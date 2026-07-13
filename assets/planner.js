@@ -4,9 +4,11 @@ const UI_TAB_KEY = 'enamed-planner-active-tab';
 const SIDEBAR_KEY = 'enamed-planner-sidebar-collapsed';
 const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
+const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 const STUDY_TIMER_KEY = 'enamed-planner-study-timer';
 const QUESTION_TIMER_KEY = 'enamed-planner-question-timer';
+const POMODORO_KEY = 'enamed-planner-pomodoro';
 // O navegador continua local-first; quando houver internet, sincroniza com o Supabase.
 const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
@@ -39,12 +41,15 @@ ensureDayLogs();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: localISODate(new Date()), analysisDate: localISODate(new Date()), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1' };
+let ui = { tab: sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: localISODate(new Date()), analysisDate: localISODate(new Date()), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto' };
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
 let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', sessionActive: false, pausedByUser: false, running: false, interval: null, questionId: '', secondsLeft: 0, elapsedSeconds: 0, beeped: false, status: '', audioContext: null };
 let studyTimeTracker = loadStudyTimerSession();
+let pomodoroInterval = null;
+let pomodoroAlarmInterval = null;
+let pomodoro = loadPomodoroSession();
 let simuladoTimer = { interval: null, runId: '' };
 let motivationRefreshInterval = null;
 let motivationRenderedKey = '';
@@ -617,6 +622,126 @@ function loadStudyTimerSession() {
     return { ...emptyStudyTimer(), kind:saved.kind, scheduleId:saved.scheduleId || '', elapsedSeconds, lastSavedAt:n(saved.savedAt) || Date.now() };
   } catch(error) { return emptyStudyTimer(); }
 }
+function emptyPomodoro() { return { mode:'', phase:'work', running:false, alarm:false, endAt:0, remaining:0, workSeconds:1500, breakSeconds:300 }; }
+function loadPomodoroSession() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(POMODORO_KEY));
+    if(!saved?.mode) return emptyPomodoro();
+    const timer = { ...emptyPomodoro(), ...saved };
+    if(timer.running && timer.endAt && timer.endAt <= Date.now()) {
+      timer.running=false; timer.alarm=true; timer.endAt=0; timer.remaining=0;
+    }
+    return timer;
+  } catch(error) { return emptyPomodoro(); }
+}
+function savePomodoro() {
+  localStorage.setItem(POMODORO_KEY, JSON.stringify({ ...pomodoro, audioContext:undefined }));
+}
+function formatPomodoro(seconds) {
+  const total = Math.max(0, Math.ceil(Number(seconds) || 0));
+  return `${String(Math.floor(total / 60)).padStart(2,'0')}:${String(total % 60).padStart(2,'0')}`;
+}
+function beepPomodoro() {
+  try {
+    const context = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    oscillator.frequency.value = 880;
+    gain.gain.value = 0.12;
+    oscillator.connect(gain); gain.connect(context.destination);
+    oscillator.start(); oscillator.stop(context.currentTime + .22);
+    setTimeout(() => context.close?.(), 350);
+  } catch(error) {}
+}
+function finishPomodoroPhase(timer=pomodoro) {
+  timer.running = false;
+  timer.alarm = true;
+  timer.remaining = 0;
+  timer.endAt = 0;
+  if(pomodoroInterval) { clearInterval(pomodoroInterval); pomodoroInterval=null; }
+  if(pomodoroAlarmInterval) clearInterval(pomodoroAlarmInterval);
+  beepPomodoro();
+  pomodoroAlarmInterval = setInterval(beepPomodoro, 900);
+  savePomodoro();
+  updatePomodoroWidget();
+}
+function startPomodoro(mode=25) {
+  if(pomodoroAlarmInterval) { clearInterval(pomodoroAlarmInterval); pomodoroAlarmInterval=null; }
+  const workSeconds = mode === 50 ? 3000 : 1500;
+  const breakSeconds = mode === 50 ? 600 : 300;
+  pomodoro = { ...emptyPomodoro(), mode, phase:'work', running:true, alarm:false, workSeconds, breakSeconds, remaining:workSeconds, endAt:Date.now()+workSeconds*1000 };
+  if(pomodoroInterval) clearInterval(pomodoroInterval);
+  pomodoroInterval = setInterval(updatePomodoro, 250);
+  savePomodoro(); updatePomodoroWidget();
+}
+function continuePomodoro() {
+  if(pomodoroAlarmInterval) { clearInterval(pomodoroAlarmInterval); pomodoroAlarmInterval=null; }
+  pomodoro.alarm=false;
+  pomodoro.phase='break';
+  pomodoro.remaining=pomodoro.breakSeconds;
+  pomodoro.endAt=Date.now()+pomodoro.breakSeconds*1000;
+  pomodoro.running=true;
+  if(pomodoroInterval) clearInterval(pomodoroInterval);
+  pomodoroInterval=setInterval(updatePomodoro,250);
+  savePomodoro(); updatePomodoroWidget();
+}
+function pausePomodoro() {
+  if(!pomodoro.running) return;
+  pomodoro.remaining=Math.max(0,Math.ceil((pomodoro.endAt-Date.now())/1000));
+  pomodoro.running=false; pomodoro.endAt=0;
+  if(pomodoroInterval) { clearInterval(pomodoroInterval); pomodoroInterval=null; }
+  savePomodoro(); updatePomodoroWidget();
+}
+function resumePomodoro() {
+  if(pomodoro.running || pomodoro.alarm || !pomodoro.mode) return;
+  pomodoro.running=true; pomodoro.endAt=Date.now()+Math.max(1,pomodoro.remaining)*1000;
+  if(pomodoroInterval) clearInterval(pomodoroInterval);
+  pomodoroInterval=setInterval(updatePomodoro,250);
+  savePomodoro(); updatePomodoroWidget();
+}
+function resetPomodoro() {
+  if(pomodoroInterval) clearInterval(pomodoroInterval);
+  if(pomodoroAlarmInterval) clearInterval(pomodoroAlarmInterval);
+  pomodoroInterval=null; pomodoroAlarmInterval=null; pomodoro=emptyPomodoro();
+  localStorage.removeItem(POMODORO_KEY); updatePomodoroWidget();
+}
+function updatePomodoro() {
+  if(!pomodoro.running) return updatePomodoroWidget();
+  pomodoro.remaining=Math.max(0,Math.ceil((pomodoro.endAt-Date.now())/1000));
+  if(pomodoro.remaining<=0) finishPomodoroPhase();
+  else { savePomodoro(); updatePomodoroWidget(); }
+}
+function ensurePomodoroWidget() {
+  if(document.getElementById('globalPomodoro')) return;
+  const widget=document.createElement('div');
+  widget.id='globalPomodoro'; widget.className='global-pomodoro';
+  widget.innerHTML='<button class="pomodoro-fruit" id="pomodoroFruit" type="button" title="Abrir pomodoro" aria-label="Abrir pomodoro">🍅<span class="pomodoro-mini-time">--:--</span></button><div class="pomodoro-panel" id="pomodoroPanel" hidden></div>';
+  document.body.append(widget);
+  document.getElementById('pomodoroFruit').onclick=()=>{
+    if(pomodoro.alarm) { continuePomodoro(); return; }
+    if(!pomodoro.running && pomodoro.mode) resumePomodoro();
+    document.getElementById('pomodoroPanel').hidden=!document.getElementById('pomodoroPanel').hidden;
+    updatePomodoroWidget();
+  };
+}
+function updatePomodoroWidget() {
+  ensurePomodoroWidget();
+  const fruit=document.getElementById('pomodoroFruit'); const panel=document.getElementById('pomodoroPanel');
+  if(!fruit || !panel) return;
+  const seconds=pomodoro.running ? Math.max(0,Math.ceil((pomodoro.endAt-Date.now())/1000)) : pomodoro.remaining;
+  fruit.classList.toggle('active', Boolean(pomodoro.running || pomodoro.alarm));
+  fruit.classList.toggle('alarming', Boolean(pomodoro.alarm));
+  fruit.querySelector('.pomodoro-mini-time').textContent=pomodoro.mode ? formatPomodoro(seconds) : '--:--';
+  const phase=pomodoro.phase==='work'?'Foco':'Pausa';
+  if(!pomodoro.mode) panel.innerHTML='<strong>Pomodoro</strong><span class="muted">Escolha o ritmo do ciclo</span><div class="pomodoro-options"><button class="icon-btn primary" data-pomodoro-start="25">25 + 5</button><button class="icon-btn" data-pomodoro-start="50">50 + 10</button></div>';
+  else if(pomodoro.alarm) panel.innerHTML=`<strong>Tempo encerrado</strong><span class="muted">${phase} concluído. O som continuará até você voltar.</span><button class="icon-btn primary" id="pomodoroContinue">Continuar · iniciar pausa</button><button class="tiny-btn" id="pomodoroReset">Encerrar ciclo</button>`;
+  else panel.innerHTML=`<strong>${phase} · ${formatPomodoro(seconds)}</strong><span class="muted">${pomodoro.running?'Em andamento':'Pausado · clique no tomate para continuar'}</span><div class="pomodoro-options">${pomodoro.running?'<button class="icon-btn" id="pomodoroPause">Pausar</button>':'<button class="icon-btn primary" id="pomodoroResume">Continuar</button>'}<button class="tiny-btn" id="pomodoroReset">Encerrar</button></div>`;
+  panel.querySelectorAll('[data-pomodoro-start]').forEach(button=>button.onclick=()=>startPomodoro(Number(button.dataset.pomodoroStart)));
+  panel.querySelector('#pomodoroContinue')?.addEventListener('click',continuePomodoro);
+  panel.querySelector('#pomodoroPause')?.addEventListener('click',pausePomodoro);
+  panel.querySelector('#pomodoroResume')?.addEventListener('click',resumePomodoro);
+  panel.querySelectorAll('#pomodoroReset').forEach(button=>button.addEventListener('click',resetPomodoro));
+}
 function persistStudyTimerSession() {
   if(!studyTimeTracker.kind) {
     localStorage.removeItem(STUDY_TIMER_KEY);
@@ -911,11 +1036,11 @@ function metric(label,value,foot='') { return `<div class="card metric-card"><di
 function progress(label,value,foot='') { return `<div class="kpi-row"><div><strong>${label}</strong><div class="muted">${foot}</div></div><div>${pct(value)}</div></div><div class="progress"><span style="width:${pct(value)}"></span></div>`; }
 function scheduleBlocks() { return [...new Set(state.schedule.map(x => x.block).filter(x => x !== undefined && x !== null).map(String))].sort((a,b)=>n(a)-n(b)); }
 function currentScheduleBlock() {
-  const changed = state.schedule.filter(item => item.notes || n(item.manualQ)!==n(item.q) || n(item.manualFC)!==n(item.fc) || n(item.hours)>0).sort((a,b)=>byDate(b,a))[0];
-  const restart = state.reschedule || seed.reschedule || {};
-  if(!changed && restart.fromBlock && restart.restartDate && ui.refDate >= restart.restartDate) return restart.fromBlock;
-  const next = state.schedule.filter(item => statusOf(item)!=='Concluído').sort(byDate)[0];
-  return changed?.block || next?.block || scheduleBlocks()[0] || '';
+  const asOf = ui.refDate || localISODate(new Date());
+  const reached = state.schedule.filter(item => item.date && item.date <= asOf).sort((a,b)=>byDate(b,a))[0];
+  if(reached?.block !== undefined) return reached.block;
+  const next = state.schedule.filter(item => item.date && item.date > asOf).sort(byDate)[0];
+  return next?.block || scheduleBlocks()[0] || '';
 }
 function lastChangedLesson() {
   return state.schedule.filter(item => item.notes || n(item.manualQ)!==n(item.q) || n(item.manualFC)!==n(item.fc) || n(item.hours)>0).sort((a,b)=>byDate(b,a))[0] || null;
@@ -2185,7 +2310,8 @@ function videoAssetUrl(video) {
   const relativePath = String(video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
   const localUrl = `video_library/media/${relativePath}`;
   // A cópia local continua funcionando sem internet; o site publicado usa o R2.
-  return window.location.protocol === 'file:' ? localUrl : `${R2_VIDEO_BASE_URL}/video_library/media/${relativePath}`;
+  const useR2 = ui.videoSourceMode === 'online' || (ui.videoSourceMode === 'auto' && window.location.protocol !== 'file:');
+  return useR2 ? `${R2_VIDEO_BASE_URL}/video_library/media/${relativePath}` : localUrl;
 }
 function formatVideoTime(seconds=0) {
   const total = Math.max(0, Math.floor(Number(seconds) || 0));
@@ -2487,6 +2613,26 @@ function markAwaitingScheduleVideosWatched() {
   if(count) saveStateOnly();
   return count;
 }
+function markCompletedLessonsThroughBlockNine() {
+  const version = 'watched-lessons-through-block-09-2026-07-13-v1';
+  if(state.videoPlayer.completedLessonMigration === version) return 0;
+  const pendingTopics = ['amenorreias', 'sindrome dos ovarios policisticos', 'disturbios do sodio e potassio', 'gasometria arterial'];
+  let count = 0;
+  videoCatalog.filter(lesson => n(lesson.block) >= 1 && n(lesson.block) <= 9).forEach(lesson => {
+    const title = normalizedTopic(lesson.title);
+    if(pendingTopics.some(topic => title.includes(topic)) || (title.includes('disturbios') && title.includes('sodio') && title.includes('potassio'))) return;
+    videoParts(lesson).forEach(part => {
+      const preferred = part.videos.find(video => video.type === 'complete') || part.videos[0];
+      if(preferred && !state.videoPlayer.watched[preferred.id]) {
+        state.videoPlayer.watched[preferred.id] = true;
+        count += 1;
+      }
+    });
+  });
+  state.videoPlayer.completedLessonMigration = version;
+  saveStateOnly();
+  return count;
+}
 function currentVideoLesson() {
   const pinned = state.videoPlayer?.pinned;
   if(pinned?.enabled) {
@@ -2555,6 +2701,21 @@ function renderAulas() {
   const resume = source ? n(state.videoPlayer.resume[source.id]) : 0;
   const watched = source ? state.videoPlayer.watched[source.id] : false;
   mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas locais · ordem do cronograma</div></div><span class="badge today">offline</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(schedule?.topic || lesson.title)}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Sair do foco':'⛶ Foco'}</button><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo local.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map((bookmark, index) => `<div class="video-bookmark"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span>${escapeHtml(bookmark.label || 'Ponto importante')}</span><button class="delete-bookmark" data-video-bookmark-delete="${index}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
+  const sourceToggle = document.createElement('button');
+  sourceToggle.className = 'tiny-btn video-source-toggle';
+  sourceToggle.type = 'button';
+  const usingR2 = ui.videoSourceMode === 'online' || (ui.videoSourceMode === 'auto' && window.location.protocol !== 'file:');
+  sourceToggle.textContent = usingR2 ? 'R2 online' : 'PC offline';
+  sourceToggle.title = usingR2 ? 'Usar os vídeos armazenados neste computador' : 'Usar os vídeos armazenados no R2';
+  sourceToggle.setAttribute('aria-label', sourceToggle.title);
+  sourceToggle.onclick = () => {
+    saveOpenVideoPosition();
+    ui.videoSourceMode = usingR2 ? 'local' : 'online';
+    localStorage.setItem(VIDEO_SOURCE_KEY, ui.videoSourceMode);
+    if(ui.videoSourceMode === 'online') pushCloudState();
+    renderAulas();
+  };
+  mount.querySelector('.video-sidebar .section-title')?.append(sourceToggle);
   const videoTitle = mount.querySelector('.video-reader-head h2');
   if(videoTitle) {
     const titleText = videoTitle.textContent.trim();
@@ -2738,6 +2899,44 @@ function bindVideoPlayer(source, schedule) {
     input.onchange = saveBookmarkTime;
     input.onkeydown = event => { if(event.key === 'Enter') { event.preventDefault(); input.blur(); } };
   });
+  document.querySelectorAll('.video-bookmark').forEach(row => {
+    const label = row.querySelector(':scope > span');
+    const deleteButton = row.querySelector('[data-video-bookmark-delete]');
+    if(!label || !deleteButton || row.querySelector('[data-video-bookmark-edit]')) return;
+    label.classList.add('video-bookmark-label');
+    const editButton = document.createElement('button');
+    editButton.className = 'edit-bookmark';
+    editButton.dataset.videoBookmarkEdit = deleteButton.dataset.videoBookmarkDelete;
+    editButton.title = 'Editar nome do ponto';
+    editButton.textContent = '⚙';
+    deleteButton.insertAdjacentElement('beforebegin', editButton);
+  });
+  document.querySelectorAll('[data-video-bookmark-edit]').forEach(button => button.onclick = event => {
+    const index = Number(event.currentTarget.dataset.videoBookmarkEdit);
+    const entry = state.videoPlayer.bookmarks[source.id]?.[index];
+    const row = event.currentTarget.closest('.video-bookmark');
+    if(!entry || !row) return;
+    const label = row.querySelector('.video-bookmark-label');
+    if(!label) return;
+    if(row.dataset.editing === '1') {
+      const input = row.querySelector('.video-bookmark-label-input');
+      entry.label = input?.value.trim() || 'Ponto importante';
+      saveStateOnly();
+      renderAulas();
+      return;
+    }
+    row.dataset.editing = '1';
+    const input = document.createElement('input');
+    input.className = 'input video-bookmark-label-input';
+    input.value = entry.label || 'Ponto importante';
+    input.setAttribute('aria-label', 'Nome do ponto importante');
+    label.replaceWith(input);
+    event.currentTarget.textContent = '✓';
+    event.currentTarget.title = 'Salvar nome do ponto';
+    input.focus();
+    input.select();
+    input.onkeydown = keyEvent => { if(keyEvent.key === 'Enter') event.currentTarget.click(); };
+  });
   document.querySelectorAll('[data-video-bookmark-delete]').forEach(button => button.onclick = event => { state.videoPlayer.bookmarks[source.id].splice(Number(event.currentTarget.dataset.videoBookmarkDelete),1); saveStateOnly(); renderAulas(); });
 }
 async function loadVideoCatalog() {
@@ -2747,6 +2946,7 @@ async function loadVideoCatalog() {
     const payload = await response.json();
     videoCatalog = Array.isArray(payload.lessons) ? payload.lessons : [];
     videoCatalogStatus = `${videoCatalog.length} aulas locais disponíveis`;
+    markCompletedLessonsThroughBlockNine();
   } catch(error) {
     console.warn('Catálogo de videoaulas indisponível:', error);
     videoCatalog = [];
@@ -4387,6 +4587,8 @@ function render() {
     feynman: renderFeynman
   };
   renderers[ui.tab]?.();
+  ensurePomodoroWidget();
+  updatePomodoroWidget();
 }
 document.getElementById('exportBtn').onclick = () => { const blob = new Blob([JSON.stringify(state,null,2)], {type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='backup-enamed-planner.json'; a.click(); URL.revokeObjectURL(a.href); };
 document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); state=data; persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
