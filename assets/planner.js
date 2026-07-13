@@ -5,7 +5,9 @@ const SIDEBAR_KEY = 'enamed-planner-sidebar-collapsed';
 const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
+const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
+const LOCAL_PLANNER_URL = 'http://127.0.0.1:8765/enamed_planner.html?tab=aulas&videoSource=local';
 const STUDY_TIMER_KEY = 'enamed-planner-study-timer';
 const QUESTION_TIMER_KEY = 'enamed-planner-question-timer';
 const POMODORO_KEY = 'enamed-planner-pomodoro';
@@ -14,6 +16,7 @@ const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
 const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) || null;
+const INITIAL_PARAMS = new URLSearchParams(window.location.search);
 const LESSON_MIN_QUESTIONS = 10;
 const LESSON_MIN_FLASHCARDS = 10;
 const DAILY_QUESTION_TARGET = 20;
@@ -33,6 +36,10 @@ let materialDbPromise = null;
 let materialLibraryStatus = 'Carregando resumos...';
 let importedSimulados = [];
 let importedSimuladosStatus = 'Carregando simulados importados...';
+let questionBankLoadPromise = null;
+let materialLibraryLoadPromise = null;
+let importedSimuladosLoadPromise = null;
+let pomodoroLastSavedSecond = -1;
 const seed = JSON.parse(document.getElementById('seed').textContent);
 let state = loadState();
 normalizeOfficialScheduleNames();
@@ -41,7 +48,7 @@ ensureDayLogs();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: localISODate(new Date()), analysisDate: localISODate(new Date()), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto' };
+let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: localISODate(new Date()), analysisDate: localISODate(new Date()), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
@@ -49,6 +56,7 @@ let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', session
 let studyTimeTracker = loadStudyTimerSession();
 let pomodoroInterval = null;
 let pomodoroAlarmInterval = null;
+let pomodoroPanelCloseTimer = null;
 let pomodoro = loadPomodoroSession();
 let simuladoTimer = { interval: null, runId: '' };
 let motivationRefreshInterval = null;
@@ -254,7 +262,7 @@ function priorityBar(item) { return `<span class="schedule-priority-bar ${priori
 function lessonDisplayTitle(item, fallback='') {
   const topic = item?.topic || fallback;
   const order = n(item?.lessonOrder);
-  return order ? `${String(item.block).padStart(2,'0')}.${order} - ${topic}` : topic;
+  return order ? `${n(item.block)}.${order} - ${topic}` : topic;
 }
 function officialMatchScore(current, official) {
   const currentTopic = canonicalTopic(current.topic);
@@ -265,8 +273,13 @@ function officialMatchScore(current, official) {
   return (currentTopic.includes(officialTopic) || officialTopic.includes(currentTopic) ? 200 : 0) + overlap;
 }
 function applyOfficialSchedule() {
-  const version = 'medplanner-text-order-v8';
-  if(!officialSchedule.length || state.officialScheduleVersion === version) return false;
+  const version = 'medplanner-text-order-v9';
+  const aligned = officialSchedule.length === state.schedule.length && officialSchedule.every(official =>
+    state.schedule.some(item => n(item.block) === n(official.block)
+      && n(item.lessonOrder) === n(official.order)
+      && canonicalTopic(item.topic) === canonicalTopic(official.topic))
+  );
+  if(!officialSchedule.length || (state.officialScheduleVersion === version && aligned)) return false;
   const used = new Set();
   const ordered = [];
   const datesByBlock = new Map(scheduleBlocks().map(block => [String(block), state.schedule.filter(item => String(item.block) === String(block)).map(item => item.date).filter(Boolean).sort()]));
@@ -365,8 +378,9 @@ function applyTheme(theme) {
   localStorage.setItem(THEME_KEY, selected);
   const button = document.getElementById('themeToggle');
   if(button) {
-    button.textContent = selected === 'dark' ? '☀' : '◐';
+    button.innerHTML = `${selected === 'dark' ? '☀' : '◐'}<span>Modo de exibição</span>`;
     button.title = selected === 'dark' ? 'Usar tema claro' : 'Usar tema escuro';
+    button.setAttribute('aria-label', button.title);
   }
 }
 
@@ -410,6 +424,9 @@ async function pullCloudState({ firstLogin=false }={}) {
   if(data?.data?.schedule?.length) {
     state = data.data;
     ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+    // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
+    // Reaplica o cronograma oficial antes de exibir ou reenviar o estado.
+    if(officialSchedule.length) applyOfficialSchedule();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     render();
     setSyncStatus('Dados atualizados', 'online');
@@ -419,12 +436,22 @@ async function pullCloudState({ firstLogin=false }={}) {
     setSyncStatus('Sincronizado', 'online');
   }
 }
-async function loadQuestionBank() {
+function loadQuestionBank() {
+  if(!questionBankLoadPromise) questionBankLoadPromise = loadQuestionBankNow();
+  return questionBankLoadPromise;
+}
+async function loadQuestionBankNow() {
   await loadLocalQuestionBank();
   backfillQuestionScheduleLinks();
   const localQuestions = [...questionBank];
+  // O banco publicado junto do planner e a fonte principal. Evita baixar e
+  // normalizar novamente milhares de registros iguais vindos do Supabase.
+  if(localQuestions.length) {
+    if(['questoes','simulados','analise'].includes(ui.tab)) render();
+    return;
+  }
   if(!currentUser || !sbClient) {
-    render();
+    if(['questoes','simulados','analise'].includes(ui.tab)) render();
     return;
   }
   let { data, error } = await sbClient.from('question_bank').select('id,number,collection_block,document_block,area,topic,stem,options,answer,source,source_label,images,comment').order('collection_block').order('source_label').order('number');
@@ -469,7 +496,7 @@ async function loadQuestionBank() {
       questionBank = deduplicateQuestions(cloudQuestions);
     }
   }
-  render();
+  if(['questoes','simulados','analise'].includes(ui.tab)) render();
 }
 function loadQuestionBlockScript(src) {
   return new Promise(resolve => {
@@ -486,9 +513,11 @@ async function loadLocalQuestionBank() {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
   window.ENAMED_LOCAL_QUESTION_BANK = window.ENAMED_LOCAL_QUESTION_BANK || {};
-  await Promise.all(index.blocks.map(block => window.ENAMED_LOCAL_QUESTION_BANK[block.block]
-    ? Promise.resolve()
-    : loadQuestionBlockScript(block.script)));
+  for(const block of index.blocks) {
+    if(!window.ENAMED_LOCAL_QUESTION_BANK[block.block]) await loadQuestionBlockScript(block.script);
+    // Entrega o controle ao navegador entre blocos para manter a interface fluida.
+    await new Promise(resolve => setTimeout(resolve, 0));
+  }
   const blocks = index.blocks
     .map(block => window.ENAMED_LOCAL_QUESTION_BANK?.[block.block]?.questions || [])
     .flat();
@@ -516,7 +545,11 @@ function deduplicateQuestions(records) {
   });
   return [...unique.values()];
 }
-async function loadImportedSimulados() {
+function loadImportedSimulados() {
+  if(!importedSimuladosLoadPromise) importedSimuladosLoadPromise = loadImportedSimuladosNow();
+  return importedSimuladosLoadPromise;
+}
+async function loadImportedSimuladosNow() {
   try {
     const response = await fetch('imported_simulados/index.json', {cache:'no-store'});
     if(!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -558,7 +591,6 @@ function isLocalPlanner() {
   return location.protocol === 'file:' || ['localhost','127.0.0.1','::1'].includes(location.hostname);
 }
 async function initCloud() {
-  await loadQuestionBank();
   if(OFFLINE_FIRST) {
     document.body.classList.remove('auth-locked');
     const button = document.getElementById('accountBtn');
@@ -583,13 +615,13 @@ async function initCloud() {
   } else {
     updateAccountUI();
   }
-  if(currentUser) await Promise.all([pullCloudState(), loadQuestionBank()]);
+  if(currentUser) await pullCloudState();
   sbClient.auth.onAuthStateChange((event, session) => {
     const wasLoggedOut = !currentUser;
     currentUser = session?.user || null;
     updateAccountUI();
     if(currentUser && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
-      setTimeout(() => Promise.all([pullCloudState({firstLogin: wasLoggedOut}), loadQuestionBank()]), 0);
+      setTimeout(() => pullCloudState({firstLogin: wasLoggedOut}), 0);
     }
   });
 }
@@ -671,7 +703,7 @@ function startPomodoro(mode=25) {
   const breakSeconds = mode === 50 ? 600 : 300;
   pomodoro = { ...emptyPomodoro(), mode, phase:'work', running:true, alarm:false, workSeconds, breakSeconds, remaining:workSeconds, endAt:Date.now()+workSeconds*1000 };
   if(pomodoroInterval) clearInterval(pomodoroInterval);
-  pomodoroInterval = setInterval(updatePomodoro, 250);
+  pomodoroInterval = setInterval(updatePomodoro, 1000);
   savePomodoro(); updatePomodoroWidget();
 }
 function continuePomodoro() {
@@ -682,7 +714,7 @@ function continuePomodoro() {
   pomodoro.endAt=Date.now()+pomodoro.breakSeconds*1000;
   pomodoro.running=true;
   if(pomodoroInterval) clearInterval(pomodoroInterval);
-  pomodoroInterval=setInterval(updatePomodoro,250);
+  pomodoroInterval=setInterval(updatePomodoro,1000);
   savePomodoro(); updatePomodoroWidget();
 }
 function pausePomodoro() {
@@ -696,7 +728,7 @@ function resumePomodoro() {
   if(pomodoro.running || pomodoro.alarm || !pomodoro.mode) return;
   pomodoro.running=true; pomodoro.endAt=Date.now()+Math.max(1,pomodoro.remaining)*1000;
   if(pomodoroInterval) clearInterval(pomodoroInterval);
-  pomodoroInterval=setInterval(updatePomodoro,250);
+  pomodoroInterval=setInterval(updatePomodoro,1000);
   savePomodoro(); updatePomodoroWidget();
 }
 function resetPomodoro() {
@@ -709,20 +741,48 @@ function updatePomodoro() {
   if(!pomodoro.running) return updatePomodoroWidget();
   pomodoro.remaining=Math.max(0,Math.ceil((pomodoro.endAt-Date.now())/1000));
   if(pomodoro.remaining<=0) finishPomodoroPhase();
-  else { savePomodoro(); updatePomodoroWidget(); }
+  else {
+    // O horario final ja permite restaurar o cronometro. Uma gravacao a cada
+    // dez segundos e suficiente e evita bloquear o navegador continuamente.
+    if(pomodoro.remaining % 10 === 0 && pomodoro.remaining !== pomodoroLastSavedSecond) {
+      pomodoroLastSavedSecond = pomodoro.remaining;
+      savePomodoro();
+    }
+    updatePomodoroWidget();
+  }
 }
 function ensurePomodoroWidget() {
   if(document.getElementById('globalPomodoro')) return;
   const widget=document.createElement('div');
   widget.id='globalPomodoro'; widget.className='global-pomodoro';
-  widget.innerHTML='<button class="pomodoro-fruit" id="pomodoroFruit" type="button" title="Abrir pomodoro" aria-label="Abrir pomodoro">🍅<span class="pomodoro-mini-time">--:--</span></button><div class="pomodoro-panel" id="pomodoroPanel" hidden></div>';
+  widget.innerHTML='<button class="pomodoro-fruit" id="pomodoroFruit" type="button" title="Abrir pomodoro" aria-label="Abrir pomodoro" aria-expanded="false" aria-controls="pomodoroPanel">🍅<span class="pomodoro-mini-time">--:--</span></button><div class="pomodoro-panel" id="pomodoroPanel" hidden></div>';
   document.body.append(widget);
   document.getElementById('pomodoroFruit').onclick=()=>{
-    if(pomodoro.alarm) { continuePomodoro(); return; }
-    if(!pomodoro.running && pomodoro.mode) resumePomodoro();
-    document.getElementById('pomodoroPanel').hidden=!document.getElementById('pomodoroPanel').hidden;
+    const panel=document.getElementById('pomodoroPanel');
+    setPomodoroPanelOpen(panel.hidden || !panel.classList.contains('is-open'));
     updatePomodoroWidget();
   };
+}
+function setPomodoroPanelOpen(open) {
+  const fruit=document.getElementById('pomodoroFruit');
+  const panel=document.getElementById('pomodoroPanel');
+  if(!fruit || !panel) return;
+  if(pomodoroPanelCloseTimer) clearTimeout(pomodoroPanelCloseTimer);
+  fruit.setAttribute('aria-expanded', String(open));
+  fruit.title=open?'Fechar pomodoro':'Abrir pomodoro';
+  fruit.setAttribute('aria-label', fruit.title);
+  if(open) {
+    panel.hidden=false;
+    panel.classList.remove('is-closing');
+    requestAnimationFrame(()=>panel.classList.add('is-open'));
+    return;
+  }
+  panel.classList.remove('is-open');
+  panel.classList.add('is-closing');
+  pomodoroPanelCloseTimer=setTimeout(()=>{
+    panel.hidden=true;
+    panel.classList.remove('is-closing');
+  },180);
 }
 function updatePomodoroWidget() {
   ensurePomodoroWidget();
@@ -732,10 +792,11 @@ function updatePomodoroWidget() {
   fruit.classList.toggle('active', Boolean(pomodoro.running || pomodoro.alarm));
   fruit.classList.toggle('alarming', Boolean(pomodoro.alarm));
   fruit.querySelector('.pomodoro-mini-time').textContent=pomodoro.mode ? formatPomodoro(seconds) : '--:--';
+  if(panel.hidden) return;
   const phase=pomodoro.phase==='work'?'Foco':'Pausa';
   if(!pomodoro.mode) panel.innerHTML='<strong>Pomodoro</strong><span class="muted">Escolha o ritmo do ciclo</span><div class="pomodoro-options"><button class="icon-btn primary" data-pomodoro-start="25">25 + 5</button><button class="icon-btn" data-pomodoro-start="50">50 + 10</button></div>';
   else if(pomodoro.alarm) panel.innerHTML=`<strong>Tempo encerrado</strong><span class="muted">${phase} concluído. O som continuará até você voltar.</span><button class="icon-btn primary" id="pomodoroContinue">Continuar · iniciar pausa</button><button class="tiny-btn" id="pomodoroReset">Encerrar ciclo</button>`;
-  else panel.innerHTML=`<strong>${phase} · ${formatPomodoro(seconds)}</strong><span class="muted">${pomodoro.running?'Em andamento':'Pausado · clique no tomate para continuar'}</span><div class="pomodoro-options">${pomodoro.running?'<button class="icon-btn" id="pomodoroPause">Pausar</button>':'<button class="icon-btn primary" id="pomodoroResume">Continuar</button>'}<button class="tiny-btn" id="pomodoroReset">Encerrar</button></div>`;
+  else panel.innerHTML=`<strong>${phase} · ${formatPomodoro(seconds)}</strong><span class="muted">${pomodoro.running?'Em andamento':'Pausado · use o botão Continuar'}</span><div class="pomodoro-options">${pomodoro.running?'<button class="icon-btn" id="pomodoroPause">Pausar</button>':'<button class="icon-btn primary" id="pomodoroResume">Continuar</button>'}<button class="tiny-btn" id="pomodoroReset">Encerrar</button></div>`;
   panel.querySelectorAll('[data-pomodoro-start]').forEach(button=>button.onclick=()=>startPomodoro(Number(button.dataset.pomodoroStart)));
   panel.querySelector('#pomodoroContinue')?.addEventListener('click',continuePomodoro);
   panel.querySelector('#pomodoroPause')?.addEventListener('click',pausePomodoro);
@@ -930,8 +991,10 @@ function motivationKey() {
 }
 function renderMotivation() {
   const el = document.getElementById('motivationBar');
+  const key = motivationKey();
+  if(el?.firstElementChild && motivationRenderedKey === key) return;
   if(el) el.innerHTML = `<span class="motivation-pill"><span class="motivation-marquee">${escapeHtml(motivationMessage())}</span></span>`;
-  motivationRenderedKey = motivationKey();
+  motivationRenderedKey = key;
 }
 function startMotivationCycle() {
   if(motivationRefreshInterval) return;
@@ -946,6 +1009,7 @@ async function loadMotivationMessages() {
     const payload = await response.json();
     if(['morning','afternoon','night','rest'].every(period => Array.isArray(payload[period]) && payload[period].length)) {
       MOTIVATION_BY_PERIOD = payload;
+      motivationRenderedKey = '';
       renderMotivation();
     }
   } catch(error) {
@@ -972,6 +1036,13 @@ function bindPlannerDateInput(id, currentDate, apply) {
   input.onblur = submit;
 }
 function n(v) { return Number.isFinite(Number(v)) ? Number(v) : 0; }
+function debounce(callback, wait=180) {
+  let timeout = null;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => callback(...args), wait);
+  };
+}
 function pct(v) { return `${Math.round(n(v)*100)}%`; }
 function clamp(v,min=0,max=1) { return Math.max(min, Math.min(max, n(v))); }
 function lessonQuestionTarget(item) { return Math.max(LESSON_MIN_QUESTIONS, n(item?.metaQ)); }
@@ -1138,11 +1209,11 @@ function startDashboardCountdown() {
     if(detail) detail.textContent = `${p.totalDays} dias no total`;
   };
   update();
-  dashboardCountdownInterval = setInterval(update, 1000);
+  dashboardCountdownInterval = setInterval(update, 60000);
 }
 function renderTabs() {
   document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => `<button class="tab ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}">${iconSvg(icon)}<span>${label}</span></button>`).join('');
-  document.querySelectorAll('.tab').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => {
     if(autoStudyIsRunning()) stopAutoStudy();
     if(ui.tab === 'aulas') saveOpenVideoPosition();
     ui.tab=b.dataset.tab;
@@ -1279,12 +1350,13 @@ function renderCronograma() {
   const rows = filteredSchedule();
   const changed = lastChangedLesson();
   document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2>Blocos do cronograma</h2><div class="muted">${changed ? `Última alteração: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}<div class="toolbar"><input class="input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}"><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select><select class="select" id="statusFilter">${['Todos','Concluído','Aguardando','Não Iniciado'].map(s=>`<option ${s===ui.status?'selected':''}>${s}</option>`).join('')}</select><button class="icon-btn" id="clearFilters">Limpar filtros</button></div></div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${renderScheduleTable(rows, true)}</div>`;
-  document.getElementById('search').oninput = e => {
-    const cursor = e.target.selectionStart;
-    ui.search=e.target.value;
+  document.getElementById('search').oninput = debounce(e => {
+    const value=e.target.value;
+    const cursor=e.target.selectionStart;
+    ui.search=value;
     renderCronograma();
     requestAnimationFrame(() => { const input=document.getElementById('search'); if(input) { input.focus(); input.setSelectionRange(cursor,cursor); } });
-  };
+  }, 220);
   document.getElementById('areaFilter').onchange = e => { ui.area=e.target.value; render(); };
   document.getElementById('statusFilter').onchange = e => { ui.status=e.target.value; render(); };
   document.querySelectorAll('[data-schedule-block]').forEach(button => button.onclick = e => { ui.scheduleBlock = e.currentTarget.dataset.scheduleBlock; render(); });
@@ -2280,7 +2352,11 @@ function applyMaterialSearch(value) {
     if(query && anyVisible) folder.open=true;
   });
 }
-async function loadMaterialLibrary() {
+function loadMaterialLibrary() {
+  if(!materialLibraryLoadPromise) materialLibraryLoadPromise = loadMaterialLibraryNow();
+  return materialLibraryLoadPromise;
+}
+async function loadMaterialLibraryNow() {
   try {
     const response = await fetch('materials_library/index.json', {cache:'no-store'});
     if(!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -2310,8 +2386,20 @@ function videoAssetUrl(video) {
   const relativePath = String(video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
   const localUrl = `video_library/media/${relativePath}`;
   // A cópia local continua funcionando sem internet; o site publicado usa o R2.
-  const useR2 = ui.videoSourceMode === 'online' || (ui.videoSourceMode === 'auto' && window.location.protocol !== 'file:');
+  const useR2 = usesR2VideoSource();
   return useR2 ? `${R2_VIDEO_BASE_URL}/video_library/media/${relativePath}` : localUrl;
+}
+function usesR2VideoSource() {
+  return ui.videoSourceMode === 'online' || (ui.videoSourceMode === 'auto' && !isLocalPlanner());
+}
+function rememberVideoPlaybackRate(rate) {
+  const allowed = [0.75,1,1.25,1.5,1.75,2];
+  const selected = allowed.reduce((best, value) => Math.abs(value-rate) < Math.abs(best-rate) ? value : best, 1);
+  ui.videoPlaybackRate = selected;
+  localStorage.setItem(VIDEO_RATE_KEY, String(selected));
+  const select = document.getElementById('videoPlaybackRate');
+  if(select) select.value = String(selected);
+  return selected;
 }
 function formatVideoTime(seconds=0) {
   const total = Math.max(0, Math.floor(Number(seconds) || 0));
@@ -2555,7 +2643,7 @@ function videoLessonSort(a, b) {
   const scheduleA = videoScheduleForLesson(a);
   const scheduleB = videoScheduleForLesson(b);
   if(Boolean(scheduleA) !== Boolean(scheduleB)) return scheduleA ? -1 : 1;
-  if(scheduleA && scheduleB) return n(scheduleA.block)-n(scheduleB.block) || n(scheduleA.row)-n(scheduleB.row) || a.title.localeCompare(b.title, 'pt-BR');
+  if(scheduleA && scheduleB) return n(scheduleA.block)-n(scheduleB.block) || n(scheduleA.lessonOrder)-n(scheduleB.lessonOrder) || a.title.localeCompare(b.title, 'pt-BR');
   return n(a.block)-n(b.block) || a.area.localeCompare(b.area, 'pt-BR') || a.title.localeCompare(b.title, 'pt-BR');
 }
 function visibleVideoLessons() {
@@ -2700,22 +2788,31 @@ function renderAulas() {
   const bookmarks = source ? (state.videoPlayer.bookmarks[source.id] || []) : [];
   const resume = source ? n(state.videoPlayer.resume[source.id]) : 0;
   const watched = source ? state.videoPlayer.watched[source.id] : false;
-  mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas locais · ordem do cronograma</div></div><span class="badge today">offline</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(schedule?.topic || lesson.title)}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Sair do foco':'⛶ Foco'}</button><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo local.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map((bookmark, index) => `<div class="video-bookmark"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span>${escapeHtml(bookmark.label || 'Ponto importante')}</span><button class="delete-bookmark" data-video-bookmark-delete="${index}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
-  const sourceToggle = document.createElement('button');
-  sourceToggle.className = 'tiny-btn video-source-toggle';
-  sourceToggle.type = 'button';
-  const usingR2 = ui.videoSourceMode === 'online' || (ui.videoSourceMode === 'auto' && window.location.protocol !== 'file:');
-  sourceToggle.textContent = usingR2 ? 'R2 online' : 'PC offline';
-  sourceToggle.title = usingR2 ? 'Usar os vídeos armazenados neste computador' : 'Usar os vídeos armazenados no R2';
-  sourceToggle.setAttribute('aria-label', sourceToggle.title);
-  sourceToggle.onclick = () => {
+  const usingR2 = usesR2VideoSource();
+  mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas locais · ordem do cronograma</div></div><span class="badge today">offline</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Sair do foco':'⛶ Foco'}</button><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo local.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map((bookmark, index) => `<div class="video-bookmark"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span>${escapeHtml(bookmark.label || 'Ponto importante')}</span><button class="delete-bookmark" data-video-bookmark-delete="${index}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
+  const sourceSwitch=document.createElement('div');
+  sourceSwitch.className='video-source-switch';
+  sourceSwitch.setAttribute('role','group');
+  sourceSwitch.setAttribute('aria-label','Fonte das videoaulas');
+  sourceSwitch.innerHTML=`<span>Fonte</span><button type="button" data-video-source-mode="local" class="${usingR2?'':'active'}" title="${isLocalPlanner()?'Usar os vídeos deste computador':'Abrir a versão local do planner'}">PC offline</button><button type="button" data-video-source-mode="online" class="${usingR2?'active':''}" title="Usar os vídeos disponíveis no R2">R2 online</button>`;
+  mount.querySelector('.video-filter')?.append(sourceSwitch);
+  const sourceBadge=mount.querySelector('.video-sidebar .section-title .badge');
+  if(sourceBadge) {
+    sourceBadge.textContent=usingR2?'R2 online':'PC offline';
+    sourceBadge.className=`badge ${usingR2?'today':'done'}`;
+  }
+  mount.querySelectorAll('[data-video-source-mode]').forEach(button => button.onclick = event => {
+    const mode=event.currentTarget.dataset.videoSourceMode;
     saveOpenVideoPosition();
-    ui.videoSourceMode = usingR2 ? 'local' : 'online';
-    localStorage.setItem(VIDEO_SOURCE_KEY, ui.videoSourceMode);
-    if(ui.videoSourceMode === 'online') pushCloudState();
+    if(mode === 'local' && !isLocalPlanner()) {
+      window.location.href=LOCAL_PLANNER_URL;
+      return;
+    }
+    ui.videoSourceMode=mode;
+    localStorage.setItem(VIDEO_SOURCE_KEY, mode);
+    if(mode === 'online') pushCloudState();
     renderAulas();
-  };
-  mount.querySelector('.video-sidebar .section-title')?.append(sourceToggle);
+  });
   const videoTitle = mount.querySelector('.video-reader-head h2');
   if(videoTitle) {
     const titleText = videoTitle.textContent.trim();
@@ -2763,7 +2860,15 @@ function renderAulas() {
   const blockInput = document.getElementById('videoBlock');
   if(blockInput) blockInput.onchange = event => { ui.videoBlock=event.target.value; ui.videoLessonId=''; ui.videoSourceId=''; renderAulas(); };
   const searchInput = document.getElementById('videoSearch');
-  if(searchInput) searchInput.oninput = event => { const cursor=event.target.selectionStart; ui.videoSearch=event.target.value; ui.videoLessonId=''; ui.videoSourceId=''; renderAulas(); requestAnimationFrame(() => { const input=document.getElementById('videoSearch'); if(input) { input.focus(); input.setSelectionRange(cursor,cursor); } }); };
+  if(searchInput) searchInput.oninput = debounce(event => {
+    const value=event.target.value;
+    const cursor=event.target.selectionStart;
+    ui.videoSearch=value;
+    ui.videoLessonId='';
+    ui.videoSourceId='';
+    renderAulas();
+    requestAnimationFrame(() => { const input=document.getElementById('videoSearch'); if(input) { input.focus(); input.setSelectionRange(cursor,cursor); } });
+  }, 220);
   document.querySelectorAll('[data-video-lesson]').forEach(button => button.onclick = event => {
     stopAutoStudy('video');
     saveOpenVideoPosition();
@@ -2812,6 +2917,15 @@ function bindVideoPlayer(source, schedule) {
   let lastCheckpoint = Math.floor(resume);
   let restoringPosition = false;
   let manualSeek = false;
+  let restoringRate = false;
+  const applyPreferredRate = () => {
+    const rate = rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || 1);
+    if(Math.abs(video.playbackRate-rate) < .01) return;
+    restoringRate = true;
+    video.defaultPlaybackRate = rate;
+    video.playbackRate = rate;
+    setTimeout(() => { restoringRate=false; }, 0);
+  };
   const setVideoTime = seconds => {
     const safeTarget = Math.max(0, Math.min(Number(seconds) || 0, Number.isFinite(video.duration) ? Math.max(0, video.duration - .1) : Number(seconds) || 0));
     restoringPosition = true;
@@ -2824,6 +2938,12 @@ function bindVideoPlayer(source, schedule) {
     if(!manualSeek && resume > 0 && resume < (video.duration || Infinity) - .1) setVideoTime(resume);
   };
   video.addEventListener('loadedmetadata', applyResume, {once:true});
+  video.addEventListener('loadedmetadata', applyPreferredRate);
+  video.addEventListener('canplay', applyPreferredRate);
+  video.addEventListener('playing', applyPreferredRate);
+  video.addEventListener('ratechange', () => {
+    if(!restoringRate) rememberVideoPlaybackRate(video.playbackRate);
+  });
   const saveProgress = () => { state.videoPlayer.resume[source.id] = Math.floor(video.currentTime || 0); saveStateOnly(); };
   video.addEventListener('play', () => startAutoStudy('video', schedule?.id || ''));
   video.addEventListener('pause', () => { pauseAutoStudy('video'); saveProgress(); });
@@ -2847,7 +2967,15 @@ function bindVideoPlayer(source, schedule) {
   });
   document.getElementById('videoBack10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime-10); state.videoPlayer.resume[source.id]=Math.floor(resume); saveStateOnly(); });
   document.getElementById('videoForward10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime+10); state.videoPlayer.resume[source.id]=Math.floor(resume); saveStateOnly(); });
-  document.getElementById('videoPlaybackRate')?.addEventListener('change', event => { video.playbackRate=Number(event.target.value); });
+  const rateSelect = document.getElementById('videoPlaybackRate');
+  if(rateSelect) {
+    rateSelect.value = String(rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || 1));
+    rateSelect.addEventListener('change', event => {
+      const rate = rememberVideoPlaybackRate(Number(event.target.value));
+      video.defaultPlaybackRate=rate;
+      video.playbackRate=rate;
+    });
+  }
   document.getElementById('videoMarkWatched')?.addEventListener('click', () => { state.videoPlayer.watched[source.id]=!state.videoPlayer.watched[source.id]; saveStateOnly(); renderAulas(); });
   document.getElementById('addVideoBookmark')?.addEventListener('click', () => {
     const label = document.getElementById('videoBookmarkLabel').value.trim();
@@ -3594,7 +3722,7 @@ function renderQuestion(question, total) {
 }
 function renderQuestionImages(question) {
   if(!question.images?.length) return '';
-  return `<div class="question-images">${question.images.map((src, index) => `<img src="${escapeAttr(src)}" alt="Imagem da questão ${question.number}${question.images.length > 1 ? `.${index + 1}` : ''}">`).join('')}</div>`;
+  return `<div class="question-images">${question.images.map((src, index) => `<img loading="lazy" decoding="async" src="${escapeAttr(src)}" alt="Imagem da questão ${question.number}${question.images.length > 1 ? `.${index + 1}` : ''}">`).join('')}</div>`;
 }
 function renderQuestionEditPanel(question) {
   const optionLetters = ['A','B','C','D','E'].filter(letter => question.options?.[letter] !== undefined);
@@ -4476,7 +4604,7 @@ function handleHighlightUndoKeyboard(event) {
 function renderMarkdown(text) {
   const escaped = escapeHtml(text || '');
   return escaped
-    .replace(/!\[([^\]]*)\]\((https?:\/\/[^)\s]+|data:image\/[^)]+)\)/g, '<img alt="$1" src="$2">')
+    .replace(/!\[([^\]]*)\]\((https?:\/\/[^)\s]+|data:image\/[^)]+)\)/g, '<img loading="lazy" decoding="async" alt="$1" src="$2">')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/\*([^*]+)\*/g, '<em>$1</em>')
     .replace(/`([^`]+)`/g, '<code>$1</code>')
@@ -4512,7 +4640,7 @@ function materialImageHtml(doc,alt,path) {
   else if(/^(?:https?:|data:image\/)/.test(path)) src=path;
   else src=`materials_library/${doc.id}/${String(path||'').replace(/^\.\//,'')}`;
   if(!src) return `<div class="material-image-placeholder">Carregando imagem salva...</div>`;
-  return `<figure><img loading="lazy" src="${escapeAttr(src)}" alt="${escapeAttr(alt||doc.title)}"><figcaption>${escapeHtml(alt||'Figura do material')}</figcaption></figure>`;
+  return `<figure><img loading="lazy" decoding="async" src="${escapeAttr(src)}" alt="${escapeAttr(alt||doc.title)}"><figcaption>${escapeHtml(alt||'Figura do material')}</figcaption></figure>`;
 }
 function renderMaterialMarkdown(text, doc) {
   const lines = String(text || '').split(/\r?\n/);
@@ -4567,9 +4695,15 @@ function renderInlineMarkdown(text) {
 function escapeHtml(s) { return String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
 function escapeAttr(s) { return escapeHtml(s).replace(/\n/g,' '); }
 function escapeRegExp(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+function ensureViewData(tab) {
+  if(['questoes','simulados','analise'].includes(tab)) loadQuestionBank();
+  if(['simulados','analise'].includes(tab)) loadImportedSimulados();
+  if(tab === 'materiais') loadMaterialLibrary();
+}
 function render() {
   sessionStorage.setItem(UI_TAB_KEY, ui.tab);
   renderCache = { questionStats: new Map(), flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
+  ensureViewData(ui.tab);
   renderMotivation();
   renderTabs();
   const renderers = {
@@ -4601,7 +4735,13 @@ document.getElementById('printBtn').onclick = () => {
   window.addEventListener('afterprint',restore);
   requestAnimationFrame(()=>window.print());
 };
-document.getElementById('themeToggle').onclick = () => applyTheme(document.body.classList.contains('dark') ? 'light' : 'dark');
+document.getElementById('themeToggle').onclick = event => {
+  event.preventDefault();
+  event.stopPropagation();
+  applyTheme(document.body.classList.contains('dark') ? 'light' : 'dark');
+  updateAutoStudyIndicator();
+  updatePomodoroWidget();
+};
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 document.addEventListener('keydown', event => {
   if(ui.tab !== 'aulas' || event.altKey || event.ctrlKey || event.metaKey) return;
@@ -4613,8 +4753,8 @@ document.addEventListener('keydown', event => {
   if(event.code === 'Space') { event.preventDefault(); video.paused ? video.play() : video.pause(); }
   else if(event.key === 'ArrowRight') { event.preventDefault(); document.getElementById('videoForward10')?.click(); }
   else if(event.key === 'ArrowLeft') { event.preventDefault(); document.getElementById('videoBack10')?.click(); }
-  else if(event.key === '[') { event.preventDefault(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.playbackRate=next; const select=document.getElementById('videoPlaybackRate'); if(select) select.value=String(next); }
-  else if(event.key === '=') { event.preventDefault(); video.playbackRate=1; const select=document.getElementById('videoPlaybackRate'); if(select) select.value='1'; }
+  else if(event.key === '[') { event.preventDefault(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); }
+  else if(event.key === '=') { event.preventDefault(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); }
 });
 document.getElementById('accountBtn').onclick = async () => {
   if(OFFLINE_FIRST) return;
@@ -4669,8 +4809,6 @@ startMotivationCycle();
 loadMotivationMessages();
 setupSidebar();
 render();
-loadMaterialLibrary();
 loadOfficialSchedule();
 loadVideoCatalog();
-loadImportedSimulados();
 initCloud();

@@ -130,17 +130,19 @@ to{transform:translateX(-100%)}
 }@media(prefers-reduced-motion:reduce){.motivation-marquee{animation:none;padding-left:12px;white-space:normal}
 }
 .pomodoro-card{border:1px solid var(--line);border-radius:8px;background:#fbfcf8;padding:14px;margin-top:14px}
-.global-pomodoro{position:fixed;right:18px;bottom:18px;z-index:1000;display:grid;justify-items:end;gap:8px}
+.global-pomodoro{position:fixed;right:18px;bottom:18px;z-index:1000;width:58px;height:58px}
 .pomodoro-fruit{position:relative;width:58px;height:58px;border:1px solid var(--line);border-radius:50%;background:var(--panel);box-shadow:0 8px 22px rgba(18,49,72,.16);font-size:29px;cursor:pointer;transition:.2s ease}
 .pomodoro-fruit:hover,.pomodoro-fruit.active{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(239,91,86,.18),0 10px 24px rgba(18,49,72,.2)}
 .pomodoro-fruit.active{border-color:#ef5b56;background:#fff4f1}
 .pomodoro-fruit.alarming{animation:pomodoro-pulse .8s infinite}
 .pomodoro-mini-time{position:absolute;right:-7px;bottom:-4px;padding:3px 6px;border-radius:999px;background:var(--blue);color:#fff;font-size:10px;font-weight:900;font-variant-numeric:tabular-nums}
-.pomodoro-panel{width:min(280px,calc(100vw - 32px));display:grid;gap:8px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:0 14px 34px rgba(18,49,72,.2)}
+.pomodoro-panel{position:absolute;right:0;bottom:68px;width:min(280px,calc(100vw - 32px));display:grid;gap:8px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:0 14px 34px rgba(18,49,72,.2);opacity:0;transform:translate(12px,18px) scale(.2);transform-origin:bottom right;pointer-events:none;transition:opacity .18s ease,transform .18s ease}
+.pomodoro-panel.is-open{opacity:1;transform:translate(0,0) scale(1);pointer-events:auto}
+.pomodoro-panel.is-closing{pointer-events:none}
 .pomodoro-panel strong{font-size:16px}.pomodoro-panel .muted{font-size:12px}.pomodoro-options{display:flex;gap:8px;flex-wrap:wrap}.pomodoro-options>*{flex:1}
 @keyframes pomodoro-pulse{50%{filter:saturate(1.35);box-shadow:0 0 0 8px rgba(239,91,86,.2),0 10px 24px rgba(18,49,72,.2)}}
 body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{background:#3b2628}
-@media(max-width:620px){.global-pomodoro{right:12px;bottom:12px}.pomodoro-fruit{width:52px;height:52px;font-size:25px}}
+@media(max-width:620px){.global-pomodoro{right:12px;bottom:12px;width:52px;height:52px}.pomodoro-fruit{width:52px;height:52px;font-size:25px}.pomodoro-panel{bottom:62px}}
 .timer-face{font-size:42px;font-weight:900;line-height:1;margin:12px 0;color:var(--ink);font-variant-numeric:tabular-nums}
 .timer-modes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .timer-mode{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px;font-weight:800}
@@ -620,7 +622,13 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .video-layout{display:grid;grid-template-columns:minmax(280px,330px) minmax(0,1fr);gap:16px;align-items:start}
 .video-sidebar{position:sticky;top:126px;max-height:calc(100vh - 150px);overflow:auto}
 .video-filter{display:grid;grid-template-columns:110px 1fr;gap:8px}
-.video-source-toggle{margin-left:auto;white-space:nowrap;font-size:11px}
+.video-source-switch{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr 1fr;align-items:center;gap:5px;padding:5px;border:1px solid var(--line);border-radius:8px;background:var(--soft-blue)}
+.video-source-switch>span{padding:0 7px;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase}
+.video-source-switch button{min-height:34px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--muted);font-weight:800}
+.video-source-switch button:hover{color:var(--blue);background:var(--panel)}
+.video-source-switch button.active{border-color:var(--line);background:var(--panel);color:var(--blue);box-shadow:0 2px 8px rgba(18,63,89,.08)}
+body.dark .video-source-switch{background:#151c24}
+body.dark .video-source-switch button.active{background:#26343b;color:#8fd4e7}
 .video-lesson-list{display:grid;gap:7px;margin-top:12px}
 .video-lesson-choice{width:100%;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:8px;background:#fff;padding:10px;color:var(--ink)}
 .video-lesson-choice:hover,.video-lesson-choice.active{border-color:var(--blue);background:var(--soft-blue)}
@@ -700,6 +708,7 @@ body.dark .video-tabs,body.dark .video-bookmarks{background:#151c24}
 .video-focus-mode .video-player-card>.video-flashcards{grid-column:1;grid-row:5}
 }
 @media(max-width:620px){.video-filter{grid-template-columns:1fr}
+.video-source-switch{grid-template-columns:1fr 1fr}.video-source-switch>span{grid-column:1/-1}
 .video-reader-head{display:grid}
 .video-player{max-height:48vh}
 .video-bookmark{grid-template-columns:62px minmax(0,1fr) auto auto}
@@ -928,7 +937,8 @@ main{display:block;max-width:none;padding:0}
 .app-sidebar .tab.active:before{content:"";position:absolute;left:-10px;top:7px;bottom:7px;width:4px;border-radius:0 4px 4px 0;background:#0875d1}
 .app-sidebar .ui-icon{width:21px;height:21px;flex:0 0 21px}
 .sidebar-foot{padding:10px;border-top:1px solid var(--line)}
-.sidebar-theme{font-weight:800}
+.sidebar-theme{width:100%;min-height:44px;display:flex;align-items:center;justify-content:flex-start;gap:12px;padding:9px 12px;border:1px solid transparent;border-radius:8px;background:transparent;color:#526763;font-weight:800}
+.sidebar-theme:hover{background:var(--soft-blue);color:var(--blue)}
 .app-header,main{margin-left:var(--sidebar-width);transition:margin-left .22s ease}
 .app-header+main,main{width:auto;min-width:0}
 .app-header{width:calc(100% - var(--sidebar-width))}
@@ -940,14 +950,17 @@ body.sidebar-collapsed .app-sidebar{width:var(--sidebar-collapsed-width)}
 body.sidebar-collapsed .app-header,body.sidebar-collapsed main{margin-left:var(--sidebar-collapsed-width)}
 body.sidebar-collapsed .app-header{width:calc(100% - var(--sidebar-collapsed-width))}
 body.sidebar-collapsed .sidebar-brand{grid-template-columns:42px;justify-content:center;padding:16px 17px}
-body.sidebar-collapsed .sidebar-brand-copy,body.sidebar-collapsed .app-sidebar .tab span{display:none}
+body.sidebar-collapsed .sidebar-brand-copy,body.sidebar-collapsed .app-sidebar .tab span,body.sidebar-collapsed .sidebar-theme span{display:none}
 body.sidebar-collapsed .sidebar-toggle{position:absolute;right:-15px;top:25px;border:1px solid var(--line);background:var(--panel);box-shadow:0 4px 12px rgba(18,63,89,.12)}
 body.sidebar-collapsed .app-sidebar .tab{justify-content:center;padding:9px}
+body.sidebar-collapsed .sidebar-theme{justify-content:center;padding:9px}
 body.sidebar-collapsed .app-sidebar .tab.active:before{left:-10px}
 body.auth-locked .app-sidebar{display:none}
 body.dark .app-sidebar{background:rgba(25,34,35,.97)}
 body.dark .app-sidebar .tab{background:transparent;color:#b8c7c4}
 body.dark .app-sidebar .tab:hover,body.dark .app-sidebar .tab.active{background:#18313a;color:#8fd4e7}
+body.dark .sidebar-theme{background:transparent;color:#b8c7c4}
+body.dark .sidebar-theme:hover{background:#18313a;color:#8fd4e7}
 body.dark .sidebar-toggle{background:#18313a;color:#8fd4e7}
 
 .question-issue-summary{width:100%;min-height:42px;margin:12px 0 2px;padding:8px 11px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--muted);text-align:left}
@@ -1195,4 +1208,41 @@ body:not(.dark) .qbank-mode .question-stem{line-height:1.75}
   .schedule-table .schedule-topic-cell{min-width:280px}
   .schedule-table .schedule-topic-link strong{max-width:25ch}
   .schedule-table .schedule-meta{white-space:normal}
+}
+/* Listas extensas ficam fora do ciclo de pintura ate entrarem na tela. */
+.pending-list > *,
+.video-lesson-list > *,
+.library-folders > *,
+.feynman-list > *,
+.sim-review-list > *,
+.history-list > * {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 92px;
+}
+
+.question-images img,
+.material-markdown img {
+  content-visibility: auto;
+  contain-intrinsic-size: 480px 320px;
+}
+
+@media (max-width: 820px) {
+  .video-lesson-list,
+  .pending-list,
+  .library-folders {
+    overscroll-behavior: contain;
+  }
+}
+
+#aulas.view.active,
+.video-layout,
+.video-player-card,
+.video-player {
+  contain: none !important;
+  content-visibility: visible !important;
+}
+
+.video-player {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
