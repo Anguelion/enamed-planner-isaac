@@ -1137,3 +1137,23 @@ body:not(.dark) .qbank-mode .question-stem{line-height:1.75}
   .qbank-mode .question-body>.section-title .highlight-tools{width:100%;justify-content:flex-start}
   th{font-size:14px}td{font-size:16px}
 }
+
+/* Cronograma: mantem cada linha legivel mesmo quando a meta ocupa varias linhas. */
+.schedule-table th,
+.schedule-table td{vertical-align:top}
+.schedule-table .schedule-date-cell{white-space:nowrap;padding-top:16px}
+.schedule-table .schedule-block-cell{text-align:center;white-space:nowrap;padding-top:16px}
+.schedule-table .schedule-topic-cell{min-width:360px}
+.schedule-table .schedule-priority-bar{vertical-align:top;margin-top:4px}
+.schedule-table .schedule-topic-link{vertical-align:top;line-height:1.35}
+.schedule-table .schedule-topic-link strong{display:inline-block;max-width:34ch}
+.schedule-table .schedule-meta{display:block;margin:6px 0 0 12px;white-space:nowrap;line-height:1.4}
+.block-chip.week-current{border-color:#21a366;box-shadow:0 0 0 3px rgba(33,163,102,.22);color:#157347}
+.block-chip.week-current:before{background:#21a366}
+.block-chip.week-current.active{background:#157347;border-color:#157347;color:#fff;box-shadow:0 0 0 3px rgba(33,163,102,.28)}
+
+@media(max-width:820px){
+  .schedule-table .schedule-topic-cell{min-width:280px}
+  .schedule-table .schedule-topic-link strong{max-width:25ch}
+  .schedule-table .schedule-meta{white-space:normal}
+}
