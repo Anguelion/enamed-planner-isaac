@@ -843,9 +843,14 @@ th{font-size:12px;letter-spacing:.02em}
 .library-stats span{min-width:92px;padding:10px 12px;border:1px solid rgba(18,63,89,.12);border-radius:8px;background:rgba(255,255,255,.76);text-align:center;color:var(--muted);font-size:12px}
 .library-stats strong{display:block;color:var(--blue);font-size:22px}
 .library-layout{grid-template-columns:minmax(300px,360px) minmax(0,1fr);gap:18px}
+.material-block-browser{margin:16px 0;padding:18px}
+.material-block-grid{grid-template-columns:repeat(auto-fill,minmax(116px,1fr));max-height:260px;overflow:auto;padding:2px}
+.material-block-grid .qbank-block-box{min-height:82px;gap:4px}
+.material-block-grid .qbank-block-box small{color:var(--muted);font-size:12px;line-height:1.25}
 .library-sidebar{padding:15px;top:142px}
 .library-folders{gap:8px}
 .material-folder{border-radius:8px}
+.material-folder.linked{border-color:var(--teal);box-shadow:0 0 0 3px rgba(12,127,143,.10)}
 .material-folder summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;font-size:14px;line-height:1.35}
 .material-folder[open] summary{background:var(--soft-blue);color:var(--blue)}
 .folder-count{float:none;display:grid;place-items:center;min-width:27px;height:27px;border-radius:50%;background:var(--panel);font-size:12px}
@@ -870,6 +875,8 @@ th{font-size:12px;letter-spacing:.02em}
 body.dark .library-overview{background:linear-gradient(110deg,#172a33,#173531 62%,#342d1d)}
 body.dark .library-overview p,body.dark .library-stats span{color:#bdc9c7}
 body.dark .library-stats span,body.dark .material-markdown figure{background:#172128}
+body.dark .material-block-grid .qbank-block-box{background:#172128;color:#eef6f5}
+body.dark .material-block-grid .qbank-block-box.active{background:#173b48;border-color:#58b7d1}
 body.dark .reader-toc{background:rgba(24,31,40,.94)}
 @media(max-width:1100px){.library-layout{grid-template-columns:290px minmax(0,1fr)}
 .library-overview{grid-template-columns:1fr}
@@ -1101,6 +1108,8 @@ body:not(.dark) .qbank-mode .question-stem{margin:8px 0 26px;padding:0;border-ra
 
 /* Leitor e editor Markdown dos materiais */
 .material-reader-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:14px 0;padding:10px 0;border-bottom:1px solid var(--line)}
+.question-feedback{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.question-feedback .question-material-link{background:#fff;border-color:currentColor;color:inherit;font-weight:800}
 .material-reader-toolbar>div,.material-highlight-toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .material-highlight-toolbar .marker-btn{width:28px;height:28px}
 .material-reading-mode{cursor:text;user-select:text}
