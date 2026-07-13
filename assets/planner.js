@@ -43,7 +43,7 @@ let pomodoroLastSavedSecond = -1;
 const seed = JSON.parse(document.getElementById('seed').textContent);
 let state = loadState();
 normalizeOfficialScheduleNames();
-ensureRestartFromBlockNine();
+ensureRestartFromBlockTen();
 ensureDayLogs();
 ensureSimTopics();
 ensureFeynman();
@@ -102,24 +102,32 @@ function nextWeekday(date) {
   while([0,6].includes(new Date(`${d}T12:00:00`).getDay())) d = addDays(d, 1);
   return d;
 }
-function ensureRestartFromBlockNine() {
-  const version = 'block9-restart-2026-07-13-v1';
+function ensureRestartFromBlockTen() {
+  const version = 'block10-restart-2026-07-13-v2';
   if(state.schedulePlanVersion === version) return;
-  const startBlock = 9;
+  const startBlock = 10;
   const restartDate = '2026-07-13';
   const vacationUntil = '2026-08-09';
-  const lessons = (state.schedule || []).filter(item => n(item.block) >= startBlock).sort((a,b)=>n(a.block)-n(b.block) || n(a.row)-n(b.row) || byDate(a,b));
+  const schedule = state.schedule || [];
+
+  // O plano anterior levou o Bloco 9 para julho. Ele já foi estudado e volta
+  // às datas originais para não reaparecer na Trilha do dia.
+  schedule.filter(item => n(item.block) === 9).forEach(item => {
+    if(item.originalDate) item.date = item.originalDate;
+    item.day = weekdayName(item.date);
+    item.catchUp = false;
+  });
+
+  const lessons = schedule.filter(item => n(item.block) >= startBlock).sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row) || byDate(a,b));
   let date = restartDate;
   let slot = 0;
-  const dateMoves = new Map();
   lessons.forEach((item, index) => {
     date = nextWeekday(date);
     const perDay = date <= vacationUntil ? 2 : 1;
-    const oldDate = item.originalDate || item.date;
-    item.originalDate = oldDate;
+    if(!item.originalDate) item.originalDate = item.date;
     item.date = date;
-    if(oldDate !== date && !dateMoves.has(oldDate)) dateMoves.set(oldDate, date);
     item.day = weekdayName(date);
+    item.catchUp = false;
     const weekIndex = Math.floor(index / 10) + 1;
     item.week = date <= vacationUntil ? `Férias.${weekIndex}` : `Aulas.${weekIndex}`;
     slot += 1;
@@ -128,6 +136,25 @@ function ensureRestartFromBlockNine() {
       date = addDays(date, 1);
     }
   });
+
+  const catchUpPlan = [
+    { topic:'Amenorreias', terms:['amenorre'], date:'2026-07-18' },
+    { topic:'Síndrome dos Ovários Policísticos', terms:['sindrome','ovarios','policistic'], date:'2026-07-19' },
+    { topic:'Gasometria Arterial', terms:['gasometria','arterial'], date:'2026-07-25' },
+    { topic:'Distúrbios do Sódio e Potássio', terms:['disturbios','sodio','potassio'], date:'2026-07-26' }
+  ];
+  catchUpPlan.forEach(plan => {
+    const target = schedule.find(item => {
+      const topic = normalizedTopic(item.topic);
+      return n(item.block) === 7 && plan.terms.every(term => topic.includes(normalizedTopic(term)));
+    });
+    if(!target) return;
+    if(!target.originalDate) target.originalDate = target.date;
+    target.date = plan.date;
+    target.day = weekdayName(plan.date);
+    target.week = 'Recuperação';
+    target.catchUp = true;
+  });
   state.reschedule = {
     ...(state.reschedule || {}),
     fromBlock: startBlock,
@@ -135,10 +162,11 @@ function ensureRestartFromBlockNine() {
     vacationUntil,
     classReturnDate: '2026-08-10',
     weekdaysOnly: true,
-    method: 'Blocos 9+ em ordem oficial, reiniciando em 13/07/2026. Ritmo de férias com até 2 aulas por dia até 09/08; depois 1 aula por dia útil.'
+    weekendCatchUp: catchUpPlan,
+    method: 'Blocos 10+ em ordem oficial, reiniciando em 13/07/2026. Até 2 aulas por dia útil nas férias; depois 1 aula por dia útil. Pendências do Bloco 7 distribuídas aos fins de semana.'
   };
   state.schedulePlanVersion = version;
-  carryDayLogsToRestartDates(dateMoves);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 function carryDayLogsToRestartDates(dateMoves) {
   if(!Array.isArray(state.dayLogs) || !dateMoves?.size) return;
@@ -182,6 +210,7 @@ function ensureQuestionProgress() {
   if(!state.videoPlayer.bookmarks || typeof state.videoPlayer.bookmarks !== 'object') state.videoPlayer.bookmarks = {};
   if(!state.videoPlayer.resume || typeof state.videoPlayer.resume !== 'object') state.videoPlayer.resume = {};
   if(!state.videoPlayer.watched || typeof state.videoPlayer.watched !== 'object') state.videoPlayer.watched = {};
+  if(!state.videoPlayer.watchedAt || typeof state.videoPlayer.watchedAt !== 'object') state.videoPlayer.watchedAt = {};
   if(!state.videoPlayer.pinned || typeof state.videoPlayer.pinned !== 'object') state.videoPlayer.pinned = { enabled:false, lessonId:'', sourceId:'' };
   if(!state.videoPlayer.lastOpen || typeof state.videoPlayer.lastOpen !== 'object') state.videoPlayer.lastOpen = { lessonId:'', sourceId:'' };
   if(!state.dailyCheckins || typeof state.dailyCheckins !== 'object') state.dailyCheckins = {};
@@ -290,7 +319,7 @@ function applyOfficialSchedule() {
     const current = exact?.score >= 2 ? exact.item : fallback;
     if(current) used.add(current.id);
     const blockDates = datesByBlock.get(String(official.block)) || [];
-    const date = blockDates[Math.min(n(official.order)-1, Math.max(blockDates.length-1,0))] || current?.date || localISODate(new Date());
+    const date = current?.date || blockDates[Math.min(n(official.order)-1, Math.max(blockDates.length-1,0))] || localISODate(new Date());
     ordered.push({
       ...(current || {}),
       id: current?.id || `cron-medplanner-${official.block}-${official.order}`,
@@ -423,12 +452,15 @@ async function pullCloudState({ firstLogin=false }={}) {
   }
   if(data?.data?.schedule?.length) {
     state = data.data;
+    normalizeOfficialScheduleNames();
+    ensureRestartFromBlockTen();
     ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
     // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
     // Reaplica o cronograma oficial antes de exibir ou reenviar o estado.
     if(officialSchedule.length) applyOfficialSchedule();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     render();
+    scheduleCloudSave();
     setSyncStatus('Dados atualizados', 'online');
   } else if(firstLogin) {
     await pushCloudState();
@@ -1108,9 +1140,10 @@ function progress(label,value,foot='') { return `<div class="kpi-row"><div><stro
 function scheduleBlocks() { return [...new Set(state.schedule.map(x => x.block).filter(x => x !== undefined && x !== null).map(String))].sort((a,b)=>n(a)-n(b)); }
 function currentScheduleBlock() {
   const asOf = ui.refDate || localISODate(new Date());
-  const reached = state.schedule.filter(item => item.date && item.date <= asOf).sort((a,b)=>byDate(b,a))[0];
+  const mainSchedule = state.schedule.filter(item => !item.catchUp);
+  const reached = mainSchedule.filter(item => item.date && item.date <= asOf).sort((a,b)=>byDate(b,a))[0];
   if(reached?.block !== undefined) return reached.block;
-  const next = state.schedule.filter(item => item.date && item.date > asOf).sort(byDate)[0];
+  const next = mainSchedule.filter(item => item.date && item.date > asOf).sort(byDate)[0];
   return next?.block || scheduleBlocks()[0] || '';
 }
 function lastChangedLesson() {
@@ -1141,11 +1174,16 @@ function renderBlockStrip() {
 function dayRoadItems(date) {
   const lessons = state.schedule.filter(x => x.date === date).sort(byDate);
   const log = getDayLog(date);
-  const dayVideoLessons = lessons.flatMap(item => videoLessonsForSchedule(item));
+  const dayVideoLessons = [...new Map(lessons.flatMap(item => videoLessonsForSchedule(item)).map(lesson => [lesson.id, lesson])).values()];
   const dayVideoFiles = dayVideoLessons.flatMap(lesson => lesson.videos || []);
-  const videoTarget = Math.max(1, dayVideoLessons.length || lessons.length || n(log.videos) || 1);
-  const watchedVideos = dayVideoLessons.filter(lesson => lessonVideoCompleted(lesson)).length;
-  const videosDone = Math.max(n(log.videos), watchedVideos, n(log.lessonMinutes) > 0 ? 1 : 0);
+  const dayVideoProgress = dayVideoLessons.reduce((total, lesson) => {
+    const progress = videoLessonProgress(lesson);
+    total.done += progress.done;
+    total.target += progress.total;
+    return total;
+  }, { done:0, target:0 });
+  const videoTarget = Math.max(1, dayVideoProgress.target || dayVideoLessons.length || lessons.length || 1);
+  const videosDone = Math.min(videoTarget, dayVideoProgress.done);
   const questionTarget = DAILY_QUESTION_TARGET;
   const flashcardTarget = DAILY_FLASHCARD_TARGET;
   const lessonLabel = lessons.length
@@ -1263,6 +1301,47 @@ function iconSvg(name) {
 function renderDashboardMood(log) {
   return `<div class="card"><div class="section-title"><div><h2>Como você está hoje?</h2><div class="muted">Registre seu ritmo antes de começar.</div></div><span class="badge today">${fmtDate(log.date)}</span></div><div class="mood-row">${[[3,'🙂','Motivado'],[2,'😐','Mais ou menos'],[1,'😴','Lento']].map(([value,face,label]) => `<button class="mood-btn ${n(log.mood)===value?'active':''}" data-dashboard-mood="${value}">${face}<small>${label}</small></button>`).join('')}</div></div>`;
 }
+function formatDailyStudyTime(minutes) {
+  const total = Math.max(0, Math.round(n(minutes)));
+  const hours = Math.floor(total / 60);
+  const remaining = total % 60;
+  if(!hours) return `${remaining} min`;
+  return remaining ? `${hours} h ${remaining} min` : `${hours} h`;
+}
+function dailyStudySnapshot(date) {
+  const log = getDayLog(date);
+  const minutes = {
+    video:n(log.lessonMinutes),
+    questions:n(log.questionMinutes),
+    flashcards:n(log.flashcardMinutes)
+  };
+  if(date === localISODate(new Date()) && studyTimeTracker.kind) {
+    const activeMinutes = autoStudyElapsedSeconds() / 60;
+    if(studyTimeTracker.kind === 'video') minutes.video += activeMinutes;
+    else if(studyTimeTracker.kind === 'flashcards') minutes.flashcards += activeMinutes;
+    else minutes.questions += activeMinutes;
+  }
+  return {
+    log,
+    minutes,
+    totalMinutes:minutes.video + minutes.questions + minutes.flashcards,
+    videos:Math.max(0, Math.round(n(log.videos))),
+    questions:Math.max(0, Math.round(n(log.questions))),
+    flashcards:Math.max(0, Math.round(n(log.flashcards)))
+  };
+}
+function renderDailyAnalysis(date) {
+  const snapshot = dailyStudySnapshot(date);
+  const questionProgress = Math.min(100, Math.round(snapshot.questions / DAILY_QUESTION_TARGET * 100));
+  const flashcardProgress = Math.min(100, Math.round(snapshot.flashcards / DAILY_FLASHCARD_TARGET * 100));
+  const tiles = [
+    { icon:'timer', label:'Tempo estudado', value:formatDailyStudyTime(snapshot.totalMinutes), foot:`${formatDailyStudyTime(snapshot.minutes.video)} em aulas · ${formatDailyStudyTime(snapshot.minutes.questions)} em questões · ${formatDailyStudyTime(snapshot.minutes.flashcards)} em revisão`, progress:null },
+    { icon:'play', label:'Videoaulas', value:snapshot.videos, foot:snapshot.videos === 1 ? 'videoaula concluída hoje' : 'videoaulas concluídas hoje', progress:null },
+    { icon:'brain', label:'Questões', value:snapshot.questions, foot:`Meta diária: ${DAILY_QUESTION_TARGET}`, progress:questionProgress },
+    { icon:'cards', label:'Flashcards', value:snapshot.flashcards, foot:`Meta diária: ${DAILY_FLASHCARD_TARGET}`, progress:flashcardProgress }
+  ];
+  return `<section class="card daily-analysis"><div class="section-title"><div><span class="eyebrow">Seu desempenho</span><h2>Análise do dia</h2></div><span class="badge today">${fmtDate(date)}</span></div><div class="daily-analysis-grid">${tiles.map(tile => `<article class="daily-analysis-tile"><span class="daily-analysis-icon">${iconSvg(tile.icon)}</span><div><span class="daily-analysis-label">${tile.label}</span><strong>${tile.value}</strong><small>${tile.foot}</small>${tile.progress === null ? '' : `<div class="daily-analysis-progress" role="progressbar" aria-valuenow="${tile.progress}" aria-valuemin="0" aria-valuemax="100"><span style="width:${tile.progress}%"></span></div>`}</div></article>`).join('')}</div></section>`;
+}
 function renderManualStudyEntry(date) {
   const studyDate = ui.manualStudyDate || date;
   const lessons = state.schedule.filter(item => item.date === studyDate).sort(byDate);
@@ -1293,6 +1372,7 @@ function renderPainel() {
   const t = totals(); const areas = areaStats(); const next = t.next; const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
     ${renderDashboardMood(dashboardLog)}
+    ${renderDailyAnalysis(ui.refDate)}
     <div class="card">${renderDailyRoad(ui.refDate)}</div>
     ${renderCountdown()}
     <div class="grid cards">
@@ -1303,7 +1383,7 @@ function renderPainel() {
       ${metric('Pendências abertas', t.overdue, `${t.due} itens vencidos/até referência`)}
       ${metric('Próximo alvo', next ? `Bloco ${next.block}` : 'Livre', next ? `${fmtDate(next.date)} · ${next.area}` : 'Nada pendente futuro')}
     </div>
-    <div class="reschedule-note"><strong>Recomeço ajustado:</strong> blocos 9 a 30 redistribuídos a partir de 13/07/2026: ritmo de férias até 09/08 e carga reduzida a partir de 10/08, quando as aulas voltam.</div>
+    <div class="reschedule-note"><strong>Recomeço ajustado:</strong> blocos 10 a 30 redistribuídos a partir de 13/07/2026. Durante as férias: até 2 aulas por dia útil. A partir de 10/08: 1 aula por dia útil. Pendências antigas entram aos poucos nos fins de semana.</div>
     ${renderManualStudyEntry(ui.refDate)}
     <div class="grid two">
       <div class="card"><div class="section-title"><h2>Ritmo da semana</h2><input class="input" id="refDate" inputmode="numeric" placeholder="dd/mm/aaaa"></div>
@@ -2643,6 +2723,30 @@ function scheduleVideoCompleted(item) {
   const lessons = videoLessonsForSchedule(item);
   return lessons.length > 0 && lessons.every(lesson => lessonVideoCompleted(lesson));
 }
+function setVideoWatchedState(videoId, watched) {
+  if(!videoId) return;
+  const wasWatched = Boolean(state.videoPlayer.watched[videoId]);
+  if(watched && !wasWatched) {
+    const completedAt = new Date().toISOString();
+    const date = completedAt.slice(0, 10);
+    state.videoPlayer.watched[videoId] = true;
+    state.videoPlayer.watchedAt[videoId] = completedAt;
+    const log = getDayLog(date);
+    log.videosOn = true;
+    log.videos = n(log.videos) + 1;
+    return;
+  }
+  if(!watched && wasWatched) {
+    const completedDate = String(state.videoPlayer.watchedAt[videoId] || '').slice(0, 10);
+    delete state.videoPlayer.watched[videoId];
+    delete state.videoPlayer.watchedAt[videoId];
+    if(completedDate) {
+      const log = getDayLog(completedDate);
+      log.videos = Math.max(0, n(log.videos) - 1);
+      log.videosOn = n(log.videos) > 0 || n(log.lessonMinutes) > 0;
+    }
+  }
+}
 function setScheduleVideosWatched(scheduleId, watched) {
   const item = state.schedule.find(entry => entry.id === scheduleId);
   if(!item) return;
@@ -2650,9 +2754,9 @@ function setScheduleVideosWatched(scheduleId, watched) {
     videoParts(lesson).forEach(part => {
       if(watched) {
         const preferred = part.videos.find(video => video.type === 'complete') || part.videos[0];
-        if(preferred) state.videoPlayer.watched[preferred.id] = true;
+        if(preferred) setVideoWatchedState(preferred.id, true);
       } else {
-        part.videos.forEach(video => { delete state.videoPlayer.watched[video.id]; });
+        part.videos.forEach(video => setVideoWatchedState(video.id, false));
       }
     });
   });
@@ -2910,7 +3014,7 @@ function renderAulas() {
   });
   document.querySelectorAll('[data-video-questions]').forEach(button => button.onclick = event => openQuestionsForSchedule(event.currentTarget.dataset.videoQuestions));
   document.querySelectorAll('[data-video-materials]').forEach(button => button.onclick = event => openMaterialsForSchedule(event.currentTarget.dataset.videoMaterials));
-  bindVideoPlayer(source, schedule);
+  bindVideoPlayer(source, schedule, lesson);
   const watchedButton = document.getElementById('videoMarkWatched');
   if(watchedButton && lesson && source) {
     const pinButton = document.createElement('button');
@@ -2930,7 +3034,39 @@ function renderAulas() {
   });
   document.querySelectorAll('[data-remove-video-card]').forEach(button => button.onclick = event => removeVideoFlashcard(event.currentTarget.dataset.removeVideoCard, event.currentTarget.dataset.cardId));
 }
-function bindVideoPlayer(source, schedule) {
+function nextCompleteVideoSource(lesson, source) {
+  if(!lesson || source?.type !== 'complete') return null;
+  const completeVideos = videoParts(lesson).flatMap(part => part.videos.filter(video => video.type === 'complete'));
+  if(completeVideos.length < 2) return null;
+  const currentIndex = completeVideos.findIndex(video => video.id === source.id);
+  if(currentIndex < 0) return null;
+  return completeVideos.slice(currentIndex + 1).find(video => !state.videoPlayer.watched[video.id]) || null;
+}
+function showVideoContinuationPrompt(lesson, completedSource, nextSource) {
+  const host = document.getElementById('aulas');
+  if(!host || !lesson || !nextSource) return;
+  host.querySelector('.video-continuation-overlay')?.remove();
+  const overlay = document.createElement('div');
+  overlay.className = 'video-continuation-overlay';
+  overlay.innerHTML = `<div class="video-continuation-dialog" role="dialog" aria-modal="true" aria-labelledby="videoContinuationTitle"><span class="video-continuation-icon">✓</span><div><span class="eyebrow">Parte concluída</span><h2 id="videoContinuationTitle">Quer continuar nesta aula?</h2><p>Você terminou <strong>${escapeHtml(videoContentLabel(completedSource))}</strong>. A próxima é <strong>${escapeHtml(videoContentLabel(nextSource))}</strong>.</p></div><div class="video-continuation-actions"><button class="icon-btn" data-video-continuation="pause">Dar uma pausa</button><button class="icon-btn primary" data-video-continuation="next">Ir para a próxima</button></div></div>`;
+  host.append(overlay);
+  const pauseButton = overlay.querySelector('[data-video-continuation="pause"]');
+  const nextButton = overlay.querySelector('[data-video-continuation="next"]');
+  pauseButton.onclick = () => overlay.remove();
+  nextButton.onclick = () => {
+    ui.videoLessonId = lesson.id;
+    ui.videoSourceId = nextSource.id;
+    state.videoPlayer.lastOpen = { lessonId:lesson.id, sourceId:nextSource.id };
+    saveStateOnly();
+    renderAulas();
+    requestAnimationFrame(() => {
+      const nextVideo = document.getElementById('lessonVideo');
+      nextVideo?.play().catch(() => {});
+    });
+  };
+  nextButton.focus();
+}
+function bindVideoPlayer(source, schedule, lesson) {
   if(!source) return;
   const video = document.getElementById('lessonVideo');
   if(!video) return;
@@ -2968,7 +3104,15 @@ function bindVideoPlayer(source, schedule) {
   const saveProgress = () => { state.videoPlayer.resume[source.id] = Math.floor(video.currentTime || 0); saveStateOnly(); };
   video.addEventListener('play', () => startAutoStudy('video', schedule?.id || ''));
   video.addEventListener('pause', () => { pauseAutoStudy('video'); saveProgress(); });
-  video.addEventListener('ended', () => { stopAutoStudy('video'); state.videoPlayer.resume[source.id] = 0; state.videoPlayer.watched[source.id] = true; saveStateOnly(); renderAulas(); });
+  video.addEventListener('ended', () => {
+    stopAutoStudy('video', false);
+    state.videoPlayer.resume[source.id] = 0;
+    setVideoWatchedState(source.id, true);
+    const nextSource = nextCompleteVideoSource(lesson, source);
+    saveStateOnly();
+    renderAulas();
+    if(nextSource) showVideoContinuationPrompt(lesson, source, nextSource);
+  });
   video.addEventListener('timeupdate', () => {
     const currentSecond = Math.floor(video.currentTime || 0);
     const stamp=document.getElementById('videoBookmarkTime');
@@ -2997,7 +3141,7 @@ function bindVideoPlayer(source, schedule) {
       video.playbackRate=rate;
     });
   }
-  document.getElementById('videoMarkWatched')?.addEventListener('click', () => { state.videoPlayer.watched[source.id]=!state.videoPlayer.watched[source.id]; saveStateOnly(); renderAulas(); });
+  document.getElementById('videoMarkWatched')?.addEventListener('click', () => { setVideoWatchedState(source.id, !state.videoPlayer.watched[source.id]); saveStateOnly(); renderAulas(); });
   document.getElementById('addVideoBookmark')?.addEventListener('click', () => {
     const label = document.getElementById('videoBookmarkLabel').value.trim();
     if(!label) { document.getElementById('videoBookmarkLabel').focus(); return; }
@@ -4747,8 +4891,8 @@ function render() {
   updatePomodoroWidget();
 }
 document.getElementById('exportBtn').onclick = () => { const blob = new Blob([JSON.stringify(state,null,2)], {type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='backup-enamed-planner.json'; a.click(); URL.revokeObjectURL(a.href); };
-document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); state=data; persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
-document.getElementById('resetBtn').onclick = () => { if(confirm('Voltar aos dados originais importados do Excel? Esta alteração também será sincronizada.')) { state=structuredClone(seed); persist(); } };
+document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
+document.getElementById('resetBtn').onclick = () => { if(confirm('Voltar aos dados originais importados do Excel? Esta alteração também será sincronizada.')) { state=structuredClone(seed); normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); persist(); } };
 document.getElementById('printBtn').onclick = () => {
   const previousTab=ui.tab;
   ui.tab='painel';

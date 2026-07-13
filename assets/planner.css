@@ -117,6 +117,19 @@ td.num,th.num{text-align:right}
 .mood-btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:10px 8px;min-height:52px;font-weight:800}
 .mood-btn.active{border-color:var(--green);background:var(--soft-green);color:var(--green)}
 .mood-btn small{display:block;font-weight:600;color:var(--muted);margin-top:2px}
+.daily-analysis{overflow:hidden}
+.daily-analysis-grid{display:grid;grid-template-columns:1.35fr repeat(3,minmax(180px,1fr));gap:12px}
+.daily-analysis-tile{min-width:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;padding:16px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,var(--panel),var(--soft-blue))}
+.daily-analysis-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:9px;background:#1261f5;color:#fff}
+.daily-analysis-icon .ui-icon{width:23px;height:23px}
+.daily-analysis-label{display:block;color:var(--muted);font-size:14px;font-weight:700}
+.daily-analysis-tile strong{display:block;margin-top:2px;color:var(--blue);font-size:28px;line-height:1.2}
+.daily-analysis-tile small{display:block;margin-top:5px;color:var(--muted);font-size:13px;line-height:1.45}
+.daily-analysis-progress{height:6px;margin-top:11px;overflow:hidden;border-radius:999px;background:var(--line)}
+.daily-analysis-progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#1261f5,var(--cyan))}
+body.dark .daily-analysis-tile{background:linear-gradient(145deg,#182128,#18313a)}
+@media(max-width:1180px){.daily-analysis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.daily-analysis-grid{grid-template-columns:1fr}.daily-analysis-tile{padding:14px}.daily-analysis-tile strong{font-size:25px}}
 .field-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .full-field{grid-column:1/-1}
 .hidden{display:none!important}
@@ -675,11 +688,18 @@ body.dark .video-source-switch button.active{background:#26343b;color:#8fd4e7}
 .video-bookmark .delete-bookmark{grid-column:4;grid-row:1/3;color:var(--red);font-size:17px}
 .video-bookmark-label-input{grid-column:2;grid-row:1/3;width:100%;min-width:0;padding:5px 7px}
 .video-player-card>.video-flashcards{grid-column:1;grid-row:5}
+.video-continuation-overlay{position:fixed;inset:0;z-index:1400;display:grid;place-items:center;padding:20px;background:rgba(11,25,35,.62);backdrop-filter:blur(4px)}
+.video-continuation-dialog{width:min(560px,100%);display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:22px;border:1px solid var(--line);border-radius:8px;background:var(--panel);box-shadow:0 24px 70px rgba(5,24,39,.3)}
+.video-continuation-dialog h2{margin:2px 0 8px;font-size:25px;color:var(--blue)}
+.video-continuation-dialog p{margin:0;color:var(--muted);line-height:1.6}
+.video-continuation-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:var(--green);color:#fff;font-size:24px;font-weight:900}
+.video-continuation-actions{grid-column:1/-1;display:flex;justify-content:flex-end;gap:10px;margin-top:4px}
 .video-empty{min-height:400px;display:grid;place-items:center;text-align:center;color:var(--muted)}
 body.dark .video-lesson-choice,body.dark .video-tab{background:#1b222c;color:#e8eef7}
 body.dark .video-tab.active{background:rgba(47,125,246,.2);border-left-color:#69a5ff}
 body.dark .video-bookmark{background:#1b222c}
 body.dark .video-tabs,body.dark .video-bookmarks{background:#151c24}
+body.dark .video-continuation-dialog{background:#151c24}
 .video-focus-mode{grid-template-columns:1fr}
 .video-focus-mode .video-sidebar{display:none}
 .video-focus-mode .video-player-card{grid-template-columns:minmax(0,1fr) minmax(270px,330px);grid-template-rows:auto auto minmax(120px,1fr) auto auto}
@@ -712,6 +732,7 @@ body.dark .video-tabs,body.dark .video-bookmarks{background:#151c24}
 .video-reader-head{display:grid}
 .video-player{max-height:48vh}
 .video-bookmark{grid-template-columns:62px minmax(0,1fr) auto auto}
+.video-continuation-dialog{grid-template-columns:1fr;padding:18px}.video-continuation-icon{width:42px;height:42px}.video-continuation-actions{display:grid}.video-continuation-actions .icon-btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){.video-title-track{animation:none}.video-title-ticker{white-space:normal}}
 body.dark .road-step{background:#202a2a}
