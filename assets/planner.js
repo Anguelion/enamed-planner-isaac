@@ -4,6 +4,7 @@ const UI_TAB_KEY = 'enamed-planner-active-tab';
 const SIDEBAR_KEY = 'enamed-planner-sidebar-collapsed';
 const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
+const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 const STUDY_TIMER_KEY = 'enamed-planner-study-timer';
 const QUESTION_TIMER_KEY = 'enamed-planner-question-timer';
 // O navegador continua local-first; quando houver internet, sincroniza com o Supabase.
@@ -2181,7 +2182,10 @@ async function loadOfficialSchedule() {
   }
 }
 function videoAssetUrl(video) {
-  return `video_library/media/${String(video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/')}`;
+  const relativePath = String(video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
+  const localUrl = `video_library/media/${relativePath}`;
+  // A cópia local continua funcionando sem internet; o site publicado usa o R2.
+  return window.location.protocol === 'file:' ? localUrl : `${R2_VIDEO_BASE_URL}/video_library/media/${relativePath}`;
 }
 function formatVideoTime(seconds=0) {
   const total = Math.max(0, Math.floor(Number(seconds) || 0));
