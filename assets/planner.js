@@ -2,6 +2,7 @@ const STORAGE_KEY = 'enamed-planner-v3';
 const THEME_KEY = 'enamed-theme';
 const UI_TAB_KEY = 'enamed-planner-active-tab';
 const SIDEBAR_KEY = 'enamed-planner-sidebar-collapsed';
+const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const STUDY_TIMER_KEY = 'enamed-planner-study-timer';
 const QUESTION_TIMER_KEY = 'enamed-planner-question-timer';
 // O navegador continua local-first; quando houver internet, sincroniza com o Supabase.
@@ -51,6 +52,7 @@ let currentUser = null;
 let syncTimer = null;
 let syncInFlight = false;
 let renderCache = { questionStats: new Map(), flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
+let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
   ['painel','Dashboard','dashboard'], ['pendencias','Pendências','alert'], ['cronograma','Trilha','route'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
 ];
@@ -3283,9 +3285,10 @@ function renderQuestionBank() {
   ui.qIndex = Math.max(0, Math.min(ui.qIndex, Math.max(questions.length - 1, 0)));
   const question = questions[ui.qIndex];
   const activeQuestion = question ? applyQuestionEdits(question) : null;
-  document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode">
+  document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
+    <button class="icon-btn question-sidebar-reopen" id="reopenQuestionSidebar" title="Abrir painel do banco" aria-label="Abrir painel do banco">☰</button>
     <aside class="card question-sidebar">
-      <div class="section-title"><h2>Banco privado</h2><span class="badge today">${questionBank.length} questões</span></div>
+      <div class="section-title"><h2>Banco privado</h2><div class="question-sidebar-actions"><span class="badge today">${questionBank.length} questões</span><button class="icon-btn" id="collapseQuestionSidebar" title="Fechar painel do banco" aria-label="Fechar painel do banco">×</button></div></div>
       <div class="muted">Organizado por blocos do planner e coleções especiais.</div>
       <div class="question-counts"><div><strong>${answered.length}</strong><span class="muted">Feitas</span></div><div><strong>${correct.length}</strong><span class="muted">Certas</span></div><div><strong>${answered.length-correct.length}</strong><span class="muted">Erros</span></div></div>
       <button class="question-issue-summary ${flagged?'has-items':''}" id="showQuestionIssues"><span>⚑</span><strong>${flagged}</strong><span>${flagged===1?'gabarito marcado':'gabaritos marcados'}</span></button>
@@ -3305,6 +3308,8 @@ function renderQuestionBank() {
     <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : '<div class="empty">Nenhuma questão corresponde a este filtro.</div>'}</div>
   </div>`;
   document.getElementById('questionBlock').onchange = e => { ui.qFocusScheduleId=''; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  document.getElementById('collapseQuestionSidebar').onclick = () => { questionSidebarCollapsed=true; localStorage.setItem(QUESTION_SIDEBAR_KEY,'1'); render(); };
+  document.getElementById('reopenQuestionSidebar').onclick = () => { questionSidebarCollapsed=false; localStorage.removeItem(QUESTION_SIDEBAR_KEY); render(); };
   document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionTopic').onchange = e => { ui.qFocusScheduleId=''; ui.qTopic=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionStatus').onchange = e => { ui.qStatus=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };

@@ -392,6 +392,14 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .eliminate-btn.active{background:var(--soft-red);color:var(--red);border-color:var(--red)}
 .answer-option.eliminated span:last-child{text-decoration:line-through;text-decoration-thickness:2px;color:var(--muted);opacity:.72}
 .qbank-mode{align-items:start}
+.qbank-mode{position:relative}
+.question-sidebar-actions{display:flex;align-items:center;gap:8px}
+.question-sidebar-actions .icon-btn{min-width:34px;min-height:34px;padding:4px 9px}
+.question-sidebar-reopen{display:none;position:absolute;top:-6px;left:0;z-index:3}
+.qbank-mode.sidebar-collapsed{display:block}
+.qbank-mode.sidebar-collapsed .question-sidebar{display:none}
+.qbank-mode.sidebar-collapsed .question-sidebar-reopen{display:inline-flex}
+.qbank-mode.sidebar-collapsed .question-card{width:100%;margin-top:28px}
 .qbank-mode .question-stem{border-radius:8px;padding:16px;margin-bottom:8px;background:var(--soft-blue)}
 .qbank-blocks{display:grid;gap:8px;margin:12px 0}
 .qbank-block-row{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:8px;background:#fbfdfc;padding:10px}
