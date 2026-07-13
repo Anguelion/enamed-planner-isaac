@@ -622,6 +622,7 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .video-player-card{min-width:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,300px);grid-template-rows:auto auto minmax(120px,1fr) auto auto;gap:12px 16px;align-items:start}
 .video-reader-head{grid-column:1/-1;grid-row:1;display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:2px}
 .video-reader-head>div:first-child{min-width:0;flex:1}
+.video-focus-toggle{white-space:nowrap;align-self:flex-start}
 .video-title-ticker{max-width:100%;overflow:hidden;white-space:nowrap}
 .video-title-track{display:flex;width:max-content;will-change:transform;animation:video-title-ticker var(--ticker-duration,18s) linear infinite}
 .video-title-track>span{display:block;padding-right:64px}
@@ -657,6 +658,16 @@ body.dark .video-lesson-choice,body.dark .video-tab{background:#1b222c;color:#e8
 body.dark .video-tab.active{background:rgba(47,125,246,.2);border-left-color:#69a5ff}
 body.dark .video-bookmark{background:#1b222c}
 body.dark .video-tabs,body.dark .video-bookmarks{background:#151c24}
+.video-focus-mode{grid-template-columns:1fr}
+.video-focus-mode .video-sidebar{display:none}
+.video-focus-mode .video-player-card{grid-template-columns:minmax(0,1fr) minmax(270px,330px);grid-template-rows:auto auto minmax(120px,1fr) auto auto}
+.video-focus-mode .video-reader-head{grid-column:1/-1}
+.video-focus-mode .video-tabs{display:none}
+.video-focus-mode .video-player{grid-column:1;grid-row:2/3;max-height:calc(100vh - 270px)}
+.video-focus-mode .video-controls{grid-column:1;grid-row:3}
+.video-focus-mode .video-bookmarks{grid-column:2;grid-row:2/5;max-height:calc(100vh - 300px)}
+.video-focus-mode .video-player-card>.video-flashcards{grid-column:1;grid-row:4}
+@media(max-width:900px){.video-focus-mode .video-player-card{grid-template-columns:minmax(0,1fr) 250px;gap:10px}.video-focus-mode .video-bookmarks{padding:10px}.video-focus-mode .video-bookmark-form{grid-template-columns:1fr}.video-focus-mode .video-bookmark-form .badge{justify-self:start}}
 @media(max-width:1180px){.video-layout{grid-template-columns:1fr}
 .video-sidebar{position:static;max-height:none}
 }
@@ -667,6 +678,12 @@ body.dark .video-tabs,body.dark .video-bookmarks{background:#151c24}
 .video-tabs{grid-column:1;grid-row:4}
 .video-bookmarks{grid-column:1;grid-row:5;max-height:none}
 .video-player-card>.video-flashcards{grid-column:1;grid-row:6}
+.video-focus-mode .video-player-card{grid-template-columns:1fr;grid-template-rows:auto auto auto auto auto auto}
+.video-focus-mode .video-tabs{display:none}
+.video-focus-mode .video-player{grid-column:1;grid-row:2}
+.video-focus-mode .video-controls{grid-column:1;grid-row:3}
+.video-focus-mode .video-bookmarks{grid-column:1;grid-row:4;max-height:none}
+.video-focus-mode .video-player-card>.video-flashcards{grid-column:1;grid-row:5}
 }
 @media(max-width:620px){.video-filter{grid-template-columns:1fr}
 .video-reader-head{display:grid}
