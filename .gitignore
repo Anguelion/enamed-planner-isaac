@@ -1,0 +1,11 @@
+trash/
+archive/
+tmp/
+deferred_sync/
+tools/
+video_library/media/
+*.mp4
+*.mkv
+*.mov
+*.avi
+backup-*.json

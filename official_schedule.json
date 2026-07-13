@@ -1,0 +1,1496 @@
+{
+  "source": "pasted-text.txt",
+  "items": [
+    {
+      "block": 1,
+      "order": 1,
+      "topic": "História e Princípios do SUS",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 1,
+      "order": 2,
+      "topic": "Aleitamento Materno",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 1,
+      "order": 3,
+      "topic": "Alimentação Infantil",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 1,
+      "order": 4,
+      "topic": "Introdução ao Sistema Reprodutor Feminino",
+      "area": "G.O",
+      "priority": "Baixa"
+    },
+    {
+      "block": 1,
+      "order": 5,
+      "topic": "Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 1,
+      "order": 6,
+      "topic": "Avaliação do Hemograma e Anemias",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 2,
+      "order": 1,
+      "topic": "HAS Ambulatorial",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 2,
+      "order": 2,
+      "topic": "Ciclo Menstrual",
+      "area": "G.O",
+      "priority": "Média"
+    },
+    {
+      "block": 2,
+      "order": 3,
+      "topic": "Gestação inicial",
+      "area": "G.O",
+      "priority": "Média"
+    },
+    {
+      "block": 2,
+      "order": 4,
+      "topic": "Crescimento e Baixa Estatura",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 2,
+      "order": 5,
+      "topic": "Puberdade",
+      "area": "Pediatria",
+      "priority": "Média"
+    },
+    {
+      "block": 2,
+      "order": 6,
+      "topic": "ATLS - Letra A",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 2,
+      "order": 7,
+      "topic": "ATLS - Letra B",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 2,
+      "order": 8,
+      "topic": "Insuficiência Cardíaca",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    },
+    {
+      "block": 2,
+      "order": 9,
+      "topic": "CofBasics - Avaliação de Vitalidade Fetal (G.O)",
+      "area": "CofBasics",
+      "priority": "Alta"
+    },
+    {
+      "block": 3,
+      "order": 1,
+      "topic": "Legislação do SUS",
+      "area": "Saúde Coletiva",
+      "priority": "Média"
+    },
+    {
+      "block": 3,
+      "order": 2,
+      "topic": "Assistência ao Pré-Natal",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 3,
+      "order": 3,
+      "topic": "Tabagismo",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 3,
+      "order": 4,
+      "topic": "Nefrologia Pediátrica",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 3,
+      "order": 5,
+      "topic": "ATLS - Letra C e X",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 3,
+      "order": 6,
+      "topic": "Espirometria Básica e Asma",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 3,
+      "order": 7,
+      "topic": "Doença Pulmonar Obstrutiva Crônica (DPOC)",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 4,
+      "order": 1,
+      "topic": "Diabetes: diagnóstico e abordagem laboratorial",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 4,
+      "order": 2,
+      "topic": "Estática Fetal",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 4,
+      "order": 3,
+      "topic": "Assistência ao Parto",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 4,
+      "order": 4,
+      "topic": "Gastropediatria",
+      "area": "G.O",
+      "priority": "Média"
+    },
+    {
+      "block": 4,
+      "order": 5,
+      "topic": "ATLS - Letra D",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 4,
+      "order": 6,
+      "topic": "ATLS - Letra E e seguimento do tratamento do politrauma",
+      "area": "Cirurgia",
+      "priority": "Média"
+    },
+    {
+      "block": 4,
+      "order": 7,
+      "topic": "Diabetes: hipoglicemia e emergências hiperglicêmicas (CAD e EHH)",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 1,
+      "topic": "Sofrimento Fetal Agudo",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 2,
+      "topic": "Pneumonias",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 3,
+      "topic": "Bronquiolite e Tuberculose",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 4,
+      "topic": "Queimaduras",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 5,
+      "topic": "Urgência e Emergência Hipertensiva",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 6,
+      "topic": "Neurovascular 1",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 7,
+      "topic": "Neurovascular 2",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 8,
+      "topic": "CofBasics - Semiologia Neurológica e Topografia da Lesão (Clínica Médica)",
+      "area": "CofBasics",
+      "priority": "Alta"
+    },
+    {
+      "block": 5,
+      "order": 9,
+      "topic": "CofBasics - Processo de Saúde e Doença (Saúde Coletiva)",
+      "area": "CofBasics",
+      "priority": "Alta"
+    },
+    {
+      "block": 6,
+      "order": 1,
+      "topic": "Níveis de Prevenção",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 6,
+      "order": 2,
+      "topic": "Sífilis e uretrites infecciosas",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 6,
+      "order": 3,
+      "topic": "Tuberculose (adulto)",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 6,
+      "order": 4,
+      "topic": "Pediatria Geral",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 6,
+      "order": 5,
+      "topic": "Transtornos Psiquiátricos no Pós-Parto",
+      "area": "Saúde Mental",
+      "priority": "Média"
+    },
+    {
+      "block": 6,
+      "order": 6,
+      "topic": "Puerpério",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 6,
+      "order": 7,
+      "topic": "Abdome agudo - introduçao e abordagem sindrômica",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 7,
+      "order": 1,
+      "topic": "Determinação Social do Processo Saúde-Doença e Promoção de Saúde",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 7,
+      "order": 2,
+      "topic": "Infecção Urinária na Prática Clínica",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 7,
+      "order": 3,
+      "topic": "Amenorreias",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 7,
+      "order": 4,
+      "topic": "Síndrome dos Ovários Policísticos",
+      "area": "G.O",
+      "priority": "Média"
+    },
+    {
+      "block": 7,
+      "order": 5,
+      "topic": "Convulsões na emergência e Traumatismo Cranioencefálico Leve",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 7,
+      "order": 6,
+      "topic": "Abdome agudo inflamatório - vias biliares",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 7,
+      "order": 7,
+      "topic": "Gasometria Arterial e distúrbios ácido-base",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 7,
+      "order": 8,
+      "topic": "Distúrbios do Sódio e do Potássio",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 8,
+      "order": 1,
+      "topic": "Síndrome dispeptica: dispepsia, fisiologia gastrica, DRGE",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 8,
+      "order": 2,
+      "topic": "Desenvolvimento Infantil",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 8,
+      "order": 3,
+      "topic": "Rastreamentos",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 8,
+      "order": 4,
+      "topic": "Transtornos do desenvolvimento e aprendizagem",
+      "area": "Saúde Mental",
+      "priority": "Alta"
+    },
+    {
+      "block": 8,
+      "order": 5,
+      "topic": "Sangramentos da Primeira Metade da Gestação",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 8,
+      "order": 6,
+      "topic": "Sangramentos da Segunda Metade da Gestação",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 8,
+      "order": 7,
+      "topic": "Abdome agudo inflamatório - apendicite",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 8,
+      "order": 8,
+      "topic": "Pancreatite aguda e crônica",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    },
+    {
+      "block": 9,
+      "order": 1,
+      "topic": "Introdução a Geriatria e Avaliação Geriátrica Ampla",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 9,
+      "order": 2,
+      "topic": "Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 9,
+      "order": 3,
+      "topic": "Dermatoses e Infecções de Partes Moles",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 9,
+      "order": 4,
+      "topic": "Corrimentos Vaginais",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 9,
+      "order": 5,
+      "topic": "Úlceras Genitais",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 9,
+      "order": 6,
+      "topic": "Doença Inflamatória Pélvica Aguda",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 9,
+      "order": 7,
+      "topic": "Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+      "area": "Pediatria",
+      "priority": "Média"
+    },
+    {
+      "block": 9,
+      "order": 8,
+      "topic": "Abdome agudo inflamatório - diverticulite e abcesso hepático",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 9,
+      "order": 9,
+      "topic": "CofBasics - Lesões Elementares (Pediatria)",
+      "area": "CofBasics",
+      "priority": "Alta"
+    },
+    {
+      "block": 9,
+      "order": 10,
+      "topic": "CofBasics - Fundamentos de Bioestatística (Saúde Coletiva)",
+      "area": "CofBasics",
+      "priority": "Média"
+    },
+    {
+      "block": 10,
+      "order": 1,
+      "topic": "Indicadores de Saúde",
+      "area": "Saúde Coletiva",
+      "priority": "Média"
+    },
+    {
+      "block": 10,
+      "order": 2,
+      "topic": "Infecção de Vias Aéreas Superiores",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 10,
+      "order": 3,
+      "topic": "Rotura Prematura de Membranas Ovulares",
+      "area": "G.O",
+      "priority": "Média"
+    },
+    {
+      "block": 10,
+      "order": 4,
+      "topic": "Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico",
+      "area": "Cirurgia",
+      "priority": "Média"
+    },
+    {
+      "block": 10,
+      "order": 5,
+      "topic": "Artrites",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 10,
+      "order": 6,
+      "topic": "Fibromialgia",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 11,
+      "order": 1,
+      "topic": "Hematopediatria 1",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 11,
+      "order": 2,
+      "topic": "Hematopediatria 2",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 11,
+      "order": 3,
+      "topic": "Hérnias",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 11,
+      "order": 4,
+      "topic": "Coagulopatias",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 11,
+      "order": 5,
+      "topic": "Onco-hematologia",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    },
+    {
+      "block": 11,
+      "order": 6,
+      "topic": "Estudos Epidemiológicos",
+      "area": "Saúde Coletiva",
+      "priority": "Média"
+    },
+    {
+      "block": 11,
+      "order": 7,
+      "topic": "CofBasics - Associação e Causalidade (Saúde Coletiva)",
+      "area": "CofBasics",
+      "priority": "Baixa"
+    },
+    {
+      "block": 12,
+      "order": 1,
+      "topic": "Medidas de Associação",
+      "area": "Saúde Coletiva",
+      "priority": "Baixa"
+    },
+    {
+      "block": 12,
+      "order": 2,
+      "topic": "Diarreia Aguda",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 12,
+      "order": 3,
+      "topic": "Sangramento Uterino Anormal",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 12,
+      "order": 4,
+      "topic": "Dor Pélvica",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 12,
+      "order": 5,
+      "topic": "Perioperatório do cirurgiao",
+      "area": "Cirurgia",
+      "priority": "Média"
+    },
+    {
+      "block": 12,
+      "order": 6,
+      "topic": "Taquiarritmias e ACL/BLS",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 12,
+      "order": 7,
+      "topic": "Bradiarritmias e síncope",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 13,
+      "order": 1,
+      "topic": "Redes de Atenção à Saúde e Níveis de Atenção",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 13,
+      "order": 2,
+      "topic": "Violência Sexual",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 13,
+      "order": 3,
+      "topic": "Febre Sem Sinais Localizatórios",
+      "area": "Pediatria",
+      "priority": "Baixa"
+    },
+    {
+      "block": 13,
+      "order": 4,
+      "topic": "Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 13,
+      "order": 5,
+      "topic": "Pneumonia: PAC e hospitalar",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 13,
+      "order": 6,
+      "topic": "Derrame pleural",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 14,
+      "order": 1,
+      "topic": "Atenção Primária à Saúde",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 14,
+      "order": 2,
+      "topic": "Diabetes na Gestação",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 14,
+      "order": 3,
+      "topic": "Suporte Avançado de Vida em Pediatria (PALS)",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 14,
+      "order": 4,
+      "topic": "Cetoacidose diabética na Pediatria",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 14,
+      "order": 5,
+      "topic": "Esôfago no ENAMED",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 14,
+      "order": 6,
+      "topic": "Dislipidemia: classificação, diagnóstico e tratamento",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 14,
+      "order": 7,
+      "topic": "Síndrome metabólica e Obesidade",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 15,
+      "order": 1,
+      "topic": "Ferramentas da APS",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 15,
+      "order": 2,
+      "topic": "Cefaleias",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 15,
+      "order": 3,
+      "topic": "Infecções na Gravidez",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 15,
+      "order": 4,
+      "topic": "Infecções Congênitas",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 15,
+      "order": 5,
+      "topic": "Cirurgia Bariatrica",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 15,
+      "order": 6,
+      "topic": "Meningites",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 16,
+      "order": 1,
+      "topic": "Icterícias febris e febre maculosa",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 16,
+      "order": 2,
+      "topic": "Hepatites Virais",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 16,
+      "order": 3,
+      "topic": "Abordagem Familiar e Comunitária",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 16,
+      "order": 4,
+      "topic": "Síndromes Hipertensivas na Gestação",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 16,
+      "order": 5,
+      "topic": "Neoplasias Pediátricas",
+      "area": "Pediatria",
+      "priority": "Média"
+    },
+    {
+      "block": 16,
+      "order": 6,
+      "topic": "Urologia do Pronto Socorro",
+      "area": "Cirurgia",
+      "priority": "Média"
+    },
+    {
+      "block": 17,
+      "order": 1,
+      "topic": "Estratégia da Saúde da Família",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 17,
+      "order": 2,
+      "topic": "Mastologia",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 17,
+      "order": 3,
+      "topic": "Infecção de Trato Urinário e Meningite",
+      "area": "Pediatria",
+      "priority": "Média"
+    },
+    {
+      "block": 17,
+      "order": 4,
+      "topic": "Trauma Urológico",
+      "area": "Cirurgia",
+      "priority": "Média"
+    },
+    {
+      "block": 17,
+      "order": 5,
+      "topic": "SRAG + suportes ventilatórios",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 17,
+      "order": 6,
+      "topic": "Intoxicações",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 17,
+      "order": 7,
+      "topic": "CofBasics - Propedêutica Mamária (G.O)",
+      "area": "CofBasics",
+      "priority": "Alta"
+    },
+    {
+      "block": 18,
+      "order": 1,
+      "topic": "MCCP - Método Clínico Centrado na Pessoa e ReSOAP",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 18,
+      "order": 2,
+      "topic": "Uroginecologia",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 18,
+      "order": 3,
+      "topic": "Sepse e Choque Séptico Pediátrico",
+      "area": "Pediatria",
+      "priority": "Média"
+    },
+    {
+      "block": 18,
+      "order": 4,
+      "topic": "Uro-oncologia",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 18,
+      "order": 5,
+      "topic": "Hiperplasia prostatica benigna",
+      "area": "Cirurgia",
+      "priority": "Média"
+    },
+    {
+      "block": 18,
+      "order": 6,
+      "topic": "Cirrose Hepática 1",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 18,
+      "order": 7,
+      "topic": "Cirrose Hepática 2",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    },
+    {
+      "block": 18,
+      "order": 8,
+      "topic": "CofBasics - Propedêutica em Uroginecologia (G.O)",
+      "area": "CofBasics",
+      "priority": "Alta"
+    },
+    {
+      "block": 19,
+      "order": 1,
+      "topic": "Doenças negligenciadas",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 19,
+      "order": 2,
+      "topic": "Hanseníase",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 19,
+      "order": 3,
+      "topic": "Habilidades de Comunicação",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 19,
+      "order": 4,
+      "topic": "Câncer de Colo de Útero",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 19,
+      "order": 5,
+      "topic": "Triagens Neonatais e Hipoglicemia",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 19,
+      "order": 6,
+      "topic": "Nodulos hepaticos benignos",
+      "area": "Cirurgia",
+      "priority": "Média"
+    },
+    {
+      "block": 20,
+      "order": 1,
+      "topic": "Testes diagnósticos",
+      "area": "Saúde Coletiva",
+      "priority": "Média"
+    },
+    {
+      "block": 20,
+      "order": 2,
+      "topic": "Outros Cânceres Ginecológicos",
+      "area": "G.O",
+      "priority": "Média"
+    },
+    {
+      "block": 20,
+      "order": 3,
+      "topic": "Icterícia e Colestase Neonatal",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 20,
+      "order": 4,
+      "topic": "Adenocarcinoma de pancreas, tumores periampulares e pancreatite crônica",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 20,
+      "order": 5,
+      "topic": "Glomerulopatias",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 20,
+      "order": 6,
+      "topic": "Injúria renal aguda",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 20,
+      "order": 7,
+      "topic": "Doença Renal Crônica",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    },
+    {
+      "block": 21,
+      "order": 1,
+      "topic": "Vigilância em Saúde",
+      "area": "Saúde Coletiva",
+      "priority": "Média"
+    },
+    {
+      "block": 21,
+      "order": 2,
+      "topic": "Insuficiência cognitiva no idoso",
+      "area": "Saúde Mental",
+      "priority": "Média"
+    },
+    {
+      "block": 21,
+      "order": 3,
+      "topic": "Infertilidade",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 21,
+      "order": 4,
+      "topic": "Dengue na Pediatria",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 21,
+      "order": 5,
+      "topic": "Hemorroidas e Doenças orificiais",
+      "area": "Cirurgia",
+      "priority": "Média"
+    },
+    {
+      "block": 21,
+      "order": 6,
+      "topic": "Hemorragia digestiva alta",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 21,
+      "order": 7,
+      "topic": "Sindrome de Fournier",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 22,
+      "order": 1,
+      "topic": "Saúde do Trabalhador",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 22,
+      "order": 2,
+      "topic": "Principais Doenças e Agravos Relacionados ao Trabalho",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 22,
+      "order": 3,
+      "topic": "Exantemáticas",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 22,
+      "order": 4,
+      "topic": "Adenocarcinoma Gastrico e GIST",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 22,
+      "order": 5,
+      "topic": "Síndromes Coronarianas Agudas",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 22,
+      "order": 6,
+      "topic": "Dor Torácica Não Anginosa",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 23,
+      "order": 1,
+      "topic": "Ética Médica",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 23,
+      "order": 2,
+      "topic": "Oftalmologia: afecções comuns",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 23,
+      "order": 3,
+      "topic": "Otorrino para o clínico",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 23,
+      "order": 4,
+      "topic": "Climatério",
+      "area": "G.O",
+      "priority": "Alta"
+    },
+    {
+      "block": 23,
+      "order": 5,
+      "topic": "Genética",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 23,
+      "order": 6,
+      "topic": "Cancer colorretal",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 23,
+      "order": 7,
+      "topic": "CofBasics: Psicofarmacologia (Saúde Mental)",
+      "area": "CofBasics",
+      "priority": "Alta"
+    },
+    {
+      "block": 24,
+      "order": 1,
+      "topic": "Declaração de Óbito, Atestados e Laudos",
+      "area": "Saúde Coletiva",
+      "priority": "Média"
+    },
+    {
+      "block": 24,
+      "order": 2,
+      "topic": "Síndrome Depressiva",
+      "area": "Saúde Mental",
+      "priority": "Alta"
+    },
+    {
+      "block": 24,
+      "order": 3,
+      "topic": "Hipertensão Arterial",
+      "area": "Pediatria",
+      "priority": "Média"
+    },
+    {
+      "block": 24,
+      "order": 4,
+      "topic": "Câncer de pulmão",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 24,
+      "order": 5,
+      "topic": "Diarreias",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 24,
+      "order": 6,
+      "topic": "Osteoporose e Distúrbios do Cálcio",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 25,
+      "order": 1,
+      "topic": "Arboviroses",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 25,
+      "order": 2,
+      "topic": "Parasitoses",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 25,
+      "order": 3,
+      "topic": "Planejamento Familiar",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 25,
+      "order": 4,
+      "topic": "Síndrome Ansiosa",
+      "area": "Saúde Mental",
+      "priority": "Alta"
+    },
+    {
+      "block": 25,
+      "order": 5,
+      "topic": "Síndrome Maníaca",
+      "area": "Saúde Mental",
+      "priority": "Média"
+    },
+    {
+      "block": 25,
+      "order": 6,
+      "topic": "Cirurgia vascular no ENAMED",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 25,
+      "order": 7,
+      "topic": "HIV",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 26,
+      "order": 1,
+      "topic": "Atenção à Saúde de Populações Específicas",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 26,
+      "order": 2,
+      "topic": "Violências",
+      "area": "Saúde Coletiva",
+      "priority": "Alta"
+    },
+    {
+      "block": 26,
+      "order": 3,
+      "topic": "Peçonhentos, Raiva e Tétano",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 26,
+      "order": 4,
+      "topic": "Cuidado à Saúde LGBTQIAPN+",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 26,
+      "order": 5,
+      "topic": "Violência e Maus Tratos Infantis",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 26,
+      "order": 6,
+      "topic": "Cirurgia Plastica no ENAMED",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 26,
+      "order": 7,
+      "topic": "Valvopatias, Febre reumática e Endocardite",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 27,
+      "order": 1,
+      "topic": "Doenças Virais e Pandêmicas",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 27,
+      "order": 2,
+      "topic": "Acidentes com Animais Peçonhentos",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Alta"
+    },
+    {
+      "block": 27,
+      "order": 3,
+      "topic": "Dermatologia na APS",
+      "area": "Medicina de Família e Comunidade",
+      "priority": "Média"
+    },
+    {
+      "block": 27,
+      "order": 4,
+      "topic": "Síndrome Psicótica",
+      "area": "Saúde Mental",
+      "priority": "Média"
+    },
+    {
+      "block": 27,
+      "order": 5,
+      "topic": "Sofrimento Fetal Crônico",
+      "area": "G.O",
+      "priority": "Média"
+    },
+    {
+      "block": 27,
+      "order": 6,
+      "topic": "Reumatologia Pediátrica",
+      "area": "Pediatria",
+      "priority": "Média"
+    },
+    {
+      "block": 27,
+      "order": 7,
+      "topic": "Ortopedia no ENAMED",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 28,
+      "order": 1,
+      "topic": "Emergências Psiquiátricas",
+      "area": "Saúde Mental",
+      "priority": "Média"
+    },
+    {
+      "block": 28,
+      "order": 2,
+      "topic": "Transtornos alimentares, somatoformes e de personalidade",
+      "area": "Saúde Mental",
+      "priority": "Baixa"
+    },
+    {
+      "block": 28,
+      "order": 3,
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "area": "Saúde Mental",
+      "priority": "Média"
+    },
+    {
+      "block": 28,
+      "order": 4,
+      "topic": "Pneumologia Pediátrica",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 28,
+      "order": 5,
+      "topic": "Anestesiologia no ENAMED",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 28,
+      "order": 6,
+      "topic": "Colagenoses: Lupus e SAF",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    },
+    {
+      "block": 28,
+      "order": 7,
+      "topic": "Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    },
+    {
+      "block": 29,
+      "order": 1,
+      "topic": "Hipotireoidismo",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 29,
+      "order": 2,
+      "topic": "Hipertireoidismo",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 29,
+      "order": 3,
+      "topic": "Nódulos e Câncer de Tireoide",
+      "area": "Clínica Médica",
+      "priority": "Alta"
+    },
+    {
+      "block": 29,
+      "order": 4,
+      "topic": "Prematuridade",
+      "area": "G.O",
+      "priority": "Média"
+    },
+    {
+      "block": 29,
+      "order": 5,
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 29,
+      "order": 6,
+      "topic": "Ética em Pediatria",
+      "area": "Pediatria",
+      "priority": "Média"
+    },
+    {
+      "block": 29,
+      "order": 7,
+      "topic": "Nefrolitíase",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 30,
+      "order": 1,
+      "topic": "Transtornos relacionados a Substâncias - Álcool",
+      "area": "Saúde Mental",
+      "priority": "Baixa"
+    },
+    {
+      "block": 30,
+      "order": 2,
+      "topic": "Vacinação",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 30,
+      "order": 3,
+      "topic": "Reanimação Neonatal",
+      "area": "Pediatria",
+      "priority": "Alta"
+    },
+    {
+      "block": 30,
+      "order": 4,
+      "topic": "Cabeça e pescoço para o ENAMED",
+      "area": "Cirurgia",
+      "priority": "Baixa"
+    },
+    {
+      "block": 30,
+      "order": 5,
+      "topic": "Encerramento Cirurgia ENAMED",
+      "area": "Cirurgia",
+      "priority": "Alta"
+    },
+    {
+      "block": 30,
+      "order": 6,
+      "topic": "Alergologia: reações de hipersensibilidade, rinite e angioedema",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    },
+    {
+      "block": 30,
+      "order": 7,
+      "topic": "Sepse, anafilaxia e outros choques",
+      "area": "Clínica Médica",
+      "priority": "Média"
+    },
+    {
+      "block": 30,
+      "order": 8,
+      "topic": "Adrenal e Cushing",
+      "area": "Clínica Médica",
+      "priority": "Baixa"
+    }
+  ]
+}

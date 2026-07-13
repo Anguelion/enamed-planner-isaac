@@ -1,0 +1,4143 @@
+{
+  "generatedAt": "2026-07-12T11:31:16.601Z",
+  "source": "E:\\MedCof 2026",
+  "lessons": [
+    {
+      "id": "b01|cirurgia|trauma conceitos iniciais atls",
+      "block": 1,
+      "area": "Cirurgia",
+      "title": "Trauma - Conceitos iniciais ATLS",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b01|Cirurgia|Trauma - Conceitos iniciais ATLS|Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
+          "title": "Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
+          "type": "complete",
+          "relativePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b01|Cirurgia|Trauma - Conceitos iniciais ATLS|Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS",
+          "title": "Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b01|clinica medica|avaliacao do hemograma e anemias",
+      "block": 1,
+      "area": "Clínica Médica",
+      "title": "Avaliação do Hemograma e Anemias",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b01|Clínica Médica|Avaliação do Hemograma e Anemias|Anemias",
+          "title": "Anemias",
+          "type": "complete",
+          "relativePath": "Bloco 01/03 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/Anemias.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b01|Clínica Médica|Avaliação do Hemograma e Anemias|Avaliação do Hemograma e Anemias",
+          "title": "Avaliação do Hemograma e Anemias",
+          "type": "complete",
+          "relativePath": "Bloco 01/03 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/Avaliação do Hemograma e Anemias.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b01|Clínica Médica|Avaliação do Hemograma e Anemias|Anemias COFEXPRESS",
+          "title": "Anemias COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 01/03 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/Anemias COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b01|clinica medica|introducao ao sistema reprodutor feminino",
+      "block": 1,
+      "area": "Clínica Médica",
+      "title": "Introdução ao Sistema Reprodutor Feminino",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b01|Clínica Médica|Introdução ao Sistema Reprodutor Feminino|Anatomia e Embriologia Femininas",
+          "title": "Anatomia e Embriologia Femininas",
+          "type": "complete",
+          "relativePath": "Bloco 01/03 - Clínica Médica/04 - Introdução ao Sistema Reprodutor Feminino/Anatomia e Embriologia Femininas.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b01|Clínica Médica|Introdução ao Sistema Reprodutor Feminino|Anatomia e Embriologia Femininas COFEXPRESS",
+          "title": "Anatomia e Embriologia Femininas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 01/03 - Clínica Médica/04 - Introdução ao Sistema Reprodutor Feminino/Anatomia e Embriologia Femininas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b01|medicina de familia e comunidade|aleitamento materno",
+      "block": 1,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Aleitamento Materno",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b01|Medicina de Família e Comunidade|Aleitamento Materno|1.2.1.2 Aleitamento Materno",
+          "title": "1.2.1.2 Aleitamento Materno",
+          "type": "complete",
+          "relativePath": "Bloco 01/02 - Medicina de Família e Comunidade/02 - Aleitamento Materno/1.2.1.2 Aleitamento Materno.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b01|Medicina de Família e Comunidade|Aleitamento Materno|Aleitamento Materno COFEXPRESS (2)",
+          "title": "Aleitamento Materno COFEXPRESS (2)",
+          "type": "express",
+          "relativePath": "Bloco 01/02 - Medicina de Família e Comunidade/02 - Aleitamento Materno/Aleitamento Materno COFEXPRESS (2).mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b01|medicina de familia e comunidade|alimentacao infantil",
+      "block": 1,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Alimentação Infantil",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b01|Medicina de Família e Comunidade|Alimentação Infantil|Alimentação Infantil",
+          "title": "Alimentação Infantil",
+          "type": "complete",
+          "relativePath": "Bloco 01/02 - Medicina de Família e Comunidade/03 - Alimentação Infantil/Alimentação Infantil.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b01|Medicina de Família e Comunidade|Alimentação Infantil|Alimentação Infantil COFEXPRESS",
+          "title": "Alimentação Infantil COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 01/02 - Medicina de Família e Comunidade/03 - Alimentação Infantil/Alimentação Infantil COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b01|saude coletiva|historia e principios do sus",
+      "block": 1,
+      "area": "Saúde Coletiva",
+      "title": "História e Princípios do SUS",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b01|Saúde Coletiva|História e Princípios do SUS|História e Princípios do SUS",
+          "title": "História e Princípios do SUS",
+          "type": "complete",
+          "relativePath": "Bloco 01/01 - Saúde Coletiva/01 - História e Princípios do SUS/História e Princípios do SUS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b01|Saúde Coletiva|História e Princípios do SUS|História e Princípios do SUS COFEXPRESS",
+          "title": "História e Princípios do SUS COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 01/01 - Saúde Coletiva/01 - História e Princípios do SUS/História e Princípios do SUS COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|cirurgia|atls letra a",
+      "block": 2,
+      "area": "Cirurgia",
+      "title": "ATLS - Letra A",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b02|Cirurgia|ATLS - Letra A|ATLS - Letra A",
+          "title": "ATLS - Letra A",
+          "type": "complete",
+          "relativePath": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/ATLS - Letra A.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b02|Cirurgia|ATLS - Letra A|ATLS - Letra A COFEXPRESS",
+          "title": "ATLS - Letra A COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/ATLS - Letra A COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|cirurgia|atls letra b",
+      "block": 2,
+      "area": "Cirurgia",
+      "title": "ATLS - Letra B",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b02|Cirurgia|ATLS - Letra B|ATLS - Letra B",
+          "title": "ATLS - Letra B",
+          "type": "complete",
+          "relativePath": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/ATLS - Letra B.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b02|Cirurgia|ATLS - Letra B|ATLS - Letra B COFEXPRESS",
+          "title": "ATLS - Letra B COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/ATLS - Letra B COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|clinica medica|insuficiencia cardiaca",
+      "block": 2,
+      "area": "Clínica Médica",
+      "title": "Insuficiência Cardíaca",
+      "folderOrder": 8,
+      "videos": [
+        {
+          "id": "b02|Clínica Médica|Insuficiência Cardíaca|Insuficiência Cardíaca",
+          "title": "Insuficiência Cardíaca",
+          "type": "complete",
+          "relativePath": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/Insuficiência Cardíaca.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b02|Clínica Médica|Insuficiência Cardíaca|Insuficiência Cardíaca COFEXPRESS",
+          "title": "Insuficiência Cardíaca COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/Insuficiência Cardíaca COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|cofbasics|cofbasics avaliacao de vitalidade fetal g o",
+      "block": 2,
+      "area": "CofBasics",
+      "title": "CofBasics - Avaliação de Vitalidade Fetal (G.O)",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b02|CofBasics|CofBasics - Avaliação de Vitalidade Fetal (G.O)|CofBasics - Avaliação de Vitalidade Fetal (G.O)",
+          "title": "CofBasics - Avaliação de Vitalidade Fetal (G.O)",
+          "type": "complete",
+          "relativePath": "Bloco 02/06 - CofBasics/01 - CofBasics - Avaliação de Vitalidade Fetal (G.O)/CofBasics - Avaliação de Vitalidade Fetal (G.O).mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|g o|ciclo menstrual",
+      "block": 2,
+      "area": "G.O",
+      "title": "Ciclo Menstrual",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b02|G.O|Ciclo Menstrual|Ciclo Menstrual",
+          "title": "Ciclo Menstrual",
+          "type": "complete",
+          "relativePath": "Bloco 02/02 - G.O/02 - Ciclo Menstrual/Ciclo Menstrual.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b02|G.O|Ciclo Menstrual|Ciclo Menstrual COFEXPRESS",
+          "title": "Ciclo Menstrual COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 02/02 - G.O/02 - Ciclo Menstrual/Ciclo Menstrual COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|g o|gestacao inicial",
+      "block": 2,
+      "area": "G.O",
+      "title": "Gestação inicial",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b02|G.O|Gestação inicial|Modificações do Organismo Materno",
+          "title": "Modificações do Organismo Materno",
+          "type": "complete",
+          "relativePath": "Bloco 02/02 - G.O/03 - Gestação inicial/Modificações do Organismo Materno.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b02|G.O|Gestação inicial|Modificações do Organismo Materno COFEXPRESS",
+          "title": "Modificações do Organismo Materno COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 02/02 - G.O/03 - Gestação inicial/Modificações do Organismo Materno COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|medicina de familia e comunidade|has ambulatorial",
+      "block": 2,
+      "area": "Medicina de Família e Comunidade",
+      "title": "HAS Ambulatorial",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b02|Medicina de Família e Comunidade|HAS Ambulatorial|HAS Ambulatorial",
+          "title": "HAS Ambulatorial",
+          "type": "complete",
+          "relativePath": "Bloco 02/01 - Medicina de Família e Comunidade/01 - HAS Ambulatorial/HAS Ambulatorial.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b02|Medicina de Família e Comunidade|HAS Ambulatorial|HAS Ambulatorial COFEXPRESS",
+          "title": "HAS Ambulatorial COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 02/01 - Medicina de Família e Comunidade/01 - HAS Ambulatorial/HAS Ambulatorial COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|pediatria|crescimento e baixa estatura",
+      "block": 2,
+      "area": "Pediatria",
+      "title": "Crescimento e Baixa Estatura",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b02|Pediatria|Crescimento e Baixa Estatura|Crescimento e Baixa Estatura",
+          "title": "Crescimento e Baixa Estatura",
+          "type": "complete",
+          "relativePath": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/Crescimento e Baixa Estatura.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b02|Pediatria|Crescimento e Baixa Estatura|Crescimento e Baixa Estatura COFEXPRESS",
+          "title": "Crescimento e Baixa Estatura COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/Crescimento e Baixa Estatura COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b02|pediatria|puberdade",
+      "block": 2,
+      "area": "Pediatria",
+      "title": "Puberdade",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b02|Pediatria|Puberdade|Puberdade",
+          "title": "Puberdade",
+          "type": "complete",
+          "relativePath": "Bloco 02/03 - Pediatria/05 - Puberdade/Puberdade.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b02|Pediatria|Puberdade|Puberdade COFEXPRESS",
+          "title": "Puberdade COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 02/03 - Pediatria/05 - Puberdade/Puberdade COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b03|cirurgia|atls letra c e x",
+      "block": 3,
+      "area": "Cirurgia",
+      "title": "ATLS - Letra C e X",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b03|Cirurgia|ATLS - Letra C e X|ATLS - Letra C e X",
+          "title": "ATLS - Letra C e X",
+          "type": "complete",
+          "relativePath": "Bloco 03/04 - Cirurgia/05 - ATLS - Letra C e X/ATLS - Letra C e X.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Cirurgia|ATLS - Letra C e X|ATLS - Letra C e X COFEXPRESS",
+          "title": "ATLS - Letra C e X COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 03/04 - Cirurgia/05 - ATLS - Letra C e X/ATLS - Letra C e X COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b03|clinica medica|doenca pulmonar obstrutiva cronica dpoc",
+      "block": 3,
+      "area": "Clínica Médica",
+      "title": "Doença Pulmonar Obstrutiva Crônica (DPOC)",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b03|Clínica Médica|Doença Pulmonar Obstrutiva Crônica (DPOC)|Doença Pulmonar Obstrutiva Crônica (DPOC)",
+          "title": "Doença Pulmonar Obstrutiva Crônica (DPOC)",
+          "type": "complete",
+          "relativePath": "Bloco 03/03 - Clínica Médica/02 - Doença Pulmonar Obstrutiva Crônica (DPOC)/Doença Pulmonar Obstrutiva Crônica (DPOC).mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Clínica Médica|DPOC|Doença Pulmonar Obstrutiva Crônica (DPOC) COFEXPRESS",
+          "title": "Doença Pulmonar Obstrutiva Crônica (DPOC) COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 03/03 - Clínica Médica/07 - DPOC/Doença Pulmonar Obstrutiva Crônica (DPOC) COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b03|clinica medica|espirometria basica e asma",
+      "block": 3,
+      "area": "Clínica Médica",
+      "title": "Espirometria Básica e Asma",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b03|Clínica Médica|Espirometria Básica e Asma|Espirometria Básica e Asma",
+          "title": "Espirometria Básica e Asma",
+          "type": "complete",
+          "relativePath": "Bloco 03/03 - Clínica Médica/06 - Espirometria Básica e Asma/Espirometria Básica e Asma.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Clínica Médica|Espirometria Básica e Asma|Espirometria Básica e Asma COFEXPRESS",
+          "title": "Espirometria Básica e Asma COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 03/03 - Clínica Médica/06 - Espirometria Básica e Asma/Espirometria Básica e Asma COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b03|medicina de familia e comunidade|assistencia ao pre natal",
+      "block": 3,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Assistência ao Pré-Natal",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b03|Medicina de Família e Comunidade|Assistência ao Pré-Natal|Assistência ao Pré-Natal",
+          "title": "Assistência ao Pré-Natal",
+          "type": "complete",
+          "relativePath": "Bloco 03/02 - Medicina de Família e Comunidade/02 - Assistência ao Pré-Natal/Assistência ao Pré-Natal.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Medicina de Família e Comunidade|Assistência ao Pré-Natal|Assistência ao Pré-Natal COFEXPRESS",
+          "title": "Assistência ao Pré-Natal COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 03/02 - Medicina de Família e Comunidade/02 - Assistência ao Pré-Natal/Assistência ao Pré-Natal COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b03|medicina de familia e comunidade|tabagismo",
+      "block": 3,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Tabagismo",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b03|Medicina de Família e Comunidade|Tabagismo|Tabagismo",
+          "title": "Tabagismo",
+          "type": "complete",
+          "relativePath": "Bloco 03/02 - Medicina de Família e Comunidade/03 - Tabagismo/Tabagismo.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Medicina de Família e Comunidade|Tabagismo|Tabagismo COFEXPRESS",
+          "title": "Tabagismo COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 03/02 - Medicina de Família e Comunidade/03 - Tabagismo/Tabagismo COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b03|pediatria|nefrologia pediatrica",
+      "block": 3,
+      "area": "Pediatria",
+      "title": "Nefrologia Pediátrica",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b03|Pediatria|Nefrologia Pediátrica|Nefrologia Pediátrica",
+          "title": "Nefrologia Pediátrica",
+          "type": "complete",
+          "relativePath": "Bloco 03/05 - Pediatria/01 - Nefrologia Pediátrica/Nefrologia Pediátrica.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Pediatria|Nefrologia Pediátrica|Nefrologia Pediátrica COFEXPRESS",
+          "title": "Nefrologia Pediátrica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 03/05 - Pediatria/04 - Nefrologia Pediátrica/Nefrologia Pediátrica COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b03|saude coletiva|legislacao do sus",
+      "block": 3,
+      "area": "Saúde Coletiva",
+      "title": "Legislação do SUS",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b03|Saúde Coletiva|Legislação do SUS|Legislação do SUS 1 Leis Orgânicas da Saúde",
+          "title": "Legislação do SUS 1 Leis Orgânicas da Saúde",
+          "type": "complete",
+          "relativePath": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/Legislação do SUS 1 Leis Orgânicas da Saúde.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Saúde Coletiva|Legislação do SUS|Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde",
+          "title": "Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde",
+          "type": "complete",
+          "relativePath": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Saúde Coletiva|Legislação do SUS|Legislação do SUS 1 Leis Orgânicas da Saúde COFEXPRESS",
+          "title": "Legislação do SUS 1 Leis Orgânicas da Saúde COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/Legislação do SUS 1 Leis Orgânicas da Saúde COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b03|Saúde Coletiva|Legislação do SUS|Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde COFEXPRESS",
+          "title": "Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b04|cirurgia|atls letra d",
+      "block": 4,
+      "area": "Cirurgia",
+      "title": "ATLS - Letra D",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b04|Cirurgia|ATLS - Letra D|ATLS - Letra D",
+          "title": "ATLS - Letra D",
+          "type": "complete",
+          "relativePath": "Bloco 04/03 - Cirurgia/05 - ATLS - Letra D/ATLS - Letra D.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b04|Cirurgia|ATLS - Letra D|ATLS - Letra D COFEXPRESS",
+          "title": "ATLS - Letra D COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 04/03 - Cirurgia/05 - ATLS - Letra D/ATLS - Letra D COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b04|cirurgia|atls letra e e seguimento do tratamento do politrauma",
+      "block": 4,
+      "area": "Cirurgia",
+      "title": "ATLS - Letra E e seguimento do tratamento do politrauma",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b04|Cirurgia|ATLS - Letra E e seguimento do tratamento do politrauma|ATLS - Letra E e seguimento do tratamento do politrauma",
+          "title": "ATLS - Letra E e seguimento do tratamento do politrauma",
+          "type": "complete",
+          "relativePath": "Bloco 04/03 - Cirurgia/02 - ATLS - Letra E e seguimento do tratamento do politrauma/ATLS - Letra E e seguimento do tratamento do politrauma.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b04|Cirurgia|ATLS - Letra E e seguimento do tratamento do politrauma|ATLS - Letra E e seguimento do tratamento do politrauma COFEXPRESS",
+          "title": "ATLS - Letra E e seguimento do tratamento do politrauma COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 04/03 - Cirurgia/02 - ATLS - Letra E e seguimento do tratamento do politrauma/ATLS - Letra E e seguimento do tratamento do politrauma COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b04|clinica medica|diabetes hipoglicemia e emergencias",
+      "block": 4,
+      "area": "Clínica Médica",
+      "title": "Diabetes - hipoglicemia e emergências",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b04|Clínica Médica|Diabetes - hipoglicemia e emergências|Emergências Hiperglicêmicas (CAD e EHH)",
+          "title": "Emergências Hiperglicêmicas (CAD e EHH)",
+          "type": "complete",
+          "relativePath": "Bloco 04/01 - Clínica Médica/07 - Diabetes - hipoglicemia e emergências/Emergências Hiperglicêmicas (CAD e EHH).mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b04|Clínica Médica|Diabetes - hipoglicemia e emergências|Emergências Hiperglicêmicas (CAD e EHH) COFEXPRESS.",
+          "title": "Emergências Hiperglicêmicas (CAD e EHH) COFEXPRESS.",
+          "type": "express",
+          "relativePath": "Bloco 04/01 - Clínica Médica/07 - Diabetes - hipoglicemia e emergências/Emergências Hiperglicêmicas (CAD e EHH) COFEXPRESS..mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b04|clinica medica|gastropediatria",
+      "block": 4,
+      "area": "Clínica Médica",
+      "title": "Gastropediatria",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b04|Clínica Médica|Gastropediatria|Gastropediatria",
+          "title": "Gastropediatria",
+          "type": "complete",
+          "relativePath": "Bloco 04/01 - Clínica Médica/04 - Gastropediatria/Gastropediatria.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b04|g o|assistencia ao parto mecanismo e assistencia ao parto",
+      "block": 4,
+      "area": "G.O",
+      "title": "Assistência ao Parto Mecanismo e Assistência ao Parto",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b04|G.O|Assistência ao Parto Mecanismo e Assistência ao Parto|Assistência ao Parto Mecanismo e Assistência ao Parto",
+          "title": "Assistência ao Parto Mecanismo e Assistência ao Parto",
+          "type": "complete",
+          "relativePath": "Bloco 04/02 - G.O/02 - Assistência ao Parto Mecanismo e Assistência ao Parto/Assistência ao Parto Mecanismo e Assistência ao Parto.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b04|G.O|Assistência ao Parto Mecanismo e Assistência ao Parto|Assistência ao Parto Mecanismo e Assistência ao Parto COFEXPRESS",
+          "title": "Assistência ao Parto Mecanismo e Assistência ao Parto COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 04/02 - G.O/02 - Assistência ao Parto Mecanismo e Assistência ao Parto/Assistência ao Parto Mecanismo e Assistência ao Parto COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b04|g o|estatica fetal estudo do trajeto de parto e estatica fetal",
+      "block": 4,
+      "area": "G.O",
+      "title": "Estatica Fetal Estudo do Trajeto de Parto e Estática Fetal",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b04|G.O|Estatica Fetal Estudo do Trajeto de Parto e Estática Fetal|Estática Fetal Estudo do Trajeto de Parto e Estática Fetal",
+          "title": "Estática Fetal Estudo do Trajeto de Parto e Estática Fetal",
+          "type": "complete",
+          "relativePath": "Bloco 04/02 - G.O/01 - Estatica Fetal Estudo do Trajeto de Parto e Estática Fetal/Estática Fetal Estudo do Trajeto de Parto e Estática Fetal.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b04|G.O|Estatica Fetal Estudo do Trajeto de Parto e Estática Fetal|Estática Fetal Estudo do Trajeto de Parto e Estática Fetal COFEXPRESS",
+          "title": "Estática Fetal Estudo do Trajeto de Parto e Estática Fetal COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 04/02 - G.O/01 - Estatica Fetal Estudo do Trajeto de Parto e Estática Fetal/Estática Fetal Estudo do Trajeto de Parto e Estática Fetal COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b04|medicina de familia e comunidade|diabetes classificacao fisiopatologia e diagnostico do dm",
+      "block": 4,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Diabetes Classificação, Fisiopatologia e Diagnostico do DM",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b04|Medicina de Família e Comunidade|Diabetes Classificação, Fisiopatologia e Diagnostico do DM|Diabetes Classificação, Fisiopatologia e Diagnóstico do DM",
+          "title": "Diabetes Classificação, Fisiopatologia e Diagnóstico do DM",
+          "type": "complete",
+          "relativePath": "Bloco 04/04 - Medicina de Família e Comunidade/01 - Diabetes Classificação, Fisiopatologia e Diagnostico do DM/Diabetes Classificação, Fisiopatologia e Diagnóstico do DM.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b04|Medicina de Família e Comunidade|Diabetes Classificação, Fisiopatologia e Diagnostico do DM|Diabetes Classificação, Fisiopatologia e Diagnóstico do DM COFEXPRESS",
+          "title": "Diabetes Classificação, Fisiopatologia e Diagnóstico do DM COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 04/04 - Medicina de Família e Comunidade/01 - Diabetes Classificação, Fisiopatologia e Diagnostico do DM/Diabetes Classificação, Fisiopatologia e Diagnóstico do DM COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b04|medicina de familia e comunidade|diabetes tratamento e complicacoes cronicas",
+      "block": 4,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Diabetes Tratamento e complicações crônicas",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b04|Medicina de Família e Comunidade|Diabetes Tratamento e complicações crônicas|Diabetes Tratamento e complicações crônicas",
+          "title": "Diabetes Tratamento e complicações crônicas",
+          "type": "complete",
+          "relativePath": "Bloco 04/04 - Medicina de Família e Comunidade/02 - Diabetes Tratamento e complicações crônicas/Diabetes Tratamento e complicações crônicas.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b04|Medicina de Família e Comunidade|Diabetes Tratamento e complicações crônicas|Diabetes Tratamento e Complicações Crônicas COFEXPRESS",
+          "title": "Diabetes Tratamento e Complicações Crônicas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 04/04 - Medicina de Família e Comunidade/02 - Diabetes Tratamento e complicações crônicas/Diabetes Tratamento e Complicações Crônicas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|cirurgia|queimaduras",
+      "block": 5,
+      "area": "Cirurgia",
+      "title": "Queimaduras",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b05|Cirurgia|Queimaduras|Queimaduras",
+          "title": "Queimaduras",
+          "type": "complete",
+          "relativePath": "Bloco 05/03 - Cirurgia/04 - Queimaduras/Queimaduras.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b05|Cirurgia|Queimaduras|Queimaduras COFEXPRESS",
+          "title": "Queimaduras COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 05/03 - Cirurgia/04 - Queimaduras/Queimaduras COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|clinica medica|neurovascular 1",
+      "block": 5,
+      "area": "Clínica Médica",
+      "title": "Neurovascular 1",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b05|Clínica Médica|Neurovascular 1|AVC isquêmico e AIT",
+          "title": "AVC isquêmico e AIT",
+          "type": "complete",
+          "relativePath": "Bloco 05/04 - Clínica Médica/06 - Neurovascular 1/AVC isquêmico e AIT.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b05|Clínica Médica|Neurovascular 1|AVC isquêmico e AIT COFEXPRESS",
+          "title": "AVC isquêmico e AIT COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 05/04 - Clínica Médica/06 - Neurovascular 1/AVC isquêmico e AIT COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|clinica medica|neurovascular 2",
+      "block": 5,
+      "area": "Clínica Médica",
+      "title": "Neurovascular 2",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b05|Clínica Médica|Neurovascular 2|AVC hemorrágico e HSA",
+          "title": "AVC hemorrágico e HSA",
+          "type": "complete",
+          "relativePath": "Bloco 05/04 - Clínica Médica/07 - Neurovascular 2/AVC hemorrágico e HSA.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b05|Clínica Médica|Neurovascular 2|AVC hemorrágico e HSA COFEXPRESS",
+          "title": "AVC hemorrágico e HSA COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 05/04 - Clínica Médica/07 - Neurovascular 2/AVC hemorrágico e HSA COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|clinica medica|urgencia e emergencia hipertensiva",
+      "block": 5,
+      "area": "Clínica Médica",
+      "title": "Urgência e Emergência Hipertensiva",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b05|Clínica Médica|Urgência e Emergência Hipertensiva|Urgência e Emergência Hipertensiva",
+          "title": "Urgência e Emergência Hipertensiva",
+          "type": "complete",
+          "relativePath": "Bloco 05/04 - Clínica Médica/05 - Urgência e Emergência Hipertensiva/Urgência e Emergência Hipertensiva.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b05|Clínica Médica|Urgência e Emergência Hipertensiva|Urgência e Emergência Hipertensiva COFEXPRESS",
+          "title": "Urgência e Emergência Hipertensiva COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 05/04 - Clínica Médica/05 - Urgência e Emergência Hipertensiva/Urgência e Emergência Hipertensiva COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|cofbasics|cofbasics processo saude doenca",
+      "block": 5,
+      "area": "CofBasics",
+      "title": "CofBasics - Processo Saúde-Doença",
+      "folderOrder": 9,
+      "videos": [
+        {
+          "id": "b05|CofBasics|CofBasics - Processo Saúde-Doença|Processo de Saúde e Doença COFBASICS",
+          "title": "Processo de Saúde e Doença COFBASICS",
+          "type": "complete",
+          "relativePath": "Bloco 05/05 - CofBasics/09 - CofBasics - Processo Saúde-Doença/Processo de Saúde e Doença COFBASICS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|cofbasics|cofbasics semiologia neurologica e topografia",
+      "block": 5,
+      "area": "CofBasics",
+      "title": "CofBasics - Semiologia Neurológica e Topografia",
+      "folderOrder": 8,
+      "videos": [
+        {
+          "id": "b05|CofBasics|CofBasics - Semiologia Neurológica e Topografia|Semiologia Neurológica e Topografia da Lesão",
+          "title": "Semiologia Neurológica e Topografia da Lesão",
+          "type": "complete",
+          "relativePath": "Bloco 05/05 - CofBasics/08 - CofBasics - Semiologia Neurológica e Topografia/Semiologia Neurológica e Topografia da Lesão.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|g o|sofrimento fetal agudo",
+      "block": 5,
+      "area": "G.O",
+      "title": "Sofrimento Fetal Agudo",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b05|G.O|Sofrimento Fetal Agudo|1. Sofrimento Fetal Agudo",
+          "title": "1. Sofrimento Fetal Agudo",
+          "type": "complete",
+          "relativePath": "Bloco 05/01 - G.O/01 - Sofrimento Fetal Agudo/1. Sofrimento Fetal Agudo.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b05|G.O|Sofrimento Fetal Agudo|R1 - Sofrimento Fetal Agudo COFEXPRESS",
+          "title": "R1 - Sofrimento Fetal Agudo COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 05/01 - G.O/01 - Sofrimento Fetal Agudo/R1 - Sofrimento Fetal Agudo COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|pediatria|bronquiolite e tuberculose",
+      "block": 5,
+      "area": "Pediatria",
+      "title": "Bronquiolite e Tuberculose",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b05|Pediatria|Bronquiolite e Tuberculose|Bronquiolite e Turberculose",
+          "title": "Bronquiolite e Turberculose",
+          "type": "complete",
+          "relativePath": "Bloco 05/02 - Pediatria/03 - Bronquiolite e Tuberculose/Bronquiolite e Turberculose.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b05|Pediatria|Bronquiolite e Tuberculose|Bronquiolite e Turberculose COFEXPRESS",
+          "title": "Bronquiolite e Turberculose COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 05/02 - Pediatria/03 - Bronquiolite e Tuberculose/Bronquiolite e Turberculose COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b05|pediatria|pneumonias",
+      "block": 5,
+      "area": "Pediatria",
+      "title": "Pneumonias",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b05|Pediatria|Pneumonias|Pneumonias",
+          "title": "Pneumonias",
+          "type": "complete",
+          "relativePath": "Bloco 05/02 - Pediatria/01 - Pneumonias/Pneumonias.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b05|Pediatria|Pneumonias|Pneumonias COFEXPRESS",
+          "title": "Pneumonias COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 05/02 - Pediatria/01 - Pneumonias/Pneumonias COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|cirurgia|abdome agudo introducao",
+      "block": 6,
+      "area": "Cirurgia",
+      "title": "Abdome Agudo - Introdução",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b06|Cirurgia|Abdome Agudo - Introdução|Abdome agudo - introduçao e abordagem sindrômica",
+          "title": "Abdome agudo - introduçao e abordagem sindrômica",
+          "type": "complete",
+          "relativePath": "Bloco 06/05 - Cirurgia/07 - Abdome Agudo - Introdução/Abdome agudo - introduçao e abordagem sindrômica.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b06|Cirurgia|Abdome Agudo - Introdução|Abdome agudo - introduçao e abordagem sindrômica COFEXPRESS",
+          "title": "Abdome agudo - introduçao e abordagem sindrômica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 06/05 - Cirurgia/07 - Abdome Agudo - Introdução/Abdome agudo - introduçao e abordagem sindrômica COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|clinica medica|sifilis e uretrites infecciosas",
+      "block": 6,
+      "area": "Clínica Médica",
+      "title": "Sífilis e Uretrites Infecciosas",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b06|Clínica Médica|Sífilis e uretrites infecciosas|Sífilis e uretrites infecciosas",
+          "title": "Sífilis e uretrites infecciosas",
+          "type": "complete",
+          "relativePath": "Bloco 06/02 - Clínica Médica/06 - Sífilis e uretrites infecciosas/Sífilis e uretrites infecciosas.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b06|Clínica Médica|Sífilis e Uretrites Infecciosas|Sífilis e uretrites infecciosas COFEXPRESS",
+          "title": "Sífilis e uretrites infecciosas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 06/02 - Clínica Médica/02 - Sífilis e Uretrites Infecciosas/Sífilis e uretrites infecciosas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|clinica medica|tuberculose adulto",
+      "block": 6,
+      "area": "Clínica Médica",
+      "title": "Tuberculose (adulto)",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b06|Clínica Médica|Tuberculose (Adulto)|Tuberculose (adulto)",
+          "title": "Tuberculose (adulto)",
+          "type": "complete",
+          "relativePath": "Bloco 06/02 - Clínica Médica/06 - Tuberculose (Adulto)/Tuberculose (adulto).mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b06|Clínica Médica|Tuberculose (adulto)|Tuberculose (adulto) COFEXPRESS",
+          "title": "Tuberculose (adulto) COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 06/02 - Clínica Médica/03 - Tuberculose (adulto)/Tuberculose (adulto) COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|g o|puerperio",
+      "block": 6,
+      "area": "G.O",
+      "title": "Puerpério",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b06|G.O|Puerpério|Puerpério Patológico e Hemorragia Pós-Parto",
+          "title": "Puerpério Patológico e Hemorragia Pós-Parto",
+          "type": "complete",
+          "relativePath": "Bloco 06/04 - G.O/06 - Puerpério/Puerpério Patológico e Hemorragia Pós-Parto.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b06|G.O|Puerpério|Puerpério Patológico e Hemorragia Pós-Parto COFEXPRESS",
+          "title": "Puerpério Patológico e Hemorragia Pós-Parto COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 06/04 - G.O/06 - Puerpério/Puerpério Patológico e Hemorragia Pós-Parto COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|g o|transtornos psiquiatricos no pos parto",
+      "block": 6,
+      "area": "G.O",
+      "title": "Transtornos Psiquiátricos no Pós-Parto",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b06|G.O|Transtornos Psiquiátricos no Pós-Parto|Transtornos Psiquiátricos no Pós-Parto",
+          "title": "Transtornos Psiquiátricos no Pós-Parto",
+          "type": "complete",
+          "relativePath": "Bloco 06/04 - G.O/05 - Transtornos Psiquiátricos no Pós-Parto/Transtornos Psiquiátricos no Pós-Parto.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b06|G.O|Transtornos Psiquiátricos no Pós-Parto|Transtornos Psiquiátricos no Pós-Parto COFEXPRESS",
+          "title": "Transtornos Psiquiátricos no Pós-Parto COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 06/04 - G.O/05 - Transtornos Psiquiátricos no Pós-Parto/Transtornos Psiquiátricos no Pós-Parto COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|medicina de familia e comunidade|pediatria geral",
+      "block": 6,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Pediatria Geral",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b06|Medicina de Família e Comunidade|Pediatria Geral|PEDIATRIA GERAL",
+          "title": "PEDIATRIA GERAL",
+          "type": "complete",
+          "relativePath": "Bloco 06/03 - Medicina de Família e Comunidade/06 - Pediatria Geral/PEDIATRIA GERAL.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b06|Medicina de Família e Comunidade|Pediatria Geral|PEDIATRIA GERAL COFEXPRESS",
+          "title": "PEDIATRIA GERAL COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 06/03 - Medicina de Família e Comunidade/04 - Pediatria Geral/PEDIATRIA GERAL COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|saude coletiva|niveis de prevencao",
+      "block": 6,
+      "area": "Saúde Coletiva",
+      "title": "Níveis de Prevenção",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b06|Saúde Coletiva|Níveis de Prevenção|Níveis de Prevenção",
+          "title": "Níveis de Prevenção",
+          "type": "complete",
+          "relativePath": "Bloco 06/01 - Saúde Coletiva/01 - Níveis de Prevenção/Níveis de Prevenção.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b06|Saúde Coletiva|Níveis de Prevenção|Níveis de Prevenção COFEXPRESS",
+          "title": "Níveis de Prevenção COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 06/01 - Saúde Coletiva/01 - Níveis de Prevenção/Níveis de Prevenção COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b06|Saúde Coletiva|Níveis de Prevenção|Prevenção Quaternária e Quinquenária COFEXPRESS",
+          "title": "Prevenção Quaternária e Quinquenária COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 06/01 - Saúde Coletiva/01 - Níveis de Prevenção/Prevenção Quaternária e Quinquenária COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|saude coletiva|prevencao quaternaria e quinquenaria",
+      "block": 6,
+      "area": "Saúde Coletiva",
+      "title": "Prevenção Quaternária e Quinquenária",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b06|Saúde Coletiva|Prevenção Quaternária e Quinquenária|Prevenção Quaternária e Quinquenária",
+          "title": "Prevenção Quaternária e Quinquenária",
+          "type": "complete",
+          "relativePath": "Bloco 06/01 - Saúde Coletiva/02 - Prevenção Quaternária e Quinquenária/Prevenção Quaternária e Quinquenária.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|cirurgia|abdome agudo vias biliares",
+      "block": 7,
+      "area": "Cirurgia",
+      "title": "Abdome Agudo - Vias Biliares",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b07|Cirurgia|Abdome Agudo - Vias Biliares|Abdome agudo inflamatório - vias biliares COFEXPRESS",
+          "title": "Abdome agudo inflamatório - vias biliares COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/05 - Cirurgia/06 - Abdome Agudo - Vias Biliares/Abdome agudo inflamatório - vias biliares COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|cirurgia|abdome agudo inflamatorio vias biliares",
+      "block": 7,
+      "area": "Cirurgia",
+      "title": "Abdome agudo inflamatório - vias biliares",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b07|Cirurgia|Abdome agudo inflamatório - vias biliares|Abdome agudo inflamatório - vias biliares",
+          "title": "Abdome agudo inflamatório - vias biliares",
+          "type": "complete",
+          "relativePath": "Bloco 07/05 - Cirurgia/07 - Abdome agudo inflamatório - vias biliares/Abdome agudo inflamatório - vias biliares.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|clinica medica|disturbios de sodio e potassio",
+      "block": 7,
+      "area": "Clínica Médica",
+      "title": "Distúrbios de Sódio e Potássio",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b07|Clínica Médica|Distúrbios de Sódio e Potássio|Distúrbios do Potássio",
+          "title": "Distúrbios do Potássio",
+          "type": "complete",
+          "relativePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Distúrbios do Potássio.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b07|Clínica Médica|Distúrbios de Sódio e Potássio|Disturbios do Sódio",
+          "title": "Disturbios do Sódio",
+          "type": "complete",
+          "relativePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Disturbios do Sódio.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|clinica medica|disturbios do sodio e potassio",
+      "block": 7,
+      "area": "Clínica Médica",
+      "title": "Distúrbios do Sódio e Potássio",
+      "folderOrder": 8,
+      "videos": [
+        {
+          "id": "b07|Clínica Médica|Distúrbios do Sódio e Potássio|Disturbios do Sódio COFEXPRESS",
+          "title": "Disturbios do Sódio COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/06 - Clínica Médica/08 - Distúrbios do Sódio e Potássio/Disturbios do Sódio COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|clinica medica|gasometria arterial",
+      "block": 7,
+      "area": "Clínica Médica",
+      "title": "Gasometria Arterial",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b07|Clínica Médica|Gasometria Arterial|Gasometria Arterial e distúrbios ácido-base COFEXPRESS",
+          "title": "Gasometria Arterial e distúrbios ácido-base COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial/Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|clinica medica|gasometria arterial e disturbios acido base",
+      "block": 7,
+      "area": "Clínica Médica",
+      "title": "Gasometria Arterial e distúrbios ácido-base",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b07|Clínica Médica|Gasometria Arterial e distúrbios ácido-base|Gasometria Arterial e distúrbios ácido-base",
+          "title": "Gasometria Arterial e distúrbios ácido-base",
+          "type": "complete",
+          "relativePath": "Bloco 07/06 - Clínica Médica/01 - Gasometria Arterial e distúrbios ácido-base/Gasometria Arterial e distúrbios ácido-base.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|g o|amenorreias",
+      "block": 7,
+      "area": "G.O",
+      "title": "Amenorreias",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b07|G.O|Amenorreias|Amenorreias Primária e Secundária",
+          "title": "Amenorreias Primária e Secundária",
+          "type": "complete",
+          "relativePath": "Bloco 07/03 - G.O/03 - Amenorreias/Amenorreias Primária e Secundária.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b07|G.O|Amenorreias|Amenorreias Primária e Secundária COFEXPRESS",
+          "title": "Amenorreias Primária e Secundária COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/03 - G.O/03 - Amenorreias/Amenorreias Primária e Secundária COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|g o|sindrome dos ovarios policisticos",
+      "block": 7,
+      "area": "G.O",
+      "title": "Síndrome dos Ovários Policísticos",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b07|G.O|Síndrome dos Ovários Policísticos|Síndrome dos Ovários Policísticos",
+          "title": "Síndrome dos Ovários Policísticos",
+          "type": "complete",
+          "relativePath": "Bloco 07/03 - G.O/04 - Síndrome dos Ovários Policísticos/Síndrome dos Ovários Policísticos.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b07|G.O|Síndrome dos Ovários Policísticos|Síndrome dos Ovários Policísticos COFEXPRESS",
+          "title": "Síndrome dos Ovários Policísticos COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/03 - G.O/04 - Síndrome dos Ovários Policísticos/Síndrome dos Ovários Policísticos COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|medicina de familia e comunidade|infeccao urinaria na pratica clinica",
+      "block": 7,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Infecção Urinária na Prática Clínica",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b07|Medicina de Família e Comunidade|Infecção Urinária na Prática Clínica|Infecção Urinária na Prática Clínica",
+          "title": "Infecção Urinária na Prática Clínica",
+          "type": "complete",
+          "relativePath": "Bloco 07/02 - Medicina de Família e Comunidade/02 - Infecção Urinária na Prática Clínica/Infecção Urinária na Prática Clínica.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b07|Medicina de Família e Comunidade|Infecção Urinária na Prática Clínica|Infecção Urinária na Prática Clínica COFEXPRESS",
+          "title": "Infecção Urinária na Prática Clínica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/02 - Medicina de Família e Comunidade/02 - Infecção Urinária na Prática Clínica/Infecção Urinária na Prática Clínica COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|pediatria|convulsoes na emergencia e tce leve",
+      "block": 7,
+      "area": "Pediatria",
+      "title": "Convulsões na emergência e TCE Leve",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b07|Pediatria|Convulsões na emergência e TCE Leve|Convulsões na Emergencia TCE Leve - 4º ano - COFEXPRESS",
+          "title": "Convulsões na Emergencia TCE Leve - 4º ano - COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/04 - Pediatria/05 - Convulsões na emergência e TCE Leve/Convulsões na Emergencia TCE Leve - 4º ano - COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|pediatria|convulsoes na emergencia e traumatismo cranioencefalico leve",
+      "block": 7,
+      "area": "Pediatria",
+      "title": "Convulsões na emergência e Traumatismo Cranioencefálico Leve",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b07|Pediatria|Convulsões na emergência e Traumatismo Cranioencefálico Leve|R+PED Convulsões na Emergencia TCE Leve - 4º ano",
+          "title": "R+PED Convulsões na Emergencia TCE Leve - 4º ano",
+          "type": "complete",
+          "relativePath": "Bloco 07/04 - Pediatria/06 - Convulsões na emergência e Traumatismo Cranioencefálico Leve/R+PED Convulsões na Emergencia TCE Leve - 4º ano.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|saude coletiva|determinacao social do processo saude doenca e promocao de saude",
+      "block": 7,
+      "area": "Saúde Coletiva",
+      "title": "Determinação Social do Processo Saúde-Doença e Promoção de Saúde",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b07|Saúde Coletiva|Determinação Social do Processo Saúde-Doença e Promoção de Saúde|Determinação Social do Processo Saúde-Doença e Promoção de Saúde",
+          "title": "Determinação Social do Processo Saúde-Doença e Promoção de Saúde",
+          "type": "complete",
+          "relativePath": "Bloco 07/01 - Saúde Coletiva/02 - Determinação Social do Processo Saúde-Doença e Promoção de Saúde/Determinação Social do Processo Saúde-Doença e Promoção de Saúde.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b07|saude coletiva|determinacao social saude doenca",
+      "block": 7,
+      "area": "Saúde Coletiva",
+      "title": "Determinação Social Saúde-Doença",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b07|Saúde Coletiva|Determinação Social Saúde-Doença|Processo de Saúde e Doença COFEXPRESS",
+          "title": "Processo de Saúde e Doença COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/01 - Saúde Coletiva/01 - Determinação Social Saúde-Doença/Processo de Saúde e Doença COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|cirurgia|abdome agudo inflamatorio apendicite",
+      "block": 8,
+      "area": "Cirurgia",
+      "title": "Abdome agudo inflamatório - apendicite",
+      "folderOrder": 8,
+      "videos": [
+        {
+          "id": "b08|Cirurgia|Abdome agudo inflamatório - apendicite|Abdome agudo inflamatório - apendicite",
+          "title": "Abdome agudo inflamatório - apendicite",
+          "type": "complete",
+          "relativePath": "Bloco 08/04 - Cirurgia/08 - Abdome agudo inflamatório - apendicite/Abdome agudo inflamatório - apendicite.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Cirurgia|Abdome agudo inflamatório - apendicite|Abdome agudo inflamatório - apendicite COFEXPRESS",
+          "title": "Abdome agudo inflamatório - apendicite COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/04 - Cirurgia/08 - Abdome agudo inflamatório - apendicite/Abdome agudo inflamatório - apendicite COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|clinica medica|pancreatite aguda e cronica",
+      "block": 8,
+      "area": "Clínica Médica",
+      "title": "Pancreatite Aguda e Crônica",
+      "folderOrder": 8,
+      "videos": [
+        {
+          "id": "b08|Clínica Médica|Pancreatite Aguda e Crônica|Pancreatite aguda e crônica 1ª Parte",
+          "title": "Pancreatite aguda e crônica 1ª Parte",
+          "type": "complete",
+          "relativePath": "Bloco 08/02 - Clínica Médica/08 - Pancreatite Aguda e Crônica/Pancreatite aguda e crônica 1ª Parte.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Clínica Médica|Pancreatite Aguda e Crônica|Pancreatite aguda e crônica 2ª parte",
+          "title": "Pancreatite aguda e crônica 2ª parte",
+          "type": "complete",
+          "relativePath": "Bloco 08/02 - Clínica Médica/08 - Pancreatite Aguda e Crônica/Pancreatite aguda e crônica 2ª parte.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Clínica Médica|Pancreatite Aguda e Crônica|Pancreatite aguda e crônica 1ª Parte COFEXPRESS",
+          "title": "Pancreatite aguda e crônica 1ª Parte COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/02 - Clínica Médica/08 - Pancreatite Aguda e Crônica/Pancreatite aguda e crônica 1ª Parte COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Clínica Médica|Pancreatite Aguda e Crônica|Pancreatite aguda e crônica 2ª parte COFEXPRESS",
+          "title": "Pancreatite aguda e crônica 2ª parte COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/02 - Clínica Médica/08 - Pancreatite Aguda e Crônica/Pancreatite aguda e crônica 2ª parte COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|cofbasics|cofbasics lesoes elementares pediatria",
+      "block": 8,
+      "area": "CofBasics",
+      "title": "CofBasics - Lesões Elementares (Pediatria)",
+      "folderOrder": 9,
+      "videos": [
+        {
+          "id": "b08|CofBasics|CofBasics - Lesões Elementares (Pediatria)|CofBasics - Lesões Elementares (Pediatria)",
+          "title": "CofBasics - Lesões Elementares (Pediatria)",
+          "type": "complete",
+          "relativePath": "Bloco 08/05 - CofBasics/09 - CofBasics - Lesões Elementares (Pediatria)/CofBasics - Lesões Elementares (Pediatria).mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|g o|sangramentos da primeira metade da gestacao",
+      "block": 8,
+      "area": "G.O",
+      "title": "Sangramentos da Primeira Metade da Gestação",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b08|G.O|Sangramentos da Primeira Metade da Gestação|Sangramentos da Primeira Metade da Gestação",
+          "title": "Sangramentos da Primeira Metade da Gestação",
+          "type": "complete",
+          "relativePath": "Bloco 08/03 - G.O/07 - Sangramentos da Primeira Metade da Gestação/Sangramentos da Primeira Metade da Gestação.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|G.O|Sangramentos da Primeira Metade da Gestação|Sangramentos da Primeira Metade da Gestação COFEXPRESS",
+          "title": "Sangramentos da Primeira Metade da Gestação COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/03 - G.O/07 - Sangramentos da Primeira Metade da Gestação/Sangramentos da Primeira Metade da Gestação COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|g o|sangramentos da segunda metade da gestacao",
+      "block": 8,
+      "area": "G.O",
+      "title": "Sangramentos da Segunda Metade da Gestação",
+      "folderOrder": 8,
+      "videos": [
+        {
+          "id": "b08|G.O|Sangramentos da Segunda Metade da Gestação|R1 - Sangramentos da Segunda Metade da Gestação",
+          "title": "R1 - Sangramentos da Segunda Metade da Gestação",
+          "type": "complete",
+          "relativePath": "Bloco 08/03 - G.O/08 - Sangramentos da Segunda Metade da Gestação/R1 - Sangramentos da Segunda Metade da Gestação.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|G.O|Sangramentos da Segunda Metade da Gestação|Outros Sangramentos de Segunda Metade da Gestação COFEXPRESS",
+          "title": "Outros Sangramentos de Segunda Metade da Gestação COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/03 - G.O/08 - Sangramentos da Segunda Metade da Gestação/Outros Sangramentos de Segunda Metade da Gestação COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|medicina de familia e comunidade|desenvolvimento infantil",
+      "block": 8,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Desenvolvimento Infantil",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b08|Medicina de Família e Comunidade|Desenvolvimento Infantil|Desenvolvimento Infantil",
+          "title": "Desenvolvimento Infantil",
+          "type": "complete",
+          "relativePath": "Bloco 08/01 - Medicina de Família e Comunidade/02 - Desenvolvimento Infantil/Desenvolvimento Infantil.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Medicina de Família e Comunidade|Desenvolvimento Infantil|Desenvolvimento Infantil COFEXPRESS",
+          "title": "Desenvolvimento Infantil COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/01 - Medicina de Família e Comunidade/02 - Desenvolvimento Infantil/Desenvolvimento Infantil COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|medicina de familia e comunidade|rastreamentos",
+      "block": 8,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Rastreamentos",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b08|Medicina de Família e Comunidade|Rastreamentos|Rastreamentos",
+          "title": "Rastreamentos",
+          "type": "complete",
+          "relativePath": "Bloco 08/01 - Medicina de Família e Comunidade/03 - Rastreamentos/Rastreamentos.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Medicina de Família e Comunidade|Rastreamentos|Rastreamentos COFEXPRESS",
+          "title": "Rastreamentos COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/01 - Medicina de Família e Comunidade/03 - Rastreamentos/Rastreamentos COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|medicina de familia e comunidade|sindrome dispeptica",
+      "block": 8,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Síndrome Dispeptica",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b08|Medicina de Família e Comunidade|Síndrome Dispeptica|Dispepsia",
+          "title": "Dispepsia",
+          "type": "complete",
+          "relativePath": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome Dispeptica/Dispepsia.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Medicina de Família e Comunidade|Síndrome Dispeptica|DRGE",
+          "title": "DRGE",
+          "type": "complete",
+          "relativePath": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome Dispeptica/DRGE.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Medicina de Família e Comunidade|Síndrome Dispeptica|Dispepsia COFEXPRESS",
+          "title": "Dispepsia COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome Dispeptica/Dispepsia COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Medicina de Família e Comunidade|Síndrome Dispeptica|DRGE COFEXPRESS",
+          "title": "DRGE COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome Dispeptica/DRGE COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|saude mental|transtorno do desenvolvimento e aprendizagem",
+      "block": 8,
+      "area": "Saúde Mental",
+      "title": "Transtorno do desenvolvimento e aprendizagem",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b08|Saúde Mental|Transtorno do desenvolvimento e aprendizagem|Transtornos do neurodesenvolvimento TEA TDAH TOD",
+          "title": "Transtornos do neurodesenvolvimento TEA TDAH TOD",
+          "type": "complete",
+          "relativePath": "Bloco 08/06 - Saúde Mental/01 - Transtorno do desenvolvimento e aprendizagem/Transtornos do neurodesenvolvimento TEA TDAH TOD.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b08|Saúde Mental|Transtorno do desenvolvimento e aprendizagem|Transtornos do neurodesenvolvimento TEA TDAH TOD COFEXPRESS",
+          "title": "Transtornos do neurodesenvolvimento TEA TDAH TOD COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 08/06 - Saúde Mental/01 - Transtorno do desenvolvimento e aprendizagem/Transtornos do neurodesenvolvimento TEA TDAH TOD COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|cirurgia|abdome agudo diverticulite",
+      "block": 9,
+      "area": "Cirurgia",
+      "title": "Abdome Agudo - Diverticulite",
+      "folderOrder": 8,
+      "videos": [
+        {
+          "id": "b09|Cirurgia|Abdome Agudo - Diverticulite|Abdome agudo inflamatório - diverticulite e abcesso hepático COFEXPRESS",
+          "title": "Abdome agudo inflamatório - diverticulite e abcesso hepático COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 09/05 - Cirurgia/08 - Abdome Agudo - Diverticulite/Abdome agudo inflamatório - diverticulite e abcesso hepático COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|cirurgia|abdome agudo inflamatorio diverticulite e abcesso hepatico",
+      "block": 9,
+      "area": "Cirurgia",
+      "title": "Abdome agudo inflamatório - diverticulite e abcesso hepático",
+      "folderOrder": 9,
+      "videos": [
+        {
+          "id": "b09|Cirurgia|Abdome agudo inflamatório - diverticulite e abcesso hepático|Abdome agudo inflamatório - diverticulite e abscesso hepático",
+          "title": "Abdome agudo inflamatório - diverticulite e abscesso hepático",
+          "type": "complete",
+          "relativePath": "Bloco 09/05 - Cirurgia/09 - Abdome agudo inflamatório - diverticulite e abcesso hepático/Abdome agudo inflamatório - diverticulite e abscesso hepático.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|clinica medica|ulceras genitais",
+      "block": 9,
+      "area": "Clínica Médica",
+      "title": "Úlceras Genitais",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b09|Clínica Médica|Úlceras Genitais|Úlceras Genitais COFEXPRESS",
+          "title": "Úlceras Genitais COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 09/02 - Clínica Médica/05 - Úlceras Genitais/Úlceras Genitais COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|cofbasics|cofbasics bioestatistica",
+      "block": 9,
+      "area": "CofBasics",
+      "title": "CofBasics - Bioestatística",
+      "folderOrder": 9,
+      "videos": [
+        {
+          "id": "b09|CofBasics|CofBasics - Bioestatística|CofBasics - Fundamentos de Bioestatística (Saúde Coletiva)",
+          "title": "CofBasics - Fundamentos de Bioestatística (Saúde Coletiva)",
+          "type": "complete",
+          "relativePath": "Bloco 09/06 - CofBasics/09 - CofBasics - Bioestatística/CofBasics - Fundamentos de Bioestatística (Saúde Coletiva).mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|medicina de familia e comunidade|corrimentos vaginais",
+      "block": 9,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Corrimentos Vaginais",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b09|Medicina de Família e Comunidade|Corrimentos Vaginais|Corrimentos Vaginais",
+          "title": "Corrimentos Vaginais",
+          "type": "complete",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/04 - Corrimentos Vaginais/Corrimentos Vaginais.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b09|Medicina de Família e Comunidade|Corrimentos Vaginais|Corrimentos Vaginais COFEXPRESS",
+          "title": "Corrimentos Vaginais COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/04 - Corrimentos Vaginais/Corrimentos Vaginais COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|medicina de familia e comunidade|dermatoses e infeccoes de partes moles",
+      "block": 9,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Dermatoses e Infecções de Partes Moles",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b09|Medicina de Família e Comunidade|Dermatoses e Infecções de Partes Moles|Dermatoses e Infecções de Partes Moles",
+          "title": "Dermatoses e Infecções de Partes Moles",
+          "type": "complete",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/03 - Dermatoses e Infecções de Partes Moles/Dermatoses e Infecções de Partes Moles.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b09|Medicina de Família e Comunidade|Dermatoses e Infecções de Partes Moles|Dermatoses e Infecções de Partes Moles COFEXPRESS",
+          "title": "Dermatoses e Infecções de Partes Moles COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/03 - Dermatoses e Infecções de Partes Moles/Dermatoses e Infecções de Partes Moles COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|medicina de familia e comunidade|introducao a geriatria e aga",
+      "block": 9,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Introdução à Geriatria e AGA",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b09|Medicina de Família e Comunidade|Introdução à Geriatria e AGA|Introdução à Geriatria e Avaliação Geriátrica Ampla COFEXPRESS",
+          "title": "Introdução à Geriatria e Avaliação Geriátrica Ampla COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/01 - Introdução à Geriatria e AGA/Introdução à Geriatria e Avaliação Geriátrica Ampla COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|medicina de familia e comunidade|introducao a geriatria e avaliacao geriatrica ampla",
+      "block": 9,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Introdução a Geriatria e Avaliação Geriátrica Ampla",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b09|Medicina de Família e Comunidade|Introdução a Geriatria e Avaliação Geriátrica Ampla|Introdução à Geriatria e Avaliação Geriátrica Ampla",
+          "title": "Introdução à Geriatria e Avaliação Geriátrica Ampla",
+          "type": "complete",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/01 - Introdução a Geriatria e Avaliação Geriátrica Ampla/Introdução à Geriatria e Avaliação Geriátrica Ampla.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|medicina de familia e comunidade|sindromes geriatricas e vacinacao idoso",
+      "block": 9,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Síndromes Geriátricas e Vacinação Idoso",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b09|Medicina de Família e Comunidade|Síndromes Geriátricas e Vacinação Idoso|Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso COFEXPRESS",
+          "title": "Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/02 - Síndromes Geriátricas e Vacinação Idoso/Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|medicina de familia e comunidade|sindromes geriatricas vacinacao do idoso e iatrogenia no idoso",
+      "block": 9,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b09|Medicina de Família e Comunidade|Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso|Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso",
+          "title": "Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso",
+          "type": "complete",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/02 - Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso/Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|medicina de familia e comunidade|ulceras genitais",
+      "block": 9,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Úlceras Genitais",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b09|Medicina de Família e Comunidade|Úlceras Genitais|Úlceras Genitais",
+          "title": "Úlceras Genitais",
+          "type": "complete",
+          "relativePath": "Bloco 09/01 - Medicina de Família e Comunidade/05 - Úlceras Genitais/Úlceras Genitais.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|pediatria|dermatite atopica e lesoes benignas do recem nascido",
+      "block": 9,
+      "area": "Pediatria",
+      "title": "Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+      "folderOrder": 8,
+      "videos": [
+        {
+          "id": "b09|Pediatria|Dermatite Atópica e Lesões Benignas do Recém-Nascido|Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+          "title": "Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+          "type": "complete",
+          "relativePath": "Bloco 09/04 - Pediatria/08 - Dermatite Atópica e Lesões Benignas do Recém-Nascido/Dermatite Atópica e Lesões Benignas do Recém-Nascido.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|pediatria|dermatite atopica e lesoes benignas rn",
+      "block": 9,
+      "area": "Pediatria",
+      "title": "Dermatite Atópica e Lesões Benignas RN",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b09|Pediatria|Dermatite Atópica e Lesões Benignas RN|Dermatite Atópica e Lesões Benignas do Recém-Nascido COFEXPRESS",
+          "title": "Dermatite Atópica e Lesões Benignas do Recém-Nascido COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 09/04 - Pediatria/07 - Dermatite Atópica e Lesões Benignas RN/Dermatite Atópica e Lesões Benignas do Recém-Nascido COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b10|cirurgia|abdome agudo obstrutivo perfurativo",
+      "block": 10,
+      "area": "Cirurgia",
+      "title": "Abdome Agudo Obstrutivo - Perfurativo",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b10|Cirurgia|Abdome Agudo Obstrutivo - Perfurativo|Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico",
+          "title": "Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico",
+          "type": "complete",
+          "relativePath": "Bloco 10/04 - Cirurgia/04 - Abdome Agudo Obstrutivo - Perfurativo/Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b10|Cirurgia|Abdome Agudo Obstrutivo - Perfurativo|Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico COFEXPRESS",
+          "title": "Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 10/04 - Cirurgia/04 - Abdome Agudo Obstrutivo - Perfurativo/Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b10|clinica medica|artrites",
+      "block": 10,
+      "area": "Clínica Médica",
+      "title": "Artrites",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b10|Clínica Médica|Artrites|Artrites",
+          "title": "Artrites",
+          "type": "complete",
+          "relativePath": "Bloco 10/05 - Clínica Médica/05 - Artrites/Artrites.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b10|Clínica Médica|Artrites|Artrites COFEXPRESS",
+          "title": "Artrites COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 10/05 - Clínica Médica/05 - Artrites/Artrites COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b10|clinica medica|fibromialgia",
+      "block": 10,
+      "area": "Clínica Médica",
+      "title": "Fibromialgia",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b10|Clínica Médica|Fibromialgia|Fibromialgia",
+          "title": "Fibromialgia",
+          "type": "complete",
+          "relativePath": "Bloco 10/05 - Clínica Médica/06 - Fibromialgia/Fibromialgia.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b10|Clínica Médica|Fibromialgia|Fibromialgia COFEXPRESS",
+          "title": "Fibromialgia COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 10/05 - Clínica Médica/06 - Fibromialgia/Fibromialgia COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b10|g o|rotura prematura de membranas ovulares",
+      "block": 10,
+      "area": "G.O",
+      "title": "Rotura Prematura de Membranas Ovulares",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b10|G.O|Rotura Prematura de Membranas Ovulares|Rotura Prematura de Membranas Ovulares",
+          "title": "Rotura Prematura de Membranas Ovulares",
+          "type": "complete",
+          "relativePath": "Bloco 10/03 - G.O/03 - Rotura Prematura de Membranas Ovulares/Rotura Prematura de Membranas Ovulares.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b10|G.O|Rotura Prematura de Membranas Ovulares|Rotura Prematura de Membranas Ovulares COFEXPRESS",
+          "title": "Rotura Prematura de Membranas Ovulares COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 10/03 - G.O/03 - Rotura Prematura de Membranas Ovulares/Rotura Prematura de Membranas Ovulares COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b10|medicina de familia e comunidade|infeccao de vias aereas superiores",
+      "block": 10,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Infecção de Vias Aéreas Superiores",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b10|Medicina de Família e Comunidade|Infecção de Vias Aéreas Superiores|Infecções de vias aéreas superiores",
+          "title": "Infecções de vias aéreas superiores",
+          "type": "complete",
+          "relativePath": "Bloco 10/02 - Medicina de Família e Comunidade/02 - Infecção de Vias Aéreas Superiores/Infecções de vias aéreas superiores.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b10|Medicina de Família e Comunidade|Infecção de Vias Aéreas Superiores|Infecções de vias aéreas superiores COFEXPRESS",
+          "title": "Infecções de vias aéreas superiores COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 10/02 - Medicina de Família e Comunidade/02 - Infecção de Vias Aéreas Superiores/Infecções de vias aéreas superiores COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b10|saude coletiva|indicadores de saude",
+      "block": 10,
+      "area": "Saúde Coletiva",
+      "title": "Indicadores de Saúde",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b10|Saúde Coletiva|Indicadores de Saúde|Indicadores de saúde Parte 1",
+          "title": "Indicadores de saúde Parte 1",
+          "type": "complete",
+          "relativePath": "Bloco 10/01 - Saúde Coletiva/01 - Indicadores de Saúde/Indicadores de saúde Parte (1).mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b10|Saúde Coletiva|Indicadores de Saúde|Indicadores de saúde Parte 2",
+          "title": "Indicadores de saúde Parte 2",
+          "type": "complete",
+          "relativePath": "Bloco 10/01 - Saúde Coletiva/01 - Indicadores de Saúde/Indicadores de saúde Parte (2).mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b10|Saúde Coletiva|Indicadores de Saúde|Indicadores de saúde Parte 1 COFEXPRESS",
+          "title": "Indicadores de saúde Parte 1 COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 10/01 - Saúde Coletiva/01 - Indicadores de Saúde/Indicadores de saúde Parte 1 COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b10|Saúde Coletiva|Indicadores de Saúde|Indicadores de saúde Parte 2 COFEXPRESS",
+          "title": "Indicadores de saúde Parte 2 COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 10/01 - Saúde Coletiva/01 - Indicadores de Saúde/Indicadores de saúde Parte 2 COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b11|cirurgia|hernias",
+      "block": 11,
+      "area": "Cirurgia",
+      "title": "Hérnias",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b11|Cirurgia|Hérnias|Hérnias",
+          "title": "Hérnias",
+          "type": "complete",
+          "relativePath": "Bloco 11/02 - Cirurgia/03 - Hérnias/Hérnias.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b11|Cirurgia|Hérnias|Hérnias COFEXPRESS",
+          "title": "Hérnias COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 11/02 - Cirurgia/03 - Hérnias/Hérnias COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b11|clinica medica|coagulopatias",
+      "block": 11,
+      "area": "Clínica Médica",
+      "title": "Coagulopatias",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b11|Clínica Médica|Coagulopatias|01 - Coagulopatias",
+          "title": "01 - Coagulopatias",
+          "type": "complete",
+          "relativePath": "Bloco 11/03 - Clínica Médica/04 - Coagulopatias/01 - Coagulopatias.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b11|Clínica Médica|Coagulopatias|Coagulopatias COFEXPRESS",
+          "title": "Coagulopatias COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 11/03 - Clínica Médica/04 - Coagulopatias/Coagulopatias COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b11|clinica medica|onco hematologia",
+      "block": 11,
+      "area": "Clínica Médica",
+      "title": "Onco-hematologia",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b11|Clínica Médica|Onco-hematologia|02 - Onco-hematologia",
+          "title": "02 - Onco-hematologia",
+          "type": "complete",
+          "relativePath": "Bloco 11/03 - Clínica Médica/05 - Onco-hematologia/02 - Onco-hematologia.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b11|Clínica Médica|Onco-hematologia|Onco-hematologia COFEXPRESS",
+          "title": "Onco-hematologia COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 11/03 - Clínica Médica/05 - Onco-hematologia/Onco-hematologia COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b11|cofbasics|cofbasics associacao e causalidade",
+      "block": 11,
+      "area": "CofBasics",
+      "title": "CofBasics - Associação e Causalidade",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b11|CofBasics|CofBasics - Associação e Causalidade|CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO",
+          "title": "CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO",
+          "type": "complete",
+          "relativePath": "Bloco 11/05 - CofBasics/07 - CofBasics - Associação e Causalidade/CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b11|pediatria|hematopediatria 1",
+      "block": 11,
+      "area": "Pediatria",
+      "title": "Hematopediatria 1",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b11|Pediatria|Hematopediatria 1|Hematopediatria I",
+          "title": "Hematopediatria I",
+          "type": "complete",
+          "relativePath": "Bloco 11/01 - Pediatria/01 - Hematopediatria 1/Hematopediatria I.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b11|Pediatria|Hematopediatria 1|Hematopediatria I COFEXPRESS",
+          "title": "Hematopediatria I COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 11/01 - Pediatria/01 - Hematopediatria 1/Hematopediatria I COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b11|pediatria|hematopediatria 2",
+      "block": 11,
+      "area": "Pediatria",
+      "title": "Hematopediatria 2",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b11|Pediatria|Hematopediatria 2|Hematopediatria parte 2",
+          "title": "Hematopediatria parte 2",
+          "type": "complete",
+          "relativePath": "Bloco 11/01 - Pediatria/02 - Hematopediatria 2/Hematopediatria parte 2.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b11|Pediatria|Hematopediatria 2|Hematopediatria II COFEXPRESS",
+          "title": "Hematopediatria II COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 11/01 - Pediatria/02 - Hematopediatria 2/Hematopediatria II COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b11|saude coletiva|estudos epidemiologicos",
+      "block": 11,
+      "area": "Saúde Coletiva",
+      "title": "Estudos Epidemiológicos",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b11|Saúde Coletiva|Estudos Epidemiológicos|R1 - Estudos Epidemiológicos",
+          "title": "R1 - Estudos Epidemiológicos",
+          "type": "complete",
+          "relativePath": "Bloco 11/04 - Saúde Coletiva/06 - Estudos Epidemiológicos/R1 - Estudos Epidemiológicos.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b11|Saúde Coletiva|Estudos Epidemiológicos|Estudos Epidemiológicos COFEXPRESS",
+          "title": "Estudos Epidemiológicos COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 11/04 - Saúde Coletiva/06 - Estudos Epidemiológicos/Estudos Epidemiológicos COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|cirurgia|perioperatorio do cirurgiao",
+      "block": 12,
+      "area": "Cirurgia",
+      "title": "Perioperatório do Cirurgião",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b12|Cirurgia|Perioperatório do Cirurgião|Perioperatório do cirurgião",
+          "title": "Perioperatório do cirurgião",
+          "type": "complete",
+          "relativePath": "Bloco 12/04 - Cirurgia/05 - Perioperatório do Cirurgião/Perioperatório do cirurgião.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b12|Cirurgia|Perioperatório do Cirurgião|Perioperatório do cirurgião COFEXPRESS",
+          "title": "Perioperatório do cirurgião COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/04 - Cirurgia/05 - Perioperatório do Cirurgião/Perioperatório do cirurgião COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|clinica medica|bradiarritmias e sincope",
+      "block": 12,
+      "area": "Clínica Médica",
+      "title": "Bradiarritmias e Síncope",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b12|Clínica Médica|Bradiarritmias e Síncope|02 - Bradiarritmias e síncope",
+          "title": "02 - Bradiarritmias e síncope",
+          "type": "complete",
+          "relativePath": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/02 - Bradiarritmias e síncope.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b12|Clínica Médica|Bradiarritmias e Síncope|Bradiarritmias e síncope COFEXPRESS",
+          "title": "Bradiarritmias e síncope COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/Bradiarritmias e síncope COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|clinica medica|taquiarritmias e acl bls",
+      "block": 12,
+      "area": "Clínica Médica",
+      "title": "Taquiarritmias e ACL - BLS",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b12|Clínica Médica|Taquiarritmias e ACL - BLS|01 - Taquiarritmias e ACLBLS",
+          "title": "01 - Taquiarritmias e ACLBLS",
+          "type": "complete",
+          "relativePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACL - BLS/01 - Taquiarritmias e ACLBLS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b12|Clínica Médica|Taquiarritmias e ACL - BLS|Taquiarritmias e ACLBLS COFEXPRESS",
+          "title": "Taquiarritmias e ACLBLS COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACL - BLS/Taquiarritmias e ACLBLS COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|g o|dor pelvica",
+      "block": 12,
+      "area": "G.O",
+      "title": "Dor pélvica",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b12|G.O|Dor pélvica|Dor Pélvica",
+          "title": "Dor Pélvica",
+          "type": "complete",
+          "relativePath": "Bloco 12/03 - G.O/05 - Dor pélvica/Dor Pélvica.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b12|G.O|Dor pélvica|Dor Pélvica COFEXPRESS",
+          "title": "Dor Pélvica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/03 - G.O/05 - Dor pélvica/Dor Pélvica COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|g o|endometriose",
+      "block": 12,
+      "area": "G.O",
+      "title": "Endometriose",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b12|G.O|Endometriose|Endometriose",
+          "title": "Endometriose",
+          "type": "complete",
+          "relativePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b12|G.O|Endometriose|Endometriose COFEXPRESS",
+          "title": "Endometriose COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|g o|sangramento uterino anormal",
+      "block": 12,
+      "area": "G.O",
+      "title": "Sangramento Uterino Anormal",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b12|G.O|Sangramento Uterino Anormal|Sangramento Uterino Anormal",
+          "title": "Sangramento Uterino Anormal",
+          "type": "complete",
+          "relativePath": "Bloco 12/03 - G.O/03 - Sangramento Uterino Anormal/Sangramento Uterino Anormal.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b12|G.O|Sangramento Uterino Anormal|Sangramento Uterino Anormal COFEXPRESS",
+          "title": "Sangramento Uterino Anormal COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/03 - G.O/03 - Sangramento Uterino Anormal/Sangramento Uterino Anormal COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|medicina de familia e comunidade|diarreia aguda",
+      "block": 12,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Diarreia Aguda",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b12|Medicina de Família e Comunidade|Diarreia Aguda|Diarreia Aguda",
+          "title": "Diarreia Aguda",
+          "type": "complete",
+          "relativePath": "Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/Diarreia Aguda.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b12|Medicina de Família e Comunidade|Diarreia Aguda|Diarreia Aguda COFEXPRESS",
+          "title": "Diarreia Aguda COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/Diarreia Aguda COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|saude coletiva|medidas de associacao",
+      "block": 12,
+      "area": "Saúde Coletiva",
+      "title": "Medidas de Associação",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b12|Saúde Coletiva|Medidas de Associação|01. Medidas de Associação",
+          "title": "01. Medidas de Associação",
+          "type": "complete",
+          "relativePath": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01. Medidas de Associação.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b12|Saúde Coletiva|Medidas de Associação|Medidas de Associação COFEXPRESS",
+          "title": "Medidas de Associação COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/Medidas de Associação COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b13|clinica medica|derrame pleural",
+      "block": 13,
+      "area": "Clínica Médica",
+      "title": "Derrame Pleural",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b13|Clínica Médica|Derrame Pleural|02 - Derrame Pleural",
+          "title": "02 - Derrame Pleural",
+          "type": "complete",
+          "relativePath": "Bloco 13/03 - Clínica Médica/06 - Derrame Pleural/02 - Derrame Pleural.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b13|Clínica Médica|Derrame Pleural|Derrame Pleural COFEXPRESS",
+          "title": "Derrame Pleural COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 13/03 - Clínica Médica/06 - Derrame Pleural/Derrame Pleural COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b13|clinica medica|febre sem sinais localizatorios",
+      "block": 13,
+      "area": "Clínica Médica",
+      "title": "Febre Sem Sinais Localizatórios",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b13|Clínica Médica|Febre Sem Sinais Localizatórios|Febre Sem Sinais Localizatórios",
+          "title": "Febre Sem Sinais Localizatórios",
+          "type": "complete",
+          "relativePath": "Bloco 13/03 - Clínica Médica/03 - Febre Sem Sinais Localizatórios/Febre Sem Sinais Localizatórios.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b13|Clínica Médica|Febre Sem Sinais Localizatórios|Febre Sem Sinais Localizatórios COFEXPRESS",
+          "title": "Febre Sem Sinais Localizatórios COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 13/03 - Clínica Médica/03 - Febre Sem Sinais Localizatórios/Febre Sem Sinais Localizatórios COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b13|clinica medica|pneumonia pac e hospitalar",
+      "block": 13,
+      "area": "Clínica Médica",
+      "title": "Pneumonia - PAC e Hospitalar",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b13|Clínica Médica|Pneumonia - PAC e Hospitalar|01 - Pneumonia PAC e hospitalar",
+          "title": "01 - Pneumonia PAC e hospitalar",
+          "type": "complete",
+          "relativePath": "Bloco 13/03 - Clínica Médica/05 - Pneumonia - PAC e Hospitalar/01 - Pneumonia PAC e hospitalar.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b13|Clínica Médica|Pneumonia - PAC e Hospitalar|Pneumonia PAC e hospitalar COFEXPRESS",
+          "title": "Pneumonia PAC e hospitalar COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 13/03 - Clínica Médica/05 - Pneumonia - PAC e Hospitalar/Pneumonia PAC e hospitalar COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b13|clinica medica|tecnica operatoria fios e anestesicos",
+      "block": 13,
+      "area": "Clínica Médica",
+      "title": "Técnica Operatória - Fios e Anestésicos",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b13|Clínica Médica|Técnica Operatória - Fios e Anestésicos|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais",
+          "title": "Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais",
+          "type": "complete",
+          "relativePath": "Bloco 13/03 - Clínica Médica/04 - Técnica Operatória - Fios e Anestésicos/Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b13|Clínica Médica|Técnica Operatória - Fios e Anestésicos|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS (1)",
+          "title": "Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS (1)",
+          "type": "express",
+          "relativePath": "Bloco 13/03 - Clínica Médica/04 - Técnica Operatória - Fios e Anestésicos/Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS (1).mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b13|g o|violencia sexual",
+      "block": 13,
+      "area": "G.O",
+      "title": "Violência Sexual",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b13|G.O|Violência Sexual|01 - Violência Sexual",
+          "title": "01 - Violência Sexual",
+          "type": "complete",
+          "relativePath": "Bloco 13/02 - G.O/02 - Violência Sexual/01 - Violência Sexual.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b13|G.O|Violência Sexual|02 - Interrupção Legal da Gravidez",
+          "title": "02 - Interrupção Legal da Gravidez",
+          "type": "complete",
+          "relativePath": "Bloco 13/02 - G.O/02 - Violência Sexual/02 - Interrupção Legal da Gravidez.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b13|G.O|Violência Sexual|Interrupção Legal da Gestação COFEXPRESS",
+          "title": "Interrupção Legal da Gestação COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 13/02 - G.O/02 - Violência Sexual/Interrupção Legal da Gestação COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b13|G.O|Violência Sexual|Violência Sexual COFEXPRESS",
+          "title": "Violência Sexual COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 13/02 - G.O/02 - Violência Sexual/Violência Sexual COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b13|saude coletiva|redes de atencao a saude",
+      "block": 13,
+      "area": "Saúde Coletiva",
+      "title": "Redes de Atenção à Saúde",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b13|Saúde Coletiva|Redes de Atenção à Saúde|Redes de Atenção à Saúde e Níveis de Atenção",
+          "title": "Redes de Atenção à Saúde e Níveis de Atenção",
+          "type": "complete",
+          "relativePath": "Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde/Redes de Atenção à Saúde e Níveis de Atenção.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b13|Saúde Coletiva|Redes de Atenção à Saúde|Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS",
+          "title": "Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde/Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b14|cirurgia|esofago no enamed",
+      "block": 14,
+      "area": "Cirurgia",
+      "title": "Esôfago no ENAMED",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b14|Cirurgia|Esôfago no ENAMED|Esôfago no",
+          "title": "Esôfago no",
+          "type": "complete",
+          "relativePath": "Bloco 14/04 - Cirurgia/05 - Esôfago no ENAMED/Esôfago no.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b14|Cirurgia|Esôfago no ENAMED|Esôfago no ENAMED COFEXPRESS",
+          "title": "Esôfago no ENAMED COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 14/04 - Cirurgia/05 - Esôfago no ENAMED/Esôfago no ENAMED COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b14|clinica medica|dislipidemia",
+      "block": 14,
+      "area": "Clínica Médica",
+      "title": "Dislipidemia",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b14|Clínica Médica|Dislipidemia|Dislipidemia classificação, diagnóstico e tratamento",
+          "title": "Dislipidemia classificação, diagnóstico e tratamento",
+          "type": "complete",
+          "relativePath": "Bloco 14/05 - Clínica Médica/06 - Dislipidemia/Dislipidemia classificação, diagnóstico e tratamento.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b14|Clínica Médica|Dislipidemia|Dislipidemia classificação, diagnóstico e tratamento COFEXPRESS",
+          "title": "Dislipidemia classificação, diagnóstico e tratamento COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 14/05 - Clínica Médica/06 - Dislipidemia/Dislipidemia classificação, diagnóstico e tratamento COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b14|clinica medica|sindrome metabolica e obesidade",
+      "block": 14,
+      "area": "Clínica Médica",
+      "title": "Síndrome Metabólica e Obesidade",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b14|Clínica Médica|Síndrome Metabólica e Obesidade|Síndrome metabólica e Obesidade",
+          "title": "Síndrome metabólica e Obesidade",
+          "type": "complete",
+          "relativePath": "Bloco 14/05 - Clínica Médica/07 - Síndrome Metabólica e Obesidade/Síndrome metabólica e Obesidade.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b14|Clínica Médica|Síndrome Metabólica e Obesidade|Síndrome metabólica e Obesidade COFEXPRESS",
+          "title": "Síndrome metabólica e Obesidade COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 14/05 - Clínica Médica/07 - Síndrome Metabólica e Obesidade/Síndrome metabólica e Obesidade COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b14|g o|diabetes na gestacao",
+      "block": 14,
+      "area": "G.O",
+      "title": "Diabetes na Gestação",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b14|G.O|Diabetes na Gestação|Diabetes na Gestação",
+          "title": "Diabetes na Gestação",
+          "type": "complete",
+          "relativePath": "Bloco 14/02 - G.O/02 - Diabetes na Gestação/Diabetes na Gestação.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b14|G.O|Diabetes na Gestação|Diabetes na Gestação COFEXPRESS",
+          "title": "Diabetes na Gestação COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 14/02 - G.O/02 - Diabetes na Gestação/Diabetes na Gestação COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b14|pediatria|cetoacidose diabetica na pediatria",
+      "block": 14,
+      "area": "Pediatria",
+      "title": "Cetoacidose Diabética na Pediatria",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b14|Pediatria|Cetoacidose Diabética na Pediatria|Cetoacidose diabética na Pediatria",
+          "title": "Cetoacidose diabética na Pediatria",
+          "type": "complete",
+          "relativePath": "Bloco 14/03 - Pediatria/04 - Cetoacidose Diabética na Pediatria/Cetoacidose diabética na Pediatria.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b14|Pediatria|Cetoacidose Diabética na Pediatria|Cetoacidose diabética na Pediatria COFEXPRESS",
+          "title": "Cetoacidose diabética na Pediatria COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 14/03 - Pediatria/04 - Cetoacidose Diabética na Pediatria/Cetoacidose diabética na Pediatria COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b14|pediatria|pals suporte avancado pediatria",
+      "block": 14,
+      "area": "Pediatria",
+      "title": "PALS - Suporte Avançado Pediatria",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b14|Pediatria|PALS - Suporte Avançado Pediatria|Suporte Avançado de Vida em Pediatria (PALS)",
+          "title": "Suporte Avançado de Vida em Pediatria (PALS)",
+          "type": "complete",
+          "relativePath": "Bloco 14/03 - Pediatria/03 - PALS - Suporte Avançado Pediatria/Suporte Avançado de Vida em Pediatria (PALS).mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b14|Pediatria|PALS - Suporte Avançado Pediatria|Suporte Avançado de Vida em Pediatria (PALS) COFEXPRESS",
+          "title": "Suporte Avançado de Vida em Pediatria (PALS) COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 14/03 - Pediatria/03 - PALS - Suporte Avançado Pediatria/Suporte Avançado de Vida em Pediatria (PALS) COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b14|saude coletiva|atencao primaria a saude",
+      "block": 14,
+      "area": "Saúde Coletiva",
+      "title": "Atenção Primária à Saúde",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b14|Saúde Coletiva|Atenção Primária à Saúde|Atenção Primária à Saúde",
+          "title": "Atenção Primária à Saúde",
+          "type": "complete",
+          "relativePath": "Bloco 14/01 - Saúde Coletiva/01 - Atenção Primária à Saúde/Atenção Primária à Saúde.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b14|Saúde Coletiva|Atenção Primária à Saúde|Atenção Primária à Saúde COFEXPRESS",
+          "title": "Atenção Primária à Saúde COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 14/01 - Saúde Coletiva/01 - Atenção Primária à Saúde/Atenção Primária à Saúde COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b15|cirurgia|cirurgia bariatrica",
+      "block": 15,
+      "area": "Cirurgia",
+      "title": "Cirurgia Bariátrica",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b15|Cirurgia|Cirurgia Bariátrica|Cirurgia Bariátrica",
+          "title": "Cirurgia Bariátrica",
+          "type": "complete",
+          "relativePath": "Bloco 15/05 - Cirurgia/05 - Cirurgia Bariátrica/Cirurgia Bariátrica.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b15|Cirurgia|Cirurgia Bariátrica|Cirurgia Bariátrica COFEXPRESS",
+          "title": "Cirurgia Bariátrica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 15/05 - Cirurgia/05 - Cirurgia Bariátrica/Cirurgia Bariátrica COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b15|clinica medica|meningites",
+      "block": 15,
+      "area": "Clínica Médica",
+      "title": "Meningites",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b15|Clínica Médica|Meningites|Meningites",
+          "title": "Meningites",
+          "type": "complete",
+          "relativePath": "Bloco 15/06 - Clínica Médica/06 - Meningites/Meningites.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b15|Clínica Médica|Meningites|Meningites COFEXPRESS",
+          "title": "Meningites COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 15/06 - Clínica Médica/06 - Meningites/Meningites COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b15|g o|infeccoes na gravidez",
+      "block": 15,
+      "area": "G.O",
+      "title": "Infecções na Gravidez",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b15|G.O|Infecções na Gravidez|Infecções na Gravidez",
+          "title": "Infecções na Gravidez",
+          "type": "complete",
+          "relativePath": "Bloco 15/03 - G.O/03 - Infecções na Gravidez/Infecções na Gravidez.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b15|G.O|Infecções na Gravidez|Infecções na Gravidez COFEXPRESS",
+          "title": "Infecções na Gravidez COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 15/03 - G.O/03 - Infecções na Gravidez/Infecções na Gravidez COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b15|medicina de familia e comunidade|cefaleias",
+      "block": 15,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Cefaleias",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b15|Medicina de Família e Comunidade|Cefaleias|Cefaleias (primárias, sinais de alarme para secundárias)",
+          "title": "Cefaleias (primárias, sinais de alarme para secundárias)",
+          "type": "complete",
+          "relativePath": "Bloco 15/02 - Medicina de Família e Comunidade/02 - Cefaleias/Cefaleias (primárias, sinais de alarme para secundárias).mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b15|Medicina de Família e Comunidade|Cefaleias|Cefaleias (primárias, sinais de alarme para secundárias)_COFEXPRESS",
+          "title": "Cefaleias (primárias, sinais de alarme para secundárias)_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 15/02 - Medicina de Família e Comunidade/02 - Cefaleias/Cefaleias (primárias, sinais de alarme para secundárias)_COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b15|pediatria|infeccoes congenitas",
+      "block": 15,
+      "area": "Pediatria",
+      "title": "Infecções Congênitas",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b15|Pediatria|Infecções Congênitas|Infecções Congênitas",
+          "title": "Infecções Congênitas",
+          "type": "complete",
+          "relativePath": "Bloco 15/04 - Pediatria/04 - Infecções Congênitas/Infecções Congênitas.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b15|Pediatria|Infecções Congênitas|Infecções Congênitas COFEXPRESS",
+          "title": "Infecções Congênitas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 15/04 - Pediatria/04 - Infecções Congênitas/Infecções Congênitas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b15|saude coletiva|ferramentas da aps",
+      "block": 15,
+      "area": "Saúde Coletiva",
+      "title": "Ferramentas da APS",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b15|Saúde Coletiva|Ferramentas da APS|Ferramentas da APS",
+          "title": "Ferramentas da APS",
+          "type": "complete",
+          "relativePath": "Bloco 15/01 - Saúde Coletiva/01 - Ferramentas da APS/Ferramentas da APS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b15|Saúde Coletiva|Ferramentas da APS|Ferramentas da APS COFEXPRESS",
+          "title": "Ferramentas da APS COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 15/01 - Saúde Coletiva/01 - Ferramentas da APS/Ferramentas da APS COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b16|cirurgia|urologia do pronto socorro",
+      "block": 16,
+      "area": "Cirurgia",
+      "title": "Urologia do Pronto Socorro",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b16|Cirurgia|Urologia do Pronto Socorro|Urologia do Pronto Socorro",
+          "title": "Urologia do Pronto Socorro",
+          "type": "complete",
+          "relativePath": "Bloco 16/04 - Cirurgia/06 - Urologia do Pronto Socorro/Urologia do Pronto Socorro.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b16|Cirurgia|Urologia do Pronto Socorro|Urologia do Pronto Socorro COFEXPRESS",
+          "title": "Urologia do Pronto Socorro COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 16/04 - Cirurgia/06 - Urologia do Pronto Socorro/Urologia do Pronto Socorro COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b16|g o|sindromes hipertensivas na gestacao",
+      "block": 16,
+      "area": "G.O",
+      "title": "Síndromes Hipertensivas na Gestação",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b16|G.O|Síndromes Hipertensivas na Gestação|Síndromes Hipertensivas na Gestação",
+          "title": "Síndromes Hipertensivas na Gestação",
+          "type": "complete",
+          "relativePath": "Bloco 16/02 - G.O/04 - Síndromes Hipertensivas na Gestação/Síndromes Hipertensivas na Gestação.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b16|G.O|Síndromes Hipertensivas na Gestação|Síndromes Hipertensivas na Gestação COFEXPRESS",
+          "title": "Síndromes Hipertensivas na Gestação COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 16/02 - G.O/04 - Síndromes Hipertensivas na Gestação/Síndromes Hipertensivas na Gestação COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b16|medicina de familia e comunidade|abordagem familiar e comunitaria",
+      "block": 16,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Abordagem Familiar e Comunitária",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b16|Medicina de Família e Comunidade|Abordagem Familiar e Comunitária|Abordagem Familiar e Comunitária",
+          "title": "Abordagem Familiar e Comunitária",
+          "type": "complete",
+          "relativePath": "Bloco 16/01 - Medicina de Família e Comunidade/03 - Abordagem Familiar e Comunitária/Abordagem Familiar e Comunitária.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b16|Medicina de Família e Comunidade|Abordagem Familiar e Comunitária|Abordagem Familiar e Comunitária COFEXPRESS",
+          "title": "Abordagem Familiar e Comunitária COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 16/01 - Medicina de Família e Comunidade/03 - Abordagem Familiar e Comunitária/Abordagem Familiar e Comunitária COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b16|medicina de familia e comunidade|hepatites virais",
+      "block": 16,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Hepatites Virais",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b16|Medicina de Família e Comunidade|Hepatites Virais|Hepatites Virais",
+          "title": "Hepatites Virais",
+          "type": "complete",
+          "relativePath": "Bloco 16/01 - Medicina de Família e Comunidade/02 - Hepatites Virais/Hepatites Virais.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b16|Medicina de Família e Comunidade|Hepatites Virais|Hepatites Virais COFEXPRESS",
+          "title": "Hepatites Virais COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 16/01 - Medicina de Família e Comunidade/02 - Hepatites Virais/Hepatites Virais COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b16|medicina de familia e comunidade|ictericias febris e febre maculosa",
+      "block": 16,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Icterícias Febris e Febre Maculosa",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b16|Medicina de Família e Comunidade|Icterícias Febris e Febre Maculosa|Icterícias febris e febre maculosa",
+          "title": "Icterícias febris e febre maculosa",
+          "type": "complete",
+          "relativePath": "Bloco 16/01 - Medicina de Família e Comunidade/01 - Icterícias Febris e Febre Maculosa/Icterícias febris e febre maculosa.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b16|Medicina de Família e Comunidade|Icterícias Febris e Febre Maculosa|Icterícias febris e febre maculosa COFEXPRESS EDITADO",
+          "title": "Icterícias febris e febre maculosa COFEXPRESS EDITADO",
+          "type": "express",
+          "relativePath": "Bloco 16/01 - Medicina de Família e Comunidade/01 - Icterícias Febris e Febre Maculosa/Icterícias febris e febre maculosa COFEXPRESS EDITADO.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b16|pediatria|neoplasias pediatricas",
+      "block": 16,
+      "area": "Pediatria",
+      "title": "Neoplasias Pediátricas",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b16|Pediatria|Neoplasias Pediátricas|Neoplasias Pediátricas",
+          "title": "Neoplasias Pediátricas",
+          "type": "complete",
+          "relativePath": "Bloco 16/03 - Pediatria/05 - Neoplasias Pediátricas/Neoplasias Pediátricas.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b16|Pediatria|Neoplasias Pediátricas|Neoplasias Pediátricas COFEXPRESS",
+          "title": "Neoplasias Pediátricas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 16/03 - Pediatria/05 - Neoplasias Pediátricas/Neoplasias Pediátricas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b17|cirurgia|trauma urologico",
+      "block": 17,
+      "area": "Cirurgia",
+      "title": "Trauma Urológico",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b17|Cirurgia|Trauma Urológico|Trauma Urológico",
+          "title": "Trauma Urológico",
+          "type": "complete",
+          "relativePath": "Bloco 17/04 - Cirurgia/04 - Trauma Urológico/Trauma Urológico.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b17|Cirurgia|Trauma Urológico|Trauma Urológico COFEXPRESS",
+          "title": "Trauma Urológico COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/04 - Cirurgia/04 - Trauma Urológico/Trauma Urológico COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b17|clinica medica|srag suportes ventilatorios",
+      "block": 17,
+      "area": "Clínica Médica",
+      "title": "SRAG + Suportes Ventilatórios",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b17|Clínica Médica|SRAG + Suportes Ventilatórios|Síndrome da angústia respiratória aguda (SARA) e módulos respiratórios",
+          "title": "Síndrome da angústia respiratória aguda (SARA) e módulos respiratórios",
+          "type": "complete",
+          "relativePath": "Bloco 17/05 - Clínica Médica/05 - SRAG + Suportes Ventilatórios/Síndrome da angústia respiratória aguda (SARA) e módulos respiratórios.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b17|Clínica Médica|SRAG + Suportes Ventilatórios|Síndrome da angústia respiratória aguda (SARA) e módulos respiratórios COFEXPRESS",
+          "title": "Síndrome da angústia respiratória aguda (SARA) e módulos respiratórios COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/05 - Clínica Médica/05 - SRAG + Suportes Ventilatórios/Síndrome da angústia respiratória aguda (SARA) e módulos respiratórios COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b17|cofbasics|cofbasics propedeutica mamaria",
+      "block": 17,
+      "area": "CofBasics",
+      "title": "CofBasics - Propedêutica Mamária",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b17|CofBasics|CofBasics - Propedêutica Mamária|CofBasics - Propedêutica Mamária (G.O)",
+          "title": "CofBasics - Propedêutica Mamária (G.O)",
+          "type": "complete",
+          "relativePath": "Bloco 17/07 - CofBasics/07 - CofBasics - Propedêutica Mamária/CofBasics - Propedêutica Mamária (G.O).mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b17|g o|mastologia",
+      "block": 17,
+      "area": "G.O",
+      "title": "Mastologia",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b17|G.O|Mastologia|Câncer de mama",
+          "title": "Câncer de mama",
+          "type": "complete",
+          "relativePath": "Bloco 17/02 - G.O/02 - Mastologia/Câncer de mama.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b17|G.O|Mastologia|Principais Sintomas na Mastologia",
+          "title": "Principais Sintomas na Mastologia",
+          "type": "complete",
+          "relativePath": "Bloco 17/02 - G.O/02 - Mastologia/Principais Sintomas na Mastologia.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b17|G.O|Mastologia|Câncer de mama COFEXPRESS",
+          "title": "Câncer de mama COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/02 - G.O/02 - Mastologia/Câncer de mama COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b17|G.O|Mastologia|Principais Sintomas na Mastologia COFEXPRESS",
+          "title": "Principais Sintomas na Mastologia COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/02 - G.O/02 - Mastologia/Principais Sintomas na Mastologia COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b17|medicina de familia e comunidade|intoxicacoes",
+      "block": 17,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Intoxicações",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b17|Medicina de Família e Comunidade|Intoxicações|Intoxicações",
+          "title": "Intoxicações",
+          "type": "complete",
+          "relativePath": "Bloco 17/06 - Medicina de Família e Comunidade/06 - Intoxicações/Intoxicações.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b17|Medicina de Família e Comunidade|Intoxicações|Intoxicações COFEXPRESS",
+          "title": "Intoxicações COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/06 - Medicina de Família e Comunidade/06 - Intoxicações/Intoxicações COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b17|pediatria|itu e meningite pediatria",
+      "block": 17,
+      "area": "Pediatria",
+      "title": "ITU e Meningite (Pediatria)",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|Infecção de Trato Urinário e Meningite",
+          "title": "Infecção de Trato Urinário e Meningite",
+          "type": "complete",
+          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/Infecção de Trato Urinário e Meningite.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|Infecção de Trato Urinário e Meningite COFEXPRESS",
+          "title": "Infecção de Trato Urinário e Meningite COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/Infecção de Trato Urinário e Meningite COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b17|saude coletiva|estrategia da saude da familia",
+      "block": 17,
+      "area": "Saúde Coletiva",
+      "title": "Estratégia da Saúde da Família",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b17|Saúde Coletiva|Estratégia da Saúde da Família|Estratégia de Saúde da Família",
+          "title": "Estratégia de Saúde da Família",
+          "type": "complete",
+          "relativePath": "Bloco 17/01 - Saúde Coletiva/01 - Estratégia da Saúde da Família/Estratégia de Saúde da Família.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b17|Saúde Coletiva|Estratégia da Saúde da Família|Estratégia de Saúde da Família COFEXPRESS",
+          "title": "Estratégia de Saúde da Família COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/01 - Saúde Coletiva/01 - Estratégia da Saúde da Família/Estratégia de Saúde da Família COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b18|clinica medica|cirrose hepatica 1",
+      "block": 18,
+      "area": "Clínica Médica",
+      "title": "Cirrose Hepática 1",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b18|Clínica Médica|Cirrose Hepática 1|Cirrose conceitos gerais, ascite e PBE",
+          "title": "Cirrose conceitos gerais, ascite e PBE",
+          "type": "complete",
+          "relativePath": "Bloco 18/04 - Clínica Médica/06 - Cirrose Hepática 1/Cirrose conceitos gerais, ascite e PBE.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b18|Clínica Médica|Cirrose Hepática 1|Cirrose conceitos gerais, ascite e PBE COFEXPRESS",
+          "title": "Cirrose conceitos gerais, ascite e PBE COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 18/04 - Clínica Médica/06 - Cirrose Hepática 1/Cirrose conceitos gerais, ascite e PBE COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b18|clinica medica|cirrose hepatica 2",
+      "block": 18,
+      "area": "Clínica Médica",
+      "title": "Cirrose Hepática 2",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b18|Clínica Médica|Cirrose Hepática 2|Cirrose encefalopatia, Sd. hepatorrenal e hepatopulmonar",
+          "title": "Cirrose encefalopatia, Sd. hepatorrenal e hepatopulmonar",
+          "type": "complete",
+          "relativePath": "Bloco 18/04 - Clínica Médica/07 - Cirrose Hepática 2/Cirrose encefalopatia, Sd. hepatorrenal e hepatopulmonar.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b18|Clínica Médica|Cirrose Hepática 2|Cirrose encefalopatia, Sd. hepatorrenal e hepatopulmonar COFEXPRESS",
+          "title": "Cirrose encefalopatia, Sd. hepatorrenal e hepatopulmonar COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 18/04 - Clínica Médica/07 - Cirrose Hepática 2/Cirrose encefalopatia, Sd. hepatorrenal e hepatopulmonar COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b18|clinica medica|hiperplasia prostatica benigna",
+      "block": 18,
+      "area": "Clínica Médica",
+      "title": "Hiperplasia Prostática Benigna",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b18|Clínica Médica|Hiperplasia Prostática Benigna|Hiperplasia prostática benigna",
+          "title": "Hiperplasia prostática benigna",
+          "type": "complete",
+          "relativePath": "Bloco 18/04 - Clínica Médica/05 - Hiperplasia Prostática Benigna/Hiperplasia prostática benigna.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b18|Clínica Médica|Hiperplasia Prostática Benigna|Hieperplasia prostática benigna COFEXPRESS",
+          "title": "Hieperplasia prostática benigna COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 18/04 - Clínica Médica/05 - Hiperplasia Prostática Benigna/Hieperplasia prostática benigna COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b18|clinica medica|uro oncologia",
+      "block": 18,
+      "area": "Clínica Médica",
+      "title": "Uro-oncologia",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b18|Clínica Médica|Uro-oncologia|Uro-oncologia",
+          "title": "Uro-oncologia",
+          "type": "complete",
+          "relativePath": "Bloco 18/04 - Clínica Médica/04 - Uro-oncologia/Uro-oncologia.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b18|Clínica Médica|Uro-oncologia|Uro-oncologia COFEXPRESS",
+          "title": "Uro-oncologia COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 18/04 - Clínica Médica/04 - Uro-oncologia/Uro-oncologia COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b18|g o|cofbasics propedeutica em uroginecologia",
+      "block": 18,
+      "area": "G.O",
+      "title": "CofBasics - Propedêutica em Uroginecologia",
+      "folderOrder": 0,
+      "videos": [
+        {
+          "id": "b18|G.O|CofBasics - Propedêutica em Uroginecologia|CofBasics - Propedêutica em Uroginecologia",
+          "title": "CofBasics - Propedêutica em Uroginecologia",
+          "type": "complete",
+          "relativePath": "Bloco 18/02 - G.O/CofBasics - Propedêutica em Uroginecologia/CofBasics - Propedêutica em Uroginecologia.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b18|g o|uroginecologia",
+      "block": 18,
+      "area": "G.O",
+      "title": "Uroginecologia",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b18|G.O|Uroginecologia|Prolapso Genital Incontinência Urinária",
+          "title": "Prolapso Genital Incontinência Urinária",
+          "type": "complete",
+          "relativePath": "Bloco 18/02 - G.O/02 - Uroginecologia/Prolapso Genital Incontinência Urinária.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b18|G.O|Uroginecologia|Prolapso Genital Incontinência Urinária COFEXPRESS",
+          "title": "Prolapso Genital Incontinência Urinária COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 18/02 - G.O/02 - Uroginecologia/Prolapso Genital Incontinência Urinária COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b18|medicina de familia e comunidade|mccp metodo clinico centrado na pessoa",
+      "block": 18,
+      "area": "Medicina de Família e Comunidade",
+      "title": "MCCP - Método Clínico Centrado na Pessoa",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b18|Medicina de Família e Comunidade|MCCP - Método Clínico Centrado na Pessoa|MCCP - Método Clínico Centrado na Pessoa e ReSOAP",
+          "title": "MCCP - Método Clínico Centrado na Pessoa e ReSOAP",
+          "type": "complete",
+          "relativePath": "Bloco 18/01 - Medicina de Família e Comunidade/01 - MCCP - Método Clínico Centrado na Pessoa/MCCP - Método Clínico Centrado na Pessoa e ReSOAP.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b18|Medicina de Família e Comunidade|MCCP - Método Clínico Centrado na Pessoa|MCCP - Método Clínico Centrado na Pessoa e ReSOAP COFEXPRESS",
+          "title": "MCCP - Método Clínico Centrado na Pessoa e ReSOAP COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 18/01 - Medicina de Família e Comunidade/01 - MCCP - Método Clínico Centrado na Pessoa/MCCP - Método Clínico Centrado na Pessoa e ReSOAP COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b18|pediatria|sepse e choque septico pediatrico",
+      "block": 18,
+      "area": "Pediatria",
+      "title": "Sepse e Choque Séptico Pediátrico",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b18|Pediatria|Sepse e Choque Séptico Pediátrico|Sepse e Choque Séptico Pediátrico",
+          "title": "Sepse e Choque Séptico Pediátrico",
+          "type": "complete",
+          "relativePath": "Bloco 18/03 - Pediatria/03 - Sepse e Choque Séptico Pediátrico/Sepse e Choque Séptico Pediátrico.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b18|Pediatria|Sepse e Choque Séptico Pediátrico|Sepse e Choque Séptico Pediátrico Enamed",
+          "title": "Sepse e Choque Séptico Pediátrico Enamed",
+          "type": "complete",
+          "relativePath": "Bloco 18/03 - Pediatria/03 - Sepse e Choque Séptico Pediátrico/Sepse e Choque Séptico Pediátrico Enamed.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b18|Pediatria|Sepse e Choque Séptico Pediátrico|Sepse e Choque Séptico Pediátrico COFEXPRESS",
+          "title": "Sepse e Choque Séptico Pediátrico COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 18/03 - Pediatria/03 - Sepse e Choque Séptico Pediátrico/Sepse e Choque Séptico Pediátrico COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b19|clinica medica|nodulos hepaticos benignos",
+      "block": 19,
+      "area": "Clínica Médica",
+      "title": "Nódulos Hepáticos Benignos",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b19|Clínica Médica|Nódulos Hepáticos Benignos|Nódulos Hepáticos Benignos",
+          "title": "Nódulos Hepáticos Benignos",
+          "type": "complete",
+          "relativePath": "Bloco 19/03 - Clínica Médica/06 - Nódulos Hepáticos Benignos/Nódulos Hepáticos Benignos.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b19|Clínica Médica|Nódulos Hepáticos Benignos|Nódulos Hepáticos Benignos COFEXPRESS",
+          "title": "Nódulos Hepáticos Benignos COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 19/03 - Clínica Médica/06 - Nódulos Hepáticos Benignos/Nódulos Hepáticos Benignos COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b19|clinica medica|triagens neonatais e hipoglicemia",
+      "block": 19,
+      "area": "Clínica Médica",
+      "title": "Triagens Neonatais e Hipoglicemia",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b19|Clínica Médica|Triagens Neonatais e Hipoglicemia|Triagens Neonatais e Hipoglicemia",
+          "title": "Triagens Neonatais e Hipoglicemia",
+          "type": "complete",
+          "relativePath": "Bloco 19/03 - Clínica Médica/05 - Triagens Neonatais e Hipoglicemia/Triagens Neonatais e Hipoglicemia.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b19|Clínica Médica|Triagens Neonatais e Hipoglicemia|Triagens Neonatais e Hipoglicemia COFEXPRESS",
+          "title": "Triagens Neonatais e Hipoglicemia COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 19/03 - Clínica Médica/05 - Triagens Neonatais e Hipoglicemia/Triagens Neonatais e Hipoglicemia COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b19|g o|cancer de colo de utero",
+      "block": 19,
+      "area": "G.O",
+      "title": "Câncer de Colo de Útero",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b19|G.O|Câncer de Colo de Útero|Rastreamento de câncer de colo de útero",
+          "title": "Rastreamento de câncer de colo de útero",
+          "type": "complete",
+          "relativePath": "Bloco 19/02 - G.O/04 - Câncer de Colo de Útero/Rastreamento de câncer de colo de útero.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b19|G.O|Câncer de Colo de Útero|Rastreamento de câncer de colo de útero COFEXPRESS",
+          "title": "Rastreamento de câncer de colo de útero COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 19/02 - G.O/04 - Câncer de Colo de Útero/Rastreamento de câncer de colo de útero COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b19|medicina de familia e comunidade|doencas negligenciadas",
+      "block": 19,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Doenças Negligenciadas",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b19|Medicina de Família e Comunidade|Doenças Negligenciadas|Doenças negligenciadas",
+          "title": "Doenças negligenciadas",
+          "type": "complete",
+          "relativePath": "Bloco 19/01 - Medicina de Família e Comunidade/01 - Doenças Negligenciadas/Doenças negligenciadas.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b19|Medicina de Família e Comunidade|Doenças Negligenciadas|Doenças negligenciadas COFEXPRESS",
+          "title": "Doenças negligenciadas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 19/01 - Medicina de Família e Comunidade/01 - Doenças Negligenciadas/Doenças negligenciadas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b19|medicina de familia e comunidade|habilidades de comunicacao",
+      "block": 19,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Habilidades de Comunicação",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b19|Medicina de Família e Comunidade|Habilidades de Comunicação|Habilidades de comunicação",
+          "title": "Habilidades de comunicação",
+          "type": "complete",
+          "relativePath": "Bloco 19/01 - Medicina de Família e Comunidade/03 - Habilidades de Comunicação/Habilidades de comunicação.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b19|Medicina de Família e Comunidade|Habilidades de Comunicação|Habilidades de comunicação COFEXPRESS",
+          "title": "Habilidades de comunicação COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 19/01 - Medicina de Família e Comunidade/03 - Habilidades de Comunicação/Habilidades de comunicação COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b19|medicina de familia e comunidade|hanseniase",
+      "block": 19,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Hanseníase",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b19|Medicina de Família e Comunidade|Hanseníase|Hanseníase",
+          "title": "Hanseníase",
+          "type": "complete",
+          "relativePath": "Bloco 19/01 - Medicina de Família e Comunidade/02 - Hanseníase/Hanseníase.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b19|Medicina de Família e Comunidade|Hanseníase|Hanseníase COFEXPRESS",
+          "title": "Hanseníase COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 19/01 - Medicina de Família e Comunidade/02 - Hanseníase/Hanseníase COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b20|cirurgia|adenocarcinoma de pancreas",
+      "block": 20,
+      "area": "Cirurgia",
+      "title": "Adenocarcinoma de Pâncreas",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b20|Cirurgia|Adenocarcinoma de Pâncreas|Adenocarcinoma de pâncreas, tumores periampulares e pancreatite crônica",
+          "title": "Adenocarcinoma de pâncreas, tumores periampulares e pancreatite crônica",
+          "type": "complete",
+          "relativePath": "Bloco 20/04 - Cirurgia/04 - Adenocarcinoma de Pâncreas/Adenocarcinoma de pâncreas, tumores periampulares e pancreatite crônica.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|Cirurgia|Adenocarcinoma de Pâncreas|Adenocarcinoma de pâncreas, tumores periampulares e pancreatite crônica COFEXPRESS",
+          "title": "Adenocarcinoma de pâncreas, tumores periampulares e pancreatite crônica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 20/04 - Cirurgia/04 - Adenocarcinoma de Pâncreas/Adenocarcinoma de pâncreas, tumores periampulares e pancreatite crônica COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b20|clinica medica|doenca renal cronica",
+      "block": 20,
+      "area": "Clínica Médica",
+      "title": "Doença Renal Crônica",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b20|Clínica Médica|Doença Renal Crônica|Doença Renal Crônica",
+          "title": "Doença Renal Crônica",
+          "type": "complete",
+          "relativePath": "Bloco 20/05 - Clínica Médica/07 - Doença Renal Crônica/Doença Renal Crônica.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|Clínica Médica|Doença Renal Crônica|Doença Renal Crônica COFEXPRESS",
+          "title": "Doença Renal Crônica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 20/05 - Clínica Médica/07 - Doença Renal Crônica/Doença Renal Crônica COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b20|clinica medica|glomerulopatias",
+      "block": 20,
+      "area": "Clínica Médica",
+      "title": "Glomerulopatias",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b20|Clínica Médica|Glomerulopatias|Glomerulopatias",
+          "title": "Glomerulopatias",
+          "type": "complete",
+          "relativePath": "Bloco 20/05 - Clínica Médica/05 - Glomerulopatias/Glomerulopatias.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|Clínica Médica|Glomerulopatias|Glomerulopatias COFEXPRESS",
+          "title": "Glomerulopatias COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 20/05 - Clínica Médica/05 - Glomerulopatias/Glomerulopatias COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b20|clinica medica|injuria renal aguda",
+      "block": 20,
+      "area": "Clínica Médica",
+      "title": "Injúria Renal Aguda",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b20|Clínica Médica|Injúria Renal Aguda|Injúria renal aguda",
+          "title": "Injúria renal aguda",
+          "type": "complete",
+          "relativePath": "Bloco 20/05 - Clínica Médica/06 - Injúria Renal Aguda/Injúria renal aguda.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|Clínica Médica|Injúria Renal Aguda|Injúria renal aguda COFEXPRESS",
+          "title": "Injúria renal aguda COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 20/05 - Clínica Médica/06 - Injúria Renal Aguda/Injúria renal aguda COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b20|g o|outros canceres ginecologicos",
+      "block": 20,
+      "area": "G.O",
+      "title": "Outros Cânceres Ginecológicos",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b20|G.O|Outros Cânceres Ginecológicos|Hiperplasia endometrial e Câncer de endométrio",
+          "title": "Hiperplasia endometrial e Câncer de endométrio",
+          "type": "complete",
+          "relativePath": "Bloco 20/02 - G.O/02 - Outros Cânceres Ginecológicos/Hiperplasia endometrial e Câncer de endométrio.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|G.O|Outros Cânceres Ginecológicos|Tumores Anexiais e Câncer de Ovário",
+          "title": "Tumores Anexiais e Câncer de Ovário",
+          "type": "complete",
+          "relativePath": "Bloco 20/02 - G.O/02 - Outros Cânceres Ginecológicos/Tumores Anexiais e Câncer de Ovário.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|G.O|Outros Cânceres Ginecológicos|Hiperplasia Endometrial e Câncer de Endométrio COFEXPRESS",
+          "title": "Hiperplasia Endometrial e Câncer de Endométrio COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 20/02 - G.O/02 - Outros Cânceres Ginecológicos/Hiperplasia Endometrial e Câncer de Endométrio COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|G.O|Outros Cânceres Ginecológicos|Tumores Anexiais e Câncer de Ovário COFEXPRESS",
+          "title": "Tumores Anexiais e Câncer de Ovário COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 20/02 - G.O/02 - Outros Cânceres Ginecológicos/Tumores Anexiais e Câncer de Ovário COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b20|pediatria|ictericia e colestase neonatal",
+      "block": 20,
+      "area": "Pediatria",
+      "title": "Icterícia e Colestase Neonatal",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b20|Pediatria|Icterícia e Colestase Neonatal|Icterícia e Colestase Neonatal",
+          "title": "Icterícia e Colestase Neonatal",
+          "type": "complete",
+          "relativePath": "Bloco 20/03 - Pediatria/03 - Icterícia e Colestase Neonatal/Icterícia e Colestase Neonatal.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|Pediatria|Icterícia e Colestase Neonatal|Icterícia e Colestase Neonatal COFEXPRESS",
+          "title": "Icterícia e Colestase Neonatal COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 20/03 - Pediatria/03 - Icterícia e Colestase Neonatal/Icterícia e Colestase Neonatal COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b20|saude coletiva|testes diagnosticos",
+      "block": 20,
+      "area": "Saúde Coletiva",
+      "title": "Testes Diagnósticos",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b20|Saúde Coletiva|Testes Diagnósticos|Testes diagnósticos",
+          "title": "Testes diagnósticos",
+          "type": "complete",
+          "relativePath": "Bloco 20/01 - Saúde Coletiva/01 - Testes Diagnósticos/Testes diagnósticos.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b20|Saúde Coletiva|Testes Diagnósticos|Testes diagnósticos COFEXPRESS",
+          "title": "Testes diagnósticos COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 20/01 - Saúde Coletiva/01 - Testes Diagnósticos/Testes diagnósticos COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b21|cirurgia|hemorroidas e doencas orificiais",
+      "block": 21,
+      "area": "Cirurgia",
+      "title": "Hemorroidas e Doenças Orificiais",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b21|Cirurgia|Hemorroidas e Doenças Orificiais|Hemorroidas e Doenças orificiais",
+          "title": "Hemorroidas e Doenças orificiais",
+          "type": "complete",
+          "relativePath": "Bloco 21/05 - Cirurgia/05 - Hemorroidas e Doenças Orificiais/Hemorroidas e Doenças orificiais.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Cirurgia|Hemorroidas e Doenças Orificiais|Hemorroidas e Doenças orificiais COFEXPRESS",
+          "title": "Hemorroidas e Doenças orificiais COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 21/05 - Cirurgia/05 - Hemorroidas e Doenças Orificiais/Hemorroidas e Doenças orificiais COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b21|cirurgia|sindrome de fournier",
+      "block": 21,
+      "area": "Cirurgia",
+      "title": "Síndrome de Fournier",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b21|Cirurgia|Síndrome de Fournier|Síndrome de Fournier",
+          "title": "Síndrome de Fournier",
+          "type": "complete",
+          "relativePath": "Bloco 21/05 - Cirurgia/07 - Síndrome de Fournier/Síndrome de Fournier.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Cirurgia|Síndrome de Fournier|Síndrome de Fournier COFEXPRESS",
+          "title": "Síndrome de Fournier COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 21/05 - Cirurgia/07 - Síndrome de Fournier/Síndrome de Fournier COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b21|clinica medica|hemorragia digestiva alta",
+      "block": 21,
+      "area": "Clínica Médica",
+      "title": "Hemorragia Digestiva Alta",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b21|Clínica Médica|Hemorragia Digestiva Alta|Hemorragia digestiva alta",
+          "title": "Hemorragia digestiva alta",
+          "type": "complete",
+          "relativePath": "Bloco 21/06 - Clínica Médica/06 - Hemorragia Digestiva Alta/Hemorragia digestiva alta.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Clínica Médica|Hemorragia Digestiva Alta|Urgências Endoscópicas HDB e HDM",
+          "title": "Urgências Endoscópicas HDB e HDM",
+          "type": "complete",
+          "relativePath": "Bloco 21/06 - Clínica Médica/06 - Hemorragia Digestiva Alta/Urgências Endoscópicas HDB e HDM.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Clínica Médica|Hemorragia Digestiva Alta|Hemorragia digestiva alta COFEXPRESS",
+          "title": "Hemorragia digestiva alta COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 21/06 - Clínica Médica/06 - Hemorragia Digestiva Alta/Hemorragia digestiva alta COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Clínica Médica|Hemorragia Digestiva Alta|Urgências Endoscópicas HDB e HDM COFEXPRESS",
+          "title": "Urgências Endoscópicas HDB e HDM COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 21/06 - Clínica Médica/06 - Hemorragia Digestiva Alta/Urgências Endoscópicas HDB e HDM COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b21|g o|infertilidade",
+      "block": 21,
+      "area": "G.O",
+      "title": "Infertilidade",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b21|G.O|Infertilidade|Infertilidade",
+          "title": "Infertilidade",
+          "type": "complete",
+          "relativePath": "Bloco 21/03 - G.O/03 - Infertilidade/Infertilidade.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|G.O|Infertilidade|Infertilidade COFEXPRESS",
+          "title": "Infertilidade COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 21/03 - G.O/03 - Infertilidade/Infertilidade COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b21|pediatria|dengue na pediatria",
+      "block": 21,
+      "area": "Pediatria",
+      "title": "Dengue na Pediatria",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b21|Pediatria|Dengue na Pediatria|Dengue na Pediatria",
+          "title": "Dengue na Pediatria",
+          "type": "complete",
+          "relativePath": "Bloco 21/04 - Pediatria/04 - Dengue na Pediatria/Dengue na Pediatria.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Pediatria|Dengue na Pediatria|Dengue na Pediatria COFEXPRESS",
+          "title": "Dengue na Pediatria COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 21/04 - Pediatria/04 - Dengue na Pediatria/Dengue na Pediatria COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b21|saude coletiva|vigilancia em saude",
+      "block": 21,
+      "area": "Saúde Coletiva",
+      "title": "Vigilância em Saúde",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b21|Saúde Coletiva|Vigilância em Saúde|Vigilância em saúde",
+          "title": "Vigilância em saúde",
+          "type": "complete",
+          "relativePath": "Bloco 21/01 - Saúde Coletiva/01 - Vigilância em Saúde/Vigilância em saúde.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Saúde Coletiva|Vigilância em Saúde|Vigilância em Saúde (2)",
+          "title": "Vigilância em Saúde (2)",
+          "type": "complete",
+          "relativePath": "Bloco 21/01 - Saúde Coletiva/01 - Vigilância em Saúde/Vigilância em Saúde (2).mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Saúde Coletiva|Vigilância em Saúde|Vigilância em Saúde COFEXPRESS",
+          "title": "Vigilância em Saúde COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 21/01 - Saúde Coletiva/01 - Vigilância em Saúde/Vigilância em Saúde COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b21|saude mental|insuficiencia cognitiva no idoso",
+      "block": 21,
+      "area": "Saúde Mental",
+      "title": "Insuficiência Cognitiva no Idoso",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b21|Saúde Mental|Insuficiência Cognitiva no Idoso|Insuficiência cognitiva no idoso demências e delirium",
+          "title": "Insuficiência cognitiva no idoso demências e delirium",
+          "type": "complete",
+          "relativePath": "Bloco 21/02 - Saúde Mental/02 - Insuficiência Cognitiva no Idoso/Insuficiência cognitiva no idoso demências e delirium.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b21|Saúde Mental|Insuficiência Cognitiva no Idoso|Insuficiência cognitiva no idoso demências e delirium COFEXPRESS",
+          "title": "Insuficiência cognitiva no idoso demências e delirium COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 21/02 - Saúde Mental/02 - Insuficiência Cognitiva no Idoso/Insuficiência cognitiva no idoso demências e delirium COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b22|cirurgia|adenocarcinoma gastrico e gist",
+      "block": 22,
+      "area": "Cirurgia",
+      "title": "Adenocarcinoma Gástrico e GIST",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b22|Cirurgia|Adenocarcinoma Gástrico e GIST|Adenocarcinoma Gástrico e GIST",
+          "title": "Adenocarcinoma Gástrico e GIST",
+          "type": "complete",
+          "relativePath": "Bloco 22/04 - Cirurgia/04 - Adenocarcinoma Gástrico e GIST/Adenocarcinoma Gástrico e GIST.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b22|Cirurgia|Adenocarcinoma Gástrico e GIST|Adenocarcinoma Gástrico e GIST COFEXPRESS",
+          "title": "Adenocarcinoma Gástrico e GIST COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 22/04 - Cirurgia/04 - Adenocarcinoma Gástrico e GIST/Adenocarcinoma Gástrico e GIST COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b22|clinica medica|dor toracica nao anginosa",
+      "block": 22,
+      "area": "Clínica Médica",
+      "title": "Dor Torácica Não Anginosa",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b22|Clínica Médica|Dor Torácica Não Anginosa|Dor Torácica Não Anginosa",
+          "title": "Dor Torácica Não Anginosa",
+          "type": "complete",
+          "relativePath": "Bloco 22/03 - Clínica Médica/06 - Dor Torácica Não Anginosa/Dor Torácica Não Anginosa.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b22|Clínica Médica|Dor Torácica Não Anginosa|Dor Torácica Não Anginosa COFEXPRESS",
+          "title": "Dor Torácica Não Anginosa COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 22/03 - Clínica Médica/06 - Dor Torácica Não Anginosa/Dor Torácica Não Anginosa COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b22|clinica medica|sindromes coronarianas agudas",
+      "block": 22,
+      "area": "Clínica Médica",
+      "title": "Síndromes Coronarianas Agudas",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b22|Clínica Médica|Síndromes Coronarianas Agudas|Síndromes Coronarianas Agudas - parte 1",
+          "title": "Síndromes Coronarianas Agudas - parte 1",
+          "type": "complete",
+          "relativePath": "Bloco 22/03 - Clínica Médica/05 - Síndromes Coronarianas Agudas/Síndromes Coronarianas Agudas - parte 1.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b22|Clínica Médica|Síndromes Coronarianas Agudas|Síndromes Coronarianas Agudas - parte 2",
+          "title": "Síndromes Coronarianas Agudas - parte 2",
+          "type": "complete",
+          "relativePath": "Bloco 22/03 - Clínica Médica/05 - Síndromes Coronarianas Agudas/Síndromes Coronarianas Agudas - parte 2.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b22|Clínica Médica|Síndromes Coronarianas Agudas|Síndromes Coronarianas Agudas COFEXPRESS",
+          "title": "Síndromes Coronarianas Agudas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 22/03 - Clínica Médica/05 - Síndromes Coronarianas Agudas/Síndromes Coronarianas Agudas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b22|pediatria|exantematicas",
+      "block": 22,
+      "area": "Pediatria",
+      "title": "Exantemáticas",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b22|Pediatria|Exantemáticas|Exantemáticas",
+          "title": "Exantemáticas",
+          "type": "complete",
+          "relativePath": "Bloco 22/02 - Pediatria/03 - Exantemáticas/Exantemáticas.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b22|Pediatria|Exantemáticas|Exantemáticas COFEXPRESS",
+          "title": "Exantemáticas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 22/02 - Pediatria/03 - Exantemáticas/Exantemáticas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b22|saude coletiva|doencas relacionadas ao trabalho",
+      "block": 22,
+      "area": "Saúde Coletiva",
+      "title": "Doenças Relacionadas ao Trabalho",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b22|Saúde Coletiva|Doenças Relacionadas ao Trabalho|Principais Doenças e Agravos Relacionados ao Trabalho",
+          "title": "Principais Doenças e Agravos Relacionados ao Trabalho",
+          "type": "complete",
+          "relativePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b22|Saúde Coletiva|Doenças Relacionadas ao Trabalho|Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS",
+          "title": "Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b22|saude coletiva|saude do trabalhador",
+      "block": 22,
+      "area": "Saúde Coletiva",
+      "title": "Saúde do Trabalhador",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b22|Saúde Coletiva|Saúde do Trabalhador|Acidente de Trabalho",
+          "title": "Acidente de Trabalho",
+          "type": "complete",
+          "relativePath": "Bloco 22/01 - Saúde Coletiva/01 - Saúde do Trabalhador/Acidente de Trabalho.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b22|Saúde Coletiva|Saúde do Trabalhador|Acidente de Trabalho COFEXPRESS",
+          "title": "Acidente de Trabalho COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 22/01 - Saúde Coletiva/01 - Saúde do Trabalhador/Acidente de Trabalho COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b23|clinica medica|cancer colorretal",
+      "block": 23,
+      "area": "Clínica Médica",
+      "title": "Câncer Colorretal",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b23|Clínica Médica|Câncer Colorretal|Câncer colorretal",
+          "title": "Câncer colorretal",
+          "type": "complete",
+          "relativePath": "Bloco 23/02 - Clínica Médica/06 - Câncer Colorretal/Câncer colorretal.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b23|Clínica Médica|Câncer Colorretal|Câncer colorretal COFEXPRESS",
+          "title": "Câncer colorretal COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 23/02 - Clínica Médica/06 - Câncer Colorretal/Câncer colorretal COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b23|clinica medica|oftalmologia afeccoes comuns",
+      "block": 23,
+      "area": "Clínica Médica",
+      "title": "Oftalmologia - Afecções Comuns",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b23|Clínica Médica|Oftalmologia - Afecções Comuns|Oftalmologia afecções comuns",
+          "title": "Oftalmologia afecções comuns",
+          "type": "complete",
+          "relativePath": "Bloco 23/02 - Clínica Médica/02 - Oftalmologia - Afecções Comuns/Oftalmologia afecções comuns.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b23|Clínica Médica|Oftalmologia - Afecções Comuns|Oftalmologia afecções comuns COFEXPRESS",
+          "title": "Oftalmologia afecções comuns COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 23/02 - Clínica Médica/02 - Oftalmologia - Afecções Comuns/Oftalmologia afecções comuns COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b23|clinica medica|otorrino para o clinico",
+      "block": 23,
+      "area": "Clínica Médica",
+      "title": "Otorrino para o Clínico",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b23|Clínica Médica|Otorrino para o Clínico|Otorrino para o clínico",
+          "title": "Otorrino para o clínico",
+          "type": "complete",
+          "relativePath": "Bloco 23/02 - Clínica Médica/03 - Otorrino para o Clínico/Otorrino para o clínico.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b23|Clínica Médica|Otorrino para o Clínico|Otorrino para o clínico COFEXPRESS",
+          "title": "Otorrino para o clínico COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 23/02 - Clínica Médica/03 - Otorrino para o Clínico/Otorrino para o clínico COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b23|cofbasics|cofbasics psicofarmacologia",
+      "block": 23,
+      "area": "CofBasics",
+      "title": "CofBasics - Psicofarmacologia",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b23|CofBasics|CofBasics - Psicofarmacologia|CofBasics Psicofarmacologia (Saúde Mental)",
+          "title": "CofBasics Psicofarmacologia (Saúde Mental)",
+          "type": "complete",
+          "relativePath": "Bloco 23/05 - CofBasics/07 - CofBasics - Psicofarmacologia/CofBasics Psicofarmacologia (Saúde Mental).mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b23|g o|climaterio",
+      "block": 23,
+      "area": "G.O",
+      "title": "Climatério",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b23|G.O|Climatério|Climatério e Terapia Hormonal",
+          "title": "Climatério e Terapia Hormonal",
+          "type": "complete",
+          "relativePath": "Bloco 23/03 - G.O/04 - Climatério/Climatério e Terapia Hormonal.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b23|G.O|Climatério|Climatério e Terapia Hormonal COFEXPRESS",
+          "title": "Climatério e Terapia Hormonal COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 23/03 - G.O/04 - Climatério/Climatério e Terapia Hormonal COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b23|pediatria|genetica",
+      "block": 23,
+      "area": "Pediatria",
+      "title": "Genética",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b23|Pediatria|Genética|Genética",
+          "title": "Genética",
+          "type": "complete",
+          "relativePath": "Bloco 23/04 - Pediatria/05 - Genética/Genética.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b23|Pediatria|Genética|Genética COFEXPRESS",
+          "title": "Genética COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 23/04 - Pediatria/05 - Genética/Genética COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b23|saude coletiva|etica medica",
+      "block": 23,
+      "area": "Saúde Coletiva",
+      "title": "Ética Médica",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b23|Saúde Coletiva|Ética Médica|Ética Médica",
+          "title": "Ética Médica",
+          "type": "complete",
+          "relativePath": "Bloco 23/01 - Saúde Coletiva/01 - Ética Médica/Ética Médica.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b23|Saúde Coletiva|Ética Médica|Ética Médica COFEXPRESS",
+          "title": "Ética Médica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 23/01 - Saúde Coletiva/01 - Ética Médica/Ética Médica COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b24|clinica medica|cancer de pulmao",
+      "block": 24,
+      "area": "Clínica Médica",
+      "title": "Câncer de Pulmão",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b24|Clínica Médica|Câncer de Pulmão|Câncer de Pulmão",
+          "title": "Câncer de Pulmão",
+          "type": "complete",
+          "relativePath": "Bloco 24/04 - Clínica Médica/04 - Câncer de Pulmão/Câncer de Pulmão.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b24|Clínica Médica|Câncer de Pulmão|Câncer de Pulmão COFEXPRESS",
+          "title": "Câncer de Pulmão COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 24/04 - Clínica Médica/04 - Câncer de Pulmão/Câncer de Pulmão COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b24|clinica medica|diarreias",
+      "block": 24,
+      "area": "Clínica Médica",
+      "title": "Diarreias",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b24|Clínica Médica|Diarreias|Diarreias Agudas e Crônicas - Parte 1",
+          "title": "Diarreias Agudas e Crônicas - Parte 1",
+          "type": "complete",
+          "relativePath": "Bloco 24/04 - Clínica Médica/05 - Diarreias/Diarreias Agudas e Crônicas - Parte 1.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b24|Clínica Médica|Diarreias|Doença Inflamatória Intestinal",
+          "title": "Doença Inflamatória Intestinal",
+          "type": "complete",
+          "relativePath": "Bloco 24/04 - Clínica Médica/05 - Diarreias/Doença Inflamatória Intestinal.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b24|Clínica Médica|Diarreias|Diarreias Agudas e Crônicas COFEXPRESS",
+          "title": "Diarreias Agudas e Crônicas COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 24/04 - Clínica Médica/05 - Diarreias/Diarreias Agudas e Crônicas COFEXPRESS.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b24|Clínica Médica|Diarreias|Doença Inflamatória Intestinal COFEXPRESS",
+          "title": "Doença Inflamatória Intestinal COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 24/04 - Clínica Médica/05 - Diarreias/Doença Inflamatória Intestinal COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b24|clinica medica|osteoporose e disturbios do calcio",
+      "block": 24,
+      "area": "Clínica Médica",
+      "title": "Osteoporose e Distúrbios do Cálcio",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b24|Clínica Médica|Osteoporose e Distúrbios do Cálcio|Osteoporose",
+          "title": "Osteoporose",
+          "type": "complete",
+          "relativePath": "Bloco 24/04 - Clínica Médica/06 - Osteoporose e Distúrbios do Cálcio/Osteoporose.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b24|Clínica Médica|Osteoporose e Distúrbios do Cálcio|Osteoporose COFEXPRESS",
+          "title": "Osteoporose COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 24/04 - Clínica Médica/06 - Osteoporose e Distúrbios do Cálcio/Osteoporose COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b24|pediatria|hipertensao arterial pediatria",
+      "block": 24,
+      "area": "Pediatria",
+      "title": "Hipertensão Arterial (Pediatria)",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b24|Pediatria|Hipertensão Arterial (Pediatria)|Hipertensão Arterial",
+          "title": "Hipertensão Arterial",
+          "type": "complete",
+          "relativePath": "Bloco 24/03 - Pediatria/03 - Hipertensão Arterial (Pediatria)/Hipertensão Arterial.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b24|Pediatria|Hipertensão Arterial (Pediatria)|Hipertensão Arterial COFEXPRESS",
+          "title": "Hipertensão Arterial COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 24/03 - Pediatria/03 - Hipertensão Arterial (Pediatria)/Hipertensão Arterial COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b24|saude coletiva|declaracao de obito atestados e laudos",
+      "block": 24,
+      "area": "Saúde Coletiva",
+      "title": "Declaração de Óbito, Atestados e Laudos",
+      "folderOrder": 1,
+      "videos": [
+        {
+          "id": "b24|Saúde Coletiva|Declaração de Óbito, Atestados e Laudos|Declaração de Óbito, Atestados e Laudos",
+          "title": "Declaração de Óbito, Atestados e Laudos",
+          "type": "complete",
+          "relativePath": "Bloco 24/01 - Saúde Coletiva/01 - Declaração de Óbito, Atestados e Laudos/Declaração de Óbito, Atestados e Laudos.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b24|Saúde Coletiva|Declaração de Óbito, Atestados e Laudos|Declaração de Óbito, Atestados e Laudos COFEXPRESS",
+          "title": "Declaração de Óbito, Atestados e Laudos COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 24/01 - Saúde Coletiva/01 - Declaração de Óbito, Atestados e Laudos/Declaração de Óbito, Atestados e Laudos COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    },
+    {
+      "id": "b24|saude mental|sindrome depressiva",
+      "block": 24,
+      "area": "Saúde Mental",
+      "title": "Síndrome Depressiva",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b24|Saúde Mental|Síndrome Depressiva|Síndrome Depressiva",
+          "title": "Síndrome Depressiva",
+          "type": "complete",
+          "relativePath": "Bloco 24/02 - Saúde Mental/02 - Síndrome Depressiva/Síndrome Depressiva.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b24|Saúde Mental|Síndrome Depressiva|Síndrome Depressiva COFEXPRESS",
+          "title": "Síndrome Depressiva COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 24/02 - Saúde Mental/02 - Síndrome Depressiva/Síndrome Depressiva COFEXPRESS.mp4",
+          "extension": ".mp4"
+        }
+      ]
+    }
+  ]
+}
