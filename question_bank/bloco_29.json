@@ -1,0 +1,2548 @@
+{
+  "block": 29,
+  "count": 125,
+  "questions": [
+    {
+      "id": "b29-q001",
+      "number": 1,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Uma mulher de 30 anos de idade vem a consulta com o endocrinologista para acompanhamento de hipotireoidismo. Há 6 meses ela procurou o médico da Unidade Básica de Saúde próxima a sua residência devido à constipação (evacuava a cada 3 dias, com fezes ressecadas e com dor ao evacuar). A paciente era sedentária e apresentava erros alimentares evidentes, com baixa ingesta de água durante o dia e pouco consumo de frutas e verduras. O médico orientou ajustes na alimentação, ingesta hídrica e necessidade de atividade física regular, assim como dosagem de TSH e T4 livre. Após 2 meses a paciente retornou, tendo aderido às recomendações, resultando na solução do quadro de constipação (evacuava diariamente, sem dor, com fezes bem formadas), contudo, os exames laboratoriais demonstraram: TSH = 5,5 mUI/mL (valor de referência: 0,4 a 4,5 mUI/L) e T4 livre = 1,0 (valor de referência: 0,7 a 1,8 ng/dL). O médico repetiu os exames, que indicaram: TSH = 5,3 mUI/L (valor de referência: 0,4 a 4,5 mUI/mL) e T4 livre = 1,1 (valor de referência: 0,7 a 1,8 ng/dL). Diante da persistência dos exames alterados, o médico prescreveu levotiroxina 50 mcg/dia e encaminhou ao especialista. Durante a consulta com o endocrinologista, a paciente está assintomática, com tireoide não palpável e índice de massa corpórea de 22 kg/m2, contudo, não havia iniciado a levotiroxina, pois possuía receio de possíveis efeitos adversos. Considerando o que foi apresentado, o endocrinologista deve:",
+      "options": {
+        "A": "Insistir com o uso da levotiroxina, pois trata-se de um caso de hipotireoidismo primário.",
+        "B": "Insistir com o uso da levotiroxina, pois trata-se de um caso de hipotireoidismo secundário.",
+        "C": "Orientar não usar a levotiroxina, pois trata-se de um caso de hipotireoidismo subclínico.",
+        "D": "Iniciar a levotiroxina apenas após realizar cintilografia, para confirmação do diagnóstico."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q002",
+      "number": 2,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Lactente com 7 meses de idade é admitido no Pronto-Atendimento com história de crises de choro / irritabilidade há cerca de 12 horas. Há 1 hora, apresentou um episódio de vômito pós-alimentar e evacuação com sangue misturado com fezes e muco. Ao exame físico, encontra-se em bom estado geral, com abdome globoso e massa palpável dolorosa em flanco direito. Assinale a alternativa que descreve a principal hipótese diagnóstica para esse paciente:",
+      "options": {
+        "A": "Intussuscepção intestinal.",
+        "B": "Neoplasia de cólon direito.",
+        "C": "Apendicite aguda retrocecal.",
+        "D": "Divertículo de Meckel com mucosa gástrica ectópica e sangramento intra-luminal."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q003",
+      "number": 3,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Sobre a ética medica, é correto afirmar que:",
+      "options": {
+        "A": "O médico está autorizado a participar de estudos científicos para fins bélicos ou políticos, desde que o estudo proposto seja autorizado pela comissão de ética médica local.",
+        "B": "É vedado ao médico participar de pesquisas médicas em seres humanos que usem placebo de maneira isolada em experimentos, quando houver método profilático ou terapêutico eficaz disponível.",
+        "C": "O médico está autorizado a praticar a medicina, no exercício da docência, sem o consentimento do paciente ou de seu representante legal, pelo caráter nobre do ensino.",
+        "D": "O médico está autorizado a divulgar fora do meio científico qualquer novo tratamento clínico ou cirúrgico cujo valor ainda não esteja expressamente reconhecido cientificamente por órgão competente.",
+        "E": "Participar de anúncios de empresas comerciais, qualquer que seja sua natureza, valendo-se de sua profissão, é ético desde que exista contrato formal de prestação de serviços e que o médico não participe de nenhuma linha de pesquisa relacionada com o produto anunciado."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q004",
+      "number": 4,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Uma primigesta de 32 semanas e quatro dias chegou ao pronto‐socorro referindo contrações uterinas regulares e dolorosas. Ao exame, apresentava pressão arterial de 110 x 70 mmHg, temperatura axilar de 36,8 ºC, altura uterina de 27 cm, batimentos cardíacos fetais de 152 bpm, dinâmica uterina de três contrações de quarenta segundos em dez minutos e colo do útero pérvio para 4 cm, com apresentação pélvica. Com base nesse caso hipotético, assinale a alternativa correta:",
+      "options": {
+        "A": "Na medida em que o feto está em apresentação pélvica, deve‐se realizar cesariana imediatamente.",
+        "B": "Na fisiopatologia que gera esse quadro, o cálcio se liga à calmodulina para criar complexo que ativa a miosina quinase.",
+        "C": "É possível tentar a inibição do trabalho de parto prematuro, sendo a indometacina a melhor opção.",
+        "D": "O atosiban (inibidor de ocitocina) é contraindicado para a gestante em questão.",
+        "E": "A melhor opção é permitir a evolução para parto vaginal, não se indicando inibição."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q005",
+      "number": 5,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "O atendimento especializado ao adolescente é feito pelo pediatra ou hebiatra. Um tema de grande discussão é o sigilo médico para esses pacientes. Nesse sentido, analise a seguinte afirmação: É vedado ao médico revelar segredo profissional referente ao paciente menor de idade, inclusive a seus pais ou responsáveis legais, desde que o menor tenha capacidade de avaliar seu problema e de conduzir-se por seus próprios meios para solucioná-lo; salvo quando a não revelação possa acarretar danos ao paciente. Todos os jovens têm direito à privacidade. Essa afirmação está:",
+      "options": {
+        "A": "Correta.",
+        "B": "Incorreta, pois, no caso de paciente menor de idade, os pais/responsáveis devem saber de tudo o que é conversado na consulta.",
+        "C": "Incorreta, pois os adolescentes não têm capacidade de avaliação de seus problemas.",
+        "D": "Incorreta, pois o segredo só pode ser contado quando puder acarretar danos a terceiros.",
+        "E": "Incorreta, pois o risco de dano ao paciente não supera a obrigação médica quanto ao sigilo."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q006",
+      "number": 6,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Médico está acompanhando um paciente com osteossarcoma no fêmur. O paciente teve falha terapêutica com todos os esquemas disponíveis e sente muitas dores, além de ter metástases detectadas em mais dois órgãos, sendo considerado um doente terminal. A família é chamada para conversar sobre cuidados paliativos e opta por interromper a Quimioterapia (QT) e manter somente os cuidados paliativos. Sobre o pedido dos pais, é correto afirmar que:",
+      "options": {
+        "A": "A QT não deve ser interrompida, pois é vedado ao médico causar dano ao paciente por ação ou omissão, caracterizável como imperícia, imprudência ou negligência.",
+        "B": "A QT não deve ser interrompida, pois é vedado ao médico deixar de usar todos os meios disponíveis de diagnóstico e tratamento, cientificamente reconhecidos e a seu alcance, em favor do paciente.",
+        "C": "O médico deve deixar o caso e transferir o paciente para a equipe de cuidados paliativos e, após avaliação posterior, eles quem devem decidir sobre a interrupção da QT.",
+        "D": "A QT pode ser interrompida, mas o médico deve, antes, tentar outras formas de tratamento, mesmo que alternativas ou sem comprovação.",
+        "E": "A QT pode ser interrompida, pois o uso de tratamentos em favor do paciente se refere às intervenções benéficas para aquele paciente naquele estágio da doença e não um ato compulsório de oferecer tudo que está disponível."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q007",
+      "number": 7,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "O tipo histológico mais comum de neoplasia de tireoide e seu padrão de disseminação são, respectivamente:",
+      "options": {
+        "A": "Carcinoma folicular, padrão linfonodal.",
+        "B": "Carcinoma folicular, padrão hematogênico.",
+        "C": "Carcinoma papilífero, padrão hematogênico.",
+        "D": "Carcinoma papilífero, padrão linfonodal.",
+        "E": "Carcinoma medular, padrão linfonodal."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q008",
+      "number": 8,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Sobre as hérnias inguinais e umbilicais na infância, é correto afirmar que hérnia do tipo:",
+      "options": {
+        "A": "Inguinal deve ser tratada cirurgicamente.",
+        "B": "Inguinal tem menor risco de encarceramento.",
+        "C": "Umbilical não se resolve espontaneamente na maioria das vezes.",
+        "D": "Umbilical >2cm tem indicação absoluta de abordagem cirúrgica."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q009",
+      "number": 9,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Na fase mais inicial da apendicite aguda, qual é a tríade sintomática mais característica entre as seguintes?",
+      "options": {
+        "A": "Dor em fossa ilíaca direita, febre alta e prostração.",
+        "B": "Dor epigástrica intensa, febre moderada e vômitos.",
+        "C": "Dor abdominal difusa, febre alta e anorexia.",
+        "D": "Dor periumbilical, febre alta e vômitos.",
+        "E": "Dor periumbilical, febre moderada e anorexia."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q010",
+      "number": 10,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Uma gestante, no curso da 24.a semana de gestação, comparece à consulta de rotina de pré-natal. Informa já ter tido um aborto com 7 semanas e um parto vaginal com 34 semanas. No momento, está sem queixas e apresenta exame físico dentro da normalidade. Traz consigo ultrassonografia gestacional que revela gestação única, tópica, com 24 semanas (corrigidas), feto com apresentação cefálica, placenta anterior e com grau zero de maturidade, quantidade de líquido amniótico e peso fetal normais para a idade gestacional, colo uterino fechado medindo 2,9 cm (valor de referência: > 2,5 cm). Apresenta também resultado de exame de urocultura que revela *E. coli* com 105 Unidades Formadoras de Colônias. O médico prescreve cefalexina e progesterona para essa paciente. Nesse caso, a prescrição de progesterona se justifica porque a gestante apresenta:",
+      "options": {
+        "A": "Bacteriúria assintomática, que é um fator de risco para parto prematuro.",
+        "B": "Ultrassonografia gestacional que demonstrou um colo uterino curto.",
+        "C": "Passado de um aborto precoce por insuficiência do corpo lúteo.",
+        "D": "Histórico de parto prematuro."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q011",
+      "number": 11,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Adolescente de 15 anos vai à consulta pediátrica acompanhada dos pais. A mãe insiste em conversar pessoalmente com o médico após a entrevista de sua filha, respeitando o preceito da privacidade, e quer saber do que a adolescente se queixou para ele. O sigilo médico deve ser preservado, mas poderá ser rompido em algumas situações. Assinale a alternativa em que todas as três condições apresentadas devem ser consideradas na perspectiva ética e legal para a quebra do sigilo e obrigatória revelação da informação para os responsáveis do adolescente:",
+      "options": {
+        "A": "Planejamento suicida, transtornos por uso de drogas ilícitas, anorexia nervosa.",
+        "B": "Comportamento homofóbico, namoro virtual pela internet com pessoa maior de idade, iniciação sexual sem uso de preservativo.",
+        "C": "Experimentação de drogas, início de atividade sexual e uso frequente de narguilé.",
+        "D": "Prescrição de contracepção de emergência, violência sexual e homossexualidade.",
+        "E": "Início de atividade sexual desprotegida, depressão, uso de álcool aos finais de semana."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q012",
+      "number": 12,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Em relação às tireoidites, assinale a alternativa correta:",
+      "options": {
+        "A": "A tireoidite de Hashimoto é a forma mais comum, acometendo mais mulheres, entre 3- 40 anos, sendo o evento laboratorial mais comum a presença de anticorpos antitireoglobulina.",
+        "B": "A tireoidite pós-parto é um quadro raro que ocorre nos primeiros dias pós-parto, de curta duração, autolimitado, sem necessidade de tratamento específico.",
+        "C": "A tireoidite de Quervain é um quadro inflamatório e autoimune da tireoide, geralmente autolimitado, mais frequente em mulheres, presumivelmente causado porinfecção viral ou pós-infecção viral.",
+        "D": "A tireoidite mais comum é de forma infecciosa, causada por bactérias gram-positivas, comum em pacientes previamente hígidos e com bom prognóstico.",
+        "E": "A tireoidite induzida por radiação é um quadro de ocorrência exclusiva de pacientes com terapia actínica para controle de tireotoxicose prévia e se manifesta como coma mixedematoso por perda aguda da função tireoideana."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q013",
+      "number": 13,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Recém-nascido (RN), 25 dias, é atendido com história de \"\"vômitos biliosos\"' há cerca de 6 horas. Exame físico: apático; sonolento; desidratado; hipocorado; perfusão periférica lentificada; abdome difusamente distendido. Radiografia simples do abdome: \"\"pobreza\"' de gás intestinal. A hipótese diagnóstica mais provável é:",
+      "options": {
+        "A": "Volvo do intestino médio.",
+        "B": "Estenose hipertrófica do piloro.",
+        "C": "Atresia jejuno ileal tipo 1.",
+        "D": "Invaginação intestinal aguda."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q014",
+      "number": 14,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Uma mulher com 55 anos de idade, previamente hígida, é admitida em hospital após episódio de síncope. Apresenta bradicardia sinusal, discreta hipertensão arterial sistêmica e edema palpebral bilateral. Nota-se um aumento difuso da tireoide que a paciente não havia percebido até então. Não há rouquidão, disfagia nem alteração recente de peso. Ademais, não apresenta histórico familiar de câncer. Um estudo ultrassonográfico da tireoide mostra 3 nódulos de bordas regulares, parcialmente císticos, com componente sólido isoecoico, sem calcificações, de 0,4 cm, 0,6 cm e 0,8 cm. Não há linfadenopatia cervical. O exame revelou TSH = 17,2 mUI/mL (valor de referência = 0,3 a 5,0 mUI/mL). Nesse caso, a abordagem adequada para com a paciente é:",
+      "options": {
+        "A": "Solicitar T3 total e T4 livre e cintilografia da tireoide antes de definir o tratamento.",
+        "B": "Prescrever levotiroxina e realizar acompanhamento clínico e ultrassonográfico dos nódulos.",
+        "C": "Prescrever levotiroxina e dosar anti-tireoide peroxidase para definir a abordagem dos nódulos.",
+        "D": "Solicitar T4 livre e punção aspirativa com agulha fina do maior nódulo antes de definir o tratamento."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q015",
+      "number": 15,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher de 38 anos foi internada na enfermaria de clínica médica de hospital universitário de ampla complexidade, em função de quadro de fibrilação atrial paroxística com alta resposta ventricular, sem instabilidade hemodinâmica, mas associada a queixas recentes de emagrecimento não intencional, irritabilidade e tremores finos de extremidades. Na anamnese dirigida, a paciente confirmava a presença de intolerância ao calor, fadiga, fraqueza, amenorreia e hiperdefecação. Ao exame físico, além da taquiarritmia, foram observados bócio difuso (com sopro à ausculta local), exoftalmia, tremores palpebrais frequentes, mixedema pré-tibial e sobre o hálux direito, hipocratismo digital e pele quente e úmida. Administradas duas doses sequenciais, com intervalos de 5 minutos, de metoprolol intravenoso (5 mg), após redução da frequência cardíaca, ocorreu reversão da arritmia para o ritmo sinusal. Solicitados exames complementares, resultados revelaram TSH < 0,004 mUI/L (valor de referência: 0,5 a 4,5 mUI/L) e T4 livre = 4,2 ng/dL (valor de referência: 0,9 a 2,0 ng/dL). Além de ser mantido o tratamento com beta- bloqueador, considerando o fato de a paciente nunca ter sido previamente tratada de sua doença, a equipe médica optou por instituir terapêutica direcionada à inibição da função da enzima tireoperoxidase, reduzindo a oxidação e organificação do iodo na tireoide, além de promover a redução dos níveis de autoanticorpos circulantes. A intervenção terapêutica instituída nesse sentido foi:",
+      "options": {
+        "A": "Radioiodo.",
+        "B": "Dexametasona.",
+        "C": "Metimazol.",
+        "D": "Colestiramina."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q016",
+      "number": 16,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Uma mulher com 44 anos de idade, atendida em hospital, refere aumento de volume cervical há 5 meses. Nega dispneia ou disfagia, alterações do sono ou no hábito intestinal. Relata história de hipotireoidismo materno e de câncer de tireoide em sua irmã mais velha. Ao exame físico, notam−se tireoide aumentada 1x, móvel, consistência fibroelástica, nódulo palpável em torno de 3 cm em lobo direito, móvel e elástico, não havendo linfadenomegalias cervicais. Na investigação do caso dessa paciente, qual é a conduta adequada?",
+      "options": {
+        "A": "Solicitar cintilografia de tireoide.",
+        "B": "Solicitar ultrassonografia de tireoide.",
+        "C": "Encaminhar a paciente para cirurgia.",
+        "D": "Solicitar punção aspirativa por agulha fina."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q017",
+      "number": 17,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Mulher, 36a, G4P1A2C0, idade gestacional de 14 semanas. Antecedentes Obstétricos: parto prematuro às 26 semanas e abortos com 18 e 15 semanas. Ultrassonografia com 12 semanas: avaliação morfológica fetal normal e colo uterino medindo 35 mm, sem sinais de afunilamento ou sludge. A CONDUTA É:",
+      "options": {
+        "A": "Amoxicilina clavulanato por 7 dias e repetir ecografia com 20 semanas.",
+        "B": "Amoxicilina clavulanato por 7 dias e pré-natal de rotina.",
+        "C": "Progesterona vaginal e pré-natal de rotina.",
+        "D": "Progesterona vaginal e cerclagem de colo uterino."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q018",
+      "number": 18,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Em relação ao hipotireoidismo, é correto afirmar que:",
+      "options": {
+        "A": "É muito importante solicitar tireoglobulina sérica na avaliação inicial de nódulos de tireoide.",
+        "B": "A dosagem de T3 reverso na avaliação de função tireoideana é essencial.",
+        "C": "Não devem ser repetidos exames de antoanticorpos (antiTPO e/ou antitireoiglobulina) no seguimento de pacientes com hipotireoidismo por tireoidite de Hashimoto com exame anterior positivo.",
+        "D": "É essencial a dosagem de tri-iodotironina (LT3), isolada ou em associação com levotiroxina (LT4), no tratamento de hipotireoidismo.",
+        "E": "A dosagem de marcadores moleculares, na avaliação inicial de pacientes com nódulo tireoide, é muito importante para o plano terapêutico."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q019",
+      "number": 19,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Guilherme, um jovem de 28 anos, realizou exames de rotina. Foram solicitados entre eles o hormônio tireoestimulante (TSH) e a tiroxina livre (T4). Seus resultados foram de 5,5 mU/L e 1,03 ng/dL, respectivamente. Guilherme nega quaisquer sintomas antes e após os exames. Nesse caso, em relação à conduta adequada, assinale a alternativa correta:",
+      "options": {
+        "A": "Trata- se de hipotireoidismo e este deve ser tratado, independente da presença de sintomas, para reduzir o risco cardiovascular do paciente.",
+        "B": "Trata-se de hipotireoidismo e este deve ser tratado, independente da presença de sintomas, para reduzir a perda de massa magra.",
+        "C": "Trata-se de hipotireoidismo subclínico; esse paciente deve ser acompanhado com exames semestrais/anuais e, caso seu TSH ultrapasse 10 mU/L, ele deve ser tratado, independente da presença de sintomas, devido ao aumento de mortalidade cardiovascular.",
+        "D": "Trata-se de hipertireoidismo subclínico; esse paciente deve ser acompanhado com exames semestrais/anuais e, caso seu T4 ultrapasse 1,5 ng/dL, ele deve ser tratado, independente da presença de sintomas, devido ao aumento de mortalidade cardiovascular.",
+        "E": "Trata- se de hipertireoidismo e este deve ser tratado, independente da presença de sintomas, para reduzir o risco cardiovascular do paciente."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q020",
+      "number": 20,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Adolescente, sexo feminino, 15 anos de idade, é levada à consulta de rotina por sua mãe. Reluta para permitir o exame físico. Ao conversar, sem presença materna, relata que tem se cortado com gilete nos antebraços, mas seus pais não tem conhecimento do fato pois tem usado mangas compridas para cobrir os ferimentos. Refere término de namoro com rapaz de 18 anos de idade, com quem teve iniciação sexual, de forma voluntária. Relata fazer uso de contraceptivos e deseja saber se deve continuar. Tem obtido notas medianas na escola. Define-se viciada em internet e jogos eletrônicos, passando mais de 6 horas por dia em uso de telas. Informa que tem poucos amigos. Ao exame físico: bom estado geral, lúcida, orientada; comunica-se pouco na presença da mãe; demonstra tristeza; fala sobre o namoro terminado, hipervalorizando a situação com conteúdo negativo. Demonstra sofrimento, autocrítica e baixa autoestima. Apresenta várias lesões cicatriciais em antebraços. Sem outros achados anormais. Com relação á demanda quanto ao uso de contraceptivos, considerando as indicações éticas da Sociedade Brasileira de Pediatria.",
+      "options": {
+        "A": "Está contraindicado pela imaturidade hormonal da paciente e seve ser comunicado à mãe.",
+        "B": "Está contraindicado pela imaturidade hormonal da paciente e não deve ser comunicado à mãe.",
+        "C": "Está indicado e é direito da adolescente usar sem informação parental e deve ser prescrito de forma adequada",
+        "D": "é indicado e o sigilo deve ser quebrado, pois é dever dos parentes participar das decisões quanto à saúde reprodutiva da adolescente."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q021",
+      "number": 21,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Paciente de 26 anos, referindo atraso menstrual de 2 meses, e encaminhada ao pré-natal de referência. Antecedentes Gineco-Obstétricos: terceira gestação, nenhum parto, dois abortos espontâneos (primeiro aborto com 18 semanas e segundo aborto com 16 semanas, nascidos vivos, evoluindo com óbito logo após os nascimentos) e conização a frio por NIC 3 aos 20 anos de idade. O exame físico realizado evidenciou colo uterino impérvio. O ultrassom mostrou gestação inicial de 7 semanas e comprimento do colo uterino de 29mm. O tratamento correto a ser orientado é:",
+      "options": {
+        "A": "Realizar cerclagem emergencial do colo uterino.",
+        "B": "Realizar restrição de atividade física, repouso no leito e uso de progesterona.",
+        "C": "Realizar cerclagem do colo uterino baseada nos antecedentes obstétricos, entre 12 e 14semanas, após a ultrassonografia revelar boa vitalidade e ausência de anomalias fetais.",
+        "D": "Realizar cerclagem do colo uterino baseada nos dados ultrassonográficos entre 16 e 24semanas de gravidez, após a ultrassonografia revelar boa vitalidade e ausência deanomalias fetais."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q022",
+      "number": 22,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Na adolescência a confidencialidade é um dos preceitos básicos de atendimento e tudo que for conversado com o adolescente só será contado aos pais com o consentimento dele. Em que situação abaixo o sigilo deve ser preservado sempre:",
+      "options": {
+        "A": "Gravidez.",
+        "B": "Experimentação de substâncias psicoativas.",
+        "C": "Recusa de uso de medicamento.",
+        "D": "Pensamentos suicidas, mas sem ideação."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q023",
+      "number": 23,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": ") P.G.V., 27 anos, GII PI 1N 0, IG 23 semanas, veio para ultrassom morfológico de segundo trimestre. Realizado ultrassom transvaginal para medida do colo uterino que demonstrou comprimento de 22 mm. Ausência de sinal de dedo de luva. Sludge ausente. Ecoglandular endocervical presente. Paciente sem antecedente de trabalho de parto prematuro anterior. Com relação ao caso acima, assinale a conduta correta.",
+      "options": {
+        "A": "Cerclagem de colo uterino.",
+        "B": "Progesterona 200mg/noite, via vaginal.",
+        "C": "Pessário em colo uterino.",
+        "D": "Expectante, com repouso absoluto.",
+        "E": "Expectante, com repouso relativo."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q024",
+      "number": 24,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Em qual situação o sigilo sobre o paciente deve ser quebrado na consulta de adolescente?",
+      "options": {
+        "A": "Iniciação sexual, excluída violência por sedução ou imposição explícita.",
+        "B": "Orientação sexual, conflito de interesse de gênero.",
+        "C": "Prescrição de contraceptivo para adolescente com maturidade para adesão.",
+        "D": "Uso de bebida alcoólica cada vez em dose maior."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q025",
+      "number": 25,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Secundigesta de 25 anos de idade procurou a clínica da família para iniciar seu pré-natal na 16ª semana de gestação. Referiu ter tido um parto pré-termo anterior, na 21ª semana de gestação. Trouxe consigo uma ultrassonografia transvaginal, que mostrou colo do útero de 43 mm de comprimento. Qual é a conduta mais efetiva a ser proposta nesse momento, a fim de reduzir a ocorrência de uma nova perda gestacional nessa paciente?",
+      "options": {
+        "A": "Indicação de cerclagem eletiva via transvaginal.",
+        "B": "Uso de progesterona natural micronizada 200 mg à noite.",
+        "C": "Suplementação diária de ácido fólico associado a ômega 3.",
+        "D": "Rastreio de estreptococo do grupo B em cultura vaginal e retal."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q026",
+      "number": 26,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "O nascimento prematuro continua sendo a principal causa de mortalidade e morbidade perinatais, sendo responsável por até dois terços das mortes neonatais e por déficits físicos, mentais e do desenvolvimento de longo prazo. Nos últimos trinta anos, os avanços foram significativos nos cuidados neonatais e na redução da mortalidade infantil na prematuridade, porém as morbidades e as consequências em longo prazo permanecem. Acerca dos cuidados gestacionais para evitar a prematuridade, assinale a opção correta.",
+      "options": {
+        "A": "As evidências científicas indicam a eficácia de uso de progesterona por toda gestante na prevenção à prematuridade.",
+        "B": "As pacientes no estágio 3, conforme a Classificação de Risco de Hobel, devem continuar em acompanhamento ambulatorial.",
+        "C": "A infecção urinária é fator de risco para a prematuridade, devendo toda gestante com bacteriúria assintomática ser submetida à antibioticoterapia.",
+        "D": "Os bloqueadores de canal de cálcio são medicamentos proibidos na inibição dos trabalhos de parto por causarem hipotensão materna e baixo fluxo placentário."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q027",
+      "number": 27,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Uma mulher com 35 anos iniciou quadro de tremores, irritabilidade, aumento de apetite com perda de peso de 8 kg em 2 meses. Notou que houve aumento da região cervical e que os olhos ficaram mais evidentes. No mesmo período, relata palpitaçõ es e aumento do número de evacuaçõ es diárias. No exame físico, apresenta fácies basedowniana, pele aveludada e com sudorese profusa, frequência cardíaca de 120 batimentos por minuto, tremores de extremidades, pressão arterial de 140 × 70 mmHg e tireoide aumentada cerca de 3 vezes o tamanho normal, com superfície lisa e presença de frêmito. Nos exames complementares, observou-se T4 livre: 5,6 ng/dL (valor de referência [VR]: 0,9-1,8), TSH < 0,01 mU/L (VR: 0,4 - 4,5). Diante do diagnóstico de hipertiroidismo, qual seria a melhor terapêutica para esse caso?",
+      "options": {
+        "A": "Levotiroxina 75 mg ao dia e Atenolol 25 mg de 12/12 horas.",
+        "B": "Metimazol (tiamazol) 30 mg ao dia e Propanolol 40 mg de 12/12 horas.",
+        "C": "Atenolol 25 mg de 12/12 horas e Radioiodoterapia com I131.",
+        "D": "Propanolol 40 mg de 12/12 horas e Radioiodoterapia com I131."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q028",
+      "number": 28,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Um parto pré-termo é aquele que ocorre após a 20a semana e antes de completar 37 semanas de amenorreia (259 dias), independentemente do peso ao nascer. O parto prematuro pode ser espontâneo ou indicado. A respeito da prematuridade e da avaliação do colo uterino, assinale a alternativa correta.",
+      "options": {
+        "A": "A medida do colo uterino é indicada de forma universal entre 18-22 semanas de IG.",
+        "B": "O colo é considerado curto se seu comprimento for < 30 mm.",
+        "C": "A medida do colo uterino é melhor avaliada pelo ultrassom transabdominal e com a bexiga cheia.",
+        "D": "A presença de eco glandular endocervical está associado à diminuição das taxas de trabalho de parto prematuro."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q029",
+      "number": 29,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Analise as assertivas abaixo em relação às determinações do Estatuto da Criança e do Adolescente: I. Determina que o Código de Ética Médica tenha especial preocupação com o sigilo de crianças e adolescentes, respeitando a capacidade de compreensão do paciente pediátrico. II. Determina que, a partir dos 13 anos, quando ocorrer conflito entre os interesses do adolescente e dos pais, deverá prevalecer a vontade do adolescente. III. Determina o direito à autonomia de crianças e adolescentes. IV. Determina a proteção integral da criança e do adolescente. Quais estão corretas?",
+      "options": {
+        "A": "Apenas II e IV.",
+        "B": "Apenas I e III.",
+        "C": "Apenas I, III e IV.",
+        "D": "I, II, III e IV."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q030",
+      "number": 30,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Você atendeu uma adolescente que procurou atendimento pois estava suspeitando de gravidez. Na consulta ela estava acompanhada do namorado e solicitou que não fosse dito nada para sua família. Qual deve ser sua conduta frente a esse caso:",
+      "options": {
+        "A": "Manter o sigilo médico.",
+        "B": "Comunicar apenas o Conselho Tutelar.",
+        "C": "Quebrar o sigilo médico e comunicar a família.",
+        "D": "Manter o sigilo médico e solicitar nova consulta em 10 dias."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q031",
+      "number": 31,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Primigesta, 24 anos, com gestação de 31 semanas, está internada por trabalho de parto inibido com terbutalina endovenosa há 1 dia. Não apresenta doenças ou vícios. Os exames da rotina pré-natal são normais, inclusive o hemograma repetido na internação. Urinocultura e Swab vaginal e endoanal para pesquisa do Streptococcus do grupo B negativos. Não recebeu qualquer outra medicação nesse período. Há 1 hora, ela se queixou de perda líquida via vaginal em grande quantidade e contrações uterinas. Sem outras queixas. Exame físico geral e sinais vitais maternos normais, altura uterina de 28 cm, atividade uterina ausente e feto ativo na cardiotocografia. No exame especular observa-se moderada quantidade de fluído claro em fundo de saco vaginal, com cristalização positiva deste conteúdo em lâmina. Toque vaginal da admissão: colo médio, centrado, médio, dilatado 2 cm, feto cefálico. Qual alternativa apresenta a medicação que deve ser prescrita nesse momento?",
+      "options": {
+        "A": "Penicilina cristalina endovenosa.",
+        "B": "Betametasona intramuscular.",
+        "C": "Atosiban endovenoso.",
+        "D": "Sulfato de magnésio endovenoso."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q032",
+      "number": 32,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Paciente hipertenso, diabético e tabagista, esteve em consulta de rotina na qual foram solicitados alguns exames. No Doppler de carótidas, foi evidenciado cisto tireoidiano em lobo E de dimensões 1,3 x 0,5 x 0,7 cm. Diante dessas informações, a conduta mais apropriada é:",
+      "options": {
+        "A": "Solicitar USG de tireoide.",
+        "B": "Solicitar tireoglobulina.",
+        "C": "Devido ao tamanho do cisto, é indicado PAAF guiada por USG.",
+        "D": "Solicitar cintilografia de tireoide.",
+        "E": "Encaminhar para cirurgião de cabeça e pescoço com indicação de tireoidectomia."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q033",
+      "number": 33,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Sobre enterocolite necrotizante, estão corretas as alternativas: I - Acomete principalmente recém-nascidos prematuros. II - Quanto menor o peso ao nascer, maior o risco de desenvolver enterocolite III - Pneumatose intestinal é considerada sinal patognomônico da doença. IV - No estadiamento clínico-radiológico de enterocolite no estágio IIA tem-se pneumoportograma:",
+      "options": {
+        "A": "I, II e III.",
+        "B": "I, II e IV.",
+        "C": "I, III e IV.",
+        "D": "II, III e IV."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q034",
+      "number": 34,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Uma paciente primigesta, de 33 anos, com idade gestacional de 29 semanas e 4 dias, está em tratamento para infecção urinária e é admitida em trabalho de parto pré-termo. A paciente relata ser tabagista eventual e frequentar academia 3 vezes por semana com exercícios de Pilates e de hidroginástica desde os 30 anos. Em seu cartão de pré-natal, lê-se: índice de massa corporal de 30,4 kg/m², hemoglobina de 9 g/dL e hematócrito de 32%. A partir das informações coletadas acerca dessa paciente, quais são fatores de risco identificados para trabalho de parto pré-termo?",
+      "options": {
+        "A": "Tabagismo e prática de atividade física.",
+        "B": "Infecção urinária e idade materna.",
+        "C": "Anemia e infecção urinária.",
+        "D": "Idade materna e anemia."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q035",
+      "number": 35,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Em relação aos Cuidados Paliativos (CPs) em pediatria, assinale a alternativa correta:",
+      "options": {
+        "A": "Pode ser definida como uma terapêutica que visa à qualidade de vida dos familiares de um paciente em situações de doencasl imitadoras da vida.",
+        "B": "Tem como proposta abreviar o fim da vida de pacientes com doenças intratáveis, garantindo o conforto e evitando o sofrimento.",
+        "C": "Crianças com doenças crônicas e doenças ameaçadoras da vida não são elegíveis aos CPs.",
+        "D": "Os CPs podem ser coordenados em qualquer local do hospital, inclusive nas salas de emergência.",
+        "E": "No tratamento da dor dos pacientes paliativos, em emergências, o uso de opioides deve ser evitado, uma vez que causam constipação e retenção urinária, além de terem potencial aditivo."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q036",
+      "number": 36,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Adolescente, 12 anos, vem sozinho à consulta médica. O médico deve:",
+      "options": {
+        "A": "Atendê-lo com outro profissional na sala.",
+        "B": "Recusar a atendê-lo.",
+        "C": "Aguardar a chegada do responsável para atendê-lo.",
+        "D": "Atendê-lo sozinho."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q037",
+      "number": 37,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Mulher, 35 semanas de gestação, é admitida em período expulsivo. Refere somente 3 consultas pré-natais, mas não sabe informar sobre medicações utilizadas na gestação, assim como doenças associadas. A via de parto é vaginal. Pediatra e obstetra visualizam exposição das alças intestinais do bebê, à direita do cordão umbilical. A principal hipótese diagnóstica e a melhor conduta terapêutica inicial é:",
+      "options": {
+        "A": "Extrofia de cloaca/atendimento ao recém-nascido na sala de parto e proteção do conteúdo herniado com compressas úmidas.",
+        "B": "Onfalocele/atendimento ao recém-nascido na sala de parto e proteção do conteúdo herniado com compressas úmidas.",
+        "C": "Trauma abdominal pelo parto vaginal/proteção das alças intestinais, redução do conteúdo herniado e rafia da parede abdominal.",
+        "D": "Gastrosquise/proteção das alças intestinais expostas com saco plástico estéril, envolvendo a criança dos pés até o tórax."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q038",
+      "number": 38,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Em relação à incontinência ou insuficiência cervical, pode-se afirmar que a cerclagem está indicada nos casos a seguir, EXCETO:",
+      "options": {
+        "A": "Após uma perda fetal, com o quadro clínico de insuficiência cervical; o exame transvaginal do colo uterino está indiciado a partir de 16 a 24 semanas de gravidez.",
+        "B": "Até 24 semanas da gestação, em pacientes com dilatação cervical < 4 cm e herniação das membranas, sem contração e/ou parto, afastada a infecção intra amniótica.",
+        "C": "Quando a técnica transabdominal puder ser realizada como alternativa à técnica transvaginal e tiver como principal indicação o prolapso do saco amniótico.",
+        "D": "Com história de uma ou mais perdas gestacionais, com quadro clínico de insuficiência cervical, compõe o grupo de mulheres que se beneficiarão com a cirurgia, devendo ser realizada entre 12 e 14 semanas de gravidez, após a ultrassonografia revelar feto vivo e sem anomalias."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q039",
+      "number": 39,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Cláudia, 10 anos de idade, realizou consulta pediátrica de rotina, numa sexta-feira às 17 horas. Estava bem, sem enfermidades agudas e foram feitas as devidas orientações solicitadas pela mãe e as necessárias para essa faixa etária. O pediatra, na segunda-feira, recebeu um telefonema da mãe, referindo que Cláudia adoeceu no domingo com febre e que estava controlando em domicílio. Solicita, então, ao seu pediatra, um atestado com a data de segunda-feira, justificando a falta escolar de Cláudia. Qual deverá ser a conduta do pediatra?",
+      "options": {
+        "A": "Não fornecer o atestado sem adicionar o CID.",
+        "B": "Fornecer o atestado conforme solicitação da mãe.",
+        "C": "Fornecer o atestado com a data do dia da consulta.",
+        "D": "Não fornecer o atestado, justificando as razões."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q040",
+      "number": 40,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Você participa de um grupo de estudos e pesquisa no hospital ao qual está vinculado na especialização em pediatria. Sobre o Código de Ética Médica, é correto afirmar que:",
+      "options": {
+        "A": "O médico pode manter vínculo com pesquisas médicas em seres humanos que usem placebo de maneira isolada em experimentos, quando houver método profilático ou terapêutico eficaz.",
+        "B": "O termo de consentimento livre e esclarecido para a realização de pesquisa envolvendo seres humanos pode ser assinado pelos responsáveis dos adolescentes e estes, mesmo que tenham discernimento, não precisam dar assentimento livre e esclarecido.",
+        "C": "O médico poderá revelar sigilo profissional relacionado a paciente criança ou adolescente, mesmo que estes tenham capacidade de discernimento, inclusive a seus pais ou representantes legais, quando a não revelação possa acarretar dano ao paciente.",
+        "D": "O médico poderá praticar a medicina, no exercício da docência, sem o consentimento do paciente ou de seu representante legal, desde que seja dentro de hospital universitário destinado à formação de recursos humanos em saúde."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q041",
+      "number": 41,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Uma paciente com 24 anos procura atendimento médico com relato de sudorese excessiva, palpitações, irritação ocular, nervosismo, fadiga e perda de peso apesar do aumento do apetite, com achado de edema ocular e aumento difuso da tireoide ao exame físico. O médico levanta a suspeita de Doenca de Graves. Durante a propedêutica laboratorial, são resultados compatíveis com a hipótese diagnóstica apresentada:",
+      "options": {
+        "A": "Níveis séricos reduzidos de anticorpos contra o receptor de TSH (TRAb) e de anticorpos antitireoperoxidase (anti-TPO).",
+        "B": "Aumento do tamanho e da ecogenicidade do parênquima da tireoide e presença de nódulos císticos difusos à ultrassonografia.",
+        "C": "Elevação dos níveis séricos do hormoniot ireoestimulante (TSH) e supressão dos níveis da fração livre de tiroxina (T4 livre) e da tri-iodotironina (T3).",
+        "D": "Teste de iodo radioativo mostrando elevada captação pela tireoide e cintilografia mostrando distribuição difusa de radiomarcador no parênquima da glândula."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q042",
+      "number": 42,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "A hérnia inguinal é frequente na infância, sua incidência varia de 1 a 4%. Nos recém nascidos prematuros a incidência é maior podendo chegar a mais de 30%. Considerando esse diagnóstico analise as afirmativas abaixo: I – A maioria das hérnias em crianças é indireta. II – Na população pediátrica não há risco significativo de encarceramento. III –As hérnias inguinais em meninas são causadas pela persistência do divertículo de Nuck e contêm o ligamento suspensor do ovário. Sobre esta situação, analise as alternativas abaixo:",
+      "options": {
+        "A": "As afirmativas I e II são verdadeiras. A afirmativa III é falsa.",
+        "B": "As afirmativas I e III são verdadeiras. A afirmativa II é falsa.",
+        "C": "As afirmativas II e III são verdadeiras. A afirmativa I é falsa.",
+        "D": "As afirmativas I, II e III são verdadeiras.",
+        "E": "As afirmativas I, II e III são falsas."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q043",
+      "number": 43,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Uma paciente com 32 anos de idade, branca, procura ambulatório com queixa de nervosismo e palpitações, relata ter percebido que seus olhos estão arregalados e que perdeu peso, embora esteja com apetite aumentado. Relata, ainda, discreta intolerância ao calor e o fato de uma amiga ter notado algo estranho em seu pescoço, o que a levou a passar a mão no local e sentir um caroço na região. Nega disfagia ou dispneia. Considerando o caso clínico, assinale a opção que apresenta, respectivamente, o procedimento correto do exame físico e a alteração esperada, compatível com o caso:",
+      "options": {
+        "A": "Pedir à paciente que fique de frente, posicionar as duas mãos na região anterior do pescoçodela, pedindo-lhe que degluta e respire; alteração esperada: nodulação única móvel.",
+        "B": "Pedir à paciente que fique em decúbito dorsal, posicionar a mão na região anterior do pescoçodela, solicitando-lhe que não degluta ou respire; alteração esperada: aumento difuso da glândula.",
+        "C": "Pedir à paciente que deglute enquanto observa o contorno do pescoço, depois posicionar-se atrás da paciente e palpar o pescoço dela com os dedos de ambas as mãos; alteração esperada: aumento difuso da glândula.",
+        "D": "Pedir à paciente que sente, observar lateralmente a região anterior do pescoço durante adeglutição e, na mesma posição lateral e, com os dedos indicadores, palpar o pescoço dela;alteração esperada: nodulação única móvel."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q044",
+      "number": 44,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Paciente de 45 anos, encaminhada para avaliação com endocrinologista devido a presença de nódulo tireoidiano identificado em ultrassom cervical solicitado por sua ginecologista. Dentre as características ultrassonográficas listadas abaixo, qual denota maior risco de malignidade?",
+      "options": {
+        "A": "Nódulo com maior componente cístico.",
+        "B": "Nódulo isoecoico.",
+        "C": "Nódulo hiperecoico.",
+        "D": "Margens lobuladas.",
+        "E": "Nódulo com maior eixo paralelo à pele."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q045",
+      "number": 45,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Adolescente, 15 anos, sexo masculino, comparece à consulta de rotina com a sua mãe. Durante a anamnese sozinho, paciente refere que se corta com canivete nos antebraços e coxas pois havia terminado namoro e que seus pais não sabiam do fato (usava camisa de manga comprida). Anamnese social: fica 6-8 horas por dia em jogos eletronicos,t em poucos amigos e sofre bullying na escola pelo fato de estar acima do peso. Exame físico: várias lesões perpendiculares à pele em fase cicatricial nos antebracosp, reservando a região arterial dos pulsos, e em região antero-superior das coxas. Preocupado, o médico informa ao adolescente que é obrigado a comunicar o fato à mãe, enfrentando grande resistência do paciente. Baseado no Código de Ética Médica (CEM), o médico:",
+      "options": {
+        "A": "Infringiu o CEM, pois como o paciente não atingiu área arterial, não configura risco.",
+        "B": "Não infringiu o CEM por se tratar de situação de risco.",
+        "C": "Infringiu o CEM por não respeitar a autonomia do paciente.",
+        "D": "Não infringiu o CEM, mas deverá comunicar ao conselho tutelar a situação.",
+        "E": "Não infringiu o CEM e deverá, juntamente com o adolescente, expor as lesões para a mãe e explicar a gravidade do caso."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q046",
+      "number": 46,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Uma das principais complicações da gestação é o trabalho de parto prematuro. Hoje dispomos de um método de rastreamento dessa ocorrência, recomendado pela Federação Internacional de Ginecologia e Obstetrícia. Assinale a alternativa que contém o método e a idade gestacional para a sua realização com esse objetivo:",
+      "options": {
+        "A": "Ultrassonografia transvaginal entre 18 e 24 semanas de gestação.",
+        "B": "Ultrassonografia obstétrica supra-púbica com bexiga cheia entre 18 e 24 semanas de gestação.",
+        "C": "Dosagem de fibronectina fetal entre 11 e 13 semanas de gestação.",
+        "D": "Ultrassonografia transvaginal entre 12 e 15 semanas de gestação.",
+        "E": "Pesquisa de fator de crescimento placentário no sangue materno entre 11 semanas e 3 dias e 13 semanas e 6 dias."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q048",
+      "number": 48,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Uma secundigesta, com história prévia de prematuridade, chega à consulta de pré-natal assintomática, trazendo resultado de ultrassonografia de 22 semanas, o qual revela feto vivo, com exame morfológico normal e com colo uterino medindo 20 mm. Nesse caso, a conduta médica mais adequada é indicar:",
+      "options": {
+        "A": "Realização de cerclagem do colo uterino imediatamente.",
+        "B": "Nifedipina com início imediato e manter o uso até as 30 semanas de gestação.",
+        "C": "Betametasona com início imediato e repetir o exame com 30 semanas de gestação.",
+        "D": "Progesterona natural com início imediato e manter o uso até as 36 semanas gestacionais"
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q049",
+      "number": 49,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mávio, engenheiro civil, 58 anos, tem queixas de cansaço progressivo com piora há 7 dias após quadro gripal. Há 1 ano fazia a vistoria das obras subindo pelas escadas até o último andar das construções. Nos últimos 2 meses notou que a visita e fiscalização é feita somente nos espaços com acesso pelo elevador. Aumentou para dois travesseiros altos para dormir e notou inchaço nas pernas. Ao exame apresenta edema de face (principalmente periorbitário), rarefação capilar. Frequência cardíaca 52 bpm. Pressão arterial: 100×80 mmHg. Ao exame de tórax notou-se murmúrio vesicular presente apenas nos dois terços superiores, sem ruídos adventícios. O abdome globoso tinha sinal do Piparote duvidoso, era indolor à palpação superficial e profunda. Os membros inferiores tinham pulsos pediosos, débeis mas presentes, e edema de duas cruzes em quatro, sem cacifo. Os exames laboratoriais revelavam anemia normocrômica normocítica, ureia e creatinina normais, fosfatase alcalina diminuída para os valores de referência; Colesterol total de 314 mg/dl, Colesterol HDL de 28 mg/dL Triglicerídeos de 245 mg/dL, TSH superior a 150 µUI/ml (valor de referência: 0,34 a 5,50 µUl/mL) e T4 livre inferior a 0,40 ng/dl (valor de referência: 0,54 até 1,48 ng/dL). No ecocardiograma transtorácico foi encontrado derrame pericárdio leve, sem sinais de restrição diastólica, com fração de ejeção de 65%. As dosagens do TSH e de T4 livre foram repetidas e seus valores confirmados. Assinale a melhor conduta neste caso:",
+      "options": {
+        "A": "Deve-se, neste caso, suspeitar e investigar causas secundárias, pois o quadro acima pode ser reflexo da síndrome do eutireoideo doente, simulando uma doença primária tireoidiana.",
+        "B": "Sugere-se que a administração de iodeto de potássio (Lugol), 2 gotas de 6/6h por 10 dias, preceda o início do metimazol, principalmente em indivíduos fumantes ou portadores de oftalmopatia",
+        "C": "Visto tratar-se de paciente com alto risco cardiovascular, a primeira atitude sugerida é instituir terapia hipolipemiante e, muito provavelmente, doses mais altas de estatina trarão benefício, caso haja intolerância ao fármaco",
+        "D": "Caso este paciente esteja em ambiente de atendimento emergencial a conduta será a administração de Levotiroxina EV na dose de ataque de 200 a 400 mcg, suporte de oxigênio nasal e a prescrição de 50 mg de Hidrocortisona EV a cada 6 h.",
+        "E": "Muito provavelmente este paciente, ao ser submetido ao exame de ressonância magnética da hipófise, será encontrada imagem compatível com tumor produtor de TSH, cuja remoção, em geral, solucionará o caso acima apresentado."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q050",
+      "number": 50,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "O hipotireoidismo subclínico (HSC) é definido por concentrações elevadas de TSH (hormônio tireoestimulante) em face de níveis normais de hormônios tireoidianos. Essa condição tem elevada prevalência no Brasil, especialmente em mulheres e idosos. Sobre o manejo do hipotireoidismo subclínico e suas consequências, assinale a alternativa CORRETA:",
+      "options": {
+        "A": "O HSC persistente ou progressivo deve ser diferenciado de causas temporárias de aumento do TSH, especialmente em pacientes com TSH < 10mU/L, quando se indica repetição do exame em 3 meses.",
+        "B": "O HSC persistente ou progressivo deve ser diferenciado de causas temporárias de aumento do TSH, especialmente em pacientes com TSH > = 10mU/L, quando se indica repetição do exame em 3 meses.",
+        "C": "Não há evidência consistente da associação entre HSC e risco de doença arterial coronariana, mesmo em pacientes com TSH > = 10mU/L, essa associação só é observado em pacientes com mais de 65 anos de idade.",
+        "D": "Há evidência consistente da associação entre HSC e risco de doença arterial coronariana, especialmente em pacientes com TSH > = 10mU/L, isso também é observado em pacientes com mais de 65 anos de idade."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q051",
+      "number": 51,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher, 45 anos, procura atendimento por amenorreia e galactorreia há 2 anos. Também relata intolerância ao frio, labilidade emocional, constipação intestinal e cefaleia holocraniana progressiva. Ao exame físico, apresenta pele seca, cabelos quebradiços e ressecados, reflexos profundos reduzidos e hemianopsia bitemporal. Aos exames laboratoriais, entre outros, encontrou-se TSH 5,5 mU/L (valor de referência 0,35-4,8) e T4 livre de 0,2 ng/dL (valor de referência 0,8-1,8). O provável diagnóstico, considerando o quadro apresentado e os achados laboratoriais, é:",
+      "options": {
+        "A": "Hipotireoidismo primário.",
+        "B": "Hipotireoidismo secundário.",
+        "C": "Hipotireoidismo subclínico.",
+        "D": "Função tireoidiana normal."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q052",
+      "number": 52,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Primigesta de 22 anos procura o pronto atendimento da maternidade com 33 semanas e 2 dias relatando sentir cólicas em baixo-ventre. AP: parto a termo em gestação anterior. Exame físico: altura uterina de 31 cm, feto único, situação longitudinal, dorso à esquerda e apresentação cefálica. Dinâmica uterina: uma contração de 25 segundos em 10 minutos. Toque vaginal: colo uterino posterior, grosso, pérvio: 1,5 cm. A conduta correta é:",
+      "options": {
+        "A": "Corticoterapia, apenas.",
+        "B": "Inibição do trabalho de parto, apenas.",
+        "C": "Liberação com orientações.",
+        "D": "Inibição do trabalho de parto, corticoterapia e neuroproteção."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q053",
+      "number": 53,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Recém-nascido do sexo masculino apresenta jato urinário em gotejamento, bexiga palpável acima da sínfise pubiana e ultrassonografia gestacional com ureterohidronefrose bilateral. Sugere o seguinte diagnóstico:",
+      "options": {
+        "A": "Válvula de uretra posterior.",
+        "B": "Refluxo vesicoureteral primário.",
+        "C": "Estenose de junção vesicoureteral.",
+        "D": "Obstrução de junção ureteropélvica."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q054",
+      "number": 54,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Mulher, de 68 anos de idade, comparece ao ambulatório com queixa de cansaço e sensação de falta de energia. Trabalha como diarista, é tabagista e não pratica atividades físicas. Refere sono entrecortado, sendo que tem insônia por ficar preocupada com seus filhos. Ao exame, apresenta IMC de 26,2 kg/m², pressão arterial de 124x80 mmHg, frequência cardíaca de 73 bpm e tireoide de volume habitual, sem nódulos. Exames laboratoriais de 6 meses atrás evidenciaram: Cr 1,0 mg/dL; Ur 43 mg/dL; TSH 6,9mUI/L; T4L 1,0 ng/dL; glicemia em jejum 101 mg/dL e HbA1c 5,9%. Foi solicitada nova função tireoidiana nesta consulta, cujo resultado evidenciou: TSH 6,8 mUI/L; T4L 1,2 ng/dL; anti-tireoperoxidase negativo e anti-tireoglobulina negativa. Qual é a conduta que deve ser adotada neste momento?",
+      "options": {
+        "A": "Observação clínica e orientar higiene do sono.",
+        "B": "Iniciar reposição oral de levotiroxina.",
+        "C": "Solicitar ultrassonografia de tireoide com doppler.",
+        "D": "Solicitar cintilografia de tireoide."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q055",
+      "number": 55,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher de 63 anos refere ganho de peso e constipação. Não possui doenças prévias nem faz uso de medicamentos. Exames laboratoriais: TSH: 10,7 mU/L, T4 livre: 1,1 ng/dL (valores de referência: 0,7 1,4 ng/dL), anti-TPO: 23 UI/mL (valores normais abaixo de 35 UI/mL). Nesse caso, a conduta deve ser:",
+      "options": {
+        "A": "Iniciar tratamento com levotiroxina para normalizar os níveis de TSH e aliviar os sintomas.",
+        "B": "Solicitar ultrassonografia de tireoide e indicar tratamento apenas em caso de alterações ecográficas difusas.",
+        "C": "Calcular o risco cardiovascular e iniciar tratamento com levotiroxina apenas em caso de a paciente apresentar alto risco.",
+        "D": "Monitorizar os níveis de TSH e T4 livre a cada 6-12 meses e iniciar tratamento apenas se houver progressão."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q056",
+      "number": 56,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Leia o Caso Clínico 2 para responder às questões 87 e 88: Caso Clínico 2: Uma mãe vai ao pediatra do seu filho solicitar um atestado de aptidão para a prática de exercícios físicos para a criança, que não pode ir à consulta porque tinha prova na escola, no mesmo horário. 88 - O pediatra, ao fornecer o atestado a esta mãe, neste momento:",
+      "options": {
+        "A": "Agiu corretamente, de acordo com o código de ética médica.",
+        "B": "Cometeu uma ação criminosa, podendo ser preso.",
+        "C": "Atuou conforme é preconizado pelo ECA (Estatuto da Criança e do Adolescente).",
+        "D": "Feriu o princípio da isonomia, defendido pela SBP (Sociedade Brasileira de Pediatria)."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q057",
+      "number": 57,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Uma paciente de 35 anos de idade apresenta quadro de taquicardia, tremores finos, febre, calafrios, sudorese e dor na região anterior do pescoço que piora à palpação. Apresenta dosagem de TSH = 1,60 UI/ml. Exame de VHS = 80 mm/h. O diagnóstico mais provável é tireoidite:",
+      "options": {
+        "A": "De Hashimoto.",
+        "B": "Pela amiodarona.",
+        "C": "De Riedel.",
+        "D": "De De Quervain.",
+        "E": "Pós-parto."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q058",
+      "number": 58,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Recém -nascido a termo, peso de nascimento 3200 g apresenta dispneia progressiva de início na sala de parto. A mãe fez 7 consultas de pré -natal e não houve intercorrências. Ao exame, apresenta -se taquipneico, com tiragem intercostal e aumento do diâmetro anteroposterior do tórax. Ausculta pulmonar com sibilos. Na radiografia de tórax, há aumento do volume pulmonar à esquerda, com atelectasia de lobo inferior. O diagnóstico mais provável nesse caso é:",
+      "options": {
+        "A": "Enfisema lobar congênito.",
+        "B": "Doença de membrana hialina tardia por deficiência de proteína B do surfactante.",
+        "C": "Taquipneia transitória do RN.",
+        "D": "Sequestração pulmonar.",
+        "E": "Malformação adenomatosa cística."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q059",
+      "number": 59,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Recém-nascido de 35 semanas de idade gestacional, apresenta desconforto respiratório logo após o nascimento. Ao exame, está cianótico +/4+, com murmúrio vesicular presente bilateralmente com roncos disseminados; sopro sistólico rude no foco aórtico; abdome globoso, distendido, flácido, RHA + e normais, ausência de orifício anal; apresenta escoliose e deformidade em perna e pé à direita. Qual é a conduta inicial mais adequada?",
+      "options": {
+        "A": "Ultrassonografia de abdome.",
+        "B": "Ecocardiograma com doppler.",
+        "C": "Tomografia computadorizada de tórax.",
+        "D": "Passagem de sonda nasogástrica."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b29-q060",
+      "number": 60,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher, de 56 anos de idade, comparece ao ambulatório para investigação de sensação de \"formigamento\" e dor no pulso direito há 3 meses. Relata que a dor ocorre predominantemente quando está trabalhando no computador (é secretária de um escritório de advocacia). Além disso, também se queixa de fadiga, humor deprimido e ganho de 5kg, sendo que também notou que seus olhos estão ficando um pouco inchados nos últimos meses. Tem história de doença celíaca, controlada com uma dieta sem glúten. Ao exame, apresenta pressão arterial de 110x74mmHg e frequência cardíaca de 52bpm. Também foi observada dificuldade de abdução do polegar da mão direita e a alteração que pode ser vista na imagem a seguir: Qual das condições abaixo é o diagnóstico que mais provavelmente justifica o quadro da paciente?",
+      "options": {
+        "A": "Hipotireoidismo.",
+        "B": "Diabetes mellitus.",
+        "C": "Deficiência de vitamina B12.",
+        "D": "Síndrome nefrótica."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q061",
+      "number": 61,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Os pais de um paciente seu estão organizando exames, receituários e diversos documentos, pois vão morar em outro estado. Eles pedem a você o prontuário médico para que possam levar para seu futuro pediatra. Nesse caso, qual é a conduta correta?",
+      "options": {
+        "A": "O prontuário é do paciente e, sendo ele menor de idade, os responsáveis não podem ter acesso.",
+        "B": "O prontuário é do médico que o fez e só pode ser cedido sob ordem judicial.",
+        "C": "O acesso deve ser permitido, e, conforme solicitado, deve-se fornecer cópias.",
+        "D": "É vedado ao médico permitir o manuseio e o conhecimento dos prontuários por pessoas não obrigadas ao sigilo profissional, o que inclui os familiares.",
+        "E": "O prontuário não pode ser acessado, mas o médico pode elaborar um laudo que contenha o resumo das informações lá contidas."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q062",
+      "number": 62,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Sobre os principais cânceres de tireoide e seus fatores epidemiológicos, assinale a alternativa correta:",
+      "options": {
+        "A": "O tumor papilífero, derivado das células foliculares, é o principal tipo histológico, predominante em pacientes do sexo feminino com idade próxima a 40 anos apresentando disseminação por via linfática.",
+        "B": "O subtipo insular, derivado das células parafoliculares, é o principal tipo histológico; responsável por cerca de 55% dos tumores, acomete principalmente mulheres jovens, por volta dos 35 anos.",
+        "C": "O subtipo anaplásico, derivado das células parafoliculares, é o mais raro dos tumores, porém apresenta bom prognóstico.",
+        "D": "O tumor folicular, derivado das células foliculares, é o principal tipo incidente, predominante em homens acima de 50 anos e de disseminação exclusivamente linfática."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q063",
+      "number": 63,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Mulher de 33 anos chega à consulta com queixa de massa no pescoço. Nega sintomas compressivos locais ou qualquer outra queixa de ganho ponderal, fraqueza ou queda de cabelo. Apresenta screening hormonal inicial normal e ultrassonografia demonstrando massa de 4 cm. Foi realizada punção por agulha fina cujo resultado revelou células com inclusões citoplasmáticas em vidro fosco (olho da órfã- Annie) e grooving intranuclear. O diagnóstico e o tratamento proposto, respectivamente, são:",
+      "options": {
+        "A": "Cisto coloide / tireoidectomia parcial.",
+        "B": "Carcinoma medular / tireoidectomia total.",
+        "C": "Carcinoma papilífero / tireoidectomia total.",
+        "D": "Carcinoma folicular / tireoidectomia parcial."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q064",
+      "number": 64,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Homem, 71 anos de idade, após diagnóstico de fibrilação atrial, iniciou uso de amiodarona. Após três meses, retoma para reavaliação com o cardiologista. Ao exame físico: PA 120 x 70 mmHg, FC 116 bpm com ritmo cardíaco irregular. Tireoide com volume levemente aumentado e sem nódulos palpáveis. Ausência de alterações oculares e presença de leve tremores de extremidades. Exames laboratoriais: TSH \\< 0,031 mUI/L (VR: 0,4 a 4,0): T4 livre 3,8 ng/dL (VR: 0,8 a 1,9); TRAb 4,5 U/L (VR: < 1,0). A ecografia da tireoide mostrou aumento difuso da vascularização, com pico sistólico de artérias tireoidianas > 60 cm/s. Na impossibilidade da suspensão da amiodarona, qual é a conduta inicial recomendada?",
+      "options": {
+        "A": "Começar com glicocorticoide oral na dose de prednisona 0,5 mg/kg/dia.",
+        "B": "Introduzir tionamida, como tapazol 20 mg/dia.",
+        "C": "Encaminhar para radioiodoterapia para tratamento definitivo.",
+        "D": "Observar clinicamente, repetir e reavaliar exames em três meses."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q065",
+      "number": 65,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Menino, de 15 anos de idade, procura o pronto-socorro por tosse seca e dispneia há 3 dias. Na triagem, apresenta saturação de oxigênio de 89% em ar ambiente. Ao exame físico, apresenta tiragem intercostal e taquipneia e, à ausculta pulmonar, notam- se sibilos difusos. Foi realizado resgate com salbutamol e suporte de oxigênio por cateter nasal. Não possuía acompanhante no momento do atendimento. Sobre o caso em questão, assinale a alternativa correta:",
+      "options": {
+        "A": "Em caso de consultas médicas de pacientes menores de 16 anos, o médico poderá exigir a presença de um acompanhante ou responsável com idade superior a 18 anos para realização de consulta com o adolescente.",
+        "B": "A tomada de conduta de emergência se deu de forma correta, pois a não assistência ao adolescente nesse caso, ainda que sem a presença de acompanhante, configuraria omissão de socorro.",
+        "C": "Em casos de internação, se o paciente possuir idade maior à de 15 anos, a autorização de pai e mãe-responsável legal pode ser dispensada, mas para os adolescentes com faixa etária inferior ela é obrigatória.",
+        "D": "Adolescentes têm direito à escolha de realizar consulta médica, procedimentos não invasivos ou invasivos, estejam sozinhos ou acompanhados por familiares, amigos ou parceiros, desde que o profissional reconheça que ele tem discernimento adequado de sua saúde e compreensão de seu autocuidado."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q066",
+      "number": 66,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Na estenose hipertrófica de piloro, os vômitos são, fundamentalmente:",
+      "options": {
+        "A": "De aspecto bilioso.",
+        "B": "De conteúdo alimentar ou não bilioso.",
+        "C": "Com presença de sangue.",
+        "D": "Bilioso ou fecaloide, nos casos mais graves."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q067",
+      "number": 67,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Menino de 13 anos, previamente hígido, vem à consulta de pronto-socorro referindo dor em região inguinoescrotal unilateral há 4 horas, associada a náuseas. Ao exame físico apresenta hiperemia e edema local, além de posição elevada em testículo direito. Qual é o exame complementar mais indicado em caráter de emergência?",
+      "options": {
+        "A": "Ressonância magnética.",
+        "B": "Ultrassonografia com Doppler.",
+        "C": "Radiografia.",
+        "D": "Tomografia computadorizada."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b29-q068",
+      "number": 68,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "RN, 38 semanas de gestação, apresenta vômitos \"biliosos\" cerca de 12 horas após iniciar alimentação com leite materno. Exame físico: bom estado geral; afebril; discretamente desidratado; ictérico; abdome distendido, com peristalse aumentada e indolor à palpação. Radiografia simples do abdome: Pode-se afirmar que a hipótese diagnóstica mais provável é:",
+      "options": {
+        "A": "Atresia duodenal.",
+        "B": "Atresia jejunoileal.",
+        "C": "Má rotação intestinal.",
+        "D": "Invaginação intestinal."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [
+        "data:image/webp;base64,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"
+      ],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q069",
+      "number": 69,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Durante a segunda metade da gestação, uma queixa frequente que leva à procura pelo pronto-socorro são as contrações uterinas relatadas como \"endurecimento da barriga\". Se a gestante tem menos de 36 semanas, a hipótese de trabalho de parto prematuro deve ser sempre afastada e medidas cabíveis devem ser tomadas. Como o médico deve proceder frente ao quadro?",
+      "options": {
+        "A": "Se tem contrações ritmadas e dilatação cervical de 1 cm com esvaecimento cervical, pode-se classificar como TPP e internar para inibição.",
+        "B": "Se apresenta contrações ritmadas e dilatação de 5 cm, deve-se realizar a corticoterapia e sulfato de magnésio para neuroproteção.",
+        "C": "Se ao toque há dilatação de 3 cm e saída de líquido amniótico, introduz-se antibioticoprofilaxia e cesariana de urgência.",
+        "D": "Se o colo é impérvio, classifica-se como útero irritável e indica-se a inibina via oral."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q070",
+      "number": 70,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Recém-nascido a termo, do sexo masculino, nascido de parto via vaginal, Apgar 9/10, apresenta salivação excessiva e muco no canto da boca após o nascimento. Durante a amamentação, apresenta regurgitação, cianose, tosse e insuficiência respiratória. Na sala de parto, não foi realizada passagem de sonda pelas narinas, nem pela boca. A ultrassonografia pré-natal evidenciava polidrâmnio. Considerando o caso descrito, assinale a alternativa que apresenta o diagnóstico provável:",
+      "options": {
+        "A": "Atresia esofágica.",
+        "B": "Atresia gástrica.",
+        "C": "Atresia intestinal.",
+        "D": "Atresia pancreática."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q071",
+      "number": 71,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Secundigesta com idade gestacional de 18 semanas comparece à consulta na unidade básica de saúde (UBS) para iniciar seu pré-natal. Está assintomática e, ao exame clínico, não são identificadas alterações. A paciente, no entanto, relata que entrou em trabalho de parto espontâneo com 32 semanas em sua primeira gestação. Considerado o caso descrito, é indicado prescrever:",
+      "options": {
+        "A": "Indometacina por via oral diariamente.",
+        "B": "Pessário vaginal, após 22 semanas de gestação.",
+        "C": "Progesterona por via intramuscular semanalmente.",
+        "D": "Progesterona natural micronizada por via vaginal diariamente."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q072",
+      "number": 72,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Uma paciente com 20 anos de idade notou nodulação na região central do pescoço. Procurou atendimento médico ambulatorial, no qual foi solicitada dosagem de hormônio tireoidiano (com resultados normais) e ultrassonografia com punção aspirativa por agulha fina (PAAF) do nódulo. O resultado foi nódulo de 1 cm em lobo esquerdo da tireoide, hipoecoico, de margens irregulares, sem calcificação. A PAAF não conseguiu distinguir entre lesão maligna ou benigna (Bethesda IV). O resultado do perfil de expressão gênica (PEG) indicou suspeita para malignidade. A conduta médica adequada para esse caso é:",
+      "options": {
+        "A": "Observar clinicamente e repetir ultrassonografia a cada 3 meses.",
+        "B": "Repetir ultrassonografia e realizar nova punção aspirativa com agulha fina.",
+        "C": "Indicar tireoidectomia total com esvaziamento cervical do lado esquerdo.",
+        "D": "Indicar cirurgia com retirada apenas do lobo esquerdo sem linfadenectomia."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q073",
+      "number": 73,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Uma gestante, no curso da 24a semana de gestação, comparece à consulta de rotina de pré-natal. Informa já ter tido um aborto com 7 semanas e um parto vaginal com 34 semanas. No momento, está sem queixas e apresenta exame físico dentro da normalidade. Traz consigo ultrassonografia gestacional que revela gestação única, tópica, com 24 semanas (corrigidas), feto com apresentação cefálica, placenta anterior e com grau zero de maturidade, quantidade de líquido amniótico e peso fetal normais para a idade gestacional, colo uterino fechado medindo 2,9 cm (valor de referência: > 2,5 cm). Apresenta também resultado de exame de urocultura que revela E. coli com 105 Unidades Formadoras de Colônias. O médico prescreve cefalexina e progesterona para essa paciente. Nesse caso, a prescrição de progesterona se justifica porque a gestante apresenta:",
+      "options": {
+        "A": "Bacteriúria assintomática, que é um fator de risco para parto prematuro.",
+        "B": "Ultrassonografia gestacional que demonstrou um colo uterino curto.",
+        "C": "Passado de um aborto precoce por insuficiência do corpo lúteo.",
+        "D": "Histórico de parto prematuro."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q074",
+      "number": 74,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Adolescente, 13 anos, acompanhado e tratado em serviço público com diagnóstico de Leucemia Mieloide Aguda há 3 anos, recebe alta por cura. Procura seu pediatra acompanhado de sua mãe e solicita cópia do prontuário, pois irá se mudar de estado e gostaria de manter acompanhamento. O pediatra nega o acesso, informando que sua caligrafia é ruim e também porque no prontuário há termos médicos, cujo entendimento do paciente pode não ser adequado. Três anos após o pediatra precisa responder um processo no CRM envolvendo o caso do paciente. Considerando a atitude do médico, é correto afirmar que:",
+      "options": {
+        "A": "É vedado ao médico negar ao paciente ou, na sua impossibilidade, a seu representante legal, acesso a seu prontuário.",
+        "B": "O paciente tem direito garantido de acesso ao prontuário pelo código civil e código penal.",
+        "C": "O processo é infundado, pois a preservação dos prontuários médicos em suporte de papel tem um prazo máximo de 5 anos.",
+        "D": "O paciente pode solicitar apenas cópias do prontuário e não ter acesso interino ao mesmo."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q075",
+      "number": 75,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Recém-nascido de 12 dias, trazido ao PSI pelos pais por vômitos incoercíveis. Associado, mãe relata olhos fundos e diurese reduzida. Ao exame físico, paciente clinicamente desidratado, com massa abdominal palpável em quadrante superior. Radiografia de abdome evidenciando bolha gástrica dilatada, sem ar nas demais porções. Coletada gasometria admissional. Quais os achados esperados?",
+      "options": {
+        "A": "Acidose metabólica hiperclorêmica.",
+        "B": "Acidose metabólica com ânion-gap aumentado.",
+        "C": "Alcalose respiratória.",
+        "D": "Alcalose metabólica hipoclorêmica."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q076",
+      "number": 76,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Um menino de 9 anos chega ao pronto-socorro com queixa de dor abdominal há 24 horas, iniciada de forma insidiosa na região periumbilical, acompanhada de náuseas, hiporexia e um episódio de vômito. Sua mãe relata febre baixa e episódios esporádicos de diarreia, além de dor ao urinar. Ao exame físico, o paciente apresenta dor acentuada à palpação suprapúbica sem irritação peritoneal evidente, ausência de defesa muscular e sinais de irritação bacteriana localizados. Ultrassonografia abdominal indica aumento volumétrico do apêndice, parede espessada e discreto líquido periapendicular. Considerando a apresentação clínica e as condutas recomendadas na abordagem da apendicite aguda precoce em crianças, assinale a alternativa correta.",
+      "options": {
+        "A": "A presença de diarreia e sintomas urinários descarta o diagnóstico de apendicite, sendo mais sugestivos de infecção gastrintestinal ou urinária.",
+        "B": "A antibioticoterapia deve ser iniciada precocemente em casos suspeitos, sendo essencial cobrir germes gram-negativos e anaeróbios, mesmo que ainda não haja sinais claros de peritonite.",
+        "C": "A ausência de defesa muscular e sinais de irritação peritoneal exclui o diagnóstico de apendicite aguda em crianças.",
+        "D": "Em casos de apendicite com apresentação atípica e sinais urinários, deve-se descartar completamente o diagnóstico de apendicite, priorizando causas urológicas.",
+        "E": "A tomografia computadorizada abdominal deve ser realizada como exame de primeira linha em qualquer suspeita de apendicite em crianças, devido à sua alta sensibilidade."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q077",
+      "number": 77,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Paciente de 32 anos, G3P1A1 (um parto prematuro com 28 semanas na primeira gestação, um aborto espontâneo no primeiro trimestre na segunda gestação), atualmente com 18 semanas de idade gestacional na terceira gestação. Em uso de sulfato ferroso e ácido fólico. Durante a consulta de pré-natal, relata não ter contrações ou sangramento. É realizada ultrassonografia transvaginal, que evidencia um colo uterino medindo 18 mm, sem afunilamento visível no momento do exame. Diante do histórico da paciente e do achado ultrassonográfico atual, qual a conduta mais adequada para a prevenção de novo parto prematuro?",
+      "options": {
+        "A": "Iniciar progesterona natural micronizada e realizar cerclagem uterina terapêutica.",
+        "B": "Iniciar progesterona natural micronizada e agendar cerclagem uterina profilática.",
+        "C": "Iniciar progesterona natural micronizada e realizar nova avaliação ultrassonográfica do colo em 1-2 semanas para considerar cerclagem se houver encurtamento progressivo ou afunilamento.",
+        "D": "Tranquilizar a paciente, pois o colo acima de 15 mm sem afunilamento indica baixo risco, e repetir a medida em 2 semanas."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q078",
+      "number": 78,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Paciente do sexo masculino, 57 anos, foi submetido à ultrassonografia de tireoide por apresentar aumento discreto de volume cervical. O exame revelou um nódulo sólido, hipoecogênico, com margens regulares, de 1,7 x 1,0 cm, sem calcificações ou sinais de extensão extratireoidiana. Ao ser avaliado pelo clínico, o paciente relatou histórico prévio de nódulo tireoidiano semelhante em ultrassonografia há 3 anos, quando foi submetido a punção aspirativa por agulha fina (PAAF), cujo laudo descreveu a amostra como \"não diagnóstica\" (Bethesda I). Desde então, não houve seguimento complementar. Considerando as recomendações atuais e a classificação Bethesda, qual deve ser a conduta mais adequada neste momento?",
+      "options": {
+        "A": "Repetir a PAAF para tentar obter amostra citológica adequada, visto o resultado prévio de Bethesda I.",
+        "B": "Indicar cirurgia para retirada do lobo tireoidiano acometido, considerando caráter persistente e risco de malignidade.",
+        "C": "Considerar o nódulo benigno, já que não houve crescimento nem alteração de características ultrassonográficas, dispensando investigação adicional.",
+        "D": "Solicitar cintilografia de tireoide, para estratificação do risco maligno desse nódulo.",
+        "E": "Realizar acompanhamento ultrassonográfico anual, sem nova PAAF, caso o nódulo mantenha estabilidade morfológica."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q079",
+      "number": 79,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Um paciente do sexo masculino de 45 anos procura atendimento após notar um aumento do volume cervical anterior. Ao exame físico, observa-se nódulo tireoidiano palpável de 1,8 cm. Na avaliação inicial, foi solicitado TSH, que se encontra no limite superior da normalidade, e ultrassonografia da tireoide, que demonstrou nódulo predominantemente cístico, isoecoico, sem calcificações, sem linfadenopatia associada, localizado em lobo direito de 1,9x1,7x0,9 cm. Considerando as recomendações atuais, qual conduta está mais adequada em relação ao nódulo identificado nesse paciente?",
+      "options": {
+        "A": "Repetir o TSH e solicitar cintilografia da tireoide.",
+        "B": "Solicitar dosagem sérica de tireoglobulina para decidir pela indicação de PA.",
+        "C": "Acompanhar clinicamente e repetir a ultrassonografia periodicamente.",
+        "D": "Solicitar pesquisa de anticorpos antitireoperoxidase (TPO) e indicar PAAF se positivos.",
+        "E": "Solicitar punção aspirativa por agulha fina (PAAF) imediatamente devido ao tamanho do nódulo."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q080",
+      "number": 80,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Uma mulher de 41 anos, previamente hígida, apresenta há 3 semanas quadro de dor cervical irradiando para mandíbula, febre baixa e mal-estar geral. Ela relata que, há cerca de um mês, teve infecção viral autolimitada. Refere início súbito de sintomas como palpitações, sudorese, ansiedade e perda de 3 kg no período. Ao exame: tireoide aumentada, firme e dolorosa à palpação; frequência cardíaca: 110 bpm; PA: 128 x 78 mmHg; temperatura de 37,6ºC. Exames laboratoriais: TSH < 0,01 mUI/L (VR: 0,45–4,5), T4 livre: 2,1 ng/dL (VR: 0,8–2,0), T3: 3,8 ng/mL (VR: 0,7–2,0), anticorpos antitireoperoxidase (anti-TPO): negativos, TRAb: negativo, VHS: 75 mm/h (VR: <20). Ultrassonografia revela áreas hipoecoicas múltiplas e Doppler: fluxo vascular diminuído. Captação de iodo radioativo em 24h: 1% (VR: 10–30%). Em relação ao quadro clínico, marque a alternativa correta quanto ao tratamento medicamentoso:",
+      "options": {
+        "A": "Prescrever levotiroxina.",
+        "B": "Prescrever metimazol e propranolol.",
+        "C": "Prescrever prednisona e metimazol.",
+        "D": "Prescrever prednisona e propranolol."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q081",
+      "number": 81,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Assinale a alternativa correta sobre pneumotórax:",
+      "options": {
+        "A": "O pneumotórax espontâneo primário no adolescente e no adulto jovem tem incidência estimada de 1:50.",
+        "B": "O pneumotórax espontâneo primário no adolescente e no adulto jovem é mais comum no sexo feminino.",
+        "C": "A drenagem torácica de urgência deve ser realizada diante da suspeita de pneumotórax hipertensivo.",
+        "D": "A pneumonia é a causa mais comum de pneumotórax espontâneo primário na criança."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q082",
+      "number": 82,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "O radiográfico característico da dupla bolha ocorre na:",
+      "options": {
+        "A": "Atresia pilórica.",
+        "B": "Atresia duodenal.",
+        "C": "Gastrosquise|.",
+        "D": "Atresia ileal."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q083",
+      "number": 83,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Renata tem 15 anos e retorna em consulta para checar exames, desacompanhada. Atualmente, está no primeiro ano do ensino médio, trabalha como menor aprendiz e tem bom desempenho escolar e no trabalho. Desde os 8 anos, Renata tem diagnóstico de tireoidite de Hashimoto e faz uso de levotiroxina, com acompanhamentos regulares para manejo da dose do medicamento. Na consulta atual, está sem queixas, e o resultado dos seus exames aponta bom controle medicamentoso do hipotireoidismo. Na avaliação clínica, não há achados anormais. Respeitando o código de ética médica e o estatuto da criança e do adolescente, qual é a conduta apropriada?",
+      "options": {
+        "A": "A paciente deve ser orientada em relação ao resultado de seus exames e sobre a adequação do tratamento, mas, por ser menor de idade, não pode se responsabilizar pelo recebimento das informações e deve ser orientada a solicitar que um maior de idade responsável venha retirar a receita dos medicamentos.",
+        "B": "Por ser menor de idade desacompanhada, a consulta não deve ser realizada, e a paciente deve ser orientada a retornar acompanhada de um maior de idade responsável que possa receber os resultados de exames e a receita dos medicamentos.",
+        "C": "A paciente só pode ser orientada, receber os resultados de exame e a receita dos medicamentos desacompanhada de um maior responsável, se o médico que a atende é o pediatra que realiza a puericultura de rotina e já a conhece desde o diagnóstico.",
+        "D": "A paciente pode ser orientada quanto aos exames e receber sua receita de medicamentos desacompanhada, desde que o médico que realiza a consulta observe que ela tem discernimento para entender as orientações.",
+        "E": "A paciente pode ser orientada quanto aos exames e receber sua receita de medicamentos desacompanhada, porém, após a consulta, é necessário entrar em contato com um maior de idade responsável para confirmar as orientações dadas."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q084",
+      "number": 84,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Atualmente a medida ultrassonográfica de comprimento de colo uterino mais aceita como fator de risco para prematuridade é abaixo de:",
+      "options": {
+        "A": "40 mm.",
+        "B": "30 mm.",
+        "C": "10 mm.",
+        "D": "25 mm."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q085",
+      "number": 85,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Paciente de 26 anos, feminina, com nódulo em tireoide de 2 cm, apresentando ao USG com doppler vascularização central e calcificações. É realizada PAAF para biópsia e este exame não pode diagnosticar com segurança qual tipo de lesão:",
+      "options": {
+        "A": "Carcinoma papilífero.",
+        "B": "Carcinoma anaplásico.",
+        "C": "Carcinoma medular.",
+        "D": "Carcinoma folicular.",
+        "E": "Bócio adenomatoso."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q086",
+      "number": 86,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Paciente feminina, de 45 anos, sem comorbidades, procurou atendimento por ter sido descoberto, de forma incidental em exame de imagem, um nódulo tireoidiano. Encontrava-se assintomática. Ao exame físico, palpou-se nódulo no lobo direito da tireoide. Ultrassonografia mostrou um nódulo sólido, hipoecogênico, com margens irregulares, microcalcificações e formato mais largo do que alto, medindo 1,3 cm no maior diâmetro. A dosagem de TSH estava normal. Segundo a classificação TI-RADS, do Colégio Americano de Radiologia (ACR-TI-RADS), qual a classificação do nódulo e qual a conduta a ser adotada?",
+      "options": {
+        "A": "TI-RADS 3 - Manter observação clínica e realizar dosagem semestral de TSH.",
+        "B": "TI-RADS 4 - Repetir ultrassonografia em 12 meses.",
+        "C": "TI-RADS 5 - Realizar punção aspirativa por agulha fina (PAAF).",
+        "D": "TI-RADS 5 - Indicar cirurgia imediata."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q087",
+      "number": 87,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Mulher de 45 anos é internada em hospital de média complexidade com queixas de febre (em torno de 38°C), mialgia, mal- estar e dor na região cervical anterior, irradiada para a mandíbula e orelhas. Há 2 semanas, iniciou quadro sugestivo de infecção viral respiratória alta, com evolução clínica lenta desde então, passando a sentir palpitações e tremores nos últimos 3 dias. Procurou atendimento na unidade de saúde. Ao exame físico, a paciente se encontra febril, com taquicardia desproporcional à temperatura corporal e tremores finos nas extremidades. À palpação da tireoide: glândula dolorosa, firme e levemente aumentada de tamanho, assimétrica, não nodular. As dosagens da velocidade de hemossedimentação e proteína C reativa se mostraram elevadas. Considerando a principal hipótese diagnóstica para o caso, quais exames complementares a sustentariam e qual o tratamento indicado, respectivamente?",
+      "options": {
+        "A": "Redução da captação tireoidiana de iodo radioativo; betabloqueador e anti-inflamatório.",
+        "B": "Detecção de presença de nódulo quente à cintilografia de tireoide; tireoidectomia subtotal.",
+        "C": "Verificação de aumento nas dosagens séricas de TSH, T4 livre e TRAb; ablação com iodo radioativo.",
+        "D": "Verificação de aumento das concentrações sanguíneas de TSH, T3 e T4 livre; oseltamivir + metimazol + atenolol."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q088",
+      "number": 88,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Recém-nascido (RN) de Sara, sexo masculino, iniciou logo após o nascimento com espumas e bolhas na boca e no nariz. Foi aspirado, com melhora. Após a primeira mamada, apresentou tosse e cianose, sendo suspensa a dieta. Em relação ao quadro do RN de Sara, a etiologia MAIS provável é a:",
+      "options": {
+        "A": "Fenda palatina.",
+        "B": "Cardiopatia congênita cianótica.",
+        "C": "Atresia de esôfago.",
+        "D": "Síndrome do pulmão molhado."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q089",
+      "number": 89,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Com relação às distopias testiculares, assinale a alternativa correta:",
+      "options": {
+        "A": "A idade mais apropriada para o tratamento cirúrgico é entre 6 a 12 meses de idade.",
+        "B": "A influência da idade gestacional no diagnóstico neonatal é irrelevante.",
+        "C": "O risco de desenvolvimento de câncer testicular é igual ao da população em geral.",
+        "D": "Testículos retráteis devem ser tratados cirurgicamente ou por hormonioterapia com gonadotrofina coriônica.",
+        "E": "Uma vez feito o diagnóstico, está indicado o tratamento cirúrgico precoce para evitar infertilidade."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q090",
+      "number": 90,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Pediatria",
+      "topic": "Ética em Pediatria",
+      "stem": "Adolescente de 14 anos de idade, vem desacompanhada ao hospital com queixa de algúria e polaciúria há 2 dias. Nega febre. Ela relata durante a consulta que tem vida sexualmente ativa desde os 13 anos de idade, sem parceiro fixo. Relata ainda que sempre faz uso de preservativo durante as relações sexuais e que sempre são de forma consentida. Refere nunca ter sido consultada por ginecologista, por ter receio de que os pais fiquem sabendo, pois ela acredita que eles não aceitariam seu modo de viver. Os exames solicitados sugerem infecção do trato urinário baixo, sendo orientado à paciente tratamento antimicrobiano oral, orientações de higiene íntima e métodos contraceptivos, e a importância do acompanhamento ginecológico especializado. Qual a conduta correta quanto ao sigilo médico nesse caso?",
+      "options": {
+        "A": "Manter o sigilo nessa consulta, porém solicitando que a adolescente venha acompanhada dos pais no retorno para que ela mesma conte aos pais sobre seu comportamento sexual, assistida pela equipe de saúde.",
+        "B": "Manter o sigilo nessa consulta, porém posteriormente convocar os pais com auxílio da assistência social para que seja comunicado aos pais o comportamento sexual relatado pela adolescente, com quebra do sigilo.",
+        "C": "Manter o sigilo do relatado nessa consulta, deixando claro que ela tem direito ao sigilo, confiabilidade e privacidade, alertando quanto aos limites das questões éticas para com ela e seus responsáveis.",
+        "D": "Quebrar o sigilo nessa consulta impreterivelmente, convocando os pais a comparecerem ao hospital antes de liberar a paciente da consulta, para assegurar o tratamento adequado da infecção urinária atual e o agendamento da consulta ginecológica.",
+        "E": "Quebra do sigilo nessa consulta impreterivelmente, incentivando a adolescente a que ela própria relata aos pais seu diagnóstico atual e seu comportamento sexual, oferecendo amplo apoio para tal."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Ética em Pediatria",
+      "images": [],
+      "scheduleId": "cron-270"
+    },
+    {
+      "id": "b29-q091",
+      "number": 91,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher, 52 anos de idade, apresenta queixa de cansaço e ganho de peso há seis meses, desde a menopausa. Sedentária. Faz uso de sinvastatina 20 mg/dia. Ao exame clínico, apresentou peso de 72 kg, altura de 160 cm, FC de 64 bpm, PA de 130x70 mmHg. Tireoide não palpável. Exames laboratoriais: T4 livre: 1,0 ng/dL, TSH: 11 mUI/L. Em relação ao caso apresentado, a próxima conduta mais adequada é:",
+      "options": {
+        "A": "Iniciar levotiroxina.",
+        "B": "Repetir TSH e T4 livre em três meses.",
+        "C": "Solicitar anticorpo antitireoperoxidase.",
+        "D": "Solicitar ultrassonografia de tireoide."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q092",
+      "number": 92,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher, 60 anos de idade, com diagnóstico de Ca de pulmão, tendo iniciado tratamento com pembrolizumabe há 2 meses. Paciente apresenta-se assintomática, peso = 60kg. Exames recentes: TSH = 14 mUI/L (VR = 0,45 – 4,50), T4 livre = 0,4 ng/dL (VR = 0,7 - 1,8). Qual é a conduta mais adequada?",
+      "options": {
+        "A": "Suspender pembrolizumabe.",
+        "B": "Prescrever levotiroxina 100mcg/d.",
+        "C": "Observação clínica.",
+        "D": "Prescrever tapazol 10mg/d."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q093",
+      "number": 93,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Paciente masculino, 70 anos, comparece à consulta ambulatorial relatando fraqueza progressiva, sonolência excessiva e artralgia há 4 meses. Ao exame, bradicardia e edema discreto de membros inferiores são observados. Diz ter história pregressa de infarto agudo do miocárdio há 5 anos, sendo coronariopata em uso de AAS e beta-bloqueador. O médico-assistente solicita exames laboratoriais, os quais mostram TSH elevado e T4L diminuído. Considerando suas comorbidades e o diagnóstico de hipotireoidismo primário recém-estabelecido, qual das opções a seguir apresenta o manejo mais seguro e adequado para início do tratamento desta condição?",
+      "options": {
+        "A": "Iniciar levotiroxina em dose total estimada (1,6 mcg/kg/dia) desde o início.",
+        "B": "Associar levotiroxina a tri-iodotironina (T3) desde o início para resposta mais rápida.",
+        "C": "Adiar o início da levotiroxina por 3 meses para monitorar evolução clínica espontaneamente.",
+        "D": "Começar levotiroxina na dose usual, sem necessidade de ajuste, e reavaliar em um mês.",
+        "E": "Começar levotiroxina na dose de 25-50 mcg/dia, com aumento gradual baseado no TSH."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q094",
+      "number": 94,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Uma mulher de 46 anos comparece ao ambulatório com queixas de cansaço, constipação, intolerância ao frio e sonolência excessiva há cerca de 4 meses. Sofreu acidente automobilístico com perda da consciência há 6 meses. Nega outras comorbidades. Ao exame físico, apresenta bradicardia (FC: 52 bpm), pele seca e fácies inexpressiva. Os exames laboratoriais mostram TSH: 1,4 μUI/mL (ref: 0,4–4,5), T4 livre: 0,4 ng/dL (ref: 0,8–1,8), T3 total: 52 ng/dL (ref: 80–200). Prolactina, IGF-1 e cortisol matinal também estão diminuídos. Considerando o provável diagnóstico e a conduta, assinale a alternativa correta:",
+      "options": {
+        "A": "O diagnóstico mais provável é hipotireoidismo subclínico, pois o TSH está normal, e não há necessidade de iniciar reposição hormonal.",
+        "B": "A presença de TSH normal com T4 livre baixo sugere resistência periférica ao hormônio tireoidiano, e a conduta deve ser expectante.",
+        "C": "O quadro é compatível com tireoidite autoimune em fase de recuperação, devendo-se repetir os exames em 4 a 6 semanas antes de iniciar o tratamento.",
+        "D": "Trata-se de hipotireoidismo central, e a reposição hormonal com levotiroxina deve ser iniciada, após avaliação e correção do eixo hipotálamo-hipofisário, especialmente o eixo corticotrófico."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q095",
+      "number": 95,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Uma paciente de 50 anos de idade, com queixa de intolerância ao frio e constipação. O exame físico mostrou FC = 58 bpm, FR = 16 irpm e SatO2 = 98%. Os testes laboratoriais indicaram TSH normal e T4 livre baixo. Qual é a hipótese diagnóstica mais provável?",
+      "options": {
+        "A": "Hipotireoidismo secundário.",
+        "B": "Hipotireoidismo primário.",
+        "C": "Hipotireoidismo subclínico.",
+        "D": "Hipertireoidismo."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q096",
+      "number": 96,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "O carbonato de lítio tem sido amplamente utilizado na prática clínica como estabilizador de humor, especialmente no tratamento de transtorno bipolar. Seu uso prolongado está associado a algumas alterações clínicas, no entanto, há uma monitoração essencial que deve ser feita antes e durante o uso dessa medicação. Qual monitoração é indispensável?",
+      "options": {
+        "A": "Prolactina.",
+        "B": "Hormônios tireoidianos.",
+        "C": "Cálcio.",
+        "D": "Ácido fólico."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q097",
+      "number": 97,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher de 27 anos se apresenta para acompanhamento de hipotireoidismo primário devido à tireoidite de Hashimoto. A patologia foi diagnosticada há quatro anos, e a levotiroxina foi iniciada na época. Embora os valores séricos de TSH da paciente tenham se normalizado após o início da levotiroxina, ela relata intolerância persistente ao frio, fadiga e dificuldade de concentração. O regime foi posteriormente transferido para terapia combinada com levotiroxina (100 mcg por dia) e liotironina (5 mcg duas vezes ao dia). Após o início desse novo regime, seus sintomas desapareceram, e ela permanece com o mesmo tratamento. Ela tomava pílula anticoncepcional oral, mas parou há dois meses devido ao desejo de engravidar. A última menstruação foi há três dias. Ao exame físico: IMC: 25,8 kg/m²; pressão arterial: 112x65 mmHg; frequência cardíaca: 62 bpm; a glândula tireoide é normal à palpação, sem nódulos; os reflexos são 2+ e simétricos em todos os aspectos. Exames séricos atuais: 2,8 TSH: mUI/L (normal: 0,5 a 5,0 mUI/L). O teste de gravidez é negativo. O próximo passo de escolha no manejo dessa paciente é:",
+      "options": {
+        "A": "Manter a mesma dose de liotironina e levoritoxina.",
+        "B": "Manter a mesma dose de liotironina e aumentar a de levoritoxina.",
+        "C": "Manter a mesma dose de liotironina e diminuir a de levoritoxina.",
+        "D": "Suspender a liotironina e manter a mesma dose de levoritoxina.",
+        "E": "Suspender a liotironina e aumentar a dose de levoritoxina."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q098",
+      "number": 98,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Paciente do sexo feminino, 75 anos, com antecedente de cardiopatia isquêmica, vem ao consultório com alteração nos exames de função tireoidiana repetidos e confirmados. Apresenta- se assintomático, com TSH de 15 μUI/mL (VR 0.5-4,5) e T4 livre de 0,4 ng/dL (VR 0.8-1.8). Qual a conduta?",
+      "options": {
+        "A": "Iniciar o tratamento com levotiroxina, na dose de 1,6 mcg/kg/dia.",
+        "B": "Não iniciar o tratamento e acompanhar a função tireoidiana.",
+        "C": "Solicitar USG e cintilografia de tireoide.",
+        "D": "Iniciar o tratamento com levotiroxina na dose de 25 mcg/dia."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q099",
+      "number": 99,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Uma mulher de 53 anos, em uso de biotina, apresenta taquicardia e tremor. Resultados dos exames laboratoriais: TSH = <0,01 mUI/L (0,5-5,0 mUI/L); T4 livre = 2,9 ng/dL (0,8-1,8 ng/dL); T3 total = 320 ng/dL (70-200 ng/dL);. Realizou cintilografia de tireoide com captação < 1%. Qual o diagnóstico?",
+      "options": {
+        "A": "Doença de Graves.",
+        "B": "Bócio multinodular atóxico.",
+        "C": "Tireoidite subaguda.",
+        "D": "Tireotoxicose pelo uso de biotina."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q100",
+      "number": 100,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Em relação à doença de Graves, marque a alternativa correta:",
+      "options": {
+        "A": "A oftalmopatia pode piorar com o uso de iodo radioativo, especialmente em tabagistas.",
+        "B": "A dosagem de TSH, T4 livre e T3 é suficiente para diferenciar entre Doença de Graves e bócio multinodular tóxico.",
+        "C": "O tratamento com metimazol é contraindicado durante toda a gestação.",
+        "D": "A tireoidectomia total, sempre que disponível, é preferida em relação ao tratamento clínico."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q101",
+      "number": 101,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher, 67 anos, é encaminhada para avaliação devido alteração da função tireoidiana. Paciente nega uso de medicamentos ou suplementos. Nega sintomas. TSH < 0,1 mUl/l (0,4 a 4,2 mUI/L) VR, e T4L 1,4 (VR até 1,9 ng/dl). Qual a conduta?",
+      "options": {
+        "A": "Prescrever metimazol 10mg/d.",
+        "B": "Repetir TSH e T4l.",
+        "C": "Solicitar cintilografia de tireoide.",
+        "D": "Realizar tireoidectomia total."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q102",
+      "number": 102,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Paciente de 23 anos, sexo feminino, comparece em consulta ambulatorial referindo perda de peso não intencional de 6 Kg nos últimos 3 meses, acompanhado de insônia, intolerância ao calor, fadiga, palpitação e agitação psicomotora. Paciente nega comorbidades ou medicações de uso contínuo, nega dor cervical. Ao exame: FC: 106 bpm; PA: 130/60 mmHg; presença de proptose discreta bilateral, tireoide de consistência fibroelástica e de volume aumentado. Trouxe os seguintes exames: hemograma sem particularidades, TGO 63 U/L (VR 10 a 37 U/L), TGP 87 (VR 7 e 56 U/L), TSH < 0,01 mUI/L (VR 0,4 e 4,5 mUI/L), T4 livre 3,5 ng/dL (VR 0,7-1,48 ng/dL). Com base no caso clínico qual o tratamento mais adequado?",
+      "options": {
+        "A": "Tireoidectomia total.",
+        "B": "Propiltiouracil e propranolol.",
+        "C": "Metimazol e propranolol.",
+        "D": "Radioiodoterapia."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q103",
+      "number": 103,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Mulher, 45 anos, procura atendimento por alteração laboratorial da função tireoidiana. Nega queixas. Aos exames laboratoriais, entre outros, encontrou-se TSH 0,1 mU/L (valor de referência 0,35-4,8) e T4 livre de 1,6 ng/dL (valor de referência 0,8- 1,8). O provável diagnóstico, considerando o quadro apresentado e os achados laboratoriais, é:",
+      "options": {
+        "A": "Hipotireoidismo secundário.",
+        "B": "Hipertireoidismo primário.",
+        "C": "Hipertireoidismo subclínico.",
+        "D": "Função tireoidiana normal."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q104",
+      "number": 104,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipotireoidismo",
+      "stem": "Homem de 35 anos vem com queixa de irritabilidade, tremor, palpitações e perda de 6 Kg nos últimos dois meses. Exame clínico: FC 115 bpm; PA 140 x 70 mmHg; bócio discreto, indolor, difuso e firme. Restante normal. Exames complementares: TSH < 0,01 mUI/mL; T3 total 250 ng/dL (VR:80-200), T4L 1,8 µg/dL (VR:0,7-1,48), tireoglobulina 130 ng/mL (VR: até 35), anti-TPO 52 UI/mL (VR:< 9), VHS 80 mm/h; captação do I-131 nas 24 horas de 2% (VR: 14-35%). A conduta mais adequada é:",
+      "options": {
+        "A": "Excluir o uso de hormônio tireoidiano.",
+        "B": "Prednisona e metimazol.",
+        "C": "Propranolol e prednisona.",
+        "D": "Metimazol e propranolol."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipotireoidismo",
+      "images": [],
+      "scheduleId": "cron-265"
+    },
+    {
+      "id": "b29-q105",
+      "number": 105,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Mulher de 42 anos, previamente saudável, procura atendimento ambulatorial com queixa de ansiedade, palpitações e tremores há 2 meses. Ao exame físico, apresenta-se taquicárdica, sem bócio palpável e sem alterações oftalmológicas. Nega uso de medicações, exceto por medicamento manipulado para perda de peso, mas não sabe sua composição. Exames laboratoriais: TSH < 0,01 mU/L; T4 livre: 3,2 ng/dL (valores de referência: 0,7–1,4); captação de iodo na cintilografia: < 1%. Com base no quadro clínico e laboratorial, a conduta mais apropriada é:",
+      "options": {
+        "A": "Iniciar propiltiouracil e betabloqueador até normalização dos níveis hormonais.",
+        "B": "Encaminhar para radioiodoterapia após preparo com metimazol.",
+        "C": "Indicar ressecção cirúrgica da tireoide devido à gravidade clínica.",
+        "D": "Confirmar o diagnóstico de tireotoxicose factícia e suspender o uso inadvertido de hormônios tireoidianos."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q106",
+      "number": 106,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Hipertireoidismo",
+      "stem": "Homem de 67 anos, com antecedente de fibrilação atrial e uso crônico de amiodarona há 10 meses, apresenta perda de peso, insônia e tremores. Ao exame, encontra-se normotenso, eupneico, com frequência cardíaca de 102 bpm e sem bócio palpável. Exames laboratoriais: TSH < 0,01 μUI/mL, T4 livre elevado, T3 total normal. Cintilografia da tireoide evidencia captação reduzida difusamente. Considerando o quadro clínico e laboratorial, qual é a conduta mais adequada?",
+      "options": {
+        "A": "Suspender amiodarona e iniciar metimazol em alta dose.",
+        "B": "Manter a amiodarona e tratar com iodo radioativo.",
+        "C": "Considerar tireoidite induzida por amiodarona tipo 2 e iniciar corticosteróides.",
+        "D": "Repetir os exames após 6 semanas, pois os achados são compatíveis com hipertireoidismo subclínico."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Hipertireoidismo",
+      "images": [],
+      "scheduleId": "cron-266"
+    },
+    {
+      "id": "b29-q107",
+      "number": 107,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Paciente de 47 anos é avaliada por apresentar nódulo palpável na região cervical anterior. Está assintomática e sem sinais de disfunção tireoidiana. Com base nas recomendações atuais, qual deve ser o primeiro passo na investigação?",
+      "options": {
+        "A": "Dosagem de TSH sérico para definir a próxima conduta.",
+        "B": "Solicitar cintilografia de tireoide para avaliação funcional do nódulo.",
+        "C": "Realizar punção aspirativa por agulha fina do nódulo.",
+        "D": "Encaminhar diretamente para cirurgia, caso o nódulo tenha mais de 2 cm."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q108",
+      "number": 108,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Homem de 45 anos é acompanhado ambulatorialmente por nódulo tireoidiano. Não há linfadenomegalias cervicais e o nódulo mede 2,2 cm. TSH está dentro da normalidade e não há sintomas compressivos. Após biópsia por punção aspirativa com agulha fina (PAAF) de nódulo sólido, hipoecoico, com margens irregulares, detectado ao ultrassom no lobo esquerdo da tireoide, o laudo citológico classifica o material como Bethesda III – atipia de significado indeterminado/lesão folicular de significado indeterminado (AUS/FLUS). Diante dessa situação, a conduta mais adequada é:",
+      "options": {
+        "A": "Repetir PAAF em 4 a 6 semanas e considerar estudo molecular, conforme recursos disponíveis.",
+        "B": "Solicitar cintilografia tireoidiana com iodo-123 para avaliação funcional do nódulo.",
+        "C": "Indicar tireoidectomia total com esvaziamento cervical central preventivo.",
+        "D": "Iniciar terapia supressiva com levotiroxina por 3 a 6 meses, antes de nova avaliação.",
+        "E": "Encerrar acompanhamento, pois a categoria Bethesda III tem risco muito baixo de malignidade."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q109",
+      "number": 109,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Paciente de 35 anos, sexo feminino, comparece em consulta ambulatorial após notar nodulação em leito tireoidiano, passou inicialmente na atenção primário onde foi solicitado provas de função tireoidiana e um ultrassom cervical. Paciente não apresenta outras comorbidades e nega medicações de uso contínuo, assintomática no momento e com exame físico dentro da normalidade exceto pela nodulação cervical. Traz consigo os seguintes exames: TSH 1,4 mUI/L (VR 0,35-4,5 mUI/L), T4 livre 1,2 ng/dL (VR 0,7-1,48 ng/dL) e USG cervical: presença de nódulo sólido, hipoecoico, mais largo do que alto com margens regulares e macrocalcificações em seu interior de 1,8x1,4x1,7 cm. Dentre as características apresentadas pelo nódulo, qual não denota maior risco de malignidade?",
+      "options": {
+        "A": "Mais largo do que alto.",
+        "B": "Sólido.",
+        "C": "Hipoecoico.",
+        "D": "Presença de macrocalcificações."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q110",
+      "number": 110,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Homem, 45 anos, sem antecedentes relevantes, apresenta nódulo não palpável de 1,3 cm encontrado incidentalmente na ultrassonografia cervical solicitada por outro motivo. O paciente está assintomático. A ecografia demonstra nódulo sólido, hipoecogênico, com margens regulares, sem microcalcificações, vascularização central discreta e sem extensão extra- tireoidiana. A função tireoidiana está normal. Considerando as recomendações da American Thyroid Association (ATA 2015/2023), qual é a conduta mais apropriada neste momento?",
+      "options": {
+        "A": "Indicar cirurgia imediata para retirada do nódulo devido ao seu caráter sólido.",
+        "B": "Apenas acompanhar o paciente com ultrassonografia anual, sem intervenção diagnóstica inicial.",
+        "C": "Solicitar tomografia computadorizada para avaliar extensão e relação com estruturas cervicais.",
+        "D": "Indicar punção aspirativa por agulha fina (PAAF) considerando as características ecográficas e o tamanho do nódulo.",
+        "E": "Solicitar cintilografia da tireoide para caracterização funcional do nódulo."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q111",
+      "number": 111,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Mulher de 48 anos, sem comorbidades, é avaliada em consulta ambulatorial após detecção incidental de um nódulo em lobo direito da tireoide, durante exame físico de rotina. Refere boa saúde geral, sem sintomas compressivos ou disfônicos. Ao exame, palpa-se nódulo firme, móvel à deglutição, de 2 cm indolor, sem linfadenomegalias cervicais. Não há antecedentes familiares de câncer de tireoide ou exposição à radiação cervical. TSH sérico está dentro da faixa de normalidade. Ultrassonografia da tireoide mostra nódulo sólido, hipoecoico, com margens levemente irregulares, microcalcificações finas e ausência de halo periférico, compatível com classificação TI-RADS 4. Considerando o caso descrito, a próxima etapa na condução é:",
+      "options": {
+        "A": "Solicitar cintilografia da tireoide com tecnécio-99m para avaliação funcional do nódulo.",
+        "B": "Repetir ultrassonografia da tireoide e, se o nódulo aumentar 20% em seu maior diâmetro, realizar punção aspirativa por agulha fina (PAAF) guiada por ultrassonografia para análise citológica.",
+        "C": "Repetir ultrassonografia da tireoide em 6 meses, e solicitar T4 Livre para completar avaliação hormonal.",
+        "D": "Solicitar punção aspirativa por agulha fina (PAAF) guiada por ultrassonografia para análise citológica.",
+        "E": "Solicitar biópsia excisional cirúrgica, dado o risco aumentado de malignidade ultrassonográfica."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q112",
+      "number": 112,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Mulher, 48 anos de idade, eutireoidea, apresenta nódulo em tireoide com o seguinte relato ultrassonográfico: lesão sólida, hipoecogênica, bem delimitada, bordos irregulares, focos hiperecogênicos centrais, mais alto que largo, localizado em terço inferior de lobo direto com 1,9x1,4x1,1 cm. Qual seria a conduta propedêutica indicada na sequência investigativa dessa paciente?",
+      "options": {
+        "A": "Cintilografia.",
+        "B": "Tomografia computadorizada de pescoço.",
+        "C": "Repetir a ultrassonografia acrescentando o recurso do Doppler colorido.",
+        "D": "Punção aspirativa com agulha fina guiada por ultrassonografia."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q113",
+      "number": 113,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Paciente do sexo feminino, 25 anos de idade, refere surgimento de nódulo cervical há 1 ano, com crescimento no período. Nega outros sintomas associados. Ao exame físico, apresenta nódulo de 4 cm em nível cervical III à direita, consistência cística, móvel e pouco doloroso, além de nódulo palpável endurecido de 1 cm em istmo da tireoide. Sem alterações na oroscopia ou no restante do exame cervical. Sobre o caso, é correto afirmar:",
+      "options": {
+        "A": "Entre os diagnósticos mais comuns, pode-se considerar doenças congênitas, como cisto branquial, porém não é possível excluir totalmente causas neoplásicas, como metástases linfonodais de neoplasias de tireoide ou de orofaringe, que podem ocorrer em pacientes jovens. A investigação deve envolver exame físico completo e exame de imagem como o ultrassom. A punção aspirativa por agulha fina é o exame que permite estabelecer um diagnóstico etiológico.",
+        "B": "Como a paciente é jovem e o nódulo tem consistência cística, pode-se descartar as causas neoplásicas e afirmar que se trata de doença congênita, provável cisto branquial ou linfonodomegalia reacional. Não são necessários exames complementares na investigação e não é necessário abordar cirurgicamente o nódulo, exceto se apresentar queixa estética.",
+        "C": "Como a paciente é jovem e sem fatores de risco e o nódulo apresenta consistência cística, pode- se descartar causas neoplásicas e afirmar que se trata de doença congênita, provável cisto branquial. É indicada a punção aspirativa por agulha fina guiada por ultrassom, um método tanto diagnóstico quanto terapêutico, pois permite o esvaziamento do conteúdo do nódulo.",
+        "D": "Entre as possibilidades diagnósticas, pode-se considerar doenças congênitas, como cisto branquial, mas também causas neoplásicas, como metástases linfonodais de sítio primário oculto. A punção por agulha fina não é capaz de estabelecer um diagnóstico, uma vez que se trata de nódulo de conteúdo cístico, sendo indicada a biópsia excisional do nódulo para análise histológica."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q114",
+      "number": 114,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nódulos e Câncer de Tireoide",
+      "stem": "Paciente de 35 anos, sexo feminino, comparece em consulta ambulatorial após diagnóstico de nódulo tireoidiano na atenção primária. Refere ter percebido nodulação em região cervical há 2 meses e por tal motivo procurou atendimento médico na UBS, onde foi realizado um USG cervical. Paciente nega outras comorbidades e medicações de uso contínuo, assintomática. Traz os seguintes exames: TSH 0,05 mUI/L (VR 0,35-4,5), T4 livre 1,3 ng/dL (VR 0,7-1,48), USG cervical com presença de nódulo sólido, isoecoico, mais largo do que alto, margens regulares e sem calcificações (TI-RADS 3) medindo 3,1x2,6x2,8 cm localizado no terço médio do lobo esquerdo. O próximo passo na condução do caso é:",
+      "options": {
+        "A": "Solicitar a realização da PAAF.",
+        "B": "Solicitar cintilografia de tireoide.",
+        "C": "Indicar abordagem cirúrgica.",
+        "D": "Iniciar tratamento com metimazol"
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nódulos e Câncer de Tireoide",
+      "images": [],
+      "scheduleId": "cron-267"
+    },
+    {
+      "id": "b29-q115",
+      "number": 115,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Um escolar de 5 anos, masculino, é levado à emergência apresentando dor abdominal forte, de início súbito, intermitente, que, quando ocorre, leva à posição antálgica e causa vômitos. Ao exame físico mostra-se em bom estado geral. com massa palpável em abdômen superior, mal definida e dolorosa. Foi realizada radiografia simples do abdômen, que mostrou área de densidade aumentada em epigástrio e ultrassonografia, com imagem tubular transversalmente e longitudinalmente em alvo. Considerando a principal hipótese diagnóstica, a localização mais comumente encontrada desse acometimento é:",
+      "options": {
+        "A": "Ileal.",
+        "B": "Ileocólica.",
+        "C": "Cecocólica.",
+        "D": "Jejunoileal.",
+        "E": "Colônica."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q116",
+      "number": 116,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Com relação à criptorquidia (situação na qual o testículo não está dentro do escroto) na infância, assinale a alternativa correta:",
+      "options": {
+        "A": "É uma condição mais prevalente no recém-nascido termo do que no pré-termo.",
+        "B": "Na maior parte dos casos há associação entre criptorquidia e doenças endócrinas.",
+        "C": "Geralmente, o testículo criptorquídico desce ao escroto até os 4 meses de idade.",
+        "D": "O encaminhamento deve ser feito dos 9 aos 14 anos, quando não houver descida de modo espontâneo, visto que o maior risco de complicações ocorre durante a puberdade."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q117",
+      "number": 117,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Apendicite aguda é a causa mais comum de dor abdominal de caráter cirúrgico em crianças e adolescentes. Ela é causada pela obstrução da luz do apêndice. Considerando esse diagnóstico analise as afirmativas abaixo: I – A dor apresentada pelo paciente pode ser suprapúbica. II – Pode haver leucocitúria na urina 1. III – O diagnóstico da apendicite é clínico. Sobre esta situação, analise as alternativas abaixo:",
+      "options": {
+        "A": "As afirmativas I e II são verdadeiras. A afirmativa III é falsa.",
+        "B": "As afirmativas I e III são verdadeiras. A afirmativa II é falsa.",
+        "C": "As afirmativas II e III são verdadeiras. A afirmativa I é falsa.",
+        "D": "As afirmativas I, II e III são verdadeiras.",
+        "E": "As afirmativas I, II e III são falsas."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q118",
+      "number": 118,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Cirurgia",
+      "topic": "Cirurgia Pediátrica no ENAMED",
+      "stem": "Lactente de 7 semanas é levado ao pronto-atendimento com histórico de vômitos em jato recorrentes e perda de peso progressiva nas últimas duas semanas. Ao exame físico, observam-se sinais de desidratação moderada com diminuição do turgor cutâneo e fontanela levemente deprimida e ausência de massa abdominal palpável. Os exames laboratoriais demonstram alcalose metabólica, hipocloremia e hipocalemia significativa. Diante desse quadro clínico, qual é o exame de imagem mais sensível e específico para confirmar o diagnóstico suspeito?",
+      "options": {
+        "A": "Tomografia computadorizada de abdome.",
+        "B": "Endoscopia digestiva alta.",
+        "C": "Radiografia simples de abdome.",
+        "D": "Radiografia contrastada do trato gastrointestinal superior.",
+        "E": "Ultrassonografia abdominal."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Cirurgia Pediátrica no ENAMED",
+      "images": [],
+      "scheduleId": "cron-269"
+    },
+    {
+      "id": "b29-q119",
+      "number": 119,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Lactente do sexo masculino, 7 meses de idade, previamente hígido, é trazido à emergência com história de início súbito de episódios de choro intenso, acompanhado de flexão das pernas contra o abdome, intercalados com períodos de aparente bem- estar. Nas últimas 6 horas evoluiu com vômitos biliosos e eliminação de fezes com muco-sanguinolentas. Ao exame físico: irritado, pálido, frequência cardíaca: 168 bpm, pressão arterial: 90x55 mmHg, temperatura: 37,4°C. Abdome discretamente distendido; à palpação, nota-se massa alongada e firme no hipocôndrio direito. Sem sinais de peritonite. De imediato, você solicita dois acessos venosos para iniciar a reposição volêmica. Considerando a principal hipótese diagnóstica, o seguinte exame deve ser solicitado como próximo passo para confirmar o diagnóstico:",
+      "options": {
+        "A": "Radiografia abdominal em decúbito dorsal e ortostase.",
+        "B": "Ultrassonografia abdominal com Doppler colorido.",
+        "C": "Radiografia do tórax em PA e perfil direito.",
+        "D": "Tomografia computadorizada de abdome com contraste intravenoso.",
+        "E": "Cintilografia com tecnécio-99m (pesquisa de mucosa ectópica)."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b29-q120",
+      "number": 120,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Paciente do sexo masculino, de 6 meses de idade, é trazido pela mãe à consulta de puericultura. A mãe refere abaulamento redutível em região umbilical intermitente, principalmente quando a criança chora. Refere que o lactente evacua todos os dias e as fezes têm aspecto habitual para a idade. Ao exame físico observado abaulamento umbilical redutível e indolor com anel com 1cm de diâmetro, sem outras alterações. Frente ao quadro clínico apresentado qual a conduta adequada?",
+      "options": {
+        "A": "Solicitar ultrassom de abdome.",
+        "B": "Observar evolução.",
+        "C": "Solicitar tomografia de abdome.",
+        "D": "Orientar internação imediata para abordagem cirúrgica."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b29-q121",
+      "number": 121,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Um lactente com 3 meses, nascido a termo e com acompanhamento adequado de puericultura, apresenta criptorquidia à esquerda. Tem crescimento e desenvolvimento adequados e não há outras alterações ao exame físico. A conduta preconizada nesse caso é:",
+      "options": {
+        "A": "Encaminhar o mais breve possível ao cirurgião para orquidopexia.",
+        "B": "Aguardar a descida espontânea do testículo até os 6 meses de idade.",
+        "C": "Iniciar tratamento com hormônios para induzir a descida do testículo.",
+        "D": "Solicitar ultrassonografia para avaliar a localização do testículo.",
+        "E": "Indicar a orquiectomia pelo risco de malignização em idade posterior."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q122",
+      "number": 122,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Recém-nascido, filho de mãe de 16 anos de idade, primigesta, não realizou pré-natal e encontrava-se com a idade gestacional de 36 semanas, determinada pela DUM quando procurou serviço médico por diminuição da movimentação fetal há 1 dia. Durante avaliação obstétrica, foi observado padrão alterado na cardiotocografia. Realizado parto cesárea tendo o RN apresentação cefálica, único, peso de 2.115 g e bolsa rota no ato com líquido claro. Após nascimento, o RN foi recebido em campo estéril, levado a berço aquecido, onde encontrava-se sem esforço respiratório, hipotônico e bradicárdico. Foram realizadas manobras de reanimação e o RN foi intubado e transportado para a UTI neonatal. Também foi realizada a radiografia de tórax apresentada a seguir: Com base no caso descrito, assinale a alternativa que apresenta a principal hipótese diagnóstica:",
+      "options": {
+        "A": "Situs inversus totalis.",
+        "B": "Neuroblastoma intratorácico.",
+        "C": "Hipoplasia pulmonar à direita.",
+        "D": "Hérnia diafragmática à esquerda."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [
+        "data:image/webp;base64,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"
+      ],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q123",
+      "number": 123,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Mulher, 30 anos de idade, branca, casada. Diagnóstico de diabetes melito gestacional no teste de tolerância à glicose oral com ingestão de 75 g. O controle de glicemia está com 5% de valores alterados. Ela comparece ao pronto-socorro de obstetrícia com queixa de dores tipo cólica de forte intensidade no baixo ventre. Idade gestacional calculada pela DUM: 31 semanas. Ao exame físico, apresenta AU de 30 cm, BCF presente, 2 contrações dolorosas em 10 minutos. Toque: colo médio, medianizado, pérvio para 3,0 cm. Apresentação cefálica e bolsa íntegra com líquido claro. Cardiotocografia: feto ativo com 2 contrações registradas. Perfil biofísico fetal de 10.",
+      "options": {
+        "A": "Internação, tocólise, corticoide para maturação pulmonar fetal e iniciar insulina na dose de 0,3 UI/kg de peso atual.",
+        "B": "Internação, tocólise, corticoide para maturação pulmonar fetal e iniciar insulina na dose de 5 UI/kg de peso atual.",
+        "C": "Internação, tocólise, corticoide para maturação pulmonar fetal e iniciar administração de sulfato de magnésio.",
+        "D": "Internação, reavaliação em 1 hora e, se progressão da dilatação do colo uterino, conduzir o trabalho de parto."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q124",
+      "number": 124,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Mulher, 30 anos de idade, branca, casada. Diagnóstico de diabetes melito gestacional no teste de tolerância à glicose oral com ingestão de 75 g. O controle de glicemia está com 5% de valores alterados. Ela comparece ao pronto-socorro de obstetrícia com queixa de dores tipo cólica de forte intensidade no baixo ventre. Idade gestacional calculada pela DUM: 31 semanas. Ao exame físico, apresenta AU de 30 cm, BCF presente, 2 contrações dolorosas em 10 minutos. Toque: colo médio, medianizado, pérvio para 3,0 cm. Apresentação cefálica e bolsa íntegra com líquido claro. Cardiotocografia: feto ativo com 2 contrações registradas. Perfil biofísico fetal de 10. A paciente ficou internada por 2 dias e, após a tocólise, evoluiu com rotura prematura das membranas ovulares e trabalho de parto. Toque: colo uterino com dilatação de 7 cm e apresentação cefálica. Cardiotocografia com aceleração transitória. Assinale a alternativa que apresenta a conduta correta:",
+      "options": {
+        "A": "Sulfato de magnésio para neuroproteção fetal na dose de 4 g, endovenoso, cerca de 4 horas antes do nascimento.",
+        "B": "Sulfato de magnésio para neuroproteção fetal na dose inicial de 4 g, endovenoso, mantendo 1 g/h até o nascimento.",
+        "C": "Sulfato de magnésio para neuroproteção fetal na dose de 4 g, intramuscular, cerca de 4 horas antes do nascimento.",
+        "D": "Sulfato de magnésio para neuroproteção fetal na dose de 8 g, por via endovenosa, no momento do nascimento."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q125",
+      "number": 125,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Gestante 3G1Pc1Ab, 32 semanas, procura o pronto atendimento obstétrico com queixas de contrações uterinas regulares há cerca de 2 horas. Ao exame físico, feto cefálico, toque vaginal com 2 cm de dilatação cervical e 50% de apagamento. Não há sinais de infecção urinária ou outras comorbidades associadas. A cardiotocografia mostra feto ativo e contrações de 50 segundos a cada 2-3 minutos. Com base nesse quadro clínico, a conduta mais adequada é:",
+      "options": {
+        "A": "Iniciar antibioticoprofilaxia e interrupção imediata da gestação.",
+        "B": "Encaminhar para cesariana de urgência, visto que há dilatação cervical.",
+        "C": "Indicar tocolítico e corticosteroide para maturação pulmonar fetal, além de realizar rastreio infeccioso e antibioticoprofilaxia para EGB.",
+        "D": "Administrar apenas corticosteroide, pois a tocólise está contraindicada antes de 34 semanas."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    },
+    {
+      "id": "b29-q126",
+      "number": 126,
+      "collectionBlock": 29,
+      "documentBlock": 30,
+      "area": "G.O.",
+      "topic": "Prematuridade",
+      "stem": "Primigesta, de 32 semanas, procura o pronto-socorro referindo contrações uterinas dolorosas regulares que tiveram início há 4 horas. Nega sangramento vaginal ou perda de líquido associados. Tem antecedente pessoal de Hipotireoidismo bem controlado com levotiroxina 100 mcg/d. Ao exame físico, apresenta abdome gravídico com dinâmica uterina de 3 contrações moderadas em 10 minutos e batimentos cardíacos fetais presentes. O toque vaginal mostra dilatação cervical de 2 cm, com colo médio e medianizado. O plantonista opta por medicar a paciente e reavaliar o toque vaginal após 2h, sendo constatada dilatação cervical de 3 cm, com colo médio e medianizado. Diante desse quadro, qual a conduta mais adequada?",
+      "options": {
+        "A": "Havendo trabalho de parto não inibível, a paciente deve ser internada para assistência ao trabalho de parto, com prescrição de sulfato de magnésio para neuroproteção fetal.",
+        "B": "Trata-se de um caso de falso trabalho de parto. A paciente deve ser orientada e liberada para a casa com medicação sintomática.",
+        "C": "Diante do diagnóstico de trabalho de parto prematuro, a paciente deve ser internada, submetida à tocólise e administração de corticoide para maturação pulmonar fetal.",
+        "D": "A paciente deve receber tratamento para infecção do trato urinário e ser orientada a retornar caso apresente perda de líquido ou sangramento vaginal."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-30-download.pdf",
+      "sourceLabel": "Prematuridade",
+      "images": [],
+      "scheduleId": "cron-268"
+    }
+  ]
+}

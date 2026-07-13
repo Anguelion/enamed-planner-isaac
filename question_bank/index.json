@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-10T00:10:01",
-  "total": 4012,
+  "generatedAt": "2026-07-13T20:01:18",
+  "total": 4679,
   "blocks": [
     {
       "block": 1,
@@ -145,6 +145,42 @@
       "file": "bloco_24.json",
       "script": "bloco_24.js",
       "count": 101
+    },
+    {
+      "block": 25,
+      "file": "bloco_25.json",
+      "script": "bloco_25.js",
+      "count": 128
+    },
+    {
+      "block": 26,
+      "file": "bloco_26.json",
+      "script": "bloco_26.js",
+      "count": 122
+    },
+    {
+      "block": 27,
+      "file": "bloco_27.json",
+      "script": "bloco_27.js",
+      "count": 94
+    },
+    {
+      "block": 28,
+      "file": "bloco_28.json",
+      "script": "bloco_28.js",
+      "count": 85
+    },
+    {
+      "block": 29,
+      "file": "bloco_29.json",
+      "script": "bloco_29.js",
+      "count": 125
+    },
+    {
+      "block": 30,
+      "file": "bloco_30.json",
+      "script": "bloco_30.js",
+      "count": 113
     },
     {
       "block": "ineditas",

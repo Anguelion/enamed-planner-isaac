@@ -1,0 +1,1736 @@
+{
+  "block": 28,
+  "count": 85,
+  "questions": [
+    {
+      "id": "b28-q001",
+      "number": 1,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Um paciente com indicação de cirurgia apresentou, logo após a anestesia, taquicardia, temperatura elevada, arritmia e espasmo do músculo masseter. Sobre o provável diagnóstico desse quadro, suas características e manejo, assinale a alternativa correta:",
+      "options": {
+        "A": "Trata-se de choque séptico que deve ser tratado com infusão imediata de antibiótico.",
+        "B": "Trata-se de hipotermia maligna e deve ser administrado Dantrolene.",
+        "C": "Trata-se de hipertermia maligna, condição autossômica dominante.",
+        "D": "Trata-se de choque séptico refratário e deve ser administrado sevoflurano.",
+        "E": "Trata-se de hipertermia maligna e deve ser administrada succinilcolina."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q002",
+      "number": 2,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Um paciente foi submetido a cirurgia abdominal e o anestesista introduziu um cateter peridural para analgesia. O paciente se encontra na UTI utilizando heparina de baixo peso molecular como anticoagulação profilática, e a enfermeira questiona o médico plantonista se pode retirar o cateter. Nesse caso qual a conduta mais adequada e a respectiva justificativa?",
+      "options": {
+        "A": "Retirar o cateter, já que a anticoagulação profilática não interfere no risco para hematoma epidural.",
+        "B": "Manter o cateter e solicitar orientação ao anestesista quando ao momento da retirada devido ao risco de hematoma epidural.",
+        "C": "O cateter poderá ser removido se a última dose de heparina tiver sido realizada há mais de 3h.",
+        "D": "Manter o cateter e aguardar, pelo menos, 48h, após a última dose de heparina para remover o cateter.",
+        "E": "Manter o cateter por, pelo menos, 24 h, após a última dose de heparina devido ao risco de hematoma subdural."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q003",
+      "number": 3,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Um paciente que será submetido a uma cirurgia teve indicação de anestesia raquidiana pela equipe de anestesia. Assinale a alternativa que apresenta somente informações corretas sobre esse bloqueio anestésico e que podem ser fornecidas ao paciente:",
+      "options": {
+        "A": "A raquianestesia representa uma alternativa à manipulação da via aérea e evita as complicações da intubação orotraqueal.",
+        "B": "Na raquianestesia, pode haver despertar prolongado ou sonolência pós-operatória com alguma frequência.",
+        "C": "A raquianestesia apresenta vantagens por evitar efeitos colaterais como bradicardia e cefaleia.",
+        "D": "A raquianestesia apresenta a vantagem de poder ser realizada também em pacientes com cardiopatias e coagulopatias.",
+        "E": "O risco de cefaleia pós-punção é baixo e ocorre com maior frequência em idosos do sexo masculino."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q004",
+      "number": 4,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Miscelâneas em Reumatologia",
+      "stem": "Uma mulher de 40 anos, branca, refere que, há 3 meses, apareceram manchas avermelhadas nas pálpebras e no dorso das mãos que apresentavam melhora discreta com o uso tópico de corticoide. Nos últimos 20 dias, começou a apresentar dificuldade de elevar os braços para pentear os cabelos e escovar os dentes. Também notou que não conseguia subir os dois lances de escada de sua casa e passou a precisar de ajuda para levantar da cama e de cadeiras. Qual achado de exame físico pode definir o diagnóstico?",
+      "options": {
+        "A": "Eritrodermia.",
+        "B": "Prurido generalizado.",
+        "C": "Pápulas de Gottron.",
+        "D": "Nódulos de Bouchard."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Miscelâneas em Reumatologia",
+      "images": [],
+      "scheduleId": "cron-261"
+    },
+    {
+      "id": "b28-q005",
+      "number": 5,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Lactente, 1 ano 10 meses com história de 4 episódios de sibilância, sem necessidade de internamentos. Mãe percebe cansaço quando brinca e quando ri, o que vem acontecendo diariamente. A criança tem pele seca, com muito prurido. Irmão mais velho tem quadro respiratório semelhante e acompanha com especialista. Assinale a alternativa com a melhor abordagem terapêutica para o caso:",
+      "options": {
+        "A": "Corticoide inalatório diário, com espaçador e máscara.",
+        "B": "Tratar somente as crises, com salbutamol no espaçador e máscara.",
+        "C": "Corticoide inalatório em pó diariamente.",
+        "D": "Formoterol inalatório de 12 em 12 horas, com espaçador e máscara, diário e nas crises."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q006",
+      "number": 6,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Miscelâneas em Reumatologia",
+      "stem": "Uma paciente com 35 anos faz tratamento em um ambulatório de referência em reumatologia devido a esclerose sistêmica, forma difusa. Faz uso regular de medicações como prednisona e metotrexato. Há 3 meses, ela apresenta dor torácica em queimação, retroesternal, associada à sensação de regurgitação, disfagia e episódios de tosse seca principalmente ao deitar. O diagnóstico e a conduta para esse caso são, respectivamente,",
+      "options": {
+        "A": "Pleurite; radiografia de tórax.",
+        "B": "Angina instável; cateterismo coronariano.",
+        "C": "Dismotilidade esofágica; manometria esofágica.",
+        "D": "Doença intersticial pulmonar; tomografia computadorizada de tórax."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Miscelâneas em Reumatologia",
+      "images": [],
+      "scheduleId": "cron-261"
+    },
+    {
+      "id": "b28-q007",
+      "number": 7,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Mulher, 28 anos de idade, sem antecedente cirúrgico, está realizando avaliação pré-aneslésica para correção de hérnia inguinal. Relata ao anestesista que não sabe se possui alergia a medicamentos, mas possui alergia a pêssego, kiwi e mandioca. Qual outro tipo de alergia deve ser investigado antes da realização do procedimento?",
+      "options": {
+        "A": "Lidocaina.",
+        "B": "Cetorolaco.",
+        "C": "Látex cirúrgico.",
+        "D": "Cefazolina."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q008",
+      "number": 8,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Menino de 8 anos apresenta quadros recorrentes de tosse seca, chiado no peito e cansaço desde os 2 anos de idade sendo que houve piora dos sintomas nos últimos 6 meses. O pediatra iniciou há 30 dias tratamento com Beclometasona HFA 50 mcg 2 jatos duas vezes ao dia com espaçador e com técnica adequada. A mãe relata que o menino tem acordado durante a noite no mínimo duas vezes por semana com falta de ar, faz uso de medicação de resgate (salbutamol spray) pelo menos 3 vezes na semana e apresentou vários atendimentos na UPA pelo mesmo motivo, sem necessidade de internação. Refere ainda que a criança sempre foi muito ativa, mas ultimamente fica ofegante quando corre muito e começa a tossir sem parar. De antecedentes familiares a mãe refere ter apresentado quadro de asma na infância. Ao exame físico: BEG, eupneico, FR= 28, corado, acianótico, hidratado. Ausculta pulmonar: murmúrio vesicular presente bilateralmente, sem ruídos adventícios. O nível de controle da asma e a recomendação para o tratamento segundo a última atualização do GINA seriam, respectivamente:",
+      "options": {
+        "A": "Asma parcialmente controlada - associação de antileucotrieno.",
+        "B": "Asma não controlada - dobrar a dose de corticosteroide inalatório.",
+        "C": "Asma parcialmente controlada - associação de beta dois de longa duração.",
+        "D": "Asma não controlada - associação de corticosteroide inalatório e beta dois de longa duração."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q009",
+      "number": 9,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Paciente do sexo feminino, 3 anos, e admitida no pronto-socorro com quadro de tosse e dificuldade para respirar há um dia, sem febre ou coriza associados. Apresenta histórico de ter apresentado três crises semelhantes nos últimos 06 meses, com necessidade de internação. Na triagem, apresentava-se taquidispenia, sendo levada a sala de emergência. Na avaliação sistematizada em sala de emergência, a paciente apresentava os seguintes dados de exame físico e monitorização: A: Via aérea pérvia. B: Murmúrio vesicular com sibilos difusos, tempo expiratório prolongado, FR: 45 ipm, tiragens sub diafragmática, intercostal e de fúrcula, SpO2 93% em máscara não reinalante. C: 2BRNF sem sopros, FC: 140 bpm, tempo de enchimento capilar de 2 segundos, pulsos cheios. D: Alerta e orientação. E: Lesões eritemato-crostosas em superfícies flexoras de pernas e braços. Além de corticoide sistêmico, assinale o que a paciente deverá receber como medida inicial em sala de emergência.",
+      "options": {
+        "A": "Cateter nasal de alto fluxo e beta-2 agonista endovenoso.",
+        "B": "Beta-2 agonista e brometo de ipratrópio inalatórios.",
+        "C": "Beta-2 agonista endovenoso, seguido de intubação orotraqueal.",
+        "D": "Ventilação em BIPAP (Bilevel Positive Airway Pressure), seguida de beta-2 agonista inalatório."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q010",
+      "number": 10,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Menina, 9 anos, é trazida para consulta de rotina. Refere que tem asma e está há dois anos sem sintomas. Faz uso de formoterol 12mcg e budesonida 400 mcg duas vezes por dia, na forma de pó seco inalatório. Dorme bem, não tem tosse noturna. Exame físico: bom estado geral; saturação de oxigênio=97% (ar ambiente); pulmões: murmúrio vesicular presente sem ruídos adventícios; IMC=32kg/m2. Como a paciente está muito bem, a mãe solicita retirada da medicação. Uma espirometria foi realizada no dia da consulta, cujo resultado é o seguinte: A conduta é:",
+      "options": {
+        "A": "Você concorda com a mãe, orienta a suspensão dos medicamentos diminuindo progressivamente a dosagem e com alta ambulatorial.",
+        "B": "Você discorda da mãe, orienta manter a medicação e associa montelucaste uma vez ao dia. Repete a espirometria em três meses.",
+        "C": "Você discorda da mãe, mantém a medicação e solicita retorno em três meses com nova espirometria.",
+        "D": "Você concorda com a mãe, orienta para redução gradual do medicamento e tomografia de tórax para ver se tem dano estrutural."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q011",
+      "number": 11,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Homem, 25 anos, deu entrada no Serviço de Emergência com ferimento corto-contuso no 3º quirodáctilo direito (QDD) de 3 cm. Opta-se pela realização de um bloqueio troncular na base do 3° QDD para realizar a sutura do ferimento. Assinale a alternativa que apresenta o anestésico mais indicado:",
+      "options": {
+        "A": "Ropivacaína.",
+        "B": "Benzocaína.",
+        "C": "Lidocaína sem vasoconstritor.",
+        "D": "Bupivacaína com vasoconstritor."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q012",
+      "number": 12,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Em um paciente com doença coronariana, qual dos seguintes agentes NÃO seria indicado para indução anestésica, por ter como efeito colateral a hipertensão?",
+      "options": {
+        "A": "Tiopental.",
+        "B": "Propofol.",
+        "C": "Cetamina.",
+        "D": "Etomidato.",
+        "E": "Midazolam."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q013",
+      "number": 13,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Mulher, 27 anos de idade, submeteu-se à colecistectomia por via laparoscópica, sob ventilação mecânica. Durante a manutenção da anestesia observa-se, na capnografia, queda progressiva do CO2 expirado sem deformação da curva. Qual é o diagnóstico mais provável?",
+      "options": {
+        "A": "Insuflação excessiva do pneumoperitônio.",
+        "B": "Diminuição da pressão arterial.",
+        "C": "Aumento de resistência em vias aéreas.",
+        "D": "Recuperação do bloqueio neuromuscular."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q014",
+      "number": 14,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Homem de 35 anos, vítima de politrauma, é encaminhado ao centro cirúrgico para realização de procedimento sob anestesia geral. Não há informação sobre o jejum prévio do paciente. É correto afirmar que a intubação orotraqueal deve ser:",
+      "options": {
+        "A": "Sequência rápida com manobra de Sellick.",
+        "B": "Sequência rápida com manobra de BURP.",
+        "C": "Pós-indução anestésica e oxigenação sob máscara com pressão positiva.",
+        "D": "Pós-sedação leve e oxigenação sob máscara com pressão positiva."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q015",
+      "number": 15,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Escolar de 6 anos de idade, portador de asma bronquica,p rocura o pronto atendimento em virtude de estar apresentando há 3 dias quadro gripal, evoluindo com desconforto respiratório moderado, sem febre, com fala entrecortada, tosse seca frequente, em acessos. Esta sem medicação de manutenção há 30 dias. Ao exame físico: regular estado geral, corado, hidratado, dispneico, anictérico; acianótico; OF; sem alteracões;A P: sibilos difusos; FR:52 ipm; SO2: 90% em ar ambiente; batimento de asa de nariz, tiragem intercostal e subcostal; AC: BCNF RCR 2t, sem sopros, FC: 154 bpm; PA: 100x 60 mmHg Abd: flácido, sem vmg, indolor; Neuro: ecg 15; Pulsos centrais e periféricos cheios, pcp 2 seg; Sem edemas; sem lesões de pele. A melhor conduta terapêutica neste caso é:",
+      "options": {
+        "A": "Oxigenioterapia de alto fluxo + B2 endovenoso + corticoide inalatório.",
+        "B": "Intubação orotraqueal.",
+        "C": "Oxigenioterapia alto fluxo + B2 inalatório (uma série com 3 ciclos a cada 20 minutos) + corticoide sistêmico e reavaliação em 1 hora.",
+        "D": "Sulfato de magnésio + ventilação não invasiva.",
+        "E": "B2 endovenoso + cateter nasal de O2."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q016",
+      "number": 16,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Mulher de 36 anos, 60kg, com xerostomia e xeroftalmia há alguns anos, apresenta fraqueza generalizada, fenômeno de Raynaud, tosse seca e ausculta pulmonar com crepitações em bases. Os exames de laboratório apresentam hemoglobina = 12g/ dL, glicemia = 80mg/dL, creatinina = 1mg/dL, sódio = 138mEq/L, potássio = 3,2mEq/L, cloro = 114 mEq/L e HC0- 3 = 14mEq/L. O PTH e a dosagem da vitamina D são normais. O exame de urina mostra pH = 6, sódio urinário = 55mEq/L e cálcio urinário = 280mg/dia (valor normal: até 4mg/kg). A TC de tórax apresenta infiltrado peribrônquico e pneumonite intersticial, predominando em bases. O diagnóstico mais provável, nesse caso, é:",
+      "options": {
+        "A": "Sarcoidose e acidose tubular distal.",
+        "B": "Sarcoidose e acidose tubular proximal.",
+        "C": "Síndrome de Sjögren e acidose tubular distal.",
+        "D": "Síndrome de Sjögren e acidose tubular proximal."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q017",
+      "number": 17,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "O Índice Preditivo de Asma modificado (IPAm) é um instrumento que inclui crianças com idade maior ou igual a dois anos e que já apresentaram inúmeros episódios de sibilância, criado com o objetivo de propor intervenções terapêuticas precoces em pacientes de alto risco para asma. Assinale a alternativa que contém um critério menor CORRETAMENTE descrito no IPAm:",
+      "options": {
+        "A": "Eosinofilia somente acima de 7%.",
+        "B": "Sensibilização alérgica a leite.",
+        "C": "Pai ou mãe com asma.",
+        "D": "Dermatite atópica.",
+        "E": "Sibilância associada a infecções virais."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q018",
+      "number": 18,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Escolar de 8 anos de idade apresenta crises de sibilância desde os 2 anos, com melhora após o uso de salbutamol de resgate. Foi atendido por pediatra que solicitou espirometria, a qual evidenciou distúrbio ventilatório obstrutivo leve com prova broncodilatadora positiva. Quatro semanas após iniciar tratamento com beclometasona inalatória em baixa dose, paciente ainda refere ter apresentado falta de ar durante atividades físicas e necessidade de broncodilatador de resgate em média 3 vezes na semana para controle de sintomas diurnos. Após verificação da técnica inalatória e adesão, o próximo passo, de acordo com as orientações do GINA, deve ser:",
+      "options": {
+        "A": "Substituir a beclometasona pela associação formoterol-budesonida inalatória em baixa dose diária.",
+        "B": "Dobrar a dose de beclometasona e substituir o salbutamol de resgate pela combinação formoterol-budesonida inalatória em baixa dose apenas nas crises.",
+        "C": "Manter a beclometasona inalatória diária na dose prescrita e o salbutamol inalatório nas crises e associar montelucaste oral diário.",
+        "D": "Suspender a beclometasona e o salbutamol e prescrever a combinação formoterol-budesonida inalatória em baixa dose apenas nas crises."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q019",
+      "number": 19,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Paciente do sexo feminino, de 72 anos de idade, com história de hipertensão arterial, diabetes mellitus tipo 2, obesidade grau 2, fibrilação atrial crônica, lombalgia crônica por espondiloartrose e transtorno depressivo crônico. Faz uso regular de dipirona, losartana, insulinas NPH e regular, metformina, sertralina e varfarina, não fuma e ingere cerveja diariamente, mas não sabe precisar a quantidade, ao médico de família e comunidade (MFC), Paciente vem à Unidade de Saúde da Família, onde é seguida há 17 anos, para atendimento eventual. Durante consulta com o MFC informa que, há cerca de 3 meses, após a morte do esposo, vem apresentando, diariamente, tristeza, anedonia, insônia, perda de apetite, sentimento de menos valia, sem esperança de melhora no futuro. Nega sintomas psicóticos. Paciente está morando sozinha, tem apenas uma filha e a relação das duas sempre foi muito conflituosa, com piora nos últimos meses, devido a desentendimentos pela divisão da herança do esposo. Paciente reduziu suas atividades sociais de costume, perdendo contato com amigos e outros familiares. Ao ser questionada pelo MFC, responde que tem vontade de morrer, pois já não vê solução para sua vida. Revela que, há cerca de 20 anos, ingeriu vários medicamentos para tentar tirar a própria vida. Ela relata que pensa em tirar a própria vida tomando grande dosagens de seus medicamentos, de uma só vez. Paciente sente que suas forças para suportar a dor emocional estão se acabando. Qual é a conduta mais adequada?",
+      "options": {
+        "A": "Encaminhar a paciente a um serviço de urgência, se ela estiver acompanhada por alguém de sua confiança e se houver o seu consentimento ou de seu acompanhante.",
+        "B": "Encaminhar a paciente a um serviço de urgência, acompanhada por profissionais de saúde ou alguém de sua confiança, independente do consentimento da paciente.",
+        "C": "Utilizando-se do vínculo que possui com a paciente, otimizar o tratamento farmacológico da depressão, agendar retorno dentro de um a dois dias e solicitar avaliação da psicóloga da USF.",
+        "D": "Preencher o formulário de encaminhamento e orientar a paciente a procurar o Centro de Atenção Psicossocial (CAPS) de referência para atendimento com psiquiatra e equipe multiprofissional, agendando retornos curtos na USF."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q020",
+      "number": 20,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Paciente de 32 anos, género feminino, foi trazida à emergência por apresentar quadro de intensa fraqueza em membros superiores e inferiores associados a câimbras. Exames preliminares colhidos na sala de emergência mostravam, creatinina = 0,9 mg/dl, glicemia de jejum = 95 mg/dl, Na = 135 mEq/l Ca = 9,8 mg/dl, Mg2 = 2.0 mg/dl, K = 2.5 mEq/l Cl = 105 mEq/l, gasometria venosa com pH=7,28, HCO, 20 e pCO= 30, hemograma dentro dos valores de referência e urina I com densidade 1015, pH =6,0 e ausência de leucocitúria ou hematúria. Considerando as informações disponibilizadas, qual é a hipótese diagnóstica mais provável entre as opções abaixo?",
+      "options": {
+        "A": "Amiloidose.",
+        "B": "Mieloma múltiplo.",
+        "C": "Doença de Addison.",
+        "D": "Síndrome de Sjögren."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q021",
+      "number": 21,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "J., 32 anos, moradora do bairro Humaitá em Porto Alegre, perto da Arena do Grêmio, é encaminhada pelo médico da Atenção Primária da UBS perto da sua casa para uma consulta com endocrinologista. Ao chegar à consulta com a especialista, refere que está bastante preocupada, pois, apesar de sempre ter apresentado sobrepeso, nos últimos seis meses aumentou de forma importante seu peso corporal (seu IMC atual é de 33,5). A paciente conta que, na enchente de maio de 2024, perdeu tudo o que tinha em sua casa. Nos primeiros dias após o evento climático, esteve com sua família em um abrigo. Nas semanas e meses subsequentes, todos permaneceram em casas de amigos e retornaram para sua residência apenas quando as águas baixaram. Além da grande perda material, diz que jamais se esquecerá \"daqueles dias terríveis\". Desde que retornou para sua casa, vem tendo cerca de quatro episódios semanais nos quais vai à cozinha e ingere, sozinha e sem fome, várias barras grandes de chocolate e, eventualmente, adiciona ainda um pote de sorvete. Conta que come isso tudo em, no máximo, cerca de meia hora até se sentir desconfortavelmente saturada e com uma sensação de não conseguir se controlar. Depois de cada um desses episódios, sente-se muito culpada e desgostosa consigo mesma. Após a anamnese e o exame físico, a médica endocrinologista esclarece à paciente sobre o seu diagnóstico. Diante deste quadro, o tratamento de escolha para J. deve ser:",
+      "options": {
+        "A": "Terapia cognitivo-comportamental.",
+        "B": "Fluoxetina.",
+        "C": "Terapia cognitivo-comportamental associada à fluoxetina.",
+        "D": "Terapia cognitivo-comportamental associada ao lisdexanfetamina."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q022",
+      "number": 22,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Menino, 8a e 4m, apresenta crises de sibilância desde os 2 anos, desencadeadas por pó, bolor e resfriados. Usou montelucaste dos 2 aos 4 anos e, atualmente, usa dipropionato de beclometasona, 800 mcg/dia, devido à falta de controle do quadro clínico. Apresenta tosse noturna e falta de ar quando corre, fazendo uso de salbutamol quatro vezes na semana. Nas últimas quatro semanas, não procurou pronto atendimento. A conduta é:",
+      "options": {
+        "A": "Iniciar corticosteroide oral por 3 a 5 dias para controle da crise aguda e encaminhar para avaliação da função pulmonar, com retorno em 30 dias.",
+        "B": "Aumentar a dose do corticosteroide inalatório e revisar técnica de inalação, adesão ao tratamento e exposição a gatilhos, com reavaliação em 30 dias.",
+        "C": "Associar broncodilatador de longa duração ao corticosteroide inalatório, revisar técnica de inalação, adesão ao tratamento e exposição a gatilhos.",
+        "D": "Substituir o corticosteroide inalatório por outro com maior potência e avaliar a resposta ao tratamento."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q023",
+      "number": 23,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Mulher, 27 anos de idade, 55 kg e 1,65 m, submetida a raquianestesia e anestesia geral para tratamento cirúrgico de endometriose. Durante avaliação pré-anestésica foi identificado alto risco para náusea e vômito no pós-operatório. Com objetivo de reduzir o risco de ocorrência de complicação no pós-operatório, qual é a conduta mais adequada?",
+      "options": {
+        "A": "Anestesia balanceada com propofol, remifentanil e sevoflurano.",
+        "B": "Anestesia inalatória com sevoflurano e óxido nitroso.",
+        "C": "Anestesia combinada com propofol e isoflurano.",
+        "D": "Anestesia venosa total com propofol e remifentanil."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q024",
+      "number": 24,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Transtornos Alimentares e de Personalidade",
+      "stem": "Uma jovem com 18 anos de idade, atualmente trabalhando como modelo fotográfica, relata que nunca está satisfeita com seu corpo, sempre se achando acima do peso quando se olha no espelho, e já recorreu a diversos tipos de dieta buscando emagrecimento. Por vezes, apresenta episódios de compulsão alimentar seguida de vômitos autoinduzidos. Apresenta Índice de Massa Corporal (IMC) atual de 15 kg/m². O diagnóstico mais provável desta afecção é:",
+      "options": {
+        "A": "Bulimia Nervosa.",
+        "B": "Transtorno de Compulsão Alimentar.",
+        "C": "Anorexia Nervosa.",
+        "D": "Transtorno de Ruminação.",
+        "E": "Transtorno Alimentar Restritivo/Evitativo."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Transtornos Alimentares e de Personalidade",
+      "images": [],
+      "scheduleId": "cron-256"
+    },
+    {
+      "id": "b28-q025",
+      "number": 25,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Miscelâneas em Reumatologia",
+      "stem": "Situação-Problema: Questões de 28 a 30. Menina de 10 anos de idade chega à Unidade de Pronto Atendimento acompanhada por sua mãe, apresentando dificuldade intensa para respirar, chiado no peito e sensação de aperto torácico, que piorou nas últimas 48 horas. Desde os 4 anos de idade, houve múltiplas internações por quadros semelhantes. Nos últimos meses, tem apresentado sintomas quase que diariamente, e despertares noturnos frequentes. Tem usado corticosteroide inalatório regularmente, além de medicamentos de resgate. Está ansiosa porque tem sido necessário se afastar de atividades físicas na escola, devido à falta de ar. Ao exame físico, observa-se desconforto respiratório, com FR: 40 ipm, SatO2: 88% em ar ambiente, Temp: 36,6ºC; sibilos difusos à ausculta pulmonar e uso de musculatura acessória para respirar. Além de oxigenoterapia, o tratamento farmacológico de primeira linha, no momento, para o caso descrito:",
+      "options": {
+        "A": "Broncodilatador via endovenosa e corticosteroides inalatórios.",
+        "B": "Broncodilatador e corticosteroides inalatórios.",
+        "C": "Broncodilatador e corticosteroides inalatórios e antibioticoterapia empírica.",
+        "D": "Broncodilatador inalatório, corticosteroide sistêmico."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Miscelâneas em Reumatologia",
+      "images": [],
+      "scheduleId": "cron-261"
+    },
+    {
+      "id": "b28-q026",
+      "number": 26,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Criança de 8 anos vem ao Pronto-Socorro acompanhada do pai com história de tosse, dor no peito e dificuldade para respirar há 1 dia. Relata que já teve alguns episódios parecidos, mas que nunca investigou. Ao exame físico, paciente em regular estado geral, FR 40, FC 150, Sat 88% em ar ambiente (95% em MNR), com desconforto respiratório moderado, com fala entrecortada e ausculta pulmonar reduzida, sem sibilos. Feita a hipótese diagnóstica de crise de asma. Qual é a classificação da crise e qual é a conduta adequada?",
+      "options": {
+        "A": "Crise de asma moderada. A conduta inicial é realizar ciclo de broncodilatador de curta duração, ciclo de ipratrópio e corticoide via oral.",
+        "B": "Crise de asma grave. A conduta inicial é realizar ciclo de broncodilatador de curta duração, ciclo de ipratrópio e corticoide via oral ou endovenoso.",
+        "C": "Crise de asma moderada. A conduta inicial é realizar ciclo de broncodilatador de curta duração e ciclo de ipratrópio.",
+        "D": "Crise de asma grave. A conduta é realizar corticoide via oral e sulfato de magnésio imediatamente."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q027",
+      "number": 27,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Miscelâneas em Reumatologia",
+      "stem": "Um paciente de 45 anos, com antecedente de síndrome de Sjögren procura o pronto atendimento queixando-se de parestesias e cansaço fácil. Na admissão a pressão arterial era 120 x 60 mmHg, ausculta cardíaca e pulmonar sem alterações, sem sinais neurológicos focais. Tem os resultados laboratoriais realizados há 2 dias: sódio sérico- 138 mEq/L; potássio sérico- 3.0 mEq/L; cloreto sérico- 112 mEq/L; HCO3- 15 mEq/L, pH arterial- 7.25 e fósforo sérico normal. No exame de urina pH- 5.8; sódio- 15 mEq/L; potássio- 10 mEq/L e cloreto de 12 mEq/L. O diagnóstico mais provável, neste caso, é:",
+      "options": {
+        "A": "Acidose tubular renal tipo I.",
+        "B": "Acidose tubular renal tipo II.",
+        "C": "Síndrome de Gitelman.",
+        "D": "Acidose tubular renal tipo III.",
+        "E": "Síndrome de Liddle."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Miscelâneas em Reumatologia",
+      "images": [],
+      "scheduleId": "cron-261"
+    },
+    {
+      "id": "b28-q028",
+      "number": 28,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Miscelâneas em Reumatologia",
+      "stem": "Paciente do sexo feminino, 26 anos, procura atendimento por início de fenômeno de Raynaud há 6 meses, associado à percepção de enrijecimento das mãos, além de disfagia para sólidos e perda de 3Kg no período. Ao exame físico, chama atenção o espessamento da pele dos dedos das mãos, além da presença de telangiectasias em face. Ausculta cardiopulmonar fisiológica e ausência de úlceras digitais. Realizou os seguintes exames: Hemoglobina: 12,3 g/dL, Leucócitos: 6.500/mm³, Plaquetas: 250.000/mm³, Creatinina: 0,8 mg/dL, VHS: 22 mm/h, PCR: 5 mg/L. FAN positivo 1/320, padrão centromérico. Considerando o exposto, a paciente apresenta risco de evoluir ao longo da doença principalmente com a seguinte complicação:",
+      "options": {
+        "A": "Crise renal esclerodérmica.",
+        "B": "Hipertensão arterial pulmonar.",
+        "C": "Doença muscular inflamatória.",
+        "D": "Doença pulmonar intersticial."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Miscelâneas em Reumatologia",
+      "images": [],
+      "scheduleId": "cron-261"
+    },
+    {
+      "id": "b28-q029",
+      "number": 29,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Um paciente de 38 anos, com histórico de transtorno depressivo maior, é avaliado em uma consulta de emergência devido a pensamentos suicidas ativos. Qual dos fatores de risco abaixo representa o maior risco de suicídio em um paciente com transtorno depressivo maior?",
+      "options": {
+        "A": "Presença de suporte social significativo.",
+        "B": "Primeiro episódio de depressão sem ideação suicida prévia.",
+        "C": "Idade jovem com ausência de comorbidades psiquiátricas.",
+        "D": "História familiar de suicídio.",
+        "E": "Perda recente de emprego, sem sintomas adicionais."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q030",
+      "number": 30,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Homem de 40 anos, previamente hígido, procura atendimento por dor lombar intensa em cólica irradiando para a região inguinal, acompanhada de náuseas e hematúria microscópica. Foi realizado exame de imagem, que evidenciou cálculo renal de 7 mm. Sobre a avaliação e manejo dos cálculos urinários, assinale a alternativa correta:",
+      "options": {
+        "A": "A hipercalciúria urinária isolada não tem relevância clínica, pois cálculos de oxalato de cálcio ocorrem apenas quando associados a infecções urinárias recorrentes.",
+        "B": "O citrato urinário atua como fator protetor, pois reduz a precipitação de cálcio ao formar complexos solúveis com ele.",
+        "C": "Cálculos de ácido úrico são radiopacos e facilmente identificados em radiografias simples do abdome.",
+        "D": "Cálculos maiores que 5 mm raramente causam dor ou complicações, sendo habitualmente assintomáticos."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q031",
+      "number": 31,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Colagenoses: Lúpus e SAF",
+      "stem": "Mulher de 45 anos comparece à Unidade Básica de Saúde com queixas de dor e rigidez em pequenas articulações das mãos, especialmente pela manhã, com duração de cerca de 1 hora, há mais de 6 meses. Refere ainda sensação de areia nos olhos e necessidade de tomar água frequentemente ao se alimentar, especialmente com alimentos secos. Nega febre, emagrecimento, ou lesões de pele. Não apresenta história familiar de doenças autoimunes. Ao exame físico, paciente apresenta dor à palpação de articulações interfalangeanas proximais e distais das mãos, porém sem edema evidente. Exames laboratoriais mostraram: fator reumatoide 18 UI/mL (VR \\< 20), FAN positivo padrão nuclear pontilhado fino, anti-Ro positivo >240 ( >10 = reagente). Radiografia de mãos sem alterações. Qual é o diagnóstico mais provável para o quadro clínico apresentado?",
+      "options": {
+        "A": "Síndrome de Sjögren.",
+        "B": "Artrite reumatoide.",
+        "C": "Lúpus eritematoso sistêmico.",
+        "D": "Artrite Psoriásica."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Colagenoses: Lúpus e SAF",
+      "images": [],
+      "scheduleId": "cron-260"
+    },
+    {
+      "id": "b28-q032",
+      "number": 32,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Transtornos Alimentares e de Personalidade",
+      "stem": "Moça de 21 anos, em consulta com o proctologista, queixa-se de dor lancinante na região do reto e de sangramento baixo. A paciente relata que sempre esteve acima do peso e que se submeteu à lipoaspiração há 2 anos, pois tinha vergonha do tamanho do próprio braço, o que a impedia de vestir camisetas sem mangas em dias quentes. Bastante preocupada com a sua forma física, costuma gastar horas fazendo exercícios aeróbicos na academia. Aspira a ser uma pessoa saudável e quer correr a maratona de São Silvestre. A paciente evita se alimentar na frente de familiares e amigas, pois costuma comer muito rápido e em grande quantidade. Muitas vezes passa mal após uma refeição farta e chega a provocar vômitos com os dedos. O seu índice de massa corpórea atual é 19 kg/m². Orientada de forma online por uma amiga, passou a comprar medicação laxante em grande quantidade por temor de constipação intestinal recorrente. Estocou os laxativos e passou a consumir a medicação secretamente. Há 3 meses, toma diariamente o laxante, pelo menos 2 comprimidos ao dia, e relata que o seu hábito intestinal passou a ser bastante frequente, por vezes com fezes aquosas. Há 2 semanas, começou a sentir dores ao evacuar. Ao exame clínico da região afetada, revelou-se uma lesão compatível com fissura na região de reto. Com base no caso hipotético, é correto afirmar que o diagnóstico provável dessa paciente é:",
+      "options": {
+        "A": "Transtorno de ruminação alimentar.",
+        "B": "Transtorno de compulsão alimentar.",
+        "C": "Bulimia nervosa.",
+        "D": "Anorexia nervosa."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Transtornos Alimentares e de Personalidade",
+      "images": [],
+      "scheduleId": "cron-256"
+    },
+    {
+      "id": "b28-q033",
+      "number": 33,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Uma paciente do sexo feminino, 29 anos, com transtorno bipolar, é trazida ao pronto-socorro em estado maníaco agudo, recusando-se a permanecer internada. Já existe laudo psiquiátrico prévio confirmando risco iminente de autoexposição ao perigo. Qual a conduta mais apropriada?",
+      "options": {
+        "A": "Respeitar a autonomia da paciente e liberá-la imediatamente.",
+        "B": "Internação psiquiátrica involuntária, pois há laudo médico indicando risco à própria vida.",
+        "C": "Administrar apenas medicação ansiolítica e encaminhar para casa com observação familiar.",
+        "D": "Aguardar decisão judicial prolongada, pois não se pode internar alguém contra a vontade."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q034",
+      "number": 34,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Uma paciente do sexo feminino, 36 anos, com quadro depressivo grave em uso irregular de antidepressivos, chega ao PS referindo ideação suicida iminente. Qual a medida prioritária?",
+      "options": {
+        "A": "Prescrever apenas mais uma dose de medicação e liberá-la para casa.",
+        "B": "Solicitar avaliação psiquiátrica urgente e considerar internação (voluntária ou involuntária), devido ao risco de suicídio.",
+        "C": "Aguardar evolução ambulatorial, pois ideação suicida não indica gravidade imediata.",
+        "D": "Orientar terapia de grupo e retorno em 30 dias."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q035",
+      "number": 35,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "A nefrolitíase é uma condição comum, dolorosa e de alto custo para o sistema de saúde. A respeito dessa doença, assinale a alternativa correta:",
+      "options": {
+        "A": "A ultrassonografia do abdome oferece a vantagem de evitar a radiação no diagnóstico, sendo capaz de detectar a maioria dos cálculos ureterais.",
+        "B": "Os cálculos de estruvita são formados somente quando o trato urinário superior é infectado por bactérias produtoras de urease.",
+        "C": "Fatores dietéticos associados ao aumento do risco incluem dietas ricas em proteína animal, cálcio e fitatos.",
+        "D": "O principal fator de risco para a formação de cálculos de ácido úrico é o ph urinário elevado.",
+        "E": "A suplementação com vitamina C em altas doses pode ser útil na prevenção da formação de cálculos de oxalato de cálcio."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q036",
+      "number": 36,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Um menino de 11 anos de idade, com diagnóstico prévio de asma, que já fazia uso de corticoide inalatório de maneira regular, passou a apresentar um quadro de coriza e de espirros e evoluiu com febre (tax.: 37,8ºC), tosse seca e dispneia. O garoto fez uso de salbutamol, em casa, conforme orientação médica em casos de crise, e não apresentou melhora. Foi levado pelos pais para o pronto-socorro e, ao exame físico, encontrava-se em regular estado geral, com fala entrecortada e tiragem subcostal. Na ausculta pulmonar foi observado murmúrio vesicular diminuído globalmente. Outros resultados: FR: 40 ipm; sat.: 88%; e FC: 110 bpm. Com base nessa situação hipotética, assinale a alternativa correta:",
+      "options": {
+        "A": "O quadro pode ser classificado como crise de asma leve após um quadro de IVAS.",
+        "B": "Essa crise de asma pode ser classificada como grave.",
+        "C": "Como já foi feito o salbutamol em casa, deve-se esperar para fazer novamente.",
+        "D": "É necessário prescrever resgate com inalação de broncodilatador de ação rápida, sem a necessidade de suplementar com oxigênio.",
+        "E": "Como não há sibilos na ausculta pulmonar, não se trata de uma crise de asma. Logo, é preciso ampliar a investigação."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q037",
+      "number": 37,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "São tratamentos alternativos para crise aguda de asma grave refratária, exceto:",
+      "options": {
+        "A": "Sulfato de magnésio endovenoso.",
+        "B": "Salbutamol endovenoso.",
+        "C": "Cetamina Endovenosa.",
+        "D": "Ventilação Não Invasiva com Heliox.",
+        "E": "Epinefrina endovenosa."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q038",
+      "number": 38,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Durante uma raquianestesia, o espaço em que é injetado o anestésico corresponde a:",
+      "options": {
+        "A": "Subaracnoide.",
+        "B": "Subdural.",
+        "C": "Epidural.",
+        "D": "Extradural."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q039",
+      "number": 39,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Pode-se afirmar que o método mais indicado para avaliação de nefrolitíase, incluindo a visualização de cálculos de ácido úrico, é:",
+      "options": {
+        "A": "Tomografia computadorizada (TC) do abdome com contraste.",
+        "B": "Ultrassonografia (US) do abdome com contraste.",
+        "C": "Tomografia computadorizada (TC) do abdome sem contraste.",
+        "D": "Ressonância magnética (RM) do abdome."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q040",
+      "number": 40,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Em paciente com nefrolitíase as orientações dietéticas têm papel fundamental na prevenção de cálculos. Das orientações abaixo assinale a incorreta:",
+      "options": {
+        "A": "Ingerir líquido suficiente para promover um volume urinário maior de 2,0 L por dia.",
+        "B": "Restringir cálcio na dieta.",
+        "C": "Reduzir consumo de sal.",
+        "D": "Evitar dietas hiperproteicas.",
+        "E": "Manter conteúdo de potássio adequado na dieta."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q041",
+      "number": 41,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Transtornos Alimentares e de Personalidade",
+      "stem": "Assinale a alternativa que mostra a correlação correta entre o transtorno de personalidade e o seu respectivo grupo, segundo a classificação do DSM-5:",
+      "options": {
+        "A": "Grupo A; Transtorno de personalidade borderline.",
+        "B": "Grupo A; Transtorno de personalidade histriônica.",
+        "C": "Grupo B; Transtorno de personalidade paranoide.",
+        "D": "Grupo C; Transtorno de personalidade dependente.",
+        "E": "Grupo C; Transtorno de personalidade narcisista."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Transtornos Alimentares e de Personalidade",
+      "images": [],
+      "scheduleId": "cron-256"
+    },
+    {
+      "id": "b28-q042",
+      "number": 42,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Assinale a alternativa que apresenta os dois principais fatores de risco para o suicídio:",
+      "options": {
+        "A": "Sexo masculino e idade acima de 60 anos.",
+        "B": "Desemprego e ser divorciado.",
+        "C": "Depressão e uso de substâncias psicoativas.",
+        "D": "Migração e ausência de religião.",
+        "E": "Presença de transtorno mental e tentativa de suicídio prévia"
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q043",
+      "number": 43,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Homem de 36 anos vai ao pronto-socorro com queixa de dor em cólica de forte intensidade na região lombar direita, com irradiação para flanco e fossa ilíaca direita há 12 horas. Ele refere que já teve alguns episódios semelhantes, com várias ocorrências de vômitos. Nega disúria ou polaciúria. Ao exame físico, apresenta-se em regular estado geral com fácies de dor, sudorese profusa, mucosas desidratadas (1+/4+), temperatura de 36,5°C, frequência cardíaca de 100 batimentos por minuto, pressão arterial de 130 x 80 mmHg, pulmões limpos e bulhas rítmicas e normofonéticas. Ao exame físico do abdome, apresenta dor à palpação de flanco direito e sinal de Giordano à direita. Nos exames complementares, hemograma sem alterações. Em rotina de urina, constata-se urina turva, ausência de nitritos, presença de leucócitos, 10.000/mL, e presença de hemácias, de 50.000/mL. Com base nessas informações, assinale a alternativa que apresenta, respectivamente, o diagnóstico da doença e a conduta inicial adequada para esse paciente:",
+      "options": {
+        "A": "Litíase renal; cirurgia de urgência.",
+        "B": "Infecção urinária; antibioticoterapia.",
+        "C": "Litíase renal; analgesia e hidratação.",
+        "D": "Infecção urinária; analgesia e urocultura.",
+        "E": "Infecção urinária; exame de imagem."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q044",
+      "number": 44,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Homem, 35 anos de idade, solteiro, policial militar, comparece para a primeira consulta médica. Refere que, há 2 meses, tem sentido ansiedade, irritabilidade, falta de energia e de prazer, além de cansaço excessivo que o tem levado a diminuir suas atividades habituais. Nesse período aumentou o consumo de alcoólicos porque o ajuda a dormir melhor e perdeu peso porque seu apetite está muito irregular. Conta, com certa relutância, que tem pensado que a vida perdeu o sentido e que não faria falta se deixasse de existir. Em relação ao risco de suicídio no paciente apresentado, assinale a alternativa correta:",
+      "options": {
+        "A": "O risco é alto, pois o paciente tem depressão e muitos fatores de risco para suicídio e deve ser encaminhado para internação psiquiátrica, mesmo que involuntária.",
+        "B": "O risco é moderado, pois, embora o diagnóstico de depressão possa ser feito nesse paciente, os fatores de risco para suicídio que apresenta são pouco significativos.",
+        "C": "O risco é baixo pois, como ele revela a ideação suicida, isso significa que ele não tem intenção de cometer suicídio.",
+        "D": "O paciente tem depressão e, nesse momento, investigar planejamento de suicídio é desnecessário, pois pode sugestionar o paciente cometer o autoextermínio.",
+        "E": "Deve-se investigar se há planejamento de suicídio, pois o paciente apresenta quadro de depressão e fatores de risco significativos."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q045",
+      "number": 45,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Homem, 27 anos de idade, relata que desde a adolescência apresenta quadro de oscilações rápidas do humor desencadeadas por eventos externos. Quando as coisas vão bem, fica muito feliz, eufórico, chegando a se colocar em situações de risco, como beber excessivamente, para agradar os amigos. Mas se, no mesmo dia, algum amigo faz algo de que ele não gosta, sente-se rejeitado, abandonado, fica muito triste e desanimado e chega a se cortar superficialmente nos antebraços com objeto afiado. Conta que a dor física, provocada pelos cortes, ajuda a aliviar a angústia e a sensação de vazio intensas que sente. Qual o diagnóstico mais provável e a conduta mais adequada para o caso apresentado?",
+      "options": {
+        "A": "Transtorno bipolar; lítio.",
+        "B": "Transtorno depressivo recorrente; sertralina.",
+        "C": "Transtorno de ansiedade generalizada; buspirona.",
+        "D": "Transtorno de personalidade borderline; psicoterapia.",
+        "E": "Transtorno dissociativo de identidade; clorpromazina."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q046",
+      "number": 46,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Homem, 35 anos de idade, solteiro, policial militar, comparece para a primeira consulta médica. Refere que, há 2 meses, tem sentido ansiedade, irritabilidade, falta de energia e de prazer, além de cansaço excessivo que o tem levado a diminuir suas atividades habituais. Nesse período aumentou o consumo de alcoólicos porque o ajuda a dormir melhor e perdeu peso porque seu apetite está muito irregular. Conta, com certa relutância, que tem pensado que a vida perdeu o sentido e que não faria falta se deixasse de existir. Em relação ao risco de suicídio no paciente apresentado, assinale a alternativa correta:",
+      "options": {
+        "A": "O risco é alto, pois o paciente tem depressão e muitos fatores de risco para suicídio e deve ser encaminhado para internação psiquiátrica, mesmo que involuntária.",
+        "B": "O risco é moderado, pois, embora o diagnóstico de depressão possa ser feito nesse paciente, os fatores de risco para suicídio que apresenta são pouco significativos.",
+        "C": "O risco é baixo pois, como ele revela a ideação suicida, isso significa que ele não tem intenção de cometer suicídio.",
+        "D": "O paciente tem depressão e, nesse momento, investigar planejamento de suicídio é desnecessário, pois pode sugestionar o paciente cometer o autoextermínio.",
+        "E": "Deve-se investigar se há planejamento de suicídio, pois o paciente apresenta quadro de depressão e fatores de risco significativos."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q047",
+      "number": 47,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Um paciente de 58 anos, hipertenso e com histórico de nefrolitíase, está em uso de clortalidona há 8 meses. Durante consulta de rotina, relata episódios de fraqueza muscular, poliúria e dor articular. Os exames laboratoriais revelam: Sódio: 137 mEq/L; Potássio: 2,8 mEq/L; Cálcio: 11,4 mg/dL; Ácido úrico: 9,5 mg/dL; Glicemia de jejum: 112 mg/dL; pH urinário: 7,1; Com base no quadro clínico e laboratorial, assinale a alternativa que melhor explica os achados observados:",
+      "options": {
+        "A": "A hipocalemia induzida pelos tiazídicos pode levar à alcalose metabólica e predisposição a nefrocalcinose.",
+        "B": "A hipercalcemia associada ao uso de diuréticos tiazídicos ocorre devido à inibição da reabsorção de cálcio nos túbulos distais.",
+        "C": "A hiperuricemia secundária ao uso de tiazídicos é causada por aumento da excreção renal de ácido úrico, predispondo a gota.",
+        "D": "O pH urinário alcalino observado está relacionado à acidose tubular renal do tipo 2 induzida pelos tiazídicos."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q048",
+      "number": 48,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "O suicídio é considerado um problema de saúde pública e está fortemente associado a outras condições de saúde mental. Sobre a abordagem à pessoa com sintomas suicidas, assinale a alternativa correta:",
+      "options": {
+        "A": "O tratamento hospitalar está sempre indicado em pessoas com sintomas suicidas.",
+        "B": "A ideação de morte, abstrata, sem o planejamento suicida, é considerada situação de baixo risco de suicídio.",
+        "C": "Não é recomendado perguntar abertamente sobre ideação suicida para pessoas com sintomas depressivos não controlados.",
+        "D": "São considerados fatores de risco para o suicídio: estar casado, estar grávida, ser médico, ser idoso, ter apresentado tentativas prévias de suicídio."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q049",
+      "number": 49,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Um jovem de 25 anos dá entrada em UPA com quadro de forte dor lombar e vômitos. Ele apresenta cálculos renais por oxalato de cálcio com crises esporádicas de cólica nefrética. Em relação às nefrolitíases, é correto afirmar que:",
+      "options": {
+        "A": "A fosfatemia elevada aumenta o risco de geração de cálculos de oxalato de cálcio.",
+        "B": "A hidratação venosa volumosa deve ser administrada nas crises de cólica nefrética.",
+        "C": "O uso de diuréticos tiazídicos deve ser evitado em casos de litíase por oxalato de cálcio.",
+        "D": "O citrato de potássio é uma boa opção terapêutica para cálculos de oxalato de cálcio.",
+        "E": "O uso de antiespasmódicos como a escopolamina é bastante eficaz na cólica nefrética e deve ser instituído."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q050",
+      "number": 50,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Paciente feminina, de 40 anos, consultou por vir apresentando episódios recorrentes de litíase renal, com eliminação frequente de cálculos. Referiu história de litíase renal na família. À avaliação metabólica, foi identificada hipercalciúria idiopática. Diante do quadro, assinale a alternativa que contempla outras medidas adequadas, além da hidratação, para prevenir novos cálculos renais:",
+      "options": {
+        "A": "Restrição severa de cálcio e sal na dieta.",
+        "B": "Suplementação de vitamina C e suplementação de cálcio oral (carbonato de cálcio e colecalciferol).",
+        "C": "Aumento do consumo de proteínas animais e restrição do consumo de cálcio.",
+        "D": "Restrição de sal na dieta e uso de diurético tiazídico (clortalidona)."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q051",
+      "number": 51,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Homem de 23 anos, estudante universitário, é levado à Unidade de Pronto Atendimento (UPA) por um amigo da moradia estudantil, que o encontrou chorando, trancado no banheiro com diversas cartelas de medicamentos próximas de si. O paciente nega ter ingerido qualquer fármaco ou outras substâncias, mas admite estar pensando em dar fim à própria vida. Refere tristeza profunda há cerca de 2 meses, com piora recente após o término de um relacionamento. Diz estar \"sem propósito na vida\" e que \"ninguém sentiria falta\" se ele morresse. Conta que viu na internet que tomar muitos comprimidos de paracetamol seria a melhor forma de morrer. Relata insônia inicial e terminal, perda de apetite, queda de rendimento acadêmico e isolamento social. Nega uso atual de drogas ilícitas, mas admite consumo de álcool eventualmente. Abandonou psicoterapia após 2 sessões. Todos os familiares vivem em outro estado. Ao exame, apresenta-se vígil, orientado, com discurso discretamente lentificado, sem alucinações ou delírios evidentes. O contato visual é pobre, o afeto está intensamente rebaixado e não modulante. Exames laboratoriais gerais solicitados à chegada na UPA não mostram alterações. Qual é a conduta adequada ao caso clínico apresentado?",
+      "options": {
+        "A": "Encaminhar o paciente para acompanhamento médico em Unidade Básica de Saúde (UBS).",
+        "B": "Encaminhar o paciente para psicoterapia com equipe multiprofissional na atenção primária à saúde.",
+        "C": "Encaminhar o paciente para avaliação ambulatorial com psiquiatra em centro de atenção psicossocial do tipo I.",
+        "D": "Encaminhar o paciente para internação em enfermaria de saúde mental em hospital geral ou em serviço congênere."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q052",
+      "number": 52,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "\"Internações sem consentimento aumentam na Cracolândia, em meio a denúncias de agressões\". ZYLBERKAN, M.; KRUSE, T. Folha de S. Paulo, 3 jul. 2024. Notícias como esta têm se tornado frequentes em jornais brasileiros nos últimos anos. Alguns municípios têm criado leis locais próprias para as internações involuntárias que muitas vezes contradizem as leis federais sobre o tema. Sobre a internação involuntária no Brasil, é correto afirmar que:",
+      "options": {
+        "A": "A internação involuntária é determinada, de acordo com a legislação, pela Justiça.",
+        "B": "É autorizada por médico devidamente registrado no Conselho Regional de Medicina.",
+        "C": "No prazo de 15 dias, a internação deve ser comunicada ao Ministério Público Federal.",
+        "D": "O término da internação involuntária ocorrerá por solicitação do Ministério Público Municipal."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q053",
+      "number": 53,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Escolar de 8 anos, menino, em tratamento de asma com beclometasona spray oral, na dose de 400 mcg ao dia há 3 meses, sem controle dos sintomas nas últimas 4 semanas. Faz uso da medicação com espaçador, tem boa adesão ao tratamento e a técnica inalatória está correta. Em relação à terapia farmacológica para a asma, a conduta nesse momento é:",
+      "options": {
+        "A": "Trocar o corticoide inalatório para associação broncodilatador de longa ação e corticoide inalatório.",
+        "B": "Manter o corticoide inalatório e associar antileucotrieno.",
+        "C": "Manter o corticoide inalatório e associar antimuscarinico de longa duração.",
+        "D": "Manter o corticoide inalatório e associar imunobiológico de acordo com o fenótipo da asma.",
+        "E": "Manter o corticoide inalatório e associar broncodilatador de curta ação contínuo."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q054",
+      "number": 54,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Pré-escolar de 6 anos, com história prévia de asma, é levado ao pronto-socorro com dispneia progressiva, sibilância difusa, FR: 52 irpm, SatO2: 89% em ar ambiente, batimento de asa do nariz e fala entrecortada. A mãe nega febre e rinorreia. Não há história de contato com indivíduos com infecção de vias aéreas. No manejo inicial são administradas duas doses de salbutamol inalatório com espaçador. Nesse caso, as seguintes medidas são preconizadas, à exceção de uma. Assinale a:",
+      "options": {
+        "A": "Iniciar oxigenoterapia.",
+        "B": "Repetir broncodilatadores em dose escalonada.",
+        "C": "Administrar azitromicina oral.",
+        "D": "Iniciar corticoterapia sistémica.",
+        "E": "Avaliar necessidade de internação"
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q055",
+      "number": 55,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Lactente de 12 meses com quatro episódios de sibilância desde os 8 meses, um deles com necessidade de hospitalização. Todos os episódios ocorreram após quadros respiratórios virais. Entre crises, permanece com sintomas respiratórios leves. Ao exame: eutrófico, eupneico, ausculta com roncos de transmissão, lesões eczematosas em fossas cubitais e poplíteas. Com base no GINA 2025 para menores de 5 anos, qual a conduta terapêutica correta?",
+      "options": {
+        "A": "Manter salbutamol inalatório sob demanda durante as crises.",
+        "B": "Corticoide inalatório diariamente, associado a salbutamol sob demanda.",
+        "C": "Tratamento de suporte exclusivo nas crises.",
+        "D": "Associar corticoide oral a salbutamol por um período de 3 a 5 dias nas crises."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q056",
+      "number": 56,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Mulher, 22 anos, estudante universitária, apresenta restrição alimentar severa, preocupação excessiva com peso e forma corporal e perda ponderal de 15% nos últimos 3 meses. Relata episódios de vômitos autoinduzidos após ingestão de pequenas quantidades de alimento. Exame físico apresenta Índice de Massa Corporal (IMC) 16 kg/m2, hipotensão ortostática, bradicardia e lanugo discreto. Laboratório indica hipocalemia: 2,8 mEq/L, hipomagnesemia: 1,3 mg/dL e TGO/TGP discretamente elevadas. Qual é a conduta inicial mais apropriada para a paciente?",
+      "options": {
+        "A": "Iniciar apenas terapia nutricional agressiva para ganho rápido de peso, sem avaliação multidisciplinar, visando à recuperação rápida do IMC.",
+        "B": "Prescrever antidepressivo ISRS em monoterapia como tratamento principal, pois transtornos alimentares são primariamente psiquiátricos.",
+        "C": "Avaliar risco clínico imediato, corrigir distúrbios eletrolíticos, garantir suporte nutricional gradual e encaminhar para equipe multidisciplinar especializada (nutricionista, psiquiatra, psicólogo).",
+        "D": "Indicar internação apenas se a paciente recusar voluntariamente qualquer tipo de tratamento nutricional; caso contrário, o tratamento ambulatorial é suficiente.",
+        "E": "Iniciar reposição eletrolítica de rotina, mas aguardar IMC <15 kg/m2 para considerar qualquer intervenção psiquiátrica ou nutricional."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q057",
+      "number": 57,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Adolescente, 14 anos de idade, com diagnóstico de asma há 5 anos, faz acompanhamento em ambulatório de pneumologia pediátrica. Atualmente, utiliza fluticasona/salmeterol 250/50 mcg, 1 inalação de 12/12 horas. Apesar disso, a mãe relata que a adolescente ainda apresenta tosse e dispneia pelo menos 3 vezes por semana, despertares noturnos semanais e precisou de curso de corticoide oral há 2 meses. A mãe também comenta que a adolescente usa o inalador de alívio (salbutamol) cerca de 4 a 5 vezes por semana e, por vezes, esquece de usar o inalador de manutenção, especialmente nos dias em que não tem aula. Ao exame físico, não apresenta sinais de esforço respiratório, mas a ausculta pulmonar revela sibilância esporádica bilateral. Diante deste quadro clínico de asma de difícil controle, assinale a alternativa que apresenta, corretamente, a primeira e mais importante conduta a ser implementada para otimizar o tratamento:",
+      "options": {
+        "A": "Aumentar a dose do corticoide inalatório para fluticasona/salmeterol 500/50 mcg de 12/12 horas e considerar a adição de tiotrópio.",
+        "B": "Manter a dose de fluticasona/salmeterol 250/50 mcg de 12/12 horas, adicionar tiotrópio e fazer fenotipagem do paciente considerando terapia biológica.",
+        "C": "Realizar espirometria com broncodilatador, contagem de eosinófilos no sangue e dosagem de FeNO para fenotipagem da asma e avaliação de elegibilidade para terapia biológica.",
+        "D": "Reavaliar a técnica inalatória do paciente, instruir sobre a importância da adesão ao tratamento e explorar as barreiras para o esquecimento das doses.",
+        "E": "Substituir a combinação fluticasona/salmeterol por uma combinação de ICS-formoterol em baixa dose como terapia de manutenção e alívio (MART), otimizando o uso do inalador."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q058",
+      "number": 58,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Criança de três anos de idade apresenta episódios de sibilância desde os cinco meses de idade, quando teve uma bronquiolite. Nunca necessitou de internação. Atualmente, está em uso de beclometasona inalatória 50 mg 2 vezes ao dia, mas mantém necessidade de salbutamol ocasionalmente (última vez foi há duas semanas). A técnica inalatória foi revista e estava adequada. Diante desse cenário, qual é a melhor conduta?",
+      "options": {
+        "A": "Acrescentar um anti leucotrieno (montelucaste).",
+        "B": "Aumentar a dose de corticoide inalatório para 200 mcg/dia.",
+        "C": "Manter a dose de corticoide inalatório e reavaliar em um mês.",
+        "D": "Acrescentar um broncodilatador de longa duração (formoterol)."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q059",
+      "number": 59,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Criança de 6 anos chega à emergência com esforço respiratório, história de tosse seca recorrente, mãe diz ouvir \"chiado\" no peito, está com saturação de oxigênio de 92%. Nega febre. Esta criança já tem história de broncoespasmo frequente, com última crise há 2 meses. Assinale qual diagnóstico desse paciente e sua terapêutica na emergência:",
+      "options": {
+        "A": "Bronquiolite aguda, beta-2-inalatório de 20/20 min e suporte de 02 com 6-8 L/min.",
+        "B": "Tuberculose, iniciar esquema RIP e suporte de 02 com 10L/min.",
+        "C": "Pneumonia, iniciar amoxicilina por 10 dias.",
+        "D": "Reação anafilática, iniciar corticoide venoso e adrenalina subcutânea.",
+        "E": "Crise asmática aguda, suplementar oxigênio de 6/8L/min na primeira hora, beta-2-inalatório 20/20 min e se não houver resposta, prednisolona ou prednisona 1-2mg/kg/dia por 3-5 dias."
+      },
+      "answer": "E",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q060",
+      "number": 60,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "De acordo com a Diretriz Brasileira para Diagnóstico e Tratamento Clínico da Nefrolitíase (SBN, 2024 - 2025), qual das condutas abaixo está CORRETAMENTE indicada para a prevenção de recorrência de cálculos renais de oxalato de cálcio?",
+      "options": {
+        "A": "Restringir de forma rigorosa a ingestão de cálcio dietético para reduzir a excreção urinária de cálcio.",
+        "B": "Incentivar hidratação adequada com meta de diurese superior a 2,0–2,5 litros por dia, visando reduzir a supersaturação urinária de sais litogênicos.",
+        "C": "Reduzir a ingestão de frutas cítricas, uma vez que aumentam a excreção urinária de oxalato.",
+        "D": "Utilizar diuréticos de alça de forma rotineira para todos os pacientes com hipercalciúria, independentemente de avaliação metabólica prévia."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q061",
+      "number": 61,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Transtornos Alimentares e de Personalidade",
+      "stem": "Mulher de 21 anos comparece à consulta médica em Unidade Básica de Saúde (UBS) para avaliação de amenorreia há 4 meses, sendo descartada gravidez. Paciente relata que há 10 meses iniciou dieta para perder peso, tendo emagrecido nesse período aproximadamente 30 kg. Há 2 dias relata desmaio durante prática de exercício físico e, por isso, realizou eletrocardiograma (ECG) que indicou alterações no segmento ST e na onda T. Paciente nega histórico de diagnóstico de transtorno mental, mora sozinha e sua família é de outra cidade. Afirma manter o padrão alimentar, pois ainda quer perder peso. Ao exame físico, apresenta palidez de mucosa e turgor cutâneo diminuído. Altura = 1,63 m; peso = 39 kg (IMC = 14,7 kg/m²); pressão arterial = 80x60 mmHg; frequência cardíaca = 55 bpm e frequência respiratória = 15 irpm. Qual é a conduta adequada nesse momento?",
+      "options": {
+        "A": "Solicitar internação em enfermaria de clínica médica.",
+        "B": "Encaminhar para internação em enfermaria de saúde mental.",
+        "C": "Continuar a investigação para causas da amenorreia na UBS.",
+        "D": "Acompanhar em ambulatório do Centro de Atenção Psicossocial (CAPs)."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Transtornos Alimentares e de Personalidade",
+      "images": [],
+      "scheduleId": "cron-256"
+    },
+    {
+      "id": "b28-q062",
+      "number": 62,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Qual das medidas não-medicamentosas abaixo, para prevenção de formação de novos cálculos renais é FALSA?",
+      "options": {
+        "A": "Redução da ingesta de cálcio.",
+        "B": "Aumento da ingesta de potássio.",
+        "C": "Redução da ingesta de sódio.",
+        "D": "Redução da ingesta de oxalato."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q063",
+      "number": 63,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Menino, 4 anos de idade, apresenta cansaço há 1 dia e tosse seca com piora há 3 horas. Paciente tem asma e parou a medicação de controle há 1 semana por estar sem crise há 2 meses. Exame físico: FR = 42 irpm, fala apenas frases curtas, SpO = 95% em ar ambiente. De acordo com o GINA (Global Initiative for Asthma), qual é a classificação da crise e a conduta imediata?",
+      "options": {
+        "A": "Crise grave; beta-2 agonista de curta ação associado a brometo de ipratrópio.",
+        "B": "Crise moderada; beta-2 agonista de curta ação associado a brometo de ipratrópio.",
+        "C": "Crise moderada; indicação de beta-2 agonista de longa ação.",
+        "D": "Crise grave; indicação de beta-2 agonista de longa ação."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q064",
+      "number": 64,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Menina, 6 anos de idade, é levada à UPA por apresentar dispneia há 8 horas. Usou salbutamol spray - dois jatos a cada 4 horas, mas mantém o quadro, e a dificuldade de respirar aumentou. Utiliza budesonida inalatória diariamente, mas tem acordado durante à noite quase todos os dias. Ao exame: temperatura: 36,8°C, taquicardia, taquipneia, SatO2 = 90%, tiragem intercostal, fala entrecortada e sibilos bilaterais à ausculta. Indique a conduta terapêutica para controle da doença nesta paciente:",
+      "options": {
+        "A": "Associação de budesonida + formoterol por via inalatória.",
+        "B": "Associação de fluticasona + fenoterol por via inalatória.",
+        "C": "Budesonida inalatório + corticosteróide sistêmico + antileucotrieno.",
+        "D": "Budesonida inalatório + corticosteróide sistêmico."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q065",
+      "number": 65,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "M., 22 anos de idade, chega ao consultório, com relatos de alteração de comportamento há cerca de 10 dias, mais ansioso que o habitual. A família relata que M. apresenta um padrão estável e persistente da experiência interna e comportamento que se desvia acentuadamente das expectativas de sua cultura, apresentando tal padrão desde a adolescência. Demonstra déficits sociais e interpessoais com grande desconforto nos relacionamentos, ideias de referência, tem fortes crenças em telepatia, desconfiança, afeto limitado, ausência de amigos, aparência excêntrica, ansiedade social excessiva. Nos últimos dias, contudo, tornou-se mais “ansioso” que o habitual, se queixando de sensações ruins no corpo, como formigamento, aperto no peito, taquicardia, sem ligação alguma com nenhum fator estressor. Os sintomas são frequentes, diários, e já duram mais de 5 dias. Qual é o diagnóstico compatível com o quadro descrito?",
+      "options": {
+        "A": "Transtorno de personalidade esquizotípica comórbido com transtorno de ansiedade generalizada.",
+        "B": "Transtorno de personalidade esquizoide comórbido com transtorno de ansiedade generalizada.",
+        "C": "Transtorno do espectro autista comórbido com transtorno de pânico e fobia social.",
+        "D": "Transtorno de personalidade paranoide comórbido com transtorno de ansiedade generalizada."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q066",
+      "number": 66,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Transtornos Alimentares e de Personalidade",
+      "stem": "Paciente do sexo feminino, 19 anos, estudante universitária, apresenta um histórico de controle excessivo sobre sua alimentação e perda de peso significativa nos últimos 6 meses. Refere um medo intenso de engordar, apesar de seu peso estar abaixo do considerado saudável para sua faixa etária. Ao exame, observa-se um Índice de massa corporal (IMC) abaixo de 17,5 kg/m², e a paciente mostra sinais de ansiedade e distorção da imagem corporal. Com base no quadro clínico descrito, qual é o diagnóstico mais provável?",
+      "options": {
+        "A": "Anorexia Nervosa.",
+        "B": "Transtorno de Personalidade Borderline.",
+        "C": "Transtorno de Compulsão Alimentar Periódica.",
+        "D": "Transtorno de Bulimia Nervosa.",
+        "E": "Transtorno de Ansiedade Generalizada."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Transtornos Alimentares e de Personalidade",
+      "images": [],
+      "scheduleId": "cron-256"
+    },
+    {
+      "id": "b28-q069",
+      "number": 69,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Miscelâneas em Reumatologia",
+      "stem": "Mulher, 25 anos de idade, queixa-se de fraqueza muscular simétrica e predominantemente proximal dos membros superiores e inferiores há seis meses. Apresenta, também, quadro crônico de fadiga. Antecedente familiar nada digno de nota. Exame clínico: força muscular grau III nos quatro membros. Restante normal. Eletroneuromiografia com padrão miopático, creatinofosfoquinase 3.000 UI/L. Recebeu prednisona 1 mg/kg/dia por seis meses, sem melhora clínica e laboratorial. A origem da miopatia desta paciente tem maior probabilidade de ser:",
+      "options": {
+        "A": "Paraneoplásica.",
+        "B": "Endocrinológica.",
+        "C": "Hereditária.",
+        "D": "Imunomediada."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Miscelâneas em Reumatologia",
+      "images": [],
+      "scheduleId": "cron-261"
+    },
+    {
+      "id": "b28-q070",
+      "number": 70,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Cirurgia",
+      "topic": "Anestesiologia no ENAMED",
+      "stem": "Em relação à Classificação De Estado Físico Da Sociedade Americana De Anestesiologia (ASA) assinale a alternativa INCORRETA:",
+      "options": {
+        "A": "O sistema classifica os pacientes de acordo com suas comorbidades.",
+        "B": "Paciente tabagista sem DPOC e que faz uso de álcool socialmente é classificado como ASA II.",
+        "C": "Paciente com infarto do miocárdio há dois meses deve ser classificado como ASA IV.",
+        "D": "Paciente com obesidade grau I sem comorbidades é classificado como ASA I."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Anestesiologia no ENAMED",
+      "images": [],
+      "scheduleId": "cron-259"
+    },
+    {
+      "id": "b28-q071",
+      "number": 71,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Transtornos Alimentares e de Personalidade",
+      "stem": "Considerando o suporte nutricional perioperatório, analise as assertivas e assinale a alternativa que aponta a(s) correta(s).: I. A nutrição parenteral é a via preferencial de suporte nutricional em pacientes cirúrgicos. II. Em pacientes cirúrgicos bem nutridos, o suporte nutricional parenteral pós-operatório só deve ser considerado se a previsão for de que não haverá alimentação enteral adequada por um período inferior a 5 dias. III. A desnutrição hospitalar é um fator de risco significativo para o aumento de complicações pós-operatórias, como infecções e dificuldades na cicatrização. IV. A suplementação imunomoduladora com arginina e glutamina demonstrou impacto robusto na redução da mortalidade em todos os pacientes cirúrgicos. Assinale a alternativa correta:",
+      "options": {
+        "A": "Apenas as afirmações I e II estão corretas.",
+        "B": "Apenas as afirmações II e IV estão corretas.",
+        "C": "Apenas a afirmação III está correta.",
+        "D": "Apenas as afirmações III e IV estão corretas."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Transtornos Alimentares e de Personalidade",
+      "images": [],
+      "scheduleId": "cron-256"
+    },
+    {
+      "id": "b28-q072",
+      "number": 72,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Menino, 9 anos de idade, previamente asmático, foi admitido no departamento de emergência com quadro de tosse e coriza, sem febre. Ao exame físico inicial, apresentava-se taquidispneico (FR de 36 irpm), com sibilos difusos, tiragem subdiafragmática e tiragem intercostal moderadas, fala entrecortada e saturação de 88% em ar ambiente. Foram realizadas medidas para crise asmática grave: salbutamol, brometo de ipratrópio e corticoide. Após as medidas iniciais, o paciente apresenta os seguintes achados ao exame físico: bom estado geral, dispneia leve/moderada, FR de 27 irpm, SpO9 4% em máscara de Venturi a 40%, tiragem subdiafragmática leve, FC de 110 bpm e demais parâmetros sem alterações. Baseando-se no GINA 2025, diante do quadro clínico e em relação à indicação de sulfato de magnésio endovenoso, assinale a melhor alternativa:",
+      "options": {
+        "A": "Está indicado e está associado a menor taxa de admissão hospitalar.",
+        "B": "Não está indicado, visto que no momento o paciente não apresenta critérios para internação em leito de UTI.",
+        "C": "Não está indicado e, caso o paciente apresentasse indicação, a via inalatória seria preferível.",
+        "D": "Pode ser administrado e o uso de sulfato de magnésio deve ser feito rotineiramente em todas as crianças com crise asmática grave."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q073",
+      "number": 73,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Menino, 36 meses de vida, apresenta sibilância recorrente, com mais de três episódios nos últimos seis meses. O pediatra considera iniciar tratamento farmacológico para controle dos sintomas. Qual é a recomendação terapêutica mais apropriada?",
+      "options": {
+        "A": "Prescrever 2-agonista de longa duração como monoterapia.",
+        "B": "Utilizar corticosteroide oral de forma contínua para prevenção.",
+        "C": "Iniciar corticosteroide inalatório contínuo como primeira escolha.",
+        "D": "Iniciar corticosteroide inalatório intermitente + 2-agonista de longa duração como primeira escolha."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q074",
+      "number": 74,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Lactente de 1 ano e três meses de vida, com antecedente de prematuridade tardia - 34 semanas de IG e peso ao nascimento de 1.850 g, sem intercorrências respiratórias perinatais. Relata 4 episódios de sibilância nos últimos 9 meses, e uso de corticoide oral em duas ocasiões. A mãe tem antecedente de asma. Assinale a alternativa correta com relação ao diagnóstico e ao tratamento:",
+      "options": {
+        "A": "Diante da prematuridade e alterações de desenvolvimento alveolar associadas, está indicado tratamento dos episódios de chiado com beta agonista de curta e corticoide inalatório.",
+        "B": "Pode-se afirmar que a criança tem asma precoce e deve-se iniciar tratamento com a associação de montelukast e tiotrópio.",
+        "C": "O tiotrópio está certamente indicado no esquema, diante do antecedente de prematuridade reportado.",
+        "D": "O tratamento inicial deve incluir corticoide inalatório em spray com uso de espaçador e máscara."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q075",
+      "number": 75,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Menino, 7 anos de idade, acompanhado no ambulatório de pneumologia por conta de asma grave, com uso irregular de medicações. É admitido no pronto-socorro pediátrico com dispneia importante, sibilância difusa e tosse seca há cerca de 8 horas, após auxiliar o pai na limpeza do porão da casa. A mãe relata ter feito uso do salbutamol em casa (6 puffs em doses repetidas ao longo de 2 horas), sem resposta adequada. Ao exame físico de chegada, apresentava-se agitado, com fala entrecortada, uso intenso de musculatura acessória, tiragens intercostal e de fúrcula. Ausculta com sibilos expiratórios difusos e redução de murmúrios vesiculares globalmente. Boa perfusão periférica, ausculta cardíaca com bulhas rítmicas e normofonéticas, sem sopros. FC de 128 bpm, FR de 40 irpm, SpOd e 87% em ar ambiente e PA de 100×60 mmHg. Foi submetido a tratamento inicial em sala de emergência, onde iniciou oxigênio por máscara não-reinalante, obtido acesso periférico com administração de metilprednisolona e iniciado salbutamol inalatório 800 μg repetido a cada 20 minutos e brometo de ipratróprio. Mantido sob monitorização contínua. Após cerca de 1 hora, encontrava-se ainda com intenso desconforto respiratório, sonolento, mais taquipneico (FR de 50 irpm), com SpOd e 90% com máscara não-reinalante. Colhida a seguinte gasometria arterial: * pH: 7,28; * PaCO:5 8 mmHg; * PaO:6 5 mmHg; * HCO3-: 24 mEq/L; * SpO:9 0%. Optou-se pela transferência à unidade de terapia intensiva para monitorização e seguimento das medidas de tratamento e suporte. Entre as terapias que podem ser instituídas para o paciente, em seu quadro atual, assinale a alternativa correta:",
+      "options": {
+        "A": "O uso de mistura hélio-oxigênio (heliox) apresenta benefícios na promoção de melhor fluxo aéreo em pacientes com quadros obstrutivos graves. Seu uso é indicado, especialmente, nos pacientes que necessitam de elevadas FiO,u ma vez que tem maior eficácia em misturas 20%/80% ou 10%/90% com oxigênio.",
+        "B": "Sulfato de magnésio IV não é recomendação de rotina nas exacerbações asmáticas, sendo reservado para pacientes os quais não responderam ao tratamento inicial e que persistem hipoxêmicos após abordagem inicial. O uso inalatório não apresenta benefícios.",
+        "C": "Aminofilina e teofilina são alternativas válidas e seguras em pacientes refratários à terapia inicial. Ambas as medicações apresentam um bom perfil de segurança, mais seguras que os 2-agonistas intravenosos.",
+        "D": "A evidência para uso de Ventilação Não-Invasiva (VNI) em asma é substancial, com vários estudos demonstrando redução da necessidade de intubação orotraqueal. É particularmente determinante na redução de intubação orotraqueal em pacientes que apresentam alteração de nível de consciência ou agitação devido à hipoxemia/hipercapnia."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q076",
+      "number": 76,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "A asma é uma doença pulmonar crônica que necessita de controle para evitar perda progressiva da função pulmonar. O tratamento intercrise tem como principal fármaco:",
+      "options": {
+        "A": "Corticoide inalatório.",
+        "B": "Antileucotrieno.",
+        "C": "Broncodilatador de longa duração.",
+        "D": "Broncodilatador de curta duração.",
+        "E": "Corticoide sistêmico na menor dose possível."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q077",
+      "number": 77,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Pneumologia Pediátrica",
+      "stem": "Criança, sexo feminino, 8 anos de idade, portadora de asma, comparece à consulta na unidade básica de saúde referindo que, nas últimas 4 semanas, apresenta tosse e cansaço pelo menos uma vez por semana. Despertou à noite por cansaço apenas uma vez. Tem utilizado medicação de resgate para realizar aula de educação física (3 vezes por semana), conseguindo fazer a aula junto aos seus colegas, sem problemas. Faz uso diário de beclometasona HFA partícula padrão 50 μg, 2 jatos por via inalatória de 12/12horas, com técnica de aplicação repetida por duas vezes, conforme imagem a seguir: Qual a conduta na consulta de hoje, conforme recomendações do GINA 2025?",
+      "options": {
+        "A": "Associar salbutamol 100 μg 4 jatos de 12/12 horas.",
+        "B": "Ajustar beclometasona para 200 μg 1 jato de 12/12 horas.",
+        "C": "Corrigir técnica de administração, sem alterar medicações.",
+        "D": "Referenciar paciente ao serviço de pneumologia pediátrica."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Pneumologia Pediátrica",
+      "images": [],
+      "scheduleId": "cron-258"
+    },
+    {
+      "id": "b28-q078",
+      "number": 78,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Paciente de 9 anos, 30 kg portador de asma, trazida ao PSI por queixa de desconforto respiratório importante. Segundo acompanhantes, paciente está resfriado há 04 dias, evoluindo com piora do padrão respiratório hoje. Na admissão, paciente com fala entrecortada, frequência respiratória de 52 irpm, tiragem intercostal e de fúrcula e com presença de sibilos difusos na ausculta pulmonar, saturando 90% em ar ambiente. Associado, apresenta-se taquicárdica (FC 130 bpm). Foi submetido à ciclo com salbutamol e ipratrópio, administrado prednisolona 30 mg via oral e acoplado a uma máscara não reinalante (MNR) a 15L/ min, sem resposta. No momento, qual a conduta recomendada?",
+      "options": {
+        "A": "Repetir ciclo de salbutamol e ipratrópio, manter salbutamol de 1 em 1 hora e solicitar avaliação da fisioterapia respiratória.",
+        "B": "Indicar salbutamol endovenoso contínuo e solicitar vaga de UTI.",
+        "C": "Prescrever salbutamol 1/1h, indicar intubação orotraqueal e solicitar vaga de UTI.",
+        "D": "Prescrever sulfato de Magnésio e solicitar vaga de UTI. Ponderar ventilação não invasiva se necessário."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q079",
+      "number": 79,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Escolar de 7 anos, menina, em tratamento profilático de asma com corticoide inalatório, chega à emergência com exacerbação da doença. É medicada com broncodilatador de curta ação, por via inalatória, de 20 em 20 minutos durante uma hora e corticoide sistêmico por via oral. Apresenta melhora e recebe alta hospitalar. A prescrição para o domicílio deverá ser feita com:",
+      "options": {
+        "A": "Broncodilatador inalatório de longa ação e corticoide inalatório.",
+        "B": "Broncodilatador inalatório de curta ação e anti-histamínico oral.",
+        "C": "Broncodilatador inalatório de curta ação e corticoide oral.",
+        "D": "Broncodilatador inalatório de curta ação.",
+        "E": "Antimuscarínico de longa duração e corticoide inalatório."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q080",
+      "number": 80,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Considere que você é profissional de uma Equipe Multiprofissional de Atenção Domiciliar (EMAD) e hoje uma das visitas é do Sr Marlon. Marlon tem 86 anos e apresenta uma síndrome demencial. Ao chegar na casa de Marlon você é recebido pelas filhas dele, que são as responsáveis pelo cuidado do pai. Elas contam que Marlon está com flutuações do nível de consciência, trocando a noite pelo dia e gritando dizendo que as filhas querem o matar. Esse quadro se iniciou há 5 dias, mas ontem de madrugada houve piora do quadro quando Marlon segurou a mão de uma de suas filhas jogando longe o remédio que ela ia entregar para ele, quase quebrando um dos dedos dela. Considerando um possível quadro de delirium, além de investigar clinicamente a causa da descompensação, qual conduta você orientaria às filhas do Sr Marlon pensando em melhorar de forma aguda o quadro de agressividade?",
+      "options": {
+        "A": "Deixar Marlon contido no leito pelo risco de agressão.",
+        "B": "Prescrever um benzodiazepínico para Marlon.",
+        "C": "Tentar manejo de sintomas psicóticos para demência como orientação na casa, calendário visível, não contradizer o paciente.",
+        "D": "Prescrever um antipsicótico típico para Marlon."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q081",
+      "number": 81,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Paciente feminina, é trazida contida pela guarda municipal à UPA. Eles referem que foram acionados após queixas da paciente estar em plataforma da estação de trem gritando e ameaçando passageiros. Os funcionários do trem contaram que ela geralmente fica nessa mesma estação falando sozinha, por vezes gritando, mas que ela nunca havia apresentado comportamento agressivo com os passageiros. Ela se encontra sem documento e não se sabe o histórico clínico da paciente. A médica solicita que os policiais liberem as mãos da paciente durante o atendimento, mas após o pedido, no meio da consulta, a paciente tenta agredir a médica. A médica prescreve haloperidol para a paciente e enquanto ela está menos agitada consegue realizar exames - que excluem qualquer causa orgânica que explique o quadro atual. Durante avaliação nada sugere intoxicação por uso de substâncias. Após algumas horas a paciente volta a apresentar sinais de agitação e agressividade com a equipe da UPA dizendo que estão tentando matá-la e que o “homem de amarelo” está observando tudo. Também foi tentado contato com algum familiar ou conhecido pela equipe da assistência social, porém sem sucesso. Diante do cenário apresentado, qual a conduta final mais adequada a ser tomada pela médica do serviço?",
+      "options": {
+        "A": "Manter paciente em observação na UPA e realizar nova dose de haloperidol com prometazina.",
+        "B": "Solicitar remoção para internação psiquiátrica involuntária.",
+        "C": "Prescrição de benzodiazepínico com reavaliação após 30 minutos, já que não houve resposta com antipsicótico.",
+        "D": "Liberação da paciente pois ela não apresenta nada clínico."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q082",
+      "number": 82,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Psiquiatria na Infância e Adolescência",
+      "stem": "Uma senhora de 79 anos, recentemente viúva e vivendo isolada dos vizinhos e filhos, trouxe o tema da morte durante uma consulta no posto de saúde. Ela diz que não vê mais sentido em continuar viva, nada lhe satisfaz e tem vontade de chorar durante a maior parte do dia. Já está em tratamento para depressão, há 5 meses, mas ainda sem resposta satisfatória. Ela também relata que não consegue tirar da cabeça a ideia de tomar veneno ou se enforcar em casa, acreditando que isso seria um alívio para seu sofrimento. Considerando a organização dos serviços na comunidade, qual seria a conduta apropriada para esse caso?",
+      "options": {
+        "A": "Encaminhar para uma internação hospitalar imediatamente.",
+        "B": "Dispensar a paciente e enviar um agente comunitário para acompanhar as suas atividades no dia a dia.",
+        "C": "Pedir para a paciente continuar o tratamento com o seu médico especialista em data oportuna de retorno.",
+        "D": "Transferir a paciente para um serviço de emergência psiquiátrica para avaliação de uma possível internação."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Psiquiatria na Infância e Adolescência",
+      "images": [],
+      "scheduleId": "cron-257"
+    },
+    {
+      "id": "b28-q083",
+      "number": 83,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Mulher, 55 anos, funcionária de segurança, é levada à Unidade Básica de Saúde por sua Agente Comunitária de Saúde (ACS) devido a delírio persecutório. Segundo relatos da ACS, a paciente chegou a proferir uma clara ameaça de morte à vizinha, a quem atribuíra a realização de trabalhos espirituais contra ela. Enquanto aguardava ser chamada na recepção, a paciente começou a ficar progressivamente agitada, falando sozinha, e tentou agredir outros usuários com um cabo de vassoura. Após tentativa de abordagem verbal e posterior restrição de espaço realizada pela equipe de enfermagem, ela ficou ainda mais agitada e passou a tentar agredir todos que se aproximavam. A sequência de procedimentos adequados para esse caso é",
+      "options": {
+        "A": "Administração de haloperidol intramuscular, seguida de nova intervenção verbal.",
+        "B": "Administração de diazepam intramuscular, seguida de observação em consultório.",
+        "C": "Contenção mecânica, seguida de administração de haloperidol intramuscular.",
+        "D": "Contenção mecânica, seguida de observação em consultório."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q084",
+      "number": 84,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Transtornos Alimentares e de Personalidade",
+      "stem": "Uma estudante de Nutrição, de 23 anos, procurou consulta com médico clínico devido a episódios recorrentes de sangramento intestinal baixo. A paciente apresentava peso de 55 kg e altura de 1,60 m (índice de massa corpórea de 21 kg/m²), com hemoglobina de 6,9 g/dL e hematócrito de 20%. O médico prescreveu uma bolsa de concentrado de hemácias de 250 mL, por via intravenosa, para corrigir o grave quadro anêmico. Durante as interações, a paciente relatou que costuma tomar vários laxantes como a simeticona, pelo menos três vezes ao dia, por medo de ganhar peso. De fato, o uso frequente dessa substância provocou alterações significativas no hábito intestinal, com aumento da frequência evacuatória e episódios de sangramento. Ela costuma armazenar várias caixas de simeticona em seu quarto, sentindo vergonha de que os familiares descubram. Em relação aos hábitos alimentares, relata episódios de comer rapidamente grande quantidade de alimento, 2 vezes por semana, alternados com períodos de jejum total, prática de atividade física intensa e uso de laxantes como forma de compensação pelo possível ganho de peso. Com base no exposto, qual transtorno alimentar melhor descreve esse quadro clínico?",
+      "options": {
+        "A": "Anorexia nervosa.",
+        "B": "Bulimia nervosa.",
+        "C": "Transtorno de compulsão alimentar.",
+        "D": "Transtorno de evitação/restrição da ingestão de alimentos."
+      },
+      "answer": "B",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Transtornos Alimentares e de Personalidade",
+      "images": [],
+      "scheduleId": "cron-256"
+    },
+    {
+      "id": "b28-q085",
+      "number": 85,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Saúde Mental",
+      "topic": "Emergências Psiquiátricas",
+      "stem": "Mulher de 43 anos procura Unidade Básica de Saúde com queixa de lombalgia crônica. Refere que o quadro iniciou há 6 meses, tem forte intensidade e impede a maioria das atividades. Por causa da dor, passa a maior parte do dia sentada ou deitada. Além da dor, queixa-se de insônia e fadiga. Nega irradiação e perda ponderal. Já procurou a emergência diversas vezes e consultou com alguns ortopedistas, tendo utilizado diferentes esquemas de analgésicos, sem melhora. Em relação ao início do quadro, nega trauma. Lembra que a dor iniciou durante o período em que ficou como acompanhante da mãe durante internação hospitalar por Infarto Agudo do Miocárdio, que foi a causa de sua morte. Traz laudo de ressonância magnética realizada há 5 meses, que demonstra abaulamento discal difuso em L4-L5. Ao exame físico, apresenta dor à movimentação ativa e passiva, sem déficits neurológicos. Considerando o caso, o diagnóstico a ser considerado e a conduta mais apropriada a ser tomada pelo médico de família e comunidade é:",
+      "options": {
+        "A": "Transtorno de ansiedade generalizada. Referenciar para psicoterapia e iniciar antidepressivo.",
+        "B": "Radiculopatia discal. Encaminhar paciente para ortopedista para avaliação cirúrgica.",
+        "C": "Transtorno de sintomas somáticos. Legimitizar os sintomas relatados. Explicar que doenças graves foram descartadas e que há a possibilidade de que a dor exista mesmo sem uma doença definida. Agendar consultas para acompanhamento regular.",
+        "D": "Lombalgia crônica inespecífica. Encaminhar paciente para fisioterapia motora."
+      },
+      "answer": "C",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Emergências Psiquiátricas",
+      "images": [],
+      "scheduleId": "cron-255"
+    },
+    {
+      "id": "b28-q086",
+      "number": 86,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Paciente masculino, 46 anos, com histórico de obesidade e hipertensão, apresenta múltiplos episódios prévios de cólica nefrética. Durante consulta de rotina com o clínico geral, ele traz exames para avaliação de risco para litíase renal, cujos resultados são os seguintes: * Cálcio urinário: 420 mg/24h (VR: 100-300 mg/24h); * Citrato urinário: 520 mg/24h (VR: 320-1200 mg/24h); * Ácido úrico urinário: 450 mg/24h (VR: 250-800 mg/24h); * Oxalato urinário: 28 mg/24h (VR: 4-40 mg/24h); * PTH sérico: 42 pg/mL. Com base nesses resultados, qual das medidas abaixo seria mais eficaz no manejo para reduzir os episódios de cólica nefrética?",
+      "options": {
+        "A": "Clortalidona",
+        "B": "Diminuir consumo de alimentos rico em cálcio.",
+        "C": "Losartana",
+        "D": "Alopurinol."
+      },
+      "answer": "A",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [],
+      "scheduleId": "cron-271"
+    },
+    {
+      "id": "b28-q087",
+      "number": 87,
+      "collectionBlock": 28,
+      "documentBlock": 29,
+      "area": "Clínica Médica",
+      "topic": "Nefrolitíase",
+      "stem": "Mulher de 34 anos, previamente hígida, apresenta histórico de nefrolitíase recorrente desde a adolescência. Refere cansaço e fraqueza muscular intermitente. Ao exame físico, está normotensa, sem edemas, e sem alterações neurológicas. Exames laboratoriais revelam creatinina 0,7 mg/dL, potássio 3,1 mEq/L, sódio 143 mEq/L, cálcio total 9,8 mg/dL, bicarbonato 15 mEq/L EAS: pH urinário: 6,8, leucócitos 25/campo. Tomografia de abdome a seguir: Fonte: radiopaedia.org. Com base no quadro clínico e laboratorial, qual o diagnóstico mais provável e a conduta inicial mais apropriada?",
+      "options": {
+        "A": "Nefrocalcinose associada à hipocalciúria; iniciar tiazídico.",
+        "B": "Hipomagnesemia com perda renal; iniciar reposição de magnésio.",
+        "C": "Acidose tubular renal proximal; iniciar bicarbonato de sódio e tiazídico.",
+        "D": "Acidose tubular renal distal; iniciar citrato de potássio."
+      },
+      "answer": "D",
+      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-29-download.pdf",
+      "sourceLabel": "Nefrolitíase",
+      "images": [
+        "data:image/webp;base64,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"
+      ],
+      "scheduleId": "cron-271"
+    }
+  ]
+}
