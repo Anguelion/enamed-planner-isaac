@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-9';
+const QUESTION_BANK_ASSET_VERSION = '20260714-10';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -79,6 +79,9 @@ let highlightUndoStack = [];
 let currentUser = null;
 let syncTimer = null;
 let syncInFlight = false;
+let cloudDirty = false;
+let lastCloudSyncAt = 0;
+let cloudSyncPoll = null;
 let renderCache = { questionStats: new Map(), flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
@@ -394,10 +397,16 @@ function applyOfficialSchedule() {
   saveStateOnly();
   return true;
 }
+function questionMatchesSchedule(question, item) {
+  if(!question || !item || String(question.collectionBlock) !== String(item.block)) return false;
+  const candidates = [question.sourceLabel, question.topic, question.source].map(canonicalTopic).filter(Boolean);
+  const target = canonicalTopic(item.topic);
+  return candidates.some(candidate => candidate === target || (candidate.length >= 6 && (target.includes(candidate) || candidate.includes(target))));
+}
 function scheduleForQuestion(question) {
   if(question.scheduleId) {
     const linked = state.schedule.find(item => item.id === question.scheduleId);
-    if(linked) return linked;
+    if(linked && questionMatchesSchedule(question, linked)) return linked;
   }
   const sameBlock = state.schedule.filter(item => String(item.block) === String(question.collectionBlock));
   const candidates = [question.sourceLabel, question.topic, question.source].map(canonicalTopic).filter(Boolean);
@@ -426,10 +435,11 @@ function backfillQuestionScheduleLinks() {
 }
 function questionStatsForSchedule(scheduleId) {
   if(renderCache.questionStats.has(scheduleId)) return renderCache.questionStats.get(scheduleId);
+  const scheduleItem = state.schedule.find(item => item.id === scheduleId);
   const linked = questionBank.filter(question => {
     const result = questionResult(question);
     if(!result?.answeredAt) return false;
-    return (result.scheduleId || scheduleForQuestion(question)?.id) === scheduleId;
+    return questionMatchesSchedule(question, scheduleItem) || (result.scheduleId === scheduleId && String(question.collectionBlock) === String(scheduleItem?.block));
   });
   const correct = linked.filter(question => questionResult(question)?.correct).length;
   const stats = { done: linked.length, correct, rate: linked.length ? correct / linked.length : 0 };
@@ -468,8 +478,19 @@ function setSyncStatus(text, kind='') {
   document.getElementById('syncText').textContent = text;
   box.className = `sync-status ${kind}`;
 }
+function showStudyToast(message) {
+  document.querySelector('.study-toast')?.remove();
+  const toast = document.createElement('div');
+  toast.className = 'study-toast';
+  toast.setAttribute('role','status');
+  toast.innerHTML = `<strong>✓ ${escapeHtml(message)}</strong><button type="button" aria-label="Fechar">×</button>`;
+  toast.querySelector('button').onclick = () => toast.remove();
+  document.body.append(toast);
+  setTimeout(() => toast.remove(), 6500);
+}
 function scheduleCloudSave() {
   if(!currentUser || !sbClient) return;
+  cloudDirty = true;
   clearTimeout(syncTimer);
   setSyncStatus('Alterações pendentes', 'busy');
   syncTimer = setTimeout(pushCloudState, 900);
@@ -478,21 +499,28 @@ async function pushCloudState() {
   if(!currentUser || syncInFlight) return;
   syncInFlight = true;
   setSyncStatus('Sincronizando...', 'busy');
+  const updatedAt = new Date().toISOString();
   const { error } = await sbClient.from('planner_states').upsert({
     user_id: currentUser.id,
     data: state,
-    updated_at: new Date().toISOString()
+    updated_at: updatedAt
   }, { onConflict: 'user_id' });
   syncInFlight = false;
   if(error) {
     console.error('Falha ao sincronizar:', error);
     setSyncStatus('Erro ao sincronizar', 'error');
   } else {
+    cloudDirty = false;
+    lastCloudSyncAt = Date.parse(updatedAt) || Date.now();
     setSyncStatus(`Sincronizado ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
   }
 }
 async function pullCloudState({ firstLogin=false }={}) {
   if(!currentUser) return;
+  if(cloudDirty && !firstLogin) {
+    await pushCloudState();
+    return;
+  }
   setSyncStatus('Buscando dados...', 'busy');
   const { data, error } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
   if(error) {
@@ -500,8 +528,15 @@ async function pullCloudState({ firstLogin=false }={}) {
     setSyncStatus('Configure o banco', 'error');
     return;
   }
+  const remoteAt = Date.parse(data?.updated_at || '') || 0;
+  if(!firstLogin && remoteAt && remoteAt <= lastCloudSyncAt) {
+    setSyncStatus(`Sincronizado ${new Date(lastCloudSyncAt || remoteAt).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
+    return;
+  }
   if(data?.data?.schedule?.length) {
     state = data.data;
+    cloudDirty = false;
+    lastCloudSyncAt = remoteAt || Date.now();
     normalizeOfficialScheduleNames();
     ensureRestartFromBlockTen();
     ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
@@ -518,6 +553,18 @@ async function pullCloudState({ firstLogin=false }={}) {
     setSyncStatus('Sincronizado', 'online');
   }
 }
+function startCloudSyncPolling() {
+  if(cloudSyncPoll) clearInterval(cloudSyncPoll);
+  cloudSyncPoll = setInterval(() => {
+    if(currentUser && !document.hidden && !syncInFlight) pullCloudState();
+  }, 30000);
+}
+window.addEventListener('focus', () => {
+  if(currentUser && !syncInFlight) pullCloudState();
+});
+document.addEventListener('visibilitychange', () => {
+  if(!document.hidden && currentUser && !syncInFlight) pullCloudState();
+});
 function loadQuestionBank() {
   if(!questionBankLoadPromise) questionBankLoadPromise = loadQuestionBankNow();
   return questionBankLoadPromise;
@@ -700,11 +747,16 @@ async function initCloud() {
   } else {
     updateAccountUI();
   }
-  if(currentUser) await pullCloudState();
+  if(currentUser) {
+    await pullCloudState({firstLogin:true});
+    startCloudSyncPolling();
+  }
   sbClient.auth.onAuthStateChange((event, session) => {
     const wasLoggedOut = !currentUser;
     currentUser = session?.user || null;
     updateAccountUI();
+    if(currentUser) startCloudSyncPolling();
+    else if(cloudSyncPoll) { clearInterval(cloudSyncPoll); cloudSyncPoll=null; }
     if(currentUser && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
       setTimeout(() => pullCloudState({firstLogin: wasLoggedOut}), 0);
     }
@@ -4418,14 +4470,14 @@ function applyQuestionEdits(question) {
 function openQuestionsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
-  const exact = questionBank.filter(question => String(question.collectionBlock) === String(item.block) && canonicalTopic(question.topic) === canonicalTopic(item.topic));
-  const direct = questionBank.filter(question => question.scheduleId === item.id);
-  const linked = exact.length ? exact : direct.length ? direct : questionBank.filter(question => scheduleForQuestion(question)?.id === item.id);
+  const linkedByTopic = questionBank.filter(question => questionMatchesSchedule(question, item));
+  const direct = questionBank.filter(question => question.scheduleId === item.id && String(question.collectionBlock) === String(item.block));
+  const linked = linkedByTopic.length ? linkedByTopic : direct;
   ui.tab = 'questoes';
   ui.qFocusScheduleId = linked.length ? item.id : '';
   ui.qBlock = item.block ? String(item.block) : 'Todos';
   ui.qSource = 'Todas';
-  ui.qTopic = exact.length ? item.topic : 'Todos';
+  ui.qTopic = linkedByTopic.length ? item.topic : 'Todos';
   ui.qStatus = 'Não respondidas';
   ui.qFocusTarget = LESSON_MIN_QUESTIONS;
   ui.qIndex = 0;
@@ -4446,6 +4498,7 @@ function openFlashcardsForSchedule(scheduleId) {
   render();
 }
 function filteredQuestions() {
+  const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   const filtered = questionBank.filter(question => {
     const result = questionResult(question);
     const query = normalizedTopic(ui.qSearch || '');
@@ -4457,7 +4510,7 @@ function filteredQuestions() {
       ...(Array.isArray(question.tags) ? question.tags : [])
     ].filter(Boolean).join(' '));
     const searchOk = !query || searchable.includes(query);
-    const focusOk = !ui.qFocusScheduleId || scheduleForQuestion(question)?.id === ui.qFocusScheduleId;
+    const focusOk = !ui.qFocusScheduleId || questionMatchesSchedule(question, focusItem);
     const blockOk = ui.qBlock === 'Todos' || String(question.collectionBlock) === String(ui.qBlock);
     const sourceOk = ui.qSource === 'Todas' || question.sourceLabel === ui.qSource;
     const topicOk = ui.qTopic === 'Todos' || question.topic === ui.qTopic;
@@ -4470,7 +4523,7 @@ function filteredQuestions() {
     return searchOk && focusOk && blockOk && sourceOk && topicOk && statusOk;
   });
   if(!ui.qFocusScheduleId || !n(ui.qFocusTarget)) return filtered;
-  const completed = questionBank.filter(question => scheduleForQuestion(question)?.id === ui.qFocusScheduleId && questionResult(question)).length;
+  const completed = questionBank.filter(question => questionMatchesSchedule(question, focusItem) && questionResult(question)).length;
   const remaining = Math.max(0, n(ui.qFocusTarget) - completed);
   return filtered.slice(0, remaining);
 }
@@ -4547,8 +4600,13 @@ function navigateQuestionBy(delta) {
   if(!settleQuestionTimerBeforeLeave()) return;
   stopQuestionTimer(true);
   resetKeyboardConfirmation();
+  const showingJustAnswered = Boolean(ui.justAnsweredId);
   ui.justAnsweredId = '';
-  ui.qIndex = Math.max(0, Math.min(questions.length - 1, ui.qIndex + delta));
+  // No filtro "Não respondidas", a questão recém-corrigida fica temporariamente
+  // na lista para exibir o comentário. Ao avançar, ela já sai da lista; manter
+  // +1 nesse momento faria o celular pular a próxima questão.
+  const effectiveDelta = showingJustAnswered && delta > 0 ? 0 : delta;
+  ui.qIndex = Math.max(0, Math.min(questions.length - 1, ui.qIndex + effectiveDelta));
   ui.qQuestionId = questions[ui.qIndex]?.id || '';
   render();
 }
@@ -5079,7 +5137,7 @@ function bindQuestionActions(questions, question) {
   const commentPrev = document.getElementById('commentPrevQuestion');
   if(commentPrev) commentPrev.onclick = () => { stopQuestionTimer(true); resetKeyboardConfirmation(); ui.justAnsweredId=''; ui.qIndex=Math.max(0,ui.qIndex-1); render(); };
   const commentNext = document.getElementById('commentNextQuestion');
-  if(commentNext) commentNext.onclick = () => { stopQuestionTimer(true); resetKeyboardConfirmation(); ui.justAnsweredId=''; ui.qIndex=Math.min(questions.length-1,ui.qIndex+1); render(); };
+  if(commentNext) commentNext.onclick = () => { stopQuestionTimer(true); resetKeyboardConfirmation(); const showingJustAnswered=Boolean(ui.justAnsweredId); ui.justAnsweredId=''; ui.qIndex=Math.min(questions.length-1,ui.qIndex+(showingJustAnswered?0:1)); render(); };
   document.querySelectorAll('[data-question-card][data-card-id][data-card-field]').forEach(input => {
     input.oninput = e => updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => updateQuestionFlashcard(e.currentTarget);
@@ -5401,6 +5459,7 @@ function answerQuestion(question, selected, timedOut=false) {
   resetKeyboardConfirmation();
   const previous = state.questionProgress[question.id] || {};
   const linkedLesson = scheduleForQuestion(question);
+  const questionsDoneBefore = linkedLesson ? questionStatsForSchedule(linkedLesson.id).done : 0;
   const correct = !timedOut && selected === question.answer;
   const draftConfidence = previous.draftConfidence || '';
   const confidenceMap = { red: 20, yellow: 55, green: 90 };
@@ -5443,7 +5502,12 @@ function answerQuestion(question, selected, timedOut=false) {
     if(correct) log.correct = n(log.correct) + 1;
     else log.wrong = n(log.wrong) + 1;
   }
+  if(linkedLesson) renderCache.questionStats.delete(linkedLesson.id);
+  const questionsDoneAfter = linkedLesson ? questionStatsForSchedule(linkedLesson.id).done : 0;
   persist();
+  if(linkedLesson && questionsDoneBefore < LESSON_MIN_QUESTIONS && questionsDoneAfter >= LESSON_MIN_QUESTIONS) {
+    showStudyToast(`Parabéns! Você concluiu as ${LESSON_MIN_QUESTIONS} questões de ${linkedLesson.topic}.`);
+  }
 }
 function updateQuestionProgressField(question, input) {
   const field = input.dataset.progressField;
