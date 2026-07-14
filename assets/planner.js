@@ -707,13 +707,13 @@ function reviveHiddenHistoryDates() {
 }
 function getDayLog(date) { ensureDayLogs(); let log = state.dayLogs.find(x=>x.date===date); if(!log) { log = defaultDayLog(date); state.dayLogs.push(log); } return log; }
 function setDayLog(date, field, value) { const log = getDayLog(date); log[field] = value; persist(); }
-function emptyStudyTimer() { return { kind:'', scheduleId:'', startedAt:0, elapsedSeconds:0, committedSeconds:0, lastSavedAt:0, interval:null, displayInterval:null }; }
+function emptyStudyTimer() { return { kind:'', scheduleId:'', startedAt:0, elapsedSeconds:0, committedSeconds:0, minimumSaveSeconds:0, lastSavedAt:0, interval:null, displayInterval:null }; }
 function loadStudyTimerSession() {
   try {
     const saved = JSON.parse(localStorage.getItem(STUDY_TIMER_KEY));
     if(!saved?.kind) return emptyStudyTimer();
     const elapsedSeconds = Math.max(0, Math.min(4 * 60 * 60, n(saved.elapsedSeconds)));
-    return { ...emptyStudyTimer(), kind:saved.kind, scheduleId:saved.scheduleId || '', elapsedSeconds, committedSeconds:Math.min(elapsedSeconds,Math.max(0,n(saved.committedSeconds))), lastSavedAt:n(saved.savedAt) || Date.now() };
+    return { ...emptyStudyTimer(), kind:saved.kind, scheduleId:saved.scheduleId || '', elapsedSeconds, committedSeconds:Math.min(elapsedSeconds,Math.max(0,n(saved.committedSeconds))), minimumSaveSeconds:Math.max(0,n(saved.minimumSaveSeconds)), lastSavedAt:n(saved.savedAt) || Date.now() };
   } catch(error) { return emptyStudyTimer(); }
 }
 function emptyPomodoro() { return { mode:'', phase:'work', running:false, alarm:false, endAt:0, remaining:0, workSeconds:1500, breakSeconds:300 }; }
@@ -883,6 +883,7 @@ function persistStudyTimerSession() {
     scheduleId:studyTimeTracker.scheduleId || '',
     elapsedSeconds:autoStudyElapsedSeconds(),
     committedSeconds:n(studyTimeTracker.committedSeconds),
+    minimumSaveSeconds:n(studyTimeTracker.minimumSaveSeconds),
     running:Boolean(studyTimeTracker.startedAt),
     savedAt:Date.now()
   }));
@@ -932,6 +933,7 @@ function commitAutoStudyTime(tracker, seconds) {
 function checkpointAutoStudyTime(force=false) {
   if(!studyTimeTracker.kind) return 0;
   const totalSeconds=autoStudyElapsedSeconds();
+  if(totalSeconds<n(studyTimeTracker.minimumSaveSeconds)) return 0;
   const seconds=Math.max(0,totalSeconds-n(studyTimeTracker.committedSeconds));
   if(!force && seconds<30) return 0;
   if(seconds<1) return 0;
@@ -943,10 +945,14 @@ function checkpointAutoStudyTime(force=false) {
   saveStateOnly();
   return seconds;
 }
-function startAutoStudy(kind, scheduleId='') {
+function startAutoStudy(kind, scheduleId='', minimumSaveSeconds=0) {
   if(document.hidden) return;
-  if(autoStudyIsRunning() && studyTimeTracker.kind === kind && studyTimeTracker.scheduleId === scheduleId) return;
+  if(autoStudyIsRunning() && studyTimeTracker.kind === kind && studyTimeTracker.scheduleId === scheduleId) {
+    studyTimeTracker.minimumSaveSeconds=Math.max(n(studyTimeTracker.minimumSaveSeconds),n(minimumSaveSeconds));
+    return;
+  }
   if(!studyTimeTracker.startedAt && studyTimeTracker.kind === kind && studyTimeTracker.scheduleId === scheduleId) {
+    studyTimeTracker.minimumSaveSeconds=Math.max(n(studyTimeTracker.minimumSaveSeconds),n(minimumSaveSeconds));
     studyTimeTracker.startedAt = Date.now();
     studyTimeTracker.displayInterval = setInterval(updateAutoStudyIndicator, 1000);
     persistStudyTimerSession();
@@ -955,7 +961,7 @@ function startAutoStudy(kind, scheduleId='') {
   }
   stopAutoStudy();
   const now = Date.now();
-  studyTimeTracker = { kind, scheduleId, startedAt:now, elapsedSeconds:0, committedSeconds:0, lastSavedAt:now, interval:null, displayInterval:setInterval(updateAutoStudyIndicator, 1000) };
+  studyTimeTracker = { kind, scheduleId, startedAt:now, elapsedSeconds:0, committedSeconds:0, minimumSaveSeconds:Math.max(0,n(minimumSaveSeconds)), lastSavedAt:now, interval:null, displayInterval:setInterval(updateAutoStudyIndicator, 1000) };
   persistStudyTimerSession();
   updateAutoStudyIndicator();
 }
@@ -971,13 +977,14 @@ function pauseAutoStudy(kind='') {
 function stopAutoStudy(kind='', askToSave=true) {
   if(!studyTimeTracker.kind || (kind && studyTimeTracker.kind !== kind)) return;
   const tracker = studyTimeTracker;
-  const seconds = Math.max(0,autoStudyElapsedSeconds()-n(tracker.committedSeconds));
+  const totalSeconds=autoStudyElapsedSeconds();
+  const seconds = Math.max(0,totalSeconds-n(tracker.committedSeconds));
   if(studyTimeTracker.interval) clearInterval(studyTimeTracker.interval);
   if(studyTimeTracker.displayInterval) clearInterval(studyTimeTracker.displayInterval);
   studyTimeTracker = emptyStudyTimer();
   localStorage.removeItem(STUDY_TIMER_KEY);
   updateAutoStudyIndicator();
-  if(seconds >= 1 && commitAutoStudyTime(tracker, seconds)) saveStateOnly();
+  if(totalSeconds>=n(tracker.minimumSaveSeconds) && seconds >= 1 && commitAutoStudyTime(tracker, seconds)) saveStateOnly();
 }
 function resumeAutoStudyForActiveView() {
   if(document.hidden) return;
@@ -4326,6 +4333,7 @@ function filteredQuestions() {
   });
 }
 function setQuestionFocusMode(enabled) {
+  const wasEnabled=questionSidebarCollapsed;
   questionSidebarCollapsed=Boolean(enabled);
   if(questionSidebarCollapsed) localStorage.setItem(QUESTION_SIDEBAR_KEY,'1');
   else localStorage.removeItem(QUESTION_SIDEBAR_KEY);
@@ -4337,10 +4345,15 @@ function setQuestionFocusMode(enabled) {
     toggle.setAttribute('aria-label',questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão');
     toggle.title=questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco';
   }
+  if(questionSidebarCollapsed && !wasEnabled) {
+    const question=filteredQuestions()[ui.qIndex];
+    if(question) startAutoStudy('questions',scheduleForQuestion(question)?.id || '',60);
+  } else if(!questionSidebarCollapsed && wasEnabled) {
+    stopAutoStudy('questions');
+  }
 }
 function renderQuestionBank() {
   stopAutoStudy('video');
-  stopAutoStudy('questions');
   ensureQuestionProgress();
   const answered = questionBank.filter(questionResult);
   const correct = answered.filter(q => questionResult(q).correct);
@@ -4391,6 +4404,8 @@ function renderQuestionBank() {
   if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qIndex=0; render(); };
   document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); });
   bindQuestionActions(questions, activeQuestion);
+  if(questionSidebarCollapsed && activeQuestion && !autoStudyIsRunning('questions')) startAutoStudy('questions',scheduleForQuestion(activeQuestion)?.id || '',60);
+  updateAutoStudyIndicator();
 }
 function renderQuestionBlockOverview() {
   const groups = [...new Set(questionBank.map(question => question.collectionBlock).filter(Boolean).map(String))]
