@@ -981,10 +981,6 @@ function stopAutoStudy(kind='', askToSave=true) {
 }
 function resumeAutoStudyForActiveView() {
   if(document.hidden) return;
-  if(ui.tab === 'questoes') {
-    const question = filteredQuestions()[ui.qIndex];
-    if(question) startAutoStudy('questions', scheduleForQuestion(question)?.id || '');
-  }
   if(ui.tab === 'aulas') {
     const video = document.getElementById('lessonVideo');
     const lesson = currentVideoLesson();
@@ -1311,9 +1307,11 @@ function startDashboardCountdown() {
 function renderTabs() {
   document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => `<button class="tab ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}">${iconSvg(icon)}<span>${label}</span></button>`).join('');
   document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => {
+    const nextTab=b.dataset.tab;
+    if(ui.tab==='questoes' && nextTab!=='questoes' && !settleQuestionTimerBeforeLeave()) return;
     if(autoStudyIsRunning()) stopAutoStudy();
     if(ui.tab === 'aulas') saveOpenVideoPosition();
-    ui.tab=b.dataset.tab;
+    ui.tab=nextTab;
     if(ui.tab==='questoes') { ui.qFocusScheduleId=''; ui.qStatus='Não respondidas'; ui.qIndex=0; ui.justAnsweredId=''; resetKeyboardConfirmation(); }
     render();
   });
@@ -4275,6 +4273,7 @@ function filteredQuestions() {
 }
 function renderQuestionBank() {
   stopAutoStudy('video');
+  stopAutoStudy('questions');
   ensureQuestionProgress();
   const answered = questionBank.filter(questionResult);
   const correct = answered.filter(q => questionResult(q).correct);
@@ -4326,8 +4325,6 @@ function renderQuestionBank() {
   if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qIndex=0; render(); };
   document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); });
   bindQuestionActions(questions, activeQuestion);
-  if(activeQuestion) startAutoStudy('questions', scheduleForQuestion(activeQuestion)?.id || '');
-  else if(questionBank.length) stopAutoStudy('questions');
 }
 function renderQuestionBlockOverview() {
   const groups = [...new Set(questionBank.map(question => question.collectionBlock).filter(Boolean).map(String))]
@@ -4535,7 +4532,7 @@ function renderQuestionTimer(question, result) {
       <input class="input" id="questionMinutes" type="number" min="0.25" step="0.25" value="${Math.round(seconds/15)/4}" ${mode==='stopwatch'?'disabled':''} title="Minutos por questão">
     </div>
     <div class="question-timer-status" id="questionTimerStatus">${escapeHtml(questionTimer.status || (active ? 'Em andamento' : 'Pronto'))}</div>
-    <div class="question-timer-actions compact"><button class="icon-btn primary" id="startQuestionTimer" ${result?'disabled':''} title="Iniciar sessão">${questionTimer.running?'●':'▶'}</button><button class="icon-btn" id="pauseQuestionTimer" title="Pausar">Ⅱ</button><button class="icon-btn" id="saveQuestionTimer" title="Salvar tempo">✓</button><button class="icon-btn" id="discardQuestionTimer" title="Desativar">×</button></div>
+    <div class="question-timer-actions compact"><button class="icon-btn primary" id="startQuestionTimer" ${result?'disabled':''} title="${questionTimer.running?'Pausar contagem':'Iniciar contagem'}">${questionTimer.running?'Ⅱ':'▶'}</button><button class="icon-btn" id="saveQuestionTimer" title="Salvar tempo">✓</button><button class="icon-btn" id="discardQuestionTimer" title="Descartar tempo">×</button></div>
   </aside>`;
 }
 function renderQuestionReflection(question, result) {
@@ -4584,7 +4581,6 @@ function bindQuestionActions(questions, question) {
   const timerMode = document.getElementById('questionTimerMode');
   const timerMinutes = document.getElementById('questionMinutes');
   const startTimer = document.getElementById('startQuestionTimer');
-  const pauseTimer = document.getElementById('pauseQuestionTimer');
   const saveTimer = document.getElementById('saveQuestionTimer');
   const discardTimer = document.getElementById('discardQuestionTimer');
   const editToggle = document.getElementById('questionEditToggle');
@@ -4602,8 +4598,9 @@ function bindQuestionActions(questions, question) {
     saveStateOnly();
     render();
   });
-  const goPrev = () => { stopQuestionTimer(true); resetKeyboardConfirmation(); ui.justAnsweredId=''; ui.qIndex=Math.max(0,ui.qIndex-1); render(); };
+  const goPrev = () => { if(!settleQuestionTimerBeforeLeave()) return; stopQuestionTimer(true); resetKeyboardConfirmation(); ui.justAnsweredId=''; ui.qIndex=Math.max(0,ui.qIndex-1); render(); };
   const goNext = () => {
+    if(!settleQuestionTimerBeforeLeave()) return;
     stopQuestionTimer(true);
     resetKeyboardConfirmation();
     if(ui.justAnsweredId) ui.justAnsweredId='';
@@ -4684,8 +4681,7 @@ function bindQuestionActions(questions, question) {
     persistQuestionTimerSession();
     renderQuestionClock();
   };
-  if(startTimer) startTimer.onclick = () => startQuestionTimer(question);
-  if(pauseTimer) pauseTimer.onclick = () => pauseQuestionTimer();
+  if(startTimer) startTimer.onclick = () => questionTimer.running ? pauseQuestionTimer() : startQuestionTimer(question);
   if(saveTimer) saveTimer.onclick = () => saveQuestionTimerTime();
   if(discardTimer) discardTimer.onclick = () => discardQuestionTimer();
   if(editToggle) editToggle.onclick = () => { ui.editQuestionId = ui.editQuestionId === question.id ? '' : question.id; render(); };
@@ -4746,7 +4742,6 @@ function bindQuestionActions(questions, question) {
     }
     persist();
   };
-  maybeAutoStartQuestionTimer(question);
 }
 function addQuestionFlashcard(question) {
   const cards = Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : [];
@@ -5123,13 +5118,6 @@ function resetQuestionTimerForQuestion(question) {
   };
   persistQuestionTimerSession();
 }
-function maybeAutoStartQuestionTimer(question) {
-  if(!question || questionResult(question)) return;
-  if(!ui.questionTimerOpen || questionTimer.mode !== 'countdown' || !questionTimer.sessionActive || questionTimer.pausedByUser) return;
-  if(questionTimer.running && questionTimer.questionId === question.id) return;
-  if(questionTimer.questionId !== question.id) resetQuestionTimerForQuestion(question);
-  startQuestionTimer(question, {auto:true});
-}
 function startQuestionTimer(question) {
   if(questionTimer.running) return;
   if(questionTimer.questionId && questionTimer.questionId !== question.id) resetQuestionTimerForQuestion(question);
@@ -5192,6 +5180,16 @@ function setQuestionTimerMode(question, mode) {
 function questionTimerElapsedSeconds() {
   if(!questionTimer.questionId) return 0;
   return Math.max(0,n(questionTimer.elapsedSeconds));
+}
+function settleQuestionTimerBeforeLeave() {
+  const seconds=questionTimerElapsedSeconds();
+  if(questionTimer.running) {
+    const shouldSave=confirm(`A contagem está ativa em ${formatClock(seconds)}.\n\nOK: salvar o tempo e sair.\nCancelar: permanecer nesta questão com a contagem ativa.`);
+    if(!shouldSave) return false;
+  }
+  if(seconds>0) saveQuestionTimerTime();
+  else if(questionTimer.running || questionTimer.questionId) discardQuestionTimer(false,'',false);
+  return true;
 }
 function saveQuestionTimerTime() {
   const seconds = questionTimerElapsedSeconds();
@@ -5505,11 +5503,15 @@ document.addEventListener('visibilitychange', () => {
     resumeAutoStudyForActiveView();
   }
 });
-window.addEventListener('beforeunload', () => {
+window.addEventListener('beforeunload', event => {
   pauseAutoStudy();
   persistStudyTimerSession();
   persistQuestionTimerSession();
   saveOpenVideoPosition();
+  if(questionTimer.running && questionTimerElapsedSeconds()>0) {
+    event.preventDefault();
+    event.returnValue='';
+  }
 });
 window.addEventListener('online', () => {
   if(currentUser) pullCloudState();
