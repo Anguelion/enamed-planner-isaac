@@ -4012,6 +4012,14 @@ function flashcardAllRecords() {
     return card.front && card.back;
   });
 }
+function mutableFlashcardRecord(id) {
+  const sources = [
+    ...Object.values(state.questionFlashcards || {}).flat(),
+    ...Object.values(state.videoFlashcards || {}).flat(),
+    ...(state.flashcardLibrary || [])
+  ];
+  return sources.find(card => card?.id === id) || null;
+}
 function fsrsIntervalDays(card, rating, nextStability) {
   const profile = state.flashcardSystem.profile;
   const retention = Math.max(0.7, Math.min(0.99, n(profile.targetRetention) || 0.9));
@@ -4330,8 +4338,9 @@ function reviewFlashcard(id, quality) {
   const nextId = queueBefore[currentIndex + 1]?.id || '';
   const card = flashcardAllRecords().find(item => item.id === id);
   if(!card) return;
+  const mutableCard = mutableFlashcardRecord(id);
   const current = state.flashcardProgress[id] || {};
-  const beforeCard = {...card};
+  const beforeCard = {...(mutableCard || card)};
   state.flashcardReviewHistory = Array.isArray(state.flashcardReviewHistory) ? state.flashcardReviewHistory : [];
   state.flashcardReviewHistory.push({ cardId:id, previous: {...current}, reviewedAt:new Date().toISOString() });
   state.flashcardReviewHistory = state.flashcardReviewHistory.slice(-50);
@@ -4349,7 +4358,9 @@ function reviewFlashcard(id, quality) {
     nextReview: isLeech ? '2099-12-31' : fsrs.due,
     dueAt: isLeech ? '2099-12-31T23:59:59.000Z' : fsrs.dueAt
   };
-  Object.assign(card, { ...fsrs, due:isLeech ? '2099-12-31' : fsrs.due, dueAt:isLeech ? '2099-12-31T23:59:59.000Z' : fsrs.dueAt, isSuspended:isLeech, contentVersion:Math.max(1,n(card.contentVersion)||1), rowVersion:Math.max(1,n(card.rowVersion)||1)+1 });
+  const cardUpdate = { ...fsrs, due:isLeech ? '2099-12-31' : fsrs.due, dueAt:isLeech ? '2099-12-31T23:59:59.000Z' : fsrs.dueAt, isSuspended:isLeech, contentVersion:Math.max(1,n(card.contentVersion)||1), rowVersion:Math.max(1,n(card.rowVersion)||1)+1 };
+  Object.assign(card, cardUpdate);
+  if(mutableCard) Object.assign(mutableCard, cardUpdate);
   state.flashcardSystem.reviewLogs.push({id:newFlashcardId('review'),cardId:id,rating:quality,reviewedAt:new Date().toISOString(),before:beforeCard,after:{...card},scheduledDays:fsrs.scheduledDays});
   state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.slice(-500);
   state.flashcardSystem.undoStack.push({cardId:id,previousProgress:{...current},beforeCard,reviewId:state.flashcardSystem.reviewLogs.at(-1).id});
@@ -4360,12 +4371,13 @@ function reviewFlashcard(id, quality) {
   const nextIndex = nextId ? queueAfter.findIndex(card => card.id === nextId) : -1;
   ui.flashcardIndex = nextIndex >= 0 ? nextIndex : Math.min(currentIndex, Math.max(queueAfter.length - 1, 0));
   ui.flashcardCurrentCardId = queueAfter[ui.flashcardIndex]?.id || '';
+  if(!queueAfter.length) showStudyToast('Parabéns! Você concluiu os flashcards. Não há mais o que fazer agora.');
   persist();
 }
 function undoFlashcardReview() {
   const systemUndo = state.flashcardSystem?.undoStack?.pop();
   if(systemUndo) {
-    const card = flashcardAllRecords().find(item => item.id === systemUndo.cardId);
+    const card = mutableFlashcardRecord(systemUndo.cardId);
     if(card) Object.assign(card, systemUndo.beforeCard);
     if(systemUndo.previousProgress && Object.keys(systemUndo.previousProgress).length) state.flashcardProgress[systemUndo.cardId] = systemUndo.previousProgress;
     else delete state.flashcardProgress[systemUndo.cardId];
@@ -4373,6 +4385,7 @@ function undoFlashcardReview() {
     state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.filter(log => log.id !== systemUndo.reviewId);
     if(review?.reviewedAt) adjustFlashcardDayCount(review.reviewedAt, -1);
     ui.revealedCards[systemUndo.cardId] = true;
+    ui.flashcardCurrentCardId = systemUndo.cardId;
     saveStateOnly();
     renderFlashcards();
     return;
@@ -4747,6 +4760,10 @@ function navigateQuestionBy(delta) {
   if(ui.tab !== 'questoes') return;
   const questions = filteredQuestions();
   if(!questions.length) return;
+  if(delta > 0 && ui.qIndex >= questions.length - 1) {
+    showStudyToast('Parabéns! Você chegou ao fim das questões deste filtro.');
+    return;
+  }
   if(!settleQuestionTimerBeforeLeave()) return;
   stopQuestionTimer(true);
   resetKeyboardConfirmation();
@@ -4882,7 +4899,7 @@ function renderQuestion(question, total) {
   const questionInfo = `<div class="question-info-stack"><div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>${renderQuestionTags(question)}</div>`;
   const focusInfo = questionSidebarCollapsed ? questionInfo : '';
   const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
-  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" ${ui.qIndex>=total-1?'disabled':''}>›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
+  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}</div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
@@ -4899,7 +4916,7 @@ function renderQuestion(question, total) {
       ${result ? renderQuestionReflection(question, result) : ''}
       ${result ? renderQuestionFlashcardEditor(question, result) : ''}
       ${renderQuestionNotes(question, savedProgress)}
-      <div class="question-nav"><div><button class="icon-btn" id="questionPrev" ${ui.qIndex===0?'disabled':''}>‹ Anterior</button> <button class="icon-btn" id="questionNext" ${ui.qIndex>=total-1?'disabled':''}>Próxima ›</button></div><div>${reviewButton} ${result?'<button class="icon-btn" id="questionRedo">Refazer</button>':''}</div></div>
+      <div class="question-nav"><div><button class="icon-btn" id="questionPrev" ${ui.qIndex===0?'disabled':''}>‹ Anterior</button> <button class="icon-btn" id="questionNext">Próxima ›</button></div><div>${reviewButton} ${result?'<button class="icon-btn" id="questionRedo">Refazer</button>':''}</div></div>
     </div></div></div>`;
 }
 function renderQuestionImages(question) {
@@ -4989,12 +5006,12 @@ function renderQuestionCommentPanel(question, result, highlights=[]) {
   const declaredAnswer = String(question.comment || '').match(/(?:^|\n)\s*(?:Correta|Gabarito)\s*:\s*([A-E])\b/i)?.[1]?.toUpperCase() || '';
   const auditedMismatch = question.answerAudit === 'official-source' && declaredAnswer && declaredAnswer !== question.answer;
   if(auditedMismatch) return `<div class="question-comment-panel">
-    <div class="comment-quick-nav"><button class="icon-btn" id="commentPrevQuestion" ${ui.qIndex===0?'disabled':''}>‹</button><button class="icon-btn primary" id="commentNextQuestion" ${nextDisabled}>Próx ›</button></div>
+    <div class="comment-quick-nav"><button class="icon-btn" id="commentPrevQuestion" ${ui.qIndex===0?'disabled':''}>‹</button><button class="icon-btn primary" id="commentNextQuestion">Próx ›</button></div>
     <div class="question-comment-card error"><strong>Comentário em revisão</strong><div>O gabarito ${escapeHtml(question.answer)} foi conferido na fonte original, mas o comentário anexado declara ${escapeHtml(declaredAnswer)} e provavelmente pertence a outra questão. A explicação foi ocultada para não induzir ao erro.</div></div>
   </div>`;
   return `<div class="question-comment-panel">
     <div class="comment-mastery">${masteryOptions.map(([value,label]) => `<button class="${mastery===value?'active':''} ${value}" data-comment-mastery="${value}">${escapeHtml(label)}</button>`).join('')}</div>
-    <div class="comment-quick-nav"><button class="icon-btn" id="commentPrevQuestion" ${ui.qIndex===0?'disabled':''}>‹</button><button class="icon-btn primary" id="commentNextQuestion" ${nextDisabled}>Próx ›</button></div>
+    <div class="comment-quick-nav"><button class="icon-btn" id="commentPrevQuestion" ${ui.qIndex===0?'disabled':''}>‹</button><button class="icon-btn primary" id="commentNextQuestion">Próx ›</button></div>
     <div class="comment-tabs">${tabs.map(([value,label,icon]) => `<button class="${tab===value?'active':''} ${value}" data-comment-tab="${value}"><span>${icon}</span>${escapeHtml(label)}</button>`).join('')}</div>
     <div class="question-comment-card ${escapeAttr(tab)}"><strong>${escapeHtml(tabs.find(item => item[0] === tab)?.[1] || 'Comentário')}</strong><div>${renderCommentSectionContent(tab, sections[tab] || sections.analysis, highlights)}</div></div>
   </div>`;
@@ -5312,7 +5329,18 @@ function bindQuestionActions(questions, question) {
   const commentPrev = document.getElementById('commentPrevQuestion');
   if(commentPrev) commentPrev.onclick = () => { stopQuestionTimer(true); resetKeyboardConfirmation(); ui.justAnsweredId=''; ui.qIndex=Math.max(0,ui.qIndex-1); render(); };
   const commentNext = document.getElementById('commentNextQuestion');
-  if(commentNext) commentNext.onclick = () => { stopQuestionTimer(true); resetKeyboardConfirmation(); const showingJustAnswered=Boolean(ui.justAnsweredId); ui.justAnsweredId=''; ui.qIndex=Math.min(questions.length-1,ui.qIndex+(showingJustAnswered?0:1)); render(); };
+  if(commentNext) commentNext.onclick = () => {
+    const showingJustAnswered = Boolean(ui.justAnsweredId);
+    if(!showingJustAnswered && ui.qIndex >= questions.length - 1) {
+      showStudyToast('Parabéns! Você chegou ao fim das questões deste filtro.');
+      return;
+    }
+    stopQuestionTimer(true);
+    resetKeyboardConfirmation();
+    ui.justAnsweredId = '';
+    ui.qIndex = Math.min(questions.length - 1, ui.qIndex + (showingJustAnswered ? 0 : 1));
+    render();
+  };
   document.querySelectorAll('[data-question-card][data-card-id][data-card-field]').forEach(input => {
     input.oninput = e => updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => updateQuestionFlashcard(e.currentTarget);
