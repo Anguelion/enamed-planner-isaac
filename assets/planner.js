@@ -6,7 +6,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260713-6';
+const QUESTION_BANK_ASSET_VERSION = '20260714-1';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -205,6 +205,18 @@ function saveStateOnly() { ensureDayLogs(); ensureSimTopics(); ensureFeynman(); 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
   if(!state.questionEdits || typeof state.questionEdits !== 'object') state.questionEdits = {};
+  if(!state.questionDataRepairs || typeof state.questionDataRepairs !== 'object') state.questionDataRepairs = {};
+  if(!state.questionDataRepairs.indicadoresSaudeQ01V1) {
+    const questionId='b10-indicadores-saude-q01';
+    const edit=state.questionEdits[questionId];
+    if(edit) {
+      edit.answer='D';
+      delete edit.comment;
+    }
+    const progress=state.questionProgress[questionId];
+    if(progress?.answeredAt && progress.selected) progress.correct=String(progress.selected).toUpperCase()==='D';
+    state.questionDataRepairs.indicadoresSaudeQ01V1=true;
+  }
   if(!state.questionLogged || typeof state.questionLogged !== 'object') state.questionLogged = {};
   if(!state.questionSettings || typeof state.questionSettings !== 'object') state.questionSettings = { secondsPerQuestion: 90 };
   if(!state.materials || typeof state.materials !== 'object') state.materials = {};
