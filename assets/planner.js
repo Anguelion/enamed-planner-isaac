@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-22';
+const QUESTION_BANK_ASSET_VERSION = '20260714-23';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -2265,7 +2265,9 @@ function toggleSelectedSimHighlight(run, question) {
     ? highlights.filter((_, index) => index !== existing)
     : [...highlights, { text: selected, color: ui.highlightColor || 'yellow' }];
   selection.removeAllRanges();
-  persist();
+  const stem = document.querySelector('.sim-highlightable.question-stem');
+  if(stem) stem.innerHTML = renderHighlightedText(question.stem, run.highlights[question.id]);
+  saveStateOnly();
 }
 function simScore(s) { return n(s.total)>0 ? n(s.correct)/n(s.total) : 0; }
 function renderSimSummary() { const done=state.simulados.filter(s=>n(s.correct)>0); const best=done.sort((a,b)=>simScore(b)-simScore(a))[0]; const avg=done.reduce((sum,s)=>sum+simScore(s),0)/Math.max(done.length,1); return `${progress('Média atual', avg, `${done.length} simulados preenchidos`)}${best ? `<div class="item"><div class="date-chip">${Math.round(simScore(best)*100)}%</div><div><strong>${escapeHtml(best.name)}</strong><div class="muted">${fmtDate(best.date)} · meta mínima 70%</div></div><div>${simScore(best)>=.7?'<span class="badge done">Meta</span>':'<span class="badge no">Abaixo</span>'}</div></div>` : '<div class="empty">Preencha os resultados para ver evolução.</div>'}`; }
@@ -5527,7 +5529,10 @@ function toggleSelectedHighlight(question) {
   const next = existing >= 0 ? highlights.filter((_, index) => index !== existing) : [...highlights, { text: selected, color: ui.highlightColor || 'yellow', scope, occurrence }];
   state.questionProgress[question.id] = { ...current, textHighlights: next };
   selection.removeAllRanges();
-  persist();
+  // Atualiza apenas o enunciado para o destaque aparecer sem reconstruir a tela inteira.
+  const stem = document.querySelector('.question-stem.highlightable[data-highlight-scope="stem"]');
+  if(stem) stem.innerHTML = renderHighlightedText(question.stem, next, true, 'stem');
+  saveStateOnly();
 }
 function loadQuestionTimerSession() {
   try {
