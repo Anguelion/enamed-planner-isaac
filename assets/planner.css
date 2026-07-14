@@ -1047,6 +1047,8 @@ body.dark .sidebar-toggle{background:#18313a;color:#8fd4e7}
 .question-issue-summary{width:100%;min-height:42px;margin:12px 0 2px;padding:8px 11px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--muted);text-align:left}
 .question-issue-summary strong{font-size:18px;color:var(--blue)}
 .question-issue-summary.has-items{border-color:#e6b760;background:var(--soft-amber);color:#85510d}
+.question-issue-summary.has-items:hover,.question-issue-summary.active{border-color:var(--blue);background:#e8f2ff;color:var(--blue);cursor:pointer}
+.question-issue-summary:disabled{opacity:.6;cursor:not-allowed}
 .question-key-issue.active{border-color:#dc9e31!important;background:var(--soft-amber)!important;color:#9a5b05!important;box-shadow:0 0 0 3px rgba(230,183,96,.2)!important}
 
 @media(max-width:1024px){

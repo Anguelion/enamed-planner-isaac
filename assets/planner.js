@@ -4765,6 +4765,7 @@ function renderQuestionBank() {
   const correct = answered.filter(q => questionResult(q).correct);
   const confidence = questionConfidenceStats();
   const flagged = questionBank.filter(question => state.questionProgress[question.id]?.answerKeyIssue).length;
+  const showingFlagged = ui.qStatus === 'Gabarito suspeito';
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   const blocks = ['Todos', ...new Set(questionBank.map(q => q.collectionBlock).filter(Boolean).map(String))]
     .sort((a,b)=>a === 'Todos' ? -1 : b === 'Todos' ? 1 : questionCollectionSort(a)-questionCollectionSort(b));
@@ -4788,7 +4789,7 @@ function renderQuestionBank() {
       <div class="section-title"><h2>Banco privado</h2><div class="question-sidebar-actions"><span class="badge today">${questionBank.length} questões</span><button class="icon-btn" id="collapseQuestionSidebar" title="Fechar painel do banco" aria-label="Fechar painel do banco">×</button></div></div>
       <div class="muted">Organizado por blocos do planner e coleções especiais.</div>
       <div class="question-counts"><div><strong>${answered.length}</strong><span class="muted">Feitas</span></div><div><strong>${correct.length}</strong><span class="muted">Certas</span></div><div><strong>${answered.length-correct.length}</strong><span class="muted">Erros</span></div></div>
-      <button class="question-issue-summary ${flagged?'has-items':''}" id="showQuestionIssues"><span>⚑</span><strong>${flagged}</strong><span>${flagged===1?'gabarito marcado':'gabaritos marcados'}</span></button>
+      <button class="question-issue-summary ${flagged?'has-items':''} ${showingFlagged?'active':''}" id="showQuestionIssues" aria-pressed="${showingFlagged}" ${flagged?'':'disabled'}><span>⚑</span><strong>${flagged}</strong><span>${showingFlagged ? 'gabaritos suspeitos exibidos' : flagged===1?'gabarito suspeito':'gabaritos suspeitos'}</span></button>
       ${progress('Aproveitamento', correct.length/Math.max(answered.length,1), `${correct.length} de ${answered.length}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
       ${focusItem ? (() => { const target=LESSON_MIN_QUESTIONS; const completed=questionBank.filter(item=>scheduleForQuestion(item)?.id===focusItem.id&&questionResult(item)).length; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
