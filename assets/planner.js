@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-23';
+const QUESTION_BANK_ASSET_VERSION = '20260714-24';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -3892,21 +3892,13 @@ async function loadVideoCatalog() {
   else render();
 }
 function flashcardCreationAllowed(result) {
-  if(!result) return false;
-  if(!result.correct) return true;
-  if(result.correctMode === 'Chute' || result.confidenceLevel === 'red') return true;
-  const confidence = n(result.certainty) || n(result.confidence) || ({ yellow:55, green:90 }[result.confidenceLevel] || 0);
-  return confidence < 90;
+  return Boolean(result);
 }
 function flashcardCreationReason(result) {
   if(!result) return '';
   if(!result.correct && result.missReason === 'Dúvida / já vi') return 'Liberado porque você errou em dúvida/já vi.';
   if(!result.correct) return 'Liberado porque você errou a questão.';
-  if(result.correctMode === 'Chute' || result.confidenceLevel === 'red') return 'Liberado porque o acerto foi um chute.';
-  const confidence = n(result.certainty) || n(result.confidence) || ({ yellow:55, green:90 }[result.confidenceLevel] || 0);
-  if(!confidence) return 'Liberado até você registrar pelo menos 90% de certeza.';
-  if(confidence < 90) return `Liberado porque sua certeza foi de ${confidence}%, abaixo de 90%.`;
-  return '';
+  return 'Liberado para transformar o acerto em revisão ativa.';
 }
 const FSRS_WEIGHTS = [0.4072,1.1829,3.1262,15.4722,7.2102,0.5316,1.0651,0.0234,1.616,0.1544,1.0824,1.9813,0.0953,0.2975,2.2042,0.2407,2.9466,0.5034,0.6567,0.1852,0.2007];
 const FSRS_RATINGS = {again:1, hard:2, good:3, easy:4};
