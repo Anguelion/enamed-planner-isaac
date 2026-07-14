@@ -3905,7 +3905,7 @@ function ankiTags(card) {
   ].map(tag => tag.replace(/\s+/g, '_').replace(/[;,\t]/g, '')).join(' ');
 }
 function exportAnkiTsv() {
-  const cards = filteredFlashcards(manualFlashcards());
+  const cards = filteredFlashcards(flashcardAllRecords());
   if(!cards.length) { alert('Nenhum flashcard para exportar neste filtro.'); return; }
   const header = '#separator:tab\n#html:true\n#tags column:5\n';
   const rows = cards.map(card => [
@@ -3927,8 +3927,10 @@ function exportFlashcardBackup() {
     exportedAt: new Date().toISOString(),
     app: 'SÓqueroMed',
     flashcards: state.questionFlashcards || {},
+    library: state.flashcardLibrary || [],
     progress: state.flashcardProgress || {},
-    settings: state.flashcardSettings || {}
+    settings: state.flashcardSettings || {},
+    scheduler: state.flashcardSystem || {}
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], {type:'application/json;charset=utf-8'});
   const a = document.createElement('a');
@@ -4682,6 +4684,7 @@ function handleQuestionKeyboard(event) {
   }
 
   if(event.code === 'Space') {
+    if(event.repeat) return;
     const selected = ui.draftAnswers[question.id];
     if(!selected || event.repeat) return;
     event.preventDefault();
@@ -4717,6 +4720,7 @@ function handleFlashcardKeyboard(event) {
     return;
   }
   if(event.code === 'Space') {
+    if(event.repeat) return;
     event.preventDefault();
     if(ui.revealedCards[card.id]) {
       reviewFlashcard(card.id, 3);
