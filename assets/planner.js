@@ -3008,7 +3008,7 @@ function renderVideoFlashcardEditor(source, lesson, schedule) {
   if(!source) return '';
   const cards = newestFlashcardsFirst(Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []);
   const topic = videoContentLabel(source);
-  return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários para registrar os pontos importantes.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>`<div class="flashcard-editor-item"><textarea class="textarea" data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front" placeholder="Frente: pergunta ou conceito">${escapeHtml(card.front || '')}</textarea><textarea class="textarea" data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back" placeholder="Verso: resposta curta">${escapeHtml(card.back || '')}</textarea><button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
+  return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários. Selecione um trecho e use a barra para formatar.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>`<div class="flashcard-editor-item">${renderFlashcardMarkdownField(`data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front"` ,card.front,'Frente: pergunta ou conceito')}${renderFlashcardMarkdownField(`data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso: resposta curta')}<button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
 }
 function addVideoFlashcard(source, lesson, schedule) {
   const cards = Array.isArray(state.videoFlashcards[source.id]) ? state.videoFlashcards[source.id] : [];
@@ -3390,6 +3390,7 @@ function renderAulas() {
     input.oninput = event => updateVideoFlashcard(event.currentTarget);
     input.onchange = event => updateVideoFlashcard(event.currentTarget);
   });
+  bindFlashcardMarkdownTools(document.getElementById('aulas') || document);
   document.querySelectorAll('[data-remove-video-card]').forEach(button => button.onclick = event => removeVideoFlashcard(event.currentTarget.dataset.removeVideoCard, event.currentTarget.dataset.cardId));
 }
 function nextCompleteVideoSource(lesson, source) {
@@ -3671,6 +3672,28 @@ function flashcardCreatedTime(card) {
 function newestFlashcardsFirst(cards) {
   return [...cards].sort((a,b) => flashcardCreatedTime(b) - flashcardCreatedTime(a));
 }
+function renderFlashcardMarkdownToolbar() {
+  return `<div class="flashcard-md-toolbar" role="toolbar" aria-label="Formatação do flashcard">
+    <button type="button" class="flashcard-md-tool" data-fc-md-prefix="**" data-fc-md-suffix="**" title="Negrito"><strong>B</strong></button>
+    <button type="button" class="flashcard-md-tool" data-fc-md-line="# " title="Texto grande"><strong>H</strong></button>
+    <button type="button" class="flashcard-md-tool marker" data-fc-md-prefix="==" data-fc-md-suffix="==" title="Marca-texto">Marca</button>
+    <button type="button" class="flashcard-md-tool color blue" data-fc-md-prefix="{{blue|" data-fc-md-suffix="}}" title="Texto azul" aria-label="Texto azul"></button>
+    <button type="button" class="flashcard-md-tool color green" data-fc-md-prefix="{{green|" data-fc-md-suffix="}}" title="Texto verde" aria-label="Texto verde"></button>
+    <button type="button" class="flashcard-md-tool color red" data-fc-md-prefix="{{red|" data-fc-md-suffix="}}" title="Texto vermelho" aria-label="Texto vermelho"></button>
+  </div>`;
+}
+function renderFlashcardMarkdownField(attributes, value, placeholder) {
+  return `<div class="flashcard-md-field">${renderFlashcardMarkdownToolbar()}<textarea class="textarea flashcard-markdown-input" ${attributes} placeholder="${escapeAttr(placeholder)}">${escapeHtml(value || '')}</textarea></div>`;
+}
+function bindFlashcardMarkdownTools(root=document) {
+  root.querySelectorAll('[data-fc-md-prefix],[data-fc-md-line]').forEach(button => button.onclick = event => {
+    event.preventDefault();
+    const textarea = event.currentTarget.closest('.flashcard-md-field')?.querySelector('textarea');
+    if(!textarea) return;
+    if(event.currentTarget.dataset.fcMdLine !== undefined) prefixMarkdownLine(textarea,event.currentTarget.dataset.fcMdLine);
+    else insertMarkdownAtSelection(textarea,event.currentTarget.dataset.fcMdPrefix || '',event.currentTarget.dataset.fcMdSuffix || '');
+  });
+}
 function normalizeFlashcardRecord(card) {
   if(!card || typeof card !== 'object') return card;
   card.weeklyBlockId = String(card.weeklyBlockId ?? card.block ?? '');
@@ -3913,6 +3936,7 @@ function renderFlashcards() {
     input.oninput = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
   });
+  bindFlashcardMarkdownTools(document.getElementById('flashcards') || document);
   if(study) startAutoStudy('flashcards', study.scheduleId || '');
   else stopAutoStudy('flashcards');
 }
@@ -3928,7 +3952,7 @@ function renderFlashcardRadar(all) {
 function renderFlashcardWorkspaceEditor() {
   const blocks = [...new Set((state.schedule||[]).map(item=>item.block).filter(Boolean))].sort((a,b)=>n(a)-n(b));
   const source=ui.flashcardCaptureSource || {};
-  return `<div class="flashcard-editor workspace-editor"><div class="section-title"><div><h2>Novo flashcard</h2><div class="muted">Criação livre na aba Flashcards. Use uma ideia por card.${source.key?` Origem: ${escapeHtml(source.label||source.key)}.`:''}</div></div><button class="icon-btn" data-fc-cancel>Cancelar</button></div><div class="fc-editor-grid"><label>Bloco<select id="fcNewBlock">${blocks.map(block=>`<option value="${escapeAttr(block)}" ${String(block)===String(source.block)?'selected':''}>Bloco ${escapeHtml(block)}</option>`).join('')}</select></label><label>Assunto<input id="fcNewSubject" class="input" value="${escapeAttr(source.subject||'')}" placeholder="Ex.: Diabetes: diagnóstico"></label><label>Tipo de origem<select id="fcNewSourceType"><option value="manual">Manual</option><option value="question" ${source.type==='question'?'selected':''}>Questão</option><option value="video" ${source.type==='video'?'selected':''}>Videoaula</option><option value="material" ${source.type==='material'?'selected':''}>Material</option></select></label><label>Referência<input id="fcNewSourceRef" class="input" value="${escapeAttr(source.reference||'')}" placeholder="Aula, questão ou material"></label></div><label>Frente<textarea id="fcNewFront" class="textarea" placeholder="Pergunta, decisão clínica ou conceito discriminativo"></textarea></label><label>Verso<textarea id="fcNewBack" class="textarea" placeholder="Resposta curta, objetiva e revisável"></textarea></label><label>Tags<input id="fcNewTags" class="input" placeholder="ex.: diabetes diagnóstico alto-rendimento"></label><div class="muted">A origem fica registrada para você voltar ao ponto de estudo. O agendamento começa como card novo.</div><button class="icon-btn primary" data-fc-save>Salvar flashcard</button></div>`;
+  return `<div class="flashcard-editor workspace-editor"><div class="section-title"><div><h2>Novo flashcard</h2><div class="muted">Criação livre na aba Flashcards. Use uma ideia por card.${source.key?` Origem: ${escapeHtml(source.label||source.key)}.`:''}</div></div><button class="icon-btn" data-fc-cancel>Cancelar</button></div><div class="fc-editor-grid"><label>Bloco<select id="fcNewBlock">${blocks.map(block=>`<option value="${escapeAttr(block)}" ${String(block)===String(source.block)?'selected':''}>Bloco ${escapeHtml(block)}</option>`).join('')}</select></label><label>Assunto<input id="fcNewSubject" class="input" value="${escapeAttr(source.subject||'')}" placeholder="Ex.: Diabetes: diagnóstico"></label><label>Tipo de origem<select id="fcNewSourceType"><option value="manual">Manual</option><option value="question" ${source.type==='question'?'selected':''}>Questão</option><option value="video" ${source.type==='video'?'selected':''}>Videoaula</option><option value="material" ${source.type==='material'?'selected':''}>Material</option></select></label><label>Referência<input id="fcNewSourceRef" class="input" value="${escapeAttr(source.reference||'')}" placeholder="Aula, questão ou material"></label></div><label>Frente${renderFlashcardMarkdownField('id="fcNewFront"','','Pergunta, decisão clínica ou conceito discriminativo')}</label><label>Verso${renderFlashcardMarkdownField('id="fcNewBack"','','Resposta curta, objetiva e revisável')}</label><label>Tags<input id="fcNewTags" class="input" placeholder="ex.: diabetes diagnóstico alto-rendimento"></label><div class="muted">A origem fica registrada para você voltar ao ponto de estudo. O agendamento começa como card novo.</div><button class="icon-btn primary" data-fc-save>Salvar flashcard</button></div>`;
 }
 function openQuickFlashcardCapture() {
   let source={type:'manual',key:`manual-${localISODate(new Date())}`,label:'Captura rápida'};
@@ -3982,20 +4006,20 @@ function renderFlashcardGroup(group) {
 function renderFlashcard(card) {
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
-  return `<article class="flashcard"><div class="flashcard-head"><strong>${escapeHtml(card.front)}</strong><span class="muted">${progress.reviews} rev. · ${escapeHtml(progress.nextReview)}</span></div><div class="flashcard-meta"><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span><span class="sm2-pill">${progress.interval} dias</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">${escapeHtml(progress.status)}</span></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back">${renderMarkdown(card.back)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}</article>`;
+  return `<article class="flashcard"><div class="flashcard-head"><div class="flashcard-rich-text">${renderFlashcardMarkdown(card.front)}</div><span class="muted">${progress.reviews} rev. · ${escapeHtml(progress.nextReview)}</span></div><div class="flashcard-meta"><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span><span class="sm2-pill">${progress.interval} dias</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">${escapeHtml(progress.status)}</span></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardMarkdown(card.back)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}</article>`;
 }
 function renderFlashcardStudy(card, queue=[]) {
   if(!card) return '<div class="flashcard-empty-session"><div><h2>Fim da sessão</h2><div class="muted">Nenhum flashcard neste filtro agora. Troque o filtro ou crie novos cards nas questões.</div></div></div>';
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
-  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span></div><div class="flashcard-front">${escapeHtml(card.front)}</div><div class="flashcard-meta" style="justify-content:center"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back">${renderMarkdown(card.back)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div></div></div>`;
+  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardMarkdown(card.front)}</div><div class="flashcard-meta" style="justify-content:center"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardMarkdown(card.back)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div></div></div>`;
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;
   const sourceAttr = card.questionId ? `data-question-card="${escapeAttr(card.questionId)}"` : `data-library-card="${escapeAttr(card.id)}"`;
   return `<div class="flashcard-inline-editor">
-    <textarea class="textarea" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="front" placeholder="Frente">${escapeHtml(card.front || '')}</textarea>
-    <textarea class="textarea" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="back" placeholder="Verso">${escapeHtml(card.back || '')}</textarea>
+    ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="front"`,card.front,'Frente')}
+    ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso')}
     <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || '')}" placeholder="Área">
     <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || '')}" placeholder="Assunto">
     <button class="tiny-btn" data-close-flashcard-edit="${escapeAttr(card.id)}">Fechar edição</button>
@@ -4586,7 +4610,7 @@ function renderQuestionFlashcardEditor(question, result) {
   const allowed = flashcardCreationAllowed(result);
   if(!allowed && !cards.length) return '';
   const reason = allowed ? flashcardCreationReason(result) : 'Flashcards já criados continuam disponíveis para edição.';
-  return `<div class="flashcard-editor"><div class="section-title"><div><h3>Criar flashcards</h3><div class="muted">${escapeHtml(reason)}</div></div><button class="icon-btn primary" id="addQuestionFlashcard" ${cards.length>=2 || !allowed?'disabled':''}>+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map((card,index)=>`<div class="flashcard-editor-item"><textarea class="textarea" data-question-card="${question.id}" data-card-id="${card.id}" data-card-field="front" placeholder="Frente: escreva a pergunta ou conceito">${escapeHtml(card.front || '')}</textarea><textarea class="textarea" data-question-card="${question.id}" data-card-id="${card.id}" data-card-field="back" placeholder="Verso: escreva a resposta">${escapeHtml(card.back || '')}</textarea><button class="tiny-btn" data-remove-question-card="${question.id}" data-card-id="${card.id}" title="Remover flashcard">×</button><input class="input" data-question-card="${question.id}" data-card-id="${card.id}" data-card-field="area" value="${escapeAttr(card.area || question.area || '')}" placeholder="Área"><input class="input" data-question-card="${question.id}" data-card-id="${card.id}" data-card-field="subarea" value="${escapeAttr(card.subarea || card.topic || question.topic || '')}" placeholder="Subárea"></div>`).join('')}</div>` : '<div class="empty">Escreva até dois flashcards curtos desta questão.</div>'}<div class="topic-source">${cards.length}/2 flashcards · ${escapeHtml(question.collectionLabel || questionCollectionLabel(question.collectionBlock))} · ${escapeHtml(question.topic)}</div></div>`;
+  return `<div class="flashcard-editor"><div class="section-title"><div><h3>Criar flashcards</h3><div class="muted">${escapeHtml(reason)} Selecione um trecho e use a barra para formatar.</div></div><button class="icon-btn primary" id="addQuestionFlashcard" ${cards.length>=2 || !allowed?'disabled':''}>+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>`<div class="flashcard-editor-item">${renderFlashcardMarkdownField(`data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front"`,card.front,'Frente: escreva a pergunta ou conceito')}${renderFlashcardMarkdownField(`data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso: escreva a resposta')}<button class="tiny-btn" data-remove-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || question.area || '')}" placeholder="Área"><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || card.topic || question.topic || '')}" placeholder="Subárea"></div>`).join('')}</div>` : '<div class="empty">Escreva até dois flashcards curtos desta questão.</div>'}<div class="topic-source">${cards.length}/2 flashcards · ${escapeHtml(question.collectionLabel || questionCollectionLabel(question.collectionBlock))} · ${escapeHtml(question.topic)}</div></div>`;
 }
 function renderQuestionNotes(question, result) {
   const notes = result?.notes || '';
@@ -4771,6 +4795,7 @@ function bindQuestionActions(questions, question) {
     input.oninput = e => updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => updateQuestionFlashcard(e.currentTarget);
   });
+  bindFlashcardMarkdownTools(document.getElementById('questoes') || document);
   document.querySelectorAll('[data-remove-question-card]').forEach(button => button.onclick = e => removeQuestionFlashcard(e.currentTarget.dataset.removeQuestionCard, e.currentTarget.dataset.cardId));
   if(feynman) feynman.onclick = () => {
     if(!state.feynman.some(item => item.topic.toLowerCase() === question.topic.toLowerCase())) {
@@ -5336,6 +5361,19 @@ function renderMarkdown(text) {
     .replace(/\*([^*]+)\*/g, '<em>$1</em>')
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\n/g, '<br>');
+}
+function renderFlashcardMarkdown(text) {
+  const inline = value => escapeHtml(value || '')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    .replace(/==([^=]+)==/g, '<mark>$1</mark>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\{\{(blue|green|red)\|([^{}]+)\}\}/g, '<span class="flashcard-text-$1">$2</span>');
+  return String(text || '').split(/\r?\n/).map(line => {
+    const heading = line.match(/^(#{1,3})\s+(.+)$/);
+    if(heading) return `<div class="flashcard-md-heading level-${heading[1].length}">${inline(heading[2])}</div>`;
+    return inline(line);
+  }).join('<br>');
 }
 function materialHeadingId(text) {
   return `material-heading-${normalizedTopic(text).replace(/\s+/g,'-').slice(0,72)}`;

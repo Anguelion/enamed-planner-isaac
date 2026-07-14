@@ -353,6 +353,8 @@ body.dark table th{background:#243434;color:#dce6d7}
 body.dark tr:hover td{background:#253030}
 body.dark .login-screen{background:#151d1e}
 body.dark .login-card,body.dark .pomodoro-card,body.dark .question-timer,body.dark .question-reflection,body.dark .question-notes,body.dark .log-box,body.dark .sim-review-card,body.dark .feynman-card,body.dark .flashcard,body.dark .flashcard-editor{background:#202a2a}
+body.dark .flashcard-md-toolbar,body.dark .flashcard-study-card,body.dark .flashcard-study-card .flashcard-back{background:#202a2a;color:var(--ink)}
+body.dark .flashcard-md-tool.color{border-color:#202a2a}
 body.dark .answer-option:hover,body.dark .sim-answer:hover,body.dark .material-choice:hover,body.dark .material-choice.active{background:#233837}
 body.dark .material-folder[open] summary{background:#243434}
 .theme-toggle{justify-self:start;min-width:42px}
@@ -477,6 +479,18 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .flashcard-editor-list{display:grid;gap:10px;margin-top:10px}
 .flashcard-editor-item{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:start}
 .flashcard-editor-item textarea{min-height:90px}
+.flashcard-md-field{display:grid;gap:6px;min-width:0}
+.flashcard-md-toolbar{display:flex;align-items:center;gap:5px;min-height:32px;padding:4px;border:1px solid var(--line);border-radius:7px;background:var(--surface,#fff)}
+.flashcard-md-tool{display:grid;place-items:center;min-width:30px;height:28px;padding:0 7px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--ink);font:inherit;font-size:13px;cursor:pointer}
+.flashcard-md-tool:hover,.flashcard-md-tool:focus-visible{border-color:var(--blue);background:var(--soft-blue);outline:0}
+.flashcard-md-tool.marker{background:#fff1a8;color:#5f4a00;font-weight:800}
+.flashcard-md-tool.color{min-width:24px;width:24px;height:24px;padding:0;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.flashcard-md-tool.color.blue{background:#1769e0}.flashcard-md-tool.color.green{background:#109b72}.flashcard-md-tool.color.red{background:#db3b35}
+.flashcard-rich-text{min-width:0;overflow-wrap:anywhere}
+.flashcard-rich-text mark{padding:1px 3px;border-radius:3px;background:#fff1a8;color:#352d10}
+.flashcard-text-blue{color:#1769e0}.flashcard-text-green{color:#087b5a}.flashcard-text-red{color:#c7332e}
+.flashcard-md-heading{display:block;margin:4px 0 8px;font-weight:900;line-height:1.2}
+.flashcard-md-heading.level-1{font-size:1.5em}.flashcard-md-heading.level-2{font-size:1.3em}.flashcard-md-heading.level-3{font-size:1.15em}
 .auto-progress{font-size:11px;color:var(--teal);font-weight:800;margin-top:4px}
 .flashcard-command{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:end}
 .flashcard-filters{display:grid;grid-template-columns:repeat(4,minmax(140px,1fr));gap:10px;margin-top:12px}
@@ -487,7 +501,8 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .flashcard-review-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,340px);gap:14px}
 .flashcard-stage{display:grid;place-items:center;min-height:520px}
 .flashcard-study-card{width:min(760px,100%);min-height:380px;display:grid;align-content:center;gap:18px;text-align:center;border:1px solid var(--line);border-radius:8px;background:radial-gradient(circle at top left,var(--soft-blue),#fff 42%);padding:34px;box-shadow:0 22px 50px rgba(20,78,108,.12)}
-.flashcard-study-card .flashcard-front{font-size:clamp(22px,3vw,34px);line-height:1.3;font-weight:900}
+.flashcard-study-card .flashcard-front{font-size:30px;line-height:1.35;font-weight:500}
+.flashcard-study-card .flashcard-front strong{font-weight:900}
 .flashcard-study-card .flashcard-back{font-size:18px;line-height:1.65;text-align:left;background:#fff;border-radius:8px;padding:16px}
 .flashcard-study-top{display:flex;justify-content:center;gap:7px;flex-wrap:wrap}
 .flashcard-session-nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
@@ -533,6 +548,9 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .answer-row{grid-template-columns:42px minmax(0,1fr)}
 .eliminate-btn{touch-action:manipulation}
 .answer-confirm{align-items:stretch;flex-direction:column}
+.flashcard-editor-item{grid-template-columns:1fr}
+.flashcard-editor-item>[data-remove-video-card],.flashcard-editor-item>[data-remove-question-card]{justify-self:end}
+.flashcard-study-card .flashcard-front{font-size:24px}
 .answer-confirm .muted{margin-right:0}
 .answer-confirm .icon-btn{width:100%}
 }
