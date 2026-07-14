@@ -4292,6 +4292,12 @@ function filteredQuestions() {
     return focusOk && blockOk && sourceOk && topicOk && statusOk;
   });
 }
+function setQuestionFocusMode(enabled) {
+  questionSidebarCollapsed=Boolean(enabled);
+  if(questionSidebarCollapsed) localStorage.setItem(QUESTION_SIDEBAR_KEY,'1');
+  else localStorage.removeItem(QUESTION_SIDEBAR_KEY);
+  document.querySelector('#questoes .question-layout')?.classList.toggle('sidebar-collapsed',questionSidebarCollapsed);
+}
 function renderQuestionBank() {
   stopAutoStudy('video');
   stopAutoStudy('questions');
@@ -4336,8 +4342,8 @@ function renderQuestionBank() {
     <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : '<div class="empty">Nenhuma questão corresponde a este filtro.</div>'}</div>
   </div>`;
   document.getElementById('questionBlock').onchange = e => { ui.qFocusScheduleId=''; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
-  document.getElementById('collapseQuestionSidebar').onclick = () => { questionSidebarCollapsed=true; localStorage.setItem(QUESTION_SIDEBAR_KEY,'1'); render(); };
-  document.getElementById('reopenQuestionSidebar').onclick = () => { questionSidebarCollapsed=false; localStorage.removeItem(QUESTION_SIDEBAR_KEY); render(); };
+  document.getElementById('collapseQuestionSidebar').onclick = () => setQuestionFocusMode(true);
+  document.getElementById('reopenQuestionSidebar').onclick = () => setQuestionFocusMode(false);
   document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionTopic').onchange = e => { ui.qFocusScheduleId=''; ui.qTopic=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionStatus').onchange = e => { ui.qStatus=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
@@ -5468,6 +5474,13 @@ document.getElementById('themeToggle').onclick = event => {
 };
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 document.addEventListener('keydown', event => {
+  if((event.ctrlKey || event.metaKey) && !event.shiftKey && event.key.toLowerCase() === 'f' && (ui.tab==='aulas' || ui.tab==='questoes')) {
+    event.preventDefault();
+    if(event.repeat) return;
+    if(ui.tab==='aulas') document.getElementById('toggleVideoFocus')?.click();
+    else setQuestionFocusMode(!questionSidebarCollapsed);
+    return;
+  }
   if((event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'f') {
     event.preventDefault();
     openQuickFlashcardCapture();
