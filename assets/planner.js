@@ -3006,13 +3006,13 @@ function videoCountRing(lesson) {
 }
 function renderVideoFlashcardEditor(source, lesson, schedule) {
   if(!source) return '';
-  const cards = Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : [];
+  const cards = newestFlashcardsFirst(Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []);
   const topic = videoContentLabel(source);
   return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários para registrar os pontos importantes.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>`<div class="flashcard-editor-item"><textarea class="textarea" data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front" placeholder="Frente: pergunta ou conceito">${escapeHtml(card.front || '')}</textarea><textarea class="textarea" data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back" placeholder="Verso: resposta curta">${escapeHtml(card.back || '')}</textarea><button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
 }
 function addVideoFlashcard(source, lesson, schedule) {
   const cards = Array.isArray(state.videoFlashcards[source.id]) ? state.videoFlashcards[source.id] : [];
-  cards.push({ id:`video-card-${Date.now()}`, front:'', back:'', scheduleId:schedule?.id || '', block:schedule?.block || lesson?.block || '', area:schedule?.area || lesson?.area || 'Sem área', subarea:videoContentLabel(source), topic:schedule?.topic || lesson?.title || videoContentLabel(source), createdAt:new Date().toISOString() });
+  cards.unshift({ id:`video-card-${Date.now()}`, front:'', back:'', scheduleId:schedule?.id || '', block:schedule?.block || lesson?.block || '', area:schedule?.area || lesson?.area || 'Sem área', subarea:videoContentLabel(source), topic:schedule?.topic || lesson?.title || videoContentLabel(source), createdAt:new Date().toISOString() });
   state.videoFlashcards[source.id] = cards;
   renderCache.manualCards = null;
   persist();
@@ -3662,6 +3662,15 @@ function flashcardCreationReason(result) {
 const FSRS_WEIGHTS = [0.4072,1.1829,3.1262,15.4722,7.2102,0.5316,1.0651,0.0234,1.616,0.1544,1.0824,1.9813,0.0953,0.2975,2.2042,0.2407,2.9466,0.5034,0.6567,0.1852,0.2007];
 const FSRS_RATINGS = {again:1, hard:2, good:3, easy:4};
 function newFlashcardId(prefix='fc') { return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2)}`; }
+function flashcardCreatedTime(card) {
+  const createdAt = Date.parse(card?.createdAt || '');
+  if(Number.isFinite(createdAt)) return createdAt;
+  const timestamp = String(card?.id || '').match(/(?:^|-)\d{13}(?:-|$)/)?.[0]?.replaceAll('-', '');
+  return timestamp ? n(timestamp) : 0;
+}
+function newestFlashcardsFirst(cards) {
+  return [...cards].sort((a,b) => flashcardCreatedTime(b) - flashcardCreatedTime(a));
+}
 function normalizeFlashcardRecord(card) {
   if(!card || typeof card !== 'object') return card;
   card.weeklyBlockId = String(card.weeklyBlockId ?? card.block ?? '');
