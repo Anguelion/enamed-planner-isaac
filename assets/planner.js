@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-6';
+const QUESTION_BANK_ASSET_VERSION = '20260714-7';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -4358,7 +4358,13 @@ function normalizeMedicalTypography(value='') {
 }
 function normalizeQuestionRecord(question) {
   const options = Object.fromEntries(Object.entries(question.options || {}).map(([letter,text]) => [String(letter).trim().toUpperCase(), normalizeQuestionText(text)]));
-  return {...question, stem:normalizeQuestionText(question.stem), options, comment:normalizeMedicalTypography(question.comment || ''), answer:String(question.answer || '').trim().toUpperCase()};
+  const answer = String(question.answer || '').trim().toUpperCase();
+  const comment = normalizeMedicalTypography(question.comment || '');
+  const declaredAnswer = comment.match(/(?:^|\n)\s*(?:Correta|Gabarito)\s*:\s*([A-E])\b/i)?.[1]?.toUpperCase() || '';
+  const safeComment = declaredAnswer && answer && declaredAnswer !== answer
+    ? `Análise em revisão: o comentário declara ${declaredAnswer}, mas o gabarito desta questão é ${answer}. A explicação foi ocultada até a conferência no TXT-base do bloco.`
+    : comment;
+  return {...question, stem:normalizeQuestionText(question.stem), options, comment:safeComment, answer};
 }
 function questionDataIssue(question) {
   const letters = Object.keys(question.options || {});
