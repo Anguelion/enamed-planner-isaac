@@ -1289,6 +1289,12 @@ function debounce(callback, wait=180) {
   };
 }
 function pct(v) { return `${Math.round(n(v)*100)}%`; }
+function formatStudyHours(hours) {
+  const totalMinutes = Math.max(0, Math.round(n(hours) * 60));
+  const h = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  return h ? `${h}h${minutes ? ` ${minutes}min` : ''}` : `${minutes}min`;
+}
 function clamp(v,min=0,max=1) { return Math.max(min, Math.min(max, n(v))); }
 function lessonQuestionTarget() { return LESSON_MIN_QUESTIONS; }
 function lessonFlashcardTarget() { return LESSON_MIN_FLASHCARDS; }
@@ -1740,6 +1746,13 @@ function enhanceScheduleStudyIcons() {
     const item=state.schedule.find(entry=>entry.id===scheduleId);
     const topicLine=row.querySelector('.schedule-topic-line');
     if(!item || !topicLine) return;
+    const hoursInput=row.querySelector('[data-field="hours"]');
+    if(hoursInput && !row.querySelector('.schedule-hours-readable')) {
+      const readable=document.createElement('div');
+      readable.className='schedule-hours-readable auto-progress';
+      readable.textContent=`${formatStudyHours(item.hours)} vinculadas à aula`;
+      hoursInput.insertAdjacentElement('afterend',readable);
+    }
     if(item.date===studyDateKey()) {
       row.classList.add('schedule-today-row');
       const dateCell=row.querySelector('.schedule-date-cell');
