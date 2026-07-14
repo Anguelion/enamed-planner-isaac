@@ -826,6 +826,11 @@ function setPomodoroPanelOpen(open) {
   fruit.title=open?'Fechar pomodoro':'Abrir pomodoro';
   fruit.setAttribute('aria-label', fruit.title);
   if(open) {
+    const rect=fruit.getBoundingClientRect();
+    const panelWidth=Math.min(280, Math.max(220, window.innerWidth - 24));
+    const opensRight=(window.innerWidth - rect.right) >= panelWidth + 8;
+    panel.classList.toggle('open-right', opensRight);
+    panel.classList.toggle('open-left', !opensRight);
     panel.hidden=false;
     panel.classList.remove('is-closing');
     requestAnimationFrame(()=>panel.classList.add('is-open'));
