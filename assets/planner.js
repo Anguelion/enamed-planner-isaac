@@ -4760,14 +4760,19 @@ function navigateQuestionBy(delta) {
   if(ui.tab !== 'questoes') return;
   const questions = filteredQuestions();
   if(!questions.length) return;
-  if(delta > 0 && ui.qIndex >= questions.length - 1) {
+  const showingJustAnswered = Boolean(ui.justAnsweredId);
+  if(delta > 0 && ui.qIndex >= questions.length - 1 && !showingJustAnswered) {
     showStudyToast('Parabéns! Você chegou ao fim das questões deste filtro.');
+    return;
+  }
+  if(delta > 0 && ui.qIndex >= questions.length - 1 && showingJustAnswered) {
+    ui.justAnsweredId = '';
+    showStudyToast('Parabéns! Você concluiu as questões deste filtro.');
     return;
   }
   if(!settleQuestionTimerBeforeLeave()) return;
   stopQuestionTimer(true);
   resetKeyboardConfirmation();
-  const showingJustAnswered = Boolean(ui.justAnsweredId);
   ui.justAnsweredId = '';
   // No filtro "Não respondidas", a questão recém-corrigida fica temporariamente
   // na lista para exibir o comentário. Ao avançar, ela já sai da lista; manter
@@ -5333,6 +5338,11 @@ function bindQuestionActions(questions, question) {
     const showingJustAnswered = Boolean(ui.justAnsweredId);
     if(!showingJustAnswered && ui.qIndex >= questions.length - 1) {
       showStudyToast('Parabéns! Você chegou ao fim das questões deste filtro.');
+      return;
+    }
+    if(showingJustAnswered && ui.qIndex >= questions.length - 1) {
+      ui.justAnsweredId = '';
+      showStudyToast('Parabéns! Você concluiu as questões deste filtro.');
       return;
     }
     stopQuestionTimer(true);
