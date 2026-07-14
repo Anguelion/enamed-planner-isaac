@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-20';
+const QUESTION_BANK_ASSET_VERSION = '20260714-21';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -5043,7 +5043,7 @@ function renderQuestionNotes(question, result) {
 }
 function bindQuestionActions(questions, question) {
   if(!question) return;
-  document.querySelectorAll('[data-question][data-answer]').forEach(button => button.onclick = e => {
+  const chooseAnswer = (button, e) => {
     const highlighting = textHighlightEnabled();
     if(highlighting && (ui.suppressAnswerClick || Date.now() < n(ui.highlightGestureUntil))) {
       ui.suppressAnswerClick = false;
@@ -5064,6 +5064,22 @@ function bindQuestionActions(questions, question) {
     saveStateOnly();
     resetKeyboardConfirmation();
     render();
+  };
+  document.querySelectorAll('[data-question][data-answer]').forEach(button => {
+    button.onclick = e => {
+      if(button.dataset.pointerHandled === '1') {
+        delete button.dataset.pointerHandled;
+        e.preventDefault();
+        return;
+      }
+      chooseAnswer(button, e);
+    };
+    button.onpointerup = e => {
+      if(e.pointerType !== 'touch' && e.pointerType !== 'pen') return;
+      button.dataset.pointerHandled = '1';
+      e.preventDefault();
+      chooseAnswer(button, e);
+    };
   });
   const prev = document.getElementById('questionPrev');
   const next = document.getElementById('questionNext');
