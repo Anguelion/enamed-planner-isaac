@@ -1106,6 +1106,7 @@ body:not(.dark) .qbank-mode .question-stem{margin:8px 0 26px;padding:0;border-ra
 .qbank-mode .answer-row{grid-template-columns:46px minmax(0,1fr);gap:10px}
 .qbank-mode .eliminate-btn{border:2px solid #dfe3e8;border-radius:12px;background:#fff;color:#758196;font-size:20px;font-weight:600}
 .qbank-mode .answer-option{grid-template-columns:58px minmax(0,1fr);gap:18px;align-items:center;min-height:92px;padding:18px 20px;border:3px solid #dedede;border-radius:15px;background:#fff;color:#151b2b;box-shadow:none}
+.qbank-mode .answer-option,.qbank-mode .answer-confirm button{touch-action:manipulation}
 .qbank-mode .answer-option:hover{border-color:#8eb5ff;background:#f8fbff}
 .qbank-mode .answer-option.selected{border-color:#1261f5;background:#f3f7ff}
 .qbank-mode .answer-option.correct{border-color:#21a77c;background:#effbf6}

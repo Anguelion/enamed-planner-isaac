@@ -4442,7 +4442,7 @@ function renderQuestion(question, total) {
   const linkedLesson = scheduleForQuestion(question);
   const isSpecialCollection = String(question.collectionBlock) === 'ineditas';
   const collectionLabel = question.collectionLabel || questionCollectionLabel(question.collectionBlock || '-');
-  const draftAnswer = ui.draftAnswers[question.id] || '';
+  const draftAnswer = ui.draftAnswers[question.id] || savedProgress.draftAnswer || '';
   const draftConfidence = savedProgress.draftConfidence || '';
   const highlights = savedProgress.textHighlights || [];
   const eliminated = savedProgress.eliminated || [];
@@ -4475,7 +4475,7 @@ function renderQuestion(question, total) {
       ${dataIssue ? `<div class="question-data-warning"><strong>Revisar extração.</strong> ${escapeHtml(dataIssue)} Use “Editar” para corrigir com base no PDF.</div>` : ''}
       <div class="answer-list">${options}</div>
       ${!result && !dataIssue ? renderQuestionConfidenceLine(question, draftConfidence) : ''}
-      ${!result && !dataIssue ? `<div class="answer-confirm"><span class="muted">${draftAnswer ? `Alternativa ${draftAnswer} selecionada` : 'Selecione uma alternativa e confirme.'}</span><button class="icon-btn primary" id="confirmQuestionAnswer" ${draftAnswer?'':'disabled'}>Confirmar resposta</button></div>` : ''}
+      ${!result && !dataIssue ? `<div class="answer-confirm"><span class="muted">${draftAnswer ? `Alternativa ${draftAnswer} selecionada` : 'Selecione uma alternativa e confirme.'}</span><button class="icon-btn primary" id="confirmQuestionAnswer" data-selected-answer="${escapeAttr(draftAnswer)}" ${draftAnswer?'':'disabled'}>Confirmar resposta</button></div>` : ''}
       ${feedback}
       ${comment}
       ${result ? renderQuestionReflection(question, result) : ''}
@@ -4664,7 +4664,11 @@ function bindQuestionActions(questions, question) {
       return;
     }
     if((window.getSelection()?.toString() || '').trim().length > 1) return;
-    ui.draftAnswers[question.id] = e.currentTarget.dataset.answer;
+    const selected=e.currentTarget.dataset.answer;
+    ui.draftAnswers[question.id] = selected;
+    const current=state.questionProgress[question.id] || {};
+    state.questionProgress[question.id] = { ...current, draftAnswer:selected };
+    saveStateOnly();
     resetKeyboardConfirmation();
     render();
   });
@@ -4832,7 +4836,9 @@ function bindQuestionActions(questions, question) {
     }
   };
   if(confirmAnswer) confirmAnswer.onclick = () => {
-    const selected = ui.draftAnswers[question.id];
+    const selected = confirmAnswer.dataset.selectedAnswer
+      || ui.draftAnswers[question.id]
+      || state.questionProgress[question.id]?.draftAnswer;
     if(selected) answerQuestion(question, selected, false);
   };
   if(fontDown) fontDown.onclick = () => setQuestionFontSize(-2);
@@ -5203,6 +5209,7 @@ function answerQuestion(question, selected, timedOut=false) {
     correct,
     timedOut,
     confidenceLevel: draftConfidence,
+    draftAnswer: '',
     confidence,
     correctMode: autoCorrectMode,
     missReason: autoMissReason,
