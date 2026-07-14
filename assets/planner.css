@@ -1531,3 +1531,34 @@ body.dark .flashcard-study-card .flashcard-back{background:linear-gradient(145de
     min-height:205px;
   }
 }
+
+/* Cartoes da trilha no mesmo padrao visual dos indicadores do Dashboard. */
+.dashboard-road > .road-path > .road-step{
+  border:1px solid #dce3ee;
+  border-left:6px solid var(--blue);
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(25,48,82,.08);
+  padding:18px 18px 16px;
+}
+.dashboard-road > .road-path > .road-step.complete{
+  border-color:#cfe5d8;
+  border-left-color:var(--green);
+  background:#fff;
+}
+.dashboard-road > .road-path > .road-step.partial{
+  border-color:#f0dfb0;
+  border-left-color:var(--amber);
+  background:#fff;
+}
+.dashboard-road > .road-path > .road-step.active{
+  border-left-color:var(--blue);
+  box-shadow:0 0 0 2px rgba(37,99,235,.1),0 10px 26px rgba(25,48,82,.1);
+}
+.dashboard-road > .road-path > .road-step:after{display:none}
+.dashboard-road > .road-path > .road-step .road-step-head{gap:9px}
+.dashboard-road > .road-path > .road-step .road-dot{width:38px;height:38px;font-size:17px}
+.dashboard-road > .road-path > .road-step .road-icon{width:32px;height:32px;border-radius:10px}
+.dashboard-road > .road-path > .road-step .road-label{font-size:18px;line-height:1.3}
+.dashboard-road > .road-path > .road-step .road-progress-row{font-size:13px}
+.dashboard-road > .road-path > .road-step .road-actions .tiny-btn{background:var(--blue);border-color:var(--blue);color:#fff}
