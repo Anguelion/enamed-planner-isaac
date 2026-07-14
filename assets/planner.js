@@ -4821,7 +4821,7 @@ function renderQuestionBank() {
     clearTimeout(questionSearchRenderTimer);
     questionSearchRenderTimer = setTimeout(refreshQuestionSearchResults,140);
   };
-  document.getElementById('showQuestionIssues').onclick = () => { ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  document.getElementById('showQuestionIssues').onclick = () => { ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qSearch=''; ui.qFocusScheduleId=''; ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); };
   document.getElementById('clearQuestionIssues')?.addEventListener('click', () => {
     if(!confirm(`Limpar as ${flagged} marcações de gabarito suspeito?`)) return;
     questionBank.forEach(question => {
