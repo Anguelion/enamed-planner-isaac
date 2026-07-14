@@ -6,7 +6,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-2';
+const QUESTION_BANK_ASSET_VERSION = '20260714-3';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -30,6 +30,7 @@ const LESSON_MIN_QUESTIONS = 10;
 const LESSON_MIN_FLASHCARDS = 10;
 const DAILY_QUESTION_TARGET = 20;
 const DAILY_FLASHCARD_TARGET = 30;
+const STUDY_DAY_START_HOUR = 5;
 const ENAMED_AREAS = ['Clínica Médica','Pediatria','Ginecologia e Obstetrícia','Cirurgia Geral','Medicina de Família e Comunidade'];
 let questionBank = [];
 let materialLibrary = [];
@@ -57,7 +58,7 @@ ensureDayLogs();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: localISODate(new Date()), analysisDate: localISODate(new Date()), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
@@ -521,6 +522,7 @@ function loadQuestionBank() {
 async function loadQuestionBankNow() {
   await loadLocalQuestionBank();
   backfillQuestionScheduleLinks();
+  reconcileQuestionProgressWithAnswers();
   const localQuestions = [...questionBank];
   // O banco publicado junto do planner e a fonte principal. Evita baixar e
   // normalizar novamente milhares de registros iguais vindos do Supabase.
@@ -574,6 +576,7 @@ async function loadQuestionBankNow() {
       questionBank = deduplicateQuestions(cloudQuestions);
     }
   }
+  reconcileQuestionProgressWithAnswers();
   if(['questoes','simulados','analise'].includes(ui.tab)) render();
 }
 function loadQuestionBlockScript(src) {
@@ -711,8 +714,24 @@ function ensureDayLogs() {
   dates.forEach(date => { if(!state.dayLogs.some(x=>x.date===date)) state.dayLogs.push(defaultDayLog(date)); });
   state.dayLogs = state.dayLogs.map(log => ({...defaultDayLog(log.date), ...log}));
   state.dayLogs.sort((a,b)=>a.date.localeCompare(b.date));
+  repairDailyActivityData();
 }
-function defaultDayLog(date) { return { date, mood: 0, pace: '', flashcardsOn: false, flashcards: 0, flashcardMinutes: 0, videosOn: false, videos: 0, videoNames: '', lessonMinutes: 0, questionsOn: false, questions: 0, correct: 0, wrong: 0, questionMinutes: 0, materialMinutes: 0, simuladoMinutes: 0, notes: '' }; }
+function defaultDayLog(date) { return { date, mood: 0, pace: '', flashcardsOn: false, flashcards: 0, manualFlashcards: 0, flashcardMinutes: 0, videosOn: false, videos: 0, videoNames: '', lessonMinutes: 0, questionsOn: false, questions: 0, correct: 0, wrong: 0, questionMinutes: 0, materialMinutes: 0, simuladoMinutes: 0, notes: '' }; }
+function repairDailyActivityData() {
+  if(!state.activityDataRepairs || typeof state.activityDataRepairs !== 'object') state.activityDataRepairs = {};
+  if(state.activityDataRepairs.flashcards20260714) return;
+  const date = '2026-07-14';
+  let log = state.dayLogs.find(item => item.date === date);
+  if(!log) {
+    log = defaultDayLog(date);
+    state.dayLogs.push(log);
+  }
+  const actualReviews = (state.flashcardSystem?.reviewLogs || []).filter(review => studyDateKey(review.reviewedAt) === date).length;
+  log.flashcards = actualReviews;
+  log.manualFlashcards = 0;
+  log.flashcardsOn = actualReviews > 0 || n(log.flashcardMinutes) > 0;
+  state.activityDataRepairs.flashcards20260714 = { repairedAt:new Date().toISOString(), reviews:actualReviews };
+}
 function dayLogHasActivity(log) {
   return n(log?.videos) + n(log?.flashcards) + n(log?.questions) + n(log?.lessonMinutes) + n(log?.flashcardMinutes) + n(log?.questionMinutes) + n(log?.materialMinutes) + n(log?.simuladoMinutes) > 0
     || Boolean(String(log?.videoNames || '').trim() || String(log?.notes || '').trim());
@@ -923,7 +942,8 @@ function autoStudyElapsedSeconds(now=Date.now()) {
 }
 function commitAutoStudyTime(tracker, seconds) {
   if(!tracker?.kind || !seconds) return 0;
-  const log = getDayLog(localISODate(new Date()));
+  const studyDate = studyDateKey();
+  const log = getDayLog(studyDate);
   const minutes = seconds / 60;
   if(tracker.kind === 'video') {
     log.videosOn = true;
@@ -943,7 +963,7 @@ function commitAutoStudyTime(tracker, seconds) {
   const lesson = state.schedule.find(item => item.id === tracker.scheduleId);
   if(lesson) lesson.hours = Math.round((n(lesson.hours) + seconds / 3600) * 10000) / 10000;
   if(!Array.isArray(state.studySessions)) state.studySessions=[];
-  state.studySessions.push({id:`study-${Date.now()}-${Math.random().toString(36).slice(2,6)}`,date:localISODate(new Date()),kind:tracker.kind,scheduleId:tracker.scheduleId||'',seconds:Math.round(seconds),savedAt:new Date().toISOString()});
+  state.studySessions.push({id:`study-${Date.now()}-${Math.random().toString(36).slice(2,6)}`,date:studyDate,kind:tracker.kind,scheduleId:tracker.scheduleId||'',seconds:Math.round(seconds),savedAt:new Date().toISOString()});
   if(state.studySessions.length>5000) state.studySessions=state.studySessions.slice(-5000);
   return seconds;
 }
@@ -1128,6 +1148,12 @@ async function loadMotivationMessages() {
   }
 }
 function localISODate(d) { const x = new Date(d); x.setMinutes(x.getMinutes() - x.getTimezoneOffset()); return x.toISOString().slice(0,10); }
+function studyDateKey(value=new Date()) {
+  const date = new Date(value);
+  if(Number.isNaN(date.getTime())) return '';
+  date.setHours(date.getHours() - STUDY_DAY_START_HOUR);
+  return localISODate(date);
+}
 function fmtDate(s) { if(!s) return ''; const [y,m,d]=s.split('-'); return `${d}/${m}/${y}`; }
 function parsePlannerDate(value) {
   const text = String(value || '').trim();
@@ -1399,7 +1425,7 @@ function dailyStudySnapshot(date) {
     materials:n(log.materialMinutes),
     simulados:n(log.simuladoMinutes)
   };
-  if(date === localISODate(new Date()) && studyTimeTracker.kind) {
+  if(date === studyDateKey() && studyTimeTracker.kind) {
     const activeMinutes = autoStudyElapsedSeconds() / 60;
     if(studyTimeTracker.kind === 'video') minutes.video += activeMinutes;
     else if(studyTimeTracker.kind === 'flashcards') minutes.flashcards += activeMinutes;
@@ -1450,7 +1476,7 @@ function bindManualStudyEntry(date) {
     lesson.manualFC=n(lesson.manualFC)+flashcards;
     const log=getDayLog(ui.manualStudyDate || date);
     if(questions) { log.questionsOn=true; log.questions=n(log.questions)+questions; }
-    if(flashcards) { log.flashcardsOn=true; log.flashcards=n(log.flashcards)+flashcards; }
+    if(flashcards) { log.flashcardsOn=true; log.manualFlashcards=n(log.manualFlashcards)+flashcards; log.flashcards=n(log.flashcards)+flashcards; }
     persist();
   };
 }
@@ -2142,7 +2168,7 @@ function bindSimInputs() {
 }
 function answerDate(value) {
   const date = new Date(value || '');
-  return Number.isNaN(date.getTime()) ? '' : localISODate(date);
+  return Number.isNaN(date.getTime()) ? '' : studyDateKey(date);
 }
 function analysisConfidence(result={}) {
   return Math.max(0, Math.min(100, n(result.certainty) || n(result.confidence) || ({red:20,yellow:55,green:90}[result.confidenceLevel] || 0)));
@@ -2209,7 +2235,7 @@ function openQuestionFromAnalysis(questionId) {
   const list=filteredQuestions(); ui.qIndex=Math.max(0,list.findIndex(item=>item.id===questionId)); render();
 }
 function renderAnalise() {
-  const date=ui.analysisDate || localISODate(new Date());
+  const date=ui.analysisDate || studyDateKey();
   const rows=dailyQuestionRows(date);
   const timed=rows.filter(row=>row.seconds>0);
   const sortedTimes=timed.map(row=>row.seconds).sort((a,b)=>a-b);
@@ -2239,7 +2265,7 @@ function renderAnalise() {
   document.getElementById('analise').innerHTML=`<div class="card analysis-head"><div><span class="eyebrow">Inteligência de desempenho</span><h1>Análise diária de questões</h1><p>${escapeHtml(executive)}</p></div><div class="analysis-date-controls"><button class="icon-btn" data-analysis-day="-1" title="Dia anterior">‹</button><input class="input" id="analysisDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="icon-btn" data-analysis-day="1" title="Dia seguinte">›</button><button class="tiny-btn" id="analysisToday">Hoje</button></div></div>${content}`;
   bindPlannerDateInput('analysisDate',date,value=>{ui.analysisDate=value;renderAnalise();});
   document.querySelectorAll('[data-analysis-day]').forEach(button=>button.onclick=()=>{ui.analysisDate=addDays(date,n(button.dataset.analysisDay));renderAnalise();});
-  document.getElementById('analysisToday')?.addEventListener('click',()=>{ui.analysisDate=localISODate(new Date());renderAnalise();});
+  document.getElementById('analysisToday')?.addEventListener('click',()=>{ui.analysisDate=studyDateKey();renderAnalise();});
   document.querySelector('[data-analysis-open-bank]')?.addEventListener('click',()=>{ui.tab='questoes';ui.qStatus='Não respondidas';render();});
   document.querySelectorAll('[data-analysis-open-question]').forEach(button=>button.onclick=()=>openQuestionFromAnalysis(button.dataset.analysisOpenQuestion));
   document.querySelectorAll('[data-analysis-open-sim]').forEach(button=>button.onclick=()=>{ui.activeSimRunId=button.dataset.analysisOpenSim;ui.tab='simulados';render();});
@@ -3078,7 +3104,7 @@ function setVideoWatchedState(videoId, watched) {
   const wasWatched = Boolean(state.videoPlayer.watched[videoId]);
   if(watched && !wasWatched) {
     const completedAt = new Date().toISOString();
-    const date = completedAt.slice(0, 10);
+    const date = studyDateKey(completedAt);
     state.videoPlayer.watched[videoId] = true;
     state.videoPlayer.watchedAt[videoId] = completedAt;
     const log = getDayLog(date);
@@ -3087,7 +3113,7 @@ function setVideoWatchedState(videoId, watched) {
     return;
   }
   if(!watched && wasWatched) {
-    const completedDate = String(state.videoPlayer.watchedAt[videoId] || '').slice(0, 10);
+    const completedDate = studyDateKey(state.videoPlayer.watchedAt[videoId] || '');
     delete state.videoPlayer.watched[videoId];
     delete state.videoPlayer.watchedAt[videoId];
     if(completedDate) {
@@ -3837,12 +3863,12 @@ function isFlashcardDue(card, date=localISODate(new Date())) {
   return flashcardProgress(card).nextReview <= date;
 }
 function flashcardReviewsToday() {
-  const today = localISODate(new Date());
-  return Object.values(state.flashcardProgress || {}).filter(progress => String(progress.lastReviewedAt || '').slice(0,10) === today).length;
+  const today = studyDateKey();
+  return (state.flashcardSystem?.reviewLogs || []).filter(review => studyDateKey(review.reviewedAt) === today).length;
 }
 function flashcardNewToday() {
-  const today = localISODate(new Date());
-  return Object.values(state.flashcardProgress || {}).filter(progress => progress.firstReviewedAt && String(progress.firstReviewedAt).slice(0,10) === today).length;
+  const today = studyDateKey();
+  return Object.values(state.flashcardProgress || {}).filter(progress => progress.firstReviewedAt && studyDateKey(progress.firstReviewedAt) === today).length;
 }
 function flashcardDueForecast(days=7) {
   const cards = flashcardAllRecords();
@@ -4083,9 +4109,7 @@ function reviewFlashcard(id, quality) {
   state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.slice(-500);
   state.flashcardSystem.undoStack.push({cardId:id,previousProgress:{...current},beforeCard,reviewId:state.flashcardSystem.reviewLogs.at(-1).id});
   state.flashcardSystem.undoStack = state.flashcardSystem.undoStack.slice(-20);
-  const log = getDayLog(localISODate(new Date()));
-  log.flashcardsOn = true;
-  log.flashcards = n(log.flashcards) + 1;
+  adjustFlashcardDayCount(new Date().toISOString(), 1);
   delete ui.revealedCards[id];
   const queueAfter = flashcardStudyQueue(flashcardAllRecords());
   const nextIndex = nextId ? queueAfter.findIndex(card => card.id === nextId) : -1;
@@ -4099,7 +4123,9 @@ function undoFlashcardReview() {
     if(card) Object.assign(card, systemUndo.beforeCard);
     if(systemUndo.previousProgress && Object.keys(systemUndo.previousProgress).length) state.flashcardProgress[systemUndo.cardId] = systemUndo.previousProgress;
     else delete state.flashcardProgress[systemUndo.cardId];
+    const review = state.flashcardSystem.reviewLogs.find(log => log.id === systemUndo.reviewId);
     state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.filter(log => log.id !== systemUndo.reviewId);
+    if(review?.reviewedAt) adjustFlashcardDayCount(review.reviewedAt, -1);
     ui.revealedCards[systemUndo.cardId] = true;
     saveStateOnly();
     renderFlashcards();
@@ -4112,6 +4138,13 @@ function undoFlashcardReview() {
   ui.revealedCards[last.cardId] = true;
   saveStateOnly();
   renderFlashcards();
+}
+function adjustFlashcardDayCount(timestamp, delta) {
+  const date = studyDateKey(timestamp);
+  if(!date || !delta) return;
+  const log = getDayLog(date);
+  log.flashcards = Math.max(n(log.manualFlashcards), n(log.flashcards) + delta);
+  log.flashcardsOn = n(log.flashcards) > 0 || n(log.flashcardMinutes) > 0;
 }
 function moveFlashcardSession(delta, total) {
   ui.flashcardIndex = Math.max(0, Math.min(Math.max(total - 1, 0), n(ui.flashcardIndex) + delta));
@@ -4231,6 +4264,27 @@ function questionResult(question) {
   const progress = state.questionProgress[question.id];
   return progress?.answeredAt ? progress : null;
 }
+function reconcileQuestionProgressWithAnswers() {
+  let changed = false;
+  questionBank.forEach(rawQuestion => {
+    const question = applyQuestionEdits(rawQuestion);
+    const progress = state.questionProgress?.[question.id];
+    if(!progress?.answeredAt || !progress.selected) return;
+    const correct = !progress.timedOut && String(progress.selected).toUpperCase() === String(question.answer).toUpperCase();
+    if(Boolean(progress.correct) === correct) return;
+    const date = state.questionLogged?.[question.id] || answerDate(progress.answeredAt);
+    const log = date ? getDayLog(date) : null;
+    if(log) {
+      if(progress.correct) log.correct = Math.max(0, n(log.correct) - 1);
+      else log.wrong = Math.max(0, n(log.wrong) - 1);
+      if(correct) log.correct = n(log.correct) + 1;
+      else log.wrong = n(log.wrong) + 1;
+    }
+    progress.correct = correct;
+    changed = true;
+  });
+  if(changed) saveStateOnly();
+}
 function questionConfidenceStats() {
   const rows = Object.values(state.questionProgress || {}).filter(item => item && item.answeredAt);
   const withConfidence = rows.filter(item => n(item.confidence));
@@ -4289,6 +4343,8 @@ function questionDataIssue(question) {
   const letters = Object.keys(question.options || {});
   if(letters.length < 2) return 'Questão discursiva ou alternativas ausentes na extração original.';
   if(!letters.includes(question.answer)) return `O gabarito ${question.answer || 'não informado'} não está entre as alternativas disponíveis.`;
+  const blank = letters.filter(letter => !String(question.options?.[letter] || '').trim());
+  if(blank.length) return `A extração original deixou ${blank.length === 1 ? 'a alternativa' : 'as alternativas'} ${blank.join(', ')} sem texto.`;
   return '';
 }
 function applyQuestionEdits(question) {
@@ -4568,6 +4624,12 @@ function renderQuestionCommentPanel(question, result, highlights=[]) {
     ['nao-sabia','Não sabia']
   ];
   const nextDisabled = ui.qIndex >= filteredQuestions().length - 1 ? 'disabled' : '';
+  const declaredAnswer = String(question.comment || '').match(/(?:^|\n)\s*(?:Correta|Gabarito)\s*:\s*([A-E])\b/i)?.[1]?.toUpperCase() || '';
+  const auditedMismatch = question.answerAudit === 'official-source' && declaredAnswer && declaredAnswer !== question.answer;
+  if(auditedMismatch) return `<div class="question-comment-panel">
+    <div class="comment-quick-nav"><button class="icon-btn" id="commentPrevQuestion" ${ui.qIndex===0?'disabled':''}>‹</button><button class="icon-btn primary" id="commentNextQuestion" ${nextDisabled}>Próx ›</button></div>
+    <div class="question-comment-card error"><strong>Comentário em revisão</strong><div>O gabarito ${escapeHtml(question.answer)} foi conferido na fonte original, mas o comentário anexado declara ${escapeHtml(declaredAnswer)} e provavelmente pertence a outra questão. A explicação foi ocultada para não induzir ao erro.</div></div>
+  </div>`;
   return `<div class="question-comment-panel">
     <div class="comment-mastery">${masteryOptions.map(([value,label]) => `<button class="${mastery===value?'active':''} ${value}" data-comment-mastery="${value}">${escapeHtml(label)}</button>`).join('')}</div>
     <div class="comment-quick-nav"><button class="icon-btn" id="commentPrevQuestion" ${ui.qIndex===0?'disabled':''}>‹</button><button class="icon-btn primary" id="commentNextQuestion" ${nextDisabled}>Próx ›</button></div>
@@ -5202,7 +5264,7 @@ function answerQuestion(question, selected, timedOut=false) {
     ? (draftConfidence === 'red' ? 'Não saber' : draftConfidence === 'yellow' ? 'Dúvida / já vi' : previous.missReason || '')
     : previous.missReason || '';
   const firstLog = !state.questionLogged[question.id];
-  const today = localISODate(new Date());
+  const today = studyDateKey();
   state.questionProgress[question.id] = {
     ...previous,
     selected,
@@ -5344,7 +5406,7 @@ function saveQuestionTimerTime() {
     return;
   }
   pauseQuestionTimer();
-  const log=getDayLog(localISODate(new Date()));
+  const log=getDayLog(studyDateKey());
   if(!autoStudyIsRunning('questions')) {
     log.questionsOn=true;
     log.questionMinutes=Math.round((n(log.questionMinutes)+seconds/60)*100)/100;

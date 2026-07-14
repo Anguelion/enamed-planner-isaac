@@ -2362,11 +2362,13 @@
         "C": "Sling retropúbico e agonista beta3adrenérgico.",
         "D": "Sling aponeurótico e aplicação detrusora de toxina botulínica."
       },
-      "answer": "D",
+      "answer": "C",
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-18-download.pdf",
       "sourceLabel": "ITU e Meningite (Pediatria)",
       "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: Uma bexiga de baixa capacidade e baixa complacência gera altas pressões, ameaça o trato urinário e pode lesar o enxerto. É necessário criar reservatório de baixa pressão, frequentemente por ampliação vesical, antes do transplante.\nPor que as outras estão erradas:\nB: Transplantar antes de corrigir o reservatório expõe o enxerto a pressão elevada, refluxo e infecção.\nC: A necessidade de correção não depende de haver doador vivo; depende da segurança urodinâmica da bexiga.\nD: Derivação ileal pode ser usada em casos selecionados, mas não é obrigatória quando a bexiga pode ser reconstruída.\nPonto de prova: Preparação urológica para transplante em bexiga neurogênica.\nFlashcard sugerido:\nPergunta: Por que corrigir bexiga de baixa complacência antes do transplante?\nResposta: Para proteger o enxerto de alta pressão e infecção.\n\nPérola:\nO rim novo precisa drenar para uma bexiga segura.\n\nArmadilha:\nPriorizar a fila do transplante sem corrigir o reservatório hostil.\n\n--------------------------------------------------------------------------------"
+      "comment": "Análise:\nCorreta: A.\nPor que está certa: Uma bexiga de baixa capacidade e baixa complacência gera altas pressões, ameaça o trato urinário e pode lesar o enxerto. É necessário criar reservatório de baixa pressão, frequentemente por ampliação vesical, antes do transplante.\nPor que as outras estão erradas:\nB: Transplantar antes de corrigir o reservatório expõe o enxerto a pressão elevada, refluxo e infecção.\nC: A necessidade de correção não depende de haver doador vivo; depende da segurança urodinâmica da bexiga.\nD: Derivação ileal pode ser usada em casos selecionados, mas não é obrigatória quando a bexiga pode ser reconstruída.\nPonto de prova: Preparação urológica para transplante em bexiga neurogênica.\nFlashcard sugerido:\nPergunta: Por que corrigir bexiga de baixa complacência antes do transplante?\nResposta: Para proteger o enxerto de alta pressão e infecção.\n\nPérola:\nO rim novo precisa drenar para uma bexiga segura.\n\nArmadilha:\nPriorizar a fila do transplante sem corrigir o reservatório hostil.\n\n--------------------------------------------------------------------------------",
+      "answerAudit": "official-source",
+      "answerSource": "AQFM---Extensivo-ENAMED-2026---Bloco-18-download.txt"
     },
     {
       "id": "b17-q116",
@@ -2382,11 +2384,13 @@
         "C": "O acolhimento deve ser compreendido como um procedimento isolado, voltado apenas para demandas urgentes, sem impacto significativo na reorganização das práticas da equipe.",
         "D": "O acolhimento é uma diretriz de cuidado que atua como mecanismo de ampliação do acesso, postura ética e reorganização do trabalho em equipe, considerando risco, vulnerabilidade e a integralidade das necessidades de saúde."
       },
-      "answer": "C",
+      "answer": "D",
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-18-download.pdf",
       "sourceLabel": "Estratégia da Saúde da Família",
       "images": [],
-      "comment": "Análise:\nCorreta: B.\nPor que está certa: A equipe mínima padrão inclui médico, enfermeiro, auxiliar e/ou técnico de enfermagem e ACS. A expressão 'e/ou' contempla a composição normativa sem exigir especificamente apenas uma das duas categorias de enfermagem de nível médio.\nPor que as outras estão erradas:\nA: Agente de combate às endemias pode integrar ações, mas não substitui técnico/auxiliar e ACS na composição mínima.\nC: Ao exigir apenas técnico, exclui a possibilidade normativa de auxiliar de enfermagem.\nD: Saúde bucal é componente adicional, não obrigatória em toda eSF mínima.\nE: Assistente social atua em equipes multiprofissionais, mas não compõe obrigatoriamente a eSF mínima.\nPonto de prova: Composição obrigatória da eSF.\nFlashcard sugerido:\nPergunta: Qual é a composição mínima da Saúde da Família?\nResposta: Médico, enfermeiro, auxiliar/técnico de enfermagem e ACS.\n\nPérola:\nSaúde bucal amplia a equipe, mas não define a equipe mínima.\n\nArmadilha:\nTrocar ACS por agente de endemias.\n\n--------------------------------------------------------------------------------"
+      "comment": "Análise:\nCorreta: B.\nPor que está certa: A equipe mínima padrão inclui médico, enfermeiro, auxiliar e/ou técnico de enfermagem e ACS. A expressão 'e/ou' contempla a composição normativa sem exigir especificamente apenas uma das duas categorias de enfermagem de nível médio.\nPor que as outras estão erradas:\nA: Agente de combate às endemias pode integrar ações, mas não substitui técnico/auxiliar e ACS na composição mínima.\nC: Ao exigir apenas técnico, exclui a possibilidade normativa de auxiliar de enfermagem.\nD: Saúde bucal é componente adicional, não obrigatória em toda eSF mínima.\nE: Assistente social atua em equipes multiprofissionais, mas não compõe obrigatoriamente a eSF mínima.\nPonto de prova: Composição obrigatória da eSF.\nFlashcard sugerido:\nPergunta: Qual é a composição mínima da Saúde da Família?\nResposta: Médico, enfermeiro, auxiliar/técnico de enfermagem e ACS.\n\nPérola:\nSaúde bucal amplia a equipe, mas não define a equipe mínima.\n\nArmadilha:\nTrocar ACS por agente de endemias.\n\n--------------------------------------------------------------------------------",
+      "answerAudit": "official-source",
+      "answerSource": "AQFM---Extensivo-ENAMED-2026---Bloco-18-download.txt"
     },
     {
       "id": "b17-q117",
@@ -2402,11 +2406,13 @@
         "C": "Apenas I e III estão corretas.",
         "D": "Apenas I está correta."
       },
-      "answer": "B",
+      "answer": "C",
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-18-download.pdf",
       "sourceLabel": "Estratégia da Saúde da Família",
       "images": [],
-      "comment": "Análise:\nCorreta: C.\nPor que está certa: A ESF organiza cuidado territorial longitudinal, ampliando acesso e integrando promoção, prevenção, tratamento, reabilitação e coordenação da rede para uma população adscrita.\nPor que as outras estão erradas:\nA: Equipe de saúde bucal não é obrigatória em todas as eSF.\nB: A recomendação não é mínimo de 5.000; populações menores são preferíveis em maior vulnerabilidade.\nD: eMulti apoia, mas não substitui a equipe mínima.\nE: Adscrição e responsabilidade sanitária são características centrais da ESF.\nPonto de prova: Finalidade e organização territorial da ESF.\nFlashcard sugerido:\nPergunta: Qual é a função central da ESF?\nResposta: Cuidado contínuo e integral de população adscrita em território definido.\n\nPérola:\nESF cria vínculo, não apenas consulta.\n\nArmadilha:\nImaginar eMulti como substituta da equipe de referência.\n\n--------------------------------------------------------------------------------"
+      "comment": "Análise:\nCorreta: C.\nPor que está certa: A ESF organiza cuidado territorial longitudinal, ampliando acesso e integrando promoção, prevenção, tratamento, reabilitação e coordenação da rede para uma população adscrita.\nPor que as outras estão erradas:\nA: Equipe de saúde bucal não é obrigatória em todas as eSF.\nB: A recomendação não é mínimo de 5.000; populações menores são preferíveis em maior vulnerabilidade.\nD: eMulti apoia, mas não substitui a equipe mínima.\nE: Adscrição e responsabilidade sanitária são características centrais da ESF.\nPonto de prova: Finalidade e organização territorial da ESF.\nFlashcard sugerido:\nPergunta: Qual é a função central da ESF?\nResposta: Cuidado contínuo e integral de população adscrita em território definido.\n\nPérola:\nESF cria vínculo, não apenas consulta.\n\nArmadilha:\nImaginar eMulti como substituta da equipe de referência.\n\n--------------------------------------------------------------------------------",
+      "answerAudit": "official-source",
+      "answerSource": "AQFM---Extensivo-ENAMED-2026---Bloco-18-download.txt"
     },
     {
       "id": "b17-q118",
@@ -2423,11 +2429,13 @@
         "D": "A composição mínima da equipe de Saúde da Família pode ser substituída por equipes com apenas médico e enfermeiro em territórios urbanos, desde que justificado pela demanda local.",
         "E": "A composição profissional das Equipes de Consultório na Rua é rígida, devendo ter obrigatoriamente todos os profissionais da equipe mínima da ESF."
       },
-      "answer": "A",
+      "answer": "B",
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-18-download.pdf",
       "sourceLabel": "Estratégia da Saúde da Família",
       "images": [],
-      "comment": "Análise:\nCorreta: B.\nPor que está certa: O Consultório na Rua possui modalidades de composição: modalidade I com no mínimo quatro profissionais, modalidade II com equipe ampliada e modalidade III correspondente à modalidade II acrescida de médico.\nPor que as outras estão erradas:\nA: A equipe atende demandas integrais, não apenas saúde mental.\nC: Médico não é obrigatório nas modalidades I e II.\nD: A atuação é itinerante, coletiva e articulada com UBS, CAPS e rede social.\nE: Não está restrita a capitais acima de 500 mil habitantes.\nPonto de prova: Modalidades das equipes de Consultório na Rua.\nFlashcard sugerido:\nPergunta: Em qual modalidade do Consultório na Rua há médico obrigatório?\nResposta: Modalidade III.\n\nPérola:\nConsultório na Rua é APS integral e itinerante.\n\nArmadilha:\nReduzi-lo a serviço de saúde mental.\n\n--------------------------------------------------------------------------------"
+      "comment": "Análise:\nCorreta: B.\nPor que está certa: O Consultório na Rua possui modalidades de composição: modalidade I com no mínimo quatro profissionais, modalidade II com equipe ampliada e modalidade III correspondente à modalidade II acrescida de médico.\nPor que as outras estão erradas:\nA: A equipe atende demandas integrais, não apenas saúde mental.\nC: Médico não é obrigatório nas modalidades I e II.\nD: A atuação é itinerante, coletiva e articulada com UBS, CAPS e rede social.\nE: Não está restrita a capitais acima de 500 mil habitantes.\nPonto de prova: Modalidades das equipes de Consultório na Rua.\nFlashcard sugerido:\nPergunta: Em qual modalidade do Consultório na Rua há médico obrigatório?\nResposta: Modalidade III.\n\nPérola:\nConsultório na Rua é APS integral e itinerante.\n\nArmadilha:\nReduzi-lo a serviço de saúde mental.\n\n--------------------------------------------------------------------------------",
+      "answerAudit": "official-source",
+      "answerSource": "AQFM---Extensivo-ENAMED-2026---Bloco-18-download.txt"
     },
     {
       "id": "b17-q119",
