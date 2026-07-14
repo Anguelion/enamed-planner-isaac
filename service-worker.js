@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v5';
+const CACHE_NAME = 'soqueromed-shell-v6';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -9,6 +9,7 @@ const APP_SHELL = [
   './assets/icons/icon-512-maskable.png',
   './assets/icons/apple-touch-icon.png',
   './question_bank/index.js'
+  ,'./data/prescription_catalog.json'
 ];
 
 self.addEventListener('install', event => {
