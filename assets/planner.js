@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-19';
+const QUESTION_BANK_ASSET_VERSION = '20260714-20';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -1382,10 +1382,56 @@ function dayRoadItems(date) {
     { id: 'daily-flashcards', scheduleId: lessons[0]?.id || '', type: 'Fixação', icon: 'FC', label: `${flashcardTarget} flashcards`, done: n(log.flashcards) >= flashcardTarget, progress: n(log.flashcards), target: flashcardTarget, unit: 'flashcards', foot: 'Fechamento do ciclo de revisão' }
   ];
 }
+function dailyStudyCandidates(date) {
+  const today = state.schedule.filter(item => item.date === date).sort(byDate);
+  const due = state.schedule
+    .filter(item => item.date && item.date <= date && statusOf(item) !== 'Concluído')
+    .sort(byPendingBlockOrder);
+  const ordered = [...today, ...due.filter(item => !today.some(current => current.id === item.id))];
+  const withVideos = ordered.filter(item => videoSourcesForSchedule(item).length);
+  const video = withVideos.find(item => videoSourcesForSchedule(item).some(source => !state.videoPlayer.watched[source.id])) || withVideos[0];
+  const questions = ordered.find(item => Math.max(0, lessonQuestionTarget(item) - completedQuestions(item)) > 0) || ordered[0];
+  const flashcards = ordered.find(item => Math.max(0, lessonFlashcardTarget(item) - completedFlashcards(item)) > 0) || ordered[0];
+  return { video, questions, flashcards };
+}
+function runDailyStudyChoice(button, date) {
+  if(!button || button.dataset.rolling === '1') return;
+  const candidates = dailyStudyCandidates(date);
+  const available = ['video', 'questions', 'flashcards'].filter(kind => candidates[kind]);
+  if(!available.length) {
+    showStudyToast('Ainda não há uma atividade disponível para sortear.');
+    return;
+  }
+  button.dataset.rolling = '1';
+  button.disabled = true;
+  button.classList.add('is-rolling');
+  const labels = { video:'Videoaula', questions:'Questões', flashcards:'Flashcards' };
+  let tick = 0;
+  const roll = () => {
+    const kind = available[tick % available.length];
+    button.innerHTML = `${iconSvg('dice')}<span>${labels[kind]}...</span>`;
+    tick += 1;
+  };
+  roll();
+  const interval = setInterval(roll, 160);
+  setTimeout(() => {
+    clearInterval(interval);
+    const kind = available[Math.floor(Math.random() * available.length)];
+    const item = candidates[kind];
+    button.innerHTML = `${iconSvg('dice')}<span>${labels[kind]} escolhidas</span>`;
+    button.dataset.rolling = '0';
+    button.disabled = false;
+    button.classList.remove('is-rolling');
+    showStudyToast(`${labels[kind]} escolhidas. Abrindo seu próximo passo.`);
+    if(kind === 'video') openVideosForSchedule(item.id);
+    else if(kind === 'questions') openQuestionsForSchedule(item.id);
+    else openFlashcardsForSchedule(item.id);
+  }, 2000);
+}
 function renderDailyRoad(date) {
   const items = dayRoadItems(date);
   const firstOpen = items.findIndex(item => !item.done);
-  return `<div class="dashboard-road"><div class="section-title"><div><h2>Trilha do dia</h2><div class="muted">${fmtDate(date)} · complete a rota: aquecer com aulas, encarar questões e fechar com revisão.</div></div><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"></div><div class="road-path">${items.map((item,index) => {
+  return `<div class="dashboard-road"><div class="section-title"><div><h2>Trilha do dia</h2><div class="muted">${fmtDate(date)} · seu caminho de hoje: aulas, questões e revisão.</div></div><div class="daily-road-tools"><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="icon-btn daily-random-choice" id="dailyRandomChoice" type="button" title="Sortear o próximo estudo">${iconSvg('dice')}<span>Deixe-me escolher</span></button></div></div><div class="road-path">${items.map((item,index) => {
     const ratio = clamp(n(item.progress) / Math.max(n(item.target), 1));
     const partial = !item.done && n(item.progress) > 0;
     const statusText = item.done ? 'concluída' : partial ? 'em progresso' : 'na fila';
@@ -1476,6 +1522,7 @@ function iconSvg(name) {
     alert:'<path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6Z"/><path d="M12 8v5"/><path d="M12 17h.01"/>',
     route:'<circle cx="6" cy="19" r="3"/><path d="M9 19h3.5a4.5 4.5 0 0 0 0-9H11a4 4 0 0 1 0-8h4"/><circle cx="18" cy="5" r="3"/>',
     helmet:'<path d="M4 16a8 8 0 0 1 16 0v1H4Z"/><path d="M2 17h20M12 8v8M7 13h10"/><path d="M5 17v2h14v-2"/>',
+    dice:'<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="8" cy="8" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="8" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="16" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>',
     play:'<circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4Z"/>',
     brain:'<path d="M9.5 4A3.5 3.5 0 0 0 6 7.5v.2A3.5 3.5 0 0 0 4 11v1a3.5 3.5 0 0 0 2 3.2v.3A3.5 3.5 0 0 0 9.5 19H12V4Z"/><path d="M14.5 4A3.5 3.5 0 0 1 18 7.5v.2a3.5 3.5 0 0 1 2 3.3v1a3.5 3.5 0 0 1-2 3.2v.3a3.5 3.5 0 0 1-3.5 3.5H12V4Z"/><path d="M8 9h4M12 14h4"/>',
     cards:'<rect width="14" height="18" x="5" y="3" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/>',
@@ -1600,6 +1647,7 @@ function renderPainel() {
   bindManualStudyEntry(ui.refDate);
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
+  document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
   document.querySelectorAll('[data-road-step]').forEach(button => button.onclick = e => {
     const target = e.currentTarget.dataset.roadStep;
     const scheduleId = e.currentTarget.dataset.roadSchedule;
