@@ -4330,6 +4330,13 @@ function setQuestionFocusMode(enabled) {
   if(questionSidebarCollapsed) localStorage.setItem(QUESTION_SIDEBAR_KEY,'1');
   else localStorage.removeItem(QUESTION_SIDEBAR_KEY);
   document.querySelector('#questoes .question-layout')?.classList.toggle('sidebar-collapsed',questionSidebarCollapsed);
+  const toggle=document.getElementById('questionFocusToggle');
+  if(toggle) {
+    toggle.textContent=questionSidebarCollapsed?'☰':'⛶';
+    toggle.setAttribute('aria-pressed',String(questionSidebarCollapsed));
+    toggle.setAttribute('aria-label',questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão');
+    toggle.title=questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco';
+  }
 }
 function renderQuestionBank() {
   stopAutoStudy('video');
@@ -4353,7 +4360,6 @@ function renderQuestionBank() {
   const question = questions[ui.qIndex];
   const activeQuestion = question ? applyQuestionEdits(question) : null;
   document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
-    <button class="icon-btn question-sidebar-reopen" id="reopenQuestionSidebar" title="Abrir painel do banco" aria-label="Abrir painel do banco">☰</button>
     <aside class="card question-sidebar">
       <div class="section-title"><h2>Banco privado</h2><div class="question-sidebar-actions"><span class="badge today">${questionBank.length} questões</span><button class="icon-btn" id="collapseQuestionSidebar" title="Fechar painel do banco" aria-label="Fechar painel do banco">×</button></div></div>
       <div class="muted">Organizado por blocos do planner e coleções especiais.</div>
@@ -4376,7 +4382,7 @@ function renderQuestionBank() {
   </div>`;
   document.getElementById('questionBlock').onchange = e => { ui.qFocusScheduleId=''; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('collapseQuestionSidebar').onclick = () => setQuestionFocusMode(true);
-  document.getElementById('reopenQuestionSidebar').onclick = () => setQuestionFocusMode(false);
+  document.getElementById('questionFocusToggle')?.addEventListener('click', () => setQuestionFocusMode(!questionSidebarCollapsed));
   document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionTopic').onchange = e => { ui.qFocusScheduleId=''; ui.qTopic=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionStatus').onchange = e => { ui.qStatus=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
@@ -4426,8 +4432,8 @@ function renderQuestion(question, total) {
   const feedback = result ? `<div class="question-feedback ${result.correct?'':'wrong'}"><div><strong>${result.correct?'Resposta correta.':'Resposta incorreta.'}</strong>${timeoutText} Gabarito: ${question.answer}.${!result.correct ? ' Marque este assunto para revisão.' : ''}</div>${!result.correct && linkedLesson ? `<button class="tiny-btn question-material-link" data-question-materials="${escapeAttr(linkedLesson.id)}">Revisar material da aula</button>` : ''}</div>` : '';
   const comment = result && question.comment ? renderQuestionCommentPanel(question, result, highlights) : '';
   const reviewButton = result && !result.correct ? `<button class="icon-btn" id="questionFeynman">Enviar tema para Feynman</button>` : '';
-  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div></div><div class="question-tool-strip"><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" ${ui.qIndex>=total-1?'disabled':''}>›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
-    <div class="question-meta"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>
+  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div></div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" ${ui.qIndex>=total-1?'disabled':''}>›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
+    <div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}</div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
     <div class="section-title"><h2>Questão ${question.number}</h2><div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearHighlights">Limpar</button></div></div>
