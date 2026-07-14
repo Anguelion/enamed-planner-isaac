@@ -294,6 +294,27 @@ function ensureQuestionProgress() {
     if(!current.nextReview) current.nextReview = localISODate(new Date());
   });
   state.flashcardLibrary.forEach(card => normalizeFlashcardRecord(card));
+  reconcileQuestionDailyLog();
+}
+
+function reconcileQuestionDailyLog() {
+  const byDate = {};
+  Object.entries(state.questionLogged || {}).forEach(([questionId, date]) => {
+    if(!date) return;
+    const progress = state.questionProgress?.[questionId];
+    if(!progress?.answeredAt) return;
+    if(!byDate[date]) byDate[date] = { total:0, correct:0, wrong:0 };
+    byDate[date].total += 1;
+    if(progress.correct) byDate[date].correct += 1;
+    else byDate[date].wrong += 1;
+  });
+  Object.entries(byDate).forEach(([date, counts]) => {
+    const log = getDayLog(date);
+    log.questionsOn = true;
+    log.questions = Math.max(n(log.questions), counts.total);
+    log.correct = Math.max(n(log.correct), counts.correct);
+    log.wrong = Math.max(n(log.wrong), counts.wrong);
+  });
 }
 
 function normalizedTopic(value='') {
