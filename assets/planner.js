@@ -3513,6 +3513,11 @@ function bindVideoPlayer(source, schedule, lesson) {
     if(!hasText) bookmarkTimeFrozen = null;
     if(stamp) stamp.textContent = formatVideoTime(bookmarkTimeFrozen ?? Math.floor(video.currentTime || 0));
   });
+  bookmarkLabelInput?.addEventListener('keydown',event=>{
+    if(event.key!=='Enter' || event.isComposing) return;
+    event.preventDefault();
+    document.getElementById('addVideoBookmark')?.click();
+  });
   document.getElementById('addVideoBookmark')?.addEventListener('click', () => {
     const label = bookmarkLabelInput?.value.trim() || '';
     if(!label) { document.getElementById('videoBookmarkLabel').focus(); return; }
@@ -5455,11 +5460,12 @@ document.addEventListener('keydown', event => {
   const video = document.getElementById('lessonVideo');
   if(!video) return;
   const rates = [0.75,1,1.25,1.5,1.75,2];
+  const key=event.key.toLowerCase();
   if(event.code === 'Space') { event.preventDefault(); video.paused ? video.play() : video.pause(); }
   else if(event.key === 'ArrowRight') { event.preventDefault(); document.getElementById('videoForward10')?.click(); }
   else if(event.key === 'ArrowLeft') { event.preventDefault(); document.getElementById('videoBack10')?.click(); }
-  else if(event.key === '[') { event.preventDefault(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); }
-  else if(event.key === '=') { event.preventDefault(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); }
+  else if(key === 'f' || event.key === '[') { event.preventDefault(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); }
+  else if(key === 'j' || event.key === '=') { event.preventDefault(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); }
 });
 document.getElementById('accountBtn').onclick = async () => {
   if(OFFLINE_FIRST) return;
