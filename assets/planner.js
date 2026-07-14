@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-25';
+const QUESTION_BANK_ASSET_VERSION = '20260714-26';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -1968,7 +1968,7 @@ function renderSimuladoReview(run, rows) {
     const tag = questionTag(row.question);
     const profile = simResultClassification(row, {slowLimit:Math.max(120, n(run.elapsedSeconds)/Math.max(1,rows.length)*1.3)});
     const changes = row.changes ? ` · ${row.changes} alteração${row.changes===1?'':'ões'} (${escapeHtml(row.firstAnswer || '—')} → ${escapeHtml(row.selected || '—')})` : '';
-    return `<div class="sim-review-item ${row.correct?'':'wrong'}"><div class="sim-question-head"><div><strong>Questão ${index+1} · ${escapeHtml(tag.area)}</strong><div class="muted">${escapeHtml(tag.topic)}${tag.subtopic?` · ${escapeHtml(tag.subtopic)}`:''}</div></div><span class="badge ${row.correct?'done':'no'}">${escapeHtml(profile)}</span></div><div class="muted">Sua resposta: ${escapeHtml(row.selected || 'em branco')} · Gabarito: ${escapeHtml(row.question.answer)} · Tempo: ${row.seconds ? formatVideoTime(row.seconds) : 'não registrado'}${changes} · Reaberta: ${row.opened || 0}x</div><div class="field-row" style="margin-top:8px"><input class="input" data-imported-tag="${row.question.id}" data-field="area" value="${escapeAttr(tag.area)}" placeholder="Área ENAMED"><input class="input" data-imported-tag="${row.question.id}" data-field="topic" value="${escapeAttr(tag.topic)}" placeholder="Tema principal"><input class="input" data-imported-tag="${row.question.id}" data-field="subtopic" value="${escapeAttr(tag.subtopic)}" placeholder="Subtema"></div>${row.question.comment?`<details class="material-original-toggle" style="margin-top:8px"><summary>Comentário da questão</summary><div class="markdown-preview">${renderMarkdown(row.question.comment)}</div></details>`:''}</div>`;
+    return `<div class="sim-review-item ${row.correct?'':'wrong'}"><div class="sim-question-head"><div><strong>Questão ${index+1} · ${escapeHtml(tag.area)}</strong><div class="muted">${escapeHtml(tag.topic)}${tag.subtopic?` · ${escapeHtml(tag.subtopic)}`:''}</div></div><span class="badge ${row.correct?'done':'no'}">${escapeHtml(profile)}</span></div><div class="muted">Sua resposta: ${escapeHtml(row.selected || 'em branco')} · Gabarito: ${escapeHtml(row.question.answer)} · Tempo: ${row.seconds ? formatVideoTime(row.seconds) : 'não registrado'}${changes} · Reaberta: ${row.opened || 0}x</div><div class="field-row" style="margin-top:8px"><input class="input" data-imported-tag="${row.question.id}" data-field="area" value="${escapeAttr(tag.area)}" placeholder="Área ENAMED"><input class="input" data-imported-tag="${row.question.id}" data-field="topic" value="${escapeAttr(tag.topic)}" placeholder="Tema principal"><input class="input" data-imported-tag="${row.question.id}" data-field="subtopic" value="${escapeAttr(tag.subtopic)}" placeholder="Subtema"></div>${row.question.comment?`<details class="material-original-toggle" style="margin-top:8px"><summary>Comentário da questão</summary><div class="markdown-preview">${renderMarkdown(row.question.comment)}</div></details>`:''}${renderQuestionFlashcardEditor(row.question, row)}</div>`;
   }).join('')}</div>`;
 }
 function bindSimuladoInputs(activeRun) {
@@ -1976,6 +1976,12 @@ function bindSimuladoInputs(activeRun) {
   if(generate) generate.onclick = () => generateSimuladoRun();
   document.querySelectorAll('[data-start-imported-sim]').forEach(button => button.onclick = e => startImportedSimulado(e.currentTarget.dataset.startImportedSim));
   document.querySelectorAll('[data-open-sim]').forEach(button => button.onclick = e => { ui.activeSimRunId = e.currentTarget.dataset.openSim; render(); });
+  document.querySelectorAll('[data-question-card][data-card-id][data-card-field]').forEach(input => {
+    input.oninput = e => updateQuestionFlashcard(e.currentTarget);
+    input.onchange = e => updateQuestionFlashcard(e.currentTarget);
+  });
+  bindFlashcardMarkdownTools(document.getElementById('simulados') || document);
+  document.querySelectorAll('[data-remove-question-card]').forEach(button => button.onclick = e => removeQuestionFlashcard(e.currentTarget.dataset.removeQuestionCard, e.currentTarget.dataset.cardId));
   if(!activeRun) return;
   document.querySelectorAll('[data-sim-go]').forEach(button => button.onclick = e => { setSimQuestionIndex(activeRun, n(e.currentTarget.dataset.simGo)); saveStateOnly(); render(); });
   document.querySelectorAll('[data-sim-answer]').forEach(button => button.onclick = e => {
