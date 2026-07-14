@@ -666,8 +666,10 @@ body.dark .video-source-switch button.active{background:#26343b;color:#8fd4e7}
 .video-stage .video-player{grid-column:auto;grid-row:auto;border-radius:0}
 .video-clean-frame-toggle{position:absolute;z-index:3;inset:0 0 54px;display:none;border:0;padding:0;background:transparent;cursor:pointer}
 .video-stage.is-paused .video-clean-frame-toggle{display:block}
-.video-stage.clean-frame .video-clean-frame-toggle{inset:0}
-.video-stage.clean-frame{cursor:pointer}
+.video-stage.clean-frame .video-clean-frame-toggle{inset:0;cursor:default}
+.video-stage.clean-frame .video-clean-frame-toggle:before{content:'▶';position:absolute;left:50%;top:50%;display:grid;place-items:center;width:64px;height:64px;padding-left:4px;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.72);border-radius:50%;background:rgba(7,23,38,.68);box-shadow:0 8px 24px rgba(0,0,0,.28);color:#fff;font-size:25px;line-height:1;opacity:.92;transition:opacity .18s,transform .18s}
+.video-stage.clean-frame .video-clean-frame-toggle:active:before{transform:translate(-50%,-50%) scale(.94)}
+@media(hover:hover){.video-stage.clean-frame:not(:hover) .video-clean-frame-toggle:before{opacity:0}.video-stage.clean-frame:hover .video-clean-frame-toggle:before{opacity:.92}}
 .video-controls{grid-column:1;grid-row:4;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:0}
 .video-controls .playback-rate{min-width:96px}
 .video-tabs{grid-column:2;grid-row:2;display:grid;gap:0;margin:0;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}

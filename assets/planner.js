@@ -3443,7 +3443,13 @@ function bindVideoPlayer(source, schedule, lesson) {
   cleanFrameToggle?.addEventListener('click',event=>{
     event.preventDefault();
     event.stopPropagation();
-    if(video.paused) setCleanFrame(!cleanFrame);
+    if(!video.paused) return;
+    if(cleanFrame && event.detail>0 && videoStage) {
+      const bounds=videoStage.getBoundingClientRect();
+      const distance=Math.hypot(event.clientX-(bounds.left+bounds.width/2),event.clientY-(bounds.top+bounds.height/2));
+      if(distance>48) return;
+    }
+    setCleanFrame(!cleanFrame);
   });
   let resume = n(state.videoPlayer.resume[source.id]);
   let lastCheckpoint = Math.floor(resume);
