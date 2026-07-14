@@ -6,7 +6,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-3';
+const QUESTION_BANK_ASSET_VERSION = '20260714-4';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -58,7 +58,7 @@ ensureDayLogs();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
@@ -67,6 +67,7 @@ let studyTimeTracker = loadStudyTimerSession();
 let pomodoroInterval = null;
 let pomodoroAlarmInterval = null;
 let pomodoroPanelCloseTimer = null;
+let questionSearchRenderTimer = null;
 let pomodoro = loadPomodoroSession();
 let simuladoTimer = { interval: null, runId: '' };
 let motivationRefreshInterval = null;
@@ -4410,6 +4411,15 @@ function openFlashcardsForSchedule(scheduleId) {
 function filteredQuestions() {
   return questionBank.filter(question => {
     const result = questionResult(question);
+    const query = normalizedTopic(ui.qSearch || '');
+    const searchable = normalizedTopic([
+      question.stem,
+      question.area,
+      question.topic,
+      question.sourceLabel || question.source,
+      ...(Array.isArray(question.tags) ? question.tags : [])
+    ].filter(Boolean).join(' '));
+    const searchOk = !query || searchable.includes(query);
     const focusOk = !ui.qFocusScheduleId || scheduleForQuestion(question)?.id === ui.qFocusScheduleId;
     const blockOk = ui.qBlock === 'Todos' || String(question.collectionBlock) === String(ui.qBlock);
     const sourceOk = ui.qSource === 'Todas' || question.sourceLabel === ui.qSource;
@@ -4420,7 +4430,39 @@ function filteredQuestions() {
       || (ui.qStatus === 'Erradas' && result && !result.correct)
       || (ui.qStatus === 'Certas' && result?.correct)
       || (ui.qStatus === 'Gabarito suspeito' && Boolean(state.questionProgress[question.id]?.answerKeyIssue));
-    return focusOk && blockOk && sourceOk && topicOk && statusOk;
+    return searchOk && focusOk && blockOk && sourceOk && topicOk && statusOk;
+  });
+}
+function renderQuestionTags(question) {
+  const tags = Array.isArray(question.tags) ? question.tags.filter(Boolean) : [];
+  if(!tags.length) return '';
+  return `<div class="question-tag-list" aria-label="Tags organizadas da questão">${tags.map((tag,index) => `<button type="button" class="question-tag tag-tone-${index%6}" data-question-tag-filter="${escapeAttr(tag)}" title="Pesquisar pela tag ${escapeAttr(tag)}"><span class="question-tag-order">${index+1}</span><span>${escapeHtml(tag)}</span></button>`).join('')}</div>`;
+}
+function bindQuestionTagFilters() {
+  document.querySelectorAll('[data-question-tag-filter]').forEach(button => button.onclick = event => {
+    ui.qSearch = event.currentTarget.dataset.questionTagFilter || '';
+    ui.qIndex = 0;
+    renderQuestionBank();
+  });
+}
+function refreshQuestionSearchResults() {
+  const searchInput = document.getElementById('questionSearch');
+  const keepSearchFocus = document.activeElement === searchInput;
+  const selectionStart = searchInput?.selectionStart ?? (ui.qSearch || '').length;
+  const selectionEnd = searchInput?.selectionEnd ?? selectionStart;
+  const questions = filteredQuestions();
+  ui.qIndex = Math.max(0, Math.min(ui.qIndex, Math.max(questions.length - 1, 0)));
+  const question = questions[ui.qIndex];
+  const activeQuestion = question ? applyQuestionEdits(question) : null;
+  const card = document.querySelector('#questoes .question-card');
+  if(!card) return;
+  card.innerHTML = activeQuestion ? renderQuestion(activeQuestion, questions.length) : '<div class="empty">Nenhuma questão corresponde a esta busca.</div>';
+  bindQuestionTagFilters();
+  bindQuestionActions(questions, activeQuestion);
+  updateAutoStudyIndicator();
+  if(keepSearchFocus && searchInput?.isConnected) requestAnimationFrame(() => {
+    searchInput.focus({ preventScroll:true });
+    searchInput.setSelectionRange(selectionStart,selectionEnd);
   });
 }
 function setQuestionFocusMode(enabled) {
@@ -4476,6 +4518,7 @@ function renderQuestionBank() {
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel"><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
       <div class="question-filter">
+        <label class="search-field question-search-field"><span aria-hidden="true">⌕</span><input class="input" id="questionSearch" value="${escapeAttr(ui.qSearch)}" placeholder="Buscar enunciado, tema ou tag" autocomplete="off"></label>
         <select class="select" id="questionBlock">${blocks.map(block => `<option value="${escapeAttr(block)}" ${block===String(ui.qBlock)?'selected':''}>${block === 'Todos' ? 'Todas as questões' : escapeHtml(questionCollectionLabel(block))}</option>`).join('')}</select>
         <select class="select" id="questionSource">${sources.map(source => `<option value="${escapeAttr(source)}" ${source===ui.qSource?'selected':''}>${escapeHtml(source)}</option>`).join('')}</select>
         <select class="select" id="questionTopic">${topics.map(topic => `<option value="${escapeAttr(topic)}" ${topic===ui.qTopic?'selected':''}>${escapeHtml(topic)}</option>`).join('')}</select>
@@ -4490,10 +4533,18 @@ function renderQuestionBank() {
   document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionTopic').onchange = e => { ui.qFocusScheduleId=''; ui.qTopic=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionStatus').onchange = e => { ui.qStatus=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  const questionSearch = document.getElementById('questionSearch');
+  questionSearch.oninput = e => {
+    ui.qSearch = e.target.value;
+    ui.qIndex = 0;
+    clearTimeout(questionSearchRenderTimer);
+    questionSearchRenderTimer = setTimeout(refreshQuestionSearchResults,140);
+  };
   document.getElementById('showQuestionIssues').onclick = () => { ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   const clearFocus = document.getElementById('clearQuestionFocus');
   if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qIndex=0; render(); };
   document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); });
+  bindQuestionTagFilters();
   bindQuestionActions(questions, activeQuestion);
   if(questionSidebarCollapsed && activeQuestion && !autoStudyIsRunning('questions')) startAutoStudy('questions',scheduleForQuestion(activeQuestion)?.id || '',60);
   updateAutoStudyIndicator();
@@ -4541,6 +4592,7 @@ function renderQuestion(question, total) {
   const highlightTools = textHighlightEnabled() ? `<div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearHighlights">Limpar</button></div>` : '';
   return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div></div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" ${ui.qIndex>=total-1?'disabled':''}>›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
     <div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>
+    ${renderQuestionTags(question)}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}</div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
     <div class="section-title"><h2>Questão ${question.number}</h2>${highlightTools}</div>
