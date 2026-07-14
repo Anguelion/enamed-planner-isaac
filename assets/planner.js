@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-7';
+const QUESTION_BANK_ASSET_VERSION = '20260714-8';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -3529,6 +3529,23 @@ function bindVideoPlayer(source, schedule, lesson) {
   let manualSeek = false;
   let restoringRate = false;
   let bookmarkTimeFrozen = null;
+  const refreshVideoKeepingPlayback = () => {
+    const currentTime = Math.floor(video.currentTime || 0);
+    const wasPlaying = !video.paused;
+    const playbackRate = video.playbackRate || 1;
+    state.videoPlayer.resume[source.id] = currentTime;
+    state.videoPlayer.lastOpen = { lessonId:ui.videoLessonId || '', sourceId:source.id };
+    saveStateOnly();
+    renderAulas();
+    requestAnimationFrame(() => {
+      const nextVideo = document.getElementById('lessonVideo');
+      if(!nextVideo) return;
+      nextVideo.currentTime = currentTime;
+      nextVideo.defaultPlaybackRate = playbackRate;
+      nextVideo.playbackRate = playbackRate;
+      if(wasPlaying) nextVideo.play().catch(() => {});
+    });
+  };
   const applyPreferredRate = () => {
     const rate = rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || 1);
     if(Math.abs(video.playbackRate-rate) < .01) return;
@@ -3615,7 +3632,8 @@ function bindVideoPlayer(source, schedule, lesson) {
     const entries = state.videoPlayer.bookmarks[source.id] || [];
     entries.push({id:`bookmark-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,time:bookmarkTimeFrozen ?? Math.floor(video.currentTime || 0),label});
     state.videoPlayer.bookmarks[source.id] = entries.sort((a,b)=>a.time-b.time);
-    saveStateOnly(); renderAulas();
+    // Atualiza a lista sem interromper o vídeo que já estava em reprodução.
+    refreshVideoKeepingPlayback();
   });
   const seekToBookmark = seconds => {
     const target = Math.max(0, Number(seconds) || 0);
@@ -3650,10 +3668,9 @@ function bindVideoPlayer(source, schedule, lesson) {
         input.value = formatVideoTime(bookmark?.time || 0);
         return;
       }
-      bookmark.time = Math.floor(Number.isFinite(video.duration) ? Math.min(parsed, Math.max(0, video.duration - .1)) : parsed);
-      state.videoPlayer.bookmarks[source.id] = entries.sort((a,b) => a.time-b.time);
-      saveStateOnly();
-      renderAulas();
+      const nextTime = Math.floor(Number.isFinite(video.duration) ? Math.min(parsed, Math.max(0, video.duration - .1)) : parsed);
+      state.videoPlayer.bookmarks[source.id] = entries.map(item => item.id === bookmark.id ? {...item, time:nextTime, label:item.label || bookmark.label || 'Ponto importante'} : item).sort((a,b) => a.time-b.time);
+      refreshVideoKeepingPlayback();
     };
     input.onchange = saveBookmarkTime;
     input.onkeydown = event => { if(event.key === 'Enter') { event.preventDefault(); input.blur(); } };
@@ -5794,6 +5811,14 @@ document.getElementById('themeToggle').onclick = event => {
 };
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 document.addEventListener('keydown', event => {
+  if((event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'l') {
+    event.preventDefault();
+    if(event.repeat) return;
+    applyTheme(document.body.classList.contains('dark') ? 'light' : 'dark');
+    updateAutoStudyIndicator();
+    updatePomodoroWidget();
+    return;
+  }
   if((event.ctrlKey || event.metaKey) && !event.shiftKey && event.key.toLowerCase() === 'f' && (ui.tab==='aulas' || ui.tab==='questoes')) {
     event.preventDefault();
     if(event.repeat) return;
