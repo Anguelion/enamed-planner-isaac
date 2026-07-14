@@ -1,14 +1,14 @@
-const CACHE_NAME = 'soqueromed-shell-v26';
+const CACHE_NAME = 'soqueromed-shell-v27';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260714-11',
-  './assets/planner.js?v=20260714-11',
+  './assets/planner.css?v=20260714-12',
+  './assets/planner.js?v=20260714-12',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
   './assets/icons/apple-touch-icon.png',
-  './question_bank/index.js?v=20260714-1'
+  './question_bank/index.js?v=20260714-2'
   ,'./data/prescription_catalog.json'
 ];
 
