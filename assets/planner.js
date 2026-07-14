@@ -270,8 +270,8 @@ function ensureQuestionProgress() {
   state.schedule.forEach(item => {
     if(item.manualQ === undefined) item.manualQ = n(item.q);
     if(item.manualFC === undefined) item.manualFC = n(item.fc);
-    item.metaQ = Math.max(LESSON_MIN_QUESTIONS, n(item.metaQ));
-    item.metaFC = Math.max(LESSON_MIN_FLASHCARDS, n(item.metaFC));
+    item.metaQ = LESSON_MIN_QUESTIONS;
+    item.metaFC = LESSON_MIN_FLASHCARDS;
   });
   state.questionSettings.secondsPerQuestion = Math.max(15, n(state.questionSettings.secondsPerQuestion) || 90);
   state.questionSettings.fontSize = Math.max(14, Math.min(28, n(state.questionSettings.fontSize) || 16));
@@ -385,7 +385,7 @@ function applyOfficialSchedule() {
       week: date <= (state.reschedule?.vacationUntil || '2026-08-09') ? `Férias.${Math.floor(index / 10) + 1}` : `Aulas.${Math.floor(index / 10) + 1}`,
       q: n(current?.q), fc: n(current?.fc), hours: n(current?.hours),
       manualQ: current?.manualQ ?? n(current?.q), manualFC: current?.manualFC ?? n(current?.fc),
-      metaQ: Math.max(LESSON_MIN_QUESTIONS, n(current?.metaQ)), metaFC: Math.max(LESSON_MIN_FLASHCARDS, n(current?.metaFC)), metaH: n(current?.metaH), notes: current?.notes || ''
+      metaQ: LESSON_MIN_QUESTIONS, metaFC: LESSON_MIN_FLASHCARDS, metaH: n(current?.metaH), notes: current?.notes || ''
     });
   });
   state.schedule = ordered;
@@ -1186,8 +1186,8 @@ function debounce(callback, wait=180) {
 }
 function pct(v) { return `${Math.round(n(v)*100)}%`; }
 function clamp(v,min=0,max=1) { return Math.max(min, Math.min(max, n(v))); }
-function lessonQuestionTarget(item) { return Math.max(LESSON_MIN_QUESTIONS, n(item?.metaQ)); }
-function lessonFlashcardTarget(item) { return Math.max(LESSON_MIN_FLASHCARDS, n(item?.metaFC)); }
+function lessonQuestionTarget() { return LESSON_MIN_QUESTIONS; }
+function lessonFlashcardTarget() { return LESSON_MIN_FLASHCARDS; }
 function statusOf(item) {
   const videoDone = scheduleVideoCompleted(item);
   if(videoDone && completedQuestions(item) >= lessonQuestionTarget(item) && completedFlashcards(item) >= lessonFlashcardTarget(item)) return 'Concluído';
@@ -1214,8 +1214,8 @@ function totals() {
   const completed = schedule.filter(x => statusOf(x)==='Concluído').length;
   const due = schedule.filter(x => x.date <= ui.refDate);
   const overdue = due.filter(x => statusOf(x)!=='Concluído');
-  const debtQ = overdue.reduce((s,x)=>s+Math.max(0,n(x.metaQ)-completedQuestions(x)),0);
-  const debtFC = overdue.reduce((s,x)=>s+Math.max(0,n(x.metaFC)-completedFlashcards(x)),0);
+  const debtQ = overdue.reduce((s,x)=>s+Math.max(0,lessonQuestionTarget(x)-completedQuestions(x)),0);
+  const debtFC = overdue.reduce((s,x)=>s+Math.max(0,lessonFlashcardTarget(x)-completedFlashcards(x)),0);
   return {
     total: schedule.length, completed, progress: completed / Math.max(schedule.length,1),
     q: schedule.reduce((s,x)=>s+completedQuestions(x),0), fc: schedule.reduce((s,x)=>s+completedFlashcards(x),0), hours: schedule.reduce((s,x)=>s+n(x.hours),0),
@@ -1228,7 +1228,7 @@ function areaStats() {
   state.schedule.forEach(x => {
     const k = x.area || 'Sem área';
     if(!map.has(k)) map.set(k, {area:k,total:0,done:0,q:0,metaQ:0,fc:0,metaFC:0,hours:0,items:[]});
-    const m = map.get(k); m.total++; m.done += statusOf(x)==='Concluído'?1:0; m.q+=completedQuestions(x); m.metaQ+=n(x.metaQ); m.fc+=completedFlashcards(x); m.metaFC+=n(x.metaFC); m.hours+=n(x.hours); m.items.push(x);
+    const m = map.get(k); m.total++; m.done += statusOf(x)==='Concluído'?1:0; m.q+=completedQuestions(x); m.metaQ+=lessonQuestionTarget(x); m.fc+=completedFlashcards(x); m.metaFC+=lessonFlashcardTarget(x); m.hours+=n(x.hours); m.items.push(x);
   });
   return [...map.values()].map(x => ({...x, progress:x.done/Math.max(x.total,1), debtQ:Math.max(0,x.metaQ-x.q), debtFC:Math.max(0,x.metaFC-x.fc)})).sort((a,b)=>a.progress-b.progress || b.total-a.total);
 }
@@ -1532,7 +1532,7 @@ function renderPainel() {
 }
 function renderMiniList(items) {
   if(!items.length) return '<div class="empty">Sem pendências nesse filtro.</div>';
-  return items.map(x => `<div class="item"><div class="date-chip">${fmtDate(x.date).slice(0,5)}</div><div><button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button><div class="muted">Bloco ${x.block} · ${escapeHtml(x.area)} · faltam ${Math.max(0,n(x.metaQ)-completedQuestions(x))} questões e ${Math.max(0,n(x.metaFC)-completedFlashcards(x))} flashcards</div></div><div>${badgeStatus(statusOf(x))}</div></div>`).join('');
+  return items.map(x => `<div class="item"><div class="date-chip">${fmtDate(x.date).slice(0,5)}</div><div><button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button><div class="muted">Bloco ${x.block} · ${escapeHtml(x.area)} · faltam ${Math.max(0,lessonQuestionTarget(x)-completedQuestions(x))} questões e ${Math.max(0,lessonFlashcardTarget(x)-completedFlashcards(x))} flashcards</div></div><div>${badgeStatus(statusOf(x))}</div></div>`).join('');
 }
 function areaLine(a) { return `<div class="area-bar"><strong>${escapeHtml(a.area)}</strong><div class="bar"><span style="width:${pct(a.progress)}"></span></div><span>${pct(a.progress)}</span></div>`; }
 function renderPendencias() {
@@ -1567,12 +1567,12 @@ function renderPendingLessons(items) {
     const videoDone = scheduleVideoCompleted(item);
     const questionStats = questionStatsForSchedule(item.id);
     const flashcardStats = flashcardStatsForSchedule(item.id);
-    return `<div class="pending-lesson"><div><div class="pending-lesson-title">${priorityBar(item)}<button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(item.id)}"><strong>B${item.block} · ${escapeHtml(item.topic)}</strong></button></div><div class="muted">${escapeHtml(item.area)} · ${badgeStatus(statusOf(item))}</div></div><div class="pending-lesson-actions"><button class="pending-action ${videoDone?'done':''}" data-toggle-schedule-video="${escapeAttr(item.id)}" ${videoAvailable?'':'disabled'} title="Marcar videoaula como assistida"><span class="pending-symbol">▶</span><small>${videoDone?'vista':'vídeo'}</small></button><button class="pending-action" data-open-schedule-questions="${escapeAttr(item.id)}" title="Abrir questões desta aula"><span class="pending-symbol">Q</span><small>${questionStats.done}/${Math.round(n(item.metaQ))}</small></button><button class="pending-action" data-open-schedule-flashcards="${escapeAttr(item.id)}" title="Abrir flashcards desta aula"><span class="pending-symbol">▤</span><small>${flashcardStats.reviews}/${Math.round(n(item.metaFC))}</small></button></div></div>`;
+    return `<div class="pending-lesson"><div><div class="pending-lesson-title">${priorityBar(item)}<button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(item.id)}"><strong>B${item.block} · ${escapeHtml(item.topic)}</strong></button></div><div class="muted">${escapeHtml(item.area)} · ${badgeStatus(statusOf(item))}</div></div><div class="pending-lesson-actions"><button class="pending-action ${videoDone?'done':''}" data-toggle-schedule-video="${escapeAttr(item.id)}" ${videoAvailable?'':'disabled'} title="Marcar videoaula como assistida"><span class="pending-symbol">▶</span><small>${videoDone?'vista':'vídeo'}</small></button><button class="pending-action" data-open-schedule-questions="${escapeAttr(item.id)}" title="Abrir questões desta aula"><span class="pending-symbol">Q</span><small>${questionStats.done}/${lessonQuestionTarget(item)}</small></button><button class="pending-action" data-open-schedule-flashcards="${escapeAttr(item.id)}" title="Abrir flashcards desta aula"><span class="pending-symbol">▤</span><small>${flashcardStats.reviews}/${lessonFlashcardTarget(item)}</small></button></div></div>`;
   }).join('')}</div>`;
 }
 function renderScheduleTable(rows, editable=false) {
   if(!rows.length) return '<div class="empty">Nada para mostrar aqui.</div>';
-  return `<div class="table-wrap"><table class="schedule-table"><thead><tr><th>Data</th><th>Bloco</th><th>Tema</th><th>Área</th><th>Status</th><th class="num">Questões</th><th class="num">Banco</th><th class="num">Flashcards</th><th class="num">Horas</th><th class="num">Progresso</th><th>Anotações</th></tr></thead><tbody>${rows.map(x => { const bank=questionStatsForSchedule(x.id); const cards=flashcardStatsForSchedule(x.id); const videoCount=plannedVideoCountForSchedule(x); const videoDone=scheduleVideoCompleted(x); return `<tr><td class="schedule-date-cell">${fmtDate(x.date)}<div class="muted">${x.day}</div></td><td class="schedule-block-cell">${x.block ?? ''}</td><td class="schedule-topic-cell"><div class="schedule-topic-line">${priorityBar(x)}<button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button>${videoCount?` <button class="tiny-btn" data-open-schedule-videos="${escapeAttr(x.id)}" title="Abrir videoaula">▶</button><button class="tiny-btn" data-toggle-schedule-video="${escapeAttr(x.id)}" title="Marcar videoaula como vista">${videoDone?'Vídeo ✓':'Vídeo'}</button>`:''}</div><div class="schedule-meta muted">Meta: ${x.metaQ} questões · ${x.metaFC} flashcards · ${x.metaH} h${videoCount?` · ${videoCount} vídeo${videoCount===1?'':'s'}`:''}</div></td><td>${escapeHtml(x.area)}</td><td>${badgeStatus(statusOf(x))}</td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="q" type="number" min="0" step="1" value="${completedQuestions(x)}"><div class="auto-progress">Banco ${bank.done}${n(x.manualQ) ? ` · manual ${n(x.manualQ)}` : ''}</div></td><td class="num"><button class="tiny-btn" data-open-schedule-questions="${escapeAttr(x.id)}">Abrir</button><div class="bank-result"><strong>${bank.done}</strong> feitas<br>${bank.correct} certas · ${bank.done?pct(bank.rate):'-'}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="fc" type="number" min="0" step="1" value="${n(x.manualFC)}"><div class="auto-progress">+${cards.reviews} revisões</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="hours" type="number" min="0" step="0.25" value="${n(x.hours)}"></td><td class="num">${pct(progressOf(x))}</td><td><input class="notes-input" data-id="${x.id}" data-field="notes" value="${escapeAttr(x.notes)}"></td></tr>`; }).join('')}</tbody></table></div>`;
+  return `<div class="table-wrap"><table class="schedule-table"><thead><tr><th>Data</th><th>Bloco</th><th>Tema</th><th>Área</th><th>Status</th><th class="num">Questões</th><th class="num">Banco</th><th class="num">Flashcards</th><th class="num">Horas</th><th class="num">Progresso</th><th>Anotações</th></tr></thead><tbody>${rows.map(x => { const bank=questionStatsForSchedule(x.id); const cards=flashcardStatsForSchedule(x.id); const videoCount=plannedVideoCountForSchedule(x); const videoDone=scheduleVideoCompleted(x); return `<tr><td class="schedule-date-cell">${fmtDate(x.date)}<div class="muted">${x.day}</div></td><td class="schedule-block-cell">${x.block ?? ''}</td><td class="schedule-topic-cell"><div class="schedule-topic-line">${priorityBar(x)}<button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button>${videoCount?` <button class="tiny-btn" data-open-schedule-videos="${escapeAttr(x.id)}" title="Abrir videoaula">▶</button><button class="tiny-btn" data-toggle-schedule-video="${escapeAttr(x.id)}" title="Marcar videoaula como vista">${videoDone?'Vídeo ✓':'Vídeo'}</button>`:''}</div><div class="schedule-meta muted">Meta: ${lessonQuestionTarget(x)} questões · ${lessonFlashcardTarget(x)} flashcards · ${x.metaH} h${videoCount?` · ${videoCount} vídeo${videoCount===1?'':'s'}`:''}</div></td><td>${escapeHtml(x.area)}</td><td>${badgeStatus(statusOf(x))}</td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="q" type="number" min="0" step="1" value="${completedQuestions(x)}"><div class="auto-progress">Banco ${bank.done}${n(x.manualQ) ? ` · manual ${n(x.manualQ)}` : ''}</div></td><td class="num"><button class="tiny-btn" data-open-schedule-questions="${escapeAttr(x.id)}">Abrir</button><div class="bank-result"><strong>${bank.done}</strong> feitas<br>${bank.correct} certas · ${bank.done?pct(bank.rate):'-'}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="fc" type="number" min="0" step="1" value="${n(x.manualFC)}"><div class="auto-progress">+${cards.reviews} revisões</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="hours" type="number" min="0" step="0.25" value="${n(x.hours)}"></td><td class="num">${pct(progressOf(x))}</td><td><input class="notes-input" data-id="${x.id}" data-field="notes" value="${escapeAttr(x.notes)}"></td></tr>`; }).join('')}</tbody></table></div>`;
 }
 function enhanceScheduleStudyIcons() {
   const currentBlock=n(currentScheduleBlock());
@@ -4394,7 +4394,7 @@ function openQuestionsForSchedule(scheduleId) {
   ui.qSource = 'Todas';
   ui.qTopic = exact.length ? item.topic : 'Todos';
   ui.qStatus = 'Não respondidas';
-  ui.qFocusTarget = Math.max(1, Math.round(n(item.metaQ) || n(item.targetQ) || 10));
+  ui.qFocusTarget = LESSON_MIN_QUESTIONS;
   ui.qIndex = 0;
   ui.qQuestionId = '';
   ui.justAnsweredId = '';
@@ -4552,7 +4552,7 @@ function renderQuestionBank() {
       <button class="question-issue-summary ${flagged?'has-items':''}" id="showQuestionIssues"><span>⚑</span><strong>${flagged}</strong><span>${flagged===1?'gabarito marcado':'gabaritos marcados'}</span></button>
       ${progress('Aproveitamento', correct.length/Math.max(answered.length,1), `${correct.length} de ${answered.length}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
-      ${focusItem ? (() => { const target=Math.max(1,Math.round(n(ui.qFocusTarget)||n(focusItem.metaQ)||10)); const completed=questionBank.filter(item=>scheduleForQuestion(item)?.id===focusItem.id&&questionResult(item)).length; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
+      ${focusItem ? (() => { const target=LESSON_MIN_QUESTIONS; const completed=questionBank.filter(item=>scheduleForQuestion(item)?.id===focusItem.id&&questionResult(item)).length; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
       <details class="question-filter-panel"><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? 'Todas' : questionCollectionLabel(ui.qBlock))}</span></summary>
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel"><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
