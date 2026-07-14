@@ -1493,70 +1493,56 @@ body.dark .question-tag-order{background:rgba(255,255,255,.08)}
 body.dark .flashcard-study-card .flashcard-back{background:linear-gradient(145deg,#263c4b,#202a2a);border-color:#35677e;color:var(--ink);box-shadow:0 12px 28px rgba(0,0,0,.24)}
 @media(max-width:700px){.flashcard-study-card .flashcard-back{padding:22px 18px;font-size:23px;line-height:1.48}.flashcard-study-card .flashcard-rating .icon-btn{min-height:38px;padding:5px 4px;font-size:12px}.flashcard-study-card .flashcard-rating small{font-size:10px}}
 
-/* Trilha do dia: tres estacoes sempre na mesma linha. Em telas estreitas, deslize horizontalmente. */
-.dashboard-road .road-path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:column;align-items:stretch;gap:12px;overflow-x:auto;overflow-y:hidden;padding:2px 2px 8px;scroll-snap-type:x proximity}
-.dashboard-road .road-step{grid-row:1;min-width:0;min-height:190px;scroll-snap-align:start}
-@media(max-width:760px){.dashboard-road .road-path{grid-template-columns:repeat(3,minmax(248px,1fr));overflow-x:auto}.dashboard-road .road-step{min-height:178px}}
-
-/* Trilha: cada etapa ocupa um cartao proprio, sem esticar o conteudo pela linha. */
+/* Trilha do dia: tres cartoes independentes para leitura imediata. */
 .dashboard-road > .road-path{
-  grid-auto-flow:row;
+  display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
   align-items:stretch;
-  min-height:0;
+  overflow:visible;
+  padding:2px;
 }
+.dashboard-road > .road-path:before{display:none}
 .dashboard-road > .road-path > .road-step{
-  grid-column:auto;
-  grid-row:auto;
   display:flex;
   flex-direction:column;
   min-width:0;
-  min-height:220px;
-}
-.dashboard-road > .road-path > .road-step .road-label{
-  min-height:42px;
-  overflow-wrap:anywhere;
-}
-.dashboard-road > .road-path > .road-step .road-sub{
-  min-height:34px;
-}
-.dashboard-road > .road-path > .road-step .road-progress{
-  margin-top:auto;
-}
-.dashboard-road > .road-path > .road-step .road-actions{
-  align-items:center;
-}
-@media(max-width:760px){
-  .dashboard-road > .road-path{
-    grid-template-columns:repeat(3,minmax(248px,1fr));
-    grid-auto-flow:column;
-    overflow-x:auto;
-  }
-  .dashboard-road > .road-path > .road-step{
-    grid-row:1;
-    min-height:205px;
-  }
-}
-
-/* Cartoes da trilha no mesmo padrao visual dos indicadores do Dashboard. */
-.dashboard-road > .road-path > .road-step{
+  min-height:204px;
+  padding:17px;
   border:1px solid #dce3ee;
-  border-left:6px solid var(--blue);
+  border-left:6px solid #d34a4a;
   border-radius:10px;
   background:#fff;
   box-shadow:0 8px 22px rgba(25,48,82,.08);
-  padding:18px 18px 16px;
+  overflow:hidden;
 }
-.dashboard-road > .road-path > .road-step.complete{border-color:#cfe5d8;border-left-color:var(--green);background:#fff}
-.dashboard-road > .road-path > .road-step.partial{border-color:#f0dfb0;border-left-color:var(--amber);background:#fff}
-.dashboard-road > .road-path > .road-step.active{border-left-color:var(--blue);box-shadow:0 0 0 2px rgba(37,99,235,.1),0 10px 26px rgba(25,48,82,.1)}
 .dashboard-road > .road-path > .road-step:after{display:none}
-.dashboard-road > .road-path > .road-step .road-step-head{gap:9px}
-.dashboard-road > .road-path > .road-step .road-dot{width:38px;height:38px;font-size:17px}
-.dashboard-road > .road-path > .road-step .road-icon{width:32px;height:32px;border-radius:10px}
-.dashboard-road > .road-path > .road-step .road-label{font-size:18px;line-height:1.3}
-.dashboard-road > .road-path > .road-step .road-progress-row{font-size:13px}
-.dashboard-road > .road-path > .road-step .road-actions .tiny-btn{background:var(--blue);border-color:var(--blue);color:#fff}
+.dashboard-road > .road-path > .road-step.missing{border-color:#efcaca;border-left-color:#d34a4a;background:#fffafa}
+.dashboard-road > .road-path > .road-step.partial{border-color:#edd69d;border-left-color:var(--amber);background:#fffdf7}
+.dashboard-road > .road-path > .road-step.complete{border-color:#b9dfc6;border-left-color:var(--green);background:#f8fffa}
+.dashboard-road .road-step-head{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:10px;align-items:center}
+.dashboard-road .road-step-head strong{font-size:18px;line-height:1.2}
+.dashboard-road .road-icon{width:38px;height:38px;border-radius:9px;background:var(--soft-blue);color:var(--blue);font-size:13px}
+.dashboard-road .road-status{display:inline-flex;align-items:center;min-height:27px;padding:4px 9px;border-radius:999px;background:#fdeaea;color:#b53232;font-size:12px;font-weight:900;white-space:nowrap}
+.dashboard-road .road-step.partial .road-status{background:#fff0c9;color:#9a6800}
+.dashboard-road .road-step.complete .road-status{background:#e4f6ea;color:#087b55}
+.dashboard-road .road-label{margin-top:16px;min-height:48px;font-size:18px;line-height:1.3;font-weight:800;overflow-wrap:anywhere}
+.dashboard-road .road-sub{margin-top:4px;min-height:26px;font-size:14px}
+.dashboard-road .road-progress{margin-top:auto;padding-top:14px}
+.dashboard-road .road-progress-row{font-size:13px}
+.dashboard-road .road-actions{margin-top:12px}
+.dashboard-road .road-actions .tiny-btn{width:100%;min-height:38px;border-radius:7px;background:var(--blue);border-color:var(--blue);color:#fff;font-weight:800}
+body.dark .dashboard-road > .road-path > .road-step{background:#202a2a;border-color:#3b494d}
+body.dark .dashboard-road > .road-path > .road-step.missing{border-left-color:#e66a6a}
+body.dark .dashboard-road > .road-path > .road-step.partial{border-left-color:var(--amber)}
+body.dark .dashboard-road > .road-path > .road-step.complete{border-left-color:var(--green)}
+@media(max-width:760px){
+  .dashboard-road > .road-path{grid-template-columns:repeat(3,minmax(226px,78vw));overflow-x:auto;overflow-y:hidden;padding:2px 2px 10px;scroll-snap-type:x mandatory}
+  .dashboard-road > .road-path > .road-step{min-height:198px;scroll-snap-align:start}
+  .dashboard-road .road-step-head{grid-template-columns:34px minmax(0,1fr)}
+  .dashboard-road .road-icon{width:34px;height:34px}
+  .dashboard-road .road-status{grid-column:1/-1;justify-self:start}
+}
 /* Compacta os controles de avaliação sem reduzir o conteúdo do cartão. */
 .flashcard-study-card .flashcard-rating .icon-btn{min-height:36px;padding:5px 6px;font-size:12px}
 @media(max-width:700px){.flashcard-study-card .flashcard-rating .icon-btn{min-height:32px;padding:4px 3px;font-size:11px}.flashcard-study-card .flashcard-rating small{font-size:9px}}
