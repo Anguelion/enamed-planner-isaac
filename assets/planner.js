@@ -210,6 +210,14 @@ function ensureQuestionProgress() {
   if(!state.videoFlashcards || typeof state.videoFlashcards !== 'object') state.videoFlashcards = {};
   if(!state.flashcardSettings || typeof state.flashcardSettings !== 'object') state.flashcardSettings = {};
   if(!Array.isArray(state.flashcardReviewHistory)) state.flashcardReviewHistory = [];
+  if(!Array.isArray(state.flashcardLibrary)) state.flashcardLibrary = [];
+  if(!state.flashcardSystem || typeof state.flashcardSystem !== 'object') state.flashcardSystem = {};
+  if(!Array.isArray(state.flashcardSystem.reviewLogs)) state.flashcardSystem.reviewLogs = [];
+  if(!Array.isArray(state.flashcardSystem.captureSessions)) state.flashcardSystem.captureSessions = [];
+  if(!Array.isArray(state.flashcardSystem.versions)) state.flashcardSystem.versions = [];
+  if(!Array.isArray(state.flashcardSystem.undoStack)) state.flashcardSystem.undoStack = [];
+  if(!state.flashcardSystem.profile || typeof state.flashcardSystem.profile !== 'object') state.flashcardSystem.profile = {};
+  state.flashcardSystem.profile = { targetRetention:0.9, maximumInterval:3650, fuzz:true, leechThreshold:8, ...state.flashcardSystem.profile };
   if(!state.importedQuestionTags || typeof state.importedQuestionTags !== 'object') state.importedQuestionTags = {};
   if(!state.dashboardSettings || typeof state.dashboardSettings !== 'object') state.dashboardSettings = {};
   if(!state.videoPlayer || typeof state.videoPlayer !== 'object') state.videoPlayer = {};
@@ -251,6 +259,7 @@ function ensureQuestionProgress() {
     current.reviews = Math.max(0, n(current.reviews) || 0);
     if(!current.nextReview) current.nextReview = localISODate(new Date());
   });
+  state.flashcardLibrary.forEach(card => normalizeFlashcardRecord(card));
 }
 
 function normalizedTopic(value='') {
@@ -3456,6 +3465,80 @@ function flashcardCreationReason(result) {
   if(confidence < 90) return `Liberado porque sua certeza foi de ${confidence}%, abaixo de 90%.`;
   return '';
 }
+const FSRS_WEIGHTS = [0.4072,1.1829,3.1262,15.4722,7.2102,0.5316,1.0651,0.0234,1.616,0.1544,1.0824,1.9813,0.0953,0.2975,2.2042,0.2407,2.9466,0.5034,0.6567,0.1852,0.2007];
+const FSRS_RATINGS = {again:1, hard:2, good:3, easy:4};
+function newFlashcardId(prefix='fc') { return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2)}`; }
+function normalizeFlashcardRecord(card) {
+  if(!card || typeof card !== 'object') return card;
+  card.weeklyBlockId = String(card.weeklyBlockId ?? card.block ?? '');
+  card.subjectId = String(card.subjectId ?? card.scheduleId ?? '');
+  card.subject = card.subject || card.subarea || card.topic || 'Sem assunto';
+  card.sourceType = card.sourceType || (card.questionId ? 'question' : card.videoId ? 'video' : card.source === 'Anki' ? 'import' : 'manual');
+  card.sourceReference = card.sourceReference || card.questionId || card.videoId || card.scheduleId || '';
+  card.sourceLocator = card.sourceLocator || card.topic || '';
+  card.tags = Array.isArray(card.tags) ? card.tags : String(card.tags || '').split(/[,;\s]+/).filter(Boolean);
+  card.schedulerProfileId = card.schedulerProfileId || 'default';
+  card.state = card.state || 'new';
+  card.due = card.due || state.flashcardProgress?.[card.id]?.nextReview || localISODate(new Date());
+  card.stability = Math.max(0, n(card.stability));
+  card.difficulty = Math.max(1, Math.min(10, n(card.difficulty) || 5));
+  card.scheduledDays = Math.max(0, n(card.scheduledDays));
+  card.learningSteps = Math.max(0, n(card.learningSteps));
+  card.reps = Math.max(0, n(card.reps) || n(state.flashcardProgress?.[card.id]?.reviews));
+  card.lapses = Math.max(0, n(card.lapses) || n(state.flashcardProgress?.[card.id]?.lapses));
+  card.lastReview = card.lastReview || state.flashcardProgress?.[card.id]?.lastReviewedAt || '';
+  card.contentVersion = Math.max(1, n(card.contentVersion) || 1);
+  card.rowVersion = Math.max(1, n(card.rowVersion) || 1);
+  card.isSuspended = Boolean(card.isSuspended || state.flashcardProgress?.[card.id]?.status === 'Suspenso');
+  return card;
+}
+function flashcardContentWarnings(card) {
+  const warnings = [];
+  const front = String(card?.front || '').trim();
+  const back = String(card?.back || '').trim();
+  if(front.split(/\s+/).filter(Boolean).length > 80) warnings.push('A frente está longa; tente deixar uma pergunta central.');
+  if(back.split(/\s+/).filter(Boolean).length > 100) warnings.push('O verso está longo; considere dividir em dois cards.');
+  if((front.match(/\?/g) || []).length > 1) warnings.push('Há mais de uma pergunta na frente.');
+  if(/\be\/ou\b|\betc\.\b/i.test(front)) warnings.push('Evite perguntas vagas ou listas abertas.');
+  return warnings;
+}
+function flashcardAllRecords() {
+  const records = [...manualFlashcards(), ...(state.flashcardLibrary || [])];
+  const seen = new Set();
+  return records.filter(card => {
+    normalizeFlashcardRecord(card);
+    if(!card.id || seen.has(card.id) || card.deletedAt) return false;
+    seen.add(card.id);
+    return card.front && card.back;
+  });
+}
+function fsrsIntervalDays(card, rating, nextStability) {
+  const profile = state.flashcardSystem.profile;
+  const retention = Math.max(0.7, Math.min(0.99, n(profile.targetRetention) || 0.9));
+  if(rating === 1) return 0;
+  const base = Math.max(0.25, nextStability * Math.log(retention) / Math.log(0.9));
+  const multiplier = rating === 2 ? 0.7 : rating === 3 ? 1 : 1.35;
+  const interval = Math.max(1, Math.round(base * multiplier));
+  if(!profile.fuzz || interval < 7) return Math.min(n(profile.maximumInterval) || 3650, interval);
+  const fuzz = Math.max(1, Math.round(interval * 0.08));
+  return Math.min(n(profile.maximumInterval) || 3650, Math.max(1, interval + Math.round((Math.random() * 2 - 1) * fuzz)));
+}
+function nextFsrsProgress(card, rating) {
+  const current = normalizeFlashcardRecord({...card});
+  const r = Math.max(1, Math.min(4, n(rating) || 3));
+  const oldStability = Math.max(0, n(current.stability));
+  const oldDifficulty = Math.max(1, Math.min(10, n(current.difficulty) || 5));
+  const first = !current.reps;
+  const recall = r === 1 ? 0.15 : r === 2 ? 0.55 : r === 3 ? 0.82 : 0.95;
+  let stability = first ? (r === 4 ? 3.5 : r === 3 ? 1.5 : 0.5) : oldStability * (r === 1 ? 0.35 : r === 2 ? 0.85 : r === 3 ? 1.65 : 2.45);
+  stability = Math.max(0.5, stability + FSRS_WEIGHTS[5] * recall * 0.1);
+  const difficulty = Math.max(1, Math.min(10, oldDifficulty + (5 - r) * 0.35 - (r === 4 ? 0.3 : 0)));
+  const scheduledDays = fsrsIntervalDays(current, r, stability);
+  const dueDate = new Date();
+  if(scheduledDays < 1) dueDate.setMinutes(dueDate.getMinutes() + (r === 1 ? 10 : 20));
+  else dueDate.setDate(dueDate.getDate() + scheduledDays);
+  return { state:r === 1 ? 'relearning' : first ? 'learning' : 'review', stability, difficulty, scheduledDays, learningSteps:r === 1 ? 1 : 0, reps:n(current.reps) + 1, lapses:n(current.lapses) + (r === 1 ? 1 : 0), due:localISODate(dueDate), interval:scheduledDays, ease:Math.max(1.3, 2.5 - (difficulty - 5) * 0.08), status:r === 1 ? 'Difícil' : r === 2 ? 'Dúvida' : r === 4 ? 'Fácil' : 'Bom', lastRating:r };
+}
 function manualFlashcards() {
   if(renderCache.manualCards) return renderCache.manualCards;
   const questionCards = Object.entries(state.questionFlashcards || {}).flatMap(([questionId,cards]) => {
@@ -3487,14 +3570,17 @@ function manualFlashcards() {
 function flashcardProgress(card) {
   const progress = state.flashcardProgress[card.id] || {};
   return {
-    ease: Math.max(1.3, n(progress.ease) || 2.5),
-    interval: Math.max(0, n(progress.interval) || 0),
-    repetitions: Math.max(0, n(progress.repetitions) || 0),
-    reviews: Math.max(0, n(progress.reviews) || 0),
-    lapses: Math.max(0, n(progress.lapses) || 0),
-    status: progress.status || 'Novo',
+    ease: Math.max(1.3, n(progress.ease) || n(card.ease) || 2.5),
+    interval: Math.max(0, n(progress.interval) || n(card.scheduledDays)),
+    repetitions: Math.max(0, n(progress.repetitions) || n(card.reps)),
+    reviews: Math.max(0, n(progress.reviews) || n(card.reps)),
+    lapses: Math.max(0, n(progress.lapses) || n(card.lapses)),
+    stability: Math.max(0, n(progress.stability) || n(card.stability)),
+    difficulty: Math.max(1, n(progress.difficulty) || n(card.difficulty) || 5),
+    lastRating: n(progress.lastRating || progress.lastQuality),
+    status: progress.status || (card.isSuspended ? 'Suspenso' : card.state === 'new' ? 'Novo' : 'Bom'),
     lastReviewedAt: progress.lastReviewedAt || '',
-    nextReview: progress.nextReview || localISODate(new Date())
+    nextReview: progress.nextReview || card.due || localISODate(new Date())
   };
 }
 function isFlashcardDue(card, date=localISODate(new Date())) {
@@ -3509,7 +3595,7 @@ function flashcardNewToday() {
   return Object.values(state.flashcardProgress || {}).filter(progress => progress.firstReviewedAt && String(progress.firstReviewedAt).slice(0,10) === today).length;
 }
 function flashcardDueForecast(days=7) {
-  const cards = manualFlashcards();
+  const cards = flashcardAllRecords();
   const start = new Date(`${localISODate(new Date())}T12:00:00`);
   return Array.from({length:days}, (_, index) => {
     const date = new Date(start);
@@ -3549,17 +3635,17 @@ function filteredFlashcards(all=manualFlashcards()) {
       || (ui.flashcardFilter === 'Suspensos' && progress.status === 'Suspenso');
     const areaOk = ui.flashcardArea === 'Todas' || card.area === ui.flashcardArea;
     const subareaOk = ui.flashcardSubarea === 'Todas' || card.subarea === ui.flashcardSubarea;
+    const blockOk = !ui.flashcardBlock || ui.flashcardBlock === 'Todos' || String(card.weeklyBlockId || card.block) === String(ui.flashcardBlock);
+    const subjectOk = !ui.flashcardSubject || (card.subject || card.subarea || card.topic) === ui.flashcardSubject;
     const deckOk = !ui.flashcardDeck || `${card.area}|${card.subarea}` === ui.flashcardDeck;
-    return filterOk && areaOk && subareaOk && deckOk;
+    return filterOk && areaOk && subareaOk && blockOk && subjectOk && deckOk;
   });
 }
 function renderFlashcards() {
-  const all = manualFlashcards();
+  const all = flashcardAllRecords();
   const areas = ['Todas', ...new Set(all.map(card => card.area).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  const blocks = ['Todos', ...new Set(all.map(card => card.weeklyBlockId || card.block).filter(Boolean))].sort((a,b)=>n(a)-n(b));
   if(!areas.includes(ui.flashcardArea)) ui.flashcardArea = 'Todas';
-  const areaScoped = ui.flashcardArea === 'Todas' ? all : all.filter(card => card.area === ui.flashcardArea);
-  const subareas = ['Todas', ...new Set(areaScoped.map(card => card.subarea).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-  if(!subareas.includes(ui.flashcardSubarea)) ui.flashcardSubarea = 'Todas';
   const cards = flashcardStudyQueue(all);
   const today = localISODate(new Date());
   const due = all.filter(card => isFlashcardDue(card, today)).length;
@@ -3568,32 +3654,22 @@ function renderFlashcards() {
   const reviewsToday = flashcardReviewsToday();
   const newToday = flashcardNewToday();
   const forecast = flashcardDueForecast(7);
-  const decks = groupFlashcardDecks(all);
   ui.flashcardIndex = Math.max(0, Math.min(n(ui.flashcardIndex), Math.max(cards.length - 1, 0)));
   const study = cards[ui.flashcardIndex];
   const groups = groupFlashcards(cards);
-  document.getElementById('flashcards').innerHTML = `<div class="grid cards">${metric('Flashcards criados', all.length, 'máximo de dois por questão')}${metric('Fila de hoje', cards.length, `${due} vencidos antes dos limites`)}${metric('Revisados hoje', reviewsToday, `${newToday} novos`) }${metric('Maduros', mature, 'intervalo de 21+ dias')}</div>
-  <div class="card">
-    <div class="flashcard-command">
-      <div><h2>Flashcards</h2><div class="muted">Revisão do ENAMED por bloco, aula e questão. Espaço para evoluir sem sair do planner.</div></div>
-      <button class="icon-btn" id="flashcardUndoBtn">Desfazer</button>
-      <button class="icon-btn" id="flashcardBackupBtn">Backup JSON</button>
-      <button class="icon-btn primary" id="ankiExportBtn">Exportar TSV</button>
-    </div>
-    <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">
-    <div class="flashcard-filters">
-      <select class="select" id="flashcardFilter">${['Devidos','Todos','Novos','Difíceis','Maduros','Suspensos'].map(value => `<option ${ui.flashcardFilter===value?'selected':''}>${value}</option>`).join('')}</select>
-      <select class="select" id="flashcardArea">${areas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select>
-      <select class="select" id="flashcardSubarea">${subareas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardSubarea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select>
-      <button class="icon-btn" id="flashcardClearDeck">Todos os baralhos</button>
-    </div>
-    <div class="flashcard-limits"><label>Novos/dia <input class="mini-input" id="flashcardNewLimit" type="number" min="0" step="1" value="${n(state.flashcardSettings.newLimit)}"></label><label>Revisões/dia <input class="mini-input" id="flashcardReviewLimit" type="number" min="0" step="1" value="${n(state.flashcardSettings.reviewLimit)}"></label><div class="muted">${forecast.map(item => `${fmtDate(item.date).slice(0,5)}: ${item.count}`).join(' · ')}</div></div>
+  const selectedBlock = ui.flashcardBlock || 'Todos';
+  const blockCards = selectedBlock === 'Todos' ? all : all.filter(card => String(card.weeklyBlockId || card.block) === String(selectedBlock));
+  const subjects = [...new Set(blockCards.map(card => card.subject || card.subarea || card.topic).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  document.getElementById('flashcards').innerHTML = `<div class="grid cards">${metric('Cards no ENAMED', all.length, 'captura rápida limitada por origem; criação livre aqui')}${metric('Devidos agora', due, 'fila global por data')}${metric('Revisados hoje', reviewsToday, `${newToday} novos`) }${metric('Maduros', mature, 'estabilidade de 21+ dias')}</div>
+  <div class="card flashcard-command"><div><h2>Flashcards</h2><div class="muted">Capture, organize e revise por bloco e assunto. A agenda usa um perfil FSRS local com retenção de ${Math.round(n(state.flashcardSystem.profile.targetRetention)*100)}%.</div></div><div class="flashcard-command-actions"><button class="icon-btn primary" id="newFlashcardBtn">+ Novo card</button><button class="icon-btn" id="flashcardUndoBtn">Desfazer</button><button class="icon-btn" id="flashcardBackupBtn">Backup</button><button class="icon-btn" id="ankiExportBtn">Exportar</button></div></div>
+  <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">
+  <div class="flashcard-filters"><select class="select" id="flashcardFilter">${['Devidos','Todos','Novos','Difíceis','Maduros','Suspensos'].map(value => `<option ${ui.flashcardFilter===value?'selected':''}>${value}</option>`).join('')}</select><select class="select" id="flashcardArea">${areas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select><label class="flashcard-target">Novos/dia <input class="mini-input" id="flashcardNewLimit" type="number" min="0" value="${n(state.flashcardSettings.newLimit)}"></label><label class="flashcard-target">Revisões/dia <input class="mini-input" id="flashcardReviewLimit" type="number" min="0" value="${n(state.flashcardSettings.reviewLimit)}"></label><span class="muted">${forecast.map(item => `${fmtDate(item.date).slice(0,5)}: ${item.count}`).join(' · ')}</span></div>
+  <div class="flashcards-workspace">
+    <aside class="flashcards-panel flashcard-block-panel"><div class="section-title"><h3>Blocos</h3><span class="badge today">${blocks.length-1}</span></div><button class="flashcard-block-choice ${selectedBlock==='Todos'?'active':''}" data-fc-block="Todos">Todos os blocos <span>${all.length}</span></button>${blocks.slice(1).map(block => `<button class="flashcard-block-choice ${String(selectedBlock)===String(block)?'active':''}" data-fc-block="${escapeAttr(block)}">Bloco ${escapeHtml(block)} <span>${all.filter(card=>String(card.weeklyBlockId||card.block)===String(block)).length}</span></button>`).join('')}<div class="muted flashcard-shortcuts">Espaço revela · 1–4 avalia<br>E edita · S suspende · Z desfaz</div></aside>
+    <main class="flashcards-panel flashcard-review-column">${ui.flashcardEditorOpen ? renderFlashcardWorkspaceEditor() : renderFlashcardStudy(study, cards)}<div class="flashcard-subject-strip"><div class="section-title"><h3>Assuntos${selectedBlock==='Todos'?'':' · Bloco '+escapeHtml(selectedBlock)}</h3><span>${subjects.length}</span></div><div class="flashcard-subject-list">${subjects.map(subject => `<button class="flashcard-subject-chip" data-fc-subject="${escapeAttr(subject)}">${escapeHtml(subject)} <span>${blockCards.filter(card=>(card.subject||card.subarea||card.topic)===subject).length}</span></button>`).join('') || '<span class="muted">Os assuntos aparecerão aqui conforme os cards forem criados.</span>'}</div></div></main>
+    <aside class="flashcards-panel flashcard-indicator-panel">${renderFlashcardIndicators(all, cards, reviewed, due)}<div class="section-title"><h3>Radar de fragilidade</h3></div>${renderFlashcardRadar(all)}<div class="section-title"><h3>Próximos dias</h3></div><div class="flashcard-forecast">${forecast.map(item=>`<div><span>${fmtDate(item.date).slice(0,5)}</span><strong>${item.count}</strong></div>`).join('')}</div></aside>
   </div>
-  <div class="flashcard-review-panel">
-    <div class="card">${renderFlashcardStudy(study, cards)}</div>
-    <aside class="card"><div class="section-title"><h2>Baralhos</h2><span class="badge today">${decks.length}</span></div><div class="flashcard-decks">${decks.map(renderFlashcardDeck).join('') || '<div class="empty">Crie flashcards nas questões para montar seus baralhos.</div>'}</div></aside>
-  </div>
-  <div class="card"><div class="section-title"><h2>Biblioteca filtrada</h2><button class="icon-btn" id="flashcardToggleLibrary">${ui.flashcardShowLibrary?'Ocultar':'Mostrar'} lista (${cards.length})</button></div>${ui.flashcardShowLibrary ? (groups.length ? groups.map(renderFlashcardGroup).join('') : '<div class="empty">Nenhum flashcard neste filtro. O editor aparece abaixo da questão quando você marca “Não saber” ou “Chute”.</div>') : '<div class="muted">A lista está recolhida para manter foco no cartão central.</div>'}</div>`;
+  <div class="card flashcard-library-card"><div class="section-title"><h3>Biblioteca</h3><button class="icon-btn" id="flashcardToggleLibrary">${ui.flashcardShowLibrary?'Ocultar':'Mostrar'} cards (${cards.length})</button></div>${ui.flashcardShowLibrary ? (groups.length ? groups.map(renderFlashcardGroup).join('') : '<div class="empty">Nenhum card neste filtro.</div>') : '<div class="muted">A biblioteca fica recolhida durante a revisão para reduzir distrações.</div>'}</div>`;
   const filter = document.getElementById('flashcardFilter');
   if(filter) filter.onchange = e => { ui.flashcardFilter=e.target.value; ui.flashcardIndex=0; ui.revealedCards={}; renderFlashcards(); };
   const area = document.getElementById('flashcardArea');
@@ -3614,6 +3690,12 @@ function renderFlashcards() {
   if(newLimit) newLimit.onchange = e => { state.flashcardSettings.newLimit = Math.max(0,n(e.target.value)); persist(); };
   const reviewLimit = document.getElementById('flashcardReviewLimit');
   if(reviewLimit) reviewLimit.onchange = e => { state.flashcardSettings.reviewLimit = Math.max(0,n(e.target.value)); persist(); };
+  document.querySelectorAll('[data-fc-block]').forEach(button => button.onclick = e => { ui.flashcardBlock=e.currentTarget.dataset.fcBlock; ui.flashcardIndex=0; ui.revealedCards={}; renderFlashcards(); });
+  document.querySelectorAll('[data-fc-subject]').forEach(button => button.onclick = e => { ui.flashcardSubject=e.currentTarget.dataset.fcSubject; ui.flashcardFilter='Todos'; ui.flashcardIndex=0; renderFlashcards(); });
+  const newCard = document.getElementById('newFlashcardBtn');
+  if(newCard) newCard.onclick = () => { ui.flashcardEditorOpen=true; renderFlashcards(); };
+  document.querySelectorAll('[data-fc-save]').forEach(button => button.onclick = saveWorkspaceFlashcard);
+  document.querySelectorAll('[data-fc-cancel]').forEach(button => button.onclick = () => { ui.flashcardEditorOpen=false; renderFlashcards(); });
   document.querySelectorAll('[data-flashcard-deck]').forEach(button => button.onclick = e => { ui.flashcardDeck = e.currentTarget.dataset.flashcardDeck; const [areaValue, subareaValue] = ui.flashcardDeck.split('|'); ui.flashcardArea=areaValue || 'Todas'; ui.flashcardSubarea=subareaValue || 'Todas'; ui.flashcardIndex=0; ui.revealedCards={}; renderFlashcards(); });
   document.querySelectorAll('[data-reveal-card]').forEach(button => button.onclick = e => {
     ui.revealedCards[e.currentTarget.dataset.revealCard] = true;
@@ -3624,12 +3706,47 @@ function renderFlashcards() {
   document.querySelectorAll('[data-flashcard-move]').forEach(button => button.onclick = e => moveFlashcardSession(n(e.currentTarget.dataset.flashcardMove), cards.length));
   document.querySelectorAll('[data-edit-flashcard]').forEach(button => button.onclick = e => { ui.editFlashcardId = e.currentTarget.dataset.editFlashcard; renderFlashcards(); });
   document.querySelectorAll('[data-close-flashcard-edit]').forEach(button => button.onclick = () => { ui.editFlashcardId = ''; renderFlashcards(); });
-  document.querySelectorAll('[data-question-card][data-card-id][data-card-field]').forEach(input => {
-    input.oninput = e => updateQuestionFlashcard(e.currentTarget);
-    input.onchange = e => updateQuestionFlashcard(e.currentTarget);
+  document.querySelectorAll('[data-question-card][data-card-id][data-card-field], [data-library-card][data-card-id][data-card-field]').forEach(input => {
+    input.oninput = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
+    input.onchange = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
   });
   if(study) startAutoStudy('flashcards', study.scheduleId || '');
   else stopAutoStudy('flashcards');
+}
+function renderFlashcardIndicators(all, queue, reviewed, due) {
+  const retention = reviewed ? Math.round(all.filter(card => flashcardProgress(card).lastRating >= 3).length / reviewed * 100) : 0;
+  return `<div class="fc-indicator"><span>Fila atual</span><strong>${queue.length}</strong><small>prioriza devidos, depois novos</small></div><div class="fc-indicator"><span>Retenção observada</span><strong>${retention}%</strong><small>acertos nas revisões registradas</small></div><div class="fc-indicator"><span>Atrasados</span><strong class="fc-alert">${due}</strong><small>cards que pedem atenção</small></div>`;
+}
+function renderFlashcardRadar(all) {
+  const bySubject = new Map();
+  all.forEach(card => { const key=card.subject||card.subarea||'Sem assunto'; if(!bySubject.has(key)) bySubject.set(key,{name:key,total:0,weak:0}); const row=bySubject.get(key); row.total++; const p=flashcardProgress(card); if(p.lapses>=2 || p.difficulty>=7 || p.status==='Difícil') row.weak++; });
+  return [...bySubject.values()].sort((a,b)=>b.weak-a.weak).slice(0,5).map(row=>`<div class="fc-radar-row"><span>${escapeHtml(row.name)}</span><strong>${row.weak}/${row.total}</strong></div>`).join('') || '<div class="muted">O radar aparece após as primeiras revisões.</div>';
+}
+function renderFlashcardWorkspaceEditor() {
+  const blocks = [...new Set((state.schedule||[]).map(item=>item.block).filter(Boolean))].sort((a,b)=>n(a)-n(b));
+  const source=ui.flashcardCaptureSource || {};
+  return `<div class="flashcard-editor workspace-editor"><div class="section-title"><div><h2>Novo flashcard</h2><div class="muted">Criação livre na aba Flashcards. Use uma ideia por card.${source.key?` Origem: ${escapeHtml(source.label||source.key)}.`:''}</div></div><button class="icon-btn" data-fc-cancel>Cancelar</button></div><div class="fc-editor-grid"><label>Bloco<select id="fcNewBlock">${blocks.map(block=>`<option value="${escapeAttr(block)}" ${String(block)===String(source.block)?'selected':''}>Bloco ${escapeHtml(block)}</option>`).join('')}</select></label><label>Assunto<input id="fcNewSubject" class="input" value="${escapeAttr(source.subject||'')}" placeholder="Ex.: Diabetes: diagnóstico"></label><label>Tipo de origem<select id="fcNewSourceType"><option value="manual">Manual</option><option value="question" ${source.type==='question'?'selected':''}>Questão</option><option value="video" ${source.type==='video'?'selected':''}>Videoaula</option><option value="material" ${source.type==='material'?'selected':''}>Material</option></select></label><label>Referência<input id="fcNewSourceRef" class="input" value="${escapeAttr(source.reference||'')}" placeholder="Aula, questão ou material"></label></div><label>Frente<textarea id="fcNewFront" class="textarea" placeholder="Pergunta, decisão clínica ou conceito discriminativo"></textarea></label><label>Verso<textarea id="fcNewBack" class="textarea" placeholder="Resposta curta, objetiva e revisável"></textarea></label><label>Tags<input id="fcNewTags" class="input" placeholder="ex.: diabetes diagnóstico alto-rendimento"></label><div class="muted">A origem fica registrada para você voltar ao ponto de estudo. O agendamento começa como card novo.</div><button class="icon-btn primary" data-fc-save>Salvar flashcard</button></div>`;
+}
+function openQuickFlashcardCapture() {
+  let source={type:'manual',key:`manual-${localISODate(new Date())}`,label:'Captura rápida'};
+  if(ui.tab==='questoes') {
+    const question=filteredQuestions()[ui.qIndex];
+    if(question) source={type:'question',key:`question:${question.id}`,reference:question.id,subject:question.topic||'',block:question.collectionBlock||'',label:`Questão · ${question.topic||question.id}`};
+  } else if(ui.tab==='aulas' && state.videoPlayer?.lastOpen?.lessonId) {
+    const lesson=videoCatalog.find(item=>item.id===state.videoPlayer.lastOpen.lessonId);
+    if(lesson) source={type:'video',key:`video:${lesson.id}`,reference:lesson.id,subject:lesson.title||'',block:lesson.block||'',label:`Vídeo · ${lesson.title||''}`};
+  }
+  const existing=(state.flashcardSystem.captureSessions||[]).find(item=>item.key===source.key);
+  if(existing && n(existing.cardsCreated)>=2) { alert('Esta origem já tem dois cards de captura rápida. Edite ou divida um card na aba Flashcards.'); return; }
+  state.flashcardSystem.captureSessions.push({key:source.key,cardsCreated:n(existing?.cardsCreated),maxCards:2,lastOpenedAt:new Date().toISOString()});
+  state.flashcardSystem.captureSessions=state.flashcardSystem.captureSessions.filter((item,index,array)=>array.findIndex(other=>other.key===item.key)===index);
+  ui.flashcardCaptureSource=source; ui.tab='flashcards'; ui.flashcardEditorOpen=true; sessionStorage.setItem(UI_TAB_KEY,'flashcards'); render();
+}
+function saveWorkspaceFlashcard() {
+  const front=document.getElementById('fcNewFront')?.value.trim(); const back=document.getElementById('fcNewBack')?.value.trim();
+  if(!front || !back) { alert('Preencha frente e verso antes de salvar.'); return; }
+  const card=normalizeFlashcardRecord({id:newFlashcardId(),front,back,block:document.getElementById('fcNewBlock')?.value||'',weeklyBlockId:document.getElementById('fcNewBlock')?.value||'',subject:document.getElementById('fcNewSubject')?.value.trim()||'Sem assunto',subarea:document.getElementById('fcNewSubject')?.value.trim()||'Sem assunto',sourceType:document.getElementById('fcNewSourceType')?.value||'manual',sourceReference:document.getElementById('fcNewSourceRef')?.value.trim()||'',tags:String(document.getElementById('fcNewTags')?.value||'').split(/[,;\s]+/).filter(Boolean),createdAt:new Date().toISOString()});
+  state.flashcardLibrary.push(card); const source=ui.flashcardCaptureSource; if(source?.key) { const session=state.flashcardSystem.captureSessions.find(item=>item.key===source.key); if(session) session.cardsCreated=n(session.cardsCreated)+1; card.sourceReference=source.reference||card.sourceReference; card.sourceLocator=source.label||card.sourceLocator; } state.flashcardSystem.versions.push({cardId:card.id,version:1,kind:'created',at:new Date().toISOString(),front:card.front,back:card.back}); ui.flashcardCaptureSource=null; ui.flashcardEditorOpen=false; renderCache.manualCards=null; persist();
 }
 function groupFlashcardDecks(cards) {
   const map = new Map();
@@ -3672,52 +3789,71 @@ function renderFlashcardStudy(card, queue=[]) {
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;
+  const sourceAttr = card.questionId ? `data-question-card="${escapeAttr(card.questionId)}"` : `data-library-card="${escapeAttr(card.id)}"`;
   return `<div class="flashcard-inline-editor">
-    <textarea class="textarea" data-question-card="${escapeAttr(card.questionId)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front" placeholder="Frente">${escapeHtml(card.front || '')}</textarea>
-    <textarea class="textarea" data-question-card="${escapeAttr(card.questionId)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back" placeholder="Verso">${escapeHtml(card.back || '')}</textarea>
-    <input class="input" data-question-card="${escapeAttr(card.questionId)}" data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || '')}" placeholder="Área">
-    <input class="input" data-question-card="${escapeAttr(card.questionId)}" data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || '')}" placeholder="Subárea">
+    <textarea class="textarea" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="front" placeholder="Frente">${escapeHtml(card.front || '')}</textarea>
+    <textarea class="textarea" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="back" placeholder="Verso">${escapeHtml(card.back || '')}</textarea>
+    <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || '')}" placeholder="Área">
+    <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || '')}" placeholder="Assunto">
     <button class="tiny-btn" data-close-flashcard-edit="${escapeAttr(card.id)}">Fechar edição</button>
   </div>`;
 }
 function renderFlashcardRating(id) {
-  return `<div class="flashcard-actions"><div class="flashcard-rating"><button class="icon-btn" data-card-quality="0" data-card-id="${id}">Errei</button><button class="icon-btn" data-card-quality="2" data-card-id="${id}">Difícil</button><button class="icon-btn" data-card-quality="3" data-card-id="${id}">Bom</button><button class="icon-btn primary" data-card-quality="5" data-card-id="${id}">Fácil</button></div><button class="icon-btn" data-card-suspend="${id}">Suspender</button></div>`;
+  const card = flashcardAllRecords().find(item => item.id === id) || {stability:1};
+  const preview = [1,2,3,4].map(r => { const p=nextFsrsProgress(card,r); return `${r}:${p.scheduledDays < 1 ? '10 min' : p.scheduledDays+' d'}`; });
+  return `<div class="flashcard-actions"><div class="flashcard-rating"><button class="icon-btn" data-card-quality="1" data-card-id="${id}"><strong>1</strong> Novamente <small>${preview[0].split(':')[1]}</small></button><button class="icon-btn" data-card-quality="2" data-card-id="${id}"><strong>2</strong> Difícil <small>${preview[1].split(':')[1]}</small></button><button class="icon-btn" data-card-quality="3" data-card-id="${id}"><strong>3</strong> Bom <small>${preview[2].split(':')[1]}</small></button><button class="icon-btn primary" data-card-quality="4" data-card-id="${id}"><strong>4</strong> Fácil <small>${preview[3].split(':')[1]}</small></button></div><button class="icon-btn" data-card-suspend="${id}">Suspender</button></div>`;
 }
 function reviewFlashcard(id, quality) {
-  const queueBefore = flashcardStudyQueue(manualFlashcards());
+  const queueBefore = flashcardStudyQueue(flashcardAllRecords());
   const currentIndex = Math.max(0, queueBefore.findIndex(card => card.id === id));
   const nextId = queueBefore[currentIndex + 1]?.id || '';
+  const card = flashcardAllRecords().find(item => item.id === id);
+  if(!card) return;
   const current = state.flashcardProgress[id] || {};
+  const beforeCard = {...card};
   state.flashcardReviewHistory = Array.isArray(state.flashcardReviewHistory) ? state.flashcardReviewHistory : [];
   state.flashcardReviewHistory.push({ cardId:id, previous: {...current}, reviewedAt:new Date().toISOString() });
   state.flashcardReviewHistory = state.flashcardReviewHistory.slice(-50);
-  const sm2 = nextSm2Progress(current, quality);
-  const lapses = n(current.lapses) + (quality < 3 ? 1 : 0);
-  const isLeech = lapses >= 8;
-  const date = new Date();
-  const fuzz = sm2.interval >= 7 ? Math.round((Math.random() - 0.5) * Math.max(2, sm2.interval * 0.1)) : 0;
-  date.setDate(date.getDate() + Math.max(1, sm2.interval + fuzz));
+  const fsrs = nextFsrsProgress({...card,...current,reps:n(current.reviews)||card.reps,stability:n(current.stability)||card.stability,difficulty:n(current.difficulty)||card.difficulty,lapses:n(current.lapses)||card.lapses}, quality);
+  const isLeech = fsrs.lapses >= n(state.flashcardSystem.profile.leechThreshold || 8);
   state.flashcardProgress[id] = {
     ...current,
-    ...sm2,
-    lapses,
-    status: isLeech ? 'Suspenso' : quality < 3 ? 'Difícil' : quality >= 5 ? 'Fácil' : 'Bom',
-    reviews: n(current.reviews) + 1,
+    ...fsrs,
+    status: isLeech ? 'Suspenso' : fsrs.status,
+    reviews: fsrs.reps,
     firstReviewedAt: current.firstReviewedAt || new Date().toISOString(),
     lastQuality: quality,
+    lastRating: quality,
     lastReviewedAt: new Date().toISOString(),
-    nextReview: isLeech ? '2099-12-31' : localISODate(date)
+    nextReview: isLeech ? '2099-12-31' : fsrs.due
   };
+  Object.assign(card, { ...fsrs, due:isLeech ? '2099-12-31' : fsrs.due, isSuspended:isLeech, contentVersion:Math.max(1,n(card.contentVersion)||1), rowVersion:Math.max(1,n(card.rowVersion)||1)+1 });
+  state.flashcardSystem.reviewLogs.push({id:newFlashcardId('review'),cardId:id,rating:quality,reviewedAt:new Date().toISOString(),before:beforeCard,after:{...card},scheduledDays:fsrs.scheduledDays});
+  state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.slice(-500);
+  state.flashcardSystem.undoStack.push({cardId:id,previousProgress:{...current},beforeCard,reviewId:state.flashcardSystem.reviewLogs.at(-1).id});
+  state.flashcardSystem.undoStack = state.flashcardSystem.undoStack.slice(-20);
   const log = getDayLog(localISODate(new Date()));
   log.flashcardsOn = true;
   log.flashcards = n(log.flashcards) + 1;
   delete ui.revealedCards[id];
-  const queueAfter = flashcardStudyQueue(manualFlashcards());
+  const queueAfter = flashcardStudyQueue(flashcardAllRecords());
   const nextIndex = nextId ? queueAfter.findIndex(card => card.id === nextId) : -1;
   ui.flashcardIndex = nextIndex >= 0 ? nextIndex : Math.min(currentIndex, Math.max(queueAfter.length - 1, 0));
   persist();
 }
 function undoFlashcardReview() {
+  const systemUndo = state.flashcardSystem?.undoStack?.pop();
+  if(systemUndo) {
+    const card = flashcardAllRecords().find(item => item.id === systemUndo.cardId);
+    if(card) Object.assign(card, systemUndo.beforeCard);
+    if(systemUndo.previousProgress && Object.keys(systemUndo.previousProgress).length) state.flashcardProgress[systemUndo.cardId] = systemUndo.previousProgress;
+    else delete state.flashcardProgress[systemUndo.cardId];
+    state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.filter(log => log.id !== systemUndo.reviewId);
+    ui.revealedCards[systemUndo.cardId] = true;
+    saveStateOnly();
+    renderFlashcards();
+    return;
+  }
   const last = Array.isArray(state.flashcardReviewHistory) ? state.flashcardReviewHistory.pop() : null;
   if(!last) { alert('Nenhuma revisão recente para desfazer.'); return; }
   if(last.previous && Object.keys(last.previous).length) state.flashcardProgress[last.cardId] = last.previous;
@@ -4478,6 +4614,16 @@ function updateQuestionFlashcard(input) {
   renderCache.manualCards = null;
   saveStateOnly();
 }
+function updateLibraryFlashcard(input) {
+  const card = (state.flashcardLibrary || []).find(item => item.id === input.dataset.cardId);
+  if(!card) return;
+  card[input.dataset.cardField] = input.value;
+  if(input.dataset.cardField === 'subarea') { card.topic=input.value; card.subject=input.value; }
+  normalizeFlashcardRecord(card);
+  state.flashcardSystem.versions.push({cardId:card.id,version:card.contentVersion,kind:'correction',at:new Date().toISOString(),field:input.dataset.cardField,value:input.value});
+  renderCache.manualCards = null;
+  saveStateOnly();
+}
 function removeQuestionFlashcard(questionId, cardId) {
   const cards = state.questionFlashcards[questionId] || [];
   state.questionFlashcards[questionId] = cards.filter(card => card.id !== cardId);
@@ -4551,12 +4697,23 @@ function handleFlashcardKeyboard(event) {
   if(event.ctrlKey || event.metaKey || event.altKey) return;
   const target = event.target;
   if(target?.matches?.('input, textarea, select, [contenteditable="true"]')) return;
-  const cards = flashcardStudyQueue(manualFlashcards());
+  const cards = flashcardStudyQueue(flashcardAllRecords());
   const card = cards[ui.flashcardIndex];
   if(!card) return;
-  if(event.key.toLowerCase() === 'u') {
+  if(event.key.toLowerCase() === 'u' || event.key.toLowerCase() === 'z') {
     event.preventDefault();
     undoFlashcardReview();
+    return;
+  }
+  if(event.key.toLowerCase() === 'e') {
+    event.preventDefault();
+    ui.editFlashcardId = ui.editFlashcardId === card.id ? '' : card.id;
+    renderFlashcards();
+    return;
+  }
+  if(event.key.toLowerCase() === 's') {
+    event.preventDefault();
+    suspendFlashcard(card.id);
     return;
   }
   if(event.code === 'Space') {
@@ -4572,7 +4729,7 @@ function handleFlashcardKeyboard(event) {
   if(/^[1-4]$/.test(event.key)) {
     if(!ui.revealedCards[card.id]) return;
     event.preventDefault();
-    const quality = {1:0,2:2,3:3,4:5}[event.key];
+    const quality = {1:1,2:2,3:3,4:4}[event.key];
     reviewFlashcard(card.id, quality);
   }
 }
@@ -5112,6 +5269,11 @@ document.getElementById('themeToggle').onclick = event => {
 };
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 document.addEventListener('keydown', event => {
+  if((event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'f') {
+    event.preventDefault();
+    openQuickFlashcardCapture();
+    return;
+  }
   if(ui.tab !== 'aulas' || event.altKey || event.ctrlKey || event.metaKey) return;
   const target = event.target;
   if(target?.matches?.('input,textarea,select,[contenteditable="true"]')) return;
