@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-17';
+const QUESTION_BANK_ASSET_VERSION = '20260714-18';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -3992,6 +3992,11 @@ function manualFlashcards() {
 }
 function flashcardProgress(card) {
   const progress = state.flashcardProgress[card.id] || {};
+  let dueAt = progress.dueAt || card.dueAt || '';
+  if(!dueAt && n(progress.lastRating || progress.lastQuality) === 1 && progress.lastReviewedAt) {
+    const reviewedAt = Date.parse(progress.lastReviewedAt);
+    if(Number.isFinite(reviewedAt)) dueAt = new Date(reviewedAt + 10 * 60 * 1000).toISOString();
+  }
   return {
     ease: Math.max(1.3, n(progress.ease) || n(card.ease) || 2.5),
     interval: Math.max(0, n(progress.interval) || n(card.scheduledDays)),
@@ -4004,7 +4009,7 @@ function flashcardProgress(card) {
     status: progress.status || (card.isSuspended ? 'Suspenso' : card.state === 'new' ? 'Novo' : 'Bom'),
     lastReviewedAt: progress.lastReviewedAt || '',
     nextReview: progress.nextReview || card.due || localISODate(new Date()),
-    dueAt: progress.dueAt || card.dueAt || ''
+    dueAt
   };
 }
 function isFlashcardDue(card, date=localISODate(new Date())) {
