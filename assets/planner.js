@@ -6,7 +6,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260713-3';
+const QUESTION_BANK_ASSET_VERSION = '20260713-4';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -565,11 +565,12 @@ async function loadLocalQuestionBank() {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
   window.ENAMED_LOCAL_QUESTION_BANK = window.ENAMED_LOCAL_QUESTION_BANK || {};
-  for(const block of index.blocks) {
-    if(!window.ENAMED_LOCAL_QUESTION_BANK[block.block]) await loadQuestionBlockScript(block.script);
-    // Entrega o controle ao navegador entre blocos para manter a interface fluida.
-    await new Promise(resolve => setTimeout(resolve, 0));
-  }
+  // Os arquivos são independentes: carregá-los em paralelo reduz a tela inicial
+  // presa em "0 questões", especialmente no celular e na primeira visita.
+  await Promise.all(index.blocks.map(block => {
+    if(window.ENAMED_LOCAL_QUESTION_BANK[block.block]) return Promise.resolve();
+    return loadQuestionBlockScript(block.script);
+  }));
   const blocks = index.blocks
     .map(block => window.ENAMED_LOCAL_QUESTION_BANK?.[block.block]?.questions || [])
     .flat();
