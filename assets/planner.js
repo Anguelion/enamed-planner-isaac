@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-13';
+const QUESTION_BANK_ASSET_VERSION = '20260714-14';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {

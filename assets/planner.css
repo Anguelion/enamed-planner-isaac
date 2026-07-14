@@ -1469,3 +1469,9 @@ body.dark .question-tag-order{background:rgba(255,255,255,.08)}
   .qbank-mode.sidebar-collapsed .question-info-stack{margin-top:8px}
   .qbank-mode.sidebar-collapsed .question-info-stack .question-meta{gap:5px}
 }
+
+/* Revisao: resposta ampla e controles compactos na base do card. */
+.flashcard-study-card .flashcard-back{width:min(680px,100%);margin:2px auto 0;padding:30px 34px;border:1px solid color-mix(in srgb,var(--primary) 22%,var(--line));border-radius:14px;background:linear-gradient(145deg,color-mix(in srgb,var(--soft-blue) 78%,#fff),var(--panel));box-shadow:0 12px 28px rgba(20,78,108,.1);font-size:27px;line-height:1.55;text-align:center;color:var(--ink)}
+.flashcard-study-card .flashcard-back p{margin:0 0 12px}.flashcard-study-card .flashcard-back p:last-child{margin-bottom:0}.flashcard-study-card .flashcard-actions{width:min(680px,100%);margin:0 auto}.flashcard-study-card .flashcard-rating{gap:6px}.flashcard-study-card .flashcard-rating .icon-btn{min-height:42px;padding:7px 8px;border-radius:7px;font-size:13px}.flashcard-study-card .flashcard-rating .icon-btn strong{font-size:16px}.flashcard-study-card .flashcard-rating small{font-size:11px}.flashcard-study-card .flashcard-actions>[data-card-suspend]{align-self:center;min-height:34px;padding:6px 12px;font-size:12px}
+body.dark .flashcard-study-card .flashcard-back{background:linear-gradient(145deg,#263c4b,#202a2a);border-color:#35677e;color:var(--ink);box-shadow:0 12px 28px rgba(0,0,0,.24)}
+@media(max-width:700px){.flashcard-study-card .flashcard-back{padding:22px 18px;font-size:23px;line-height:1.48}.flashcard-study-card .flashcard-rating .icon-btn{min-height:38px;padding:5px 4px;font-size:12px}.flashcard-study-card .flashcard-rating small{font-size:10px}}
