@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-12';
+const QUESTION_BANK_ASSET_VERSION = '20260714-13';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -5765,6 +5765,14 @@ function handleHighlightUndoKeyboard(event) {
   if(target?.matches?.('input, textarea, select, [contenteditable="true"]') || target?.closest?.('[contenteditable="true"]')) return;
   if(undoLastHighlight()) event.preventDefault();
 }
+function handleFlashcardUndoKeyboard(event) {
+  if(ui.tab !== 'flashcards' || !(event.ctrlKey || event.metaKey) || event.shiftKey || event.altKey || event.key.toLowerCase() !== 'z') return;
+  const target = event.target;
+  if(target?.matches?.('input, textarea, select, [contenteditable="true"]') || target?.closest?.('[contenteditable="true"]')) return;
+  event.preventDefault();
+  if(event.repeat) return;
+  undoFlashcardReview();
+}
 function renderMarkdown(text) {
   const escaped = escapeHtml(text || '');
   return escaped
@@ -6019,6 +6027,7 @@ window.addEventListener('online', () => {
   if(currentUser) pullCloudState();
 });
 document.addEventListener('keydown', handleHighlightUndoKeyboard);
+document.addEventListener('keydown', handleFlashcardUndoKeyboard);
 document.addEventListener('keydown', handleQuestionKeyboard);
 startMotivationCycle();
 loadMotivationMessages();
