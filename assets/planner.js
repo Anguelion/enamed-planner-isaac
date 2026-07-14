@@ -54,7 +54,7 @@ ensureDayLogs();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: localISODate(new Date()), analysisDate: localISODate(new Date()), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: localISODate(new Date()), analysisDate: localISODate(new Date()), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
@@ -75,7 +75,7 @@ let syncInFlight = false;
 let renderCache = { questionStats: new Map(), flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
-  ['painel','Dashboard','dashboard'], ['cronograma','Trilha','route'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
+  ['painel','Dashboard','dashboard'], ['cronograma','Trilha','route'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
 ];
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
@@ -220,6 +220,10 @@ function ensureQuestionProgress() {
   if(!state.videoPlayer.pinned || typeof state.videoPlayer.pinned !== 'object') state.videoPlayer.pinned = { enabled:false, lessonId:'', sourceId:'' };
   if(!state.videoPlayer.lastOpen || typeof state.videoPlayer.lastOpen !== 'object') state.videoPlayer.lastOpen = { lessonId:'', sourceId:'' };
   if(!state.dailyCheckins || typeof state.dailyCheckins !== 'object') state.dailyCheckins = {};
+  if(!state.prescriptionLab || typeof state.prescriptionLab !== 'object') state.prescriptionLab = {};
+  if(!Array.isArray(state.prescriptionLab.cases)) state.prescriptionLab.cases = [];
+  if(!state.prescriptionLab.library || typeof state.prescriptionLab.library !== 'object') state.prescriptionLab.library = {medications:[],exams:[],others:[]};
+  ['medications','exams','others'].forEach(key => { if(!Array.isArray(state.prescriptionLab.library[key])) state.prescriptionLab.library[key]=[]; });
   if(!Array.isArray(state.hiddenHistoryDates)) state.hiddenHistoryDates = [];
   if(!state.dashboardSettings.countdownDate) {
     state.dashboardSettings.countdownDate = [...(state.schedule || [])].map(x => x.date).filter(Boolean).sort().at(-1) || '2026-11-01';
@@ -671,9 +675,9 @@ function ensureDayLogs() {
   state.dayLogs = state.dayLogs.map(log => ({...defaultDayLog(log.date), ...log}));
   state.dayLogs.sort((a,b)=>a.date.localeCompare(b.date));
 }
-function defaultDayLog(date) { return { date, mood: 0, pace: '', flashcardsOn: false, flashcards: 0, flashcardMinutes: 0, videosOn: false, videos: 0, videoNames: '', lessonMinutes: 0, questionsOn: false, questions: 0, correct: 0, wrong: 0, questionMinutes: 0, notes: '' }; }
+function defaultDayLog(date) { return { date, mood: 0, pace: '', flashcardsOn: false, flashcards: 0, flashcardMinutes: 0, videosOn: false, videos: 0, videoNames: '', lessonMinutes: 0, questionsOn: false, questions: 0, correct: 0, wrong: 0, questionMinutes: 0, materialMinutes: 0, simuladoMinutes: 0, notes: '' }; }
 function dayLogHasActivity(log) {
-  return n(log?.videos) + n(log?.flashcards) + n(log?.questions) + n(log?.lessonMinutes) + n(log?.flashcardMinutes) + n(log?.questionMinutes) > 0
+  return n(log?.videos) + n(log?.flashcards) + n(log?.questions) + n(log?.lessonMinutes) + n(log?.flashcardMinutes) + n(log?.questionMinutes) + n(log?.materialMinutes) + n(log?.simuladoMinutes) > 0
     || Boolean(String(log?.videoNames || '').trim() || String(log?.notes || '').trim());
 }
 function reviveHiddenHistoryDates() {
@@ -683,13 +687,13 @@ function reviveHiddenHistoryDates() {
 }
 function getDayLog(date) { ensureDayLogs(); let log = state.dayLogs.find(x=>x.date===date); if(!log) { log = defaultDayLog(date); state.dayLogs.push(log); } return log; }
 function setDayLog(date, field, value) { const log = getDayLog(date); log[field] = value; persist(); }
-function emptyStudyTimer() { return { kind:'', scheduleId:'', startedAt:0, elapsedSeconds:0, lastSavedAt:0, interval:null, displayInterval:null }; }
+function emptyStudyTimer() { return { kind:'', scheduleId:'', startedAt:0, elapsedSeconds:0, committedSeconds:0, lastSavedAt:0, interval:null, displayInterval:null }; }
 function loadStudyTimerSession() {
   try {
     const saved = JSON.parse(localStorage.getItem(STUDY_TIMER_KEY));
     if(!saved?.kind) return emptyStudyTimer();
     const elapsedSeconds = Math.max(0, Math.min(4 * 60 * 60, n(saved.elapsedSeconds)));
-    return { ...emptyStudyTimer(), kind:saved.kind, scheduleId:saved.scheduleId || '', elapsedSeconds, lastSavedAt:n(saved.savedAt) || Date.now() };
+    return { ...emptyStudyTimer(), kind:saved.kind, scheduleId:saved.scheduleId || '', elapsedSeconds, committedSeconds:Math.min(elapsedSeconds,Math.max(0,n(saved.committedSeconds))), lastSavedAt:n(saved.savedAt) || Date.now() };
   } catch(error) { return emptyStudyTimer(); }
 }
 function emptyPomodoro() { return { mode:'', phase:'work', running:false, alarm:false, endAt:0, remaining:0, workSeconds:1500, breakSeconds:300 }; }
@@ -794,7 +798,10 @@ function ensurePomodoroWidget() {
   const widget=document.createElement('div');
   widget.id='globalPomodoro'; widget.className='global-pomodoro';
   widget.innerHTML='<button class="pomodoro-fruit" id="pomodoroFruit" type="button" title="Abrir pomodoro" aria-label="Abrir pomodoro" aria-expanded="false" aria-controls="pomodoroPanel">🍅<span class="pomodoro-mini-time">--:--</span></button><div class="pomodoro-panel" id="pomodoroPanel" hidden></div>';
-  document.body.append(widget);
+  const headerActions=document.querySelector('.header-actions');
+  const syncStatus=document.getElementById('syncStatus');
+  if(headerActions && syncStatus) syncStatus.insertAdjacentElement('afterend',widget);
+  else (headerActions||document.body).append(widget);
   document.getElementById('pomodoroFruit').onclick=()=>{
     const panel=document.getElementById('pomodoroPanel');
     setPomodoroPanelOpen(panel.hidden || !panel.classList.contains('is-open'));
@@ -850,6 +857,7 @@ function persistStudyTimerSession() {
     kind:studyTimeTracker.kind,
     scheduleId:studyTimeTracker.scheduleId || '',
     elapsedSeconds:autoStudyElapsedSeconds(),
+    committedSeconds:n(studyTimeTracker.committedSeconds),
     running:Boolean(studyTimeTracker.startedAt),
     savedAt:Date.now()
   }));
@@ -862,6 +870,7 @@ function updateAutoStudyIndicator() {
     node.textContent = studyTimeTracker.startedAt ? `${prefix} ${formatClock(elapsed)}` : studyTimeTracker.kind ? `Pausado em ${formatClock(elapsed)}` : 'Tempo pausado';
   });
   if(studyTimeTracker.startedAt && elapsed % 5 === 0) persistStudyTimerSession();
+  if(studyTimeTracker.startedAt && elapsed >= 30 && Date.now()-n(studyTimeTracker.lastSavedAt)>=30000) checkpointAutoStudyTime();
 }
 function autoStudyElapsedSeconds(now=Date.now()) {
   if(!studyTimeTracker.kind) return 0;
@@ -870,7 +879,7 @@ function autoStudyElapsedSeconds(now=Date.now()) {
   return Math.max(0, Math.min(4 * 60 * 60, n(studyTimeTracker.elapsedSeconds) + activeSeconds));
 }
 function commitAutoStudyTime(tracker, seconds) {
-  if(!tracker?.startedAt || !seconds) return 0;
+  if(!tracker?.kind || !seconds) return 0;
   const log = getDayLog(localISODate(new Date()));
   const minutes = seconds / 60;
   if(tracker.kind === 'video') {
@@ -879,12 +888,34 @@ function commitAutoStudyTime(tracker, seconds) {
   } else if(tracker.kind === 'flashcards') {
     log.flashcardsOn = true;
     log.flashcardMinutes = Math.round((n(log.flashcardMinutes) + minutes) * 100) / 100;
+  } else if(tracker.kind === 'material') {
+    log.materialMinutes = Math.round((n(log.materialMinutes) + minutes) * 100) / 100;
+  } else if(tracker.kind === 'simulado') {
+    log.questionsOn = true;
+    log.simuladoMinutes = Math.round((n(log.simuladoMinutes) + minutes) * 100) / 100;
   } else {
     log.questionsOn = true;
     log.questionMinutes = Math.round((n(log.questionMinutes) + minutes) * 100) / 100;
   }
   const lesson = state.schedule.find(item => item.id === tracker.scheduleId);
   if(lesson) lesson.hours = Math.round((n(lesson.hours) + seconds / 3600) * 10000) / 10000;
+  if(!Array.isArray(state.studySessions)) state.studySessions=[];
+  state.studySessions.push({id:`study-${Date.now()}-${Math.random().toString(36).slice(2,6)}`,date:localISODate(new Date()),kind:tracker.kind,scheduleId:tracker.scheduleId||'',seconds:Math.round(seconds),savedAt:new Date().toISOString()});
+  if(state.studySessions.length>5000) state.studySessions=state.studySessions.slice(-5000);
+  return seconds;
+}
+function checkpointAutoStudyTime(force=false) {
+  if(!studyTimeTracker.kind) return 0;
+  const totalSeconds=autoStudyElapsedSeconds();
+  const seconds=Math.max(0,totalSeconds-n(studyTimeTracker.committedSeconds));
+  if(!force && seconds<30) return 0;
+  if(seconds<1) return 0;
+  const snapshot={...studyTimeTracker};
+  commitAutoStudyTime(snapshot,seconds);
+  studyTimeTracker.committedSeconds=totalSeconds;
+  studyTimeTracker.lastSavedAt=Date.now();
+  persistStudyTimerSession();
+  saveStateOnly();
   return seconds;
 }
 function startAutoStudy(kind, scheduleId='') {
@@ -899,7 +930,7 @@ function startAutoStudy(kind, scheduleId='') {
   }
   stopAutoStudy();
   const now = Date.now();
-  studyTimeTracker = { kind, scheduleId, startedAt:now, elapsedSeconds:0, lastSavedAt:now, interval:null, displayInterval:setInterval(updateAutoStudyIndicator, 1000) };
+  studyTimeTracker = { kind, scheduleId, startedAt:now, elapsedSeconds:0, committedSeconds:0, lastSavedAt:now, interval:null, displayInterval:setInterval(updateAutoStudyIndicator, 1000) };
   persistStudyTimerSession();
   updateAutoStudyIndicator();
 }
@@ -915,20 +946,13 @@ function pauseAutoStudy(kind='') {
 function stopAutoStudy(kind='', askToSave=true) {
   if(!studyTimeTracker.kind || (kind && studyTimeTracker.kind !== kind)) return;
   const tracker = studyTimeTracker;
-  const seconds = autoStudyElapsedSeconds();
+  const seconds = Math.max(0,autoStudyElapsedSeconds()-n(tracker.committedSeconds));
   if(studyTimeTracker.interval) clearInterval(studyTimeTracker.interval);
   if(studyTimeTracker.displayInterval) clearInterval(studyTimeTracker.displayInterval);
-  studyTimeTracker = { kind:'', scheduleId:'', startedAt:0, elapsedSeconds:0, lastSavedAt:0, interval:null, displayInterval:null };
+  studyTimeTracker = emptyStudyTimer();
   localStorage.removeItem(STUDY_TIMER_KEY);
   updateAutoStudyIndicator();
-  if(seconds < 60) return;
-  const lesson = state.schedule.find(item => item.id === tracker.scheduleId);
-  const label = tracker.kind === 'video' ? 'videoaula' : tracker.kind === 'flashcards' ? 'flashcards' : tracker.kind === 'simulado' ? 'simulado' : 'questões';
-  const detail = lesson ? `\nAula: ${lesson.topic}` : '';
-  const shouldSave = askToSave && !document.hidden
-    ? confirm(`Salvar ${formatClock(seconds)} estudados em ${label}?${detail}`)
-    : true;
-  if(shouldSave && commitAutoStudyTime(tracker, seconds)) saveStateOnly();
+  if(seconds >= 1 && commitAutoStudyTime(tracker, seconds)) saveStateOnly();
 }
 function resumeAutoStudyForActiveView() {
   if(document.hidden) return;
@@ -1301,6 +1325,7 @@ function iconSvg(name) {
     insight:'<path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/><path d="m4 7 6-4 6 6 5-5"/>',
     history:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/>',
     message:'<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/><path d="M8 9h8M8 13h5"/>'
+    ,prescription:'<path d="M9 3h6l1 3h3a2 2 0 0 1 2 2v12H3V8a2 2 0 0 1 2-2h3Z"/><path d="M9 6h6M8 11h8M8 15h5"/><path d="M16 15v5M13.5 17.5h5"/>'
   };
   return `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.dashboard}</svg>`;
 }
@@ -1319,18 +1344,22 @@ function dailyStudySnapshot(date) {
   const minutes = {
     video:n(log.lessonMinutes),
     questions:n(log.questionMinutes),
-    flashcards:n(log.flashcardMinutes)
+    flashcards:n(log.flashcardMinutes),
+    materials:n(log.materialMinutes),
+    simulados:n(log.simuladoMinutes)
   };
   if(date === localISODate(new Date()) && studyTimeTracker.kind) {
     const activeMinutes = autoStudyElapsedSeconds() / 60;
     if(studyTimeTracker.kind === 'video') minutes.video += activeMinutes;
     else if(studyTimeTracker.kind === 'flashcards') minutes.flashcards += activeMinutes;
+    else if(studyTimeTracker.kind === 'material') minutes.materials += activeMinutes;
+    else if(studyTimeTracker.kind === 'simulado') minutes.simulados += activeMinutes;
     else minutes.questions += activeMinutes;
   }
   return {
     log,
     minutes,
-    totalMinutes:minutes.video + minutes.questions + minutes.flashcards,
+    totalMinutes:minutes.video + minutes.questions + minutes.flashcards + minutes.materials + minutes.simulados,
     videos:Math.max(0, Math.round(n(log.videos))),
     questions:Math.max(0, Math.round(n(log.questions))),
     flashcards:Math.max(0, Math.round(n(log.flashcards)))
@@ -1341,7 +1370,7 @@ function renderDailyAnalysis(date) {
   const questionProgress = Math.min(100, Math.round(snapshot.questions / DAILY_QUESTION_TARGET * 100));
   const flashcardProgress = Math.min(100, Math.round(snapshot.flashcards / DAILY_FLASHCARD_TARGET * 100));
   const tiles = [
-    { icon:'timer', label:'Tempo estudado', value:formatDailyStudyTime(snapshot.totalMinutes), foot:`${formatDailyStudyTime(snapshot.minutes.video)} em aulas · ${formatDailyStudyTime(snapshot.minutes.questions)} em questões · ${formatDailyStudyTime(snapshot.minutes.flashcards)} em revisão`, progress:null },
+    { icon:'timer', label:'Tempo estudado', value:formatDailyStudyTime(snapshot.totalMinutes), foot:`${formatDailyStudyTime(snapshot.minutes.video)} aulas · ${formatDailyStudyTime(snapshot.minutes.questions)} questões · ${formatDailyStudyTime(snapshot.minutes.simulados)} simulados · ${formatDailyStudyTime(snapshot.minutes.materials)} materiais · ${formatDailyStudyTime(snapshot.minutes.flashcards)} revisão`, progress:null },
     { icon:'play', label:'Videoaulas', value:snapshot.videos, foot:snapshot.videos === 1 ? 'videoaula concluída hoje' : 'videoaulas concluídas hoje', progress:null },
     { icon:'brain', label:'Questões', value:snapshot.questions, foot:`Meta diária: ${DAILY_QUESTION_TARGET}`, progress:questionProgress },
     { icon:'cards', label:'Flashcards', value:snapshot.flashcards, foot:`Meta diária: ${DAILY_FLASHCARD_TARGET}`, progress:flashcardProgress }
@@ -1436,6 +1465,7 @@ function renderCronograma() {
   const rows = filteredSchedule();
   const changed = lastChangedLesson();
   document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2>Blocos do cronograma</h2><div class="muted">${changed ? `Última alteração: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}<div class="toolbar"><input class="input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}"><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select><select class="select" id="statusFilter">${['Todos','Concluído','Aguardando','Não Iniciado'].map(s=>`<option ${s===ui.status?'selected':''}>${s}</option>`).join('')}</select><button class="icon-btn" id="clearFilters">Limpar filtros</button></div></div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${renderScheduleTable(rows, true)}</div>`;
+  enhanceScheduleStudyIcons();
   document.getElementById('search').oninput = debounce(e => {
     const value=e.target.value;
     const cursor=e.target.selectionStart;
@@ -1462,6 +1492,28 @@ function renderPendingLessons(items) {
 function renderScheduleTable(rows, editable=false) {
   if(!rows.length) return '<div class="empty">Nada para mostrar aqui.</div>';
   return `<div class="table-wrap"><table class="schedule-table"><thead><tr><th>Data</th><th>Bloco</th><th>Tema</th><th>Área</th><th>Status</th><th class="num">Questões</th><th class="num">Banco</th><th class="num">Flashcards</th><th class="num">Horas</th><th class="num">Progresso</th><th>Anotações</th></tr></thead><tbody>${rows.map(x => { const bank=questionStatsForSchedule(x.id); const cards=flashcardStatsForSchedule(x.id); const videoCount=plannedVideoCountForSchedule(x); const videoDone=scheduleVideoCompleted(x); return `<tr><td class="schedule-date-cell">${fmtDate(x.date)}<div class="muted">${x.day}</div></td><td class="schedule-block-cell">${x.block ?? ''}</td><td class="schedule-topic-cell"><div class="schedule-topic-line">${priorityBar(x)}<button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button>${videoCount?` <button class="tiny-btn" data-open-schedule-videos="${escapeAttr(x.id)}" title="Abrir videoaula">▶</button><button class="tiny-btn" data-toggle-schedule-video="${escapeAttr(x.id)}" title="Marcar videoaula como vista">${videoDone?'Vídeo ✓':'Vídeo'}</button>`:''}</div><div class="schedule-meta muted">Meta: ${x.metaQ} questões · ${x.metaFC} flashcards · ${x.metaH} h${videoCount?` · ${videoCount} vídeo${videoCount===1?'':'s'}`:''}</div></td><td>${escapeHtml(x.area)}</td><td>${badgeStatus(statusOf(x))}</td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="q" type="number" min="0" step="1" value="${completedQuestions(x)}"><div class="auto-progress">Banco ${bank.done}${n(x.manualQ) ? ` · manual ${n(x.manualQ)}` : ''}</div></td><td class="num"><button class="tiny-btn" data-open-schedule-questions="${escapeAttr(x.id)}">Abrir</button><div class="bank-result"><strong>${bank.done}</strong> feitas<br>${bank.correct} certas · ${bank.done?pct(bank.rate):'-'}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="fc" type="number" min="0" step="1" value="${n(x.manualFC)}"><div class="auto-progress">+${cards.reviews} revisões</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="hours" type="number" min="0" step="0.25" value="${n(x.hours)}"></td><td class="num">${pct(progressOf(x))}</td><td><input class="notes-input" data-id="${x.id}" data-field="notes" value="${escapeAttr(x.notes)}"></td></tr>`; }).join('')}</tbody></table></div>`;
+}
+function enhanceScheduleStudyIcons() {
+  const currentBlock=n(currentScheduleBlock());
+  document.querySelectorAll('.schedule-table tbody tr').forEach(row => {
+    const videoToggle=row.querySelector('[data-toggle-schedule-video]');
+    const openVideo=row.querySelector('[data-open-schedule-videos]');
+    const scheduleId=videoToggle?.dataset.toggleScheduleVideo || openVideo?.dataset.openScheduleVideos;
+    const item=state.schedule.find(entry=>entry.id===scheduleId);
+    const topicLine=row.querySelector('.schedule-topic-line');
+    if(!item || !topicLine) return;
+    videoToggle?.remove();
+    openVideo?.remove();
+    const colorable=n(item.block)<=currentBlock;
+    const stateClass=done=>done?'done':colorable?'missing':'future';
+    const videoDone=scheduleVideoCompleted(item);
+    const questionDone=completedQuestions(item)>=lessonQuestionTarget(item);
+    const flashcardDone=completedFlashcards(item)>=lessonFlashcardTarget(item);
+    const icons=document.createElement('span');
+    icons.className='schedule-study-icons';
+    icons.innerHTML=`${plannedVideoCountForSchedule(item)>0?`<button class="schedule-study-icon ${stateClass(videoDone)}" data-open-schedule-videos="${escapeAttr(item.id)}" title="${videoDone?'Videoaula concluída':'Videoaula pendente'}" aria-label="Videoaula">${iconSvg('play')}</button>`:''}<button class="schedule-study-icon ${stateClass(questionDone)}" data-open-schedule-questions="${escapeAttr(item.id)}" title="${completedQuestions(item)}/${lessonQuestionTarget(item)} questões" aria-label="Questões">${iconSvg('brain')}</button><button class="schedule-study-icon ${stateClass(flashcardDone)}" data-open-schedule-flashcards="${escapeAttr(item.id)}" title="${completedFlashcards(item)}/${lessonFlashcardTarget(item)} flashcards" aria-label="Flashcards">${iconSvg('cards')}</button>`;
+    topicLine.append(icons);
+  });
 }
 function bindScheduleInputs() {
   document.querySelectorAll('[data-id][data-field]').forEach(el => el.onchange = e => { const item = state.schedule.find(x=>x.id===e.target.dataset.id); if(!item) return; const f=e.target.dataset.field; if(f==='q') item.manualQ=Math.max(0, n(e.target.value) - questionStatsForSchedule(item.id).done); else if(f==='fc') item.manualFC=n(e.target.value); else item[f] = f==='notes' ? e.target.value : n(e.target.value); persist(); });
@@ -2093,13 +2145,13 @@ function historyRows() {
   return state.dayLogs.map(log => {
     const dayItems = state.schedule.filter(x => x.date === log.date);
     const doneItems = dayItems.filter(x => statusOf(x) === 'Concluído');
-    const activity = n(log.videos) + n(log.flashcards) + n(log.questions) + n(log.lessonMinutes) + n(log.flashcardMinutes) + n(log.questionMinutes) + doneItems.length;
+    const activity = n(log.videos) + n(log.flashcards) + n(log.questions) + n(log.lessonMinutes) + n(log.flashcardMinutes) + n(log.questionMinutes) + n(log.materialMinutes) + n(log.simuladoMinutes) + doneItems.length;
     return { log, dayItems, doneItems, activity };
   }).filter(x => !hiddenDates.has(x.log.date) && (x.activity > 0 || x.dayItems.some(item => completedQuestions(item)>0 || completedFlashcards(item)>0 || n(item.hours)>0))).sort((a,b)=>b.log.date.localeCompare(a.log.date));
 }
 function renderHistorico() {
   const rows = historyRows();
-  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Aulas concluídas', rows.reduce((s,x)=>s+x.doneItems.length,0), 'no histórico por data')}${metric('Questões', Math.round(rows.reduce((s,x)=>s+n(x.log.questions),0)), 'registradas no dia')}${metric('Flashcards', Math.round(rows.reduce((s,x)=>s+n(x.log.flashcards),0)), 'registrados no dia')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+n(x.log.lessonMinutes)+n(x.log.flashcardMinutes)+n(x.log.questionMinutes),0))} min`, 'aulas + flashcards + questões')}</div><div class="card"><div class="section-title"><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div>${renderHistoryTable(rows)}</div>`;
+  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Aulas concluídas', rows.reduce((s,x)=>s+x.doneItems.length,0), 'no histórico por data')}${metric('Questões', Math.round(rows.reduce((s,x)=>s+n(x.log.questions),0)), 'registradas no dia')}${metric('Flashcards', Math.round(rows.reduce((s,x)=>s+n(x.log.flashcards),0)), 'registrados no dia')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+n(x.log.lessonMinutes)+n(x.log.flashcardMinutes)+n(x.log.questionMinutes)+n(x.log.materialMinutes)+n(x.log.simuladoMinutes),0))} min`, 'todas as atividades acumuladas')}</div><div class="card"><div class="section-title"><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div>${renderHistoryTable(rows)}</div>`;
   document.querySelectorAll('[data-remove-history]').forEach(button => button.onclick = event => removeHistoryRecord(event.currentTarget.dataset.removeHistory));
 }
 function removeHistoryRecord(date) {
@@ -2117,7 +2169,7 @@ function renderHistoryTable(rows) {
   return `<div class="table-wrap"><table><thead><tr><th>Data</th><th>Humor</th><th>Aulas e temas</th><th class="num">Vídeos</th><th class="num">Flashcards</th><th class="num">Questões</th><th class="num">Tempo</th><th>Anotações</th><th><span class="sr-only">Excluir</span></th></tr></thead><tbody>${rows.map(({log, dayItems, doneItems}) => {
     const topics = doneItems.length ? doneItems : dayItems.filter(x => completedQuestions(x)>0 || completedFlashcards(x)>0 || n(x.hours)>0).slice(0,4);
     const topicText = topics.length ? topics.map(x=>`Bloco ${x.block}: ${escapeHtml(x.topic)}`).join('<br>') : escapeHtml(log.videoNames || 'Registro manual');
-    const pom = n(log.lessonMinutes)+n(log.flashcardMinutes)+n(log.questionMinutes);
+    const pom = n(log.lessonMinutes)+n(log.flashcardMinutes)+n(log.questionMinutes)+n(log.materialMinutes)+n(log.simuladoMinutes);
     return `<tr><td>${fmtDate(log.date)}</td><td>${moodLabel(log.mood)}</td><td>${topicText}</td><td class="num">${n(log.videos)}</td><td class="num">${n(log.flashcards)}</td><td class="num">${n(log.questions)}<div class="muted">${n(log.correct)} acertos · ${n(log.wrong)} erros</div></td><td class="num">${Math.round(pom)} min</td><td>${escapeHtml(log.notes)}</td><td class="history-remove-cell"><button class="history-remove" data-remove-history="${escapeAttr(log.date)}" title="Excluir registro de ${escapeAttr(fmtDate(log.date))}" aria-label="Excluir registro de ${escapeAttr(fmtDate(log.date))}">×</button></td></tr>`;
   }).join('')}</tbody></table></div>`;
 }
@@ -2138,6 +2190,126 @@ function renderFeynmanCards() {
     const source = linked ? `Cronograma: Bloco ${linked.block} · ${linked.area} · Prioridade ${linked.priority}` : 'Tema livre';
     return `<div class="feynman-card"><div class="sim-review-head"><div><strong>${escapeHtml(item.topic || 'Novo tema')}</strong><div class="topic-source">${escapeHtml(source)}</div></div><button class="tiny-btn" data-remove-feynman="${item.id}">×</button></div><div class="feynman-fields"><input class="input" list="feynmanTopicList" data-feynman="${item.id}" data-field="topic" value="${escapeAttr(item.topic)}" placeholder="Tema ou aula"><input class="input" type="number" min="0" max="5" step="1" data-feynman="${item.id}" data-field="mastery" value="${n(item.mastery)}" title="Domínio 0 a 5"><input class="input" type="date" data-feynman="${item.id}" data-field="reviewDate" value="${escapeAttr(item.reviewDate)}"></div><div class="feynman-texts"><textarea class="textarea" data-feynman="${item.id}" data-field="explain" placeholder="Explique com palavras simples">${escapeHtml(item.explain)}</textarea><textarea class="textarea" data-feynman="${item.id}" data-field="gaps" placeholder="Onde travei? Quais lacunas?">${escapeHtml(item.gaps)}</textarea><textarea class="textarea" data-feynman="${item.id}" data-field="analogy" placeholder="Analogia ou exemplo clínico">${escapeHtml(item.analogy)}</textarea><textarea class="textarea" data-feynman="${item.id}" data-field="nextStep" placeholder="Próximo passo de revisão">${escapeHtml(item.nextStep)}</textarea></div><div class="review-strip">${importanceBadge(feynmanPriority(item))}<span class="badge today">Atualizado: ${fmtDate(item.updatedAt)}</span></div></div>`;
   }).join('')}</div>`;
+}
+
+const PRESCRIPTION_THEMES = ['Pneumonia adquirida na comunidade','Crise asmática','Pielonefrite','Hipertensão arterial','Síndrome coronariana aguda','Sepse','Dor abdominal','Paciente pós-operatório','Prescrição de internação'];
+const PRESCRIPTION_EXAMS = ['Hemograma','Ureia','Creatinina','Sódio','Potássio','Magnésio','Cálcio','Glicemia','PCR','TGO','TGP','Bilirrubinas','Coagulograma','Gasometria arterial','Lactato','Troponina','Urina tipo I','Urocultura','Hemoculturas','Radiografia de tórax','Ultrassonografia','Tomografia','Ressonância magnética','Ecocardiograma','Doppler','Eletrocardiograma'];
+const PRESCRIPTION_MEDICATIONS = ['Ceftriaxona','Azitromicina','Amoxicilina','Dipirona','Paracetamol','Salbutamol','Prednisona','Enoxaparina','Omeprazol','Ondansetrona','Insulina regular','Soro fisiológico 0,9%'];
+function prescriptionLab() { ensureQuestionProgress(); return state.prescriptionLab; }
+function prescriptionCase() { return prescriptionLab().cases.find(item => item.id === ui.prescriptionCaseId); }
+function prescriptionPatient(population='adulto', sex='qualquer') {
+  const male=['João Almeida','Carlos Ribeiro','Miguel Santos'];
+  const female=['Maria Oliveira','Ana Martins','Helena Costa'];
+  const selectedSex=sex==='qualquer' ? (Math.random()>.5?'Masculino':'Feminino') : sex;
+  const names=selectedSex==='Masculino'?male:female;
+  const age=population==='pediatrico'?Math.floor(Math.random()*14)+2:population==='idoso'?Math.floor(Math.random()*24)+65:Math.floor(Math.random()*43)+18;
+  const weight=population==='pediatrico'?Math.round((age*2+8+Math.random()*5)*10)/10:Math.floor(Math.random()*45)+50;
+  const allergy=['Nenhuma conhecida','Penicilina','Dipirona','AAS'][Math.floor(Math.random()*4)];
+  const renal=['Sem alteração conhecida','DRC estágio 3','Creatinina 1,8 mg/dL'][Math.floor(Math.random()*3)];
+  return {name:names[Math.floor(Math.random()*names.length)],sex:selectedSex,age,weight,height:'',allergies:allergy,pregnancy:selectedSex==='Feminino'?'Não informado':'Não aplicável',comorbidities:age>=65?'Hipertensão arterial':'Nenhuma informada',renal,liver:'Sem alteração conhecida',vitals:'',currentMedications:'',availableExams:'',notes:''};
+}
+function newPrescriptionCase(data={}) {
+  const now=new Date().toISOString();
+  return {id:`rx-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,createdAt:now,updatedAt:now,status:'incomplete',mode:data.mode||'free',theme:data.theme||'',initialProblem:data.initialProblem||'',diagnosis:data.diagnosis||'',setting:data.setting||'Ambulatório',patient:data.patient||prescriptionPatient(),reasoning:{problems:data.initialProblem||'',hypotheses:data.diagnosis||'',objectives:'',justification:''},items:[],drawing:{strokes:[]},review:null};
+}
+function prescriptionTypeLabel(type) { return ({medication:'Medicamento',exam:'Exame',procedure:'Cuidado ou procedimento',monitoring:'Monitorização',orientation:'Orientação',diet:'Dieta',note:'Anotação livre'})[type]||'Item'; }
+function prescriptionSafetyBanner() { return `<div class="rx-safety"><strong>PACIENTE SIMULADO</strong><span>Ambiente educacional. Não utilizar para assistência, prescrição real ou tomada de decisão clínica. Não insira dados identificáveis.</span></div>`; }
+function renderPrescription() {
+  const mount=document.getElementById('prescricao');
+  if(!mount) return;
+  if(ui.prescriptionScreen==='new') mount.innerHTML=renderPrescriptionNew();
+  else if(prescriptionCase()) mount.innerHTML=renderPrescriptionWorkspace(prescriptionCase());
+  else mount.innerHTML=renderPrescriptionHome();
+  bindPrescriptionEvents();
+}
+function renderPrescriptionHome() {
+  const cases=[...prescriptionLab().cases].sort((a,b)=>String(b.updatedAt).localeCompare(String(a.updatedAt)));
+  const complete=cases.filter(item=>item.status==='complete');
+  const avg=complete.length?Math.round(complete.reduce((sum,item)=>sum+n(item.review?.overall),0)/complete.length):0;
+  return `${prescriptionSafetyBanner()}<div class="rx-home-head"><div><span class="eyebrow">Laboratório clínico</span><h1>Simulador de Prescrição</h1><p class="muted">Treine a estrutura, a clareza e o raciocínio de prescrições em pacientes fictícios.</p></div><button class="icon-btn primary" id="rxNewCase">+ Novo caso</button></div><div class="grid cards rx-metrics">${metric('Casos salvos',cases.length,'armazenados no planner')}${metric('Finalizados',complete.length,'com revisão estrutural')}${metric('Média',`${avg}%`,'tentativas finalizadas')}</div><div class="card"><div class="section-title"><h2>Casos recentes</h2><span class="badge today">${cases.length}</span></div><div class="rx-case-list">${cases.map(item=>`<article class="rx-case-row"><button data-rx-open="${item.id}"><strong>${escapeHtml(item.theme||item.initialProblem||'Caso sem título')}</strong><span>${escapeHtml(item.patient?.name||'Paciente simulado')} · ${fmtDate(String(item.createdAt).slice(0,10))}</span></button><span class="badge ${item.status==='complete'?'done':'wait'}">${item.status==='complete'?'finalizado':'incompleto'}</span><button class="tiny-btn" data-rx-delete="${item.id}" title="Excluir caso">×</button></article>`).join('')||'<div class="empty">Nenhum caso criado. Comece por um tema clínico que deseja treinar.</div>'}</div></div>`;
+}
+function renderPrescriptionNew() {
+  return `${prescriptionSafetyBanner()}<div class="card rx-new"><div class="section-title"><div><h1>Novo caso simulado</h1><div class="muted">Comece pelo problema; a hipótese pode permanecer aberta.</div></div><button class="icon-btn" id="rxCancelNew">Voltar</button></div><div class="rx-new-grid"><section><h2>1. Situação clínica</h2><label>Tema do treinamento<input class="input" id="rxTheme" list="rxThemeList" placeholder="Ex.: pneumonia"></label><datalist id="rxThemeList">${PRESCRIPTION_THEMES.map(x=>`<option value="${escapeAttr(x)}">`).join('')}</datalist><label>Problema clínico inicial<textarea class="textarea" id="rxProblem" placeholder="Ex.: febre, tosse e dispneia"></textarea></label><label>Hipótese diagnóstica<input class="input" id="rxDiagnosis" placeholder="Pode ficar em aberto"></label><div class="field-row"><label>Cenário<select class="select" id="rxSetting"><option>Ambulatório</option><option>Emergência</option><option>Internação</option></select></label><label>Modo<select class="select" id="rxMode"><option value="free">Livre</option><option value="challenge">Desafio</option></select></label><label>Faixa<select class="select" id="rxPopulation"><option value="adulto">Adulto</option><option value="pediatrico">Pediátrico</option><option value="idoso">Idoso</option></select></label></div></section><section><div class="section-title"><h2>2. Paciente fictício</h2><button class="tiny-btn" id="rxGeneratePatient">Gerar paciente</button></div><div class="field-row"><label>Identificação fictícia<input class="input" id="rxPatientName" placeholder="Paciente simulado"></label><label>Sexo<select class="select" id="rxPatientSex"><option>Qualquer</option><option>Masculino</option><option>Feminino</option></select></label><label>Idade<input class="input" id="rxPatientAge" type="number" min="0" max="120"></label></div><div class="field-row"><label>Peso (kg)<input class="input" id="rxPatientWeight" type="number" min="0" step="0.1"></label><label>Alergias<input class="input" id="rxPatientAllergies" placeholder="Nenhuma conhecida"></label><label>Função renal<input class="input" id="rxPatientRenal" placeholder="Sem alteração conhecida"></label></div><details><summary>Dados avançados</summary><div class="field-row"><label>Gestação<input class="input" id="rxPatientPregnancy"></label><label>Comorbidades<input class="input" id="rxPatientComorbidities"></label><label>Função hepática<input class="input" id="rxPatientLiver"></label></div></details></section></div><button class="icon-btn primary rx-create" id="rxCreateCase">Criar folha de prescrição</button></div>`;
+}
+function renderPrescriptionWorkspace(item) {
+  const review=prescriptionReview(item);
+  return `${prescriptionSafetyBanner()}<div class="rx-work-head"><button class="icon-btn" id="rxBackHome">‹ Casos</button><div><h1>${escapeHtml(item.theme||'Caso clínico')}</h1><div class="muted">${escapeHtml(item.setting)} · salvo automaticamente</div></div><div class="rx-head-actions"><button class="icon-btn" id="rxPrint">Imprimir</button><button class="icon-btn" id="rxReview">Revisar</button><button class="icon-btn primary" id="rxFinish">${item.status==='complete'?'Atualizar avaliação':'Finalizar'}</button></div></div><div class="rx-layout"><aside class="rx-patient">${renderPrescriptionPatient(item)}</aside><section class="rx-sheet">${renderPrescriptionSheet(item)}${ui.prescriptionReviewOpen?renderPrescriptionReview(review):''}</section><aside class="rx-tools">${renderPrescriptionTools(item)}</aside></div>`;
+}
+function renderPrescriptionPatient(item) {
+  const p=item.patient||{};
+  return `<span class="eyebrow">Paciente simulado</span><h2>${escapeHtml(p.name||'Sem identificação')}</h2><div class="rx-patient-summary">${escapeHtml(p.age||'?')} anos · ${escapeHtml(p.weight||'?')} kg · ${escapeHtml(p.sex||'')}</div><label>Alergias<input class="input" data-rx-patient="allergies" value="${escapeAttr(p.allergies||'')}"></label><label>Função renal<input class="input" data-rx-patient="renal" value="${escapeAttr(p.renal||'')}"></label><label>Função hepática<input class="input" data-rx-patient="liver" value="${escapeAttr(p.liver||'')}"></label><label>Gestação<input class="input" data-rx-patient="pregnancy" value="${escapeAttr(p.pregnancy||'')}"></label><label>Comorbidades<textarea class="textarea" data-rx-patient="comorbidities">${escapeHtml(p.comorbidities||'')}</textarea></label><details><summary>Dados clínicos</summary><label>Sinais vitais<textarea class="textarea" data-rx-patient="vitals">${escapeHtml(p.vitals||'')}</textarea></label><label>Medicamentos em uso<textarea class="textarea" data-rx-patient="currentMedications">${escapeHtml(p.currentMedications||'')}</textarea></label><label>Exames disponíveis<textarea class="textarea" data-rx-patient="availableExams">${escapeHtml(p.availableExams||'')}</textarea></label></details>`;
+}
+function renderPrescriptionSheet(item) {
+  const r=item.reasoning||{};
+  return `<header class="rx-paper-head"><div><strong>Folha de prescrição educacional</strong><span>${fmtDate(String(item.createdAt).slice(0,10))}</span></div><div>${escapeHtml(item.setting)} · ${escapeHtml(item.diagnosis||'Hipótese em construção')}</div></header><div class="rx-reasoning"><label>Problema principal<textarea class="textarea" data-rx-root="initialProblem">${escapeHtml(item.initialProblem||'')}</textarea></label><label>Hipóteses diagnósticas<textarea class="textarea" data-rx-reason="hypotheses">${escapeHtml(r.hypotheses||'')}</textarea></label><label>Objetivos da prescrição<textarea class="textarea" data-rx-reason="objectives">${escapeHtml(r.objectives||'')}</textarea></label><label>Justificativa clínica<textarea class="textarea" data-rx-reason="justification">${escapeHtml(r.justification||'')}</textarea></label></div><div class="section-title rx-items-title"><h2>Prescrição</h2><span class="badge today">${item.items.length} itens</span></div><div class="rx-items">${item.items.map((entry,index)=>renderPrescriptionItem(entry,index)).join('')||'<div class="empty">Use o painel Adicionar para montar a prescrição.</div>'}</div><div class="rx-handwriting"><div class="section-title"><div><h2>Anotações manuscritas</h2><div class="muted">Caneta escreve; o toque continua rolando a página.</div></div><div class="rx-pen-tools"><button class="tiny-btn ${ui.prescriptionPen==='pen'?'active':''}" data-rx-pen="pen">Caneta</button><button class="tiny-btn ${ui.prescriptionPen==='highlight'?'active':''}" data-rx-pen="highlight">Marca-texto</button><button class="tiny-btn ${ui.prescriptionPen==='eraser'?'active':''}" data-rx-pen="eraser">Borracha</button><button class="tiny-btn" id="rxUndoStroke">Desfazer</button><button class="tiny-btn" id="rxClearDrawing">Limpar</button></div></div><canvas id="rxCanvas" width="1000" height="420" aria-label="Área de escrita manual"></canvas></div>`;
+}
+function renderPrescriptionItem(entry,index) {
+  const common=`<label>Instruções<textarea class="textarea" data-rx-item="${entry.id}" data-field="instructions">${escapeHtml(entry.instructions||'')}</textarea></label><label>Justificativa<input class="input" data-rx-item="${entry.id}" data-field="justification" value="${escapeAttr(entry.justification||'')}"></label>`;
+  let fields='';
+  if(entry.type==='medication') fields=`<div class="rx-item-grid"><label>Medicamento<input class="input" list="rxMedicationList" data-rx-item="${entry.id}" data-field="name" value="${escapeAttr(entry.name||'')}"></label><label>Apresentação<input class="input" data-rx-item="${entry.id}" data-field="presentation" value="${escapeAttr(entry.presentation||'')}"></label><label>Dose<input class="input" data-rx-item="${entry.id}" data-field="dose" value="${escapeAttr(entry.dose||'')}"></label><label>Unidade<input class="input" data-rx-item="${entry.id}" data-field="unit" value="${escapeAttr(entry.unit||'')}"></label><label>Via<input class="input" list="rxRouteList" data-rx-item="${entry.id}" data-field="route" value="${escapeAttr(entry.route||'')}"></label><label>Frequência<input class="input" data-rx-item="${entry.id}" data-field="frequency" value="${escapeAttr(entry.frequency||'')}"></label><label>Duração<input class="input" data-rx-item="${entry.id}" data-field="duration" value="${escapeAttr(entry.duration||'')}"></label><label>Diluição<input class="input" data-rx-item="${entry.id}" data-field="dilution" value="${escapeAttr(entry.dilution||'')}"></label><label>Tempo de infusão<input class="input" data-rx-item="${entry.id}" data-field="infusion" value="${escapeAttr(entry.infusion||'')}"></label></div>${common}`;
+  else if(entry.type==='exam') fields=`<div class="rx-item-grid"><label>Exame<input class="input" list="rxExamList" data-rx-item="${entry.id}" data-field="name" value="${escapeAttr(entry.name||'')}"></label><label>Região ou material<input class="input" data-rx-item="${entry.id}" data-field="region" value="${escapeAttr(entry.region||'')}"></label><label>Incidências ou técnica<input class="input" data-rx-item="${entry.id}" data-field="technique" placeholder="Ex.: posteroanterior e perfil" value="${escapeAttr(entry.technique||'')}"></label></div><label>Indicação clínica<textarea class="textarea" data-rx-item="${entry.id}" data-field="indication">${escapeHtml(entry.indication||'')}</textarea></label>${common}`;
+  else fields=`<div class="rx-item-grid"><label>${prescriptionTypeLabel(entry.type)}<input class="input" data-rx-item="${entry.id}" data-field="name" value="${escapeAttr(entry.name||'')}"></label><label>Frequência<input class="input" data-rx-item="${entry.id}" data-field="frequency" value="${escapeAttr(entry.frequency||'')}"></label></div>${common}`;
+  return `<article class="rx-item"><div class="rx-item-head"><span>${index+1}</span><strong>${prescriptionTypeLabel(entry.type)}</strong><div><button class="tiny-btn" data-rx-save-model="${entry.id}">Salvar modelo</button><button class="tiny-btn" data-rx-remove-item="${entry.id}" title="Remover item">×</button></div></div>${fields}</article>`;
+}
+function renderPrescriptionTools(item) {
+  const library=prescriptionLab().library;
+  const models=[...library.medications,...library.exams,...library.others];
+  return `<h2>Adicionar</h2><div class="rx-add-list">${[['medication','Medicamento'],['exam','Exame'],['procedure','Procedimento'],['monitoring','Monitorização'],['orientation','Orientação'],['diet','Dieta'],['note','Anotação livre']].map(([type,label])=>`<button data-rx-add="${type}">+ ${label}</button>`).join('')}</div><datalist id="rxMedicationList">${PRESCRIPTION_MEDICATIONS.map(x=>`<option value="${escapeAttr(x)}">`).join('')}</datalist><datalist id="rxExamList">${PRESCRIPTION_EXAMS.map(x=>`<option value="${escapeAttr(x)}">`).join('')}</datalist><datalist id="rxRouteList"><option value="VO"><option value="IV"><option value="IM"><option value="SC"><option value="Inalatória"><option value="Tópica"></datalist><div class="rx-library"><div class="section-title"><h3>Biblioteca pessoal</h3><span>${models.length}</span></div>${models.map(model=>`<div><button data-rx-use-model="${model.id}"><strong>${escapeHtml(model.name||prescriptionTypeLabel(model.type))}</strong><small>${prescriptionTypeLabel(model.type)}</small></button><button data-rx-delete-model="${model.id}">×</button></div>`).join('')||'<p class="muted">Salve itens que deseja reutilizar.</p>'}</div><div class="rx-tool-note"><strong>Checagem responsável</strong><p>A revisão avalia preenchimento e alertas simples. Não verifica interação, dose correta ou adequação terapêutica.</p></div>`;
+}
+function prescriptionReview(item) {
+  const issues=[],safety=[],clarity=[]; let required=0,filled=0;
+  const check=(value,label)=>{required++;if(String(value||'').trim())filled++;else issues.push(label);};
+  item.items.forEach((entry,index)=>{const label=`Item ${index+1}`;check(entry.name,`${label}: informe o nome`);if(entry.type==='medication'){check(entry.dose,`${label}: informe a dose`);check(entry.unit,`${label}: informe a unidade`);check(entry.route,`${label}: informe a via`);check(entry.frequency,`${label}: informe a frequência`);if(/cef|penic|cillin|azitro|cipro|metro|vanco|antibi/i.test(entry.name||''))check(entry.duration,`${label}: informe a duração do antimicrobiano`);if(/\biv\b|intraven/i.test(entry.route||'')){check(entry.dilution,`${label}: informe a diluição IV`);check(entry.infusion,`${label}: informe o tempo de infusão`);}}if(entry.type==='exam')check(entry.indication,`${label}: informe a indicação clínica`);const text=Object.values(entry).join(' ');if(/\b1\s*ampola\b/i.test(text))clarity.push(`${label}: “1 ampola” exige concentração e volume`);if(/conforme orientação/i.test(text))clarity.push(`${label}: substitua “conforme orientação” por instrução explícita`);});
+  const allergy=normalizedTopic(item.patient?.allergies||'');
+  item.items.filter(x=>x.type==='medication').forEach(entry=>{const med=normalizedTopic(entry.name||'').split(' ')[0];if(med.length>3&&allergy.includes(med))safety.push(`Possível conflito entre ${entry.name} e a alergia registrada. Confirme manualmente.`);});
+  if(item.items.some(x=>x.type==='medication')&&!/sem alteracao|normal|nao/i.test(normalizedTopic(item.patient?.renal||'')))safety.push('Função renal alterada ou incerta: confirme necessidade de ajuste de dose.');
+  if(item.items.some(x=>x.type==='medication')&&/^sim/i.test(item.patient?.pregnancy||''))safety.push('Gestação registrada: confirme segurança de cada medicamento.');
+  const coherenceFields=[item.initialProblem,item.reasoning?.hypotheses,item.reasoning?.objectives,item.reasoning?.justification];
+  const coherence=Math.round(coherenceFields.filter(x=>String(x||'').trim()).length/coherenceFields.length*100);
+  const completeness=required?Math.round(filled/required*100):(item.items.length?100:0);
+  const scores={safety:Math.max(0,100-safety.length*25),completeness,coherence,clarity:Math.max(0,100-clarity.length*20)};
+  return {...scores,overall:Math.round((scores.safety+scores.completeness+scores.coherence+scores.clarity)/4),issues,safety,clarity};
+}
+function renderPrescriptionReview(review) {
+  const rows=[['Segurança',review.safety],['Completude',review.completeness],['Coerência',review.coherence],['Clareza',review.clarity]];
+  const messages=[...review.safety,...review.issues,...review.clarity];
+  return `<section class="rx-review"><div class="section-title"><div><h2>Revisão estrutural</h2><div class="muted">Não valida a correção clínica da conduta.</div></div><strong>${review.overall}%</strong></div><div class="rx-score-grid">${rows.map(([label,value])=>`<div><span>${label}</span><strong>${value}%</strong><i style="--score:${value}%"></i></div>`).join('')}</div><div class="rx-review-list">${messages.map(message=>`<p>${escapeHtml(message)}</p>`).join('')||'<p class="ok">Estrutura completa nos critérios automáticos disponíveis.</p>'}</div></section>`;
+}
+function restrictedPrescriptionData(values) { return values.some(value=>/\b\d{11}\b/.test(String(value||''))); }
+function bindPrescriptionEvents() {
+  document.getElementById('rxNewCase')?.addEventListener('click',()=>{ui.prescriptionScreen='new';renderPrescription();});
+  document.getElementById('rxCancelNew')?.addEventListener('click',()=>{ui.prescriptionScreen='home';renderPrescription();});
+  document.getElementById('rxGeneratePatient')?.addEventListener('click',()=>{const sex=(document.getElementById('rxPatientSex')?.value||'Qualquer').toLowerCase();const p=prescriptionPatient(document.getElementById('rxPopulation')?.value,sex==='qualquer'?'qualquer':sex==='masculino'?'masculino':'feminino');[['rxPatientName','name'],['rxPatientAge','age'],['rxPatientWeight','weight'],['rxPatientAllergies','allergies'],['rxPatientRenal','renal'],['rxPatientPregnancy','pregnancy'],['rxPatientComorbidities','comorbidities'],['rxPatientLiver','liver']].forEach(([id,key])=>{const el=document.getElementById(id);if(el)el.value=p[key]||'';});const sexEl=document.getElementById('rxPatientSex');if(sexEl)sexEl.value=p.sex;});
+  document.getElementById('rxCreateCase')?.addEventListener('click',()=>{const value=id=>document.getElementById(id)?.value?.trim()||'';const values=['rxTheme','rxProblem','rxDiagnosis','rxPatientName','rxPatientAllergies','rxPatientRenal','rxPatientComorbidities'].map(value);if(restrictedPrescriptionData(values)){alert('Não insira CPF, prontuário ou outro número identificável. Use apenas um paciente fictício.');return;}if(!value('rxTheme')&&!value('rxProblem')){alert('Informe o tema ou o problema clínico inicial.');return;}const patient={...prescriptionPatient(),name:value('rxPatientName')||'Paciente simulado',sex:value('rxPatientSex'),age:value('rxPatientAge'),weight:value('rxPatientWeight'),allergies:value('rxPatientAllergies')||'Nenhuma conhecida',renal:value('rxPatientRenal')||'Sem alteração conhecida',pregnancy:value('rxPatientPregnancy'),comorbidities:value('rxPatientComorbidities'),liver:value('rxPatientLiver')};const item=newPrescriptionCase({theme:value('rxTheme')||value('rxProblem'),initialProblem:value('rxProblem'),diagnosis:value('rxDiagnosis'),setting:value('rxSetting'),mode:value('rxMode'),patient});prescriptionLab().cases.unshift(item);ui.prescriptionCaseId=item.id;ui.prescriptionScreen='case';persist();});
+  document.querySelectorAll('[data-rx-open]').forEach(button=>button.onclick=()=>{ui.prescriptionCaseId=button.dataset.rxOpen;ui.prescriptionScreen='case';renderPrescription();});
+  document.querySelectorAll('[data-rx-delete]').forEach(button=>button.onclick=()=>{if(!confirm('Excluir este caso simulado e suas anotações?'))return;prescriptionLab().cases=prescriptionLab().cases.filter(x=>x.id!==button.dataset.rxDelete);persist();});
+  document.getElementById('rxBackHome')?.addEventListener('click',()=>{ui.prescriptionCaseId='';ui.prescriptionScreen='home';ui.prescriptionReviewOpen=false;renderPrescription();});
+  const item=prescriptionCase(); if(!item)return;
+  const touch=()=>{item.updatedAt=new Date().toISOString();saveStateOnly();};
+  document.querySelectorAll('[data-rx-root]').forEach(el=>el.onchange=()=>{if(restrictedPrescriptionData([el.value])){alert('Remova dados identificáveis.');return;}item[el.dataset.rxRoot]=el.value;touch();});
+  document.querySelectorAll('[data-rx-patient]').forEach(el=>el.onchange=()=>{if(restrictedPrescriptionData([el.value])){alert('Remova dados identificáveis.');return;}item.patient[el.dataset.rxPatient]=el.value;touch();});
+  document.querySelectorAll('[data-rx-reason]').forEach(el=>el.onchange=()=>{item.reasoning[el.dataset.rxReason]=el.value;touch();});
+  document.querySelectorAll('[data-rx-item]').forEach(el=>el.onchange=()=>{const entry=item.items.find(x=>x.id===el.dataset.rxItem);if(entry){entry[el.dataset.field]=el.value;touch();}});
+  document.querySelectorAll('[data-rx-add]').forEach(button=>button.onclick=()=>{item.items.push({id:`rx-item-${Date.now()}`,type:button.dataset.rxAdd,name:'',instructions:'',justification:''});persist();});
+  document.querySelectorAll('[data-rx-remove-item]').forEach(button=>button.onclick=()=>{if(confirm('Remover este item da prescrição?')){item.items=item.items.filter(x=>x.id!==button.dataset.rxRemoveItem);persist();}});
+  document.querySelectorAll('[data-rx-save-model]').forEach(button=>button.onclick=()=>{const entry=item.items.find(x=>x.id===button.dataset.rxSaveModel);if(!entry||!entry.name){alert('Informe o nome antes de salvar o modelo.');return;}const bucket=entry.type==='medication'?'medications':entry.type==='exam'?'exams':'others';prescriptionLab().library[bucket].push({...entry,id:`rx-model-${Date.now()}`});persist();});
+  document.querySelectorAll('[data-rx-use-model]').forEach(button=>button.onclick=()=>{const models=Object.values(prescriptionLab().library).flat();const model=models.find(x=>x.id===button.dataset.rxUseModel);if(model){item.items.push({...model,id:`rx-item-${Date.now()}`});persist();}});
+  document.querySelectorAll('[data-rx-delete-model]').forEach(button=>button.onclick=()=>{if(!confirm('Excluir este modelo pessoal?'))return;Object.keys(prescriptionLab().library).forEach(key=>prescriptionLab().library[key]=prescriptionLab().library[key].filter(x=>x.id!==button.dataset.rxDeleteModel));persist();});
+  document.getElementById('rxReview')?.addEventListener('click',()=>{ui.prescriptionReviewOpen=!ui.prescriptionReviewOpen;renderPrescription();});
+  document.getElementById('rxFinish')?.addEventListener('click',()=>{const review=prescriptionReview(item);item.review={...review,at:new Date().toISOString()};item.status='complete';ui.prescriptionReviewOpen=true;persist();});
+  document.getElementById('rxPrint')?.addEventListener('click',()=>{document.body.classList.add('prescription-print');const restore=()=>{document.body.classList.remove('prescription-print');window.removeEventListener('afterprint',restore);};window.addEventListener('afterprint',restore);window.print();});
+  bindPrescriptionCanvas(item,touch);
+}
+function bindPrescriptionCanvas(item,touch) {
+  const canvas=document.getElementById('rxCanvas');if(!canvas)return;const ctx=canvas.getContext('2d');const strokes=item.drawing?.strokes||(item.drawing={strokes:[]}).strokes;
+  const redraw=()=>{ctx.clearRect(0,0,canvas.width,canvas.height);strokes.forEach(stroke=>{ctx.save();ctx.globalCompositeOperation=stroke.mode==='eraser'?'destination-out':'source-over';ctx.strokeStyle=stroke.mode==='highlight'?'rgba(255,205,30,.38)':'#1261f5';ctx.lineWidth=stroke.mode==='highlight'?28:stroke.mode==='eraser'?34:5;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();stroke.points.forEach((point,index)=>{const x=point[0]*canvas.width,y=point[1]*canvas.height;index?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.stroke();ctx.restore();});};redraw();let active=null;
+  const point=event=>{const rect=canvas.getBoundingClientRect();return[(event.clientX-rect.left)/rect.width,(event.clientY-rect.top)/rect.height];};
+  canvas.onpointerdown=event=>{if(event.pointerType==='touch')return;canvas.setPointerCapture(event.pointerId);active={mode:ui.prescriptionPen,points:[point(event)]};strokes.push(active);redraw();};
+  canvas.onpointermove=event=>{if(!active)return;active.points.push(point(event));redraw();};
+  canvas.onpointerup=()=>{if(!active)return;active=null;touch();};
+  document.querySelectorAll('[data-rx-pen]').forEach(button=>button.onclick=()=>{ui.prescriptionPen=button.dataset.rxPen;renderPrescription();});
+  document.getElementById('rxUndoStroke')?.addEventListener('click',()=>{strokes.pop();touch();renderPrescription();});
+  document.getElementById('rxClearDrawing')?.addEventListener('click',()=>{if(confirm('Apagar toda a anotação manuscrita?')){strokes.splice(0);touch();renderPrescription();}});
 }
 function bindFeynmanInputs() {
   const add = document.getElementById('addFeynman');
@@ -2175,6 +2347,19 @@ function renderMateriais() {
   document.querySelectorAll('[data-material-doc]').forEach(button => button.onclick = e => { ui.materialDocId=e.currentTarget.dataset.materialDoc; ui.materialScheduleId=materialLibrary.find(doc=>doc.id===ui.materialDocId)?.scheduleId || ''; renderMateriais(); });
   document.querySelectorAll('[data-material-heading]').forEach(button => button.onclick = e => document.getElementById(e.currentTarget.dataset.materialHeading)?.scrollIntoView({behavior:'smooth',block:'start'}));
   bindMaterialReader(selected);
+  if(selected) {
+    const readerHead=document.querySelector('#materiais .reader-head');
+    if(readerHead) {
+      const clock=document.createElement('span');
+      clock.className='badge today';
+      clock.dataset.autoStudyClock='';
+      clock.dataset.autoStudyPrefix='Leitura ·';
+      clock.textContent='Leitura · 00:00';
+      readerHead.append(clock);
+    }
+    startAutoStudy('material', selected.scheduleId || '');
+  }
+  else stopAutoStudy('material');
   if(ui.materialSearch) applyMaterialSearch(ui.materialSearch);
 }
 function materialLibraryGroups() {
@@ -4890,13 +5075,24 @@ function render() {
     analise: renderAnalise,
     areas: renderAreas,
     historico: renderHistorico,
-    feynman: renderFeynman
+    feynman: renderFeynman,
+    prescricao: renderPrescription
   };
   renderers[ui.tab]?.();
   ensurePomodoroWidget();
   updatePomodoroWidget();
 }
-document.getElementById('exportBtn').onclick = () => { const blob = new Blob([JSON.stringify(state,null,2)], {type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='backup-enamed-planner.json'; a.click(); URL.revokeObjectURL(a.href); };
+document.getElementById('exportBtn').onclick = () => {
+  checkpointAutoStudyTime(true);
+  const backup=structuredClone(state);
+  backup.backupInfo={format:'soqueromed-completo',version:2,exportedAt:new Date().toISOString(),includes:['cronograma','questões respondidas','videoaulas assistidas','horas e sessões','flashcards','simulados','atividades diárias']};
+  const blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`backup-completo-soqueromed-${localISODate(new Date())}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
 document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
 document.getElementById('resetBtn').onclick = () => { if(confirm('Voltar aos dados originais importados do Excel? Esta alteração também será sincronizada.')) { state=structuredClone(seed); normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); persist(); } };
 document.getElementById('printBtn').onclick = () => {
