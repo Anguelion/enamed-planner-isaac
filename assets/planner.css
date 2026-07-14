@@ -327,6 +327,8 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .question-timer-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .question-reflection{display:grid;gap:10px;margin-top:14px;border:1px solid var(--line);border-radius:8px;padding:12px;background:#fbfcf8}
 .question-reflection .field-row{grid-template-columns:repeat(3,1fr)}
+.reflection-writing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.reflection-writing textarea{min-height:92px;resize:vertical}
+@media(max-width:700px){.reflection-writing{grid-template-columns:1fr}}
 .question-notes{margin-top:14px;border:1px solid var(--line);border-radius:8px;padding:12px;background:#fbfcf8}
 .question-notes textarea{min-height:190px;resize:vertical}
 .question-notes .markdown-preview{margin-top:10px}
