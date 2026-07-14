@@ -225,6 +225,13 @@ function ensureQuestionProgress() {
   if(!state.dashboardSettings || typeof state.dashboardSettings !== 'object') state.dashboardSettings = {};
   if(!state.videoPlayer || typeof state.videoPlayer !== 'object') state.videoPlayer = {};
   if(!state.videoPlayer.bookmarks || typeof state.videoPlayer.bookmarks !== 'object') state.videoPlayer.bookmarks = {};
+  Object.entries(state.videoPlayer.bookmarks).forEach(([sourceId,entries]) => {
+    if(!Array.isArray(entries)) { state.videoPlayer.bookmarks[sourceId]=[]; return; }
+    state.videoPlayer.bookmarks[sourceId]=entries.map((bookmark,index)=>({
+      ...bookmark,
+      id:bookmark.id || `bookmark-${normalizedTopic(sourceId).replace(/\s+/g,'-')}-${n(bookmark.time)}-${index}`
+    }));
+  });
   if(!state.videoPlayer.resume || typeof state.videoPlayer.resume !== 'object') state.videoPlayer.resume = {};
   if(!state.videoPlayer.watched || typeof state.videoPlayer.watched !== 'object') state.videoPlayer.watched = {};
   if(!state.videoPlayer.watchedAt || typeof state.videoPlayer.watchedAt !== 'object') state.videoPlayer.watchedAt = {};
@@ -2275,7 +2282,14 @@ const PRESCRIPTION_MEDICATIONS = ['Ceftriaxona','Azitromicina','Amoxicilina','Di
 let prescriptionCatalog = { medications:[], conditions:[] };
 let prescriptionCatalogPromise = null;
 function prescriptionMedicationCatalog() { return prescriptionCatalog.medications.length ? prescriptionCatalog.medications : PRESCRIPTION_MEDICATIONS.map(name=>({name,className:'',presentation:''})); }
-function prescriptionConditionCatalog() { return prescriptionCatalog.conditions.length ? prescriptionCatalog.conditions : PRESCRIPTION_THEMES.map(name=>({name,cid:'',specialty:''})); }
+function prescriptionConditionCatalog() {
+  const scheduleConditions=(state.schedule||[]).map(item=>({name:item.topic,cid:'',specialty:item.area||''}));
+  const builtIn=PRESCRIPTION_THEMES.map(name=>({name,cid:'',specialty:''}));
+  const merged=[...prescriptionCatalog.conditions,...scheduleConditions,...builtIn];
+  const unique=new Map();
+  merged.forEach(item=>{const key=normalizedTopic(item.name);if(key&&!unique.has(key))unique.set(key,item);});
+  return [...unique.values()].sort((a,b)=>a.name.localeCompare(b.name,'pt-BR'));
+}
 function loadPrescriptionCatalog() {
   if(prescriptionCatalogPromise) return prescriptionCatalogPromise;
   prescriptionCatalogPromise=fetch('data/prescription_catalog.json',{cache:'no-store'}).then(response=>response.ok?response.json():null).then(data=>{
@@ -2334,10 +2348,21 @@ function renderPrescriptionSheet(item) {
   const r=item.reasoning||{};
   return `<header class="rx-paper-head"><div><strong>Folha de prescrição educacional</strong><span>${fmtDate(String(item.createdAt).slice(0,10))}</span></div><div>${escapeHtml(item.setting)} · ${escapeHtml(item.diagnosis||'Hipótese em construção')}</div></header><div class="rx-reasoning"><label>Problema principal<textarea class="textarea" data-rx-root="initialProblem">${escapeHtml(item.initialProblem||'')}</textarea></label><label>Hipóteses diagnósticas<textarea class="textarea" data-rx-reason="hypotheses">${escapeHtml(r.hypotheses||'')}</textarea></label><label>Objetivos da prescrição<textarea class="textarea" data-rx-reason="objectives">${escapeHtml(r.objectives||'')}</textarea></label><label>Justificativa clínica<textarea class="textarea" data-rx-reason="justification">${escapeHtml(r.justification||'')}</textarea></label></div><div class="section-title rx-items-title"><h2>Prescrição</h2><span class="badge today">${item.items.length} itens</span></div><div class="rx-items">${item.items.map((entry,index)=>renderPrescriptionItem(entry,index)).join('')||'<div class="empty">Use o painel Adicionar para montar a prescrição.</div>'}</div><div class="rx-handwriting"><div class="section-title"><div><h2>Anotações manuscritas</h2><div class="muted">Caneta escreve; o toque continua rolando a página.</div></div><div class="rx-pen-tools"><button class="tiny-btn ${ui.prescriptionPen==='pen'?'active':''}" data-rx-pen="pen">Caneta</button><button class="tiny-btn ${ui.prescriptionPen==='highlight'?'active':''}" data-rx-pen="highlight">Marca-texto</button><button class="tiny-btn ${ui.prescriptionPen==='eraser'?'active':''}" data-rx-pen="eraser">Borracha</button><button class="tiny-btn" id="rxUndoStroke">Desfazer</button><button class="tiny-btn" id="rxClearDrawing">Limpar</button></div></div><canvas id="rxCanvas" width="1000" height="420" aria-label="Área de escrita manual"></canvas></div>`;
 }
+function prescriptionMedicationMatch(value='') {
+  const key=normalizedTopic(value);
+  return key ? prescriptionMedicationCatalog().find(item=>normalizedTopic(item.name)===key) || null : null;
+}
+function renderPrescriptionMedicationReference(value='',entryId='') {
+  const medication=prescriptionMedicationMatch(value);
+  if(!medication) return '<span class="muted">Selecione um medicamento da lista para ver apresentação e referências de uso.</span>';
+  const details=[medication.className,medication.presentation].filter(Boolean).map(escapeHtml).join(' · ');
+  const examples=Array.isArray(medication.posologyExamples)?medication.posologyExamples:[];
+  return `<div class="rx-medication-reference-head"><strong>${escapeHtml(medication.name)}</strong><span>${details||'Catálogo auxiliar'}</span></div>${examples.length?`<div class="rx-posology-examples">${examples.map((example,index)=>`<div><span><strong>${escapeHtml(example.label)}</strong><small>${escapeHtml(example.instructions)}</small></span><button type="button" class="tiny-btn" data-rx-posology-example="${escapeAttr(entryId)}" data-example-index="${index}">Usar se vazio</button></div>`).join('')}</div>`:'<span class="muted">Sem exemplo de posologia neste arquivo. Preencha livremente.</span>'}`;
+}
 function renderPrescriptionItem(entry,index) {
   const common=`<label>Instruções<textarea class="textarea" data-rx-item="${entry.id}" data-field="instructions">${escapeHtml(entry.instructions||'')}</textarea></label><label>Justificativa<input class="input" data-rx-item="${entry.id}" data-field="justification" value="${escapeAttr(entry.justification||'')}"></label>`;
   let fields='';
-  if(entry.type==='medication') fields=`<div class="rx-item-grid"><label>Medicamento<input class="input" list="rxMedicationList" data-rx-item="${entry.id}" data-rx-medication-input="${entry.id}" data-field="name" value="${escapeAttr(entry.name||'')}"></label><label>Apresentação<input class="input" data-rx-item="${entry.id}" data-rx-medication-presentation="${entry.id}" data-field="presentation" value="${escapeAttr(entry.presentation||'')}"></label><label>Dose<input class="input" data-rx-item="${entry.id}" data-field="dose" value="${escapeAttr(entry.dose||'')}"></label><label>Unidade<input class="input" data-rx-item="${entry.id}" data-field="unit" value="${escapeAttr(entry.unit||'')}"></label><label>Via<input class="input" list="rxRouteList" data-rx-item="${entry.id}" data-field="route" value="${escapeAttr(entry.route||'')}"></label><label>Frequência<input class="input" data-rx-item="${entry.id}" data-field="frequency" value="${escapeAttr(entry.frequency||'')}"></label><label>Duração<input class="input" data-rx-item="${entry.id}" data-field="duration" value="${escapeAttr(entry.duration||'')}"></label><label>Diluição<input class="input" data-rx-item="${entry.id}" data-field="dilution" value="${escapeAttr(entry.dilution||'')}"></label><label>Tempo de infusão<input class="input" data-rx-item="${entry.id}" data-field="infusion" value="${escapeAttr(entry.infusion||'')}"></label></div>${common}`;
+  if(entry.type==='medication') fields=`<div class="rx-item-grid"><label>Medicamento<input class="input" list="rxMedicationList" data-rx-item="${entry.id}" data-rx-medication-input="${entry.id}" data-field="name" value="${escapeAttr(entry.name||'')}"></label><label>Apresentação<input class="input" data-rx-item="${entry.id}" data-rx-medication-presentation="${entry.id}" data-field="presentation" value="${escapeAttr(entry.presentation||'')}"></label><label>Dose<input class="input" data-rx-item="${entry.id}" data-field="dose" value="${escapeAttr(entry.dose||'')}"></label><label>Unidade<input class="input" data-rx-item="${entry.id}" data-field="unit" value="${escapeAttr(entry.unit||'')}"></label><label>Via<input class="input" list="rxRouteList" data-rx-item="${entry.id}" data-field="route" value="${escapeAttr(entry.route||'')}"></label><label>Frequência<input class="input" data-rx-item="${entry.id}" data-field="frequency" value="${escapeAttr(entry.frequency||'')}"></label><label>Duração<input class="input" data-rx-item="${entry.id}" data-field="duration" value="${escapeAttr(entry.duration||'')}"></label><label>Diluição<input class="input" data-rx-item="${entry.id}" data-field="dilution" value="${escapeAttr(entry.dilution||'')}"></label><label>Tempo de infusão<input class="input" data-rx-item="${entry.id}" data-field="infusion" value="${escapeAttr(entry.infusion||'')}"></label></div><div class="rx-medication-reference" data-rx-medication-help="${entry.id}">${renderPrescriptionMedicationReference(entry.name,entry.id)}</div>${common}`;
   else if(entry.type==='exam') fields=`<div class="rx-item-grid"><label>Exame<input class="input" list="rxExamList" data-rx-item="${entry.id}" data-field="name" value="${escapeAttr(entry.name||'')}"></label><label>Região ou material<input class="input" data-rx-item="${entry.id}" data-field="region" value="${escapeAttr(entry.region||'')}"></label><label>Incidências ou técnica<input class="input" data-rx-item="${entry.id}" data-field="technique" placeholder="Ex.: posteroanterior e perfil" value="${escapeAttr(entry.technique||'')}"></label></div><label>Indicação clínica<textarea class="textarea" data-rx-item="${entry.id}" data-field="indication">${escapeHtml(entry.indication||'')}</textarea></label>${common}`;
   else fields=`<div class="rx-item-grid"><label>${prescriptionTypeLabel(entry.type)}<input class="input" data-rx-item="${entry.id}" data-field="name" value="${escapeAttr(entry.name||'')}"></label><label>Frequência<input class="input" data-rx-item="${entry.id}" data-field="frequency" value="${escapeAttr(entry.frequency||'')}"></label></div>${common}`;
   return `<article class="rx-item"><div class="rx-item-head"><span>${index+1}</span><strong>${prescriptionTypeLabel(entry.type)}</strong><div><button class="tiny-btn" data-rx-save-model="${entry.id}">Salvar modelo</button><button class="tiny-btn" data-rx-remove-item="${entry.id}" title="Remover item">×</button></div></div>${fields}</article>`;
@@ -2382,6 +2407,15 @@ function bindPrescriptionEvents() {
   document.querySelectorAll('[data-rx-patient]').forEach(el=>el.onchange=()=>{if(restrictedPrescriptionData([el.value])){alert('Remova dados identificáveis.');return;}item.patient[el.dataset.rxPatient]=el.value;touch();});
   document.querySelectorAll('[data-rx-reason]').forEach(el=>el.onchange=()=>{item.reasoning[el.dataset.rxReason]=el.value;touch();});
   document.querySelectorAll('[data-rx-item]').forEach(el=>el.onchange=()=>{const entry=item.items.find(x=>x.id===el.dataset.rxItem);if(entry){entry[el.dataset.field]=el.value;touch();}});
+  const bindPosologyExamples=()=>document.querySelectorAll('[data-rx-posology-example]').forEach(button=>button.onclick=()=>{
+    const entry=item.items.find(x=>x.id===button.dataset.rxPosologyExample); if(!entry) return;
+    const medication=prescriptionMedicationMatch(entry.name);
+    const example=medication?.posologyExamples?.[n(button.dataset.exampleIndex)]; if(!example) return;
+    if(String(entry.instructions||'').trim()) { alert('Sua descrição foi mantida. Apague as instruções atuais para usar esta referência.'); return; }
+    entry.instructions=example.instructions;
+    if(!entry.presentation) entry.presentation=medication.presentation||'';
+    touch(); renderPrescription();
+  });
   document.querySelectorAll('[data-rx-medication-input]').forEach(el=>el.oninput=()=>{
     const entry=item.items.find(x=>x.id===el.dataset.rxItem); if(!entry) return;
     entry.name=el.value;
@@ -2390,7 +2424,10 @@ function bindPrescriptionEvents() {
     touch();
     const presentation=document.querySelector(`[data-rx-medication-presentation="${CSS.escape(entry.id)}"]`);
     if(presentation && match && !presentation.value) presentation.value=match.presentation;
+    const help=document.querySelector(`[data-rx-medication-help="${CSS.escape(entry.id)}"]`);
+    if(help) { help.innerHTML=renderPrescriptionMedicationReference(el.value,entry.id); bindPosologyExamples(); }
   });
+  bindPosologyExamples();
   document.querySelectorAll('[data-rx-add]').forEach(button=>button.onclick=()=>{item.items.push({id:`rx-item-${Date.now()}`,type:button.dataset.rxAdd,name:'',instructions:'',justification:''});persist();});
   document.querySelectorAll('[data-rx-remove-item]').forEach(button=>button.onclick=()=>{if(confirm('Remover este item da prescrição?')){item.items=item.items.filter(x=>x.id!==button.dataset.rxRemoveItem);persist();}});
   document.querySelectorAll('[data-rx-save-model]').forEach(button=>button.onclick=()=>{const entry=item.items.find(x=>x.id===button.dataset.rxSaveModel);if(!entry||!entry.name){alert('Informe o nome antes de salvar o modelo.');return;}const bucket=entry.type==='medication'?'medications':entry.type==='exam'?'exams':'others';prescriptionLab().library[bucket].push({...entry,id:`rx-model-${Date.now()}`});persist();});
@@ -3205,7 +3242,7 @@ function renderAulas() {
   const resume = source ? n(state.videoPlayer.resume[source.id]) : 0;
   const watched = source ? state.videoPlayer.watched[source.id] : false;
   const usingR2 = usesR2VideoSource();
-  mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas locais · ordem do cronograma</div></div><span class="badge today">offline</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Sair do foco':'⛶ Foco'}</button><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo local.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${schedule ? `<button class="tiny-btn" data-video-materials="${escapeAttr(schedule.id)}">Material da aula</button>` : ''}${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map((bookmark, index) => `<div class="video-bookmark"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span>${escapeHtml(bookmark.label || 'Ponto importante')}</span><button class="delete-bookmark" data-video-bookmark-delete="${index}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
+  mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas locais · ordem do cronograma</div></div><span class="badge today">offline</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Sair do foco':'⛶ Foco'}</button><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo local.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${schedule ? `<button class="tiny-btn" data-video-materials="${escapeAttr(schedule.id)}">Material da aula</button>` : ''}${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map(bookmark => `<div class="video-bookmark" data-video-bookmark-id="${escapeAttr(bookmark.id)}"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span>${escapeHtml(bookmark.label || 'Ponto importante')}</span><button class="delete-bookmark" data-video-bookmark-delete="${escapeAttr(bookmark.id)}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
   const sourceSwitch=document.createElement('div');
   sourceSwitch.className='video-source-switch';
   sourceSwitch.setAttribute('role','group');
@@ -3262,13 +3299,15 @@ function renderAulas() {
       button.title = `${kind}: ${videoContentLabel(listedVideo)}`;
     });
   }
-  document.querySelectorAll('[data-video-seek]').forEach((button, index) => {
+  document.querySelectorAll('[data-video-seek]').forEach(button => {
+    const bookmarkId=button.closest('[data-video-bookmark-id]')?.dataset.videoBookmarkId || '';
+    const bookmark=bookmarks.find(item=>item.id===bookmarkId);
     const timeInput = document.createElement('input');
     timeInput.className = 'video-bookmark-time';
     timeInput.type = 'text';
     timeInput.inputMode = 'numeric';
-    timeInput.value = formatVideoTime(bookmarks[index]?.time || 0);
-    timeInput.dataset.videoBookmarkTime = String(index);
+    timeInput.value = formatVideoTime(bookmark?.time || 0);
+    timeInput.dataset.videoBookmarkTime = bookmarkId;
     timeInput.title = 'Editar tempo do ponto';
     timeInput.setAttribute('aria-label', 'Tempo do ponto');
     button.insertAdjacentElement('afterend', timeInput);
@@ -3447,7 +3486,7 @@ function bindVideoPlayer(source, schedule, lesson) {
     const label = bookmarkLabelInput?.value.trim() || '';
     if(!label) { document.getElementById('videoBookmarkLabel').focus(); return; }
     const entries = state.videoPlayer.bookmarks[source.id] || [];
-    entries.push({time:bookmarkTimeFrozen ?? Math.floor(video.currentTime || 0),label});
+    entries.push({id:`bookmark-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,time:bookmarkTimeFrozen ?? Math.floor(video.currentTime || 0),label});
     state.videoPlayer.bookmarks[source.id] = entries.sort((a,b)=>a.time-b.time);
     saveStateOnly(); renderAulas();
   });
@@ -3478,8 +3517,7 @@ function bindVideoPlayer(source, schedule, lesson) {
   document.querySelectorAll('[data-video-bookmark-time]').forEach(input => {
     const saveBookmarkTime = () => {
       const entries = state.videoPlayer.bookmarks[source.id] || [];
-      const index = Number(input.dataset.videoBookmarkTime);
-      const bookmark = entries[index];
+      const bookmark = entries.find(item=>item.id===input.dataset.videoBookmarkTime);
       const parsed = parseVideoTime(input.value);
       if(!bookmark || parsed === null || parsed < 0) {
         input.value = formatVideoTime(bookmark?.time || 0);
@@ -3506,8 +3544,8 @@ function bindVideoPlayer(source, schedule, lesson) {
     deleteButton.insertAdjacentElement('beforebegin', editButton);
   });
   document.querySelectorAll('[data-video-bookmark-edit]').forEach(button => button.onclick = event => {
-    const index = Number(event.currentTarget.dataset.videoBookmarkEdit);
-    const entry = state.videoPlayer.bookmarks[source.id]?.[index];
+    const bookmarkId=event.currentTarget.dataset.videoBookmarkEdit;
+    const entry = state.videoPlayer.bookmarks[source.id]?.find(item=>item.id===bookmarkId);
     const row = event.currentTarget.closest('.video-bookmark');
     if(!entry || !row) return;
     const label = row.querySelector('.video-bookmark-label');
@@ -3531,7 +3569,7 @@ function bindVideoPlayer(source, schedule, lesson) {
     input.select();
     input.onkeydown = keyEvent => { if(keyEvent.key === 'Enter') event.currentTarget.click(); };
   });
-  document.querySelectorAll('[data-video-bookmark-delete]').forEach(button => button.onclick = event => { state.videoPlayer.bookmarks[source.id].splice(Number(event.currentTarget.dataset.videoBookmarkDelete),1); saveStateOnly(); renderAulas(); });
+  document.querySelectorAll('[data-video-bookmark-delete]').forEach(button => button.onclick = event => { const id=event.currentTarget.dataset.videoBookmarkDelete; state.videoPlayer.bookmarks[source.id]=state.videoPlayer.bookmarks[source.id].filter(item=>item.id!==id); saveStateOnly(); renderAulas(); });
 }
 async function loadVideoCatalog() {
   try {

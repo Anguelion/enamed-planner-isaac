@@ -1,141 +1,16 @@
 {
-  "version": 1,
-  "generatedAt": "2026-07-13",
+  "version": 2,
+  "generatedAt": "2026-07-14T02:36:31.109Z",
   "medications": [
     {
-      "name": "Losartana potássica",
-      "className": "Anti-hipertensivo (BRA)",
-      "presentation": "50mg, 100mg comprimido"
+      "name": "5-Fluorouracila",
+      "className": "Quimioterápico (antimetabólito)",
+      "presentation": "injetável; tópico"
     },
     {
-      "name": "Valsartana",
-      "className": "Anti-hipertensivo (BRA)",
-      "presentation": "80mg, 160mg comprimido"
-    },
-    {
-      "name": "Enalapril maleato",
-      "className": "Anti-hipertensivo (IECA)",
-      "presentation": "10mg, 20mg comprimido"
-    },
-    {
-      "name": "Captopril",
-      "className": "Anti-hipertensivo (IECA)",
-      "presentation": "25mg, 50mg comprimido"
-    },
-    {
-      "name": "Lisinopril",
-      "className": "Anti-hipertensivo (IECA)",
-      "presentation": "10mg, 20mg comprimido"
-    },
-    {
-      "name": "Ramipril",
-      "className": "Anti-hipertensivo (IECA)",
-      "presentation": "5mg, 10mg comprimido"
-    },
-    {
-      "name": "Anlodipino besilato",
-      "className": "Anti-hipertensivo (BCC)",
-      "presentation": "5mg, 10mg comprimido"
-    },
-    {
-      "name": "Nifedipino",
-      "className": "Anti-hipertensivo (BCC)",
-      "presentation": "20mg comprimido/retard"
-    },
-    {
-      "name": "Verapamil",
-      "className": "Anti-hipertensivo (BCC)",
-      "presentation": "80mg, 120mg comprimido"
-    },
-    {
-      "name": "Diltiazem",
-      "className": "Anti-hipertensivo (BCC)",
-      "presentation": "60mg, 120mg comprimido"
-    },
-    {
-      "name": "Hidroclorotiazida",
-      "className": "Diurético tiazídico",
-      "presentation": "25mg, 50mg comprimido"
-    },
-    {
-      "name": "Clortalidona",
-      "className": "Diurético tiazídico",
-      "presentation": "12,5mg, 25mg comprimido"
-    },
-    {
-      "name": "Furosemida",
-      "className": "Diurético de alça",
-      "presentation": "40mg comprimido; 20mg/2mL injetável"
-    },
-    {
-      "name": "Espironolactona",
-      "className": "Diurético poupador de potássio",
-      "presentation": "25mg, 100mg comprimido"
-    },
-    {
-      "name": "Propranolol",
-      "className": "Betabloqueador",
-      "presentation": "40mg comprimido"
-    },
-    {
-      "name": "Atenolol",
-      "className": "Betabloqueador",
-      "presentation": "25mg, 50mg comprimido"
-    },
-    {
-      "name": "Metoprolol succinato",
-      "className": "Betabloqueador",
-      "presentation": "25mg, 50mg, 100mg comprimido"
-    },
-    {
-      "name": "Carvedilol",
-      "className": "Betabloqueador",
-      "presentation": "3,125mg, 6,25mg, 12,5mg, 25mg comprimido"
-    },
-    {
-      "name": "Bisoprolol",
-      "className": "Betabloqueador",
-      "presentation": "2,5mg, 5mg, 10mg comprimido"
-    },
-    {
-      "name": "Metildopa",
-      "className": "Anti-hipertensivo central",
-      "presentation": "250mg, 500mg comprimido"
-    },
-    {
-      "name": "Hidralazina",
-      "className": "Vasodilatador",
-      "presentation": "25mg, 50mg comprimido"
-    },
-    {
-      "name": "Doxazosina",
-      "className": "Alfabloqueador",
-      "presentation": "1mg, 2mg, 4mg comprimido"
-    },
-    {
-      "name": "Sinvastatina",
-      "className": "Estatina",
-      "presentation": "10mg, 20mg, 40mg comprimido"
-    },
-    {
-      "name": "Atorvastatina cálcica",
-      "className": "Estatina",
-      "presentation": "10mg, 20mg, 40mg, 80mg comprimido"
-    },
-    {
-      "name": "Rosuvastatina cálcica",
-      "className": "Estatina",
-      "presentation": "10mg, 20mg comprimido"
-    },
-    {
-      "name": "Ezetimiba",
-      "className": "Hipolipemiante",
-      "presentation": "10mg comprimido"
-    },
-    {
-      "name": "Fenofibrato",
-      "className": "Fibrato",
-      "presentation": "160mg, 200mg comprimido"
+      "name": "Aciclovir",
+      "className": "Antiviral",
+      "presentation": "200mg, 400mg comprimido; pomada; injetável"
     },
     {
       "name": "Ácido acetilsalicílico (AAS)",
@@ -143,39 +18,94 @@
       "presentation": "100mg, 500mg comprimido"
     },
     {
-      "name": "Clopidogrel",
-      "className": "Antiagregante plaquetário",
-      "presentation": "75mg comprimido"
+      "name": "Ácido acetilsalicílico (cardiológico)",
+      "className": "Antiagregante (baixa dose)",
+      "presentation": "100mg comprimido"
     },
     {
-      "name": "Varfarina sódica",
-      "className": "Anticoagulante",
-      "presentation": "1mg, 2,5mg, 5mg comprimido"
+      "name": "Ácido ascórbico (vitamina C)",
+      "className": "Suplemento vitamínico",
+      "presentation": "comprimido; xarope"
     },
     {
-      "name": "Rivaroxabana",
-      "className": "Anticoagulante (NOAC)",
-      "presentation": "10mg, 15mg, 20mg comprimido"
+      "name": "Ácido fólico",
+      "className": "Suplemento (vitamina B9)",
+      "presentation": "5mg comprimido"
     },
     {
-      "name": "Apixabana",
-      "className": "Anticoagulante (NOAC)",
-      "presentation": "2,5mg, 5mg comprimido"
+      "name": "Ácido salicílico",
+      "className": "Ceratolítico",
+      "presentation": "tópico"
     },
     {
-      "name": "Enoxaparina sódica",
-      "className": "Anticoagulante (heparina baixo peso)",
-      "presentation": "20mg, 40mg, 60mg, 80mg injetável"
+      "name": "Ácido tranexâmico",
+      "className": "Antifibrinolítico",
+      "presentation": "250mg comprimido; injetável"
     },
     {
-      "name": "Heparina sódica",
-      "className": "Anticoagulante",
-      "presentation": "5000UI/mL injetável"
+      "name": "Ácido valproico/valproato",
+      "className": "Estabilizador de humor/anticonvulsivante",
+      "presentation": "250mg, 500mg comprimido"
     },
     {
-      "name": "Digoxina",
-      "className": "Cardiotônico glicosídeo",
-      "presentation": "0,25mg comprimido"
+      "name": "Ácido zoledrônico",
+      "className": "Bifosfonato EV (oncologia/osteoporose)",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Adalimumabe",
+      "className": "Biológico (anti-TNF)",
+      "presentation": "40mg injetável subcutâneo"
+    },
+    {
+      "name": "Adapaleno",
+      "className": "Retinoide tópico (acne)",
+      "presentation": "0,1% gel/creme"
+    },
+    {
+      "name": "Adrenalina (epinefrina)",
+      "className": "Vasopressor/anafilaxia",
+      "presentation": "1mg/mL injetável"
+    },
+    {
+      "name": "Albendazol",
+      "className": "Antiparasitário",
+      "presentation": "400mg comprimido; suspensão"
+    },
+    {
+      "name": "Albumina humana",
+      "className": "Expansor plasmático",
+      "presentation": "20% injetável"
+    },
+    {
+      "name": "Alendronato de sódio",
+      "className": "Bifosfonato (osteoporose)",
+      "presentation": "70mg comprimido semanal"
+    },
+    {
+      "name": "Alopurinol",
+      "className": "Antigotoso (inibidor xantina oxidase)",
+      "presentation": "100mg, 300mg comprimido"
+    },
+    {
+      "name": "Alprazolam",
+      "className": "Benzodiazepínico",
+      "presentation": "0,25mg, 0,5mg, 1mg comprimido"
+    },
+    {
+      "name": "Alteplase",
+      "className": "Trombolítico",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Ambroxol",
+      "className": "Mucolítico",
+      "presentation": "xarope; comprimido"
+    },
+    {
+      "name": "Amicacina",
+      "className": "Antibiótico (aminoglicosídeo)",
+      "presentation": "injetável"
     },
     {
       "name": "Amiodarona",
@@ -183,19 +113,386 @@
       "presentation": "200mg comprimido; 150mg/3mL injetável"
     },
     {
-      "name": "Isossorbida (mono/dinitrato)",
-      "className": "Nitrato",
-      "presentation": "20mg, 40mg comprimido"
+      "name": "Amiodarona (PCR)",
+      "className": "Antiarrítmico (emergência)",
+      "presentation": "injetável"
     },
     {
-      "name": "Nitroglicerina",
-      "className": "Nitrato",
-      "presentation": "sublingual, spray, EV"
+      "name": "Amitriptilina",
+      "className": "Antidepressivo tricíclico",
+      "presentation": "25mg comprimido"
     },
     {
-      "name": "Sacubitril + valsartana",
-      "className": "IC (ARNI)",
-      "presentation": "24/26mg, 49/51mg, 97/103mg comprimido"
+      "name": "Amoxicilina",
+      "className": "Antibiótico (penicilina)",
+      "presentation": "500mg, 875mg comprimido; suspensão"
+    },
+    {
+      "name": "Amoxicilina (suspensão pediátrica)",
+      "className": "Antibiótico",
+      "presentation": "suspensão 250mg/5mL"
+    },
+    {
+      "name": "Amoxicilina + clavulanato",
+      "className": "Antibiótico (penicilina + inibidor)",
+      "presentation": "500/125mg, 875/125mg comprimido",
+      "posologyExamples": [
+        {
+          "label": "AMOXICILINA + CLAVULANATO 875/125MG · 14 COMP.",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 12/12H, POR 07 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Ampicilina",
+      "className": "Antibiótico (penicilina)",
+      "presentation": "500mg cápsula; injetável"
+    },
+    {
+      "name": "Anastrozol",
+      "className": "Antineoplásico (inibidor de aromatase)",
+      "presentation": "1mg comprimido"
+    },
+    {
+      "name": "Anlodipino besilato",
+      "className": "Anti-hipertensivo (BCC)",
+      "presentation": "5mg, 10mg comprimido"
+    },
+    {
+      "name": "Apixabana",
+      "className": "Anticoagulante (NOAC)",
+      "presentation": "2,5mg, 5mg comprimido"
+    },
+    {
+      "name": "Aripiprazol",
+      "className": "Antipsicótico (atípico)",
+      "presentation": "10mg, 15mg comprimido"
+    },
+    {
+      "name": "Artemeter + lumefantrina",
+      "className": "Antimalárico",
+      "presentation": "20/120mg comprimido"
+    },
+    {
+      "name": "Atenolol",
+      "className": "Betabloqueador",
+      "presentation": "25mg, 50mg comprimido"
+    },
+    {
+      "name": "Atorvastatina cálcica",
+      "className": "Estatina",
+      "presentation": "10mg, 20mg, 40mg, 80mg comprimido"
+    },
+    {
+      "name": "Atropina",
+      "className": "Anticolinérgico/emergência",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Azatioprina",
+      "className": "Imunossupressor",
+      "presentation": "50mg comprimido"
+    },
+    {
+      "name": "Azitromicina",
+      "className": "Antibiótico (macrolídeo)",
+      "presentation": "500mg comprimido; suspensão",
+      "posologyExamples": [
+        {
+          "label": "AZITROMICINA 500MG · 05 COMP.",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, UMA VEZ AO DIA POR 05 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Baclofeno",
+      "className": "Relaxante muscular",
+      "presentation": "10mg comprimido"
+    },
+    {
+      "name": "Beclometasona",
+      "className": "Corticoide inalatório/nasal",
+      "presentation": "spray nasal; inalatório"
+    },
+    {
+      "name": "Betametasona",
+      "className": "Corticoide tópico/sistêmico",
+      "presentation": "creme; injetável depot"
+    },
+    {
+      "name": "Betametasona (maturação pulmonar fetal)",
+      "className": "Corticoide antenatal",
+      "presentation": "12mg injetável"
+    },
+    {
+      "name": "Bicarbonato de sódio",
+      "className": "Alcalinizante",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Biperideno",
+      "className": "Antiparkinsoniano (anticolinérgico)",
+      "presentation": "2mg comprimido; injetável"
+    },
+    {
+      "name": "Bisacodil",
+      "className": "Laxante estimulante",
+      "presentation": "5mg comprimido; supositório"
+    },
+    {
+      "name": "Bisoprolol",
+      "className": "Betabloqueador",
+      "presentation": "2,5mg, 5mg, 10mg comprimido"
+    },
+    {
+      "name": "Bromoprida",
+      "className": "Procinético/antiemético",
+      "presentation": "10mg comprimido; gotas"
+    },
+    {
+      "name": "Budesonida",
+      "className": "Corticoide inalatório/nasal",
+      "presentation": "spray nasal; inalatório"
+    },
+    {
+      "name": "Budesonida (nebulização)",
+      "className": "Corticoide inalatório",
+      "presentation": "suspensão para nebulização"
+    },
+    {
+      "name": "Bupropiona",
+      "className": "Antidepressivo (IRDN)",
+      "presentation": "150mg comprimido"
+    },
+    {
+      "name": "BUSCOPAM COMPOSTO",
+      "className": "Predefinição auxiliar",
+      "presentation": "",
+      "posologyExamples": [
+        {
+          "label": "BUSCOPAM COMPOSTO · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 08/08H, SE DOR ABDOMINAL"
+        }
+      ]
+    },
+    {
+      "name": "Captopril",
+      "className": "Anti-hipertensivo (IECA)",
+      "presentation": "25mg, 50mg comprimido"
+    },
+    {
+      "name": "Carbamazepina",
+      "className": "Estabilizador de humor/anticonvulsivante",
+      "presentation": "200mg comprimido"
+    },
+    {
+      "name": "Carbonato de cálcio",
+      "className": "Suplemento",
+      "presentation": "500mg, 600mg comprimido"
+    },
+    {
+      "name": "Carvão ativado",
+      "className": "Antídoto/descontaminação",
+      "presentation": "suspensão oral"
+    },
+    {
+      "name": "Carvedilol",
+      "className": "Betabloqueador",
+      "presentation": "3,125mg, 6,25mg, 12,5mg, 25mg comprimido"
+    },
+    {
+      "name": "Cefalexina",
+      "className": "Antibiótico (cefalosporina 1ª ger.)",
+      "presentation": "500mg cápsula; suspensão",
+      "posologyExamples": [
+        {
+          "label": "CEFALEXINA 500MG · 28CP",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 06/06H, POR 07 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Cefepima",
+      "className": "Antibiótico (cefalosporina 4ª ger.)",
+      "presentation": "1g, 2g injetável"
+    },
+    {
+      "name": "Ceftriaxona",
+      "className": "Antibiótico (cefalosporina 3ª ger.)",
+      "presentation": "500mg, 1g injetável"
+    },
+    {
+      "name": "Cefuroxima",
+      "className": "Antibiótico (cefalosporina 2ª ger.)",
+      "presentation": "250mg, 500mg comprimido"
+    },
+    {
+      "name": "Celecoxibe",
+      "className": "AINE (inibidor COX-2)",
+      "presentation": "100mg, 200mg cápsula"
+    },
+    {
+      "name": "Cetirizina",
+      "className": "Anti-histamínico (2ª geração)",
+      "presentation": "10mg comprimido; gotas"
+    },
+    {
+      "name": "Cetoconazol",
+      "className": "Antifúngico",
+      "presentation": "200mg comprimido; creme; xampu"
+    },
+    {
+      "name": "Cetoprofeno",
+      "className": "AINE",
+      "presentation": "100mg cápsula; injetável",
+      "posologyExamples": [
+        {
+          "label": "CETOPROFENO 100MG · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 12/12H, POR 03 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Cianocobalamina (vitamina B12)",
+      "className": "Suplemento",
+      "presentation": "injetável; comprimido"
+    },
+    {
+      "name": "Ciclobenzaprina",
+      "className": "Relaxante muscular",
+      "presentation": "5mg, 10mg comprimido",
+      "posologyExamples": [
+        {
+          "label": "CICLOBENZAPRINA 5MG · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, A NOITE, POR 03 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Ciclofosfamida",
+      "className": "Quimioterápico (alquilante)",
+      "presentation": "comprimido; injetável"
+    },
+    {
+      "name": "Cilostazol",
+      "className": "Vasodilatador periférico",
+      "presentation": "50mg, 100mg comprimido"
+    },
+    {
+      "name": "Ciprofloxacino",
+      "className": "Antibiótico (quinolona)",
+      "presentation": "500mg comprimido; injetável",
+      "posologyExamples": [
+        {
+          "label": "CIPROFLOXACINO 500MG · 10 COMP.",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 12/12H, POR 05 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Cisplatina",
+      "className": "Quimioterápico (platina)",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Citalopram",
+      "className": "Antidepressivo (ISRS)",
+      "presentation": "20mg comprimido"
+    },
+    {
+      "name": "Citrato de cálcio",
+      "className": "Suplemento",
+      "presentation": "comprimido"
+    },
+    {
+      "name": "Claritromicina",
+      "className": "Antibiótico (macrolídeo)",
+      "presentation": "500mg comprimido"
+    },
+    {
+      "name": "Clindamicina",
+      "className": "Antibiótico (lincosamida)",
+      "presentation": "300mg cápsula; injetável"
+    },
+    {
+      "name": "Clobetasol propionato",
+      "className": "Corticoide tópico (alta potência)",
+      "presentation": "0,05% pomada/creme"
+    },
+    {
+      "name": "Clomifeno (citrato)",
+      "className": "Indutor de ovulação",
+      "presentation": "50mg comprimido"
+    },
+    {
+      "name": "Clonazepam",
+      "className": "Benzodiazepínico",
+      "presentation": "0,5mg, 2mg comprimido; gotas"
+    },
+    {
+      "name": "Clopidogrel",
+      "className": "Antiagregante plaquetário",
+      "presentation": "75mg comprimido"
+    },
+    {
+      "name": "Cloranfenicol (colírio)",
+      "className": "Antibiótico oftálmico",
+      "presentation": "colírio; pomada"
+    },
+    {
+      "name": "Cloreto de potássio",
+      "className": "Reposição eletrolítica",
+      "presentation": "xarope; injetável (diluído)"
+    },
+    {
+      "name": "Cloroquina",
+      "className": "Antimalárico/imunomodulador",
+      "presentation": "150mg comprimido"
+    },
+    {
+      "name": "Clorpromazina",
+      "className": "Antipsicótico (típico)",
+      "presentation": "25mg, 100mg comprimido"
+    },
+    {
+      "name": "Clortalidona",
+      "className": "Diurético tiazídico",
+      "presentation": "12,5mg, 25mg comprimido"
+    },
+    {
+      "name": "Clotrimazol (creme vaginal)",
+      "className": "Antifúngico tópico",
+      "presentation": "creme vaginal; comprimido vaginal"
+    },
+    {
+      "name": "Clozapina",
+      "className": "Antipsicótico (atípico, refratário)",
+      "presentation": "25mg, 100mg comprimido"
+    },
+    {
+      "name": "Codeína (associada)",
+      "className": "Opioide fraco",
+      "presentation": "30mg comprimido"
+    },
+    {
+      "name": "Colchicina",
+      "className": "Antigotoso",
+      "presentation": "0,5mg, 1mg comprimido"
+    },
+    {
+      "name": "Colecalciferol (vitamina D3)",
+      "className": "Suplemento",
+      "presentation": "gotas; cápsula 7.000UI, 50.000UI"
+    },
+    {
+      "name": "Complexo B",
+      "className": "Suplemento vitamínico",
+      "presentation": "comprimido; injetável"
+    },
+    {
+      "name": "Dabigatrana",
+      "className": "Anticoagulante (NOAC)",
+      "presentation": "110mg, 150mg cápsula"
     },
     {
       "name": "Dapagliflozina",
@@ -203,14 +500,362 @@
       "presentation": "10mg comprimido"
     },
     {
+      "name": "Denosumabe",
+      "className": "Anticorpo monoclonal (osteoporose)",
+      "presentation": "60mg injetável subcutâneo"
+    },
+    {
+      "name": "Desloratadina",
+      "className": "Anti-histamínico (2ª geração)",
+      "presentation": "5mg comprimido; xarope"
+    },
+    {
+      "name": "Dexametasona",
+      "className": "Corticoide sistêmico",
+      "presentation": "4mg comprimido; injetável"
+    },
+    {
+      "name": "Dexclorfeniramina",
+      "className": "Anti-histamínico (1ª geração)",
+      "presentation": "2mg comprimido; xarope"
+    },
+    {
+      "name": "Dextrometorfano",
+      "className": "Antitussígeno",
+      "presentation": "xarope"
+    },
+    {
+      "name": "Diazepam",
+      "className": "Benzodiazepínico",
+      "presentation": "5mg, 10mg comprimido; injetável"
+    },
+    {
+      "name": "Diclofenaco sódico",
+      "className": "AINE",
+      "presentation": "50mg comprimido; injetável; gel"
+    },
+    {
+      "name": "Digoxina",
+      "className": "Cardiotônico glicosídeo",
+      "presentation": "0,25mg comprimido"
+    },
+    {
+      "name": "Diltiazem",
+      "className": "Anti-hipertensivo (BCC)",
+      "presentation": "60mg, 120mg comprimido"
+    },
+    {
+      "name": "Diosmina + hesperidina",
+      "className": "Flebotônico",
+      "presentation": "450/50mg comprimido"
+    },
+    {
+      "name": "DIPIRONA",
+      "className": "Predefinição auxiliar",
+      "presentation": "01G",
+      "posologyExamples": [
+        {
+          "label": "DIPIRONA 01G · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 06/06H, SE DOR OU FEBRE"
+        },
+        {
+          "label": "DIPIRONA 500MG · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 06/06H, SE DOR OU FEBRE"
+        }
+      ]
+    },
+    {
+      "name": "Dipirona (gotas pediátricas)",
+      "className": "Analgésico/Antipirético",
+      "presentation": "gotas 500mg/mL"
+    },
+    {
+      "name": "Dipirona sódica",
+      "className": "Analgésico/Antipirético",
+      "presentation": "500mg comprimido; solução oral/injetável"
+    },
+    {
+      "name": "Dobutamina",
+      "className": "Inotrópico",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Dolutegravir",
+      "className": "Antirretroviral",
+      "presentation": "50mg comprimido"
+    },
+    {
+      "name": "Domperidona",
+      "className": "Procinético",
+      "presentation": "10mg comprimido",
+      "posologyExamples": [
+        {
+          "label": "DOMPERIDONA 10MG · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, 30 MINUTOS ANTES DO ALMOÇO E DO JANTAR"
+        }
+      ]
+    },
+    {
+      "name": "Domperidona (suspensão pediátrica)",
+      "className": "Procinético",
+      "presentation": "suspensão"
+    },
+    {
+      "name": "Donepezila",
+      "className": "Anticolinesterásico (Alzheimer)",
+      "presentation": "5mg, 10mg comprimido"
+    },
+    {
+      "name": "Dopamina",
+      "className": "Vasopressor/inotrópico",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Doxazosina",
+      "className": "Alfabloqueador",
+      "presentation": "1mg, 2mg, 4mg comprimido"
+    },
+    {
+      "name": "Doxiciclina",
+      "className": "Antibiótico (tetraciclina)",
+      "presentation": "100mg comprimido/cápsula"
+    },
+    {
+      "name": "Doxorrubicina",
+      "className": "Quimioterápico (antraciclina)",
+      "presentation": "injetável"
+    },
+    {
+      "name": "DRAMIN",
+      "className": "Predefinição auxiliar",
+      "presentation": "25mg",
+      "posologyExamples": [
+        {
+          "label": "DRAMIN 25mg · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 06/06H, SE NAUSEA OU VOMITO."
+        }
+      ]
+    },
+    {
+      "name": "Duloxetina",
+      "className": "Antidepressivo (IRSN)",
+      "presentation": "30mg, 60mg cápsula"
+    },
+    {
+      "name": "Efavirenz",
+      "className": "Antirretroviral",
+      "presentation": "600mg comprimido"
+    },
+    {
       "name": "Empagliflozina",
       "className": "Antidiabético (iSGLT2)",
       "presentation": "10mg, 25mg comprimido"
     },
     {
-      "name": "Metformina",
-      "className": "Antidiabético (biguanida)",
-      "presentation": "500mg, 850mg, 1000mg comprimido"
+      "name": "Enalapril + hidroclorotiazida",
+      "className": "Anti-hipertensivo combinado",
+      "presentation": "10/25mg comprimido"
+    },
+    {
+      "name": "Enalapril maleato",
+      "className": "Anti-hipertensivo (IECA)",
+      "presentation": "10mg, 20mg comprimido"
+    },
+    {
+      "name": "Enoxaparina sódica",
+      "className": "Anticoagulante (heparina baixo peso)",
+      "presentation": "20mg, 40mg, 60mg, 80mg injetável"
+    },
+    {
+      "name": "Eritromicina",
+      "className": "Antibiótico (macrolídeo)",
+      "presentation": "500mg comprimido"
+    },
+    {
+      "name": "Eritropoietina",
+      "className": "Estimulante eritropoiese",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Escitalopram",
+      "className": "Antidepressivo (ISRS)",
+      "presentation": "10mg, 20mg comprimido"
+    },
+    {
+      "name": "Esomeprazol",
+      "className": "Inibidor de bomba de prótons",
+      "presentation": "20mg, 40mg comprimido"
+    },
+    {
+      "name": "Espironolactona",
+      "className": "Diurético poupador de potássio",
+      "presentation": "25mg, 100mg comprimido"
+    },
+    {
+      "name": "Espironolactona + hidroclorotiazida",
+      "className": "Diurético combinado",
+      "presentation": "25/25mg comprimido"
+    },
+    {
+      "name": "Estradiol",
+      "className": "Terapia de reposição hormonal",
+      "presentation": "comprimido; gel; adesivo"
+    },
+    {
+      "name": "Estreptoquinase",
+      "className": "Trombolítico",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Etambutol",
+      "className": "Antibiótico (esquema TB)",
+      "presentation": "comprimido; associado RHZE"
+    },
+    {
+      "name": "Etanercepte",
+      "className": "Biológico (anti-TNF)",
+      "presentation": "50mg injetável subcutâneo"
+    },
+    {
+      "name": "Etinilestradiol + drospirenona",
+      "className": "Anticoncepcional combinado",
+      "presentation": "comprimido"
+    },
+    {
+      "name": "Etinilestradiol + levonorgestrel",
+      "className": "Anticoncepcional combinado",
+      "presentation": "comprimido"
+    },
+    {
+      "name": "Ezetimiba",
+      "className": "Hipolipemiante",
+      "presentation": "10mg comprimido"
+    },
+    {
+      "name": "Famotidina",
+      "className": "Bloqueador H2",
+      "presentation": "20mg, 40mg comprimido"
+    },
+    {
+      "name": "Fenitoína",
+      "className": "Anticonvulsivante",
+      "presentation": "100mg comprimido; injetável"
+    },
+    {
+      "name": "Fenobarbital",
+      "className": "Anticonvulsivante (barbitúrico)",
+      "presentation": "100mg comprimido; gotas"
+    },
+    {
+      "name": "Fenofibrato",
+      "className": "Fibrato",
+      "presentation": "160mg, 200mg comprimido"
+    },
+    {
+      "name": "Fenoterol",
+      "className": "Broncodilatador (beta-2 agonista curto)",
+      "presentation": "spray, solução para nebulização"
+    },
+    {
+      "name": "Fenoterol + ipratrópio",
+      "className": "Broncodilatador combinado",
+      "presentation": "solução para nebulização"
+    },
+    {
+      "name": "Fentanila",
+      "className": "Opioide forte",
+      "presentation": "adesivo transdérmico; injetável"
+    },
+    {
+      "name": "Fexofenadina",
+      "className": "Anti-histamínico (2ª geração)",
+      "presentation": "120mg, 180mg comprimido"
+    },
+    {
+      "name": "Filgrastim (G-CSF)",
+      "className": "Fator de crescimento (neutropenia)",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Finasterida",
+      "className": "Antiandrogênico (HPB/alopecia)",
+      "presentation": "1mg, 5mg comprimido"
+    },
+    {
+      "name": "FLORAX",
+      "className": "Predefinição auxiliar",
+      "presentation": "",
+      "posologyExamples": [
+        {
+          "label": "FLORAX · 01 CAIXA",
+          "instructions": "TOMAR UM FLACONETE, VIA ORAL, DE 12/12H, POR 03 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Fluconazol",
+      "className": "Antifúngico",
+      "presentation": "150mg cápsula; injetável"
+    },
+    {
+      "name": "Flumazenil",
+      "className": "Antagonista benzodiazepínico",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Fluoxetina",
+      "className": "Antidepressivo (ISRS)",
+      "presentation": "20mg cápsula"
+    },
+    {
+      "name": "Fluticasona",
+      "className": "Corticoide inalatório/nasal",
+      "presentation": "spray nasal; inalatório"
+    },
+    {
+      "name": "Fondaparinux",
+      "className": "Anticoagulante",
+      "presentation": "2,5mg injetável"
+    },
+    {
+      "name": "Formoterol",
+      "className": "Broncodilatador (beta-2 agonista longo)",
+      "presentation": "inalatório"
+    },
+    {
+      "name": "Formoterol + budesonida",
+      "className": "Broncodilatador + corticoide (combo)",
+      "presentation": "inalatório"
+    },
+    {
+      "name": "Fosfomicina trometamol",
+      "className": "Antibiótico urinário",
+      "presentation": "3g sachê"
+    },
+    {
+      "name": "Furosemida",
+      "className": "Diurético de alça",
+      "presentation": "40mg comprimido; 20mg/2mL injetável"
+    },
+    {
+      "name": "Furosemida (oral)",
+      "className": "Diurético de alça",
+      "presentation": "40mg comprimido"
+    },
+    {
+      "name": "Gabapentina",
+      "className": "Anticonvulsivante/dor neuropática",
+      "presentation": "300mg, 400mg cápsula"
+    },
+    {
+      "name": "Gentamicina",
+      "className": "Antibiótico (aminoglicosídeo)",
+      "presentation": "injetável; colírio"
+    },
+    {
+      "name": "Glatirâmer (acetato)",
+      "className": "Imunomodulador (esclerose múltipla)",
+      "presentation": "injetável"
     },
     {
       "name": "Glibenclamida",
@@ -228,33 +873,83 @@
       "presentation": "1mg, 2mg, 4mg comprimido"
     },
     {
-      "name": "Sitagliptina",
-      "className": "Antidiabético (iDPP-4)",
-      "presentation": "50mg, 100mg comprimido"
+      "name": "Gluconato de cálcio",
+      "className": "Reposição eletrolítica/antídoto",
+      "presentation": "injetável"
     },
     {
-      "name": "Vildagliptina",
-      "className": "Antidiabético (iDPP-4)",
-      "presentation": "50mg comprimido"
+      "name": "Haloperidol",
+      "className": "Antipsicótico (típico)",
+      "presentation": "5mg comprimido; injetável; gotas"
     },
     {
-      "name": "Liraglutida",
-      "className": "Antidiabético (análogo GLP-1)",
-      "presentation": "6mg/mL injetável caneta"
+      "name": "Heparina (creme/gel)",
+      "className": "Anticoagulante tópico",
+      "presentation": "gel tópico"
     },
     {
-      "name": "Semaglutida",
-      "className": "Antidiabético (análogo GLP-1)",
-      "presentation": "0,25/0,5/1mg injetável caneta"
+      "name": "Heparina sódica",
+      "className": "Anticoagulante",
+      "presentation": "5000UI/mL injetável"
     },
     {
-      "name": "Insulina NPH",
-      "className": "Insulina basal",
-      "presentation": "100UI/mL injetável"
+      "name": "Hidralazina",
+      "className": "Vasodilatador",
+      "presentation": "25mg, 50mg comprimido"
     },
     {
-      "name": "Insulina regular",
-      "className": "Insulina rápida",
+      "name": "Hidroclorotiazida",
+      "className": "Diurético tiazídico",
+      "presentation": "25mg, 50mg comprimido"
+    },
+    {
+      "name": "Hidrocortisona",
+      "className": "Corticoide sistêmico",
+      "presentation": "100mg, 500mg injetável"
+    },
+    {
+      "name": "Hidrocortisona (tópica)",
+      "className": "Corticoide tópico (baixa potência)",
+      "presentation": "1% creme"
+    },
+    {
+      "name": "Hidroxicloroquina",
+      "className": "DMARD/antimalárico",
+      "presentation": "400mg comprimido"
+    },
+    {
+      "name": "Hidróxido de alumínio + magnésio",
+      "className": "Antiácido",
+      "presentation": "suspensão oral"
+    },
+    {
+      "name": "Hidroxizina",
+      "className": "Anti-histamínico (1ª geração)",
+      "presentation": "25mg comprimido; xarope"
+    },
+    {
+      "name": "Ibuprofeno",
+      "className": "AINE",
+      "presentation": "200mg, 400mg, 600mg comprimido"
+    },
+    {
+      "name": "Imatinibe",
+      "className": "Quimioterápico (inibidor de tirosina quinase)",
+      "presentation": "100mg, 400mg comprimido"
+    },
+    {
+      "name": "Imunoglobulina antitetânica",
+      "className": "Soro/imunoglobulina",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Infliximabe",
+      "className": "Biológico (anti-TNF)",
+      "presentation": "100mg injetável EV"
+    },
+    {
+      "name": "Insulina asparte",
+      "className": "Insulina ultrarrápida",
       "presentation": "100UI/mL injetável"
     },
     {
@@ -268,529 +963,19 @@
       "presentation": "100UI/mL injetável"
     },
     {
-      "name": "Insulina asparte",
-      "className": "Insulina ultrarrápida",
+      "name": "Insulina NPH",
+      "className": "Insulina basal",
       "presentation": "100UI/mL injetável"
     },
     {
-      "name": "Levotiroxina sódica",
-      "className": "Hormônio tireoidiano",
-      "presentation": "25mcg, 50mcg, 75mcg, 100mcg comprimido"
+      "name": "Insulina regular",
+      "className": "Insulina rápida",
+      "presentation": "100UI/mL injetável"
     },
     {
-      "name": "Metimazol",
-      "className": "Antitireoidiano",
-      "presentation": "5mg, 10mg comprimido"
-    },
-    {
-      "name": "Propiltiouracil",
-      "className": "Antitireoidiano",
-      "presentation": "100mg comprimido"
-    },
-    {
-      "name": "Prednisona",
-      "className": "Corticoide sistêmico",
-      "presentation": "5mg, 20mg comprimido"
-    },
-    {
-      "name": "Prednisolona",
-      "className": "Corticoide sistêmico",
-      "presentation": "20mg comprimido; solução oral"
-    },
-    {
-      "name": "Dexametasona",
-      "className": "Corticoide sistêmico",
-      "presentation": "4mg comprimido; injetável"
-    },
-    {
-      "name": "Hidrocortisona",
-      "className": "Corticoide sistêmico",
-      "presentation": "100mg, 500mg injetável"
-    },
-    {
-      "name": "Metilprednisolona",
-      "className": "Corticoide sistêmico",
-      "presentation": "40mg, 125mg, 500mg injetável"
-    },
-    {
-      "name": "Betametasona",
-      "className": "Corticoide tópico/sistêmico",
-      "presentation": "creme; injetável depot"
-    },
-    {
-      "name": "Paracetamol",
-      "className": "Analgésico/Antipirético",
-      "presentation": "500mg, 750mg comprimido; solução oral"
-    },
-    {
-      "name": "Dipirona sódica",
-      "className": "Analgésico/Antipirético",
-      "presentation": "500mg comprimido; solução oral/injetável"
-    },
-    {
-      "name": "Ibuprofeno",
-      "className": "AINE",
-      "presentation": "200mg, 400mg, 600mg comprimido"
-    },
-    {
-      "name": "Naproxeno",
-      "className": "AINE",
-      "presentation": "250mg, 500mg comprimido"
-    },
-    {
-      "name": "Diclofenaco sódico",
-      "className": "AINE",
-      "presentation": "50mg comprimido; injetável; gel"
-    },
-    {
-      "name": "Nimesulida",
-      "className": "AINE (seletivo COX-2)",
-      "presentation": "100mg comprimido"
-    },
-    {
-      "name": "Celecoxibe",
-      "className": "AINE (inibidor COX-2)",
-      "presentation": "100mg, 200mg cápsula"
-    },
-    {
-      "name": "Meloxicam",
-      "className": "AINE",
-      "presentation": "7,5mg, 15mg comprimido"
-    },
-    {
-      "name": "Cetoprofeno",
-      "className": "AINE",
-      "presentation": "100mg cápsula; injetável"
-    },
-    {
-      "name": "Codeína (associada)",
-      "className": "Opioide fraco",
-      "presentation": "30mg comprimido"
-    },
-    {
-      "name": "Tramadol",
-      "className": "Opioide fraco",
-      "presentation": "50mg cápsula; injetável; gotas"
-    },
-    {
-      "name": "Morfina sulfato",
-      "className": "Opioide forte",
-      "presentation": "10mg, 30mg comprimido; injetável"
-    },
-    {
-      "name": "Oxicodona",
-      "className": "Opioide forte",
-      "presentation": "10mg, 20mg comprimido"
-    },
-    {
-      "name": "Fentanila",
-      "className": "Opioide forte",
-      "presentation": "adesivo transdérmico; injetável"
-    },
-    {
-      "name": "Metadona",
-      "className": "Opioide/tratamento dependência",
-      "presentation": "5mg, 10mg comprimido"
-    },
-    {
-      "name": "Amoxicilina",
-      "className": "Antibiótico (penicilina)",
-      "presentation": "500mg, 875mg comprimido; suspensão"
-    },
-    {
-      "name": "Amoxicilina + clavulanato",
-      "className": "Antibiótico (penicilina + inibidor)",
-      "presentation": "500/125mg, 875/125mg comprimido"
-    },
-    {
-      "name": "Ampicilina",
-      "className": "Antibiótico (penicilina)",
-      "presentation": "500mg cápsula; injetável"
-    },
-    {
-      "name": "Penicilina benzatina",
-      "className": "Antibiótico (penicilina)",
-      "presentation": "1.200.000UI injetável"
-    },
-    {
-      "name": "Penicilina cristalina",
-      "className": "Antibiótico (penicilina)",
-      "presentation": "5.000.000UI injetável"
-    },
-    {
-      "name": "Cefalexina",
-      "className": "Antibiótico (cefalosporina 1ª ger.)",
-      "presentation": "500mg cápsula; suspensão"
-    },
-    {
-      "name": "Cefuroxima",
-      "className": "Antibiótico (cefalosporina 2ª ger.)",
-      "presentation": "250mg, 500mg comprimido"
-    },
-    {
-      "name": "Ceftriaxona",
-      "className": "Antibiótico (cefalosporina 3ª ger.)",
-      "presentation": "500mg, 1g injetável"
-    },
-    {
-      "name": "Cefepima",
-      "className": "Antibiótico (cefalosporina 4ª ger.)",
-      "presentation": "1g, 2g injetável"
-    },
-    {
-      "name": "Azitromicina",
-      "className": "Antibiótico (macrolídeo)",
-      "presentation": "500mg comprimido; suspensão"
-    },
-    {
-      "name": "Claritromicina",
-      "className": "Antibiótico (macrolídeo)",
-      "presentation": "500mg comprimido"
-    },
-    {
-      "name": "Eritromicina",
-      "className": "Antibiótico (macrolídeo)",
-      "presentation": "500mg comprimido"
-    },
-    {
-      "name": "Clindamicina",
-      "className": "Antibiótico (lincosamida)",
-      "presentation": "300mg cápsula; injetável"
-    },
-    {
-      "name": "Ciprofloxacino",
-      "className": "Antibiótico (quinolona)",
-      "presentation": "500mg comprimido; injetável"
-    },
-    {
-      "name": "Levofloxacino",
-      "className": "Antibiótico (quinolona)",
-      "presentation": "500mg, 750mg comprimido"
-    },
-    {
-      "name": "Norfloxacino",
-      "className": "Antibiótico (quinolona)",
-      "presentation": "400mg comprimido"
-    },
-    {
-      "name": "Metronidazol",
-      "className": "Antibiótico/antiparasitário",
-      "presentation": "250mg, 400mg comprimido; gel; injetável"
-    },
-    {
-      "name": "Sulfametoxazol + trimetoprima",
-      "className": "Antibiótico (sulfa)",
-      "presentation": "400/80mg, 800/160mg comprimido"
-    },
-    {
-      "name": "Doxiciclina",
-      "className": "Antibiótico (tetraciclina)",
-      "presentation": "100mg comprimido/cápsula"
-    },
-    {
-      "name": "Vancomicina",
-      "className": "Antibiótico (glicopeptídeo)",
-      "presentation": "500mg, 1g injetável"
-    },
-    {
-      "name": "Meropenem",
-      "className": "Antibiótico (carbapenêmico)",
-      "presentation": "500mg, 1g injetável"
-    },
-    {
-      "name": "Gentamicina",
-      "className": "Antibiótico (aminoglicosídeo)",
-      "presentation": "injetável; colírio"
-    },
-    {
-      "name": "Amicacina",
-      "className": "Antibiótico (aminoglicosídeo)",
+      "name": "Interferon beta",
+      "className": "Imunomodulador (esclerose múltipla)",
       "presentation": "injetável"
-    },
-    {
-      "name": "Nitrofurantoína",
-      "className": "Antibiótico urinário",
-      "presentation": "100mg cápsula"
-    },
-    {
-      "name": "Fosfomicina trometamol",
-      "className": "Antibiótico urinário",
-      "presentation": "3g sachê"
-    },
-    {
-      "name": "Fluconazol",
-      "className": "Antifúngico",
-      "presentation": "150mg cápsula; injetável"
-    },
-    {
-      "name": "Itraconazol",
-      "className": "Antifúngico",
-      "presentation": "100mg cápsula"
-    },
-    {
-      "name": "Cetoconazol",
-      "className": "Antifúngico",
-      "presentation": "200mg comprimido; creme; xampu"
-    },
-    {
-      "name": "Nistatina",
-      "className": "Antifúngico tópico/oral",
-      "presentation": "suspensão oral; creme vaginal"
-    },
-    {
-      "name": "Terbinafina",
-      "className": "Antifúngico",
-      "presentation": "250mg comprimido; creme"
-    },
-    {
-      "name": "Aciclovir",
-      "className": "Antiviral",
-      "presentation": "200mg, 400mg comprimido; pomada; injetável"
-    },
-    {
-      "name": "Valaciclovir",
-      "className": "Antiviral",
-      "presentation": "500mg comprimido"
-    },
-    {
-      "name": "Oseltamivir",
-      "className": "Antiviral (influenza)",
-      "presentation": "75mg cápsula"
-    },
-    {
-      "name": "Tenofovir + lamivudina",
-      "className": "Antirretroviral",
-      "presentation": "300/300mg comprimido"
-    },
-    {
-      "name": "Efavirenz",
-      "className": "Antirretroviral",
-      "presentation": "600mg comprimido"
-    },
-    {
-      "name": "Dolutegravir",
-      "className": "Antirretroviral",
-      "presentation": "50mg comprimido"
-    },
-    {
-      "name": "Ivermectina",
-      "className": "Antiparasitário",
-      "presentation": "6mg comprimido"
-    },
-    {
-      "name": "Albendazol",
-      "className": "Antiparasitário",
-      "presentation": "400mg comprimido; suspensão"
-    },
-    {
-      "name": "Mebendazol",
-      "className": "Antiparasitário",
-      "presentation": "100mg comprimido; suspensão"
-    },
-    {
-      "name": "Praziquantel",
-      "className": "Antiparasitário (esquistossomose)",
-      "presentation": "600mg comprimido"
-    },
-    {
-      "name": "Cloroquina",
-      "className": "Antimalárico/imunomodulador",
-      "presentation": "150mg comprimido"
-    },
-    {
-      "name": "Artemeter + lumefantrina",
-      "className": "Antimalárico",
-      "presentation": "20/120mg comprimido"
-    },
-    {
-      "name": "Permetrina",
-      "className": "Antiparasitário tópico (escabicida)",
-      "presentation": "loção 5%"
-    },
-    {
-      "name": "Omeprazol",
-      "className": "Inibidor de bomba de prótons",
-      "presentation": "20mg, 40mg cápsula"
-    },
-    {
-      "name": "Pantoprazol",
-      "className": "Inibidor de bomba de prótons",
-      "presentation": "20mg, 40mg comprimido"
-    },
-    {
-      "name": "Esomeprazol",
-      "className": "Inibidor de bomba de prótons",
-      "presentation": "20mg, 40mg comprimido"
-    },
-    {
-      "name": "Lansoprazol",
-      "className": "Inibidor de bomba de prótons",
-      "presentation": "15mg, 30mg cápsula"
-    },
-    {
-      "name": "Ranitidina",
-      "className": "Bloqueador H2",
-      "presentation": "150mg comprimido (uso restrito)"
-    },
-    {
-      "name": "Famotidina",
-      "className": "Bloqueador H2",
-      "presentation": "20mg, 40mg comprimido"
-    },
-    {
-      "name": "Domperidona",
-      "className": "Procinético",
-      "presentation": "10mg comprimido"
-    },
-    {
-      "name": "Metoclopramida",
-      "className": "Procinético/antiemético",
-      "presentation": "10mg comprimido; injetável"
-    },
-    {
-      "name": "Bromoprida",
-      "className": "Procinético/antiemético",
-      "presentation": "10mg comprimido; gotas"
-    },
-    {
-      "name": "Ondansetrona",
-      "className": "Antiemético (antagonista 5-HT3)",
-      "presentation": "4mg, 8mg comprimido; injetável"
-    },
-    {
-      "name": "Simeticona",
-      "className": "Antiflatulento",
-      "presentation": "40mg, 125mg comprimido/gotas"
-    },
-    {
-      "name": "Hidróxido de alumínio + magnésio",
-      "className": "Antiácido",
-      "presentation": "suspensão oral"
-    },
-    {
-      "name": "Sucralfato",
-      "className": "Protetor de mucosa",
-      "presentation": "1g comprimido; suspensão"
-    },
-    {
-      "name": "Loperamida",
-      "className": "Antidiarreico",
-      "presentation": "2mg cápsula"
-    },
-    {
-      "name": "Racecadotrila",
-      "className": "Antidiarreico",
-      "presentation": "100mg cápsula; sachê pediátrico"
-    },
-    {
-      "name": "Sais de reidratação oral",
-      "className": "Reidratante",
-      "presentation": "envelope para diluição"
-    },
-    {
-      "name": "Lactulose",
-      "className": "Laxante osmótico",
-      "presentation": "solução oral"
-    },
-    {
-      "name": "Óleo mineral",
-      "className": "Laxante lubrificante",
-      "presentation": "solução oral"
-    },
-    {
-      "name": "Bisacodil",
-      "className": "Laxante estimulante",
-      "presentation": "5mg comprimido; supositório"
-    },
-    {
-      "name": "Polietilenoglicol",
-      "className": "Laxante osmótico",
-      "presentation": "pó para solução"
-    },
-    {
-      "name": "Mesalazina",
-      "className": "Anti-inflamatório intestinal",
-      "presentation": "400mg, 800mg comprimido; supositório"
-    },
-    {
-      "name": "Sulfassalazina",
-      "className": "Anti-inflamatório intestinal/DMARD",
-      "presentation": "500mg comprimido"
-    },
-    {
-      "name": "Azatioprina",
-      "className": "Imunossupressor",
-      "presentation": "50mg comprimido"
-    },
-    {
-      "name": "Loratadina",
-      "className": "Anti-histamínico (2ª geração)",
-      "presentation": "10mg comprimido; xarope"
-    },
-    {
-      "name": "Desloratadina",
-      "className": "Anti-histamínico (2ª geração)",
-      "presentation": "5mg comprimido; xarope"
-    },
-    {
-      "name": "Fexofenadina",
-      "className": "Anti-histamínico (2ª geração)",
-      "presentation": "120mg, 180mg comprimido"
-    },
-    {
-      "name": "Cetirizina",
-      "className": "Anti-histamínico (2ª geração)",
-      "presentation": "10mg comprimido; gotas"
-    },
-    {
-      "name": "Hidroxizina",
-      "className": "Anti-histamínico (1ª geração)",
-      "presentation": "25mg comprimido; xarope"
-    },
-    {
-      "name": "Dexclorfeniramina",
-      "className": "Anti-histamínico (1ª geração)",
-      "presentation": "2mg comprimido; xarope"
-    },
-    {
-      "name": "Prometazina",
-      "className": "Anti-histamínico/sedativo",
-      "presentation": "25mg comprimido; injetável"
-    },
-    {
-      "name": "Budesonida",
-      "className": "Corticoide inalatório/nasal",
-      "presentation": "spray nasal; inalatório"
-    },
-    {
-      "name": "Beclometasona",
-      "className": "Corticoide inalatório/nasal",
-      "presentation": "spray nasal; inalatório"
-    },
-    {
-      "name": "Fluticasona",
-      "className": "Corticoide inalatório/nasal",
-      "presentation": "spray nasal; inalatório"
-    },
-    {
-      "name": "Salbutamol (albuterol)",
-      "className": "Broncodilatador (beta-2 agonista curto)",
-      "presentation": "spray, solução para nebulização"
-    },
-    {
-      "name": "Fenoterol",
-      "className": "Broncodilatador (beta-2 agonista curto)",
-      "presentation": "spray, solução para nebulização"
-    },
-    {
-      "name": "Formoterol",
-      "className": "Broncodilatador (beta-2 agonista longo)",
-      "presentation": "inalatório"
-    },
-    {
-      "name": "Salmeterol",
-      "className": "Broncodilatador (beta-2 agonista longo)",
-      "presentation": "inalatório"
     },
     {
       "name": "Ipratrópio (brometo)",
@@ -798,139 +983,50 @@
       "presentation": "spray, solução para nebulização"
     },
     {
-      "name": "Tiotrópio (brometo)",
-      "className": "Broncodilatador anticolinérgico longo",
-      "presentation": "inalatório"
-    },
-    {
-      "name": "Formoterol + budesonida",
-      "className": "Broncodilatador + corticoide (combo)",
-      "presentation": "inalatório"
-    },
-    {
-      "name": "Salmeterol + fluticasona",
-      "className": "Broncodilatador + corticoide (combo)",
-      "presentation": "inalatório"
-    },
-    {
-      "name": "Montelucaste",
-      "className": "Antagonista de leucotrienos",
-      "presentation": "4mg, 5mg, 10mg comprimido"
-    },
-    {
-      "name": "Teofilina",
-      "className": "Broncodilatador (metilxantina)",
-      "presentation": "100mg, 200mg comprimido"
-    },
-    {
-      "name": "N-acetilcisteína",
-      "className": "Mucolítico",
-      "presentation": "600mg comprimido efervescente; xarope"
-    },
-    {
-      "name": "Ambroxol",
-      "className": "Mucolítico",
-      "presentation": "xarope; comprimido"
-    },
-    {
-      "name": "Dextrometorfano",
-      "className": "Antitussígeno",
-      "presentation": "xarope"
-    },
-    {
-      "name": "Rifampicina",
-      "className": "Antibiótico (esquema TB)",
-      "presentation": "comprimido; associado RHZE"
-    },
-    {
       "name": "Isoniazida",
       "className": "Antibiótico (esquema TB)",
       "presentation": "comprimido; associado RHZE"
     },
     {
-      "name": "Pirazinamida",
-      "className": "Antibiótico (esquema TB)",
-      "presentation": "comprimido; associado RHZE"
+      "name": "Isossorbida (mono/dinitrato)",
+      "className": "Nitrato",
+      "presentation": "20mg, 40mg comprimido"
     },
     {
-      "name": "Etambutol",
-      "className": "Antibiótico (esquema TB)",
-      "presentation": "comprimido; associado RHZE"
+      "name": "Isotretinoína (oral)",
+      "className": "Retinoide sistêmico (acne grave)",
+      "presentation": "20mg, 40mg cápsula"
     },
     {
-      "name": "Sertralina",
-      "className": "Antidepressivo (ISRS)",
-      "presentation": "50mg, 100mg comprimido"
+      "name": "Itraconazol",
+      "className": "Antifúngico",
+      "presentation": "100mg cápsula"
     },
     {
-      "name": "Fluoxetina",
-      "className": "Antidepressivo (ISRS)",
-      "presentation": "20mg cápsula"
+      "name": "Ivermectina",
+      "className": "Antiparasitário",
+      "presentation": "6mg comprimido"
     },
     {
-      "name": "Escitalopram",
-      "className": "Antidepressivo (ISRS)",
-      "presentation": "10mg, 20mg comprimido"
+      "name": "KOID D",
+      "className": "Predefinição auxiliar",
+      "presentation": "",
+      "posologyExamples": [
+        {
+          "label": "KOID D · 01 FRASCO",
+          "instructions": "TOMAR 10ML, VIA ORAL, DE 08/08H, POR 05 DIAS"
+        }
+      ]
     },
     {
-      "name": "Paroxetina",
-      "className": "Antidepressivo (ISRS)",
-      "presentation": "20mg comprimido"
+      "name": "Lactulose",
+      "className": "Laxante osmótico",
+      "presentation": "solução oral"
     },
     {
-      "name": "Citalopram",
-      "className": "Antidepressivo (ISRS)",
-      "presentation": "20mg comprimido"
-    },
-    {
-      "name": "Venlafaxina",
-      "className": "Antidepressivo (IRSN)",
-      "presentation": "75mg, 150mg cápsula"
-    },
-    {
-      "name": "Duloxetina",
-      "className": "Antidepressivo (IRSN)",
-      "presentation": "30mg, 60mg cápsula"
-    },
-    {
-      "name": "Amitriptilina",
-      "className": "Antidepressivo tricíclico",
-      "presentation": "25mg comprimido"
-    },
-    {
-      "name": "Nortriptilina",
-      "className": "Antidepressivo tricíclico",
-      "presentation": "25mg, 50mg cápsula"
-    },
-    {
-      "name": "Bupropiona",
-      "className": "Antidepressivo (IRDN)",
-      "presentation": "150mg comprimido"
-    },
-    {
-      "name": "Mirtazapina",
-      "className": "Antidepressivo (NaSSA)",
-      "presentation": "15mg, 30mg comprimido"
-    },
-    {
-      "name": "Trazodona",
-      "className": "Antidepressivo (sedativo)",
-      "presentation": "50mg, 100mg comprimido"
-    },
-    {
-      "name": "Lítio (carbonato)",
-      "className": "Estabilizador de humor",
-      "presentation": "300mg comprimido"
-    },
-    {
-      "name": "Ácido valproico/valproato",
-      "className": "Estabilizador de humor/anticonvulsivante",
-      "presentation": "250mg, 500mg comprimido"
-    },
-    {
-      "name": "Carbamazepina",
-      "className": "Estabilizador de humor/anticonvulsivante",
-      "presentation": "200mg comprimido"
+      "name": "Lágrima artificial (carmelose)",
+      "className": "Lubrificante ocular",
+      "presentation": "colírio"
     },
     {
       "name": "Lamotrigina",
@@ -938,109 +1034,29 @@
       "presentation": "25mg, 50mg, 100mg comprimido"
     },
     {
-      "name": "Haloperidol",
-      "className": "Antipsicótico (típico)",
-      "presentation": "5mg comprimido; injetável; gotas"
+      "name": "Lansoprazol",
+      "className": "Inibidor de bomba de prótons",
+      "presentation": "15mg, 30mg cápsula"
     },
     {
-      "name": "Clorpromazina",
-      "className": "Antipsicótico (típico)",
-      "presentation": "25mg, 100mg comprimido"
+      "name": "Latanoprosta",
+      "className": "Análogo de prostaglandina (glaucoma)",
+      "presentation": "colírio"
     },
     {
-      "name": "Risperidona",
-      "className": "Antipsicótico (atípico)",
-      "presentation": "1mg, 2mg, 3mg comprimido"
+      "name": "Leflunomida",
+      "className": "DMARD",
+      "presentation": "20mg comprimido"
     },
     {
-      "name": "Olanzapina",
-      "className": "Antipsicótico (atípico)",
-      "presentation": "5mg, 10mg comprimido"
-    },
-    {
-      "name": "Quetiapina",
-      "className": "Antipsicótico (atípico)",
-      "presentation": "25mg, 100mg, 200mg comprimido"
-    },
-    {
-      "name": "Aripiprazol",
-      "className": "Antipsicótico (atípico)",
-      "presentation": "10mg, 15mg comprimido"
-    },
-    {
-      "name": "Clozapina",
-      "className": "Antipsicótico (atípico, refratário)",
-      "presentation": "25mg, 100mg comprimido"
-    },
-    {
-      "name": "Diazepam",
-      "className": "Benzodiazepínico",
-      "presentation": "5mg, 10mg comprimido; injetável"
-    },
-    {
-      "name": "Clonazepam",
-      "className": "Benzodiazepínico",
-      "presentation": "0,5mg, 2mg comprimido; gotas"
-    },
-    {
-      "name": "Alprazolam",
-      "className": "Benzodiazepínico",
-      "presentation": "0,25mg, 0,5mg, 1mg comprimido"
-    },
-    {
-      "name": "Lorazepam",
-      "className": "Benzodiazepínico",
-      "presentation": "1mg, 2mg comprimido"
-    },
-    {
-      "name": "Midazolam",
-      "className": "Benzodiazepínico (sedação)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Zolpidem",
-      "className": "Hipnótico não benzodiazepínico",
-      "presentation": "10mg comprimido"
-    },
-    {
-      "name": "Fenobarbital",
-      "className": "Anticonvulsivante (barbitúrico)",
-      "presentation": "100mg comprimido; gotas"
-    },
-    {
-      "name": "Fenitoína",
-      "className": "Anticonvulsivante",
-      "presentation": "100mg comprimido; injetável"
+      "name": "Leuprorrelina",
+      "className": "Antineoplásico (análogo GnRH)",
+      "presentation": "injetável depot"
     },
     {
       "name": "Levetiracetam",
       "className": "Anticonvulsivante",
       "presentation": "250mg, 500mg, 750mg comprimido"
-    },
-    {
-      "name": "Topiramato",
-      "className": "Anticonvulsivante/profilaxia enxaqueca",
-      "presentation": "25mg, 50mg, 100mg comprimido"
-    },
-    {
-      "name": "Gabapentina",
-      "className": "Anticonvulsivante/dor neuropática",
-      "presentation": "300mg, 400mg cápsula"
-    },
-    {
-      "name": "Pregabalina",
-      "className": "Anticonvulsivante/dor neuropática",
-      "presentation": "75mg, 150mg cápsula"
-    },
-    {
-      "name": "Sumatriptana",
-      "className": "Antimigranoso (triptano)",
-      "presentation": "50mg, 100mg comprimido"
-    },
-    {
-      "name": "Biperideno",
-      "className": "Antiparkinsoniano (anticolinérgico)",
-      "presentation": "2mg comprimido; injetável"
     },
     {
       "name": "Levodopa + benserazida",
@@ -1053,174 +1069,9 @@
       "presentation": "250/25mg comprimido"
     },
     {
-      "name": "Pramipexol",
-      "className": "Antiparkinsoniano (agonista dopaminérgico)",
-      "presentation": "0,125mg, 0,25mg comprimido"
-    },
-    {
-      "name": "Rivastigmina",
-      "className": "Anticolinesterásico (Alzheimer)",
-      "presentation": "adesivo; cápsula"
-    },
-    {
-      "name": "Donepezila",
-      "className": "Anticolinesterásico (Alzheimer)",
-      "presentation": "5mg, 10mg comprimido"
-    },
-    {
-      "name": "Memantina",
-      "className": "Antagonista NMDA (Alzheimer)",
-      "presentation": "10mg comprimido"
-    },
-    {
-      "name": "Baclofeno",
-      "className": "Relaxante muscular",
-      "presentation": "10mg comprimido"
-    },
-    {
-      "name": "Ciclobenzaprina",
-      "className": "Relaxante muscular",
-      "presentation": "5mg, 10mg comprimido"
-    },
-    {
-      "name": "Tizanidina",
-      "className": "Relaxante muscular",
-      "presentation": "2mg, 4mg comprimido"
-    },
-    {
-      "name": "Metilfenidato",
-      "className": "Estimulante (TDAH)",
-      "presentation": "10mg, 18mg, 36mg comprimido"
-    },
-    {
-      "name": "Sulfato ferroso",
-      "className": "Suplemento (ferro)",
-      "presentation": "40mg comprimido; gotas"
-    },
-    {
-      "name": "Ácido fólico",
-      "className": "Suplemento (vitamina B9)",
-      "presentation": "5mg comprimido"
-    },
-    {
-      "name": "Cianocobalamina (vitamina B12)",
-      "className": "Suplemento",
-      "presentation": "injetável; comprimido"
-    },
-    {
-      "name": "Colecalciferol (vitamina D3)",
-      "className": "Suplemento",
-      "presentation": "gotas; cápsula 7.000UI, 50.000UI"
-    },
-    {
-      "name": "Carbonato de cálcio",
-      "className": "Suplemento",
-      "presentation": "500mg, 600mg comprimido"
-    },
-    {
-      "name": "Citrato de cálcio",
-      "className": "Suplemento",
-      "presentation": "comprimido"
-    },
-    {
-      "name": "Complexo B",
-      "className": "Suplemento vitamínico",
-      "presentation": "comprimido; injetável"
-    },
-    {
-      "name": "Ácido ascórbico (vitamina C)",
-      "className": "Suplemento vitamínico",
-      "presentation": "comprimido; xarope"
-    },
-    {
-      "name": "Alendronato de sódio",
-      "className": "Bifosfonato (osteoporose)",
-      "presentation": "70mg comprimido semanal"
-    },
-    {
-      "name": "Risedronato de sódio",
-      "className": "Bifosfonato (osteoporose)",
-      "presentation": "35mg comprimido semanal"
-    },
-    {
-      "name": "Denosumabe",
-      "className": "Anticorpo monoclonal (osteoporose)",
-      "presentation": "60mg injetável subcutâneo"
-    },
-    {
-      "name": "Alopurinol",
-      "className": "Antigotoso (inibidor xantina oxidase)",
-      "presentation": "100mg, 300mg comprimido"
-    },
-    {
-      "name": "Colchicina",
-      "className": "Antigotoso",
-      "presentation": "0,5mg, 1mg comprimido"
-    },
-    {
-      "name": "Metotrexato",
-      "className": "DMARD/imunossupressor",
-      "presentation": "2,5mg comprimido; injetável"
-    },
-    {
-      "name": "Leflunomida",
-      "className": "DMARD",
-      "presentation": "20mg comprimido"
-    },
-    {
-      "name": "Hidroxicloroquina",
-      "className": "DMARD/antimalárico",
-      "presentation": "400mg comprimido"
-    },
-    {
-      "name": "Adalimumabe",
-      "className": "Biológico (anti-TNF)",
-      "presentation": "40mg injetável subcutâneo"
-    },
-    {
-      "name": "Etanercepte",
-      "className": "Biológico (anti-TNF)",
-      "presentation": "50mg injetável subcutâneo"
-    },
-    {
-      "name": "Infliximabe",
-      "className": "Biológico (anti-TNF)",
-      "presentation": "100mg injetável EV"
-    },
-    {
-      "name": "Rituximabe",
-      "className": "Biológico (anti-CD20)",
-      "presentation": "injetável EV"
-    },
-    {
-      "name": "Finasterida",
-      "className": "Antiandrogênico (HPB/alopecia)",
-      "presentation": "1mg, 5mg comprimido"
-    },
-    {
-      "name": "Tansulosina",
-      "className": "Alfabloqueador seletivo (HPB)",
-      "presentation": "0,4mg cápsula"
-    },
-    {
-      "name": "Sildenafila",
-      "className": "Inibidor da fosfodiesterase-5",
-      "presentation": "50mg, 100mg comprimido"
-    },
-    {
-      "name": "Tadalafila",
-      "className": "Inibidor da fosfodiesterase-5",
-      "presentation": "5mg, 20mg comprimido"
-    },
-    {
-      "name": "Etinilestradiol + levonorgestrel",
-      "className": "Anticoncepcional combinado",
-      "presentation": "comprimido"
-    },
-    {
-      "name": "Etinilestradiol + drospirenona",
-      "className": "Anticoncepcional combinado",
-      "presentation": "comprimido"
+      "name": "Levofloxacino",
+      "className": "Antibiótico (quinolona)",
+      "presentation": "500mg, 750mg comprimido"
     },
     {
       "name": "Levonorgestrel",
@@ -1228,29 +1079,160 @@
       "presentation": "0,75mg, 1,5mg comprimido; DIU"
     },
     {
+      "name": "Levotiroxina sódica",
+      "className": "Hormônio tireoidiano",
+      "presentation": "25mcg, 50mcg, 75mcg, 100mcg comprimido"
+    },
+    {
+      "name": "Liraglutida",
+      "className": "Antidiabético (análogo GLP-1)",
+      "presentation": "6mg/mL injetável caneta"
+    },
+    {
+      "name": "Lisinopril",
+      "className": "Anti-hipertensivo (IECA)",
+      "presentation": "10mg, 20mg comprimido"
+    },
+    {
+      "name": "Lítio (carbonato)",
+      "className": "Estabilizador de humor",
+      "presentation": "300mg comprimido"
+    },
+    {
+      "name": "Loperamida",
+      "className": "Antidiarreico",
+      "presentation": "2mg cápsula"
+    },
+    {
+      "name": "Loperamida (pediátrica cautela)",
+      "className": "Antidiarreico",
+      "presentation": "gotas"
+    },
+    {
+      "name": "Loratadina",
+      "className": "Anti-histamínico (2ª geração)",
+      "presentation": "10mg comprimido; xarope",
+      "posologyExamples": [
+        {
+          "label": "LORATADINA 10MG · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, UMA VEZ AO DIA, POR 05 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Lorazepam",
+      "className": "Benzodiazepínico",
+      "presentation": "1mg, 2mg comprimido"
+    },
+    {
+      "name": "Losartana + hidroclorotiazida",
+      "className": "Anti-hipertensivo combinado",
+      "presentation": "50/12,5mg comprimido"
+    },
+    {
+      "name": "Losartana potássica",
+      "className": "Anti-hipertensivo (BRA)",
+      "presentation": "50mg, 100mg comprimido"
+    },
+    {
+      "name": "Mebendazol",
+      "className": "Antiparasitário",
+      "presentation": "100mg comprimido; suspensão"
+    },
+    {
       "name": "Medroxiprogesterona (injetável)",
       "className": "Contraceptivo injetável",
       "presentation": "150mg injetável trimestral"
     },
     {
-      "name": "Estradiol",
-      "className": "Terapia de reposição hormonal",
-      "presentation": "comprimido; gel; adesivo"
+      "name": "Meloxicam",
+      "className": "AINE",
+      "presentation": "7,5mg, 15mg comprimido"
     },
     {
-      "name": "Progesterona micronizada",
-      "className": "Terapia de reposição hormonal/obstetrícia",
-      "presentation": "100mg, 200mg cápsula"
+      "name": "Memantina",
+      "className": "Antagonista NMDA (Alzheimer)",
+      "presentation": "10mg comprimido"
     },
     {
-      "name": "Clomifeno (citrato)",
-      "className": "Indutor de ovulação",
-      "presentation": "50mg comprimido"
+      "name": "Meropenem",
+      "className": "Antibiótico (carbapenêmico)",
+      "presentation": "500mg, 1g injetável"
     },
     {
-      "name": "Ocitocina",
-      "className": "Uterotônico",
+      "name": "Mesalazina",
+      "className": "Anti-inflamatório intestinal",
+      "presentation": "400mg, 800mg comprimido; supositório"
+    },
+    {
+      "name": "Metadona",
+      "className": "Opioide/tratamento dependência",
+      "presentation": "5mg, 10mg comprimido"
+    },
+    {
+      "name": "Metformina",
+      "className": "Antidiabético (biguanida)",
+      "presentation": "500mg, 850mg, 1000mg comprimido"
+    },
+    {
+      "name": "Metildopa",
+      "className": "Anti-hipertensivo central",
+      "presentation": "250mg, 500mg comprimido"
+    },
+    {
+      "name": "Metilfenidato",
+      "className": "Estimulante (TDAH)",
+      "presentation": "10mg, 18mg, 36mg comprimido"
+    },
+    {
+      "name": "Metilprednisolona",
+      "className": "Corticoide sistêmico",
+      "presentation": "40mg, 125mg, 500mg injetável"
+    },
+    {
+      "name": "Metimazol",
+      "className": "Antitireoidiano",
+      "presentation": "5mg, 10mg comprimido"
+    },
+    {
+      "name": "Metoclopramida",
+      "className": "Procinético/antiemético",
+      "presentation": "10mg comprimido; injetável"
+    },
+    {
+      "name": "Metoprolol succinato",
+      "className": "Betabloqueador",
+      "presentation": "25mg, 50mg, 100mg comprimido"
+    },
+    {
+      "name": "Metotrexato",
+      "className": "DMARD/imunossupressor",
+      "presentation": "2,5mg comprimido; injetável"
+    },
+    {
+      "name": "Metronidazol",
+      "className": "Antibiótico/antiparasitário",
+      "presentation": "250mg, 400mg comprimido; gel; injetável"
+    },
+    {
+      "name": "Metronidazol (gel vaginal)",
+      "className": "Antibiótico tópico vaginal",
+      "presentation": "gel vaginal"
+    },
+    {
+      "name": "Midazolam",
+      "className": "Benzodiazepínico (sedação)",
       "presentation": "injetável"
+    },
+    {
+      "name": "Minoxidil (tópico)",
+      "className": "Estimulante capilar",
+      "presentation": "solução 2%, 5%"
+    },
+    {
+      "name": "Mirtazapina",
+      "className": "Antidepressivo (NaSSA)",
+      "presentation": "15mg, 30mg comprimido"
     },
     {
       "name": "Misoprostol",
@@ -1258,64 +1240,24 @@
       "presentation": "200mcg comprimido vaginal/oral"
     },
     {
-      "name": "Sulfato de magnésio",
-      "className": "Anticonvulsivante obstétrico (pré-eclâmpsia)",
-      "presentation": "injetável"
+      "name": "Mometasona (tópica)",
+      "className": "Corticoide tópico (média potência)",
+      "presentation": "0,1% creme"
     },
     {
-      "name": "Nifedipina (tocólise)",
-      "className": "Tocolítico",
-      "presentation": "10mg comprimido"
+      "name": "Montelucaste",
+      "className": "Antagonista de leucotrienos",
+      "presentation": "4mg, 5mg, 10mg comprimido"
     },
     {
-      "name": "Betametasona (maturação pulmonar fetal)",
-      "className": "Corticoide antenatal",
-      "presentation": "12mg injetável"
+      "name": "Morfina sulfato",
+      "className": "Opioide forte",
+      "presentation": "10mg, 30mg comprimido; injetável"
     },
     {
-      "name": "Ácido tranexâmico",
-      "className": "Antifibrinolítico",
-      "presentation": "250mg comprimido; injetável"
-    },
-    {
-      "name": "Adrenalina (epinefrina)",
-      "className": "Vasopressor/anafilaxia",
-      "presentation": "1mg/mL injetável"
-    },
-    {
-      "name": "Noradrenalina",
-      "className": "Vasopressor",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Dopamina",
-      "className": "Vasopressor/inotrópico",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Dobutamina",
-      "className": "Inotrópico",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Atropina",
-      "className": "Anticolinérgico/emergência",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Amiodarona (PCR)",
-      "className": "Antiarrítmico (emergência)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Naloxona",
-      "className": "Antagonista opioide",
-      "presentation": "injetável/spray nasal"
-    },
-    {
-      "name": "Flumazenil",
-      "className": "Antagonista benzodiazepínico",
-      "presentation": "injetável"
+      "name": "N-acetilcisteína",
+      "className": "Mucolítico",
+      "presentation": "600mg comprimido efervescente; xarope"
     },
     {
       "name": "N-acetilcisteína (antídoto)",
@@ -1323,9 +1265,247 @@
       "presentation": "injetável/oral"
     },
     {
-      "name": "Carvão ativado",
-      "className": "Antídoto/descontaminação",
-      "presentation": "suspensão oral"
+      "name": "Naloxona",
+      "className": "Antagonista opioide",
+      "presentation": "injetável/spray nasal"
+    },
+    {
+      "name": "Naproxeno",
+      "className": "AINE",
+      "presentation": "250mg, 500mg comprimido"
+    },
+    {
+      "name": "Nifedipina (tocólise)",
+      "className": "Tocolítico",
+      "presentation": "10mg comprimido"
+    },
+    {
+      "name": "Nifedipino",
+      "className": "Anti-hipertensivo (BCC)",
+      "presentation": "20mg comprimido/retard"
+    },
+    {
+      "name": "Nimesulida",
+      "className": "AINE (seletivo COX-2)",
+      "presentation": "100mg comprimido"
+    },
+    {
+      "name": "Nistatina",
+      "className": "Antifúngico tópico/oral",
+      "presentation": "suspensão oral; creme vaginal"
+    },
+    {
+      "name": "Nistatina (creme vaginal)",
+      "className": "Antifúngico tópico",
+      "presentation": "creme vaginal"
+    },
+    {
+      "name": "Nitrofurantoína",
+      "className": "Antibiótico urinário",
+      "presentation": "100mg cápsula"
+    },
+    {
+      "name": "Nitroglicerina",
+      "className": "Nitrato",
+      "presentation": "sublingual, spray, EV"
+    },
+    {
+      "name": "Noradrenalina",
+      "className": "Vasopressor",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Norfloxacino",
+      "className": "Antibiótico (quinolona)",
+      "presentation": "400mg comprimido"
+    },
+    {
+      "name": "Nortriptilina",
+      "className": "Antidepressivo tricíclico",
+      "presentation": "25mg, 50mg cápsula"
+    },
+    {
+      "name": "Ocitocina",
+      "className": "Uterotônico",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Olanzapina",
+      "className": "Antipsicótico (atípico)",
+      "presentation": "5mg, 10mg comprimido"
+    },
+    {
+      "name": "Óleo mineral",
+      "className": "Laxante lubrificante",
+      "presentation": "solução oral"
+    },
+    {
+      "name": "Omeprazol",
+      "className": "Inibidor de bomba de prótons",
+      "presentation": "20mg, 40mg cápsula"
+    },
+    {
+      "name": "Ondansetrona",
+      "className": "Antiemético (antagonista 5-HT3)",
+      "presentation": "4mg, 8mg comprimido; injetável"
+    },
+    {
+      "name": "Ondansetrona (quimioterapia)",
+      "className": "Antiemético",
+      "presentation": "comprimido/injetável"
+    },
+    {
+      "name": "Oseltamivir",
+      "className": "Antiviral (influenza)",
+      "presentation": "75mg cápsula"
+    },
+    {
+      "name": "Oxicodona",
+      "className": "Opioide forte",
+      "presentation": "10mg, 20mg comprimido"
+    },
+    {
+      "name": "Paclitaxel",
+      "className": "Quimioterápico (taxano)",
+      "presentation": "injetável"
+    },
+    {
+      "name": "Pantoprazol",
+      "className": "Inibidor de bomba de prótons",
+      "presentation": "20mg, 40mg comprimido",
+      "posologyExamples": [
+        {
+          "label": "PANTOPRAZOL 40MG · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, PELA MANHA EM JEJUM, POR 30 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Paracetamol",
+      "className": "Analgésico/Antipirético",
+      "presentation": "500mg, 750mg comprimido; solução oral",
+      "posologyExamples": [
+        {
+          "label": "PARACETAMOL + CODEINA 500/30MG · 01 CAIXA",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 08/08H, SE DOR INTENSA"
+        }
+      ]
+    },
+    {
+      "name": "Paracetamol (gotas pediátricas)",
+      "className": "Analgésico/Antipirético",
+      "presentation": "gotas 200mg/mL"
+    },
+    {
+      "name": "Paroxetina",
+      "className": "Antidepressivo (ISRS)",
+      "presentation": "20mg comprimido"
+    },
+    {
+      "name": "Penicilina benzatina",
+      "className": "Antibiótico (penicilina)",
+      "presentation": "1.200.000UI injetável"
+    },
+    {
+      "name": "Penicilina cristalina",
+      "className": "Antibiótico (penicilina)",
+      "presentation": "5.000.000UI injetável"
+    },
+    {
+      "name": "Pentoxifilina",
+      "className": "Vasodilatador periférico/hemorreológico",
+      "presentation": "400mg comprimido"
+    },
+    {
+      "name": "Permetrina",
+      "className": "Antiparasitário tópico (escabicida)",
+      "presentation": "loção 5%"
+    },
+    {
+      "name": "Permetrina (tópica)",
+      "className": "Antiparasitário tópico",
+      "presentation": "5% loção/creme"
+    },
+    {
+      "name": "Peróxido de benzoíla",
+      "className": "Antiacneico tópico",
+      "presentation": "tópico"
+    },
+    {
+      "name": "Pirazinamida",
+      "className": "Antibiótico (esquema TB)",
+      "presentation": "comprimido; associado RHZE"
+    },
+    {
+      "name": "Piridostigmina",
+      "className": "Anticolinesterásico (miastenia)",
+      "presentation": "60mg comprimido"
+    },
+    {
+      "name": "Polietilenoglicol",
+      "className": "Laxante osmótico",
+      "presentation": "pó para solução"
+    },
+    {
+      "name": "Polivitamínico infantil",
+      "className": "Suplemento",
+      "presentation": "gotas; xarope"
+    },
+    {
+      "name": "Pramipexol",
+      "className": "Antiparkinsoniano (agonista dopaminérgico)",
+      "presentation": "0,125mg, 0,25mg comprimido"
+    },
+    {
+      "name": "Prasugrel",
+      "className": "Antiagregante plaquetário",
+      "presentation": "10mg comprimido"
+    },
+    {
+      "name": "Praziquantel",
+      "className": "Antiparasitário (esquistossomose)",
+      "presentation": "600mg comprimido"
+    },
+    {
+      "name": "Prednisolona",
+      "className": "Corticoide sistêmico",
+      "presentation": "20mg comprimido; solução oral"
+    },
+    {
+      "name": "Prednisona",
+      "className": "Corticoide sistêmico",
+      "presentation": "5mg, 20mg comprimido",
+      "posologyExamples": [
+        {
+          "label": "PREDNISONA 20MG · 10 COMP",
+          "instructions": "TOMAR UM COMPRIMIDO, VIA ORAL, DE 12/12H, POR 05 DIAS"
+        }
+      ]
+    },
+    {
+      "name": "Pregabalina",
+      "className": "Anticonvulsivante/dor neuropática",
+      "presentation": "75mg, 150mg cápsula"
+    },
+    {
+      "name": "Progesterona micronizada",
+      "className": "Terapia de reposição hormonal/obstetrícia",
+      "presentation": "100mg, 200mg cápsula"
+    },
+    {
+      "name": "Prometazina",
+      "className": "Anti-histamínico/sedativo",
+      "presentation": "25mg comprimido; injetável"
+    },
+    {
+      "name": "Propiltiouracil",
+      "className": "Antitireoidiano",
+      "presentation": "100mg comprimido"
+    },
+    {
+      "name": "Propranolol",
+      "className": "Betabloqueador",
+      "presentation": "40mg comprimido"
     },
     {
       "name": "Protamina (sulfato)",
@@ -1333,29 +1513,34 @@
       "presentation": "injetável"
     },
     {
-      "name": "Vitamina K (fitomenadiona)",
-      "className": "Antídoto (varfarina)/coagulação",
-      "presentation": "comprimido; injetável"
+      "name": "Quetiapina",
+      "className": "Antipsicótico (atípico)",
+      "presentation": "25mg, 100mg, 200mg comprimido"
     },
     {
-      "name": "Gluconato de cálcio",
-      "className": "Reposição eletrolítica/antídoto",
-      "presentation": "injetável"
+      "name": "Racecadotrila",
+      "className": "Antidiarreico",
+      "presentation": "100mg cápsula; sachê pediátrico"
     },
     {
-      "name": "Cloreto de potássio",
-      "className": "Reposição eletrolítica",
-      "presentation": "xarope; injetável (diluído)"
+      "name": "Ramipril",
+      "className": "Anti-hipertensivo (IECA)",
+      "presentation": "5mg, 10mg comprimido"
     },
     {
-      "name": "Bicarbonato de sódio",
-      "className": "Alcalinizante",
-      "presentation": "injetável"
+      "name": "Ranitidina",
+      "className": "Bloqueador H2",
+      "presentation": "150mg comprimido (uso restrito)"
     },
     {
-      "name": "Soro fisiológico 0,9%",
-      "className": "Solução para infusão",
-      "presentation": "bolsa 100/250/500/1000mL"
+      "name": "Rifampicina",
+      "className": "Antibiótico (esquema TB)",
+      "presentation": "comprimido; associado RHZE"
+    },
+    {
+      "name": "Riluzol",
+      "className": "Neuroprotetor (ELA)",
+      "presentation": "50mg comprimido"
     },
     {
       "name": "Ringer lactato",
@@ -1363,22 +1548,249 @@
       "presentation": "bolsa 500/1000mL"
     },
     {
+      "name": "Risedronato de sódio",
+      "className": "Bifosfonato (osteoporose)",
+      "presentation": "35mg comprimido semanal"
+    },
+    {
+      "name": "Risperidona",
+      "className": "Antipsicótico (atípico)",
+      "presentation": "1mg, 2mg, 3mg comprimido"
+    },
+    {
+      "name": "Rituximabe",
+      "className": "Biológico (anti-CD20)",
+      "presentation": "injetável EV"
+    },
+    {
+      "name": "Rivaroxabana",
+      "className": "Anticoagulante (NOAC)",
+      "presentation": "10mg, 15mg, 20mg comprimido"
+    },
+    {
+      "name": "Rivastigmina",
+      "className": "Anticolinesterásico (Alzheimer)",
+      "presentation": "adesivo; cápsula"
+    },
+    {
+      "name": "Rosuvastatina cálcica",
+      "className": "Estatina",
+      "presentation": "10mg, 20mg comprimido"
+    },
+    {
+      "name": "Sacubitril + valsartana",
+      "className": "IC (ARNI)",
+      "presentation": "24/26mg, 49/51mg, 97/103mg comprimido"
+    },
+    {
+      "name": "Sais de reidratação oral",
+      "className": "Reidratante",
+      "presentation": "envelope para diluição"
+    },
+    {
+      "name": "Salbutamol (albuterol)",
+      "className": "Broncodilatador (beta-2 agonista curto)",
+      "presentation": "spray, solução para nebulização"
+    },
+    {
+      "name": "Salbutamol (xarope pediátrico)",
+      "className": "Broncodilatador",
+      "presentation": "xarope"
+    },
+    {
+      "name": "Salmeterol",
+      "className": "Broncodilatador (beta-2 agonista longo)",
+      "presentation": "inalatório"
+    },
+    {
+      "name": "Salmeterol + fluticasona",
+      "className": "Broncodilatador + corticoide (combo)",
+      "presentation": "inalatório"
+    },
+    {
+      "name": "Semaglutida",
+      "className": "Antidiabético (análogo GLP-1)",
+      "presentation": "0,25/0,5/1mg injetável caneta"
+    },
+    {
+      "name": "Sertralina",
+      "className": "Antidepressivo (ISRS)",
+      "presentation": "50mg, 100mg comprimido"
+    },
+    {
+      "name": "Sildenafila",
+      "className": "Inibidor da fosfodiesterase-5",
+      "presentation": "50mg, 100mg comprimido"
+    },
+    {
+      "name": "Simeticona",
+      "className": "Antiflatulento",
+      "presentation": "40mg, 125mg comprimido/gotas"
+    },
+    {
+      "name": "Sinvastatina",
+      "className": "Estatina",
+      "presentation": "10mg, 20mg, 40mg comprimido"
+    },
+    {
+      "name": "Sitagliptina",
+      "className": "Antidiabético (iDPP-4)",
+      "presentation": "50mg, 100mg comprimido"
+    },
+    {
+      "name": "Soro antiofídico",
+      "className": "Soro heterólogo",
+      "presentation": "injetável"
+    },
+    {
+      "name": "SORO DE REIDRATAÇÃO ORAL",
+      "className": "Predefinição auxiliar",
+      "presentation": "",
+      "posologyExamples": [
+        {
+          "label": "SORO DE REIDRATAÇÃO ORAL · 04 SACHES",
+          "instructions": "DILUIR UM SACHE EM UM LITRO DE AGUA, E TOMAR UM COPO A LIVRE DEMANDA. CONSERVAR EM GELADEIRA."
+        }
+      ]
+    },
+    {
+      "name": "Soro fisiológico 0,9%",
+      "className": "Solução para infusão",
+      "presentation": "bolsa 100/250/500/1000mL"
+    },
+    {
+      "name": "SORO FISIOLOGICO SPRAY",
+      "className": "Predefinição auxiliar",
+      "presentation": "",
+      "posologyExamples": [
+        {
+          "label": "SORO FISIOLOGICO SPRAY · 01 FRASCO",
+          "instructions": "APLICAR 02 JATOS EM CADA NARINA, DE 4/4H, OU SEMPRE QUE NECESSÁRIO"
+        }
+      ]
+    },
+    {
       "name": "Soro glicosado 5%",
       "className": "Solução para infusão",
       "presentation": "bolsa 250/500mL"
     },
     {
-      "name": "Albumina humana",
-      "className": "Expansor plasmático",
-      "presentation": "20% injetável"
+      "name": "Sucralfato",
+      "className": "Protetor de mucosa",
+      "presentation": "1g comprimido; suspensão"
     },
     {
-      "name": "Vacina dTpa",
-      "className": "Imunobiológico",
+      "name": "Sulfametoxazol + trimetoprima",
+      "className": "Antibiótico (sulfa)",
+      "presentation": "400/80mg, 800/160mg comprimido"
+    },
+    {
+      "name": "Sulfassalazina",
+      "className": "Anti-inflamatório intestinal/DMARD",
+      "presentation": "500mg comprimido"
+    },
+    {
+      "name": "Sulfato de magnésio",
+      "className": "Anticonvulsivante obstétrico (pré-eclâmpsia)",
       "presentation": "injetável"
     },
     {
-      "name": "Vacina contra influenza",
+      "name": "Sulfato de zinco",
+      "className": "Suplemento mineral",
+      "presentation": "comprimido; solução oral"
+    },
+    {
+      "name": "Sulfato ferroso",
+      "className": "Suplemento (ferro)",
+      "presentation": "40mg comprimido; gotas"
+    },
+    {
+      "name": "Sumatriptana",
+      "className": "Antimigranoso (triptano)",
+      "presentation": "50mg, 100mg comprimido"
+    },
+    {
+      "name": "Tacrolimo (tópico)",
+      "className": "Imunomodulador tópico",
+      "presentation": "0,03%, 0,1% pomada"
+    },
+    {
+      "name": "Tadalafila",
+      "className": "Inibidor da fosfodiesterase-5",
+      "presentation": "5mg, 20mg comprimido"
+    },
+    {
+      "name": "Tamoxifeno",
+      "className": "Antineoplásico (hormonal, mama)",
+      "presentation": "20mg comprimido"
+    },
+    {
+      "name": "Tansulosina",
+      "className": "Alfabloqueador seletivo (HPB)",
+      "presentation": "0,4mg cápsula"
+    },
+    {
+      "name": "Tenofovir + lamivudina",
+      "className": "Antirretroviral",
+      "presentation": "300/300mg comprimido"
+    },
+    {
+      "name": "Teofilina",
+      "className": "Broncodilatador (metilxantina)",
+      "presentation": "100mg, 200mg comprimido"
+    },
+    {
+      "name": "Terbinafina",
+      "className": "Antifúngico",
+      "presentation": "250mg comprimido; creme"
+    },
+    {
+      "name": "Ticagrelor",
+      "className": "Antiagregante plaquetário",
+      "presentation": "90mg comprimido"
+    },
+    {
+      "name": "Timolol (colírio)",
+      "className": "Betabloqueador oftálmico (glaucoma)",
+      "presentation": "colírio"
+    },
+    {
+      "name": "Tiotrópio (brometo)",
+      "className": "Broncodilatador anticolinérgico longo",
+      "presentation": "inalatório"
+    },
+    {
+      "name": "Tizanidina",
+      "className": "Relaxante muscular",
+      "presentation": "2mg, 4mg comprimido"
+    },
+    {
+      "name": "Tobramicina (colírio)",
+      "className": "Antibiótico oftálmico",
+      "presentation": "colírio"
+    },
+    {
+      "name": "Topiramato",
+      "className": "Anticonvulsivante/profilaxia enxaqueca",
+      "presentation": "25mg, 50mg, 100mg comprimido"
+    },
+    {
+      "name": "Tramadol",
+      "className": "Opioide fraco",
+      "presentation": "50mg cápsula; injetável; gotas"
+    },
+    {
+      "name": "Trazodona",
+      "className": "Antidepressivo (sedativo)",
+      "presentation": "50mg, 100mg comprimido"
+    },
+    {
+      "name": "Tropicamida",
+      "className": "Midriático",
+      "presentation": "colírio"
+    },
+    {
+      "name": "Vacina contra hepatite B",
       "className": "Imunobiológico",
       "presentation": "injetável"
     },
@@ -1388,294 +1800,49 @@
       "presentation": "injetável"
     },
     {
-      "name": "Vacina contra hepatite B",
+      "name": "Vacina contra influenza",
       "className": "Imunobiológico",
       "presentation": "injetável"
     },
     {
-      "name": "Imunoglobulina antitetânica",
-      "className": "Soro/imunoglobulina",
+      "name": "Vacina dTpa",
+      "className": "Imunobiológico",
       "presentation": "injetável"
     },
     {
-      "name": "Soro antiofídico",
-      "className": "Soro heterólogo",
-      "presentation": "injetável"
+      "name": "Valaciclovir",
+      "className": "Antiviral",
+      "presentation": "500mg comprimido"
     },
     {
-      "name": "Timolol (colírio)",
-      "className": "Betabloqueador oftálmico (glaucoma)",
-      "presentation": "colírio"
+      "name": "Valsartana",
+      "className": "Anti-hipertensivo (BRA)",
+      "presentation": "80mg, 160mg comprimido"
     },
     {
-      "name": "Latanoprosta",
-      "className": "Análogo de prostaglandina (glaucoma)",
-      "presentation": "colírio"
+      "name": "Vancomicina",
+      "className": "Antibiótico (glicopeptídeo)",
+      "presentation": "500mg, 1g injetável"
     },
     {
-      "name": "Tropicamida",
-      "className": "Midriático",
-      "presentation": "colírio"
-    },
-    {
-      "name": "Cloranfenicol (colírio)",
-      "className": "Antibiótico oftálmico",
-      "presentation": "colírio; pomada"
-    },
-    {
-      "name": "Tobramicina (colírio)",
-      "className": "Antibiótico oftálmico",
-      "presentation": "colírio"
-    },
-    {
-      "name": "Lágrima artificial (carmelose)",
-      "className": "Lubrificante ocular",
-      "presentation": "colírio"
-    },
-    {
-      "name": "Clotrimazol (creme vaginal)",
-      "className": "Antifúngico tópico",
-      "presentation": "creme vaginal; comprimido vaginal"
-    },
-    {
-      "name": "Nistatina (creme vaginal)",
-      "className": "Antifúngico tópico",
-      "presentation": "creme vaginal"
-    },
-    {
-      "name": "Metronidazol (gel vaginal)",
-      "className": "Antibiótico tópico vaginal",
-      "presentation": "gel vaginal"
-    },
-    {
-      "name": "Clobetasol propionato",
-      "className": "Corticoide tópico (alta potência)",
-      "presentation": "0,05% pomada/creme"
-    },
-    {
-      "name": "Mometasona (tópica)",
-      "className": "Corticoide tópico (média potência)",
-      "presentation": "0,1% creme"
-    },
-    {
-      "name": "Hidrocortisona (tópica)",
-      "className": "Corticoide tópico (baixa potência)",
-      "presentation": "1% creme"
-    },
-    {
-      "name": "Tacrolimo (tópico)",
-      "className": "Imunomodulador tópico",
-      "presentation": "0,03%, 0,1% pomada"
-    },
-    {
-      "name": "Ácido salicílico",
-      "className": "Ceratolítico",
-      "presentation": "tópico"
-    },
-    {
-      "name": "Peróxido de benzoíla",
-      "className": "Antiacneico tópico",
-      "presentation": "tópico"
-    },
-    {
-      "name": "Adapaleno",
-      "className": "Retinoide tópico (acne)",
-      "presentation": "0,1% gel/creme"
-    },
-    {
-      "name": "Isotretinoína (oral)",
-      "className": "Retinoide sistêmico (acne grave)",
-      "presentation": "20mg, 40mg cápsula"
-    },
-    {
-      "name": "Minoxidil (tópico)",
-      "className": "Estimulante capilar",
-      "presentation": "solução 2%, 5%"
-    },
-    {
-      "name": "Permetrina (tópica)",
-      "className": "Antiparasitário tópico",
-      "presentation": "5% loção/creme"
-    },
-    {
-      "name": "Fenoterol + ipratrópio",
-      "className": "Broncodilatador combinado",
-      "presentation": "solução para nebulização"
-    },
-    {
-      "name": "Budesonida (nebulização)",
-      "className": "Corticoide inalatório",
-      "presentation": "suspensão para nebulização"
-    },
-    {
-      "name": "Furosemida (oral)",
-      "className": "Diurético de alça",
-      "presentation": "40mg comprimido"
-    },
-    {
-      "name": "Espironolactona + hidroclorotiazida",
-      "className": "Diurético combinado",
-      "presentation": "25/25mg comprimido"
-    },
-    {
-      "name": "Losartana + hidroclorotiazida",
-      "className": "Anti-hipertensivo combinado",
-      "presentation": "50/12,5mg comprimido"
-    },
-    {
-      "name": "Enalapril + hidroclorotiazida",
-      "className": "Anti-hipertensivo combinado",
-      "presentation": "10/25mg comprimido"
-    },
-    {
-      "name": "Cilostazol",
-      "className": "Vasodilatador periférico",
-      "presentation": "50mg, 100mg comprimido"
-    },
-    {
-      "name": "Pentoxifilina",
-      "className": "Vasodilatador periférico/hemorreológico",
-      "presentation": "400mg comprimido"
-    },
-    {
-      "name": "Diosmina + hesperidina",
-      "className": "Flebotônico",
-      "presentation": "450/50mg comprimido"
-    },
-    {
-      "name": "Heparina (creme/gel)",
-      "className": "Anticoagulante tópico",
-      "presentation": "gel tópico"
-    },
-    {
-      "name": "Ácido acetilsalicílico (cardiológico)",
-      "className": "Antiagregante (baixa dose)",
-      "presentation": "100mg comprimido"
-    },
-    {
-      "name": "Ticagrelor",
-      "className": "Antiagregante plaquetário",
-      "presentation": "90mg comprimido"
-    },
-    {
-      "name": "Prasugrel",
-      "className": "Antiagregante plaquetário",
-      "presentation": "10mg comprimido"
-    },
-    {
-      "name": "Dabigatrana",
-      "className": "Anticoagulante (NOAC)",
-      "presentation": "110mg, 150mg cápsula"
-    },
-    {
-      "name": "Fondaparinux",
+      "name": "Varfarina sódica",
       "className": "Anticoagulante",
-      "presentation": "2,5mg injetável"
+      "presentation": "1mg, 2,5mg, 5mg comprimido"
     },
     {
-      "name": "Estreptoquinase",
-      "className": "Trombolítico",
-      "presentation": "injetável"
+      "name": "Venlafaxina",
+      "className": "Antidepressivo (IRSN)",
+      "presentation": "75mg, 150mg cápsula"
     },
     {
-      "name": "Alteplase",
-      "className": "Trombolítico",
-      "presentation": "injetável"
+      "name": "Verapamil",
+      "className": "Anti-hipertensivo (BCC)",
+      "presentation": "80mg, 120mg comprimido"
     },
     {
-      "name": "Piridostigmina",
-      "className": "Anticolinesterásico (miastenia)",
-      "presentation": "60mg comprimido"
-    },
-    {
-      "name": "Interferon beta",
-      "className": "Imunomodulador (esclerose múltipla)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Glatirâmer (acetato)",
-      "className": "Imunomodulador (esclerose múltipla)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Riluzol",
-      "className": "Neuroprotetor (ELA)",
+      "name": "Vildagliptina",
+      "className": "Antidiabético (iDPP-4)",
       "presentation": "50mg comprimido"
-    },
-    {
-      "name": "Ondansetrona (quimioterapia)",
-      "className": "Antiemético",
-      "presentation": "comprimido/injetável"
-    },
-    {
-      "name": "Filgrastim (G-CSF)",
-      "className": "Fator de crescimento (neutropenia)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Eritropoietina",
-      "className": "Estimulante eritropoiese",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Ácido zoledrônico",
-      "className": "Bifosfonato EV (oncologia/osteoporose)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Tamoxifeno",
-      "className": "Antineoplásico (hormonal, mama)",
-      "presentation": "20mg comprimido"
-    },
-    {
-      "name": "Anastrozol",
-      "className": "Antineoplásico (inibidor de aromatase)",
-      "presentation": "1mg comprimido"
-    },
-    {
-      "name": "Leuprorrelina",
-      "className": "Antineoplásico (análogo GnRH)",
-      "presentation": "injetável depot"
-    },
-    {
-      "name": "Ciclofosfamida",
-      "className": "Quimioterápico (alquilante)",
-      "presentation": "comprimido; injetável"
-    },
-    {
-      "name": "Doxorrubicina",
-      "className": "Quimioterápico (antraciclina)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Cisplatina",
-      "className": "Quimioterápico (platina)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "Paclitaxel",
-      "className": "Quimioterápico (taxano)",
-      "presentation": "injetável"
-    },
-    {
-      "name": "5-Fluorouracila",
-      "className": "Quimioterápico (antimetabólito)",
-      "presentation": "injetável; tópico"
-    },
-    {
-      "name": "Imatinibe",
-      "className": "Quimioterápico (inibidor de tirosina quinase)",
-      "presentation": "100mg, 400mg comprimido"
-    },
-    {
-      "name": "Loperamida (pediátrica cautela)",
-      "className": "Antidiarreico",
-      "presentation": "gotas"
-    },
-    {
-      "name": "Zinco (sulfato)",
-      "className": "Suplemento (diarreia infantil)",
-      "presentation": "xarope"
     },
     {
       "name": "Vitamina A (retinol)",
@@ -1683,39 +1850,19 @@
       "presentation": "megadose gotas"
     },
     {
-      "name": "Sulfato de zinco",
-      "className": "Suplemento mineral",
-      "presentation": "comprimido; solução oral"
+      "name": "Vitamina K (fitomenadiona)",
+      "className": "Antídoto (varfarina)/coagulação",
+      "presentation": "comprimido; injetável"
     },
     {
-      "name": "Polivitamínico infantil",
-      "className": "Suplemento",
-      "presentation": "gotas; xarope"
-    },
-    {
-      "name": "Paracetamol (gotas pediátricas)",
-      "className": "Analgésico/Antipirético",
-      "presentation": "gotas 200mg/mL"
-    },
-    {
-      "name": "Dipirona (gotas pediátricas)",
-      "className": "Analgésico/Antipirético",
-      "presentation": "gotas 500mg/mL"
-    },
-    {
-      "name": "Amoxicilina (suspensão pediátrica)",
-      "className": "Antibiótico",
-      "presentation": "suspensão 250mg/5mL"
-    },
-    {
-      "name": "Salbutamol (xarope pediátrico)",
-      "className": "Broncodilatador",
+      "name": "Zinco (sulfato)",
+      "className": "Suplemento (diarreia infantil)",
       "presentation": "xarope"
     },
     {
-      "name": "Domperidona (suspensão pediátrica)",
-      "className": "Procinético",
-      "presentation": "suspensão"
+      "name": "Zolpidem",
+      "className": "Hipnótico não benzodiazepínico",
+      "presentation": "10mg comprimido"
     }
   ],
   "conditions": []
