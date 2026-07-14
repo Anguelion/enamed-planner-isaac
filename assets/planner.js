@@ -3305,6 +3305,7 @@ function bindVideoPlayer(source, schedule, lesson) {
   let restoringPosition = false;
   let manualSeek = false;
   let restoringRate = false;
+  let bookmarkTimeFrozen = null;
   const applyPreferredRate = () => {
     const rate = rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || 1);
     if(Math.abs(video.playbackRate-rate) < .01) return;
@@ -3346,7 +3347,7 @@ function bindVideoPlayer(source, schedule, lesson) {
   video.addEventListener('timeupdate', () => {
     const currentSecond = Math.floor(video.currentTime || 0);
     const stamp=document.getElementById('videoBookmarkTime');
-    if(stamp) stamp.textContent=formatVideoTime(currentSecond);
+    if(stamp && bookmarkTimeFrozen === null) stamp.textContent=formatVideoTime(currentSecond);
     const chapterButtons = [...document.querySelectorAll('[data-video-seek]')];
     let activeChapter = -1;
     chapterButtons.forEach((button, index) => {
@@ -3372,11 +3373,19 @@ function bindVideoPlayer(source, schedule, lesson) {
     });
   }
   document.getElementById('videoMarkWatched')?.addEventListener('click', () => { setVideoWatchedState(source.id, !state.videoPlayer.watched[source.id]); saveStateOnly(); renderAulas(); });
+  const bookmarkLabelInput = document.getElementById('videoBookmarkLabel');
+  bookmarkLabelInput?.addEventListener('input', () => {
+    const hasText = bookmarkLabelInput.value.trim().length > 0;
+    const stamp = document.getElementById('videoBookmarkTime');
+    if(hasText && bookmarkTimeFrozen === null) bookmarkTimeFrozen = Math.floor(video.currentTime || 0);
+    if(!hasText) bookmarkTimeFrozen = null;
+    if(stamp) stamp.textContent = formatVideoTime(bookmarkTimeFrozen ?? Math.floor(video.currentTime || 0));
+  });
   document.getElementById('addVideoBookmark')?.addEventListener('click', () => {
-    const label = document.getElementById('videoBookmarkLabel').value.trim();
+    const label = bookmarkLabelInput?.value.trim() || '';
     if(!label) { document.getElementById('videoBookmarkLabel').focus(); return; }
     const entries = state.videoPlayer.bookmarks[source.id] || [];
-    entries.push({time:Math.floor(video.currentTime || 0),label});
+    entries.push({time:bookmarkTimeFrozen ?? Math.floor(video.currentTime || 0),label});
     state.videoPlayer.bookmarks[source.id] = entries.sort((a,b)=>a.time-b.time);
     saveStateOnly(); renderAulas();
   });
