@@ -4719,6 +4719,9 @@ function bindQuestionActions(questions, question) {
     toggleEliminated(question, e.currentTarget.dataset.eliminate);
   });
   document.querySelectorAll('.highlightable').forEach(el => {
+    let longPressTimer=0;
+    let touchHighlightTimer=0;
+    let touchStartPoint=null;
     el.onselectstart = () => {
       ui.suppressAnswerClick = true;
       ui.highlightGestureUntil = Date.now() + 800;
@@ -4738,6 +4741,42 @@ function bindQuestionActions(questions, question) {
         e.preventDefault();
         e.stopPropagation();
       }
+    };
+    el.ontouchstart = event => {
+      const touch=event.touches?.[0];
+      touchStartPoint=touch ? { x:touch.clientX, y:touch.clientY } : null;
+      clearTimeout(longPressTimer);
+      clearTimeout(touchHighlightTimer);
+      longPressTimer=setTimeout(() => {
+        ui.suppressAnswerClick=true;
+        ui.highlightGestureUntil=Date.now()+1400;
+      },420);
+    };
+    el.ontouchmove = event => {
+      const touch=event.touches?.[0];
+      if(!touch || !touchStartPoint) return;
+      if(Math.hypot(touch.clientX-touchStartPoint.x,touch.clientY-touchStartPoint.y)>12) clearTimeout(longPressTimer);
+    };
+    el.ontouchcancel = () => {
+      clearTimeout(longPressTimer);
+      clearTimeout(touchHighlightTimer);
+      touchStartPoint=null;
+    };
+    el.ontouchend = () => {
+      clearTimeout(longPressTimer);
+      touchStartPoint=null;
+      clearTimeout(touchHighlightTimer);
+      touchHighlightTimer=setTimeout(() => {
+        const hasSelection=(window.getSelection()?.toString() || '').trim().length>1;
+        if(!hasSelection) {
+          setTimeout(() => { ui.suppressAnswerClick=false; },850);
+          return;
+        }
+        ui.suppressAnswerClick=true;
+        ui.highlightGestureUntil=Date.now()+1200;
+        toggleSelectedHighlight(question);
+        setTimeout(() => { ui.suppressAnswerClick=false; },1250);
+      },420);
     };
   });
   if(timerToggle) timerToggle.onclick = () => { ui.questionTimerOpen=!ui.questionTimerOpen; render(); };
