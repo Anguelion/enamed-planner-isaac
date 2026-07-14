@@ -1009,6 +1009,10 @@ function ensureSimTopics() {
     eliminated: run.eliminated && typeof run.eliminated === 'object' ? run.eliminated : {},
     highlights: run.highlights && typeof run.highlights === 'object' ? run.highlights : {},
     confidence: run.confidence && typeof run.confidence === 'object' ? run.confidence : {},
+    firstAnswers: run.firstAnswers && typeof run.firstAnswers === 'object' ? run.firstAnswers : {},
+    answerHistory: run.answerHistory && typeof run.answerHistory === 'object' ? run.answerHistory : {},
+    openedCount: run.openedCount && typeof run.openedCount === 'object' ? run.openedCount : {},
+    reviewFlags: run.reviewFlags && typeof run.reviewFlags === 'object' ? run.reviewFlags : {},
     questionSeconds: run.questionSeconds && typeof run.questionSeconds === 'object' ? run.questionSeconds : {},
     questionVisited: run.questionVisited && typeof run.questionVisited === 'object' ? run.questionVisited : {},
     activeQuestionId: run.activeQuestionId || '',
@@ -1637,6 +1641,8 @@ function beginSimQuestionTiming(run, questionId) {
   run.questionTimingStart = n(run.elapsedSeconds);
   if(!run.questionVisited || typeof run.questionVisited !== 'object') run.questionVisited = {};
   run.questionVisited[questionId] = true;
+  if(!run.openedCount || typeof run.openedCount !== 'object') run.openedCount = {};
+  run.openedCount[questionId] = n(run.openedCount[questionId]) + 1;
 }
 function finishSimQuestionTiming(run) {
   const questionId = run?.activeQuestionId;
@@ -1685,7 +1691,13 @@ function simuladoResult(run) {
     const area = simQuestionArea(question);
     const confidence = run.confidence?.[question.id] || '';
     const seconds = n(run.questionSeconds?.[question.id]);
-    return { question, selected, correct, area, topic: tag.topic || 'Sem tema', subtopic: tag.subtopic || '', confidence, seconds, skipped: !selected, guessed: confidence === 'red', overconfidentWrong: !correct && confidence === 'green' };
+    const history = Array.isArray(run.answerHistory?.[question.id]) ? run.answerHistory[question.id] : [];
+    const firstAnswer = run.firstAnswers?.[question.id] || selected;
+    const changed = history.length > 0;
+    const changedCorrectToWrong = changed && firstAnswer === question.answer && selected !== question.answer;
+    const changedWrongToCorrect = changed && firstAnswer !== question.answer && selected === question.answer;
+    const confidenceScore = { red:20, yellow:55, green:90 }[confidence] || 0;
+    return { question, selected, correct, area, topic: tag.topic || 'Sem tema', subtopic: tag.subtopic || '', confidence, confidenceScore, seconds, skipped: !selected, guessed: confidence === 'red', overconfidentWrong: !correct && confidence === 'green', changed, changedCorrectToWrong, changedWrongToCorrect, changes:history.length, opened:n(run.openedCount?.[question.id]) || (run.questionVisited?.[question.id] ? 1 : 0), firstAnswer };
   });
   const correct = rows.filter(row => row.correct).length;
   const byArea = ENAMED_AREAS.map(area => {
@@ -1710,18 +1722,50 @@ function simuladoResult(run) {
     return acc;
   }, { red: 0, yellow: 0, green: 0, blank: 0 });
   const timedRows = rows.filter(row => row.seconds > 0);
-  return { rows, total: rows.length, correct, rate: rows.length ? correct / rows.length : 0, byArea, weakTopics: [...topicMap.values()].sort((a,b)=>b.score-a.score || b.wrong-a.wrong).slice(0,8), confidenceCounts, skipped: rows.filter(row=>row.skipped), guessed: rows.filter(row=>row.guessed), overconfidentWrong: rows.filter(row=>row.overconfidentWrong), timedRows, averageSeconds: timedRows.length ? timedRows.reduce((sum,row)=>sum+row.seconds,0)/timedRows.length : 0 };
+  const totalSeconds = Math.max(n(run.elapsedSeconds), timedRows.reduce((sum,row)=>sum+row.seconds,0));
+  const slowLimit = Math.max(120, totalSeconds / Math.max(1, rows.length) * 1.3);
+  const adjustedPoints = rows.reduce((sum,row)=>sum + (row.correct ? ({ red:.3, yellow:.6, green:1 }[row.confidence] || .75) : 0), 0);
+  const phaseSize = Math.max(1, Math.ceil(rows.length / 5));
+  const phases = Array.from({length:Math.min(5, Math.ceil(rows.length / phaseSize))},(_,index)=>{
+    const phaseRows = rows.slice(index*phaseSize,(index+1)*phaseSize);
+    const phaseTimed = phaseRows.filter(row=>row.seconds>0);
+    return { label:`${index*phaseSize+1}–${index*phaseSize+phaseRows.length}`, total:phaseRows.length, correct:phaseRows.filter(row=>row.correct).length, skipped:phaseRows.filter(row=>row.skipped).length, confidence:phaseRows.filter(row=>row.confidenceScore>0).length ? phaseRows.reduce((sum,row)=>sum+row.confidenceScore,0)/phaseRows.filter(row=>row.confidenceScore>0).length : 0, averageSeconds:phaseTimed.length ? phaseTimed.reduce((sum,row)=>sum+row.seconds,0)/phaseTimed.length : 0 };
+  });
+  const productiveRows = rows.filter(row=>row.correct || row.changedWrongToCorrect);
+  const unproductiveRows = rows.filter(row=>(!row.correct && row.seconds>slowLimit) || row.changedCorrectToWrong);
+  return { rows, total: rows.length, correct, rate: rows.length ? correct / rows.length : 0, adjustedRate: rows.length ? adjustedPoints / rows.length : 0, byArea, weakTopics: [...topicMap.values()].sort((a,b)=>b.score-a.score || b.wrong-a.wrong).slice(0,8), confidenceCounts, skipped: rows.filter(row=>row.skipped), guessed: rows.filter(row=>row.guessed), overconfidentWrong: rows.filter(row=>row.overconfidentWrong), timedRows, averageSeconds: timedRows.length ? timedRows.reduce((sum,row)=>sum+row.seconds,0)/timedRows.length : 0, totalSeconds, slowLimit, phases, productiveSeconds:productiveRows.reduce((sum,row)=>sum+row.seconds,0), unproductiveSeconds:unproductiveRows.reduce((sum,row)=>sum+row.seconds,0), changed:rows.filter(row=>row.changed), changedCorrectToWrong:rows.filter(row=>row.changedCorrectToWrong), changedWrongToCorrect:rows.filter(row=>row.changedWrongToCorrect), fragileCorrect:rows.filter(row=>row.correct && row.confidenceScore<80), matrix:{solid:rows.filter(row=>row.correct && row.confidenceScore>=80).length, fragile:rows.filter(row=>row.correct && row.confidenceScore<80).length, recognizedGap:rows.filter(row=>!row.correct && row.confidenceScore>0 && row.confidenceScore<80).length, dangerous:rows.filter(row=>!row.correct && row.confidenceScore>=80).length} };
+}
+function simResultClassification(row, result) {
+  if(row.skipped) return 'Questão pulada';
+  if(row.changedCorrectToWrong) return 'Mudança: certa → errada';
+  if(row.changedWrongToCorrect) return 'Mudança: errada → certa';
+  if(!row.correct && row.confidenceScore >= 80) return 'Erro consciente';
+  if(!row.correct && row.confidenceScore > 0) return 'Erro por dúvida';
+  if(!row.correct) return 'Erro por chute';
+  if(row.guessed) return 'Acerto por chute';
+  if(row.correct && row.seconds > result.slowLimit) return 'Acerto lento';
+  return 'Acerto sólido';
 }
 function renderSimuladoResult(run, questions) {
   const result = simuladoResult(run);
-  const weakText = result.weakTopics.length ? result.weakTopics.map(item => `${item.topic} (${item.wrong})`).join(' · ') : 'Nenhum tema crítico.';
-  return `<div class="card"><div class="section-title"><div><h2>Resultado: ${escapeHtml(run.name)}</h2><div class="muted">${result.correct} de ${result.total} · ${Math.round(n(run.elapsedSeconds)/60)} min usados</div></div><button class="icon-btn" data-open-sim="${run.id}">Revisar prova</button></div><div class="sim-result-grid"><div class="sim-area-card"><strong>Nota final</strong><div class="metric-value">${pct(result.rate)}</div><div class="muted">${result.correct} acertos</div></div><div class="sim-area-card"><strong>Erros</strong><div class="metric-value">${result.total-result.correct}</div><div class="muted">questões para revisar</div></div><div class="sim-area-card"><strong>Em branco</strong><div class="metric-value">${result.skipped.length}</div><div class="muted">questões puladas</div></div><div class="sim-area-card"><strong>Chutes</strong><div class="metric-value">${result.guessed.length}</div><div class="muted">confiança vermelha</div></div><div class="sim-area-card"><strong>Errou na certeza</strong><div class="metric-value">${result.overconfidentWrong.length}</div><div class="muted">revisar conceito-base</div></div></div><div class="sim-result-grid">${result.byArea.map(area => `<div class="sim-area-card"><strong>${escapeHtml(area.area)}</strong><div class="metric-value">${pct(area.rate)}</div><div class="muted">${area.correct}/${area.total || 0} acertos</div></div>`).join('')}<div class="sim-area-card"><strong>Tempo médio</strong><div class="metric-value">${formatVideoTime(result.averageSeconds)}</div><div class="muted">por questão visitada</div></div></div><div class="sim-review-item" style="margin-top:14px"><div class="section-title"><h2>Foco de estudo</h2><button class="icon-btn" id="sendSimWeakToFeynman">Enviar temas para Feynman</button></div><div class="muted">${escapeHtml(weakText)}</div><div class="topic-source">Prioridade combina erro, questão em branco, chute, dúvida e erro marcado com certeza.</div></div>${renderSimuladoReview(run, result.rows)}</div>`;
+  const errors = result.total - result.correct;
+  const weakText = result.weakTopics.length ? result.weakTopics.slice(0,4).map(item => `${item.topic} (${item.wrong} erro${item.wrong===1?'':'s'})`).join(' · ') : 'Nenhum tema crítico.';
+  const phases = result.phases.map(phase => `<div class="sim-phase-row"><strong>Q${phase.label}</strong><span>${phase.correct}/${phase.total} · ${pct(phase.correct/Math.max(1,phase.total))}</span><span>${phase.averageSeconds?formatVideoTime(phase.averageSeconds):'—'} méd.</span><span>${phase.confidence?Math.round(phase.confidence)+'%':'—'} confiança</span><span>${phase.skipped} em branco</span></div>`).join('');
+  const matrix = [['Acerto sólido',result.matrix.solid,'success'],['Acerto frágil / chute',result.matrix.fragile,'warning'],['Erro reconhecido',result.matrix.recognizedGap,'warning'],['Erro perigoso na certeza',result.matrix.dangerous,'critical']].map(item=>`<div class="sim-matrix-cell ${item[2]}"><strong>${item[1]}</strong><span>${item[0]}</span></div>`).join('');
+  const actions = [];
+  if(result.overconfidentWrong.length) actions.push(`Revisar ${result.overconfidentWrong.length} erro${result.overconfidentWrong.length===1?'':'s'} com alta confiança: possível modelo mental incorreto.`);
+  if(result.fragileCorrect.length) actions.push(`Revisar ${result.fragileCorrect.length} acerto${result.fragileCorrect.length===1?'':'s'} frágil${result.fragileCorrect.length===1?'':'eis'} antes de considerar o tema dominado.`);
+  if(result.skipped.length) actions.push(`Retomar ${result.skipped.length} questão${result.skipped.length===1?'':'ões'} pulada${result.skipped.length===1?'':'s'} em uma segunda passagem cronometrada.`);
+  if(result.changedCorrectToWrong.length) actions.push(`Investigar ${result.changedCorrectToWrong.length} mudança${result.changedCorrectToWrong.length===1?'':'s'} de certa para errada.`);
+  if(!actions.length) actions.push('Manter revisão espaçada e treinar questões com o mesmo nível de dificuldade.');
+  return `<div class="card sim-postmortem"><div class="section-title"><div><span class="eyebrow">Centro de análise pós-simulado</span><h2>${escapeHtml(run.name)}</h2><div class="muted">Diagnóstico de conhecimento, confiança, tempo e qualidade das decisões.</div></div><button class="icon-btn" data-open-sim="${run.id}">Revisar prova</button></div><div class="sim-result-grid"><div class="sim-area-card"><strong>Resultado bruto</strong><div class="metric-value">${pct(result.rate)}</div><div class="muted">${result.correct}/${result.total} acertos</div></div><div class="sim-area-card primary"><strong>Domínio ajustado</strong><div class="metric-value">${pct(result.adjustedRate)}</div><div class="muted">acertos ponderados pela confiança</div></div><div class="sim-area-card"><strong>Tempo total</strong><div class="metric-value">${formatVideoTime(result.totalSeconds)}</div><div class="muted">média ${result.averageSeconds?formatVideoTime(result.averageSeconds):'—'} por questão</div></div><div class="sim-area-card"><strong>Não respondidas</strong><div class="metric-value">${result.skipped.length}</div><div class="muted">questões puladas</div></div><div class="sim-area-card"><strong>Erro na certeza</strong><div class="metric-value">${result.overconfidentWrong.length}</div><div class="muted">prioridade máxima</div></div><div class="sim-area-card"><strong>Alterações</strong><div class="metric-value">${result.changed.reduce((sum,row)=>sum+row.changes,0)}</div><div class="muted">${result.changedWrongToCorrect.length} ajudaram · ${result.changedCorrectToWrong.length} prejudicaram</div></div></div><div class="sim-analysis-section"><div class="section-title"><h3>Matriz acerto × confiança</h3><span class="muted">O que importa é a robustez do acerto.</span></div><div class="sim-matrix">${matrix}</div></div><div class="sim-analysis-section"><div class="section-title"><h3>Tempo e queda de desempenho</h3><span class="muted">Tempo improdutivo estimado: ${formatVideoTime(result.unproductiveSeconds)}</span></div><div class="sim-phase-list">${phases}</div></div><div class="sim-analysis-section"><div class="section-title"><h3>Desempenho por área</h3></div><div class="sim-result-grid">${result.byArea.map(area => { const areaRows=result.rows.filter(row=>row.area===area.area); const dangerous=areaRows.filter(row=>row.overconfidentWrong).length; const fragile=areaRows.filter(row=>row.correct&&row.confidenceScore<80).length; return `<div class="sim-area-card"><strong>${escapeHtml(area.area)}</strong><div class="metric-value">${pct(area.rate)}</div><div class="muted">${area.correct}/${area.total||0} · ${dangerous} erro${dangerous===1?'':'s'} confiante${dangerous===1?'':'s'} · ${fragile} acerto${fragile===1?'':'s'} frágil${fragile===1?'':'eis'}</div></div>`; }).join('')}</div></div><div class="sim-review-item sim-action-plan"><div class="section-title"><h3>Plano prioritário</h3><button class="icon-btn" id="sendSimWeakToFeynman">Enviar temas para Feynman</button></div><ol>${actions.map(action=>`<li>${escapeHtml(action)}</li>`).join('')}</ol><div class="topic-source">Temas críticos: ${escapeHtml(weakText)}</div></div>${renderSimuladoReview(run, result.rows)}</div>`;
 }
 function renderSimuladoReview(run, rows) {
   return `<div class="sim-review-list">${rows.map((row,index) => {
     const tag = questionTag(row.question);
-    const profile = row.skipped ? 'Em branco' : row.overconfidentWrong ? 'Errou na certeza' : row.guessed ? 'Chute' : row.correct ? 'Certa' : 'Errada';
-    return `<div class="sim-review-item ${row.correct?'':'wrong'}"><div class="sim-question-head"><div><strong>Questão ${index+1} · ${escapeHtml(tag.area)}</strong><div class="muted">${escapeHtml(tag.topic)}${tag.subtopic?` · ${escapeHtml(tag.subtopic)}`:''}</div></div><span class="badge ${row.correct?'done':'no'}">${profile}</span></div><div class="muted">Sua resposta: ${escapeHtml(row.selected || 'em branco')} · Gabarito: ${escapeHtml(row.question.answer)} · Tempo: ${row.seconds ? formatVideoTime(row.seconds) : 'não registrado'}</div><div class="field-row" style="margin-top:8px"><input class="input" data-imported-tag="${row.question.id}" data-field="area" value="${escapeAttr(tag.area)}" placeholder="Área ENAMED"><input class="input" data-imported-tag="${row.question.id}" data-field="topic" value="${escapeAttr(tag.topic)}" placeholder="Tema principal"><input class="input" data-imported-tag="${row.question.id}" data-field="subtopic" value="${escapeAttr(tag.subtopic)}" placeholder="Subtema"></div>${row.question.comment?`<details class="material-original-toggle" style="margin-top:8px"><summary>Comentário da questão</summary><div class="markdown-preview">${renderMarkdown(row.question.comment)}</div></details>`:''}</div>`;
+    const profile = simResultClassification(row, {slowLimit:Math.max(120, n(run.elapsedSeconds)/Math.max(1,rows.length)*1.3)});
+    const changes = row.changes ? ` · ${row.changes} alteração${row.changes===1?'':'ões'} (${escapeHtml(row.firstAnswer || '—')} → ${escapeHtml(row.selected || '—')})` : '';
+    return `<div class="sim-review-item ${row.correct?'':'wrong'}"><div class="sim-question-head"><div><strong>Questão ${index+1} · ${escapeHtml(tag.area)}</strong><div class="muted">${escapeHtml(tag.topic)}${tag.subtopic?` · ${escapeHtml(tag.subtopic)}`:''}</div></div><span class="badge ${row.correct?'done':'no'}">${escapeHtml(profile)}</span></div><div class="muted">Sua resposta: ${escapeHtml(row.selected || 'em branco')} · Gabarito: ${escapeHtml(row.question.answer)} · Tempo: ${row.seconds ? formatVideoTime(row.seconds) : 'não registrado'}${changes} · Reaberta: ${row.opened || 0}x</div><div class="field-row" style="margin-top:8px"><input class="input" data-imported-tag="${row.question.id}" data-field="area" value="${escapeAttr(tag.area)}" placeholder="Área ENAMED"><input class="input" data-imported-tag="${row.question.id}" data-field="topic" value="${escapeAttr(tag.topic)}" placeholder="Tema principal"><input class="input" data-imported-tag="${row.question.id}" data-field="subtopic" value="${escapeAttr(tag.subtopic)}" placeholder="Subtema"></div>${row.question.comment?`<details class="material-original-toggle" style="margin-top:8px"><summary>Comentário da questão</summary><div class="markdown-preview">${renderMarkdown(row.question.comment)}</div></details>`:''}</div>`;
   }).join('')}</div>`;
 }
 function bindSimuladoInputs(activeRun) {
@@ -1741,7 +1785,14 @@ function bindSimuladoInputs(activeRun) {
     if((window.getSelection()?.toString() || '').trim().length > 1) return;
     const question = activeSimQuestion(activeRun);
     if(!question) return;
-    activeRun.answers[question.id] = e.currentTarget.dataset.simAnswer;
+    const nextAnswer = e.currentTarget.dataset.simAnswer;
+    const previousAnswer = activeRun.answers?.[question.id] || '';
+    if(!activeRun.firstAnswers[question.id]) activeRun.firstAnswers[question.id] = nextAnswer;
+    if(previousAnswer && previousAnswer !== nextAnswer) {
+      if(!Array.isArray(activeRun.answerHistory[question.id])) activeRun.answerHistory[question.id] = [];
+      activeRun.answerHistory[question.id].push({ from:previousAnswer, to:nextAnswer, elapsedSeconds:n(activeRun.elapsedSeconds), at:new Date().toISOString() });
+    }
+    activeRun.answers[question.id] = nextAnswer;
     if(n(activeRun.currentIndex) < activeRun.questionIds.length - 1) setSimQuestionIndex(activeRun, n(activeRun.currentIndex) + 1);
     saveStateOnly();
     render();
@@ -1859,6 +1910,10 @@ function startImportedSimulado(simId) {
     eliminated: {},
     highlights: {},
     confidence: {},
+    firstAnswers: {},
+    answerHistory: {},
+    openedCount: {},
+    reviewFlags: {},
     areaTargets: {}
   };
   state.simuladoRuns.unshift(run);
@@ -1890,6 +1945,10 @@ function generateSimuladoRun() {
     eliminated: {},
     highlights: {},
     confidence: {},
+    firstAnswers: {},
+    answerHistory: {},
+    openedCount: {},
+    reviewFlags: {},
     areaTargets: targets
   };
   state.simuladoRuns.unshift(run);
