@@ -876,6 +876,7 @@ function setPomodoroPanelOpen(open) {
     const rect=fruit.getBoundingClientRect();
     const panelWidth=Math.min(280, Math.max(220, window.innerWidth - 24));
     const opensRight=(window.innerWidth - rect.right) >= panelWidth + 8;
+    panel.style.setProperty('--pomodoro-mobile-top', `${Math.min(window.innerHeight - 16, rect.bottom + 8)}px`);
     panel.classList.toggle('open-right', opensRight);
     panel.classList.toggle('open-left', !opensRight);
     panel.hidden=false;
