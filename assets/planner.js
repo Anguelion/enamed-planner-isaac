@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-11';
+const QUESTION_BANK_ASSET_VERSION = '20260714-12';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -3164,11 +3164,27 @@ function renderVideoFlashcardEditor(source, lesson, schedule) {
   return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários. Selecione um trecho e use a barra para formatar.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>`<div class="flashcard-editor-item">${renderFlashcardMarkdownField(`data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front"` ,card.front,'Frente: pergunta ou conceito')}${renderFlashcardMarkdownField(`data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso: resposta curta')}<button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
 }
 function addVideoFlashcard(source, lesson, schedule) {
+  const video = document.getElementById('lessonVideo');
+  const wasPlaying = Boolean(video && !video.paused);
+  const currentTime = video ? Math.floor(video.currentTime || 0) : 0;
+  const playbackRate = video?.playbackRate || 1;
   const cards = Array.isArray(state.videoFlashcards[source.id]) ? state.videoFlashcards[source.id] : [];
   cards.unshift({ id:`video-card-${Date.now()}`, front:'', back:'', scheduleId:schedule?.id || '', block:schedule?.block || lesson?.block || '', area:schedule?.area || lesson?.area || 'Sem área', subarea:videoContentLabel(source), topic:schedule?.topic || lesson?.title || videoContentLabel(source), createdAt:new Date().toISOString() });
   state.videoFlashcards[source.id] = cards;
   renderCache.manualCards = null;
-  persist();
+  saveStateOnly();
+  renderAulas();
+  requestAnimationFrame(() => {
+    const nextVideo = document.getElementById('lessonVideo');
+    if(!nextVideo) return;
+    nextVideo.currentTime = currentTime;
+    nextVideo.defaultPlaybackRate = playbackRate;
+    nextVideo.playbackRate = playbackRate;
+    if(wasPlaying) {
+      nextVideo.play().catch(() => {});
+      startAutoStudy('video', schedule?.id || '');
+    }
+  });
 }
 function updateVideoFlashcard(input) {
   const cards = state.videoFlashcards?.[input.dataset.videoCard] || [];
