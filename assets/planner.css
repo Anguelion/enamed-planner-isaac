@@ -1437,3 +1437,31 @@ body.dark .question-tag.tag-tone-3{background:#12343e;color:#8bdcf0;border-color
 body.dark .question-tag.tag-tone-4{background:#3d2422;color:#f2aca3;border-color:#70413b}
 body.dark .question-tag.tag-tone-5{background:#262d38;color:#c5cfde;border-color:#465163}
 body.dark .question-tag-order{background:rgba(255,255,255,.08)}
+
+/* Banco de questoes: o cartao inteiro se comporta como uma area clicavel. */
+.qbank-mode .answer-row,
+.qbank-mode .answer-option,
+.qbank-mode .answer-option .highlightable{cursor:pointer}
+.qbank-mode .answer-option{width:100%}
+
+/* No modo foco, todas as informacoes ficam no cabecalho da questao. */
+.qbank-mode .question-heading{min-width:0}
+.qbank-mode .question-info-stack{margin-top:10px;min-width:0}
+.qbank-mode .question-info-stack .question-meta{margin-bottom:7px}
+.qbank-mode.sidebar-collapsed .question-topbar{position:sticky;top:0;z-index:30;display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px;min-height:70px;overflow:visible;isolation:isolate}
+.qbank-mode.sidebar-collapsed .question-topbar>.question-heading{flex:1 1 190px;min-width:0}
+.qbank-mode.sidebar-collapsed .question-topbar>.question-tool-strip{flex:1 1 100%;width:100%;justify-content:flex-start;min-width:0;overflow:visible}
+.qbank-mode.sidebar-collapsed .question-topbar .question-info-stack{max-width:100%;overflow:visible}
+.qbank-mode.sidebar-collapsed .question-topbar .question-tag-list{max-height:none;overflow:visible}
+.qbank-mode.sidebar-collapsed .question-timer-popover{z-index:45}
+.question-focus-progress{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:9px;padding-top:8px;border-top:1px solid var(--line);font-size:13px}
+.question-focus-progress span{color:var(--muted);white-space:nowrap}
+@media(max-width:620px){
+  .qbank-mode.sidebar-collapsed .question-topbar{padding:12px;gap:8px}
+  .qbank-mode.sidebar-collapsed .question-topbar>.question-heading{flex-basis:calc(100% - 50px)}
+  .qbank-mode.sidebar-collapsed .question-topbar>.question-tool-strip{flex-basis:100%;gap:6px}
+  .qbank-mode.sidebar-collapsed .question-topbar .question-tool-strip .icon-btn,
+  .qbank-mode.sidebar-collapsed .question-topbar .question-tool-strip .tiny-btn{min-width:38px;min-height:38px}
+  .qbank-mode.sidebar-collapsed .question-info-stack{margin-top:8px}
+  .qbank-mode.sidebar-collapsed .question-info-stack .question-meta{gap:5px}
+}

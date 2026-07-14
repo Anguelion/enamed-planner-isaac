@@ -1,6 +1,7 @@
 const STORAGE_KEY = 'enamed-planner-v3';
 const THEME_KEY = 'enamed-theme';
 const UI_TAB_KEY = 'enamed-planner-active-tab';
+const QUESTION_VIEW_KEY = 'enamed-planner-question-view';
 const SIDEBAR_KEY = 'enamed-planner-sidebar-collapsed';
 const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
@@ -58,7 +59,8 @@ ensureDayLogs();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+try { Object.assign(ui, JSON.parse(localStorage.getItem(QUESTION_VIEW_KEY) || '{}')); } catch(error) {}
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
@@ -4392,7 +4394,9 @@ function openQuestionsForSchedule(scheduleId) {
   ui.qSource = 'Todas';
   ui.qTopic = exact.length ? item.topic : 'Todos';
   ui.qStatus = 'Não respondidas';
+  ui.qFocusTarget = Math.max(1, Math.round(n(item.metaQ) || n(item.targetQ) || 10));
   ui.qIndex = 0;
+  ui.qQuestionId = '';
   ui.justAnsweredId = '';
   resetKeyboardConfirmation();
   render();
@@ -4409,7 +4413,7 @@ function openFlashcardsForSchedule(scheduleId) {
   render();
 }
 function filteredQuestions() {
-  return questionBank.filter(question => {
+  const filtered = questionBank.filter(question => {
     const result = questionResult(question);
     const query = normalizedTopic(ui.qSearch || '');
     const searchable = normalizedTopic([
@@ -4432,6 +4436,10 @@ function filteredQuestions() {
       || (ui.qStatus === 'Gabarito suspeito' && Boolean(state.questionProgress[question.id]?.answerKeyIssue));
     return searchOk && focusOk && blockOk && sourceOk && topicOk && statusOk;
   });
+  if(!ui.qFocusScheduleId || !n(ui.qFocusTarget)) return filtered;
+  const completed = questionBank.filter(question => scheduleForQuestion(question)?.id === ui.qFocusScheduleId && questionResult(question)).length;
+  const remaining = Math.max(0, n(ui.qFocusTarget) - completed);
+  return filtered.slice(0, remaining);
 }
 function renderQuestionTags(question) {
   const tags = Array.isArray(question.tags) ? question.tags.filter(Boolean) : [];
@@ -4485,6 +4493,32 @@ function setQuestionFocusMode(enabled) {
     stopAutoStudy('questions');
   }
 }
+function persistQuestionView() {
+  if(ui.tab !== 'questoes') return;
+  localStorage.setItem(QUESTION_VIEW_KEY, JSON.stringify({
+    qBlock: ui.qBlock,
+    qSource: ui.qSource,
+    qTopic: ui.qTopic,
+    qStatus: ui.qStatus,
+    qSearch: ui.qSearch || '',
+    qIndex: ui.qIndex,
+    qQuestionId: ui.qQuestionId || '',
+    qFocusScheduleId: ui.qFocusScheduleId || '',
+    qFocusTarget: n(ui.qFocusTarget) || 0
+  }));
+}
+function navigateQuestionBy(delta) {
+  if(ui.tab !== 'questoes') return;
+  const questions = filteredQuestions();
+  if(!questions.length) return;
+  if(!settleQuestionTimerBeforeLeave()) return;
+  stopQuestionTimer(true);
+  resetKeyboardConfirmation();
+  ui.justAnsweredId = '';
+  ui.qIndex = Math.max(0, Math.min(questions.length - 1, ui.qIndex + delta));
+  ui.qQuestionId = questions[ui.qIndex]?.id || '';
+  render();
+}
 function renderQuestionBank() {
   stopAutoStudy('video');
   ensureQuestionProgress();
@@ -4502,8 +4536,13 @@ function renderQuestionBank() {
   const topics = ['Todos', ...new Set(scopedBySource.map(q => q.topic))];
   if(ui.qTopic !== 'Todos' && !topics.includes(ui.qTopic)) ui.qTopic = 'Todos';
   const questions = filteredQuestions();
+  if(ui.qQuestionId) {
+    const savedIndex = questions.findIndex(item => item.id === ui.qQuestionId);
+    if(savedIndex >= 0) ui.qIndex = savedIndex;
+  }
   ui.qIndex = Math.max(0, Math.min(ui.qIndex, Math.max(questions.length - 1, 0)));
   const question = questions[ui.qIndex];
+  ui.qQuestionId = question?.id || '';
   const activeQuestion = question ? applyQuestionEdits(question) : null;
   document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
     <aside class="card question-sidebar">
@@ -4513,7 +4552,7 @@ function renderQuestionBank() {
       <button class="question-issue-summary ${flagged?'has-items':''}" id="showQuestionIssues"><span>⚑</span><strong>${flagged}</strong><span>${flagged===1?'gabarito marcado':'gabaritos marcados'}</span></button>
       ${progress('Aproveitamento', correct.length/Math.max(answered.length,1), `${correct.length} de ${answered.length}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
-      ${focusItem ? `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>` : ''}
+      ${focusItem ? (() => { const target=Math.max(1,Math.round(n(ui.qFocusTarget)||n(focusItem.metaQ)||10)); const completed=questionBank.filter(item=>scheduleForQuestion(item)?.id===focusItem.id&&questionResult(item)).length; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
       <details class="question-filter-panel"><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? 'Todas' : questionCollectionLabel(ui.qBlock))}</span></summary>
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel"><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
@@ -4542,8 +4581,8 @@ function renderQuestionBank() {
   };
   document.getElementById('showQuestionIssues').onclick = () => { ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   const clearFocus = document.getElementById('clearQuestionFocus');
-  if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qIndex=0; render(); };
-  document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); });
+  if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qFocusTarget=0; ui.qQuestionId=''; ui.qIndex=0; render(); };
+  document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusTarget=0; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
   bindQuestionTagFilters();
   bindQuestionActions(questions, activeQuestion);
   if(questionSidebarCollapsed && activeQuestion && !autoStudyIsRunning('questions')) startAutoStudy('questions',scheduleForQuestion(activeQuestion)?.id || '',60);
@@ -4590,9 +4629,11 @@ function renderQuestion(question, total) {
   const comment = result && question.comment ? renderQuestionCommentPanel(question, result, highlights) : '';
   const reviewButton = result && !result.correct ? `<button class="icon-btn" id="questionFeynman">Enviar tema para Feynman</button>` : '';
   const highlightTools = textHighlightEnabled() ? `<div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearHighlights">Limpar</button></div>` : '';
-  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div></div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" ${ui.qIndex>=total-1?'disabled':''}>›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
-    <div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>
-    ${renderQuestionTags(question)}
+  const questionInfo = `<div class="question-info-stack"><div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>${renderQuestionTags(question)}</div>`;
+  const focusInfo = questionSidebarCollapsed ? questionInfo : '';
+  const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
+  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" ${ui.qIndex>=total-1?'disabled':''}>›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
+    ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}</div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
     <div class="section-title"><h2>Questão ${question.number}</h2>${highlightTools}</div>
@@ -4839,15 +4880,8 @@ function bindQuestionActions(questions, question) {
     saveStateOnly();
     render();
   });
-  const goPrev = () => { if(!settleQuestionTimerBeforeLeave()) return; stopQuestionTimer(true); resetKeyboardConfirmation(); ui.justAnsweredId=''; ui.qIndex=Math.max(0,ui.qIndex-1); render(); };
-  const goNext = () => {
-    if(!settleQuestionTimerBeforeLeave()) return;
-    stopQuestionTimer(true);
-    resetKeyboardConfirmation();
-    if(ui.justAnsweredId) ui.justAnsweredId='';
-    else ui.qIndex=Math.min(questions.length-1,ui.qIndex+1);
-    render();
-  };
+  const goPrev = () => navigateQuestionBy(-1);
+  const goNext = () => navigateQuestionBy(1);
   if(prev) prev.onclick = goPrev;
   if(next) next.onclick = goNext;
   if(topPrev) topPrev.onclick = goPrev;
@@ -5113,6 +5147,10 @@ function handleQuestionKeyboard(event) {
   if(ui.tab !== 'questoes' || event.ctrlKey || event.metaKey || event.altKey) return;
   const target = event.target;
   if(target?.matches?.('input, textarea, select, [contenteditable="true"]')) return;
+  if(event.key === 'ArrowRight') { event.preventDefault(); navigateQuestionBy(1); return; }
+  if(event.key === 'ArrowLeft') { event.preventDefault(); navigateQuestionBy(-1); return; }
+  if(event.key === 'ArrowDown') { event.preventDefault(); window.scrollBy({ top: Math.max(280, window.innerHeight * .72), behavior: 'smooth' }); return; }
+  if(event.key === 'ArrowUp') { event.preventDefault(); window.scrollBy({ top: -Math.max(280, window.innerHeight * .72), behavior: 'smooth' }); return; }
   const questions = filteredQuestions();
   const question = questions[ui.qIndex] ? applyQuestionEdits(questions[ui.qIndex]) : null;
   if(!question || questionResult(question)) return;
@@ -5716,6 +5754,7 @@ function render() {
     prescricao: renderPrescription
   };
   renderers[ui.tab]?.();
+  persistQuestionView();
   ensurePomodoroWidget();
   updatePomodoroWidget();
 }
