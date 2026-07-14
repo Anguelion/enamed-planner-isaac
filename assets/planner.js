@@ -3178,6 +3178,8 @@ function currentVideoLesson() {
     if(pinnedLesson) {
       ui.videoLessonId = pinnedLesson.id;
       ui.videoSourceId = pinnedLesson.videos.some(video => video.id === pinned.sourceId) ? pinned.sourceId : pinnedLesson.videos[0]?.id || '';
+      ui.videoBlock = String(pinnedLesson.block);
+      ui.videoSearch = '';
       return pinnedLesson;
     }
   }
@@ -3187,8 +3189,15 @@ function currentVideoLesson() {
     if(rememberedLesson) {
       ui.videoLessonId = rememberedLesson.id;
       ui.videoSourceId = rememberedLesson.videos.some(video => video.id === lastOpen.sourceId) ? lastOpen.sourceId : rememberedLesson.videos[0]?.id || '';
+      ui.videoBlock = String(rememberedLesson.block);
+      ui.videoSearch = '';
       return rememberedLesson;
     }
+  }
+  const selectedLesson = displayVideoLessons().find(lesson => lesson.id === ui.videoLessonId);
+  if(selectedLesson) {
+    ui.videoBlock = String(selectedLesson.block);
+    return selectedLesson;
   }
   const visible = visibleVideoLessons();
   if(!visible.length) return null;
@@ -3229,8 +3238,8 @@ function renderAulas() {
   }
   const catalogLessons = displayVideoLessons();
   const blocks = [...new Set(catalogLessons.map(lesson => lesson.block))].sort((a,b)=>a-b);
-  const visible = visibleVideoLessons();
   const lesson = currentVideoLesson();
+  const visible = visibleVideoLessons();
   const source = currentVideoSource(lesson);
   const schedule = lesson ? videoScheduleForLesson(lesson) : null;
   const parts = lesson ? videoParts(lesson) : [];
@@ -3350,10 +3359,16 @@ function renderAulas() {
   });
   document.querySelectorAll('[data-video-source]').forEach(button => button.onclick = event => { stopAutoStudy('video'); saveOpenVideoPosition(); ui.videoSourceId=event.currentTarget.dataset.videoSource; state.videoPlayer.lastOpen={lessonId:ui.videoLessonId,sourceId:ui.videoSourceId}; saveStateOnly(); renderAulas(); });
   document.getElementById('toggleVideoFocus')?.addEventListener('click', () => {
-    saveOpenVideoPosition();
     ui.videoFocusMode = !ui.videoFocusMode;
     localStorage.setItem(VIDEO_FOCUS_KEY, ui.videoFocusMode ? '1' : '0');
-    renderAulas();
+    const layout=mount.querySelector('.video-layout');
+    const button=document.getElementById('toggleVideoFocus');
+    layout?.classList.toggle('video-focus-mode',ui.videoFocusMode);
+    if(button) {
+      button.setAttribute('aria-pressed',String(ui.videoFocusMode));
+      button.title=ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes';
+      button.textContent=ui.videoFocusMode?'Sair do foco':'⛶ Foco';
+    }
   });
   document.querySelectorAll('[data-video-questions]').forEach(button => button.onclick = event => openQuestionsForSchedule(event.currentTarget.dataset.videoQuestions));
   document.querySelectorAll('[data-video-materials]').forEach(button => button.onclick = event => openMaterialsForSchedule(event.currentTarget.dataset.videoMaterials));
