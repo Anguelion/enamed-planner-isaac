@@ -1486,3 +1486,8 @@ body.dark .question-tag-order{background:rgba(255,255,255,.08)}
 .flashcard-study-card .flashcard-back p{margin:0 0 12px}.flashcard-study-card .flashcard-back p:last-child{margin-bottom:0}.flashcard-study-card .flashcard-actions{width:min(680px,100%);margin:0 auto}.flashcard-study-card .flashcard-rating{gap:6px}.flashcard-study-card .flashcard-rating .icon-btn{min-height:42px;padding:7px 8px;border-radius:7px;font-size:13px}.flashcard-study-card .flashcard-rating .icon-btn strong{font-size:16px}.flashcard-study-card .flashcard-rating small{font-size:11px}.flashcard-study-card .flashcard-actions>[data-card-suspend]{align-self:center;min-height:34px;padding:6px 12px;font-size:12px}
 body.dark .flashcard-study-card .flashcard-back{background:linear-gradient(145deg,#263c4b,#202a2a);border-color:#35677e;color:var(--ink);box-shadow:0 12px 28px rgba(0,0,0,.24)}
 @media(max-width:700px){.flashcard-study-card .flashcard-back{padding:22px 18px;font-size:23px;line-height:1.48}.flashcard-study-card .flashcard-rating .icon-btn{min-height:38px;padding:5px 4px;font-size:12px}.flashcard-study-card .flashcard-rating small{font-size:10px}}
+
+/* Trilha do dia: tres estacoes sempre na mesma linha. Em telas estreitas, deslize horizontalmente. */
+.dashboard-road .road-path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:column;align-items:stretch;gap:12px;overflow-x:auto;overflow-y:hidden;padding:2px 2px 8px;scroll-snap-type:x proximity}
+.dashboard-road .road-step{grid-row:1;min-width:0;min-height:190px;scroll-snap-align:start}
+@media(max-width:760px){.dashboard-road .road-path{grid-template-columns:repeat(3,minmax(248px,1fr));overflow-x:auto}.dashboard-road .road-step{min-height:178px}}
