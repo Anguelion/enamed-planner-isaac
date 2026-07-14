@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-15';
+const QUESTION_BANK_ASSET_VERSION = '20260714-17';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -3960,7 +3960,7 @@ function nextFsrsProgress(card, rating) {
   const dueDate = new Date();
   if(scheduledDays < 1) dueDate.setMinutes(dueDate.getMinutes() + (r === 1 ? 10 : 20));
   else dueDate.setDate(dueDate.getDate() + scheduledDays);
-  return { state:r === 1 ? 'relearning' : first ? 'learning' : 'review', stability, difficulty, scheduledDays, learningSteps:r === 1 ? 1 : 0, reps:n(current.reps) + 1, lapses:n(current.lapses) + (r === 1 ? 1 : 0), due:localISODate(dueDate), interval:scheduledDays, ease:Math.max(1.3, 2.5 - (difficulty - 5) * 0.08), status:r === 1 ? 'Difícil' : r === 2 ? 'Dúvida' : r === 4 ? 'Fácil' : 'Bom', lastRating:r };
+  return { state:r === 1 ? 'relearning' : first ? 'learning' : 'review', stability, difficulty, scheduledDays, learningSteps:r === 1 ? 1 : 0, reps:n(current.reps) + 1, lapses:n(current.lapses) + (r === 1 ? 1 : 0), due:localISODate(dueDate), dueAt:dueDate.toISOString(), interval:scheduledDays, ease:Math.max(1.3, 2.5 - (difficulty - 5) * 0.08), status:r === 1 ? 'Difícil' : r === 2 ? 'Dúvida' : r === 4 ? 'Fácil' : 'Bom', lastRating:r };
 }
 function manualFlashcards() {
   if(renderCache.manualCards) return renderCache.manualCards;
@@ -4003,11 +4003,17 @@ function flashcardProgress(card) {
     lastRating: n(progress.lastRating || progress.lastQuality),
     status: progress.status || (card.isSuspended ? 'Suspenso' : card.state === 'new' ? 'Novo' : 'Bom'),
     lastReviewedAt: progress.lastReviewedAt || '',
-    nextReview: progress.nextReview || card.due || localISODate(new Date())
+    nextReview: progress.nextReview || card.due || localISODate(new Date()),
+    dueAt: progress.dueAt || card.dueAt || ''
   };
 }
 function isFlashcardDue(card, date=localISODate(new Date())) {
-  return flashcardProgress(card).nextReview <= date;
+  const progress = flashcardProgress(card);
+  if(progress.dueAt) {
+    const timestamp = Date.parse(progress.dueAt);
+    if(Number.isFinite(timestamp)) return timestamp <= Date.now();
+  }
+  return progress.nextReview <= date;
 }
 function flashcardReviewsToday() {
   const today = studyDateKey();
@@ -4034,8 +4040,8 @@ function flashcardStudyQueue(all=manualFlashcards()) {
   const base = filteredFlashcards(all);
   if(ui.flashcardFilter !== 'Devidos') return base;
   const reviews = base
-    .filter(card => flashcardProgress(card).reviews > 0 && flashcardProgress(card).nextReview <= today)
-    .sort((a,b)=>String(flashcardProgress(a).nextReview).localeCompare(String(flashcardProgress(b).nextReview)));
+    .filter(card => flashcardProgress(card).reviews > 0 && isFlashcardDue(card, today))
+    .sort((a,b)=>String(flashcardProgress(a).dueAt || flashcardProgress(a).nextReview).localeCompare(String(flashcardProgress(b).dueAt || flashcardProgress(b).nextReview)));
   const news = base.filter(card => !flashcardProgress(card).reviews);
   const buried = new Set();
   const burySiblings = cards => cards.filter(card => {
@@ -4051,7 +4057,7 @@ function filteredFlashcards(all=manualFlashcards()) {
   return all.filter(card => {
     const progress = flashcardProgress(card);
     const filterOk = ui.flashcardFilter === 'Todos'
-      || (ui.flashcardFilter === 'Devidos' && progress.nextReview <= today)
+      || (ui.flashcardFilter === 'Devidos' && isFlashcardDue(card, today))
       || (ui.flashcardFilter === 'Novos' && !progress.reviews)
       || (ui.flashcardFilter === 'Maduros' && progress.interval >= 21)
       || (ui.flashcardFilter === 'Difíceis' && (progress.status === 'Difícil' || progress.ease < 2.2))
@@ -4258,9 +4264,10 @@ function reviewFlashcard(id, quality) {
     lastQuality: quality,
     lastRating: quality,
     lastReviewedAt: new Date().toISOString(),
-    nextReview: isLeech ? '2099-12-31' : fsrs.due
+    nextReview: isLeech ? '2099-12-31' : fsrs.due,
+    dueAt: isLeech ? '2099-12-31T23:59:59.000Z' : fsrs.dueAt
   };
-  Object.assign(card, { ...fsrs, due:isLeech ? '2099-12-31' : fsrs.due, isSuspended:isLeech, contentVersion:Math.max(1,n(card.contentVersion)||1), rowVersion:Math.max(1,n(card.rowVersion)||1)+1 });
+  Object.assign(card, { ...fsrs, due:isLeech ? '2099-12-31' : fsrs.due, dueAt:isLeech ? '2099-12-31T23:59:59.000Z' : fsrs.dueAt, isSuspended:isLeech, contentVersion:Math.max(1,n(card.contentVersion)||1), rowVersion:Math.max(1,n(card.rowVersion)||1)+1 });
   state.flashcardSystem.reviewLogs.push({id:newFlashcardId('review'),cardId:id,rating:quality,reviewedAt:new Date().toISOString(),before:beforeCard,after:{...card},scheduledDays:fsrs.scheduledDays});
   state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.slice(-500);
   state.flashcardSystem.undoStack.push({cardId:id,previousProgress:{...current},beforeCard,reviewId:state.flashcardSystem.reviewLogs.at(-1).id});
