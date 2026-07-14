@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-10';
+const QUESTION_BANK_ASSET_VERSION = '20260714-11';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -1124,6 +1124,32 @@ function ensureSimTopics() {
     questionTimingStart: Math.max(0, n(run.questionTimingStart)),
     areaTargets: run.areaTargets && typeof run.areaTargets === 'object' ? run.areaTargets : defaultSimuladoTargets()
   }));
+  ensureSimuladoSundaySchedule();
+}
+function ensureSimuladoSundaySchedule() {
+  const version = 'simulados-domingos-2026-v1';
+  if(state.dashboardSettings?.simuladoSundayVersion === version || !Array.isArray(state.simulados) || !state.simulados.length) return false;
+  if(!state.dashboardSettings || typeof state.dashboardSettings !== 'object') state.dashboardSettings = {};
+  const sims = [...state.simulados].sort((a,b) => String(a.date || '').localeCompare(String(b.date || '')));
+  const start = new Date('2026-07-19T12:00:00');
+  const oldDates = new Set(sims.map(sim => sim.date).filter(Boolean));
+  sims.forEach((sim, index) => {
+    const date = new Date(start);
+    date.setDate(start.getDate() + index * 21);
+    sim.date = localISODate(date);
+  });
+  if(Array.isArray(state.dayLogs)) {
+    state.dayLogs.forEach(log => {
+      if(/SIMULADO/i.test(String(log.videoNames || ''))) log.videoNames = String(log.videoNames).replace(/🏆\s*SIMULADO\s*\d+\s*→[^|]*/gi, '').replace(/\s{2,}/g, ' ').trim();
+    });
+  }
+  sims.forEach((sim, index) => {
+    const log = getDayLog(sim.date);
+    const marker = `🏆 SIMULADO ${index + 1} → abra a aba Simulados`;
+    log.videoNames = [String(log.videoNames || '').trim(), marker].filter(Boolean).join(' · ');
+  });
+  state.dashboardSettings.simuladoSundayVersion = version;
+  return true;
 }
 function defaultSimuladoTargets() { return Object.fromEntries(ENAMED_AREAS.map(area => [area, 20])); }
 function scheduleTopicOptions() {
@@ -1351,9 +1377,9 @@ function dayRoadItems(date) {
     ? lessons.slice(0,2).map(item => item.topic).join(' + ') + (lessons.length > 2 ? ` +${lessons.length - 2}` : '')
     : 'Abrir videoaula do dia';
   return [
-    { id: 'daily-video', type: 'Aquecimento', icon: '▶', label: lessonLabel, done: videosDone >= videoTarget, progress: videosDone, target: videoTarget, unit: videoTarget === 1 ? 'aula' : 'aulas', foot: lessons.length ? `Bloco ${lessons[0].block} · ${dayVideoFiles.length ? `${dayVideoFiles.length} arquivos disponíveis` : lessons.map(item=>item.area).filter(Boolean).slice(0,2).join(' / ')}` : 'Primeiro trecho do caminho' },
-    { id: 'daily-questions', type: 'Desafio', icon: 'Q', label: `${questionTarget} questões`, done: n(log.questions) >= questionTarget, progress: n(log.questions), target: questionTarget, unit: 'questões', foot: n(log.correct)+n(log.wrong) ? `${pct(dayScore(log))} de nota` : 'Meta mínima antes de liberar o check' },
-    { id: 'daily-flashcards', type: 'Fixação', icon: 'FC', label: `${flashcardTarget} flashcards`, done: n(log.flashcards) >= flashcardTarget, progress: n(log.flashcards), target: flashcardTarget, unit: 'flashcards', foot: 'Fechamento do ciclo de revisão' }
+    { id: 'daily-video', scheduleId: lessons[0]?.id || '', type: 'Aquecimento', icon: '▶', label: lessonLabel, done: videosDone >= videoTarget, progress: videosDone, target: videoTarget, unit: videoTarget === 1 ? 'aula' : 'aulas', foot: lessons.length ? `Bloco ${lessons[0].block} · ${dayVideoFiles.length ? `${dayVideoFiles.length} arquivos disponíveis` : lessons.map(item=>item.area).filter(Boolean).slice(0,2).join(' / ')}` : 'Primeiro trecho do caminho' },
+    { id: 'daily-questions', scheduleId: lessons[0]?.id || '', type: 'Desafio', icon: 'Q', label: `${questionTarget} questões`, done: n(log.questions) >= questionTarget, progress: n(log.questions), target: questionTarget, unit: 'questões', foot: n(log.correct)+n(log.wrong) ? `${pct(dayScore(log))} de nota` : 'Meta mínima antes de liberar o check' },
+    { id: 'daily-flashcards', scheduleId: lessons[0]?.id || '', type: 'Fixação', icon: 'FC', label: `${flashcardTarget} flashcards`, done: n(log.flashcards) >= flashcardTarget, progress: n(log.flashcards), target: flashcardTarget, unit: 'flashcards', foot: 'Fechamento do ciclo de revisão' }
   ];
 }
 function renderDailyRoad(date) {
@@ -1363,7 +1389,7 @@ function renderDailyRoad(date) {
     const ratio = clamp(n(item.progress) / Math.max(n(item.target), 1));
     const partial = !item.done && n(item.progress) > 0;
     const statusText = item.done ? 'concluída' : partial ? 'em progresso' : 'na fila';
-    return `<div class="road-step ${item.done?'complete':''} ${partial?'partial':''} ${index===firstOpen?'active':''}"><div class="road-step-head"><div class="road-dot">${item.done?'✓':index+1}</div><div><strong>${escapeHtml(item.type)}</strong><div class="road-mini">Etapa ${index+1} de ${items.length}</div></div><div class="road-icon">${escapeHtml(item.icon)}</div></div><div class="road-label">${escapeHtml(item.label)}</div><div class="road-sub muted">${escapeHtml(item.foot)}</div><div class="road-progress"><div class="road-progress-row"><span>${Math.round(n(item.progress))} / ${Math.round(n(item.target))} ${escapeHtml(item.unit)}</span><span>${pct(ratio)}</span></div><div class="progress"><span style="width:${pct(ratio)}"></span></div></div><div class="road-actions"><button class="tiny-btn" data-road-step="${escapeAttr(item.id)}">Abrir estação</button><span class="checkin-stamp ${item.done?'complete':''}">${statusText}</span></div></div>`;
+    return `<div class="road-step ${item.done?'complete':''} ${partial?'partial':''} ${index===firstOpen?'active':''}><div class="road-step-head"><div class="road-dot">${item.done?'✓':index+1}</div><div><strong>${escapeHtml(item.type)}</strong><div class="road-mini">Etapa ${index+1} de ${items.length}</div></div><div class="road-icon">${escapeHtml(item.icon)}</div></div><div class="road-label">${escapeHtml(item.label)}</div><div class="road-sub muted">${escapeHtml(item.foot)}</div><div class="road-progress"><div class="road-progress-row"><span>${Math.round(n(item.progress))} / ${Math.round(n(item.target))} ${escapeHtml(item.unit)}</span><span>${pct(ratio)}</span></div><div class="progress"><span style="width:${pct(ratio)}"></span></div></div><div class="road-actions"><button class="tiny-btn" data-road-step="${escapeAttr(item.id)}" data-road-schedule="${escapeAttr(item.scheduleId || '')}">${item.type === 'Aquecimento' ? '▶ Vídeo' : item.type === 'Desafio' ? 'Q Questões' : '▤ Flashcards'}</button><span class="checkin-stamp ${item.done?'complete':''}">${statusText}</span></div></div>`;
   }).join('')}</div></div>`;
 }
 function toggleRoadCheckin(date, id) {
@@ -1575,6 +1601,10 @@ function renderPainel() {
   startDashboardCountdown();
   document.querySelectorAll('[data-road-step]').forEach(button => button.onclick = e => {
     const target = e.currentTarget.dataset.roadStep;
+    const scheduleId = e.currentTarget.dataset.roadSchedule;
+    if(target === 'daily-questions' && scheduleId) { openQuestionsForSchedule(scheduleId); return; }
+    if(target === 'daily-flashcards' && scheduleId) { openFlashcardsForSchedule(scheduleId); return; }
+    if(target === 'daily-video' && scheduleId) { openVideosForSchedule(scheduleId); return; }
     if(target === 'daily-questions') ui.tab = 'questoes';
     else if(target === 'daily-flashcards') ui.tab = 'flashcards';
     else { openDayVideos(ui.refDate); return; }
@@ -4490,8 +4520,11 @@ function openFlashcardsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
   ui.tab = 'flashcards';
+  ui.flashcardBlock = item.block ? String(item.block) : 'Todos';
   ui.flashcardArea = item.area || 'Todas';
   ui.flashcardSubarea = item.topic || 'Todas';
+  ui.flashcardSubject = item.topic || '';
+  ui.flashcardDeck = '';
   ui.flashcardFilter = 'Todos';
   ui.flashcardDeck = '';
   ui.flashcardIndex = 0;
