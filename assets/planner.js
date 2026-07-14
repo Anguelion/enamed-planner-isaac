@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-8';
+const QUESTION_BANK_ASSET_VERSION = '20260714-9';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -3669,8 +3669,18 @@ function bindVideoPlayer(source, schedule, lesson) {
         return;
       }
       const nextTime = Math.floor(Number.isFinite(video.duration) ? Math.min(parsed, Math.max(0, video.duration - .1)) : parsed);
-      state.videoPlayer.bookmarks[source.id] = entries.map(item => item.id === bookmark.id ? {...item, time:nextTime, label:item.label || bookmark.label || 'Ponto importante'} : item).sort((a,b) => a.time-b.time);
-      refreshVideoKeepingPlayback();
+      // O nome pode ter acabado de ser editado na tela. Mesclamos somente o
+      // tempo com o registro atual, sem reconstruir o ponto a partir de uma
+      // cópia antiga nem redesenhar o vídeo.
+      const visibleLabel = input.closest('.video-bookmark')?.querySelector('.video-bookmark-label')?.textContent?.trim();
+      const updated = {...bookmark, time:nextTime, label:visibleLabel || bookmark.label || 'Ponto importante'};
+      state.videoPlayer.bookmarks[source.id] = entries.map(item => item.id === bookmark.id ? updated : item).sort((a,b) => a.time-b.time);
+      const seekButton = input.previousElementSibling;
+      if(seekButton?.matches?.('[data-video-seek]')) {
+        seekButton.dataset.videoSeek = String(nextTime);
+        seekButton.textContent = formatVideoTime(nextTime);
+      }
+      saveStateOnly();
     };
     input.onchange = saveBookmarkTime;
     input.onkeydown = event => { if(event.key === 'Enter') { event.preventDefault(); input.blur(); } };
