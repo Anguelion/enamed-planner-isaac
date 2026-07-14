@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-14';
+const QUESTION_BANK_ASSET_VERSION = '20260714-15';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -3191,6 +3191,7 @@ function updateVideoFlashcard(input) {
   const card = cards.find(item => item.id === input.dataset.cardId);
   if(!card) return;
   card[input.dataset.cardField] = input.value;
+  if(input.dataset.cardField === 'subarea') card.topic = input.value;
   renderCache.manualCards = null;
   saveStateOnly();
 }
@@ -4076,8 +4077,13 @@ function renderFlashcards() {
   const reviewsToday = flashcardReviewsToday();
   const newToday = flashcardNewToday();
   const forecast = flashcardDueForecast(7);
+  if(ui.flashcardCurrentCardId) {
+    const anchoredIndex = cards.findIndex(card => card.id === ui.flashcardCurrentCardId);
+    if(anchoredIndex >= 0) ui.flashcardIndex = anchoredIndex;
+  }
   ui.flashcardIndex = Math.max(0, Math.min(n(ui.flashcardIndex), Math.max(cards.length - 1, 0)));
   const study = cards[ui.flashcardIndex];
+  ui.flashcardCurrentCardId = study?.id || '';
   const groups = groupFlashcards(cards);
   const selectedBlock = ui.flashcardBlock || 'Todos';
   const blockCards = selectedBlock === 'Todos' ? all : all.filter(card => String(card.weeklyBlockId || card.block) === String(selectedBlock));
@@ -4131,6 +4137,10 @@ function renderFlashcards() {
   document.querySelectorAll('[data-question-card][data-card-id][data-card-field], [data-library-card][data-card-id][data-card-field]').forEach(input => {
     input.oninput = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
+  });
+  document.querySelectorAll('[data-video-card][data-card-id][data-card-field]').forEach(input => {
+    input.oninput = e => updateVideoFlashcard(e.currentTarget);
+    input.onchange = e => updateVideoFlashcard(e.currentTarget);
   });
   bindFlashcardMarkdownTools(document.getElementById('flashcards') || document);
   if(study) startAutoStudy('flashcards', study.scheduleId || '');
@@ -4212,7 +4222,7 @@ function renderFlashcardStudy(card, queue=[]) {
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;
-  const sourceAttr = card.questionId ? `data-question-card="${escapeAttr(card.questionId)}"` : `data-library-card="${escapeAttr(card.id)}"`;
+  const sourceAttr = card.questionId ? `data-question-card="${escapeAttr(card.questionId)}"` : card.videoId ? `data-video-card="${escapeAttr(card.videoId)}"` : `data-library-card="${escapeAttr(card.id)}"`;
   return `<div class="flashcard-inline-editor">
     ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="front"`,card.front,'Frente')}
     ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso')}
@@ -4260,6 +4270,7 @@ function reviewFlashcard(id, quality) {
   const queueAfter = flashcardStudyQueue(flashcardAllRecords());
   const nextIndex = nextId ? queueAfter.findIndex(card => card.id === nextId) : -1;
   ui.flashcardIndex = nextIndex >= 0 ? nextIndex : Math.min(currentIndex, Math.max(queueAfter.length - 1, 0));
+  ui.flashcardCurrentCardId = queueAfter[ui.flashcardIndex]?.id || '';
   persist();
 }
 function undoFlashcardReview() {
@@ -4294,6 +4305,7 @@ function adjustFlashcardDayCount(timestamp, delta) {
 }
 function moveFlashcardSession(delta, total) {
   ui.flashcardIndex = Math.max(0, Math.min(Math.max(total - 1, 0), n(ui.flashcardIndex) + delta));
+  ui.flashcardCurrentCardId = '';
   ui.revealedCards = {};
   renderFlashcards();
 }
