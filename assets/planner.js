@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-21';
+const QUESTION_BANK_ASSET_VERSION = '20260714-22';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -1871,7 +1871,7 @@ function renderSimuladoExam(run, questions, question) {
   const highlights = Array.isArray(run.highlights?.[question.id]) ? run.highlights[question.id] : [];
   const options = Object.entries(question.options || {}).map(([letter,text]) => {
     const isEliminated = eliminated.includes(letter);
-    return `<div class="sim-answer-row"><button class="eliminate-btn ${isEliminated?'active':''}" data-sim-eliminate="${letter}" title="Riscar alternativa ${letter}">×</button><button class="sim-answer ${selected===letter?'selected':''} ${isEliminated?'eliminated':''}" data-sim-answer="${letter}"><span class="answer-letter">${letter}</span><span class="sim-highlightable" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, highlights)}</span></button></div>`;
+    return `<div class="sim-answer-row"><button class="eliminate-btn ${isEliminated?'active':''}" data-sim-eliminate="${letter}" title="Riscar alternativa ${letter}">×</button><button class="sim-answer ${selected===letter?'selected':''} ${isEliminated?'eliminated':''}" data-sim-answer="${letter}"><span class="answer-letter">${letter}</span><span style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, [])}</span></button></div>`;
   }).join('');
   const highlightTools = textHighlightEnabled() ? `<div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-sim-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearSimHighlights">Limpar marcações</button></div>` : '';
   return `<div class="sim-run-layout"><aside class="card"><div class="section-title"><h2>${escapeHtml(run.name)}</h2><span class="badge ${run.paused?'wait':'done'}">${run.paused?'Pausado':'Rodando'}</span></div><div class="sim-clock" id="simuladoClock">${formatClock(run.secondsLeft)}</div><div class="muted">${answeredSimCount(run)} de ${questions.length} respondidas</div>${progress('Progresso', answeredSimCount(run)/Math.max(questions.length,1), 'sem correção durante a prova')}<div class="sim-palette">${questions.map((q,index) => `<button class="sim-dot ${run.answers?.[q.id]?'answered':''} ${index===run.currentIndex?'active':''}" data-sim-go="${index}">${index+1}</button>`).join('')}</div><div class="sim-side-actions"><button class="icon-btn primary" id="toggleSimuladoTimer">${run.paused?'Iniciar prova':'Pausar prova'}</button><button class="icon-btn" id="clearSimAnswer" ${selected?'':'disabled'}>Limpar resposta</button><button class="icon-btn" id="finishSimulado">Finalizar prova</button><button class="icon-btn" id="cancelSimulado">Cancelar simulado</button></div></aside><section class="card question-card"><div class="question-body"><div class="sim-exam-top"><div><span class="badge today">${run.currentIndex + 1} de ${questions.length}</span><span class="badge wait">${escapeHtml(broadArea)}</span></div>${highlightTools}<div class="sim-tools"><button type="button" title="Imprimir">⎙</button><button type="button" title="Informações">i</button><button type="button" title="Alerta">!</button><button type="button" id="simFontUp" title="Aumentar fonte">A+</button><button type="button" id="simFontDown" title="Diminuir fonte">A−</button><button type="button" title="Favoritar">♡</button><button type="button" title="Marcar">⚑</button></div></div><div class="sim-question-head"><div><h2>Questão ${run.currentIndex + 1}</h2><div class="muted">${escapeHtml(broadArea)}</div></div><div><button class="icon-btn" id="simPrev" ${run.currentIndex===0?'disabled':''}>‹</button> <button class="icon-btn primary" id="simNext" ${run.currentIndex>=questions.length-1?'disabled':''}>›</button></div></div><div class="question-stem sim-highlightable" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights)}</div>${renderQuestionImages(question)}<div class="answer-list">${options}</div>${renderSimConfidence(run, question)}<div class="question-nav"><span class="muted">${selected ? `Marcada: ${selected}` : 'Sem resposta marcada'}</span></div></div></section></div>`;
@@ -4834,8 +4834,7 @@ function renderQuestion(question, total) {
       cls = 'selected';
     }
     const isEliminated = eliminated.includes(letter);
-    const scope=`option-${letter}`;
-    return `<div class="answer-row"><button class="eliminate-btn ${isEliminated?'active':''}" data-eliminate="${letter}" title="Riscar alternativa ${letter} com J">×</button><button class="answer-option ${cls} ${isEliminated?'eliminated':''}" data-question="${question.id}" data-answer="${letter}" title="Alternativa ${letter} · tecla ${optionIndex+1}" ${result?'disabled':''}><span class="answer-letter">${letter}</span><span class="highlightable" data-highlight-scope="${scope}" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, highlights, false, scope)}</span></button></div>`;
+    return `<div class="answer-row"><button class="eliminate-btn ${isEliminated?'active':''}" data-eliminate="${letter}" title="Riscar alternativa ${letter} com J">×</button><button class="answer-option ${cls} ${isEliminated?'eliminated':''}" data-question="${question.id}" data-answer="${letter}" title="Alternativa ${letter} · tecla ${optionIndex+1}" ${result?'disabled':''}><span class="answer-letter">${letter}</span><span style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, [], false)}</span></button></div>`;
   }).join('');
   const timeoutText = result?.timedOut ? ' Tempo esgotado no modo contratempo.' : '';
   const feedback = result ? `<div class="question-feedback ${result.correct?'':'wrong'}"><div><strong>${result.correct?'Resposta correta.':'Resposta incorreta.'}</strong>${timeoutText} Gabarito: ${question.answer}.${!result.correct ? ' Marque este assunto para revisão.' : ''}</div>${!result.correct && linkedLesson ? `<button class="tiny-btn question-material-link" data-question-materials="${escapeAttr(linkedLesson.id)}">Revisar material da aula</button>` : ''}</div>` : '';
@@ -5141,7 +5140,7 @@ function bindQuestionActions(questions, question) {
     e.stopPropagation();
     toggleEliminated(question, e.currentTarget.dataset.eliminate);
   });
-  if(textHighlightEnabled()) document.querySelectorAll('.highlightable').forEach(el => {
+  if(textHighlightEnabled()) document.querySelectorAll('.question-stem.highlightable[data-highlight-scope="stem"]').forEach(el => {
     let longPressTimer=0;
     let touchHighlightTimer=0;
     let touchStartPoint=null;
