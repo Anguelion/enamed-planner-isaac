@@ -3428,7 +3428,8 @@ function currentVideoLesson() {
   const pinned = state.videoPlayer?.pinned;
   if(pinned?.enabled) {
     const pinnedLesson = displayVideoLessons().find(lesson => lesson.id === pinned.lessonId);
-    if(pinnedLesson) {
+    const blockAllowsPinned = !ui.videoBlock || ui.videoBlock === 'Todos' || String(pinnedLesson?.block) === String(ui.videoBlock);
+    if(pinnedLesson && blockAllowsPinned) {
       ui.videoLessonId = pinnedLesson.id;
       ui.videoSourceId = pinnedLesson.videos.some(video => video.id === pinned.sourceId) ? pinned.sourceId : pinnedLesson.videos[0]?.id || '';
       ui.videoBlock = String(pinnedLesson.block);
@@ -3439,7 +3440,8 @@ function currentVideoLesson() {
   const lastOpen = state.videoPlayer?.lastOpen;
   if(!ui.videoLessonId && lastOpen?.lessonId) {
     const rememberedLesson = displayVideoLessons().find(lesson => lesson.id === lastOpen.lessonId);
-    if(rememberedLesson) {
+    const blockAllowsLastOpen = !ui.videoBlock || ui.videoBlock === 'Todos' || String(rememberedLesson?.block) === String(ui.videoBlock);
+    if(rememberedLesson && blockAllowsLastOpen) {
       ui.videoLessonId = rememberedLesson.id;
       ui.videoSourceId = rememberedLesson.videos.some(video => video.id === lastOpen.sourceId) ? lastOpen.sourceId : rememberedLesson.videos[0]?.id || '';
       ui.videoBlock = String(rememberedLesson.block);
