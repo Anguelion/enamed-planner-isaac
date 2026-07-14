@@ -1580,6 +1580,16 @@ function enhanceScheduleStudyIcons() {
     const item=state.schedule.find(entry=>entry.id===scheduleId);
     const topicLine=row.querySelector('.schedule-topic-line');
     if(!item || !topicLine) return;
+    if(item.date===studyDateKey()) {
+      row.classList.add('schedule-today-row');
+      const dateCell=row.querySelector('.schedule-date-cell');
+      if(dateCell && !dateCell.querySelector('.schedule-today-marker')) {
+        const marker=document.createElement('span');
+        marker.className='schedule-today-marker';
+        marker.innerHTML='<span>Hoje</span><b aria-hidden="true">→</b>';
+        dateCell.prepend(marker);
+      }
+    }
     videoToggle?.remove();
     openVideo?.remove();
     const colorable=n(item.block)<=currentBlock;
