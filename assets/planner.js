@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-26';
+const QUESTION_BANK_ASSET_VERSION = '20260714-27';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -4017,7 +4017,7 @@ function manualFlashcards() {
     const question = questionBank.find(item => item.id === questionId);
     const result = question ? questionResult(question) : null;
     const linked = result?.scheduleId ? state.schedule.find(item => item.id === result.scheduleId) : question ? scheduleForQuestion(question) : null;
-    return (Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
+    return newestFlashcardsFirst(Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
       ...card,
       questionId,
       scheduleId: card.scheduleId || linked?.id || '',
@@ -4027,7 +4027,7 @@ function manualFlashcards() {
       topic: card.topic || linked?.topic || question?.topic || 'Sem aula vinculada'
     }));
   });
-  const videoCards = Object.entries(state.videoFlashcards || {}).flatMap(([videoId,cards]) => (Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
+  const videoCards = Object.entries(state.videoFlashcards || {}).flatMap(([videoId,cards]) => newestFlashcardsFirst(Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
     ...card,
     videoId,
     scheduleId: card.scheduleId || '',
@@ -4458,7 +4458,7 @@ function importAnkiTsv(event) {
       const subarea = (cols[3] || 'Sem subárea').trim();
       const questionId = `anki-import-${normalizedTopic(area)}-${normalizedTopic(subarea)}`;
       if(!Array.isArray(state.questionFlashcards[questionId])) state.questionFlashcards[questionId] = [];
-      state.questionFlashcards[questionId].push({
+      state.questionFlashcards[questionId].unshift({
         id: `card-anki-${Date.now()}-${index}-${Math.random().toString(16).slice(2)}`,
         front,
         back,
@@ -5030,7 +5030,7 @@ function renderQuestionReflection(question, result) {
   return `<div class="question-reflection"><strong>Por que errei?</strong><div class="muted">Nível marcado antes de corrigir: ${escapeHtml(levelLabel)}</div><div class="field-row"><label class="field-label">Motivo do erro<select class="select" data-progress-field="missReason"><option value="">Escolher motivo</option>${['Desatenção','Dúvida / já vi','Não saber'].map(option => `<option ${missReason===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Confiança antes da correção (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 40"></label><label class="field-label">O que aconteceu?<input class="input" data-progress-field="reflection" value="${escapeAttr(result.reflection || '')}" placeholder="Comentário curto"></label></div><div class="reflection-help">Este percentual registra o quanto você acreditava que estava certo antes de ver o gabarito.</div></div>`;
 }
 function renderQuestionFlashcardEditor(question, result) {
-  const cards = Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : [];
+  const cards = newestFlashcardsFirst(Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : []);
   const allowed = flashcardCreationAllowed(result);
   if(!allowed && !cards.length) return '';
   const reason = allowed ? flashcardCreationReason(result) : 'Flashcards já criados continuam disponíveis para edição.';
@@ -5292,7 +5292,7 @@ function addQuestionFlashcard(question) {
   const cards = Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : [];
   if(cards.length >= 2) return;
   const linked = scheduleForQuestion(question);
-  cards.push({
+  cards.unshift({
     id: `card-${question.id}-${Date.now()}`,
     front: '',
     back: '',
