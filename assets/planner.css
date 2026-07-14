@@ -416,6 +416,7 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .text-mark.red{background:#ffe1dc;color:#7d251e}
 .highlightable{cursor:text;-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 .question-stem.highlightable,.answer-option .highlightable{touch-action:auto}
+@media(pointer:coarse){.qbank-mode .highlightable,.sim-highlightable{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;cursor:pointer;touch-action:manipulation}.qbank-mode .answer-option,.sim-answer{touch-action:manipulation}}
 .answer-row{display:grid;grid-template-columns:38px 1fr;gap:8px;align-items:stretch}
 .eliminate-btn{border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:900}
 .eliminate-btn.active{background:var(--soft-red);color:var(--red);border-color:var(--red)}

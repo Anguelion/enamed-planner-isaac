@@ -1729,7 +1729,8 @@ function renderSimuladoExam(run, questions, question) {
     const isEliminated = eliminated.includes(letter);
     return `<div class="sim-answer-row"><button class="eliminate-btn ${isEliminated?'active':''}" data-sim-eliminate="${letter}" title="Riscar alternativa ${letter}">×</button><button class="sim-answer ${selected===letter?'selected':''} ${isEliminated?'eliminated':''}" data-sim-answer="${letter}"><span class="answer-letter">${letter}</span><span class="sim-highlightable" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, highlights)}</span></button></div>`;
   }).join('');
-  return `<div class="sim-run-layout"><aside class="card"><div class="section-title"><h2>${escapeHtml(run.name)}</h2><span class="badge ${run.paused?'wait':'done'}">${run.paused?'Pausado':'Rodando'}</span></div><div class="sim-clock" id="simuladoClock">${formatClock(run.secondsLeft)}</div><div class="muted">${answeredSimCount(run)} de ${questions.length} respondidas</div>${progress('Progresso', answeredSimCount(run)/Math.max(questions.length,1), 'sem correção durante a prova')}<div class="sim-palette">${questions.map((q,index) => `<button class="sim-dot ${run.answers?.[q.id]?'answered':''} ${index===run.currentIndex?'active':''}" data-sim-go="${index}">${index+1}</button>`).join('')}</div><div class="sim-side-actions"><button class="icon-btn primary" id="toggleSimuladoTimer">${run.paused?'Iniciar prova':'Pausar prova'}</button><button class="icon-btn" id="clearSimAnswer" ${selected?'':'disabled'}>Limpar resposta</button><button class="icon-btn" id="finishSimulado">Finalizar prova</button><button class="icon-btn" id="cancelSimulado">Cancelar simulado</button></div></aside><section class="card question-card"><div class="question-body"><div class="sim-exam-top"><div><span class="badge today">${run.currentIndex + 1} de ${questions.length}</span><span class="badge wait">${escapeHtml(broadArea)}</span></div><div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-sim-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearSimHighlights">Limpar marcações</button></div><div class="sim-tools"><button type="button" title="Imprimir">⎙</button><button type="button" title="Informações">i</button><button type="button" title="Alerta">!</button><button type="button" id="simFontUp" title="Aumentar fonte">A+</button><button type="button" id="simFontDown" title="Diminuir fonte">A−</button><button type="button" title="Favoritar">♡</button><button type="button" title="Marcar">⚑</button></div></div><div class="sim-question-head"><div><h2>Questão ${run.currentIndex + 1}</h2><div class="muted">${escapeHtml(broadArea)}</div></div><div><button class="icon-btn" id="simPrev" ${run.currentIndex===0?'disabled':''}>‹</button> <button class="icon-btn primary" id="simNext" ${run.currentIndex>=questions.length-1?'disabled':''}>›</button></div></div><div class="question-stem sim-highlightable" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights)}</div>${renderQuestionImages(question)}<div class="answer-list">${options}</div>${renderSimConfidence(run, question)}<div class="question-nav"><span class="muted">${selected ? `Marcada: ${selected}` : 'Sem resposta marcada'}</span></div></div></section></div>`;
+  const highlightTools = textHighlightEnabled() ? `<div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-sim-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearSimHighlights">Limpar marcações</button></div>` : '';
+  return `<div class="sim-run-layout"><aside class="card"><div class="section-title"><h2>${escapeHtml(run.name)}</h2><span class="badge ${run.paused?'wait':'done'}">${run.paused?'Pausado':'Rodando'}</span></div><div class="sim-clock" id="simuladoClock">${formatClock(run.secondsLeft)}</div><div class="muted">${answeredSimCount(run)} de ${questions.length} respondidas</div>${progress('Progresso', answeredSimCount(run)/Math.max(questions.length,1), 'sem correção durante a prova')}<div class="sim-palette">${questions.map((q,index) => `<button class="sim-dot ${run.answers?.[q.id]?'answered':''} ${index===run.currentIndex?'active':''}" data-sim-go="${index}">${index+1}</button>`).join('')}</div><div class="sim-side-actions"><button class="icon-btn primary" id="toggleSimuladoTimer">${run.paused?'Iniciar prova':'Pausar prova'}</button><button class="icon-btn" id="clearSimAnswer" ${selected?'':'disabled'}>Limpar resposta</button><button class="icon-btn" id="finishSimulado">Finalizar prova</button><button class="icon-btn" id="cancelSimulado">Cancelar simulado</button></div></aside><section class="card question-card"><div class="question-body"><div class="sim-exam-top"><div><span class="badge today">${run.currentIndex + 1} de ${questions.length}</span><span class="badge wait">${escapeHtml(broadArea)}</span></div>${highlightTools}<div class="sim-tools"><button type="button" title="Imprimir">⎙</button><button type="button" title="Informações">i</button><button type="button" title="Alerta">!</button><button type="button" id="simFontUp" title="Aumentar fonte">A+</button><button type="button" id="simFontDown" title="Diminuir fonte">A−</button><button type="button" title="Favoritar">♡</button><button type="button" title="Marcar">⚑</button></div></div><div class="sim-question-head"><div><h2>Questão ${run.currentIndex + 1}</h2><div class="muted">${escapeHtml(broadArea)}</div></div><div><button class="icon-btn" id="simPrev" ${run.currentIndex===0?'disabled':''}>‹</button> <button class="icon-btn primary" id="simNext" ${run.currentIndex>=questions.length-1?'disabled':''}>›</button></div></div><div class="question-stem sim-highlightable" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights)}</div>${renderQuestionImages(question)}<div class="answer-list">${options}</div>${renderSimConfidence(run, question)}<div class="question-nav"><span class="muted">${selected ? `Marcada: ${selected}` : 'Sem resposta marcada'}</span></div></div></section></div>`;
 }
 function renderSimConfidence(run, question) {
   const selected = run.confidence?.[question.id] || '';
@@ -1834,13 +1835,19 @@ function bindSimuladoInputs(activeRun) {
   if(!activeRun) return;
   document.querySelectorAll('[data-sim-go]').forEach(button => button.onclick = e => { setSimQuestionIndex(activeRun, n(e.currentTarget.dataset.simGo)); saveStateOnly(); render(); });
   document.querySelectorAll('[data-sim-answer]').forEach(button => button.onclick = e => {
-    if(ui.suppressAnswerClick || Date.now() < n(ui.highlightGestureUntil)) {
+    const highlighting = textHighlightEnabled();
+    if(highlighting && (ui.suppressAnswerClick || Date.now() < n(ui.highlightGestureUntil))) {
       ui.suppressAnswerClick = false;
       e.preventDefault();
       e.stopPropagation();
       return;
     }
-    if((window.getSelection()?.toString() || '').trim().length > 1) return;
+    if(highlighting && (window.getSelection()?.toString() || '').trim().length > 1) return;
+    if(!highlighting) {
+      ui.suppressAnswerClick = false;
+      ui.highlightGestureUntil = 0;
+      window.getSelection()?.removeAllRanges?.();
+    }
     const question = activeSimQuestion(activeRun);
     if(!question) return;
     const nextAnswer = e.currentTarget.dataset.simAnswer;
@@ -1879,7 +1886,7 @@ function bindSimuladoInputs(activeRun) {
     activeRun.highlights[question.id] = [];
     persist();
   };
-  document.querySelectorAll('.sim-highlightable').forEach(el => {
+  if(textHighlightEnabled()) document.querySelectorAll('.sim-highlightable').forEach(el => {
     el.onselectstart = () => {
       ui.suppressAnswerClick = true;
       ui.highlightGestureUntil = Date.now() + 800;
@@ -4521,11 +4528,12 @@ function renderQuestion(question, total) {
   const feedback = result ? `<div class="question-feedback ${result.correct?'':'wrong'}"><div><strong>${result.correct?'Resposta correta.':'Resposta incorreta.'}</strong>${timeoutText} Gabarito: ${question.answer}.${!result.correct ? ' Marque este assunto para revisão.' : ''}</div>${!result.correct && linkedLesson ? `<button class="tiny-btn question-material-link" data-question-materials="${escapeAttr(linkedLesson.id)}">Revisar material da aula</button>` : ''}</div>` : '';
   const comment = result && question.comment ? renderQuestionCommentPanel(question, result, highlights) : '';
   const reviewButton = result && !result.correct ? `<button class="icon-btn" id="questionFeynman">Enviar tema para Feynman</button>` : '';
+  const highlightTools = textHighlightEnabled() ? `<div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearHighlights">Limpar</button></div>` : '';
   return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div></div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" ${ui.qIndex>=total-1?'disabled':''}>›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
     <div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}</div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
-    <div class="section-title"><h2>Questão ${question.number}</h2><div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearHighlights">Limpar</button></div></div>
+    <div class="section-title"><h2>Questão ${question.number}</h2>${highlightTools}</div>
     <div class="question-workspace"><div class="question-main">
       <div class="question-stem highlightable" data-highlight-scope="stem" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights, true, 'stem')}</div>
       ${renderQuestionImages(question)}
@@ -4720,13 +4728,19 @@ function renderQuestionNotes(question, result) {
 function bindQuestionActions(questions, question) {
   if(!question) return;
   document.querySelectorAll('[data-question][data-answer]').forEach(button => button.onclick = e => {
-    if(ui.suppressAnswerClick || Date.now() < n(ui.highlightGestureUntil)) {
+    const highlighting = textHighlightEnabled();
+    if(highlighting && (ui.suppressAnswerClick || Date.now() < n(ui.highlightGestureUntil))) {
       ui.suppressAnswerClick = false;
       e.preventDefault();
       e.stopPropagation();
       return;
     }
-    if((window.getSelection()?.toString() || '').trim().length > 1) return;
+    if(highlighting && (window.getSelection()?.toString() || '').trim().length > 1) return;
+    if(!highlighting) {
+      ui.suppressAnswerClick = false;
+      ui.highlightGestureUntil = 0;
+      window.getSelection()?.removeAllRanges?.();
+    }
     const selected=e.currentTarget.dataset.answer;
     ui.draftAnswers[question.id] = selected;
     const current=state.questionProgress[question.id] || {};
@@ -4802,7 +4816,7 @@ function bindQuestionActions(questions, question) {
     e.stopPropagation();
     toggleEliminated(question, e.currentTarget.dataset.eliminate);
   });
-  document.querySelectorAll('.highlightable').forEach(el => {
+  if(textHighlightEnabled()) document.querySelectorAll('.highlightable').forEach(el => {
     let longPressTimer=0;
     let touchHighlightTimer=0;
     let touchStartPoint=null;
@@ -5465,6 +5479,11 @@ function formatClock(seconds) {
 }
 function highlightLabel(color) {
   return ({ yellow:'amarelo', green:'verde', blue:'azul', red:'vermelho' })[color] || color;
+}
+function textHighlightEnabled() {
+  const touchDevice = n(navigator.maxTouchPoints) > 0
+    && (window.matchMedia?.('(pointer: coarse)').matches || /Android|iPad|iPhone|Mobile/i.test(navigator.userAgent));
+  return !touchDevice;
 }
 function rememberHighlightState(action) {
   highlightUndoStack.push({ ...action, highlights:structuredClone(action.highlights || []) });
