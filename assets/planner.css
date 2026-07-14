@@ -1045,6 +1045,7 @@ body.dark .sidebar-theme:hover{background:#18313a;color:#8fd4e7}
 body.dark .sidebar-toggle{background:#18313a;color:#8fd4e7}
 
 .question-issue-summary{width:100%;min-height:42px;margin:12px 0 2px;padding:8px 11px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--muted);text-align:left}
+.question-issue-actions{display:flex;align-items:stretch;gap:6px;margin:12px 0 2px}.question-issue-actions .question-issue-summary{margin:0;flex:1}.question-issue-clear{flex:0 0 40px;min-height:42px;color:#9b4b21;border-color:#e6b760;background:var(--soft-amber);font-size:20px}
 .question-issue-summary strong{font-size:18px;color:var(--blue)}
 .question-issue-summary.has-items{border-color:#e6b760;background:var(--soft-amber);color:#85510d}
 .question-issue-summary.has-items:hover,.question-issue-summary.active{border-color:var(--blue);background:#e8f2ff;color:var(--blue);cursor:pointer}

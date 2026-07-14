@@ -4791,7 +4791,7 @@ function renderQuestionBank() {
       <div class="section-title"><h2>Banco privado</h2><div class="question-sidebar-actions"><span class="badge today">${questionBank.length} questões</span><button class="icon-btn" id="collapseQuestionSidebar" title="Fechar painel do banco" aria-label="Fechar painel do banco">×</button></div></div>
       <div class="muted">Organizado por blocos do planner e coleções especiais.</div>
       <div class="question-counts"><div><strong>${answered.length}</strong><span class="muted">Feitas</span></div><div><strong>${correct.length}</strong><span class="muted">Certas</span></div><div><strong>${answered.length-correct.length}</strong><span class="muted">Erros</span></div></div>
-      <button class="question-issue-summary ${flagged?'has-items':''} ${showingFlagged?'active':''}" id="showQuestionIssues" aria-pressed="${showingFlagged}" ${flagged?'':'disabled'}><span>⚑</span><strong>${flagged}</strong><span>${showingFlagged ? 'gabaritos suspeitos exibidos' : flagged===1?'gabarito suspeito':'gabaritos suspeitos'}</span></button>
+      <div class="question-issue-actions"><button class="question-issue-summary ${flagged?'has-items':''} ${showingFlagged?'active':''}" id="showQuestionIssues" aria-pressed="${showingFlagged}" ${flagged?'':'disabled'}><span>⚑</span><strong>${flagged}</strong><span>${showingFlagged ? 'gabaritos suspeitos exibidos' : flagged===1?'gabarito suspeito':'gabaritos suspeitos'}</span></button>${flagged?'<button class="icon-btn question-issue-clear" id="clearQuestionIssues" title="Limpar todas as marcações" aria-label="Limpar todas as marcações de gabarito suspeito">×</button>':''}</div>
       ${progress('Aproveitamento', correct.length/Math.max(answered.length,1), `${correct.length} de ${answered.length}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
       ${focusItem ? (() => { const target=LESSON_MIN_QUESTIONS; const completed=questionBank.filter(item=>scheduleForQuestion(item)?.id===focusItem.id&&questionResult(item)).length; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
@@ -4822,6 +4822,15 @@ function renderQuestionBank() {
     questionSearchRenderTimer = setTimeout(refreshQuestionSearchResults,140);
   };
   document.getElementById('showQuestionIssues').onclick = () => { ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  document.getElementById('clearQuestionIssues')?.addEventListener('click', () => {
+    if(!confirm(`Limpar as ${flagged} marcações de gabarito suspeito?`)) return;
+    questionBank.forEach(question => {
+      const progress = state.questionProgress[question.id];
+      if(!progress?.answerKeyIssue) return;
+      state.questionProgress[question.id] = { ...progress, answerKeyIssue:false, answerKeyIssueAt:'' };
+    });
+    ui.qStatus='Todas'; ui.qIndex=0; ui.justAnsweredId=''; persist();
+  });
   const clearFocus = document.getElementById('clearQuestionFocus');
   if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qFocusTarget=0; ui.qQuestionId=''; ui.qIndex=0; render(); };
   document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusTarget=0; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
