@@ -496,7 +496,12 @@ function scheduleCloudSave() {
   syncTimer = setTimeout(pushCloudState, 900);
 }
 async function pushCloudState() {
-  if(!currentUser || syncInFlight) return;
+  if(!currentUser) return;
+  if(syncInFlight) {
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(pushCloudState, 700);
+    return;
+  }
   syncInFlight = true;
   setSyncStatus('Sincronizando...', 'busy');
   const updatedAt = new Date().toISOString();
@@ -5610,8 +5615,10 @@ function answerQuestion(question, selected, timedOut=false) {
   const autoMissReason = !correct
     ? (draftConfidence === 'red' ? 'Não saber' : draftConfidence === 'yellow' ? 'Dúvida / já vi' : previous.missReason || '')
     : previous.missReason || '';
-  const firstLog = !state.questionLogged[question.id];
   const today = studyDateKey();
+  // Uma questao pode ser revisada em varios dias: conte-a uma vez em cada dia,
+  // sem duplicar o mesmo registro quando apenas a resposta e editada.
+  const firstLog = state.questionLogged[question.id] !== today;
   state.questionProgress[question.id] = {
     ...previous,
     selected,
