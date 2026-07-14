@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-18';
+const QUESTION_BANK_ASSET_VERSION = '20260714-19';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -85,7 +85,7 @@ let cloudSyncPoll = null;
 let renderCache = { questionStats: new Map(), flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
-  ['painel','Dashboard','dashboard'], ['cronograma','Trilha','route'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
+  ['painel','Dashboard','dashboard'], ['cronograma','Missão','helmet'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
 ];
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
@@ -1475,6 +1475,7 @@ function iconSvg(name) {
     dashboard:'<rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/>',
     alert:'<path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6Z"/><path d="M12 8v5"/><path d="M12 17h.01"/>',
     route:'<circle cx="6" cy="19" r="3"/><path d="M9 19h3.5a4.5 4.5 0 0 0 0-9H11a4 4 0 0 1 0-8h4"/><circle cx="18" cy="5" r="3"/>',
+    helmet:'<path d="M4 16a8 8 0 0 1 16 0v1H4Z"/><path d="M2 17h20M12 8v8M7 13h10"/><path d="M5 17v2h14v-2"/>',
     play:'<circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4Z"/>',
     brain:'<path d="M9.5 4A3.5 3.5 0 0 0 6 7.5v.2A3.5 3.5 0 0 0 4 11v1a3.5 3.5 0 0 0 2 3.2v.3A3.5 3.5 0 0 0 9.5 19H12V4Z"/><path d="M14.5 4A3.5 3.5 0 0 1 18 7.5v.2a3.5 3.5 0 0 1 2 3.3v1a3.5 3.5 0 0 1-2 3.2v.3a3.5 3.5 0 0 1-3.5 3.5H12V4Z"/><path d="M8 9h4M12 14h4"/>',
     cards:'<rect width="14" height="18" x="5" y="3" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/>',
