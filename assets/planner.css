@@ -135,6 +135,8 @@ body.dark .daily-analysis-tile{background:linear-gradient(145deg,#182128,#18313a
 @media(max-width:1180px){.daily-analysis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.daily-analysis-grid{grid-template-columns:1fr}.daily-analysis-tile{padding:14px}.daily-analysis-tile strong{font-size:25px}}
 .field-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.field-label{display:grid;gap:5px;align-content:start;color:var(--muted);font-size:12px;font-weight:800;line-height:1.25}
+.reflection-help{color:var(--muted);font-size:12px;line-height:1.45}
 .full-field{grid-column:1/-1}
 .hidden{display:none!important}
 .score-pill{display:inline-flex;border-radius:999px;padding:5px 8px;background:var(--soft-blue);color:var(--blue);font-weight:800;font-size:12px;margin-top:8px}
