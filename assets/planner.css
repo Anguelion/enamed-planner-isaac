@@ -261,6 +261,19 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .road-progress .progress{height:9px;background:#e7efec}
 .road-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .road-actions button{min-height:34px;border-radius:999px}
+.personal-tasks-card{display:grid;gap:12px}
+.personal-tasks-count{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:32px;padding:0 10px;border:1px solid var(--line);border-radius:999px;background:var(--soft-blue);color:var(--blue);font-weight:900}
+.personal-task-add{display:flex;gap:8px;align-items:center}
+.personal-task-add .input{flex:1;min-width:0}
+.personal-task-list{display:grid;gap:8px}
+.personal-task-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface,#fff)}
+.personal-task-row label{display:flex;align-items:center;gap:10px;min-width:0;cursor:pointer;font-weight:700}
+.personal-task-row input{width:18px;height:18px;accent-color:var(--green);flex:0 0 auto}
+.personal-task-text{overflow-wrap:anywhere}
+.personal-task-row.done .personal-task-text{text-decoration:line-through;color:var(--muted);font-weight:600}
+.personal-task-remove{min-width:32px;width:32px;height:32px;padding:0;color:var(--red);border-color:transparent}
+.personal-task-remove:hover{border-color:var(--red);background:#fff1ef}
+.personal-task-empty{padding:4px 0}
 .checkin-stamp{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900;color:var(--muted);background:#fff}
 .checkin-stamp.checked{border-color:var(--blue);color:var(--blue);background:var(--soft-blue)}
 .checkin-stamp.complete{border-color:var(--green);color:var(--green);background:#fff}
@@ -615,6 +628,8 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .flashcard-command,.flashcard-filters{grid-template-columns:1fr}
 }
 @media(max-width:620px){.question-topbar{grid-template-columns:36px minmax(0,1fr) auto}
+.personal-task-add{align-items:stretch;flex-direction:column}
+.personal-task-add .input,.personal-task-add .icon-btn{width:100%}
 .question-font-tools{flex-wrap:wrap;justify-content:flex-end}
 .question-font-value{display:none}
 .answer-row{grid-template-columns:42px minmax(0,1fr)}

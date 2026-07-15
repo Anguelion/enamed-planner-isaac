@@ -60,6 +60,7 @@ ensureImportedQuestions();
 normalizeOfficialScheduleNames();
 ensureRestartFromBlockTen();
 ensureDayLogs();
+ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
@@ -601,6 +602,18 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   });
   merged.importedQuestions = [...importedByHash.values()];
 
+  const remoteTasks = Array.isArray(remote.dailyTasks) ? remote.dailyTasks : [];
+  const localTasks = Array.isArray(local.dailyTasks) ? local.dailyTasks : [];
+  const tasksById = new Map();
+  [...remoteTasks, ...localTasks].forEach(task => {
+    if(!task?.id || !String(task.text || '').trim()) return;
+    const previous = tasksById.get(task.id);
+    if(!previous || (Date.parse(task.updatedAt || task.completedAt || task.createdAt || '') || 0) >= (Date.parse(previous.updatedAt || previous.completedAt || previous.createdAt || '') || 0)) {
+      tasksById.set(task.id, structuredClone(task));
+    }
+  });
+  merged.dailyTasks = [...tasksById.values()];
+
   const localSchedule = new Map((local.schedule || []).map(item => [item.id, item]));
   merged.schedule = (remote.schedule || local.schedule || []).map(item => {
     const localItem = localSchedule.get(item.id);
@@ -953,6 +966,57 @@ function ensureDayLogs() {
   state.dayLogs = state.dayLogs.map(log => ({...defaultDayLog(log.date), ...log}));
   state.dayLogs.sort((a,b)=>a.date.localeCompare(b.date));
   repairDailyActivityData();
+}
+function ensureDailyTasks() {
+  if(!Array.isArray(state.dailyTasks)) state.dailyTasks = [];
+  state.dailyTasks = state.dailyTasks.map((task, index) => ({
+    id: task.id || `daily-task-${index}-${Date.now()}`,
+    date: task.date || studyDateKey(),
+    text: String(task.text || '').trim(),
+    done: Boolean(task.done),
+    createdAt: task.createdAt || new Date().toISOString(),
+    completedAt: task.completedAt || '',
+    updatedAt: task.updatedAt || task.createdAt || new Date().toISOString()
+  })).filter(task => task.text);
+}
+function dailyTasksFor(date) {
+  ensureDailyTasks();
+  return state.dailyTasks.filter(task => task.date === date).sort((a,b) => {
+    if(a.done !== b.done) return a.done ? 1 : -1;
+    return (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0);
+  });
+}
+function renderPersonalDailyTasks(date) {
+  const tasks = dailyTasksFor(date);
+  const completed = tasks.filter(task => task.done).length;
+  return `<div class="card personal-tasks-card"><div class="section-title"><div><h2>Tarefas pessoais do dia</h2><div class="muted">Anotações individuais, separadas do cronograma oficial.</div></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="personal-task-add"><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria antes de dormir"><button class="icon-btn primary" id="addPersonalTask" type="button">${iconSvg('plus')}<span>Adicionar</span></button></div>${tasks.length ? `<div class="personal-task-list">${tasks.map(task => `<div class="personal-task-row ${task.done ? 'done' : ''}"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''}><span class="personal-task-text">${escapeHtml(task.text)}</span></label><button class="icon-btn danger personal-task-remove" type="button" title="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">${iconSvg('x')}</button></div>`).join('')}</div>` : '<div class="empty personal-task-empty">Nenhuma tarefa pessoal para esta data.</div>'}</div>`;
+}
+function bindPersonalDailyTasks(date) {
+  const input = document.getElementById('personalTaskInput');
+  const addTask = () => {
+    const text = String(input?.value || '').trim();
+    if(!text) return;
+    ensureDailyTasks();
+    const now = new Date().toISOString();
+    state.dailyTasks.unshift({ id:`daily-task-${Date.now()}-${Math.random().toString(36).slice(2,7)}`, date, text, done:false, createdAt:now, completedAt:'', updatedAt:now });
+    persist();
+  };
+  document.getElementById('addPersonalTask')?.addEventListener('click', addTask);
+  input?.addEventListener('keydown', event => { if(event.key === 'Enter') { event.preventDefault(); addTask(); } });
+  document.querySelectorAll('[data-toggle-personal-task]').forEach(box => box.addEventListener('change', event => {
+    const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.togglePersonalTask);
+    if(!task) return;
+    task.done = event.currentTarget.checked;
+    task.completedAt = task.done ? new Date().toISOString() : '';
+    task.updatedAt = new Date().toISOString();
+    persist();
+  }));
+  document.querySelectorAll('[data-remove-personal-task]').forEach(button => button.addEventListener('click', event => {
+    const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.removePersonalTask);
+    if(!task || !confirm('Excluir esta tarefa pessoal?')) return;
+    state.dailyTasks = state.dailyTasks.filter(item => item.id !== task.id);
+    persist();
+  }));
 }
 function defaultDayLog(date) { return { date, mood: 0, pace: '', flashcardsOn: false, flashcards: 0, manualFlashcards: 0, flashcardMinutes: 0, videosOn: false, videos: 0, videoNames: '', lessonMinutes: 0, questionsOn: false, questions: 0, correct: 0, wrong: 0, questionMinutes: 0, materialMinutes: 0, simuladoMinutes: 0, notes: '' }; }
 function repairDailyActivityData() {
@@ -1748,6 +1812,8 @@ function iconSvg(name) {
     message:'<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/><path d="M8 9h8M8 13h5"/>'
     ,upload:'<path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 20h14a2 2 0 0 0 2-2v-3M3 15v3a2 2 0 0 0 2 2"/>'
     ,prescription:'<path d="M9 3h6l1 3h3a2 2 0 0 1 2 2v12H3V8a2 2 0 0 1 2-2h3Z"/><path d="M9 6h6M8 11h8M8 15h5"/><path d="M16 15v5M13.5 17.5h5"/>'
+    ,plus:'<path d="M12 5v14M5 12h14"/>'
+    ,x:'<path d="m6 6 12 12M18 6 6 18"/>'
   };
   return `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.dashboard}</svg>`;
 }
@@ -1831,6 +1897,7 @@ function renderPainel() {
     ${renderDashboardMood(dashboardLog)}
     ${renderDailyAnalysis(ui.refDate)}
     <div class="card">${renderDailyRoad(ui.refDate)}</div>
+    ${renderPersonalDailyTasks(ui.refDate)}
     ${renderCountdown()}
     <div class="grid cards">
       ${metric('Mapa geral', pct(t.progress), `${t.completed} de ${t.total} aulas concluídas`)}
@@ -1860,6 +1927,7 @@ function renderPainel() {
   bindPlannerDateInput('dashboardDate', ui.refDate, date => { ui.refDate=date; render(); });
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
   bindManualStudyEntry(ui.refDate);
+  bindPersonalDailyTasks(ui.refDate);
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
   document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
