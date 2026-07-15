@@ -39,7 +39,14 @@ body.dark .study-toast{background:#202a2a;color:var(--ink);box-shadow:0 14px 34p
 body.auth-locked .app-header,body.auth-locked main{display:none}
 body:not(.auth-locked) .login-screen{display:none}
 .tabs{width:100%;max-width:none;margin:0 auto;padding:0 clamp(18px,2.4vw,48px) 14px;display:flex;gap:8px;overflow:auto}
-.tab{white-space:nowrap;display:flex;gap:7px;align-items:center;font-size:14px;font-weight:800}
+.tab{white-space:nowrap;display:flex;gap:8px;align-items:center;font-size:14px;font-weight:800;transition:transform .16s ease,box-shadow .16s ease}
+.tab:hover{transform:translateY(-2px)}
+.tab-icon{width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:color-mix(in srgb,currentColor 13%,transparent);color:currentColor;transition:transform .16s ease,background .16s ease}
+.tab:hover .tab-icon{transform:rotate(-5deg) scale(1.08)}
+.tab-icon .ui-icon{width:17px;height:17px;stroke-width:2.2}
+.tab-painel{color:#2867e8}.tab-cronograma{color:#8b5cf6}.tab-pendencias{color:#e05a47}.tab-aulas{color:#0b9b77}.tab-questoes{color:#087fa1}.tab-importar-questoes{color:#d97706}.tab-analise{color:#e58a14}.tab-flashcards{color:#d04fb3}.tab-materiais{color:#188b92}.tab-simulados{color:#ef6a3a}.tab-prescricao{color:#16a085}.tab-areas{color:#3b82f6}.tab-historico{color:#64748b}.tab-feynman{color:#7c5ce3}
+.tab.active{color:#fff;transform:translateY(-1px)}
+.tab.active .tab-icon{background:rgba(255,255,255,.18);color:#fff}
 .tab.active{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(18,63,89,.16)}
 main{width:100%;max-width:none;margin:0 auto;padding:22px clamp(18px,2.4vw,48px);display:grid;gap:18px}
 .view{display:none}

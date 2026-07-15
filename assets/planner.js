@@ -1686,7 +1686,7 @@ function startDashboardCountdown() {
   dashboardCountdownInterval = setInterval(update, 60000);
 }
 function renderTabs() {
-  document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => `<button class="tab ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}">${iconSvg(icon)}<span>${label}</span></button>`).join('');
+  document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => `<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span>${label}</span></button>`).join('');
   document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => {
     const nextTab=b.dataset.tab;
     if(ui.tab==='questoes' && nextTab!=='questoes' && !settleQuestionTimerBeforeLeave()) return;
