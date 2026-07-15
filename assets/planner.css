@@ -267,6 +267,10 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .personal-task-add .input{flex:1;min-width:0}
 .personal-task-list{display:grid;gap:8px}
 .personal-task-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface,#fff)}
+.personal-task-main{min-width:0;flex:1}.personal-task-actions{display:flex;align-items:center;gap:5px;flex:none}.personal-task-priority{display:flex;gap:1px;padding:2px 4px;border:1px solid var(--line);border-radius:999px;background:var(--soft-amber)}
+.personal-task-star{width:18px;height:23px;padding:0;border:0;background:transparent;color:#d4c2a5;font-size:14px;line-height:1;cursor:pointer}.personal-task-star.active{color:#e3a700}.personal-task-star:hover{transform:scale(1.12)}
+.personal-task-actions .tiny-btn{min-width:30px;height:30px;padding:4px 8px;line-height:1}.personal-task-actions .danger{color:var(--red);border-color:#f1c8c5}
+.personal-task-editor{display:grid;grid-template-columns:minmax(160px,1fr) 72px auto auto;gap:6px;align-items:center;margin-top:8px}.personal-task-editor .input{min-height:30px;padding:5px 7px}.personal-task-add-button{width:40px;height:40px;min-width:40px;padding:8px}.personal-task-add-button svg{width:20px;height:20px}
 .personal-task-row label{display:flex;align-items:center;gap:10px;min-width:0;cursor:pointer;font-weight:700}
 .personal-task-row input{width:18px;height:18px;accent-color:var(--green);flex:0 0 auto}
 .personal-task-text{overflow-wrap:anywhere}
@@ -649,8 +653,8 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .flashcard-command,.flashcard-filters{grid-template-columns:1fr}
 }
 @media(max-width:620px){.question-topbar{grid-template-columns:36px minmax(0,1fr) auto}
-.personal-task-add{align-items:stretch;flex-direction:column}
-.personal-task-add .input,.personal-task-add .icon-btn{width:100%}
+.personal-task-add{align-items:center;flex-direction:row}.personal-task-add .input{width:auto}.personal-task-add-button{width:40px!important;flex:0 0 40px}
+.personal-task-row{align-items:flex-start}.personal-task-actions{flex-wrap:wrap;justify-content:flex-end}.personal-task-editor{grid-template-columns:1fr 68px}.personal-task-editor .tiny-btn{width:100%}
 .cloud-backup-controls{align-items:stretch;flex-direction:column}
 .cloud-backup-controls .input,.cloud-backup-controls .icon-btn{width:100%}
 .question-font-tools{flex-wrap:wrap;justify-content:flex-end}

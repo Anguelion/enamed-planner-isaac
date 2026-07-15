@@ -1131,6 +1131,8 @@ function ensureDailyTasks() {
     date: task.date || studyDateKey(),
     text: String(task.text || '').trim(),
     done: Boolean(task.done),
+    priority: Math.min(3, Math.max(0, n(task.priority))),
+    order: n(task.order) || index + 1,
     createdAt: task.createdAt || new Date().toISOString(),
     completedAt: task.completedAt || '',
     updatedAt: task.updatedAt || task.createdAt || new Date().toISOString()
@@ -1140,13 +1142,19 @@ function dailyTasksFor(date) {
   ensureDailyTasks();
   return state.dailyTasks.filter(task => task.date === date).sort((a,b) => {
     if(a.done !== b.done) return a.done ? 1 : -1;
-    return (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0);
+    return n(b.priority) - n(a.priority) || n(a.order) - n(b.order) || (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0);
   });
 }
 function renderPersonalDailyTasks(date) {
   const tasks = dailyTasksFor(date);
   const completed = tasks.filter(task => task.done).length;
-  return `<div class="card personal-tasks-card"><div class="section-title"><div><h2>Tarefas pessoais do dia</h2><div class="muted">Anotações individuais, separadas do cronograma oficial.</div></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="personal-task-add"><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria antes de dormir"><button class="icon-btn primary" id="addPersonalTask" type="button">${iconSvg('plus')}<span>Adicionar</span></button></div>${tasks.length ? `<div class="personal-task-list">${tasks.map(task => `<div class="personal-task-row ${task.done ? 'done' : ''}"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''}><span class="personal-task-text">${escapeHtml(task.text)}</span></label><button class="icon-btn danger personal-task-remove" type="button" title="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">${iconSvg('x')}</button></div>`).join('')}</div>` : '<div class="empty personal-task-empty">Nenhuma tarefa pessoal para esta data.</div>'}</div>`;
+  const taskRows = tasks.map((task,index) => {
+    const editing = ui.personalTaskEditId === task.id;
+    const stars = [1,2,3].map(value => `<button class="personal-task-star ${value <= n(task.priority) ? 'active' : ''}" data-task-priority="${escapeAttr(task.id)}" data-priority-value="${value}" title="Prioridade ${value} de 3" aria-label="Prioridade ${value} de 3">★</button>`).join('');
+    const editor = editing ? `<div class="personal-task-editor"><input class="input" data-task-edit-text="${escapeAttr(task.id)}" value="${escapeAttr(task.text)}" maxlength="180"><input class="input task-order-input" type="number" min="1" step="1" data-task-edit-order="${escapeAttr(task.id)}" value="${n(task.order) || index + 1}"><button class="tiny-btn" data-task-edit-save="${escapeAttr(task.id)}">Salvar</button><button class="tiny-btn" data-task-edit-cancel="${escapeAttr(task.id)}">Cancelar</button></div>` : '';
+    return `<div class="personal-task-row ${task.done ? 'done' : ''}"><div class="personal-task-main"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''}><span class="personal-task-text">${escapeHtml(task.text)}</span></label>${editor}</div><div class="personal-task-actions"><div class="personal-task-priority" title="Prioridade ${n(task.priority) || 0} de 3 estrelas">${stars}</div><button class="tiny-btn" type="button" data-task-edit="${escapeAttr(task.id)}" title="Editar tarefa" aria-label="Editar tarefa">✎</button><button class="tiny-btn danger personal-task-remove" type="button" title="Excluir tarefa" aria-label="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">×</button></div></div>`;
+  }).join('');
+  return `<div class="card personal-tasks-card"><div class="section-title"><div><h2>Tarefas pessoais do dia</h2><div class="muted">Anotações individuais, separadas do cronograma oficial.</div></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="personal-task-add"><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria antes de dormir"><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar tarefa" aria-label="Adicionar tarefa">${iconSvg('plus')}</button></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>` : '<div class="empty personal-task-empty">Nenhuma tarefa pessoal para esta data.</div>'}</div>`;
 }
 function bindPersonalDailyTasks(date) {
   const input = document.getElementById('personalTaskInput');
@@ -1155,7 +1163,7 @@ function bindPersonalDailyTasks(date) {
     if(!text) return;
     ensureDailyTasks();
     const now = new Date().toISOString();
-    state.dailyTasks.unshift({ id:`daily-task-${Date.now()}-${Math.random().toString(36).slice(2,7)}`, date, text, done:false, createdAt:now, completedAt:'', updatedAt:now });
+    state.dailyTasks.unshift({ id:`daily-task-${Date.now()}-${Math.random().toString(36).slice(2,7)}`, date, text, done:false, priority:0, order:state.dailyTasks.filter(task => task.date === date).length + 1, createdAt:now, completedAt:'', updatedAt:now });
     persist();
   };
   document.getElementById('addPersonalTask')?.addEventListener('click', addTask);
@@ -1172,6 +1180,33 @@ function bindPersonalDailyTasks(date) {
     const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.removePersonalTask);
     if(!task || !confirm('Excluir esta tarefa pessoal?')) return;
     state.dailyTasks = state.dailyTasks.filter(item => item.id !== task.id);
+    persist();
+  }));
+  document.querySelectorAll('[data-task-priority]').forEach(button => button.addEventListener('click', event => {
+    const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.taskPriority);
+    if(!task) return;
+    task.priority = n(event.currentTarget.dataset.priorityValue);
+    task.updatedAt = new Date().toISOString();
+    persist();
+  }));
+  document.querySelectorAll('[data-task-edit]').forEach(button => button.addEventListener('click', event => {
+    ui.personalTaskEditId = event.currentTarget.dataset.taskEdit;
+    render();
+  }));
+  document.querySelectorAll('[data-task-edit-cancel]').forEach(button => button.addEventListener('click', () => {
+    ui.personalTaskEditId = '';
+    render();
+  }));
+  document.querySelectorAll('[data-task-edit-save]').forEach(button => button.addEventListener('click', event => {
+    const id = event.currentTarget.dataset.taskEditSave;
+    const task = state.dailyTasks.find(item => item.id === id);
+    if(!task) return;
+    const text = document.querySelector(`[data-task-edit-text="${CSS.escape(id)}"]`)?.value?.trim();
+    if(!text) return;
+    task.text = text;
+    task.order = Math.max(1, n(document.querySelector(`[data-task-edit-order="${CSS.escape(id)}"]`)?.value) || 1);
+    task.updatedAt = new Date().toISOString();
+    ui.personalTaskEditId = '';
     persist();
   }));
 }
