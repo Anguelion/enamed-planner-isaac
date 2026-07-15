@@ -5262,7 +5262,10 @@ function renderQuestionCommentPanel(question, result, highlights=[]) {
   </div>`;
 }
 function renderCommentSectionContent(tab, text, highlights=[]) {
-  const raw = String(text || '').trim();
+  // Separadores usados nos arquivos de comentarios nao devem aparecer na interface.
+  const raw = String(text || '')
+    .replace(/(?:^|\n)\s*-{3,}\s*(?=\n|$)/g, '\n')
+    .trim();
   if(tab !== 'analysis') return renderHighlightedText(raw, highlights);
   const rows = raw.split(/\n+/).map(line => line.trim()).filter(Boolean);
   const labels = [
