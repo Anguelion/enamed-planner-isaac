@@ -83,7 +83,7 @@ let cloudDirty = false;
 let cloudRevision = 0;
 let lastCloudSyncAt = 0;
 let cloudSyncPoll = null;
-let renderCache = { questionStats: new Map(), questionStatsReady:false, questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
+let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
   ['painel','Dashboard','dashboard'], ['cronograma','Missão','helmet'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
@@ -324,6 +324,10 @@ function normalizedTopic(value='') {
 const TOPIC_ALIASES = {
   'dpoc': 'doenca pulmonar obstrutiva cronica dpoc',
   'trauma conceitos iniciais atls': 'trauma conceitos iniciais e atendimento inicial ao trauma atls',
+  'introducao ao sist reprodutor feminino': 'introducao ao sistema reprodutor feminino',
+  'avaliacao das anemias': 'avaliacao do hemograma e anemias',
+  'cofbasics vitalidade fetal': 'cofbasics avaliacao de vitalidade fetal g o',
+  'atls letra e e politrauma': 'atls letra e e seguimento do tratamento do politrauma',
   'diabetes diagnostico e abordagem ambulatorial': 'diabetes diagnostico e abordagem laboratorial',
   'diabetes classificacao fisiopatologia e diagnostico do dm': 'diabetes diagnostico e abordagem laboratorial',
   'diabetes tratamento e complicacoes cronicas': 'diabetes diagnostico e abordagem laboratorial',
@@ -338,6 +342,7 @@ const TOPIC_ALIASES = {
   'determinacao social saude doenca': 'determinacao social do processo saude doenca e promocao de saude',
   'abdome agudo apendicite': 'abdome agudo inflamatorio apendicite',
   'sangramentos 2 metade gestacao': 'sangramentos da segunda metade da gestacao',
+  'sangramentos 1 metade gestacao': 'sangramentos da primeira metade da gestacao',
   'r1 outros sangramentos de segunda metade da gestacao': 'sangramentos da segunda metade da gestacao',
   'sindrome dispeptica drge': 'sindrome dispeptica dispepsia fisiologia gastrica drge',
   'endometriose': 'sangramento uterino anormal',
@@ -350,6 +355,9 @@ const TOPIC_ALIASES = {
   'sindromes geriatricas e vacinacao idoso': 'sindromes geriatricas vacinacao do idoso e iatrogenia no idoso',
   'dermatite atopica e lesoes benignas rn': 'dermatite atopica e lesoes benignas do recem nascido',
   'cofbasics bioestatistica': 'cofbasics fundamentos de bioestatistica saude coletiva',
+  'cofbasics propedeutica uroginecologia': 'cofbasics propedeutica em uroginecologia g o',
+  'transtornos alimentares e de personalidade': 'transtornos alimentares somatoformes e de personalidade',
+  'alergologia hipersensibilidade': 'alergologia reacoes de hipersensibilidade rinite e angioedema',
   'tecnica operatoria fios e anestesicos': 'tecnica operatoria aspectos gerais fios de sutura e anestesicos locais',
   'pals suporte avancado pediatria': 'suporte avancado de vida em pediatria pals',
   'itu e meningite pediatria': 'infeccao de trato urinario e meningite',
@@ -460,15 +468,25 @@ function questionStatsForSchedule(scheduleId) {
   return renderCache.questionStats.get(scheduleId) || { done:0, correct:0, rate:0 };
 }
 function ensureQuestionStatsIndex() {
-  if(renderCache.questionStatsReady) return;
-  renderCache.questionStats.clear();
+  const scheduleKey = (state.schedule || []).map(item => `${item.id}:${item.block}:${canonicalTopic(item.topic)}`).join('|');
+  if(renderCache.questionAvailabilityScheduleKey !== scheduleKey) {
+    renderCache.questionAvailabilityReady = false;
+    renderCache.questionAvailabilityScheduleKey = scheduleKey;
+  }
+  if(renderCache.questionStatsReady && renderCache.questionAvailabilityReady) return;
+  const buildStats = !renderCache.questionStatsReady;
+  const buildAvailability = !renderCache.questionAvailabilityReady;
+  if(buildStats) renderCache.questionStats.clear();
+  if(buildAvailability) renderCache.questionAvailability.clear();
   const scheduleById = new Map((state.schedule || []).map(item => [item.id, item]));
   questionBank.forEach(question => {
     const result = questionResult(question);
-    if(!result?.answeredAt) return;
-    const direct = result.scheduleId ? scheduleById.get(result.scheduleId) : null;
+    if(!buildAvailability && !result?.answeredAt) return;
+    const direct = result?.scheduleId ? scheduleById.get(result.scheduleId) : null;
     const lesson = direct && String(question.collectionBlock) === String(direct.block) ? direct : scheduleForQuestion(question);
     if(!lesson) return;
+    if(buildAvailability) renderCache.questionAvailability.set(lesson.id, n(renderCache.questionAvailability.get(lesson.id)) + 1);
+    if(!buildStats || !result?.answeredAt) return;
     const stats = renderCache.questionStats.get(lesson.id) || { done:0, correct:0, rate:0 };
     stats.done += 1;
     if(result.correct) stats.correct += 1;
@@ -476,6 +494,7 @@ function ensureQuestionStatsIndex() {
   });
   renderCache.questionStats.forEach(stats => { stats.rate = stats.done ? stats.correct / stats.done : 0; });
   renderCache.questionStatsReady = true;
+  renderCache.questionAvailabilityReady = true;
 }
 function flashcardStatsForSchedule(scheduleId) {
   if(renderCache.flashcardStats.has(scheduleId)) return renderCache.flashcardStats.get(scheduleId);
@@ -604,6 +623,12 @@ function invalidateActivityRenderCache() {
   renderCache.questionSummary = null;
   renderCache.flashcardStats.clear();
   renderCache.manualCards = null;
+}
+function invalidateQuestionBankRenderCache() {
+  invalidateActivityRenderCache();
+  renderCache.questionAvailability.clear();
+  renderCache.questionAvailabilityReady = false;
+  renderCache.questionAvailabilityScheduleKey = '';
 }
 function scheduleCloudSave() {
   if(!currentUser || !sbClient) return;
@@ -766,7 +791,7 @@ async function loadQuestionBankNow() {
       questionBank = deduplicateQuestions(cloudQuestions);
     }
   }
-  invalidateActivityRenderCache();
+  invalidateQuestionBankRenderCache();
   reconcileQuestionProgressWithAnswers();
   if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
 }
@@ -797,7 +822,7 @@ async function loadLocalQuestionBank() {
     .flat();
   if(blocks.length) {
     questionBank = deduplicateQuestions(blocks.map(normalizeQuestionRecord)).sort((a,b)=>questionCollectionSort(a)-questionCollectionSort(b) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
-    invalidateActivityRenderCache();
+    invalidateQuestionBankRenderCache();
     return true;
   }
   return false;
@@ -1413,7 +1438,15 @@ function formatStudyHours(hours) {
   return h ? `${h}h${minutes ? ` ${minutes}min` : ''}` : `${minutes}min`;
 }
 function clamp(v,min=0,max=1) { return Math.max(min, Math.min(max, n(v))); }
-function lessonQuestionTarget() { return LESSON_MIN_QUESTIONS; }
+function availableQuestionsForLesson(item) {
+  if(!item || !questionBank.length) return null;
+  ensureQuestionStatsIndex();
+  return n(renderCache.questionAvailability.get(item.id));
+}
+function lessonQuestionTarget(item) {
+  const available = availableQuestionsForLesson(item);
+  return available === null ? LESSON_MIN_QUESTIONS : Math.min(LESSON_MIN_QUESTIONS, available);
+}
 function lessonFlashcardTarget() { return LESSON_MIN_FLASHCARDS; }
 function statusOf(item) {
   const videoDone = scheduleVideoCompleted(item);
@@ -1423,7 +1456,9 @@ function statusOf(item) {
 }
 function progressOf(item) {
   if(statusOf(item)==='Concluído') return 1;
-  return clamp(((scheduleVideoCompleted(item) ? 1 : 0) + clamp(completedQuestions(item)/lessonQuestionTarget(item)) + clamp(completedFlashcards(item)/lessonFlashcardTarget(item))) / 3);
+  const questionTarget = lessonQuestionTarget(item);
+  const questionProgress = questionTarget ? clamp(completedQuestions(item)/questionTarget) : 1;
+  return clamp(((scheduleVideoCompleted(item) ? 1 : 0) + questionProgress + clamp(completedFlashcards(item)/lessonFlashcardTarget(item))) / 3);
 }
 function badgeStatus(s) { const cls = s==='Concluído'?'done':s==='Aguardando'?'wait':'no'; return `<span class="badge ${cls}">${s}</span>`; }
 function byDate(a,b) { return a.date.localeCompare(b.date) || n(a.block)-n(b.block) || n(a.row)-n(b.row) || a.topic.localeCompare(b.topic); }
@@ -1819,7 +1854,7 @@ function areaLine(a) { return `<div class="area-bar"><strong>${escapeHtml(a.area
 function renderPendencias() {
   const items = state.schedule.filter(x => x.date <= ui.refDate && statusOf(x)!=='Concluído').sort(byPendingBlockOrder);
   const t=totals();
-  document.getElementById('pendencias').innerHTML = `<div class="grid cards">${metric('Aulas pendentes', items.length, `até ${fmtDate(ui.refDate)}`)}${metric('Questões pendentes', Math.round(t.debtQ), 'diferença entre meta e realizado')}${metric('Flashcards pendentes', Math.round(t.debtFC), 'diferença entre meta e realizado')}</div><div class="card"><div class="section-title"><div><h2>Pendências por bloco</h2><div class="muted">A revisão começa pelos blocos mais antigos. Cada aula conclui com vídeo, 10 questões e 10 flashcards.</div></div><input class="input" id="pendDate" type="date" value="${ui.refDate}"></div>${renderPendingLessons(items)}</div>`;
+  document.getElementById('pendencias').innerHTML = `<div class="grid cards">${metric('Aulas pendentes', items.length, `até ${fmtDate(ui.refDate)}`)}${metric('Questões pendentes', Math.round(t.debtQ), 'diferença entre meta e realizado')}${metric('Flashcards pendentes', Math.round(t.debtFC), 'diferença entre meta e realizado')}</div><div class="card"><div class="section-title"><div><h2>Pendências por bloco</h2><div class="muted">A revisão começa pelos blocos mais antigos. Cada aula conclui com vídeo, até 10 questões disponíveis e 10 flashcards.</div></div><input class="input" id="pendDate" type="date" value="${ui.refDate}"></div>${renderPendingLessons(items)}</div>`;
   document.getElementById('pendDate').onchange = e => { ui.refDate=e.target.value; render(); }; bindScheduleInputs();
 }
 function renderCronograma() {
@@ -4808,6 +4843,10 @@ function openQuestionsForSchedule(scheduleId) {
   if(!item) return;
   const completed = completedQuestions(item);
   const target = lessonQuestionTarget(item);
+  if(target === 0) {
+    showStudyToast(`Ainda não há questões vinculadas a ${item.topic}.`);
+    return;
+  }
   if(completed >= target) {
     showStudyToast(`Parabéns, você já concluiu esta lista. ${completed} de ${target} questões realizadas em ${item.topic}.`);
     return;
@@ -4821,7 +4860,7 @@ function openQuestionsForSchedule(scheduleId) {
   ui.qSource = 'Todas';
   ui.qTopic = linkedByTopic.length ? item.topic : 'Todos';
   ui.qStatus = 'Não respondidas';
-  ui.qFocusTarget = LESSON_MIN_QUESTIONS;
+  ui.qFocusTarget = target;
   ui.qIndex = 0;
   ui.qQuestionId = '';
   ui.justAnsweredId = '';
@@ -5006,7 +5045,7 @@ function renderQuestionBank() {
       <div class="question-issue-actions"><button class="question-issue-summary ${flagged?'has-items':''} ${showingFlagged?'active':''}" id="showQuestionIssues" aria-pressed="${showingFlagged}" ${flagged?'':'disabled'}><span>⚑</span><strong>${flagged}</strong><span>${showingFlagged ? 'gabaritos suspeitos exibidos' : flagged===1?'gabarito suspeito':'gabaritos suspeitos'}</span></button>${flagged?'<button class="icon-btn question-issue-clear" id="clearQuestionIssues" title="Limpar todas as marcações" aria-label="Limpar todas as marcações de gabarito suspeito">×</button>':''}</div>
       ${progress('Aproveitamento', summary.correct/Math.max(summary.answered,1), `${summary.correct} de ${summary.answered}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
-      ${focusItem ? (() => { const target=LESSON_MIN_QUESTIONS; const completed=questionStatsForSchedule(focusItem.id).done; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
+      ${focusItem ? (() => { const target=lessonQuestionTarget(focusItem); const completed=questionStatsForSchedule(focusItem.id).done; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
       <details class="question-filter-panel"><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? 'Todas' : questionCollectionLabel(ui.qBlock))}</span></summary>
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel"><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
@@ -5938,9 +5977,10 @@ function answerQuestion(question, selected, timedOut=false) {
     else log.wrong = n(log.wrong) + 1;
   }
   const questionsDoneAfter = linkedLesson ? questionsDoneBefore + (wasAnswered ? 0 : 1) : 0;
+  const questionTarget = linkedLesson ? lessonQuestionTarget(linkedLesson) : LESSON_MIN_QUESTIONS;
   persist();
-  if(linkedLesson && questionsDoneBefore < LESSON_MIN_QUESTIONS && questionsDoneAfter >= LESSON_MIN_QUESTIONS) {
-    showStudyToast(`Parabéns! Você concluiu as ${LESSON_MIN_QUESTIONS} questões de ${linkedLesson.topic}.`);
+  if(linkedLesson && questionTarget > 0 && questionsDoneBefore < questionTarget && questionsDoneAfter >= questionTarget) {
+    showStudyToast(`Parabéns! Você concluiu as ${questionTarget} questões disponíveis de ${linkedLesson.topic}.`);
   }
 }
 function updateQuestionProgressField(question, input) {
