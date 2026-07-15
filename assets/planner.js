@@ -588,6 +588,9 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     return log;
   }).sort((a,b) => a.date.localeCompare(b.date));
 
+  merged.flashcardSystem = { ...(remote.flashcardSystem || {}), ...(local.flashcardSystem || {}) };
+  merged.flashcardSystem.reviewLogs = mergeRecordsById(remote.flashcardSystem?.reviewLogs, local.flashcardSystem?.reviewLogs);
+
   const localSchedule = new Map((local.schedule || []).map(item => [item.id, item]));
   merged.schedule = (remote.schedule || local.schedule || []).map(item => {
     const localItem = localSchedule.get(item.id);
@@ -942,18 +945,21 @@ function ensureDayLogs() {
 function defaultDayLog(date) { return { date, mood: 0, pace: '', flashcardsOn: false, flashcards: 0, manualFlashcards: 0, flashcardMinutes: 0, videosOn: false, videos: 0, videoNames: '', lessonMinutes: 0, questionsOn: false, questions: 0, correct: 0, wrong: 0, questionMinutes: 0, materialMinutes: 0, simuladoMinutes: 0, notes: '' }; }
 function repairDailyActivityData() {
   if(!state.activityDataRepairs || typeof state.activityDataRepairs !== 'object') state.activityDataRepairs = {};
-  if(state.activityDataRepairs.flashcards20260714) return;
-  const date = '2026-07-14';
-  let log = state.dayLogs.find(item => item.date === date);
-  if(!log) {
-    log = defaultDayLog(date);
-    state.dayLogs.push(log);
-  }
-  const actualReviews = (state.flashcardSystem?.reviewLogs || []).filter(review => studyDateKey(review.reviewedAt) === date).length;
-  log.flashcards = actualReviews;
-  log.manualFlashcards = 0;
-  log.flashcardsOn = actualReviews > 0 || n(log.flashcardMinutes) > 0;
-  state.activityDataRepairs.flashcards20260714 = { repairedAt:new Date().toISOString(), reviews:actualReviews };
+  const today = studyDateKey();
+  if(!today) return;
+  const reviewsByDate = new Map();
+  (state.flashcardSystem?.reviewLogs || []).forEach(review => {
+    const date = studyDateKey(review.reviewedAt);
+    if(date) reviewsByDate.set(date, n(reviewsByDate.get(date)) + 1);
+  });
+  // Do not carry accumulated totals into the current or a future study day.
+  state.dayLogs.filter(log => log.date >= today).forEach(log => {
+    const automatic = n(reviewsByDate.get(log.date));
+    const manual = n(log.manualFlashcards);
+    log.flashcards = automatic + manual;
+    log.flashcardsOn = log.flashcards > 0 || n(log.flashcardMinutes) > 0;
+  });
+  state.activityDataRepairs.flashcardsDailyV2 = { repairedAt:new Date().toISOString(), studyDate:today };
 }
 function dayLogHasActivity(log) {
   return n(log?.videos) + n(log?.flashcards) + n(log?.questions) + n(log?.lessonMinutes) + n(log?.flashcardMinutes) + n(log?.questionMinutes) + n(log?.materialMinutes) + n(log?.simuladoMinutes) > 0
