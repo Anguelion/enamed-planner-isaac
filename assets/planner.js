@@ -5719,7 +5719,7 @@ function renderQuestionEditPanel(question) {
     <div class="question-edit-options">${optionLetters.map(letter => `<label>${letter}<textarea class="textarea" data-question-edit-option="${letter}">${escapeHtml(question.options?.[letter] || '')}</textarea></label>`).join('')}</div>
     <div class="field-row"><label>Gabarito<select class="select" data-question-edit="answer">${optionLetters.map(letter => `<option value="${letter}" ${question.answer===letter?'selected':''}>${letter}</option>`).join('')}</select></label><label>Área<input class="input" data-question-edit="area" value="${escapeAttr(question.area || '')}"></label><label>Tema<input class="input" data-question-edit="topic" value="${escapeAttr(question.topic || '')}"></label></div>
     <label>Comentário<textarea class="textarea" data-question-edit="comment">${escapeHtml(question.comment || '')}</textarea></label>
-    <div class="question-edit-actions"><button class="icon-btn primary" id="questionEditSave">Salvar correção</button><button class="icon-btn" id="questionEditReset">Restaurar original</button></div>
+    <div class="question-edit-actions"><button class="icon-btn primary" id="questionEditSave">Salvar correção</button><button class="icon-btn" id="copyFullQuestion" title="Copiar enunciado, alternativas, gabarito e comentário">Copiar questão</button><button class="icon-btn" id="questionEditReset">Restaurar original</button></div>
   </div>`;
 }
 function renderQuestionConfidenceLine(question, selected) {
@@ -5955,6 +5955,7 @@ function bindQuestionActions(questions, question) {
   const editClose = document.getElementById('questionEditClose');
   const editSave = document.getElementById('questionEditSave');
   const editReset = document.getElementById('questionEditReset');
+  const copyFullQuestion = document.getElementById('copyFullQuestion');
   const confirmAnswer = document.getElementById('confirmQuestionAnswer');
   const fontDown = document.getElementById('questionFontDown');
   const fontUp = document.getElementById('questionFontUp');
@@ -6089,6 +6090,7 @@ function bindQuestionActions(questions, question) {
   if(editToggle) editToggle.onclick = () => { ui.editQuestionId = ui.editQuestionId === question.id ? '' : question.id; render(); };
   if(editClose) editClose.onclick = () => { ui.editQuestionId = ''; render(); };
   if(editSave) editSave.onclick = () => saveQuestionEdit(question);
+  if(copyFullQuestion) copyFullQuestion.onclick = () => copyFullQuestionText(question);
   if(editReset) editReset.onclick = () => {
     if(confirm('Restaurar o texto original desta questão?')) {
       delete state.questionEdits[question.id];
@@ -6205,6 +6207,45 @@ function deleteQuestionFromPlanner(question) {
   ui.qIndex = Math.max(0, ui.qIndex - 1);
   persist();
   showStudyToast(imported ? 'Questão importada excluída.' : 'Questão ocultada do seu banco.');
+}
+async function copyFullQuestionText(question) {
+  const stem = document.querySelector('[data-question-edit="stem"]')?.value?.trim() || question.stem || '';
+  const answer = document.querySelector('[data-question-edit="answer"]')?.value?.trim() || question.answer || '';
+  const area = document.querySelector('[data-question-edit="area"]')?.value?.trim() || question.area || '';
+  const topic = document.querySelector('[data-question-edit="topic"]')?.value?.trim() || question.topic || '';
+  const comment = document.querySelector('[data-question-edit="comment"]')?.value?.trim() || question.comment || '';
+  const options = Object.keys(question.options || {}).map(letter => {
+    const edited = document.querySelector(`[data-question-edit-option="${letter}"]`)?.value?.trim();
+    return `${letter}. ${edited || question.options[letter] || ''}`;
+  });
+  const parts = [
+    `QUESTÃO ${question.number || ''}`.trim(),
+    [area,topic].filter(Boolean).join(' · '),
+    '',
+    'ENUNCIADO',
+    stem,
+    '',
+    'ALTERNATIVAS',
+    ...options,
+    '',
+    `GABARITO: ${answer || 'Não informado'}`,
+    comment ? `\nCOMENTÁRIO\n${comment}` : '',
+    question.pearl ? `\nPÉROLA\n${question.pearl}` : '',
+    question.trap ? `\nARMADILHA\n${question.trap}` : ''
+  ].filter(Boolean).join('\n');
+  try {
+    await navigator.clipboard.writeText(parts);
+  } catch(error) {
+    const textarea = document.createElement('textarea');
+    textarea.value = parts;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.append(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+  }
+  showStudyToast('Questão completa copiada para a área de transferência.');
 }
 function saveQuestionEdit(question) {
   const edit = {
