@@ -288,6 +288,12 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .feynman-card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px;box-shadow:var(--shadow)}
 .feynman-fields{display:grid;grid-template-columns:1fr 120px 150px;gap:8px;margin:10px 0}
 .feynman-texts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.feynman-guide-steps{display:grid;gap:10px}
+.feynman-guide-step{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start}
+.feynman-guide-step>span{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:var(--soft-blue);color:var(--blue);font-weight:900}
+.feynman-guide-step strong{display:block;color:var(--ink)}
+.feynman-guide-step p{margin:3px 0 0;color:var(--muted);font-size:13px;line-height:1.45}
+.feynman-guide-tip{margin-top:12px;padding:10px 12px;border-left:3px solid var(--amber);border-radius:6px;background:var(--soft-amber);color:var(--ink);font-size:13px;line-height:1.45}
 .textarea{width:100%;min-height:92px;resize:vertical;border:1px solid var(--line);border-radius:8px;padding:9px;background:#fff}
 .review-strip{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 .question-layout{grid-template-columns:minmax(300px,360px) minmax(0,1fr)}
