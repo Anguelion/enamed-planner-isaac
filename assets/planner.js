@@ -609,6 +609,13 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   });
   merged.importedQuestions = [...importedByHash.values()];
   merged.deletedQuestions = { ...(remote.deletedQuestions || {}), ...(local.deletedQuestions || {}) };
+  const incorporationById = new Map();
+  [...(remote.incorporationHistory || []), ...(local.incorporationHistory || [])].forEach(entry => {
+    if(!entry?.id) return;
+    const previous = incorporationById.get(entry.id);
+    incorporationById.set(entry.id, {...previous, ...entry, deletedAt: previous?.deletedAt || entry.deletedAt || ''});
+  });
+  merged.incorporationHistory = [...incorporationById.values()];
 
   const remoteTasks = Array.isArray(remote.dailyTasks) ? remote.dailyTasks : [];
   const localTasks = Array.isArray(local.dailyTasks) ? local.dailyTasks : [];
@@ -5198,6 +5205,7 @@ function parseQuestionBatch(text, defaults={}) {
 function ensureImportedQuestions() {
   if(!Array.isArray(state.importedQuestions)) state.importedQuestions = [];
   if(!state.deletedQuestions || typeof state.deletedQuestions !== 'object') state.deletedQuestions = {};
+  if(!Array.isArray(state.incorporationHistory)) state.incorporationHistory = [];
 }
 function normalizeQuestionRecord(question) {
   const options = Object.fromEntries(Object.entries(question.options || {}).map(([letter,text]) => [String(letter).trim().toUpperCase(), normalizeQuestionText(text)]));
@@ -5528,12 +5536,78 @@ function renderImportQuestionCard(question, index) {
     <div class="import-image-list">${images.length ? images.map(image => `<div class="import-image-item" data-import-drop="${escapeAttr(image.alias)}" data-import-index="${index}"><span>Imagem: <strong>${escapeHtml(image.alias)}</strong></span><span class="badge ${image.assetId?'done':'wait'}">${image.assetId?'anexada':'pendente'}</span><label class="tiny-btn">${image.assetId?'Trocar':'Selecionar arquivo'}<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" data-import-image="${escapeAttr(image.alias)}" data-import-index="${index}" hidden></label></div>`).join('') : '<span class="muted">Sem imagens neste enunciado.</span>'}</div>
   </article>`;
 }
+function incorporationDestination(question) {
+  const lesson = state.schedule.find(item => item.id === question.scheduleId);
+  if(lesson) return `B${String(lesson.block).padStart(2,'0')} · ${lesson.topic}`;
+  const block = question.collectionBlock ? `Bloco ${String(question.collectionBlock).padStart(2,'0')}` : 'Banco geral';
+  return [block, question.topic || question.area].filter(Boolean).join(' · ');
+}
+function incorporationEntries() {
+  ensureImportedQuestions();
+  const recorded = new Map(state.incorporationHistory.map(entry => [entry.questionId, entry]));
+  state.importedQuestions.forEach(question => {
+    if(recorded.has(question.id)) return;
+    recorded.set(question.id, {
+      id: `legacy-${question.id}`,
+      questionId: question.id,
+      createdAt: question.incorporatedAt || question.createdAt || '',
+      destination: incorporationDestination(question),
+      scheduleId: question.scheduleId || '',
+      block: question.collectionBlock || '',
+      topic: question.topic || '',
+      source: question.sourceLabel || 'Importação manual'
+    });
+  });
+  return [...recorded.values()].sort((a,b) => (Date.parse(b.createdAt || '') || 0) - (Date.parse(a.createdAt || '') || 0));
+}
+function renderIncorporationHistory() {
+  const entries = incorporationEntries();
+  const rows = entries.slice(0,80).map(entry => {
+    const question = state.importedQuestions.find(item => item.id === entry.questionId);
+    const removed = Boolean(entry.deletedAt) || !question;
+    const label = question ? `Questão ${question.sourceNumber || question.number || 'sem número'}` : 'Questão excluída';
+    const when = entry.createdAt ? new Date(entry.createdAt).toLocaleString('pt-BR', {dateStyle:'short', timeStyle:'short'}) : 'data anterior não registrada';
+    return `<div class="incorporation-row ${removed?'removed':''}"><div><strong>${escapeHtml(label)}</strong><div class="muted">${escapeHtml(entry.destination || incorporationDestination(question || entry))}</div><small>${escapeHtml(entry.source || '')} · ${escapeHtml(when)}</small></div><div class="incorporation-actions">${removed ? '<span class="badge no">excluída</span>' : `<button class="tiny-btn" data-incorporation-open="${escapeAttr(entry.questionId)}">Abrir</button><button class="tiny-btn danger" data-incorporation-delete="${escapeAttr(entry.questionId)}">Excluir</button>`}</div></div>`;
+  }).join('');
+  return `<section class="card incorporation-history"><div class="section-title"><div><h3>Histórico de incorporações</h3><div class="muted">Questões adicionadas ao banco, com o destino registrado para você revisar ou corrigir.</div></div><span class="badge today">${entries.filter(entry => !entry.deletedAt && state.importedQuestions.some(question => question.id === entry.questionId)).length} ativas</span></div><div class="incorporation-list">${rows || '<div class="empty">As questões que você incorporar aparecerão aqui.</div>'}</div></section>`;
+}
+function openIncorporatedQuestion(questionId) {
+  const question = state.importedQuestions.find(item => item.id === questionId);
+  if(!question) return;
+  ui.tab = 'questoes';
+  ui.qBlock = question.collectionBlock ? String(question.collectionBlock) : 'Todos';
+  ui.qSource = 'Todas';
+  ui.qTopic = 'Todos';
+  ui.qStatus = 'Todas';
+  ui.qQuestionId = question.id;
+  ui.qIndex = 0;
+  ui.qFocusScheduleId = '';
+  render();
+}
+function deleteIncorporatedQuestion(questionId) {
+  const question = state.importedQuestions.find(item => item.id === questionId);
+  if(!question) return;
+  if(!confirm('Excluir esta questão do banco geral? Ela será removida em todos os dispositivos sincronizados.')) return;
+  state.importedQuestions = state.importedQuestions.filter(item => item.id !== questionId);
+  const history = state.incorporationHistory.find(entry => entry.questionId === questionId);
+  if(history) { history.deletedAt = new Date().toISOString(); history.updatedAt = history.deletedAt; }
+  delete state.questionProgress[questionId];
+  delete state.questionEdits[questionId];
+  delete state.questionFlashcards[questionId];
+  delete state.questionLogged[questionId];
+  questionBank = questionBank.filter(item => item.id !== questionId);
+  invalidateQuestionBankRenderCache();
+  persist();
+  renderQuestionImporter();
+  showStudyToast('Questão excluída do banco geral.');
+}
 function renderQuestionImporter() {
   const draft = questionImportDraft || {};
   const defaults = {...importDefaultFields(), ...(draft.defaults || {})};
   const questions = Array.isArray(draft.questions) ? draft.questions : [];
   const report = draft.report || {errors:[], warnings:[], markers:[], estimated:0};
   document.getElementById('importar-questoes').innerHTML = `<div class="importer-layout"><section class="card"><div class="section-title"><div><span class="eyebrow">Banco privado</span><h2>Adicionar questões</h2><div class="muted">Parser determinístico: cole o modelo, revise tudo e só então salve.</div></div><span class="badge today">até ${QUESTION_IMPORT_MAX} por lote</span></div><div class="import-step"><h3>1. Configurações gerais</h3><div class="field-row import-defaults"><label>Coleção / bloco<input class="input" data-import-default="collection_block" value="${escapeAttr(defaults.collection_block)}" placeholder="Ex.: 10 ou ENARE 2025"></label><label>Área<input class="input" data-import-default="area" value="${escapeAttr(defaults.area)}" placeholder="Clínica Médica"></label><label>Especialidade<input class="input" data-import-default="specialty" value="${escapeAttr(defaults.specialty)}"></label><label>Tema padrão<input class="input" data-import-default="topic" value="${escapeAttr(defaults.topic)}"></label><label>Instituição<input class="input" data-import-default="institution" value="${escapeAttr(defaults.institution)}"></label><label>Ano<input class="input" data-import-default="year" value="${escapeAttr(defaults.year)}" inputmode="numeric"></label><label>Dificuldade<select class="select" data-import-default="difficulty"><option value="">Não definida</option>${['baixa','média','alta'].map(value => `<option ${defaults.difficulty===value?'selected':''}>${value}</option>`).join('')}</select></label><label>Tags padrão<input class="input" data-import-default="tags" value="${escapeAttr(defaults.tags)}" placeholder="tema | revisão"></label><label>Status inicial<select class="select" data-import-default="status">${['draft','needs_review','ready','published'].map(value => `<option ${defaults.status===value?'selected':''}>${value}</option>`).join('')}</select></label></div></div><div class="import-step"><div class="section-title"><h3>2. Texto do lote</h3><div class="import-toolbar"><span class="muted" id="importCharCount">${String(draft.text || '').length} caracteres</span><button class="tiny-btn" id="importExample">Usar modelo</button><button class="tiny-btn" id="downloadImportTemplate">Baixar TXT</button><button class="tiny-btn" id="clearImportText">Limpar</button></div></div><textarea class="textarea import-source" id="importSource" placeholder="Cole aqui uma ou mais questões entre @@QUESTION e @@END">${escapeHtml(draft.text || '')}</textarea><div class="import-actions"><button class="icon-btn primary" id="parseQuestionBatch">Interpretar questões</button><button class="icon-btn" id="saveImportDraft">Salvar rascunho</button></div><div class="muted import-help">Obrigatórios: [STEM], [OPTIONS], [ANSWER] e pelo menos duas alternativas. Imagens usam [[IMAGE:nome]].</div></div></section><section class="card import-review"><div class="section-title"><div><h3>3. Revisão antes de salvar</h3><div class="muted">${questions.length} questões · ${questions.filter(q => !(q._errors || []).length).length} válidas · ${report.warnings?.length || 0} avisos · ${report.markers?.length || 0} imagens pendentes</div></div><button class="icon-btn primary" id="commitImportedQuestions" ${questions.length && questions.some(q => !(q._errors || []).length)?'':'disabled'}>Salvar questões</button></div>${report.errors?.length ? `<div class="import-report error"><strong>Erros de formatação</strong>${report.errors.slice(0,12).map(error => `<div>Linha ${error.line || '?'}${error.question?` · questão ${error.question}`:''}: ${escapeHtml(error.message)}</div>`).join('')}</div>` : ''}${report.warnings?.length ? `<div class="import-report warning"><strong>Avisos para revisão</strong>${report.warnings.slice(0,12).map(error => `<div>${error.question?`Questão ${error.question}: `:''}${escapeHtml(error.message)}</div>`).join('')}</div>` : ''}${questions.length ? `<div class="import-review-list">${questions.map(renderImportQuestionCard).join('')}</div>` : '<div class="empty">Interprete o texto para abrir a revisão visual.</div>'}</section></div>`;
+  document.getElementById('importar-questoes').insertAdjacentHTML('beforeend', renderIncorporationHistory());
   enhanceQuestionImporterUi();
   bindQuestionImporter();
 }
@@ -5652,7 +5726,44 @@ function bindQuestionImporter() {
   });
   document.getElementById('removeImportDuplicates')?.addEventListener('click', () => cleanupImportDraft('duplicates'));
   document.getElementById('removeImportInvalid')?.addEventListener('click', () => cleanupImportDraft('invalid'));
-  document.getElementById('commitImportedQuestions')?.addEventListener('click', () => { if(!confirm(`Salvar ${questionImportDraft.questions.length} questões no banco privado?`)) return; const valid=questionImportDraft.questions.filter(q => !(q._errors||[]).length); if(!valid.length) return; ensureImportedQuestions(); const existing=new Set(questionBank.map(questionDuplicateKey)); const batch=new Set(); const fresh=valid.filter(q=>{ const key=questionDuplicateKey(q); if(existing.has(key) || batch.has(key)) return false; batch.add(key); return true; }).map((q,index)=>({...q, displayOrder:state.importedQuestions.length+index+1, importStatus:q.importStatus==='published'?'published':q.importStatus||'ready', _errors:undefined, _warnings:undefined})); state.importedQuestions.push(...fresh); questionBank=deduplicateQuestions([...questionBank,...fresh]); questionImportDraft={text:'',defaults:importQuestionDefaults(),questions:[],report:{errors:[],warnings:[],markers:[],estimated:0}}; saveQuestionImportDraft(); invalidateQuestionBankRenderCache(); persist(); showStudyToast(`${fresh.length} questões adicionadas. ${valid.length-fresh.length} duplicatas ignoradas.`); });
+  document.querySelectorAll('[data-incorporation-open]').forEach(button => button.onclick = () => openIncorporatedQuestion(button.dataset.incorporationOpen));
+  document.querySelectorAll('[data-incorporation-delete]').forEach(button => button.onclick = () => deleteIncorporatedQuestion(button.dataset.incorporationDelete));
+  document.getElementById('commitImportedQuestions')?.addEventListener('click', () => {
+    if(!confirm(`Salvar ${questionImportDraft.questions.length} questões no banco privado?`)) return;
+    const valid=questionImportDraft.questions.filter(q => !(q._errors||[]).length);
+    if(!valid.length) return;
+    ensureImportedQuestions();
+    const existing=new Set(questionBank.map(questionDuplicateKey));
+    const batch=new Set();
+    const now=new Date().toISOString();
+    const fresh=valid.filter(q=>{
+      const key=questionDuplicateKey(q);
+      if(existing.has(key) || batch.has(key)) return false;
+      batch.add(key);
+      return true;
+    }).map((q,index)=>({
+      ...q,
+      displayOrder:state.importedQuestions.length+index+1,
+      incorporatedAt:now,
+      importStatus:q.importStatus==='published'?'published':q.importStatus||'ready',
+      _errors:undefined,
+      _warnings:undefined
+    }));
+    state.importedQuestions.push(...fresh);
+    fresh.forEach(question => state.incorporationHistory.push({
+      id:uuidv7(), questionId:question.id, createdAt:now, updatedAt:now,
+      destination:incorporationDestination(question), scheduleId:question.scheduleId || '',
+      block:question.collectionBlock || '', topic:question.topic || '',
+      source:question.sourceLabel || 'Importação manual'
+    }));
+    questionBank=deduplicateQuestions([...questionBank,...fresh]);
+    questionImportDraft={text:'',defaults:importQuestionDefaults(),questions:[],report:{errors:[],warnings:[],markers:[],estimated:0}};
+    saveQuestionImportDraft();
+    invalidateQuestionBankRenderCache();
+    persist();
+    renderQuestionImporter();
+    showStudyToast(`${fresh.length} questões adicionadas. ${valid.length-fresh.length} duplicatas ignoradas.`);
+  });
 }
 function importQuestionDefaults() { return importDefaultFields(); }
 function renderQuestion(question, total) {
@@ -6194,7 +6305,11 @@ function deleteQuestionFromPlanner(question) {
     ? 'Excluir esta questão importada do seu banco? Esta ação também será sincronizada.'
     : 'Ocultar esta questão do seu banco em todos os aparelhos? O arquivo original local não será apagado.';
   if(!confirm(message)) return;
-  if(imported) state.importedQuestions.splice(importedIndex, 1);
+  if(imported) {
+    state.importedQuestions.splice(importedIndex, 1);
+    const history = state.incorporationHistory?.find(entry => entry.questionId === question.id);
+    if(history) { history.deletedAt = new Date().toISOString(); history.updatedAt = history.deletedAt; }
+  }
   else state.deletedQuestions[question.id] = new Date().toISOString();
   delete state.questionProgress[question.id];
   delete state.questionEdits[question.id];
