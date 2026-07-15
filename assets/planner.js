@@ -83,7 +83,7 @@ let cloudDirty = false;
 let cloudRevision = 0;
 let lastCloudSyncAt = 0;
 let cloudSyncPoll = null;
-let renderCache = { questionStats: new Map(), flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
+let renderCache = { questionStats: new Map(), questionStatsReady:false, questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
   ['painel','Dashboard','dashboard'], ['cronograma','Missão','helmet'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
@@ -207,8 +207,8 @@ function carryDayLogsToRestartDates(dateMoves) {
     if(n(oldLog.mood) && !n(newLog.mood)) newLog.mood = oldLog.mood;
   });
 }
-function persist() { ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
-function saveStateOnly() { ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
+function persist() { ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
+function saveStateOnly(options={}) { ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); if(options.invalidate !== false) invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
@@ -456,17 +456,26 @@ function backfillQuestionScheduleLinks() {
   return linked;
 }
 function questionStatsForSchedule(scheduleId) {
-  if(renderCache.questionStats.has(scheduleId)) return renderCache.questionStats.get(scheduleId);
-  const scheduleItem = state.schedule.find(item => item.id === scheduleId);
-  const linked = questionBank.filter(question => {
+  ensureQuestionStatsIndex();
+  return renderCache.questionStats.get(scheduleId) || { done:0, correct:0, rate:0 };
+}
+function ensureQuestionStatsIndex() {
+  if(renderCache.questionStatsReady) return;
+  renderCache.questionStats.clear();
+  const scheduleById = new Map((state.schedule || []).map(item => [item.id, item]));
+  questionBank.forEach(question => {
     const result = questionResult(question);
-    if(!result?.answeredAt) return false;
-    return questionMatchesSchedule(question, scheduleItem) || (result.scheduleId === scheduleId && String(question.collectionBlock) === String(scheduleItem?.block));
+    if(!result?.answeredAt) return;
+    const direct = result.scheduleId ? scheduleById.get(result.scheduleId) : null;
+    const lesson = direct && String(question.collectionBlock) === String(direct.block) ? direct : scheduleForQuestion(question);
+    if(!lesson) return;
+    const stats = renderCache.questionStats.get(lesson.id) || { done:0, correct:0, rate:0 };
+    stats.done += 1;
+    if(result.correct) stats.correct += 1;
+    renderCache.questionStats.set(lesson.id, stats);
   });
-  const correct = linked.filter(question => questionResult(question)?.correct).length;
-  const stats = { done: linked.length, correct, rate: linked.length ? correct / linked.length : 0 };
-  renderCache.questionStats.set(scheduleId, stats);
-  return stats;
+  renderCache.questionStats.forEach(stats => { stats.rate = stats.done ? stats.correct / stats.done : 0; });
+  renderCache.questionStatsReady = true;
 }
 function flashcardStatsForSchedule(scheduleId) {
   if(renderCache.flashcardStats.has(scheduleId)) return renderCache.flashcardStats.get(scheduleId);
@@ -588,6 +597,11 @@ function mergeRecordsById(remoteRecords, localRecords) {
 }
 function invalidateActivityRenderCache() {
   renderCache.questionStats.clear();
+  renderCache.questionStatsReady = false;
+  renderCache.questionFilterKey = '';
+  renderCache.questionFilterResults = null;
+  renderCache.questionBlockStats = null;
+  renderCache.questionSummary = null;
   renderCache.flashcardStats.clear();
   renderCache.manualCards = null;
 }
@@ -752,6 +766,7 @@ async function loadQuestionBankNow() {
       questionBank = deduplicateQuestions(cloudQuestions);
     }
   }
+  invalidateActivityRenderCache();
   reconcileQuestionProgressWithAnswers();
   if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
 }
@@ -770,17 +785,19 @@ async function loadLocalQuestionBank() {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
   window.ENAMED_LOCAL_QUESTION_BANK = window.ENAMED_LOCAL_QUESTION_BANK || {};
-  // Os arquivos são independentes: carregá-los em paralelo reduz a tela inicial
-  // presa em "0 questões", especialmente no celular e na primeira visita.
-  await Promise.all(index.blocks.map(block => {
-    if(window.ENAMED_LOCAL_QUESTION_BANK[block.block]) return Promise.resolve();
-    return loadQuestionBlockScript(block.script);
-  }));
+  // Executar os 30 scripts no mesmo instante trava aparelhos mais modestos.
+  // Pequenos lotes preservam a rolagem e os toques durante a carga inicial.
+  const pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
+  for(let start=0; start<pending.length; start+=4) {
+    await Promise.all(pending.slice(start,start+4).map(block => loadQuestionBlockScript(block.script)));
+    await new Promise(resolve => requestAnimationFrame(() => resolve()));
+  }
   const blocks = index.blocks
     .map(block => window.ENAMED_LOCAL_QUESTION_BANK?.[block.block]?.questions || [])
     .flat();
   if(blocks.length) {
     questionBank = deduplicateQuestions(blocks.map(normalizeQuestionRecord)).sort((a,b)=>questionCollectionSort(a)-questionCollectionSort(b) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
+    invalidateActivityRenderCache();
     return true;
   }
   return false;
@@ -2149,7 +2166,7 @@ function bindSimuladoInputs(activeRun) {
     }
     activeRun.answers[question.id] = nextAnswer;
     if(n(activeRun.currentIndex) < activeRun.questionIds.length - 1) setSimQuestionIndex(activeRun, n(activeRun.currentIndex) + 1);
-    saveStateOnly();
+    saveStateOnly({invalidate:false});
     render();
   });
   document.querySelectorAll('[data-sim-confidence]').forEach(button => button.onclick = e => {
@@ -2157,7 +2174,7 @@ function bindSimuladoInputs(activeRun) {
     if(!question) return;
     if(!activeRun.confidence || typeof activeRun.confidence !== 'object') activeRun.confidence = {};
     activeRun.confidence[question.id] = e.currentTarget.dataset.simConfidence;
-    saveStateOnly();
+    saveStateOnly({invalidate:false});
     render();
   });
   document.querySelectorAll('[data-sim-eliminate]').forEach(button => button.onclick = e => {
@@ -4036,6 +4053,8 @@ async function loadVideoCatalog() {
     videoCatalog = [];
     videoCatalogStatus = 'Não encontrei o catálogo de videoaulas locais';
   }
+  renderCache.videoDisplay = null;
+  renderCache.videoLessons.clear();
   if(ui.tab === 'aulas') renderAulas();
   else render();
 }
@@ -4670,6 +4689,49 @@ function questionConfidenceStats() {
   const knowledge = rows.filter(item => item.missReason === 'Não saber').length;
   return { avgConfidence, knownCorrect, luckyCorrect, attention, memory, knowledge };
 }
+function questionBankSummary() {
+  if(renderCache.questionSummary) return renderCache.questionSummary;
+  let answered = 0;
+  let correct = 0;
+  let flagged = 0;
+  let confidenceTotal = 0;
+  let confidenceCount = 0;
+  let knownCorrect = 0;
+  let luckyCorrect = 0;
+  let attention = 0;
+  let memory = 0;
+  let knowledge = 0;
+  questionBank.forEach(question => {
+    const result = questionResult(question);
+    if(!result) return;
+    answered += 1;
+    if(result.correct) correct += 1;
+    if(result.answerKeyIssue) flagged += 1;
+    if(n(result.confidence)) {
+      confidenceTotal += n(result.confidence);
+      confidenceCount += 1;
+    }
+    if(result.correct && result.correctMode === 'Sabendo') knownCorrect += 1;
+    if(result.correct && result.correctMode === 'Chute') luckyCorrect += 1;
+    if(result.missReason === 'Desatenção') attention += 1;
+    if(result.missReason === 'Dúvida / já vi' || result.missReason === 'Não lembrar') memory += 1;
+    if(result.missReason === 'Não saber') knowledge += 1;
+  });
+  renderCache.questionSummary = {
+    answered,
+    correct,
+    flagged,
+    confidence: {
+      avgConfidence: confidenceCount ? Math.round(confidenceTotal / confidenceCount) : 0,
+      knownCorrect,
+      luckyCorrect,
+      attention,
+      memory,
+      knowledge
+    }
+  };
+  return renderCache.questionSummary;
+}
 function questionCollectionLabel(value) {
   if(String(value) === 'ineditas') return 'Inéditas por Macroárea';
   return `Bloco ${value}`;
@@ -4781,6 +4843,8 @@ function openFlashcardsForSchedule(scheduleId) {
   render();
 }
 function filteredQuestions() {
+  const cacheKey = JSON.stringify([ui.qFocusScheduleId || '', ui.qBlock, ui.qSource, ui.qTopic, ui.qStatus, normalizedTopic(ui.qSearch || ''), ui.justAnsweredId || '', n(ui.qFocusTarget), questionBank.length]);
+  if(renderCache.questionFilterKey === cacheKey && Array.isArray(renderCache.questionFilterResults)) return renderCache.questionFilterResults;
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   const filtered = questionBank.filter(question => {
     const result = questionResult(question);
@@ -4805,10 +4869,17 @@ function filteredQuestions() {
       || (ui.qStatus === 'Gabarito suspeito' && Boolean(state.questionProgress[question.id]?.answerKeyIssue));
     return searchOk && focusOk && blockOk && sourceOk && topicOk && statusOk;
   });
-  if(!ui.qFocusScheduleId || !n(ui.qFocusTarget)) return filtered;
-  const completed = questionBank.filter(question => questionMatchesSchedule(question, focusItem) && questionResult(question)).length;
+  if(!ui.qFocusScheduleId || !n(ui.qFocusTarget)) {
+    renderCache.questionFilterKey = cacheKey;
+    renderCache.questionFilterResults = filtered;
+    return filtered;
+  }
+  const completed = questionStatsForSchedule(focusItem.id).done;
   const remaining = Math.max(0, n(ui.qFocusTarget) - completed);
-  return filtered.slice(0, remaining);
+  const results = filtered.slice(0, remaining);
+  renderCache.questionFilterKey = cacheKey;
+  renderCache.questionFilterResults = results;
+  return results;
 }
 function renderQuestionTags(question) {
   const tags = Array.isArray(question.tags) ? question.tags.filter(Boolean) : [];
@@ -4905,10 +4976,9 @@ function navigateQuestionBy(delta) {
 function renderQuestionBank() {
   stopAutoStudy('video');
   ensureQuestionProgress();
-  const answered = questionBank.filter(questionResult);
-  const correct = answered.filter(q => questionResult(q).correct);
-  const confidence = questionConfidenceStats();
-  const flagged = questionBank.filter(question => state.questionProgress[question.id]?.answerKeyIssue).length;
+  const summary = questionBankSummary();
+  const confidence = summary.confidence;
+  const flagged = summary.flagged;
   const showingFlagged = ui.qStatus === 'Gabarito suspeito';
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   const blocks = ['Todos', ...new Set(questionBank.map(q => q.collectionBlock).filter(Boolean).map(String))]
@@ -4932,11 +5002,11 @@ function renderQuestionBank() {
     <aside class="card question-sidebar">
       <div class="section-title"><h2>Banco privado</h2><div class="question-sidebar-actions"><span class="badge today">${questionBank.length} questões</span><button class="icon-btn" id="collapseQuestionSidebar" title="Fechar painel do banco" aria-label="Fechar painel do banco">×</button></div></div>
       <div class="muted">Organizado por blocos do planner e coleções especiais.</div>
-      <div class="question-counts"><div><strong>${answered.length}</strong><span class="muted">Feitas</span></div><div><strong>${correct.length}</strong><span class="muted">Certas</span></div><div><strong>${answered.length-correct.length}</strong><span class="muted">Erros</span></div></div>
+      <div class="question-counts"><div><strong>${summary.answered}</strong><span class="muted">Feitas</span></div><div><strong>${summary.correct}</strong><span class="muted">Certas</span></div><div><strong>${summary.answered-summary.correct}</strong><span class="muted">Erros</span></div></div>
       <div class="question-issue-actions"><button class="question-issue-summary ${flagged?'has-items':''} ${showingFlagged?'active':''}" id="showQuestionIssues" aria-pressed="${showingFlagged}" ${flagged?'':'disabled'}><span>⚑</span><strong>${flagged}</strong><span>${showingFlagged ? 'gabaritos suspeitos exibidos' : flagged===1?'gabarito suspeito':'gabaritos suspeitos'}</span></button>${flagged?'<button class="icon-btn question-issue-clear" id="clearQuestionIssues" title="Limpar todas as marcações" aria-label="Limpar todas as marcações de gabarito suspeito">×</button>':''}</div>
-      ${progress('Aproveitamento', correct.length/Math.max(answered.length,1), `${correct.length} de ${answered.length}`)}
+      ${progress('Aproveitamento', summary.correct/Math.max(summary.answered,1), `${summary.correct} de ${summary.answered}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
-      ${focusItem ? (() => { const target=LESSON_MIN_QUESTIONS; const completed=questionBank.filter(item=>scheduleForQuestion(item)?.id===focusItem.id&&questionResult(item)).length; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
+      ${focusItem ? (() => { const target=LESSON_MIN_QUESTIONS; const completed=questionStatsForSchedule(focusItem.id).done; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
       <details class="question-filter-panel"><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? 'Todas' : questionCollectionLabel(ui.qBlock))}</span></summary>
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel"><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
@@ -4982,16 +5052,27 @@ function renderQuestionBank() {
   updateAutoStudyIndicator();
 }
 function renderQuestionBlockOverview() {
-  const groups = [...new Set(questionBank.map(question => question.collectionBlock).filter(Boolean).map(String))]
-    .sort((a,b)=>questionCollectionSort(a)-questionCollectionSort(b));
+  const groups = questionBlockStats();
   if(!groups.length) return '<div class="empty">Carregue questões para ver os blocos.</div>';
-  return `<div class="qbank-block-grid">${groups.map(block => {
-    const questions = questionBank.filter(question => String(question.collectionBlock) === block);
-    const done = questions.filter(questionResult).length;
-    const active = String(ui.qBlock) === block;
-    const label = block === 'ineditas' ? 'Inéditas' : block;
-    return `<button class="qbank-block-box ${active?'active':''}" data-qblock-pick="${escapeAttr(block)}"><strong>${escapeHtml(label)}</strong><small>${done}/${questions.length}</small></button>`;
+  return `<div class="qbank-block-grid">${groups.map(group => {
+    const active = String(ui.qBlock) === group.block;
+    const label = group.block === 'ineditas' ? 'Inéditas' : group.block;
+    return `<button class="qbank-block-box ${active?'active':''}" data-qblock-pick="${escapeAttr(group.block)}"><strong>${escapeHtml(label)}</strong><small>${group.done}/${group.total}</small></button>`;
   }).join('')}</div>`;
+}
+function questionBlockStats() {
+  if(Array.isArray(renderCache.questionBlockStats)) return renderCache.questionBlockStats;
+  const groups = new Map();
+  questionBank.forEach(question => {
+    if(question.collectionBlock === undefined || question.collectionBlock === null || question.collectionBlock === '') return;
+    const block = String(question.collectionBlock);
+    const group = groups.get(block) || { block, total:0, done:0 };
+    group.total += 1;
+    if(questionResult(question)) group.done += 1;
+    groups.set(block, group);
+  });
+  renderCache.questionBlockStats = [...groups.values()].sort((a,b)=>questionCollectionSort(a.block)-questionCollectionSort(b.block));
+  return renderCache.questionBlockStats;
 }
 function renderQuestion(question, total) {
   const savedProgress = state.questionProgress[question.id] || {};
@@ -5220,6 +5301,18 @@ function renderQuestionNotes(question, result) {
   const notes = result?.notes || '';
   return `<div class="question-notes single"><textarea class="textarea" data-progress-field="notes" aria-label="Anotação da questão">${escapeHtml(notes)}</textarea></div>`;
 }
+function updateQuestionDraftUI(questionId, selected) {
+  document.querySelectorAll('[data-question][data-answer]').forEach(button => {
+    button.classList.toggle('selected', button.dataset.question === questionId && button.dataset.answer === selected);
+  });
+  const confirm = document.getElementById('confirmQuestionAnswer');
+  if(confirm) {
+    confirm.disabled = !selected;
+    confirm.dataset.selectedAnswer = selected || '';
+  }
+  const status = document.querySelector('.answer-confirm .muted');
+  if(status) status.textContent = selected ? `Alternativa ${selected} selecionada` : 'Selecione uma alternativa e confirme.';
+}
 function bindQuestionActions(questions, question) {
   if(!question) return;
   const chooseAnswer = (button, e) => {
@@ -5240,9 +5333,9 @@ function bindQuestionActions(questions, question) {
     ui.draftAnswers[question.id] = selected;
     const current=state.questionProgress[question.id] || {};
     state.questionProgress[question.id] = { ...current, draftAnswer:selected };
-    saveStateOnly();
+    saveStateOnly({invalidate:false});
     resetKeyboardConfirmation();
-    render();
+    updateQuestionDraftUI(question.id, selected);
   };
   document.querySelectorAll('[data-question][data-answer]').forEach(button => {
     button.onclick = e => {
@@ -5285,8 +5378,8 @@ function bindQuestionActions(questions, question) {
   document.querySelectorAll('[data-question-confidence]').forEach(button => button.onclick = e => {
     const current = state.questionProgress[question.id] || {};
     state.questionProgress[question.id] = { ...current, draftConfidence: e.currentTarget.dataset.questionConfidence };
-    saveStateOnly();
-    render();
+    saveStateOnly({invalidate:false});
+    document.querySelectorAll('[data-question-confidence]').forEach(option => option.classList.toggle('active', option === e.currentTarget));
   });
   const goPrev = () => navigateQuestionBy(-1);
   const goNext = () => navigateQuestionBy(1);
@@ -5584,8 +5677,11 @@ function handleQuestionKeyboard(event) {
     if(!Object.prototype.hasOwnProperty.call(question.options || {}, letter)) return;
     event.preventDefault();
     ui.draftAnswers[question.id] = letter;
+    const current = state.questionProgress[question.id] || {};
+    state.questionProgress[question.id] = { ...current, draftAnswer:letter };
+    saveStateOnly({invalidate:false});
     resetKeyboardConfirmation();
-    render();
+    updateQuestionDraftUI(question.id, letter);
     return;
   }
 
@@ -5794,6 +5890,7 @@ function answerQuestion(question, selected, timedOut=false) {
   stopQuestionTimer(true);
   resetKeyboardConfirmation();
   const previous = state.questionProgress[question.id] || {};
+  const wasAnswered = Boolean(previous.answeredAt);
   const linkedLesson = scheduleForQuestion(question);
   const questionsDoneBefore = linkedLesson ? questionStatsForSchedule(linkedLesson.id).done : 0;
   const correct = !timedOut && selected === question.answer;
@@ -5840,8 +5937,7 @@ function answerQuestion(question, selected, timedOut=false) {
     if(correct) log.correct = n(log.correct) + 1;
     else log.wrong = n(log.wrong) + 1;
   }
-  if(linkedLesson) renderCache.questionStats.delete(linkedLesson.id);
-  const questionsDoneAfter = linkedLesson ? questionStatsForSchedule(linkedLesson.id).done : 0;
+  const questionsDoneAfter = linkedLesson ? questionsDoneBefore + (wasAnswered ? 0 : 1) : 0;
   persist();
   if(linkedLesson && questionsDoneBefore < LESSON_MIN_QUESTIONS && questionsDoneAfter >= LESSON_MIN_QUESTIONS) {
     showStudyToast(`Parabéns! Você concluiu as ${LESSON_MIN_QUESTIONS} questões de ${linkedLesson.topic}.`);
@@ -6177,7 +6273,6 @@ function ensureViewData(tab) {
 }
 function render() {
   sessionStorage.setItem(UI_TAB_KEY, ui.tab);
-  renderCache = { questionStats: new Map(), flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
   ensureViewData(ui.tab);
   renderMotivation();
   renderTabs();
@@ -6322,7 +6417,8 @@ startMotivationCycle();
 loadMotivationMessages();
 setupSidebar();
 render();
-loadQuestionBank();
+if('requestIdleCallback' in window) requestIdleCallback(() => loadQuestionBank(), {timeout:700});
+else setTimeout(() => loadQuestionBank(), 120);
 loadOfficialSchedule();
 loadVideoCatalog();
 initCloud();
