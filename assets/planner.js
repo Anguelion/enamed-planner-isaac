@@ -7,7 +7,9 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260714-31';
+const QUESTION_BANK_ASSET_VERSION = '20260715-32';
+const QUESTION_IMPORT_MAX = 200;
+const QUESTION_IMPORT_DRAFT_KEY = 'soqueromed-question-import-draft';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -48,11 +50,13 @@ let materialLibraryStatus = 'Carregando resumos...';
 let importedSimulados = [];
 let importedSimuladosStatus = 'Carregando simulados importados...';
 let questionBankLoadPromise = null;
+let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
 let importedSimuladosLoadPromise = null;
 let pomodoroLastSavedSecond = -1;
 const seed = JSON.parse(document.getElementById('seed').textContent);
 let state = loadState();
+ensureImportedQuestions();
 normalizeOfficialScheduleNames();
 ensureRestartFromBlockTen();
 ensureDayLogs();
@@ -86,7 +90,7 @@ let cloudSyncPoll = null;
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
-  ['painel','Dashboard','dashboard'], ['cronograma','Missão','helmet'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
+  ['painel','Dashboard','dashboard'], ['cronograma','Missão','helmet'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['importar-questoes','Adicionar questões','upload'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
 ];
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
@@ -207,8 +211,8 @@ function carryDayLogsToRestartDates(dateMoves) {
     if(n(oldLog.mood) && !n(newLog.mood)) newLog.mood = oldLog.mood;
   });
 }
-function persist() { ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
-function saveStateOnly(options={}) { ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); if(options.invalidate !== false) invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
+function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
+function saveStateOnly(options={}) { ensureImportedQuestions(); ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); if(options.invalidate !== false) invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
@@ -590,6 +594,12 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
 
   merged.flashcardSystem = { ...(remote.flashcardSystem || {}), ...(local.flashcardSystem || {}) };
   merged.flashcardSystem.reviewLogs = mergeRecordsById(remote.flashcardSystem?.reviewLogs, local.flashcardSystem?.reviewLogs);
+  const importedByHash = new Map();
+  [...(remote.importedQuestions || []), ...(local.importedQuestions || [])].forEach(question => {
+    const key = question.contentHash || question.id;
+    if(key && !importedByHash.has(key)) importedByHash.set(key, question);
+  });
+  merged.importedQuestions = [...importedByHash.values()];
 
   const localSchedule = new Map((local.schedule || []).map(item => [item.id, item]));
   merged.schedule = (remote.schedule || local.schedule || []).map(item => {
@@ -823,8 +833,10 @@ async function loadLocalQuestionBank() {
   const blocks = index.blocks
     .map(block => window.ENAMED_LOCAL_QUESTION_BANK?.[block.block]?.questions || [])
     .flat();
-  if(blocks.length) {
-    questionBank = deduplicateQuestions(blocks.map(normalizeQuestionRecord)).sort((a,b)=>questionCollectionSort(a)-questionCollectionSort(b) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
+  ensureImportedQuestions();
+  const imported = state.importedQuestions.map(normalizeQuestionRecord);
+  if(blocks.length || imported.length) {
+    questionBank = deduplicateQuestions([...blocks.map(normalizeQuestionRecord), ...imported]).sort((a,b)=>questionCollectionSort(a)-questionCollectionSort(b) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
     invalidateQuestionBankRenderCache();
     return true;
   }
@@ -1723,6 +1735,7 @@ function iconSvg(name) {
     insight:'<path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/><path d="m4 7 6-4 6 6 5-5"/>',
     history:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/>',
     message:'<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/><path d="M8 9h8M8 13h5"/>'
+    ,upload:'<path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 20h14a2 2 0 0 0 2-2v-3M3 15v3a2 2 0 0 0 2 2"/>'
     ,prescription:'<path d="M9 3h6l1 3h3a2 2 0 0 1 2 2v12H3V8a2 2 0 0 1 2-2h3Z"/><path d="M9 6h6M8 11h8M8 15h5"/><path d="M16 15v5M13.5 17.5h5"/>'
   };
   return `<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.dashboard}</svg>`;
@@ -4812,15 +4825,134 @@ function normalizeMedicalTypography(value='') {
     .replace(/\s+([,.;:!?])/g, '$1')
     .replace(/([A-Za-zÀ-ÿ0-9])\s+:\s+/g, '$1: ');
 }
+function loadQuestionImportDraft() {
+  try { return JSON.parse(localStorage.getItem(QUESTION_IMPORT_DRAFT_KEY) || '{}'); } catch { return {}; }
+}
+function saveQuestionImportDraft() {
+  try { localStorage.setItem(QUESTION_IMPORT_DRAFT_KEY, JSON.stringify(questionImportDraft || {})); } catch {}
+}
+function uuidv7() {
+  const now = Date.now();
+  const random = new Uint8Array(10);
+  crypto.getRandomValues(random);
+  const time = now.toString(16).padStart(12, '0');
+  const hex = `${time}${[...random].map(value => value.toString(16).padStart(2, '0')).join('')}`;
+  return `${hex.slice(0,8)}-${hex.slice(8,12)}-7${hex.slice(13,16)}-${(8 + (parseInt(hex.slice(16,18),16) % 4).toString(16))}${hex.slice(18,20)}-${hex.slice(20,32)}`;
+}
+function simpleContentHash(value) {
+  let hash = 2166136261;
+  for(const char of String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()) {
+    hash ^= char.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0).toString(16).padStart(8, '0');
+}
+function sanitizeImportedText(value='') {
+  return String(value).replace(/<\/?script[^>]*>/gi, '').replace(/\son\w+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, '').replace(/javascript\s*:/gi, '').trim();
+}
+function normalizeImportKey(key) {
+  return String(key || '').trim().toLowerCase().replace(/[ -]+/g, '_');
+}
+function parseQuestionBatch(text, defaults={}) {
+  const source = String(text || '').replace(/\r\n?/g, '\n');
+  const chunks = [];
+  const startRe = /@@QUESTION\b/gi;
+  let match;
+  while((match = startRe.exec(source))) {
+    const end = source.indexOf('@@END', match.index);
+    const chunkEnd = end >= 0 ? end : source.length;
+    chunks.push({ text: source.slice(match.index + match[0].length, chunkEnd), start: source.slice(0, match.index).split('\n').length, closed: end >= 0 });
+    if(end < 0) break;
+    startRe.lastIndex = end + 5;
+  }
+  const report = { errors: [], warnings: [], markers: [], estimated: chunks.length };
+  if(!chunks.length && source.trim()) report.errors.push({line:1, message:'Nenhum marcador @@QUESTION foi encontrado.'});
+  const parsed = chunks.slice(0, QUESTION_IMPORT_MAX).map((chunk, index) => {
+    const lines = chunk.text.split('\n');
+    const meta = {...defaults};
+    const sections = {stem:[], options:[], answer:[], comment:[], pearl:[], trap:[], source:[]};
+    let section = 'meta';
+    let option = null;
+    lines.forEach((rawLine, offset) => {
+      const line = rawLine.trimEnd();
+      const header = line.match(/^\[([A-Z]+)\]\s*$/i);
+      if(header) { section = normalizeImportKey(header[1]); option = null; return; }
+      if(section === 'meta') {
+        const field = line.match(/^([a-z][\w-]*)\s*:\s*(.*)$/i);
+        if(field) meta[normalizeImportKey(field[1])] = sanitizeImportedText(field[2]);
+        else if(line.trim()) report.warnings.push({line:chunk.start + offset, question:index + 1, message:'Linha fora do formato de metadado.'});
+        return;
+      }
+      if(section === 'options') {
+        const found = line.match(/^([A-Z])\.\s*(.*)$/);
+        if(found) { option = found[1].toUpperCase(); sections.options.push({key:option, lines:[sanitizeImportedText(found[2])]}); }
+        else if(line.trim() && option) sections.options.at(-1).lines.push(sanitizeImportedText(line));
+        return;
+      }
+      if(sections[section]) sections[section].push(sanitizeImportedText(line));
+      else if(line.trim()) report.warnings.push({line:chunk.start + offset, question:index + 1, message:`Seção [${section}] não é suportada.`});
+    });
+    const markers = [...sections.stem.join('\n').matchAll(/\[\[IMAGE:([^\]]+)\]\]/gi)].map(item => item[1].trim());
+    markers.forEach(alias => report.markers.push({question:index + 1, alias, line:chunk.start}));
+    const options = Object.fromEntries(sections.options.map(item => [item.key, item.lines.join('\n').trim()]));
+    const answer = String((sections.answer.join('\n').match(/\b([A-E])\b/i) || [,''])[1]).toUpperCase();
+    const question = normalizeQuestionRecord({
+      id: uuidv7(), number: meta.number || '', sourceNumber: meta.number || '', displayOrder:index + 1,
+      collectionBlock: meta.collection_block || meta.block || defaults.collection_block || defaults.block || '',
+      collectionLabel: meta.collection || defaults.collection || '', documentBlock: meta.document_block || '',
+      sourceLabel: meta.source_label || defaults.source_label || meta.institution || defaults.institution || 'Importação manual',
+      area: meta.area || defaults.area || '', specialty: meta.specialty || '', topic: meta.topic || defaults.topic || '', subtopic: meta.subtopic || '',
+      difficulty: meta.difficulty || defaults.difficulty || '', institution: meta.institution || defaults.institution || '', examYear: meta.year || defaults.year || '',
+      tags: String(meta.tags || defaults.tags || '').split('|').map(tag => tag.trim()).filter(Boolean), stem: sections.stem.join('\n').replace(/\[\[IMAGE:[^\]]+\]\]/gi, '').trim(), options, answer,
+      comment: sections.comment.join('\n').trim(), pearl: sections.pearl.join('\n').trim(), trap: sections.trap.join('\n').trim(), source: sections.source.join('\n').trim(),
+      images: markers.map(alias => ({alias, assetId:null, pending:true}))
+    });
+    const errors = [];
+    if(!question.stem) errors.push('Enunciado ausente.');
+    if(Object.keys(options).length < 2) errors.push('São necessárias pelo menos duas alternativas.');
+    if(new Set(Object.keys(options).map(key => key.toUpperCase())).size !== Object.keys(options).length) errors.push('Há letras de alternativas duplicadas.');
+    if(!answer) errors.push('Gabarito ausente.');
+    if(answer && !options[answer]) errors.push(`O gabarito ${answer} não corresponde a uma alternativa.`);
+    if(meta.year && !/^\d{4}$/.test(String(meta.year))) errors.push('Ano inválido.');
+    if(meta.difficulty && !['baixa','média','media','alta'].includes(String(meta.difficulty).toLowerCase())) errors.push('Dificuldade deve ser baixa, média ou alta.');
+    if(markers.length !== new Set(markers.map(alias => alias.toLowerCase())).size) errors.push('Há marcadores de imagem duplicados.');
+    if(question.stem.length > 50000) errors.push('Questão excede 50.000 caracteres.');
+    if(!chunk.closed) errors.push('Falta @@END para esta questão.');
+    question.contentHash = simpleContentHash([question.stem, ...Object.values(question.options), question.answer].join('|'));
+    question.importStatus = errors.length ? 'draft' : markers.length ? 'needs_review' : (defaults.status || 'ready');
+    question._errors = errors;
+    if(errors.length) errors.forEach(message => report.errors.push({line:chunk.start, question:index + 1, message}));
+    return question;
+  });
+  if(chunks.length > QUESTION_IMPORT_MAX) report.errors.push({line:1, message:`O lote excede o limite de ${QUESTION_IMPORT_MAX} questões.`});
+  const seen = new Set();
+  parsed.forEach((question, index) => {
+    if(seen.has(question.contentHash)) { question._warnings = [...(question._warnings || []), 'Possível duplicata dentro deste lote.']; report.warnings.push({question:index + 1, line:1, message:'Possível duplicata dentro deste lote.'}); }
+    seen.add(question.contentHash);
+    if(questionBank.some(existing => existing.contentHash === question.contentHash || simpleContentHash([existing.stem, ...Object.values(existing.options || {}), existing.answer].join('|')) === question.contentHash)) {
+      question._warnings = [...(question._warnings || []), 'Possível duplicata já existente no banco.'];
+      report.warnings.push({question:index + 1, line:1, message:'Possível duplicata já existente no banco.'});
+    }
+  });
+  parseQuestionBatch.lastReport = report;
+  return parsed;
+}
+function ensureImportedQuestions() {
+  if(!Array.isArray(state.importedQuestions)) state.importedQuestions = [];
+}
 function normalizeQuestionRecord(question) {
   const options = Object.fromEntries(Object.entries(question.options || {}).map(([letter,text]) => [String(letter).trim().toUpperCase(), normalizeQuestionText(text)]));
   const answer = String(question.answer || '').trim().toUpperCase();
-  const comment = normalizeMedicalTypography(question.comment || '');
+  const comment = normalizeMedicalTypography([
+    question.comment || '',
+    question.pearl ? `Pérola: ${question.pearl}` : '',
+    question.trap ? `Armadilha: ${question.trap}` : ''
+  ].filter(Boolean).join('\n\n'));
   const declaredAnswer = comment.match(/(?:^|\n)\s*(?:Correta|Gabarito)\s*:\s*([A-E])\b/i)?.[1]?.toUpperCase() || '';
   const safeComment = declaredAnswer && answer && declaredAnswer !== answer
     ? `Análise em revisão: o comentário declara ${declaredAnswer}, mas o gabarito desta questão é ${answer}. A explicação foi ocultada até a conferência no TXT-base do bloco.`
     : comment;
-  return {...question, stem:normalizeQuestionText(question.stem), options, comment:safeComment, answer};
+  return {...question, stem:normalizeQuestionText(question.stem), options, comment:safeComment, answer, tags:Array.isArray(question.tags) ? question.tags.map(tag => String(tag).trim()).filter(Boolean) : [], images:Array.isArray(question.images) ? question.images : []};
 }
 function questionDataIssue(question) {
   const letters = Object.keys(question.options || {});
@@ -5119,6 +5251,60 @@ function questionBlockStats() {
   renderCache.questionBlockStats = [...groups.values()].sort((a,b)=>questionCollectionSort(a.block)-questionCollectionSort(b.block));
   return renderCache.questionBlockStats;
 }
+function importDefaultFields() {
+  return {collection_block:'', area:'', specialty:'', topic:'', subtopic:'', institution:'ENAMED', year:'', difficulty:'', tags:'', status:'draft'};
+}
+function renderImportQuestionCard(question, index) {
+  const errors = question._errors || [];
+  const warnings = question._warnings || [];
+  const images = question.images || [];
+  return `<article class="import-question-card ${errors.length?'invalid':warnings.length?'warning':'valid'}" data-import-card="${index}">
+    <div class="import-question-head"><div><strong>Questão ${escapeHtml(String(question.sourceNumber || question.number || index + 1))}</strong><span class="badge ${errors.length?'no':warnings.length?'wait':'done'}">${errors.length?'Inválida':warnings.length?'Aviso':'Válida'}</span></div><div class="import-card-actions"><button class="tiny-btn" data-import-move="up" data-import-index="${index}" ${index?'':'disabled'} title="Mover para cima">↑</button><button class="tiny-btn" data-import-move="down" data-import-index="${index}" title="Mover para baixo">↓</button><button class="tiny-btn" data-import-duplicate="${index}">Duplicar</button><button class="tiny-btn" data-import-remove="${index}" title="Remover do lote">×</button></div></div>
+    ${errors.length?`<div class="import-errors">${errors.map(error => `<div>⚠ ${escapeHtml(error)}</div>`).join('')}</div>`:''}${warnings.length?`<div class="import-warnings">${warnings.map(warning => `<div>ⓘ ${escapeHtml(warning)}</div>`).join('')}</div>`:''}
+    <div class="import-preview-meta"><span>${escapeHtml(question.area || 'Sem área')}</span><span>${escapeHtml(question.topic || 'Sem tema')}</span><span>${question.tags?.length ? escapeHtml(question.tags.join(' · ')) : 'Sem tags'}</span></div>
+    <label>Enunciado<textarea class="textarea" data-import-edit="stem" data-import-index="${index}">${escapeHtml(question.stem || '')}</textarea></label>
+    <div class="import-options">${Object.entries(question.options || {}).map(([key,value]) => `<label><b>${escapeHtml(key)}</b><textarea class="textarea" data-import-option="${escapeAttr(key)}" data-import-index="${index}">${escapeHtml(value)}</textarea></label>`).join('')}</div>
+    <div class="field-row import-edit-fields"><label>Gabarito<select class="select" data-import-edit="answer" data-import-index="${index}">${Object.keys(question.options || {}).map(key => `<option value="${escapeAttr(key)}" ${question.answer===key?'selected':''}>${escapeHtml(key)}</option>`).join('')}</select></label><label>Tema<input class="input" data-import-edit="topic" data-import-index="${index}" value="${escapeAttr(question.topic || '')}"></label><label>Tags<input class="input" data-import-edit="tags" data-import-index="${index}" value="${escapeAttr((question.tags || []).join(' | '))}"></label></div>
+    <label>Comentário<textarea class="textarea" data-import-edit="comment" data-import-index="${index}">${escapeHtml(question.comment || '')}</textarea></label>
+    <div class="import-image-list">${images.length ? images.map(image => `<div class="import-image-item" data-import-drop="${escapeAttr(image.alias)}" data-import-index="${index}"><span>Imagem: <strong>${escapeHtml(image.alias)}</strong></span><span class="badge ${image.assetId?'done':'wait'}">${image.assetId?'anexada':'pendente'}</span><label class="tiny-btn">${image.assetId?'Trocar':'Selecionar arquivo'}<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" data-import-image="${escapeAttr(image.alias)}" data-import-index="${index}" hidden></label></div>`).join('') : '<span class="muted">Sem imagens neste enunciado.</span>'}</div>
+  </article>`;
+}
+function renderQuestionImporter() {
+  const draft = questionImportDraft || {};
+  const defaults = {...importDefaultFields(), ...(draft.defaults || {})};
+  const questions = Array.isArray(draft.questions) ? draft.questions : [];
+  const report = draft.report || {errors:[], warnings:[], markers:[], estimated:0};
+  document.getElementById('importar-questoes').innerHTML = `<div class="importer-layout"><section class="card"><div class="section-title"><div><span class="eyebrow">Banco privado</span><h2>Adicionar questões</h2><div class="muted">Parser determinístico: cole o modelo, revise tudo e só então salve.</div></div><span class="badge today">até ${QUESTION_IMPORT_MAX} por lote</span></div><div class="import-step"><h3>1. Configurações gerais</h3><div class="field-row import-defaults"><label>Coleção / bloco<input class="input" data-import-default="collection_block" value="${escapeAttr(defaults.collection_block)}" placeholder="Ex.: 10 ou ENARE 2025"></label><label>Área<input class="input" data-import-default="area" value="${escapeAttr(defaults.area)}" placeholder="Clínica Médica"></label><label>Especialidade<input class="input" data-import-default="specialty" value="${escapeAttr(defaults.specialty)}"></label><label>Tema padrão<input class="input" data-import-default="topic" value="${escapeAttr(defaults.topic)}"></label><label>Instituição<input class="input" data-import-default="institution" value="${escapeAttr(defaults.institution)}"></label><label>Ano<input class="input" data-import-default="year" value="${escapeAttr(defaults.year)}" inputmode="numeric"></label><label>Dificuldade<select class="select" data-import-default="difficulty"><option value="">Não definida</option>${['baixa','média','alta'].map(value => `<option ${defaults.difficulty===value?'selected':''}>${value}</option>`).join('')}</select></label><label>Tags padrão<input class="input" data-import-default="tags" value="${escapeAttr(defaults.tags)}" placeholder="tema | revisão"></label><label>Status inicial<select class="select" data-import-default="status">${['draft','needs_review','ready','published'].map(value => `<option ${defaults.status===value?'selected':''}>${value}</option>`).join('')}</select></label></div></div><div class="import-step"><div class="section-title"><h3>2. Texto do lote</h3><div class="import-toolbar"><span class="muted" id="importCharCount">${String(draft.text || '').length} caracteres</span><button class="tiny-btn" id="importExample">Usar modelo</button><button class="tiny-btn" id="downloadImportTemplate">Baixar TXT</button><button class="tiny-btn" id="clearImportText">Limpar</button></div></div><textarea class="textarea import-source" id="importSource" placeholder="Cole aqui uma ou mais questões entre @@QUESTION e @@END">${escapeHtml(draft.text || '')}</textarea><div class="import-actions"><button class="icon-btn primary" id="parseQuestionBatch">Interpretar questões</button><button class="icon-btn" id="saveImportDraft">Salvar rascunho</button></div><div class="muted import-help">Obrigatórios: [STEM], [OPTIONS], [ANSWER] e pelo menos duas alternativas. Imagens usam [[IMAGE:nome]].</div></div></section><section class="card import-review"><div class="section-title"><div><h3>3. Revisão antes de salvar</h3><div class="muted">${questions.length} questões · ${questions.filter(q => !(q._errors || []).length).length} válidas · ${report.warnings?.length || 0} avisos · ${report.markers?.length || 0} imagens pendentes</div></div><button class="icon-btn primary" id="commitImportedQuestions" ${questions.length && questions.some(q => !(q._errors || []).length)?'':'disabled'}>Salvar questões</button></div>${report.errors?.length ? `<div class="import-report error"><strong>Erros de formatação</strong>${report.errors.slice(0,12).map(error => `<div>Linha ${error.line || '?'}${error.question?` · questão ${error.question}`:''}: ${escapeHtml(error.message)}</div>`).join('')}</div>` : ''}${report.warnings?.length ? `<div class="import-report warning"><strong>Avisos para revisão</strong>${report.warnings.slice(0,12).map(error => `<div>${error.question?`Questão ${error.question}: `:''}${escapeHtml(error.message)}</div>`).join('')}</div>` : ''}${questions.length ? `<div class="import-review-list">${questions.map(renderImportQuestionCard).join('')}</div>` : '<div class="empty">Interprete o texto para abrir a revisão visual.</div>'}</section></div>`;
+  bindQuestionImporter();
+}
+function importExampleText() { return `@@QUESTION\nnumber: 1\narea: Clínica Médica\ntopic: Síndrome Coronariana Aguda\ntags: cardiologia | emergência\n\n[STEM]\nPaciente com dor torácica há 40 minutos.\n\n[OPTIONS]\nA. Conduta inicial inadequada.\nB. Observar sem tratamento.\nC. Iniciar protocolo de síndrome coronariana aguda.\nD. Dar alta.\n\n[ANSWER]\nC\n\n[COMMENT]\nExplique aqui o raciocínio do gabarito e das alternativas.\n\n[PEARL]\nUma frase curta de alto rendimento.\n\n[TRAP]\nA pegadinha que não pode ser confundida.\n\n[SOURCE]\nFonte da questão.\n@@END` }
+function updateImportDraftFromForm() {
+  questionImportDraft = questionImportDraft || {};
+  questionImportDraft.text = document.getElementById('importSource')?.value || questionImportDraft.text || '';
+  questionImportDraft.defaults = [...document.querySelectorAll('[data-import-default]')].reduce((acc, input) => { acc[input.dataset.importDefault] = input.value; return acc; }, {...importDefaultFields(), ...(questionImportDraft.defaults || {})});
+  saveQuestionImportDraft();
+}
+function bindQuestionImporter() {
+  const source = document.getElementById('importSource');
+  source?.addEventListener('input', () => { updateImportDraftFromForm(); const count=document.getElementById('importCharCount'); if(count) count.textContent=`${source.value.length} caracteres`; });
+  document.querySelectorAll('[data-import-default]').forEach(input => input.addEventListener('change', updateImportDraftFromForm));
+  document.getElementById('importExample')?.addEventListener('click', () => { source.value=importExampleText(); source.dispatchEvent(new Event('input')); });
+  document.getElementById('clearImportText')?.addEventListener('click', () => { source.value=''; questionImportDraft.questions=[]; source.dispatchEvent(new Event('input')); renderQuestionImporter(); });
+  document.getElementById('saveImportDraft')?.addEventListener('click', () => { updateImportDraftFromForm(); showStudyToast('Rascunho do lote salvo neste dispositivo.'); });
+  document.getElementById('downloadImportTemplate')?.addEventListener('click', () => { const blob=new Blob([importExampleText()],{type:'text/plain;charset=utf-8'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='modelo-importacao-questoes.txt'; a.click(); URL.revokeObjectURL(a.href); });
+  document.getElementById('parseQuestionBatch')?.addEventListener('click', () => { updateImportDraftFromForm(); const parsed=parseQuestionBatch(questionImportDraft.text, questionImportDraft.defaults); questionImportDraft.questions=parsed; questionImportDraft.report=parseQuestionBatch.lastReport; saveQuestionImportDraft(); renderQuestionImporter(); });
+  document.querySelectorAll('[data-import-edit]').forEach(input => input.addEventListener('input', event => { const index=n(event.currentTarget.dataset.importIndex); const field=event.currentTarget.dataset.importEdit; const q=questionImportDraft.questions?.[index]; if(!q) return; q[field]=field==='tags'?String(event.currentTarget.value).split('|').map(tag=>tag.trim()).filter(Boolean):event.currentTarget.value; q.contentHash=simpleContentHash([q.stem,...Object.values(q.options||{}),q.answer].join('|')); saveQuestionImportDraft(); }));
+  document.querySelectorAll('[data-import-option]').forEach(input => input.addEventListener('input', event => { const q=questionImportDraft.questions?.[n(event.currentTarget.dataset.importIndex)]; if(!q) return; q.options[event.currentTarget.dataset.importOption]=event.currentTarget.value; q.contentHash=simpleContentHash([q.stem,...Object.values(q.options||{}),q.answer].join('|')); saveQuestionImportDraft(); }));
+  document.querySelectorAll('[data-import-remove]').forEach(button => button.onclick=() => { questionImportDraft.questions.splice(n(button.dataset.importRemove),1); saveQuestionImportDraft(); renderQuestionImporter(); });
+  document.querySelectorAll('[data-import-duplicate]').forEach(button => button.onclick=() => { const q=structuredClone(questionImportDraft.questions[n(button.dataset.importDuplicate)]); q.id=uuidv7(); q.sourceNumber=''; q.displayOrder=questionImportDraft.questions.length+1; questionImportDraft.questions.splice(n(button.dataset.importDuplicate)+1,0,q); saveQuestionImportDraft(); renderQuestionImporter(); });
+  document.querySelectorAll('[data-import-move]').forEach(button => button.onclick=() => { const index=n(button.dataset.importIndex); const target=button.dataset.importMove==='up'?index-1:index+1; if(target<0 || target>=questionImportDraft.questions.length) return; [questionImportDraft.questions[index],questionImportDraft.questions[target]]=[questionImportDraft.questions[target],questionImportDraft.questions[index]]; saveQuestionImportDraft(); renderQuestionImporter(); });
+  const attachImportImage = (file, index, alias) => { const q=questionImportDraft.questions?.[index]; const image=q?.images?.find(item=>item.alias===alias); if(!file || !image) return; if(file.size>10*1024*1024 || !file.type.startsWith('image/')) { alert('Use uma imagem de até 10 MB.'); return; } image.assetId=uuidv7(); image.originalFilename=file.name; image.mimeType=file.type; image.sizeBytes=file.size; image.url=URL.createObjectURL(file); image.pending=false; window.ENAMED_IMPORTED_ASSET_URLS=window.ENAMED_IMPORTED_ASSET_URLS||{}; window.ENAMED_IMPORTED_ASSET_URLS[image.assetId]=image.url; saveQuestionImportDraft(); renderQuestionImporter(); };
+  document.querySelectorAll('[data-import-image]').forEach(input => input.addEventListener('change', event => attachImportImage(event.currentTarget.files?.[0], n(event.currentTarget.dataset.importIndex), event.currentTarget.dataset.importImage)));
+  document.querySelectorAll('[data-import-drop]').forEach(drop => { drop.addEventListener('dragover', event => { event.preventDefault(); drop.classList.add('dragging'); }); drop.addEventListener('dragleave', () => drop.classList.remove('dragging')); drop.addEventListener('drop', event => { event.preventDefault(); drop.classList.remove('dragging'); attachImportImage(event.dataTransfer.files?.[0], n(drop.dataset.importIndex), drop.dataset.importDrop); }); });
+  document.getElementById('importar-questoes')?.addEventListener('paste', event => { const file=[...(event.clipboardData?.items || [])].find(item => item.type.startsWith('image/'))?.getAsFile(); const pending=questionImportDraft.questions?.flatMap((q,index)=>(q.images||[]).filter(image=>!image.assetId).map(image=>({index,alias:image.alias})))[0]; if(file && pending) { event.preventDefault(); attachImportImage(file,pending.index,pending.alias); showStudyToast(`Imagem ${pending.alias} anexada.`); } });
+  document.getElementById('commitImportedQuestions')?.addEventListener('click', () => { if(!confirm(`Salvar ${questionImportDraft.questions.length} questões no banco privado?`)) return; const valid=questionImportDraft.questions.filter(q => !(q._errors||[]).length); if(!valid.length) return; ensureImportedQuestions(); const existing=new Set(state.importedQuestions.map(q=>q.contentHash)); const fresh=valid.filter(q=>!existing.has(q.contentHash)).map((q,index)=>({...q, displayOrder:state.importedQuestions.length+index+1, importStatus:q.importStatus==='published'?'published':q.importStatus||'ready', _errors:undefined, _warnings:undefined})); state.importedQuestions.push(...fresh); questionBank=deduplicateQuestions([...questionBank,...fresh]); questionImportDraft={text:'',defaults:importQuestionDefaults(),questions:[],report:{errors:[],warnings:[],markers:[],estimated:0}}; saveQuestionImportDraft(); invalidateQuestionBankRenderCache(); persist(); showStudyToast(`${fresh.length} questões adicionadas. ${valid.length-fresh.length} duplicatas ignoradas.`); });
+}
+function importQuestionDefaults() { return importDefaultFields(); }
 function renderQuestion(question, total) {
   const savedProgress = state.questionProgress[question.id] || {};
   const result = questionResult(question);
@@ -5172,7 +5358,8 @@ function renderQuestion(question, total) {
 }
 function renderQuestionImages(question) {
   if(!question.images?.length) return '';
-  return `<div class="question-images">${question.images.map((src, index) => `<img loading="lazy" decoding="async" src="${escapeAttr(src)}" alt="Imagem da questão ${question.number}${question.images.length > 1 ? `.${index + 1}` : ''}">`).join('')}</div>`;
+  const urls = window.ENAMED_IMPORTED_ASSET_URLS || {};
+  return `<div class="question-images">${question.images.map((image, index) => { const src = typeof image === 'string' ? image : image.url || urls[image.assetId] || ''; return src ? `<img loading="lazy" decoding="async" src="${escapeAttr(src)}" alt="Imagem da questão ${question.number}${question.images.length > 1 ? `.${index + 1}` : ''}">` : `<div class="question-image-pending">Imagem pendente: ${escapeHtml(image.alias || 'sem nome')}</div>`; }).join('')}</div>`;
 }
 function renderQuestionEditPanel(question) {
   const optionLetters = ['A','B','C','D','E'].filter(letter => question.options?.[letter] !== undefined);
@@ -6331,6 +6518,7 @@ function render() {
     cronograma: renderCronograma,
     aulas: renderAulas,
     questoes: renderQuestionBank,
+    'importar-questoes': renderQuestionImporter,
     flashcards: renderFlashcards,
     materiais: renderMateriais,
     simulados: renderSimulados,
