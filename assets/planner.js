@@ -88,6 +88,10 @@ let cloudDirty = false;
 let cloudRevision = 0;
 let lastCloudSyncAt = 0;
 let cloudSyncPoll = null;
+let cloudBackups = [];
+let cloudBackupsLoading = false;
+let cloudBackupsReady = false;
+let cloudBackupsError = '';
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
@@ -212,8 +216,8 @@ function carryDayLogsToRestartDates(dateMoves) {
     if(n(oldLog.mood) && !n(newLog.mood)) newLog.mood = oldLog.mood;
   });
 }
-function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
-function saveStateOnly(options={}) { ensureImportedQuestions(); ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); if(options.invalidate !== false) invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
+function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
+function saveStateOnly(options={}) { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); if(options.invalidate !== false) invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
@@ -263,10 +267,13 @@ function ensureQuestionProgress() {
     }));
   });
   if(!state.videoPlayer.resume || typeof state.videoPlayer.resume !== 'object') state.videoPlayer.resume = {};
+  if(!state.videoPlayer.resumeUpdatedAt || typeof state.videoPlayer.resumeUpdatedAt !== 'object') state.videoPlayer.resumeUpdatedAt = {};
   if(!state.videoPlayer.watched || typeof state.videoPlayer.watched !== 'object') state.videoPlayer.watched = {};
   if(!state.videoPlayer.watchedAt || typeof state.videoPlayer.watchedAt !== 'object') state.videoPlayer.watchedAt = {};
   if(!state.videoPlayer.pinned || typeof state.videoPlayer.pinned !== 'object') state.videoPlayer.pinned = { enabled:false, lessonId:'', sourceId:'' };
-  if(!state.videoPlayer.lastOpen || typeof state.videoPlayer.lastOpen !== 'object') state.videoPlayer.lastOpen = { lessonId:'', sourceId:'' };
+  if(!state.videoPlayer.lastOpen || typeof state.videoPlayer.lastOpen !== 'object') state.videoPlayer.lastOpen = { lessonId:'', sourceId:'', updatedAt:'' };
+  state.videoPlayer.lastOpen = { lessonId:'', sourceId:'', updatedAt:'', ...state.videoPlayer.lastOpen };
+  state.videoPlayer.bookmarks = Object.fromEntries(Object.entries(state.videoPlayer.bookmarks).map(([sourceId, entries]) => [sourceId, entries.map(bookmark => ({ ...bookmark, updatedAt:bookmark.updatedAt || bookmark.createdAt || '' }))]));
   if(!state.dailyCheckins || typeof state.dailyCheckins !== 'object') state.dailyCheckins = {};
   if(!state.prescriptionLab || typeof state.prescriptionLab !== 'object') state.prescriptionLab = {};
   if(!Array.isArray(state.prescriptionLab.cases)) state.prescriptionLab.cases = [];
@@ -627,9 +634,41 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   });
 
   merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions);
-  merged.videoPlayer = { ...(remote.videoPlayer || {}), ...(local.videoPlayer || {}) };
-  merged.videoPlayer.watched = { ...(remote.videoPlayer?.watched || {}), ...(local.videoPlayer?.watched || {}) };
-  merged.videoPlayer.watchedAt = { ...(remote.videoPlayer?.watchedAt || {}), ...(local.videoPlayer?.watchedAt || {}) };
+  merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
+  return merged;
+}
+function timestampOf(value) { return Date.parse(value || '') || 0; }
+function mergeVideoPlayerState(remotePlayer={}, localPlayer={}, preferLocal=false) {
+  const remote = remotePlayer && typeof remotePlayer === 'object' ? remotePlayer : {};
+  const local = localPlayer && typeof localPlayer === 'object' ? localPlayer : {};
+  const merged = preferLocal ? { ...remote, ...local } : { ...local, ...remote };
+  const sourceIds = new Set([...Object.keys(remote.resume || {}), ...Object.keys(local.resume || {})]);
+  merged.resume = {};
+  merged.resumeUpdatedAt = {};
+  sourceIds.forEach(sourceId => {
+    const remoteTime = timestampOf(remote.resumeUpdatedAt?.[sourceId]);
+    const localTime = timestampOf(local.resumeUpdatedAt?.[sourceId]);
+    const useLocal = localTime > remoteTime || (localTime === remoteTime && preferLocal);
+    merged.resume[sourceId] = n((useLocal ? local : remote).resume?.[sourceId]);
+    merged.resumeUpdatedAt[sourceId] = (useLocal ? local : remote).resumeUpdatedAt?.[sourceId] || '';
+  });
+  merged.watched = { ...(remote.watched || {}), ...(local.watched || {}) };
+  merged.watchedAt = { ...(remote.watchedAt || {}), ...(local.watchedAt || {}) };
+  const bookmarkSources = new Set([...Object.keys(remote.bookmarks || {}), ...Object.keys(local.bookmarks || {})]);
+  merged.bookmarks = {};
+  bookmarkSources.forEach(sourceId => {
+    const points = new Map();
+    [...(remote.bookmarks?.[sourceId] || []), ...(local.bookmarks?.[sourceId] || [])].forEach((point,index) => {
+      const id = point?.id || `legacy-${sourceId}-${n(point?.time)}-${index}`;
+      const previous = points.get(id);
+      if(!previous || timestampOf(point.updatedAt || point.createdAt) >= timestampOf(previous.updatedAt || previous.createdAt)) points.set(id, {...point, id});
+    });
+    merged.bookmarks[sourceId] = [...points.values()].sort((a,b) => n(a.time)-n(b.time));
+  });
+  const remoteOpen = remote.lastOpen || {};
+  const localOpen = local.lastOpen || {};
+  const useLocalOpen = timestampOf(localOpen.updatedAt) > timestampOf(remoteOpen.updatedAt) || (timestampOf(localOpen.updatedAt) === timestampOf(remoteOpen.updatedAt) && preferLocal);
+  merged.lastOpen = {...(useLocalOpen ? localOpen : remoteOpen)};
   return merged;
 }
 function mergeRecordsById(remoteRecords, localRecords) {
@@ -729,12 +768,16 @@ async function pullCloudState({ firstLogin=false }={}) {
     lastCloudSyncAt = remoteAt || Date.now();
     normalizeOfficialScheduleNames();
     ensureRestartFromBlockTen();
-    ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+    ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
     invalidateActivityRenderCache();
     // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
     // Reaplica o cronograma oficial antes de exibir ou reenviar o estado.
     if(officialSchedule.length) applyOfficialSchedule();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    if(firstLogin && state.videoPlayer?.lastOpen?.lessonId) {
+      ui.videoLessonId = '';
+      ui.videoSourceId = '';
+    }
     render();
     scheduleCloudSave();
     setSyncStatus('Dados atualizados', 'online');
@@ -748,7 +791,110 @@ function startCloudSyncPolling() {
   if(cloudSyncPoll) clearInterval(cloudSyncPoll);
   cloudSyncPoll = setInterval(() => {
     if(currentUser && !document.hidden && !syncInFlight) pullCloudState();
-  }, 30000);
+  }, 12000);
+}
+function fullPlannerBackup() {
+  checkpointAutoStudyTime(true);
+  const backup = structuredClone(state);
+  backup.backupInfo = {
+    format:'soqueromed-completo',
+    version:3,
+    exportedAt:new Date().toISOString(),
+    includes:['cronograma','questões respondidas','videoaulas assistidas','posição dos vídeos','pontos importantes','horas e sessões','flashcards','simulados','atividades diárias','tarefas pessoais']
+  };
+  return backup;
+}
+function backupDateTime(value) {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? 'Data indisponível' : date.toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'});
+}
+async function loadCloudBackups({force=false}={}) {
+  if(!currentUser || !sbClient || (cloudBackupsLoading && !force)) return;
+  cloudBackupsLoading = true;
+  cloudBackupsError = '';
+  const { data, error } = await sbClient.from('planner_backups').select('id,label,created_at').eq('user_id', currentUser.id).order('created_at',{ascending:false}).limit(24);
+  cloudBackupsLoading = false;
+  if(error) {
+    cloudBackupsReady = false;
+    cloudBackupsError = error.code === '42P01' ? 'A tabela de backups ainda não foi criada no Supabase.' : 'Não foi possível carregar os backups agora.';
+    return;
+  }
+  cloudBackups = data || [];
+  cloudBackupsReady = true;
+}
+async function forcePlannerSync() {
+  if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para sincronizar entre aparelhos.'); return; }
+  checkpointAutoStudyTime(true);
+  saveStateOnly();
+  await pushCloudState();
+  await pullCloudState();
+  await loadCloudBackups({force:true});
+  if(ui.tab === 'painel') renderPainel();
+}
+async function createCloudBackup(label='') {
+  if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para salvar uma cópia na nuvem.'); return; }
+  const payload = fullPlannerBackup();
+  setSyncStatus('Criando backup...', 'busy');
+  const { error } = await sbClient.from('planner_backups').insert({
+    user_id: currentUser.id,
+    label: String(label || '').trim() || `Backup de ${backupDateTime(payload.backupInfo.exportedAt)}`,
+    data: payload
+  });
+  if(error) {
+    console.error('Falha ao criar backup:', error);
+    cloudBackupsReady = false;
+    cloudBackupsError = error.code === '42P01' ? 'A tabela de backups ainda não foi criada no Supabase.' : 'Não foi possível criar o backup.';
+    setSyncStatus('Erro no backup', 'error');
+    if(ui.tab === 'painel') renderPainel();
+    return;
+  }
+  await loadCloudBackups({force:true});
+  setSyncStatus('Backup salvo na nuvem', 'online');
+  showStudyToast('Backup salvo. Ele já pode ser recuperado em outro aparelho.');
+  if(ui.tab === 'painel') renderPainel();
+}
+async function restoreCloudBackup(id) {
+  if(!currentUser || !sbClient || !id) return;
+  if(!confirm('Restaurar esta cópia neste aparelho? O estado atual será substituído e depois sincronizado.')) return;
+  const { data, error } = await sbClient.from('planner_backups').select('data,label,created_at').eq('id',id).eq('user_id',currentUser.id).maybeSingle();
+  if(error || !data?.data?.schedule?.length) { alert('Não consegui abrir esse backup.'); return; }
+  state = data.data;
+  normalizeOfficialScheduleNames();
+  ensureRestartFromBlockTen();
+  ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+  invalidateActivityRenderCache();
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  cloudDirty = true;
+  await pushCloudState();
+  showStudyToast(`Backup restaurado: ${data.label || backupDateTime(data.created_at)}.`);
+  render();
+}
+async function deleteCloudBackup(id) {
+  if(!currentUser || !sbClient || !id || !confirm('Excluir este backup da nuvem?')) return;
+  const { error } = await sbClient.from('planner_backups').delete().eq('id',id).eq('user_id',currentUser.id);
+  if(error) { alert('Não consegui excluir o backup.'); return; }
+  await loadCloudBackups({force:true});
+  if(ui.tab === 'painel') renderPainel();
+}
+function renderCloudBackupCard() {
+  const online = Boolean(currentUser && sbClient);
+  const body = !online
+    ? '<div class="muted">Entre na conta para sincronizar e usar cópias de segurança entre PC, tablet e celular.</div>'
+    : cloudBackupsLoading
+      ? '<div class="muted">Carregando backups...</div>'
+      : !cloudBackupsReady
+        ? `<div class="backup-warning">${escapeHtml(cloudBackupsError || 'Os backups serão habilitados depois da configuração no Supabase.')}</div>`
+        : cloudBackups.length
+          ? `<div class="cloud-backup-list">${cloudBackups.map(item => `<div class="cloud-backup-row"><div><strong>${escapeHtml(item.label || 'Backup sem nome')}</strong><small>${backupDateTime(item.created_at)}</small></div><div class="cloud-backup-actions"><button class="tiny-btn" data-restore-cloud-backup="${escapeAttr(item.id)}">Restaurar</button><button class="icon-btn danger" title="Excluir backup" data-delete-cloud-backup="${escapeAttr(item.id)}">${iconSvg('x')}</button></div></div>`).join('')}</div>`
+          : '<div class="muted">Ainda não há backups na nuvem.</div>';
+  return `<div class="card cloud-backup-card"><div class="section-title"><div><h2>Sincronização e backups</h2><div class="muted">O estudo salva automaticamente; crie cópias recuperáveis quando quiser.</div></div><span class="backup-status ${online?'online':'offline'}">${online?'Conta conectada':'Somente local'}</span></div><div class="cloud-backup-controls"><input class="input" id="cloudBackupLabel" maxlength="80" placeholder="Nome opcional do backup"><button class="icon-btn" id="syncNowBtn" type="button">${iconSvg('history')}<span>Sincronizar agora</span></button><button class="icon-btn primary" id="createCloudBackup" type="button">${iconSvg('upload')}<span>Salvar backup</span></button></div>${body}</div>`;
+}
+function bindCloudBackupCard() {
+  document.getElementById('syncNowBtn')?.addEventListener('click', forcePlannerSync);
+  document.getElementById('createCloudBackup')?.addEventListener('click', () => createCloudBackup(document.getElementById('cloudBackupLabel')?.value));
+  document.querySelectorAll('[data-restore-cloud-backup]').forEach(button => button.addEventListener('click', event => restoreCloudBackup(event.currentTarget.dataset.restoreCloudBackup)));
+  document.querySelectorAll('[data-delete-cloud-backup]').forEach(button => button.addEventListener('click', event => deleteCloudBackup(event.currentTarget.dataset.deleteCloudBackup)));
+  if(currentUser && !cloudBackupsReady && !cloudBackupsLoading && !cloudBackupsError) loadCloudBackups().then(() => { if(ui.tab === 'painel') renderPainel(); });
 }
 window.addEventListener('focus', () => {
   if(currentUser && !syncInFlight) pullCloudState();
@@ -1898,6 +2044,7 @@ function renderPainel() {
     ${renderDailyAnalysis(ui.refDate)}
     <div class="card">${renderDailyRoad(ui.refDate)}</div>
     ${renderPersonalDailyTasks(ui.refDate)}
+    ${renderCloudBackupCard()}
     ${renderCountdown()}
     <div class="grid cards">
       ${metric('Mapa geral', pct(t.progress), `${t.completed} de ${t.total} aulas concluídas`)}
@@ -1928,6 +2075,7 @@ function renderPainel() {
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
   bindManualStudyEntry(ui.refDate);
   bindPersonalDailyTasks(ui.refDate);
+  bindCloudBackupCard();
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
   document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
@@ -3743,9 +3891,17 @@ function saveOpenVideoPosition() {
   const video = document.getElementById('lessonVideo');
   const sourceId = ui.videoSourceId;
   if(!video || !sourceId) return;
-  state.videoPlayer.resume[sourceId] = Math.floor(video.currentTime || 0);
-  state.videoPlayer.lastOpen = { lessonId:ui.videoLessonId || '', sourceId };
+  saveVideoResume(sourceId, Math.floor(video.currentTime || 0));
+  setVideoLastOpen(ui.videoLessonId || '', sourceId);
   saveStateOnly();
+}
+function saveVideoResume(sourceId, seconds) {
+  if(!sourceId) return;
+  state.videoPlayer.resume[sourceId] = Math.max(0, Math.floor(n(seconds)));
+  state.videoPlayer.resumeUpdatedAt[sourceId] = new Date().toISOString();
+}
+function setVideoLastOpen(lessonId, sourceId) {
+  state.videoPlayer.lastOpen = { lessonId:lessonId || '', sourceId:sourceId || '', updatedAt:new Date().toISOString() };
 }
 function togglePinnedVideo(lesson, source) {
   if(!lesson || !source) return;
@@ -3883,11 +4039,11 @@ function renderAulas() {
     if(selectedLesson) ui.videoBlock=String(selectedLesson.block);
     ui.videoSearch='';
     ui.videoSourceId='';
-    state.videoPlayer.lastOpen={lessonId:ui.videoLessonId,sourceId:''};
+    setVideoLastOpen(ui.videoLessonId, '');
     saveStateOnly();
     renderAulas();
   });
-  document.querySelectorAll('[data-video-source]').forEach(button => button.onclick = event => { stopAutoStudy('video'); saveOpenVideoPosition(); ui.videoSourceId=event.currentTarget.dataset.videoSource; state.videoPlayer.lastOpen={lessonId:ui.videoLessonId,sourceId:ui.videoSourceId}; saveStateOnly(); renderAulas(); });
+  document.querySelectorAll('[data-video-source]').forEach(button => button.onclick = event => { stopAutoStudy('video'); saveOpenVideoPosition(); ui.videoSourceId=event.currentTarget.dataset.videoSource; setVideoLastOpen(ui.videoLessonId, ui.videoSourceId); saveStateOnly(); renderAulas(); });
   document.getElementById('toggleVideoFocus')?.addEventListener('click', () => {
     ui.videoFocusMode = !ui.videoFocusMode;
     localStorage.setItem(VIDEO_FOCUS_KEY, ui.videoFocusMode ? '1' : '0');
@@ -3945,7 +4101,7 @@ function showVideoContinuationPrompt(lesson, completedSource, nextSource) {
   nextButton.onclick = () => {
     ui.videoLessonId = lesson.id;
     ui.videoSourceId = nextSource.id;
-    state.videoPlayer.lastOpen = { lessonId:lesson.id, sourceId:nextSource.id };
+    setVideoLastOpen(lesson.id, nextSource.id);
     saveStateOnly();
     renderAulas();
     requestAnimationFrame(() => {
@@ -3992,8 +4148,8 @@ function bindVideoPlayer(source, schedule, lesson) {
     const currentTime = Math.floor(video.currentTime || 0);
     const wasPlaying = !video.paused;
     const playbackRate = video.playbackRate || 1;
-    state.videoPlayer.resume[source.id] = currentTime;
-    state.videoPlayer.lastOpen = { lessonId:ui.videoLessonId || '', sourceId:source.id };
+    saveVideoResume(source.id, currentTime);
+    setVideoLastOpen(ui.videoLessonId || '', source.id);
     saveStateOnly();
     renderAulas();
     requestAnimationFrame(() => {
@@ -4031,12 +4187,12 @@ function bindVideoPlayer(source, schedule, lesson) {
   video.addEventListener('ratechange', () => {
     if(!restoringRate) rememberVideoPlaybackRate(video.playbackRate);
   });
-  const saveProgress = () => { state.videoPlayer.resume[source.id] = Math.floor(video.currentTime || 0); saveStateOnly(); };
+  const saveProgress = () => { saveVideoResume(source.id, video.currentTime || 0); saveStateOnly(); };
   video.addEventListener('play', () => { setCleanFrame(false); videoStage?.classList.remove('is-paused'); startAutoStudy('video', schedule?.id || ''); });
   video.addEventListener('pause', () => { videoStage?.classList.add('is-paused'); pauseAutoStudy('video'); saveProgress(); });
   video.addEventListener('ended', () => {
     stopAutoStudy('video', false);
-    state.videoPlayer.resume[source.id] = 0;
+    saveVideoResume(source.id, 0);
     setVideoWatchedState(source.id, true);
     const nextSource = nextCompleteVideoSource(lesson, source);
     saveStateOnly();
@@ -4055,13 +4211,13 @@ function bindVideoPlayer(source, schedule, lesson) {
     chapterButtons.forEach((button, index) => button.closest('.video-bookmark')?.classList.toggle('active', index === activeChapter));
     if(currentSecond >= lastCheckpoint + 10) {
       lastCheckpoint = currentSecond;
-      state.videoPlayer.resume[source.id] = currentSecond;
-      state.videoPlayer.lastOpen = { lessonId:ui.videoLessonId || '', sourceId:source.id };
+      saveVideoResume(source.id, currentSecond);
+      setVideoLastOpen(ui.videoLessonId || '', source.id);
       saveStateOnly();
     }
   });
-  document.getElementById('videoBack10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime-10); state.videoPlayer.resume[source.id]=Math.floor(resume); saveStateOnly(); });
-  document.getElementById('videoForward10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime+10); state.videoPlayer.resume[source.id]=Math.floor(resume); saveStateOnly(); });
+  document.getElementById('videoBack10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime-10); saveVideoResume(source.id, resume); saveStateOnly(); });
+  document.getElementById('videoForward10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime+10); saveVideoResume(source.id, resume); saveStateOnly(); });
   const rateSelect = document.getElementById('videoPlaybackRate');
   if(rateSelect) {
     rateSelect.value = String(rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || 1));
@@ -4089,7 +4245,8 @@ function bindVideoPlayer(source, schedule, lesson) {
     const label = bookmarkLabelInput?.value.trim() || '';
     if(!label) { document.getElementById('videoBookmarkLabel').focus(); return; }
     const entries = state.videoPlayer.bookmarks[source.id] || [];
-    entries.push({id:`bookmark-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,time:bookmarkTimeFrozen ?? Math.floor(video.currentTime || 0),label,starred:false});
+    const now = new Date().toISOString();
+    entries.push({id:`bookmark-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,time:bookmarkTimeFrozen ?? Math.floor(video.currentTime || 0),label,starred:false,createdAt:now,updatedAt:now});
     state.videoPlayer.bookmarks[source.id] = entries.sort((a,b)=>a.time-b.time);
     // Atualiza a lista sem interromper o vídeo que já estava em reprodução.
     refreshVideoKeepingPlayback();
@@ -4100,7 +4257,7 @@ function bindVideoPlayer(source, schedule, lesson) {
     // se recarregar os metadados do MP4 durante a busca.
     manualSeek = true;
     resume = target;
-    state.videoPlayer.resume[source.id] = Math.floor(target);
+    saveVideoResume(source.id, target);
     saveStateOnly();
     const seek = () => {
       const safeTarget = Math.min(target, Number.isFinite(video.duration) ? Math.max(0, video.duration - .1) : target);
@@ -4132,7 +4289,7 @@ function bindVideoPlayer(source, schedule, lesson) {
       // tempo com o registro atual, sem reconstruir o ponto a partir de uma
       // cópia antiga nem redesenhar o vídeo.
       const visibleLabel = input.closest('.video-bookmark')?.querySelector('.video-bookmark-label')?.textContent?.trim();
-      const updated = {...bookmark, time:nextTime, label:visibleLabel || bookmark.label || 'Ponto importante'};
+      const updated = {...bookmark, time:nextTime, label:visibleLabel || bookmark.label || 'Ponto importante', updatedAt:new Date().toISOString()};
       state.videoPlayer.bookmarks[source.id] = entries.map(item => item.id === bookmark.id ? updated : item).sort((a,b) => a.time-b.time);
       const seekButton = input.previousElementSibling;
       if(seekButton?.matches?.('[data-video-seek]')) {
@@ -4166,6 +4323,7 @@ function bindVideoPlayer(source, schedule, lesson) {
     if(row.dataset.editing === '1') {
       const input = row.querySelector('.video-bookmark-label-input');
       entry.label = input?.value.trim() || 'Ponto importante';
+      entry.updatedAt = new Date().toISOString();
       saveStateOnly();
       renderAulas();
       return;
@@ -4183,7 +4341,7 @@ function bindVideoPlayer(source, schedule, lesson) {
     input.onkeydown = keyEvent => { if(keyEvent.key === 'Enter') event.currentTarget.click(); };
   });
   document.querySelectorAll('[data-video-bookmark-delete]').forEach(button => button.onclick = event => { const id=event.currentTarget.dataset.videoBookmarkDelete; state.videoPlayer.bookmarks[source.id]=state.videoPlayer.bookmarks[source.id].filter(item=>item.id!==id); saveStateOnly(); renderAulas(); });
-  document.querySelectorAll('[data-video-bookmark-star]').forEach(button => button.onclick = event => { const id=event.currentTarget.dataset.videoBookmarkStar; const entries=state.videoPlayer.bookmarks[source.id] || []; const bookmark=entries.find(item=>item.id===id); if(!bookmark) return; bookmark.starred=!bookmark.starred; saveStateOnly(); renderAulas(); });
+  document.querySelectorAll('[data-video-bookmark-star]').forEach(button => button.onclick = event => { const id=event.currentTarget.dataset.videoBookmarkStar; const entries=state.videoPlayer.bookmarks[source.id] || []; const bookmark=entries.find(item=>item.id===id); if(!bookmark) return; bookmark.starred=!bookmark.starred; bookmark.updatedAt=new Date().toISOString(); saveStateOnly(); renderAulas(); });
 }
 async function loadVideoCatalog() {
   try {
@@ -6703,9 +6861,7 @@ function render() {
   updatePomodoroWidget();
 }
 document.getElementById('exportBtn').onclick = () => {
-  checkpointAutoStudyTime(true);
-  const backup=structuredClone(state);
-  backup.backupInfo={format:'soqueromed-completo',version:2,exportedAt:new Date().toISOString(),includes:['cronograma','questões respondidas','videoaulas assistidas','horas e sessões','flashcards','simulados','atividades diárias']};
+  const backup=fullPlannerBackup();
   const blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob);
@@ -6713,7 +6869,7 @@ document.getElementById('exportBtn').onclick = () => {
   a.click();
   URL.revokeObjectURL(a.href);
 };
-document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
+document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
 document.getElementById('resetBtn').onclick = () => { if(confirm('Voltar aos dados originais importados do Excel? Esta alteração também será sincronizada.')) { state=structuredClone(seed); normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); persist(); } };
 document.getElementById('printBtn').onclick = () => {
   const previousTab=ui.tab;

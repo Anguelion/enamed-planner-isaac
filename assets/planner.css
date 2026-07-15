@@ -274,6 +274,17 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .personal-task-remove{min-width:32px;width:32px;height:32px;padding:0;color:var(--red);border-color:transparent}
 .personal-task-remove:hover{border-color:var(--red);background:#fff1ef}
 .personal-task-empty{padding:4px 0}
+.cloud-backup-card{display:grid;gap:12px}
+.backup-status{display:inline-flex;align-items:center;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:900;white-space:nowrap}
+.backup-status.online{color:var(--green);background:#effbf4;border-color:#a7dcb8}
+.backup-status.offline{color:var(--muted);background:#f7faf9}
+.cloud-backup-controls{display:flex;gap:8px;align-items:center}
+.cloud-backup-controls .input{flex:1;min-width:0}
+.cloud-backup-list{display:grid;gap:7px;max-height:250px;overflow:auto;padding-right:2px}
+.cloud-backup-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface,#fff)}
+.cloud-backup-row strong,.cloud-backup-row small{display:block}.cloud-backup-row small{margin-top:2px;color:var(--muted);font-size:12px}
+.cloud-backup-actions{display:flex;align-items:center;gap:6px}.cloud-backup-actions .icon-btn{min-width:32px;width:32px;height:32px;padding:0}
+.backup-warning{padding:10px 12px;border-left:4px solid var(--amber);border-radius:6px;background:#fff8e5;color:#80610d;font-weight:700}
 .checkin-stamp{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900;color:var(--muted);background:#fff}
 .checkin-stamp.checked{border-color:var(--blue);color:var(--blue);background:var(--soft-blue)}
 .checkin-stamp.complete{border-color:var(--green);color:var(--green);background:#fff}
@@ -630,6 +641,8 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 @media(max-width:620px){.question-topbar{grid-template-columns:36px minmax(0,1fr) auto}
 .personal-task-add{align-items:stretch;flex-direction:column}
 .personal-task-add .input,.personal-task-add .icon-btn{width:100%}
+.cloud-backup-controls{align-items:stretch;flex-direction:column}
+.cloud-backup-controls .input,.cloud-backup-controls .icon-btn{width:100%}
 .question-font-tools{flex-wrap:wrap;justify-content:flex-end}
 .question-font-value{display:none}
 .answer-row{grid-template-columns:42px minmax(0,1fr)}
