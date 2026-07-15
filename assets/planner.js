@@ -1003,7 +1003,7 @@ async function loadLocalQuestionBank() {
   ensureImportedQuestions();
   const imported = state.importedQuestions.map(normalizeQuestionRecord);
   if(blocks.length || imported.length) {
-    questionBank = deduplicateQuestions([...blocks.map(normalizeQuestionRecord), ...imported]).sort((a,b)=>questionCollectionSort(a)-questionCollectionSort(b) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
+    questionBank = deduplicateQuestions([...blocks.map(normalizeQuestionRecord), ...imported]).sort((a,b)=>n(b.importPriority)-n(a.importPriority) || questionCollectionSort(a)-questionCollectionSort(b) || n(a.displayOrder)-n(b.displayOrder) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
     invalidateQuestionBankRenderCache();
     return true;
   }
@@ -5555,10 +5555,12 @@ function incorporationEntries() {
       scheduleId: question.scheduleId || '',
       block: question.collectionBlock || '',
       topic: question.topic || '',
-      source: question.sourceLabel || 'Importação manual'
+      source: question.sourceLabel || 'Importação manual',
+      priority: n(question.importPriority),
+      displayOrder: n(question.displayOrder)
     });
   });
-  return [...recorded.values()].sort((a,b) => (Date.parse(b.createdAt || '') || 0) - (Date.parse(a.createdAt || '') || 0));
+  return [...recorded.values()].sort((a,b) => n(b.priority) - n(a.priority) || n(a.displayOrder) - n(b.displayOrder) || (Date.parse(b.createdAt || '') || 0) - (Date.parse(a.createdAt || '') || 0));
 }
 function renderIncorporationHistory() {
   const entries = incorporationEntries();
@@ -5567,7 +5569,11 @@ function renderIncorporationHistory() {
     const removed = Boolean(entry.deletedAt) || !question;
     const label = question ? `Questão ${question.sourceNumber || question.number || 'sem número'}` : 'Questão excluída';
     const when = entry.createdAt ? new Date(entry.createdAt).toLocaleString('pt-BR', {dateStyle:'short', timeStyle:'short'}) : 'data anterior não registrada';
-    return `<div class="incorporation-row ${removed?'removed':''}"><div><strong>${escapeHtml(label)}</strong><div class="muted">${escapeHtml(entry.destination || incorporationDestination(question || entry))}</div><small>${escapeHtml(entry.source || '')} · ${escapeHtml(when)}</small></div><div class="incorporation-actions">${removed ? '<span class="badge no">excluída</span>' : `<button class="tiny-btn" data-incorporation-open="${escapeAttr(entry.questionId)}">Abrir</button><button class="tiny-btn danger" data-incorporation-delete="${escapeAttr(entry.questionId)}">Excluir</button>`}</div></div>`;
+    const priority = n(entry.priority || question?.importPriority);
+    const editing = ui.incorporationEditId === entry.questionId;
+    const stars = [1,2,3].map(value => `<button class="incorporation-star ${value<=priority?'active':''}" data-incorporation-priority="${escapeAttr(entry.questionId)}" data-priority-value="${value}" title="Prioridade ${value} de 3" aria-label="Prioridade ${value} de 3">★</button>`).join('');
+    const editor = editing && question ? `<div class="incorporation-editor"><label>Nome da lista<input class="input" data-incorporation-field="name" value="${escapeAttr(question.collectionLabel || question.sourceLabel || '')}" placeholder="Ex.: Questões de revisão"></label><label>Ordem<input class="input" type="number" min="1" step="1" data-incorporation-field="order" value="${n(question.displayOrder) || 1}"></label><button class="tiny-btn" data-incorporation-save="${escapeAttr(entry.questionId)}">Salvar</button><button class="tiny-btn" data-incorporation-cancel="${escapeAttr(entry.questionId)}">Cancelar</button></div>` : '';
+    return `<div class="incorporation-row ${removed?'removed':''}"><div class="incorporation-details"><strong>${escapeHtml(label)}</strong><div class="muted">${escapeHtml(entry.destination || incorporationDestination(question || entry))}</div><small>${escapeHtml(question?.collectionLabel || entry.source || '')} · ${escapeHtml(when)}</small>${editor}</div><div class="incorporation-actions">${removed ? '<span class="badge no">excluída</span>' : `<div class="incorporation-priority" title="Prioridade: ${priority || 0} de 3">${stars}</div><button class="tiny-btn" data-incorporation-open="${escapeAttr(entry.questionId)}">Abrir</button><button class="tiny-btn" data-incorporation-edit="${escapeAttr(entry.questionId)}" title="Editar nome e ordem">Editar</button><button class="tiny-btn danger" data-incorporation-delete="${escapeAttr(entry.questionId)}" title="Excluir do banco">×</button>`}</div></div>`;
   }).join('');
   return `<section class="card incorporation-history"><div class="section-title"><div><h3>Histórico de incorporações</h3><div class="muted">Questões adicionadas ao banco, com o destino registrado para você revisar ou corrigir.</div></div><span class="badge today">${entries.filter(entry => !entry.deletedAt && state.importedQuestions.some(question => question.id === entry.questionId)).length} ativas</span></div><div class="incorporation-list">${rows || '<div class="empty">As questões que você incorporar aparecerão aqui.</div>'}</div></section>`;
 }
@@ -5600,6 +5606,41 @@ function deleteIncorporatedQuestion(questionId) {
   persist();
   renderQuestionImporter();
   showStudyToast('Questão excluída do banco geral.');
+}
+function reorderQuestionBank() {
+  questionBank.sort((a,b) => n(b.importPriority)-n(a.importPriority) || questionCollectionSort(a)-questionCollectionSort(b) || n(a.displayOrder)-n(b.displayOrder) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
+}
+function updateIncorporationPriority(questionId, priority) {
+  const question = state.importedQuestions.find(item => item.id === questionId);
+  if(!question) return;
+  const history = state.incorporationHistory.find(entry => entry.questionId === questionId);
+  const value = n(priority);
+  question.importPriority = value;
+  const bankQuestion = questionBank.find(item => item.id === questionId);
+  if(bankQuestion) bankQuestion.importPriority = value;
+  if(history) { history.priority = value; history.updatedAt = new Date().toISOString(); }
+  reorderQuestionBank();
+  invalidateQuestionBankRenderCache();
+  persist();
+  renderQuestionImporter();
+}
+function saveIncorporationEdit(questionId) {
+  const question = state.importedQuestions.find(item => item.id === questionId);
+  if(!question) return;
+  const name = document.querySelector('[data-incorporation-field="name"]')?.value?.trim();
+  const order = Math.max(1, n(document.querySelector('[data-incorporation-field="order"]')?.value) || 1);
+  const history = state.incorporationHistory.find(entry => entry.questionId === questionId);
+  if(name) question.collectionLabel = name;
+  question.displayOrder = order;
+  const bankQuestion = questionBank.find(item => item.id === questionId);
+  if(bankQuestion) { bankQuestion.collectionLabel = question.collectionLabel; bankQuestion.displayOrder = order; }
+  if(history) { history.displayOrder = order; history.updatedAt = new Date().toISOString(); }
+  reorderQuestionBank();
+  ui.incorporationEditId = '';
+  invalidateQuestionBankRenderCache();
+  persist();
+  renderQuestionImporter();
+  showStudyToast('Nome e ordem da lista atualizados.');
 }
 function renderQuestionImporter() {
   const draft = questionImportDraft || {};
@@ -5727,6 +5768,10 @@ function bindQuestionImporter() {
   document.getElementById('removeImportDuplicates')?.addEventListener('click', () => cleanupImportDraft('duplicates'));
   document.getElementById('removeImportInvalid')?.addEventListener('click', () => cleanupImportDraft('invalid'));
   document.querySelectorAll('[data-incorporation-open]').forEach(button => button.onclick = () => openIncorporatedQuestion(button.dataset.incorporationOpen));
+  document.querySelectorAll('[data-incorporation-priority]').forEach(button => button.onclick = () => updateIncorporationPriority(button.dataset.incorporationPriority, button.dataset.priorityValue));
+  document.querySelectorAll('[data-incorporation-edit]').forEach(button => button.onclick = () => { ui.incorporationEditId = button.dataset.incorporationEdit; renderQuestionImporter(); });
+  document.querySelectorAll('[data-incorporation-cancel]').forEach(button => button.onclick = () => { ui.incorporationEditId = ''; renderQuestionImporter(); });
+  document.querySelectorAll('[data-incorporation-save]').forEach(button => button.onclick = () => saveIncorporationEdit(button.dataset.incorporationSave));
   document.querySelectorAll('[data-incorporation-delete]').forEach(button => button.onclick = () => deleteIncorporatedQuestion(button.dataset.incorporationDelete));
   document.getElementById('commitImportedQuestions')?.addEventListener('click', () => {
     if(!confirm(`Salvar ${questionImportDraft.questions.length} questões no banco privado?`)) return;
@@ -5753,7 +5798,8 @@ function bindQuestionImporter() {
     fresh.forEach(question => state.incorporationHistory.push({
       id:uuidv7(), questionId:question.id, createdAt:now, updatedAt:now,
       destination:incorporationDestination(question), scheduleId:question.scheduleId || '',
-      block:question.collectionBlock || '', topic:question.topic || '',
+      block:question.collectionBlock || '', topic:question.topic || '', priority:0,
+      displayOrder:question.displayOrder,
       source:question.sourceLabel || 'Importação manual'
     }));
     questionBank=deduplicateQuestions([...questionBank,...fresh]);

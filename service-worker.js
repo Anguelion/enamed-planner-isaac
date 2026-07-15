@@ -1,9 +1,9 @@
-const CACHE_NAME = 'soqueromed-shell-v97';
+const CACHE_NAME = 'soqueromed-shell-v98';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260715-49',
-  './assets/planner.js?v=20260715-77',
+  './assets/planner.css?v=20260715-50',
+  './assets/planner.js?v=20260715-78',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
