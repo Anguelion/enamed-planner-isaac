@@ -4921,8 +4921,8 @@ function parseQuestionBatch(text, defaults={}) {
     const answer = String((sections.answer.join('\n').match(/\b([A-E])\b/i) || [,''])[1]).toUpperCase();
     const question = normalizeQuestionRecord({
       id: uuidv7(), number: meta.number || '', sourceNumber: meta.number || '', displayOrder:index + 1,
-      collectionBlock: meta.collection_block || meta.block || defaults.collection_block || defaults.block || '',
-      collectionLabel: meta.collection || defaults.collection || '', documentBlock: meta.document_block || '',
+      collectionBlock: meta.collection_block || meta.block || defaults.collection_block || defaults.block || (meta.destination === 'simulado' || defaults.destination === 'simulado' ? `simulado:${meta.simulado_name || defaults.simulado_name || 'Novo simulado'}` : ''),
+      collectionLabel: meta.collection || defaults.collection || (meta.destination === 'simulado' || defaults.destination === 'simulado' ? meta.simulado_name || defaults.simulado_name || 'Novo simulado' : ''), documentBlock: meta.document_block || '',
       sourceLabel: meta.source_label || defaults.source_label || meta.institution || defaults.institution || 'Importação manual',
       area: meta.area || defaults.area || '', specialty: meta.specialty || '', topic: meta.topic || defaults.topic || '', subtopic: meta.subtopic || '',
       difficulty: meta.difficulty || defaults.difficulty || '', institution: meta.institution || defaults.institution || '', examYear: meta.year || defaults.year || '',
@@ -5275,7 +5275,7 @@ function questionBlockStats() {
   return renderCache.questionBlockStats;
 }
 function importDefaultFields() {
-  return {collection_block:'', area:'', specialty:'', topic:'', subtopic:'', institution:'ENAMED', year:'', difficulty:'', tags:'', status:'draft'};
+  return {collection_block:'', collection:'', destination:'bank', simulado_name:'', area:'', specialty:'', topic:'', subtopic:'', institution:'ENAMED', year:'', difficulty:'', tags:'', status:'draft'};
 }
 function renderImportQuestionCard(question, index) {
   const errors = question._errors || [];
@@ -5298,6 +5298,7 @@ function renderQuestionImporter() {
   const questions = Array.isArray(draft.questions) ? draft.questions : [];
   const report = draft.report || {errors:[], warnings:[], markers:[], estimated:0};
   document.getElementById('importar-questoes').innerHTML = `<div class="importer-layout"><section class="card"><div class="section-title"><div><span class="eyebrow">Banco privado</span><h2>Adicionar questões</h2><div class="muted">Parser determinístico: cole o modelo, revise tudo e só então salve.</div></div><span class="badge today">até ${QUESTION_IMPORT_MAX} por lote</span></div><div class="import-step"><h3>1. Configurações gerais</h3><div class="field-row import-defaults"><label>Coleção / bloco<input class="input" data-import-default="collection_block" value="${escapeAttr(defaults.collection_block)}" placeholder="Ex.: 10 ou ENARE 2025"></label><label>Área<input class="input" data-import-default="area" value="${escapeAttr(defaults.area)}" placeholder="Clínica Médica"></label><label>Especialidade<input class="input" data-import-default="specialty" value="${escapeAttr(defaults.specialty)}"></label><label>Tema padrão<input class="input" data-import-default="topic" value="${escapeAttr(defaults.topic)}"></label><label>Instituição<input class="input" data-import-default="institution" value="${escapeAttr(defaults.institution)}"></label><label>Ano<input class="input" data-import-default="year" value="${escapeAttr(defaults.year)}" inputmode="numeric"></label><label>Dificuldade<select class="select" data-import-default="difficulty"><option value="">Não definida</option>${['baixa','média','alta'].map(value => `<option ${defaults.difficulty===value?'selected':''}>${value}</option>`).join('')}</select></label><label>Tags padrão<input class="input" data-import-default="tags" value="${escapeAttr(defaults.tags)}" placeholder="tema | revisão"></label><label>Status inicial<select class="select" data-import-default="status">${['draft','needs_review','ready','published'].map(value => `<option ${defaults.status===value?'selected':''}>${value}</option>`).join('')}</select></label></div></div><div class="import-step"><div class="section-title"><h3>2. Texto do lote</h3><div class="import-toolbar"><span class="muted" id="importCharCount">${String(draft.text || '').length} caracteres</span><button class="tiny-btn" id="importExample">Usar modelo</button><button class="tiny-btn" id="downloadImportTemplate">Baixar TXT</button><button class="tiny-btn" id="clearImportText">Limpar</button></div></div><textarea class="textarea import-source" id="importSource" placeholder="Cole aqui uma ou mais questões entre @@QUESTION e @@END">${escapeHtml(draft.text || '')}</textarea><div class="import-actions"><button class="icon-btn primary" id="parseQuestionBatch">Interpretar questões</button><button class="icon-btn" id="saveImportDraft">Salvar rascunho</button></div><div class="muted import-help">Obrigatórios: [STEM], [OPTIONS], [ANSWER] e pelo menos duas alternativas. Imagens usam [[IMAGE:nome]].</div></div></section><section class="card import-review"><div class="section-title"><div><h3>3. Revisão antes de salvar</h3><div class="muted">${questions.length} questões · ${questions.filter(q => !(q._errors || []).length).length} válidas · ${report.warnings?.length || 0} avisos · ${report.markers?.length || 0} imagens pendentes</div></div><button class="icon-btn primary" id="commitImportedQuestions" ${questions.length && questions.some(q => !(q._errors || []).length)?'':'disabled'}>Salvar questões</button></div>${report.errors?.length ? `<div class="import-report error"><strong>Erros de formatação</strong>${report.errors.slice(0,12).map(error => `<div>Linha ${error.line || '?'}${error.question?` · questão ${error.question}`:''}: ${escapeHtml(error.message)}</div>`).join('')}</div>` : ''}${report.warnings?.length ? `<div class="import-report warning"><strong>Avisos para revisão</strong>${report.warnings.slice(0,12).map(error => `<div>${error.question?`Questão ${error.question}: `:''}${escapeHtml(error.message)}</div>`).join('')}</div>` : ''}${questions.length ? `<div class="import-review-list">${questions.map(renderImportQuestionCard).join('')}</div>` : '<div class="empty">Interprete o texto para abrir a revisão visual.</div>'}</section></div>`;
+  enhanceQuestionImporterUi();
   bindQuestionImporter();
 }
 function importExampleText() { return `@@QUESTION\nnumber: 1\narea: Clínica Médica\ntopic: Síndrome Coronariana Aguda\ntags: cardiologia | emergência\n\n[STEM]\nPaciente com dor torácica há 40 minutos.\n\n[OPTIONS]\nA. Conduta inicial inadequada.\nB. Observar sem tratamento.\nC. Iniciar protocolo de síndrome coronariana aguda.\nD. Dar alta.\n\n[ANSWER]\nC\n\n[COMMENT]\nExplique aqui o raciocínio do gabarito e das alternativas.\n\n[PEARL]\nUma frase curta de alto rendimento.\n\n[TRAP]\nA pegadinha que não pode ser confundida.\n\n[SOURCE]\nFonte da questão.\n@@END` }
@@ -5306,6 +5307,55 @@ function updateImportDraftFromForm() {
   questionImportDraft.text = document.getElementById('importSource')?.value || questionImportDraft.text || '';
   questionImportDraft.defaults = [...document.querySelectorAll('[data-import-default]')].reduce((acc, input) => { acc[input.dataset.importDefault] = input.value; return acc; }, {...importDefaultFields(), ...(questionImportDraft.defaults || {})});
   saveQuestionImportDraft();
+}
+function refreshImportDraftReport() {
+  const questions = questionImportDraft?.questions || [];
+  questionImportDraft.report = {
+    errors: questions.flatMap((q,index) => (q._errors || []).map(message => ({question:index + 1, line:1, message}))),
+    warnings: questions.flatMap((q,index) => (q._warnings || []).map(message => ({question:index + 1, line:1, message}))),
+    markers: questions.flatMap((q,index) => (q.images || []).filter(image => !image.assetId).map(image => ({question:index + 1, alias:image.alias, line:1}))),
+    estimated: questions.length
+  };
+}
+function cleanupImportDraft(mode) {
+  const questions = questionImportDraft?.questions || [];
+  if(mode === 'invalid') questionImportDraft.questions = questions.filter(question => !(question._errors || []).length);
+  if(mode === 'duplicates') {
+    const seen = new Set();
+    questionImportDraft.questions = questions.filter(question => {
+      const key = question.contentHash || simpleContentHash([question.stem, ...Object.values(question.options || {}), question.answer].join('|'));
+      if(seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+  refreshImportDraftReport();
+  saveQuestionImportDraft();
+  renderQuestionImporter();
+}
+function enhanceQuestionImporterUi() {
+  const defaults = document.querySelector('.import-defaults');
+  if(defaults && !defaults.querySelector('[data-import-default="destination"]')) {
+    defaults.insertAdjacentHTML('afterbegin', '<label>Destino<select class="select" data-import-default="destination"><option value="bank">Banco de questões</option><option value="simulado">Simulado separado</option></select></label><label>Nome do simulado<input class="input" data-import-default="simulado_name" placeholder="Ex.: ENARE 2024"></label>');
+    const saved = questionImportDraft?.defaults || {};
+    defaults.querySelector('[data-import-default="destination"]').value = saved.destination || 'bank';
+    defaults.querySelector('[data-import-default="simulado_name"]').value = saved.simulado_name || '';
+    defaults.insertAdjacentHTML('afterend', '<div class="muted import-help">Banco de questões deixa o conteúdo disponível nos blocos. “Simulado separado” cria uma coleção identificada pelo nome, sem misturar com os blocos de aula.</div>');
+  }
+  const commit = document.getElementById('commitImportedQuestions');
+  if(commit && !document.getElementById('removeImportDuplicates')) {
+    commit.insertAdjacentHTML('beforebegin', '<button class="tiny-btn" id="removeImportDuplicates" title="Mantém apenas a primeira cópia de cada questão">Limpar duplicadas</button><button class="tiny-btn" id="removeImportInvalid" title="Remove questões com erro de estrutura">Remover inválidas</button>');
+  }
+  document.querySelectorAll('[data-import-card]').forEach(card => {
+    const index = n(card.dataset.importCard);
+    const imageList = card.querySelector('.import-image-list');
+    if(imageList && !imageList.querySelector('[data-import-add-image]')) imageList.insertAdjacentHTML('beforeend', `<label class="tiny-btn import-add-image">+ Colar/ adicionar imagem<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" data-import-add-image="${index}" hidden></label>`);
+    (questionImportDraft.questions?.[index]?.images || []).forEach(image => {
+      const row=imageList?.querySelector(`[data-import-drop="${CSS.escape(image.alias)}"]`);
+      const url=window.ENAMED_IMPORTED_ASSET_URLS?.[image.assetId];
+      if(row && url && !row.querySelector('.import-image-preview')) row.insertAdjacentHTML('afterbegin', `<img class="import-image-preview" src="${escapeAttr(url)}" alt="${escapeAttr(image.alias)}">`);
+    });
+  });
 }
 function bindQuestionImporter() {
   const source = document.getElementById('importSource');
@@ -5323,8 +5373,33 @@ function bindQuestionImporter() {
   document.querySelectorAll('[data-import-move]').forEach(button => button.onclick=() => { const index=n(button.dataset.importIndex); const target=button.dataset.importMove==='up'?index-1:index+1; if(target<0 || target>=questionImportDraft.questions.length) return; [questionImportDraft.questions[index],questionImportDraft.questions[target]]=[questionImportDraft.questions[target],questionImportDraft.questions[index]]; saveQuestionImportDraft(); renderQuestionImporter(); });
   const attachImportImage = (file, index, alias) => { const q=questionImportDraft.questions?.[index]; const image=q?.images?.find(item=>item.alias===alias); if(!file || !image) return; if(file.size>10*1024*1024 || !file.type.startsWith('image/')) { alert('Use uma imagem de até 10 MB.'); return; } image.assetId=uuidv7(); image.originalFilename=file.name; image.mimeType=file.type; image.sizeBytes=file.size; image.url=URL.createObjectURL(file); image.pending=false; window.ENAMED_IMPORTED_ASSET_URLS=window.ENAMED_IMPORTED_ASSET_URLS||{}; window.ENAMED_IMPORTED_ASSET_URLS[image.assetId]=image.url; saveQuestionImportDraft(); renderQuestionImporter(); };
   document.querySelectorAll('[data-import-image]').forEach(input => input.addEventListener('change', event => attachImportImage(event.currentTarget.files?.[0], n(event.currentTarget.dataset.importIndex), event.currentTarget.dataset.importImage)));
+  document.querySelectorAll('[data-import-add-image]').forEach(input => input.addEventListener('change', event => {
+    const index=n(event.currentTarget.dataset.importAddImage);
+    const q=questionImportDraft.questions?.[index];
+    if(!q) return;
+    q.images=Array.isArray(q.images) ? q.images : [];
+    const alias=`imagem-${q.images.length + 1}`;
+    q.images.push({alias,assetId:null,pending:true});
+    attachImportImage(event.currentTarget.files?.[0], index, alias);
+  }));
   document.querySelectorAll('[data-import-drop]').forEach(drop => { drop.addEventListener('dragover', event => { event.preventDefault(); drop.classList.add('dragging'); }); drop.addEventListener('dragleave', () => drop.classList.remove('dragging')); drop.addEventListener('drop', event => { event.preventDefault(); drop.classList.remove('dragging'); attachImportImage(event.dataTransfer.files?.[0], n(drop.dataset.importIndex), drop.dataset.importDrop); }); });
-  document.getElementById('importar-questoes')?.addEventListener('paste', event => { const file=[...(event.clipboardData?.items || [])].find(item => item.type.startsWith('image/'))?.getAsFile(); const pending=questionImportDraft.questions?.flatMap((q,index)=>(q.images||[]).filter(image=>!image.assetId).map(image=>({index,alias:image.alias})))[0]; if(file && pending) { event.preventDefault(); attachImportImage(file,pending.index,pending.alias); showStudyToast(`Imagem ${pending.alias} anexada.`); } });
+  document.getElementById('importar-questoes')?.addEventListener('paste', event => {
+    const file=[...(event.clipboardData?.items || [])].find(item => item.type.startsWith('image/'))?.getAsFile();
+    if(!file) return;
+    const focusedCard=document.activeElement?.closest?.('[data-import-card]');
+    const index=focusedCard ? n(focusedCard.dataset.importCard) : 0;
+    const q=questionImportDraft.questions?.[index];
+    if(!q) return;
+    q.images=Array.isArray(q.images) ? q.images : [];
+    const pending=q.images.find(image => !image.assetId);
+    const alias=pending?.alias || `imagem-${q.images.length + 1}`;
+    if(!pending) q.images.push({alias,assetId:null,pending:true});
+    event.preventDefault();
+    attachImportImage(file,index,alias);
+    showStudyToast(`Imagem anexada à questão ${index + 1}.`);
+  });
+  document.getElementById('removeImportDuplicates')?.addEventListener('click', () => cleanupImportDraft('duplicates'));
+  document.getElementById('removeImportInvalid')?.addEventListener('click', () => cleanupImportDraft('invalid'));
   document.getElementById('commitImportedQuestions')?.addEventListener('click', () => { if(!confirm(`Salvar ${questionImportDraft.questions.length} questões no banco privado?`)) return; const valid=questionImportDraft.questions.filter(q => !(q._errors||[]).length); if(!valid.length) return; ensureImportedQuestions(); const existing=new Set(state.importedQuestions.map(q=>q.contentHash)); const fresh=valid.filter(q=>!existing.has(q.contentHash)).map((q,index)=>({...q, displayOrder:state.importedQuestions.length+index+1, importStatus:q.importStatus==='published'?'published':q.importStatus||'ready', _errors:undefined, _warnings:undefined})); state.importedQuestions.push(...fresh); questionBank=deduplicateQuestions([...questionBank,...fresh]); questionImportDraft={text:'',defaults:importQuestionDefaults(),questions:[],report:{errors:[],warnings:[],markers:[],estimated:0}}; saveQuestionImportDraft(); invalidateQuestionBankRenderCache(); persist(); showStudyToast(`${fresh.length} questões adicionadas. ${valid.length-fresh.length} duplicatas ignoradas.`); });
 }
 function importQuestionDefaults() { return importDefaultFields(); }

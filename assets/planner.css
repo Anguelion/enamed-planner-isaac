@@ -342,6 +342,8 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .import-image-list{display:grid;gap:6px;padding-top:5px;border-top:1px dashed var(--line)}
 .import-image-item{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px}
 .import-image-item.dragging{outline:2px dashed var(--blue);outline-offset:3px;background:var(--soft-blue)}
+.import-add-image{width:max-content;cursor:pointer}
+.import-image-preview{width:58px;height:42px;object-fit:cover;border:1px solid var(--line);border-radius:6px;background:#fff}
 body.dark .import-question-card,body.dark .import-source{background:#202a2a;color:var(--ink)}
 @media(max-width:980px){.importer-layout{grid-template-columns:1fr}.import-review-list{max-height:none}}
 @media(max-width:620px){.import-defaults,.import-edit-fields{grid-template-columns:1fr}.import-source{min-height:280px}.import-question-head{align-items:flex-start;flex-direction:column}}

@@ -1,9 +1,9 @@
-const CACHE_NAME = 'soqueromed-shell-v90';
+const CACHE_NAME = 'soqueromed-shell-v91';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260715-43',
-  './assets/planner.js?v=20260715-70',
+  './assets/planner.css?v=20260715-44',
+  './assets/planner.js?v=20260715-71',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
@@ -77,6 +77,7 @@ self.addEventListener('fetch', event => {
     })
   );
 });
+
 
 
 
