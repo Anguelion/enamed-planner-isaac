@@ -1273,6 +1273,13 @@ function resumeAutoStudyForActiveView() {
     if(video && !video.paused && lesson) startAutoStudy('video', videoScheduleForLesson(lesson)?.id || '');
   }
 }
+function ensureQuestionFocusStudyTimer(question=null) {
+  if(ui.tab !== 'questoes' || !questionSidebarCollapsed) return;
+  const active = question || filteredQuestions()[ui.qIndex];
+  if(active && !autoStudyIsRunning('questions')) {
+    startAutoStudy('questions', scheduleForQuestion(active)?.id || '', 60);
+  }
+}
 function dayScore(log) { const total = n(log.correct) + n(log.wrong); return total ? n(log.correct) / total : (n(log.questions) ? n(log.correct) / n(log.questions) : 0); }
 function moodLabel(v) { return v==3 ? 'Motivado' : v==2 ? 'Mais ou menos' : v==1 ? 'Lento' : 'Sem humor'; }
 function ensureSimTopics() {
@@ -5829,6 +5836,7 @@ function addQuestionFlashcard(question) {
     createdAt: new Date().toISOString()
   });
   state.questionFlashcards[question.id] = cards;
+  ensureQuestionFocusStudyTimer(question);
   persist();
 }
 function saveQuestionEdit(question) {
@@ -5851,6 +5859,7 @@ function updateQuestionFlashcard(input) {
   const cards = state.questionFlashcards[input.dataset.questionCard] || [];
   const card = cards.find(item => item.id === input.dataset.cardId);
   if(!card) return;
+  ensureQuestionFocusStudyTimer(questionBank.find(item => item.id === input.dataset.questionCard));
   card[input.dataset.cardField] = input.value;
   if(input.dataset.cardField === 'subarea') card.topic = input.value;
   renderCache.manualCards = null;
@@ -5871,6 +5880,7 @@ function removeQuestionFlashcard(questionId, cardId) {
   state.questionFlashcards[questionId] = cards.filter(card => card.id !== cardId);
   delete state.flashcardProgress[cardId];
   delete ui.revealedCards[cardId];
+  ensureQuestionFocusStudyTimer(questionBank.find(item => item.id === questionId));
   persist();
 }
 function resetKeyboardConfirmation() {
