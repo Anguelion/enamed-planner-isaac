@@ -4744,6 +4744,12 @@ function applyQuestionEdits(question) {
 function openQuestionsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
+  const completed = completedQuestions(item);
+  const target = lessonQuestionTarget(item);
+  if(completed >= target) {
+    showStudyToast(`Parabéns, você já concluiu esta lista. ${completed} de ${target} questões realizadas em ${item.topic}.`);
+    return;
+  }
   const linkedByTopic = questionBank.filter(question => questionMatchesSchedule(question, item));
   const direct = questionBank.filter(question => question.scheduleId === item.id && String(question.collectionBlock) === String(item.block));
   const linked = linkedByTopic.length ? linkedByTopic : direct;
