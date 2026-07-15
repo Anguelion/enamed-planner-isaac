@@ -1280,6 +1280,10 @@ function ensureQuestionFocusStudyTimer(question=null) {
     startAutoStudy('questions', scheduleForQuestion(active)?.id || '', 60);
   }
 }
+function ensureVideoFlashcardStudyTimer(source, schedule) {
+  if(ui.tab !== 'aulas' || !source) return;
+  if(!autoStudyIsRunning('video')) startAutoStudy('video', schedule?.id || '', 60);
+}
 function dayScore(log) { const total = n(log.correct) + n(log.wrong); return total ? n(log.correct) / total : (n(log.questions) ? n(log.correct) / n(log.questions) : 0); }
 function moodLabel(v) { return v==3 ? 'Motivado' : v==2 ? 'Mais ou menos' : v==1 ? 'Lento' : 'Sem humor'; }
 function ensureSimTopics() {
@@ -3443,6 +3447,7 @@ function addVideoFlashcard(source, lesson, schedule) {
   const wasPlaying = Boolean(video && !video.paused);
   const currentTime = video ? Math.floor(video.currentTime || 0) : 0;
   const playbackRate = video?.playbackRate || 1;
+  ensureVideoFlashcardStudyTimer(source, schedule);
   const cards = Array.isArray(state.videoFlashcards[source.id]) ? state.videoFlashcards[source.id] : [];
   cards.unshift({ id:`video-card-${Date.now()}`, front:'', back:'', scheduleId:schedule?.id || '', block:schedule?.block || lesson?.block || '', area:schedule?.area || lesson?.area || 'Sem área', subarea:videoContentLabel(source), topic:schedule?.topic || lesson?.title || videoContentLabel(source), createdAt:new Date().toISOString() });
   state.videoFlashcards[source.id] = cards;
@@ -3465,12 +3470,22 @@ function updateVideoFlashcard(input) {
   const cards = state.videoFlashcards?.[input.dataset.videoCard] || [];
   const card = cards.find(item => item.id === input.dataset.cardId);
   if(!card) return;
+  const lesson = currentVideoLesson();
+  ensureVideoFlashcardStudyTimer(
+    lesson?.videos?.find(item => item.id === input.dataset.videoCard),
+    videoScheduleForLesson(lesson)
+  );
   card[input.dataset.cardField] = input.value;
   if(input.dataset.cardField === 'subarea') card.topic = input.value;
   renderCache.manualCards = null;
   saveStateOnly();
 }
 function removeVideoFlashcard(videoId, cardId) {
+  const lesson = currentVideoLesson();
+  ensureVideoFlashcardStudyTimer(
+    lesson?.videos?.find(item => item.id === videoId),
+    videoScheduleForLesson(lesson)
+  );
   state.videoFlashcards[videoId] = (state.videoFlashcards[videoId] || []).filter(card => card.id !== cardId);
   delete state.flashcardProgress[cardId];
   delete ui.revealedCards[cardId];
