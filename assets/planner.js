@@ -90,7 +90,7 @@ let cloudSyncPoll = null;
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
-  ['painel','Dashboard','dashboard'], ['cronograma','Missão','helmet'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['importar-questoes','Adicionar questões','upload'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
+  ['painel','Dashboard','dashboard'], ['cronograma','Missão','trophy'], ['pendencias','Pendências','alert'], ['aulas','Aulas','play'], ['questoes','Questões','brain'], ['importar-questoes','Adicionar questões','upload'], ['analise','Análise','insight'], ['flashcards','Flashcards','cards'], ['materiais','Materiais','library'], ['simulados','Simulados','timer'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','chart'], ['historico','Histórico','history'], ['feynman','Feynman','message']
 ];
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
@@ -1693,7 +1693,7 @@ function startDashboardCountdown() {
   dashboardCountdownInterval = setInterval(update, 60000);
 }
 function renderTabs() {
-  document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => `<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span>${label}</span></button>`).join('');
+  document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => `<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`).join('');
   document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => {
     const nextTab=b.dataset.tab;
     if(ui.tab==='questoes' && nextTab!=='questoes' && !settleQuestionTimerBeforeLeave()) return;
@@ -1731,7 +1731,7 @@ function iconSvg(name) {
     dashboard:'<rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/>',
     alert:'<path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6Z"/><path d="M12 8v5"/><path d="M12 17h.01"/>',
     route:'<circle cx="6" cy="19" r="3"/><path d="M9 19h3.5a4.5 4.5 0 0 0 0-9H11a4 4 0 0 1 0-8h4"/><circle cx="18" cy="5" r="3"/>',
-    helmet:'<path d="M4 16a8 8 0 0 1 16 0v1H4Z"/><path d="M2 17h20M12 8v8M7 13h10"/><path d="M5 17v2h14v-2"/>',
+    trophy:'<path d="M8 4h8v4a4 4 0 0 1-8 0Z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 12v5M8 20h8M9 17h6"/>',
     dice:'<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="8" cy="8" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="16" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="8" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="16" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>',
     play:'<circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4Z"/>',
     brain:'<path d="M9.5 4A3.5 3.5 0 0 0 6 7.5v.2A3.5 3.5 0 0 0 4 11v1a3.5 3.5 0 0 0 2 3.2v.3A3.5 3.5 0 0 0 9.5 19H12V4Z"/><path d="M14.5 4A3.5 3.5 0 0 1 18 7.5v.2a3.5 3.5 0 0 1 2 3.3v1a3.5 3.5 0 0 1-2 3.2v.3a3.5 3.5 0 0 1-3.5 3.5H12V4Z"/><path d="M8 9h4M12 14h4"/>',

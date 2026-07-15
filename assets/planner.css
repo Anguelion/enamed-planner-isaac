@@ -44,7 +44,7 @@ body:not(.auth-locked) .login-screen{display:none}
 .tab-icon{width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:color-mix(in srgb,currentColor 13%,transparent);color:currentColor;transition:transform .16s ease,background .16s ease}
 .tab:hover .tab-icon{transform:rotate(-5deg) scale(1.08)}
 .tab-icon .ui-icon{width:17px;height:17px;stroke-width:2.2}
-.tab-painel{color:#2867e8}.tab-cronograma{color:#8b5cf6}.tab-pendencias{color:#e05a47}.tab-aulas{color:#0b9b77}.tab-questoes{color:#087fa1}.tab-importar-questoes{color:#d97706}.tab-analise{color:#e58a14}.tab-flashcards{color:#d04fb3}.tab-materiais{color:#188b92}.tab-simulados{color:#ef6a3a}.tab-prescricao{color:#16a085}.tab-areas{color:#3b82f6}.tab-historico{color:#64748b}.tab-feynman{color:#7c5ce3}
+.tab-painel{color:#2867e8}.tab-cronograma{color:#c58a16}.tab-pendencias{color:#e05a47}.tab-aulas{color:#0b9b77}.tab-questoes{color:#087fa1}.tab-importar-questoes{color:#d97706}.tab-analise{color:#e58a14}.tab-flashcards{color:#d04fb3}.tab-materiais{color:#188b92}.tab-simulados{color:#ef6a3a}.tab-prescricao{color:#16a085}.tab-areas{color:#3b82f6}.tab-historico{color:#64748b}.tab-feynman{color:#7c5ce3}
 .tab.active{color:#fff;transform:translateY(-1px)}
 .tab.active .tab-icon{background:rgba(255,255,255,.18);color:#fff}
 .tab.active{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(18,63,89,.16)}
@@ -1077,7 +1077,7 @@ body.sidebar-collapsed .app-sidebar{width:var(--sidebar-collapsed-width)}
 body.sidebar-collapsed .app-header,body.sidebar-collapsed main{margin-left:var(--sidebar-collapsed-width)}
 body.sidebar-collapsed .app-header{width:calc(100% - var(--sidebar-collapsed-width))}
 body.sidebar-collapsed .sidebar-brand{grid-template-columns:42px;justify-content:center;padding:16px 17px}
-body.sidebar-collapsed .sidebar-brand-copy,body.sidebar-collapsed .app-sidebar .tab span,body.sidebar-collapsed .sidebar-theme span{display:none}
+body.sidebar-collapsed .sidebar-brand-copy,body.sidebar-collapsed .app-sidebar .tab-label,body.sidebar-collapsed .sidebar-theme span{display:none}
 body.sidebar-collapsed .sidebar-toggle{position:absolute;right:-15px;top:25px;border:1px solid var(--line);background:var(--panel);box-shadow:0 4px 12px rgba(18,63,89,.12)}
 body.sidebar-collapsed .app-sidebar .tab{justify-content:center;padding:9px}
 body.sidebar-collapsed .sidebar-theme{justify-content:center;padding:9px}
