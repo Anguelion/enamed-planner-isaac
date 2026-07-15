@@ -80,6 +80,7 @@ let currentUser = null;
 let syncTimer = null;
 let syncInFlight = false;
 let cloudDirty = false;
+let cloudRevision = 0;
 let lastCloudSyncAt = 0;
 let cloudSyncPoll = null;
 let renderCache = { questionStats: new Map(), flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
@@ -509,9 +510,91 @@ function showStudyToast(message) {
   document.body.append(toast);
   setTimeout(() => toast.remove(), 6500);
 }
+function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
+  const remote = remoteState && typeof remoteState === 'object' ? structuredClone(remoteState) : {};
+  const local = localState && typeof localState === 'object' ? localState : {};
+  const merged = preferLocal ? { ...remote, ...local } : { ...local, ...remote };
+
+  const remoteProgress = remote.questionProgress || {};
+  const localProgress = local.questionProgress || {};
+  merged.questionProgress = { ...remoteProgress };
+  new Set([...Object.keys(remoteProgress), ...Object.keys(localProgress)]).forEach(id => {
+    const remoteItem = remoteProgress[id];
+    const localItem = localProgress[id];
+    if(!remoteItem) { merged.questionProgress[id] = structuredClone(localItem); return; }
+    if(!localItem) return;
+    const remoteTime = Date.parse(remoteItem.answeredAt || '') || 0;
+    const localTime = Date.parse(localItem.answeredAt || '') || 0;
+    const latest = localTime >= remoteTime ? localItem : remoteItem;
+    const older = latest === localItem ? remoteItem : localItem;
+    merged.questionProgress[id] = {
+      ...older,
+      ...latest,
+      attempts: Math.max(n(remoteItem.attempts), n(localItem.attempts)),
+      secondsSpent: Math.max(n(remoteItem.secondsSpent), n(localItem.secondsSpent))
+    };
+  });
+
+  const remoteLogged = remote.questionLogged || {};
+  const localLogged = local.questionLogged || {};
+  merged.questionLogged = {};
+  new Set([...Object.keys(remoteLogged), ...Object.keys(localLogged)]).forEach(id => {
+    const dates = [remoteLogged[id], localLogged[id]].filter(Boolean).sort();
+    if(dates.length) merged.questionLogged[id] = dates.at(-1);
+  });
+
+  const remoteLogs = new Map((remote.dayLogs || []).map(log => [log.date, log]));
+  const localLogs = new Map((local.dayLogs || []).map(log => [log.date, log]));
+  merged.dayLogs = [...new Set([...remoteLogs.keys(), ...localLogs.keys()])].map(date => {
+    const remoteLog = remoteLogs.get(date) || defaultDayLog(date);
+    const localLog = localLogs.get(date) || defaultDayLog(date);
+    const questionSource = n(localLog.questions) >= n(remoteLog.questions) ? localLog : remoteLog;
+    const log = { ...remoteLog, ...localLog, date };
+    ['flashcards','manualFlashcards','videos','flashcardMinutes','lessonMinutes','questionMinutes','materialMinutes','simuladoMinutes'].forEach(field => {
+      log[field] = Math.max(n(remoteLog[field]), n(localLog[field]));
+    });
+    ['questions','correct','wrong'].forEach(field => { log[field] = n(questionSource[field]); });
+    ['flashcardsOn','videosOn','questionsOn'].forEach(field => { log[field] = Boolean(remoteLog[field] || localLog[field]); });
+    ['videoNames','notes','pace'].forEach(field => { log[field] = localLog[field] || remoteLog[field] || ''; });
+    log.mood = n(localLog.mood) || n(remoteLog.mood);
+    return log;
+  }).sort((a,b) => a.date.localeCompare(b.date));
+
+  const localSchedule = new Map((local.schedule || []).map(item => [item.id, item]));
+  merged.schedule = (remote.schedule || local.schedule || []).map(item => {
+    const localItem = localSchedule.get(item.id);
+    if(!localItem) return item;
+    return {
+      ...item,
+      manualQ: Math.max(n(item.manualQ ?? item.q), n(localItem.manualQ ?? localItem.q)),
+      manualFC: Math.max(n(item.manualFC ?? item.fc), n(localItem.manualFC ?? localItem.fc)),
+      hours: Math.max(n(item.hours), n(localItem.hours))
+    };
+  });
+
+  merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions);
+  merged.videoPlayer = { ...(remote.videoPlayer || {}), ...(local.videoPlayer || {}) };
+  merged.videoPlayer.watched = { ...(remote.videoPlayer?.watched || {}), ...(local.videoPlayer?.watched || {}) };
+  merged.videoPlayer.watchedAt = { ...(remote.videoPlayer?.watchedAt || {}), ...(local.videoPlayer?.watchedAt || {}) };
+  return merged;
+}
+function mergeRecordsById(remoteRecords, localRecords) {
+  const records = new Map();
+  [...(remoteRecords || []), ...(localRecords || [])].forEach((record,index) => {
+    const key = record?.id || `${record?.date || ''}|${record?.kind || ''}|${record?.savedAt || ''}|${index}`;
+    records.set(key, record);
+  });
+  return [...records.values()];
+}
+function invalidateActivityRenderCache() {
+  renderCache.questionStats.clear();
+  renderCache.flashcardStats.clear();
+  renderCache.manualCards = null;
+}
 function scheduleCloudSave() {
   if(!currentUser || !sbClient) return;
   cloudDirty = true;
+  cloudRevision += 1;
   clearTimeout(syncTimer);
   setSyncStatus('Alterações pendentes', 'busy');
   syncTimer = setTimeout(pushCloudState, 900);
@@ -524,7 +607,17 @@ async function pushCloudState() {
     return;
   }
   syncInFlight = true;
+  const pushRevision = cloudRevision;
   setSyncStatus('Sincronizando...', 'busy');
+  const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
+  const remoteAt = Date.parse(remoteRow?.updated_at || '') || 0;
+  if(!remoteError && remoteRow?.data && remoteAt > lastCloudSyncAt) {
+    state = mergePlannerActivityState(remoteRow.data, state, true);
+    ensureDayLogs();
+    ensureQuestionProgress();
+    invalidateActivityRenderCache();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
   const updatedAt = new Date().toISOString();
   const { error } = await sbClient.from('planner_states').upsert({
     user_id: currentUser.id,
@@ -536,9 +629,15 @@ async function pushCloudState() {
     console.error('Falha ao sincronizar:', error);
     setSyncStatus('Erro ao sincronizar', 'error');
   } else {
-    cloudDirty = false;
+    cloudDirty = cloudRevision !== pushRevision;
     lastCloudSyncAt = Date.parse(updatedAt) || Date.now();
-    setSyncStatus(`Sincronizado ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
+    if(cloudDirty) {
+      setSyncStatus('Alterações pendentes', 'busy');
+      clearTimeout(syncTimer);
+      syncTimer = setTimeout(pushCloudState, 350);
+    } else {
+      setSyncStatus(`Sincronizado ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
+    }
   }
 }
 async function pullCloudState({ firstLogin=false }={}) {
@@ -560,12 +659,13 @@ async function pullCloudState({ firstLogin=false }={}) {
     return;
   }
   if(data?.data?.schedule?.length) {
-    state = data.data;
+    state = mergePlannerActivityState(data.data, state);
     cloudDirty = false;
     lastCloudSyncAt = remoteAt || Date.now();
     normalizeOfficialScheduleNames();
     ensureRestartFromBlockTen();
     ensureDayLogs(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+    invalidateActivityRenderCache();
     // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
     // Reaplica o cronograma oficial antes de exibir ou reenviar o estado.
     if(officialSchedule.length) applyOfficialSchedule();
@@ -603,11 +703,11 @@ async function loadQuestionBankNow() {
   // O banco publicado junto do planner e a fonte principal. Evita baixar e
   // normalizar novamente milhares de registros iguais vindos do Supabase.
   if(localQuestions.length) {
-    if(['questoes','simulados','analise'].includes(ui.tab)) render();
+    if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
     return;
   }
   if(!currentUser || !sbClient) {
-    if(['questoes','simulados','analise'].includes(ui.tab)) render();
+    if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
     return;
   }
   let { data, error } = await sbClient.from('question_bank').select('id,number,collection_block,document_block,area,topic,stem,options,answer,source,source_label,images,comment').order('collection_block').order('source_label').order('number');
@@ -653,7 +753,7 @@ async function loadQuestionBankNow() {
     }
   }
   reconcileQuestionProgressWithAnswers();
-  if(['questoes','simulados','analise'].includes(ui.tab)) render();
+  if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
 }
 function loadQuestionBlockScript(src) {
   return new Promise(resolve => {
@@ -6216,6 +6316,7 @@ startMotivationCycle();
 loadMotivationMessages();
 setupSidebar();
 render();
+loadQuestionBank();
 loadOfficialSchedule();
 loadVideoCatalog();
 initCloud();
