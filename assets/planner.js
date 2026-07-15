@@ -608,6 +608,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     if(key && !importedByHash.has(key)) importedByHash.set(key, question);
   });
   merged.importedQuestions = [...importedByHash.values()];
+  merged.deletedQuestions = { ...(remote.deletedQuestions || {}), ...(local.deletedQuestions || {}) };
 
   const remoteTasks = Array.isArray(remote.dailyTasks) ? remote.dailyTasks : [];
   const localTasks = Array.isArray(local.dailyTasks) ? local.dailyTasks : [];
@@ -1005,7 +1006,7 @@ function deduplicateQuestions(records) {
   const unique = new Map();
   const richness = question => n((question.comment || '').length) + n((question.images || []).length) * 2000 + Object.keys(question.options || {}).length * 20;
   records.forEach(question => {
-    const key = `${question.collectionBlock ?? 'sem-bloco'}|${normalizedTopic(question.stem)}`;
+    const key = questionDuplicateKey(question);
     if(!question.stem || !unique.has(key)) { unique.set(key, question); return; }
     const current = unique.get(key);
     const keep = richness(question) > richness(current) ? question : current;
@@ -1017,7 +1018,10 @@ function deduplicateQuestions(records) {
     }
     if(keep !== current) unique.set(key, keep);
   });
-  return [...unique.values()];
+  return [...unique.values()].filter(question => !state.deletedQuestions?.[question.id]);
+}
+function questionDuplicateKey(question={}) {
+  return `${String(question.collectionBlock ?? 'sem-bloco').trim()}|${normalizedTopic(question.stem)}`;
 }
 function loadImportedSimulados() {
   if(!importedSimuladosLoadPromise) importedSimuladosLoadPromise = loadImportedSimuladosNow();
@@ -5145,12 +5149,15 @@ function parseQuestionBatch(text, defaults={}) {
     markers.forEach(alias => report.markers.push({question:index + 1, alias, line:chunk.start}));
     const options = Object.fromEntries(sections.options.map(item => [item.key, item.lines.join('\n').trim()]));
     const answer = String((sections.answer.join('\n').match(/\b([A-E])\b/i) || [,''])[1]).toUpperCase();
+    const requestedScheduleId = meta.schedule_id || defaults.schedule_id || '';
+    const scheduledLesson = state.schedule.find(item => item.id === requestedScheduleId);
     const question = normalizeQuestionRecord({
       id: uuidv7(), number: meta.number || '', sourceNumber: meta.number || '', displayOrder:index + 1,
-      collectionBlock: meta.collection_block || meta.block || defaults.collection_block || defaults.block || (meta.destination === 'simulado' || defaults.destination === 'simulado' ? `simulado:${meta.simulado_name || defaults.simulado_name || 'Novo simulado'}` : ''),
+      scheduleId: scheduledLesson?.id || '',
+      collectionBlock: meta.collection_block || meta.block || defaults.collection_block || defaults.block || scheduledLesson?.block || (meta.destination === 'simulado' || defaults.destination === 'simulado' ? `simulado:${meta.simulado_name || defaults.simulado_name || 'Novo simulado'}` : ''),
       collectionLabel: meta.collection || defaults.collection || (meta.destination === 'simulado' || defaults.destination === 'simulado' ? meta.simulado_name || defaults.simulado_name || 'Novo simulado' : ''), documentBlock: meta.document_block || '',
       sourceLabel: meta.source_label || defaults.source_label || meta.institution || defaults.institution || 'Importação manual',
-      area: meta.area || defaults.area || '', specialty: meta.specialty || '', topic: meta.topic || defaults.topic || '', subtopic: meta.subtopic || '',
+      area: meta.area || defaults.area || scheduledLesson?.area || '', specialty: meta.specialty || '', topic: meta.topic || defaults.topic || scheduledLesson?.topic || '', subtopic: meta.subtopic || '',
       difficulty: meta.difficulty || defaults.difficulty || '', institution: meta.institution || defaults.institution || '', examYear: meta.year || defaults.year || '',
       tags: String(meta.tags || defaults.tags || '').split('|').map(tag => tag.trim()).filter(Boolean), stem: sections.stem.join('\n').replace(/\[\[IMAGE:[^\]]+\]\]/gi, '').trim(), options, answer,
       comment: sections.comment.join('\n').trim(), pearl: sections.pearl.join('\n').trim(), trap: sections.trap.join('\n').trim(), source: sections.source.join('\n').trim(),
@@ -5175,11 +5182,13 @@ function parseQuestionBatch(text, defaults={}) {
   });
   if(chunks.length > QUESTION_IMPORT_MAX) report.errors.push({line:1, message:`O lote excede o limite de ${QUESTION_IMPORT_MAX} questões.`});
   const seen = new Set();
+  const existingKeys = new Set(questionBank.map(questionDuplicateKey));
   parsed.forEach((question, index) => {
-    if(seen.has(question.contentHash)) { question._warnings = [...(question._warnings || []), 'Possível duplicata dentro deste lote.']; report.warnings.push({question:index + 1, line:1, message:'Possível duplicata dentro deste lote.'}); }
-    seen.add(question.contentHash);
-    if(questionBank.some(existing => existing.contentHash === question.contentHash || simpleContentHash([existing.stem, ...Object.values(existing.options || {}), existing.answer].join('|')) === question.contentHash)) {
-      question._warnings = [...(question._warnings || []), 'Possível duplicata já existente no banco.'];
+    const duplicateKey = questionDuplicateKey(question);
+    if(seen.has(duplicateKey)) { question._warnings = [...(question._warnings || []), 'Possível duplicata dentro deste lote.']; report.warnings.push({question:index + 1, line:1, message:'Possível duplicata dentro deste lote.'}); }
+    seen.add(duplicateKey);
+    if(existingKeys.has(duplicateKey)) {
+      question._warnings = [...(question._warnings || []), 'Possível duplicata já existente neste bloco do banco.'];
       report.warnings.push({question:index + 1, line:1, message:'Possível duplicata já existente no banco.'});
     }
   });
@@ -5188,6 +5197,7 @@ function parseQuestionBatch(text, defaults={}) {
 }
 function ensureImportedQuestions() {
   if(!Array.isArray(state.importedQuestions)) state.importedQuestions = [];
+  if(!state.deletedQuestions || typeof state.deletedQuestions !== 'object') state.deletedQuestions = {};
 }
 function normalizeQuestionRecord(question) {
   const options = Object.fromEntries(Object.entries(question.options || {}).map(([letter,text]) => [String(letter).trim().toUpperCase(), normalizeQuestionText(text)]));
@@ -5501,7 +5511,7 @@ function questionBlockStats() {
   return renderCache.questionBlockStats;
 }
 function importDefaultFields() {
-  return {collection_block:'', collection:'', destination:'bank', simulado_name:'', area:'', specialty:'', topic:'', subtopic:'', institution:'ENAMED', year:'', difficulty:'', tags:'', status:'draft'};
+  return {collection_block:'', collection:'', destination:'bank', simulado_name:'', schedule_id:'', area:'', specialty:'', topic:'', subtopic:'', institution:'ENAMED', year:'', difficulty:'', tags:'', status:'draft'};
 }
 function renderImportQuestionCard(question, index) {
   const errors = question._errors || [];
@@ -5548,9 +5558,10 @@ function cleanupImportDraft(mode) {
   if(mode === 'invalid') questionImportDraft.questions = questions.filter(question => !(question._errors || []).length);
   if(mode === 'duplicates') {
     const seen = new Set();
+    const existing = new Set(questionBank.map(questionDuplicateKey));
     questionImportDraft.questions = questions.filter(question => {
-      const key = question.contentHash || simpleContentHash([question.stem, ...Object.values(question.options || {}), question.answer].join('|'));
-      if(seen.has(key)) return false;
+      const key = questionDuplicateKey(question);
+      if(seen.has(key) || existing.has(key)) return false;
       seen.add(key);
       return true;
     });
@@ -5568,9 +5579,24 @@ function enhanceQuestionImporterUi() {
     defaults.querySelector('[data-import-default="simulado_name"]').value = saved.simulado_name || '';
     defaults.insertAdjacentHTML('afterend', '<div class="muted import-help">Banco de questões deixa o conteúdo disponível nos blocos. “Simulado separado” cria uma coleção identificada pelo nome, sem misturar com os blocos de aula.</div>');
   }
+  if(defaults && !defaults.querySelector('[data-import-default="schedule_id"]')) {
+    const scheduleOptions = state.schedule.slice().sort((a,b) => n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || byDate(a,b)).map(item => `<option value="${escapeAttr(item.id)}">B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.topic)}</option>`).join('');
+    defaults.insertAdjacentHTML('afterbegin', `<label class="import-schedule-link">Vincular à aula<select class="select" data-import-default="schedule_id"><option value="">Sem aula específica</option>${scheduleOptions}</select></label>`);
+    const select = defaults.querySelector('[data-import-default="schedule_id"]');
+    select.value = questionImportDraft?.defaults?.schedule_id || '';
+    select.addEventListener('change', event => {
+      const lesson = state.schedule.find(item => item.id === event.currentTarget.value);
+      if(!lesson) { updateImportDraftFromForm(); return; }
+      const setValue = (field,value) => { const input=defaults.querySelector(`[data-import-default="${field}"]`); if(input) input.value=value; };
+      setValue('collection_block', String(lesson.block));
+      setValue('area', lesson.area || '');
+      setValue('topic', lesson.topic || '');
+      updateImportDraftFromForm();
+    });
+  }
   const commit = document.getElementById('commitImportedQuestions');
   if(commit && !document.getElementById('removeImportDuplicates')) {
-    commit.insertAdjacentHTML('beforebegin', '<button class="tiny-btn" id="removeImportDuplicates" title="Mantém apenas a primeira cópia de cada questão">Limpar duplicadas</button><button class="tiny-btn" id="removeImportInvalid" title="Remove questões com erro de estrutura">Remover inválidas</button>');
+    commit.insertAdjacentHTML('beforebegin', '<button class="tiny-btn" id="removeImportDuplicates" title="Remove cópias dentro do lote e questões que já existem no mesmo bloco">Limpar duplicadas</button><button class="tiny-btn" id="removeImportInvalid" title="Remove questões com erro de estrutura">Remover inválidas</button>');
   }
   document.querySelectorAll('[data-import-card]').forEach(card => {
     const index = n(card.dataset.importCard);
@@ -5626,7 +5652,7 @@ function bindQuestionImporter() {
   });
   document.getElementById('removeImportDuplicates')?.addEventListener('click', () => cleanupImportDraft('duplicates'));
   document.getElementById('removeImportInvalid')?.addEventListener('click', () => cleanupImportDraft('invalid'));
-  document.getElementById('commitImportedQuestions')?.addEventListener('click', () => { if(!confirm(`Salvar ${questionImportDraft.questions.length} questões no banco privado?`)) return; const valid=questionImportDraft.questions.filter(q => !(q._errors||[]).length); if(!valid.length) return; ensureImportedQuestions(); const existing=new Set(state.importedQuestions.map(q=>q.contentHash)); const fresh=valid.filter(q=>!existing.has(q.contentHash)).map((q,index)=>({...q, displayOrder:state.importedQuestions.length+index+1, importStatus:q.importStatus==='published'?'published':q.importStatus||'ready', _errors:undefined, _warnings:undefined})); state.importedQuestions.push(...fresh); questionBank=deduplicateQuestions([...questionBank,...fresh]); questionImportDraft={text:'',defaults:importQuestionDefaults(),questions:[],report:{errors:[],warnings:[],markers:[],estimated:0}}; saveQuestionImportDraft(); invalidateQuestionBankRenderCache(); persist(); showStudyToast(`${fresh.length} questões adicionadas. ${valid.length-fresh.length} duplicatas ignoradas.`); });
+  document.getElementById('commitImportedQuestions')?.addEventListener('click', () => { if(!confirm(`Salvar ${questionImportDraft.questions.length} questões no banco privado?`)) return; const valid=questionImportDraft.questions.filter(q => !(q._errors||[]).length); if(!valid.length) return; ensureImportedQuestions(); const existing=new Set(questionBank.map(questionDuplicateKey)); const batch=new Set(); const fresh=valid.filter(q=>{ const key=questionDuplicateKey(q); if(existing.has(key) || batch.has(key)) return false; batch.add(key); return true; }).map((q,index)=>({...q, displayOrder:state.importedQuestions.length+index+1, importStatus:q.importStatus==='published'?'published':q.importStatus||'ready', _errors:undefined, _warnings:undefined})); state.importedQuestions.push(...fresh); questionBank=deduplicateQuestions([...questionBank,...fresh]); questionImportDraft={text:'',defaults:importQuestionDefaults(),questions:[],report:{errors:[],warnings:[],markers:[],estimated:0}}; saveQuestionImportDraft(); invalidateQuestionBankRenderCache(); persist(); showStudyToast(`${fresh.length} questões adicionadas. ${valid.length-fresh.length} duplicatas ignoradas.`); });
 }
 function importQuestionDefaults() { return importDefaultFields(); }
 function renderQuestion(question, total) {
@@ -5660,7 +5686,7 @@ function renderQuestion(question, total) {
   const questionInfo = `<div class="question-info-stack"><div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>${renderQuestionTags(question)}</div>`;
   const focusInfo = questionSidebarCollapsed ? questionInfo : '';
   const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
-  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
+  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${questionSidebarCollapsed?'☰':'⛶'}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">◷</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">⚑</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn danger" id="questionDelete" title="Excluir questão">${iconSvg('x')}</button><button class="icon-btn" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}</div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
@@ -5933,6 +5959,7 @@ function bindQuestionActions(questions, question) {
   const fontDown = document.getElementById('questionFontDown');
   const fontUp = document.getElementById('questionFontUp');
   const keyIssue = document.getElementById('questionKeyIssue');
+  const deleteQuestion = document.getElementById('questionDelete');
   document.querySelectorAll('[data-question-materials]').forEach(button => button.onclick = e => openMaterialsForSchedule(e.currentTarget.dataset.questionMaterials));
   document.querySelectorAll('[data-question-confidence]').forEach(button => button.onclick = e => {
     const current = state.questionProgress[question.id] || {};
@@ -5946,6 +5973,7 @@ function bindQuestionActions(questions, question) {
   if(next) next.onclick = goNext;
   if(topPrev) topPrev.onclick = goPrev;
   if(topNext) topNext.onclick = goNext;
+  if(deleteQuestion) deleteQuestion.onclick = () => deleteQuestionFromPlanner(question);
   if(redo) redo.onclick = () => {
     const previous = state.questionProgress[question.id] || {};
     state.questionProgress[question.id] = {
@@ -6154,6 +6182,29 @@ function addQuestionFlashcard(question) {
   state.questionFlashcards[question.id] = cards;
   ensureQuestionFocusStudyTimer(question);
   persist();
+}
+function deleteQuestionFromPlanner(question) {
+  if(!question?.id) return;
+  ensureImportedQuestions();
+  const importedIndex = state.importedQuestions.findIndex(item => item.id === question.id);
+  const imported = importedIndex >= 0;
+  const message = imported
+    ? 'Excluir esta questão importada do seu banco? Esta ação também será sincronizada.'
+    : 'Ocultar esta questão do seu banco em todos os aparelhos? O arquivo original local não será apagado.';
+  if(!confirm(message)) return;
+  if(imported) state.importedQuestions.splice(importedIndex, 1);
+  else state.deletedQuestions[question.id] = new Date().toISOString();
+  delete state.questionProgress[question.id];
+  delete state.questionEdits[question.id];
+  delete state.questionFlashcards[question.id];
+  delete state.questionLogged[question.id];
+  delete ui.draftAnswers[question.id];
+  questionBank = questionBank.filter(item => item.id !== question.id);
+  invalidateQuestionBankRenderCache();
+  ui.qQuestionId = '';
+  ui.qIndex = Math.max(0, ui.qIndex - 1);
+  persist();
+  showStudyToast(imported ? 'Questão importada excluída.' : 'Questão ocultada do seu banco.');
 }
 function saveQuestionEdit(question) {
   const edit = {
