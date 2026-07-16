@@ -67,6 +67,90 @@ test('videoaula contabiliza somente segundos ativos e bônus único de conclusã
   assert.equal(ledger.filter(item=>item.activity_type==='video_completion').length,1);
 });
 
+function flashcardReview(overrides={}) {
+  return {id:'review-1',cardId:'fc-1',rating:3,sessionId:'session-1',reviewedAt:'2026-07-16T10:00:00.000Z',wasDue:false,wasNew:true,legacy:false,...overrides};
+}
+
+test('abrir ou revelar flashcard não concede XP',()=>{
+  const state=Gamification.ensureState({});
+  assert.equal(Gamification.totalXP(state.xpTransactions),0);
+  assert.equal(state.xpTransactions.length,0);
+});
+
+test('primeira avaliação de cartão novo concede 1 XP',()=>{
+  const state=Gamification.ensureState({});
+  const result=Gamification.awardFlashcardReviewXP(state,flashcardReview());
+  assert.equal(result.awarded,true);
+  assert.equal(result.transaction.base_xp,1);
+  assert.equal(result.transaction.final_xp,1);
+  assert.equal(result.transaction.metadata.wasNew,true);
+});
+
+test('revisão vencida concede 1 XP e as quatro avaliações têm o mesmo XP-base',()=>{
+  for(const rating of [1,2,3,4]) {
+    const state=Gamification.ensureState({});
+    const result=Gamification.awardFlashcardReviewXP(state,flashcardReview({id:`review-${rating}`,rating,wasNew:false,wasDue:true}));
+    assert.equal(result.transaction.base_xp,1);
+    assert.equal(result.transaction.metadata.rating,rating);
+  }
+});
+
+test('mesmo reviewLogId não duplica XP',()=>{
+  const state=Gamification.ensureState({});
+  const review=flashcardReview();
+  const first=Gamification.awardFlashcardReviewXP(state,review);
+  const second=Gamification.awardFlashcardReviewXP(state,review);
+  assert.equal(first.awarded,true);
+  assert.equal(second.duplicate,true);
+  assert.equal(state.xpTransactions.length,1);
+});
+
+test('repetição imediata na mesma sessão não concede outro XP',()=>{
+  const state=Gamification.ensureState({});
+  Gamification.awardFlashcardReviewXP(state,flashcardReview());
+  const repeat=Gamification.awardFlashcardReviewXP(state,flashcardReview({id:'review-2',wasNew:false,wasDue:false,reviewedAt:'2026-07-16T10:01:00.000Z'}));
+  assert.equal(repeat.awarded,false);
+  assert.ok(repeat.evaluation.reasons.includes('not_due_or_new'));
+  assert.equal(Gamification.totalXP(state.xpTransactions),1);
+});
+
+test('nova revisão legítima futura concede XP',()=>{
+  const state=Gamification.ensureState({});
+  Gamification.awardFlashcardReviewXP(state,flashcardReview());
+  const future=Gamification.awardFlashcardReviewXP(state,flashcardReview({id:'review-future',wasNew:false,wasDue:true,reviewedAt:'2026-07-20T10:00:00.000Z'}));
+  assert.equal(future.awarded,true);
+  assert.equal(Gamification.totalXP(state.xpTransactions),2);
+});
+
+test('cinco cartões diferentes concedem 5 XP-base e atualizam perfil e histórico',()=>{
+  const state=Gamification.ensureState({});
+  for(let index=1;index<=5;index+=1) Gamification.awardFlashcardReviewXP(state,flashcardReview({id:`review-${index}`,cardId:`fc-${index}`}));
+  assert.equal(state.xpTransactions.length,5);
+  assert.equal(Gamification.totalXP(state.xpTransactions),5);
+  assert.equal(state.profile.cachedTotalXP,5);
+  assert.equal(state.xpTransactions.filter(item=>item.activity_type==='flashcard_review').length,5);
+});
+
+test('reload não duplica revisão de flashcard',()=>{
+  const state=Gamification.ensureState({});
+  const review=flashcardReview();
+  Gamification.awardFlashcardReviewXP(state,review);
+  const reloaded=Gamification.ensureState(JSON.parse(JSON.stringify(state)));
+  const duplicate=Gamification.awardFlashcardReviewXP(reloaded,review);
+  assert.equal(duplicate.duplicate,true);
+  assert.equal(Gamification.totalXP(reloaded.xpTransactions),1);
+});
+
+test('prévia histórica reconhece reviewLogId e não repete revisão já lançada',()=>{
+  const state=Gamification.ensureState({});
+  const review=flashcardReview();
+  Gamification.awardFlashcardReviewXP(state,review);
+  const plannerState={gamification:state,flashcardSystem:{reviewLogs:[review]},flashcardReviewHistory:[]};
+  const preview=Gamification.createAutomaticLegacyPreview({state:plannerState});
+  const known=new Set(state.xpTransactions.map(item=>item.source_event_id));
+  assert.equal(preview.events.filter(event=>!known.has(event.source_event_id)).length,0);
+});
+
 test('reabrir um bloco não duplica o bônus de conclusão',()=>{
   const ledger=[];
   const completion={activity_type:'block_completion',source_type:'block',source_id:'10',source_event_id:'block:10:first-completion',reason:'block_completion',base_xp:100};

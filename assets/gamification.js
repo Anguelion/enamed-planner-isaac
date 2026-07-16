@@ -127,6 +127,32 @@
     return { baseXP:round(minuteXP+completion), watchedSeconds:Math.round(seconds), minuteXP:round(minuteXP), completionBonus:round(completion) };
   }
 
+  function evaluateFlashcardReviewXP(reviewLog={}) {
+    const reviewLogId=text(reviewLog.reviewLogId || reviewLog.id);
+    const cardId=text(reviewLog.cardId);
+    const rating=Math.floor(number(reviewLog.rating));
+    const wasDue=Boolean(reviewLog.wasDue);
+    const wasNew=Boolean(reviewLog.wasNew);
+    const validRating=rating>=1 && rating<=4;
+    const eligible=Boolean(reviewLogId && cardId && validRating && (wasDue || wasNew) && !reviewLog.legacy);
+    const reasons=[];
+    if(!reviewLogId) reasons.push('missing_review_log_id');
+    if(!cardId) reasons.push('missing_card_id');
+    if(!validRating) reasons.push('invalid_rating');
+    if(!wasDue && !wasNew) reasons.push('not_due_or_new');
+    if(reviewLog.legacy) reasons.push('legacy_review');
+    return {reviewLogId,cardId,rating,sessionId:text(reviewLog.sessionId),reviewedAt:iso(reviewLog.reviewedAt),wasDue,wasNew,eligible,reasons,eventKey:`flashcard-review:${reviewLogId}`,baseXP:eligible?1:0};
+  }
+
+  function awardFlashcardReviewXP(container,reviewLog={},options={}) {
+    ensureState(container);
+    const evaluation=evaluateFlashcardReviewXP(reviewLog);
+    if(!evaluation.eligible) return {evaluation,transaction:null,duplicate:false,awarded:false};
+    const result=awardXPIdempotently(container.xpTransactions,{user_id:text(options.userId)||'local',activity_type:'flashcard_review',source_type:'flashcard_review',source_id:evaluation.cardId,source_event_id:evaluation.eventKey,base_xp:evaluation.baseXP,reason:'flashcard_review',occurred_at:evaluation.reviewedAt,metadata:{rating:evaluation.rating,reviewLogId:evaluation.reviewLogId,sessionId:evaluation.sessionId,reviewedAt:evaluation.reviewedAt,wasDue:evaluation.wasDue,wasNew:evaluation.wasNew,legacy:false}},container.rules);
+    refreshProfile(container);
+    return {evaluation,transaction:result.transaction,duplicate:result.duplicate,awarded:!result.duplicate};
+  }
+
   function calculateBlockXP(input={}, ruleOverrides={}) {
     const rules=mergeRules(ruleOverrides);
     return { baseXP:input.completed ? number(rules.block.completionBonus) : 0 };
@@ -301,8 +327,15 @@
       const watchedAt=state.videoPlayer?.watchedAt?.[videoId];
       events.push(makeLegacyEvent({activity_type:'video_completion',source_type:'video',source_id:videoId,source_event_id:`completion:${videoId}`,base_xp:mergeRules(ruleOverrides).video.completionBonus,reason:'video_completion_90',occurred_at:watchedAt || input.generatedAt,metadata:{dateUnknown:!watchedAt,legacySource:true}}));
     });
+    const structuredFlashcardReviews=state.flashcardSystem?.reviewLogs || [];
+    structuredFlashcardReviews.forEach(review => {
+      if(!review?.id || !review?.cardId || !review?.reviewedAt) return;
+      events.push(makeLegacyEvent({activity_type:'flashcard_review',source_type:'flashcard_review',source_id:review.cardId,source_event_id:`flashcard-review:${review.id}`,base_xp:mergeRules(ruleOverrides).flashcard.dueReview,reason:'flashcard_review',occurred_at:review.reviewedAt,metadata:{rating:number(review.rating),reviewLogId:review.id,sessionId:text(review.sessionId),wasDue:Boolean(review.wasDue),wasNew:Boolean(review.wasNew),legacySource:true}}));
+    });
+    const structuredTimes=new Set(structuredFlashcardReviews.map(review=>`${text(review.cardId)}|${text(review.reviewedAt)}`));
     (state.flashcardReviewHistory || []).forEach(review => {
       if(!review?.cardId || !review?.reviewedAt) return;
+      if(structuredTimes.has(`${text(review.cardId)}|${text(review.reviewedAt)}`)) return;
       events.push(makeLegacyEvent({activity_type:'flashcard_review',source_type:'flashcard',source_id:review.cardId,source_event_id:`review:${review.cardId}:${review.reviewedAt}`,base_xp:mergeRules(ruleOverrides).flashcard.dueReview,reason:'flashcard_due_review',occurred_at:review.reviewedAt,metadata:{legacySource:true}}));
     });
     (state.simulados || []).forEach(simulation => {
@@ -380,7 +413,7 @@
   }
 
   return {
-    VERSION,FEATURE_FLAGS,RANKS,DEFAULT_RULES,mergeRules,getRankFromCompletedBlocks,evaluateRankPromotion,repetitionMultiplier,calculateQuestionXP,calculateVideoXP,calculateBlockXP,
+    VERSION,FEATURE_FLAGS,RANKS,DEFAULT_RULES,mergeRules,getRankFromCompletedBlocks,evaluateRankPromotion,repetitionMultiplier,calculateQuestionXP,calculateVideoXP,evaluateFlashcardReviewXP,awardFlashcardReviewXP,calculateBlockXP,
     calculateSimulationBonus,applyMultiplierCap,transactionKey,awardXPIdempotently,totalXP,calculateLevelFromXP,
     normalizeTransaction,ensureState,ensurePlannerState,refreshProfile,createAutomaticLegacyPreview,createAggregateLegacyPreview,
     summarizePreview,commitLegacyImport,revertLegacyImport,stableHash

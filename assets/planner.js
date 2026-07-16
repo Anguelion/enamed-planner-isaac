@@ -265,6 +265,7 @@ function ensureQuestionProgress() {
   if(!Array.isArray(state.flashcardSystem.captureSessions)) state.flashcardSystem.captureSessions = [];
   if(!Array.isArray(state.flashcardSystem.versions)) state.flashcardSystem.versions = [];
   if(!Array.isArray(state.flashcardSystem.undoStack)) state.flashcardSystem.undoStack = [];
+  if(!state.flashcardSystem.activeReviewSessionId) state.flashcardSystem.activeReviewSessionId = newFlashcardId('fc-session');
   if(!state.flashcardSystem.profile || typeof state.flashcardSystem.profile !== 'object') state.flashcardSystem.profile = {};
   state.flashcardSystem.profile = { targetRetention:0.9, maximumInterval:3650, fuzz:true, leechThreshold:8, ...state.flashcardSystem.profile };
   if(!state.importedQuestionTags || typeof state.importedQuestionTags !== 'object') state.importedQuestionTags = {};
@@ -5027,9 +5028,12 @@ function reviewFlashcard(id, quality) {
   if(!card) return;
   const mutableCard = mutableFlashcardRecord(id);
   const current = state.flashcardProgress[id] || {};
+  const reviewedAt = new Date().toISOString();
+  const wasNew = n(current.reviews || current.repetitions || card.reps) === 0;
+  const wasDue = isFlashcardDue({...card,...current});
   const beforeCard = {...(mutableCard || card)};
   state.flashcardReviewHistory = Array.isArray(state.flashcardReviewHistory) ? state.flashcardReviewHistory : [];
-  state.flashcardReviewHistory.push({ cardId:id, previous: {...current}, reviewedAt:new Date().toISOString() });
+  state.flashcardReviewHistory.push({ cardId:id, previous: {...current}, reviewedAt });
   state.flashcardReviewHistory = state.flashcardReviewHistory.slice(-50);
   const fsrs = nextFsrsProgress({...card,...current,reps:n(current.reviews)||card.reps,stability:n(current.stability)||card.stability,difficulty:n(current.difficulty)||card.difficulty,lapses:n(current.lapses)||card.lapses}, quality);
   const isLeech = fsrs.lapses >= n(state.flashcardSystem.profile.leechThreshold || 8);
@@ -5038,21 +5042,27 @@ function reviewFlashcard(id, quality) {
     ...fsrs,
     status: isLeech ? 'Suspenso' : fsrs.status,
     reviews: fsrs.reps,
-    firstReviewedAt: current.firstReviewedAt || new Date().toISOString(),
+    firstReviewedAt: current.firstReviewedAt || reviewedAt,
     lastQuality: quality,
     lastRating: quality,
-    lastReviewedAt: new Date().toISOString(),
+    lastReviewedAt: reviewedAt,
     nextReview: isLeech ? '2099-12-31' : fsrs.due,
     dueAt: isLeech ? '2099-12-31T23:59:59.000Z' : fsrs.dueAt
   };
   const cardUpdate = { ...fsrs, due:isLeech ? '2099-12-31' : fsrs.due, dueAt:isLeech ? '2099-12-31T23:59:59.000Z' : fsrs.dueAt, isSuspended:isLeech, contentVersion:Math.max(1,n(card.contentVersion)||1), rowVersion:Math.max(1,n(card.rowVersion)||1)+1 };
   Object.assign(card, cardUpdate);
   if(mutableCard) Object.assign(mutableCard, cardUpdate);
-  state.flashcardSystem.reviewLogs.push({id:newFlashcardId('review'),cardId:id,rating:quality,reviewedAt:new Date().toISOString(),before:beforeCard,after:{...card},scheduledDays:fsrs.scheduledDays});
+  const reviewLog={id:newFlashcardId('review'),cardId:id,rating:quality,reviewedAt,sessionId:state.flashcardSystem.activeReviewSessionId,wasDue,wasNew,legacy:false,before:beforeCard,after:{...card},scheduledDays:fsrs.scheduledDays};
+  state.flashcardSystem.reviewLogs.push(reviewLog);
   state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.slice(-500);
-  state.flashcardSystem.undoStack.push({cardId:id,previousProgress:{...current},beforeCard,reviewId:state.flashcardSystem.reviewLogs.at(-1).id});
+  state.flashcardSystem.undoStack.push({cardId:id,previousProgress:{...current},beforeCard,reviewId:reviewLog.id});
   state.flashcardSystem.undoStack = state.flashcardSystem.undoStack.slice(-20);
-  adjustFlashcardDayCount(new Date().toISOString(), 1);
+  adjustFlashcardDayCount(reviewedAt, 1);
+  // Primeiro torna o log e o novo agendamento duráveis; só então concede XP.
+  saveStateOnly({invalidate:false});
+  const xpResult=Gamification?.awardFlashcardReviewXP(state.gamification,reviewLog,{userId:gamificationUserId()});
+  reviewLog.xpEventKey=xpResult?.evaluation?.eventKey || '';
+  reviewLog.xpAwarded=Boolean(xpResult?.awarded);
   delete ui.revealedCards[id];
   const queueAfter = flashcardStudyQueue(flashcardAllRecords());
   const nextIndex = nextId ? queueAfter.findIndex(card => card.id === nextId) : -1;
@@ -5070,6 +5080,7 @@ function undoFlashcardReview() {
     else delete state.flashcardProgress[systemUndo.cardId];
     const review = state.flashcardSystem.reviewLogs.find(log => log.id === systemUndo.reviewId);
     state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.filter(log => log.id !== systemUndo.reviewId);
+    if(review?.xpAwarded) awardGamificationXP({activity_type:'flashcard_review_reversal',source_type:'flashcard_review',source_id:review.cardId,source_event_id:`flashcard-review-reversal:${review.id}`,base_xp:-1,reason:'flashcard_review_undone',occurred_at:new Date().toISOString(),metadata:{reviewLogId:review.id,reversesEventKey:review.xpEventKey||`flashcard-review:${review.id}`}});
     if(review?.reviewedAt) adjustFlashcardDayCount(review.reviewedAt, -1);
     ui.revealedCards[systemUndo.cardId] = true;
     ui.flashcardCurrentCardId = systemUndo.cardId;
