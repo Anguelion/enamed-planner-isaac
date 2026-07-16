@@ -7,6 +7,18 @@
 
   const VERSION = 'mvp-1';
   const FEATURE_FLAGS = Object.freeze({ relationalSync:false });
+  const RANKS = Object.freeze([
+    Object.freeze({key:'aldeao',name:'Aldeão',start:0,end:2}),
+    Object.freeze({key:'aprendiz',name:'Aprendiz',start:3,end:5}),
+    Object.freeze({key:'escudeiro',name:'Escudeiro',start:6,end:8}),
+    Object.freeze({key:'soldado',name:'Soldado',start:9,end:11}),
+    Object.freeze({key:'cavaleiro',name:'Cavaleiro',start:12,end:14}),
+    Object.freeze({key:'capitao',name:'Capitão',start:15,end:17}),
+    Object.freeze({key:'barao',name:'Barão',start:18,end:20}),
+    Object.freeze({key:'duque',name:'Duque',start:21,end:23}),
+    Object.freeze({key:'rei',name:'Rei',start:24,end:26}),
+    Object.freeze({key:'imperador',name:'Imperador',start:27,end:30})
+  ]);
   const DEFAULT_RULES = Object.freeze({
     version: VERSION,
     question: Object.freeze({ answer:2, correct:3, reviewedError:3, consolidation:1, repeatUnder24h:0.2, repeatUnder7d:0.5 }),
@@ -45,6 +57,45 @@
       simulation:{...DEFAULT_RULES.simulation,...(overrides.simulation || {})},
       block:{...DEFAULT_RULES.block,...(overrides.block || {})},
       level:{...DEFAULT_RULES.level,...(overrides.level || {})}
+    };
+  }
+
+  function getRankFromCompletedBlocks(completedBlocks) {
+    const normalized=Math.min(30,Math.max(0,Math.floor(number(completedBlocks))));
+    const index=Math.max(0,RANKS.findIndex(rank=>normalized>=rank.start && normalized<=rank.end));
+    const current=RANKS[index];
+    const next=RANKS[index+1] || null;
+    const span=next ? next.start-current.start : current.end-current.start;
+    const progressed=next ? normalized-current.start : span;
+    return {
+      key:current.key,
+      name:current.name,
+      index,
+      completedBlocks:normalized,
+      currentRangeStart:current.start,
+      currentRangeEnd:current.end,
+      nextRank:next ? {key:next.key,name:next.name,index:index+1,currentRangeStart:next.start,currentRangeEnd:next.end} : null,
+      blocksForNextRank:next ? Math.max(0,next.start-normalized) : 0,
+      progressPercent:next ? Math.max(0,Math.min(100,round(progressed/Math.max(1,span)*100))) : 100,
+      isMaxRank:!next
+    };
+  }
+
+  function evaluateRankPromotion(previous={},completedBlocks=0) {
+    const rank=getRankFromCompletedBlocks(completedBlocks);
+    const source=previous && typeof previous==='object' ? previous : {};
+    const initialized=Boolean(source.initialized);
+    const shown=new Set(Array.isArray(source.shownRankKeys) ? source.shownRankKeys.map(text).filter(Boolean) : []);
+    let promotion=null;
+    if(!initialized) shown.add(rank.key);
+    else if(rank.index>number(source.lastKnownRankIndex) && !shown.has(rank.key)) {
+      promotion=rank;
+      shown.add(rank.key);
+    }
+    return {
+      rank,
+      promotion,
+      state:{initialized:true,lastKnownRankKey:rank.key,lastKnownRankIndex:rank.index,shownRankKeys:[...shown]}
     };
   }
 
@@ -329,7 +380,7 @@
   }
 
   return {
-    VERSION,FEATURE_FLAGS,DEFAULT_RULES,mergeRules,repetitionMultiplier,calculateQuestionXP,calculateVideoXP,calculateBlockXP,
+    VERSION,FEATURE_FLAGS,RANKS,DEFAULT_RULES,mergeRules,getRankFromCompletedBlocks,evaluateRankPromotion,repetitionMultiplier,calculateQuestionXP,calculateVideoXP,calculateBlockXP,
     calculateSimulationBonus,applyMultiplierCap,transactionKey,awardXPIdempotently,totalXP,calculateLevelFromXP,
     normalizeTransaction,ensureState,ensurePlannerState,refreshProfile,createAutomaticLegacyPreview,createAggregateLegacyPreview,
     summarizePreview,commitLegacyImport,revertLegacyImport,stableHash

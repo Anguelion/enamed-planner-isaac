@@ -116,6 +116,67 @@ test('nível é derivado do XP e informa progresso restante',()=>{
   assert.equal(level.remainingXP,70);
 });
 
+test('zero blocos retorna Aldeão',()=>{
+  const rank=Gamification.getRankFromCompletedBlocks(0);
+  assert.equal(rank.name,'Aldeão');
+  assert.equal(rank.completedBlocks,0);
+  assert.equal(rank.blocksForNextRank,3);
+});
+
+test('dois blocos ainda retorna Aldeão',()=>{
+  assert.equal(Gamification.getRankFromCompletedBlocks(2).key,'aldeao');
+});
+
+test('três blocos retorna Aprendiz',()=>{
+  const rank=Gamification.getRankFromCompletedBlocks(3);
+  assert.equal(rank.name,'Aprendiz');
+  assert.equal(rank.progressPercent,0);
+});
+
+test('seis blocos retorna Escudeiro',()=>{
+  assert.equal(Gamification.getRankFromCompletedBlocks(6).key,'escudeiro');
+});
+
+test('vinte e sete blocos retorna Imperador',()=>{
+  assert.equal(Gamification.getRankFromCompletedBlocks(27).name,'Imperador');
+});
+
+test('trinta blocos retorna Imperador como classe máxima',()=>{
+  const rank=Gamification.getRankFromCompletedBlocks(30);
+  assert.equal(rank.key,'imperador');
+  assert.equal(rank.isMaxRank,true);
+  assert.equal(rank.nextRank,null);
+  assert.equal(rank.progressPercent,100);
+});
+
+test('blocos negativos são tratados como zero',()=>{
+  assert.deepEqual(Gamification.getRankFromCompletedBlocks(-8),Gamification.getRankFromCompletedBlocks(0));
+});
+
+test('blocos acima de trinta são limitados a trinta',()=>{
+  assert.deepEqual(Gamification.getRankFromCompletedBlocks(99),Gamification.getRankFromCompletedBlocks(30));
+});
+
+test('XP diferente com o mesmo número de blocos mantém a mesma classe',()=>{
+  const lowXP=Gamification.getRankFromCompletedBlocks(12);
+  const highXP=Gamification.getRankFromCompletedBlocks(12);
+  assert.equal(Gamification.calculateLevelFromXP(0).level,1);
+  assert.ok(Gamification.calculateLevelFromXP(5000).level>1);
+  assert.equal(lowXP.key,highXP.key);
+  assert.equal(lowXP.name,'Cavaleiro');
+});
+
+test('reload não repete promoção já apresentada',()=>{
+  const baseline=Gamification.evaluateRankPromotion({},2);
+  assert.equal(baseline.promotion,null);
+  const promoted=Gamification.evaluateRankPromotion(baseline.state,3);
+  assert.equal(promoted.promotion?.name,'Aprendiz');
+  const reloaded=Gamification.evaluateRankPromotion(JSON.parse(JSON.stringify(promoted.state)),3);
+  assert.equal(reloaded.promotion,null);
+  const repeatedAfterUndo=Gamification.evaluateRankPromotion(Gamification.evaluateRankPromotion(reloaded.state,2).state,3);
+  assert.equal(repeatedAfterUndo.promotion,null);
+});
+
 test('prévia automática preserva eventos verificáveis sem alterar o estado',()=>{
   const state={
     questionProgress:{q1:{selected:'A',correct:true,answeredAt:'2026-07-01T10:00:00Z'}},

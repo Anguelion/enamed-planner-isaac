@@ -68,6 +68,7 @@ ensureFeynman();
 ensureQuestionProgress();
 let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
+ui.rankPromotion = null;
 try { Object.assign(ui, JSON.parse(localStorage.getItem(QUESTION_VIEW_KEY) || '{}')); } catch(error) {}
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
@@ -573,10 +574,17 @@ function awardVideoCompletionXP(videoId,completedAt) {
   if(!videoId || !completedAt) return;
   awardGamificationXP({activity_type:'video_completion',source_type:'video',source_id:videoId,source_event_id:`completion:${videoId}`,base_xp:n(state.gamification?.rules?.video?.completionBonus)||5,reason:'video_completion_90',occurred_at:completedAt,metadata:{completionThreshold:0.9}});
 }
+function reconcileRankProgress(completedBlocks) {
+  if(!Gamification?.evaluateRankPromotion) return;
+  const result=Gamification.evaluateRankPromotion(state.gamification.rankPresentation,completedBlocks);
+  state.gamification.rankPresentation=result.state;
+  if(result.promotion) ui.rankPromotion=result.promotion;
+}
 function reconcileCompletedBlockXP() {
   if(!Gamification || !state?.schedule?.length || !videoCatalog.length || !questionBank.length) return;
   ensureGamificationState();
   const completed=completedAcademicBlockIds();
+  reconcileRankProgress(completed.length);
   if(!Array.isArray(state.gamification.observedCompletedBlockIds)) {
     const ledgerBlocks=gamificationTransactions().filter(item=>item.activity_type==='block_completion').map(item=>String(item.source_id));
     state.gamification.observedCompletedBlockIds=[...new Set([...completed,...ledgerBlocks])];
@@ -2205,9 +2213,19 @@ function renderGamificationDashboard() {
   ensureGamificationState();
   const profile=Gamification ? Gamification.refreshProfile(state.gamification) : {level:1,totalXP:0,xpWithinLevel:0,xpForNextLevel:100,remainingXP:100,progress:0};
   const blocks=completedAcademicBlockIds();
+  const rank=Gamification?.getRankFromCompletedBlocks ? Gamification.getRankFromCompletedBlocks(blocks.length) : {name:'Aldeão',completedBlocks:blocks.length,nextRank:null,blocksForNextRank:0,progressPercent:0,isMaxRank:false,currentRangeStart:0};
   const history=[...(state.gamification.xpTransactions || [])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,6);
   const classAsset=window.ENAMED_ICONS?.RpgAsset('class',{label:'Classe de estudo',size:34})||'';
-  return `<section class="card gamification-card"><div class="gamification-head"><div class="gamification-level">${classAsset}<span>Nível</span><strong>${profile.level}</strong></div><div class="gamification-progress"><div class="section-title"><div><span class="eyebrow">Fundação RPG</span><h2>${Math.round(n(profile.totalXP))} XP acumulados</h2></div><span class="badge today">Blocos concluídos: ${blocks.length}/30</span></div><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP neste nível</span><span>faltam ${Math.round(n(profile.remainingXP))} XP</span></div></div></div>${history.length?`<div class="xp-history-mini">${history.map(transaction=>`<div><span><strong>${escapeHtml(gamificationActivityLabel(transaction))}</strong><small>${fmtDate(String(transaction.occurred_at||'').slice(0,10))}${transaction.is_legacy?' · Legado':''}</small></span><b class="${n(transaction.final_xp)<0?'negative':''}">${n(transaction.final_xp)>0?'+':''}${roundDisplayXP(transaction.final_xp)} XP</b></div>`).join('')}</div>`:'<div class="muted">O histórico de XP aparecerá após uma atividade nova ou uma importação retroativa confirmada.</div>'}</section>`;
+  const rankProgress=rank.isMaxRank ? 'Classe máxima alcançada' : `Faltam ${rank.blocksForNextRank} ${rank.blocksForNextRank===1?'bloco':'blocos'} para ${escapeHtml(rank.nextRank.name)}`;
+  const segmentTotal=rank.isMaxRank ? 30 : rank.nextRank.currentRangeStart-rank.currentRangeStart;
+  const segmentDone=rank.isMaxRank ? 30 : rank.completedBlocks-rank.currentRangeStart;
+  return `<section class="card gamification-card"><div class="gamification-head"><div class="gamification-rank">${classAsset}<div><span class="eyebrow">Classe RPG</span><h2>${escapeHtml(rank.name)} <small>· Nível ${profile.level}</small></h2><p>Blocos concluídos: <strong>${rank.completedBlocks}/30</strong></p></div></div><div class="gamification-progress"><div class="section-title"><div><span class="eyebrow">Experiência</span><h2>${Math.round(n(profile.totalXP))} XP acumulados</h2></div><span class="badge today">Nível ${profile.level}</span></div><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP neste nível</span><span>faltam ${Math.round(n(profile.remainingXP))} XP</span></div></div></div><div class="rank-progress-panel"><div><strong>${rank.isMaxRank?'Imperador':`Próxima classe: ${escapeHtml(rank.nextRank.name)}`}</strong><span>${rankProgress}</span></div><div class="progress" aria-label="Progresso para a próxima classe"><span style="width:${rank.progressPercent}%"></span></div><small>Progresso: ${segmentDone}/${segmentTotal} blocos</small></div>${history.length?`<div class="xp-history-mini">${history.map(transaction=>`<div><span><strong>${escapeHtml(gamificationActivityLabel(transaction))}</strong><small>${fmtDate(String(transaction.occurred_at||'').slice(0,10))}${transaction.is_legacy?' · Legado':''}</small></span><b class="${n(transaction.final_xp)<0?'negative':''}">${n(transaction.final_xp)>0?'+':''}${roundDisplayXP(transaction.final_xp)} XP</b></div>`).join('')}</div>`:'<div class="muted">O histórico de XP aparecerá após uma atividade nova ou uma importação retroativa confirmada.</div>'}</section>`;
+}
+function renderRankPromotionModal() {
+  const rank=ui.rankPromotion;
+  if(!rank) return '';
+  const classAsset=window.ENAMED_ICONS?.RpgAsset('class',{label:'Nova classe',size:58})||'';
+  return `<div class="rank-promotion-overlay" role="dialog" aria-modal="true" aria-labelledby="rankPromotionTitle"><div class="rank-promotion-dialog">${classAsset}<span class="eyebrow">Promoção acadêmica</span><h2 id="rankPromotionTitle">Você agora é ${escapeHtml(rank.name)}</h2><p>${rank.completedBlocks} blocos concluídos. Sua classe mudou pelo avanço no cronograma, independentemente do XP.</p><button class="icon-btn primary" id="closeRankPromotion">Continuar estudando</button></div></div>`;
 }
 function roundDisplayXP(value) { const rounded=Math.round(n(value)*10)/10; return Number.isInteger(rounded)?String(rounded):rounded.toFixed(1).replace('.',','); }
 function automaticLegacyPreview() {
@@ -2235,6 +2253,10 @@ function renderLegacyImportCard() {
   return `<details class="card legacy-import-card"><summary><span><strong>Contabilizar estudo anterior</strong><small>Preview obrigatório, ledger idempotente e reversão por lote</small></span><span class="badge ${batches.length?'done':'today'}">${batches.length} lote${batches.length===1?'':'s'}</span></summary><div class="legacy-import-content"><div class="legacy-import-actions"><button class="icon-btn primary" id="previewAutomaticLegacy">Analisar dados existentes</button><span class="muted">Questões, vídeos, flashcards, simulados e blocos com histórico verificável.</span></div><div class="legacy-aggregate"><strong>Ou registrar um saldo conhecido</strong><div class="legacy-aggregate-fields"><input class="input" id="legacyDate" type="date" value="${studyDateKey()}"><input class="input" id="legacyQuestions" type="number" min="0" placeholder="Questões"><input class="input" id="legacyCorrect" type="number" min="0" placeholder="Acertos conhecidos"><input class="input" id="legacyReviewed" type="number" min="0" placeholder="Erros revisados"><input class="input" id="legacyVideoMinutes" type="number" min="0" step="1" placeholder="Minutos de vídeo"><input class="input" id="legacyFlashcards" type="number" min="0" placeholder="Flashcards"><input class="input" id="legacyBlocks" type="number" min="0" max="30" placeholder="Blocos concluídos"><input class="input" id="legacySimulations" type="number" min="0" placeholder="Simulados"><button class="icon-btn" id="previewAggregateLegacy">Pré-visualizar saldo</button></div></div>${preview?`<div class="legacy-preview"><div class="section-title"><div><h3>Prévia sem alterar seus dados</h3><div class="muted">${preview.events.length} eventos válidos · ${Object.entries(previewRows||{}).map(([label,count])=>`${count} ${label.toLowerCase()}`).join(' · ')||'nenhum evento'}</div><div class="muted">${escapeHtml(categoryDetails)}</div></div><strong>${roundDisplayXP(preview.totalXP)} XP legado</strong></div><div class="legacy-preview-actions"><button class="icon-btn primary" id="commitLegacyPreview" ${preview.events.length?'':'disabled'}>Confirmar importação</button><button class="tiny-btn" id="cancelLegacyPreview">Cancelar</button></div></div>`:''}${batches.length?`<div class="legacy-batches"><h3>Importações confirmadas</h3>${batches.map(batch=>`<div><span><strong>${escapeHtml(batch.source||'Importação')}</strong><small>${fmtDate(String(batch.committed_at||'').slice(0,10))} · ${roundDisplayXP(batch.totals_json?.xp)} XP</small></span><button class="tiny-btn danger" data-revert-legacy="${escapeAttr(batch.id)}">Desfazer lote</button></div>`).join('')}</div>`:''}</div></details>`;
 }
 function bindGamificationDashboard() {
+  document.getElementById('closeRankPromotion')?.addEventListener('click',()=>{
+    ui.rankPromotion=null;
+    document.querySelector('.rank-promotion-overlay')?.remove();
+  });
   document.getElementById('previewAutomaticLegacy')?.addEventListener('click',()=>{ui.legacyImportPreview=automaticLegacyPreview();renderPainel();});
   document.getElementById('previewAggregateLegacy')?.addEventListener('click',()=>{
     ui.legacyImportPreview=prepareLegacyPreview(Gamification.createAggregateLegacyPreview({date:document.getElementById('legacyDate')?.value,questions:n(document.getElementById('legacyQuestions')?.value),correctAnswers:n(document.getElementById('legacyCorrect')?.value),reviewedErrors:n(document.getElementById('legacyReviewed')?.value),videoMinutes:n(document.getElementById('legacyVideoMinutes')?.value),flashcards:n(document.getElementById('legacyFlashcards')?.value),blocksCompleted:n(document.getElementById('legacyBlocks')?.value),simulations:n(document.getElementById('legacySimulations')?.value)},state.gamification?.rules));
@@ -2263,6 +2285,7 @@ function renderPainel() {
     ${renderDashboardMood(dashboardLog)}
     ${renderDailyAnalysis(ui.refDate)}
     ${renderGamificationDashboard()}
+    ${renderRankPromotionModal()}
     <div class="card">${renderDailyRoad(ui.refDate)}</div>
     ${renderPersonalDailyTasks(ui.refDate)}
     ${renderLegacyImportCard()}

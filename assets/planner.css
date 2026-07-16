@@ -1652,7 +1652,7 @@ body.dark .dashboard-road > .road-path > .road-step.complete{border-left-color:v
 /* Gamificação MVP: nível derivado do ledger e importação retroativa auditável. */
 .gamification-card{position:relative;overflow:hidden;border-color:#c9dcf7;background:linear-gradient(135deg,#fff 0%,#f5f9ff 100%)}
 .gamification-card:before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:linear-gradient(180deg,#1664f5,#25b6c7)}
-.gamification-head{display:grid;grid-template-columns:112px minmax(0,1fr);gap:18px;align-items:center}
+.gamification-head{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1fr);gap:22px;align-items:center}
 .gamification-level{width:96px;height:96px;display:grid;place-content:center;text-align:center;border:5px solid #dce9ff;border-radius:50%;background:#1664f5;color:#fff;box-shadow:0 10px 24px rgba(22,100,245,.2)}
 .gamification-level span{font-size:12px;font-weight:800;text-transform:uppercase}
 .gamification-level strong{font-size:36px;line-height:1}
@@ -1662,6 +1662,21 @@ body.dark .dashboard-road > .road-path > .road-step.complete{border-left-color:v
 .gamification-progress .progress{height:13px;background:#dfe8ef}
 .gamification-progress .progress>span{background:linear-gradient(90deg,#1664f5,#25b6c7)}
 .gamification-progress-label{display:flex;justify-content:space-between;gap:12px;margin-top:7px;color:var(--muted);font-size:12px;font-weight:700}
+.gamification-rank{display:grid;grid-template-columns:58px minmax(0,1fr);gap:14px;align-items:center;min-width:0;padding:14px;border:1px solid #d6e5fb;border-radius:8px;background:rgba(255,255,255,.78)}
+.gamification-rank .rpg-asset{width:58px;height:58px}
+.gamification-rank h2{margin:2px 0 3px;font-size:24px;color:var(--text)}
+.gamification-rank h2 small{font-size:15px;color:var(--muted)}
+.gamification-rank p{margin:0;color:var(--muted);font-size:14px}
+.rank-progress-panel{display:grid;grid-template-columns:minmax(190px,.7fr) minmax(160px,1fr) auto;gap:14px;align-items:center;margin-top:15px;padding:13px 15px;border:1px solid #d6e5fb;border-radius:8px;background:#eef6ff}
+.rank-progress-panel>div:first-child{display:grid;gap:2px}
+.rank-progress-panel span,.rank-progress-panel small{color:var(--muted);font-size:13px}
+.rank-progress-panel .progress{height:11px;background:#d9e6ef}
+.rank-progress-panel .progress>span{background:linear-gradient(90deg,#e6a700,#f2c94c)}
+.rank-promotion-overlay{position:fixed;inset:0;z-index:1600;display:grid;place-items:center;padding:20px;background:rgba(11,25,35,.62);backdrop-filter:blur(4px)}
+.rank-promotion-dialog{width:min(440px,100%);display:grid;justify-items:center;gap:9px;padding:28px;border:1px solid #d7e5f8;border-radius:8px;background:var(--panel);text-align:center;box-shadow:0 24px 70px rgba(5,24,39,.3)}
+.rank-promotion-dialog .rpg-asset{width:72px;height:72px;margin-bottom:3px}
+.rank-promotion-dialog h2{margin:0;color:var(--blue);font-size:26px}
+.rank-promotion-dialog p{margin:0 0 8px;color:var(--muted);line-height:1.55}
 .xp-history-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:15px;padding-top:14px;border-top:1px solid var(--line)}
 .xp-history-mini>div,.legacy-batches>div{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;padding:10px;border:1px solid var(--line);border-radius:8px;background:color-mix(in srgb,var(--panel) 88%,#edf5ff)}
 .xp-history-mini span,.legacy-batches span{display:grid;min-width:0}
@@ -1687,11 +1702,14 @@ body.dark .dashboard-road > .road-path > .road-step.complete{border-left-color:v
 .legacy-batches h3{margin:0}
 body.dark .gamification-card{border-color:#344e68;background:linear-gradient(135deg,#202a2a,#1c2b3a)}
 body.dark .gamification-level{border-color:#345b91;background:#1c69e8}
+body.dark .gamification-rank,body.dark .rank-progress-panel{border-color:#344e68;background:#1d2b38}
+body.dark .rank-promotion-dialog{border-color:#344e68;background:#151c24}
 body.dark .xp-history-mini>div,body.dark .legacy-batches>div{background:#1d272c;border-color:#3b494d}
 body.dark .legacy-import-card[open]>summary{background:#203443}
 body.dark .legacy-preview{border-color:#345b91;background:#1b2b3b}
 @media(max-width:1050px){.xp-history-mini{grid-template-columns:repeat(2,minmax(0,1fr))}.legacy-aggregate-fields{grid-template-columns:repeat(3,minmax(0,1fr))}.legacy-aggregate-fields button{grid-column:span 3}}
-@media(max-width:620px){.gamification-head{grid-template-columns:74px minmax(0,1fr);gap:12px}.gamification-level{width:68px;height:68px;border-width:4px}.gamification-level strong{font-size:27px}.gamification-progress h2{font-size:18px}.gamification-progress .section-title{align-items:flex-start;flex-direction:column}.gamification-progress-label{display:grid;gap:2px}.xp-history-mini{grid-template-columns:1fr}.legacy-aggregate-fields{grid-template-columns:1fr}.legacy-aggregate-fields button{grid-column:auto}.legacy-import-card>summary{align-items:flex-start}.legacy-preview .section-title{align-items:flex-start;flex-direction:column}}
+@media(max-width:760px){.gamification-head{grid-template-columns:1fr;gap:12px}.gamification-rank{grid-template-columns:50px minmax(0,1fr)}.gamification-rank .rpg-asset{width:50px;height:50px}.gamification-rank h2{font-size:21px}.gamification-progress h2{font-size:18px}.gamification-progress .section-title{align-items:flex-start;flex-direction:column}.gamification-progress-label{display:grid;gap:2px}.rank-progress-panel{grid-template-columns:1fr;gap:8px}.xp-history-mini{grid-template-columns:1fr}.legacy-aggregate-fields{grid-template-columns:1fr}.legacy-aggregate-fields button{grid-column:auto}.legacy-import-card>summary{align-items:flex-start}.legacy-preview .section-title{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){.rank-promotion-overlay,.rank-promotion-dialog{scroll-behavior:auto;animation:none;transition:none}}
 /* Sistema visual semântico de ícones — Phosphor local */
 :root{
   --icon-fire:#ef5b3e;--icon-fire-soft:#fff0e8;
