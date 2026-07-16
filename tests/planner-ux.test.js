@@ -60,6 +60,14 @@ test('vídeo concluído perto do final recomeça sem cair nos últimos segundos'
   assert.equal(UX.resumeTime({currentTime:900,duration:1200,completed:true}),900);
 });
 
+test('cancelar simulado remove a tentativa e o resumo automático sem afetar os demais',()=>{
+  const runs=[{id:'run-1',name:'Cancelar'},{id:'run-2',name:'Preservar'}];
+  const summaries=[{id:'auto-run-1'},{id:'auto-run-2'},{id:'manual-1'}];
+  const result=UX.removeSimulationRecord(runs,summaries,'run-1');
+  assert.deepEqual(result.simuladoRuns,[runs[1]]);
+  assert.deepEqual(result.simulados,[summaries[1],summaries[2]]);
+});
+
 test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');

@@ -2673,7 +2673,7 @@ function bindScheduleInputs() {
 }
 function renderSimulados() {
   ensureSimTopics();
-  const active = state.simuladoRuns.find(run => run.id === ui.activeSimRunId) || state.simuladoRuns.find(run => !run.finishedAt&&!run.abandonedAt) || state.simuladoRuns[0] || null;
+  const active = state.simuladoRuns.find(run => run.id === ui.activeSimRunId) || state.simuladoRuns.find(run => !run.finishedAt&&!run.abandonedAt) || null;
   if(active && !ui.activeSimRunId) ui.activeSimRunId = active.id;
   const libraryOpen=ui.simulationLibraryOpen||!active;
   const library=`<section class="sim-library ${libraryOpen?'open':'collapsed'}">${libraryOpen?`${renderImportedSimulados()}${renderSimuladoGenerator()}`:''}</section>`;
@@ -2761,7 +2761,7 @@ function renderSimuladoRunsList() {
   return `<div class="list">${state.simuladoRuns.map(run => {
     const result = simuladoResult(run);
     const status=run.abandonedAt?'Abandonado':run.finishedAt?`Finalizado em ${new Date(run.finishedAt).toLocaleString('pt-BR')}`:'Em andamento';
-    return `<div class="item"><div class="date-chip">${run.finishedAt?pct(result.rate):`${answeredSimCount(run)}/${run.questionIds.length}`}</div><div><strong>${escapeHtml(run.name)}</strong><div class="muted">${status} · ${run.questionIds.length} questões</div></div><div><button class="icon-btn" data-open-sim="${run.id}">${run.finishedAt?'Revisar':run.abandonedAt?'Ver registro':'Continuar'}</button></div></div>`;
+    return `<div class="item"><div class="date-chip">${run.finishedAt?pct(result.rate):`${answeredSimCount(run)}/${run.questionIds.length}`}</div><div><strong>${escapeHtml(run.name)}</strong><div class="muted">${status} · ${run.questionIds.length} questões</div></div><div class="sim-run-history-actions"><button class="icon-btn" data-open-sim="${run.id}">${run.finishedAt?'Revisar':run.abandonedAt?'Ver registro':'Continuar'}</button><button class="tiny-btn danger" data-delete-sim-run="${run.id}" title="Excluir este registro">Excluir</button></div></div>`;
   }).join('')}</div>`;
 }
 function renderSimuladoRun(run) {
@@ -2924,6 +2924,12 @@ function bindSimuladoInputs(activeRun) {
   if(generate) generate.onclick = () => generateSimuladoRun();
   document.querySelectorAll('[data-start-imported-sim]').forEach(button => button.onclick = e => startImportedSimulado(e.currentTarget.dataset.startImportedSim));
   document.querySelectorAll('[data-open-sim]').forEach(button => button.onclick = e => { ui.activeSimRunId = e.currentTarget.dataset.openSim; ui.simulationLibraryOpen=false; syncRouteFromUI('push'); render(); });
+  document.querySelectorAll('[data-delete-sim-run]').forEach(button => button.onclick = e => {
+    const run=state.simuladoRuns.find(item=>item.id===e.currentTarget.dataset.deleteSimRun);
+    if(!run) return;
+    const warning=run.finishedAt?'O resultado será removido da lista. O XP e as recompensas já concedidos permanecem no ledger para preservar a contabilidade.':'A tentativa e suas respostas serão apagadas definitivamente.';
+    if(confirm(`Excluir "${run.name}"?\n\n${warning}`)) deleteSimuladoRun(run);
+  });
   document.querySelectorAll('[data-question-card][data-card-id][data-card-field]').forEach(input => {
     input.oninput = e => updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => updateQuestionFlashcard(e.currentTarget);
@@ -3218,16 +3224,25 @@ function finishSimuladoRun(run) {
   persist();
 }
 function cancelSimuladoRun(run) {
+  deleteSimuladoRun(run,{cancelled:true});
+}
+function deleteSimuladoRun(run,{cancelled=false}={}) {
+  if(!run) return;
   if(simuladoTimer.interval && simuladoTimer.runId === run.id) clearInterval(simuladoTimer.interval);
   simuladoTimer.interval = null;
   simuladoTimer.runId = '';
-  stopAutoStudy('simulado');
-  finishSimQuestionTiming(run);
-  run.paused=true;
-  run.abandonedAt=run.abandonedAt||new Date().toISOString();
-  run.elapsedSeconds=Math.max(n(run.elapsedSeconds),n(run.durationMinutes)*60-n(run.secondsLeft));
+  if(studyTimeTracker.kind==='simulado') stopAutoStudy('simulado');
+  const cleaned=PlannerUX?.removeSimulationRecord?.(state.simuladoRuns,state.simulados,run.id) || {
+    simuladoRuns:state.simuladoRuns.filter(item=>item.id!==run.id),
+    simulados:state.simulados.filter(item=>item.id!==`auto-${run.id}`)
+  };
+  state.simuladoRuns=cleaned.simuladoRuns;
+  state.simulados=cleaned.simulados;
   if(ui.activeSimRunId===run.id) ui.activeSimRunId='';
+  ui.simulationLibraryOpen=true;
   persist();
+  syncRouteFromUI('replace');
+  showStudyToast(cancelled?'Simulado cancelado. A tentativa foi apagada.':'Registro do simulado excluído.');
 }
 function upsertManualSimFromRun(run, result) {
   const existing = state.simulados.find(sim => sim.id === `auto-${run.id}`);

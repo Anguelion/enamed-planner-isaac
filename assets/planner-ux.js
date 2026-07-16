@@ -131,5 +131,13 @@
     return duration>0?Math.min(current,Math.max(0,duration-.1)):current;
   }
 
-  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,scheduledForDate,ensureOccurrences,postponeOccurrence,normalizeVideoProgress,resumeTime};
+  function removeSimulationRecord(simuladoRuns=[],simulados=[],runId=''){
+    const id=String(runId||'');
+    return {
+      simuladoRuns:(Array.isArray(simuladoRuns)?simuladoRuns:[]).filter(run=>String(run?.id||'')!==id),
+      simulados:(Array.isArray(simulados)?simulados:[]).filter(sim=>String(sim?.id||'')!==`auto-${id}`)
+    };
+  }
+
+  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,scheduledForDate,ensureOccurrences,postponeOccurrence,normalizeVideoProgress,resumeTime,removeSimulationRecord};
 });

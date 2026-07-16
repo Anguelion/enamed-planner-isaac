@@ -224,6 +224,7 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .sim-tools button:hover{background:var(--soft-blue)}
 .sim-side-actions{display:grid;gap:8px;margin-top:14px}
 .sim-side-actions .icon-btn{border-radius:999px}
+.sim-run-history-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}
 .sim-side-actions .primary{background:var(--blue);border-color:var(--blue)}
 .sim-confidence{margin:18px 0 6px;padding:14px;border:1px solid var(--line);border-radius:8px;background:#fbfdfc}
 .sim-confidence-track{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:relative}
