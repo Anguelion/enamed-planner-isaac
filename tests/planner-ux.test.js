@@ -68,6 +68,32 @@ test('cancelar simulado remove a tentativa e o resumo automático sem afetar os 
   assert.deepEqual(result.simulados,[summaries[1],summaries[2]]);
 });
 
+test('validação rejeita questões incompletas e gabaritos incompatíveis',()=>{
+  assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um',B:'Dois',C:'Três'},answer:'A'}).valid,false);
+  assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um',B:'Dois',C:'Três',D:'Quatro'},answer:'E'}).valid,false);
+  assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um',B:'Dois',C:'Três',D:'Quatro'},answer:'D'}).valid,true);
+});
+
+test('progresso mais novo preserva edições posteriores à resposta',()=>{
+  const remote={answeredAt:'2026-07-16T10:00:00Z',updatedAt:'2026-07-16T10:05:00Z',notes:'remota',attempts:1,secondsSpent:20};
+  const local={answeredAt:'2026-07-16T10:00:00Z',updatedAt:'2026-07-16T10:10:00Z',notes:'local',attempts:2,secondsSpent:15};
+  const merged=UX.mergeQuestionProgressRecord(remote,local);
+  assert.equal(merged.notes,'local');
+  assert.equal(merged.attempts,2);
+  assert.equal(merged.secondsSpent,20);
+});
+
+test('IDs duplicados recebem sufixo estável sem descartar questões diferentes',()=>{
+  const records=UX.ensureUniqueRecordIds([
+    {id:'q1',stem:'Primeira',number:1,collectionBlock:2},
+    {id:'q1',stem:'Segunda',number:2,collectionBlock:2}
+  ]);
+  assert.equal(records.length,2);
+  assert.equal(records[0].id,'q1');
+  assert.match(records[1].id,/^q1-dup-/);
+  assert.equal(records[1].duplicateSourceId,'q1');
+});
+
 test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');

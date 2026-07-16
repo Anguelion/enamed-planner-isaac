@@ -139,5 +139,65 @@
     };
   }
 
-  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,scheduledForDate,ensureOccurrences,postponeOccurrence,normalizeVideoProgress,resumeTime,removeSimulationRecord};
+  function validateQuestionRecord(question={}){
+    const options=Object.entries(question.options||{})
+      .map(([letter,text])=>[String(letter||'').trim().toUpperCase(),String(text||'').trim()])
+      .filter(([letter,text])=>letter&&text);
+    const letters=options.map(([letter])=>letter);
+    const answer=String(question.answer||'').trim().toUpperCase();
+    const reasons=[];
+    if(!String(question.stem||'').trim()) reasons.push('Enunciado ausente.');
+    if(options.length<4) reasons.push(`Apenas ${options.length} alternativa${options.length===1?'':'s'} válida${options.length===1?'':'s'}.`);
+    if(!answer) reasons.push('Gabarito ausente.');
+    else if(!letters.includes(answer)) reasons.push(`O gabarito ${answer} não corresponde a uma alternativa válida.`);
+    return {valid:reasons.length===0,reasons,answer,optionLetters:letters,optionCount:options.length};
+  }
+
+  function questionProgressTimestamp(progress={}){
+    return Date.parse(progress.updatedAt||progress.answerKeyIssueAt||progress.answeredAt||'')||0;
+  }
+
+  function mergeQuestionProgressRecord(remoteItem,localItem,preferLocal=false){
+    if(!remoteItem) return localItem?structuredClone(localItem):null;
+    if(!localItem) return structuredClone(remoteItem);
+    const remoteTime=questionProgressTimestamp(remoteItem);
+    const localTime=questionProgressTimestamp(localItem);
+    const localIsLatest=localTime>remoteTime||(localTime===remoteTime&&preferLocal);
+    const latest=localIsLatest?localItem:remoteItem;
+    const older=localIsLatest?remoteItem:localItem;
+    return {
+      ...older,
+      ...latest,
+      attempts:Math.max(Number(remoteItem.attempts)||0,Number(localItem.attempts)||0),
+      secondsSpent:Math.max(Number(remoteItem.secondsSpent)||0,Number(localItem.secondsSpent)||0)
+    };
+  }
+
+  function stableTextHash(value=''){
+    let hash=2166136261;
+    for(const char of String(value)){
+      hash^=char.codePointAt(0);
+      hash=Math.imul(hash,16777619);
+    }
+    return (hash>>>0).toString(36);
+  }
+
+  function ensureUniqueRecordIds(records=[]){
+    const used=new Set();
+    return records.map((record,index)=>{
+      const base=String(record?.id||`question-${index+1}`);
+      if(!used.has(base)){
+        used.add(base);
+        return record;
+      }
+      const hash=stableTextHash(`${record?.collectionBlock||''}|${record?.number||''}|${record?.stem||''}`);
+      let candidate=`${base}-dup-${hash}`;
+      let suffix=2;
+      while(used.has(candidate)) candidate=`${base}-dup-${hash}-${suffix++}`;
+      used.add(candidate);
+      return {...record,id:candidate,duplicateSourceId:base};
+    });
+  }
+
+  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,scheduledForDate,ensureOccurrences,postponeOccurrence,normalizeVideoProgress,resumeTime,removeSimulationRecord,validateQuestionRecord,questionProgressTimestamp,mergeQuestionProgressRecord,ensureUniqueRecordIds};
 });

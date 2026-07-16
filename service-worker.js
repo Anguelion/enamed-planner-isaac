@@ -1,18 +1,18 @@
-const CACHE_NAME = 'soqueromed-shell-v112';
+const CACHE_NAME = 'soqueromed-shell-v114';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260716-61',
+  './assets/planner.css?v=20260716-63',
   './assets/app-icons.js?v=20260716-3',
   './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-4',
-  './assets/planner-ux.js?v=20260716-2',
-  './assets/planner.js?v=20260716-87',
+  './assets/planner-ux.js?v=20260716-3',
+  './assets/planner.js?v=20260716-89',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
   './assets/icons/apple-touch-icon.png',
-  './question_bank/index.js?v=20260714-5',
+  './question_bank/index.js?v=20260716-6',
   './assets/rpg/element-fire.svg',
   './assets/rpg/element-water.svg',
   './assets/rpg/element-earth.svg',

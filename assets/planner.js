@@ -7,7 +7,7 @@ const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
-const QUESTION_BANK_ASSET_VERSION = '20260715-32';
+const QUESTION_BANK_ASSET_VERSION = '20260716-33';
 const QUESTION_IMPORT_MAX = 200;
 const QUESTION_IMPORT_DRAFT_KEY = 'soqueromed-question-import-draft';
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
@@ -107,7 +107,17 @@ const views = [
 ];
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
-  try { const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); if(saved?.schedule?.length) return saved; } catch(e) {}
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if(saved && typeof saved === 'object') {
+      const base = structuredClone(seed);
+      return {
+        ...base,
+        ...saved,
+        schedule:Array.isArray(saved.schedule) && saved.schedule.length ? saved.schedule : base.schedule
+      };
+    }
+  } catch(e) {}
   return structuredClone(seed);
 }
 function ensureGamificationState() {
@@ -237,6 +247,7 @@ function saveStateOnly(options={}) { ensureImportedQuestions(); ensureDayLogs();
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
+  if(!state.questionProgressDeleted || typeof state.questionProgressDeleted !== 'object') state.questionProgressDeleted = {};
   if(!state.questionEdits || typeof state.questionEdits !== 'object') state.questionEdits = {};
   if(!state.questionDataRepairs || typeof state.questionDataRepairs !== 'object') state.questionDataRepairs = {};
   if(!state.questionDataRepairs.indicadoresSaudeV2) {
@@ -335,6 +346,20 @@ function ensureQuestionProgress() {
   });
   state.flashcardLibrary.forEach(card => normalizeFlashcardRecord(card));
   reconcileQuestionDailyLog();
+}
+
+function setQuestionProgress(questionId, patch={}, updatedAt=new Date().toISOString()) {
+  if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
+  if(!state.questionProgressDeleted || typeof state.questionProgressDeleted !== 'object') state.questionProgressDeleted = {};
+  delete state.questionProgressDeleted[questionId];
+  state.questionProgress[questionId] = { ...(state.questionProgress[questionId] || {}), ...patch, updatedAt };
+  return state.questionProgress[questionId];
+}
+function removeQuestionProgress(questionId, deletedAt=new Date().toISOString()) {
+  if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
+  if(!state.questionProgressDeleted || typeof state.questionProgressDeleted !== 'object') state.questionProgressDeleted = {};
+  state.questionProgressDeleted[questionId] = deletedAt;
+  delete state.questionProgress[questionId];
 }
 
 function reconcileQuestionDailyLog() {
@@ -720,22 +745,25 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
 
   const remoteProgress = remote.questionProgress || {};
   const localProgress = local.questionProgress || {};
-  merged.questionProgress = { ...remoteProgress };
-  new Set([...Object.keys(remoteProgress), ...Object.keys(localProgress)]).forEach(id => {
-    const remoteItem = remoteProgress[id];
-    const localItem = localProgress[id];
-    if(!remoteItem) { merged.questionProgress[id] = structuredClone(localItem); return; }
-    if(!localItem) return;
-    const remoteTime = Date.parse(remoteItem.answeredAt || '') || 0;
-    const localTime = Date.parse(localItem.answeredAt || '') || 0;
-    const latest = localTime >= remoteTime ? localItem : remoteItem;
-    const older = latest === localItem ? remoteItem : localItem;
-    merged.questionProgress[id] = {
-      ...older,
-      ...latest,
-      attempts: Math.max(n(remoteItem.attempts), n(localItem.attempts)),
-      secondsSpent: Math.max(n(remoteItem.secondsSpent), n(localItem.secondsSpent))
-    };
+  const remoteDeleted = remote.questionProgressDeleted || {};
+  const localDeleted = local.questionProgressDeleted || {};
+  merged.questionProgress = {};
+  merged.questionProgressDeleted = {};
+  new Set([...Object.keys(remoteDeleted), ...Object.keys(localDeleted)]).forEach(id => {
+    const remoteTime=Date.parse(remoteDeleted[id]||'')||0;
+    const localTime=Date.parse(localDeleted[id]||'')||0;
+    merged.questionProgressDeleted[id]=localTime>=remoteTime?localDeleted[id]:remoteDeleted[id];
+  });
+  new Set([...Object.keys(remoteProgress), ...Object.keys(localProgress), ...Object.keys(merged.questionProgressDeleted)]).forEach(id => {
+    const record = PlannerUX?.mergeQuestionProgressRecord
+      ? PlannerUX.mergeQuestionProgressRecord(remoteProgress[id],localProgress[id],preferLocal)
+      : structuredClone(localProgress[id] || remoteProgress[id] || null);
+    const recordTime=PlannerUX?.questionProgressTimestamp?.(record)||Date.parse(record?.updatedAt||record?.answeredAt||'')||0;
+    const deletedTime=Date.parse(merged.questionProgressDeleted[id]||'')||0;
+    if(record && (!merged.questionProgressDeleted[id] || recordTime>deletedTime)) {
+      merged.questionProgress[id]=record;
+      delete merged.questionProgressDeleted[id];
+    }
   });
 
   const remoteLogged = remote.questionLogged || {};
@@ -1168,7 +1196,12 @@ async function loadLocalQuestionBank() {
   ensureImportedQuestions();
   const imported = state.importedQuestions.map(normalizeQuestionRecord);
   if(blocks.length || imported.length) {
-    questionBank = deduplicateQuestions([...blocks.map(normalizeQuestionRecord), ...imported]).sort((a,b)=>n(b.importPriority)-n(a.importPriority) || questionCollectionSort(a)-questionCollectionSort(b) || n(a.displayOrder)-n(b.displayOrder) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
+    const normalized=[...blocks.map(normalizeQuestionRecord), ...imported];
+    const invalid=normalized.filter(question=>PlannerUX?.validateQuestionRecord?.(question)?.valid === false);
+    if(invalid.length) console.warn(`${invalid.length} questões incompletas foram ignoradas para evitar alternativas ou gabaritos inválidos.`);
+    const valid=normalized.filter(question=>PlannerUX?.validateQuestionRecord?.(question)?.valid !== false);
+    const deduplicated=deduplicateQuestions(valid);
+    questionBank = (PlannerUX?.ensureUniqueRecordIds?.(deduplicated) || deduplicated).sort((a,b)=>n(b.importPriority)-n(a.importPriority) || questionCollectionSort(a)-questionCollectionSort(b) || n(a.displayOrder)-n(b.displayOrder) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
     invalidateQuestionBankRenderCache();
     reconcileCompletedBlockXP();
     return true;
@@ -1340,7 +1373,8 @@ function renderPersonalDailyTasks(date) {
   }).join('');
   const weekdays=['D','S','T','Q','Q','S','S'].map((label,index)=>`<label><input type="checkbox" data-new-task-weekday="${index}" ${index>0&&index<6?'checked':''}>${label}</label>`).join('');
   const pending=tasks.filter(task=>!task.done&&task.status!=='postponed').length;
-  return `<div class="card personal-tasks-card dashboard-tasks-card"><div class="section-title"><div><span class="eyebrow">Agenda pessoal</span><h2>Tarefas de hoje</h2></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="dashboard-task-summary"><div><strong>${pending}</strong><span>Pendentes</span></div><div><strong>${completed}</strong><span>Concluídas</span></div></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>${tasks.length>visibleTasks.length?`<div class="muted dashboard-task-more">+ ${tasks.length-visibleTasks.length} tarefa${tasks.length-visibleTasks.length===1?'':'s'}</div>`:''}` : '<div class="empty personal-task-empty">Nenhuma tarefa para esta data.</div>'}<details class="personal-task-manage"><summary>Adicionar ou escolher outra data</summary><div class="personal-task-date-tools"><button class="tiny-btn" id="personalTaskPrev" aria-label="Dia anterior">‹</button><input class="input" id="personalTaskDate" type="date" value="${escapeAttr(selectedDate)}"><button class="tiny-btn" id="personalTaskNext" aria-label="Dia seguinte">›</button><button class="tiny-btn" id="personalTaskToday">Hoje</button><select class="select" id="personalTaskFilter"><option value="all" ${filter==='all'?'selected':''}>Todas</option><option value="pending" ${filter==='pending'?'selected':''}>Pendentes</option><option value="done" ${filter==='done'?'selected':''}>Concluídas</option><option value="overdue" ${filter==='overdue'?'selected':''}>Atrasadas</option></select></div><div class="personal-task-add"><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria"><select class="select" id="personalTaskRecurrence"><option value="none">Uma vez</option><option value="daily">Todo dia</option><option value="weekdays">Dias escolhidos</option></select><div class="task-weekdays">${weekdays}</div><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar tarefa" aria-label="Adicionar tarefa">${iconSvg('plus')}</button></div></details></div>`;
+  const emptyState = `<div class="personal-task-empty"><strong>Seu dia está livre nesta data.</strong><span>Crie uma tarefa pontual ou uma rotina recorrente.</span><div><button class="tiny-btn primary" type="button" data-open-task-manager="single">Adicionar tarefa</button><button class="tiny-btn" type="button" data-open-task-manager="recurring">Criar recorrente</button></div></div>`;
+  return `<div class="card personal-tasks-card dashboard-tasks-card"><div class="section-title"><div><span class="eyebrow">Agenda pessoal</span><h2>Tarefas de hoje</h2></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="dashboard-task-summary"><div><strong>${pending}</strong><span>Pendentes</span></div><div><strong>${completed}</strong><span>Concluídas</span></div></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>${tasks.length>visibleTasks.length?`<div class="muted dashboard-task-more">+ ${tasks.length-visibleTasks.length} tarefa${tasks.length-visibleTasks.length===1?'':'s'}</div>`:''}` : emptyState}<details class="personal-task-manage" id="personalTaskManager"><summary>Adicionar ou escolher outra data</summary><div class="personal-task-date-tools"><button class="tiny-btn" id="personalTaskPrev" aria-label="Dia anterior">‹</button><input class="input" id="personalTaskDate" type="date" value="${escapeAttr(selectedDate)}"><button class="tiny-btn" id="personalTaskNext" aria-label="Dia seguinte">›</button><button class="tiny-btn" id="personalTaskToday">Hoje</button><select class="select" id="personalTaskFilter"><option value="all" ${filter==='all'?'selected':''}>Todas</option><option value="pending" ${filter==='pending'?'selected':''}>Pendentes</option><option value="done" ${filter==='done'?'selected':''}>Concluídas</option><option value="overdue" ${filter==='overdue'?'selected':''}>Atrasadas</option></select></div><div class="personal-task-add"><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria"><select class="select" id="personalTaskRecurrence"><option value="none">Uma vez</option><option value="daily">Todo dia</option><option value="weekdays">Dias escolhidos</option></select><div class="task-weekdays">${weekdays}</div><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar tarefa" aria-label="Adicionar tarefa">${iconSvg('plus')}</button></div></details></div>`;
 }
 function bindPersonalDailyTasks(date) {
   const selectedDate=ui.personalTaskDate||date;
@@ -1363,6 +1397,15 @@ function bindPersonalDailyTasks(date) {
   document.getElementById('personalTaskDate')?.addEventListener('change',event=>{ui.personalTaskDate=event.target.value||selectedDate;render();});
   document.getElementById('personalTaskFilter')?.addEventListener('change',event=>{ui.personalTaskFilter=event.target.value;render();});
   document.getElementById('addPersonalTask')?.addEventListener('click', addTask);
+  document.querySelectorAll('[data-open-task-manager]').forEach(button=>button.addEventListener('click',event=>{
+    const manager=document.getElementById('personalTaskManager');
+    if(manager) manager.open=true;
+    if(event.currentTarget.dataset.openTaskManager==='recurring') {
+      const recurrence=document.getElementById('personalTaskRecurrence');
+      if(recurrence) recurrence.value='daily';
+    }
+    document.getElementById('personalTaskInput')?.focus();
+  }));
   input?.addEventListener('keydown', event => { if(event.key === 'Enter') { event.preventDefault(); addTask(); } });
   document.querySelectorAll('[data-toggle-personal-task]').forEach(box => box.addEventListener('change', event => {
     const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.togglePersonalTask);
@@ -2149,7 +2192,7 @@ function countdownPrecision(parts) {
 function renderCountdown() {
   const date = state.dashboardSettings?.countdownDate || '';
   const p = countdownParts(date);
-  return `<div class="card countdown-card"><div class="countdown-ring"><div id="countdownValue"><strong>${escapeHtml(countdownText(p))}</strong><small>${escapeHtml(countdownPrecision(p))}</small></div></div><div><div class="section-title"><div><h2>Contagem regressiva</h2><div class="muted">Tempo restante até a data escolhida.</div></div></div><input class="input" id="countdownDate" inputmode="numeric" placeholder="dd/mm/aaaa"><div class="countdown-detail" id="countdownDetail">${p.totalDays} dias no total</div></div></div>`;
+  return `<section class="dashboard-countdown-compact" aria-label="Contagem regressiva"><span class="dashboard-countdown-icon">${iconSvg('timer')}</span><div><span class="eyebrow">Contagem regressiva</span><div id="countdownValue"><strong>${escapeHtml(countdownText(p))}</strong><small>${escapeHtml(countdownPrecision(p))}</small></div></div><details class="dashboard-countdown-settings"><summary class="tiny-btn" title="Alterar data-alvo">Data-alvo</summary><div><input class="input" id="countdownDate" inputmode="numeric" placeholder="dd/mm/aaaa"><span class="countdown-detail" id="countdownDetail">${p.totalDays} dias no total</span></div></details></section>`;
 }
 function startDashboardCountdown() {
   if(dashboardCountdownInterval) clearInterval(dashboardCountdownInterval);
@@ -2445,7 +2488,7 @@ function renderDashboardEvolution() {
 }
 function renderRecentDashboardActivity() {
   const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,4);
-  return `<section class="card dashboard-recent-card"><div class="section-title"><div><span class="eyebrow">Histórico</span><h2>Atividade recente</h2></div></div><div class="dashboard-recent-list">${transactions.length?transactions.map(item=>`<div><span>${iconSvg(item.activity_type==='video_progress'||item.activity_type==='video_completion'?'play':item.activity_type==='flashcard_review'?'cards':'brain')}</span><strong>${escapeHtml(gamificationActivityLabel(item))}</strong><time>${new Date(item.occurred_at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</time></div>`).join(''):'<div class="muted">Suas próximas atividades aparecerão aqui.</div>'}</div></section>`;
+  return `<section class="card dashboard-recent-card"><div class="section-title"><div><span class="eyebrow">Histórico</span><h2>Atividade recente</h2></div><button class="tiny-btn" data-dashboard-open-history>Ver histórico</button></div><div class="dashboard-recent-list">${transactions.length?transactions.map(item=>`<div><span>${iconSvg(item.activity_type==='video_progress'||item.activity_type==='video_completion'?'play':item.activity_type==='flashcard_review'?'cards':'brain')}</span><strong>${escapeHtml(gamificationActivityLabel(item))}</strong><time>${new Date(item.occurred_at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</time></div>`).join(''):'<div class="muted">Suas próximas atividades aparecerão aqui.</div>'}</div></section>`;
 }
 function renderRankPromotionModal() {
   const rank=ui.rankPromotion;
@@ -2512,7 +2555,7 @@ function bindGamificationDashboard() {
 function renderPainel() {
   const t = totals(); const areas = areaStats(); const next = t.next; const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
-    <div class="dashboard-global-head"><div><span class="eyebrow">Visão geral</span><h1>Seu dia de estudos</h1></div><label class="dashboard-date-control"><span>Data</span><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"></label></div>
+    <div class="dashboard-global-head"><div><span class="eyebrow">Visão geral</span><h1>Seu dia de estudos</h1></div><div class="dashboard-head-tools">${renderCountdown()}<label class="dashboard-date-control"><span>Data do painel</span><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"></label></div></div>
     <div class="dashboard-desktop-grid">
       ${renderContinueStudying()}
       ${renderDashboardMood(dashboardLog)}
@@ -2522,7 +2565,6 @@ function renderPainel() {
       ${renderDashboardEvolution()}
       ${renderGamificationDashboard(true)}
       ${renderRecentDashboardActivity()}
-      ${renderCountdown()}
       <div class="dashboard-road-region"><div class="card">${renderDailyRoad(ui.refDate)}</div></div>
     </div>
     ${renderRankPromotionModal()}
@@ -2562,6 +2604,7 @@ function renderPainel() {
   bindCloudBackupCard();
   document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
   document.querySelector('[data-dashboard-open-flashcards]')?.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Devidos';render();});
+  document.querySelector('[data-dashboard-open-history]')?.addEventListener('click',()=>navigateToTab('historico'));
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
   document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
@@ -5868,8 +5911,10 @@ function normalizeQuestionRecord(question) {
   return {...question, stem:normalizeQuestionText(question.stem), options, comment:safeComment, answer, tags:Array.isArray(question.tags) ? question.tags.map(tag => String(tag).trim()).filter(Boolean) : [], images:Array.isArray(question.images) ? question.images : []};
 }
 function questionDataIssue(question) {
+  const validation=PlannerUX?.validateQuestionRecord?.(question);
+  if(validation && !validation.valid) return validation.reasons.join(' ');
   const letters = Object.keys(question.options || {});
-  if(letters.length < 2) return 'Questão discursiva ou alternativas ausentes na extração original.';
+  if(letters.length < 4) return 'Questão discursiva ou alternativas ausentes na extração original.';
   if(!letters.includes(question.answer)) return `O gabarito ${question.answer || 'não informado'} não está entre as alternativas disponíveis.`;
   const blank = letters.filter(letter => !String(question.options?.[letter] || '').trim());
   if(blank.length) return `A extração original deixou ${blank.length === 1 ? 'a alternativa' : 'as alternativas'} ${blank.join(', ')} sem texto.`;
@@ -6140,7 +6185,7 @@ function renderQuestionBank() {
     questionBank.forEach(question => {
       const progress = state.questionProgress[question.id];
       if(!progress?.answerKeyIssue) return;
-      state.questionProgress[question.id] = { ...progress, answerKeyIssue:false, answerKeyIssueAt:'' };
+      setQuestionProgress(question.id,{ answerKeyIssue:false, answerKeyIssueAt:'' });
     });
     ui.qStatus='Todas'; ui.qIndex=0; ui.justAnsweredId=''; persist();
   });
@@ -6254,7 +6299,7 @@ function deleteIncorporatedQuestion(questionId) {
   state.importedQuestions = state.importedQuestions.filter(item => item.id !== questionId);
   const history = state.incorporationHistory.find(entry => entry.questionId === questionId);
   if(history) { history.deletedAt = new Date().toISOString(); history.updatedAt = history.deletedAt; }
-  delete state.questionProgress[questionId];
+  removeQuestionProgress(questionId);
   delete state.questionEdits[questionId];
   delete state.questionFlashcards[questionId];
   delete state.questionLogged[questionId];
@@ -6731,7 +6776,7 @@ function bindQuestionActions(questions, question) {
     const selected=e.currentTarget.dataset.answer;
     ui.draftAnswers[question.id] = selected;
     const current=state.questionProgress[question.id] || {};
-    state.questionProgress[question.id] = { ...current, draftAnswer:selected };
+    setQuestionProgress(question.id,{ draftAnswer:selected });
     saveStateOnly({invalidate:false});
     resetKeyboardConfirmation();
     updateQuestionDraftUI(question.id, selected);
@@ -6778,7 +6823,7 @@ function bindQuestionActions(questions, question) {
   document.querySelectorAll('[data-question-materials]').forEach(button => button.onclick = e => openMaterialsForSchedule(e.currentTarget.dataset.questionMaterials));
   document.querySelectorAll('[data-question-confidence]').forEach(button => button.onclick = e => {
     const current = state.questionProgress[question.id] || {};
-    state.questionProgress[question.id] = { ...current, draftConfidence: e.currentTarget.dataset.questionConfidence };
+    setQuestionProgress(question.id,{ draftConfidence: e.currentTarget.dataset.questionConfidence });
     saveStateOnly({invalidate:false});
     document.querySelectorAll('[data-question-confidence]').forEach(option => option.classList.toggle('active', option === e.currentTarget));
   });
@@ -6791,13 +6836,13 @@ function bindQuestionActions(questions, question) {
   if(deleteQuestion) deleteQuestion.onclick = () => deleteQuestionFromPlanner(question);
   if(redo) redo.onclick = () => {
     const previous = state.questionProgress[question.id] || {};
-    state.questionProgress[question.id] = {
+    setQuestionProgress(question.id,{
       notes: previous.notes || '',
       textHighlights: previous.textHighlights || [],
       eliminated: previous.eliminated || [],
       draftConfidence: previous.confidenceLevel || previous.draftConfidence || '',
       attempts: previous.attempts || 0
-    };
+    });
     delete ui.draftAnswers[question.id];
     stopQuestionTimer(true);
     persist();
@@ -6807,7 +6852,7 @@ function bindQuestionActions(questions, question) {
   if(clearHighlights) clearHighlights.onclick = () => {
     const current = state.questionProgress[question.id] || {};
     if(current.textHighlights?.length) rememberHighlightState({ context:'question', questionId:question.id, highlights:current.textHighlights });
-    state.questionProgress[question.id] = { ...current, textHighlights: [] };
+    setQuestionProgress(question.id,{ textHighlights: [] });
     persist();
   };
   document.querySelectorAll('[data-eliminate]').forEach(button => button.onclick = e => {
@@ -6862,7 +6907,7 @@ function bindQuestionActions(questions, question) {
   if(fontUp) fontUp.onclick = () => setQuestionFontSize(2);
   if(keyIssue) keyIssue.onclick = () => {
     const current = state.questionProgress[question.id] || {};
-    state.questionProgress[question.id] = { ...current, answerKeyIssue: !current.answerKeyIssue, answerKeyIssueAt: !current.answerKeyIssue ? new Date().toISOString() : '' };
+    setQuestionProgress(question.id,{ answerKeyIssue: !current.answerKeyIssue, answerKeyIssueAt: !current.answerKeyIssue ? new Date().toISOString() : '' });
     persist();
   };
   document.querySelectorAll('[data-progress-field]').forEach(input => {
@@ -6877,13 +6922,13 @@ function bindQuestionActions(questions, question) {
   if(addFlashcard) addFlashcard.onclick = () => addQuestionFlashcard(question);
   document.querySelectorAll('[data-comment-mastery]').forEach(button => button.onclick = e => {
     const current = state.questionProgress[question.id] || {};
-    state.questionProgress[question.id] = { ...current, commentMastery: e.currentTarget.dataset.commentMastery };
+    setQuestionProgress(question.id,{ commentMastery: e.currentTarget.dataset.commentMastery });
     saveStateOnly();
     render();
   });
   document.querySelectorAll('[data-comment-tab]').forEach(button => button.onclick = e => {
     const current = state.questionProgress[question.id] || {};
-    state.questionProgress[question.id] = { ...current, commentTab: e.currentTarget.dataset.commentTab };
+    setQuestionProgress(question.id,{ commentTab: e.currentTarget.dataset.commentTab });
     saveStateOnly();
     render();
   });
@@ -6954,7 +6999,7 @@ function deleteQuestionFromPlanner(question) {
     if(history) { history.deletedAt = new Date().toISOString(); history.updatedAt = history.deletedAt; }
   }
   else state.deletedQuestions[question.id] = new Date().toISOString();
-  delete state.questionProgress[question.id];
+  removeQuestionProgress(question.id);
   delete state.questionEdits[question.id];
   delete state.questionFlashcards[question.id];
   delete state.questionLogged[question.id];
@@ -7090,7 +7135,7 @@ function handleQuestionKeyboard(event) {
     event.preventDefault();
     ui.draftAnswers[question.id] = letter;
     const current = state.questionProgress[question.id] || {};
-    state.questionProgress[question.id] = { ...current, draftAnswer:letter };
+    setQuestionProgress(question.id,{ draftAnswer:letter });
     saveStateOnly({invalidate:false});
     resetKeyboardConfirmation();
     updateQuestionDraftUI(question.id, letter);
@@ -7207,7 +7252,7 @@ function toggleEliminated(question, letter) {
   const current = state.questionProgress[question.id] || {};
   const eliminated = Array.isArray(current.eliminated) ? [...current.eliminated] : [];
   const next = eliminated.includes(letter) ? eliminated.filter(item => item !== letter) : [...eliminated, letter];
-  state.questionProgress[question.id] = { ...current, eliminated: next };
+  setQuestionProgress(question.id,{ eliminated: next });
   persist();
 }
 function toggleSelectedHighlight(question) {
@@ -7229,7 +7274,7 @@ function toggleSelectedHighlight(question) {
   const existing = highlights.findIndex(item => item.text === selected && item.scope===scope && n(item.occurrence)===occurrence);
   rememberHighlightState({ context:'question', questionId:question.id, highlights });
   const next = existing >= 0 ? highlights.filter((_, index) => index !== existing) : [...highlights, { text: selected, color: ui.highlightColor || 'yellow', scope, occurrence }];
-  state.questionProgress[question.id] = { ...current, textHighlights: next };
+  setQuestionProgress(question.id,{ textHighlights: next });
   selection.removeAllRanges();
   // Atualiza apenas o enunciado para o destaque aparecer sem reconstruir a tela inteira.
   const stem = document.querySelector('.question-stem.highlightable[data-highlight-scope="stem"]');
@@ -7319,8 +7364,7 @@ function answerQuestion(question, selected, timedOut=false) {
   // Uma questao pode ser revisada em varios dias: conte-a uma vez em cada dia,
   // sem duplicar o mesmo registro quando apenas a resposta e editada.
   const firstLog = state.questionLogged[question.id] !== today;
-  state.questionProgress[question.id] = {
-    ...previous,
+  setQuestionProgress(question.id,{
     selected,
     correct,
     timedOut,
@@ -7334,7 +7378,7 @@ function answerQuestion(question, selected, timedOut=false) {
     secondsSpent: measuredSeconds || previous.secondsSpent || 0,
     attempts: n(previous.attempts) + 1,
     scheduleId: linkedLesson?.id || previous.scheduleId || ''
-  };
+  });
   awardQuestionAnswerXP(question,state.questionProgress[question.id]);
   ui.justAnsweredId=question.id;
   delete ui.draftAnswers[question.id];
@@ -7361,7 +7405,7 @@ function updateQuestionProgressField(question, input) {
   const field = input.dataset.progressField;
   const current = state.questionProgress[question.id] || {};
   const value = input.type === 'number' ? n(input.value) : input.value;
-  state.questionProgress[question.id] = { ...current, [field]: value };
+  setQuestionProgress(question.id,{ [field]: value });
   if(field === 'postLearning') awardQuestionReviewXP(question.id,state.questionProgress[question.id]);
   if(field === 'notes') {
     const preview = document.getElementById('questionNotesPreview');
@@ -7577,7 +7621,7 @@ function undoLastHighlight() {
   const action = highlightUndoStack.splice(index,1)[0];
   if(context === 'question') {
     const current = state.questionProgress[action.questionId] || {};
-    state.questionProgress[action.questionId] = { ...current, textHighlights:action.highlights };
+    setQuestionProgress(action.questionId,{ textHighlights:action.highlights });
   } else if(context === 'material') {
     materialEditMeta(action.docId).highlights = action.highlights;
   } else {
