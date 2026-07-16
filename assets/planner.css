@@ -1748,3 +1748,12 @@ body.dark .tab.active .tab-icon{background:#172331}
   .header-actions>*{flex:0 0 auto}
   .app-icon{--icon-size:1.2rem}.tab-icon .app-icon{width:21px;height:21px}
 }
+
+/* Override final da barra compacta, apos os tokens responsivos. */
+@media(min-width:721px){
+  body.sidebar-collapsed .app-sidebar{width:52px}
+  body.sidebar-collapsed .sidebar-brand{grid-template-columns:36px;padding:16px 8px}
+  body.sidebar-collapsed .app-sidebar .tabs{padding:14px 2px}
+  body.sidebar-collapsed .app-sidebar .tab{min-height:44px;padding:8px 2px}
+  body.sidebar-collapsed .sidebar-foot{padding:6px 2px}
+}
