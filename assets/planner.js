@@ -68,7 +68,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -1371,10 +1371,11 @@ function renderPersonalDailyTasks(date) {
     const editor = editing ? `<div class="personal-task-editor"><input class="input" data-task-edit-text="${escapeAttr(task.id)}" value="${escapeAttr(task.text)}" maxlength="180"><input class="input task-order-input" type="number" min="1" step="1" data-task-edit-order="${escapeAttr(task.id)}" value="${n(task.order) || index + 1}"><button class="tiny-btn" data-task-edit-save="${escapeAttr(task.id)}">Salvar</button><button class="tiny-btn" data-task-edit-cancel="${escapeAttr(task.id)}">Cancelar</button></div>` : '';
     return `<div class="personal-task-row ${task.done ? 'done' : ''} ${task.status==='postponed'?'postponed':''}"><div class="personal-task-main"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''} ${task.status==='postponed'?'disabled':''}><span class="personal-task-text">${escapeHtml(task.text)}</span></label>${task.status==='postponed'?`<small class="muted">Adiada para ${fmtDate(task.postponedTo)}</small>`:''}${editor}</div><div class="personal-task-actions"><div class="personal-task-priority" title="Prioridade ${n(task.priority) || 0} de 3 estrelas">${stars}</div>${!task.done&&task.status!=='postponed'?`<button class="tiny-btn" type="button" data-task-postpone="${escapeAttr(task.id)}" title="Mover para o próximo dia" aria-label="Mover para o próximo dia">${iconSvg('next',{weight:'regular'})}</button>`:''}<button class="tiny-btn" type="button" data-task-edit="${escapeAttr(task.id)}" title="Editar tarefa" aria-label="Editar tarefa">✎</button><button class="tiny-btn danger personal-task-remove" type="button" title="Excluir tarefa" aria-label="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">×</button></div></div>`;
   }).join('');
-  const weekdays=['D','S','T','Q','Q','S','S'].map((label,index)=>`<label><input type="checkbox" data-new-task-weekday="${index}" ${index>0&&index<6?'checked':''}>${label}</label>`).join('');
+  const weekdays=['D','S','T','Q','Q','S','S'].map((label,index)=>`<label class="task-weekday" title="${['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'][index]}"><input type="checkbox" data-new-task-weekday="${index}" ${index>0&&index<6?'checked':''}><span>${label}</span></label>`).join('');
   const pending=tasks.filter(task=>!task.done&&task.status!=='postponed').length;
+  const editorMode=ui.personalTaskEditorMode||'';
   const emptyState = `<div class="personal-task-empty"><strong>Seu dia está livre nesta data.</strong><span>Crie uma tarefa pontual ou uma rotina recorrente.</span><div><button class="tiny-btn primary" type="button" data-open-task-manager="single">Adicionar tarefa</button><button class="tiny-btn" type="button" data-open-task-manager="recurring">Criar recorrente</button></div></div>`;
-  return `<div class="card personal-tasks-card dashboard-tasks-card"><div class="section-title"><div><span class="eyebrow">Agenda pessoal</span><h2>Tarefas de hoje</h2></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="dashboard-task-summary"><div><strong>${pending}</strong><span>Pendentes</span></div><div><strong>${completed}</strong><span>Concluídas</span></div></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>${tasks.length>visibleTasks.length?`<div class="muted dashboard-task-more">+ ${tasks.length-visibleTasks.length} tarefa${tasks.length-visibleTasks.length===1?'':'s'}</div>`:''}` : emptyState}<details class="personal-task-manage" id="personalTaskManager"><summary>Adicionar ou escolher outra data</summary><div class="personal-task-date-tools"><button class="tiny-btn" id="personalTaskPrev" aria-label="Dia anterior">‹</button><input class="input" id="personalTaskDate" type="date" value="${escapeAttr(selectedDate)}"><button class="tiny-btn" id="personalTaskNext" aria-label="Dia seguinte">›</button><button class="tiny-btn" id="personalTaskToday">Hoje</button><select class="select" id="personalTaskFilter"><option value="all" ${filter==='all'?'selected':''}>Todas</option><option value="pending" ${filter==='pending'?'selected':''}>Pendentes</option><option value="done" ${filter==='done'?'selected':''}>Concluídas</option><option value="overdue" ${filter==='overdue'?'selected':''}>Atrasadas</option></select></div><div class="personal-task-add"><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria"><select class="select" id="personalTaskRecurrence"><option value="none">Uma vez</option><option value="daily">Todo dia</option><option value="weekdays">Dias escolhidos</option></select><div class="task-weekdays">${weekdays}</div><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar tarefa" aria-label="Adicionar tarefa">${iconSvg('plus')}</button></div></details></div>`;
+  return `<div class="card personal-tasks-card dashboard-tasks-card ${editorMode?'is-expanded':''}" data-task-editor-mode="${escapeAttr(editorMode)}"><div class="section-title"><div><span class="eyebrow">Agenda pessoal</span><h2>Tarefas de hoje</h2></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="dashboard-task-summary"><div><strong>${pending}</strong><span>Pendentes</span></div><div><strong>${completed}</strong><span>Concluídas</span></div></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>${tasks.length>visibleTasks.length?`<div class="muted dashboard-task-more">+ ${tasks.length-visibleTasks.length} tarefa${tasks.length-visibleTasks.length===1?'':'s'}</div>`:''}` : emptyState}<details class="personal-task-manage" id="personalTaskManager" ${editorMode?'open':''}><summary>Adicionar ou escolher outra data</summary><div class="personal-task-manage-head">${editorMode?`<span class="eyebrow">Editor de tarefas</span><button class="tiny-btn" type="button" data-close-personal-task-editor aria-label="Fechar formulário de tarefas">Fechar</button>`:''}</div><div class="personal-task-date-tools"><button class="tiny-btn" id="personalTaskPrev" aria-label="Dia anterior">‹</button><label class="sr-only" for="personalTaskDate">Data das tarefas</label><input class="input" id="personalTaskDate" type="date" value="${escapeAttr(selectedDate)}"><button class="tiny-btn" id="personalTaskNext" aria-label="Dia seguinte">›</button><button class="tiny-btn" id="personalTaskToday">Hoje</button><label class="sr-only" for="personalTaskFilter">Filtrar tarefas</label><select class="select" id="personalTaskFilter"><option value="all" ${filter==='all'?'selected':''}>Todas</option><option value="pending" ${filter==='pending'?'selected':''}>Pendentes</option><option value="done" ${filter==='done'?'selected':''}>Concluídas</option><option value="overdue" ${filter==='overdue'?'selected':''}>Atrasadas</option></select></div><div class="personal-task-add"><label class="sr-only" for="personalTaskInput">Descrição da tarefa</label><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria"><label class="sr-only" for="personalTaskRecurrence">Recorrência da tarefa</label><select class="select" id="personalTaskRecurrence"><option value="none">Uma vez</option><option value="daily">Todo dia</option><option value="weekdays">Dias escolhidos</option></select><fieldset class="task-weekdays"><legend>Dias da semana</legend>${weekdays}</fieldset><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar tarefa" aria-label="Adicionar tarefa">${iconSvg('plus')}</button></div></details></div>`;
 }
 function bindPersonalDailyTasks(date) {
   const selectedDate=ui.personalTaskDate||date;
@@ -1397,15 +1398,39 @@ function bindPersonalDailyTasks(date) {
   document.getElementById('personalTaskDate')?.addEventListener('change',event=>{ui.personalTaskDate=event.target.value||selectedDate;render();});
   document.getElementById('personalTaskFilter')?.addEventListener('change',event=>{ui.personalTaskFilter=event.target.value;render();});
   document.getElementById('addPersonalTask')?.addEventListener('click', addTask);
-  document.querySelectorAll('[data-open-task-manager]').forEach(button=>button.addEventListener('click',event=>{
+  const focusTaskEditor=()=>requestAnimationFrame(()=>{
     const manager=document.getElementById('personalTaskManager');
     if(manager) manager.open=true;
-    if(event.currentTarget.dataset.openTaskManager==='recurring') {
-      const recurrence=document.getElementById('personalTaskRecurrence');
-      if(recurrence) recurrence.value='daily';
-    }
+    const recurrence=document.getElementById('personalTaskRecurrence');
+    if(ui.personalTaskEditorMode==='create-recurring' && recurrence) recurrence.value='daily';
     document.getElementById('personalTaskInput')?.focus();
+  });
+  const closeTaskEditor=()=>{
+    const trigger=ui.personalTaskEditorTrigger;
+    ui.personalTaskEditorMode=null;
+    ui.personalTaskEditId='';
+    render();
+    requestAnimationFrame(()=>document.querySelector(`[data-open-task-manager="${CSS.escape(trigger)}"]`)?.focus()||document.querySelector('#personalTaskManager summary')?.focus());
+  };
+  document.querySelectorAll('[data-open-task-manager]').forEach(button=>button.addEventListener('click',event=>{
+    const mode=event.currentTarget.dataset.openTaskManager==='recurring'?'create-recurring':'create-once';
+    ui.personalTaskEditorMode=mode;
+    ui.personalTaskEditorTrigger=event.currentTarget.dataset.openTaskManager;
+    render();
+    focusTaskEditor();
   }));
+  document.querySelector('[data-close-personal-task-editor]')?.addEventListener('click',closeTaskEditor);
+  document.getElementById('personalTaskManager')?.addEventListener('toggle',event=>{
+    if(event.currentTarget.open && !ui.personalTaskEditorMode) {
+      ui.personalTaskEditorMode='create-once';
+      ui.personalTaskEditorTrigger='summary';
+      render();
+      focusTaskEditor();
+      return;
+    }
+    if(event.currentTarget.open || !ui.personalTaskEditorMode) return;
+    closeTaskEditor();
+  });
   input?.addEventListener('keydown', event => { if(event.key === 'Enter') { event.preventDefault(); addTask(); } });
   document.querySelectorAll('[data-toggle-personal-task]').forEach(box => box.addEventListener('change', event => {
     const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.togglePersonalTask);
@@ -1441,11 +1466,13 @@ function bindPersonalDailyTasks(date) {
   }));
   document.querySelectorAll('[data-task-edit]').forEach(button => button.addEventListener('click', event => {
     ui.personalTaskEditId = event.currentTarget.dataset.taskEdit;
+    ui.personalTaskEditorMode = 'edit';
+    ui.personalTaskEditorTrigger = 'edit';
     render();
   }));
   document.querySelectorAll('[data-task-edit-cancel]').forEach(button => button.addEventListener('click', () => {
     ui.personalTaskEditId = '';
-    render();
+    closeTaskEditor();
   }));
   document.querySelectorAll('[data-task-edit-save]').forEach(button => button.addEventListener('click', event => {
     const id = event.currentTarget.dataset.taskEditSave;
@@ -1459,6 +1486,7 @@ function bindPersonalDailyTasks(date) {
     const template=state.taskTemplates.find(item=>item.id===task.templateId);
     if(template) { template.text=task.text;template.order=task.order;template.updatedAt=task.updatedAt; }
     ui.personalTaskEditId = '';
+    ui.personalTaskEditorMode = null;
     persist();
   }));
 }
