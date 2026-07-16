@@ -1672,6 +1672,17 @@ body.dark .dashboard-road > .road-path > .road-step.complete{border-left-color:v
 .rank-progress-panel span,.rank-progress-panel small{color:var(--muted);font-size:13px}
 .rank-progress-panel .progress{height:11px;background:#d9e6ef}
 .rank-progress-panel .progress>span{background:linear-gradient(90deg,#e6a700,#f2c94c)}
+.gamification-simulation-card{display:grid;gap:14px;border-color:#d8def8;background:#fbfcff}
+.gamification-sim-metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.gamification-sim-metrics>div{display:grid;gap:2px;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+.gamification-sim-metrics strong{font-size:24px;color:#3156bd}.gamification-sim-metrics span{font-size:13px;color:var(--muted)}
+.gamification-sim-element{display:grid;gap:3px;padding:13px 15px;border:1px solid #cdd9fb;border-radius:8px;background:#f0f4ff}
+.gamification-sim-element strong{font-size:17px}.gamification-sim-element span:last-child{color:var(--muted)}
+.simulation-reward-overlay{position:fixed;inset:0;z-index:140;display:grid;place-items:center;padding:20px;background:rgba(14,25,45,.55)}
+.simulation-reward-dialog{width:min(520px,100%);display:grid;gap:16px;padding:25px;border:1px solid var(--line);border-radius:8px;background:var(--panel);box-shadow:0 22px 70px rgba(0,0,0,.25)}
+.simulation-reward-dialog h2,.simulation-reward-dialog p{margin:0}.simulation-reward-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.simulation-reward-metrics>div{display:grid;gap:3px;padding:12px;border:1px solid var(--line);border-radius:8px;text-align:center}.simulation-reward-metrics strong{font-size:22px;color:#3156bd}.simulation-reward-metrics span{font-size:12px;color:var(--muted)}
+.simulation-reward-revealed{display:grid;gap:4px;padding:14px;border:1px solid #c3dfd2;border-radius:8px;background:#edf9f3;color:#147152}
 .rank-promotion-overlay{position:fixed;inset:0;z-index:1600;display:grid;place-items:center;padding:20px;background:rgba(11,25,35,.62);backdrop-filter:blur(4px)}
 .rank-promotion-dialog{width:min(440px,100%);display:grid;justify-items:center;gap:9px;padding:28px;border:1px solid #d7e5f8;border-radius:8px;background:var(--panel);text-align:center;box-shadow:0 24px 70px rgba(5,24,39,.3)}
 .rank-promotion-dialog .rpg-asset{width:72px;height:72px;margin-bottom:3px}
@@ -1701,6 +1712,7 @@ body.dark .dashboard-road > .road-path > .road-step.complete{border-left-color:v
 .legacy-batches{display:grid;gap:8px}
 .legacy-batches h3{margin:0}
 body.dark .gamification-card{border-color:#344e68;background:linear-gradient(135deg,#202a2a,#1c2b3a)}
+body.dark .gamification-simulation-card{border-color:#344e68;background:#18242f}body.dark .gamification-sim-element{border-color:#405477;background:#202d43}body.dark .simulation-reward-revealed{border-color:#28624e;background:#173c31;color:#8ee2be}
 body.dark .gamification-level{border-color:#345b91;background:#1c69e8}
 body.dark .gamification-rank,body.dark .rank-progress-panel{border-color:#344e68;background:#1d2b38}
 body.dark .rank-promotion-dialog{border-color:#344e68;background:#151c24}
@@ -1709,6 +1721,7 @@ body.dark .legacy-import-card[open]>summary{background:#203443}
 body.dark .legacy-preview{border-color:#345b91;background:#1b2b3b}
 @media(max-width:1050px){.xp-history-mini{grid-template-columns:repeat(2,minmax(0,1fr))}.legacy-aggregate-fields{grid-template-columns:repeat(3,minmax(0,1fr))}.legacy-aggregate-fields button{grid-column:span 3}}
 @media(max-width:760px){.gamification-head{grid-template-columns:1fr;gap:12px}.gamification-rank{grid-template-columns:50px minmax(0,1fr)}.gamification-rank .rpg-asset{width:50px;height:50px}.gamification-rank h2{font-size:21px}.gamification-progress h2{font-size:18px}.gamification-progress .section-title{align-items:flex-start;flex-direction:column}.gamification-progress-label{display:grid;gap:2px}.rank-progress-panel{grid-template-columns:1fr;gap:8px}.xp-history-mini{grid-template-columns:1fr}.legacy-aggregate-fields{grid-template-columns:1fr}.legacy-aggregate-fields button{grid-column:auto}.legacy-import-card>summary{align-items:flex-start}.legacy-preview .section-title{align-items:flex-start;flex-direction:column}}
+@media(max-width:760px){.gamification-sim-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.simulation-reward-metrics{grid-template-columns:1fr}.simulation-reward-dialog{padding:18px}}
 @media(prefers-reduced-motion:reduce){.rank-promotion-overlay,.rank-promotion-dialog{scroll-behavior:auto;animation:none;transition:none}}
 /* Sistema visual semântico de ícones — Phosphor local */
 :root{

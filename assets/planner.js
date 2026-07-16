@@ -69,6 +69,7 @@ ensureQuestionProgress();
 let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
+ui.simulationRewardSummary = null;
 try { Object.assign(ui, JSON.parse(localStorage.getItem(QUESTION_VIEW_KEY) || '{}')); } catch(error) {}
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
@@ -548,7 +549,8 @@ function completedAcademicBlockIds() {
 function awardGamificationXP(input) {
   if(!Gamification) return {transaction:null,duplicate:true};
   ensureGamificationState();
-  const result=Gamification.awardXPIdempotently(state.gamification.xpTransactions,{...input,user_id:gamificationUserId()},state.gamification.rules);
+  const active=Gamification.getActiveElementMultipliers?.(state.gamification,input.activity_type,input.occurred_at || new Date()) || {multiplier:1,element:'',rewardId:''};
+  const result=Gamification.awardXPIdempotently(state.gamification.xpTransactions,{...input,user_id:gamificationUserId(),multipliers:{...(input.multipliers||{}),element:active.multiplier},metadata:{...(input.metadata||{}),element:active.element||'',elementRewardId:active.rewardId||''}},state.gamification.rules);
   if(!result.duplicate) Gamification.refreshProfile(state.gamification);
   return result;
 }
@@ -577,7 +579,8 @@ function awardVideoCompletionXP(videoId,completedAt) {
 }
 function reconcileRankProgress(completedBlocks) {
   if(!Gamification?.evaluateRankPromotion) return;
-  const result=Gamification.evaluateRankPromotion(state.gamification.rankPresentation,completedBlocks);
+  Gamification.applyRankAcceleration?.(state.gamification,completedBlocks);
+  const result=Gamification.evaluateRankPromotion(state.gamification.rankPresentation,completedBlocks,state.gamification.rankProgress);
   state.gamification.rankPresentation=result.state;
   if(result.promotion) ui.rankPromotion=result.promotion;
 }
@@ -616,7 +619,16 @@ function mergeGamificationState(remoteGamification={},localGamification={}) {
     const previous=batches.get(batch.id);
     if(!previous || Date.parse(batch.reverted_at||batch.committed_at||batch.created_at||0)>=Date.parse(previous.reverted_at||previous.committed_at||previous.created_at||0)) batches.set(batch.id,batch);
   });
-  const merged=Gamification.ensureState({...remote,...local,xpTransactions:[...transactions.values()],importBatches:[...batches.values()]});
+  const mergeByKey=(items,keyOf)=>[...new Map(items.filter(Boolean).map(item=>[keyOf(item),item])).values()];
+  const remoteProgress=remote.rankProgress || {};
+  const localProgress=local.rankProgress || {};
+  const fragmentEvents=mergeByKey([...(remoteProgress.fragmentEvents||[]),...(localProgress.fragmentEvents||[])],item=>item.eventKey || item.attemptId);
+  const medallionEvents=mergeByKey([...(remoteProgress.medallionEvents||[]),...(localProgress.medallionEvents||[])],item=>item.eventKey || item.sourceFragmentEventKey);
+  const promotionHistory=mergeByKey([...(remoteProgress.promotionHistory||[]),...(localProgress.promotionHistory||[])],item=>item.eventKey || `${item.type}:${item.rangeKey}`);
+  const rankProgress={...remoteProgress,...localProgress,fragmentEvents,medallionEvents,promotionHistory,fragments:Math.max(n(remoteProgress.fragments),n(localProgress.fragments)),simulationMedallions:Math.max(n(remoteProgress.simulationMedallions),n(localProgress.simulationMedallions)),simulationMedallionsUsed:Math.max(n(remoteProgress.simulationMedallionsUsed),n(localProgress.simulationMedallionsUsed)),globalSubstitutionsUsed:Math.max(n(remoteProgress.globalSubstitutionsUsed),n(localProgress.globalSubstitutionsUsed))};
+  const elementRewards=mergeByKey([...(remote.elementRewards||[]),...(local.elementRewards||[])],item=>item.eventKey || item.id);
+  const legacyChests=mergeByKey([...(remote.legacyChests||[]),...(local.legacyChests||[])],item=>item.id || item.attemptId);
+  const merged=Gamification.ensureState({...remote,...local,xpTransactions:[...transactions.values()],importBatches:[...batches.values()],rankProgress,elementRewards,legacyChests});
   Gamification.refreshProfile(merged);
   return merged;
 }
@@ -1714,6 +1726,7 @@ function ensureSimTopics() {
     answerHistory: run.answerHistory && typeof run.answerHistory === 'object' ? run.answerHistory : {},
     openedCount: run.openedCount && typeof run.openedCount === 'object' ? run.openedCount : {},
     reviewFlags: run.reviewFlags && typeof run.reviewFlags === 'object' ? run.reviewFlags : {},
+    reviewedErrors: run.reviewedErrors && typeof run.reviewedErrors === 'object' ? run.reviewedErrors : {},
     questionSeconds: run.questionSeconds && typeof run.questionSeconds === 'object' ? run.questionSeconds : {},
     questionVisited: run.questionVisited && typeof run.questionVisited === 'object' ? run.questionVisited : {},
     activeQuestionId: run.activeQuestionId || '',
@@ -2207,20 +2220,43 @@ function bindManualStudyEntry(date) {
   };
 }
 function gamificationActivityLabel(transaction) {
-  const labels={question_answer:'Questão respondida',question_error_review:'Erro revisado',video_progress:'Videoaula assistida',video_completion:'Videoaula concluída',flashcard_review:'Flashcard revisado',flashcard_session:'Sessão de flashcards',simulation_completion:'Simulado concluído',block_completion:'Bloco concluído',question_session:'Sessão de questões',import_reversal:'Importação desfeita'};
+  const labels={question_answer:'Questão respondida',question_error_review:'Erro revisado',video_progress:'Videoaula assistida',video_completion:'Videoaula concluída',flashcard_review:'Flashcard revisado',flashcard_session:'Sessão de flashcards',simulation_completion:'Simulado concluído',simulation_review:'Erros do simulado revisados',block_completion:'Bloco concluído',question_session:'Sessão de questões',import_reversal:'Importação desfeita'};
   return labels[transaction.activity_type] || transaction.activity_type || 'Atividade';
+}
+function elementLabel(element) { return ({fire:'Fogo',water:'Água',earth:'Terra',air:'Ar'})[element] || element || 'Sem elemento'; }
+function simulationGamificationStats() {
+  ensureGamificationState();
+  const runs=(state.simuladoRuns||[]).map(run=>({run,eligibility:Gamification.evaluateSimulationEligibility(simulationGamificationSnapshot(run),state.gamification)}));
+  const completed=runs.filter(item=>item.eligibility.isEligibleForCompletionXP);
+  const reviewed=completed.filter(item=>item.eligibility.isFullyReviewed);
+  const rankProgress=Gamification.ensureRankProgress(state.gamification);
+  const rewards=state.gamification.elementRewards||[];
+  const active=rewards.filter(reward=>reward.openedAt&&reward.expiresAt&&Date.parse(reward.expiresAt)>Date.now());
+  return {completed:completed.length,reviewed:reviewed.length,average:completed.length?completed.reduce((sum,item)=>sum+n(item.eligibility.scorePercent),0)/completed.length:0,fragments:n(rankProgress.fragments),medallionsAvailable:Math.max(0,n(rankProgress.simulationMedallions)-n(rankProgress.simulationMedallionsUsed)),activeRewards:active,sealedRewards:rewards.filter(reward=>!reward.openedAt)};
+}
+function renderSimulationGamificationDashboard() {
+  if(!Gamification) return '';
+  const stats=simulationGamificationStats();
+  const active=stats.activeRewards.sort((a,b)=>Date.parse(a.expiresAt)-Date.parse(b.expiresAt))[0];
+  const remaining=active?Math.max(0,Date.parse(active.expiresAt)-Date.now()):0;
+  const hours=Math.floor(remaining/3600000);
+  const minutes=Math.floor(remaining%3600000/60000);
+  const elementCard=active?`<div class="gamification-sim-element"><span class="eyebrow">Buff elemental ativo</span><strong>${active.elements.map(elementLabel).join(' + ')} · ${escapeHtml(active.rarityLabel||active.rarity)}</strong><span>x${String(active.multiplier).replace('.',',')} · ${hours}h ${minutes}min restantes</span></div>`:`<div class="gamification-sim-element muted"><span class="eyebrow">Buff elemental</span><strong>Nenhum buff ativo</strong><span>Corrija integralmente um simulado para liberar uma recompensa.</span></div>`;
+  return `<section class="card gamification-simulation-card"><div class="section-title"><div><span class="eyebrow">Jornada de simulados</span><h2>Ascensão e elementos</h2></div><button class="tiny-btn" onclick="ui.tab='simulados';render()">Abrir simulados</button></div><div class="gamification-sim-metrics"><div><strong>${stats.completed}</strong><span>concluídos</span></div><div><strong>${stats.reviewed}</strong><span>corrigidos</span></div><div><strong>${Math.round(stats.average)}%</strong><span>média</span></div><div><strong>${stats.fragments}/3</strong><span>fragmentos</span></div><div><strong>${stats.medallionsAvailable}</strong><span>medalhões livres</span></div></div>${elementCard}${stats.sealedRewards.length?`<button class="icon-btn primary" data-open-sealed-reward="${escapeAttr(stats.sealedRewards[0].id)}">Revelar ${stats.sealedRewards.length} recompensa${stats.sealedRewards.length===1?'':'s'}</button>`:''}</section>`;
 }
 function renderGamificationDashboard() {
   ensureGamificationState();
   const profile=Gamification ? Gamification.refreshProfile(state.gamification) : {level:1,totalXP:0,xpWithinLevel:0,xpForNextLevel:100,remainingXP:100,progress:0};
   const blocks=completedAcademicBlockIds();
-  const rank=Gamification?.getRankFromCompletedBlocks ? Gamification.getRankFromCompletedBlocks(blocks.length) : {name:'Aldeão',completedBlocks:blocks.length,nextRank:null,blocksForNextRank:0,progressPercent:0,isMaxRank:false,currentRangeStart:0};
+  const academicRank=Gamification?.getRankFromCompletedBlocks ? Gamification.getRankFromCompletedBlocks(blocks.length) : {name:'Aldeão',completedBlocks:blocks.length,nextRank:null,blocksForNextRank:0,progressPercent:0,isMaxRank:false,currentRangeStart:0};
+  const rank=Gamification?.getRankFromProgress ? Gamification.getRankFromProgress(blocks.length,state.gamification.rankProgress) : academicRank;
   const history=[...(state.gamification.xpTransactions || [])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,6);
   const classAsset=window.ENAMED_ICONS?.RpgAsset('class',{label:'Classe de estudo',size:34})||'';
-  const rankProgress=rank.isMaxRank ? 'Classe máxima alcançada' : `Faltam ${rank.blocksForNextRank} ${rank.blocksForNextRank===1?'bloco':'blocos'} para ${escapeHtml(rank.nextRank.name)}`;
-  const segmentTotal=rank.isMaxRank ? 30 : rank.nextRank.currentRangeStart-rank.currentRangeStart;
-  const segmentDone=rank.isMaxRank ? 30 : rank.completedBlocks-rank.currentRangeStart;
-  return `<section class="card gamification-card"><div class="gamification-head"><div class="gamification-rank">${classAsset}<div><span class="eyebrow">Classe RPG</span><h2>${escapeHtml(rank.name)} <small>· Nível ${profile.level}</small></h2><p>Blocos concluídos: <strong>${rank.completedBlocks}/30</strong></p></div></div><div class="gamification-progress"><div class="section-title"><div><span class="eyebrow">Experiência</span><h2>${Math.round(n(profile.totalXP))} XP acumulados</h2></div><span class="badge today">Nível ${profile.level}</span></div><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP neste nível</span><span>faltam ${Math.round(n(profile.remainingXP))} XP</span></div></div></div><div class="rank-progress-panel"><div><strong>${rank.isMaxRank?'Imperador':`Próxima classe: ${escapeHtml(rank.nextRank.name)}`}</strong><span>${rankProgress}</span></div><div class="progress" aria-label="Progresso para a próxima classe"><span style="width:${rank.progressPercent}%"></span></div><small>Progresso: ${segmentDone}/${segmentTotal} blocos</small></div>${history.length?`<div class="xp-history-mini">${history.map(transaction=>`<div><span><strong>${escapeHtml(gamificationActivityLabel(transaction))}</strong><small>${fmtDate(String(transaction.occurred_at||'').slice(0,10))}${transaction.is_legacy?' · Legado':''}</small></span><b class="${n(transaction.final_xp)<0?'negative':''}">${n(transaction.final_xp)>0?'+':''}${roundDisplayXP(transaction.final_xp)} XP</b></div>`).join('')}</div>`:'<div class="muted">O histórico de XP aparecerá após uma atividade nova ou uma importação retroativa confirmada.</div>'}</section>`;
+  const progressText=rank.isMaxRank?'Classe máxima alcançada':rank.accelerated?`Classe acelerada por simulado · progresso acadêmico real: ${academicRank.name}`:`Faltam ${academicRank.blocksForNextRank} ${academicRank.blocksForNextRank===1?'bloco':'blocos'} para ${escapeHtml(academicRank.nextRank.name)}`;
+  const segmentTotal=academicRank.isMaxRank?30:academicRank.nextRank.currentRangeStart-academicRank.currentRangeStart;
+  const segmentDone=academicRank.isMaxRank?30:academicRank.completedBlocks-academicRank.currentRangeStart;
+  const availableMedallions=Math.max(0,n(state.gamification.rankProgress?.simulationMedallions)-n(state.gamification.rankProgress?.simulationMedallionsUsed));
+  return `<section class="card gamification-card"><div class="gamification-head"><div class="gamification-rank">${classAsset}<div><span class="eyebrow">Classe RPG</span><h2>${escapeHtml(rank.name)} <small>· Nível ${profile.level}</small></h2><p>Blocos acadêmicos: <strong>${academicRank.completedBlocks}/30</strong>${rank.accelerated?` · <strong>aceleração ativa</strong>`:''}</p></div></div><div class="gamification-progress"><div class="section-title"><div><span class="eyebrow">Experiência</span><h2>${Math.round(n(profile.totalXP))} XP acumulados</h2></div><span class="badge today">Nível ${profile.level}</span></div><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP neste nível</span><span>faltam ${Math.round(n(profile.remainingXP))} XP</span></div></div></div><div class="rank-progress-panel"><div><strong>${rank.isMaxRank?'Imperador':`Próxima classe acadêmica: ${escapeHtml(academicRank.nextRank?.name||rank.nextRank?.name||'Imperador')}`}</strong><span>${progressText}</span></div><div class="progress" aria-label="Progresso acadêmico para a próxima classe"><span style="width:${academicRank.progressPercent}%"></span></div><small>${segmentDone}/${segmentTotal} blocos · ${availableMedallions} medalhão livre</small></div>${history.length?`<div class="xp-history-mini">${history.map(transaction=>`<div><span><strong>${escapeHtml(gamificationActivityLabel(transaction))}</strong><small>${fmtDate(String(transaction.occurred_at||'').slice(0,10))}${transaction.is_legacy?' · Legado':''}${transaction.metadata?.element?` · ${elementLabel(transaction.metadata.element)}`:''}</small></span><b class="${n(transaction.final_xp)<0?'negative':''}">${n(transaction.final_xp)>0?'+':''}${roundDisplayXP(transaction.final_xp)} XP</b></div>`).join('')}</div>`:'<div class="muted">O histórico de XP aparecerá após uma atividade nova ou uma importação retroativa confirmada.</div>'}</section>`;
 }
 function renderRankPromotionModal() {
   const rank=ui.rankPromotion;
@@ -2264,6 +2300,10 @@ function bindGamificationDashboard() {
     renderPainel();
   });
   document.getElementById('cancelLegacyPreview')?.addEventListener('click',()=>{ui.legacyImportPreview=null;renderPainel();});
+  document.querySelectorAll('[data-open-sealed-reward]').forEach(button=>button.addEventListener('click',event=>{
+    const result=Gamification.openElementReward(state.gamification,event.currentTarget.dataset.openSealedReward,{now:new Date()});
+    if(result.opened) { persist(); showStudyToast(`Recompensa ${result.reward.rarityLabel} revelada: ${result.reward.elements.map(elementLabel).join(' + ')}.`); }
+  }));
   document.getElementById('commitLegacyPreview')?.addEventListener('click',()=>{
     if(!ui.legacyImportPreview) return;
     const result=Gamification.commitLegacyImport(state.gamification,ui.legacyImportPreview,{userId:gamificationUserId()});
@@ -2287,6 +2327,7 @@ function renderPainel() {
     ${renderDailyAnalysis(ui.refDate)}
     ${renderGamificationDashboard()}
     ${renderRankPromotionModal()}
+    ${renderSimulationGamificationDashboard()}
     <div class="card">${renderDailyRoad(ui.refDate)}</div>
     ${renderPersonalDailyTasks(ui.refDate)}
     ${renderLegacyImportCard()}
@@ -2434,11 +2475,19 @@ function bindScheduleInputs() {
 }
 function renderSimulados() {
   ensureSimTopics();
-  const active = state.simuladoRuns.find(run => run.id === ui.activeSimRunId) || state.simuladoRuns.find(run => !run.finishedAt) || state.simuladoRuns[0] || null;
+  const active = state.simuladoRuns.find(run => run.id === ui.activeSimRunId) || state.simuladoRuns.find(run => !run.finishedAt&&!run.abandonedAt) || state.simuladoRuns[0] || null;
   if(active && !ui.activeSimRunId) ui.activeSimRunId = active.id;
-  document.getElementById('simulados').innerHTML = `${renderImportedSimulados()}${renderSimuladoGenerator()}${active ? renderSimuladoRun(active) : ''}<div class="grid two"><div class="card"><div class="section-title"><h2>Resumo dos simulados</h2></div>${renderSimSummary()}</div><div class="card"><div class="section-title"><h2>Próximo simulado</h2></div>${renderNextSim()}</div></div><div class="card"><div class="section-title"><h2>Histórico de provas geradas</h2><span class="muted">${state.simuladoRuns.length} provas</span></div>${renderSimuladoRunsList()}</div><div class="card"><div class="section-title"><h2>Registro editável</h2></div>${renderSimTable()}</div><div class="card"><div class="section-title"><h2>Temas que mais errei</h2><span class="muted">Pesquise aulas do cronograma ou digite um tema novo.</span></div>${renderMissedTopics()}</div>`;
+  document.getElementById('simulados').innerHTML = `${renderSimulationRewardModal()}${renderImportedSimulados()}${renderSimuladoGenerator()}${active ? renderSimuladoRun(active) : ''}<div class="grid two"><div class="card"><div class="section-title"><h2>Resumo dos simulados</h2></div>${renderSimSummary()}</div><div class="card"><div class="section-title"><h2>Próximo simulado</h2></div>${renderNextSim()}</div></div><div class="card"><div class="section-title"><h2>Histórico de provas geradas</h2><span class="muted">${state.simuladoRuns.length} provas</span></div>${renderSimuladoRunsList()}</div><div class="card"><div class="section-title"><h2>Registro editável</h2></div>${renderSimTable()}</div><div class="card"><div class="section-title"><h2>Temas que mais errei</h2><span class="muted">Pesquise aulas do cronograma ou digite um tema novo.</span></div>${renderMissedTopics()}</div>`;
   bindSimInputs();
   bindSimuladoInputs(active);
+}
+function renderSimulationRewardModal() {
+  const summary=ui.simulationRewardSummary;
+  if(!summary) return '';
+  const reward=(state.gamification?.elementRewards||[]).find(item=>item.id===summary.reward?.id)||summary.reward;
+  const progress=Gamification.ensureRankProgress(state.gamification);
+  const rewardText=reward?.openedAt?`${reward.elements.map(elementLabel).join(' + ')} · ${reward.rarityLabel} · x${String(reward.multiplier).replace('.',',')}`:'Sua recompensa elemental já foi sorteada e salva. Revele quando quiser.';
+  return `<div class="simulation-reward-overlay" role="dialog" aria-modal="true" aria-labelledby="simulationRewardTitle"><div class="simulation-reward-dialog"><span class="eyebrow">Correção concluída</span><h2 id="simulationRewardTitle">Simulado integralmente revisado</h2><div class="simulation-reward-metrics"><div><strong>+${roundDisplayXP(summary.xp)}</strong><span>XP de correção</span></div><div><strong>${summary.fragmentGranted?'1':'0'}</strong><span>fragmento obtido</span></div><div><strong>${progress.fragments}/3</strong><span>próximo medalhão</span></div></div><p>${escapeHtml(rewardText)}</p>${reward&&!reward.openedAt?`<button class="icon-btn primary" data-reveal-simulation-reward="${escapeAttr(reward.id)}">Revelar recompensa</button>`:''}${reward?.openedAt?`<div class="simulation-reward-revealed"><strong>${escapeHtml(rewardText)}</strong><span>${reward.durationHours} horas de duração</span></div>`:''}<button class="tiny-btn" id="closeSimulationReward">Continuar</button></div></div>`;
 }
 function renderImportedSimulados() {
   const cards = importedSimulados.map(sim => `<div class="sim-review-card"><div class="sim-review-head"><div><strong>${escapeHtml(sim.name)}</strong><div class="muted">${sim.questionCount || sim.questions?.length || 0} questões · comentários por questão · tags editáveis</div></div><button class="icon-btn primary" data-start-imported-sim="${escapeAttr(sim.id)}">Iniciar</button></div></div>`).join('');
@@ -2510,12 +2559,14 @@ function renderSimuladoRunsList() {
   if(!state.simuladoRuns.length) return '<div class="empty">Nenhuma prova gerada ainda.</div>';
   return `<div class="list">${state.simuladoRuns.map(run => {
     const result = simuladoResult(run);
-    return `<div class="item"><div class="date-chip">${run.finishedAt ? pct(result.rate) : `${answeredSimCount(run)}/${run.questionIds.length}`}</div><div><strong>${escapeHtml(run.name)}</strong><div class="muted">${run.finishedAt ? `Finalizado em ${new Date(run.finishedAt).toLocaleString('pt-BR')}` : 'Em andamento'} · ${run.questionIds.length} questões</div></div><div><button class="icon-btn" data-open-sim="${run.id}">${run.finishedAt?'Revisar':'Continuar'}</button></div></div>`;
+    const status=run.abandonedAt?'Abandonado':run.finishedAt?`Finalizado em ${new Date(run.finishedAt).toLocaleString('pt-BR')}`:'Em andamento';
+    return `<div class="item"><div class="date-chip">${run.finishedAt?pct(result.rate):`${answeredSimCount(run)}/${run.questionIds.length}`}</div><div><strong>${escapeHtml(run.name)}</strong><div class="muted">${status} · ${run.questionIds.length} questões</div></div><div><button class="icon-btn" data-open-sim="${run.id}">${run.finishedAt?'Revisar':run.abandonedAt?'Ver registro':'Continuar'}</button></div></div>`;
   }).join('')}</div>`;
 }
 function renderSimuladoRun(run) {
   const questions = simRunQuestions(run);
   if(!questions.length) return '<div class="card"><div class="empty">Este simulado não encontrou questões carregadas.</div></div>';
+  if(run.abandonedAt) return `<div class="card"><div class="empty"><strong>Simulado abandonado</strong><br>Esta tentativa foi preservada no histórico, mas não concede XP de conclusão, fragmento ou recompensa elemental.</div></div>`;
   run.currentIndex = Math.max(0, Math.min(n(run.currentIndex), questions.length - 1));
   const question = questions[run.currentIndex];
   return run.finishedAt ? renderSimuladoResult(run, questions) : renderSimuladoExam(run, questions, question);
@@ -2585,7 +2636,7 @@ function simuladoResult(run) {
     const changedCorrectToWrong = changed && firstAnswer === question.answer && selected !== question.answer;
     const changedWrongToCorrect = changed && firstAnswer !== question.answer && selected === question.answer;
     const confidenceScore = { red:20, yellow:55, green:90 }[confidence] || 0;
-    return { question, selected, correct, area, topic: tag.topic || 'Sem tema', subtopic: tag.subtopic || '', confidence, confidenceScore, seconds, skipped: !selected, guessed: confidence === 'red', overconfidentWrong: !correct && confidence === 'green', changed, changedCorrectToWrong, changedWrongToCorrect, changes:history.length, opened:n(run.openedCount?.[question.id]) || (run.questionVisited?.[question.id] ? 1 : 0), firstAnswer };
+    return { question, selected, correct, reviewed:Boolean(run.reviewedErrors?.[question.id]), area, topic: tag.topic || 'Sem tema', subtopic: tag.subtopic || '', confidence, confidenceScore, seconds, skipped: !selected, guessed: confidence === 'red', overconfidentWrong: !correct && confidence === 'green', changed, changedCorrectToWrong, changedWrongToCorrect, changes:history.length, opened:n(run.openedCount?.[question.id]) || (run.questionVisited?.[question.id] ? 1 : 0), firstAnswer };
   });
   const correct = rows.filter(row => row.correct).length;
   const byArea = ENAMED_AREAS.map(area => {
@@ -2649,14 +2700,23 @@ function renderSimuladoResult(run, questions) {
   return `<div class="card sim-postmortem"><div class="section-title"><div><span class="eyebrow">Centro de análise pós-simulado</span><h2>${escapeHtml(run.name)}</h2><div class="muted">Diagnóstico de conhecimento, confiança, tempo e qualidade das decisões.</div></div><button class="icon-btn" data-open-sim="${run.id}">Revisar prova</button></div><div class="sim-result-grid"><div class="sim-area-card"><strong>Resultado bruto</strong><div class="metric-value">${pct(result.rate)}</div><div class="muted">${result.correct}/${result.total} acertos</div></div><div class="sim-area-card primary"><strong>Domínio ajustado</strong><div class="metric-value">${pct(result.adjustedRate)}</div><div class="muted">acertos ponderados pela confiança</div></div><div class="sim-area-card"><strong>Tempo total</strong><div class="metric-value">${formatVideoTime(result.totalSeconds)}</div><div class="muted">média ${result.averageSeconds?formatVideoTime(result.averageSeconds):'—'} por questão</div></div><div class="sim-area-card"><strong>Não respondidas</strong><div class="metric-value">${result.skipped.length}</div><div class="muted">questões puladas</div></div><div class="sim-area-card"><strong>Erro na certeza</strong><div class="metric-value">${result.overconfidentWrong.length}</div><div class="muted">prioridade máxima</div></div><div class="sim-area-card"><strong>Alterações</strong><div class="metric-value">${result.changed.reduce((sum,row)=>sum+row.changes,0)}</div><div class="muted">${result.changedWrongToCorrect.length} ajudaram · ${result.changedCorrectToWrong.length} prejudicaram</div></div></div><div class="sim-analysis-section"><div class="section-title"><h3>Matriz acerto × confiança</h3><span class="muted">O que importa é a robustez do acerto.</span></div><div class="sim-matrix">${matrix}</div></div><div class="sim-analysis-section"><div class="section-title"><h3>Tempo e queda de desempenho</h3><span class="muted">Tempo improdutivo estimado: ${formatVideoTime(result.unproductiveSeconds)}</span></div><div class="sim-phase-list">${phases}</div></div><div class="sim-analysis-section"><div class="section-title"><h3>Desempenho por área</h3></div><div class="sim-result-grid">${result.byArea.map(area => { const areaRows=result.rows.filter(row=>row.area===area.area); const dangerous=areaRows.filter(row=>row.overconfidentWrong).length; const fragile=areaRows.filter(row=>row.correct&&row.confidenceScore<80).length; return `<div class="sim-area-card"><strong>${escapeHtml(area.area)}</strong><div class="metric-value">${pct(area.rate)}</div><div class="muted">${area.correct}/${area.total||0} · ${dangerous} erro${dangerous===1?'':'s'} confiante${dangerous===1?'':'s'} · ${fragile} acerto${fragile===1?'':'s'} frágil${fragile===1?'':'eis'}</div></div>`; }).join('')}</div></div><div class="sim-review-item sim-action-plan"><div class="section-title"><h3>Plano prioritário</h3><button class="icon-btn" id="sendSimWeakToFeynman">Enviar temas para Feynman</button></div><ol>${actions.map(action=>`<li>${escapeHtml(action)}</li>`).join('')}</ol><div class="topic-source">Temas críticos: ${escapeHtml(weakText)}</div></div>${renderSimuladoReview(run, result.rows)}</div>`;
 }
 function renderSimuladoReview(run, rows) {
+  const wrongRows=rows.filter(row=>!row.correct);
+  const reviewedCount=wrongRows.filter(row=>row.reviewed).length;
   return `<div class="sim-review-list">${rows.map((row,index) => {
     const tag = questionTag(row.question);
     const profile = simResultClassification(row, {slowLimit:Math.max(120, n(run.elapsedSeconds)/Math.max(1,rows.length)*1.3)});
     const changes = row.changes ? ` · ${row.changes} alteração${row.changes===1?'':'ões'} (${escapeHtml(row.firstAnswer || '—')} → ${escapeHtml(row.selected || '—')})` : '';
-    return `<div class="sim-review-item ${row.correct?'':'wrong'}"><div class="sim-question-head"><div><strong>Questão ${index+1} · ${escapeHtml(tag.area)}</strong><div class="muted">${escapeHtml(tag.topic)}${tag.subtopic?` · ${escapeHtml(tag.subtopic)}`:''}</div></div><span class="badge ${row.correct?'done':'no'}">${escapeHtml(profile)}</span></div><div class="muted">Sua resposta: ${escapeHtml(row.selected || 'em branco')} · Gabarito: ${escapeHtml(row.question.answer)} · Tempo: ${row.seconds ? formatVideoTime(row.seconds) : 'não registrado'}${changes} · Reaberta: ${row.opened || 0}x</div><div class="field-row" style="margin-top:8px"><input class="input" data-imported-tag="${row.question.id}" data-field="area" value="${escapeAttr(tag.area)}" placeholder="Área ENAMED"><input class="input" data-imported-tag="${row.question.id}" data-field="topic" value="${escapeAttr(tag.topic)}" placeholder="Tema principal"><input class="input" data-imported-tag="${row.question.id}" data-field="subtopic" value="${escapeAttr(tag.subtopic)}" placeholder="Subtema"></div>${row.question.comment?`<details class="material-original-toggle" style="margin-top:8px"><summary>Comentário da questão</summary><div class="markdown-preview">${renderMarkdown(row.question.comment)}</div></details>`:''}${renderQuestionFlashcardEditor(row.question, row)}</div>`;
-  }).join('')}</div>`;
+    const reviewAction=row.correct?'':`<button class="tiny-btn ${row.reviewed?'done':''}" data-review-sim-error="${escapeAttr(row.question.id)}">${row.reviewed?'Erro revisado ✓':'Marcar erro como revisado'}</button>`;
+    return `<div class="sim-review-item ${row.correct?'':'wrong'}"><div class="sim-question-head"><div><strong>Questão ${index+1} · ${escapeHtml(tag.area)}</strong><div class="muted">${escapeHtml(tag.topic)}${tag.subtopic?` · ${escapeHtml(tag.subtopic)}`:''}</div></div><span class="badge ${row.correct?'done':'no'}">${escapeHtml(profile)}</span></div><div class="muted">Sua resposta: ${escapeHtml(row.selected || 'em branco')} · Gabarito: ${escapeHtml(row.question.answer)} · Tempo: ${row.seconds ? formatVideoTime(row.seconds) : 'não registrado'}${changes} · Reaberta: ${row.opened || 0}x</div>${reviewAction}<div class="field-row" style="margin-top:8px"><input class="input" data-imported-tag="${row.question.id}" data-field="area" value="${escapeAttr(tag.area)}" placeholder="Área ENAMED"><input class="input" data-imported-tag="${row.question.id}" data-field="topic" value="${escapeAttr(tag.topic)}" placeholder="Tema principal"><input class="input" data-imported-tag="${row.question.id}" data-field="subtopic" value="${escapeAttr(tag.subtopic)}" placeholder="Subtema"></div>${row.question.comment?`<details class="material-original-toggle" style="margin-top:8px"><summary>Comentário da questão</summary><div class="markdown-preview">${renderMarkdown(row.question.comment)}</div></details>`:''}${renderQuestionFlashcardEditor(row.question, row)}</div>`;
+  }).join('')}<div class="sim-review-progress"><strong>Revisão dos erros: ${reviewedCount}/${wrongRows.length}</strong><span>${wrongRows.length===reviewedCount?'Revisão completa: fragmento e recompensa liberados.':'Leia os comentários e marque cada erro depois de revisá-lo.'}</span></div></div>`;
 }
 function bindSimuladoInputs(activeRun) {
+  document.getElementById('closeSimulationReward')?.addEventListener('click',()=>{ui.simulationRewardSummary=null;render();});
+  document.querySelectorAll('[data-reveal-simulation-reward]').forEach(button=>button.addEventListener('click',event=>{
+    const result=Gamification.openElementReward(state.gamification,event.currentTarget.dataset.revealSimulationReward,{now:new Date()});
+    if(result.reward) ui.simulationRewardSummary={...ui.simulationRewardSummary,reward:result.reward};
+    persist();
+  }));
   const generate = document.getElementById('generateSimulado');
   if(generate) generate.onclick = () => generateSimuladoRun();
   document.querySelectorAll('[data-start-imported-sim]').forEach(button => button.onclick = e => startImportedSimulado(e.currentTarget.dataset.startImportedSim));
@@ -2667,6 +2727,14 @@ function bindSimuladoInputs(activeRun) {
   });
   bindFlashcardMarkdownTools(document.getElementById('simulados') || document);
   document.querySelectorAll('[data-remove-question-card]').forEach(button => button.onclick = e => removeQuestionFlashcard(e.currentTarget.dataset.removeQuestionCard, e.currentTarget.dataset.cardId));
+  document.querySelectorAll('[data-review-sim-error]').forEach(button=>button.onclick=e=>{
+    const questionId=e.currentTarget.dataset.reviewSimError;
+    activeRun.reviewedErrors ||= {};
+    activeRun.reviewedErrors[questionId]=!activeRun.reviewedErrors[questionId];
+    const summary=processSimulationReviewGamification(activeRun);
+    persist();
+    if(summary?.eligibility?.fullyReviewed) showStudyToast('Revisão do simulado concluída. Recompensas registradas sem duplicação.');
+  });
   if(!activeRun) return;
   document.querySelectorAll('[data-sim-go]').forEach(button => button.onclick = e => { setSimQuestionIndex(activeRun, n(e.currentTarget.dataset.simGo)); saveStateOnly(); render(); });
   document.querySelectorAll('[data-sim-answer]').forEach(button => button.onclick = e => {
@@ -2797,6 +2865,7 @@ function startImportedSimulado(simId) {
     name: sim.name,
     sourceType: 'imported',
     importedSimId: sim.id,
+    sourceSimulationId: sim.id,
     createdAt: new Date().toISOString(),
     startedAt: new Date().toISOString(),
     finishedAt: '',
@@ -2814,6 +2883,7 @@ function startImportedSimulado(simId) {
     answerHistory: {},
     openedCount: {},
     reviewFlags: {},
+    reviewedErrors: {},
     areaTargets: {}
   };
   state.simuladoRuns.unshift(run);
@@ -2832,6 +2902,7 @@ function generateSimuladoRun() {
     name: document.getElementById('simRunName')?.value?.trim() || `Simulado ENAMED ${state.simuladoRuns.length + 1}`,
     sourceType: 'generated',
     importedSimId: '',
+    sourceSimulationId: `generated:${Gamification?.stableHash?.(questions.map(question=>question.id).sort())||Date.now()}`,
     createdAt: new Date().toISOString(),
     startedAt: new Date().toISOString(),
     finishedAt: '',
@@ -2849,6 +2920,7 @@ function generateSimuladoRun() {
     answerHistory: {},
     openedCount: {},
     reviewFlags: {},
+    reviewedErrors: {},
     areaTargets: targets
   };
   state.simuladoRuns.unshift(run);
@@ -2884,6 +2956,47 @@ function tickSimuladoTimer(runId) {
   if(run.secondsLeft % 15 === 0) saveStateOnly();
   if(run.secondsLeft <= 0) finishSimuladoRun(run);
 }
+function simulationGamificationSnapshot(run) {
+  const result=simuladoResult(run);
+  return {id:run.id,attemptId:run.id,simulationId:run.sourceSimulationId||run.importedSimId||run.id,finishedAt:run.finishedAt,finished:Boolean(run.finishedAt),abandoned:Boolean(run.abandonedAt),totalQuestions:result.total,answeredQuestions:result.rows.filter(row=>Boolean(row.selected)).length,correctAnswers:result.correct,reviewedErrors:result.rows.filter(row=>!row.correct&&row.reviewed).length,questionResults:result.rows.map(row=>({questionId:row.question.id,selected:row.selected,answered:Boolean(row.selected),correct:row.correct,reviewed:row.reviewed}))};
+}
+function awardSimulationQuestionXP(run,result) {
+  result.rows.filter(row=>row.selected).forEach(row=>{
+    const previous=latestQuestionXPTransaction(row.question.id);
+    const occurredAt=run.finishedAt||new Date().toISOString();
+    const calculation=Gamification.calculateQuestionXP({correct:row.correct,occurredAt,previousOccurredAt:previous?.occurred_at},state.gamification?.rules);
+    awardGamificationXP({activity_type:'question_answer',source_type:'question',source_id:row.question.id,source_event_id:`simulation:${run.id}:question:${row.question.id}`,base_xp:calculation.finalBaseXP,reason:'question_answer',occurred_at:occurredAt,metadata:{correct:row.correct,selected:row.selected,answer:row.question.answer||'',simulationAttemptId:run.id,repetitionMultiplier:calculation.repetitionMultiplier}});
+  });
+}
+function processSimulationCompletionGamification(run) {
+  if(!Gamification||!run?.finishedAt) return null;
+  ensureGamificationState();
+  const result=simuladoResult(run);
+  const eligibility=Gamification.evaluateSimulationEligibility(simulationGamificationSnapshot(run),state.gamification);
+  if(!eligibility.isEligibleForCompletionXP) return {eligibility};
+  awardSimulationQuestionXP(run,result);
+  const bonus=Gamification.calculateSimulationBonus({completed:true,totalQuestions:eligibility.totalQuestions,correctAnswers:eligibility.correctAnswers,reviewedErrors:0,rules:state.gamification.rules});
+  const repeatWindowMs=Math.max(0,n(state.gamification.rules?.simulation?.repeatWindowDays)||30)*86400000;
+  const finishedAt=Date.parse(run.finishedAt);
+  const previousAttempts=gamificationTransactions().filter(item=>item.activity_type==='simulation_completion'&&item.source_id===eligibility.simulationId&&item.source_event_id!==`simulation-completion:${eligibility.attemptId}`&&finishedAt-Date.parse(item.occurred_at||0)>=0&&finishedAt-Date.parse(item.occurred_at||0)<=repeatWindowMs).length;
+  const repeatMultiplier=previousAttempts?(n(state.gamification.rules?.simulation?.repeatXPMultiplier)||0.5):1;
+  awardGamificationXP({activity_type:'simulation_completion',source_type:'simulation',source_id:eligibility.simulationId,source_event_id:`simulation-completion:${eligibility.attemptId}`,base_xp:bonus.completionXP*repeatMultiplier,reason:'simulation_completion',occurred_at:run.finishedAt,metadata:{attemptId:eligibility.attemptId,totalQuestions:eligibility.totalQuestions,correctAnswers:eligibility.correctAnswers,scorePercent:eligibility.scorePercent,repeatMultiplier,breakdown:{completionBase:bonus.completionBase,questionQuantityBonus:bonus.questionQuantityBonus,performanceBonus:bonus.performanceBonus,reviewedErrorsBonus:0,cappedValue:bonus.completionXP,finalXP:bonus.completionXP*repeatMultiplier}}});
+  return processSimulationReviewGamification(run,{silent:eligibility.incorrectAnswers>0});
+}
+function processSimulationReviewGamification(run,{silent=false}={}) {
+  if(!Gamification||!run?.finishedAt) return null;
+  const eligibility=Gamification.evaluateSimulationEligibility(simulationGamificationSnapshot(run),state.gamification);
+  if(!eligibility.isEligibleForFragment) return {eligibility};
+  const bonus=Gamification.calculateSimulationBonus({completed:true,totalQuestions:eligibility.totalQuestions,correctAnswers:eligibility.correctAnswers,reviewedErrors:eligibility.reviewedErrors,rules:state.gamification.rules});
+  const reviewAward=awardGamificationXP({activity_type:'simulation_review',source_type:'simulation',source_id:eligibility.simulationId,source_event_id:`simulation-review:${eligibility.attemptId}`,base_xp:bonus.reviewedErrorsBonus,reason:'simulation_errors_reviewed',occurred_at:new Date().toISOString(),metadata:{attemptId:eligibility.attemptId,reviewedErrors:eligibility.reviewedErrors,breakdown:{reviewedErrorsBonus:bonus.reviewedErrorsBonus,cappedValue:bonus.cappedValue,finalXP:bonus.reviewedErrorsBonus}}});
+  const fragment=Gamification.grantSimulationFragment(state.gamification,eligibility);
+  const reward=Gamification.createElementReward(state.gamification,eligibility);
+  const acceleration=Gamification.applyRankAcceleration(state.gamification,completedAcademicBlockIds().length);
+  reconcileRankProgress(completedAcademicBlockIds().length);
+  const summary={attemptId:run.id,eligibility,xp:n(reviewAward.transaction?.final_xp),fragmentGranted:fragment.granted,medallionCreated:fragment.medallionCreated,reward:reward.reward,accelerated:acceleration.consumed};
+  if(!silent&&(fragment.granted||reward.created||n(summary.xp)>0||acceleration.consumed)) ui.simulationRewardSummary=summary;
+  return summary;
+}
 function finishSimuladoRun(run) {
   if(simuladoTimer.interval && simuladoTimer.runId === run.id) clearInterval(simuladoTimer.interval);
   simuladoTimer.interval = null;
@@ -2898,6 +3011,7 @@ function finishSimuladoRun(run) {
   run.correct = result.correct;
   run.total = result.total;
   upsertManualSimFromRun(run, result);
+  processSimulationCompletionGamification(run);
   persist();
 }
 function cancelSimuladoRun(run) {
@@ -2905,8 +3019,11 @@ function cancelSimuladoRun(run) {
   simuladoTimer.interval = null;
   simuladoTimer.runId = '';
   stopAutoStudy('simulado');
-  state.simuladoRuns = state.simuladoRuns.filter(item => item.id !== run.id);
-  if(ui.activeSimRunId === run.id) ui.activeSimRunId = state.simuladoRuns[0]?.id || '';
+  finishSimQuestionTiming(run);
+  run.paused=true;
+  run.abandonedAt=run.abandonedAt||new Date().toISOString();
+  run.elapsedSeconds=Math.max(n(run.elapsedSeconds),n(run.durationMinutes)*60-n(run.secondsLeft));
+  if(ui.activeSimRunId===run.id) ui.activeSimRunId='';
   persist();
 }
 function upsertManualSimFromRun(run, result) {
