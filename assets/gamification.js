@@ -5,7 +5,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function() {
   'use strict';
 
-  const VERSION = 'mvp-1';
+  const VERSION = 'mvp-2';
   const FEATURE_FLAGS = Object.freeze({ relationalSync:false });
   const RANKS = Object.freeze([
     Object.freeze({key:'aldeao',name:'Aldeão',start:0,end:2}),
@@ -24,7 +24,7 @@
     question: Object.freeze({ answer:2, correct:3, reviewedError:3, consolidation:1, repeatUnder24h:0.2, repeatUnder7d:0.5 }),
     flashcard: Object.freeze({ dueReview:1 }),
     video: Object.freeze({ xpPerMinute:0.4, completionBonus:5, completionThreshold:0.9 }),
-    simulation: Object.freeze({ completionBase:50, xpPerQuestion:0.5, reviewPerError:2, reviewCap:100, bonusCap:300 }),
+    simulation: Object.freeze({ completionBase:50, xpPerQuestion:0.5, reviewPerError:2, reviewCap:100, bonusCap:300, minQuestions:10, repeatXPMultiplier:0.5, repeatWindowDays:30, maxFragmentsPerSimulation:1, fragmentsPerMedallion:3, globalSubstitutionLimit:3, legacyChestLimit:3 }),
     block: Object.freeze({ completionBonus:100 }),
     level: Object.freeze({ firstLevelCost:100, growthPerLevel:20 }),
     multiplierCap:1.5
@@ -81,8 +81,8 @@
     };
   }
 
-  function evaluateRankPromotion(previous={},completedBlocks=0) {
-    const rank=getRankFromCompletedBlocks(completedBlocks);
+  function evaluateRankPromotion(previous={},completedBlocks=0,rankProgress={}) {
+    const rank=getRankFromProgress(completedBlocks,rankProgress);
     const source=previous && typeof previous==='object' ? previous : {};
     const initialized=Boolean(source.initialized);
     const shown=new Set(Array.isArray(source.shownRankKeys) ? source.shownRankKeys.map(text).filter(Boolean) : []);
@@ -159,14 +159,194 @@
   }
 
   function calculateSimulationBonus(input={}) {
-    if(!input.completed || input.abandoned) return {baseXP:0,performanceBonus:0,reviewBonus:0};
+    if(!input.completed || input.abandoned) return {baseXP:0,finalXP:0,completionXP:0,completionBase:0,questionQuantityBonus:0,questionBonus:0,performanceBonus:0,reviewedErrorsBonus:0,reviewBonus:0,cappedValue:0};
     const rules=mergeRules(input.rules || {});
     const total=Math.max(0,number(input.totalQuestions));
     const correct=Math.max(0,Math.min(total,number(input.correctAnswers)));
     const rate=total ? correct/total : 0;
     const performanceBonus=rate>=0.9?50:rate>=0.8?40:rate>=0.7?30:rate>=0.6?20:rate>=0.5?10:0;
     const reviewBonus=Math.min(number(input.reviewBonusCap)||number(rules.simulation.reviewCap),Math.max(0,number(input.reviewedErrors))*number(rules.simulation.reviewPerError));
-    return {baseXP:round(Math.min(number(input.cap)||number(rules.simulation.bonusCap),number(rules.simulation.completionBase)+number(rules.simulation.xpPerQuestion)*total+performanceBonus+reviewBonus)),performanceBonus,reviewBonus};
+    const completionBase=number(rules.simulation.completionBase);
+    const questionQuantityBonus=number(rules.simulation.xpPerQuestion)*total;
+    const cap=number(input.cap)||number(rules.simulation.bonusCap);
+    const completionXP=Math.min(cap,completionBase+questionQuantityBonus+performanceBonus);
+    const reviewXP=Math.min(reviewBonus,Math.max(0,cap-completionXP));
+    const finalXP=round(completionXP+reviewXP);
+    return {baseXP:finalXP,finalXP,completionXP:round(completionXP),completionBase:round(completionBase),questionQuantityBonus:round(questionQuantityBonus),questionBonus:round(questionQuantityBonus),performanceBonus:round(performanceBonus),reviewedErrorsBonus:round(reviewXP),reviewBonus:round(reviewXP),cappedValue:finalXP};
+  }
+
+  function simulationIdOf(attempt={}) { return text(attempt.simulationId || attempt.importedSimId || attempt.sourceSimulationId || attempt.id || attempt.attemptId); }
+  function evaluateSimulationEligibility(simulationAttempt={},container={}) {
+    const rules=mergeRules(container?.rules || simulationAttempt.rules || {});
+    const attemptId=text(simulationAttempt.attemptId || simulationAttempt.id);
+    const simulationId=simulationIdOf(simulationAttempt);
+    const results=Array.isArray(simulationAttempt.questionResults) ? simulationAttempt.questionResults : [];
+    const totalQuestions=Math.max(0,Math.floor(number(simulationAttempt.totalQuestions ?? simulationAttempt.total ?? results.length)));
+    const answeredQuestions=Math.max(0,Math.min(totalQuestions,Math.floor(number(simulationAttempt.answeredQuestions ?? simulationAttempt.answered ?? results.filter(item=>item?.answered !== false && text(item?.selected)).length))));
+    const correctAnswers=Math.max(0,Math.min(totalQuestions,Math.floor(number(simulationAttempt.correctAnswers ?? simulationAttempt.correct ?? results.filter(item=>item?.correct).length))));
+    const incorrectAnswers=Math.max(0,totalQuestions-correctAnswers);
+    const reviewedErrors=Math.max(0,Math.min(incorrectAnswers,Math.floor(number(simulationAttempt.reviewedErrors ?? results.filter(item=>!item?.correct && item?.reviewed).length))));
+    const finished=Boolean(simulationAttempt.finished || simulationAttempt.completed || simulationAttempt.finishedAt);
+    const abandoned=Boolean(simulationAttempt.abandoned || simulationAttempt.cancelled || simulationAttempt.canceled);
+    const fullyReviewed=finished && (incorrectAnswers===0 || reviewedErrors>=incorrectAnswers);
+    const reasons=[];
+    if(!attemptId) reasons.push('missing_attempt_id');
+    if(!simulationId) reasons.push('missing_simulation_id');
+    if(abandoned) reasons.push('abandoned');
+    if(!finished) reasons.push('not_finished');
+    if(totalQuestions<number(rules.simulation.minQuestions)) reasons.push('below_minimum_questions');
+    if(answeredQuestions<totalQuestions) reasons.push('incomplete_answers');
+    const completionEligible=reasons.length===0;
+    const reviewEligible=completionEligible && fullyReviewed;
+    const completionEventKey=`simulation-completion:${attemptId}`;
+    const completionAlreadyProcessed=Boolean(container?.xpTransactions?.some(item=>item.source_event_id===completionEventKey));
+    return {attemptId,simulationId,totalQuestions,answeredQuestions,correctAnswers,incorrectAnswers,reviewedErrors,scorePercent:totalQuestions?round(correctAnswers/totalQuestions*100):0,isFinished:finished,isFullyReviewed:fullyReviewed,isEligibleForCompletionXP:completionEligible,isEligibleForFragment:reviewEligible,isEligibleForElementReward:reviewEligible,ineligibilityReasons:reasons,completionEventKey,completionAlreadyProcessed,finished,abandoned,fullyReviewed,completionEligible,fragmentEligible:reviewEligible,elementRewardEligible:reviewEligible,reasons};
+  }
+
+  function ensureRankProgress(container={}) {
+    const source=container.rankProgress && typeof container.rankProgress==='object' ? container.rankProgress : {};
+    source.fragments=Math.max(0,Math.floor(number(source.fragments)));
+    source.simulationMedallions=Math.max(0,Math.floor(number(source.simulationMedallions)));
+    source.simulationMedallionsUsed=Math.max(0,Math.floor(number(source.simulationMedallionsUsed)));
+    source.globalSubstitutionsUsed=Math.max(0,Math.floor(number(source.globalSubstitutionsUsed)));
+    source.fragmentEvents=Array.isArray(source.fragmentEvents)?source.fragmentEvents:[];
+    source.medallionEvents=Array.isArray(source.medallionEvents)?source.medallionEvents:[];
+    source.promotionHistory=Array.isArray(source.promotionHistory)?source.promotionHistory:[];
+    container.rankProgress=source;
+    return source;
+  }
+
+  function grantSimulationFragment(container,eligibility={},options={}) {
+    const rules=mergeRules(container?.rules || options.rules || {});
+    const progress=ensureRankProgress(container);
+    const attemptId=text(eligibility.attemptId);
+    const simulationId=text(eligibility.simulationId);
+    const eventKey=`simulation-fragment:${attemptId}`;
+    const duplicate=progress.fragmentEvents.find(event=>event.eventKey===eventKey);
+    if(duplicate) return {granted:false,duplicate:true,event:duplicate,medallionCreated:false,progress};
+    if(!eligibility.isEligibleForFragment || !attemptId || !simulationId) return {granted:false,duplicate:false,reason:'not_eligible',medallionCreated:false,progress};
+    const priorForSimulation=progress.fragmentEvents.filter(event=>event.simulationId===simulationId && event.granted!==false).length;
+    if(priorForSimulation>=number(rules.simulation.maxFragmentsPerSimulation)) return {granted:false,duplicate:false,reason:'simulation_fragment_limit',medallionCreated:false,progress};
+    const event={eventKey,attemptId,simulationId,createdAt:iso(options.now),legacy:Boolean(options.legacy),granted:true};
+    progress.fragmentEvents.push(event);
+    progress.fragments+=1;
+    let medallionCreated=false;
+    const needed=Math.max(1,Math.floor(number(rules.simulation.fragmentsPerMedallion)||3));
+    if(progress.fragments>=needed) {
+      progress.fragments-=needed;
+      progress.simulationMedallions+=1;
+      medallionCreated=true;
+      progress.medallionEvents.push({eventKey:`simulation-medallion:${eventKey}`,sourceFragmentEventKey:eventKey,simulationId,attemptId,createdAt:iso(options.now)});
+    }
+    return {granted:true,duplicate:false,event,medallionCreated,progress};
+  }
+
+  function getRankFromProgress(completedBlocks,rankProgress={}) {
+    const academic=getRankFromCompletedBlocks(completedBlocks);
+    const promotions=Array.isArray(rankProgress?.promotionHistory)?rankProgress.promotionHistory:[];
+    const accelerated=promotions.filter(item=>item?.type==='simulation_substitution' && item?.consumed).sort((a,b)=>number(b.toRankIndex)-number(a.toRankIndex))[0];
+    const effectiveIndex=Math.min(RANKS.length-1,Math.max(academic.index,number(accelerated?.toRankIndex)));
+    const current=RANKS[effectiveIndex];
+    const next=RANKS[effectiveIndex+1] || null;
+    return {...academic,key:current.key,name:current.name,index:effectiveIndex,nextRank:next?{key:next.key,name:next.name,index:effectiveIndex+1,currentRangeStart:next.start,currentRangeEnd:next.end}:null,isMaxRank:!next,accelerated:effectiveIndex>academic.index,academicRank:academic};
+  }
+
+  function applyRankAcceleration(container,completedBlocks,options={}) {
+    const progress=ensureRankProgress(container);
+    const rules=mergeRules(container?.rules || options.rules || {});
+    const academic=getRankFromCompletedBlocks(completedBlocks);
+    const rangeKey=academic.key;
+    const existing=progress.promotionHistory.find(item=>item.type==='simulation_substitution' && item.rangeKey===rangeKey && item.consumed);
+    if(existing) return {consumed:false,duplicate:true,event:existing,rank:getRankFromProgress(completedBlocks,progress)};
+    const available=progress.simulationMedallions-progress.simulationMedallionsUsed;
+    const canAdvance=academic.completedBlocks-academic.currentRangeStart>=2 && academic.nextRank && academic.nextRank.key!=='imperador' && available>0 && progress.globalSubstitutionsUsed<number(rules.simulation.globalSubstitutionLimit);
+    if(!canAdvance) return {consumed:false,duplicate:false,rank:getRankFromProgress(completedBlocks,progress)};
+    const event={eventKey:`rank-substitution:${rangeKey}`,type:'simulation_substitution',rangeKey,fromRankIndex:academic.index,toRankIndex:academic.index+1,completedBlocks:academic.completedBlocks,consumed:true,createdAt:iso(options.now)};
+    progress.promotionHistory.push(event);
+    progress.simulationMedallionsUsed+=1;
+    progress.globalSubstitutionsUsed+=1;
+    return {consumed:true,duplicate:false,event,rank:getRankFromProgress(completedBlocks,progress)};
+  }
+
+  const ELEMENTS=Object.freeze(['fire','water','earth','air']);
+  const ELEMENT_ACTIVITY=Object.freeze({question_answer:'fire',question_error_review:'fire',video_progress:'water',video_completion:'water',material_reading:'earth',reading:'earth',summary:'earth',flashcard_review:'air',flashcard_session:'air'});
+  const RARITIES=Object.freeze({common:{label:'Comum',multiplier:1.2,hours:24,elements:1},rare:{label:'Rara',multiplier:1.2,hours:24,elements:2},epic:{label:'Épica',multiplier:1.35,hours:48,elements:1,shield:true},legendary:{label:'Lendária',multiplier:1.5,hours:72,elements:1,title:true}});
+  function secureRandom() { if(typeof crypto!=='undefined' && typeof crypto.getRandomValues==='function'){const values=new Uint32Array(1);crypto.getRandomValues(values);return values[0]/4294967296;} throw new Error('RNG criptograficamente seguro indisponível'); }
+  function rarityFromRoll(value) { const roll=Math.max(0,Math.min(.999999,number(value))); return roll<.60?'common':roll<.85?'rare':roll<.97?'epic':'legendary'; }
+  function ensureElementRewards(container={}) { if(!Array.isArray(container.elementRewards)) container.elementRewards=[]; return container.elementRewards; }
+  function createElementReward(container,eligibility={},options={}) {
+    const rewards=ensureElementRewards(container);
+    const attemptId=text(eligibility.attemptId);
+    const eventKey=`simulation-element-reward:${attemptId}`;
+    const duplicate=rewards.find(item=>item.eventKey===eventKey);
+    if(duplicate) return {created:false,duplicate:true,reward:duplicate};
+    if(!eligibility.isEligibleForElementReward || !attemptId || options.legacy) return {created:false,duplicate:false,reason:'not_eligible',reward:null};
+    const rng=typeof options.rng==='function'?options.rng:secureRandom;
+    const rarity=rarityFromRoll(rng());
+    const config=RARITIES[rarity];
+    const first=Math.min(ELEMENTS.length-1,Math.floor(rng()*ELEMENTS.length));
+    const elements=[ELEMENTS[first]];
+    if(config.elements===2) { let second=Math.min(ELEMENTS.length-1,Math.floor(rng()*ELEMENTS.length)); if(second===first) second=(first+1)%ELEMENTS.length; elements.push(ELEMENTS[second]); }
+    const generatedAt=iso(options.now);
+    const reward={id:id('element'),eventKey,attemptId,simulationId:text(eligibility.simulationId),rarity,rarityLabel:config.label,elements,multiplier:config.multiplier,durationHours:config.hours,status:'sealed',generatedAt,createdAt:generatedAt,openedAt:'',expiresAt:'',shieldAvailable:Boolean(config.shield),temporaryTitle:Boolean(config.title),temporaryFrame:Boolean(config.title),legacy:false};
+    rewards.push(reward);
+    return {created:true,duplicate:false,reward};
+  }
+  function openElementReward(container,rewardId,options={}) {
+    const reward=ensureElementRewards(container).find(item=>item.id===rewardId || item.eventKey===rewardId);
+    if(!reward) return {opened:false,reason:'not_found',reward:null};
+    if(reward.openedAt) return {opened:false,duplicate:true,reward};
+    const openedAt=iso(options.now);
+    reward.openedAt=openedAt;
+    reward.expiresAt=new Date(new Date(openedAt).getTime()+number(reward.durationHours)*60*60*1000).toISOString();
+    reward.status='active';
+    return {opened:true,duplicate:false,reward};
+  }
+  function getActiveElementMultipliers(containerOrRewards,activityType,now=new Date()) {
+    const rewards=Array.isArray(containerOrRewards)?containerOrRewards:ensureElementRewards(containerOrRewards || {});
+    const element=ELEMENT_ACTIVITY[text(activityType)] || '';
+    const at=new Date(now).getTime();
+    rewards.forEach(item=>{if(item.openedAt && item.expiresAt && new Date(item.expiresAt).getTime()<=at) item.status='expired';});
+    if(!element) return {element:'',multiplier:1,rewardId:'',rarity:'',activeRewards:[]};
+    const active=rewards.filter(item=>item.openedAt && item.expiresAt && new Date(item.openedAt).getTime()<=at && new Date(item.expiresAt).getTime()>at && item.elements?.includes(element));
+    const best=active.sort((a,b)=>number(b.multiplier)-number(a.multiplier))[0] || null;
+    return {element,multiplier:best?Math.min(1.5,number(best.multiplier)):1,rewardId:best?.id || '',rarity:best?.rarity || '',activeRewards:active};
+  }
+
+  function previewLegacySimulationChests(attempts=[],container={},options={}) {
+    const limit=Math.max(0,Math.floor(number(options.limit ?? mergeRules(container?.rules || {}).simulation.legacyChestLimit)));
+    const existing=new Set((container.legacyChests||[]).map(item=>text(item.attemptId)));
+    const candidates=[];
+    attempts.forEach(attempt=>{
+      const eligibility=evaluateSimulationEligibility(attempt,container);
+      if(!eligibility.isEligibleForFragment || !eligibility.attemptId || existing.has(eligibility.attemptId)) return;
+      candidates.push({attemptId:eligibility.attemptId,simulationId:eligibility.simulationId,scorePercent:eligibility.scorePercent,reviewedErrors:eligibility.reviewedErrors,eventKey:`legacy-chest:${eligibility.attemptId}`});
+    });
+    return {candidates:candidates.slice(0,Math.max(0,limit-(container.legacyChests||[]).length)),totalEligible:candidates.length,limit};
+  }
+  function createLegacyChest(container,attempt={},options={}) {
+    if(!Array.isArray(container.legacyChests)) container.legacyChests=[];
+    const attemptId=text(attempt.attemptId || attempt.id);
+    const existing=container.legacyChests.find(item=>item.attemptId===attemptId);
+    if(existing) return {created:false,duplicate:true,chest:existing};
+    const limit=Math.max(0,Math.floor(number(options.limit ?? mergeRules(container?.rules || {}).simulation.legacyChestLimit)));
+    const eligibility=evaluateSimulationEligibility(attempt,container);
+    if(!attemptId || container.legacyChests.length>=limit || !eligibility.isEligibleForFragment || !options.confirmed) return {created:false,duplicate:false,reason:!options.confirmed?'confirmation_required':'limit_or_not_eligible'};
+    const chest={id:id('legacy-chest'),eventKey:`legacy-chest:${attemptId}`,attemptId,simulationId:simulationIdOf(attempt),createdAt:iso(options.now),openedAt:'',rewardId:''};
+    container.legacyChests.push(chest);
+    return {created:true,duplicate:false,chest};
+  }
+  function openLegacyChest(container,chestId,options={}) {
+    const chest=(container.legacyChests||[]).find(item=>item.id===chestId);
+    if(!chest) return {opened:false,reason:'not_found'};
+    if(chest.openedAt) return {opened:false,duplicate:true,chest,reward:(container.elementRewards||[]).find(item=>item.id===chest.rewardId)};
+    const eligibility={attemptId:`legacy-chest-${chest.id}`,simulationId:chest.simulationId,isEligibleForElementReward:true};
+    const created=createElementReward(container,eligibility,{...options,legacy:false});
+    if(!created.reward) return {opened:false,reason:created.reason};
+    created.reward.legacy=true;
+    openElementReward(container,created.reward.id,options);
+    chest.openedAt=created.reward.openedAt; chest.rewardId=created.reward.id;
+    return {opened:true,duplicate:false,chest,reward:created.reward};
   }
 
   function applyMultiplierCap(multipliers={}, cap=DEFAULT_RULES.multiplierCap) {
@@ -253,6 +433,9 @@
     if(!Array.isArray(container.importBatches)) container.importBatches=[];
     if(!container.rules || typeof container.rules!=='object') container.rules=clone(DEFAULT_RULES);
     if(!container.profile || typeof container.profile!=='object') container.profile={};
+    ensureRankProgress(container);
+    ensureElementRewards(container);
+    if(!Array.isArray(container.legacyChests)) container.legacyChests=[];
     container.version=VERSION;
     refreshProfile(container);
     return container;
@@ -413,9 +596,11 @@
   }
 
   return {
-    VERSION,FEATURE_FLAGS,RANKS,DEFAULT_RULES,mergeRules,getRankFromCompletedBlocks,evaluateRankPromotion,repetitionMultiplier,calculateQuestionXP,calculateVideoXP,evaluateFlashcardReviewXP,awardFlashcardReviewXP,calculateBlockXP,
+    VERSION,FEATURE_FLAGS,RANKS,DEFAULT_RULES,mergeRules,getRankFromCompletedBlocks,getRankFromProgress,evaluateRankPromotion,applyRankAcceleration,repetitionMultiplier,calculateQuestionXP,calculateVideoXP,evaluateFlashcardReviewXP,awardFlashcardReviewXP,calculateBlockXP,
     calculateSimulationBonus,applyMultiplierCap,transactionKey,awardXPIdempotently,totalXP,calculateLevelFromXP,
     normalizeTransaction,ensureState,ensurePlannerState,refreshProfile,createAutomaticLegacyPreview,createAggregateLegacyPreview,
-    summarizePreview,commitLegacyImport,revertLegacyImport,stableHash
+    summarizePreview,commitLegacyImport,revertLegacyImport,stableHash,evaluateSimulationEligibility,grantSimulationFragment,
+    ensureRankProgress,ELEMENTS,ELEMENT_ACTIVITY,RARITIES,rarityFromRoll,createElementReward,openElementReward,getActiveElementMultipliers,
+    previewLegacySimulationChests,createLegacyChest,openLegacyChest
   };
 });

@@ -336,3 +336,174 @@ test('bônus de simulado respeita abandono e teto',()=>{
   assert.equal(Gamification.calculateSimulationBonus({completed:true,totalQuestions:100,correctAnswers:90,reviewedErrors:10}).baseXP,170);
   assert.equal(Gamification.calculateSimulationBonus({completed:true,totalQuestions:1000,correctAnswers:1000,reviewedErrors:1000}).baseXP,300);
 });
+
+function simulationAttempt(overrides={}) {
+  const totalQuestions=overrides.totalQuestions ?? 20;
+  const correctAnswers=overrides.correctAnswers ?? 14;
+  const incorrectAnswers=totalQuestions-correctAnswers;
+  const reviewedErrors=overrides.reviewedErrors ?? incorrectAnswers;
+  return {attemptId:'attempt-1',simulationId:'simulation-1',totalQuestions,answeredQuestions:totalQuestions,correctAnswers,reviewedErrors,finished:true,abandoned:false,...overrides};
+}
+
+test('simulado abandonado ou incompleto não é elegível',()=>{
+  const abandoned=Gamification.evaluateSimulationEligibility(simulationAttempt({abandoned:true}),{});
+  assert.equal(abandoned.isEligibleForCompletionXP,false);
+  assert.ok(abandoned.ineligibilityReasons.includes('abandoned'));
+  const incomplete=Gamification.evaluateSimulationEligibility(simulationAttempt({answeredQuestions:19}),{});
+  assert.equal(incomplete.isEligibleForCompletionXP,false);
+  assert.ok(incomplete.ineligibilityReasons.includes('incomplete_answers'));
+});
+
+test('simulado concluído concede bônus uma vez e reload não duplica',()=>{
+  const state=Gamification.ensureState({});
+  const eligibility=Gamification.evaluateSimulationEligibility(simulationAttempt(),state);
+  const bonus=Gamification.calculateSimulationBonus({completed:true,totalQuestions:eligibility.totalQuestions,correctAnswers:eligibility.correctAnswers});
+  const event={activity_type:'simulation_completion',source_type:'simulation',source_id:eligibility.simulationId,source_event_id:`simulation-completion:${eligibility.attemptId}`,reason:'simulation_completion',base_xp:bonus.completionXP};
+  Gamification.awardXPIdempotently(state.xpTransactions,event);
+  const reloaded=Gamification.ensureState(JSON.parse(JSON.stringify(state)));
+  const duplicate=Gamification.awardXPIdempotently(reloaded.xpTransactions,event);
+  assert.equal(duplicate.duplicate,true);
+  assert.equal(reloaded.xpTransactions.length,1);
+  assert.equal(Gamification.evaluateSimulationEligibility(simulationAttempt(),reloaded).completionAlreadyProcessed,true);
+});
+
+test('bônus de desempenho cobre todas as faixas e expõe breakdown auditável',()=>{
+  const expected=[[49,0],[50,10],[60,20],[70,30],[80,40],[90,50]];
+  expected.forEach(([correct,performance])=>assert.equal(Gamification.calculateSimulationBonus({completed:true,totalQuestions:100,correctAnswers:correct}).performanceBonus,performance));
+  const bonus=Gamification.calculateSimulationBonus({completed:true,totalQuestions:100,correctAnswers:90,reviewedErrors:10});
+  assert.deepEqual({completionBase:bonus.completionBase,questionQuantityBonus:bonus.questionQuantityBonus,performanceBonus:bonus.performanceBonus,reviewedErrorsBonus:bonus.reviewedErrorsBonus,cappedValue:bonus.cappedValue,finalXP:bonus.finalXP},{completionBase:50,questionQuantityBonus:50,performanceBonus:50,reviewedErrorsBonus:20,cappedValue:170,finalXP:170});
+  assert.equal(Gamification.calculateSimulationBonus({completed:true,totalQuestions:1000,correctAnswers:1000,reviewedErrors:1000}).finalXP,300);
+});
+
+test('correção parcial não concede fragmento nem roleta',()=>{
+  const state=Gamification.ensureState({});
+  const eligibility=Gamification.evaluateSimulationEligibility(simulationAttempt({reviewedErrors:2}),state);
+  assert.equal(eligibility.isFullyReviewed,false);
+  assert.equal(Gamification.grantSimulationFragment(state,eligibility).granted,false);
+  assert.equal(Gamification.createElementReward(state,eligibility,{rng:()=>0}).created,false);
+});
+
+test('correção completa concede fragmento uma única vez',()=>{
+  const state=Gamification.ensureState({});
+  const eligibility=Gamification.evaluateSimulationEligibility(simulationAttempt(),state);
+  const first=Gamification.grantSimulationFragment(state,eligibility,{now:'2026-07-16T10:00:00Z'});
+  const duplicate=Gamification.grantSimulationFragment(state,eligibility,{now:'2026-07-16T10:01:00Z'});
+  assert.equal(first.granted,true);
+  assert.equal(duplicate.duplicate,true);
+  assert.equal(state.rankProgress.fragments,1);
+});
+
+test('três fragmentos formam um medalhão automaticamente',()=>{
+  const state=Gamification.ensureState({});
+  for(let index=1;index<=3;index+=1) {
+    const eligibility=Gamification.evaluateSimulationEligibility(simulationAttempt({attemptId:`attempt-${index}`,simulationId:`simulation-${index}`}),state);
+    Gamification.grantSimulationFragment(state,eligibility);
+  }
+  assert.equal(state.rankProgress.fragments,0);
+  assert.equal(state.rankProgress.simulationMedallions,1);
+  assert.equal(state.rankProgress.medallionEvents.length,1);
+});
+
+test('aceleração exige dois blocos e respeita limites por faixa e global',()=>{
+  const oneBlock=Gamification.ensureState({rankProgress:{simulationMedallions:1}});
+  assert.equal(Gamification.applyRankAcceleration(oneBlock,1).consumed,false);
+  const twoBlocks=Gamification.ensureState({rankProgress:{simulationMedallions:1}});
+  assert.equal(Gamification.applyRankAcceleration(twoBlocks,2).consumed,true);
+  assert.equal(Gamification.getRankFromProgress(2,twoBlocks.rankProgress).key,'aprendiz');
+  assert.equal(Gamification.applyRankAcceleration(twoBlocks,2).duplicate,true);
+  const limited=Gamification.ensureState({rules:{simulation:{globalSubstitutionLimit:3}},rankProgress:{simulationMedallions:4,simulationMedallionsUsed:3,globalSubstitutionsUsed:3}});
+  assert.equal(Gamification.applyRankAcceleration(limited,11).consumed,false);
+});
+
+test('Imperador continua exigindo trinta blocos',()=>{
+  const state=Gamification.ensureState({rankProgress:{simulationMedallions:5}});
+  assert.equal(Gamification.applyRankAcceleration(state,26).consumed,false);
+  assert.notEqual(Gamification.getRankFromProgress(26,state.rankProgress).key,'imperador');
+  assert.equal(Gamification.getRankFromProgress(30,state.rankProgress).key,'imperador');
+});
+
+function sequenceRng(values) { let index=0; return ()=>values[Math.min(index++,values.length-1)]; }
+
+test('roleta usa RNG controlado e respeita probabilidades',()=>{
+  assert.equal(Gamification.rarityFromRoll(.1),'common');
+  assert.equal(Gamification.rarityFromRoll(.6),'rare');
+  assert.equal(Gamification.rarityFromRoll(.85),'epic');
+  assert.equal(Gamification.rarityFromRoll(.97),'legendary');
+});
+
+test('recompensa é persistida selada, reload mantém resultado e tentativa não sorteia novamente',()=>{
+  const state=Gamification.ensureState({});
+  const eligibility=Gamification.evaluateSimulationEligibility(simulationAttempt(),state);
+  const first=Gamification.createElementReward(state,eligibility,{rng:sequenceRng([.1,.2]),now:'2026-07-16T10:00:00Z'});
+  assert.equal(first.created,true);
+  assert.equal(first.reward.status,'sealed');
+  assert.equal(state.elementRewards.length,1);
+  const reloaded=Gamification.ensureState(JSON.parse(JSON.stringify(state)));
+  const duplicate=Gamification.createElementReward(reloaded,eligibility,{rng:()=>.99});
+  assert.equal(duplicate.duplicate,true);
+  assert.equal(duplicate.reward.rarity,'common');
+});
+
+test('recompensa rara sempre possui dois elementos distintos',()=>{
+  const state=Gamification.ensureState({});
+  const eligibility=Gamification.evaluateSimulationEligibility(simulationAttempt(),state);
+  const reward=Gamification.createElementReward(state,eligibility,{rng:sequenceRng([.7,.1,.1])}).reward;
+  assert.equal(reward.rarity,'rare');
+  assert.equal(reward.elements.length,2);
+  assert.notEqual(reward.elements[0],reward.elements[1]);
+});
+
+test('buffs elementais afetam somente suas atividades e eventos dentro da validade',()=>{
+  const openedAt='2026-07-16T10:00:00Z';
+  const expiresAt='2026-07-17T10:00:00Z';
+  const rewards=[
+    {id:'fire',elements:['fire'],multiplier:1.2,rarity:'common',openedAt,expiresAt},
+    {id:'water',elements:['water'],multiplier:1.2,rarity:'common',openedAt,expiresAt},
+    {id:'earth',elements:['earth'],multiplier:1.2,rarity:'common',openedAt,expiresAt},
+    {id:'air',elements:['air'],multiplier:1.2,rarity:'common',openedAt,expiresAt}
+  ];
+  const now='2026-07-16T12:00:00Z';
+  assert.equal(Gamification.getActiveElementMultipliers(rewards,'question_answer',now).rewardId,'fire');
+  assert.equal(Gamification.getActiveElementMultipliers(rewards,'video_progress',now).rewardId,'water');
+  assert.equal(Gamification.getActiveElementMultipliers(rewards,'reading',now).rewardId,'earth');
+  assert.equal(Gamification.getActiveElementMultipliers(rewards,'flashcard_review',now).rewardId,'air');
+  assert.equal(Gamification.getActiveElementMultipliers(rewards,'simulation_completion',now).multiplier,1);
+  assert.equal(Gamification.getActiveElementMultipliers(rewards,'question_answer','2026-07-16T09:00:00Z').multiplier,1);
+  assert.equal(Gamification.getActiveElementMultipliers(rewards,'question_answer','2026-07-17T11:00:00Z').multiplier,1);
+});
+
+test('dois buffs iguais usam o maior e o cap global permanece x1,50',()=>{
+  const rewards=[
+    {id:'low',elements:['fire'],multiplier:1.2,openedAt:'2026-07-16T10:00:00Z',expiresAt:'2026-07-18T10:00:00Z'},
+    {id:'high',elements:['fire'],multiplier:1.5,openedAt:'2026-07-16T10:00:00Z',expiresAt:'2026-07-18T10:00:00Z'}
+  ];
+  assert.equal(Gamification.getActiveElementMultipliers(rewards,'question_answer','2026-07-16T12:00:00Z').multiplier,1.5);
+  assert.equal(Gamification.applyMultiplierCap({element:1.5,streak:1.2}).final,1.5);
+});
+
+test('buff novo ou expirado não recalcula XP anterior',()=>{
+  const ledger=[];
+  Gamification.awardXPIdempotently(ledger,{activity_type:'question_answer',source_type:'question',source_id:'q1',source_event_id:'before-buff',reason:'question_answer',base_xp:5});
+  const original=ledger[0].final_xp;
+  Gamification.getActiveElementMultipliers([{id:'fire',elements:['fire'],multiplier:1.5,openedAt:'2026-07-16T10:00:00Z',expiresAt:'2026-07-16T11:00:00Z'}],'question_answer','2026-07-16T12:00:00Z');
+  assert.equal(ledger[0].final_xp,original);
+});
+
+test('legado exige preview e confirmação, não ativa buff automaticamente e abre uma vez',()=>{
+  const state=Gamification.ensureState({});
+  const attempt=simulationAttempt({attemptId:'legacy-1',simulationId:'old-sim'});
+  const before=JSON.stringify(state);
+  const preview=Gamification.previewLegacySimulationChests([attempt],state);
+  assert.equal(preview.candidates.length,1);
+  assert.equal(JSON.stringify(state),before);
+  assert.equal(Gamification.createLegacyChest(state,attempt).reason,'confirmation_required');
+  const committed=Gamification.createLegacyChest(state,attempt,{confirmed:true,now:'2026-07-16T10:00:00Z'});
+  assert.equal(committed.created,true);
+  assert.equal(state.elementRewards.length,0);
+  const duplicate=Gamification.createLegacyChest(state,attempt,{confirmed:true});
+  assert.equal(duplicate.duplicate,true);
+  const opened=Gamification.openLegacyChest(state,committed.chest.id,{rng:sequenceRng([.1,.2]),now:'2026-07-16T11:00:00Z'});
+  assert.equal(opened.opened,true);
+  assert.equal(opened.reward.legacy,true);
+  assert.equal(Gamification.openLegacyChest(state,committed.chest.id,{rng:()=>.99}).duplicate,true);
+});
