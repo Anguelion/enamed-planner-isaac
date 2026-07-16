@@ -1683,3 +1683,59 @@ body.dark .legacy-import-card[open]>summary{background:#203443}
 body.dark .legacy-preview{border-color:#345b91;background:#1b2b3b}
 @media(max-width:1050px){.xp-history-mini{grid-template-columns:repeat(2,minmax(0,1fr))}.legacy-aggregate-fields{grid-template-columns:repeat(3,minmax(0,1fr))}.legacy-aggregate-fields button{grid-column:span 3}}
 @media(max-width:620px){.gamification-head{grid-template-columns:74px minmax(0,1fr);gap:12px}.gamification-level{width:68px;height:68px;border-width:4px}.gamification-level strong{font-size:27px}.gamification-progress h2{font-size:18px}.gamification-progress .section-title{align-items:flex-start;flex-direction:column}.gamification-progress-label{display:grid;gap:2px}.xp-history-mini{grid-template-columns:1fr}.legacy-aggregate-fields{grid-template-columns:1fr}.legacy-aggregate-fields button{grid-column:auto}.legacy-import-card>summary{align-items:flex-start}.legacy-preview .section-title{align-items:flex-start;flex-direction:column}}
+/* Sistema visual semântico de ícones — Phosphor local */
+:root{
+  --icon-fire:#ef5b3e;--icon-fire-soft:#fff0e8;
+  --icon-water:#1685d1;--icon-water-soft:#e7f7ff;
+  --icon-earth:#8a6a27;--icon-earth-soft:#f8f1dc;
+  --icon-air:#7657d6;--icon-air-soft:#f0ecff;
+  --icon-xp:#d49300;--icon-xp-soft:#fff5cf;
+  --icon-simulation:#4f46c7;--icon-simulation-soft:#eeedff;
+  --icon-success:#15956f;--icon-success-soft:#e6f8f1;
+  --icon-warning:#c57c00;--icon-warning-soft:#fff3d8;
+  --icon-error:#d5443d;--icon-error-soft:#ffebe9;
+  --icon-neutral:#60758b;--icon-neutral-soft:#eef3f7;
+}
+body.dark{
+  --icon-fire:#ff8068;--icon-fire-soft:#462822;
+  --icon-water:#66c8ff;--icon-water-soft:#173747;
+  --icon-earth:#e5c06b;--icon-earth-soft:#3d3523;
+  --icon-air:#b7a4ff;--icon-air-soft:#30294c;
+  --icon-xp:#ffd05a;--icon-xp-soft:#41371c;
+  --icon-simulation:#a9a5ff;--icon-simulation-soft:#2d2b4c;
+  --icon-success:#64d8af;--icon-success-soft:#173b31;
+  --icon-warning:#ffc15a;--icon-warning-soft:#44331d;
+  --icon-error:#ff8a80;--icon-error-soft:#472521;
+  --icon-neutral:#b4c5d5;--icon-neutral-soft:#26333e;
+}
+.app-icon{width:var(--icon-size,1.25rem);height:var(--icon-size,1.25rem);display:inline-block;flex:0 0 auto;vertical-align:-.18em;fill:currentColor;overflow:visible}
+.app-icon--fire{color:var(--icon-fire)}.app-icon--water{color:var(--icon-water)}.app-icon--earth{color:var(--icon-earth)}.app-icon--air{color:var(--icon-air)}.app-icon--xp{color:var(--icon-xp)}.app-icon--simulation{color:var(--icon-simulation)}.app-icon--success{color:var(--icon-success)}.app-icon--warning{color:var(--icon-warning)}.app-icon--error{color:var(--icon-error)}.app-icon--neutral{color:var(--icon-neutral)}
+.rpg-asset{display:block;object-fit:contain;flex:0 0 auto}
+.tab-icon{background:var(--icon-neutral-soft)}
+.tab-painel{--tab-tone:var(--icon-neutral);--tab-soft:var(--icon-neutral-soft)}
+.tab-cronograma{--tab-tone:var(--icon-xp);--tab-soft:var(--icon-xp-soft)}
+.tab-pendencias{--tab-tone:var(--icon-warning);--tab-soft:var(--icon-warning-soft)}
+.tab-aulas{--tab-tone:var(--icon-water);--tab-soft:var(--icon-water-soft)}
+.tab-questoes,.tab-importar-questoes{--tab-tone:var(--icon-fire);--tab-soft:var(--icon-fire-soft)}
+.tab-analise,.tab-simulados{--tab-tone:var(--icon-simulation);--tab-soft:var(--icon-simulation-soft)}
+.tab-flashcards{--tab-tone:var(--icon-air);--tab-soft:var(--icon-air-soft)}
+.tab-materiais,.tab-feynman{--tab-tone:var(--icon-earth);--tab-soft:var(--icon-earth-soft)}
+.tab-prescricao{--tab-tone:var(--icon-success);--tab-soft:var(--icon-success-soft)}
+.tab-areas{--tab-tone:var(--icon-water);--tab-soft:var(--icon-water-soft)}
+.tab-historico{--tab-tone:var(--icon-neutral);--tab-soft:var(--icon-neutral-soft)}
+.tab .tab-icon{color:var(--tab-tone);background:var(--tab-soft)}
+.tab.active .tab-icon{background:#fff;color:var(--tab-tone);box-shadow:0 2px 9px rgba(16,36,64,.16)}
+body.dark .tab.active .tab-icon{background:#172331}
+.tab-icon .app-icon,.app-sidebar .app-icon{width:22px;height:22px}
+.sidebar-toggle .app-icon,.sidebar-theme .app-icon{width:21px;height:21px}
+.daily-analysis-icon{background:var(--icon-neutral-soft);color:var(--icon-neutral)}
+.daily-analysis-icon .app-icon{width:25px;height:25px}
+.schedule-study-icon .app-icon{width:18px;height:18px}
+.icon-btn .app-icon,.tiny-btn .app-icon{min-width:18px;min-height:18px}
+@media(max-width:620px){
+  html,body{max-width:100%;overflow-x:clip}
+  .header-inner{min-width:0;overflow:hidden}
+  .header-actions{width:100%;max-width:100%;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-inline:contain;padding-bottom:3px}
+  .header-actions>*{flex:0 0 auto}
+  .app-icon{--icon-size:1.2rem}.tab-icon .app-icon{width:21px;height:21px}
+}

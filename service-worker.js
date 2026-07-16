@@ -1,15 +1,24 @@
-const CACHE_NAME = 'soqueromed-shell-v100';
+const CACHE_NAME = 'soqueromed-shell-v101';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260715-52',
+  './assets/planner.css?v=20260715-53',
+  './assets/app-icons.js?v=20260715-1',
+  './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-2',
-  './assets/planner.js?v=20260715-80',
+  './assets/planner.js?v=20260715-81',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
   './assets/icons/apple-touch-icon.png',
-  './question_bank/index.js?v=20260714-5'
+  './question_bank/index.js?v=20260714-5',
+  './assets/rpg/element-fire.svg',
+  './assets/rpg/element-water.svg',
+  './assets/rpg/element-earth.svg',
+  './assets/rpg/element-air.svg',
+  './assets/rpg/medal-block.svg',
+  './assets/rpg/class-crown.svg',
+  './assets/rpg/rarity-gem.svg'
   ,'./data/prescription_catalog.json'
 ];
 
