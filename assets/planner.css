@@ -1142,11 +1142,11 @@ body.dark .sidebar-toggle{background:#18313a;color:#8fd4e7}
 
 /* Sidebar recolhida: mantém os acessos visíveis em uma faixa compacta. */
 @media(min-width:721px){
-  :root{--sidebar-collapsed-width:76px}
-  body.sidebar-collapsed .sidebar-brand{grid-template-columns:36px;padding:16px 10px}
-  body.sidebar-collapsed .app-sidebar .tabs{padding:14px 8px}
-  body.sidebar-collapsed .app-sidebar .tab{min-height:44px;padding:8px}
-  body.sidebar-collapsed .sidebar-foot{padding:8px}
+  :root{--sidebar-collapsed-width:64px}
+  body.sidebar-collapsed .sidebar-brand{grid-template-columns:36px;padding:16px 6px}
+  body.sidebar-collapsed .app-sidebar .tabs{padding:14px 4px}
+  body.sidebar-collapsed .app-sidebar .tab{min-height:44px;padding:8px 4px}
+  body.sidebar-collapsed .sidebar-foot{padding:6px 4px}
 }
 
 .question-issue-summary{width:100%;min-height:42px;margin:12px 0 2px;padding:8px 11px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--muted);text-align:left}
