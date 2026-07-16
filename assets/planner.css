@@ -2191,3 +2191,128 @@ body.dark .tab.active .tab-icon{background:#172331}
 @media(min-width:768px) and (max-width:1199px){
   .dashboard-desktop-grid>.dashboard-tasks-card.is-expanded{grid-column:1/-1}
 }
+
+/* Fase 1: o dashboard é uma central operacional. A composição abaixo prevalece
+   sobre as variações antigas sem alterar os componentes ou seus dados. */
+.dashboard-today-focus{display:grid;gap:12px;align-content:start}
+.dashboard-today-focus .dashboard-mood-copy{display:flex;align-items:start;justify-content:space-between;gap:10px}
+.dashboard-today-focus .dashboard-mood-copy h2{margin:2px 0 0;font-size:19px}
+.dashboard-today-focus .dashboard-mood-copy .muted{font-size:12px;text-align:right}
+.dashboard-today-focus .mood-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.dashboard-today-focus .mood-btn{display:grid;place-items:center;gap:3px;min-height:56px;padding:7px 4px;border:1px solid var(--line);border-radius:9px;background:var(--soft-blue)}
+.dashboard-today-focus .mood-btn.active{border-color:var(--green);background:var(--soft-green)}
+.dashboard-today-focus .mood-btn>span{font-size:21px;line-height:1}
+.dashboard-today-focus .mood-btn small{font-size:11px;font-weight:800;white-space:nowrap}
+.dashboard-review-compact{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
+.dashboard-review-compact>div{display:flex;align-items:center;gap:8px;min-width:0}
+.dashboard-review-compact .dashboard-review-icon{flex:0 0 auto}
+.dashboard-review-compact strong,.dashboard-review-compact small{display:block}
+.dashboard-review-compact strong{font-size:13px}
+.dashboard-review-compact small{margin-top:2px;font-size:11px;color:var(--muted)}
+
+.dashboard-weekly-card{display:grid;grid-template-rows:auto auto 1fr;gap:10px}
+.weekly-metric-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.weekly-metric-tabs .tiny-btn.active{border-color:var(--blue);background:var(--soft-blue);color:var(--blue)}
+.weekly-bars{height:170px}
+.dashboard-weekly-summary{display:grid;align-content:start;gap:12px}
+.dashboard-weekly-summary>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.dashboard-weekly-summary article{display:grid;gap:2px;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--soft-blue)}
+.dashboard-weekly-summary article strong{font-size:21px;color:var(--blue)}
+.dashboard-weekly-summary article small{font-size:11px;color:var(--muted);font-weight:800}
+.dashboard-weekly-summary p{margin:0;font-size:12px}
+
+.dashboard-target-card,.dashboard-queue-card,.dashboard-radar-card,.dashboard-sim-summary-card{display:grid;align-content:start;gap:12px}
+.dashboard-target-main{display:flex;align-items:end;justify-content:space-between;gap:12px}
+.dashboard-target-main>div{min-width:0}
+.dashboard-target-main h2{margin:3px 0 5px;font-size:18px;line-height:1.25}
+.dashboard-target-main p{margin:0;font-size:12px;color:var(--muted)}
+.dashboard-target-main>.icon-btn{flex:0 0 auto;min-height:42px}
+.dashboard-target-progress{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.dashboard-target-progress span{padding:5px 7px;border-radius:7px;background:var(--soft-blue);color:var(--muted);font-size:11px;font-weight:800}
+.dashboard-target-empty{display:grid;gap:4px;padding:12px;border:1px dashed var(--line);border-radius:9px;background:var(--soft-green)}
+.dashboard-target-empty span{font-size:12px;color:var(--muted)}
+.dashboard-queue-list{display:grid;gap:6px}
+.dashboard-queue-list>div{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.dashboard-queue-list>div:last-child{border-bottom:0}
+.dashboard-queue-list .date-chip{min-width:32px;padding:5px;font-size:11px}
+.dashboard-queue-list .schedule-topic-link{display:block;max-width:100%;padding:0;border:0;background:transparent;text-align:left;color:var(--ink);font-size:13px}
+.dashboard-queue-list small{display:block;overflow:hidden;margin-top:3px;color:var(--muted);font-size:11px;text-overflow:ellipsis;white-space:nowrap}
+.dashboard-queue-list .badge{font-size:10px;white-space:nowrap}
+.dashboard-area-list{display:grid;gap:10px}
+.dashboard-radar-card .area-bar{padding:0}
+.dashboard-sim-summary-card .kpi-row{padding-top:0}
+
+.dashboard-tools-region{margin-top:2px}
+.dashboard-tools-disclosure{border:1px solid var(--line);border-radius:11px;background:var(--panel)}
+.dashboard-tools-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;cursor:pointer;list-style:none}
+.dashboard-tools-disclosure>summary::-webkit-details-marker{display:none}
+.dashboard-tools-disclosure>summary>span{display:flex;align-items:center;gap:8px}
+.dashboard-tools-disclosure>summary .app-icon{width:19px;height:19px;color:var(--blue)}
+.dashboard-tools-disclosure>summary small{color:var(--muted);font-size:12px}
+.dashboard-tools-disclosure[open]>summary{border-bottom:1px solid var(--line)}
+.dashboard-tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:14px}
+.dashboard-tools-grid>.card{height:auto!important}
+.dashboard-question-import-tool{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.dashboard-question-import-tool h2{margin:2px 0 4px;font-size:18px}
+.dashboard-question-import-tool p{margin:0;font-size:12px}
+
+@media(min-width:1200px){
+  #painel.view.active{gap:16px}
+  #painel .dashboard-desktop-grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;align-items:stretch}
+  #painel .dashboard-desktop-grid>.continue-study-card{grid-column:span 5;min-height:214px}
+  #painel .dashboard-desktop-grid>.dashboard-tasks-card{grid-column:span 4;min-height:214px}
+  #painel .dashboard-desktop-grid>.dashboard-today-focus{grid-column:span 3;min-height:214px}
+  #painel .dashboard-desktop-grid>.dashboard-road-region{grid-column:1/-1;min-height:0}
+  #painel .dashboard-desktop-grid>.dashboard-road-region .dashboard-road{gap:12px}
+  #painel .dashboard-desktop-grid>.dashboard-road-region .road-path{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  #painel .dashboard-desktop-grid>.dashboard-road-region .road-step{min-height:186px;padding:14px}
+  #painel .dashboard-desktop-grid>.dashboard-road-region .road-sub{min-height:32px}
+  #painel .dashboard-desktop-grid>.dashboard-weekly-card{grid-column:span 8;min-height:258px}
+  #painel .dashboard-desktop-grid>.dashboard-weekly-summary{grid-column:span 4;min-height:258px}
+  #painel .dashboard-desktop-grid>.dashboard-target-card{grid-column:span 4;min-height:240px}
+  #painel .dashboard-desktop-grid>.dashboard-queue-card{grid-column:span 8;min-height:240px}
+  #painel .dashboard-desktop-grid>.dashboard-radar-card,
+  #painel .dashboard-desktop-grid>.dashboard-sim-summary-card{grid-column:span 6;min-height:220px}
+  #painel .dashboard-desktop-grid>.gamification-card,
+  #painel .dashboard-desktop-grid>.gamification-simulation-card{grid-column:span 6;min-height:0}
+  #painel .dashboard-desktop-grid>.dashboard-recent-card{grid-column:1/-1;min-height:0}
+  #painel .dashboard-desktop-grid>.dashboard-tasks-card.is-expanded{grid-column:span 8;min-height:0}
+  .dashboard-global-head{padding-block:2px;min-height:58px}
+  .dashboard-global-head h1{margin:0;font-size:28px}
+  .dashboard-head-tools{gap:8px}
+  .dashboard-countdown-compact{padding:7px 10px}
+  .dashboard-countdown-icon{width:34px;height:34px}
+  .dashboard-countdown-compact{grid-template-columns:34px minmax(132px,auto) auto}
+  .dashboard-countdown-compact .eyebrow{display:none}
+  .dashboard-countdown-compact #countdownValue{display:grid;gap:1px}
+  .dashboard-countdown-compact #countdownValue strong{font-size:14px}
+  .dashboard-countdown-compact #countdownValue small{font-size:11px}
+  .dashboard-date-control .input{min-height:36px}
+}
+@media(min-width:1600px){
+  #painel{max-width:1740px}
+  #painel .dashboard-desktop-grid{gap:20px}
+  #painel .dashboard-desktop-grid>.continue-study-card,
+  #painel .dashboard-desktop-grid>.dashboard-tasks-card,
+  #painel .dashboard-desktop-grid>.dashboard-today-focus{min-height:202px}
+  #painel .dashboard-desktop-grid>.dashboard-weekly-card,
+  #painel .dashboard-desktop-grid>.dashboard-weekly-summary{min-height:244px}
+}
+@media(min-width:768px) and (max-width:1199px){
+  #painel .dashboard-desktop-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  #painel .dashboard-road-region,
+  #painel .dashboard-weekly-card,
+  #painel .dashboard-recent-card{grid-column:1/-1}
+  #painel .dashboard-weekly-summary{grid-column:auto}
+}
+@media(max-width:767px){
+  .dashboard-tools-grid{grid-template-columns:1fr;padding:10px}
+  .dashboard-tools-disclosure>summary{align-items:start;padding:12px}
+  .dashboard-tools-disclosure>summary small{max-width:150px;text-align:right}
+  .dashboard-today-focus .mood-btn small{font-size:10px}
+  .dashboard-weekly-summary>div{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .dashboard-weekly-summary article{padding:8px 5px;text-align:center}
+  .dashboard-weekly-summary article strong{font-size:16px}
+  .dashboard-weekly-summary article small{font-size:10px}
+  .dashboard-target-main{align-items:start}
+}

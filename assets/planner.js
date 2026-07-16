@@ -68,7 +68,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -2325,7 +2325,7 @@ function iconSvg(name,options={}) {
   return window.ENAMED_ICONS?.AppIcon(name,options) || '';
 }
 function renderDashboardMood(log) {
-  return `<section class="card dashboard-mood"><div class="dashboard-mood-copy"><h2>Como você está hoje?</h2><div class="muted">Registre seu ritmo antes de começar.</div></div><div class="mood-row">${[[3,'🙂','Motivado'],[2,'😐','Mais ou menos'],[1,'😴','Lento']].map(([value,face,label]) => `<button class="mood-btn ${n(log.mood)===value?'active':''}" data-dashboard-mood="${value}" aria-pressed="${n(log.mood)===value}"><span>${face}</span><small>${label}</small></button>`).join('')}</div></section>`;
+  return `<section class="card dashboard-today-focus"><div class="dashboard-mood-copy"><div><span class="eyebrow">Hoje</span><h2>Como você está?</h2></div><span class="muted">Defina seu ritmo</span></div><div class="mood-row">${[[3,'🙂','Motivado'],[2,'😐','Mais ou menos'],[1,'😴','Lento']].map(([value,face,label]) => `<button class="mood-btn ${n(log.mood)===value?'active':''}" data-dashboard-mood="${value}" aria-pressed="${n(log.mood)===value}"><span>${face}</span><small>${label}</small></button>`).join('')}</div>${renderUpcomingReviews({compact:true})}</section>`;
 }
 function formatDailyStudyTime(minutes) {
   const total = Math.max(0, Math.round(n(minutes)));
@@ -2498,25 +2498,66 @@ function renderGamificationDashboard(compact=false) {
   return `<section class="card gamification-card"><div class="gamification-head"><div class="gamification-rank">${classAsset}<div><span class="eyebrow">Classe RPG</span><h2>${escapeHtml(rank.name)} <small>· Nível ${profile.level}</small></h2><p>Blocos acadêmicos: <strong>${academicRank.completedBlocks}/30</strong>${rank.accelerated?` · <strong>aceleração ativa</strong>`:''}</p></div></div><div class="gamification-progress"><div class="section-title"><div><span class="eyebrow">Experiência</span><h2>${Math.round(n(profile.totalXP))} XP acumulados</h2></div><span class="badge today">Nível ${profile.level}</span></div><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP neste nível</span><span>faltam ${Math.round(n(profile.remainingXP))} XP</span></div></div></div><div class="rank-progress-panel"><div><strong>${rank.isMaxRank?'Imperador':`Próxima classe acadêmica: ${escapeHtml(academicRank.nextRank?.name||rank.nextRank?.name||'Imperador')}`}</strong><span>${progressText}</span></div><div class="progress" aria-label="Progresso acadêmico para a próxima classe"><span style="width:${academicRank.progressPercent}%"></span></div><small>${segmentDone}/${segmentTotal} blocos · ${availableMedallions} medalhão livre</small></div>${history.length?`<div class="xp-history-mini">${history.map(transaction=>`<div><span><strong>${escapeHtml(gamificationActivityLabel(transaction))}</strong><small>${fmtDate(String(transaction.occurred_at||'').slice(0,10))}${transaction.is_legacy?' · Legado':''}${transaction.metadata?.element?` · ${elementLabel(transaction.metadata.element)}`:''}</small></span><b class="${n(transaction.final_xp)<0?'negative':''}">${n(transaction.final_xp)>0?'+':''}${roundDisplayXP(transaction.final_xp)} XP</b></div>`).join('')}</div>`:'<div class="muted">O histórico de XP aparecerá após uma atividade nova ou uma importação retroativa confirmada.</div>'}</section>`;
 }
 
-function renderUpcomingReviews() {
+function upcomingReviewGroups() {
   const now=Date.now();
   const cards=flashcardAllRecords().map(card=>({card,due:Date.parse(flashcardProgress(card).dueAt||`${flashcardProgress(card).nextReview||studyDateKey()}T05:00:00`)})).filter(item=>Number.isFinite(item.due)).sort((a,b)=>a.due-b.due);
-  const groups=[
+  return [
     {label:'Devidos agora',count:cards.filter(item=>item.due<=now).length,foot:'estudar agora'},
     {label:'Nas próximas 2 h',count:cards.filter(item=>item.due>now&&item.due<=now+7200000).length,foot:'fila próxima'},
     {label:'Até amanhã',count:cards.filter(item=>item.due>now+7200000&&item.due<=now+86400000).length,foot:'programados'}
   ];
+}
+function renderUpcomingReviews({compact=false}={}) {
+  const groups=upcomingReviewGroups();
+  if(compact) {
+    const due=groups[0];
+    return `<div class="dashboard-review-compact"><div><span class="dashboard-review-icon tone-0">${iconSvg('cards')}</span><span><strong>${due.count} revisões devidas</strong><small>${due.count ? 'Sua fila de estudo está pronta.' : 'Nenhuma revisão vencida agora.'}</small></span></div><button class="tiny-btn" data-dashboard-open-flashcards>Estudar</button></div>`;
+  }
   return `<section class="card dashboard-review-card"><div class="section-title"><div><span class="eyebrow">FSRS</span><h2>Próximas revisões</h2></div><button class="tiny-btn" data-dashboard-open-flashcards>Estudar</button></div><div class="dashboard-review-list">${groups.map((group,index)=>`<div><span class="dashboard-review-icon tone-${index}">${iconSvg('cards')}</span><strong>${group.count}</strong><span>${group.label}</span><small>${group.foot}</small></div>`).join('')}</div></section>`;
 }
-function renderDashboardEvolution() {
+function weeklyDashboardData(date) {
   const dates=Array.from({length:7},(_,index)=>PlannerUX.addDays(ui.refDate,index-6));
-  const values=dates.map(date=>dailyStudySnapshot(date).totalMinutes);
-  const max=Math.max(60,...values);
-  return `<section class="card dashboard-evolution-card"><div class="section-title"><div><span class="eyebrow">7 dias</span><h2>Evolução</h2></div></div><div class="dashboard-bars">${dates.map((date,index)=>`<div><span style="height:${Math.max(6,Math.round(values[index]/max*100))}%" title="${formatDailyStudyTime(values[index])}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${date}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section>`;
+  const snapshots=dates.map(day=>dailyStudySnapshot(day));
+  const simulations=dates.map(day=>(state.simuladoRuns||[]).filter(run=>String(run.finishedAt||run.updatedAt||'').slice(0,10)===day && run.finishedAt && !run.abandonedAt).length);
+  return {dates,snapshots,simulations};
+}
+function renderWeeklyPerformance(date) {
+  const data=weeklyDashboardData(date);
+  const metrics={
+    hours:{label:'Horas',values:data.snapshots.map(snapshot=>snapshot.totalMinutes),format:value=>formatDailyStudyTime(value),summary:data.snapshots.reduce((sum,snapshot)=>sum+snapshot.totalMinutes,0)},
+    questions:{label:'Questões',values:data.snapshots.map(snapshot=>snapshot.questions),format:value=>`${Math.round(value)}`,summary:data.snapshots.reduce((sum,snapshot)=>sum+snapshot.questions,0)},
+    flashcards:{label:'Revisões',values:data.snapshots.map(snapshot=>snapshot.flashcards),format:value=>`${Math.round(value)}`,summary:data.snapshots.reduce((sum,snapshot)=>sum+snapshot.flashcards,0)},
+    videos:{label:'Aulas',values:data.snapshots.map(snapshot=>snapshot.videos),format:value=>`${Math.round(value)}`,summary:data.snapshots.reduce((sum,snapshot)=>sum+snapshot.videos,0)},
+    simulados:{label:'Simulados',values:data.simulations,format:value=>`${Math.round(value)}`,summary:data.simulations.reduce((sum,value)=>sum+value,0)}
+  };
+  const metric=metrics[metrics[ui.weeklyMetric] ? ui.weeklyMetric : 'hours'];
+  const max=Math.max(1,...metric.values);
+  const summary=[
+    ['Tempo',formatDailyStudyTime(metrics.hours.summary)],
+    ['Questões',Math.round(metrics.questions.summary)],
+    ['Revisões',Math.round(metrics.flashcards.summary)],
+    ['Aulas',Math.round(metrics.videos.summary)]
+  ];
+  return `<section class="card dashboard-weekly-card"><div class="section-title"><div><span class="eyebrow">Últimos 7 dias</span><h2>Desempenho semanal</h2></div></div><div class="weekly-metric-tabs">${Object.entries(metrics).map(([key,item])=>`<button class="tiny-btn ${key===ui.weeklyMetric?'active':''}" data-weekly-metric="${key}" aria-pressed="${key===ui.weeklyMetric}">${item.label}</button>`).join('')}</div><div class="dashboard-bars weekly-bars">${data.dates.map((day,index)=>`<div><span style="height:${Math.max(8,Math.round(metric.values[index]/max*100))}%" title="${escapeAttr(metric.format(metric.values[index]))}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${day}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section><section class="card dashboard-weekly-summary"><span class="eyebrow">Resumo da semana</span><div>${summary.map(([label,value])=>`<article><strong>${escapeHtml(String(value))}</strong><small>${label}</small></article>`).join('')}</div><p class="muted">Exibindo ${escapeHtml(metric.label.toLowerCase())} no gráfico.</p></section>`;
 }
 function renderRecentDashboardActivity() {
-  const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,4);
+  const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,5);
   return `<section class="card dashboard-recent-card"><div class="section-title"><div><span class="eyebrow">Histórico</span><h2>Atividade recente</h2></div><button class="tiny-btn" data-dashboard-open-history>Ver histórico</button></div><div class="dashboard-recent-list">${transactions.length?transactions.map(item=>`<div><span>${iconSvg(item.activity_type==='video_progress'||item.activity_type==='video_completion'?'play':item.activity_type==='flashcard_review'?'cards':'brain')}</span><strong>${escapeHtml(gamificationActivityLabel(item))}</strong><time>${new Date(item.occurred_at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</time></div>`).join(''):'<div class="muted">Suas próximas atividades aparecerão aqui.</div>'}</div></section>`;
+}
+function renderDashboardPlanning(t) {
+  const pending=state.schedule.filter(item=>item.date<=ui.refDate&&statusOf(item)!=='Concluído').sort(byPendingBlockOrder);
+  const target=t.next || pending[0] || null;
+  const targetContent=target
+    ? `<div class="dashboard-target-main"><div><span class="eyebrow">Próximo alvo</span><h2>${escapeHtml(target.topic)}</h2><p>${fmtDate(target.date)} · Bloco ${target.block} · ${escapeHtml(target.area)}</p><div class="dashboard-target-progress"><span>${Math.max(0,lessonQuestionTarget(target)-completedQuestions(target))} questões restantes</span><span>${Math.max(0,lessonFlashcardTarget(target)-completedFlashcards(target))} flashcards restantes</span></div></div><button class="icon-btn primary" data-dashboard-open-target="${escapeAttr(target.id)}">Abrir</button></div>`
+    : `<div class="dashboard-target-empty"><strong>Você está em dia.</strong><span>Não há uma aula pendente para priorizar agora.</span></div>`;
+  const queue=pending.slice(0,5);
+  return `<section class="card dashboard-target-card"><div class="section-title"><div><span class="eyebrow">Planejamento</span><h2>Onde focar agora</h2></div>${target?badgeStatus(statusOf(target)):''}</div>${targetContent}</section><section class="card dashboard-queue-card"><div class="section-title"><div><span class="eyebrow">Pendências</span><h2>Fila para destravar</h2></div><button class="tiny-btn" data-dashboard-open-pending>Ver todas</button></div><div class="dashboard-queue-list">${queue.length?queue.map(item=>`<div><span class="date-chip">B${escapeHtml(String(item.block))}</span><div><button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(item.id)}"><strong>${escapeHtml(item.topic)}</strong></button><small>${escapeHtml(item.area)} · ${Math.max(0,lessonQuestionTarget(item)-completedQuestions(item))} Q · ${Math.max(0,lessonFlashcardTarget(item)-completedFlashcards(item))} FC</small></div>${badgeStatus(statusOf(item))}</div>`).join(''):'<div class="empty">Nenhuma pendência aberta até esta data.</div>'}</div></section>`;
+}
+function renderDashboardAcademicEvolution(areas) {
+  return `<section class="card dashboard-radar-card"><div class="section-title"><div><span class="eyebrow">Evolução acadêmica</span><h2>Radar de áreas</h2></div><button class="tiny-btn" data-dashboard-open-areas>Ver áreas</button></div><div class="dashboard-area-list">${areas.slice(0,6).map(areaLine).join('') || '<div class="empty">As áreas aparecerão quando houver aulas no cronograma.</div>'}</div></section><section class="card dashboard-sim-summary-card"><div class="section-title"><div><span class="eyebrow">Evolução acadêmica</span><h2>Simulados</h2></div><button class="tiny-btn" data-dashboard-open-simulations>Abrir</button></div>${renderSimSummary()}</section>`;
+}
+function renderDashboardTools(date) {
+  return `<section class="dashboard-tools-region"><details class="dashboard-tools-disclosure"><summary><span>${iconSvg('settings')}<strong>Ferramentas e manutenção</strong></span><small>lançamentos, estudo anterior, importação e backups</small></summary><div class="dashboard-tools-grid">${renderManualStudyEntry(date)}${renderLegacyImportCard()}${renderCloudBackupCard()}<section class="card dashboard-question-import-tool"><div><span class="eyebrow">Banco privado</span><h2>Adicionar questões</h2><p class="muted">Revise e incorpore novas questões sem misturar o fluxo diário.</p></div><button class="icon-btn" data-dashboard-open-question-import>${iconSvg('upload')}<span>Abrir importador</span></button></section></div></details></section>`;
 }
 function renderRankPromotionModal() {
   const rank=ui.rankPromotion;
@@ -2583,47 +2624,21 @@ function bindGamificationDashboard() {
 function renderPainel() {
   const t = totals(); const areas = areaStats(); const next = t.next; const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
-    <div class="dashboard-global-head"><div><span class="eyebrow">Visão geral</span><h1>Seu dia de estudos</h1></div><div class="dashboard-head-tools">${renderCountdown()}<label class="dashboard-date-control"><span>Data do painel</span><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"></label></div></div>
+    <div class="dashboard-global-head"><div><h1>Seu dia de estudos</h1></div><div class="dashboard-head-tools"><label class="dashboard-date-control"><span>Data do painel</span><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"></label>${renderCountdown()}</div></div>
     <div class="dashboard-desktop-grid">
       ${renderContinueStudying()}
-      ${renderDashboardMood(dashboardLog)}
       ${renderPersonalDailyTasks(ui.refDate)}
-      ${renderDailyAnalysis(ui.refDate)}
-      ${renderUpcomingReviews()}
-      ${renderDashboardEvolution()}
-      ${renderGamificationDashboard(true)}
+      ${renderDashboardMood(dashboardLog)}
+      <section class="card dashboard-road-region">${renderDailyRoad(ui.refDate)}</section>
+      ${renderWeeklyPerformance(ui.refDate)}
+      ${renderDashboardPlanning(t)}
+      ${renderDashboardAcademicEvolution(areas)}
+      ${renderGamificationDashboard(false)}
+      ${renderSimulationGamificationDashboard()}
       ${renderRecentDashboardActivity()}
-      <div class="dashboard-road-region"><div class="card">${renderDailyRoad(ui.refDate)}</div></div>
     </div>
     ${renderRankPromotionModal()}
-    ${renderSimulationGamificationDashboard()}
-    ${renderLegacyImportCard()}
-    ${renderCloudBackupCard()}
-    <div class="grid cards">
-      ${metric('Mapa geral', pct(t.progress), `${t.completed} de ${t.total} aulas concluídas`)}
-      ${metric('Questões feitas', Math.round(t.q), `${Math.round(t.debtQ)} ainda em aberto até ${fmtDate(ui.refDate)}`)}
-      ${metric('Revisões', Math.round(t.fc), `${Math.round(t.debtFC)} flashcards para pagar`)}
-      ${metric('Horas focadas', t.hours.toFixed(1), 'registradas no cronograma')}
-      ${metric('Pendências abertas', t.overdue, `${t.due} itens vencidos/até referência`)}
-      ${metric('Próximo alvo', next ? `Bloco ${next.block}` : 'Livre', next ? `${fmtDate(next.date)} · ${next.area}` : 'Nada pendente futuro')}
-    </div>
-    <div class="reschedule-note"><strong>Recomeço ajustado:</strong> blocos 10 a 30 redistribuídos a partir de 13/07/2026. Durante as férias: até 2 aulas por dia útil. A partir de 10/08: 1 aula por dia útil. Pendências antigas entram aos poucos nos fins de semana.</div>
-    ${renderManualStudyEntry(ui.refDate)}
-    <div class="grid two">
-      <div class="card"><div class="section-title"><h2>Ritmo da semana</h2><input class="input" id="refDate" inputmode="numeric" placeholder="dd/mm/aaaa"></div>
-        ${progress('Aulas concluídas', t.progress, 'Calculado por meta de questões + flashcards')}
-        ${progress('Questões em dia', 1 - t.debtQ/Math.max(t.debtQ+t.q,1), `${Math.round(t.debtQ)} questões pendentes`)}
-        ${progress('Flashcards em dia', 1 - t.debtFC/Math.max(t.debtFC+t.fc,1), `${Math.round(t.debtFC)} flashcards pendentes`)}
-      </div>
-      <div class="card"><div class="section-title"><h2>Fila para destravar</h2><button class="icon-btn" onclick="ui.tab='pendencias';render()">Ver pendências</button></div>
-        <div class="list">${renderMiniList(state.schedule.filter(x => x.date <= ui.refDate && statusOf(x)!=='Concluído').sort(byPendingBlockOrder).slice(0,7))}</div>
-      </div>
-    </div>
-    <div class="grid two">
-      <div class="card"><div class="section-title"><h2>Radar de áreas</h2><button class="icon-btn" onclick="ui.tab='areas';render()">Ver áreas</button></div>${areas.slice(0,6).map(areaLine).join('')}</div>
-      <div class="card"><div class="section-title"><h2>Simulados</h2><button class="icon-btn" onclick="ui.tab='simulados';render()">Abrir</button></div>${renderSimSummary()}</div>
-    </div>`;
-  bindPlannerDateInput('refDate', ui.refDate, date => { ui.refDate=date; render(); });
+    ${renderDashboardTools(ui.refDate)}`;
   bindPlannerDateInput('dashboardDate', ui.refDate, date => { ui.refDate=date; render(); });
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
   bindManualStudyEntry(ui.refDate);
@@ -2631,8 +2646,14 @@ function renderPainel() {
   bindGamificationDashboard();
   bindCloudBackupCard();
   document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
-  document.querySelector('[data-dashboard-open-flashcards]')?.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Devidos';render();});
+  document.querySelectorAll('[data-dashboard-open-flashcards]').forEach(button=>button.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Devidos';render();}));
   document.querySelector('[data-dashboard-open-history]')?.addEventListener('click',()=>navigateToTab('historico'));
+  document.querySelectorAll('[data-weekly-metric]').forEach(button=>button.addEventListener('click',event=>{ui.weeklyMetric=event.currentTarget.dataset.weeklyMetric;renderPainel();}));
+  document.querySelector('[data-dashboard-open-target]')?.addEventListener('click',event=>openVideosForSchedule(event.currentTarget.dataset.dashboardOpenTarget));
+  document.querySelector('[data-dashboard-open-pending]')?.addEventListener('click',()=>navigateToTab('pendencias'));
+  document.querySelector('[data-dashboard-open-areas]')?.addEventListener('click',()=>navigateToTab('areas'));
+  document.querySelector('[data-dashboard-open-simulations]')?.addEventListener('click',()=>navigateToTab('simulados'));
+  document.querySelector('[data-dashboard-open-question-import]')?.addEventListener('click',()=>navigateToTab('importar-questoes'));
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
   document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
