@@ -1,5 +1,7 @@
--- SÓqueroMed / ENAMED - Gamificação MVP (Fases 1 e base da Fase 2)
--- Execute no Supabase SQL Editor. A migration é aditiva e não altera planner_states.
+-- EXPERIMENTAL / NÃO APLICADA / NÃO EXECUTAR NO MVP LOCAL-FIRST.
+-- SÓqueroMed / ENAMED - protótipo de ledger relacional para avaliação futura.
+-- A aplicação atual usa exclusivamente state.gamification dentro do JSON de planner_states.
+-- Esta migration não é requisito de execução, sincronização, concessão ou reversão de XP.
 
 create extension if not exists pgcrypto;
 

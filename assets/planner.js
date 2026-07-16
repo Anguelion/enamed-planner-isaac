@@ -111,7 +111,7 @@ function ensureGamificationState() {
     state.gamification = state.gamification && typeof state.gamification === 'object' ? state.gamification : {xpTransactions:[],importBatches:[],profile:{cachedTotalXP:0}};
     return;
   }
-  state.gamification = Gamification.ensureState(state.gamification || {});
+  state = Gamification.ensurePlannerState(state).state;
 }
 function normalizeOfficialScheduleNames() {
   const officialNames = {
@@ -575,11 +575,22 @@ function awardVideoCompletionXP(videoId,completedAt) {
 }
 function reconcileCompletedBlockXP() {
   if(!Gamification || !state?.schedule?.length || !videoCatalog.length || !questionBank.length) return;
-  completedAcademicBlockIds().forEach(blockId=>{
+  ensureGamificationState();
+  const completed=completedAcademicBlockIds();
+  if(!Array.isArray(state.gamification.observedCompletedBlockIds)) {
+    const ledgerBlocks=gamificationTransactions().filter(item=>item.activity_type==='block_completion').map(item=>String(item.source_id));
+    state.gamification.observedCompletedBlockIds=[...new Set([...completed,...ledgerBlocks])];
+    state.gamification.blockBaselineInitializedAt=new Date().toISOString();
+    return;
+  }
+  const observed=new Set(state.gamification.observedCompletedBlockIds.map(String));
+  completed.filter(blockId=>!observed.has(blockId)).forEach(blockId=>{
     const lessons=state.schedule.filter(item=>String(item.block)===blockId);
     const occurredAt=lessons.map(item=>item.date).filter(Boolean).sort().at(-1) || new Date().toISOString();
     awardGamificationXP({activity_type:'block_completion',source_type:'block',source_id:blockId,source_event_id:`block:${blockId}:first-completion`,base_xp:n(state.gamification?.rules?.block?.completionBonus)||100,reason:'block_completion',occurred_at:occurredAt,metadata:{academicProgress:true,lessonCount:lessons.length}});
+    observed.add(blockId);
   });
+  state.gamification.observedCompletedBlockIds=[...observed];
 }
 function mergeGamificationState(remoteGamification={},localGamification={}) {
   if(!Gamification) return localGamification || remoteGamification || {};
@@ -596,11 +607,12 @@ function mergeGamificationState(remoteGamification={},localGamification={}) {
     const previous=batches.get(batch.id);
     if(!previous || Date.parse(batch.reverted_at||batch.committed_at||batch.created_at||0)>=Date.parse(previous.reverted_at||previous.committed_at||previous.created_at||0)) batches.set(batch.id,batch);
   });
-  const merged=Gamification.ensureState({...remote,...local,xpTransactions:[...transactions.values()],importBatches:[...batches.values()],cloudSyncedTransactionIds:{...(remote.cloudSyncedTransactionIds||{}),...(local.cloudSyncedTransactionIds||{})}});
+  const merged=Gamification.ensureState({...remote,...local,xpTransactions:[...transactions.values()],importBatches:[...batches.values()]});
   Gamification.refreshProfile(merged);
   return merged;
 }
 async function ensureCloudImportBatch(batchId) {
+  if(!Gamification?.FEATURE_FLAGS?.relationalSync) return false;
   const batch=state.gamification?.importBatches?.find(item=>item.id===batchId);
   if(!batch || !currentUser || !sbClient) return true;
   // A reversão relacional é feita exclusivamente pela RPC, após os lançamentos
@@ -610,10 +622,11 @@ async function ensureCloudImportBatch(batchId) {
   return !error;
 }
 async function syncGamificationLedger(limit=40) {
+  if(!Gamification?.FEATURE_FLAGS?.relationalSync) return {disabled:true,synced:0};
   const schemaUnavailableAt=n(state.gamification?.cloudSchemaUnavailableAt);
   if(!currentUser || !sbClient || !Gamification || (schemaUnavailableAt && Date.now()-schemaUnavailableAt<5*60*1000)) return;
   ensureGamificationState();
-  const synced=state.gamification.cloudSyncedTransactionIds;
+  const synced=state.gamification.cloudSyncedTransactionIds ||= {};
   const pending=state.gamification.xpTransactions.filter(transaction=>!synced[transaction.id]).slice(0,limit);
   for(const transaction of pending) {
     if(transaction.import_batch_id && !(await ensureCloudImportBatch(transaction.import_batch_id))) break;
@@ -1123,6 +1136,7 @@ async function loadLocalQuestionBank() {
   if(blocks.length || imported.length) {
     questionBank = deduplicateQuestions([...blocks.map(normalizeQuestionRecord), ...imported]).sort((a,b)=>n(b.importPriority)-n(a.importPriority) || questionCollectionSort(a)-questionCollectionSort(b) || n(a.displayOrder)-n(b.displayOrder) || String(a.sourceLabel || '').localeCompare(String(b.sourceLabel || '')) || n(a.number)-n(b.number));
     invalidateQuestionBankRenderCache();
+    reconcileCompletedBlockXP();
     return true;
   }
   return false;
@@ -2215,7 +2229,10 @@ function renderLegacyImportCard() {
   const preview=ui.legacyImportPreview;
   const batches=(state.gamification.importBatches || []).filter(batch=>batch.status==='committed').sort((a,b)=>Date.parse(b.committed_at||'')-Date.parse(a.committed_at||''));
   const previewRows=preview?.events?.reduce((rows,event)=>{const key=gamificationActivityLabel(event);rows[key]=(rows[key]||0)+1;return rows;},{});
-  return `<details class="card legacy-import-card"><summary><span><strong>Contabilizar estudo anterior</strong><small>Preview obrigatório, ledger idempotente e reversão por lote</small></span><span class="badge ${batches.length?'done':'today'}">${batches.length} lote${batches.length===1?'':'s'}</span></summary><div class="legacy-import-content"><div class="legacy-import-actions"><button class="icon-btn primary" id="previewAutomaticLegacy">Analisar dados existentes</button><span class="muted">Questões, vídeos, flashcards, simulados e blocos com histórico verificável.</span></div><div class="legacy-aggregate"><strong>Ou registrar um saldo conhecido</strong><div class="legacy-aggregate-fields"><input class="input" id="legacyDate" type="date" value="${studyDateKey()}"><input class="input" id="legacyQuestions" type="number" min="0" placeholder="Questões"><input class="input" id="legacyCorrect" type="number" min="0" placeholder="Acertos conhecidos"><input class="input" id="legacyReviewed" type="number" min="0" placeholder="Erros revisados"><input class="input" id="legacyVideoMinutes" type="number" min="0" step="1" placeholder="Minutos de vídeo"><input class="input" id="legacyFlashcards" type="number" min="0" placeholder="Flashcards"><input class="input" id="legacyBlocks" type="number" min="0" max="30" placeholder="Blocos concluídos"><input class="input" id="legacySimulations" type="number" min="0" placeholder="Simulados"><button class="icon-btn" id="previewAggregateLegacy">Pré-visualizar saldo</button></div></div>${preview?`<div class="legacy-preview"><div class="section-title"><div><h3>Prévia sem alterar seus dados</h3><div class="muted">${preview.events.length} eventos válidos · ${Object.entries(previewRows||{}).map(([label,count])=>`${count} ${label.toLowerCase()}`).join(' · ')||'nenhum evento'}</div></div><strong>${roundDisplayXP(preview.totalXP)} XP legado</strong></div><div class="legacy-preview-actions"><button class="icon-btn primary" id="commitLegacyPreview" ${preview.events.length?'':'disabled'}>Confirmar importação</button><button class="tiny-btn" id="cancelLegacyPreview">Cancelar</button></div></div>`:''}${batches.length?`<div class="legacy-batches"><h3>Importações confirmadas</h3>${batches.map(batch=>`<div><span><strong>${escapeHtml(batch.source||'Importação')}</strong><small>${fmtDate(String(batch.committed_at||'').slice(0,10))} · ${roundDisplayXP(batch.totals_json?.xp)} XP</small></span><button class="tiny-btn danger" data-revert-legacy="${escapeAttr(batch.id)}">Desfazer lote</button></div>`).join('')}</div>`:''}</div></details>`;
+  const previewSummary=preview && Gamification?.summarizePreview ? Gamification.summarizePreview(preview) : null;
+  const categoryLabels={questions:'Questões',videos:'Videoaulas',flashcards:'Flashcards',simulations:'Simulados',blocks:'Blocos',other:'Outros'};
+  const categoryDetails=previewSummary ? Object.entries(previewSummary.categories).map(([key,item])=>`${categoryLabels[key]}: ${item.count} evento${item.count===1?'':'s'} · ${roundDisplayXP(item.xp)} XP`).join(' · ') : '';
+  return `<details class="card legacy-import-card"><summary><span><strong>Contabilizar estudo anterior</strong><small>Preview obrigatório, ledger idempotente e reversão por lote</small></span><span class="badge ${batches.length?'done':'today'}">${batches.length} lote${batches.length===1?'':'s'}</span></summary><div class="legacy-import-content"><div class="legacy-import-actions"><button class="icon-btn primary" id="previewAutomaticLegacy">Analisar dados existentes</button><span class="muted">Questões, vídeos, flashcards, simulados e blocos com histórico verificável.</span></div><div class="legacy-aggregate"><strong>Ou registrar um saldo conhecido</strong><div class="legacy-aggregate-fields"><input class="input" id="legacyDate" type="date" value="${studyDateKey()}"><input class="input" id="legacyQuestions" type="number" min="0" placeholder="Questões"><input class="input" id="legacyCorrect" type="number" min="0" placeholder="Acertos conhecidos"><input class="input" id="legacyReviewed" type="number" min="0" placeholder="Erros revisados"><input class="input" id="legacyVideoMinutes" type="number" min="0" step="1" placeholder="Minutos de vídeo"><input class="input" id="legacyFlashcards" type="number" min="0" placeholder="Flashcards"><input class="input" id="legacyBlocks" type="number" min="0" max="30" placeholder="Blocos concluídos"><input class="input" id="legacySimulations" type="number" min="0" placeholder="Simulados"><button class="icon-btn" id="previewAggregateLegacy">Pré-visualizar saldo</button></div></div>${preview?`<div class="legacy-preview"><div class="section-title"><div><h3>Prévia sem alterar seus dados</h3><div class="muted">${preview.events.length} eventos válidos · ${Object.entries(previewRows||{}).map(([label,count])=>`${count} ${label.toLowerCase()}`).join(' · ')||'nenhum evento'}</div><div class="muted">${escapeHtml(categoryDetails)}</div></div><strong>${roundDisplayXP(preview.totalXP)} XP legado</strong></div><div class="legacy-preview-actions"><button class="icon-btn primary" id="commitLegacyPreview" ${preview.events.length?'':'disabled'}>Confirmar importação</button><button class="tiny-btn" id="cancelLegacyPreview">Cancelar</button></div></div>`:''}${batches.length?`<div class="legacy-batches"><h3>Importações confirmadas</h3>${batches.map(batch=>`<div><span><strong>${escapeHtml(batch.source||'Importação')}</strong><small>${fmtDate(String(batch.committed_at||'').slice(0,10))} · ${roundDisplayXP(batch.totals_json?.xp)} XP</small></span><button class="tiny-btn danger" data-revert-legacy="${escapeAttr(batch.id)}">Desfazer lote</button></div>`).join('')}</div>`:''}</div></details>`;
 }
 function bindGamificationDashboard() {
   document.getElementById('previewAutomaticLegacy')?.addEventListener('click',()=>{ui.legacyImportPreview=automaticLegacyPreview();renderPainel();});
@@ -4038,6 +4055,7 @@ function markCompletedLessonsThroughBlockNine() {
   const version = 'watched-lessons-through-block-09-2026-07-13-v1';
   if(state.videoPlayer.completedLessonMigration === version) return 0;
   const pendingTopics = ['amenorreias', 'sindrome dos ovarios policisticos', 'disturbios do sodio e potassio', 'gasometria arterial'];
+  const administrativeCompletions = new Set(state.videoPlayer.autoCompletedVideoIds || []);
   let count = 0;
   videoCatalog.filter(lesson => n(lesson.block) >= 1 && n(lesson.block) <= 9).forEach(lesson => {
     const title = normalizedTopic(lesson.title);
@@ -4046,10 +4064,12 @@ function markCompletedLessonsThroughBlockNine() {
       const preferred = part.videos.find(video => video.type === 'complete') || part.videos[0];
       if(preferred && !state.videoPlayer.watched[preferred.id]) {
         state.videoPlayer.watched[preferred.id] = true;
+        administrativeCompletions.add(preferred.id);
         count += 1;
       }
     });
   });
+  state.videoPlayer.autoCompletedVideoIds = [...administrativeCompletions];
   state.videoPlayer.completedLessonMigration = version;
   saveStateOnly();
   return count;
@@ -4558,6 +4578,7 @@ async function loadVideoCatalog() {
     videoCatalog = Array.isArray(payload.lessons) ? payload.lessons : [];
     videoCatalogStatus = `${videoCatalog.length} aulas locais disponíveis`;
     markCompletedLessonsThroughBlockNine();
+    reconcileCompletedBlockXP();
   } catch(error) {
     console.warn('Catálogo de videoaulas indisponível:', error);
     videoCatalog = [];

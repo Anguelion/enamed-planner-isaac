@@ -6,6 +6,7 @@
   'use strict';
 
   const VERSION = 'mvp-1';
+  const FEATURE_FLAGS = Object.freeze({ relationalSync:false });
   const DEFAULT_RULES = Object.freeze({
     version: VERSION,
     question: Object.freeze({ answer:2, correct:3, reviewedError:3, consolidation:1, repeatUnder24h:0.2, repeatUnder7d:0.5 }),
@@ -104,6 +105,29 @@
     return [text(input.user_id)||'local',text(input.source_type),text(input.source_id),text(input.reason),text(input.source_event_id)].join('|');
   }
 
+  function normalizeTransaction(input={}) {
+    const normalized={...input};
+    normalized.activity_type=text(normalized.activity_type || normalized.type);
+    normalized.source_type=text(normalized.source_type);
+    normalized.source_id=text(normalized.source_id);
+    normalized.source_event_id=text(normalized.source_event_id);
+    normalized.reason=text(normalized.reason);
+    normalized.idempotency_key=text(normalized.idempotency_key || normalized.eventKey) || transactionKey(normalized);
+    normalized.eventKey=normalized.idempotency_key;
+    normalized.base_xp=round(normalized.base_xp);
+    normalized.element_multiplier=number(normalized.element_multiplier) || 1;
+    normalized.streak_multiplier=number(normalized.streak_multiplier) || 1;
+    normalized.balance_multiplier=number(normalized.balance_multiplier) || 1;
+    normalized.final_multiplier=number(normalized.final_multiplier) || 1;
+    normalized.final_xp=round(normalized.final_xp ?? normalized.base_xp);
+    normalized.metadata=clone(normalized.metadata || {});
+    normalized.occurred_at=iso(normalized.occurred_at || normalized.created_at);
+    normalized.created_at=iso(normalized.created_at || normalized.occurred_at);
+    normalized.import_batch_id=text(normalized.import_batch_id);
+    normalized.is_legacy=Boolean(normalized.is_legacy);
+    return normalized;
+  }
+
   function awardXPIdempotently(ledger, input={}, ruleOverrides={}) {
     if(!Array.isArray(ledger)) throw new TypeError('ledger deve ser uma lista');
     const required=['activity_type','source_type','source_id','source_event_id','reason'];
@@ -119,7 +143,7 @@
     const transaction={
       id:text(input.id)||id('xp'), user_id:text(input.user_id)||'local', activity_type:text(input.activity_type),
       source_type:text(input.source_type), source_id:text(input.source_id), source_event_id:text(input.source_event_id),
-      idempotency_key:key, base_xp:baseXP, element_multiplier:multipliers.element, streak_multiplier:multipliers.streak,
+      idempotency_key:key, eventKey:key, base_xp:baseXP, element_multiplier:multipliers.element, streak_multiplier:multipliers.streak,
       balance_multiplier:multipliers.balance, final_multiplier:multipliers.final, multiplier_capped:multipliers.capped,
       final_xp:finalXP, reason:text(input.reason), metadata:clone(input.metadata || {}), occurred_at:iso(input.occurred_at),
       created_at:createdAt, import_batch_id:text(input.import_batch_id), is_legacy:Boolean(input.is_legacy)
@@ -148,13 +172,20 @@
   function ensureState(container={}) {
     if(!container || typeof container!=='object') container={};
     if(!Array.isArray(container.xpTransactions)) container.xpTransactions=[];
+    else container.xpTransactions=container.xpTransactions.map(normalizeTransaction);
     if(!Array.isArray(container.importBatches)) container.importBatches=[];
     if(!container.rules || typeof container.rules!=='object') container.rules=clone(DEFAULT_RULES);
     if(!container.profile || typeof container.profile!=='object') container.profile={};
-    if(!container.cloudSyncedTransactionIds || typeof container.cloudSyncedTransactionIds!=='object') container.cloudSyncedTransactionIds={};
     container.version=VERSION;
     refreshProfile(container);
     return container;
+  }
+
+  function ensurePlannerState(plannerState={}) {
+    const state=plannerState && typeof plannerState==='object' ? plannerState : {};
+    const created=!state.gamification || typeof state.gamification!=='object';
+    state.gamification=ensureState(created ? {} : state.gamification);
+    return {state,created};
   }
 
   function refreshProfile(container) {
@@ -170,11 +201,33 @@
   }
 
   function makeLegacyEvent(input) {
+    const eventKey=[text(input.source_type),text(input.source_id),text(input.reason),text(input.source_event_id)].join('|');
     return {
       activity_type:input.activity_type, source_type:input.source_type, source_id:String(input.source_id),
       source_event_id:String(input.source_event_id), base_xp:round(input.base_xp), reason:input.reason,
-      metadata:clone(input.metadata || {}), occurred_at:iso(input.occurred_at), is_legacy:true
+      eventKey, metadata:clone(input.metadata || {}), occurred_at:iso(input.occurred_at), is_legacy:true,
+      import_batch_id:text(input.import_batch_id)
     };
+  }
+
+  function previewCategory(activityType='') {
+    const type=text(activityType);
+    if(type.startsWith('question_')) return 'questions';
+    if(type.startsWith('video_')) return 'videos';
+    if(type.startsWith('flashcard_')) return 'flashcards';
+    if(type.startsWith('simulation_')) return 'simulations';
+    if(type.startsWith('block_')) return 'blocks';
+    return 'other';
+  }
+
+  function summarizePreview(preview={}) {
+    const categories={questions:{count:0,xp:0},videos:{count:0,xp:0},flashcards:{count:0,xp:0},simulations:{count:0,xp:0},blocks:{count:0,xp:0},other:{count:0,xp:0}};
+    (preview.events || []).forEach(event=>{
+      const bucket=categories[previewCategory(event.activity_type)];
+      bucket.count+=1;
+      bucket.xp=round(bucket.xp+number(event.base_xp));
+    });
+    return {events:Object.values(categories).reduce((sum,item)=>sum+item.count,0),xp:round(Object.values(categories).reduce((sum,item)=>sum+item.xp,0)),categories};
   }
 
   function createAutomaticLegacyPreview(input={}, ruleOverrides={}) {
@@ -190,8 +243,10 @@
       const result=calculateVideoXP({seconds:session.seconds},ruleOverrides);
       events.push(makeLegacyEvent({activity_type:'video_progress',source_type:'video_session',source_id:session.scheduleId || session.id,source_event_id:session.id,base_xp:result.baseXP,reason:'video_active_minutes',occurred_at:session.savedAt || session.date,metadata:{seconds:Math.round(number(session.seconds)),scheduleId:session.scheduleId || '',legacySource:true}}));
     });
+    const excludedVideoIds=new Set(state.videoPlayer?.autoCompletedVideoIds || []);
     Object.entries(state.videoPlayer?.watched || {}).forEach(([videoId,watched]) => {
       if(!watched) return;
+      if(excludedVideoIds.has(videoId)) return;
       const watchedAt=state.videoPlayer?.watchedAt?.[videoId];
       events.push(makeLegacyEvent({activity_type:'video_completion',source_type:'video',source_id:videoId,source_event_id:`completion:${videoId}`,base_xp:mergeRules(ruleOverrides).video.completionBonus,reason:'video_completion_90',occurred_at:watchedAt || input.generatedAt,metadata:{dateUnknown:!watchedAt,legacySource:true}}));
     });
@@ -274,8 +329,9 @@
   }
 
   return {
-    VERSION,DEFAULT_RULES,mergeRules,repetitionMultiplier,calculateQuestionXP,calculateVideoXP,calculateBlockXP,
+    VERSION,FEATURE_FLAGS,DEFAULT_RULES,mergeRules,repetitionMultiplier,calculateQuestionXP,calculateVideoXP,calculateBlockXP,
     calculateSimulationBonus,applyMultiplierCap,transactionKey,awardXPIdempotently,totalXP,calculateLevelFromXP,
-    ensureState,refreshProfile,createAutomaticLegacyPreview,createAggregateLegacyPreview,commitLegacyImport,revertLegacyImport,stableHash
+    normalizeTransaction,ensureState,ensurePlannerState,refreshProfile,createAutomaticLegacyPreview,createAggregateLegacyPreview,
+    summarizePreview,commitLegacyImport,revertLegacyImport,stableHash
   };
 });
