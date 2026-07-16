@@ -28,6 +28,7 @@ const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
 const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) || null;
+const Gamification = window.ENAMED_GAMIFICATION || null;
 const INITIAL_PARAMS = new URLSearchParams(window.location.search);
 const LESSON_MIN_QUESTIONS = 10;
 const LESSON_MIN_FLASHCARDS = 10;
@@ -56,6 +57,7 @@ let importedSimuladosLoadPromise = null;
 let pomodoroLastSavedSecond = -1;
 const seed = JSON.parse(document.getElementById('seed').textContent);
 let state = loadState();
+ensureGamificationState();
 ensureImportedQuestions();
 normalizeOfficialScheduleNames();
 ensureRestartFromBlockTen();
@@ -65,6 +67,7 @@ ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
 let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+ui.legacyImportPreview = null;
 try { Object.assign(ui, JSON.parse(localStorage.getItem(QUESTION_VIEW_KEY) || '{}')); } catch(error) {}
 if(ui.tab === 'hoje') ui.tab = 'painel';
 const restoredQuestionTimer = loadQuestionTimerSession();
@@ -101,6 +104,14 @@ applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
   try { const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); if(saved?.schedule?.length) return saved; } catch(e) {}
   return structuredClone(seed);
+}
+function ensureGamificationState() {
+  if(!state || typeof state !== 'object') return;
+  if(!Gamification) {
+    state.gamification = state.gamification && typeof state.gamification === 'object' ? state.gamification : {xpTransactions:[],importBatches:[],profile:{cachedTotalXP:0}};
+    return;
+  }
+  state.gamification = Gamification.ensureState(state.gamification || {});
 }
 function normalizeOfficialScheduleNames() {
   const officialNames = {
@@ -216,8 +227,8 @@ function carryDayLogsToRestartDates(dateMoves) {
     if(n(oldLog.mood) && !n(newLog.mood)) newLog.mood = oldLog.mood;
   });
 }
-function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
-function saveStateOnly(options={}) { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); reviveHiddenHistoryDates(); if(options.invalidate !== false) invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
+function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
+function saveStateOnly(options={}) { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates(); if(options.invalidate !== false) invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
@@ -523,6 +534,111 @@ function completedFlashcards(item) {
   return n(item.manualFC ?? item.fc) + flashcardStatsForSchedule(item.id).reviews;
 }
 
+function gamificationUserId() { return currentUser?.id || 'local'; }
+function gamificationTransactions() { ensureGamificationState(); return state.gamification.xpTransactions; }
+function completedAcademicBlockIds() {
+  const blocks=[...new Set((state.schedule || []).map(item=>n(item.block)).filter(block=>block>=1 && block<=30))];
+  return blocks.filter(block=>{
+    const lessons=state.schedule.filter(item=>n(item.block)===block);
+    return lessons.length>0 && lessons.every(item=>statusOf(item)==='Concluído');
+  }).map(String);
+}
+function awardGamificationXP(input) {
+  if(!Gamification) return {transaction:null,duplicate:true};
+  ensureGamificationState();
+  const result=Gamification.awardXPIdempotently(state.gamification.xpTransactions,{...input,user_id:gamificationUserId()},state.gamification.rules);
+  if(!result.duplicate) Gamification.refreshProfile(state.gamification);
+  return result;
+}
+function latestQuestionXPTransaction(questionId) {
+  return gamificationTransactions().filter(item=>item.activity_type==='question_answer' && item.source_type==='question' && item.source_id===questionId).sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||''))[0] || null;
+}
+function awardQuestionAnswerXP(question,progress) {
+  if(!Gamification || !question || !progress?.answeredAt) return;
+  const previous=latestQuestionXPTransaction(question.id);
+  const calculation=Gamification.calculateQuestionXP({correct:Boolean(progress.correct),occurredAt:progress.answeredAt,previousOccurredAt:previous?.occurred_at},state.gamification?.rules);
+  awardGamificationXP({activity_type:'question_answer',source_type:'question',source_id:question.id,source_event_id:`answer:${question.id}:${progress.answeredAt}`,base_xp:calculation.finalBaseXP,reason:'question_answer',occurred_at:progress.answeredAt,metadata:{correct:Boolean(progress.correct),selected:progress.selected||'',answer:question.answer||'',attempt:n(progress.attempts),scheduleId:progress.scheduleId||'',repetitionMultiplier:calculation.repetitionMultiplier}});
+}
+function awardQuestionReviewXP(questionId,progress) {
+  if(!progress || progress.correct || !progress.answeredAt || String(progress.postLearning||'').trim().length<20) return;
+  awardGamificationXP({activity_type:'question_error_review',source_type:'question',source_id:questionId,source_event_id:`review:${questionId}:${progress.answeredAt}`,base_xp:3,reason:'question_error_reviewed',occurred_at:new Date().toISOString(),metadata:{reviewedError:true,answerEventAt:progress.answeredAt,scheduleId:progress.scheduleId||''}});
+}
+function awardVideoProgressXP(session) {
+  if(!session?.id || n(session.seconds)<=0) return;
+  const calculation=Gamification?.calculateVideoXP({seconds:session.seconds},state.gamification?.rules);
+  if(!calculation) return;
+  awardGamificationXP({activity_type:'video_progress',source_type:'video_session',source_id:session.scheduleId||session.id,source_event_id:session.id,base_xp:calculation.baseXP,reason:'video_active_minutes',occurred_at:session.savedAt||new Date().toISOString(),metadata:{seconds:Math.round(n(session.seconds)),scheduleId:session.scheduleId||''}});
+}
+function awardVideoCompletionXP(videoId,completedAt) {
+  if(!videoId || !completedAt) return;
+  awardGamificationXP({activity_type:'video_completion',source_type:'video',source_id:videoId,source_event_id:`completion:${videoId}`,base_xp:n(state.gamification?.rules?.video?.completionBonus)||5,reason:'video_completion_90',occurred_at:completedAt,metadata:{completionThreshold:0.9}});
+}
+function reconcileCompletedBlockXP() {
+  if(!Gamification || !state?.schedule?.length || !videoCatalog.length || !questionBank.length) return;
+  completedAcademicBlockIds().forEach(blockId=>{
+    const lessons=state.schedule.filter(item=>String(item.block)===blockId);
+    const occurredAt=lessons.map(item=>item.date).filter(Boolean).sort().at(-1) || new Date().toISOString();
+    awardGamificationXP({activity_type:'block_completion',source_type:'block',source_id:blockId,source_event_id:`block:${blockId}:first-completion`,base_xp:n(state.gamification?.rules?.block?.completionBonus)||100,reason:'block_completion',occurred_at:occurredAt,metadata:{academicProgress:true,lessonCount:lessons.length}});
+  });
+}
+function mergeGamificationState(remoteGamification={},localGamification={}) {
+  if(!Gamification) return localGamification || remoteGamification || {};
+  const remote=Gamification.ensureState(structuredClone(remoteGamification || {}));
+  const local=Gamification.ensureState(structuredClone(localGamification || {}));
+  const transactions=new Map();
+  [...remote.xpTransactions,...local.xpTransactions].forEach(transaction=>{
+    const key=transaction.idempotency_key || Gamification.transactionKey(transaction);
+    if(key && !transactions.has(key)) transactions.set(key,transaction);
+  });
+  const batches=new Map();
+  [...remote.importBatches,...local.importBatches].forEach(batch=>{
+    if(!batch?.id) return;
+    const previous=batches.get(batch.id);
+    if(!previous || Date.parse(batch.reverted_at||batch.committed_at||batch.created_at||0)>=Date.parse(previous.reverted_at||previous.committed_at||previous.created_at||0)) batches.set(batch.id,batch);
+  });
+  const merged=Gamification.ensureState({...remote,...local,xpTransactions:[...transactions.values()],importBatches:[...batches.values()],cloudSyncedTransactionIds:{...(remote.cloudSyncedTransactionIds||{}),...(local.cloudSyncedTransactionIds||{})}});
+  Gamification.refreshProfile(merged);
+  return merged;
+}
+async function ensureCloudImportBatch(batchId) {
+  const batch=state.gamification?.importBatches?.find(item=>item.id===batchId);
+  if(!batch || !currentUser || !sbClient) return true;
+  // A reversão relacional é feita exclusivamente pela RPC, após os lançamentos
+  // originais chegarem ao servidor. Não antecipe o status do lote pelo cliente.
+  const payload={id:batch.id,user_id:currentUser.id,status:'committed',source:batch.source||'planner',fingerprint:batch.fingerprint||batch.id,preview_json:batch.preview_json||{},committed_at:batch.committed_at||null,reverted_at:null,totals_json:batch.totals_json||{}};
+  const {error}=await sbClient.from('import_batches').upsert(payload,{onConflict:'id'});
+  return !error;
+}
+async function syncGamificationLedger(limit=40) {
+  const schemaUnavailableAt=n(state.gamification?.cloudSchemaUnavailableAt);
+  if(!currentUser || !sbClient || !Gamification || (schemaUnavailableAt && Date.now()-schemaUnavailableAt<5*60*1000)) return;
+  ensureGamificationState();
+  const synced=state.gamification.cloudSyncedTransactionIds;
+  const pending=state.gamification.xpTransactions.filter(transaction=>!synced[transaction.id]).slice(0,limit);
+  for(const transaction of pending) {
+    if(transaction.import_batch_id && !(await ensureCloudImportBatch(transaction.import_batch_id))) break;
+    if(transaction.activity_type==='import_reversal' && transaction.import_batch_id) {
+      const {error}=await sbClient.rpc('revert_gamification_import',{p_batch_id:transaction.import_batch_id});
+      if(error) {
+        if(/function|schema cache|does not exist/i.test(error.message||'')) state.gamification.cloudSchemaUnavailableAt=Date.now();
+        break;
+      }
+      state.gamification.xpTransactions.filter(item=>item.import_batch_id===transaction.import_batch_id && item.activity_type==='import_reversal').forEach(item=>{synced[item.id]=true;});
+      continue;
+    }
+    const event={activity_type:transaction.activity_type,source_type:transaction.source_type,source_id:transaction.source_id,source_event_id:transaction.source_event_id,reason:transaction.reason,occurred_at:transaction.occurred_at,metadata:transaction.metadata||{},import_batch_id:transaction.import_batch_id||null,is_legacy:Boolean(transaction.is_legacy)};
+    const {error}=await sbClient.rpc('process_study_event',{p_event:event});
+    if(error) {
+      if(/function|schema cache|does not exist/i.test(error.message||'')) state.gamification.cloudSchemaUnavailableAt=Date.now();
+      else console.warn('Falha ao sincronizar transação de XP:',error);
+      break;
+    }
+    synced[transaction.id]=true;
+    state.gamification.cloudSchemaUnavailableAt=0;
+  }
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+}
+
 function applyTheme(theme) {
   const selected = theme === 'dark' ? 'dark' : 'light';
   document.body.classList.toggle('dark', selected === 'dark');
@@ -643,6 +759,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
 
   merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions);
   merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
+  merged.gamification = mergeGamificationState(remote.gamification, local.gamification);
   return merged;
 }
 function timestampOf(value) { return Date.parse(value || '') || 0; }
@@ -750,6 +867,7 @@ async function pushCloudState() {
     } else {
       setSyncStatus(`Sincronizado ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
     }
+    syncGamificationLedger();
   }
 }
 async function pullCloudState({ firstLogin=false }={}) {
@@ -1461,7 +1579,9 @@ function commitAutoStudyTime(tracker, seconds) {
   const lesson = state.schedule.find(item => item.id === tracker.scheduleId);
   if(lesson) lesson.hours = Math.round((n(lesson.hours) + seconds / 3600) * 10000) / 10000;
   if(!Array.isArray(state.studySessions)) state.studySessions=[];
-  state.studySessions.push({id:`study-${Date.now()}-${Math.random().toString(36).slice(2,6)}`,date:studyDate,kind:tracker.kind,scheduleId:tracker.scheduleId||'',seconds:Math.round(seconds),savedAt:new Date().toISOString()});
+  const session={id:`study-${Date.now()}-${Math.random().toString(36).slice(2,6)}`,date:studyDate,kind:tracker.kind,scheduleId:tracker.scheduleId||'',seconds:Math.round(seconds),savedAt:new Date().toISOString()};
+  state.studySessions.push(session);
+  if(tracker.kind==='video') awardVideoProgressXP(session);
   if(state.studySessions.length>5000) state.studySessions=state.studySessions.slice(-5000);
   return seconds;
 }
@@ -2083,13 +2203,71 @@ function bindManualStudyEntry(date) {
     persist();
   };
 }
+function gamificationActivityLabel(transaction) {
+  const labels={question_answer:'Questão respondida',question_error_review:'Erro revisado',video_progress:'Videoaula assistida',video_completion:'Videoaula concluída',flashcard_review:'Flashcard revisado',flashcard_session:'Sessão de flashcards',simulation_completion:'Simulado concluído',block_completion:'Bloco concluído',question_session:'Sessão de questões',import_reversal:'Importação desfeita'};
+  return labels[transaction.activity_type] || transaction.activity_type || 'Atividade';
+}
+function renderGamificationDashboard() {
+  ensureGamificationState();
+  const profile=Gamification ? Gamification.refreshProfile(state.gamification) : {level:1,totalXP:0,xpWithinLevel:0,xpForNextLevel:100,remainingXP:100,progress:0};
+  const blocks=completedAcademicBlockIds();
+  const history=[...(state.gamification.xpTransactions || [])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,6);
+  return `<section class="card gamification-card"><div class="gamification-head"><div class="gamification-level"><span>Nível</span><strong>${profile.level}</strong></div><div class="gamification-progress"><div class="section-title"><div><span class="eyebrow">Fundação RPG</span><h2>${Math.round(n(profile.totalXP))} XP acumulados</h2></div><span class="badge today">Blocos concluídos: ${blocks.length}/30</span></div><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP neste nível</span><span>faltam ${Math.round(n(profile.remainingXP))} XP</span></div></div></div>${history.length?`<div class="xp-history-mini">${history.map(transaction=>`<div><span><strong>${escapeHtml(gamificationActivityLabel(transaction))}</strong><small>${fmtDate(String(transaction.occurred_at||'').slice(0,10))}${transaction.is_legacy?' · Legado':''}</small></span><b class="${n(transaction.final_xp)<0?'negative':''}">${n(transaction.final_xp)>0?'+':''}${roundDisplayXP(transaction.final_xp)} XP</b></div>`).join('')}</div>`:'<div class="muted">O histórico de XP aparecerá após uma atividade nova ou uma importação retroativa confirmada.</div>'}</section>`;
+}
+function roundDisplayXP(value) { const rounded=Math.round(n(value)*10)/10; return Number.isInteger(rounded)?String(rounded):rounded.toFixed(1).replace('.',','); }
+function automaticLegacyPreview() {
+  if(!Gamification) return null;
+  const blockDates={};
+  completedAcademicBlockIds().forEach(blockId=>{blockDates[blockId]=state.schedule.filter(item=>String(item.block)===blockId).map(item=>item.date).filter(Boolean).sort().at(-1)||new Date().toISOString();});
+  return prepareLegacyPreview(Gamification.createAutomaticLegacyPreview({state,completedBlockIds:completedAcademicBlockIds(),blockDates,generatedAt:new Date().toISOString()},state.gamification?.rules));
+}
+function prepareLegacyPreview(preview) {
+  if(!preview) return preview;
+  const known=new Set(gamificationTransactions().map(transaction=>[transaction.source_type,transaction.source_id,transaction.reason,transaction.source_event_id].join('|')));
+  const events=preview.events.filter(event=>!known.has([event.source_type,event.source_id,event.reason,event.source_event_id].join('|')));
+  const duplicateBatch=(state.gamification.importBatches||[]).some(batch=>batch.fingerprint===preview.fingerprint);
+  const accepted=duplicateBatch?[]:events;
+  return {...preview,events:accepted,totalXP:accepted.reduce((sum,event)=>sum+n(event.base_xp),0),counts:accepted.reduce((counts,event)=>{counts[event.activity_type]=(counts[event.activity_type]||0)+1;return counts;},{}),duplicateBatch};
+}
+function renderLegacyImportCard() {
+  ensureGamificationState();
+  const preview=ui.legacyImportPreview;
+  const batches=(state.gamification.importBatches || []).filter(batch=>batch.status==='committed').sort((a,b)=>Date.parse(b.committed_at||'')-Date.parse(a.committed_at||''));
+  const previewRows=preview?.events?.reduce((rows,event)=>{const key=gamificationActivityLabel(event);rows[key]=(rows[key]||0)+1;return rows;},{});
+  return `<details class="card legacy-import-card"><summary><span><strong>Contabilizar estudo anterior</strong><small>Preview obrigatório, ledger idempotente e reversão por lote</small></span><span class="badge ${batches.length?'done':'today'}">${batches.length} lote${batches.length===1?'':'s'}</span></summary><div class="legacy-import-content"><div class="legacy-import-actions"><button class="icon-btn primary" id="previewAutomaticLegacy">Analisar dados existentes</button><span class="muted">Questões, vídeos, flashcards, simulados e blocos com histórico verificável.</span></div><div class="legacy-aggregate"><strong>Ou registrar um saldo conhecido</strong><div class="legacy-aggregate-fields"><input class="input" id="legacyDate" type="date" value="${studyDateKey()}"><input class="input" id="legacyQuestions" type="number" min="0" placeholder="Questões"><input class="input" id="legacyCorrect" type="number" min="0" placeholder="Acertos conhecidos"><input class="input" id="legacyReviewed" type="number" min="0" placeholder="Erros revisados"><input class="input" id="legacyVideoMinutes" type="number" min="0" step="1" placeholder="Minutos de vídeo"><input class="input" id="legacyFlashcards" type="number" min="0" placeholder="Flashcards"><input class="input" id="legacyBlocks" type="number" min="0" max="30" placeholder="Blocos concluídos"><input class="input" id="legacySimulations" type="number" min="0" placeholder="Simulados"><button class="icon-btn" id="previewAggregateLegacy">Pré-visualizar saldo</button></div></div>${preview?`<div class="legacy-preview"><div class="section-title"><div><h3>Prévia sem alterar seus dados</h3><div class="muted">${preview.events.length} eventos válidos · ${Object.entries(previewRows||{}).map(([label,count])=>`${count} ${label.toLowerCase()}`).join(' · ')||'nenhum evento'}</div></div><strong>${roundDisplayXP(preview.totalXP)} XP legado</strong></div><div class="legacy-preview-actions"><button class="icon-btn primary" id="commitLegacyPreview" ${preview.events.length?'':'disabled'}>Confirmar importação</button><button class="tiny-btn" id="cancelLegacyPreview">Cancelar</button></div></div>`:''}${batches.length?`<div class="legacy-batches"><h3>Importações confirmadas</h3>${batches.map(batch=>`<div><span><strong>${escapeHtml(batch.source||'Importação')}</strong><small>${fmtDate(String(batch.committed_at||'').slice(0,10))} · ${roundDisplayXP(batch.totals_json?.xp)} XP</small></span><button class="tiny-btn danger" data-revert-legacy="${escapeAttr(batch.id)}">Desfazer lote</button></div>`).join('')}</div>`:''}</div></details>`;
+}
+function bindGamificationDashboard() {
+  document.getElementById('previewAutomaticLegacy')?.addEventListener('click',()=>{ui.legacyImportPreview=automaticLegacyPreview();renderPainel();});
+  document.getElementById('previewAggregateLegacy')?.addEventListener('click',()=>{
+    ui.legacyImportPreview=prepareLegacyPreview(Gamification.createAggregateLegacyPreview({date:document.getElementById('legacyDate')?.value,questions:n(document.getElementById('legacyQuestions')?.value),correctAnswers:n(document.getElementById('legacyCorrect')?.value),reviewedErrors:n(document.getElementById('legacyReviewed')?.value),videoMinutes:n(document.getElementById('legacyVideoMinutes')?.value),flashcards:n(document.getElementById('legacyFlashcards')?.value),blocksCompleted:n(document.getElementById('legacyBlocks')?.value),simulations:n(document.getElementById('legacySimulations')?.value)},state.gamification?.rules));
+    renderPainel();
+  });
+  document.getElementById('cancelLegacyPreview')?.addEventListener('click',()=>{ui.legacyImportPreview=null;renderPainel();});
+  document.getElementById('commitLegacyPreview')?.addEventListener('click',()=>{
+    if(!ui.legacyImportPreview) return;
+    const result=Gamification.commitLegacyImport(state.gamification,ui.legacyImportPreview,{userId:gamificationUserId()});
+    ui.legacyImportPreview=null;
+    persist();
+    showStudyToast(result.alreadyReverted?'Este mesmo lote já foi importado e desfeito; ele não será duplicado.':result.alreadyCommitted?'Esta importação já estava contabilizada.':`${result.transactions.length} eventos antigos contabilizados sem duplicação.`);
+    syncGamificationLedger();
+  });
+  document.querySelectorAll('[data-revert-legacy]').forEach(button=>button.addEventListener('click',event=>{
+    if(!confirm('Desfazer este lote? O histórico original será preservado e receberá lançamentos de reversão.')) return;
+    const result=Gamification.revertLegacyImport(state.gamification,event.currentTarget.dataset.revertLegacy,{userId:gamificationUserId()});
+    persist();
+    showStudyToast(`${result.reversals.length} lançamentos revertidos com trilha de auditoria.`);
+    syncGamificationLedger();
+  }));
+}
 function renderPainel() {
   const t = totals(); const areas = areaStats(); const next = t.next; const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
     ${renderDashboardMood(dashboardLog)}
     ${renderDailyAnalysis(ui.refDate)}
+    ${renderGamificationDashboard()}
     <div class="card">${renderDailyRoad(ui.refDate)}</div>
     ${renderPersonalDailyTasks(ui.refDate)}
+    ${renderLegacyImportCard()}
     ${renderCloudBackupCard()}
     ${renderCountdown()}
     <div class="grid cards">
@@ -2121,6 +2299,7 @@ function renderPainel() {
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
   bindManualStudyEntry(ui.refDate);
   bindPersonalDailyTasks(ui.refDate);
+  bindGamificationDashboard();
   bindCloudBackupCard();
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
@@ -3779,6 +3958,7 @@ function setVideoWatchedState(videoId, watched) {
     const date = studyDateKey(completedAt);
     state.videoPlayer.watched[videoId] = true;
     state.videoPlayer.watchedAt[videoId] = completedAt;
+    awardVideoCompletionXP(videoId,completedAt);
     const log = getDayLog(date);
     log.videosOn = true;
     log.videos = n(log.videos) + 1;
@@ -6773,6 +6953,7 @@ function answerQuestion(question, selected, timedOut=false) {
     attempts: n(previous.attempts) + 1,
     scheduleId: linkedLesson?.id || previous.scheduleId || ''
   };
+  awardQuestionAnswerXP(question,state.questionProgress[question.id]);
   ui.justAnsweredId=question.id;
   delete ui.draftAnswers[question.id];
   const log = getDayLog(today);
@@ -6799,6 +6980,7 @@ function updateQuestionProgressField(question, input) {
   const current = state.questionProgress[question.id] || {};
   const value = input.type === 'number' ? n(input.value) : input.value;
   state.questionProgress[question.id] = { ...current, [field]: value };
+  if(field === 'postLearning') awardQuestionReviewXP(question.id,state.questionProgress[question.id]);
   if(field === 'notes') {
     const preview = document.getElementById('questionNotesPreview');
     if(preview) preview.innerHTML = renderMarkdown(value);

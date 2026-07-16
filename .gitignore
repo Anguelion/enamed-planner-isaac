@@ -3,6 +3,7 @@ archive/
 tmp/
 deferred_sync/
 tools/
+node_modules/
 video_library/media/
 *.mp4
 *.mkv

@@ -1,0 +1,11 @@
+{
+  "name": "soqueromed-enamed-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Planner ENAMED local-first",
+  "scripts": {
+    "test": "node --test tests/gamification.test.js",
+    "lint": "node --check assets/gamification.js && node --check assets/planner.js && node --check tests/verify-static-build.js",
+    "build": "node tests/verify-static-build.js"
+  }
+}
