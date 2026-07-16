@@ -1,0 +1,135 @@
+(function(root,factory){
+  const api=factory();
+  if(typeof module==='object'&&module.exports) module.exports=api;
+  if(root) root.ENAMED_PLANNER_UX=api;
+})(typeof globalThis!=='undefined'?globalThis:this,function(){
+  'use strict';
+
+  const TIME_ZONE='America/Fortaleza';
+  const ROUTE_TABS=new Set(['painel','cronograma','pendencias','aulas','questoes','analise','flashcards','materiais','simulados','prescricao','areas','historico','feynman','importar-questoes']);
+  const ROUTE_ALIASES={dashboard:'painel',missao:'cronograma',videos:'aulas'};
+
+  function safeDecode(value=''){
+    try{return decodeURIComponent(value);}catch(error){return String(value);}
+  }
+  function safeEncode(value=''){return encodeURIComponent(String(value));}
+  function parseRoute(hash=''){
+    const parts=String(hash||'').replace(/^#\/?/,'').split('/').filter(Boolean).map(safeDecode);
+    if(!parts.length) return {tab:'painel'};
+    const requested=ROUTE_ALIASES[parts[0]]||parts[0];
+    if(requested==='questoes') return {tab:'questoes',questionId:parts[1]||''};
+    if(requested==='aulas') return {tab:'aulas',videoId:parts[1]||''};
+    if(requested==='simulados'&&parts[2]==='tentativas') return {tab:'simulados',simulationId:parts[1]||'',attemptId:parts[3]||'',questionIndex:Math.max(0,Number(parts[5])||0)};
+    return {tab:ROUTE_TABS.has(requested)?requested:'painel'};
+  }
+  function buildRoute(route={}){
+    const tab=ROUTE_TABS.has(route.tab)?route.tab:'painel';
+    if(tab==='questoes'&&route.questionId) return `#/questoes/${safeEncode(route.questionId)}`;
+    if(tab==='aulas'&&route.videoId) return `#/videos/${safeEncode(route.videoId)}`;
+    if(tab==='simulados'&&route.attemptId) return `#/simulados/${safeEncode(route.simulationId||'gerado')}/tentativas/${safeEncode(route.attemptId)}/questao/${Math.max(0,Number(route.questionIndex)||0)}`;
+    return `#/${tab}`;
+  }
+  function localDateKey(value=new Date(),timeZone=TIME_ZONE){
+    const date=value instanceof Date?value:new Date(value);
+    if(Number.isNaN(date.getTime())) return '';
+    const parts=new Intl.DateTimeFormat('en-CA',{timeZone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);
+    const pick=type=>parts.find(part=>part.type===type)?.value||'';
+    return `${pick('year')}-${pick('month')}-${pick('day')}`;
+  }
+  function addDays(dateKey,days){
+    const [year,month,day]=String(dateKey||'').split('-').map(Number);
+    if(!year||!month||!day) return '';
+    const date=new Date(Date.UTC(year,month-1,day+Number(days||0),12));
+    return date.toISOString().slice(0,10);
+  }
+  function weekdayFor(dateKey){
+    const [year,month,day]=String(dateKey||'').split('-').map(Number);
+    if(!year||!month||!day) return -1;
+    return new Date(Date.UTC(year,month-1,day,12)).getUTCDay();
+  }
+  function occurrenceKey(templateId,date){return `task-occurrence:${templateId}:${date}`;}
+  function scheduledForDate(template,date){
+    if(!template||template.active===false||!date) return false;
+    const start=template.startDate||template.createdDate||date;
+    if(date<start) return false;
+    if(template.recurrence==='daily') return true;
+    if(template.recurrence==='weekdays') return (template.weekdays||[]).map(Number).includes(weekdayFor(date));
+    return date===(template.date||start);
+  }
+  function ensureOccurrences(templates=[],occurrences=[],date,now=new Date().toISOString()){
+    const result=occurrences.map(item=>({...item}));
+    const keys=new Set(result.map(item=>item.occurrenceKey).filter(Boolean));
+    templates.filter(template=>scheduledForDate(template,date)).forEach(template=>{
+      const key=occurrenceKey(template.id,date);
+      if(keys.has(key)) return;
+      result.push({
+        id:`occ-${template.id}-${date}`,
+        templateId:template.id,
+        occurrenceKey:key,
+        date,
+        text:template.text,
+        done:false,
+        status:'pending',
+        priority:Number(template.priority)||0,
+        order:Number(template.order)||1,
+        createdAt:now,
+        completedAt:'',
+        updatedAt:now,
+        postponedFrom:'',
+        postponedTo:''
+      });
+      keys.add(key);
+    });
+    return result;
+  }
+  function postponeOccurrence(occurrences=[],taskId,nextDate,now=new Date().toISOString()){
+    const result=occurrences.map(item=>({...item}));
+    const source=result.find(item=>item.id===taskId);
+    if(!source||!nextDate) return result;
+    source.status='postponed';
+    source.postponedTo=nextDate;
+    source.updatedAt=now;
+    const key=occurrenceKey(source.templateId,nextDate);
+    const existing=result.find(item=>item.occurrenceKey===key);
+    if(existing) {
+      existing.postponedFrom=source.date;
+      existing.updatedAt=now;
+      return result;
+    }
+    result.push({
+      ...source,
+      id:`occ-${source.templateId}-${nextDate}`,
+      occurrenceKey:key,
+      date:nextDate,
+      done:false,
+      status:'pending',
+      completedAt:'',
+      postponedFrom:source.date,
+      postponedTo:'',
+      createdAt:now,
+      updatedAt:now
+    });
+    return result;
+  }
+  function normalizeVideoProgress(existing={},fallback={}){
+    return {
+      videoId:String(existing.videoId||fallback.videoId||''),
+      currentTime:Math.max(0,Number(existing.currentTime??fallback.currentTime)||0),
+      duration:Math.max(0,Number(existing.duration??fallback.duration)||0),
+      playbackRate:Math.min(4,Math.max(.25,Number(existing.playbackRate??fallback.playbackRate)||1)),
+      updatedAt:existing.updatedAt||fallback.updatedAt||'',
+      completed:Boolean(existing.completed??fallback.completed),
+      lessonId:String(existing.lessonId||fallback.lessonId||''),
+      scheduleId:String(existing.scheduleId||fallback.scheduleId||''),
+      block:Number(existing.block??fallback.block)||0
+    };
+  }
+  function resumeTime(progress={},nearEndSeconds=15){
+    const current=Math.max(0,Number(progress.currentTime)||0);
+    const duration=Math.max(0,Number(progress.duration)||0);
+    if(progress.completed&&duration>0&&current>=Math.max(0,duration-nearEndSeconds)) return 0;
+    return duration>0?Math.min(current,Math.max(0,duration-.1)):current;
+  }
+
+  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,scheduledForDate,ensureOccurrences,postponeOccurrence,normalizeVideoProgress,resumeTime};
+});

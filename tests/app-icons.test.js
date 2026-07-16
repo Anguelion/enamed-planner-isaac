@@ -35,11 +35,22 @@ test('sprite local contém todas as variantes do mapa',()=>{
 });
 
 test('assets RPG são locais, multicoloridos e preservam fills',()=>{
-  for(const source of Object.values(Icons.RPG_ASSET_MAP)) {
+  for(const source of Object.values(Icons.RPG_ASSET_MAP).filter(source=>source.endsWith('.svg'))) {
     assert.doesNotMatch(source,/^https?:/);
     const svg=fs.readFileSync(path.join(root,source),'utf8');
     assert.match(svg,/<svg/);
     assert.match(svg,/fill="#[0-9a-f]{3,8}"/i);
     assert.doesNotMatch(svg,/currentColor/);
   }
+});
+
+test('cada classe RPG possui um personagem PNG local',()=>{
+  const ranks=['aldeao','aprendiz','escudeiro','soldado','cavaleiro','capitao','barao','duque','rei','imperador'];
+  for(const rank of ranks) {
+    const source=Icons.RPG_ASSET_MAP[rank];
+    assert.match(source,new RegExp(`assets/rpg/classes/${rank}\\.png$`));
+    assert.ok(fs.existsSync(path.join(root,source)),`${rank}: personagem ausente`);
+    assert.ok(fs.statSync(path.join(root,source)).size>10_000,`${rank}: arquivo parece inválido`);
+  }
+  assert.match(Icons.RpgAsset('imperador',{label:'Classe Imperador',width:240,height:336}),/width="240" height="336"/);
 });

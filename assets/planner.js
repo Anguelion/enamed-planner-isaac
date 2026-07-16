@@ -29,7 +29,9 @@ const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
 const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) || null;
 const Gamification = window.ENAMED_GAMIFICATION || null;
+const PlannerUX = window.ENAMED_PLANNER_UX || null;
 const INITIAL_PARAMS = new URLSearchParams(window.location.search);
+const INITIAL_ROUTE = PlannerUX?.parseRoute(window.location.hash) || {tab:''};
 const LESSON_MIN_QUESTIONS = 10;
 const LESSON_MIN_FLASHCARDS = 10;
 const DAILY_QUESTION_TARGET = 20;
@@ -66,7 +68,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -84,6 +86,7 @@ let pomodoro = loadPomodoroSession();
 let simuladoTimer = { interval: null, runId: '' };
 let motivationRefreshInterval = null;
 let motivationRenderedKey = '';
+let activeVideoProgressCleanup = null;
 let dashboardCountdownInterval = null;
 let highlightUndoStack = [];
 let currentUser = null;
@@ -100,7 +103,7 @@ let cloudBackupsError = '';
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
-  ['painel','Dashboard','dashboard'], ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['aulas','Aulas','video'], ['questoes','Questões','question'], ['importar-questoes','Adicionar questões','upload'], ['analise','Análise','analysis'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'], ['simulados','Simulados','simulation'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','areas'], ['historico','Histórico','history'], ['feynman','Feynman','feynman']
+  ['painel','Dashboard','dashboard'], ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['aulas','Aulas','video'], ['questoes','Questões','question'], ['analise','Análise','analysis'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'], ['simulados','Simulados','simulation'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','areas'], ['historico','Histórico','history'], ['feynman','Feynman','feynman'], ['importar-questoes','Adicionar questões','upload']
 ];
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
@@ -284,6 +287,16 @@ function ensureQuestionProgress() {
   if(!state.videoPlayer.resumeUpdatedAt || typeof state.videoPlayer.resumeUpdatedAt !== 'object') state.videoPlayer.resumeUpdatedAt = {};
   if(!state.videoPlayer.watched || typeof state.videoPlayer.watched !== 'object') state.videoPlayer.watched = {};
   if(!state.videoPlayer.watchedAt || typeof state.videoPlayer.watchedAt !== 'object') state.videoPlayer.watchedAt = {};
+  if(!state.videoPlayer.progress || typeof state.videoPlayer.progress !== 'object') state.videoPlayer.progress = {};
+  Object.keys(state.videoPlayer.resume).forEach(sourceId => {
+    state.videoPlayer.progress[sourceId] = PlannerUX?.normalizeVideoProgress(state.videoPlayer.progress[sourceId], {
+      videoId:sourceId,
+      currentTime:state.videoPlayer.resume[sourceId],
+      playbackRate:n(state.videoPlayer.progress[sourceId]?.playbackRate) || n(localStorage.getItem(VIDEO_RATE_KEY)) || 1,
+      updatedAt:state.videoPlayer.resumeUpdatedAt[sourceId] || '',
+      completed:Boolean(state.videoPlayer.watched[sourceId])
+    }) || state.videoPlayer.progress[sourceId];
+  });
   if(!state.videoPlayer.pinned || typeof state.videoPlayer.pinned !== 'object') state.videoPlayer.pinned = { enabled:false, lessonId:'', sourceId:'' };
   if(!state.videoPlayer.lastOpen || typeof state.videoPlayer.lastOpen !== 'object') state.videoPlayer.lastOpen = { lessonId:'', sourceId:'', updatedAt:'' };
   state.videoPlayer.lastOpen = { lessonId:'', sourceId:'', updatedAt:'', ...state.videoPlayer.lastOpen };
@@ -1279,52 +1292,83 @@ function ensureDayLogs() {
 }
 function ensureDailyTasks() {
   if(!Array.isArray(state.dailyTasks)) state.dailyTasks = [];
+  if(!Array.isArray(state.taskTemplates)) state.taskTemplates = [];
   state.dailyTasks = state.dailyTasks.map((task, index) => ({
     id: task.id || `daily-task-${index}-${Date.now()}`,
+    templateId: task.templateId || `task-template-${task.id || index}`,
+    occurrenceKey: task.occurrenceKey || PlannerUX?.occurrenceKey(task.templateId || `task-template-${task.id || index}`, task.date || studyDateKey()),
     date: task.date || studyDateKey(),
     text: String(task.text || '').trim(),
     done: Boolean(task.done),
+    status: task.status || (task.done ? 'done' : 'pending'),
     priority: Math.min(3, Math.max(0, n(task.priority))),
     order: n(task.order) || index + 1,
     createdAt: task.createdAt || new Date().toISOString(),
     completedAt: task.completedAt || '',
-    updatedAt: task.updatedAt || task.createdAt || new Date().toISOString()
+    updatedAt: task.updatedAt || task.createdAt || new Date().toISOString(),
+    postponedFrom:task.postponedFrom || '',
+    postponedTo:task.postponedTo || ''
   })).filter(task => task.text);
+  const templateIds=new Set(state.taskTemplates.map(template=>template.id));
+  state.dailyTasks.forEach(task=>{
+    if(templateIds.has(task.templateId)) return;
+    state.taskTemplates.push({id:task.templateId,text:task.text,recurrence:'none',weekdays:[],date:task.date,startDate:task.date,priority:task.priority,order:task.order,active:true,createdAt:task.createdAt,updatedAt:task.updatedAt});
+    templateIds.add(task.templateId);
+  });
+  state.taskTemplates=state.taskTemplates.map(template=>({...template,recurrence:['daily','weekdays'].includes(template.recurrence)?template.recurrence:'none',weekdays:Array.isArray(template.weekdays)?template.weekdays.map(Number):[],active:template.active!==false}));
 }
 function dailyTasksFor(date) {
   ensureDailyTasks();
+  state.dailyTasks=PlannerUX?.ensureOccurrences(state.taskTemplates,state.dailyTasks,date,new Date().toISOString())||state.dailyTasks;
   return state.dailyTasks.filter(task => task.date === date).sort((a,b) => {
     if(a.done !== b.done) return a.done ? 1 : -1;
     return n(b.priority) - n(a.priority) || n(a.order) - n(b.order) || (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0);
   });
 }
 function renderPersonalDailyTasks(date) {
-  const tasks = dailyTasksFor(date);
+  const selectedDate=ui.personalTaskDate||date;
+  const filter=ui.personalTaskFilter||'all';
+  const today=PlannerUX?.localDateKey(new Date())||studyDateKey();
+  const tasks = dailyTasksFor(selectedDate).filter(task=>filter==='done'?task.done:filter==='pending'?!task.done&&task.status!=='postponed':filter==='overdue'?!task.done&&task.status!=='postponed'&&task.date<today:true);
   const completed = tasks.filter(task => task.done).length;
-  const taskRows = tasks.map((task,index) => {
+  const visibleTasks=tasks.slice(0,5);
+  const taskRows = visibleTasks.map((task,index) => {
     const editing = ui.personalTaskEditId === task.id;
     const stars = [1,2,3].map(value => `<button class="personal-task-star ${value <= n(task.priority) ? 'active' : ''}" data-task-priority="${escapeAttr(task.id)}" data-priority-value="${value}" title="Prioridade ${value} de 3" aria-label="Prioridade ${value} de 3">★</button>`).join('');
     const editor = editing ? `<div class="personal-task-editor"><input class="input" data-task-edit-text="${escapeAttr(task.id)}" value="${escapeAttr(task.text)}" maxlength="180"><input class="input task-order-input" type="number" min="1" step="1" data-task-edit-order="${escapeAttr(task.id)}" value="${n(task.order) || index + 1}"><button class="tiny-btn" data-task-edit-save="${escapeAttr(task.id)}">Salvar</button><button class="tiny-btn" data-task-edit-cancel="${escapeAttr(task.id)}">Cancelar</button></div>` : '';
-    return `<div class="personal-task-row ${task.done ? 'done' : ''}"><div class="personal-task-main"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''}><span class="personal-task-text">${escapeHtml(task.text)}</span></label>${editor}</div><div class="personal-task-actions"><div class="personal-task-priority" title="Prioridade ${n(task.priority) || 0} de 3 estrelas">${stars}</div><button class="tiny-btn" type="button" data-task-edit="${escapeAttr(task.id)}" title="Editar tarefa" aria-label="Editar tarefa">✎</button><button class="tiny-btn danger personal-task-remove" type="button" title="Excluir tarefa" aria-label="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">×</button></div></div>`;
+    return `<div class="personal-task-row ${task.done ? 'done' : ''} ${task.status==='postponed'?'postponed':''}"><div class="personal-task-main"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''} ${task.status==='postponed'?'disabled':''}><span class="personal-task-text">${escapeHtml(task.text)}</span></label>${task.status==='postponed'?`<small class="muted">Adiada para ${fmtDate(task.postponedTo)}</small>`:''}${editor}</div><div class="personal-task-actions"><div class="personal-task-priority" title="Prioridade ${n(task.priority) || 0} de 3 estrelas">${stars}</div>${!task.done&&task.status!=='postponed'?`<button class="tiny-btn" type="button" data-task-postpone="${escapeAttr(task.id)}" title="Mover para o próximo dia" aria-label="Mover para o próximo dia">${iconSvg('next',{weight:'regular'})}</button>`:''}<button class="tiny-btn" type="button" data-task-edit="${escapeAttr(task.id)}" title="Editar tarefa" aria-label="Editar tarefa">✎</button><button class="tiny-btn danger personal-task-remove" type="button" title="Excluir tarefa" aria-label="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">×</button></div></div>`;
   }).join('');
-  return `<div class="card personal-tasks-card"><div class="section-title"><div><h2>Tarefas pessoais do dia</h2><div class="muted">Anotações individuais, separadas do cronograma oficial.</div></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="personal-task-add"><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria antes de dormir"><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar tarefa" aria-label="Adicionar tarefa">${iconSvg('plus')}</button></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>` : '<div class="empty personal-task-empty">Nenhuma tarefa pessoal para esta data.</div>'}</div>`;
+  const weekdays=['D','S','T','Q','Q','S','S'].map((label,index)=>`<label><input type="checkbox" data-new-task-weekday="${index}" ${index>0&&index<6?'checked':''}>${label}</label>`).join('');
+  const pending=tasks.filter(task=>!task.done&&task.status!=='postponed').length;
+  return `<div class="card personal-tasks-card dashboard-tasks-card"><div class="section-title"><div><span class="eyebrow">Agenda pessoal</span><h2>Tarefas de hoje</h2></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="dashboard-task-summary"><div><strong>${pending}</strong><span>Pendentes</span></div><div><strong>${completed}</strong><span>Concluídas</span></div></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>${tasks.length>visibleTasks.length?`<div class="muted dashboard-task-more">+ ${tasks.length-visibleTasks.length} tarefa${tasks.length-visibleTasks.length===1?'':'s'}</div>`:''}` : '<div class="empty personal-task-empty">Nenhuma tarefa para esta data.</div>'}<details class="personal-task-manage"><summary>Adicionar ou escolher outra data</summary><div class="personal-task-date-tools"><button class="tiny-btn" id="personalTaskPrev" aria-label="Dia anterior">‹</button><input class="input" id="personalTaskDate" type="date" value="${escapeAttr(selectedDate)}"><button class="tiny-btn" id="personalTaskNext" aria-label="Dia seguinte">›</button><button class="tiny-btn" id="personalTaskToday">Hoje</button><select class="select" id="personalTaskFilter"><option value="all" ${filter==='all'?'selected':''}>Todas</option><option value="pending" ${filter==='pending'?'selected':''}>Pendentes</option><option value="done" ${filter==='done'?'selected':''}>Concluídas</option><option value="overdue" ${filter==='overdue'?'selected':''}>Atrasadas</option></select></div><div class="personal-task-add"><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria"><select class="select" id="personalTaskRecurrence"><option value="none">Uma vez</option><option value="daily">Todo dia</option><option value="weekdays">Dias escolhidos</option></select><div class="task-weekdays">${weekdays}</div><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar tarefa" aria-label="Adicionar tarefa">${iconSvg('plus')}</button></div></details></div>`;
 }
 function bindPersonalDailyTasks(date) {
+  const selectedDate=ui.personalTaskDate||date;
   const input = document.getElementById('personalTaskInput');
   const addTask = () => {
     const text = String(input?.value || '').trim();
     if(!text) return;
     ensureDailyTasks();
     const now = new Date().toISOString();
-    state.dailyTasks.unshift({ id:`daily-task-${Date.now()}-${Math.random().toString(36).slice(2,7)}`, date, text, done:false, priority:0, order:state.dailyTasks.filter(task => task.date === date).length + 1, createdAt:now, completedAt:'', updatedAt:now });
+    const templateId=`task-template-${Date.now()}-${Math.random().toString(36).slice(2,7)}`;
+    const recurrence=document.getElementById('personalTaskRecurrence')?.value||'none';
+    const weekdays=[...document.querySelectorAll('[data-new-task-weekday]:checked')].map(box=>n(box.dataset.newTaskWeekday));
+    state.taskTemplates.push({id:templateId,text,recurrence,weekdays,date:selectedDate,startDate:selectedDate,priority:0,order:state.dailyTasks.filter(task => task.date === selectedDate).length + 1,active:true,createdAt:now,updatedAt:now});
+    state.dailyTasks=PlannerUX?.ensureOccurrences(state.taskTemplates,state.dailyTasks,selectedDate,now)||state.dailyTasks;
     persist();
   };
+  document.getElementById('personalTaskPrev')?.addEventListener('click',()=>{ui.personalTaskDate=PlannerUX.addDays(selectedDate,-1);render();});
+  document.getElementById('personalTaskNext')?.addEventListener('click',()=>{ui.personalTaskDate=PlannerUX.addDays(selectedDate,1);render();});
+  document.getElementById('personalTaskToday')?.addEventListener('click',()=>{ui.personalTaskDate=PlannerUX.localDateKey(new Date());render();});
+  document.getElementById('personalTaskDate')?.addEventListener('change',event=>{ui.personalTaskDate=event.target.value||selectedDate;render();});
+  document.getElementById('personalTaskFilter')?.addEventListener('change',event=>{ui.personalTaskFilter=event.target.value;render();});
   document.getElementById('addPersonalTask')?.addEventListener('click', addTask);
   input?.addEventListener('keydown', event => { if(event.key === 'Enter') { event.preventDefault(); addTask(); } });
   document.querySelectorAll('[data-toggle-personal-task]').forEach(box => box.addEventListener('change', event => {
     const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.togglePersonalTask);
     if(!task) return;
     task.done = event.currentTarget.checked;
+    task.status = task.done ? 'done' : 'pending';
     task.completedAt = task.done ? new Date().toISOString() : '';
     task.updatedAt = new Date().toISOString();
     persist();
@@ -1339,7 +1383,17 @@ function bindPersonalDailyTasks(date) {
     const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.taskPriority);
     if(!task) return;
     task.priority = n(event.currentTarget.dataset.priorityValue);
+    const template=state.taskTemplates.find(item=>item.id===task.templateId);
+    if(template) template.priority=task.priority;
     task.updatedAt = new Date().toISOString();
+    persist();
+  }));
+  document.querySelectorAll('[data-task-postpone]').forEach(button=>button.addEventListener('click',event=>{
+    const task=state.dailyTasks.find(item=>item.id===event.currentTarget.dataset.taskPostpone);
+    if(!task) return;
+    const nextDate=PlannerUX.addDays(task.date,1);
+    const now=new Date().toISOString();
+    state.dailyTasks=PlannerUX.postponeOccurrence(state.dailyTasks,task.id,nextDate,now);
     persist();
   }));
   document.querySelectorAll('[data-task-edit]').forEach(button => button.addEventListener('click', event => {
@@ -1359,6 +1413,8 @@ function bindPersonalDailyTasks(date) {
     task.text = text;
     task.order = Math.max(1, n(document.querySelector(`[data-task-edit-order="${CSS.escape(id)}"]`)?.value) || 1);
     task.updatedAt = new Date().toISOString();
+    const template=state.taskTemplates.find(item=>item.id===task.templateId);
+    if(template) { template.text=task.text;template.order=task.order;template.updatedAt=task.updatedAt; }
     ui.personalTaskEditId = '';
     persist();
   }));
@@ -2055,7 +2111,7 @@ function runDailyStudyChoice(button, date) {
 }
 function renderDailyRoad(date) {
   const items = dayRoadItems(date);
-  return `<div class="dashboard-road"><div class="section-title"><div><h2>Trilha do dia</h2><div class="muted">${fmtDate(date)} · veja rapidamente o que falta concluir hoje.</div></div><div class="daily-road-tools"><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="icon-btn daily-random-choice" id="dailyRandomChoice" type="button" title="Sortear o próximo estudo">${iconSvg('dice')}<span>Deixe-me escolher</span></button></div></div><div class="road-path">${items.map(item => {
+  return `<div class="dashboard-road"><div class="section-title"><div><h2>Trilha do dia</h2><div class="muted">Veja rapidamente o que falta concluir hoje.</div></div><div class="daily-road-tools"><button class="icon-btn daily-random-choice" id="dailyRandomChoice" type="button" title="Sortear o próximo estudo">${iconSvg('dice')}<span>Deixe-me escolher</span></button></div></div><div class="road-path">${items.map(item => {
     const ratio = clamp(n(item.progress) / Math.max(n(item.target), 1));
     const partial = !item.done && n(item.progress) > 0;
     const statusText = item.done ? 'Concluído' : partial ? 'Em andamento' : 'Falta';
@@ -2108,17 +2164,69 @@ function startDashboardCountdown() {
   update();
   dashboardCountdownInterval = setInterval(update, 60000);
 }
+function currentRouteState() {
+  const activeRun=state.simuladoRuns?.find(run=>run.id===ui.activeSimRunId);
+  return {
+    tab:ui.tab,
+    questionId:ui.tab==='questoes'?(ui.qQuestionId||filteredQuestions?.()?.[ui.qIndex]?.id||''):'',
+    videoId:ui.tab==='aulas'?(ui.videoSourceId||state.videoPlayer?.lastOpen?.sourceId||''):'',
+    simulationId:activeRun?.sourceSimulationId||activeRun?.importedSimId||'gerado',
+    attemptId:ui.tab==='simulados'?activeRun?.id||'':'',
+    questionIndex:activeRun?.currentIndex||0
+  };
+}
+function navigationSnapshot() {
+  return {
+    route:currentRouteState(),
+    ui:{
+      tab:ui.tab,qBlock:ui.qBlock,qSource:ui.qSource,qTopic:ui.qTopic,qStatus:ui.qStatus,qSearch:ui.qSearch,qIndex:ui.qIndex,qQuestionId:ui.qQuestionId,
+      videoBlock:ui.videoBlock,videoSearch:ui.videoSearch,videoLessonId:ui.videoLessonId,videoSourceId:ui.videoSourceId,
+      activeSimRunId:ui.activeSimRunId,simulationLibraryOpen:ui.simulationLibraryOpen
+    },
+    scrollY:window.scrollY
+  };
+}
+function syncRouteFromUI(mode='replace') {
+  if(!PlannerUX) return;
+  const route=currentRouteState();
+  const hash=PlannerUX.buildRoute(route);
+  const current=`${window.location.hash||''}`;
+  if(mode==='push') {
+    history.replaceState(navigationSnapshot(),'',window.location.href);
+    history.pushState(navigationSnapshot(),'',hash);
+  } else if(current!==hash) history.replaceState(navigationSnapshot(),'',hash);
+  else history.replaceState(navigationSnapshot(),'',window.location.href);
+}
+function navigateToTab(nextTab,{push=true}={}) {
+  if(ui.tab==='questoes'&&nextTab!=='questoes'&&!settleQuestionTimerBeforeLeave()) return false;
+  if(autoStudyIsRunning()) stopAutoStudy();
+  if(ui.tab==='aulas') saveOpenVideoPosition();
+  ui.tab=nextTab;
+  if(nextTab==='questoes') { ui.qFocusScheduleId=''; ui.qStatus='Não respondidas'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; resetKeyboardConfirmation(); }
+  if(nextTab==='simulados'&&ui.activeSimRunId) ui.simulationLibraryOpen=false;
+  syncRouteFromUI(push?'push':'replace');
+  render();
+  return true;
+}
+function restoreNavigation(event) {
+  const parsed=PlannerUX?.parseRoute(window.location.hash)||{tab:'painel'};
+  const snapshot=event?.state;
+  if(snapshot?.ui) Object.assign(ui,snapshot.ui);
+  ui.tab=parsed.tab||snapshot?.ui?.tab||'painel';
+  if(parsed.questionId) ui.qQuestionId=parsed.questionId;
+  if(parsed.videoId) ui.videoSourceId=parsed.videoId;
+  if(parsed.attemptId) {
+    ui.activeSimRunId=parsed.attemptId;
+    ui.simulationLibraryOpen=false;
+    const run=state.simuladoRuns?.find(item=>item.id===parsed.attemptId);
+    if(run) run.currentIndex=Math.max(0,Math.min(run.questionIds.length-1,n(parsed.questionIndex)));
+  }
+  render();
+  requestAnimationFrame(()=>window.scrollTo({top:Math.max(0,n(snapshot?.scrollY)),behavior:'auto'}));
+}
 function renderTabs() {
   document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => `<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`).join('');
-  document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => {
-    const nextTab=b.dataset.tab;
-    if(ui.tab==='questoes' && nextTab!=='questoes' && !settleQuestionTimerBeforeLeave()) return;
-    if(autoStudyIsRunning()) stopAutoStudy();
-    if(ui.tab === 'aulas') saveOpenVideoPosition();
-    ui.tab=nextTab;
-    if(ui.tab==='questoes') { ui.qFocusScheduleId=''; ui.qStatus='Não respondidas'; ui.qIndex=0; ui.justAnsweredId=''; resetKeyboardConfirmation(); }
-    render();
-  });
+  document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => navigateToTab(b.dataset.tab));
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id===ui.tab));
   if(window.matchMedia('(max-width: 820px)').matches) {
     requestAnimationFrame(() => document.querySelector('.tab.active')?.scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'}));
@@ -2146,7 +2254,7 @@ function iconSvg(name,options={}) {
   return window.ENAMED_ICONS?.AppIcon(name,options) || '';
 }
 function renderDashboardMood(log) {
-  return `<div class="card"><div class="section-title"><div><h2>Como você está hoje?</h2><div class="muted">Registre seu ritmo antes de começar.</div></div><span class="badge today">${fmtDate(log.date)}</span></div><div class="mood-row">${[[3,'🙂','Motivado'],[2,'😐','Mais ou menos'],[1,'😴','Lento']].map(([value,face,label]) => `<button class="mood-btn ${n(log.mood)===value?'active':''}" data-dashboard-mood="${value}">${face}<small>${label}</small></button>`).join('')}</div></div>`;
+  return `<section class="card dashboard-mood"><div class="dashboard-mood-copy"><h2>Como você está hoje?</h2><div class="muted">Registre seu ritmo antes de começar.</div></div><div class="mood-row">${[[3,'🙂','Motivado'],[2,'😐','Mais ou menos'],[1,'😴','Lento']].map(([value,face,label]) => `<button class="mood-btn ${n(log.mood)===value?'active':''}" data-dashboard-mood="${value}" aria-pressed="${n(log.mood)===value}"><span>${face}</span><small>${label}</small></button>`).join('')}</div></section>`;
 }
 function formatDailyStudyTime(minutes) {
   const total = Math.max(0, Math.round(n(minutes)));
@@ -2191,7 +2299,66 @@ function renderDailyAnalysis(date) {
     { icon:'brain', label:'Questões', value:snapshot.questions, foot:`Meta diária: ${DAILY_QUESTION_TARGET}`, progress:questionProgress },
     { icon:'cards', label:'Flashcards', value:snapshot.flashcards, foot:`Meta diária: ${DAILY_FLASHCARD_TARGET}`, progress:flashcardProgress }
   ];
-  return `<section class="card daily-analysis"><div class="section-title"><div><span class="eyebrow">Seu desempenho</span><h2>Análise do dia</h2></div><span class="badge today">${fmtDate(date)}</span></div><div class="daily-analysis-grid">${tiles.map(tile => `<article class="daily-analysis-tile"><span class="daily-analysis-icon">${iconSvg(tile.icon)}</span><div><span class="daily-analysis-label">${tile.label}</span><strong>${tile.value}</strong><small>${tile.foot}</small>${tile.progress === null ? '' : `<div class="daily-analysis-progress" role="progressbar" aria-valuenow="${tile.progress}" aria-valuemin="0" aria-valuemax="100"><span style="width:${tile.progress}%"></span></div>`}</div></article>`).join('')}</div></section>`;
+  return `<section class="card daily-analysis"><div class="section-title"><div><span class="eyebrow">Seu desempenho</span><h2>Análise do dia</h2></div></div><div class="daily-analysis-grid">${tiles.map(tile => `<article class="daily-analysis-tile"><span class="daily-analysis-icon">${iconSvg(tile.icon)}</span><div><span class="daily-analysis-label">${tile.label}</span><strong>${tile.value}</strong><small title="${escapeAttr(tile.foot)}">${tile.foot}</small>${tile.progress === null ? '' : `<div class="daily-analysis-progress" role="progressbar" aria-label="Progresso de ${escapeAttr(tile.label)}" aria-valuenow="${tile.progress}" aria-valuemin="0" aria-valuemax="100"><span style="width:${tile.progress}%"></span></div>`}</div></article>`).join('')}</div></section>`;
+}
+
+function latestDashboardActivity() {
+  const candidates=[];
+  const lastVideo=state.videoPlayer?.lastOpen;
+  if(lastVideo?.lessonId && lastVideo?.updatedAt) {
+    const lesson=displayVideoLessons().find(item=>item.id===lastVideo.lessonId);
+    const source=lesson?.videos?.find(item=>item.id===lastVideo.sourceId);
+    const progress=state.videoPlayer?.progress?.[lastVideo.sourceId] || {};
+    const seconds=Math.max(0,n(progress.currentTime ?? state.videoPlayer?.resume?.[lastVideo.sourceId]));
+    candidates.push({type:'video',icon:'play',title:source?.label||lesson?.title||'Videoaula',module:lesson?.title||'Videoaulas',updatedAt:lastVideo.updatedAt,position:seconds?`Retomar em ${formatVideoTime(seconds)}`:'Retomar do início',lessonId:lastVideo.lessonId,sourceId:lastVideo.sourceId});
+  }
+  Object.entries(state.questionProgress||{}).forEach(([questionId,progress])=>{
+    if(!progress?.answeredAt) return;
+    const question=questionBank.find(item=>item.id===questionId);
+    candidates.push({type:'question',icon:'brain',title:question?.topic||question?.title||`Questão ${question?.number||''}`.trim(),module:`Bloco ${question?.block||progress.block||'—'} · Questões`,updatedAt:progress.answeredAt,position:question?.number?`Questão ${question.number}`:'Voltar à questão',questionId});
+  });
+  (state.simuladoRuns||[]).forEach(run=>{
+    if(!run?.updatedAt) return;
+    candidates.push({type:'simulado',icon:'simulations',title:run.name||'Simulado ENAMED',module:'Simulados',updatedAt:run.updatedAt,position:run.finishedAt?'Rever resultado':`Questão ${n(run.currentIndex)+1}`,runId:run.id});
+  });
+  (state.flashcardSystem?.reviewLogs||[]).forEach(review=>{
+    if(!review?.reviewedAt) return;
+    const card=state.flashcardLibrary?.find(item=>item.id===review.cardId);
+    candidates.push({type:'flashcard',icon:'cards',title:card?.front||card?.question||'Revisão de flashcards',module:card?.deck||card?.topic||'Flashcards',updatedAt:review.reviewedAt,position:'Continuar revisão',cardId:review.cardId||''});
+  });
+  return candidates.sort((a,b)=>(Date.parse(b.updatedAt)||0)-(Date.parse(a.updatedAt)||0))[0]||null;
+}
+function dashboardActivityTimestamp(value) {
+  const date=new Date(value);
+  if(Number.isNaN(date.getTime())) return 'Ainda sem horário registrado';
+  return new Intl.DateTimeFormat('pt-BR',{dateStyle:'short',timeStyle:'short'}).format(date);
+}
+function renderContinueStudying() {
+  const activity=latestDashboardActivity();
+  if(!activity) return `<section class="card continue-study-card is-empty"><span class="continue-study-icon">${iconSvg('play')}</span><div><span class="eyebrow">Prioridade</span><h2>Continuar estudando</h2><p>A primeira atividade que você abrir ficará disponível aqui para retomada.</p></div><button class="icon-btn primary" data-dashboard-continue="empty">Abrir trilha</button></section>`;
+  return `<section class="card continue-study-card"><span class="continue-study-icon">${iconSvg(activity.icon)}</span><div class="continue-study-copy"><span class="eyebrow">Continuar estudando</span><h2>${escapeHtml(activity.title)}</h2><p>${escapeHtml(activity.module)} · ${escapeHtml(activity.position)}</p><small>Última atividade: ${escapeHtml(dashboardActivityTimestamp(activity.updatedAt))}</small></div><button class="icon-btn primary" data-dashboard-continue="${escapeAttr(activity.type)}" data-continue-lesson="${escapeAttr(activity.lessonId||'')}" data-continue-source="${escapeAttr(activity.sourceId||'')}" data-continue-question="${escapeAttr(activity.questionId||'')}" data-continue-run="${escapeAttr(activity.runId||'')}">${iconSvg('next')}<span>Retomar</span></button></section>`;
+}
+function openDashboardActivity(button) {
+  const type=button.dataset.dashboardContinue;
+  if(type==='video') {
+    ui.videoLessonId=button.dataset.continueLesson||'';
+    ui.videoSourceId=button.dataset.continueSource||'';
+    ui.tab='aulas';
+  } else if(type==='question') {
+    ui.qQuestionId=button.dataset.continueQuestion||'';
+    ui.qStatus='Todas';
+    ui.tab='questoes';
+  } else if(type==='simulado') {
+    ui.activeSimRunId=button.dataset.continueRun||'';
+    ui.simulationLibraryOpen=false;
+    ui.tab='simulados';
+  } else if(type==='flashcard') {
+    ui.tab='flashcards';
+  } else {
+    document.querySelector('.dashboard-road')?.scrollIntoView({behavior:'smooth',block:'start'});
+    return;
+  }
+  render();
 }
 function renderManualStudyEntry(date) {
   const studyDate = ui.manualStudyDate || date;
@@ -2244,24 +2411,46 @@ function renderSimulationGamificationDashboard() {
   const elementCard=active?`<div class="gamification-sim-element"><span class="eyebrow">Buff elemental ativo</span><strong>${active.elements.map(elementLabel).join(' + ')} · ${escapeHtml(active.rarityLabel||active.rarity)}</strong><span>x${String(active.multiplier).replace('.',',')} · ${hours}h ${minutes}min restantes</span></div>`:`<div class="gamification-sim-element muted"><span class="eyebrow">Buff elemental</span><strong>Nenhum buff ativo</strong><span>Corrija integralmente um simulado para liberar uma recompensa.</span></div>`;
   return `<section class="card gamification-simulation-card"><div class="section-title"><div><span class="eyebrow">Jornada de simulados</span><h2>Ascensão e elementos</h2></div><button class="tiny-btn" onclick="ui.tab='simulados';render()">Abrir simulados</button></div><div class="gamification-sim-metrics"><div><strong>${stats.completed}</strong><span>concluídos</span></div><div><strong>${stats.reviewed}</strong><span>corrigidos</span></div><div><strong>${Math.round(stats.average)}%</strong><span>média</span></div><div><strong>${stats.fragments}/3</strong><span>fragmentos</span></div><div><strong>${stats.medallionsAvailable}</strong><span>medalhões livres</span></div></div>${elementCard}${stats.sealedRewards.length?`<button class="icon-btn primary" data-open-sealed-reward="${escapeAttr(stats.sealedRewards[0].id)}">Revelar ${stats.sealedRewards.length} recompensa${stats.sealedRewards.length===1?'':'s'}</button>`:''}</section>`;
 }
-function renderGamificationDashboard() {
+function renderGamificationDashboard(compact=false) {
   ensureGamificationState();
   const profile=Gamification ? Gamification.refreshProfile(state.gamification) : {level:1,totalXP:0,xpWithinLevel:0,xpForNextLevel:100,remainingXP:100,progress:0};
   const blocks=completedAcademicBlockIds();
   const academicRank=Gamification?.getRankFromCompletedBlocks ? Gamification.getRankFromCompletedBlocks(blocks.length) : {name:'Aldeão',completedBlocks:blocks.length,nextRank:null,blocksForNextRank:0,progressPercent:0,isMaxRank:false,currentRangeStart:0};
   const rank=Gamification?.getRankFromProgress ? Gamification.getRankFromProgress(blocks.length,state.gamification.rankProgress) : academicRank;
   const history=[...(state.gamification.xpTransactions || [])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,6);
-  const classAsset=window.ENAMED_ICONS?.RpgAsset('class',{label:'Classe de estudo',size:34})||'';
+  const classAsset=window.ENAMED_ICONS?.RpgAsset(rank.key,{label:`Personagem da classe ${rank.name}`,width:150,height:210,className:'rank-character'})||'';
   const progressText=rank.isMaxRank?'Classe máxima alcançada':rank.accelerated?`Classe acelerada por simulado · progresso acadêmico real: ${academicRank.name}`:`Faltam ${academicRank.blocksForNextRank} ${academicRank.blocksForNextRank===1?'bloco':'blocos'} para ${escapeHtml(academicRank.nextRank.name)}`;
   const segmentTotal=academicRank.isMaxRank?30:academicRank.nextRank.currentRangeStart-academicRank.currentRangeStart;
   const segmentDone=academicRank.isMaxRank?30:academicRank.completedBlocks-academicRank.currentRangeStart;
   const availableMedallions=Math.max(0,n(state.gamification.rankProgress?.simulationMedallions)-n(state.gamification.rankProgress?.simulationMedallionsUsed));
+  if(compact) return `<section class="card gamification-card gamification-card--compact"><div class="section-title"><div><span class="eyebrow">Gamificação</span><h2>${escapeHtml(rank.name)} · Nível ${profile.level}</h2></div>${classAsset}</div><strong class="compact-xp">${Math.round(n(profile.totalXP))} XP</strong><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP</span><span>${academicRank.completedBlocks}/30 blocos</span></div><small class="compact-rank-next">${progressText}</small></section>`;
   return `<section class="card gamification-card"><div class="gamification-head"><div class="gamification-rank">${classAsset}<div><span class="eyebrow">Classe RPG</span><h2>${escapeHtml(rank.name)} <small>· Nível ${profile.level}</small></h2><p>Blocos acadêmicos: <strong>${academicRank.completedBlocks}/30</strong>${rank.accelerated?` · <strong>aceleração ativa</strong>`:''}</p></div></div><div class="gamification-progress"><div class="section-title"><div><span class="eyebrow">Experiência</span><h2>${Math.round(n(profile.totalXP))} XP acumulados</h2></div><span class="badge today">Nível ${profile.level}</span></div><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP neste nível</span><span>faltam ${Math.round(n(profile.remainingXP))} XP</span></div></div></div><div class="rank-progress-panel"><div><strong>${rank.isMaxRank?'Imperador':`Próxima classe acadêmica: ${escapeHtml(academicRank.nextRank?.name||rank.nextRank?.name||'Imperador')}`}</strong><span>${progressText}</span></div><div class="progress" aria-label="Progresso acadêmico para a próxima classe"><span style="width:${academicRank.progressPercent}%"></span></div><small>${segmentDone}/${segmentTotal} blocos · ${availableMedallions} medalhão livre</small></div>${history.length?`<div class="xp-history-mini">${history.map(transaction=>`<div><span><strong>${escapeHtml(gamificationActivityLabel(transaction))}</strong><small>${fmtDate(String(transaction.occurred_at||'').slice(0,10))}${transaction.is_legacy?' · Legado':''}${transaction.metadata?.element?` · ${elementLabel(transaction.metadata.element)}`:''}</small></span><b class="${n(transaction.final_xp)<0?'negative':''}">${n(transaction.final_xp)>0?'+':''}${roundDisplayXP(transaction.final_xp)} XP</b></div>`).join('')}</div>`:'<div class="muted">O histórico de XP aparecerá após uma atividade nova ou uma importação retroativa confirmada.</div>'}</section>`;
+}
+
+function renderUpcomingReviews() {
+  const now=Date.now();
+  const cards=flashcardAllRecords().map(card=>({card,due:Date.parse(flashcardProgress(card).dueAt||`${flashcardProgress(card).nextReview||studyDateKey()}T05:00:00`)})).filter(item=>Number.isFinite(item.due)).sort((a,b)=>a.due-b.due);
+  const groups=[
+    {label:'Devidos agora',count:cards.filter(item=>item.due<=now).length,foot:'estudar agora'},
+    {label:'Nas próximas 2 h',count:cards.filter(item=>item.due>now&&item.due<=now+7200000).length,foot:'fila próxima'},
+    {label:'Até amanhã',count:cards.filter(item=>item.due>now+7200000&&item.due<=now+86400000).length,foot:'programados'}
+  ];
+  return `<section class="card dashboard-review-card"><div class="section-title"><div><span class="eyebrow">FSRS</span><h2>Próximas revisões</h2></div><button class="tiny-btn" data-dashboard-open-flashcards>Estudar</button></div><div class="dashboard-review-list">${groups.map((group,index)=>`<div><span class="dashboard-review-icon tone-${index}">${iconSvg('cards')}</span><strong>${group.count}</strong><span>${group.label}</span><small>${group.foot}</small></div>`).join('')}</div></section>`;
+}
+function renderDashboardEvolution() {
+  const dates=Array.from({length:7},(_,index)=>PlannerUX.addDays(ui.refDate,index-6));
+  const values=dates.map(date=>dailyStudySnapshot(date).totalMinutes);
+  const max=Math.max(60,...values);
+  return `<section class="card dashboard-evolution-card"><div class="section-title"><div><span class="eyebrow">7 dias</span><h2>Evolução</h2></div></div><div class="dashboard-bars">${dates.map((date,index)=>`<div><span style="height:${Math.max(6,Math.round(values[index]/max*100))}%" title="${formatDailyStudyTime(values[index])}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${date}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section>`;
+}
+function renderRecentDashboardActivity() {
+  const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,4);
+  return `<section class="card dashboard-recent-card"><div class="section-title"><div><span class="eyebrow">Histórico</span><h2>Atividade recente</h2></div></div><div class="dashboard-recent-list">${transactions.length?transactions.map(item=>`<div><span>${iconSvg(item.activity_type==='video_progress'||item.activity_type==='video_completion'?'play':item.activity_type==='flashcard_review'?'cards':'brain')}</span><strong>${escapeHtml(gamificationActivityLabel(item))}</strong><time>${new Date(item.occurred_at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</time></div>`).join(''):'<div class="muted">Suas próximas atividades aparecerão aqui.</div>'}</div></section>`;
 }
 function renderRankPromotionModal() {
   const rank=ui.rankPromotion;
   if(!rank) return '';
-  const classAsset=window.ENAMED_ICONS?.RpgAsset('class',{label:'Nova classe',size:58})||'';
+  const classAsset=window.ENAMED_ICONS?.RpgAsset(rank.key,{label:`Personagem da nova classe ${rank.name}`,width:240,height:336,className:'rank-character rank-character--promotion'})||'';
   return `<div class="rank-promotion-overlay" role="dialog" aria-modal="true" aria-labelledby="rankPromotionTitle"><div class="rank-promotion-dialog">${classAsset}<span class="eyebrow">Promoção acadêmica</span><h2 id="rankPromotionTitle">Você agora é ${escapeHtml(rank.name)}</h2><p>${rank.completedBlocks} blocos concluídos. Sua classe mudou pelo avanço no cronograma, independentemente do XP.</p><button class="icon-btn primary" id="closeRankPromotion">Continuar estudando</button></div></div>`;
 }
 function roundDisplayXP(value) { const rounded=Math.round(n(value)*10)/10; return Number.isInteger(rounded)?String(rounded):rounded.toFixed(1).replace('.',','); }
@@ -2323,16 +2512,23 @@ function bindGamificationDashboard() {
 function renderPainel() {
   const t = totals(); const areas = areaStats(); const next = t.next; const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
-    ${renderDashboardMood(dashboardLog)}
-    ${renderDailyAnalysis(ui.refDate)}
-    ${renderGamificationDashboard()}
+    <div class="dashboard-global-head"><div><span class="eyebrow">Visão geral</span><h1>Seu dia de estudos</h1></div><label class="dashboard-date-control"><span>Data</span><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"></label></div>
+    <div class="dashboard-desktop-grid">
+      ${renderContinueStudying()}
+      ${renderDashboardMood(dashboardLog)}
+      ${renderPersonalDailyTasks(ui.refDate)}
+      ${renderDailyAnalysis(ui.refDate)}
+      ${renderUpcomingReviews()}
+      ${renderDashboardEvolution()}
+      ${renderGamificationDashboard(true)}
+      ${renderRecentDashboardActivity()}
+      ${renderCountdown()}
+      <div class="dashboard-road-region"><div class="card">${renderDailyRoad(ui.refDate)}</div></div>
+    </div>
     ${renderRankPromotionModal()}
     ${renderSimulationGamificationDashboard()}
-    <div class="card">${renderDailyRoad(ui.refDate)}</div>
-    ${renderPersonalDailyTasks(ui.refDate)}
     ${renderLegacyImportCard()}
     ${renderCloudBackupCard()}
-    ${renderCountdown()}
     <div class="grid cards">
       ${metric('Mapa geral', pct(t.progress), `${t.completed} de ${t.total} aulas concluídas`)}
       ${metric('Questões feitas', Math.round(t.q), `${Math.round(t.debtQ)} ainda em aberto até ${fmtDate(ui.refDate)}`)}
@@ -2364,6 +2560,8 @@ function renderPainel() {
   bindPersonalDailyTasks(ui.refDate);
   bindGamificationDashboard();
   bindCloudBackupCard();
+  document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
+  document.querySelector('[data-dashboard-open-flashcards]')?.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Devidos';render();});
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
   document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
@@ -2477,7 +2675,10 @@ function renderSimulados() {
   ensureSimTopics();
   const active = state.simuladoRuns.find(run => run.id === ui.activeSimRunId) || state.simuladoRuns.find(run => !run.finishedAt&&!run.abandonedAt) || state.simuladoRuns[0] || null;
   if(active && !ui.activeSimRunId) ui.activeSimRunId = active.id;
-  document.getElementById('simulados').innerHTML = `${renderSimulationRewardModal()}${renderImportedSimulados()}${renderSimuladoGenerator()}${active ? renderSimuladoRun(active) : ''}<div class="grid two"><div class="card"><div class="section-title"><h2>Resumo dos simulados</h2></div>${renderSimSummary()}</div><div class="card"><div class="section-title"><h2>Próximo simulado</h2></div>${renderNextSim()}</div></div><div class="card"><div class="section-title"><h2>Histórico de provas geradas</h2><span class="muted">${state.simuladoRuns.length} provas</span></div>${renderSimuladoRunsList()}</div><div class="card"><div class="section-title"><h2>Registro editável</h2></div>${renderSimTable()}</div><div class="card"><div class="section-title"><h2>Temas que mais errei</h2><span class="muted">Pesquise aulas do cronograma ou digite um tema novo.</span></div>${renderMissedTopics()}</div>`;
+  const libraryOpen=ui.simulationLibraryOpen||!active;
+  const library=`<section class="sim-library ${libraryOpen?'open':'collapsed'}">${libraryOpen?`${renderImportedSimulados()}${renderSimuladoGenerator()}`:''}</section>`;
+  const activeView=active?`<div class="sim-active-head"><div><span class="eyebrow">Tentativa ativa</span><h2>${escapeHtml(active.name)}</h2></div><button class="tiny-btn" id="toggleSimulationLibrary">${libraryOpen?'Ocultar provas':'Ver outras provas'}</button></div>${renderSimuladoRun(active)}`:'';
+  document.getElementById('simulados').innerHTML = `${renderSimulationRewardModal()}${activeView}${library}<div class="grid two"><div class="card"><div class="section-title"><h2>Resumo dos simulados</h2></div>${renderSimSummary()}</div><div class="card"><div class="section-title"><h2>Próximo simulado</h2></div>${renderNextSim()}</div></div><div class="card"><div class="section-title"><h2>Histórico de provas geradas</h2><span class="muted">${state.simuladoRuns.length} provas</span></div>${renderSimuladoRunsList()}</div><div class="card"><div class="section-title"><h2>Registro editável</h2></div>${renderSimTable()}</div><div class="card"><div class="section-title"><h2>Temas que mais errei</h2><span class="muted">Pesquise aulas do cronograma ou digite um tema novo.</span></div>${renderMissedTopics()}</div>`;
   bindSimInputs();
   bindSimuladoInputs(active);
 }
@@ -2596,6 +2797,7 @@ function finishSimQuestionTiming(run) {
 function setSimQuestionIndex(run, index) {
   finishSimQuestionTiming(run);
   run.currentIndex = Math.max(0, Math.min(run.questionIds.length - 1, n(index)));
+  run.updatedAt = new Date().toISOString();
   beginSimQuestionTiming(run, run.questionIds[run.currentIndex]);
 }
 function renderSimuladoExam(run, questions, question) {
@@ -2711,6 +2913,7 @@ function renderSimuladoReview(run, rows) {
   }).join('')}<div class="sim-review-progress"><strong>Revisão dos erros: ${reviewedCount}/${wrongRows.length}</strong><span>${wrongRows.length===reviewedCount?'Revisão completa: fragmento e recompensa liberados.':'Leia os comentários e marque cada erro depois de revisá-lo.'}</span></div></div>`;
 }
 function bindSimuladoInputs(activeRun) {
+  document.getElementById('toggleSimulationLibrary')?.addEventListener('click',()=>{ui.simulationLibraryOpen=!ui.simulationLibraryOpen;render();});
   document.getElementById('closeSimulationReward')?.addEventListener('click',()=>{ui.simulationRewardSummary=null;render();});
   document.querySelectorAll('[data-reveal-simulation-reward]').forEach(button=>button.addEventListener('click',event=>{
     const result=Gamification.openElementReward(state.gamification,event.currentTarget.dataset.revealSimulationReward,{now:new Date()});
@@ -2720,7 +2923,7 @@ function bindSimuladoInputs(activeRun) {
   const generate = document.getElementById('generateSimulado');
   if(generate) generate.onclick = () => generateSimuladoRun();
   document.querySelectorAll('[data-start-imported-sim]').forEach(button => button.onclick = e => startImportedSimulado(e.currentTarget.dataset.startImportedSim));
-  document.querySelectorAll('[data-open-sim]').forEach(button => button.onclick = e => { ui.activeSimRunId = e.currentTarget.dataset.openSim; render(); });
+  document.querySelectorAll('[data-open-sim]').forEach(button => button.onclick = e => { ui.activeSimRunId = e.currentTarget.dataset.openSim; ui.simulationLibraryOpen=false; syncRouteFromUI('push'); render(); });
   document.querySelectorAll('[data-question-card][data-card-id][data-card-field]').forEach(input => {
     input.oninput = e => updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => updateQuestionFlashcard(e.currentTarget);
@@ -2761,6 +2964,7 @@ function bindSimuladoInputs(activeRun) {
       activeRun.answerHistory[question.id].push({ from:previousAnswer, to:nextAnswer, elapsedSeconds:n(activeRun.elapsedSeconds), at:new Date().toISOString() });
     }
     activeRun.answers[question.id] = nextAnswer;
+    activeRun.updatedAt = new Date().toISOString();
     if(n(activeRun.currentIndex) < activeRun.questionIds.length - 1) setSimQuestionIndex(activeRun, n(activeRun.currentIndex) + 1);
     saveStateOnly({invalidate:false});
     render();
@@ -2789,28 +2993,9 @@ function bindSimuladoInputs(activeRun) {
     activeRun.highlights[question.id] = [];
     persist();
   };
-  if(textHighlightEnabled()) document.querySelectorAll('.sim-highlightable').forEach(el => {
-    el.onselectstart = () => {
-      ui.suppressAnswerClick = true;
-      ui.highlightGestureUntil = Date.now() + 800;
-    };
-    el.onmouseup = e => {
-      const hasSelection = (window.getSelection()?.toString() || '').trim().length > 1;
-      if(!hasSelection) return;
-      ui.suppressAnswerClick = true;
-      ui.highlightGestureUntil = Date.now() + 800;
-      e.preventDefault();
-      e.stopPropagation();
-      const question = activeSimQuestion(activeRun);
-      if(question) setTimeout(() => toggleSelectedSimHighlight(activeRun, question), 0);
-      setTimeout(() => { ui.suppressAnswerClick = false; }, 850);
-    };
-    el.onclick = e => {
-      if(Date.now() < n(ui.highlightGestureUntil)) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    };
+  if(textHighlightEnabled()) bindPointerHighlighter(document.querySelectorAll('.sim-highlightable'),()=>{
+    const question=activeSimQuestion(activeRun);
+    if(question) toggleSelectedSimHighlight(activeRun,question);
   });
   const clear = document.getElementById('clearSimAnswer');
   if(clear) clear.onclick = () => {
@@ -2859,15 +3044,25 @@ function activeSimQuestion(run) {
 function startImportedSimulado(simId) {
   const sim = importedSimulados.find(item => item.id === simId);
   if(!sim?.questions?.length) { alert('Não encontrei questões neste simulado importado.'); return; }
+  const existing=state.simuladoRuns.find(run=>run.sourceType==='imported'&&run.importedSimId===simId&&!run.finishedAt&&!run.abandonedAt);
+  if(existing) {
+    ui.activeSimRunId=existing.id;
+    ui.simulationLibraryOpen=false;
+    syncRouteFromUI('push');
+    render();
+    return;
+  }
   const duration = Math.max(30, n(sim.durationMinutes) || 300);
+  const now=new Date().toISOString();
   const run = {
     id: `simrun-imported-${Date.now()}`,
     name: sim.name,
     sourceType: 'imported',
     importedSimId: sim.id,
     sourceSimulationId: sim.id,
-    createdAt: new Date().toISOString(),
-    startedAt: new Date().toISOString(),
+    createdAt: now,
+    startedAt: now,
+    updatedAt: now,
     finishedAt: '',
     durationMinutes: duration,
     secondsLeft: duration * 60,
@@ -2888,7 +3083,9 @@ function startImportedSimulado(simId) {
   };
   state.simuladoRuns.unshift(run);
   ui.activeSimRunId = run.id;
+  ui.simulationLibraryOpen=false;
   persist();
+  syncRouteFromUI('push');
   startSimuladoTimer(run, false);
 }
 function generateSimuladoRun() {
@@ -2897,14 +3094,16 @@ function generateSimuladoRun() {
   const questions = buildBalancedSimulado(targets);
   if(!questions.length) { alert('Ainda não há questões carregadas para gerar o simulado.'); return; }
   const duration = Math.max(30, n(document.getElementById('simDuration')?.value) || 300);
+  const now=new Date().toISOString();
   const run = {
     id: `simrun-${Date.now()}`,
     name: document.getElementById('simRunName')?.value?.trim() || `Simulado ENAMED ${state.simuladoRuns.length + 1}`,
     sourceType: 'generated',
     importedSimId: '',
     sourceSimulationId: `generated:${Gamification?.stableHash?.(questions.map(question=>question.id).sort())||Date.now()}`,
-    createdAt: new Date().toISOString(),
-    startedAt: new Date().toISOString(),
+    createdAt: now,
+    startedAt: now,
+    updatedAt: now,
     finishedAt: '',
     durationMinutes: duration,
     secondsLeft: duration * 60,
@@ -2925,7 +3124,9 @@ function generateSimuladoRun() {
   };
   state.simuladoRuns.unshift(run);
   ui.activeSimRunId = run.id;
+  ui.simulationLibraryOpen=false;
   persist();
+  syncRouteFromUI('push');
   startSimuladoTimer(run, false);
 }
 function startSimuladoTimer(run, shouldRender=true) {
@@ -2943,6 +3144,7 @@ function pauseSimuladoTimer(run, shouldRender=true) {
   simuladoTimer.interval = null;
   simuladoTimer.runId = '';
   run.paused = true;
+  run.updatedAt = new Date().toISOString();
   stopAutoStudy('simulado');
   if(shouldRender) persist();
 }
@@ -2951,6 +3153,7 @@ function tickSimuladoTimer(runId) {
   if(!run || run.finishedAt || run.paused) return;
   run.secondsLeft = Math.max(0, n(run.secondsLeft) - 1);
   run.elapsedSeconds = Math.max(0, n(run.durationMinutes) * 60 - n(run.secondsLeft));
+  run.updatedAt = new Date().toISOString();
   const clock = document.getElementById('simuladoClock');
   if(clock) clock.textContent = formatClock(run.secondsLeft);
   if(run.secondsLeft % 15 === 0) saveStateOnly();
@@ -3063,15 +3266,22 @@ function toggleSelectedSimHighlight(run, question) {
   const selection = window.getSelection();
   const selected = selection ? selection.toString().replace(/\s+/g, ' ').trim() : '';
   if(!selected || selected.length < 2) return;
-  const anchor = selection.anchorNode?.parentElement;
-  if(!anchor?.closest('.sim-run-layout')) return;
+  const anchor = selection.anchorNode?.parentElement?.closest('.sim-highlightable');
+  const focus = selection.focusNode?.parentElement?.closest('.sim-highlightable');
+  if(!anchor || anchor!==focus || !anchor.closest('.sim-run-layout')) return;
+  const range=selection.getRangeAt(0);
+  const beforeRange=range.cloneRange();
+  beforeRange.selectNodeContents(anchor);
+  beforeRange.setEnd(range.startContainer,range.startOffset);
+  const before=beforeRange.toString().replace(/\s+/g,' ');
+  const occurrence=(before.match(new RegExp(escapeRegExp(selected),'g'))||[]).length;
   if(!run.highlights || typeof run.highlights !== 'object') run.highlights = {};
   const highlights = Array.isArray(run.highlights[question.id]) ? [...run.highlights[question.id]] : [];
-  const existing = highlights.findIndex(item => item.text === selected);
+  const existing = highlights.findIndex(item => item.text === selected && n(item.occurrence)===occurrence);
   rememberHighlightState({ context:'simulado', runId:run.id, questionId:question.id, highlights });
   run.highlights[question.id] = existing >= 0
     ? highlights.filter((_, index) => index !== existing)
-    : [...highlights, { text: selected, color: ui.highlightColor || 'yellow' }];
+    : [...highlights, { text: selected, color: ui.highlightColor || 'yellow', scope:'stem', occurrence }];
   selection.removeAllRanges();
   const stem = document.querySelector('.sim-highlightable.question-stem');
   if(stem) stem.innerHTML = renderHighlightedText(question.stem, run.highlights[question.id]);
@@ -4216,6 +4426,15 @@ function markCompletedLessonsThroughBlockNine() {
   return count;
 }
 function currentVideoLesson() {
+  if(ui.videoSourceId) {
+    const routedLesson=displayVideoLessons().find(item=>item.videos?.some(video=>video.id===ui.videoSourceId));
+    if(routedLesson) {
+      ui.videoLessonId=routedLesson.id;
+      ui.videoBlock=String(routedLesson.block);
+      ui.videoSearch='';
+      return routedLesson;
+    }
+  }
   const pinned = state.videoPlayer?.pinned;
   if(pinned?.enabled) {
     const pinnedLesson = displayVideoLessons().find(lesson => lesson.id === pinned.lessonId);
@@ -4259,7 +4478,10 @@ function saveOpenVideoPosition() {
   const video = document.getElementById('lessonVideo');
   const sourceId = ui.videoSourceId;
   if(!video || !sourceId) return;
-  saveVideoResume(sourceId, Math.floor(video.currentTime || 0));
+  const lesson=displayVideoLessons().find(item=>item.id===ui.videoLessonId);
+  const source=lesson?.videos?.find(item=>item.id===sourceId)||{id:sourceId};
+  const schedule=lesson?videoScheduleForLesson(lesson):null;
+  saveVideoProgressRecord(source,video,schedule,lesson);
   setVideoLastOpen(ui.videoLessonId || '', sourceId);
   saveStateOnly();
 }
@@ -4270,6 +4492,30 @@ function saveVideoResume(sourceId, seconds) {
 }
 function setVideoLastOpen(lessonId, sourceId) {
   state.videoPlayer.lastOpen = { lessonId:lessonId || '', sourceId:sourceId || '', updatedAt:new Date().toISOString() };
+}
+function saveVideoProgressRecord(source,video,schedule,lesson,{completed}={}) {
+  if(!source?.id||!video) return null;
+  const previous=state.videoPlayer.progress?.[source.id]||{};
+  const duration=Number.isFinite(video.duration)?video.duration:n(previous.duration);
+  const progressData={
+    ...previous,
+    videoId:source.id,
+    currentTime:video.currentTime||0,
+    duration,
+    playbackRate:video.playbackRate||previous.playbackRate||1,
+    updatedAt:new Date().toISOString(),
+    completed:completed===undefined?Boolean(previous.completed||state.videoPlayer.watched[source.id]):Boolean(completed),
+    lessonId:lesson?.id||ui.videoLessonId||'',
+    scheduleId:schedule?.id||'',
+    block:lesson?.block||schedule?.block||0
+  };
+  const record=PlannerUX?.normalizeVideoProgress
+    ? PlannerUX.normalizeVideoProgress(progressData)
+    : progressData;
+  state.videoPlayer.progress[source.id]=record;
+  saveVideoResume(source.id,record.currentTime);
+  setVideoLastOpen(record.lessonId,source.id);
+  return record;
 }
 function togglePinnedVideo(lesson, source) {
   if(!lesson || !source) return;
@@ -4299,7 +4545,8 @@ function renderAulas() {
   const parts = lesson ? videoParts(lesson) : [];
   const summaryExpress = lesson ? videoSummaryExpressVideos(lesson) : [];
   const bookmarks = source ? (state.videoPlayer.bookmarks[source.id] || []) : [];
-  const resume = source ? n(state.videoPlayer.resume[source.id]) : 0;
+  const progressRecord = source ? state.videoPlayer.progress?.[source.id] || {} : {};
+  const resume = source ? (PlannerUX?.resumeTime(progressRecord) ?? n(state.videoPlayer.resume[source.id])) : 0;
   const watched = source ? state.videoPlayer.watched[source.id] : false;
   const usingR2 = usesR2VideoSource();
   mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas locais · ordem do cronograma</div></div><span class="badge today">offline</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Sair do foco':`${iconSvg('focus',{weight:'regular'})} Foco`}</button><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo local.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${schedule ? `<button class="tiny-btn" data-video-materials="${escapeAttr(schedule.id)}">Material da aula</button>` : ''}${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map(bookmark => `<div class="video-bookmark ${bookmark.starred?'starred':''}" data-video-bookmark-id="${escapeAttr(bookmark.id)}"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span class="video-bookmark-label">${escapeHtml(bookmark.label || 'Ponto importante')}</span><button type="button" class="video-bookmark-star ${bookmark.starred?'active':''}" data-video-bookmark-star="${escapeAttr(bookmark.id)}" title="${bookmark.starred?'Desmarcar ponto-chave':'Marcar como ponto-chave'}" aria-label="${bookmark.starred?'Desmarcar ponto-chave':'Marcar como ponto-chave'}">${iconSvg('xp',{weight:bookmark.starred?'duotone':'regular'})}</button><button class="delete-bookmark" data-video-bookmark-delete="${escapeAttr(bookmark.id)}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
@@ -4406,12 +4653,13 @@ function renderAulas() {
     const selectedLesson=displayVideoLessons().find(item => item.id===ui.videoLessonId);
     if(selectedLesson) ui.videoBlock=String(selectedLesson.block);
     ui.videoSearch='';
-    ui.videoSourceId='';
-    setVideoLastOpen(ui.videoLessonId, '');
+    ui.videoSourceId=selectedLesson?.videos?.[0]?.id||'';
+    setVideoLastOpen(ui.videoLessonId, ui.videoSourceId);
     saveStateOnly();
+    syncRouteFromUI('push');
     renderAulas();
   });
-  document.querySelectorAll('[data-video-source]').forEach(button => button.onclick = event => { stopAutoStudy('video'); saveOpenVideoPosition(); ui.videoSourceId=event.currentTarget.dataset.videoSource; setVideoLastOpen(ui.videoLessonId, ui.videoSourceId); saveStateOnly(); renderAulas(); });
+  document.querySelectorAll('[data-video-source]').forEach(button => button.onclick = event => { stopAutoStudy('video'); saveOpenVideoPosition(); ui.videoSourceId=event.currentTarget.dataset.videoSource; setVideoLastOpen(ui.videoLessonId, ui.videoSourceId); saveStateOnly(); syncRouteFromUI('push'); renderAulas(); });
   document.getElementById('toggleVideoFocus')?.addEventListener('click', () => {
     ui.videoFocusMode = !ui.videoFocusMode;
     localStorage.setItem(VIDEO_FOCUS_KEY, ui.videoFocusMode ? '1' : '0');
@@ -4481,6 +4729,8 @@ function showVideoContinuationPrompt(lesson, completedSource, nextSource) {
 }
 function bindVideoPlayer(source, schedule, lesson) {
   if(!source) return;
+  activeVideoProgressCleanup?.();
+  activeVideoProgressCleanup=null;
   const video = document.getElementById('lessonVideo');
   if(!video) return;
   const videoStage=document.getElementById('lessonVideoStage');
@@ -4506,7 +4756,8 @@ function bindVideoPlayer(source, schedule, lesson) {
     }
     setCleanFrame(!cleanFrame);
   });
-  let resume = n(state.videoPlayer.resume[source.id]);
+  const storedProgress=state.videoPlayer.progress?.[source.id]||{};
+  let resume = PlannerUX?.resumeTime(storedProgress) ?? n(state.videoPlayer.resume[source.id]);
   let lastCheckpoint = Math.floor(resume);
   let restoringPosition = false;
   let manualSeek = false;
@@ -4530,7 +4781,7 @@ function bindVideoPlayer(source, schedule, lesson) {
     });
   };
   const applyPreferredRate = () => {
-    const rate = rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || 1);
+    const rate = rememberVideoPlaybackRate(n(storedProgress.playbackRate) || n(ui.videoPlaybackRate) || 1);
     if(Math.abs(video.playbackRate-rate) < .01) return;
     restoringRate = true;
     video.defaultPlaybackRate = rate;
@@ -4553,14 +4804,19 @@ function bindVideoPlayer(source, schedule, lesson) {
   video.addEventListener('canplay', applyPreferredRate);
   video.addEventListener('playing', applyPreferredRate);
   video.addEventListener('ratechange', () => {
-    if(!restoringRate) rememberVideoPlaybackRate(video.playbackRate);
+    if(!restoringRate) {
+      rememberVideoPlaybackRate(video.playbackRate);
+      saveVideoProgressRecord(source,video,schedule,lesson);
+      saveStateOnly({invalidate:false});
+    }
   });
-  const saveProgress = () => { saveVideoResume(source.id, video.currentTime || 0); saveStateOnly(); };
+  const saveProgress = () => { saveVideoProgressRecord(source,video,schedule,lesson); saveStateOnly({invalidate:false}); };
   video.addEventListener('play', () => { setCleanFrame(false); videoStage?.classList.remove('is-paused'); startAutoStudy('video', schedule?.id || ''); });
   video.addEventListener('pause', () => { videoStage?.classList.add('is-paused'); pauseAutoStudy('video'); saveProgress(); });
+  video.addEventListener('seeked', saveProgress);
   video.addEventListener('ended', () => {
     stopAutoStudy('video', false);
-    saveVideoResume(source.id, 0);
+    saveVideoProgressRecord(source,video,schedule,lesson,{completed:true});
     setVideoWatchedState(source.id, true);
     const nextSource = nextCompleteVideoSource(lesson, source);
     saveStateOnly();
@@ -4579,16 +4835,23 @@ function bindVideoPlayer(source, schedule, lesson) {
     chapterButtons.forEach((button, index) => button.closest('.video-bookmark')?.classList.toggle('active', index === activeChapter));
     if(currentSecond >= lastCheckpoint + 10) {
       lastCheckpoint = currentSecond;
-      saveVideoResume(source.id, currentSecond);
-      setVideoLastOpen(ui.videoLessonId || '', source.id);
-      saveStateOnly();
+      saveProgress();
     }
   });
+  const saveWhenHidden=()=>{if(document.visibilityState==='hidden') saveProgress();};
+  const saveOnPageHide=()=>saveProgress();
+  document.addEventListener('visibilitychange',saveWhenHidden);
+  window.addEventListener('pagehide',saveOnPageHide);
+  activeVideoProgressCleanup=()=>{
+    saveProgress();
+    document.removeEventListener('visibilitychange',saveWhenHidden);
+    window.removeEventListener('pagehide',saveOnPageHide);
+  };
   document.getElementById('videoBack10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime-10); saveVideoResume(source.id, resume); saveStateOnly(); });
   document.getElementById('videoForward10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime+10); saveVideoResume(source.id, resume); saveStateOnly(); });
   const rateSelect = document.getElementById('videoPlaybackRate');
   if(rateSelect) {
-    rateSelect.value = String(rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || 1));
+    rateSelect.value = String(rememberVideoPlaybackRate(n(storedProgress.playbackRate) || n(ui.videoPlaybackRate) || 1));
     rateSelect.addEventListener('change', event => {
       const rate = rememberVideoPlaybackRate(Number(event.target.value));
       video.defaultPlaybackRate=rate;
@@ -5783,10 +6046,21 @@ function navigateQuestionBy(delta) {
   const effectiveDelta = showingJustAnswered && delta > 0 ? 0 : delta;
   ui.qIndex = Math.max(0, Math.min(questions.length - 1, ui.qIndex + effectiveDelta));
   ui.qQuestionId = questions[ui.qIndex]?.id || '';
+  syncRouteFromUI('push');
   render();
 }
 function renderQuestionBank() {
   stopAutoStudy('video');
+  if(ui.qQuestionId) {
+    const routedQuestion=questionBank.find(item=>item.id===ui.qQuestionId);
+    if(routedQuestion) {
+      ui.qStatus='Todas';
+      ui.qBlock=routedQuestion.collectionBlock||ui.qBlock;
+      ui.qSource='Todas';
+      ui.qTopic='Todos';
+      ui.qSearch='';
+    }
+  }
   ensureQuestionProgress();
   const summary = questionBankSummary();
   const confidence = summary.confidence;
@@ -6526,67 +6800,7 @@ function bindQuestionActions(questions, question) {
     e.stopPropagation();
     toggleEliminated(question, e.currentTarget.dataset.eliminate);
   });
-  if(textHighlightEnabled()) document.querySelectorAll('.question-stem.highlightable[data-highlight-scope="stem"]').forEach(el => {
-    let longPressTimer=0;
-    let touchHighlightTimer=0;
-    let touchStartPoint=null;
-    el.onselectstart = () => {
-      ui.suppressAnswerClick = true;
-      ui.highlightGestureUntil = Date.now() + 800;
-    };
-    el.onmouseup = e => {
-      const hasSelection = (window.getSelection()?.toString() || '').trim().length > 1;
-      if(!hasSelection) return;
-      ui.suppressAnswerClick = true;
-      ui.highlightGestureUntil = Date.now() + 800;
-      e.preventDefault();
-      e.stopPropagation();
-      setTimeout(() => toggleSelectedHighlight(question), 0);
-      setTimeout(() => { ui.suppressAnswerClick = false; }, 850);
-    };
-    el.onclick = e => {
-      if(Date.now() < n(ui.highlightGestureUntil)) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    };
-    el.ontouchstart = event => {
-      const touch=event.touches?.[0];
-      touchStartPoint=touch ? { x:touch.clientX, y:touch.clientY } : null;
-      clearTimeout(longPressTimer);
-      clearTimeout(touchHighlightTimer);
-      longPressTimer=setTimeout(() => {
-        ui.suppressAnswerClick=true;
-        ui.highlightGestureUntil=Date.now()+1400;
-      },420);
-    };
-    el.ontouchmove = event => {
-      const touch=event.touches?.[0];
-      if(!touch || !touchStartPoint) return;
-      if(Math.hypot(touch.clientX-touchStartPoint.x,touch.clientY-touchStartPoint.y)>12) clearTimeout(longPressTimer);
-    };
-    el.ontouchcancel = () => {
-      clearTimeout(longPressTimer);
-      clearTimeout(touchHighlightTimer);
-      touchStartPoint=null;
-    };
-    el.ontouchend = () => {
-      clearTimeout(longPressTimer);
-      touchStartPoint=null;
-      clearTimeout(touchHighlightTimer);
-      touchHighlightTimer=setTimeout(() => {
-        const hasSelection=(window.getSelection()?.toString() || '').trim().length>1;
-        if(!hasSelection) {
-          setTimeout(() => { ui.suppressAnswerClick=false; },850);
-          return;
-        }
-        ui.suppressAnswerClick=true;
-        ui.highlightGestureUntil=Date.now()+1200;
-        toggleSelectedHighlight(question);
-        setTimeout(() => { ui.suppressAnswerClick=false; },1250);
-      },420);
-    };
-  });
+  if(textHighlightEnabled()) bindPointerHighlighter(document.querySelectorAll('.question-stem.highlightable[data-highlight-scope="stem"]'),()=>toggleSelectedHighlight(question));
   if(timerToggle) timerToggle.onclick = () => { ui.questionTimerOpen=!ui.questionTimerOpen; render(); };
   if(closeTimer) closeTimer.onclick = () => {
     if(questionTimer.sessionActive) {
@@ -7298,9 +7512,40 @@ function highlightLabel(color) {
   return ({ yellow:'amarelo', green:'verde', blue:'azul', red:'vermelho' })[color] || color;
 }
 function textHighlightEnabled() {
-  const touchDevice = n(navigator.maxTouchPoints) > 0
-    && (window.matchMedia?.('(pointer: coarse)').matches || /Android|iPad|iPhone|Mobile/i.test(navigator.userAgent));
-  return !touchDevice;
+  return true;
+}
+function bindPointerHighlighter(elements,onHighlight) {
+  elements.forEach(element => {
+    let pointer={id:null,type:'',x:0,y:0,moved:false};
+    const finish = event => {
+      if(pointer.id!==null&&event.pointerId!==pointer.id) return;
+      const pointerType=event.pointerType||pointer.type||'mouse';
+      pointer={id:null,type:'',x:0,y:0,moved:false};
+      if(pointerType==='touch') return;
+      const selection=(window.getSelection()?.toString()||'').replace(/\s+/g,' ').trim();
+      if(selection.length<2) return;
+      ui.suppressAnswerClick=true;
+      ui.highlightGestureUntil=Date.now()+500;
+      setTimeout(onHighlight,0);
+      setTimeout(()=>{ui.suppressAnswerClick=false;},550);
+    };
+    if(window.PointerEvent) {
+      element.addEventListener('pointerdown',event=>{
+        pointer={id:event.pointerId,type:event.pointerType||'mouse',x:event.clientX,y:event.clientY,moved:false};
+      });
+      element.addEventListener('pointermove',event=>{
+        if(pointer.id!==event.pointerId) return;
+        if(Math.hypot(event.clientX-pointer.x,event.clientY-pointer.y)>8) pointer.moved=true;
+      },{passive:true});
+      element.addEventListener('pointerup',finish);
+      element.addEventListener('pointercancel',()=>{pointer={id:null,type:'',x:0,y:0,moved:false};});
+    } else element.addEventListener('mouseup',finish);
+    element.addEventListener('selectstart',()=>{
+      ui.suppressAnswerClick=true;
+      ui.highlightGestureUntil=Date.now()+500;
+      setTimeout(()=>{ui.suppressAnswerClick=false;},550);
+    });
+  });
 }
 function rememberHighlightState(action) {
   highlightUndoStack.push({ ...action, highlights:structuredClone(action.highlights || []) });
@@ -7480,6 +7725,7 @@ function render() {
   };
   renderers[ui.tab]?.();
   persistQuestionView();
+  syncRouteFromUI('replace');
   ensurePomodoroWidget();
   updatePomodoroWidget();
 }
@@ -7595,6 +7841,7 @@ window.addEventListener('beforeunload', event => {
 window.addEventListener('online', () => {
   if(currentUser) pullCloudState();
 });
+window.addEventListener('popstate', restoreNavigation);
 document.addEventListener('keydown', handleHighlightUndoKeyboard);
 document.addEventListener('keydown', handleFlashcardUndoKeyboard);
 document.addEventListener('keydown', handleQuestionKeyboard);

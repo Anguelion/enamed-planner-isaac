@@ -1,0 +1,72 @@
+'use strict';
+
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const UX=require('../assets/planner-ux.js');
+
+test('rotas reproduzem questão, vídeo e tentativa de simulado',()=>{
+  const routes=[
+    {tab:'questoes',questionId:'bloco 10:q1'},
+    {tab:'aulas',videoId:'video/parte-1'},
+    {tab:'simulados',simulationId:'enare-2024',attemptId:'run-7',questionIndex:18}
+  ];
+  routes.forEach(route=>assert.deepEqual(UX.parseRoute(UX.buildRoute(route)),route));
+});
+
+test('data local respeita America/Fortaleza',()=>{
+  assert.equal(UX.localDateKey(new Date('2026-07-17T01:30:00.000Z')),'2026-07-16');
+});
+
+test('ocorrências recorrentes são idempotentes e preservam o histórico concluído',()=>{
+  const template={id:'hidratar',text:'Hidratar',recurrence:'daily',startDate:'2026-07-16',active:true};
+  let occurrences=UX.ensureOccurrences([template],[],'2026-07-16','2026-07-16T10:00:00Z');
+  occurrences[0].done=true;
+  occurrences[0].status='done';
+  occurrences=UX.ensureOccurrences([template],occurrences,'2026-07-16','2026-07-16T11:00:00Z');
+  assert.equal(occurrences.length,1);
+  assert.equal(occurrences[0].done,true);
+  occurrences=UX.ensureOccurrences([template],occurrences,'2026-07-17','2026-07-17T10:00:00Z');
+  assert.equal(occurrences.length,2);
+  assert.equal(occurrences.find(item=>item.date==='2026-07-17').done,false);
+});
+
+test('recorrência por dias da semana só cria datas selecionadas',()=>{
+  const template={id:'seg-qua',text:'Revisão',recurrence:'weekdays',weekdays:[1,3],startDate:'2026-07-13',active:true};
+  assert.equal(UX.ensureOccurrences([template],[],'2026-07-13').length,1);
+  assert.equal(UX.ensureOccurrences([template],[],'2026-07-14').length,0);
+  assert.equal(UX.ensureOccurrences([template],[],'2026-07-15').length,1);
+});
+
+test('adiar preserva a origem e não duplica o destino',()=>{
+  const original={id:'occ-t-2026-07-16',templateId:'t',occurrenceKey:UX.occurrenceKey('t','2026-07-16'),date:'2026-07-16',text:'Revisar',done:false,status:'pending'};
+  let occurrences=UX.postponeOccurrence([original],original.id,'2026-07-17','2026-07-16T22:00:00Z');
+  assert.equal(occurrences.length,2);
+  assert.equal(occurrences[0].status,'postponed');
+  assert.equal(occurrences[1].postponedFrom,'2026-07-16');
+  occurrences=UX.postponeOccurrence(occurrences,original.id,'2026-07-17','2026-07-16T22:05:00Z');
+  assert.equal(occurrences.length,2);
+});
+
+test('progresso de vídeo restaura posição e velocidade',()=>{
+  const progress=UX.normalizeVideoProgress({videoId:'v1',currentTime:415.4,duration:1200,playbackRate:1.75});
+  assert.equal(UX.resumeTime(progress),415.4);
+  assert.equal(progress.playbackRate,1.75);
+});
+
+test('vídeo concluído perto do final recomeça sem cair nos últimos segundos',()=>{
+  assert.equal(UX.resumeTime({currentTime:1195,duration:1200,completed:true}),0);
+  assert.equal(UX.resumeTime({currentTime:900,duration:1200,completed:true}),900);
+});
+
+test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(planner,/function bindPointerHighlighter/);
+  assert.match(planner,/event\.pointerType/);
+  assert.match(css,/\.highlightable,.sim-highlightable\{[^}]*user-select:text/s);
+  const views=planner.match(/const views = \[([\s\S]*?)\n\];/)?.[1]||'';
+  assert.ok(views.lastIndexOf("['importar-questoes'")>views.lastIndexOf("['feynman'"));
+});

@@ -1,12 +1,13 @@
-const CACHE_NAME = 'soqueromed-shell-v106';
+const CACHE_NAME = 'soqueromed-shell-v111';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260715-57',
-  './assets/app-icons.js?v=20260715-1',
+  './assets/planner.css?v=20260716-60',
+  './assets/app-icons.js?v=20260716-3',
   './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-4',
-  './assets/planner.js?v=20260715-83',
+  './assets/planner-ux.js?v=20260716-1',
+  './assets/planner.js?v=20260716-86',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
@@ -19,6 +20,16 @@ const APP_SHELL = [
   './assets/rpg/medal-block.svg',
   './assets/rpg/class-crown.svg',
   './assets/rpg/rarity-gem.svg'
+  ,'./assets/rpg/classes/aldeao.png'
+  ,'./assets/rpg/classes/aprendiz.png'
+  ,'./assets/rpg/classes/escudeiro.png'
+  ,'./assets/rpg/classes/soldado.png'
+  ,'./assets/rpg/classes/cavaleiro.png'
+  ,'./assets/rpg/classes/capitao.png'
+  ,'./assets/rpg/classes/barao.png'
+  ,'./assets/rpg/classes/duque.png'
+  ,'./assets/rpg/classes/rei.png'
+  ,'./assets/rpg/classes/imperador.png'
   ,'./data/prescription_catalog.json'
 ];
 

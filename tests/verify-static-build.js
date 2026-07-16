@@ -12,6 +12,7 @@ const required=[
   'assets/app-icons.js',
   'assets/icons/phosphor-sprite.svg',
   'assets/gamification.js',
+  'assets/planner-ux.js',
   'assets/planner.js',
   'manifest.webmanifest',
   'service-worker.js',
@@ -23,10 +24,10 @@ for(const relative of required) {
   if(!fs.existsSync(path.join(root,relative))) failures.push(`arquivo ausente: ${relative}`);
   if(!['service-worker.js','assets/icons/phosphor-sprite.svg'].includes(relative) && !html.includes(relative)) failures.push(`referência ausente no HTML: ${relative}`);
 }
-const scriptOrder=['assets/app-icons.js','assets/gamification.js','assets/planner.js'];
+const scriptOrder=['assets/app-icons.js','assets/gamification.js','assets/planner-ux.js','assets/planner.js'];
 for(let index=1;index<scriptOrder.length;index++) if(html.indexOf(scriptOrder[index-1])>html.indexOf(scriptOrder[index])) failures.push(`${scriptOrder[index-1]} deve carregar antes de ${scriptOrder[index]}`);
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
-for(const relative of ['assets/planner.css','assets/app-icons.js','assets/icons/phosphor-sprite.svg','assets/gamification.js','assets/planner.js',...['fire','water','earth','air'].map(name=>`assets/rpg/element-${name}.svg`)]) {
+for(const relative of ['assets/planner.css','assets/app-icons.js','assets/icons/phosphor-sprite.svg','assets/gamification.js','assets/planner-ux.js','assets/planner.js',...['fire','water','earth','air'].map(name=>`assets/rpg/element-${name}.svg`),...['aldeao','aprendiz','escudeiro','soldado','cavaleiro','capitao','barao','duque','rei','imperador'].map(name=>`assets/rpg/classes/${name}.png`)]) {
   if(!sw.includes(relative)) failures.push(`asset não versionado no service worker: ${relative}`);
 }
 const iconRuntime=fs.readFileSync(path.join(root,'assets/app-icons.js'),'utf8');

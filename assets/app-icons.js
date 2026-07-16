@@ -39,7 +39,10 @@
   });
   const RPG_ASSET_MAP=Object.freeze({
     fire:'assets/rpg/element-fire.svg',water:'assets/rpg/element-water.svg',earth:'assets/rpg/element-earth.svg',air:'assets/rpg/element-air.svg',
-    medal:'assets/rpg/medal-block.svg',class:'assets/rpg/class-crown.svg',rarity:'assets/rpg/rarity-gem.svg'
+    medal:'assets/rpg/medal-block.svg',class:'assets/rpg/class-crown.svg',rarity:'assets/rpg/rarity-gem.svg',
+    aldeao:'assets/rpg/classes/aldeao.png',aprendiz:'assets/rpg/classes/aprendiz.png',escudeiro:'assets/rpg/classes/escudeiro.png',
+    soldado:'assets/rpg/classes/soldado.png',cavaleiro:'assets/rpg/classes/cavaleiro.png',capitao:'assets/rpg/classes/capitao.png',
+    barao:'assets/rpg/classes/barao.png',duque:'assets/rpg/classes/duque.png',rei:'assets/rpg/classes/rei.png',imperador:'assets/rpg/classes/imperador.png'
   });
 
   function escapeAttribute(value){return String(value??'').replace(/[&<>'"]/g,character=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[character]));}
@@ -67,8 +70,10 @@
     const source=RPG_ASSET_MAP[name]||RPG_ASSET_MAP.medal;
     const label=String(options.label||'').trim();
     const size=Number(options.size)||32;
+    const width=Number(options.width)||size;
+    const height=Number(options.height)||size;
     const className=['rpg-asset',options.className||''].filter(Boolean).join(' ');
-    return `<img class="${escapeAttribute(className)}" src="${source}" width="${size}" height="${size}" alt="${escapeAttribute(label)}"${label?'':' aria-hidden="true"'}>`;
+    return `<img class="${escapeAttribute(className)}" src="${source}" width="${width}" height="${height}" alt="${escapeAttribute(label)}"${label?'':' aria-hidden="true"'} loading="eager" decoding="async">`;
   }
 
   function hydrateIcons(scope){

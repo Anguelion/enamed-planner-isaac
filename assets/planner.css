@@ -1662,8 +1662,8 @@ body.dark .dashboard-road > .road-path > .road-step.complete{border-left-color:v
 .gamification-progress .progress{height:13px;background:#dfe8ef}
 .gamification-progress .progress>span{background:linear-gradient(90deg,#1664f5,#25b6c7)}
 .gamification-progress-label{display:flex;justify-content:space-between;gap:12px;margin-top:7px;color:var(--muted);font-size:12px;font-weight:700}
-.gamification-rank{display:grid;grid-template-columns:58px minmax(0,1fr);gap:14px;align-items:center;min-width:0;padding:14px;border:1px solid #d6e5fb;border-radius:8px;background:rgba(255,255,255,.78)}
-.gamification-rank .rpg-asset{width:58px;height:58px}
+.gamification-rank{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:center;min-width:0;padding:14px;border:1px solid #d6e5fb;border-radius:8px;background:rgba(255,255,255,.78)}
+.gamification-rank .rank-character{width:150px;height:210px;object-fit:contain;border-radius:8px;filter:drop-shadow(0 10px 15px rgba(40,34,22,.14))}
 .gamification-rank h2{margin:2px 0 3px;font-size:24px;color:var(--text)}
 .gamification-rank h2 small{font-size:15px;color:var(--muted)}
 .gamification-rank p{margin:0;color:var(--muted);font-size:14px}
@@ -1684,8 +1684,8 @@ body.dark .dashboard-road > .road-path > .road-step.complete{border-left-color:v
 .simulation-reward-metrics>div{display:grid;gap:3px;padding:12px;border:1px solid var(--line);border-radius:8px;text-align:center}.simulation-reward-metrics strong{font-size:22px;color:#3156bd}.simulation-reward-metrics span{font-size:12px;color:var(--muted)}
 .simulation-reward-revealed{display:grid;gap:4px;padding:14px;border:1px solid #c3dfd2;border-radius:8px;background:#edf9f3;color:#147152}
 .rank-promotion-overlay{position:fixed;inset:0;z-index:1600;display:grid;place-items:center;padding:20px;background:rgba(11,25,35,.62);backdrop-filter:blur(4px)}
-.rank-promotion-dialog{width:min(440px,100%);display:grid;justify-items:center;gap:9px;padding:28px;border:1px solid #d7e5f8;border-radius:8px;background:var(--panel);text-align:center;box-shadow:0 24px 70px rgba(5,24,39,.3)}
-.rank-promotion-dialog .rpg-asset{width:72px;height:72px;margin-bottom:3px}
+.rank-promotion-dialog{width:min(520px,100%);display:grid;justify-items:center;gap:9px;padding:28px;border:1px solid #d7e5f8;border-radius:8px;background:var(--panel);text-align:center;box-shadow:0 24px 70px rgba(5,24,39,.3)}
+.rank-promotion-dialog .rank-character--promotion{width:240px;height:336px;object-fit:contain;margin-bottom:3px;border-radius:8px;filter:drop-shadow(0 16px 22px rgba(40,34,22,.2))}
 .rank-promotion-dialog h2{margin:0;color:var(--blue);font-size:26px}
 .rank-promotion-dialog p{margin:0 0 8px;color:var(--muted);line-height:1.55}
 .xp-history-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:15px;padding-top:14px;border-top:1px solid var(--line)}
@@ -1720,9 +1720,74 @@ body.dark .xp-history-mini>div,body.dark .legacy-batches>div{background:#1d272c;
 body.dark .legacy-import-card[open]>summary{background:#203443}
 body.dark .legacy-preview{border-color:#345b91;background:#1b2b3b}
 @media(max-width:1050px){.xp-history-mini{grid-template-columns:repeat(2,minmax(0,1fr))}.legacy-aggregate-fields{grid-template-columns:repeat(3,minmax(0,1fr))}.legacy-aggregate-fields button{grid-column:span 3}}
-@media(max-width:760px){.gamification-head{grid-template-columns:1fr;gap:12px}.gamification-rank{grid-template-columns:50px minmax(0,1fr)}.gamification-rank .rpg-asset{width:50px;height:50px}.gamification-rank h2{font-size:21px}.gamification-progress h2{font-size:18px}.gamification-progress .section-title{align-items:flex-start;flex-direction:column}.gamification-progress-label{display:grid;gap:2px}.rank-progress-panel{grid-template-columns:1fr;gap:8px}.xp-history-mini{grid-template-columns:1fr}.legacy-aggregate-fields{grid-template-columns:1fr}.legacy-aggregate-fields button{grid-column:auto}.legacy-import-card>summary{align-items:flex-start}.legacy-preview .section-title{align-items:flex-start;flex-direction:column}}
+@media(max-width:760px){.gamification-head{grid-template-columns:1fr;gap:12px}.gamification-rank{grid-template-columns:108px minmax(0,1fr);gap:12px}.gamification-rank .rank-character{width:108px;height:152px}.gamification-rank h2{font-size:21px}.gamification-progress h2{font-size:18px}.gamification-progress .section-title{align-items:flex-start;flex-direction:column}.gamification-progress-label{display:grid;gap:2px}.rank-progress-panel{grid-template-columns:1fr;gap:8px}.xp-history-mini{grid-template-columns:1fr}.legacy-aggregate-fields{grid-template-columns:1fr}.legacy-aggregate-fields button{grid-column:auto}.legacy-import-card>summary{align-items:flex-start}.legacy-preview .section-title{align-items:flex-start;flex-direction:column}.rank-promotion-dialog .rank-character--promotion{width:170px;height:238px}}
 @media(max-width:760px){.gamification-sim-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.simulation-reward-metrics{grid-template-columns:1fr}.simulation-reward-dialog{padding:18px}}
 @media(prefers-reduced-motion:reduce){.rank-promotion-overlay,.rank-promotion-dialog{scroll-behavior:auto;animation:none;transition:none}}
+
+/* Experiência responsiva e persistente: shell fluido, tablet próprio e alvos touch. */
+:root{
+  --icon-size-inline:16px;
+  --icon-size-default:20px;
+  --icon-size-action:24px;
+  --icon-size-feature:30px;
+  --shell-gutter:clamp(12px,2.2vw,36px);
+  --sidebar-collapsed-width:58px;
+}
+html,body{width:100%;min-height:100%;min-height:100dvh;overflow-x:clip}
+body{margin:0}
+.app-header,main{box-sizing:border-box;width:calc(100% - var(--sidebar-width));max-width:none;margin-right:0}
+main{min-height:100dvh;padding-inline:var(--shell-gutter)}
+body.sidebar-collapsed .app-header,body.sidebar-collapsed main{width:calc(100% - var(--sidebar-collapsed-width))}
+body.sidebar-collapsed .sidebar-brand{grid-template-columns:36px;padding-inline:10px}
+body.sidebar-collapsed .app-sidebar .tabs{padding-inline:5px}
+body.sidebar-collapsed .app-sidebar .tab{padding-inline:7px}
+.question-stem,.material-markdown,.markdown-preview,.question-comment-card p{max-width:90ch}
+.question-stem{overflow-wrap:anywhere}
+.highlightable,.sim-highlightable{-webkit-user-select:text!important;user-select:text!important;-webkit-touch-callout:default!important;touch-action:pan-y;cursor:text}
+@media(pointer:coarse){
+  .qbank-mode .highlightable,.sim-highlightable{-webkit-user-select:text!important;user-select:text!important;-webkit-touch-callout:default!important;cursor:text;touch-action:pan-y}
+  button,.icon-btn,.tiny-btn,.tab,.answer-option,.sim-answer,input,select{min-height:44px}
+}
+.app-sidebar .tab-icon .ui-icon{width:var(--icon-size-default);height:var(--icon-size-default)}
+.header-tool .ui-icon,.question-tool-strip .ui-icon{width:var(--icon-size-action);height:var(--icon-size-action)}
+.global-mini-player-slot{position:fixed;right:var(--shell-gutter);bottom:18px;z-index:90;width:min(420px,calc(100vw - 32px))}
+.sim-active-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:4px 2px 10px}.sim-active-head h2{margin:2px 0 0}.sim-library{display:grid;gap:16px}.sim-library.collapsed{display:none}
+.personal-task-date-tools{display:grid;grid-template-columns:44px minmax(150px,220px) 44px auto minmax(130px,180px);gap:8px;align-items:center;margin-bottom:12px}
+.personal-task-date-tools .tiny-btn{min-height:43px}.personal-task-add{display:grid;grid-template-columns:minmax(220px,1fr) 160px auto 44px;gap:8px}.task-weekdays{display:flex;align-items:center;gap:4px;flex-wrap:wrap}.task-weekdays label{display:grid;place-items:center;gap:2px;font-size:11px;color:var(--muted)}.task-weekdays input{min-height:0}.personal-task-row.postponed{opacity:.72}.personal-task-row.postponed .personal-task-text{text-decoration:line-through}
+
+@media(min-width:1500px){
+  main{padding-inline:clamp(30px,3vw,64px)}
+  .cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .question-layout{grid-template-columns:minmax(280px,330px) minmax(0,1fr)}
+  .qbank-mode{max-width:none;margin:0}
+}
+@media(min-width:1181px) and (max-width:1499px){
+  main{padding-inline:clamp(20px,2.2vw,34px)}
+}
+@media(min-width:768px) and (max-width:1180px){
+  :root{--tablet-sidebar:66px}
+  .app-sidebar,body.sidebar-collapsed .app-sidebar{position:fixed;inset:0 auto 0 0;width:var(--tablet-sidebar)!important;height:auto;display:flex;border-right:1px solid var(--line);border-top:0}
+  .sidebar-brand{display:grid;grid-template-columns:40px!important;justify-content:center;min-height:72px;padding:14px 10px!important}.sidebar-brand-copy,.sidebar-toggle,.sidebar-foot,.app-sidebar .tab-label{display:none!important}
+  .app-sidebar .tabs,body.sidebar-collapsed .app-sidebar .tabs{height:auto;padding:12px 6px;display:flex;flex-direction:column;gap:5px;overflow-x:hidden;overflow-y:auto}
+  .app-sidebar .tab,body.sidebar-collapsed .app-sidebar .tab{width:100%;min-width:0;min-height:48px;flex:0 0 auto;padding:8px;justify-content:center;flex-direction:row;border-radius:8px}
+  .app-sidebar .tab.active:before,body.sidebar-collapsed .app-sidebar .tab.active:before{inset:7px auto 7px -6px;width:4px;height:auto}
+  .app-header,body.sidebar-collapsed .app-header,main,body.sidebar-collapsed main{width:calc(100% - var(--tablet-sidebar));margin-left:var(--tablet-sidebar)}
+  main{padding:18px clamp(14px,2vw,24px) 28px}
+  .header-inner{grid-template-columns:minmax(0,1fr) auto}.header-actions{overflow-x:auto;justify-content:flex-end}
+  .video-layout,.video-focus-mode{grid-template-columns:minmax(230px,28%) minmax(0,1fr)}.video-sidebar{position:sticky;top:104px;max-height:calc(100dvh - 122px)}
+  .sim-run-layout{grid-template-columns:minmax(220px,28%) minmax(0,1fr)}.sim-run-layout .sim-palette{grid-template-columns:repeat(5,minmax(34px,1fr));max-height:230px}
+  .question-layout{grid-template-columns:minmax(230px,30%) minmax(0,1fr)}.qbank-mode .question-sidebar{display:block;position:sticky;top:104px;max-height:calc(100dvh - 120px);overflow:auto}
+  .qbank-mode .question-sidebar>.muted,.qbank-mode .question-sidebar>.question-counts,.qbank-mode .question-sidebar>.kpi-row,.qbank-mode .question-sidebar>.progress,.qbank-mode .question-sidebar>.confidence-box{display:initial}
+  .daily-analysis-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:767px){
+  :root{--mobile-nav-height:68px}
+  .app-header,body.sidebar-collapsed .app-header,main,body.sidebar-collapsed main{width:100%;margin-left:0}
+  main{padding:12px 10px calc(var(--mobile-nav-height) + 18px)}
+  .personal-task-date-tools{grid-template-columns:44px minmax(0,1fr) 44px}.personal-task-date-tools #personalTaskToday,.personal-task-date-tools #personalTaskFilter{grid-column:span 1}.personal-task-date-tools #personalTaskFilter{grid-column:2/4}
+  .personal-task-add{grid-template-columns:minmax(0,1fr) 44px}.personal-task-add #personalTaskRecurrence,.personal-task-add .task-weekdays{grid-column:1/-1}
+  .sim-active-head{align-items:flex-start;flex-direction:column}.sim-active-head .tiny-btn{width:auto}
+}
 /* Sistema visual semântico de ícones — Phosphor local */
 :root{
   --icon-fire:#ef5b3e;--icon-fire-soft:#fff0e8;
@@ -1787,4 +1852,182 @@ body.dark .tab.active .tab-icon{background:#172331}
   body.sidebar-collapsed .app-sidebar .tabs{padding:14px 2px}
   body.sidebar-collapsed .app-sidebar .tab{min-height:44px;padding:8px 2px}
   body.sidebar-collapsed .sidebar-foot{padding:6px 2px}
+}
+
+/* Dashboard density: mobile stays comfortable; desktop gets a true 12-column composition. */
+.dashboard-global-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:2px 2px 0}
+.dashboard-global-head h1{margin:2px 0 0;font-size:clamp(24px,2vw,32px);line-height:1.1;letter-spacing:0}
+.dashboard-date-control{display:grid;grid-template-columns:auto minmax(142px,170px);align-items:center;gap:8px;color:var(--muted);font-size:13px;font-weight:800}
+.dashboard-date-control .input{min-height:42px}
+.dashboard-desktop-grid{display:grid;gap:18px}
+.dashboard-primary-column,.dashboard-side-column,.dashboard-progress-region{display:grid;gap:18px;align-content:start;min-width:0}
+.continue-study-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;border-left:5px solid var(--blue);background:linear-gradient(120deg,var(--panel),var(--soft-blue))}
+.continue-study-icon{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;background:var(--blue);color:#fff}
+.continue-study-icon .ui-icon,.continue-study-icon .app-icon{width:25px;height:25px}
+.continue-study-copy{min-width:0}
+.continue-study-copy h2{margin:2px 0 3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.continue-study-copy p,.continue-study-copy small{display:block;margin:0;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.continue-study-card>.icon-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px}
+.dashboard-mood{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.dashboard-mood-copy{min-width:max-content}
+.dashboard-mood-copy h2{margin:0 0 2px}
+.dashboard-mood .mood-row{display:flex;flex:1;justify-content:flex-end;margin:0;max-width:560px}
+.dashboard-mood .mood-btn{display:flex;align-items:center;justify-content:center;gap:7px;min-height:46px;padding:7px 12px;flex:1}
+.dashboard-mood .mood-btn small{margin:0;white-space:nowrap}
+.daily-analysis>.section-title{margin-bottom:10px}
+.daily-analysis-grid{grid-template-columns:1.25fr repeat(3,minmax(0,1fr));gap:8px}
+.daily-analysis-tile{gap:9px;padding:11px;border-radius:8px;align-items:center}
+.daily-analysis-icon{width:36px;height:36px;border-radius:8px}
+.daily-analysis-icon .ui-icon,.daily-analysis-icon .app-icon{width:20px;height:20px}
+.daily-analysis-label{font-size:12px}
+.daily-analysis-tile strong{font-size:22px;line-height:1.05}
+.daily-analysis-tile small{font-size:11px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.daily-analysis-progress{height:5px;margin-top:7px}
+.dashboard-side-column .personal-tasks-card{gap:9px}
+.dashboard-side-column .personal-tasks-card>.section-title{margin-bottom:0}
+.dashboard-side-column .personal-tasks-card>.section-title .muted{display:none}
+.dashboard-side-column .personal-task-date-tools{display:grid;grid-template-columns:34px minmax(0,1fr) 34px auto;gap:5px}
+.dashboard-side-column .personal-task-date-tools .select{grid-column:1/-1}
+.dashboard-side-column .personal-task-add{display:grid;grid-template-columns:minmax(0,1fr) 40px}
+.dashboard-side-column .personal-task-add #personalTaskRecurrence,.dashboard-side-column .personal-task-add .task-weekdays{grid-column:1/-1}
+.dashboard-side-column .personal-task-list{max-height:350px;overflow:auto;padding-right:2px}
+.dashboard-side-column .personal-task-row{align-items:flex-start;padding:8px 9px}
+.dashboard-side-column .personal-task-actions{flex-wrap:wrap;justify-content:flex-end;max-width:122px}
+.dashboard-side-column .countdown-card{grid-template-columns:74px minmax(0,1fr);padding:14px}
+.dashboard-side-column .countdown-ring{width:70px;height:70px;border-width:6px}
+.dashboard-side-column .countdown-ring strong{font-size:12px}
+.dashboard-side-column .countdown-ring small{display:none}
+.dashboard-side-column .gamification-head{grid-template-columns:1fr;gap:12px;align-items:stretch}
+.dashboard-side-column .gamification-rank{grid-template-columns:78px minmax(0,1fr);gap:12px;padding:10px;align-items:center}
+.dashboard-side-column .gamification-rank .rank-character{width:78px;height:118px}
+.dashboard-side-column .gamification-rank h2{font-size:21px;line-height:1.2;overflow-wrap:normal;word-break:normal}
+.dashboard-side-column .gamification-rank h2 small{display:block;margin-top:3px;font-size:13px}
+.dashboard-side-column .gamification-rank p{font-size:12px;line-height:1.4}
+.dashboard-side-column .gamification-progress .section-title{align-items:flex-start;gap:8px}
+.dashboard-side-column .gamification-progress h2{font-size:19px;line-height:1.25;overflow-wrap:normal;word-break:normal}
+.dashboard-side-column .gamification-progress-label{display:grid;gap:2px}
+.dashboard-side-column .rank-progress-panel{grid-template-columns:1fr;gap:8px;margin-top:12px;padding:11px}
+.dashboard-side-column .xp-history-mini{grid-template-columns:1fr;max-height:150px;overflow:auto}
+
+@media(min-width:1200px){
+  #painel.view.active{gap:14px}
+  #painel .card{padding:14px}
+  .dashboard-desktop-grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;align-items:start}
+  .dashboard-primary-column{grid-column:span 8;gap:12px}
+  .dashboard-side-column{grid-column:span 4}
+  .dashboard-road-region{grid-column:span 8;min-width:0}
+  .dashboard-road-region .road-step{min-height:162px;padding:13px}
+  .dashboard-road-region .road-label{font-size:14px;margin-top:9px}
+  .dashboard-road-region .road-sub{min-height:30px;font-size:12px}
+  .dashboard-road-region .road-progress{margin-top:9px}
+  .dashboard-road-region .road-actions{margin-top:9px}
+  .dashboard-side-column .gamification-card{overflow:hidden}
+  .app-header{min-height:0}
+  .header-inner{padding-top:9px;padding-bottom:9px}
+  .header-context strong{font-size:17px}
+  .header-context span{font-size:12px}
+  .motivation-bar{padding-bottom:7px}
+  .motivation-marquee{padding-top:7px;padding-bottom:7px}
+}
+@media(min-width:1600px){
+  .app-header,main{max-width:1760px;margin-right:auto}
+  main{padding-top:18px;padding-bottom:32px}
+  .app-header{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,35%);align-items:center}
+  .header-inner{padding-right:12px}
+  .motivation-bar{min-width:0;padding:7px 18px 7px 0}
+  .motivation-pill{width:100%}
+  .motivation-marquee{display:block;padding:7px 10px;overflow:hidden;text-overflow:ellipsis;animation:none}
+  .dashboard-primary-column{grid-column:span 9}
+  .dashboard-side-column{grid-column:span 3}
+  .dashboard-road-region{grid-column:span 9}
+}
+@media(max-width:1199px){
+  .dashboard-mood{display:grid}
+  .dashboard-mood .mood-row{max-width:none;justify-content:stretch}
+  .daily-analysis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .dashboard-global-head{align-items:stretch;display:grid}
+  .dashboard-date-control{grid-template-columns:auto 1fr}
+  .continue-study-card{grid-template-columns:auto minmax(0,1fr)}
+  .continue-study-card>.icon-btn{grid-column:1/-1;width:100%}
+  .dashboard-mood .mood-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dashboard-mood .mood-btn{display:grid;gap:2px;padding:7px 4px}
+  .dashboard-mood .mood-btn small{font-size:10px;white-space:normal}
+  .daily-analysis-grid{grid-template-columns:1fr}
+}
+
+/* Dashboard desktop inspirado no painel de referência: módulos curtos numa malha única. */
+.dashboard-task-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dashboard-task-summary>div{display:flex;align-items:baseline;gap:6px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--soft-blue)}
+.dashboard-task-summary strong{font-size:22px;color:var(--blue)}
+.dashboard-task-summary span{font-size:12px;color:var(--muted);font-weight:800}
+.dashboard-tasks-card .personal-task-list{gap:5px;max-height:174px;overflow:auto}
+.dashboard-tasks-card .personal-task-row{padding:6px 8px}
+.dashboard-tasks-card .personal-task-priority{display:none}
+.dashboard-tasks-card .personal-task-actions{gap:3px}
+.dashboard-tasks-card .personal-task-actions .tiny-btn{width:28px;min-width:28px;height:28px;padding:3px}
+.dashboard-task-more{text-align:center;font-size:11px}
+.personal-task-manage{border-top:1px solid var(--line);padding-top:8px}
+.personal-task-manage>summary{cursor:pointer;color:var(--blue);font-size:12px;font-weight:900;list-style:none}
+.personal-task-manage>summary::-webkit-details-marker{display:none}
+.personal-task-manage[open]>summary{margin-bottom:8px}
+.personal-task-manage .personal-task-date-tools,.personal-task-manage .personal-task-add{margin-top:8px}
+.dashboard-review-list{display:grid;gap:7px}
+.dashboard-review-list>div{display:grid;grid-template-columns:32px auto 1fr auto;align-items:center;gap:8px;padding:8px;border:1px solid var(--line);border-radius:8px}
+.dashboard-review-list strong{font-size:18px;color:var(--blue)}
+.dashboard-review-list>div>span:not(.dashboard-review-icon){font-size:12px;font-weight:800}
+.dashboard-review-list small{font-size:10px;color:var(--muted)}
+.dashboard-review-icon{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;background:var(--soft-blue);color:var(--blue)}
+.dashboard-review-icon.tone-1{background:var(--soft-red);color:var(--red)}
+.dashboard-review-icon.tone-2{background:var(--soft-amber);color:var(--amber)}
+.dashboard-bars{height:132px;display:grid;grid-template-columns:repeat(7,1fr);align-items:end;gap:7px;padding-top:8px}
+.dashboard-bars>div{height:100%;display:grid;grid-template-rows:1fr auto;align-items:end;gap:5px;text-align:center}
+.dashboard-bars>div>span{width:70%;min-height:6px;justify-self:center;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,var(--blue),var(--cyan))}
+.dashboard-bars small{font-size:10px;color:var(--muted);text-transform:capitalize}
+.gamification-card--compact{display:grid;align-content:start;gap:9px}
+.gamification-card--compact .section-title{align-items:center;margin:0}
+.gamification-card--compact .rank-character{width:52px;height:72px;object-fit:contain}
+.gamification-card--compact h2{font-size:18px;line-height:1.2}
+.gamification-card--compact .compact-xp{font-size:25px;color:var(--blue)}
+.gamification-card--compact>.progress{height:9px}
+.compact-rank-next{color:var(--muted);font-size:11px;line-height:1.35}
+.dashboard-recent-list{display:grid;gap:4px}
+.dashboard-recent-list>div{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:7px;padding:7px 0;border-bottom:1px solid var(--line)}
+.dashboard-recent-list>div:last-child{border-bottom:0}
+.dashboard-recent-list>div>span{width:27px;height:27px;display:grid;place-items:center;border-radius:7px;background:var(--soft-blue);color:var(--blue)}
+.dashboard-recent-list strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}
+.dashboard-recent-list time{color:var(--muted);font-size:10px}
+
+@media(min-width:1200px){
+  .dashboard-desktop-grid>.continue-study-card{grid-column:span 4}
+  .dashboard-desktop-grid>.dashboard-mood{grid-column:span 4}
+  .dashboard-desktop-grid>.dashboard-tasks-card{grid-column:span 4}
+  .dashboard-desktop-grid>.daily-analysis{grid-column:span 8}
+  .dashboard-desktop-grid>.dashboard-review-card{grid-column:span 4}
+  .dashboard-desktop-grid>.dashboard-evolution-card,
+  .dashboard-desktop-grid>.gamification-card--compact,
+  .dashboard-desktop-grid>.dashboard-recent-card,
+  .dashboard-desktop-grid>.countdown-card{grid-column:span 3}
+  .dashboard-desktop-grid>.dashboard-road-region{grid-column:1/-1}
+  .dashboard-desktop-grid>.continue-study-card{grid-template-columns:42px minmax(0,1fr);align-content:start}
+  .dashboard-desktop-grid>.continue-study-card .continue-study-icon{width:42px;height:42px}
+  .dashboard-desktop-grid>.continue-study-card>.icon-btn{grid-column:1/-1;width:max-content;min-width:150px}
+  .dashboard-desktop-grid>.dashboard-mood{display:grid;align-content:start}
+  .dashboard-desktop-grid>.dashboard-mood .mood-row{max-width:none;width:100%}
+  .dashboard-desktop-grid>.dashboard-mood .mood-btn{display:grid;gap:2px;padding:7px 5px}
+  .dashboard-desktop-grid>.dashboard-mood .mood-btn small{font-size:10px;white-space:normal}
+  .dashboard-desktop-grid>.daily-analysis .daily-analysis-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .dashboard-desktop-grid>.countdown-card{grid-template-columns:62px minmax(0,1fr)}
+  .dashboard-desktop-grid>.countdown-card .countdown-ring{width:60px;height:60px}
+}
+@media(min-width:1600px){
+  .dashboard-primary-column,.dashboard-side-column,.dashboard-road-region,.dashboard-progress-region{grid-column:auto}
+  .dashboard-desktop-grid>.dashboard-road-region{grid-column:1/-1}
+}
+@media(max-width:1199px){
+  .dashboard-desktop-grid>.dashboard-review-card,
+  .dashboard-desktop-grid>.dashboard-evolution-card,
+  .dashboard-desktop-grid>.gamification-card--compact,
+  .dashboard-desktop-grid>.dashboard-recent-card{min-width:0}
 }
