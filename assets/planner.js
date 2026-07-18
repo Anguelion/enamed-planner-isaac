@@ -29,6 +29,14 @@ const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
 const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) || null;
 const MATERIAL_IMAGE_BUCKET = 'materials-images';
+// As chaves acima sao fixas no codigo: qualquer copia destes arquivos (um
+// servidor local de teste, uma porta nova, etc.) fala com o MESMO projeto
+// Supabase de producao. Para evitar que uma sessao de teste grave dados
+// reais por acidente, a sincronizacao com a nuvem so roda em origens
+// conhecidas (o deploy real e o servidor offline oficial). Passe
+// ?allowSync=1 na URL para autorizar explicitamente um teste pontual.
+const KNOWN_SYNC_ORIGINS = ['https://enamed-planner-isaac.pages.dev', 'http://127.0.0.1:8765', 'http://localhost:8765'];
+const CLOUD_SYNC_ALLOWED = KNOWN_SYNC_ORIGINS.includes(location.origin) || new URLSearchParams(location.search).get('allowSync') === '1';
 const Gamification = window.ENAMED_GAMIFICATION || null;
 const PlannerUX = window.ENAMED_PLANNER_UX || null;
 const INITIAL_PARAMS = new URLSearchParams(window.location.search);
@@ -933,6 +941,7 @@ function invalidateQuestionBankRenderCache() {
 }
 function scheduleCloudSave() {
   if(!currentUser || !sbClient) return;
+  if(!CLOUD_SYNC_ALLOWED) { setSyncStatus('Ambiente de teste — sincronização desativada', 'error'); return; }
   cloudDirty = true;
   cloudRevision += 1;
   clearTimeout(syncTimer);
@@ -940,7 +949,7 @@ function scheduleCloudSave() {
   syncTimer = setTimeout(pushCloudState, 900);
 }
 async function pushCloudState() {
-  if(!currentUser) return;
+  if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
   if(syncInFlight) {
     clearTimeout(syncTimer);
     syncTimer = setTimeout(pushCloudState, 700);
@@ -990,7 +999,7 @@ function isEditingTextField() {
   return active.isContentEditable === true;
 }
 async function pullCloudState({ firstLogin=false }={}) {
-  if(!currentUser) return;
+  if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
   if(!firstLogin && isEditingTextField()) return;
   if(cloudDirty && !firstLogin) {
     await pushCloudState();
@@ -1055,7 +1064,7 @@ function backupDateTime(value) {
   return Number.isNaN(date.getTime()) ? 'Data indisponível' : date.toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'});
 }
 async function loadCloudBackups({force=false}={}) {
-  if(!currentUser || !sbClient || (cloudBackupsLoading && !force)) return;
+  if(!currentUser || !sbClient || !CLOUD_SYNC_ALLOWED || (cloudBackupsLoading && !force)) return;
   cloudBackupsLoading = true;
   cloudBackupsError = '';
   const { data, error } = await sbClient.from('planner_backups').select('id,label,created_at').eq('user_id', currentUser.id).order('created_at',{ascending:false}).limit(24);
@@ -1070,6 +1079,7 @@ async function loadCloudBackups({force=false}={}) {
 }
 async function forcePlannerSync() {
   if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para sincronizar entre aparelhos.'); return; }
+  if(!CLOUD_SYNC_ALLOWED) { showStudyToast('Ambiente de teste: sincronização com a nuvem está desativada.'); return; }
   checkpointAutoStudyTime(true);
   saveStateOnly();
   await pushCloudState();
@@ -1079,6 +1089,7 @@ async function forcePlannerSync() {
 }
 async function createCloudBackup(label='') {
   if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para salvar uma cópia na nuvem.'); return; }
+  if(!CLOUD_SYNC_ALLOWED) { showStudyToast('Ambiente de teste: sincronização com a nuvem está desativada.'); return; }
   const payload = fullPlannerBackup();
   setSyncStatus('Criando backup...', 'busy');
   const { error } = await sbClient.from('planner_backups').insert({
@@ -1100,7 +1111,7 @@ async function createCloudBackup(label='') {
   if(ui.tab === 'painel') renderPainel();
 }
 async function restoreCloudBackup(id) {
-  if(!currentUser || !sbClient || !id) return;
+  if(!currentUser || !sbClient || !id || !CLOUD_SYNC_ALLOWED) return;
   if(!confirm('Restaurar esta cópia neste aparelho? O estado atual será substituído e depois sincronizado.')) return;
   const { data, error } = await sbClient.from('planner_backups').select('data,label,created_at').eq('id',id).eq('user_id',currentUser.id).maybeSingle();
   if(error || !data?.data?.schedule?.length) { alert('Não consegui abrir esse backup.'); return; }
@@ -1116,7 +1127,7 @@ async function restoreCloudBackup(id) {
   render();
 }
 async function deleteCloudBackup(id) {
-  if(!currentUser || !sbClient || !id || !confirm('Excluir este backup da nuvem?')) return;
+  if(!currentUser || !sbClient || !id || !CLOUD_SYNC_ALLOWED || !confirm('Excluir este backup da nuvem?')) return;
   const { error } = await sbClient.from('planner_backups').delete().eq('id',id).eq('user_id',currentUser.id);
   if(error) { alert('Não consegui excluir o backup.'); return; }
   await loadCloudBackups({force:true});
@@ -4040,7 +4051,7 @@ async function storeMaterialImage(file) {
   const id=`img-${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
   materialImageCache.set(id,dataUrl);
   await materialDbPut({key:`image:${id}`,type:'image',id,name:file.name,mime:compressed.type||file.type,dataUrl,createdAt:Date.now()});
-  if(currentUser && sbClient) {
+  if(currentUser && sbClient && CLOUD_SYNC_ALLOWED) {
     sbClient.storage.from(MATERIAL_IMAGE_BUCKET).upload(`${currentUser.id}/${id}.webp`, compressed, {contentType:'image/webp', upsert:true})
       .then(({error}) => { if(error) console.warn('Não foi possível sincronizar a imagem do material:', error); })
       .catch(error => console.warn('Não foi possível sincronizar a imagem do material:', error));
@@ -4054,7 +4065,7 @@ async function loadMaterialImagesForMarkdown(doc,markdown) {
   await Promise.all(missing.map(async id => {
     const record=await materialDbGet(`image:${id}`);
     if(record?.dataUrl) { materialImageCache.set(id,record.dataUrl); return; }
-    if(!currentUser || !sbClient) return;
+    if(!currentUser || !sbClient || !CLOUD_SYNC_ALLOWED) return;
     try {
       const {data,error}=await sbClient.storage.from(MATERIAL_IMAGE_BUCKET).download(`${currentUser.id}/${id}.webp`);
       if(error || !data) return;
