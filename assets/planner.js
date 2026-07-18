@@ -8041,7 +8041,7 @@ document.getElementById('signInBtn').onclick = async () => {
   if(!email || !password) { message.textContent = 'Informe seu e-mail e sua senha.'; return; }
   message.textContent = 'Entrando...';
   const { error } = await sbClient.auth.signInWithPassword({ email, password });
-  message.textContent = error ? `Não foi possível entrar: ${error.message}` : 'Conta conectada.';
+  message.textContent = error ? 'Não foi possível entrar. Confira o e-mail e a senha e tente novamente.' : 'Conta conectada.';
 };
 document.addEventListener('visibilitychange', () => {
   if(document.visibilityState === 'hidden') {

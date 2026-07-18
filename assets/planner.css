@@ -1,12 +1,4 @@
-:root {
-  --bg:#f7f9f8; --panel:#ffffff; --ink:#182421; --muted:#63706c; --line:#dce7e3;
-  --green:#16805b; --teal:#0c7f8f; --red:#bd3f32; --amber:#b66b12; --blue:#123f59;
-  --primary:var(--blue); --text:var(--ink); --warning:var(--amber);
-  --mint:#8ce0cf; --cyan:#25b6c7;
-  --soft-green:#e7f6f0; --soft-red:#faeae7; --soft-amber:#fff0d4; --soft-blue:#e6f1f5;
-  --shadow:0 14px 34px rgba(13,50,61,.09); --focus:0 0 0 3px rgba(37,182,199,.18);
-  --radius:16px; --radius-sm:12px;
-}
+/* Tokens de design: definição única em :root, ver linha ~1183. */
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#f4f8f7 0,#f7f9f8 260px);color:var(--ink);letter-spacing:0}
 button,input,select,textarea{font:inherit}
@@ -449,7 +441,6 @@ body.dark .import-question-card,body.dark .import-source{background:#202a2a;colo
 .sim-tools{width:100%;justify-content:space-between;border-radius:8px}
 .sim-question-head{align-items:stretch;flex-direction:column}
 .question-body{padding:12px}
-.question-topbar{grid-template-columns:32px 1fr;align-items:start}
 .question-tool-strip{grid-column:1/-1;justify-content:flex-start}
 .qbank-block-row{grid-template-columns:34px 1fr}
 .qbank-block-row button{grid-column:1/-1}
@@ -649,6 +640,9 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .material-markdown blockquote{margin:16px 0;padding:10px 14px;border-left:4px solid var(--teal);background:var(--soft-blue);border-radius:6px;color:var(--muted)}
 .material-original-toggle{margin-top:18px}
 .material-original-toggle summary{cursor:pointer;font-weight:800;color:var(--blue)}
+/* Reposicionado para depois da regra base (linha ~500): antes ficava antes dela no
+   arquivo e nunca chegava a fazer efeito entre 620px e 760px. */
+@media(max-width:760px){.question-topbar{grid-template-columns:32px 1fr;align-items:start}}
 @media(max-width:980px){.question-workspace,.material-grid,.flashcard-grid,.library-layout,.flashcard-review-panel{grid-template-columns:1fr}
 .question-timer.compact,.library-sidebar{position:static;max-height:none}
 .question-topbar{top:0}
@@ -971,7 +965,6 @@ body.dark .analysis-head{background:linear-gradient(105deg,var(--soft-blue),var(
 @media(max-width:760px){.analysis-head{display:grid}.analysis-date-controls{display:grid;grid-template-columns:auto minmax(0,1fr) auto}.analysis-date-controls .input{width:100%}.analysis-date-controls #analysisToday{grid-column:1/-1}.analysis-kpis{grid-template-columns:1fr 1fr}.analysis-kpi{min-height:112px}.analysis-focus-grid{grid-template-columns:1fr}.analysis-table td:nth-child(2),.analysis-table td:nth-child(6){min-width:190px}}
 @media(max-width:460px){.analysis-kpis{grid-template-columns:1fr}.analysis-head h1{font-size:24px}}
 /* Revisão visual 2026: leitura confortável, navegação consistente e uso amplo da tela. */
-:root{--radius:12px;--radius-sm:8px;--shadow:0 10px 28px rgba(13,50,61,.07)}
 body{min-width:0;background:#f4f8f7;font-size:15px}
 body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.34;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='240' viewBox='0 0 560 240'%3E%3Cg fill='none' stroke='%23b7d7d2' stroke-width='1'%3E%3Cpath d='M0 64h205l9-16 12 40 13-58 14 62 10-28h87l10-11 11 22 10-11h169'/%3E%3Cpath opacity='.45' d='M0 184h125l12-18 14 38 15-53 15 62 13-29h116l12-14 14 28 13-14h211'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(180deg,rgba(230,241,245,.88),rgba(244,248,247,.94) 260px,#f4f8f7 720px);background-repeat:repeat-x,no-repeat;background-position:0 112px,0 0;background-size:560px 240px,100% 100%}
 body.dark:before{opacity:.15;filter:saturate(.7)}
@@ -1102,7 +1095,7 @@ main{display:block;max-width:none;padding:0}
 }
 
 /* Navegação principal lateral */
-:root{--sidebar-width:248px;--sidebar-collapsed-width:76px}
+/* Variáveis --sidebar-width/--sidebar-collapsed-width: ver definição única em :root (linha ~1189). */
 .app-sidebar{position:fixed;inset:0 auto 0 0;z-index:35;width:var(--sidebar-width);display:flex;flex-direction:column;background:rgba(255,255,255,.97);border-right:1px solid var(--line);box-shadow:6px 0 24px rgba(18,63,89,.04);transition:width .22s ease;backdrop-filter:blur(14px)}
 .sidebar-brand{min-height:82px;display:grid;grid-template-columns:42px minmax(0,1fr) 30px;gap:10px;align-items:center;padding:16px 14px;border-bottom:1px solid var(--line)}
 .sidebar-brand-copy{min-width:0;display:grid;line-height:1.2;color:var(--blue)}
@@ -1144,7 +1137,6 @@ body.dark .sidebar-toggle{background:#18313a;color:#8fd4e7}
 
 /* Sidebar recolhida: mantém os acessos visíveis em uma faixa compacta. */
 @media(min-width:721px){
-  :root{--sidebar-collapsed-width:64px}
   body.sidebar-collapsed .sidebar-brand{grid-template-columns:36px;padding:16px 6px}
   body.sidebar-collapsed .app-sidebar .tabs{padding:14px 4px}
   body.sidebar-collapsed .app-sidebar .tab{min-height:44px;padding:8px 4px}
@@ -1184,9 +1176,10 @@ body.dark .sidebar-toggle{background:#18313a;color:#8fd4e7}
 :root{
   --bg:#f6f7f9;--panel:#fff;--ink:#141b2d;--muted:#667085;--line:#e1e5eb;
   --blue:#1261f5;--teal:#02acd2;--cyan:#39c9ed;--green:#15966b;--amber:#e5a400;--red:#e5484d;
+  --primary:var(--blue);--text:var(--ink);--warning:var(--amber);
   --soft-blue:#eaf2ff;--soft-green:#e6f6ef;--soft-amber:#fff5d9;--soft-red:#ffeded;
   --shadow:0 7px 24px rgba(31,42,68,.07);--focus:0 0 0 3px rgba(18,97,245,.16);
-  --radius:12px;--radius-sm:10px;--sidebar-width:258px;--sidebar-collapsed-width:112px;
+  --radius:12px;--radius-sm:10px;--sidebar-width:258px;--sidebar-collapsed-width:58px;
 }
 body{font-family:Poppins,"Segoe UI",Arial,sans-serif;font-size:15px;font-weight:400;background:#f6f7f9;color:var(--ink)}
 body:not(.dark):before{opacity:0}
@@ -1733,7 +1726,6 @@ body.dark .legacy-preview{border-color:#345b91;background:#1b2b3b}
   --icon-size-action:24px;
   --icon-size-feature:30px;
   --shell-gutter:clamp(12px,2.2vw,36px);
-  --sidebar-collapsed-width:58px;
 }
 html,body{width:100%;min-height:100%;min-height:100dvh;overflow-x:clip}
 body{margin:0}

@@ -9,6 +9,14 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { loadPlannerSandbox } = require('./planner-sandbox.js');
 
+// Objetos criados dentro do sandbox de vm pertencem a um "realm" diferente do
+// deste arquivo de teste: `Array`/`Object` do sandbox nao sao literalmente os
+// mesmos construtores do processo Node, entao assert.deepStrictEqual falha por
+// identidade de protótipo mesmo quando os valores sao estruturalmente iguais.
+// Normalizamos via JSON (o mesmo caminho que os dados percorrem de verdade ao
+// ir para localStorage/Supabase) antes de comparar.
+const plain = value => JSON.parse(JSON.stringify(value));
+
 test('merge de simuladoRuns: uniao por id, vence o updatedAt mais recente de qualquer lado', () => {
   const ctx = loadPlannerSandbox();
   const remote = {
@@ -32,8 +40,8 @@ test('merge de simuladoRuns: uniao por id, vence o updatedAt mais recente de qua
   assert.equal(byId.r1.foo, 'local-mais-novo', 'a versao mais recente (local) deve vencer');
   assert.equal(byId.r2.foo, 'so-existe-local', 'tentativa exclusiva de um lado nao pode sumir');
   assert.equal(byId.r3.foo, 'remoto-mais-novo', 'o lado remoto tambem pode vencer quando e o mais novo');
-  const simIds = merged.simulados.map(sim => sim.id).sort();
-  assert.deepEqual(simIds, ['s1', 's2'], 'resumo legado deve unir os dois lados sem perder nenhum');
+  const simIds = plain(merged.simulados.map(sim => sim.id).sort());
+  assert.deepStrictEqual(simIds, ['s1', 's2'], 'resumo legado deve unir os dois lados sem perder nenhum');
 });
 
 test('merge de materials: conteudo do lado mais recente, destaques (highlights) sempre unidos', () => {
@@ -51,8 +59,8 @@ test('merge de materials: conteudo do lado mais recente, destaques (highlights) 
   };
   const merged = ctx.mergePlannerActivityState(remote, local, false);
   assert.equal(merged.materials['doc-a'].content, 'versao local nova');
-  const highlightTexts = merged.materials['doc-a'].highlights.map(h => h.text).sort();
-  assert.deepEqual(highlightTexts, ['trecho-local', 'trecho-remoto'], 'grifos de ambos os lados devem sobreviver ao merge');
+  const highlightTexts = plain(merged.materials['doc-a'].highlights.map(h => h.text).sort());
+  assert.deepStrictEqual(highlightTexts, ['trecho-local', 'trecho-remoto'], 'grifos de ambos os lados devem sobreviver ao merge');
   assert.equal(merged.materials['doc-b'].content, 'documento so local', 'documento exclusivo de um lado nao pode sumir');
 });
 
