@@ -585,6 +585,8 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .flashcard-md-field{display:grid;gap:6px;min-width:0}
 .flashcard-md-toolbar{display:flex;align-items:center;gap:5px;min-height:32px;padding:4px;border:1px solid var(--line);border-radius:7px;background:var(--surface,#fff)}
 .flashcard-md-tool{display:grid;place-items:center;min-width:30px;height:28px;padding:0 7px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--ink);font:inherit;font-size:13px;cursor:pointer}
+.flashcard-image{display:block;max-width:100%;max-height:320px;margin:8px auto;border-radius:8px;object-fit:contain}
+.flashcard-image-pending{display:inline-block;padding:6px 10px;border-radius:6px;background:var(--soft-blue);color:var(--muted);font-size:12px}
 .flashcard-md-tool:hover,.flashcard-md-tool:focus-visible{border-color:var(--blue);background:var(--soft-blue);outline:0}
 .flashcard-md-tool.marker{background:#fff1a8;color:#5f4a00;font-weight:800}
 .flashcard-md-tool.color{min-width:24px;width:24px;height:24px;padding:0;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
@@ -609,6 +611,10 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .flashcard-study-card .flashcard-back{font-size:18px;line-height:1.65;text-align:left;background:#fff;border-radius:8px;padding:16px}
 .flashcard-study-top{display:flex;justify-content:center;gap:7px;flex-wrap:wrap}
 .flashcard-session-nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.flashcard-stats-disclosure{margin-top:4px}
+.flashcard-stats-disclosure summary{cursor:pointer;list-style:none;font-size:12px;color:var(--muted);text-align:center}
+.flashcard-stats-disclosure summary::-webkit-details-marker{display:none}
+.flashcard-stats-disclosure .flashcard-meta{justify-content:center;margin-top:10px}
 .flashcard-rating{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:100%}
 .flashcard-rating .icon-btn{min-height:52px;border-radius:8px}
 .sm2-pill{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:11px;font-weight:900;color:var(--muted);background:#fff}
