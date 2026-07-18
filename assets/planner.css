@@ -38,7 +38,7 @@ body:not(.auth-locked) .login-screen{display:none}
 .tab-icon{width:27px;height:27px;display:grid;place-items:center;border-radius:9px;background:color-mix(in srgb,currentColor 13%,transparent);color:currentColor;transition:transform .16s ease,background .16s ease}
 .tab:hover .tab-icon{transform:rotate(-5deg) scale(1.08)}
 .tab-icon .ui-icon{width:17px;height:17px;stroke-width:2.2}
-.tab-painel{color:#2867e8}.tab-cronograma{color:#c58a16}.tab-pendencias{color:#e05a47}.tab-aulas{color:#0b9b77}.tab-questoes{color:#087fa1}.tab-importar-questoes{color:#d97706}.tab-analise{color:#e58a14}.tab-flashcards{color:#d04fb3}.tab-materiais{color:#188b92}.tab-simulados{color:#ef6a3a}.tab-prescricao{color:#16a085}.tab-areas{color:#3b82f6}.tab-historico{color:#64748b}.tab-feynman{color:#7c5ce3}.tab-ferramentas{color:#475569}
+.tab-painel{color:#2867e8}.tab-cronograma{color:#c58a16}.tab-pendencias{color:#e05a47}.tab-aulas{color:#0b9b77}.tab-questoes{color:#087fa1}.tab-importar-questoes{color:#d97706}.tab-analise{color:#e58a14}.tab-flashcards{color:#d04fb3}.tab-materiais{color:#188b92}.tab-simulados{color:#ef6a3a}.tab-prescricao{color:#16a085}.tab-areas{color:#3b82f6}.tab-historico{color:#64748b}.tab-feynman{color:#7c5ce3}.tab-ferramentas{color:#475569}.tab-caderno-erros{color:#c0392b}.tab-ecg{color:#1685d1}
 .tab.active{color:#fff;transform:translateY(-1px)}
 .tab.active .tab-icon{background:rgba(255,255,255,.18);color:#fff}
 .tab.active{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(18,63,89,.16)}
@@ -284,6 +284,8 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .cloud-backup-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface,#fff)}
 .cloud-backup-row strong,.cloud-backup-row small{display:block}.cloud-backup-row small{margin-top:2px;color:var(--muted);font-size:12px}
 .cloud-backup-actions{display:flex;align-items:center;gap:6px}.cloud-backup-actions .icon-btn{min-width:32px;width:32px;height:32px;padding:0}
+.backup-section{display:grid;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
+.backup-section>strong{font-size:14px;color:var(--ink)}
 .backup-warning{padding:10px 12px;border-left:4px solid var(--amber);border-radius:6px;background:#fff8e5;color:#80610d;font-weight:700}
 .checkin-stamp{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900;color:var(--muted);background:#fff}
 .checkin-stamp.checked{border-color:var(--blue);color:var(--blue);background:var(--soft-blue)}
@@ -1010,6 +1012,15 @@ th{font-size:12px;letter-spacing:.02em}
 .badge{font-size:12px;padding:5px 9px}
 .eyebrow{display:block;margin-bottom:5px;color:var(--teal);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
 .search-field{position:relative;display:block}
+.caderno-erros-filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.caderno-erros-filters .search-field{flex:1;min-width:220px}
+.caderno-erro-item{grid-template-columns:minmax(0,1fr) auto;align-items:start}
+.caderno-erro-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.caderno-erro-tags{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0}
+.caderno-erro-stem{margin:6px 0;color:var(--muted);font-size:13px}
+.caderno-erro-note{margin:6px 0;padding:8px 10px;border-radius:8px;background:var(--soft-blue);font-size:13px}
+.caderno-answer-compare{display:flex;align-items:center;gap:6px;margin-top:6px}
+@media(max-width:620px){.caderno-erro-item{grid-template-columns:1fr}}
 .search-field>span{position:absolute;left:12px;top:50%;transform:translateY(-50%);z-index:1;color:var(--muted);font-size:19px}
 .search-field .input{padding-left:38px}
 .library-overview{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;padding:24px 28px;border:1px solid #cfe1df;border-radius:10px;background:linear-gradient(110deg,rgba(230,241,245,.95),rgba(231,246,240,.92) 62%,rgba(255,240,212,.72));box-shadow:var(--shadow)}
@@ -1839,6 +1850,8 @@ body.dark{
 .tab-prescricao{--tab-tone:var(--icon-success);--tab-soft:var(--icon-success-soft)}
 .tab-areas{--tab-tone:var(--icon-water);--tab-soft:var(--icon-water-soft)}
 .tab-historico,.tab-ferramentas{--tab-tone:var(--icon-neutral);--tab-soft:var(--icon-neutral-soft)}
+.tab-caderno-erros{--tab-tone:var(--icon-fire);--tab-soft:var(--icon-fire-soft)}
+.tab-ecg{--tab-tone:var(--icon-water);--tab-soft:var(--icon-water-soft)}
 .tab .tab-icon{color:var(--tab-tone);background:var(--tab-soft)}
 .tab.active .tab-icon{background:#fff;color:var(--tab-tone);box-shadow:0 2px 9px rgba(16,36,64,.16)}
 body.dark .tab.active .tab-icon{background:#172331}

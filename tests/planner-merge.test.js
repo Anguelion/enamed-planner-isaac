@@ -64,6 +64,23 @@ test('merge de materials: conteudo do lado mais recente, destaques (highlights) 
   assert.equal(merged.materials['doc-b'].content, 'documento so local', 'documento exclusivo de um lado nao pode sumir');
 });
 
+test('merge de dailyTasks preserva exclusao mais recente e compacta duplicatas', () => {
+  const ctx = loadPlannerSandbox();
+  const remote = {
+    dailyTasks: [
+      { id: 'old-copy', templateId: 'task-1', occurrenceKey: 'task-occurrence:task-1:2026-07-18', date: '2026-07-18', text: 'Revisar pneumo', status: 'pending', updatedAt: '2026-07-18T10:00:00.000Z' }
+    ]
+  };
+  const local = {
+    dailyTasks: [
+      { id: 'deleted-copy', templateId: 'task-1', occurrenceKey: 'task-occurrence:task-1:2026-07-18', date: '2026-07-18', text: 'Revisar pneumo', status: 'deleted', deletedAt: '2026-07-18T11:00:00.000Z', updatedAt: '2026-07-18T11:00:00.000Z' }
+    ]
+  };
+  const merged = ctx.mergePlannerActivityState(remote, local, false);
+  assert.equal(merged.dailyTasks.length, 1);
+  assert.equal(merged.dailyTasks[0].status, 'deleted');
+});
+
 test('isEditingTextField: detecta textarea e input de texto, ignora checkbox e nada focado', () => {
   const ctx = loadPlannerSandbox();
   ctx.document.activeElement = { tagName: 'TEXTAREA' };

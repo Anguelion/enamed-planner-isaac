@@ -10,6 +10,8 @@ const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
 const QUESTION_BANK_ASSET_VERSION = '20260716-33';
 const QUESTION_IMPORT_MAX = 200;
 const QUESTION_IMPORT_DRAFT_KEY = 'soqueromed-question-import-draft';
+const LOCAL_BACKUPS_KEY = 'soqueromed-local-backups-v1';
+const LOCAL_BACKUP_LIMIT = 12;
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -77,7 +79,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -110,18 +112,23 @@ let cloudBackups = [];
 let cloudBackupsLoading = false;
 let cloudBackupsReady = false;
 let cloudBackupsError = '';
+let localBackups = loadLocalBackups();
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
   ['painel','Dashboard','dashboard'],
-  ['cronograma','Missão','mission'], ['aulas','Aulas','video'], ['questoes','Questões','question'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'], ['simulados','Simulados','simulation'], ['importar-questoes','Adicionar questões','upload'],
-  ['pendencias','Pendências','pending'], ['analise','Análise','analysis'], ['areas','Áreas','areas'], ['historico','Histórico','history'],
-  ['feynman','Feynman','feynman'], ['prescricao','Prescrição','prescription'], ['ferramentas','Ferramentas','settings']
+  ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['materiais','Materiais','materials'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'], ['caderno-erros','Caderno de erros','question'],
+  ['aulas','Aulas','video'], ['questoes','Questões','question'], ['flashcards','Flashcards','flashcard'], ['simulados','Simulados','simulation'],
+  ['prescricao','Prescrição','prescription'],
+  ['ecg','ECG','medical'],
+  ['feynman','Feynman','feynman'], ['ferramentas','Ferramentas','settings'], ['importar-questoes','Adicionar questões','upload']
 ];
 const VIEW_GROUPS = {
-  cronograma:'Conteúdo', aulas:'Conteúdo', questoes:'Conteúdo', flashcards:'Conteúdo', materiais:'Conteúdo', simulados:'Conteúdo', 'importar-questoes':'Conteúdo',
-  pendencias:'Acompanhamento', analise:'Acompanhamento', areas:'Acompanhamento', historico:'Acompanhamento',
-  feynman:'Outros', prescricao:'Outros', ferramentas:'Outros'
+  cronograma:'Meus estudos', pendencias:'Meus estudos', materiais:'Meus estudos', historico:'Meus estudos', areas:'Meus estudos', analise:'Meus estudos', 'caderno-erros':'Meus estudos',
+  aulas:'Conteúdo', questoes:'Conteúdo', flashcards:'Conteúdo', simulados:'Conteúdo',
+  prescricao:'Habilidade',
+  ecg:'ECG',
+  'importar-questoes':'Conteúdo', feynman:'Outros', ferramentas:'Outros'
 };
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
@@ -858,7 +865,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
       tasksById.set(task.id, structuredClone(task));
     }
   });
-  merged.dailyTasks = [...tasksById.values()];
+  merged.dailyTasks = PlannerUX?.compactOccurrences ? PlannerUX.compactOccurrences([...tasksById.values()]) : [...tasksById.values()];
 
   const localSchedule = new Map((local.schedule || []).map(item => [item.id, item]));
   merged.schedule = (remote.schedule || local.schedule || []).map(item => {
@@ -962,6 +969,66 @@ function mergeRecordsById(remoteRecords, localRecords) {
   });
   return [...records.values()];
 }
+function loadLocalBackups() {
+  try {
+    const backups = JSON.parse(localStorage.getItem(LOCAL_BACKUPS_KEY) || '[]');
+    return Array.isArray(backups) ? backups.filter(item => item?.id && item?.data).slice(0, LOCAL_BACKUP_LIMIT) : [];
+  } catch(error) {
+    return [];
+  }
+}
+function saveLocalBackups() {
+  localStorage.setItem(LOCAL_BACKUPS_KEY, JSON.stringify(localBackups.slice(0, LOCAL_BACKUP_LIMIT)));
+}
+function createLocalBackup(label='', {silent=false, reason='manual'}={}) {
+  const payload = fullPlannerBackup();
+  const createdAt = payload.backupInfo.exportedAt;
+  localBackups = [
+    {
+      id:`local-backup-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
+      label:String(label || '').trim() || `Backup local de ${backupDateTime(createdAt)}`,
+      created_at:createdAt,
+      reason,
+      data:payload
+    },
+    ...localBackups
+  ].slice(0, LOCAL_BACKUP_LIMIT);
+  saveLocalBackups();
+  if(!silent) showStudyToast('Backup local salvo neste aparelho.');
+  if(ui.tab === 'ferramentas') renderFerramentas();
+  return localBackups[0];
+}
+function createSafetyLocalBackup(reason='segurança') {
+  try {
+    if(!state?.schedule?.length) return null;
+    return createLocalBackup(`Cópia automática · ${reason}`, {silent:true, reason});
+  } catch(error) {
+    console.warn('Falha ao criar backup local de segurança:', error);
+    return null;
+  }
+}
+function restoreLocalBackup(id) {
+  const item = localBackups.find(backup => backup.id === id);
+  if(!item?.data?.schedule?.length) { alert('Não consegui abrir esse backup local.'); return; }
+  if(!confirm('Restaurar este backup local neste aparelho? O estado atual será salvo antes de restaurar.')) return;
+  createSafetyLocalBackup('antes de restaurar backup local');
+  state = structuredClone(item.data);
+  normalizeOfficialScheduleNames();
+  ensureRestartFromBlockTen();
+  ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+  invalidateActivityRenderCache();
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  cloudDirty = true;
+  scheduleCloudSave();
+  showStudyToast(`Backup local restaurado: ${item.label}.`);
+  render();
+}
+function deleteLocalBackup(id) {
+  if(!confirm('Excluir este backup local deste aparelho?')) return;
+  localBackups = localBackups.filter(backup => backup.id !== id);
+  saveLocalBackups();
+  if(ui.tab === 'ferramentas') renderFerramentas();
+}
 function invalidateActivityRenderCache() {
   renderCache.questionStats.clear();
   renderCache.questionStatsReady = false;
@@ -987,26 +1054,28 @@ function scheduleCloudSave() {
   setSyncStatus('Alterações pendentes', 'busy');
   syncTimer = setTimeout(pushCloudState, 900);
 }
-async function pushCloudState() {
+async function pushCloudState({skipRemoteMerge=false}={}) {
   if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
   if(syncInFlight) {
     clearTimeout(syncTimer);
-    syncTimer = setTimeout(pushCloudState, 700);
+    syncTimer = setTimeout(() => pushCloudState({skipRemoteMerge}), 700);
     return;
   }
   syncInFlight = true;
   const pushRevision = cloudRevision;
   setSyncStatus('Sincronizando...', 'busy');
   try {
-    const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
-    const remoteAt = Date.parse(remoteRow?.updated_at || '') || 0;
-    if(remoteRow?.updated_at) updateServerClockOffset(remoteRow.updated_at);
-    if(!remoteError && remoteRow?.data && remoteAt > lastCloudSyncAt) {
-      state = mergePlannerActivityState(remoteRow.data, state, true);
-      ensureDayLogs();
-      ensureQuestionProgress();
-      invalidateActivityRenderCache();
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    if(!skipRemoteMerge) {
+      const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
+      const remoteAt = Date.parse(remoteRow?.updated_at || '') || 0;
+      if(remoteRow?.updated_at) updateServerClockOffset(remoteRow.updated_at);
+      if(!remoteError && remoteRow?.data && remoteAt > lastCloudSyncAt) {
+        state = mergePlannerActivityState(remoteRow.data, state, true);
+        ensureDayLogs();
+        ensureQuestionProgress();
+        invalidateActivityRenderCache();
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
     }
     const { data:savedRow, error } = await sbClient.from('planner_states').upsert({
       user_id: currentUser.id,
@@ -1057,6 +1126,7 @@ async function pullCloudState({ firstLogin=false }={}) {
   }
   setSyncStatus('Buscando dados...', 'busy');
   try {
+    if(firstLogin) createSafetyLocalBackup('antes de buscar nuvem');
     const { data, error } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
     if(error) {
       console.error('Falha ao buscar dados:', error);
@@ -1143,20 +1213,35 @@ async function forcePlannerSync() {
   await loadCloudBackups({force:true});
   if(ui.tab === 'ferramentas') renderFerramentas();
 }
-async function createCloudBackup(label='') {
-  if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para salvar uma cópia na nuvem.'); return; }
+async function forcePushThisDeviceToCloud() {
+  if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para enviar este aparelho para a nuvem.'); return; }
   if(!CLOUD_SYNC_ALLOWED) { showStudyToast('Ambiente de teste: sincronização com a nuvem está desativada.'); return; }
+  if(!confirm('Enviar os dados deste aparelho para a nuvem agora? Use isto quando este aparelho estiver com a versão correta.')) return;
+  createSafetyLocalBackup('antes de enviar aparelho para nuvem');
+  checkpointAutoStudyTime(true);
+  saveStateOnly();
+  cloudDirty = true;
+  cloudRevision += 1;
+  await pushCloudState({skipRemoteMerge:true});
+  await loadCloudBackups({force:true});
+  showStudyToast('Dados deste aparelho enviados para a nuvem.');
+  if(ui.tab === 'ferramentas') renderFerramentas();
+}
+async function createCloudBackup(label='') {
+  const localCopy = createLocalBackup(label, {silent:true, reason:'manual'});
+  if(!currentUser || !sbClient) { showStudyToast('Backup local salvo. Entre na sua conta para salvar também na nuvem.'); return; }
+  if(!CLOUD_SYNC_ALLOWED) { showStudyToast('Backup local salvo. Neste ambiente, a nuvem está desativada.'); return; }
   const payload = fullPlannerBackup();
   setSyncStatus('Criando backup...', 'busy');
   const { error } = await sbClient.from('planner_backups').insert({
     user_id: currentUser.id,
-    label: String(label || '').trim() || `Backup de ${backupDateTime(payload.backupInfo.exportedAt)}`,
+    label: String(label || '').trim() || localCopy.label || `Backup de ${backupDateTime(payload.backupInfo.exportedAt)}`,
     data: payload
   });
   if(error) {
     console.error('Falha ao criar backup:', error);
     cloudBackupsReady = false;
-    cloudBackupsError = error.code === '42P01' ? 'A tabela de backups ainda não foi criada no Supabase.' : 'Não foi possível criar o backup.';
+    cloudBackupsError = error.code === '42P01' ? 'Backup local salvo. A tabela de backups ainda não foi criada no Supabase.' : 'Backup local salvo. Não foi possível criar o backup na nuvem.';
     setSyncStatus('Erro no backup', 'error');
     if(ui.tab === 'ferramentas') renderFerramentas();
     return;
@@ -1191,6 +1276,9 @@ async function deleteCloudBackup(id) {
 }
 function renderCloudBackupCard() {
   const online = Boolean(currentUser && sbClient);
+  const localBody = localBackups.length
+    ? `<div class="cloud-backup-list">${localBackups.map(item => `<div class="cloud-backup-row"><div><strong>${escapeHtml(item.label || 'Backup local')}</strong><small>${backupDateTime(item.created_at)} · neste aparelho</small></div><div class="cloud-backup-actions"><button class="tiny-btn" data-restore-local-backup="${escapeAttr(item.id)}">Restaurar</button><button class="icon-btn danger" title="Excluir backup local" data-delete-local-backup="${escapeAttr(item.id)}">${iconSvg('delete',{weight:'regular'})}</button></div></div>`).join('')}</div>`
+    : '<div class="muted">Ainda não há backups locais neste aparelho.</div>';
   const body = !online
     ? '<div class="muted">Entre na conta para sincronizar e usar cópias de segurança entre PC, tablet e celular.</div>'
     : cloudBackupsLoading
@@ -1200,13 +1288,16 @@ function renderCloudBackupCard() {
         : cloudBackups.length
           ? `<div class="cloud-backup-list">${cloudBackups.map(item => `<div class="cloud-backup-row"><div><strong>${escapeHtml(item.label || 'Backup sem nome')}</strong><small>${backupDateTime(item.created_at)}</small></div><div class="cloud-backup-actions"><button class="tiny-btn" data-restore-cloud-backup="${escapeAttr(item.id)}">Restaurar</button><button class="icon-btn danger" title="Excluir backup" data-delete-cloud-backup="${escapeAttr(item.id)}">${iconSvg('delete',{weight:'regular'})}</button></div></div>`).join('')}</div>`
           : '<div class="muted">Ainda não há backups na nuvem.</div>';
-  return `<div class="card cloud-backup-card"><div class="section-title"><div><h2>Sincronização e backups</h2><div class="muted">O estudo salva automaticamente; crie cópias recuperáveis quando quiser.</div></div><span class="backup-status ${online?'online':'offline'}">${online?'Conta conectada':'Somente local'}</span></div><div class="cloud-backup-controls"><input class="input" id="cloudBackupLabel" maxlength="80" placeholder="Nome opcional do backup"><button class="icon-btn" id="syncNowBtn" type="button">${iconSvg('history')}<span>Sincronizar agora</span></button><button class="icon-btn primary" id="createCloudBackup" type="button">${iconSvg('upload')}<span>Salvar backup</span></button></div>${body}</div>`;
+  return `<div class="card cloud-backup-card"><div class="section-title"><div><h2>Sincronização e backups</h2><div class="muted">O estudo salva automaticamente; crie cópias recuperáveis quando quiser.</div></div><span class="backup-status ${online?'online':'offline'}">${online?'Conta conectada':'Somente local'}</span></div><div class="cloud-backup-controls"><input class="input" id="cloudBackupLabel" maxlength="80" placeholder="Nome opcional do backup"><button class="icon-btn" id="syncNowBtn" type="button">${iconSvg('history')}<span>Sincronizar agora</span></button><button class="icon-btn" id="forcePushCloudBtn" type="button">${iconSvg('upload')}<span>Enviar este aparelho</span></button><button class="icon-btn primary" id="createCloudBackup" type="button">${iconSvg('save')}<span>Salvar backup</span></button></div><div class="backup-section"><strong>Backups locais</strong>${localBody}</div><div class="backup-section"><strong>Backups na nuvem</strong>${body}</div></div>`;
 }
 function bindCloudBackupCard() {
   document.getElementById('syncNowBtn')?.addEventListener('click', forcePlannerSync);
+  document.getElementById('forcePushCloudBtn')?.addEventListener('click', forcePushThisDeviceToCloud);
   document.getElementById('createCloudBackup')?.addEventListener('click', () => createCloudBackup(document.getElementById('cloudBackupLabel')?.value));
   document.querySelectorAll('[data-restore-cloud-backup]').forEach(button => button.addEventListener('click', event => restoreCloudBackup(event.currentTarget.dataset.restoreCloudBackup)));
   document.querySelectorAll('[data-delete-cloud-backup]').forEach(button => button.addEventListener('click', event => deleteCloudBackup(event.currentTarget.dataset.deleteCloudBackup)));
+  document.querySelectorAll('[data-restore-local-backup]').forEach(button => button.addEventListener('click', event => restoreLocalBackup(event.currentTarget.dataset.restoreLocalBackup)));
+  document.querySelectorAll('[data-delete-local-backup]').forEach(button => button.addEventListener('click', event => deleteLocalBackup(event.currentTarget.dataset.deleteLocalBackup)));
   if(currentUser && !cloudBackupsReady && !cloudBackupsLoading && !cloudBackupsError) loadCloudBackups().then(() => { if(ui.tab === 'ferramentas') renderFerramentas(); });
 }
 window.addEventListener('focus', () => {
@@ -1484,6 +1575,7 @@ function ensureDailyTasks() {
     postponedFrom:task.postponedFrom || '',
     postponedTo:task.postponedTo || ''
   })).filter(task => task.text);
+  state.dailyTasks = PlannerUX?.compactOccurrences ? PlannerUX.compactOccurrences(state.dailyTasks) : state.dailyTasks;
   const templateIds=new Set(state.taskTemplates.map(template=>template.id));
   state.dailyTasks.forEach(task=>{
     if(templateIds.has(task.templateId)) return;
@@ -2755,6 +2847,53 @@ function renderFerramentas() {
     ensureRestartFromBlockTen();
     persist();
   });
+}
+function cadernoErrosEntries() {
+  return Object.entries(state.questionProgress || {})
+    .filter(([id, progress]) => String(progress?.notes || '').trim())
+    .map(([id, progress]) => ({ id, progress, question: questionBank.find(q => q.id === id) || importedQuestionById(id) }))
+    .filter(entry => entry.question)
+    .sort((a, b) => Date.parse(b.progress.updatedAt || '') - Date.parse(a.progress.updatedAt || ''));
+}
+function renderCadernoErroCard(entry) {
+  const { question, progress, id } = entry;
+  const tag = questionTag(question);
+  const source = question.sourceLabel || questionCollectionLabel(question.collectionBlock);
+  const stem = String(question.stem || '').replace(/\s+/g, ' ').trim();
+  const snippet = stem.length > 160 ? `${stem.slice(0, 160)}…` : stem;
+  const answerCompare = progress.answeredAt ? `<div class="caderno-answer-compare"><span class="badge ${progress.correct ? 'done' : 'no'}">${escapeHtml(String(progress.selected || '—'))}</span><span>→</span><span class="badge done">${escapeHtml(String(question.answer || '—'))}</span></div>` : '';
+  const savedAt = progress.updatedAt ? new Date(progress.updatedAt).toLocaleDateString('pt-BR') : '';
+  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p><p class="caderno-erro-note">${escapeHtml(progress.notes)}</p>${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
+}
+function renderCadernoErros() {
+  const allEntries = cadernoErrosEntries();
+  const areas = ['Todas', ...new Set(allEntries.map(entry => questionTag(entry.question).area).filter(Boolean))].sort();
+  const search = normalizedTopic(ui.cadernoSearch || '');
+  const entries = allEntries.filter(entry => {
+    const tag = questionTag(entry.question);
+    if(ui.cadernoArea !== 'Todas' && tag.area !== ui.cadernoArea) return false;
+    if(!search) return true;
+    const haystack = normalizedTopic(`${entry.question.stem || ''} ${entry.progress.notes || ''}`);
+    return haystack.includes(search);
+  });
+  document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span></div></div><section class="card"><div class="section-title"><div><h2>Anotações</h2></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado ou comentário"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada. Escreva um comentário em qualquer questão para ela aparecer aqui.</div>'}</div></section>`;
+  bindCadernoErros();
+}
+function bindCadernoErros() {
+  const search = document.getElementById('cadernoSearch');
+  if(search) search.oninput = e => { ui.cadernoSearch = e.target.value; renderCadernoErros(); };
+  const areaSelect = document.getElementById('cadernoArea');
+  if(areaSelect) areaSelect.onchange = e => { ui.cadernoArea = e.target.value; renderCadernoErros(); };
+  document.querySelectorAll('[data-caderno-access]').forEach(button => button.onclick = e => {
+    ui.qQuestionId = e.currentTarget.dataset.cadernoAccess;
+    ui.qRouteRestorePending = true;
+    ui.qStatus = 'Todas';
+    ui.tab = 'questoes';
+    render();
+  });
+}
+function renderEcg() {
+  document.getElementById('ecg').innerHTML = `<section class="card"><div class="section-title"><div><span class="eyebrow">Em construção</span><h2>Estudo de ECG</h2></div></div><p class="muted">Essa aba vai reunir um jogo de reconhecimento de padrões, treino de leitura e questionários de interpretação de ECG. O conteúdo (traçados/imagens) ainda não foi adicionado — a mecânica é definida numa conversa dedicada, depois que o material estiver disponível.</p></section>`;
 }
 function renderRankPromotionModal() {
   const rank=ui.rankPromotion;
@@ -8258,7 +8397,9 @@ function render() {
     historico: renderHistorico,
     feynman: renderFeynman,
     prescricao: renderPrescription,
-    ferramentas: renderFerramentas
+    ferramentas: renderFerramentas,
+    'caderno-erros': renderCadernoErros,
+    ecg: renderEcg
   };
   renderers[ui.tab]?.();
   persistQuestionView();
@@ -8275,7 +8416,7 @@ document.getElementById('exportBtn').onclick = () => {
   a.click();
   URL.revokeObjectURL(a.href);
 };
-document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
+document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); createSafetyLocalBackup('antes de importar JSON'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
 document.getElementById('printBtn').onclick = () => {
   const previousTab=ui.tab;
   ui.tab='painel';
@@ -8333,11 +8474,9 @@ document.getElementById('accountBtn').onclick = async () => {
       clearTimeout(syncTimer);
       await pushCloudState();
     }
+    createSafetyLocalBackup('antes de sair da conta');
     await sbClient.auth.signOut();
     currentUser = null;
-    questionBank = [];
-    localStorage.removeItem(STORAGE_KEY);
-    state = structuredClone(seed);
     render();
     updateAccountUI();
     return;

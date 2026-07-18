@@ -6,7 +6,7 @@
   'use strict';
 
   const TIME_ZONE='America/Fortaleza';
-  const ROUTE_TABS=new Set(['painel','cronograma','pendencias','aulas','questoes','analise','flashcards','materiais','simulados','prescricao','areas','historico','feynman','importar-questoes','ferramentas']);
+  const ROUTE_TABS=new Set(['painel','cronograma','pendencias','aulas','questoes','analise','flashcards','materiais','simulados','prescricao','areas','historico','feynman','importar-questoes','ferramentas','caderno-erros','ecg']);
   const ROUTE_ALIASES={dashboard:'painel',missao:'cronograma',videos:'aulas'};
 
   function safeDecode(value=''){
@@ -48,6 +48,19 @@
     return new Date(Date.UTC(year,month-1,day,12)).getUTCDay();
   }
   function occurrenceKey(templateId,date){return `task-occurrence:${templateId}:${date}`;}
+  function taskUpdatedTime(task={}){
+    return Date.parse(task.updatedAt||task.deletedAt||task.completedAt||task.createdAt||'')||0;
+  }
+  function compactOccurrences(occurrences=[]){
+    const byKey=new Map();
+    (Array.isArray(occurrences)?occurrences:[]).forEach(item=>{
+      if(!item) return;
+      const key=item.occurrenceKey||`${item.templateId||item.id||''}:${item.date||''}:${String(item.text||'').trim().toLowerCase()}`;
+      const previous=byKey.get(key);
+      if(!previous||taskUpdatedTime(item)>=taskUpdatedTime(previous)) byKey.set(key,{...item});
+    });
+    return [...byKey.values()];
+  }
   function scheduledForDate(template,date){
     if(!template||template.active===false||!date) return false;
     const start=template.startDate||template.createdDate||date;
@@ -57,7 +70,7 @@
     return date===(template.date||start);
   }
   function ensureOccurrences(templates=[],occurrences=[],date,now=new Date().toISOString()){
-    const result=occurrences.map(item=>({...item}));
+    const result=compactOccurrences(occurrences);
     const keys=new Set(result.map(item=>item.occurrenceKey).filter(Boolean));
     templates.filter(template=>scheduledForDate(template,date)).forEach(template=>{
       const key=occurrenceKey(template.id,date);
@@ -83,8 +96,14 @@
     return result;
   }
   function deleteOccurrence(occurrences=[],taskId,now=new Date().toISOString()){
-    return (Array.isArray(occurrences)?occurrences:[]).map(item=>{
-      if(String(item?.id||'')!==String(taskId||'')) return {...item};
+    const source=(Array.isArray(occurrences)?occurrences:[]).find(item=>String(item?.id||'')===String(taskId||''));
+    if(!source) return compactOccurrences(occurrences);
+    const sourceText=String(source.text||'').trim().toLowerCase();
+    const matches=item=>String(item?.id||'')===String(taskId||'')||
+      (source.occurrenceKey&&item?.occurrenceKey===source.occurrenceKey)||
+      (source.templateId&&item?.templateId===source.templateId&&item?.date===source.date&&String(item?.text||'').trim().toLowerCase()===sourceText);
+    return compactOccurrences((Array.isArray(occurrences)?occurrences:[]).map(item=>{
+      if(!matches(item)) return {...item};
       return {
         ...item,
         done:false,
@@ -92,7 +111,7 @@
         deletedAt:now,
         updatedAt:now
       };
-    });
+    }));
   }
   function postponeOccurrence(occurrences=[],taskId,nextDate,now=new Date().toISOString()){
     const result=occurrences.map(item=>({...item}));
@@ -211,5 +230,5 @@
     });
   }
 
-  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,scheduledForDate,ensureOccurrences,deleteOccurrence,postponeOccurrence,normalizeVideoProgress,resumeTime,removeSimulationRecord,validateQuestionRecord,questionProgressTimestamp,mergeQuestionProgressRecord,ensureUniqueRecordIds};
+  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,compactOccurrences,scheduledForDate,ensureOccurrences,deleteOccurrence,postponeOccurrence,normalizeVideoProgress,resumeTime,removeSimulationRecord,validateQuestionRecord,questionProgressTimestamp,mergeQuestionProgressRecord,ensureUniqueRecordIds};
 });

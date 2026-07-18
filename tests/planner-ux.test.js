@@ -49,6 +49,14 @@ test('excluir ocorrência recorrente impede recriação no mesmo dia',()=>{
   assert.equal(occurrences[0].deletedAt,'2026-07-16T11:00:00Z');
 });
 
+test('excluir uma tarefa duplicada apaga a ocorrência inteira',()=>{
+  const first={id:'a',templateId:'rotina',occurrenceKey:UX.occurrenceKey('rotina','2026-07-16'),date:'2026-07-16',text:'Revisar flashcards',status:'pending',updatedAt:'2026-07-16T10:00:00Z'};
+  const second={...first,id:'b',updatedAt:'2026-07-16T10:05:00Z'};
+  const occurrences=UX.deleteOccurrence([first,second],'a','2026-07-16T11:00:00Z');
+  assert.equal(occurrences.length,1);
+  assert.equal(occurrences[0].status,'deleted');
+});
+
 test('adiar preserva a origem e não duplica o destino',()=>{
   const original={id:'occ-t-2026-07-16',templateId:'t',occurrenceKey:UX.occurrenceKey('t','2026-07-16'),date:'2026-07-16',text:'Revisar',done:false,status:'pending'};
   let occurrences=UX.postponeOccurrence([original],original.id,'2026-07-17','2026-07-16T22:00:00Z');
