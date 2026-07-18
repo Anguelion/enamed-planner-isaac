@@ -1479,6 +1479,7 @@ function ensureDailyTasks() {
     order: n(task.order) || index + 1,
     createdAt: task.createdAt || new Date().toISOString(),
     completedAt: task.completedAt || '',
+    deletedAt: task.deletedAt || '',
     updatedAt: task.updatedAt || task.createdAt || new Date().toISOString(),
     postponedFrom:task.postponedFrom || '',
     postponedTo:task.postponedTo || ''
@@ -1494,7 +1495,7 @@ function ensureDailyTasks() {
 function dailyTasksFor(date) {
   ensureDailyTasks();
   state.dailyTasks=PlannerUX?.ensureOccurrences(state.taskTemplates,state.dailyTasks,date,new Date().toISOString())||state.dailyTasks;
-  return state.dailyTasks.filter(task => task.date === date).sort((a,b) => {
+  return state.dailyTasks.filter(task => task.date === date && task.status !== 'deleted').sort((a,b) => {
     if(a.done !== b.done) return a.done ? 1 : -1;
     return n(b.priority) - n(a.priority) || n(a.order) - n(b.order) || (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0);
   });
@@ -1585,8 +1586,11 @@ function bindPersonalDailyTasks(date) {
   document.querySelectorAll('[data-remove-personal-task]').forEach(button => button.addEventListener('click', event => {
     const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.removePersonalTask);
     if(!task || !confirm('Excluir esta tarefa pessoal?')) return;
-    state.dailyTasks = state.dailyTasks.filter(item => item.id !== task.id);
-    persist();
+    const now=new Date().toISOString();
+    state.dailyTasks = PlannerUX?.deleteOccurrence ? PlannerUX.deleteOccurrence(state.dailyTasks,task.id,now) : state.dailyTasks.map(item=>item.id===task.id?{...item,status:'deleted',deletedAt:now,updatedAt:now}:item);
+    const template=state.taskTemplates.find(item=>item.id===task.templateId);
+    if(template?.recurrence==='none') { template.active=false; template.updatedAt=now; }
+    persist(); render();
   }));
   document.querySelectorAll('[data-task-priority]').forEach(button => button.addEventListener('click', event => {
     const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.taskPriority);

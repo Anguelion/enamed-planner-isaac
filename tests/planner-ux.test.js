@@ -39,6 +39,16 @@ test('recorrência por dias da semana só cria datas selecionadas',()=>{
   assert.equal(UX.ensureOccurrences([template],[],'2026-07-15').length,1);
 });
 
+test('excluir ocorrência recorrente impede recriação no mesmo dia',()=>{
+  const template={id:'rotina',text:'Revisar flashcards',recurrence:'daily',startDate:'2026-07-16',active:true};
+  let occurrences=UX.ensureOccurrences([template],[],'2026-07-16','2026-07-16T10:00:00Z');
+  occurrences=UX.deleteOccurrence(occurrences,occurrences[0].id,'2026-07-16T11:00:00Z');
+  occurrences=UX.ensureOccurrences([template],occurrences,'2026-07-16','2026-07-16T12:00:00Z');
+  assert.equal(occurrences.length,1);
+  assert.equal(occurrences[0].status,'deleted');
+  assert.equal(occurrences[0].deletedAt,'2026-07-16T11:00:00Z');
+});
+
 test('adiar preserva a origem e não duplica o destino',()=>{
   const original={id:'occ-t-2026-07-16',templateId:'t',occurrenceKey:UX.occurrenceKey('t','2026-07-16'),date:'2026-07-16',text:'Revisar',done:false,status:'pending'};
   let occurrences=UX.postponeOccurrence([original],original.id,'2026-07-17','2026-07-16T22:00:00Z');

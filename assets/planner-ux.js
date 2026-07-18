@@ -82,6 +82,18 @@
     });
     return result;
   }
+  function deleteOccurrence(occurrences=[],taskId,now=new Date().toISOString()){
+    return (Array.isArray(occurrences)?occurrences:[]).map(item=>{
+      if(String(item?.id||'')!==String(taskId||'')) return {...item};
+      return {
+        ...item,
+        done:false,
+        status:'deleted',
+        deletedAt:now,
+        updatedAt:now
+      };
+    });
+  }
   function postponeOccurrence(occurrences=[],taskId,nextDate,now=new Date().toISOString()){
     const result=occurrences.map(item=>({...item}));
     const source=result.find(item=>item.id===taskId);
@@ -199,5 +211,5 @@
     });
   }
 
-  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,scheduledForDate,ensureOccurrences,postponeOccurrence,normalizeVideoProgress,resumeTime,removeSimulationRecord,validateQuestionRecord,questionProgressTimestamp,mergeQuestionProgressRecord,ensureUniqueRecordIds};
+  return {TIME_ZONE,parseRoute,buildRoute,localDateKey,addDays,weekdayFor,occurrenceKey,scheduledForDate,ensureOccurrences,deleteOccurrence,postponeOccurrence,normalizeVideoProgress,resumeTime,removeSimulationRecord,validateQuestionRecord,questionProgressTimestamp,mergeQuestionProgressRecord,ensureUniqueRecordIds};
 });
