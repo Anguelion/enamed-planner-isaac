@@ -805,13 +805,31 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
 
   merged.flashcardSystem = { ...(remote.flashcardSystem || {}), ...(local.flashcardSystem || {}) };
   merged.flashcardSystem.reviewLogs = mergeRecordsById(remote.flashcardSystem?.reviewLogs, local.flashcardSystem?.reviewLogs);
-  const importedByHash = new Map();
+  // Mesma noção de "questão igual" usada ao montar o banco (bloco + enunciado),
+  // não o contentHash: assim uma correção de gabarito/alternativa continua
+  // sendo tratada como a mesma questão em vez de virar uma cópia divergente.
+  const importedByKey = new Map();
   [...(remote.importedQuestions || []), ...(local.importedQuestions || [])].forEach(question => {
-    const key = question.contentHash || question.id;
-    if(key && !importedByHash.has(key)) importedByHash.set(key, question);
+    if(!question?.id) return;
+    const key = questionDuplicateKey(question);
+    const previous = importedByKey.get(key);
+    if(!previous) { importedByKey.set(key, question); return; }
+    const previousTime = Date.parse(previous.updatedAt || previous.incorporatedAt || previous.createdAt || '') || 0;
+    const currentTime = Date.parse(question.updatedAt || question.incorporatedAt || question.createdAt || '') || 0;
+    importedByKey.set(key, currentTime >= previousTime ? question : previous);
   });
-  merged.importedQuestions = [...importedByHash.values()];
+  merged.importedQuestions = [...importedByKey.values()];
   merged.deletedQuestions = { ...(remote.deletedQuestions || {}), ...(local.deletedQuestions || {}) };
+  // Ao contrário do spread raso do topo (que faz um lado vencer por inteiro),
+  // essas três dependem do id da questão: uniões por chave evitam que editar
+  // uma questão num aparelho apague edições/flashcards/tags feitos no outro.
+  merged.questionEdits = preferLocal ? { ...(remote.questionEdits || {}), ...(local.questionEdits || {}) } : { ...(local.questionEdits || {}), ...(remote.questionEdits || {}) };
+  merged.importedQuestionTags = preferLocal ? { ...(remote.importedQuestionTags || {}), ...(local.importedQuestionTags || {}) } : { ...(local.importedQuestionTags || {}), ...(remote.importedQuestionTags || {}) };
+  merged.questionFlashcards = {};
+  new Set([...Object.keys(remote.questionFlashcards || {}), ...Object.keys(local.questionFlashcards || {})]).forEach(id => {
+    const cards = mergeRecordsById(remote.questionFlashcards?.[id], local.questionFlashcards?.[id]);
+    if(cards.length) merged.questionFlashcards[id] = cards;
+  });
   const incorporationById = new Map();
   [...(remote.incorporationHistory || []), ...(local.incorporationHistory || [])].forEach(entry => {
     if(!entry?.id) return;
@@ -1290,17 +1308,41 @@ function deduplicateQuestions(records) {
     const current = unique.get(key);
     const keep = richness(question) > richness(current) ? question : current;
     const discard = keep === question ? current : question;
-    const keptProgress = state.questionProgress?.[keep.id];
-    const discardedProgress = state.questionProgress?.[discard.id];
-    if(discardedProgress && (!keptProgress || String(discardedProgress.answeredAt || '') > String(keptProgress.answeredAt || ''))) {
-      state.questionProgress[keep.id] = discardedProgress;
-    }
+    migrateOrphanedQuestionData(discard.id, keep.id);
     if(keep !== current) unique.set(key, keep);
   });
   return [...unique.values()].filter(question => !state.deletedQuestions?.[question.id]);
 }
+// Quando o dedup descarta uma cópia, os dados presos ao id dela (progresso,
+// edições de texto, flashcards, tags e log diário) ficariam órfãos e
+// invisíveis, já que apenas o id mantido continua aparecendo no banco.
+function migrateOrphanedQuestionData(discardId, keepId) {
+  if(!discardId || !keepId || discardId === keepId) return;
+  const keptProgress = state.questionProgress?.[keepId];
+  const discardedProgress = state.questionProgress?.[discardId];
+  if(discardedProgress && (!keptProgress || String(discardedProgress.answeredAt || '') > String(keptProgress.answeredAt || ''))) {
+    state.questionProgress[keepId] = discardedProgress;
+  }
+  if(state.questionEdits?.[discardId] && !state.questionEdits[keepId]) {
+    state.questionEdits[keepId] = state.questionEdits[discardId];
+  }
+  if(Array.isArray(state.questionFlashcards?.[discardId]) && state.questionFlashcards[discardId].length) {
+    state.questionFlashcards[keepId] = mergeRecordsById(state.questionFlashcards[keepId], state.questionFlashcards[discardId]);
+  }
+  if(state.questionLogged?.[discardId] && (!state.questionLogged[keepId] || state.questionLogged[discardId] > state.questionLogged[keepId])) {
+    state.questionLogged[keepId] = state.questionLogged[discardId];
+  }
+  if(state.importedQuestionTags?.[discardId] && !state.importedQuestionTags[keepId]) {
+    state.importedQuestionTags[keepId] = state.importedQuestionTags[discardId];
+  }
+}
+function normalizeBlockKey(value) {
+  const raw = String(value ?? '').trim();
+  if(!raw) return 'sem-bloco';
+  return /^\d+$/.test(raw) ? String(Number(raw)) : raw.toLowerCase();
+}
 function questionDuplicateKey(question={}) {
-  return `${String(question.collectionBlock ?? 'sem-bloco').trim()}|${normalizedTopic(question.stem)}`;
+  return `${normalizeBlockKey(question.collectionBlock)}|${normalizedTopic(question.stem)}`;
 }
 function loadImportedSimulados() {
   if(!importedSimuladosLoadPromise) importedSimuladosLoadPromise = loadImportedSimuladosNow();
@@ -6605,9 +6647,10 @@ function updateIncorporationPriority(questionId, priority) {
   const history = state.incorporationHistory.find(entry => entry.questionId === questionId);
   const value = n(priority);
   question.importPriority = value;
+  question.updatedAt = new Date().toISOString();
   const bankQuestion = questionBank.find(item => item.id === questionId);
   if(bankQuestion) bankQuestion.importPriority = value;
-  if(history) { history.priority = value; history.updatedAt = new Date().toISOString(); }
+  if(history) { history.priority = value; history.updatedAt = question.updatedAt; }
   reorderQuestionBank();
   invalidateQuestionBankRenderCache();
   persist();
@@ -6621,9 +6664,10 @@ function saveIncorporationEdit(questionId) {
   const history = state.incorporationHistory.find(entry => entry.questionId === questionId);
   if(name) question.collectionLabel = name;
   question.displayOrder = order;
+  question.updatedAt = new Date().toISOString();
   const bankQuestion = questionBank.find(item => item.id === questionId);
   if(bankQuestion) { bankQuestion.collectionLabel = question.collectionLabel; bankQuestion.displayOrder = order; }
-  if(history) { history.displayOrder = order; history.updatedAt = new Date().toISOString(); }
+  if(history) { history.displayOrder = order; history.updatedAt = question.updatedAt; }
   reorderQuestionBank();
   ui.incorporationEditId = '';
   invalidateQuestionBankRenderCache();
@@ -6696,6 +6740,21 @@ function enhanceQuestionImporterUi() {
       setValue('area', lesson.area || '');
       setValue('topic', lesson.topic || '');
       updateImportDraftFromForm();
+    });
+  }
+  if(defaults && !defaults.querySelector('[data-import-block-picker]')) {
+    const blocks = (window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || []).slice().sort((a,b) => questionCollectionSort(a.block) - questionCollectionSort(b.block));
+    const blockOptions = blocks.map(block => `<option value="${escapeAttr(String(block.block))}">${escapeHtml(questionCollectionLabel(block.block))} · ${block.count} questões</option>`).join('');
+    defaults.insertAdjacentHTML('afterbegin', `<label class="import-block-link">Incluir direto num bloco existente<select class="select" data-import-block-picker><option value="">Selecionar…</option>${blockOptions}</select></label>`);
+    const blockPicker = defaults.querySelector('[data-import-block-picker]');
+    blockPicker.addEventListener('change', event => {
+      const picked = event.currentTarget.value;
+      if(!picked) return;
+      const blockField = defaults.querySelector('[data-import-default="collection_block"]');
+      if(blockField) blockField.value = picked;
+      event.currentTarget.value = '';
+      updateImportDraftFromForm();
+      showStudyToast(`Lote será incluído em ${questionCollectionLabel(picked)}.`);
     });
   }
   const commit = document.getElementById('commitImportedQuestions');
@@ -6779,6 +6838,7 @@ function bindQuestionImporter() {
       ...q,
       displayOrder:state.importedQuestions.length+index+1,
       incorporatedAt:now,
+      updatedAt:now,
       importStatus:q.importStatus==='published'?'published':q.importStatus||'ready',
       _errors:undefined,
       _warnings:undefined
