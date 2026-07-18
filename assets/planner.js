@@ -118,10 +118,10 @@ let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1
 const views = [
   ['painel','Dashboard','dashboard'],
   ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['materiais','Materiais','materials'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'], ['caderno-erros','Caderno de erros','question'],
-  ['aulas','Aulas','video'], ['questoes','Questões','question'], ['flashcards','Flashcards','flashcard'], ['simulados','Simulados','simulation'],
+  ['aulas','Aulas','video'], ['questoes','Questões','question'], ['flashcards','Flashcards','flashcard'], ['simulados','Simulados','simulation'], ['importar-questoes','Adicionar questões','upload'],
   ['prescricao','Prescrição','prescription'],
   ['ecg','ECG','medical'],
-  ['feynman','Feynman','feynman'], ['ferramentas','Ferramentas','settings'], ['importar-questoes','Adicionar questões','upload']
+  ['feynman','Feynman','feynman'], ['ferramentas','Ferramentas','settings']
 ];
 const VIEW_GROUPS = {
   cronograma:'Meus estudos', pendencias:'Meus estudos', materiais:'Meus estudos', historico:'Meus estudos', areas:'Meus estudos', analise:'Meus estudos', 'caderno-erros':'Meus estudos',
@@ -4139,19 +4139,16 @@ function renderMateriais() {
   const groups = blockIsOpen ? allGroups.filter(group => String(group.block) === String(ui.materialBlock)) : [];
   const selected = materialLibrary.find(doc => doc.id === ui.materialDocId && blockIsOpen && String(doc.block) === String(ui.materialBlock)) || null;
   const figures = materialLibrary.reduce((sum,doc)=>sum+n(doc.imageCount),0);
-  const blockSummary = blocks.map(block => {
+  const blockOptions = blocks.map(block => {
     const docs=materialLibrary.filter(doc=>String(doc.block)===block);
     const lessons=new Set(docs.map(doc=>doc.scheduleId).filter(Boolean)).size;
-    const active=String(ui.materialBlock)===block;
-    return `<button class="qbank-block-box material-block-card ${active?'active expanded':''}" data-material-block-pick="${escapeAttr(block)}" aria-expanded="${active}"><strong>Bloco ${String(block).padStart(2,'0')}</strong><small>${lessons} aulas · ${docs.length} materiais</small></button>`;
+    return `<option value="${escapeAttr(block)}" ${String(ui.materialBlock)===block?'selected':''}>Bloco ${String(block).padStart(2,'0')} · ${lessons} aulas · ${docs.length} materiais</option>`;
   }).join('');
   const sidebar = blockIsOpen ? `<aside class="card library-sidebar"><div class="section-title"><div><span class="eyebrow">Assuntos do bloco</span><h2>Bloco ${String(ui.materialBlock).padStart(2,'0')}</h2></div><span class="badge today">${groups.length}</span></div><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="materialSearch" value="${escapeAttr(ui.materialSearch)}" placeholder="Buscar assunto neste bloco"></label><div class="library-folders">${groups.map(group => renderMaterialFolder(group, selected?.id)).join('') || '<div class="empty">Nenhum material disponível neste bloco.</div>'}</div></aside>` : '';
   const reader = blockIsOpen ? renderMaterialReader(selected) : '<div class="reader-empty"><div><strong>Escolha um bloco para começar</strong><div>A pesquisa e os assuntos aparecem apenas depois que você abre um bloco, para evitar uma lista longa demais.</div></div></div>';
-  document.getElementById('materiais').innerHTML = `<div class="materials-shell ${ui.materialFocusMode?'material-focus-mode':''}"><div class="library-overview"><div><span class="eyebrow">Biblioteca médica</span><h2>Materiais por bloco</h2><p>Abra um bloco, pesquise o assunto e entre em foco quando começar a leitura.</p></div><div class="library-stats"><span><strong>${materialLibrary.length}</strong> resumos</span><span><strong>${new Set(materialLibrary.filter(doc=>doc.scheduleId).map(doc=>doc.scheduleId)).size}</strong> aulas</span><span><strong>${figures}</strong> figuras</span></div></div><section class="card material-block-browser"><div class="section-title"><div><span class="eyebrow">Blocos</span><h2>${blockIsOpen?`Bloco ${String(ui.materialBlock).padStart(2,'0')} aberto`:'Escolha onde revisar'}</h2></div>${blockIsOpen?'<button class="tiny-btn" id="closeMaterialBlock">Fechar bloco</button>':'<span class="badge today">Fechado</span>'}</div><div class="qbank-block-grid material-block-grid">${blockSummary}</div></section><div class="library-layout ${blockIsOpen?'':'materials-block-only'}">${sidebar}<section class="card material-reader">${reader}</section></div></div>`;
-  document.querySelectorAll('[data-material-block-pick]').forEach(button => button.onclick = e => {
-    const picked=e.currentTarget.dataset.materialBlockPick;
-    const closing=String(ui.materialBlock)===String(picked);
-    ui.materialBlock=closing?'Todos':picked;
+  document.getElementById('materiais').innerHTML = `<div class="materials-shell ${ui.materialFocusMode?'material-focus-mode':''}"><div class="materials-topbar"><div class="materials-breadcrumb">Início <span>›</span> Materiais</div><div class="materials-title-row"><span class="materials-icon">${iconSvg('materials')}</span><div><h2>Apostila</h2><p class="muted">Reforce pontos importantes do estudo por meio do conteúdo teórico</p></div></div><div class="materials-filters"><label class="materials-filter"><span>Bloco</span><select class="select" id="materialBlockSelect"><option value="Todos">Todos os blocos</option>${blockOptions}</select></label><span class="muted materials-count">${materialLibrary.length} resumos · ${figures} figuras</span></div></div><div class="library-layout ${blockIsOpen?'':'materials-block-only'}">${sidebar}<section class="card material-reader">${reader}</section></div></div>`;
+  document.getElementById('materialBlockSelect')?.addEventListener('change', e => {
+    ui.materialBlock=e.target.value;
     ui.materialScheduleId='';
     ui.materialDocId='';
     ui.materialSearch='';
@@ -4159,7 +4156,6 @@ function renderMateriais() {
     stopAutoStudy('material');
     renderMateriais();
   });
-  document.getElementById('closeMaterialBlock')?.addEventListener('click',() => { ui.materialBlock='Todos'; ui.materialScheduleId=''; ui.materialDocId=''; ui.materialSearch=''; ui.materialFocusMode=false; stopAutoStudy('material'); renderMateriais(); });
   const search = document.getElementById('materialSearch');
   if(search) search.oninput = e => { ui.materialSearch=e.target.value; applyMaterialSearch(e.target.value); };
   document.querySelectorAll('[data-material-doc]').forEach(button => button.onclick = e => { ui.materialDocId=e.currentTarget.dataset.materialDoc; ui.materialScheduleId=materialLibrary.find(doc=>doc.id===ui.materialDocId)?.scheduleId || ''; ui.materialFocusMode=false; stopAutoStudy('material'); renderMateriais(); });
