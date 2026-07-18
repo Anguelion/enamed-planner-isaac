@@ -113,8 +113,16 @@ let cloudBackupsError = '';
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
-  ['painel','Dashboard','dashboard'], ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['aulas','Aulas','video'], ['questoes','Questões','question'], ['analise','Análise','analysis'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'], ['simulados','Simulados','simulation'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','areas'], ['historico','Histórico','history'], ['feynman','Feynman','feynman'], ['importar-questoes','Adicionar questões','upload'], ['ferramentas','Ferramentas','settings']
+  ['painel','Dashboard','dashboard'],
+  ['cronograma','Missão','mission'], ['aulas','Aulas','video'], ['questoes','Questões','question'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'], ['simulados','Simulados','simulation'], ['importar-questoes','Adicionar questões','upload'],
+  ['pendencias','Pendências','pending'], ['analise','Análise','analysis'], ['areas','Áreas','areas'], ['historico','Histórico','history'],
+  ['feynman','Feynman','feynman'], ['prescricao','Prescrição','prescription'], ['ferramentas','Ferramentas','settings']
 ];
+const VIEW_GROUPS = {
+  cronograma:'Conteúdo', aulas:'Conteúdo', questoes:'Conteúdo', flashcards:'Conteúdo', materiais:'Conteúdo', simulados:'Conteúdo', 'importar-questoes':'Conteúdo',
+  pendencias:'Acompanhamento', analise:'Acompanhamento', areas:'Acompanhamento', historico:'Acompanhamento',
+  feynman:'Outros', prescricao:'Outros', ferramentas:'Outros'
+};
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
   try {
@@ -1203,6 +1211,11 @@ function bindCloudBackupCard() {
 }
 window.addEventListener('focus', () => {
   if(currentUser && !syncInFlight) pullCloudState();
+});
+document.addEventListener('click', event => {
+  const bar = event.target.closest('.dashboard-bars.weekly-bars>div>span');
+  document.querySelectorAll('.dashboard-bars.weekly-bars>div>span.show-value').forEach(el => { if(el !== bar) el.classList.remove('show-value'); });
+  if(bar) bar.classList.toggle('show-value');
 });
 document.addEventListener('visibilitychange', () => {
   if(!document.hidden && currentUser && !syncInFlight) pullCloudState();
@@ -2445,7 +2458,13 @@ function restoreNavigation(event) {
   requestAnimationFrame(()=>window.scrollTo({top:Math.max(0,n(snapshot?.scrollY)),behavior:'auto'}));
 }
 function renderTabs() {
-  document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => `<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`).join('');
+  let lastGroup;
+  document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => {
+    const group = VIEW_GROUPS[id] || null;
+    const header = group && group !== lastGroup ? `<div class="tab-group-label">${escapeHtml(group)}</div>` : '';
+    lastGroup = group;
+    return `${header}<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`;
+  }).join('');
   document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => navigateToTab(b.dataset.tab));
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id===ui.tab));
   if(window.matchMedia('(max-width: 820px)').matches) {
@@ -2632,6 +2651,19 @@ function renderSimulationGamificationDashboard() {
   const elementCard=active?`<div class="gamification-sim-element"><span class="eyebrow">Buff elemental ativo</span><strong>${active.elements.map(elementLabel).join(' + ')} · ${escapeHtml(active.rarityLabel||active.rarity)}</strong><span>x${String(active.multiplier).replace('.',',')} · ${hours}h ${minutes}min restantes</span></div>`:`<div class="gamification-sim-element muted"><span class="eyebrow">Buff elemental</span><strong>Nenhum buff ativo</strong><span>Corrija integralmente um simulado para liberar uma recompensa.</span></div>`;
   return `<section class="card gamification-simulation-card"><div class="section-title"><div><span class="eyebrow">Jornada de simulados</span><h2>Ascensão e elementos</h2></div><button class="tiny-btn" onclick="ui.tab='simulados';render()">Abrir simulados</button></div><div class="gamification-sim-metrics"><div><strong>${stats.completed}</strong><span>concluídos</span></div><div><strong>${stats.reviewed}</strong><span>corrigidos</span></div><div><strong>${Math.round(stats.average)}%</strong><span>média</span></div><div><strong>${stats.fragments}/3</strong><span>fragmentos</span></div><div><strong>${stats.medallionsAvailable}</strong><span>medalhões livres</span></div></div>${elementCard}${stats.sealedRewards.length?`<button class="icon-btn primary" data-open-sealed-reward="${escapeAttr(stats.sealedRewards[0].id)}">Revelar ${stats.sealedRewards.length} recompensa${stats.sealedRewards.length===1?'':'s'}</button>`:''}</section>`;
 }
+function renderSimuladoEstatisticas() {
+  if(!Gamification) return '';
+  const stats=simulationGamificationStats();
+  const active=stats.activeRewards.sort((a,b)=>Date.parse(a.expiresAt)-Date.parse(b.expiresAt))[0];
+  const remaining=active?Math.max(0,Date.parse(active.expiresAt)-Date.now()):0;
+  const hours=Math.floor(remaining/3600000);
+  const minutes=Math.floor(remaining%3600000/60000);
+  const elementCard=active?`<div class="gamification-sim-element"><span class="eyebrow">Buff elemental ativo</span><strong>${active.elements.map(elementLabel).join(' + ')} · ${escapeHtml(active.rarityLabel||active.rarity)}</strong><span>x${String(active.multiplier).replace('.',',')} · ${hours}h ${minutes}min restantes</span></div>`:`<div class="gamification-sim-element muted"><span class="eyebrow">Buff elemental</span><strong>Nenhum buff ativo</strong><span>Corrija integralmente um simulado para liberar uma recompensa.</span></div>`;
+  return `<section class="card gamification-simulation-card"><div class="section-title"><div><span class="eyebrow">Jornada de simulados</span><h2>Estatísticas</h2></div></div><div class="gamification-sim-metrics"><div><strong>${stats.completed}</strong><span>concluídos</span></div><div><strong>${stats.reviewed}</strong><span>corrigidos</span></div><div><strong>${Math.round(stats.average)}%</strong><span>média</span></div><div><strong>${stats.fragments}/3</strong><span>fragmentos</span></div><div><strong>${stats.medallionsAvailable}</strong><span>medalhões livres</span></div></div>${elementCard}${stats.sealedRewards.length?`<button class="icon-btn primary" data-open-sealed-reward="${escapeAttr(stats.sealedRewards[0].id)}">Revelar ${stats.sealedRewards.length} recompensa${stats.sealedRewards.length===1?'':'s'}</button>`:''}</section>`;
+}
+function renderGamificationPopover() {
+  return `<details class="dashboard-gamification-popover"><summary>${renderGamificationDashboard(true)}</summary><div>${renderGamificationDashboard(false)}</div></details>`;
+}
 function renderGamificationDashboard(compact=false) {
   ensureGamificationState();
   const profile=Gamification ? Gamification.refreshProfile(state.gamification) : {level:1,totalXP:0,xpWithinLevel:0,xpForNextLevel:100,remainingXP:100,progress:0};
@@ -2688,7 +2720,7 @@ function renderWeeklyPerformance(date) {
     ['Revisões',Math.round(metrics.flashcards.summary)],
     ['Aulas',Math.round(metrics.videos.summary)]
   ];
-  return `<section class="card dashboard-weekly-card"><div class="section-title"><div><span class="eyebrow">Últimos 7 dias</span><h2>Desempenho semanal</h2></div></div><div class="weekly-metric-tabs">${Object.entries(metrics).map(([key,item])=>`<button class="tiny-btn ${key===ui.weeklyMetric?'active':''}" data-weekly-metric="${key}" aria-pressed="${key===ui.weeklyMetric}">${item.label}</button>`).join('')}</div><div class="dashboard-bars weekly-bars">${data.dates.map((day,index)=>`<div><span style="height:${Math.max(8,Math.round(metric.values[index]/max*100))}%" title="${escapeAttr(metric.format(metric.values[index]))}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${day}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section><section class="card dashboard-weekly-summary"><span class="eyebrow">Resumo da semana</span><div>${summary.map(([label,value])=>`<article><strong>${escapeHtml(String(value))}</strong><small>${label}</small></article>`).join('')}</div><p class="muted">Exibindo ${escapeHtml(metric.label.toLowerCase())} no gráfico.</p></section>`;
+  return `<section class="card dashboard-weekly-card"><div class="section-title"><div><span class="eyebrow">Últimos 7 dias</span><h2>Desempenho semanal</h2></div></div><div class="weekly-metric-tabs">${Object.entries(metrics).map(([key,item])=>`<button class="tiny-btn ${key===ui.weeklyMetric?'active':''}" data-weekly-metric="${key}" aria-pressed="${key===ui.weeklyMetric}">${item.label}</button>`).join('')}</div><div class="dashboard-bars weekly-bars">${data.dates.map((day,index)=>`<div><span style="height:${Math.max(8,Math.round(metric.values[index]/max*100))}%" title="${escapeAttr(metric.format(metric.values[index]))}" data-bar-value="${escapeAttr(metric.format(metric.values[index]))}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${day}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section><section class="card dashboard-weekly-summary"><span class="eyebrow">Resumo da semana</span><div>${summary.map(([label,value])=>`<article><strong>${escapeHtml(String(value))}</strong><small>${label}</small></article>`).join('')}</div><p class="muted">Exibindo ${escapeHtml(metric.label.toLowerCase())} no gráfico.</p></section>`;
 }
 function renderRecentDashboardActivity() {
   const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,5);
@@ -2785,7 +2817,7 @@ function bindLegacyImportCard() {
   }));
 }
 function renderPainel() {
-  const t = totals(); const areas = areaStats(); const next = t.next; const dashboardLog=getDayLog(ui.refDate);
+  const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
     <div class="dashboard-global-head"><div><h1>Seu dia de estudos</h1></div><div class="dashboard-head-tools"><label class="dashboard-date-control"><span>Data do painel</span><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"></label>${renderCountdown()}</div></div>
     <div class="dashboard-desktop-grid">
@@ -2794,11 +2826,7 @@ function renderPainel() {
       ${renderDashboardMood(dashboardLog)}
       <section class="card dashboard-road-region">${renderDailyRoad(ui.refDate)}</section>
       ${renderWeeklyPerformance(ui.refDate)}
-      ${renderDashboardPlanning(t)}
-      ${renderDashboardAcademicEvolution(areas)}
-      ${renderGamificationDashboard(false)}
-      ${renderSimulationGamificationDashboard()}
-      ${renderRecentDashboardActivity()}
+      ${renderGamificationPopover()}
     </div>
     ${renderRankPromotionModal()}`;
   bindPlannerDateInput('dashboardDate', ui.refDate, date => { ui.refDate=date; render(); });
@@ -2807,12 +2835,7 @@ function renderPainel() {
   bindGamificationDashboard();
   document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
   document.querySelectorAll('[data-dashboard-open-flashcards]').forEach(button=>button.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Devidos';render();}));
-  document.querySelector('[data-dashboard-open-history]')?.addEventListener('click',()=>navigateToTab('historico'));
   document.querySelectorAll('[data-weekly-metric]').forEach(button=>button.addEventListener('click',event=>{ui.weeklyMetric=event.currentTarget.dataset.weeklyMetric;renderPainel();}));
-  document.querySelector('[data-dashboard-open-target]')?.addEventListener('click',event=>openVideosForSchedule(event.currentTarget.dataset.dashboardOpenTarget));
-  document.querySelector('[data-dashboard-open-pending]')?.addEventListener('click',()=>navigateToTab('pendencias'));
-  document.querySelector('[data-dashboard-open-areas]')?.addEventListener('click',()=>navigateToTab('areas'));
-  document.querySelector('[data-dashboard-open-simulations]')?.addEventListener('click',()=>navigateToTab('simulados'));
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
   document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
@@ -2929,7 +2952,7 @@ function renderSimulados() {
   const libraryOpen=ui.simulationLibraryOpen||!active;
   const library=`<section class="sim-library ${libraryOpen?'open':'collapsed'}">${libraryOpen?`${renderImportedSimulados()}${renderSimuladoGenerator()}`:''}</section>`;
   const activeView=active?`<div class="sim-active-head"><div><span class="eyebrow">Tentativa ativa</span><h2>${escapeHtml(active.name)}</h2></div><button class="tiny-btn" id="toggleSimulationLibrary">${libraryOpen?'Ocultar provas':'Ver outras provas'}</button></div>${renderSimuladoRun(active)}`:'';
-  document.getElementById('simulados').innerHTML = `${renderSimulationRewardModal()}${activeView}${library}<div class="grid two"><div class="card"><div class="section-title"><h2>Resumo dos simulados</h2></div>${renderSimSummary()}</div><div class="card"><div class="section-title"><h2>Próximo simulado</h2></div>${renderNextSim()}</div></div><div class="card"><div class="section-title"><h2>Histórico de provas geradas</h2><span class="muted">${state.simuladoRuns.length} provas</span></div>${renderSimuladoRunsList()}</div><div class="card"><div class="section-title"><h2>Registro editável</h2></div>${renderSimTable()}</div><div class="card"><div class="section-title"><h2>Temas que mais errei</h2><span class="muted">Pesquise aulas do cronograma ou digite um tema novo.</span></div>${renderMissedTopics()}</div>`;
+  document.getElementById('simulados').innerHTML = `${renderSimulationRewardModal()}${activeView}${library}<div class="grid two"><div class="card"><div class="section-title"><h2>Resumo dos simulados</h2></div>${renderSimSummary()}</div><div class="card"><div class="section-title"><h2>Próximo simulado</h2></div>${renderNextSim()}</div></div>${renderSimuladoEstatisticas()}<div class="card"><div class="section-title"><h2>Histórico de provas geradas</h2><span class="muted">${state.simuladoRuns.length} provas</span></div>${renderSimuladoRunsList()}</div><div class="card"><div class="section-title"><h2>Registro editável</h2></div>${renderSimTable()}</div><div class="card"><div class="section-title"><h2>Temas que mais errei</h2><span class="muted">Pesquise aulas do cronograma ou digite um tema novo.</span></div>${renderMissedTopics()}</div>`;
   bindSimInputs();
   bindSimuladoInputs(active);
 }
@@ -3572,6 +3595,10 @@ function renderMissedRows(sim) {
   }).join('');
 }
 function bindSimInputs() {
+  document.querySelectorAll('[data-open-sealed-reward]').forEach(button=>button.addEventListener('click',event=>{
+    const result=Gamification.openElementReward(state.gamification,event.currentTarget.dataset.openSealedReward,{now:new Date()});
+    if(result.opened) { persist(); showStudyToast(`Recompensa ${result.reward.rarityLabel} revelada: ${result.reward.elements.map(elementLabel).join(' + ')}.`); }
+  }));
   document.querySelectorAll('[data-sim]').forEach(el => el.onchange = e => { const sim=state.simulados.find(x=>x.id===e.target.dataset.sim); const f=e.target.dataset.field; sim[f]=['total','correct'].includes(f)?n(e.target.value):e.target.value; persist(); });
   document.querySelectorAll('[data-add-missed]').forEach(btn => btn.onclick = e => { const sim=state.simulados.find(x=>x.id===e.currentTarget.dataset.addMissed); if(!sim) return; sim.missedTopics.push({ id: `${sim.id}-miss-${Date.now()}`, topic: '', scheduleId: '', importance: 'Média', note: '' }); persist(); });
   document.querySelectorAll('[data-remove-missed]').forEach(btn => btn.onclick = e => { const sim=state.simulados.find(x=>x.id===e.currentTarget.dataset.removeMissed); if(!sim) return; sim.missedTopics = sim.missedTopics.filter(x => x.id !== e.currentTarget.dataset.missedId); persist(); });
@@ -3719,9 +3746,13 @@ function historyRows() {
     return { log, dayItems, doneItems, activity };
   }).filter(x => !hiddenDates.has(x.log.date) && (x.activity > 0 || x.dayItems.some(item => completedQuestions(item)>0 || completedFlashcards(item)>0 || n(item.hours)>0))).sort((a,b)=>b.log.date.localeCompare(a.log.date));
 }
+function renderRecentActivityCard() {
+  const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,5);
+  return `<section class="card"><div class="section-title"><div><span class="eyebrow">Ledger de XP</span><h2>Atividade recente</h2></div></div><div class="dashboard-recent-list">${transactions.length?transactions.map(item=>`<div><span>${iconSvg(item.activity_type==='video_progress'||item.activity_type==='video_completion'?'play':item.activity_type==='flashcard_review'?'cards':'brain')}</span><strong>${escapeHtml(gamificationActivityLabel(item))}</strong><time>${new Date(item.occurred_at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</time></div>`).join(''):'<div class="muted">Suas próximas atividades aparecerão aqui.</div>'}</div></section>`;
+}
 function renderHistorico() {
   const rows = historyRows();
-  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Aulas concluídas', rows.reduce((s,x)=>s+x.doneItems.length,0), 'no histórico por data')}${metric('Questões', Math.round(rows.reduce((s,x)=>s+n(x.log.questions),0)), 'registradas no dia')}${metric('Flashcards', Math.round(rows.reduce((s,x)=>s+n(x.log.flashcards),0)), 'registrados no dia')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+n(x.log.lessonMinutes)+n(x.log.flashcardMinutes)+n(x.log.questionMinutes)+n(x.log.materialMinutes)+n(x.log.simuladoMinutes),0))} min`, 'todas as atividades acumuladas')}</div><div class="card"><div class="section-title"><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div>${renderHistoryTable(rows)}</div>`;
+  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Aulas concluídas', rows.reduce((s,x)=>s+x.doneItems.length,0), 'no histórico por data')}${metric('Questões', Math.round(rows.reduce((s,x)=>s+n(x.log.questions),0)), 'registradas no dia')}${metric('Flashcards', Math.round(rows.reduce((s,x)=>s+n(x.log.flashcards),0)), 'registrados no dia')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+n(x.log.lessonMinutes)+n(x.log.flashcardMinutes)+n(x.log.questionMinutes)+n(x.log.materialMinutes)+n(x.log.simuladoMinutes),0))} min`, 'todas as atividades acumuladas')}</div>${renderRecentActivityCard()}<div class="card"><div class="section-title"><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div>${renderHistoryTable(rows)}</div>`;
   document.querySelectorAll('[data-remove-history]').forEach(button => button.onclick = event => removeHistoryRecord(event.currentTarget.dataset.removeHistory));
 }
 function removeHistoryRecord(date) {

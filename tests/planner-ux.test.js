@@ -102,5 +102,7 @@ test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
   assert.match(planner,/event\.pointerType/);
   assert.match(css,/\.highlightable,.sim-highlightable\{[^}]*user-select:text/s);
   const views=planner.match(/const views = \[([\s\S]*?)\n\];/)?.[1]||'';
-  assert.ok(views.lastIndexOf("['importar-questoes'")>views.lastIndexOf("['feynman'"));
+  assert.ok(views.includes("['importar-questoes'"));
+  const groups=planner.match(/const VIEW_GROUPS = \{([\s\S]*?)\n\};/)?.[1]||'';
+  assert.match(groups,/'importar-questoes':'Conteúdo'/);
 });
