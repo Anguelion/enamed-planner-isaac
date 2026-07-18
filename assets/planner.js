@@ -968,19 +968,22 @@ async function pushCloudState() {
     invalidateActivityRenderCache();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }
-  const updatedAt = new Date().toISOString();
-  const { error } = await sbClient.from('planner_states').upsert({
+  const { data:savedRow, error } = await sbClient.from('planner_states').upsert({
     user_id: currentUser.id,
     data: state,
-    updated_at: updatedAt
-  }, { onConflict: 'user_id' });
+    updated_at: new Date().toISOString()
+  }, { onConflict: 'user_id' }).select('updated_at').maybeSingle();
   syncInFlight = false;
   if(error) {
     console.error('Falha ao sincronizar:', error);
     setSyncStatus('Erro ao sincronizar', 'error');
   } else {
     cloudDirty = cloudRevision !== pushRevision;
-    lastCloudSyncAt = Date.parse(updatedAt) || Date.now();
+    // O servidor (via trigger) e quem decide o updated_at real — nao confiar no
+    // relogio deste aparelho aqui, ou comparacoes entre aparelhos com relogios
+    // dessincronizados podem falhar silenciosamente (ver migracao
+    // 20260718_planner_states_server_updated_at.sql).
+    lastCloudSyncAt = Date.parse(savedRow?.updated_at || '') || Date.now();
     if(cloudDirty) {
       setSyncStatus('Alterações pendentes', 'busy');
       clearTimeout(syncTimer);
