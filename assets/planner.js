@@ -65,6 +65,7 @@ let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
 let importedSimuladosLoadPromise = null;
 let pomodoroLastSavedSecond = -1;
+let pomodoroLastTickedSecond = -1;
 const seed = JSON.parse(document.getElementById('seed').textContent);
 let state = loadState();
 ensureGamificationState();
@@ -112,7 +113,7 @@ let cloudBackupsError = '';
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
-  ['painel','Dashboard','dashboard'], ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['aulas','Aulas','video'], ['questoes','Questões','question'], ['analise','Análise','analysis'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'], ['simulados','Simulados','simulation'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','areas'], ['historico','Histórico','history'], ['feynman','Feynman','feynman'], ['importar-questoes','Adicionar questões','upload']
+  ['painel','Dashboard','dashboard'], ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['aulas','Aulas','video'], ['questoes','Questões','question'], ['analise','Análise','analysis'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'], ['simulados','Simulados','simulation'], ['prescricao','Prescrição','prescription'], ['areas','Áreas','areas'], ['historico','Histórico','history'], ['feynman','Feynman','feynman'], ['importar-questoes','Adicionar questões','upload'], ['ferramentas','Ferramentas','settings']
 ];
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
@@ -738,6 +739,7 @@ function applyTheme(theme) {
 function setSyncStatus(text, kind='') {
   const box = document.getElementById('syncStatus');
   document.getElementById('syncText').textContent = text;
+  box.title = text;
   box.className = `sync-status ${kind}`;
 }
 function showStudyToast(message) {
@@ -987,41 +989,47 @@ async function pushCloudState() {
   syncInFlight = true;
   const pushRevision = cloudRevision;
   setSyncStatus('Sincronizando...', 'busy');
-  const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
-  const remoteAt = Date.parse(remoteRow?.updated_at || '') || 0;
-  if(remoteRow?.updated_at) updateServerClockOffset(remoteRow.updated_at);
-  if(!remoteError && remoteRow?.data && remoteAt > lastCloudSyncAt) {
-    state = mergePlannerActivityState(remoteRow.data, state, true);
-    ensureDayLogs();
-    ensureQuestionProgress();
-    invalidateActivityRenderCache();
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }
-  const { data:savedRow, error } = await sbClient.from('planner_states').upsert({
-    user_id: currentUser.id,
-    data: state,
-    updated_at: new Date().toISOString()
-  }, { onConflict: 'user_id' }).select('updated_at').maybeSingle();
-  syncInFlight = false;
-  if(error) {
+  try {
+    const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
+    const remoteAt = Date.parse(remoteRow?.updated_at || '') || 0;
+    if(remoteRow?.updated_at) updateServerClockOffset(remoteRow.updated_at);
+    if(!remoteError && remoteRow?.data && remoteAt > lastCloudSyncAt) {
+      state = mergePlannerActivityState(remoteRow.data, state, true);
+      ensureDayLogs();
+      ensureQuestionProgress();
+      invalidateActivityRenderCache();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+    const { data:savedRow, error } = await sbClient.from('planner_states').upsert({
+      user_id: currentUser.id,
+      data: state,
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'user_id' }).select('updated_at').maybeSingle();
+    if(error) {
+      console.error('Falha ao sincronizar:', error);
+      setSyncStatus('Erro ao sincronizar', 'error');
+    } else {
+      cloudDirty = cloudRevision !== pushRevision;
+      // O servidor (via trigger) e quem decide o updated_at real — nao confiar no
+      // relogio deste aparelho aqui, ou comparacoes entre aparelhos com relogios
+      // dessincronizados podem falhar silenciosamente (ver migracao
+      // 20260718_planner_states_server_updated_at.sql).
+      if(savedRow?.updated_at) updateServerClockOffset(savedRow.updated_at);
+      lastCloudSyncAt = Date.parse(savedRow?.updated_at || '') || Date.now();
+      if(cloudDirty) {
+        setSyncStatus('Alterações pendentes', 'busy');
+        clearTimeout(syncTimer);
+        syncTimer = setTimeout(pushCloudState, 350);
+      } else {
+        setSyncStatus(`Sincronizado ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
+      }
+      syncGamificationLedger();
+    }
+  } catch(error) {
     console.error('Falha ao sincronizar:', error);
     setSyncStatus('Erro ao sincronizar', 'error');
-  } else {
-    cloudDirty = cloudRevision !== pushRevision;
-    // O servidor (via trigger) e quem decide o updated_at real — nao confiar no
-    // relogio deste aparelho aqui, ou comparacoes entre aparelhos com relogios
-    // dessincronizados podem falhar silenciosamente (ver migracao
-    // 20260718_planner_states_server_updated_at.sql).
-    if(savedRow?.updated_at) updateServerClockOffset(savedRow.updated_at);
-    lastCloudSyncAt = Date.parse(savedRow?.updated_at || '') || Date.now();
-    if(cloudDirty) {
-      setSyncStatus('Alterações pendentes', 'busy');
-      clearTimeout(syncTimer);
-      syncTimer = setTimeout(pushCloudState, 350);
-    } else {
-      setSyncStatus(`Sincronizado ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
-    }
-    syncGamificationLedger();
+  } finally {
+    syncInFlight = false;
   }
 }
 function isEditingTextField() {
@@ -1040,41 +1048,46 @@ async function pullCloudState({ firstLogin=false }={}) {
     return;
   }
   setSyncStatus('Buscando dados...', 'busy');
-  const { data, error } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
-  if(error) {
-    console.error('Falha ao buscar dados:', error);
-    setSyncStatus('Configure o banco', 'error');
-    return;
-  }
-  const remoteAt = Date.parse(data?.updated_at || '') || 0;
-  if(data?.updated_at) updateServerClockOffset(data.updated_at);
-  if(!firstLogin && remoteAt && remoteAt <= lastCloudSyncAt) {
-    setSyncStatus(`Sincronizado ${new Date(lastCloudSyncAt || remoteAt).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
-    return;
-  }
-  if(data?.data?.schedule?.length) {
-    state = mergePlannerActivityState(data.data, state);
-    cloudDirty = false;
-    lastCloudSyncAt = remoteAt || Date.now();
-    normalizeOfficialScheduleNames();
-    ensureRestartFromBlockTen();
-    ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
-    invalidateActivityRenderCache();
-    // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
-    // Reaplica o cronograma oficial antes de exibir ou reenviar o estado.
-    if(officialSchedule.length) applyOfficialSchedule();
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    if(firstLogin && state.videoPlayer?.lastOpen?.lessonId) {
-      ui.videoLessonId = '';
-      ui.videoSourceId = '';
+  try {
+    const { data, error } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
+    if(error) {
+      console.error('Falha ao buscar dados:', error);
+      setSyncStatus('Configure o banco', 'error');
+      return;
     }
-    render();
-    scheduleCloudSave();
-    setSyncStatus('Dados atualizados', 'online');
-  } else if(firstLogin) {
-    await pushCloudState();
-  } else {
-    setSyncStatus('Sincronizado', 'online');
+    const remoteAt = Date.parse(data?.updated_at || '') || 0;
+    if(data?.updated_at) updateServerClockOffset(data.updated_at);
+    if(!firstLogin && remoteAt && remoteAt <= lastCloudSyncAt) {
+      setSyncStatus(`Sincronizado ${new Date(lastCloudSyncAt || remoteAt).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
+      return;
+    }
+    if(data?.data?.schedule?.length) {
+      state = mergePlannerActivityState(data.data, state);
+      cloudDirty = false;
+      lastCloudSyncAt = remoteAt || Date.now();
+      normalizeOfficialScheduleNames();
+      ensureRestartFromBlockTen();
+      ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+      invalidateActivityRenderCache();
+      // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
+      // Reaplica o cronograma oficial antes de exibir ou reenviar o estado.
+      if(officialSchedule.length) applyOfficialSchedule();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      if(firstLogin && state.videoPlayer?.lastOpen?.lessonId) {
+        ui.videoLessonId = '';
+        ui.videoSourceId = '';
+      }
+      render();
+      scheduleCloudSave();
+      setSyncStatus('Dados atualizados', 'online');
+    } else if(firstLogin) {
+      await pushCloudState();
+    } else {
+      setSyncStatus('Sincronizado', 'online');
+    }
+  } catch(error) {
+    console.error('Falha ao buscar dados:', error);
+    setSyncStatus('Erro ao sincronizar', 'error');
   }
 }
 function startCloudSyncPolling() {
@@ -1120,7 +1133,7 @@ async function forcePlannerSync() {
   await pushCloudState();
   await pullCloudState();
   await loadCloudBackups({force:true});
-  if(ui.tab === 'painel') renderPainel();
+  if(ui.tab === 'ferramentas') renderFerramentas();
 }
 async function createCloudBackup(label='') {
   if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para salvar uma cópia na nuvem.'); return; }
@@ -1137,13 +1150,13 @@ async function createCloudBackup(label='') {
     cloudBackupsReady = false;
     cloudBackupsError = error.code === '42P01' ? 'A tabela de backups ainda não foi criada no Supabase.' : 'Não foi possível criar o backup.';
     setSyncStatus('Erro no backup', 'error');
-    if(ui.tab === 'painel') renderPainel();
+    if(ui.tab === 'ferramentas') renderFerramentas();
     return;
   }
   await loadCloudBackups({force:true});
   setSyncStatus('Backup salvo na nuvem', 'online');
   showStudyToast('Backup salvo. Ele já pode ser recuperado em outro aparelho.');
-  if(ui.tab === 'painel') renderPainel();
+  if(ui.tab === 'ferramentas') renderFerramentas();
 }
 async function restoreCloudBackup(id) {
   if(!currentUser || !sbClient || !id || !CLOUD_SYNC_ALLOWED) return;
@@ -1166,7 +1179,7 @@ async function deleteCloudBackup(id) {
   const { error } = await sbClient.from('planner_backups').delete().eq('id',id).eq('user_id',currentUser.id);
   if(error) { alert('Não consegui excluir o backup.'); return; }
   await loadCloudBackups({force:true});
-  if(ui.tab === 'painel') renderPainel();
+  if(ui.tab === 'ferramentas') renderFerramentas();
 }
 function renderCloudBackupCard() {
   const online = Boolean(currentUser && sbClient);
@@ -1186,7 +1199,7 @@ function bindCloudBackupCard() {
   document.getElementById('createCloudBackup')?.addEventListener('click', () => createCloudBackup(document.getElementById('cloudBackupLabel')?.value));
   document.querySelectorAll('[data-restore-cloud-backup]').forEach(button => button.addEventListener('click', event => restoreCloudBackup(event.currentTarget.dataset.restoreCloudBackup)));
   document.querySelectorAll('[data-delete-cloud-backup]').forEach(button => button.addEventListener('click', event => deleteCloudBackup(event.currentTarget.dataset.deleteCloudBackup)));
-  if(currentUser && !cloudBackupsReady && !cloudBackupsLoading && !cloudBackupsError) loadCloudBackups().then(() => { if(ui.tab === 'painel') renderPainel(); });
+  if(currentUser && !cloudBackupsReady && !cloudBackupsLoading && !cloudBackupsError) loadCloudBackups().then(() => { if(ui.tab === 'ferramentas') renderFerramentas(); });
 }
 window.addEventListener('focus', () => {
   if(currentUser && !syncInFlight) pullCloudState();
@@ -1644,7 +1657,7 @@ function loadStudyTimerSession() {
     return { ...emptyStudyTimer(), kind:saved.kind, scheduleId:saved.scheduleId || '', elapsedSeconds, committedSeconds:Math.min(elapsedSeconds,Math.max(0,n(saved.committedSeconds))), minimumSaveSeconds:Math.max(0,n(saved.minimumSaveSeconds)), lastSavedAt:n(saved.savedAt) || Date.now() };
   } catch(error) { return emptyStudyTimer(); }
 }
-function emptyPomodoro() { return { mode:'', phase:'work', running:false, alarm:false, endAt:0, remaining:0, workSeconds:1500, breakSeconds:300 }; }
+function emptyPomodoro() { return { mode:'', phase:'work', running:false, alarm:false, endAt:0, remaining:0, workSeconds:1500, breakSeconds:300, tickEnabled:true }; }
 function loadPomodoroSession() {
   try {
     const saved = JSON.parse(localStorage.getItem(POMODORO_KEY));
@@ -1673,6 +1686,18 @@ function beepPomodoro() {
     oscillator.connect(gain); gain.connect(context.destination);
     oscillator.start(); oscillator.stop(context.currentTime + .22);
     setTimeout(() => context.close?.(), 350);
+  } catch(error) {}
+}
+function beepPomodoroTick() {
+  try {
+    const context = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    oscillator.frequency.value = 660;
+    gain.gain.value = 0.05;
+    oscillator.connect(gain); gain.connect(context.destination);
+    oscillator.start(); oscillator.stop(context.currentTime + .09);
+    setTimeout(() => context.close?.(), 200);
   } catch(error) {}
 }
 function finishPomodoroPhase(timer=pomodoro) {
@@ -1738,6 +1763,10 @@ function updatePomodoro() {
       pomodoroLastSavedSecond = pomodoro.remaining;
       savePomodoro();
     }
+    if(pomodoro.tickEnabled && pomodoro.remaining<=10 && pomodoro.remaining !== pomodoroLastTickedSecond) {
+      pomodoroLastTickedSecond = pomodoro.remaining;
+      beepPomodoroTick();
+    }
     updatePomodoroWidget();
   }
 }
@@ -1795,12 +1824,13 @@ function updatePomodoroWidget() {
   const phase=pomodoro.phase==='work'?'Foco':'Pausa';
   if(!pomodoro.mode) panel.innerHTML='<strong>Pomodoro</strong><span class="muted">Escolha o ritmo do ciclo</span><div class="pomodoro-options"><button class="icon-btn primary" data-pomodoro-start="25">25 + 5</button><button class="icon-btn" data-pomodoro-start="50">50 + 10</button></div>';
   else if(pomodoro.alarm) panel.innerHTML=`<strong>Tempo encerrado</strong><span class="muted">${phase} concluído. O som continuará até você voltar.</span><button class="icon-btn primary" id="pomodoroContinue">Continuar · iniciar pausa</button><button class="tiny-btn" id="pomodoroReset">Encerrar ciclo</button>`;
-  else panel.innerHTML=`<strong>${phase} · ${formatPomodoro(seconds)}</strong><span class="muted">${pomodoro.running?'Em andamento':'Pausado · use o botão Continuar'}</span><div class="pomodoro-options">${pomodoro.running?'<button class="icon-btn" id="pomodoroPause">Pausar</button>':'<button class="icon-btn primary" id="pomodoroResume">Continuar</button>'}<button class="tiny-btn" id="pomodoroReset">Encerrar</button></div>`;
+  else panel.innerHTML=`<strong>${phase} · ${formatPomodoro(seconds)}</strong><span class="muted">${pomodoro.running?'Em andamento':'Pausado · use o botão Continuar'}</span><div class="pomodoro-options">${pomodoro.running?'<button class="icon-btn" id="pomodoroPause">Pausar</button>':'<button class="icon-btn primary" id="pomodoroResume">Continuar</button>'}<button class="tiny-btn" id="pomodoroReset">Encerrar</button></div><label class="pomodoro-tick-toggle"><input type="checkbox" id="pomodoroTickToggle" ${pomodoro.tickEnabled?'checked':''}> Bipes nos últimos 10s</label>`;
   panel.querySelectorAll('[data-pomodoro-start]').forEach(button=>button.onclick=()=>startPomodoro(Number(button.dataset.pomodoroStart)));
   panel.querySelector('#pomodoroContinue')?.addEventListener('click',continuePomodoro);
   panel.querySelector('#pomodoroPause')?.addEventListener('click',pausePomodoro);
   panel.querySelector('#pomodoroResume')?.addEventListener('click',resumePomodoro);
   panel.querySelectorAll('#pomodoroReset').forEach(button=>button.addEventListener('click',resetPomodoro));
+  panel.querySelector('#pomodoroTickToggle')?.addEventListener('change',event=>{ pomodoro.tickEnabled=event.target.checked; savePomodoro(); });
 }
 function persistStudyTimerSession() {
   if(!studyTimeTracker.kind) {
@@ -2676,8 +2706,19 @@ function renderDashboardPlanning(t) {
 function renderDashboardAcademicEvolution(areas) {
   return `<section class="card dashboard-radar-card"><div class="section-title"><div><span class="eyebrow">Evolução acadêmica</span><h2>Radar de áreas</h2></div><button class="tiny-btn" data-dashboard-open-areas>Ver áreas</button></div><div class="dashboard-area-list">${areas.slice(0,6).map(areaLine).join('') || '<div class="empty">As áreas aparecerão quando houver aulas no cronograma.</div>'}</div></section><section class="card dashboard-sim-summary-card"><div class="section-title"><div><span class="eyebrow">Evolução acadêmica</span><h2>Simulados</h2></div><button class="tiny-btn" data-dashboard-open-simulations>Abrir</button></div>${renderSimSummary()}</section>`;
 }
-function renderDashboardTools(date) {
-  return `<section class="dashboard-tools-region"><details class="dashboard-tools-disclosure"><summary><span>${iconSvg('settings')}<strong>Ferramentas e manutenção</strong></span><small>lançamentos, estudo anterior, importação e backups</small></summary><div class="dashboard-tools-grid">${renderManualStudyEntry(date)}${renderLegacyImportCard()}${renderCloudBackupCard()}<section class="card dashboard-question-import-tool"><div><span class="eyebrow">Banco privado</span><h2>Adicionar questões</h2><p class="muted">Revise e incorpore novas questões sem misturar o fluxo diário.</p></div><button class="icon-btn" data-dashboard-open-question-import>${iconSvg('upload')}<span>Abrir importador</span></button></section></div></details></section>`;
+function renderFerramentas() {
+  document.getElementById('ferramentas').innerHTML = `<div class="dashboard-tools-grid">${renderManualStudyEntry(ui.refDate)}${renderLegacyImportCard()}${renderCloudBackupCard()}<section class="card dashboard-question-import-tool"><div><span class="eyebrow">Banco privado</span><h2>Adicionar questões</h2><p class="muted">Revise e incorpore novas questões sem misturar o fluxo diário.</p></div><button class="icon-btn" data-dashboard-open-question-import>${iconSvg('upload')}<span>Abrir importador</span></button></section></div><section class="card tool-danger-zone"><div><span class="eyebrow">Zona de perigo</span><h2>Restaurar dados originais</h2><p class="muted">Apaga todo o progresso salvo neste aparelho e na nuvem, voltando ao cronograma original importado do Excel. Esta ação também é sincronizada — não pode ser desfeita.</p></div><button class="icon-btn danger" id="resetBtn" type="button">${iconSvg('history')}<span>Restaurar dados originais</span></button></section>`;
+  bindManualStudyEntry(ui.refDate);
+  bindLegacyImportCard();
+  bindCloudBackupCard();
+  document.querySelector('[data-dashboard-open-question-import]')?.addEventListener('click',()=>navigateToTab('importar-questoes'));
+  document.getElementById('resetBtn')?.addEventListener('click', () => {
+    if(!confirm('Voltar aos dados originais importados do Excel? Esta alteração também será sincronizada.')) return;
+    state=structuredClone(seed);
+    normalizeOfficialScheduleNames();
+    ensureRestartFromBlockTen();
+    persist();
+  });
 }
 function renderRankPromotionModal() {
   const rank=ui.rankPromotion;
@@ -2715,16 +2756,18 @@ function bindGamificationDashboard() {
     ui.rankPromotion=null;
     document.querySelector('.rank-promotion-overlay')?.remove();
   });
-  document.getElementById('previewAutomaticLegacy')?.addEventListener('click',()=>{ui.legacyImportPreview=automaticLegacyPreview();renderPainel();});
-  document.getElementById('previewAggregateLegacy')?.addEventListener('click',()=>{
-    ui.legacyImportPreview=prepareLegacyPreview(Gamification.createAggregateLegacyPreview({date:document.getElementById('legacyDate')?.value,questions:n(document.getElementById('legacyQuestions')?.value),correctAnswers:n(document.getElementById('legacyCorrect')?.value),reviewedErrors:n(document.getElementById('legacyReviewed')?.value),videoMinutes:n(document.getElementById('legacyVideoMinutes')?.value),flashcards:n(document.getElementById('legacyFlashcards')?.value),blocksCompleted:n(document.getElementById('legacyBlocks')?.value),simulations:n(document.getElementById('legacySimulations')?.value)},state.gamification?.rules));
-    renderPainel();
-  });
-  document.getElementById('cancelLegacyPreview')?.addEventListener('click',()=>{ui.legacyImportPreview=null;renderPainel();});
   document.querySelectorAll('[data-open-sealed-reward]').forEach(button=>button.addEventListener('click',event=>{
     const result=Gamification.openElementReward(state.gamification,event.currentTarget.dataset.openSealedReward,{now:new Date()});
     if(result.opened) { persist(); showStudyToast(`Recompensa ${result.reward.rarityLabel} revelada: ${result.reward.elements.map(elementLabel).join(' + ')}.`); }
   }));
+}
+function bindLegacyImportCard() {
+  document.getElementById('previewAutomaticLegacy')?.addEventListener('click',()=>{ui.legacyImportPreview=automaticLegacyPreview();renderFerramentas();});
+  document.getElementById('previewAggregateLegacy')?.addEventListener('click',()=>{
+    ui.legacyImportPreview=prepareLegacyPreview(Gamification.createAggregateLegacyPreview({date:document.getElementById('legacyDate')?.value,questions:n(document.getElementById('legacyQuestions')?.value),correctAnswers:n(document.getElementById('legacyCorrect')?.value),reviewedErrors:n(document.getElementById('legacyReviewed')?.value),videoMinutes:n(document.getElementById('legacyVideoMinutes')?.value),flashcards:n(document.getElementById('legacyFlashcards')?.value),blocksCompleted:n(document.getElementById('legacyBlocks')?.value),simulations:n(document.getElementById('legacySimulations')?.value)},state.gamification?.rules));
+    renderFerramentas();
+  });
+  document.getElementById('cancelLegacyPreview')?.addEventListener('click',()=>{ui.legacyImportPreview=null;renderFerramentas();});
   document.getElementById('commitLegacyPreview')?.addEventListener('click',()=>{
     if(!ui.legacyImportPreview) return;
     const result=Gamification.commitLegacyImport(state.gamification,ui.legacyImportPreview,{userId:gamificationUserId()});
@@ -2757,14 +2800,11 @@ function renderPainel() {
       ${renderSimulationGamificationDashboard()}
       ${renderRecentDashboardActivity()}
     </div>
-    ${renderRankPromotionModal()}
-    ${renderDashboardTools(ui.refDate)}`;
+    ${renderRankPromotionModal()}`;
   bindPlannerDateInput('dashboardDate', ui.refDate, date => { ui.refDate=date; render(); });
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
-  bindManualStudyEntry(ui.refDate);
   bindPersonalDailyTasks(ui.refDate);
   bindGamificationDashboard();
-  bindCloudBackupCard();
   document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
   document.querySelectorAll('[data-dashboard-open-flashcards]').forEach(button=>button.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Devidos';render();}));
   document.querySelector('[data-dashboard-open-history]')?.addEventListener('click',()=>navigateToTab('historico'));
@@ -2773,7 +2813,6 @@ function renderPainel() {
   document.querySelector('[data-dashboard-open-pending]')?.addEventListener('click',()=>navigateToTab('pendencias'));
   document.querySelector('[data-dashboard-open-areas]')?.addEventListener('click',()=>navigateToTab('areas'));
   document.querySelector('[data-dashboard-open-simulations]')?.addEventListener('click',()=>navigateToTab('simulados'));
-  document.querySelector('[data-dashboard-open-question-import]')?.addEventListener('click',()=>navigateToTab('importar-questoes'));
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
   document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
@@ -8154,7 +8193,8 @@ function render() {
     areas: renderAreas,
     historico: renderHistorico,
     feynman: renderFeynman,
-    prescricao: renderPrescription
+    prescricao: renderPrescription,
+    ferramentas: renderFerramentas
   };
   renderers[ui.tab]?.();
   persistQuestionView();
@@ -8172,7 +8212,6 @@ document.getElementById('exportBtn').onclick = () => {
   URL.revokeObjectURL(a.href);
 };
 document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
-document.getElementById('resetBtn').onclick = () => { if(confirm('Voltar aos dados originais importados do Excel? Esta alteração também será sincronizada.')) { state=structuredClone(seed); normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); persist(); } };
 document.getElementById('printBtn').onclick = () => {
   const previousTab=ui.tab;
   ui.tab='painel';

@@ -6,7 +6,7 @@
   'use strict';
 
   const TIME_ZONE='America/Fortaleza';
-  const ROUTE_TABS=new Set(['painel','cronograma','pendencias','aulas','questoes','analise','flashcards','materiais','simulados','prescricao','areas','historico','feynman','importar-questoes']);
+  const ROUTE_TABS=new Set(['painel','cronograma','pendencias','aulas','questoes','analise','flashcards','materiais','simulados','prescricao','areas','historico','feynman','importar-questoes','ferramentas']);
   const ROUTE_ALIASES={dashboard:'painel',missao:'cronograma',videos:'aulas'};
 
   function safeDecode(value=''){
