@@ -28,6 +28,7 @@ const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
 const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) || null;
+const MATERIAL_IMAGE_BUCKET = 'materials-images';
 const Gamification = window.ENAMED_GAMIFICATION || null;
 const PlannerUX = window.ENAMED_PLANNER_UX || null;
 const INITIAL_PARAMS = new URLSearchParams(window.location.search);
@@ -980,8 +981,17 @@ async function pushCloudState() {
     syncGamificationLedger();
   }
 }
+function isEditingTextField() {
+  const active = document.activeElement;
+  if(!active) return false;
+  const tag = active.tagName;
+  if(tag === 'TEXTAREA') return true;
+  if(tag === 'INPUT') return !['checkbox','radio','button','submit','range','color','file'].includes((active.type || 'text').toLowerCase());
+  return active.isContentEditable === true;
+}
 async function pullCloudState({ firstLogin=false }={}) {
   if(!currentUser) return;
+  if(!firstLogin && isEditingTextField()) return;
   if(cloudDirty && !firstLogin) {
     await pushCloudState();
     return;
@@ -4004,20 +4014,57 @@ function prefixMarkdownLine(textarea,prefix) {
   textarea.focus();
   textarea.dispatchEvent(new Event('input',{bubbles:true}));
 }
+async function compressImageForMaterial(file, {maxDimension=1600, quality=0.82}={}) {
+  try {
+    const bitmap = await createImageBitmap(file);
+    const scale = Math.min(1, maxDimension / Math.max(bitmap.width, bitmap.height));
+    const width = Math.max(1, Math.round(bitmap.width * scale));
+    const height = Math.max(1, Math.round(bitmap.height * scale));
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    canvas.getContext('2d').drawImage(bitmap, 0, 0, width, height);
+    bitmap.close?.();
+    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/webp', quality));
+    return blob && blob.size < file.size ? blob : file;
+  } catch(error) {
+    console.warn('Não foi possível comprimir a imagem, usando o arquivo original:', error);
+    return file;
+  }
+}
 async function storeMaterialImage(file) {
   if(!file?.type?.startsWith('image/')) return '';
   if(file.size > 12*1024*1024) { alert('Escolha uma imagem com até 12 MB.'); return ''; }
-  const dataUrl=await new Promise((resolve,reject) => { const reader=new FileReader(); reader.onload=()=>resolve(reader.result); reader.onerror=()=>reject(reader.error); reader.readAsDataURL(file); });
+  const compressed = await compressImageForMaterial(file);
+  const dataUrl=await new Promise((resolve,reject) => { const reader=new FileReader(); reader.onload=()=>resolve(reader.result); reader.onerror=()=>reject(reader.error); reader.readAsDataURL(compressed); });
   const id=`img-${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
   materialImageCache.set(id,dataUrl);
-  await materialDbPut({key:`image:${id}`,type:'image',id,name:file.name,mime:file.type,dataUrl,createdAt:Date.now()});
+  await materialDbPut({key:`image:${id}`,type:'image',id,name:file.name,mime:compressed.type||file.type,dataUrl,createdAt:Date.now()});
+  if(currentUser && sbClient) {
+    sbClient.storage.from(MATERIAL_IMAGE_BUCKET).upload(`${currentUser.id}/${id}.webp`, compressed, {contentType:'image/webp', upsert:true})
+      .then(({error}) => { if(error) console.warn('Não foi possível sincronizar a imagem do material:', error); })
+      .catch(error => console.warn('Não foi possível sincronizar a imagem do material:', error));
+  }
   return id;
 }
 async function loadMaterialImagesForMarkdown(doc,markdown) {
   const ids=[...String(markdown||'').matchAll(/material-image:([\w-]+)/g)].map(match=>match[1]);
   const missing=[...new Set(ids)].filter(id=>!materialImageCache.has(id));
   if(!missing.length) return;
-  await Promise.all(missing.map(async id => { const record=await materialDbGet(`image:${id}`); if(record?.dataUrl) materialImageCache.set(id,record.dataUrl); }));
+  await Promise.all(missing.map(async id => {
+    const record=await materialDbGet(`image:${id}`);
+    if(record?.dataUrl) { materialImageCache.set(id,record.dataUrl); return; }
+    if(!currentUser || !sbClient) return;
+    try {
+      const {data,error}=await sbClient.storage.from(MATERIAL_IMAGE_BUCKET).download(`${currentUser.id}/${id}.webp`);
+      if(error || !data) return;
+      const dataUrl=await new Promise((resolve,reject) => { const reader=new FileReader(); reader.onload=()=>resolve(reader.result); reader.onerror=()=>reject(reader.error); reader.readAsDataURL(data); });
+      materialImageCache.set(id,dataUrl);
+      await materialDbPut({key:`image:${id}`,type:'image',id,mime:'image/webp',dataUrl,createdAt:Date.now()});
+    } catch(error) {
+      console.warn('Não foi possível baixar a imagem sincronizada do material:', error);
+    }
+  }));
   if(ui.tab==='materiais' && ui.materialDocId===doc.id) renderMateriais();
 }
 function exportMaterialMarkdown(doc,markdown) {
@@ -6937,7 +6984,17 @@ function bindQuestionActions(questions, question) {
       textHighlights: previous.textHighlights || [],
       eliminated: previous.eliminated || [],
       draftConfidence: previous.confidenceLevel || previous.draftConfidence || '',
-      attempts: previous.attempts || 0
+      attempts: previous.attempts || 0,
+      selected: '',
+      correct: false,
+      timedOut: false,
+      answeredAt: '',
+      confidenceLevel: '',
+      confidence: 0,
+      correctMode: '',
+      missReason: '',
+      certainty: 0,
+      secondsSpent: 0
     });
     delete ui.draftAnswers[question.id];
     stopQuestionTimer(true);
