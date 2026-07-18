@@ -76,7 +76,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -5278,6 +5278,16 @@ function bindFlashcardMarkdownTools(root=document) {
     const id = await storeFlashcardImage(image);
     if(id) insertMarkdownAtSelection(textarea, `![Imagem](flashcard-image:${id})`, '');
   });
+  root.querySelectorAll('[data-fc-insert-cloze-edit]').forEach(button => button.onclick = () => {
+    const textarea = document.getElementById(`fcEdit-${button.dataset.fcInsertClozeEdit}-front`);
+    if(!textarea) return;
+    const nextNumber = Math.max(0, ...flashcardClozeNumbers(textarea.value)) + 1;
+    const hadSelection = textarea.selectionStart !== textarea.selectionEnd;
+    const prefixLength = `{{c${nextNumber}::`.length;
+    const insertStart = textarea.selectionStart;
+    insertMarkdownAtSelection(textarea, `{{c${nextNumber}::`, `}}`);
+    if(!hadSelection) textarea.setSelectionRange(insertStart + prefixLength, insertStart + prefixLength);
+  });
 }
 function normalizeFlashcardRecord(card) {
   if(!card || typeof card !== 'object') return card;
@@ -5529,9 +5539,22 @@ function renderFlashcards() {
   document.querySelectorAll('[data-fc-block]').forEach(button => button.onclick = e => { ui.flashcardBlock=e.currentTarget.dataset.fcBlock; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); });
   document.querySelectorAll('[data-fc-subject]').forEach(button => button.onclick = e => { ui.flashcardSubject=e.currentTarget.dataset.fcSubject; ui.flashcardFilter='Todos'; ui.flashcardIndex=0; ui.flashcardSessionDone=false; renderFlashcards(); });
   const newCard = document.getElementById('newFlashcardBtn');
-  if(newCard) newCard.onclick = () => { ui.flashcardEditorOpen=true; renderFlashcards(); };
+  if(newCard) newCard.onclick = () => { ui.flashcardEditorOpen=true; ui.flashcardNewCardType='basic'; renderFlashcards(); };
   document.querySelectorAll('[data-fc-save]').forEach(button => button.onclick = saveWorkspaceFlashcard);
   document.querySelectorAll('[data-fc-cancel]').forEach(button => button.onclick = () => { ui.flashcardEditorOpen=false; renderFlashcards(); });
+  const newCardType = document.getElementById('fcNewCardType');
+  if(newCardType) newCardType.onchange = e => { ui.flashcardNewCardType = e.target.value; renderFlashcards(); };
+  const insertCloze = document.getElementById('fcInsertCloze');
+  if(insertCloze) insertCloze.onclick = () => {
+    const textarea = document.getElementById('fcNewCloze');
+    if(!textarea) return;
+    const nextNumber = Math.max(0, ...flashcardClozeNumbers(textarea.value)) + 1;
+    const hadSelection = textarea.selectionStart !== textarea.selectionEnd;
+    const prefixLength = `{{c${nextNumber}::`.length;
+    const insertStart = textarea.selectionStart;
+    insertMarkdownAtSelection(textarea, `{{c${nextNumber}::`, `}}`);
+    if(!hadSelection) textarea.setSelectionRange(insertStart + prefixLength, insertStart + prefixLength);
+  };
   document.querySelectorAll('[data-flashcard-deck]').forEach(button => button.onclick = e => { ui.flashcardDeck = e.currentTarget.dataset.flashcardDeck; const [areaValue, subareaValue] = ui.flashcardDeck.split('|'); ui.flashcardArea=areaValue || 'Todas'; ui.flashcardSubarea=subareaValue || 'Todas'; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); });
   document.querySelectorAll('[data-reveal-card]').forEach(button => button.onclick = e => {
     ui.revealedCards[e.currentTarget.dataset.revealCard] = true;
@@ -5588,9 +5611,18 @@ function openQuickFlashcardCapture() {
   ui.flashcardCaptureSource=source; ui.tab='flashcards'; ui.flashcardEditorOpen=true; sessionStorage.setItem(UI_TAB_KEY,'flashcards'); render();
 }
 function saveWorkspaceFlashcard() {
-  const front=document.getElementById('fcNewFront')?.value.trim(); const back=document.getElementById('fcNewBack')?.value.trim();
-  if(!front || !back) { alert('Preencha frente e verso antes de salvar.'); return; }
-  const card=normalizeFlashcardRecord({id:newFlashcardId(),front,back,block:document.getElementById('fcNewBlock')?.value||'',weeklyBlockId:document.getElementById('fcNewBlock')?.value||'',subject:document.getElementById('fcNewSubject')?.value.trim()||'Sem assunto',subarea:document.getElementById('fcNewSubject')?.value.trim()||'Sem assunto',sourceType:document.getElementById('fcNewSourceType')?.value||'manual',sourceReference:document.getElementById('fcNewSourceRef')?.value.trim()||'',tags:String(document.getElementById('fcNewTags')?.value||'').split(/[,;\s]+/).filter(Boolean),createdAt:new Date().toISOString()});
+  const cardType = ui.flashcardNewCardType === 'cloze' ? 'cloze' : 'basic';
+  let front, back;
+  if(cardType === 'cloze') {
+    front = document.getElementById('fcNewCloze')?.value.trim();
+    back = document.getElementById('fcNewClozeExtra')?.value.trim() || '';
+    if(!front || !flashcardClozeNumbers(front).length) { alert('Marque ao menos uma lacuna com {{c1::texto}} antes de salvar.'); return; }
+  } else {
+    front = document.getElementById('fcNewFront')?.value.trim();
+    back = document.getElementById('fcNewBack')?.value.trim();
+    if(!front || !back) { alert('Preencha frente e verso antes de salvar.'); return; }
+  }
+  const card=normalizeFlashcardRecord({id:newFlashcardId(),cardType,front,back,block:document.getElementById('fcNewBlock')?.value||'',weeklyBlockId:document.getElementById('fcNewBlock')?.value||'',subject:document.getElementById('fcNewSubject')?.value.trim()||'Sem assunto',subarea:document.getElementById('fcNewSubject')?.value.trim()||'Sem assunto',sourceType:document.getElementById('fcNewSourceType')?.value||'manual',sourceReference:document.getElementById('fcNewSourceRef')?.value.trim()||'',tags:String(document.getElementById('fcNewTags')?.value||'').split(/[,;\s]+/).filter(Boolean),createdAt:new Date().toISOString()});
   state.flashcardLibrary.push(card); const source=ui.flashcardCaptureSource; if(source?.key) { const session=state.flashcardSystem.captureSessions.find(item=>item.key===source.key); if(session) session.cardsCreated=n(session.cardsCreated)+1; card.sourceReference=source.reference||card.sourceReference; card.sourceLocator=source.label||card.sourceLocator; } state.flashcardSystem.versions.push({cardId:card.id,version:1,kind:'created',at:new Date().toISOString(),front:card.front,back:card.back}); ui.flashcardCaptureSource=null; ui.flashcardEditorOpen=false; renderCache.manualCards=null; persist();
 }
 function groupFlashcardDecks(cards) {
@@ -5613,7 +5645,7 @@ function groupFlashcards(cards) {
   const map = new Map();
   cards.forEach(card => {
     const key = `${card.area}|${card.subarea}|${card.block}|${card.scheduleId || card.topic}`;
-    if(!map.has(key)) map.set(key,{area:card.area,subarea:card.subarea,block:card.block,topic:card.topic,cards:[]});
+    if(!map.has(key)) map.set(key,{area:card.area||'Sem área',subarea:card.subarea||'Sem assunto',block:card.block||'',topic:card.topic||'',cards:[]});
     map.get(key).cards.push(card);
   });
   return [...map.values()].sort((a,b)=>a.area.localeCompare(b.area)||a.subarea.localeCompare(b.subarea)||n(a.block)-n(b.block)||a.topic.localeCompare(b.topic));
@@ -5647,9 +5679,11 @@ function renderFlashcardStudy(card, queue=[]) {
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;
   const sourceAttr = card.questionId ? `data-question-card="${escapeAttr(card.questionId)}"` : card.videoId ? `data-video-card="${escapeAttr(card.videoId)}"` : `data-library-card="${escapeAttr(card.id)}"`;
+  const isCloze = card.cardType === 'cloze';
   return `<div class="flashcard-inline-editor">
-    ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="front"`,card.front,'Frente')}
-    ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso')}
+    ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="front" id="fcEdit-${escapeAttr(card.id)}-front"`,card.front,isCloze?'Texto com lacunas, ex.: {{c1::resposta}}':'Frente')}
+    ${isCloze ? `<div class="fc-cloze-tools"><button type="button" class="tiny-btn" data-fc-insert-cloze-edit="${escapeAttr(card.id)}">Marcar seleção como lacuna</button><span class="muted">Use c2, c3... para lacunas independentes.</span></div>` : ''}
+    ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,isCloze?'Extra (opcional, só aparece na resposta)':'Verso')}
     <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || '')}" placeholder="Área">
     <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || '')}" placeholder="Assunto">
     <button class="tiny-btn" data-close-flashcard-edit="${escapeAttr(card.id)}">Fechar edição</button>
