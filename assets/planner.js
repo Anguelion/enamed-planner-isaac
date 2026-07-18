@@ -44,10 +44,8 @@ let videoCatalog = [];
 let officialSchedule = [];
 let videoCatalogStatus = 'Carregando videoaulas locais...';
 let materialMarkdownCache = {};
-let materialEditCache = new Map();
 let materialImageCache = new Map();
 let materialEditSaveTimers = new Map();
-let materialEditLoading = new Set();
 let materialDbPromise = null;
 let materialLibraryStatus = 'Carregando resumos...';
 let importedSimulados = [];
@@ -838,6 +836,40 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions);
   merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
   merged.gamification = mergeGamificationState(remote.gamification, local.gamification);
+
+  const remoteRuns = Array.isArray(remote.simuladoRuns) ? remote.simuladoRuns : [];
+  const localRuns = Array.isArray(local.simuladoRuns) ? local.simuladoRuns : [];
+  const runsById = new Map();
+  [...remoteRuns, ...localRuns].forEach(run => {
+    if(!run?.id) return;
+    const previous = runsById.get(run.id);
+    if(!previous || timestampOf(run.updatedAt) >= timestampOf(previous.updatedAt)) runsById.set(run.id, run);
+  });
+  merged.simuladoRuns = [...runsById.values()];
+
+  const remoteSims = Array.isArray(remote.simulados) ? remote.simulados : [];
+  const localSims = Array.isArray(local.simulados) ? local.simulados : [];
+  const simsById = new Map();
+  [...remoteSims, ...localSims].forEach(sim => {
+    if(!sim?.id) return;
+    simsById.set(sim.id, sim);
+  });
+  merged.simulados = [...simsById.values()];
+
+  const remoteMaterials = remote.materials && typeof remote.materials==='object' ? remote.materials : {};
+  const localMaterials = local.materials && typeof local.materials==='object' ? local.materials : {};
+  merged.materials = {};
+  new Set([...Object.keys(remoteMaterials), ...Object.keys(localMaterials)]).forEach(docId => {
+    const remoteDoc = remoteMaterials[docId] || {};
+    const localDoc = localMaterials[docId] || {};
+    const base = timestampOf(localDoc.updatedAt) >= timestampOf(remoteDoc.updatedAt) ? localDoc : remoteDoc;
+    const highlightsByKey = new Map();
+    [...(remoteDoc.highlights || []), ...(localDoc.highlights || [])].forEach(highlight => {
+      highlightsByKey.set(`${highlight.text}|${highlight.color}|${highlight.block}|${highlight.occurrence}`, highlight);
+    });
+    merged.materials[docId] = { ...base, highlights: [...highlightsByKey.values()] };
+  });
+
   return merged;
 }
 function timestampOf(value) { return Date.parse(value || '') || 0; }
@@ -3875,7 +3907,6 @@ async function loadMaterialMarkdown(doc) {
     const response = await fetch(`materials_library/${doc.markdown}`, {cache:'no-store'});
     if(!response.ok) throw new Error(`HTTP ${response.status}`);
     materialMarkdownCache[doc.id] = await response.text();
-    if(materialEditMeta(doc.id).edited) loadMaterialEdit(doc);
   } catch(error) {
     console.warn('Markdown do material indisponível:', error);
     materialMarkdownCache[doc.id] = '';
@@ -3900,8 +3931,8 @@ function cleanMaterialExtraction(text) {
   return cleaned.replace(/([A-Za-zÀ-ÖØ-öø-ÿ])-\n\s*([a-zà-öø-ÿ])/g,'$1$2').replace(/\n{3,}/g,'\n\n').trim() + '\n';
 }
 function effectiveMaterialMarkdown(doc, source=materialMarkdownCache[doc.id]) {
-  if(materialEditCache.has(doc.id)) return materialEditCache.get(doc.id) ?? cleanMaterialExtraction(source || '');
-  if(materialEditMeta(doc.id).edited) loadMaterialEdit(doc);
+  const meta=materialEditMeta(doc.id);
+  if(meta.edited && typeof meta.content==='string') return meta.content;
   if(source === undefined) return undefined;
   return cleanMaterialExtraction(source || '');
 }
@@ -3945,32 +3976,18 @@ async function materialDbPut(record) {
 async function materialDbDelete(key) {
   try { const db=await openMaterialDb(); await new Promise((resolve,reject) => { const tx=db.transaction('records','readwrite'); tx.objectStore('records').delete(key); tx.oncomplete=()=>resolve(); tx.onerror=()=>reject(tx.error); }); } catch(error) { console.warn('Não foi possível remover a edição local:',error); }
 }
-async function loadMaterialEdit(doc) {
-  if(!doc || materialEditCache.has(doc.id) || materialEditLoading.has(doc.id)) return;
-  materialEditLoading.add(doc.id);
-  const record=await materialDbGet(`document:${doc.id}`);
-  materialEditLoading.delete(doc.id);
-  materialEditCache.set(doc.id,typeof record?.content==='string'?record.content:null);
-  if(ui.tab==='materiais' && ui.materialDocId===doc.id) renderMateriais();
-}
 function queueMaterialEditSave(doc,markdown) {
-  materialEditCache.set(doc.id,markdown);
   const meta=materialEditMeta(doc.id);
   meta.edited=true;
+  meta.content=markdown;
   meta.updatedAt=new Date().toISOString();
   const status=document.getElementById('materialAutosave');
   if(status) status.textContent='Salvando...';
   clearTimeout(materialEditSaveTimers.get(doc.id));
-  materialEditSaveTimers.set(doc.id,setTimeout(async() => {
-    try {
-      await materialDbPut({key:`document:${doc.id}`,type:'markdown',docId:doc.id,content:markdown,updatedAt:Date.now()});
-      saveStateOnly();
-      const current=document.getElementById('materialAutosave');
-      if(current) current.textContent='Salvo neste computador';
-    } catch(error) {
-      const current=document.getElementById('materialAutosave');
-      if(current) current.textContent='Não foi possível salvar';
-    }
+  materialEditSaveTimers.set(doc.id,setTimeout(() => {
+    saveStateOnly();
+    const current=document.getElementById('materialAutosave');
+    if(current) current.textContent='Salvo e sincronizado';
   },300));
 }
 function insertMarkdownAtSelection(textarea,prefix,suffix='') {
@@ -4015,10 +4032,10 @@ async function restoreOriginalMaterial(doc) {
   if(!confirm('Restaurar o texto original? As marcações serão mantidas, mas a edição Markdown será apagada.')) return;
   clearTimeout(materialEditSaveTimers.get(doc.id));
   await materialDbDelete(`document:${doc.id}`);
-  materialEditCache.delete(doc.id);
   const meta=materialEditMeta(doc.id);
   meta.edited=false;
-  meta.updatedAt='';
+  meta.content='';
+  meta.updatedAt=new Date().toISOString();
   ui.materialEditMode=false;
   saveStateOnly();
   renderMateriais();
@@ -4093,7 +4110,8 @@ function bindMaterialReader(doc) {
 function applyMaterialSearch(value) {
   const query = normalizedTopic(value);
   const visibleIds = new Set(materialLibrary.filter(doc => {
-    const editedText=materialEditCache.has(doc.id) ? normalizedTopic(materialEditCache.get(doc.id) || '') : '';
+    const docMeta=state.materials[doc.id];
+    const editedText=docMeta?.edited && typeof docMeta.content==='string' ? normalizedTopic(docMeta.content) : '';
     return !query || doc.searchText.includes(query) || editedText.includes(query) || normalizedTopic(doc.title).includes(query) || (doc.headings||[]).some(item => normalizedTopic(item.text).includes(query));
   }).map(doc=>doc.id));
   document.querySelectorAll('[data-material-doc]').forEach(button => button.classList.toggle('hidden', !visibleIds.has(button.dataset.materialDoc)));
