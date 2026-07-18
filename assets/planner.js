@@ -68,7 +68,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardShowLibrary: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -495,7 +495,10 @@ function questionMatchesSchedule(question, item) {
   if(!question || !item || String(question.collectionBlock) !== String(item.block)) return false;
   const candidates = [question.sourceLabel, question.topic, question.source].map(canonicalTopic).filter(Boolean);
   const target = canonicalTopic(item.topic);
-  return candidates.some(candidate => candidate === target || (candidate.length >= 6 && (target.includes(candidate) || candidate.includes(target))));
+  if(candidates.includes(target)) return true;
+  // Evita ligar questões a uma aula apenas porque compartilham uma palavra curta
+  // (por exemplo, "trauma" ou "diabetes") dentro do mesmo bloco.
+  return candidates.some(candidate => candidate.length >= 12 && (target.includes(candidate) || candidate.includes(target)));
 }
 function scheduleForQuestion(question) {
   if(question.scheduleId) {
@@ -2273,7 +2276,11 @@ function navigateToTab(nextTab,{push=true}={}) {
   if(autoStudyIsRunning()) stopAutoStudy();
   if(ui.tab==='aulas') saveOpenVideoPosition();
   ui.tab=nextTab;
-  if(nextTab==='questoes') { ui.qFocusScheduleId=''; ui.qStatus='Não respondidas'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; resetKeyboardConfirmation(); }
+  if(nextTab==='questoes') {
+    resetQuestionBrowser();
+    questionSidebarCollapsed=false;
+    localStorage.removeItem(QUESTION_SIDEBAR_KEY);
+  }
   if(nextTab==='simulados'&&ui.activeSimRunId) ui.simulationLibraryOpen=false;
   syncRouteFromUI(push?'push':'replace');
   render();
@@ -2284,7 +2291,7 @@ function restoreNavigation(event) {
   const snapshot=event?.state;
   if(snapshot?.ui) Object.assign(ui,snapshot.ui);
   ui.tab=parsed.tab||snapshot?.ui?.tab||'painel';
-  if(parsed.questionId) ui.qQuestionId=parsed.questionId;
+  if(parsed.questionId) { ui.qQuestionId=parsed.questionId; ui.qRouteRestorePending=true; }
   if(parsed.videoId) ui.videoSourceId=parsed.videoId;
   if(parsed.attemptId) {
     ui.activeSimRunId=parsed.attemptId;
@@ -2417,6 +2424,7 @@ function openDashboardActivity(button) {
     ui.tab='aulas';
   } else if(type==='question') {
     ui.qQuestionId=button.dataset.continueQuestion||'';
+    ui.qRouteRestorePending=true;
     ui.qStatus='Todas';
     ui.tab='questoes';
   } else if(type==='simulado') {
@@ -5709,24 +5717,27 @@ function questionResult(question) {
   const progress = state.questionProgress[question.id];
   return progress?.answeredAt ? progress : null;
 }
+function reconcileQuestionProgressForQuestion(rawQuestion) {
+  const question = applyQuestionEdits(rawQuestion);
+  const progress = state.questionProgress?.[question.id];
+  if(!progress?.answeredAt || !progress.selected) return false;
+  const correct = !progress.timedOut && String(progress.selected).toUpperCase() === String(question.answer).toUpperCase();
+  if(Boolean(progress.correct) === correct) return false;
+  const date = state.questionLogged?.[question.id] || answerDate(progress.answeredAt);
+  const log = date ? getDayLog(date) : null;
+  if(log) {
+    if(progress.correct) log.correct = Math.max(0, n(log.correct) - 1);
+    else log.wrong = Math.max(0, n(log.wrong) - 1);
+    if(correct) log.correct = n(log.correct) + 1;
+    else log.wrong = n(log.wrong) + 1;
+  }
+  progress.correct = correct;
+  return true;
+}
 function reconcileQuestionProgressWithAnswers() {
   let changed = false;
   questionBank.forEach(rawQuestion => {
-    const question = applyQuestionEdits(rawQuestion);
-    const progress = state.questionProgress?.[question.id];
-    if(!progress?.answeredAt || !progress.selected) return;
-    const correct = !progress.timedOut && String(progress.selected).toUpperCase() === String(question.answer).toUpperCase();
-    if(Boolean(progress.correct) === correct) return;
-    const date = state.questionLogged?.[question.id] || answerDate(progress.answeredAt);
-    const log = date ? getDayLog(date) : null;
-    if(log) {
-      if(progress.correct) log.correct = Math.max(0, n(log.correct) - 1);
-      else log.wrong = Math.max(0, n(log.wrong) - 1);
-      if(correct) log.correct = n(log.correct) + 1;
-      else log.wrong = n(log.wrong) + 1;
-    }
-    progress.correct = correct;
-    changed = true;
+    if(reconcileQuestionProgressForQuestion(rawQuestion)) changed = true;
   });
   if(changed) saveStateOnly();
 }
@@ -5983,6 +5994,19 @@ function applyQuestionEdits(question) {
     edited: true
   };
 }
+function resetQuestionBrowser({status='Todas'}={}) {
+  ui.qFocusScheduleId='';
+  ui.qFocusTarget=0;
+  ui.qBlock='Todos';
+  ui.qSource='Todas';
+  ui.qTopic='Todos';
+  ui.qStatus=status;
+  ui.qSearch='';
+  ui.qIndex=0;
+  ui.qQuestionId='';
+  ui.justAnsweredId='';
+  resetKeyboardConfirmation();
+}
 function openQuestionsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
@@ -5998,18 +6022,22 @@ function openQuestionsForSchedule(scheduleId) {
   }
   const linkedByTopic = questionBank.filter(question => questionMatchesSchedule(question, item));
   const direct = questionBank.filter(question => question.scheduleId === item.id && String(question.collectionBlock) === String(item.block));
+  // A ligação por bloco + tema é mais confiável do que um scheduleId legado
+  // criado antes da normalização dos nomes das aulas.
   const linked = linkedByTopic.length ? linkedByTopic : direct;
   ui.tab = 'questoes';
   ui.qFocusScheduleId = linked.length ? item.id : '';
   ui.qBlock = item.block ? String(item.block) : 'Todos';
   ui.qSource = 'Todas';
-  ui.qTopic = linkedByTopic.length ? item.topic : 'Todos';
+  ui.qTopic = 'Todos';
   ui.qStatus = 'Não respondidas';
+  ui.qSearch = '';
   ui.qFocusTarget = target;
   ui.qIndex = 0;
   ui.qQuestionId = '';
   ui.justAnsweredId = '';
   resetKeyboardConfirmation();
+  syncRouteFromUI('push');
   render();
 }
 function openFlashcardsForSchedule(scheduleId) {
@@ -6160,7 +6188,7 @@ function navigateQuestionBy(delta) {
 }
 function renderQuestionBank() {
   stopAutoStudy('video');
-  if(ui.qQuestionId) {
+  if(ui.qRouteRestorePending && ui.qQuestionId) {
     const routedQuestion=questionBank.find(item=>item.id===ui.qQuestionId);
     if(routedQuestion) {
       ui.qStatus='Todas';
@@ -6169,6 +6197,7 @@ function renderQuestionBank() {
       ui.qTopic='Todos';
       ui.qSearch='';
     }
+    ui.qRouteRestorePending=false;
   }
   ensureQuestionProgress();
   const summary = questionBankSummary();
@@ -6204,7 +6233,7 @@ function renderQuestionBank() {
       ${focusItem ? (() => { const target=lessonQuestionTarget(focusItem); const completed=questionStatsForSchedule(focusItem.id).done; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
       <details class="question-filter-panel"><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? 'Todas' : questionCollectionLabel(ui.qBlock))}</span></summary>
       ${renderQuestionBlockOverview()}</details>
-      <details class="question-filter-panel"><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
+      <details class="question-filter-panel" open><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
       <div class="question-filter">
         <label class="search-field question-search-field"><span aria-hidden="true">⌕</span><input class="input" id="questionSearch" value="${escapeAttr(ui.qSearch)}" placeholder="Buscar enunciado, tema ou tag" autocomplete="off"></label>
         <select class="select" id="questionBlock">${blocks.map(block => `<option value="${escapeAttr(block)}" ${block===String(ui.qBlock)?'selected':''}>${block === 'Todos' ? 'Todas as questões' : escapeHtml(questionCollectionLabel(block))}</option>`).join('')}</select>
@@ -6942,6 +6971,7 @@ function bindQuestionActions(questions, question) {
   if(editReset) editReset.onclick = () => {
     if(confirm('Restaurar o texto original desta questão?')) {
       delete state.questionEdits[question.id];
+      reconcileQuestionProgressForQuestion(questionBank.find(item => item.id === question.id) || question);
       ui.editQuestionId = '';
       persist();
     }
@@ -7112,6 +7142,7 @@ function saveQuestionEdit(question) {
     edit.options[input.dataset.questionEditOption] = input.value;
   });
   state.questionEdits[question.id] = edit;
+  reconcileQuestionProgressForQuestion(questionBank.find(item => item.id === question.id) || question);
   ui.editQuestionId = '';
   persist();
 }

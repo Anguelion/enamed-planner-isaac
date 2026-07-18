@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "planner-offline",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-3", "D:\\Usuário\\Isaac Sotero\\Documents\\ENAMED\\tools\\offline_server.py", "8765"],
+      "port": 8765
+    },
+    {
+      "name": "planner-repo-dev",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-3", "-m", "http.server", "8766"],
+      "port": 8766
+    }
+  ]
+}
