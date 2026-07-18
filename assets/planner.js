@@ -104,6 +104,7 @@ let cloudDirty = false;
 let cloudRevision = 0;
 let lastCloudSyncAt = 0;
 let cloudSyncPoll = null;
+let serverClockOffsetMs = 0;
 let cloudBackups = [];
 let cloudBackupsLoading = false;
 let cloudBackupsReady = false;
@@ -883,6 +884,15 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   return merged;
 }
 function timestampOf(value) { return Date.parse(value || '') || 0; }
+// PC e celular podem ter relogios dessincronizados; sem isso, o merge por
+// "quem tem o updatedAt mais novo" pode escolher errado (o aparelho com o
+// relogio adiantado sempre "vence", mesmo com a edicao mais antiga).
+function updateServerClockOffset(serverIso) {
+  const serverAt = Date.parse(serverIso || '');
+  if(!serverAt) return;
+  serverClockOffsetMs = serverAt - Date.now();
+}
+function nowIso() { return new Date(Date.now() + serverClockOffsetMs).toISOString(); }
 function mergeVideoPlayerState(remotePlayer={}, localPlayer={}, preferLocal=false) {
   const remote = remotePlayer && typeof remotePlayer === 'object' ? remotePlayer : {};
   const local = localPlayer && typeof localPlayer === 'object' ? localPlayer : {};
@@ -961,6 +971,7 @@ async function pushCloudState() {
   setSyncStatus('Sincronizando...', 'busy');
   const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
   const remoteAt = Date.parse(remoteRow?.updated_at || '') || 0;
+  if(remoteRow?.updated_at) updateServerClockOffset(remoteRow.updated_at);
   if(!remoteError && remoteRow?.data && remoteAt > lastCloudSyncAt) {
     state = mergePlannerActivityState(remoteRow.data, state, true);
     ensureDayLogs();
@@ -983,6 +994,7 @@ async function pushCloudState() {
     // relogio deste aparelho aqui, ou comparacoes entre aparelhos com relogios
     // dessincronizados podem falhar silenciosamente (ver migracao
     // 20260718_planner_states_server_updated_at.sql).
+    if(savedRow?.updated_at) updateServerClockOffset(savedRow.updated_at);
     lastCloudSyncAt = Date.parse(savedRow?.updated_at || '') || Date.now();
     if(cloudDirty) {
       setSyncStatus('Alterações pendentes', 'busy');
@@ -1017,6 +1029,7 @@ async function pullCloudState({ firstLogin=false }={}) {
     return;
   }
   const remoteAt = Date.parse(data?.updated_at || '') || 0;
+  if(data?.updated_at) updateServerClockOffset(data.updated_at);
   if(!firstLogin && remoteAt && remoteAt <= lastCloudSyncAt) {
     setSyncStatus(`Sincronizado ${new Date(lastCloudSyncAt || remoteAt).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
     return;
@@ -4005,7 +4018,7 @@ function queueMaterialEditSave(doc,markdown) {
   const meta=materialEditMeta(doc.id);
   meta.edited=true;
   meta.content=markdown;
-  meta.updatedAt=new Date().toISOString();
+  meta.updatedAt=nowIso();
   const status=document.getElementById('materialAutosave');
   if(status) status.textContent='Salvando...';
   clearTimeout(materialEditSaveTimers.get(doc.id));
@@ -4132,7 +4145,7 @@ async function restoreOriginalMaterial(doc) {
   const meta=materialEditMeta(doc.id);
   meta.edited=false;
   meta.content='';
-  meta.updatedAt=new Date().toISOString();
+  meta.updatedAt=nowIso();
   ui.materialEditMode=false;
   saveStateOnly();
   renderMateriais();
