@@ -77,7 +77,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -528,7 +528,7 @@ function scheduleForQuestion(question) {
   return sameBlock.find(item => candidates.includes(canonicalTopic(item.topic)))
     || sameBlock.find(item => candidates.some(candidate => {
       const topic = canonicalTopic(item.topic);
-      return candidate.length >= 6 && (topic.includes(candidate) || candidate.includes(topic));
+      return candidate.length >= 12 && (topic.includes(candidate) || candidate.includes(topic));
     }))
     || null;
 }
@@ -3696,7 +3696,7 @@ function renderAnalysisBars(groups,emptyText) {
 function openQuestionFromAnalysis(questionId) {
   const question=questionBank.find(item=>item.id===questionId);
   if(!question) return;
-  ui.tab='questoes'; ui.qFocusScheduleId=''; ui.qBlock=question.collectionBlock!==undefined?String(question.collectionBlock):'Todos'; ui.qSource='Todas'; ui.qTopic=question.topic || 'Todos'; ui.qStatus='Todas'; ui.justAnsweredId='';
+  ui.tab='questoes'; ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=question.collectionBlock!==undefined?String(question.collectionBlock):'Todos'; ui.qSource='Todas'; ui.qTopic=question.topic || 'Todos'; ui.qStatus='Todas'; ui.justAnsweredId='';
   const list=filteredQuestions(); ui.qIndex=Math.max(0,list.findIndex(item=>item.id===questionId)); render();
 }
 function renderAnalise() {
@@ -6318,6 +6318,7 @@ function applyQuestionEdits(question) {
 function resetQuestionBrowser({status='Todas'}={}) {
   ui.qFocusScheduleId='';
   ui.qFocusTarget=0;
+  ui.qFocusQuestionIds=[];
   ui.qBlock='Todos';
   ui.qSource='Todas';
   ui.qTopic='Todos';
@@ -6348,6 +6349,7 @@ function openQuestionsForSchedule(scheduleId) {
   const linked = linkedByTopic.length ? linkedByTopic : direct;
   ui.tab = 'questoes';
   ui.qFocusScheduleId = linked.length ? item.id : '';
+  ui.qFocusQuestionIds = linked.map(question => question.id);
   ui.qBlock = item.block ? String(item.block) : 'Todos';
   ui.qSource = 'Todas';
   ui.qTopic = 'Todos';
@@ -6376,7 +6378,8 @@ function openFlashcardsForSchedule(scheduleId) {
   render();
 }
 function filteredQuestions() {
-  const cacheKey = JSON.stringify([ui.qFocusScheduleId || '', ui.qBlock, ui.qSource, ui.qTopic, ui.qStatus, normalizedTopic(ui.qSearch || ''), ui.justAnsweredId || '', n(ui.qFocusTarget), questionBank.length]);
+  const focusQuestionIds = new Set(Array.isArray(ui.qFocusQuestionIds) ? ui.qFocusQuestionIds : []);
+  const cacheKey = JSON.stringify([ui.qFocusScheduleId || '', [...focusQuestionIds], ui.qBlock, ui.qSource, ui.qTopic, ui.qStatus, normalizedTopic(ui.qSearch || ''), ui.justAnsweredId || '', n(ui.qFocusTarget), questionBank.length]);
   if(renderCache.questionFilterKey === cacheKey && Array.isArray(renderCache.questionFilterResults)) return renderCache.questionFilterResults;
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   const filtered = questionBank.filter(question => {
@@ -6390,7 +6393,7 @@ function filteredQuestions() {
       ...(Array.isArray(question.tags) ? question.tags : [])
     ].filter(Boolean).join(' '));
     const searchOk = !query || searchable.includes(query);
-    const focusOk = !ui.qFocusScheduleId || questionMatchesSchedule(question, focusItem);
+    const focusOk = !ui.qFocusScheduleId || (focusQuestionIds.size ? focusQuestionIds.has(question.id) : questionMatchesSchedule(question, focusItem));
     const blockOk = ui.qBlock === 'Todos' || String(question.collectionBlock) === String(ui.qBlock);
     const sourceOk = ui.qSource === 'Todas' || question.sourceLabel === ui.qSource;
     const topicOk = ui.qTopic === 'Todos' || question.topic === ui.qTopic;
@@ -6477,6 +6480,7 @@ function persistQuestionView() {
     qIndex: ui.qIndex,
     qQuestionId: ui.qQuestionId || '',
     qFocusScheduleId: ui.qFocusScheduleId || '',
+    qFocusQuestionIds: Array.isArray(ui.qFocusQuestionIds) ? ui.qFocusQuestionIds : [],
     qFocusTarget: n(ui.qFocusTarget) || 0
   }));
 }
@@ -6565,11 +6569,11 @@ function renderQuestionBank() {
     </aside>
     <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : '<div class="empty">Nenhuma questão corresponde a este filtro.</div>'}</div>
   </div>`;
-  document.getElementById('questionBlock').onchange = e => { ui.qFocusScheduleId=''; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  document.getElementById('questionBlock').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('collapseQuestionSidebar').onclick = () => setQuestionFocusMode(true);
   document.getElementById('questionFocusToggle')?.addEventListener('click', () => setQuestionFocusMode(!questionSidebarCollapsed));
-  document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
-  document.getElementById('questionTopic').onchange = e => { ui.qFocusScheduleId=''; ui.qTopic=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  document.getElementById('questionTopic').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qTopic=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionStatus').onchange = e => { ui.qStatus=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   const questionSearch = document.getElementById('questionSearch');
   questionSearch.oninput = e => {
@@ -6578,7 +6582,7 @@ function renderQuestionBank() {
     clearTimeout(questionSearchRenderTimer);
     questionSearchRenderTimer = setTimeout(refreshQuestionSearchResults,140);
   };
-  document.getElementById('showQuestionIssues').onclick = () => { ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qSearch=''; ui.qFocusScheduleId=''; ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); };
+  document.getElementById('showQuestionIssues').onclick = () => { ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qSearch=''; ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); };
   document.getElementById('clearQuestionIssues')?.addEventListener('click', () => {
     if(!confirm(`Limpar as ${flagged} marcações de gabarito suspeito?`)) return;
     questionBank.forEach(question => {
@@ -6589,8 +6593,8 @@ function renderQuestionBank() {
     ui.qStatus='Todas'; ui.qIndex=0; ui.justAnsweredId=''; persist();
   });
   const clearFocus = document.getElementById('clearQuestionFocus');
-  if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qFocusTarget=0; ui.qQuestionId=''; ui.qIndex=0; render(); };
-  document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusTarget=0; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
+  if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qQuestionId=''; ui.qIndex=0; render(); };
+  document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
   bindQuestionTagFilters();
   bindQuestionActions(questions, activeQuestion);
   if(questionSidebarCollapsed && activeQuestion && !autoStudyIsRunning('questions')) startAutoStudy('questions',scheduleForQuestion(activeQuestion)?.id || '',60);
@@ -6689,6 +6693,8 @@ function openIncorporatedQuestion(questionId) {
   ui.qQuestionId = question.id;
   ui.qIndex = 0;
   ui.qFocusScheduleId = '';
+  ui.qFocusQuestionIds = [];
+  ui.qFocusTarget = 0;
   render();
 }
 function deleteIncorporatedQuestion(questionId) {
@@ -7767,7 +7773,8 @@ function persistQuestionTimerSession() {
       qTopic:ui.qTopic,
       qStatus:ui.qStatus,
       qIndex:ui.qIndex,
-      qFocusScheduleId:ui.qFocusScheduleId || ''
+      qFocusScheduleId:ui.qFocusScheduleId || '',
+      qFocusQuestionIds:Array.isArray(ui.qFocusQuestionIds)?ui.qFocusQuestionIds:[]
     }
   }));
 }
