@@ -959,7 +959,12 @@
           id: 't2', title: 'O papel: quadradinhos, tempo e voltagem', level: 'leigo',
           base: 'O ECG é impresso num papel quadriculado que anda a uma velocidade fixa. Como a velocidade é conhecida, a distância no papel vira tempo, e a altura vira voltagem (força do sinal). É isso que permite medir tudo.',
           deep: 'Padrão: 25 mm/s e 10 mm/mV. Então 1 quadradinho (1 mm) = 0,04 s na horizontal e 0,1 mV na vertical. 1 quadradão (5 mm) = 0,20 s. A marca de calibração no início do traçado (um "degrau" de 10 mm) confirma o ganho. Use a régua digital do simulador para praticar essas medidas.',
-          demo: 'sinus_normal', measure: true
+          demo: 'sinus_normal', measure: true,
+          realImages: [
+            { src: 'calibracao-1.jpg', caption: 'Traçado real: repare no retângulo de calibração antes do início das derivações, e nas marcas "25 mm/s" e "10 mm/mV" no rodapé.' },
+            { src: 'calibracao-2.jpg', caption: 'Outro registro real — mesma lógica de calibração e velocidade, aparelho diferente.' },
+            { src: 'calibracao-3.jpg', caption: 'Compare a densidade da grade: quadradinhos pequenos (1 mm) e quadradões (5 mm) formando os blocos maiores.' },
+          ]
         },
         {
           id: 't3', title: 'As três ondas: P, QRS e T', level: 'leigo',
@@ -977,7 +982,14 @@
           id: 't5', title: 'As 12 derivações: as câmeras do coração', level: 'basico',
           base: 'Cada derivação enxerga o coração de um ângulo. As das pernas/braços (DI, DII, DIII, aVR, aVL, aVF) olham no plano vertical; as do peito (V1 a V6) olham no plano horizontal, do lado direito ao esquerdo.',
           deep: 'Inferior: DII, DIII, aVF. Lateral: DI, aVL, V5, V6. Anterosseptal: V1–V4. aVR olha "de dentro/de cima" e por isso é quase tudo negativo no normal. Saber qual derivação vê qual parede é o que permite localizar um infarto.',
-          demo: 'sinus_normal'
+          demo: 'sinus_normal',
+          realImages: [
+            { src: 'eletrodos-1.jpg', caption: 'Registro real de 12 derivações após posicionamento correto dos eletrodos — repare como cada uma tem uma morfologia própria do mesmo batimento.' },
+            { src: 'eletrodos-2.jpg', caption: 'Outro exemplo real — compare a polaridade de aVR (quase tudo negativo) com as demais.' },
+            { src: 'eixo-1.jpg', caption: 'Para estimar o eixo, compare a polaridade do QRS em DI e aVF — isso é possível porque cada derivação vê o coração de um ângulo diferente.' },
+            { src: 'eixo-2.jpg', caption: 'Outro traçado real para praticar a leitura de polaridade entre derivações.' },
+            { src: 'eixo-3.jpg', caption: 'Terceiro exemplo — quanto mais positivo o QRS numa derivação, mais o vetor elétrico aponta na direção dela.' },
+          ]
         },
       ]
     },
@@ -988,13 +1000,24 @@
           id: 't6', title: 'Frequência cardíaca', level: 'basico',
           base: 'Frequência é quantas batidas por minuto. O jeito rápido: conte os quadradões entre duas batidas (dois QRS) e divida 300 por esse número.',
           deep: 'Regra dos 300: 300 ÷ (nº de quadradões entre RR). Alternativa para ritmos irregulares: conte os QRS em 6 segundos (30 quadradões) e multiplique por 10. Normal: 60–100 bpm. <60 bradicardia, >100 taquicardia.',
-          demo: 'sinus_normal', measure: true
+          demo: 'sinus_normal', measure: true,
+          realImages: [
+            { src: 'frequencia-1.jpg', caption: 'Traçado real: conte os quadradões entre dois QRS consecutivos e aplique 300 ÷ n.' },
+            { src: 'frequencia-2.jpg', caption: 'Outro exemplo — o aparelho mostra o valor calculado (bpm), tente confirmar contando você mesmo.' },
+            { src: 'frequencia-2-zoom.jpg', caption: 'Zoom no intervalo RR do traçado anterior, para facilitar a contagem dos quadradinhos.' },
+          ]
         },
         {
           id: 't7', title: 'Ritmo e regularidade', level: 'basico',
           base: 'Antes de nomear qualquer coisa: as batidas são regulares (espaçadas igualzinho) ou irregulares? E vêm de onde — do "marca-passo natural" (nó sinusal) ou de outro lugar?',
           deep: 'Ritmo sinusal = P positiva em DII antes de cada QRS, com FC 60–100 e RR regular. Irregularmente irregular sem P = pense em fibrilação atrial. Compare o traçado normal com a FA no modo Explorar para sentir a diferença.',
-          demo: 'sinus_normal'
+          demo: 'sinus_normal',
+          realImages: [
+            { src: 'ritmo-1.jpg', caption: 'Traçado real: procure a onda P antes de cada QRS, com a mesma morfologia em todos os batimentos — ritmo sinusal.' },
+            { src: 'ritmo-2.jpg', caption: 'Outro exemplo de ritmo sinusal — confirme o RR regular.' },
+            { src: 'ritmo-3.jpg', caption: 'Terceiro traçado real para praticar o reconhecimento da onda P sinusal.' },
+            { src: 'ritmo-4.jpg', caption: 'Quarto exemplo — compare a morfologia da P nas diferentes derivações.' },
+          ]
         },
         {
           id: 't8', title: 'O método dos 19 passos', level: 'basico',
@@ -1154,6 +1177,15 @@
     .ecg-table{width:100%;border-collapse:collapse;font-size:13px;color:var(--ink)}
     .ecg-table th,.ecg-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line,#eef1f7)}
     .ecg-table th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted,#5b6472)}
+    .ecg-real-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+    .ecg-real-item{margin:0;border:1px solid var(--line,#dce1ec);border-radius:10px;overflow:hidden;cursor:zoom-in;background:var(--panel,#fff)}
+    .ecg-real-item img{display:block;width:100%;height:140px;object-fit:cover;object-position:top}
+    .ecg-real-item figcaption{padding:8px 10px;font-size:12px;line-height:1.4}
+    .ecg-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:2000;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+    .ecg-lightbox.open{display:flex}
+    .ecg-lightbox img{max-width:100%;max-height:78vh;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+    .ecg-lightbox-cap{position:absolute;left:0;right:0;bottom:0;padding:14px 20px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);color:#fff;font-size:13px;text-align:center}
+    .ecg-lightbox-close{position:absolute;top:16px;right:20px;background:rgba(255,255,255,.12);border:0;color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer}
     `;
     document.head.appendChild(style);
   }
@@ -1360,6 +1392,25 @@
     return html;
   }
 
+  // Galeria "traçados reais" (scans de ECGs reais do material de estudo do usuário,
+  // usados apenas no app privado dele para comparação com os traçados sintéticos).
+  const REAL_IMG_BASE = 'assets/ecg-real/';
+  function realGallery(lesson) {
+    const imgs = lesson.realImages;
+    if (!imgs || !imgs.length) return '';
+    return `<div class="ecg-card">
+      <h3 style="margin:0 0 4px;font-size:15px">Traçados reais para comparar</h3>
+      <p class="ecg-muted" style="margin:0 0 10px">Registros reais (material de estudo pessoal) — o sintético acima é limpo/idealizado; estes têm o ruído e a variação de um exame de verdade. Toque para ampliar.</p>
+      <div class="ecg-real-grid">
+        ${imgs.map((im, i) => `<figure class="ecg-real-item" data-ecg-real-open="${esc(im.src)}" data-ecg-real-caption="${escapeAttrLocal(im.caption)}">
+          <img src="${REAL_IMG_BASE}${esc(im.src)}" alt="${escapeAttrLocal(im.caption)}">
+          <figcaption class="ecg-muted">${esc(im.caption)}</figcaption>
+        </figure>`).join('')}
+      </div>
+    </div>`;
+  }
+  function escapeAttrLocal(s) { return esc(s).replace(/"/g, '&quot;'); }
+
   function viewLesson(lesson) {
     const S = st();
     const idx = TRILHA_LESSONS.findIndex((l) => l.id === lesson.id);
@@ -1386,6 +1437,7 @@
       <p style="margin:0">${esc(lesson.deep)}</p>
       ${actions ? `<div class="ecg-conf" style="margin-top:14px">${actions}</div>` : ''}
     </div>
+    ${realGallery(lesson)}
     ${quiz.length ? `<div class="ecg-card"><h3 style="margin:0 0 6px;font-size:15px">Praticar agora</h3><p class="ecg-muted" style="margin:0 0 10px">Fixe com um treino rápido dos padrões desta lição.</p><button class="ecg-btn" data-ecg-lesson-quiz="${quiz.join(',')}">Treinar (${quiz.length})</button></div>` : ''}
     <div class="ecg-toolbar" style="margin-top:4px">
       ${prev ? `<button class="ecg-btn ghost" data-ecg-lesson="${prev.id}">← Anterior</button>` : ''}
@@ -1789,8 +1841,29 @@
   function openCondition(id, viewer) {
     const S = st(); S.ui.sub = 'banco'; S.ui.bankId = id; S.ui.viewer = viewer || null; S.ui.lesson = null; save(); mountBody();
   }
+  // Lightbox de imagens reais: abre/fecha, independente do mountBody (fica fora de .ecg-body)
+  function setupLightbox(container) {
+    const box = container.querySelector('[data-ecg-lightbox]');
+    const img = container.querySelector('[data-ecg-lightbox-img]');
+    const cap = container.querySelector('[data-ecg-lightbox-cap]');
+    const closeBtn = container.querySelector('[data-ecg-lightbox-close]');
+    if (!box) return;
+    const close = () => { box.classList.remove('open'); img.src = ''; };
+    box.onclick = (e) => { if (e.target === box) close(); };
+    if (closeBtn) closeBtn.onclick = close;
+    container._openLightbox = (src, caption) => {
+      img.src = REAL_IMG_BASE + src;
+      img.alt = caption || '';
+      cap.textContent = caption || '';
+      box.classList.add('open');
+    };
+  }
   function wireBody() {
     const el = root();
+    el.querySelectorAll('[data-ecg-real-open]').forEach((fig) => (fig.onclick = () => {
+      const opener = root()._openLightbox;
+      if (opener) opener(fig.dataset.ecgRealOpen, fig.dataset.ecgRealCaption);
+    }));
     el.querySelectorAll('[data-ecg-sub]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.viewer = null; S.ui.bankId = null; S.ui.lesson = null; S._quiz = null; go(b.dataset.ecgSub); }));
     el.querySelectorAll('[data-ecg-sub-go]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.viewer = null; S.ui.bankId = null; S.ui.lesson = null; go(b.dataset.ecgSubGo); }));
     el.querySelectorAll('[data-ecg-open]').forEach((b) => (b.onclick = () => openCondition(b.dataset.ecgOpen, null)));
@@ -1862,9 +1935,15 @@
       </div>
       ${subnav()}
       <div class="ecg-body"></div>
+      <div class="ecg-lightbox" data-ecg-lightbox>
+        <button class="ecg-lightbox-close" data-ecg-lightbox-close aria-label="Fechar">✕</button>
+        <img data-ecg-lightbox-img src="" alt="">
+        <div class="ecg-lightbox-cap" data-ecg-lightbox-cap></div>
+      </div>
     </div>`;
     // subnav (fora do body para persistir estado ativo)
     container.querySelectorAll('.ecg-subnav button').forEach((b) => (b.onclick = () => { const s = st(); s.ui.viewer = null; s.ui.bankId = null; s.ui.lesson = null; s._quiz = null; go(b.dataset.ecgSub); }));
+    setupLightbox(container);
     maybeAutoRevisao();
     mountBody();
     // redesenhar canvases ao redimensionar

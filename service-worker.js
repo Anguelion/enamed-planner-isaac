@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v119';
+const CACHE_NAME = 'soqueromed-shell-v121';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -7,7 +7,7 @@ const APP_SHELL = [
   './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-4',
   './assets/planner-ux.js?v=20260716-3',
-  './assets/ecg-simulator.js?v=20260719-2',
+  './assets/ecg-simulator.js?v=20260719-4',
   './assets/planner.js?v=20260716-90',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
@@ -32,6 +32,21 @@ const APP_SHELL = [
   ,'./assets/rpg/classes/rei.png'
   ,'./assets/rpg/classes/imperador.png'
   ,'./data/prescription_catalog.json'
+  ,'./assets/ecg-real/eletrodos-1.jpg'
+  ,'./assets/ecg-real/eletrodos-2.jpg'
+  ,'./assets/ecg-real/eixo-1.jpg'
+  ,'./assets/ecg-real/eixo-2.jpg'
+  ,'./assets/ecg-real/eixo-3.jpg'
+  ,'./assets/ecg-real/calibracao-1.jpg'
+  ,'./assets/ecg-real/calibracao-2.jpg'
+  ,'./assets/ecg-real/calibracao-3.jpg'
+  ,'./assets/ecg-real/ritmo-1.jpg'
+  ,'./assets/ecg-real/ritmo-2.jpg'
+  ,'./assets/ecg-real/ritmo-3.jpg'
+  ,'./assets/ecg-real/ritmo-4.jpg'
+  ,'./assets/ecg-real/frequencia-1.jpg'
+  ,'./assets/ecg-real/frequencia-2.jpg'
+  ,'./assets/ecg-real/frequencia-2-zoom.jpg'
 ];
 
 self.addEventListener('install', event => {
