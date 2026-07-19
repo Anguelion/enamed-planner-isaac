@@ -659,6 +659,9 @@
       realImages: [
         { src: 'rbbb-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 90 bpm, eixo -10°, bloqueio do ramo direito.' },
         { src: 'rbbb-2.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo 0°, bloqueio do ramo direito.' },
+        { src: 'rbbb-3.jpg', caption: 'Caso real: ritmo sinusal, FC 70 bpm, eixo +80°, distúrbio de condução pelo ramo direito.' },
+        { src: 'rbbb-4.jpg', caption: 'Caso real: ritmo sinusal, FC 85 bpm, eixo +10°, BRD.' },
+        { src: 'rbbb-5.jpg', caption: 'Caso real: ritmo sinusal, FC 65 bpm, eixo 0°, distúrbio de condução pelo ramo direito.' },
       ]
     },
     {
@@ -682,6 +685,9 @@
       realImages: [
         { src: 'lbbb-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 90 bpm, eixo -40°, BRE, extrassístoles ventriculares frequentes.' },
         { src: 'lbbb-2.jpg', caption: 'Caso real: ritmo sinusal, FC 85 bpm, eixo -30°, BRE.' },
+        { src: 'lbbb-3.jpg', caption: 'Caso real: ritmo sinusal, FC 65 bpm, eixo 0°, BRE.' },
+        { src: 'lbbb-4.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo +50°, BRE.' },
+        { src: 'lbbb-5.jpg', caption: 'Caso real: ritmo sinusal, FC 70 bpm, eixo +10°, distúrbio de condução pelo ramo esquerdo.' },
       ]
     },
     {
@@ -834,6 +840,8 @@
         { src: 'lvh-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 75 bpm, eixo -30°, sobrecarga atrial esquerda, sobrecarga de VE com strain.' },
         { src: 'lvh-2.jpg', caption: 'Caso real: ritmo sinusal, FC 100 bpm, sobrecarga atrial direita e esquerda, sobrecarga de VE com strain.' },
         { src: 'lvh-3.jpg', caption: 'Caso real: bradicardia sinusal, FC 46 bpm, eixo -10°, sobrecarga atrial esquerda, sobrecarga de VE com strain.' },
+        { src: 'lvh-4.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo -20°, sobrecarga de VE com strain, extrassístoles atriais.' },
+        { src: 'lvh-5.jpg', caption: 'Caso real: ritmo sinusal, FC média 80 bpm, eixo +70°, sobrecarga de VE com strain.' },
       ]
     },
     {
