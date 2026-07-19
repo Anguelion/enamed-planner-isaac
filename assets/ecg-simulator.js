@@ -391,7 +391,12 @@
         ddx: ['Taquicardia atrial (P de morfologia diferente)', 'Ritmo atrial ectópico'],
         armadilhas: ['Ver "muita doença" em todo ECG — o normal é a referência.'],
         conduta: ['Nenhuma. Referência de normalidade.'], ref: 'Referência de normalidade.'
-      }
+      },
+      realImages: [
+        { src: 'normal-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 75 bpm, eixo +30°, ECG normal.' },
+        { src: 'normal-2.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo +60°, ECG normal.' },
+        { src: 'normal-3.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo 0°, ECG normal.' },
+      ]
     },
     {
       id: 'sinus_brady', name: 'Bradicardia sinusal', category: 'Ritmos sinusais', level: 1,
@@ -405,7 +410,10 @@
         ddx: ['BAV de alto grau (dissociação P-QRS)', 'Ritmo juncional (P ausente/retrógrada)'],
         armadilhas: ['Bradicardia fisiológica em atletas x patológica sintomática.'],
         conduta: ['Assintomático: observar.', 'Instável (hipotensão, síncope): atropina, considerar marca-passo (algoritmo de bradicardia).'], ref: 'AHA ACLS Bradicardia.'
-      }
+      },
+      realImages: [
+        { src: 'bradi-1.jpg', caption: 'Caso real (material de estudo pessoal): bradicardia sinusal, FC 34 bpm, eixo -30°.' },
+      ]
     },
     {
       id: 'sinus_tachy', name: 'Taquicardia sinusal', category: 'Ritmos sinusais', level: 1,
@@ -419,7 +427,10 @@
         ddx: ['Flutter 2:1 (FC ~150 fixa)', 'Taquicardia atrial', 'TSV'],
         armadilhas: ['É quase sempre secundária — procure a causa (dor, febre, hipovolemia, TEP, anemia, hipertireoidismo).'],
         conduta: ['Tratar a causa de base, não a FC isoladamente.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'taqui-1.jpg', caption: 'Caso real (material de estudo pessoal): taquicardia sinusal, FC 130 bpm, eixo +70°.' },
+      ]
     },
     {
       id: 'afib', name: 'Fibrilação atrial', category: 'Ritmos atriais', level: 2,
@@ -434,7 +445,11 @@
         ddx: ['Flutter com condução variável', 'Taquicardia atrial multifocal (≥3 morfologias de P)', 'Artefato'],
         armadilhas: ['FA pré-excitada (WPW): irregular, largo e MUITO rápido — não usar bloqueador do nó AV.', 'Confirmação exige interpretação visual do traçado.'],
         conduta: ['Instável: cardioversão elétrica sincronizada.', 'Estável: controle de FC (betabloqueador/BCC), anticoagulação por risco (CHA₂DS₂-VASc).'], ref: 'Diretriz de FA.'
-      }
+      },
+      realImages: [
+        { src: 'afib-mod1-1.jpg', caption: 'Caso real (material de estudo pessoal): fibrilação atrial, FC média 80 bpm, eixo 0°, distúrbios secundários da repolarização ventricular nas paredes lateral alta e anterior.' },
+        { src: 'afib-mod1-2.jpg', caption: 'Caso real: fibrilação atrial, FC média 80 bpm, eixo -30°.' },
+      ]
     },
     {
       id: 'flutter', name: 'Flutter atrial (2:1)', category: 'Ritmos atriais', level: 2,
@@ -537,7 +552,11 @@
         ddx: ['BAV 2º grau (aqui não há P bloqueada)'],
         armadilhas: ['Isolado costuma ser benigno.'],
         conduta: ['Assintomático: observar.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'avb1-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 65 bpm, BAV do 1º grau (PR 0,32 s).' },
+        { src: 'avb1-2.jpg', caption: 'Caso real: ritmo sinusal, FC 60 bpm, BAV do 1º grau (PR 0,28 s).' },
+      ]
     },
     {
       id: 'mobitz1', name: 'BAV 2º grau Mobitz I (Wenckebach)', category: 'Distúrbios de condução', level: 3,
@@ -613,7 +632,11 @@
         ddx: ['BRD incompleto (QRS 110–120 ms)', 'Padrão de Brugada (avaliar V1-V2 elevadas)'],
         armadilhas: ['BRD não impede a leitura de isquemia (ao contrário do BRE).'],
         conduta: ['Isolado: sem tratamento específico; contextualizar (novo BRD + dor torácica pode indicar isquemia/TEP).'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'rbbb-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 90 bpm, eixo -10°, bloqueio do ramo direito.' },
+        { src: 'rbbb-2.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo 0°, bloqueio do ramo direito.' },
+      ]
     },
     {
       id: 'lbbb', name: 'Bloqueio de ramo esquerdo', category: 'Distúrbios de condução', level: 2,
@@ -632,7 +655,11 @@
         ddx: ['Ritmo de marca-passo (espícula precede QRS)', 'IAM com BRE'],
         armadilhas: ['BRE mascara isquemia → usar critérios de Sgarbossa (concordância de ST, ou discordância desproporcional).'],
         conduta: ['Novo BRE + dor torácica: aplicar Sgarbossa; tratar como possível IAM.'], ref: 'Sgarbossa.'
-      }
+      },
+      realImages: [
+        { src: 'lbbb-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 90 bpm, eixo -40°, BRE, extrassístoles ventriculares frequentes.' },
+        { src: 'lbbb-2.jpg', caption: 'Caso real: ritmo sinusal, FC 85 bpm, eixo -30°, BRE.' },
+      ]
     },
     {
       id: 'stemi_inf', name: 'IAM com supra — parede inferior', category: 'Isquemia e infarto', level: 3,
@@ -737,7 +764,11 @@
         ddx: ['BRE/BRD', 'Isquemia (pseudo-Q por delta negativa)'],
         armadilhas: ['FA em WPW: cuidado — bloqueadores do nó AV podem acelerar a via acessória (usar cardioversão/procainamida).'],
         conduta: ['Assintomático: acompanhamento.', 'Taquiarritmia: conforme mecanismo; encaminhar para estudo eletrofisiológico/ablação.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'wpw-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 60 bpm, eixo +30°, PR curto (0,08 s), onda delta, pré-excitação ventricular (WPW).' },
+        { src: 'wpw-2.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo +50°, PR curto, onda delta, WPW.' },
+      ]
     },
     {
       id: 'pe_s1q3t3', name: 'TEP — sobrecarga aguda de VD (S1Q3T3)', category: 'Pericárdio/pulmão/sistêmico', level: 4,
@@ -775,7 +806,12 @@
         ddx: ['Alta voltagem do jovem magro (sem strain)', 'BRE'],
         armadilhas: ['ECG sugere, mas confirmação de hipertrofia é ecocardiográfica.', 'Strain pode simular/ mascarar isquemia.'],
         conduta: ['Investigar causa (HAS, valvopatia); ecocardiograma.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'lvh-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC 75 bpm, eixo -30°, sobrecarga atrial esquerda, sobrecarga de VE com strain.' },
+        { src: 'lvh-2.jpg', caption: 'Caso real: ritmo sinusal, FC 100 bpm, sobrecarga atrial direita e esquerda, sobrecarga de VE com strain.' },
+        { src: 'lvh-3.jpg', caption: 'Caso real: bradicardia sinusal, FC 46 bpm, eixo -10°, sobrecarga atrial esquerda, sobrecarga de VE com strain.' },
+      ]
     },
     {
       id: 'low_voltage', name: 'Baixa voltagem', category: 'Pericárdio/pulmão/sistêmico', level: 2,
