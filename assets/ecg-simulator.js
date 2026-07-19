@@ -565,7 +565,15 @@
         ddx: ['Mobitz I (PR crescente)'],
         armadilhas: ['Infra-Hissiano → risco de BAVT/assistolia. Não confiar em atropina.'],
         conduta: ['Marca-passo (transcutâneo/transvenoso → definitivo).'], ref: 'AHA Bradicardia.'
-      }
+      },
+      realImages: [
+        { src: 'mobitz2-real-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal, FC média 60 bpm, BAV 2º grau Mobitz II.' },
+        { src: 'mobitz2-real-2.jpg', caption: 'Caso real: ritmo sinusal, FC média 80 bpm, BAV 2º grau Mobitz II.' },
+        { src: 'mobitz2-real-3.jpg', caption: 'Caso real: ritmo sinusal, FC média 60 bpm, BAV 2º grau Mobitz II.' },
+        { src: 'bav21-1.jpg', caption: 'Caso real — variante próxima: BAV 2º grau 2:1, FC ventricular ~40 bpm (baixo). O bloqueio 2:1 não permite diferenciar Mobitz I de II só pelo traçado — o contexto (QRS largo, resposta a esforço) ajuda.' },
+        { src: 'bav21-2.jpg', caption: 'Caso real — BAV 2:1: ritmo sinusal, FC média 37 bpm, BAV 2º grau 2:1 (baixo).' },
+        { src: 'bav21-3.jpg', caption: 'Caso real — BAV 2:1: ritmo sinusal, FC 37 bpm, BAV 2º grau 2:1 (baixo).' },
+      ]
     },
     {
       id: 'cavt', name: 'BAV total (3º grau)', category: 'Distúrbios de condução', level: 3,
@@ -579,7 +587,14 @@
         ddx: ['Dissociação AV isorrítmica', 'BAV avançado'],
         armadilhas: ['Não é o mesmo que "PR longo" — as ondas P marcham independentes dos QRS.'],
         conduta: ['Marca-passo (transcutâneo de imediato se instável → definitivo). Atropina costuma falhar em escape ventricular.'], ref: 'AHA Bradicardia.'
-      }
+      },
+      realImages: [
+        { src: 'bavt-1.jpg', caption: 'Caso real (material de estudo pessoal): BAVT, frequência ventricular 34 bpm (baixo).' },
+        { src: 'bavt-2.jpg', caption: 'Caso real: BAVT, frequência ventricular 34 bpm (baixo).' },
+        { src: 'bavt-3.jpg', caption: 'Caso real: BAVT, frequência ventricular 37 bpm (baixo).' },
+        { src: 'bavt-4.jpg', caption: 'Caso real: BAVT, frequência ventricular 37 bpm (baixo).' },
+        { src: 'bavt-5.jpg', caption: 'Caso real: BAVT, frequência ventricular 37 bpm (baixo).' },
+      ]
     },
     {
       id: 'rbbb', name: 'Bloqueio de ramo direito', category: 'Distúrbios de condução', level: 2,

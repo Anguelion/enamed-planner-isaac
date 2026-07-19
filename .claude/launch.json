@@ -24,12 +24,6 @@
       "runtimeExecutable": "py",
       "runtimeArgs": ["-3", "-m", "http.server", "8794"],
       "port": 8794
-    },
-    {
-      "name": "planner-verify",
-      "runtimeExecutable": "py",
-      "runtimeArgs": ["-3", "-m", "http.server", "8799"],
-      "port": 8799
     }
   ]
 }
