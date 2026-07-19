@@ -120,15 +120,13 @@ const views = [
   ['painel','Dashboard','dashboard'],
   ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['materiais','Materiais','materials'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'], ['caderno-erros','Caderno de erros','question'],
   ['aulas','Aulas','video'], ['questoes','Questões','question'], ['flashcards','Flashcards','flashcard'], ['simulados','Simulados','simulation'], ['importar-questoes','Adicionar questões','upload'],
-  ['prescricao','Prescrição','prescription'],
-  ['ecg','ECG','medical'],
+  ['prescricao','Prescrição','prescription'], ['ecg','ECG','medical'], ['radiografia','Radiografia','materials'],
   ['feynman','Feynman','feynman'], ['ferramentas','Ferramentas','settings']
 ];
 const VIEW_GROUPS = {
   cronograma:'Meus estudos', pendencias:'Meus estudos', materiais:'Meus estudos', historico:'Meus estudos', areas:'Meus estudos', analise:'Meus estudos', 'caderno-erros':'Meus estudos',
   aulas:'Conteúdo', questoes:'Conteúdo', flashcards:'Conteúdo', simulados:'Conteúdo',
-  prescricao:'Habilidade',
-  ecg:'ECG',
+  prescricao:'Habilidade', ecg:'Habilidade', radiografia:'Habilidade',
   'importar-questoes':'Conteúdo', feynman:'Outros', ferramentas:'Outros'
 };
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
@@ -2991,7 +2989,15 @@ function bindCadernoErros() {
   });
 }
 function renderEcg() {
-  document.getElementById('ecg').innerHTML = `<section class="card"><div class="section-title"><div><span class="eyebrow">Em construção</span><h2>Estudo de ECG</h2></div></div><p class="muted">Essa aba vai reunir um jogo de reconhecimento de padrões, treino de leitura e questionários de interpretação de ECG. O conteúdo (traçados/imagens) ainda não foi adicionado — a mecânica é definida numa conversa dedicada, depois que o material estiver disponível.</p></section>`;
+  const el = document.getElementById('ecg');
+  if(!window.EcgSim) { el.innerHTML = `<section class="card"><p class="muted">Carregando simulador de ECG…</p></section>`; return; }
+  if(!state.ecg) state.ecg = window.EcgSim.defaultState();
+  window.EcgSim.mount(el, {
+    getState: () => state,
+    save: () => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){} scheduleCloudSave(); },
+    escapeHtml,
+    iconSvg
+  });
 }
 function renderRankPromotionModal() {
   const rank=ui.rankPromotion;
@@ -8493,7 +8499,8 @@ function render() {
     prescricao: renderPrescription,
     ferramentas: renderFerramentas,
     'caderno-erros': renderCadernoErros,
-    ecg: renderEcg
+    ecg: renderEcg,
+    radiografia: renderRadiografia
   };
   renderers[ui.tab]?.();
   persistQuestionView();
