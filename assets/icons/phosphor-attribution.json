@@ -11,6 +11,7 @@
     "arrow-left",
     "arrow-right",
     "arrows-out",
+    "bone",
     "book-open-text",
     "books",
     "brain",
@@ -37,6 +38,7 @@
     "minus",
     "moon-stars",
     "mountains",
+    "note-pencil",
     "notebook",
     "pause",
     "pencil-simple",
@@ -62,5 +64,5 @@
     "wind",
     "x"
   ],
-  "generatedAt": "2026-07-19T01:22:45.857Z"
+  "generatedAt": "2026-07-19T09:24:09.377Z"
 }

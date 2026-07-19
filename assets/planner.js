@@ -118,16 +118,18 @@ let renderCache = { questionStats: new Map(), questionAvailability: new Map(), q
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 const views = [
   ['painel','Dashboard','dashboard'],
-  ['cronograma','Missão','mission'], ['pendencias','Pendências','pending'], ['materiais','Materiais','materials'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'], ['caderno-erros','Caderno de erros','question'],
-  ['aulas','Aulas','video'], ['questoes','Questões','question'], ['flashcards','Flashcards','flashcard'], ['simulados','Simulados','simulation'], ['importar-questoes','Adicionar questões','upload'],
-  ['prescricao','Prescrição','prescription'], ['ecg','ECG','medical'], ['radiografia','Radiografia','materials'],
-  ['feynman','Feynman','feynman'], ['ferramentas','Ferramentas','settings']
+  ['cronograma','Missão','mission'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'],
+  ['aulas','Aulas','video'], ['questoes','Questões','question'], ['simulados','Simulados','simulation'], ['caderno-erros','Caderno de erros','caderno'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'],
+  ['prescricao','Prescrição','prescription'], ['ecg','ECG','medical'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
+  ['importar-questoes','Adicionar questões','upload'],
+  ['ferramentas','Ferramentas','settings']
 ];
 const VIEW_GROUPS = {
-  cronograma:'Meus estudos', pendencias:'Meus estudos', materiais:'Meus estudos', historico:'Meus estudos', areas:'Meus estudos', analise:'Meus estudos', 'caderno-erros':'Meus estudos',
-  aulas:'Conteúdo', questoes:'Conteúdo', flashcards:'Conteúdo', simulados:'Conteúdo',
-  prescricao:'Habilidade', ecg:'Habilidade', radiografia:'Habilidade',
-  'importar-questoes':'Conteúdo', feynman:'Outros', ferramentas:'Outros'
+  cronograma:'Meus estudos', historico:'Meus estudos', areas:'Meus estudos', analise:'Meus estudos',
+  aulas:'Conteúdo', questoes:'Conteúdo', simulados:'Conteúdo', 'caderno-erros':'Conteúdo', flashcards:'Conteúdo', materiais:'Conteúdo',
+  prescricao:'Habilidade', ecg:'Habilidade', radiografia:'Habilidade', feynman:'Habilidade',
+  'importar-questoes':'Outros',
+  ferramentas:'Configuração'
 };
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 function loadState() {
@@ -1820,6 +1822,18 @@ function beepPomodoroTick() {
     setTimeout(() => context.close?.(), 200);
   } catch(error) {}
 }
+function beepBlockSelect() {
+  try {
+    const context = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    oscillator.frequency.value = 520;
+    gain.gain.value = 0.07;
+    oscillator.connect(gain); gain.connect(context.destination);
+    oscillator.start(); oscillator.stop(context.currentTime + .1);
+    setTimeout(() => context.close?.(), 220);
+  } catch(error) {}
+}
 function finishPomodoroPhase(timer=pomodoro) {
   timer.running = false;
   timer.alarm = true;
@@ -3136,7 +3150,15 @@ function renderCronograma() {
   }, 220);
   document.getElementById('areaFilter').onchange = e => { ui.area=e.target.value; render(); };
   document.getElementById('statusFilter').onchange = e => { ui.status=e.target.value; render(); };
-  document.querySelectorAll('[data-schedule-block]').forEach(button => button.onclick = e => { ui.scheduleBlock = e.currentTarget.dataset.scheduleBlock; render(); });
+  document.querySelectorAll('[data-schedule-block]').forEach(button => button.onclick = e => {
+    ui.scheduleBlock = e.currentTarget.dataset.scheduleBlock;
+    beepBlockSelect();
+    render();
+    requestAnimationFrame(() => {
+      const picked = document.querySelector(`[data-schedule-block="${CSS.escape(ui.scheduleBlock)}"]`);
+      if(picked) { picked.classList.add('block-chip-pulse'); setTimeout(() => picked.classList.remove('block-chip-pulse'), 500); }
+    });
+  });
   document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.scheduleBlock='Atual'; render(); };
   bindScheduleInputs();
 }

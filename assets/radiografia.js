@@ -147,6 +147,16 @@
     { t: 'Princípio ALARA', d: 'As Low As Reasonably Achievable: justificar o exame, otimizar a técnica, colimar, evitar repetições e proteger gônadas/gestante. Radiografia sempre exige justificativa clínica.', tag: 'radioproteção' },
   ];
 
+  // 3.1b Introdução para leigos — "Do zero"
+  const INTRO = [
+    { t: 'O que é uma radiografia?', d: 'É a "sombra" do seu corpo feita com raios X. O aparelho dispara raios que atravessam você e batem num detector atrás. Onde o corpo é denso (osso), poucos raios passam e a região fica branca; onde há ar (pulmão), quase tudo passa e fica preto. Ou seja: é uma sombra, não uma fotografia colorida.' },
+    { t: 'Pense numa lanterna atrás da mão', d: 'Se você põe a mão na frente de uma lanterna, o osso bloqueia mais luz e faz uma sombra mais forte. A radiografia usa o mesmo princípio — só que o "filme" registra o contrário: o que bloqueia o raio fica branco, e o que deixa passar fica preto.' },
+    { t: 'Tudo é uma escala de cinza (densidades)', d: 'Do mais preto ao mais branco: ar → gordura → água/partes moles → osso/cálcio → metal. Essa ordem é o "alfabeto" da radiografia. No próximo passo você treina isso tocando nas estruturas.', cta: { label: 'Treinar densidades', fundTab: 'densidades' } },
+    { t: 'Por que não basta "só olhar"?', d: 'O olho tende a parar no primeiro achado e perder o resto (tem nome: satisfaction of search). Por isso a leitura é SEMPRE feita na mesma ordem, com um método (ex.: ABCDE no tórax). Ordem fixa = menos coisa passa batido.' },
+    { t: 'A radiografia pode te enganar', d: 'A mesma pessoa parece ter o coração maior numa incidência (AP, deitada) do que noutra (PA, em pé) — sem ter doença nenhuma. Sobreposição de estruturas e artefatos (roupa, cabelo) também imitam doença. Por isso você avalia a técnica ANTES de diagnosticar.' },
+    { t: 'Como você vai aprender aqui', d: 'A Trilha te leva na ordem certa: densidades → método de leitura → sinais clássicos → casos completos (onde você interpreta do zero até escrever o laudo). Siga os passos; o app marca seu progresso.', cta: { label: 'Abrir a Trilha', sub: 'trilha' } },
+  ];
+
   // 3.2 Densidades radiográficas — referência + exercício interativo
   const DENSIDADES = [
     { k: 'ar', nome: 'Ar', cor: '#05070a', txt: '#cfd8e2', apar: 'Mais radiotransparente — preto', ex: 'Pulmões, gás intestinal, traqueia' },
@@ -474,15 +484,74 @@
   ];
   const CASO_MAP = Object.fromEntries(CASOS.map((c) => [c.id, c]));
 
+  // 3.7 TRILHA — ordem de estudo guiada (leigo → aprofundado).
+  //   Cada passo: id, t(ítulo), k(ind), go(destino). `auto(S)` marca conclusão
+  //   por engajamento real; `autoVisit` marca ao abrir (passos de leitura).
+  const hasSrsAttempt = (S, id) => !!(S.srs[id] && S.srs[id].attempts > 0);
+  const caseFinished = (S, id) => (S.caseState[id] || 0) >= CASE_STEPS.length - 1;
+  const TRILHA = [
+    {
+      stage: 'Etapa 0 · Comece do zero', desc: 'Para quem nunca leu uma radiografia. Linguagem simples, sem física pesada.',
+      steps: [
+        { id: 'intro-oque', t: 'O que é uma radiografia (a sombra do corpo)', k: 'Ler', go: { sub: 'fundamentos', fundTab: 'intro' }, autoVisit: true },
+        { id: 'intro-densidade', t: 'Por que preto e branco? A escala de densidades', k: 'Ler', go: { sub: 'fundamentos', fundTab: 'intro' }, autoVisit: true },
+        { id: 'intro-metodo', t: 'Por que ler com método e não "só olhar"', k: 'Ler', go: { sub: 'fundamentos', fundTab: 'intro' }, autoVisit: true },
+      ],
+    },
+    {
+      stage: 'Etapa 1 · Fundamentos', desc: 'A base visual e física antes de diagnosticar qualquer coisa.',
+      steps: [
+        { id: 'f-densidades', t: 'Densidades: exercício "toque e classifique"', k: 'Exercitar', go: { sub: 'fundamentos', fundTab: 'densidades' }, auto: (S) => S.log.some((l) => l.id.indexOf('dens:') === 0) },
+        { id: 'f-fisica', t: 'Física essencial (kVp, mAs, ALARA, magnificação)', k: 'Ler', go: { sub: 'fundamentos', fundTab: 'fisica' }, autoVisit: true },
+        { id: 'f-projecoes', t: 'Projeções e incidências (PA × AP)', k: 'Ler', go: { sub: 'fundamentos', fundTab: 'projecoes' }, autoVisit: true },
+      ],
+    },
+    {
+      stage: 'Etapa 2 · Método de leitura', desc: 'Uma rotina fixa para não ler no aleatório.',
+      steps: [
+        { id: 'm-qualidade', t: 'Avaliar a qualidade técnica primeiro', k: 'Ler', go: { sub: 'metodo', metodoTab: 'qualidade' }, autoVisit: true },
+        { id: 'm-abcde', t: 'Método ABCDE (tórax)', k: 'Ler', go: { sub: 'metodo', metodoTab: 'abcde' }, autoVisit: true },
+        { id: 'm-abcs', t: 'Método ABCS (osso)', k: 'Ler', go: { sub: 'metodo', metodoTab: 'abcs' }, autoVisit: true },
+      ],
+    },
+    {
+      stage: 'Etapa 3 · Sinais essenciais', desc: 'Comece pelos sinais de tórax mais cobrados. Responda a questão rápida de cada um.',
+      steps: [
+        { id: 's-broncograma', t: 'Broncograma aéreo', k: 'Reconhecer', go: { sub: 'sinais', sinalId: 'broncograma' }, auto: (S) => hasSrsAttempt(S, 'broncograma') },
+        { id: 's-silhueta', t: 'Sinal da silhueta', k: 'Reconhecer', go: { sub: 'sinais', sinalId: 'silhueta' }, auto: (S) => hasSrsAttempt(S, 'silhueta') },
+        { id: 's-menisco', t: 'Sinal do menisco (derrame)', k: 'Reconhecer', go: { sub: 'sinais', sinalId: 'menisco' }, auto: (S) => hasSrsAttempt(S, 'menisco') },
+        { id: 's-sulco', t: 'Sulco profundo (pneumotórax no leito)', k: 'Reconhecer', go: { sub: 'sinais', sinalId: 'sulco' }, auto: (S) => hasSrsAttempt(S, 'sulco') },
+      ],
+    },
+    {
+      stage: 'Etapa 4 · Casos guiados', desc: 'Interpretação completa: técnica → detecção → localização → laudo.',
+      steps: [
+        { id: 'c-ptx', t: 'Caso: dispneia súbita na emergência', k: 'Interpretar', go: { sub: 'casos', casoId: 'ptx_hipertensivo' }, auto: (S) => caseFinished(S, 'ptx_hipertensivo') },
+        { id: 'c-pneumo', t: 'Caso: abdome agudo / abdome em tábua', k: 'Interpretar', go: { sub: 'casos', casoId: 'pneumoperitonio' }, auto: (S) => caseFinished(S, 'pneumoperitonio') },
+      ],
+    },
+    {
+      stage: 'Etapa 5 · Consolidar', desc: 'Fixe com revisão espaçada e acompanhe onde você erra mais.',
+      steps: [
+        { id: 'r-desempenho', t: 'Ver desempenho e fila de revisão', k: 'Revisar', go: { sub: 'desempenho' }, autoVisit: true },
+      ],
+    },
+  ];
+  const TRAIL_STEPS = TRILHA.flatMap((s) => s.steps);
+  function isStepDone(S, step) { return !!S.trail[step.id] || (step.auto ? step.auto(S) : false); }
+  function trailProgress(S) { const done = TRAIL_STEPS.filter((s) => isStepDone(S, s)).length; return { done, total: TRAIL_STEPS.length, pct: Math.round(100 * done / TRAIL_STEPS.length) }; }
+  function nextStep(S) { return TRAIL_STEPS.find((s) => !isStepDone(S, s)) || null; }
+
   // ---------------------------------------------------------------------------
   // 4. SRS + estado
   // ---------------------------------------------------------------------------
   function defaultState() {
     return {
-      ui: { sub: 'inicio', sinalId: null, casoId: null, fundTab: 'fisica', metodoTab: 'abcde' },
+      ui: { sub: 'inicio', sinalId: null, casoId: null, fundTab: 'intro', metodoTab: 'abcde' },
       srs: {},          // por sinal: SM-2 lite
       log: [],          // tentativas { id, ok, conf, t }
       progress: {},     // marcadores de conclusão de módulos
+      trail: {},        // passos da trilha concluídos { stepId: dataISO }
       daily: { day: null, sinalOfDay: null },
       caseState: {},    // etapa atual por caso
     };
@@ -519,7 +588,7 @@
   function root() { return document.getElementById('radiografia'); }
 
   const SUBS = [
-    ['inicio', 'Início'], ['fundamentos', 'Fundamentos'], ['metodo', 'Método'],
+    ['inicio', 'Início'], ['trilha', 'Trilha'], ['fundamentos', 'Fundamentos'], ['metodo', 'Método'],
     ['sinais', 'Sinais'], ['casos', 'Casos'], ['desempenho', 'Desempenho'],
   ];
 
@@ -583,6 +652,20 @@
     .radio-feedback.ok{background:#e6f4ea;color:#1a7f37}
     .radio-feedback.no{background:#ffe1e1;color:#c1121f}
     .radio-textarea{width:100%;min-height:96px;border:1px solid var(--border,#dce1ec);border-radius:10px;padding:10px;font:inherit;font-size:13px;background:var(--card,#fff);color:inherit;resize:vertical}
+    .radio-progress{height:8px;border-radius:999px;background:var(--chip,#eef1f7);overflow:hidden;margin-top:8px}
+    .radio-progress i{display:block;height:100%;background:var(--accent,#1261f5);border-radius:999px;transition:width .3s}
+    .radio-trail-stage{border:1px solid var(--border,#dce1ec);border-radius:14px;padding:14px;background:var(--card,#fff);margin-top:12px}
+    .radio-trail-head{display:flex;align-items:center;gap:8px;justify-content:space-between}
+    .radio-trail-step{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--border,#eef1f7)}
+    .radio-trail-step:first-of-type{border-top:none}
+    .radio-trail-main{flex:1;min-width:0}
+    .radio-trail-main b{font-size:14px;font-weight:600}
+    .radio-trail-dot{flex:0 0 24px;height:24px;border-radius:50%;border:2px solid var(--border,#dce1ec);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#1a7f37}
+    .radio-trail-step.done .radio-trail-dot{background:#e6f4ea;border-color:#1a7f37}
+    .radio-trail-step.done .radio-trail-main b{color:var(--muted,#5b6472)}
+    .radio-trail-step.next{background:linear-gradient(90deg,rgba(18,97,245,.06),transparent);border-radius:8px;padding-left:8px;margin-left:-8px}
+    .radio-trail-step.next .radio-trail-dot{border-color:var(--accent,#1261f5)}
+    .radio-tag.next{background:var(--accent,#1261f5);color:#fff}
     `;
     document.head.appendChild(style);
   }
@@ -627,12 +710,13 @@
     const attempts = S.log.length;
     const acc = attempts ? Math.round(100 * S.log.filter((l) => l.ok).length / attempts) : 0;
     const dueSinais = SINAIS.filter((s) => { const r = S.srs[s.id]; return r && r.attempts > 0 && r.dueISO <= todayISO(); });
-    const doneFund = Object.keys(S.progress).length;
+    const prog = trailProgress(S);
+    const nxt = nextStep(S);
     return `<div class="radio-hero">
         <div class="radio-stat"><span class="radio-muted">Tentativas</span><b>${attempts}</b></div>
         <div class="radio-stat"><span class="radio-muted">Acerto</span><b>${acc}%</b></div>
         <div class="radio-stat"><span class="radio-muted">Sinais a revisar</span><b>${dueSinais.length}</b></div>
-        <div class="radio-stat"><span class="radio-muted">Módulos vistos</span><b>${doneFund}</b></div>
+        <div class="radio-stat"><span class="radio-muted">Trilha</span><b>${prog.pct}%</b></div>
       </div>
       <div class="radio-grid">
         <div class="radio-card">
@@ -642,10 +726,11 @@
           <button class="radio-btn wide" data-radio-open-sinal="${sod.id}">Estudar sinal</button>
         </div>
         <div class="radio-card">
-          <span class="radio-muted">Comece por aqui</span>
-          <h3>Como ler uma radiografia</h3>
-          <p class="radio-muted">Densidades → qualidade técnica → método ABCDE. A base antes de diagnosticar.</p>
-          <button class="radio-btn wide" data-radio-goto="fundamentos">Ir para Fundamentos</button>
+          <span class="radio-muted">Sua trilha de estudo</span>
+          <h3>${prog.done ? 'Continuar de onde parou' : 'Comece do zero'} — ${prog.pct}%</h3>
+          <div class="radio-progress"><i style="width:${prog.pct}%"></i></div>
+          <p class="radio-muted">${nxt ? 'Próximo: ' + esc(nxt.t) : 'Trilha concluída — hora de revisar.'}</p>
+          <button class="radio-btn wide" data-radio-goto="trilha">${prog.done ? 'Continuar trilha' : 'Começar agora'}</button>
         </div>
         <div class="radio-card">
           <span class="radio-muted">Treine a interpretação</span>
@@ -660,10 +745,14 @@
   // ---------- FUNDAMENTOS ----------
   function fundamentosHtml() {
     const tab = st().ui.fundTab;
-    const tabs = [['fisica', 'Física'], ['densidades', 'Densidades'], ['projecoes', 'Projeções']];
+    const tabs = [['intro', 'Do zero'], ['fisica', 'Física'], ['densidades', 'Densidades'], ['projecoes', 'Projeções']];
     const nav = `<div class="radio-subnav" style="margin-bottom:4px">${tabs.map(([id, l]) => `<button data-radio-fund="${id}" class="${tab === id ? 'active' : ''}">${l}</button>`).join('')}</div>`;
     let body = '';
-    if (tab === 'fisica') {
+    if (tab === 'intro') {
+      body = `<p class="radio-muted" style="margin-top:0">Se você nunca leu uma radiografia, comece por aqui. Sem física pesada — só a intuição do que a imagem significa.</p>
+        <div class="radio-grid">${INTRO.map((c) => `<div class="radio-card"><h3>${esc(c.t)}</h3><p class="radio-muted">${esc(c.d)}</p>${c.cta ? `<button class="radio-btn ghost sm" ${c.cta.sub ? `data-radio-goto="${c.cta.sub}"` : `data-radio-fund="${c.cta.fundTab}"`}>${esc(c.cta.label)} →</button>` : ''}</div>`).join('')}</div>
+        <button class="radio-btn" data-radio-goto="trilha" style="margin-top:12px">Seguir a Trilha na ordem certa →</button>`;
+    } else if (tab === 'fisica') {
       body = `<div class="radio-grid">${FISICA.map((f) => `<div class="radio-card"><div class="radio-tags"><span class="radio-tag">${esc(f.tag)}</span></div><h3>${esc(f.t)}</h3><p class="radio-muted">${esc(f.d)}</p></div>`).join('')}</div>
         <button class="radio-btn ghost" data-radio-fund-done="fisica" style="margin-top:12px">Marcar módulo como visto</button>`;
     } else if (tab === 'densidades') {
@@ -858,11 +947,45 @@
       ${due.length ? `<div class="radio-tags">${due.map((s) => `<button class="radio-tag radio-region-btn" data-radio-open-sinal="${s.id}">${esc(s.nome)}</button>`).join('')}</div>` : `<p class="radio-muted">Nada vencido. As revisões são agendadas conforme seu acerto e confiança.</p>`}`;
   }
 
+  // ---------- TRILHA ----------
+  function trilhaHtml() {
+    const S = st();
+    const prog = trailProgress(S);
+    const nxt = nextStep(S);
+    const header = `<div class="radio-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+          <div><span class="radio-muted">Seu progresso</span><h3 style="margin:2px 0">Trilha de estudo — ${prog.pct}%</h3></div>
+          ${nxt ? `<button class="radio-btn" data-radio-trail-go="${nxt.id}">Próximo passo →</button>` : `<span class="radio-badge baixa">Trilha concluída 🎉</span>`}
+        </div>
+        <div class="radio-progress"><i style="width:${prog.pct}%"></i></div>
+        <p class="radio-muted" style="margin:6px 0 0">${prog.done}/${prog.total} passos · ${nxt ? 'Próximo: <b>' + esc(nxt.t) + '</b>' : 'Você percorreu toda a trilha. Continue revisando os sinais em atraso.'}</p>
+      </div>`;
+    const stages = TRILHA.map((stage) => {
+      const rows = stage.steps.map((step) => {
+        const done = isStepDone(S, step);
+        const isNext = nxt && nxt.id === step.id;
+        return `<div class="radio-trail-step${done ? ' done' : ''}${isNext ? ' next' : ''}">
+          <span class="radio-trail-dot">${done ? '✓' : ''}</span>
+          <div class="radio-trail-main"><b>${esc(step.t)}</b><div class="radio-tags"><span class="radio-tag">${esc(step.k)}</span>${isNext ? '<span class="radio-tag next">próximo</span>' : ''}</div></div>
+          <button class="radio-btn ${done ? 'ghost ' : ''}sm" data-radio-trail-go="${step.id}">${done ? 'Revisar' : 'Ir'}</button>
+        </div>`;
+      }).join('');
+      const sDone = stage.steps.every((s) => isStepDone(S, s));
+      return `<div class="radio-trail-stage">
+        <div class="radio-trail-head"><b>${esc(stage.stage)}</b>${sDone ? '<span class="radio-badge baixa">completa</span>' : ''}</div>
+        <p class="radio-muted" style="margin:2px 0 8px">${esc(stage.desc)}</p>
+        ${rows}
+      </div>`;
+    }).join('');
+    return `<p class="radio-muted" style="margin-top:0">Siga os passos de cima para baixo: começa do zero e vai aprofundando. O app marca cada passo conforme você lê, exercita e interpreta.</p>${header}${stages}`;
+  }
+
   // ---------- Roteador de corpo ----------
   function bodyHtml() {
     const S = st();
     switch (S.ui.sub) {
       case 'inicio': return inicioHtml();
+      case 'trilha': return trilhaHtml();
       case 'fundamentos': return fundamentosHtml();
       case 'metodo': return metodoHtml();
       case 'sinais': return S.ui.sinalId && SINAL_MAP[S.ui.sinalId] ? sinalDetailHtml(SINAL_MAP[S.ui.sinalId]) : sinaisListHtml();
@@ -872,6 +995,16 @@
     }
   }
   function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'sinais') S.ui.sinalId = null; if (sub !== 'casos') S.ui.casoId = null; save(); mountBody(); }
+  function goTo(t) {
+    const S = st();
+    S.ui.sub = t.sub;
+    if (t.fundTab) S.ui.fundTab = t.fundTab;
+    if (t.metodoTab) S.ui.metodoTab = t.metodoTab;
+    S.ui.sinalId = t.sinalId || null;
+    S.ui.casoId = t.casoId || null;
+    if (t.casoId && S.caseState[t.casoId] == null) S.caseState[t.casoId] = 0;
+    save(); mountBody();
+  }
   function mountBody() {
     const el = root(); if (!el) return;
     el.querySelector('.radio-body').innerHTML = bodyHtml();
@@ -893,6 +1026,11 @@
     el.querySelectorAll('[data-radio-open-caso]').forEach((b) => b.onclick = () => { const S = st(); S.ui.sub = 'casos'; S.ui.casoId = b.dataset.radioOpenCaso; S.caseState[b.dataset.radioOpenCaso] = 0; save(); mountBody(); });
     el.querySelectorAll('[data-radio-back-caso]').forEach((b) => b.onclick = () => { st().ui.casoId = null; save(); mountBody(); });
     el.querySelectorAll('[data-radio-fund]').forEach((b) => b.onclick = () => { st().ui.fundTab = b.dataset.radioFund; save(); mountBody(); });
+    el.querySelectorAll('[data-radio-trail-go]').forEach((b) => b.onclick = () => {
+      const step = TRAIL_STEPS.find((s) => s.id === b.dataset.radioTrailGo); if (!step) return;
+      if (step.autoVisit) st().trail[step.id] = todayISO();
+      goTo(step.go);
+    });
     el.querySelectorAll('[data-radio-metodo]').forEach((b) => b.onclick = () => { st().ui.metodoTab = b.dataset.radioMetodo; save(); mountBody(); });
     el.querySelectorAll('[data-radio-fund-done]').forEach((b) => b.onclick = () => { st().progress['fund:' + b.dataset.radioFundDone] = todayISO(); save(); b.textContent = 'Módulo marcado ✓'; b.disabled = true; });
     wireViewer(el);
@@ -1000,7 +1138,7 @@
     if (!S.radio) S.radio = defaultState();
     const d = defaultState();
     S.radio.ui = Object.assign({}, d.ui, S.radio.ui);
-    ['srs', 'progress', 'caseState'].forEach((k) => { if (!S.radio[k]) S.radio[k] = {}; });
+    ['srs', 'progress', 'caseState', 'trail'].forEach((k) => { if (!S.radio[k]) S.radio[k] = {}; });
     if (!S.radio.log) S.radio.log = [];
     if (!S.radio.daily) S.radio.daily = d.daily;
 

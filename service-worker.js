@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v116';
+const CACHE_NAME = 'soqueromed-shell-v117';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -7,7 +7,7 @@ const APP_SHELL = [
   './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-4',
   './assets/planner-ux.js?v=20260716-3',
-  './assets/ecg-simulator.js?v=20260718-1',
+  './assets/ecg-simulator.js?v=20260718-4',
   './assets/planner.js?v=20260716-90',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',

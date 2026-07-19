@@ -130,5 +130,5 @@ test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
   const views=planner.match(/const views = \[([\s\S]*?)\n\];/)?.[1]||'';
   assert.ok(views.includes("['importar-questoes'"));
   const groups=planner.match(/const VIEW_GROUPS = \{([\s\S]*?)\n\};/)?.[1]||'';
-  assert.match(groups,/'importar-questoes':'Conteúdo'/);
+  assert.match(groups,/'importar-questoes':'Outros'/);
 });

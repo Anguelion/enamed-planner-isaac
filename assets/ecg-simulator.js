@@ -849,9 +849,10 @@
   // ---------------------------------------------------------------------------
   function defaultState() {
     return {
-      ui: { sub: 'inicio', bankCat: 'all', bankId: null, quizMode: null },
+      ui: { sub: 'inicio', bankCat: 'all', bankId: null, quizMode: null, viewer: null, lesson: null },
       srs: {},        // por condição: { reps, ease, dueISO, correct, attempts, times:[], confusion:{}, highConfWrong }
       daily: { day: null, ecgOfDay: null },
+      trilha: { done: {}, current: null }, // progresso da trilha de estudo
       log: [],        // histórico de tentativas
       seenIntro: false,
     };
@@ -896,6 +897,198 @@
   }
 
   // ---------------------------------------------------------------------------
+  // 4b. CICLO CARDÍACO — identificação ao clicar no traçado
+  //     Mapeia um instante do traçado para a onda/segmento e a fase mecânica
+  //     (sístole atrial, sístole ventricular, diástole).
+  // ---------------------------------------------------------------------------
+  const CYCLE = {
+    P:  { wave: 'Onda P', electrical: 'Despolarização atrial', mechanical: 'Sístole atrial — os átrios se contraem e terminam de encher os ventrículos ("chute atrial").', phase: 'Sístole atrial', color: '#7b5cff' },
+    PR: { wave: 'Segmento PR', electrical: 'Condução pelo nó AV (atraso fisiológico)', mechanical: 'Transição: os átrios já contraíram; o estímulo está "esperando" no nó AV antes de ativar os ventrículos.', phase: 'Transição', color: '#00a6a6' },
+    QRS: { wave: 'Complexo QRS', electrical: 'Despolarização ventricular', mechanical: 'Início da sístole ventricular — contração isovolumétrica; logo em seguida os ventrículos ejetam o sangue.', phase: 'Sístole ventricular', color: '#e0483b' },
+    ST: { wave: 'Segmento ST', electrical: 'Ventrículos totalmente despolarizados (platô do potencial de ação)', mechanical: 'Sístole ventricular — fase de ejeção: o sangue está sendo bombeado para a aorta e a artéria pulmonar.', phase: 'Sístole ventricular', color: '#e0733b' },
+    T:  { wave: 'Onda T', electrical: 'Repolarização ventricular', mechanical: 'Início da diástole ventricular — os ventrículos relaxam e começam a se encher de novo.', phase: 'Diástole', color: '#2f9e44' },
+    TP: { wave: 'Segmento TP (linha de base)', electrical: 'Coração eletricamente em repouso', mechanical: 'Diástole — enchimento ventricular passivo; o coração descansa até o próximo batimento.', phase: 'Diástole', color: '#4c6ef5' },
+    FIB: { wave: 'Linha de base fibrilatória', electrical: 'Atividade atrial caótica (fibrilação)', mechanical: 'Não há sístole atrial organizada; os ventrículos batem de forma irregular.', phase: 'Sem sístole atrial', color: '#9c36b5' },
+    FLUT: { wave: 'Ondas F (flutter)', electrical: 'Circuito de reentrada atrial (~300/min)', mechanical: 'Átrios "tremulam" em dente-de-serra; apenas parte dos estímulos passa para os ventrículos.', phase: 'Flutter atrial', color: '#9c36b5' },
+  };
+
+  // Retorna a fase do ciclo no instante t, usando o cronograma de batimentos.
+  function phaseAt(t, beats, cond) {
+    // 1) Perto de uma onda P?
+    for (const p of beats.pWaves) {
+      if (Math.abs(t - p.t) < 0.055) return CYCLE.P;
+    }
+    // 2) Dentro de um complexo QRS-T?
+    let host = null, rel = 0;
+    for (const c of beats.complexes) {
+      const r = t - c.t;
+      if (r >= -0.03 && r < 0.42) { host = c; rel = r; break; }
+    }
+    if (host) {
+      if (rel < 0.10) return CYCLE.QRS;
+      if (rel < 0.24) return CYCLE.ST;
+      if (rel < 0.40) return CYCLE.T;
+    }
+    // 3) Linha de base
+    if (beats.baseline && beats.baseline.type === 'afib') return CYCLE.FIB;
+    if (beats.baseline && beats.baseline.type === 'flutter') return CYCLE.FLUT;
+    // 4) Entre uma P e o próximo QRS → segmento PR; senão → TP (diástole)
+    for (const p of beats.pWaves) {
+      if (t > p.t && t - p.t < 0.22) return CYCLE.PR;
+    }
+    return CYCLE.TP;
+  }
+
+  // ---------------------------------------------------------------------------
+  // 4c. TRILHA DE ESTUDO — do leigo ao avançado, na ordem certa
+  //     Cada lição tem didática em camadas (base → aprofundar), traçado de
+  //     demonstração e prática opcional.
+  // ---------------------------------------------------------------------------
+  const LEVEL_LABEL = { leigo: 'Do zero', basico: 'Básico', intermediario: 'Intermediário', avancado: 'Avançado' };
+  const TRILHA = [
+    {
+      module: '1 · Fundamentos (comece aqui)', level: 'leigo',
+      lessons: [
+        {
+          id: 't1', title: 'O que é o ECG, sem susto', level: 'leigo',
+          base: 'O coração é uma bomba, e cada batida começa com um pequeno "choque" elétrico que ele mesmo gera. O eletrocardiograma (ECG) é só um gráfico dessa eletricidade ao longo do tempo — como um sismógrafo capta um tremor. Ele NÃO mostra entupimento diretamente, nem "dá o diagnóstico sozinho": mostra o sinal elétrico, e a partir dele a gente interpreta.',
+          deep: 'Os eletrodos na pele captam a diferença de potencial gerada pela despolarização e repolarização das células cardíacas. Cada par de eletrodos forma uma "derivação" — um ponto de vista diferente do mesmo coração. Por isso o ECG padrão tem 12 derivações: 12 câmeras olhando o coração de ângulos distintos.',
+          demo: 'sinus_normal'
+        },
+        {
+          id: 't2', title: 'O papel: quadradinhos, tempo e voltagem', level: 'leigo',
+          base: 'O ECG é impresso num papel quadriculado que anda a uma velocidade fixa. Como a velocidade é conhecida, a distância no papel vira tempo, e a altura vira voltagem (força do sinal). É isso que permite medir tudo.',
+          deep: 'Padrão: 25 mm/s e 10 mm/mV. Então 1 quadradinho (1 mm) = 0,04 s na horizontal e 0,1 mV na vertical. 1 quadradão (5 mm) = 0,20 s. A marca de calibração no início do traçado (um "degrau" de 10 mm) confirma o ganho. Use a régua digital do simulador para praticar essas medidas.',
+          demo: 'sinus_normal', measure: true
+        },
+        {
+          id: 't3', title: 'As três ondas: P, QRS e T', level: 'leigo',
+          base: 'Cada batida desenha três coisas: uma ondinha (P), um pico alto (QRS) e outra ondinha (T). A P é os átrios "acordando", o QRS é os ventrículos (a parte forte da bomba) "acordando", e a T é o coração "recarregando" para a próxima batida.',
+          deep: 'P = despolarização atrial. QRS = despolarização ventricular (é alto porque a massa muscular ventricular é grande). T = repolarização ventricular. A repolarização atrial fica escondida dentro do QRS. Clique no traçado no modo "Explorar ondas" para ver cada uma nomeada.',
+          demo: 'sinus_normal', explore: true
+        },
+        {
+          id: 't4', title: 'Sístole e diástole no traçado', level: 'leigo',
+          base: 'Sístole = contração (aperta e ejeta o sangue). Diástole = relaxamento (enche de sangue). Dá para "ver" isso no ECG: logo após a P os átrios contraem; durante o QRS-ST os ventrículos contraem e ejetam; na onda T e depois dela o coração relaxa e enche.',
+          deep: 'P → sístole atrial. QRS → começo da sístole ventricular (contração isovolumétrica). Segmento ST → ejeção. Onda T → início da diástole ventricular. Segmento TP (a linha reta entre batidas) → diástole plena, enchimento. Abra "Animar" para ver o traçado correndo com a fase marcada em tempo real.',
+          demo: 'sinus_normal', explore: true, animate: true
+        },
+        {
+          id: 't5', title: 'As 12 derivações: as câmeras do coração', level: 'basico',
+          base: 'Cada derivação enxerga o coração de um ângulo. As das pernas/braços (DI, DII, DIII, aVR, aVL, aVF) olham no plano vertical; as do peito (V1 a V6) olham no plano horizontal, do lado direito ao esquerdo.',
+          deep: 'Inferior: DII, DIII, aVF. Lateral: DI, aVL, V5, V6. Anterosseptal: V1–V4. aVR olha "de dentro/de cima" e por isso é quase tudo negativo no normal. Saber qual derivação vê qual parede é o que permite localizar um infarto.',
+          demo: 'sinus_normal'
+        },
+      ]
+    },
+    {
+      module: '2 · Leitura sistemática', level: 'basico',
+      lessons: [
+        {
+          id: 't6', title: 'Frequência cardíaca', level: 'basico',
+          base: 'Frequência é quantas batidas por minuto. O jeito rápido: conte os quadradões entre duas batidas (dois QRS) e divida 300 por esse número.',
+          deep: 'Regra dos 300: 300 ÷ (nº de quadradões entre RR). Alternativa para ritmos irregulares: conte os QRS em 6 segundos (30 quadradões) e multiplique por 10. Normal: 60–100 bpm. <60 bradicardia, >100 taquicardia.',
+          demo: 'sinus_normal', measure: true
+        },
+        {
+          id: 't7', title: 'Ritmo e regularidade', level: 'basico',
+          base: 'Antes de nomear qualquer coisa: as batidas são regulares (espaçadas igualzinho) ou irregulares? E vêm de onde — do "marca-passo natural" (nó sinusal) ou de outro lugar?',
+          deep: 'Ritmo sinusal = P positiva em DII antes de cada QRS, com FC 60–100 e RR regular. Irregularmente irregular sem P = pense em fibrilação atrial. Compare o traçado normal com a FA no modo Explorar para sentir a diferença.',
+          demo: 'sinus_normal'
+        },
+        {
+          id: 't8', title: 'O método dos 19 passos', level: 'basico',
+          base: 'Interpretar ECG bem é seguir SEMPRE a mesma ordem, sem pular etapas e sem "chutar" o diagnóstico de cara. Isso é o que mais aumenta o acerto na literatura.',
+          deep: 'Contexto → qualidade → calibração → frequência → regularidade → ritmo → P → PR → QRS → eixo → progressão de R → Q → ST → T → QT → U → comparação → síntese → conduta. Veja a lista completa na aba Método e aplique-a em cada traçado do Banco.',
+          demo: 'sinus_normal', gotoMethod: true
+        },
+      ]
+    },
+    {
+      module: '3 · Reconhecendo o anormal', level: 'intermediario',
+      lessons: [
+        {
+          id: 't9', title: 'Bradi e taquicardia sinusais', level: 'intermediario',
+          base: 'Mesmo ritmo normal (sinusal), só que mais lento (bradi) ou mais rápido (taqui). Quase sempre é uma resposta do corpo a algo — não um problema do coração em si.',
+          deep: 'Taquicardia sinusal: procure a causa (dor, febre, hipovolemia, TEP, anemia, hipertireoidismo). Bradicardia: fisiológica em atletas, ou por fármacos/isquemia/BAV. Trate a causa, não só o número.',
+          demo: 'sinus_tachy', quiz: ['sinus_brady', 'sinus_tachy', 'sinus_normal']
+        },
+        {
+          id: 't10', title: 'Fibrilação e flutter atrial', level: 'intermediario',
+          base: 'Duas arritmias atriais muito comuns. Na fibrilação, os átrios "tremem" de forma caótica e o pulso fica totalmente irregular. No flutter, há um circuito organizado que faz ondas em "dente-de-serra".',
+          deep: 'FA: sem onda P, RR irregularmente irregular, linha de base fibrilatória. Flutter: ondas F ~300/min; com condução 2:1 a FC fica ~150 (fixa!). FC exatamente ~150 → sempre pense em flutter 2:1. Use Explorar para ver as ondas F.',
+          demo: 'flutter', explore: true, quiz: ['afib', 'flutter', 'sinus_tachy', 'svt']
+        },
+        {
+          id: 't11', title: 'Bloqueios AV', level: 'intermediario',
+          base: 'É quando o "sinal" tem dificuldade de passar dos átrios para os ventrículos. Vai do leve (só um atraso) até o total (átrio e ventrículo batendo independentes).',
+          deep: '1º grau: PR longo e fixo, todo P conduz. Mobitz I: PR aumenta até uma P bloquear. Mobitz II: PR fixo e uma P "cai" de repente (perigoso). BAVT: dissociação AV completa, escape lento. Mobitz II e BAVT costumam precisar de marca-passo.',
+          demo: 'mobitz1', quiz: ['avb1', 'mobitz1', 'mobitz2', 'cavt']
+        },
+        {
+          id: 't12', title: 'Bloqueios de ramo (BRD e BRE)', level: 'intermediario',
+          base: 'Quando um dos "cabos" que levam o estímulo aos ventrículos está interrompido, o QRS fica largo e com forma característica.',
+          deep: 'BRD: rSR\' ("orelhas de coelho") em V1, S larga em DI/V6. BRE: R larga e entalhada em DI/V5/V6, QS em V1, ST-T discordante. Importante: o BRE atrapalha a leitura de isquemia (use Sgarbossa).',
+          demo: 'rbbb', quiz: ['rbbb', 'lbbb', 'wpw']
+        },
+      ]
+    },
+    {
+      module: '4 · Emergências que não podem passar', level: 'avancado',
+      lessons: [
+        {
+          id: 't13', title: 'Isquemia e IAM com supra de ST', level: 'avancado',
+          base: 'O achado mais crítico: quando uma artéria entope, a área do coração sofre e o segmento ST "sobe" nas derivações que olham aquela parede. É corrida contra o tempo.',
+          deep: 'Supra de ST ≥1 mm em ≥2 derivações contíguas. Inferior (DII, DIII, aVF) → peça V3R-V4R (VD) e V7-V9 (posterior). Anterior (V1–V4) → oclusão da DA. Procure recíprocas (espelho). Padrões-equivalentes: De Winter, Wellens. Conduta: reperfusão imediata.',
+          demo: 'stemi_inf', explore: true, quiz: ['stemi_inf', 'stemi_ant', 'pericarditis', 'early_repol']
+        },
+        {
+          id: 't14', title: 'Taquicardias de QRS largo (TV)', level: 'avancado',
+          base: 'Batimentos largos e rápidos. Em adulto, até prova em contrário, trate como taquicardia ventricular (TV) — a mais perigosa.',
+          deep: 'TV: regular, QRS largo, dissociação AV, batimentos de captura/fusão, concordância precordial. Diferencie de TSV com aberrância e de pré-excitação. Instável → cardioversão; sem pulso → desfibrilação.',
+          demo: 'vt', quiz: ['vt', 'svt', 'torsades', 'afib']
+        },
+        {
+          id: 't15', title: 'Ritmos de parada', level: 'avancado',
+          base: 'Os ritmos da parada cardíaca. Dois são "chocáveis" (FV e TV sem pulso) — o choque salva. Outros dois não (assistolia e AESP).',
+          deep: 'FV: ondulações caóticas sem QRS → desfibrilar já. TV sem pulso → desfibrilar. Torsades → magnésio. Sempre RCP de alta qualidade. Siga os algoritmos vigentes da AHA.',
+          demo: 'vf', quiz: ['vf', 'vt', 'torsades']
+        },
+        {
+          id: 't16', title: 'Hipercalemia (o grande imitador)', level: 'avancado',
+          base: 'Potássio alto muda o ECG e pode matar rápido. Começa com ondas T altas e pontudas e pode terminar num traçado "sinusoidal" de pré-parada.',
+          deep: 'T apiculada e estreita → achatamento da P → alargamento do QRS → onda sinusoidal. Conduta: gluconato de cálcio (estabiliza a membrana) + insulina/glicose + remover o potássio.',
+          demo: 'hyperk', explore: true, quiz: ['hyperk', 'stemi_ant', 'early_repol']
+        },
+      ]
+    },
+    {
+      module: '5 · Aprofundando (armadilhas e diferenciais)', level: 'avancado',
+      lessons: [
+        {
+          id: 't17', title: 'Pericardite × repolarização precoce × IAM', level: 'avancado',
+          base: 'Três causas de "ST elevado" que se confundem. Saber diferenciar evita tanto perder um infarto quanto tratar demais um quadro benigno.',
+          deep: 'Pericardite: supra difuso e côncavo, depressão de PR, SEM recíproca. Repolarização precoce: entalhe do ponto J, estável, jovem. IAM: supra localizado numa parede + recíproca. Na dúvida com dor torácica → trate como isquemia e seria ECG/troponina.',
+          demo: 'pericarditis', quiz: ['pericarditis', 'early_repol', 'stemi_inf', 'stemi_ant']
+        },
+        {
+          id: 't18', title: 'Pré-excitação (WPW) e TEP', level: 'avancado',
+          base: 'Dois padrões que aparecem em prova e no plantão. WPW tem um "atalho" elétrico (onda delta). O TEP costuma dar taquicardia e sinais de sobrecarga do coração direito.',
+          deep: 'WPW: PR curto + onda delta + QRS largo (cuidado com FA pré-excitada). TEP: taquicardia sinusal é o mais comum; S1Q3T3 e T invertida em V1–V3 sugerem sobrecarga aguda de VD. ECG normal não exclui TEP.',
+          demo: 'wpw', quiz: ['wpw', 'pe_s1q3t3', 'rbbb', 'lbbb']
+        },
+        {
+          id: 't19', title: 'Sobrecargas e baixa voltagem', level: 'avancado',
+          base: 'O ECG sugere quando uma câmara está "grande" (hipertrofia) ou quando algo abafa o sinal (derrame, obesidade). Sugere — a confirmação costuma ser o ecocardiograma.',
+          deep: 'HVE: alta voltagem (Sokolow-Lyon) + strain lateral. Baixa voltagem: QRS pequeno difuso → derrame/obesidade/DPOC/amiloidose; com taquicardia e alternância elétrica, pense em tamponamento.',
+          demo: 'lvh', quiz: ['lvh', 'low_voltage', 'lbbb']
+        },
+      ]
+    },
+  ];
+  const TRILHA_LESSONS = TRILHA.flatMap((m) => m.lessons);
+
+  // ---------------------------------------------------------------------------
   // 5. UI
   // ---------------------------------------------------------------------------
   let BRIDGE = null;
@@ -905,6 +1098,7 @@
 
   const SUBS = [
     ['inicio', 'Início'],
+    ['trilha', 'Trilha'],
     ['metodo', 'Método'],
     ['banco', 'Banco'],
     ['treino', 'Treino'],
@@ -916,46 +1110,49 @@
     if (document.getElementById('ecg-sim-styles')) return;
     const style = document.createElement('style');
     style.id = 'ecg-sim-styles';
+    // Usa as variáveis de tema do planner (--panel/--ink/--muted/--line/--soft-blue),
+    // que já respondem a body.dark. Evita cores claras fixas que sumiam no modo escuro.
     style.textContent = `
-    .ecg-wrap{display:flex;flex-direction:column;gap:16px}
+    #ecg .ecg-wrap{display:flex;flex-direction:column;gap:16px;color:var(--ink)}
     .ecg-subnav{display:flex;flex-wrap:wrap;gap:6px}
-    .ecg-subnav button{border:1px solid var(--border,#dce1ec);background:var(--card,#fff);color:inherit;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s}
+    .ecg-subnav button{border:1px solid var(--line,#dce1ec);background:var(--panel,#fff);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s}
     .ecg-subnav button.active{background:var(--accent,#1261f5);color:#fff;border-color:transparent}
-    .ecg-canvas-shell{border:1px solid var(--border,#dce1ec);border-radius:12px;overflow:hidden;background:#fff7f6}
+    .ecg-canvas-shell{border:1px solid var(--line,#dce1ec);border-radius:12px;overflow:hidden;background:var(--panel,#fff7f6)}
     .ecg-canvas-shell canvas{display:block;width:100%}
     .ecg-grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-    .ecg-card{border:1px solid var(--border,#dce1ec);border-radius:14px;padding:14px;background:var(--card,#fff);display:flex;flex-direction:column;gap:8px}
-    .ecg-card h3{margin:0;font-size:15px}
+    .ecg-card{border:1px solid var(--line,#dce1ec);border-radius:14px;padding:14px;background:var(--panel,#fff);color:var(--ink);display:flex;flex-direction:column;gap:8px}
+    .ecg-card h3{margin:0;font-size:15px;color:var(--ink)}
     .ecg-badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
-    .ecg-badge.baixa{background:#e6f4ea;color:#1a7f37}
-    .ecg-badge.media{background:#fff4e0;color:#a15c00}
-    .ecg-badge.alta{background:#ffe9e0;color:#b5411b}
-    .ecg-badge.critica{background:#ffe1e1;color:#c1121f}
+    .ecg-badge.baixa{background:#1a7f37;color:#fff}
+    .ecg-badge.media{background:#b7791f;color:#fff}
+    .ecg-badge.alta{background:#c05621;color:#fff}
+    .ecg-badge.critica{background:#c1121f;color:#fff}
     .ecg-tags{display:flex;flex-wrap:wrap;gap:4px}
-    .ecg-tag{font-size:10.5px;background:var(--chip,#eef1f7);border-radius:6px;padding:2px 6px;color:var(--muted,#5b6472)}
+    .ecg-tag{font-size:10.5px;background:var(--soft-blue,#eef1f7);border-radius:6px;padding:2px 6px;color:var(--muted,#5b6472)}
     .ecg-btn{border:none;border-radius:10px;padding:9px 14px;font-weight:600;font-size:13px;cursor:pointer;background:var(--accent,#1261f5);color:#fff}
-    .ecg-btn.ghost{background:transparent;border:1px solid var(--border,#dce1ec);color:inherit}
+    .ecg-btn.ghost{background:transparent;border:1px solid var(--line,#dce1ec);color:var(--ink)}
     .ecg-btn.wide{width:100%}
     .ecg-opts{display:grid;gap:8px}
-    .ecg-opt{text-align:left;border:1px solid var(--border,#dce1ec);background:var(--card,#fff);border-radius:10px;padding:11px 14px;font-size:14px;cursor:pointer;color:inherit;transition:.12s}
+    .ecg-opt{text-align:left;border:1px solid var(--line,#dce1ec);background:var(--panel,#fff);border-radius:10px;padding:11px 14px;font-size:14px;cursor:pointer;color:var(--ink);transition:.12s}
     .ecg-opt:hover{border-color:var(--accent,#1261f5)}
-    .ecg-opt.correct{background:#e6f4ea;border-color:#1a7f37}
-    .ecg-opt.wrong{background:#ffe1e1;border-color:#c1121f}
+    .ecg-opt.correct{background:var(--soft-green,#e6f4ea);border-color:#1a7f37;color:var(--ink)}
+    .ecg-opt.wrong{background:var(--soft-red,#ffe1e1);border-color:#c1121f;color:var(--ink)}
     .ecg-opt:disabled{cursor:default}
     .ecg-hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-    .ecg-stat{border:1px solid var(--border,#dce1ec);border-radius:14px;padding:14px;background:var(--card,#fff)}
-    .ecg-stat b{font-size:24px;display:block}
+    .ecg-stat{border:1px solid var(--line,#dce1ec);border-radius:14px;padding:14px;background:var(--panel,#fff);color:var(--ink)}
+    .ecg-stat b{font-size:24px;display:block;color:var(--ink)}
     .ecg-muted{color:var(--muted,#5b6472);font-size:13px}
-    .ecg-method-step{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border,#eef1f7)}
+    .ecg-method-step{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line,#eef1f7)}
     .ecg-method-step .n{flex:0 0 28px;height:28px;border-radius:50%;background:var(--accent,#1261f5);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+    .ecg-teach{color:var(--ink)}
     .ecg-teach h4{margin:14px 0 4px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted,#5b6472)}
     .ecg-teach ul{margin:4px 0;padding-left:18px}
     .ecg-conf{display:flex;flex-wrap:wrap;gap:8px}
-    .ecg-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-    .ecg-caliper-read{font-variant-numeric:tabular-nums;font-weight:700}
-    .ecg-select{border:1px solid var(--border,#dce1ec);border-radius:10px;padding:8px 10px;background:var(--card,#fff);color:inherit;font-size:13px}
-    .ecg-table{width:100%;border-collapse:collapse;font-size:13px}
-    .ecg-table th,.ecg-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border,#eef1f7)}
+    .ecg-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--ink)}
+    .ecg-caliper-read{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink)}
+    .ecg-select{border:1px solid var(--line,#dce1ec);border-radius:10px;padding:8px 10px;background:var(--panel,#fff);color:var(--ink);font-size:13px}
+    .ecg-table{width:100%;border-collapse:collapse;font-size:13px;color:var(--ink)}
+    .ecg-table th,.ecg-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line,#eef1f7)}
     .ecg-table th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted,#5b6472)}
     `;
     document.head.appendChild(style);
@@ -1028,7 +1225,7 @@
   // ---- Banco ----------------------------------------------------------------
   function viewBanco() {
     const S = st();
-    if (S.ui.bankId && CONDITION_MAP[S.ui.bankId]) return viewCondition(CONDITION_MAP[S.ui.bankId], 'banco');
+    // (o detalhe da condição é roteado em bodyHtml conforme S.ui.viewer)
     const cat = S.ui.bankCat || 'all';
     const list = CONDITIONS.filter((c) => cat === 'all' || c.category === cat);
     const catOptions = ['all', ...CATEGORIES].map((c) => `<option value="${esc(c)}" ${cat === c ? 'selected' : ''}>${c === 'all' ? 'Todas as categorias' : esc(c)}</option>`).join('');
@@ -1068,20 +1265,26 @@
     </div>`;
   }
 
-  function viewCondition(c, back) {
-    return `
-    <div class="ecg-toolbar"><button class="ecg-btn ghost" data-ecg-back="${back}">← Voltar</button><h3 style="margin:0">${esc(c.name)}</h3>${badge(c.urgency)}
-      <button class="ecg-btn" data-ecg-regen="${c.id}" style="margin-left:auto">Gerar nova variação</button>
-      <button class="ecg-btn ghost" data-ecg-measure="${c.id}">Régua/compasso</button></div>
+  function viewerToolbar(c, active) {
+    const b = (mode, label) => `<button class="ecg-btn ${active === mode ? '' : 'ghost'}" data-ecg-viewer="${mode}">${label}</button>`;
+    return `<div class="ecg-toolbar">
+      <button class="ecg-btn ghost" data-ecg-back="banco">← Voltar</button>
+      <h3 style="margin:0">${esc(c.name)}</h3>${badge(c.urgency)}
+      <span style="margin-left:auto"></span>
+      ${b('trace', 'Traçado')}${b('explore', 'Explorar ondas')}${b('animate', 'Animar')}${b('measure', 'Régua')}
+      <button class="ecg-btn ghost" data-ecg-regen="${c.id}">Nova variação</button>
+    </div>`;
+  }
+
+  function viewCondition(c) {
+    return `${viewerToolbar(c, 'trace')}
     <div class="ecg-canvas-shell"><canvas data-ecg-canvas="${c.id}"></canvas></div>
     <div class="ecg-card">${teachBlock(c)}</div>`;
   }
 
   // ---- Régua / compasso -----------------------------------------------------
   function viewMeasure(c) {
-    return `
-    <div class="ecg-toolbar"><button class="ecg-btn ghost" data-ecg-open="${c.id}">← Voltar ao traçado</button>
-      <h3 style="margin:0">Régua digital — ${esc(c.name)}</h3></div>
+    return `${viewerToolbar(c, 'measure')}
     <p class="ecg-muted">Clique e arraste sobre a tira para medir. Horizontal → intervalo (ms) e frequência; vertical incluída no cálculo de amplitude.</p>
     <div class="ecg-toolbar">
       <span class="ecg-caliper-read" data-ecg-read>Δt: — ms · FC: — bpm · Δ: — mV</span>
@@ -1092,6 +1295,102 @@
       <canvas data-ecg-overlay style="position:absolute;inset:0;width:100%"></canvas>
     </div>
     <p class="ecg-muted">1 quadradinho = 0,04 s (40 ms) e 0,1 mV. 1 quadradão = 0,20 s. FC ≈ 60 / (Δt em s).</p>`;
+  }
+
+  // ---- Explorar ondas (clicar para identificar) -----------------------------
+  function viewExplore(c) {
+    return `${viewerToolbar(c, 'explore')}
+    <p class="ecg-muted">Clique em qualquer ponto do traçado para identificar a onda/segmento e o que está acontecendo no coração naquele instante (sístole ou diástole).</p>
+    <div class="ecg-canvas-shell" style="position:relative">
+      <canvas data-ecg-explore="${c.id}"></canvas>
+      <canvas data-ecg-explore-ov style="position:absolute;inset:0;width:100%;cursor:crosshair"></canvas>
+    </div>
+    <div class="ecg-card" data-ecg-explore-info>
+      <p class="ecg-muted">👆 Toque no traçado para começar. Dica: clique na ondinha antes do pico (P), no pico alto (QRS) e na onda arredondada depois (T).</p>
+    </div>`;
+  }
+
+  // ---- Animar (traçado em tempo real, tipo monitor) -------------------------
+  function viewAnimate(c) {
+    return `${viewerToolbar(c, 'animate')}
+    <p class="ecg-muted">O traçado corre em tempo real, como num monitor de beira de leito. Acompanhe a fase do ciclo cardíaco mudando a cada batida.</p>
+    <div class="ecg-toolbar">
+      <button class="ecg-btn" data-ecg-anim-toggle>⏸ Pausar</button>
+      <label class="ecg-muted" style="display:flex;align-items:center;gap:6px">Velocidade
+        <select class="ecg-select" data-ecg-anim-speed><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="2">2×</option></select>
+      </label>
+      <span class="ecg-anim-phase" data-ecg-anim-phase>—</span>
+      <span class="ecg-muted" data-ecg-anim-hr></span>
+    </div>
+    <div class="ecg-canvas-shell"><canvas data-ecg-animate="${c.id}" style="background:#0c0f14"></canvas></div>
+    <p class="ecg-muted">Verde = diástole (relaxa/enche) · Vermelho = sístole (contrai/ejeta). Derivação DII.</p>`;
+  }
+
+  // ---- Trilha de estudo -----------------------------------------------------
+  function viewTrilha() {
+    const S = st();
+    const done = S.trilha.done || {};
+    const total = TRILHA_LESSONS.length;
+    const doneCount = TRILHA_LESSONS.filter((l) => done[l.id]).length;
+    const pct = Math.round((doneCount / total) * 100);
+    // primeira lição não concluída = "próxima"
+    const next = TRILHA_LESSONS.find((l) => !done[l.id]) || TRILHA_LESSONS[0];
+    let html = `
+    <div class="ecg-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+        <div><h3 style="margin:0">Sua trilha de ECG</h3><p class="ecg-muted" style="margin:4px 0 0">Do zero ao avançado, na ordem certa. ${doneCount}/${total} lições concluídas.</p></div>
+        <button class="ecg-btn" data-ecg-lesson="${next.id}">${doneCount ? 'Continuar' : 'Começar'} →</button>
+      </div>
+      <div style="height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:12px"><div style="height:100%;width:${pct}%;background:var(--accent,#1261f5)"></div></div>
+    </div>`;
+    TRILHA.forEach((mod) => {
+      const modDone = mod.lessons.filter((l) => done[l.id]).length;
+      html += `<div class="ecg-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3 style="margin:0;font-size:14px">${esc(mod.module)}</h3><span class="ecg-tag">${modDone}/${mod.lessons.length}</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
+        ${mod.lessons.map((l) => {
+          const isDone = !!done[l.id];
+          return `<button class="ecg-opt" data-ecg-lesson="${l.id}" style="display:flex;align-items:center;gap:10px">
+            <span style="flex:0 0 22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;background:${isDone ? '#1a7f37' : 'var(--line)'};color:${isDone ? '#fff' : 'var(--muted)'}">${isDone ? '✓' : ''}</span>
+            <span style="flex:1">${esc(l.title)}</span>
+            <span class="ecg-tag">${LEVEL_LABEL[l.level]}</span></button>`;
+        }).join('')}
+        </div></div>`;
+    });
+    return html;
+  }
+
+  function viewLesson(lesson) {
+    const S = st();
+    const idx = TRILHA_LESSONS.findIndex((l) => l.id === lesson.id);
+    const prev = TRILHA_LESSONS[idx - 1], nxt = TRILHA_LESSONS[idx + 1];
+    const isDone = !!(S.trilha.done && S.trilha.done[lesson.id]);
+    const demo = lesson.demo && CONDITION_MAP[lesson.demo];
+    let actions = '';
+    if (demo) {
+      if (lesson.explore) actions += `<button class="ecg-btn ghost" data-ecg-open2="${demo.id}:explore">Explorar ondas neste traçado</button>`;
+      if (lesson.animate) actions += `<button class="ecg-btn ghost" data-ecg-open2="${demo.id}:animate">Ver em movimento (animar)</button>`;
+      if (lesson.measure) actions += `<button class="ecg-btn ghost" data-ecg-open2="${demo.id}:measure">Medir com a régua</button>`;
+      actions += `<button class="ecg-btn ghost" data-ecg-open2="${demo.id}:trace">Abrir no banco</button>`;
+    }
+    if (lesson.gotoMethod) actions += `<button class="ecg-btn ghost" data-ecg-sub-go="metodo">Ver o método completo</button>`;
+    const quiz = (lesson.quiz || []).filter((id) => CONDITION_MAP[id]);
+    return `
+    <div class="ecg-toolbar"><button class="ecg-btn ghost" data-ecg-sub-go="trilha">← Trilha</button>
+      <h3 style="margin:0">${esc(lesson.title)}</h3><span class="ecg-tag">${LEVEL_LABEL[lesson.level]}</span></div>
+    ${demo ? `<div class="ecg-canvas-shell"><canvas data-ecg-canvas="${demo.id}"></canvas></div>` : ''}
+    <div class="ecg-card">
+      <h4 style="margin:0 0 4px;text-transform:uppercase;font-size:12px;letter-spacing:.04em;color:var(--muted)">Para começar</h4>
+      <p style="margin:0 0 12px">${esc(lesson.base)}</p>
+      <h4 style="margin:0 0 4px;text-transform:uppercase;font-size:12px;letter-spacing:.04em;color:var(--muted)">Aprofundando</h4>
+      <p style="margin:0">${esc(lesson.deep)}</p>
+      ${actions ? `<div class="ecg-conf" style="margin-top:14px">${actions}</div>` : ''}
+    </div>
+    ${quiz.length ? `<div class="ecg-card"><h3 style="margin:0 0 6px;font-size:15px">Praticar agora</h3><p class="ecg-muted" style="margin:0 0 10px">Fixe com um treino rápido dos padrões desta lição.</p><button class="ecg-btn" data-ecg-lesson-quiz="${quiz.join(',')}">Treinar (${quiz.length})</button></div>` : ''}
+    <div class="ecg-toolbar" style="margin-top:4px">
+      ${prev ? `<button class="ecg-btn ghost" data-ecg-lesson="${prev.id}">← Anterior</button>` : ''}
+      <button class="ecg-btn" data-ecg-lesson-done="${lesson.id}" style="margin-left:auto">${isDone ? '✓ Concluída' : 'Concluir'}${nxt ? ' e avançar →' : ''}</button>
+    </div>`;
   }
 
   // ---- Treino / Revisão -----------------------------------------------------
@@ -1272,14 +1571,39 @@
       if (!cond) return;
       drawWhenReady(cv, () => { renderECG(cv, cond, { mode: 'strip', height: 180, stripDur: 10 }); setupCalipers(cv); });
     });
+    root().querySelectorAll('canvas[data-ecg-explore]').forEach((cv) => {
+      const cond = CONDITION_MAP[cv.dataset.ecgExplore];
+      if (!cond) return;
+      drawWhenReady(cv, () => { renderECG(cv, cond, { mode: 'strip', height: 200, stripDur: 8 }); setupExplore(cv, cond); });
+    });
+    root().querySelectorAll('canvas[data-ecg-animate]').forEach((cv) => {
+      const cond = CONDITION_MAP[cv.dataset.ecgAnimate];
+      if (!cond) return;
+      drawWhenReady(cv, () => startAnimation(cv, cond));
+    });
   }
 
   function bodyHtml() {
     const S = st();
     const sub = S.ui.sub;
-    if (S._measure) return viewMeasure(CONDITION_MAP[S._measure]);
+    // Lição da trilha aberta?
+    if (sub === 'trilha' && S.ui.lesson) {
+      const lesson = TRILHA_LESSONS.find((l) => l.id === S.ui.lesson);
+      if (lesson) return viewLesson(lesson);
+    }
+    // Visualizador de condição (banco) com modo selecionado
+    if (S.ui.bankId && CONDITION_MAP[S.ui.bankId] && (sub === 'banco')) {
+      const c = CONDITION_MAP[S.ui.bankId];
+      switch (S.ui.viewer) {
+        case 'measure': return viewMeasure(c);
+        case 'explore': return viewExplore(c);
+        case 'animate': return viewAnimate(c);
+        default: return viewCondition(c);
+      }
+    }
     switch (sub) {
       case 'inicio': return viewInicio();
+      case 'trilha': return viewTrilha();
       case 'metodo': return viewMetodo();
       case 'banco': return viewBanco();
       case 'treino': return viewQuiz('treino');
@@ -1290,10 +1614,11 @@
   }
 
   function mountBody() {
+    stopAnimation(); // encerra qualquer animação da tela anterior
     const el = root();
     if (!el) return;
     el.querySelector('.ecg-body').innerHTML = bodyHtml();
-    el.querySelectorAll('.ecg-subnav button').forEach((b) => b.classList.toggle('active', b.dataset.ecgSub === st().ui.sub && !st()._measure));
+    el.querySelectorAll('.ecg-subnav button').forEach((b) => b.classList.toggle('active', b.dataset.ecgSub === st().ui.sub));
     wireBody();
     renderCanvases();
   }
@@ -1332,6 +1657,134 @@
     overlay.ontouchend = () => (dragging = false);
     const clearBtn = root().querySelector('[data-ecg-caliper-clear]');
     if (clearBtn) clearBtn.onclick = () => { ctx.clearRect(0, 0, w, h); if (readEl) readEl.textContent = 'Δt: — ms · FC: — bpm · Δ: — mV'; };
+  }
+
+  // ---------------------------------------------------------------------------
+  // Explorar ondas — clique identifica onda/segmento + fase do ciclo
+  // ---------------------------------------------------------------------------
+  function setupExplore(stripCanvas, cond) {
+    const overlay = root().querySelector('canvas[data-ecg-explore-ov]');
+    const info = root().querySelector('[data-ecg-explore-info]');
+    if (!overlay || !stripCanvas._ecgMap) return;
+    const map = stripCanvas._ecgMap;
+    const beats = buildBeats(cond, 11, 1);
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const w = stripCanvas.clientWidth, h = stripCanvas.clientHeight;
+    overlay.width = w * dpr; overlay.height = h * dpr; overlay.style.height = h + 'px';
+    const ctx = overlay.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const pxToTime = (px) => map.tStart + (px - map.x0) / (MM_PER_S * map.pxmm);
+    const timeToPx = (t) => map.x0 + (t - map.tStart) * MM_PER_S * map.pxmm;
+    function markAt(px) {
+      const t = pxToTime(px);
+      const ph = phaseAt(t, beats, cond);
+      // faixa destacando a região da fase
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = ph.color + '33';
+      ctx.fillRect(px - 14, 0, 28, h);
+      ctx.strokeStyle = ph.color; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(px, 0); ctx.lineTo(px, h); ctx.stroke();
+      // rótulo
+      ctx.fillStyle = ph.color; ctx.font = '700 12px system-ui';
+      const lbl = ph.wave;
+      const tw = ctx.measureText(lbl).width;
+      let lx = clamp(px - tw / 2, 2, w - tw - 6);
+      ctx.fillRect(lx - 4, 4, tw + 8, 18); ctx.fillStyle = '#fff'; ctx.fillText(lbl, lx, 17);
+      if (info) {
+        const isS = ph.phase.indexOf('Sístole') === 0;
+        info.innerHTML = `
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <span class="ecg-badge" style="background:${ph.color};color:#fff">${esc(ph.wave)}</span>
+            <span class="ecg-badge" style="background:${isS ? '#c1121f' : '#1a7f37'};color:#fff">${esc(ph.phase)}</span>
+          </div>
+          <p style="margin:10px 0 4px"><b>Elétrica:</b> ${esc(ph.electrical)}.</p>
+          <p style="margin:0"><b>No coração:</b> ${esc(ph.mechanical)}</p>`;
+      }
+    }
+    const pos = (e) => { const r = overlay.getBoundingClientRect(); const p = e.touches ? e.touches[0] : e; return p.clientX - r.left; };
+    overlay.onmousedown = overlay.ontouchstart = (e) => { e.preventDefault(); markAt(pos(e)); };
+    overlay.onmousemove = (e) => { if (e.buttons === 1) markAt(pos(e)); };
+  }
+
+  // ---------------------------------------------------------------------------
+  // Animar — traçado correndo em tempo real (tipo monitor de leito)
+  // ---------------------------------------------------------------------------
+  let ANIM = { raf: 0, running: false };
+  function stopAnimation() {
+    if (ANIM.raf) cancelAnimationFrame(ANIM.raf);
+    ANIM = { raf: 0, running: false };
+  }
+  function startAnimation(canvas, cond) {
+    stopAnimation();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const cssW = canvas.clientWidth || 900;
+    const h = 220;
+    canvas.width = cssW * dpr; canvas.height = h * dpr; canvas.style.height = h + 'px';
+    const ctx = canvas.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = '#0c0f14'; ctx.fillRect(0, 0, cssW, h);
+    const beats = buildBeats(cond, 300, 1); // cronograma longo
+    const ampCache = {}; ampCache.II = getAmps(cond, 'II');
+    const pxmm = Math.max(3, cssW / (MM_PER_S * 6)); // ~6 s visíveis
+    const yBase = h / 2;
+    const winDur = cssW / (MM_PER_S * pxmm); // segundos visíveis
+    const phaseEl = root().querySelector('[data-ecg-anim-phase]');
+    const hrEl = root().querySelector('[data-ecg-anim-hr]');
+    const toggleBtn = root().querySelector('[data-ecg-anim-toggle]');
+    const speedSel = root().querySelector('[data-ecg-anim-speed]');
+    let speed = speedSel ? parseFloat(speedSel.value) : 1;
+    if (speedSel) speedSel.onchange = () => { speed = parseFloat(speedSel.value); };
+    ANIM.running = true;
+    if (toggleBtn) toggleBtn.onclick = () => {
+      ANIM.running = !ANIM.running;
+      toggleBtn.textContent = ANIM.running ? '⏸ Pausar' : '▶ Retomar';
+      if (ANIM.running) loop();
+    };
+    // grade leve
+    function grid() {
+      ctx.strokeStyle = 'rgba(80,200,120,0.10)'; ctx.lineWidth = 1;
+      for (let gx = 0; gx <= cssW; gx += pxmm * 5) { ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, h); ctx.stroke(); }
+      for (let gy = 0; gy <= h; gy += pxmm * 5) { ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(cssW, gy); ctx.stroke(); }
+    }
+    grid();
+    let lastT = 0, startWall = performance.now(), prevX = -1;
+    function loop() {
+      if (!ANIM.running) return;
+      const now = performance.now();
+      const tNow = ((now - startWall) / 1000) * speed;
+      const step = 0.004;
+      for (let t = lastT; t <= tNow; t += step) {
+        const cyc = t % winDur;
+        const x = cyc * MM_PER_S * pxmm;
+        const v = clamp(sampleLead('II', t + 0.5, beats, cond, ampCache), -2, 2);
+        const y = yBase - v * MM_PER_MV * pxmm;
+        if (x < prevX) { prevX = -1; } // deu a volta → recomeça da esquerda
+        if (prevX < 0) {
+          // limpa uma faixa e redesenha grade nela
+          ctx.fillStyle = '#0c0f14'; ctx.fillRect(0, 0, cssW, h); grid();
+          ctx.beginPath(); ctx.moveTo(x, y);
+        } else {
+          // apaga uma barrinha à frente (efeito varredura)
+          ctx.fillStyle = '#0c0f14'; ctx.fillRect(x + 1, 0, 10, h);
+          ctx.strokeStyle = '#37d67a'; ctx.lineWidth = 1.8; ctx.lineJoin = 'round';
+          ctx.beginPath(); ctx.moveTo(prevX, prevY); ctx.lineTo(x, y); ctx.stroke();
+        }
+        prevX = x; prevY = y;
+      }
+      lastT = tNow;
+      // fase atual + FC
+      const ph = phaseAt((tNow % winDur) + (tNow - (tNow % winDur)) + 0.5, beats, cond);
+      if (phaseEl) {
+        const isS = ph.phase.indexOf('Sístole') === 0;
+        phaseEl.textContent = ph.phase;
+        phaseEl.style.color = isS ? '#ff5a5a' : '#37d67a';
+        phaseEl.style.fontWeight = '800';
+      }
+      if (hrEl) hrEl.textContent = cond.rate ? `≈ ${cond.rate} bpm` : '';
+      ANIM.raf = requestAnimationFrame(loop);
+    }
+    let prevY = yBase;
+    loop();
   }
 
   // ---------------------------------------------------------------------------
@@ -1401,6 +1854,19 @@
       window.__ecgResizeHooked = true;
       let rt;
       window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (document.getElementById('ecg')?.classList.contains('active') || document.getElementById('ecg')?.offsetParent) renderCanvases(); }, 200); });
+    }
+    // redesenhar canvases quando o tema (body.dark) muda — a cor do papel/traçado segue o tema
+    if (!window.__ecgThemeHooked && typeof MutationObserver === 'function') {
+      window.__ecgThemeHooked = true;
+      let lastDark = document.body.classList.contains('dark');
+      new MutationObserver(() => {
+        const nowDark = document.body.classList.contains('dark');
+        if (nowDark !== lastDark) {
+          lastDark = nowDark;
+          const ecg = document.getElementById('ecg');
+          if (ecg && (ecg.classList.contains('active') || ecg.offsetParent)) renderCanvases();
+        }
+      }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
     }
   }
 

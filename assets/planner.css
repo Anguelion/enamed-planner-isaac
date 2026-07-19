@@ -316,7 +316,9 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .block-strip{display:flex;gap:8px;overflow:auto;padding:4px 0 10px}
 .block-chip{border:1px solid var(--line);background:#fff;border-radius:999px;min-width:46px;min-height:36px;font-weight:900;position:relative;padding-left:15px}
 .block-chip:before{content:"";position:absolute;left:7px;top:50%;transform:translateY(-50%);width:7px;height:7px;border-radius:50%;background:var(--line)}
-.block-chip.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.block-chip.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 0 0 3px rgba(18,97,245,.3)}
+@keyframes block-chip-pulse{0%{box-shadow:0 0 0 0 rgba(18,97,245,.55)}100%{box-shadow:0 0 0 16px rgba(18,97,245,0)}}
+.block-chip-pulse{animation:block-chip-pulse .5s ease-out}
 .block-chip.done{background:var(--soft-green);border-color:#cde8d5;color:var(--green)}
 .block-chip.done:before{background:var(--green)}
 .block-chip.pending{background:var(--soft-amber);border-color:#f0d9a6;color:var(--amber)}
