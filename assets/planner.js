@@ -79,12 +79,13 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Devidos', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
 try { Object.assign(ui, JSON.parse(localStorage.getItem(QUESTION_VIEW_KEY) || '{}')); } catch(error) {}
 if(ui.tab === 'hoje') ui.tab = 'painel';
+if(ui.flashcardFilter === 'Devidos') ui.flashcardFilter = 'Aprendendo';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
 let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', sessionActive: false, pausedByUser: false, running: false, interval: null, questionId: '', secondsLeft: 0, elapsedSeconds: 0, beeped: false, status: '', audioContext: null };
@@ -2900,7 +2901,7 @@ function upcomingReviewGroups() {
   const now=Date.now();
   const cards=flashcardAllRecords().map(card=>({card,due:Date.parse(flashcardProgress(card).dueAt||`${flashcardProgress(card).nextReview||studyDateKey()}T05:00:00`)})).filter(item=>Number.isFinite(item.due)).sort((a,b)=>a.due-b.due);
   return [
-    {label:'Devidos agora',count:cards.filter(item=>item.due<=now).length,foot:'estudar agora'},
+    {label:'Aprendendo agora',count:cards.filter(item=>item.due<=now).length,foot:'estudar agora'},
     {label:'Nas próximas 2 h',count:cards.filter(item=>item.due>now&&item.due<=now+7200000).length,foot:'fila próxima'},
     {label:'Até amanhã',count:cards.filter(item=>item.due>now+7200000&&item.due<=now+86400000).length,foot:'programados'}
   ];
@@ -3116,7 +3117,7 @@ function renderPainel() {
   bindPersonalDailyTasks(ui.refDate);
   bindGamificationDashboard();
   document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
-  document.querySelectorAll('[data-dashboard-open-flashcards]').forEach(button=>button.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Devidos';render();}));
+  document.querySelectorAll('[data-dashboard-open-flashcards]').forEach(button=>button.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Aprendendo';render();}));
   document.querySelectorAll('[data-weekly-metric]').forEach(button=>button.addEventListener('click',event=>{ui.weeklyMetric=event.currentTarget.dataset.weeklyMetric;renderPainel();}));
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
@@ -5832,6 +5833,17 @@ function manualFlashcards() {
   renderCache.manualCards = [...questionCards, ...videoCards];
   return renderCache.manualCards;
 }
+let everGoodCardIdsCache = null;
+let everGoodCardIdsCacheLen = -1;
+function everGoodCardIds() {
+  const logs = state.flashcardSystem?.reviewLogs || [];
+  if(everGoodCardIdsCache && everGoodCardIdsCacheLen === logs.length) return everGoodCardIdsCache;
+  const set = new Set();
+  logs.forEach(log => { if(n(log.rating) >= 3) set.add(log.cardId); });
+  everGoodCardIdsCache = set;
+  everGoodCardIdsCacheLen = logs.length;
+  return set;
+}
 function flashcardProgress(card) {
   const progress = state.flashcardProgress[card.id] || {};
   let dueAt = progress.dueAt || card.dueAt || '';
@@ -5851,6 +5863,7 @@ function flashcardProgress(card) {
     status: progress.status || (card.isSuspended ? 'Suspenso' : card.state === 'new' ? 'Novo' : 'Bom'),
     lastReviewedAt: progress.lastReviewedAt || '',
     nextReview: progress.nextReview || card.due || localISODate(new Date()),
+    everGood: Boolean(progress.everGood) || everGoodCardIds().has(card.id),
     dueAt
   };
 }
