@@ -2982,7 +2982,7 @@ function renderFerramentas() {
 }
 function cadernoErrosEntries() {
   return Object.entries(state.questionProgress || {})
-    .filter(([id, progress]) => String(progress?.notes || '').trim())
+    .filter(([id, progress]) => String(progress?.notes || '').trim() || String(progress?.preReasoning || '').trim() || String(progress?.postLearning || '').trim())
     .map(([id, progress]) => ({ id, progress, question: questionBank.find(q => q.id === id) || importedQuestionById(id) }))
     .filter(entry => entry.question)
     .sort((a, b) => Date.parse(b.progress.updatedAt || '') - Date.parse(a.progress.updatedAt || ''));
@@ -2995,7 +2995,12 @@ function renderCadernoErroCard(entry) {
   const snippet = stem.length > 160 ? `${stem.slice(0, 160)}…` : stem;
   const answerCompare = progress.answeredAt ? `<div class="caderno-answer-compare"><span class="badge ${progress.correct ? 'done' : 'no'}">${escapeHtml(String(progress.selected || '—'))}</span><span>→</span><span class="badge done">${escapeHtml(String(question.answer || '—'))}</span></div>` : '';
   const savedAt = progress.updatedAt ? new Date(progress.updatedAt).toLocaleDateString('pt-BR') : '';
-  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p><p class="caderno-erro-note">${escapeHtml(progress.notes)}</p>${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
+  const noteBlock = String(progress.notes || '').trim() ? `<p class="caderno-erro-note">${escapeHtml(progress.notes)}</p>` : '';
+  const reflectionRows = [
+    String(progress.preReasoning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que eu achava antes</span><p>${escapeHtml(progress.preReasoning)}</p></div>` : '',
+    String(progress.postLearning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que sei agora</span><p>${escapeHtml(progress.postLearning)}</p></div>` : ''
+  ].join('');
+  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
 }
 function renderCadernoErros() {
   const allEntries = cadernoErrosEntries();
@@ -3005,10 +3010,10 @@ function renderCadernoErros() {
     const tag = questionTag(entry.question);
     if(ui.cadernoArea !== 'Todas' && tag.area !== ui.cadernoArea) return false;
     if(!search) return true;
-    const haystack = normalizedTopic(`${entry.question.stem || ''} ${entry.progress.notes || ''}`);
+    const haystack = normalizedTopic(`${entry.question.stem || ''} ${entry.progress.notes || ''} ${entry.progress.preReasoning || ''} ${entry.progress.postLearning || ''}`);
     return haystack.includes(search);
   });
-  document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span></div></div><section class="card"><div class="section-title"><div><h2>Anotações</h2></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado ou comentário"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada. Escreva um comentário em qualquer questão para ela aparecer aqui.</div>'}</div></section>`;
+  document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários e reflexões que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span></div></div><section class="card"><div class="section-title"><div><h2>Anotações</h2></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado ou comentário"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada. Escreva um comentário em qualquer questão para ela aparecer aqui.</div>'}</div></section>`;
   bindCadernoErros();
 }
 function bindCadernoErros() {
@@ -5680,6 +5685,8 @@ function newestFlashcardsFirst(cards) {
 function renderFlashcardMarkdownToolbar() {
   return `<div class="flashcard-md-toolbar" role="toolbar" aria-label="Formatação do flashcard">
     <button type="button" class="flashcard-md-tool" data-fc-md-prefix="**" data-fc-md-suffix="**" title="Negrito"><strong>B</strong></button>
+    <button type="button" class="flashcard-md-tool" data-fc-md-prefix="*" data-fc-md-suffix="*" title="Itálico"><em>I</em></button>
+    <button type="button" class="flashcard-md-tool" data-fc-md-prefix="++" data-fc-md-suffix="++" title="Sublinhado"><u>S</u></button>
     <button type="button" class="flashcard-md-tool" data-fc-md-line="# " title="Texto grande"><strong>H</strong></button>
     <button type="button" class="flashcard-md-tool marker" data-fc-md-prefix="==" data-fc-md-suffix="==" title="Marca-texto">Marca</button>
     <button type="button" class="flashcard-md-tool color blue" data-fc-md-prefix="{{blue|" data-fc-md-suffix="}}" title="Texto azul" aria-label="Texto azul"></button>
@@ -5898,7 +5905,7 @@ function flashcardStudyQueue(all=manualFlashcards()) {
   const newRemaining = Math.max(0, n(state.flashcardSettings.newLimit) - flashcardNewToday());
   const reviewRemaining = Math.max(0, n(state.flashcardSettings.reviewLimit) - flashcardReviewsToday());
   const base = filteredFlashcards(all);
-  if(ui.flashcardFilter !== 'Devidos') return base;
+  if(ui.flashcardFilter !== 'Aprendendo') return base;
   const reviews = base
     .filter(card => flashcardProgress(card).reviews > 0 && isFlashcardDue(card, today))
     .sort((a,b)=>String(flashcardProgress(a).dueAt || flashcardProgress(a).nextReview).localeCompare(String(flashcardProgress(b).dueAt || flashcardProgress(b).nextReview)));
@@ -5917,7 +5924,8 @@ function filteredFlashcards(all=manualFlashcards()) {
   return all.filter(card => {
     const progress = flashcardProgress(card);
     const filterOk = ui.flashcardFilter === 'Todos'
-      || (ui.flashcardFilter === 'Devidos' && isFlashcardDue(card, today))
+      || (ui.flashcardFilter === 'Aprendendo' && isFlashcardDue(card, today))
+      || (ui.flashcardFilter === 'Revisando' && progress.everGood)
       || (ui.flashcardFilter === 'Novos' && !progress.reviews)
       || (ui.flashcardFilter === 'Maduros' && progress.interval >= 21)
       || (ui.flashcardFilter === 'Difíceis' && (progress.status === 'Difícil' || progress.ease < 2.2))
@@ -5954,10 +5962,11 @@ function renderFlashcards() {
   const selectedBlock = ui.flashcardBlock || 'Todos';
   const blockCards = selectedBlock === 'Todos' ? all : all.filter(card => String(card.weeklyBlockId || card.block) === String(selectedBlock));
   const subjects = [...new Set(blockCards.map(card => card.subject || card.subarea || card.topic).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-  document.getElementById('flashcards').innerHTML = `<div class="grid cards">${metric('Cards no ENAMED', all.length, 'captura rápida limitada por origem; criação livre aqui')}${metric('Devidos agora', due, 'fila global por data')}${metric('Revisados hoje', reviewsToday, `${newToday} novos`) }${metric('Maduros', mature, 'estabilidade de 21+ dias')}</div>
+  document.getElementById('flashcards').classList.toggle('flashcard-focus-mode', ui.flashcardFocusMode);
+  document.getElementById('flashcards').innerHTML = `<div class="grid cards">${metric('Cards no ENAMED', all.length, 'captura rápida limitada por origem; criação livre aqui')}${metric('Aprendendo agora', due, 'fila global por data')}${metric('Revisados hoje', reviewsToday, `${newToday} novos`) }${metric('Maduros', mature, 'estabilidade de 21+ dias')}</div>
   <div class="card flashcard-command"><div><h2>Flashcards</h2><div class="muted">Capture, organize e revise por bloco e assunto. A agenda usa um perfil FSRS local com retenção de ${Math.round(n(state.flashcardSystem.profile.targetRetention)*100)}%.</div></div><div class="flashcard-command-actions"><button class="icon-btn primary" id="newFlashcardBtn">+ Novo card</button><button class="icon-btn" id="flashcardUndoBtn">Desfazer</button><button class="icon-btn" id="flashcardBackupBtn">Backup</button><button class="icon-btn" id="ankiExportBtn">Exportar</button></div></div>
   <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">
-  <div class="flashcard-filters"><select class="select" id="flashcardFilter">${['Devidos','Todos','Novos','Difíceis','Maduros','Suspensos'].map(value => `<option ${ui.flashcardFilter===value?'selected':''}>${value}</option>`).join('')}</select><select class="select" id="flashcardArea">${areas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select><label class="flashcard-target">Novos/dia <input class="mini-input" id="flashcardNewLimit" type="number" min="0" value="${n(state.flashcardSettings.newLimit)}"></label><label class="flashcard-target">Revisões/dia <input class="mini-input" id="flashcardReviewLimit" type="number" min="0" value="${n(state.flashcardSettings.reviewLimit)}"></label><span class="muted">${forecast.map(item => `${fmtDate(item.date).slice(0,5)}: ${item.count}`).join(' · ')}</span></div>
+  <div class="flashcard-filters"><select class="select" id="flashcardFilter">${['Aprendendo','Revisando','Todos','Novos','Difíceis','Maduros','Suspensos'].map(value => `<option ${ui.flashcardFilter===value?'selected':''}>${value}</option>`).join('')}</select><select class="select" id="flashcardArea">${areas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select><label class="flashcard-target">Novos/dia <input class="mini-input" id="flashcardNewLimit" type="number" min="0" value="${n(state.flashcardSettings.newLimit)}"></label><label class="flashcard-target">Revisões/dia <input class="mini-input" id="flashcardReviewLimit" type="number" min="0" value="${n(state.flashcardSettings.reviewLimit)}"></label><span class="muted">${forecast.map(item => `${fmtDate(item.date).slice(0,5)}: ${item.count}`).join(' · ')}</span></div>
   <div class="flashcards-workspace">
     <aside class="flashcards-panel flashcard-block-panel"><div class="section-title"><h3>Blocos</h3><span class="badge today">${blocks.length-1}</span></div><button class="flashcard-block-choice ${selectedBlock==='Todos'?'active':''}" data-fc-block="Todos">Todos os blocos <span>${all.length}</span></button>${blocks.slice(1).map(block => `<button class="flashcard-block-choice ${String(selectedBlock)===String(block)?'active':''}" data-fc-block="${escapeAttr(block)}">Bloco ${escapeHtml(block)} <span>${all.filter(card=>String(card.weeklyBlockId||card.block)===String(block)).length}</span></button>`).join('')}<div class="muted flashcard-shortcuts">Espaço revela · 1–4 avalia<br>E edita · S suspende · Z desfaz</div></aside>
     <main class="flashcards-panel flashcard-review-column">${ui.flashcardEditorOpen ? renderFlashcardWorkspaceEditor() : renderFlashcardStudy(study, cards)}<div class="flashcard-subject-strip"><div class="section-title"><h3>Assuntos${selectedBlock==='Todos'?'':' · Bloco '+escapeHtml(selectedBlock)}</h3><span>${subjects.length}</span></div><div class="flashcard-subject-list">${subjects.map(subject => `<button class="flashcard-subject-chip" data-fc-subject="${escapeAttr(subject)}">${escapeHtml(subject)} <span>${blockCards.filter(card=>(card.subject||card.subarea||card.topic)===subject).length}</span></button>`).join('') || '<span class="muted">Os assuntos aparecerão aqui conforme os cards forem criados.</span>'}</div></div></main>
@@ -5974,6 +5983,8 @@ function renderFlashcards() {
   if(clearDeck) clearDeck.onclick = () => { ui.flashcardDeck=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
   const toggleLibrary = document.getElementById('flashcardToggleLibrary');
   if(toggleLibrary) toggleLibrary.onclick = () => { ui.flashcardShowLibrary = !ui.flashcardShowLibrary; renderFlashcards(); };
+  const focusToggle = document.getElementById('flashcardFocusToggle');
+  if(focusToggle) focusToggle.onclick = () => { ui.flashcardFocusMode = !ui.flashcardFocusMode; renderFlashcards(); };
   const exportBtn = document.getElementById('ankiExportBtn');
   if(exportBtn) exportBtn.onclick = exportAnkiTsv;
   const backupBtn = document.getElementById('flashcardBackupBtn');
@@ -6027,7 +6038,7 @@ function renderFlashcards() {
 }
 function renderFlashcardIndicators(all, queue, reviewed, due) {
   const retention = reviewed ? Math.round(all.filter(card => flashcardProgress(card).lastRating >= 3).length / reviewed * 100) : 0;
-  return `<div class="fc-indicator"><span>Fila atual</span><strong>${queue.length}</strong><small>prioriza devidos, depois novos</small></div><div class="fc-indicator"><span>Retenção observada</span><strong>${retention}%</strong><small>acertos nas revisões registradas</small></div><div class="fc-indicator"><span>Atrasados</span><strong class="fc-alert">${due}</strong><small>cards que pedem atenção</small></div>`;
+  return `<div class="fc-indicator"><span>Fila atual</span><strong>${queue.length}</strong><small>prioriza aprendendo, depois novos</small></div><div class="fc-indicator"><span>Retenção observada</span><strong>${retention}%</strong><small>acertos nas revisões registradas</small></div><div class="fc-indicator"><span>Atrasados</span><strong class="fc-alert">${due}</strong><small>cards que pedem atenção</small></div>`;
 }
 function renderFlashcardRadar(all) {
   const bySubject = new Map();
@@ -6122,7 +6133,7 @@ function renderFlashcardStudy(card, queue=[]) {
   if(!card) return '<div class="flashcard-empty-session"><div><h2>Fim da sessão</h2><div class="muted">Nenhum flashcard neste filtro agora. Troque o filtro ou crie novos cards nas questões.</div></div></div>';
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
-  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today" data-auto-study-clock>Tempo pausado</span><span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
+  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="${ui.flashcardFocusMode ? 'Foco ·' : 'Registrando'}">Tempo pausado</span><span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span><button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;
@@ -6162,6 +6173,7 @@ function reviewFlashcard(id, quality) {
   state.flashcardProgress[id] = {
     ...current,
     ...fsrs,
+    everGood: Boolean(current.everGood) || quality >= 3,
     status: isLeech ? 'Suspenso' : fsrs.status,
     reviews: fsrs.reps,
     firstReviewedAt: current.firstReviewedAt || reviewedAt,
@@ -7285,6 +7297,7 @@ function renderQuestion(question, total) {
       ${dataIssue ? `<div class="question-data-warning"><strong>Revisar extração.</strong> ${escapeHtml(dataIssue)} Use “Editar” para corrigir com base no PDF.</div>` : ''}
       <div class="answer-list">${options}</div>
       ${!result && !dataIssue ? renderQuestionConfidenceLine(question, draftConfidence) : ''}
+      ${!result && !dataIssue ? renderQuestionPreReasoning(question, savedProgress) : ''}
       ${!result && !dataIssue ? `<div class="answer-confirm"><span class="muted">${draftAnswer ? `Alternativa ${draftAnswer} selecionada` : 'Selecione uma alternativa e confirme.'}</span><button class="icon-btn primary" id="confirmQuestionAnswer" data-selected-answer="${escapeAttr(draftAnswer)}" ${draftAnswer?'':'disabled'}>Confirmar resposta</button></div>` : ''}
       ${feedback}
       ${comment}
@@ -7452,6 +7465,10 @@ function renderQuestionTimer(question, result) {
     <div class="question-timer-status" id="questionTimerStatus">${escapeHtml(questionTimer.status || (active ? 'Em andamento' : 'Pronto'))}</div>
     <div class="question-timer-actions compact"><button class="icon-btn primary" id="startQuestionTimer" ${result?'disabled':''} title="${questionTimer.running?'Pausar contagem':'Iniciar contagem'}">${iconSvg(questionTimer.running?'pause':'play',{weight:'regular'})}</button><button class="icon-btn" id="saveQuestionTimer" title="Salvar tempo">${iconSvg('save',{weight:'regular'})}</button><button class="icon-btn" id="discardQuestionTimer" title="Descartar tempo">${iconSvg('delete',{weight:'regular'})}</button></div>
   </aside>`;
+}
+function renderQuestionPreReasoning(question, progress) {
+  const value = progress?.preReasoning || '';
+  return `<div class="question-pre-reasoning"><label class="field-label">Por que você acha que essa alternativa está correta?<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de confirmar a resposta">${escapeHtml(value)}</textarea></label></div>`;
 }
 function renderQuestionReflection(question, result) {
   const confidence = Math.max(0, Math.min(100, n(result.confidence)));
@@ -8416,6 +8433,7 @@ function renderFlashcardMarkdown(text, {cloze}={}) {
         return src ? `<img class="flashcard-image" loading="lazy" decoding="async" src="${src}" alt="${alt.replace(/\n/g,' ')}">` : `<span class="flashcard-image-pending">Carregando imagem...</span>`;
       })
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\+\+([^+]+)\+\+/g, '<u>$1</u>')
       .replace(/\*([^*]+)\*/g, '<em>$1</em>')
       .replace(/==([^=]+)==/g, '<mark>$1</mark>')
       .replace(/`([^`]+)`/g, '<code>$1</code>')
