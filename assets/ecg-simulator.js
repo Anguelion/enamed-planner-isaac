@@ -1740,40 +1740,33 @@
       toggleBtn.textContent = ANIM.running ? '⏸ Pausar' : '▶ Retomar';
       if (ANIM.running) loop();
     };
-    // grade leve
-    function grid() {
-      ctx.strokeStyle = 'rgba(80,200,120,0.10)'; ctx.lineWidth = 1;
-      for (let gx = 0; gx <= cssW; gx += pxmm * 5) { ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, h); ctx.stroke(); }
-      for (let gy = 0; gy <= h; gy += pxmm * 5) { ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(cssW, gy); ctx.stroke(); }
+    // grade leve (em toda a tela ou só numa faixa)
+    function grid(x0, x1) {
+      x0 = x0 || 0; x1 = x1 == null ? cssW : x1;
+      ctx.strokeStyle = 'rgba(80,200,120,0.12)'; ctx.lineWidth = 1;
+      for (let gx = Math.ceil(x0 / (pxmm * 5)) * pxmm * 5; gx <= x1; gx += pxmm * 5) { ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, h); ctx.stroke(); }
+      for (let gy = 0; gy <= h; gy += pxmm * 5) { ctx.beginPath(); ctx.moveTo(x0, gy); ctx.lineTo(x1, gy); ctx.stroke(); }
     }
     grid();
-    let lastT = 0, startWall = performance.now(), prevX = -1;
+    let lastT = 0, startWall = performance.now(), prevX = -1, prevY = yBase;
+    const OFF = 0.5; // desloca o início para não começar no meio de um batimento
     function loop() {
       if (!ANIM.running) return;
-      const now = performance.now();
-      const tNow = ((now - startWall) / 1000) * speed;
+      const tNow = ((performance.now() - startWall) / 1000) * speed;
       const step = 0.004;
       for (let t = lastT; t <= tNow; t += step) {
-        const cyc = t % winDur;
-        const x = cyc * MM_PER_S * pxmm;
-        const v = clamp(sampleLead('II', t + 0.5, beats, cond, ampCache), -2, 2);
+        const x = (t % winDur) * MM_PER_S * pxmm;
+        const v = clamp(sampleLead('II', t + OFF, beats, cond, ampCache), -2, 2);
         const y = yBase - v * MM_PER_MV * pxmm;
-        if (x < prevX) { prevX = -1; } // deu a volta → recomeça da esquerda
-        if (prevX < 0) {
-          // limpa uma faixa e redesenha grade nela
-          ctx.fillStyle = '#0c0f14'; ctx.fillRect(0, 0, cssW, h); grid();
-          ctx.beginPath(); ctx.moveTo(x, y);
-        } else {
-          // apaga uma barrinha à frente (efeito varredura)
-          ctx.fillStyle = '#0c0f14'; ctx.fillRect(x + 1, 0, 10, h);
-          ctx.strokeStyle = '#37d67a'; ctx.lineWidth = 1.8; ctx.lineJoin = 'round';
-          ctx.beginPath(); ctx.moveTo(prevX, prevY); ctx.lineTo(x, y); ctx.stroke();
-        }
+        if (x < prevX) prevX = -1; // deu a volta → recomeça da esquerda sem traço atravessando
+        // barra de varredura: apaga logo à frente e repõe a grade ali
+        ctx.fillStyle = '#0c0f14'; ctx.fillRect(x + 1, 0, 12, h); grid(x + 1, x + 13);
+        if (prevX < 0) { ctx.beginPath(); ctx.moveTo(x, y); }
+        else { ctx.strokeStyle = '#37d67a'; ctx.lineWidth = 1.8; ctx.lineJoin = 'round'; ctx.beginPath(); ctx.moveTo(prevX, prevY); ctx.lineTo(x, y); ctx.stroke(); }
         prevX = x; prevY = y;
       }
       lastT = tNow;
-      // fase atual + FC
-      const ph = phaseAt((tNow % winDur) + (tNow - (tNow % winDur)) + 0.5, beats, cond);
+      const ph = phaseAt(tNow + OFF, beats, cond);
       if (phaseEl) {
         const isS = ph.phase.indexOf('Sístole') === 0;
         phaseEl.textContent = ph.phase;
@@ -1783,22 +1776,41 @@
       if (hrEl) hrEl.textContent = cond.rate ? `≈ ${cond.rate} bpm` : '';
       ANIM.raf = requestAnimationFrame(loop);
     }
-    let prevY = yBase;
     loop();
   }
 
   // ---------------------------------------------------------------------------
   // Eventos
   // ---------------------------------------------------------------------------
+  function openCondition(id, viewer) {
+    const S = st(); S.ui.sub = 'banco'; S.ui.bankId = id; S.ui.viewer = viewer || null; S.ui.lesson = null; save(); mountBody();
+  }
   function wireBody() {
     const el = root();
-    el.querySelectorAll('[data-ecg-sub]').forEach((b) => (b.onclick = () => { st()._measure = null; st()._quiz = null; go(b.dataset.ecgSub); }));
-    el.querySelectorAll('[data-ecg-sub-go]').forEach((b) => (b.onclick = () => { st()._measure = null; go(b.dataset.ecgSubGo); }));
-    el.querySelectorAll('[data-ecg-open]').forEach((b) => (b.onclick = () => { const S = st(); S._measure = null; S.ui.sub = 'banco'; S.ui.bankId = b.dataset.ecgOpen; save(); mountBody(); }));
-    el.querySelectorAll('[data-ecg-back]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.bankId = null; S._measure = null; save(); mountBody(); }));
+    el.querySelectorAll('[data-ecg-sub]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.viewer = null; S.ui.bankId = null; S.ui.lesson = null; S._quiz = null; go(b.dataset.ecgSub); }));
+    el.querySelectorAll('[data-ecg-sub-go]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.viewer = null; S.ui.bankId = null; S.ui.lesson = null; go(b.dataset.ecgSubGo); }));
+    el.querySelectorAll('[data-ecg-open]').forEach((b) => (b.onclick = () => openCondition(b.dataset.ecgOpen, null)));
+    // abrir condição num modo específico (usado pela trilha): "id:modo"
+    el.querySelectorAll('[data-ecg-open2]').forEach((b) => (b.onclick = () => { const [id, mode] = b.dataset.ecgOpen2.split(':'); openCondition(id, mode === 'trace' ? null : mode); }));
+    el.querySelectorAll('[data-ecg-back]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.bankId = null; S.ui.viewer = null; save(); mountBody(); }));
+    el.querySelectorAll('[data-ecg-viewer]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.viewer = b.dataset.ecgViewer === 'trace' ? null : b.dataset.ecgViewer; save(); mountBody(); }));
     el.querySelectorAll('[data-ecg-bankcat]').forEach((sel) => (sel.onchange = () => { st().ui.bankCat = sel.value; st().ui.bankId = null; save(); mountBody(); }));
     el.querySelectorAll('[data-ecg-regen]').forEach((b) => (b.onclick = () => { const cv = el.querySelector(`canvas[data-ecg-canvas="${b.dataset.ecgRegen}"]`); if (cv) { cv.dataset.ecgSeed = String(Math.floor(Math.random() * 9999)); renderECG(cv, CONDITION_MAP[b.dataset.ecgRegen], { seed: parseInt(cv.dataset.ecgSeed, 10) }); } }));
-    el.querySelectorAll('[data-ecg-measure]').forEach((b) => (b.onclick = () => { st()._measure = b.dataset.ecgMeasure; save(); mountBody(); }));
+    // Trilha
+    el.querySelectorAll('[data-ecg-lesson]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.sub = 'trilha'; S.ui.lesson = b.dataset.ecgLesson; S.ui.bankId = null; S.ui.viewer = null; save(); mountBody(); }));
+    el.querySelectorAll('[data-ecg-lesson-done]').forEach((b) => (b.onclick = () => {
+      const S = st(); const id = b.dataset.ecgLessonDone;
+      S.trilha.done = S.trilha.done || {}; S.trilha.done[id] = true;
+      const idx = TRILHA_LESSONS.findIndex((l) => l.id === id);
+      const nxt = TRILHA_LESSONS[idx + 1];
+      S.ui.lesson = nxt ? nxt.id : id; // avança
+      if (!nxt) S.ui.lesson = null; // última → volta para a lista
+      save(); mountBody();
+    }));
+    el.querySelectorAll('[data-ecg-lesson-quiz]').forEach((b) => (b.onclick = () => {
+      const ids = b.dataset.ecgLessonQuiz.split(',').filter((id) => CONDITION_MAP[id]);
+      startQuiz('trilha', shuffle(ids.map((id) => CONDITION_MAP[id])));
+    }));
     el.querySelectorAll('[data-ecg-start-quiz]').forEach((b) => (b.onclick = () => {
       const mode = b.dataset.ecgStartQuiz;
       let pool;
