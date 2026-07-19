@@ -5472,16 +5472,14 @@ function bindVideoPlayer(source, schedule, lesson) {
   video.addEventListener('canplay', applyPreferredRate);
   video.addEventListener('playing', applyPreferredRate);
   video.addEventListener('ratechange', () => {
-    if(!restoringRate) {
-      rememberVideoPlaybackRate(video.playbackRate);
-      saveVideoProgressRecord(source,video,schedule,lesson);
-      saveStateOnly({invalidate:false});
-    }
+    // Alguns navegadores resetam a velocidade sozinhos ao pausar ou buscar um trecho.
+    // Em vez de gravar esse reset como se fosse escolha do usuário, apenas corrigimos de volta.
+    if(!restoringRate) applyPreferredRate();
   });
   const saveProgress = () => { saveVideoProgressRecord(source,video,schedule,lesson); saveStateOnly({invalidate:false}); };
   video.addEventListener('play', () => { setCleanFrame(false); videoStage?.classList.remove('is-paused'); startAutoStudy('video', schedule?.id || ''); });
-  video.addEventListener('pause', () => { videoStage?.classList.add('is-paused'); pauseAutoStudy('video'); saveProgress(); });
-  video.addEventListener('seeked', saveProgress);
+  video.addEventListener('pause', () => { videoStage?.classList.add('is-paused'); pauseAutoStudy('video'); saveProgress(); applyPreferredRate(); });
+  video.addEventListener('seeked', () => { saveProgress(); applyPreferredRate(); });
   video.addEventListener('ended', () => {
     stopAutoStudy('video', false);
     saveVideoProgressRecord(source,video,schedule,lesson,{completed:true});
@@ -5524,6 +5522,8 @@ function bindVideoPlayer(source, schedule, lesson) {
       const rate = rememberVideoPlaybackRate(Number(event.target.value));
       video.defaultPlaybackRate=rate;
       video.playbackRate=rate;
+      saveVideoProgressRecord(source,video,schedule,lesson);
+      saveStateOnly({invalidate:false});
     });
   }
   document.getElementById('videoMarkWatched')?.addEventListener('click', () => { setVideoWatchedState(source.id, !state.videoPlayer.watched[source.id]); saveStateOnly(); renderAulas(); });
@@ -8626,8 +8626,8 @@ document.addEventListener('keydown', event => {
   if(event.code === 'Space') { event.preventDefault(); video.paused ? video.play() : video.pause(); }
   else if(event.key === 'ArrowRight') { event.preventDefault(); document.getElementById('videoForward10')?.click(); }
   else if(event.key === 'ArrowLeft') { event.preventDefault(); document.getElementById('videoBack10')?.click(); }
-  else if(key === 'f' || event.key === '[') { event.preventDefault(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); }
-  else if(key === 'j' || event.key === '=') { event.preventDefault(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); }
+  else if(key === 'f' || event.key === '[') { event.preventDefault(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
+  else if(key === 'j' || event.key === '=') { event.preventDefault(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
 });
 document.getElementById('accountBtn').onclick = async () => {
   if(OFFLINE_FIRST) return;
