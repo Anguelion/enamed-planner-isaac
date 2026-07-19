@@ -1159,7 +1159,7 @@ body.sidebar-collapsed .app-sidebar{width:var(--sidebar-collapsed-width)}
 body.sidebar-collapsed .app-header,body.sidebar-collapsed main{margin-left:var(--sidebar-collapsed-width)}
 body.sidebar-collapsed .app-header{width:calc(100% - var(--sidebar-collapsed-width))}
 body.sidebar-collapsed .sidebar-brand{grid-template-columns:42px;justify-content:center;padding:16px 17px}
-body.sidebar-collapsed .sidebar-brand-copy,body.sidebar-collapsed .app-sidebar .tab-label,body.sidebar-collapsed .sidebar-theme span{display:none}
+body.sidebar-collapsed .sidebar-brand-copy,body.sidebar-collapsed .app-sidebar .tab-label,body.sidebar-collapsed .sidebar-theme span,body.sidebar-collapsed .tab-group-label{display:none}
 body.sidebar-collapsed .sidebar-toggle{position:absolute;right:-15px;top:25px;border:1px solid var(--line);background:var(--panel);box-shadow:0 4px 12px rgba(18,63,89,.12)}
 body.sidebar-collapsed .app-sidebar .tab{justify-content:center;padding:9px}
 body.sidebar-collapsed .sidebar-theme{justify-content:center;padding:9px}
@@ -1992,8 +1992,9 @@ body.dark .tab.active .tab-icon{background:#172331}
 .dashboard-countdown-compact #countdownValue{display:flex;align-items:baseline;gap:9px;white-space:nowrap}
 .dashboard-countdown-compact #countdownValue strong{font-size:15px;line-height:1.2;white-space:nowrap}
 .dashboard-countdown-compact #countdownValue small{font-size:12px;color:var(--muted);white-space:nowrap}
-.dashboard-gamification-popover{position:relative}
-.dashboard-gamification-popover>summary{list-style:none;cursor:pointer}
+.dashboard-gamification-popover{position:relative;min-width:0;width:100%}
+.dashboard-gamification-popover>summary{list-style:none;cursor:pointer;width:100%}
+.dashboard-gamification-popover>summary>.card{width:100%}
 .dashboard-gamification-popover>summary::-webkit-details-marker{display:none}
 .dashboard-gamification-popover>summary>.card{margin:0}
 .dashboard-gamification-popover[open]>summary>.card{border-color:var(--blue)}
@@ -2024,6 +2025,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-desktop-grid>.dashboard-review-card{grid-column:span 4;min-height:220px}
   .dashboard-desktop-grid>.dashboard-evolution-card,
   .dashboard-desktop-grid>.gamification-card--compact,
+  .dashboard-desktop-grid>.dashboard-gamification-popover,
   .dashboard-desktop-grid>.dashboard-recent-card{grid-column:span 4;min-height:230px}
   .dashboard-desktop-grid>.dashboard-road-region{grid-column:1/-1}
   .dashboard-desktop-grid>.continue-study-card{grid-template-columns:52px minmax(0,1fr);grid-template-rows:auto 1fr auto;align-items:start;align-content:stretch;gap:12px}
@@ -2070,6 +2072,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-desktop-grid>.dashboard-tasks-card,
   .dashboard-desktop-grid>.dashboard-evolution-card,
   .dashboard-desktop-grid>.gamification-card--compact,
+  .dashboard-desktop-grid>.dashboard-gamification-popover,
   .dashboard-desktop-grid>.dashboard-recent-card{grid-column:span 4}
 }
 
@@ -2148,6 +2151,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-desktop-grid>.dashboard-review-card{grid-column:span 4}
   .dashboard-desktop-grid>.dashboard-evolution-card,
   .dashboard-desktop-grid>.gamification-card--compact,
+  .dashboard-desktop-grid>.dashboard-gamification-popover,
   .dashboard-desktop-grid>.dashboard-recent-card,
   .dashboard-desktop-grid>.countdown-card{grid-column:span 3}
   .dashboard-desktop-grid>.dashboard-road-region{grid-column:1/-1}
@@ -2170,6 +2174,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-desktop-grid>.dashboard-review-card,
   .dashboard-desktop-grid>.dashboard-evolution-card,
   .dashboard-desktop-grid>.gamification-card--compact,
+  .dashboard-desktop-grid>.dashboard-gamification-popover,
   .dashboard-desktop-grid>.dashboard-recent-card{min-width:0}
 }
 
@@ -2178,6 +2183,7 @@ body.dark .tab.active .tab-icon{background:#172331}
 @media(min-width:1200px){
   .dashboard-desktop-grid>.dashboard-evolution-card,
   .dashboard-desktop-grid>.gamification-card--compact,
+  .dashboard-desktop-grid>.dashboard-gamification-popover,
   .dashboard-desktop-grid>.dashboard-recent-card{grid-column:span 4}
   .dashboard-desktop-grid>.continue-study-card>.icon-btn{width:100%;min-width:0}
   .dashboard-desktop-grid>.dashboard-mood .mood-btn{min-height:104px;padding:10px 7px}
@@ -2318,6 +2324,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   #painel .dashboard-desktop-grid>.dashboard-radar-card,
   #painel .dashboard-desktop-grid>.dashboard-sim-summary-card{grid-column:span 6;min-height:220px}
   #painel .dashboard-desktop-grid>.gamification-card,
+  #painel .dashboard-desktop-grid>.dashboard-gamification-popover,
   #painel .dashboard-desktop-grid>.gamification-simulation-card{grid-column:span 6;min-height:0}
   #painel .dashboard-desktop-grid>.dashboard-recent-card{grid-column:1/-1;min-height:0}
   #painel .dashboard-desktop-grid>.dashboard-tasks-card.is-expanded{grid-column:span 8;min-height:0}
