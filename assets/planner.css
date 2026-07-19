@@ -150,6 +150,24 @@ to{transform:translateX(-100%)}
 }@media(prefers-reduced-motion:reduce){.motivation-marquee{animation:none;padding-left:12px;white-space:normal}
 }
 .pomodoro-card{border:1px solid var(--line);border-radius:8px;background:#fbfcf8;padding:14px;margin-top:14px}
+.global-daily-mission{position:relative;z-index:44}
+.daily-mission-trigger{display:flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 1px 0 rgba(18,63,89,.03)}
+.daily-mission-trigger:hover{border-color:#9ccfc9}
+.daily-mission-trigger .app-icon{color:var(--icon-xp)}
+.daily-mission-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:45;width:min(360px,calc(100vw - 24px));display:grid;gap:12px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:0 14px 34px rgba(18,49,72,.2);opacity:0;transform:translateY(8px) scale(.96);transform-origin:top right;pointer-events:none;transition:opacity .18s ease,transform .18s ease}
+.daily-mission-panel.open-left{right:auto;left:0;transform-origin:top left}
+.daily-mission-panel.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.daily-mission-week{display:flex;justify-content:space-between;gap:4px}
+.daily-mission-day{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:var(--soft-blue);color:var(--muted);font-size:12px;font-weight:800}
+.daily-mission-day.done{background:var(--green);color:#fff}
+.daily-mission-day.today{box-shadow:0 0 0 2px var(--blue)}
+.daily-mission-card{display:grid;gap:8px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--soft-blue)}
+.daily-mission-card h3{margin:0;font-size:16px}
+.daily-mission-card-head{display:flex;gap:6px}
+.daily-mission-done{text-align:center}
+body.dark .daily-mission-trigger{background:#202a2a;color:var(--ink)}
+body.dark .daily-mission-card,body.dark .daily-mission-day{background:#233837}
+@media(max-width:620px){.daily-mission-trigger span{display:none}.daily-mission-trigger{padding:0 10px;width:38px;justify-content:center}}
 .global-pomodoro{position:fixed;right:18px;bottom:18px;z-index:1000;width:58px;height:58px}
 .pomodoro-fruit{position:relative;width:58px;height:58px;border:1px solid var(--line);border-radius:50%;background:var(--panel);box-shadow:0 8px 22px rgba(18,49,72,.16);font-size:29px;cursor:pointer;transition:.2s ease}
 .pomodoro-fruit:hover,.pomodoro-fruit.active{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(239,91,86,.18),0 10px 24px rgba(18,49,72,.2)}

@@ -92,6 +92,7 @@ let studyTimeTracker = loadStudyTimerSession();
 let pomodoroInterval = null;
 let pomodoroAlarmInterval = null;
 let pomodoroPanelCloseTimer = null;
+let dailyMissionPanelCloseTimer = null;
 let questionSearchRenderTimer = null;
 let pomodoro = loadPomodoroSession();
 let simuladoTimer = { interval: null, runId: '' };
@@ -1953,6 +1954,62 @@ function updatePomodoroWidget() {
   panel.querySelectorAll('#pomodoroReset').forEach(button=>button.addEventListener('click',resetPomodoro));
   panel.querySelector('#pomodoroTickToggle')?.addEventListener('change',event=>{ pomodoro.tickEnabled=event.target.checked; savePomodoro(); });
 }
+function ensureDailyMissionWidget() {
+  if(document.getElementById('globalDailyMission')) return;
+  const widget=document.createElement('div');
+  widget.id='globalDailyMission'; widget.className='global-daily-mission';
+  widget.innerHTML=`<button class="daily-mission-trigger" id="dailyMissionTrigger" type="button" title="Abrir trilha do dia" aria-label="Abrir trilha do dia" aria-expanded="false" aria-controls="dailyMissionPanel">${iconSvg('sparkle')}<span>Trilha do dia</span></button><div class="daily-mission-panel" id="dailyMissionPanel" hidden></div>`;
+  const pomodoro=document.getElementById('globalPomodoro');
+  const headerActions=document.querySelector('.header-actions');
+  if(pomodoro) pomodoro.insertAdjacentElement('beforebegin',widget);
+  else (headerActions||document.body).append(widget);
+  document.getElementById('dailyMissionTrigger').onclick=()=>{
+    const panel=document.getElementById('dailyMissionPanel');
+    setDailyMissionPanelOpen(panel.hidden || !panel.classList.contains('is-open'));
+  };
+}
+function setDailyMissionPanelOpen(open) {
+  const trigger=document.getElementById('dailyMissionTrigger');
+  const panel=document.getElementById('dailyMissionPanel');
+  if(!trigger || !panel) return;
+  if(dailyMissionPanelCloseTimer) clearTimeout(dailyMissionPanelCloseTimer);
+  trigger.setAttribute('aria-expanded', String(open));
+  if(open) {
+    updateDailyMissionWidget();
+    const rect=trigger.getBoundingClientRect();
+    const panelWidth=Math.min(360, Math.max(260, window.innerWidth - 24));
+    const opensRight=(window.innerWidth - rect.right) >= panelWidth + 8;
+    panel.classList.toggle('open-right', opensRight);
+    panel.classList.toggle('open-left', !opensRight);
+    panel.hidden=false;
+    panel.classList.remove('is-closing');
+    requestAnimationFrame(()=>panel.classList.add('is-open'));
+    return;
+  }
+  panel.classList.remove('is-open');
+  panel.classList.add('is-closing');
+  dailyMissionPanelCloseTimer=setTimeout(()=>{
+    panel.hidden=true;
+    panel.classList.remove('is-closing');
+  },180);
+}
+function updateDailyMissionWidget() {
+  ensureDailyMissionWidget();
+  const panel=document.getElementById('dailyMissionPanel');
+  if(!panel || panel.hidden) return;
+  panel.innerHTML=renderDailyMissionPanel(ui.refDate || studyDateKey());
+  panel.querySelectorAll('[data-mission-step]').forEach(button => button.onclick = e => {
+    const target=e.currentTarget.dataset.missionStep;
+    const scheduleId=e.currentTarget.dataset.missionSchedule;
+    setDailyMissionPanelOpen(false);
+    if(target==='daily-questions' && scheduleId) { openQuestionsForSchedule(scheduleId); return; }
+    if(target==='daily-flashcards' && scheduleId) { openFlashcardsForSchedule(scheduleId); return; }
+    if(target==='daily-video' && scheduleId) { openVideosForSchedule(scheduleId); return; }
+    if(target==='daily-questions') { ui.tab='questoes'; render(); return; }
+    if(target==='daily-flashcards') { ui.tab='flashcards'; render(); return; }
+    openDayVideos(ui.refDate);
+  });
+}
 function persistStudyTimerSession() {
   if(!studyTimeTracker.kind) {
     localStorage.removeItem(STUDY_TIMER_KEY);
@@ -2456,6 +2513,35 @@ function renderDailyRoad(date) {
     const actionText = item.id === 'daily-video' ? 'Abrir aulas' : item.id === 'daily-questions' ? 'Fazer questões' : 'Revisar cards';
     return `<div class="road-step ${statusClass}"><div class="road-step-head"><div class="road-icon">${iconSvg(item.icon)}</div><strong>${escapeHtml(item.type)}</strong><span class="road-status">${statusText}</span></div><div class="road-label">${escapeHtml(item.label)}</div><div class="road-sub muted">${escapeHtml(item.foot)}</div><div class="road-progress"><div class="road-progress-row"><span>${Math.round(n(item.progress))} de ${Math.round(n(item.target))} ${escapeHtml(item.unit)}</span><span>${pct(ratio)}</span></div><div class="progress"><span style="width:${pct(ratio)}"></span></div></div><div class="road-actions"><button class="tiny-btn" data-road-step="${escapeAttr(item.id)}" data-road-schedule="${escapeAttr(item.scheduleId || '')}">${actionText}</button></div></div>`;
   }).join('')}</div></div>`;
+}
+function dailyMissionSteps(date) {
+  return dayRoadItems(date);
+}
+function currentDailyMissionStep(date) {
+  return dailyMissionSteps(date).find(item => !item.done) || null;
+}
+function currentWeekDates(date) {
+  const weekday = PlannerUX.weekdayFor(date);
+  const mondayOffset = weekday === 0 ? -6 : 1 - weekday;
+  return Array.from({length:7}, (_, index) => PlannerUX.addDays(date, mondayOffset + index));
+}
+function dayHasActivity(date) {
+  const log = state.dayLogs.find(x => x.date === date);
+  if(!log) return false;
+  return n(log.videos) + n(log.flashcards) + n(log.questions) + n(log.lessonMinutes) + n(log.flashcardMinutes) + n(log.questionMinutes) + n(log.materialMinutes) + n(log.simuladoMinutes) > 0;
+}
+function renderDailyMissionPanel(date) {
+  const week = currentWeekDates(date);
+  const dayLetters = ['S','T','Q','Q','S','S','D'];
+  const weekRow = week.map((day, index) => `<span class="daily-mission-day ${dayHasActivity(day)?'done':''} ${day===date?'today':''}" title="${escapeAttr(fmtDate(day))}">${dayLetters[index]}</span>`).join('');
+  const steps = dailyMissionSteps(date);
+  const step = currentDailyMissionStep(date);
+  const stepIndex = step ? steps.findIndex(item => item.id === step.id) : steps.length;
+  const actionLabel = step?.id === 'daily-video' ? 'Assistir aula' : step?.id === 'daily-questions' ? 'Fazer questões' : 'Revisar flashcards';
+  const card = step
+    ? `<div class="daily-mission-card"><div class="daily-mission-card-head"><span class="badge today">Passo ${stepIndex+1} de ${steps.length}</span><span class="badge ${n(step.progress)>0?'today':'no'}">${n(step.progress)>0?'Em andamento':'Não iniciado'}</span></div><h3>${escapeHtml(step.type)}</h3><p class="muted">${escapeHtml(step.label)}</p><div class="progress"><span style="width:${pct(clamp(n(step.progress)/Math.max(n(step.target),1)))}"></span></div><small class="muted">${Math.round(n(step.progress))} de ${Math.round(n(step.target))} ${escapeHtml(step.unit)}</small><button class="icon-btn primary" data-mission-step="${escapeAttr(step.id)}" data-mission-schedule="${escapeAttr(step.scheduleId||'')}">${actionLabel}</button></div>`
+    : `<div class="daily-mission-card daily-mission-done"><strong>Missão do dia concluída 🎉</strong><span class="muted">Você já cumpriu os 3 passos de hoje.</span></div>`;
+  return `<div class="daily-mission-week">${weekRow}</div>${card}`;
 }
 function toggleRoadCheckin(date, id) {
   if(!state.dailyCheckins || typeof state.dailyCheckins !== 'object') state.dailyCheckins = {};
@@ -8414,6 +8500,8 @@ function render() {
   syncRouteFromUI('replace');
   ensurePomodoroWidget();
   updatePomodoroWidget();
+  ensureDailyMissionWidget();
+  updateDailyMissionWidget();
 }
 document.getElementById('exportBtn').onclick = () => {
   const backup=fullPlannerBackup();
