@@ -1998,6 +1998,7 @@ function updateDailyMissionWidget() {
   const panel=document.getElementById('dailyMissionPanel');
   if(!panel || panel.hidden) return;
   panel.innerHTML=renderDailyMissionPanel(ui.refDate || studyDateKey());
+  panel.querySelector('.daily-mission-close')?.addEventListener('click', () => setDailyMissionPanelOpen(false));
   panel.querySelectorAll('[data-mission-step]').forEach(button => button.onclick = e => {
     const target=e.currentTarget.dataset.missionStep;
     const scheduleId=e.currentTarget.dataset.missionSchedule;
@@ -2530,18 +2531,44 @@ function dayHasActivity(date) {
   if(!log) return false;
   return n(log.videos) + n(log.flashcards) + n(log.questions) + n(log.lessonMinutes) + n(log.flashcardMinutes) + n(log.questionMinutes) + n(log.materialMinutes) + n(log.simuladoMinutes) > 0;
 }
+function dailyMissionDayIcon(status) {
+  if(status === 'done') return iconSvg('success');
+  if(status === 'missed') return iconSvg('close');
+  if(status === 'today-pending') return '<span class="daily-mission-day-dots"><span></span><span></span><span></span></span>';
+  return '';
+}
 function renderDailyMissionPanel(date) {
   const week = currentWeekDates(date);
   const dayLetters = ['S','T','Q','Q','S','S','D'];
-  const weekRow = week.map((day, index) => `<span class="daily-mission-day ${dayHasActivity(day)?'done':''} ${day===date?'today':''}" title="${escapeAttr(fmtDate(day))}">${dayLetters[index]}</span>`).join('');
+  const dayNames = ['segunda','terça','quarta','quinta','sexta','sábado','domingo'];
+  const todayKey = studyDateKey();
+  const weekRow = week.map((day, index) => {
+    const active = dayHasActivity(day);
+    let status;
+    if(day === todayKey) status = active && !currentDailyMissionStep(day) ? 'done' : 'today-pending';
+    else if(day < todayKey) status = active ? 'done' : 'missed';
+    else status = 'future';
+    const statusText = status === 'done' ? 'estudado' : status === 'missed' ? 'sem estudo' : status === 'today-pending' ? 'em andamento' : 'ainda não chegou';
+    const content = status === 'future' ? `<span>${dayLetters[index]}</span>` : dailyMissionDayIcon(status);
+    return `<span class="daily-mission-day ${status}" title="${escapeAttr(fmtDate(day))} — ${escapeAttr(dayNames[index])}, ${escapeAttr(statusText)}">${content}</span>`;
+  }).join('');
   const steps = dailyMissionSteps(date);
   const step = currentDailyMissionStep(date);
   const stepIndex = step ? steps.findIndex(item => item.id === step.id) : steps.length;
   const actionLabel = step?.id === 'daily-video' ? 'Assistir aula' : step?.id === 'daily-questions' ? 'Fazer questões' : 'Revisar flashcards';
-  const card = step
-    ? `<div class="daily-mission-card"><div class="daily-mission-card-head"><span class="badge today">Passo ${stepIndex+1} de ${steps.length}</span><span class="badge ${n(step.progress)>0?'today':'no'}">${n(step.progress)>0?'Em andamento':'Não iniciado'}</span></div><h3>${escapeHtml(step.type)}</h3><p class="muted">${escapeHtml(step.label)}</p><div class="progress"><span style="width:${pct(clamp(n(step.progress)/Math.max(n(step.target),1)))}"></span></div><small class="muted">${Math.round(n(step.progress))} de ${Math.round(n(step.target))} ${escapeHtml(step.unit)}</small><button class="icon-btn primary" data-mission-step="${escapeAttr(step.id)}" data-mission-schedule="${escapeAttr(step.scheduleId||'')}">${actionLabel}</button></div>`
-    : `<div class="daily-mission-card daily-mission-done"><strong>Missão do dia concluída 🎉</strong><span class="muted">Você já cumpriu os 3 passos de hoje.</span></div>`;
-  return `<div class="daily-mission-week">${weekRow}</div>${card}`;
+  let card;
+  if(step) {
+    const ratio = clamp(n(step.progress) / Math.max(n(step.target), 1));
+    const remaining = Math.max(0, Math.round(n(step.target) - n(step.progress)));
+    const rocketPos = Math.min(96, Math.max(3, Math.round(ratio * 100)));
+    const statusTag = n(step.progress) > 0
+      ? `<span class="daily-mission-tag status-progress">${iconSvg('energy')}Em andamento</span>`
+      : `<span class="daily-mission-tag status-todo">${iconSvg('flag')}Não iniciado</span>`;
+    card = `<div class="daily-mission-card"><div class="daily-mission-card-head"><span class="daily-mission-tag priority">${iconSvg('target')}Passo ${stepIndex+1} de ${steps.length}</span>${statusTag}</div><h3>${escapeHtml(step.type)}</h3><p class="muted">${escapeHtml(step.label)}</p><div class="daily-mission-stats"><span>↓ ${Math.round(n(step.progress))} ${escapeHtml(step.unit)} concluídas</span><span>↓ ${pct(ratio)} da meta</span></div><div class="daily-mission-track"><div class="progress"><span style="width:${pct(ratio)}"></span></div><span class="daily-mission-rocket ${ratio < 1 ? 'flying' : ''}" style="left:${rocketPos}%">🚀</span></div><div class="daily-mission-remaining">${remaining > 0 ? `Faltam ${remaining} ${escapeHtml(step.unit)} para a meta` : 'Meta batida! 🎉'}</div><div class="daily-mission-actions"><button class="daily-mission-cta" data-mission-step="${escapeAttr(step.id)}" data-mission-schedule="${escapeAttr(step.scheduleId||'')}">${actionLabel}${iconSvg('next')}</button></div></div>`;
+  } else {
+    card = `<div class="daily-mission-card daily-mission-done"><strong>Missão do dia concluída 🎉</strong><span class="muted">Você já cumpriu os 3 passos de hoje.</span></div>`;
+  }
+  return `<div class="daily-mission-panel-head"><h3>${iconSvg('sparkle')}Trilha do dia</h3><button class="daily-mission-close" type="button" aria-label="Fechar trilha do dia">${iconSvg('close')}</button></div><div class="daily-mission-week">${weekRow}</div>${card}`;
 }
 function toggleRoadCheckin(date, id) {
   if(!state.dailyCheckins || typeof state.dailyCheckins !== 'object') state.dailyCheckins = {};
