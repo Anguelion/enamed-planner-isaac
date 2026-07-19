@@ -2018,6 +2018,10 @@ body.dark .tab.active .tab-icon{background:#172331}
 .dashboard-gamification-popover[open]>summary>.card{border-color:var(--blue)}
 .dashboard-gamification-popover>div{position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:12;width:min(420px,92vw)}
 .dashboard-gamification-popover>div>.card{margin:0;box-shadow:var(--shadow)}
+.dashboard-gamification-popover>div .gamification-head{grid-template-columns:1fr;gap:12px;align-items:stretch}
+.dashboard-gamification-popover>div .gamification-rank{grid-template-columns:78px minmax(0,1fr);gap:12px;padding:10px}
+.dashboard-gamification-popover>div .rank-progress-panel{grid-template-columns:1fr;gap:8px;margin-top:12px;padding:11px}
+.dashboard-gamification-popover>div .xp-history-mini{grid-template-columns:1fr;max-height:200px;overflow:auto}
 .dashboard-countdown-settings{position:relative}
 .dashboard-countdown-settings>summary{list-style:none;white-space:nowrap}
 .dashboard-countdown-settings>summary::-webkit-details-marker{display:none}

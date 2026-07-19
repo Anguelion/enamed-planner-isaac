@@ -1975,14 +1975,14 @@ function setDailyMissionPanelOpen(open) {
   if(dailyMissionPanelCloseTimer) clearTimeout(dailyMissionPanelCloseTimer);
   trigger.setAttribute('aria-expanded', String(open));
   if(open) {
+    panel.hidden=false;
+    panel.classList.remove('is-closing');
     updateDailyMissionWidget();
     const rect=trigger.getBoundingClientRect();
     const panelWidth=Math.min(360, Math.max(260, window.innerWidth - 24));
     const opensRight=(window.innerWidth - rect.right) >= panelWidth + 8;
     panel.classList.toggle('open-right', opensRight);
     panel.classList.toggle('open-left', !opensRight);
-    panel.hidden=false;
-    panel.classList.remove('is-closing');
     requestAnimationFrame(()=>panel.classList.add('is-open'));
     return;
   }
