@@ -306,7 +306,7 @@
   function renderECG(canvas, cond, opts) {
     opts = opts || {};
     const seed = opts.seed || 1;
-    const dark = document.body.classList.contains('theme-dark') || document.documentElement.dataset.theme === 'dark' || matchMedia('(prefers-color-scheme: dark)').matches && !document.body.classList.contains('theme-light');
+    const dark = document.body.classList.contains('dark'); // segue o tema do planner (body.dark)
     const paper = dark ? '#1c1416' : '#fff7f6';
     const traceColor = dark ? '#ffd9d0' : '#111';
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
