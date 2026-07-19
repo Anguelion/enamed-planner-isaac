@@ -464,7 +464,11 @@
         ddx: ['Taquicardia sinusal (FC ~150 é suspeita de flutter 2:1)', 'TSV'],
         armadilhas: ['FC exatamente ~150 → sempre pensar em flutter 2:1. Manobra vagal/adenosina desmascara as ondas F.'],
         conduta: ['Instável: cardioversão sincronizada (baixa energia).', 'Estável: controle de FC/ritmo; anticoagulação semelhante à FA.'], ref: 'Diretriz de arritmias supraventriculares.'
-      }
+      },
+      realImages: [
+        { src: 'flutter-1.jpg', caption: 'Caso real (material de estudo pessoal): flutter atrial, FC média 120 bpm.' },
+        { src: 'flutter-2.jpg', caption: 'Caso real: flutter atrial, FC 150 bpm.' },
+      ]
     },
     {
       id: 'svt', name: 'TSV (reentrada nodal)', category: 'Taquicardias supraventriculares', level: 3,
@@ -478,7 +482,11 @@
         ddx: ['Flutter 2:1', 'Taquicardia atrial', 'TV (se QRS largo)'],
         armadilhas: ['QRS largo + regular: tratar como TV até prova em contrário.'],
         conduta: ['Instável: cardioversão sincronizada.', 'Estável: manobra vagal → adenosina.'], ref: 'ACLS Taquicardia.'
-      }
+      },
+      realImages: [
+        { src: 'svt-1.jpg', caption: 'Caso real (material de estudo pessoal): TPSV, FC 240 bpm.' },
+        { src: 'svt-2.jpg', caption: 'Caso real: TPSV, FC 240 bpm.' },
+      ]
     },
     {
       id: 'pvc', name: 'Extrassístole ventricular', category: 'Ritmos ventriculares', level: 2,
@@ -492,7 +500,12 @@
         ddx: ['Batimento de escape (tardio, não precoce)', 'Aberrância de condução'],
         armadilhas: ['Fenômeno R sobre T pode deflagrar TV/FV.', 'Bigeminismo = 1 EV a cada batimento sinusal.'],
         conduta: ['Isoladas em coração normal: geralmente benignas.', 'Investigar se muito frequentes/sintomáticas ou cardiopatia.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'pvc-1.jpg', caption: 'Caso real (material de estudo pessoal): ritmo sinusal FC 80, extrassístoles ventriculares (tetrageminismo ventricular).' },
+        { src: 'pvc-2.jpg', caption: 'Caso real: ritmo sinusal FC 80, extrassístoles ventriculares.' },
+        { src: 'pvc-3.jpg', caption: 'Caso real: ritmo sinusal FC média 80, extrassístoles ventriculares frequentes (bigeminismo ventricular).' },
+      ]
     },
     {
       id: 'vt', name: 'Taquicardia ventricular monomórfica', category: 'Taquicardias ventriculares', level: 3,
@@ -510,7 +523,12 @@
         ddx: ['TSV com aberrância', 'Taquicardia pré-excitada', 'Ritmo estimulado'],
         armadilhas: ['Taquicardia de QRS largo em adulto → TV até prova em contrário, sobretudo se história de cardiopatia.'],
         conduta: ['Com pulso instável: cardioversão sincronizada.', 'Sem pulso: desfibrilação + RCP (algoritmo de PCR).', 'Estável: antiarrítmico (amiodarona) e preparo para cardioversão.'], ref: 'ACLS 2025.'
-      }
+      },
+      realImages: [
+        { src: 'vt-1.jpg', caption: 'Caso real (material de estudo pessoal): TV monomórfica sustentada, FC 200 bpm.' },
+        { src: 'vt-2.jpg', caption: 'Caso real: TV monomórfica sustentada, FC 200 bpm.' },
+        { src: 'vt-3.jpg', caption: 'Caso real: TV monomórfica sustentada, FC 240 bpm.' },
+      ]
     },
     {
       id: 'vf', name: 'Fibrilação ventricular', category: 'Ritmos de parada', level: 3,
@@ -524,7 +542,12 @@
         ddx: ['Artefato de movimento (paciente consciente/com pulso)', 'TV polimórfica'],
         armadilhas: ['"FV fina" pode ser confundida com assistolia — checar ganho e derivações.'],
         conduta: ['Ritmo CHOCÁVEL: desfibrilação imediata + RCP de alta qualidade + adrenalina/amiodarona (algoritmo de PCR).'], ref: 'AHA 2025 PCR.'
-      }
+      },
+      realImages: [
+        { src: 'vf-1.jpg', caption: 'Caso real (material de estudo pessoal): fibrilação ventricular grosseira.' },
+        { src: 'vf-2.jpg', caption: 'Caso real: fibrilação ventricular grosseira.' },
+        { src: 'vf-3.jpg', caption: 'Caso real: fibrilação ventricular grosseira.' },
+      ]
     },
     {
       id: 'torsades', name: 'Torsades de pointes', category: 'Taquicardias ventriculares', level: 4,
