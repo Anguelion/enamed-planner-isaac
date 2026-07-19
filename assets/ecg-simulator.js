@@ -1709,10 +1709,12 @@
   // ---------------------------------------------------------------------------
   // Animar — traçado correndo em tempo real (tipo monitor de leito)
   // ---------------------------------------------------------------------------
-  let ANIM = { raf: 0, running: false };
+  // Usa setInterval (não rAF): rAF é pausado pelo navegador quando a aba
+  // perde o foco/fica oculta, o que travaria o "monitor" ao trocar de app.
+  let ANIM = { timer: 0, running: false };
   function stopAnimation() {
-    if (ANIM.raf) cancelAnimationFrame(ANIM.raf);
-    ANIM = { raf: 0, running: false };
+    if (ANIM.timer) clearInterval(ANIM.timer);
+    ANIM = { timer: 0, running: false };
   }
   function startAnimation(canvas, cond) {
     stopAnimation();
@@ -1738,7 +1740,7 @@
     if (toggleBtn) toggleBtn.onclick = () => {
       ANIM.running = !ANIM.running;
       toggleBtn.textContent = ANIM.running ? '⏸ Pausar' : '▶ Retomar';
-      if (ANIM.running) loop();
+      if (ANIM.running) startWall = performance.now() - (lastT / speed) * 1000; // não pula tempo ao retomar
     };
     // grade leve (em toda a tela ou só numa faixa)
     function grid(x0, x1) {
@@ -1752,7 +1754,9 @@
     const OFF = 0.5; // desloca o início para não começar no meio de um batimento
     function loop() {
       if (!ANIM.running) return;
-      const tNow = ((performance.now() - startWall) / 1000) * speed;
+      let tNow = ((performance.now() - startWall) / 1000) * speed;
+      // se a aba ficou muito tempo oculta/em segundo plano, não tenta "recuperar" tudo de uma vez
+      if (tNow - lastT > 2) { startWall = performance.now() - (lastT / speed) * 1000; tNow = lastT + 2; }
       const step = 0.004;
       for (let t = lastT; t <= tNow; t += step) {
         const x = (t % winDur) * MM_PER_S * pxmm;
@@ -1774,9 +1778,9 @@
         phaseEl.style.fontWeight = '800';
       }
       if (hrEl) hrEl.textContent = cond.rate ? `≈ ${cond.rate} bpm` : '';
-      ANIM.raf = requestAnimationFrame(loop);
     }
     loop();
+    ANIM.timer = setInterval(loop, 40); // ~25 fps; setInterval não é pausado em aba oculta como o rAF
   }
 
   // ---------------------------------------------------------------------------
@@ -1849,6 +1853,8 @@
     if (!S.ecg.srs) S.ecg.srs = {};
     if (!S.ecg.log) S.ecg.log = [];
     if (!S.ecg.daily) S.ecg.daily = d.daily;
+    if (!S.ecg.trilha) S.ecg.trilha = d.trilha;
+    if (!S.ecg.trilha.done) S.ecg.trilha.done = {};
 
     container.innerHTML = `<div class="ecg-wrap">
       <div class="section-title" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
@@ -1858,7 +1864,7 @@
       <div class="ecg-body"></div>
     </div>`;
     // subnav (fora do body para persistir estado ativo)
-    container.querySelectorAll('.ecg-subnav button').forEach((b) => (b.onclick = () => { const s = st(); s._measure = null; s._quiz = null; go(b.dataset.ecgSub); }));
+    container.querySelectorAll('.ecg-subnav button').forEach((b) => (b.onclick = () => { const s = st(); s.ui.viewer = null; s.ui.bankId = null; s.ui.lesson = null; s._quiz = null; go(b.dataset.ecgSub); }));
     maybeAutoRevisao();
     mountBody();
     // redesenhar canvases ao redimensionar

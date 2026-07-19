@@ -103,7 +103,7 @@
         "A": "Encaminhar a gestante para pré−natal de alto risco, já que se trata de diabetes mellitus gestacional.",
         "B": "Encaminhar a gestante para pré−natal de alto risco, já que se trata de diabetes mellitus prévio diagnosticado na gestação.",
         "C": "Solicitar um teste de tolerância à glicose oral com 75 g imediatamente para elucidar o diagnóstico e avaliar necessidade de encaminhar a paciente ao ambulatório especializado.",
-        "D": "Solicitar um teste de tolerância à glicose oral com 75 g com26 semanas para elucidar o diagnóstico e avaliar necessidade de encaminhar a paciente ao ambulatório especializado. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 2 de 46"
+        "D": "Solicitar um teste de tolerância à glicose oral com 75 g com26 semanas para elucidar o diagnóstico e avaliar necessidade de encaminhar a paciente ao ambulatório especializado."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -221,7 +221,7 @@
         "B": "Ela possui diabetes gestacional e o tratamento deve ser com insulina.",
         "C": "Ela possui diabetes pré-gestacional (pré-existente) e deve iniciar dieta e exercícios físicos.",
         "D": "Ela possui diabetes pré-gestacional (preexistente) e o tratamento deve ser instituído com metformina.",
-        "E": "Ela não possui diabetes gestacional, mas, por ter histórico e outros fatores de risco, deve ficar atenta e seguir rotina com alimentação saudável e exercícios para prevenção. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 3 de 46"
+        "E": "Ela não possui diabetes gestacional, mas, por ter histórico e outros fatores de risco, deve ficar atenta e seguir rotina com alimentação saudável e exercícios para prevenção."
       },
       "answer": "E",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -338,7 +338,7 @@
         "A": "Adenocarcinoma, tomografia de pescoço, tórax, abdome e pelve.",
         "B": "Adenocarcinoma tomografia de tórax e laparoscopia.",
         "C": "Carcinoma espino-celular; tomografia por emissão de pósitrons (PET-CT).",
-        "D": "Carcinoma espino-celular; tomografia de pescoço, tórax, abdome e pelve. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 4 de 46"
+        "D": "Carcinoma espino-celular; tomografia de pescoço, tórax, abdome e pelve."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -427,7 +427,7 @@
         "B": "Realizar uma gastrostomia laparoscópica.",
         "C": "Realizar uma jejunostomia.",
         "D": "Realizar uma ileostomia.",
-        "E": "Realizar uma esofagostomia. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 5 de 46"
+        "E": "Realizar uma esofagostomia."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -515,7 +515,7 @@
         "A": "A paciente apresenta LDL no alvo de acordo com as recomendações da American Diabetes Association (ADA).",
         "B": "A adição de fibrato à terapia com Estatina reduz o risco de eventos cardiovasculares maiores, em comparação ao tratamento com Estatina isoladamente.",
         "C": "A paciente necessita de ajuste na dose de Metformina, em função do comprometimento da taxa de filtração glomerular.",
-        "D": "A paciente apresenta indicação para iniciar Aspirina em baixa dose, como prevenção primária, para redução de evento cardiovascular. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 6 de 46"
+        "D": "A paciente apresenta indicação para iniciar Aspirina em baixa dose, como prevenção primária, para redução de evento cardiovascular."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -602,7 +602,7 @@
         "A": "100 g, entre 32 e 36 semanas gestacional, já que o diagnóstico é feito com pelo menos um valor alterado.",
         "B": "75 g, entre 24 e 28 semanas de gestação, visto que o diagnóstico é feito com pelo menos um valor alterado.",
         "C": "75 g, entre 22 e 28 semanas de gestação, pois o diagnóstico é feito com pelo menos dois valores alterados.",
-        "D": "100 g, entre 34 e 36 semanas de gestação, uma vez que o diagnóstico é feito com pelo menos dois valores alterados. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 7 de 46"
+        "D": "100 g, entre 34 e 36 semanas de gestação, uma vez que o diagnóstico é feito com pelo menos dois valores alterados."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -690,7 +690,7 @@
         "B": "Os exames colesterol total (CT) e lipoproteína de alta densidade-colesterol (HDL-c) devem ser realizados em jejum em todas as situações.",
         "C": "Existem evidências de associação independente entre elevações de lipoproteína (a) [Lp(a)] e risco de DCV na população geral, não apenas pelo conteúdo lipídico da Lp(a), mas também por suas propriedades pró-trombóticas e pró-inflamatórias.",
         "D": "O valor de referência do LDL para pacientes de muito alto risco, de acordo com a avaliação do risco cardiovascular em adultos, deve ser menor que 100 mg/dl.",
-        "E": "O valor de referência do LDL para pacientes de alto risco, de acordo com a avaliação do risco cardiovascular em adultos, deve ser menor que 130 mg/dl. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 8 de 46"
+        "E": "O valor de referência do LDL para pacientes de alto risco, de acordo com a avaliação do risco cardiovascular em adultos, deve ser menor que 130 mg/dl."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -778,7 +778,7 @@
         "A": "Associar enalapril, trocar sinvastatina por atorvastatina, iniciar insulina NPH bedtime 10 UI e alendronato de sódio.",
         "B": "Associar anlodipino, trocar por rosuvastatina, aumentar a dose de gliclazida e associar denosumabe.",
         "C": "Associar losartana, aumentar dose de sinvastatina, trocar metformina pela sua fórmula de liberação prolongada e associar alendronato de sódio.",
-        "D": "Associar losartana, aumentar dose de sinvastatina, iniciar insulina NPH bedtime 10 Ul e prescrever ácido zoledrônico anual. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 9 de 46"
+        "D": "Associar losartana, aumentar dose de sinvastatina, iniciar insulina NPH bedtime 10 Ul e prescrever ácido zoledrônico anual."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -867,7 +867,7 @@
         "B": "Deve-se buscar compreender a percepção do paciente: o que ele entende como saúde e como a obesidade é vista por ele, bem como seu estágio de preparo para a mudança de hábitos.",
         "C": "Deve-se abordar de forma sistemática e impessoal, pois sabe-se que abordagens em pacientes que não estão prontos para mudança levam à ruptura da relação médico-paciente.",
         "D": "Deve- se valorizar o ponto positivo que o paciente trouxe - seus exames normais - e utilizar uma linguagem positivista, demonstrando que ele pode ser ainda mais saudável.",
-        "E": "Deve- se demonstrar atitude empática e consolar o paciente, afirmando que ele é tão saudável quanto o máximo que ele consegue. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 10 de 46"
+        "E": "Deve- se demonstrar atitude empática e consolar o paciente, afirmando que ele é tão saudável quanto o máximo que ele consegue."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -955,7 +955,7 @@
         "A": "Insulina e potássio total.",
         "B": "Cortisol e potássio total.",
         "C": "Insulina e sódio.",
-        "D": "Glucagon e sódio. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 11 de 46"
+        "D": "Glucagon e sódio."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1045,7 +1045,7 @@
         "A": "Indicar dieta com redução de carboidratos e monitorar glicemia.",
         "B": "Solicitar teste oral de tolerância à glicose após duas semanas de dieta.",
         "C": "Prescrever metformina associada à dieta com redução de carboidratos.",
-        "D": "Orientar dieta hipocalórica, prescrever insulinoterapia e monitorar glicemia. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 12 de 46"
+        "D": "Orientar dieta hipocalórica, prescrever insulinoterapia e monitorar glicemia."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1132,7 +1132,7 @@
         "A": "Aumentar a dose de Rosuvastatina para 80mg ao dia.",
         "B": "Substituir Rosuvastatina por Atorvastatina em dose máxima.",
         "C": "Associar Ezetimibe 10mg ao esquema já utilizado.",
-        "D": "Manter o esquema em uso e fortalecer medidas não farmacológicas. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 13 de 46"
+        "D": "Manter o esquema em uso e fortalecer medidas não farmacológicas."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1220,7 +1220,7 @@
         "A": "Trocar o inibidor de bomba de próton e associar procinético.",
         "B": "Realizar manometria e pH-metria.",
         "C": "Indicar tratamento cirúrgico do refluxo gastroesofágico.",
-        "D": "Iniciar amitriptilina e acompanhamento psicológico. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 14 de 46"
+        "D": "Iniciar amitriptilina e acompanhamento psicológico."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1336,7 +1336,7 @@
         "A": "Longitudinalidade.",
         "B": "Integralidade.",
         "C": "Coordenação do cuidado.",
-        "D": "Acesso/Primeiro contato. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 15 de 46"
+        "D": "Acesso/Primeiro contato."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1426,7 +1426,7 @@
         "B": "Iniciar corticosteroides para reduzir a inflamação autoimune e adiar a introdução de insulina até nova avaliação.",
         "C": "Iniciar reposição volêmica maciça associada a bólus de insulina de ação rápida, com dose ajustada de acordo com os valores da glicemia capilar.",
         "D": "Iniciar metformina, mudança no estilo de vida com atividade física e acompanhamento com nutricionista.",
-        "E": "Insulinoterapia, automonitorização glicêmica, orientação nutricional e prática monitorada de exercício. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 16 de 46"
+        "E": "Insulinoterapia, automonitorização glicêmica, orientação nutricional e prática monitorada de exercício."
       },
       "answer": "E",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1515,7 +1515,7 @@
         "B": "Resistência periférica à insulina, causando hiperglicemia moderada sem cetonemia.",
         "C": "Glicogenólise hepática aumentada.",
         "D": "Hipersecreção de cortisol e catecolaminas.",
-        "E": "Hipoinsulinemia, resultando em lipólise descontrolada. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 17 de 46"
+        "E": "Hipoinsulinemia, resultando em lipólise descontrolada."
       },
       "answer": "E",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1574,7 +1574,7 @@
         "A": "Crianças com miocardite aguda acompanhada de arritmias, bloqueio cardíaco, alterações do segmento ST ou baixo débito cardíaco têm alto risco de PCR, sendo necessário a transferência rápida para uma unidade de terapia intensiva.",
         "B": "Durante e após o atendimento da PCR, o paciente pode apresentar hipertensão pulmonar, sendo indicado sedar e evitar a intubação traqueal. O paciente deve ser mantido em leve acidemia.",
         "C": "O uso rotineiro de pressão cricoide não é recomendado durante a intubação endotraqueal de pacientes pediátricos, pois reduz as taxas de sucesso da intubação e não reduz a taxa de regurgitação.",
-        "D": "Quando houver recursos disponíveis, o monitoramento contínuo por eletroencefalografia é recomendado para a detecção de convulsões depois de uma PCR em pacientes com encefalopatia persistente. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 18 de 46"
+        "D": "Quando houver recursos disponíveis, o monitoramento contínuo por eletroencefalografia é recomendado para a detecção de convulsões depois de uma PCR em pacientes com encefalopatia persistente."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1661,7 +1661,7 @@
         "A": "Bicarbonato de sódio.",
         "B": "Sulfato de magnésio.",
         "C": "Cloreto de cálcio 10%.",
-        "D": "Atropina. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 19 de 46"
+        "D": "Atropina."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1749,7 +1749,7 @@
         "B": "O paciente apresenta comorbidades médicas agravadas pela obesidade.",
         "C": "O paciente tem antecedentes de terapia dietética sem sucesso.",
         "D": "O paciente é estável do ponto de vista psiquiátrico e sem dependência de substâncias.",
-        "E": "Não há critérios que impeçam o paciente de ser um candidato à cirurgia bariátrica. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 20 de 46"
+        "E": "Não há critérios que impeçam o paciente de ser um candidato à cirurgia bariátrica."
       },
       "answer": "E",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1867,7 +1867,7 @@
         "A": "As principais causas de CAD são infecções, falta de aderência ao tratamento, porém não está relacionada a estresse emocional.",
         "B": "Os principais sintomas da CAD são: polifagia, polidipsia, poliúria, noctúria, polifagia, náuseas e vômitos, dor abdominal e perda ponderal. Não há predominância da anorexia durante o quadro de CAD.",
         "C": "Na admissão ao serviço de urgência as principais alterações em crianças e adolescentes com CAD incluem hálito cetônico, rubor facial, desidratação, taquicardia, hipotensão, redução da perfusão periférica, hiperventilação e dor abdominal.",
-        "D": "Laboratorialmente a CAD caracteriza- se por: hiperglicemia (superior a 400 mg/ dL), acidose metabólica (pH < 7 e/ ou bicarbonato inferior a 18 mEq/L) com elevação do ânion-gap e presença de cetonemia (maior que 8 mg/dL ou fortemente positivas em diluição do soro superior a 1:8) e cetonúria. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 21 de 46"
+        "D": "Laboratorialmente a CAD caracteriza- se por: hiperglicemia (superior a 400 mg/ dL), acidose metabólica (pH < 7 e/ ou bicarbonato inferior a 18 mEq/L) com elevação do ânion-gap e presença de cetonemia (maior que 8 mg/dL ou fortemente positivas em diluição do soro superior a 1:8) e cetonúria."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -1954,7 +1954,7 @@
         "A": "Adrenalina, lidocaína e amiodarona.",
         "B": "Apenas adrenalina.",
         "C": "Adrenalina, adenosina e lidocaína.",
-        "D": "Apenas adrenalina e amiodarona. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 22 de 46"
+        "D": "Apenas adrenalina e amiodarona."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2041,7 +2041,7 @@
         "A": "Apolipoproteína A- IV.",
         "B": "Insulina.",
         "C": "Grelina.",
-        "D": "TNF- α. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 23 de 46"
+        "D": "TNF- α."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2101,7 +2101,7 @@
         "B": "Prescrever amiodarona em bolus.",
         "C": "Realizar cardioversão elétrica sincronizada.",
         "D": "Prescrever expansão volêmica.",
-        "E": "Iniciar reanimação cardiopulmonar. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 24 de 46"
+        "E": "Iniciar reanimação cardiopulmonar."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2189,7 +2189,7 @@
         "A": "Administrar epinefrina na dose de 0,1 mg/kg EV.",
         "B": "Realizar desfibrilação com carga de 2 J/kg.",
         "C": "Administrar epinefrina na dose de 0,01 mg/kg EV.",
-        "D": "Realizar desfibrilação com carga de 4 J/kg. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 25 de 46"
+        "D": "Realizar desfibrilação com carga de 4 J/kg."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2277,7 +2277,7 @@
         "A": "Promover cuidado transversal.",
         "B": "Coordenar o cuidado de pacientes com doenças crônicas.",
         "C": "Oferecer um cuidado integral.",
-        "D": "Garantir acesso aos serviços de saúde. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 26 de 46"
+        "D": "Garantir acesso aos serviços de saúde."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2395,7 +2395,7 @@
         "A": "Iniciar reanimação cardiopulmonar e solicitar material para proceder intubação orotraqueal.",
         "B": "Pedir ajuda e solicitar que a ajuda traga o carrinho de emergência com desfibrilador.",
         "C": "Checar pulso e respiração por no mínimo 5 segundos e no máximo 10 segundos.",
-        "D": "Abrir via aérea e solicitar monitorização, punção de acesso venoso e ofertar oxigênio. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 27 de 46"
+        "D": "Abrir via aérea e solicitar monitorização, punção de acesso venoso e ofertar oxigênio."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2515,7 +2515,7 @@
         "B": "A correção da desidratação é o procedimento inicial mais importante no tratamento da cetoacidose diabética.",
         "C": "Na admissão, o paciente apresenta hiperpotassemia e, portanto, não se deve administrar potássio sérico durante o tratamento da cetoacidose.",
         "D": "Deve-se evitar o uso de glicose endovenosa devido a glicemia elevada na admissão.",
-        "E": "O uso de bicarbonato é fundamental para o tratamento da acidose metabólica na cetoacidose diabética. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 28 de 46"
+        "E": "O uso de bicarbonato é fundamental para o tratamento da acidose metabólica na cetoacidose diabética."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2635,7 +2635,7 @@
         "B": "Cardioversão sincronizada 0,5 J/kg.",
         "C": "Amiodarona 5 mg/kg.",
         "D": "Atropina 0,5 mg.",
-        "E": "Bicarbonato de sódio 1 mEq/kg. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 29 de 46"
+        "E": "Bicarbonato de sódio 1 mEq/kg."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2752,7 +2752,7 @@
         "A": "O HDL-colesterol baixo não é considerado fator de risco cardiovascular isolado.",
         "B": "Níveis elevados de triglicerídeos acima de 150 mg/dL definem hipercolesterolemia.",
         "C": "A elevação do colesterol total, isoladamente, é suficiente para diagnóstico de dislipidemia familiar.",
-        "D": "A redução do LDL-colesterol é o principal alvo terapêutico para prevenção cardiovascular. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 30 de 46"
+        "D": "A redução do LDL-colesterol é o principal alvo terapêutico para prevenção cardiovascular."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2869,7 +2869,7 @@
         "B": "< 70 mg/dL.",
         "C": "< 100 mg/dL.",
         "D": "< 130 mg/dL.",
-        "E": "< 160 mg/dL. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 31 de 46"
+        "E": "< 160 mg/dL."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -2985,7 +2985,7 @@
         "A": "Glicemia de jejum: 118 mg/dL.",
         "B": "Circunferência abdominal: 104 cm.",
         "C": "HDL: 30 mg/dL.",
-        "D": "LDL: 195 mg/dL. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 32 de 46"
+        "D": "LDL: 195 mg/dL."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3072,7 +3072,7 @@
         "A": "Iniciar agonista de GLP-1 e manter medidas comportamentais.",
         "B": "Encaminhar para cirurgia bariátrica por se tratar de obesidade grau I.",
         "C": "Iniciar metformina e orlistate, independentemente do perfil glicêmico.",
-        "D": "Aguardar evolução espontânea com controle apenas da apneia. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 33 de 46"
+        "D": "Aguardar evolução espontânea com controle apenas da apneia."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3160,7 +3160,7 @@
         "B": "Repetir a endoscopia com biópsias em 3 meses, para confirmar o diagnóstico antes de qualquer tratamento.",
         "C": "Realizar terapia endoscópica de ablação com radiofrequência imediatamente, mesmo na ausência de displasia.",
         "D": "Iniciar inibidor de bomba de prótons (IBP) e realizar vigilância endoscópica periódica com biópsias.",
-        "E": "Encaminhar para fundoplicatura laparoscópica como primeira medida curativa. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 34 de 46"
+        "E": "Encaminhar para fundoplicatura laparoscópica como primeira medida curativa."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3247,7 +3247,7 @@
         "A": "Choque cardiogênico hipotensivo decorrente de taquicardia supraventricular instável. O tratamento consiste em cardioversão elétrica sincronizada de modo imediato.",
         "B": "Choque séptico hipotensivo, de foco pulmonar (pneumonia), e taquicardia sinusal compensatória. O tratamento consiste em expansão volêmica e antibioticoterapia de modo imediato.",
         "C": "Choque distributivo hipotensivo por provável anafilaxia e taquicardia sinusal compensatória. Deve-se administrar adrenalina intramuscular imediatamente.",
-        "D": "Choque cardiogênico hipotensivo decorrente de taquicardia ventricular instável. A desfibrilação é o tratamento preconizado nesse caso. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 35 de 46"
+        "D": "Choque cardiogênico hipotensivo decorrente de taquicardia ventricular instável. A desfibrilação é o tratamento preconizado nesse caso."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3300,10 +3300,10 @@
       "documentBlock": 14,
       "area": "Pediatria",
       "topic": "Questões semanais - Bloco 14",
-      "stem": "Criança, sexo masculino, 6 anos de idade, portadora de asma não controlada, foi admitida na unidade de emergência em insuficiência respiratória devido à exacerbação asmática. O paciente recebeu corticosteroide sistêmico, salbutamol inalatório a cada 20 minutos por três vezes e sulfato de magnésio. Teve melhora, apenas discreta, e agora está recebendo β2- agonista endovenoso contínuo. Na evolução, o monitor do paciente começou a sinalizar alteração dos sinais vitais. As imagens a seguir apresentam os dados de monitorização dos últimos cinco minutos (prévio) e o do momento atual: Prévio: Atual: Assinale a alternativa que ilustra, corretamente, o procedimento de urgência a ser realizado no paciente descrito: Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 36 de 46",
+      "stem": "Criança, sexo masculino, 6 anos de idade, portadora de asma não controlada, foi admitida na unidade de emergência em insuficiência respiratória devido à exacerbação asmática. O paciente recebeu corticosteroide sistêmico, salbutamol inalatório a cada 20 minutos por três vezes e sulfato de magnésio. Teve melhora, apenas discreta, e agora está recebendo β2- agonista endovenoso contínuo. Na evolução, o monitor do paciente começou a sinalizar alteração dos sinais vitais. As imagens a seguir apresentam os dados de monitorização dos últimos cinco minutos (prévio) e o do momento atual: Prévio: Atual: Assinale a alternativa que ilustra, corretamente, o procedimento de urgência a ser realizado no paciente descrito:",
       "options": {
         "A": "B)",
-        "C": "D) Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 37 de 46"
+        "C": "D)"
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3387,7 +3387,7 @@
       "topic": "Questões semanais - Bloco 14",
       "stem": "Um lactente de 5 meses é trazido à emergência pediátrica devido à palidez e arresponsividade de início súbito. Exame físico: regular estado geral; afebril; FR = 60 irpm; SatO2 = 82%; PA = 50 x 30 mmHg; pulsos periféricos finos; tempo de enchimento capilar = 4 seg. O paciente foi monitorizado e, por ora, não foi possível obter acesso venoso. O monitor cardíaco evidencia o seguinte traçado: ** ** Qual a conduta correta?",
       "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 38 de 46"
+        "A": "Anote sua principal hipótese e leia nosso comentário."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3471,7 +3471,7 @@
         "A": "Tomografia de crânio.",
         "B": "Radiografia de tórax.",
         "C": "Coleta de líquor.",
-        "D": "Gasometria com glicemia. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 39 de 46"
+        "D": "Gasometria com glicemia."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3588,7 +3588,7 @@
         "A": "Acidose metabólica de ânion gap aumentado.",
         "B": "Alcalose metabólica hipoclorêmica.",
         "C": "Acidose metabólica de ânion gap normal.",
-        "D": "Alcalose metabólica hiperclorêmica. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 40 de 46"
+        "D": "Alcalose metabólica hiperclorêmica."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3673,7 +3673,7 @@
         "A": "Os valores estão dentro da normalidade, e não há diagnóstico de DMG.",
         "B": "O diagnóstico de DMG é confirmado, e há risco aumentado de hipoglicemia neonatal.",
         "C": "O diagnóstico de DMG é confirmado, e há risco aumentado de malformações congênitas.",
-        "D": "O diagnóstico de DMG é confirmado e há risco aumentado de hemorragia puerperal. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 41 de 46"
+        "D": "O diagnóstico de DMG é confirmado e há risco aumentado de hemorragia puerperal."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3702,7 +3702,7 @@
         "A": "Orientar a paciente que como a Glicemia de Jejum foi normal não há necessidade de realização de outros exames complementares. Orientar evitar ingesta de alimentos crus e água não filtrada, assim como cuidado no contato com gato e coleta de sorologia para toxoplasmose a cada 2 meses.",
         "B": "Orientar evitar ingesta de alimentos crus e água não filtrada, assim como cuidado no contato com gato e coleta de sorologia para toxoplasmose a cada 2 meses. Orientar dieta para realização de TTOG com 75g de 24 a 28 semanas.",
         "C": "Orientar evitar ingesta de alimentos crus e água não filtrada, assim como cuidado no contato com gato e coleta de sorologia para toxoplasmose a cada 2 meses. Orientar dieta, exercício físico e iniciar controle glicêmico simples.",
-        "D": "Repetir Glicemia de Jejum imediatamente para nova avaliação. Orientar paciente quanto à susceptibilidade à Toxoplasmose. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 42 de 46"
+        "D": "Repetir Glicemia de Jejum imediatamente para nova avaliação. Orientar paciente quanto à susceptibilidade à Toxoplasmose."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3819,7 +3819,7 @@
         "A": "V - V - F - V - F.",
         "B": "V - F - F - F - F.",
         "C": "F - V - F - V - V.",
-        "D": "F - V - V - F - V. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 43 de 46"
+        "D": "F - V - V - F - V."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -3936,7 +3936,7 @@
         "A": "A longitudinalidade se refere à continuidade da atenção ao longo da vida do paciente, independente da necessidade de vínculo com a equipe de saúde.",
         "B": "A integralidade está associada à oferta de serviços médicos especializados dentro da atenção primária.",
         "C": "A orientação familiar e comunitária são consideradas atributos essenciais da APS, pois em atenção primária deve- se garantir cuidado amplo ao paciente e ao seu meio.",
-        "D": "A coordenação do cuidado implica no acompanhamento contínuo do paciente e na articulação entre os diferentes níveis de atenção à saúde, garantindo a continuidade do cuidado. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 44 de 46"
+        "D": "A coordenação do cuidado implica no acompanhamento contínuo do paciente e na articulação entre os diferentes níveis de atenção à saúde, garantindo a continuidade do cuidado."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -4050,7 +4050,7 @@
         "A": "Longitudinalidade.",
         "B": "Competência cultural.",
         "C": "Orientação familiar.",
-        "D": "Coordenação. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 45 de 46"
+        "D": "Coordenação."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
@@ -4109,7 +4109,7 @@
         "A": "Acesso.",
         "B": "Equidade.",
         "C": "Universalidade.",
-        "D": "Coordenação do cuidado. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 15 | Página 46 de 46 GABARITO 1) D 16) B 31) A 46) C 61) C 76) C 91) A 106) A 121) D 136) D 2) C 17) C 32) C 47) D 62) D 77) E 92) E 107) A 122) D 137) D 3) B 18) A 33) A 48) E 63) A 78) D 93) C 108) D 123) A 138) A 4) B 19) A 34) D 49) E 64) C 79) B 94) D 109) C 124) A 139) D 5) C 20) A 35) C 50) D 65) B 80) B 95) A 110) C 125) D 140) A 6) E 21) B 36) A 51) D 66) B 81) B 96) D 111) A 126) B 141) D 7) D 22) A 37) C 52) E 67) A 82) B 97) B 112) C 127) C 8) E 23) D 38) D 53) B 68) C 83) A 98) B 113) D 128) D 9) D 24) C 39) C 54) B 69) A 84) D 99) D 114) C 129) B 10) C 25) E 40) E 55) B 70) C 85) C 100) A 115) B 130) A 11) E 26) D 41) A 56) D 71) A 86) B 101) A 116) A 131) C 12) A 27) A 42) B 57) D 72) C 87) B 102) D 117) A 132) A 13) E 28) A 43) D 58) C 73) C 88) A 103) A 118) A 133) B 14) B 29) B 44) A 59) A 74) D 89) B 104) C 119) D 134) A 15) C 30) B 45) D 60) E 75) C 90) A 105) A 120) B"
+        "D": "Coordenação do cuidado."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",

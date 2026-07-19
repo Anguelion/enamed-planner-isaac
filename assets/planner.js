@@ -1822,18 +1822,6 @@ function beepPomodoroTick() {
     setTimeout(() => context.close?.(), 200);
   } catch(error) {}
 }
-function beepBlockSelect() {
-  try {
-    const context = new (window.AudioContext || window.webkitAudioContext)();
-    const oscillator = context.createOscillator();
-    const gain = context.createGain();
-    oscillator.frequency.value = 520;
-    gain.gain.value = 0.07;
-    oscillator.connect(gain); gain.connect(context.destination);
-    oscillator.start(); oscillator.stop(context.currentTime + .1);
-    setTimeout(() => context.close?.(), 220);
-  } catch(error) {}
-}
 function finishPomodoroPhase(timer=pomodoro) {
   timer.running = false;
   timer.alarm = true;
@@ -2637,11 +2625,6 @@ function navigateToTab(nextTab,{push=true}={}) {
   if(autoStudyIsRunning()) stopAutoStudy();
   if(ui.tab==='aulas') saveOpenVideoPosition();
   ui.tab=nextTab;
-  if(nextTab==='questoes') {
-    resetQuestionBrowser();
-    questionSidebarCollapsed=false;
-    localStorage.removeItem(QUESTION_SIDEBAR_KEY);
-  }
   if(nextTab==='simulados'&&ui.activeSimRunId) ui.simulationLibraryOpen=false;
   syncRouteFromUI(push?'push':'replace');
   render();
@@ -3152,7 +3135,6 @@ function renderCronograma() {
   document.getElementById('statusFilter').onchange = e => { ui.status=e.target.value; render(); };
   document.querySelectorAll('[data-schedule-block]').forEach(button => button.onclick = e => {
     ui.scheduleBlock = e.currentTarget.dataset.scheduleBlock;
-    beepBlockSelect();
     render();
     requestAnimationFrame(() => {
       const picked = document.querySelector(`[data-schedule-block="${CSS.escape(ui.scheduleBlock)}"]`);
@@ -6612,20 +6594,6 @@ function applyQuestionEdits(question) {
     area: edit.area || question.area,
     edited: true
   };
-}
-function resetQuestionBrowser({status='Todas'}={}) {
-  ui.qFocusScheduleId='';
-  ui.qFocusTarget=0;
-  ui.qFocusQuestionIds=[];
-  ui.qBlock='Todos';
-  ui.qSource='Todas';
-  ui.qTopic='Todos';
-  ui.qStatus=status;
-  ui.qSearch='';
-  ui.qIndex=0;
-  ui.qQuestionId='';
-  ui.justAnsweredId='';
-  resetKeyboardConfirmation();
 }
 function openQuestionsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);

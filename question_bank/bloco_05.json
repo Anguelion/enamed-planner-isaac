@@ -47,7 +47,7 @@
         "A": "Parar imediatamente a trombólise química e encaminhar o doente para realizar tomografia computadorizada de crânio sem contraste.",
         "B": "Iniciar nitroprussiato para melhor controle pressórico e prosseguir com a trombólise.",
         "C": "Prosseguir com a trombólise e, após término do procedimento, realizar tomografia de crânio sem contraste.",
-        "D": "Prosseguir com a trombólise e, após término do procedimento, não é necessária a realização de novo exame de imagem. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 2 de 62"
+        "D": "Prosseguir com a trombólise e, após término do procedimento, não é necessária a realização de novo exame de imagem."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -171,7 +171,7 @@
         "B": "Analgesia e, após 1h, reavaliação da dor e início da avaliação secundária quanto aos cuidados com as queimaduras – fazer apenas cobertura das lesões com gaze para não causar mais dor à manipulação.",
         "C": "Acalmar o paciente; ressuscitação volêmica utilizando a fórmula de Parkland – 1,5mL/ kg/ % de superfície corpórea queimada; analgesia e curativo com sulfadiazina de prata nas feridas.",
         "D": "Analgesia; ressuscitação volêmica utilizando a fórmula de Brooke – 4mL/kg/% de superfície corpórea queimada – e curativo com neomicina nas feridas.",
-        "E": "Avaliação quanto à possível lesão direta de via aérea; ressuscitação volêmica utilizando a fórmula de Parkland – 4mL/kg/% de superfície corpórea queimada – juntamente com a analgesia, e curativo com sulfadiazina de prata nas feridas. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 3 de 62"
+        "E": "Avaliação quanto à possível lesão direta de via aérea; ressuscitação volêmica utilizando a fórmula de Parkland – 4mL/kg/% de superfície corpórea queimada – juntamente com a analgesia, e curativo com sulfadiazina de prata nas feridas."
       },
       "answer": "E",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -236,7 +236,7 @@
         "B": "V – V – V – F – V.",
         "C": "F – F – F – F – F.",
         "D": "F – V – F – V – V.",
-        "E": "V – F – V – V – F. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 4 de 62"
+        "E": "V – F – V – V – F."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -329,7 +329,7 @@
         "A": "Controle pressórico com nitroprussiato com PAS aproximada de 140mmHg.",
         "B": "Compressor pneumático intermitente",
         "C": "Controle glicêmico com insulina para glicemia < 180mg/dL",
-        "D": "Dexametasona para diminuição do edema cerebral Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 5 de 62"
+        "D": "Dexametasona para diminuição do edema cerebral"
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -423,7 +423,7 @@
         "A": "Dieta oral em livre demanda complementada por alimentação enteral.",
         "B": "O suporte enteral ou parenteral orientado pelo nível sérico de albumina.",
         "C": "NPT, já que há comprometimento do trato gastrointestinal na maioria dos grandes queimados.",
-        "D": "Estratégias farmacológicas, cirúrgicas e comportamentais devem ser utilizadas para conter efeitos anabólicos e atenuar resposta metabólica. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 6 de 62"
+        "D": "Estratégias farmacológicas, cirúrgicas e comportamentais devem ser utilizadas para conter efeitos anabólicos e atenuar resposta metabólica."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -486,7 +486,7 @@
         "A": "Máscara de oxigênio com FiO2 a 80%.",
         "B": "Intubação orotraqueal e ventilação com FiO2 a 100%.",
         "C": "Reposição volêmica com cristaloides e curativo com sulfadiazina de prata.",
-        "D": "Reposição volêmica com colóides e curativo com nitrato de certo. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 7 de 62"
+        "D": "Reposição volêmica com colóides e curativo com nitrato de certo."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -610,7 +610,7 @@
         "B": "Haemophilus influenzae.",
         "C": "Streptococcus pneumoniae.",
         "D": "Staphylococcus aureus.",
-        "E": "Mycoplasma pneumoniae. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 8 de 62"
+        "E": "Mycoplasma pneumoniae."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -701,7 +701,7 @@
         "B": "Doença de chagas aguda.",
         "C": "Infarto agudo do miocárdio da parede anterior.",
         "D": "Infarto agudo do miocárdio da parede anterolateral.",
-        "E": "Pericardite. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 9 de 62"
+        "E": "Pericardite."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -823,7 +823,7 @@
         "B": "Internamento e iniciar antibioticoterapia por via parenteral.",
         "C": "Manter amoxicilina e deixar antitérmico fixo e reavaliar com 48 horas, ou antes, se piora.",
         "D": "Modificar esquema para amoxacilina com clavulanato, orientação de aumentar a ingesta hídrica, além de solicitar reavaliação com 48 horas.",
-        "E": "Substituir amoxacilina por macrolídeo, com orientação de reavaliar com 48 horas, ou antes, se piora clínica. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 10 de 62"
+        "E": "Substituir amoxacilina por macrolídeo, com orientação de reavaliar com 48 horas, ou antes, se piora clínica."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -882,7 +882,7 @@
       "stem": "Paciente de 32 anos, primigesta, com hipertensão arterial crônica, em uso de 80mg/dia de nifedipina, encontra-se em fase ativa do trabalho de parto com 5cm de dilatação. Nesse momento, foi realizada cardiotocografia, cujo resultado levou à indicação de cesariana em função do diagnóstico de sofrimento fetal agudo. O padrão cardiotocográfico que melhor representa esse quadro é:",
       "options": {
         "A": "B)",
-        "C": "D) Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 11 de 62"
+        "C": "D)"
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -972,7 +972,7 @@
         "A": "Retirar imediatamente a mão no toque vaginal e seguir para cesariana.",
         "B": "Manter a mão no toque vaginal e encaminhar a paciente com urgência para interrupção da gestação por cesárea.",
         "C": "Encaminhar a paciente para ultrassonografia para avaliação de perfil biofísico fetal.",
-        "D": "Modificar o decúbito, ofertar glicose e reavaliar o ritmo cardíaco fetal. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 12 de 62"
+        "D": "Modificar o decúbito, ofertar glicose e reavaliar o ritmo cardíaco fetal."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1064,7 +1064,7 @@
         "A": "Descontinuar a ocitocina.",
         "B": "Indicar cesariana.",
         "C": "Iniciar sulfato de magnésio 50 mg.",
-        "D": "Iniciar terbutalina. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 13 de 62"
+        "D": "Iniciar terbutalina."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1155,7 +1155,7 @@
         "A": "Em pré- escolares, os vírus representam um dos principais agentes etiológicos das pneumonias, principalmente o vírus sincicial respiratório, o da influenza e o da parainfluenza.",
         "B": "A pneumonia afebril do lactente, causada pela Chlamydophila trachomatis e pelo Ureaplasma urealyticum, acomete lactentes entre um e quatro meses, que manifestam quadro de febre baixa, tosse seca e hipoxemia discreta.",
         "C": "Em crianças acima de cinco anos, o Haemophilus influenzae tipo B e o Streptococcus pneumoniae respondem como os principais agentes causadores de pneumonia de etiologia bacteriana.",
-        "D": "Em escolares e adolescentes que apresentam quadros prolongados de tosse seca precedidos por sintomas inespecíficos como febre, faringite e mialgia, deve- se suspeitar da pneumonia atípica, causada pelo Mycoplasma pneumoniae e pela Chlamydophila pneumoniae. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 14 de 62"
+        "D": "Em escolares e adolescentes que apresentam quadros prolongados de tosse seca precedidos por sintomas inespecíficos como febre, faringite e mialgia, deve- se suspeitar da pneumonia atípica, causada pelo Mycoplasma pneumoniae e pela Chlamydophila pneumoniae."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1219,7 +1219,7 @@
         "B": "Hemorragia subaracnóidea focal ou difusa fina, sem hemorragia intraventricular.",
         "C": "Hemorragia subaracnóidea focal ou difusa fina, com hemorragia intraventricular.",
         "D": "Hemorragia subaracnóidea focal ou difusa espessa, sem hemorragia intraventricular.",
-        "E": "Hemorragia subaracnóidea focal ou difusa espessa, com hemorragia intraventricular. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 15 de 62"
+        "E": "Hemorragia subaracnóidea focal ou difusa espessa, com hemorragia intraventricular."
       },
       "answer": "E",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1310,7 +1310,7 @@
         "B": "Haemophilus influenzae.",
         "C": "Streptococcus pyogenes.",
         "D": "Streptococcus pneumoniae.",
-        "E": "Mycobacterium tuberculosis. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 16 de 62"
+        "E": "Mycobacterium tuberculosis."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1400,7 +1400,7 @@
         "A": "Prescrever penicilina cristalina.",
         "B": "Introduzir soro de manutenção.",
         "C": "Iniciar salbutamol spray.",
-        "D": "Manter a prescrição atual. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 17 de 62"
+        "D": "Manter a prescrição atual."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1494,7 +1494,7 @@
         "B": "Quanto menor o calibre do dreno, melhor será a recuperação do paciente.",
         "C": "Em geral, a melhor conduta é apenas a punção de alívio.",
         "D": "As imagens de ultrassom podem guiar melhor a posição do dreno e, assim, alcançar áreas com abscessos fechados.",
-        "E": "O paciente deve estar sob intubação mecânica para a drenagem. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 18 de 62"
+        "E": "O paciente deve estar sob intubação mecânica para a drenagem."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1586,7 +1586,7 @@
         "A": "Pneumonia grave e internação hospitalar.",
         "B": "Febre sem foco definido e internação hospitalar.",
         "C": "Bronquiolite viral aguda grave e internação hospitalar.",
-        "D": "Laringotraqueobronquite grave e internação hospitalar. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 19 de 62"
+        "D": "Laringotraqueobronquite grave e internação hospitalar."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1738,7 +1738,7 @@
         "A": "A estimulação da faringe posterior não tem efeito no palato mole dos músculos faríngeos.",
         "B": "A infusão de água fria no ouvido direito não causa desvio dos olhos no plano horizontal para qualquer lado.",
         "C": "Quando a cabeça é girada de um lado para o outro no plano horizontal, o olhar conjugado muda para o lado contralateral.",
-        "D": "Uma gota de solução salina na córnea de um olho faz com que ambos os olhos pisquem. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 20 de 62"
+        "D": "Uma gota de solução salina na córnea de um olho faz com que ambos os olhos pisquem."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1858,7 +1858,7 @@
         "A": "Hipertensão Maligna; coriorretinite.",
         "B": "Encefalopatia Hipertensiva; papiledema.",
         "C": "Ataque Isquêmico Transitório; fibras nervosas meduladas.",
-        "D": "Acidente Vascular Encefálico Hemorrágico; pulso venoso espontâneo. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 21 de 62"
+        "D": "Acidente Vascular Encefálico Hemorrágico; pulso venoso espontâneo."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -1979,7 +1979,7 @@
         "A": "Broncopneumonia.",
         "B": "Crise de asma.",
         "C": "Bronquiolite viral aguda.",
-        "D": "Displasia broncopulmonar. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 22 de 62"
+        "D": "Displasia broncopulmonar."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2101,7 +2101,7 @@
         "B": "Entre 2 e 4 horas e meia, desde o último momento visto assintomático.",
         "C": "≥ 18 anos.",
         "D": "Paciente diabético com glicemia, no momento do evento > 50 e < 250 mg/dL.",
-        "E": "Pressão arterial 185 x 110 mmHg. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 23 de 62"
+        "E": "Pressão arterial 185 x 110 mmHg."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2132,7 +2132,7 @@
         "B": "Deve-se solicitar apenas prova tuberculínica; se 11 mm, iniciar o tratamento com esquema quádruplo, independentemente de qualquer achado radiológico.",
         "C": "Deve- se solicitar prova tuberculínica e radiografia de tórax; se 7 mm, sem achados radiológicos, indicar tratamento da infecção latente.",
         "D": "Deve-se iniciar tratamento profilático com isoniazida ou rifampicina até 3 meses após a negativação do escarro da mãe.",
-        "E": "Solicitar apenas exame radiológico do tórax; se a radiografia for anormal, iniciar tratamento de infecção latente. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 24 de 62"
+        "E": "Solicitar apenas exame radiológico do tórax; se a radiografia for anormal, iniciar tratamento de infecção latente."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2162,7 +2162,7 @@
         "A": "Metástase encefálica.",
         "B": "Trombose venosa cerebral.",
         "C": "Angiopatia amiloide.",
-        "D": "Hipertensão arterial sistêmica. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 25 de 62"
+        "D": "Hipertensão arterial sistêmica."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2258,7 +2258,7 @@
         "A": "Oxigenioterapia por máscara não inalante (fluxo = 10L/min).",
         "B": "Indicar intubação orotraqueal.",
         "C": "Realizar nebulização com solução salina hipertônica 3%.",
-        "D": "Iniciar prova terapêutica com salbutamol inalatório. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 26 de 62"
+        "D": "Iniciar prova terapêutica com salbutamol inalatório."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2319,7 +2319,7 @@
         "A": "Aspiração de corpo estranho.",
         "B": "Crise de broncoespasmo.",
         "C": "Pneumonia em lobo médio.",
-        "D": "Pneumonia em lobo inferior direito. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 27 de 62"
+        "D": "Pneumonia em lobo inferior direito."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2443,7 +2443,7 @@
         "A": "A Moraxella catarrhalis é o agente viral mais frequentemente associado a pneumonias em crianças.",
         "B": "O Vírus Sincicial Respiratório é o principal agente viral encontrado nas pneumonias em crianças.",
         "C": "O Staphylococcus aureus é o agente bacteriano mais comum, superando o pneumococo nas pneumonias infantis.",
-        "D": "O Haemophilus influenzae tipo B é atualmente o agente mais frequente em pneumonias bacterianas em crianças devido à baixa taxa de imunização. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 28 de 62"
+        "D": "O Haemophilus influenzae tipo B é atualmente o agente mais frequente em pneumonias bacterianas em crianças devido à baixa taxa de imunização."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2565,7 +2565,7 @@
         "B": "Corticosteroides endovenoso.",
         "C": "Suporte ventilatório através de cânula nasal de alto fluxo.",
         "D": "Hidratação e oxigenoterapia, se necessário.",
-        "E": "Ribavirina aerossol. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 29 de 62"
+        "E": "Ribavirina aerossol."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2658,7 +2658,7 @@
         "A": "Prescrever antibióticos de amplo espectro para tratar a tosse e solicitar retorno em 15 dias para avaliar se há melhora dos sintomas.",
         "B": "Iniciar tratamento empírico para tuberculose mesmo sem confirmação diagnóstica, haja vista o histórico de contato e os sintomas apresentados.",
         "C": "Solicitar radiografia de tórax e prova tuberculínica e explicar à família que esses exames são fundamentais para o diagnóstico de tuberculose pulmonar.",
-        "D": "Solicitar hemograma e radiografia de tórax para investigar tuberculose pulmonar e manter o menino afastado do avô até que este complete 6 meses de tratamento. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 30 de 62"
+        "D": "Solicitar hemograma e radiografia de tórax para investigar tuberculose pulmonar e manter o menino afastado do avô até que este complete 6 meses de tratamento."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2780,7 +2780,7 @@
         "B": "Por se tratar de urgência hipertensiva, é necessário administrar iECA ou Blog canal de cálcio e monitorar a pressão com objetivo de controle em até 12 horas, ou há risco estatístico de evolução para complicações graves.",
         "C": "Por se tratar de emergência hipertensiva, é necessário iniciar nitroprussiato venoso com meta de controle de 30% da PAM em 12h.",
         "D": "Avaliar a paciente. Tratar dor e ansiedade. Caso assintomática, apenas ajustar anti-hipertensivos de horário.",
-        "E": "Solicitar ECG e ecocardiograma para definição de conduta. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 31 de 62"
+        "E": "Solicitar ECG e ecocardiograma para definição de conduta."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -2904,7 +2904,7 @@
         "B": "AVC isquêmico lacunar; internação hospitalar e prescrição de dupla antiagregação.",
         "C": "AIT; alta hospitalar com consulta com neurologista em menos de 72 h.",
         "D": "AVC isquêmico; internação em unidade de terapia Intensiva para monitorização neurológica.",
-        "E": "AVC hemorrágico; contactar neurocirurgia imediatamente. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 32 de 62"
+        "E": "AVC hemorrágico; contactar neurocirurgia imediatamente."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3028,7 +3028,7 @@
         "A": "A corticoterapia não oferece benefício no manejo da bronquiolite.",
         "B": "Deve ser ofertado via oral inicialmente.",
         "C": "A via de administração é intramuscular, já que a absorção é maior.",
-        "D": "A via endovenosa deve ser a preferencial, já que não há primeira passagem hepática do corticoide. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 33 de 62"
+        "D": "A via endovenosa deve ser a preferencial, já que não há primeira passagem hepática do corticoide."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3150,7 +3150,7 @@
         "B": "Iniciar tratamento para tuberculose latente.",
         "C": "Fazer acompanhamento com PPD e radiografia de tórax a cada 3 meses.",
         "D": "Indicar isolamento do pai até o término do tratamento dele.",
-        "E": "Utilizar conduta expectante, já que está assintomática. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 34 de 62"
+        "E": "Utilizar conduta expectante, já que está assintomática."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3236,7 +3236,7 @@
         "A": "Realizar ultrassonografia point of care à beira leito, iniciar avaliação pela janela pélvica.",
         "B": "Suspender nitroprussiato de sódio e substituir por nitroglicerina, por se tratar de pós- operatório de cirurgia de revascularização miocárdica.",
         "C": "Realizar ultrassonografia point of care à beira leito, iniciar avaliação pelas janelas cardíacas, considerar associação de dobutamina para otimização do fluxo sanguíneo renal.",
-        "D": "Realizar ultrassonografia point of care à beira leito, iniciar pelas janelas cardíacas e avaliar veia cava, considerar realizar expansão volêmica se sinais de hipovolemia ou furosemida se sinais de congestão. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 35 de 62"
+        "D": "Realizar ultrassonografia point of care à beira leito, iniciar pelas janelas cardíacas e avaliar veia cava, considerar realizar expansão volêmica se sinais de hipovolemia ou furosemida se sinais de congestão."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3329,7 +3329,7 @@
         "B": "Nitroglicerina.",
         "C": "Nitroprussiato de sódio.",
         "D": "Beta-bloqueador.",
-        "E": "Tartarato e Metoprolol. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 36 de 62"
+        "E": "Tartarato e Metoprolol."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3391,7 +3391,7 @@
         "B": "Administrar captopril 25 mg por via sublingual, devido ao efeito rápido esperado para controle da pressão arterial, repetir a dose até que atinja PA Sistólica de 160 mmHg.",
         "C": "Prescrever anlodipino 5 mg por via oral, uma vez que apresenta início de ação imediato, mantendo observação por 3 horas para avaliar resposta inicial ao tratamento.",
         "D": "Iniciar infusão de nitroprussiato em bomba, visando redução imediata de 25% da pressão arterial sob monitorização contínua.",
-        "E": "Ofertar atenolol 50 mg via oral em dose única, devido ao efeito anti hipertensivo imediato e ação protetora cardíaca. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 37 de 62"
+        "E": "Ofertar atenolol 50 mg via oral em dose única, devido ao efeito anti hipertensivo imediato e ação protetora cardíaca."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3453,7 +3453,7 @@
         "A": "Angiotomografia arterial.",
         "B": "Fenitoína endovenosa.",
         "C": "Transfusão de plaquetas.",
-        "D": "Drenagem de hematoma intracraniano. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 38 de 62"
+        "D": "Drenagem de hematoma intracraniano."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3549,7 +3549,7 @@
         "A": "niciar AAS 100 mg/dia.",
         "B": "Iniciar apixabana 5 mg/dia.\\",
         "C": "Ajustar alvo da varfarina para INR entre 1,5 e 2,0.",
-        "D": "Indicar oclusão percutânea do apêndice atrial esquerdo. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 39 de 62"
+        "D": "Indicar oclusão percutânea do apêndice atrial esquerdo."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3609,7 +3609,7 @@
         "A": "Redução de pressão arterial, com níveis de PAS abaixo de 145mmHg e prescrever 5 unidades de plasma fresco congelado",
         "B": "Solicitar Angiotomografia arterial, buscando obstrução de grandes vasos, para que seja definida conduta com trombectomia mecânica",
         "C": "Iniciar trombólise endovenosa, sem redução de pressão arterial, pois paciente encontra-se em janela terapêutica (até 4,5h).",
-        "D": "Redução de pressão arterial, com níveis de PAS entre 130-140 mmHg Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 40 de 62"
+        "D": "Redução de pressão arterial, com níveis de PAS entre 130-140 mmHg"
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3641,7 +3641,7 @@
         "A": "Ruptura de aneurisma sacular de artéria cerebral média. Trata- se de uma hemorragia subaracnoide Fisher IV com hemoventrículo associado.",
         "B": "Malformação arteriovenosa cerebral. Hemorragia lobar importante com sinais de calcificação importante típicas de malformação arteriovenosa e com calcificação ventricular associada",
         "C": "Angiopatia amiloide cerebral. Hemorragia lobar extensa com hemoventrículo associado.",
-        "D": "Microaneurismas de Charcot- Bouchard secundários à hipertensão arterial crônica. Hematoma em região dos núcleos da base com extensão para ventrículo. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 41 de 62"
+        "D": "Microaneurismas de Charcot- Bouchard secundários à hipertensão arterial crônica. Hematoma em região dos núcleos da base com extensão para ventrículo."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3709,7 +3709,7 @@
         "B": "Iniciar tocolítico para reduzir a frequência de contrações e melhorar a oxigenação fetal, aguardando progressão do trabalho de parto.",
         "C": "Indicar amnioinfusão com soro fisiológico para diluir o mecônio e reduzir risco de aspiração meconial.",
         "D": "Avaliar pH ou lactato do sangue fetal para então confirmar sofrimento fetal e avaliar via de parto.",
-        "E": "Diagnosticar sofrimento fetal agudo e indicar cesariana de emergência. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 42 de 62"
+        "E": "Diagnosticar sofrimento fetal agudo e indicar cesariana de emergência."
       },
       "answer": "E",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3799,7 +3799,7 @@
         "A": "Sugere-se compressão do cordão umbilical, com desaceleração de bom prognóstico.",
         "B": "Observa-se uma síndrome de hiperestimulação uterina.",
         "C": "Pode tratar-se de hipóxia fetal e sofrimento fetal agudo.",
-        "D": "É provável uma compressão do polo cefálico, mediada pelo nervo vago. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 43 de 62"
+        "D": "É provável uma compressão do polo cefálico, mediada pelo nervo vago."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -3924,7 +3924,7 @@
         "A": "Streptococcus pneumoniae.",
         "B": "Staphylococcus aureus.",
         "C": "Mycoplasma pneumoniae.",
-        "D": "Mycobacterium tuberculosis. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 44 de 62"
+        "D": "Mycobacterium tuberculosis."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4016,7 +4016,7 @@
         "B": "A principal indicação para antibioticoterapia intravenosa em crianças com pneumonia é a recusa alimentar, sem necessidade de outros critérios.",
         "C": "Episódios prévios de pneumonia, presença de doença de base crônica e ausência de aleitamento materno estão entre os principais fatores de risco para pneumonia complicada e necessidade de internação.",
         "D": "A realização de radiografia de tórax deve ser feita rotineiramente em todos os casos leves de pneumonia tratados em regime ambulatorial, sem necessidade de internação.",
-        "E": "A presença de tosse seca apenas indica infecção viral e descarta completamente a possibilidade de pneumonia bacteriana complicada. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 45 de 62"
+        "E": "A presença de tosse seca apenas indica infecção viral e descarta completamente a possibilidade de pneumonia bacteriana complicada."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4106,7 +4106,7 @@
         "A": "Internação hospitalar para realização de antibioticoterapia parenteral.",
         "B": "Alta com amoxicilina por via oral e reavaliação em 48-72h.",
         "C": "Realizar radiografia de tórax e aguardar resultado para definir a conduta.",
-        "D": "Alta com sintomáticos e orientação de sinais de alarme. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 46 de 62"
+        "D": "Alta com sintomáticos e orientação de sinais de alarme."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4197,7 +4197,7 @@
         "A": "Realizar PPD, se < 5 mm, suspender rifampicina e administrar BCG.",
         "B": "Manter rifampicina até quatro meses e, após esse período, suspender a medicação, não realizar PPD e administrar BCG.",
         "C": "Realizar PPD, se ≥ 5 mm, suspender rifampicina e administrar BCG.",
-        "D": "Realizar PPD, se ≥ 5 mm, substituir rifampicina por isoniazida e completar mais 3 meses de tratamento. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 47 de 62"
+        "D": "Realizar PPD, se ≥ 5 mm, substituir rifampicina por isoniazida e completar mais 3 meses de tratamento."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4288,7 +4288,7 @@
         "A": "Oxigenoterapia suplementar.",
         "B": "B2 inalatório.",
         "C": "B2 inalatório e prednisolona.",
-        "D": "Amoxicilina. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 48 de 62"
+        "D": "Amoxicilina."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4378,7 +4378,7 @@
         "A": "Iniciar o tratamento para tuberculose, pela alta probabilidade diagnóstica, utilizando esquema com rifampicina, isoniazida e pirimetamina por dois meses, associada a 4 meses de rifampicina e isoniazida.",
         "B": "Considerar início do tratamento para tuberculose, pela possibilidade diagnóstica por sistema de escore, com esquema de 2 meses de rifampicina, isoniazida e pirazinamida associado a mais dois meses de rifampicina e isoniazida.",
         "C": "Iniciar antibioticoterapia empírica para pneumonia oculta com amoxicilina associada a clavulanato, uma vez que os exames bacteriológicos para tuberculose são negativos e o diagnóstico da doença é pouco provável.",
-        "D": "Realizar biópsia linfonodal cervical para investigação de doenças infectocontagiosas fúngicas, como botriomicose, e doenças linfoproliferativas, como linfomas. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 49 de 62"
+        "D": "Realizar biópsia linfonodal cervical para investigação de doenças infectocontagiosas fúngicas, como botriomicose, e doenças linfoproliferativas, como linfomas."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4501,7 +4501,7 @@
         "B": "Reanimação volêmica adequada é essencial para o resultado adequado do tratamento e deve ser feita preferencialmente com Ringer Lactato.",
         "C": "O paciente deve ser extubado em até 24h para evitar maior risco de estenose de traqueia.",
         "D": "Um raio X de tórax normal tem alto valor preditivo negativo, podendo a hipótese de queimadura de via aérea ser afastada.",
-        "E": "A corticoterapia deve ser indicada em altas doses. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 50 de 62"
+        "E": "A corticoterapia deve ser indicada em altas doses."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4591,7 +4591,7 @@
         "A": "Iniciar expansão volêmica conforme regra de Brooke modificada e aquecer o paciente.",
         "B": "Proceder com analgesia e desbridamento de áreas de queimadura.",
         "C": "Posicionar colar cervical e avaliar via aérea.",
-        "D": "Realizar escarotomia profilática de região de tórax. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 51 de 62"
+        "D": "Realizar escarotomia profilática de região de tórax."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4650,9 +4650,9 @@
       "topic": "Questões semanais - Bloco 5",
       "stem": "Mulher, 74 anos de idade, tabagista, tem hipertensão e diabetes. Foi encontrada confusa em casa pela filha, que há 2 dias atrás havia a visto bem. Na admissão no pronto-socorro, encontrava-se afebril, eupneica, com PA de 170×110 mmHg, FC de 102 bpm, glicemia capilar de 145 mg/dL. Ao exame neurológico, apresentou-se vigil, alerta, irritada, afirmando “estou bem, quero ir para casa”. Tinha o olhar desviado para a direita quando distraída, mas conseguia olhar para a esquerda quando instruída pelo examinador. A paciente percebia o dedo do examinador em todos os quadrantes no exame de campos visuais por confrontação. Quando solicitada a ler um texto, começava a partir do meio da página e lia apenas o lado direito das frases repetidamente. Não apresentava fraqueza muscular. Assinale a alternativa que apresenta uma imagem de ressonância magnética compatível com o quadro da paciente descrita:",
       "options": {
-        "A": "Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 52 de 62",
+        "A": "",
         "B": "C)",
-        "D": "Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 53 de 62"
+        "D": ""
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4711,7 +4711,7 @@
         "A": "O ASPECTS avalia a extensão tomográfica do insulto, com boa acurácia para circulação vertebrobasilar.",
         "B": "Para indicação de trombectomia mecânica, faz-se necessária ressonância magnética evidenciando DWI-FLAIR mismatch.",
         "C": "A tenecteplase é não inferior à alteplase, no contexto de trombólise de pacientes com acidente vascular cerebral isquêmico.",
-        "D": "Em pacientes com NIHSS menor que 5, não há indicação de terapia trombolítica. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 54 de 62"
+        "D": "Em pacientes com NIHSS menor que 5, não há indicação de terapia trombolítica."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4799,7 +4799,7 @@
         "A": "Iniciar AAS e clopidogrel.",
         "B": "Iniciar rivaroxabana até resultado do Holter.",
         "C": "Considerar trombectomia mecânica.",
-        "D": "Indicar endarterectomia de carótida em até catorze dias. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 55 de 62"
+        "D": "Indicar endarterectomia de carótida em até catorze dias."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4829,7 +4829,7 @@
         "A": "Tomografia de crânio com sinal da ACM (artéria cerebral Média) esquerda hiperdensa, Hemiparesia a direita e afasia. Trombólise química e trombectomia.",
         "B": "Tomografia de crânio com sinal da ACM (artéria cerebral Média) esquerda hiperdensa, Hemiparesia a direita e afasia. Trombólise química.",
         "C": "Ressonância Magnética de crânio com hemorragia subaracnóidea. Sinais de irritação meníngea. Iniciar nimodipino.",
-        "D": "Tomografia crânio normal. Rebaixamento do nível de consciência. Iniciar AAS e Estatina. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 56 de 62"
+        "D": "Tomografia crânio normal. Rebaixamento do nível de consciência. Iniciar AAS e Estatina."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -4924,7 +4924,7 @@
         "A": "Compromete o nervo hipoglosso direito, indicando lesão periférica ipsilateral.",
         "B": "Compromete o nervo hipoglosso esquerdo, indicando lesão periférica contralateral.",
         "C": "Está localizada no córtex motor esquerdo, sugerindo uma lesão central contralateral.",
-        "D": "Está localizada no córtex motor direito, sugerindo uma lesão central ipsilateral. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 57 de 62"
+        "D": "Está localizada no córtex motor direito, sugerindo uma lesão central ipsilateral."
       },
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -5047,7 +5047,7 @@
         "B": "Nervo abducente esquerdo.",
         "C": "Nervo troclear esquerdo.",
         "D": "Nervo troclear direito.",
-        "E": "Nervo abducente direito. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 58 de 62"
+        "E": "Nervo abducente direito."
       },
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -5139,7 +5139,7 @@
         "B": "As desigualdades em saúde representam variações naturais e inevitáveis nos indicadores entre diferentes grupos, não configurando necessariamente um problema de justiça social.",
         "C": "O modelo ampliado dos DSS reconhece os fatores biológicos e genéticos como causas fundamentais das iniquidades em saúde, sendo suficiente abordá-los por meio da atenção clínica individual.",
         "D": "As iniquidades em saúde são desigualdades evitáveis, injustas e sistemáticas, que resultam da distribuição desigual dos determinantes sociais, exigindo ações intersetoriais para sua superação.",
-        "E": "O modelo de Dahlgren e Whitehead agrupa os determinantes em níveis proximais, intermediários e finais, sendo estes últimos compostos por fatores imutáveis da biologia humana e, portanto, não passíveis de intervenção. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 59 de 62"
+        "E": "O modelo de Dahlgren e Whitehead agrupa os determinantes em níveis proximais, intermediários e finais, sendo estes últimos compostos por fatores imutáveis da biologia humana e, portanto, não passíveis de intervenção."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -5229,7 +5229,7 @@
         "A": "Prevenção primária – voltada à interrupção de fatores de risco antes da instalação da doença, com foco em hábitos saudáveis e promoção da saúde.",
         "B": "Prevenção secundária – intervenção precoce sobre agravos assintomáticos ou doenças subclínicas, com o objetivo de impedir sua progressão.",
         "C": "Prevenção terciária – abordagem centrada em evitar complicações e perdas funcionais em indivíduos com doença instalada e sintomas evidentes.",
-        "D": "Prevenção quaternária – estratégia para evitar intervenções desnecessárias, rastreamentos abusivos ou excessiva medicalização de condições benignas. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 60 de 62"
+        "D": "Prevenção quaternária – estratégia para evitar intervenções desnecessárias, rastreamentos abusivos ou excessiva medicalização de condições benignas."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -5320,7 +5320,7 @@
         "B": "Encaminhar a paciente para avaliação de um gastroenterologista para garantir que não haja doenças graves ocultas, já que a dor abdominal sempre necessita de investigação especializada.",
         "C": "Deve- se manter o acompanhamento baseado somente em exames de rotina, repetindo- os periodicamente mesmo que assintomáticos, como forma de prevenção secundária.",
         "D": "O correto é realizar acolhimento, escuta qualificada e discutir estratégias não farmacológicas de manejo do estresse, evitando exames ou terapias desnecessárias, atuando principalmente em prevenção quaternária.",
-        "E": "É adequado solicitar exames de imagem mais sofisticados, como ressonância magnética, para garantir a exclusão de qualquer doença grave subjacente. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 61 de 62"
+        "E": "É adequado solicitar exames de imagem mais sofisticados, como ressonância magnética, para garantir a exclusão de qualquer doença grave subjacente."
       },
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
@@ -5351,7 +5351,7 @@
         "B": "Informar que o rastreio com mamografia deve ser iniciado aos 50 anos, com frequência a cada dois anos.",
         "C": "Sugerir que ela aguarde até os 50 anos para iniciar o rastreio, pois é a idade recomendada pelas diretrizes de saúde, com intervalo de três anos.",
         "D": "Discutir com a paciente sobre os benefícios e riscos da mamografia e individualizar a decisão, incentivando o autoexame como rastreio.",
-        "E": "Orientar a paciente a realizar apenas exames clínicos regulares, sem a necessidade de mamografia. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 6 | Página 62 de 62 GABARITO 1) B 16) B 31) C 46) B 61) B 76) C 91) D 106) A 121) E 136) B 151) A 166) E 2) A 17) A 32) B 47) D 62) C 77) B 92) C 107) B 122) D 137) B 152) A 167) C 3) D 18) A 33) C 48) D 63) A 78) C 93) C 108) B 123) B 138) B 153) A 168) D 4) B 19) D 34) D 49) D 64) B 79) C 94) D 109) C 124) C 139) C 154) C 169) C 5) E 20) A 35) A 50) C 65) C 80) B 95) A 110) E 125) C 140) A 155) A 170) B 6) E 21) B 36) B 51) C 66) A 81) B 96) D 111) A 126) B 141) D 156) A 171) B 7) C 22) B 37) E 52) A 67) D 82) D 97) D 112) D 127) D 142) D 157) A 172) A 8) D 23) A 38) C 53) A 68) A 83) E 98) B 113) A 128) C 143) B 158) A 173) B 9) A 24) D 39) A 54) E 69) C 84) D 99) A 114) D 129) B 144) C 159) D 174) D 10) C 25) E 40) E 55) C 70) C 85) D 100) D 115) D 130) D 145) D 160) D 175) B 11) D 26) C 41) A 56) D 71) C 86) C 101) B 116) D 131) C 146) A 161) A 12) C 27) B 42) B 57) B 72) E 87) C 102) B 117) D 132) A 147) B 162) C 13) D 28) A 43) D 58) D 73) B 88) B 103) B 118) D 133) C 148) B 163) C 14) A 29) C 44) D 59) D 74) A 89) B 104) C 119) D 134) B 149) C 164) B 15) A 30) B 45) C 60) D 75) D 90) A 105) A 120) B 135) B 150) C"
+        "E": "Orientar a paciente a realizar apenas exames clínicos regulares, sem a necessidade de mamografia."
       },
       "answer": "B",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",

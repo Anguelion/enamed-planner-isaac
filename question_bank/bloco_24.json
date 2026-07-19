@@ -102,7 +102,7 @@
         "A": "Manter mudanças no estilo de vida (dieta e atividade física) e nova medida de pressão arterial em 1 ano.",
         "B": "Medir a pressão no outro braço e no membro inferior ainda nesta consulta e, caso não apresente anormalidades, nova medida em 6 meses.",
         "C": "Solicitar a realização de MAPA e, em caso de confirmação de diagnóstico, prosseguir com a investigação laboratorial.",
-        "D": "Realizar MAPA (se disponível) e solicitar coleta de: urina tipo 1, eletrólitos, função renal, perfil lipídico, Hb glicada e transaminases. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 2 de 34"
+        "D": "Realizar MAPA (se disponível) e solicitar coleta de: urina tipo 1, eletrólitos, função renal, perfil lipídico, Hb glicada e transaminases."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -164,7 +164,7 @@
         "B": "Pré-hipertensão.",
         "C": "Hipertensão estágio II.",
         "D": "Hipertensão estágio I.",
-        "E": "Pressão arterial elevada. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 3 de 34"
+        "E": "Pressão arterial elevada."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -257,7 +257,7 @@
         "A": "Doença de Crohn; infliximab.",
         "B": "Colite microscópica; mesalazina.",
         "C": "Retocolite ulcerativa; prednisona.",
-        "D": "Colite pseudomembranosa; metronidazol. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 4 de 34"
+        "D": "Colite pseudomembranosa; metronidazol."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -347,7 +347,7 @@
         "B": "Densitometria óssea: o T score apresenta valores inferiores a -2,5 do desvio- padrão em um dos seguintes sítios: coluna lombar, colo de fêmur, fêmur total ou rádio a 33%.",
         "C": "Densitometria óssea: o Z score apresenta valores inferiores a -2,5 do desvio- padrão em um dos seguintes sítios: coluna lombar, colo de fêmur, fêmur total ou rádio a 33%.",
         "D": "Ressonância magnética: rarefação óssea.",
-        "E": "Densitometria óssea: o T score apresenta valores entre -1 e -2,5 do desvio- padrão em um dos seguintes sítios: coluna lombar, colo de fêmur, fêmur total ou rádio a 33%. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 5 de 34"
+        "E": "Densitometria óssea: o T score apresenta valores entre -1 e -2,5 do desvio- padrão em um dos seguintes sítios: coluna lombar, colo de fêmur, fêmur total ou rádio a 33%."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -465,7 +465,7 @@
         "B": "Captopril sublingual, com diminuição da PA em até 25% nas primeiras 8 horas de tratamento.",
         "C": "Nitroprussiato de sódio endovenoso, com diminuição da PA em até 25% na primeira 1 hora de tratamento.",
         "D": "Captopril sublingual, com diminuição da PA em até 25% na primeira 1 hora de tratamento.",
-        "E": "Captopril sublingual e analgésicos, observação clínica até melhora dos sintomas de dor e opressão no peito. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 6 de 34"
+        "E": "Captopril sublingual e analgésicos, observação clínica até melhora dos sintomas de dor e opressão no peito."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -553,7 +553,7 @@
         "A": "Biópsia transtorácica.",
         "B": "Toracocentese diagnóstica.",
         "C": "Drenagem torácica.",
-        "D": "Segmentectomia pulmonar. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 7 de 34"
+        "D": "Segmentectomia pulmonar."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -614,7 +614,7 @@
         "A": "Ressecção nodular cirúrgica em cunha.",
         "B": "Broncoscopia endoscópica com biópsia.",
         "C": "Acompanhamento em nível ambulatorial.",
-        "D": "Biópsia cirúrgica ou aspiração por agulha fina. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 8 de 34"
+        "D": "Biópsia cirúrgica ou aspiração por agulha fina."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -675,7 +675,7 @@
         "A": "Fazer um relatório médico e encaminhar o corpo ao Instituto Médico Legal, por se tratar de morte por causas externas.",
         "B": "Incluir no item “Condições e Causa do Óbito” o código de Classificação Internacional de Doenças (CID), obrigatório para padronização.",
         "C": "Atestar como causas a sepse e a pneumonia, já que não houve relação entre o trauma e o óbito, pois o tempo decorrido ultrapassou 30 dias.",
-        "D": "Preencher o item “Condições e Causa do Óbito” com informações na seguinte ordem: sepse, pneumonia, contusão pulmonar, politrauma. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 9 de 34"
+        "D": "Preencher o item “Condições e Causa do Óbito” com informações na seguinte ordem: sepse, pneumonia, contusão pulmonar, politrauma."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -791,7 +791,7 @@
         "A": "Tumor de retossigmoide.",
         "B": "Retocolite ulcerativa.",
         "C": "Diverticulite aguda.",
-        "D": "Colite isquêmica. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 10 de 34"
+        "D": "Colite isquêmica."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -878,7 +878,7 @@
         "A": "Cálcio oral associado a vitamina D, fisioterapia e denosumab subcutâneo.",
         "B": "Vitamina D, reeducação postural global e alendronato oral.",
         "C": "Cálcio oral, repouso parcial e ácido zoledrónico.",
-        "D": "Cálcio oral associado a vitamina D, fisioterapia passiva e etanercept subcutâneo. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 11 de 34"
+        "D": "Cálcio oral associado a vitamina D, fisioterapia passiva e etanercept subcutâneo."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -966,7 +966,7 @@
         "A": "Cessação de tabagismo.",
         "B": "Reposição de vitamina D.",
         "C": "Prescrição de bisfosfonato.",
-        "D": "Início de carbonato de cálcio. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 12 de 34"
+        "D": "Início de carbonato de cálcio."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1055,7 +1055,7 @@
         "B": "Prescrever antidepressivos sem avaliação de outras abordagens.",
         "C": "Agendar consultas periódicas para acompanhamento e iniciar apoio psicossocial na unidade básica de saúde.",
         "D": "Recomendar que o paciente busque terapia em uma clínica privada.",
-        "E": "Solicitar exames laboratoriais antes de iniciar qualquer ação de acompanhamento. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 13 de 34"
+        "E": "Solicitar exames laboratoriais antes de iniciar qualquer ação de acompanhamento."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1174,7 +1174,7 @@
         "B": "Observação com seguimento periódico devido à baixa agressividade do tumor.",
         "C": "Ressecção cirúrgica do tumor com linfadenectomia mediastinal.",
         "D": "Quimioterapia seguida de radioterapia para tratamento local e sistêmico.",
-        "E": "Cirurgia citorredutora seguida de quimioterapia adjuvante. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 14 de 34"
+        "E": "Cirurgia citorredutora seguida de quimioterapia adjuvante."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1291,7 +1291,7 @@
         "B": "Confirmar diagnóstico com monitorização ambulatorial da pressão arterial (MAPA).",
         "C": "Solicitar exame de urina tipo I e medir albumina urinária.",
         "D": "Iniciar tratamento com bloqueador de canal de cálcio e reavaliar em 1 mês.",
-        "E": "Solicitar ecocardiograma e angiotomografia abdominal. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 15 de 34"
+        "E": "Solicitar ecocardiograma e angiotomografia abdominal."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1407,7 +1407,7 @@
         "A": "Transtorno Depressivo Maior.",
         "B": "Transtorno de Ansiedade Social (Fobia Social).",
         "C": "Transtorno Bipolar.",
-        "D": "Transtorno de Personalidade Borderline. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 16 de 34"
+        "D": "Transtorno de Personalidade Borderline."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1494,7 +1494,7 @@
         "A": "Transtorno de ansiedade generalizada; prescrever benzodiazepínico e encaminhar para psicanálise.",
         "B": "Transtorno Esquizoafetivo; iniciar o estabilizador de humor para prevenir episódios maníacos.",
         "C": "Transtorno de estresse pós-traumático; investigue eventos traumáticos recentes e recomende terapia de exposição.",
-        "D": "Transtorno depressivo maior; iniciar tratamento com um inibidor seletivo da recaptação de serotonina (ISRS) após avaliar riscos e benefícios. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 17 de 34"
+        "D": "Transtorno depressivo maior; iniciar tratamento com um inibidor seletivo da recaptação de serotonina (ISRS) após avaliar riscos e benefícios."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1582,7 +1582,7 @@
         "A": "Recomenda-se aferir a PA em decúbito dorsal, sem escolha entre membro superior ou inferior.",
         "B": "A aferição deve ser realizada com manguito com câmara interna de largura correspondente a 60% da circunferência do braço.",
         "C": "Após a aferição por método adequado, a classificação da hipertensão é baseada em uma tabela padronizada, para meninos e meninas, de acordo com a idade e o peso.",
-        "D": "A aferição deve ser realizada no membro superior direito, sendo que a bolsa inflável do manguito selecionado deve cobrir 40% da circunferência do braço na largura e 80-100% da circunferência do braço no comprimento. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 18 de 34"
+        "D": "A aferição deve ser realizada no membro superior direito, sendo que a bolsa inflável do manguito selecionado deve cobrir 40% da circunferência do braço na largura e 80-100% da circunferência do braço no comprimento."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1670,7 +1670,7 @@
         "A": "Realizar o ecocardiograma transtorácico de imediato para avaliação de hipertrofia ventricular esquerda e avaliação da microalbuminúria.",
         "B": "Orientar mudanças no estilo de vida, incluindo incentivo à redução de peso, alimentação saudável e aumento de atividade física; reavaliar pressão arterial em 1 a 2 semanas para confirmar diagnóstico e avaliar necessidade de investigação adicional.",
         "C": "Prescrever terapia medicamentosa anti- hipertensiva logo na primeira consulta para prevenir possível progressão de hipertensão.",
-        "D": "Orientar retorno em seis meses para nova avaliação, visto que não há fatores de risco relevantes ou sintomas associados. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 19 de 34"
+        "D": "Orientar retorno em seis meses para nova avaliação, visto que não há fatores de risco relevantes ou sintomas associados."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1729,7 +1729,7 @@
         "A": "Parte 1: a) Insuficiência Respiratória Aguda: b) Pneumonia Bacteriana Aguda e c) Asma.",
         "B": "Parte 1: a) Asma, b) Pneumonia Adquirida na Comunidade e c) Insuficiência Respiratória Aguda.",
         "C": "Parte 1: a) Parada Cardiorrespiratória: b) Pneumonia Adquirida na Comunidade; c) Doença Pulmonar Obstrutiva Crônica e d) Tabagismo.",
-        "D": "Parte 1: a) Insuficiência Respiratória Aguda; b) Pneumonia Bacteriana, c) Doença Pulmonar Obstrutiva Crônica e d) Tabagismo. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 20 de 34"
+        "D": "Parte 1: a) Insuficiência Respiratória Aguda; b) Pneumonia Bacteriana, c) Doença Pulmonar Obstrutiva Crônica e d) Tabagismo."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1820,7 +1820,7 @@
         "B": "Orienta mudança de estilo de vida e aguarda evolução.",
         "C": "Orienta mudança de estilo de vida e solicita monitorização ambulatorial da pressão arterial.",
         "D": "Orienta mudança de estilo de vida e solicita fundoscopia.",
-        "E": "Orienta mudança de estilo de vida e inicia tratamento para dislipidemia. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 21 de 34"
+        "E": "Orienta mudança de estilo de vida e inicia tratamento para dislipidemia."
       },
       "answer": "A",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -1909,7 +1909,7 @@
         "B": "Doença de Whipple.",
         "C": "Artrite reumatoide.",
         "D": "Cirrose biliar primária.",
-        "E": "Síndrome da artrite-pancreatite. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 22 de 34"
+        "E": "Síndrome da artrite-pancreatite."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2025,7 +2025,7 @@
         "A": "A hipertensão arterial na infância frequentemente não tem causa etiológica conhecida e, geralmente, não tem repercussão cardiovascular.",
         "B": "A pressão arterial elevada durante a infância pode levar a alterações cardiovasculares subclínicas precoces, como hipertrofia ventricular esquerda e aumento da espessura médio-intimal da carótida.",
         "C": "As modificações no estilo de vida, incluindo alimentação saudável e atividade física, são intervenções secundárias, sendo a intervenção farmacológica a primeira linha de tratamento.",
-        "D": "Normalizar a pressão arterial antes da idade adulta não oferece impacto sobre a remodelação do músculo cardíaco. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 23 de 34"
+        "D": "Normalizar a pressão arterial antes da idade adulta não oferece impacto sobre a remodelação do músculo cardíaco."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2141,7 +2141,7 @@
         "A": "Metilprednisolona 1 g/dia.",
         "B": "Infliximabe.",
         "C": "Cicloscoporina.",
-        "D": "Hidrocortisona 400 mg/dia. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 24 de 34"
+        "D": "Hidrocortisona 400 mg/dia."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2258,7 +2258,7 @@
         "A": "A otimização pré-operatória do paciente geralmente não melhora as condições em que o paciente é operado.",
         "B": "Diferentes técnicas de anastomose devem ser consideradas com base na gravidade e na localização da Doença de Crohn.",
         "C": "A radicalidade cirúrgica com ressecção de todas as áreas acometidas é fundamental para diminuir a recidiva da Doença de Crohn.",
-        "D": "Para obter-se os melhores resultados com menor taxa de recidiva, o momento ideal da cirurgia da Doença de Crohn do cólon é assim que o paciente começa a apresentar aumento do número de evacuações. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 25 de 34"
+        "D": "Para obter-se os melhores resultados com menor taxa de recidiva, o momento ideal da cirurgia da Doença de Crohn do cólon é assim que o paciente começa a apresentar aumento do número de evacuações."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2346,7 +2346,7 @@
         "A": "Pseudopólipos.",
         "B": "Microabscessos de cripta.",
         "C": "Úlceras acometendo apenas a mucosa.",
-        "D": "Granuloma não caseoso. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 26 de 34"
+        "D": "Granuloma não caseoso."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2405,7 +2405,7 @@
         "A": "Ao aumento dos níveis de paratormônio.",
         "B": "Ao aumento dos níveis da 1,25-dihidroxivitamina D.",
         "C": "Hiperparatireoidismo terciário.",
-        "D": "Ao aumento dos níveis da proteína relacionada ao paratormônio. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 27 de 34"
+        "D": "Ao aumento dos níveis da proteína relacionada ao paratormônio."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2494,7 +2494,7 @@
         "A": "Quimioterapia.",
         "B": "EBUS e/ou Mediastinoscopia.",
         "C": "Imunoterapia neoadjuvante.",
-        "D": "Lobectomia superior esquerda com linfadenectomia mediastinal. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 28 de 34"
+        "D": "Lobectomia superior esquerda com linfadenectomia mediastinal."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2611,7 +2611,7 @@
         "B": "Ele deve ser encaminhado ao nefrologista.",
         "C": "A medicação anti-hipertensiva deve ser iniciada.",
         "D": "O paciente está hipertenso, mas sem necessidade de tratamento.",
-        "E": "A PA deve ser aferida mais duas vezes, com cálculo da média das aferições, para definição diagnóstica. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 29 de 34"
+        "E": "A PA deve ser aferida mais duas vezes, com cálculo da média das aferições, para definição diagnóstica."
       },
       "answer": "E",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2669,7 +2669,7 @@
         "A": "O médico plantonista deve recusar- se a emitir a DO, pois esta responsabilidade é do médico assistente que vinha acompanhando o paciente regularmente.",
         "B": "O médico plantonista deve emitir a DO, por estar presente no momento da constatação do óbito e, na ausência do médico assistente, a responsabilidade recai sobre o médico substituto ou plantonista do serviço.",
         "C": "O médico plantonista deve solicitar o encaminhamento do corpo para o Serviço de Verificação de Óbito (SVO), pois não estava acompanhando o caso anteriormente e a causa exata da morte precisa ser confirmada.",
-        "D": "O médico plantonista deve preencher apenas os dados de identificação da DO e solicitar que o médico assistente preencha posteriormente os campos referentes à causa da morte. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 30 de 34"
+        "D": "O médico plantonista deve preencher apenas os dados de identificação da DO e solicitar que o médico assistente preencha posteriormente os campos referentes à causa da morte."
       },
       "answer": "B",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2754,7 +2754,7 @@
         "A": "I - Médico plantonista; II - Médico da família; III - Autoridade policial; IV - Médico obstetra.",
         "B": "I - Diretor do hospital; II - Autoridade policial; III - Médico legista; IV - Médico obstetra.",
         "C": "I - Médico assistente; II - Qualquer médico da localidade; III - Médico legista; IV - Não é necessária a emissão de DO.",
-        "D": "I - Médico assistente; II - Autoridade policial; III - Médico legista; IV - Médico obstetra. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 31 de 34"
+        "D": "I - Médico assistente; II - Autoridade policial; III - Médico legista; IV - Médico obstetra."
       },
       "answer": "C",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2842,7 +2842,7 @@
         "B": "Durante a gestação, deve- se abordar os sintomas apenas com medidas não medicamentosas, pois não existe fármaco seguro para uso nesse período.",
         "C": "Terapias não medicamentosas, como psicoterapia e atividade física, não têm impacto relevante em quadros de depressão confirmada de grau moderado.",
         "D": "Medicamentos antidepressivos não mostraram vantagens de eficácia na comparação com placebo se usados para pessoas com depressão unipolar leve.",
-        "E": "A abordagem do risco de suicídio não deve ser realizada na Atenção Primária, devendo ser feita exclusivamente em ambientes de internamento, pois não há instrumentos validados para a realização desta abordagem. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 32 de 34"
+        "E": "A abordagem do risco de suicídio não deve ser realizada na Atenção Primária, devendo ser feita exclusivamente em ambientes de internamento, pois não há instrumentos validados para a realização desta abordagem."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2900,7 +2900,7 @@
         "A": "Hipotireoidismo.",
         "B": "Doença arterial coronariana.",
         "C": "Diabetes mellitus tipo 2.",
-        "D": "Síndrome da apneia-hipopneia obstrutiva do sono. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 33 de 34"
+        "D": "Síndrome da apneia-hipopneia obstrutiva do sono."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
@@ -2990,7 +2990,7 @@
         "A": "Antipsicóticos atípicos.",
         "B": "Benzodiazepínicos.",
         "C": "Estabilizadores de humor.",
-        "D": "Inibidores seletivos da recaptação de serotonina. Prova gerada pelo MedCof QBank - Todos os direitos reservados. Maria Eduarda | 15814814462 | AQFM - Extensivo ENAMED 2026 - Bloco 25 | Página 34 de 34 GABARITO 1) A 16) A 31) D 46) C 61) A 76) D 91) B 2) D 17) B 32) D 47) B 62) A 77) B 92) C 3) D 18) C 33) C 48) A 63) D 78) B 93) A 4) A 19) A 34) B 49) C 64) E 79) A 94) C 5) D 20) C 35) C 50) D 65) B 80) D 95) A 6) D 21) C 36) C 51) D 66) B 81) B 96) D 7) D 22) A 37) B 52) A 67) D 82) B 97) D 8) A 23) A 38) D 53) B 68) A 83) B 98) B 9) C 24) A 39) E 54) D 69) B 84) D 99) D 10) D 25) C 40) D 55) D 70) B 85) B 100) C 11) C 26) C 41) D 56) B 71) C 86) B 101) C 12) B 27) B 42) A 57) B 72) A 87) C 102) D 13) C 28) A 43) C 58) E 73) D 88) A 14) D 29) A 44) B 59) D 74) A 89) E 15) A 30) A 45) B 60) A 75) D"
+        "D": "Inibidores seletivos da recaptação de serotonina."
       },
       "answer": "D",
       "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
