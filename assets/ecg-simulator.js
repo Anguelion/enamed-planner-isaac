@@ -842,6 +842,8 @@
         { src: 'lvh-3.jpg', caption: 'Caso real: bradicardia sinusal, FC 46 bpm, eixo -10°, sobrecarga atrial esquerda, sobrecarga de VE com strain.' },
         { src: 'lvh-4.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo -20°, sobrecarga de VE com strain, extrassístoles atriais.' },
         { src: 'lvh-5.jpg', caption: 'Caso real: ritmo sinusal, FC média 80 bpm, eixo +70°, sobrecarga de VE com strain.' },
+        { src: 'lvh-6.jpg', caption: 'Caso real: ritmo sinusal, FC 90 bpm, eixo -10°, sobrecarga de VE com strain.' },
+        { src: 'lvh-7.jpg', caption: 'Caso real: ritmo sinusal, FC 90 bpm, eixo -20°, sobrecarga de VE com strain.' },
       ]
     },
     {
