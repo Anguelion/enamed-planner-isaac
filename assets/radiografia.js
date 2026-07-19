@@ -547,7 +547,7 @@
   // ---------------------------------------------------------------------------
   function defaultState() {
     return {
-      ui: { sub: 'inicio', sinalId: null, casoId: null, fundTab: 'intro', metodoTab: 'abcde' },
+      ui: { sub: 'inicio', sinalId: null, casoId: null, fundTab: 'intro', metodoTab: 'abcde', aulaModId: null, aulaTopicoId: null },
       srs: {},          // por sinal: SM-2 lite
       log: [],          // tentativas { id, ok, conf, t }
       progress: {},     // marcadores de conclusão de módulos
@@ -589,7 +589,7 @@
 
   const SUBS = [
     ['inicio', 'Início'], ['trilha', 'Trilha'], ['fundamentos', 'Fundamentos'], ['metodo', 'Método'],
-    ['sinais', 'Sinais'], ['casos', 'Casos'], ['desempenho', 'Desempenho'],
+    ['aulas', 'Aulas'], ['sinais', 'Sinais'], ['casos', 'Casos'], ['desempenho', 'Desempenho'],
   ];
 
   function injectStyles() {
@@ -666,6 +666,11 @@
     .radio-trail-step.next{background:linear-gradient(90deg,rgba(18,97,245,.06),transparent);border-radius:8px;padding-left:8px;margin-left:-8px}
     .radio-trail-step.next .radio-trail-dot{border-color:var(--accent,#1261f5)}
     .radio-tag.next{background:var(--accent,#1261f5);color:#fff}
+    .radio-aula-bullets{margin:12px 0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+    .radio-aula-bullets li{line-height:1.5;font-size:14px}
+    .radio-aula-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .radio-aula-gallery .radio-figure{background:#fff}
+    .radio-aula-gallery .radio-xray{object-fit:contain;max-height:340px;margin:0 auto;background:#fff}
     `;
     document.head.appendChild(style);
   }
@@ -980,6 +985,44 @@
     return `<p class="radio-muted" style="margin-top:0">Siga os passos de cima para baixo: começa do zero e vai aprofundando. O app marca cada passo conforme você lê, exercita e interpreta.</p>${header}${stages}`;
   }
 
+  // ---------- AULAS (conteúdo real, assets/radiografia-aulas.js) ----------
+  function aulasModulosList() {
+    const mods = (window.RadioAulas && window.RadioAulas.MODULOS) || [];
+    if (!mods.length) return '<p class="radio-muted">Carregando aulas…</p>';
+    return `<p class="radio-muted" style="margin-top:0">Aulas com imagens reais (radiografia, TC, RM e USG), organizadas como no guia original — 7 módulos, do básico ao trauma e neurorradiologia.</p>
+      <div class="radio-grid">${mods.map((m) => `<div class="radio-card radio-region-btn" data-radio-open-mod="${m.id}">
+        <div class="radio-tags"><span class="radio-tag">Módulo ${m.id}</span><span class="radio-tag">${m.topicos.length} tópicos</span></div>
+        <h3>${esc(m.nome)}</h3><p class="radio-muted">${esc(m.resumo)}</p>
+      </div>`).join('')}</div>`;
+  }
+  function aulasTopicosList(mod) {
+    return `<button class="radio-btn ghost sm" data-radio-back-mod>← Voltar aos módulos</button>
+      <div style="margin:10px 0"><span class="radio-tag">Módulo ${mod.id}</span><h2 style="margin:6px 0 0">${esc(mod.nome)}</h2><p class="radio-muted">${esc(mod.resumo)}</p></div>
+      <div class="radio-grid">${mod.topicos.map((t) => `<div class="radio-card radio-region-btn" data-radio-open-topico="${t.id}">
+        <h3>${esc(t.titulo)}</h3><span class="radio-muted">${t.imagens.length ? t.imagens.length + ' imagens' : 'Sem imagens'} · ${t.bullets.length} pontos-chave</span>
+      </div>`).join('')}</div>`;
+  }
+  function aulasTopicoDetail(mod, topico) {
+    const gallery = topico.imagens.length
+      ? `<div class="radio-aula-gallery">${topico.imagens.map((src, i) => `<div class="radio-figure" data-anno="0" data-inv="0" data-zoom="0" data-radio-viewer><img src="${esc(src)}" class="radio-xray" alt="${esc(topico.titulo)} — imagem ${i + 1}" loading="lazy"/>
+          <div class="radio-viewer-bar"><button class="radio-btn ghost sm" data-vw="inv">Inverter</button><button class="radio-btn ghost sm" data-vw="zoom">Zoom</button></div>
+        </div>`).join('')}</div>`
+      : '';
+    return `<button class="radio-btn ghost sm" data-radio-back-topico>← Voltar a ${esc(mod.nome)}</button>
+      <div style="margin:10px 0"><span class="radio-tag">Módulo ${mod.id}</span><h2 style="margin:6px 0 0">${esc(topico.titulo)}</h2></div>
+      <ul class="radio-aula-bullets">${topico.bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
+      ${gallery}`;
+  }
+  function aulasHtml() {
+    const S = st();
+    const mods = (window.RadioAulas && window.RadioAulas.MODULOS) || [];
+    const mod = mods.find((m) => m.id === S.ui.aulaModId);
+    if (!mod) return aulasModulosList();
+    const topico = mod.topicos.find((t) => t.id === S.ui.aulaTopicoId);
+    if (!topico) return aulasTopicosList(mod);
+    return aulasTopicoDetail(mod, topico);
+  }
+
   // ---------- Roteador de corpo ----------
   function bodyHtml() {
     const S = st();
@@ -988,13 +1031,14 @@
       case 'trilha': return trilhaHtml();
       case 'fundamentos': return fundamentosHtml();
       case 'metodo': return metodoHtml();
+      case 'aulas': return aulasHtml();
       case 'sinais': return S.ui.sinalId && SINAL_MAP[S.ui.sinalId] ? sinalDetailHtml(SINAL_MAP[S.ui.sinalId]) : sinaisListHtml();
       case 'casos': return S.ui.casoId && CASO_MAP[S.ui.casoId] ? casoDetailHtml(CASO_MAP[S.ui.casoId]) : casosListHtml();
       case 'desempenho': return desempenhoHtml();
       default: return inicioHtml();
     }
   }
-  function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'sinais') S.ui.sinalId = null; if (sub !== 'casos') S.ui.casoId = null; save(); mountBody(); }
+  function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'sinais') S.ui.sinalId = null; if (sub !== 'casos') S.ui.casoId = null; if (sub !== 'aulas') { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; } save(); mountBody(); }
   function goTo(t) {
     const S = st();
     S.ui.sub = t.sub;
@@ -1002,6 +1046,8 @@
     if (t.metodoTab) S.ui.metodoTab = t.metodoTab;
     S.ui.sinalId = t.sinalId || null;
     S.ui.casoId = t.casoId || null;
+    S.ui.aulaModId = t.aulaModId || null;
+    S.ui.aulaTopicoId = t.aulaTopicoId || null;
     if (t.casoId && S.caseState[t.casoId] == null) S.caseState[t.casoId] = 0;
     save(); mountBody();
   }
@@ -1033,6 +1079,10 @@
     });
     el.querySelectorAll('[data-radio-metodo]').forEach((b) => b.onclick = () => { st().ui.metodoTab = b.dataset.radioMetodo; save(); mountBody(); });
     el.querySelectorAll('[data-radio-fund-done]').forEach((b) => b.onclick = () => { st().progress['fund:' + b.dataset.radioFundDone] = todayISO(); save(); b.textContent = 'Módulo marcado ✓'; b.disabled = true; });
+    el.querySelectorAll('[data-radio-open-mod]').forEach((b) => b.onclick = () => { const S = st(); S.ui.aulaModId = +b.dataset.radioOpenMod; S.ui.aulaTopicoId = null; save(); mountBody(); });
+    el.querySelectorAll('[data-radio-back-mod]').forEach((b) => b.onclick = () => { st().ui.aulaModId = null; save(); mountBody(); });
+    el.querySelectorAll('[data-radio-open-topico]').forEach((b) => b.onclick = () => { st().ui.aulaTopicoId = b.dataset.radioOpenTopico; save(); mountBody(); });
+    el.querySelectorAll('[data-radio-back-topico]').forEach((b) => b.onclick = () => { st().ui.aulaTopicoId = null; save(); mountBody(); });
     wireViewer(el);
     wireDensidades(el);
     wireSinalQuiz(el);
