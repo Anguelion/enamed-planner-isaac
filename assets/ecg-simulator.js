@@ -1243,17 +1243,34 @@
   // ---------------------------------------------------------------------------
   // Render de corpo + canvases
   // ---------------------------------------------------------------------------
+  // Desenha assim que o canvas tiver largura. Não depende de requestAnimationFrame
+  // (que fica pausado quando a aba está em segundo plano) — usa ResizeObserver.
+  function drawWhenReady(cv, draw) {
+    if (cv._ecgObserver) { cv._ecgObserver.disconnect(); cv._ecgObserver = null; }
+    if (cv.clientWidth > 40) { draw(); return; }
+    if (typeof ResizeObserver === 'function') {
+      const ro = new ResizeObserver(() => {
+        if (cv.clientWidth > 40) { ro.disconnect(); cv._ecgObserver = null; draw(); }
+      });
+      ro.observe(cv);
+      cv._ecgObserver = ro;
+    } else {
+      let tries = 0;
+      const poll = () => { if (cv.clientWidth > 40) draw(); else if (tries++ < 40) setTimeout(poll, 60); };
+      setTimeout(poll, 60);
+    }
+  }
   function renderCanvases() {
     root().querySelectorAll('canvas[data-ecg-canvas]').forEach((cv) => {
       const cond = CONDITION_MAP[cv.dataset.ecgCanvas];
       if (!cond) return;
       const seed = parseInt(cv.dataset.ecgSeed || '1', 10);
-      requestAnimationFrame(() => renderECG(cv, cond, { seed }));
+      drawWhenReady(cv, () => renderECG(cv, cond, { seed }));
     });
     root().querySelectorAll('canvas[data-ecg-strip]').forEach((cv) => {
       const cond = CONDITION_MAP[cv.dataset.ecgStrip];
       if (!cond) return;
-      requestAnimationFrame(() => { renderECG(cv, cond, { mode: 'strip', height: 180, stripDur: 10 }); setupCalipers(cv); });
+      drawWhenReady(cv, () => { renderECG(cv, cond, { mode: 'strip', height: 180, stripDur: 10 }); setupCalipers(cv); });
     });
   }
 
