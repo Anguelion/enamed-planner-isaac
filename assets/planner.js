@@ -978,7 +978,19 @@ function loadLocalBackups() {
   }
 }
 function saveLocalBackups() {
-  localStorage.setItem(LOCAL_BACKUPS_KEY, JSON.stringify(localBackups.slice(0, LOCAL_BACKUP_LIMIT)));
+  let backups = localBackups.slice(0, LOCAL_BACKUP_LIMIT);
+  while(backups.length) {
+    try {
+      localStorage.setItem(LOCAL_BACKUPS_KEY, JSON.stringify(backups));
+      localBackups = backups;
+      return;
+    } catch(error) {
+      // Sem espaco no localStorage para todos os backups locais: reduz pela
+      // metade e tenta de novo, em vez de falhar e nao salvar nenhum.
+      backups = backups.slice(0, Math.floor(backups.length / 2));
+    }
+  }
+  console.warn('Não foi possível salvar nenhum backup local: armazenamento cheio.');
 }
 function createLocalBackup(label='', {silent=false, reason='manual'}={}) {
   const payload = fullPlannerBackup();

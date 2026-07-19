@@ -184,7 +184,8 @@
     return {valid:reasons.length===0,reasons,answer,optionLetters:letters,optionCount:options.length};
   }
 
-  function questionProgressTimestamp(progress={}){
+  function questionProgressTimestamp(progress){
+    if(!progress) return 0;
     return Date.parse(progress.updatedAt||progress.answerKeyIssueAt||progress.answeredAt||'')||0;
   }
 

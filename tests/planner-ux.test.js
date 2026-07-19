@@ -101,6 +101,14 @@ test('progresso mais novo preserva edições posteriores à resposta',()=>{
   assert.equal(merged.secondsSpent,20);
 });
 
+test('questionProgressTimestamp não quebra quando o registro mesclado é null',()=>{
+  const merged=UX.mergeQuestionProgressRecord(undefined,undefined);
+  assert.equal(merged,null);
+  assert.equal(UX.questionProgressTimestamp(merged),0);
+  assert.equal(UX.questionProgressTimestamp(null),0);
+  assert.equal(UX.questionProgressTimestamp(undefined),0);
+});
+
 test('IDs duplicados recebem sufixo estável sem descartar questões diferentes',()=>{
   const records=UX.ensureUniqueRecordIds([
     {id:'q1',stem:'Primeira',number:1,collectionBlock:2},
