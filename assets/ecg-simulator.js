@@ -1326,7 +1326,8 @@
   function viewCondition(c) {
     return `${viewerToolbar(c, 'trace')}
     <div class="ecg-canvas-shell"><canvas data-ecg-canvas="${c.id}"></canvas></div>
-    <div class="ecg-card">${teachBlock(c)}</div>`;
+    <div class="ecg-card">${teachBlock(c)}</div>
+    ${realGallery(c)}`;
   }
 
   // ---- Régua / compasso -----------------------------------------------------
