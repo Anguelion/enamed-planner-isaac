@@ -688,6 +688,8 @@
         { src: 'lbbb-3.jpg', caption: 'Caso real: ritmo sinusal, FC 65 bpm, eixo 0°, BRE.' },
         { src: 'lbbb-4.jpg', caption: 'Caso real: ritmo sinusal, FC 75 bpm, eixo +50°, BRE.' },
         { src: 'lbbb-5.jpg', caption: 'Caso real: ritmo sinusal, FC 70 bpm, eixo +10°, distúrbio de condução pelo ramo esquerdo.' },
+        { src: 'lbbb-sgarbossa-1.jpg', caption: 'Caso real — Sgarbossa: mulher de 80 anos com BRE de base, entra na emergência hipotensa com dor precordial. Compare o ECG basal (BRE isolado) com o de admissão — mudança evidente do ST-T apesar do BRE.' },
+        { src: 'lbbb-sgarbossa-2.jpg', caption: 'Caso real — Sgarbossa: homem de 68 anos, ECG prévio (BRE) trazido pela esposa vs. ECG de admissão com dor precordial — concordância de ST em V1-V4 mostra IAM apesar do BRE.' },
       ]
     },
     {
@@ -712,6 +714,10 @@
         { src: 'stemi-inf-1.jpg', caption: 'Caso real (material de estudo pessoal): IAM com supra de ST inferior — paciente com PCR na emergência, desfibrilado com sucesso; supra em DII/DIII/aVF com recíproca em DI/aVL.' },
         { src: 'stemi-inf-2.jpg', caption: 'Caso real: homem de 62 anos, forte precordialgia, náuseas e sudorese — IAM com supra de ST inferior.' },
         { src: 'stemi-inf-3.jpg', caption: 'Caso real: paciente internado com IAM, delta T de 18h sem trombólise, evoluindo com angina pós-IAM — supra inferior persistente.' },
+        { src: 'stemi-inf-4.jpg', caption: 'Caso real: homem de 59 anos, mal-estar precordial há 2 dias — foi liberado na primeira avaliação, sintomas persistiram e o IAM inferior foi identificado no retorno (armadilha real de subdiagnóstico).' },
+        { src: 'stemi-inf-5.jpg', caption: 'Caso real: IAM inferior subagudo — lesão e necrose subepicárdica inferior com imagem-espelho em lateral alta.' },
+        { src: 'stemi-inf-6.jpg', caption: 'Caso real: homem de 70 anos, angina crescente há 6 meses evoluindo para dor intensa — IAM inferior com envolvimento posterior (parede que não aparece nas 12 derivações padrão).' },
+        { src: 'stemi-inf-7.jpg', caption: 'Caso real: IAM inferior com possível acometimento da parede posterior e lesão subendocárdica anterior — sempre pedir V7-V9 quando suspeitar de extensão posterior.' },
       ]
     },
     {
