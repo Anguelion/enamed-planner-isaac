@@ -79,7 +79,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -4284,24 +4284,75 @@ function bindFeynmanInputs() {
     }
   });
 }
+function especialidadesGroups(docs) {
+  const map = new Map();
+  docs.forEach(doc => {
+    const key = `${doc.area}||${doc.topic}`;
+    if(!map.has(key)) map.set(key, { key, specialty:doc.area, topic:doc.topic || 'Outros', documents:[] });
+    map.get(key).documents.push(doc);
+  });
+  return [...map.values()].map(group => ({...group,documents:group.documents.sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'))})).sort((a,b)=>a.topic.localeCompare(b.topic,'pt-BR'));
+}
+function renderEspecialidadeFolder(group, selectedId) {
+  const open = group.documents.some(doc => doc.id === selectedId) || Boolean(ui.materialSearch);
+  return `<details class="material-folder" data-material-folder ${open?'open':''}><summary><span>${escapeHtml(group.topic)}</span><span class="folder-count">${group.documents.length}</span></summary><div class="folder-options">${group.documents.map(doc => `<button class="material-choice ${doc.id===selectedId?'active':''}" data-material-doc="${doc.id}"><strong>${escapeHtml(doc.title)}</strong><span class="topic-source">${n(doc.imageCount) ? `${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}` : 'Somente texto'}</span></button>`).join('')}</div></details>`;
+}
 function renderMateriais() {
-  const allGroups = materialLibraryGroups();
-  const blocks = [...new Set(materialLibrary.map(doc => String(doc.block)).filter(block => block && block !== '999'))].sort((a,b)=>n(a)-n(b));
-  const blockIsOpen = ui.materialBlock !== 'Todos';
-  const groups = blockIsOpen ? allGroups.filter(group => String(group.block) === String(ui.materialBlock)) : [];
-  const selected = materialLibrary.find(doc => doc.id === ui.materialDocId && blockIsOpen && String(doc.block) === String(ui.materialBlock)) || null;
+  const section = ui.materialsSection === 'especialidades' ? 'especialidades' : 'apostila';
+  const baseDocs = materialLibrary.filter(doc => doc.category !== 'especialidade');
+  const specialtyDocs = materialLibrary.filter(doc => doc.category === 'especialidade');
   const figures = materialLibrary.reduce((sum,doc)=>sum+n(doc.imageCount),0);
-  const blockOptions = blocks.map(block => {
-    const docs=materialLibrary.filter(doc=>String(doc.block)===block);
-    const lessons=new Set(docs.map(doc=>doc.scheduleId).filter(Boolean)).size;
-    return `<option value="${escapeAttr(block)}" ${String(ui.materialBlock)===block?'selected':''}>Bloco ${String(block).padStart(2,'0')} · ${lessons} aulas · ${docs.length} materiais</option>`;
-  }).join('');
-  const sidebar = blockIsOpen ? `<aside class="card library-sidebar"><div class="section-title"><div><span class="eyebrow">Assuntos do bloco</span><h2>Bloco ${String(ui.materialBlock).padStart(2,'0')}</h2></div><span class="badge today">${groups.length}</span></div><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="materialSearch" value="${escapeAttr(ui.materialSearch)}" placeholder="Buscar assunto neste bloco"></label><div class="library-folders">${groups.map(group => renderMaterialFolder(group, selected?.id)).join('') || '<div class="empty">Nenhum material disponível neste bloco.</div>'}</div></aside>` : '';
-  const reader = blockIsOpen ? renderMaterialReader(selected) : '<div class="reader-empty"><div><strong>Escolha um bloco para começar</strong><div>A pesquisa e os assuntos aparecem apenas depois que você abre um bloco, para evitar uma lista longa demais.</div></div></div>';
-  document.getElementById('materiais').innerHTML = `<div class="materials-shell ${ui.materialFocusMode?'material-focus-mode':''}"><div class="materials-topbar"><div class="materials-breadcrumb">Início <span>›</span> Materiais</div><div class="materials-title-row"><span class="materials-icon">${iconSvg('materials')}</span><div><h2>Apostila</h2><p class="muted">Reforce pontos importantes do estudo por meio do conteúdo teórico</p></div></div><div class="materials-filters"><label class="materials-filter"><span>Bloco</span><select class="select" id="materialBlockSelect"><option value="Todos">Todos os blocos</option>${blockOptions}</select></label><span class="muted materials-count">${materialLibrary.length} resumos · ${figures} figuras</span></div></div><div class="library-layout ${blockIsOpen?'':'materials-block-only'}">${sidebar}<section class="card material-reader">${reader}</section></div></div>`;
+  const sectionTabs = `<div class="materials-section-tabs"><button class="materials-section-tab ${section==='apostila'?'active':''}" data-materials-section="apostila">Apostila</button><button class="materials-section-tab ${section==='especialidades'?'active':''}" data-materials-section="especialidades">Especialidades</button></div>`;
+  let filtersHtml = '', sidebar = '', reader = '', layoutOpen = false, selected = null;
+  if(section === 'apostila') {
+    const allGroups = materialLibraryGroups(baseDocs);
+    const blocks = [...new Set(baseDocs.map(doc => String(doc.block)).filter(block => block && block !== '999'))].sort((a,b)=>n(a)-n(b));
+    layoutOpen = ui.materialBlock !== 'Todos';
+    const groups = layoutOpen ? allGroups.filter(group => String(group.block) === String(ui.materialBlock)) : [];
+    selected = baseDocs.find(doc => doc.id === ui.materialDocId && layoutOpen && String(doc.block) === String(ui.materialBlock)) || null;
+    const blockOptions = blocks.map(block => {
+      const docs=baseDocs.filter(doc=>String(doc.block)===block);
+      const lessons=new Set(docs.map(doc=>doc.scheduleId).filter(Boolean)).size;
+      return `<option value="${escapeAttr(block)}" ${String(ui.materialBlock)===block?'selected':''}>Bloco ${String(block).padStart(2,'0')} · ${lessons} aulas · ${docs.length} materiais</option>`;
+    }).join('');
+    filtersHtml = `<label class="materials-filter"><span>Bloco</span><select class="select" id="materialBlockSelect"><option value="Todos">Todos os blocos</option>${blockOptions}</select></label><span class="muted materials-count">${baseDocs.length} resumos · ${figures} figuras</span>`;
+    sidebar = layoutOpen ? `<aside class="card library-sidebar"><div class="section-title"><div><span class="eyebrow">Assuntos do bloco</span><h2>Bloco ${String(ui.materialBlock).padStart(2,'0')}</h2></div><span class="badge today">${groups.length}</span></div><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="materialSearch" value="${escapeAttr(ui.materialSearch)}" placeholder="Buscar assunto neste bloco"></label><div class="library-folders">${groups.map(group => renderMaterialFolder(group, selected?.id)).join('') || '<div class="empty">Nenhum material disponível neste bloco.</div>'}</div></aside>` : '';
+    reader = layoutOpen ? renderMaterialReader(selected) : '<div class="reader-empty"><div><strong>Escolha um bloco para começar</strong><div>A pesquisa e os assuntos aparecem apenas depois que você abre um bloco, para evitar uma lista longa demais.</div></div></div>';
+  } else {
+    const specialties = [...new Set(specialtyDocs.map(doc=>doc.area))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+    layoutOpen = ui.materialSpecialty !== 'Todos';
+    const allGroups = especialidadesGroups(specialtyDocs);
+    const groups = layoutOpen ? allGroups.filter(group => group.specialty === ui.materialSpecialty) : [];
+    selected = specialtyDocs.find(doc => doc.id === ui.materialDocId && layoutOpen && doc.area === ui.materialSpecialty) || null;
+    const specialtyOptions = specialties.map(spec => {
+      const docs = specialtyDocs.filter(doc=>doc.area===spec);
+      const subs = new Set(docs.map(doc=>doc.topic)).size;
+      return `<option value="${escapeAttr(spec)}" ${ui.materialSpecialty===spec?'selected':''}>${escapeHtml(spec)} · ${subs} temas · ${docs.length} artigos</option>`;
+    }).join('');
+    filtersHtml = `<label class="materials-filter"><span>Especialidade</span><select class="select" id="materialSpecialtySelect"><option value="Todos">Todas as especialidades</option>${specialtyOptions}</select></label><span class="muted materials-count">${specialtyDocs.length} artigos · ${specialties.length} especialidades</span>`;
+    sidebar = layoutOpen ? `<aside class="card library-sidebar"><div class="section-title"><div><span class="eyebrow">Temas · ${escapeHtml(ui.materialSpecialty)}</span><h2>${escapeHtml(ui.materialSpecialty)}</h2></div><span class="badge today">${groups.length}</span></div><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="materialSearch" value="${escapeAttr(ui.materialSearch)}" placeholder="Buscar tema ou artigo"></label><div class="library-folders">${groups.map(group => renderEspecialidadeFolder(group, selected?.id)).join('') || '<div class="empty">Nenhum artigo disponível.</div>'}</div></aside>` : '';
+    reader = layoutOpen ? renderMaterialReader(selected) : '<div class="reader-empty"><div><strong>Escolha uma especialidade para começar</strong><div>Selecione uma especialidade para ver os temas e artigos disponíveis.</div></div></div>';
+  }
+  document.getElementById('materiais').innerHTML = `<div class="materials-shell ${ui.materialFocusMode?'material-focus-mode':''}"><div class="materials-topbar"><div class="materials-breadcrumb">Início <span>›</span> Materiais</div><div class="materials-title-row"><span class="materials-icon">${iconSvg('materials')}</span><div><h2>${section==='apostila'?'Apostila':'Especialidades'}</h2><p class="muted">${section==='apostila'?'Reforce pontos importantes do estudo por meio do conteúdo teórico':'Artigos de referência organizados por especialidade e tema, com marca-texto'}</p></div></div>${sectionTabs}<div class="materials-filters">${filtersHtml}</div></div><div class="library-layout ${layoutOpen?'':'materials-block-only'}">${sidebar}<section class="card material-reader">${reader}</section></div></div>`;
+  document.querySelectorAll('[data-materials-section]').forEach(button => button.onclick = () => {
+    ui.materialsSection = button.dataset.materialsSection;
+    ui.materialDocId='';
+    ui.materialSearch='';
+    ui.materialFocusMode=false;
+    stopAutoStudy('material');
+    renderMateriais();
+  });
   document.getElementById('materialBlockSelect')?.addEventListener('change', e => {
     ui.materialBlock=e.target.value;
     ui.materialScheduleId='';
+    ui.materialDocId='';
+    ui.materialSearch='';
+    ui.materialFocusMode=false;
+    stopAutoStudy('material');
+    renderMateriais();
+  });
+  document.getElementById('materialSpecialtySelect')?.addEventListener('change', e => {
+    ui.materialSpecialty=e.target.value;
     ui.materialDocId='';
     ui.materialSearch='';
     ui.materialFocusMode=false;
@@ -4328,9 +4379,9 @@ function renderMateriais() {
   else stopAutoStudy('material');
   if(ui.materialSearch) applyMaterialSearch(ui.materialSearch);
 }
-function materialLibraryGroups() {
+function materialLibraryGroups(docs=materialLibrary) {
   const map = new Map();
-  materialLibrary.forEach(doc => {
+  docs.forEach(doc => {
     const key = doc.scheduleId || 'outros';
     const schedule = doc.scheduleId ? state.schedule.find(item => item.id === doc.scheduleId) : null;
     if(!map.has(key)) map.set(key, { key, topic:schedule?.topic || 'Outros resumos', block:schedule?.block || 999, area:schedule?.area || '', documents:[] });
@@ -4674,17 +4725,27 @@ async function openMaterialsForSchedule(scheduleId) {
   render();
 }
 async function loadMaterialLibraryNow() {
+  let baseDocs = [];
   try {
     const response = await fetch('materials_library/index.json', {cache:'no-store'});
     if(!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
-    materialLibrary = Array.isArray(payload.documents) ? payload.documents : [];
-    materialLibraryStatus = `${materialLibrary.length} resumos disponíveis`;
+    baseDocs = Array.isArray(payload.documents) ? payload.documents : [];
   } catch(error) {
     console.warn('Biblioteca de materiais ainda não disponível:', error);
-    materialLibrary = [];
-    materialLibraryStatus = 'Biblioteca em preparação';
   }
+  let specialtyDocs = [];
+  try {
+    const response = await fetch('materials_library/especialidades-index.json', {cache:'no-store'});
+    if(response.ok) {
+      const payload = await response.json();
+      specialtyDocs = Array.isArray(payload.documents) ? payload.documents : [];
+    }
+  } catch(error) {
+    console.warn('Biblioteca de especialidades ainda não disponível:', error);
+  }
+  materialLibrary = [...baseDocs, ...specialtyDocs];
+  materialLibraryStatus = materialLibrary.length ? `${materialLibrary.length} resumos disponíveis` : 'Biblioteca em preparação';
   if(ui.tab === 'materiais') renderMateriais();
 }
 async function loadOfficialSchedule() {
@@ -4717,6 +4778,13 @@ function rememberVideoPlaybackRate(rate) {
   const select = document.getElementById('videoPlaybackRate');
   if(select) select.value = String(selected);
   return selected;
+}
+function persistCurrentVideoRate(video) {
+  const lesson = currentVideoLesson();
+  const source = lesson ? currentVideoSource(lesson) : null;
+  if(!source || !video) return;
+  saveVideoProgressRecord(source, video, videoScheduleForLesson(lesson), lesson);
+  saveStateOnly({invalidate:false});
 }
 function formatVideoTime(seconds=0) {
   const total = Math.max(0, Math.floor(Number(seconds) || 0));
@@ -5449,7 +5517,9 @@ function bindVideoPlayer(source, schedule, lesson) {
     });
   };
   const applyPreferredRate = () => {
-    const rate = rememberVideoPlaybackRate(n(storedProgress.playbackRate) || n(ui.videoPlaybackRate) || 1);
+    // ui.videoPlaybackRate é sempre atualizado a cada mudança real; storedProgress é só
+    // uma foto tirada na abertura do vídeo e não deve prevalecer sobre uma escolha mais recente.
+    const rate = rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || n(storedProgress.playbackRate) || 1);
     if(Math.abs(video.playbackRate-rate) < .01) return;
     restoringRate = true;
     video.defaultPlaybackRate = rate;
