@@ -707,7 +707,12 @@
         ddx: ['Pericardite (supra difuso, sem recíproca)', 'Repolarização precoce'],
         armadilhas: ['SEMPRE pedir V3R-V4R (infarto de VD) e V7-V9 (posterior) — DIII > DII e infra V1-V3 sugerem VD/posterior.', 'Infarto de VD: evitar nitrato/depletores de volume.'],
         conduta: ['Ativar reperfusão (angioplastia primária x trombólise conforme tempo).', 'AAS + 2º antiplaquetário, anticoagulação; cuidado com hipotensão no VD.'], ref: 'Diretriz SCA.'
-      }
+      },
+      realImages: [
+        { src: 'stemi-inf-1.jpg', caption: 'Caso real (material de estudo pessoal): IAM com supra de ST inferior — paciente com PCR na emergência, desfibrilado com sucesso; supra em DII/DIII/aVF com recíproca em DI/aVL.' },
+        { src: 'stemi-inf-2.jpg', caption: 'Caso real: homem de 62 anos, forte precordialgia, náuseas e sudorese — IAM com supra de ST inferior.' },
+        { src: 'stemi-inf-3.jpg', caption: 'Caso real: paciente internado com IAM, delta T de 18h sem trombólise, evoluindo com angina pós-IAM — supra inferior persistente.' },
+      ]
     },
     {
       id: 'stemi_ant', name: 'IAM com supra — parede anterior', category: 'Isquemia e infarto', level: 3,
@@ -725,7 +730,12 @@
         ddx: ['Repolarização precoce', 'Aneurisma de VE (supra persistente + Q)', 'BRE'],
         armadilhas: ['Padrão de De Winter (infra ascendente + T apiculada em V1-V6) = oclusão proximal da DA — equivalente de STEMI.', 'Wellens (T bifásica/invertida em V2-V3) = estenose crítica da DA, alto risco.'],
         conduta: ['Reperfusão imediata; antiagregação e anticoagulação.'], ref: 'Diretriz SCA.'
-      }
+      },
+      realImages: [
+        { src: 'stemi-ant-1.jpg', caption: 'Caso real (material de estudo pessoal): IAM com supra de ST anterior extenso — isquemia, lesão e necrose subepicárdica na parede anterior extensa.' },
+        { src: 'stemi-ant-2.jpg', caption: 'Caso real: homem de 53 anos, opressão precordial, náuseas e vômitos, instável e hipotenso — IAM com supra de ST anterior extenso, delta T de 1 hora.' },
+        { src: 'stemi-ant-3.jpg', caption: 'Caso real: homem de 71 anos, PCR em fibrilação ventricular ressuscitada — oclusão total da descendente anterior, lesão subepicárdica na parede anterior.' },
+      ]
     },
     {
       id: 'hyperk', name: 'Hipercalemia', category: 'Eletrólitos e fármacos', level: 3,
@@ -939,6 +949,7 @@
       trilha: { done: {}, current: null }, // progresso da trilha de estudo
       log: [],        // histórico de tentativas
       seenIntro: false,
+      highlights: {}, // marca-texto: { blockKey: [[start,end], ...] }
     };
   }
   function ensureSrs(st, id) {
@@ -1261,15 +1272,31 @@
     .ecg-table{width:100%;border-collapse:collapse;font-size:13px;color:var(--ink)}
     .ecg-table th,.ecg-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line,#eef1f7)}
     .ecg-table th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted,#5b6472)}
+    /* Artigo com imagens intercaladas no texto (substitui a antiga grade de miniaturas) */
+    .ecg-article-figure{margin:16px 0;border:1px solid var(--line,#dce1ec);border-radius:12px;overflow:hidden;background:var(--panel,#fff)}
+    .ecg-article-figure img{display:block;width:100%;height:auto;cursor:zoom-in;touch-action:pan-y}
+    .ecg-article-figure figcaption{padding:12px 14px;font-size:14px;line-height:1.5;color:var(--ink)}
     .ecg-real-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
     .ecg-real-item{margin:0;border:1px solid var(--line,#dce1ec);border-radius:10px;overflow:hidden;cursor:zoom-in;background:var(--panel,#fff)}
-    .ecg-real-item img{display:block;width:100%;height:140px;object-fit:cover;object-position:top}
+    .ecg-real-item img{display:block;width:100%;height:140px;object-fit:cover;object-position:top;touch-action:pan-y}
     .ecg-real-item figcaption{padding:8px 10px;font-size:12px;line-height:1.4}
-    .ecg-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:2000;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+    /* Lightbox: touch-action impede que o pinch-zoom nativo do navegador "prenda" a página
+       ampliada sem jeito de voltar; o zoom controlado é feito por toque (toggle 1x/2x) via JS. */
+    .ecg-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;display:none;align-items:center;justify-content:center;padding:24px;touch-action:pan-y;overscroll-behavior:contain}
     .ecg-lightbox.open{display:flex}
-    .ecg-lightbox img{max-width:100%;max-height:78vh;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+    .ecg-lightbox-imgwrap{max-width:100%;max-height:78vh;overflow:auto;touch-action:pan-x pan-y;display:flex;align-items:center;justify-content:center}
+    .ecg-lightbox img{max-width:100%;max-height:78vh;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5);cursor:zoom-in;transition:transform .15s ease;touch-action:pan-x pan-y}
+    .ecg-lightbox img.zoomed{cursor:zoom-out;max-width:none;max-height:none;transform:scale(2)}
     .ecg-lightbox-cap{position:absolute;left:0;right:0;bottom:0;padding:14px 20px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);color:#fff;font-size:13px;text-align:center}
-    .ecg-lightbox-close{position:absolute;top:16px;right:20px;background:rgba(255,255,255,.12);border:0;color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer}
+    .ecg-lightbox-close{position:fixed;top:16px;right:20px;background:rgba(255,255,255,.18);border:0;color:#fff;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;z-index:2001}
+    .ecg-lightbox-hint{position:absolute;top:16px;left:16px;color:rgba(255,255,255,.75);font-size:12px;background:rgba(255,255,255,.12);padding:6px 10px;border-radius:999px}
+    /* Marca-texto persistente */
+    mark.ecg-hl{background:#ffe066;color:#111;border-radius:2px;padding:0 1px}
+    body.dark mark.ecg-hl{background:#8a6d00;color:#fff}
+    .ecg-hl-block{cursor:text}
+    .ecg-hl-popover{position:fixed;z-index:2100;background:#1c1f26;color:#fff;border-radius:8px;padding:6px;display:flex;gap:4px;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+    .ecg-hl-popover button{border:0;background:transparent;color:#fff;font-size:16px;padding:6px 10px;border-radius:6px;cursor:pointer}
+    .ecg-hl-popover button:hover{background:rgba(255,255,255,.15)}
     `;
     document.head.appendChild(style);
   }
@@ -1359,27 +1386,149 @@
     </div>`;
   }
 
-  function teachBlock(c) {
-    const t = c.teach;
-    const listOf = (arr) => `<ul>${(arr || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
-    return `
-    <div class="ecg-teach">
+  // ---------------------------------------------------------------------------
+  // Marca-texto (highlighter) — seleção persistente em state.ecg.highlights.
+  // blockKey identifica o parágrafo/item (ex.: "sinus_normal:freq", "t3:base:2").
+  // As posições são offsets de caractere no texto puro do bloco (marks não mudam
+  // o texto, só envolvem trechos), então funcionam mesmo depois de re-render.
+  // ---------------------------------------------------------------------------
+  function mergeRanges(ranges) {
+    if (!ranges || !ranges.length) return [];
+    const sorted = ranges.map((r) => [r[0], r[1]]).sort((a, b) => a[0] - b[0]);
+    const out = [sorted[0].slice()];
+    for (let i = 1; i < sorted.length; i++) {
+      const [s, e] = sorted[i];
+      const last = out[out.length - 1];
+      if (s <= last[1]) last[1] = Math.max(last[1], e);
+      else out.push([s, e]);
+    }
+    return out;
+  }
+  function hlHtml(blockKey, text) {
+    text = text == null ? '' : String(text);
+    const S = st();
+    const ranges = (S && S.highlights && S.highlights[blockKey]) || [];
+    if (!ranges.length) return esc(text);
+    let out = '', pos = 0;
+    ranges.forEach((r, i) => {
+      const s = clamp(r[0], 0, text.length), e = clamp(r[1], 0, text.length);
+      if (s > pos) out += esc(text.slice(pos, s));
+      if (e > s) out += `<mark class="ecg-hl" data-hl-mark="${escapeAttrLocal(blockKey)}|${i}">${esc(text.slice(s, e))}</mark>`;
+      pos = Math.max(pos, e);
+    });
+    if (pos < text.length) out += esc(text.slice(pos));
+    return out;
+  }
+  function hlBlock(blockKey, text, tag) {
+    tag = tag || 'p';
+    return `<${tag} class="ecg-hl-block" data-hl-block="${escapeAttrLocal(blockKey)}">${hlHtml(blockKey, text)}</${tag}>`;
+  }
+  function addHighlight(blockKey, s, e) {
+    const S = st();
+    if (!S.highlights) S.highlights = {};
+    const arr = S.highlights[blockKey] || [];
+    arr.push([s, e]);
+    S.highlights[blockKey] = mergeRanges(arr);
+  }
+  let HL_POPOVER = null;
+  function hideHlPopover() { if (HL_POPOVER) { HL_POPOVER.remove(); HL_POPOVER = null; } }
+  function textOffsetInBlock(root, node, offset) {
+    let total = 0;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let n;
+    while ((n = walker.nextNode())) {
+      if (n === node) return total + offset;
+      total += n.textContent.length;
+    }
+    return total;
+  }
+  function setupHighlighter() {
+    if (window.__ecgHlHooked) return;
+    window.__ecgHlHooked = true;
+    const onSelChange = () => {
+      setTimeout(() => {
+        const sel = window.getSelection();
+        hideHlPopover();
+        if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+        const range = sel.getRangeAt(0);
+        const rootEl = root();
+        if (!rootEl || !rootEl.contains(range.commonAncestorContainer)) return;
+        let blockEl = range.commonAncestorContainer;
+        if (blockEl.nodeType === 3) blockEl = blockEl.parentElement;
+        blockEl = blockEl && blockEl.closest('[data-hl-block]');
+        if (!blockEl || !blockEl.contains(range.startContainer) || !blockEl.contains(range.endContainer)) return;
+        const text = String(sel).trim();
+        if (!text) return;
+        const s0 = textOffsetInBlock(blockEl, range.startContainer, range.startOffset);
+        const e0 = textOffsetInBlock(blockEl, range.endContainer, range.endOffset);
+        const s = Math.min(s0, e0), e = Math.max(s0, e0);
+        const rect = range.getBoundingClientRect();
+        const pop = document.createElement('div');
+        pop.className = 'ecg-hl-popover';
+        pop.style.left = Math.max(8, Math.min(window.innerWidth - 96, rect.left + rect.width / 2 - 40)) + 'px';
+        pop.style.top = Math.max(8, rect.top - 44) + 'px';
+        pop.innerHTML = '<button type="button">🖍 Marcar</button>';
+        pop.querySelector('button').onclick = () => {
+          addHighlight(blockEl.dataset.hlBlock, s, e);
+          window.getSelection().removeAllRanges();
+          hideHlPopover();
+          save();
+          mountBody();
+        };
+        document.body.appendChild(pop);
+        HL_POPOVER = pop;
+      }, 10);
+    };
+    document.addEventListener('mouseup', onSelChange);
+    document.addEventListener('touchend', onSelChange);
+    document.addEventListener('mousedown', (e) => { if (HL_POPOVER && !HL_POPOVER.contains(e.target)) hideHlPopover(); });
+    // Tocar num trecho já marcado remove a marcação (toggle).
+    document.addEventListener('click', (e) => {
+      const mark = e.target.closest && e.target.closest('mark.ecg-hl');
+      if (!mark) return;
+      const parts = (mark.dataset.hlMark || '').split('|');
+      const blockKey = parts.slice(0, -1).join('|');
+      const idx = Number(parts[parts.length - 1]);
+      const S = st();
+      const arr = S.highlights && S.highlights[blockKey];
+      if (arr && Number.isInteger(idx) && arr[idx]) {
+        arr.splice(idx, 1);
+        if (!arr.length) delete S.highlights[blockKey];
+        save();
+        mountBody();
+      }
+    });
+  }
+
+  function listOf(arr, keyPrefix) {
+    return `<ul>${(arr || []).map((x, i) => hlBlock(keyPrefix ? `${keyPrefix}:${i}` : null, x, 'li')).join('')}</ul>`;
+  }
+  function teachQuick(c) {
+    const k = c.id;
+    return `<div class="ecg-teach">
       <h4>Resposta rápida</h4>
-      <p><b>${esc(c.quick.dx)}</b> — urgência ${badge(c.quick.urgency)}</p>
-      ${listOf(c.quick.findings)}
-      <h4>Qualidade</h4><p>${esc(t.qualidade)}</p>
-      <h4>Frequência</h4><p>${esc(t.freq)}</p>
-      <h4>Ritmo</h4><p>${esc(t.ritmo)}</p>
-      <h4>Eixo</h4><p>${esc(t.eixo)}</p>
-      <h4>Intervalos</h4><p>${esc(t.intervalos)}</p>
-      <h4>Morfologia / ST-T</h4><p>${esc(t.morfologia)}</p>
-      <h4>Critérios</h4>${listOf(t.criterios)}
-      <h4>Diagnósticos diferenciais</h4>${listOf(t.ddx)}
-      <h4>Armadilhas</h4>${listOf(t.armadilhas)}
-      <h4>Conduta inicial (educacional)</h4>${listOf(t.conduta)}
+      <p class="ecg-hl-block" data-hl-block="${k}:dx"><b>${hlHtml(k + ':dx', c.quick.dx)}</b> — urgência ${badge(c.quick.urgency)}</p>
+      ${listOf(c.quick.findings, k + ':findings')}
+    </div>`;
+  }
+  function teachDetail(c) {
+    const t = c.teach, k = c.id;
+    return `<div class="ecg-teach">
+      <h4>Qualidade</h4>${hlBlock(k + ':qualidade', t.qualidade)}
+      <h4>Frequência</h4>${hlBlock(k + ':freq', t.freq)}
+      <h4>Ritmo</h4>${hlBlock(k + ':ritmo', t.ritmo)}
+      <h4>Eixo</h4>${hlBlock(k + ':eixo', t.eixo)}
+      <h4>Intervalos</h4>${hlBlock(k + ':intervalos', t.intervalos)}
+      <h4>Morfologia / ST-T</h4>${hlBlock(k + ':morfologia', t.morfologia)}
+      <h4>Critérios</h4>${listOf(t.criterios, k + ':criterios')}
+      <h4>Diagnósticos diferenciais</h4>${listOf(t.ddx, k + ':ddx')}
+      <h4>Armadilhas</h4>${listOf(t.armadilhas, k + ':armadilhas')}
+      <h4>Conduta inicial (educacional)</h4>${listOf(t.conduta, k + ':conduta')}
       <p class="ecg-muted" style="margin-top:10px">Referência: ${esc(t.ref || '—')} · Conteúdo educacional; condutas seguem algoritmos vigentes e não substituem avaliação clínica.</p>
     </div>`;
   }
+  // Mantido por compatibilidade — junta os dois blocos sem a intercalação de imagens.
+  function teachBlock(c) { return teachQuick(c) + teachDetail(c); }
 
   function viewerToolbar(c, active) {
     const b = (mode, label) => `<button class="ecg-btn ${active === mode ? '' : 'ghost'}" data-ecg-viewer="${mode}">${label}</button>`;
@@ -1395,8 +1544,9 @@
   function viewCondition(c) {
     return `${viewerToolbar(c, 'trace')}
     <div class="ecg-canvas-shell"><canvas data-ecg-canvas="${c.id}"></canvas></div>
-    <div class="ecg-card">${teachBlock(c)}</div>
-    ${realGallery(c)}`;
+    <div class="ecg-card">${teachQuick(c)}</div>
+    ${realArticle(c, { heading: 'Veja em traçados reais', intro: 'O traçado acima é sintético (limpo, para você aprender o padrão). Estes abaixo são registros reais — cada um com sua própria variação, ruído e, quando disponível, o contexto clínico do caso.' })}
+    <div class="ecg-card">${teachDetail(c)}</div>`;
   }
 
   // ---- Régua / compasso -----------------------------------------------------
@@ -1477,21 +1627,22 @@
     return html;
   }
 
-  // Galeria "traçados reais" (scans de ECGs reais do material de estudo do usuário,
-  // usados apenas no app privado dele para comparação com os traçados sintéticos).
+  // Traçados reais (scans de ECGs reais do material de estudo do usuário, usados apenas
+  // no app privado dele) — renderizados como ARTIGO: cada imagem em largura cheia, seguida
+  // imediatamente da sua explicação (não uma grade de miniaturas separada do texto).
   const REAL_IMG_BASE = 'assets/ecg-real/';
-  function realGallery(lesson) {
-    const imgs = lesson.realImages;
+  function realArticle(obj, opts) {
+    const imgs = obj.realImages;
     if (!imgs || !imgs.length) return '';
+    const heading = (opts && opts.heading) || 'Comparando com traçados reais';
+    const intro = (opts && opts.intro) || 'Estes são registros reais (material de estudo pessoal) — o traçado sintético é limpo/idealizado; aqui você vê o ruído e a variação de um exame de verdade. Toque na imagem para ampliar.';
     return `<div class="ecg-card">
-      <h3 style="margin:0 0 4px;font-size:15px">Traçados reais para comparar</h3>
-      <p class="ecg-muted" style="margin:0 0 10px">Registros reais (material de estudo pessoal) — o sintético acima é limpo/idealizado; estes têm o ruído e a variação de um exame de verdade. Toque para ampliar.</p>
-      <div class="ecg-real-grid">
-        ${imgs.map((im, i) => `<figure class="ecg-real-item" data-ecg-real-open="${esc(im.src)}" data-ecg-real-caption="${escapeAttrLocal(im.caption)}">
-          <img src="${REAL_IMG_BASE}${esc(im.src)}" alt="${escapeAttrLocal(im.caption)}">
-          <figcaption class="ecg-muted">${esc(im.caption)}</figcaption>
-        </figure>`).join('')}
-      </div>
+      <h3 style="margin:0 0 4px;font-size:15px">${esc(heading)}</h3>
+      <p class="ecg-muted" style="margin:0 0 4px">${esc(intro)}</p>
+      ${imgs.map((im) => `<figure class="ecg-article-figure" data-ecg-real-open="${esc(im.src)}" data-ecg-real-caption="${escapeAttrLocal(im.caption)}">
+        <img src="${REAL_IMG_BASE}${esc(im.src)}" alt="${escapeAttrLocal(im.caption)}" loading="eager">
+        <figcaption>${esc(im.caption)}</figcaption>
+      </figure>`).join('')}
     </div>`;
   }
   function escapeAttrLocal(s) { return esc(s).replace(/"/g, '&quot;'); }
@@ -1517,12 +1668,14 @@
     ${demo ? `<div class="ecg-canvas-shell"><canvas data-ecg-canvas="${demo.id}"></canvas></div>` : ''}
     <div class="ecg-card">
       <h4 style="margin:0 0 4px;text-transform:uppercase;font-size:12px;letter-spacing:.04em;color:var(--muted)">Para começar</h4>
-      <p style="margin:0 0 12px">${esc(lesson.base)}</p>
+      <p class="ecg-hl-block" data-hl-block="${lesson.id}:base" style="margin:0">${hlHtml(lesson.id + ':base', lesson.base)}</p>
+    </div>
+    ${realArticle(lesson, { heading: 'Veja isso em traçados reais', intro: 'Cada imagem abaixo é um registro real (material de estudo pessoal), explicado logo em seguida. Toque para ampliar.' })}
+    <div class="ecg-card">
       <h4 style="margin:0 0 4px;text-transform:uppercase;font-size:12px;letter-spacing:.04em;color:var(--muted)">Aprofundando</h4>
-      <p style="margin:0">${esc(lesson.deep)}</p>
+      <p class="ecg-hl-block" data-hl-block="${lesson.id}:deep" style="margin:0">${hlHtml(lesson.id + ':deep', lesson.deep)}</p>
       ${actions ? `<div class="ecg-conf" style="margin-top:14px">${actions}</div>` : ''}
     </div>
-    ${realGallery(lesson)}
     ${quiz.length ? `<div class="ecg-card"><h3 style="margin:0 0 6px;font-size:15px">Praticar agora</h3><p class="ecg-muted" style="margin:0 0 10px">Fixe com um treino rápido dos padrões desta lição.</p><button class="ecg-btn" data-ecg-lesson-quiz="${quiz.join(',')}">Treinar (${quiz.length})</button></div>` : ''}
     <div class="ecg-toolbar" style="margin-top:4px">
       ${prev ? `<button class="ecg-btn ghost" data-ecg-lesson="${prev.id}">← Anterior</button>` : ''}
@@ -1926,19 +2079,30 @@
   function openCondition(id, viewer) {
     const S = st(); S.ui.sub = 'banco'; S.ui.bankId = id; S.ui.viewer = viewer || null; S.ui.lesson = null; save(); mountBody();
   }
-  // Lightbox de imagens reais: abre/fecha, independente do mountBody (fica fora de .ecg-body)
+  // Lightbox de imagens reais: abre/fecha, independente do mountBody (fica fora de .ecg-body).
+  // Zoom é controlado por toque (não pelo pinch nativo do navegador, que travava "ampliado"
+  // sem jeito de voltar) — tocar na imagem alterna 1x/2x; fechar sempre reseta pra 1x.
   function setupLightbox(container) {
     const box = container.querySelector('[data-ecg-lightbox]');
     const img = container.querySelector('[data-ecg-lightbox-img]');
     const cap = container.querySelector('[data-ecg-lightbox-cap]');
     const closeBtn = container.querySelector('[data-ecg-lightbox-close]');
+    const hint = container.querySelector('[data-ecg-lightbox-hint]');
     if (!box) return;
-    const close = () => { box.classList.remove('open'); img.src = ''; };
+    const close = () => { box.classList.remove('open'); img.classList.remove('zoomed'); img.src = ''; };
     box.onclick = (e) => { if (e.target === box) close(); };
     if (closeBtn) closeBtn.onclick = close;
+    img.onclick = (e) => {
+      e.stopPropagation();
+      img.classList.toggle('zoomed');
+      if (hint) hint.textContent = img.classList.contains('zoomed') ? 'Toque para diminuir' : 'Toque na imagem para ampliar';
+    };
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
     container._openLightbox = (src, caption) => {
       img.src = REAL_IMG_BASE + src;
       img.alt = caption || '';
+      img.classList.remove('zoomed');
+      if (hint) hint.textContent = 'Toque na imagem para ampliar';
       cap.textContent = caption || '';
       box.classList.add('open');
     };
@@ -2013,6 +2177,7 @@
     if (!S.ecg.daily) S.ecg.daily = d.daily;
     if (!S.ecg.trilha) S.ecg.trilha = d.trilha;
     if (!S.ecg.trilha.done) S.ecg.trilha.done = {};
+    if (!S.ecg.highlights) S.ecg.highlights = {};
 
     container.innerHTML = `<div class="ecg-wrap">
       <div class="section-title" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
@@ -2022,7 +2187,8 @@
       <div class="ecg-body"></div>
       <div class="ecg-lightbox" data-ecg-lightbox>
         <button class="ecg-lightbox-close" data-ecg-lightbox-close aria-label="Fechar">✕</button>
-        <img data-ecg-lightbox-img src="" alt="">
+        <span class="ecg-lightbox-hint" data-ecg-lightbox-hint>Toque na imagem para ampliar</span>
+        <div class="ecg-lightbox-imgwrap"><img data-ecg-lightbox-img src="" alt=""></div>
         <div class="ecg-lightbox-cap" data-ecg-lightbox-cap></div>
       </div>
     </div>`;
@@ -2031,6 +2197,7 @@
     setupLightbox(container);
     maybeAutoRevisao();
     mountBody();
+    setupHighlighter();
     // redesenhar canvases ao redimensionar
     if (!window.__ecgResizeHooked) {
       window.__ecgResizeHooked = true;
