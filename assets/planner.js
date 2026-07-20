@@ -4,6 +4,7 @@ const UI_TAB_KEY = 'enamed-planner-active-tab';
 const QUESTION_VIEW_KEY = 'enamed-planner-question-view';
 const SIDEBAR_KEY = 'enamed-planner-sidebar-collapsed';
 const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
+const QUESTION_TAGS_HIDDEN_KEY = 'enamed-question-tags-hidden';
 const VIDEO_FOCUS_KEY = 'enamed-video-focus-mode';
 const VIDEO_SOURCE_KEY = 'enamed-video-source-mode';
 const VIDEO_RATE_KEY = 'enamed-video-playback-rate';
@@ -65,6 +66,7 @@ let importedSimuladosStatus = 'Carregando simulados importados...';
 let questionBankLoadPromise = null;
 let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
+let materialGlobalSearchTimer = null;
 let importedSimuladosLoadPromise = null;
 let pomodoroLastSavedSecond = -1;
 let pomodoroLastTickedSecond = -1;
@@ -79,7 +81,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -117,6 +119,7 @@ let cloudBackupsError = '';
 let localBackups = loadLocalBackups();
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
+let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) === '1';
 const views = [
   ['painel','Dashboard','dashboard'],
   ['cronograma','Missão','mission'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'],
@@ -270,7 +273,16 @@ function carryDayLogsToRestartDates(dateMoves) {
   });
 }
 function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
-function saveStateOnly(options={}) { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates(); if(options.invalidate !== false) invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
+let saveStateOnlyTimer = null;
+function flushSaveStateOnly() { clearTimeout(saveStateOnlyTimer); saveStateOnlyTimer = null; localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
+function saveStateOnly(options={}) {
+  ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates();
+  if(options.invalidate !== false) invalidateActivityRenderCache();
+  clearTimeout(saveStateOnlyTimer);
+  saveStateOnlyTimer = setTimeout(flushSaveStateOnly, 400);
+}
+document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'hidden' && saveStateOnlyTimer) flushSaveStateOnly(); });
+window.addEventListener('beforeunload', () => { if(saveStateOnlyTimer) flushSaveStateOnly(); });
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
@@ -4293,6 +4305,57 @@ function especialidadesGroups(docs) {
   });
   return [...map.values()].map(group => ({...group,documents:group.documents.sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'))})).sort((a,b)=>a.topic.localeCompare(b.topic,'pt-BR'));
 }
+function materialSearchHaystack(doc) {
+  if(doc.__haystack === undefined) {
+    const headings = (doc.headings||[]).map(item => item.text).join(' ');
+    doc.__haystack = `${normalizedTopic(doc.title)} ${normalizedTopic(doc.area)} ${normalizedTopic(doc.topic)} ${normalizedTopic(headings)} ${doc.searchText||''}`;
+  }
+  return doc.__haystack;
+}
+function searchMaterialLibrary(query) {
+  const q = normalizedTopic(query);
+  if(!q) return [];
+  const terms = q.split(' ').filter(Boolean);
+  if(!terms.length) return [];
+  const matches = materialLibrary.filter(doc => { const hay=materialSearchHaystack(doc); return terms.every(term => hay.includes(term)); });
+  matches.sort((a,b) => {
+    const at=normalizedTopic(a.title), bt=normalizedTopic(b.title);
+    const aStarts=at.startsWith(q)?0:1, bStarts=bt.startsWith(q)?0:1;
+    if(aStarts!==bStarts) return aStarts-bStarts;
+    const aHit=at.includes(q)?0:1, bHit=bt.includes(q)?0:1;
+    if(aHit!==bHit) return aHit-bHit;
+    return at.length-bt.length;
+  });
+  return matches.slice(0,30);
+}
+function renderMaterialGlobalSearchResults(matches, query) {
+  const box=document.getElementById('materialGlobalSearchResults');
+  if(!box) return;
+  if(!String(query||'').trim()) { box.hidden=true; box.innerHTML=''; return; }
+  box.hidden=false;
+  box.innerHTML = matches.length
+    ? matches.map(doc => `<button type="button" class="materials-global-search-item" data-global-search-doc="${doc.id}"><strong>${escapeHtml(doc.title)}</strong><span>${doc.category==='especialidade'?'Especialidades':'Apostila'} · ${escapeHtml(doc.area||'')}${doc.topic?` · ${escapeHtml(doc.topic)}`:''}</span></button>`).join('')
+    : `<div class="materials-global-search-empty">Nenhum resultado para "${escapeHtml(query)}"</div>`;
+  box.querySelectorAll('[data-global-search-doc]').forEach(button => button.onclick = () => openMaterialDocGlobal(button.dataset.globalSearchDoc));
+}
+function openMaterialDocGlobal(docId) {
+  const doc = materialLibrary.find(item => item.id === docId);
+  if(!doc) return;
+  ui.materialGlobalSearch='';
+  ui.materialDocId=doc.id;
+  ui.materialSearch='';
+  ui.materialFocusMode=false;
+  if(doc.category==='especialidade') {
+    ui.materialsSection='especialidades';
+    ui.materialSpecialty=doc.area || 'Todos';
+  } else {
+    ui.materialsSection='apostila';
+    ui.materialBlock=doc.block ? String(doc.block) : 'Todos';
+    ui.materialScheduleId=doc.scheduleId || '';
+  }
+  stopAutoStudy('material');
+  renderMateriais();
+}
 function renderEspecialidadeFolder(group, selectedId) {
   const open = group.documents.some(doc => doc.id === selectedId) || Boolean(ui.materialSearch);
   return `<details class="material-folder" data-material-folder ${open?'open':''}><summary><span>${escapeHtml(group.topic)}</span><span class="folder-count">${group.documents.length}</span></summary><div class="folder-options">${group.documents.map(doc => `<button class="material-choice ${doc.id===selectedId?'active':''}" data-material-doc="${doc.id}"><strong>${escapeHtml(doc.title)}</strong><span class="topic-source">${n(doc.imageCount) ? `${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}` : 'Somente texto'}</span></button>`).join('')}</div></details>`;
@@ -4333,7 +4396,33 @@ function renderMateriais() {
     sidebar = layoutOpen ? `<aside class="card library-sidebar"><div class="section-title"><div><span class="eyebrow">Temas · ${escapeHtml(ui.materialSpecialty)}</span><h2>${escapeHtml(ui.materialSpecialty)}</h2></div><span class="badge today">${groups.length}</span></div><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="materialSearch" value="${escapeAttr(ui.materialSearch)}" placeholder="Buscar tema ou artigo"></label><div class="library-folders">${groups.map(group => renderEspecialidadeFolder(group, selected?.id)).join('') || '<div class="empty">Nenhum artigo disponível.</div>'}</div></aside>` : '';
     reader = layoutOpen ? renderMaterialReader(selected) : '<div class="reader-empty"><div><strong>Escolha uma especialidade para começar</strong><div>Selecione uma especialidade para ver os temas e artigos disponíveis.</div></div></div>';
   }
-  document.getElementById('materiais').innerHTML = `<div class="materials-shell ${ui.materialFocusMode?'material-focus-mode':''}"><div class="materials-topbar"><div class="materials-breadcrumb">Início <span>›</span> Materiais</div><div class="materials-title-row"><span class="materials-icon">${iconSvg('materials')}</span><div><h2>${section==='apostila'?'Apostila':'Especialidades'}</h2><p class="muted">${section==='apostila'?'Reforce pontos importantes do estudo por meio do conteúdo teórico':'Artigos de referência organizados por especialidade e tema, com marca-texto'}</p></div></div>${sectionTabs}<div class="materials-filters">${filtersHtml}</div></div><div class="library-layout ${layoutOpen?'':'materials-block-only'}">${sidebar}<section class="card material-reader">${reader}</section></div></div>`;
+  const globalSearchBar = `<div class="materials-global-search search-field" id="materialGlobalSearchWrap"><span aria-hidden="true">⌕</span><input class="input" id="materialGlobalSearch" type="search" autocomplete="off" placeholder="Pesquisar tema, assunto ou termo em todos os materiais" value="${escapeAttr(ui.materialGlobalSearch)}"><button type="button" class="materials-global-search-clear" id="materialGlobalSearchClear" aria-label="Limpar pesquisa" ${ui.materialGlobalSearch?'':'hidden'}>×</button><div class="materials-global-search-results" id="materialGlobalSearchResults" hidden></div></div>`;
+  document.getElementById('materiais').innerHTML = `<div class="materials-shell ${ui.materialFocusMode?'material-focus-mode':''}"><div class="materials-topbar"><div class="materials-breadcrumb">Início <span>›</span> Materiais</div><div class="materials-title-row"><span class="materials-icon">${iconSvg('materials')}</span><div><h2>${section==='apostila'?'Apostila':'Especialidades'}</h2><p class="muted">${section==='apostila'?'Reforce pontos importantes do estudo por meio do conteúdo teórico':'Artigos de referência organizados por especialidade e tema, com marca-texto'}</p></div></div>${globalSearchBar}${sectionTabs}<div class="materials-filters">${filtersHtml}</div></div><div class="library-layout ${layoutOpen?'':'materials-block-only'}">${sidebar}<section class="card material-reader">${reader}</section></div></div>`;
+  const globalSearchInput = document.getElementById('materialGlobalSearch');
+  const globalSearchClear = document.getElementById('materialGlobalSearchClear');
+  if(globalSearchInput) {
+    globalSearchInput.oninput = e => {
+      ui.materialGlobalSearch = e.target.value;
+      if(globalSearchClear) globalSearchClear.hidden = !ui.materialGlobalSearch;
+      clearTimeout(materialGlobalSearchTimer);
+      materialGlobalSearchTimer = setTimeout(() => renderMaterialGlobalSearchResults(searchMaterialLibrary(ui.materialGlobalSearch), ui.materialGlobalSearch), 120);
+    };
+    globalSearchInput.onfocus = () => { if(ui.materialGlobalSearch) renderMaterialGlobalSearchResults(searchMaterialLibrary(ui.materialGlobalSearch), ui.materialGlobalSearch); };
+    globalSearchInput.onkeydown = e => {
+      if(e.key !== 'Escape') return;
+      ui.materialGlobalSearch='';
+      e.target.value='';
+      if(globalSearchClear) globalSearchClear.hidden=true;
+      renderMaterialGlobalSearchResults([],'');
+    };
+  }
+  if(globalSearchClear) globalSearchClear.onclick = () => {
+    ui.materialGlobalSearch='';
+    if(globalSearchInput) { globalSearchInput.value=''; globalSearchInput.focus(); }
+    globalSearchClear.hidden=true;
+    renderMaterialGlobalSearchResults([],'');
+  };
+  if(ui.materialGlobalSearch) renderMaterialGlobalSearchResults(searchMaterialLibrary(ui.materialGlobalSearch), ui.materialGlobalSearch);
   document.querySelectorAll('[data-materials-section]').forEach(button => button.onclick = () => {
     ui.materialsSection = button.dataset.materialsSection;
     ui.materialDocId='';
@@ -6808,9 +6897,17 @@ function filteredQuestions() {
 function renderQuestionTags(question) {
   const tags = Array.isArray(question.tags) ? question.tags.filter(Boolean) : [];
   if(!tags.length) return '';
-  return `<div class="question-tag-list" aria-label="Tags organizadas da questão">${tags.map((tag,index) => `<button type="button" class="question-tag tag-tone-${index%6}" data-question-tag-filter="${escapeAttr(tag)}" title="Pesquisar pela tag ${escapeAttr(tag)}"><span class="question-tag-order">${index+1}</span><span>${escapeHtml(tag)}</span></button>`).join('')}</div>`;
+  const toggleBtn = `<button type="button" class="tiny-btn question-tag-toggle" id="questionTagsToggle" title="${questionTagsHidden?'Mostrar tags':'Ocultar tags'}" aria-pressed="${questionTagsHidden}">${questionTagsHidden?`Mostrar tags (${tags.length})`:'Ocultar tags'}</button>`;
+  const list = questionTagsHidden ? '' : `<div class="question-tag-list" aria-label="Tags organizadas da questão">${tags.map((tag,index) => `<button type="button" class="question-tag tag-tone-${index%6}" data-question-tag-filter="${escapeAttr(tag)}" title="Pesquisar pela tag ${escapeAttr(tag)}"><span class="question-tag-order">${index+1}</span><span>${escapeHtml(tag)}</span></button>`).join('')}</div>`;
+  return `<div class="question-tag-wrap">${toggleBtn}${list}</div>`;
+}
+function setQuestionTagsHidden(hidden) {
+  questionTagsHidden = Boolean(hidden);
+  localStorage.setItem(QUESTION_TAGS_HIDDEN_KEY, questionTagsHidden ? '1' : '0');
+  render();
 }
 function bindQuestionTagFilters() {
+  document.getElementById('questionTagsToggle')?.addEventListener('click', () => setQuestionTagsHidden(!questionTagsHidden));
   document.querySelectorAll('[data-question-tag-filter]').forEach(button => button.onclick = event => {
     ui.qSearch = event.currentTarget.dataset.questionTagFilter || '';
     ui.qIndex = 0;
@@ -7359,7 +7456,7 @@ function renderQuestion(question, total) {
   return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${iconSvg(questionSidebarCollapsed?'sidebar':'focus',{weight:'regular'})}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">${iconSvg('simulation',{weight:'regular'})}</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">${iconSvg('flag',{weight:'regular'})}</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn danger" id="questionDelete" title="Excluir questão">${iconSvg('delete',{weight:'regular'})}</button><button class="icon-btn" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
-    ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}</div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
+    ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
     <div class="section-title"><h2>Questão ${question.number}</h2>${highlightTools}</div>
     <div class="question-workspace"><div class="question-main">
       <div class="question-stem highlightable" data-highlight-scope="stem" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights, true, 'stem')}</div>
@@ -7637,6 +7734,7 @@ function bindQuestionActions(questions, question) {
   const keyIssue = document.getElementById('questionKeyIssue');
   const deleteQuestion = document.getElementById('questionDelete');
   document.querySelectorAll('[data-question-materials]').forEach(button => button.onclick = e => openMaterialsForSchedule(e.currentTarget.dataset.questionMaterials));
+  document.querySelectorAll('[data-question-video]').forEach(button => button.onclick = e => openVideosForSchedule(e.currentTarget.dataset.questionVideo));
   document.querySelectorAll('[data-question-confidence]').forEach(button => button.onclick = e => {
     const current = state.questionProgress[question.id] || {};
     setQuestionProgress(question.id,{ draftConfidence: e.currentTarget.dataset.questionConfidence });
@@ -8750,6 +8848,11 @@ window.addEventListener('online', () => {
 });
 window.addEventListener('popstate', restoreNavigation);
 document.addEventListener('keydown', handleHighlightUndoKeyboard);
+document.addEventListener('click', event => {
+  const box = document.getElementById('materialGlobalSearchResults');
+  const wrap = document.getElementById('materialGlobalSearchWrap');
+  if(box && !box.hidden && wrap && !wrap.contains(event.target)) box.hidden = true;
+});
 document.addEventListener('keydown', handleFlashcardUndoKeyboard);
 document.addEventListener('keydown', handleQuestionKeyboard);
 startMotivationCycle();

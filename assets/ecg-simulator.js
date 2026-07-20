@@ -2154,7 +2154,13 @@
     }));
     el.querySelectorAll('[data-ecg-answer]').forEach((b) => (b.onclick = () => answerQuiz(b.dataset.ecgAnswer)));
     el.querySelectorAll('[data-ecg-confidence]').forEach((b) => (b.onclick = () => rateConfidence(b.dataset.ecgConfidence)));
-    el.querySelectorAll('[data-ecg-quiz-quit]').forEach((b) => (b.onclick = () => { const S = st(); S._quiz = null; save(); mountBody(); }));
+    el.querySelectorAll('[data-ecg-quiz-quit]').forEach((b) => (b.onclick = () => {
+      const S = st();
+      const cameFromLesson = S.ui.quizMode === 'trilha' && S.ui.lesson;
+      S._quiz = null;
+      if (cameFromLesson) S.ui.sub = 'trilha';
+      save(); mountBody();
+    }));
   }
   function shuffle(arr) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
