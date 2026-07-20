@@ -531,7 +531,14 @@
       ],
     },
     {
-      stage: 'Etapa 5 · Consolidar', desc: 'Fixe com revisão espaçada e acompanhe onde você erra mais.',
+      stage: 'Etapa 5 · Aulas completas', desc: 'Aprofunde com o conteúdo real dos 7 módulos (Rx, TC, RM e USG) — texto corrido, imagens legendadas e macetes.',
+      steps: (window.RadioAulas ? window.RadioAulas.MODULOS : []).map((m) => ({
+        id: 'aula-mod' + m.id, t: 'Módulo ' + m.id + ' — ' + m.nome, k: 'Estudar',
+        go: { sub: 'aulas', aulaModId: m.id }, autoVisit: true,
+      })),
+    },
+    {
+      stage: 'Etapa 6 · Consolidar', desc: 'Fixe com revisão espaçada e acompanhe onde você erra mais.',
       steps: [
         { id: 'r-desempenho', t: 'Ver desempenho e fila de revisão', k: 'Revisar', go: { sub: 'desempenho' }, autoVisit: true },
       ],
@@ -552,6 +559,7 @@
       log: [],          // tentativas { id, ok, conf, t }
       progress: {},     // marcadores de conclusão de módulos
       trail: {},        // passos da trilha concluídos { stepId: dataISO }
+      highlights: {},   // marca-texto por aula: { topicoId: { blockIndex: [trechos...] } }
       daily: { day: null, sinalOfDay: null },
       caseState: {},    // etapa atual por caso
     };
@@ -666,11 +674,27 @@
     .radio-trail-step.next{background:linear-gradient(90deg,rgba(18,97,245,.06),transparent);border-radius:8px;padding-left:8px;margin-left:-8px}
     .radio-trail-step.next .radio-trail-dot{border-color:var(--accent,#1261f5)}
     .radio-tag.next{background:var(--accent,#1261f5);color:#fff}
-    .radio-aula-bullets{margin:12px 0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
-    .radio-aula-bullets li{line-height:1.5;font-size:14px}
-    .radio-aula-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px}
-    .radio-aula-gallery .radio-figure{background:#fff}
-    .radio-aula-gallery .radio-xray{object-fit:contain;max-height:340px;margin:0 auto;background:#fff}
+    .radio-aula-flow{display:flex;flex-direction:column;gap:14px;max-width:760px}
+    .radio-aula-p{margin:0;line-height:1.65;font-size:15px}
+    .radio-aula-tip{background:#fff8e1;border:1px solid #f0d98c;border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.6;color:#5c4a10}
+    :root[data-theme="dark"] .radio-aula-tip{background:#332b0f;border-color:#5c4a10;color:#f0d98c}
+    @media(prefers-color-scheme:dark){.radio-aula-tip{background:#332b0f;border-color:#5c4a10;color:#f0d98c}}
+    .radio-aula-figure{margin:4px 0;border:1px solid var(--border,#dce1ec);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;max-width:520px}
+    .radio-aula-figure img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;background:#05070a}
+    .radio-aula-figure figcaption{padding:8px 12px;font-size:12.5px;color:var(--muted,#5b6472);border-top:1px solid var(--border,#eef1f7);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+    .radio-aula-ampliar{white-space:nowrap;opacity:.75}
+    mark.radio-hl{background:#ffe066;color:#2b2600;border-radius:3px;padding:0 2px;cursor:pointer}
+    mark.radio-hl:hover{background:#ffd43b}
+    .radio-lightbox{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:16px}
+    .radio-lightbox.open{display:flex}
+    .radio-lightbox-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.85)}
+    .radio-lightbox-panel{position:relative;z-index:1;max-width:min(94vw,900px);max-height:92vh;background:#05070a;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+    .radio-lightbox-bar{display:flex;gap:8px;padding:8px;background:#12161c;flex-shrink:0}
+    .radio-lightbox-imgwrap{flex:1;min-height:0;overflow:auto;display:flex;align-items:center;justify-content:center;padding:12px}
+    .radio-lightbox-img{max-width:100%;max-height:74vh;transition:transform .15s;display:block}
+    .radio-lightbox-imgwrap.zoom .radio-lightbox-img{transform:scale(1.7);cursor:zoom-out}
+    .radio-lightbox-imgwrap.inv .radio-lightbox-img{filter:invert(1) hue-rotate(180deg)}
+    .radio-lightbox-caption{padding:10px 14px;color:#e8edf2;font-size:13px;background:#05070a;border-top:1px solid rgba(255,255,255,.08);flex-shrink:0}
     `;
     document.head.appendChild(style);
   }
@@ -706,6 +730,92 @@
         if (k === 'zoom') fig.dataset.zoom = fig.dataset.zoom === '1' ? '0' : '1';
       });
     });
+  }
+
+  // ---------- Lightbox (visualizador em tela cheia para as imagens das Aulas) ----------
+  function lightboxEl() {
+    let box = document.getElementById('radioLightbox');
+    if (!box) {
+      box = document.createElement('div');
+      box.id = 'radioLightbox';
+      box.className = 'radio-lightbox';
+      document.body.appendChild(box);
+    }
+    return box;
+  }
+  function closeLightbox() {
+    const box = document.getElementById('radioLightbox');
+    if (box) box.classList.remove('open');
+    document.removeEventListener('keydown', lightboxEscHandler);
+  }
+  function lightboxEscHandler(e) { if (e.key === 'Escape') closeLightbox(); }
+  function openLightbox(src, caption) {
+    const box = lightboxEl();
+    box.innerHTML = `<div class="radio-lightbox-backdrop" data-lb-close></div>
+      <div class="radio-lightbox-panel">
+        <div class="radio-lightbox-bar">
+          <button class="radio-btn ghost sm" data-lb-inv>Inverter cores</button>
+          <button class="radio-btn ghost sm" data-lb-zoom>Zoom</button>
+          <button class="radio-btn ghost sm" data-lb-close style="margin-left:auto">✕ Fechar</button>
+        </div>
+        <div class="radio-lightbox-imgwrap" data-lb-imgwrap><img src="${esc(src)}" class="radio-lightbox-img" alt="${esc(caption || '')}"/></div>
+        ${caption ? `<div class="radio-lightbox-caption">${esc(caption)}</div>` : ''}
+      </div>`;
+    box.classList.add('open');
+    box.querySelectorAll('[data-lb-close]').forEach((b) => (b.onclick = closeLightbox));
+    const imgwrap = box.querySelector('[data-lb-imgwrap]');
+    box.querySelector('[data-lb-inv]').onclick = () => imgwrap.classList.toggle('inv');
+    box.querySelector('[data-lb-zoom]').onclick = () => imgwrap.classList.toggle('zoom');
+    document.addEventListener('keydown', lightboxEscHandler);
+  }
+  function wireAulaFigures(scope) {
+    scope.querySelectorAll('[data-aula-img]').forEach((fig) => {
+      fig.onclick = () => openLightbox(fig.dataset.aulaSrc, fig.dataset.aulaCap);
+    });
+  }
+
+  // ---------- Marca-texto (highlighter) nos blocos de texto das Aulas ----------
+  function wireHighlighter(scope) {
+    const flow = scope.querySelector('.radio-aula-flow');
+    if (!flow) return;
+    const topico = currentAulaTopico();
+    if (!topico) return;
+    flow.onmouseup = flow.ontouchend = () => {
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+      const range = sel.getRangeAt(0);
+      const target = range.commonAncestorContainer.nodeType === 1 ? range.commonAncestorContainer : range.commonAncestorContainer.parentElement;
+      const holder = target && target.closest ? target.closest('[data-hl-target]') : null;
+      if (!holder) return; // seleção fora de um bloco marcável
+      const text = range.toString();
+      if (!text.trim() || text.length > 400) { sel.removeAllRanges(); return; }
+      const blockEl = holder.closest('[data-hl-block]');
+      const blockIndex = +blockEl.dataset.hlBlock;
+      const S = st();
+      S.highlights[topico.id] = S.highlights[topico.id] || {};
+      S.highlights[topico.id][blockIndex] = S.highlights[topico.id][blockIndex] || [];
+      S.highlights[topico.id][blockIndex].push(text);
+      save(); sel.removeAllRanges(); mountBody();
+    };
+    flow.querySelectorAll('mark.radio-hl').forEach((m) => {
+      m.onclick = () => {
+        const blockEl = m.closest('[data-hl-block]');
+        const blockIndex = +blockEl.dataset.hlBlock;
+        const S = st();
+        const arr = S.highlights[topico.id] && S.highlights[topico.id][blockIndex];
+        if (!arr) return;
+        const i = arr.indexOf(m.dataset.hlText);
+        if (i !== -1) arr.splice(i, 1);
+        save(); mountBody();
+      };
+    });
+  }
+  function currentAulaTopico() {
+    const S = st();
+    const mods = (window.RadioAulas && window.RadioAulas.MODULOS) || [];
+    const mod = mods.find((m) => m.id === S.ui.aulaModId);
+    if (!mod) return null;
+    return mod.topicos.find((t) => t.id === S.ui.aulaTopicoId) || null;
   }
 
   // ---------- INÍCIO ----------
@@ -998,20 +1108,51 @@
   function aulasTopicosList(mod) {
     return `<button class="radio-btn ghost sm" data-radio-back-mod>← Voltar aos módulos</button>
       <div style="margin:10px 0"><span class="radio-tag">Módulo ${mod.id}</span><h2 style="margin:6px 0 0">${esc(mod.nome)}</h2><p class="radio-muted">${esc(mod.resumo)}</p></div>
-      <div class="radio-grid">${mod.topicos.map((t) => `<div class="radio-card radio-region-btn" data-radio-open-topico="${t.id}">
-        <h3>${esc(t.titulo)}</h3><span class="radio-muted">${t.imagens.length ? t.imagens.length + ' imagens' : 'Sem imagens'} · ${t.bullets.length} pontos-chave</span>
-      </div>`).join('')}</div>`;
+      <div class="radio-grid">${mod.topicos.map((t) => {
+        const nImg = t.blocks.filter((b) => b.type === 'img').length;
+        const nTxt = t.blocks.filter((b) => b.type === 'p' || b.type === 'tip').length;
+        return `<div class="radio-card radio-region-btn" data-radio-open-topico="${t.id}">
+        <h3>${esc(t.titulo)}</h3><span class="radio-muted">${nImg ? nImg + ' imagens' : 'Sem imagens'} · ${nTxt} blocos de texto</span>
+      </div>`;
+      }).join('')}</div>`;
+  }
+  // Marca-texto: reaplica os trechos salvos como <mark> por cima do texto plano do bloco.
+  function applyHighlights(text, marks) {
+    if (!marks || !marks.length) return esc(text);
+    // aplica na ordem em que os trechos aparecem no texto (primeira ocorrência de cada)
+    let html = esc(text);
+    marks.forEach((m) => {
+      const needle = esc(m);
+      const i = html.indexOf(needle);
+      if (i === -1) return;
+      // evita marcar dentro de uma <mark> já existente
+      const before = html.slice(0, i), after = html.slice(i + needle.length);
+      if (/<mark[^>]*>[^<]*$/.test(before)) return;
+      html = before + '<mark class="radio-hl" data-hl-text="' + needle.replace(/"/g, '&quot;') + '">' + needle + '</mark>' + after;
+    });
+    return html;
   }
   function aulasTopicoDetail(mod, topico) {
-    const gallery = topico.imagens.length
-      ? `<div class="radio-aula-gallery">${topico.imagens.map((src, i) => `<div class="radio-figure" data-anno="0" data-inv="0" data-zoom="0" data-radio-viewer><img src="${esc(src)}" class="radio-xray" alt="${esc(topico.titulo)} — imagem ${i + 1}" loading="lazy"/>
-          <div class="radio-viewer-bar"><button class="radio-btn ghost sm" data-vw="inv">Inverter</button><button class="radio-btn ghost sm" data-vw="zoom">Zoom</button></div>
-        </div>`).join('')}</div>`
-      : '';
+    const S = st();
+    const marks = (S.highlights && S.highlights[topico.id]) || {};
+    const parts = topico.blocks.map((b, i) => {
+      if (b.type === 'img') {
+        return `<figure class="radio-aula-figure" data-aula-img="${i}" data-aula-src="${esc(b.src)}" data-aula-cap="${esc(b.caption || '')}">
+          <img src="${esc(b.src)}" alt="${esc(b.caption || topico.titulo)}" loading="lazy"/>
+          <figcaption>${esc(b.caption || '')} <span class="radio-aula-ampliar">🔍 toque para ampliar</span></figcaption>
+        </figure>`;
+      }
+      if (b.type === 'tip') {
+        return `<div class="radio-aula-tip" data-hl-block="${i}"><b>💡 Macete / dica:</b> <span data-hl-target>${applyHighlights(b.text, marks[i])}</span></div>`;
+      }
+      return `<p class="radio-aula-p" data-hl-block="${i}"><span data-hl-target>${applyHighlights(b.text, marks[i])}</span></p>`;
+    });
     return `<button class="radio-btn ghost sm" data-radio-back-topico>← Voltar a ${esc(mod.nome)}</button>
-      <div style="margin:10px 0"><span class="radio-tag">Módulo ${mod.id}</span><h2 style="margin:6px 0 0">${esc(topico.titulo)}</h2></div>
-      <ul class="radio-aula-bullets">${topico.bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
-      ${gallery}`;
+      <div style="margin:10px 0"><span class="radio-tag">Módulo ${mod.id}</span><h2 style="margin:6px 0 0">${esc(topico.titulo)}</h2>
+        <p class="radio-muted" style="margin:4px 0 0">Selecione qualquer trecho do texto para marcar com marca-texto. Toque numa imagem para ampliar.</p>
+        ${Object.keys(marks).length ? `<button class="radio-btn ghost sm" data-radio-clear-hl style="margin-top:6px">Limpar marcações deste tópico</button>` : ''}
+      </div>
+      <div class="radio-aula-flow">${parts.join('')}</div>`;
   }
   function aulasHtml() {
     const S = st();
@@ -1083,6 +1224,12 @@
     el.querySelectorAll('[data-radio-back-mod]').forEach((b) => b.onclick = () => { st().ui.aulaModId = null; save(); mountBody(); });
     el.querySelectorAll('[data-radio-open-topico]').forEach((b) => b.onclick = () => { st().ui.aulaTopicoId = b.dataset.radioOpenTopico; save(); mountBody(); });
     el.querySelectorAll('[data-radio-back-topico]').forEach((b) => b.onclick = () => { st().ui.aulaTopicoId = null; save(); mountBody(); });
+    el.querySelectorAll('[data-radio-clear-hl]').forEach((b) => b.onclick = () => {
+      const topico = currentAulaTopico(); if (!topico) return;
+      delete st().highlights[topico.id]; save(); mountBody();
+    });
+    wireAulaFigures(el);
+    wireHighlighter(el);
     wireViewer(el);
     wireDensidades(el);
     wireSinalQuiz(el);
@@ -1188,7 +1335,7 @@
     if (!S.radio) S.radio = defaultState();
     const d = defaultState();
     S.radio.ui = Object.assign({}, d.ui, S.radio.ui);
-    ['srs', 'progress', 'caseState', 'trail'].forEach((k) => { if (!S.radio[k]) S.radio[k] = {}; });
+    ['srs', 'progress', 'caseState', 'trail', 'highlights'].forEach((k) => { if (!S.radio[k]) S.radio[k] = {}; });
     if (!S.radio.log) S.radio.log = [];
     if (!S.radio.daily) S.radio.daily = d.daily;
 
