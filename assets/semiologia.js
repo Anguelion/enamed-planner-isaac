@@ -384,25 +384,110 @@
       comoPesquisar: 'Inspecione sacro, calcâneos, trocânteres e occipício. Estágio 1 = eritema que NÃO empalidece à digitopressão.',
       significado: 'Marcador de imobilidade e risco assistencial; prevenção com mudança de decúbito. Eritema não-branqueável já é estágio 1.',
       quiz: { p: 'Eritema que NÃO empalidece à digitopressão sobre o sacro indica lesão por pressão:', ops: ['Estágio 1', 'Apenas pele normal', 'Estágio 4', 'Cicatrizada'], correct: 0, exp: 'Eritema não-branqueável = estágio 1.' } },
+    // ---- vista MÃOS (zoom) ----
+    { id: 'cianose-periferica', nome: 'Cianose periférica', cat: 'Inspeção', view: 'maos', x: 108, y: 60,
+      oQue: 'Coloração azulada restrita às extremidades, que costumam estar frias.',
+      comoPesquisar: 'Compare a cor das pontas dos dedos com as mucosas; aqueça a mão — a periférica melhora, a central não.',
+      significado: 'Por má perfusão/vasoconstrição (frio, choque, insuficiência arterial). Mucosas normais a diferenciam da central (hipoxemia).',
+      quiz: { p: 'Cianose apenas nas extremidades frias, com mucosas rosadas, é do tipo:', ops: ['Central', 'Periférica', 'Mista obrigatória', 'Fisiológica em adulto'], correct: 1, exp: 'Extremidades frias + mucosas normais = periférica (perfusão).' } },
+    { id: 'leuconiquia', nome: 'Leuconíquia', cat: 'Inspeção', view: 'maos', x: 86, y: 74,
+      oQue: 'Esbranquiçamento das unhas (difuso ou em faixas, como linhas de Muehrcke).',
+      comoPesquisar: 'Inspecione o leito ungueal sob boa luz, sem esmalte.',
+      significado: 'Leuconíquia difusa associa-se a hipoalbuminemia (hepatopatia, síndrome nefrótica, desnutrição).',
+      quiz: { p: 'Unhas difusamente esbranquiçadas (leuconíquia) associam-se a:', ops: ['Hipoalbuminemia', 'Hipertensão', 'Hipertireoidismo', 'Anemia ferropriva'], correct: 0, exp: 'Leuconíquia difusa reflete hipoalbuminemia.' } },
+    { id: 'coiloniquia', nome: 'Coiloníquia (unha em colher)', cat: 'Inspeção', view: 'maos', x: 130, y: 70,
+      oQue: 'Unha côncava, "em colher", capaz de reter uma gota d\'água.',
+      comoPesquisar: 'Inspeção de perfil; a concavidade central é evidente.',
+      significado: 'Clássica da anemia ferropriva (também hemocromatose, trauma ocupacional).',
+      quiz: { p: 'A coiloníquia (unha em colher) é clássica de qual condição?', ops: ['Anemia ferropriva', 'Endocardite', 'Cirrose', 'Hipotireoidismo'], correct: 0, exp: 'Unha em colher = deficiência de ferro.' } },
+    { id: 'splinter', nome: 'Hemorragias em estilha', cat: 'Inspeção', view: 'maos', x: 151, y: 90,
+      oQue: 'Finas linhas avermelhadas/acastanhadas longitudinais sob a unha (microêmbolos).',
+      comoPesquisar: 'Inspecione o leito ungueal; são lineares, no sentido do crescimento da unha.',
+      significado: 'Podem ser fenômeno embólico da endocardite infecciosa (mas também trauma comum). Somam-se a Osler, Janeway e Roth.',
+      quiz: { p: 'Hemorragias em estilha somadas a febre e sopro novo devem lembrar:', ops: ['Trauma isolado', 'Endocardite infecciosa', 'Anemia', 'Psoríase'], correct: 1, exp: 'No contexto de febre + sopro, sugerem endocardite.' } },
+    { id: 'osler-janeway', nome: 'Nódulos de Osler / lesões de Janeway', cat: 'Inspeção', view: 'maos', x: 112, y: 195,
+      oQue: 'Fenômenos periféricos da endocardite: Osler = nódulos DOLOROSOS na polpa digital; Janeway = máculas INDOLORES em palmas/plantas.',
+      comoPesquisar: 'Inspeção e palpação da polpa dos dedos e das palmas.',
+      significado: 'Compõem os critérios de Duke (menores). Osler dói (imunológico); Janeway não dói (embólico).',
+      quiz: { p: 'Nódulos DOLOROSOS na polpa dos dedos na endocardite são:', ops: ['Lesões de Janeway', 'Nódulos de Osler', 'Manchas de Roth', 'Petéquias'], correct: 1, exp: 'Osler = dolorosos ("Osler = Ouch"); Janeway = indolores.' } },
+    { id: 'dupuytren', nome: 'Contratura de Dupuytren', cat: 'Palpação', view: 'maos', x: 90, y: 205,
+      oQue: 'Espessamento e retração da fáscia palmar, fletindo tipicamente o 4º e 5º dedos.',
+      comoPesquisar: 'Palpe cordões fibrosos na palma; peça extensão dos dedos (fica limitada).',
+      significado: 'Associada a etilismo/hepatopatia, diabetes e predisposição genética.',
+      quiz: { p: 'Retração fibrosa da fáscia palmar com flexão do 4º/5º dedos é:', ops: ['Contratura de Dupuytren', 'Baqueteamento', 'Coiloníquia', 'Artrite'], correct: 0, exp: 'É a contratura de Dupuytren (ligada a etilismo/DM).' } },
+    // ---- vista CABEÇA/OLHOS (zoom) ----
+    { id: 'palidez-conjuntival', nome: 'Palidez conjuntival', cat: 'Inspeção', view: 'cabeca', x: 92, y: 108,
+      oQue: 'Redução da coloração rósea da conjuntiva palpebral inferior.',
+      comoPesquisar: 'Everta suavemente a pálpebra inferior e compare com o esperado sob luz natural.',
+      significado: 'Sugere anemia; a palidez conjuntival tem melhor correlação clínica do que a palidez cutânea isolada.',
+      quiz: { p: 'A palidez avaliada na conjuntiva palpebral inferior sugere:', ops: ['Icterícia', 'Anemia', 'Cianose', 'Desidratação'], correct: 1, exp: 'Palidez conjuntival aponta anemia.' } },
+    { id: 'arco-corneano', nome: 'Arco corneano (gerontoxon)', cat: 'Inspeção', view: 'cabeca', x: 148, y: 96,
+      oQue: 'Anel branco-acinzentado na periferia da córnea, separado do limbo por faixa clara.',
+      comoPesquisar: 'Inspeção da córnea; é periférico e bilateral.',
+      significado: 'No idoso é senil (benigno); antes dos ~45 anos (arcus juvenil) levanta dislipidemia.',
+      quiz: { p: 'Arco corneano em paciente JOVEM (<45 anos) sugere:', ops: ['Envelhecimento normal', 'Dislipidemia', 'Glaucoma', 'Catarata'], correct: 1, exp: 'Arcus precoce → investigar dislipidemia.' } },
+    { id: 'xantelasma', nome: 'Xantelasma', cat: 'Inspeção', view: 'cabeca', x: 100, y: 82,
+      oQue: 'Placas amareladas de depósito lipídico nas pálpebras, sobretudo no canto medial.',
+      comoPesquisar: 'Inspeção das pálpebras.',
+      significado: 'Associado a dislipidemia (embora possa ocorrer com lipídios normais); marcador de risco cardiovascular.',
+      quiz: { p: 'Placas amareladas nas pálpebras (xantelasma) associam-se a:', ops: ['Anemia', 'Dislipidemia', 'Hipotireoidismo', 'Icterícia'], correct: 1, exp: 'Xantelasma = depósito lipídico, ligado a dislipidemia.' } },
+    { id: 'pupilas', nome: 'Pupilas (anisocoria e reflexos)', cat: 'Inspeção', view: 'cabeca', x: 92, y: 94,
+      oQue: 'Avaliação de tamanho, simetria e reatividade das pupilas.',
+      comoPesquisar: 'Em penumbra, observe simetria; teste o reflexo fotomotor direto e consensual.',
+      significado: 'Anisocoria nova + rebaixamento = herniação (emergência). Miose puntiforme → opioides/ponte; midríase fixa → lesão do III par/anóxia.',
+      quiz: { p: 'Anisocoria nova com rebaixamento do nível de consciência sugere:', ops: ['Enxaqueca', 'Herniação cerebral', 'Conjuntivite', 'Cansaço'], correct: 1, exp: 'É sinal de herniação — emergência neurológica.' } },
+    { id: 'desvio-rima', nome: 'Desvio de rima (paralisia facial)', cat: 'Inspeção', view: 'cabeca', x: 148, y: 165,
+      oQue: 'Assimetria da face com desvio da comissura labial para o lado são.',
+      comoPesquisar: 'Peça para sorrir, mostrar os dentes, fechar os olhos com força e franzir a testa.',
+      significado: 'Central (AVC) POUPA a fronte (enruga dos dois lados); periférica (Bell) acomete a fronte do lado afetado.',
+      quiz: { p: 'Paralisia facial que POUPA a fronte (enruga normalmente) é do tipo:', ops: ['Periférica (Bell)', 'Central', 'Miastênica', 'Nenhuma'], correct: 1, exp: 'A central poupa a fronte (inervação bilateral do frontal).' } },
+    { id: 'mucosa-hidratacao', nome: 'Hidratação de mucosas', cat: 'Inspeção', view: 'cabeca', x: 120, y: 168,
+      oQue: 'Avaliação do estado de hidratação pela mucosa oral e turgor.',
+      comoPesquisar: 'Inspecione mucosa oral/língua (secas?) e teste o turgor cutâneo (prega que desfaz lentamente).',
+      significado: 'Mucosas secas + turgor lentificado + olhos fundos + oligúria compõem o quadro de desidratação.',
+      quiz: { p: 'Mucosa oral seca com turgor cutâneo lentificado indica:', ops: ['Hipervolemia', 'Desidratação', 'Anemia', 'Icterícia'], correct: 1, exp: 'São sinais de desidratação/hipovolemia.' } },
   ];
   const SINAL_MAP = Object.fromEntries(CORPO_SINAIS.map((s) => [s.id, s]));
   const CAT_COR = { 'Inspeção': '#3a6ea5', 'Palpação': '#2f7d6f', 'Percussão': '#b45309', 'Ausculta': '#8b5cf6' };
 
   const signsInView = (view) => CORPO_SINAIS.filter((s) => (s.view || 'ant') === view);
+  const VIEW_LABEL = { ant: 'anterior', post: 'posterior', maos: 'mãos e unhas', cabeca: 'cabeça e olhos' };
 
-  function bodySvg(activeId, testeMode, view) {
-    const list = signsInView(view);
-    const hotspots = list.map((s, i) => {
-      const on = s.id === activeId;
-      const cor = CAT_COR[s.cat] || '#2f7d6f';
-      const label = testeMode ? '?' : (i + 1);
-      return `<g class="semio-hot ${on ? 'on' : ''}" data-sign="${esc(s.id)}" style="cursor:pointer">
-        <circle cx="${s.x}" cy="${s.y}" r="${on ? 11 : 9}" fill="${cor}" stroke="#fff" stroke-width="2" opacity="${on ? 1 : .88}"/>
-        <text x="${s.x}" y="${s.y + 3.5}" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">${label}</text>
-      </g>`;
-    }).join('');
-    // silhueta simétrica (serve para as duas vistas); detalhe interno muda por vista
-    const body = `<g fill="#e7d3bf" stroke="#b89c82" stroke-width="1.4" stroke-linejoin="round">
+  function figureFor(view) {
+    const skin = 'fill="#e7d3bf" stroke="#b89c82" stroke-width="1.4" stroke-linejoin="round"';
+    if (view === 'maos') {
+      return { vb: '0 0 220 260', inner: `<g ${skin}>
+        <rect x="66" y="150" width="94" height="86" rx="26"/>
+        <rect x="78" y="66" width="18" height="98" rx="9"/>
+        <rect x="101" y="52" width="18" height="112" rx="9"/>
+        <rect x="124" y="62" width="18" height="102" rx="9"/>
+        <rect x="147" y="82" width="17" height="82" rx="8"/>
+        <rect x="40" y="150" width="17" height="60" rx="8" transform="rotate(-38 48 178)"/>
+        </g>
+        <g fill="#f3e6d6" stroke="#c9ac8f" stroke-width="1">
+        <rect x="80" y="68" width="14" height="12" rx="4"/>
+        <rect x="103" y="54" width="14" height="12" rx="4"/>
+        <rect x="126" y="64" width="14" height="12" rx="4"/>
+        <rect x="148" y="84" width="13" height="11" rx="4"/>
+        </g>` };
+    }
+    if (view === 'cabeca') {
+      return { vb: '0 0 240 220', inner: `<g ${skin}>
+        <path d="M58 96 Q60 20 120 18 Q180 20 182 96 Q182 170 120 200 Q58 170 58 96 Z"/>
+        <path d="M56 96 q-14 2 -12 20 q2 14 14 12"/>
+        <path d="M184 96 q14 2 12 20 q-2 14 -14 12"/>
+        </g>
+        <g fill="none" stroke="#c9ac8f" stroke-width="1.4">
+        <path d="M72 92 Q92 80 112 92 Q92 104 72 92 Z"/>
+        <path d="M128 92 Q148 80 168 92 Q148 104 128 92 Z"/>
+        <path d="M118 100 L114 138 Q120 142 126 138"/>
+        <path d="M100 166 Q120 176 140 166"/>
+        <path d="M70 74 Q88 66 108 74"/><path d="M132 74 Q152 66 170 74"/>
+        </g>
+        <circle cx="92" cy="92" r="5" fill="#5b4636"/><circle cx="148" cy="92" r="5" fill="#5b4636"/>` };
+    }
+    // corpo inteiro (anterior/posterior) — silhueta simétrica reaproveitada
+    const body = `<g ${skin}>
         <ellipse cx="110" cy="40" rx="25" ry="29"/>
         <path d="M101 66 h18 v14 q-9 5 -18 0 Z"/>
         <path d="M74 92 C 82 82 138 82 146 92 L160 132 L150 148 L142 130 L146 214 Q110 230 74 214 L78 130 L70 148 L60 132 Z"/>
@@ -422,8 +507,23 @@
           <line x1="90" y1="238" x2="130" y2="238"/>
         </g>`
       : `<line x1="110" y1="88" x2="110" y2="222" stroke="#cbb79f" stroke-width="1" stroke-dasharray="3 4"/>`;
-    return `<svg viewBox="0 0 220 470" xmlns="http://www.w3.org/2000/svg" class="semio-body-svg" role="img" aria-label="Figura corporal (${view === 'post' ? 'posterior' : 'anterior'}) com sinais semiológicos">
-      ${body}${detail}${hotspots}
+    return { vb: '0 0 220 470', inner: body + detail };
+  }
+
+  function bodySvg(activeId, testeMode, view) {
+    const list = signsInView(view);
+    const hotspots = list.map((s, i) => {
+      const on = s.id === activeId;
+      const cor = CAT_COR[s.cat] || '#2f7d6f';
+      const label = testeMode ? '?' : (i + 1);
+      return `<g class="semio-hot ${on ? 'on' : ''}" data-sign="${esc(s.id)}" style="cursor:pointer">
+        <circle cx="${s.x}" cy="${s.y}" r="${on ? 11 : 9}" fill="${cor}" stroke="#fff" stroke-width="2" opacity="${on ? 1 : .88}"/>
+        <text x="${s.x}" y="${s.y + 3.5}" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">${label}</text>
+      </g>`;
+    }).join('');
+    const fig = figureFor(view);
+    return `<svg viewBox="${fig.vb}" xmlns="http://www.w3.org/2000/svg" class="semio-body-svg" role="img" aria-label="Figura (${VIEW_LABEL[view] || 'anterior'}) com sinais semiológicos">
+      ${fig.inner}${hotspots}
     </svg>`;
   }
 

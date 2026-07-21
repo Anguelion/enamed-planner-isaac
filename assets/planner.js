@@ -26,6 +26,7 @@ const LOCAL_PLANNER_URL = 'http://127.0.0.1:8765/enamed_planner.html?tab=aulas&v
 const STUDY_TIMER_KEY = 'enamed-planner-study-timer';
 const QUESTION_TIMER_KEY = 'enamed-planner-question-timer';
 const POMODORO_KEY = 'enamed-planner-pomodoro';
+const POMODORO_CYCLES_KEY = 'enamed-planner-pomodoro-cycles';
 // O navegador continua local-first; quando houver internet, sincroniza com o Supabase.
 const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
@@ -1815,20 +1816,43 @@ function loadPomodoroSession() {
 function savePomodoro() {
   localStorage.setItem(POMODORO_KEY, JSON.stringify({ ...pomodoro, audioContext:undefined }));
 }
+function getPomodoroCycles() {
+  const today = studyDateKey();
+  try {
+    const saved = JSON.parse(localStorage.getItem(POMODORO_CYCLES_KEY));
+    if(saved?.date === today) return Math.max(0, Number(saved.count) || 0);
+  } catch(error) {}
+  return 0;
+}
+function bumpPomodoroCycles() {
+  const count = getPomodoroCycles() + 1;
+  localStorage.setItem(POMODORO_CYCLES_KEY, JSON.stringify({ date: studyDateKey(), count }));
+  return count;
+}
 function formatPomodoro(seconds) {
   const total = Math.max(0, Math.ceil(Number(seconds) || 0));
   return `${String(Math.floor(total / 60)).padStart(2,'0')}:${String(total % 60).padStart(2,'0')}`;
 }
 function beepPomodoro() {
+  // Sino suave: duas notas em harmonia (C6 -> G6) com decaimento exponencial,
+  // bem menos agressivo do que o bipe seco anterior.
   try {
     const context = new (window.AudioContext || window.webkitAudioContext)();
-    const oscillator = context.createOscillator();
-    const gain = context.createGain();
-    oscillator.frequency.value = 880;
-    gain.gain.value = 0.12;
-    oscillator.connect(gain); gain.connect(context.destination);
-    oscillator.start(); oscillator.stop(context.currentTime + .22);
-    setTimeout(() => context.close?.(), 350);
+    const now = context.currentTime;
+    const chime = (freq, start, peak) => {
+      const oscillator = context.createOscillator();
+      const gain = context.createGain();
+      oscillator.type = 'sine';
+      oscillator.frequency.value = freq;
+      gain.gain.setValueAtTime(0.0001, now + start);
+      gain.gain.exponentialRampToValueAtTime(peak, now + start + 0.04);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + start + 1.1);
+      oscillator.connect(gain); gain.connect(context.destination);
+      oscillator.start(now + start); oscillator.stop(now + start + 1.15);
+    };
+    chime(1046.5, 0, 0.09);
+    chime(1568, 0.16, 0.07);
+    setTimeout(() => context.close?.(), 1500);
   } catch(error) {}
 }
 function beepPomodoroTick() {
@@ -1848,10 +1872,11 @@ function finishPomodoroPhase(timer=pomodoro) {
   timer.alarm = true;
   timer.remaining = 0;
   timer.endAt = 0;
+  if(timer.phase === 'work') bumpPomodoroCycles();
   if(pomodoroInterval) { clearInterval(pomodoroInterval); pomodoroInterval=null; }
   if(pomodoroAlarmInterval) clearInterval(pomodoroAlarmInterval);
   beepPomodoro();
-  pomodoroAlarmInterval = setInterval(beepPomodoro, 900);
+  pomodoroAlarmInterval = setInterval(beepPomodoro, 2200);
   savePomodoro();
   updatePomodoroWidget();
 }
@@ -1917,7 +1942,7 @@ function ensurePomodoroWidget() {
   if(document.getElementById('globalPomodoro')) return;
   const widget=document.createElement('div');
   widget.id='globalPomodoro'; widget.className='global-pomodoro';
-  widget.innerHTML='<button class="pomodoro-fruit" id="pomodoroFruit" type="button" title="Abrir pomodoro" aria-label="Abrir pomodoro" aria-expanded="false" aria-controls="pomodoroPanel">🍅<span class="pomodoro-mini-time">--:--</span></button><div class="pomodoro-panel" id="pomodoroPanel" hidden></div>';
+  widget.innerHTML='<button class="pomodoro-fruit" id="pomodoroFruit" type="button" title="Abrir pomodoro" aria-label="Abrir pomodoro" aria-expanded="false" aria-controls="pomodoroPanel"><svg class="pomodoro-ring" viewBox="0 0 44 44" aria-hidden="true"><circle class="pomodoro-ring-track" cx="22" cy="22" r="19"></circle><circle class="pomodoro-ring-fill" cx="22" cy="22" r="19"></circle></svg><span class="pomodoro-fruit-emoji">🍅</span><span class="pomodoro-mini-time">--:--</span></button><div class="pomodoro-panel" id="pomodoroPanel" hidden></div>';
   const headerActions=document.querySelector('.header-actions');
   const syncStatus=document.getElementById('syncStatus');
   if(headerActions && syncStatus) syncStatus.insertAdjacentElement('afterend',widget);
@@ -1960,14 +1985,23 @@ function updatePomodoroWidget() {
   const fruit=document.getElementById('pomodoroFruit'); const panel=document.getElementById('pomodoroPanel');
   if(!fruit || !panel) return;
   const seconds=pomodoro.running ? Math.max(0,Math.ceil((pomodoro.endAt-Date.now())/1000)) : pomodoro.remaining;
+  const phaseTotal=pomodoro.phase==='work'?(pomodoro.workSeconds||1500):(pomodoro.breakSeconds||300);
+  const elapsedFraction=pomodoro.mode ? Math.min(1,Math.max(0,1-(seconds/Math.max(1,phaseTotal)))) : 0;
   fruit.classList.toggle('active', Boolean(pomodoro.running || pomodoro.alarm));
   fruit.classList.toggle('alarming', Boolean(pomodoro.alarm));
+  fruit.dataset.phase=pomodoro.mode ? pomodoro.phase : 'idle';
+  fruit.style.setProperty('--pomodoro-progress', String(pomodoro.alarm ? 1 : elapsedFraction));
   fruit.querySelector('.pomodoro-mini-time').textContent=pomodoro.mode ? formatPomodoro(seconds) : '--:--';
   if(panel.hidden) return;
   const phase=pomodoro.phase==='work'?'Foco':'Pausa';
-  if(!pomodoro.mode) panel.innerHTML='<strong>Pomodoro</strong><span class="muted">Escolha o ritmo do ciclo</span><div class="pomodoro-options"><button class="icon-btn primary" data-pomodoro-start="25">25 + 5</button><button class="icon-btn" data-pomodoro-start="50">50 + 10</button></div>';
-  else if(pomodoro.alarm) panel.innerHTML=`<strong>Tempo encerrado</strong><span class="muted">${phase} concluído. O som continuará até você voltar.</span><button class="icon-btn primary" id="pomodoroContinue">Continuar · iniciar pausa</button><button class="tiny-btn" id="pomodoroReset">Encerrar ciclo</button>`;
-  else panel.innerHTML=`<strong>${phase} · ${formatPomodoro(seconds)}</strong><span class="muted">${pomodoro.running?'Em andamento':'Pausado · use o botão Continuar'}</span><div class="pomodoro-options">${pomodoro.running?'<button class="icon-btn" id="pomodoroPause">Pausar</button>':'<button class="icon-btn primary" id="pomodoroResume">Continuar</button>'}<button class="tiny-btn" id="pomodoroReset">Encerrar</button></div><label class="pomodoro-tick-toggle"><input type="checkbox" id="pomodoroTickToggle" ${pomodoro.tickEnabled?'checked':''}> Bipes nos últimos 10s</label>`;
+  const phaseEmoji=pomodoro.phase==='work'?'🎯':'☕';
+  panel.dataset.phase=pomodoro.mode ? pomodoro.phase : 'idle';
+  const dial=(pct,label,sub)=>`<div class="pomo-dial" style="--pomo-progress:${pct}"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="pomo-dial-track" cx="60" cy="60" r="52"></circle><circle class="pomo-dial-fill" cx="60" cy="60" r="52"></circle></svg><div class="pomo-dial-center"><span class="pomo-dial-time">${label}</span><span class="pomo-dial-sub">${sub}</span></div></div>`;
+  const cycles=getPomodoroCycles();
+  const cycleTally=`<div class="pomo-cycles" title="Ciclos de foco concluídos hoje">${'🍅'.repeat(Math.min(cycles,8))||'<span class="pomo-cycles-empty">Nenhum ciclo hoje ainda</span>'}<span class="pomo-cycles-count">${cycles>8?`${cycles} hoje`:cycles>0?`${cycles} ${cycles===1?'ciclo':'ciclos'} hoje`:''}</span></div>`;
+  if(!pomodoro.mode) panel.innerHTML=`<div class="pomo-head"><strong>Pomodoro</strong><span class="muted">Escolha o ritmo do ciclo de estudo</span></div><div class="pomodoro-options"><button class="pomo-choice" data-pomodoro-start="25"><strong>25<span>+5</span></strong><em>Clássico</em></button><button class="pomo-choice" data-pomodoro-start="50"><strong>50<span>+10</span></strong><em>Imersão</em></button></div>${cycleTally}`;
+  else if(pomodoro.alarm) panel.innerHTML=`<div class="pomo-head"><strong>Tempo encerrado</strong><span class="muted">${phaseEmoji} ${phase} concluído · o som continua até você voltar</span></div>${dial(1,'00:00','feito')}${cycleTally}<div class="pomodoro-options"><button class="icon-btn primary" id="pomodoroContinue">${pomodoro.phase==='work'?'Iniciar pausa':'Retomar foco'}</button><button class="tiny-btn" id="pomodoroReset">Encerrar ciclo</button></div>`;
+  else panel.innerHTML=`<div class="pomo-head"><strong>${phaseEmoji} ${phase}</strong><span class="pomo-status ${pomodoro.running?'is-running':''}">${pomodoro.running?'Em andamento':'Pausado'}</span></div>${dial(pomodoro.alarm?1:elapsedFraction,formatPomodoro(seconds),phase)}${cycleTally}<div class="pomodoro-options">${pomodoro.running?'<button class="icon-btn" id="pomodoroPause">⏸ Pausar</button>':'<button class="icon-btn primary" id="pomodoroResume">▶ Continuar</button>'}<button class="tiny-btn" id="pomodoroReset">Encerrar</button></div><label class="pomodoro-tick-toggle"><input type="checkbox" id="pomodoroTickToggle" ${pomodoro.tickEnabled?'checked':''}> Bipes nos últimos 10s</label>`;
   panel.querySelectorAll('[data-pomodoro-start]').forEach(button=>button.onclick=()=>startPomodoro(Number(button.dataset.pomodoroStart)));
   panel.querySelector('#pomodoroContinue')?.addEventListener('click',continuePomodoro);
   panel.querySelector('#pomodoroPause')?.addEventListener('click',pausePomodoro);

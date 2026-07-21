@@ -205,20 +205,49 @@ body.dark .daily-mission-card{background:#1c2626}
 body.dark .daily-mission-track .progress{background:#2b3838}
 body.dark .daily-mission-close{background:#233837}
 @media(max-width:620px){.daily-mission-trigger span{display:none}.daily-mission-trigger{padding:0 10px;width:38px;justify-content:center}}
-.global-pomodoro{position:fixed;right:18px;bottom:18px;z-index:1000;width:58px;height:58px}
-.pomodoro-fruit{position:relative;width:58px;height:58px;border:1px solid var(--line);border-radius:50%;background:var(--panel);box-shadow:0 8px 22px rgba(18,49,72,.16);font-size:29px;cursor:pointer;transition:.2s ease}
-.pomodoro-fruit:hover,.pomodoro-fruit.active{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(239,91,86,.18),0 10px 24px rgba(18,49,72,.2)}
-.pomodoro-fruit.active{border-color:#ef5b56;background:#fff4f1}
+.global-pomodoro{position:fixed;right:18px;bottom:18px;z-index:1000;width:58px;height:58px;--pomo-accent:#ef5b56;--pomo-accent-soft:rgba(239,91,86,.16)}
+.global-pomodoro [data-phase=break],.global-pomodoro[data-phase=break]{--pomo-accent:#16a178;--pomo-accent-soft:rgba(22,161,120,.16)}
+.pomodoro-fruit{position:relative;display:grid;place-items:center;width:58px;height:58px;border:0;padding:0;border-radius:50%;background:var(--panel);box-shadow:0 8px 22px rgba(18,49,72,.16);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease;--pomodoro-progress:0}
+.pomodoro-fruit[data-phase=break]{--pomo-accent:#16a178;--pomo-accent-soft:rgba(22,161,120,.16)}
+.pomodoro-fruit .pomodoro-fruit-emoji{position:relative;z-index:1;font-size:26px;line-height:1;transition:transform .2s ease}
+.pomodoro-fruit:hover,.pomodoro-fruit.active{transform:translateY(-2px);box-shadow:0 0 0 4px var(--pomo-accent-soft),0 10px 24px rgba(18,49,72,.2)}
+.pomodoro-fruit.active{background:color-mix(in srgb,var(--pomo-accent) 9%,var(--panel))}
+.pomodoro-fruit:hover .pomodoro-fruit-emoji{transform:scale(1.08)}
 .pomodoro-fruit.alarming{animation:pomodoro-pulse .8s infinite}
-.pomodoro-mini-time{position:absolute;right:-7px;bottom:-4px;padding:3px 6px;border-radius:999px;background:var(--blue);color:#fff;font-size:10px;font-weight:900;font-variant-numeric:tabular-nums}
-.pomodoro-panel{position:absolute;right:0;bottom:68px;width:min(280px,calc(100vw - 32px));display:grid;gap:8px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:0 14px 34px rgba(18,49,72,.2);opacity:0;transform:translate(12px,18px) scale(.2);transform-origin:bottom right;pointer-events:none;transition:opacity .18s ease,transform .18s ease}
+.pomodoro-ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);pointer-events:none}
+.pomodoro-ring circle{fill:none;stroke-width:3.5;stroke-linecap:round}
+.pomodoro-ring-track{stroke:var(--line)}
+.pomodoro-ring-fill{stroke:var(--pomo-accent);stroke-dasharray:119.4;stroke-dashoffset:calc(119.4 - 119.4 * var(--pomodoro-progress));transition:stroke-dashoffset .95s linear,stroke .3s ease}
+.pomodoro-fruit[data-phase=idle] .pomodoro-ring-fill{opacity:0}
+.pomodoro-mini-time{position:absolute;right:-7px;bottom:-4px;z-index:2;padding:3px 6px;border-radius:999px;background:var(--pomo-accent);color:#fff;font-size:10px;font-weight:900;font-variant-numeric:tabular-nums;box-shadow:0 3px 8px rgba(18,49,72,.25);transition:background .3s ease}
+.pomodoro-panel{position:absolute;right:0;bottom:68px;width:min(288px,calc(100vw - 32px));display:grid;gap:12px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:0 18px 44px rgba(18,49,72,.24);opacity:0;transform:translate(12px,18px) scale(.2);transform-origin:bottom right;pointer-events:none;transition:opacity .18s ease,transform .18s cubic-bezier(.2,.9,.3,1.2);--pomo-accent:#ef5b56;--pomo-accent-soft:rgba(239,91,86,.16)}
+.pomodoro-panel[data-phase=break]{--pomo-accent:#16a178;--pomo-accent-soft:rgba(22,161,120,.16)}
 .pomodoro-panel.is-open{opacity:1;transform:translate(0,0) scale(1);pointer-events:auto}
 .pomodoro-panel.is-closing{pointer-events:none}
-.pomodoro-panel strong{font-size:16px}.pomodoro-panel .muted{font-size:12px}.pomodoro-options{display:flex;gap:8px;flex-wrap:wrap}.pomodoro-options>*{flex:1}
-.pomodoro-tick-toggle{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:12px;color:var(--muted);cursor:pointer}
-@keyframes pomodoro-pulse{50%{filter:saturate(1.35);box-shadow:0 0 0 8px rgba(239,91,86,.2),0 10px 24px rgba(18,49,72,.2)}}
-body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{background:#3b2628}
-@media(max-width:620px){.global-pomodoro{right:12px;bottom:12px;width:52px;height:52px}.pomodoro-fruit{width:52px;height:52px;font-size:25px}.pomodoro-panel{bottom:62px}}
+.pomo-head{display:grid;gap:3px}.pomo-head strong{font-size:16px}.pomodoro-panel .muted{font-size:12px;color:var(--muted)}
+.pomo-status{font-size:12px;font-weight:700;color:var(--muted)}.pomo-status.is-running{color:var(--pomo-accent)}.pomo-status.is-running::before{content:'';display:inline-block;width:7px;height:7px;margin-right:5px;border-radius:50%;background:var(--pomo-accent);animation:pomodoro-blink 1.4s infinite}
+.pomo-dial{position:relative;justify-self:center;width:150px;height:150px}
+.pomo-dial svg{width:100%;height:100%;transform:rotate(-90deg)}
+.pomo-dial circle{fill:none;stroke-width:9;stroke-linecap:round}
+.pomo-dial-track{stroke:var(--line)}
+.pomo-dial-fill{stroke:var(--pomo-accent);stroke-dasharray:326.7;stroke-dashoffset:calc(326.7 - 326.7 * var(--pomo-progress,0));transition:stroke-dashoffset .95s linear,stroke .3s ease}
+.pomo-dial-center{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:2px}
+.pomo-dial-time{font-size:32px;font-weight:900;font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.pomo-dial-sub{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--pomo-accent)}
+.pomodoro-options{display:flex;gap:8px;flex-wrap:wrap}.pomodoro-options>*{flex:1}
+.pomodoro-options .icon-btn.primary{background:var(--pomo-accent);border-color:var(--pomo-accent)}
+.pomo-choice{display:grid;gap:2px;justify-items:center;padding:12px 8px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--text);cursor:pointer;transition:.18s ease}
+.pomo-choice:hover{border-color:var(--pomo-accent);background:var(--pomo-accent-soft);transform:translateY(-2px)}
+.pomo-choice strong{font-size:24px;font-weight:900}.pomo-choice strong span{font-size:13px;color:var(--muted);font-weight:700}.pomo-choice em{font-size:11px;font-style:normal;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+.pomo-cycles{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;justify-content:center;padding:9px 10px;border-radius:12px;background:var(--pomo-accent-soft);font-size:16px;line-height:1}
+.pomo-cycles-empty{font-size:12px;color:var(--muted)}
+.pomo-cycles-count{flex-basis:100%;text-align:center;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--pomo-accent)}
+.pomodoro-tick-toggle{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer}
+@keyframes pomodoro-pulse{50%{filter:saturate(1.35);box-shadow:0 0 0 8px var(--pomo-accent-soft),0 10px 24px rgba(18,49,72,.2)}}
+@keyframes pomodoro-blink{50%{opacity:.25}}
+body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{background:color-mix(in srgb,var(--pomo-accent) 22%,#1b222c)}
+@media(max-width:620px){.global-pomodoro{right:12px;bottom:12px;width:52px;height:52px}.pomodoro-fruit{width:52px;height:52px}.pomodoro-fruit .pomodoro-fruit-emoji{font-size:23px}.pomodoro-panel{bottom:62px}}
+@media(prefers-reduced-motion:reduce){.pomodoro-ring-fill,.pomo-dial-fill{transition:none}.pomodoro-fruit.alarming{animation:none}.pomo-status.is-running::before{animation:none}}
 .timer-face{font-size:42px;font-weight:900;line-height:1;margin:12px 0;color:var(--ink);font-variant-numeric:tabular-nums}
 .timer-modes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .timer-mode{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px;font-weight:800}
@@ -1625,7 +1654,8 @@ body.dark .rx-safety{background:#332a18;color:#ffe6ad;border-color:#765c25}body.
 /* Pomodoro permanece no cabecalho, junto do estado de sincronizacao. */
 .header-actions{overflow:visible}
 .global-pomodoro{position:relative;right:auto;bottom:auto;z-index:45;width:42px;height:42px;flex:0 0 42px}
-.pomodoro-fruit{width:42px;height:42px;font-size:22px;box-shadow:none}
+.pomodoro-fruit{width:42px;height:42px;box-shadow:none}
+.pomodoro-fruit .pomodoro-fruit-emoji{font-size:19px}
 .pomodoro-mini-time{right:-8px;bottom:-5px;font-size:9px}
 .pomodoro-panel{right:0;top:50px;bottom:auto;transform:translate(12px,-12px) scale(.2);transform-origin:top right}
 .pomodoro-panel.is-open{transform:translate(0,0) scale(1)}
@@ -1639,7 +1669,7 @@ body.dark .rx-safety{background:#332a18;color:#ffe6ad;border-color:#765c25}body.
 .schedule-study-icon.future{border-color:var(--line);background:var(--panel);color:#9aa5a1}
 .schedule-study-icon:hover{box-shadow:var(--focus);transform:translateY(-1px)}
 body.dark .schedule-study-icon.done{background:#153a31;color:#63d5ae}body.dark .schedule-study-icon.missing{background:#452522;color:#ff9187}
-@media(max-width:620px){.global-pomodoro{right:auto;bottom:auto;width:40px;height:40px}.pomodoro-fruit{width:40px;height:40px;font-size:21px}.pomodoro-panel{top:48px;bottom:auto}.schedule-study-icons{display:flex;margin:8px 0 0 12px}}
+@media(max-width:620px){.global-pomodoro{right:auto;bottom:auto;width:40px;height:40px}.pomodoro-fruit{width:40px;height:40px}.pomodoro-fruit .pomodoro-fruit-emoji{font-size:18px}.pomodoro-panel{top:48px;bottom:auto}.schedule-study-icons{display:flex;margin:8px 0 0 12px}}
 
 /* No celular, o painel fica preso à margem direita da tela e nunca extrapola o viewport. */
 @media(max-width:620px){.pomodoro-panel,.pomodoro-panel.open-right,.pomodoro-panel.open-left{position:fixed;top:var(--pomodoro-mobile-top,68px);right:12px;left:auto;width:min(280px,calc(100vw - 24px));max-height:calc(100dvh - var(--pomodoro-mobile-top,68px) - 12px);overflow:auto;transform-origin:top right;transform:translate(0,-12px) scale(.2)}.pomodoro-panel.is-open,.pomodoro-panel.open-right.is-open,.pomodoro-panel.open-left.is-open{transform:translate(0,0) scale(1)}}
