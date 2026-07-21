@@ -49,6 +49,7 @@ const LESSON_MIN_QUESTIONS = 10;
 const LESSON_MIN_FLASHCARDS = 10;
 const DAILY_QUESTION_TARGET = 20;
 const DAILY_FLASHCARD_TARGET = 30;
+const FLASHCARD_SPEED_TARGET_SECONDS = 20;
 const STUDY_DAY_START_HOUR = 5;
 const ENAMED_AREAS = ['Clínica Médica','Pediatria','Ginecologia e Obstetrícia','Cirurgia Geral','Medicina de Família e Comunidade'];
 let questionBank = [];
@@ -82,7 +83,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
@@ -2093,6 +2094,13 @@ function updateAutoStudyIndicator() {
   });
   if(studyTimeTracker.startedAt && elapsed % 5 === 0) persistStudyTimerSession();
   if(studyTimeTracker.startedAt && elapsed >= 30 && Date.now()-n(studyTimeTracker.lastSavedAt)>=30000) checkpointAutoStudyTime();
+  const speedClock = document.getElementById('flashcardSpeedClock');
+  if(speedClock) {
+    const target = n(speedClock.dataset.speedTarget) || FLASHCARD_SPEED_TARGET_SECONDS;
+    const cardSeconds = ui.flashcardCardStartedAt ? Math.round((Date.now() - ui.flashcardCardStartedAt) / 1000) : 0;
+    speedClock.textContent = `⚡ ${cardSeconds}s`;
+    speedClock.classList.toggle('flashcard-speed-over', cardSeconds > target);
+  }
 }
 function autoStudyElapsedSeconds(now=Date.now()) {
   if(!studyTimeTracker.kind) return 0;
@@ -6173,6 +6181,12 @@ function renderFlashcards() {
   ui.flashcardIndex = Math.max(0, Math.min(n(ui.flashcardIndex), Math.max(cards.length - 1, 0)));
   const study = ui.flashcardSessionDone ? null : cards[ui.flashcardIndex];
   ui.flashcardCurrentCardId = study?.id || '';
+  if(ui.flashcardSpeedMode && ui.flashcardFocusMode && study && !ui.flashcardFocusPaused) {
+    if(ui.flashcardSpeedCardId !== study.id) { ui.flashcardSpeedCardId = study.id; ui.flashcardCardStartedAt = Date.now(); }
+  } else if(!ui.flashcardFocusPaused) {
+    ui.flashcardSpeedCardId = '';
+    ui.flashcardCardStartedAt = 0;
+  }
   const groups = groupFlashcards(cards);
   const selectedBlock = ui.flashcardBlock || 'Todos';
   const blockCards = selectedBlock === 'Todos' ? all : all.filter(card => String(card.weeklyBlockId || card.block) === String(selectedBlock));
@@ -6200,6 +6214,8 @@ function renderFlashcards() {
   if(toggleLibrary) toggleLibrary.onclick = () => { ui.flashcardShowLibrary = !ui.flashcardShowLibrary; renderFlashcards(); };
   const focusToggle = document.getElementById('flashcardFocusToggle');
   if(focusToggle) focusToggle.onclick = () => { ui.flashcardFocusMode = !ui.flashcardFocusMode; ui.flashcardFocusPaused = false; renderFlashcards(); };
+  const speedToggle = document.getElementById('flashcardSpeedToggle');
+  if(speedToggle) speedToggle.onclick = () => { ui.flashcardSpeedMode = !ui.flashcardSpeedMode; ui.flashcardSpeedCardId = ''; ui.flashcardCardStartedAt = 0; renderFlashcards(); };
   const exportBtn = document.getElementById('ankiExportBtn');
   if(exportBtn) exportBtn.onclick = exportAnkiTsv;
   const backupBtn = document.getElementById('flashcardBackupBtn');
@@ -6361,7 +6377,7 @@ function renderFlashcardStudy(card, queue=[]) {
   if(!card) return '<div class="flashcard-empty-session"><div><h2>Fim da sessão</h2><div class="muted">Nenhum flashcard neste filtro agora. Troque o filtro ou crie novos cards nas questões.</div></div></div>';
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
-  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today${ui.flashcardFocusMode ? ' flashcard-focus-clock' : ''}" id="flashcardFocusClock" data-auto-study-clock data-auto-study-prefix="${ui.flashcardFocusMode ? (ui.flashcardFocusPaused ? 'Pausado ·' : 'Foco ·') : 'Fora do foco'}" title="${ui.flashcardFocusMode ? 'Clique para pausar/retomar o tempo' : 'Ative o modo foco para contar o tempo'}">Tempo pausado</span><span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span><button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
+  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today${ui.flashcardFocusMode ? ' flashcard-focus-clock' : ''}" id="flashcardFocusClock" data-auto-study-clock data-auto-study-prefix="${ui.flashcardFocusMode ? (ui.flashcardFocusPaused ? 'Pausado ·' : 'Foco ·') : 'Fora do foco'}" title="${ui.flashcardFocusMode ? 'Clique para pausar/retomar o tempo' : 'Ative o modo foco para contar o tempo'}">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;

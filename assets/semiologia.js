@@ -666,8 +666,8 @@
       case 'p':
       default: {
         const id = topId + ':' + idx;
-        const hl = marks[id] ? ' semio-hl' : '';
-        return `<p class="semio-p${hl}" data-hl-id="${esc(id)}">${esc(b.x)}</p>`;
+        const inner = marks[id] != null ? marks[id] : esc(b.x);
+        return `<p class="semio-p" data-hl-id="${esc(id)}">${inner}</p>`;
       }
     }
   }
@@ -728,7 +728,7 @@
       <div class="semio-topic-head"><h2>${esc(topico.titulo)}</h2>
         <div class="semio-topic-tools">
           <button class="semio-btn ghost sm" data-focus-toggle>🎯 Modo foco</button>
-          <span class="semio-muted sm">Selecione um parágrafo para marcá-lo.</span>
+          <span class="semio-muted sm">Selecione um trecho de texto para marcá-lo. Clique numa marcação para remover.</span>
         </div></div>
       <article class="semio-flow${focus}">${parts}</article>
       <button class="semio-btn wide" data-mark-read="${esc(mod.id + ':' + topico.id)}">✓ Marcar tópico como lido</button>`;
@@ -842,6 +842,7 @@
     const cor = CAT_COR[s.cat] || '#2f7d6f';
     return `<div class="semio-sign-detail">
       <div class="semio-sign-head"><span class="semio-cat" style="background:${cor}">${esc(s.cat)}</span><h3>${esc(s.nome)}</h3></div>
+      ${SIGN_FIG[s.id] ? `<figure class="semio-sign-fig">${SIGN_FIG[s.id]}<figcaption>Ilustração original — esquema didático</figcaption></figure>` : ''}
       <div class="semio-def"><b>O que é</b><p>${esc(s.oQue)}</p></div>
       <div class="semio-def"><b>Como pesquisar</b><p>${esc(s.comoPesquisar)}</p></div>
       <div class="semio-def"><b>Significado clínico</b><p>${esc(s.significado)}</p></div>
@@ -957,13 +958,34 @@
     ROOT.querySelector('[data-back-topicos]')?.addEventListener('click', () => { S.ui.aulaTopicoId = null; save(); paint(); });
     ROOT.querySelector('[data-focus-toggle]')?.addEventListener('click', () => { S.ui.focus = !S.ui.focus; save(); paint(); });
     ROOT.querySelector('[data-mark-read]')?.addEventListener('click', (e) => { S.progress['aula:' + e.target.dataset.markRead] = true; save(); paint(); });
-    // marca-texto por parágrafo
-    ROOT.querySelectorAll('.semio-p[data-hl-id]').forEach((p) => p.onclick = () => {
+    // marca-texto: seleciona qualquer trecho do parágrafo para marcar
+    ROOT.querySelectorAll('.semio-p[data-hl-id]').forEach((p) => {
+      p.addEventListener('mouseup', () => {
+        const sel = window.getSelection();
+        if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+        const range = sel.getRangeAt(0);
+        if (!p.contains(range.commonAncestorContainer)) return;
+        if (range.startContainer.nodeType !== Node.TEXT_NODE || range.endContainer.nodeType !== Node.TEXT_NODE) return;
+        const mark = document.createElement('mark');
+        mark.className = 'semio-hl-mark';
+        try { range.surroundContents(mark); } catch (err) { return; }
+        sel.removeAllRanges();
+        const topId = S.ui.aulaModId + ':' + S.ui.aulaTopicoId;
+        S.highlights[topId] = S.highlights[topId] || {};
+        S.highlights[topId][p.dataset.hlId] = p.innerHTML;
+        save();
+      });
+    });
+    ROOT.querySelectorAll('.semio-hl-mark').forEach((mk) => mk.onclick = (e) => {
+      e.stopPropagation();
+      const p = mk.closest('.semio-p[data-hl-id]');
+      if (!p) return;
+      mk.replaceWith(...mk.childNodes);
+      p.normalize();
       const topId = S.ui.aulaModId + ':' + S.ui.aulaTopicoId;
       S.highlights[topId] = S.highlights[topId] || {};
-      const id = p.dataset.hlId;
-      if (S.highlights[topId][id]) delete S.highlights[topId][id]; else S.highlights[topId][id] = true;
-      p.classList.toggle('semio-hl'); save();
+      S.highlights[topId][p.dataset.hlId] = p.innerHTML;
+      save();
     });
 
     // Manobras
@@ -1128,9 +1150,9 @@
     .semio-btn.sm{padding:5px 10px;font-size:.8rem}.semio-btn.wide{width:100%;margin-top:12px}
     .semio-flow{line-height:1.62;margin:6px 0}
     .semio-h{margin:18px 0 6px;font-size:1.05rem;color:var(--semio-acc2)}
-    .semio-p{margin:9px 0;cursor:pointer;border-radius:4px;transition:background .12s}
-    .semio-p:hover{background:rgba(47,125,111,.06)}
-    .semio-hl{background:rgba(255,214,79,.5)!important}
+    .semio-p{margin:9px 0;border-radius:4px}
+    .semio-hl-mark{background:rgba(255,214,79,.6);border-radius:2px;padding:0 1px;cursor:pointer}
+    .semio-hl-mark:hover{background:rgba(255,193,7,.75)}
     .semio-ul{margin:8px 0;padding-left:20px}.semio-ul li{margin:5px 0}
     .semio-callout{display:flex;gap:10px;padding:11px 13px;border-radius:12px;margin:10px 0;font-size:.9rem;line-height:1.5}
     .semio-callout-ic{flex:none}
@@ -1177,6 +1199,9 @@
     .semio-num{flex:none;width:22px;height:22px;border-radius:6px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:700}
     .semio-sign-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}.semio-sign-head h3{margin:0}
     .semio-cat{font-size:.7rem;color:#fff;padding:3px 9px;border-radius:999px;font-weight:700}
+    .semio-sign-fig{margin:6px 0 10px;text-align:center;background:var(--card,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:10px}
+    .semio-sign-svg{width:100%;max-width:260px;height:auto}
+    .semio-sign-fig figcaption{font-size:.72rem;color:var(--muted,#667085);margin-top:4px}
     @media(max-width:640px){.semio-corpo{grid-template-columns:1fr}.semio-corpo-fig{position:static;max-width:200px;margin:0 auto}}
     .semio-focus .semio-callout,.semio-focus .semio-doc{opacity:1}
     @media(max-width:560px){.semio-grid3{grid-template-columns:1fr 1fr}.semio-cards{grid-template-columns:1fr}.semio-tbl td:first-child{white-space:normal}}
