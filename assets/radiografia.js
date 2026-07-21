@@ -683,8 +683,16 @@
     .radio-aula-figure img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;background:#05070a}
     .radio-aula-figure figcaption{padding:8px 12px;font-size:12.5px;color:var(--muted,#5b6472);border-top:1px solid var(--border,#eef1f7);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
     .radio-aula-ampliar{white-space:nowrap;opacity:.75}
-    mark.radio-hl{background:#ffe066;color:#2b2600;border-radius:3px;padding:0 2px;cursor:pointer}
-    mark.radio-hl:hover{background:#ffd43b}
+    mark.radio-hl{background:#ffe066;color:#2b2600;border-radius:3px;padding:0 2px;cursor:pointer;transition:filter .15s}
+    mark.radio-hl:hover{filter:brightness(.93)}
+    .radio-hl-pop{position:fixed;z-index:2100;display:flex;align-items:center;gap:6px;background:#1c1f26;border-radius:10px;padding:6px 8px;box-shadow:0 8px 24px rgba(0,0,0,.4);animation:radioHlPopIn .12s ease-out}
+    @keyframes radioHlPopIn{from{opacity:0;transform:translateY(3px) scale(.96)}to{opacity:1;transform:none}}
+    .radio-hl-swatch{width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.45);cursor:pointer;padding:0}
+    .radio-hl-swatch:hover{border-color:#fff;transform:scale(1.1)}
+    .radio-hl-swatch.active{border-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.25)}
+    .radio-hl-pop-cancel,.radio-hl-pop-del{border:0;background:transparent;color:#fff;font-size:14px;line-height:1;padding:5px 7px;border-radius:6px;cursor:pointer}
+    .radio-hl-pop-cancel:hover,.radio-hl-pop-del:hover{background:rgba(255,255,255,.15)}
+    .radio-hl-pop-sep{width:1px;height:18px;background:rgba(255,255,255,.22);margin:0 2px}
     .radio-lightbox{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:16px}
     .radio-lightbox.open{display:flex}
     .radio-lightbox-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.85)}
@@ -695,6 +703,18 @@
     .radio-lightbox-imgwrap.zoom .radio-lightbox-img{transform:scale(1.7);cursor:zoom-out}
     .radio-lightbox-imgwrap.inv .radio-lightbox-img{filter:invert(1) hue-rotate(180deg)}
     .radio-lightbox-caption{padding:10px 14px;color:#e8edf2;font-size:13px;background:#05070a;border-top:1px solid rgba(255,255,255,.08);flex-shrink:0}
+    .radio-focus-btn{display:inline-flex;align-items:center;gap:6px}
+    body.radio-focus-on .app-sidebar,
+    body.radio-focus-on .app-header,
+    body.radio-focus-on .radio-subnav,
+    body.radio-focus-on .section-title{display:none !important}
+    body.radio-focus-on main{margin:0 !important;max-width:none !important;padding:0 !important}
+    body.radio-focus-on .radio-wrap{gap:0}
+    body.radio-focus-on .radio-aula-flow{max-width:680px;margin:0 auto;padding:36px 20px 80px;font-size:1.08em}
+    body.radio-focus-on .radio-aula-p{font-size:17px;line-height:1.85}
+    body.radio-focus-on .radio-aula-tip{font-size:15.5px;line-height:1.75}
+    body.radio-focus-on .radio-aula-figure{max-width:100%}
+    .radio-focus-exit{position:fixed;top:14px;right:16px;z-index:500;box-shadow:0 4px 14px rgba(0,0,0,.15)}
     `;
     document.head.appendChild(style);
   }
@@ -749,6 +769,16 @@
     document.removeEventListener('keydown', lightboxEscHandler);
   }
   function lightboxEscHandler(e) { if (e.key === 'Escape') closeLightbox(); }
+  // ---------- Modo foco (leitura sem distração nas Aulas) ----------
+  function focusEscHandler(e) { if (e.key === 'Escape') toggleFocusMode(false); }
+  function toggleFocusMode(on) {
+    const body = document.body;
+    const enable = typeof on === 'boolean' ? on : !body.classList.contains('radio-focus-on');
+    body.classList.toggle('radio-focus-on', enable);
+    document.querySelectorAll('.radio-focus-exit').forEach((b) => { b.style.display = enable ? 'inline-flex' : 'none'; });
+    if (enable) document.addEventListener('keydown', focusEscHandler);
+    else document.removeEventListener('keydown', focusEscHandler);
+  }
   function openLightbox(src, caption) {
     const box = lightboxEl();
     box.innerHTML = `<div class="radio-lightbox-backdrop" data-lb-close></div>
@@ -775,38 +805,87 @@
   }
 
   // ---------- Marca-texto (highlighter) nos blocos de texto das Aulas ----------
+  const HL_COLORS = [
+    { id: 'yellow', hex: '#ffe066', label: 'Amarelo' },
+    { id: 'red', hex: '#ffa8a8', label: 'Vermelho' },
+  ];
+  function hlColorHex(id) { return (HL_COLORS.find((c) => c.id === id) || HL_COLORS[0]).hex; }
+  function normalizeMark(raw) { return typeof raw === 'string' ? { t: raw, c: 'yellow' } : { t: raw.t, c: raw.c || 'yellow' }; }
+  let HL_POPOVER = null;
+  function hideHlPopover() { if (HL_POPOVER) { HL_POPOVER.remove(); HL_POPOVER = null; } }
+  function positionHlPopover(pop, rect) {
+    document.body.appendChild(pop);
+    const w = pop.offsetWidth, h = pop.offsetHeight;
+    pop.style.left = Math.max(8, Math.min(window.innerWidth - w - 8, rect.left + rect.width / 2 - w / 2)) + 'px';
+    pop.style.top = Math.max(8, rect.top - h - 8) + 'px';
+  }
+  // Após selecionar um trecho: mostra só as cores, natural como marcar com caneta de verdade.
+  function showHlColorPopover(rect, activeColor, onPick, onDelete) {
+    hideHlPopover();
+    const pop = document.createElement('div');
+    pop.className = 'radio-hl-pop';
+    pop.innerHTML = HL_COLORS.map((c) => `<button type="button" class="radio-hl-swatch${c.id === activeColor ? ' active' : ''}" data-c="${c.id}" style="background:${c.hex}" title="${c.label}" aria-label="${c.label}"></button>`).join('')
+      + (onDelete ? '<span class="radio-hl-pop-sep"></span><button type="button" class="radio-hl-pop-del" title="Excluir marcação" aria-label="Excluir">🗑</button>' : '<button type="button" class="radio-hl-pop-cancel" title="Cancelar" aria-label="Cancelar">✕</button>');
+    pop.querySelectorAll('.radio-hl-swatch').forEach((btn) => { btn.onclick = (e) => { e.stopPropagation(); onPick(btn.dataset.c); }; });
+    const cancelBtn = pop.querySelector('.radio-hl-pop-cancel');
+    if (cancelBtn) cancelBtn.onclick = (e) => { e.stopPropagation(); window.getSelection().removeAllRanges(); hideHlPopover(); };
+    const delBtn = pop.querySelector('.radio-hl-pop-del');
+    if (delBtn) delBtn.onclick = (e) => { e.stopPropagation(); onDelete(); };
+    positionHlPopover(pop, rect);
+    HL_POPOVER = pop;
+  }
   function wireHighlighter(scope) {
     const flow = scope.querySelector('.radio-aula-flow');
     if (!flow) return;
     const topico = currentAulaTopico();
     if (!topico) return;
+    if (!window.__radioHlHooked) {
+      window.__radioHlHooked = true;
+      document.addEventListener('mousedown', (e) => { if (HL_POPOVER && !HL_POPOVER.contains(e.target)) hideHlPopover(); });
+      document.addEventListener('scroll', hideHlPopover, true);
+    }
     flow.onmouseup = flow.ontouchend = () => {
-      const sel = window.getSelection();
-      if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
-      const range = sel.getRangeAt(0);
-      const target = range.commonAncestorContainer.nodeType === 1 ? range.commonAncestorContainer : range.commonAncestorContainer.parentElement;
-      const holder = target && target.closest ? target.closest('[data-hl-target]') : null;
-      if (!holder) return; // seleção fora de um bloco marcável
-      const text = range.toString();
-      if (!text.trim() || text.length > 400) { sel.removeAllRanges(); return; }
-      const blockEl = holder.closest('[data-hl-block]');
-      const blockIndex = +blockEl.dataset.hlBlock;
-      const S = st();
-      S.highlights[topico.id] = S.highlights[topico.id] || {};
-      S.highlights[topico.id][blockIndex] = S.highlights[topico.id][blockIndex] || [];
-      S.highlights[topico.id][blockIndex].push(text);
-      save(); sel.removeAllRanges(); mountBody();
+      setTimeout(() => {
+        const sel = window.getSelection();
+        if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
+        const range = sel.getRangeAt(0);
+        const target = range.commonAncestorContainer.nodeType === 1 ? range.commonAncestorContainer : range.commonAncestorContainer.parentElement;
+        const holder = target && target.closest ? target.closest('[data-hl-target]') : null;
+        if (!holder) return; // seleção fora de um bloco marcável
+        const text = range.toString();
+        if (!text.trim() || text.length > 400) { sel.removeAllRanges(); return; }
+        const blockEl = holder.closest('[data-hl-block]');
+        const blockIndex = +blockEl.dataset.hlBlock;
+        const rect = range.getBoundingClientRect();
+        showHlColorPopover(rect, null, (color) => {
+          const S = st();
+          S.highlights[topico.id] = S.highlights[topico.id] || {};
+          S.highlights[topico.id][blockIndex] = S.highlights[topico.id][blockIndex] || [];
+          S.highlights[topico.id][blockIndex].push({ t: text, c: color });
+          save(); window.getSelection().removeAllRanges(); hideHlPopover(); mountBody();
+        }, null);
+      }, 0);
     };
     flow.querySelectorAll('mark.radio-hl').forEach((m) => {
-      m.onclick = () => {
+      m.onclick = (ev) => {
+        ev.stopPropagation();
         const blockEl = m.closest('[data-hl-block]');
         const blockIndex = +blockEl.dataset.hlBlock;
-        const S = st();
-        const arr = S.highlights[topico.id] && S.highlights[topico.id][blockIndex];
-        if (!arr) return;
-        const i = arr.indexOf(m.dataset.hlText);
-        if (i !== -1) arr.splice(i, 1);
-        save(); mountBody();
+        const hlIdx = +m.dataset.hlIdx;
+        const rect = m.getBoundingClientRect();
+        showHlColorPopover(rect, m.dataset.hlColor, (color) => {
+          const S = st();
+          const arr = S.highlights[topico.id] && S.highlights[topico.id][blockIndex];
+          if (!arr || !arr[hlIdx]) return;
+          arr[hlIdx] = { t: normalizeMark(arr[hlIdx]).t, c: color };
+          save(); hideHlPopover(); mountBody();
+        }, () => {
+          const S = st();
+          const arr = S.highlights[topico.id] && S.highlights[topico.id][blockIndex];
+          if (!arr || !arr[hlIdx]) return;
+          arr.splice(hlIdx, 1);
+          save(); hideHlPopover(); mountBody();
+        });
       };
     });
   }
@@ -1121,14 +1200,15 @@
     if (!marks || !marks.length) return esc(text);
     // aplica na ordem em que os trechos aparecem no texto (primeira ocorrência de cada)
     let html = esc(text);
-    marks.forEach((m) => {
-      const needle = esc(m);
+    marks.forEach((raw, idx) => {
+      const m = normalizeMark(raw);
+      const needle = esc(m.t);
       const i = html.indexOf(needle);
       if (i === -1) return;
       // evita marcar dentro de uma <mark> já existente
       const before = html.slice(0, i), after = html.slice(i + needle.length);
       if (/<mark[^>]*>[^<]*$/.test(before)) return;
-      html = before + '<mark class="radio-hl" data-hl-text="' + needle.replace(/"/g, '&quot;') + '">' + needle + '</mark>' + after;
+      html = before + `<mark class="radio-hl" data-hl-idx="${idx}" data-hl-color="${m.c}" style="background:${hlColorHex(m.c)}">` + needle + '</mark>' + after;
     });
     return html;
   }
@@ -1150,9 +1230,13 @@
     return `<button class="radio-btn ghost sm" data-radio-back-topico>← Voltar a ${esc(mod.nome)}</button>
       <div style="margin:10px 0"><span class="radio-tag">Módulo ${mod.id}</span><h2 style="margin:6px 0 0">${esc(topico.titulo)}</h2>
         <p class="radio-muted" style="margin:4px 0 0">Selecione qualquer trecho do texto para marcar com marca-texto. Toque numa imagem para ampliar.</p>
-        ${Object.keys(marks).length ? `<button class="radio-btn ghost sm" data-radio-clear-hl style="margin-top:6px">Limpar marcações deste tópico</button>` : ''}
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px">
+          <button class="radio-btn ghost sm radio-focus-btn" data-radio-focus-toggle>🎯 Modo foco</button>
+          ${Object.keys(marks).length ? `<button class="radio-btn ghost sm" data-radio-clear-hl>Limpar marcações deste tópico</button>` : ''}
+        </div>
       </div>
-      <div class="radio-aula-flow">${parts.join('')}</div>`;
+      <div class="radio-aula-flow">${parts.join('')}</div>
+      <button class="radio-btn radio-focus-exit" data-radio-focus-toggle style="display:none">✕ Sair do modo foco</button>`;
   }
   function aulasHtml() {
     const S = st();
@@ -1179,8 +1263,9 @@
       default: return inicioHtml();
     }
   }
-  function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'sinais') S.ui.sinalId = null; if (sub !== 'casos') S.ui.casoId = null; if (sub !== 'aulas') { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; } save(); mountBody(); }
+  function go(sub) { toggleFocusMode(false); const S = st(); S.ui.sub = sub; if (sub !== 'sinais') S.ui.sinalId = null; if (sub !== 'casos') S.ui.casoId = null; if (sub !== 'aulas') { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; } save(); mountBody(); }
   function goTo(t) {
+    toggleFocusMode(false);
     const S = st();
     S.ui.sub = t.sub;
     if (t.fundTab) S.ui.fundTab = t.fundTab;
@@ -1222,12 +1307,13 @@
     el.querySelectorAll('[data-radio-fund-done]').forEach((b) => b.onclick = () => { st().progress['fund:' + b.dataset.radioFundDone] = todayISO(); save(); b.textContent = 'Módulo marcado ✓'; b.disabled = true; });
     el.querySelectorAll('[data-radio-open-mod]').forEach((b) => b.onclick = () => { const S = st(); S.ui.aulaModId = +b.dataset.radioOpenMod; S.ui.aulaTopicoId = null; save(); mountBody(); });
     el.querySelectorAll('[data-radio-back-mod]').forEach((b) => b.onclick = () => { st().ui.aulaModId = null; save(); mountBody(); });
-    el.querySelectorAll('[data-radio-open-topico]').forEach((b) => b.onclick = () => { st().ui.aulaTopicoId = b.dataset.radioOpenTopico; save(); mountBody(); });
-    el.querySelectorAll('[data-radio-back-topico]').forEach((b) => b.onclick = () => { st().ui.aulaTopicoId = null; save(); mountBody(); });
+    el.querySelectorAll('[data-radio-open-topico]').forEach((b) => b.onclick = () => { toggleFocusMode(false); st().ui.aulaTopicoId = b.dataset.radioOpenTopico; save(); mountBody(); });
+    el.querySelectorAll('[data-radio-back-topico]').forEach((b) => b.onclick = () => { toggleFocusMode(false); st().ui.aulaTopicoId = null; save(); mountBody(); });
     el.querySelectorAll('[data-radio-clear-hl]').forEach((b) => b.onclick = () => {
       const topico = currentAulaTopico(); if (!topico) return;
       delete st().highlights[topico.id]; save(); mountBody();
     });
+    el.querySelectorAll('[data-radio-focus-toggle]').forEach((b) => b.onclick = () => toggleFocusMode());
     wireAulaFigures(el);
     wireHighlighter(el);
     wireViewer(el);

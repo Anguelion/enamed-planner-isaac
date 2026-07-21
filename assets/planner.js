@@ -124,14 +124,14 @@ const views = [
   ['painel','Dashboard','dashboard'],
   ['cronograma','Missão','mission'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'],
   ['aulas','Aulas','video'], ['questoes','Questões','question'], ['simulados','Simulados','simulation'], ['caderno-erros','Caderno de erros','caderno'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'],
-  ['prescricao','Prescrição','prescription'], ['ecg','ECG','medical'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
+  ['prescricao','Prescrição','prescription'], ['semiologia','Semiologia','medical'], ['ecg','ECG','medical'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
   ['importar-questoes','Adicionar questões','upload'],
   ['ferramentas','Ferramentas','settings']
 ];
 const VIEW_GROUPS = {
   cronograma:'Meus estudos', historico:'Meus estudos', areas:'Meus estudos', analise:'Meus estudos',
   aulas:'Conteúdo', questoes:'Conteúdo', simulados:'Conteúdo', 'caderno-erros':'Conteúdo', flashcards:'Conteúdo', materiais:'Conteúdo',
-  prescricao:'Habilidade', ecg:'Habilidade', radiografia:'Habilidade', feynman:'Habilidade',
+  prescricao:'Habilidade', semiologia:'Habilidade', ecg:'Habilidade', radiografia:'Habilidade', feynman:'Habilidade',
   'importar-questoes':'Outros',
   ferramentas:'Configuração'
 };
@@ -281,8 +281,8 @@ function saveStateOnly(options={}) {
   clearTimeout(saveStateOnlyTimer);
   saveStateOnlyTimer = setTimeout(flushSaveStateOnly, 400);
 }
-document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'hidden' && saveStateOnlyTimer) flushSaveStateOnly(); });
-window.addEventListener('beforeunload', () => { if(saveStateOnlyTimer) flushSaveStateOnly(); });
+document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'hidden') { if(saveStateOnlyTimer) flushSaveStateOnly(); flushCloudSaveNow(); } });
+window.addEventListener('beforeunload', () => { if(saveStateOnlyTimer) flushSaveStateOnly(); flushCloudSaveNow(); });
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
@@ -765,10 +765,10 @@ function applyTheme(theme) {
   }
 }
 
-function setSyncStatus(text, kind='') {
+function setSyncStatus(text, kind='', fullText='') {
   const box = document.getElementById('syncStatus');
   document.getElementById('syncText').textContent = text;
-  box.title = text;
+  box.title = fullText || text;
   box.className = `sync-status ${kind}`;
 }
 function showStudyToast(message) {
@@ -1071,14 +1071,21 @@ function invalidateQuestionBankRenderCache() {
   renderCache.questionAvailabilityReady = false;
   renderCache.questionAvailabilityScheduleKey = '';
 }
-function scheduleCloudSave() {
+const CLOUD_SYNC_DEBOUNCE_MS = 3 * 60 * 1000;
+function scheduleCloudSave({immediate=false}={}) {
   if(!currentUser || !sbClient) return;
-  if(!CLOUD_SYNC_ALLOWED) { setSyncStatus('Ambiente de teste — sincronização desativada', 'error'); return; }
+  if(!CLOUD_SYNC_ALLOWED) { setSyncStatus('Nuvem off', 'error'); return; }
   cloudDirty = true;
   cloudRevision += 1;
   clearTimeout(syncTimer);
-  setSyncStatus('Alterações pendentes', 'busy');
-  syncTimer = setTimeout(pushCloudState, 900);
+  setSyncStatus('Pendente', 'busy');
+  syncTimer = setTimeout(pushCloudState, immediate ? 400 : CLOUD_SYNC_DEBOUNCE_MS);
+}
+function flushCloudSaveNow() {
+  if(!currentUser || !sbClient || !CLOUD_SYNC_ALLOWED) return;
+  if(!cloudDirty && !syncTimer) return;
+  clearTimeout(syncTimer);
+  pushCloudState();
 }
 async function pushCloudState({skipRemoteMerge=false}={}) {
   if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
@@ -1089,7 +1096,7 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
   }
   syncInFlight = true;
   const pushRevision = cloudRevision;
-  setSyncStatus('Sincronizando...', 'busy');
+  setSyncStatus('Enviando', 'busy');
   try {
     if(!skipRemoteMerge) {
       const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
@@ -1110,7 +1117,7 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
     }, { onConflict: 'user_id' }).select('updated_at').maybeSingle();
     if(error) {
       console.error('Falha ao sincronizar:', error);
-      setSyncStatus('Erro ao sincronizar', 'error');
+      setSyncStatus('Erro', 'error', 'Erro ao sincronizar');
     } else {
       cloudDirty = cloudRevision !== pushRevision;
       // O servidor (via trigger) e quem decide o updated_at real — nao confiar no
@@ -1120,17 +1127,18 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
       if(savedRow?.updated_at) updateServerClockOffset(savedRow.updated_at);
       lastCloudSyncAt = Date.parse(savedRow?.updated_at || '') || Date.now();
       if(cloudDirty) {
-        setSyncStatus('Alterações pendentes', 'busy');
+        setSyncStatus('Pendente', 'busy');
         clearTimeout(syncTimer);
         syncTimer = setTimeout(pushCloudState, 350);
       } else {
-        setSyncStatus(`Sincronizado ${new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
+        const stamp = new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+        setSyncStatus('Sincronizado', 'online', `Sincronizado ${stamp}`);
       }
       syncGamificationLedger();
     }
   } catch(error) {
     console.error('Falha ao sincronizar:', error);
-    setSyncStatus('Erro ao sincronizar', 'error');
+    setSyncStatus('Erro', 'error', 'Erro ao sincronizar');
   } finally {
     syncInFlight = false;
   }
@@ -1150,19 +1158,19 @@ async function pullCloudState({ firstLogin=false }={}) {
     await pushCloudState();
     return;
   }
-  setSyncStatus('Buscando dados...', 'busy');
+  setSyncStatus('Buscando', 'busy');
   try {
     if(firstLogin) createSafetyLocalBackup('antes de buscar nuvem');
     const { data, error } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
     if(error) {
       console.error('Falha ao buscar dados:', error);
-      setSyncStatus('Configure o banco', 'error');
+      setSyncStatus('Erro', 'error', 'Configure o banco');
       return;
     }
     const remoteAt = Date.parse(data?.updated_at || '') || 0;
     if(data?.updated_at) updateServerClockOffset(data.updated_at);
     if(!firstLogin && remoteAt && remoteAt <= lastCloudSyncAt) {
-      setSyncStatus(`Sincronizado ${new Date(lastCloudSyncAt || remoteAt).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`, 'online');
+      setSyncStatus('Sincronizado', 'online', `Sincronizado ${new Date(lastCloudSyncAt || remoteAt).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`);
       return;
     }
     if(data?.data?.schedule?.length) {
@@ -1183,7 +1191,7 @@ async function pullCloudState({ firstLogin=false }={}) {
       }
       render();
       scheduleCloudSave();
-      setSyncStatus('Dados atualizados', 'online');
+      setSyncStatus('Sincronizado', 'online', 'Dados atualizados');
     } else if(firstLogin) {
       await pushCloudState();
     } else {
@@ -1191,14 +1199,14 @@ async function pullCloudState({ firstLogin=false }={}) {
     }
   } catch(error) {
     console.error('Falha ao buscar dados:', error);
-    setSyncStatus('Erro ao sincronizar', 'error');
+    setSyncStatus('Erro', 'error', 'Erro ao sincronizar');
   }
 }
 function startCloudSyncPolling() {
   if(cloudSyncPoll) clearInterval(cloudSyncPoll);
   cloudSyncPoll = setInterval(() => {
     if(currentUser && !document.hidden && !syncInFlight) pullCloudState();
-  }, 12000);
+  }, 60000);
 }
 function fullPlannerBackup() {
   checkpointAutoStudyTime(true);
@@ -1258,7 +1266,7 @@ async function createCloudBackup(label='') {
   if(!currentUser || !sbClient) { showStudyToast('Backup local salvo. Entre na sua conta para salvar também na nuvem.'); return; }
   if(!CLOUD_SYNC_ALLOWED) { showStudyToast('Backup local salvo. Neste ambiente, a nuvem está desativada.'); return; }
   const payload = fullPlannerBackup();
-  setSyncStatus('Criando backup...', 'busy');
+  setSyncStatus('Backup', 'busy');
   const { error } = await sbClient.from('planner_backups').insert({
     user_id: currentUser.id,
     label: String(label || '').trim() || localCopy.label || `Backup de ${backupDateTime(payload.backupInfo.exportedAt)}`,
@@ -1268,12 +1276,12 @@ async function createCloudBackup(label='') {
     console.error('Falha ao criar backup:', error);
     cloudBackupsReady = false;
     cloudBackupsError = error.code === '42P01' ? 'Backup local salvo. A tabela de backups ainda não foi criada no Supabase.' : 'Backup local salvo. Não foi possível criar o backup na nuvem.';
-    setSyncStatus('Erro no backup', 'error');
+    setSyncStatus('Erro', 'error', 'Erro no backup');
     if(ui.tab === 'ferramentas') renderFerramentas();
     return;
   }
   await loadCloudBackups({force:true});
-  setSyncStatus('Backup salvo na nuvem', 'online');
+  setSyncStatus('Sincronizado', 'online', 'Backup salvo na nuvem');
   showStudyToast('Backup salvo. Ele já pode ser recuperado em outro aparelho.');
   if(ui.tab === 'ferramentas') renderFerramentas();
 }
@@ -1526,7 +1534,7 @@ function updateAccountUI() {
     panel.classList.remove('hidden');
     button.textContent = 'Entrar';
     button.title = 'Entrar para sincronizar';
-    setSyncStatus('Somente neste aparelho');
+    setSyncStatus('Local', '', 'Somente neste aparelho');
   }
 }
 function isLocalPlanner() {
@@ -1537,15 +1545,15 @@ async function initCloud() {
     document.body.classList.remove('auth-locked');
     const button = document.getElementById('accountBtn');
     if(button) button.classList.add('hidden');
-    setSyncStatus('Offline · dados locais', 'online');
+    setSyncStatus('Local', 'online', 'Offline · dados locais');
     return;
   }
   if(!sbClient) {
     if(isLocalPlanner()) {
       document.body.classList.remove('auth-locked');
-      setSyncStatus('Modo local offline', 'online');
+      setSyncStatus('Local', 'online', 'Modo local offline');
     } else {
-      setSyncStatus('Supabase indisponível', 'error');
+      setSyncStatus('Erro', 'error', 'Supabase indisponível');
     }
     return;
   }
@@ -1553,7 +1561,7 @@ async function initCloud() {
   currentUser = data.session?.user || null;
   if(!currentUser && isLocalPlanner()) {
     document.body.classList.remove('auth-locked');
-    setSyncStatus('Modo local neste aparelho');
+    setSyncStatus('Local', '', 'Modo local neste aparelho');
   } else {
     updateAccountUI();
   }
@@ -2972,6 +2980,17 @@ function renderRadiografia() {
   if(!window.RadioSim) { el.innerHTML = `<section class="card"><p class="muted">Carregando módulo de radiografia…</p></section>`; return; }
   if(!state.radio) state.radio = window.RadioSim.defaultState();
   window.RadioSim.mount(el, {
+    getState: () => state,
+    save: () => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){} scheduleCloudSave(); },
+    escapeHtml,
+    iconSvg
+  });
+}
+function renderSemiologia() {
+  const el = document.getElementById('semiologia');
+  if(!window.SemioSim) { el.innerHTML = `<section class="card"><p class="muted">Carregando módulo de semiologia…</p></section>`; return; }
+  if(!state.semio) state.semio = window.SemioSim.defaultState();
+  window.SemioSim.mount(el, {
     getState: () => state,
     save: () => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){} scheduleCloudSave(); },
     escapeHtml,
@@ -5053,7 +5072,7 @@ function videoCountRing(lesson) {
 }
 function renderVideoFlashcardEditor(source, lesson, schedule) {
   if(!source) return '';
-  const cards = newestFlashcardsFirst(Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []);
+  const cards = flashcardsInBuildOrder(Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []);
   const topic = videoContentLabel(source);
   return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários. Selecione um trecho e use a barra para formatar.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>`<div class="flashcard-editor-item">${renderFlashcardMarkdownField(`data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front"` ,card.front,'Frente: pergunta ou conceito')}${renderFlashcardMarkdownField(`data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso: resposta curta')}<button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
 }
@@ -5838,8 +5857,8 @@ function flashcardCreatedTime(card) {
   const timestamp = String(card?.id || '').match(/(?:^|-)\d{13}(?:-|$)/)?.[0]?.replaceAll('-', '');
   return timestamp ? n(timestamp) : 0;
 }
-function newestFlashcardsFirst(cards) {
-  return [...cards].sort((a,b) => flashcardCreatedTime(b) - flashcardCreatedTime(a));
+function flashcardsInBuildOrder(cards) {
+  return [...cards].sort((a,b) => flashcardCreatedTime(a) - flashcardCreatedTime(b));
 }
 function renderFlashcardMarkdownToolbar() {
   return `<div class="flashcard-md-toolbar" role="toolbar" aria-label="Formatação do flashcard">
@@ -5977,7 +5996,7 @@ function manualFlashcards() {
     const question = questionBank.find(item => item.id === questionId);
     const result = question ? questionResult(question) : null;
     const linked = result?.scheduleId ? state.schedule.find(item => item.id === result.scheduleId) : question ? scheduleForQuestion(question) : null;
-    return newestFlashcardsFirst(Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
+    return flashcardsInBuildOrder(Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
       ...card,
       questionId,
       scheduleId: card.scheduleId || linked?.id || '',
@@ -5987,7 +6006,7 @@ function manualFlashcards() {
       topic: card.topic || linked?.topic || question?.topic || 'Sem aula vinculada'
     }));
   });
-  const videoCards = Object.entries(state.videoFlashcards || {}).flatMap(([videoId,cards]) => newestFlashcardsFirst(Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
+  const videoCards = Object.entries(state.videoFlashcards || {}).flatMap(([videoId,cards]) => flashcardsInBuildOrder(Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
     ...card,
     videoId,
     scheduleId: card.scheduleId || '',
@@ -6263,10 +6282,13 @@ function groupFlashcards(cards) {
   const map = new Map();
   cards.forEach(card => {
     const key = `${card.area}|${card.subarea}|${card.block}|${card.scheduleId || card.topic}`;
-    if(!map.has(key)) map.set(key,{area:card.area||'Sem área',subarea:card.subarea||'Sem assunto',block:card.block||'',topic:card.topic||'',cards:[]});
-    map.get(key).cards.push(card);
+    if(!map.has(key)) map.set(key,{area:card.area||'Sem área',subarea:card.subarea||'Sem assunto',block:card.block||'',topic:card.topic||'',cards:[],newestCreatedTime:0});
+    const group = map.get(key);
+    group.cards.push(card);
+    group.newestCreatedTime = Math.max(group.newestCreatedTime, flashcardCreatedTime(card));
   });
-  return [...map.values()].sort((a,b)=>a.area.localeCompare(b.area)||a.subarea.localeCompare(b.subarea)||n(a.block)-n(b.block)||a.topic.localeCompare(b.topic));
+  return [...map.values()].map(group => ({...group, cards: flashcardsInBuildOrder(group.cards)}))
+    .sort((a,b)=>b.newestCreatedTime-a.newestCreatedTime || a.area.localeCompare(b.area)||a.subarea.localeCompare(b.subarea)||n(a.block)-n(b.block)||a.topic.localeCompare(b.topic));
 }
 function renderFlashcardGroup(group) {
   return `<section class="flashcard-course-group"><div class="section-title"><h3>${escapeHtml(group.area)} · ${escapeHtml(group.subarea)}</h3><span class="badge today">Bloco ${escapeHtml(group.block || '-')} · ${group.cards.length}</span></div><div class="muted">${escapeHtml(group.topic)}</div><div class="flashcard-grid">${group.cards.map(renderFlashcard).join('')}</div></section>`;
@@ -6889,7 +6911,12 @@ function filteredQuestions() {
   }
   const completed = questionStatsForSchedule(focusItem.id).done;
   const remaining = Math.max(0, n(ui.qFocusTarget) - completed);
-  const results = filtered.slice(0, remaining);
+  // A questao recem-respondida so deve sair da lista quando o usuario avancar
+  // (navigateQuestionBy limpa justAnsweredId); sem isso o slice a corta na hora,
+  // antes de o usuario ver se acertou.
+  const justAnsweredIndex = ui.justAnsweredId ? filtered.findIndex(question => question.id === ui.justAnsweredId) : -1;
+  const sliceCount = justAnsweredIndex >= remaining ? justAnsweredIndex + 1 : remaining;
+  const results = filtered.slice(0, sliceCount);
   renderCache.questionFilterKey = cacheKey;
   renderCache.questionFilterResults = results;
   return results;
@@ -7545,18 +7572,11 @@ function renderQuestionCommentPanel(question, result, highlights=[]) {
   const current = state.questionProgress[question.id] || {};
   const allowedTabs = ['analysis','pearl','error'];
   const tab = allowedTabs.includes(current.commentTab) ? current.commentTab : 'pearl';
-  const mastery = current.commentMastery || '';
   const sections = questionCommentSections(question, result);
   const tabs = [
     ['analysis','Análise','◉'],
     ['pearl','Pérola','✦'],
     ['error','Armadilha','!']
-  ];
-  const masteryOptions = [
-    ['dominei','Dominei'],
-    ['duvida','Dúvida'],
-    ['vacilei','Vacilei'],
-    ['nao-sabia','Não sabia']
   ];
   const nextDisabled = ui.qIndex >= filteredQuestions().length - 1 ? 'disabled' : '';
   const declaredAnswer = String(question.comment || '').match(/(?:^|\n)\s*(?:Correta|Gabarito)\s*:\s*([A-E])\b/i)?.[1]?.toUpperCase() || '';
@@ -7566,7 +7586,6 @@ function renderQuestionCommentPanel(question, result, highlights=[]) {
     <div class="question-comment-card error"><strong>Comentário em revisão</strong><div>O gabarito ${escapeHtml(question.answer)} foi conferido na fonte original, mas o comentário anexado declara ${escapeHtml(declaredAnswer)} e provavelmente pertence a outra questão. A explicação foi ocultada para não induzir ao erro.</div></div>
   </div>`;
   return `<div class="question-comment-panel">
-    <div class="comment-mastery">${masteryOptions.map(([value,label]) => `<button class="${mastery===value?'active':''} ${value}" data-comment-mastery="${value}">${escapeHtml(label)}</button>`).join('')}</div>
     <div class="comment-quick-nav"><button class="icon-btn" id="commentPrevQuestion" ${ui.qIndex===0?'disabled':''}>‹</button><button class="icon-btn primary" id="commentNextQuestion">Próx ›</button></div>
     <div class="comment-tabs">${tabs.map(([value,label,icon]) => `<button class="${tab===value?'active':''} ${value}" data-comment-tab="${value}"><span>${icon}</span>${escapeHtml(label)}</button>`).join('')}</div>
     <div class="question-comment-card ${escapeAttr(tab)}"><strong>${escapeHtml(tabs.find(item => item[0] === tab)?.[1] || 'Comentário')}</strong><div>${renderCommentSectionContent(tab, sections[tab] || sections.analysis, highlights)}</div></div>
@@ -7648,7 +7667,7 @@ function renderQuestionReflection(question, result) {
   return `<div class="question-reflection"><strong>Por que errei?</strong><div class="muted">Nível marcado antes de corrigir: ${escapeHtml(levelLabel)}</div><div class="field-row"><label class="field-label">Motivo do erro<select class="select" data-progress-field="missReason"><option value="">Escolher motivo</option>${['Desatenção','Dúvida / já vi','Não saber'].map(option => `<option ${missReason===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Confiança antes da correção (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 40"></label><label class="field-label">O que aconteceu?<input class="input" data-progress-field="reflection" value="${escapeAttr(result.reflection || '')}" placeholder="Comentário curto"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label></div><div class="reflection-help">Este percentual registra o quanto você acreditava que estava certo antes de ver o gabarito.</div></div>`;
 }
 function renderQuestionFlashcardEditor(question, result) {
-  const cards = newestFlashcardsFirst(Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : []);
+  const cards = flashcardsInBuildOrder(Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : []);
   const allowed = flashcardCreationAllowed(result);
   if(!allowed && !cards.length) return '';
   const reason = allowed ? flashcardCreationReason(result) : 'Flashcards já criados continuam disponíveis para edição.';
@@ -7845,12 +7864,6 @@ function bindQuestionActions(questions, question) {
   });
   const addFlashcard = document.getElementById('addQuestionFlashcard');
   if(addFlashcard) addFlashcard.onclick = () => addQuestionFlashcard(question);
-  document.querySelectorAll('[data-comment-mastery]').forEach(button => button.onclick = e => {
-    const current = state.questionProgress[question.id] || {};
-    setQuestionProgress(question.id,{ commentMastery: e.currentTarget.dataset.commentMastery });
-    saveStateOnly();
-    render();
-  });
   document.querySelectorAll('[data-comment-tab]').forEach(button => button.onclick = e => {
     const current = state.questionProgress[question.id] || {};
     setQuestionProgress(question.id,{ commentTab: e.currentTarget.dataset.commentTab });
@@ -8727,7 +8740,8 @@ function render() {
     ferramentas: renderFerramentas,
     'caderno-erros': renderCadernoErros,
     ecg: renderEcg,
-    radiografia: renderRadiografia
+    radiografia: renderRadiografia,
+    semiologia: renderSemiologia
   };
   renderers[ui.tab]?.();
   persistQuestionView();
@@ -8791,12 +8805,13 @@ document.addEventListener('keydown', event => {
   if(!video) return;
   const rates = [0.75,1,1.25,1.5,1.75,2];
   const key=event.key.toLowerCase();
-  if(event.code === 'Space') { event.preventDefault(); video.paused ? video.play() : video.pause(); }
-  else if(event.key === 'ArrowRight') { event.preventDefault(); document.getElementById('videoForward10')?.click(); }
-  else if(event.key === 'ArrowLeft') { event.preventDefault(); document.getElementById('videoBack10')?.click(); }
-  else if(key === 'f' || event.key === '[') { event.preventDefault(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
-  else if(key === 'j' || event.key === '=') { event.preventDefault(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
-});
+  if(event.code === 'Space') { event.preventDefault(); event.stopPropagation(); video.paused ? video.play() : video.pause(); }
+  else if(event.key === 'ArrowRight') { event.preventDefault(); event.stopPropagation(); document.getElementById('videoForward10')?.click(); }
+  else if(event.key === 'ArrowLeft') { event.preventDefault(); event.stopPropagation(); document.getElementById('videoBack10')?.click(); }
+  else if(key === 'f' || event.key === '[') { event.preventDefault(); event.stopPropagation(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
+  else if(key === 'j' || event.key === '=') { event.preventDefault(); event.stopPropagation(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
+}, true);
+document.getElementById('headerSyncBtn')?.addEventListener('click', () => forcePlannerSync());
 document.getElementById('accountBtn').onclick = async () => {
   if(OFFLINE_FIRST) return;
   if(currentUser) {
