@@ -741,6 +741,9 @@
         { src: 'stemi-ant-1.jpg', caption: 'Caso real (material de estudo pessoal): IAM com supra de ST anterior extenso — isquemia, lesão e necrose subepicárdica na parede anterior extensa.' },
         { src: 'stemi-ant-2.jpg', caption: 'Caso real: homem de 53 anos, opressão precordial, náuseas e vômitos, instável e hipotenso — IAM com supra de ST anterior extenso, delta T de 1 hora.' },
         { src: 'stemi-ant-3.jpg', caption: 'Caso real: homem de 71 anos, PCR em fibrilação ventricular ressuscitada — oclusão total da descendente anterior, lesão subepicárdica na parede anterior.' },
+        { src: 'stemi-ant-4.jpg', caption: 'Caso real: mulher de 64 anos, dor precordial opressiva há 8 horas, hipertensa e tabagista — isquemia anterior extensa com ondas T profundamente invertidas em V1-V4 (padrão evoluído / tipo Wellens: atenção, indica estenose crítica da DA mesmo sem supra florido).' },
+        { src: 'stemi-ant-5.jpg', caption: 'Caso real: homem de 54 anos, IAM atendido ~1h após o início, sem trombólise, aguardando transferência há 4 dias — IATh CSSST anterior extenso subagudo.' },
+        { src: 'stemi-ant-6.jpg', caption: 'Caso real: homem de 60 anos, diabético/hipertenso, IAM atendido tardiamente (delta T de 20h), instável com B3 e crepitações — IAM anterior extenso associado a BRD.' },
       ]
     },
     {
@@ -777,7 +780,10 @@
         ddx: ['IAM (supra localizado + recíproca)', 'Repolarização precoce (sem evolução/depressão de PR)'],
         armadilhas: ['A ausência de recíprocas e a difusão do supra ajudam a separar de IAM.'],
         conduta: ['AINE + colchicina; investigar etiologia e derrame/tamponamento.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'pericarditis-1.jpg', caption: 'Caso real (material de estudo pessoal): homem de 40 anos, dor precordial ventilatório-dependente que melhora ao inclinar o tórax para frente, após virose — supra de ST côncavo e difuso (todas as paredes exceto aVR/V1), sem imagem-espelho: pericardite.' },
+      ]
     },
     {
       id: 'early_repol', name: 'Repolarização precoce', category: 'Variantes normais', level: 2,

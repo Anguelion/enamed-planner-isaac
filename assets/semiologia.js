@@ -791,8 +791,10 @@
     return `<div class="semio-topic-head"><h2>Corpo Semiológico</h2>
       <button class="semio-btn ghost sm" data-corpo-teste>🎯 Modo teste</button></div>
       <div class="semio-chips" style="margin-top:2px">
-        <button class="semio-chip ${view === 'ant' ? 'on' : ''}" data-corpo-view="ant">Vista anterior</button>
-        <button class="semio-chip ${view === 'post' ? 'on' : ''}" data-corpo-view="post">Vista posterior</button>
+        <button class="semio-chip ${view === 'ant' ? 'on' : ''}" data-corpo-view="ant">Anterior</button>
+        <button class="semio-chip ${view === 'post' ? 'on' : ''}" data-corpo-view="post">Posterior</button>
+        <button class="semio-chip ${view === 'maos' ? 'on' : ''}" data-corpo-view="maos">Mãos e unhas</button>
+        <button class="semio-chip ${view === 'cabeca' ? 'on' : ''}" data-corpo-view="cabeca">Cabeça e olhos</button>
       </div>
       <p class="semio-muted">Toque num ponto da figura (ou na lista) para estudar o sinal. ${done}/${CORPO_SINAIS.length} sinais praticados no total.</p>
       <div class="semio-corpo">
@@ -811,7 +813,7 @@
     const view = s.view || 'ant';
     return `<div class="semio-topic-head"><h2>Corpo Semiológico — teste</h2>
       <button class="semio-btn ghost sm" data-corpo-estudo>← Voltar ao estudo</button></div>
-      <p class="semio-muted">O ponto destacado na figura (${view === 'post' ? 'vista posterior' : 'vista anterior'}) corresponde a um sinal. Responda:</p>
+      <p class="semio-muted">O ponto destacado na figura (${VIEW_LABEL[view] || 'anterior'}) corresponde a um sinal. Responda:</p>
       <div class="semio-corpo">
         <div class="semio-corpo-fig">${bodySvg(s.id, true, view)}</div>
         <div class="semio-corpo-side">

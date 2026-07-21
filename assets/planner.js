@@ -1915,6 +1915,9 @@ function resumePomodoro() {
   savePomodoro(); updatePomodoroWidget();
 }
 function resetPomodoro() {
+  // Encerrar durante o Foco também conta o ciclo. O alarme já contou ao terminar
+  // sozinho, então só contamos quando a fase de foco ainda estava ativa/pausada.
+  if(pomodoro.mode && pomodoro.phase==='work' && !pomodoro.alarm) bumpPomodoroCycles();
   if(pomodoroInterval) clearInterval(pomodoroInterval);
   if(pomodoroAlarmInterval) clearInterval(pomodoroAlarmInterval);
   pomodoroInterval=null; pomodoroAlarmInterval=null; pomodoro=emptyPomodoro();
@@ -6196,7 +6199,7 @@ function renderFlashcards() {
   const toggleLibrary = document.getElementById('flashcardToggleLibrary');
   if(toggleLibrary) toggleLibrary.onclick = () => { ui.flashcardShowLibrary = !ui.flashcardShowLibrary; renderFlashcards(); };
   const focusToggle = document.getElementById('flashcardFocusToggle');
-  if(focusToggle) focusToggle.onclick = () => { ui.flashcardFocusMode = !ui.flashcardFocusMode; renderFlashcards(); };
+  if(focusToggle) focusToggle.onclick = () => { ui.flashcardFocusMode = !ui.flashcardFocusMode; ui.flashcardFocusPaused = false; renderFlashcards(); };
   const exportBtn = document.getElementById('ankiExportBtn');
   if(exportBtn) exportBtn.onclick = exportAnkiTsv;
   const backupBtn = document.getElementById('flashcardBackupBtn');
@@ -6245,8 +6248,18 @@ function renderFlashcards() {
     input.onchange = e => updateVideoFlashcard(e.currentTarget);
   });
   bindFlashcardMarkdownTools(document.getElementById('flashcards') || document);
-  if(study) startAutoStudy('flashcards', study.scheduleId || '');
-  else stopAutoStudy('flashcards');
+  if(study && ui.flashcardFocusMode) {
+    if(ui.flashcardFocusPaused) pauseAutoStudy('flashcards');
+    else startAutoStudy('flashcards', study.scheduleId || '');
+  } else {
+    stopAutoStudy('flashcards');
+  }
+  const focusClock = document.getElementById('flashcardFocusClock');
+  if(focusClock) focusClock.onclick = () => {
+    if(!ui.flashcardFocusMode) return;
+    ui.flashcardFocusPaused = !ui.flashcardFocusPaused;
+    renderFlashcards();
+  };
 }
 function renderFlashcardIndicators(all, queue, reviewed, due) {
   const retention = reviewed ? Math.round(all.filter(card => flashcardProgress(card).lastRating >= 3).length / reviewed * 100) : 0;
@@ -6348,7 +6361,7 @@ function renderFlashcardStudy(card, queue=[]) {
   if(!card) return '<div class="flashcard-empty-session"><div><h2>Fim da sessão</h2><div class="muted">Nenhum flashcard neste filtro agora. Troque o filtro ou crie novos cards nas questões.</div></div></div>';
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
-  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="${ui.flashcardFocusMode ? 'Foco ·' : 'Registrando'}">Tempo pausado</span><span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span><button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
+  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today${ui.flashcardFocusMode ? ' flashcard-focus-clock' : ''}" id="flashcardFocusClock" data-auto-study-clock data-auto-study-prefix="${ui.flashcardFocusMode ? (ui.flashcardFocusPaused ? 'Pausado ·' : 'Foco ·') : 'Fora do foco'}" title="${ui.flashcardFocusMode ? 'Clique para pausar/retomar o tempo' : 'Ative o modo foco para contar o tempo'}">Tempo pausado</span><span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span><button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;
