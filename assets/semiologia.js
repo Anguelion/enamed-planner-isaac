@@ -448,6 +448,77 @@
       quiz: { p: 'Mucosa oral seca com turgor cutâneo lentificado indica:', ops: ['Hipervolemia', 'Desidratação', 'Anemia', 'Icterícia'], correct: 1, exp: 'São sinais de desidratação/hipovolemia.' } },
   ];
   const SINAL_MAP = Object.fromEntries(CORPO_SINAIS.map((s) => [s.id, s]));
+
+  // Ilustrações ORIGINAIS (SVG próprio) por sinal — sem uso de imagens de terceiros.
+  const F = (vb, inner) => `<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" class="semio-sign-svg" role="img">${inner}</svg>`;
+  const SIGN_FIG = {
+    baqueteamento: F('0 0 240 130', `
+      <text x="60" y="16" font-size="11" fill="#667085" text-anchor="middle">Normal (~160°)</text>
+      <path d="M20 70 L86 70 Q98 70 100 60 L102 52 Q103 46 97 46 L90 47 Q84 48 84 56 L84 70" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <rect x="86" y="48" width="12" height="9" rx="2" fill="#f3e6d6" stroke="#c9ac8f"/>
+      <text x="180" y="16" font-size="11" fill="#667085" text-anchor="middle">Baqueteamento (&gt;180°)</text>
+      <path d="M140 74 L196 74 Q222 74 226 58 Q228 44 214 40 Q198 37 190 46 Q186 52 186 62 L186 74" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M196 46 Q214 40 222 52 Q214 62 200 60 Z" fill="#f3e6d6" stroke="#c9ac8f"/>
+      <text x="130" y="118" font-size="10" fill="#c0392b" text-anchor="middle">Schamroth: o losango entre as unhas desaparece</text>`),
+    coiloniquia: F('0 0 200 110', `
+      <text x="55" y="16" font-size="11" fill="#667085" text-anchor="middle">Normal</text>
+      <path d="M25 60 q30 -14 60 0 q-30 10 -60 0" fill="#f3e6d6" stroke="#c9ac8f" stroke-width="1.6"/>
+      <text x="150" y="16" font-size="11" fill="#667085" text-anchor="middle">Em colher</text>
+      <path d="M118 55 q30 18 60 0 q-30 -6 -60 0" fill="#f3e6d6" stroke="#c9ac8f" stroke-width="1.6"/>
+      <path d="M150 58 q4 6 0 10" fill="none" stroke="#3a6ea5" stroke-width="1"/>
+      <ellipse cx="150" cy="60" rx="9" ry="3" fill="#bcd4ec" opacity=".7"/>
+      <text x="100" y="100" font-size="10" fill="#c0392b" text-anchor="middle">Concavidade retém uma gota — anemia ferropriva</text>`),
+    leuconiquia: F('0 0 200 100', `
+      <ellipse cx="100" cy="50" rx="46" ry="30" fill="#f3e6d6" stroke="#c9ac8f" stroke-width="1.6"/>
+      <path d="M70 40 q30 -6 60 0" stroke="#fff" stroke-width="5" fill="none" opacity=".9"/>
+      <path d="M66 54 q34 -6 68 0" stroke="#fff" stroke-width="5" fill="none" opacity=".9"/>
+      <text x="100" y="92" font-size="10" fill="#667085" text-anchor="middle">Faixas brancas — hipoalbuminemia</text>`),
+    splinter: F('0 0 200 100', `
+      <ellipse cx="100" cy="48" rx="44" ry="30" fill="#f3e6d6" stroke="#c9ac8f" stroke-width="1.6"/>
+      <g stroke="#7a1f1f" stroke-width="2" stroke-linecap="round">
+        <line x1="86" y1="30" x2="90" y2="60"/><line x1="100" y1="26" x2="103" y2="62"/><line x1="114" y1="32" x2="116" y2="58"/></g>
+      <text x="100" y="92" font-size="10" fill="#667085" text-anchor="middle">Linhas subungueais — microêmbolos</text>`),
+    aranha: F('0 0 180 120', `
+      <g stroke="#c0392b" stroke-width="1.4"><circle cx="90" cy="60" r="5" fill="#c0392b"/>
+      <line x1="90" y1="60" x2="60" y2="40"/><line x1="90" y1="60" x2="120" y2="40"/>
+      <line x1="90" y1="60" x2="55" y2="66"/><line x1="90" y1="60" x2="125" y2="66"/>
+      <line x1="90" y1="60" x2="70" y2="88"/><line x1="90" y1="60" x2="110" y2="88"/></g>
+      <text x="90" y="110" font-size="10" fill="#667085" text-anchor="middle">Arteríola central + vasos radiados</text>`),
+    ictericia: F('0 0 200 110', `
+      <ellipse cx="100" cy="55" rx="70" ry="34" fill="#f7e9a8" stroke="#c9ac8f" stroke-width="1.6"/>
+      <circle cx="100" cy="55" r="17" fill="#7b5a3a"/><circle cx="100" cy="55" r="8" fill="#2b2b2b"/>
+      <circle cx="95" cy="51" r="3" fill="#fff"/>
+      <text x="100" y="100" font-size="10" fill="#667085" text-anchor="middle">Esclera amarelada (luz natural)</text>`),
+    'palidez-conjuntival': F('0 0 200 110', `
+      <path d="M40 55 Q100 25 160 55 Q100 85 40 55 Z" fill="#fff" stroke="#c9ac8f" stroke-width="1.6"/>
+      <circle cx="100" cy="55" r="15" fill="#7b5a3a"/><circle cx="100" cy="55" r="7" fill="#2b2b2b"/>
+      <path d="M60 70 Q100 84 140 70" fill="#f2d9cf" stroke="#d9a99a" stroke-width="6" stroke-linecap="round"/>
+      <text x="100" y="102" font-size="10" fill="#667085" text-anchor="middle">Conjuntiva inferior pálida — anemia</text>`),
+    'arco-corneano': F('0 0 200 110', `
+      <ellipse cx="100" cy="55" rx="70" ry="34" fill="#fdfdfd" stroke="#c9ac8f" stroke-width="1.6"/>
+      <circle cx="100" cy="55" r="24" fill="none" stroke="#cbd5e1" stroke-width="5"/>
+      <circle cx="100" cy="55" r="15" fill="#7b8ea3"/><circle cx="100" cy="55" r="7" fill="#2b2b2b"/>
+      <text x="100" y="100" font-size="10" fill="#667085" text-anchor="middle">Anel periférico — arcus</text>`),
+    xantelasma: F('0 0 200 110', `
+      <path d="M40 60 Q100 30 160 60 Q100 88 40 60 Z" fill="#fff" stroke="#c9ac8f" stroke-width="1.6"/>
+      <circle cx="105" cy="58" r="14" fill="#7b5a3a"/><circle cx="105" cy="58" r="6" fill="#2b2b2b"/>
+      <ellipse cx="62" cy="46" rx="12" ry="6" fill="#f2d16b" stroke="#d9b53f"/>
+      <text x="100" y="102" font-size="10" fill="#667085" text-anchor="middle">Placa amarelada no canto medial</text>`),
+    'cianose-periferica': F('0 0 200 110', `
+      <path d="M60 90 L60 40 Q60 26 78 26 Q94 26 94 42 L94 90 Z" fill="#9fb4c9" stroke="#6b8199" stroke-width="1.6"/>
+      <path d="M60 40 Q60 26 78 26 Q94 26 94 42 Q77 50 60 40 Z" fill="#5b7fa6"/>
+      <rect x="66" y="30" width="14" height="10" rx="3" fill="#3f5d80"/>
+      <text x="100" y="102" font-size="10" fill="#667085" text-anchor="middle">Extremidade azulada e fria</text>`),
+    edema: F('0 0 200 120', `
+      <rect x="40" y="60" width="120" height="34" rx="6" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="100" cy="60" r="14" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M92 60 q8 14 16 0" fill="#d8c2ab"/>
+      <text x="100" y="112" font-size="10" fill="#c0392b" text-anchor="middle">Cacifo (godet): depressão que persiste</text>`),
+    varizes: F('0 0 140 130', `
+      <rect x="52" y="14" width="34" height="104" rx="14" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M62 22 q14 14 -2 28 q-14 14 4 28 q16 12 -2 28 q-8 8 2 16" fill="none" stroke="#3b5aa0" stroke-width="3.4"/>
+      <text x="70" y="128" font-size="10" fill="#667085" text-anchor="middle">Veias tortuosas e dilatadas</text>`),
+  };
   const CAT_COR = { 'Inspeção': '#3a6ea5', 'Palpação': '#2f7d6f', 'Percussão': '#b45309', 'Ausculta': '#8b5cf6' };
 
   const signsInView = (view) => CORPO_SINAIS.filter((s) => (s.view || 'ant') === view);
