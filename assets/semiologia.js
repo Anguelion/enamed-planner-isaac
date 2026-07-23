@@ -139,6 +139,13 @@
     },
   ];
   const MANOBRA_MAP = Object.fromEntries(MANOBRAS.map((m) => [m.id, m]));
+  // fotos reais da aula (Semiologia Descomplicada) associadas a algumas manobras, complementando o esquema didático
+  const MANOBRA_FOTO = {
+    murphy: { src: 'assets/semiologia-real/08-abdomen-agudo/46.jpg', cap: 'Foto real — aula de Abdômen Agudo (Semiologia Descomplicada).' },
+    blumberg: { src: 'assets/semiologia-real/08-abdomen-agudo/49.jpg', cap: 'Foto real — aula de Abdômen Agudo (Semiologia Descomplicada).' },
+    'macicez-movel': { src: 'assets/semiologia-real/07-ascite/108.jpg', cap: 'Foto real — aula de Ascite (Semiologia Descomplicada).' },
+    ftv: { src: 'assets/semiologia-real/01-exame-fisico-geral-parte-01-e-02/12.png', cap: 'Foto real — técnica de palpação (Exame Físico Geral).' },
+  };
 
   // ---------------------------------------------------------------------------
   // 2b. BANCO DE AUSCULTA — sons reais (Littmann) com achados e quiz
@@ -1032,7 +1039,8 @@
   function manobraDetailHtml(m) {
     return `<button class="semio-btn ghost sm" data-back-manobras>← Manobras</button>
       <div class="semio-topic-head"><h2>${esc(m.nome)}</h2><span class="semio-tag">${esc(m.sistema)}</span></div>
-      ${MANOBRA_FIG[m.id] ? `<figure class="semio-sign-fig">${MANOBRA_FIG[m.id]}<figcaption>Ilustração original — esquema didático</figcaption></figure>` : ''}
+      ${MANOBRA_FIG[m.id] ? `<figure class="semio-sign-fig">${MANOBRA_FIG[m.id]}<figcaption>Esquema didático próprio</figcaption></figure>` : ''}
+      ${MANOBRA_FOTO[m.id] ? `<figure class="semio-fig semio-fig-photo"><img src="${esc(MANOBRA_FOTO[m.id].src)}" alt="${esc(MANOBRA_FOTO[m.id].cap)}" loading="lazy" onerror="${imgFallback}"/><figcaption>${esc(MANOBRA_FOTO[m.id].cap)}</figcaption></figure>` : ''}
       <div class="semio-def"><b>Finalidade</b><p>${esc(m.finalidade)}</p></div>
       <div class="semio-def"><b>Quando fazer</b><p>${esc(m.quando)}</p></div>
       <div class="semio-def"><b>Execução</b><p>${esc(m.execucao)}</p></div>
@@ -1072,7 +1080,8 @@
   function auscultaDetailHtml(a) {
     return `<button class="semio-btn ghost sm" data-back-ausculta>← Ausculta</button>
       <div class="semio-topic-head"><h2>${esc(a.nome)}</h2><span class="semio-tag">${esc(a.sistema)}</span></div>
-      <audio class="semio-audio" controls preload="none" src="${esc(a.arquivo)}"></audio>
+      <audio class="semio-audio" controls loop preload="none" src="${esc(a.arquivo)}"></audio>
+      <p class="semio-muted" style="margin-top:-4px">🔁 O som repete em loop automaticamente — use pausar ou saia da tela para parar.</p>
       <div class="semio-def"><b>Onde auscultar</b><p>${esc(a.onde)}</p></div>
       <div class="semio-def"><b>O que se ouve / significado</b><p>${esc(a.achado)}</p></div>
       <div class="semio-quiz" data-quiz-ausculta="${esc(a.id)}">
