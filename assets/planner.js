@@ -3456,8 +3456,7 @@ function renderSimuladoExam(run, questions, question) {
     const isEliminated = eliminated.includes(letter);
     return `<div class="sim-answer-row"><button class="eliminate-btn ${isEliminated?'active':''}" data-sim-eliminate="${letter}" title="Riscar alternativa ${letter}">×</button><button class="sim-answer ${selected===letter?'selected':''} ${isEliminated?'eliminated':''}" data-sim-answer="${letter}"><span class="answer-letter">${letter}</span><span style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, [])}</span></button></div>`;
   }).join('');
-  const highlightTools = textHighlightEnabled() ? `<div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-sim-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearSimHighlights">Limpar marcações</button></div>` : '';
-  return `<div class="sim-run-layout"><aside class="card"><div class="section-title"><h2>${escapeHtml(run.name)}</h2><span class="badge ${run.paused?'wait':'done'}">${run.paused?'Pausado':'Rodando'}</span></div><div class="sim-clock" id="simuladoClock">${formatClock(run.secondsLeft)}</div><div class="muted">${answeredSimCount(run)} de ${questions.length} respondidas</div>${progress('Progresso', answeredSimCount(run)/Math.max(questions.length,1), 'sem correção durante a prova')}<div class="sim-palette">${questions.map((q,index) => `<button class="sim-dot ${run.answers?.[q.id]?'answered':''} ${index===run.currentIndex?'active':''}" data-sim-go="${index}">${index+1}</button>`).join('')}</div><div class="sim-side-actions"><button class="icon-btn primary" id="toggleSimuladoTimer">${run.paused?'Iniciar prova':'Pausar prova'}</button><button class="icon-btn" id="clearSimAnswer" ${selected?'':'disabled'}>Limpar resposta</button><button class="icon-btn" id="finishSimulado">Finalizar prova</button><button class="icon-btn" id="cancelSimulado">Cancelar simulado</button></div></aside><section class="card question-card"><div class="question-body"><div class="sim-exam-top"><div><span class="badge today">${run.currentIndex + 1} de ${questions.length}</span><span class="badge wait">${escapeHtml(broadArea)}</span></div>${highlightTools}<div class="sim-tools"><button type="button" title="Imprimir">⎙</button><button type="button" title="Informações">i</button><button type="button" title="Alerta">!</button><button type="button" id="simFontUp" title="Aumentar fonte">A+</button><button type="button" id="simFontDown" title="Diminuir fonte">A−</button><button type="button" title="Favoritar">♡</button><button type="button" title="Marcar">${iconSvg('flag',{weight:'regular'})}</button></div></div><div class="sim-question-head"><div><h2>Questão ${run.currentIndex + 1}</h2><div class="muted">${escapeHtml(broadArea)}</div></div><div><button class="icon-btn" id="simPrev" ${run.currentIndex===0?'disabled':''}>‹</button> <button class="icon-btn primary" id="simNext" ${run.currentIndex>=questions.length-1?'disabled':''}>›</button></div></div><div class="question-stem sim-highlightable" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights)}</div>${renderQuestionImages(question)}<div class="answer-list">${options}</div>${renderSimConfidence(run, question)}<div class="question-nav"><span class="muted">${selected ? `Marcada: ${selected}` : 'Sem resposta marcada'}</span></div></div></section></div>`;
+  return `<div class="sim-run-layout"><aside class="card"><div class="section-title"><h2>${escapeHtml(run.name)}</h2><span class="badge ${run.paused?'wait':'done'}">${run.paused?'Pausado':'Rodando'}</span></div><div class="sim-clock" id="simuladoClock">${formatClock(run.secondsLeft)}</div><div class="muted">${answeredSimCount(run)} de ${questions.length} respondidas</div>${progress('Progresso', answeredSimCount(run)/Math.max(questions.length,1), 'sem correção durante a prova')}<div class="sim-palette">${questions.map((q,index) => `<button class="sim-dot ${run.answers?.[q.id]?'answered':''} ${index===run.currentIndex?'active':''}" data-sim-go="${index}">${index+1}</button>`).join('')}</div><div class="sim-side-actions"><button class="icon-btn primary" id="toggleSimuladoTimer">${run.paused?'Iniciar prova':'Pausar prova'}</button><button class="icon-btn" id="clearSimAnswer" ${selected?'':'disabled'}>Limpar resposta</button><button class="icon-btn" id="finishSimulado">Finalizar prova</button><button class="icon-btn" id="cancelSimulado">Cancelar simulado</button></div></aside><section class="card question-card"><div class="question-body"><div class="sim-exam-top"><div><span class="badge today">${run.currentIndex + 1} de ${questions.length}</span><span class="badge wait">${escapeHtml(broadArea)}</span></div><div class="sim-tools"><button type="button" title="Imprimir">⎙</button><button type="button" title="Informações">i</button><button type="button" title="Alerta">!</button><button type="button" id="simFontUp" title="Aumentar fonte">A+</button><button type="button" id="simFontDown" title="Diminuir fonte">A−</button><button type="button" title="Favoritar">♡</button><button type="button" title="Marcar">${iconSvg('flag',{weight:'regular'})}</button></div></div><div class="sim-question-head"><div><h2>Questão ${run.currentIndex + 1}</h2><div class="muted">${escapeHtml(broadArea)}</div></div><div><button class="icon-btn" id="simPrev" ${run.currentIndex===0?'disabled':''}>‹</button> <button class="icon-btn primary" id="simNext" ${run.currentIndex>=questions.length-1?'disabled':''}>›</button></div></div><div class="question-stem sim-highlightable" data-highlight-scope="stem" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights, false, 'stem')}</div>${renderQuestionImages(question)}<div class="answer-list">${options}</div>${renderSimConfidence(run, question)}<div class="question-nav"><span class="muted">${selected ? `Marcada: ${selected}` : 'Sem resposta marcada'}</span></div></div></section></div>`;
 }
 function renderSimConfidence(run, question) {
   const selected = run.confidence?.[question.id] || '';
@@ -3634,20 +3633,16 @@ function bindSimuladoInputs(activeRun) {
     const question = activeSimQuestion(activeRun);
     if(question) toggleSimEliminated(activeRun, question, e.currentTarget.dataset.simEliminate);
   });
-  document.querySelectorAll('[data-sim-marker]').forEach(button => button.onclick = e => { ui.highlightColor = e.currentTarget.dataset.simMarker; render(); });
-  const clearHighlights = document.getElementById('clearSimHighlights');
-  if(clearHighlights) clearHighlights.onclick = () => {
-    const question = activeSimQuestion(activeRun);
-    if(!question) return;
-    const previous = Array.isArray(activeRun.highlights?.[question.id]) ? activeRun.highlights[question.id] : [];
-    if(previous.length) rememberHighlightState({ context:'simulado', runId:activeRun.id, questionId:question.id, highlights:previous });
-    activeRun.highlights[question.id] = [];
-    persist();
-  };
-  if(textHighlightEnabled()) bindPointerHighlighter(document.querySelectorAll('.sim-highlightable'),()=>{
-    const question=activeSimQuestion(activeRun);
-    if(question) toggleSelectedSimHighlight(activeRun,question);
-  });
+  if(textHighlightEnabled()) {
+    bindPointerHighlighter(document.querySelectorAll('.sim-highlightable'),(descriptor,color)=>{
+      const question=activeSimQuestion(activeRun);
+      if(question) applySimHighlight(activeRun,question,descriptor,color);
+    });
+    bindSavedHighlightMenus(document.querySelector('.sim-run-layout'),(descriptor,color)=>{
+      const question=activeSimQuestion(activeRun);
+      if(question) applySimHighlight(activeRun,question,descriptor,color);
+    });
+  }
   const clear = document.getElementById('clearSimAnswer');
   if(clear) clear.onclick = () => {
     const question = activeSimQuestion(activeRun);
@@ -3922,30 +3917,20 @@ function toggleSimEliminated(run, question, letter) {
   run.eliminated[question.id] = current.includes(letter) ? current.filter(item => item !== letter) : [...current, letter];
   persist();
 }
-function toggleSelectedSimHighlight(run, question) {
-  const selection = window.getSelection();
-  const selected = selection ? selection.toString().replace(/\s+/g, ' ').trim() : '';
-  if(!selected || selected.length < 2) return;
-  const anchor = selection.anchorNode?.parentElement?.closest('.sim-highlightable');
-  const focus = selection.focusNode?.parentElement?.closest('.sim-highlightable');
-  if(!anchor || anchor!==focus || !anchor.closest('.sim-run-layout')) return;
-  const range=selection.getRangeAt(0);
-  const beforeRange=range.cloneRange();
-  beforeRange.selectNodeContents(anchor);
-  beforeRange.setEnd(range.startContainer,range.startOffset);
-  const before=beforeRange.toString().replace(/\s+/g,' ');
-  const occurrence=(before.match(new RegExp(escapeRegExp(selected),'g'))||[]).length;
+function applySimHighlight(run, question, descriptor, color) {
+  if(!descriptor?.text) return;
+  const selected=descriptor.text;
+  const occurrence=n(descriptor.occurrence);
+  const scope=descriptor.scope || 'stem';
   if(!run.highlights || typeof run.highlights !== 'object') run.highlights = {};
   const highlights = Array.isArray(run.highlights[question.id]) ? [...run.highlights[question.id]] : [];
-  const existing = highlights.findIndex(item => item.text === selected && n(item.occurrence)===occurrence);
+  const existing = highlights.findIndex(item => item.text === selected && (item.scope || 'stem')===scope && n(item.occurrence)===occurrence);
   rememberHighlightState({ context:'simulado', runId:run.id, questionId:question.id, highlights });
-  run.highlights[question.id] = existing >= 0
-    ? highlights.filter((_, index) => index !== existing)
-    : [...highlights, { text: selected, color: ui.highlightColor || 'yellow', scope:'stem', occurrence }];
-  selection.removeAllRanges();
-  const stem = document.querySelector('.sim-highlightable.question-stem');
-  if(stem) stem.innerHTML = renderHighlightedText(question.stem, run.highlights[question.id]);
+  if(color===null) run.highlights[question.id]=highlights.filter((_,index)=>index!==existing);
+  else if(existing>=0) run.highlights[question.id]=highlights.map((item,index)=>index===existing ? {...item,color:normalizeHighlightColor(color),scope} : item);
+  else run.highlights[question.id]=[...highlights,{text:selected,color:normalizeHighlightColor(color),scope,occurrence}];
   saveStateOnly();
+  render();
 }
 function simScore(s) { return n(s.total)>0 ? n(s.correct)/n(s.total) : 0; }
 function renderSimSummary() { const done=state.simulados.filter(s=>n(s.correct)>0); const best=done.sort((a,b)=>simScore(b)-simScore(a))[0]; const avg=done.reduce((sum,s)=>sum+simScore(s),0)/Math.max(done.length,1); return `${progress('Média atual', avg, `${done.length} simulados preenchidos`)}${best ? `<div class="item"><div class="date-chip">${Math.round(simScore(best)*100)}%</div><div><strong>${escapeHtml(best.name)}</strong><div class="muted">${fmtDate(best.date)} · meta mínima 70%</div></div><div>${simScore(best)>=.7?'<span class="badge done">Meta</span>':'<span class="badge no">Abaixo</span>'}</div></div>` : '<div class="empty">Preencha os resultados para ver evolução.</div>'}`; }
@@ -4661,8 +4646,7 @@ function renderMaterialReader(doc) {
     : '<div class="empty">Texto estruturado ainda não gerado para este material.</div>';
   const tocItems = toc.map(item => ({...item,id:materialHeadingId(item.text)}));
   const meta = materialEditMeta(doc.id);
-  const markers = ['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.materialHighlightColor===color?'active':''}" data-material-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('');
-  return `<div class="reader-head"><div><span class="eyebrow">${doc.block?`Bloco ${String(doc.block).padStart(2,'0')}`:'Material complementar'} · ${escapeHtml(doc.area || 'Revisão')}</span><h2>${escapeHtml(doc.title)}</h2><div class="muted">Vinculado a ${escapeHtml(doc.topic || 'conteúdo complementar')}</div></div><span class="badge ${meta.edited?'wait':'done'}">${meta.edited?'Editado neste computador':n(doc.imageCount)?`${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}`:'Texto limpo'}</span></div><div class="material-reader-toolbar"><div><button class="icon-btn primary" id="materialEditToggle">${ui.materialEditMode?'Concluir edição':'Editar Markdown'}</button><button class="icon-btn" id="materialFocusToggle" aria-pressed="${ui.materialFocusMode}">${ui.materialFocusMode?'Sair do foco':'Foco'}</button><button class="icon-btn" id="materialExportMarkdown">Exportar .md</button>${meta.edited?'<button class="icon-btn" id="materialRestoreOriginal">Restaurar original</button>':''}</div><div class="material-highlight-toolbar"><span class="muted">Marca-texto</span>${markers}<button class="tiny-btn" id="clearMaterialHighlights">Limpar</button></div></div>${!ui.materialEditMode && tocItems.length?`<nav class="reader-toc" aria-label="Seções do resumo">${tocItems.map(item=>`<button class="tiny-btn" data-material-heading="${item.id}">${escapeHtml(item.text)}</button>`).join('')}</nav>`:''}${markdownHtml}`;
+  return `<div class="reader-head"><div><span class="eyebrow">${doc.block?`Bloco ${String(doc.block).padStart(2,'0')}`:'Material complementar'} · ${escapeHtml(doc.area || 'Revisão')}</span><h2>${escapeHtml(doc.title)}</h2><div class="muted">Vinculado a ${escapeHtml(doc.topic || 'conteúdo complementar')}</div></div><span class="badge ${meta.edited?'wait':'done'}">${meta.edited?'Editado neste computador':n(doc.imageCount)?`${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}`:'Texto limpo'}</span></div><div class="material-reader-toolbar"><div><button class="icon-btn primary" id="materialEditToggle">${ui.materialEditMode?'Concluir edição':'Editar Markdown'}</button><button class="icon-btn" id="materialFocusToggle" aria-pressed="${ui.materialFocusMode}">${ui.materialFocusMode?'Sair do foco':'Foco'}</button><button class="icon-btn" id="materialExportMarkdown">Exportar .md</button>${meta.edited?'<button class="icon-btn" id="materialRestoreOriginal">Restaurar original</button>':''}</div><div class="material-highlight-toolbar"><span class="muted">Selecione um trecho para destacar.</span><button class="tiny-btn" id="clearMaterialHighlights">Limpar todos</button></div></div>${!ui.materialEditMode && tocItems.length?`<nav class="reader-toc" aria-label="Seções do resumo">${tocItems.map(item=>`<button class="tiny-btn" data-material-heading="${item.id}">${escapeHtml(item.text)}</button>`).join('')}</nav>`:''}${markdownHtml}`;
 }
 async function loadMaterialMarkdown(doc) {
   if(!doc?.markdown || materialMarkdownCache[doc.id] !== undefined) return;
@@ -4876,24 +4860,18 @@ async function restoreOriginalMaterial(doc) {
   saveStateOnly();
   renderMateriais();
 }
-function toggleMaterialHighlight(doc) {
-  const selection=window.getSelection();
-  const selected=selection?.toString().replace(/\s+/g,' ').trim() || '';
-  const anchor=selection?.anchorNode?.parentElement?.closest('[data-material-block]');
-  const focus=selection?.focusNode?.parentElement?.closest('[data-material-block]');
-  if(selected.length<2 || !anchor || anchor!==focus || !anchor.closest('.material-reading-mode')) return;
-  const range=selection.getRangeAt(0);
-  const beforeRange=range.cloneRange();
-  beforeRange.selectNodeContents(anchor);
-  beforeRange.setEnd(range.startContainer,range.startOffset);
-  const before=beforeRange.toString().replace(/\s+/g,' ');
-  const occurrence=(before.match(new RegExp(escapeRegExp(selected),'g'))||[]).length;
-  const block=anchor.dataset.materialBlock;
+function applyMaterialHighlight(doc, descriptor, color) {
+  if(!descriptor?.text || !descriptor.element) return;
+  const selected=descriptor.text;
+  const occurrence=n(descriptor.occurrence);
+  const block=descriptor.element.dataset.materialBlock || descriptor.block || '';
+  if(!block) return;
   const meta=materialEditMeta(doc.id);
   const index=meta.highlights.findIndex(item=>item.text===selected && item.block===block && n(item.occurrence)===occurrence);
   rememberHighlightState({ context:'material', docId:doc.id, highlights:meta.highlights });
-  meta.highlights=index>=0?meta.highlights.filter((_,position)=>position!==index):[...meta.highlights,{text:selected,color:ui.materialHighlightColor||'yellow',block,occurrence}];
-  selection.removeAllRanges();
+  if(color===null) meta.highlights=meta.highlights.filter((_,position)=>position!==index);
+  else if(index>=0) meta.highlights=meta.highlights.map((item,position)=>position===index?{...item,color:normalizeHighlightColor(color)}:item);
+  else meta.highlights=[...meta.highlights,{text:selected,color:normalizeHighlightColor(color),block,occurrence}];
   saveStateOnly();
   renderMateriais();
 }
@@ -4903,7 +4881,6 @@ function bindMaterialReader(doc) {
   document.getElementById('materialFocusToggle')?.addEventListener('click',() => { ui.materialFocusMode=!ui.materialFocusMode; renderMateriais(); });
   document.getElementById('materialExportMarkdown')?.addEventListener('click',() => exportMaterialMarkdown(doc,effectiveMaterialMarkdown(doc)||''));
   document.getElementById('materialRestoreOriginal')?.addEventListener('click',() => restoreOriginalMaterial(doc));
-  document.querySelectorAll('[data-material-marker]').forEach(button => button.onclick=() => { ui.materialHighlightColor=button.dataset.materialMarker; renderMateriais(); });
   document.getElementById('clearMaterialHighlights')?.addEventListener('click',() => {
     const meta=materialEditMeta(doc.id);
     if(meta.highlights.length) rememberHighlightState({ context:'material', docId:doc.id, highlights:meta.highlights });
@@ -4912,7 +4889,10 @@ function bindMaterialReader(doc) {
     renderMateriais();
   });
   const reading=document.querySelector('.material-reading-mode');
-  if(reading) reading.onmouseup=event => { if((window.getSelection()?.toString()||'').trim().length>1) { event.preventDefault(); setTimeout(()=>toggleMaterialHighlight(doc),0); } };
+  if(reading) {
+    bindPointerHighlighter(reading.querySelectorAll('[data-material-block]'),(descriptor,color)=>applyMaterialHighlight(doc,descriptor,color));
+    bindSavedHighlightMenus(reading,(descriptor,color)=>applyMaterialHighlight(doc,descriptor,color));
+  }
   const scope=document.getElementById('materialEditScope');
   if(scope) scope.onchange=event => { ui.materialEditScope=event.target.value; ui.materialSectionIndex=0; renderMateriais(); };
   const section=document.getElementById('materialSectionSelect');
@@ -7646,7 +7626,6 @@ function renderQuestion(question, total) {
   const feedback = result ? `<div class="question-feedback ${result.correct?'':'wrong'}"><div><strong>${result.correct?'Resposta correta.':'Resposta incorreta.'}</strong>${timeoutText} Gabarito: ${question.answer}.${!result.correct ? ' Marque este assunto para revisão.' : ''}</div>${!result.correct && linkedLesson ? `<button class="tiny-btn question-material-link" data-question-materials="${escapeAttr(linkedLesson.id)}">Revisar material da aula</button>` : ''}</div>` : '';
   const comment = result && question.comment ? renderQuestionCommentPanel(question, result, highlights) : '';
   const reviewButton = result && !result.correct ? `<button class="icon-btn" id="questionFeynman">Enviar tema para Feynman</button>` : '';
-  const highlightTools = textHighlightEnabled() ? `<div class="highlight-tools">${['yellow','green','blue','red'].map(color => `<button class="marker-btn marker-${color} ${ui.highlightColor===color?'active':''}" data-marker="${color}" title="Marca-texto ${highlightLabel(color)}"></button>`).join('')}<button class="tiny-btn" id="clearHighlights">Limpar</button></div>` : '';
   const questionInfo = `<div class="question-info-stack"><div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>${renderQuestionTags(question)}</div>`;
   const focusInfo = questionSidebarCollapsed ? questionInfo : '';
   const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
@@ -7654,7 +7633,7 @@ function renderQuestion(question, total) {
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
-    <div class="section-title"><h2>Questão ${question.number}</h2>${highlightTools}</div>
+    <div class="section-title"><h2>Questão ${question.number}</h2></div>
     <div class="question-workspace"><div class="question-main">
       <div class="question-stem highlightable" data-highlight-scope="stem" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights, true, 'stem')}</div>
       ${renderQuestionImages(question)}
@@ -7944,20 +7923,15 @@ function bindQuestionActions(questions, question) {
     stopQuestionTimer(true);
     persist();
   };
-  document.querySelectorAll('[data-marker]').forEach(button => button.onclick = e => { ui.highlightColor = e.currentTarget.dataset.marker; render(); });
-  const clearHighlights = document.getElementById('clearHighlights');
-  if(clearHighlights) clearHighlights.onclick = () => {
-    const current = state.questionProgress[question.id] || {};
-    if(current.textHighlights?.length) rememberHighlightState({ context:'question', questionId:question.id, highlights:current.textHighlights });
-    setQuestionProgress(question.id,{ textHighlights: [] });
-    persist();
-  };
   document.querySelectorAll('[data-eliminate]').forEach(button => button.onclick = e => {
     e.preventDefault();
     e.stopPropagation();
     toggleEliminated(question, e.currentTarget.dataset.eliminate);
   });
-  if(textHighlightEnabled()) bindPointerHighlighter(document.querySelectorAll('.question-stem.highlightable[data-highlight-scope="stem"]'),()=>toggleSelectedHighlight(question));
+  if(textHighlightEnabled()) {
+    bindPointerHighlighter(document.querySelectorAll('.question-stem.highlightable[data-highlight-scope="stem"]'),(descriptor,color)=>applyQuestionHighlight(question,descriptor,color));
+    bindSavedHighlightMenus(document.querySelector('.qbank-mode .question-card'),(descriptor,color)=>applyQuestionHighlight(question,descriptor,color));
+  }
   if(timerToggle) timerToggle.onclick = () => { ui.questionTimerOpen=!ui.questionTimerOpen; render(); };
   if(closeTimer) closeTimer.onclick = () => {
     if(questionTimer.sessionActive) {
@@ -8349,31 +8323,22 @@ function toggleEliminated(question, letter) {
   setQuestionProgress(question.id,{ eliminated: next });
   persist();
 }
-function toggleSelectedHighlight(question) {
-  const selection = window.getSelection();
-  const selected = selection ? selection.toString().replace(/\s+/g, ' ').trim() : '';
-  if(!selected || selected.length < 2) return;
-  const anchor = selection.anchorNode?.parentElement?.closest('.highlightable');
-  const focus = selection.focusNode?.parentElement?.closest('.highlightable');
-  if(!anchor || anchor!==focus || !anchor.closest('.question-card')) return;
-  const range=selection.getRangeAt(0);
-  const beforeRange=range.cloneRange();
-  beforeRange.selectNodeContents(anchor);
-  beforeRange.setEnd(range.startContainer,range.startOffset);
-  const before=beforeRange.toString().replace(/\s+/g,' ');
-  const occurrence=(before.match(new RegExp(escapeRegExp(selected),'g'))||[]).length;
-  const scope=anchor.dataset.highlightScope || 'stem';
+function applyQuestionHighlight(question, descriptor, color) {
+  if(!descriptor?.text) return;
+  const selected=descriptor.text;
+  const occurrence=n(descriptor.occurrence);
+  const scope=descriptor.scope || 'stem';
   const current = state.questionProgress[question.id] || {};
   const highlights = Array.isArray(current.textHighlights) ? [...current.textHighlights] : [];
-  const existing = highlights.findIndex(item => item.text === selected && item.scope===scope && n(item.occurrence)===occurrence);
+  const existing = highlights.findIndex(item => item.text === selected && (item.scope || 'stem')===scope && n(item.occurrence)===occurrence);
   rememberHighlightState({ context:'question', questionId:question.id, highlights });
-  const next = existing >= 0 ? highlights.filter((_, index) => index !== existing) : [...highlights, { text: selected, color: ui.highlightColor || 'yellow', scope, occurrence }];
+  let next=highlights;
+  if(color===null) next=highlights.filter((_,index)=>index!==existing);
+  else if(existing>=0) next=highlights.map((item,index)=>index===existing ? {...item,color:normalizeHighlightColor(color),scope} : item);
+  else next=[...highlights,{text:selected,color:normalizeHighlightColor(color),scope,occurrence}];
   setQuestionProgress(question.id,{ textHighlights: next });
-  selection.removeAllRanges();
-  // Atualiza apenas o enunciado para o destaque aparecer sem reconstruir a tela inteira.
-  const stem = document.querySelector('.question-stem.highlightable[data-highlight-scope="stem"]');
-  if(stem) stem.innerHTML = renderHighlightedText(question.stem, next, true, 'stem');
   saveStateOnly();
+  render();
 }
 function loadQuestionTimerSession() {
   try {
@@ -8668,6 +8633,75 @@ function highlightLabel(color) {
 function textHighlightEnabled() {
   return true;
 }
+const HIGHLIGHT_MENU_COLORS=['yellow','red','blue'];
+function normalizeHighlightColor(color) {
+  return HIGHLIGHT_MENU_COLORS.includes(color) ? color : 'yellow';
+}
+function highlightNodeElement(node) {
+  return node?.nodeType===Node.TEXT_NODE ? node.parentElement : node;
+}
+function highlightSelectionDescriptor(element) {
+  const selection=window.getSelection();
+  if(!selection || selection.rangeCount<1 || selection.isCollapsed) return null;
+  const selected=selection.toString().replace(/\s+/g,' ').trim();
+  if(selected.length<2) return null;
+  const anchor=highlightNodeElement(selection.anchorNode);
+  const focus=highlightNodeElement(selection.focusNode);
+  if(!anchor || !focus || !element.contains(anchor) || !element.contains(focus)) return null;
+  const range=selection.getRangeAt(0);
+  const beforeRange=range.cloneRange();
+  beforeRange.selectNodeContents(element);
+  beforeRange.setEnd(range.startContainer,range.startOffset);
+  const before=beforeRange.toString().replace(/\s+/g,' ');
+  const occurrence=(before.match(new RegExp(escapeRegExp(selected),'g'))||[]).length;
+  const rect=range.getBoundingClientRect();
+  return {text:selected,occurrence,element,scope:element.dataset.highlightScope||'stem',block:element.dataset.materialBlock||'',rect};
+}
+function closeHighlightPopup() {
+  document.querySelector('.highlight-popup')?.remove();
+}
+function positionHighlightPopup(popup,rect) {
+  const margin=8;
+  const box=popup.getBoundingClientRect();
+  const center=rect.left+(rect.width/2);
+  const left=Math.max(margin,Math.min(window.innerWidth-box.width-margin,center-(box.width/2)));
+  let top=rect.top-box.height-10;
+  if(top<margin) top=Math.min(window.innerHeight-box.height-margin,rect.bottom+10);
+  popup.style.left=`${Math.round(left)}px`;
+  popup.style.top=`${Math.round(Math.max(margin,top))}px`;
+}
+function showHighlightPopup({rect,editing=false,onColor,onDelete}) {
+  closeHighlightPopup();
+  const popup=document.createElement('div');
+  popup.className='highlight-popup';
+  popup.setAttribute('role','dialog');
+  popup.setAttribute('aria-label',editing?'Alterar destaque':'Escolher cor do destaque');
+  popup.innerHTML=`<span class="highlight-popup-label">${editing?'Alterar':'Destacar'}</span>${HIGHLIGHT_MENU_COLORS.map(color=>`<button type="button" class="highlight-popup-color ${color}" data-highlight-popup-color="${color}" aria-label="${highlightLabel(color)}" title="${highlightLabel(color)}"></button>`).join('')}${editing?'<button type="button" class="highlight-popup-delete" data-highlight-popup-delete aria-label="Apagar destaque" title="Apagar destaque">×</button>':''}`;
+  popup.addEventListener('pointerdown',event=>event.stopPropagation());
+  popup.addEventListener('click',event=>{
+    event.stopPropagation();
+    const color=event.target.closest('[data-highlight-popup-color]')?.dataset.highlightPopupColor;
+    const remove=event.target.closest('[data-highlight-popup-delete]');
+    if(!color&&!remove) return;
+    closeHighlightPopup();
+    window.getSelection()?.removeAllRanges();
+    if(remove) onDelete?.();
+    else onColor?.(color);
+  });
+  document.body.appendChild(popup);
+  positionHighlightPopup(popup,rect);
+  const dismiss=event=>{
+    if(!popup.contains(event.target)) closeHighlightPopup();
+  };
+  const escape=event=>{
+    if(event.key==='Escape') {
+      closeHighlightPopup();
+      window.getSelection()?.removeAllRanges();
+    }
+  };
+  setTimeout(()=>document.addEventListener('pointerdown',dismiss,{once:true}),0);
+  document.addEventListener('keydown',escape,{once:true});
+}
 function bindPointerHighlighter(elements,onHighlight) {
   elements.forEach(element => {
     let pointer={id:null,type:'',x:0,y:0,moved:false};
@@ -8675,13 +8709,13 @@ function bindPointerHighlighter(elements,onHighlight) {
       if(pointer.id!==null&&event.pointerId!==pointer.id) return;
       const pointerType=event.pointerType||pointer.type||'mouse';
       pointer={id:null,type:'',x:0,y:0,moved:false};
-      if(pointerType==='touch') return;
-      const selection=(window.getSelection()?.toString()||'').replace(/\s+/g,' ').trim();
-      if(selection.length<2) return;
       ui.suppressAnswerClick=true;
-      ui.highlightGestureUntil=Date.now()+500;
-      setTimeout(onHighlight,0);
-      setTimeout(()=>{ui.suppressAnswerClick=false;},550);
+      ui.highlightGestureUntil=Date.now()+750;
+      setTimeout(()=>{
+        const descriptor=highlightSelectionDescriptor(element);
+        if(descriptor) showHighlightPopup({rect:descriptor.rect,onColor:color=>onHighlight(descriptor,color)});
+      },pointerType==='touch'?220:0);
+      setTimeout(()=>{ui.suppressAnswerClick=false;},800);
     };
     if(window.PointerEvent) {
       element.addEventListener('pointerdown',event=>{
@@ -8700,6 +8734,33 @@ function bindPointerHighlighter(elements,onHighlight) {
       setTimeout(()=>{ui.suppressAnswerClick=false;},550);
     });
   });
+}
+function bindSavedHighlightMenus(root,onChange) {
+  if(!root) return;
+  root.querySelectorAll('.text-mark[data-saved-highlight]').forEach(mark=>mark.addEventListener('click',event=>{
+    const selection=window.getSelection();
+    if(selection&&!selection.isCollapsed&&selection.toString().trim()) return;
+    event.preventDefault();
+    event.stopPropagation();
+    ui.suppressAnswerClick=true;
+    ui.highlightGestureUntil=Date.now()+750;
+    const element=mark.closest('[data-material-block]') || mark.closest('.sim-highlightable, .highlightable') || mark.parentElement || mark;
+    const descriptor={
+      text:mark.textContent.replace(/\s+/g,' ').trim(),
+      occurrence:n(mark.dataset.highlightOccurrence),
+      scope:mark.dataset.highlightScope||element.dataset.highlightScope||'stem',
+      block:element.dataset.materialBlock||'',
+      element,
+      rect:mark.getBoundingClientRect()
+    };
+    showHighlightPopup({
+      rect:descriptor.rect,
+      editing:true,
+      onColor:color=>onChange(descriptor,color),
+      onDelete:()=>onChange(descriptor,null)
+    });
+    setTimeout(()=>{ui.suppressAnswerClick=false;},800);
+  }));
 }
 function rememberHighlightState(action) {
   highlightUndoStack.push({ ...action, highlights:structuredClone(action.highlights || []) });
@@ -8787,7 +8848,9 @@ function materialHeadingId(text) {
 function replaceHighlightedOccurrence(html,target,item) {
   let occurrence=0;
   const wanted=Math.max(0,n(item.occurrence));
-  return html.replace(new RegExp(escapeRegExp(target),'g'),match => occurrence++===wanted ? `<span class="text-mark ${escapeAttr(item.color||'yellow')}">${match}</span>` : match);
+  const color=escapeAttr(item.color||'yellow');
+  const scope=escapeAttr(item.scope||'stem');
+  return html.replace(new RegExp(escapeRegExp(target),'g'),match => occurrence++===wanted ? `<span class="text-mark ${color}" data-saved-highlight="true" data-highlight-color="${color}" data-highlight-occurrence="${wanted}" data-highlight-scope="${scope}">${match}</span>` : match);
 }
 function renderMaterialInlineMarkdown(text,doc,blockKey='') {
   let html=escapeHtml(String(text||'').replace(/\s*\|\s*/g,' '));

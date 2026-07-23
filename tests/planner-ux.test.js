@@ -132,3 +132,17 @@ test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
   const groups=planner.match(/const VIEW_GROUPS = \{([\s\S]*?)\n\};/)?.[1]||'';
   assert.match(groups,/'importar-questoes':'Outros'/);
 });
+
+test('marca-texto usa seletor flutuante único e permite editar marcações salvas',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(planner,/const HIGHLIGHT_MENU_COLORS=\['yellow','red','blue'\]/);
+  assert.match(planner,/function showHighlightPopup/);
+  assert.match(planner,/function bindSavedHighlightMenus/);
+  assert.match(planner,/data-saved-highlight="true"/);
+  assert.match(planner,/onDelete:\(\)=>onChange\(descriptor,null\)/);
+  assert.doesNotMatch(planner,/data-(?:sim-marker|material-marker|marker)=/);
+  assert.match(css,/\.highlight-popup\{position:fixed;/);
+  assert.match(css,/@media\(pointer:coarse\)\{\.highlight-popup/);
+});
