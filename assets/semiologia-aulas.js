@@ -1218,10 +1218,91 @@
     },
 
     // =========================================================================
-    // MÓDULO 8 — APARELHO MÚSCULO-ESQUELÉTICO (Aula real: Membro Superior, Membro Inferior e Tronco)
+    // MÓDULO 8 — SEMIOLOGIA DERMATOLÓGICA (Aula real, Partes 1–2)
     // =========================================================================
     {
-      id: 8, nome: 'Aparelho Músculo-Esquelético',
+      id: 8, nome: 'Semiologia Dermatológica',
+      resumo: 'Lesões elementares da pele, morfologia e distribuição — a linguagem que descreve qualquer achado cutâneo.',
+      topicos: [
+        {
+          id: 'm8d-lesoes-elementares', titulo: 'Lesões elementares: descrevendo qualquer achado de pele',
+          blocks: [
+            P('A semiologia dermatológica começa por nomear corretamente o que se vê — a "lesão elementar" — pois o nome já carrega implicações diagnósticas. Sempre descreva: tipo de lesão, cor, tamanho, forma, superfície, distribuição (localizada/generalizada, simétrica, fotoexposta) e configuração (linear, anular, agrupada).'),
+            H('Lesões planas (sem relevo)'),
+            UL(
+              'Mácula — alteração de cor, sem relevo, < 1 cm (ex.: efélide, mancha café-com-leite).',
+              'Mancha — igual à mácula, porém > 1 cm.',
+              'Púrpura — mácula por extravasamento de hemácias; não desaparece à vitropressão (diferencia de eritema, que desaparece à compressão). Petéquia < 1 cm; equimose > 1 cm.'
+            ),
+            H('Lesões sólidas (com relevo)'),
+            UL(
+              'Pápula — elevação sólida < 1 cm.',
+              'Placa — elevação sólida > 1 cm, geralmente por confluência de pápulas.',
+              'Nódulo — lesão sólida mais profunda (derme/hipoderme), > 1 cm, geralmente palpável mais do que visível.',
+              'Tumor — lesão sólida de maior volume, pode ser benigna ou maligna (termo neutro em dermatologia).',
+              'Vegetação — superfície irregular, aspecto de couve-flor (ex.: verrugas, condiloma).'
+            ),
+            H('Lesões de conteúdo líquido'),
+            UL(
+              'Vesícula — elevação com líquido claro, < 1 cm (ex.: herpes).',
+              'Bolha — igual à vesícula, > 1 cm (ex.: pênfigo, queimadura).',
+              'Pústula — elevação com conteúdo purulento.'
+            ),
+            H('Lesões por perda de substância ou secundárias'),
+            UL(
+              'Erosão — perda superficial da epiderme, cicatriza sem cicatriz.',
+              'Úlcera — perda que atinge a derme, cicatriza com cicatriz.',
+              'Fissura — corte linear estreito, geralmente em áreas de dobra/atrito.',
+              'Escara — tecido necrótico, geralmente escurecido, por isquemia/pressão.',
+              'Crosta — secreção ressecada sobre a pele (serosa, hemática ou purulenta).',
+              'Escama — descamação da camada córnea, visível e destacável.',
+              'Liquenificação — espessamento da pele com acentuação dos sulcos, por atrito/coçadura crônica.',
+              'Atrofia — afinamento da pele, perde a elasticidade normal.',
+              'Cicatriz — tecido fibroso que substitui a pele normal após reparo.'
+            ),
+            TIP('Vitropressão (comprimir a lesão com uma lâmina de vidro) é o teste mais rápido para diferenciar eritema (desaparece — vasodilatação) de púrpura (não desaparece — sangue extravasado no tecido). É crucial na avaliação de exantemas febris, onde púrpura levanta suspeita de doença meningocócica/vasculite.'),
+            WARN('Púrpura palpável + febre é uma combinação de alarme — investigar meningococcemia e vasculites sistêmicas com urgência.'),
+            galeria('07-semiologia-dermatologica-pt-1', 12, 25),
+          ],
+        },
+        {
+          id: 'm8d-morfologia-distribuicao', titulo: 'Morfologia, distribuição e achados dermatológicos comuns',
+          blocks: [
+            H('Configuração das lesões'),
+            UL(
+              'Linear — segue um trajeto (ex.: dermatite de contato por planta, fenômeno de Koebner na psoríase).',
+              'Anular — em anel, com centro poupado (ex.: tinha do corpo, granuloma anular).',
+              'Agrupada/herpetiforme — lesões próximas umas às outras (ex.: vesículas do herpes simples/zóster).',
+              'Serpiginosa — trajeto sinuoso (ex.: larva migrans cutânea).',
+              'Alvo/em íris — anéis concêntricos (ex.: eritema multiforme).'
+            ),
+            H('Distribuição — pista topográfica'),
+            UL(
+              'Fotoexposta — face, "V" do decote, dorso das mãos: fotodermatoses, lúpus cutâneo.',
+              'Áreas de dobra (flexural) — dermatite atópica do adulto, intertrigo, candidíase.',
+              'Dermátomo — distribuição unilateral em faixa: herpes zóster.',
+              'Extensoras (cotovelo, joelho, couro cabeludo) — psoríase.',
+              'Trajeto de vaso/linfático — linfangite (estrias eritematosas lineares a partir de porta de entrada infecciosa).'
+            ),
+            H('Sinais e achados clássicos'),
+            UL(
+              'Sinal de Nikolsky — descolamento da pele aparentemente sã com fricção leve: pênfigo, necrólise epidérmica tóxica (NET/Stevens-Johnson).',
+              'Sinal de Darier — urtica ao atritar a lesão: mastocitose cutânea (urticária pigmentosa).',
+              'Fenômeno de Koebner — lesões novas surgem em áreas de trauma/atrito: psoríase, líquen plano, vitiligo.',
+              'Escama fina "em hóstia" — psoríase; escama furfurácea (farinha) — pitiríase versicolor.'
+            ),
+            WARN('Sinal de Nikolsky positivo com lesões bolhosas extensas e comprometimento de mucosas é emergência dermatológica (suspeita de NET/Stevens-Johnson) — risco de perda de barreira cutânea, infecção e desequilíbrio hidroeletrolítico grave.'),
+            galeria('08-semiologia-dermatologica-pt-2', 12, 33),
+          ],
+        },
+      ],
+    },
+
+    // =========================================================================
+    // MÓDULO 9 — APARELHO MÚSCULO-ESQUELÉTICO (Aula real: Membro Superior, Membro Inferior e Tronco)
+    // =========================================================================
+    {
+      id: 9, nome: 'Aparelho Músculo-Esquelético',
       resumo: 'Roteiro sistematizado (inspeção → palpação → mobilidade → testes especiais → neurológico) e os testes clássicos de ombro, cotovelo, punho, quadril, joelho e tornozelo.',
       topicos: [
         {
@@ -1333,10 +1414,10 @@
     },
 
     // =========================================================================
-    // MÓDULO 9 — SISTEMA NEUROLÓGICO
+    // MÓDULO 10 — SISTEMA NEUROLÓGICO
     // =========================================================================
     {
-      id: 9, nome: 'Sistema Neurológico',
+      id: 10, nome: 'Sistema Neurológico',
       resumo: 'O exame que localiza a lesão: consciência, pares cranianos, motor, sensitivo, reflexos e sinais meníngeos.',
       topicos: [
         {

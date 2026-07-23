@@ -7,7 +7,7 @@ A única pasta de desenvolvimento é:
 `D:\Usuário\Isaac Sotero\Documents\ENAMED-GitHub\`
 
 O arquivo `index.html` é a única entrada canônica. A cópia `enamed_planner.html` da pasta
-offline é um artefato gerado por `pnpm offline:sync` e não deve ser editada manualmente.
+offline é um artefato gerado por `npm run offline:sync` e não deve ser editada manualmente.
 
 ## Fonte de verdade
 
