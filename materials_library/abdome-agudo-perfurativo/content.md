@@ -2,71 +2,51 @@
 
 <!-- page:1 -->
 
-## DOENÇA ULCEROSA PÉPTICA PERFURADA
+## Definição
 
-Dica de prova = Uso de Aines
+- O **abdome agudo perfurativo** é caracterizado por uma perfuração de víscera oca → pneumoperitônio → cai secreção intestinal na cavidade → inflamação → infecção → complicações → peritonite → sepse → morte
+- Manejo: **analgesia + hidratação + antibioticoterapia + suporte + cirurgia**
 
-- Quadro Clínico: Dor abdominal aguda intensa; Peritonite; Posição antálgica; Abdome em tábua; Sepse.
+## Principais Etiologias
 
-- Raio-x de abdome agudo = Pneumoperitônio;
+### Esôfago
 
-## DEFINIÇÃO
+- 1ª causa de perfuração esofágica: **perfuração iatrogênica** após endoscopia
+- Outras causas: trauma, corpo estranho, tumor e vômitos incoercíveis
+- Perfuração do esôfago abdominal é rara
+- Tratamento segue o mesmo raciocínio: **cirurgia**
 
-- O abdome agudo perfurativo é caracterizado por uma perfuração de víscera oca → Pneumoperitônio
+**Síndrome de Boerhaave**
 
-→ Cai secreção intestinal na cavidade → Inflamação → Infecção → Complicações → Peritonite → Sepse → Morte;
+- Perfuração esofágica após vômitos incoercíveis ou esforço extenuante
+- Mais comum na parte distal e na região póstero-lateral esquerda do órgão
+- Mortalidade de até **40%**, devido ao difícil diagnóstico
+- Quadro clínico: **Tríade de Mackler** (enfisema de subcutâneo, derrame pleural e pneumomediastino)
+- Diagnóstico: suspeita pelo histórico e exame clínico → solicitar exames de imagem
+- Tratamento: **cirurgia**
+  - Precoce: reparo primário e drenagem
+  - Tardia: esofagostomia + gastrostomia
+  - Via videotoracoscopia ou toracotomia
+  - Patch de Graham modificado
 
-- Manejo: Analgesia + Hidratação + Antibioticoterapia + suporte e CIRURGIA!
+### Estômago e Duodeno
 
-## PRINCIPAIS ETIOLOGIAS
+- Causas: neoplasia, divertículo, corpo estranho, iatrogênica
 
-## ESÔFAGO
+**Doença ulcerosa péptica perfurada** (a mais comum)
 
-- 1ª causa de perfuração esofágica: perfuração iatrogênica após endoscopia;
+> Dica de prova: uso de AINEs.
 
-- Outras causas: trauma, corpo estranho, tumor e vômitos incoercíveis;
-
-- Perfuração do esôfago abdominal é raro;
-
-- O tratamento segue o mesmo raciocínio = cirurgia!
-
-Síndrome de Boerhaave
-
-- Perfuração esofágica após vômitos incoercíveis ou esforço extenuante;
-
-- Mais comum na parte distal e região póstero-lateral esquerda do órgão;
-
-- A mortalidade é de até 40% - devido ao difícil diagnóstico;
-
-- Quadro clínico: Tríade de Mackler (enfisema de subcutâneo, derrame pleural e pneumomediastino); - Tratamento: Patch de Graham modificado.
-
-- Diagnóstico: suspeita pelo histórico e exame clínico →
-
-Solicitar exames de imagem;
-
-- Tratamento: CIRURGIA: Precoce = reparo primário e drenagem; Tardia: esofagostomia + gastrostomia; Via videotoracoscopia ou toracotomia.
-
-## ESTÔMAGO E DUODENO
-
-- Causas: neoplasia, divertículo, corpo estranho, iatrogênica.
-
-Doença ulcerosa péptica perfurada (a mais comum)
-
-- 90% são causadas pela H. pylori;
-
-- 10 % são causadas por: AINES; corticoides; Zollinger
-
-Ellison; tumores gástricos;
-
-- Complicações da úlcera: perfuração: Normalmente a úlcera duodenal de parede anterior perfura; Sangramento: parede posterior; Em estômago: pensar em neoplasia.
-
-- Clínica: Dor abdominal aguda e intensa; peritonite;
-
-posição antálgica; abdome em tábua; sepse;
-
-- Sinal de Jobert → Perda da macicez hepática e punho percussão no hipocôndrio direito – loja hepática;
-
-- Diagnóstico: Raio-x de abdome agudo! Pneumoperitônio! Cuidado com o sinal de Chilaiditi: às vezes, o paciente pode ter uma alça que se interpõe entre fígado e diafragma e pode-se confundir com pneumoperitônio. O paciente não vai apresentar manifestações clínicas.
+- **90%** são causadas por *H. pylori*
+- **10%** são causadas por: AINEs, corticoides, síndrome de Zollinger-Ellison, tumores gástricos
+- Complicações da úlcera:
+  - Perfuração: normalmente a úlcera duodenal de parede anterior perfura
+  - Sangramento: parede posterior
+  - Em estômago: pensar em neoplasia
+- Clínica: dor abdominal aguda e intensa, peritonite, posição antálgica, abdome em tábua, sepse
+- **Sinal de Jobert**: perda da macicez hepática e punho-percussão dolorosa no hipocôndrio direito (loja hepática)
+- Diagnóstico: **raio-X de abdome agudo** → pneumoperitônio
+  - Cuidado com o **sinal de Chilaiditi**: às vezes o paciente tem uma alça que se interpõe entre fígado e diafragma, podendo ser confundida com pneumoperitônio; o paciente não apresenta manifestações clínicas nesse caso
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -74,47 +54,42 @@ posição antálgica; abdome em tábua; sepse;
 
 <!-- page:2 -->
 
-- Tratamento cirúrgico;
+- Tratamento: **cirúrgico**
+  - Laparotomia ou laparoscopia, se o paciente tiver condições clínicas: suturar a úlcera + patch de epiplon (patch de Graham modificado)
+  - **Gastrectomia** é exceção → úlcera > 2 cm, complicada
+  - Hidratação + analgesia + antibioticoterapia + omeprazol em dose plena
+- Dúvidas frequentes:
+  - Dreno em todo mundo? Não é necessário
+  - SNG em todo mundo? Não é necessária
+  - Libera dieta no pós-operatório? Pode, deve-se avaliar caso a caso
+- Após a alta: endoscopia e pesquisa de *H. pylori* ambulatorial (biópsia)
 
-- Laparotomia ou laparoscopia se o paciente tiver condições clínicas: Suturar a úlcera + patch de epiplon (patch de Gastrectomia é exceção → Úlcera > 2 cm, complicada; Hidratação + analgesia + antibioticoterapia +
+Figura 1: Gás entre o fígado e o diafragma — pneumoperitônio.
 
-Graham modificado); Omeprazol dose plena.
+## Outras Vísceras Ocas que Podem Perfurar
 
-- Dúvidas: Dreno em todo mundo? Não precisa! SNG em todo mundo? Não precisa! Libera dieta no pós-op? Pode! Deve-se avaliar caso a caso;
+### Delgado
 
-Figura 1: Gás entre o fígado e diafragma - pneumoperitônio. | Após a alta: Endoscopia e pesquisa por H pylori ambulatorial: Biópsia.
+- Etiologias: infecciosas, DII, iatrogenias, neoplasias
+- Tratamento: cirurgia e tratamento da causa base
 
-## LEMBRAR QUE OUTRAS VÍSCERAS OCAS
+### Cólon
 
-## PODEM PERFURAR
+- Etiologias: tumor, divertículo, síndrome de Ogilvie
+- Tratamento: cirurgia e tratamento da causa base
 
-## DELGADO
+### Reto
 
-- Etiologias: infecciosas, DII, Iatrogenias, neoplasias;
+- Etiologias: corpo estranho, iatrogenias
+- Tratamento: cirurgia e tratamento da causa base
 
-- Tratamento: cirurgia e tratar a causa base.
+## Referências
 
-## CÓLON
+Figura 1: Gás entre o fígado e o diafragma — pneumoperitônio. Fonte: Case courtesy of Dr Guilherme Pioli Resende, Radiopaedia.org, rID: 81470.
 
-- Etiologias: tumor, divertículo, Ogilvie;
+Figura 2: Sinal de Rigler — outro sinal de pneumoperitônio. Fonte: Case courtesy of Dr Andrew Van, Radiopaedia.org, rID: 45431.
 
-- Tratamento: cirurgia e tratar causa base.
-
-## RETO
-
-- Etiologias: corpo estranho, iatrogenias;
-
-- Tratamento: cirurgia e tratar causa base.
-
-## REFERÊNCIAS
-
-Figura 2: Sinal de Rigler - outro sinal de pneumoperitônio. Figura 1: Gás entre o fígado e diafragma - pneumoperitônio.
-
-Fonte: Case courtesy of Dr Guilherme Pioli Resende, Radiopaedia.org, rID: 81470 Figura 2: Sinal de Rigler - outro sinal de pneumoperitônio.
-
-Fonte: Case courtesy of Dr Andrew Van, Radiopaedia.org, rID: 45431 Figura 3: Sinal do ligamento falciforme - outro sinal de pneumoperitônio.
-
-Fonte: www.radiopaedia.org Figura 3: Sinal do ligamento falciforme - outro sinal de pneumoperitônio.
+Figura 3: Sinal do ligamento falciforme — outro sinal de pneumoperitônio. Fonte: www.radiopaedia.org.
 
 ![Figura do material - página 2](figure-002-1.webp)
 

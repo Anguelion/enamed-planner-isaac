@@ -1802,7 +1802,7 @@
         "D": "Apenas II e III estão corretas.",
         "E": "I e III estão incorretas."
       },
-      "answer": "D",
+      "answer": "E",
       "source": "01. QUESTÕES BLOCO 4 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 4",
       "images": [],
@@ -1816,7 +1816,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-35"
+      "scheduleId": "cron-35",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 4 (SEMANAIS).txt"
     },
     {
       "id": "b04-semanal-q060",

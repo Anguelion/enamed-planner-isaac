@@ -1,205 +1,157 @@
-# Cirrose Hepática Varizes Esofágicas e Síndrome Hepatopulmonar
+# Cirrose Hepática: Varizes Esofágicas e Síndrome Hepatopulmonar
 
 <!-- page:1 -->
 
-## CIRROSE: VARIZES ESOFÁGICAS E
+## Hemorragia Digestiva Alta (HDA) Varicosa
 
-## SÍNDROME HEPATOPULMONAR
+- **Estabilização clínica (1ª conduta)**: proteção de vias aéreas, expansão volêmica com cristaloides, hemotransfusão se Hb < 7 g/dL;
+- **Controle do sangramento** com vasoconstritor esplâncnico (mesmo antes da EDA): Terlipressina ou Octreotide;
+- **Antibioticoprofilaxia** para PBE: ceftriaxona 1 g/dia (EV);
+- **Endoscopia Digestiva Alta (EDA)**, na urgência (ideal até 12h), no paciente estável: esofágicas – ligadura elástica; gástricas – cianoacrilato;
+- **Refratariedade**: nova EDA; balão de Sengstaken-Blakemore (terapia de transição, máximo 24h); TIPS; cirurgia para derivação portossistêmica.
 
-## HDA (CM) HEMORRAGIA DIGESTIVA ALTA (HDA) VARICOSA
+## Hemorragia Digestiva Alta (HDA) Varicosa
 
-- Estabilização clínica (1ª conduta): proteção de vias aéreas, expansão volêmica com cristaloides, hemotransfusão se Hb < 7 g/dL
-
-- Controle do sangramento com vasoconstritor esplâncnico (mesmo antes da EDA) Terlipressina ou Octreotide
-
-- Antibioticoprofilaxia para PBE: ceftriaxona
-
-1g/dia (EV)
-
-- Endoscopia Digestiva Alta (EDA), na urgência (ideal até 12h),no paciente estável Esofágicas: ligadura elástica Gástricas: cianoacrilato
-
-- Refratariedade Nova EDA Balão de Sengstaken-Blakemore (terapia de transição, máximo 24h) TIPS Cirurgia para derivação portossistêmica
-
-## HEMORRAGIA DIGESTIVA ALTA
-
-## (HDA) VARICOSA DEFINIÇÃO
+### Definição
 
 - É a HDA secundária à rotura de varizes, sejam esofágicas (maioria) ou gástricas (10-15%), decorrentes da hipertensão portal. Varizes gástricas isoladas: considerar hipertensão portal segmentar;
-
-- Mortalidade: 15 – 25%, em 6 semanas.
-
+- Mortalidade: 15 – 25%, em 6 semanas;
 - Recorrência: 60 – 70% em 1 – 2 anos (sem profilaxia).
 
-TRATAMENTO Manejo inicial
+### Tratamento
 
-- Estabilização clínica: Proteção de vias aéreas; Expansão volêmica com cristaloides; Hemotransfusão se Hb < 7 g/dL (limiar mais alto no caso de coronariopatia).
+**Manejo inicial**
+- Estabilização clínica: proteção de vias aéreas; expansão volêmica com cristaloides; hemotransfusão se Hb < 7 g/dL (limiar mais alto no caso de coronariopatia).
 
-Tabela 1: Vasoconstritores esplâncnicos. VASOCONSTRITOR DO 2mg EV 4/4h na TERLIPRESSINA (1mg) 1mg EV 4/4h se hem Bôlus inicial de 50 OCTREOTIDE (100mcg/mL)
+**Manejo específico**
+- Controle do sangramento com vasoconstritor esplâncnico (mesmo antes da EDA).
 
-seguido de Profilaxias
+#### Tabela 1: Vasoconstritores Esplâncnicos
 
-- Primária Todos os pacientes com hipertensão portal clinicamente significativa (HPCS) Betabloqueador (1ª escolha): carvedilol (alvo Ligadura elástica (2ª escolha), apenas se intolerância ao B + varizes alto risco
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-6,25mg 2x/dia)
+| Vasoconstritor | Dose | Tempo de uso |
+|---|---|---|
+| **Terlipressina** (1 mg) | 1-2 mg EV 4/4h | Manter por 2-5 dias após hemostasia endoscópica |
+| **Octreotide** (100 mcg/mL) | Bolus inicial de 50 mcg EV em 10 min, seguido de 50 mcg/h | Nas primeiras 48h se hemorragia controlada |
 
-- Secundária β Para todos os pacientes que já tiveram um sangramento Betabloqueador + ligadura elástica.
+*Verificar Tabela 1.*
 
-## SÍNDROME HEPATOPULMONAR (SHP)
+- **Antibioticoprofilaxia** para PBE (5 dias ou até estabilidade para alta), pelo maior risco de translocação bacteriana: Ceftriaxona 1 g/dia EV (prioridade) OU Norfloxacino 400 mg/dia (7 dias);
+- **Endoscopia Digestiva Alta (EDA)**, na urgência (ideal até 12h), quando paciente estável:
+  - Esofágicas: ligadura elástica (preferível); escleroterapia;
+  - Gástricas: cianoacrilato.
 
-- Caracterizado pela platipneia e ortodeóxia
+## Síndrome Hepatopulmonar (SHP)
 
-- Diagnóstico PaO2 < 80 mmHg OU Gradiente de oxigênio alveolar-arterial ≥ 15 mmHg (≥ 20 mmHg se > Identificação de defeito vascular pulmonar
-
-65 anos) E (Ecocardiograma com “microbolhas”)
-
-- Tratamento: O2 suplementar (S/N) + transplante hepático
-
-Manejo específico
-
-- Controle do sangramento com vasoconstritor esplâncnico (mesmo antes da EDA)
-
-- Vasoconstrictor esplâncnico
-
-- Verificar Tabela 1
-
-- Antibioticoprofilaxia para PBE (5 dias ou até estabilidade para alta) Pelo maior risco de translocação bacteriana; Ceftriaxona 1g/dia EV (prioridade) OU Norfloxacino
-
-400 mg/d (7 dias)
-
-- Endoscopia Digestiva Alta (EDA), na urgência (ideal até Esofágicas Ligadura elástica (preferível); Escleroterapia Gástricas Cianoacrilato as primeiras 48h morragia controlada Manter por 2-5 dias após hemostasia endoscópica e 50 mcg/h
-
-12h), quando paciente estável OSE TEMPO DE USO 0mcg EV em 10min,
+- Caracterizada pela **platipneia** e **ortodeóxia**;
+- **Diagnóstico**: PaO2 < 80 mmHg OU gradiente de oxigênio alveolar-arterial ≥ 15 mmHg (≥ 20 mmHg se > 65 anos) E identificação de defeito vascular pulmonar (ecocardiograma com "microbolhas");
+- **Tratamento**: O2 suplementar (se necessário) + transplante hepático.
 
 ---
 
 <!-- page:2 -->
 
-ATENÇÃO: lembrar que pacientes cirróticos
+> **Atenção**: lembrar que pacientes cirróticos também podem ter úlceras pépticas. É claro que, proporcionalmente, sangramento por varizes nestes pacientes é muito comum, mas até confirmação de sangramento por varizes via EDA, é bem indicado também o uso de IBP em dose plena.
 
-- Ligadura elástica (2ª escolha), apenas se:
+- **TIPS preemptivo**: colocação de um TIPS de forma precoce, entre 24-72h após a admissão, em um paciente que apresente alto risco de ressangramento, antes que ocorra a falha do tratamento, ou seja, antes da necessidade de colocação de um TIPS de resgate. Considerar em pacientes: Child B > 7 e EDA com sangramento; Child C com pontuação 10 a 13.
 
-também podem ter úlceras pépticas. É claro que, | Intolerância ao betabloqueador + varizes de proporcionalmente, sangramento por varizes nestes alto risco (médio ou grosso calibre, presença pacientes é muito comum, mas até confirmação de de redspots).
+### Indicações de EDA
 
-sangramento por varizes via EDA, é bem indicado também o uso de IBP em dose plena. ATENÇÃO: Todo paciente com HPCS deve ser considerado para profilaxia de descompensação
+- Se ausência de elastografia e não está em uso de betabloqueador;
+- Se plaquetas < 150.000 e não está em uso de betabloqueador;
+- Se tem contraindicação ao betabloqueador ou não tolera seu uso.
 
-- TIPS preemptivo com betabloqueador Colocação de um TIPS de forma precoce, entre apresente alto risco de ressangramento, antes
+*Verificar Tabela 2.*
 
-24-72h após a admissão, em um paciente que PROFILAXIA SECUNDÁRIA
+> **Atenção**: se o paciente já está em uso de betabloqueador, não é necessário realizar EDA para avaliar varizes.
 
-- Para todos os pacientes que já tiveram que ocorra a falha do tratamento ou seja, antes da um sangramento necessidade de colocação de um TIPS de resgate
+## Profilaxia Primária
 
-- Betabloqueador + ligadura elástica. Considerar em pacientes: Child B > 7 e EDA com sangramento INDICAÇÕES DE EDA Child C com pontuação 10 a 13
+- Todos os pacientes com hipertensão portal clinicamente significativa (HPCS) — rever a ficha-resumo de "Cirrose: Conceitos Gerais";
+- **Betabloqueador (1ª escolha)**: classicamente betabloqueadores não seletivos: propranolol, nadolol. Preferível atualmente: Carvedilol 3,125 – 6,25 mg 2x/dia — apresenta melhor tolerância, efeito vasodilatador, anti-alfa-adrenérgico. Precaução em ascites volumosas, refratárias. Suspender em: PAS < 90 mmHg; sangramento; PBE; insuficiência renal;
+- **Ligadura elástica (2ª escolha)**, apenas se: intolerância ao betabloqueador + varizes de alto risco (médio ou grosso calibre, presença de red spots).
 
-- Se ausência de elastografia e não está em uso
+## Profilaxia Secundária
 
-Quadros refratários de betabloqueador
+- Para todos os pacientes que já tiveram um sangramento;
+- **Betabloqueador + ligadura elástica**;
+- **Nova EDA**;
+- **Balão de Sengstaken-Blakemore** – é uma terapia de ponte, de transição, baseada em tamponamento mecânico (sonda de 3 vias): lúmen para aspiração de conteúdo gástrico; lúmen para insuflar a porção gástrica do balão; lúmen para porção esofágica. Deve ser utilizado por no máximo 24h: risco elevado para ulceração e perfuração esofágica;
+- **TIPS**: útil para reduzir pressão portal; é um shunt portossistêmico intra-hepático;
+- **Cirurgia** para derivação portossistêmica.
 
-- Nova EDA
+## Outras Causas de Sangramento no Cirrótico
 
-- Se plaquetas < 150.000 e não está em uso
+### Gastropatia Hipertensiva Portal
 
-- Balão de Sengstaken-Blakemore – é uma terapia de betabloqueador ponte, de transição, baseada em tamponamento
+- Padrão em "mosaico" no corpo gástrico;
+- Hemorragias subepiteliais – principalmente em pacientes com gastropatia mais grave;
+- Se intensa: encarar como HPCS.
 
-- Se tem contraindicação ao betabloqueador ou não mecânico (sonda de 3 vias); tolera seu uso Lúmen para aspiração de conteúdo gástrico;
+**Tratamento**
+- **Sangramento crônico**: betabloqueador não seletivo; reposição de ferro; TIPS (se refratário às medidas iniciais);
+- **Sangramento agudo**: vasoconstritores esplâncnicos.
+- Ainda, é possível surgir duodenopatia, enteropatia, colopatia hipertensiva portal.
 
-- Verificar Tabela 2 Lúmen para insuflar a porção gástrica do balão; Lúmen para porção esofágica. ATENÇÃO: Se o paciente já está em uso de Deve ser utilizado por no máximo 24h: risco elevado betabloqueador, não é necessário realizar EDA para ulceração e perfuração esofágica avaliar varizes.
+### Tabela 2: Frequência de EDA
 
-- TIPS;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## OUTRAS CAUSAS DE
-
-| Útil para reduzir pressão portal;
-
-## | É um shunt portossistêmico intra-hepático. SANGRAMENTO NO CIRRÓTICO
-
-- Cirurgia para derivação portossistêmica.
-
-## GASTROPATIA HIPERTENSIVA PORTAL
-
-## PROFILAXIA PRIMÁRIA
-
-- Padrão em “mosaico” no corpo gástrico
-
-- Todos os pacientes com hipertensão portal | Hemorragias subepiteliais – Principalmente em clinicamente significativa (HPCS) - rever a ficha pacientes com gastropatia mais grave.
-
-resumo de “Cirrose: Conceitos Gerais”
-
-- Se intensa: encarar como HPCS
-
-- Betabloqueador (1ª escolha) Tratamento
-
-- Classicamente betabloqueadores não seletivos:
-
-- Sangramento crônico propranolol, nadolol; | Betabloqueador não seletivo;
-
-- Preferível atualmente: Carvedilol | Reposição de ferro; 3,125 - 6,25 mg 2x/dia | TIPS: se refratário às medidas iniciais. Apresenta melhor tolerância, efeito vasodilatador,
-
-- Sangramento agudo anti-alfa-adrenérgico. | Vasoconstritores esplâncnicos;
-
-- Precaução em ascites volumosas, refratárias.
-
-- Ainda, é possível surgir duodenopatia, enteropatia,
-
-- Suspender em: colopatia hipertensiva portal. PAS < 90 mmHg; Sangramento; PBE; Insuficiência renal.
-
-Tabela 2: Frequência de EDA. Varizes Fator de risco p/ hepatopatia Frequência Presente 2 anos Ausente Quiescente 3 anos Presente 1 ano Fino calibre Quiescente 2 anos Alto risco Ligadura (só se profilaxia secundára ou se não (médio ou grosso calibre, red tolerar betabloqueador na primária) e repetir 2-4 6m e seguir 1/1 ano spots) sem até erradicação
+| Varizes | Fator de risco p/ hepatopatia | Frequência |
+|---|---|---|
+| Ausente | Presente | 2 anos |
+| Ausente | Ausente | 3 anos |
+| Fino calibre (quiescente) | Presente | 1 ano |
+| Fino calibre (quiescente) | Ausente | 2 anos |
+| Alto risco (médio ou grosso calibre, red spots) | — | Ligadura (só se profilaxia secundária ou se não tolerar betabloqueador na primária) e repetir 2-4 6m e seguir 1/1 ano até erradicação |
 
 ---
 
 <!-- page:3 -->
 
-## GAVE (ECTASIA VASCULAR ANTRAL QUADRO CLÍNICO
+## GAVE (Ectasia Vascular Antral Gástrica)
 
-## GÁSTRICA)
-
-- Caracterizado pela platipneia e ortodeóxia:
-
-- Ectasias vasculares antrais gástricas; | Platipneia: piora da dispneia ao sentar/ortostase Em aspecto de favo de mel; e melhora ao decúbito. Apesar de não ser “Watermelon stomach” – estômago em melancia; patognomônico, é bastante específico; “Watermelon stomach” – estômago em melancia;
-
+- Ectasias vasculares antrais gástricas;
+- Em aspecto de favo de mel; "Watermelon stomach" – estômago em melancia;
 - Não estão associadas à hipertensão portal;
+- Outras associações: esclerose sistêmica; DRC; cardiopatia.
 
-- Outras associações: Esclerose sistêmica;
-
-DRC; Cardiopatia.
-
-## Tratamento
+### Tratamento
 
 - EDA com plasma de argônio – principal;
+- Antrectomia – se refratário.
 
-- Antrectomia – se refratário;
+## Síndrome Hepatopulmonar (SHP)
 
-(SHP)
+- Cerca de ¼ dos cirróticos podem apresentar SHP;
+- A liberação de citocinas vasodilatadoras, especialmente o óxido nítrico, leva à vasodilatação pulmonar, especialmente nos capilares das bases pulmonares, o que dificulta o acesso dos capilares ao O2, com um distúrbio de ventilação-perfusão.
 
-- Cerca de ¼ dos cirróticos podem apresentar SHP.
+*Verificar Figura 1.*
 
-- A liberação de citocinas vasodilatadoras, especialmente o óxido nítrico, levam à vasodilatação pulmonar, especialmente nos capilares das bases pulmonares, o que dificulta o acesso dos capilares ao
+*Figura 1: Quadro clínico e fisiopatologia da síndrome hepatopulmonar (SHP).*
 
-O2, com um distúrbio de ventilação-perfusão.
+### Quadro Clínico
 
-- Verificar Figura 1
+Caracterizado pela platipneia e ortodeóxia:
+- **Platipneia**: piora da dispneia ao sentar/ortostase e melhora ao decúbito. Apesar de não ser patognomônico, é bastante específico;
+- **Ortodeóxia**: dessaturação quando o paciente passa de uma posição supina para uma posição vertical. Apesar de não ser patognomônico, é bastante específico.
 
-Figura 1: Quadro clínico e fisiopatologia da síndrome hepatopulm patognomônico, é bastante específico;
+### Diagnóstico
 
-| Ortodeóxia: dessaturação quando o paciente passa de uma posição supina para uma posição vertical. Apesar de não ser patognomônico, é bastante específico.
+- PaO2 < 80 mmHg OU gradiente de oxigênio alveolar-arterial ≥ 15 mmHg (≥ 20 mmHg se > 65 anos) E
+- Identificação de defeito vascular pulmonar: ecocardiograma com "microbolhas" — no átrio esquerdo (AE) em 1 ciclo: shunt intracardíaco; no AE, após 3 a 8 ciclos: dilatação de vasos intrapulmonares.
 
-## DIAGNÓSTICO
+### Classificação
 
-- PaO2 < 80 mmHg OU Gradiente de oxigênio alveolararterial ≥ 15 mmHg (≥ 20 mmHg se > 65 anos) E
+- **Leve**: PaO2 ≥ 80 mmHg;
+- **Moderada**: 60-80 mmHg;
+- **Grave**: 50-60 mmHg (considerar transplante hepático);
+- **Muito grave**: < 50 mmHg.
 
-- Identificação de defeito vascular pulmonar Ecocardiograma com “microbolhas”; No átrio esquerdo (AE) em 1 ciclo: No AE, após 3 a 8 ciclos: Dilatação vasos intrapulmonares.
-
-Shunt intracardíaco; CLASSIFICAÇÃO
-
-- Leve: PaO2 ≥ 80 mmHg;
-
-- Moderada: 60-80 mmHg;
-
-- Grave: 50-60 mmHg; Considerar transplante hepático.
-
-- Muito grave: < 50 mmHg.
+### Tratamento
 
 - O2 suplementar, se necessário;
-
-- Transplante hepático monar (SHP).
+- Transplante hepático.
 
 ![Figura do material - página 3](figure-003-1.webp)

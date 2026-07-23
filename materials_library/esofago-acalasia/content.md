@@ -1,232 +1,169 @@
-# Esôfago Acalasia
+# Esôfago — Acalasia
 
 <!-- page:1 -->
 
-Esôfago (CIR) Fisiopatologia: T
+## Visão Geral
 
-- Degeneração progressiva do plexo mioentérico
+**Fisiopatologia:**
 
-(Auerbach) e submucoso (Meissner)
+- Degeneração progressiva do plexo mioentérico (Auerbach) e submucoso (Meissner).
+- Relaxamento incompleto do esfíncter esofágico inferior (EEI).
+- Aperistalse do corpo esofágico.
 
-- Relaxamento incompleto do Esfíncter esofágico inferior
+**Exames:**
 
-- Aperistalse do corpo esofágico
+- **EDA:** não serve para diagnóstico → serve para excluir neoplasia.
+- **EED (esofagograma):** avalia o grau de dilatação do esôfago (classificação de Rezende-Mascarenhas) → determina o tipo de tratamento.
+- **Manometria:** padrão-ouro.
 
-Exames:
+## Epidemiologia
 
-- EDA: Não serve para diagnóstico → excluir neoplasia;
-
-- EED: Grau de dilatação do esôfago (Rezende
-
-Mascarenhas) → determina o tipo de tratamento;
-
-- Manometria: padrão-ouro.
-
-## EPIDEMIOLOGIA M
-
-- Principal distúrbio motor do esôfago D
-
+- Principal distúrbio motor do esôfago.
 - Acalasia é um fator de risco para desenvolvimento de neoplasia de esôfago, principalmente CEC.
 
-## FISIOPATOLOGIA
+## Fisiopatologia
 
-- Degeneração progressiva do plexo mioentérico relaxamento incompleto do Esfíncter esofágico inferior
+- Degeneração progressiva do plexo mioentérico (Auerbach) e submucoso (Meissner), levando ao relaxamento incompleto do esfíncter esofágico inferior (EEI) e aperistalse do corpo esofágico.
+- A hipertonia do EEI pode estar associada, mas ocorre na minoria dos casos de acalasia.
+- O achado principal na manometria é o relaxamento incompleto sem hipertonia do EEI, associado com aperistalse do corpo esofágico.
 
-(Auerbach) e submucosa (Meisser), levando ao U (EEI) e aperistalse do corpo esofágico.
+## Etiologia
 
-- A hipertonia do EEI pode estar associada, mas ocorre G na minoria dos casos de acalasia.
+**Doença de Chagas = principal causa no Brasil!**
 
-- Achado principal na manometria é o relaxamento E incompleto sem hipertonia do EEI associado com aperistalse do corpo esofágico.
+- Megaesôfago Chagásico (90% dos casos no Brasil) → parasitismo direto das células nervosas (minoria dos casos), ação inflamatória/neurotoxinas, mecanismo autoimune.
+- Comum acometimento de esôfago, sigmoide e coração, com BRD+BDAS (bloqueio de ramo direito e bloqueio divisional ântero-superior).
+- **Outras etiologias:** idiopática (principal etiologia em regiões não endêmicas de Doença de Chagas); gás mostarda (lesão nervosa direta); genética.
 
-## ETIOLOGIA
+**Tratamento (resumo por grau):**
 
-Doença de Chagas = principal no Brasil!
+- **Forma Incipiente (Grau 1):** dilatação endoscópica, toxina botulínica. Cirurgia e POEM são opções.
+- **Forma Não Avançada (Grau 2 e 3):** cardiomiotomia + fundoplicatura (Heller-Pinotti) ou POEM (problema = DRGE).
+- **Forma Avançada (Grau 4):** esofagectomia, cirurgia de Thal-Hatafuku, mucosectomia ou cirurgia de Serra-Dória.
 
-- Megaesôfago Chagásico (90% dos casos no Brasil)
+## Manifestações Clínicas
 
-→
+**Disfagia de longa duração:**
 
-| Parasitismo direto das células nervosas (minoria dos casos), | Ação inflamatória/ neurotoxinas, | Autoimune.
+- Ao contrário da neoplasia de esôfago (disfagia de curta duração, meses).
+- Início com disfagia a sólidos, progressiva.
 
-- Comum acometimento de esôfago, sigmóide e coração com BRD+BDAS (bloqueio de ramo direito e bloqueio divisional ântero-superior)
+**Regurgitação:**
 
-- Outras etiologias: Idiopática (principal etiologia em regiões não endêmicas de Doença de Chagas) E Gás mostarda (lesão nervosa direta) Genética
+- Retorno de alimento sem ânsia de vômito, esôfago-esofágica.
 
-- Tratamento:
+**Uso de coluna d'água:**
 
-- Forma Incipiente (Grau 1) - Dilatação endoscópica, toxina botulínica. Cirurgia e POEM são opções;
+- Necessidade de ingestão de água para auxiliar na deglutição de alimentos sólidos.
 
-- Forma Não avançada (Grau 2 e 3) - Cardiomiotomia
+**Globus:**
 
-+ Fundoplicatura (Heller-Pinotti) ou POEM (problema = DRGE);
+- Sensação de "bolo na garganta".
 
-- Forma Avançada (Grau 4) - Esofagectomia, Cirurgia de Thal-Hatafuko, Mucosectomia ou Cirurgia de
+**Emagrecimento:**
 
-Serra Dória. MANIFESTAÇÕES CLÍNICAS Disfagia de longa duração
+- Emagrecimento lento; o paciente vai se acostumando.
 
-- Ao contrário de neoplasia de esôfago (disfagia de curta duração (meses))
+## Exames Complementares
 
-- Início com disfagia com sólidos - Progressiva…
+### EDA
 
-Regurgitação
+- Primeiro exame a ser solicitado.
+- **Objetivo:** excluir diagnósticos diferenciais (neoplasia).
+- Identificação de lesões pré-malignas (cromoscopia com lugol identifica áreas suspeitas para displasia, que devem ser biopsiadas — áreas iodo-negativas são suspeitas).
+- Não é um exame adequado para o diagnóstico de acalasia (é difícil o endoscopista identificar durante o exame a dilatação do esôfago, devido à insuflação de gás durante o procedimento).
 
-- Retorno de alimento sem ânsia de vômito, esofago-esofágica
+### EED (Esofagograma)
 
-Uso de coluna d’água
-
-- Necessidade de ingestão de água para auxiliar na deglutição de alimentos sólidos
-
-Globus
-
-- Sensação de “bolo na garganta”)
-
-Emagrecimento
-
-- Emagrecimento lento… O paciente vai se acostumando
-
-## EXAMES COMPLEMENTARES
-
-## EDA
-
-- Primeiro exame a ser solicitado
-
-- Objetivo: excluir diagnósticos diferenciais (neoplasia)
-
-- Identificação de lesões pré malignas (cromoscopia com lugol identifica áreas suspeitas para displasia que devem ser biopsiadas)
-
-- Não é um exame adequado para o diagnóstico de acalásia (difícil o endoscopista identificar durante o exame a dilatação do esôfago devido à insuflação de gás durante o exame)
-
-Áreas Iodo-negativas = Suspeitas - Displasia? EED (ESOFAGOGRAMA)
-
-- Permite identificar o Grau de Dilatação do esôfago
-
-- Importante para escolha do tratamento do paciente
-
-- Administração de contraste de bário via oral com obtenção de série de radiografias.
+- Permite identificar o grau de dilatação do esôfago.
+- Importante para escolha do tratamento do paciente.
+- Administração de contraste de bário via oral, com obtenção de série de radiografias.
 
 ---
 
 <!-- page:2 -->
 
-## CLASSIFICAÇÃO DE
+## Achados do EED
 
-## ACHADOS DO EED
-
-## 1. Dilatação do esôfago (normalmente esôfago possui < RESENDE-MASCARENHAS
-
-3 cm, quando maior que a largura do corpo vertebral provavelmente está aumentado); Grupo I
-
-2. Estase de contraste (retardo de esvaziamento);
-
-- Esôfago até 4 cm.
-
-2. Estase de contraste (retardo de esvaziamento);
-
-3. Presença de ondas terciárias (contrações
-
-não peristálticas);
-
-4. Estreitamento do esôfago no EEI (bico de pássaro/
-
-cauda de rato);
-
+1. Dilatação do esôfago (normalmente o esôfago possui <3 cm; quando maior que a largura do corpo vertebral, provavelmente está aumentado).
+2. Estase de contraste (retardo de esvaziamento).
+3. Presença de ondas terciárias (contrações não peristálticas).
+4. Estreitamento do esôfago no EEI ("bico de pássaro"/"cauda de rato").
 5. Ausência de bolha gástrica.
 
-Figura 1: EED com dilatação do esôfago, estase do contraste, estreitamento do esôfago no EEI (bico de pássaro/cauda de rato), ausência de bolha gástrica, ondas terciárias.
+*Figura 1: EED com dilatação do esôfago, estase do contraste, estreitamento do esôfago no EEI (bico de pássaro/cauda de rato), ausência de bolha gástrica, ondas terciárias.*
 
-## MANOMETRIA
+## Classificação de Rezende-Mascarenhas
 
-- Terceiro exame a ser solicitado - exame padrão ouro
+**Grupo I:**
 
-1. Relaxamento incompleto do Esfíncter esofágico
+- Esôfago até 4 cm.
+- Esôfago de calibre aparentemente normal ao exame radiológico. Trânsito lento. Surtos de ondas terciárias. Pequena retenção na radiografia tomada um minuto após a ingestão de sulfato de bário.
 
-inferior (EEI).
+**Grupo II:**
 
-2. Aperistalse do corpo esofágico.
-
-3. Hipertonia do EEI (incomum).
-
-## MANOMETRIA CONVENCIONAL
-
-- Estudo elétrico do esôfago.
-
-- Composto de 8 canais com 4 canais no corpo esofágico e 4 canais radiais no EEI.
-
-- Exame normal: há geração de ondas peristálticas ao administrar copo de água ao paciente e relaxamento completo do EEI.
-
-- Achados de acalasia: relaxamento incompleto do EEI, aperistalse do corpo esofágico.
-
-DE ALTA RESOLUÇÃO Traduz em gráfico e em cores as pressões esofágicas, com utilização de mais canais. - Esôfago até 4 cm.
-
-- Esôfago de calibre aparentemente normal ao exame radiológico. Trânsito lento. Surtos de ondas terciárias.
-
-Pequena retenção na radiografia tomada um minuto após a ingestão de sulfato de bário. Grupo II
-
-- Esôfago entre 4 - 7 cm.
-
+- Esôfago entre 4-7 cm.
 - Esôfago com pequeno a moderado aumento do calibre. Apreciável retenção de contraste. Presença frequente de ondas terciárias, associadas ou não a hipertonia do esôfago.
 
-Grupo III
+**Grupo III:**
 
-- Esôfago entre 7 - 10 cm.
-
+- Esôfago entre 7-10 cm.
 - Esôfago com grande aumento de diâmetro. Atividade motora reduzida. Hipotonia do esôfago inferior. Grande retenção de contraste.
 
-Grupo IV
+**Grupo IV:**
 
 - Esôfago maior que 10 cm.
+- Dolicomegaesôfago (esôfago "deita" no diafragma). Esôfago com grande capacidade de retenção, atônico, alongado, dobrando-se sobre a cúpula diafragmática.
 
-- Dolicomegaesôfago (esôfago “deita” no diafragma).
+## Manometria
 
-Esôfago com grande capacidade de retenção, atônico, alongado, dobrando-se sobre a cúpula diafragmática.
+- Terceiro exame a ser solicitado — exame padrão-ouro.
 
-## CLASSIFICAÇÃO DE PINOTTI
+1. Relaxamento incompleto do esfíncter esofágico inferior (EEI).
+2. Aperistalse do corpo esofágico.
+3. Hipertonia do EEI (incomum).
 
-## (EED + MANOMETRIA)
+### Manometria Convencional
 
-Incipiente, Grau I:
+- Estudo elétrico do esôfago.
+- Composto de 8 canais: 4 canais no corpo esofágico e 4 canais radiais no EEI.
+- **Exame normal:** há geração de ondas peristálticas ao administrar copo de água ao paciente, e relaxamento completo do EEI.
+- **Achados de acalasia:** relaxamento incompleto do EEI, aperistalse do corpo esofágico.
 
-- Dilatação pequena ou ausente (< 4 cm) +
+### Manometria de Alta Resolução
 
-- Manometria com alterações mínimas (ausência de relaxamento do EEI, presença de ondas terciárias).
+- Traduz em gráfico e em cores as pressões esofágicas, com utilização de mais canais.
 
-Não avançada, Grau II e III:
+## Classificação de Pinotti (EED + Manometria)
 
-- Estase do contraste (dilatação < 10 cm) +
+**Incipiente, Grau I:**
 
-- Períodos de aperistalse na manometria.
+- Dilatação pequena ou ausente (<4 cm) + manometria com alterações mínimas (ausência de relaxamento do EEI, presença de ondas terciárias).
 
-Avançada, Grau IV
+**Não avançada, Grau II e III:**
 
-- Dolicomegaesôfago (dilatação > 10cm) +
+- Estase do contraste (dilatação <10 cm) + períodos de aperistalse na manometria.
 
-,
+**Avançada, Grau IV:**
 
-- Atonia total do esôfago na manometria.
+- Dolicomegaesôfago (dilatação >10 cm) + atonia total do esôfago na manometria.
 
-## TRATAMENTO
+## Tratamento
 
-## TRATAMENTO CLÍNICO
+### Tratamento Clínico
 
-- Pouco empregado
+- Pouco empregado.
+- Nitrato sublingual ou bloqueador de canal de cálcio diidropiridínico (nifedipino).
+- **Efeito colateral:** hipotensão e cefaleia.
+- Pode ser utilizado para pacientes com poucos sintomas e alto risco cirúrgico.
 
-- Nitrato sublingual ou bloqueador de canal de cálcio diidropiridínicos (nifedipino)
+### Dilatação Endoscópica Pneumática
 
-- Efeito colateral: hipotensão e cefaleia
-
-- Pode ser utilizado para pacientes com poucos sintomas e alto risco cirúrgico
-
-## DILATAÇÃO ENDOSCÓPICA PNEUMÁTICA
-
-- Dilatação da transição esôfago-gástrica com rompimento das fibras musculares que possuem relaxamento incompleto
-
-- Método de escolha para pacientes com alto risco cirúrgico
-
-- Alta recidiva
-
-- Resultado ruim em pacientes jovens
-
-- Risco: laceração do esôfago, necessidade de vários procedimentos consecutivos a cada 4-6 meses. Pode ser associado à injeção de toxina botulínica.
+- Dilatação da transição esôfago-gástrica, com rompimento das fibras musculares que possuem relaxamento incompleto.
+- Método de escolha para pacientes com alto risco cirúrgico.
+- Alta recidiva.
+- Resultado ruim em pacientes jovens.
+- **Risco:** laceração do esôfago; necessidade de vários procedimentos consecutivos a cada 4-6 meses. Pode ser associada à injeção de toxina botulínica.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -236,99 +173,62 @@ Avançada, Grau IV
 
 <!-- page:3 -->
 
-## INJEÇÃO DE TOXINA BOTULÍNICA
+### Injeção de Toxina Botulínica
 
-- Desvantagem: preserva esôfago com disfunção motora
+- Relaxamento do EEI, com possibilidade de manutenção do esvaziamento.
+- **Desvantagem:** preserva esôfago com disfunção motora; melhora temporária dos sintomas, tornando-se ineficaz e havendo necessidade de esofagectomia a posteriori (aproximadamente 6 meses), com necessidade de procedimentos consecutivos.
 
-- Relaxamento do EEI com possibilidade de manutenção de esvaziamento
+### Tratamento Endoscópico
 
-- Desvantagem: melhora temporária dos sintomas ineficaz e necessidade de esofagectomia a posteriori
+- Mucosectomia com reconstrução com tubo gástrico.
+- Esofagectomia com técnica rudimentar, com reconstrução com tubo gástrico.
 
-(aproximadamente 6 meses) com necessidade de
+### Tratamento Cirúrgico
 
-- Tratamento endoscópico procedimentos consecutivos Mucosectomia com reconstrução com tubo gástrico
+**Cardiomiotomia + fundoplicatura a Heller-Pinotti:**
 
-- Esofagectomia com técnica rudimentar com
+- **Indicação:** principalmente formas grau 2 e grau 3 (não avançadas).
+- **Padrão-ouro.**
+- **Cardiomiotomia:** miotomia ampla de 7 a 9 cm, desde a cárdia até o esôfago distal (6 cm em esôfago inferior e 3 cm abaixo da TEG) — deve-se ter certeza de que abriu o EEI.
+- **Fundoplicatura a Heller-Pinotti:** póstero-latero-anterior (parcial a 270°), com diminuição do refluxo gastroesofágico (principal benefício em relação ao POEM).
+- Não confundir com a hiatoplastia com fundoplicatura a Nissen (cirurgia de refluxo gastroesofágico com plastia do hiato diafragmático e fundoplicatura total).
 
-TRATAMENTO CIRÚRGICO reconstrução com tubo gástrico Cardiomiotomia + fundoplicatura a Heller-Pinotti
+**POEM (Miotomia Endoscópica Peroral):**
 
-- Indicação: em formas avançadas de acalásia
+- **Benefício:** utiliza orifício natural (boca).
+- Incisão na mucosa, túnel submucoso e miotomia ampla, com fechamento com clip.
+- **Principal complicação:** refluxo (muito refluxo).
+- **Outras complicações (raras):** perfuração esofágica, pneumotórax, pneumoperitônio, mediastinite.
+- A morbidade do POEM e do procedimento cirúrgico são comparáveis, e ambos são seguros.
 
-- Padrão ouro
+*Figura 2: Dilatação endoscópica pneumática.*
 
-## RESUMO DO TRATAMENTO
+*Figura 3: POEM.*
 
-- Cardiomiotomia: miotomia ampla de 7 a 9cm desde cardia até esôfago distal (6cm em esôfago inferior e
+## Resumo do Tratamento
 
-3cm abaixo da TEG) - ter certeza que abriu o EEI. Grau I - incipiente:
+- **Grau I - Incipiente:** tratamento clínico ou cardiomiotomia a Heller-Pinotti (em paciente com bom status de performance, mesmo que grau incipiente); dilatação endoscópica, POEM e injeção de toxina botulínica são opções.
+- **Grau II e Grau III - Não avançada:** cardiomiotomia a Heller-Pinotti; dilatação endoscópica, POEM e injeção de toxina botulínica são opções.
+- **Grau IV - Avançada:** esofagectomia; mucosectomia com reconstrução com tubo gástrico; Thal-Hatafuku e Serra-Dória são opções.
+  - Cardiomiotomia + fundoplicatura totalmente anterior a 180° (mais feita nos EUA).
 
-- Fundoplicatura a Heller-Pinotti: póstero-latero-
+## Tratamento de Formas Avançadas
 
-- Tratamento clínico ou cardiomiotomia a Helleranterior (parcial a 270o) com diminuição de refluxo Pinotti (em bom status performance, mesmo que gastroesofágico (principal benefício em relação grau incipiente);
+**Esofagectomia:**
 
-ao POEM)
+- Por toracoscopia ou transhiatal (THE).
+- **Indicação:** formas avançadas de acalasia.
+- Reconstrução com tubo gástrico.
 
-- Dilatação endoscópica, POEM e injeção de toxina
+**Cirurgia de Thal-Hatafuku (esofagogastroplastia):**
 
-- Indicação: principalmente grau 2 e grau 3 - (forma botulínica são opções.
+- **Indicação:** formas avançadas de acalasia, em que o paciente não tem status de performance para esofagectomia.
+- Consiste basicamente em uma abertura de todas as camadas da parede, que se estende de 3 a 6 cm acima e 2 a 3 cm abaixo da cárdia, em direção à grande curvatura gástrica. Resulta em uma brecha que é fechada rebatendo-se sobre ela a parede anterior do fundo gástrico.
+- **Desvantagem:** preserva esôfago com disfunção motora, com possibilidade de manutenção de esvaziamento ineficaz e necessidade de esofagectomia a posteriori.
 
-não avançada) Grau II e Grau III - Não avancada:
+**Cirurgia de Serra-Dória combinada a vagotomia:**
 
-- Cardiomiotomia a Heller-Pinotti;
-
-Não confundir com hiatoplastia com fundoplicatura a
-
-- Dilatação endoscópica, POEM e injeção de toxina do hiato diafragmático e fundoplicatura total) Grau IV - Avançada:
-
-Nissen (cirurgia de refluxo gastroesofágica com plastia botulínica são opções.
-
-- Esofagectomia;
-
-Cardimiotomia + fundoplicatura a Dor
-
-- Mucosectomia com reconstrução com tubo gástrico,
-
-- Mais feita nos EUA Thal Hatafuku e Serra Dória são opções.
-
-- Fundoplicatura totalmente anterior 180o
-
-POEM (Miotomia Endoscópica PerOral)
-
-- Benefício: utiliza orifício natural (boca)
-
-- Incisão na mucosa, túnel submucoso e miotomia ampla e fechamento com clip.
-
-- Principal complicação: refluxo! (muito refluxo)
-
-- Outras complicações (raras): perfuração esofágica, pneumotórax, pneumoperitônio, mediastinite
-
-- Morbidade do POEM e procedimento cirúrgico são comparáveis e são seguros.
-
-Figura 2: Dilatação endoscópica pneumática
-
-## TRATAMENTO DE FORMAS AVANÇADAS
-
-Esofagectomia
-
-- Por toracoscopia ou transhiatal (THE)
-
-- Indicação: em formas avançadas de acalásia
-
-- Reconstrução com tubo gástrico
-
-Cirurgia de Thal-Hatafuku (esofagogastroplastia)
-
-- Indicação: em formas avançadas de acalásia em que paciente não tem status performance para esofagectomia
-
-- Consiste basicamente em uma abertura de todas as camadas da parede, que se estende de 3 a 6 cm acima e 2 a 3 cm abaixo da cárdia em direção à grande curvatura gástrica. Resulta uma brecha que é fechada rebatendo-se sobre ela a parede anterior do fundo gástrico
-
-- Desvantagem: preserva esôfago com disfunção motora com possibilidade de manutenção de esvaziamento Figura 3: POEM ineficaz e necessidade de esofagectomia a posteriori
-
-Cirurgia de Serra-Dória combinada a vagotomia
-
-- Anastomose látero-lateral entre o esôfago terminal e o fundo gástrico, visando facilitar o esvaziamento esofágico, associada a uma gastrectomia parcial em
-
-Y-de-Roux, prevenindo refluxo biliar
+- Anastomose látero-lateral entre o esôfago terminal e o fundo gástrico, visando facilitar o esvaziamento esofágico, associada a uma gastrectomia parcial em Y de Roux, prevenindo refluxo biliar.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -338,32 +238,31 @@ Y-de-Roux, prevenindo refluxo biliar
 
 <!-- page:4 -->
 
-## CAUSAS FREQUENTES DE RECIDIVA REFERÊNCIAS
+## Causas Frequentes de Recidiva da Disfagia
 
-## DA DISFAGIA
+**Disfagia precoce (semanas a meses):**
 
-Disfagia precoce (semanas a meses) Figura 1: Figura 1: EED com dilatação do esôfago, estase do
+1. Miotomia curta/incompleta.
+2. Migração aguda (migração da fundoplicatura abdominal para o tórax, em que ocorre rotação, podendo causar disfagia).
 
-- 1) Miotomia curta/incompleta contraste, estreitamento do esôfago no EEI.
+- Início dos sintomas na transição da alimentação líquida à pastosa, para consistência normal.
+- **Conduta:** EDA, EED, manometria.
+- **Tratamento:** cirúrgico.
 
-- 2) Migração aguda (migração da fundoplicatura Fonte: www.radiopaedia.org abdominal para tórax, em que ocorre rotação podendo ter disfagia) Figura 2: Dilatação endoscópica pneumática
+**Disfagia tardia (após anos):**
 
-- Início dos sintomas na transição da alimentação de Adaptado de www.endoscopiaterapeutica.com.br líquida à pastosa para consistência normal
+- Fibrose (cárdia).
+- Reaproximação das bordas da miotomia.
+- Refluxo intenso, com estenose péptica secundária a refluxo gastroesofágico.
+- Mega avançado (evolução da doença).
+- Neoplasia (risco aumentado de CEC e adenocarcinoma; permanece sendo necessário seguimento com EDA).
 
-- Conduta: EDA, EED, manometria Figura 3: POEM
+- Obs.: realizar seguimento do paciente com EDA, pois se mantém o risco de CEC.
 
-- Tratamento: cirúrgico Adaptado de www.endoscopiaterapeutica.com.br
+## Referências
 
-Disfagia tardia (após anos)
+Figura 1: EED com dilatação do esôfago, estase do contraste, estreitamento do esôfago no EEI. Fonte: www.radiopaedia.org
 
-- Fibrose (cárdia)
+Figura 2: Dilatação endoscópica pneumática. Adaptado de www.endoscopiaterapeutica.com.br
 
-- Reaproximação das bordas da miotomia
-
-- Refluxo intenso com estenose péptica secundária a refluxo gastroesofágico
-
-- Mega avançado (evolução de doença)
-
-- Neoplasia (risco aumentado de CEC e adenocarcinoma, permanece sendo necessário seguimento com EDA)
-
-- Obs.: realizar seguimento do paciente com EDA mantém risco de CEC
+Figura 3: POEM. Adaptado de www.endoscopiaterapeutica.com.br

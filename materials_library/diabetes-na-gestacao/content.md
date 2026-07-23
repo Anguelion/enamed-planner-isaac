@@ -2,79 +2,63 @@
 
 <!-- page:1 -->
 
-Diabetes Mellitus e Gravidez Diabetes Mellitus Gestacional
+## Diabetes Mellitus e Gravidez
 
-- Rastreio universal (todas as gestantes devem ser rastreadas para Diabetes Gestacional, exceto em quem já possui o diagnóstico);
+### Diabetes Mellitus Gestacional
 
-- A glicemia em jejum no início da gestação e o teste de tolerância à glicose oral com sobrecarga de gestacional e do diabetes prévio;
+- **Rastreio universal:** todas as gestantes devem ser rastreadas para diabetes gestacional, exceto quem já possui o diagnóstico.
+- A glicemia em jejum no início da gestação e o teste de tolerância à glicose oral com sobrecarga de 75g permitem o diagnóstico de diabetes mellitus gestacional e do diabetes prévio.
 
-75g permitem o diagnóstico de diabetes mellitus Glicemia de Jejum
+**Glicemia de Jejum:**
 
-- < 92 mg/dL: normal;
+- **<92 mg/dL:** normal.
+- **92-125 mg/dL:** DMG.
+- **≥126 mg/dL:** diabetes mellitus prévio.
 
-- 92 - 125: DMG;
+## Classificação
 
-- ≥ 126 mg/dL: Diabetes mellitus prévio.
+- Diabetes Mellitus (DM) tipo 1.
+- DM tipo 2.
+- LADA.
+- MODY.
+- **Diabetes Mellitus Gestacional (DMG):** iniciado durante a gestação, que pode ou não persistir após o parto.
 
-## CLASSIFICAÇÃO
+## Fatores de Risco
 
-- Diabetes Mellitus (DM) tipo 1;
-
-- DM tipo 2;
-
-- LADA;
-
-- MODY;
-
-- Diabetes Mellitus Gestacional (DMG) → iniciado durante a gestação, que pode ou não persistir após o parto.
-
-## FATORES DE RISCO
-
-- Idade acima de 35 anos;
-
-- Sobrepeso / Obesidade;
-
-- Antecedente familiar de primeiro grau de DM;
-
-- DMG em gestação prévia;
-
-- Macrossomia ou feto grande para idade gestacional
-
-(GIG) prévio;
-
-- Hipertensão arteria crônica;
-
-- Uso crônico de corticosteroide;
-
+- Idade acima de 35 anos.
+- Sobrepeso / obesidade.
+- Antecedente familiar de primeiro grau de DM.
+- DMG em gestação prévia.
+- Macrossomia ou feto grande para idade gestacional (GIG) prévio.
+- Hipertensão arterial crônica.
+- Uso crônico de corticosteroide.
 - Antecedente de óbito perinatal.
 
-## MECANISMO
+## Mecanismo
 
-- Existe uma secreção placentária de hormônios e mediadores metabólicos diabetogênicos: ↑ Secreção insulina; ↓ Glicemia de jejum;
-
-Figura 1: Interpretação e conduta frente à glicemia de jejum no prim TOTG 75G
-
-- 0 horas: < 92mg/dL: normal | 92 - 125: DMG | ≥ 126 mg/dL: Diabetes prévio
-
-- 1h: < 180 mg/dL: normal | ≥ 180 mg/dL: DMG
-
-- 2h: < 153 mg/dL: normal | 153 - 200: DMG | ≥ 200 mg/dL: DM prévio física e mudança no estilo de vida;
-
-Tratamento não medicamentoso: Dieta, Atividade Tratamento medicamentoso: Insulina (medicamento de escolha).
-
-- A partir da 24ª semana aumenta a resistência insulínica; Responsável: Lactogênio placentário.
-
+- Existe uma secreção placentária de hormônios e mediadores metabólicos diabetogênicos: ↑ secreção de insulina; ↓ glicemia de jejum. **Responsável:** lactogênio placentário.
+- A partir da 24ª semana, aumenta a resistência insulínica.
 - Quando as modificações na função pancreática são insuficientes para vencer a resistência insulínica → diabetes mellitus gestacional.
 
-## RASTREAMENTO
+*Figura 1: Interpretação e conduta frente à glicemia de jejum no primeiro trimestre.*
+
+### TOTG 75g
+
+- **0 horas:** <92 mg/dL: normal | 92-125: DMG | ≥126 mg/dL: diabetes prévio.
+- **1h:** <180 mg/dL: normal | ≥180 mg/dL: DMG.
+- **2h:** <153 mg/dL: normal | 153-200: DMG | ≥200 mg/dL: DM prévio.
+
+**Tratamento não medicamentoso:** dieta, atividade física e mudança no estilo de vida.
+
+**Tratamento medicamentoso:** insulina (medicamento de escolha).
+
+## Rastreamento
 
 - Todas as gestantes devem ser rastreadas para DM.
 
-- Verificar Figura 1
+- Verificar Figura 1.
 
-- Se os valores de glicemia de jejum do 1º trimestre forem normais, a paciente deverá ser submetida a um novo rastreamento entre 24 e 28 semanas com o Dosa-se a glicemia em jejum, 01h e 02h após a ingestão dessa solução; Basta um valor alterado para que o diagnóstico seja dado.
-
-Teste Oral de Tolerância à Glicose com 75g de glicose (TOTG 75g). meiro trimestre.
+- Se os valores de glicemia de jejum do 1º trimestre forem normais, a paciente deverá ser submetida a um novo rastreamento entre 24 e 28 semanas com o Teste Oral de Tolerância à Glicose com 75g de glicose (TOTG 75g). Dosa-se a glicemia em jejum, 1h e 2h após a ingestão dessa solução; basta um valor alterado para que o diagnóstico seja dado.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -82,117 +66,89 @@ Teste Oral de Tolerância à Glicose com 75g de glicose (TOTG 75g). meiro trimes
 
 <!-- page:2 -->
 
-- Óbito fetal;
+## Complicações do DM na Gravidez
 
+### Complicações Precoces – DMG
+
+- ITU / cistite.
+- Candidíase.
+- Maior taxa de cesárea.
+- Pré-eclâmpsia.
+- Macrossomia.
+- Polidrâmnio.
+- Ruptura prematura de membranas ovulares.
+- TPP (trabalho de parto prematuro).
+- Tocotrauma.
+- Distocia de ombros.
+- Lesão de plexo braquial.
+- Policitemia.
+- Hipocalcemia neonatal.
+- Desconforto respiratório do recém-nascido.
+- Hipoglicemia neonatal.
+- Óbito fetal.
 - Hiperbilirrubinemia neonatal.
 
-## COMPLICAÇÕES TARDIAS – DMG
+### Complicações Tardias – DMG
 
-- Obesidade;
-
-- - - C
-
-- - - - - - T
-
-Figura 2: Interpretação e conduta frente ao TOTG 75g entre 24 e 28 semanas. Casos especiais:
-
-- Pós-operatório de bariátrica, principalmente em Y de Roux. Maior risco de síndrome de Dumping mediante alta exposição à glicose; C Repetir apenas glicemia de jejum entre 24 e
-
-- 28 semanas Não realizar TOTG 75g.
-
-- DM prévio à gestação não precisa fazer rastreamento.
-
-Na indisponibilidade de TOTG 75g, deve-se repetir a glicemia de jejum entre 24 e 28 semanas. Um exame alterado, se corretamente realizado, é suficiente para fazer o diagnóstico de DMG.
-
-## COMPLICAÇÕES DO DM
-
-## NA GRAVIDEZ
-
-## COMPLICAÇÕES PRECOCES – DMG O
-
-- ITU / Cistite;
-
-- Candidíase;
-
-- Maior taxa de cesárea;
-
-- Pré-eclâmpsia;
-
-- Macrossomia;
-
-- Polidrâmnio;
-
-- Ruptura prematura de membranas ovulares T
-
-- TPP (trabalho de parto prematuro); I
-
-- Tocotrauma;
-
-- Distocia de ombros;
-
-- Lesão de plexo braquial;
-
-- Policitemia;
-
-- Hipocalcemia neonatal;
-
-- Desconforto respiratório do recém-nascido;
-
-- Hipoglicemia neonatal; z - Obesidade;
-
+- Obesidade.
+- Hipertensão arterial crônica.
+- Doença cardiovascular.
 - DM2.
 
-- Hipertensão arterial crônica;
+### Complicações Precoces – DM Prévio
 
-- Doença cardiovascular.
-
-## COMPLICAÇÕES PRECOCES - DM PRÉVIO
-
-- Aborto espontâneo;
-
-- Maior risco de pré-eclâmpsia;
-
-- Cetoacidose;
-
-- Malformações fetais: Síndrome da regressão caudal → mais específica; Cardíacas → mais frequente;
-
+- Aborto espontâneo.
+- Maior risco de pré-eclâmpsia.
+- Cetoacidose.
+- Malformações fetais: síndrome da regressão caudal (mais específica); malformações cardíacas (mais frequentes).
 - Insuficiência placentária.
-
-- Insuficiência placentária;
-
 - Restrição de crescimento fetal.
 
-## TRATAMENTO DO DMG
+*Figura 2: Interpretação e conduta frente ao TOTG 75g entre 24 e 28 semanas.*
 
-## PILARES DO TRATAMENTO
+**Casos especiais:**
 
-- Dieta;
+- Pós-operatório de bariátrica, principalmente em Y de Roux: maior risco de síndrome de Dumping mediante alta exposição à glicose. Repetir apenas glicemia de jejum entre 24 e 28 semanas; não realizar TOTG 75g.
+- DM prévio à gestação não precisa fazer rastreamento.
+- Na indisponibilidade de TOTG 75g, deve-se repetir a glicemia de jejum entre 24 e 28 semanas. Um exame alterado, se corretamente realizado, é suficiente para fazer o diagnóstico de DMG.
 
-- Atividade física;
+## Tratamento do DMG
 
+### Pilares do Tratamento
+
+- Dieta.
+- Atividade física.
 - Controle glicêmico.
 
-## CONTROLE GLICÊMICO
+### Controle Glicêmico
 
-- Ideal é fazer um perfil glicêmico simples (diário) com aferição 04 vezes ao dia: jejum e pós-prandial (01h OU Alternativa: 3x por semana capilar na gestação.
+- **Ideal:** fazer um perfil glicêmico simples (diário), com aferição 4 vezes ao dia: jejum e pós-prandial (1h ou 2h após a refeição).
+- **Alternativa:** 3x por semana, glicemia capilar na gestação.
 
-02h após a refeição): Tabela 1: Valores de referência para o perfil simples de glicemia 1h após 2h após Horário Jejum refeição refeição Limites < 95 mg/dL < 140 mg/dL < 120 mg/dL Objetivo
+### Tabela 1: Valores de Referência para o Perfil Simples de Glicemia
 
-- Manter glicemia capilar em jejum >70 mg/dL e pósprandial >100 mg/dL para evitar hipoglicemia;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- 60 – 70% controlam sem medicação.
+| Horário | Limite |
+|---|---|
+| Jejum | <95 mg/dL |
+| 1h após refeição | <140 mg/dL |
+| 2h após refeição | <120 mg/dL |
 
-- Considera-se descontrole quando ≥ 30% de hiperglicemia.
+**Objetivo:**
 
-TERAPIA MEDICAMENTOSA Insulina (medicação de escolha) – indicações:
+- Manter glicemia capilar em jejum >70 mg/dL e pós-prandial >100 mg/dL para evitar hipoglicemia.
+- 60-70% controlam sem medicação.
+- Considera-se descontrole quando ≥30% de hiperglicemia.
 
-- Todas as pacientes que já faziam uso antes da gravidez;
+### Terapia Medicamentosa
 
-- Em substituição dos hipoglicemiantes usados previamente à gestação;
+**Insulina (medicação de escolha) — indicações:**
 
-- Refratariedade clínica (após 1 a 2 semanas de dieta e exercício físico) para pacientes com DMG;
-
-- Dose inicial (insulina NPH): 0,5 UI/kg/dia em 2-3 aplicações (1/2 jejum, 1/4 almoço e 1/4 às 22h) ou 4 aplicações (NPH bed time + regular).
+- Todas as pacientes que já faziam uso antes da gravidez.
+- Em substituição dos hipoglicemiantes usados previamente à gestação.
+- Refratariedade clínica (após 1 a 2 semanas de dieta e exercício físico) para pacientes com DMG.
+- **Dose inicial (insulina NPH):** 0,5 UI/kg/dia em 2-3 aplicações (1/2 jejum, 1/4 almoço e 1/4 às 22h) ou 4 aplicações (NPH *bed time* + regular).
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -200,68 +156,62 @@ TERAPIA MEDICAMENTOSA Insulina (medicação de escolha) – indicações:
 
 <!-- page:3 -->
 
-- Controle glicêmico completo (diário): jejum, pré- DM PRÉ-GESTACIONAL prandial, pós-prandial (01h OU 02h).
+- **Controle glicêmico completo (diário):** jejum, pré-prandial, pós-prandial (1h ou 2h). Importante para controle mais rigoroso da glicemia e avaliar a necessidade da adição de outras insulinas no esquema de tratamento.
 
-- Fazer vitalidade fetal: nesse caso, deve-se Importante para controle mais rigoroso da glicemia incluir dopplervelocimetria;
+### Tabela 2: Valores de Referência para o Perfil Completo de Controle
 
-e avaliar a necessidade da adição de outras ATENÇÃO: insulinas no esquema de tratamento.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Paciente DM2 em uso de insulina, que vem com bom glicemia capilar na gestação. → Insuficiência placentária.
+| Horário | Bem controlada | Mal controlada |
+|---|---|---|
+| Jejum | <95 mg/dL | ≥95 mg/dL |
+| Pré-prandial | <100 mg/dL | ≥100 mg/dL |
+| 1h após refeição | <140 mg/dL | ≥140 mg/dL |
+| 2h após refeição | <120 mg/dL | ≥120 mg/dL |
 
-Tabela 2: Valores de referência para o perfil completo de controle e começa a fazer hipoglicemias
+**ATENÇÃO:** paciente DM2 em uso de insulina, que vem com bom controle e começa a fazer hipoglicemias → considerar insuficiência placentária.
 
-## PARTO – DIABETES GESTACIONAL
+**Com medicação — Metformina** (Diretriz da Sociedade Brasileira de Diabetes, edição 2023):
 
-Pré- 1h após 2h após Horário Jejum prandial refeição refeição Bem controlada: < 95 mg/ <100 mg/ < 140 mg/ < 120 mg/
+- Indivíduos com DMG e refratariedade clínica, na inviabilidade do uso de insulina.
+- Dificuldade de acesso à insulina.
+- Dificuldade na autoadministração da insulina.
+- Estresse exacerbado decorrente do uso de insulina.
+- Restrição alimentar excessiva da gestante para evitar o uso da insulina.
 
-- Parto até 40s6d, se houver bom controle de dL dL dL dL vitalidade fetal.
+- O uso de glibenclamida não é recomendado para gestantes com DMG.
+- Deve ser considerada a associação de metformina com insulina em gestantes que apresentem: uso de altas doses de insulina (>2 UI/kg/dia) sem controle glicêmico adequado; ganho de peso fetal e/ou materno excessivos.
+- A ANVISA não aprovou a metformina na gravidez, e a FDA considera categoria B na gestação. Se optar pelo seu uso, deve haver o registro em prontuário e assinatura do TCLE pela paciente.
 
-Limites Com medicação: Metformina – Diretriz da Sociedade Brasileira de
+## Parto – Diabetes Gestacional
 
-- Parto entre 39 semanas e 39 semanas e 6 dias.
+- Parto até 40s6d, se houver bom controle e vitalidade fetal.
+- Parto entre 39 semanas e 39 semanas e 6 dias, se mal controlada.
+- Via de parto é obstétrica.
+- **Exceção:** macrossomia fetal (≥4000g) ou alteração de vitalidade fetal.
 
-Diabetes (Edição 2023): Mal controlada:
+## DM Pré-Gestacional
 
-- Indivíduos com DMG e refratariedade clínica, na
+- Fazer avaliação de vitalidade fetal: nesse caso, deve-se incluir dopplervelocimetria.
+- Parto ≥37 semanas.
 
-- Parto ≥37 semanas. Dificuldade de acesso à insulina;
+## Puerpério
 
-inviabilidade do uso de insulina; Via de parto é obstétrica.
+- Suspender medidas.
+- Ao final do puerpério, fazer TOTG 75g, jejum e 2h.
 
-- Exceção: macrossomia fetal (≥4000g) ou alteração de Dificuldade na autoadministração da insulina; vitalidade fetal; Estresse exacerbado decorrente do uso de insulina;
+## Seguimento — Diabetes Gestacional
 
-## PUERPÉRIO
+- USG obstétrico: iniciar entre 24 e 28 semanas.
+- **Circunferência abdominal.**
+- **Conceitos:** GIG → peso ao nascer percentil ≥90; macrossomia → ≥4000g.
 
-| Restrição alimentar excessiva da gestante para evitar o uso da insulina.
+*Figura 3: Interpretação e conduta frente ao TOTG 75g (0-2h) no puerpério.*
 
-- O uso de glibenclamida não é recomendado para
+### Vitalidade Fetal
 
-- Suspender medidas;
-
-gestantes com DMG;
-
-- Ao final do puerpério, fazer TTOG 75g Jejum e 2h:
-
-- Deve ser considerada a associação de metformina com insulina em gestantes que: Uso de altas doses de insulina (> 2 UI/Kg/dia) sem controle glicêmico adequado; Ganho de peso fetal e/ou materno excessivos.
-
-A ANVISA não aprovou a metformina na gravidez e a FDA considera categoria B na gestação. Se optar pelo seu uso, deve haver o registro em prontuário e assinatura do TCLE pela paciente.
-
-## SEGUIMENTO
-
-## DIABETES GESTACIONAL
-
-USG obstétrico – iniciar entre 24 e 28 semanas;
-
-- Circunferência Abdominal; Figura 3: Interpretação e conduta frente ao TOTG 75g
-
-- Conceitos: GIG → peso ao nascer p ≥ 90; Macrossomia (0-2h) no puerpério.
-
-→ ≥ 4000g. Vitalidade fetal
-
-- Cardiotocografia + Perfil biofísico fetal;
-
-- Indicada se em uso de insulina ou DMG mal controlado: A partir de 32 semanas, 1 – 2x por semana;
-
+- Cardiotocografia + perfil biofísico fetal.
+- Indicada se em uso de insulina ou DMG mal controlado: a partir de 32 semanas, 1-2x por semana.
 - Doppler obstétrico não tem utilidade clínica no DMG.
 
 ![Figura do material - página 3](figure-003-1.webp)

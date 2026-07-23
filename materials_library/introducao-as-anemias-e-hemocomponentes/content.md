@@ -2,138 +2,113 @@
 
 <!-- page:1 -->
 
-## INTRODUÇÃO ÀS ANEMIAS E
+## Introdução às Anemias e Hemocomponentes
 
-## HEMOCOMPONENTES
+### Introdução às Anemias (G6PD, Esferocitose, Hemolítica) e Transfusões (Pediatria)
 
-Introdução às anemias (G6PD, esferocitose, hemolítica) e transfusões (PED) Hemograma chumbo, sideroblástica.
+> ⚠️ Página reconstruída a partir de OCR de duas colunas intercaladas — confira contra a fonte original.
 
-- VCM: volume corpuscular médio (tamanho médio Anemias Hemolíticas de hemoglobina dentro da hemácia);
+**Hemograma**
 
-- Esferocitose: icterícia precoce, anemia,
+- VCM: volume corpuscular médio (tamanho médio da hemácia);
+- HCM: hemoglobina corpuscular média (concentração de hemoglobina dentro da hemácia);
+- RDW: variação dos tamanhos das hemácias (anisocitose).
 
-- HCM: hemoglobina corpuscular média esplenomegalia, aumento de CHCM.
+**Reticulócitos** — precursores medulares dos glóbulos vermelhos
 
-(concentração de hemoglobina dentro da hemácia);
+- Quantidade no sangue periférico reflete a intensidade da produção medular;
+- Aumentado: anemias hemolíticas, perda sanguínea, correção de anemias carenciais;
+- Diminuído: carência de ferro, B12, ácido fólico, doenças linfoproliferativas e falências medulares.
 
-- Deficiência de G6PD: hemólise desencadeada por
+**Anemias Hemolíticas** (resumo)
 
-- RDW: variação dos tamanhos das agentes oxidantes.
+- Esferocitose: icterícia precoce, anemia, esplenomegalia, aumento de CHCM;
+- Deficiência de G6PD: hemólise desencadeada por agentes oxidantes;
+- Hemolítica Autoimune: TAD/Coombs direto positivo; tratamento: corticoide;
+- Anemia Megaloblástica: deficiência de vitamina B12 (cobalamina) e/ou folatos; anemia macrocítica; pode evoluir para bi ou pancitopenia, neutrófilos hipersegmentados, atraso/regressão de desenvolvimento neuropsicomotor; tratamento: reposição de B12 ou ácido fólico.
 
-hemácias (anisocitose) .
+**Hemocomponentes** (resumo)
 
-- Hemolítica Autoimune: TAD/COOMBS direto
+- **Irradiado**: prevenção de Doença do Enxerto Contra Hospedeiro Transfusional;
+- **Filtrado**: prevenção de CMV, reação transfusional febril não hemolítica (politransfundidos) e profilaxia de aloimunização HLA (risco de transplante);
+- **Lavado**: prevenção de reação alérgica (anafilaxia prévia e deficiência de IgA);
+- Reações transfusionais: sempre interromper a transfusão. Imediata: < 24h / Tardia: > 24h.
 
-Reticulócitos positivo; Tratamento: corticoide. Precursores medulares dos glóbulos vermelhos
+| | TRALI | TACO |
+|---|---|---|
+| Tipo | Reação transfusional imediata (< 24h) | Reação transfusional imediata (< 24h) |
+| Sintomas | Respiratórios (tosse, dispneia, dessaturação, febre) | Respiratórios e cardíacos (PA elevada, cardiomegalia, B3) |
+| Edema pulmonar | Não cardiogênico | Cardiogênico |
+| p-BNP | Normal | Elevado |
+| Tratamento | Suspender transfusão, suporte | Suspender transfusão, suporte, diurético |
 
-- Anemia Megaloblástica: deficiência de vitamina B12
+## Anemias
 
-- Quantidade no sangue periférico reflete intensidade (cobalamina) e/ou folatos. Aumentado: Anemias hemolíticas, perda para bi ou pancitopenia, neutrófilos sanguínea, correção de anemias carenciais; hipersegmentados, atraso/regressão de Diminuído: Carência de ferro, B12, ácido fólico, desenvolvimento neuropsicomotor.
+### Conceitos
 
-da produção medular | Anemia macrocítica; pode evoluir anemia hemolítica autoimune (AHAI) grave, | Tratamento: reposição de B12 ou Ácido fólico.
-
-doenças linfoproliferativas e falências medulares Hemocomponentes Anemia
-
-- Irradiado: prevenção de Doença do Enxerto Contra dos valores esperados (inferior a -2DP), tornando-
-
-Concentração sanguínea de hemoglobina abaixo Hospedeiro Transfusional.
-
-- Filtrado: prevenção de CMV, reação transfusional se insuficiente para atender as necessidades febril não hemolítica (politransfundidos) e profilaxia fisiológicas exigidas. de aloimunização HLA (risco de transplante).
-
-- Macrocítica: deficiência de B12 e ácido
-
-- Lavado: prevenção de reação alérgica (anafilaxia fólico, causas medulares, hipotireoidismo, prévia e deficiência de IgA).
-
-doença hepática. Reações transfusionais: sempre
-
-- Normocítica: hemolíticas congênitas e adquiridas, interromper a transfusão.
-
-sangramento agudo, sequestro esplênico.
-
-- Imediata: <24h / Tardia: >24h
-
-- Microcítica: ferropriva, talassemias, intoxicação por
-
-TRALI TACO Reação transfusional imediata (<24h) Reação transfusional imediata (<24h) Sintomas respiratórios Sintomas respiratórios e cardíacos (PA elevada, (tosse, dispneia, dessaturação, febre) cardiomegalia, B3)
-
-Edema pulmonar não cardiogênico Edema pulmonar cardiogênico p-BNP normal p-BNP elevado Tratamento: Suspender transfusão, suporte Tratamento: Suspender transfusão, suporte, diurético
-
-## ANEMIAS
-
-necessidades fisiológicas de acordo com idade, sexo, gestação e altitude. CONCEITOS
-
-- Definição US National Health and Nutrition Examination
-
-- Definição OMS: concentração sanguínea de Survey: concentração sanguínea de hemoglobina hemoglobina abaixo dos valores esperados inferior a 11.0 g/dL para crianças de ambos os sexos,
-
-(< -2 desvios-padrão), insuficiente para atender às entre 12 e 35 meses.
+- **Definição OMS**: concentração sanguínea de hemoglobina abaixo dos valores esperados (< -2 desvios-padrão), insuficiente para atender às necessidades fisiológicas de acordo com idade, sexo, gestação e altitude.
+- **Definição US National Health and Nutrition Examination Survey**: concentração sanguínea de hemoglobina inferior a 11,0 g/dL para crianças de ambos os sexos, entre 12 e 35 meses.
 
 ---
 
 <!-- page:2 -->
 
-## CLASSIFICAÇÃO MORFOLÓGICA DE ACORDO COM O VCM
+## Classificação Morfológica de Acordo com o VCM
 
-Anemia Macrocítica (VCM aumentado) Normocítica (V
+> ⚠️ Tabela/figura reconstruída a partir de OCR (texto de três colunas intercalado) — confira contra a fonte original.
 
-- Def. de B12 ou AF • Hemolíticas Con
+Figura 1: Classificação da anemia de acordo com o VCM.
 
-- A. Aplásica Def. enzimas ou m
+| Macrocítica (VCM aumentado) | Normocítica (VCM normal) | Microcítica (VCM diminuído) |
+|---|---|---|
+| Deficiência de B12 ou ácido fólico | Hemolíticas congênitas (Hb ou membrana) | Ferropriva |
+| Anemia aplásica | Hemolíticas adquiridas (autoimune, MAT) | Talassemia |
+| Hipotireoidismo | Perda de sangue aguda | Intoxicação por chumbo |
+| Doença hepática | Sequestro esplênico | Anemia sideroblástica |
+| Infiltração medular | DRC | — |
 
-- Hipotireoidismo • Hemolíticas Adq
+Figura 2: Classificação das anemias de acordo com o valor do reticulócito.
 
-- D. Hepática (Autoimune, MAT)
+## Classificação Morfológica de Acordo com os Reticulócitos
 
-- Infiltração medular • Perda de sangue
+O reticulócito é o precursor da hemácia, avaliando a função da medula.
 
-- Sequestro Esplên
+**Reticulócito normal**
 
-- DRC função da medula.
+- Produção normal de hemoglobina;
+- Valor de referência: 0,5–1,5%.
 
-Figura 1: Classificação da anemia de acordo com VCM. Figura 2: Classificação das anemias de acordo com o valor do reticuló CLASSIFICAÇÃO MORFOLÓGICA DE ACORDO COM OS RETICULÓCITOS O reticulócito é o precursor da hemácia, avaliando a Reticulócito normal
+**Reticulócito aumentado**
 
-- Produção normal de hemoglobina.
+- Aumento da produção na medula para compensar a anemia;
+- Medula com boa função: etiologia da anemia envolve aumento da destruição de hemácias. Confirmação com provas de hemólise positivas (aumento da bilirrubina, do DHL e diminuição da haptoglobina);
+- Principais causas: anemias hemolíticas congênitas ou adquiridas; perda excessiva de sangue aguda ou crônica (investigar sangramento).
 
-- Valor de referência: 0,5-1,5%. A
+**Reticulócito diminuído**
 
-Reticulócito aumentado O
+- Medula incapaz de compensar a perda: etiologia da anemia envolve redução na produção;
+- Principais causas: deficiência de eritropoietina; leucemia; falta de substrato para a produção (carenciais).
 
-- Aumento da produção na medula para compensar anemia.
+Verificar Figura 2.
 
-- Medula com boa função: etiologia da anemia envolve aumento da destruição de hemácias. Confirmação com provas de hemólise positivas da haptoglobina). A
+### Anemia Fisiológica do Lactente
 
-(aumento da bilirrubina, do DHL e diminuição D
+Ocorre entre 2 e 6 meses.
 
-- Principais causas: p Anemias hemolíticas congênitas ou adquiridas. E
+- RNT: Hb 9–12 g/dL;
+- RNPT: Hb 8–10 g/dL.
 
-Reticulócito diminuído
+## Anemia Hemolítica
 
-- Medula incapaz de compensar a perda: etiologia da anemia envolve redução na produção.
+### Definição
 
-- Principais causas: Deficiência de eritropoietina; VCM normal) Microcítica (VCM diminuído)
+Anemia secundária ao processo de hemólise (destruição prematura dos eritrócitos).
 
-- Ferropriva ngênitas (Hb ou • Talassemia membrana) • Intoxicação por chumbo quiridas • Anemia Sideroblástica e aguda nico ócito. Leucemia; Perda excessiva de sangue aguda ou crônica Falta de substrato para a produção (carenciais).
-
-) (investigar sangramento);
-
-- Verificar Figura 2
-
-ANEMIA FISIOLÓGICA DO LACTENTE Ocorre entre 2 e 6 meses
-
-- RNT: Hb 9-12 g/dL
-
-- RNPT: Hb 8-10 g/dL
-
-## ANEMIA HEMOLÍTICA
-
-DEFINIÇÃO Anemia secundária ao processo de hemólise (destruição prematura dos eritrócitos). Exames laboratoriais
+### Exames Laboratoriais
 
 - Aumento de reticulócitos;
-
 - DHL elevado;
-
 - Bilirrubina indireta elevada;
-
 - Consumo de haptoglobina.
 
 ![Figura do material - página 2](figure-002-1.webp)
@@ -142,388 +117,310 @@ DEFINIÇÃO Anemia secundária ao processo de hemólise (destruição prematura 
 
 <!-- page:3 -->
 
-Etiologias Quadro clínico
+> ⚠️ Trecho reconstruído a partir de OCR (texto de duas colunas intercalado) — confira contra a fonte original.
 
-- Congênitas
+### Etiologias
 
-- Assintomática; Hemoglobinopatias: anemia falciforme, talassemias;
+- **Congênitas**: hemoglobinopatias (anemia falciforme, talassemias); deficiências enzimáticas (deficiência de G6PD, deficiência de piruvato quinase); alterações de membrana eritrocitária (esferocitose).
+- **Adquiridas**: autoimune; microangiopatias (púrpura trombocitopênica trombótica — PTT; síndrome hemolítico-urêmica — SHU).
 
-- Hemólise intravascular e abrupta decorrente de Deficiências enzimáticas: deficiência de G6PD, processos infecciosos ou substâncias oxidantes:
+### Quadro Clínico
 
-deficiência de piruvato quinase; icterícia, palidez, hemoglobinúria; deficiência de piruvato quinase;
+- Assintomática;
+- Hemólise intravascular e abrupta decorrente de processos infecciosos ou substâncias oxidantes: icterícia, palidez, hemoglobinúria.
 
-| Alterações de membrana eritrocitária: esferocitose.
-
-- Adquiridas Autoimune; Microangiopatias (púrpura trombocitopênica trombótica - PTT; síndrome hemolíticourêmica - SHU).
-
-## ESFEROCITOSE
+## Esferocitose
 
 - Segunda causa mais frequente de anemia hemolítica hereditária;
-
 - Herança autossômica dominante com expressão variável (casos raros: autossômica recessiva).
 
-Fisiopatologia
+### Fisiopatologia
 
-- Defeito em proteínas estruturais que ligam o citoesqueleto à camada lipídica (anquirina, banda 3,
-
-B-espectrina, A-espectrina e proteína 4.2);
-
+- Defeito em proteínas estruturais que ligam o citoesqueleto à camada lipídica (anquirina, banda 3, β-espectrina, α-espectrina e proteína 4.2);
 - Perda de membrana à medida que circulam no baço e sistema reticuloendotelial (SRE);
+- Formato esférico e diminuição da relação superfície/volume levam à incapacidade de passar pela microcirculação esplênica, levando à hemólise.
 
-- Formato esférico e diminuição da relação superfície/ volume levam à incapacidade de passar pela microcirculação esplênica, levando à hemólise.
-
-Quadro clínico
+### Quadro Clínico
 
 - Icterícia neonatal precoce;
-
 - Icterícia flutuante (pior em períodos de inflamação);
-
-- Anemia: pior durante o período da anemia fisiológica de compensação;
-
-(2-4 meses), pois não apresenta mecanismos
-
+- Anemia: pior durante o período da anemia fisiológica (2–4 meses), pois não apresenta mecanismos de compensação;
 - Esplenomegalia;
-
 - Litíase biliar.
 
-Diagnóstico
+### Diagnóstico
 
 - Anemia normocítica normocrômica (grau variado);
-
 - Aumento do CHCM;
-
 - Aumento do reticulócito;
-
 - Aumento de bilirrubina e DHL;
-
-- Teste de Antiglobulina Direto (TAD /
-
-COOMBS) negativo;
-
+- Teste de Antiglobulina Direto (TAD/Coombs) negativo;
 - Lâmina: presença de esferócitos;
+- Aumento da fragilidade osmótica (curva desviada).
 
-- Aumento da fragilidade osmótica (curva desviada);
-
-Tratamento
+### Tratamento
 
 - Suporte;
-
 - Vigiar hemólise em quadros infecciosos;
-
 - Vigiar sequestro esplênico;
-
 - Vigiar colelitíase;
-
 - Esplenectomia: apenas em casos selecionados, maior risco de infecção por encapsulados e de trombose.
 
-DEFICIÊNCIA DE G6PD Fisiopatologia
+## Deficiência de G6PD
 
-- A enzima G6PD reduz NADP/ NADPH e oxida glucose-6-fosfato. NADPH protege a célula de processos oxidantes.
+### Fisiopatologia
 
-- Deficiência de G6PD leva a prejuízo na redução da glutationa.
+- A enzima G6PD reduz NADP/NADPH e oxida glicose-6-fosfato. NADPH protege a célula de processos oxidantes;
+- Deficiência de G6PD leva a prejuízo na redução da glutationa;
+- Herança ligada ao cromossomo X (acomete mais o sexo masculino);
+- Quadro clínico: icterícia, palidez, hemoglobinúria; icterícia neonatal pode ocorrer.
 
-- Herança ligada ao cromossomo X (acomete mais sexo masculino). icterícia, palidez, hemoglobinúria;
-
-- Icterícia neonatal pode ocorrer.
-
-Diagnóstico
+### Diagnóstico
 
 - Triagem neonatal;
-
-- Diminuição na atividade enzimática nos eritrócitos; Não realizar durante o período agudo de hemólise.
-
-- Lâmina: “bite cells e blister cells”;
-
+- Diminuição na atividade enzimática nos eritrócitos. Não realizar durante o período agudo de hemólise;
+- Lâmina: "bite cells" e "blister cells";
 - Teste genético.
 
-Tratamento
+### Tratamento
 
 - Suporte;
-
-- Interromper o uso do agente oxidante; Evitar agentes oxidantes, sendo o mais reconhecido o feijão fava; Há divergências sobre quais medicações evitar.
-
+- Interromper o uso do agente oxidante. Evitar agentes oxidantes, sendo o mais reconhecido o feijão fava. Há divergências sobre quais medicações evitar;
 - Manter alto fluxo urinário.
 
-Tabela 1:: Lista de medicamentos que devem ser evitados na deficiência de G6PD Primaquina, Pamaquina, Cloroquina, Mepramina Antimaláricos (Quinacrina), Tefonoquina, Pentaquina Sulfanilamida, Sulfapiridina, Sulfadimidine, Sulfacetamida, Sulfafurazole, Sulfonamidas Salcilazosulfapiridine, Dapsona, e sulfonas Sulfoxona, Glucosulfona, Septrin, Sulfametoxazole, Tiazolsulfona, Sulfassalazina Nitrofurantoina, Furazolidona, Antibacterianos Nitrofurazona, Ácido nalidíxico, Cloranfenicol, Doxorrubina Ácido acetilsalicílico, Acetofenetidina, Acetanilida, Analgésicos Fenacetina, Fernazopridininaácido paraminosalicicio, Isobutil Nitrito Anti-helmínticos Stibofen, Niridazol Análogos da vitamina K, Naftalina, Dimercaprol, Azul de metileno, Arsina, Acetilfenilhidrazina, Azul de toluidina, Outros Mepacrine, Henna, Vinho tinto, Fava, Água tônica (TNT), Betanaftol, Urato Oxidase, Probenecida ANEMIA HEMOLÍTICA AUTOIMUNE (AHAI)
+Tabela 1: Lista de medicamentos que devem ser evitados na deficiência de G6PD.
 
-Fisiopatologia
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
+
+| Categoria | Medicamentos |
+|---|---|
+| Antimaláricos | Primaquina, Pamaquina, Cloroquina, Mepacrina (Quinacrina), Tafenoquina, Pentaquina |
+| Sulfonamidas e sulfonas | Sulfanilamida, Sulfapiridina, Sulfadimidina, Sulfacetamida, Sulfafurazol, Salicilazossulfapiridina, Dapsona, Sulfoxona, Glucosulfona, Septrin, Sulfametoxazol, Tiazolsulfona, Sulfassalazina |
+| Antibacterianos | Nitrofurantoína, Furazolidona, Nitrofurazona, Ácido nalidíxico, Cloranfenicol, Doxorrubicina |
+| Analgésicos | Ácido acetilsalicílico, Acetofenetidina, Acetanilida, Fenacetina, Ácido paraminossalicílico |
+| Anti-helmínticos | Stibofeno, Niridazol |
+| Outros | Análogos da vitamina K, Naftalina, Dimercaprol, Azul de metileno, Arsina, Acetilfenilhidrazina, Azul de toluidina, Mepacrina, Hena, Vinho tinto, Fava, Água tônica, Betanaftol, Urato oxidase, Probenecida, Isobutil nitrito |
+
+## Anemia Hemolítica Autoimune (AHAI)
+
+### Fisiopatologia
 
 - Produção de anticorpos contra os próprios eritrócitos;
-
-- Na criança, o principal desencadeante é viral; Outras causas: doença autoimune, imunodeficiências, malignidade, medicamentos.
-
-- Classificação: de acordo com a temperatura no qual o anticorpo reage melhor com o eritrócito. Quente (37°C): normalmente IgG; Fria (4°C): normalmente IgM ou C3d; Mista: presença de anticorpos frios e quentes.
+- Na criança, o principal desencadeante é viral; outras causas: doença autoimune, imunodeficiências, malignidade, medicamentos;
+- Classificação: de acordo com a temperatura na qual o anticorpo reage melhor com o eritrócito:
+  - Quente (37 °C): normalmente IgG;
+  - Fria (4 °C): normalmente IgM ou C3d;
+  - Mista: presença de anticorpos frios e quentes.
 
 ---
 
 <!-- page:4 -->
 
-Quadro clínico
+> ⚠️ Trecho reconstruído a partir de OCR (texto de duas colunas intercalado) — confira contra a fonte original.
 
-- Mielograma: hipercelularidade das 3 séries,
+### Quadro Clínico (AHAI)
 
-- Início súbito, desencadeado por quadro viral, anormalidades na hematopoiese com medicamento ou doença linfoproliferativa ou imune; elementos megaloblastóides.
-
+- Início súbito, desencadeado por quadro viral, medicamento ou doença linfoproliferativa ou imune;
 - Anemia importante e muito sintomática;
+- Esplenomegalia, icterícia;
+- Provas de hemólise positivas;
+- Tendência de remissões e recaídas;
+- Pode ocorrer em associação com outras doenças: síndrome de Evans, quando AHAI associada à púrpura trombocitopênica imune (PTI).
 
-- Esplenomegalia, icterícia; TRATAMENTO
-
-- Provas de hemólise positivas; Reposição de vitamina B12 ou ácido fólico até correção
-
-- Tendência de remissões e recaídas; das anormalidades hematológicas e correção da causa.
-
-- Pode ocorrer em associação com outras doenças
-
-- Cobalamina IM ou SC; Síndrome de Evans: quando AHAI associada à
-
-- Ácido Fólico VO.
-
-púrpura trombocitopênica imune (PTI).
-
-Diagnóstico
+### Diagnóstico
 
 - Anemia hemolítica (normocítica e normocrômica);
+- Provas de hemólise positivas;
+- TAD/Coombs positivo.
 
-- Provas de hemólise positivas; TIPOS DE HEMOCOMPONENTES
+### Tratamento
 
-- TAD/COOMBS positivo.
+- Sempre afastar e tratar a causa;
+- Transfusão de hemácias: indicada se instabilidade clínica. Deve ser a menos incompatível possível e com a menor quantidade possível.
 
-- Concentrado de hemácias;
+**Quente**
 
-Tratamento
+- Primeira linha: corticoide;
+- Segunda linha: esplenectomia, imunossupressão (azatioprina, ciclofosfamida, ciclosporina), imunoglobulina humana, rituximabe (casos refratários).
 
-- Concentrado de plaquetas;
+**Fria**
 
-- Sempre afastar e tratar a causa; | Pool: junção de plaquetas doadas por
+- Aquecer o paciente;
+- Tratar causa de base.
 
-- Transfusão de hemácias vários pacientes; Indicada se instabilidade clínica; | Aférese: bolsa de plaquetas feita de apenas Deve ser menos incompatível possível e com a um doador.
+## Anemia Megaloblástica
 
-menor quantidade possível.
+### Fisiopatologia
 
-- Plasma (possui principalmente fatores de coagulação);
+- Anemia carencial por deficiência de vitamina B12 (cobalamina) e/ou folatos;
+- Etiologia: ingestão reduzida (dieta vegetariana ou má nutrição); distúrbios na absorção, transporte ou metabolização;
+- Em crianças menores, investigar valores baixos de B12 maternos.
 
-- Quente
-
-- Crioprecipitado (possui principalmente fibrinogênio); Primeira linha: corticoide;
-
-- Concentrado de granulócitos. Segunda linha: esplenectomia, imunossupressão imunoglobulina humana, rituximabe Transfusão de Hemácias
-
-(azatioprina, ciclofosfamida, ciclosporina), INDICAÇÕES (casos refratários).
-
-- Perda sanguínea aguda ≥ 15% da volemia total;
-
-- Fria
-
-- Hb < 8g/dL com sintomas de anemia; Aquecer o paciente;
-
-- Anemia pré-operatória significativa sem outras Tratar causa de base. terapêuticas corretivas disponíveis;
-
-- Hb < 13g/dL e paciente com doença pulmonar grave,
-
-## ANEMIA MEGALOBLÁSTICA
-
-oxigenação de membrana extracorpórea (ECMO).
-
-- Pacientes com cardiopatias isquêmicas agudas
-
-FISIOPATOLOGIA parecem se beneficiar com níveis de Hb acima de 9 a
-
-- Anemia carencial por deficiência de vitamina B12 10 g/dL.
-
-(cobalamina) e/ou folatos. Transfusão de Plaquetas
-
-- Etiologia:
-
-- Contagens de plaquetas entre 5.000 e 10.000/mm³ Ingestão reduzida: dieta vegetariana ou má nutrição; com falha de produção ou <20.000/mm³ e quadro Distúrbios na absorção, transporte infeccioso ou sangramento;
-
-ou metabolização;
-
-- Contagens de plaquetas < 30.000/mm³ em RN com Em crianças menores, investigar valores baixos de falha de produção;
-
-B12 maternos.
-
-- Contagens de plaquetas <50.000/mm³ em RNPT estáveis, com sangramento ativo, submetidos a
-
-QUADRO CLÍNICO procedimentos invasivos e com falta de produção.
+### Quadro Clínico
 
 - Início insidioso;
-
-- Contagens de plaquetas <100.000/mm³ em RNPT
-
-- Adinamia, fadiga, palidez; doentes, com sangramento ativo, submetidos a
-
-- Déficit de crescimento; procedimentos invasivos e com CIVD.
-
+- Adinamia, fadiga, palidez;
+- Déficit de crescimento;
 - Glossite;
-
-- Sangramento ativo em associação com defeito
-
-- Atraso ou regressão do qualitativo das plaquetas;
-
-desenvolvimento neuropsicomotor;
-
-- Sangramento excessivo e inexplicável em paciente a
-
-- Se leucopenia: maior suscetibilidade a infecções; ser submetido ao bypass cardiopulmonar;
-
+- Atraso ou regressão do desenvolvimento neuropsicomotor;
+- Se leucopenia: maior suscetibilidade a infecções;
 - Se plaquetopenia: sangramentos.
 
-- Paciente em ECMO: Com plaquetas < 100.000/mm³;
+### Diagnóstico
 
-com alta contagem de plaquetas e sangrando. DIAGNÓSTICO Transfusão de Plasma Fresco Congelado (PFC)
-
-- Anemia macrocítica;
-
-- Terapia de reposição em pacientes com sangramento Nem sempre o VCM está muito aumentado. ou que serão submetidos a procedimento invasivo;
-
+- Anemia macrocítica (nem sempre o VCM está muito aumentado);
 - Pode evoluir para bi ou pancitopenia;
+- Neutrófilos hipersegmentados;
+- Reticulócitos normais ou diminuídos;
+- B12 ou ácido fólico baixos;
+- Mielograma: hipercelularidade das 3 séries, anormalidades na hematopoiese com elementos megaloblastoides.
 
-- Quando fatores específicos da coagulação não são
+### Tratamento
 
-- Neutrófilos hipersegmentados; disponíveis (antitrombina III, deficiência de proteína C
+Reposição de vitamina B12 ou ácido fólico até correção das anormalidades hematológicas e correção da causa.
 
-- Reticulócitos normais ou diminuídos; ou S, FII, FV, FX e FXI);
+- Cobalamina IM ou SC;
+- Ácido fólico VO.
 
-- B12 ou Ácido fólico baixos;
+## Tipos de Hemocomponentes
+
+- Concentrado de hemácias;
+- Concentrado de plaquetas: pool — junção de plaquetas doadas por vários pacientes; aférese — bolsa de plaquetas feita de apenas um doador;
+- Plasma (possui principalmente fatores de coagulação);
+- Crioprecipitado (possui principalmente fibrinogênio);
+- Concentrado de granulócitos.
+
+### Transfusão de Hemácias — Indicações
+
+- Perda sanguínea aguda ≥ 15% da volemia total;
+- Hb < 8 g/dL com sintomas de anemia;
+- Anemia pré-operatória significativa sem outras terapêuticas corretivas disponíveis;
+- Hb < 13 g/dL e paciente com doença pulmonar grave, oxigenação de membrana extracorpórea (ECMO);
+- Pacientes com cardiopatias isquêmicas agudas parecem se beneficiar com níveis de Hb acima de 9 a 10 g/dL.
+
+### Transfusão de Plaquetas
+
+- Contagens de plaquetas entre 5.000 e 10.000/mm³ com falha de produção, ou < 20.000/mm³ e quadro infeccioso ou sangramento;
+- Contagens de plaquetas < 30.000/mm³ em RN com falha de produção;
+- Contagens de plaquetas < 50.000/mm³ em RNPT estáveis, com sangramento ativo, submetidos a procedimentos invasivos e com falha de produção;
+- Contagens de plaquetas < 100.000/mm³ em RNPT doentes, com sangramento ativo, submetidos a procedimentos invasivos e com CIVD;
+- Sangramento ativo em associação com defeito qualitativo das plaquetas;
+- Sangramento excessivo e inexplicável em paciente a ser submetido ao bypass cardiopulmonar;
+- Paciente em ECMO com plaquetas < 100.000/mm³.
+
+### Transfusão de Plasma Fresco Congelado (PFC)
+
+- Terapia de reposição em pacientes com sangramento ou que serão submetidos a procedimento invasivo;
+- Quando fatores específicos da coagulação não são disponíveis (antitrombina III, deficiência de proteína C ou S, FII, FV, FX e FXI);
 
 ---
 
 <!-- page:5 -->
 
-- Tempo de Protrombina (PT) e/ou Tempo de
+> ⚠️ Trecho reconstruído a partir de OCR (texto de duas colunas intercalado) — confira contra a fonte original.
 
-- Hipotensão por inibidor de iECA;
-
-Tromboplastina Parcial (TTPA) = 1,5x o valor do controle
-
-- Hemólise não-imune;
-
-para a idade em pacientes com sangramento ou que
-
-- Hipocalcemia;
-
-serão submetidos a procedimento invasivo;
-
-- Hipotermia;
-
+- Tempo de Protrombina (PT) e/ou Tempo de Tromboplastina Parcial Ativado (TTPa) ≥ 1,5x o valor do controle para a idade, em pacientes com sangramento ou que serão submetidos a procedimento invasivo;
 - Durante a plasmaférese terapêutica;
+- Reversão da anticoagulação por warfarina em situações de emergência, tais como antes de procedimentos invasivos com sangramento ativo.
 
-- Embolia aérea.
+Na doença hepática e na CIVD, não há indicação de transfusão de PFC na ausência de sangramento ou se o paciente não será submetido a procedimento invasivo.
 
-- Reversão da anticoagulação por warfarina em TRALI (Transfusion Related Lung Injury) situações de emergência, tais como antes de Lesão pulmonar aguda relacionada à transfusão.
+### Transfusão de Crioprecipitado
 
-procedimentos invasivos com sangramento ativo.
+- Hipofibrinogenemia e disfibrinogenemia com sangramento ativo ou na realização de procedimentos invasivos;
+- Deficiência de FXIII com sangramento ou em procedimentos invasivos na indisponibilidade do concentrado de FXIII;
+- Doença de von Willebrand com sangramento ativo ou antes de procedimento invasivo, apenas se a vasopressina é contraindicada e o concentrado de FvW não está disponível.
 
-- Sinais e sintomas: insuficiência respiratória aguda até
+### Transfusão de Granulócitos
 
-6 horas após a transfusão, associada a febre. Na doença hepática e na CIVD, não há indicação Conduta:
+- Paciente com neutropenia (< 500 neutrófilos/mm³) e infecção documentada e não responsiva à terapia por pelo menos 24h a 48 horas, num cenário de hipoplasia mieloide reversível.
 
-de transfusão de PFC na ausência de sangramento
+## Modificações dos Hemocomponentes
 
-- Laboratorial: afastar reação hemolítica e contaminação ou se o paciente não será submetido a bacteriana; solicitar RX tórax, ecocardiograma, procedimento invasivo. pesquisa de Ac antileucocitário doador e/ou receptor.
+**Filtrado / Desleucocitado**
 
-- Clínica: suporte respiratório, afastar
+- Remoção de leucócitos. Utilizado principalmente para:
+  - Prevenção de infecção por CMV;
+  - Prevenção de reação transfusional febril não hemolítica (RFNH) → politransfundidos;
+  - Profilaxia de aloimunização HLA → risco de transplante.
 
-Transfusão de Crioprecipitado sobrecarga circulatória.
+**Irradiado**
 
-- Hipofibrinogenemia e disfibrinogenemia
+- Irradiação gama, impossibilitando a multiplicação dos linfócitos;
+- Utilizado para prevenção de DECH (Doença do Enxerto Contra o Hospedeiro);
+- Indicada para pacientes com risco de TMO.
 
-- Prevenção (não há unanimidade): evitar uso de plasma com sangramento ativo ou na realização de feminino e de doadores relacionado com eventos procedimentos invasivos; anteriores de TRALI.
+**Lavado**
 
-- Deficiência de FXIII com sangramento ou em TACO (Transfusion Acute Circulatory Overload) procedimentos invasivos na indisponibilidade do Sobrecarga circulatória associada à transfusão.
-
-concentrado de FXIII;
-
-- Sinais e sintomas: PA elevada, cardiomegalia,
-
-- Doença de von Willebrand com sangramento ativo B3, insuficiência respiratória por edema ou antes de procedimento invasivo apenas se pulmonar cardiogênico.
-
-vasopressina é contraindicada e se o concentrado de
-
-- Ocorre mais em idosos, crianças e indivíduos com
-
-FvW não é disponível. disfunção cardíaca. Transfusão de Granulócitos Conduta
-
-- Paciente com neutropenia (< 500 neutrófilos/mm³) e
-
-- Laboratorial: RX de tórax e ecocardiograma.
-
-infecção documentada e não-responsiva à terapia por BNP elevado. pelo menos 24h a 48 horas, num cenário de hipoplasia
-
-- Clínica: suporte respiratório, colocar o paciente em mielóide reversível. posição sentada, diurético.
-
-Conduta clínica nas reações transfusionais MODIFICAÇÕES DOS HEMOCOMPONENTES
-
-- Interromper imediatamente a transfusão e comunicar
-
-Filtrado / Desleucocitado o médico responsável; Remoção de leucócitos. Utilizado principalmente para:
-
-- Manter acesso venoso com solução salina a 0,9%;
-
-- Prevenção de infecção por CMV;
-
-- Verificar sinais vitais e observar o
-
-- Prevenção de Reação transfusional febril não estado cardiorrespiratório;
-
-hemolítica (RFNH) → Politransfundidos;
-
-- Verificar todos os registros, formulários e identificação
-
-- Profilaxia de aloimunização HLA → risco do receptor;
-
-de transplante.
-
-- Verificar se o hemocomponente foi corretamente
-
-Irradiado administrado ao paciente desejado;
-
-- Irradiação gama, impossibilitando a multiplicação
-
-- Manter o equipo e a bolsa intactos e encaminhar esse dos linfócitos; material à hemoterapia;
-
-- Utilizado para prevenção de DECH (Doença do Enxerto
-
-- Avaliar a possibilidade de reação hemolítica, TRALI,
-
-Contra o Hospedeiro). anafilaxia, e sepse relacionada à transfusão, situações
-
-- Indicada para pacientes com risco de TMO. nas quais são necessárias condutas de urgência;
-
-Lavado
-
-- Lavagens com solução isotônica de cloreto de sódio Coletar e enviar uma amostra pós transfusional junto estéril = eliminar maior quantidade de plasma; com a bolsa e os equipos ao serviço de hemoterapia.
-
+- Lavagens com solução isotônica de cloreto de sódio estéril = eliminar maior quantidade de plasma;
 - Utilizado na prevenção de reações alérgicas.
 
-## REAÇÕES TRANSFUSIONAIS TARDIAS
+## Conduta Clínica nas Reações Transfusionais
 
-REAÇÕES TRANSFUSIONAIS IMEDIATAS Ocorrem após 24 horas da infusão. Ocorrem até 24 horas da infusão. Imune Imune
+- Interromper imediatamente a transfusão e comunicar o médico responsável;
+- Manter acesso venoso com solução salina a 0,9%;
+- Verificar sinais vitais e observar o estado cardiorrespiratório;
+- Verificar todos os registros, formulários e identificação do receptor;
+- Verificar se o hemocomponente foi corretamente administrado ao paciente desejado;
+- Manter o equipo e a bolsa intactos e encaminhar esse material à hemoterapia;
+- Avaliar a possibilidade de reação hemolítica, TRALI, anafilaxia e sepse relacionada à transfusão, situações nas quais são necessárias condutas de urgência;
+- Coletar e enviar uma amostra pós-transfusional, junto com a bolsa e os equipos, ao serviço de hemoterapia.
 
-- Aloimunização eritrocitária;
+### TRALI (Transfusion Related Lung Injury)
 
-- Reação febril não-hemolítica;
+Lesão pulmonar aguda relacionada à transfusão.
 
-- Aloimunização HLA;
+- Sinais e sintomas: insuficiência respiratória aguda até 6 horas após a transfusão, associada a febre.
 
+**Conduta**
+
+- Laboratorial: afastar reação hemolítica e contaminação bacteriana; solicitar RX de tórax, ecocardiograma, pesquisa de anticorpo antileucocitário do doador e/ou receptor;
+- Clínica: suporte respiratório, afastar sobrecarga circulatória.
+- Prevenção (não há unanimidade): evitar uso de plasma feminino e de doadores relacionados com eventos anteriores de TRALI.
+
+### TACO (Transfusion Associated Circulatory Overload)
+
+Sobrecarga circulatória associada à transfusão.
+
+- Sinais e sintomas: PA elevada, cardiomegalia, B3, insuficiência respiratória por edema pulmonar cardiogênico;
+- Ocorre mais em idosos, crianças e indivíduos com disfunção cardíaca.
+
+**Conduta**
+
+- Laboratorial: RX de tórax e ecocardiograma; BNP elevado;
+- Clínica: suporte respiratório, colocar o paciente em posição sentada, diurético.
+
+**Outras causas de insuficiência respiratória/instabilidade a considerar**: hipotensão por inibidor de iECA; hemólise não imune; hipocalcemia; hipotermia; embolia aérea.
+
+## Reações Transfusionais Imediatas
+
+Ocorrem até 24 horas da infusão.
+
+**Imune**
+
+- Reação febril não hemolítica;
 - Reação hemolítica aguda;
-
-- Reação enxerto X hospedeiro;
-
 - Reação alérgica (leve, moderada e grave);
-
-- Púrpura pós-transfusional;
-
 - TRALI (Transfusion Related Lung Injury).
 
-- Imunomodulação.
-
-Não imune Não imune
+**Não imune**
 
 - Sobrecarga volêmica;
+- Contaminação bacteriana.
+
+## Reações Transfusionais Tardias
+
+Ocorrem após 24 horas da infusão.
+
+**Imune**
+
+- Aloimunização eritrocitária;
+- Aloimunização HLA;
+- Reação enxerto x hospedeiro;
+- Púrpura pós-transfusional;
+- Imunomodulação.
+
+**Não imune**
 
 - Hemossiderose;
-
-- Contaminação bacteriana;
-
 - Doenças infecciosas.

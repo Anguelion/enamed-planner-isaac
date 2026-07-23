@@ -1,52 +1,41 @@
-# Obesidade Procedimentos Cirúrgicos
+# Obesidade: Procedimentos Cirúrgicos
 
 <!-- page:1 -->
 
-## OBESIDADE: PROCEDIMENTOS
+## Resumo — Indicações Gerais
 
-## CIRÚRGICOS
+- **Bypass**: diabetes tipo 2, síndrome metabólica, DRGE, superobesos → cirurgia mais realizada no Brasil (situação em mudança).
 
-Obesidade (CIR) Bypass Diabetes Tipo 2 Síndrome Metabólica DRGE Superobesos → Cirurgia mais realizada no BR (está mudando)
-
-## PROCEDIMENTOS RESTRITIVOS
+## Procedimentos Restritivos
 
 - Diminuem a capacidade do estômago por restrição mecânica à passagem de alimentos;
-
 - Exemplos: balão gástrico, banda gástrica, gastrectomia vertical, gastroplastia tipo Mason.
 
-BALÃO GÁSTRICO Figura 1: Balão gástrico Balão de água: Por endoscopia;
+## Balão Gástrico
 
+*Figura 1: Balão gástrico.*
+
+- Balão de água, colocado por endoscopia;
 - Máximo 6 meses;
-
 - Ponte para outra cirurgia;
+- Pontos negativos: paciente fica bastante sintomático, com sensação de empachamento, náuseas e vômitos. Além disso, no momento da retirada do balão, o risco de broncoaspiração é significativo, com necessidade de proteção de via aérea.
 
-- Pontos negativos: paciente fica bastante sintomático, com sensação de empachamento, náuseas e vômitos.
-
-Além disso, no momento da retirada do balão o risco de broncoaspiração é significativo, com necessidade de proteção de via aérea.
-
-## BANDA GÁSTRICA
+## Banda Gástrica
 
 - Anel para restringir a passagem do alimento;
-
-- Muito utilizada no passado, atualmente não mais utilizada, pois os pacientes cursam com disfagia e complicações da banda;
-
+- Muito utilizada no passado; atualmente não é mais utilizada, pois os pacientes cursam com disfagia e complicações da banda;
 - Dispositivo subcutâneo (portal para ajuste da banda);
+- Obstrução crônica desencadeia complicações: extrusão da banda gástrica; pseudoacalásia;
+- Pouco realizada no mundo.
 
-- Obstrução crônica desencadeia complicações: Extrusão da banda gástrica; pseudoacalásia;
+*Figura 2: Banda gástrica — esôfago, bolsa gástrica menor, duodeno, portal de acesso, bolsa gástrica maior.*
 
-- Pouco realizada no mundo. Gastrectomia Vertical intensa, DII)
+## Gastrectomia Vertical ou Sleeve
 
-Extremos de Idade (jovens e Idosos) Hérnia Incisional Gigante Osteoporose Esteatose pós Transplante hepático Uso de Anticoagulantes Comorbidades Graves (Hepatopatia, DRC, Anemia SuperSuperobesos (procedimento ponte)
+*Figura 3: Gastrectomia vertical ou sleeve — novo estômago, parte do estômago removida.*
 
-→ Cirurgia mais realizada nos EUA. Esôfago Bolsa gástrica menor
-
-Duodeno Portal de acesso Bolsa gástrica maior Figura 2: Banda gástrica
-
-## GASTRECTOMIA VERTICAL OU SLEEVE
-
-Sleeve Gástrico: Novo estomago Parte do Estômago Removida Figura 3: Gastrectomia vertical ou Sleeve Mais realizada no mundo;
-
-- Confecciona um tubo gástrico;
+- Mais realizada no mundo;
+- Confecciona um tubo gástrico.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -56,55 +45,48 @@ Sleeve Gástrico: Novo estomago Parte do Estômago Removida Figura 3: Gastrectom
 
 <!-- page:2 -->
 
-- Efeito êntero-hormonal importante: Aumenta GLP 1; Aumenta peptídeo Y; Diminui Grelina.
+- Efeito entero-hormonal importante:
+  - Aumenta GLP-1;
+  - Aumenta peptídeo YY;
+  - Diminui grelina.
 
-## GASTROPLASTIA VERTICAL TIPO MASON
+## Gastroplastia Vertical Tipo Mason
 
 - Não é mais realizada.
 
-Figura 4: Gastroplastia vertical tipo Mason PROCEDIMENTOS P
+*Figura 4: Gastroplastia vertical tipo Mason.*
 
-## PREDOMINANTEMENTE
+## Procedimentos Predominantemente Disabsortivos — Derivações Biliopancreáticas
 
-## DISABSORTIVOS – DERIVAÇÕES
+- Diminuem a absorção de nutrientes por meio da alteração da absorção de nutrientes no intestino delgado;
+- Exemplos: derivações biliopancreáticas — duodenal switch, Scopinaro.
 
-## BILIOPANCREÁTICAS
-
-- - Diminuem a absorção de nutrientes por meio da alteração da absorção de nutrientes no intestino delgado;
-
-- Exemplos: derivações biliopancreáticas - duodenal switch, Scopinaro.
-
-## CIRURGIA DE SCOPINARO
+## Cirurgia de Scopinaro
 
 - Gastrectomia distal + anastomose em Y de Roux, com alça comum pequena (íleo distal), geralmente de 50 cm;
+- Complicações: diarreia crônica; supercrescimento bacteriano; desnutrição.
 
-- Complicações: Diarreia crônica; Supercrescimento bacteriano; Desnutrição.
-
-## DUODENAL SWITCH
+## Duodenal Switch
 
 - Gastrectomia vertical + grampeamento da primeira porção do duodeno;
-
-- Menos disabsortiva que a cirurgia de Scopinaro, mas ainda traz complicações importantes como supercrescimento bacteriano, desnutrição e diarreia crônica;
-
+- Menos disabsortiva que a cirurgia de Scopinaro, mas ainda traz complicações importantes, como supercrescimento bacteriano, desnutrição e diarreia crônica;
 - Anastomose da primeira porção duodenal com o jejuno (alça alimentar de 150 cm);
+- Enteroenteroanastomose entre a alça alimentar e a biliopancreática, a 100 cm da válvula ileocecal.
 
-- Enteroenteroanastomose entre a alça alimentar e a biliopancreática a 100 cm da válvula ileocecal. Figura 5: Cirurgia de Scopinaro
+*Figura 5: Cirurgia de Scopinaro.*
 
-## PROCEDIMENTOS MISTOS
+## Procedimentos Mistos
 
-## BYPASS GÁSTRICO Y DE ROUX (FOBI –
+## Bypass Gástrico em Y de Roux (Fobi-Capella)
 
-## CAPELLA)
-
-- Pouch gástrico pequeno – Aproximadamente 40 ml;
-
-- Anastomose Y de Roux;
-
+- Pouch gástrico pequeno — aproximadamente 40 mL;
+- Anastomose em Y de Roux;
 - Alça alimentar com aproximadamente 100 cm;
+- Alça biliopancreática com aproximadamente 100 cm.
 
-- Alça biliopancreática com aproximadamente 100cm.
+*Figura 6: Bypass gástrico em Y de Roux.*
 
-Figura 6: Bypass gástrico em Y de Roux Esôfago Bolsa proximal do estôomago Parte excluída do estômago Alça biliopancreática Figura 7: Bypass gástrico em Y de Roux
+*Figura 7: Bypass gástrico em Y de Roux — esôfago, bolsa proximal do estômago, parte excluída do estômago, alça biliopancreática.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -114,58 +96,47 @@ Figura 6: Bypass gástrico em Y de Roux Esôfago Bolsa proximal do estôomago Pa
 
 <!-- page:3 -->
 
-## MINI GASTRIC BYPASS INDICAÇÕES, VANTAGENS
+## Mini Gastric Bypass
 
-- Pouch gástrico de aproximadamente 30 ml; E DESVANTAGENS ENTRE
-
-- Anastomose pouch-jejunal a 100 cm do ângulo AS PRINCIPAIS TÉCNICAS:
-
-de Treitz;
-
-## GASTRECTOMIA VERTICAL E O
-
+- Pouch gástrico de aproximadamente 30 mL;
+- Anastomose pouch-jejunal a 100 cm do ângulo de Treitz;
 - Não há enteroenteroanastomose;
-
-- Não há enteroenteroanastomose;
-
 - Pode ter refluxo bilioso e desencadear úlcera.
 
-Novo estômago Parte do estômago Bypasseado Parte do intestino Bypasseado Figura 8: Mini gastric bypass
+*Figura 8: Mini gastric bypass — novo estômago, parte do estômago bypassada, parte do intestino bypassada.*
 
-## CIRURGIA DE SANTORO
+## Cirurgia de Santoro
 
 - Gastrectomia vertical com bipartição do trânsito intestinal;
-
 - Reduz o risco de deficiência de vitaminas.
 
-## TRANSPOSIÇÃO ILEAL + GASTRECTOMIA
-
-## VERTICAL
+## Transposição Ileal + Gastrectomia Vertical
 
 - Promove aumento de hormônios hiporexígenos e GLP-1;
-
-- Bom controle DM;
-
+- Bom controle de DM;
 - Não é tão comum.
 
-Tabela 2: Vantagens e desvantagens entre a gastrectomia vertica
+## Indicações, Vantagens e Desvantagens Entre as Principais Técnicas
 
-## Bypass
+**Tabela 1: Indicações entre a gastrectomia vertical e o bypass**
 
-Vantagens: Controle de DM; Controle do Refluxo; Maior perda de peso sustentada. Desvantagens: Duas anastomoses;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Risco de hérnia interna; Risco de deiscência e fístulas; Desabsorção (hipovitaminose e anemia); Maior curva de aprendizado. GASTRECTOMIA VERTICAL E O
+| Bypass | Gastrectomia Vertical |
+|---|---|
+| Diabetes tipo 2 | Extremos de idade (jovens e idosos) |
+| Síndrome metabólica | Hérnia incisional gigante |
+| DRGE | Osteoporose |
+| Superobesos → cirurgia mais realizada no Brasil (situação em mudança) | Esteatose pós-transplante hepático |
+| — | Uso de anticoagulantes |
+| — | Comorbidades graves (hepatopatia, DRC, anemia intensa, DII) |
+| — | Super-superobesos (procedimento ponte) → cirurgia mais realizada nos EUA |
 
-Tabela 1: Indicações, vantagens e desvantagens entre a gastrectomia vertical e o bypass Bypass Gastrectomia Vertical Extremos de Idade Diabetes Tipo 2 (jovens e Idosos)
+**Tabela 2: Vantagens e desvantagens entre a gastrectomia vertical e o bypass**
 
-Síndrome Metabólica Hérnia Incisional Gigante DRGE Osteoporose Esteatose pós Transplante Superobesos hepático → Cirurgia mais realizada Uso de Anticoagulantes no BR (está mudando)
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Comorbidades Graves (Hepatopatia, DRC, Anemia intensa, DII) Super Superobesos (procedimento ponte) → Cirurgia mais realizada nos EUA.
-
-- Verificar Tabela2 al e o bypass
-
-Gastrectomia Vertical Vantagens: Cirurgia mais rápida; Menos Complicações; Não há risco de hérnia interna;
-
-Menos disabsortiva; Facilidade técnica. Desvantagens: Menor perda de peso / Reganho; Menor controle do DM;
-
-DRGE.
+| Técnica | Vantagens | Desvantagens |
+|---|---|---|
+| Bypass | Controle de DM; controle do refluxo; maior perda de peso sustentada | Duas anastomoses; risco de hérnia interna; risco de deiscência e fístulas; desabsorção (hipovitaminose e anemia); maior curva de aprendizado |
+| Gastrectomia Vertical | Cirurgia mais rápida; menos complicações; não há risco de hérnia interna; menos disabsortiva; facilidade técnica | Menor perda de peso / reganho; menor controle do DM; DRGE |

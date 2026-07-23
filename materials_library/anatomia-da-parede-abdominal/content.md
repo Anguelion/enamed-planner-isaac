@@ -2,107 +2,83 @@
 
 <!-- page:1 -->
 
-## HÉRNIAS: ANATOMIA DA
+## Hérnias: Anatomia da Parede Abdominal
 
-## PAREDE ABDOMINAL
+> ⚠️ Trecho reconstruído a partir de OCR — confira contra a fonte original.
 
-PAREDE ABDOMINA Hérnias
-
-## TRIÂNGULO DE HASSELBACH
+### Triângulo de Hasselbach
 
 - Vasos epigástricos inferiores;
-
 - Ligamento inguinal;
-
-- Reto abdominal. R
-
-## CANAL INGUINAL
-
-- Limite anterior: Formação = Aponeurose do oblíquo externo; Se finaliza no ligamento inguinal.
-
-- Limite inferior: Chão do canal: Fáscia transversalis / m. transverso.
-
-- Início: Lateral e profundo → Anel inguinal interno; Abertura na fáscia transversalis.
-
-## ANATOMIA PAREDE ABDOMINAL
-
-## MÚSCULOS
-
-- Reto;
-
-- Moe - músculo oblíquo externo; T
-
-- Moi- músculo oblíquo interno;
-
-- Transverso.
-
-## CAMADAS
-
-- Pele;
-
-- Subcutâneo (Camper e Scarpa);
-
-- Aponeurose oblíquo externo;
-
-- MOE;
-
-- MOI;
-
-- Transverso;
-
-- Fáscia transversalis;
-
-- Gordura pré-peritoneal;
-
-- Peritônio;
-
-## VASCULARIZAÇÃO
-
-- Vasos epigástricos: superiores (que são ramos da mamária); inferiores (que são ramos da ilíaca externa).
-
-## INERVAÇÃO
-
-- N. Genitofemoral *
-
-- N. Ilioinguinal *
-
-- N. Iliohipogástrico*
-
-- N. Cutâneo femoral lateral*
-
-- Verificar Figura 1
-
-## ANATOMIA REGIÃO INGUINAL
-
-- Pele;
-
-- Subcutâneo (Camper e Scarpa);
-
-- Aponeurose oblíquo externo;
-
-- Chão do canal inguinal; AL
-
-- Final: Medial e superficial → Anel inguinal externo; Abertura do músculo oblíquo externo.
-
-## REGIÃO INGUINAL
-
-- Dividido em superior e inferior pelo ligamento inguinal: Superior; Inferior → hérnias femorais.
-
-- Dividido em medial e lateral pelos vasos epigástricos: Medial → hérnias diretas (Triângulo de Hasselbach) ; Lateral → Hérnias indiretas.
-
-- Fáscia transversalis;
-
-- Gordura pré-peritoneal;
-
-- Peritônio.
-
-- Vasos epigástricos inferiores;
-
-- Ligamento inguinal;
-
 - Reto abdominal.
 
-Figura 1: Inervação região inguinal.
+### Canal Inguinal
+
+- **Limite anterior**: formação = aponeurose do oblíquo externo; finaliza no ligamento inguinal.
+- **Limite inferior**: chão do canal = fáscia transversalis / m. transverso.
+- **Início**: lateral e profundo → **anel inguinal interno**; abertura na fáscia transversalis.
+- **Final**: medial e superficial → **anel inguinal externo**; abertura do músculo oblíquo externo.
+
+### Anatomia da Parede Abdominal
+
+**Músculos**
+
+- Reto abdominal;
+- MOE — músculo oblíquo externo;
+- MOI — músculo oblíquo interno;
+- Transverso.
+
+**Camadas**
+
+- Pele;
+- Subcutâneo (Camper e Scarpa);
+- Aponeurose do oblíquo externo;
+- MOE;
+- MOI;
+- Transverso;
+- Fáscia transversalis;
+- Gordura pré-peritoneal;
+- Peritônio.
+
+**Vascularização**
+
+- Vasos epigástricos: superiores (ramos da mamária); inferiores (ramos da ilíaca externa).
+
+**Inervação**
+
+- N. genitofemoral;
+- N. ilioinguinal;
+- N. iliohipogástrico;
+- N. cutâneo femoral lateral.
+
+Verificar Figura 1.
+
+### Anatomia da Região Inguinal
+
+- Pele;
+- Subcutâneo (Camper e Scarpa);
+- Aponeurose do oblíquo externo;
+- Chão do canal inguinal;
+- Fáscia transversalis;
+- Gordura pré-peritoneal;
+- Peritônio.
+
+### Região Inguinal
+
+- Dividida em **superior e inferior** pelo ligamento inguinal:
+  - Superior;
+  - Inferior → **hérnias femorais**.
+- Dividida em **medial e lateral** pelos vasos epigástricos:
+  - Medial → **hérnias diretas** (Triângulo de Hasselbach);
+  - Lateral → **hérnias indiretas**.
+
+Referências do triângulo:
+
+- Vasos epigástricos inferiores;
+- Ligamento inguinal;
+- Reto abdominal.
+
+Figura 1: Inervação da região inguinal.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -114,72 +90,50 @@ Região da parede abdominal anterior que não é protegida por musculatura = mai
 
 Figura 2: Triângulo de Hasselbach.
 
-## CANAL INGUINAL LIMITES
+### Canal Inguinal — Limites
 
-- Anterior: aponeurose do oblíquo externo e finaliza no ligamento inguinal.
+- **Anterior**: aponeurose do oblíquo externo; finaliza no ligamento inguinal.
+- **Inferior** (chão do canal): fáscia transversalis / m. transverso.
+- **Início** (região lateral e profunda): anel inguinal interno, com abertura na fáscia transversalis.
+- **Final** (região medial e superficial): anel inguinal externo, com abertura do m. oblíquo externo.
 
-- Inferior (chão do canal): fáscia transversalis/m. transverso.
+### Conteúdo do Canal Inguinal
 
-- Início (região lateral e profunda): anel inguinal interno com abertura na fáscia transversalis.
+- **Homens**: cordão espermático; m. cremaster; artéria e veia testicular; ducto deferente; vasos cremastéricos; processo vaginal; ramo genital do nervo genitofemoral.
+- **Mulheres**: ligamento redondo.
 
-- Final (região medial e superficial): anel inguinal externo com abertura do m. oblíquo externo.
+### Orifício Miopectíneo de Fruchaud
 
-## CONTEÚDO DO CANAL INGUINAL
+- **Limite superior**: arco do músculo interno e transverso (tendão conjunto);
+- **Limite inferior**: ligamento pectíneo (Cooper);
+- **Limite lateral**: m. ileopsoas;
+- **Limite medial**: parede lateral do reto abdominal e púbis.
 
-- Homens: cordão espermático; m. cremaster;
+- Pode ser dividido em **superior e inferior** pelo ligamento inguinal. Inferior = hérnias femorais.
+- Pode ser dividido em **medial e lateral** pelos vasos epigástricos. Medial: hérnias diretas; Lateral: hérnias indiretas.
 
-artéria e veia testicular; ducto deferente; vasos cremastéricos; processo vaginalis; ramo genital do nervo genitofemoral.
+### Hérnia
 
-- Mulheres: Ligamento redondo.
+- Abaulamento, protrusão ou projeção de um órgão ou parte dele através das paredes que o contêm.
 
-## ORIFÍCIO MIOPECTÍNEO DE FROUCHARD
-
-- Limites: Superior: Arco do músculo interno e transverso Inferior: Ligamento Pectíneo (Cooper); Lateral: Músculo ileopsoas; Medial : Reto abdominal e púbis. - Limite superior: arco do músculo interno e transverso
-
-(tendão conjunto); (tendão conjunto);
-
-- Limite inferior: ligamento pectíneo (Cooper);
-
-- Limite lateral: m. Ileopsoas;
-
-- Limite medial: parede lateral do reto abdominal e púbis;
-
-- Pode ser dividido em superior e inferior pelo ligamento inguinal. Inferior = hérnias femorais.
-
-- Pode ser dividido em medial e lateral pelos vasos epigástricos. Medial: hérnias diretas; Lateral: hérnias indiretas.
-
-## HÉRNIA
-
-- Abaulamento, protusão ou projeção de um órgão ou parte dele através das paredes que o contém.
-
-## FATORES DE RISCO
+### Fatores de Risco
 
 - Fraqueza da parede;
-
 - Tabagismo;
-
 - Diabetes;
-
 - Desnutrição;
-
 - Imunossupressão;
-
 - Doenças do colágeno.
 
-## FISIOPATOLOGIA
+### Fisiopatologia
 
-- Elevação da pressão intra-abdominal;
+Elevação da pressão intra-abdominal por:
 
 - Tosse crônica;
-
 - Prostatismo;
-
 - Obesidade;
-
 - Ascite;
-
 - Gestação;
-
 - Tumores.
 
 ![Figura do material - página 2](figure-002-1.webp)

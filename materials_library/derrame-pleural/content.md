@@ -4,75 +4,78 @@
 
 Derrame Pleural (CM)
 
-## INTRODUÇÃO
+## Introdução
 
 - Acúmulo anormal de líquido na cavidade pleural;
-
 - Associado a diversas condições clínicas.
 
-## QUADRO CLÍNICO
+## Quadro Clínico
 
-- Tríade clássica: dor torácica, tosse e dispneia;
-
-- Dor ventilatório dependente, localizada;
-
+- Tríade clássica: **dor torácica, tosse e dispneia**;
+- Dor ventilatório-dependente, localizada;
 - Tosse esporádica, pouco intensa;
-
 - Dispneia multifatorial.
 
-## EXAME FÍSICO
+## Exame Físico
 
-- No local acometido pelo derrame: Expansibilidade reduzida; Macicez à percussão; MV abolido ou reduzido.
+- No local acometido pelo derrame:
+  - Expansibilidade reduzida;
+  - Macicez à percussão;
+  - MV abolido ou reduzido.
 
-ANÁLISE DO LÍQUIDO PLEURAL Sempre solicitar proteínas e DHL (pleura e sangue). Critérios de Light Relação proteína líquido pleural/ Proteínas totais sangue > 0,5 Relação DHL pleural/sangue > 0,6 Desidrogenase DHL líquido pleural > 2/3 do valor láctica de referência sérico
+### Análise do Líquido Pleural
 
-- 1 presente = EXSUDATO;
+Sempre solicitar **proteínas e DHL** (pleura e sangue).
 
-- Todos ausentes = TRANSUDATO.
+**Critérios de Light**:
 
-## CONSIDERAÇÕES GERAIS
+- Relação proteína líquido pleural / proteínas totais sangue **> 0,5**;
+- Relação DHL pleural/sangue **> 0,6**;
+- DHL líquido pleural **> 2/3** do valor de referência sérico (limite superior da normalidade).
 
-- Definição: é o acúmulo anormal de líquido entre as pleuras visceral e parietal.
+- **1 presente = Exsudato**;
+- **Todos ausentes = Transudato**.
 
-MANIFESTAÇÕES CLÍNICAS:
+## Considerações Gerais
+
+- **Definição**: acúmulo anormal de líquido entre as pleuras visceral e parietal.
+
+**Manifestações clínicas**:
 
 - Dispneia → geralmente progressiva (a depender da velocidade de instalação);
-
 - Dor torácica, do tipo ventilatório-dependente;
-
 - Tosse seca ou produtiva.
 
-- Aparelho respiratório: Taquipneia; Expansibilidade torácica reduzida; Macicez à percussão torácica.
+**Aparelho respiratório**:
 
-## DIAGNÓSTICO
+- Taquipneia;
+- Expansibilidade torácica reduzida;
+- Macicez à percussão torácica.
 
-- É dado pelo conjunto de fatores obtidos a partir de: história clínica + elementos do exame físico + propedêutica armada. Transudato
+## Diagnóstico
+
+É dado pelo conjunto de fatores obtidos a partir de: história clínica + elementos do exame físico + propedêutica armada.
+
+### Transudato
 
 - Insuficiência cardíaca, hidrotórax hepático;
+- **Falso exsudato** (pensar principalmente em usuários de diuréticos): gradiente de proteína (sérica – pleural) > 3,1 g/dL; gradiente de albumina (sérica – pleural) > 1,2 g/dL;
+- **Tratamento**: diurético e tratamento da doença de base.
 
-- Falso exsudato (pensar principalmente em usuários de diuréticos): gradiente de proteína (sérica– pleural) > 3,1 g/dL; gradiente de albumina (sérica – pleural)
-
-> 1,2 g/dL;
-
-- Tratamento: diurético e tratamento da doença de base.
-
-Exsudato
+### Exsudato
 
 - Infecções, neoplasias, outros;
+- Avaliar o diferencial na celularidade: predomínio linfocítico ou neutrofílico?
+  - **Predomínio linfocítico**: ADA baixo → pensar neoplásico? ADA > 30-40 → pensar em tuberculose. Diagnósticos diferenciais: linfoma, artrite reumatoide / lúpus eritematoso sistêmico.
+  - **Predomínio neutrofílico**: parapneumônico. Complicado: pH < 7,2 e/ou DHL > 1000 → drenagem torácica.
 
-- Avaliar o diferencial na celularidade: Predomínio linfocítico ou neutrofílico?
+## Exames Complementares
 
-- Predomínio linfocítico: ADA baixo: neoplásico? ADA > 30-40 → pensar em tuberculose: Diagnósticos diferenciais: linfoma, artrite reumatoide / lúpus eritematoso sistêmico.
+- **Radiografia de tórax**:
+  - Figura 1: sinal do menisco; derrame pleural à direita;
+  - Figura 2: radiografia de tórax — incidência de Laurell; presença de duas lâminas líquidas, determinando a mobilidade do fluido.
 
-- Predomínio neutrofílico: Parapneumônico: Complicado: pH < 7,2 e/ou DHL > 1000 → drenagem torácica.
-
-## EXAMES COMPLEMENTARES
-
-- Radiografia de tórax: Figura 1 : sinal do menisco; derrame pleural à direita; Figura 2 : radiografia de tórax – incidência de Laurell;
-
-presença de duas lâminas líquidas, determinando a mobilidade do fluido. Figura 1: Radiografia de tórax em PA em ortostase à esquerda e em Laurell à direita, demonstrando derrame pleural.
-
-- Verificar Figura 2 na próxima página.
+Figura 1: Radiografia de tórax em PA em ortostase à esquerda e em Laurell à direita, demonstrando derrame pleural.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -80,35 +83,38 @@ presença de duas lâminas líquidas, determinando a mobilidade do fluido. Figur
 
 <!-- page:2 -->
 
-Figura 2: Tomografia de Tórax com contraste - corte axial na janela mediastinal (ou de partes moles) evidenciando pequeno derrame pleural à direita.
+Figura 2: Tomografia de tórax com contraste — corte axial na janela mediastinal (ou de partes moles) evidenciando pequeno derrame pleural à direita.
 
-## CONDUTAS DIAGNÓSTICAS
+## Condutas Diagnósticas
 
-- Critérios para exsudato:
+### Toracocentese
 
-Toracocentese | Proteína pleural/proteína soro > 0,5;
+- Sempre indicada (motivo de controvérsia); considerar não realizar em casos de **insuficiência cardíaca** como etiologia provável — possível considerar prova terapêutica com diureticoterapia.
+- **Classificação**:
+  - **Alívio**: utilizada em etiologias conhecidas; demonstra utilidade para a redução dos sintomas associados; contraindicada nos casos de pulmão não expansível (por exemplo em caso de atelectasia por obstrução do brônquio-fonte por neoplasia).
+  - **Diagnóstica**: realizada em quadros novos ou em investigação de complicações.
 
-- Sempre indicada (motivo de controvérsia); considerar | DHL pleural/DHL soro > 0,6;
+### Critérios para Exsudato
 
-não realizar em casos de insuficiência cardíaca | DHL pleural > ⅔ o limite superior da normalidade como etiologia provável - possível considerar prova (normalmente maior que 200).
+- Proteína pleural/proteína soro **> 0,5**;
+- DHL pleural/DHL soro **> 0,6**;
+- DHL pleural **> ⅔** do limite superior da normalidade (normalmente maior que 200).
+- **Exsudato** — apenas um critério confirma; em usuários de diuréticos, confirmar (risco de falso exsudato).
+- Diagnóstico estabelecido?
+  - **Sim**: tratar de acordo com a causa-base;
+  - **Não**: proceder com broncoscopia; biópsia de pleura; videotoracoscopia (VATS).
 
-terapêutica com diureticoterapia:
+> ⚠️ **Atenção!** Nem todo exsudato é exsudato! Os critérios de Light demonstram algumas limitações, principalmente para os pacientes em uso de diuréticos → risco de **pseudo-exsudato**! Nesses casos, é útil considerar o uso de uma ferramenta semelhante ao **GASA** ("gradiente de albumina soro-ascite"), a fim de confirmar a amostra como exsudato, caso: albumina soro – albumina pleural ≤ 1,2.
 
-- Classificação: Alívio: | Exsudato – apenas um critério - confirmar em Utilizada em etiologias conhecidas; demonstra usuários de diuréticos; Contraindicada nos casos de pulmão não | Sim: tratar de acordo com a causa-base;
+> ⚠️ **Atenção!** No caso de diagnóstico de transudato, não é indicada a realização de demais exames, em virtude de que a causa faz parte da própria etiologia da insuficiência cardíaca.
 
-utilidade para a redução dos sintomas associados; | Diagnóstico estabelecido? expansível (por exemplo em caso de atelectasia | Não: proceder com broncoscopia; biópsia de por obstrução do brônquiofonte por neoplasia). pleura; videotoracoscopia (VATS).
+### Análise do Líquido Pleural
 
-| Diagnóstica: realizada em quadros novos ou em investigação de complicações. ATENÇÃO! Nem todo exsudato é exsudato! Os critérios de Light demonstram algumas limitações, principalmente para ANÁLISE DO LÍQUIDO os pacientes em uso de diuréticos →
-
-- Sempre deve ser realizada uma coleta pareada para pseudo-exsudato! Nesses casos, é útil considerar o uso cálculo dos Critérios de Light (líquido pleural e sangue). de uma ferramenta semelhante ao “GASA” (“gradiente
-
-- Pesquisar: albumina soro-ascite”), a fim de confirmar a amostra como Sérico e pleural: proteínas totais; DHL, glicose, exsudato, caso: albumina soro – albumina pleural ≤ 1,2. Líquido pleural: pH, celularidade total e diferencial, citologia oncótica, bacterioscopia, exame ATENÇÃO! No caso de diagnóstico de transudato, micológico direto, pBAAR; culturas – BAAR, fungos, não é indicada a realização de demais exames, em bactérias; adenosina deaminase (ADA), PCR-TB. virtude de que faz parte da própria etiologia da
-
-colesterol e triglicérides; Critérios de Light insuficiência cardíaca.
-
-- É realizado pela avaliação dos seguintes parâmetros: DHL; Etiologias Proteínas totais → pleural e soro.
-
-- Observe as Tabelas 1 e 2 na próxima página.
+- Sempre deve ser realizada uma coleta pareada para o cálculo dos **Critérios de Light** (líquido pleural e sangue).
+- **Pesquisar**:
+  - Sérico e pleural: proteínas totais; DHL, glicose, colesterol e triglicérides;
+  - Líquido pleural: pH, celularidade total e diferencial, citologia oncótica, bacterioscopia, exame micológico direto, pBAAR; culturas — BAAR, fungos, bactérias; adenosina deaminase (**ADA**), PCR-TB.
+- **Critérios de Light**: realizado pela avaliação dos seguintes parâmetros: proteínas totais → pleural e soro; DHL.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -118,26 +124,41 @@ colesterol e triglicérides; Critérios de Light insuficiência cardíaca.
 
 <!-- page:3 -->
 
-## TRATAMENTO
+## Tratamento
 
-Tabela 1: Etiologias de exsudato. Etiologias de exsudato
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Atente-se: a principal conduta deve ser tratar a causa- base:
+**Tabela 1: Etiologias de exsudato**
 
-Metástase pleural | Hipervolemia? → diuréticos; Metástase pleural Neoplasia pulmonar primária Neoplasias Neoplasia de mama Mesotelioma Doenças infecciosas Parapneumônico (PAC)
+| Categoria | Etiologias |
+|---|---|
+| Neoplasias | Metástase pleural, neoplasia pulmonar primária, neoplasia de mama, mesotelioma |
+| Doenças infecciosas | Parapneumônico (PAC) — pode se manifestar como transudato |
+| Doenças do trato gastrointestinal | Pancreatite, abscesso intra-abdominal, perfuração esofágica |
+| Doenças reumatológicas | Artrite reumatoide, LES, síndrome de Sjögren, GPA — granulomatose com poliangiite, ES — esclerose sistêmica, amiloidose, sarcoidose (mais comum exsudato, mas pode ser também transudato) |
+| Outros | Reação a drogas, histiocitose de células de Langerhans, síndrome de Meigs, hemotórax, quilotórax (neoplasias, ex: linfoma; lesão do ducto torácico após trauma ou cirurgia) |
 
-Pode se manifestar como TEP transudato Pancreatite Doenças do trato Abscesso intra-abdominal gastrointestinal Perfuração esofágica Artrite reumatoide LES Síndrome de Sjögren GPA – Granulomatose com Doenças poliangiite reumatológicas ES – Esclerose sistêmica Amiloidose Sarcoidose (mais comum exsudato, mas pode ser também transudato)
+**Tabela 2: Etiologias de transudato**
 
-Reação a drogas Histiocitose de células de Outros Langerhans Síndrome de Meigs Hemotórax Neoplasias (ex: linfoma), lesão Quilotórax do ducto torácico após trauma ou cirurgia Tabela 2: Etiologias de transudato.
+| Etiologia | Observação |
+|---|---|
+| Insuficiência cardíaca | Frequentemente bilateral, congestiva ou à direita |
+| Cirrose hepática | Hidrotórax hepático |
+| Síndrome nefrótica | Hipoalbuminemia |
+| TEP | Pode se manifestar como exsudato |
+| Mixedema e sarcoidose | Eventos raros |
 
-Etiologias de transudato Insuficiência cardíaca Frequentemente bilateral, congestiva ou à direita Cirrose hepática Hidrotórax hepático Síndrome nefrótica Hipoalbuminemia Pode se manifestar como TEP exsudato Mixedema e sarcoidose Eventos raros | Hipervolemia? → diuréticos;
+- Atente-se: a principal conduta deve ser tratar a causa-base:
+  - **Hipervolemia?** → diuréticos;
+  - **Quadros infecciosos?** → antimicrobianos;
+  - **Neoplasias?** → toracocentese de alívio, tratamento primário (tratar a causa base!).
 
-| Quadros infecciosos? → antimicrobianos; | Neoplasias? → toracocentese de alívio, tratamento primário (tratar a causa base!).
+- **Quando indicar drenagem?** Empiemas e derrames parapneumônicos complicados, conforme abaixo.
+  - **Empiema**: líquido purulento; Gram e culturas positivos;
+  - **Derrame parapneumônico complicado**: pH < 7,2; DHL > 1000; glicose < 60.
 
-- Quando indicar drenagem? Empiemas e derrames parapneumônicos complicados, conforme abaixo. Empiema: Líquido purulento; Gram e culturas + Derrame parapneumônico complicado: pH <7,2; DHL >1000; Glicose <60.
+## Referências
 
-## REFERÊNCIAS
+Figura 1: Radiografia de tórax em PA em ortostase à esquerda e em Laurell à direita, demonstrando derrame pleural. Arquivo pessoal.
 
-Figura 1: Radiografia de tórax em PA em ortostase à esquerda e em Laurell à direita, demonstrando derrame pleural.
-
-Arquivo pessoal. Figura 2: TC de tórax evidenciando derrame pleural à direita. Arquivo pessoal.
+Figura 2: TC de tórax evidenciando derrame pleural à direita. Arquivo pessoal.

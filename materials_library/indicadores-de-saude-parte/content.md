@@ -1,235 +1,202 @@
-# Indicadores de saúde Parte
+# Indicadores de Saúde — Parte 1
 
 <!-- page:1 -->
 
-## INDICADORES DE SAÚDE: PARTE 1
+## Indicadores de Saúde: Parte 1
 
 Indicadores e Medidas de Saúde
 
-## PREVALÊNCIA OUTROS INDICADORES IMPORTANTES
+> ⚠️ Seção reconstruída a partir de OCR de duas colunas intercaladas — confira contra a fonte original.
 
-- Mede a frequência de casos existentes em Coeficiente de Mortalidade Geral uma população.
+## Indicadores/Medidas de Saúde
 
-- Fórmula: (nº total de óbitos / população total) × 10n
+- Indicadores de saúde são medidas que expressam, de forma sintética, atributos, condições ou fenômenos relacionados à saúde de uma população. Seu objetivo é descrever, monitorar e avaliar tanto o estado de saúde de grupos populacionais quanto o desempenho de serviços e políticas públicas
+- Todo indicador é fruto de um processo de mensuração, isto é, de transformação de dados (informações brutas) em conhecimento estruturado
+- Útil para a tomada de decisão. Isso implica atribuir significado epidemiológico e social a variáveis como número de casos, óbitos, internações, ou atributos ambientais, sociais e econômicos
 
-TIPOS Coeficiente de Mortalidade por Causa
+### Coeficientes e Índices — Tipos de Medidas em Saúde Coletiva
 
-- Prevalência Pontual: casos em um ponto específico
+- **Índice**: medida genérica e ampla que descreve uma grandeza da realidade. Pode ser um número absoluto (ex.: nº de casos de dengue) ou uma frequência relativa. Inclui medidas como número de nascimentos, óbitos e doenças. Todo coeficiente e taxa é, antes de tudo, um índice
+- **Indicador**: é um índice que ganha função analítica ou decisória. Serve para alertar, orientar decisões e monitorar ações. Um mesmo índice pode se tornar diferentes indicadores, dependendo de quem observa e do seu objetivo (por exemplo, o número de casos de dengue pode indicar necessidade de leitos, exames, combate ao vetor etc.)
+- **Coeficiente**: é o resultado da divisão entre duas medidas (ex.: casos novos/população), normalmente usado para descrever o risco ou a intensidade de ocorrência de eventos. Serve para comparações padronizadas entre populações ou tempos distintos (ex.: coeficiente de incidência, de mortalidade)
+- **Taxa**: é a aplicação do coeficiente para estimar ou projetar o número de eventos esperados em outras populações. Ex.: se o coeficiente de natalidade de São Paulo for usado para estimar o número de nascimentos em Campinas, este será chamado de taxa de natalidade para essa finalidade
 
-- Fórmula: (nº de óbitos por causa específica / do tempo. população total) × 10n
+> Embora os termos índice e indicador sejam frequentemente usados como sinônimos na prática, a distinção conceitual proposta por autores como Rouquayrol, Lima e Pordeu visa mais à clareza didática e à utilidade analítica do que à imposição de uma regra rígida.
 
-- Prevalência de Período: casos durante um intervalo Letalidade de tempo.
+### Tipos de Valores Utilizados nos Indicadores
 
-- Fórmula: (nº de óbitos pela doença / nº total de
+**Valores absolutos**
 
-- Prevalência na Vida: indivíduos que já tiveram a casos da doença) × 100 doença alguma vez. Coeficiente de Mortalidade Materna
+- Representam quantidades brutas, como número total de casos, óbitos ou habitantes
+- Exemplo: 1.200 casos de dengue em um município
+- Principais usos: planejamento de recursos, gestão operacional
 
-## INCIDÊNCIA
+**Valores relativos**
 
-- Fórmula: (nº de óbitos maternos / nº de nascidos
+- Representam proporções ou razões, ajustando o valor ao tamanho da população
+- Exemplo: 150 casos de dengue por 100 mil habitantes
+- Principais usos: comparação entre diferentes populações, locais ou períodos
 
-- Mede a velocidade de surgimento de novos casos vivos) × 100.000 em uma população sob risco, em certo intervalo MORTALIDADE INFANTIL de tempo.
+### Prevalência
 
-- Fórmula CMI = (nº de óbitos em <1 ano / número de
+- Mede a frequência de casos existentes em uma população
 
-- Reflete o risco de adoecer. nascidos vivos) × 1000
+**Tipos**
 
-TIPOS | Mortalidade Neonatal Precoce: (Número de
+- **Prevalência pontual**: casos em um ponto específico do tempo
+- **Prevalência de período**: casos durante um intervalo de tempo
+- **Prevalência na vida**: indivíduos que já tiveram a doença alguma vez
 
-- Coeficiente de Incidência (ou Incidência óbitos do nascimento até o 6º dia completo de início do período) × 10n | Mortalidade Neonatal Tardia: (Número de óbitos
+### Incidência
 
-Acumulada): (casos novos / população sob risco no vida / número de nascidos vivos) × 1000
+- Mede a velocidade de surgimento de novos casos em uma população sob risco, em certo intervalo de tempo
+- Reflete o risco de adoecer
 
-- Taxa de Incidência (ou Densidade de Incidência): entre o 7º e o 27º dia completo de vida / número casos novos / soma dos tempos de exposição de nascidos vivos) × 1000
+**Tipos**
 
-(pessoa-tempo) × 10n | Mortalidade Pós-neonatal (Número de óbitos
+- **Coeficiente de incidência** (ou incidência acumulada): casos novos / população sob risco no início do período
+- **Taxa de incidência** (ou densidade de incidência): casos novos / soma dos tempos de exposição (pessoa-tempo) × 10ⁿ
+- **Taxa de ataque primária**: casos novos / pessoas expostas × 100
+- **Taxa de ataque secundária**: casos entre contatos de casos primários / total de contatos expostos × 100
 
-- Taxa de Ataque Primária: (casos novos / pessoas ocorridos do 28º ao 364º dia de vida / número expostas) × 100 de nascidos vivos) × 1000
+### Outros Indicadores Importantes
 
-- Taxa de Ataque Secundária: (casos entre contatos de casos primários / total de contatos expostos) × 100
+**Coeficiente de Mortalidade Geral**
 
-## INDICADORES/MEDIDAS DE SAÚDE
+- Fórmula: (nº total de óbitos / população total) × 10ⁿ
 
-- Exemplo: 150 casos de dengue por 100 mil habitantes.
+**Coeficiente de Mortalidade por Causa**
 
-- Principais usos: comparação entre diferentes
+- Fórmula: (nº de óbitos por causa específica / população total) × 10ⁿ
 
-- Indicadores de saúde são medidas que expressam, de populações, locais ou períodos.
+**Letalidade**
 
-forma sintética, atributos, condições ou fenômenos relacionados à saúde de uma população. Seu objetivo COEFICIENTES E ÍNDICES é descrever, monitorar e avaliar tanto o estado de Tipos de Medidas em Saúde Coletiva saúde de grupos populacionais quanto o desempenho
+- Fórmula: (nº de óbitos pela doença / nº total de casos da doença) × 100
 
-- Índice: Medida genérica e ampla que descreve uma de serviços e políticas públicas. grandeza da realidade. Pode ser um número absoluto
+**Coeficiente de Mortalidade Materna**
 
-- Todo indicador é fruto de um processo de (ex: nº de casos de dengue) ou uma frequência mensuração, isto é, de transformação de dados relativa. Inclui medidas como número de nascimentos,
+- Fórmula: (nº de óbitos maternos / nº de nascidos vivos) × 100.000
 
-(informações brutas) em conhecimento estruturado óbitos e doenças. Todo coeficiente e taxa é, antes de
+**Mortalidade Infantil**
 
-- Útil para a tomada de decisão. Isso implica atribuir tudo, um índice.
-
-significado epidemiológico e social a variáveis como
-
-- Indicador: É um índice que ganha função analítica número de casos, óbitos, internações, ou atributos ou decisória. Serve para alertar, orientar decisões e ambientais, sociais e econômicos. monitorar ações. Um mesmo índice pode se tornar diferentes indicadores, dependendo de quem observa
-
-TIPOS DE VALORES UTILIZADOS e do seu objetivo (como mostra o Quadro 3.5: número NOS INDICADORES de casos de dengue pode indicar necessidade de Valores absolutos leitos, exames, combate ao vetor etc.).
-
-- Representam quantidades brutas, como número total
-
-- Coeficiente: É o resultado da divisão entre duas de casos, óbitos ou habitantes. medidas (ex: casos novos/população), normalmente
-
-- Exemplo: 1.200 casos de dengue em um município. usado para descrever o risco ou a intensidade de
-
-- Principais usos: planejamento de recursos, ocorrência de eventos. Serve para comparações gestão operacional. padronizadas entre populações ou tempos distintos.
-
-Valores relativos Ex: coeficiente de incidência, de mortalidade.
-
-- Representam proporções ou razões, ajustando o valor
-
-- Taxa: É a aplicação do coeficiente para estimar ao tamanho da população. ou projetar o número de eventos esperados em
+- Fórmula (CMI): (nº de óbitos em < 1 ano / número de nascidos vivos) × 1.000
+- **Mortalidade neonatal precoce**: (número de óbitos do nascimento até o 6º dia completo de vida / número de nascidos vivos) × 1.000
+- **Mortalidade neonatal tardia**: (número de óbitos entre o 7º e o 27º dia completo de vida / número de nascidos vivos) × 1.000
+- **Mortalidade pós-neonatal**: (número de óbitos ocorridos do 28º ao 364º dia de vida / número de nascidos vivos) × 1.000
 
 ---
 
 <!-- page:2 -->
 
-outras populações. Ex: se o coeficiente de natalidade | Calculada como: (número de casos novos de uma de São Paulo for usado para estimar o número de doença em um período / número de pessoas sob nascimentos em Campinas, este será chamado de risco no início do período) × 10n taxa de natalidade para essa finalidade.
+O valor de 10ⁿ depende da base populacional: pode ser calculado como: (número de casos novos de uma doença em um período / número de pessoas sob risco no início do período) × 10ⁿ.
 
-O valor de 10n depende da base populacional: pode ser Embora os termos índice e indicador sejam frequentemente usados como sinônimos na prática, a distinção conceitual proposta por autores como por
+## Principais Indicadores
 
-- Rouquayrol, Lima e Pordeu, visa mais à clareza didática e à utilidade analítica do que à imposição de uma regra rígida.
+### Prevalência
 
-## PRINCIPAIS INDICADORES PREVALÊNCIA
+- **Prevalência pontual (ou instantânea)**: mede a frequência de casos existentes em um ponto específico no tempo. Ex.: número de pessoas com diabetes no dia 1º de janeiro. É o tipo mais utilizado em estudos transversais
+- **Prevalência de período (ou lápsica)**: frequência de casos existentes durante um intervalo de tempo (semana, mês, ano). Soma os casos já existentes no início do período com os novos casos surgidos no decorrer do tempo. Não desconta óbitos, curas ou migrações durante o período
+- **Prevalência ao longo da vida (ou prevalência na vida)**: frequência de pessoas que em algum momento da vida já tiveram pelo menos um episódio da doença. Muito usada em estudos sobre saúde mental, doenças infecciosas crônicas, entre outros
 
-- Prevalência Pontual (ou Instantânea): Mede a frequência de casos existentes em um ponto específico no tempo. Ex: número de pessoas com diabetes no dia 1º de janeiro. É o tipo mais utilizado em estudos transversais.
+O coeficiente de prevalência é calculado dividindo-se o número de casos conhecidos de uma dada doença pelo total da população observada, multiplicando-se o resultado por uma base de 10 (como 1.000, 10.000 ou 100.000).
 
-- Prevalência de Período (ou Lápsica): Frequência de casos existentes durante um intervalo de tempo (semana, mês, ano). Soma os casos já existentes no início do período com os novos casos surgidos no decorrer do tempo. Não desconta óbitos, curas ou migrações durante o período.
+**Fórmula**: Coeficiente de Prevalência = (número de casos existentes / população total) × base 10ⁿ
 
-- Prevalência ao Longo da Vida (ou Prevalência na Vida): P Frequência de pessoas que em algum momento da vida já tiveram pelo menos um episódio da doença. Muito usada em estudos sobre saúde mental, doenças infecciosas crônicas, entre outros.
+### Incidência
 
-- O coeficiente de prevalência é calculado dividindo-se o número de casos conhecidos de uma dada doença pelo total da população observada, multiplicando-se o resultado por uma base de 10 (como 1.000, 10.000 ou 100.000) existentes / população total) × base 10n C
+- Incidência é uma medida epidemiológica que expressa a velocidade com que surgem novos casos de uma doença ou agravo em uma população sob risco, dentro de um determinado intervalo de tempo
+- Informa o risco de adoecer e é essencial para entender a dinâmica da transmissão de doenças e orientar ações de prevenção e controle de surtos
 
-Fórmula: Coeficiente de Prevalência = (número de casos
+**Tipos de Incidência**
 
-- INCIDÊNCIA
+- **Coeficiente de incidência/incidência acumulada** (ou simplesmente "incidência"): expressa a probabilidade ou proporção de indivíduos que desenvolvem a doença em um intervalo de tempo determinado. Pode ser usado como proxy de risco
+  - O valor de 10ⁿ depende da base populacional: pode ser por mil (10³), dez mil (10⁴), cem mil (10⁵) etc.
+- **Taxa de incidência** (ou densidade de incidência): leva em conta o tempo de exposição ao risco. Indicada quando há diferenças no tempo de seguimento dos indivíduos. Calculada como: número de casos novos / soma dos tempos de exposição de todos os indivíduos (pessoa-tempo)
+- **Taxa de ataque primária**: é um tipo especial de coeficiente de incidência, utilizado em surtos localizados e em populações específicas, como uma escola ou restaurante. Aplica-se a eventos agudos com curta duração e rápida disseminação. Calculada como: (número de casos novos / número de pessoas expostas ao risco) × 100
+- **Taxa de ataque secundária**: aponta a transmissibilidade de uma doença entre os contatos de um caso-índice (ex.: familiares de alguém com gripe). Calculada como: (número de casos entre os contatos de casos primários / número total de contatos expostos) × 100
 
-- Incidência é uma medida epidemiológica que expressa a velocidade com que surgem novos casos de uma doença ou agravo em uma população sob risco, dentro de um determinado intervalo de tempo. C
+**Pontos Importantes**
 
-- Ela nos informa o risco de adoecer e é essencial para entender a dinâmica da transmissão de doenças e orientar ações de prevenção e controle de surtos.
+- O numerador sempre considera apenas casos novos
+- O denominador deve ser a população sob risco, excluindo quem já teve a doença ou está imunizado
+- A incidência reflete o risco de adoecimento em um determinado intervalo de tempo
+- Quanto maior a incidência, maior a velocidade de ocorrência de novos casos
+- A incidência é mais sensível a fatores causais recentes e ideal para estudar doenças agudas e avaliação de intervenções preventivas
 
-Tipos de Incidência
+### Coeficiente de Mortalidade Geral
 
-- Coeficiente de Incidência/Incidência Acumulada (ou simplesmente “incidência”) Expressa a probabilidade ou proporção de L indivíduos que desenvolvem a doença em um intervalo de tempo determinado Pode ser usado como proxy de risco.
+- Expressa o risco de um indivíduo da população morrer por qualquer causa
+- Mede a magnitude geral da mortalidade em um território
+- Fórmula: (nº total de óbitos / população exposta no local e período) × 10ⁿ
 
-- O valor de 10n depende da base populacional: pode ser por mil (10³), dez mil (10⁴), cem mil (105) etc.
+### Coeficiente de Mortalidade por Causa
 
-- Taxa de Incidência (ou Densidade de Incidência) Leva em conta o tempo de exposição ao risco Indicada quando há diferenças no tempo de seguimento dos indivíduos. Calculada como: número de casos novos / soma dos tempos de exposição de todos os indivíduos
+- Expressa o risco de morrer por uma causa específica
+- Permite avaliar a magnitude de um problema de saúde e a capacidade de enfrentamento do sistema de saúde
+- Fórmula: (nº de óbitos por causa específica / população exposta no local e período) × 10ⁿ
 
-(pessoa-tempo). (pessoa-tempo).
+### Letalidade
 
-- Taxa de Ataque Primária É um tipo especial de coeficiente de incidência, utilizado em surtos localizados e em populações específicas, como uma escola ou restaurante. Aplica-se a eventos agudos com curta duração e rápida disseminação. Calculada como: (número de casos novos / número de pessoas expostas ao risco) × 100
-
-- Taxa de Ataque Secundária Aponta a transmissibilidade de uma doença entre os contatos de um caso-índice (ex: familiares de alguém com gripe). Calculada como: (número de casos entre os contatos de casos primários / número total de contatos expostos) × 100
-
-Pontos Importantes
-
-- O numerador sempre considera apenas casos novos.
-
-- O denominador deve ser a população sob risco, excluindo quem já teve a doença ou está imunizado.
-
-- A incidência reflete o risco de adoecimento em um determinado intervalo de tempo.
-
-- Quanto maior a incidência, maior a velocidade de ocorrência de novos casos.
-
-- A incidência é mais sensível a fatores causais recentes e ideal para estudar doenças agudas e avaliação de intervenções preventivas.
-
-Coeficiente de Mortalidade Geral
-
-- Expressa o risco de um indivíduo da população morrer por qualquer causa.
-
-- Mede a magnitude geral da mortalidade em um território.
-
-- Fórmula: (nº total de óbitos / população exposta no local e período) × 10n
-
-Coeficiente de Mortalidade por Causa
-
-- Expressa o risco de morrer por uma causa específica.
-
-- Permite avaliar a magnitude de um problema de saúde e a capacidade de enfrentamento do sistema de saúde.
-
-- Fórmula: (nº de óbitos por causa específica / população exposta no local e período) × 10n
-
-Letalidade
-
-- Mede o risco de morte entre os doentes por determinada condição.
-
-- Expressa a gravidade da doença.
-
+- Mede o risco de morte entre os doentes por determinada condição
+- Expressa a gravidade da doença
 - Fórmula: (nº de óbitos pela doença / nº total de casos da doença) × 100
 
 ---
 
 <!-- page:3 -->
 
-Coeficiente de Mortalidade Materna precoce e neonatal tardia, refletindo a qualidade da
+### Coeficiente de Mortalidade Materna
 
-- Expressa o risco de morte materna por causas atenção pré-natal, do parto e do cuidado neonatal.
-
-relacionadas à gestação, parto ou puerpério. | Faixa etária: 0 a 27 dias completos.
-
-- Denominador: nascidos vivos (não a população total).
-
-- Mortalidade Neonatal Precoce: Engloba os óbitos
-
-- Indicador importante da qualidade da Atenção ocorridos entre o nascimento e o 6º dia de vida (0 a 6
-
-- Indicador importante da qualidade da Atenção
-
-Primária à Saúde (APS) e da assistência obstétrica.
-
+- Expressa o risco de morte materna por causas relacionadas à gestação, parto ou puerpério
+- Denominador: nascidos vivos (não a população total)
+- Indicador importante da qualidade da Atenção Primária à Saúde (APS) e da assistência obstétrica
 - Fórmula: (nº de óbitos maternos / nº de nascidos vivos) × 100.000
 
-- Conceito de Óbito Materno: “Morte de uma mulher durante a gestação ou até 42 dias após o término da gestação, independentemente da duração ou localização da gravidez, devido a qualquer causa relacionada com ou agravada pela gravidez ou por medidas em relação a ela, porém não devido a causas acidentais ou incidentais.” As causas de morte materna são tradicionalmente classificadas em diretas e indiretas. Causas obstétricas diretas: Resultam de complicações obstétricas na gravidez, parto ou puerpério, devido a intervenções, omissões, tratamento incorreto ou cadeia de eventos resultantes destas causas. Causas obstétricas indiretas: Resultam de condições clínicas preexistentes ou adquiridas durante a gestação que não se relacionam diretamente ao processo obstétrico, mas que são agravadas pelas modificações fisiológicas da gestação
+**Conceito de óbito materno**: "Morte de uma mulher durante a gestação ou até 42 dias após o término da gestação, independentemente da duração ou localização da gravidez, devido a qualquer causa relacionada com ou agravada pela gravidez ou por medidas em relação a ela, porém não devido a causas acidentais ou incidentais."
 
-## COEFICIENTE DE MORTALIDADE INFANTIL
+As causas de morte materna são tradicionalmente classificadas em diretas e indiretas.
 
-- Risco de um nascido vivo morrer antes de completar
+- **Causas obstétricas diretas**: resultam de complicações obstétricas na gravidez, parto ou puerpério, devido a intervenções, omissões, tratamento incorreto ou cadeia de eventos resultantes dessas causas
+- **Causas obstétricas indiretas**: resultam de condições clínicas preexistentes ou adquiridas durante a gestação que não se relacionam diretamente ao processo obstétrico, mas que são agravadas pelas modificações fisiológicas da gestação
 
-01 ano de idade
+### Coeficiente de Mortalidade Infantil
 
-- Conceito de nascido vivo: “Nascido vivo é a expulsão ou extração completa do corpo da mãe, independentemente da duração da gravidez, de um produto de concepção que, depois de tal separação, respire ou apresente qualquer outro sinal de vida, como batimentos do coração, pulsação do cordão umbilical ou movimentos efetivos dos músculos de contração voluntária, esteja ou não cortado o cordão umbilical e esteja ou não desprendida a placenta.
+- Risco de um nascido vivo morrer antes de completar 1 ano de idade
 
-Cada produto de um nascimento que reúna essas condições se considera como uma criança viva.” (OMS, 1999)
+**Conceito de nascido vivo**: "Nascido vivo é a expulsão ou extração completa do corpo da mãe, independentemente da duração da gravidez, de um produto de concepção que, depois de tal separação, respire ou apresente qualquer outro sinal de vida, como batimentos do coração, pulsação do cordão umbilical ou movimentos efetivos dos músculos de contração voluntária, esteja ou não cortado o cordão umbilical e esteja ou não desprendida a placenta. Cada produto de um nascimento que reúna essas condições se considera como uma criança viva." (OMS, 1999)
 
-Subdivisões da mortalidade infantil A mortalidade infantil pode ser subdividida com base na idade ao falecer, o que permite a identificação de diferentes determinantes e a formulação de intervenções específicas. O único elemento que muda para as subdivisões abaixo refere-se ao numerador da fórmula.
+**Subdivisões da mortalidade infantil**
 
-Todos eles possuem como denominador o número de nascidos vivos e a multiplicação é mantida padronizada (por 1000):
+A mortalidade infantil pode ser subdividida com base na idade ao falecer, o que permite a identificação de diferentes determinantes e a formulação de intervenções específicas. O único elemento que muda para as subdivisões abaixo refere-se ao numerador da fórmula. Todos possuem como denominador o número de nascidos vivos, e a multiplicação é mantida padronizada (por 1.000):
 
-- Mortalidade Neonatal: Refere-se aos óbitos ocorridos entre o nascimento e o 27º dia completo de vida.
+- **Mortalidade neonatal**: refere-se aos óbitos ocorridos entre o nascimento e o 27º dia completo de vida. Representa a soma dos componentes neonatal precoce e neonatal tardia, refletindo a qualidade da atenção pré-natal, do parto e do cuidado neonatal. Faixa etária: 0 a 27 dias completos
+  - **Mortalidade neonatal precoce**: engloba os óbitos ocorridos entre o nascimento e o 6º dia de vida (0 a 6 dias completos). Geralmente associada à assistência gestacional, ao parto e aos cuidados imediatos ao recém-nascido
+  - **Mortalidade neonatal tardia**: refere-se aos óbitos entre o 7º e o 27º dia de vida completo. Relaciona-se com a continuidade do cuidado neonatal e a qualidade da atenção hospitalar especializada
+- **Mortalidade pós-neonatal**: compreende os óbitos ocorridos entre o 28º dia e o 364º dia de vida. Costuma refletir as condições socioambientais, como acesso à alimentação adequada, saneamento, imunização e políticas de proteção social
 
-Representa a soma dos componentes neonatal ocorridos entre o nascimento e o 6º dia de vida (0 a 6 dias completos).
+### Coeficiente de Mortalidade Perinatal
 
-| Geralmente associada à assistência gestacional, ao parto e aos cuidados imediatos ao recém-nascido.
+- Número de óbitos fetais a partir de 22 semanas completas de gestação (154 dias) acrescido dos óbitos ocorridos entre 0 e 6 dias de vida, por mil nascimentos totais (óbitos fetais mais nascidos vivos), em determinado período, no espaço geográfico considerado
 
-- Mortalidade Neonatal Tardia: Refere-se aos óbitos entre o 7º e o 27º dia de vida completo. Relaciona-se com a continuidade do cuidado neonatal e a qualidade da atenção hospitalar especializada.
+### Coeficiente de Natimortalidade
 
-- Mortalidade Pós-Neonatal: Compreende os óbitos ocorridos entre o 28º dia e o 364º dia de vida. Costuma refletir as condições socioambientais, como acesso à alimentação adequada, saneamento, imunização e políticas de proteção social.
+- Número de nascidos mortos entre os nascidos vivos e mortos
+- Fórmula: Taxa de Natimortalidade = [Número de Natimortos / (Número de Nascidos Vivos + Número de Natimortos)] × 1.000
 
-Coeficiente de Mortalidade Perinatal
+## Para Lembrar
 
-- Número de óbitos fetais a partir de 22 semanas completas de gestação (154 dias) acrescido dos óbitos ocorridos entre 0 e 6 dias de vida, por mil nascimentos totais (óbitos fetais mais nascidos vivos), em determinado período, no espaço geográfico considerado.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Coeficiente de Natimortalidade
+**Tabela 1: Indicador Epidemiológico e Definição**
 
-- Número de nascidos mortos entre os nascidos vivos e mortos.
+| Indicador | Definição |
+|---|---|
+| Mortalidade Infantil | Número de óbitos de menores de 1 ano a cada mil nascidos vivos (NV) |
+| Mortalidade Neonatal Precoce | Óbitos entre o nascimento e o 6º dia completo de vida por mil NV |
+| Mortalidade Neonatal Tardia | Óbitos entre o 7º e o 27º dia completo de vida por mil NV |
+| Mortalidade Pós-neonatal | Óbitos entre o 28º e o 364º dia de vida por mil NV |
+| Mortalidade Perinatal | Óbitos fetais (IG ≥ 22 semanas) + óbitos neonatais precoces (0 a 6 dias) por mil NV |
 
-- Taxa de Natimortalidade = (Número de Natimortos
-
-/ (Número de Nascidos Vivos + Número de Natimortos) X 1.000
-
-## PARA LEMBRAR
-
-Tabela 1: Indicador Epidemiológico e Definição. Indicador Definição Número de óbitos de Mortalidade Infantil menores de 1 ano a cada mil nascidos vivos (NV).
-
-Óbitos entre o nascimento Mortalidade Neonatal e o 6º dia completo de Precoce vida por mil NV Óbitos entre o 7º e o 27º Mortalidade Neonatal dia completo de vida por Tardia mil NV Óbitos entre o 28º e o Mortalidade Pós-neonatal 364º dia de vida por mil NV Óbitos fetais (IG ≥ 22 semanas) + óbitos Mortalidade Perinatal neonatais precoces (0 a 6 dias) por mil NV
-
-## REFERÊNCIAS
+## Referências
 
 Tabela 1: Autoral. Baseado em ROUQUAYROL, Maria Zélia; GURGEL, Marcelo. Rouquayrol: epidemiologia e saúde. Medbook, 2021.

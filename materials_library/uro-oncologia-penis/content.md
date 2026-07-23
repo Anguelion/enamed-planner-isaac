@@ -1,36 +1,33 @@
-# Uro-oncologia Pênis
+# Uro-oncologia: Pênis
 
 <!-- page:1 -->
 
-Uro-oncologia
+## Uro-oncologia: Pênis
 
-## CONSIDERAÇÕES INICIAIS
+## Considerações Iniciais
 
-## DENTRE AS LESÕES PENIANAS
+### Dentre as Lesões Penianas
 
-- 95% - carcinomas espinocelulares (CEC);
+- 95% – carcinomas espinocelulares (CEC);
+- 5% – melanoma, linfoma, sarcoma.
 
-- 5% - melanoma, linfoma, sarcoma.
+### O CEC de Pênis Advém de Lesões Específicas (Pré-malignas)
 
-## O CEC DE PÊNIS ADVÉM DE LESÕES
-
-## ESPECÍFICAS (PRÉ-MALIGNAS)
-
-## ERITROPLASIA DE QUEYRAT
+**Eritroplasia de Queyrat**
 
 É um carcinoma in situ que forma placas avermelhadas, planas, de textura aveludada, que recobrem regiões penianas grandes.
 
-Figura 1: Eritroplasia de Queyrat LESÃO DE BUSCHKE-LÖWENSTEIN: Conhecido como condiloma acuminado gigante.
+*Figura 1: Eritroplasia de Queyrat.*
 
-Figura 2: Lesão de Buschke-Löwenstein
+**Lesão de Buschke-Löwenstein**: conhecido como condiloma acuminado gigante.
 
-## DOENÇA DE BOWEN
+*Figura 2: Lesão de Buschke-Löwenstein.*
 
+**Doença de Bowen**
 - Lesões eritematosas circunscritas;
-
 - É um carcinoma in situ.
 
-Figura 3: Doença de Bowen
+*Figura 3: Doença de Bowen.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -40,139 +37,84 @@ Figura 3: Doença de Bowen
 
 <!-- page:2 -->
 
-## EPIDEMIOLOGIA TRATAMENTO
+## Epidemiologia
 
-- Rara em países desenvolvidos; É definido mediante o estadiamento e a estratificação
+- Rara em países desenvolvidos;
+- Brasil → corresponde a 2% do total de neoplasias em homens;
+- Pico de idade: 6ª década.
 
-- Brasil → corresponde a 2%, de total de neoplasias, de risco:
+### Fatores de Risco
 
-em homens; em homens;
-
-- Pico de idade: 6° década. T
-
-## FATORES DE RISCO
-
-- Fimose → a circuncisão neonatal é fator protetor;
-
-- HPV → em especial, os subtipos 16 e 18; representa até
-
-40% dos casos;
-
-- Má higiene:
-
-- Especialmente em região de maior vulnerabilidade social; D
-
-- Nordeste – 10% de incidência de CA de pênis.
-
+- **Fimose** → a circuncisão neonatal é fator protetor;
+- **HPV** → em especial, os subtipos 16 e 18; representa até 40% dos casos;
+- **Má higiene**: especialmente em região de maior vulnerabilidade social; Nordeste – 10% de incidência de CA de pênis;
 - Infecção por HIV;
-
 - Tabagismo;
-
 - Zoofilia.
 
-## MANIFESTAÇÕES CLÍNICAS E
+## Manifestações Clínicas e Diagnósticos
 
-## DIAGNÓSTICOS
+### Sinais e Sintomas
 
-- SINAIS E SINTOMAS:
+- Lesões exofíticas, ulceradas;
+- 50% acometem a glande, prepúcio; existem relatos de casos com acometimento de haste e escroto.
 
-- Lesões exofítica, ulceradas;
-
-- 50% acometem a glande, prepúcio: Existem relatos de casos com acometimento de E haste e escroto. A
-
-DISSEMINAÇÃO: VIA LINFÁTICA - PRINCIPAL:
+### Disseminação: Via Linfática — Principal
 
 - Atenção ao exame dos linfonodos inguinais;
-
 - Grande morbidade!
 
-## DIAGNÓSTICO
+### Diagnóstico
 
-- Anatomopatológico → Biópsia da margem da lesão!
+- **Anatomopatológico** → biópsia da margem da lesão!
+- **Indicações**: lesões típicas; úlceras ou lesão com período de cicatrização > 3 semanas.
 
-- Indicações:
+## Estadiamento
 
-- Lesões típicas;
+**T** → é melhor avaliado com auxílio da ressonância magnética, pela avaliação de corpo cavernoso, uretra:
+- **Ta** – não invade a submucosa;
+- **T1** – invade o tecido subepitelial: T1a → baixo grau (G1) e sem invasão angiolinfática; T1b → alto grau (G3) ou invasão angiolinfática;
+- **T2** – invade o tecido esponjoso;
+- **T3** – invade o corpo cavernoso;
+- **T4** – invade estruturas adjacentes.
 
-- Úlceras ou lesão com período de cicatrização
+*Verificar Figura 4.*
 
-> 3 semanas.
-
-## ESTADIAMENTO
-
-## T → É MELHOR AVALIADO COM AUXÍLIO DA
-
-## RESSONÂNCIA MAGNÉTICA, PELA AVALIAÇÃO
-
-## DE CORPO CAVERNOSO, URETRA
-
-- Ta – não invade a submucosa;
-
-- T1 – invade o tecido subepitelial: T1a → baixo grau (G1) e sem invasão angiolinfática; T1b → alto grau (G3) ou invasão angiolinfática:
-
-- T2 – invade o tecido esponjoso;
-
-- T3 – invade o corpo cavernoso;
-
-- T4 – invade estruturas adjacentes.
-
-- Verificar Figura 4
-
-## N → AVALIADO PELO EXAME FÍSICO E EXAMES
-
-DE IMAGEM:
-
+**N** → avaliado pelo exame físico e exames de imagem:
 - A palpação positiva denota N+;
+- A presença de linfonodomegalia pélvica classifica a lesão como M1.
 
-- A presença de linfonodomegalia pélvica classifica a lesão como M1. TUMOR TA OU CARCINOMA IN SITU →
+## Tratamento
 
-## DOENÇA SUPERFICIAL NÃO INVASIVA
+É definido mediante o estadiamento e a estratificação de risco.
 
-- Agentes quimio ablativos podem ser utilizados – com postectomia;
+### Tumor Ta ou Carcinoma In Situ → Doença Superficial Não Invasiva
 
-Imiquimode ou 5-Fluorouracil – em associação
-
+- Agentes quimioablativos podem ser utilizados – com postectomia: Imiquimode ou 5-Fluorouracil, em associação;
 - Laser convencional ou de CO2;
-
 - É necessária uma nova biópsia após o tratamento.
 
-DOENÇA INVASIVA:
+### Doença Invasiva
 
 - O princípio do tratamento é dado pela escolha do ponto de vista oncológico. Isto é, somente em tempo posterior é aventada a possibilidade de preservação do órgão;
-
-- Margem de segurança → pelo menos, 3 – 5 mm: Atentar para a importância do processo de congelação, para garantia das margens livres.
-
+- **Margem de segurança** → pelo menos, 3 – 5 mm: atentar para a importância do processo de congelação, para garantia das margens livres;
 - Radio/braquiterapia – alternativa;
-
 - No caso de invasão de corpos → proceder com amputação ou corporectomia distal.
 
-EM TUMORES T4 → É REALIZADA A AMPUTAÇÃO + URETROSTOMIA PERINEAL. Modalidades de tratamento:
+> Em tumores T4 → é realizada a amputação + uretrostomia perineal.
 
-- Glandectomia:
+### Modalidades de Tratamento
 
-1. Tumor restrito à glande, sem invasão de
+- **Glandectomia**:
+  1. Tumor restrito à glande, sem invasão de tecidos adjacentes;
+  2. Com a rotação do retalho de pele, é possível recobrir a falha.
+- **Penectomia parcial**:
+  1. Realizada na presença de algum grau de invasão no tecido adjacente;
+  2. A reconstrução torna-se mais complexa. A manipulação da uretra não é infrequente.
+- **Penectomia total ou amputação**:
+  1. Realizada em tumores invasivos.
 
-tecidos adjacentes;
-
-2. Com a rotação do retalho de pele, é possível
-
-recobrir a falha.
-
-- Penectomia parcial:
-
-1. Realizada na presença de algum grau de invasão no
-
-tecido adjacente;
-
-2. A reconstrução torna-se mais complexa. A
-
-manipulação da uretra não é infrequente.
-
-- Penectomia total ou amputação:
-
-1. Realizada em tumores invasivos.
-
-Pele Fáscia Dartos T4 Fáscia de Buck Túnica albugínea TI T4 T2 T2 T2 Ta Tis Ta T3 Figura 4: Estadiamento T do câncer de Pênis
+*Figura 4: Estadiamento T do câncer de Pênis (pele, fáscia Dartos, fáscia de Buck, túnica albugínea; Ta, Tis, T1, T2, T3, T4).*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -180,44 +122,45 @@ Pele Fáscia Dartos T4 Fáscia de Buck Túnica albugínea TI T4 T2 T2 T2 Ta Tis 
 
 <!-- page:3 -->
 
-SEGUIMENTO COMPLEMENTO AO TRATAMENTO:
+## Complemento ao Tratamento pelo Estadiamento
 
-- N2/N3 → quimioterapia adjuvante;
+**N0** – ausência de linfonodomegalia ou palpação negativa:
+- **T1a** → conduta expectante;
+- **T1b** → linfadenectomia inguinal bilateral.
 
-PELO ESTADIAMENTO:
+**N1 ou N2** → linfadenectomia inguinal bilateral.
 
-- N3 → quimioterapia neoadjuvante;
+**Na ressecção**:
+- 2 ou + linfonodos inguinais positivos ou extensão extracapsular → linfadenectomia pélvica ipsilateral.
 
-N0 – ausência de linfonodomegalia ou palpação Na ressecção: negativa:
+## Seguimento
 
-- 2 ou + linfonodos inguinais positivos ou extensão negativa:
+- **N2/N3** → quimioterapia adjuvante;
+- **N3** → quimioterapia neoadjuvante.
 
-- T1a → conduta expectante;
+## Linfadenectomia Inguinal
 
-- T1b → linfadenectomia inguinal bilateral.
-
-N1 ou N2 → linfadenectomia inguinal bilateral. LINFADENECTOMIA INGUINAL Limites da região de dissecção:
-
+**Limites da região de dissecção:**
 - Lateral: músculo sartório;
-
 - Medial: músculo adutor longo;
-
 - Cranial: ligamento inguinal.
 
-É retirado o coxim gorduroso que recobre a veia e a artéria femoral, juntamente com todos os linfonodos da região;
+É retirado o coxim gorduroso que recobre a veia e a artéria femoral, juntamente com todos os linfonodos da região.
 
-Pode ser realizada pela técnica modificada – evitar evolução com linfedemas mais importantes; Complicações:
+Pode ser realizada pela técnica modificada – para evitar evolução com linfedemas mais importantes.
 
+**Complicações:**
 - Linfedema;
-
 - Linfocele;
-
 - Necrose de pele – se abordagem aberta;
+- Infecções – se abordagem aberta.
 
-- Infecções – se abordagem aberta. - 2 ou + linfonodos inguinais positivos ou extensão extracapsular → linfadenectomia pélvica ipsilateral.
+## Referências
 
-## REFERÊNCIAS
+Figura 1: Eritroplasia de Queyrat. Fonte: Revista da SPDV 69(3) 2011; Rita Guedes, Inês Leite, Paulo Araújo, David Tente, Armando Baptista, Natividade Rocha; Queyrat e Co.
 
-Figura 1: Eritroplasia de Queyrat Fonte: Revista da SPDV 69(3) 2011; Rita Guedes, Inês Leite, Paulo Araújo, David Tente, Armando Baptista, Natividade Rocha; Queyrat e CO Figura 2: Lesão de Buschke-Löwenstein Pineda-Murillo, J., Lugo-García, J.A., Martínez-Carrillo, G. et al. Buschke Fonte: Löwenstein tumor of the penis. Afr J Urol 25, 9 (2019). https://doi.
+Figura 2: Lesão de Buschke-Löwenstein. Fonte: Pineda-Murillo, J., Lugo-García, J.A., Martínez-Carrillo, G. et al. Buschke Löwenstein tumor of the penis. Afr J Urol 25, 9 (2019). https://doi.org/10.1186/s12301-019-0011-4
 
-org/10.1186/s12301-019-0011-4 Figura 3: Doença de Bowen Fonte: Iophoto associates/science photo library Figura 4: Estadiamento T do câncer de Pênis Fonte: Acervo Medcof
+Figura 3: Doença de Bowen. Fonte: Iophoto associates/science photo library.
+
+Figura 4: Estadiamento T do câncer de Pênis. Fonte: Acervo Medcof.

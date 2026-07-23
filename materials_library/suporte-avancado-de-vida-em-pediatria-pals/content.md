@@ -2,15 +2,9 @@
 
 <!-- page:1 -->
 
-## Suporte Avançado
+## Suporte Avançado de Vida em Pediatria
 
-## de Vida em
-
-## Pediatria
-
-## Dra. Camilla Castro
-
-## EMERGÊNCIA
+### Dra. Camilla Castro — Emergência
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -20,17 +14,12 @@
 
 <!-- page:2 -->
 
-## NESSA AULA
+## Nessa Aula Revisaremos
 
-## REVISAREMOS
-
-## o SBV (BLS)
-
-o PCR avançada
-
-## o Bradicardia sintomática
-
-o Taquicardias
+- SBV (BLS).
+- PCR avançada.
+- Bradicardia sintomática.
+- Taquicardias.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -40,23 +29,16 @@ o Taquicardias
 
 <!-- page:3 -->
 
-## PALS
+## PALS — Sistematização do Atendimento
 
-## Sistematização do atendimento!
+- **Reconhecimento.**
+- **RCP de alta qualidade.**
+- **Desfibrilação.**
+- **Ressuscitação avançada.**
+- **Cuidados pós-PCR.**
+- **Recuperação e sobrevida.**
 
-## Reconhecimento
-
-## RCP de alta qualidade
-
-## Desfibrilação
-
-## Ressuscitação avançada
-
-Fonte: AHA 2025
-
-## Cuidadoos pós PCR
-
-## Recuperação e sobrevida
+*Fonte: AHA 2025.*
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -66,69 +48,40 @@ Fonte: AHA 2025
 
 <!-- page:4 -->
 
-## Triângulo de avaliação pediátrica
+## Triângulo de Avaliação Pediátrica
 
-## Aparência
-
-## Consciência
-
-## Tônus
-
-## Comportamento
-
-## Esforço Respiratório Circulação
-
-## Frequência Cor da pele
-
-## Sinais de esforço Sinais de sangramento
-
-## Ruídos
+- **Aparência:** consciência, tônus, comportamento.
+- **Esforço Respiratório:** frequência, sinais de esforço, ruídos.
+- **Circulação:** cor da pele, sinais de sangramento.
 
 ---
 
 <!-- page:5 -->
 
-- Avaliação: Intervenção Reavaliação
-
-## X-ABCDE (= ATLS)
-
-## Avaliação secundária / SAMPLE
-
-## Trabalho
-
-- Exames complementares. em equipe
+- **Avaliação → intervenção → reavaliação.**
+- **X-ABCDE** (= ATLS).
+- **Avaliação secundária / SAMPLE.**
+- **Exames complementares.**
+- **Trabalho em equipe.**
 
 ---
 
 <!-- page:6 -->
 
-## Suporte Avançado de Vida em
+## Suporte Avançado de Vida em Pediatria (PALS)
 
-## Pediatria (PALS)
-
-## Suporte Básico de Vida
-
-## em Pediatria
+### Suporte Básico de Vida em Pediatria
 
 ---
 
 <!-- page:7 -->
 
-## 1- Checar a segurança do ambiente
+1. Checar a segurança do ambiente.
+2. Checar responsividade (com estímulo tátil).
+3. Chamar ajuda e acionar o serviço de emergência.
+4. Checar respiração e pulso simultaneamente por, no mínimo, 5s e, no máximo, 10s.
 
-## 2- Checar responsividade (com estímulo tátil)
-
-## 3- Chamar ajuda e acionar serviço de emergência
-
-## 4- Checar respiração e pulso simultaneamente por
-
-## mínimo 5s, máximo 10s
-
-## Figura 1: Técnica para checagem de pulso na
-
-## criança até 1 ano (braquial) e nos maiores de 1 ano
-
-## (carotídeo ou femoral)
+*Figura 1: Técnica para checagem de pulso na criança até 1 ano (braquial) e nos maiores de 1 ano (carotídeo ou femoral).*
 
 ![Figura do material - página 7](figure-007-1.webp)
 
@@ -138,17 +91,11 @@ Fonte: AHA 2025
 
 <!-- page:8 -->
 
-## 5 - RCP = CAB
-
-## Sozinho: 30 compressões x 2
-
-## ventilações
-
-## ≥ 2 socorristas: 15 x 2
-
-## 6 - DEA
-
-## < 8 anos: pás pediátricas ou atenuador
+5. **RCP = CAB.**
+   - Sozinho: 30 compressões x 2 ventilações.
+   - ≥2 socorristas: 15 x 2.
+6. **DEA.**
+   - <8 anos: pás pediátricas ou atenuador.
 
 ![Figura do material - página 8](figure-008-1.webp)
 
@@ -156,17 +103,11 @@ Fonte: AHA 2025
 
 <!-- page:9 -->
 
-## Compressões cardíacas
+## Compressões Cardíacas
 
-## <1 ano: técnica dos 2 polegares com as mãos circundando o tórax. Se não
-
-## conseguir envolver o tórax → base de uma das mãos
-
-## AHA 2025: a tradicional técnica de 2 dedos para RCP em bebês não é mais
-
-## recomendada
-
-## A partir de 1 ano: uma mão ou duas mãos sobrepostas
+- **<1 ano:** técnica dos 2 polegares, com as mãos circundando o tórax. Se não conseguir envolver o tórax → base de uma das mãos.
+  - **AHA 2025:** a tradicional técnica de 2 dedos para RCP em bebês não é mais recomendada.
+- **A partir de 1 ano:** uma mão ou duas mãos sobrepostas.
 
 ![Figura do material - página 9](figure-009-1.webp)
 
@@ -176,13 +117,10 @@ Fonte: AHA 2025
 
 <!-- page:10 -->
 
-## Comprimir 1/3 do tórax
-
-## Retorno completo
-
-## Frequência 100 - 120 cpm
-
-## Alternar funções a cada 2 min
+- Comprimir **1/3 do tórax**.
+- Retorno completo.
+- Frequência **100-120 cpm**.
+- Alternar funções a cada 2 min.
 
 ![Figura do material - página 10](figure-010-1.webp)
 
@@ -194,11 +132,9 @@ Fonte: AHA 2025
 
 ## Ventilação
 
-## Cabeça em posição neutra e elevar o queixo
-
-## Anteriorização da mandíbula se suspeita de lesão cervical
-
-## “Boca-a-boca”/ dispositivos de barreira/ dispositivo BVM
+- Cabeça em posição neutra e elevar o queixo.
+- Anteriorização da mandíbula se suspeita de lesão cervical.
+- "Boca a boca" / dispositivos de barreira / dispositivo BVM (bolsa-válvula-máscara).
 
 ![Figura do material - página 11](figure-011-1.webp)
 
@@ -206,33 +142,19 @@ Fonte: AHA 2025
 
 <!-- page:12 -->
 
-## QUESTÃO
+## Questão — HSL 2024
 
-## HSL 2024
+Uma criança de 7 meses de idade é encontrada abandonada em uma rua sem saída. Entre as opções abaixo, a sequência mais correta para início da reanimação é:
 
-## Uma criança de 7 meses de idade é encontrada abandonada em uma rua sem saída
+A) Verificar o nível de consciência, se não responder chamar por ajuda, verificar a respiração, verificar o pulso carotídeo.
 
-## Entre as opções abaixo, a sequência mais correta para início da reanimação é
+B) Verificar o nível de consciência, se não responder chamar por ajuda, verificar o pulso braquial, verificar a respiração.
 
-## A) Verificar o nível de consciência, se não responder chamar por ajuda, verificar a
+C) Chamar por ajuda, verificar o nível de consciência, verificar a respiração, verificar o pulso carotídeo.
 
-## respiração, verificar o pulso carotídeo
+D) Verificar o nível de consciência, se não responder chamar por ajuda, verificar a respiração, verificar o pulso braquial.
 
-## B) Verificar o nível de consciência, se não responder chamar por ajuda, verificar o
-
-## pulso braquial, verificar a respiração
-
-## C) Chamar por ajuda, verificar o nível de consciência, verificar a respiração, verificar
-
-## o pulso carotídeo
-
-## D) Verificar o nível de consciência, se não responder chamar por ajuda, verificar a
-
-## respiração, verificar o pulso braquial
-
-## E) Verificar o nível de consciência, se não responder chamar por ajuda, verificar o
-
-## pulso carotídeo, verificar a respiração
+E) Verificar o nível de consciência, se não responder chamar por ajuda, verificar o pulso carotídeo, verificar a respiração.
 
 ---
 
@@ -242,41 +164,31 @@ Fonte: AHA 2025
 
 <!-- page:14 -->
 
-## Suporte Avançado de Vida
+## Suporte Avançado de Vida em Pediatria (PALS)
 
-## em Pediatria (PALS)
-
-## PCR avançada
+### PCR Avançada
 
 ---
 
 <!-- page:15 -->
 
-## Acesso venoso
+## Acesso Venoso
 
-## Acesso venoso periférico
-
-## Cateter venoso central (cateter umbilical - RN)
-
-## Acesso intraósseo
-
-## Locais: tíbia, fêmur distal, espinha ilíaca anterossuperior, etc
-
-## Indicações: PCR, choque, falha de acesso
-
-## Contraindicações: fraturas, lesões, tentativas anteriores
-
-## Duração: até 24h
+- Acesso venoso periférico.
+- Cateter venoso central (cateter umbilical — RN).
+- **Acesso intraósseo:**
+  - Locais: tíbia, fêmur distal, espinha ilíaca anterossuperior, etc.
+  - Indicações: PCR, choque, falha de acesso.
+  - Contraindicações: fraturas, lesões, tentativas anteriores.
+  - Duração: até 24h.
 
 ---
 
 <!-- page:16 -->
 
-## Paciente não intubado: 2x, nos intervalos das compressões
-
-## Paciente intubado: 1 ventilação a cada 2-3 segundos
-
-## Se IOT: Tubo com cuff
+- **Paciente não intubado:** 2 ventilações, nos intervalos das compressões.
+- **Paciente intubado:** 1 ventilação a cada 2-3 segundos.
+- Se IOT (intubação orotraqueal): tubo com cuff.
 
 ![Figura do material - página 16](figure-016-1.webp)
 
@@ -286,31 +198,19 @@ Fonte: AHA 2025
 
 <!-- page:17 -->
 
-## QUESTÃO ENARE 2023
+## Questão — ENARE 2023
 
-## Lactente de 3 meses de idade, internado por bronquiolite, evoluiu com piora respiratória
+Lactente de 3 meses de idade, internado por bronquiolite, evoluiu com piora respiratória. Permaneceu em leito de enfermaria enquanto aguardava a transferência para a UTI. A enfermagem foi chamada pela mãe, porque a criança ficou "molinha". A criança estava cianótica e inconsciente, sem movimento respiratório e sem pulso. São iniciadas as manobras de reanimação cardiopulmonar pela equipe. Qual é a relação de compressão/ventilação durante o atendimento dessa criança?
 
-## Permaneceu em leito de enfermaria enquanto aguardava a transferência para a UTI. A
+A) Se estiver sendo ventilada com máscara orofacial, manter uma relação de 15 compressões para duas ventilações.
 
-## enfermagem foi chamada pela mãe, porque a criança ficou “molinha”. A criança estava
+B) Se estiver sendo ventilada com máscara orofacial, manter uma relação de 30 compressões para duas ventilações.
 
-## cianótica e inconsciente, sem movimento respiratório e sem pulso. São iniciadas as manobras
+C) Manter uma relação de 3 compressões para uma ventilação.
 
-## de reanimação cardiopulmonar pela equipe. Qual é a relação da compressão ventilação durante
+D) Se estiver com via aérea avançada, manter uma relação de 15 compressões para duas ventilações.
 
-## o atendimento dessa criança?
-
-## A) Se estiver sendo ventilada com máscara orofacial, manter uma relação de 15 compressões
-
-## para duas ventilações
-
-## B) Se estiver sendo ventilada com máscara orofacial, manter uma relação de 30 compressões
-
-## C) Manter uma relação de 3 compressões para uma ventilação
-
-## D) Se estiver com via aérea avançada, manter uma relação de 15 compressões para duas
-
-## E) Se estiver com via aérea avançada, manter uma relação de 3 compressões para uma
+E) Se estiver com via aérea avançada, manter uma relação de 3 compressões para uma ventilação.
 
 ---
 
@@ -322,25 +222,13 @@ Fonte: AHA 2025
 
 ## USP-SP 2023
 
-## Paciente de 2 meses, sexo masculino, foi admitido no pronto atendimento após
-
-## mãe ter notado que ele estava com os lábios arroxeados. Na admissão
-
-## encontrava-se arresponsivo, com perda de tônus muscular e com respiração
-
-## superficial e hipoxemia, tendo sido prontamente iniciadas ventilações assistidas
-
-## O paciente havia recebido as imunizações previstas no calendário vacinal há
-
-## cerca de 5 horas e teve febre precedendo o quadro
+Paciente de 2 meses, sexo masculino, foi admitido no pronto atendimento após a mãe ter notado que ele estava com os lábios arroxeados. Na admissão, encontrava-se arresponsivo, com perda de tônus muscular e com respiração superficial e hipoxemia, tendo sido prontamente iniciadas ventilações assistidas. O paciente havia recebido as imunizações previstas no calendário vacinal há cerca de 5 horas, e teve febre precedendo o quadro.
 
 ---
 
 <!-- page:20 -->
 
-## Assinale a alternativa abaixo na qual está representada a escolha da máscara adequada
-
-## o posicionamento correto do coxim e o posicionamento correto da mão na máscara
+Assinale a alternativa abaixo na qual está representada a escolha da máscara adequada, o posicionamento correto do coxim e o posicionamento correto da mão na máscara.
 
 ![Figura do material - página 20](figure-020-1.webp)
 
@@ -360,31 +248,23 @@ Fonte: AHA 2025
 
 ## ENARE 2023
 
-## Paciente pediátrico de 10 anos sofre uma parada cardiorrespiratória em ambiente
+Paciente pediátrico de 10 anos sofre uma parada cardiorrespiratória em ambiente hospitalar. Sobre esse caso, assinale a alternativa correta:
 
-## hospitalar. Sobre esse caso, assinale a alternativa correta
+A) Com via aérea avançada estabelecida, é recomendado realizar 2 ventilações para 15 compressões.
 
-## A) Com via aérea avançada estabelecida, é recomendado realizar 2 ventilações para 15
+B) Com via aérea avançada estabelecida, é recomendada 1 ventilação a cada 6 segundos (10/min).
 
-## B) Com via aérea avançada estabelecida, é recomendada 1 ventilação a cada 6 segundos
+C) Com via aérea avançada estabelecida, é recomendada 1 ventilação a cada 2 a 3 segundos (20 a 30/min), sem interromper as compressões.
 
-## (10/min)
+D) É aconselhável administrar a primeira dose de epinefrina em até 8 minutos depois do início das compressões torácicas.
 
-## C) Com via aérea avançada estabelecida, é recomendada 1 ventilação a cada 2 a 3
-
-## segundos (20 a 30/min), sem interromper as compressões
-
-## D) É aconselhável administrar a primeira dose de epinefrina em até 8 minutos depois do
-
-## início das compressões torácicas.Aplicar pressão na i
-
-## E) A lidocaína é contraindicada na reanimação cardiopulmonar em pacientes pediátricos
+E) A lidocaína é contraindicada na reanimação cardiopulmonar em pacientes pediátricos.
 
 ---
 
 <!-- page:23 -->
 
-## segundos (20 a 30/min), sem interromper as compressões
+**Resposta:** C) Com via aérea avançada estabelecida, é recomendada 1 ventilação a cada 2 a 3 segundos (20 a 30/min), sem interromper as compressões.
 
 ---
 
@@ -392,7 +272,8 @@ Fonte: AHA 2025
 
 ## Ritmos
 
-## Chocáveis: TVSP/ FV • Não chocáveis: assistolia e AESP
+- **Chocáveis:** TVSP (taquicardia ventricular sem pulso) / FV (fibrilação ventricular).
+- **Não chocáveis:** assistolia e AESP (atividade elétrica sem pulso).
 
 ![Figura do material - página 24](figure-024-1.webp)
 
@@ -402,21 +283,17 @@ Fonte: AHA 2025
 
 <!-- page:25 -->
 
-## Chocáveis
+**Chocáveis:**
 
-## Parada Cardíaca Súbita (atividade física, cardiopata)
+- Parada cardíaca súbita (atividade física, cardiopata).
+- Sobrevida mais alta.
+- Menos comuns.
 
-## Sobrevida mais alta
+**Não chocáveis:**
 
-## Menos comuns
-
-## Não chocáveis
-
-## Parada Hipóxica (respiratória ou choque hipovolêmico)
-
-## Mais comuns
-
-## Sobrevida menor
+- Parada hipóxica (respiratória ou choque hipovolêmico).
+- Mais comuns.
+- Sobrevida menor.
 
 ---
 
@@ -424,21 +301,17 @@ Fonte: AHA 2025
 
 ## ENARE 2021
 
-## Sobre as causas de parada cardiorrespiratória (PCR) na faixa etária pediátrica, assinale a
+Sobre as causas de parada cardiorrespiratória (PCR) na faixa etária pediátrica, assinale a alternativa correta:
 
-## alternativa correta
+A) Geralmente é um evento súbito.
 
-## A) Geralmente é um evento súbito
+B) Os ritmos cardíacos mais frequentes são a bradicardia e a assistolia.
 
-## B) Os ritmos cardíacos mais frequentes são a bradicardia e a assistolia
+C) As arritmias ventriculares são muito comuns, principalmente em PCR extra-hospitalar.
 
-## C) As arritmias ventriculares são muito comuns, principalmente em PCR extra-hospitalar
+D) Costuma ser de origem cardíaca, sendo a fibrilação ventricular o ritmo mais comum.
 
-## D) Costuma ser de origem cardíaca, sendo a fibrilação ventricular o ritmo mais comum
-
-## E) No ambiente hospitalar, as causas mais comuns são infarto agudo do miocárdio e
-
-## miocardite
+E) No ambiente hospitalar, as causas mais comuns são infarto agudo do miocárdio e miocardite.
 
 ---
 
@@ -448,35 +321,14 @@ Fonte: AHA 2025
 
 <!-- page:28 -->
 
-## Parada cardiorrespiratória
+## Parada Cardiorrespiratória
 
-## Inicie a RCP
-
-## Forneça oxigênio
-
-## Coloque o monitor/desfibrilador
-
-## Ritmo chocável?
-
-## Sim Não
-
-FV/TVSP Assistolia/AESP
-
-## Epinefrina
-
-## imediatamente
-
-## Choque
-
-## RCP 2 min
-
-## Epinefrina a cada 3 a 5 min
-
-## Considere via aérea
-
-## Acesso IV/IO
-
-## avançada, capnografia
+- Inicie a RCP.
+- Forneça oxigênio.
+- Coloque o monitor/desfibrilador.
+- Ritmo chocável?
+  - **Sim → FV/TVSP:** choque; RCP 2 min; epinefrina imediatamente; considere via aérea avançada, capnografia; acesso IV/IO.
+  - **Não → Assistolia/AESP:** epinefrina imediatamente; RCP 2 min; epinefrina a cada 3 a 5 min; considere via aérea avançada, capnografia; acesso IV/IO.
 
 ---
 
@@ -484,45 +336,21 @@ FV/TVSP Assistolia/AESP
 
 ## INEP 2023
 
-## Um pré-escolar aguardando um atendimento eletivo foi vítima de colapso súbito em ambiente
+Um pré-escolar aguardando um atendimento eletivo foi vítima de colapso súbito em ambiente intra-hospitalar; parece inconsciente e está cianótico. De acordo com as diretrizes do suporte avançado de pediatria (2020), deve-se, inicialmente:
 
-## intra hospitalar; parece inconsciente e está cianótico. De acordo com as diretrizes do suporte
+A) Avaliar a responsividade e, se não houver resposta, chamar por ajuda; logo após, palpar pulso carotídeo e verificar a respiração, simultaneamente; se pulso carotídeo ausente, iniciar compressões torácicas (15 compressões torácicas : 2 ventilações).
 
-## avançado de pediatria (2020), deve-se, inicialmente
+B) Avaliar a responsividade e, se não houver resposta, chamar por ajuda; logo após, palpar pulso radial e verificar a respiração, simultaneamente; se pulso radial ausente, iniciar compressões torácicas (30 compressões torácicas : 2 ventilações).
 
-A) Avaliar a responsividade e, se não houver resposta, chamar por ajuda; logo após palpar pulso
+C) Chamar por ajuda, avaliar a responsividade e, se não houver resposta, palpar pulso radial e verificar a respiração, simultaneamente; se pulso radial ausente, iniciar compressões torácicas (15 compressões torácicas : 2 ventilações).
 
-## carotídeo e verificar a respiração, simultaneamente; se pulso carotídeo ausente, iniciar
-
-## compressões torácicas (15 compressões torácicas: 2 ventilações)
-
-## B) Avaliar a responsividade e, se não houver resposta, chamar por ajuda; logo após palpar pulso
-
-## radial e verificar a respiração, simultaneamente; se pulso radial ausente, iniciar compressões
-
-## torácicas (30 compressões torácicas: 2 ventilações)
-
-## C) Chamar por ajuda, avaliar a responsividade e, se não houver resposta, palpar pulso radial e
-
-## verificar a respiração, simultaneamente; se pulso radial ausente, iniciar compressões
-
-## torácicas (15 compressões torácicas: 2 ventilações)
-
-## D) Chamar por ajuda e, se não houver resposta, palpar pulso carotídeo e verificar a respiração
-
-## simultaneamente; se pulso carotídeo ausente, iniciar compressões torácicas (30
-
-## compressões torácicas: 2 ventilações)
+D) Chamar por ajuda e, se não houver resposta, palpar pulso carotídeo e verificar a respiração simultaneamente; se pulso carotídeo ausente, iniciar compressões torácicas (30 compressões torácicas : 2 ventilações).
 
 ---
 
 <!-- page:30 -->
 
-A) Avaliar a responsividade e, se não houver resposta, chamar por ajuda; logo após palpar
-
-## pulso carotídeo e verificar a respiração, simultaneamente; se pulso carotídeo ausente, iniciar
-
-## compressões torácicas (15 compressões torácicas: 2 ventilações)
+**Resposta:** A) Avaliar a responsividade e, se não houver resposta, chamar por ajuda; logo após, palpar pulso carotídeo e verificar a respiração, simultaneamente; se pulso carotídeo ausente, iniciar compressões torácicas (15 compressões torácicas : 2 ventilações).
 
 ---
 
@@ -530,109 +358,58 @@ A) Avaliar a responsividade e, se não houver resposta, chamar por ajuda; logo a
 
 ## ENARE 2024
 
-## Paciente do sexo feminino, 12 anos, é admitida no pronto-socorro após intoxicação exógena. É
+Paciente do sexo feminino, 12 anos, é admitida no pronto-socorro após intoxicação exógena. É ofertado oxigênio a 100% e constata-se bradicardia no monitor. Em determinado momento, o oxímetro de pulso não consegue mais detectar a saturação, o monitor acusa assistolia e a paciente aparentemente não apresenta pulso central palpável. Assinale a alternativa que apresenta uma conduta correta nesse caso:
 
-## ofertado oxigênio a 100% e constata-se bradicardia no monitor. Em determinado momento, o
+A) Iniciar ventilação com bolsa-válvula-máscara, 20 a 30 ventilações por minuto, com compressões torácicas contínuas.
 
-## oxímetro de pulso não consegue mais detectar a saturação, o monitor acusa assistolia e a
+B) Iniciar ventilação com bolsa-válvula-máscara sincronizadas com compressões torácicas e providenciar a desfibrilação com 2 J/kg.
 
-## paciente aparentemente não apresenta pulso central palpável. Assinale a alternativa que
+C) Proceder imediatamente à intubação orotraqueal, por se tratar de uma urgência nesses casos, e ventilar cerca de 6 a 8 vezes por minuto.
 
-## apresenta uma conduta correta nesse caso
+D) Como o ritmo de parada é assistolia, está indicada a administração de adrenalina a cada 3 a 5 minutos, sem indicação de desfibrilação.
 
-A) Iniciar ventilação com bolsa-válvula-máscara 20 a 30 ventilações por minuto com
-
-## compressões torácicas contínuas
-
-## B) Iniciar ventilação com bolsa-válvula-máscara sincronizadas com compressões torácicas e
-
-## providenciar a desfibrilação com 2 J/kg
-
-C) Proceder imediatamente à intubação orotraqueal, por se tratar de uma urgência nesses casos,
-
-## e ventilar cerca de 6 a 8 vezes por minuto
-
-D) Como o ritmo de parada é assistolia, está indicada a administração de adrenalina a cada 3 a 5
-
-## minutos, sem indicação de desfibrilação
-
-## E) Deve-se trocar a pessoa que administra as compressões torácicas a cada 4 minutos
+E) Deve-se trocar a pessoa que administra as compressões torácicas a cada 4 minutos.
 
 ---
 
 <!-- page:32 -->
 
-A) Iniciar ventilação com bolsa-válvula-máscara 20 a 30 ventilações por minuto com
-
-C) Proceder imediatamente à intubação orotraqueal, por se tratar de uma urgência nesses casos,
-
-D) Como o ritmo de parada é assistolia, está indicada a administração de adrenalina a cada 3 a 5
+**Resposta:** D) Como o ritmo de parada é assistolia, está indicada a administração de adrenalina a cada 3 a 5 minutos, sem indicação de desfibrilação.
 
 ---
 
 <!-- page:33 -->
 
-## Em um paciente pediátrico em parada cardiorrespiratória, qual é a conduta correta?
+Em um paciente pediátrico em parada cardiorrespiratória, qual é a conduta correta?
 
-## A) Se o ritmo de choque for Atividade Elétrica Sem Pulso (AESP), está indicada a
+A) Se o ritmo de choque for Atividade Elétrica Sem Pulso (AESP), está indicada a cardioversão com choque.
 
-## cardioversão com choque
+B) O ritmo de choque deve ser verificado e, caso se detecte assistolia, não há indicação de choque.
 
-## B) O ritmo de choque deve ser verificado e, caso se detecte assistolia, não há indicação
+C) Se o paciente estiver com via aérea avançada, deve-se usar a relação 15 compressões para cada ventilação.
 
-## de choque
+D) No momento da intubação, usar sedativo e analgésico, mas é contraindicado o uso de relaxante neuromuscular.
 
-## C) Se o paciente estiver com via aérea avançada, deve-se usar a relação 15
-
-## compressões para cada ventilação
-
-## D) No momento da intubação, usar sedativo e analgésico, mas é contraindicado o uso
-
-## de relaxante neuromuscular
-
-## E) Na indicação de choque, a dose inicial é de 1 J/Kg
+E) Na indicação de choque, a dose inicial é de 1 J/kg.
 
 ---
 
 <!-- page:34 -->
 
-## B) O ritmo de choque deve ser verificado e, caso se detecte assistolia, não há
-
-## indicação de choque
+**Resposta:** B) O ritmo de choque deve ser verificado e, caso se detecte assistolia, não há indicação de choque.
 
 ---
 
 <!-- page:35 -->
 
-## Ritmos chocáveis
+## Ritmos Chocáveis (FV/TVSP)
 
-## 2 a 4 J/kg
-
-## FV/TVSP
-
-- aumentar dose até 10 J/k
-
-(bifásica 120-200J ou mono 1° RCP 2 m Choque Amiodarona ou Trate as causas
-
-## Sim
-
-## 2°
-
-Choque kg ou máximo disponível ofásica 360J)
-
-## Adrenalina: 0,01 mg/kg
-
-## EV; ET: 0,1 mg/kg
-
-3° min
-
-## Amiodarona: 5 mg/kg
-
-u lidocaína
-
-## Lidocaína: 1 mg/kg
-
-s reversíveis
+- **1º choque:** 2 a 4 J/kg (bifásica 120-200J ou monofásica 360J).
+- RCP 2 min.
+- **2º choque:** aumentar dose (até 10 J/kg ou máximo disponível).
+- **Adrenalina:** 0,01 mg/kg EV; ET: 0,1 mg/kg — a cada 3 a 5 min.
+- **3º choque em diante:** amiodarona (5 mg/kg) ou lidocaína (1 mg/kg).
+- Tratar as causas reversíveis.
 
 ---
 
@@ -640,17 +417,14 @@ s reversíveis
 
 ## Medicações
 
-## Adrenalina: 0,01 mg/kg EV, máx. 1 mg = 0,1 mL/kg da adrenalina diluída 1:10.000
-
-## Endotraqueal: 10x mais (0,1 mg/kg) – 0,1 mL/kg da adrenalina pura (1: 1.000)
-
-## Amiodarona: 5 mg/kg até 300mg (repetir até 3x, máx 150 cada)
+- **Adrenalina:** 0,01 mg/kg EV, máx. 1 mg = 0,1 mL/kg da adrenalina diluída 1:10.000. Endotraqueal: 10x mais (0,1 mg/kg) = 0,1 mL/kg da adrenalina pura (1:1.000).
+- **Amiodarona:** 5 mg/kg, até 300mg (repetir até 3x, máx. 150mg cada).
 
 ---
 
 <!-- page:37 -->
 
-## Causas reversíveis
+## Causas Reversíveis
 
 ![Figura do material - página 37](figure-037-1.webp)
 
@@ -662,27 +436,15 @@ s reversíveis
 
 ## PALS 2022
 
-## Paramédicos foram acionados para irem até a casa de uma criança com história de vômitos e
+Paramédicos foram acionados para irem até a casa de uma criança com história de vômitos e diarreia, que se encontra reativa apenas a estímulo doloroso, respiração irregular, desidratada, pálida, com dor à palpação do abdome, abdome distendido, cianótica. É iniciada ventilação com bolsa-valva-máscara com oxigênio a 100%, FC 36. Evoluiu com PCR, sendo realizada RCP com 2 socorristas. Após 2 min, reavaliada e mantinha-se sem pulsos palpáveis. Retomada RCP e realizada dose de adrenalina. Após 2 min, paciente seguia em PCR. Qual a próxima medida neste momento?
 
-## diarreia que se encontra reativa apenas a estímulo doloroso, respiração irregular, desidratada
+A) Epinefrina.
 
-## pálida, com dor à palpação do abdome, abdome distendido, cianótica
+B) Amiodarona.
 
-## É iniciada ventilação com bolsa-valva-máscara com oxigênio a 100% por FC 36. Evoluiu com
+C) SF 0,9% 20 mL/kg.
 
-## PCR, sendo realizada RCP com 2 socorristas. Após 2 min, reavaliada e mantinha-se sem pulsos
-
-## palpáveis. Retomada RCP e realizada dose de adrenalina. Após 2 min, paciente seguia em PCR
-
-## Qual a próxima medida neste momento?
-
-## A) Epinefrina
-
-## B) Amiodarona
-
-## C) SF 0,9% 20 mL/kg
-
-## D) Atropina
+D) Atropina.
 
 ---
 
@@ -692,21 +454,14 @@ s reversíveis
 
 <!-- page:40 -->
 
-## Cuidados pós-parada
+## Cuidados Pós-Parada
 
-## Normoxemia e PaCO2 adequada
-
-## Monitorizar: sinais vitais + lactato, débito urinário, saturação
-
-## venosa central
-
-## Controle de temperatura
-
-## Neuromonitoramento
-
-## Eletrólitos e glicose
-
-## Sedação: sedativos e ansiolíticos
+- Normoxemia e PaCO2 adequada.
+- Monitorizar: sinais vitais + lactato, débito urinário, saturação venosa central.
+- Controle de temperatura.
+- Neuromonitoramento.
+- Eletrólitos e glicose.
+- Sedação: sedativos e ansiolíticos.
 
 ---
 
@@ -714,47 +469,29 @@ s reversíveis
 
 ## ENARE 2022
 
-## As recomendações para a reanimação cardiopulmonar pediátrica estão sempre em revisão e
+As recomendações para a reanimação cardiopulmonar pediátrica estão sempre em revisão e em constante atualização, para melhor cuidar dos pacientes, oferecendo a melhor chance possível de desfechos favoráveis. Sobre esse tema, informe se é verdadeiro (V) ou falso (F) o que se afirma a seguir e assinale a alternativa com a sequência correta:
 
-## em constante atualização, para melhor cuidar dos pacientes, oferecendo a melhor chance
+( ) Para maximizar as chances de bons resultados, a epinefrina deve ser administrada o quanto antes, idealmente em até cinco minutos depois do início da parada cardiorrespiratória de um ritmo não chocável.
 
-## possível de desfechos favoráveis. Sobre esse tema, informe se é verdadeiro (V) ou falso (F) o
+( ) A taxa de ventilação assistida recomendada tem sido aumentada para uma ventilação a cada 2 a 3 segundos (20 a 30 ventilações por minuto) para todos os casos de ressuscitação pediátrica.
 
-## que se afirma a seguir e assinale a alternativa com a sequência correta
+( ) Tubos endotraqueais com cuff são sugeridos para reduzir o vazamento de ar e a necessidade de trocas de tubos para pacientes de qualquer idade com necessidade de intubação.
 
-## ( ) Para maximizar as chances de bons resultados, a epinefrina deve ser administrada o quanto
-
-## antes, idealmente em até cinco minutos depois do início da parada cardiorrespiratória de um
-
-## ritmo não chocável
-
-## ( ) A taxa de ventilação assistida recomendada tem sido aumentada para uma ventilação a cada
-
-## 2 a 3 segundos (20 a 30 ventilações por minuto) para todos os casos de ressuscitação
-
-## pediátrica
-
-## ( ) Tubos endotraqueais com cuff são sugeridos para reduzir o vazamento de ar e a
-
-## necessidade de trocas de tubos para pacientes de qualquer idade com necessidade de
-
-## intubação
-
-## ( ) O uso rotineiro de pressão cricoide durante a intubação não é mais recomendado
+( ) O uso rotineiro de pressão cricoide durante a intubação não é mais recomendado.
 
 ---
 
 <!-- page:42 -->
 
-## (V) Para maximizar as chances de bons resultados, a epinefrina deve ser administrada o quanto
+**Respostas:**
 
-## (V) A taxa de ventilação assistida recomendada tem sido aumentada para uma ventilação a
+(V) Para maximizar as chances de bons resultados, a epinefrina deve ser administrada o quanto antes.
 
-## cada 2 a 3 segundos (20 a 30 ventilações por minuto) para todos os casos de ressuscitação
+(V) A taxa de ventilação assistida recomendada tem sido aumentada para uma ventilação a cada 2 a 3 segundos (20 a 30 ventilações por minuto) para todos os casos de ressuscitação pediátrica.
 
-## (V) Tubos endotraqueais com cuff são sugeridos para reduzir o vazamento de ar e a
+(V) Tubos endotraqueais com cuff são sugeridos para reduzir o vazamento de ar e a necessidade de trocas de tubos.
 
-## (V) O uso rotineiro de pressão cricoide durante a intubação não é mais recomendado
+(V) O uso rotineiro de pressão cricoide durante a intubação não é mais recomendado.
 
 ---
 
@@ -766,29 +503,17 @@ s reversíveis
 
 <!-- page:44 -->
 
-## Estado mental agudamente alterado
-
-## Bradicardia sintomática
-
-## Sinais de choque
-
-## Hipotensão
-
-## Mantenha as vias aéreas patentes
-
-## Ventilação com pressão positiva e oxigênio
-
-## Monitorização + acesso
-
-## RCP e Epinefrina
-
-## Atropina se tônus vagal aumentado ou
-
-## bloqueio AV primário
-
-## Identifique e trate causas subjacentes
-
-## Marcapasso
+- Estado mental agudamente alterado.
+- **Bradicardia sintomática:**
+  - Sinais de choque.
+  - Hipotensão.
+- Mantenha as vias aéreas patentes.
+- Ventilação com pressão positiva e oxigênio.
+- Monitorização + acesso.
+- RCP e epinefrina.
+- Atropina, se tônus vagal aumentado ou bloqueio AV primário.
+- Identifique e trate causas subjacentes.
+- Marcapasso.
 
 ---
 
@@ -796,31 +521,25 @@ s reversíveis
 
 ## Causas
 
-## Hipotermia Tóxicos
-
-## Hipóxia
+- Hipóxia.
+- Hipotermia.
+- Tóxicos.
 
 ---
 
 <!-- page:46 -->
 
-## Criança com bradicardia é avaliada e são detectados sinais de choque e hipotensão
+Criança com bradicardia é avaliada e são detectados sinais de choque e hipotensão. Iniciou-se ventilação com pressão positiva, sem melhora mesmo com ventilação efetiva e suporte de oxigênio. A frequência cardíaca é de 45 bpm. Qual é a conduta mais adequada nesse caso?
 
-## Iniciou-se ventilação com pressão positiva, sem melhora mesmo com ventilação efetiva e
+A) Manter a ventilação com pressão positiva e considerar intubação orotraqueal.
 
-## suporte de oxigênio. A frequência cardíaca é de 45 bpm. Qual é a conduta mais adequada
+B) Iniciar compressões torácicas e ventilações (RCP).
 
-## nesse caso?
+C) Realizar cardioversão com choque não sincronizado.
 
-## A) Manter a ventilação com pressão positiva e considerar intubação orotraqueal
+D) Solicitar avaliação de cardiologista e realizar reposição volumétrica.
 
-## B) Iniciar compressões torácicas e ventilações (RCP)
-
-## C) Realizar cardioversão com choque não sincronizado
-
-## D) Solicitar avaliação de cardiologista e realizar reposição volumétrica
-
-## E) Administrar adenosina, podendo repetir após 5 minutos se não houver melhora
+E) Administrar adenosina, podendo repetir após 5 minutos se não houver melhora.
 
 ---
 
@@ -836,63 +555,40 @@ s reversíveis
 
 <!-- page:49 -->
 
-## Taquicardias
+## Taquicardias — Avaliação e Suporte Iniciais
 
-## Avaliação e suporte iniciais
-
-## Avalie o ritmo com ECG ou monitor
-
-## Comprometimento cardiopulmonar?
-
-## QRS estreito ou alargado?
+- Avalie o ritmo com ECG ou monitor.
+- Comprometimento cardiopulmonar?
+- QRS estreito ou alargado?
 
 ---
 
 <!-- page:50 -->
 
-Taquicardias com estabilidade hemodinâmica Estre
+### Taquicardias com Estabilidade Hemodinâmica
 
-## Taquicardia sinusal
+**Taquicardia sinusal:**
 
-## Ondas P presentes/normais
+- Ondas P presentes/normais.
+- Intervalo de RR variável.
+- Bebês: frequência geralmente <220/min.
+- Crianças: frequência geralmente <180/min.
+- Pesquise e trate a causa.
 
-## Intervalo de RR variável
+**Taquicardia supraventricular:**
 
-## Bebês: frequência geralmente <220/min
+- Ondas P ausentes/anormais.
+- Intervalo RR não variável.
+- Bebês: frequência geralmente ≥220/min.
+- Crianças: frequência geralmente ≥180/min.
+- Histórico de alterações abruptas na frequência.
+- Considere manobras vagais.
+- Adenosina 0,1 mg/kg → 0,2 mg/kg.
 
-## Crianças: frequência geralmente <180/min
+**Avalie a duração do QRS:**
 
-## Pesquise e trate a causa
-
-Taquicardia suprav
-
-- Ondas P ausentes/anorma
-
-## Intervalo RR não variável
-
-- Bebês: frequência geralme
-
-- Crianças: frequência geralm
-
-- Histórico de alterações abr Avalie a duração do QRS eito Alargado
-
-## Possível
-
-## ventricular
-
-## Recomenda-se consultar
-
-## um especialista
-
-## Tratar causas
-
-## Considerar antiarrítmico
-
-ais;
-
-## Considere manobras vagais
-
-ente ≥ 220/min; mente ≥ 180/min; Adenosina 0,1 mg/kg → 0,2 mg/kg ruptas na frequência.
+- **Estreito:** possível taquicardia supraventricular. Considerar antiarrítmico.
+- **Alargado:** possível taquicardia ventricular. Recomenda-se consultar um especialista. Tratar causas.
 
 ![Figura do material - página 50](figure-050-1.webp)
 
@@ -902,49 +598,28 @@ ente ≥ 220/min; mente ≥ 180/min; Adenosina 0,1 mg/kg → 0,2 mg/kg ruptas na
 
 <!-- page:51 -->
 
-## Taquicardias instáveis
+## Taquicardias Instáveis
 
-## Avalie a duração do QRS
-
-## Estreito Alargado
-
-## Provável Possível
-
-## taquicardia supraventricular taquicardia ventricular
-
-## Cardioversão sincronizada
-
-## Se acesso IV/IO: adenosina
-
-ou
-
-## Se acesso indisponível ou
-
-## adenosina ineficaz →
+- Avalie a duração do QRS:
+  - **Estreito:** provável taquicardia supraventricular. Se acesso IV/IO: adenosina.
+  - **Alargado:** possível taquicardia ventricular. Cardioversão sincronizada.
+- Se acesso indisponível ou adenosina ineficaz → cardioversão sincronizada.
 
 ---
 
 <!-- page:52 -->
 
-## Em relação às características da taquicardia supraventricular (TSV), é correto afirmar que
+Em relação às características da taquicardia supraventricular (TSV), é correto afirmar que:
 
-## A) O eletrocardiograma típico apresenta onda P ausente ou anormal e QRS estreito, mas
+A) O eletrocardiograma típico apresenta onda P ausente ou anormal e QRS estreito, mas pode estar alargado em algumas situações.
 
-## pode estar alargado em algumas situações
+B) A frequência cardíaca habitualmente encontra-se acima de 200 bpm ou acima de 160 bpm na criança maior e não varia com atividade.
 
-## B) A frequência cardíaca habitualmente encontra-se acima de 200 bpm ou acima de 160
+C) Apresenta frequência cardíaca abaixo do limite normal para a idade, com ritmo sinusal e onda P positiva nas derivações D2, D3, aVF.
 
-## bpm na criança maior e não varia com atividade
+D) A taquicardia supraventricular é a taquiarritmia menos comum na infância.
 
-## C) Apresenta frequência cardíaca abaixo do limite normal para a idade, com ritmo sinusal e
-
-## onda P positiva nas derivações D2, D3, AVF
-
-## D) A taquicardia supraventricular é a taquiarritmia menos comum na infância
-
-## E) No tratamento medicamentoso, a lidocaína é o fármaco de escolha se não houver
-
-## contraindicação
+E) No tratamento medicamentoso, a lidocaína é o fármaco de escolha se não houver contraindicação.
 
 ---
 
@@ -954,27 +629,17 @@ ou
 
 <!-- page:54 -->
 
-## Quanto à terapêutica nos casos de Taquicardia Supraventricular (TSV), assinale a
+Quanto à terapêutica nos casos de Taquicardia Supraventricular (TSV), assinale a alternativa correta:
 
-## A) A carga inicial na cardioversão elétrica sincronizada em paciente com TSV deve ser de
+A) A carga inicial na cardioversão elétrica sincronizada em paciente com TSV deve ser de 0,5 a 1 J/kg.
 
-## 0,5 a 1 J/kg
+B) A desfibrilação elétrica não sincronizada está indicada imediatamente em paciente com TSV com instabilidade hemodinâmica.
 
-## B) A desfibrilação elétrica não sincronizada está indicada imediatamente em paciente com
+C) A adenosina é o fármaco de escolha em casos de síndrome de Wolff-Parkinson-White com intervalo RR irregular.
 
-## TSV com instabilidade hemodinâmica
+D) A amiodarona é utilizada em TSV sem instabilidade hemodinâmica como droga de primeira escolha.
 
-## C) A adenosina é o fármaco de escolha em casos de síndrome de Wolff-Parkinson-White
-
-## com intervalo RR irregular
-
-## D) A amiodarona é utilizada em TSV sem instabilidade hemodinâmica como droga de
-
-## primeira escolha
-
-## E) A manobra vagal pode ser realizada através de massagem do seio carotídeo ou
-
-## compressão ocular
+E) A manobra vagal pode ser realizada através de massagem do seio carotídeo ou compressão ocular.
 
 ---
 
@@ -990,13 +655,10 @@ ou
 
 <!-- page:57 -->
 
-## 4- Checar respiração e pulso* simultaneamente por até 10s
+4. Checar respiração e pulso simultaneamente por até 10s.
+5. RCP: sozinho, 30 compressões x 2 ventilações.
 
-## 5- RCP
-
-## Sozinho: 30 compressões x 2 ventilações
-
-“Seja Rápido, Ajude Rápido, Pois Corações Vivem!"
+*"Seja Rápido, Ajude Rápido, Pois Corações Vivem!"*
 
 ![Figura do material - página 57](figure-057-1.webp)
 
@@ -1006,61 +668,47 @@ ou
 
 <!-- page:58 -->
 
-- Comprimir 1/3 do tórax;
+## Parada Cardiorrespiratória — Resumo
 
-## Parada cardiorrespiratória • Retorno completo
+- Comprimir 1/3 do tórax; retorno completo.
+- Frequência 100-120 cpm; alternar funções a cada 2 min.
+- Forneça oxigênio; se IOT: 1 ventilação a cada 2-3 s.
 
-- Frequência 100 -120 cpm;
+**FV/TVSP:**
 
-- Alternar funções a cada 2 min.
+- Choque: 2 J/kg, aumentando de 2 em 2.
+- RCP 2 min.
+- Acesso IV/IO.
+- Epinefrina a partir do 2º choque; amiodarona a partir do 3º choque.
 
-Forneça oxigênio • Se IOT: 1 ventilação a cada 2-3 s
+**Assistolia/AESP:**
 
-FV/TVSP Assistolia/AESP
-
-## Adrenalina: 0,01 mg/kg EV; ET
-
-## 0,1 mg/kg
-
-## Choque: 2 J/Kg e aumenta de
-
-## 2/2
-
-## RCP 2 min Epinefrina a cada 3 a 5 min
-
-## Acesso IV/IO Considere via aérea
-
-Epinefrina a partir do 2º choque avançada, capnografia Amiodarona a partir do 3º
+- Adrenalina: 0,01 mg/kg EV; ET: 0,1 mg/kg.
+- RCP 2 min; epinefrina a cada 3 a 5 min.
+- Considere via aérea avançada, capnografia.
 
 ---
 
 <!-- page:59 -->
 
-## Mantenha as vias aéreas patentes; • Estado mental agudamente alterado
-
-## Ventilação com pressão positiva e oxigênio; • Sinais de choque
-
-## Monitorização + acesso. • Hipotensão
+- Mantenha as vias aéreas patentes; estado mental agudamente alterado.
+- Ventilação com pressão positiva e oxigênio; sinais de choque.
+- Monitorização + acesso; hipotensão.
 
 ---
 
 <!-- page:60 -->
 
-Taquicardias com estabilidade hemodinâmica Estre
+### Taquicardias com Estabilidade Hemodinâmica
 
-Taquicardia suprav
+**Taquicardia supraventricular:**
 
-- Ondas P ausentes/anorma
+- Ondas P ausentes/anormais.
+- Bebês: frequência geralmente ≥220/min.
+- Crianças: frequência geralmente ≥180/min.
+- Histórico de alterações abruptas na frequência.
 
-- Bebês: frequência geralme
-
-- Crianças: frequência geralm
-
-- Histórico de alterações abr Avalie a duração do QRS eito Alargado
-
-ais;
-
-ente ≥ 220/min; mente ≥ 180/min; Adenosina 0,1 mg/kg → 0,2 mg/kg ruptas na frequência.
+**Avalie a duração do QRS:** estreito ou alargado. Adenosina 0,1 mg/kg → 0,2 mg/kg.
 
 ![Figura do material - página 60](figure-060-1.webp)
 
@@ -1069,8 +717,6 @@ ente ≥ 220/min; mente ≥ 180/min; Adenosina 0,1 mg/kg → 0,2 mg/kg ruptas na
 ---
 
 <!-- page:61 -->
-
-ou
 
 ---
 

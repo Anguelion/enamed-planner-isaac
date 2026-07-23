@@ -2,115 +2,106 @@
 
 <!-- page:1 -->
 
-## TRÍADE DO ABDOME AGUDO OBSTRUTIVO
+## Introdução
 
-- Dor abdominal;
+O **abdome agudo obstrutivo** é caracterizado por uma parada de progressão do trânsito intestinal, causando dilatação proximal e esvaziamento distal. Isso leva a mais pressão intestinal, o que aumenta a força na tentativa de vencer a obstrução. Como o intestino não consegue vencer a obstrução, há um sequestro de líquidos para o **3º espaço**, com redução da perfusão, isquemia, necrose e, por fim, perfuração intestinal.
 
-- Distensão abdominal;
+## Tríade do Abdome Agudo Obstrutivo
 
-- Parada de eliminação de fezes e flatus.
+- **Dor abdominal**
+- **Distensão abdominal**
+- **Parada de eliminação de fezes e flatos**
 
-## CLASSIFICAÇÃO DA OBSTRUÇÃO
+## Quadro Clínico
 
-- Alta: Delgado; Vômitos precoces biliosos; Menos distensão; Bridas;
+- Tríade clássica: **dor abdominal** + **distensão abdominal** + **parada de eliminação de fezes e flatos**
+- Outros sintomas:
+  - RHA aumentados
+  - Náuseas e vômitos
+  - Diarreia paradoxal
+  - Desidratação, sepse e peritonite
+  - Alcalose (por vômitos)
+- Outras causas: hérnia interna, hérnia inguinal tumoral
 
-## MANEJO INICIAL
+## Classificação da Obstrução
 
-Rx ab Sinais de alarme? Sepse Peritonite Alça fechada Ciru Obstrução total INTRODUÇÃO O abdome agudo obstrutivo é caracterizado como uma parada de progressão do trânsito intestinal, causando dilatação proximal e esvaziamento distal → Mais pressão intestinal, o que leva ao aumento de força na tentativa de vencer a obstrução → Como o intestino não consegue vencer, há um sequestro de líquidos para o 3º espaço → Redução da perfusão → Isquemia → Necrose → Perfuração intestinal.
+### Obstrução Alta x Baixa
 
-## QUADRO CLÍNICO
+- **Obstrução alta**: intestino delgado
+  - Clínica: vômitos precoces, biliosos, com menos distensão
+  - **Alcalose metabólica** devido aos vômitos
+  - Causa principal: **bridas**
+  - Outras causas: hérnia interna, hérnia inguinal encarcerada, tumor, bezoar e corpo estranho
+  - Radiografia: **empilhamento de moedas**
+- **Obstrução baixa**: cólon e reto
+  - Clínica: vômitos tardios, fecalóides. Distensão maior
+  - **Acidose metabólica**, já que há perda para o 3º espaço
+  - Causa principal: **neoplasia colorretal**
+  - Outras causas: volvo, megacólon, doença inflamatória intestinal (DII)
 
-- Tríade clássica: dor abdominal + distensão abdominal
+### Obstrução Parcial x Total
 
-+ parada de eliminação de fezes e flatos;
+- **Parcial**: suboclusão intestinal. Exemplo: paciente com fecaloma que ainda evacua
+- **Total**: oclusão total. Não há eliminação nem de flatos
 
-- Outros sintomas: RHA aumentados; Náuseas e vômitos; Diarreia paradoxal; Desidratação, sepse e peritonite. | Alcalose (vômitos); Outras causas: Hérnia interna – tumor hérnia inguinal.
+### Obstrução Mecânica x Funcional
 
-- Baixa: Cólon e reto; Vômitos tardios fecalóides; Mais distensão; Neoplasia; Acidose (perdas); Outras causas: Volvo – megacólon – DII.
+- **Mecânica**: há um processo mecânico obstruindo, como brida, tumor, estenose, fecaloma, volvo
+- **Funcional**: paciente apresenta alguma condição que impede o funcionamento intestinal, como síndromes metabólicas, medicamentosas, constipação, infecção, pós-operatório
 
-AAO SNG Hidratação Sintomáticos Laboratoriais bdome agudo Paciente estável? TC Abdome urgia Conforme etiologia CLASSIFICAÇÃO
+### Obstrução Complicada ou Não
 
-## OBSTRUÇÃO ALTA X BAIXA
-
-- Obstrução Alta: Obstrução de intestino delgado; Clínica: vômitos precoces, biliosos, com menos r, distensão. Alcalose metabólica devido aos vômitos; Causa: as principais são bridas. Outras causas: Radiografia: empilhamento de moedas.
-
-hérnia interna, hérnia inguinal encarcerada, tumor, bezoar e corpo estranho;
-
-- Obstrução Baixa: Obstrução de cólon e reto; Clínica: vômitos tardios, fecalóides. A distensão é maior. Paciente vai apresentar acidose, já que está perdendo para o 3º espaço; Causas: a principal é a neoplasia colorretal.
-
-Outras causas: volvo, megacólon, doença inflamatória intestinal.
+- **Complicada**: presença de sinais de alarme — sepse, isquemia, perfuração, necrose, obstrução em alça fechada
+- **Não complicada**: paciente não apresenta complicações
 
 ---
 
 <!-- page:2 -->
 
-## OBSTRUÇÃO PARCIAL X TOTAL
+## Diagnóstico
 
-- Obstrução Parcial: É uma suboclusão intestinal; Exemplo: o paciente apresenta fecaloma, mas ainda evacua.
+### Anamnese e Exame Físico
 
-- Obstrução Total: É uma oclusão total; Não há eliminação nem de flatos.
+- Atenção aos dados da história na busca de etiologias e sinais de alarme
+- Sempre examinar a região inguinal e fazer o toque retal
 
-## OBSTRUÇÃO MECÂNICA X FUNCIONAL
+### Exames Laboratoriais
 
-- Mecânica: Há um processo mecânico obstruindo, como: brida, tumor, estenose, fecaloma, volvo.
+- Inespecíficos — usados para avaliar a gravidade
 
-- Funcional: O paciente apresenta alguma condição que não deixa o intestino funcionar, como: síndromes metabólicas, medicamentosas, constipação, infecção, pós-operatório.
+### Exames de Imagem
 
-## OBSTRUÇÃO COMPLICADA OU NÃO
+**Radiografia de abdome agudo** (3 incidências): primeiro exame a ser solicitado.
 
-## COMPLICADA
+- Identificação de complicações: obstrução em alça fechada, nível hidroaéreo, pneumoperitônio
+- Distingue obstrução alta de baixa:
+  - Alta: empilhamento de moedas, central
+  - Baixa: haustrações periféricas
+- Ver Figuras 1 e 2
 
-| Sinais de alarme: sepse, isquemia, perfuração, necrose, obstrução em alça fechada.
+**TC de abdome**
 
-- Não complicada: Paciente não apresenta complicações.
+- **Padrão-ouro**
+- Indica o ponto de obstrução, a altura e se a obstrução é total ou parcial
+- Mostra a etiologia e sinais de sofrimento de alças ou complicações
 
-## DIAGNÓSTICO
+### Manejo Inicial
 
-## ANAMNESE E EXAME FÍSICO
+> ⚠️ Fluxograma reconstruído a partir de OCR (texto de figura intercalado) — confira contra a fonte original.
 
-- Atenção a dados da história na busca de etiologias e sinais de alarme;
+- Jejum, sonda nasogástrica (SNG), hidratação, exames de triagem (laboratoriais e raio-X de abdome agudo), internação e sintomáticos
+- Presença de sinal de alarme (sepse, peritonite, alça fechada, obstrução total) → **cirurgia**
+- Paciente estável → **TC de abdome** para confirmar a etiologia → conduta conforme etiologia
 
-- Sempre examinar a região inguinal e fazer o toque retal.
+Figura 3: Fluxograma de manejo inicial do abdome agudo obstrutivo.
 
-## EXAMES LABORATORIAIS
+## Principais Etiologias
 
-- Inespecíficos - avaliar gravidade.
+### Bridas
 
-## EXAMES DE IMAGEM
-
-- Radiografia de abdome agudo: 3 incidências! Primeiro exame a ser solicitado! Identificação de complicações: obstrução em alta fechada, nível hidroaéreo, pneumoperitônio; Distinguir entre obstrução alta e baixa: Alta - empilhamento em moedas, central; Baixa - Haustrações periféricas.
-
-- Verificar Figuras 1 e 2
-
-TC de abdome
-
-- Padrão-ouro;
-
-- Indica o ponto de obstrução, altura, se a obstrução é total ou parcial;
-
-- Mostra a etiologia e se há sinais de sofrimento de alças ou complicações.
-
-## MANEJO INICIAL B
-
-- Jejum, sonda nasogástrica, hidratação, exames de triagem (laboratoriais e raio-x de abdome agudo), internação e sintomáticos;
-
-- Presença de sinal de alarme → CIRURGIA!
-
-- Paciente estável → TC de abdome para confirmar a etiologia.
-
-- Verificar Figura 3 Figuras 1 e 2: Obstrução intestinal alta e obstrução intestinal baixa.
-
-AAO Rx abdome agudo SNG Paciente estável? Hidratação Sintomáticos Laboratoriais Sinais de alarme? TC Abdome Sepse Conforme etiologia Peritonite Alça fechada Obstrução total Cirurgia Figura 3: Fluxograma manejo inicial abdômen agudo obstrutivo.
-
-## PRINCIPAIS ETIOLOGIAS
-
-## BRIDAS
-
-- Etiologia mais comum de abdome agudo obstrutivo alto;
-
-- É caracterizada por aderências pós-cirúrgicas. Quanto mais episódios, pior!
-
-- Necessário cirurgia prévia - cirurgias em abdome inferior, pior;
+- Etiologia mais comum de abdome agudo obstrutivo alto
+- Caracterizada por aderências pós-cirúrgicas: quanto mais episódios, pior
+- Necessário cirurgia prévia — cirurgias em abdome inferior tendem a ser piores
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -118,61 +109,60 @@ AAO Rx abdome agudo SNG Paciente estável? Hidratação Sintomáticos Laboratori
 
 <!-- page:3 -->
 
-- Tratamento: inicialmente é clínico, pois o paciente FECALOMA apresenta uma suboclusão:
+- Tratamento: inicialmente clínico, pois o paciente apresenta uma suboclusão
 
-- É mais comum em idosos, acamados e Sonda nasogástrica + jejum + constipados crônicos; Caso o paciente não apresente melhora: faz-se TC abdome com contraste VO após 48/72 horas; Indicações de CIRURGIA: refratariedade, peritonite difusa, pneumoperitônio.
+### Fecaloma
 
-hidratação + analgesia;
+- Mais comum em idosos, acamados e constipados crônicos
+- Conduta: sonda nasogástrica + jejum + hidratação + analgesia
+- Caso o paciente não apresente melhora: TC de abdome com contraste VO após 48–72 horas
+- Indicações de **cirurgia**: refratariedade, peritonite difusa, pneumoperitônio
 
-## TUMOR
+### Tumor
 
-- Pacientes idosos, perda de peso, presença de massa abdominal palpável, anemia;
+- Pacientes idosos, com perda de peso, massa abdominal palpável e anemia
+- Tumor como causa de abdome obstrutivo → **cirurgia**
+- Sempre que possível, mesmo na urgência, realizar cirurgia oncológica, reconstruindo o trânsito se possível
 
-- Tumor como causa do abdome obstrutivo → cirurgia;
+### Volvo de Sigmoide
 
-- Sempre que possível, mesmo na urgência, fazer cirurgia oncológica: Reconstruir o trânsito se possível.
+Figura 4: Volvo de sigmoide — sinal do grão de café.
 
-## VOLVO DE SIGMÓIDE
+- Mais comum em pacientes idosos, portadores de doença de Chagas e megacólon
+- Evolução com dor abdominal súbita
+- Toque retal: **sinal de Gersuny** (crepitação e massa moldável à palpação do abdome)
+- Tratamento:
+  - Se o paciente apresentar peritonite/sofrimento de alça → **laparotomia**
+    - Paciente instável → cirurgia de Hartmann
+    - Paciente estável → pode-se discutir anastomose primária
+  - Se o paciente não apresentar peritonite ou sofrimento de alça → **retossigmoidoscopia rígida** com manobra de devolvulação (manobra de Bruusgaard); deixar sonda retal, retirar da urgência e programar cirurgia posteriormente
 
-Figura 4: Volvo de sigmoide - Sinal do grão de café.
+> ⚠️ Trecho reconstruído a partir de OCR (figura da Síndrome de Wilkie intercalada com o texto de volvo) — confira contra a fonte original.
 
-- É mais comum em pacientes idosos, portadores de doença de Chagas e megacólon;
+### Síndrome de Ogilvie
 
-- Pacientes evoluem com dor abdominal súbita;
+- Pseudo-obstrução colônica aguda, sem ponto de obstrução mecânica
+- Fatores de risco:
+  - Trauma raquimedular
+  - Imobilidade (pacientes de UTI, casas de repouso)
+  - Politrauma, uso de narcóticos
+  - Distúrbios metabólicos, doença neurodegenerativa
+- Achados: dilatação maciça do cólon sem obstrução mecânica
+- Conduta:
+  - **Fecaloma volumoso** que não se resolve clinicamente ou refratário: lavagem, esvaziamento, laxativos; se refratário, pode-se tentar descompressão via colonoscopia
+  - Indicações de cirurgia: complicação com perfuração, isquemia ou necrose
+- Tratamento em etapas:
+  1. 1ª linha: tratamento clínico (retirar fatores desencadeantes, dieta laxativa, fisioterapia)
+  2. 2ª linha: neostigmina / colonoscopia descompressiva
+  3. 3ª linha: cirurgia, se refratário ao tratamento ou se ceco maior que 10–12 cm de diâmetro (laparotomia com colectomia)
 
-- Tratamento: Se o paciente apresentar peritonite/sofrimento de alça = laparotomia! Se paciente instável = Hartmann; Paciente estável = pode-se discutir realizar anastomose; Se paciente não apresenta peritonite ou sofrimento retossigmoidoscopia rígida. Deixar sonda retal, retirar da urgência e após programar a cirurgia.
+### Síndrome de Wilkie
 
-= manobra de Bruusgaard - devolvulação por Ao Artéria me Ângu Du Figura 5: SÍNDROME DE WILKIE. - Toque retal: sinal de Gersuny (crepitação e massa moldável à palpação do abdome);
-
-- Conduta: lavagem, esvaziamento, laxativos: Se refratário podemos tentar descompressão via colonoscopia; Indicações de cirurgia: complicação com perfuração, isquemia ou necrose; apresentar fecaloma muito grande, que não se resolve clinicamente.
-
-## SÍNDROME DE OGILVIE
-
-- Pseudo-obstrução colônica aguda, sem ponto de obstrução;
-
-- Fatores de risco: Trauma raquimedular; Imobilidade (pacientes de UTI, casas de repouso); Politrauma, uso de narcóticos; Distúrbios metabólicos, doença neurodegenerativa.
-
-- Achados: dilatação maciça do cólon sem obstrução mecânica;
-
-- Tratamento: 1ª linha = tratamento clínico (retirar fatores desencadeantes, dieta laxativa, fisioterapia); 2ª linha = tratamento com neostigmina/ colonoscopia descompressiva; 3ª linha = cirurgia se refratário ao tratamento ou se ceco maior que 10-12 cm de diâmetro; Cirurgia: Laparotomia com Colectomia.
-
-## SÍNDROME DE WILKIE
-
-- Obstrução intestinal alta;
-
-- Também chamada de síndrome da artéria mesentérica superior;
-
-- Mais comum em pacientes que perdem muito peso/magros;
-
-- Diagnóstico diferencial difícil → AngioTC;
-
-- Tratamento inicial clínico → Adequação da dieta e hábitos;
-
-o
-
-- Casos graves ou refratários → orta esentérica superior (SMA) ulo da SMA uodeno
-
-Cirurgia → duodenojejunostomia.
+- Obstrução intestinal alta, também chamada de **síndrome da artéria mesentérica superior**
+- Mais comum em pacientes com perda de peso importante/magros
+- Diagnóstico diferencial difícil → **AngioTC**
+- Tratamento inicial clínico: adequação da dieta e hábitos
+- Casos graves ou refratários → cirurgia (**duodenojejunostomia**)
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -182,22 +172,19 @@ Cirurgia → duodenojejunostomia.
 
 <!-- page:4 -->
 
-## OUTRAS ETIOLOGIAS DE OBSTRUÇÃO
+## Outras Etiologias de Obstrução Intestinal
 
-## INTESTINAL
+- **Pseudo-obstruções**: medicamentosas, constipação funcional, distúrbio hidroeletrolítico, íleo metabólico, infecção, carcinomatose peritoneal
+  - Tratamento clínico e da causa base: laxativos, suporte
+- **Bezoar e/ou corpo estranho**
+  - Clínica: pacientes psiquiátricos (que ingerem tufos de cabelo, entre outros)
+  - Tratamento: endoscopia; cirurgia em casos refratários
+- Hérnia interna, íleo biliar, hérnias de parede, pós-operatório, enterite actínica
 
-- Pseudo-obstruções: Medicamentosas, constipação funcional, distúrbio hidroeletrolítico, íleo metabólico, infecção, carcinomatose peritoneal: Tratamento clínico e da causa base:
+## Referências
 
-laxativos, suporte.
+Figura 1: Obstrução intestinal alta. Fonte: Case courtesy of Fakhry Mahmoud Ebouda, Radiopaedia.org, rID: 68831.
 
-- Bezoar e/ou corpo estranho: Clínica: pacientes psiquiátricos (que comem vários tufos de cabelo); Tratamento: endoscopia. Cirurgia em casos refratários.
+Figura 2: Obstrução intestinal baixa. Fonte: Case courtesy of Fakhry Mahmoud Ebouda, Radiopaedia.org, rID: 68831.
 
-- Hérnia interna, íleo biliar, hérnias de paredes, pós-operatório, enterite actínica.
-
-## REFERÊNCIAS
-
-Figura 1: Obstrução intestinal alta. Fonte: Case courtesy of Fakhry Mahmoud Ebouda, Radiopaedia.org, rID: 68831 Figura 2: Obstrução intestinal baixa.
-
-Fonte: Case courtesy of Fakhry Mahmoud Ebouda, Radiopaedia.org, rID: 68831 Figura 4: Volvo de Sigmóide.
-
-Fonte: Case courtesy of Dr Wael Nemattalla, Radiopaedia.org,rID: 10633
+Figura 4: Volvo de sigmoide. Fonte: Case courtesy of Dr Wael Nemattalla, Radiopaedia.org, rID: 10633.

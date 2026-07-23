@@ -1,22 +1,19 @@
-# Síndrome metabólica e Obesidade
+# Síndrome Metabólica e Obesidade
 
 <!-- page:1 -->
 
-## SÍNDROME METABÓLICA
+## Síndrome Metabólica
 
-Síndrome Metabólica (CM)
+## Fisiopatologia — Complicações
 
-## FISIOPATOLOGIA
-
-COMPLICAÇÕES Diabetes Mellitus E Pré-Diabetes Elevado Risco Cardiovascular Doença Hepática Gordurosa Metabólica
-
-- 3 x evento cardiovascular Câncer
-
-- 4 x morte por DAC
-
-- Mama, colorretal e endometrial
-
-- 2,4 x morte por qualquer causa Doença De Alzheimer
+- **Elevado risco cardiovascular:**
+  - 3x mais eventos cardiovasculares.
+  - 4x mais mortes por doença arterial coronariana (DAC).
+  - 2,4x mais mortes por qualquer causa.
+- **Diabetes Mellitus e pré-diabetes.**
+- **Doença Hepática Gordurosa Metabólica.**
+- **Câncer:** mama, colorretal e endometrial.
+- **Doença de Alzheimer.**
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -26,81 +23,81 @@ COMPLICAÇÕES Diabetes Mellitus E Pré-Diabetes Elevado Risco Cardiovascular Do
 
 <!-- page:2 -->
 
-CRITÉRIOS DIAGNÓSTICOS 3 - PA elevada ou HAS 1 - Obesidade Abdominal
+## Critérios Diagnósticos
 
-- IDF e NCEP
+> ⚠️ Tabela/quadro de critérios reconstruído a partir de OCR — confira contra a fonte original.
 
-- IDF
+**1 - Obesidade Abdominal**
 
-- PA > ou = 130x85mmHg Mulheres > ou = 80cm 4 - TGL elevado Homens > ou = 94cm
+- **IDF:** homens ≥94 cm; mulheres ≥80 cm.
+- **NCEP-ATP III:** homens ≥102 cm; mulheres ≥88 cm.
 
-- IDF e NCEP
+**2 - Glicemia de jejum (GJ) alterada ou DM**
 
-- NCEP-ATP III z > ou = 150mg/dL Mulheres > ou = 88cm 5 - HDL baixo Homens > ou = 102cm
+- **IDF:** ≥100 mg/dL.
+- **NCEP:** ≥110 mg/dL.
 
-- IDF e NCEP
+**3 - PA elevada ou HAS**
 
-2 - GJ alterada ou DM
+- **IDF e NCEP:** PA ≥130x85 mmHg.
 
-- Mulheres < ou = 50mg/dL
+**4 - TGL elevado**
 
-- IDF
+- **IDF e NCEP:** ≥150 mg/dL.
 
-- Homens < ou = 40mg/dL > ou = 100mg/dL IDF = Obesidade Abdominal + 2/4 critérios
+**5 - HDL baixo**
 
-- NCEP NCEP = 3/5 critérios > ou = 110mg/dL
+- **IDF e NCEP:** homens ≤40 mg/dL; mulheres ≤50 mg/dL.
 
-## CONCEITO
+**Interpretação:**
 
-- Pode ser dita como: Um conjunto interligado de fatores fisiológicos, bioquímicos, clínicos e metabólicos que aumentam diretamente o risco de doença cardiovascular e diabetes mellitus tipo 2.
+- **IDF** = obesidade abdominal + 2/4 critérios.
+- **NCEP** = 3/5 critérios.
 
-## PRINCIPAIS MANIFESTAÇÕES E
+## Conceito
 
-## SUAS FISIOPATOLOGIAS
+- Pode ser definida como um conjunto interligado de fatores fisiológicos, bioquímicos, clínicos e metabólicos que aumentam diretamente o risco de doença cardiovascular e diabetes mellitus tipo 2.
 
-- Dislipidemia aterogênica;
+## Principais Manifestações e Suas Fisiopatologias
 
-- Hiperglicemia;
+- Dislipidemia aterogênica.
+- Hiperglicemia.
+- Hipertensão.
+- Estado de hipercoagulabilidade.
+- Disfunção endotelial.
+- Estresse oxidativo.
+- Liberação de citocinas inflamatórias pelos adipócitos viscerais.
+- Liberação excessiva de ácidos graxos livres.
+- Resistência insulínica.
+- Adiposidade visceral.
 
-- Hipertensão;
+*Figura 1: Tecido Adiposo Visceral x Subcutâneo.*
 
-- Estado de hipercoagulabilidade;
+## Critérios/Classificação
 
-- Disfunção endotelial;
+### NCEP-ATP III, 2001
 
-- Estresse oxidativo;
+- Três ou mais dos seguintes critérios:
+  - Obesidade abdominal (circunferência abdominal >102 cm em homens e >88 cm em mulheres).
+  - TGL ≥150 mg/dL.
+  - HDL <40 mg/dL (homens) e <50 mg/dL (mulheres).
+  - PA ≥130x85 mmHg ou diagnóstico de hipertensão arterial sistêmica.
+  - GJ ≥110 mg/dL ou diagnóstico de diabetes mellitus.
 
-- Liberação de citocinas inflamatórias pelos Figura 1: Tecido Adiposo Visceral X Subcutâneo.
+### International Diabetes Federation, 2005
 
-adipócitos viscerais;
+- **Obesidade visceral (critério obrigatório):** homens >94 cm; mulheres >80 cm.
+- Associada a mais 2 dos seguintes critérios:
+  - TGL ≥150 mg/dL.
+  - HDL <40 mg/dL (homens) e <50 mg/dL (mulheres).
+  - PA ≥130x85 mmHg ou diagnóstico de hipertensão arterial sistêmica.
+  - GJ ≥100 mg/dL ou diagnóstico de diabetes mellitus.
 
-## CRITÉRIOS/CLASSIFICAÇÃO
+## Fisiologia
 
-- Liberação excessiva de ácidos graxos livres;
-
-- Resistência insulínica;
-
-- Adiposidade visceral. NCEP-ATP III, 2001;
-
-- Três ou mais dos seguintes critérios: obesidade
-
-## FISIOLOGIA
-
-abdominal (circunferência abdominal > 102 cm em homens e > 88 cm em mulheres); TGL ≥ 150 mg/dL;
-
-- A base da síndrome metabólica parte do princípio HDL < 40 mg/dL (homens) e < 50 mg/dL (mulheres);
-
-do acúmulo de tecido adiposo visceral; PA ≥ 130 x 85 mmHg ou diagnóstico de hipertensão
-
-- Tecido adiposo visceral: demonstra células maiores, arterial sistêmica; GJ ≥ 110 mg/dL ou diagnóstico de com grande atividade lipolítica. Isto é, cliva e elimina diabetes mellitus.
-
-elevada quantidade de ácidos graxos livres na circulação. É muito metabolicamente ativo, liberando INTERNATIONAL DIABETES FEDERATION, uma quantidade mais expressiva de citocinas 2005:
-
-inflamatórias (TNF-alfa, PAI-I, IL-6 e PCR). Tal | Obesidade visceral (critério obrigatório); inflamação leva à resistência insulínica.
-
-- Tecido adiposo subcutâneo: demonstra células Em homens: >94cm menores. É mais responsivo ao efeito antilipolítico da Em mulheres: >80cm insulina → isto é, a insulina é capaz de estocar maior quantidade de gordura dentro do tecido adiposo
-
-- Associados a mais 2, dos seguintes critérios: TGL subcutâneo. Nesse sentido, é capaz de armazenar ≥ 150 mg/dL; HDL < 40 mg/dL (homens) e < 50 mg/ elevada quantidade de ácidos graxos livres sob a dL (mulheres); PA ≥ 130 x 85 mmHg ou diagnóstico forma de triacilglicerol. Sofre pouca influência das de hipertensão arterial sistêmica; GJ ≥ 100 mg/dL ou citocinas inflamatórias. diagnóstico de diabetes mellitus.
+- A base da síndrome metabólica parte do princípio do acúmulo de tecido adiposo visceral.
+- **Tecido adiposo visceral:** demonstra células maiores, com grande atividade lipolítica — isto é, cliva e elimina elevada quantidade de ácidos graxos livres na circulação. É muito metabolicamente ativo, liberando uma quantidade mais expressiva de citocinas inflamatórias (TNF-alfa, PAI-1, IL-6 e PCR). Tal inflamação leva à resistência insulínica.
+- **Tecido adiposo subcutâneo:** demonstra células menores. É mais responsivo ao efeito antilipolítico da insulina — isto é, a insulina é capaz de estocar maior quantidade de gordura dentro do tecido adiposo subcutâneo. Nesse sentido, é capaz de armazenar elevada quantidade de ácidos graxos livres sob a forma de triacilglicerol. Sofre pouca influência das citocinas inflamatórias.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -108,22 +105,13 @@ inflamatórias (TNF-alfa, PAI-I, IL-6 e PCR). Tal | Obesidade visceral (critéri
 
 <!-- page:3 -->
 
-Figura 2: Fisiopatologia da Síndrome Metabólica.
+*Figura 2: Fisiopatologia da Síndrome Metabólica.*
 
-## COMPLICAÇÕES
+## Complicações
 
-- Associação com neoplasias Mama, colorretal e endometrial; Mediado
-
-- Maior risco cardiovascular pela hiperinsulinemia, aumento do IGF-1, Epidemiologicamente, demonstra: 3x mais eventos inflamação crônica.
-
-cardiovasculares; 4x mais mortes por DAC; 2,4x
-
-- Doença de Alzheimer mais mortes por qualquer causa. | A resistência insulínica favorece algumas alterações, Tal fato é devido ao: HDL-c baixo; LDL pequeno tais quais: Aumento na produção de secreção de e denso elevado (demonstra maior potencial beta-amiloide; Redução na captação de glicose aterosclerótico pelo depósito na camada pelos neurônios; Formação de placas senis;
-
-médiointimal dos vasos sanguíneos e apresenta Aumento da fosforilação de proteína tau. elevada capacidade oxidativa); Hipertrigliceridemia;
-
-- Doença Hepática Gordurosa Metabólica
-
-HAS; PAI-I elevado.
+- **Associação com neoplasias:** mama, colorretal e endometrial. Mediado pela hiperinsulinemia, aumento do IGF-1 e inflamação crônica.
+- **Maior risco cardiovascular:** epidemiologicamente, demonstra 3x mais eventos cardiovasculares, 4x mais mortes por DAC e 2,4x mais mortes por qualquer causa. Tal fato é devido a: HDL-c baixo; LDL pequeno e denso elevado (demonstra maior potencial aterosclerótico pelo depósito na camada médio-intimal dos vasos sanguíneos e apresenta elevada capacidade oxidativa); hipertrigliceridemia; HAS; PAI-1 elevado.
+- **Doença de Alzheimer:** a resistência insulínica favorece algumas alterações, tais quais: aumento na produção e secreção de beta-amiloide; redução na captação de glicose pelos neurônios; formação de placas senis; aumento da fosforilação de proteína tau.
+- **Doença Hepática Gordurosa Metabólica.**
 
 ![Figura do material - página 3](figure-003-1.webp)

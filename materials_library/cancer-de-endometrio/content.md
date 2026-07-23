@@ -2,155 +2,146 @@
 
 <!-- page:1 -->
 
-- O principal sintoma é o sangramento uterino pós-menopausa;
+- O principal sintoma é o **sangramento uterino pós-menopausa**;
+- O tipo histológico mais comum é o **adenocarcinoma endometrioide**;
+- Tratamento padrão: **histerectomia com salpingooforectomia bilateral (HT + SOB)**;
+- Linfadenectomia — prescindir da linfadenectomia se:
+  - Baixo grau;
+  - Subtipo endometrioide;
+  - Menor do que 2 cm.
 
-- O tipo histológico mais comum é o adenocarcinoma endometrioide;
-
-- Tratamento padrão: Histerectomia com salpingooforectomia bilateral (HT + SOB).
-
-- Linfadenectomia - prescindir da linfadenectomia se: Baixo grau; Subtipo endometrioide; Menor do que 2 cm;
-
-## INFORMAÇÕES GERAIS PANORAMA
+## Informações Gerais / Panorama
 
 - Câncer ginecológico mais comum nos países desenvolvidos;
-
-- 5º câncer mais comum em mulheres - risco cumulativo de 1% aos 75 anos;
-
+- **5º câncer mais comum em mulheres** — risco cumulativo de 1% aos 75 anos;
 - 14% dos casos ocorrem em mulheres pré-menopausa;
-
-- Incidência vem aumentando pela associação com obesidade, síndrome metabólica e envelhecimento da população;
-
+- Incidência vem aumentando pela associação com **obesidade, síndrome metabólica e envelhecimento da população**;
 - Adenocarcinoma endometrioide do endométrio é o tipo histológico mais comum;
+- Diagnóstico costuma ser precoce, pois dá sintoma (sangramento uterino anormal ou pós-menopausa).
 
-- Diagnóstico costuma ser precoce pois dá sintoma
+## Hiperplasia Endometrial e Câncer
 
-(sangramento uterino anormal ou pós-menopausa);
+- Verificar Tabela 1.
 
-## HIPERPLASIA ENDOMETRIAL E CÂNCER
+## Etiologia
 
-- Verificar Tabela 1
+- O principal fator para desenvolver uma hiperplasia atípica é o **desbalanço entre progesterona e estrogênio** (anovulação crônica, obesidade, infertilidade);
+- **Progesterona** = protege o endométrio (estabiliza).
 
-## ETIOLOGIA
+### Tabela 1: Classificação WHO para Hiperplasia Endometrial
 
-- O principal fator para desenvolver uma hiperplasia atípica é o desbalanço entre progesterona e estrogênio (anovulação crônica, obesidade, infertilidade);
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Progesterona = protege o endométrio (estabiliza).
+| Termo | Sinônimos | Mudanças genéticas | Coexistência com carcinoma invasor | Progressão para carcinoma invasor |
+|---|---|---|---|---|
+| **Hiperplasia sem atipia** | HE benigna; HE simples; HE simples sem atipia; HE complexa sem atipia | Baixo nível de mutações somáticas, sem alterações típicas do carcinoma endometrioide | < 1% | RR: 1,01 a 1,03 |
+| **Hiperplasia atípica / NIE** | HA simples atípica; HE complexa atípica; NIE | Muitas alterações genéticas presentes, instabilidade de microssatélites, inativação de PTEN, mutação de PAX2, KRAS e CTNNB1 (betacatenina); equivalente a Estadiamento IA | 25% a 33% | 59%; RR: 14 a 45 |
 
-Tabela 1: Classificação WHO para hiperplasia endometrial Termo Sinônimos Mudanç HE beniga; HE simples;
+- Tratamento conservador → progestagênio em alta dose:
+  - Paciente sem prole constituída, tipo histológico de baixo grau, endometrioide, e restrito ao endométrio;
+  - Reavaliação em 3-6 meses;
+  - Realizar tratamento definitivo após constituir a prole;
+  - Adjuvância com radioterapia (RT) + braquiterapia → se risco intermediário-alto ou alto.
 
-Baixo níve Hiperplasia sem atipia não Hiperplasia somática atípica; HE simples sem sem atipia dispersas c atipia; He complexa sem coloração H atipias.
+## Classificação
 
-Muitas alter típicas do C estão HE complexa atípica; HE HA/NIE incluindo i atípica simples; NIE. microssatéli PAX2, mutaç e CTNNB1 | Estadiamento IA.
+### Tabela 2: Classificação Antiga do Câncer de Endométrio
 
-- Adjuvância com radioterapia (RT) + braquiterapia → se risco intermediário-alto ou alto;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Tratamento conservador → progestagênio em alta dose: Paciente sem prole constituída, tipo histológico de baixo grau, endometrioide, e restrito Reavaliação em 3-6 meses; Realizar tratamento definitivo após constituir a prola.
+| | Tipo I | Tipo II |
+|---|---|---|
+| **Grau/Histologia** | Grau 1, endometrioide (induzidos por estrogênio e precedidos por NIE) | Grau 2, 3 e histologia não endometrioide (carcinoma seroso, mucinoso, células claras), aneuploide, mutação de TP53 |
+| **Prevalência** | 80% | 20% |
+| **Prognóstico** | Favorável | Desfavorável |
 
-: ao endométrio; CLASSIFICAÇÃO Tabela 2: Antiga classificação do câncer de endométrio Tumores Tipo I Tipo II 2, 3 e histologia não 1, endometrioide adenocarcinoma (carcinoma endometrioide mucinoso, Grau/ Histologia (induzidos por carcinoma estrogênio e são seroso, precedidos por carcinoma de NIE) células claras), aneuploide, mutação TP 53 Prevalência 80% 20% Prognóstico Favorável Desfavorável CLASSIFICAÇÃO MOLECULAR DO CÂNCER DE ENDOMÉTRIO
+## Classificação Molecular do Câncer de Endométrio
 
 - Padrões de imuno-histoquímica trazem informações mais precisas em relação ao prognóstico;
+- Os **4 subgrupos moleculares**, do pior ao melhor prognóstico, são:
+  - **POLE** (melhor prognóstico);
+  - **MSI hipermutado**;
+  - **Baixo número de cópias** (endometrioide);
+  - **Alto número de cópias** (seroso-like) (pior prognóstico).
 
-Coexistência Progressão ças genéticas com carcinoma para carcinoma endometrial invasor invasor el de mutações as em glândulas < 1% RR: 1,01 a 1,03.
+## Critérios para Avaliação Histológica do Tecido Endometrial
 
-com morfologia na HE, sem alterações. rações genéticas CE endometrioide o presentes, instabilidade de 25% a 33%* 59%** RR: 14 a 45.
-
-ites, inativação de ção de PTEN, KRAS (betacatenina).
+- Pré-menopausa: > 35 anos com fatores de risco;
+- Sangramento uterino anormal refratário a tratamento clínico;
+- Uso de tamoxifeno + sangramento uterino anormal;
+- Pós-menopausa → qualquer sangramento genital.
 
 ---
 
 <!-- page:2 -->
 
-- 0s 4 subgrupos moleculares, do pior ao melhor CRITÉRIOS PARA AVALIAÇÃO HISTOLÓGICA prognóstico, são: DO TECIDO ENDOMETRIAL POLE;
+## Fatores de Risco e Proteção
 
-- Pré menopausa: MSI hipermutado; | >35ª com fatores de risco; Baixo número de cópias (endometriode); | Sangramento uterino anormal refratário a Baixo número de cópias (endometriode); Alto número de cópias (seroso-like).
-
-## FATORES DE RISCO E PROTEÇÃO
-
-- B
-
-## FATORES DE RISCO
+### Fatores de Risco
 
 - Iatrogênico: TH somente com estrogênio;
-
 - Tumores produtores de estrogênio;
-
 - Perimenopausa: FSH alto e diminuição da reserva ovariana → ciclos anovulatórios;
-
 - Obesidade → resistência insulínica → redução sérica de SHBG → aromatização de andrógenos para estrógenos, maior risco de anovulação crônica;
+- SOP: resistência insulínica + excesso de estrogênios + ciclos anovulatórios.
 
-- SOP: resistência insulínica + excesso de estrogênios + ciclos anovulatórios. P
+![Figura 1: Desbalanço entre progesterona e estrogênio.](figure-002-1.webp)
 
-- - Figura 1: Desbalanço entre progesterona e estrogênio.
+### Fatores de Proteção
 
-## FATORES DE PROTEÇÃO
+- **Multiparidade**: efeitos da progesterona no endométrio;
+- **Uso de anticoncepcionais orais combinados** — reduz o risco em 50% se uso > 12 meses;
+- **Tabagismo** — efeito antiestrogênico;
+- **Dispositivo intrauterino de levonorgestrel (DIU-LNG)**;
+- **TH combinada**.
 
-- Multiparidade: Efeitos da progesterona no endométrio;
-
-- Uso de anticoncepcionais orais combinados - Reduz o risco em 50% se uso > 12 meses; C
-
-- Tabagismo – Efeito antiestrogênico;
-
-- Dispositivo intrauterino de levonorgestrel (DIU-LNG);
-
-- TH combinada.
-
-## DIAGNÓSTICO
+## Diagnóstico
 
 - Sangramento uterino anormal;
+- **Ultrassom transvaginal**: espessura e irregularidade endometrial (hipertrofia focal, pólipo);
+- Valores de corte de normalidade:
+  - Pós-menopausa: **< 4-5 mm**;
+  - Pós-menopausa + TRH: **< 8-9 mm**;
+  - Se assintomática: **< 10 mm**.
 
-- Ultrassom transvaginal: espessura e irregularidade Q endometrial (hipertrofia focal, pólipo);
+Figura 2: Ultrassonografia transvaginal com identificação de espessamento endometrial de 3,35 cm.
 
-- Valores de corte de normalidade: Pós menopausa: < 4-5 mm; Pós menopausa + TRH: < 8-9 mm; Se assintomática: < 10 mm.
+### Biópsia Endometrial
 
-- E
-
-(
-
-- Figura 2: Ultrassonografia transvaginal com identificação de espessamento endometrial de 3,35 cm. | Sangramento uterino anormal refratário a tratamento clínico; Uso de tamoxifeno + sangramento uterino anormal.
-
-- Pós menopausa → qualquer sangramento genital.
-
-Biópsia endometrial
-
-- Histeroscopia com biópsia - melhor exame;
-
+- **Histeroscopia com biópsia** — melhor exame;
 - Ambulatorial: Pipelle, aspiração endometrial, cureta de Novak;
-
 - Contraindicações: estenose cervical, limiar baixo de dor, alto risco de neoplasia;
+- Cirúrgico: curetagem uterina fracionada.
 
-- Cirúrgico: Curetagem uterina fracionada.
+## Estadiamento
 
-## ESTADIAMENTO
-
-## PRÉ-CIRÚRGICO
+### Pré-Cirúrgico
 
 - Ressonância magnética de pelve;
-
 - Tomografia computadorizada de tórax e abdome superior (avaliação de carcinomatose, metástases parenquimatosas ou linfonodomegalias);
-
 - PET-CT (dispensável).
 
-Figura 3: Carcinoma endometrioide estágio IB visto pela ressonância magnética ponderada em T2. CIRURGIA DE ESTADIAMENTO
+Figura 3: Carcinoma endometrioide estágio IB visto pela ressonância magnética ponderada em T2.
 
-- Exploração do abdome e pelve - biópsia/excisão de lesões suspeitas, palpação de linfonodos, coleta de líquido ascítico;
+### Cirurgia de Estadiamento
 
-- Histerectomia total abdominal + salpingooforectomia bilateral;
-
-- Congelação da peça - grau histológico, invasão do colo, profundidade da invasão miometrial;
-
-Quando não precisa fazer linfadenectomia?
-
-- Critérios de Mayo → prescindir da linfadenectomia: Tumor de baixo grau; Endometrioide; < 2 cm; FIGO IA;
-
+- Exploração do abdome e pelve — biópsia/excisão de lesões suspeitas, palpação de linfonodos, coleta de líquido ascítico;
+- **Histerectomia total abdominal + salpingooforectomia bilateral**;
+- Congelação da peça — grau histológico, invasão do colo, profundidade da invasão miometrial;
 - Biópsia de linfonodo sentinela;
-
 - Omentectomia se adenocarcinoma seroso.
 
-## ESTADIAMENTO ANTIGO FIGO 2014
+**Quando não precisa fazer linfadenectomia?**
 
-## (ATUALIZADO EM 2023)
+- **Critérios de Mayo** → prescindir da linfadenectomia:
+  - Tumor de baixo grau;
+  - Endometrioide;
+  - < 2 cm;
+  - FIGO IA.
 
-- Verificar Figura 4 na próxima página
+## Estadiamento Antigo FIGO 2014 (Atualizado em 2023)
+
+- Verificar Figura 4 na próxima página.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -160,27 +151,38 @@ Quando não precisa fazer linfadenectomia?
 
 <!-- page:3 -->
 
-Figura 4: Ilustração do estadiamento de 2014 do carcinoma de en Tabela 3: Estadiamento novo FIGO: atualizado em 2023.
+Figura 4: Ilustração do estadiamento de 2014 do carcinoma de endométrio.
 
-Estádio I Confinado ao útero. Doença limitada ao útero; bom prognóstico. IA1 Tipo histológico não agressivo, limitado ao endométrio ou pólipo IA IA2 Tipo histológico não agressivo, envolvendo <50% miométrio, sem IAL.
+### Tabela 3: Estadiamento Novo FIGO (Atualizado em 2023)
 
-IA3 CA endometrioide de baixo-grau, limitado ao útero/ovário. Tipos histológicos não agressivos, com IB >50% invasão miometrial, sem IAL.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Tipos histológicos agressivos, limitados IC ao endométrio ou pólipo. Invasão do estroma cervical sem extensão extrauterina ou IAL significativa Estádio II ou tipo histológico agressivo com invasão miometrial.
-
-Invasão do estroma cervical de tipo IIA histológico não agressivo. IVL significativa de tipo histológico não IIB agressivo.
-
-Tipo histológico agressivo com invasão IIC miometrial. ndométrio. Disseminação local ou regional do tumor Estádio III de qualquer tipo histológico.
-
-Invasão da serosa uterina, anexos ou ambos. IIIA IIIA1 Disseminação para ovário ou tubas. IIIA2 Serosa uterina.
-
-Disseminação para vagina, paramétrios IIIB ou peritônio pélvico. IIIB1 Vagina ou paramétrio. IIIB2 Peritônio pélvico Comprometimento de linfonodos pélvicos ou para-aórticos.
-
-IIIC IIIC1 LN pélvicos (IIIC2i Micrometastases / IIIC2ii Macrometastases). IIIC2 LN paraaórticos (IIIC2i Micrometastases / IIIC2ii Macrometastases).
-
-Disseminação para mucosa de bexiga ou Estádio IV intestino ou metástases a distância. Invasão de mucosa de bexiga ou IVA intestino.
-
-IVB Metástases em peritônio além da pelve. Metástases a distância (LN além de IVC vasos renais, pulmões, fígado, SNC, ossos).
+| Estádio | Descrição |
+|---|---|
+| **Estádio I** | Confinado ao útero. Doença limitada ao útero; bom prognóstico. |
+| IA1 | Tipo histológico não agressivo, limitado ao endométrio ou pólipo. |
+| IA2 | Tipo histológico não agressivo, envolvendo < 50% do miométrio, sem IAL. |
+| IA3 | CA endometrioide de baixo grau, limitado ao útero/ovário. |
+| IB | Tipos histológicos não agressivos, com ≥ 50% invasão miometrial, sem IAL. |
+| IC | Tipos histológicos agressivos, limitados ao endométrio ou pólipo. |
+| **Estádio II** | Invasão do estroma cervical sem extensão extrauterina, ou IAL significativa, ou tipo histológico agressivo com invasão miometrial. |
+| IIA | Invasão do estroma cervical de tipo histológico não agressivo. |
+| IIB | IAL significativa de tipo histológico não agressivo. |
+| IIC | Tipo histológico agressivo com invasão miometrial. |
+| **Estádio III** | Disseminação local ou regional do tumor de qualquer tipo histológico. |
+| IIIA | Invasão da serosa uterina, anexos ou ambos. |
+| IIIA1 | Disseminação para ovário ou tubas. |
+| IIIA2 | Serosa uterina. |
+| IIIB | Disseminação para vagina, paramétrios ou peritônio pélvico. |
+| IIIB1 | Vagina ou paramétrio. |
+| IIIB2 | Peritônio pélvico. |
+| IIIC | Comprometimento de linfonodos pélvicos ou para-aórticos. |
+| IIIC1 | LN pélvicos (IIIC1i Micrometástases / IIIC1ii Macrometástases). |
+| IIIC2 | LN para-aórticos (IIIC2i Micrometástases / IIIC2ii Macrometástases). |
+| **Estádio IV** | Disseminação para mucosa de bexiga ou intestino, ou metástases a distância. |
+| IVA | Invasão de mucosa de bexiga ou intestino. |
+| IVB | Metástases em peritônio além da pelve. |
+| IVC | Metástases a distância (LN além de vasos renais, pulmões, fígado, SNC, ossos). |
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -188,62 +190,59 @@ IVB Metástases em peritônio além da pelve. Metástases a distância (LN além
 
 <!-- page:4 -->
 
-ESTRATIFICAÇÃO DE RISCO RISCO INTERMEDIÁRIO Histerectomia total abdominal + salpingooforectomia Tabela 4: Estratificação de risco do câncer de endométrio bilateral
+## Estratificação de Risco
 
-- Linfadenectomia pélvica e para-aórtica: indicado para risco invasão linfovascular (-).
+### Tabela 4: Estratificação de Risco do Câncer de Endométrio
 
-Grupos de o estadiamento, mas não aumenta sobrevida. Grupos de Características CE endometriode estádio I, grau 1 ou 2, A Baixo menos de 50% de invasão miometrial, H b CE endometrioide, grau 1 ou 2, mais de
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Intermediário 50% de invasão miometrial, invasão linfovascular (-).
+| Grupo de Risco | Características |
+|---|---|
+| **Baixo** | CE endometrioide estádio I, grau 1 ou 2, menos de 50% de invasão miometrial, invasão linfovascular (-). |
+| **Intermediário** | CE endometrioide, grau 1 ou 2, mais de 50% de invasão miometrial, invasão linfovascular (-). |
+| **Intermediário-alto** | CE endometrioide estádio I, grau 3, menos de 50% de invasão miometrial, independentemente do status de invasão linfovascular; ou CE endometrioide, grau 1 ou 2, invasão linfovascular (+), independentemente do grau de invasão miometrial. |
+| **Alto** | CE endometrioide estádio I, grau 3, 50% ou mais de invasão miometrial, independentemente do status de invasão linfovascular; CE estádio II; CE endometrioide estádio III sem doença residual. |
+| **Avançado** | CE estádio III com doença residual e CE estádio IVA. |
+| **Metastático** | CE estádio IVB. |
 
-CE endometrioide estádio I, grau 3, menos de 50% de invasão miometrial, independentemente do status de Intermediário T invasão linfovascular. CE endometrioide, alto grau 1 ou 2, invasão linfovascular (+), independentemente do grau de invasão miometrial.
+- **Linfadenectomia pélvica e para-aórtica**: indicada para risco intermediário — melhora o estadiamento, mas não aumenta sobrevida.
 
-- CE endometrioide estádio I, grau 3,
+## Tratamento
 
-- 50% ou mais de invasão miometrial invasão linfovascular. CE estádio II. CE endometrioide estádio III, sem doença
+### Baixo Risco
 
-Alto independentemente do status de
+- Histerectomia total abdominal + salpingooforectomia bilateral;
+- Se desejo reprodutivo e tumor de baixo grau, endometrioide, sem infiltração miometrial, tratamento conservador:
+  - Progesterona em altas doses ou SIU-LNG, seguindo com USGTV + amostra endometrial semestralmente;
+  - Se regredir = libera a paciente para gestação após 6-12 meses;
+  - Tratamento cirúrgico após prole constituída ou falha do tratamento clínico.
 
-- residual.
+### Risco Intermediário
 
-CE estádio III com doença residual e CE Avançado estádio IVa. Metastático CE estádio IVb.
+- Histerectomia total abdominal + salpingooforectomia bilateral;
+- Linfadenectomia pélvica e para-aórtica: melhora o estadiamento, mas não aumenta sobrevida.
 
-## TRATAMENTO
+### Alto Risco
 
-BAIXO RISCO A Histerectomia total abdominal + salpingooforectomia bilateral
-
-- Se desejo reprodutivo e tumor de baixo grau, M endometrioide, sem infiltração miometrial, m tratamento conservador: Progesterona em altas doses ou SIU-LNG, seguindo com USGTV + amostra endometrial A semestralmente. Se regredir = libera a paciente para gestação após 6-12 meses.
-
-- Tratamento cirúrgico após prole constituída ou falha do tratamento clínico. o estadiamento, mas não aumenta sobrevida.
-
-ALTO RISCO Histerectomia total abdominal + salpingooforectomia bilateral
-
+- Histerectomia total abdominal + salpingooforectomia bilateral;
 - Linfadenectomia pélvica e para-aórtica;
+- **Histerectomia radical**, se acometimento do colo uterino;
+- **Citorredução completa** se doença avançada.
 
-- *Histerectomia radical, se acometimento do colo uterino;
-
-- *Citorredução completa se doença avançada.
-
-## TERAPIA ADJUVANTE
+## Terapia Adjuvante
 
 - Depende do estadiamento, grau e tamanho do tumor, idade e status da paciente;
-
 - Quimioterapia neoadjuvante ou adjuvante;
+- **Radioterapia**: paciente com alto risco cirúrgico, tumor inoperável, paliação de sintomas;
+- **RDT (radioterapia) + BQT (braquiterapia) adjuvante**: risco intermediário-alto e alto;
+- Radioterapia adjuvante **não** é necessária para carcinoma endometrioide de baixo risco!
 
-- Radioterapia: paciente com alto risco cirúrgico, tumor inoperável, paliação de sintomas;
+## Referências
 
-- RDT (radioterapia) + BQT (braquiterapia) adjuvante:
+Figura 1: Desbalanço entre progesterona e estrogênio. Acervo de imagens Medcof.
 
-Risco intermediário-alto e alto;
+Figura 2: Ultrassonografia transvaginal com identificação de espessamento endometrial de 3,35 cm. Acervo pessoal Dra. Marília Bertolazzi.
 
-- Radioterapia adjuvante não é necessária para carcinoma endometrioide de baixo risco!
+Figura 3: Carcinoma endometrioide estágio IB visto pela ressonância magnética ponderada em T2. MORICE, P. et al. Endometrial cancer. Lancet, v. 387, n. 10023, p. 1094–1108, mar. 2016. DOI: 10.1016/S0140-6736(15)00130-0.
 
-## REFERÊNCIAS
-
-Figura 1: Desbalanço entre progesterona e estrogênio. Acervo de imagens Medcof. Figura 2: Ultrassonografia transvaginal com identificação de espessamento endometrial de 3,35 cm.
-
-Acervo pessoal Dra. Marilia Bertolazzi Figura 3: Carcinoma endometrioide estágio IB visto pela ressonância magnética ponderada em T2.
-
-MORICE, P. et al. Endometrial cancer. Lancet, v. 387, n. 10023, p. 1094–1108, mar. 2016. DOI: 10.1016/S0140-6736(15)00130-0.
-
-Figura 4: Ilustração do estadiamento do carcinoma de endométrio Acervo de imagens Medcof.
+Figura 4: Ilustração do estadiamento do carcinoma de endométrio. Acervo de imagens Medcof.

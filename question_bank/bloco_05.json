@@ -856,7 +856,7 @@
         "D": "Ultimação do parto com fórceps de Simpson-Braun",
         "E": "Ultimação do parto com fórceps de Kielland"
       },
-      "answer": "C",
+      "answer": "A",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 5",
       "images": [],
@@ -870,7 +870,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-42"
+      "scheduleId": "cron-42",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt"
     },
     {
       "id": "b05-semanais-q29",
@@ -1830,7 +1832,7 @@
         "C": "Não administrar dose de reforço de vacina antitetânica e indicar o uso de soro antitetânico.",
         "D": "Não administrar dose de reforço de vacina antitetânica e não indicar o uso de soro antitetânico."
       },
-      "answer": "A",
+      "answer": "D",
       "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 5",
       "images": [],
@@ -1844,7 +1846,9 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-45"
+      "scheduleId": "cron-45",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt"
     },
     {
       "id": "b05-semanal-q061",

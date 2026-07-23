@@ -2,245 +2,171 @@
 
 <!-- page:1 -->
 
-- Anamnese: base da propedêutica;
+## Anamnese
 
-- Incontinência urinária mista;
+- **Anamnese**: base da propedêutica;
+- Não se esquecer da anamnese completa: identificação; queixa e duração; história da moléstia atual; comorbidades e cirurgias realizadas; medicamentos em uso; antecedentes ginecológicos e obstétricos; hábitos e vícios; antecedentes familiares;
+- Deve-se sempre detalhar o tempo de duração dos sintomas, a ordem em que surgiram, as comorbidades, antecedentes cirúrgicos, hábitos e medicamentos;
+- Número de micções ao dia/intervalo entre as micções.
 
-- Deve-se sempre detalhar o tempo de duração
+### Comorbidades e Cirurgias Prévias
 
-- Sensibilidade vesical reduzida ou ausente;
-
-dos sintomas, a ordem em que surgiram,
-
-- Perda urinária insensível: não precedida de as comorbidades, antecedentes cirúrgicos, desejo miccional;
-
-hábitos e medicamentos;
-
-- Dor durante o enchimento vesical.
-
-- Comorbidades e cirurgias realizadas: FASE DE ESVAZIAMENTO (MICÇÃO) Cirurgia abdominal/pélvica ou traumas;
-
-- Número de micções ao dia/intervalo entre Doenças neurológicas/ Tosse as micções;
-
-crônica / Constipação;
-
-- Sensação de esvaziamento incompleto ou Limitação de mobilidade. jato fraco;
-
-- Antecedentes ginecológicos e obstétricos:
-
-- Gotejamento pós-miccional ou Via de parto/ Tempo do período expulsivo/ Peso micção entrecortada;
-
-do RN/ Houve laceração de trajeto → sutura
-
-- Exame físico direcionado: Atividade sexual. da uretra no esforço maior do que 30º,
-
-foi realizada? | Teste de esforço, Teste do Cotonete (angulação
-
-- Hábitos e vícios: Atividade física / Tabagismo/Etilismo; Teste do absorvente (Pad Tast) e avaliação
-
-- Medicamentos em uso: Diuréticos/ neurológica perineal: (reflexo bulbo-cavernoso e
-
-Antidepressivos/ Sedativos; reflexo anocutâneo).
-
-## QUEIXAS URINÁRIAS - FASE DE ENCHIMENTO QUEIXAS DE PROLAPSO - SENSAÇÃO DE BOLA
-
-## VESICAL NA VAGINA
-
-- Urgência: é a queixa de um desejo súbito de urinar,
-
-- Queixa de peso na vagina;
-
-o que é difícil de postergar;
-
-- Dificuldade de urinar/evacuar pela presença do
-
-- Incontinência urinária por urgência; prolapso com necessidade de redução do mesmo;
-
-- Noctúria: acordar para urinar durante o período de
-
-- Úlceras na mucosa/sangramento/corrimento ou sono principal; disfunções sexuais;
-
-- Enurese: queixa de perda urinária intermitente e
-
-- O exame físico com manobra de esforço é o insensível que ocorre durante o período de sono; principal para detectar as distopias em que se
-
-- Incontinência urinária de esforço: perda com avalia o grau máximo do prolapso.
-
-aumento da pressão intra- abdominal;
-
-## ANAMNESE
-
-Hábitos e vícios
-
-- Atividade física;
-
-- Não se esquecer da anamnese completa;
-
-- Tabagismo; Identificação;
-
-- Etilismo. Queixa e duração; História da moléstia atual; DISFUNÇÕES URINÁRIAS Comorbidades e cirurgias realizadas; Bexiga Medicamentos em uso;
-
-- Órgão de armazenamento de urina; Antecedentes ginecológicos e obstétricos;
-
-- Capacidade de acomodar alterações de Hábitos e vícios; volume (complacência); Antecedentes familiares.
-
-- Capacidade de coordenar o esvaziamento com condições
-
-Comorbidades e cirurgias prévias externas: liberação voluntária da micção quando há
-
-- Cirurgia abdominal ou pélvica; condições socialmente aceitáveis para a mesma.
-
-- Traumas; Enchimento vesical
-
-- Doenças neurológicas/ Tosse crônica / Constipação;
-
-- Sensibilidade → Como avaliar?
-
+- Cirurgia abdominal ou pélvica;
+- Traumas;
+- Doenças neurológicas/tosse crônica/constipação;
 - Limitação de mobilidade.
 
-- Intervalo entre as micções: urina de quantas em
-
-Medicamentos em uso quantas horas?
+### Medicamentos em Uso
 
 - Diuréticos;
+- Antidepressivos e sedativos.
 
-- Quando sente vontade de urinar, consegue esperar e ir
+### Antecedentes Ginecológicos e Obstétricos
 
-- Antidepressivos e sedativos. tranquilamente ao banheiro?
-
-Antecedentes ginecológicos e obstétricos
-
-- Chega a perder urina antes de chegar ao banheiro?
-
-- Via de parto/ Tempo do período expulsivo/ Peso do
-
-- Acorda à noite por causa da vontade de urinar?
-
-RN/ Houve laceração de trajeto → sutura foi realizada? Quantas vezes?
-
+- Via de parto/tempo do período expulsivo/peso do RN/houve laceração de trajeto → sutura foi realizada?
 - Atividade sexual.
 
-- Tem dor supra-púbica quando a bexiga está cheia?
+### Hábitos e Vícios
 
-Urina para aliviar a dor?
+- Atividade física;
+- Tabagismo;
+- Etilismo.
+
+## Disfunções Urinárias
+
+### Bexiga
+
+- Órgão de armazenamento de urina;
+- Capacidade de acomodar alterações de volume (complacência);
+- Capacidade de coordenar o esvaziamento com condições externas: liberação voluntária da micção quando há condições socialmente aceitáveis para a mesma.
+
+### Enchimento Vesical — Sensibilidade: Como Avaliar?
+
+- Intervalo entre as micções: urina de quantas em quantas horas?
+- Quando sente vontade de urinar, consegue esperar e ir tranquilamente ao banheiro?
+- Chega a perder urina antes de chegar ao banheiro?
+- Acorda à noite por causa da vontade de urinar? Quantas vezes?
+- Tem dor suprapúbica quando a bexiga está cheia? Urina para aliviar a dor?
 
 ---
 
 <!-- page:2 -->
 
-Sintomas de armazenamento Tabela 1: Principais disfunções urinárias
+## Sintomas de Armazenamento (Fase de Enchimento)
 
-- Sensibilidade normal: o indivíduo está consciente do enchimento da bexiga e a sensibilidade aumenta até DISFUNÇÕES URINÁRIAS um forte desejo para urinar;
+- **Sensibilidade normal**: o indivíduo está consciente do enchimento da bexiga e a sensibilidade aumenta até um forte desejo de urinar;
+- **Urgência**: é a queixa de um desejo súbito de urinar, o que é difícil de postergar;
+- **Incontinência por urgência**: é a queixa de perda involuntária de urina associada à urgência;
+- **Noctúria**: é a queixa de acordar para urinar durante o período de sono principal;
+- **Enurese**: queixa de incontinência intermitente que ocorre durante períodos de sono.
 
-- Urgência: é a queixa de um desejo súbito de urinar, o ENCHIMENTO ESVAZIAMENTO
+### Esforço
 
-- Urgência: é a queixa de um desejo súbito de urinar, o que é difícil de postergar;
+- Quando se realiza esforço, há perda concomitante de urina? Qual tipo de esforço (tosse, espirro, pular, caminhar rápido no plano, subir escada, carregar sacolas)?
+  - **Grande**: tossir, espirrar, pular corda, fazer polichinelo;
+  - **Moderado**: descer escada, dar risada, correr/trotar;
+  - **Pequeno**: mudança de decúbito (ex. levantar da cadeira), caminhar rápido no plano.
+- **Incontinência urinária de esforço**: é a queixa de perda involuntária por esforço, ou por espirro ou por tosse; relacionado ao aumento da pressão intra-abdominal, e não necessariamente a se a paciente fica cansada ou tem dificuldade de realizá-lo;
+- **Incontinência urinária mista**: é a queixa de perda involuntária associada à urgência e também a esforço, espirro ou tosse;
+- **Incontinência urinária contínua**: queixa de perda involuntária contínua de urina;
+- **Sensibilidade vesical reduzida ou ausente**;
+- **Perda urinária insensível**: não precedida de desejo miccional;
+- **Dor durante o enchimento vesical**.
 
-- Incontinência por urgência: é a queixa de perda involuntária de urina associada à urgência;
+**Queixas da fase de enchimento**: urgência; incontinência urinária por urgência; noctúria e enurese; incontinência urinária de esforço ou mista; sensibilidade vesical reduzida ou ausente; perda urinária insensível; dor.
 
-- Noctúria: é a queixa de acordar para urinar durante o período de sono principal;
+## Esvaziamento Vesical (Micção)
 
-- Enurese: queixa de incontinência intermitente que ocorre durante períodos de sono.
+- **Hesitação**: queixa de atraso no início da micção;
+- **Jato fraco**: queixa de um jato urinário mais fraco em comparação ao desempenho prévio do paciente ou em comparação com outros indivíduos;
+- **Micção entrecortada**: é o termo utilizado quando o indivíduo descreve um jato de urina que para e recomeça em uma ou mais ocasiões durante a micção;
+- **Esforço para urinar**: queixa de necessidade de fazer esforço intenso (por meio de contração abdominal, Valsalva ou pressão suprapúbica) para começar, manter ou melhorar o jato urinário;
+- **Gotejamento terminal**: é o termo utilizado quando um indivíduo descreve uma fase final da micção prolongada, na qual o fluxo se torna reduzido a pingos ou gotejamento;
+- **Sensação de esvaziamento incompleto**: queixa de que a bexiga, após a micção, não parece estar vazia;
+- Gotejamento pós-miccional ou micção entrecortada.
 
-Enchimento vesical
+### Tabela 1: Principais Disfunções Urinárias
 
-- Esforço: Quando se realiza esforço, há perda concomitante de urina? Qual tipo de esforço (tosse, espirro, pular, caminhar rápido no plano, subir escada, carregar sacolas)? Grande: Tossir, espirrar, pular corda, fazer polichinelo; Moderado: Descer escada, dar risada, correr/trotar; Pequeno: Mudança de decúbito (ex. levantar da cadeira), caminhar rápido no plano;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Incontinência urinária de esforço é a queixa de perda involuntária por esforço, ou por espirro ou por tosse; Relacionado ao aumento da pressão intraabdominal, e não necessariamente a se a paciente fica cansada ou tem dificuldade de realizá-lo.
+| Enchimento | Esvaziamento |
+|---|---|
+| Urgência | Hesitação |
+| Noctúria | Micção entrecortada |
+| Enurese | Jato fraco |
+| Incontinência por urgência | Gotejamento terminal |
+| Incontinência por esforço | Esforço/pressão para urinar |
+| Incontinência mista | Sensação de esvaziamento incompleto |
+| Sensibilidade vesical reduzida ou ausente | — |
+| Perda urinária insensível | — |
+| Dor | — |
 
-- Incontinência urinária mista: é a queixa de perda involuntária associada à urgência e também a esforço, espirro ou tosse;
+## Prolapsos Vaginais — Sensação de Bola na Vagina
 
-- Incontinência urinária contínua: queixa de perda involuntária contínua de urina;
+- A sensibilidade da região vaginal advém principalmente do **nervo pudendo**, a partir da ramificação dos nervos perineais: a porção do 1/3 distal é mais inervada;
+- Torna-se uma queixa mediante o relato de sensibilidade vaginal: sensação de "bola na vagina"; sensação de "peso na vagina". Em geral, a paciente descreve ter sentido um abaulamento ao se higienizar → prolapso de 1/3 proximal ou médio;
+- Queixa de peso na vagina;
+- Dificuldade de urinar/evacuar pela presença do prolapso com necessidade de redução do mesmo;
+- Úlceras na mucosa/sangramento/corrimento ou disfunções sexuais;
+- O exame físico com manobra de esforço é o principal para detectar as distopias, em que se avalia o grau máximo do prolapso.
 
-- Queixa da fase de enchimento: Urgência; Incontinência urinária por urgência; Noctúria e enurese; Incontinência urinária de esforço ou mista; Sensibilidade vesical reduzida ou ausente; Perda urinária insensível; Dor.
+*Figura 1: Inervação pélvica pelo nervo pudendo (ramo perineal, ramo dorsal do clitóris).*
 
-Esvaziamento vesical
-
-- Hesitação: queixa de atraso no início da micção;
-
-- Jato fraco: queixa de um jato urinário mais fraco em comparação ao desempenho prévio do paciente ou em comparação com outros indivíduos;
-
-- Micção entrecortada: é o termo utilizado quando o indivíduo descreve um jato de urina que para e recomeça em uma ou mais ocasiões durante a micção;
-
-- Esforço para urinar: queixa de necessidade de fazer esforço intenso (por meio de contração abdominal, S manter ou melhorar o jato urinário;
-
-Valsalva ou pressão suprapúbica) para começar,
-
-- Gotejamento terminal: é o termo utilizado quando um indivíduo descreve uma fase final da micção prolongada, na qual o fluxo se torna reduzido a pingos ou gotejamento;
-
-- Sensação de esvaziamento incompleto: queixa de que a bexiga, após a micção, não parece estar vazia.
-
-- ENCHIMENTO ESVAZIAMENTO urinar reduzida ou ausente incompleto
-
-Urgência Hesitação Noctúria Micção entrecortada Enurese Jato Fraco Incontinência por urgência Gotejamento Esforço / Pressão para Incontinência por esforço Incontinência mista Sensibilidade vesical Sensação de esvaziamento Perda urinária Dor
-
-## PROLAPSOS VAGINAIS
-
-- A sensibilidade da região vaginal advém principalmente do nervo pudendo, a partir da ramificação dos nervos perineais: A porção do 1/3 distal é mais inervada;
-
-- Torna-se uma queixa mediante o relato de sensibilidade vaginal; Sensação de “bola na vagina”; Sensação de “peso na vagina”; Em geral, a paciente descreve ter sentido um abaulamento ao se higienizar → prolapso de ⅓ proximal ou médio.
-
-Nervo pudendo Ramo Perineal Ramo Dorsal do clitóris Figura 1: Inervação pélvica pelo nervo pudendo. SIntomas que podem estar associados
+### Sintomas que Podem Estar Associados
 
 - Obstrução para a micção e/ou para a evacuação;
-
 - Perguntar se precisa reduzir o prolapso para urinar/evacuar;
-
 - Lesões na mucosa da região prolapsada;
-
 - Secreção/sangramento;
-
 - Disfunções sexuais;
-
 - Dor;
-
 - Vergonha.
 
 ---
 
 <!-- page:3 -->
 
-Figura 2: Anatomia pélvica
+*Figura 2: Anatomia pélvica.*
 
-## EXAME FÍSICO
+## Exame Físico
 
 - Exame físico geral;
+- Exame ginecológico: inspeção; exame especular; toque vaginal;
+- Atentar-se para as hipóteses diagnósticas levantadas a partir da realização da anamnese.
 
-- Exame ginecológico; Inspeção; Exame especular; Toque vaginal.
+### Inspeção
 
-- Atentar-se para as hipóteses diagnósticas levantadas Figura 3: Teste do cotonete para avaliação da mobilidade uretral.
+- **Observação**: períneo/virilha com sinais de dermatite amoniacal; conteúdo líquido no intróito vaginal; trofismo; abaulamento em canal vaginal (prolapso visível ao repouso).
 
-a partir da realização da anamnese. Teste de Marshall-Bonney INSPEÇÃO
+### Teste de Marshall-Bonney
 
-- Pede-se para a paciente tossir enquanto o examinador
+- Pede-se para a paciente tossir enquanto o examinador posiciona 1 ou 2 dedos no interior da vagina para elevar a uretra (teste de Marshall-Bonney): a incontinência de esforço que é corrigida por esta manobra pode responder a uma cirurgia.
 
-- Observação: posiciona 1 ou 2 dedos no interior da vagina para Períneo/virilha com sinais de dermatite amoniacal; elevar a uretra (teste de Marshall-Bonney): a Conteúdo líquido no intróito vaginal; incontinência de esforço que é corrigida por esta Trofismo; manobra pode responder a uma cirurgia. Abaulamento em canal vaginal (prolapso visível ao repouso).
+*Figura 3: Teste do cotonete para avaliação da mobilidade uretral.*
 
-Avaliação neurológica
+*Figura 4: Teste de Marshall-Bonney.*
 
-- Reflexo Bulbocavernoso: estímulo em um dos lábios maiores, lateralmente ao clitóris → ambos os lábios se contraem;
+### Avaliação Neurológica
 
-- Reflexo anocutâneo: toque da pele peri-anal → contração do esfíncter externo; Figura 4: Teste de Marshall-Bonney
-
+- **Reflexo Bulbocavernoso**: estímulo em um dos lábios maiores, lateralmente ao clitóris → ambos os lábios se contraem;
+- **Reflexo anocutâneo**: toque da pele peri-anal → contração do esfíncter externo;
 - Também integrado nas raízes sacrais.
 
-- Verificar Figura 2 “Pad Test”
+*Verificar Figura 2.*
 
-- É útil para avaliar a queixa de incontinência de esforço;
+### "Pad Test" (Teste do Absorvente)
 
-Avaliação da perda urinária
+- É útil para avaliar a queixa de incontinência de esforço.
 
+**Avaliação da perda urinária**
 - Absorvente seco com peso aferido;
+- Paciente ingere 500 mL de água;
+- Fica em repouso por 15 minutos, e depois realiza atividades habituais (subir e descer escada, sentar-se e se levantar, tossir, agachar, correr no lugar) por 1 hora;
+- Visualização de perda urinária sincrônica à manobra de esforço (tosse e Valsalva).
 
-- Visualização de perda urinária sincrônica à manobra
+### Teste do Cotonete (Q-Tip Test)
 
-- Paciente ingere 500 ml de água;
-
-de esforço (tosse e valsalva);
-
-- Fica em repouso por 15 minutos, e depois realiza
-
-- Teste do Cotonete (Q-Tip test): atividades habituais (subir e descer escada, sentar- Avalia o excesso de mobilidade da uretra durante o se e se levantar, tossir, agachar, correr no lugar) aumento da pressão abdominal. por 1 hora;
+- Avalia o excesso de mobilidade da uretra durante o aumento da pressão abdominal.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -250,20 +176,20 @@ de esforço (tosse e valsalva);
 
 <!-- page:4 -->
 
-- Absorvente é novamente pesado: Perda de até 1 g: insignificantes; 1,1 g a 9,9 g: leves; 10 a 49,9 g: moderadas; 50 g ou mais: severas.
+- Absorvente é novamente pesado:
+  - Perda de até 1 g: insignificante;
+  - 1,1 g a 9,9 g: leve;
+  - 10 a 49,9 g: moderada;
+  - 50 g ou mais: severa.
 
-Exame especular e toque vaginal bimanual
+### Exame Especular e Toque Vaginal Bimanual
 
-- POP-Q → Pelvic Organ Prolapse Quantification.
+- **POP-Q** → Pelvic Organ Prolapse Quantification.
 
-## EXAMES COMPLEMENTARES
+## Exames Complementares
 
-- Incontinência urinária → sempre excluir infecção urinária: Urina tipo 1; Urocultura.
-
+- Incontinência urinária → sempre excluir infecção urinária: urina tipo 1; urocultura;
 - Imagem (TC/USG) de rins e vias urinárias;
-
 - Ressonância magnética de pelve;
-
 - Cistoscopia;
-
 - Estudo Urodinâmico.

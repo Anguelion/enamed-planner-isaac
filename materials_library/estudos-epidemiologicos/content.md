@@ -2,36 +2,24 @@
 
 <!-- page:1 -->
 
-## CLASSIFICAÇÃO DOS
+## Classificação dos Estudos Epidemiológicos
 
-Tabela 1: Classificação dos Estudos Epidemiológicos Medidas de Ass Tipo de Estudo Temporalidade Importan Relato de Caso / Transversal (ou Frequência / D Série de Casos Retrospectiva) Qualitati Transversal.
+> ⚠️ Tabela reconstruída a partir de OCR fortemente fragmentado (múltiplas colunas intercaladas) — confira contra a fonte original.
 
-Coeficiente Estudo Ecológico (Pode ter Séries Correlação Temporais) Estudo Transversal Transversal Razão de Prev (ponto único (Seccional / (RP)
+Tabela 1: Classificação dos Estudos Epidemiológicos.
 
-no tempo) Inquérito) Risco Relativ Longitudinal RAF (Risco At Estudo de Coorte (Prospectivo ou ao Fator); RAP Retrospectivo)
+| Tipo de Estudo | Temporalidade | Medidas de Associação | Principais Vantagens | Principais Limitações |
+|---|---|---|---|---|
+| Relato de Caso / Série de Casos | Transversal (ou retrospectiva) | Frequência / Descrição (qualitativa) | Identifica eventos incomuns/novos; gera hipóteses | Não testa hipóteses; não generalizável |
+| Estudo Ecológico | Transversal (pode ter séries temporais) | Coeficiente de correlação (r) | Rápido e barato (dados secundários); útil para grandes populações | Falácia ecológica (inferência inadequada ao nível individual); não controla fatores de confusão |
+| Estudo Transversal (Seccional / Inquérito) | Transversal (ponto único no tempo) | Razão de Prevalência (RP) | Rápido e de baixo custo; estima prevalência; gera hipóteses | Não estabelece relação temporal causa-efeito |
+| Estudo de Coorte (Prospectivo ou Retrospectivo) | Longitudinal | Risco Relativo (RR); Risco Atribuível ao Fator (RAF); Risco Atribuível na População (RAP) | Melhor evidência observacional para causalidade; permite calcular incidência e RR; estuda múltiplas exposições/desfechos | Caro, demorado; dificuldade com doenças raras; perdas de seguimento; desafios éticos/logísticos |
+| Estudo de Caso-Controle | Retrospectivo | Odds Ratio (OR) — aproxima o RR quando a doença é rara | Bom para doenças raras ou com longo período de latência; mais rápido e barato que coortes | Vieses de recordatório e de seleção; dificuldade em estabelecer relação temporal precisa; não calcula incidência |
+| Ensaio Clínico Randomizado (ECR) | Longitudinal (Prospectivo) | Risco Relativo (RR); Redução Relativa do Risco (RRR); Redução Absoluta do Risco (RAR); Número Necessário para Tratar (NNT); Número Necessário para Prejudicar (NNH) | Padrão-ouro para causalidade; minimiza vieses; alta validade interna | Caro, complexo, demorado; questões éticas; nem sempre exequível (ex.: exposições nocivas) |
+| Ensaio Comunitário | Longitudinal (Prospectivo) | Risco Relativo (RR) ou Diferença de Risco (DR) em nível populacional | Avalia impacto de intervenções em larga escala; aborda fatores sociais e ambientais | Menor controle sobre variáveis; mais suscetível a vieses (não há randomização individual) |
 
-Atribuível na Po Odds Ratio ( Estudo de Retrospectivo aproxima RR q Caso-Controle doença é r Risco Relativ Redução Rela Risco (RRR); R Ensaio Clínico Absoluta do Longitudinal Randomizado (RAR); Núm (Prospectivo)
+O delineamento de cada tipo de estudo pode ser consultado na sua respectiva ficha.
 
-(ECR) Necessário Tratar (NNT); N Necessário Prejudicar ( Risco Relativo Ensaio Longitudinal Diferença de Ri Comunitário (Prospectivo) em nível popu Taxa de Incid O delineamento de cada tipo de estudo pode ser consultado na sua respectiva ficha
+## Referências
 
-## REFERÊNCIAS
-
-Tabela 1: Classificação dos Estudos Epidemiológicos. Fonte: ROUQUAYROL, Maria Zélia; GURGEL, Marcelo. Rouquayrol:
-
-epidemiologia e saúde. Medbook, 2021. sociação Principais Vantagens Principais Limitações ntes Não testa hipóteses;
-
-Identifica eventos Descrição Não generalizável; Alto incomuns/novos; iva risco de viés Gera hipóteses.
-
-de publicação. Rápido e barato Falácia ecológica (dados secundários); (inferência inadequada te de Gera hipóteses; ao nível individual); Não o (r)
-
-Útil para grandes controla fatores populações. de confusão. Estima prevalência; valência Não estabelece relação Rápido e de baixo temporal causa-efeito custo Melhor evidência Caro, demorado;
-
-observacional para vo (RR); Dificuldade com causalidade; Permite tribuível doenças raras; Perdas calcular incidência e P (Risco de seguimento;
-
-RR; Estuda múltiplas opulação) Desafios éticos/ exposições/ logísticos. desfechos. Bom para doenças Vieses de recordatório (OR) – raras ou com longo e seleção; Dificuldade quando período de latência; em estabelecer relação rara Mais rápido e barato temporal precisa; Não que coortes. calcula incidência.
-
-vo (RR); ativa do Redução Caro, complexo, Padrão-ouro o Risco demorado; Questões para causalidade; mero éticas; Nem sempre Minimiza vieses; Alta o para exequível (ex:
-
-validade interna. Número exposições nocivas) o para (NNH) Avalia impacto de Menor controle (RR) ou intervenções em sobre variáveis; Mais isco (DR)
-
-larga escala; Aborda suscetível a vieses ulacional; fatores sociais (não há randomização dência e ambientais. individual);
+Tabela 1: Classificação dos Estudos Epidemiológicos. Fonte: ROUQUAYROL, Maria Zélia; GURGEL, Marcelo. **Rouquayrol: epidemiologia e saúde**. Medbook, 2021.

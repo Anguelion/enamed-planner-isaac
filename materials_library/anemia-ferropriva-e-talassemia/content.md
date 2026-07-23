@@ -2,344 +2,296 @@
 
 <!-- page:1 -->
 
-Anemia Ferropriva, suplementação de ferro e talassemia (PED)
+## Anemia Ferropriva, Suplementação de Ferro e Talassemia (Pediatria)
 
-## Anemia Ferropriva
+> ⚠️ Página reconstruída a partir de OCR de duas colunas fortemente intercaladas — confira contra a fonte original.
 
-- Alfa-talassemia no RN → Hb Bart’s (tetrâmero de
+### Anemia Ferropriva — Resumo
 
-Hipocromia, microcitose e anisocitose cadeias gama); (RDW aumentado).
+- Hipocromia, microcitose e anisocitose (RDW aumentado);
+- Investigação: aos 12 meses ou se suspeita clínica (hemograma, ferritina e PCR);
+- Tratamento: ferro oral 3 a 6 mg Fe/kg/dia;
+- **Prevenção**:
+  - RNT AIG: 1 mg Fe/kg/dia até 2 anos (sem risco: a partir de 6 meses; com risco: a partir de 3 meses);
+  - RNT P < 2500 g e RNPT P > 1500 g: 2 mg Fe/kg/dia (30 dias até 1 ano);
+  - RNPT, P 1000–1500 g: 3 mg Fe/kg/dia (30 dias até 1 ano);
+  - RNPT, P < 1000 g: 4 mg Fe/kg/dia (30 dias até 1 ano);
+  - Após, 1 mg/kg/dia de 1 ano até 2 anos.
 
-- Alfa-talassemia no adulto → Hb H (tetrâmero de
+### Talassemias — Resumo
 
-- Investigação: 12 meses ou se suspeita clínica (HMG, cadeias beta);
-
-Ferritina e PCR);
-
-- Beta-talassemia:
-
-- Tratamento: ferro oral 3 a 6mg Fe/kg/dia; | Major: diminuição importante ou ausência de cadeia
-
-- Prevenção: beta → em alguns casos, pode ter só HbF no RN; RNT AIG: 1mg Fe/kg/dia até 2 anos (sem risco: | Minor: diminuição de cadeia beta → aumento de a partir de 6 meses; com risco: 3 meses); HbA2 no adulto. RNT P<2500g e RNPT P >1500g: 2mg Fe/kg/dia Triagem Neonatal para hemoglobinopatias
-
-(30 dias até 1 ano);
-
-- Normal: FA; RNPT, P 1000-1500g: 3mg Fe/kg/dia
-
-- Traço Falciforme: FAS;
-
-(30d até 1a);
-
-- Anemia Falciforme: FS; RNPT, P <1000g: 4mg Fe/kg/dia (30d até 1a);
-
-- Doença Falciforme SC: FSC; Após, 1mg/kg/dia de 1 ano até 2 anos.
-
-- Sbeta-Talassemia: FSA;
-
-Talassemias
-
-- Alfa-Talassemia: FABarts:
-
-- Talassemias: diminuição ou ausência de uma | 1-2%= Portador silencioso;
-
-cadeia específica; | 5-10%= Traço Talassêmico;
-
-- Anemia hipocrômica, microcítica, RDW normal, | 20-30%= Doença da HbH.
-
-aumento de eritrócitos;
-
-- Beta-Talassemia:
-
-- Major: Dependente de transfusão; | Minor: FA;
-
-- Minor/Traço: Anemia leve; | Major: FA ou F0.
-
+- **Alfa-talassemia** no RN → Hb Bart's (tetrâmero de cadeias gama);
+- **Alfa-talassemia** no adulto → Hb H (tetrâmero de cadeias beta);
+- **Beta-talassemia**:
+  - **Major**: diminuição importante ou ausência de cadeia beta → em alguns casos, pode ter só HbF no RN;
+  - **Minor**: diminuição de cadeia beta → aumento de HbA2 no adulto.
+- Talassemias: diminuição ou ausência de uma cadeia específica;
+- Anemia hipocrômica, microcítica, RDW normal, aumento de eritrócitos;
+- **Beta-talassemia**:
+  - **Major**: dependente de transfusão;
+  - **Minor/Traço**: anemia leve.
 - Disfunção neurocognitiva (déficit psicomotor e comportamental);
-
-## FISIOPATOLOGIA
-
 - Vertigem.
 
+**Triagem Neonatal para Hemoglobinopatias**
+
+- Normal: FA;
+- Traço Falciforme: FAS;
+- Anemia Falciforme: FS;
+- Doença Falciforme SC: FSC;
+- Sβ-Talassemia: FSA;
+- Alfa-Talassemia: FABart's:
+  - 1–2% = Portador silencioso;
+  - 5–10% = Traço Talassêmico;
+  - 20–30% = Doença da HbH.
+- Beta-Talassemia:
+  - Minor: FA;
+  - Major: FA ou F0.
+
+## Fisiopatologia
+
 - 60% das anemias na faixa etária infantil;
-
-- 40% das crianças com menos de 5 anos apresentam INVESTIGAÇÃO esse tipo de anemia;
-
+- 40% das crianças com menos de 5 anos apresentam esse tipo de anemia;
 - Triagem universal aos 12 meses de vida;
-
-- Caracterizada pela deficiência de ferro: quantidade
-
-- A qualquer momento se houver fator de risco de ferro insuficiente para manter funções ou sintomas.
-
-fisiológicas normais; Passo a passo
-
+- Caracterizada pela deficiência de ferro: quantidade de ferro insuficiente para manter funções fisiológicas normais;
 - Pode ser resultado de:
+  - Absorção inadequada para manter uma demanda maior (fase de crescimento);
+  - Balanço negativo crônico nas necessidades de ferro.
+- Diminuição nos estoques de ferro (medida pela ferritina) pode resultar em anemia ferropriva.
 
-- Hemograma (HMG): Hemoglobina (Hb), índices Absorção inadequada para manter uma demanda hematimétricos (VCM, HCM, RDW) e morfologia;
+### Investigação
 
-maior (fase de crescimento);
+- Hemograma (HMG): hemoglobina (Hb), índices hematimétricos (VCM, HCM, RDW) e morfologia;
+- Ferritina sérica: marcador da fase de depleção dos estoques de ferro;
+- Proteína C Reativa: identificar processo infeccioso/inflamatório, que poderia aumentar a ferritina;
+- Saturação de transferrina não aumenta no caso de inflamação e também avalia o estoque de ferro. Melhor avaliação dos estoques de ferro: saturação de transferrina.
 
-- Ferritina sérica: marcador da fase de depleção dos Balanço negativo crônico nas necessidades de ferro. estoques de ferro;
+### Quadro Clínico
 
-- Diminuição nos estoques de ferro (medida pela
-
-- Proteína C Reativa: identificar processo infeccioso/ ferritina) pode resultar em anemia ferropriva. inflamatório, que poderia aumentar a ferritina: Saturação de Transferrina não aumenta no caso de
-
-QUADRO CLÍNICO inflamação e também avalia estoque de ferro.
-
-- Palidez (45-50%);
-
-- Fadiga (44%); Melhor avaliação dos estoques de ferro: saturação
-
-- Dispneia; de transferrina.
-
+- Palidez (45–50%);
+- Fadiga (44%);
+- Dispneia;
 - Cefaleia (63%);
-
-- Parorexia: distúrbio de perversão do apetite (pica); Características da lâmina de sangue periférico na anemia
-
-- Maior suscetibilidade a processos infecciosos; ferropriva
-
+- Parorexia: distúrbio de perversão do apetite (pica);
+- Maior suscetibilidade a processos infecciosos;
 - Glossite (27%);
+- Hipocromia (HCM baixo);
+- Síndrome das pernas inquietas (24%);
+- Microcitose (VCM baixo);
+- Pele e cabelo secos, alopecia (30%);
+- Anisocitose (RDW alto);
+- Taquicardia (9%) ou angina;
+- Poiquilocitose.
+
+### Características da Lâmina de Sangue Periférico na Anemia Ferropriva
 
 - Hipocromia (HCM baixo);
-
-- Síndrome das pernas inquietas (24%);
-
 - Microcitose (VCM baixo);
-
-- Pele e cabelo seco, alopecia (30%);
-
 - Anisocitose (RDW alto);
-
-- Taquicardia (9%) ou angina;
-
 - Poiquilocitose.
 
 ---
 
 <!-- page:2 -->
 
-## TRATAMENTO
+> ⚠️ Página reconstruída a partir de OCR de duas colunas fortemente intercaladas — confira contra a fonte original.
+
+## Tratamento
 
 - Ferro oral (dose de 3 a 6 mg de ferro elementar/kg/dia), fracionado ou em dose única;
-
-- Tratar por 6 meses, ou até reposição dos estoques corporais (normalização da Hb, VCM, HCM, ferro sérico,
+- Tratar por 6 meses, ou até reposição dos estoques corporais (normalização da Hb, VCM, HCM, ferro sérico, saturação da transferrina e ferritina sérica):
+  - 1º parâmetro a subir: reticulócitos (15 dias);
+  - Normalização da Hb: 1–2 meses;
+  - Restaurar os estoques normais de ferro do organismo: 3–6 meses, ou até obter-se valor de ferritina sérica ≥ 15 ng/mL.
 
 Figura 1: Lâmina de sangue periférico na anemia ferropriva.
 
-## FATORES DE RISCO
+## Fatores de Risco
 
-- Gestação: Insuficiência placentária presumida Descolamento precoce de placenta ou placenta prévia; Má nutrição materna; Falta de suplementação de ferro na gestação.
+- **Gestação**: insuficiência placentária presumida (HAS, tabagismo); descolamento precoce de placenta ou placenta prévia; má nutrição materna; falta de suplementação de ferro na gestação;
+- **Nascimento**: clampeamento precoce do cordão (< 1 min); necessidade de atendimento imediato do RN;
+- **Primeiros 90 dias**: má nutrição materna; perda sanguínea; falta de suplementação de ferro na lactação; mãe com Hb < 11 ou ferritina < 15; velocidade de crescimento > p90 pela criança.
 
-(HAS, tabagismo);
+## Prevenção
 
-- Nascimento: Clampeamento precoce do cordão (<1 min); Necessidade de atendimento imediato do RN.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Primeiros 90 dias: Má nutrição materna; Perda sanguínea; Falta de suplementação de ferro na lactação; Mãe com Hb <11 ou Ferritina <15; Velocidade de crescimento >p90 pela criança.
+Tabela 1: Suplementação de ferro de acordo com grupo de risco.
 
-PREVENÇÃO H Tabela 1: Suplementação de ferro de acordo com grupo de risco. Quanto: 1 mg de ferro RNT, AIG, sem fator elementar/kg/dia Quando: 180 de risco, em AME dias de vida a 24º mês de vida.
+| Grupo | Quanto (ferro elementar/kg/dia) | Quando |
+|---|---|---|
+| RNT, AIG, sem fator de risco, em AME | 1 mg | 180 dias de vida a 24º mês de vida |
+| RNT, AIG, com fator de risco | 1 mg | 90 dias de vida a 24º mês de vida |
+| RNT < 2500 g (baixo peso) ou RNPT > 1500 g | 2 mg | 30 dias de vida até 12º mês de vida; após, 1 mg/kg/dia até 24º mês de vida |
+| RNPT 1000 a 1500 g | 3 mg | 30 dias de vida até 12º mês de vida; após, 1 mg/kg/dia até 24º mês de vida |
+| RNPT < 1000 g | 4 mg | 30 dias de vida até 12º mês de vida; após, 1 mg/kg/dia até 24º mês de vida |
+| RNPT que recebeu concentrado de hemácias (> 100 mL) | — | Avaliar individualmente o momento do início da suplementação |
 
-Quanto: 1 mg de ferro
+## Composição das Hemoglobinas
 
-- RNT, AIG, com fator elementar/kg/dia de risco Quando: 90 dias de vida a
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-24º mês de vida.
+Tabela 2: Composição das hemoglobinas no RN e no adulto.
 
-- Quanto: 2 mg de ferro peso) ou Quando: 30 dias de vida a até 24º mês de vida.
+| Tipo de Hb | Cadeias | RN | Adulto |
+|---|---|---|---|
+| Fetal | 2 alfas e 2 gamas | 80% | < 1% |
+| A1 | 2 alfas e 2 betas | 20% | 96–97% |
+| A2 | 2 alfas e 2 deltas | — | 0,5–2,5% |
+| Bart's (alfa-talassemia) | 4 gamas | — | — |
+| H (alfa-talassemia) | 4 betas | — | — |
 
-RNT <2500g (baixo elementar/kg/dia RNPT >1500g 12º mês de vida; após, 1mg/kg/dia Quanto: 3 mg de ferro elementar/kg/dia RNPT 1000 a 1500g Quando: 30 dias de vida a N 12º mês de vida; após, 1mg/kg/dia D até 24º mês de vida.
+## Triagem Neonatal para Hemoglobinopatias
 
-- Quanto: 4 mg de ferro elementar/kg/dia até 24º mês de vida.
+### Interpretação
 
-RNPT < 1000g Quando: 30 dias de vida a 12º mês de vida; após, 1mg/kg/dia RNPT que recebeu Avaliar individualmente momento concentrado de do início da suplementação.
-
-hemácias (>100mL) corporais (normalização da Hb, VCM, HCM, ferro sérico, saturação da transferrina e ferritina sérica):
-
-| 1º parâmetro a subir: reticulócitos (15 dias); | Normalização da Hb: 1-2 meses; | Restaurar os estoques normais de ferro do organismo: 3-6 meses, ou até obter-se valor de ferritina sérica ≥15 ng/mL.
-
-## COMPOSIÇÃO DAS
-
-## HEMOGLOBINAS
-
-Tabela 2: Composição das hemoglobinas no RN e no adulto. Tipo de Hb Cadeias RN Adulto 2 alfas e Fetal 80% <1% 2 gamas AlfaBart’s 4 gamas Talassemia 2 alfas e A1 20% 96-97% 2 betas 2 alfas e A2 0,5% 2,5% 2 deltas AlfaH 4 betas Talassemia
-
-## TRIAGEM NEONATAL PARA
-
-## HEMOGLOBINOPATIAS
-
-## INTERPRETAÇÃO
-
-- 1ª letra: Hb em maior concentração no sangue do RN; Esperado: Hb Fetal (F).
-
-- 2ª letra: Hb em concentração menor; Esperado: Hb A.
-
-- 3ª letra: Nem sempre está presente; É um sinal de alteração.
+- **1ª letra**: Hb em maior concentração no sangue do RN. Esperado: Hb Fetal (F).
+- **2ª letra**: Hb em concentração menor. Esperado: Hb A.
+- **3ª letra**: nem sempre está presente. É um sinal de alteração.
 
 Resultado normal: FA.
 
-## DOENÇAS DETECTADAS NA TRIAGEM
+## Doenças Detectadas na Triagem Neonatal
 
-NEONATAL Doença Falciforme
+### Doença Falciforme
 
 - Presença de HbS > 50%;
-
-- Resultados na triagem neonatal: Traço Falciforme: FAS (HbS<50%); Anemia Falciforme: FS; Anemia Falciforme + B-Talassemia: FSA; Outras Doenças Falciformes: FSC, FSD.
+- Resultados na triagem neonatal:
+  - Traço Falciforme: FAS (HbS < 50%);
+  - Anemia Falciforme: FS;
+  - Anemia Falciforme + Beta-Talassemia: FSA;
+  - Outras Doenças Falciformes: FSC, FSD.
 
 ---
 
 <!-- page:3 -->
 
-Talassemia Quadro clínico
+> ⚠️ Página reconstruída a partir de OCR de duas colunas fortemente intercaladas — confira contra a fonte original.
 
-- Alfa Talassemia: FABart’s:
+## Talassemia — Quadro Clínico
 
-- Pode ser assintomático; palidez cutânea recorrente, 1-2%: Portador silencioso; fadiga e dispneia aos esforços e acentuação da 5-10%: Traço Talassêmico; anemia em vigência de infecções. 20-30%= Doença da HbH. Talassemia beta associada a outras Hb anômalas
+- Pode ser assintomática; palidez cutânea recorrente, fadiga e dispneia aos esforços, e acentuação da anemia em vigência de infecções.
 
-- Beta Talassemia Major (ausência de A1): F0 ou FA;
+**Triagem Neonatal — Alfa Talassemia: FABart's**
 
-- HbS/talassemia beta: clinicamente semelhante à
+- 1–2%: Portador silencioso;
+- 5–10%: Traço Talassêmico;
+- 20–30%: Doença da HbH.
 
-- Beta Talassemia Minor: FA. anemia falciforme;
+**Beta Talassemia**
 
-- HbC/talassemia beta: assintomática ou
+- Major (ausência de A1): F0 ou FA;
+- Minor: FA.
 
-## TALASSEMIAS
+### Talassemia Beta Associada a Outras Hb Anômalas
 
-anemia e esplenomegalia;
+- **HbS/talassemia beta**: clinicamente semelhante à anemia falciforme;
+- **HbC/talassemia beta**: assintomática ou com anemia e esplenomegalia;
+- **HbE/talassemia beta**: quadro clínico pode ser leve, moderadamente grave (com clínica semelhante à da talassemia intermediária) ou grave (com clínica semelhante à da talassemia maior).
 
-- HbE/talassemia beta: quadro clínico pode ser leve,
+## Talassemias
 
-DEFINIÇÃO moderadamente grave (com clínica semelhante à
+### Definição
 
-- Grupo heterogêneo de doenças genéticas; da talassemia intermediária) ou grave (com clínica
+- Grupo heterogêneo de doenças genéticas;
+- Mutações ou deleções afetam quantitativamente a síntese de cadeias de globina:
+  - **Beta-talassemia**: ocorre redução ou ausência de produção de cadeias beta;
+  - **Alfa-talassemia**: ocorre redução ou ausência de produção de cadeias alfa.
 
-- Mutações ou deleções afetam quantitativamente a semelhante à clínica da talassemia maior). Beta-talassemia: ocorre redução ou ausência de ALFA-TALASSEMIA produção de cadeias beta; Patogênese Alfa-talassemia: ocorre redução ou ausência de 4 Síndromes relacionadas à quantidade de genes com produção de cadeias alfa. disfunção no cromossomo 16.
+### Alfa-Talassemia — Patogênese
 
-síntese de cadeias de globina:
-
+- 4 síndromes relacionadas à quantidade de genes com disfunção no cromossomo 16;
 - 1 gene alfa não funcionante: portador silencioso;
-
-## BETA-TALASSEMIA
-
 - 2 genes alterados: traço de alfa-talassemia;
+- 3 genes alterados: doença da HbH — Hb H: tetrâmero instável (4 betas) → anemia hemolítica moderada e hipocromia;
+- 4 genes defeituosos: hidropsia fetal — dano oxidativo e destruição precoce dos precursores eritroides na medula óssea (MO); hemácias formadas com alterações são removidas desde o período intraútero; Hb com alta afinidade pelo O2 → hipóxia tecidual; anemia acentuada, causando ICC e insuficiência hepática, hipoalbuminemia, hidropsia fetal e óbito intraútero.
 
-Homozigoto - Talassemia Major
-
-- 3 genes alterados: alfa-Talassemia:
-
-- Não há produção de cadeias beta; | Hb H: Tetrâmero instável (4 betas) → anemia
-
-- Não se formam os tetrâmeros normais a2b2 (HbA1); hemolítica moderada e hipocromia.
-
-- Acumulam-se cadeias alfa, que precipitam na
-
-- 4 genes defeituosos: hidropsia fetal: Dano oxidativo e destruição precoce dos desde o período intraútero; Hemácias formadas com alterações são removidas óbito intraútero.
-
-membrana do eritrócito: | Hb com alta afinidade pelo O2 → hipóxia tecidual precursores eritróides na medula óssea (MO): | Anemia acentuada, causando ICC e insuficiência eritropoese ineficaz; hepática, hipoalbuminemia, hidropsia fetal e da circulação, levando à anemia hemolítica. Quadro clínico
-
-- Anemia, microcitose e hipocromia acentuada;
+### Quadro Clínico
 
 - Portador silencioso da alfa-talassemia: assintomático;
+- Traço de alfa-talassemia: tem ou não anemia leve, com palidez recorrente e raramente icterícia;
+- Doença da HbH: anemia moderada, palidez, icterícia, esplenomegalia, litíase biliar, úlceras de perna, alterações ósseas e crise hemolítica aguda em resposta a drogas oxidantes e infecções.
 
-- Para compensar o prejuízo no transporte de O2,
+## Beta-Talassemia
 
-- Traço de Alfa-talassemia: tem ou não anemia leve, com ocorre hiperplasia eritroide, com expansão da MO e palidez recorrente e raramente icterícia;
+### Homozigoto — Talassemia Major
 
-eritropoese extramedular;
+- Não há produção de cadeias beta;
+- Não se formam os tetrâmeros normais α2β2 (HbA1);
+- Acumulam-se cadeias alfa, que precipitam na membrana do eritrócito, causando eritropoese ineficaz;
+- Para compensar o prejuízo no transporte de O2, ocorre hiperplasia eritroide, com expansão da MO e eritropoese extramedular;
+- Para evitar este processo, deve-se realizar transfusões de hemácias a cada 2 a 4 semanas desde os primeiros meses de vida.
 
-- Doença da HbH: anemia moderada, palidez, icterícia,
+### Quadro Clínico
 
-- Para evitar este processo, deve-se realizar transfusões esplenomegalia, litíase biliar, úlceras de perna, de hemácias a cada 2 a 4 semanas desde os primeiros alterações ósseas e crise hemolítica aguda em meses de vida. resposta a drogas oxidantes e infecções.
+- Início dos sintomas aos 6 meses de vida; se não tratados, óbito até os 5 anos por anemia e insuficiência cardíaca;
+- Palidez, retardo do crescimento, hepatoesplenomegalia, icterícia;
+- Outros: hipogonadismo, diminuição da fertilidade, osteopenia e osteoporose;
+- Depósito de ferro (uma das principais complicações da transfusão crônica);
+- Fenômenos tromboembólicos (pela alteração na membrana do eritrócito);
+- Se não realiza transfusões regulares: alterações esqueléticas de face e crânio.
 
-Quadro clínico Diagnóstico
+### Heterozigoto — Talassemia Minor / Traço Talassêmico
 
-- Início dos sintomas aos 6 meses de vida; se
+- Pequena redução de cadeias beta, cursando com microcitose e hipocromia;
+- Anemia leve ou ausente;
+- Poucos sintomas, sem grandes complicações.
+- Diagnóstico diferencial com anemia ferropriva.
+
+### Diagnóstico
 
 - Teste de Triagem Neonatal:
-
-não tratados, óbito até os 5 anos por anemia e | Beta-talassemia major: FA ou raramente F0; insuficiência cardíaca; | Beta-talassemia minor: FA;
-
-- Palidez, retardo do crescimento, | Alfa-talassemia: FABart’s.
-
-hepatoesplenomegalia, icterícia;
-
+  - Beta-talassemia major: FA ou raramente F0;
+  - Beta-talassemia minor: FA;
+  - Alfa-talassemia: FABart's.
 - Exame genético;
-
-- Outros: hipogonadismo, diminuição da fertilidade,
-
-- Eletroforese de Hb: pode ser realizada após os osteopenia e osteoporose; 6 meses de idade:
-
-- Depósito de ferro (uma das principais complicações | Traço talassêmico beta: HbA2 > 3,5-4%;
-
-da transfusão crônica); | Traço talassêmico alfa: normal;
-
-- Fenômenos tromboembólicos (pela alteração na | Talassemia beta major é variável: aumento de Hb membrana do eritrócito); F (60% a 90%); Hb A2 elevada; Hb A1 somente nos
-
-- Se não realiza transfusões regulares: alterações casos de deficiência parcial da síntese de cadeias esqueléticas de face e crânio. beta (b+).
-
-Heterozigoto - Talassemia Minor / Traço Talassêmico
-
-- Exames complementares: Hemograma,
-
-- Pequena redução de cadeias beta, cursando com reticulócitos e provas de hemólise (BI, DHL, microcitose e hipocromia; Haptoglobina), apresentando:
-
-- Anemia leve ou ausente; | VCM, HCM e CHCM diminuídos e RDW normal;
-
-- Poucos sintomas, sem grandes complicações. | Reticulócitos aumentados de 5% a 15%; Aumento da bilirrubina indireta e DHL,
-
-Diagnóstico diferencial com anemia ferropriva. haptoglobina reduzida.
+- Eletroforese de Hb: pode ser realizada após os 6 meses de idade:
+  - Traço talassêmico beta: HbA2 > 3,5–4%;
+  - Traço talassêmico alfa: normal;
+  - Talassemia beta major é variável: aumento de HbF (60% a 90%); HbA2 elevada; HbA1 somente nos casos de deficiência parcial da síntese de cadeias beta (β+).
+- Exames complementares: hemograma, reticulócitos e provas de hemólise (BI, DHL, haptoglobina), apresentando:
+  - VCM, HCM e CHCM diminuídos e RDW normal;
+  - Reticulócitos aumentados de 5% a 15%; aumento da bilirrubina indireta e DHL, haptoglobina reduzida.
 
 ---
 
 <!-- page:4 -->
 
-TRATAMENTO | Deferiprona: pode ser utilizada a partir de 6 anos Traço Talassêmico (Alfa ou Beta) de idade;
+> ⚠️ Página reconstruída a partir de OCR de duas colunas fortemente intercaladas — confira contra a fonte original.
 
-- Monitorização da anemia nas situações de risco | Desferoxamina.
+## Tratamento
 
-para piora ou para ferropenia (fase de crescimento, Complicações gestação e perdas sanguíneas);
+### Traço Talassêmico (Alfa ou Beta)
 
-- Cardiovasculares:
-
-gestação e perdas sanguíneas);
-
+- Monitorização da anemia nas situações de risco para piora ou para ferropenia (fase de crescimento, gestação e perdas sanguíneas);
 - Suplementação com ácido fólico em casos selecionados.
 
-Talassemia Major
+### Talassemia Major
 
-- Transfusões de concentrado de hemácias a cada 2-4 semanas iniciadas precocemente desenvolvimento adequados: Manter Hb pré transfusão entre 9-10,5; As hemácias devem ser filtradas e irradiadas.
-
-(Hb entre 6-7), para promover o crescimento e
-
+- Transfusões de concentrado de hemácias a cada 2–4 semanas, iniciadas precocemente para promover o crescimento e desenvolvimento adequados: manter Hb pré-transfusão entre 9–10,5 (Hb entre 6–7 antes da transfusão); as hemácias devem ser filtradas e irradiadas;
 - Avaliação do excesso de ferro e quelação;
-
-- Prevenção e tratamento das complicações desenvolvimento, glândulas endócrinas e sobrecarga de ferro);
-
-(seguimento adequado do crescimento,
-
-- Transplante de Células-Tronco Hematopoéticas até o momento;
-
-(TCTH): única terapia curativa disponível
-
+- Prevenção e tratamento das complicações (seguimento adequado do crescimento, glândulas endócrinas e sobrecarga de ferro);
+- Transplante de Células-Tronco Hematopoéticas (TCTH): única terapia curativa disponível até o momento;
 - Terapia Gênica: início de pesquisas.
 
-Quelação de ferro
+### Quelação de Ferro
 
 - Tratamento do depósito de ferro;
+- Iniciada quando ferritina sérica > 1000, 2x em até 60 dias;
+- Medicações:
+  - Deferasirox: pode ser utilizada a partir de 2 anos de idade;
+  - Deferiprona: pode ser utilizada a partir de 6 anos de idade;
+  - Desferoxamina.
 
-- Iniciada quando ferritina sérica>1000, 2x em até
+### Complicações
 
-60 dias;
+- **Cardiovasculares**: principal causa de mortalidade; a sobrecarga de ferro pode evoluir para insuficiência cardíaca, arritmias, disfunção ventricular e atrial; hipertensão pulmonar, precipitada pelo estado de hipercoagulabilidade;
+- **Endócrinas**: hipotireoidismo; hipogonadismo; hipoparatireoidismo; osteoporose; diabetes;
+- **Renais**: alterações da função tubular renal, da filtração glomerular, disfunção renal associada à quelação, nefrolitíase e hematopoiese extramedular renal;
+- **Infecciosas**: relacionadas à esplenectomia e às transfusões.
 
-- Medicações: B Deferasirox: pode ser utilizada a partir de 2 anos d de idade; A - Cardiovasculares: Principal causa de mortalidade; A sobrecarga de ferro pode evoluir para insuficiência cardíaca, arritmias, disfunção ventricular e atrial; Hipertensão pulmonar, precipitada pelo estado de hipercoagulabilidade.
+## Referências
 
-- Endócrinas: Hipotireoidismo; Hipogonadismo; Hipoparatiroidismo; Osteoporose; Diabetes.
+Figura 1: Lâmina de sangue periférico na anemia ferropriva.
 
-- Renais: Alterações da função tubular renal, da filtração glomerular, disfunção renal associada à quelação, nefrolitíase e a hematopoiese extramedular renal.
-
-- Infecciosas: Relacionadas à esplenectomia e às transfusões.
-
-## REFERÊNCIAS
-
-Figura 1: Lâmina de sangue periférico na anemia ferropriva. BRASIL. Diagnóstico laboratorial da deficiência de ferro. Revista Brasileira de Hematologia e Hemoterapia, São Paulo, v. 32, supl. 2, jun. 2010.
-
-Disponível em: https://doi.org/10.1590/S1516-84842010005000046. Acesso em: 28 abr. 2025.
+BRASIL. Diagnóstico laboratorial da deficiência de ferro. **Revista Brasileira de Hematologia e Hemoterapia**, São Paulo, v. 32, supl. 2, jun. 2010. Disponível em: https://doi.org/10.1590/S1516-84842010005000046. Acesso em: 28 abr. 2025.

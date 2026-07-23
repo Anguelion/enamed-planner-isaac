@@ -2,188 +2,168 @@
 
 <!-- page:1 -->
 
-Sepse (PED). DEFINIÇÕES | Expansão com cristaloide (com UTI: até 60 mL/
+## Sepse (Pediatria)
 
-- Antiga: SIRS → sepse → sepse grave → choque séptico; kg; sem UTI: 40 mL/kg, se hipotensão);
+### Definições
 
-- Atual (2024): | Antibioticoterapia (com choque: em 1 hora; sem Sepse: infecção + disfunção orgânica (2 ou mais choque: em 3 horas); Choque séptico: sepse + disfunção quente: noradrenalina);
+- **Antiga**: SIRS → sepse → sepse grave → choque séptico;
+- **Atual (2024)**:
+  - **Sepse**: infecção + disfunção orgânica (2 ou mais pontos dos critérios de Phoenix);
+  - **Choque séptico**: sepse + disfunção cardiovascular (sepse com pelo menos 1 ponto por disfunção cardiovascular).
 
-pontos dos critérios de Phoenix); | Droga vasoativa (frio: adrenalina; cardiovascular (sepse com pelo menos 1 ponto | Corticoide – se houver insuficiência adrenal por disfunção cardiovascular). relativa ou absoluta;
+### Critérios de Phoenix (Pontuação)
 
-- Critérios de Phoenix (pontuação): | Ajuste metabólico: Disfunção respiratória (máx. 3): queda de PaO2/ normoglicemia e normocalcemia.
+- **Disfunção respiratória** (máx. 3): queda de PaO2/FiO2 < 400 ou SatO2/FiO2 < 292 em qualquer suporte respiratório (1) ou em ventilação invasiva (2 ou 3);
+- **Disfunção cardiovascular** (máx. 6): uso de droga vasoativa, aumento do lactato ou queda da PAM (1 ou 2 cada – de acordo com a gravidade);
+- **Disfunção de coagulação** (máx. 2): plaqueta < 100 mil, INR > 1,3, D-dímero > 2, fibrinogênio < 100 (1 ponto cada);
+- **Disfunção neurológica** (máx. 2): GCS < 10 (1), pupilas médio-fixas (2).
 
-FiO2 < 400 ou SatO2/FiO2 < 292 em qualquer
+### Conduta Inicial: Sala de Emergência + MOVED
 
-- Outras medidas: Disfunção cardiovascular (máx. 6): uso de droga se sangramento;
+**Medidas da primeira hora:**
+- Expansão com cristaloide (com UTI: até 60 mL/kg; sem UTI: 40 mL/kg, se hipotensão);
+- Antibioticoterapia (com choque: em 1 hora; sem choque: em 3 horas);
+- Droga vasoativa (frio: adrenalina; quente: noradrenalina);
+- Corticoide – se houver insuficiência adrenal relativa ou absoluta;
+- Ajuste metabólico: normoglicemia e normocalcemia.
 
-suporte respiratório (1) ou em ventilação invasiva | Transfusões – se Hb < 7 ou < 10 com choque; (2 ou 3); plaquetas se sangramento/risco; plasma vasoativa, aumento do lactato ou queda da PAM | Intubação (se choque);
+**Outras medidas:**
+- Transfusões – se Hb < 7 ou < 10 com choque; plaquetas se sangramento/risco; plasma se sangramento;
+- Intubação (se choque);
+- Dieta enteral, assim que possível;
+- Terapia de substituição renal, se necessário para controle do balanço hídrico;
+- IgG – Síndrome do Choque Tóxico (especialmente estreptocócica); Fasceíte Necrotizante; Imunodeficiências Primárias humorais; imunocomprometimento com valores baixos de imunoglobulinas;
+- ECMO.
 
-(1 ou 2 cada – de acordo com a gravidade); | Dieta enteral, assim que possível; | Disfunção de coagulação (máx. 2): | Terapia de substituição renal, se necessário para plaqueta < 100 mil, INR > 1,3, D-dímero > 2, controle do balanço hídrico;
+## Sepse em Adultos
 
-fibrinogênio < 100 (1); | IgG – Síndrome do Choque Tóxico | Disfunção neurológica (máx. 2): GCS < 10 (1), (especialmente estreptocócica); Fasceíte pupilas médio-fixas (2). Necrotizante; Imunodeficiências Primárias CONDUTA INICIAL: SALA DE EMERGÊNCIA + humorais; imunocomprometimento com valores MOVED baixos de imunoglobulinas;
+- Infecção suspeita → qSOFA → avaliação de disfunções → SOFA → sepse;
+- **Aplicação do escore qSOFA** (qualquer alteração é suficiente): frequência respiratória; nível de consciência; pressão arterial sistólica (PAS);
+- **Avaliação das disfunções orgânicas do escore SOFA** (qualquer alteração é suficiente para diagnóstico de sepse): PAM (pressão arterial média); uso de drogas vasoativas (DVA); creatinina e débito urinário; bilirrubina; plaquetas; PaO2/FiO2; Escala de Coma de Glasgow (GCS);
+- **Conduta inicial**: reposição de volume; ressuscitação fluídica, com necessidade de uso de DVA ou elevação do lactato;
+- **Choque séptico**: quando o paciente não for responsivo a volume, com necessidade de uso de DVA.
 
-- Medidas da primeira hora: | ECMO.
+## Sepse em Crianças (Definição Anterior)
 
-## SEPSE
+*Verificar Tabela 1.*
 
-- pressão arterial média (PAM);
+### Tabela 1: Classificação — Mais Abrangente e Mais Sensível, Porém Menos Específica
 
-- uso de drogas vasoativas – DVA;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-SEPSE EM ADULTOS z creatinina e débito urinário; Infecção suspeita → qSOFA → avaliação de disfunções z bilirrubina;
-
-SOFA → sepse z plaquetas.
-
-- Aplicação do escore qSOFA (qualquer Conduta inicial: reposição de volume. frequência respiratória; ressuscitação fluídica, com necessidade de uso de DVA nível de consciência; ou elevação do lactato. pressão arterial sistólica (PAS).
-
-alteração é suficiente): Choque séptico: quando o paciente não for responsivo a Avaliação das disfunções orgânicas do escore SOFA SEPSE EM CRIANÇAS (qualquer alteração é suficiente para diagnóstico Definição anterior de sepse):
-
-- Verificar Tabela 1
-
-- PaO2/FiO2;
-
-- Escala de Coma de Glasgow (GCS);
-
-Tabela 1: Classificação mais abrangente e mais sensível, porém menos específica.
-
-## SIRS SEPSE SEPSE GRAVE CHOQUE SÉPTICO
-
-Sepse + disfunção orgânica ou sinais Pelo menos 2 dos 4 de hipoperfusão: critérios: ↑ lactato; taquicardia; SIRS + foco infeccioso ↑ creatinina ou da diurese;
-
-taquipneia; comprovado ou ↓ PaO2/Fio2; Sepse + hipotensão hipotermia ou hipertermia; presumido ↑ bilirrubinas;
-
-leucocitose ou leucopenia plaquetopenia; ou desvio à esquerda. alargamento de coagulograma; hipotensão.
+| SIRS | Sepse | Sepse Grave | Choque Séptico |
+|---|---|---|---|
+| Pelo menos 2 dos 4 critérios: taquicardia; taquipneia; hipotermia ou hipertermia; leucocitose ou leucopenia ou desvio à esquerda | SIRS + foco infeccioso comprovado ou presumido | Sepse + disfunção orgânica ou sinais de hipoperfusão: ↑ lactato; ↑ creatinina ou ↓ diurese; ↓ PaO2/FiO2; ↑ bilirrubinas; plaquetopenia; alargamento de coagulograma; hipotensão | Sepse + hipotensão |
 
 ---
 
 <!-- page:2 -->
 
-Tabela 2: Parâmetros de sinais vitais. Variável Valores de corte (por grupo etário) Frequência Contagem Frequência cardíaca (bpm Grupo de idade Idade Taquicardia Bradicardia Recém- 0 - 1
+### Tabela 2: Parâmetros de Sinais Vitais
 
-> 180 < 100 nascidos semana ano escolar
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-1 semana – Neonatos > 180 < 100 1 mês 1 mês – 1 Lactente jovem > 180 < 90 Lactente e pré2 – 5 anos > 140 N/A Escolar 6 – 12 anos > 130 N/A Adolescente e 13 < 18
+| Grupo de idade | Faixa etária | Frequência cardíaca — Taquicardia (bpm) | Frequência cardíaca — Bradicardia (bpm) | Frequência respiratória — Taquipneia (irpm) | Contagem leucocitária (WBC x 10⁹/L) — Leucocitose ou leucopenia | Pressão arterial sistólica — Hipotensão (mmHg) |
+|---|---|---|---|---|---|---|
+| Recém-nascidos | 0 – 1 semana | > 180 | < 100 | > 50 | > 34 | < 59 |
+| Neonatos | 1 semana – 1 mês | > 180 | < 100 | > 40 | > 19,5 ou < 5 | < 79 |
+| Lactente jovem | 1 mês – 1 ano | > 180 | < 90 | > 34 | > 17,5 ou < 5 | < 75 |
+| Lactente e pré-escolar | 2 – 5 anos | > 140 | N/A | > 22 | > 15,5 ou < 6 | < 74 |
+| Escolar | 6 – 12 anos | > 130 | N/A | > 18 | > 13,5 ou < 4,5 | < 83 |
+| Adolescente e adulto jovem | 13 – 18 anos | > 110 | N/A | > 14 | > 11 ou < 4,5 | < 90 |
 
-> 110 N/A adulto jovem anos ou hipotermia) 36.0
+**Temperatura**: hipertermia > 38,5 ou hipotermia < 36,0. **Tempo de enchimento capilar prolongado**: > 5 segundos.
 
-Temperatura (hiper > 38.5 ou < Tempo de enchimento
+## Definição Atual — Atualização 2024
 
-> 5 segundos capilar prolongado
+- Necessidade de melhorar o diagnóstico, prevenção e manejo, frente aos últimos critérios de 2005 (IPSCC): SIRS não define gravidade e qSOFA não é validado em pediatria;
+- Conferência com diversos especialistas objetivando avaliar disfunções orgânicas: excluídos RNPT < 37 semanas e RN em internação pós-parto, além de > 18 anos;
+- Levaram em conta as definições do Sepsis-3 (adultos):
+  - **Sepse**: disfunção orgânica com risco à vida secundária a uma infecção;
+  - **Choque séptico**: sepse com disfunção cardiovascular.
 
-Definição atual
+### Critérios de Phoenix
 
-- Atualização 2024
-
-- Necessidade de melhorar o diagnóstico, prevenção e manejo: Últimos critérios de 2005 (IPSCC); SIRS não define gravidade e qSOFA não é validado em pediatria.
-
-- Conferência com diversos especialistas objetivando avaliar disfunções orgânicas: Excluídos RNPT < 37 semanas e RN em internação pós-parto, além de > 18 anos; Levaram em conta as definições do Sepsis Sepse: disfunção orgânica com risco à vida secundária a uma infecção; Choque séptico: sepse com disfunção cardiovascular.
-
-3 (adultos): Critérios de Phoenix
-
-- Derivado do Score de Phoenix 8 para disfunção orgânica → selecionadas matematicamente as intra-hospitalar; E
-
-4 disfunções mais associadas a mortalidade
-
-- Base de dados de 4 países subdesenvolvidos (China,
-
-- Bangladesh, Kenia e Colômbia) e 6 locais nos EUA
-
-→ n > 3 milhões;
-
+- Derivado do Score de Phoenix 8 para disfunção orgânica intra-hospitalar → selecionadas matematicamente as 4 disfunções mais associadas a mortalidade;
+- Base de dados de 4 países subdesenvolvidos (China, Bangladesh, Quênia e Colômbia) e 6 locais nos EUA → n > 3 milhões;
 - Aplicado nas primeiras 24 horas após admissão hospitalar;
+- Não serve como screening inicial de sepse ou como indicação de manejo clínico antes da instalação de disfunções orgânicas! Serve para confirmar suspeita já instalada (suspeita de sepse = agravo relacionado a infecção).
 
-- Não serve como screening inicial de sepse ou como indicação de manejo clínico antes da instalação de disfunções orgânicas! Frequência Contagem Pressão arterial m) respiratória leucocitária (WBC sistólica (mmHg) a Taquipneia Hipotensão leucopenia
+**SEPSE**: 2 ou mais pontos, associados a uma infecção suspeita ou confirmada.
+**CHOQUE SÉPTICO**: sepse com pelo menos 1 ponto por disfunção cardiovascular (já havendo confirmação de sepse com disfunção orgânica).
 
-(irpm) X 10⁹/L) Leucocitose ou
+*Verificar Tabela 3 na próxima página.*
 
-> 50 > 34 < 59
-
-> 40 > 19,5 ou < 5 < 79
-
-> 34 > 17,5 ou < 5 < 75
-
-> 22 15,5 ou < 6 < 74
-
-> 18 > 13,5 ou < 4,5 < 83
-
-> 14 > 11 ou < 4,5 < 90 suspeita (já confirmada suspeita de sepse = agravo relacionado a infecção).
-
-SEPSE: 2 ou mais pontos, associados a uma infecção CHOQUE SÉPTICO: sepse com pelo menos 1 ponto por disfunção cardiovascular (já havendo confirmação de sepse com disfunção orgânica).
-
-- Verificar Tabela 3 na próxima página
-
-Outras atualizações de 2024:
+### Outras Atualizações de 2024
 
 - SIRS não deve ser utilizado para diagnóstico de sepse;
-
-- O termo sepse grave não deve ser utilizado;
-
+- O termo "sepse grave" não deve ser utilizado;
 - Disfunção orgânica não relacionada diretamente ao sítio de infecção tem maior associação com mortalidade;
-
 - Apesar de não serem incluídas nos critérios diagnósticos, as outras disfunções orgânicas devem ser pesquisadas e acompanhadas.
 
-## CHOQUE SÉPTICO
+## Choque Séptico — Estatística
 
-## ESTATÍSTICA
-
-- Continua sendo uma das maiores causas de mortalidade em pacientes críticos: 1,7 milhão de casos de sepse pediátrica por ano; 4% dos indivíduos hospitalizados com < 18 anos; 8% dos pacientes admitidos em UTI; mortalidade: 4%–50% – depende de fatores como: 1/5 de todas as mortes globais.
-
-localidade, fatores de risco, gravidade do quadro:
+- Continua sendo uma das maiores causas de mortalidade em pacientes críticos:
+  - 1,7 milhão de casos de sepse pediátrica por ano;
+  - 4% dos indivíduos hospitalizados com < 18 anos;
+  - 8% dos pacientes admitidos em UTI;
+  - Mortalidade: 4%–50% – depende de fatores como localidade, fatores de risco, gravidade do quadro;
+  - 1/5 de todas as mortes globais.
 
 ---
 
 <!-- page:3 -->
 
-Tabela 3: Critérios de Phoenix Variáveis 0 ponto 1 ponto 2 pontos 3 pontos PaO2/FiO2 100PaO2/FiO2 < 100 ou PaO2/ Respiratória PaO2/FiO2 ≥ 400 ou SatO2/ 0–3 pontos SatO2/FiO2 ≥ 292 qualq re 1 ponto Normotenso Hip Cardiovascular Sem DVA 0–6 pontos Lactato < 5 mmol/L Lactato 1 ponto Plaquetas ≥ 100 mil Plaqu INR ≤ 1,3 Coagulação D-dímero ≤ 2 mg/L 0–2 pontos D-dím Fibrinogênio ≥ 100 mg/ Fibrinog dL Neurológica GCS > 10 0–2 pontos Pupilas reativas CONDUTA INICIAL
+### Tabela 3: Critérios de Phoenix
+
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
+
+| Sistema | 0 ponto | 1 ponto | 2 pontos | 3 pontos |
+|---|---|---|---|---|
+| **Respiratória** (0–3 pontos) | PaO2/FiO2 ≥ 400 ou SatO2/FiO2 ≥ 292 | PaO2/FiO2 < 400 ou SatO2/FiO2 < 292 em qualquer suporte respiratório | PaO2/FiO2 < 200 ou SatO2/FiO2 < 220 em ventilação mecânica invasiva | PaO2/FiO2 < 100 ou SatO2/FiO2 < 148 em ventilação mecânica invasiva |
+| **Cardiovascular** (0–6 pontos) | Sem DVA; normotenso; lactato < 5 mmol/L | 1 ponto cada (até 6): 1 DVA; hipotenso (↓ PAM); lactato 5–10,9 mmol/L | 2 pontos cada (até 6): 2 ou + DVA; mais hipotenso (↓ importante da PAM); lactato ≥ 11 mmol/L | — |
+| **Coagulação** (0–2 pontos) | Plaquetas ≥ 100 mil; INR ≤ 1,3; D-dímero ≤ 2 mg/L; fibrinogênio ≥ 100 mg/dL | 1 ponto cada (até 2): plaquetas < 100 mil; INR > 1,3; D-dímero > 2 mg/L; fibrinogênio < 100 mg/dL | — | — |
+| **Neurológica** (0–2 pontos) | GCS > 10; pupilas reativas | — | GCS ≤ 10 ou pupilas fixas bilateralmente | — |
+
+## Conduta Inicial
 
 - Encaminhar para sala de emergência;
+- **MOVED**: monitorização; oxigênio suplementar via máscara não reinalante com FiO2 100%; acesso venoso calibroso – idealmente 2; coleta de exames gerais, coleta de culturas e glicemia (dextro).
 
-- MOVED: monitorização; oxigênio suplementar via máscara não reinalante com FiO2 100%; acesso venoso calibroso – idealmente 2; coleta de exames gerais, coleta de culturas e glicemia (dextro).
+## Tratamento — Surviving Sepsis 2020
 
-TRATAMENTO – SURVIVING SEPSIS 2020 Primeira hora
+### Primeira Hora
 
-- Volume: cristaloide balanceado: soro fisiológico ou ringer lactato; com UTI: até 60 mL/kg; suspender, na presença de sobrecarga hídrica; sem UTI: não expandir sem hipotensão; fazer até 40 mL/kg com hipotensão.
+- **Volume**: cristaloide balanceado (soro fisiológico ou ringer lactato); com UTI: até 60 mL/kg, suspender na presença de sobrecarga hídrica; sem UTI: não expandir sem hipotensão, fazer até 40 mL/kg com hipotensão;
+- **Antibiótico**: amplo espectro e descalonar quando possível; com choque: iniciar na primeira hora; sem choque: iniciar em até 3 horas;
+- **Drogas vasoativas**: se paciente não responsivo a volume;
+- **Corticoide**: se houver insuficiência adrenal relativa ou absoluta — se paciente refratário a volume e DVA (uso em doses altas ou associação de pelo menos 2 DVA com paciente ainda hipotenso ou com sinais de má perfusão periférica): hidrocortisona 10 mg/kg (ataque) + 100 mg/m² divididos de 6/6 horas por 5 dias, ou até suspensão de DVA;
+- **Controle de hipoglicemia e hipocalcemia**.
 
-- Antibiótico: amplo espectro e descalonar quando possível; com choque: iniciar na primeira hora; sem choque: iniciar em até 3 horas.
+### Transfusões
 
-- Drogas vasoativas: se paciente não responsivo a volume.
+- **Hemácias**: Hb < 7 g/dL – sempre; Hb < 10 g/dL – se choque;
+- **Plaquetas**: apenas se sangramento ou risco de sangramento → TAMOF (trombocitopenia associada à falência de múltiplos órgãos) = plasmaférese;
+- **Plasma**: apenas em quadros de sangramento.
 
-- Corticoide: se houver insuficiência adrenal relativa ou absoluta: se paciente refratário a volume e DVA (uso em doses altas ou associação de pelo menos 2 DVA com paciente ainda hipotenso ou com sinais de má perfusão periférica); FiO2 < 400 ou 200 ou PaO2/FiO2 < 100 ou quer suporte 220 em ventilação ventilação mecânica espiratório mecânica invasiva invasiva o cada (até 3):
-
-SatO2/FiO2 < 148 /FiO2 < 292 em SatO2/FiO2 148em 2 pontos cada (até 6): potensão (↓ Mais hipotenso (↓ PAM)
-
-importante da PAM) 1 DVA 2 ou + DVA o 5–10,9 mmol/L Lactato ≥ 11 mmol/L o cada (até 2): uetas <100 mil INR > 1,3 mero > 2 mg/L gênio < 100 mg/ dL Pupilas fixas GCS ≤ 10 bilateralmente | hidrocortisona 10 mg/kg (ataque) + 100 mg/ m² divididos de 6/6 horas por 5 dias, ou até suspensão de DVA.
-
-- Controle de hipoglicemia e hipocalcemia.
-
-Transfusões
-
-- Hemácias: Hb < 7 g/dL – sempre; Hb < 10 g/dL – se choque;
-
-- Plaquetas: apenas se sangramento ou risco de sangramento → TAMOF (trombocitopenia associada à falência de múltiplos órgãos) = plasmaférese;
-
-- Plasma: apenas em quadros de sangramento.
-
-Intubação
+### Intubação
 
 - Recomenda-se na presença de choque;
-
 - Aplicar sequência rápida: não utilizar etomidato, pelo risco de insuficiência adrenal; sugestão: quetamina, fentanil e rocurônio.
 
-Dieta
+### Dieta
 
 - Iniciar por via enteral, assim que possível.
 
-Terapia de substituição renal
+### Terapia de Substituição Renal
 
 - Se necessário para controle de balanço hídrico.
 
-Imunoglobulina
+### Imunoglobulina
 
 - Não é indicada de rotina;
+- Pode apresentar benefício em: Síndrome do Choque Tóxico (especialmente de etiologia estreptocócica); Fasceíte Necrotizante; imunodeficiências primárias humorais; imunocomprometimento documentado com valores baixos de imunoglobulinas.
 
-- Pode apresentar benefício: Síndrome do Choque humorais; imunocomprometimento documentado com valores baixos de imunoglobulinas.
-
-Tóxico (especialmente de etiologia estreptocócica); Fasceíte Necrotizante; imunodeficiências primárias Oxigenação por membrana extracorpórea (ECMO)
+### Oxigenação por Membrana Extracorpórea (ECMO)
 
 - Último recurso.

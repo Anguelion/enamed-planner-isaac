@@ -2572,7 +2572,7 @@
         "C": "Solicitar hemograma completo, rotina de urina e painel viral. Diante dos resultados, avaliar antibioticoterapia.",
         "D": "Indicar internação hospitalar para investigação laboratorial completa e iniciar antibioticoterapia empírica imediata."
       },
-      "answer": "D",
+      "answer": "C",
       "source": "QUESTÕES BLOCO 13 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 13",
       "images": [],
@@ -2585,7 +2585,9 @@
         "Conduta Terapêutica",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "answerAudit": "official-source",
+      "answerSource": "QUESTÕES BLOCO 13 (SEMANAIS).txt"
     },
     {
       "id": "b13-febre-sem-sinais-q19",

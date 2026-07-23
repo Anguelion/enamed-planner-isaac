@@ -2,156 +2,167 @@
 
 <!-- page:1 -->
 
-Outros temas em cirurgia plástica Permanência: T
+## Cirurgia Plástica — Fios de Sutura
 
-- Absorvível: S Perdem força tênsil com o tempo; e Natural: Catgut; F Sintético: Monocryl, Vicryl. Q
+### Permanência
 
-- Inabsorvível; Manutenção da força tênsil; Natural: algodão, seda e linho; Sintético: Nylon, prolene.
+- **Absorvível**: perdem força tênsil com o tempo.
+  - Natural: Catgut;
+  - Sintético: Monocryl, Vicryl.
+- **Inabsorvível**: manutenção da força tênsil.
+  - Natural: algodão, seda e linho;
+  - Sintético: Nylon, Prolene.
 
-- Configuração:
+### Configuração
 
-- Monofilamentar: Menos traumático, mais frágil; Menor maleabilidade. (Prolene, Nylon, Monocryl).
+- **Monofilamentar**: menos traumático, mais frágil, menor maleabilidade (Prolene, Nylon, Monocryl).
+- **Multifilamentar**: mais resistente e mais maleável, mais traumático (Vicryl, Algodão).
 
-- Multifilamentar; Mais resistente e mais maleável; Mais traumáticos. (Vicryl, Algodão).
+## Classificação
 
-## CLASSIFICAÇÃO
+### Permanência
 
-- Permanência
+- **Absorvíveis**:
+  - Biológico (proteólise + inflamação);
+  - Sintético (hidrólise — menos inflamação);
+  - Perda de 50% da força tênsil após 4 semanas.
+- **Não absorvíveis**:
+  - Natural;
+  - Sintético;
+  - Força tênsil indeterminada.
 
-- Absorvíveis: Biológico (proteólise + inflamação); Sintético (hidrólise - inflamação); 50% da força tênsil após 4 semanas.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Não absorvíveis: Natural; Sintético; Força tênsil indeterminada.
+**Tabela 1: Fios absorvíveis — tempo para redução da força tênsil (50%)**
 
-- Verificar Tabela 1
+| Composição | Observações | Tempo para redução da força tênsil (50%) |
+|---|---|---|
+| Catgut simples | Feito de vísceras de animais. Causa grande processo inflamatório. | 7 dias |
+| Catgut cromado | Usado em mucosas. | 10-14 dias |
+| Poliglecaprone 24 (Monocryl) | Muito usado em cirurgia plástica; perde força tênsil após a fase inflamatória da cicatrização. | 7-10 dias |
+| Poliglactina 910 (Vicryl) | Multifilamentar, usado em mucosas e lábios, um pouco traumático. | 2-3 semanas |
+| Ácido poliglicólico (Dexon S) | — | 2-3 semanas |
+| Poligliconato (Maxon) | — | 4 semanas |
+| Polidioxanona (PDS II) | Fio "coringa", usado em fechamento de aponeurose e subcutâneo. É caro. | 4 semanas |
 
-- Verificar Tabela 2 na próxima página
+### Técnica Cirúrgica
 
-Tabela 1: Fios absorvíveis FIOS ABSOR Composição Catgut simples Catgut cromado (feitos de vísceras de animais. Causam grande processo infl Usado em mucosas)
+- **Sutura**: estéril, atraumática, sem tensão, com aposição e eversão das bordas;
+- Fechamento por planos!
 
-Poliglecaprone 24 (Monocryl) (Muito usado em Cirurgia plástica, perde força tênsil apó inflamatória da cicatrização)
+### Qual Fio Escolher?
 
-Poliglactina 910 (Vicryl) (Multifilamentar, usado em mucosas, lábios, um pouco trau Ácido poliglicólico (Dexon S)
+- **Tensão mínima e moderada**: absorvível ou inabsorvível.
+  - Absorvíveis: pele, tecido subcutâneo, derme.
+- **Tensão alta**: inabsorvível.
+  - Inabsorvível: osso, tendão, cartilagem, fáscia, vasos.
+- **Inflamação/infecção**: monofilamentar e inabsorvível.
 
-Poligliconato (Maxon) Polidioxanona (PDS II) (PDS de “pode ser”, fio usado como “coringa”, usado em fec de aponeurose, subcutâneo. É caro) Técnica cirúrgica:
+### Configuração
 
-Sutura: estéril, atraumática, sem tensão, aposição e eversão das bordas; Fechamento por planos!!! Qual fio escolher?
+- **Monofilamentar**: menos traumático, mais frágil (Prolene).
+- **Multifilamentar**: mais resistente e maleável (Vicryl).
+- **Farpados**: mais segurança e mais rápidos.
+- **Infecção**: preferência por fio monofilamentar e inabsorvível.
 
-- Tensão mínima e moderada: absorvível ou inabsorvível.
+### Outras Classificações
 
-- Absorvíveis: pele, tecido subcutâneo, derme.
-
-- Tensão Alta: inabsorvível.
-
-- Inabsorvível: Osso, tendão, cartilagem, fáscia, vasos.
-
-- Inflamação/infecção: monofilamentar e inabsorvível.
-
-Configuração
-
-- Monofilamentar: Menos traumático, mais frágil(Prolene).
-
-- Multifilamentar: Mais resistente e maleável (Vicryl).
-
-- Farpados: Mais segurança e rápidos.
-
-- Infecção: Preferência por fio monofilamentar e inabsorvível.
-
-- Outras classificações: Elasticidade – mais fácil de manipular, mas pode cortar os tecidos; Segurança do nó – quanto maior, menos passadas são necessárias; Memória – quanto maior a memória, mais difícil é de manipular o fio.
-
-RVÍVEIS Tempo para redução da força tênsil (50%) 7 dias 10 – 14 dias flamatório. ós fase 7 – 10 dias 2 – 3 semanas umático)
-
-2 – 3 semanas 4 semanas chamento 4 semanas
+- **Elasticidade**: mais fácil de manipular, mas pode cortar os tecidos;
+- **Segurança do nó**: quanto maior, menos passadas são necessárias;
+- **Memória**: quanto maior a memória, mais difícil é manipular o fio.
 
 ---
 
 <!-- page:2 -->
 
-## AGULHA
+## Agulha
 
-- Cortante: Possui secção transversal de sua ponta com formato triangular, é mais traumática, usado em pele.
+- **Cortante**: possui secção transversal de sua ponta com formato triangular; é mais traumática; usada em pele.
+- **Não cortante**: possui secção transversal de sua ponta com formato redondo; usada em mucosas.
+- Características variáveis:
+  - Curvatura;
+  - Comprimento.
 
-em pele.
-
-- Não cortante: Possui secção transversal de sua ponta com formato redondo, usado em mucosas.
-
-- Curvatura;
-
-- Comprimento.
-
-## Agulha de ponta
-
-## cônica
-
-## PONTO
-
-## CORPO
+**Agulha de ponta cônica** — Ponto / Corpo.
 
 Figura 1: Agulha atraumática.
 
-## Agulha de corte
-
-## convencional
+**Agulha de corte convencional**
 
 Figura 2: Agulha cortante com ponta triangular.
 
-- Curvatura;
+- Curvatura.
 
-Tabela 2: Fios inabsorvíveis. FIOS INA Composição Seda Nylon monofilamentar (Poliamida) Nylon multifilamentar Polipropileno (Prolene) (Usado em sutura de vasos)
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Poliéster (Mersilene, Ethibond) Aço (Fio de alta resistência, usado em fixação de osso, por exemplo esterno) Figura 3: Demonstração de diferentes comprimentos para agulhas
+**Tabela 2: Fios inabsorvíveis — perda de força tênsil**
 
-## QUAL FIO ESCOLHER?
+| Composição | Observações | Força tênsil (perda) |
+|---|---|---|
+| Seda | — | 81% em 1 ano |
+| Nylon monofilamentar (Poliamida) | — | 72% em 2 anos |
+| Nylon multifilamentar | — | 66% em 11 anos |
+| Polipropileno (Prolene) | Usado em sutura de vasos. | Indefinido |
+| Poliéster (Mersilene, Ethibond) | — | Indefinido |
+| Aço | Fio de alta resistência, usado em fixação de osso (ex: esterno). | Indefinido |
 
-Tensão Tecidual:
+Figura 3: Demonstração de diferentes comprimentos para agulhas.
 
-- Mínima / Moderada: Foi Absorvível ou Inabsorvível
+## Qual Fio Escolher?
 
-- Alta: Inabsorvível
+**Tensão tecidual**:
 
-Tipo de tecido
+- Mínima/Moderada: fio absorvível ou inabsorvível;
+- Alta: inabsorvível.
 
-- Absorvível Pele, subcutâneo
+**Tipo de tecido**:
 
-- Inabsorvível Tendão, osso, cartilagem, vasos
+- Absorvível: pele, subcutâneo;
+- Inabsorvível: tendão, osso, cartilagem, vasos.
 
-Infecção/inflamação:
+**Infecção/inflamação**:
 
 - Monofilamentar inabsorvível que seja capaz de resistir à tensão tecidual.
 
-Deve-se sempre optar por usar o fio de menor calibre, Fio “X-0” não diz respeito à espessura do fio, mas sim ao grau de tensão suportada antes de seu rompimento.
+Deve-se sempre optar por usar o fio de **menor calibre**. A nomenclatura "X-0" não diz respeito à espessura do fio, mas sim ao grau de tensão suportada antes de seu rompimento.
 
-## TÉCNICA CIRÚRGICA
+## Técnica Cirúrgica
 
-- Sutura: Técnica estéril; Atraumática (fazer apenas força necessária); Sem tensão; Aposição das bordas ; Eversão das bordas.
-
+- **Sutura**:
+  - Técnica estéril;
+  - Atraumática (fazer apenas a força necessária);
+  - Sem tensão;
+  - Aposição das bordas;
+  - Eversão das bordas.
 - Fechamento por planos.
+- **Ponto do "cirurgião plástico"** → ponto subdérmico.
 
-- Ponto do “cirurgião plástico” → ponto subdérmico
+## Tempo de Permanência
 
-## TEMPO DE PERMANÊNCIA
-
-- Dependerá do objetivo estético, tensão do tecido, trauma local.
-
-- Verificar Tabela 3 na próxima página
-
-ABSORVÍVEIS Força tênsil Perda em 1 ano 81% em 1 ano 72% em 2 anos 66% em 11 anos Indefinido Indefinido Indefinido
+- Dependerá do objetivo estético, tensão do tecido e trauma local.
 
 ---
 
 <!-- page:3 -->
 
-Tabela 3: Tempo de permanência dos pontos.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## REGIÃO TEMPO
+**Tabela 3: Tempo de permanência dos pontos**
 
-Face 3 – 5 dias Escalpe 7 – 10 dias Braços 7 – 10 dias Tronco 10 - 14 dias Pernas 10 - 14 dias Mãos e pés 10 - 14 dias Palmas e solas 14 – 21 dias
+| Região | Tempo |
+|---|---|
+| Face | 3-5 dias |
+| Escalpe | 7-10 dias |
+| Braços | 7-10 dias |
+| Tronco | 10-14 dias |
+| Pernas | 10-14 dias |
+| Mãos e pés | 10-14 dias |
+| Palmas e solas | 14-21 dias |
 
-## COMPLICAÇÕES
+## Complicações
 
-| Tardia decorrente de infecção de ferida
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Retirada precoce: operatória, desnutrição, isquemia da ferida). Deiscência;
-
-- Técnica inadequada, retirada tardia: Precoce, em cerca de 3 dias decorre de falha de | Infecção;
-
-técnica cirúrgica. | Cicatriz inestética, cicatriz patológica.
+| Retirada precoce | Retirada tardia | Técnica inadequada |
+|---|---|---|
+| Deiscência (precoce, em cerca de 3 dias, decorre de falha de técnica cirúrgica). | Tardia, decorrente de infecção de ferida operatória, desnutrição, isquemia da ferida. | Cicatriz inestética, cicatriz patológica; infecção. |

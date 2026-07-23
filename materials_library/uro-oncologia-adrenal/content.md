@@ -1,40 +1,38 @@
-# Uro-oncologia Adrenal
+# Uro-oncologia: Adrenal
 
 <!-- page:1 -->
 
-Uro-oncologia Lembre das ca Definição fasciculad Nódulos de Adre Epidemiologia 2-5% s Sintomas secund Sintomas e sinais Ex. complementares TC Diagnóstico Fe Metástase, TB adr Diferenciais Tratamento A Carcinoma de Seguimento
+## Uro-oncologia: Adrenal
 
-## PECULIARIDADES DA ANATOMIA
+**Tópicos**: Definição; Epidemiologia; Sintomas e sinais; Exames complementares; Diagnóstico; Diferenciais; Tratamento; Seguimento.
 
-DAS ADRENAIS:
+## Peculiaridades da Anatomia das Adrenais
 
-- Adrenal direita: Relação próxima com órgãos vitais: fígado, duodeno e veia cava; Mais baixa que a esquerda; Formato mais triangular que a esquerda.
+- **Adrenal direita**: relação próxima com órgãos vitais: fígado, duodeno e veia cava; mais baixa que a esquerda; formato mais triangular que a esquerda;
+- **Adrenal esquerda**: relação próxima com o baço, cauda do pâncreas e flexura esplênica do cólon.
 
-- Adrenal esquerda: Relação próxima com o baço, cauda do pâncreas e flexura esplênica do cólon.
+*Figura 1: Exposição intraoperatória de adrenal direita e esquerda, respectivamente (fígado retraído superiormente; fáscia renal de Gerota; rim direito; duodeno; glândula suprarrenal; artéria suprarrenal inferior, da artéria renal; artérias suprarrenais superiores, da artéria frênica inferior; veia cava inferior retraída medialmente; ramos das artérias suprarrenais intermediárias, da aorta abdominal; peritônio; pâncreas e baço; artéria frênica inferior esquerda; veia esplênica; aorta; rim esquerdo).*
 
-Fígado (retraído superiormente) Ar (d Fáscia renal (Gerota) Rim direito Duodeno Glândula suprarrenal Artéria suprarrenal inferior (da artéria renal)
+**Lembre das camadas da adrenal e produção hormonal**: glomerulosa (mineralocorticoide), fasciculada (glicocorticoide), reticulada (andrógenos) e medula (noradrenalina).
 
-Figura 1: Exposição intra operatória de adrenal direita e esque amadas da adrenal e produção: Glomerulosa (Mineralo) , da (glico), reticulada (Andrógenos) e medula (NOR)
+**Nódulos de adrenal**: 5% da população; desses, 10-15% são funcionantes e 2-5% são malignos. Prevalência aumenta com a idade.
 
-enal: 5% da população, desses, 10-15% são funcionantes e são malignos. Prevalência aumenta com a idade.
+**Sintomas** secundários à produção de hormônios adrenais: HAS secundária, hipercortisolismo, hiperandrogenismo.
 
-dários a produção de hormônios adrenais: HAS secundária, hipercortisolismo, hiperandrogenismo. com Sinais do mal: > 4 cm, irregular, > 10UH Cortisol - supressão com dexa Aldosterona - Aldo/APR > 20 eo – metanefrinas urinárias ou plasmáticas renal, Carcinoma Adrenocortical, Adenomas Funcionantes e não funcionantes Adrenalectomia se > 4 cm ou funcionante e adrenal se Weiss > ou = 3. Mitotano pode ser usado.
+**Sinais de malignidade em exame de imagem**: > 4 cm, irregular, > 10 UH.
 
-Preferência a cirurgia aberta.
+**Diagnóstico**: Cortisol – supressão com dexametasona; Aldosterona – relação Aldo/APR > 20; Feocromocitoma – metanefrinas urinárias ou plasmáticas.
 
-## VASCULARIZAÇÃO
+**Diferenciais**: Metástase, TB adrenal, Carcinoma Adrenocortical, Adenomas Funcionantes e não funcionantes.
 
-- Tanto adrenal direita quanto esquerda apresentam veia única: Direita: drenagem para a veia cava; Esquerda: drenagem para a veia renal esquerda.
+**Tratamento**: Adrenalectomia se > 4 cm ou funcionante e Escore de Weiss ≥ 3. Mitotano pode ser usado. Preferência à cirurgia aberta.
 
-- Irrigação arterial: Segmentos das artérias frênica, aorta e renal.
+## Vascularização
 
-- Verificar Figura 1 rtérias suprarrenais superiores da artéria frênica inferior)
+- Tanto adrenal direita quanto esquerda apresentam veia única: direita – drenagem para a veia cava; esquerda – drenagem para a veia renal esquerda;
+- **Irrigação arterial**: segmentos das artérias frênica, aorta e renal.
 
-Veia cava inferior (retraída medialmente) Ramos das artérias suprarrenais intermediárias (da aorta abdominal)
-
-Peritônio Pâncreas e baço Artéria frêntica inferior esquerda Artérias surprarrenais superiores Glândula suprarrenal Fáscia Renal (gerota)
-
-Rim esquerdo Veia esplênica Aorta erda respectivamente.
+*Verificar Figura 1.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -42,43 +40,45 @@ Rim esquerdo Veia esplênica Aorta erda respectivamente.
 
 <!-- page:2 -->
 
-## SINAIS E SINTOMAS
+## Sinais e Sintomas
 
-Zona glomerular Tabela 2: Hormônios produzidos pelo córtex da adrenal e seus Zona Fascicular respectivos sintomas em caso de tumores funcionantes.
+*Figura 2: Adrenal com suas zonas histológicas do córtex e medula (córtex: zona glomerular, zona fascicular, zona reticular; medula: células cromafins).*
 
-Córtex Córtex Zona Reticular Células Medula cromafins Figura 2: Adrenal com suas zonas histológicas do córtex e medula.
+### Córtex da Adrenal
 
-## CÓRTEX DA ADRENAL
+- **Glomerular**: produz Aldosterona;
+- **Fascicular**: produz Cortisol;
+- **Reticular**: produz Testosterona.
 
-- Glomerular: produz Aldosterona;
+*Tabela 1: Zonas histológicas da adrenal e respectivas produções hormonais.*
 
-- Fascicular: produz Cortisol;
+### Medula (no "recheio")
 
-- Reticular: produz Testosterona.
+- Células cromafins, produtoras de catecolaminas (noradrenalina).
 
-Tabela 1: Zonas histológicas da adrenal e respectivas produções hormonais
+*Tabela 2: Hormônios produzidos pelo córtex da adrenal e seus respectivos sintomas em caso de tumores funcionantes.*
 
-## MEDULA (NO RECHEIO)
-
-- Células cromafins, produtoras de
-
-Catecolaminas (NORadrenalina).
-
-## EPIDEMIOLOGIA - NÓDULOS
+## Epidemiologia — Nódulos
 
 - Maior incidência com a idade, com média de 5% na população geral;
-
 - 10-15% são funcionantes;
-
 - 2-5% são malignos.
 
-Figura 3: Incidência de nódulos adrenais encontrados na TC por faixa etária. EXAMES COMPLEMENTARES
+*Figura 3: Incidência de nódulos adrenais encontrados na TC por faixa etária.*
 
-## TC COM CONTRASTE É O PRINCIPAL EXAME
+## Exames Complementares
 
-Figura 4: Nódulo homogêneo com bordas regulares: padrão benigno. Figura 5:: Massa na adrenal direita, irregular, limites imprecisos, centro necrótico, heterogêneo: padrão maligno.
+### TC com Contraste É o Principal Exame
 
-- Ao avaliar o exame de imagem, observar: Tamanho → lesão > 4 cm sugestivo de malignidade; Bordas → irregularidade sugere malignidade; Densidade → > 10 unidades Hounsfield, indica irrigação anômala; Washout → se lento, também sugere hipervascularização, caraterística sugestiva de malignidade.
+*Figura 4: Nódulo homogêneo com bordas regulares — padrão benigno.*
+
+*Figura 5: Massa na adrenal direita, irregular, limites imprecisos, centro necrótico, heterogêneo — padrão maligno.*
+
+- Ao avaliar o exame de imagem, observar:
+  - **Tamanho** → lesão > 4 cm sugestivo de malignidade;
+  - **Bordas** → irregularidade sugere malignidade;
+  - **Densidade** → > 10 unidades Hounsfield, indica irrigação anômala;
+  - **Washout** → se lento, também sugere hipervascularização, característica sugestiva de malignidade.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -88,49 +88,41 @@ Figura 4: Nódulo homogêneo com bordas regulares: padrão benigno. Figura 5:: M
 
 <!-- page:3 -->
 
-Tabela 3:: Diferenciação radiográfica de nódulos benignos e malignos na tomografia
+*Tabela 3: Diferenciação radiográfica de nódulos benignos e malignos na tomografia.*
 
-## DIAGNÓSTICO
+## Diagnóstico
 
-CORTISOL:
+### Cortisol
 
 - Teste de supressão de cortisol com dexametasona;
+- Paciente ingere 1 mg de Dexametasona às 23h e coleta cortisol às 08h: resultado normal — cortisol suprimido.
 
-- Paciente ingere 1 mg de Dexa às 23h e Coleta cortisol às 08h: Resultado normal: cortisol suprimido.
-
-## ALDOSTERONA
+### Aldosterona
 
 - Hipocalemia;
+- Sugestivo de aldosteronoma: relação Aldosterona/Atividade Plasmática de Renina > 20;
+- **Testes confirmatórios**: sobrecarga oral de sódio; supressão com fludrocortisona.
 
-- Sugestivo de aldosteronoma: relação Aldosterona /
-
-Atividade Plasmática de Renina > 20;
-
-- Testes confirmatórios: Sobrecarga oral de Na; Supressão com fludrocortisona.
-
-## FEOCROMOCITOMA
+### Feocromocitoma
 
 - Produz noradrenalina e adrenalina;
-
 - 10% bilateral, 10% extra-adrenal, 10% maligno;
-
-- Preparo pré-op com alfa-bloqueador: Betabloqueador pode ser associado, se necessário, após 3-5 dias.
-
-- Aferir Catecolaminas séricas e metanefrinas urinárias;
-
+- Preparo pré-operatório com alfa-bloqueador; betabloqueador pode ser associado, se necessário, após 3-5 dias;
+- Aferir catecolaminas séricas e metanefrinas urinárias;
 - MIBG (exame de cintilografia).
 
-DIAGNÓSTICOS DIFERENCIAIS: Figura 6:: Metástase Figura 7: Cisto de Adrenal: possibilidade de ação compressiva traduz necessidade de intervenção.
+### Diagnósticos Diferenciais
 
-Figura 8:: Tuberculose de adrenal: calcificação bilateral das adrenais é mais sugestivo.
+*Figura 6: Metástase.*
 
-## TRATAMENTO
+*Figura 7: Cisto de Adrenal — possibilidade de ação compressiva traduz necessidade de intervenção.*
 
-- Adrenalectomia: VLP sempre que possível; Indicações: funcionantes; > 4 cm; outros sinais de malignidade. Caso contrário = Acompanhar
+*Figura 8: Tuberculose de adrenal — calcificação bilateral das adrenais é mais sugestivo.*
 
-- Seguimento: Se carcinoma de adrenal: aplicar Escore de Weiss:
+## Tratamento
 
-≥ 3 pontos indica carcinoma.
+- **Adrenalectomia**: videolaparoscopia (VLP) sempre que possível. Indicações: funcionantes; > 4 cm; outros sinais de malignidade. Caso contrário: acompanhar;
+- **Seguimento**: se carcinoma de adrenal, aplicar Escore de Weiss: ≥ 3 pontos indica carcinoma.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -140,12 +132,22 @@ Figura 8:: Tuberculose de adrenal: calcificação bilateral das adrenais é mais
 
 <!-- page:4 -->
 
-ESCORE DE WEISS REFERÊNCIAS Tabela 4: Escore de Weiss Figura 1, 2 e 3: Ilustrações Acervo Medcof. Figura 4: Adrenal com nódulo.
+### Escore de Weiss
 
-Fonte:https://www.researchgate.net/figure/33-year-old-man-withadrenaladenoma-A-Transverse-unenhanced-CT-image-shows_fig2_44590897 Figura 5: Massa na adrenal direita.
+*Tabela 4: Escore de Weiss.*
 
-Fonte: https://radiopaedia.org/articles/adrenal-adenoma?lang=us Figura 6: Metástase. Fonte: https://radiopaedia.org/articles/adrenal-metastasis-1 Figura 7: Cisto de Adrenal.
+## Referências
 
-Fonte: https://radiopaedia.org/articles/adrenal-cyst?lang=us Figura 8: Tuberculose de adrenal. Fonte: https://radiopaedia.org/articles/adrenal-tuberculosis?lang=uS
+Figuras 1, 2 e 3: Ilustrações — Acervo Medcof.
+
+Figura 4: Adrenal com nódulo. Fonte: https://www.researchgate.net/figure/33-year-old-man-with-adrenal-adenoma-A-Transverse-unenhanced-CT-image-shows_fig2_44590897
+
+Figura 5: Massa na adrenal direita. Fonte: https://radiopaedia.org/articles/adrenal-adenoma?lang=us
+
+Figura 6: Metástase. Fonte: https://radiopaedia.org/articles/adrenal-metastasis-1
+
+Figura 7: Cisto de Adrenal. Fonte: https://radiopaedia.org/articles/adrenal-cyst?lang=us
+
+Figura 8: Tuberculose de adrenal. Fonte: https://radiopaedia.org/articles/adrenal-tuberculosis?lang=us
 
 ![Figura do material - página 4](figure-004-1.webp)

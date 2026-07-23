@@ -865,7 +865,7 @@
         "D": "Cirurgia para tratamento de catarata em apenas um dos olhos afetados.",
         "E": "Orientação educacional."
       },
-      "answer": "D",
+      "answer": "E",
       "source": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 9",
       "images": [],
@@ -878,7 +878,9 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "answerAudit": "official-source",
+      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt"
     },
     {
       "id": "b09-sindromes-geriatricas-q05",
@@ -1046,7 +1048,7 @@
         "C": "I e IV.",
         "D": "I e III."
       },
-      "answer": "B",
+      "answer": "A",
       "source": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 9",
       "images": [
@@ -1062,7 +1064,9 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "answerAudit": "official-source",
+      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt"
     },
     {
       "id": "b09-corrimentos-q07",
@@ -4479,7 +4483,7 @@
         "C": "Cancro duro (sífilis primária).",
         "D": "Donovanose."
       },
-      "answer": "B",
+      "answer": "A",
       "source": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 9",
       "images": [],
@@ -4492,7 +4496,9 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "answerAudit": "official-source",
+      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt"
     },
     {
       "id": "b09-semanais-q152",

@@ -1,30 +1,25 @@
-# Uro-oncologia Bexiga
+# Uro-oncologia: Bexiga
 
 <!-- page:1 -->
 
-Uro-oncologia Neoplasia
+## Uro-oncologia: Neoplasia de Bexiga
 
-## Definição
+**Tópicos**: Definição; Epidemiologia (tabagismo); Sintomas e sinais (hematúria); Exames complementares (USG, UroTC — padrão-ouro); Diagnóstico (fundamental definir se é músculo invasivo ou não; representação da camada muscular; lembrar do T2); Indicações de Re-RTU (T1, G3, >3cm ou muscular não encontrada, exceto TaG1); Risco baixo (tumor < 3 cm, sem carcinoma in situ); Risco intermediário (nem alto nem baixo); Alto risco (carcinoma in situ, alto grau); Tratamento (múltiplas lesões, invasivo de muscular = cistectomia radical com reconstrução — neobexiga ortotópica ou Bricker; pode fazer neoadjuvância em bom status); Seguimento (cistoscopias regulares, lembrar de BCG em moderado e alto risco no tumor não invasivo).
 
-d Epidemiologia Tabagismo, Sintomas e sinais Hematúria Ex complementares US Importante defini Diagnóstico fundamental com representaç T2 Lembrar Indicações de Re-RTU: T1, G3 o Risco Baixo: Tumor < 3cm, sem carc Risco intermediári Alto risco: Car Tratamento Múltiplas lesõ Invasivo de Muscular ( Cistectomia Radical com r Pode fazer Cistoscopias regula Seguimento risc
+## Histologia
 
-- Urotélio: Origem da grande maioria das neoplasias malignas de bexiga; É uma camada fina de epitélio pseudoestratificado que recobre toda a via coletora, indo desde a bexiga até a pelve renal, formando todo o ureter; Logo abaixo do epitélio, tem o tecido conectivo da bexiga e a camada muscular.
+- **Urotélio**: origem da grande maioria das neoplasias malignas de bexiga. É uma camada fina de epitélio pseudoestratificado que recobre toda a via coletora, indo desde a bexiga até a pelve renal, formando todo o ureter;
+- Logo abaixo do epitélio, tem o tecido conectivo da bexiga e a camada muscular.
 
-Figura 1: Histologia normal da bexiga. do Urotélio, epitélio transicional desde pelve até bexiga exposição a aminas, radioterapia a (Macro = UroTC + cistoscopia)
+*Figura 1: Histologia normal da bexiga — epitélio transicional (urotélio), desde a pelve até a bexiga.*
 
-SG, UROTC (padrão ouro) ir se é músculo invasivo ou não. A RTU é ção da muscular. Isso muda totalmente o tratamento.
+- A invasão de tumores até o nível da camada muscular (**T2**) traz repercussão tanto prognóstica como para o tratamento do doente — isso muda totalmente o tratamento (diferenciar músculo invasivo x não invasivo com UroTC + cistoscopia).
 
-2 = cistectomia radical! ou >3 cm ou muscular não encontrada (exceto TaG1) res solitários ,Ta (papilíferos) , Baixo grau, cinoma in Situ - Seguimento sem BCG io: nem alto, nem baixo risco - BCG 1 ano rcinoma in situ, Alto grau, T1/TaG2G3, ões >3cm , Variantes - BCG 3 anos (T2), disseminado ou agressivo localmente:
-
-reconstrução (Neobexiga ortotópica ou Bricker). r neoadjuvância em bom status. ares, lembrar de BCG em moderado e alto co no tumor não invasivo.
-
-- A invasão de tumores até o nível da camada muscular tratamento do doente;
-
-(T2) traz repercussão tanto prognóstica como para o Figura 2: Câncer de bexiga - visão cistoscópica.
+*Figura 2: Câncer de bexiga - visão cistoscópica.*
 
 - Imagens bem típicas, quando se faz uma cistoscopia no paciente. Visualiza-se uma lesão papilífera típica de tumor urotelial, localizada bem próxima do meato ureteral direito, sugestiva de um tumor superficial (conclusão apenas após a ressecção e análise histopatológica);
 
-Figura 3: Câncer de bexiga - visão cistoscópica.
+*Figura 3: Câncer de bexiga - visão cistoscópica.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -34,87 +29,68 @@ Figura 3: Câncer de bexiga - visão cistoscópica.
 
 <!-- page:2 -->
 
-- Lesão com aspecto mais infiltrativo, com um diâmetro
+- Lesão com aspecto mais infiltrativo, com um diâmetro longitudinal mais extenso, parecendo ser uma lesão mais endurecida, não tem aspecto piriforme típico, sugere tumor de músculo invasivo;
+- **Tumores de bexiga**: 80% são superficiais; 20% são músculo-invasivos.
 
-- Cistoscopia:
+## Epidemiologia
 
-longitudinal mais extenso, parecendo ser uma lesão | Visualizar a bexiga procurando lesões. mais endurecida, não tem aspecto piriforme típico, Urotomografia (UROTC):
+**Fatores de risco:**
+- **Tabagismo** (principal fator de risco);
+- **Radioterapia pélvica**: pacientes que já fizeram algum tratamento para um outro tumor primário. Por exemplo: tumor de colo de útero com radioterapia ou braquiterapia na pelve pode aumentar risco para neoplasia urotelial;
+- **Exposição às aminas aromáticas**: principalmente exposições ocupacionais com corantes, petroquímicas e borracha;
+- **Esquistossomose**: com a variante da região do Egito — não é típico desse platelminto no Brasil.
 
-sugere tumor de músculo invasivo;
+## Sinais e Sintomas
 
-- Exame de imagem padrão-ouro;
+### Hematúria
 
-- Tumores de bexiga:
+- Sinal de alerta para tumor de bexiga em pacientes com fatores de risco;
+- **Definição**: > 3 hemácias por campo de aumento;
+- Outras causas urológicas podem também se apresentar com hematúria. Exemplos: mulher em idade fértil com infecção do trato urinário; ureterolitíase; procedimentos endourológicos;
+- O objetivo principal para esse sintoma é excluir neoplasia.
 
-- TC com contraste intravenoso que possui três fases:
+**Hematúria macroscópica**: 13% dos pacientes vão ter diagnóstico neoplásico. Podemos investigar com: citologia oncótica, cistoscopia e UroTC ou UroRM; além disso, excluir causas ginecológicas.
 
-- Tumores de bexiga: 80% são superficiais; 20% são músculo-invasivo.
+**Hematúria microscópica**: 3% dos pacientes vão ter diagnóstico neoplásico. Tem que se atentar a dismorfismo eritrocitário, que pode indicar doenças glomerulares — a investigação toda será conduzida por um nefrologista. Não se faz citologia oncótica.
 
-## EPIDEMIOLOGIA
+**Investigação da hematúria:**
+- Anamnese e exame físico completos: tentar achar fatores de risco para neoplasias e para diagnósticos diferenciais; excluir causas de sangramentos ginecológicos.
 
-- Fatores de risco:
+**Exames:**
+- **Citologia oncótica**: tem sensibilidade capaz de detectar a presença de um tumor urotelial;
+- **TC com contraste intravenoso**, com três fases: fase arterial; fase venosa; fase excretora. Para pacientes com alergia ao contraste, a alternativa é a ressonância.
 
-- Tabagismo (principal fator de risco);
+### Hematúria Microscópica (Estratificação e Conduta)
 
-- Radioterapia pélvica: Pacientes que já fizeram algum tratamento para um outro tumor primário; Por exemplo: tumor de colo de útero com radioterapia ou braquiterapia na pelve, pode aumentar risco para neoplasia urotelial.
+*Verificar Tabela 1.*
 
-- Exposição às aminas aromáticas: Principalmente exposições ocupacionais com corantes, petroquímicas e borracha.
+### Tabela 1: Classificação de Risco (Hematúria Microscópica)
 
-- Esquistossomose: Com a variante da região do Egito - não é típico desse platelminto no Brasil.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## SINAIS E SINTOMAS
+| Risco | Baixo | Intermediário | Alto |
+|---|---|---|---|
+| Tabagismo | Não fumante | < 30 maços-ano | > 30 maços-ano |
+| Hemácias | < 10 hem | < 25 hem | > 25 hem |
+| Idade — homem | H < 40a | H < 60a | H > 60a |
+| Idade — mulher | M < 50a | M < 60a | M > 60a |
 
-- Hematúria:
-
-- Sinal de alerta para tumor de bexiga para pacientes com fatores de risco;
-
-- Definição: S >3 hemácias por campo de aumento.
-
-- Outras causas urológicas podem também se apresentar com hematúria;
-
-- Exemplos: Mulher em idade fértil com infecção do trato urinário; Ureterolitíase; Procedimentos endourológicos;
-
-- O objetivo principal para esse sintoma é E excluir neoplasia.
-
-- Hematúria macroscópica: 13% dos pacientes vão ter diagnóstico neoplásico; Podemos investigar com: citologia oncótica, cistoscopia e uroTC ou uroRM; além disso, excluir causas ginecológicas.
-
-- Hematúria microscópica: 3% dos pacientes vão ter diagnóstico neoplásico; Tem que se atentar a dismorfismo eritrocitário, que pode indicar doenças glomerulares e a investigação toda será conduzida por um nefrologista; Não se faz citologia oncótica.
-
-Investigação da hematúria:
-
-- Anamnese e exame físico completos; Tentar achar fatores de risco para neoplasias e para diagnósticos diferenciais; Excluir causas de sangramentos ginecológicos.
-
-Exames:
-
-- Citologia oncótica: Tem sensibilidade capaz de detectar a presença de um tumor urotelial. - TC com contraste intravenoso que possui três fases: Fase arterial; Fase venosa; Fase excretora.
-
-- Para pacientes com alergia ao contraste, a alternativa é a ressonância.
-
-- Hematúria microscópica (estratificação e conduta);
-
-Tabela 1: Classificação de risco. Baixo Intermediário Alto não fumante < 30 m.a > 30 m.a < 10 hem < 25 hem > 25 hem H < 40a H < 60a H > 60a M < 50a M < 60a M > 60a
-
-- Risco baixo: repete análise de urina em 6 meses e considera USG + cistoscopia neste período caso o sintoma caso esteja incomodando/piorando para o paciente;
-
-- Risco intermediário: USG + cistoscopia;
-
-- Risco alto: UroTC + cistoscopia (investigação semelhante à hematúria macroscópica);
-
+- **Risco baixo**: repete análise de urina em 6 meses e considera USG + cistoscopia neste período, caso o sintoma esteja incomodando/piorando para o paciente;
+- **Risco intermediário**: USG + cistoscopia;
+- **Risco alto**: UroTC + cistoscopia (investigação semelhante à hematúria macroscópica);
 - Não se faz citologia oncótica.
 
-Sintomas de LUTS:
+### Sintomas de LUTS
 
 - Disúria persistente;
-
 - Polaciúria;
+- **Ureterohidronefrose**: ocorre quando o tumor está obstruindo as vias urinárias — no tumor de bexiga pode ocorrer obstrução do meato ureteral, piorando o prognóstico.
 
-- Ureterohidronefrose: Ocorre quando o tumor está obstruindo as vias urinárias - no tumor de bexiga pode ocorrer obstrução do meato ureteral; Piora prognóstico.
+## Exames Complementares
 
-Exames complementares
+- **USG**: exame auxiliar, pode ajudar; pode exibir algumas vegetações.
 
-- USG: Exame auxiliar, pode ajudar; Pode exibir algumas vegetações;.
-
-Figura 4: USG - CA bexiga.
+*Figura 4: USG - CA de bexiga.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -122,72 +98,76 @@ Figura 4: USG - CA bexiga.
 
 <!-- page:3 -->
 
-- UroTC:
+- **UroTC**: padrão-ouro. Na imagem abaixo, observa-se uma fase contrastada com o espessamento da bexiga, correspondente a uma vegetação de tumor urotelial.
 
-- Re-RTU - indicações Padrão-ouro. | Tumor > 3 cm; Na imagem abaixo, observa-se uma fase | T1;
+*Figura 5: TC - CA de bexiga.*
 
-contrastada com o espessamento da | G3; bexiga, correspondente a uma vegetação de | Camada muscular não representada na bexiga, correspondente a uma vegetação de tumor urotelial.
+### Re-RTU — Indicações
 
-Figura 5: TC - CA bexiga. DIAGNÓSTICO
+- Tumor > 3 cm;
+- T1;
+- G3;
+- Camada muscular não representada na primeira ressecção.
+
+## Diagnóstico
 
 - Confirmado com o anatomopatológico;
+- **Via**: ressecção transuretral de bexiga (RTUb). Entra na bexiga com um ressectoscópio; com a alça de ressecção se usa a energia monopolar para ressecar a lesão no subepitelial. Ressecção ideal é ir além do subepitelial, ressecando parte da camada muscular, caracterizando a ressecção completa. Assim é possível avaliar se é ou não um tumor músculo invasivo. Analisar a bexiga como um todo (cistoscopia armada), buscar outras lesões, pois é tumor comumente multicêntrico.
 
-- Via: ressecção transuretral de bexiga (RTUb). Entra na bexiga com um ressectoscópio, com a alça de ressecção se usa a energia monopolar para ressecar a lesão no subeptelial: Ressecção ideal é ir além do subeptelial, ressecando parte da camada muscular, caracterizando a ressecção completa. Assim é possível avaliar se é ou não um tumor músculo invasivo; Analisar a bexiga como um todo (cistoscopia armada), buscar outras lesões, pois é tumor comumente multicêntrico.
+### Estadiamento
 
-Estadiamento:
+**T bem detalhado:**
+- **Ta**: tumor que fica somente no urotélio, não é invasivo;
+- **T1**: invade o tecido subepitelial;
+- **T2**: tem a invasão da camada muscular;
+- **T3**: pode chegar até os limites da bexiga;
+- **T4**: invade estruturas adjacentes;
+- **Tis** (ou CIS - carcinoma in situ): lesões com ampla extensão longitudinal, porém pouco profunda, considerado de alto risco.
 
-- T bem detalhado: Ta: tumor que fica somente no urotélio, não é invasivo; T1: invade o tecido subepitelial; T2: tem a invasão da camada muscular; T3: pode chegar até os limites da bexiga; T4: invade estruturas adjacentes; Tis (ou CIS - carcinoma in situ): lesões com ampla extensão longitudinal, porém pouco profunda;
+**Grau de desorganização celular:**
+- **Baixo grau (G1)**: tem desorganização;
+- **Alto grau (G3)**: a desorganização é muito maior, com núcleos mais heterogêneos;
+- **CIS**: tem progressão mais longitudinal e em extensão do que em profundidade, mas confere um alto risco para o paciente.
 
-considerado de alto risco.
+*Figura 6: Grau de desorganização celular.*
 
-- Grau de desorganização celular: Baixo grau (G1): tem desorganização; Alto grau (G3): a desorganização é muito maior, com núcleos mais heterogêneos; CIS: tem progressão mais longitudinal e em extensão do que em profundidade, mas confere um alto risco para o paciente.
+- Re-RTU (nova ressecção transuretral): tem que ser feito duas a seis semanas após a RTU prévia, para analisar se há tumor residual e avaliar se há invasão da camada muscular da bexiga — realiza uma nova ressecção transuretral (RTU) no local da RTU prévia.
 
-Figura 6: Grau de desorganização celular. | Camada muscular não representada na primeira ressecção:
+*Verificar Tabela 2.*
 
-- Tem que ser feito duas a seis semanas após a RTU prévia, para analisar se há tumor residual e avaliar se há invasão da camada muscular da bexiga;
+### Tabela 2: Classificação de Risco (Tumor Não Músculo-Invasivo)
 
-- Realiza uma nova ressecção transuretral (RTU) no local da RTU prévia.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Tabela 2: Classificação de risco: Baixo risco Moderado risco Alto risco Tumores Carcinoma in situ solitários Não preenche Alto grau Ta (papilíferos)
+| Baixo risco | Moderado risco | Alto risco |
+|---|---|---|
+| Tumores solitários, Ta (papilíferos), baixo grau, sem carcinoma in situ | Não preenche critérios para baixo risco nem para alto risco | Carcinoma in situ, alto grau, T1/TaG2G3, múltiplas lesões > 3 cm, variantes |
 
-critérios para T1/TaG2G3 Baixo grau baixo risco nem Múltiplas lesões < 3 cm para alto risco > 3 cm Sem carcinoma Variantes in situ CONDUTA LOGO APÓS A RESSECÇÃO:
+## Conduta Logo Após a Ressecção
 
-Baixo risco:
+**Baixo risco:**
+- Dose única de quimioterapia intravesical não obrigatória;
+- Cistoscopia ambulatorial ou cirúrgica para analisar reincidência da lesão: intervalo inicialmente a cada 3 meses, a seguir anual, e por fim a cada 5 anos.
 
-- Dose única quimioterapia intravesical não obrigatória;
-
-- Cistoscopia ambulatorial ou cirúrgica para analisar reincidência da lesão: Intervalo: inicialmente a cada 3 meses, a seguir anual e por fim a cada 5 anos.
-
-Moderado risco:
-
+**Moderado risco:**
 - BCG por um ano;
+- Cistoscopia ambulatorial ou cirúrgica para analisar alguma reincidência da lesão: inicialmente a cada três meses; depois a cada seis meses; depois a cada um ano.
 
-- Cistoscopia ambulatorial ou cirúrgica para analisar alguma reincidência da lesão: Inicialmente a cada três meses; Depois a cada seis meses; Depois a cada um ano.
-
-Alto risco: ;
-
+**Alto risco:**
 - BCG por até três anos;
+- Cistoscopia ambulatorial ou cirúrgica para analisar alguma reincidência da lesão: inicialmente a cada três meses por dois anos (alta taxa de recidiva); depois a cada seis meses.
 
-- Cistoscopia ambulatorial ou cirúrgica para analisar alguma reincidência da lesão: Inicialmente a cada três meses por dois anos: Alta taxa de recidiva. Depois a cada seis meses.
-
-Muito alto risco:
-
-- Tumores T1G3 e CIS + um fator de risco:
-
-- Fatores de risco: > 70 anos; > 3 cm.
-
-m | > 3 lesões;
-
+**Muito alto risco:**
+- Tumores T1G3 e CIS + um fator de risco;
+- **Fatores de risco**: > 70 anos; > 3 cm; > 3 lesões;
 - Mesmo que não seja um tumor muito invasivo, pode se discutir a cistectomia direta.
 
-## TRATAMENTO
+## Tratamento
 
-Cistectomia radical: Abordagem aberta x robótica:
+### Cistectomia Radical
 
-- Nenhum estudo comprovou um benefício oncológico ainda de nenhuma das duas abordagens;
-
+- Abordagem aberta x robótica: nenhum estudo comprovou benefício oncológico ainda de nenhuma das duas abordagens;
 - Linfadenectomia pélvica estendida;
-
 - No homem: cistoprostatectomia;
 
 ![Figura do material - página 3](figure-003-1.webp)
@@ -198,57 +178,42 @@ Cistectomia radical: Abordagem aberta x robótica:
 
 <!-- page:4 -->
 
-- Na mulher: exenteração pélvica anterior. implantando os dois ureteres no fundo dessa alça.
+- Na mulher: exenteração pélvica anterior.
 
-- Casos que levam à cistectomia radical: A urina fica drenando para uma bolsinha na pele.
+### Casos que Levam à Cistectomia Radical
 
-- Músculo invasivo (T2):
+- **Músculo invasivo (T2)**: deve-se avaliar antes da cistectomia a realização de quimioterapia neoadjuvante, a partir de boa função renal;
+- **Superficial (Ta)**: CA urotelial de alto risco (muito alto risco; G3 recidivante; variantes histológicas);
+- Pode ter um tumor sincrônico na via urinária alta e na bexiga.
 
-- Verificar Figura 8 Deve-se avaliar antes da cistectomia a realização
+## Diagnósticos Diferenciais
 
-## DIAGNÓSTICOS DIFERENCIAIS
-
-de quimioterapia neoadjuvante a partir de boa função renal.
-
-- Superficial (Ta): CA urotelial alto: Muito alto risco;
-
-- Se levantou-se essa suspeita no exame de imagem, G3 recidivante; sempre começar investigação com uma cistoscopia; Variantes histológicas. | Pode ter um tumor sincrônico na via urinária alta e
-
-Reconstrução da via urinária do paciente: na bexiga; No caso do homem que retira a bexiga e a próstata,
-
-- Depois da cistoscopia, progride para uretroscopia tem que se realizar a derivação urinária dos dois com biópsia;
-
-ureteres livres.
-
+- Se levantou-se essa suspeita no exame de imagem, sempre começar investigação com uma cistoscopia;
+- Depois da cistoscopia, progride para uretroscopia com biópsia;
 - Se não tiver dúvida, pode fazer a biópsia incisional.
 
-Neobexiga ortotópica:
+## Reconstrução da Via Urinária do Paciente
 
-- Nefroureterectomia com linfadenectomia e ressecção
+No caso do homem que retira a bexiga e a próstata, tem que se realizar a derivação urinária dos dois ureteres livres.
 
-- Confecção de uma nova bexiga a partir de um de cuff vesical (porção periureteral distal):
+### Neobexiga Ortotópica
 
-segmento de intestino delgado, no mesmo lugar da | Casos de câncer urotelial alto com acometimento bexiga original, onde se implantam os dois ureteres; da pelve renal;
+- Confecção de uma nova bexiga a partir de um segmento de intestino delgado, no mesmo lugar da bexiga original, onde se implantam os dois ureteres;
+- Requer uma condição social e clínica (função renal preservada) para o paciente cuidar da reconstrução;
+- Sendo uma derivação ortotópica e continente: em teoria apresenta algum grau de continência;
+- Não pode ser indicada em alguns pacientes, sobretudo por disfunção renal, uma vez que a neobexiga é formada por um tecido de delgado que absorve parte da urina produzida.
 
-- Requer uma condição social e clínica (função renal | Retira-se o rim com todo o ureter e um segmento preservada) para o paciente cuidar da reconstrução; da bexiga;
+*Verificar Figura 7.*
 
-- Sendo uma derivação ortotópica e continente:
+### Conduto Ileal "Bricker"
 
-## SEGUIMENTO
+- É um método incontinente: com um conduto ileal, faz-se uma ressecção de um segmento do íleo. Retira do trânsito e fica como uma alça fechada, implantando os dois ureteres no fundo dessa alça; uma ostomia na pele. A urina fica drenando para uma bolsinha na pele.
 
-| Em teoria apresenta algum grau de continência; | Não pode ser indicada em alguns pacientes, sobretudo por disfunção renal, uma vez que a
+*Verificar Figura 8.*
 
-- Continuar com exames de cistoscopia regulares:
+*Figura 7: Neobexiga ortotópica.*
 
-neobexiga é formada por um tecido de delgado que | Lesões de caráter recidivante: não é incomum para absorve parte da urina produzida. o paciente que está livre da doença por algum
-
-- Verificar Figura 7 tempo, tem reincidência de novos tumores;
-
-Conduto ileal “Bricker”: | Geralmente o urotélio foi exposto a alta carga
-
-- É um método incontinente: tabágica durante toda a vida e está exposto aos Com um conduto ileal, faz-se uma ressecção de mesmos danos celulares, por isso há risco de um segmento do íleo. Retira do trânsito e fica recidiva de novas lesões.
-
-como uma alça fechada e uma ostomia na pele, Figura 7: Neobexiga ortotópica Figura 8: Conduto ileal “Bricker”
+*Figura 8: Conduto ileal "Bricker".*
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -258,22 +223,26 @@ como uma alça fechada e uma ostomia na pele, Figura 7: Neobexiga ortotópica Fi
 
 <!-- page:5 -->
 
-## REFERÊNCIAS
+## Seguimento
 
-Figura 4: USG - CA bexiga Neoplasms of the bladder. Radiology Key, [s.d.]. Disponível em: https:// radiologykey.com/neoplasms-of-the-bladder/. Acesso em: 4 jun. 2025.
+- Continuar com exames de cistoscopia regulares;
+- Lesões de caráter recidivante: não é incomum para o paciente que está livre da doença por algum tempo ter reincidência de novos tumores;
+- Geralmente o urotélio foi exposto a alta carga tabágica durante toda a vida e está exposto aos mesmos danos celulares, por isso há risco de recidiva de novas lesões.
 
-Figura 1: Histologia normal da bexiga Imagem retirada do site. Yong Loo Lin School of Medicine - National University of Singapore (NUS).
+## Nefroureterectomia
 
-Bladder – Normal Histology. Disponível em: https://medicine.nus.edu.sg/ Figura 5: Bladder – Normal Histology. Disponível em: https://medicine.nus.edu.sg/ pathweb/normal-histology/bladder/. Acesso em: 4 jun. 2025. (Imagem adaptada).
+- Com linfadenectomia e ressecção de cuff vesical (porção periureteral distal): casos de câncer urotelial alto com acometimento da pelve renal; retira-se o rim com todo o ureter e um segmento da bexiga.
 
-Figura 2: Câncer de bexiga - visão cistoscópica MEEKS, Joshua J.; VANDERWEELE, David; FENTON, Sarah E. Câncer de bexiga. BMJ Best Practice, 2025. Disponível em: https://bestpractice.bmj.
+## Referências
 
-com/topics/pt-br/980. Acesso em: 4 jun. 2025. Imagem retirada do site. Figura 3: Câncer de bexiga - visão cistoscópica ESPAÑA es el país europeo con mayor incidencia de cáncer de vejiga en varones. Somos Pacientes, 2012. Disponível em: https://www.
+Figura 4: USG - CA bexiga. Neoplasms of the bladder. Radiology Key, [s.d.]. Disponível em: https://radiologykey.com/neoplasms-of-the-bladder/. Acesso em: 4 jun. 2025.
 
-somospacientes.com/noticias/al-dia/de-interes/espana-es-el-paiseuropeo-con-mayor-incidencia-de-cancer-de-vejiga-en-varones/.
+Figura 1: Histologia normal da bexiga. Imagem retirada do site. Yong Loo Lin School of Medicine - National University of Singapore (NUS). Bladder – Normal Histology. Disponível em: https://medicine.nus.edu.sg/pathweb/normal-histology/bladder/. Acesso em: 4 jun. 2025. (Imagem adaptada).
 
-Acesso em: 4 jun. 2025. Imagem retirada do site. Figura 5: TC - CA bexiga Neoplasms of the bladder. Radiology Key, [s.d.]. Disponível em: https:// radiologykey.com/neoplasms-of-the-bladder/. Acesso em: 4 jun. 2025.
+Figura 2: Câncer de bexiga - visão cistoscópica. MEEKS, Joshua J.; VANDERWEELE, David; FENTON, Sarah E. Câncer de bexiga. BMJ Best Practice, 2025. Disponível em: https://bestpractice.bmj.com/topics/pt-br/980. Acesso em: 4 jun. 2025. Imagem retirada do site.
 
-Imagem retirada do site. Figura 6: Grau de desorganização celular. BLADDER CANCER ADVOCACY NETWORK (BCAN). Bladder cancer types, stages and grades. 2025. Disponível em: https://bcan.org/facing-bladdercancer/bladder-cancer-types-stages-grades/. Acesso em: 4 jun. 2025.
+Figura 3: Câncer de bexiga - visão cistoscópica. ESPAÑA es el país europeo con mayor incidencia de cáncer de vejiga en varones. Somos Pacientes, 2012. Disponível em: https://www.somospacientes.com/noticias/al-dia/de-interes/espana-es-el-pais-europeo-con-mayor-incidencia-de-cancer-de-vejiga-en-varones/. Acesso em: 4 jun. 2025. Imagem retirada do site.
 
-Imagem adaptada do site.
+Figura 5: TC - CA bexiga. Neoplasms of the bladder. Radiology Key, [s.d.]. Disponível em: https://radiologykey.com/neoplasms-of-the-bladder/. Acesso em: 4 jun. 2025. Imagem retirada do site.
+
+Figura 6: Grau de desorganização celular. Bladder Cancer Advocacy Network (BCAN). Bladder cancer types, stages and grades. 2025. Disponível em: https://bcan.org/facing-bladder-cancer/bladder-cancer-types-stages-grades/. Acesso em: 4 jun. 2025. Imagem adaptada do site.

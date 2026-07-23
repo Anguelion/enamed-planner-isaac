@@ -805,7 +805,7 @@
         "C": "Não adicionar sal à comida da criança no primeiro ano de vida.",
         "D": "Oferecer água potável à criança em vez de sucos, refrigerantes e outras bebidas açucaradas."
       },
-      "answer": "A",
+      "answer": "C",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -819,7 +819,9 @@
         "Processamento de Alimentos"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanal-q028",
@@ -2107,7 +2109,7 @@
         "C": "Imunofenotipagem de sangue periférico.",
         "D": "Esfregaço de sangue periférico."
       },
-      "answer": "A",
+      "answer": "B",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2120,7 +2122,9 @@
         "Investigação Hematológica",
         "Paciente Assintomatico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanal-q074",
@@ -2136,7 +2140,7 @@
         "C": "Hemocromatose hereditária.",
         "D": "Anemia sideroblástica."
       },
-      "answer": "D",
+      "answer": "A",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [
@@ -2152,7 +2156,9 @@
         "Diagnóstico Diferencial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q72",
@@ -2229,7 +2235,7 @@
         "D": "Pseudocisto pancreático infectado.",
         "E": "Rotura esplênica espontânea."
       },
-      "answer": "D",
+      "answer": "A",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2242,7 +2248,9 @@
         "Tomografia de Abdome",
         "Diagnóstico Diferencial"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanal-q071",
@@ -2259,7 +2267,7 @@
         "D": "Laparotomia de urgência com salpingectomia e controle do sangramento.",
         "E": "Coleta de beta-hCG e alta com retorno ambulatorial para ultrassonografia repetida."
       },
-      "answer": "B",
+      "answer": "D",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2273,7 +2281,9 @@
         "Tratamento Cirúrgico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanal-q070",
@@ -2379,7 +2389,7 @@
         "D": "Cristaloides intravenosos e embolização arterial por arteriografia.",
         "E": "Transfusão de concentrado de hemácias e laparotomia exploradora."
       },
-      "answer": "D",
+      "answer": "B",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2393,7 +2403,9 @@
         "Estratégia de Tratamento"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q80",
@@ -2409,7 +2421,7 @@
         "C": "Videotoracoscopia, com retirada do cateter sob visão direta.",
         "D": "Drenagem torácica no 5º espaço intercostal e retirada do cateter."
       },
-      "answer": "B",
+      "answer": "D",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2422,7 +2434,9 @@
         "Trauma Torácico",
         "Conduta Pós-Procedimento"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q81",
@@ -2438,7 +2452,7 @@
         "C": "Limpeza dos ferimentos após avalição do reto; sutura e aproximação dos planos e realizar uma colostomia de proteção – antibioticoterapia.",
         "D": "Reconstrução do períneo e drenagem da região; antibioticoterapia."
       },
-      "answer": "A",
+      "answer": "B",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2451,7 +2465,9 @@
         "Controle de Hemorragia",
         "Antibioticoprofilaxia"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q82",
@@ -2497,7 +2513,7 @@
         "D": "Cristaloides intravenosos e embolização arterial por arteriografia.",
         "E": "Transfusão de concentrado de hemácias e laparotomia exploradora."
       },
-      "answer": "C",
+      "answer": "B",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2510,7 +2526,9 @@
         "Estabilidade Hemodinâmica",
         "Estratégia de Tratamento"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q84",
@@ -2584,7 +2602,7 @@
       "options": {
         "A": "Anote sua principal hipótese e leia nosso comentário."
       },
-      "answer": "C",
+      "answer": "A",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2597,7 +2615,9 @@
         "Avaliação da Mamada",
         "Ganho Ponderal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q87",
@@ -2613,7 +2633,7 @@
         "C": "Checar e orientar a técnica de amamentação e estimular o aleitamento materno exclusivo.",
         "D": "Prescrever fórmula extensamente hidrolisada pela hipótese de alergia à proteína do leite de vaca."
       },
-      "answer": "A",
+      "answer": "C",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2626,7 +2646,9 @@
         "Ganho Ponderal",
         "Manejo da Amamentação"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q88",
@@ -2642,7 +2664,7 @@
         "C": "A amamentação, embora muito benéfica ao lactente, deve ser interrompida quando o bebê completa dois anos de idade. Após essa idade, há um estranhamento social ao ver um pré-escolar sendo amamentado, podendo inclusive haver prejuízos no seu desenvolvimento social.",
         "D": "Nos dias mais quentes, o lactente em aleitamento materno exclusivo poderá aumentar o número de mamadas no decorrer do dia. Porém, independente do clima, não há necessidade de introduzir água para hidratação do bebê, visto que o leite materno possui capacidade total de hidratá-lo isoladamente."
       },
-      "answer": "A",
+      "answer": "C",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2655,7 +2677,9 @@
         "Hidratação do Lactente",
         "Saúde Infantil"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanal-q091",
@@ -2671,7 +2695,7 @@
         "C": "Orientar a ordenha do leite materno com bomba e oferecer com mamadeira.",
         "D": "Orientar a técnica de amamentação e os cuidados com a mama e reavaliar em 3 dias."
       },
-      "answer": "A",
+      "answer": "D",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2685,7 +2709,9 @@
         "Manejo da Lactação"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q90",
@@ -2701,7 +2727,7 @@
         "C": "Redução de diabetes tipo 1 e 2 para a criança",
         "D": "Redução do risco materno de câncer de cólon."
       },
-      "answer": "A",
+      "answer": "D",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2714,7 +2740,9 @@
         "Saúde Infantil",
         "Alojamento Conjunto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q91",
@@ -2730,7 +2758,7 @@
         "C": "Verificar e orientar a técnica da mamada.",
         "D": "Introduzir complemento com leite de vaca."
       },
-      "answer": "B",
+      "answer": "C",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2743,7 +2771,9 @@
         "Fissuras Mamilares",
         "Avaliação da Mamada"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q92",
@@ -2759,7 +2789,7 @@
         "C": "Suspender o aleitamento, podendo ofertar apenas leite humano pasteurizado ou fórmula infantil de partida.",
         "D": "Manter aleitamento materno, sem qualquer observação especial quanto ao manejo."
       },
-      "answer": "C",
+      "answer": "A",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2772,7 +2802,9 @@
         "RIPE",
         "Prevenção de Transmissão"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q93",
@@ -2818,7 +2850,7 @@
         "D": "Transtorno de ruminação, com regurgitação repetida de alimentos previamente ingeridos.",
         "E": "Síndrome de alimentação noturna, caracterizada pela ingestão compulsiva durante a madrugada."
       },
-      "answer": "C",
+      "answer": "A",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2831,7 +2863,9 @@
         "Processamento Sensorial",
         "Pré-Escolar"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q95",
@@ -2936,7 +2970,7 @@
         "C": "O limite lateral é a borda lateral do músculo psoas.",
         "D": "O limite medial é o nervo obturatório."
       },
-      "answer": "D",
+      "answer": "C",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -2949,7 +2983,9 @@
         "Cadeia Ilíaca",
         "Cadeia Obturatória"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q99",
@@ -3052,7 +3088,7 @@
         "C": "A crise previdenciária, a mobilização dos movimentos sociais por aumento da extensão das ações de assistência médica, uma nova articulação entre os setores público e privado na saúde e a participação popular nos diversos níveis da federação.",
         "D": "A desarticulação entre setor público e privado, a desmobilização dos movimentos sociais por saúde, a articulação entre os diversos níveis de atenção à saúde da federação e a crise das instituições democráticas"
       },
-      "answer": "B",
+      "answer": "C",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -3066,7 +3102,9 @@
         "História da Saúde"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q103",
@@ -3082,7 +3120,7 @@
         "C": "Universalidade.",
         "D": "Coordenação do cuidado."
       },
-      "answer": "A",
+      "answer": "D",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -3095,7 +3133,9 @@
         "Atributos da APS",
         "Falha de Seguimento"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q104",
@@ -3111,7 +3151,7 @@
         "C": "Estabelecer plano terapêutico singular em articulação com a APS e a assistência social, com registro compartilhado e ações intersetoriais no território.",
         "D": "Priorizar o acesso imediato a abrigos institucionais, como condição inicial para viabilizar o cuidado em saúde."
       },
-      "answer": "D",
+      "answer": "C",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -3124,7 +3164,9 @@
         "Vínculo Territorial",
         "Vulnerabilidade Social"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q105",
@@ -3140,7 +3182,7 @@
         "C": "Apenas as proposições I, II e IV estão corretas.",
         "D": "Apenas as proposições I e III estão corretas."
       },
-      "answer": "D",
+      "answer": "B",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -3153,7 +3195,9 @@
         "Regionalização",
         "Descentralização"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q106",
@@ -3169,7 +3213,7 @@
         "C": "A eugenia positiva se traduziu, no Brasil, na implantação de programas estatais de segregação racial e de internação compulsória de usuários de álcool e outras drogas, com o objetivo de preservar a \"pureza racial\" e controlar os vícios sociais.",
         "D": "A eugenia preventiva foi expressa na defesa do saneamento básico, da puericultura, dos exames pré-nupciais e da educação higiênico- sexual, sendo associada ao combate às doenças endêmicas nas zonas rurais — um campo de atuação da Fundação Rockefeller."
       },
-      "answer": "C",
+      "answer": "D",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -3182,7 +3226,9 @@
         "Fundação Rockefeller",
         "Puericultura"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q107",
@@ -3199,7 +3245,7 @@
         "D": "Universalidade e vulnerabilidade programática.",
         "E": "Equidade e vulnerabilidade social."
       },
-      "answer": "D",
+      "answer": "B",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
       "images": [],
@@ -3212,7 +3258,9 @@
         "Vulnerabilidade em Saúde",
         "Organização da Rede"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     }
   ]
 }

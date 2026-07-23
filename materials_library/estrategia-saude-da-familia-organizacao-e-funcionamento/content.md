@@ -1,341 +1,238 @@
-# Estratégia Saúde da Família Organização e Funcionamento
+# Estratégia Saúde da Família - Organização e Funcionamento
 
 <!-- page:1 -->
 
-## ESTRATÉGIA SAÚDE DA FAMÍLIA
+## Política Nacional de Atenção Básica (PNAB) 2017
 
-## ORGANIZAÇÃO E FUNCIONAMENTO
+- **ESF:** principal estratégia de organização da Atenção Primária no Brasil. Busca superar modelos centrados na doença, fortalecendo cuidado territorial, integral e com participação comunitária;
+- **Princípios do SUS na APS:** universalidade, equidade, integralidade;
+- **Diretrizes:** regionalização, territorialização, população adscrita, cuidado centrado na pessoa, resolutividade, longitudinalidade, coordenação, ordenação da rede e participação social.
 
-ESF
+## Equipes Específicas
 
-## POLÍTICA NACIONAL DE ATENÇÃO BÁSICA EQUIPES ESPECÍFICAS
+- **eMulti (2023):** substitui NASF-AB; apoio matricial e multiprofissional (Portarias 635/2023 e 3.493/2024);
+- **eSFR/eSFF:** para contextos ribeirinhos/fluviais; atuação em embarcações; incluem técnico ou auxiliar de laboratório/bioquímico e odontologia;
+- **eCR:** 3 modalidades, atua com população em situação de rua; médico só obrigatório na modalidade III;
+- **eAPP:** Atenção Primária no sistema prisional (regida pela PNAISP); não exige ACS.
 
-(PNAB) 2017 z eMulti (2023): Substitui NASF-AB; apoio matricial e
+## Organização dos Serviços: Tipos de Equipes
 
-- ESF: Principal estratégia de organização da Atenção multiprofissional (Portarias 635/2023 e 3.493/2024).
+- **UBS:** qualquer unidade de APS; pode ou não ter eSF;
+- **USF:** UBS com pelo menos uma eSF;
+- **eSF:** médico, enfermeiro, técnico ou auxiliar de enfermagem + ACS (todos com 40h);
+- **eAP:** sem ACS; modalidade 1 (20h – cobre até 50% da eSF), modalidade 2 (30h – até 75%);
+- **eSB:** modalidade I (cirurgião-dentista + ASB ou TSB); modalidade II (cirurgião-dentista + TSB + ASB).
 
-Primária no Brasil. Busca superar modelos centrados z eSFR/eSFF: Para contextos ribeirinhos/ na doença, fortalecendo cuidado territorial, integral e fluviais; atuação em embarcações; incluem com participação comunitária. bioquímico e odontologia.
+Verificar Tabela 1.
 
-- Princípios do SUS na APS: universalidade, z eCR: 3 modalidades, atua com população equidade, integralidade. em situação de rua; médico só obrigatório
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Diretrizes: regionalização, territorialização, população na modalidade III.
+**Tabela 1: Faixa de pessoas vinculadas e acompanhadas por Equipe de Saúde da Família e Equipe de Atenção Primária à Saúde**
 
-adscrita, cuidado centrado na pessoa, resolutividade, z eAPP: Atenção primária no sistema prisional (regida longitudinalidade, coordenação, ordenação da rede e pela PNAISP); não exige ACS.
+| Porte Populacional (habitantes) | eSF - Parâmetro | eSF - Limite máximo | eAP 30h - Parâmetro | eAP 30h - Limite máximo | eAP 20h - Parâmetro | eAP 20h - Limite máximo |
+|---|---|---|---|---|---|---|
+| 1 - Até 20 mil | 2.000 | 3.000 | 1.500 | 2.250 | 1.000 | 1.500 |
+| 2 - Acima de 20 mil até 50 mil | 2.500 | 3.750 | 1.875 | 2.813 | 1.250 | 1.875 |
+| 3 - Acima de 50 mil até 100 mil | 2.750 | 4.125 | 2.063 | 3.095 | 1.375 | 2.063 |
+| 4 - Acima de 100 mil | 3.000 | 4.500 | 2.250 | 3.375 | 1.500 | 2.250 |
 
-participação social. ORGANIZAÇÃO DOS SERVIÇOS: TIPOS DE EQUIPES:
+## Introdução PNAB 2017
 
-- UBS: Qualquer unidade de APS; pode ou não ter eSF.
+- A Estratégia de Saúde da Família (ESF) é a principal estratégia e modelo tecnoassistencial de atenção à saúde no Brasil;
+- É a principal forma de operacionalização da Atenção Primária à Saúde (APS), promovendo a reorganização do modelo assistencial;
+- Busca superar modelos hegemônicos centrados na doença, como o modelo médico-curativista e privatista, fortalecendo práticas baseadas no território, no cuidado integral e na participação social.
 
-- eSF: Médico, enfermeiro, técnico ou auxiliar de
+**Principais mudanças da PNAB 2017:**
 
-- USF: UBS com pelo menos uma eSF.
-
-enfermagem + ACS (todos com 40h).
-
-- Verificar Tabela 1
-
-- eAP: Sem ACS; modalidade 1 (20h – cobre até 50% da eSF), modalidade 2 (30h – até 75%).
-
-- eSB: Modalidade I (cirurgião + ASB ou TSB);
-
-Modalidade II (cirurgião + TSB + ASB). Tabela 1: Faixa de pessoas vinculadas e acompanhadas por Equipe de Saúde da Família e Equipe de Atenção Primária à Saúde eSF eAP 30h eAP 20h Porte Populacional Parâmetro Parâmetro Parâmetro Limite Limite Limite (habitantes) de pessoas de pessoas de pessoas máximo máximo máximo vinculadas vinculadas vinculadas 1- Até 20 mil 2.000 3.000 1.500 2.250 1.000 1.500 2- Acima de 20 2.500 3.750 1.875 2.813 1.250 1.875 mil até 50 mil 3- Acima de 50 2.750 4.125 2.063 3.095 1.375 2.063 mil até 100 mil 4- Acima de 100 3.000 4.500 2.250 3.375 1.500 2.250 mil INTRODUÇÃO PNAB 2017
-
-- Principais mudanças:
-
-- A Estratégia de Saúde da Família (ESF) é a principal | Flexibilização do número de ACS por área estratégia e modelo tecnoassitencial de atenção à de abrangência.
-
-saúde no Brasil. | Permissão para equipes sem ACS.
-
-- É a principal forma de operacionalização da Atenção | Incorporação de atividades administrativas ao ACS, do modelo assistencial. | Fusão de atribuições entre ACS e ACE.
-
-Primária à Saúde (APS), promovendo a reorganização impactando negativamente a territorialização.
-
-- Busca superar modelos hegemônicos centrados | Flexibilização da carga horária de médicos e na doença, como o modelo médico-curativista enfermeiros (podem atuar em mais de uma equipe).
-
-e privatista, fortalecendo práticas baseadas no | Instituição da figura do gerente da Unidade território, no cuidado integral e na participação social. de Saúde.
+- Flexibilização do número de ACS por área de abrangência;
+- Permissão para equipes sem ACS;
+- Incorporação de atividades administrativas ao ACS, fusão de atribuições entre ACS e ACE, impactando negativamente a territorialização;
+- Flexibilização da carga horária de médicos e enfermeiros (podem atuar em mais de uma equipe);
+- Instituição da figura do gerente da Unidade de Saúde.
 
 ---
 
 <!-- page:2 -->
 
-| Transformação do NASF em NASF-AB | Modalidade 2 (30h): Cobre até 75% da população (descontinuado em 2023, sendo substituído pelas de uma eSF.
+- Transformação do NASF em NASF-AB (descontinuado em 2023, sendo substituído pelas Equipes Multiprofissionais na APS - eMulti, com novas diretrizes de financiamento, composição e processo de trabalho - Portarias GM/MS nº 635/2023 e nº 3.493/2024);
+- **População adscrita por equipe:** de 2.000 a 3.500 pessoas (parâmetro adaptável conforme porte do município e vulnerabilidades).
 
-Equipes Multiprofissionais na APS (eMulti), com
+**Equipe de Saúde Bucal (eSB):** atua vinculada a uma eSF ou eAP.
 
-- Equipe de Saúde Bucal (eSB): Atua vinculada a uma novas diretrizes de financiamento, composição eSF ou eAP.
+- **Modalidade I:** cirurgião-dentista + auxiliar ou técnico em saúde bucal;
+- **Modalidade II:** cirurgião-dentista + técnico + auxiliar (ou outro técnico).
 
-e processo de trabalho - Portarias GM/MS nº | Modalidade I: Cirurgião-dentista + auxiliar ou 635/2023 e nº 3.493/2024). técnico em saúde bucal.
+## Princípios e Diretrizes do SUS e da RAS a Serem Operacionalizados na Atenção Básica
 
-| População adscrita por equipe: de 2.000 a 3.500 | Modalidade II: Cirurgião-dentista + técnico + pessoas (parâmetro adaptável conforme porte do auxiliar (ou outro técnico).
+- **I. Princípios:** Universalidade, Equidade e Integralidade;
+- **II. Diretrizes:** Regionalização e Hierarquização, Territorialização, População adscrita, Cuidado centrado na Pessoa, Resolutividade, Longitudinalidade do Cuidado, Coordenação do Cuidado, Ordenação da Rede e Participação da Comunidade.
 
-município e vulnerabilidades). Equipes para Populações Específicas e Suporte Multiprofissional PRINCÍPIOS E DIRETRIZES DO SUS E DA RAS A
+## Equipes para Populações Específicas e Suporte Multiprofissional
 
-- Equipe Multiprofissional na APS (eMulti): As na Pessoa, Resolutividade, Longitudinalidade do (Ampliada, Complementar e Estratégica) são para fins
+**Equipe Multiprofissional na APS (eMulti):** as modalidades de financiamento (Ampliada, Complementar e Estratégica) da eMulti, instituídas pela Portaria nº 635/2023 (e regulamentadas pela Portaria nº 3.493/2024), substituíram o NASF-AB. Seu propósito é dar suporte às equipes de AB, atuando com ações matriciais e apoio clínico-pedagógico.
 
-SEREM OPERACIONALIZADOS NA ATENÇÃO eMulti, instituídas pela Portaria nº 635/2023 (e BÁSICA regulamentadas pela Portaria nº 3.493/2024), I. Princípios: Universalidade, Equidade e Integralidade; substituíram o Nasf-AB. O seu propósito é dar II. Diretrizes: Regionalização e Hierarquização, suporte às equipes de AB, atuando com ações Territorialização, População adscrita, Cuidado centrado matriciais e apoio clínico-pedagógico. As modalidades Cuidado, Coordenação do Cuidado, Ordenação da de financiamento.
+## Saúde da Família: Estratégia Prioritária
 
-rede e Participação da Comunidade;
+- São reconhecidas outras estratégias de Atenção Básica, desde que haja estímulo para a conversão em ESF;
+- Podem ser de dois tipos de estabelecimento:
+  - **UBS:** são os estabelecimentos onde atuam as equipes da APS. Quando há presença de eSF, a unidade pode ser chamada de Unidade de Saúde da Família (USF), conforme pactuação local;
+  - **USF:** pelo menos uma equipe de saúde da família. Mínimo de 40 horas semanais, por 5 dias da semana e nos 12 meses do ano. Horários alternativos de funcionamento podem existir, desde que pactuados;
+- **População adscrita por eAP (Equipe de Atenção Primária) e eSF (Equipe de Saúde da Família):** 2.000 a 3.500 pessoas, localizada dentro do seu território. Podem existir outros arranjos, conforme vulnerabilidades, riscos e dinâmica comunitária;
+- 4 equipes por UBS/USF (AP ou SF) — para que possam atingir o seu potencial resolutivo;
+- Teto máximo de equipes, com ou sem profissionais de saúde bucal — Município e DF: População/2000;
+- Municípios com menos de 2.000 habitantes: uma equipe (eSF ou eAP) responde por todo o território.
 
-- Equipe de Saúde da Família Ribeirinha (eSFR)
+## Modalidades de Equipes
 
-- Vinculada a uma UBS na sede do município ou em
+**Equipe de Saúde da Família (eSF):** estratégia prioritária da PNAB.
 
-SAÚDE DA FAMÍLIA: ESTRATÉGIA PRIORITÁRIA comunidade ribeirinha da área adstrita.
+- **Composição mínima:** médico, enfermeiro, técnico ou auxiliar de enfermagem e ACS;
+- **Carga horária:** 40 horas semanais obrigatórias para todos os profissionais.
 
-- São reconhecidas outras estratégias de
+**Equipe de Atenção Primária (eAP):** a Portaria nº 2.539/2019 alterou o nome de "eAB" para "eAP". Não exige a presença de ACS.
 
-- Composição mínima:
+- **Modalidade 1 (20h):** cobre até 50% da população de uma eSF;
+- **Modalidade 2 (30h):** cobre até 75% da população de uma eSF.
 
-Atenção Básica, desde que haja estímulo para a | 1 (um) médico (preferencialmente de conversão em ESF. Família e Comunidade);
+**Equipe de Saúde da Família Ribeirinha (eSFR):**
 
-- Podem ser de dois tipos de estabelecimento: | 1 (um) enfermeiro (preferencialmente com UBS: São os estabelecimentos onde atuam as especialização em Saúde da Família);
-
-equipes da APS. Quando há presença de eSF, a | 1 (um) técnico ou auxiliar de enfermagem. unidade pode ser chamada de Unidade de Saúde
-
-- Profissionais adicionais possíveis: USF: pelo menos uma equipe de saúde da | Agente de combate às endemias (ACE);
-
-da Família (USF), conforme pactuação local.; | Agente comunitário de saúde (ACS); família. Mínimo de 40 horas semanais, por 5 | Profissionais de saúde bucal: 1 cirurgião-dentista e 1 dias da semana e nos 12 meses do ano. Horários técnico ou auxiliar em saúde bucal.
-
-alternativos de funcionamentos podem existir,
-
-- Atendimento à população:
-
-desde que pactuados. População adscrita por | No mínimo, 14 (quatorze) dias mensais. eAP (equipe de Atenção Primária) e eSF (Equipe
-
+- Vinculada a uma UBS na sede do município ou em comunidade ribeirinha da área adstrita;
+- **Composição mínima:**
+  - 1 (um) médico (preferencialmente de Família e Comunidade);
+  - 1 (um) enfermeiro (preferencialmente com especialização em Saúde da Família);
+  - 1 (um) técnico ou auxiliar de enfermagem.
+- **Profissionais adicionais possíveis:**
+  - Agente de combate às endemias (ACE);
+  - Agente comunitário de saúde (ACS);
+  - Profissionais de saúde bucal: 1 cirurgião-dentista e 1 técnico ou auxiliar em saúde bucal.
+- **Atendimento à população:** no mínimo, 14 (quatorze) dias mensais;
 - Adaptada à realidade amazônica e ribeirinha.
 
-de Saúde da Família) – 2000 a 3500 pessoas,
+**Equipe de Saúde da Família Fluvial (eSFF):**
 
-- Equipe de Saúde da Família Fluvial (eSFF) localizada dentro do seu território. Podem existir
+- Atua por meio de Unidades Básicas de Saúde Fluviais (UBSF);
+- **Composição mínima:**
+  - 1 (um) médico (preferencialmente de Família e Comunidade);
+  - 1 (um) enfermeiro (preferencialmente com especialização em Saúde da Família);
+  - 1 (um) técnico ou auxiliar de enfermagem.
+- **Profissionais adicionais possíveis:**
+  - ACS, ACE;
+  - Profissionais de saúde bucal: 1 cirurgião-dentista e 1 técnico ou auxiliar em saúde bucal;
+  - 1 (um) técnico de laboratório e/ou bioquímico.
+- Atuação itinerante, por meio de embarcações adaptadas.
 
-- Atua por meio de Unidades Básicas de Saúde outros arranjos, conforme vulnerabilidades, riscos e Fluviais (UBSF).
+**Equipe de Consultório na Rua (eCR):**
 
-dinâmica comunitária.
-
-- Composição mínima:
-
-- 4 equipes por UBS/USF (AP ou SF) – para que possam | 1 (um) médico (preferencialmente de atingir o seu potencial resolutivo; Família e Comunidade);
-
-- Teto máximo de equipes, com ou sem profissionais de | 1 (um) enfermeiro (preferencialmente com saúde bucal – Município e DF: População/2000; especialização em Saúde da Família);
-
-- Municípios com menos de 2.000 habitantes: uma | 1 (um) técnico ou auxiliar de enfermagem.
-
-equipe (eSF ou eAP) responde por todo o território.
-
-- Profissionais adicionais possíveis: ACS, ACE;
-
-MODALIDADES DE EQUIPES | Profissionais de saúde bucal: 1 cirurgião-dentista e 1
-
-- Equipe de Saúde da Família (eSF): Estratégia técnico ou auxiliar em saúde bucal; Composição Mínima: Médico, Enfermeiro, Técnico
-
-prioritária da PNAB. | 1 (um) técnico de laboratório e/ou bioquímico.
-
-- Atuação itinerante, por meio de ou Auxiliar de Enfermagem e ACS. embarcações adaptadas. Carga Horária: 40 horas semanais obrigatórias para
-
-- Equipe de Consultório na Rua (eCR) todos os profissionais.
-
-- Atende pessoas em situação de rua ou com
-
-- Equipe de Atenção Primária (eAP): A Portaria nº perfil semelhante.
-
-2.539/2019 alterou o nome de “eAB” para “eAP”. Não
-
-- Atuação itinerante, em ruas, unidades móveis, UBS do exige a presença de ACS. território e locais estratégicos. Modalidade 1 (20h): Cobre até 50% da população
-
-- Integração com:
-
-de uma eSF. | eSF, eAP, CAPS, Rede de Urgência, SUAS e instituições comunitárias.
+- Atende pessoas em situação de rua ou com perfil semelhante;
+- Atuação itinerante, em ruas, unidades móveis, UBS do território e locais estratégicos;
+- **Integração com:** eSF, eAP, CAPS, Rede de Urgência, SUAS e instituições comunitárias.
 
 ---
 
 <!-- page:3 -->
 
-- Composição:
+- **Composição:** multiprofissional, com até 2 profissionais da mesma categoria (nível médio ou superior); ACS pode ser incluído, mas não é obrigatório;
+- **Modalidades:**
+  - Modalidade I e II: médico não obrigatório;
+  - Modalidade III: médico obrigatório.
+- **Carga horária mínima:** 30 horas semanais; funcionamento diurno e/ou noturno, todos os dias da semana.
 
-- Utilizar o Sistema de Informação da Atenção Básica Multiprofissional, com até 2 profissionais da mesma vigente para registro das ações de saúde.
+**Equipe de Atenção Primária Prisional (eAPP):**
 
-categoria (nível médio ou superior);
+- Atua em unidades prisionais ou UBS vinculadas ao sistema prisional;
+- **Modalidades:**
+  - Equipe de Atenção Primária Prisional;
+  - Equipe Essencial;
+  - Equipe Ampliada;
+  - Equipe Complementar Psicossocial (exige 1 médico psiquiatra ou com experiência em saúde mental).
+- **Regulação:** conforme a Política Nacional de Atenção Integral à Saúde das Pessoas Privadas de Liberdade (PNAISP);
+- **Observação:** não exige presença de ACS.
 
-- Contribuir para a organização da demanda e regulação ACS pode ser incluído, mas não é obrigatório. do acesso, por meio da gestão das filas de espera e
+## Atribuições dos Profissionais da Atenção Básica
 
-- Modalidades: encaminhamentos conforme protocolos locais. Modalidade I e II: médico não obrigatório;
+### Atribuições Comuns a Todos os Membros das Equipes da Atenção Básica
 
-- Prever a integração com outros pontos da Rede de Modalidade III: médico obrigatório. Atenção à Saúde (RAS), por meio de serviços de
+- Participar do processo de territorialização e mapeamento da área de atuação da equipe, identificando grupos, famílias e indivíduos expostos a riscos e vulnerabilidades;
+- Cadastrar e manter atualizados os dados das famílias e indivíduos, incluindo a lista de problemas e condições de saúde, no sistema de informação da Atenção Básica vigente;
+- Realizar ações de cuidado integral à saúde da população adscrita, prioritariamente na Unidade Básica de Saúde (UBS) e, quando necessário, no domicílio e demais espaços comunitários (escolas, associações, etc.);
+- Atuar conforme as necessidades de saúde da população local, respeitando prioridades, protocolos e diretrizes clínicas e terapêuticas;
+- Garantir a atenção à saúde da população adscrita, promovendo a integralidade por meio de ações de promoção, proteção, recuperação e prevenção;
+- Participar do acolhimento dos usuários, proporcionando atendimento humanizado, com escuta qualificada, realizando classificação de risco e estabelecendo vínculo;
+- Responsabilizar-se pelo acompanhamento longitudinal da população adscrita;
+- Praticar o cuidado individual, familiar e dirigido a grupos sociais;
+- Manter a coordenação do cuidado das pessoas sob sua responsabilidade;
+- Utilizar o Sistema de Informação da Atenção Básica vigente para registro das ações de saúde;
+- Contribuir para a organização da demanda e regulação do acesso, por meio da gestão das filas de espera e encaminhamentos conforme protocolos locais;
+- Prever a integração com outros pontos da Rede de Atenção à Saúde (RAS), por meio de serviços de apoio e referência;
+- Instituir ações para a segurança do paciente na Atenção Básica;
+- Garantir a qualidade e a alimentação oportuna dos sistemas de informação em saúde;
+- Realizar busca ativa e notificar doenças e agravos de notificação compulsória;
+- Realizar busca ativa de internações e atendimentos por causas sensíveis à Atenção Básica;
+- Realizar visitas domiciliares e atendimentos em domicílio a famílias e indivíduos;
+- Realizar atenção domiciliar a pessoas com problemas de saúde controlados/compensados, com algum grau de dependência ou necessidade de cuidado contínuo;
+- Trabalhar de forma interdisciplinar e em equipe multiprofissional;
+- Participar de reuniões de equipe para planejamento, avaliação e qualificação do processo de trabalho;
+- Participar de atividades de educação permanente e educação continuada;
+- Realizar ações de educação em saúde voltadas à população;
+- Participar da organização e gerenciamento dos insumos necessários ao funcionamento da UBS;
+- Promover a mobilização e a participação da comunidade, estimulando o funcionamento dos conselhos locais de saúde ou colegiados equivalentes;
+- Identificar parceiros e recursos disponíveis na comunidade para potencializar as ações em saúde;
+- Acompanhar e registrar, nos sistemas específicos, as condicionalidades de saúde das famílias beneficiárias do Programa Bolsa Família (PBF) e outros programas sociais equivalentes;
+- Realizar outras ações e atividades conforme prioridades definidas pela gestão local.
 
-- Carga horária mínima: apoio e referência. 30 horas semanais;
+### Atribuições Específicas dos Profissionais
 
-- Instituir ações para a segurança do paciente na Funcionamento diurno e/ou noturno, todos os dias Atenção Básica.
+**Enfermeiro:**
 
-da semana.
-
-- Garantir a qualidade e a alimentação oportuna dos
-
-- Equipe de Atenção Primária Prisional (eAPP) sistemas de informação em saúde.
-
-- Atua em unidades prisionais ou UBS vinculadas ao
-
-- Realizar busca ativa e notificar doenças e agravos de sistema prisional. notificação compulsória.
-
-- Modalidades:
-
-- Realizar busca ativa de internações e atendimentos Equipe de Atenção Primária Prisional; por causas sensíveis à Atenção Básica. Equipe Essencial;
-
-- Realizar visitas domiciliares e atendimentos em Equipe Ampliada; domicílio a famílias e indivíduos. Equipe Complementar Psicossocial (exige 1 médico
-
-- Realizar atenção domiciliar a pessoas com problemas psiquiatra ou com experiência em saúde mental). de saúde controlados/compensados, com algum grau
-
-- Regulação: de dependência ou necessidade de cuidado contínuo. Conforme a Política Nacional de Atenção Integral à
-
-- Trabalhar de forma interdisciplinar e em
-
-Saúde das Pessoas Privadas de Liberdade (PNAISP). equipe multiprofissional.
-
-- Observação:
-
-- Participar de reuniões de equipe para planejamento, Não exige presença de ACS. avaliação e qualificação do processo de trabalho.
-
-- Participar de atividades de educação permanente e
-
-ATRIBUIÇÕES DOS PROFISSIONAIS DA educação continuada. ATENÇÃO BÁSICA
-
-- Realizar ações de educação em saúde
-
-Atribuições Comuns a Todos os Membros das Equipes da voltadas à população. Atenção Básica:
-
-- Participar da organização e gerenciamento dos
-
-- Participar do processo de territorialização e insumos necessários ao funcionamento da UBS.
-
-mapeamento da área de atuação da equipe,
-
-- Promover a mobilização e a participação da identificando grupos, famílias e indivíduos expostos a comunidade, estimulando o funcionamento dos riscos e vulnerabilidades. conselhos locais de saúde ou colegiados equivalentes.
-
-- Cadastrar e manter atualizados os dados das
-
-- Identificar parceiros e recursos disponíveis na famílias e indivíduos, incluindo a lista de problemas comunidade para potencializar as ações em saúde.
-
-e condições de saúde, no sistema de informação da
-
-- Acompanhar e registrar, nos sistemas específicos, as
-
-Atenção Básica vigente. condicionalidades de saúde das famílias beneficiárias
-
-- Realizar ações de cuidado integral à saúde da do Programa Bolsa Família (PBF) e outros programas população adscrita, prioritariamente na Unidade sociais equivalentes.
-
-Básica de Saúde (UBS) e, quando necessário, no
-
-- Realizar outras ações e atividades conforme domicílio e demais espaços comunitários (escolas, prioridades definidas pela gestão local.
-
-associações, etc.).
-
-- Atuar conforme as necessidades de saúde da ATRIBUIÇÕES ESPECÍFICAS DOS PROFISSIONAIS:
-
-população local, respeitando prioridades, protocolos e Enfermeiro: diretrizes clínicas e terapêuticas.
-
-- Realizar atenção à saúde de indivíduos e famílias em
-
-- Garantir a atenção à saúde da população adscrita, todos os ciclos de vida.
-
-promovendo a integralidade por meio de ações de
-
-- Realizar consulta de enfermagem, procedimentos, promoção, proteção, recuperação e prevenção. solicitar exames complementares e prescrever
-
-- Participar do acolhimento dos usuários, medicamentos conforme protocolos, diretrizes proporcionando atendimento humanizado, com clínicas e terapêuticas.
-
-escuta qualificada, realizando classificação de risco e
-
-- Realizar e/ou supervisionar acolhimento com escuta estabelecendo vínculo. qualificada e classificação de risco.
-
-- Responsabilizar-se pelo acompanhamento longitudinal
-
-- Realizar estratificação de risco e elaborar plano de da população adscrita. cuidados para pessoas com condições crônicas, em
-
-- Praticar o cuidado individual, familiar e dirigido a conjunto com a equipe.
-
-grupos sociais.
-
-- Conduzir atividades em grupo e encaminhar usuários a
-
-- Manter a coordenação do cuidado das pessoas sob outros serviços quando necessário.
-
-sua responsabilidade.
+- Realizar atenção à saúde de indivíduos e famílias em todos os ciclos de vida;
+- Realizar consulta de enfermagem, procedimentos, solicitar exames complementares e prescrever medicamentos conforme protocolos, diretrizes clínicas e terapêuticas;
+- Realizar e/ou supervisionar acolhimento com escuta qualificada e classificação de risco;
+- Realizar estratificação de risco e elaborar plano de cuidados para pessoas com condições crônicas, em conjunto com a equipe;
+- Conduzir atividades em grupo e encaminhar usuários a outros serviços quando necessário;
 
 ---
 
 <!-- page:4 -->
 
-- Planejar, gerenciar e avaliar ações dos técnicos/
+- Planejar, gerenciar e avaliar ações dos técnicos/auxiliares de enfermagem, ACS e ACE, em conjunto com outros membros da equipe;
+- Supervisionar diretamente as ações dos técnicos/auxiliares de enfermagem e dos ACS;
+- Implementar, manter e revisar rotinas, protocolos e fluxos assistenciais no âmbito da UBS;
+- Exercer outras atribuições previstas na legislação profissional específica.
 
-- Orientar as famílias sobre a utilização adequada dos auxiliares de enfermagem, ACS e ACE, em conjunto serviços disponíveis na Rede de Atenção à Saúde, com outros membros da equipe. apoiando os fluxos locais de acesso.
+**Médico:**
 
-- Supervisionar diretamente as ações dos técnicos/
+- Realizar a atenção à saúde de pessoas e famílias adscritas, em todos os ciclos de vida;
+- Realizar consultas clínicas, pequenos procedimentos cirúrgicos e atividades em grupo, na UBS ou em outros espaços comunitários;
+- Realizar estratificação de risco e elaborar plano de cuidados para pessoas com condições crônicas, em articulação com os demais profissionais da equipe;
+- Encaminhar usuários a outros pontos da RAS, respeitando fluxos, protocolos e mantendo vínculo e responsabilização;
+- Indicar a necessidade de internação hospitalar ou domiciliar;
+- Planejar, gerenciar e avaliar ações desenvolvidas pelos ACS e ACE, em conjunto com os demais membros da equipe;
+- Exercer outras atribuições previstas na legislação profissional.
 
-- Exercer outras atribuições previstas na legislação auxiliares de enfermagem e dos ACS. profissional da categoria.
+**Agente Comunitário de Saúde (ACS):**
 
-- Implementar, manter e revisar rotinas, protocolos e
+- Trabalhar com adscrição de famílias e indivíduos em base geográfica definida, mantendo os dados atualizados no sistema de informação vigente;
+- Utilizar instrumentos para coleta de dados que subsidiem o diagnóstico demográfico, epidemiológico e sociocultural da população;
+- Registrar informações sobre nascimentos, óbitos, agravos e condições de saúde, mantendo o sigilo ético;
+- Desenvolver ações de integração entre equipe de saúde e a comunidade;
+- Informar e orientar os usuários sobre datas e horários de consultas, exames e procedimentos;
+- Orientar as famílias sobre a utilização adequada dos serviços disponíveis na Rede de Atenção à Saúde, apoiando os fluxos locais de acesso;
+- Exercer outras atribuições previstas na legislação profissional da categoria;
+- Em caráter excepcional, após capacitação específica, com equipamentos adequados e sob supervisão de profissional de nível superior, poderá realizar: aferição de pressão arterial, glicemia capilar, temperatura axilar e técnicas limpas de curativos.
 
-- Em caráter excepcional, após capacitação específica, fluxos assistenciais no âmbito da UBS. com equipamentos adequados e sob supervisão de
+**Gerente de Atenção Básica:**
 
-- Exercer outras atribuições previstas na legislação profissional de nível superior, poderá realizar: aferição profissional específica. de pressão arterial, glicemia capilar, temperatura axilar
+- Figura recomendada pela PNAB 2017 para aprimorar a gestão local da UBS;
+- Deve ser um profissional qualificado, preferencialmente com nível superior e experiência prévia em Atenção Básica;
+- Possui função técnico-gerencial: responsável pelo planejamento em saúde, organização do processo de trabalho, coordenação e integração das ações na UBS;
+- Não deve ser integrante das equipes assistenciais da UBS.
 
-Médico: e técnicas limpas de curativos.
+### Leis Complementares Pós-PNAB 2017
 
-- Realizar a atenção à saúde de pessoas e famílias Gerente de Atenção Básica:
+- **Lei nº 14.231/2021:** inclui fisioterapeutas e terapeutas ocupacionais como profissionais da APS, ampliando o reconhecimento de sua atuação nos territórios;
+- **Lei nº 14.536/2023:** reconhece formalmente os Agentes Comunitários de Saúde (ACS) e os Agentes de Combate às Endemias (ACE) como profissionais de saúde, com direito à aposentadoria especial e política de valorização;
+- A Portaria GM/MS nº 3.493/2024 reformulou o financiamento da APS, com novos componentes: fixo, variável, qualidade e implantação/manutenção.
 
-adscritas, em todos os ciclos de vida.
+## Referências
 
-- Figura recomendada pela PNAB 2017 para aprimorar a
-
-- Realizar consultas clínicas, pequenos procedimentos gestão local da UBS.
-
-cirúrgicos e atividades em grupo, na UBS ou em outros
-
-- Deve ser um profissional qualificado, espaços comunitários. preferencialmente com nível superior e experiência
-
-- Realizar estratificação de risco e elaborar plano de prévia em Atenção Básica.
-
-cuidados para pessoas com condições crônicas, em
-
-- Possui função técnico-gerencial: responsável pelo articulação com os demais profissionais da equipe. planejamento em saúde, organização do processo de
-
-- Encaminhar usuários a outros pontos da RAS, trabalho, coordenação e integração das ações na UBS.
-
-respeitando fluxos, protocolos e mantendo
-
-- Não deve ser integrante das equipes vínculo e responsabilização. assistenciais da UBS.
-
-- Indicar a necessidade de internação hospitalar Leis Complementares Pós-PNAB 2017:
-
-ou domiciliar.
-
-- Lei nº 14.231/2021: Inclui fisioterapeutas e terapeutas
-
-- Planejar, gerenciar e avaliar ações desenvolvidas pelos ocupacionais como profissionais da APS, ampliando o da equipe.
-
-ACS e ACE, em conjunto com os demais membros reconhecimento de sua atuação nos territórios
-
-- Lei nº 14.536/23: Reconhece formalmente os Agentes
-
-- Exercer outras atribuições previstas na Comunitários de Saúde (ACS) e os Agentes de legislação profissional. Combate às Endemias (ACE) como profissionais de
-
-Agente Comunitário de Saúde (ACS): saúde, com direito à aposentadoria especial e política
-
-- Trabalhar com adscrição de famílias e indivíduos de valorização.
-
-em base geográfica definida, mantendo os dados
-
-- A Portaria GM/MS nº 3.493/2024 reformulou o atualizados no sistema de informação vigente. financiamento da APS, com novos componentes: fixo,
-
-- Utilizar instrumentos para coleta de dados que variável, qualidade e implantação/manutenção.
-
-subsidiem o diagnóstico demográfico, epidemiológico
-
-## REFERÊNCIAS
-
-e sociocultural da população.
-
-- Registrar informações sobre nascimentos, óbitos, agravos e condições de saúde, mantendo o sigilo ético. Tabela 1::
-
-- Desenvolver ações de integração entre equipe de BRASIL. Ministério da Saúde. Gabinete do Ministro. Portaria GM/MS nº saúde e a comunidade. 3.493, de 10 de abril de 2024.
-
-- Informar e orientar os usuários sobre datas e horários de consultas, exames e procedimentos.
+Tabela 1: BRASIL. Ministério da Saúde. Gabinete do Ministro. Portaria GM/MS nº 3.493, de 10 de abril de 2024.

@@ -1,303 +1,240 @@
-# Síndromes Hipertensivas na Gestação - Parte (2)
+# Síndromes Hipertensivas na Gestação — Parte 2
 
 <!-- page:1 -->
 
-## SÍNDROMES HIPERTENSIVAS
+## Síndromes Hipertensivas na Gestação — Parte 2
 
-## NA GESTAÇÃO - PARTE 2
+### Pré-Eclâmpsia
 
-T Síndromes Hipertensivas na Gestação Pré-Eclâmpsia
+- **Eclâmpsia**: convulsões tônico-clônicas generalizadas autolimitadas. Conduta: estabilização; sulfatação; resolução (não intempestiva); fazer controle de diurese.
+- **Sulfato de magnésio**: esquemas Zuspan x Pritchard. Cuidado com a função renal. Não usar em casos de miastenia gravis. Ter gluconato de cálcio sempre à disposição.
+- **Síndrome HELLP** é diagnóstico laboratorial (hemólise + alteração hepática + plaquetopenia): BI > 1,2 | DHL > 600 | TGO/TGP > 70 | Plaquetas < 100.000.
 
-- Eclâmpsia: convulsões tonicoclônicas generalizadas autolimitadas; Conduta: estabilização; sulfatação; resolução
+## Eclâmpsia
 
-(não intempestiva); fazer controle de diurese.
-
-- Sulfato de magnésio: Zuspan x Pritchard; Cuidado com a função renal; Não usar em casos de miastenia gravis; Aspirar gluconato de cálcio sempre;
-
-- Síndrome HELLP é diagnóstico laboratorial (BI> 1,2 | DHL >600 | TGO/TGP >70 |
-
-(hemólise + alteração hepática + plaquetopenia); Plaquetas < 100.000)
-
-## ECLÂMPSIA
-
-- Convulsões tônico-clônicas generalizadas e/ou coma associadas à pré-eclâmpsia;
-
-- Quadro autolimitado;
-
+- Convulsões tônico-clônicas generalizadas e/ou coma associadas à pré-eclâmpsia.
+- Quadro autolimitado.
 - Casos atípicos sempre merecem investigação.
 
-## OS 10 PASSOS DA ECLÂMPSIA
+### Os 10 Passos da Eclâmpsia
 
-1. Aspirar secreções + protetor bucal (Guedel);
-
-2. Sat O2 + O2 a 8-10 L/min;
-
-3. Instalar SG 5% IV;
-
-4. Coleta sangue + urina;
-
-5. Decúbito lateral ou semi-sentada;
-
-6. Sulfato de Magnésio;
-
-7. Nifedipina VO ou hidralazina EV se PA ≥ 160/110 mmHg;
-
-8. Sonda Vesical de Demora;
-
-9. Aguardar recuperação;
-
+1. Aspirar secreções + protetor bucal (Guedel).
+2. Sat O2 + O2 a 8-10 L/min.
+3. Instalar SG 5% IV.
+4. Coleta de sangue + urina.
+5. Decúbito lateral ou semi-sentada.
+6. Sulfato de magnésio.
+7. Nifedipina VO ou hidralazina EV se PA ≥ 160/110 mmHg.
+8. Sonda vesical de demora.
+9. Aguardar recuperação.
 10. Programar interrupção.
 
-Objetivo primário: preservar via aérea e garantir oxigenação
+- **Objetivo primário**: preservar via aérea e garantir oxigenação.
+- Evitar indicar a resolução da gestação de maneira intempestiva.
+- Controle clínico materno melhora oxigenação fetal (e reduz acidose).
+- Cirurgia pode agravar quadro materno.
+- Aguardar 4-6 horas — via obstétrica.
 
-- Evitar indicar a resolução da gestação de maneira intempestiva;
+## Sulfato de Magnésio
 
-- Controle clínico materno melhora oxigenação fetal (e reduz acidose);
+### Indicações
 
-- Cirurgia pode agravar quadro materno;
+- Se houver sinais de deterioração clínica e/ou laboratorial.
+- Iminência de eclâmpsia.
+- HELLP.
+- Hipertensão de difícil controle / pico pressórico.
 
-- Aguardar 4 - 6 horas - via obstétrica.
+### Prevenção da Pré-Eclâmpsia
 
-## SULFATO DE MAGNÉSIO
+- Indicada se 1 fator de alto risco ou 2 fatores de risco moderado.
+- Medicações: AAS 100 mg (ou 150 mg) + cálcio 1-2 g.
+- **Predição de pré-eclâmpsia**: PLGF (fator de crescimento placentário) pode ajudar na predição; sFlt-1/PLGF pode auxiliar em casos duvidosos. Exame caro.
 
-## INDICAÇÕES
+**Uso de sulfato de magnésio não indica o parto.**
 
-- Se houver sinais de deterioração clínica e/ ou laboratorial;
-
-- Iminência de eclâmpsia;
-
-- HELLP;
-
-- Hipertensão de difícil controle / pico pressórico. - Prevenção da pré-eclâmpsia: 1 fator de alto risco ou 2 fatores de risco moderado Medicações: AAS 100 mg (ou 150 mg) + cálcio 1-2g;
-
-- Predição de Pré-eclâmpsia: PLGF: fator de crescimento placentário; pode ajudar na predição; sFLt1/PLGF: pode auxiliar em casos duvidosos.
-
-Exame caro. Uso de Sulfato de Magnésio não indica o parto SULFATO DE MAGNÉSIO (USP – SP)
+### Sulfato de Magnésio (USP-SP)
 
 - Sulfato de magnésio é um estabilizador de membrana e atua como profilaxia de convulsões.
 
-Indicações
+**Indicações**:
 
-- Iminência de eclâmpsia (obrigatória a tríade de sintomas);
-
-- Trabalho de parto em pacientes com pré-eclâmpsia grave ou sobreposta;
-
+- Iminência de eclâmpsia (obrigatória a tríade de sintomas).
+- Trabalho de parto em pacientes com pré-eclâmpsia grave ou sobreposta.
 - Seu uso indica parto.
 
-ESQUEMAS DE TRATAMENTO Zuspan
+### Esquemas de Tratamento
 
-- Ataque: 4g IV lentamente;
+**Zuspan**:
 
-- Manutenção: 2g/h IV.
+- Ataque: 4 g IV lentamente.
+- Manutenção: 2 g/h IV.
 
-Pritchard
+**Pritchard**:
 
-- Ataque: 4g IV lentamente + 10g IM;
+- Ataque: 4 g IV lentamente + 10 g IM.
+- Manutenção: 5 g IM 4/4h.
+- Melhor esquema para situações em que for necessário transportar a paciente.
+- Não usar se plaquetopenia.
 
-- Manutenção: 5g IM 4/4h;
+**Contraindicação**: não usar se miastenia gravis.
 
-- Melhor esquema para situações que necessitar transportar a paciente;
+- Se nova convulsão → nova dose de ataque de 2 g.
+- Estado de mal epiléptico → indicada neuroimagem.
+- Se foram feitas duas doses de "ataque" e sem controle → indicado benzodiazepínico.
 
-- Não usar se plaquetopenia;
+### Cuidados
 
-Contraindicação Não usar se miastenia gravis. Se nova convulsão → nova dose de ataque de 2g; Estado de Mal Epiléptico → indicada neuroimagem;
+- Se houver insuficiência renal (creatinina > 1,3 mg/dL) → aplicar metade da dose.
 
-Se foram feitas duas doses de “ataques” e sem controle → Indicado Benzodiazepínico.
+### Critérios para Manutenção
 
-## CUIDADOS
-
-- Se houver insuficiência renal (creatinina > 1,3 mg/dL)
-
-→ aplicar metade da dose. CRITÉRIOS PARA MANUTENÇÃO
-
-- Reflexos patelares presentes
-
-- FR ≥ 12 irpm (ou 14 ou 16)
-
-- Diurese ≥ 25 mL/h
+- Reflexos patelares presentes.
+- FR ≥ 12 irpm (ou 14 ou 16).
+- Diurese ≥ 25 mL/h.
 
 ---
 
 <!-- page:2 -->
 
-Dosar magnésio sérico somente se houver DIAGNÓSTICO DIFERENCIAL insuficiência renal ou redução de reflexos patelares;
+- Dosar magnésio sérico somente se houver insuficiência renal ou redução de reflexos patelares.
+- Níveis acima de 7 mEq/L podem gerar sinais de toxicidade.
 
-- Esteatose hepática da gravidez;
+**Tabela 1: Níveis de Magnesemia e Efeito Sistêmico Observado**
 
-Níveis acima de 7 mEq/L podem gerar sinais
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Púrpura trombocitopênica trombótica (PTT);
+| Magnesemia | Efeito |
+|---|---|
+| 4 – 7 mEq/L | Níveis terapêuticos |
+| 8 – 10 mEq/L | Abolição de reflexo patelar |
+| ≥ 12 mEq/L | Risco de parada cardiorrespiratória |
 
-de toxicidade.
+### Diagnóstico Diferencial
 
-- Síndrome hemolítico urêmica;
+- Esteatose hepática da gravidez.
+- Púrpura trombocitopênica trombótica (PTT).
+- Síndrome hemolítico-urêmica.
+- Hepatite aguda.
 
-- Hepatite aguda;
+### Critérios para Suspensão
 
-- Tabela 1: Níveis de magnesemia e efeito sistêmico observado
+- Depressão respiratória.
+- Diurese insuficiente.
+- Abolição de reflexos patelares.
 
-- Magnesemia Efeito
+Se os critérios de suspensão estiverem presentes:
 
-- 4 – 7 mEq/L Níveis terapêuticos
+- Reavaliar de 1/1h até conseguir retornar; se aguardou até 2h, pode só retornar o esquema de tratamento; se passar de 2h, deve fazer novo ataque de 2 g.
 
-- 8 – 10 mEq/L Abolição de Reflexão Patelar
+### Intoxicação
 
-Risco de Parada ≥ 12 mEq/L Cardiorrespiratória
+- **Antídoto**: gluconato de cálcio 10% (1 g) EV.
+- Indicado se: depressão respiratória e/ou abolição de reflexos profundos.
+- Dar suporte respiratório: O2 5 L/min por máscara.
 
-## CRITÉRIOS PARA SUSPENSÃO
+## Hipotensores de Ação Rápida
 
-- Depressão respiratória; C
-
-- Diurese insuficiente;
-
-- Abolição reflexos patelares.
-
-- Se os critérios de suspensão presentes:
-
-- Reavaliar de 1/1h até conseguir retornar; Se aguardou até 2h, pode só retornar o esquema de tratamento; Se passar de 2h, deve fazer novo ataque 2g.
-
-Intoxicação P
-
-- Antídoto: Gluconato de cálcio 10% (1g) EV;
-
-- Indicado se: depressão respiratória e/ou abolição de reflexos profundos
-
-- Dar suporte respiratório O2 5 l/min por máscara.
-
-## HIPOTENSORES DE AÇÃO RÁPIDA
-
-- Meta: Redução 15 – 25% na primeira hora.
-
-- Verificar Tabela 2
-
+- **Meta**: redução de 15–25% na primeira hora.
 - Diante de edema agudo de pulmão ou limitação da função do rim que indique terapêutica com diurético, a furosemida está eleita.
 
-## SÍNDROME HELLP
+## Síndrome HELLP
 
 - É uma complicação caracterizada por hemólise, elevação de enzimas hepáticas e plaquetopenia → diagnóstico laboratorial.
 
-- DIAGNÓSTICO
+### Diagnóstico
 
-Hemólise
+**Hemólise**:
 
-- Bilirrubina Indireta > 1,2 mg/dL;
-
-- DHL > 600 UI/L;
-
+- Bilirrubina indireta > 1,2 mg/dL.
+- DHL > 600 UI/L.
 - Esquizócitos em sangue periférico.
 
-Alteração Hepática
+**Alteração hepática**:
 
-- TGO/AST ou TGP/ALT > 70 UI ou >2x valor de referência
+- TGO/AST ou TGP/ALT > 70 UI ou > 2x valor de referência.
 
-Plaquetopenia
+**Plaquetopenia**:
 
 - Plaquetas < 100.000/mm³.
 
-Tabela 2: Esquemas de tratamento anti-hipertensivo em caso de eclâ Medicação Hidralazina Nifedipino Nitroprussiato de sódio - Hepatite aguda;
+**Tabela 2: Esquemas de Tratamento Anti-Hipertensivo em Caso de Eclâmpsia**
 
-- Colecistite;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Pancreatite;
+| Medicação | Via | Dose |
+|---|---|---|
+| Hidralazina | EV | 5 mg (máx 30 mg) |
+| Nifedipino | VO | 10 mg (máx 30 mg) |
+| Nitroprussiato de sódio | EV | 0,5 – 10 mcg/kg/min |
 
-- Lúpus;
+### Diagnósticos Diferenciais (HELLP)
 
+- Hepatite aguda.
+- Colecistite.
+- Pancreatite.
+- Lúpus.
 - Choque séptico.
 
-## CLASSIFICAÇÃO DE MARTIN (1983)
+### Classificação de Martin (1983)
 
-- Classe I: < 50.000 plaquetas; → Maior risco de CIVD
+- **Classe I**: < 50.000 plaquetas — maior risco de CIVD.
+- **Classe II**: > 50.000 e < 100.000/mm³.
+- **Classe III**: > 100.000 e < 150.000/mm³.
 
-- Classe II: > 50.000 e < 100.000/mm3;
+## Conduta (Síndrome HELLP)
 
-- Classe III: > 100.000 e < 150.000/mm3.
-
-## CONDUTA
-
-- Ultrassonografia de abdome: avaliação hepática;
-
+- Ultrassonografia de abdome: avaliação hepática.
 - Fazer controle de pressão arterial.
+- Meta de parto: 34 semanas, desde que excelente controle clínico e melhora laboratorial progressiva; plaquetas devem estar, obrigatoriamente, > 100.000/mm³.
 
-- Meta de parto: 34 semanas Desde que excelente controle clínico e melhora laboratorial progressiva; Plaquetas devem estar, obrigatoriamente
+**Plaquetas**:
 
->100.000/mm3. Plaquetas
+- Parto cesáreo → ideal ≥ 50.000/mm³.
+- Parto vaginal → ideal ≥ 20.000/mm³ (pode transfundir).
+- Se > 70.000/mm³, permite bloqueio de neuroeixo (ex.: raquianestesia).
+- Dexametasona se < 50.000/mm³.
 
-- Parto cesáreo → ideal ≥ 50.000/mm³;
+**Lembre-se**:
 
-- Parto vaginal → ideal ≥ 20.000/mm³ (pode transfundir);
+- É uma indicação de sulfato de magnésio (Ministério da Saúde).
+- Para USP-SP, se for síndrome HELLP isolada (sem iminência de eclâmpsia ou eclâmpsia), não indica sulfatação.
 
-- Se > 70.000/mm³ permite bloqueio de neuroeixo
-
-(ex: raquianestesia);
-
-- Dexametasona se < 50.000/mm3
-
-Lembre-se:
-
-- É uma indicação de sulfato de magnésio (Ministério da Saúde);
-
-- Para USP-SP, se for Síndrome HELLP isolada indica sulfatação.
-
-(sem iminência de eclâmpsia ou eclâmpsia), não
-
-## CALCULADORA FULLPIERS
+## Calculadora fullPIERS
 
 - Calculadora que pode auxiliar na identificação de pacientes com maior risco de complicação em 48h até 7 dias.
-
-- Ajuda se houver dúvida, para: Resolução ou não da gravidez; Necessidade de UTI.
-
-- Valor de corte: a partir de 30%;
-
-- Parâmetros: Idade gestacional; Dor torácica ou dispneia; Plaquetas; Creatinina; AST/TGO; Saturação de O2.
-
-âmpsia. Via Dose EV 5 mg (máx 30 mg) VO 10 mg (máx 30 mg) EV 0,5 - 10 mcg/kg/min
+- Ajuda se houver dúvida, para: resolução ou não da gravidez; necessidade de UTI.
+- Valor de corte: a partir de 30%.
+- Parâmetros: idade gestacional; dor torácica ou dispneia; plaquetas; creatinina; AST/TGO; saturação de O2.
 
 ---
 
 <!-- page:3 -->
 
-Tabela 3: Fatores de risco para pré-eclâmpsia Risco Apresentação clínica e/ou obstétrica História de pré-eclâmpsia, principalmente acomp
+**Tabela 3: Fatores de Risco para Pré-Eclâmpsia**
 
-## ALTO
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Doenças autoim História famil
+| Risco | Apresentação clínica e/ou obstétrica |
+|---|---|
+| Alto | História de pré-eclâmpsia, principalmente acompanhada de desfechos adversos; gemelaridade; obesidade (IMC > 30); HAC; DM1 ou DM2; DRC; doenças autoimunes (ex.: lúpus, síndrome antifosfolípide) |
+| Moderado | Nuliparidade; história familiar de pré-eclâmpsia (mãe e/ou irmãs); baixo nível socioeconômico; etnia afrodescendente; idade ≥ 35 anos; história pessoal de baixo peso ao nascer; gravidez prévia com desfecho adverso; intervalo > 10 anos desde a última gestação |
+| Baixa | Gravidez prévia de termo e sem intercorrências |
 
-## MODERADO
+*Figura 1: Comparação entre as secreções de sFlt-1 e PLGF em gestações normais e as complicadas com pré-eclâmpsia.*
 
-História Gravid Intervalo BAIXA Gravidez pr Figura 1: Comparação entre as secreções de SFLT-1 e PLGF em ge
+## Extras & Prevenção
 
-## EXTRAS & PREVENÇÃO
+### Prevenção
 
-## PREVENÇÃO
+- AAS 100 mg, 1x à noite, para pacientes de maior risco. Início até 16 semanas; manter até 36 semanas ou até o diagnóstico de pré-eclâmpsia.
+- Cálcio 1-2 g/dia, indicado para todas as pacientes.
+- Prevenção indicada para pacientes com 1 fator de alto risco ou ≥ 2 de risco moderado.
 
-- AAS 100mg 1x à noite, para pacientes de maior risco; Início até 16 Manter até 36 semanas ou até o diagnóstico de pré-eclâmpsia
+### Predição de Pré-Eclâmpsia
 
-+
-
-- Cálcio 1-2g/dia, indicado para todas as pacientes.
-
-Prevenção indicada para pacientes com 1 fator de alto risco ou ≥2 de risco moderado.
-
-- Verificar Tabela 3 panhada de desfechos adversos;
-
-Gemelaridade; Obesidade (IMC > 30); HAC; DM1 ou DM2; DRC; munes (ex.: lúpus, síndrome antifosfolípide).
-
-Nuliparidade; liar de pré-eclâmpsia (mãe e/ou irmãs); Baixo nível socioeconômico; Etnia afrodescendente;
-
-Idade ≥ 35 anos; a pessoal de baixo peso ao nascer; dez prévia com desfecho adverso;
-
-> 10 anos desde a última gestação.
-
-révia de termo e sem intercorrências. estações normais e as complicadas com pré-eclâmpsia.
-
-## PREDIÇÃO DE PRÉ-ECLÂMPSIA
-
-- Os marcadores sFLT-1 e PLGF auxiliam na diferenciação diagnóstica de síndromes hipertensivas na gestação; sFLT-1 (soluble fms-like tyrosine kinase-1) são fatores antiangiogênicos e PLGF (placental growth factor) é angiogênico. Em uma gravidez normal, espera-se PLGF abundante e baixos níveis de SFLT-1.
-
-- A avaliação desses marcadores têm alto VPN para pré-eclâmpsia;
-
-- Em uma gestação complicada com pré-eclâmpsia, há aumento da relação SFLT-1/PLGF o que é marcador de uma má vascularização e aumento da resistência vascular.
-
-- Verificar Figura 1 sFLT-1/PLGF ≤ 38 (na dúvida diagnóstica) → exclusão do diagnóstico nos próximos 7 a 14 dias.
+- Os marcadores sFlt-1 e PLGF auxiliam na diferenciação diagnóstica de síndromes hipertensivas na gestação; sFlt-1 (*soluble fms-like tyrosine kinase-1*) é fator antiangiogênico e PLGF (*placental growth factor*) é angiogênico. Em uma gravidez normal, espera-se PLGF abundante e baixos níveis de sFlt-1.
+- A avaliação desses marcadores tem alto VPN para pré-eclâmpsia.
+- Em uma gestação complicada com pré-eclâmpsia, há aumento da relação sFlt-1/PLGF, o que é marcador de má vascularização e aumento da resistência vascular.
+- sFlt-1/PLGF ≤ 38 (na dúvida diagnóstica) → exclusão do diagnóstico nos próximos 7 a 14 dias.
 
 ![Figura do material - página 3](figure-003-1.webp)

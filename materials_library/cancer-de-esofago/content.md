@@ -2,75 +2,68 @@
 
 <!-- page:1 -->
 
-Esôfago (CIR) Câncer de Esôfago CE Tabagismo; Etilismo Fatores de Risco quentes; HPV dos sub Tilo Sintomas Disfag Diagnóstico Diferencial Acalásia EDA com cromosc Diagnóstico suspeitas = Io TC Pescoço, Tórax EcoEDA (precoce- ava linfonodos Estadiamento PET-CT (identificação Laringoscopia + Bro invasão t TIPOS DE ESOFAGECTOMIA
+> ⚠️ Diagrama/fluxograma reconstruído a partir de OCR (colunas intercaladas) — confira contra a fonte original.
 
-- Esofagectomia em Três Campos (McKeown)
+## Câncer de Esôfago (CEC e Adenocarcinoma) — Visão Geral
 
-- Esofagectomia Transhiatal - Anastomose Cervical
+- **Fatores de Risco:** tabagismo; etilismo; ingesta de bebidas quentes; **HPV** (subtipos 16 e 18); acalasia; **DRGE**; uso de bifosfonados.
+- **Sintomas:** disfagia abrupta, perda ponderal, melena, HDA.
+- **Diagnóstico Diferencial:** acalasia, estenose péptica, divertículo, membrana esofágica.
+- **Diagnóstico:** EDA com cromoscopia (lugol) — áreas iodonegativas em lesões suspeitas.
+- **Estadiamento:**
+  - TC de pescoço, tórax, abdome e pelve.
+  - EcoEDA (ecoendoscopia) — avaliação precoce de profundidade e linfonodos regionais.
+  - PET-CT — identificação de metástase oculta.
+  - Laringoscopia + broncoscopia — avaliar invasão de traqueia.
 
-(mais fístula, mas risco de mediastinite é menor
+## Tipos de Esofagectomia
 
-- Esofagectomia Transtorácica - Ivor – Lewis:
+- **Esofagectomia em Três Campos (McKeown):** anastomose cervical.
+- **Esofagectomia Transhiatal - Anastomose Cervical:** mais fístula, mas risco de mediastinite é menor.
+- **Esofagectomia Transtorácica (Ivor-Lewis):** anastomose intratorácica (maior risco de mediastinite).
 
-anastomose intratorácica (risco de mediastinite) TRATAMENTO
+## Tratamento (Resumo)
 
-- Restrito à mucosa (T1a) - ESD
+- **Restrito à mucosa (T1a):** ESD.
+- **Restrito à submucosa (T1b):** esofagectomia upfront.
+- **T3/T4 ou N+:** neoadjuvância + cirurgia.
+- **CEC:** protocolo CROSS - QRT.
+- **Adenocarcinoma:** quimioterapia ou QRT neoadjuvante.
+- **Tumores irressecáveis:** quimio-radioterapia definitiva (QRT) ou QT paliativa.
+  - **Irressecável:** invasão de aorta, via aérea e coluna vertebral; metástase a distância ou linfonodomegalia não regional.
 
-- Restrito a submucosa (T1b) - Esofagectomia upfront
+## Introdução e Conceitos
 
-- T3/T4 ou N+ - Neoadjuvância + Cirurgia
-
-## INTRODUÇÃO E CONCEITOS
-
-- Tumores de esôfago: CEC, adenocarcinoma, GIST, leiom
-
-- CEC são tumores mais proximais, adenocarcinomas são ou subcárdicos) suspeitas = Io linfonodos traqu EC Adenocarcinoma o; Ingesta de bebidas btipos 16 e 18; Acalásia; DRGE; Uso de bifosfonados;
-
-Câncer de Esôfago CE Tabagismo; Etilismo Fatores de Risco quentes; HPV dos sub Tilo Sintomas Disfa Diagnóstico Diferencial Acalás EDA com cromosco Diagnóstico TC Pescoço, Tórax EcoEDA (precoce- ava Estadiamento PET-CT (identificação Laringoscopia + Bronco ose;
-
-gia abrupta, perda ponderal, melena, HDA a, Estenose péptica, Divertículo, Membrana copia (lugol) - Áreas EDA odonegativas TC Pescoço, Tórax, Abdome e x, Abdome e pelve pelve aliação profundidade e EcoEDA (precoce- avaliação s regionais)
-
-profundidade e linfonodos o de metástase oculta) regionais) oncoscopia (avaliar PET-CT (identificação de traqueia)
-
-metástase oculta)
-
-- CEC - Protocolo Cross - QRT
-
-- Adenocarcinoma - Quimioterapia ou
-
-QRT neoadjuvante
-
-- Tumores irressecáveis – Quimio-radioterapia definitiva (QRT) Ou Qt paliativa
-
-- Irressecável: Invasão aorta, via aérea e coluna vertebral
-
-- Metástase a distância ou Linfonodomegalia t não regional miossarcoma.
-
-o tumores mais distais (5cm distais do esôfago, TEG EC Adenocarcinoma o; Ingesta de bebidas btipos 16 e 18; Acalásia; DRGE; Uso de bifosfonados;
-
-ose; agia abrupta, perda ponderal, melena, HDA sia, Estenose péptica, Divertículo, Membrana opia (lugol) - Áreas EDA odonegativas TC Pescoço, Tórax, Abdome e x, Abdome e pelve pelve aliação profundidade e EcoEDA (precoce- avaliação s regionais)
-
-profundidade e linfonodos o de metástase oculta) regionais) oscopia (avaliar invasão PET-CT (identificação de ueia)
-
-metástase oculta)
+- **Tumores de esôfago:** carcinoma epidermoide/escamoso (**CEC**), **adenocarcinoma**, GIST, leiomiossarcoma.
+- **CEC** são tumores mais proximais; **adenocarcinomas** são tumores mais distais (5 cm distais do esôfago, TEG — transição esofagogástrica — ou subcárdicos).
 
 ---
 
 <!-- page:2 -->
 
-## ESTADIAMENTO
+## Estadiamento
 
-- CEC de esôfago que invadem traqueia, coluna ou aorta são tumores irressecáveis
+- CEC de esôfago que invadem traqueia, coluna ou aorta são tumores **irressecáveis**.
+- **EDA com cromoscopia com lugol:** local de biópsia na borda da lesão, para ver a transição entre epitélio normal e epitélio escamoso do tumor. Áreas iodonegativas têm alto metabolismo glicolítico, com suspeita para tumores precoces.
+- **TC de pescoço, tórax, abdome e pelve.** Se sem evidência de metástase, prosseguir com **PET-CT**.
+  - Metástase de fígado: lesões hipoatenuantes.
+- **Laringotraqueobroncoscopia:** risco aumentado de tumores do trato aerodigestivo (cabeça e pescoço, pulmão, traqueia). **Cancerização de campo:** uma vez que o paciente tem CEC de esôfago, tem chance aumentada de CEC em toda a cavidade oral, orofaringe e via aérea.
 
-- EDA com cromoscopia com lugol
+### Classificação TNM
 
-- TNM Local de biópsia: borda da lesão para ver transição | T1: invade até submucosa entre epitélio normal e epitélio escamoso do tumor | T2: invasão até muscular própria Áreas iodo negativas: alto metabolismo glicolítico | T3- invasão até adventícia com suspeita de para tumores precoces | T4a- estruturas ressecáveis por exemplo pleura
+- **T1:** invade até submucosa.
+- **T2:** invasão até muscular própria.
+- **T3:** invasão até adventícia.
+- **T4a:** invasão de estruturas ressecáveis (por exemplo, pleura).
+- **T4b:** invasão de estruturas não ressecáveis.
+- **N-:** linfonodo negativo.
+- **N+:** linfonodo acometido.
+- **M0:** sem metástase a distância.
+- **M1:** com metástase a distância (carcinomatose, metástase hepática, metástase pulmonar).
 
-- TC pescoço, tórax, abdome e pelve | T4b- estruturas não ressecáveis Se TC TAP sem evidência de metástase, prosseguir | N- linfonodo negativo com PET-CT | N+ linfonodo acometido Metástase do fígado: lesões hipoatenuantes | M0- sem metástase a distância (carcinomatose,
+*Figura 1: Endoscopia com visualização de lesão ulcerada, grande, friável, com sangramento ativo ocupando 30% da luz do esôfago, com resultado de biópsia de CEC de esôfago.*
 
-- Laringotraqueobroncoscopia: metástase hepática, metástase pulmonar) Risco aumentado de tumores do trato aerodigestivo | M1- com metástase a distância. Cancerização de campo: uma vez que tem CEC de esôfago tem chance aumentada de CEC em toda cavidade oral, orofaringe e via aérea.
-
-(cabeça pescoço, pulmão, traqueia) Figura 1: Endoscopia com visualização de lesão ulcerada, grande, friável, com sangramento ativo ocupando 30% da luz do esôfago com resultado de biópsia de CEC de esôfago Figura 2: Cromoscopia com lugol com área iodo negativas (mais claras), áreas suspeitas para tumores precoces de esôfago, principalmente CEC
+*Figura 2: Cromoscopia com lugol, com áreas iodonegativas (mais claras), suspeitas para tumores precoces de esôfago, principalmente CEC.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -80,7 +73,13 @@ metástase oculta)
 
 <!-- page:3 -->
 
-Figura 3: Laringotraqueobroncoscopia com traqueia normal, regular, sem invasões grosseiras Figura 4: Exame de PET-CT com evidência de acometimento de linfonodos mediastinais M1 M2 M3 SM1 SM1 SM3 Epithelium Lamina propria Muscularis mucosa Submucosa Figura 5: Estadiamento local
+*Figura 3: Laringotraqueobroncoscopia com traqueia normal, regular, sem invasões grosseiras.*
+
+*Figura 4: Exame de PET-CT com evidência de acometimento de linfonodos mediastinais.*
+
+*Figura 5: Estadiamento local (camadas do esôfago — epitélio, lâmina própria, muscular da mucosa, submucosa — com correspondência às categorias M1-M3 e SM1-SM3).*
+
+> ⚠️ Diagrama de estadiamento reconstruído a partir de OCR — confira contra a fonte original.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -90,83 +89,47 @@ Figura 3: Laringotraqueobroncoscopia com traqueia normal, regular, sem invasões
 
 <!-- page:4 -->
 
-Epithelium Basement membrane Tis (HGD) T2 T1 Lamina propria T3 T4a T4b Muscularis mucosae T3 T4a N0 N1 or 2 N2 3 to 6 N3 7 or more M1 Pleura Figura 6: Estadiamento T
+*Figura 6: Estadiamento T (epitélio, membrana basal, lâmina própria, muscular da mucosa, correspondência com Tis/HGD, T1, T2, T3, T4a, T4b; N0, N1, N2 [3 a 6 linfonodos], N3 [7 ou mais]; M1; pleura).*
 
-## TRATAMENTO
+> ⚠️ Diagrama de estadiamento reconstruído a partir de OCR — confira contra a fonte original.
 
-## TUMORES RESSECÁVEIS INICIAIS
+## Tratamento
 
-- 1. Restrito à mucosa (T1a) e sem Linfonodomegalias (N0):
+### Tumores Ressecáveis Iniciais
 
-Tratamento endoscópico.
+1. **Restrito à mucosa (T1a) e sem linfonodomegalias (N0):** tratamento endoscópico.
+   - **Diagnóstico padrão-ouro (T):** IPCL (*Intrapapillary capillary loop*) → EDA com magnificação + NBI. Alternativa: EUS (USG endoscópico).
+   - **Critérios de ressecção endoscópica:**
+     1. Bem diferenciado.
+     2. Restrito à mucosa (T1a).
+     3. Ausência de invasão linfovascular e perineural.
+   - **Opções:**
+     - **EMR** ("Endoscopic mucosal resection" = mucosectomia).
+     - **ESD** ("Endoscopic submucosal dissection" = dissecção submucosa).
+   - **Indicações relativas (expandidas):** M3 (MM) ou SM1, com invasão submucosa <200 micras (CEC) ou <500 micras (adenocarcinoma).
+2. **Restrito à submucosa (T1bN0):** esofagectomia upfront (sem neoadjuvância prévia).
+   - Obs.: T2N0 → avaliação individualizada (esofagectomia upfront ou neoadjuvância).
 
-- Diagnóstico padrão ouro (T): IPCL (Intrapapillary capillary loop) → EDA magnificação + NBI. Alternativa:
+### Tumores Irressecáveis
 
-EUS (USG endoscópico). CRITÉRIOS DE RESSECÇÃO ENDOSCÓPICA O
+**Quimio-radioterapia, quimioterapia paliativa ou QRT definitiva**, indicadas quando há:
 
-1. Bem diferenciado N
+1. Metástase a distância.
+2. Linfonodomegalia não regional.
+3. Invasão da aorta, via aérea e coluna vertebral.
 
-2. Restrito à mucosa (T1a) N
+- Uso de próteses para tratamento de fístulas (principalmente esôfago-traqueal) e disfagia.
+- Não há intuito de operar o paciente depois, mesmo que o tumor desapareça após QRT definitiva.
+- Pode ser feita esofagectomia de resgate quando se ganha plano de dissecção após QRT definitiva, mas é discutível caso a caso.
 
-3. Ausência de invasão linfovascular e perineural
+### Outros Tumores Ressecáveis (T3/T4a ou N+) — Neoadjuvância
 
-- Opções:
-
-- EMR (“Endoscopic mucosal resection”= mucosectomia)
-
-- ESD (“Endoscopic submucosal dissection”= dissecção submucosa)
-
-Indicações relativas (expandidas):
-
-- M3 (MM) ou SM1 Sm <200 micras (CEC) ou <500 micras (adenoCa)
-
-2. Restrito à submucosa (T1bN0)
-
-Esofagectomia upfront (upfront = sem neoadjuvância prévia) Obs.: T2N0 -> avaliação individualizada (esofagectomia upfront ou neoadjuvância)
-
-## TUMORES IRRESSECÁVEIS
-
-QUIMIO-RADIOTERAPIA, QUIMIOTERAPIA PALIATIVA A OU QRT DEFINITIVA p
-
-1. Metástase a distância n
-
-2. Linfonodomegalia não regional t
-
-3. Invasão da aorta, via aérea e coluna vertebral m
-
-c m Muscularis mucosae Submucosa Muscularis propria Periesophageal tissue Aorta
-
-- Uso de próteses para tratamento de fístulas
-
-(principalmente esofago-traqueal) e disfagia
-
-- Não há intuito de operar paciente após, mesmo que o tumor desapareça após QRT definitiva.
-
-- Pode ser feito esofagectomia de resgate quando se ganha plano de dissecção após QRT definitiva, mas discutível caso a caso.
-
-## OUTROS TUMORES RESSECÁVEIS (T3/4A OU
-
-## N+)
-
-## NEOADJUVÂNCIA
-
-- Protocolo CROSS: Normalmente indicada em CEC
-
-(responde melhor à RT com QT radiossensibilizante).
-
-- Carboplatina + paclitaxel + 41,4 Gy (5 semanas) com cirurgia 5-7 semanas após tratamento
-
-- Esquema FLOT: (QT neoadjuvante). Indicada para adenocarcinoma de TEG, podendo também ser usado
-
-Protocolo CROSS
-
-- Após neoadjuvância são repetidos exames de estadiamento (TC, EDA, PET-CT) e reavalia resposta:
-
-Regressão de doença → indicação de esofagectomia em 3 campos (esôfago cervical, torácico e abdominal)
-
-com linfadenectomia em 2 campos (torácica e abdominal) e reconstrução tubo gástrico. Obs.: no Japão se faz linfadenectomia em 3 campos (cervical, torácica e abdominal)
-
-A esofagectomia é indicada mesmo se resposta completa pós neoadjuvância, (NÃO existe watchful waiting como no no CA de cólon), exceto se paciente baixa performance, tumor irressecável, em que a QT e RT é definitiva e possui maior dose de radiação e não se planeja fazer uma cirurgia curativa, no máximo uma cirurgia de resgate para melhora de qualidade de vida).
+- **Protocolo CROSS:** normalmente indicado em CEC (responde melhor à RT com QT radiossensibilizante). Esquema: carboplatina + paclitaxel + 41,4 Gy (5 semanas), com cirurgia 5-7 semanas após o tratamento.
+- **Esquema FLOT:** QT neoadjuvante indicada para adenocarcinoma de TEG, podendo também ser usado o Protocolo CROSS.
+- Após a neoadjuvância, são repetidos exames de estadiamento (TC, EDA, PET-CT) para reavaliar a resposta:
+  - **Regressão de doença** → indicação de esofagectomia em 3 campos (esôfago cervical, torácico e abdominal), com linfadenectomia em 2 campos (torácica e abdominal) e reconstrução com tubo gástrico.
+  - Obs.: no Japão, faz-se linfadenectomia em 3 campos (cervical, torácica e abdominal).
+- A esofagectomia é indicada mesmo em caso de resposta completa pós-neoadjuvância (**não** existe *watchful waiting* como no câncer de cólon), exceto se o paciente tiver baixa performance ou o tumor for irressecável — nesse caso, a QT e RT são definitivas, com maior dose de radiação, e não se planeja cirurgia curativa, no máximo uma cirurgia de resgate para melhora de qualidade de vida.
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -176,92 +139,64 @@ A esofagectomia é indicada mesmo se resposta completa pós neoadjuvância, (NÃ
 
 <!-- page:5 -->
 
-## CLASSIFICAÇÃO DE
+## Classificação de Adenocarcinoma de TEG (Classificação de Siewert)
 
-## ADENOCARCINOMA DE TEG
+*Figura 7: Classificação de Siewert.*
 
-## (CLASSIFICAÇÃO DE SIEWERT)
+- **Tipo I:** adenocarcinoma esofágico. Epicentro até 1 cm acima da TEG → esofagectomia em 3 campos.
+- **Tipo II:** adenocarcinoma de cárdia (TEG). Epicentro de 1 cm acima até 2 cm abaixo da TEG → esofagectomia em 3 campos / gastrectomia total (avaliação individualizada).
+- **Tipo III:** adenocarcinoma subcárdico (câncer gástrico). Epicentro de 2-5 cm abaixo da TEG → gastrectomia total com linfadenectomia D2.
+- Entre 5-10% dos pacientes com Siewert II podem ter metástase em linfonodos mediastinais inferiores; logo, a esofagectomia em três campos é mais benéfica, pois retira mais linfonodos do mediastino inferior.
 
-Figura 7: Classificação de Siewert
+- Verificar Figura 7.
 
-## TIPOS DE ESOFAGECTOMIA
+## Tipos de Esofagectomia
 
-Esofagectomia em Três Campos (McKeown)
+- **Esofagectomia em Três Campos (McKeown):**
+  - Toracotomia direita + laparotomia supraumbilical por videolaparoscopia + anastomose cervical (incisão cervical esquerda). Hoje em dia faz-se o acesso torácico e abdominal por videolaparoscopia.
+- **Esofagectomia Transhiatal - Anastomose Cervical:**
+  - Não abre o tórax do paciente; faz-se por laparotomia e videolaparoscopia, com dissecção de todo o esôfago mediastinal e anastomose cervical com tubo gástrico. Muito feito antigamente devido à menor morbidade por não precisar de toracotomia.
+  - **Desvantagem:** linfadenectomia prejudicada (não consegue fazer dissecção supracarinal).
+- **Esofagectomia Transtorácica (Ivor-Lewis):**
+  - Laparotomia + toracotomia direita + anastomose intratorácica.
 
-- Toracotomia direita + Laparotomia supraumbilical por videolaparoscopia.
+### Anastomose Cervical x Intratorácica
 
-+ Anastomose cervical (Incisão cervical esquerda). Hoje em dia faz-se o acesso torácico e abdominal Esofagectomia Transhiatal - Anastomose Cervical
+**Cervical:**
+- Mais segura, mais superficial, com drenagem ao meio externo mais facilmente.
+- Apesar do maior risco de formação de fístula (menos vascularização), a fístula é menos grave (menor risco de mediastinite).
 
-- Não abre o tórax do paciente, faz-se por laparotomia e videolaparoscopia com dissecção de todo esôfago mediastinal com anastomose cervical com tubo gástrico. Muito feito antigamente devido à menor morbidade por não precisar de toracotomia.
+**Intratorácica:**
+- Menos fístula, porém maior chance de gravidade quando ocorre.
 
-Desvantagem: linfadenectomia prejudicada (não consegue fazer supracarinal). Esofagectomia Transtorácica - Ivor – Lewis
+> Obs.: para algumas metanálises, as anastomoses cervical e intratorácica apresentam taxas de mortalidade semelhantes.
 
-- Laparotomia + toracotomia direita + anastomose intratorácica.
+## Complicações Pós-Esofagectomia
 
-## ANASTOMOSE CERVICAL X INTRATORÁCICA
+### Fístula
 
-Cervical:
+- Surge no 5º-7º dia pós-operatório, com dor, taquicardia, dreno com saliva.
+- Pode-se deglutir azul de metileno com saída pelo dreno.
+- **Risco:** mediastinite.
+- **Paciente instável** → reoperação com lavagem de cavidade e drenagem.
+- **Paciente estável** → azul de metileno, esofagograma (EED) ou TC de pescoço, tórax e abdome com contraste iodado, para estudo da fístula.
+  - Fístula limitada e já drenada: deixar em jejum, dieta por SNE, antibioticoterapia, podendo introduzir ou não vácuo endoscópico (aumenta a taxa de cicatrização da fístula e o clearance bacteriano).
+  - Fístula não bloqueada → reabordagem, lavagem, jejum, drenagem, ATB de largo espectro, vácuo endoscópico.
+  - Quando a fístula é devido a uma anastomose pequena, pode-se fazer dilatação endoscópica.
 
-- Mais segura, mais superficial com drenagem ao meio externo mais facilmente.
+### Outras Complicações
 
-- apesar de maior risco de formação de fístula
+- **Respiratórias:** pneumonia, TEP, broncoespasmo, SDRA...
+- **Paralisia de corda vocal:** lesão do nervo laríngeo recorrente.
 
-(menos vascularização).
+## Referências
 
-- Fístula menos grave (menor risco de mediastinite)
+Figura 1: Endoscopia com visualização de lesão ulcerada, grande, friável, com sangramento ativo ocupando 30% da luz do esôfago, com resultado de biópsia de CEC de esôfago. www.endoscopiaterapeutica.com.br
 
-Intratorácica:
+Figura 2: Cromoscopia com lugol com área iodonegativa (mais clara), área suspeita para tumores precoces de esôfago, principalmente CEC. www.endoscopiaterapeutica.com.br
 
-- Menos fístula, porém maior chance de gravidade cervical e intratorácica apresentam taxas de mortalidade semelhantes! (CLASSIFICAÇÃO DE SIEWERT)
+Figura 3: Laringotraqueobroncoscopia com traqueia normal, regular, sem invasões grosseiras. www.endoscopiaterapeutica.com.br
 
-OBS: para algumas metanálises, as anastomoses
-
-- Tipo I: adenocarcinoma esofágico. Epicentro até 1cm da TEG →Esofagectomia em 3 campos
-
-- Tipo II: adenocarcinoma de Cárdia (TEG). Epicentro em 3 campos/ Gastrectomia total?
-
-1cm acima da TEG até 2cm abaixo → Esofagectomia
-
-- Tipo III: adenocarcinoma subcárdico (câncer gástrico).
-
-Epicentro 2-5cm abaixo da TEG → Gastrectomia total com linfadenectomia a D2
-
-- Entre 5-10% pacientes com Siewert II podem ter metástase de linfonodos mediastinais inferiores, logo esofagectomia em três campos mais benéfica pois retira mais linfonodos do mediastino inferior
-
-- Verificar Figura 7
-
-COMPLICAÇÕES PÓSESOFAGECTOMIA Fístula
-
-- 5-7PO, dor, taquicardia, dreno com saliva.
-
-- Pode deglutir azul de metileno com saída no dreno
-
-- Risco: mediastinite
-
-- Paciente instável → reoperação com lavagem de cavidade e drenagem
-
-- Paciente estável → azul de metileno, EED ou TC pescoço, tórax e abdome com administração de contraste iodado para estudo da fístula (fístula limitada já drenada deixar em jejum, dieta pela SNE,
-
-ATB podendo introduzir ou não vácuo endoscópico
-
-- aumenta taxa de cicatrização da fístula e clearance bacteriano.
-
-- Fístula não bloqueada → reabordagem, lavagem, jejum, drenagem, ATB largo espectro, vácuo endoscópico.
-
-- Quando fístula devido a anastomose pequena podese fazer dilatação endoscópica
-
-Respiratórias (pneumonia, TEP, broncoespasmo, SDRA…) Paralisia de corda vocal
-
-- Lesão do nervo laríngeo recorrente
-
-## REFERÊNCIAS
-
-Figura 1:: Endoscopia com visualização de lesão ulcerada, grande, friável, com sangramento ativo ocupando 30% da luz do esôfago com resultado de biópsia de CEC de esôfago.
-
-www.endoscopiaterapeutica.com.br Figura 2: Cromoscopia com lugol com área iodo negativas (mais claras), áreas suspeitas para tumores precoces de esôfago, principalmente CEC.
-
-www.endoscopiaterapeutica.com.br Figura 3: Laringotraqueobroncoscopia com traqueia normal, regular, sem invasões grosseiras.
-
-www.endoscopiaterapeutica.com.br Figura 4: Exame de PET-CT com evidência de acometimento de linfonodos mediastinais Acervo pessoal Medcof
+Figura 4: Exame de PET-CT com evidência de acometimento de linfonodos mediastinais. Acervo pessoal Medcof.
 
 ![Figura do material - página 5](figure-005-1.webp)

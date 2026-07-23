@@ -1,84 +1,64 @@
-# Hernioplastia inguinal
+# Hernioplastia Inguinal
 
 <!-- page:1 -->
 
-Hérnia Inguinal LICHTENSTEIN
+## Hérnia Inguinal — Lichtenstein
 
-- Técnica aberta, via anterior
+- Técnica aberta, via anterior;
+- Rápida, fácil reprodução, resolutiva;
+- Baixo índice de complicações e recidiva;
+- Passível de realização com raquianestesia e anestesia local.
 
-- Rápida, fácil reprodução, resolutiva
-
-- Baixo índice de complicações e recidiva
-
-- Passível de realização com raquianestesia e anestesia local
-
-## QUAL É A MELHOR CIRURGIA
-
-PARA HÉRNIA INGUINAL?
+## Qual é a Melhor Cirurgia para Hérnia Inguinal?
 
 - Cirurgia sem tensão;
-
 - Reforço com prótese (colocação de tela).
 
-## CIRURGIAS COM TECIDO
+## Cirurgias com Tecido
 
-- Métodos possíveis: Shouldice – Bassini –McVay;
-
-- Praticamente abandonada; altas taxas de recidiva;
-
+- Métodos possíveis: Shouldice, Bassini, McVay;
+- Praticamente abandonadas; altas taxas de recidiva;
 - Problema = tensão.
 
-## SHOULDICE
+### Shouldice
 
 A melhor para ser utilizada em casos selecionados:
 
 - Recidiva aceitável;
-
 - Uso em cirurgias contaminadas/infectadas;
+- Suturas por camadas: arco do transverso (tendão conjunto) no trato iliopúbico; oblíquo interno e aponeuroses no ligamento inguinal; incisão relaxadora na aponeurose, se necessário.
 
-- Suturas por camadas; Arco do transverso (tendão conjunto) no trato iliopúbico; Oblíquo interno e aponeuroses no ligamento inguinal; Incisão relaxadora na aponeurose, se necessário. TAPP X TEP
+### Bassini
 
-- Videolaparoscopia!
+- Era a mais utilizada antigamente; tudo suturado no ligamento inguinal.
 
-- Colocação de tela pré-peritoneal.
-
-- Menor dor pós operatória, recuperação mais rápida.
-
-- Mais caro, menos disponível.
-
-- Curva de aprendizado maior.
-
-## 5 TRIÂNGULOS
-
-- ‘Y’ Invertido
-
-## BASSINI
-
-- Era a mais utilizada antigamente; Tudo no ligamento inguinal.
-
-## MCVAY
+### McVay
 
 - Para hérnia femoral, ainda pode ser usada;
-
 - Sutura no trato iliopúbico e depois no ligamento de Cooper;
+- Requer incisão relaxadora (reto abdominal cobre o defeito).
 
-- Requer incisão relaxadora (reto abdominal cobre o defeito);
+## Cirurgia com Prótese
 
-## CIRURGIA COM PRÓTESE
-
-- Lichtenstein – Stoppa – TAPP X TEP;
-
+- Lichtenstein, Stoppa, TAPP x TEP;
 - Todas são boas.
 
-LICHTENSTEIN:
+### Lichtenstein
 
 - Técnica aberta, via anterior;
-
 - Rápida, fácil reprodução, resolutiva;
-
 - Baixo índice de complicações e recidiva;
+- Passível de realização com raquianestesia e anestesia local.
 
-- Passível de realização com raquianestesia e anestesia local;
+### TAPP x TEP
+
+- Videolaparoscopia;
+- Colocação de tela pré-peritoneal;
+- Menor dor pós-operatória, recuperação mais rápida;
+- Mais caro, menos disponível;
+- Curva de aprendizado maior.
+
+## 5 Triângulos — "Y" Invertido
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -86,71 +66,63 @@ LICHTENSTEIN:
 
 <!-- page:2 -->
 
-- Técnica descrita: RIVES: Uso de anestesia local;
+> ⚠️ Página reconstruída a partir de OCR de duas colunas intercaladas — confira contra a fonte original.
 
-- Unilateral; Incisão na pele de +- 6 cm;
+### Técnica de Lichtenstein — Descrição
 
-- Pré-peritoneal; do tubérculo púbico → espinha
+- Uso de anestesia local;
+- Unilateral;
+- Incisão na pele de aproximadamente 6 cm, do tubérculo púbico até a espinha ilíaca anterossuperior;
+- Dissecção por planos;
+- Identificação da aponeurose do músculo oblíquo externo e do anel inguinal externo;
+- Abertura e liberação dos folhetos da aponeurose do músculo oblíquo externo;
+- Isolar músculo cremaster e o funículo espermático ou ligamento redondo;
+- Identificar e preservar os 3 nervos dentro de suas fáscias (ilio-hipogástrico, ilioinguinal, ramo genital do genitofemoral);
+- Exploração do anel inguinal interno por meio da abertura do músculo cremaster;
+- Redução dos sacos herniários encontrados;
+- Colocação de tela: 10 cm caudal e 15 cm lateral (cobrir todo o orifício miopectíneo de Frouchard). Não precisa fixar a tela;
+- Fechamento por planos anatômicos; curativo.
 
-- Anterior;
-
-ilíaca anterossuperior;
-
-- Recidivadas. Dissecção por planos; Identificação da aponeurose do músculo oblíquo TAPP (TRANSABDOMINAL PRE-PERITONEAL) E externo e do anel inguinal externo; Abertura e liberação dos folhetos da aponeurose do TEP (TOTALLY EXTRAPERITONEAL):
-
-músculo oblíquo externo;
-
-- Videolaparoscopia; Isolar músculo cremaster e do funículo espermático
-
-- Colocação de tela pré-peritoneal (com tela, ou ligamento redondo; sem tensão); Identificar e preservar os 3 nervos dentro de suas
-
-- Menor dor pós-operatória, recuperação mais rápida;
-
-fáscias (ilio-hipogástrico, ilioinguinal, ramo genital
-
-- Mais caro e menos disponível;
-
-do genitofemoral);
-
-- Curva de aprendizado maior; Exploração do anel inguinal interno por meio da
-
-- Tela: 10 cm caudal e 15 cm lateral (cobrir todo o orifício abertura do músculo cremaster; miopectíneo de Frouchard); Redução dos sacos herniários encontrados.
-
-- Não precisa fixar a tela; Colocação de tela:
-
-- TAPP (transabdominal pré-peritoneal): Fechamento por planos anatômicos; | Transabdominal; Curativo. | Precisa fechar o peritônio depois; Mais fácil que a TEP; mais utilizada.
-
-Figura 2: TAPP Figura 1: Técnica de Lichtenstein TEP (TOTALLY EXTRAPERITONEAL):
-
-- Total extraperitoneal;
-
-Como fixar a tela na técnica de Lichtenstein?
-
-- Mais difícil que a TAPP;
+**Como fixar a tela na técnica de Lichtenstein?**
 
 - Fixada ultrapassando o tubérculo púbico (aprox. 2 cm);
+- Fixada no ligamento inguinal (pontos contínuos);
+- Fixada na parte superior e medial (4 cm, pontos separados);
+- Manter um discreto abaulamento da tela;
+- Criar um novo anel inguinal interno com auxílio da tela;
+- Tamanho da tela: 12 x 6 cm.
 
+Figura 1: Técnica de Lichtenstein.
+
+### TAPP (Transabdominal Pré-Peritoneal) e TEP (Totally Extraperitoneal)
+
+- Videolaparoscopia;
+- Colocação de tela pré-peritoneal (sem tensão);
+- Menor dor pós-operatória, recuperação mais rápida;
+- Mais caro e menos disponível;
+- Curva de aprendizado maior.
+
+**TAPP (transabdominal pré-peritoneal)**
+
+- Transabdominal;
+- Precisa fechar o peritônio depois;
+- Mais fácil que a TEP; mais utilizada.
+
+Figura 2: TAPP.
+
+**TEP (totally extraperitoneal)**
+
+- Total extraperitoneal;
+- Mais difícil que a TAPP;
 - Dizem que tem ainda mais benefícios.
 
-- Fixada no ligamento inguinal (pontos contínuos);
-
-- Fixada na parte superior e medial (4 cm, pontos separados);
-
-- Manter um discreto abaulamento da tela;
-
-- Criar um novo anel inguinal interno com auxílio da tela.
-
-- Tamanho da tela (12 x 6 cm).
-
-## STOPPA
+## Stoppa
 
 - Mais difícil, reservada para hérnias inguinais bilaterais e/ou recidivas grandes;
-
 - Tela pré-peritoneal bilateral;
-
 - Acesso posterior (aberto).
 
-Figura 3: TEP
+Figura 3: TEP.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -160,74 +132,97 @@ Figura 3: TEP
 
 <!-- page:3 -->
 
-Anatomia posterior: conceito do Y invertido B. Hérnia inguinal bilateral? → Tanto faz; e dos 5 triângulos. C. Complicações? → Tanto faz;
+> ⚠️ Trecho reconstruído a partir de OCR (texto de duas colunas intercalado) — confira contra a fonte original.
 
-D. Inguinoescrotal? → Tanto faz. OBS1: Pacientes com hérnias bilaterais ou hérnias em Figura 4: Y invertido e 05 triângulos
+### Anatomia Posterior
 
-- 5 triângulos: Anterior e medial: por onde ocorrem as hérnias inguinais diretas; Anterior e lateral: por onde ocorrem as hérnias inguinais indiretas; Medial e posterior: por onde ocorrem as hérnias femorais; Meio e posterior: triângulo de Doom (da morte), onde correm os vasos ilíacos; Lateral e posterior: triângulo da dor, onde correm os nervos.
+Conceito do Y invertido e dos 5 triângulos.
 
-## TELA
+Figura 4: Y invertido e 5 triângulos.
 
-## OBJETIVOS
+- **5 triângulos**:
+  - Anterior e medial: por onde ocorrem as hérnias inguinais diretas;
+  - Anterior e lateral: por onde ocorrem as hérnias inguinais indiretas;
+  - Medial e posterior: por onde ocorrem as hérnias femorais;
+  - Meio e posterior: triângulo de Doom (da morte), onde correm os vasos ilíacos;
+  - Lateral e posterior: triângulo da dor, onde correm os nervos.
+
+## Tela
+
+### Objetivos
 
 - Reduzir recidiva;
-
 - Não aumentar complicações;
-
 - Barreira física e mecânica;
-
-- Efeito biológico → inflamação e deposição de colágeno
-
+- Efeito biológico → inflamação e deposição de colágeno;
 - Fechamento sem tensão.
 
-## CARACTERÍSTICAS IDEAIS
+### Características Ideais
 
 - Poros grandes, 75 µm → permitem a infiltração de células;
-
-- Força tênsil de até 16 N/cm2;
-
+- Força tênsil de até 16 N/cm²;
 - Telas planas → aderem bem ao tecido;
-
 - Telas monofilamentares;
+- Sintética → mais barata, disponível, com menores taxas de recorrência: polipropileno (PP); poliéster (PET); polivinilideno (PVDF);
+- De baixo peso molecular, gramatura entre 30–140 g/m² → causa menos dor e sensação de peso.
 
-- Sintética → mais barata, disponível, com menores taxas de recorrência; Polipropileno - PP; poliéster - PET;
+## Escolha da Técnica Cirúrgica
 
-polivinilideno - PVDF.
+Quando operar por videolaparoscopia ou por técnica convencional?
 
-- De baixo peso molecular, gramatura entre 30-140 g/ m2 → causa menos dor e sensação de peso.
+- **Recidiva? Sim** → usar técnica diferente da primeira cirurgia: Lichtenstein → TAPP, TEP, robótica, Stoppa…; videolaparoscópica → usar Lichtenstein;
+- **Recidiva? Não** → tanto faz! Depende do cirurgião, paciente, local, equipamento;
+- **Hérnia inguinal bilateral?** → tanto faz;
+- **Complicações?** → tanto faz;
+- **Inguinoescrotal?** → tanto faz.
 
-## ESCOLHA DA TÉCNICA CIRÚRGICA
+Obs. 1: pacientes com hérnias bilaterais ou hérnias em mulheres → ligeira preferência por videolaparoscopia.
 
-Quando operar por videolaparoscopia ou por técnica convencional? A. Recidiva? Sim? → Usar técnica diferente da primeira cirurgia;
+Obs. 2: hérnias gigantes, abdome agudo obstrutivo, sepse → discutir laparotomia.
 
-| Lichtenstein → TAPP, TEP, robótica, Stoppa… | Videolaparoscópica → usar Lichtenstein. Não? → tanto faz! Depende do cirurgião, paciente, local, equipamento. OBS1: Pacientes com hérnias bilaterais ou hérnias em mulheres → ligeira preferência por videolaparoscopia OBS2: Hérnias gigantes, abdome agudo obstrutivo, sepse → Discutir laparotomia OBS3: Atualmente, se não houver contraindicações, VLP é melhor!
+Obs. 3: atualmente, se não houver contraindicações, a VLP é melhor.
 
-## TABELA RESUMO
+## Tabela Resumo
 
-Qual é a Lichtenstein TAPP/TEP melhor?? Posterior, Via de acesso Anterior, aberta videolaparoscópica Geral, Anestesia raquianestesia, Geral local Nível de dificuldade e + +++ aprendizado Complicações e < 1% < 1% recidiva Especificidade de material + ++++ o e equipe Resultados finais Iguais ;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## PÓS-OPERATÓRIO
+| | Lichtenstein | TAPP/TEP |
+|---|---|---|
+| Via de acesso | Anterior, aberta | Posterior, videolaparoscópica |
+| Anestesia | Raquianestesia, local | Geral |
+| Nível de dificuldade e aprendizado | + | +++ |
+| Complicações e recidiva | < 1% | < 1% |
+| Especificidade de material e equipe | + | ++++ |
+| Resultados finais | Iguais | Iguais |
 
-s
+## Pós-Operatório
 
 - Retorno às atividades conforme a dor do paciente;
-
 - Exercícios pesados devem ser evitados por cerca de 60 dias;
-
 - Infiltração anestésica da ferida é recomendada;
-
 - Drenos não são recomendados rotineiramente;
+- Não é recomendada retirada rotineira de tela quando há infecção do sítio cirúrgico;
+- Colocação de tela não causa infertilidade.
 
-- Não é recomendada retirada rotineira de tela quando dá infecção do sítio cirúrgico;
+### Dor Crônica (3 meses)
 
-- Colocação de tela não causa infertilidade Fatores de risco: jovens, história de dor no pré operatório, complicações no pós-operatório, cirurgia aberta, exercícios pesados antes de Tratamento: identificação rotineira dos três principais nervos, evitar excesso de suturas, neurectomia profilática não é recomendada.
-
-DOR CRÔNICA (3 MESES): 60 dias;
+- Fatores de risco: jovens, história de dor no pré-operatório, complicações no pós-operatório, cirurgia aberta, exercícios pesados antes dos 60 dias;
+- Tratamento: identificação rotineira dos três principais nervos, evitar excesso de suturas; neurectomia profilática não é recomendada.
 
 ---
 
 <!-- page:4 -->
 
-ORQUITE ISQUÊMICA: REFERÊNCIAS | Trombose do plexo pampiniforme | Congestão testicular + edema e dor Figura 1: Orifício miopectíneo de Frouchard.
+> ⚠️ Trecho reconstruído a partir de OCR (texto de duas colunas intercalado) — confira contra a fonte original.
 
-| 2 a 5 dias de PO - até 12 semanas Fonte: Furtado M, Claus CMP, Cavazzola LT, Malcher F, Bakonyi-Neto A, | Pode evoluir para atrofia testicular Saad-Hossne R. Sistematização do reparo da hérnia inguinal laparoscópica | Pode evoluir para atrofia testicular S ( | Evitar dissecções do funículo espermático t | Tratamento clínico sintomático 6 Saad-Hossne R. Sistematização do reparo da hérnia inguinal laparoscópica (TAPP) baseada em um novo conceito anatômico: Y invertido e cinco triângulos. ABCD Arq Bras Cir Dig. 2019;32(1):e1426. DOI: /10.1590/0102672020180001e1426
+### Orquite Isquêmica
+
+- Trombose do plexo pampiniforme → congestão testicular + edema e dor;
+- 2 a 5 dias de pós-operatório, podendo persistir até 12 semanas;
+- Pode evoluir para atrofia testicular;
+- Evitar dissecções do funículo espermático;
+- Tratamento clínico sintomático.
+
+## Referências
+
+Figura 1: Orifício miopectíneo de Frouchard. Fonte: FURTADO, M.; CLAUS, C. M. P.; CAVAZZOLA, L. T.; MALCHER, F.; BAKONYI-NETO, A.; SAAD-HOSSNE, R. Sistematização do reparo da hérnia inguinal laparoscópica (TAPP) baseada em um novo conceito anatômico: Y invertido e cinco triângulos. **ABCD Arquivos Brasileiros de Cirurgia Digestiva**, 2019;32(1):e1426. DOI: 10.1590/0102672020180001e1426.

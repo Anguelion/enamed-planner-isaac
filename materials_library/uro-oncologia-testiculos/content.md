@@ -1,40 +1,28 @@
-# Uro-oncologia Testículos
+# Uro-oncologia: Testículos
 
 <!-- page:1 -->
 
-Uro-oncologia
+## Uro-oncologia: Testículos
 
-## Epidemiologia
+**Tópicos**: Epidemiologia; Fatores de risco; Sintomas e sinais; Exames complementares; Estadiamento; Diferenciais; Tratamento; Seguimento.
 
-Fatores de risco Sintomas e sinais Ex. complementares Estadiamento
+**Resumo**: 95% germinativos, linfomas (idosos); criptorquidia, infertilidade; massa escrotal; USG de testículos + marcadores; TC de tórax/abdome/pelve (TAP), βHCG, DHL; alfafetoproteína (sobe apenas no não-seminoma); hidrocele — transluminescência; torção e orquite no PS (diagnósticos diferenciais de urgência); orquiectomia inguinal; enucleação em exceções; QT em estágios II e III. Doença residual: seminoma < 3 cm = expectante; não-seminomas > 1 cm = opera.
 
-- A
+## Introdução
 
-Diferenciais Tratamento Seguimento
+*Figura 1: Lâmina histológica testicular normal.*
 
-## INTRODUÇÃO
+- **Linfoma testicular** (5%) → relação com idosos;
+- **Tumores germinativos do testículo** (95%) → relação com pacientes jovens:
+  - **Seminoma**;
 
-- Normal:
+*Figura 2: Histologia de tumor testicular seminomatoso.*
 
-Figura 1: Lâmina histológica testicular normal.
+- **Não-seminoma** (mais agressivo que o seminoma);
 
-- Linfoma testicular (5%) → relação com idosos.
+*Figura 3: Histologia testicular de tumor não-seminomatoso.*
 
-Tumores germinativos do testículo (95%) → relação com pacientes jovens:
-
-- Seminoma:
-
-Figura 2: Histologia de tumor testicular seminomatoso. 95% germinativos, linfomas (idosos) Criptorquidia, infertilidade Massa escrotal USG testículos + marcadores TC TAP, bHCG, DHL Alfafetoproteína (sobe apenas no não-seminoma)
-
-Hidrocele – transluminescência Torção e orquite no PS Orquiectomia inguinal Enucleação em exceções QT em estágios II e III Doença residual:
-
-Seminoma < 3cm = expectante Não-seminomas > 1cm = opera
-
-- Não-seminoma (mais agressivo que o seminoma):
-
-Figura 3: Histologia testicular de tumor não-seminomatoso.
-
-)oãhlim rop( aicnêdicni ed axaT + Jovem Seminomas + Agressivo Não Seminomas 0/4 5/9 10/14 15/19 20/24 25/29 30/34 35/39 40/64 65+ Idade do grupo Figura 4: Incidência da neoplasia seminomatosa x não-seminomatosa de acordo com a faixa etária.
+*Figura 4: Incidência da neoplasia seminomatosa x não-seminomatosa de acordo com a faixa etária (taxa de incidência por milhão; eixo de idade: 0/4, 5/9, 10/14, 15/19, 20/24, 25/29, 30/34, 35/39, 40/64, 65+; seminomas mais comuns em faixas etárias mais jovens/intermediárias, não-seminomas mais agressivos e também predominando em jovens).*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -44,57 +32,49 @@ Figura 3: Histologia testicular de tumor não-seminomatoso.
 
 <!-- page:2 -->
 
-## FATORES DE RISCO
+## Fatores de Risco
 
-Marcadores tumorais → auxiliam no prognóstico e seguimento, mas não fazem
-
-- Criptorquidia (10%); diagnóstico:
-
-- Infertilidade / Atrofia testicular;
-
-- Aumento dos marcadores principalmente nos tumores
-
-- Usuários de Cannabis; não seminomatosos;
-
+- Criptorquidia (10%);
+- Infertilidade/atrofia testicular;
 - Usuários de Cannabis;
+- HIV+.
 
-- HIV +.
+**Marcadores tumorais** → auxiliam no prognóstico e seguimento, mas não fazem diagnóstico:
+- Aumento dos marcadores principalmente nos tumores não-seminomatosos.
 
-## SINAIS E SINTOMAS
+## Sinais e Sintomas
 
 - Massa escrotal;
-
 - Indolor;
-
 - Cresce rápido;
-
 - Desconforto local;
+- Relação aumentada com trauma – momento comum de identificação do aumento de volume.
 
-- Relação aumentada com trauma - momento comum de identificação do aumento de volume.
+## Exames Complementares
 
-## EXAMES COMPLEMENTARES
+- Boa avaliação por USG.
 
-- Boa avaliação por USG;
+*Figura 5: Seminoma — bem circunscrito e homogêneo.*
 
-- Figura 5:: Seminoma: bem circunscrito e homogêneo.
+*Figura 6: Não-seminoma — mais irregular/heterogêneo, menos delimitado, regiões de necrose.*
 
-- Figura 6:: Não-seminoma: mais irregular/ heterogêneo, menos delimitado, regiões de necrose.
+*Figura 7: USG testicular normal.*
 
-Figura 7: USG testicular normal não seminomatosos;
+**Marcadores**:
+- **βHCG** → aumento principalmente no coriocarcinoma; 10-15% dos seminomas têm aumento do βHCG;
+- **Alfafetoproteína**: não se eleva nos quadros de seminoma → aumenta no CA embrionário e tumor de saco vitelínico;
+- **DHL (ou LDH)** → relação com o volume tumoral.
 
-- Marcadores: BHCG → aumento principalmente no Coriocarcinoma; 10-15% dos Seminomas tem aumento do BHCG; Não se eleva nos quadros de seminoma → aumento no CA Embrionário e Tumor de saco vitelínico; DHL (ou LDH) → relação com o volume tumoral.
+Os níveis se relacionam com o volume tumoral, metástase e prognóstico.
 
-- Os níveis se relacionam com o volume tumoral, metástase e prognóstico.
+*Tabela 1: Elevação dos marcadores tumorais com respectivas neoplasias testiculares.*
 
-Tabela 1: Elevação dos marcadores tumorais com respectivas neoplasias testiculares
+## Estadiamento
 
-## ESTADIAMENTO
+- Não se biopsia suspeita de tumor testicular, devido ao alto risco de implante no trajeto da biópsia;
+- Diagnóstico final no anatomopatológico (AP) da orquiectomia.
 
-- Não se biópsia suspeita de tumor testicular, devido ao alto risco de implante no trajeto da biópsia;
-
-- Diagnóstico final no Anatomopatológico (AP) da orquiectomia.
-
-Tabela 2: Diferenciação entre neoplasia seminomatosa x Não seminomatosa de testículo.
+*Tabela 2: Diferenciação entre neoplasia seminomatosa x não-seminomatosa de testículo.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -104,7 +84,7 @@ Tabela 2: Diferenciação entre neoplasia seminomatosa x Não seminomatosa de te
 
 <!-- page:3 -->
 
-Tabela 3: Estadiamento TNM dos tumores testiculares.
+*Tabela 3: Estadiamento TNM dos tumores testiculares.*
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -112,29 +92,32 @@ Tabela 3: Estadiamento TNM dos tumores testiculares.
 
 <!-- page:4 -->
 
-- Destaca-se: ESTADIO I: Restrito ao Testículo; ESTADIO II: LFN Retroperitoneal; ESTADIO III: Metástase.
+- Destaca-se:
+  - **Estádio I**: restrito ao testículo;
+  - **Estádio II**: linfonodo (LFN) retroperitoneal;
+  - **Estádio III**: metástase.
 
-## DIAGNÓSTICOS DIFERENCIAIS
+## Diagnósticos Diferenciais
 
-- Hidrocele.
+- **Hidrocele**.
 
-- Figura 8: Normal.
+*Figura 8: Normal.*
 
-- Figura 9: Hidrocele não comunicante.
+*Figura 9: Hidrocele não comunicante.*
 
-Figura 10: Hidrocele comunicante Figura 11: Sinal da transluminescência positiva - sugere hidrocele.
+*Figura 10: Hidrocele comunicante.*
 
-## TRATAMENTO
+*Figura 11: Sinal da transluminescência positiva — sugere hidrocele.*
 
-- Suspeita de tumor:
+## Tratamento
 
-- Orquiectomia total via inguinal:
+- **Suspeita de tumor**: orquiectomia total via inguinal.
 
-Figura 12: Orquiectomia total por via inguinal
+*Figura 12: Orquiectomia total por via inguinal.*
 
-- Orquiectomia parcial (enucleação) - (exceção): Testículo único e desejo reprodutivo Testosterona normal; Volume tumoral < 30% do volume testicular.
+- **Orquiectomia parcial (enucleação)** — exceção: testículo único e desejo reprodutivo; testosterona normal; volume tumoral < 30% do volume testicular.
 
-Figura 13: Orquiectomia parcial ou enucleação do tumor
+*Figura 13: Orquiectomia parcial ou enucleação do tumor.*
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -144,42 +127,46 @@ Figura 13: Orquiectomia parcial ou enucleação do tumor
 
 <!-- page:5 -->
 
-## SEGUIMENTO REFERÊNCIAS
+## Seguimento
 
-ESTADIO I: Figura 1: Lâmina histológica testicular normal.
+### Estádio I
 
-- Acompanhar. Se alto risco, submete o paciente a 01 Fonte: Histology Guide © Faculty of Biological Sciences, University of ciclo de Quimioterapia com esquema BEP (bleomicina, Leeds ciclo de Quimioterapia com esquema BEP (bleomicina,
+- Acompanhar. Se alto risco, submete o paciente a 1 ciclo de quimioterapia com esquema **BEP** (Bleomicina, Etoposídeo e Platina);
+- **Quando é alto risco?**
+  - Seminoma: > 4 cm ou invasão de rete testis;
+  - Não-seminoma: invasão vascular ou > 50% da composição do tumor é CA embrionário.
 
-Etoposídeo e Platina):
+### Estádio II
 
-- Quando é alto risco? Seminoma: > 4 cm ou invasão de rete testis; Não-seminoma: Invasão vascular ou > 50% da composição do tumor é CA embrionário.
+- Quimioterapia com 4 ciclos BEP; avaliar se paciente é candidato à linfadenectomia retroperitoneal.
+- **Quando realizar linfadenectomia**:
+  - **Seminoma**: massa residual retroperitoneal < 3 cm = seguimento; massa residual retroperitoneal > 3 cm = realizar PET-FDG (positivo = linfadenectomia; negativo = seguimento);
+  - **Não-seminoma**: massa residual retroperitoneal > 1 cm = cirurgia.
 
-## ESTADIO II
-
-- Quimioterapia com 4 ciclos BEP; avaliar se paciente é candidato à Linfadenectomia retroperitoneal. Quando realizar linfadenectomia:
-
-- Seminoma: Massa residual retroperitoneal < 3cm = Seguimento; Massa residual retroperitoneal > 3cm = realizar PET-FDG (Positivo = linfadenectomia;
-
-Negativo = seguimento).
-
-- Não-seminoma: Massa residual retroperitoneal > 1 cm: cirurgia.
-
-ESTADIO III:
+### Estádio III
 
 - Quimioterapia com 4 ciclos BEP;
-
 - Metastasectomia em casos selecionados;
+- Excelente resposta à quimioterapia.
 
-- Excelente resposta à quimioterapia. Leeds x não-seminomatosa de acordo com a faixa etária.
+## Referências
 
-Figura 2: Histologia de tumor testicular seminomatoso Fonte: http://thetcrc.org/pathology_report.html Figura 3: Histologia testicular de tumor não-seminomatoso Fonte: Uptodate Figura 4: Incidência da neoplasia seminomatosa Fonte: Acervo Medcof Figura 5: Seminoma: bem circunscrito e homogêneo.
+Figura 1: Lâmina histológica testicular normal. Fonte: Histology Guide © Faculty of Biological Sciences, University of Leeds.
 
-Fonte: https://radiopaedia.org/cases/45719/studies/49912?lang=us Figura 6: Não-seminoma: mais irregular/ heterogêneo, menos delimitado, regiões de necrose.
+Figura 2: Histologia de tumor testicular seminomatoso. Fonte: http://thetcrc.org/pathology_report.html
 
-Fonte: https://radiopaedia.org/cases/testicular-non-seminomatous-germcelltumour?lang=gb Figura 7: USG testicular normal.
+Figura 3: Histologia testicular de tumor não-seminomatoso. Fonte: Uptodate.
 
-Fonte: https://radiopaedia.org/images/626703?case_id=12525&lang=gb Figura 8 a 10: Ilustrações - Acervo Medcof Figura 11: Sinal da transluminescência positiva
+Figura 4: Incidência da neoplasia seminomatosa x não-seminomatosa de acordo com a faixa etária. Fonte: Acervo Medcof.
 
-- sugere hidrocele.
+Figura 5: Seminoma: bem circunscrito e homogêneo. Fonte: https://radiopaedia.org/cases/45719/studies/49912?lang=us
 
-Fonte:https://www.eumedicoresidente.com.br/post/exame-fisico-dolactentehidrocele-ou-hernia Figura 12 e 13: Ilustrações - Acervo Medcof
+Figura 6: Não-seminoma: mais irregular/heterogêneo, menos delimitado, regiões de necrose. Fonte: https://radiopaedia.org/cases/testicular-non-seminomatous-germ-cell-tumour?lang=gb
+
+Figura 7: USG testicular normal. Fonte: https://radiopaedia.org/images/626703?case_id=12525&lang=gb
+
+Figura 8 a 10: Ilustrações - Acervo Medcof.
+
+Figura 11: Sinal da transluminescência positiva — sugere hidrocele. Fonte: https://www.eumedicoresidente.com.br/post/exame-fisico-do-lactente-hidrocele-ou-hernia
+
+Figura 12 e 13: Ilustrações - Acervo Medcof.

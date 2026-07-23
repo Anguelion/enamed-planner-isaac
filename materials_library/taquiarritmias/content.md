@@ -2,186 +2,154 @@
 
 <!-- page:1 -->
 
-Taquiarritmias (CM) FIBRILAÇÃO ATRIAL E FLUTTER | Se estável: controlar FC, anticoagular;
+## Fibrilação Atrial e Flutter
 
-- Sempre avaliar o risco de AVC pelo | Se < 24h: considerar reversão do ritmo;
+- Sempre avaliar o risco de AVC pelo **CHA2DS2-VA**: anticoagular sempre se escore **≥ 2**;
+- Em algumas situações vamos anticoagular SEMPRE, independentemente do escore: cardiomiopatia hipertrófica, hipertireoidismo descompensado, amiloidose cardíaca, miocárdio não compactado; usar apenas varfarina se estenose mitral moderada ou importante ou prótese valvar mecânica (DOAC não);
+- **Controle de FC**: betabloqueador, digoxina, amiodarona, bloqueadores do canal de cálcio não diidropiridínicos (não usar em pacientes com fração de ejeção (FE) reduzida);
+- **Reverter o ritmo**: principalmente se IC com FE reduzida. Demais pacientes, ponderar;
+- **FA aguda, no PS**: se instável: cardioversão elétrica sincronizada;
+- Se estável: controlar FC, anticoagular;
+- Se < 24h: considerar reversão do ritmo;
+- Se > 24h: ECOTE ou anticoagulação por 3 semanas antes de reverter o ritmo.
 
-CHA2DS2-VA: anticoagular sempre se escore ≥ 2; | Se > 24h: ECOTE ou anticoagulação por 3 Em algumas situações vamos anticoagular SEMPRE, semanas antes de reverter o ritmo.
+## Taquicardia de QRS Estreito e RR Regular
 
-independentemente do escore: TAQUICARDIA DE QRS ESTREITO E RR REGULAR | Cardiomiopatia hipertrófica, hipertireoidismo
+- TA / TRN / TAV (TAV: onda P retrógrada mais distante do QRS anterior do que na TRN);
+- **Tratamento**: instável = CVE; estável = manobra vagal → adenosina 6 mg → adenosina 12 mg.
 
-- TA /TRN/ TAV (TAV onda P retrógrada e mais descompensado, amiloidose cardíaca, miocárdio distante do QRS anterior do que na TRN) ;
+## Taquicardia de QRS Largo
 
-não compactado;
+- **Torsades de Pointes**: relacionada ao intervalo QT aumentado (congênito ou adquirido – lembrar de remédios!);
+- Taquicardias com QRS largo e monomórfico: > 70% taquicardia ventricular. Para diferenciar de taquicardia supraventricular com aberrância de condução, existem vários critérios (Pava, Santos, Brugada).
 
-- Tratamento: instável = CVE / estável = manobra Usar apenas varfarina se estenose mitral vagal → adenosina 6mg → adenosina 12 mg.
+## Fibrilação Atrial - Conduta
 
-moderada ou importante ou prótese valvar TAQUICARDIA DE QRS LARGO mecânica (DOAC não).
+### ECG
 
-- Torsades de Pointes: relacionada ao intervalo QT
+- Ritmo irregularmente irregular: intervalos RR distintos, sem um padrão;
+- Ausência de onda P: não é possível determinar uma linha de base;
+- Somente pode ser caracterizada como taquicardia nos casos com resposta ventricular aumentada, ou seja, com FC (frequência cardíaca ventricular) **> 100/110 bpm**. Para valores menores, considera-se fibrilação atrial com frequência adequada;
+- Cálculo da FC na FA → nº de intervalos RR (na derivação D2 longa) x 6;
+- Verificar Figura 1 na próxima página.
 
-- Controle de FC: B-bloq, digoxina, amiodarona, aumentado (congênito ou adquirido – lembrar bloqueadores do canal de cálcio não de remédios!) ;
+### Classificação
 
-diidropiridínicos (não usar em pacientes com fração
+- **Paroxística**: duração < 7 dias; em geral, demonstra reversão espontânea;
+- **Persistente**: duração > 7 dias;
+- **Permanente**: médico e paciente definiram que não vão tentar reverter o ritmo. Manter apenas controle da frequência e anticoagulação.
 
-- Taquicardias com QRS largo e monomórfico: > 70% de ejeção (FE) reduzida); taquicardia ventricular:
+### Estratificação de Risco
 
-- Reverter o ritmo: principalmente se IC Fe reduzida. | Para diferenciar de taquicardia supraventricular
+Avaliação do risco de AVC pelo escore **CHA2DS2-VA**:
 
-Demais pacientes, ponderar; com aberrância de condução, existem vários
-
-- FA AGUDA, NO PS: se instável: cardioversão critérios (Pava, Santos, Brugada).
-
-elétrica sincronizada: FIBRILAÇÃO ATRIAL CONDUTA
+- **C**: Insuficiência cardíaca – 1 ponto;
+- **H**: Hipertensão arterial sistêmica – 1 ponto;
+- **A**: Idade ≥ 75 anos – 2 pontos;
+- **D**: Diabetes mellitus – 1 ponto;
+- **S**: História de acidente vascular cerebral (AVC) – 2 pontos;
+- **V**: Doença vascular (IAM prévio, doença vascular periférica e placa na aorta) – 1 ponto;
+- **A**: Idade entre 65 e 74 anos – 1 ponto.
 
 - Anticoagular sempre se: escore ≥ 2;
+- Considerar a anticoagulação: escore ≥ 1.
 
-ECG
+### Escore HAS-BLED
 
-- Considerar a anticoagulação: escore ≥ 1;
+- Não validado para pacientes em uso de DOACs;
+- É um escore útil para avaliar o risco de sangramento do paciente.
 
-- Ritmo irregularmente irregular: intervalos RR distintos,
+Fatores de risco para sangramento:
 
-- Escore HAS-BLED: não validado para pacientes em sem um padrão; uso de DOACs:
+- **H**: Hipertensão arterial – 1 ponto;
+- **A**: Alteração de função hepática ou renal – 1 ponto para cada alteração;
+- **S**: Stroke – AVC – 1 ponto;
+- **B**: Bleeding – sangramento prévio – 1 ponto;
+- **L**: Labilidade do INR*** – 1 ponto;
+- **E**: Elderly – idade avançada – 1 ponto;
+- **D**: Drogas ou álcool – 1 ponto cada item.
 
-- Ausência de onda P: não é possível determinar uma | É um escore útil para avaliar o risco de sangramento linha de base; do paciente.
+**Interpretação**:
 
-- Somente pode ser caracterizada como taquicardia nos
-
-- Fatores de risco para sangramento:
-
-casos com resposta ventricular aumentada, ou seja, com | H: Hipertensão arterial 1 ponto; FC (frequência cardíaca - ventricular) > 100/110 bpm. | A: Alteração de função hepática ou renal: 1 ponto Para valores menores, considera-se fibrilação atrial com cada alteração;
-
-frequência adequada: | S: Stroke – AVC: 1 ponto; | Cálculo da FC na FA → N° de intervalo RR (na | B: Bleeding – Sangramento prévio: 1 ponto;
-
-derivação D2 longa) x 6. | L: Labilidade do INR***: 1 ponto;
-
-- Verificar Figura 1 na próxima página. | E: Elderly – Idade avançada: 1 ponto; D: Drogas ou álcool: 1 ponto cada item.
-
-CLASSIFICAÇÃO Interpretação:
-
-- Paroxística: duração < 7 dias; em geral, demonstra
-
-- Pontuação > 3 pontos: denota maior risco reversão espontânea; de sangramento;
-
-- Persistente: duração > 7 dias;
-
-- Ainda, a pontuação HAS-BLED > 3 sugere que seja
-
-- Permanente: médico e paciente definiram que não feito um controle dos fatores de risco contidos no vão tentar reverter o ritmo. Manter apenas controle da próprio escore;
-
-frequência e anticoagulação.
-
+- Pontuação > 3 pontos: denota maior risco de sangramento;
+- Ainda, a pontuação HAS-BLED > 3 sugere que seja feito um controle dos fatores de risco contidos no próprio escore;
 - Escore HAS-BLED não contraindica o uso de anticoagulante.
 
-ESTRATIFICAÇÃO DE RISCO Opções terapêuticas Avaliação do risco de AVC pelo escore CHA2DS2- VA
+### Opções Terapêuticas
 
-- Os DOACs (anticoagulantes de ação direta) são
-
-- C: Insuficiência cardíaca 1 ponto; liberados para uso na maioria dos casos de fibrilação
-
-- H: Hipertensão arterial sistêmica 1 ponto; atrial! Exceto: estenose mitral moderada e importante
-
-- A: Idade ≥ 75 anos 2 pontos; e prótese valvar mecânica;
-
-- D: Diabetes mellitus 1 ponto;
-
+- Os DOACs (anticoagulantes de ação direta) são liberados para uso na maioria dos casos de fibrilação atrial! Exceto: estenose mitral moderada e importante e prótese valvar mecânica;
 - Opções:
-
-- S: História de acidente vascular cerebral (AVC) 2 pontos; | Rivaroxabana: 20 mg, 1x ao dia;
-
-- V: Doença vascular (IAM prévio, doença vascular | Dabigatrana: 150 mg, 2x ao dia;
-
-periférica e placa na aorta) 1 ponto; | Apixabana: 5 mg, 2x ao dia;
-
-- A: Idade entre 65 e 74 anos 1 ponto. | Edoxaban: 60 mg, 1x ao dia.
+  - **Rivaroxabana**: 20 mg, 1x ao dia;
+  - **Dabigatrana**: 150 mg, 2x ao dia;
+  - **Apixabana**: 5 mg, 2x ao dia;
+  - **Edoxaban**: 60 mg, 1x ao dia.
 
 ---
 
 <!-- page:2 -->
 
-Figura 1: Fibrilação atrial. Anticoagular independente do Escore CHA2DS2-VA
+Figura 1: Fibrilação atrial.
 
-- Paciente sem sinais de sepse, hipovolemia grave
+### Anticoagular Independente do Escore CHA2DS2-VA
 
-- Estenose mitral moderada ou importante (antigamente e hemorragia, deve-se abordar com cardioversão conhecida como FA valvar); elétrica sincronizada, independentemente do tempo
-
-- Prótese valvar mecânica; de início do quadro: 120-200 J.
-
-- Cardiomiopatia hipertrófica; Conduta – paciente estável
-
+- Estenose mitral moderada ou importante (antigamente conhecida como FA valvar);
+- Prótese valvar mecânica;
+- Cardiomiopatia hipertrófica;
 - Hipertireoidismo descompensado;
+- Amiloidose cardíaca.
 
-- Abordar com controle de frequência e
+### Manejo FA Crônica
 
-- Amiloidose cardíaca. planejar anticoagulação;
-
-Manejo FA crônica
-
-- Sem comorbidades, HAS, ICFEp: betabloqueador,
-
-- Controle de ritmo ou frequência: diltiazem, verapamil; No geral, a diferença de mortalidade não
-
+- **Controle de ritmo ou frequência**: no geral, a diferença de mortalidade não foi demonstrada. Em alguns grupos específicos, há diferenças. A tendência é tentar reverter o ritmo para sinusal, pelo menos uma vez, principalmente em pacientes jovens;
+- **Controle da frequência cardíaca**: deve-se manter a frequência cardíaca < 110 bpm. As medicações possíveis de serem usadas:
+  - Betabloqueadores - principais;
+  - Bloqueadores do canal de cálcio não diidropiridínicos - não usar em pacientes com fração de ejeção (FE) reduzida (verapamil, diltiazem);
+  - Digoxina.
+- Sem comorbidades, HAS, ICFEp: betabloqueador, diltiazem, verapamil;
 - IC com FE < 50%: magnésio, digitálico (deslanosídeo);
+- Asma ou DPOC, com broncoespasmo: diltiazem/verapamil, digitálico;
+- Posteriormente ao controle da frequência, proceder com CHA2DS2-VA + anticoagulação.
 
-foi demonstrada;
+### Manejo da FA Aguda
 
-- Asma ou DPOC, com broncoespasmo: diltiazem/ Em alguns grupos específicos, há diferenças. verapamil, digitálico;
+**Primeira conduta** - avaliar a instabilidade → 5 D's da instabilidade hemodinâmica:
 
-A tendência é tentar reverter o ritmo para
+- Dispneia;
+- Dor torácica;
+- Diminuição da PA;
+- Diminuição do nível de consciência;
+- Desmaio (síncope).
 
-- Posteriormente ao controle da frequência, proceder sinusal, pelo menos, uma vez , principalmente em com CHA2DS2- VA + anticoagulação.
+**Conduta – paciente instável**:
 
-pacientes jovens. Conduta – FA aguda de início < 24h:
+- Assegurar que a instabilidade decorre da fibrilação atrial;
+- FC, em geral, ≥ 150 bpm: pacientes com comorbidades cardiovasculares podem instabilizar com frequências mais baixas;
+- Paciente sem sinais de sepse, hipovolemia grave e hemorragia, deve-se abordar com cardioversão elétrica sincronizada, independentemente do tempo de início do quadro: **120-200 J**.
 
-- Controle da frequência cardíaca: deve-se manter
+**Conduta – paciente estável**:
+
+- Abordar com controle de frequência e planejar anticoagulação.
+
+**Conduta – FA aguda de início < 24h**:
 
 - Considerar a cardioversão para reversão de ritmo;
+- Após, manter o uso do antiarrítmico.
 
-a frequência cardíaca < 110 bpm. As medicações
+**Conduta – FA aguda de início > 24h**:
 
-- Após, manter o uso do antiarrítmico. Betabloqueadores - principais;
+- Considerar solicitar ECO TE, para avaliar a presença de trombo, ou anticoagulação por 3 semanas para CVE;
+- Após a CVE, proceder com anticoagulação por 4 semanas, mesmo se CHA2DS2-VA = 0.
 
-possíveis de serem usadas: Conduta – FA aguda de início > 24h:
-
-- Considerar solicitar ECO TE, para avaliar a presença de Bloqueadores do canal de cálcio não-diidropiridínicos trombo ou anticoagulação por 3 semanas para CVE;
-
-- não usar em pacientes com fração de ejeção (FE)
-
-- Após a CVE, proceder com anticoagulação por 4 reduzida (verapamil, diltiazem); semanas, mesmo se CHA2DS2-VA = 0. Digoxina;
-
-## FLUTTER ATRIAL
-
-Manejo da FA aguda Primeira conduta - avaliar a instabilidade → 5 Ds da instabilidade hemodinâmica:
+## Flutter Atrial
 
 - O manejo da anticoagulação é igual ao da FA!
 
-- Dispneia;
-
-- Dor torácica; ECG
-
-- Diminuição da PA;
+### ECG
 
 - É uma taquicardia com QRS estreito;
-
-- Diminuição do nível de consciência;
-
-- Atividade atrial regular - FC ~300 bpm, com ausência
-
-- Desmaio (síncope). de linha isoelétrica;
-
-Conduta – paciente instável
-
-- Demonstra ondas F serrilhadas – são mais bem
-
-- Assegurar que a instabilidade decorre da fibrilação atrial; observadas em V1, D2, D3, avF;
-
-- FC, em geral, ≥ 150 bpm: pacientes com comorbidades
-
-- A frequência ventricular depende da razão de cardiovasculares podem instabilizar com frequências condução do nó atrioventricular;
-
-mais baixas;
-
+- Atividade atrial regular - FC ~300 bpm, com ausência de linha isoelétrica;
+- Demonstra ondas F serrilhadas – são mais bem observadas em V1, D2, D3, aVF;
+- A frequência ventricular depende da razão de condução do nó atrioventricular;
 - Verificar Figura 2 na próxima página.
 
 ![Figura do material - página 2](figure-002-1.webp)
@@ -192,55 +160,47 @@ mais baixas;
 
 Figura 2: Flutter Atrial.
 
-## TAQUICARDIA - QRS ESTREITO E
+## Taquicardia - QRS Estreito e RR Regular
 
-## RR REGULAR
-
-## TIPOS
+### Tipos
 
 - Taquicardia por reentrada nodal – TRN;
-
-- Taquicardia por reentrada átrio-ventricular – TAV;
-
+- Taquicardia por reentrada atrioventricular – TAV;
 - Taquicardia atrial (TA).
 
-## CONTEXTO GERAL TRN E TAV
+### Contexto Geral TRN e TAV
 
-- Paciente jovem; Figura 3: Representação gráfica evidenciando as diferenças
+- Paciente jovem;
+- Coração estruturalmente normal;
+- Início súbito de palpitações regulares.
 
-- Coração estruturalmente normal; entre o circuito de reentrada nodal (à esquerda) e a via acessória
+Figura 3: Representação gráfica evidenciando as diferenças entre o circuito de reentrada nodal (à esquerda) e a via acessória presente na taquicardia por reentrada átrio-ventricular.
 
-- Início súbito de palpitações regulares. presente na taquicardia por reentrada átrio-ventricular.
+### Fisiopatologia
 
-## FISIOPATOLOGIA ECG
-
-Taquicardia por reentrada nodal (TRN) Taquicardia por reentrada nodal
+**Taquicardia por reentrada nodal (TRN)**
 
 - Denota um circuito dentro do nó AV – via rápida e via lenta;
-
-- Se visíveis, as ondas P estarão após o QRS – muito
-
-- Em geral, o estímulo parte para a via rápida; próximas e invertidas;
-
-- Contudo, se existir uma extrassístole supraventricular,
-
-- Intervalo RP’ < 70 ms;
-
-a condução pela via rápida estará impedida, já que
-
-- Pseudo R’ (em V1) ou pseudo-S (em D2, D3) essa se encontrará em período refratário: onda P retrógrada. Assim, o estímulo segue para via lenta; Ao final do trajeto, a via rápida sai do período refratário e, o estímulo, além de despolarizar os ventrículos, pode também retornar pela via rápida criando um circuito de reentrada.
-
+- Em geral, o estímulo parte para a via rápida;
+- Contudo, se existir uma extrassístole supraventricular, a condução pela via rápida estará impedida, já que essa se encontrará em período refratário. Assim, o estímulo segue para via lenta. Ao final do trajeto, a via rápida sai do período refratário e o estímulo, além de despolarizar os ventrículos, pode também retornar pela via rápida, criando um circuito de reentrada;
 - Ou seja, o estímulo que desce despolariza os ventrículos, e o estímulo que sobe despolariza os átrios (de baixo para cima);
-
 - Se visíveis, ondas P estarão após o QRS, mas muito próximas dele e invertidas.
 
-Taquicardia por reentrada atrioventricular (TAV)
+**Taquicardia por reentrada atrioventricular (TAV)**
 
-- Todo o mecanismo decorre da existência de uma via acessória; Figura 4: Taquicardia por reentrada nodal em VI.
-
-- Da mesma forma, pode ser formado um circuito de macro reentrada;
-
+- Todo o mecanismo decorre da existência de uma via acessória;
+- Da mesma forma, pode ser formado um circuito de macrorreentrada;
 - Assim, observa-se onda P mais longe do QRS.
+
+### ECG
+
+**Taquicardia por reentrada nodal**
+
+- Se visíveis, as ondas P estarão após o QRS – muito próximas e invertidas: onda P retrógrada;
+- Intervalo RP' < 70 ms;
+- Pseudo R' (em V1) ou pseudo-S (em D2, D3).
+
+Figura 4: Taquicardia por reentrada nodal em V1.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -250,45 +210,34 @@ Taquicardia por reentrada atrioventricular (TAV)
 
 <!-- page:4 -->
 
-- Verificar Figura 7 .
+Figura 5: Taquicardia por reentrada nodal em DII e DIII.
 
-## TAQUICARDIAS COM QRS LARGO
-
-## E MONOMÓRFICO
-
-- Tipos:
-
-- Figura 5: Taquicardia por reentrada nodal em DII e DIII.
-
-Taquicardia por reentrada atrioventricular
+**Taquicardia por reentrada atrioventricular**
 
 - Apresenta uma via acessória;
+- Onda P observada mais distante do complexo QRS (intervalo RP' > 70 ms);
+- Observe que a onda P retrógrada pode "puxar" o segmento ST para baixo, gerando um infradesnivelamento de ST;
+- Verificar Figura 6.
 
-- Onda P observada mais distante do complexo QRS
-
-(intervalo RP’ > 70 ms);
-
-- Observe que a onda P retrógrada pode “puxar” o segmento
-
-ST para baixo, gerando um infradesnivelamento de ST;
-
-- Verificar Figura 6 .
-
-## CONDUTA
+### Conduta
 
 - Se instável: cardioversão elétrica sincronizada;
+- Estável → manobra vagal → adenosina 6 mg → adenosina 12 mg.
 
-- Estável → Manobra vagal → Adenosina 6mg →
+## Taquicardias com QRS Largo e Monomórfico
 
-Adenosina 12mg.
+- Tipos: taquicardia ventricular (> 70%) ou taquicardia supraventricular com aberrância de condução (BRD, BRE, via acessória);
+- Verificar Figura 7.
 
-## TAQUICARDIA - QRS LARGO
+## Taquicardia - QRS Largo - Torsades de Pointes
 
-## TORSADES DE POINTES
+- Apresenta complexo QRS largo e de característica polimórfica: relacionada ao intervalo QT aumentado.
 
-- Apresenta complexo QRS largo e de característica polimórfica: Relacionada ao intervalo QT aumentado. Taquicardia ventricular (> 70%) ou taquicardia supraventricular com aberrância de condução (BRD,
+Figura 6: Taquicardia por reentrada atrioventricular.
 
-Figura 7: Torsades de Pointes. Figura 8: Taquicardia Ventricular. - Tipos: BRE, via acessória). Figura 6: Taquicardia por reentrada atrioventricular.
+Figura 7: Torsades de Pointes.
+
+Figura 8: Taquicardia Ventricular.
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -298,32 +247,29 @@ Figura 7: Torsades de Pointes. Figura 8: Taquicardia Ventricular. - Tipos: BRE, 
 
 <!-- page:5 -->
 
-## CARDIOVERSÃO ELÉTRICA REFERÊCIAS
+## Cardioversão Elétrica Sincronizada
 
-## SINCRONIZADA
-
-Figura 1: Fibrilação atrial. Deve ser realizada sempre que um paciente se apresentar LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.
-
-com uma taquiarritmia e sinais de instabilidade Figura 2: com uma taquiarritmia e sinais de instabilidade decorrentes dela - 5.
+Deve ser realizada sempre que um paciente se apresentar com uma taquiarritmia e sinais de instabilidade decorrentes dela:
 
 - Explicar o procedimento ao paciente;
-
 - Fazer uso de sedação;
-
 - Garantir aporte de oxigênio;
-
 - Sincronizar com complexo QRS;
-
 - Chocar aplicando pressão no tórax, com as pás;
+- Atentar para o monitor sem retirar as pás do tórax do paciente.
 
-- Atentar para o monitor sem retirar as pás do tórax do paciente. Figura 2: Flutter Atrial.
+## Referências
 
-LITFL. Life in the Fast Lane. Disponível em: https://litfl.com. Figura 4: Taquicardia por reentrada nodal em VI.
+Figura 1: Fibrilação atrial. LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.
 
-LITFL. Life in the Fast Lane. Disponível em: https://litfl.com. Figura 5: Taquicardia por reentrada nodal em DII e DIII.
+Figura 2: Flutter Atrial. LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.
 
-LITFL. Life in the Fast Lane. Disponível em: https://litfl.com. Figura 6: Taquicardia por reentrada atrioventricular.
+Figura 4: Taquicardia por reentrada nodal em V1. LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.
 
-LITFL. Life in the Fast Lane. Disponível em: https://litfl.com. Figura 7: Torsades de Pointes. LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.
+Figura 5: Taquicardia por reentrada nodal em DII e DIII. LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.
+
+Figura 6: Taquicardia por reentrada atrioventricular. LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.
+
+Figura 7: Torsades de Pointes. LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.
 
 Figura 8: Taquicardia Ventricular. LITFL. Life in the Fast Lane. Disponível em: https://litfl.com.

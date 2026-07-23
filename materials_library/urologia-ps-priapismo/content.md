@@ -1,120 +1,112 @@
-# Urologia PS - Priapismo
+# Urologia PS — Priapismo
 
 <!-- page:1 -->
 
-Priapismo CARACTERÍSTICAS T ISQUÊMICO N
+Priapismo
 
-- Extremamente DOLOROSO;
+## Características
 
-- Ereção 10/10;
+### Isquêmico
 
+- Extremamente **doloroso**.
+- Ereção 10/10.
 - Pode levar a isquemia.
 
-## NÃO ISQUÊMICO
+### Não Isquêmico
 
-- INDOLOR;
+- **Indolor**.
+- Ereção pode ser "meia bomba".
 
-- Ereção pode ser “meia bomba”. I
+## Avaliação
 
-## AVALIAÇÃO
+- Exame físico, gasometria de corpo cavernoso / USG Doppler.
 
-- Exame físico, gasometria de corpo cavenoso /
+**Tabela comparativa: Priapismo Isquêmico x Não Isquêmico**
 
-- USG doppler
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## Isquêmico Não Isquêmico
+| Parâmetro | Isquêmico | Não Isquêmico |
+|---|---|---|
+| Aspecto | Escuro | Vermelho vivo |
+| pO2 (mmHg) | < 30 | > 90 |
+| pCO2 (mmHg) | > 60 | < 40 |
+| pH | < 7,25 | > 7,35 |
 
-- Aspecto Escuro Vermelho vivo pO2 (mmHg) < 30 > 90 pCO2 (mmHg) > 60 < 40 pH < 7,25 > 7,35
-
-## DEFINIÇÃO
+## Definição
 
 - Ereção não desejada que pode iniciar durante estímulo, mas perdura sem estímulo de forma prolongada (> 2-3 horas).
+- Relembrando: o pênis no seu estado flácido apresenta a cavidade sinusoidal não preenchida e o músculo liso contraído; o pênis ereto apresenta o músculo liso relaxado, cavidades sinusoidais ingurgitadas, colapsando as veias e diminuindo o retorno venoso.
 
-- Relembrando: O pênis no seu estado flácido apresenta a cavidade sinusoidal não preenchida e o músculo liso contraído; O pênis ereto apresenta o músculo liso relaxado, cavidades sinusoidais ingurgitadas, colapsando as veias e diminuindo o retorno venoso.
+## Fisiologia da Ereção
 
-## FISIOLOGIA DA EREÇÃO
+- **Via do óxido nítrico**: ocorre liberação do óxido nítrico pelas células endoteliais, agindo de forma intracelular nas células musculares dos sinusoides, fazendo o estímulo da guanilil ciclase, que, por sua vez, converte guanosina trifosfato (GTP) em cGMP (monofosfato cíclico de guanosina). O cGMP é a substância ativa que irá promover o decréscimo de cálcio intracelular, levando ao relaxamento do músculo liso e ereção. Nessa mesma via, a fosfodiesterase degrada o cGMP; logo, sua inibição por medicamentos aumenta a concentração de cGMP e causa a ereção.
 
-- Via do óxido nítrico: ocorre liberação do óxido nítrico I pelas células endoteliais, agindo de forma intracelular nas células musculares dos sinusoides, fazendo o estímulo da guanilil ciclase, que, por sua vez, converte guanosina trifosfato (GTP) em cGMP (monofosfato cíclico de guanosina). O cGMP é a substância ativa que irá promover o decréscimo de cálcio intracelular, levando ao N relaxamento do músculo liso e ereção. Nessa mesma via, a fosfodiesterase degrada o cGMP, logo, a sua inibição por medicamentos aumenta a concentração de cGMP e causa a ereção.
+*Figura 1: Demonstração da musculatura peniana durante flacidez (à esquerda — músculo liso contraído, cavidade sinusoide colapsada, veia ingurgitada) e ereção (à direita — músculo liso relaxado, cavidade sinusoide ingurgitada, veia colapsada).*
 
-- M. Liso M. Liso
+### Via Receptores de Prostaglandinas (PGE)
 
-Relaxado Cavidade Sinusóide Veia Sinusoidal Ingurgitado Colapsada
+- A ativação dos receptores de PGE1 leva à ação na adenilil ciclase, que converte adenosina trifosfato (ATP) em monofosfato cíclico de adenosina (cAMP), também levando ao decréscimo de cálcio, relaxamento do músculo liso e ereção.
+- Medicações que agem diretamente nos receptores de PGE1.
 
-- Figura 1: Demonstração da musculatura peniana durante flacidez
+### Medicações que Inibem a Fosfodiesterase (PDE5)
 
-(à esquerda) e ereção (à direita). TRATAMENTO NÃO ISQUÊMICO
+- Avanafil (Stendra®).
+- Sildenafil (Viagra®).
+- Tadalafil (Cialis®).
+- Vardenafil (Levitra®, Staxyn®).
 
-- Observação clínica (resolução espontânea em
+## Isquêmico (Baixo Fluxo)
 
-24-48h). Embolização em casos refratários
-
-## ISQUÊMICO
-
-- Irrigação/Lavagem;
-
-- Injeção intracavernosa de solução de adrenalina/Fenilefrina;
-
-- Shunt Distal;
-
-- Shunt proximal.
-
-- Medicações que inibem a fosfodiesterase (PDES): Avanafil (Stendra ®); Sildenafil (Viagra ®); Tadalafil (Cialis ®); Vardenafil (Levitra ®, Staxyn ®).
-
-- Via receptores de prostaglandinas (PGE): A ativação dos receptores de PGE1 leva à ação na adenilil ciclase, que converte adenosina trifosfato também levando ao decrescimento de cálcio, relaxamento do músculo liso e ereção.
-
-(ATP) em monofosfato cíclico de adenosina (cAMP),
-
-- Medicações que agem diretamente nos receptores de PGE1:
-
-- Verificar Figura 2 na próxima página.
-
-## ISQUÊMICO (BAIXO FLUXO)
-
-- Envolve fenômenos venoclusivos;
-
+- Envolve fenômenos venoclusivos.
 - Fatores de risco: anemia falciforme ou uso de medicações (medicação intracavernosa para ereção ou cocaína).
 
-## NÃO ISQUÊMICO (ALTO FLUXO)
+## Não Isquêmico (Alto Fluxo)
 
-- Envolve fístula artério-venosa (sangue arterial entra nos corpos cavernosos, causando a ereção);
-
-- Fator de risco: Trauma Perineal;
-
+- Envolve fístula arteriovenosa (sangue arterial entra nos corpos cavernosos, causando a ereção).
+- Fator de risco: trauma perineal.
 - Não configura urgência urológica, pois não causa isquemia.
 
-## SINAIS E SINTOMAS
+## Sinais e Sintomas
 
-- Extremamente doloroso;
+### Isquêmico
 
-- Ereção 10/10 (importante): Pode levar a isquemia tecidual (urgente).
+- Extremamente doloroso.
+- Ereção 10/10 (importante): pode levar a isquemia tecidual (urgente).
 
 ---
 
 <!-- page:2 -->
 
-Figura 2: Fisiopatologia da ativação do GMP culminando na formação do NO, associado a fatores reguladores como sua degradação pela PDE5 com respectivos fármacos que podem a inibir além da ativação através de receptores de prostaglandinas.
+*Figura 2: Fisiopatologia da ativação do GMP culminando na formação do NO, associado a fatores reguladores como sua degradação pela PDE5, com os respectivos fármacos que podem inibi-la, além da ativação através de receptores de prostaglandinas.*
 
-- Geralmente indolor;
+### Não Isquêmico
 
-- Ereção pode ser “meia bomba” (o sangue não está totalmente represado).
+- Geralmente indolor.
+- Ereção pode ser "meia bomba" (o sangue não está totalmente represado).
 
-## EXAMES COMPLEMENTARES
+## Exames Complementares
 
-## GASOMETRIA DE CORPOS CAVERNOSOS
+### Gasometria de Corpos Cavernosos
 
 - Aspirado do sangue do corpo cavernoso:
 
-Isquêmico Não Isquêmico Aspecto Escuro Vermelho vivo Figura 3: USG Doppler de um priapismo isquêmico (não há fluxo na artéria cavernosa).
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-pO2 (mmHg) < 30 > 90 pCO2 (mmHg) > 60 < 40 pH < 7,25 > 7,35
+| Parâmetro | Isquêmico | Não Isquêmico |
+|---|---|---|
+| Aspecto | Escuro | Vermelho vivo |
+| pO2 (mmHg) | < 30 | > 90 |
+| pCO2 (mmHg) | > 60 | < 40 |
+| pH | < 7,25 | > 7,35 |
 
-## USG DOPPLER DE PÊNIS
+*Figura 3: USG Doppler de um priapismo isquêmico (não há fluxo na artéria cavernosa).*
 
-- Achados no Priapismo Isquêmico: Fluxo reduzido ou ausente na artéria cavernosa; Índice de Resistividade aumentado; Sinais de trombose em corpo cavernoso ou esponjoso.
+### USG Doppler de Pênis
 
-- Verificar Figura 3
+- **Achados no priapismo isquêmico**: fluxo reduzido ou ausente na artéria cavernosa; índice de resistividade aumentado; sinais de trombose em corpo cavernoso ou esponjoso.
+- **Achados no priapismo não isquêmico**: fístula arteriovenosa pode ser vista; velocidades normais ou aumentadas em artérias penianas.
 
-- Achados no priapismo não-isquêmico: Fístula artério-venosa pode ser vista; Velocidades normais ou aumentadas em Figura 4: USG Doppler de um priapismo não-isquêmico artérias penianas. (observa-se fístula arteriovenosa).
+*Figura 4: USG Doppler de um priapismo não isquêmico (observa-se fístula arteriovenosa).*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -124,19 +116,26 @@ pO2 (mmHg) < 30 > 90 pCO2 (mmHg) > 60 < 40 pH < 7,25 > 7,35
 
 <!-- page:3 -->
 
-PRIAPISMO Abordagem cirúrgica: Shunt distal (produção de fístula entre o corpo cavernoso e esponjoso para drenagem do sangue represado);
+## Priapismo — Abordagem Cirúrgica
 
-Exame físico, gasometria de corpo cavernoso / USG doppler cavernoso / USG doppler Não Isquêmico Isquêmico Observação clínica Irrigação / lavagem (resolução espontânea em 24-48h)
+- **Shunt distal**: produção de fístula entre o corpo cavernoso e esponjoso para drenagem do sangue represado.
 
-Embolização em casos refratários Injeção intracavernosa de solução de adrenalina / fenilefrina Shunt Distal Shunt proximal Figura 5: Fluxograma. Condutas no Priapismo no Pronto Socorro até o Diagnóstico. No Isquêmico, os passos são progressivos, iniciando pela irrigação/ lavagem dos corpos cavernosos, injeção intracavernosa de solução de adrenalina/ fenilefrina, e, se refratário, parte para condutas cirúrgicas, o Shunt Distal e Shunt Proximal.
+> ⚠️ Fluxograma (Figura 5) reconstruído a partir de OCR — confira contra a fonte original.
 
-## TRATAMENTO
+*Figura 5: Fluxograma — condutas no priapismo no pronto-socorro até o diagnóstico (exame físico, gasometria de corpo cavernoso / USG Doppler).*
 
-Punção com lavagem do corpo cavernosos (introduz soro fisiológico, podendo-se diluir alfa-adrenérgico):
+- **Não isquêmico**: observação clínica (resolução espontânea em 24-48h); embolização em casos refratários.
+- **Isquêmico**: os passos são progressivos, iniciando pela irrigação/lavagem dos corpos cavernosos, injeção intracavernosa de solução de adrenalina/fenilefrina, e, se refratário, parte para condutas cirúrgicas — shunt distal e shunt proximal.
 
-Quack Figura 6: Irrigação e lavagem do corpo cavernoso. Figura 7: Técnicas para confecção de shunt distal.
+## Tratamento
 
-Procedimentos: Winter, Ebbehoj, T-Shunt e Al-Ghorab. klesQuackles GrayhackGrayhack Figura 8: Técnicas para confecção de shunt proximal.
+- Punção com lavagem do corpo cavernoso (introduz soro fisiológico, podendo-se diluir alfa-adrenérgico).
+
+*Figura 6: Irrigação e lavagem do corpo cavernoso.*
+
+*Figura 7: Técnicas para confecção de shunt distal — procedimentos de Winter, Ebbehoj, T-Shunt e Al-Ghorab.*
+
+*Figura 8: Técnicas para confecção de shunt proximal — técnicas de Quackels e Grayhack.*
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -146,14 +145,17 @@ Procedimentos: Winter, Ebbehoj, T-Shunt e Al-Ghorab. klesQuackles GrayhackGrayha
 
 <!-- page:4 -->
 
-Disfunção Erétil -> Risco maior após 6h Fibrose Isquemia Shunt Figura 9: Dificuldade de confecção de próteses penianas apos lo durante primeira cirurgia.
+> ⚠️ Trecho e legenda da Figura 9 reconstruídos a partir de OCR — confira contra a fonte original.
 
-SEGUIMENTO Importante se atentar para a disfunção erétil, principalmente quanto maior o tempo de isquemia (risco maior após 6 horas);
+*Figura 9: Dificuldade de confecção de próteses penianas após longo tempo de isquemia e fibrose (com confecção de shunt na artéria cavernosa) durante primeira cirurgia. Disfunção erétil → risco maior após 6h de isquemia → fibrose → dificuldade técnica para shunt/prótese.*
 
-A isquemia prolongada causa fibrose, inviabilizando o tecido do corpo cavernoso, somado à necessidade que muitos pacientes têm de realizar shunt, resultado em uma situação de maior dificuldade técnica para colocação da prótese.
+## Seguimento
 
-- Verificar Figura 9 . Dificuldades técnicas para prótese ongo tempo de isquemia e fibrose com confecção de shunt na artéria cavernosa).
+- Importante se atentar para a disfunção erétil, principalmente quanto maior o tempo de isquemia (risco maior após 6 horas).
+- A isquemia prolongada causa fibrose, inviabilizando o tecido do corpo cavernoso, somado à necessidade que muitos pacientes têm de realizar shunt, resultando em uma situação de maior dificuldade técnica para colocação da prótese.
 
-REFERÊNCIAS Figura 3: USG Doppler de um priapismo isquêmico (não há fluxo Morgan M, Silverstone L, Elfeky M, et al. Priapism. Reference article, Radiopaedia.org (Accessed on 02 Apr 2025) https://doi.org/10.53347/rID32721 Figura 4: USG Doppler de um priapismo não-isquêmico (observa-se fístula arteriovenosa).
+## Referências
 
-Morgan M, Silverstone L, Elfeky M, et al. Priapism. Reference article, Radiopaedia.org (Accessed on 02 Apr 2025) https://doi.org/10.53347/ rID-32721
+Figura 3: USG Doppler de um priapismo isquêmico (não há fluxo na artéria cavernosa). Morgan M, Silverstone L, Elfeky M, et al. *Priapism*. Reference article, Radiopaedia.org (Accessed on 02 Apr 2025) https://doi.org/10.53347/rID-32721
+
+Figura 4: USG Doppler de um priapismo não isquêmico (observa-se fístula arteriovenosa). Morgan M, Silverstone L, Elfeky M, et al. *Priapism*. Reference article, Radiopaedia.org (Accessed on 02 Apr 2025) https://doi.org/10.53347/rID-32721

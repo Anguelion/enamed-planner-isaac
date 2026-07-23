@@ -2735,7 +2735,7 @@
         "C": "Realização de radiografia de crânio como critério de liberação do paciente.",
         "D": "Hospitalização com pedido de avaliação imediata pelo neurocirurgião."
       },
-      "answer": "B",
+      "answer": "A",
       "source": "01. QUESTÕES BLOCO 7 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 7",
       "images": [],
@@ -2749,7 +2749,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "answerAudit": "official-source",
+      "answerSource": "01. QUESTÕES BLOCO 7 (SEMANAIS).txt"
     },
     {
       "id": "b07-semanal-q091",

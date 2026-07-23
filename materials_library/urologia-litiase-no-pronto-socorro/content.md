@@ -1,166 +1,138 @@
-# Urologia Litíase no pronto-socorro
+# Urologia: Litíase no Pronto-Socorro
 
 <!-- page:1 -->
 
-## UROLOGIA: LITÍASE NO
+## Urologia: Litíase no Pronto-Socorro
 
-## PRONTO-SOCORRO
+Litíase (CIR)
 
-Litíase (CIR) TC sem constraste é padrão ouro para diagnóstoco Ultrassom mais utilizado em crianças e gestantes evitar radiação da TC.
+- TC sem contraste é padrão-ouro para diagnóstico.
+- Ultrassom mais utilizado em crianças e gestantes, para evitar radiação da TC.
 
-Tabela 1: Pontos principais sobre litíase renal do pronto socorr Definição Mi Epidemiologia 15% p Sintomas e sinais Ex complementares La Diagnóstico Pielonefrite Obstr Diferenciais Lombalgia mecâni Tratamento Sintomático Seguimento P
+**Tabela 1: Pontos Principais sobre Litíase Renal no Pronto-Socorro**
 
-## DEFINIÇÃO
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Diagnóstico diferencial de dor lombar no PS
+| Tópico | Resumo |
+|---|---|
+| Definição | Migração de cálculo na via urinária |
+| Epidemiologia | 15% da população, 40-60 anos, recorrente |
+| Sintomas e sinais | Dor, infecção e obstrução |
+| Exames complementares | Laboratoriais, cultura e tomografia |
+| Diagnóstico | Obstrutiva — clínica + achados em exame de imagem |
+| Pielonefrite diferenciais | Lombalgia mecânica, pielonefrite não obstrutiva, prenhez ectópica |
+| Tratamento | Sintomáticos, terapia expulsiva, desobstrução se PNO |
+| Seguimento | Programar tratamento definitivo |
 
-- Dor = migração dos cálculos renais para as vias urinárias
+## Definição
 
-- 3 pontos de estreitamento : junção ureteropiélica uretrovesical (JUV).
+- Diagnóstico diferencial de dor lombar no PS.
+- Dor = migração dos cálculos renais para as vias urinárias.
+- 3 pontos de estreitamento: junção ureteropiélica (JUP), cruzamento dos vasos ilíacos, junção ureterovesical (JUV).
 
-(JUP), cruzamento dos vasos ilíacos, junção
+*Figura 1: Anatomia do trato genitourinário e ureteroscopia.*
 
-- Verificar Figura 1 na próxima página
+## Epidemiologia
 
-## EPIDEMIOLOGIA
-
-- 15% da população geral
-
-- Mais comum em homens → tendendo ao equilíbrio;
-
-- Pico de incidência entre 40 e 60 anos
-
+- 15% da população geral.
+- Mais comum em homens → tendendo ao equilíbrio.
+- Pico de incidência entre 40 e 60 anos.
 - Principal fator de risco é a baixa ingesta hídrica.
 
-## SINAIS E SINTOMAS
+## Sinais e Sintomas
 
-- Podem ser assintomáticos,
-
+- Podem ser assintomáticos.
 - Migração do cálculo = dor.
+- **Dor (cólica nefrética)**: tipo cólica, súbita, de forte intensidade; irradiação conforme sua localização no trato urinário.
+- Sintomas associados: inquietação, náuseas e vômitos, sudorese.
+- **Sinais de obstrução**: dilatação da via urinária avaliada em exame de imagem; anúria pode estar presente em rim único ou obstrução bilateral; urinoma — obstrução aguda com distensão e rompimento da via urinária.
+- **Sinais de infecção**: hematúria; queda do estado geral; instabilidade hemodinâmica, sinais de sepse.
 
-- Dor (Cólica nefrética): Tipo cólica, súbita, de forte intensidade; Irradiação conforme sua localização no trato urinário; TERAPIA EXPULSIVA:
+### Terapia Expulsiva
 
-- Cálculos de até 5mm (ideal);
+- Cálculos de até 5 mm (ideal).
+- Alfabloqueador por até 4 a 6 semanas.
 
-- Alfa bloqueador por até 4 a 6 semanas.
+### Litíase Obstrutiva
 
-LITÍASE OBSTRUTIVA:
+- Cateter duplo J.
+- Nefrostomia percutânea.
 
-- Cateter duplo J
+## Exames Complementares
 
-- Nefrostomia percutânea ro. Sintomas associados: inquietação, náuseas e vômitos, sudorese.
-
-igração de cálculo na via urinária população, 40-60 anos, recorrente Dor, infecção e obstrução aboratoriais, cultura e tomografia rutiva - Clínica + achados em exame de imagem ica, pielonefrite não obstrutiva, prenhez ectópica os, terapia expulsiva, desobstrução se PNO Programar tratamento definitivo
-
-- Sinais de obstrução: Dilatação da via urinária avaliada em exame de imagem; Anúria pode estar presente em rim único ou obstrução bilateral; Urinoma, obstrução aguda com distensão e rompimento da via urinária.
-
-- Sinais de Infecção: Hematúria; Queda do estado geral; Instabilidade hemodinâmica, sinais de sepse.
-
-## EXAMES COMPLEMENTARES
-
-- Laboratorial – buscar por sinais de infecção Hemograma, provas inflamatórias, gasometria arterial, lactato, urocultura e hemocultura.
-
-- Hemocultura; urocultura, urina 1
-
+- Laboratorial — buscar por sinais de infecção: hemograma, provas inflamatórias, gasometria arterial, lactato, urocultura e hemocultura.
+- Hemocultura; urocultura; urina 1.
 - Função renal e eletrólitos.
-
-- B-HCG para mulheres em idade fértil;
-
-- Exame de imagem: Tomografia computadorizada sem contraste = padrão ouro!
+- B-HCG para mulheres em idade fértil.
+- **Exame de imagem**: tomografia computadorizada sem contraste = padrão-ouro!
 
 ---
 
 <!-- page:2 -->
 
-Tabela 2: Comparação das vantagens e desvantagens entre Tomografia e Ultrassom para diagnóstico de cálculo renal.
+**Tabela 2: Comparação das Vantagens e Desvantagens entre Tomografia e Ultrassom para Diagnóstico de Cálculo Renal**
 
-## TOMOGRAFIA ULTRASSOM
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Tamanho e número de Baixo Custo cálculos Topografia não é um Sem radiação limitante na TC Densidade do Cálculo Dificuldade em obesos Bom para Rim e terço Distância Pele-Cálculo proximal e distal de ureter Não examinador Examinador dependente dependente Preferir em crianças e Anatomia Renal gestantes
+| Tomografia | Ultrassom |
+|---|---|
+| Tamanho e número de cálculos | Baixo custo |
+| Topografia não é um limitante na TC | Sem radiação |
+| Densidade do cálculo | Dificuldade em obesos |
+| Distância pele-cálculo | Bom para rim e terço proximal e distal de ureter |
+| Não examinador-dependente | Examinador-dependente |
+| Anatomia renal | Preferir em crianças e gestantes |
+| > 90% de sensibilidade e especificidade | Preferir em cálculos de indinavir |
+| Padrão-ouro | — |
 
-> 90% de sensibilidade e Preferir em cálculos de especificidade indinavir
+## Pielonefrite Obstrutiva
 
-Padrão ouro
+- Clínica de infecção do trato urinário alto + sinais de obstrução em exame de imagem.
+- Urocultura pode vir negativa nos exames iniciais.
+- Conduta: tratar o cálculo e a infecção.
 
-- - - - T
+## Pielonefrite Xantogranulomatosa
 
-- - - - T
+- Pielonefrite de repetição + cálculo + obstrução.
+- Destruição do parênquima renal (macrófagos xantomatosos).
+- **Sinal da pata do urso**: dilatação calicinal.
+- Conduta: nefrectomia.
 
-- - - - Figura 1: Anatomia do trato genitourinário e ureteroscopia.
+*Figura 2: Sinal da pata do urso.*
 
-## PIELONEFRITE OBSTRUTIVA
+## Diagnóstico Diferencial
 
-- Clínica de infecção do trato urinário alto + sinais de obstrução em exame de imagem;
-
-- Urocultura pode vir negativa nos exames iniciais. F
-
-- Conduta: tratar o cálculo e a infecção n a
-
-## PIELONEFRITE
-
-## XANTOGRANULOMATOSA P
-
-- Pielonefrite de repetição + cálculo + obstrução;
-
-- Destruição do parênquima renal
-
-(macrofagos xantomatosos)
-
-- Sinal da pata do urso - dilatação calicinal
-
-- Conduta: nefrectomia
-
-- Figura 2: Sinal da pata do urso.
-
-## DIAGNÓSTICO DIFERENCIAL
-
-- Lombalgia mecânica;
-
-- Hérnia discal;
-
-- Causas obstétricas / ginecológicas;
-
-- Outras causas de abdome inflamatório;
-
+- Lombalgia mecânica.
+- Hérnia discal.
+- Causas obstétricas/ginecológicas.
+- Outras causas de abdome inflamatório.
 - Pielonefrite aguda.
 
-## TRATAMENTO
+## Tratamento
 
-## CÓLICA NEFRÉTICA
+### Cólica Nefrética
 
-- Analgésico simples;
-
-- AINEs;
-
-- Antiespasmódico;
-
-- Manter paciente normohidratado;
-
+- Analgésico simples.
+- AINEs.
+- Antiespasmódico.
+- Manter paciente normo-hidratado.
 - Opioides de resgate.
 
-## TERAPIA EXPULSIVA
+### Terapia Expulsiva
 
-- Para cálculos de até 5mm (podendo ser até 10mm)
+- Para cálculos de até 5 mm (podendo ser até 10 mm).
+- Apenas se não indicar cirurgia imediata.
+- Acrescentar alfabloqueador por até 4 a 6 semanas.
+- Interromper se dor refratária, infecção ou piora da função renal.
+- 95% dos cálculos de até 4 mm saem em 40 dias.
 
-- Apenas se não indicar cirurgia imediata;
+**Atenção**: pacientes com rim único, imunossuprimidos, obstrução bilateral ou múltiplas comorbidades geralmente necessitam de abordagem cirúrgica (não é possível aguardar o tempo de expulsão do cálculo).
 
-- Acrescentar Alfa bloqueador por até 4 a 6 semanas;
-
-- Interromper se dor refratária, infecção ou piora da função renal;
-
-- 95% dos cálculos de até 4mm saem em 40 dias.
-
-Rim único Imunossuprimido Obstrução bilateral Múltiplas comorbidades Ficar atento com os pacientes acima, geralmente necessitam de abordagem cirúrgica (não é possível aguardar o tempo de expulsão do cálculo).
-
-- Desobstrução imediata: duplo J ou nefrostomia percutânea;
-
-- Antibiótico;
-
-- Hidratação;
-
-- O2 se necessário;
-
-- Monitorização se sepse;
+- Desobstrução imediata: duplo J ou nefrostomia percutânea.
+- Antibiótico.
+- Hidratação.
+- O2 se necessário.
+- Monitorização se sepse.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -170,17 +142,18 @@ Rim único Imunossuprimido Obstrução bilateral Múltiplas comorbidades Ficar a
 
 <!-- page:3 -->
 
-Figura 3: Possibilidades de tratamento para pielonefrite obstrutiv Cálculo < 10mm sem evidência de infecção:
+*Figura 3: Possibilidades de tratamento para pielonefrite obstrutiva. À direita, cateter duplo J; à esquerda, nefrostomia percutânea.*
 
-podemos realizar terapia expulsiva Alfabloqueador (Tansulosina, doxazosina) AINE; Sintomáticos Falha de tratamento conservador Cálculos não passíveis de Tratamento conservador Figura 4: Fluxograma para condução de pacientes com ureterolit
+> ⚠️ Fluxograma (Figura 4) reconstruído a partir de OCR — confira contra a fonte original.
 
-## REFERÊNCIAS
+*Figura 4: Fluxograma para condução de pacientes com ureterolitíase não obstrutiva versus obstrutiva.*
 
-Figura 2: Sinal da pata do urso. Fonte: Adaptado de https://institutoammo.org/noticia.php?n=75 va. A direita cateter duplo J e a esquerda Nefrostomia percutânea.
+- **Cálculo < 10 mm, sem evidência de infecção**: podemos realizar terapia expulsiva — alfabloqueador (tansulosina, doxazosina) + AINE; sintomáticos. Se falha de tratamento conservador ou cálculos não passíveis de tratamento conservador, prosseguir para tratamento definitivo do cálculo: litotripsia extracorpórea (LECO), nefrolitotomia percutânea, ureterolitotripsia (ULT) semirrígida ou ureterolitotripsia flexível.
+- **Evidência de pielonefrite obstrutiva**: descompressão da via urinária → cateter duplo J ou nefrostomia → antibioticoterapia e suporte → tratamento definitivo do cálculo.
 
-Evidência de pielonefrite obstrutiva Descompressão da Via urinária -> Cateter Duplo J -> Nefrostomia -> Antibioticoterapia e suporte Tratamento definitivo do cálculo -> Litotripsia extracorpórea (LECO)
+## Referências
 
--> Nefrolitotomia percutanea -> ULT Semirrígida -> Ureterolitotripsia flexível tíase não obstrutiva versus obstrutiva.
+Figura 2: Sinal da pata do urso. Fonte: adaptado de https://institutoammo.org/noticia.php?n=75
 
 ![Figura do material - página 3](figure-003-1.webp)
 

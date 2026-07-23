@@ -1,178 +1,155 @@
-# Esôfago Diagnósticos Diferenciais de Disfagia
+# Esôfago — Diagnósticos Diferenciais de Disfagia
 
 <!-- page:1 -->
 
-## ESÔFAGO: DIAGNÓSTICOS
+## Visão Geral
 
-## DIFERENCIAIS DE DISFAGIA
+**Divertículo de Zenker:**
 
-DIFERENCIAIS DE DI Esôfago (CIR) Divertículo de Zenker E
+- Pulsão (falso divertículo).
+- Triângulo de Killian.
+- Tratamento (divertículos grandes): miotomia do cricofaríngeo + diverticulectomia.
 
-- Pulsão (falso)
+**Divertículo de esôfago médio:**
 
-- Triângulo de Killian
+- Tração (verdadeiro divertículo).
+- Relacionado à tuberculose mediastinal.
 
-- Tratamento (divertículos grandes) = miotomia do cricofaríngeo + diverticulectomia
+**Divertículos epifrênicos:**
 
-- Divertículo esôfago médio D
+- Esôfago inferior, pulsão (falso).
+- Tratamento: diverticulectomia + miotomia ampla.
 
-- Tração (verdadeiro)
+## Disfagia
 
-- Telacionado a Tuberculose Mediastinal A
+- **Definição:** dificuldade de deglutição.
+- É um sinal de alarme e deve ser investigado com EDA + EED + manometria.
 
-Divertículos epifrênicos à
+## Diagnósticos Diferenciais
 
-- Esôfago inferior – Pulsão (Falso) A
+- **Acalasia:** principal distúrbio motor primário do esôfago.
+- **Esclerose sistêmica:** principal distúrbio motor secundário do esôfago. Doença autoimune, na forma limitada (síndrome de CREST). Pode haver acometimento esofágico com aperistalse e hipotonia do esfíncter esofágico inferior (EEI).
+- **Divertículos faringoesofágicos:** divertículo de Zenker, epifrênico, de tração.
+- **Esofagite eosinofílica:** doença inflamatória diagnosticada com achado de mais de 15 eosinófilos por campo de aumento no esôfago.
+- **Compressões extrínsecas:** tumores de cabeça e pescoço; artéria subclávia direita aberrante → disfagia lusória.
+- **Estenose de esôfago:** ingestão de soda cáustica; estenose péptica com anéis de Schatzki.
+- **Neoplasia de esôfago:** disfagia importante de evolução recente.
 
-- Tratamento: diverticulectomia + miotomia ampla
+### Tabela 1: Diagnósticos Diferenciais de Disfagia
 
-## DISFAGIA D
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Definição: dificuldade de deglutição D
+| Categoria | Causas |
+|---|---|
+| Alterações motoras esofágicas/orofaríngeas | Acalasia; Esclerose Sistêmica |
+| Divertículos faringoesofágicos | Divertículo de Zenker; divertículo epifrênico; divertículo de tração |
+| Compressão extrínseca | Neoplasia de cabeça e pescoço; artéria subclávia direita aberrante (disfagia lusória) |
+| Doença inflamatória | Esofagite eosinofílica |
+| Estenose de esôfago | Estenose péptica, anel de Schatzki, ingestão de cáustico |
+| Neoplasia | Neoplasia de esôfago |
 
-- É um sinal de alarme e deve ser investigado com
+**Esofagite eosinofílica:**
 
-- EDA + EED + Manometria
+- Disfagia.
+- >15 eosinófilos/CGA (campo de grande aumento).
+- Traqueização do esôfago.
+- Tratamento: budesonida VO ou antileucotrienos.
 
-## DIAGNÓSTICOS DIFERENCIAIS
+**Disfagia lusória:**
 
-- Acalasia: principal distúrbio motor primário do esôfago.
+- Artéria subclávia direita aberrante.
 
-- Esclerose sistêmica: principal distúrbio motor secundário do esôfago. Doença autoimune, na forma limitada (síndrome de CREST) Pode ter acometimento esofágico com aperistalse e hipotonia do esfíncter esofágico inferior (EEI)
+**Esclerose sistêmica:**
 
-- Divertículos faringoesofágicos: Divertículo de zencker, epifrênico, de tração. D
+- Acometimento esofágico secundário.
 
-- Esofagite eosinofílica: doença inflamatória diagnosticada com achado de mais de 15 eosinófilos por campo de aumento no esôfago.
+**Acalasia:** ver material específico.
 
-- Compressões extrínsecas: tumores de cabeça e pescoço, artéria subclávia direita aberrante → disfagia lusória.
+## Divertículos Esofágicos
 
-- Estenose de esôfago: Ingestão de soda cáustica, *
+### Divertículos de Pulsão
 
-Estenose péptica com anéis de schatzki
+- **Definição:** falsos divertículos (não possuem todos os componentes da parede do esôfago — normalmente somente mucosa e submucosa).
+- **Fisiopatologia:** aumento de pressão endoluminal com alteração motora do esôfago.
+- **Exemplos:**
+  - **Divertículo de Zenker:** o principal das provas. Distúrbio motor peristáltico do esôfago.
+  - **Divertículo epifrênico:** logo acima do diafragma.
+- **Tratamento:** diverticulectomia + miotomia ampla, da base do divertículo até o esfíncter esofagiano inferior (a miotomia pode prevenir formação de fístula).
 
-- Neoplasia de esôfago: Disfagia importante de evolução recente
+### Divertículos de Tração
 
-Tabela 1: Diagnósticos diferenciais de disfagia
+- **Epidemiologia:** raros. Relacionados a afecções mediastinais (tuberculose/adenomegalias) que levam à fibrose e retração local, tracionando o esôfago.
+- **Definição:** são divertículos verdadeiros (possuem todas as camadas do esôfago — mucosa, submucosa e muscular).
 
-- Alterações motoras E orofaríngeas (Esclerose Acalasia
+> Lembrando que o esôfago não tem serosa.
 
-- Sistêmica) F
+## Divertículo de Zenker
 
-- Divertículos faringoesofágicos
+### Definição
 
-Esofagite eosinofílica Compressão extrínseca
+- Pseudodivertículo faringoesofágico de pulsão, causado por hipertonia do músculo cricofaríngeo.
 
-- Estenose de esôfago pescoço ISFAGIA
+### Epidemiologia
 
-(disfagia lusória) Neoplasia de cabeça e Neoplasia de esôfago Esofagite eosinofílica
+- Idosos (normalmente >70 anos).
 
-- Disfagia
+### Fisiopatologia
 
-- > 15 Eosinófilos / CGA
-
-- Traqueização do esôfago
-
-- Tratamento: budesonida VO ou antileucotrienos
-
-Disfagia lusória
-
-- Artéria subclávia direita aberrante à Esclerose sistêmica
-
-Acometimento esofágico secundário Acalasia DIVERTÍCULOS ESOFÁGICOS Divertículos de pulsão
-
-- Definição: Falsos divertículos (não possuem todos os componentes da parede do esôfago, normalmente somente mucosa e submucosa)
-
-- Fisiopatologia: aumento de pressão endoluminal com alteração motora esôfago.
-
-- Exemplos: Divertículo de Zenker: O principal das provas Divertículo epifrênico: logo acima do diafragma.
-
-Distúrbio motor peristáltico do esôfago. Tratamento: diverticulectomia + miotomia ampla da base do divertículo até esfíncter esofagiano inferior (miotomia pode prevenir formação de fístula).
-
-Divertículos de tração
-
-- Epidemiologia: raros. Relacionados a afecções mediastinais (tuberculose/ adenomegalias) que levam à fibrose e retração local com tracionam do esôfago
-
-- Definição: São divertículos verdadeiros submucosa e muscular).
-
-(possuem todas camadas do esôfago, mucosa, ** Lembrando que esôfago não tem serosa **
-
-## DIVERTÍCULO DE ZENKER
-
-## DEFINIÇÃO
-
-- Pseudodivertículo faringoesofágico de pulsão causado por hipertonia do músculo cricofaríngeo.
-
-## EPIDEMIOLOGIA
-
-- Idosos (normalmente > 70 anos).
-
-## FISIOPATOLOGIA
-
-- Herniação da mucosa e da submucosa conhecida como triângulo de Killian.
-
-(pseudodivertículo) através da área anatômica
-
-- Triângulo de Killian: constituído superiormente por músculos tireo-faríngeos (ou músculos constritores da faringe) e inferiormente pelo músculo cricofaríngeo
+- Herniação da mucosa e da submucosa (pseudodivertículo) através da área anatômica conhecida como triângulo de Killian.
+- **Triângulo de Killian:** constituído superiormente pelos músculos tireofaríngeos (ou músculos constritores da faringe) e, inferiormente, pelo músculo cricofaríngeo.
 
 ---
 
 <!-- page:2 -->
 
-## MANIFESTAÇÕES CLÍNICAS TRATAMENTO
+## Manifestações Clínicas
 
-- Disfagia
+- Disfagia.
+- Tosse.
+- Pneumonia de repetição.
+- Sensação de corpo estranho em região cervical, com manobra cervical para deglutição.
+- Halitose.
 
-- Depende do tamanho do divertículo e
+## Investigação
 
-- Tosse da sintomatologia.
+- **Primeiro exame: EDA** (visualização de divertículo com septo separando a luz do esôfago da saculação em fundo cego — divertículo de Zenker). Atenção: a EDA pode perfurar.
+- **Segundo exame: EED** (possibilita estudo de tamanho, profundidade e espessura do divertículo).
 
-- Pneumonia de repetição
+*Figura 1: Endoscopia digestiva alta com visualização de divertículo com septo separando luz do esôfago de saculação em fundo cego (divertículo de Zenker).*
 
-- Sensação de corpo estranho em região cervical com manobra cervical para deglutição
+*Figura 2: Estudo contrastado de esôfago-estômago-duodeno (EED) com achado de divertículo de Zenker.*
 
-- Halitose
+## Tratamento
 
-## INVESTIGAÇÃO
+- Depende do tamanho do divertículo e da sintomatologia.
+- **Divertículos <2 cm e assintomáticos:** acompanhamento.
+- **Divertículos >5 cm:** miotomia do cricofaríngeo + diverticulectomia.
+- **Tratamento endoscópico (septostomia):** miotomia ou diverticulopexia é opção para divertículos menores.
 
-- Primeiro exame: EDA (visualização de divertículo com septo separando luz do esôfago de saculação em fundo cego - divertículo de Zenker) Atenção com a EDA - pode perfurar
+## Esofagite Eosinofílica
 
-- Segundo exame: EED (possibilita estudo de tamanho, profundidade, espessura do divertículo) divertículo com septo separando luz do esôfago de saculação em fundo cego - divertículo de Zenker assintomáticos: acompanhamento
+- Distúrbio inflamatório do esôfago.
+- Associado a alergias (atopias, rinite alérgica, asma).
+- Homens jovens, com disfagia e impactação alimentar.
 
-Figura 1: Endoscopia digestiva alta com visualização de Figura 2: Estudo contrastado de esôfago-estômago-duodeno (EED) com achado de divertículo de Zenker - Divertículos < 2 cm e
+### Endoscopia
 
-- Divertículos > 5cm: miotomia do cricofaríngeo + diverticulectomía
+- Micropústulas esofágicas (infiltrados eosinofílicos).
+- Traqueização do esôfago (em doença avançada).
 
-- Tratamento endoscópico (septostomia): miotomia ou diverticulopexia é opção para divertículos menores
+### Diagnóstico
 
-## ESOFAGITE EOSINOFÍLICA
+- Biópsias randômicas do esôfago → mais de 15 eosinófilos/campo de grande aumento.
 
-- Distúrbio inflamatório do esôfago
+### Diagnóstico Diferencial
 
-- Associado com alergias (atopias, rinite alérgica, asma)
+- Candidíase esofágica.
 
-- Homens jovens com disfagia e impactação alimentar
+### Tratamento
 
-## ENDOSCOPIA
+- Clínico: budesonida VO ou antileucotrieno.
 
-- Micropústulas esofágicas (infiltrados eosinofílicos)
-
-- Traqueização do esôfago (em doença avançada)
-
-## DIAGNÓSTICO
-
-- Biópsias randômicas do esôfago → + de 15 eosinófilos / campo grande aumento
-
-## DIAGNÓSTICO DIFERENCIAL
-
-- Candidíase esofágica
-
-## TRATAMENTO
-
-- Clínico
-
-- Budesonida VO ou antileucotrieno traqueização e lâmina com mais de 15 eosinófilos por campo de grande aumento
-
-Figura 3: Esofagite eosinofílica com micropústulas esofágicas,
+*Figura 3: Esofagite eosinofílica com micropústulas esofágicas, traqueização e lâmina com mais de 15 eosinófilos por campo de grande aumento.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -182,91 +159,73 @@ Figura 3: Esofagite eosinofílica com micropústulas esofágicas,
 
 <!-- page:3 -->
 
-## DISFAGIA LUSÓRIA
+## Disfagia Lusória
 
-- Esôfago hipercontrátil (jackhammer) Onda peristáltica hipocontrátil principalmente em
+### Definição
 
-DEFINIÇÃO esôfago distal
+- Disfagia causada por artéria subclávia direita aberrante.
 
-- Disfagia causada por artéria subclávia direita aberrante
+### Fisiopatologia
 
-- FISIOPATOLOGIA
+- A artéria subclávia direita aberrante possui origem à esquerda do arco aórtico, com caminho retroesofágico (posterior). Normalmente, a artéria subclávia direita se origina do tronco braquiocefálico, à frente do esôfago.
+- Com a idade e desenvolvimento de aterosclerose, o paciente pode ter obstrução do esôfago pela compressão da artéria subclávia direita aberrante.
 
-- A artéria subclávia direita aberrante possui origem à esquerda do arco aórtico com caminho retroesofágico origina do tronco braquiocefálico à frente do esôfago).
+### Diagnóstico e Tratamento
 
-(posterior). Normalmente a artéria subclávia direita se
+- **Primeiro exame:** EDA. Achado de massa compressiva pulsátil na parede posterior do esôfago. **Não biopsiar!**
+- **Tratamento clínico e multidisciplinar:** adaptação da dieta (mais pastosa, líquida, de forma lenta).
+- Tratamento cirúrgico é mórbido.
 
-- Com a idade e desenvolvimento de aterosclerose paciente pode ter obstrução do esôfago pela compressão da artéria subclávia direita aberrante
+## Acometimento Esofágico Relacionado à Esclerose Sistêmica
 
-- Primeiro exame: EDA. Achado massa compressiva pulsátil na parede posterior do esôfago. Não biopsiar!
+- Secundário à síndrome CREST (esclerose sistêmica limitada).
+- Mulher, meia-idade.
+- **Principal distúrbio motor secundário!**
 
-- Clínico. Multidisciplinar - adaptação da dieta (mais pastosa, líquida, de forma lenta)
+### Manifestações Clínicas
 
-- Tratamento cirúrgico mórbido.
+- Desenvolvimento de disfagia associado a refluxo gastroesofágico.
 
-## ACOMETIMENTO ESOFÁGICO
+### Exames de Imagem
 
-## RELACIONADO À ESCLEROSE
+- **Manometria:** aperistalse do esôfago, principalmente dos 2/3 inferiores. Esfíncter esofágico inferior hipotônico.
 
-## SISTÊMICA
+### Tratamento
 
-- Secundário à Síndrome CREST (Esclerose sistêmica limitada)
+- Clínico: adaptação de dieta e inibidor de bomba de prótons.
+- Tratamento conforme sintomatologia e comorbidades (esofagectomia com reconstrução com tubo gástrico; bypass). Não se pode fazer hiatoplastia com fundoplicatura devido à aperistalse.
 
-- Mulher, meia idade
+## Distúrbios Primários Motores do Esôfago
 
-- Principal distúrbio motor secundário!
+- **Acalasia** (ver material específico).
+- **Espasmo esofágico** — diagnóstico diferencial de síndrome coronariana aguda.
+  - **Fisiopatologia:** espasmos difusos do esôfago de forma esporádica. Contração sincrônica com ondas de alta amplitude.
+  - **Manifestações clínicas:** dor torácica.
+  - **Exame de imagem:** aspecto de esôfago em "saca-rolhas" ao EED.
+  - **Tratamento:** bloqueadores de canal de cálcio e nitratos.
+- **Esôfago hipercontrátil (jackhammer):** onda peristáltica hipercontrátil, principalmente em esôfago distal.
+- **Motilidade esofágica ineficaz:** dismotilidade do esôfago (ondas peristálticas com menor intensidade) relacionada a refluxo gastroesofágico (agressão crônica do epitélio do esôfago pelo refluxo). Peristalse ineficaz.
 
-## MANIFESTAÇÕES CLÍNICAS
+*Figura 4: Espasmo esofágico ao EED, com aspecto de saca-rolhas.*
 
-- Desenvolvimento de disfagia associado a refluxo gastroesofágico
-
-## EXAMES DE IMAGEM P
-
-- Manometria: aperistalse do esôfago principalmente dos 2/3 inferiores do esôfago. Esfíncter esofágico inferior hipotônico
-
-- Clínico. Adaptação de dieta e inibidor de bomba de prótons
-
-- Tratamento conforme sintomatologia e comorbidades gástrico; bypass. Não pode fazer hiatoplastia com fundoplicatura devido a aperistalse)
-
-(esofagectomia com reconstrução com tubo
-
-## DISTÚRBIOS PRIMÁRIOS MOTORES
-
-## DO ESÔFAGO S
-
-- Acalasia
-
-- Espasmo esofageano Diagnóstico diferencial de síndrome coronariana aguda A Fisiopatologia: espasmos difusos do esôfago de forma esporádica. Contração sincrônica com ondas de alta amplitude Manifestações Clínicas: dor torácica Exame de Imagem: aspecto de esôfago em saca rolhas ao EED Tratamento: Bloqueadores de canal de cálcio e nitratos. - Motilidade esofageana ineficaz Dismotilidade do esôfago (ondas peristálticas com menor intensidade) relacionado com refluxo refluxo gastroesofágico)
-
-(agressão crônica do epitélio do esôfago pelo
-
-- Peristalse ineficaz de saca rolhas.
-
-Figura 4: Espasmo esofageano ao EED em aspecto PSEUDOACALÁSIAS
+## Pseudoacalásias
 
 - Distúrbio esofágico que imita acalasia.
+- Em casos mais severos, pode haver aperistalse do corpo esofágico na manometria.
+- **Principais causas:** neoplasia de esôfago, ou neoplasia que leva à compressão extrínseca do esôfago, ou cirurgia esofágica prévia que leve à compressão extrínseca do hiato esofágico ou da válvula da hiatoplastia com fundoplicatura.
 
-- Em casos mais severos pode ter aperistalse do corpo esofágico na manometria.
+## Anéis ou Membranas Esofágicas
 
-- Principal distúrbio: neoplasia de esôfago ou neoplasia que leva a compressão extrínseca do esôfago ou cirurgia esofágica prévia que leve a compressão extrínseca do hiato esofágico ou válvula da hiatoplastia com fundoplicatura.
-
-## ANEIS OU MEMBRANAS
-
-## ESOFÁGICAS
-
-Síndrome de Plummer-Vinson
+### Síndrome de Plummer-Vinson
 
 - Mais comum em mulheres.
-
-- Membrana esofágica + anemia ferropriva + queilite angular + onicodistrofia
-
+- Membrana esofágica + anemia ferropriva + queilite angular + onicodistrofia.
 - Risco aumentado de CEC de esôfago.
 
-Anel de Schatzki:
+### Anel de Schatzki
 
-- Anel da transição esofago-gástrica (associação com estenose péptica e DRGE)
-
-- Tratamento: dilatação pneumática esofágica e IBP em dose plena. Discutir cirurgia em pacientes com estenoses muito grandes não dilatáveis.
+- Anel da transição esofagogástrica (associação com estenose péptica e DRGE).
+- **Tratamento:** dilatação pneumática esofágica e IBP em dose plena. Discutir cirurgia em pacientes com estenoses muito grandes, não dilatáveis.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -274,14 +233,18 @@ Anel de Schatzki:
 
 <!-- page:4 -->
 
-Figura 5:: Anel de Schatski EED e EDA
+*Figura 5: Anel de Schatzki ao EED e à EDA.*
 
-## REFERÊNCIAS
+## Referências
 
-Figura 3: Esofagite eosinofílica com micropústulas esofágicas, traqueização e lâmina com mais de 15 eosinófilos por campo Figura 1: Endoscopia digestiva alta com visualização de de grande aumento.
+Figura 1: Endoscopia digestiva alta com visualização de divertículo com septo separando luz do esôfago de saculação em fundo cego — divertículo de Zenker. Fonte: www.endoscopiaterapeutica.com.br
 
-divertículo com septo separando luz do esôfago de saculação Fonte:www.endoscopiaterapeutica.com.br em fundo cego - divertículo de Zenker. Figura 4: Espasmo esofageano ao EED em aspecto Fonte: www.endoscopiaterapeutica.com.br de saca rolhas.
+Figura 2: Estudo contrastado de esôfago-estômago-duodeno (EED) com achado de divertículo de Zenker. Fonte: www.endoscopiaterapeutica.com.br
 
-Figura 2: Estudo contrastado de esôfago-estômago-duodeno Fonte: www.endoscopiaterapeutica.com.br (EED) com achado de divertículo de Zenker. Figura 5: Anel de Schatski EED e EDA Fonte: www.endoscopiaterapeutica.com.br Fonte: https://endoscopiaterapeutica.com.br/
+Figura 3: Esofagite eosinofílica com micropústulas esofágicas, traqueização e lâmina com mais de 15 eosinófilos por campo de grande aumento. Fonte: www.endoscopiaterapeutica.com.br
+
+Figura 4: Espasmo esofageano ao EED, em aspecto de saca-rolhas. Fonte: www.endoscopiaterapeutica.com.br
+
+Figura 5: Anel de Schatzki ao EED e à EDA. Fonte: https://endoscopiaterapeutica.com.br/
 
 ![Figura do material - página 4](figure-004-1.webp)

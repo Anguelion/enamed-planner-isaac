@@ -2,288 +2,212 @@
 
 <!-- page:1 -->
 
-## PERIOPERATÓRIO
+## Perioperatório - Complicações Gerais
 
-## COMPLICAÇÕES GERAIS
+### Febre — Mnemônico dos 5 W's
 
-## FEBRE
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Categoria Dias Causas atelectasia
+| Categoria | Dias | Causas |
+|---|---|---|
+| Wind | 1-2 | Atelectasia, pneumonia |
+| Water | 3-5 | ITU |
+| Walking | 4-6 | TVP e TEP |
+| Wound | 5-7 | ISC, deiscência, abscessos |
+| Wonder Drugs / What did we do | 7+ | Drogas, cateteres, "wonder where" |
 
-Wind 1-2 Pneumonia, embolia, Water 3-5 ITU Walking 4-6 TVP e TEP
+### Ferida Operatória
 
-- Wound 5-7 ISC, Deiscência abscessos
+- **Seroma e hematoma**: coleção em subcutâneo de ferida; líquido seroso (linfa) x hemático (sangue); drenagem x aspiração x nada;
+- **Deiscência**:
+  - Parcial: pele ou subcutâneo. Tratamento conservador: lavagem com água e sabão e curativo diário;
+  - Total: eventração ou evisceração; água de carne, víscera visível; reabordagem cirúrgica.
 
-Wonder Drugs Drogas, cateteres, What did we do 7+ Wonder where
+### Infecção de Ferida Operatória
 
-- FERIDA OPERATÓRIA
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Seroma e hematoma: Coleção em subcutâneo de ferida; Líquido seroso (linfa) x Hemático (sangue); Drenagem x Aspiração x nada.
+| Tipo | Localização | Quadro clínico | Tratamento |
+|---|---|---|---|
+| Superficial | Pele e subcutâneo | Drenagem purulenta, sinais flogísticos | Abertura, sem antibiótico |
+| Profunda | Fáscia e músculo | Febre alta, dor intensa, sinais sistêmicos | Drenagem local + antibiótico |
+| Intracavitária | Espaços (intraperitoneal, intracraniano, intrapleural...) | Febre alta, dor intensa, sinais sistêmicos | Drenagem ou cirurgia + antibiótico |
 
-- Deiscência: Parcial: Pele ou subcutâneo: Tratamento conservador: Lavagem com água e sabão e curativo diário
+## Aspectos Gerais
 
-## ASPECTOS GERAIS
+- É fundamental conhecer a evolução esperada, identificar precocemente problemas, e realizar exame físico diário para evitar complicações no pós-operatório;
+- As complicações aumentam o tempo de internação, aumentam o número de intervenções e causam sofrimento ao paciente.
 
-- - É fundamental conhecer a evolução esperada, identificar precocemente problemas, e realizar exame físico diário para evitar complicações no pós-operatório;
+### Causas
 
-- As complicações aumentam o tempo de internação, aumentam o número de intervenções e causam Q sofrimento ao paciente.
-
-- CAUSAS
-
-- Reação esperada, doença cirúrgica
-
-- Resposta endócrina e metabólica inflamatória ao trauma (REMIT); F
-
+- Reação esperada, doença cirúrgica;
+- Resposta endócrina e metabólica inflamatória ao trauma (**REMIT**);
 - Comorbidades do paciente;
-
-- Técnica inadequada, ambiente cirúrgico inadequado; C
-
+- Técnica inadequada, ambiente cirúrgico inadequado;
 - Cuidados pós-operatórios inadequados.
 
-- PREVENÇÃO
+### Prevenção
 
 - Indicação cirúrgica adequada;
-
-- Preparo pré-operatório; C
-
+- Preparo pré-operatório;
 - Controle de comorbidades;
-
 - Cirurgia segura;
-
 - Cuidados pós-operatórios;
-
 - Abordagem interdisciplinar.
 
-- PRINCIPAIS FATORES DE RISCO
+### Principais Fatores de Risco
 
-- Obesidade,
-
-- Tabagismo, - Total: Eventração ou evisceração; Água de carne, víscera visível; Reabordagem cirúrgica.
-
-## INFECÇÃO DE FERIDA OPERATÓRIA
-
-- Superficial Pele e subcutâneo; Drenagem purulenta, sinais flogísticos. Tratamento: Abertura, sem atb
-
-- Profunda Fáscia e músculo Febre alta, dor intensa, sinais sistêmicos Tratamento: Drenagem local + atb
-
-- Intracavitária Espaços (intraperitoneal, intracraniano, intrapleural...) Febre alta, dor intensa, sinais sistêmicos. Tratamento: Drenagem ou cirurgia + atb
-
-- Câncer e imunossupressão,
-
-- Diabetes,
-
-- Cirurgia prévia,
-
-- Irradiação,
-
-- Desnutrição,
-
+- Obesidade;
+- Tabagismo;
+- Câncer e imunossupressão;
+- Diabetes;
+- Cirurgia prévia;
+- Irradiação;
+- Desnutrição;
 - Técnica incorreta.
 
-QUANDO INVESTIGAROU REOPERAR?
+### Quando Investigar ou Reoperar?
 
 - Piora clínica: taquicardia, hipotensão, peritonite;
-
 - Evolução não esperada: vômitos, febre persistente, dreno saindo algo não esperado.
 
-## PRINCIPAIS COMPLICAÇÕES
+## Principais Complicações
 
-## FEBRE CAUSAS IMEDIATAS
+### Febre — Causas Imediatas
 
 - Causas pré-cirurgia; reação adversa a medicamentos;
-
 - Hipertermia maligna;
-
 - REMIT.
 
-## CAUSAS PRECOCES (1 A 5 DIAS)
+### Causas Precoces (1 a 5 Dias)
 
-- Atelectasias → a mais comum. conduta → fisioterapia e observação;
-
+- **Atelectasias** → a mais comum. Conduta → fisioterapia e observação;
 - Flebites;
-
 - IAM/pericardite;
-
 - Infecção do trato urinário/pneumonia;
-
-- Infecção de sítio cirúrgico fulminante → s.
-
-aureus; clostridium.
+- Infecção de sítio cirúrgico fulminante → S. aureus; clostridium.
 
 ---
 
 <!-- page:2 -->
 
-## CAUSAS TARDIAS (5 A 30 DIAS)
+### Causas Tardias (5 a 30 Dias)
 
-- Intracavitária: Até 30 dias sem “implante”, até
+- **Infecções de sítio cirúrgico** – a mais comum;
+- Infecções gerais;
+- Complicações do procedimento;
+- **Intracavitária**: até 30 dias sem "implante", até um ano com "implante"; febre alta, dor intensa, sinais sistêmicos; confirmação com exame de imagem e/ou exploração; conduta: drenagem ou cirurgia + antibiótico.
 
-- Infecções de sítio cirúrgico – a mais comum; um ano com “implante”; Febre alta, dor intensa,
+## Ferida Operatória
 
-- Infecções gerais; sinais sistêmicos; Confirmação com exame de
+### Fatores de Risco Relacionados ao Paciente
 
-- Complicações do procedimento. imagem e/ou exploração; Conduta: drenagem ou cirurgia + antibiótico.
-
-## FERIDA OPERATÓRIA
-
-## FATORES DE RISCO RELACIONADOS AO
-
-## PACIENTE
-
-- Sexo Masculino;
-
-- Idade > 65ª;
-
+- Sexo masculino;
+- Idade > 65 anos;
 - Hipoalbuminemia;
-
 - Septicemia;
-
 - Obesidade;
-
 - Tabagismo;
-
 - Uremia;
-
-- Suporte nutricional;
-
+- Suporte nutricional inadequado;
 - Imunossupressão;
-
 - Doença maligna;
-
 - Ascite;
-
 - Corticoide;
-
 - Diabetes;
-
 - Hipertensão.
 
-## FATORES DE RISCO RELACIONADOS À
-
-## CIRURGIA
+### Fatores de Risco Relacionados à Cirurgia
 
 - Infecções da ferida;
-
 - Doença pulmonar;
-
 - Hipotensão arterial;
-
 - Estomias;
-
 - Irradiação;
-
 - Técnica incorreta;
-
 - Cirurgias prévias.
 
-SEROMA E HEMATOMA = COLEÇÃO SEROSA OU DE SANGUE LOCAL.
+### Seroma e Hematoma
 
-- Prevenção: Hemostasia correta, drenagem, compressão, cinta; Controle de glicemia, cessar tabagismo, evitar eletrocautério;
+Coleção serosa ou de sangue local.
 
-- Tratamento clínico e drenagem local.
+- **Prevenção**: hemostasia correta, drenagem, compressão, cinta; controle de glicemia, cessar tabagismo, evitar eletrocautério;
+- **Tratamento**: clínico e drenagem local.
 
-## DEISCÊNCIA DOS PLANOS
+### Deiscência dos Planos
 
-- Parcial: pele ou subcutâneo → fechamento por segunda intenção;
+- **Parcial**: pele ou subcutâneo → fechamento por segunda intenção;
+- **Total**: eventração ou evisceração; água de rocha, víscera visível; conduta = reabordagem cirúrgica.
 
-- Total: eventração ou evisceração: Água de rocha, víscera visível; Conduta = Reabordagem cirúrgica.
+### Infecção do Sítio Cirúrgico
 
-## INFECÇÃO DO SÍTIO CIRÚRGICO
+- **Superficial**: até 30 dias do procedimento; pele e subcutâneo; drenagem purulenta, sinais flogísticos; conduta: abertura, não sendo necessário antibiótico;
+- **Profunda**: até 30 dias sem "implante", até um ano com "implante"; fáscia e músculo; febre alta, dor intensa, sinais sistêmicos; conduta: drenagem local + antibioticoterapia; cirurgia + antibiótico.
 
-- Superficial: Até 30 dias do procedimento; Pele e subcutâneo; Drenagem purulenta, sinais flogístico;
-
-Conduta: abertura, não sendo necessário antibiótico;
-
-- Profunda: Até 30 dias sem “implante”, até um ano com “implante”; Fáscia e músculo; Febre alta, dor intensa, sinais sistêmicos; Conduta: drenagem local + antibioticoterapia; cirurgia + antibiótico.
-
-## ÍLEO PÓS-OPERATÓRIO
+## Íleo Pós-Operatório
 
 - Pseudo-obstrução intestinal por atonia das alças intestinais;
-
 - Ocorre em algum grau após qualquer manipulação abdominal;
+- Retorno do trânsito intestinal normal:
+  - 0 a 24 horas = delgado → ruídos hidroaéreos presentes (RHA+);
+  - 24 a 48 horas = estômago → fome;
+  - 48 a 72 horas = cólon → flatos e fezes.
 
-- Retorno do trânsito intestinal normal: 0 a 24 horas = delgado → Ruídos hidroaéreo presentes (RHA +); 24 a 48 horas = estômago → fome; 48 a 72 horas = cólon → flatos e fezes.
-
-## QUADRO CLÍNICO
+### Quadro Clínico
 
 - Ausência de RHA, distensão abdominal, náuseas, vômitos.
 
-## TRATAMENTO
+### Tratamento
 
 - Jejum, peridural, observação e deambulação, mascar chiclete e cafeína.
 
-## ÍLEO PÓS-OPERATÓRIO PROLONGADO
+### Íleo Pós-Operatório Prolongado
 
-- > 4 dias: manutenção ou piora dos sintomas;
-
+- **> 4 dias**: manutenção ou piora dos sintomas;
 - Procurar fatores reversíveis → distúrbios hidroeletrolíticos, anemia, opioides, desidratação, infecção.
 
-## PREVENÇÃO
+### Prevenção
 
 - Analgesia multimodal;
-
 - Cirurgias menos invasivas;
-
 - Peridural;
-
 - Mascar chiclete.
 
-## MEDIDAS SEM COMPROVAÇÃO
+### Medidas Sem Comprovação
 
 - Deambular;
-
 - Sondas;
-
 - Antieméticos.
 
-## PROJETO ACERTO / ERAS
+## Projeto ACERTO / ERAS
 
 - Auditoria e avaliação dos resultados;
-
 - Pré-habilitação, informação pré-operatória;
-
 - Controle de dor;
-
 - Uso restrito de drenos e sondas;
-
 - Restrição de volume excessivo de fluidos EV;
-
 - Preparo de cólon apenas para casos selecionados;
-
 - Terapia nutricional perioperatória;
-
-- Imunonutrição
-
+- Imunonutrição;
 - Abreviação do jejum pré-operatório;
-
 - Anestesia moderna;
-
-- Realimentação ultrapecoce ou precoce;
-
+- Realimentação ultraprecoce ou precoce;
 - Mobilização ultraprecoce;
-
-- Cirurgia por vídeolaparoscopia / minimamente invasiva.
+- Cirurgia por videolaparoscopia / minimamente invasiva.
 
 ---
 
 <!-- page:3 -->
 
-Objetivos do ACERTO/ERAS
+### Objetivos do ACERTO/ERAS
 
-- Diminuir complicações pós-operatórias,
-
-- Aumentar satisfação do paciente,
-
-- Melhorar a recuperação pós-operatória do paciente e sua percepção,
-
-- Objetivar alta precoce,
-
+- Diminuir complicações pós-operatórias;
+- Aumentar satisfação do paciente;
+- Melhorar a recuperação pós-operatória do paciente e sua percepção;
+- Objetivar alta precoce;
 - Diminuir gastos.
 
-## QUANDO INVESTIGAR OU
-
-## REOPERAR O PACIENTE?
+## Quando Investigar ou Reoperar o Paciente?
 
 - Piora clínica: taquicardia, hipotensão, peritonite;
-
 - Evolução não esperada: vômitos, febre alta, dreno saindo ou algo inesperado.

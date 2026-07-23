@@ -2,211 +2,191 @@
 
 <!-- page:1 -->
 
-Hepatites Virais (CM) HEPATITE B SOROLOGIAS Antígenos (Ag) parte do vírus
+Hepatites Virais (CM)
 
-- AgHBS: Doença
+## Hepatite B — Sorologias
 
-- AgHBE: Replicação
+### Marcadores Sorológicos
 
-AgHBS AntiHBS AntiHBC AgHBE + - - + + - + + + - + -
+**Antígenos (Ag)** — parte do vírus:
 
-- + + -
+- **AgHBs**: indica doença.
+- **AgHBe**: indica replicação.
 
-- + - Evolução para cura funcional por > 6 meses.
+**Anticorpos (Anti)** — resposta imune:
 
-Incubação Sintomas Recuperação 4 sem 8 sem 24 sem 28 sem AGHBS IgM AGHBE anti-HBc an Evolução para infecção crônica Crônica = AgHBS AGHBS IgM lgG AGHBE anti-HBc anti-HBc Marcadores sorológicos até a cronificação.
+- **Anti-HBs**: cura.
+- **Anti-HBc**: contato.
+- **Anti-HBe**: não replicante — contato sem antígeno como marcador de replicação.
 
-Nunca faz o antiHBS. Crônica = AgHBS por > 6 meses. Anticorpo (Anti) resposta imune
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- AntiHBS: Cura
+| Situação | AgHBs | Anti-HBs | Anti-HBc | AgHBe |
+|---|---|---|---|---|
+| Doença aguda | + | - | - | +/- |
+| Doença replicante | + | - | + | + |
+| Não teve cura | + | - | + | -/+ |
+| Cura funcional (cura pela doença) | - | + | + | - |
+| Imunidade sem contato = vacina | - | + | - | - |
 
-- AntiHBC: Contato
+- **Janela imunológica**: somente anti-HBc +. Dosar TGP; se normal, revacina; se alterado, solicitar PCR.
+- Evolução para cura funcional por > 6 meses; nunca faz o anti-HBs quando cronifica.
+- **Crônica** = AgHBs por > 6 meses.
 
-- AntiHBE: Não replica contato
+*Figura: marcadores sorológicos até a cura funcional e até a cronificação (incubação, sintomas, recuperação — 4, 8, 24, 28, 32 semanas).*
 
-AntiHBE Aguda - antígeno sem marcador de
+### Tratamento HBV — Mind the Gap
 
-- Doença Replicante
+Dano hepático sustentado devido à replicação viral: **pacientes com HBV-DNA ≥ 2.000 UI/mL** e ALT elevada (**≥ 52 U/L para homens** e **≥ 37 U/L para mulheres**) em duas medidas consecutivas, com intervalo mínimo de 3 meses, devem ser tratados.
 
-- Não tive cura...
+### Outras Condições de Tratamento HBV
 
-Cura funcional + (cura pela doença)
-
-- Imunidade sem contato = vacina o lgG anti-HBs anti-HBe nti-HBc independentemente do status do HBeAg E níveis de mulheres) em duas medidas consecutivas, com intervalo mínimo de 3 meses elas, devem ser tratados”
-
-32 sem } Janela imunológica. Somente anti-HBC +. Dosa TGP. Se normal, revacina. Se alterado = PCR. MIND THE GAP TRATAMENTO HBV Dano hepático sustentado devido à replicação viral “Pacientes com HBV-DNA ≥ 2.000 UI/mL, ALT elevados (≥ 52 U/L para homens e ≥ 37 U/L para
-
-## OUTRAS CONDIÇÕES DE TRATAMENTO HBV
-
-Sintomático fase aguda B : Tto específico se
+Sintomático na fase aguda B — tratamento específico se:
 
 - INR > 1,5
-
-- BT > 3 ou BD > 1,5 > 4 sem
-
+- BT > 3 ou BD > 1,5, por mais de 4 semanas
 - Encefalopatia / ascite
 
 ---
 
 <!-- page:2 -->
 
-Alto risco CHC Hepatite C
+### Indicações de Tratamento por Alto Risco de CHC (Hepatite B)
 
-- Cirrose / fibrose avançada
+- Cirrose / fibrose avançada.
+- Bx: ≥ F2.
+- Elastografia: > 9 kPa (AST normal) / > 12 kPa (AST 1-5x LSN).
+- Histórico familiar de CHC.
+- Coinfecção HCV/HIV.
+- Todo AgHBe + com mais de 30 anos.
+- Manifestação extra-hepática (ex.: poliartrite nodosa) — estudos apontam que esses pacientes evoluem pior.
+- Uso de rituximab (anti-CD20, esquema R-CHOP) — neoplasias hematológicas (linfomas) e artrite reumatoide.
+- Anti-HBc + (anti-HBs não importa — sororreversão).
 
-- Tratamos todos que cronificam = PCR + > 6 meses. Bx : ≥F2
+### Hepatite C
 
-- Tratamento atualiza por nota técnica, mas Elasto : >9kPa (AST normal) / > 12kPA preconizados atualmente são pangenotípicos. Histórico familiar CHC Co-infecção HCV / HIV
+- Tratamos todos que cronificam = PCR + > 6 meses.
+- Tratamento atualizado por nota técnica, mas os esquemas preconizados atualmente são pangenotípicos.
 
-(AST 1-5x LSN) (AST 1-5x LSN)
+## Profilaxia HBV
 
-- Quem sofre muito: manifestação extra-hepática
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Todo AGHBE + com mais de 30 anos
+| Fonte | Acidentado | Conduta |
+|---|---|---|
+| AgHBs+ | Vacinado, anti-HBs > 10 UI | Nenhuma medida adicional |
+| AgHBs+ | Não vacinado | Vacina + imunoglobulina (IG) |
+| AgHBs+ | Anti-HBs < 10 UI / desconhecido | Vacina + IG |
+| AgHBs+ | Sem resposta após segunda série (6 doses) | IG 2x |
+| Desconhecido | Não vacinado | Vacina |
 
-- Estudos apontam que evoluem pior
+## Hepatites Virais Agudas
 
-Rituximab (antiCD-20) (RCHOP) – neoplasias hematológicas (linfomas) e AR
+### Informações Gerais
 
-- antiHBC +
+- Quadro viral agudo é observado principalmente nas hepatites A e B.
+- Hepatites B e C se cronificam; a hepatite A nunca cronifica.
 
-- antiHBS não importa : sororreversão
+### Pródromo Viral
 
-## PROFILAXIA HBV
+- Os sintomas mais proeminentes são expressos no TGI: náuseas/vômitos, dor abdominal, hepatomegalia dolorosa.
+- Presença de mialgia e cefaleia.
+- Febre é incomum; se estiver presente, geralmente é uma febre baixa de 37,5°C–37,9°C, não tão intensa como em arboviroses — simula bastante uma GECA.
 
-Fonte Acidentado AgHBS+ Vacina antiHBS > 10 ui Não vacinado antiHBS < 10 UI / desconhecido Sem resposta após segunda série (6 doses)
+**Atenção**: transaminases altíssimas → **> 1.000 UI/mL**. Nesses casos, sempre pensar em hepatites virais. Sempre que as transaminases forem mais brandas, na faixa dos 200–300, devemos pensar em outros diagnósticos diferenciais, como dengue, leptospirose e malária.
 
-## HEPATITES VIRAIS AGUDAS
-
-Informações gerais:
-
-- Quadro viral agudo é observado principalmente nas hepatites A e B;
-
-- Hepatites B e C se cronificam, a hepatite A nunca.
-
-## PRÓDROMO VIRAL
-
-- Os sintomas mais proeminentes são expressos no
-
-- TGI como: Náuseas/Vômitos; Dor abdominal; Hepatomegalia dolorosa.
-
-- Presença de mialgia e cefaleia;
-
-- Febre é incomum; Se estiver presente, geralmente, é uma febre baixa de 37,5°C – 37,9ºC, não tão intensa como em F arboviroses, simula bastante uma GECA.
-
-- Tratamento: o Único vírus que tratamos e curamos
-
-12 SEM 24 SEM Sem cirrose Child A Child B Child C Sof + daclata Sof + velpata
-
-- RVS: 12 semanas após término: PCR HCV < 12 UI/ml
-
-- Seguimento o resto da vida: cirrótico ou F3/F4 agudas e febre amarela.
-
-Desconhecido IG Vacina IG 2x 2x ATENÇÃO: transaminases altíssimas → > 1.000UI/ml. Nesses casos, sempre pensar em hepatites virais Sempre que as transaminases forem mais brandas, na faixa dos 200-300, devemos pensar em outros diagnósticos diferenciais, como dengue, leptospirose e malária.
-
-- Na hepatite A sempre há cura espontânea, nunca cronifica. Na maioria das vezes ocorre na infância e passa meio oligossintomática. No adulto, mais frequentemente faz caso grave, mas ainda apresenta baixa taxa de complicações;
-
+- Na hepatite A sempre há cura espontânea, nunca cronifica. Na maioria das vezes ocorre na infância e passa de forma oligossintomática. No adulto, mais frequentemente faz caso grave, mas ainda apresenta baixa taxa de complicações.
 - Na hepatite B, até 20% dos quadros podem evoluir para a fase ictérica.
 
-## FASE ICTÉRICA
+### Fase Ictérica
 
-- Estabelecimento da síndrome colestática; Aumento de bilirrubina direta;
+- Estabelecimento da síndrome colestática; aumento de bilirrubina direta.
 
 ---
 
 <!-- page:3 -->
 
-## HEPATITE B
+- Acolia fecal; colúria.
+- Leucopenia com linfocitose acima de 35% — diferentemente de doenças bacterianas como a colangite e a leptospirose, que apresentam leucocitose com desvio à esquerda.
 
-| Acolia fecal; | Colúria.
+### Tratamento na Fase Ictérica
 
-- Leucopenia com linfocitose acima de 35%; Trata-se de um DNA vírus: Diferentemente de doenças bacterianas como
+- **Hepatite A**: tratamento de suporte.
+- **Hepatite B**: tratamento de suporte. A cura da hepatite B depende da resposta imunológica.
 
-- Integra-se ao DNA humano;
+Para se ter boa resposta, há necessidade de reconhecer o vírus como *non-self*. Desse modo, antivirais, por diminuírem a carga viral, diminuem as chances de o sistema imune fazer esse reconhecimento e aumentam as chances de cronificação.
 
-a colangite e leptospirose que apresentam | Tem potencial carcinogênico independente a colangite e leptospirose que apresentam leucocitose com desvio à esquerda.
+Tratamento específico com antivirais apenas se houver evidências de que podem vir a fulminar, como:
 
-Tratamento na fase ictérica:
+- Sintomas e icterícia caracterizada por bilirrubina total (BT) superior a 3 mg/dL ou bilirrubina direta (BD) superior a 1,5 mg/dL por mais de quatro semanas.
+- Qualquer grau de encefalopatia hepática ou ascite.
 
-- Hepatite A: Tratamento de suporte;
+## Hepatite B
 
-- Hepatite B: Tratamento de suporte.
+É uma doença causada por um **DNA vírus**:
 
-- A cura da hepatite B depende da resposta imunológica;
+- Integra-se ao DNA humano.
+- Tem potencial carcinogênico independente da cirrose.
+- Forma o **cccDNA**, que fica em latência virológica, ou seja, não há cura microbiológica, apenas funcional (clínica).
+- Pode ser reativada, principalmente se o paciente for imunossuprimido — em especial se a imunossupressão for feita com anti-CD20 (rituximab).
 
-Para se ter boa resposta, há necessidade de reconhecer o vírus como non-self. Desse modo, antivirais, por diminuírem a carga viral, diminuem as chances de o sistema imune fazer esse reconhecimento e aumentam as chances de cronificação.
-
-- Tratamento específico com antivirais apenas se houver evidências de que podem vir a fulminar, como: Sintomas e icterícia caracterizada por bilirrubina total (BT) superior a 3 mg/dL ou bilirrubina direta (BD) superior a 1,5 mg/dL por mais de quatro semanas. Qualquer grau de encefalopatia hepática ou ascite.
-
-## HEPATITE A
+## Hepatite A
 
 É uma doença predominantemente da criança:
 
-- 50% têm quadro viral inespecífico, como de uma GECA;
-
-- Apenas 1 – 2% evoluem para forma mais grave - icterícia.
+- 50% têm quadro viral inespecífico, como de uma GECA.
+- Apenas 1–2% evoluem para forma mais grave — icterícia.
 
 Em adultos:
 
-- 5% têm apresentação clínica inespecífica;
-
-- 80% evoluem para forma mais grave – icterícia;
+- 5% têm apresentação clínica inespecífica.
+- 80% evoluem para forma mais grave — icterícia.
 
 A vacina contra a hepatite A dura toda a vida:
 
-- A transmissão acontece fecal-oral;
+- A transmissão acontece por via fecal-oral.
+- A hepatite A é um picornavírus com apenas 1 sorotipo, por isso a eficácia da vacina.
+- Em imunossuprimidos: 2 doses com 6 meses de intervalo.
+- A vacina entrou no PNI em 2014, então nascidos antes desse ano não receberam a vacina rotineiramente.
 
-- A hepatite A é picornavírus com apenas 1 sorotipo, por isso a eficácia da vacina. Em imunossuprimidos → 2 doses com 6 meses de intervalo; A vacina entrou no PNI em 2014, então nascidos antes desse ano não receberam a vacina rotineiramente. Indica-se a vacina para adultos em casos de:
+Indica-se a vacina para adultos em casos de:
 
-- Homem que faz sexo com homem (HSH);
+- Homem que faz sexo com homem (HSH).
+- Hepatopatas.
+- Coinfecção: PVHIV, HCV ou HBV.
+- Imunossuprimidos em geral.
+- Coagulopatia, hemoglobinopatias.
 
-- Hepatopatas;
+*Figura 1: Curso sorológico da hepatite A.*
 
-- Coinfeção: PVHIV, HCV ou HBV;
+### A Transmissão Ocorre por Vias
 
-- Imunossuprimidos em geral;
+- **Sexual**: principal forma de transmissão.
+- **Percutânea**: é o vírus com maior risco de contágio nesse tipo de acidente.
+- **Vertical**.
+- **Sanguínea**: lembrar que os screenings em bancos de sangue para hepatites virais surgiram na década de 90.
 
-- Coagulopatia, hemoglobinopatias;
+### A Estrutura Viral da Hepatite B
 
-Figura 1: Curso sorológico da hepatite A | Tem potencial carcinogênico independente da cirrose;
+- **S** = Superfície = AgHBs.
+- **C** = Core/Centro = interpretado na sorologia como "Contato" = AgHBc. Não é possível dosar o AgHBc no sangue, porque o vírus não o elimina na circulação. Vê-se apenas o anti-HBc = resposta imune.
 
-- A hepatite B forma o cccDNA que fica em latência virológica, ou seja, não há cura microbiológica, apenas funcional (clínica);
+*Figura 2: HBsAg, HBcAg.*
 
-- A hepatite B pode ser reativada, principalmente r se tratar de paciente imunossuprimido, principalmente se a imunossupressão for feita com antiCD20 - rituximab.
+### Marcadores Sorológicos
 
-## A TRANSMISSÃO OCORRE POR VIAS
+**Antígenos (Ag)**:
 
-- Sexual: principal forma de transmissão;
+- Parte do vírus.
+- Aparecem precocemente.
+- **AgHBs**: indica doença — antígeno de superfície.
+- **AgHBc**: indicaria contato, mas não é liberado pelo vírus no sangue; logo, não conseguimos detectá-lo diretamente.
+- **AgHBe**: indica replicação.
 
-- Percutânea: é o vírus com maior risco de contágio nesse tipo de acidente;
+**Anticorpos (Anti)**:
 
-- Vertical.
-
-- Sanguínea: lembrar que os screenings em bancos de sangue para hepatites virais surgiram na década de 90.
-
-## A ESTRUTURA VIRAL DA HEPATITE B
-
-- S = Superfície = AGHBS;
-
-- C = Core/Centro = Interpretado na sorologia como Não é possível dosar o AGHBC; no sangue porque o vírus não o elimina na circulação. Vê-se apenas o anti-HbC = resposta imune.
-
-“Contato” = AGHBC; Figura 2: HBsAg, HBcAg MARCADORES SOROLÓGICOS Antígenos (Ag):
-
-- Parte do vírus;
-
-- Aparecem precocemente;
-
-- AGHBS: indica doença - antígeno de superfície
-
-- AGHBC: indicaria contato Mas não é liberado pelo vírus no sangue. Logo, não conseguimos detectar.
-
-- AGHBE: indica replicação.
-
-Anticorpo (Anti):
-
-- Resposta imune;
-
-- Demoram um pouco para serem sintetizados;
+- Resposta imune.
+- Demoram um pouco para serem sintetizados.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -216,190 +196,210 @@ Anticorpo (Anti):
 
 <!-- page:4 -->
 
-- Anti-HBs: Indica cura funcional ou vacinação prévia
+- **Anti-HBs**: indica cura funcional ou vacinação prévia — anticorpo contra a superfície do vírus.
+- **Anti-HBe**: indica não haver replicação.
+- **Anti-HBc**: indica contato; ter anticorpo contra a parte central do vírus significa que houve contato com ele.
 
-- Anti-HBe: Indica não haver replicação. anticorpo contra a superfície do vírus.
+**Tabela 1: Hepatite B — Marcadores Sorológicos**
 
-- Verificar Tabela 1
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Anti-HBc: Indica contato; para se ter anticorpo contra a parte central do vírus, é porque entrou em contato com ele.
+| Situação | AgHBs | Anti-HBs | Anti-HBc | AgHBe | Anti-HBe |
+|---|---|---|---|---|---|
+| Doença aguda | + | - | - | + | - |
+| Doença replicante | + | - | + | + | - |
+| Não teve cura | + | - | + | - | -/+ |
+| Cura funcional | - | + | + | - | + |
+| Imunidade sem contato = vacina | - | + | - | - | - |
 
-Tabela 1: Hepatite B: Marcadores Sorológicos AGHBS Anti-HBS Anti-HBC AGHBE Anti-HBE Doença aguda + - - +/- Doença + - + + replicante Não teve cura + - + - -/+ Cura funcional - + + - + Imunidade sem
+*Figura 3: Marcadores sorológicos até a cura funcional (incubação, sintomas, recuperação — 4, 8, 24, 28, 32 semanas: AgHBs, IgM/IgG anti-HBc, AgHBe, anti-HBs, anti-HBe).*
 
-- + - - contato = vacina
-
-Incubação Sintomas Recuperação 4 sem 8 sem 24 sem 28 sem 32 sem AGHBS IgM lgG anti-HBs anti-HBe AGHBE anti-HBc anti-HBc Marcadores sorológicos até a cura funcional.
-
-Figura 3: Marcadores sorológicos até a cura funcional Crônica = AgHBS por > 6 meses. AGHBS IgM lgG AGHBE anti-HBc anti-HBc Marcadores sorológicos até a cronificação.
-
-Nunca faz o antiHBS. Crônica = AgHBS por > 6 meses. Figura 4: Marcadores sorológicos até a cronificação. Nunca faz o anti-HBs. Crônica = AGHBS por > 6 meses.
+*Figura 4: Marcadores sorológicos até a cronificação. Nunca faz o anti-HBs. Crônica = AgHBs por > 6 meses.*
 
 ---
 
 <!-- page:5 -->
 
-- Quanto mais cedo na vida o paciente tiver contato fazer o anti-HbS. Por conseguinte, é na transmissão com o vírus, mais imaturo será o sistema imune para vertical que temos o maior risco de cronificação.
+Quanto mais cedo na vida o paciente tiver contato com o vírus, mais imaturo será o sistema imune para fazer o anti-HBs. Por conseguinte, é na transmissão vertical que temos o maior risco de cronificação.
 
-## SOROLOGIAS PEGADINHAS
+## Sorologias — Pegadinhas
 
-1º ponto: teve contato mas não houve cura (conversão em anti-HBs). Tabela 2: Marcadores sorológicos quando o paciente não teve cura AGHBS Anti-HBS Anti-HBC AGHBE Anti-HBE Não teve cura + - + - -/+
+**1º ponto**: teve contato mas não houve cura (conversão em anti-HBs).
 
-- No caso acima, há duas possibilidades:
+**Tabela 2: Marcadores sorológicos quando o paciente não teve cura**
 
-- Lembrar primeiro que anti-HBC + isolado pode ser
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Portador inativo: nunca se curou, mas convive bem apenas janela imunológica com o vírus; | Paciente está evoluindo para cura funcional. não tem dano hepático e baixa replicação
+| Situação | AgHBs | Anti-HBs | Anti-HBc | AgHBe | Anti-HBe |
+|---|---|---|---|---|---|
+| Não teve cura | + | - | + | - | -/+ |
 
-- Mutante por escape: deixa de produzir agHBS ou Não precisa tratar passa a produzir de outro tipo para “escapar” do
+No caso acima, há duas possibilidades:
 
-- Mutante pré-core: cepa capaz de se replicar mesmo Anti-HBS.
+- **Portador inativo**: nunca se curou, mas convive bem com o vírus; não tem dano hepático e tem baixa replicação. Não precisa tratar.
+- **Mutante por escape**: deixa de produzir AgHBs ou passa a produzir de outro tipo, para "escapar" do anti-HBs.
+- **Mutante pré-core**: cepa capaz de se replicar mesmo na presença do anti-HBe, "se escondendo" do sistema imune exatamente por não ter o AgHBe. Essa é a pegadinha: não é só porque não tem AgHBe que não replica.
 
-na presença do Anti-HbE, “se escondendo” do sistema
+Lembrar primeiro que anti-HBc + isolado pode ser apenas janela imunológica — o paciente está evoluindo para cura funcional.
 
-- Confira Figura 5 imune exatamente por não ter o AgHbE. | mesmo raciocínio: o paciente se infectou pela cepa Altera TGP (> 1,5x LSN) e PCR elevado (> 2000 UI); selvagem e a cepa mutante. Faz anti-HBS contra Por ter dano hepático, caracteriza necessidade o HBS da cepa selvagem. A cepa mutante, ou por de tratamento. não ter o Ag-HBS ou por ter outro tipo, não tem sua Essa que é a pegadinha: não é só porque não tem replicação afetada.
+Outro raciocínio possível: o paciente se infectou pela cepa selvagem e pela cepa mutante. Faz anti-HBs contra o HBs da cepa selvagem; a cepa mutante, por não ter o AgHBs ou por ter outro tipo, não tem sua replicação afetada. Inclusive, o paciente pode se infectar com a cepa selvagem (que tem AgHBe) e um pouquinho de mutante pré-core. Ao fazer anti-HBe contra a cepa selvagem, esta morre e abre espaço para o mutante se replicar.
 
-Ag-HBE que não replica.
+Ao alterar TGP (> 1,5x LSN) e ter PCR elevado (> 2.000 UI), por haver dano hepático, caracteriza-se necessidade de tratamento.
 
-- Anti-HBs negativo significa necessariamente Inclusive, o paciente pode se infectar com a cepa ser suscetível? selvagem (que tem Ag-HBE), e um pouquinho só | Não. Por vezes o sistema imune simplesmente se de mutante pré-core. Aí, ao fazer o anti-HBE contra esquece de fazer anti-HBS, mas a vacinação contra a cepa selvagem, ela morre e abre espaço para o hepatite B tem uma taxa de soroconversão de 90% mutante se replicar. com o esquema completo.
+**Anti-HBs negativo significa necessariamente ser suscetível?** Não. Por vezes o sistema imune simplesmente se esquece de fazer anti-HBs, mas a vacinação contra a hepatite B tem uma taxa de soroconversão de 90% com o esquema completo.
 
-2º ponto: paciente é somente anti-HBC + ou tem Ag-HBS e anti-HBS ao mesmo tempo.
+**2º ponto**: paciente é somente anti-HBc + ou tem AgHBs e anti-HBs ao mesmo tempo.
 
-## Anti-HBC isolado
+### Anti-HBc Isolado
 
-ALT normal ALT alterada Hepatite B oculta/ mutante por Uma dose de vacina Solicitar PCR-HBV escape Anti-HBS > 10 Anti-HBS < 10 > 2.000 Perdeu/ fez um outro agHBS Protegido < 2.000: PCR-HDV Se não teve curta (anti-HBS), solicite PCR.
+> ⚠️ Fluxograma reconstruído a partir de OCR — confira contra a fonte original.
 
-Figura 5: Fluxograma Anti-HBC positivo isolado: investigação de hepatite B oculta (mutante por escape)
+- Solicitar PCR-HBV.
+  - **PCR > 2.000**: hepatite B oculta/mutante por escape.
+  - **PCR < 2.000**: solicitar PCR-HDV.
+- Verificar ALT: normal ou alterada.
+- Verificar anti-HBs: se ≥ 10, protegido; se < 10, considerar uma dose de vacina — se não fez soroconversão (anti-HBs), solicitar PCR.
 
-Tabela 3. Hepatite D
+*Figura 5: Fluxograma — anti-HBc positivo isolado: investigação de hepatite B oculta (mutante por escape).*
 
-- Transmissão: igual à hepatite B - percutânea, materno ou sexual.
+## Hepatite D
 
-- Necessita do AGHBS:
+**Tabela 3: Hepatite D**
 
-{ Coinfecção simultânea com HBV; { Superinfecção com HBV crônico.
-
-- Rápida progressão para cirrose hepática e CHC;
-
-- Quando suspeitar;
-
-{ Exacerbação da doença hepática com HBV-DNA suprimido (menor 2000 UI/mL), sem outra causa identificada.
+- Transmissão: igual à hepatite B — percutânea, materna ou sexual.
+- Necessita do AgHBs:
+  - Coinfecção simultânea com HBV.
+  - Superinfecção com HBV crônico.
+- Rápida progressão para cirrose hepática e CHC.
+- Quando suspeitar: exacerbação da doença hepática com HBV-DNA suprimido (menor que 2.000 UI/mL), sem outra causa identificada.
 
 ---
 
 <!-- page:6 -->
 
-INDICAÇÕES DE TRATAMENTO NA FASE | Suspende se por acaso o paciente evoluiu com cura CRÔNICA e não for cirrótico. Mas é realmente muito raro.
+## Indicações de Tratamento na Fase Crônica (Hepatite B)
 
-- Por causas dessas cepas mutantes é que o novo
+Independentemente do status do HBeAg, se níveis elevados de ALT (≥ 52 U/L para homens, ≥ 37 U/L para mulheres) em duas medidas consecutivas, com intervalo mínimo de 3 meses, e pacientes com HBV-DNA ≥ 2.000 UI/mL, devem ser tratados — o PCDT é categórico.
 
-- Tenofovir 300 mg/dia: preferencial Atentar-se para os efeitos colaterais → Corrigir para independentemente do status do HBeAg, se níveis | Causa alteração no metabolismo ósseo e pode elevados de ALT (≥ 52 U/L para homens e ≥ 37 U/L desencadear osteoporose:
+Suspende-se o tratamento se, por acaso, o paciente evoluiu com cura e não for cirrótico — mas isso é realmente muito raro. Por causa dessas cepas mutantes, veja bem: não se fala em AgHBe para indicação de tratamento (porque há o mutante pré-core, que se replica sem fazer AgHBe), nem em AgHBs (porque há o mutante por escape, que se replica sem fazer AgHBs ainda que tenha anti-HBe). Fala-se em PCR alto.
 
-PCDT é categórico; | Único possível na gestação; Pacientes com HBV-DNA ≥ 2.000 UI/mL, função renal; para mulheres) em duas medidas consecutivas, com
+### Tratamento
 
-- Realizar densitometria óssea a partir de 5 anos de uso intervalo mínimo de 3 meses, devem ser tratados do medicamento;
+- **Inibidores de nucleosídeos**: usados para tratamento; quase nunca haverá suspensão da medicação.
+- **Tenofovir 300 mg/dia**: preferencial.
+  - Atentar-se para os efeitos colaterais: causa alteração no metabolismo ósseo e pode desencadear osteoporose. Corrigir para função renal.
+  - Realizar densitometria óssea a partir de 5 anos de uso do medicamento.
+  - Pode desencadear a síndrome de Fanconi-like.
+  - Único possível na gestação.
+  - Evitar uso em pacientes com comorbidades e/ou imunossuprimidos.
+  - Obs.: opção de TAF (um "novo" tenofovir), se tiver usado lamivudina antes.
+- **Entecavir**: preferencial se cirrótico.
+  - Child B e C: 1 mg/dia.
+  - Child A: 0,5 mg/dia.
+- **Interferon peguilado**:
+  - É a tentativa de cura no paciente jovem, sem cirrose, com transaminases altas — há muitos efeitos colaterais e muitas interações medicamentosas.
+  - Indicação: paciente com HBeAg reagente, alfapeginterferona e ALT ≥ 2x LSN e CV < 2x10⁷ UI/mL, sem contraindicações e disposto a utilizar.
+  - Tempo total de 48 semanas.
+  - Não pode ter cirrose instalada/hepatite aguda em nenhum grau para utilizar esse tratamento.
+  - Na hepatite B, os resultados são ruins tanto em monoterapia quanto em terapia combinada.
 
-- Pode desencadear a Síndrome Fanconi-like;
+### Rastreio de CHC — Quem Tem Alto Risco
 
-- Obs: | Evitar uso em pacientes com comorbidades e/ Veja bem: não se fala em Ag-HBE para tratamento ou imunossuprimidos. Porque há o mutante pré-core que se replica
+- Cirrose ou fibrose avançada ≥ F3; Bx: ≥ F2; Elastografia: ≥ F3 = > 9 kPa (AST normal) / > 12 kPa (AST 1-5x LSN).
+- Histórico familiar de Carcinoma Hepatocelular.
+- Coinfecção HCV/HIV.
+- Manifestação extra-hepática (ex.: poliartrite nodosa).
+- Todo AgHBe + com ≥ 30 anos, pois dificilmente soroconvertem.
+- Uso de rituximab (anti-CD20) — possui tempo de meia-vida longa. Se o paciente já teve a cura funcional com o rituximab, ele pode passar pela sororreversão, perder o anti-HBs e reativar a hepatite B.
+- Se for usar rituximab e for anti-HBc positivo, não importa o anti-HBs, e deve-se fazer a terapia preemptiva.
 
-- Entecavir preferencial se cirrótico: Não se fala tampouco em ser Ag-HBS para | Obs: opção de TAF (um “novo” tenofovir se tiver tratamento, se fala em PCR alto usado lamivudina antes) Porque tem o mutante por escape, que se replica | CHILD B e C: 1mg/dia sem fazer Ag-HBS.
+### Seguimento
 
-ainda que tenha anti_HBE | CHILD A: 0,5mg/dia
+Caso não haja cura funcional (pela doença), há necessidade de seguimento, pois, como é um vírus de DNA que se integra ao genoma da célula, ele tem potencial de hepatocarcinoma ainda que sem cirrose.
 
-- Interferon peguilado:
+## Profilaxia
 
-- Quem tem alto risco de fazer hepatocarcinoma; | É a tentativa de cura no paciente jovem, sem Cirrose ou fibrose avançada ≥ F3; cirrose com transaminases altas – há muitos efeitos Bx : ≥F2; colaterais e muitas interações medicamentosas; Elasto : ≥ F3 = >9kPa (AST normal) / > 12kPA | Indicação: paciente com HBeAg reagente Histórico familiar Carcinoma Hepatocelular; alfapeginterferona E ALT 2 2 x LSN e CV < 2 x Co-infecção HCV/HIV; 107 Ul/mLb
+**Tabela 5**: IG — 7 dias após exposições perinatais ou percutâneas / 14 dias após exposição sexual.
 
-(AST 1-5x LSN) sem contraindicações disposto a utilizar
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Quem sofre muito com manifestação extra-hepática | Tempo total de 48 semanas;
-
-- lembrar da poliartrite nodosa; | Não pode ter cirrose instalada/hepatite aguda em
-
-- Todo AgHBE + com ≥ de 30 anos, pois nenhum grau para utilizar desse tratamento;
-
-dificilmente soroconvertem;
-
-- Na hepatite B, os resultados são ruins tanto em mono
-
-- Rituximab (antiCD-20); quanto em terapia combinada. Possui tempo de meia-vida longa; Se o paciente já teve a cura funcional com o SEGUIMENTO rituximab ele pode passar pela soro reversão →
-
-- Caso não haja cura funcional (pela doença), há perde o antiHBS e reativa a Hepatite B; necessidade de seguimento pois, como é um vírus de DNA que se integra ao genoma da célula, ele tem não importa o anti HBS, e deve-se fazer a
-
-Se for usar rituximab e for antiHBC positivo, potencial de hepatocarcinoma ainda que sem cirrose.
-
-- Conforme Tabela 4 na próxima página terapia preemptiva;
-
-## TRATAMENTO
-
-- Inibidores de nucleosídeos: se utilizados para tratamento quase nunca haverá a suspensão da medicação.
-
-## PROFILAXIA
-
-Tabela 5: IG: 7 dias exposição perinatais ou percutâneas / 14 dias exposição sexual. Aghbs+ Desconhecido Fonte Acidentado Vacina Ig Vacina Ig Anti-Hbs Negativo Negativo Negativo Negativo
-
-> 10 Ui
-
-Não Vacinado Positivo Positivo Positivo Negativo Anti-Hbs < 10ui / Positivo Positivo Positivo Negativo Desconhecido Sem Resposta Após Segunda Negativo Positivo 2x Negativo Positivo 2x (6 Doses)
+| Fonte AgHBs+ | Acidentado | Vacina | Ig |
+|---|---|---|---|
+| Vacinado, anti-HBs > 10 UI | Negativo | Negativo | Negativo |
+| Não vacinado | Positivo | Positivo | Negativo |
+| Anti-HBs < 10 UI / desconhecido | Positivo | Positivo | Negativo |
+| Sem resposta após segunda série (6 doses) | Negativo | Positivo 2x | Negativo |
+| Fonte desconhecida | Positivo 2x | | |
 
 ---
 
 <!-- page:7 -->
 
-Tabela 4: Rastreio CHC hepatite B Infecção Hepatite Homens 40 anos de idade Homens 40 Mulheres 50 O rastreamento de CHC com USG está Pacientes ab indicado para os seguintes grupos e deve Fibrose avan ser repetido a cada 6 meses:
+**Tabela 4: Rastreio de CHC na Hepatite B**
 
-História fami Coinfecção H Esteatose He Escore PAGE HEPATITE B NA GESTAÇÃO
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Gestação mãe AgHBS + com PCR > 2.000 UI → Após isso a manutenção ou não da medicação são as indicações de tratamento da hepatite B no geral; A hepatite B não contraindica a amamentação.
+O rastreamento de CHC com USG está indicado para os seguintes grupos e deve ser repetido a cada 6 meses:
 
-Tenofovir até 30 dias após parto:
+| Grupo | Critério |
+|---|---|
+| Infecção por Hepatite B | Homens ≥ 40 anos de idade / Mulheres ≥ 50 anos de idade |
+| Fibrose avançada (F3) ou cirrose (F4) | — |
+| História familiar de CHC | — |
+| Coinfecção HIV, HCV e/ou HDV | — |
+| Esteatose hepática não alcoólica ou doença hepática alcoólica | — |
+| Escore PAGE-B > 9 | — |
 
-- Imunoglobulina: Se RN de mãe AgHBS positiva; A transmissão periparto corresponde a 90 – 95% das transmissões verticais.
+## Hepatite B na Gestação
 
-- Verificar Tabela 4
+- Gestante mãe AgHBs+ com PCR > 2.000 UI: tenofovir até 30 dias após o parto. Após isso, a manutenção ou não da medicação segue as mesmas indicações de tratamento da hepatite B no geral.
+- A hepatite B não contraindica a amamentação.
+- **Imunoglobulina**: se RN de mãe AgHBs positiva.
+- A transmissão periparto corresponde a **90–95%** das transmissões verticais.
 
-## HEPATITE C
+## Hepatite C
 
-- O único vírus que a gente trata e resolve é o da hepatite C;
+- O único vírus que a gente trata e resolve é o da hepatite C.
+- A partir da infecção aguda, o paciente pode evoluir para:
+  - **Resolução** (cura espontânea) — 15% dos casos.
+  - **Hepatite crônica** — 85% dos casos. Pode manter-se estável ou evoluir para cirrose e carcinoma hepatocelular.
 
-- A partir da infecção aguda, o paciente pode evoluir para: Resolução (cura espontânea) avançada crônica raro fulminante baixo dessa faixa etária: Hepatite crônica: Pode manter-se estável ou evoluir para cirrose e carcinoma hepatocelular.
+A hepatite crônica é diferenciada da resolução pela manutenção do PCR HCV positivo por ≥ 6 meses, quando se indica elastografia ou biópsia hepática (para avaliar se há e qual o grau da cirrose).
 
-PCR HCV + ≥ 6 meses APRI < 1 : sem fibrose Resolução 15% 85% Hepatite Infecção Aguda Hepatite Figura 6: Hepatite C: curso clínico anos de idade 0 anos de idade nçada (F3) ou cirrose F4 iliar de CHC HIV, HCD e/ou HDV epática não alcoólica ou doença hepática alcoólica E- B > 9
+- **APRI < 1**: sem fibrose.
+- **PCR HCV+ ≥ 6 meses**: hepatite crônica.
 
-- A hepatite crônica é diferenciada da resolução através da manutenção do PCR HCV positivo por ≥ 6 meses, quando indica-se elastografia ou biópsia hepática
+*Figura 6: Hepatite C — curso clínico.*
 
-(avaliar se há e qual o grau da cirrose);
+> ⚠️ Trecho de OCR de duas colunas parcialmente reconstruído — a evolução completa da cirrose/carcinoma pode não refletir a disposição exata da fonte original.
 
-- Confira Figura 6
+- 80% doença estável → 50% cirrose estável / 20% carcinoma hepatocelular.
+- Cirrose → 50% morte.
 
-## FORMAS DE TRANSMISSÃO
+### Formas de Transmissão
 
-- Sangue e perfurocortantes;
-
+- Sangue e perfurocortantes.
 - Existe transmissão sexual, mas é bem menos importante que na hepatite B.
-
-- Não tem vacina e não apresenta sintomatologia até evoluir para a cirrose: RNA vírus e 7 subtipos, por isso a dificuldade em ter a vacina.
-
-80% Doença 50% Cirrose estável estável Cirrose Morte 20% 50% Carcinoma hepatocelular
+- Não tem vacina e não apresenta sintomatologia até evoluir para cirrose: é um RNA vírus, com 7 subtipos, por isso a dificuldade em ter a vacina.
 
 ---
 
 <!-- page:8 -->
 
-## TRATAMENTO Tratamento: o Único vírus que
+## Tratamento (Hepatite C)
 
-- Resposta virológica sustentada (RVS) = cura. tratamos e curamos Consiste em 12 semanas após o término do tratamento, avaliada por PCR-HCV.
+- **Resposta virológica sustentada (RVS) = cura**. Consiste na avaliação por PCR-HCV 12 semanas após o término do tratamento (PCR HCV < 12 UI/mL).
+- É o único vírus que tratamos e curamos.
 
-Em quem realizar o seguimento pelo resto da vida? Em quem realizar o seguimento pelo resto da vida? Cirrose ou fibrose (F3/F4)
+### Em Quem Realizar o Seguimento pelo Resto da Vida?
 
-- F0/F1 considera curado sem necessidade de seguimento.
+- Cirrose ou fibrose (F3/F4).
+- F0/F1: considera-se curado, sem necessidade de seguimento.
+- F2: avalia se regride após tratamento. Se sim, pode dar alta; senão, mantém seguimento.
 
-- F2 avalia se regride após tratamento. Se sim, pode dar alta. Senão, mantém seguimento. 12 SEM 24 SEM
+**Esquemas (12 ou 24 semanas conforme Child):**
 
-Sem cirrose Child A Child B Child C Sof + daclata Sof + velpata
+- Sem cirrose / Child A: Sof + Daclata ou Sof + Velpata (12 semanas).
+- Child B / Child C: esquema estendido (24 semanas).
 
-- RVS: 12 semanas após término: PCR HCV < 12 UI/ml
-
-- Seguimento o resto da vida: cirrótico ou F3/F4
-
-Figura 7.
+*Figura 7.*

@@ -1,387 +1,322 @@
-# Habilidades de Comunicação - Parte
+# Habilidades de Comunicação - Parte 1
 
 <!-- page:1 -->
 
-## HABILIDADES DE COMUNICAÇÃO PARTE 1
+> ⚠️ Conteúdo desta página reconstruído a partir de OCR de duas colunas — confira contra a fonte original.
 
-## Habilidades de Comunicação
+## Comunicação Clínica
 
-## COMUNICAÇÃO CLÍNICA COMUNICAÇÃO DE MÁS-NOTÍCIAS: PROTOCOLO
+### Tipos de Perguntas
 
-Tipos de Perguntas: SPIKES
+- **Abertas**: sem restrições de opções e limitação do tema;
+- **Focadas**: perguntas com uma direção de tema, mas que permitem respostas livres;
+- **Fechadas**: respostas curtas, concisas e pré-definidas;
+- **Dirigidas**: entrevistador induz o paciente a uma resposta, pode gerar viés.
 
-- Abertas: Sem restrições de opções e limitação
+### Consulta Clínica
 
-- S = Setting up = Preparando-se para o encontro;
+- **Abertura**: delimitar o motivo da consulta e estabelecer relação médico-paciente;
+- **Prevenção de demandas aditivas** (novos motivos de consulta): questionar se o paciente apresenta outras demandas; evita o "sinal da maçaneta" (paciente lembra de assunto ao final da consulta);
+- **Método Clínico Centrado no Paciente (MCCP)**:
+  - Explorar a saúde, doença e a experiência da doença;
+  - Entendendo o indivíduo como um todo;
+  - Elaborar plano em conjunto para manejo dos problemas;
+  - Intensificando a relação entre médico-paciente;
+- **Demora Permitida**: período de observação entre a avaliação/diagnóstico e a tomada de decisão terapêutica, com o objetivo de evitar iatrogenia por intervenções precipitadas, desnecessárias ou prejudiciais.
 
-do tema;
+## Comunicação de Más Notícias: Protocolo SPIKES
 
-- P = Perception = Percebendo o paciente;
+- **S** = Setting up = Preparando-se para o encontro;
+- **P** = Perception = Percebendo o paciente;
+- **I** = Invitation = Convidando para o diálogo;
+- **K** = Knowledge = Transmitindo as informações;
+- **E** = Emotions = respondendo às emoções dos pacientes;
+- **S** = Strategy and Summary = Resumindo e organizando estratégias.
 
-- Focadas: Perguntas com uma direção de tema, mas
+## Comunicação sobre Espiritualidade
 
-- I = Invitation = Convidando para o diálogo;
+**Questionário HOPE**
 
-que permitem respostas livres;
+- **H** (Hope) - Fontes de esperança;
+- **O** - Organização religiosa;
+- **P** - Espiritualidade pessoal e prática;
+- **E** - Efeitos no tratamento médico e assuntos terminais.
 
-- K = Knowledge = Transmitindo as informações;
+**Questionário FICA**
 
-- Fechadas: Respostas curtas, concisas e
+- **F** – Fé e crença;
+- **I** – Importância/influência;
+- **C** – Comunidade;
+- **A** – Ação no tratamento.
 
-- E = Emotions = responder às emoções pré-definidas; dos pacientes;
+## A Arte da Comunicação na Prática Clínica — Comunicação Clínica Efetiva
 
-- Dirigidas: Entrevistador induz o paciente a uma
+A comunicação é um processo natural e simbólico essencial para os seres humanos, que, por sua natureza social, dependem dela para transmitir mensagens. Na medicina, a comunicação clínica efetiva transcende a mera troca de informações; ela é a base de uma relação harmoniosa e produtiva entre o profissional de saúde e o paciente.
 
-- S = Strategy and Summary = Resumindo e resposta, pode gerar viés; organizando estratégias.
-
-Consulta Clínica: COMUNICAÇÃO SOBRE ESPIRITUALIDADE:
-
-- Abertura: delimitar o motivo da consulta e
-
-- Questionário HOPE:
-
-estabelecer relação médico-paciente; | H (Hope) - Fontes de esperança;
-
-- Prevenção de demandas aditivas (novos motivos | O - Organização religiosa; Questionar se o paciente apresenta | E - Efeitos no tratamento médico e outras demandas; assuntos terminais. Evita o “sinal da maçaneta” (paciente lembra de
-
-de consulta): | P - Espiritualidade pessoal e prática;
-
-- Questionário FICA:
-
-demanda não mencionada ao final da consulta); | F – Fé e Crença;
-
-- Método Clínico Centrado no Paciente (MCCP): | I – Importância/Influência; Explorar a saúde, doença e a experiência | C – Comunidade; Entendendo o indivíduo como um todo; Elaborar plano em conjunto para manejo dos problemas; Intensificando a relação entre médico-paciente;
-
-da doença; | A – Ação no tratamento.
-
-- Demora Permitida: período de observação entre a avaliação/diagnóstico e a tomada de decisão terapêutica, com o objetivo de evitar iatrogenia por intervenções precipitadas, desnecessárias ou prejudiciais;
-
-## A ARTE DA COMUNICAÇÃO NA COMUNICAÇÃO CLÍNICA EFETIVA PRÁTICA CLÍNICA
-
-- Melhora a relação entre o profissional de saúde e o paciente, construindo confiança e respeito mútuo.
-
-A comunicação é um processo natural e simbólico
-
-- Contribui para decisões compartilhadas, garantindo essencial para os seres humanos, que, por sua natureza que o plano de tratamento alinhe-se com os valores e social, dependem dela para transmitir mensagens. Na preferências do paciente.
-
-medicina, a comunicação clínica efetiva transcende a
-
-- Reduz a incidência de processos por erros médicos, mera troca de informações; ela é a base de uma relação pois a clareza e o entendimento mútuo minimizam harmoniosa e produtiva entre o profissional de saúde mal-entendidos.
-
-e o paciente.
-
-- Promove um melhor cuidado da saúde e maior
-
-- Tipos de comunicação: adesão medicamentosa, impactando positivamente os Verbal: fala e escrita; resultados clínicos. Não verbal: gestos, expressões faciais, postura, tom
-
-- Pode até levar à redução do tempo de internação, de voz, símbolos visuais e outros elementos que otimizando o processo de recuperação.
-
-não envolvem o uso de palavras.
+- **Tipos de comunicação**:
+  - Verbal: fala e escrita;
+  - Não verbal: gestos, expressões faciais, postura, tom de voz, símbolos visuais e outros elementos que não envolvem o uso de palavras.
+- Melhora a relação entre o profissional de saúde e o paciente, construindo confiança e respeito mútuo;
+- Contribui para decisões compartilhadas, garantindo que o plano de tratamento alinhe-se com os valores e preferências do paciente;
+- Reduz a incidência de processos por erros médicos, pois a clareza e o entendimento mútuo minimizam mal-entendidos;
+- Promove um melhor cuidado da saúde e maior adesão medicamentosa, impactando positivamente os resultados clínicos;
+- Pode até levar à redução do tempo de internação, otimizando o processo de recuperação.
 
 ---
 
 <!-- page:2 -->
 
-TIPOS DE PERGUNTAS NA CONSULTA | Caso possua mais de uma demanda, deve-se Perguntas abertas: negociar como usar o tempo disponível para
+> ⚠️ Conteúdo desta página reconstruído a partir de OCR de duas colunas — confira contra a fonte original.
 
-- Permitem ao paciente responder livremente; atender cada demanda;
+## Tipos de Perguntas na Consulta
 
+**Perguntas abertas**
+
+- Permitem ao paciente responder livremente;
 - Sem restrições de opções e limitação do tema;
+- Oportunidade de detalhar seus sintomas, experiências e sentimentos;
+- Promovem a comunicação aberta e a criação de um ambiente de confiança.
 
-- Encorajamentos Verbais Curtos: Use “continue”,
+**Perguntas focadas**
 
-- Oportunidade de detalhar seus sintomas, “sim”, “entendo” para sinalizar que você está ouvindo.
-
-experiências e sentimentos;
-
-- Reflexões em Espelho: Explore um assunto usando as
-
-- Promovem a comunicação aberta e a criação de um próprias palavras do paciente.
-
-ambiente de confiança.
-
-- Seguimento de Pistas Verbais: Reutilize palavras e
-
-Perguntas focadas: frases do paciente em momentos posteriores para dar
-
-- Perguntas com uma direção de tema, mas que continuidade à entrevista.
-
-permitem respostas livres;
-
-- Paráfrases: Devolva ao paciente uma ideia que ele
-
-- Aprofundar a investigação sobre um sintoma transmitiu, mas com suas próprias palavras, para específico para obter detalhes adicionais sobre a confirmar o entendimento.
-
-natureza e características do sintoma;
-
-- Sumários/Resumos: Faça resumos periódicos do que
-
-- Auxiliam na identificação de causas e padrões; foi relatado para garantir alinhamento.
-
+- Perguntas com uma direção de tema, mas que permitem respostas livres;
+- Aprofundar a investigação sobre um sintoma específico para obter detalhes adicionais sobre a natureza e características do sintoma;
+- Auxiliam na identificação de causas e padrões;
 - Contribuem para um diagnóstico mais preciso.
 
-- Linguagem Positiva: Estimule o paciente com uma
-
-Perguntas fechadas: comunicação encorajadora.
+**Perguntas fechadas**
 
 - Respostas curtas e concisas;
+- Podem ser respondidas com "sim", "não" ou respostas pré-definidas;
+- Confirmar informações específicas de forma rápida e objetiva;
+- Direcionar a conversa para áreas específicas do interesse do médico;
+- Economizam tempo na entrevista;
+- Permitem a coleta de dados precisos.
 
-- Escuta Ativa: Demonstre total atenção e interesse.
+**Perguntas dirigidas**
 
-- Podem ser respondidas com “sim”, “não” ou respostas O que evitar:
-
-pré-definidas;
-
-- Respostas que encerram o diálogo.
-
-- Confirmar informações específicas de forma
-
-- Perguntas que possam ser interpretadas como críticas rápidas e objetivas; ou juízos de valor.
-
-- Direcionar a conversa para áreas específicas do
-
-- Perguntas sugestivas.
-
-interesse do médico;
-
-- Uso de diminutivos (“dorzinha”, “febrezinha”,
-
-- Economizam tempo na entrevista; “mãezinha”), pois retiram a importância, minimizam ou
-
-- Permitem a coleta de dados precisos. infantilizam o paciente.
-
-Perguntas dirigidas:
-
-- Digitar enquanto o paciente fala, o que pode passar a
-
-- Entrevistador induz o paciente a uma resposta; impressão de desatenção. Exemplo: “Você está tomando os remédios, né?”;
-
-## MÉTODO CLÍNICO CENTRADO NO
-
-- Podem levar a respostas enviesadas e prejudicar a
-
-## precisão do diagnóstico; PACIENTE (MCCP)
-
+- Entrevistador induz o paciente a uma resposta. Exemplo: "Você está tomando os remédios, né?";
+- Podem levar a respostas enviesadas e prejudicar a precisão do diagnóstico;
 - Podem criar um ambiente de desconfiança;
+- Devem ser evitadas ou utilizadas com cautela.
 
-- Devem ser evitadas ou utilizadas com cautela. O Método Clínico Centrado na Pessoa (MCCP) é uma abordagem sistemática para o cuidado que visa uma
+## Conduzindo a Consulta Clínica
 
-CONDUZINDO A CONSULTA CLÍNICA compreensão profunda e um manejo colaborativo. Ele é Abertura da Consulta definido em passos essenciais:
+**Abertura da consulta**
 
-- Momento crucial para estabelecer vínculo
+- Momento crucial para estabelecer vínculo médico-paciente;
+- Compreender e delimitar o motivo principal da consulta;
+- Perguntas iniciais devem ser abertas e focadas nas demandas que trazem a pessoa ao consultório: "O que lhe trouxe aqui hoje?", "Como eu posso ajudar hoje?";
+- Não dar por óbvio o motivo da consulta;
+- Tempo de fala sem ser interrompido do paciente é de suma importância, geralmente a fala por cerca de 2 minutos, aumentando a probabilidade de expor os seus medos e preocupações.
 
-- 1) Explorar a saúde, a doença e a experiência da médico-paciente; doença: Isso inclui entender não apenas os aspectos
+**Prevenção de demandas aditivas**
 
-- Compreender e delimitar o motivo principal da consulta; biomédicos, mas como a doença afeta a vida do
+- Demandas aditivas são novos motivos de consulta trazidos pelo paciente, geralmente ao final da consulta;
+- Questionar se o paciente apresenta outras demandas;
+- Diminui a chance do "sinal da maçaneta": situação em que um paciente, ao se despedir do médico, lembra de algo importante que não havia mencionado durante a consulta;
+- Caso possua mais de uma demanda, deve-se negociar como usar o tempo disponível para atender cada demanda.
 
-- Perguntas iniciais devem ser abertas e focadas nas paciente. O Método SIFE (Sentimentos, Ideias, demandas que trazem a pessoa ao consultório: Funcionalidade, Expectativas) é uma ferramenta para “O que lhe trouxe aqui hoje?” essa exploração. “Como eu posso ajudar hoje?” | S = Sentimentos. Exemplos de perguntas: “Como
+**Durante a consulta: ferramentas de comunicação**
 
-- Não dar por óbvio o motivo da consulta; você tem se sentido com tudo isso?”, “Quais são
+- **Negociação da agenda**: sumarização das demandas trazidas pelo paciente, recapitular o que a pessoa trouxe;
+- **Encorajamentos verbais curtos**: use "continue", "sim", "entendo" para sinalizar que você está ouvindo;
+- **Reflexões em espelho**: explore um assunto usando as próprias palavras do paciente;
+- **Seguimento de pistas verbais**: reutilize palavras e frases do paciente em momentos posteriores para dar continuidade à entrevista;
+- **Paráfrases**: devolva ao paciente uma ideia que ele transmitiu, mas com suas próprias palavras, para confirmar o entendimento;
+- **Sumários/resumos**: faça resumos periódicos do que foi relatado para garantir alinhamento;
+- **Linguagem positiva**: estimule o paciente com uma comunicação encorajadora;
+- **Escuta ativa**: demonstre total atenção e interesse.
 
-- Tempo de fala sem ser interrompido do paciente é suas maiores preocupações?”, “Isso tem te deixado de suma importância, geralmente a fala por cerca de mais triste, irritado, ou ansioso?” seus medos e preocupações; que está acontecendo com você?”, “Qual a sua
+**O que evitar**
 
-2 minutos, aumentando a probabilidade de expor os | I = Ideias. Exemplos de perguntas: “O que você acha Prevenção de Demandas Aditivas ideia sobre o que causou isso?”, “Você já ouviu falar
+- Respostas que encerram o diálogo;
+- Perguntas que possam ser interpretadas como críticas ou juízos de valor;
+- Perguntas sugestivas;
+- Uso de diminutivos ("dorzinha", "febrezinha", "mãezinha"), pois retiram a importância, minimizam ou infantilizam o paciente;
+- Digitar enquanto o paciente fala, o que pode passar a impressão de desatenção.
 
-- Demandas aditivas são novos motivos de consulta sobre essa condição? O que você sabe sobre ela?” trazidos pelo paciente geralmente ao final da consulta; | F = Funcionalidade. Exemplos de perguntas: “Como
+## Método Clínico Centrado na Pessoa (MCCP)
 
-- Questionar se o paciente apresenta outras demandas; isso tem afetado seu dia a dia?”, “Você consegue
+O Método Clínico Centrado na Pessoa (MCCP) é uma abordagem sistemática para o cuidado que visa uma compreensão profunda e um manejo colaborativo. Ele é definido em passos essenciais:
 
-- Diminui a chance do “sinal da maçaneta”: fazer as coisas que costumava fazer?”, “Como isso Situação em que um paciente, ao se despedir do impacta seu trabalho/estudos ou suas atividades médico, lembra de algo importante que não havia de lazer?” mencionado durante a consulta. | E = Expectativas. Exemplos de perguntas: “O que
+**1) Explorar a saúde, a doença e a experiência da doença**
 
-Durante a Consulta: Ferramentas de Comunicação você espera que aconteça com a gente aqui hoje?”,
-
-- Negociação da Agenda: “O que você espera que esse tratamento faça por Sumarização das demandas trazidas pelo paciente, você?”, “Quais são seus objetivos com a melhora da recapitular o que a pessoa trouxe; sua saúde?”
+- Isso inclui entender não apenas os aspectos biomédicos, mas como a doença afeta a vida do paciente. O Método **SIFE** (Sentimentos, Ideias, Funcionalidade, Expectativas) é uma ferramenta para essa exploração:
+  - **S** = Sentimentos. Exemplos de perguntas: "Como você tem se sentido com tudo isso?", "Quais são suas maiores preocupações?", "Isso tem te deixado mais triste, irritado, ou ansioso?";
+  - **I** = Ideias. Exemplos de perguntas: "O que você acha que está acontecendo com você?", "Qual a sua ideia sobre o que causou isso?", "Você já ouviu falar sobre essa condição? O que você sabe sobre ela?";
+  - **F** = Funcionalidade. Exemplos de perguntas: "Como isso tem afetado seu dia a dia?", "Você consegue fazer as coisas que costumava fazer?", "Como isso impacta seu trabalho/estudos ou suas atividades de lazer?";
+  - **E** = Expectativas. Exemplos de perguntas: "O que você espera que aconteça com a gente aqui hoje?", "O que você espera que esse tratamento faça por você?", "Quais são seus objetivos com a melhora da sua saúde?".
 
 ---
 
 <!-- page:3 -->
 
-- 2) Entendendo o indivíduo como um todo: Compreender
+> ⚠️ Conteúdo desta página reconstruído a partir de OCR de duas colunas — confira contra a fonte original.
 
-- Verificar Figura 1 a história de vida do paciente, seu ciclo de vida, estrutura A Demora Permitida é um período de observação familiar e o contexto da comunidade em que vive. intencionalmente prolongado entre a avaliação/ História de Vida: Compreender experiências diagnóstico e a decisão terapêutica. Seu objetivo é passadas, eventos marcantes (perdas, evitar a iatrogenia: danos causados por intervenções passadas, eventos marcantes (perdas, conquistas, traumas), e como essas experiências moldaram a pessoa.. Ciclo de Vida: Considerar o ciclo da vida em que o paciente se encontra (adolescência, vida adulta jovem, meia-idade, velhice). Estrutura Familiar: Entender a dinâmica familiar depende do paciente). Contexto da Comunidade: Analisar o ambiente social, cultural, econômico e geográfico em que o paciente vive.
+**2) Entendendo o indivíduo como um todo**
 
-(quem mora junto, quem oferece suporte, quem
+- Compreender a história de vida do paciente, seu ciclo de vida, estrutura familiar e o contexto da comunidade em que vive:
+  - **História de vida**: compreender experiências passadas, eventos marcantes (perdas, conquistas, traumas), e como essas experiências moldaram a pessoa;
+  - **Ciclo de vida**: considerar o ciclo de vida em que o paciente se encontra (adolescência, vida adulta jovem, meia-idade, velhice);
+  - **Estrutura familiar**: entender a dinâmica familiar (quem mora junto, quem oferece suporte, quem depende do paciente);
+  - **Contexto da comunidade**: analisar o ambiente social, cultural, econômico e geográfico em que o paciente vive.
 
-- 3) Elaborar plano em conjunto médico-paciente para manejo dos problemas: Um plano de ação criado em parceria, que define o problema, estabelece metas de tratamento e determina os papéis de cada um no processo. Definição do Problema Estabelecimento de Metas de Tratamento Determinação dos Papéis Flexibilidade e Revisão
+**3) Elaborar plano em conjunto médico-paciente para manejo dos problemas**
 
-- 4) Intensificando a relação entre médico-paciente:
+- Um plano de ação criado em parceria, que define o problema, estabelece metas de tratamento e determina os papéis de cada um no processo:
+  - Definição do problema;
+  - Estabelecimento de metas de tratamento;
+  - Determinação dos papéis;
+  - Flexibilidade e revisão.
 
-Uma relação baseada em respeito e confiança é fundamental para uma comunicação, planejamento e execução de qualidade, essenciais para alcançar os objetivos de saúde.
+**4) Intensificando a relação entre médico-paciente**
 
-| Respeito | Confiança | Comunicação Efetiva | Empatia | Colaboração
+- Uma relação baseada em respeito e confiança é fundamental para uma comunicação, planejamento e execução de qualidade, essenciais para alcançar os objetivos de saúde:
+  - Respeito;
+  - Confiança;
+  - Comunicação efetiva;
+  - Empatia;
+  - Colaboração.
 
-1. Explorando a Saúde,
+> Figura 1: Método Clínico Centrado na Pessoa — os quatro componentes: (1) Explorando a saúde, a doença e a experiência da doença; (2) Entendendo a pessoa como um todo; (3) Elaborando um plano conjunto de manejo dos problemas; (4) Intensificando a relação entre pessoa e médico.
 
-a Doença e a Experiência da Doença Sinais e indicações Doença Experiência da doença Saúde
+## Demora Permitida
 
-3. Elaborando u
-
-Conjunto de Manejo d
-
-- Problem
-
-- Metas
-
-- Papéis
-
-Entendimento integrado Decisões Con D.V
-
-4. Intensificando
-
-Pessoa e Mé Figura 1: Método Clínico Centrado na Pessoa. evitar a iatrogenia: danos causados por intervenções precipitadas, desnecessárias ou prejudiciais.
-
-- É um método da Prevenção Quaternária, especialmente relevante na Atenção Primária à Saúde paciente permite o uso consciente do tempo como ferramenta clínica.
-
-(APS), onde o vínculo longitudinal entre profissional e
-
-- A decisão de esperar deve considerar a urgência do quadro: se não for urgente, é possível aguardar.
-
-- É apropriado para demandas ambulatoriais autolimitadas, que tendem a ter remissão espontânea na maioria dos casos.
-
-- A duração da espera varia conforme a situação o clínica, exigindo reavaliações frequentes e contínua observação.
-
-## DEMORA PERMITIDA
-
-- Refere-se a um período de observação, deliberadamente prolongado entre o diagnóstico e a tomada de decisão terapêutica, com o objetivo de evitar iatrogenia por intervenções precipitadas, desnecessárias ou prejudiciais;
-
+- Refere-se a um período de observação, deliberadamente prolongado, entre o diagnóstico e a tomada de decisão terapêutica, com o objetivo de evitar iatrogenia por intervenções precipitadas, desnecessárias ou prejudiciais;
 - Método utilizado na prevenção quaternária realizada pela Atenção Primária à Saúde (APS), especialmente nas equipes de Saúde da Família (eSF), em que o vínculo longitudinal entre profissional e paciente permite o uso intencional do tempo como ferramenta clínica;
-
-2. Entendendo a Pessoa
-
-como um Todo Doença Experiência da doença Pessoa Saúde um plano dos Problemas mas s Contexto próximo s Contexto amplo njuntas a relação édico
+- A decisão de esperar deve considerar a urgência do quadro: se não for urgente, é possível aguardar;
+- É apropriado para demandas ambulatoriais autolimitadas, que tendem a ter remissão espontânea na maioria dos casos;
+- A duração da espera varia conforme a situação clínica, exigindo reavaliações frequentes e contínua observação.
 
 ---
 
 <!-- page:4 -->
 
-## PROTOCOLO SPIKES
+> ⚠️ Conteúdo desta página reconstruído a partir de OCR de duas colunas — confira contra a fonte original.
 
-5. E (Emotions - Respondendo às emoções
+## Protocolo SPIKES — Comunicação de Notícias Difíceis
 
-## COMUNICAÇÃO DE NOTÍCIAS dos pacientes)
+- Protocolo utilizado na área da saúde para estruturar a comunicação de notícias difíceis aos pacientes;
+- Visa tornar a comunicação mais clara, ética e empática, auxiliando a lidar com situações delicadas como diagnósticos graves, prognósticos desfavoráveis ou qualquer informação que altere de forma drástica e negativa a visão do paciente sobre o seu futuro.
 
-DIFÍCEIS | Ofereça apoio, solidariedade e empatia. | Identifique a razão da emoção e tente entender as
+O Protocolo SPIKES é uma ferramenta estruturada para comunicar notícias difíceis aos pacientes de forma clara, ética e empática. É fundamental para lidar com diagnósticos graves, prognósticos desfavoráveis ou qualquer informação que altere drasticamente a visão do paciente sobre seu futuro. Os 6 passos do protocolo SPIKES são:
 
-- Protocolo utilizado na área da saúde para estruturar a crenças do paciente sobre a notícia.
+**1. S (Setting up - Preparando-se para o encontro)**
 
-comunicação de notícias difíceis aos pacientes; | Facilite a expressão das emoções e demonstre
+- Prepare-se emocionalmente;
+- Organize o tempo disponível;
+- Escolha um ambiente adequado, acolhedor e privativo, evitando interrupções;
+- Considere a presença de pessoas importantes para o paciente, se for o desejo dele;
+- Alerte o paciente que notícias difíceis serão dadas.
 
-- Visa tornar a comunicação mais clara, ética e compreensão, colocando-se à disposição.
+**2. P (Perception - Percebendo o paciente)**
 
-empática, auxiliando a lidar com situações delicadas 6. S (Strategy and Summary - Resumindo e como diagnósticos graves, prognósticos desfavoráveis organizando estratégias):
+- Avalie o nível de conhecimento e compreensão do paciente sobre a situação;
+- Use perguntas abertas como: "Você sabe por que fizemos tal exame?" ou "O que você sabe sobre seu estado clínico?".
 
-ou qualquer informação que altere de forma drástica e | Verifique se o paciente está pronto para discutir os negativa a visão do paciente sobre o seu futuro; próximos passos.
+**3. I (Invitation - Convidando para o diálogo)**
 
-- Verificar Tabela 1 | Comunique de forma assertiva, planejando o comunicar notícias difíceis aos pacientes de forma | Reforce as estratégias de enfrentamento do clara, ética e empática. É fundamental para lidar com paciente, abordando a superação de crises diagnósticos graves, prognósticos desfavoráveis ou anteriores e a rede de apoio existente.
+- Pergunte ao paciente como ele prefere receber a informação, se deseja saber todos os detalhes ou se prefere que um familiar receba as informações. Respeite a vontade do paciente. Ex.: "Quer que eu lhe explique o diagnóstico com profundidade?".
 
-O Protocolo SPIKES é uma ferramenta estruturada para seguimento, os planos para o futuro qualquer informação que altere drasticamente a visão do | Alinhe as expectativas.
+**4. K (Knowledge - Transmitindo as informações)**
 
-paciente sobre seu futuro. Os 6 passos do protocolo SPIKES são: COMUNICAÇÃO SOBRE RELIGIOSIDADE /
+- Adeque a linguagem ao nível de compreensão do paciente, falando com franqueza, empatia e sem excesso de termos técnicos;
+- Competência cultural;
+- Forneça a informação gradualmente e confirme periodicamente o entendimento do paciente;
+- Dê tempo para que o paciente possa processar a notícia, respeitando seu ritmo.
 
-1. S (Setting up - Preparando-se para o encontro): ESPIRITUALIDADE
+**5. E (Emotions - Respondendo às emoções dos pacientes)**
 
-| Prepare-se emocionalmente.
+- Ofereça apoio, solidariedade e empatia;
+- Identifique a razão da emoção e tente entender as crenças do paciente sobre a notícia;
+- Facilite a expressão das emoções e demonstre compreensão, colocando-se à disposição.
 
-- Coping é definido como a maneira como lidamos com Organize o tempo disponível. os problemas e as adversidades; Escolha um ambiente adequado, acolhedor e
+**6. S (Strategy and Summary - Resumindo e organizando estratégias)**
 
-- Coping religioso-espiritual aborda a forma como o privativo, evitando interrupções. entremeado religiosidade, religião e espiritualidade Considere a presença de pessoas importantes para influenciam no modo de enfrentar os problemas que a o paciente, se for o desejo dele. vida impõe; Alerta o paciente que notícias difíceis serão dadas.
+- Verifique se o paciente está pronto para discutir os próximos passos;
+- Comunique de forma assertiva, planejando o seguimento, os planos para o futuro;
+- Reforce as estratégias de enfrentamento do paciente, abordando a superação de crises anteriores e a rede de apoio existente;
+- Alinhe as expectativas.
 
-- Por meio desse entendimento, pode auxiliar o paciente
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-2. P (Perception - Percebendo o paciente): na forma como entende o processo de saúde-
+**Tabela 1: Passos do Protocolo SPIKES**
 
-| Avalie o nível de conhecimento e compreensão do doença, adesão ao tratamento e consequentemente paciente sobre a situação. seu prognóstico.
+| Sigla | Etapa | Descrição |
+|---|---|---|
+| S | Setting up | Preparação para o encontro |
+| P | Perception | Percebendo o paciente |
+| I | Invitation | Convidando para o diálogo |
+| K | Knowledge | Transmitindo as informações |
+| E | Emotions | Expressando/respondendo às emoções |
+| S | Strategy and Summary | Resumindo e organizando estratégias |
 
-| Use perguntas abertas como: “Você sabe por que Dois questionários são ferramentas úteis para abordar a fizemos tal exame?” ou “O que você sabe sobre seu espiritualidade na consulta:
+## Comunicação sobre Religiosidade / Espiritualidade
 
-estado clínico?”. Questionário HOPE:
+- **Coping** é definido como a maneira como lidamos com os problemas e as adversidades;
+- **Coping religioso-espiritual** aborda a forma como o entremeado religiosidade, religião e espiritualidade influenciam no modo de enfrentar os problemas que a vida impõe;
+- Por meio desse entendimento, pode auxiliar o paciente na forma como entende o processo de saúde-doença, adesão ao tratamento e, consequentemente, seu prognóstico.
 
-3. I (Invitation - Convidando para o diálogo):
+Dois questionários são ferramentas úteis para abordar a espiritualidade na consulta:
 
-- H (Hope - Fontes de esperança): Explora o que Pergunte ao paciente como ele prefere receber a conforta e dá força ao paciente, incluindo crenças e informação, se deseja saber todos os detalhes ou práticas espirituais. Conforto, força, paz, amor, crenças, se prefere que um familiar receba as informações. práticas espirituais e relacionamento social. Respeite a vontade do paciente. Ex: “Quer que eu
+**Questionário HOPE**
 
-- O (Organized Religion - Organização religiosa): Avalia lhe explique o diagnóstico com profundidade?”. o envolvimento do paciente com a religião organizada
-
-4. K (Knowledge - Transmitindo as informações): e como isso pode afetar sua saúde.
-
-| Adeque a linguagem ao nível de compreensão do
-
-- P (Personal Spirituality and Practice - Espiritualidade paciente, falando com franqueza, empatia e sem pessoal e prática): Explora as práticas espirituais excesso de termos técnicos. pessoais do paciente e como elas podem ser Competência cultural utilizadas para lidar com o estresse e a doença; Forneça a informação gradualmente e confirme
-
-- E (Effects on Medical Care and End-of-life Issues periodicamente o entendimento do paciente. Efeitos no tratamento médico e assuntos terminais): Dê tempo para que o paciente possa processar a Investiga como a espiritualidade do paciente pode notícia, respeitando seu ritmo. influenciar suas decisões médicas e acesso a recursos de saúde, especialmente em situações de fim de vida.
-
-Tabela 1: Passos do Protocolo SPIKES. S Setting up Preparação para o encontro P Perception Percebendo o paciente I Invitation Convidando para o diálogo K Knowledge Transmitindo as informações E Emotions Expressando emoções S Strategy and Summary Resumindo e organizando estratégias
+- **H** (Hope - Fontes de esperança): explora o que conforta e dá força ao paciente, incluindo crenças e práticas espirituais. Conforto, força, paz, amor, crenças, práticas espirituais e relacionamento social;
+- **O** (Organized Religion - Organização religiosa): avalia o envolvimento do paciente com a religião organizada e como isso pode afetar sua saúde;
+- **P** (Personal Spirituality and Practice - Espiritualidade pessoal e prática): explora as práticas espirituais pessoais do paciente e como elas podem ser utilizadas para lidar com o estresse e a doença;
+- **E** (Effects on Medical Care and End-of-life Issues - Efeitos no tratamento médico e assuntos terminais): investiga como a espiritualidade do paciente pode influenciar suas decisões médicas e acesso a recursos de saúde, especialmente em situações de fim de vida.
 
 ---
 
 <!-- page:5 -->
 
-Tabela 2: Questionários HOPE, FICA, CSI-MEMO e ACP para anamnese espiritual. Questionário HOPE Questionário FICA H - Há fontes de esperança?
+> ⚠️ Conteúdo desta página reconstruído a partir de OCR de duas colunas, tabelas de anamnese espiritual muito fragmentadas — confira contra a fonte original.
 
-F - Fé/crença Quais são suas fontes de esperança, conforto e Quais são suas fontes de esperança, conforto e paz?
+**Questionário FICA**
 
-A que você se apega nos tempos difíceis? O que lhe dá apoio e faz você andar para a frente? O - Organização religiosa Qu Você se considera parte de uma religião organizada? Isso é importante?
+- **F** (Faith and Belief - Fé e crença): aborda a fé ou crenças espirituais do paciente e como elas o ajudam a lidar com problemas;
+- **I** (Importance and Influence - Importância e influência): investiga a importância da espiritualidade na vida do paciente e como ela influencia suas decisões e bem-estar;
+- **C** (Community - Comunidade): questiona a participação do paciente em comunidades religiosas ou espirituais e como elas o apoiam;
+- **A** (Address in Care - Ação/Aplicação nos cuidados): explora como a espiritualidade pode ser integrada ao tratamento médico, incluindo práticas e crenças que podem influenciar as decisões do paciente.
 
-Faz parte de uma comunidade? Isso ajuda? De que formas sua religião ajuda você? Voc Você é parte de uma comunidade religiosa?
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-P - Práticas espirituais pessoais Você tem alguma crença espiritual que seja Vo independente da sua religião organizada?
+**Tabela 2: Questionários HOPE, FICA, CSI-MEMO e ACP para anamnese espiritual**
 
-Você crê em Deus? Qual é a sua relação com ele? Ex Que aspectos da sua espiritualidade ou prática espiritual ajudam mais? (oração, meditação, Há leituras, frequentar serviços religiosos?)
+*Questionário HOPE*
 
-E - Efeitos no tratamento Há algum recurso espiritual do qual você está Com sentindo falta? Há alguma restrição para seu tratamento gerada In por suas crenças?
+- **H - Há fontes de esperança?**: Quais são suas fontes de esperança, conforto e paz? A que você se apega nos tempos difíceis? O que lhe dá apoio e faz você seguir em frente?
+- **O - Organização religiosa**: Você se considera parte de uma religião organizada? Isso é importante? Faz parte de uma comunidade religiosa?
+- **P - Práticas espirituais pessoais**: Você tem alguma crença espiritual que seja independente da sua religião organizada? Você crê em Deus? Qual é a sua relação com Ele? Que aspectos da sua espiritualidade ou prática espiritual ajudam mais (oração, meditação, leituras, frequentar serviços religiosos)?
+- **E - Efeitos no tratamento**: Há algum recurso espiritual do qual você está sentindo falta? Há alguma restrição para seu tratamento gerada por suas crenças?
 
-## CSI-MEMO
+*Questionário FICA*
 
-1. Suas crenças religiosas/espirituais lhe dão
+- **F - Fé/crença**: Você se considera religioso ou espiritualizado? Que importância você dá para a fé e as crenças religiosas na sua vida?
+- **I - Importância/influência**: A fé ou as crenças já ajudaram você a lidar com problemas de saúde? Você tem alguma crença que pode afetar decisões médicas ou o seu tratamento?
+- **C - Comunidade**: Você é parte de uma comunidade religiosa? Ela lhe dá suporte? Como? Existe algum grupo de pessoas que você realmente ama ou que é importante para você?
+- **A - Ação no tratamento**: Como você gostaria que o médico considerasse a questão religiosa/espiritual no seu tratamento? Indique algum líder religioso/espiritual da sua comunidade.
 
-conforto ou são fontes de estresse?
+*Questionário CSI-MEMO*
 
-2. Como estas crenças influenciariam
+1. Suas crenças religiosas/espirituais lhe dão conforto ou são fontes de estresse?
+2. Como estas crenças influenciariam suas decisões médicas se você ficasse realmente doente?
+3. Você possui algum tipo de crença espiritual que pode influenciar ou conflitar com suas decisões médicas?
+4. Você é membro de alguma comunidade espiritual ou religiosa e ela lhe dá suporte?
+5. Você possui alguma necessidade espiritual que deva ser abordada por alguém?
 
-suas decisões médicas se você ficasse 1. A realmente doente? n
+*História espiritual (American College of Physicians - ACP)*
 
-3. Você possui algum tipo de crença espiritual 2. A
+- A fé (religião/espiritualidade) é importante para você nesta doença?
+- A fé tem sido importante para você em outras épocas da sua vida?
+- Você tem alguém para falar sobre assuntos religiosos?
+- Você gostaria de tratar de assuntos religiosos com alguém?
 
-que pode influenciar ou conflitar com suas s decisões médicas? 3. V
-
-4. Você é membro de alguma comunidade 4. V
-
-espiritual ou religiosa e ela lhe dá suporte?
-
-5. Você possui alguma necessidade espiritual que
-
-deva ser abordada por alguém? Questionário FICA:
-
-- F (Faith and Belief - Fé e Crença): Aborda a fé ou crenças espirituais do paciente e como elas o ajudam a lidar com problemas.
-
-- I (Importance and Influence - Importância e na vida do paciente e como ela influencia suas decisões e bem-estar.
-
-Influência): Investiga a importância da espiritualidade
-
-- C (Community - Comunidade): Questiona a participação do paciente em comunidades religiosas ou espirituais e como elas o apoiam.
-
-- A (Address in Care - Ação/Aplicação nos Cuidados):
-
-Explora como a espiritualidade pode ser integrada ao tratamento médico, incluindo práticas e crenças que podem influenciar as decisões do paciente.
-
-- Verificar Tabela 2 Você se considera religioso ou espiritualizado? ue importância você dá para a fé e as crenças religiosas na sua vida? problemas de saúde? cê tem alguma crença que pode afetar decisões médicas ou o seu tratamento? ocê faz parte de alguma comunidade religiosa ou espiritual?
-
-Você tem crenças que ajudam a lidar com os problemas? Se não tem, o que dá significado à vida? I - Importância/influência A fé ou as crenças já ajudaram você a lidar com estresse ou C - Comunidade Ela lhe dá suporte? Como?
-
-xiste algum grupo de pessoas que você realmente ama ou é importante para você? alguma comunidade (igreja, templo, grupo de apoio) que lhe dê suporte?
-
-A - Ação no tratamento mo você gostaria que o médico considerasse a questão R/E no seu tratamento? ndique algum líder religioso/espiritual da sua comunidade.
-
-História espiritual (American College of Physicians) A fé (religião/espiritualidade) é importante para você nesta doença?
-
-A fé tem sido importante para você em outras épocas da sua vida? Você tem alguém para falar sobre assuntos religiosos?
-
-Você gostaria de tratar de assuntos religiosos com alguém?
-
-## REFERÊNCIAS
+## Referências
 
 Figura 1: Método Clínico Centrado na Pessoa. STEWART, Moira et al. Medicina centrada na pessoa: transformando o método clínico. Artmed Editora, 2017.
 
-Tabela 1: CRUZ, Carolina de Oliveira; RIERA, Rachel. Comunicando más notícias: o protocolo SPIKES. Diagn. tratamento, p.
+Tabela 1: CRUZ, Carolina de Oliveira; RIERA, Rachel. Comunicando más notícias: o protocolo SPIKES. Diagn. Tratamento, p. 106-108, 2016.
 
-106-108, 2016. Tabela 2: Questionários HOPE, FICA, CSI-MEMO e ACP para anamnese espiritual. ESPORCATTE, Roberto et al. Espiritualidade: do conceito à anamnese espiritual e escalas para avaliação. Rev. Soc. Cardiol. Estado de Säo Paulo, p. 306-314, 2020.
+Tabela 2: Questionários HOPE, FICA, CSI-MEMO e ACP para anamnese espiritual. ESPÓRCATTE, Roberto et al. Espiritualidade: do conceito à anamnese espiritual e escalas para avaliação. Rev. Soc. Cardiol. Estado de São Paulo, p. 306-314, 2020.

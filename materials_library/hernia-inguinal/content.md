@@ -2,100 +2,64 @@
 
 <!-- page:1 -->
 
-## Hernia inguinal
+## Hérnia Inguinal
 
-## EPIDEMIOLOGIA
-
-- 25% homens, 5% mulheres
-
-- 96% inguinais, 4% femorais
-
-- Inguinais: 9 homens para 1 mulher
-
-- Femorais: 4 mulheres para 1 homem
-
-- Direita > Esquerda; (processo embriológico e sigmoide)
-
-- Direta Fraqueza de parede Medial aos vasos epigástricos Lateral ao dedo *Por baixo do canal inguinal Encarcera menos
-
-## EPIDEMIOLOGIA E
+### Epidemiologia
 
 - 25% homens, 5% mulheres;
-
 - 96% inguinais, 4% femorais;
-
 - Inguinais: 9 homens para 1 mulher;
-
 - Femorais: 4 mulheres para 1 homem;
+- Direita > Esquerda (processo embriológico e posição do sigmoide).
 
-- Direita > Esquerda; (processo embriológico e sigmoide).
+### Classificação de Nyhus
 
-## CLASSIFICAÇÃO DE NYHUS
+- **Tipo 1**: hérnia inguinal indireta;
+- **Tipo 2**: hérnia inguinal indireta com anel inguinal interno dilatado;
+- **Tipo 3**: fraqueza na parede posterior. A: direta; B: indireta; C: femoral;
+- **Tipo 4**: recorrência. A: direta; B: indireta; C: femoral; D: mista.
 
-- Tipo 1: Hérnia inguinal indireta;
+### Anatomia
 
-- Tipo 2: Hérnia inguinal indireta com anel inguinal interno dilatado;
-
-- Tipo 3: Fraqueza na parede posterior. A: Direta; B: Indireta; C: Femoral.
-
-- Tipo 4: Recorrência: A: Direta; B: Indireta; C: Femoral; D: Mista.
-
-## ANATOMIA
-
-- Direta
+**Direta**
 
 - Fraqueza de parede;
-
-- Medial aos vasos;
-
-- Epigástricos;
-
-- Lateral ao dedo; C
-
+- Medial aos vasos epigástricos;
+- Lateral ao dedo;
 - Por baixo do canal inguinal;
-
 - Encarcera menos.
 
-Indireta P
+**Indireta**
 
-- +comum;
-
-- Patência do conduto;
-
-- Peritônio-vaginal (congênito);
-
-- Fatores de risco → Hérnia;
-
-- Pelo canal-inguinal;
-
+- Mais comum;
+- Patência do conduto peritônio-vaginal (congênito);
+- Fator de risco para hérnia;
+- Pelo canal inguinal;
 - Lateral aos vasos epigástricos;
+- Exame físico → ponta do dedo.
 
-- Exame físico → Ponta do dedo. - Indireta + comum Patência do conduto peritôniovaginal (congênito) Fatores de risco → Hérnia Pelo canal inguinal Lateral aos vasos epigástricos Exame físico → Ponta do dedo
+- Tratamento cirúrgico é o mesmo: hernioplastia inguinal.
 
-- Tratamento cirúrgico é o mesmo Hernioplastia inguinal
+### Exames
 
-EXAMES Figura 1:: Fluxograma: Exames de imagem nas hérnias inguinais
+Figura 1: Fluxograma — exames de imagem nas hérnias inguinais.
 
-## DIAGNÓSTICO
+### Diagnóstico
 
-- Baseado principalmente no exame clínico: Dor em peso, incômodo na região, piora com esforço; Exame físico em pé e deitado, realizando a manobra de Valsalva; Avaliação de direta ou indireta através de palpação do anel inguinal externo;
+- Baseado principalmente no exame clínico: dor em peso, incômodo na região, piora com esforço; exame físico em pé e deitado, realizando a manobra de Valsalva; avaliação de direta ou indireta através de palpação do anel inguinal externo;
+- Exames laboratoriais são inespecíficos — auxiliam apenas em casos de complicações;
+- Imagem: realizar na dúvida diagnóstica — dificuldade de palpação, obesos, hidrocele, pubalgia, hérnia gigante.
 
-- Exames laboratoriais são inespecíficos - auxiliam apenas em casos de complicações;
+### Tratamento
 
-- Imagem: realizar na dúvida diagnóstica: Dificuldade de palpação, obesos, hidrocele, pubeíte, hérnia gigante.
+- **Cirúrgico eletivo → hernioplastia**;
+- Exceções: complicações agudas; contraindicação ao procedimento.
 
-## TRATAMENTO
-
-Cirúrgico Eletivo → Hernioplastia
-
-- Exceções: Complicações agudas; contraindicação ao procedimento.
-
-Porque operar todo mundo?
+**Por que operar todo mundo?**
 
 - Risco de encarcerar sempre existe; cirurgia eletiva tem menor risco de complicar.
 
-- Watchful waiting → aceito em homens assintomáticos com risco cirúrgico muito alto.
-
+- **Watchful waiting**: aceito em homens assintomáticos com risco cirúrgico muito alto;
 - Necessário discutir caso a caso.
 
 ![Figura do material - página 1](figure-001-1.webp)
@@ -104,40 +68,43 @@ Porque operar todo mundo?
 
 <!-- page:2 -->
 
-## COMPLICAÇÕES
+## Complicações
 
-Colocar tela?
+> ⚠️ Trecho reconstruído a partir de OCR (texto de duas colunas intercalado) — confira contra a fonte original.
 
-- Sim, sempre na hernioplastia inguinal – exceção se
+**Encarceramento → cirurgia de urgência**
 
-Encarceramento → cirurgia de urgência pus ou fezes no local da ferida, nesses casos pode
+- Hérnia irredutível/permanente;
+- Compressão das estruturas → diminui retorno venoso e linfático → edema → isquemia → necrose (estrangulamento);
+- A princípio, cirurgia de urgência → inguinotomia ou videolaparoscopia;
+- Marcar a cirurgia o mais precoce possível;
+- Realizar laparotomia apenas se sinais de comprometimento visceral: peritonite, sepse, paciente muito grave.
 
-- Hérnia irredutível/permanente; se realizar um damage control e, em uma segunda
-
-- Compressão das estruturas → Diminui retorno abordagem, colocar a tela.
-
-venoso e linfático → Edema → Isquemia →
-
-- E sempre usar fios absorvíveis de longa duração
-
-Necrose (estrangulamento). (vicryl e PDS). Perda de domicílio / hérnia cronicamente habitada: Reduzir e Observar?
+**Perda de domicílio / hérnia cronicamente habitada**
 
 - Hérnias crônicas, habitualmente gigantes;
+- Pacientes obesos, desnutridos;
+- Nova cavidade: não está encarcerada, porém não reduz.
 
-- Pode ser feito para encarceramento recente, onde
+**Reduzir e observar?**
 
-- Pacientes obesos, desnutridos; não há comprometimento sistêmico mas é conduta
+- Pode ser feito para encarceramento recente, onde não há comprometimento sistêmico, mas é conduta de exceção;
+- Nesses casos é prudente observar o paciente por um tempo, diante da possibilidade de ter reduzido o conteúdo em sofrimento.
 
-- Nova cavidade: não está encarcerada, porém de exceção! não reduz.
+**Colocar tela?**
 
-- Nesses casos é prudente observar o paciente por a princípio, cirurgia de urgência → Inguinotomia conteúdo em sofrimento.
+- Sim, sempre na hernioplastia inguinal — exceção se pus ou fezes no local da ferida; nesses casos, pode-se realizar um damage control e, em uma segunda abordagem, colocar a tela;
+- E sempre usar fios absorvíveis de longa duração (Vicryl e PDS).
 
-Estrangulamento ou encarceramento → um tempo diante da possibilidade de ter reduzido o ou videolaparoscopia
+### Tabela 1: Hérnia Inguinal — Urgências
 
-- Marcar a cirurgia o mais precoce possível.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Realizar laparotomia apenas se sinais de
-
-- Verificar Tabela 1 comprometimento visceral: peritonite, sepse, paciente muito grave.
-
-Tabela 1:: Hérnia inguinal: urgências Quadro Clínico Encarceramento Estrangulamento Perda de Domicílio Tempo de sintomas Súbito > 6 horas? Crônico Sinais flogísticos Não Pode Lesões de pele Dor Sim Em piora Crônica Sinais sistêmicos Não Sim e em piora Não Obstrução intestinal Não Pode (omento?) Não Pode, ajuda, não muda Imagem? Planejamento conduta
+| Quadro Clínico | Encarceramento | Estrangulamento | Perda de Domicílio |
+|---|---|---|---|
+| Tempo de sintomas | Súbito | > 6 horas | Crônico |
+| Sinais flogísticos / lesões de pele | Não | Pode ter | Não |
+| Dor | Sim | Em piora | Crônica |
+| Sinais sistêmicos | Não | Sim, e em piora | Não |
+| Obstrução intestinal | Não | Pode ter (omento?) | Não |
+| Imagem | Ajuda, não muda a conduta | Planejamento | Planejamento da conduta |
