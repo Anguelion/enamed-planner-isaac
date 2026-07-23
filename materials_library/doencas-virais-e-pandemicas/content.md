@@ -2,77 +2,72 @@
 
 <!-- page:1 -->
 
-Doenças Virais Pândemicas (CM) SARAMPO Aerossol: de 6 dias antes até 4 dias após o rash → Incubação: 10-14 dias Manchas de Koplic (esbranquiçadas, em mucosa jugal)
+## Sarampo
 
-Paciente tá mal!!! IVAS + conjuntivite Notificar caso suspeito em até 24hs Febre + exantema máculo-papular com:
+- **Transmissão**: aerossol, de **6 dias antes até 4 dias após o rash**.
+- **Incubação**: 10–14 dias.
+- **Manchas de Koplik**: manchas esbranquiçadas em mucosa jugal (patognomônicas).
+- Paciente com quadro geral importante ("tá mal"): **IVAS + conjuntivite**.
+- **Notificar caso suspeito em até 24h**.
+- **Caso suspeito**: febre + exantema máculo-papular com pelo menos um dos seguintes:
+  - Tosse
+  - Coriza
+  - Conjuntivite
 
-- Tosse
+**Curso clínico**: viremia → 2–4 dias → fase exantemática. Diagnóstico com anticorpos (sorologia) e PCR no sangue.
 
-- Coriza
+- **IgM negativo, < 5 dias de exantema**: exclui apenas se **IgG positivo**.
+- **IgM negativo, > 5 dias de exantema**: exclui.
+- Demais casos: confirmar com segunda sorologia.
 
-- Conjuntivite
+**Complicações:**
 
-Viremia → 2-4 dias → Fase exantemática Anticorpos (sorologia) PCR no sangue IgM negativo < 5 dias: exclui só se IgG+ IgM negativo > 5 dias: exclui Demais casos, confirmar com segunda sorologia Complicações
+- Mais comum: **otite média aguda (OMA)**.
+- Maior mortalidade: **pneumonia** (pode ser só viral, com suporte, ou bacteriana).
+- Mais temida: **encefalite**.
+- Forma tardia: **PESS** (panencefalite esclerosante subaguda), anos após a infecção.
 
-- Mais comum: OMA
+**Vacinação**: vírus vivo atenuado. Bloqueio em até **72h**.
 
-- Maior mortalidade: pneumonia Pode ser só viral (suporte) ou bacteriana
-
-- Mais temida: encefalite Forma tardia: PESS – anos após Panencefalite esclerosante subaguda Vacina vírus vivo atenuado
-
-72hs
+**Recomendação de imunoglobulina** (até **6 dias**) nas seguintes populações:
 
 - Gestante
-
-- CD4 < 350 (<200)
-
+- CD4 < 350 (< 200)
 - Imunossuprimidos
 
-- Nessas populações, fazer Ig em até 6 dias
+**Tratamento**: suporte. Considerar **ribavirina e vitamina A** se criança não vacinada.
 
-Tratamento suporte Ribavirina e vit.A se criança não vacinada
+## Mononucleose
 
-## MONONUCLEOSE
+- Quadro **subagudo, > 1 semana**.
+- Astenia importante.
+- Febre baixa, diária.
+- Linfadenopatia generalizada.
+- Hepatoesplenomegalia dolorosa.
+- Faringite com exsudato algodonoso.
+- **Não dar amoxicilina!!!**
 
-- Subaguda, > 1 semana
+Diferencial com **faringite estreptocócica**:
 
-- Asteniiiiiaa
+- Quadro agudo, 2–3 dias.
+- Febre alta > 38,5 ºC.
+- Leucocitose, com desvio à esquerda.
+- Sem hepatoesplenomegalia, sem linfonodos generalizados.
 
-- Febre baixa, diária
+**Diagnóstico definitivo:**
 
-- Linfadenopatia generalizada
+- Sorologia **anti-VCA** (monotest).
+- Anticorpos heterófilos.
+- Achado sugestivo: **linfócitos atípicos**.
 
-- Hepatoesplenomegalia dolorosa
+**Complicações**: orquite e parotidite; miocardite; ruptura esplênica. É um vírus sabidamente **oncogênico**.
 
-- Faringite com exudato algodonoso
+## Varicela-Zóster
 
-Não dar amoxicilina!!! Streptococo
+**Incubação**: 10–21 dias. Contato por aerossol com paciente com varicela ou zóster disseminado.
 
-- Quadro agudo, 2-3 dias
-
-- Febre alta > 38,5ºC
-
-- Leucocitose, desvio à esquerda
-
-- Sem hepatoespleno, sem linfonodos generalizados
-
-Definitivo
-
-- Sorologia Anti-VCA (monotest)
-
-- Anticorpos heterófilos
-
-- Achado sugestivo: linfócitos atípicos ruptura esplênica
-
-Complicações: orquite e parotidite; miocardite / É um vírus sabidamente oncogênico
-
-## VARICELA-ZOSTER
-
-Incubação: 10-21 dias Contato aerossol paciente com varicela ou zoster disseminado → Varicela
-
-- Suporte / vala ou aciclovir em até 24hs do rash
-
-Vacina vírus vivo atenuado 120hs
+- **Varicela**: tratamento de suporte; considerar aciclovir em até 24h do início do rash.
+- **Vacina**: vírus vivo atenuado. Bloqueio em até **120h**.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -82,87 +77,70 @@ Vacina vírus vivo atenuado 120hs
 
 <!-- page:2 -->
 
+**Recomendação de imunoglobulina** (até **96h**) nas seguintes populações:
+
 - Gestante
-
-- CD4 < 350 (<200)
-
+- CD4 < 350 (< 200)
 - Imunossuprimidos
 
-- Ig também em até 96hs disseminado → Varicela → Latência em gânglios sensitivos da raiz dorsal → Imunossupressão Idade avançada → Zoster e r
+O vírus, após a varicela, permanece em **latência nos gânglios sensitivos da raiz dorsal**. Com imunossupressão ou idade avançada, pode haver reativação como **zóster**.
 
-Contato aerossol paciente com varicela ou zoster Contato aerossol paciente com varicela ou zoster Neuralgia pós-herpética: persistência da dor C
+- Contato por aerossol com paciente com varicela ou zóster disseminado.
+- **Neuralgia pós-herpética**: persistência da dor por **> 3 meses**, com inflamação hemorrágica, fibrose e hiperexcitabilidade.
+  - Corticoide **não** tem benefício.
+  - Opções: gabapentina, pregabalina, tricíclicos, duais, carbamazepina.
 
-> 3 meses
+## Mpox
 
-- Inflamação hemorrágica com fibrose e hiperexcitabilidade
+**Incubação**: 5–21 dias.
 
-- Corticóide não tem benefício!
-
-- Gabapentina
-
-- Pregabalina
-
-- Tricíclicos
-
-- Duais, carbamazepina...
-
-MPOX Incubação: 5 – 21 dias
-
-- Contato com pele com lesões, pele a pele, sêmen, saliva → Precaução de contato e gotículas.
-
+- Contato com pele com lesões, pele a pele, sêmen, saliva → precaução de contato e gotículas.
 - Aerossol, superfícies contaminadas, gotículas respiratórias.
 
-1ª viremia : replicação linfonodos regionais → 2ª viremia : replicação no SRE → Manifestações clínicas Erupções cutâneas – polimorfismo no corpo, mas uniformes na região;
+**Fisiopatologia**: 1ª viremia (replicação em linfonodos regionais) → 2ª viremia (replicação no sistema reticuloendotelial) → manifestações clínicas.
 
-Linfadenopatia; Proctite.
+- Erupções cutâneas: polimorfismo entre regiões do corpo, mas uniformes dentro de cada região.
+- Linfadenopatia.
+- Proctite.
 
-- Tempo de doença: 21-28 dias;
+**Outros pontos:**
 
-- Dx: PCR em raspado das lesões
+- Tempo de doença: 21–28 dias.
+- Diagnóstico: PCR em raspado das lesões.
+- Isolamento enquanto houver lesões não reepitelizadas.
+- Tratamento: **tecovirimat**.
+- Vacina como profilaxia pré e pós-exposição (pós-exposição: 4 a 14 dias após a exposição).
 
-- Isolamento enquanto tiver lesões não re-epitelizadas;
+## Exantema Morbiliforme (Diagnóstico Diferencial do Sarampo)
 
-- Tecovirimat;
+- Exantema morbiliforme: permeado por pele sã (áreas de pele normal entre as lesões).
 
-- Vacina é profilaxia pré e pós exposição;
+Outras doenças que apresentam esse tipo de exantema:
 
-- Se vacina como profilaxia pós-exposição - 4 a 14 dias após exposição .
+- Rubéola
+- Mononucleose (após uso de amoxicilina)
+- Dengue
+- Eritema súbito
+- Sífilis
 
-## SARAMPO T
+## Herpes Simples e COVID
 
-- Exantema morbiliforme (ou seja, é permeado C por pele sã) l
+**Herpes simples**: vesículas agrupadas de base eritematosa. Tratamento supressivo se **> 6 recorrências/ano**.
 
-Outras doenças que apresentam tal exantema 7
+**COVID:**
 
-- Rubéola;
+- TC não indicada se ausência de sinais de SRAG.
+- D-dímero é fator de pior prognóstico, mas não altera indicação de anticoagulação.
+- Não se faz antibiótico empírico nem se dosa procalcitonina de rotina.
+- Corticoterapia se em uso de oxigênio.
+- Diagnóstico: **PCR** (momento incerto, pode persistir positivo) ou **antígeno** (indicação precoce, pode ser falso negativo).
+- Antivirais: sempre até **D5**.
 
-- Mononucleose → após uso de amoxicilina;
+## Transmissão por Aerossol
 
-- Dengue;
+Cerca de 6 dias antes até 4 dias após o rash; partículas viajam longas distâncias e permanecem em suspensão por até **72 horas**.
 
-- Eritema súbito;
-
-- Sífilis. HERPES SIMPLES E COVID eritematosa. Tratamento supressivo se > 6 recorrências / ano
-
-Herpes simples : vesículas agrupadas de base COVID
-
-- TC não indicada se ausência de sinais de SRAG
-
-- D-dímero é fator de pior prognóstico mas não altera indicação de anticoagulação
-
-- Não se faz antibiótico empírico dosar procalcitonina
-
-- Corticoterapia se uso de oxigênio
-
-- Diagnóstico: PCR : momento incerto e pode persistir positivo / Antígeno: indicação precoce, pode ser falso negativo
-
-- Antivirais sempre até D5
-
-## TRANSMISSÃO
-
-Aerossol Cerca de 6 dias antes até 4 dias após o rash; viajam longas distâncias; permanecem em suspensão por até 72 horas.
-
-OBS.: Outras doenças com transmissão por aerossol: sarampo, tuberculose , varicela, zoster disseminado ou no paciente imunocomprometido.
+**Obs.:** outras doenças com transmissão por aerossol: sarampo, tuberculose, varicela, zóster disseminado ou no paciente imunocomprometido.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -170,39 +148,43 @@ OBS.: Outras doenças com transmissão por aerossol: sarampo, tuberculose , vari
 
 <!-- page:3 -->
 
-- Apresenta alta infectividade → erradicação: cobertura vacinal > 90% é um dos maiores R0s (potencial de infectividade)
+## Sarampo — Aprofundamento
 
-R0 - Influenza: 1/7; R0 - Sarampo: 1/13 / R0 COVID: 1/ 2,5;
+- Alta infectividade; erradicação requer **cobertura vacinal > 90%**. É uma das doenças com maiores **R0** (potencial de infectividade).
 
-- Deve-se notificar já na suspeita clínica, em até
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-24 horas, se:
+Valores de R0 mencionados: Influenza ≈ 1/7; Sarampo ≈ 1/13; COVID ≈ 1/2,5 (referem-se a estimativas de contágio comparativas citadas no material).
 
-## CASO SUSPEITO
+- Deve-se **notificar já na suspeita clínica, em até 24 horas**.
 
-Febre + exantema maculo-papular com 1 de: tosse; coriza; conjuntivite bilateral com fotofobia. CURSO CLÍNICO Figura 1: Gráfico representativo do fator de contágio.
+**Caso suspeito**: febre + exantema máculo-papular com pelo menos um dos seguintes: tosse; coriza; conjuntivite bilateral com fotofobia.
 
-- Período de incubação entre 10 a 14 dias.
+**Curso clínico:**
 
-- Acometimento de mucosas; AVALIAÇÃO DA SOROLOGIA Manchas de Koplik – patognomônicas;
+- Período de incubação entre 10 e 14 dias.
+- Acometimento de mucosas; manchas de Koplik (patognomônicas).
+- Em geral, surgimento na 1ª viremia; após, surgimento de sintomas clássicos de IVAS intensas, com muito mal-estar e conjuntivite bilateral com intensa fotofobia.
 
-- Sorologia coletada com menos de 5 dias de exantema: Em geral, ocorre o surgimento na 1° viremia. | Pode ser que apenas não tenha dado tempo de ter Após, surgimento de sintomas clássicos de IVAS tido resposta imune. Avaliar a ascensão do título.
+**Obs.:** o curso clínico do sarampo é marcado por intensa depleção linfocitária; por isso, há chances de desenvolvimento de outros quadros concomitantes.
 
-intensas, com muito mal estar, conjuntivite bilateral | Paciente somente IgG+ : contato antigo - exclui com intensa fotofobia doença atual:
+Paciente costuma estar visivelmente mal (febre, conjuntivite bilateral com fotofobia intensa, tosse seca, coriza).
 
-| Se teve tempo de fazer IgG neste episódio, o OBS.: O curso clínico do sarampo é marcado por IgM já deveria ser positivo. Logo, se tem IgG e uma intensa depleção linfocitária. Sendo assim, não tem IgM, é porque este IgG veio de uma há chances para desenvolvimento de outros infecção prévia.
+**Diagnóstico:**
 
-quadros concomitantes.
+- Swab de orofaringe, para cultura, e PCR de urina.
+- A fase exantemática é caracterizada por exantema crânio-caudal e descamação fina; acompanha-se de anticorpos (sorologia) e PCR no sangue.
 
-- Sorologia coletada com mais de 5 dias do exantema: IgM negativo: descarta;
+**Avaliação da sorologia:**
 
-- Paciente não “tá bem, não” (febre, conjuntivite bilateral | 5 dias é tempo suficiente, se não fez IgM é com fotofobia intensa, tosse seca, coriza) porque não é sarampo. Mas, dada a baixa especificidade do IgM em doenças respiratórias
+- **Sorologia coletada com menos de 5 dias de exantema**: pode ser que ainda não tenha havido tempo para resposta imune — avaliar a ascensão do título.
+  - Paciente somente **IgG+**: contato antigo, exclui doença atual.
+  - Se já teve tempo de desenvolver IgG neste episódio, o IgM já deveria ser positivo. Logo, se há IgG sem IgM, esse IgG é de infecção prévia.
+- **Sorologia coletada com mais de 5 dias de exantema**:
+  - **IgM negativo**: descarta (5 dias é tempo suficiente; se não fez IgM, não é sarampo).
+  - Dada a baixa especificidade do IgM em doenças respiratórias de forma geral, se vier positivo, precisa ser confirmado com ascensão do título.
 
-DIAGNÓSTICO de forma geral, se ele vem positivo, ele precisa
-
-- Swab da orofaringe, para cultura e PCR de urina. ser confirmado com ascensão do título.
-
-- A fase exantemática é caracterizada por exantema crânio-caudal e descamação fina; acompanha-se de anticorpos (em sorologia) e PCR no sangue.
+Figura 1: Gráfico representativo do fator de contágio.
 
 Figura 2: Procedimento de avaliação da sorologia para municípios sem surto.
 
@@ -214,176 +196,148 @@ Figura 2: Procedimento de avaliação da sorologia para municípios sem surto.
 
 <!-- page:4 -->
 
-COMPLICAÇÕES E TRATAMENTO linfadenopatia generalizada; hepatoesplenomegalia
+## Sarampo — Complicações e Tratamento
 
-- Mais comum? Otite média aguda (OMA); dolorosa - por replicação viral no sistema retículo- Principais agentes: Pneumococo, endotelial-; faringite com exsudato algodonoso – Tratamento: clavulin (amoxicilinaclavulanato), axetilcefuroxima. DOENÇAS MONO-LIKE
+- Mais comum: **otite média aguda (OMA)**. Principais agentes: pneumococo, *Haemophilus*, *Moraxella*.
+- O que mais mata: **pneumonia**. Pode ser apenas viral (tratamento de suporte) ou por sobreposição bacteriana (geralmente pneumococo, MSSA).
+- Mais temida: **encefalite**.
+- Forma tardia: **PESS** (panencefalite esclerosante subaguda) — surgimento anos após a infecção, curso inexorável, manifesta-se 10–15 anos após a infecção.
+- Tratamento: medidas de suporte.
+- **Não administrar amoxicilina**: o paciente pode evoluir com exantema morbiliforme — é uma **vasculite**, e não uma alergia.
 
-Haemophilus, Moraxella; discretamente acinzentado.
+**Vacinação:**
 
-- O que mais mata? Pneumonia
+- Vacina de vírus vivo atenuado.
+- Esquema em adultos: < 30 anos — 2 doses; entre 30–59 anos — 1 dose; > 60 anos — não se vacina.
 
-- Citomegalovirose; Pode ser apenas viral (seguir com tratamento
+**Recomendações:**
 
-- Hepatites virais;
+- Bloqueio: até 72 horas.
+- Contraindicação: nesses casos, manejar com uso de imunoglobulina em até 6 dias, nos seguintes grupos: idade ≤ 6 meses; gestantes; imunocomprometidos (CD4 < 350 células).
 
-de suporte) ou por sobreposição bacteriana
+## Coqueluche
 
-- HIV;
+- "Tosse comprida"; quadro respiratório comum em lactentes jovens (< 6 meses).
+- Etiologia: *Bordetella pertussis*.
+- Quadro clínico dividido em 3 fases:
+  - **Catarral**: síndrome gripal, 1–2 semanas.
+  - **Paroxística**: tosse de início súbito, incontrolável e sem pausa, levando a apneia, cianose, vômitos e som específico à inspiração (guincho); 2–6 semanas.
+  - **Convalescente**: tosse mais branda, 2–6 semanas.
+- Diagnóstico: clínico. Hemograma: linfocitose. RX de tórax: coração "felpudo".
+- Tratamento: azitromicina ou claritromicina, idealmente nas primeiras 3 semanas do início da tosse.
+- Prevenção: vacinação com tríplice bacteriana (DTP) ou dTpa na gestante.
 
-(geralmente, por pneumococo, MSSA).
+## Mononucleose Infecciosa
 
-- Toxoplasmose;
-
-- A mais temida? Encefalite;
-
-- Sarampo, caxumba, rubéola; Forma tardia: PESS – surgimento anos após;
-
-- Arboviroses;
-
-PESS = Panencefalite esclerosante subaguda;
-
-- Sífilis.
-
-curso inexorável; manifesta-se 10 – 15 anos Tratamento: sintomático; após a infecção. Não administrar amoxicilina → o paciente pode evoluir Tratamento: medidas de suporte. com surgimento de exantema morbiliforme; É uma
-
-- 1. Ribavirina e vitamina A, se a criança estiver em vasculite!!! E não alergia! estado grave e não foi vacinada.
-
-- Diferenciação com quadro de faringite estreptocócica;
-
-Vacinação | Quadro agudo, em geral de 2 – 3 dias;
-
-- É uma vacina de vírus vivo atenuado; esquema de | Febre alta - > 38,5 °C; < 30 anos: 2 doses; entre 30 – 59 anos: 1 dose; > 60 desvio à esquerda;
-
-vacinação em adultos: | Laboratorialmente, há leucocitose, com anos: não se vacina. | Não cursa com hepatoesplenomegalia, sem Recomendações linfonodos generalizados.
-
-- Bloqueio – até 72 horas;
-
-- Contraindicação: nesses casos, deve-se manejar com DIAGNÓSTICO E COMPLICAÇÕES uso de imunoglobulina em até 6 dias;
-
-- Definitivo: sorologia (anti-VCA) ou por anticorpos Idade ≤ 6 meses; heterófilos (surgem antes do início dos sintomas até Gestantes; 48h após); Imunocomprometidos (CD4 < 350 céls). Achado sugestivo: linfócitos atípicos;
-
-Outros achados possíveis: trombocitopenia discreta;
-
-## COQUELUCHE
-
-hepatite “transinfecciosa” (< 300 UI); linfocitose relativa (> 35%).
-
-- “Tosse comprida”; quadro respiratório, comum em lactentes jovens (<6 meses) COMPLICAÇÕES
-
-- Etiologia: Bordetella pertussis
-
-- Mais comum: orquite e parotidite;
-
-- Quadro clínico: dividido em 3 fases
-
-- Mais graves: miocardite, ruptura esplênica; Catarral = síndrome gripal, 1-2 semanas
-
-- Desencadeia LES, AR. Paroxística = tosse de início súbito, incontrolável
-
-- Lembrar que é um vírus sabidamente oncogênico;
-
-e sem pausa, levando a apneia, cianose, vômitos e | Linfoma de sistema nervoso central em som específico a inspiração (guincho), 2-6 semanas AIDS (100%);
-
-| Convalescente = tosse mais branda, 2-6 semanas | Carcinoma nasofaringe (100%);
-
-- Diagnóstico: clínico. | Linfoma de Burkitt (40%); HMG: linfocitose // RX tórax: coração felpudo | Linfoma de Hodgkin (50%).
-
-- Tratamento: Azitromicina ou claritromicina, idealmente nas primeiras 3 semanas do início da tosse
-
-- Prevenção: vacinação com tríplice bacteriana (DTP) ou
-
-DTPa na gestante
-
-## MONONUCLEOSE INFECCIOSA
-
-- Etiologia: EBV (Epstein-Barr virus);
-
-- Período de incubação: 7-50 dias;
-
+- Etiologia: **EBV** (vírus Epstein-Barr).
+- Período de incubação: 7–50 dias.
 - Transmissão: gotículas.
+- Doença típica de adolescentes.
 
-- É uma doença de adolescente;
+**Manifestações clínicas:**
 
-## MANIFESTAÇÕES CLÍNICAS
+- Evolução subaguda, com duração > 1 semana.
+- Sinais e sintomas: astenia; mal-estar; febre baixa diária; linfadenopatia generalizada; hepatoesplenomegalia dolorosa (por replicação viral no sistema retículo-endotelial); faringite com exsudato algodonoso, discretamente acinzentado.
 
-Evolução subaguda, com duração > 1 semana; Figura 3: Gráfico representativo da sorologia/tempo. Sinais e sintomas: astenia; mal estar; febre baixa diária;
+Figura 3: Gráfico representativo da sorologia ao longo do tempo.
 
 ![Figura do material - página 4](figure-004-1.webp)
+
+**Diagnóstico diferencial — doenças mono-like:**
+
+- Citomegalovirose
+- Hepatites virais
+- HIV
+- Toxoplasmose
+- Sarampo, caxumba, rubéola
+- Arboviroses
+- Sífilis
+
+**Não administrar amoxicilina** — diferenciação com quadro de faringite estreptocócica:
+
+- Faringite estreptocócica: quadro agudo, em geral de 2–3 dias; febre alta > 38,5 ºC; leucocitose, com desvio à esquerda; não cursa com hepatoesplenomegalia nem linfonodos generalizados.
+
+**Diagnóstico e complicações:**
+
+- Definitivo: sorologia (anti-VCA) ou anticorpos heterófilos (surgem antes do início dos sintomas até 48h após).
+- Achado sugestivo: linfócitos atípicos.
+- Outros achados possíveis: trombocitopenia discreta; hepatite "transinfecciosa" (< 300 UI); linfocitose relativa (> 35%).
+
+**Complicações:**
+
+- Mais comuns: orquite e parotidite.
+- Mais graves: miocardite, ruptura esplênica.
+- Pode desencadear LES, AR.
+- Lembrar que é um vírus sabidamente **oncogênico**: associado a linfoma de sistema nervoso central em AIDS (100%); carcinoma de nasofaringe (100%); linfoma de Burkitt (40%); linfoma de Hodgkin (50%).
 
 ---
 
 <!-- page:5 -->
 
-## VARICELA-ZÓSTER
+## Varicela-Zóster (Aprofundamento)
 
-| Neuralgia pós-herpética: cursa com inflamação hemorrágica com fibrose e hiperexcitabilidade; São a mesma doença, se manifestando em 2 corticóide não apresenta benefício; esquemas momentos distintos; terapêuticos: gabapentina; pregabalina; tricíclicos;
+Varicela e zóster são a mesma doença, manifestando-se em 2 momentos distintos.
 
-duais, carbamazepina. INFÂNCIA
+**Infância — Varicela:**
 
-- Contato via aerossol com outro indivíduo com varicela ou com zóster disseminado;
-
-- Apresenta período de incubação entre 10 – 14 dias;
-
-- Vesículas disseminadas, altamente pruriginosas e com polimorfismo regional;
-
-- A abertura do quadro é abrupta (sem pródromo);
-
+- Contato via aerossol com outro indivíduo com varicela ou com zóster disseminado.
+- Período de incubação entre 10–14 dias.
+- Vesículas disseminadas, altamente pruriginosas, com polimorfismo regional.
+- Abertura do quadro é abrupta (sem pródromo).
 - Entre as fases, o vírus permanece no organismo em estado de latência, nos gânglios sensitivos da raiz dorsal.
 
-## FASE ADULTA
+**Fase adulta — Zóster:**
 
-- Geralmente, o quadro é desencadeado mediante imunossupressão ou idade avançada;
+- Geralmente desencadeado por imunossupressão ou idade avançada.
+- Cursa com dor intensa em período de pródromo, neuropática, em choque, em fisgada, com alodinia (por ganglionite).
 
-- Cursa com muita dor em período de pródromo, intensa e neuropática, em choque, fisgada, com alodinia (por ganglionite).
+**Obs.:** a dor precede o surgimento das lesões de pele.
 
-OBS.: A dor precede o surgimento das lesões de pele. Acometimento
+**Acometimento:**
 
 - Localizado: até 2 dermátomos contíguos.
+- Disseminado: dermátomos não contíguos, ou se ultrapassar a linha média.
 
-- Disseminado: dermátomos não contíguos ou se ultrapassar linha média.
+**Diagnóstico: clínico**
 
-## DIAGNÓSTICO: CLÍNICO
+- Observam-se localização, aparência das lesões e clínica de ganglionite.
+- Exames laboratoriais: cultura (positiva em 14–46% dos casos); PCR (positivo em 46–92% dos casos); IgM (somente alterado em primoinfecção).
 
-- Observa-se localização, aparência das lesões e clínica de ganglionite;
+**Neuralgia pós-herpética**: cursa com inflamação hemorrágica, fibrose e hiperexcitabilidade; corticoide não apresenta benefício. Esquemas terapêuticos: gabapentina; pregabalina; tricíclicos; duais; carbamazepina.
 
-- Exames laboratoriais: cultura: positiva em 14 – 46% dos casos; PCR: positivo em 46 – 92% dos casos; IgM:
+**Tratamento:**
 
-somente alterado em primoinfecção. TRATAMENTO
+- **Varicela**: suporte (atenção para infecção bacteriana secundária em lesões). Adultos podem ser tratados com aciclovir/valaciclovir, por frequentemente terem quadros mais floridos.
+- **Vacina**: também de vírus vivo atenuado. Esquema: 2 doses < 30 anos; 1 dose entre 30–59 anos.
+  - Bloqueio: até 120 horas.
+  - Imunoglobulina, se grávida, imunocomprometido ou indivíduo < 9 meses de idade: em até 96 horas.
+- **Zóster:**
+  - Localizado: aciclovir 800 mg VO de 8/8h por 7 a 10 dias.
+  - Se acometer face, manifestação disseminada ou paciente imunocomprometido: aciclovir 10 mg/kg EV de 8/8h por 14 dias.
+  - **Síndrome de Ramsay-Hunt**: acometimento auricular por zóster. Ocorre reativação no gânglio geniculado, com acometimento do nervo facial + eritema vesicular em canal auditivo. Mais severa que a paralisia de Bell (HSV). Tratamento com valaciclovir + prednisona 1 mg/kg por 10 dias.
+- **Vacina de zóster**: vacina recombinante; administrada em 2 doses, com 2 meses de intervalo; recomendada para imunocomprometidos > 18 anos e indivíduos > 50 anos. Ainda não incluída no PNI (perspectiva de entrar).
+  - Não existe, de forma concisa na literatura, tempo bem determinado para aguardar entre o episódio de zóster e a aplicação da vacina; em geral, recomenda-se um intervalo de 6 meses.
 
-- Varicela: suporte (atenção para infecção bacteriana secundária em lesões). Adultos podem ser tratados com aciclovir / valaciclovir por frequentemente terem quadros mais floridos. Vacina – também vírus vivo atenuado Esquema: administrar 2 doses < 30 anos; Bloqueio: até 120 horas; Imunoglobulina, se grávida, imunocomprometido e indivíduos < 9 meses de idade: em até
+## Herpes Simples
 
-administrar 1 dose > 30 - 59 anos; 96 horas.
+**Manifestação**: presença de vesículas agrupadas, de base eritematosa, com pródromo de queimação local.
 
-- Zóster: Localizado: aciclovir 800mg VO de 8/8h por 7 a 10 dias; Se acometer face, manifestação disseminada ou em paciente imunocomprometido: aciclovir 10 mg/ kg EV de 8/8 horas por 14 dias. Síndrome de Ramsay-Hunt: acometimento auricular por zóster. Ocorre reativação no gânglio geniculado – acometimento de facial + eritema vesciular em canal auditivo. Mais severa que a de Bell (HSV). Tratamento com valaciclovir + prednisona 1mg/kg por 10 dias. duais, carbamazepina. Vacina de zóster: vacina recombinante;
+**Sítios de reativação:**
 
-administrada em 2 doses, com 2 meses de intervalo; recomendada para: imunocomprometidos
+- Labial
+- Genital
 
-> 18 anos; indivíduos > 50 anos. Não inclusa (ainda) no PNI - perspectiva de entrar;
+**Diagnóstico:**
 
-Não existe de forma concisa em literatura tempo bem determinado para aguardar entre o episódio de zóster e a aplicação da vacina; em geral, recomenda-se que haja um intervalo de 6 meses.
+- Clínico.
+- Teste de Tzanck: não é específico; avalia efeito citopático viral — "olhos de coruja" (distensão citoplasmática).
 
-## HERPES SIMPLES
+**Tratamento:**
 
-MANIFESTAÇÃO Presença de vesículas agrupadas, de base eritematosa, com pródromo de queimação local;
+- Subdividido conforme o paciente acometido e a forma de acometimento.
+- **Forma esporádica** (até 6 episódios/ano): tratamento indicado apenas do episódio — aciclovir 400 mg 8/8h (ou 200 mg 5x/dia) ou valaciclovir 1 g 12/12h por 7 a 10 dias.
+- **Forma recorrente** (mais de 6 episódios/ano): indicado tratamento supressivo — aciclovir 400 mg 12/12h ou valaciclovir 500 mg/dia (0,5 a 1 g de 12/12h em imunocomprometidos) por 6 a 12 meses.
 
-## SÍTIOS DE REATIVAÇÃO
+## Referências
 
-Labial; Genital. DIAGNÓSTICO:
-
-- Clínico;
-
-- Teste Tzanck: não é específico; avalia efeito citopático viral – “Olhos de coruja” → distensão citoplasmática.
-
-## TRATAMENTO
-
-- É subdivido mediante o paciente acometido e a forma de acometimento;
-
-- Forma esporádica: até 6 episódios/ano - tratamento indicado apenas do episódio: aciclovir 400mg 8/8h
-
-(200mg 5x/dia) ou valaciclovir 1g 12/12h por 7 a 10 dias;
-
-- Forma recorrente: mais de 6 episódios/ano - indicado tratamento supressivo: aciclovir 400mg 12/12h ou valaciclovir 500mg/dia (0,5 a 1g de 12/12h em imunocomprometidos) por 6 a 12 meses.
-
-## REFERÊNCIAS
-
-Figuras do CofExpress. Wikipedia UpToDate a
+Figuras do CofExpress. Wikipedia. UpToDate.

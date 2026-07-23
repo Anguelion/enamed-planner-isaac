@@ -2,85 +2,73 @@
 
 <!-- page:1 -->
 
-## CABEÇA E PESCOÇO: CÂNCER DE
+## Cabeça e Pescoço: Câncer de Pele Não Melanoma
 
-## PELE NÃO MELANOMA
+### Carcinoma Basocelular (CBC) — Resumo
 
-CEC do trato aerodigestivo superior CBC:
+- **Mais comum** dos cânceres de pele;
+- Apresenta-se como **nódulo brilhante, perláceo, com telangiectasias**;
+- Subtipos:
+  - **Nodular** e **superficial** (mais comuns e de **melhor prognóstico**);
+  - **Esclerodermiforme, basoescamoso e micronodular** (**pior prognóstico**);
+- **Boa resposta à radioterapia**.
 
-- Mais comum;
+### Considerações Iniciais
 
-- Nódulo brilhante, perláceo, telangiectasia;
+- **Neoplasia maligna mais comum na raça humana** (tão comum que é um câncer que **não precisa notificação**).
 
-- Subtipos: Nodular e superficial (mais comuns e melhor prognóstico); Esclerodermiforme, basoescamoso e micronodular (pior prognóstico).
+**Tipos mais comuns:**
 
-- Boa resposta à radioterapia.
+- **Carcinoma espinocelular (CEC)**;
+- **Carcinoma basocelular (CBC)**;
+- **Melanoma**.
 
-## CONSIDERAÇÕES INICIAIS
+### Principais Causas
 
-- Neoplasia maligna mais comum na raça humana (tão comum, que é um câncer que não precisa notificar).
+**Fator hereditário:**
 
-TIPOS MAIS COMUNS:
-
-- Carcinoma espinocelular (CEC);
-
-## Carcinoma basocelular (CBC)
-
-- Melanoma.
-
-## PRINCIPAIS CAUSAS
-
-Fator hereditário:
-
-- Cor de pele Escala de Fitzpatrick (escala de tonalidades da pele); Fototipo claro tem maior chance de câncer de pele.
-
+- Cor de pele — **Escala de Fitzpatrick** (escala de tonalidades da pele); **fototipo claro** tem maior chance de câncer de pele;
 - Histórico familiar.
 
-Exposição solar:
+**Exposição solar:**
 
-- Raios UVA e UVB;
-
+- Raios **UVA e UVB**;
 - Tempo de exposição e intensidade.
 
-Outros fatores:
+**Outros fatores:**
 
 - Imunossupressão;
-
-- Queimaduras (úlcera de Marjolin);
-
+- Queimaduras (**úlcera de Marjolin**);
 - Genética (síndrome de Gorlin, epidermólise bolhosa, epidermodisplasia verruciforme, xeroderma pigmentoso etc.);
+- Bronzeamento artificial (aumenta em aproximadamente **6 vezes** o risco).
 
-- Bronzeamento artificial (aumenta em aproximadamente 6 vezes o risco).
+**Figura 1:** Escala de Fitzpatrick - fototipos. Tipos de pele com base na sua reação à exposição solar.
 
-Figura 1: Escala de Fitzpatrick - fototipos. Tipos de pele com base na sua reação à exposição solar. CEC:
+### CEC — Características
 
-- Lesão precursora (queratose actínica);
+- Lesão precursora: **queratose actínica**;
+- Apresentação: placa, pápula, ulceração;
+- Subtipos: **acantolítico, adenoescamoso e desmoplásico** (pior prognóstico).
 
-- Placa, pápula, ulceração;
+**Características comuns (CBC e CEC):**
 
-- Subtipos acantolítico, adenoescamoso e desmoplásico (pior prognóstico).
-
-Características comuns:
-
-- Cirurgia é a melhor opção de tratamento (margens livres de 10 mm);
-
+- **Cirurgia é a melhor opção de tratamento** (margens livres de **10 mm**);
 - Atenção com envolvimento de estruturas nobres da face.
 
-## CAMADAS DA PELE
+### Camadas da Pele
 
 - O câncer de pele se origina da epiderme, de diferentes camadas.
+- O **carcinoma espinocelular (CEC)** se origina da **camada espinhosa**.
+- O **carcinoma basocelular (CBC)** se origina da **camada basal**.
 
-- O carcinoma espinocelular (CEC) se origina da camada espinhosa.
+**Figura 2:** Estratificação das camadas da pele.
 
-- O carcinoma basocelular (CBC) se origina da camada basal.
-
-Figura 2: Estratificação das camadas da pele.
-
-- Tumor maligno mais comum;
-
-- Incidência pouco precisa, porém existem estudos que estipulam a sua epidemiologia: 500-1000 casos/100.000 habitantes; 3,5 milhões/ano nos EUA; 35% em brancos.
-
-- Influência da latitude: quanto mais próximo da linha do equador, maior risco → Austrália (40: 1) Finlândia.
+- **Tumor maligno mais comum** (referindo-se ao CBC);
+- Incidência pouco precisa, porém existem estudos que estipulam sua epidemiologia:
+  - **500-1000 casos/100.000 habitantes**;
+  - **3,5 milhões/ano** nos EUA;
+  - **35%** em brancos.
+- Influência da latitude: quanto mais próximo da linha do equador, maior risco → **Austrália (40:1) Finlândia**.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -90,181 +78,177 @@ Figura 2: Estratificação das camadas da pele.
 
 <!-- page:2 -->
 
-LOCALIZAÇÃO | Área de radioterapia prévia;
+### Carcinoma Basocelular (CBC) — Localização
 
-- 80% são na região cervicofacial; | Subtipos específicos: Esclerodermiforme,
+- **80%** são na região cervicofacial;
+- Ocorre apenas onde há pelos;
+- Localizações mais comuns:
+  - Nariz (**1/3 dos casos**);
+  - Região malar;
+  - Pálpebras;
+  - Couro cabeludo;
+  - Sulco nasogeniano.
 
-- Ocorre apenas onde há pelos; metatípico, micronodular, misto infiltrativo.
+### Classificação em Subtipos
 
-- Localizações mais comuns: Nariz (1/3 dos casos); DIAGNÓSTICO Região malar;
+- **Nodular (70-80% dos casos):** lesão elevada, nodulariforme, bordas bem definidas, avermelhada e brilhante, telangiectasias nas bordas, pode ser ulcerada.
+- **Superficial:** mesmas características do nodular, porém sem aspecto de nódulo.
+  - Os subtipos **nodular e superficial** são os mais prevalentes e menos agressivos.
+- **Esclerodermiforme**;
+- **Metatípico (basoescamoso)**;
+- **Micronodular**;
+- **Esclerosante**;
+- **Pigmentado**;
+- **Adenoide**.
 
-- Geralmente dado por meio de biópsia incisional Pálpebras; da tumoração; Couro cabeludo;
+### Fatores de Pior Prognóstico
 
-- Se diagnosticado de forma precoce, 95% dos casos Sulco nasogeniano. são curados definitivamente no 1º tratamento;
+- Paciente jovem;
+- Áreas de fusão embrionária (sulco nasogeniano – área de atividade celular mais intensa);
+- Áreas próximas a orifícios naturais (difícil realizar tratamento por falta de margem livre);
+- Recidiva;
+- Subtipos **esclerodermiforme, basoescamoso e micronodular**;
+- Área de radioterapia prévia.
 
-- A investigação com exames de imagem são solicitados
+### Fatores de Risco (para Metástase)
 
-CLASSIFICAÇÃO EM SUBTIPOS se houver suspeita clínica de invasão profunda: osso,
+- A localização é um fator importante em relação à probabilidade de recorrência e metastatização;
+- As áreas de alto risco de metástase incluem:
+  - Área central da face;
+  - Pálpebras;
+  - Sobrancelha;
+  - Periórbita;
+  - Nariz;
+  - Lábio-cutâneo e vermelhão;
+  - Queixo;
+  - Mandíbula;
+  - Pré e pós-auricular;
+  - Orelha;
+  - Temporal;
+  - Genitália, mãos e pés.
+- Perceba que a cabeça, no geral, é uma área de alto risco para metastatização.
 
-- Nodular (70-80% dos casos) cartilagem, parótida. Lesão elevada, nodulariforme, bordas bem definidas, avermelhada e brilhante, telangiectasias nas bordas, TRATAMENTO pode ser ulcerado.
+### Diagnóstico
 
-- Curetagem;
+- Geralmente dado por meio de **biópsia incisional** da tumoração;
+- Se diagnosticado de forma precoce, **95%** dos casos são curados definitivamente no 1º tratamento;
+- A investigação com exames de imagem é solicitada se houver suspeita clínica de invasão profunda: osso, cartilagem, parótida.
 
-- Superficial
+### Tratamento do CBC
 
-- Crioterapia; Mesmas características do nodular, porém sem
+- **Curetagem**;
+- **Crioterapia**;
+- **Eletrocoagulação**;
+- **Terapia fotodinâmica**;
+- **Quimioterapia tópica**;
+- **Radioterapia**;
+- **Excisão cirúrgica com margem de segurança** → abordagem mais comum e mais eficiente (**tratamento de escolha**).
 
-- Eletrocoagulação;
+**Radioterapia** — está indicada principalmente nos seguintes casos:
 
-aspecto de nódulo;
+- Cirurgia não exequível (seja por condições locais ou sistêmicas);
+- Margem comprometida em que reoperação não é opção;
+- Grandes ressecções ósseas e invasão de base do crânio;
+- Pacientes idosos frágeis ou com alto risco de óbito na cirurgia;
+- Boa resposta do CBC à radioterapia.
 
-- Terapia fotodinâmica; Os subtipos nodular e superficial são os mais
+**Terapia sistêmica** — pode ser utilizada na impossibilidade de tratamento cirúrgico e radioterápico. São opções:
 
-- Quimioterapia tópica;
+- **Inibidores da via Hedgehog** → vismodegib, sonidegib;
+- **Imunoterapia inibidora de checkpoint** → cemiplimab;
+- **Quimioterapia** → carboplatina + paclitaxel;
+- **Antifúngicos** → itraconazol.
 
-prevalentes e menos agressivos.
+### Carcinoma Espinocelular (CEC)
 
-- Radioterapia;
+**Epidemiologia:**
 
-- Esclerodermiforme;
-
-- Excisão cirúrgica com margem de segurança →
-
-- Metatípico (basoescamoso); abordagem mais comum e mais eficiente (tratamento
-
-- Micronodular; de escolha).
-
-- Esclerosante; Radioterapia
-
-- Pigmentado;
-
-- Está indicada principalmente nos seguintes casos:
-
-- Adenoide. | Cirurgia não exequível (seja por condições locais ou sistêmicas);
-
-FATORES DE PIOR PROGNÓSTICO | Margem comprometida em que reoperação
-
-- Paciente jovem; não é opção;
-
-- Áreas de fusão embrionária (sulco nasogeniano – área | Grandes ressecções ósseas e invasão de base de atividade celular mais intensa); do crânio.
-
-- Áreas próximas a orifícios naturais (difícil realizar | Pacientes idosos frágeis ou com alto risco de óbito tratamento por falta de margem livre); na cirurgia.
-
-- Recidiva; | Boa resposta do CBC à radioterapia.
-
-- Subtipos esclerodermiforme, Terapia sistêmica basoescamoso e micronodular.
-
-- Pode ser utilizada na impossibilidade de tratamento cirúrgico e radioterápico
-
-FATORES DE RISCO:
-
-- São opções:
-
-- A localização é um fator importante em relação à | Inibidores da via Hedgehog probabilidade de recorrência e metastatização; → vismodegib, sonidegib;
-
-- As áreas de alto risco de metástase incluem: | Imunoterapia inibidora de Área central da face; checkpoint → cemiplimab; Pálpebras; | Quimioterapia → carboplatina + paclitaxel; Sobrancelha; | Antifúngicos → itraconazol. Periórbita;
-
-## CARCINOMA ESPINOCELULAR (CEC)
-
-| Nariz; | Lábio-cutâneo e vermelhão; | Queixo; EPIDEMIOLOGIA: | Mandíbula;
-
-- 20-30% dos tumores malignos de pele. Pré e pós-auricular;
-
-- Incidência depende da latitude e da etnia (assim Orelha; como o CBC): Temporal
-
-- Latitude: Genitália, mãos e pés. | Finlândia → 8/100.000 hab.
-
-- Perceba que a cabeça, no geral, é uma área de alto | Austrália → 1.035/100.000 hab.
-
-risco para metastatização!
-
-- Etnia:
-
-- Menos que 1-3% tem metástases cervicais; | Branca → 150 - 360/100.000 hab.
-
-- Os fatores de alto risco para recorrência são: | Negra → 3 / 100.000 hab. Tamanho (a depender da localização); Bordas mal definidas; Imunossupressão;
+- **20-30%** dos tumores malignos de pele;
+- Incidência depende da latitude e da etnia (assim como o CBC):
+  - **Latitude:** Finlândia → 8/100.000 hab.; Austrália → 1.035/100.000 hab.
+  - **Etnia:** Branca → 150-360/100.000 hab.; Negra → 3/100.000 hab.
+- Menos que **1-3%** têm metástases cervicais;
+- Os fatores de alto risco para recorrência são:
+  - Tamanho (a depender da localização);
+  - Bordas mal definidas;
+  - Imunossupressão.
 
 ---
 
 <!-- page:3 -->
 
-CARACTERÍSTICAS GERAIS DO CEC:
+### Características Gerais do CEC
 
-- Existe atual evolução no campo da imunoterapia
+- Apresenta uma lesão precursora: **queratose actínica**;
+- A taxa de metastatização linfática é maior que a do CBC: aproximadamente **10%**;
+- Apresenta-se normalmente como uma **placa ou pápula**;
+- Lesão firme, mais fixa e ulcerada: pensar em forma invasiva.
+- Existe atual evolução no campo da **imunoterapia** seguida de cirurgia em pacientes com CEC localmente avançado.
 
-- Apresenta uma lesão precursora: queratose actínica; seguida de cirurgia em pacientes com CEC
+### Fatores de Alto Risco para Recorrência
 
-- A taxa de metastatização linfática é maior que o localmente avançado.
-
-CBC: aproximadamente 10%;
-
-## COMPARAÇÃO CBC X CEC
-
-- Apresenta-se normalmente como uma placa
-
-- Apresenta-se normalmente como uma placa ou pápula;
-
-- Na lesão firme, mais fixa e ulcerada: pensar em forma invasiva.
-
-## FATORES DE ALTO RISCO
-
-## PARA RECORRÊNCIA
-
-- Zona “H” na face (imagem abaixo) → H de “high risk”;
-
+- **Zona "H" na face** (imagem abaixo) → H de "high risk";
 - Imunossupressão;
-
 - Radioterapia prévia;
-
 - Local já operado;
-
 - Bordas pouco definidas;
-
-- Subtipos acantolítico, adenoescamoso, desmoplásico;
-
-- Invasão > 4 mm;
-
+- Subtipos **acantolítico, adenoescamoso, desmoplásico**;
+- Invasão **> 4 mm**;
 - Invasão vascular ou perineural.
 
-Figura 3: Zona “H” pintada em rosa (“high risk” - alto risco, em português).
+**Figura 3:** Zona "H" pintada em rosa ("high risk" - alto risco, em português).
 
-## TRATAMENTO
+### Tratamento do CEC
 
-- Principal: excisão cirúrgica.
+- **Principal: excisão cirúrgica**.
+- O esvaziamento cervical é apenas terapêutico quando há metástase. Lembrando que a taxa de metástase cervical é de aproximadamente **10%**; não se faz esvaziamento cervical eletivo de rotina para CEC ou CBC, pois estaria indicado se o risco fosse maior que **20%**.
 
-- O esvaziamento cervical apenas terapêutico quando há metástase Lembrando que a taxa de metástase cervical é de aproximadamente 10%; Não se faz esvaziamento cervical eletivo de rotina para CEC ou CBC, pois estaria indicado se o risco fosse maior que 20%.
-
-Radioterapia
+**Radioterapia:**
 
 - O CEC não é tão radiossensível quanto o CBC;
-
 - Optada como tratamento primário nos casos não cirúrgicos;
+- Optada como adjuvância em casos de:
+  - Metástase cervical;
+  - Margens comprometidas e impossibilidade de reabordagem cirúrgica;
+  - Invasão perineural.
 
-- Optada como adjuvância em casos de: Metástase cervical; Margens comprometidas e impossibilidade de reabordagem cirúrgica; Invasão perineural.
-
-Terapia sistêmica
+**Terapia sistêmica:**
 
 - Assim como no CBC, indicada para os casos em que não há possibilidade de cirurgia ou radioterapia;
+- São alternativas:
+  - **Imunoterapia inibidora de checkpoint** → cemiplimab, pembrolizumab;
+  - **Quimioterapia** → carboplatina + paclitaxel, agente único;
+  - **Inibidores de EGFR** → cetuximab.
 
-- São alternativas: Imunoterapia inibidora de checkpoint Quimioterapia → carboplatina + paclitaxel, agente único; Inibidores de EGFR → cetuximab; COMPARAÇÃO CBC X CEC
+### Comparação CBC x CEC
 
-→ cemiplimab, pembrolizumab; Tabela 1: Características dos CBC e dos CEC
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-## CBC CEC
+- **CBC:** ocorrência muito comum (+++); não há lesão precursora; metástase linfonodal **< 1-3%**; apresentação em nódulo brilhante, com telangiectasia.
+- **CEC:** ocorrência comum; lesão precursora é a **queratose actínica**; metástase linfonodal **± 10%**; apresentação em placa, pápula, ulceração.
 
-Ocorrência +++ comum Comum Queratose Lesão precursora Não há actínica Metástase linfonodal < 1-3% +- 10% Nódulo, Placa, pápula, Apresentação brilhante, ulceração.
+### Considerações sobre o Tratamento Cirúrgico
 
-telangiectasia.
+**Estadiamento T** para o câncer de pele não melanoma:
 
-## CONSIDERAÇÕES SOBRE O TRATAMENTO
+- **T1:** < 2 cm;
+- **T2:** 2 - 4 cm;
+- **T3:** > 4 cm ou erosão óssea pequena ou invasão profunda subcutânea (SC);
+- **T4:** invasão de estruturas adjacentes:
+  - **T4a:** invasão grosseira de osso cortical/medular;
+  - **T4b:** invasão de base de crânio.
 
-## CIRÚRGICO
+**Estadiamento N** para o câncer de pele não melanoma (igual ao do CEC do trato aerodigestivo):
 
-- Estadiamento T para o Câncer de pele não melanoma: T1: <2 cm; T2: 2 - 4 cm; T3: > 4 cm ou erosão óssea pequena ou invasão profunda subcutânea (SC); T4: Invasão de estruturas adjacentes T4a: Invasão grosseira de osso cortical / medular; T4b: Invasão de base de crânio.
+- **N0:** não há acometimento.
+- **N1:** acomete 1 linfonodo ipsilateral à lesão de até 3 cm.
+- **N2a:** 1 linfonodo ipsilateral à lesão entre 3-6 cm.
+- **N2b:** ≥ 2 linfonodos de até 6 cm.
+- **N2c:** linfonodo contralateral à lesão.
+- **N3a:** linfonodo > 6 cm.
+- **N3b:** vazamento extracapsular/extranodal (**ENE+**).
 
-- Estadiamento N para o Câncer de pele não melanoma (igual ao do CEC do trato aerodigestivo). N0: não há acometimento. N1: acomete 1 linfonodo ipsilateral à lesão de até 3 cm. N2a: 1 linfonodo ipsilateral à lesão entre 3-6 cm. N2b: ≥ 2 linfonodos de até 6 cm. N2c: linfonodo contralateral à lesão. N3a: linfonodo > 6 cm. N3b: vazamento extracapsular/ extranodal (ENE+).
-
-Figura 4: Estadiamento N dos cânceres de pele não melanoma.
+**Figura 4:** Estadiamento N dos cânceres de pele não melanoma.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -274,34 +258,34 @@ Figura 4: Estadiamento N dos cânceres de pele não melanoma.
 
 <!-- page:4 -->
 
-TRATAMENTO CIRÚRGICO DO CBC E CEC - Tabela 2: Relação do Breslow com a margem mínima PRINCÍPIOS IDEAIS: necessária para ampliação
+### Tratamento Cirúrgico do CBC e CEC
 
-- Margens livres (≥ 10mm) → a fim de diminuir risco de recorrência.
+**Princípios ideais:**
 
-Breslow Margem de ressecção In situ 0,5 a 1 cm
+- **Margens livres (≥ 10 mm)** → a fim de diminuir risco de recorrência;
+- Atenção com envolvimento de estruturas adjacentes: pode haver necessidade de exenteração de órbita ou ressecções ósseas, por exemplo; abordagem multidisciplinar é essencial;
+- Mesmo que pequena, a cirurgia em face geralmente é uma cirurgia de grande porte;
+- Pesar o porte da cirurgia x qualidade de vida: considerar alternativas paliativas.
 
-- Atenção com envolvimento de estruturas adjacentes:
+### Melanoma
 
-- Atenção com envolvimento de estruturas adjacentes: Pode haver necessidade de exenteração de órbita ou ressecções ósseas, por exemplo; Abordagem multidisciplinar é essencial;
+- **15 a 25%** dos melanomas ocorrem em cabeça e pescoço: área de alta exposição solar e de maior concentração de melanócitos;
+- Porém, os princípios são os mesmos para o corpo inteiro: prezar pelas margens cirúrgicas, tendo-se em mente o resultado final da cirurgia; atentar para debilidade funcional importante e estética.
 
-- Mesmo que pequena, a cirurgia em face geralmente é uma cirurgia de grande porte.
+**Tabela 2 — Relação do índice de Breslow com a margem mínima necessária para ressecção:**
 
-- Pesar o porte da cirurgia x qualidade de vida: Q considerar alternativas paliativas. S
+| Breslow | Margem de ressecção |
+| --- | --- |
+| In situ | 0,5 a 1 cm |
+| ≤ 1 mm (T1) | 1 cm |
+| > 1 a 2 mm (T2) | 1 a 2 cm |
+| > 2 mm (T3 e T4) | 2 cm |
 
-## MELANOMA
+### Quando Fazer Pesquisa de Linfonodo Sentinela em Melanoma?
 
-- 15 a 25% dos melanomas ocorrem em cabeça e pescoço: Área de alta exposição solar e de maior concentração de melanócitos.
-
-- Porém, os princípios são os mesmos para o corpo inteiro: Prezar pelas margens cirúrgicas, tendo-se em mente o resultado final da cirurgia! Atentar para debilidade funcional importante e estética. In situ 0,5 a 1 cm
-
-≤ 1 mm (T1) 1 cm
-
-> 1 a 2 mm (T2) 1 a 2 cm
-
-> 2 mm (T3 e T4) 2 cm
-
-QUANDO FAZER PESQUISA DE LINFONODO SENTINELA EM MELANOMA?
-
-- Clinicamente negativo (cNO) para linfonodo metastático;
-
-- Risco intermediário ou alto de metástases. Espessura > 0,8 mm; Ulceração; Invasão linfovascular;* > 1 mitose/mm² (principalmente em pacientes jovens).
+- Clinicamente negativo (**cN0**) para linfonodo metastático;
+- Risco intermediário ou alto de metástases:
+  - Espessura **> 0,8 mm**;
+  - Ulceração;
+  - Invasão linfovascular;
+  - **> 1 mitose/mm²** (principalmente em pacientes jovens).

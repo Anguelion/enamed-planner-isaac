@@ -618,6 +618,14 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .text-mark.green{background:#dff3df;color:#173d24}
 .text-mark.blue{background:#ddecff;color:#173f70}
 .text-mark.red{background:#ffe1dc;color:#7d251e}
+.highlight-popup{position:absolute;z-index:900;display:flex;gap:6px;align-items:center;background:var(--card,#fff);border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.18);padding:6px}
+.highlight-popup-color{width:24px;height:24px;border-radius:7px;border:1px solid var(--line);cursor:pointer;padding:0}
+.highlight-popup-color:hover{outline:2px solid var(--ink);outline-offset:1px}
+.highlight-popup-color.yellow{background:#fff1a8}
+.highlight-popup-color.blue{background:#ddecff}
+.highlight-popup-color.red{background:#ffe1dc}
+.highlight-popup-delete{width:24px;height:24px;border-radius:7px;border:1px solid var(--line);background:#fff;cursor:pointer;color:#7d251e;font-size:15px;line-height:1;padding:0}
+.highlight-popup-delete:hover{background:#ffe1dc}
 .highlightable{cursor:text;-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 .question-stem.highlightable,.answer-option .highlightable{touch-action:auto}
 @media(pointer:coarse){.qbank-mode .highlightable,.sim-highlightable{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;cursor:pointer;touch-action:manipulation}.qbank-mode .answer-option,.sim-answer{touch-action:manipulation}}

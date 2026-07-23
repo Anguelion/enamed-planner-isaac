@@ -1,56 +1,43 @@
-# Estômago Gist
+# Estômago GIST
 
 <!-- page:1 -->
 
-Estômago (CIR)
+## Estômago (CIR)
 
-- Tumores derivados da Célula de Cajal;
+### Introdução
 
-- Subepiteliais (2ª ou 4ª camada da EcoEDA);
+- Tumores derivados da célula de Cajal.
+- Lesão subepitelial (2ª ou 4ª camada da EcoEDA).
+- Diagnóstico: **EDA/EcoEDA + PAAF**.
+- Não fazer biópsia com agulha grossa (risco de romper a cápsula!).
+- Tumores estromais do trato gastrointestinal.
+- Derivados da célula de Cajal (marca-passo responsável pelos movimentos peristálticos do trato gastrointestinal).
+- Mais comum no estômago (**60-70%**). Outros locais: intestino delgado (**20-25%**), cólon e reto (**5%**), e esôfago (**menos que 5%**).
+- Sintomatologia: mais comumente assintomático; **HDA**; massa epigástrica; saciedade precoce.
+- Lesão subepitelial (recoberta por mucosa normal); mais comum na camada muscular (4ª camada da ecoendoscopia) ou muscular da mucosa (2ª camada na ecoendoscopia).
 
-- Diagnóstico: EDA/ EcoEDA + PAAF;
+### Diagnósticos Diferenciais
 
-- Não fazer biópsia com agulha grossa (risco de romper a cápsula!);
+- Outras lesões subepiteliais: leiomioma, leiomiossarcoma, schwannoma, lipoma, tumor glômico e pâncreas ectópico.
 
-Tipo CD117 DOG-1 PKC-th + + + GISTs (>95%) (97%) (72%) Leiomioma - Leiomiosarcoma - Schwannoma - INTRODUÇÃO
+### Características
 
-- Tumores estromais do trato gastrointestinal;
+- A maioria dos GISTs são esporádicos, mas podem estar relacionados a síndromes genéticas: neurofibromatose tipo 1 (**NEM1**), síndrome de Carney-Stratakis e síndromes familiares relacionadas ao GIST.
+- Estadiamento: **TC TAP**; se reto ou fígado = **RM**.
+- Tratamento: ressecção com margens livres, **sem linfadenectomia**.
 
-- Derivados da célula de Cajal (marcapasso responsável pelos movimentos peristálticos do trato gastrointestinal);
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-- Mais comum no estômago (60-70%). Outros locais:
+- Painel imuno-histoquímico usado para diferenciar lesões subepiteliais gástricas: **CD117**, **DOG-1**, **PKC-theta**, **CD34**, **AML (actina de músculo liso)** e **desmina**.
+- **GIST**: positivo para CD117 (em cerca de 95%), DOG-1 (cerca de 97%) e PKC-theta (cerca de 72%).
+- **Leiomioma**: positivo para desmina e AML; negativo para os marcadores de GIST.
+- **Leiomiossarcoma**: perfil semelhante ao leiomioma, com positividade para marcadores de músculo liso.
+- **Schwannoma**: positivo para S100; negativo para os demais marcadores citados.
 
-intestino delgado (20-25%), cólon e reto (5%), e esôfago (menos que 5%);
+### Imagem
 
-- Sintomatologia: Mais comumente assintomático; HDA; massa epigástrica; saciedade precoce;
-
-- Lesão subepitelial (recoberta por mucosa normal); Mais comum na camada muscular (4ª camada da ecoendoscopia) ou muscular da mucosa (2ª camada na ecoendoscopia).
-
-## DIAGNÓSTICOS DIFERENCIAIS
-
-- Diagnósticos Diferenciais - outras lesões subepiteliais:
-
-Leiomioma, Leiomiossarcoma, Schwannomas, Lipoma, Tumor Glômico e Pâncreas ectópico.
-
-## CARACTERÍSTICAS
-
-- A maioria dos GISTs são esporádicos, mas podem estar relacionados com síndromes genéticas: Neurofibromatose tipo 1 (NEM1), Síndrome CarneyStratakis e Síndromes familiares relacionadas ao GIST. - Estadiamento: TC TAP / Se reto ou fígado = RM
-
-- Tratamento: Ressecção com Margens Livres –
-
-Sem linfadenectomia!
-
-## S100
-
-heta CD34 AML* Desmina proteína + +/- - (60 to (30 to - ) (5%+) 70%) 40%) + + - + (10 to 15%)
-
-- + - +
-
-## + IMAGEM
-
-- Endoscopia Digestiva Alta com presença lesão recoberta por mucosa normal; Pode haver umbilicação (local de sangramento prévio)
-
-- Deve-se fazer ecoendoscopia para identificar o tumor na camada muscular + PAAF; Não se deve fazer biópsia por agulha grossa: Pode romper a cápsula do GIST - pior prognóstico; Se PAAF indisponível, conduta guiada apenas pela endoscopia.
+- Endoscopia digestiva alta com presença de lesão recoberta por mucosa normal; pode haver umbilicação (local de sangramento prévio).
+- Deve-se fazer ecoendoscopia para identificar o tumor na camada muscular + **PAAF**; não se deve fazer biópsia por agulha grossa, pois pode romper a cápsula do GIST e piorar o prognóstico. Se **PAAF** indisponível, a conduta é guiada apenas pela endoscopia.
 
 Figura 1: GIST na endoscopia.
 
@@ -60,65 +47,42 @@ Figura 1: GIST na endoscopia.
 
 <!-- page:2 -->
 
-## DIAGNÓSTICO: ECO-EDA + PAAF →
+### Diagnóstico: Eco-EDA + PAAF → Imuno-histoquímica
 
-## IMUNOHISTOQUÍMICA
+- O GIST tem **CD117 (c-kit)** positivo em mais de **90%** das vezes.
+- **CD117** e/ou **DOG-1** positivo = GIST.
+- O **PKC-theta** e o **CD34** também auxiliam no diagnóstico de GIST.
+- Caso o **CD117** venha negativo, pesquisar **PDGFRA**: se positivo, confirma GIST; se negativo, pode haver formas selvagens, sem expressão de nenhum desses genes.
+- Verificar Tabela 1.
 
-- O GIST tem CD117 (c-kit) positivo em mais de 90% das vezes;
+### Estadiamento
 
-- CD117 e/ou DOG-1 positivo = GIST;
+- Tomografia computadorizada (**TC**) de tórax, abdome e pelve; se reto ou fígado, pedir **RM**.
+- Principal tipo de metástase é por disseminação hematogênica: fígado, peritônio, pulmão.
+- Observação: GIST não dá metástase linfonodal (muito raro).
+- Fatores prognósticos do GIST: tamanho do tumor; idade; número de mitoses por campo; **Ki-67**; **p53**; rotura da cápsula.
 
-- CD117 e/ou DOG-1 positivo = GIST;
+### Tratamento
 
-- O PKC-teta, CD34 também auxiliam no diagnóstico para GIST;
+- Tumores menores (**< 2 cm**) = acompanhar clinicamente para observar o crescimento.
+- Tumores **> 2 cm** = cirurgia com ressecção com margens livres, sem linfadenectomia.
+- Modalidades de cirurgia dependem da localização do GIST (tipos 1, 2 e 3).
 
-- Caso o CD117 vier negativo, pesquisar PDGFRA Positivo: confirma GIST; Negativo: pode haver formas selvagens, sem expressão de nenhum destes genes.
+Tabela 1: Marcadores em tumores gástricos subepiteliais (ver observação acima sobre ambiguidade do OCR).
 
-- Verificar Tabela 1
+Figura 2: Tipo de GIST conforme sua localização.
 
-## ESTADIAMENTO
+**Tipo 1**:
 
-- Tomografia computadorizada (TC) de Tórax, Se reto ou fígado, pedir RM;
-
-Abdome e Pelve
-
-- Principal tipo de metástase é por disseminação T hematogênica: fígado, peritônio, pulmão;
-
-- OBS: GIST não dá metástase linfonodal (muito difícil)
-
-- Fatores prognósticos GIST: Tamanho do tumor; Idade; Número de mitoses por campo; Ki-67; P53; Rotura da cápsula.
-
-## TRATAMENTO
-
-- Tumores menores (<2cm) = acompanhar clinicamente para observar o crescimento;
-
-- Tumores > 2cm = cirurgia com ressecção com margens livres, sem linfadenectomia; T
-
-- Modalidades de cirurgia – depende da localização do
-
-- GIST (tipos 1, 2 e 3).
-
-- Tabela 1: Marcadores em tumores gástricos subepiteliais.
-
-Tipo CD117 DOG-1 PKC-theta + + + GISTs (>95%) (97%) (72%) Figura 2: Tipo de GIST conforme sua localização.
-
-TIPO 1:
-
-- Grande curvatura = gastrectomia em cunha;
-
+- Grande curvatura = gastrectomia em cunha.
 - Parede posterior = endogastrocirurgia.
 
-Figura 3: Endogastrocirurgia. TIPO 2:
+Figura 3: Endogastrocirurgia.
 
-- Região antropilórica;
+**Tipo 2**:
 
+- Região antropilórica.
 - Gastrectomia parcial/antrectomia.
-
-CD34 AML* Desmina proteína + +/- - - (60 to 70%) (30 to 40%) (5%+) + + - + (10 to 15%)
-
-- + - +
-
-- + -
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -128,30 +92,29 @@ CD34 AML* Desmina proteína + +/- - - (60 to 70%) (30 to 40%) (5%+) + + - + (10 
 
 <!-- page:3 -->
 
-## TIPO 3: CRITÉRIOS DE ADJUVÂNCIA – USO DE
+### Tipo 3
 
-- Pequena curvatura e cárdia; IMATINIBE (INIBIDOR DA TIROSINA QUINASE)
+- Pequena curvatura e cárdia.
+- Grande = gastrectomia total.
+- Pequeno e não está na cárdia = **LECS** (ressecção combinada entre videolaparoscopia e endoscopia).
 
-- Grande = gastrectomia total;
+Figura 4: Tratamento cirúrgico combinado (LECS).
 
-- Apenas para pacientes c-kit positivo;
+### Critérios de Adjuvância – Uso de Imatinibe (Inibidor da Tirosina Quinase)
 
-- Pequeno e não está na cárdia = LECS (ressecção
+- Apenas para pacientes **c-kit positivo**.
+- Indicações – casos com mau prognóstico:
+  - Tumor extra-gástrico.
+  - Tamanho maior que **10 cm**.
+  - Tumor com mais de **10 mitoses** por campo de 50 aumentos.
+  - Tumor **> 5 cm** + **> 5 mitoses** por campo de 50 aumentos.
+  - Rotura da cápsula.
+  - Recidiva/metastático.
+- A cirurgia de resgate pode ser feita após neoadjuvância com imatinibe, incluindo metastasectomia hepática.
+- Neoadjuvância – indicada para tumores borderline irressecáveis.
 
-- Indicações - casos com mau prognóstico:
+## Referências
 
-combinada entre videolaparoscopia e endoscopia). | Tumor extra-gástrico; combinada entre videolaparoscopia e endoscopia).
-
-Figura 4: Tratamento cirúrgico combinado (LECS). | Tumor extra-gástrico; | Tamanho maior que 10 cm; | Tumor com > 10 mitoses por campo de 50 aumento;
-
-| Tumor > 5 cm + > 5 mitoses por campo de 50 aumento; | Rotura da cápsula; | Recidiva / Metastático.
-
-- A cirurgia de resgate pode ser feita após neoadjuvância com imatinibe, incluindo metastasectomia hepática; Neoadjuvância – indicada para tumores borderlines irressecáveis.
-
-## REFERÊNCIAS
-
-Figura 1: GIST na endoscopia. GAILLARD, F.; SILVERSTONE, L.; LE, L. et al. Gastrointestinal stromal tumor.
-
-Radiopaedia.org, 16 ago. 2009. Disponível em: https://doi.org/10.53347/rID6758. Acesso em: 12 jul. 2025.
+Figura 1: GIST na endoscopia. GAILLARD, F.; SILVERSTONE, L.; LE, L. et al. Gastrointestinal stromal tumor. Radiopaedia.org, 16 ago. 2009. Disponível em: https://doi.org/10.53347/rID6758. Acesso em: 12 jul. 2025.
 
 ![Figura do material - página 3](figure-003-1.webp)
