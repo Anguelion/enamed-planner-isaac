@@ -922,6 +922,9 @@
   // ---------------------------------------------------------------------------
   // 6. RENDER — helpers de bloco de aula
   // ---------------------------------------------------------------------------
+  // troca jpg<->png automaticamente se o arquivo real usar outra extensão; some se nenhuma existir
+  const imgFallback = `(function(im){var t=im.dataset.try||0;t=+t+1;im.dataset.try=t;var src=im.getAttribute('src');var alt=src.replace(/\\.(jpg|png)$/i,t===1?'.png':'.jpg');if(t<=1){im.src=alt;}else{im.closest('figure').style.display='none';}})(this)`;
+
   function blockHtml(b, topId, idx) {
     const S = st();
     const marks = (S.highlights[topId] || {});
@@ -933,6 +936,8 @@
       case 'doc': return `<div class="semio-doc"><span class="semio-doc-tag">Prontuário</span><code>${esc(b.x)}</code></div>`;
       case 'ul': return `<ul class="semio-ul">${b.x.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`;
       case 'svg': return `<figure class="semio-fig">${b.x}${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
+      case 'img': return `<figure class="semio-fig semio-fig-photo"><img src="${esc(b.x)}" alt="${esc(b.cap || '')}" loading="lazy" onerror="${imgFallback}"/>${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
+      case 'imggrid': return `<div class="semio-fig-row">${b.x.map((im) => `<figure class="semio-fig semio-fig-photo"><img src="${esc(im.src)}" alt="${esc(im.cap || '')}" loading="lazy" onerror="${imgFallback}"/>${im.cap ? `<figcaption>${esc(im.cap)}</figcaption>` : ''}</figure>`).join('')}</div>`;
       case 'p':
       default: {
         const id = topId + ':' + idx;
@@ -1485,6 +1490,9 @@
     .semio-doc code{display:block;background:var(--card,#f1f5f9);border:1px dashed var(--border,#cbd5e1);border-radius:8px;padding:10px;font-size:.84rem;white-space:pre-wrap;line-height:1.5}
     .semio-fig{margin:12px 0;text-align:center}.semio-fig-svg{max-width:320px;width:100%;height:auto}
     .semio-fig figcaption{font-size:.8rem;color:var(--muted,#667085);margin-top:6px;text-align:left}
+    .semio-fig-photo img{max-width:100%;width:auto;max-height:420px;border-radius:10px;border:1px solid var(--border,#cbd5e1);background:#fff}
+    .semio-fig-row{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;justify-content:center}
+    .semio-fig-row .semio-fig{margin:0;flex:1 1 220px;max-width:280px}
     .semio-def{margin:9px 0}.semio-def b{color:var(--semio-acc2)}.semio-def p{margin:2px 0 0;line-height:1.5}
     .semio-quiz{margin-top:14px;background:var(--card,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:14px}
     .semio-audio{width:100%;margin:10px 0}

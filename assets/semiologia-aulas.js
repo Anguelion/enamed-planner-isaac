@@ -34,6 +34,16 @@
   const DOC = (x) => ({ t: 'doc', x });
   const EV = (x) => ({ t: 'ev', x });
   const SVG = (x, cap) => ({ t: 'svg', x, cap });
+  const IMG = (src, cap) => ({ t: 'img', x: src, cap });
+  const IMGGRID = (arr) => ({ t: 'imggrid', x: arr });
+  // gera uma grade de imagens numeradas [de..ate] de uma pasta real (assets/semiologia-real/<pasta>);
+  // a extensão real (jpg/png) é resolvida automaticamente no navegador (ver imgFallback em semiologia.js)
+  const galeria = (pasta, de, ate) => {
+    const items = [];
+    for (let i = de; i <= ate; i++) items.push({ src: `assets/semiologia-real/${pasta}/${i}.jpg`, cap: `Slide ${i}` });
+    return IMGGRID(items);
+  };
+  const foto = (pasta, n, cap) => IMG(`assets/semiologia-real/${pasta}/${n}.jpg`, cap);
 
   // --- alguns esquemas SVG didáticos reutilizáveis -------------------------
   const svgTorax = `<svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" class="semio-fig-svg">
@@ -328,6 +338,8 @@
               'Vitropressão (comprimir com lâmina) — diferencia eritema (some) de púrpura (não some).',
               'Palpação bimanual combinada — órgãos profundos e toques (ex.: toque vaginal com a outra mão no abdome).'
             ),
+            foto('01-exame-fisico-geral-parte-01-e-02', 12, 'Decúbitos de exame: dorsal, lateral D/E, ventral, sentado e ortostático.'),
+            foto('01-exame-fisico-geral-parte-01-e-02', 15, 'Nomenclatura das regiões do corpo usada para localizar achados no exame.'),
             SVG(svgPercussao, 'Escala dos sons à percussão, do mais "cheio" de ar ao mais sólido: timpânico → claro pulmonar → submaciço → maciço.'),
             H('Percussão'),
             P('Golpear a superfície para gerar vibração e som que informam sobre o que há embaixo. A técnica mais usada é a dígito-digital: o dedo plexímetro apoiado na pele recebe 2 golpes secos do dedo plexor, retirado rápido para não abafar o som.'),
@@ -376,6 +388,71 @@
               'Falseiam a SpO₂: má perfusão/frio, movimento, esmalte, e — importante — a saturação pode parecer normal na intoxicação por CO (a carboxiemoglobina engana o sensor).'
             ),
             EV('Pele mais pigmentada: oxímetros de dedo têm maior taxa de hipoxemia oculta (SpO₂ "normal" com PaO₂ baixa) em pessoas negras. Diante de discrepância clínica, valorize o quadro e considere gasometria — não descarte hipoxemia só pela SpO₂.'),
+          ],
+        },
+        {
+          id: 'm3-avaliacao-inicial', titulo: 'Avaliação inicial: olho clínico, hálito e coloração (Aula real, Parte 3)',
+          blocks: [
+            P('Os primeiros 30 segundos de consulta já rendem exame físico: dá para classificar o estado geral, notar o biótipo, a fácies e a coloração da pele mesmo enquanto o paciente ainda está sentando ou contando a queixa. Essa leitura simultânea à anamnese é o que se chama de "olho clínico" — uma habilidade que se desenvolve com estudo e prática, e que sozinha às vezes já fecha o diagnóstico.'),
+            H('Estado geral'),
+            UL('BEG — bom estado geral.', 'REG — regular estado geral.', 'MEG — mau estado geral.'),
+            H('Hálito'),
+            UL(
+              'Hálito urêmico (IRC) — odor de amônia/urina.',
+              'Hálito cetônico (DM descompensado) — odor adocicado/frutas.',
+              'Hálito etílico — excesso de aldeído expirado.',
+              'Trimetilaminúria — odor de peixe podre.',
+              'Hálito fecalóide — obstrução intestinal.'
+            ),
+            H('Coloração de pele e mucosas'),
+            P('Avalie na pele, palma das mãos, conjuntiva ocular e mucosa oral — registrando em cruzes quando aplicável.'),
+            UL(
+              'Corado — normal.',
+              'Descorado — neoplasias, perdas sanguíneas pequenas e constantes, doenças crônicas.',
+              'Pálido — perda sanguínea intensa, choque, má perfusão periférica.',
+              'Pletórico — poliglobulia (DPOC), policitemia, corticoterapia, síndrome de Cushing.'
+            ),
+            foto('02-exame-fisico-geral-parte-03', 14, 'Coloração da pele e mucosas — referência de avaliação.'),
+          ],
+        },
+        {
+          id: 'm3-hidratacao-cianose', titulo: 'Hidratação, turgência jugular, perfusão e cianose (Aula real, Parte 4)',
+          blocks: [
+            H('Estado de hidratação'),
+            P('Avalia-se pela umidade/elasticidade/turgor da pele, umidade de mucosas, fontanelas (em crianças), globo ocular, estado psíquico, PA e pulso, além de queixas de sede, alteração de peso e diurese.'),
+            H('Turgência venosa jugular'),
+            UL(
+              'Estase jugular avaliada em graus de elevação da cabeceira: 0°, 30°, 45°, 60° e 90°.',
+              'Sinal de Kussmaul — aumento paradoxal da PVJ durante a inspiração: miocardiopatia constritiva, ICC direita grave, infarto de VD.',
+              'Método de Gaertner — cabeceira a 45°, eleva-se passivamente o membro superior e observa-se a turgência das veias da mão; pressão venosa normal = colapso na altura do ângulo esternal.'
+            ),
+            TIP('A turgência jugular é uma estimativa indireta e à beira-leito da pressão venosa central — útil para diferenciar congestão (ICC direita, tamponamento) de hipovolemia sem precisar de exame invasivo.'),
+            H('Perfusão tecidual'),
+            P('Avalie leito ungueal e tempo de enchimento capilar — refletem a microcirculação em quadros hemodinâmicos (IAM, sepse, choques cardiogênico/distributivo/hemorrágico) e a perfusão específica de extremidades em obstrução arterial.'),
+            H('Cianose'),
+            UL(
+              'Periférica — lábios, ponta do nariz, malares, lóbulo da orelha, língua, palato, extremidades; causa mais comum é exposição ao frio (vasoconstrição); também ICC, choque, TVP.',
+              'Central — hipóxia sistêmica: O₂ inspirado baixo (altitude), transtorno de ventilação (asma/DPOC, depressão do centro respiratório), transtorno de difusão (fibrose, pneumonia, congestão), transtorno de perfusão (TEP, cardiopatias) ou shunt D–E (T4F, CIA, CIV).',
+              'Mista — dois mecanismos somados, como na ICC (congestão pulmonar + estase venosa periférica).',
+              'Alteração de hemoglobina — metahemoglobinemia (CO, anestésicos, substâncias tóxicas).'
+            ),
+            WARN('Cianose central sempre indica hipóxia sistêmica e deve ser investigada com urgência; cianose periférica isolada, com extremidades frias e o resto do paciente corado, aponta primeiro para causa local/vascular.'),
+            foto('03-exame-fisico-geral-parte-04', 13, 'Cianose central x periférica — pontos de avaliação.'),
+          ],
+        },
+        {
+          id: 'm3-galeria-ectoscopia', titulo: 'Galeria complementar — fácies, biótipos e achados de ectoscopia (aula real)',
+          blocks: [
+            P('Conjunto de slides originais da aula que ilustram fácies, biótipos e demais achados de ectoscopia citados nos tópicos acima. Use como banco de imagens para revisão visual — a legenda indica apenas o número do slide original.'),
+            galeria('04-exame-fisico-geral-parte-05', 12, 86),
+          ],
+        },
+        {
+          id: 'm3-galeria-hidratacao', titulo: 'Galeria complementar — hidratação, perfusão e sinais vitais (aula real)',
+          blocks: [
+            P('Slides originais complementares às Partes 6 e 7 da aula real de Exame Físico Geral.'),
+            galeria('05-exame-fisico-geral-parte-06', 12, 54),
+            galeria('06-exame-fisico-geral-parte-07', 12, 51),
           ],
         },
       ],
