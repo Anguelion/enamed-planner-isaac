@@ -141,6 +141,144 @@
   const MANOBRA_MAP = Object.fromEntries(MANOBRAS.map((m) => [m.id, m]));
 
   // ---------------------------------------------------------------------------
+  // 2b. BANCO DE AUSCULTA — sons reais (Littmann) com achados e quiz
+  // ---------------------------------------------------------------------------
+  const AUSCULTA = [
+    { id: 's1-fisiologica', nome: 'B1 (primeira bulha) — normal', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/s1-fisiologica.mp3',
+      onde: 'Foco mitral/tricúspide, com o diafragma.',
+      achado: 'Fechamento das valvas mitral e tricúspide, marca o início da sístole. Som de referência normal.',
+      quiz: { p: 'A B1 (primeira bulha) corresponde a:', ops: ['Fechamento das valvas mitral e tricúspide', 'Fechamento das valvas aórtica e pulmonar', 'Abertura da valva mitral', 'Contração atrial'], correct: 0, exp: 'B1 = fechamento das valvas atrioventriculares (mitral/tricúspide), início da sístole.' } },
+    { id: 's3-fisiologica', nome: 'B3 fisiológica', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/s3-fisiologica.mp3',
+      onde: 'Foco mitral, com a campânula, decúbito lateral esquerdo.',
+      achado: 'Som protodiastólico grave logo após B2, pelo enchimento ventricular rápido. Comum e normal em crianças, jovens e gestantes — diferente da B3 patológica do adulto com ICC.',
+      quiz: { p: 'B3 ouvida em uma gestante jovem e assintomática é, na maioria das vezes:', ops: ['Sempre patológica', 'Um achado fisiológico do alto débito/enchimento rápido', 'Sinal de estenose mitral', 'Indicação de ecocardiograma urgente'], correct: 1, exp: 'Em jovens/gestantes, B3 costuma ser fisiológica; em adultos com dispneia, pensar em ICC (ver manobra "Terceira bulha (B3)").' } },
+    { id: 's4', nome: 'B4 (quarta bulha)', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/s4.mp3',
+      onde: 'Foco mitral, com a campânula.',
+      achado: 'Som pré-sistólico (antes de B1), gerado pela contração atrial contra um ventrículo pouco complacente/hipertrofiado. Sugere HAS, cardiomiopatia hipertrófica ou isquemia. Ritmo "Te-le-ssístole" (Tennessee).',
+      quiz: { p: 'A B4 é causada por:', ops: ['Fechamento valvar', 'Contração atrial contra ventrículo pouco complacente', 'Regurgitação valvar', 'Abertura da mitral'], correct: 1, exp: 'B4 = contração atrial vencendo um ventrículo rígido/hipertrofiado — nunca ocorre em fibrilação atrial (não há contração atrial coordenada).' } },
+    { id: 'click-mesossistolico', nome: 'Click mesossistólico (prolapso mitral)', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/click-mesossistolico.mp3',
+      onde: 'Foco mitral/ápice.',
+      achado: 'Estalido protomesossistólico, às vezes seguido de sopro telessistólico — síndrome do click-murmúrio do prolapso da valva mitral. Manobras que reduzem o volume ventricular (Valsalva, ortostatismo) antecipam o click e alongam o sopro.',
+      quiz: { p: 'O click mesossistólico seguido de sopro telessistólico é característico de:', ops: ['Estenose aórtica', 'Prolapso da valva mitral', 'CIV', 'Pericardite'], correct: 1, exp: 'É a síndrome do click-murmúrio do prolapso mitral.' } },
+    { id: 'estenose-mitral', nome: 'Sopro diastólico — Estenose mitral', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/estenose-mitral.mp3',
+      onde: 'Foco mitral, com a campânula, decúbito lateral esquerdo, após exercício leve.',
+      achado: 'Ruflar (rumble) diastólico de baixa frequência, com reforço pré-sistólico (se ritmo sinusal), frequentemente precedido de estalido de abertura.',
+      quiz: { p: 'O ruflar diastólico mitral se ausculta melhor:', ops: ['Com o diafragma, sentado', 'Com a campânula, em decúbito lateral esquerdo', 'Em pé, apneia inspiratória', 'No foco aórtico'], correct: 1, exp: 'É um som grave — a campânula e o decúbito lateral esquerdo aproximam o ápice do tórax.' } },
+    { id: 'regurgitacao-mitral', nome: 'Sopro sistólico — Regurgitação mitral', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/regurgitacao-mitral.mp3',
+      onde: 'Foco mitral, irradiando para a axila.',
+      achado: 'Sopro holossistólico (em platô), de timbre em "jato de vapor", irradiando classicamente para a axila esquerda.',
+      quiz: { p: 'O sopro da regurgitação mitral irradia classicamente para:', ops: ['Carótidas', 'Axila esquerda', 'Dorso', 'Região epigástrica'], correct: 1, exp: 'Irradiação típica: foco mitral → axila.' } },
+    { id: 'regurgitacao-aortica', nome: 'Sopro diastólico — Regurgitação aórtica', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/regurgitacao-aortica.mp3',
+      onde: 'Foco aórtico acessório (Erb, 3º EIC esquerdo), paciente sentado, inclinado à frente, em apneia expiratória.',
+      achado: 'Sopro diastólico decrescente, aspirativo ("em decrescendo"), logo após B2.',
+      quiz: { p: 'Para auscultar melhor a regurgitação aórtica, o paciente deve:', ops: ['Deitar em decúbito lateral esquerdo', 'Sentar, inclinar-se à frente e prender a expiração', 'Fazer Valsalva', 'Deitar em decúbito dorsal e inspirar fundo'], correct: 1, exp: 'Essa posição aproxima a via de saída da aorta da parede torácica, realçando o sopro diastólico aspirativo.' } },
+    { id: 'defeito-septal-atrial', nome: 'CIA — Comunicação interatrial', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/defeito-septal-atrial.mp3',
+      onde: 'Foco pulmonar.',
+      achado: 'Sopro sistólico ejetivo em foco pulmonar (por hiperfluxo) associado ao achado clássico de desdobramento FIXO de B2 (não varia com a respiração).',
+      quiz: { p: 'O achado auscultatório mais característico da CIA é:', ops: ['Desdobramento fixo de B2', 'Estalido de abertura', 'B4 proeminente', 'Sopro diastólico aspirativo'], correct: 0, exp: 'O hiperfluxo pulmonar crônico causa o clássico desdobramento fixo (não respirodependente) de B2.' } },
+    { id: 'defeito-septal-ventricular', nome: 'CIV — Comunicação interventricular', sistema: 'Cardíaco', arquivo: 'assets/audio/ausculta/coracao/defeito-septal-ventricular.mp3',
+      onde: 'Borda esternal esquerda baixa (3º–4º EIC).',
+      achado: 'Sopro holossistólico "em banda", de alta intensidade, frequentemente acompanhado de frêmito palpável no local — quanto menor o defeito, mais alto costuma soar o sopro.',
+      quiz: { p: 'O sopro da CIV é mais bem auscultado em:', ops: ['Foco aórtico', 'Borda esternal esquerda baixa', 'Foco mitral', 'Base do pescoço'], correct: 1, exp: 'É o local de maior turbulência do shunt interventricular.' } },
+    { id: 'ruido-normal-vesicular', nome: 'Murmúrio vesicular normal', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/ruido-normal-vesicular.mp3',
+      onde: 'Campos pulmonares periféricos.',
+      achado: 'Som suave e grave, audível principalmente na inspiração (a expiração é quase silenciosa) — o ruído normal do parênquima pulmonar.',
+      quiz: { p: 'No murmúrio vesicular normal:', ops: ['A expiração é mais audível que a inspiração', 'A inspiração é mais audível e a expiração é quase silenciosa', 'Inspiração e expiração têm igual duração e intensidade', 'É um som tubular e áspero'], correct: 1, exp: 'É o padrão inverso do som brônquico/traqueal — inspiração > expiração.' } },
+    { id: 'ruido-normal-traqueia', nome: 'Ruído traqueal/brônquico normal', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/ruido-normal-traqueia.mp3',
+      onde: 'Sobre a traqueia e grandes vias aéreas.',
+      achado: 'Som mais áspero e tubular que o vesicular, com inspiração e expiração de duração semelhante — normal nesse local, mas patológico (som brônquico) se ouvido na periferia do pulmão.',
+      quiz: { p: 'Ouvir um som tubular como esse na PERIFERIA do pulmão sugere:', ops: ['Normalidade', 'Consolidação (som brônquico ectópico)', 'Derrame pleural', 'Pneumotórax'], correct: 1, exp: 'Consolidação transmite melhor o som das grandes vias — é o "sopro tubário"/ruído brônquico fora do lugar.' } },
+    { id: 'ruido-bronquial', nome: 'Ruído brônquico (em área periférica)', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/ruido-bronquial.mp3',
+      onde: 'Área pulmonar periférica onde normalmente se ouviria apenas o murmúrio vesicular.',
+      achado: 'Som tubular, alto, com inspiração ≈ expiração, transmitido de vias aéreas centrais através de tecido consolidado — compõe a síndrome de consolidação junto com FTV aumentado e macicez.',
+      quiz: { p: 'Ruído brônquico numa base pulmonar, junto com FTV aumentado e macicez, forma a síndrome de:', ops: ['Derrame pleural', 'Consolidação pulmonar', 'Pneumotórax', 'DPOC'], correct: 1, exp: 'É a tríade clássica da consolidação (ex.: pneumonia).' } },
+    { id: 'crepitacoes-finas', nome: 'Crepitações finas ("velcro")', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/crepitacoes-finas.mp3',
+      onde: 'Bases pulmonares, final da inspiração.',
+      achado: 'Estalidos curtos, de alta frequência, ao final da inspiração, lembrando o som de velcro sendo aberto — clássicos de fibrose pulmonar; também surgem nas fases iniciais do edema pulmonar/ICC.',
+      quiz: { p: 'Crepitações finas em "velcro" nas bases, bilaterais e persistentes, sugerem fortemente:', ops: ['Asma', 'Fibrose pulmonar', 'Pneumotórax', 'Derrame pleural volumoso'], correct: 1, exp: 'É o achado auscultatório clássico da fibrose pulmonar (também presente na ICC).' } },
+    { id: 'crepitacoes-finas-sons-bronquiais', nome: 'Crepitações finas + sons bronquiais', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/crepitacoes-finas-sons-bronquiais.mp3',
+      onde: 'Área de consolidação com secreção associada.',
+      achado: 'Combinação de crepitações finas com ruído brônquico transmitido — sugere consolidação (pneumonia) com componente de secreção nas vias aéreas menores.',
+      quiz: { p: 'A combinação de crepitações finas com som brônquico numa área pulmonar sugere:', ops: ['Pulmão normal', 'Consolidação com secreção associada', 'Pneumotórax hipertensivo', 'Ausência de doença'], correct: 1, exp: 'É comum em pneumonias — som brônquico pela consolidação, crepitações pela secreção/exsudato alveolar.' } },
+    { id: 'crepitacoes-fortes', nome: 'Crepitações grossas/bolhosas', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/crepitacoes-fortes.mp3',
+      onde: 'Vias aéreas de maior calibre, ambas as fases respiratórias.',
+      achado: 'Sons mais graves e "úmidos", de bolhas maiores, por secreção em vias aéreas de maior calibre — presentes em pneumonia mais avançada, bronquiectasias e edema pulmonar mais franco.',
+      quiz: { p: 'Crepitações grossas/bolhosas, diferente das finas em velcro, indicam secreção em:', ops: ['Alvéolos apenas', 'Vias aéreas de maior calibre', 'Pleura', 'Mediastino'], correct: 1, exp: 'O timbre mais grave e as bolhas maiores refletem secreção em brônquios de maior calibre.' } },
+    { id: 'estridor-inspiratorio', nome: 'Estridor inspiratório', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/estridor-inspiratorio.mp3',
+      onde: 'Audível mesmo sem estetoscópio, sobre laringe/traqueia.',
+      achado: 'Som agudo, musical, predominantemente inspiratório, por obstrução de via aérea SUPERIOR (laringe/traqueia) — crupe, corpo estranho, epiglotite, edema de glote. É sinal de alarme.',
+      quiz: { p: 'O estridor inspiratório indica obstrução:', ops: ['De pequenas vias aéreas (asma)', 'De via aérea superior (laringe/traqueia)', 'Alveolar difusa', 'Pleural'], correct: 1, exp: 'Diferente do sibilo (vias baixas), o estridor é típico de obstrução alta — emergência potencial.' } },
+    { id: 'roncos', nome: 'Roncos', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/roncos.mp3',
+      onde: 'Vias aéreas de maior calibre, ambas as fases respiratórias.',
+      achado: 'Som grave, contínuo, "ronronado", causado por secreção espessa ou estreitamento de vias aéreas maiores — típico de bronquite/DPOC; costuma mudar ou desaparecer com a tosse.',
+      quiz: { p: 'Um som grave e contínuo que muda de característica após a tosse é típico de:', ops: ['Sibilo por broncoespasmo fixo', 'Roncos por secreção em vias aéreas maiores', 'Estridor laríngeo', 'Atrito pleural'], correct: 1, exp: 'Roncos mudam/desaparecem com a tosse por serem causados por secreção mobilizável.' } },
+    { id: 'sibilos', nome: 'Sibilos', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/sibilos.mp3',
+      onde: 'Predominam na expiração, por todo o tórax.',
+      achado: 'Sons agudos, musicais, contínuos, por obstrução/estreitamento de pequenas vias aéreas — marca registrada de asma e DPOC/broncoespasmo. Predominam na expiração.',
+      quiz: { p: 'Sibilos difusos, predominantemente expiratórios, são a marca registrada de:', ops: ['Obstrução de via aérea superior', 'Broncoespasmo (asma/DPOC)', 'Derrame pleural', 'Fibrose pulmonar'], correct: 1, exp: 'Estreitamento de pequenas vias aéreas gera esse som agudo e musical, mais audível na expiração.' } },
+    { id: 'atrito-pleural', nome: 'Atrito pleural', sistema: 'Pulmonar', arquivo: 'assets/audio/ausculta/pulmao/atrito-pleural.mp3',
+      onde: 'Área de dor pleurítica, ambas as fases respiratórias.',
+      achado: 'Som áspero, de "couro rangendo" ou "pisar na neve", por atrito entre folhetos pleurais inflamados — desaparece se um derrame se acumular entre eles.',
+      quiz: { p: 'O atrito pleural desaparece quando:', ops: ['O paciente tosse', 'Se acumula líquido (derrame) entre os folhetos pleurais', 'O paciente inspira fundo', 'Nunca desaparece'], correct: 1, exp: 'O líquido separa os folhetos inflamados, eliminando o atrito entre eles.' } },
+  ];
+  const AUSCULTA_MAP = Object.fromEntries(AUSCULTA.map((a) => [a.id, a]));
+
+  const MF = (vb, inner) => `<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" class="semio-sign-svg" role="img">${inner}</svg>`;
+  const MANOBRA_FIG = {
+    ftv: MF('0 0 220 130', `
+      <path d="M30 20 Q110 4 190 20 L196 108 Q110 128 24 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <g stroke="#3a6ea5" stroke-width="1.4" fill="none">
+        <path d="M64 40 q6 8 0 16"/><path d="M74 40 q6 8 0 16"/>
+        <path d="M146 40 q6 8 0 16"/><path d="M156 40 q6 8 0 16"/></g>
+      <text x="70" y="76" font-size="10" fill="#667085" text-anchor="middle">"trinta e três"</text>
+      <text x="150" y="76" font-size="10" fill="#667085" text-anchor="middle">comparar lados</text>`),
+    egofonia: MF('0 0 220 130', `
+      <path d="M30 20 Q110 4 190 20 L196 108 Q110 128 24 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="150" cy="60" r="14" fill="none" stroke="#c0392b" stroke-width="2"/>
+      <text x="150" y="64" font-size="12" fill="#c0392b" text-anchor="middle" font-weight="700">É</text>
+      <text x="150" y="100" font-size="10" fill="#667085" text-anchor="middle">"i" soa como "é"</text>`),
+    murphy: MF('0 0 200 130', `
+      <path d="M40 20 Q100 6 160 20 L166 108 Q100 128 34 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <ellipse cx="125" cy="55" rx="14" ry="18" fill="#7a9a5b" stroke="#5a7a3b" stroke-width="1.4"/>
+      <path d="M115 40 v-16" stroke="#c0392b" stroke-width="2"/>
+      <text x="100" y="122" font-size="10" fill="#667085" text-anchor="middle">Inspiração + palpação do HD → parada</text>`),
+    blumberg: MF('0 0 200 130', `
+      <path d="M40 20 Q100 6 160 20 L166 108 Q100 128 34 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="150" cy="86" r="8" fill="#c0392b" opacity=".55"/>
+      <path d="M150 60 v18" stroke="#3a6ea5" stroke-width="2"/>
+      <text x="100" y="122" font-size="10" fill="#667085" text-anchor="middle">Dor à retirada súbita da mão (FID)</text>`),
+    'macicez-movel': MF('0 0 200 130', `
+      <ellipse cx="100" cy="60" rx="66" ry="40" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M50 70 Q100 88 150 70 L150 84 Q100 102 50 84 Z" fill="#9fc3e0" opacity=".8"/>
+      <text x="100" y="118" font-size="10" fill="#c0392b" text-anchor="middle">Interface desloca ao mudar decúbito</text>`),
+    babinski: MF('0 0 200 120', `
+      <path d="M60 100 L60 40 Q80 20 130 40 L140 90 Q100 108 60 100 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M70 90 L50 70" stroke="#3a6ea5" stroke-width="2"/>
+      <path d="M115 44 q10 -14 0 -22" stroke="#c0392b" stroke-width="2.4" fill="none"/>
+      <text x="100" y="114" font-size="10" fill="#667085" text-anchor="middle">Extensão do hálux (positivo)</text>`),
+    meningeos: MF('0 0 200 120', `
+      <ellipse cx="100" cy="40" rx="26" ry="28" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M100 66 q0 20 0 40" stroke="#8a6a4a" stroke-width="10" stroke-linecap="round"/>
+      <path d="M78 60 q22 20 44 0" stroke="#c0392b" stroke-width="2" fill="none"/>
+      <text x="100" y="112" font-size="10" fill="#667085" text-anchor="middle">Flexão passiva da nuca — resistência/dor</text>`),
+    ortostatica: MF('0 0 200 120', `
+      <rect x="86" y="16" width="28" height="60" rx="8" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <text x="100" y="8" font-size="10" fill="#667085" text-anchor="middle">Deitado</text>
+      <rect x="150" y="30" width="20" height="70" rx="8" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <text x="160" y="20" font-size="10" fill="#667085" text-anchor="middle">Em pé (1' e 3')</text>
+      <text x="100" y="112" font-size="10" fill="#c0392b" text-anchor="middle">Queda ≥ 20/10 mmHg = positivo</text>`),
+    b3: MF('0 0 200 100', `
+      <path d="M20 50 q10 -6 20 0 q10 6 20 0 q10 -30 20 0 q10 30 20 0 q10 -6 20 0 q10 -22 20 0 q10 6 20 0" fill="none" stroke="#3a6ea5" stroke-width="2"/>
+      <text x="55" y="70" font-size="9" fill="#667085" text-anchor="middle">B1</text>
+      <text x="105" y="70" font-size="9" fill="#667085" text-anchor="middle">B2</text>
+      <text x="150" y="86" font-size="9" fill="#c0392b" text-anchor="middle">B3 (surda, protodiastólica)</text>`),
+    'valsalva-cmh': MF('0 0 200 110', `
+      <path d="M20 60 h40 q6 -34 12 0 h30 q6 12 12 0 h40" fill="none" stroke="#3a6ea5" stroke-width="2"/>
+      <text x="100" y="20" font-size="10" fill="#667085" text-anchor="middle">↓ retorno venoso (Valsalva)</text>
+      <text x="100" y="98" font-size="10" fill="#c0392b" text-anchor="middle">Sopro AUMENTA na CMH/prolapso</text>`),
+  };
+
+  // ---------------------------------------------------------------------------
   // 3. CASOS CLÍNICOS GUIADOS
   //    Fluxo: representação → hipóteses → red flag → conduta (feedback a cada passo)
   // ---------------------------------------------------------------------------
@@ -452,6 +590,11 @@
   // Ilustrações ORIGINAIS (SVG próprio) por sinal — sem uso de imagens de terceiros.
   const F = (vb, inner) => `<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" class="semio-sign-svg" role="img">${inner}</svg>`;
   const SIGN_FIG = {
+    facies: F('0 0 200 110', `
+      <ellipse cx="100" cy="55" rx="52" ry="46" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="82" cy="46" r="5" fill="#2b2b2b"/><circle cx="118" cy="46" r="5" fill="#2b2b2b"/>
+      <path d="M84 74 Q100 82 116 74" fill="none" stroke="#8a6a4a" stroke-width="2.4" stroke-linecap="round"/>
+      <text x="100" y="102" font-size="10" fill="#667085" text-anchor="middle">Expressão, simetria e cor do rosto</text>`),
     baqueteamento: F('0 0 240 130', `
       <text x="60" y="16" font-size="11" fill="#667085" text-anchor="middle">Normal (~160°)</text>
       <path d="M20 70 L86 70 Q98 70 100 60 L102 52 Q103 46 97 46 L90 47 Q84 48 84 56 L84 70" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
@@ -518,6 +661,133 @@
       <rect x="52" y="14" width="34" height="104" rx="14" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
       <path d="M62 22 q14 14 -2 28 q-14 14 4 28 q16 12 -2 28 q-8 8 2 16" fill="none" stroke="#3b5aa0" stroke-width="3.4"/>
       <text x="70" y="128" font-size="10" fill="#667085" text-anchor="middle">Veias tortuosas e dilatadas</text>`),
+    ascite: F('0 0 200 140', `
+      <path d="M40 30 Q100 14 160 30 L170 110 Q100 132 30 110 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M46 88 Q100 108 154 88 L160 105 Q100 126 40 105 Z" fill="#9fc3e0" opacity=".75"/>
+      <path d="M35 55 q4 -4 8 0" stroke="#3a6ea5" stroke-width="1.4" fill="none"/>
+      <text x="100" y="16" font-size="10" fill="#667085" text-anchor="middle">Decúbito dorsal → lateral</text>
+      <text x="100" y="132" font-size="10" fill="#c0392b" text-anchor="middle">Nível líquido se desloca (macicez móvel)</text>`),
+    hepatomegalia: F('0 0 200 140', `
+      <path d="M40 30 Q100 14 160 30 L165 100 Q100 120 35 100 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M108 40 Q150 44 152 76 Q150 96 112 92 Q92 88 96 62 Q98 46 108 40 Z" fill="#9a5b45" stroke="#7a4433" stroke-width="1.4"/>
+      <path d="M120 30 L114 96" stroke="#c9ac8f" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="100" y="132" font-size="10" fill="#667085" text-anchor="middle">Borda a X cm do rebordo costal D</text>`),
+    esplenomegalia: F('0 0 200 140', `
+      <path d="M40 30 Q100 14 160 30 L165 100 Q100 120 35 100 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <ellipse cx="70" cy="58" rx="22" ry="30" fill="#6b3f6b" stroke="#4d2c4d" stroke-width="1.4" transform="rotate(-18 70 58)"/>
+      <text x="100" y="132" font-size="10" fill="#667085" text-anchor="middle">Palpável = já aumentado (2–3×)</text>`),
+    ictus: F('0 0 200 140', `
+      <path d="M40 26 Q100 12 160 26 L166 108 Q100 128 34 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M78 60 C70 46 96 40 100 56 C104 40 130 46 122 60 C114 76 100 88 100 88 C100 88 86 76 78 60 Z" fill="#b23b3b"/>
+      <circle cx="86" cy="88" r="4" fill="none" stroke="#c0392b" stroke-width="1.4"/>
+      <text x="100" y="130" font-size="10" fill="#667085" text-anchor="middle">5º EIC, linha hemiclavicular</text>`),
+    jugular: F('0 0 200 130', `
+      <ellipse cx="100" cy="34" rx="30" ry="32" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M84 60 L78 118" stroke="#3b5aa0" stroke-width="9" stroke-linecap="round" opacity=".8"/>
+      <line x1="40" y1="118" x2="160" y2="70" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="100" y="128" font-size="10" fill="#667085" text-anchor="middle">45° — distensão acima do esperado</text>`),
+    tireoide: F('0 0 200 120', `
+      <ellipse cx="100" cy="30" rx="26" ry="28" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M78 66 q22 -10 44 0 q-4 20 -22 20 q-18 0 -22 -20 Z" fill="#c97a63" stroke="#a35a45" stroke-width="1.4"/>
+      <text x="100" y="112" font-size="10" fill="#667085" text-anchor="middle">Sobe com a deglutição</text>`),
+    'linfonodo-cervical': F('0 0 200 120', `
+      <ellipse cx="100" cy="30" rx="26" ry="28" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="130" cy="60" r="8" fill="#d9b3a8" stroke="#b17f6f" stroke-width="1.4"/>
+      <circle cx="140" cy="76" r="6" fill="#d9b3a8" stroke="#b17f6f" stroke-width="1.4"/>
+      <text x="100" y="112" font-size="10" fill="#667085" text-anchor="middle">Cadeias cervicais — comparar bilateral</text>`),
+    'cianose-central': F('0 0 200 110', `
+      <path d="M70 40 Q100 34 130 40 Q128 62 100 66 Q72 62 70 40 Z" fill="#6b8fae" stroke="#4d6c88" stroke-width="1.6"/>
+      <text x="100" y="98" font-size="10" fill="#667085" text-anchor="middle">Lábios/língua azulados — hipoxemia</text>`),
+    'circulacao-colateral': F('0 0 200 130', `
+      <path d="M40 26 Q100 12 160 26 L166 108 Q100 128 34 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="100" cy="70" r="5" fill="#8a6a4a"/>
+      <g stroke="#3b5aa0" stroke-width="2" fill="none">
+        <path d="M100 65 q-20 -20 -40 -14"/><path d="M100 65 q20 -20 40 -14"/>
+        <path d="M100 75 q-20 20 -40 14"/><path d="M100 75 q20 20 40 14"/></g>
+      <text x="100" y="126" font-size="10" fill="#667085" text-anchor="middle">"Cabeça de medusa" — hipertensão portal</text>`),
+    'eritema-palmar': F('0 0 180 120', `
+      <path d="M60 100 L60 40 Q60 26 90 26 Q120 26 120 44 L120 100 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <ellipse cx="72" cy="90" rx="10" ry="7" fill="#c0392b" opacity=".55"/>
+      <ellipse cx="108" cy="90" rx="10" ry="7" fill="#c0392b" opacity=".55"/>
+      <text x="90" y="114" font-size="10" fill="#667085" text-anchor="middle">Eminências avermelhadas, centro poupado</text>`),
+    tremor: F('0 0 200 120', `
+      <path d="M50 90 L54 40" stroke="#e7d3bf" stroke-width="16" stroke-linecap="round"/>
+      <path d="M150 90 L146 40" stroke="#e7d3bf" stroke-width="16" stroke-linecap="round"/>
+      <path d="M50 40 q3 10 -3 18" stroke="#c0392b" stroke-width="2" fill="none"/>
+      <path d="M150 40 q-3 10 3 18" stroke="#c0392b" stroke-width="2" fill="none"/>
+      <text x="100" y="112" font-size="10" fill="#667085" text-anchor="middle">Asterixis — queda súbita ("flapping")</text>`),
+    perfusao: F('0 0 200 100', `
+      <rect x="75" y="30" width="20" height="46" rx="9" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <rect x="80" y="60" width="10" height="14" fill="#c0392b" opacity=".5"/>
+      <text x="60" y="92" font-size="10" fill="#667085" text-anchor="middle">Comprime</text>
+      <path d="M110 50 h30" stroke="#94a3b8" stroke-width="1.6"/>
+      <text x="150" y="46" font-size="10" fill="#667085">≤ 2s = normal</text>`),
+    'macicez-movel': F('0 0 200 130', `
+      <ellipse cx="100" cy="70" rx="66" ry="40" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M50 78 Q100 96 150 78 L150 92 Q100 110 50 92 Z" fill="#9fc3e0" opacity=".8"/>
+      <text x="100" y="20" font-size="10" fill="#667085" text-anchor="middle">Muda de posição →</text>
+      <text x="100" y="122" font-size="10" fill="#c0392b" text-anchor="middle">Interface timpânico/maciço se desloca</text>`),
+    'edema-sacral': F('0 0 200 110', `
+      <path d="M60 20 L60 90 Q100 100 140 90 L140 20" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <ellipse cx="100" cy="70" rx="24" ry="14" fill="#d8c2ab"/>
+      <text x="100" y="102" font-size="10" fill="#c0392b" text-anchor="middle">Sacro — área mais baixa no acamado</text>`),
+    'lesao-pressao': F('0 0 200 100', `
+      <ellipse cx="100" cy="50" rx="60" ry="30" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="100" cy="50" r="18" fill="#d98a7c"/>
+      <text x="100" y="92" font-size="10" fill="#667085" text-anchor="middle">Eritema não-branqueável — estágio 1</text>`),
+    escoliose: F('0 0 140 160', `
+      <path d="M70 12 C40 40 100 70 60 100 C30 130 90 148 70 150" fill="none" stroke="#8a6a4a" stroke-width="8" stroke-linecap="round"/>
+      <text x="70" y="12" font-size="0"/>
+      <text x="70" y="20" font-size="10" fill="#667085" text-anchor="middle">↑</text>
+      <text x="70" y="158" font-size="10" fill="#667085" text-anchor="middle">Curva em "S"</text>`),
+    dupuytren: F('0 0 180 130', `
+      <path d="M60 110 L60 50 Q60 34 90 34 Q120 34 120 52 L120 110 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M72 108 Q78 78 96 70" stroke="#8a6a4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M96 108 Q100 80 112 70" stroke="#8a6a4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <text x="90" y="124" font-size="10" fill="#667085" text-anchor="middle">Cordão fibroso — flexão do 4º/5º dedo</text>`),
+    'osler-janeway': F('0 0 180 120', `
+      <path d="M60 100 L60 40 Q60 26 90 26 Q120 26 120 44 L120 100 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="72" cy="86" r="6" fill="#c0392b"/><circle cx="100" cy="90" r="5" fill="#c0392b"/>
+      <text x="90" y="114" font-size="10" fill="#667085" text-anchor="middle">Osler (dolorosos) / Janeway (indolores)</text>`),
+    'expansibilidade-posterior': F('0 0 200 130', `
+      <path d="M40 30 Q100 14 160 30 L165 108 Q100 128 35 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <line x1="100" y1="35" x2="100" y2="105" stroke="#8a6a4a" stroke-width="2"/>
+      <path d="M60 60 h-14" stroke="#3a6ea5" stroke-width="2"/><path d="M140 60 h14" stroke="#3a6ea5" stroke-width="2"/>
+      <text x="100" y="126" font-size="10" fill="#667085" text-anchor="middle">Polegares se afastam simetricamente</text>`),
+    'macicez-base': F('0 0 200 130', `
+      <path d="M40 30 Q100 14 160 30 L165 108 Q100 128 35 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M46 88 Q100 105 154 88 L160 106 Q100 124 40 106 Z" fill="#3a6ea5" opacity=".5"/>
+      <text x="100" y="126" font-size="10" fill="#667085" text-anchor="middle">Macicez basal — derrame pleural</text>`),
+    giordano: F('0 0 200 130', `
+      <path d="M40 30 Q100 14 160 30 L165 108 Q100 128 35 108 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="130" cy="66" r="10" fill="none" stroke="#c0392b" stroke-width="2"/>
+      <path d="M130 46 v-14" stroke="#c0392b" stroke-width="2"/>
+      <text x="100" y="126" font-size="10" fill="#667085" text-anchor="middle">Punho-percussão da loja renal</text>`),
+    'linfonodo-supraclavicular': F('0 0 200 120', `
+      <path d="M40 26 Q100 12 160 26 L165 100 Q100 118 35 100 Z" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="132" cy="42" r="8" fill="#d9b3a8" stroke="#b17f6f" stroke-width="1.4"/>
+      <text x="100" y="114" font-size="10" fill="#667085" text-anchor="middle">Gânglio de Virchow — fossa supraclavicular E</text>`),
+    'tvp-panturrilha': F('0 0 140 150', `
+      <path d="M55 20 L55 100 Q70 120 55 140" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <path d="M95 20 L102 100 Q88 120 100 140" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <ellipse cx="100" cy="80" rx="14" ry="20" fill="#c0392b" opacity=".4"/>
+      <text x="70" y="148" font-size="10" fill="#667085" text-anchor="middle">Assimetria + empastamento</text>`),
+    pupilas: F('0 0 200 100', `
+      <circle cx="70" cy="50" r="26" fill="#fff" stroke="#c9ac8f" stroke-width="1.6"/>
+      <circle cx="70" cy="50" r="10" fill="#2b2b2b"/>
+      <circle cx="140" cy="50" r="26" fill="#fff" stroke="#c9ac8f" stroke-width="1.6"/>
+      <circle cx="140" cy="50" r="16" fill="#2b2b2b"/>
+      <text x="100" y="92" font-size="10" fill="#c0392b" text-anchor="middle">Anisocoria — assimetria pupilar</text>`),
+    'desvio-rima': F('0 0 200 120', `
+      <ellipse cx="100" cy="55" rx="55" ry="50" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <circle cx="80" cy="45" r="5" fill="#2b2b2b"/><circle cx="120" cy="45" r="5" fill="#2b2b2b"/>
+      <path d="M75 78 Q95 70 130 84" fill="none" stroke="#7a4433" stroke-width="3" stroke-linecap="round"/>
+      <text x="100" y="116" font-size="10" fill="#667085" text-anchor="middle">Comissura desviada para o lado são</text>`),
+    'mucosa-hidratacao': F('0 0 200 100', `
+      <ellipse cx="100" cy="50" rx="55" ry="34" fill="#e7d3bf" stroke="#b89c82" stroke-width="1.6"/>
+      <ellipse cx="100" cy="58" rx="30" ry="12" fill="#c97a63"/>
+      <path d="M78 58 h44" stroke="#8a4a3a" stroke-width="1" stroke-dasharray="2 2"/>
+      <text x="100" y="92" font-size="10" fill="#667085" text-anchor="middle">Mucosa seca + turgor lentificado</text>`),
   };
   const CAT_COR = { 'Inspeção': '#3a6ea5', 'Palpação': '#2f7d6f', 'Percussão': '#b45309', 'Ausculta': '#8b5cf6' };
 
@@ -603,7 +873,7 @@
   // ---------------------------------------------------------------------------
   function defaultState() {
     return {
-      ui: { sub: 'inicio', aulaModId: null, aulaTopicoId: null, manobraId: null, casoId: null, focus: false, fichaSistema: 'Todos', corpoSignId: null, corpoTeste: false, corpoTesteId: null, corpoView: 'ant' },
+      ui: { sub: 'inicio', aulaModId: null, aulaTopicoId: null, manobraId: null, auscultaId: null, casoId: null, focus: false, fichaSistema: 'Todos', corpoSignId: null, corpoTeste: false, corpoTesteId: null, corpoView: 'ant' },
       srs: {}, progress: {}, caseState: {}, highlights: {}, log: [],
       daily: { date: todayISO(), studied: 0 },
     };
@@ -757,6 +1027,7 @@
   function manobraDetailHtml(m) {
     return `<button class="semio-btn ghost sm" data-back-manobras>← Manobras</button>
       <div class="semio-topic-head"><h2>${esc(m.nome)}</h2><span class="semio-tag">${esc(m.sistema)}</span></div>
+      ${MANOBRA_FIG[m.id] ? `<figure class="semio-sign-fig">${MANOBRA_FIG[m.id]}<figcaption>Ilustração original — esquema didático</figcaption></figure>` : ''}
       <div class="semio-def"><b>Finalidade</b><p>${esc(m.finalidade)}</p></div>
       <div class="semio-def"><b>Quando fazer</b><p>${esc(m.quando)}</p></div>
       <div class="semio-def"><b>Execução</b><p>${esc(m.execucao)}</p></div>
@@ -775,6 +1046,35 @@
     const S = st();
     if (S.ui.manobraId && MANOBRA_MAP[S.ui.manobraId]) return manobraDetailHtml(MANOBRA_MAP[S.ui.manobraId]);
     return manobrasListHtml();
+  }
+
+  // ---- Ausculta (áudios reais) ----
+  function auscultaHtml() {
+    const S = st();
+    if (S.ui.auscultaId && AUSCULTA_MAP[S.ui.auscultaId]) return auscultaDetailHtml(AUSCULTA_MAP[S.ui.auscultaId]);
+    return auscultaListHtml();
+  }
+  function auscultaListHtml() {
+    const sistemas = [...new Set(AUSCULTA.map((a) => a.sistema))];
+    return `<h2 class="semio-topic-title">Ausculta — sons reais (Littmann)</h2>
+      <p class="semio-muted">Ouça cada som, leia onde e como auscultar, e teste seu reconhecimento no quiz.</p>
+      ${sistemas.map((s) => `<h3 class="semio-h">${esc(s)}</h3>
+        <div class="semio-list">${AUSCULTA.filter((a) => a.sistema === s).map((a) => {
+          const done = st().progress['ausculta:' + a.id];
+          return `<button class="semio-topic" data-ausculta="${esc(a.id)}"><span>${esc(a.nome)}</span>${done ? '<i class="semio-check">✓</i>' : ''}</button>`;
+        }).join('')}</div>`).join('')}`;
+  }
+  function auscultaDetailHtml(a) {
+    return `<button class="semio-btn ghost sm" data-back-ausculta>← Ausculta</button>
+      <div class="semio-topic-head"><h2>${esc(a.nome)}</h2><span class="semio-tag">${esc(a.sistema)}</span></div>
+      <audio class="semio-audio" controls preload="none" src="${esc(a.arquivo)}"></audio>
+      <div class="semio-def"><b>Onde auscultar</b><p>${esc(a.onde)}</p></div>
+      <div class="semio-def"><b>O que se ouve / significado</b><p>${esc(a.achado)}</p></div>
+      <div class="semio-quiz" data-quiz-ausculta="${esc(a.id)}">
+        <b>${esc(a.quiz.p)}</b>
+        <div class="semio-opts">${a.quiz.ops.map((o, i) => `<button class="semio-opt" data-opt="${i}">${esc(o)}</button>`).join('')}</div>
+        <div class="semio-fb"></div>
+      </div>`;
   }
 
   // ---- Casos ----
@@ -920,7 +1220,7 @@
   // ---------------------------------------------------------------------------
   // 7. ROTEADOR + MOUNT
   // ---------------------------------------------------------------------------
-  const SUBS = [['inicio', 'Início'], ['aulas', 'Aulas'], ['corpo', 'Corpo'], ['manobras', 'Manobras'], ['casos', 'Casos'], ['fichas', 'Fichas'], ['desempenho', 'Desempenho']];
+  const SUBS = [['inicio', 'Início'], ['aulas', 'Aulas'], ['corpo', 'Corpo'], ['manobras', 'Manobras'], ['ausculta', 'Ausculta'], ['casos', 'Casos'], ['fichas', 'Fichas'], ['desempenho', 'Desempenho']];
   function subnav() {
     const cur = st().ui.sub;
     return `<div class="semio-subnav">${SUBS.map(([k, l]) => `<button class="semio-sub ${k === cur ? 'on' : ''}" data-sub="${k}">${l}</button>`).join('')}</div>`;
@@ -930,6 +1230,7 @@
       case 'aulas': return aulasHtml();
       case 'corpo': return corpoHtml();
       case 'manobras': return manobrasHtml();
+      case 'ausculta': return auscultaHtml();
       case 'casos': return casosHtml();
       case 'fichas': return fichasHtml();
       case 'desempenho': return desempenhoHtml();
@@ -944,7 +1245,7 @@
     ROOT.querySelector('.semio-body').innerHTML = bodyHtml();
     bind();
   }
-  function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'aulas') { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; } if (sub !== 'manobras') S.ui.manobraId = null; if (sub !== 'casos') S.ui.casoId = null; if (sub !== 'corpo') { S.ui.corpoSignId = null; S.ui.corpoTeste = false; S.ui.corpoTesteId = null; } save(); paint(); }
+  function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'aulas') { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; } if (sub !== 'manobras') S.ui.manobraId = null; if (sub !== 'ausculta') S.ui.auscultaId = null; if (sub !== 'casos') S.ui.casoId = null; if (sub !== 'corpo') { S.ui.corpoSignId = null; S.ui.corpoTeste = false; S.ui.corpoTesteId = null; } save(); paint(); }
 
   function bind() {
     const S = st();
@@ -992,6 +1293,11 @@
     ROOT.querySelectorAll('[data-manobra]').forEach((b) => b.onclick = () => { S.ui.manobraId = b.dataset.manobra; save(); paint(); });
     ROOT.querySelector('[data-back-manobras]')?.addEventListener('click', () => { S.ui.manobraId = null; save(); paint(); });
     bindQuizManobra();
+
+    // Ausculta
+    ROOT.querySelectorAll('[data-ausculta]').forEach((b) => b.onclick = () => { S.ui.auscultaId = b.dataset.ausculta; save(); paint(); });
+    ROOT.querySelector('[data-back-ausculta]')?.addEventListener('click', () => { S.ui.auscultaId = null; save(); paint(); });
+    bindQuizAusculta();
 
     // Casos
     ROOT.querySelectorAll('[data-caso]').forEach((b) => b.onclick = () => { S.ui.casoId = b.dataset.caso; save(); paint(); });
@@ -1064,6 +1370,22 @@
         st().progress['manobra:' + m.id] = true; st().daily.studied++; save();
         confRow.innerHTML = '<span class="semio-muted sm">Registrado na revisão espaçada ✓</span>';
       });
+    });
+  }
+
+  function bindQuizAusculta() {
+    const box = ROOT.querySelector('[data-quiz-ausculta]');
+    if (!box) return;
+    const a = AUSCULTA_MAP[box.dataset.quizAusculta];
+    const fb = box.querySelector('.semio-fb');
+    let answered = false;
+    box.querySelectorAll('.semio-opt').forEach((btn) => btn.onclick = () => {
+      if (answered) return; answered = true;
+      const i = +btn.dataset.opt; const ok = i === a.quiz.correct;
+      box.querySelectorAll('.semio-opt').forEach((b, j) => { if (j === a.quiz.correct) b.classList.add('correct'); if (j === i && !ok) b.classList.add('wrong'); b.disabled = true; });
+      logAttempt('ausculta:' + a.id, ok, null);
+      st().progress['ausculta:' + a.id] = true; st().daily.studied++; save();
+      fb.innerHTML = `<div class="semio-feedback ${ok ? 'ok' : 'no'}">${ok ? 'Correto! ' : 'Reveja: '}${esc(a.quiz.exp)}</div>`;
     });
   }
 
@@ -1165,6 +1487,7 @@
     .semio-fig figcaption{font-size:.8rem;color:var(--muted,#667085);margin-top:6px;text-align:left}
     .semio-def{margin:9px 0}.semio-def b{color:var(--semio-acc2)}.semio-def p{margin:2px 0 0;line-height:1.5}
     .semio-quiz{margin-top:14px;background:var(--card,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:14px}
+    .semio-audio{width:100%;margin:10px 0}
     .semio-opts{display:flex;flex-direction:column;gap:7px;margin-top:9px}
     .semio-opt{text-align:left;border:1px solid var(--border,#cbd5e1);background:var(--bg,#fff);border-radius:9px;padding:10px 12px;cursor:pointer;font-size:.88rem}
     .semio-opt:hover:not(:disabled){border-color:var(--semio-acc)}
@@ -1209,5 +1532,5 @@
     document.head.appendChild(s);
   }
 
-  window.SemioSim = { mount, defaultState, MANOBRAS, CASOS, FICHAS };
+  window.SemioSim = { mount, defaultState, MANOBRAS, AUSCULTA, CASOS, FICHAS };
 })();

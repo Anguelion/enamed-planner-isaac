@@ -4064,6 +4064,95 @@ function renderAnalysisBars(groups,emptyText) {
   if(!groups.length) return `<div class="empty">${escapeHtml(emptyText)}</div>`;
   return `<div class="analysis-bars">${groups.map(group=>`<div class="analysis-bar"><div><strong>${escapeHtml(group.name)}</strong><span>${group.correct}/${group.total} · ${pct(group.rate)}</span></div><div class="progress"><span style="width:${pct(group.rate)}"></span></div></div>`).join('')}</div>`;
 }
+function analysisRateColor(rate) { return rate>=.7?'var(--green)':rate>=.4?'var(--amber)':'var(--red)'; }
+function renderAreaBars(groups,emptyText) {
+  if(!groups.length) return `<div class="empty">${escapeHtml(emptyText)}</div>`;
+  return `<div class="analysis-bars">${groups.map(group=>`<div class="analysis-bar"><div><strong>${escapeHtml(group.name)}</strong><span>${group.correct}/${group.total} · ${pct(group.rate)}</span></div><div class="progress"><span style="width:${pct(group.rate)};background:${analysisRateColor(group.rate)}"></span></div></div>`).join('')}</div>`;
+}
+function areaWindowRows(daysBack) {
+  const today=studyDateKey();
+  const dates=[...Array(daysBack)].map((_,i)=>addDays(today,-i));
+  return dates.flatMap(dailyQuestionRows);
+}
+function attentionMetrics(rows) {
+  const BREAK_MINUTES=15;
+  const timed=rows.filter(row=>row.answeredAt && !Number.isNaN(Date.parse(row.answeredAt))).sort((a,b)=>Date.parse(a.answeredAt)-Date.parse(b.answeredAt));
+  const sessions=[];
+  let current=null;
+  timed.forEach(row=>{
+    const t=Date.parse(row.answeredAt);
+    if(!current || (t-current.lastTime)/60000>BREAK_MINUTES) { current={start:t,lastTime:t,questions:1,correct:row.correct?1:0}; sessions.push(current); }
+    else { current.lastTime=t; current.questions+=1; current.correct+=row.correct?1:0; }
+  });
+  const longest=sessions.reduce((max,s)=>Math.max(max,(s.lastTime-s.start)/60000),0);
+  const totalActive=sessions.reduce((sum,s)=>sum+(s.lastTime-s.start)/60000,0);
+  const breaks=Math.max(0,sessions.length-1);
+  const half=Math.floor(timed.length/2);
+  const firstAcc=half?timed.slice(0,half).filter(row=>row.correct).length/half:null;
+  const secondAcc=(timed.length-half)?timed.slice(half).filter(row=>row.correct).length/(timed.length-half):null;
+  const decline=(firstAcc!==null && secondAcc!==null)?firstAcc-secondAcc:0;
+  const secondsArr=timed.map(row=>row.seconds).filter(s=>s>0);
+  const meanSec=secondsArr.length?secondsArr.reduce((a,b)=>a+b,0)/secondsArr.length:0;
+  const variance=secondsArr.length?secondsArr.reduce((sum,s)=>sum+(s-meanSec)**2,0)/secondsArr.length:0;
+  const cv=meanSec?Math.sqrt(variance)/meanSec:0;
+  const continuityScore=Math.min(1,longest/45)*40;
+  const consistencyScore=Math.max(0,1-Math.min(1,cv))*30;
+  const stabilityScore=Math.max(0,1-Math.min(1,Math.max(0,decline)*2))*30;
+  const score=timed.length?Math.round(continuityScore+consistencyScore+stabilityScore):null;
+  return {sessions,longest,totalActive,breaks,decline,score,timed};
+}
+function attentionScoreLabel(score) {
+  if(score===null) return {label:'Sem dados',className:''};
+  if(score>=75) return {label:'Foco alto',className:'success'};
+  if(score>=50) return {label:'Foco moderado',className:'attention'};
+  if(score>=25) return {label:'Foco disperso',className:'warning'};
+  return {label:'Atenção baixa',className:'critical'};
+}
+function svgAttentionTimeline(metrics) {
+  const {timed}=metrics;
+  if(timed.length<2) return '<div class="empty">Sem horários suficientes registrados nesta data.</div>';
+  const start=Date.parse(timed[0].answeredAt), end=Date.parse(timed[timed.length-1].answeredAt);
+  const span=Math.max(end-start,60000);
+  const w=680,h=100,pad=12;
+  const maxSec=Math.max(60,...timed.map(row=>row.seconds||0));
+  const xOf=iso=>pad+((Date.parse(iso)-start)/span)*(w-2*pad);
+  const points=timed.map(row=>({x:xOf(row.answeredAt),y:h-pad-((row.seconds||0)/maxSec)*(h-2*pad),correct:row.correct}));
+  const BREAK_MS=15*60000;
+  let gaps='';
+  for(let i=1;i<timed.length;i++) {
+    const gap=Date.parse(timed[i].answeredAt)-Date.parse(timed[i-1].answeredAt);
+    if(gap>BREAK_MS) {
+      const x1=xOf(timed[i-1].answeredAt), x2=xOf(timed[i].answeredAt);
+      gaps+=`<rect x="${x1.toFixed(1)}" y="0" width="${Math.max(2,x2-x1).toFixed(1)}" height="${h}" fill="var(--muted)" opacity=".14"/>`;
+    }
+  }
+  const path=points.map((p,i)=>`${i?'L':'M'}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+  const dots=points.map(p=>`<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3.5" fill="${p.correct?'var(--green)':'var(--red)'}"/>`).join('');
+  return `<svg viewBox="0 0 ${w} ${h}" class="attention-chart" role="img" aria-label="Tempo por questão ao longo do dia, com pausas sombreadas">${gaps}<path d="${path}" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>${dots}</svg>`;
+}
+function accuracyTrend(days) {
+  ensureDayLogs();
+  const today=studyDateKey();
+  const dates=[...Array(days)].map((_,i)=>addDays(today,-(days-1-i)));
+  return dates.map(date=>{
+    const log=state.dayLogs.find(item=>item.date===date);
+    const total=n(log?.correct)+n(log?.wrong);
+    return {date,total,rate:total?n(log.correct)/total:null};
+  });
+}
+function svgTrendLine(series) {
+  const valid=series.filter(p=>p.rate!==null);
+  if(valid.length<2) return '<div class="empty">Ainda não há dias suficientes para mostrar a tendência.</div>';
+  const w=680,h=120,pad=14;
+  const points=series.map((p,i)=>({...p,x:pad+(i/(series.length-1))*(w-2*pad),y:p.rate===null?null:h-pad-p.rate*(h-2*pad)}));
+  const segments=[]; let seg=[];
+  points.forEach(p=>{ if(p.y===null) { if(seg.length) segments.push(seg); seg=[]; } else seg.push(p); });
+  if(seg.length) segments.push(seg);
+  const paths=segments.map(s=>`<path d="${s.map((p,i)=>`${i?'L':'M'}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ')}" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`).join('');
+  const dots=points.filter(p=>p.y!==null).map(p=>`<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3" fill="var(--teal)"><title>${fmtDate(p.date)} · ${pct(p.rate)}</title></circle>`).join('');
+  const grid=[0,.25,.5,.75,1].map(v=>{const y=(h-pad-v*(h-2*pad)).toFixed(1);return `<line x1="${pad}" x2="${w-pad}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width="1"/>`;}).join('');
+  return `<svg viewBox="0 0 ${w} ${h}" class="attention-chart" role="img" aria-label="Tendência de precisão nos últimos ${series.length} dias">${grid}${paths}${dots}</svg>`;
+}
 function openQuestionFromAnalysis(questionId) {
   const question=questionBank.find(item=>item.id===questionId);
   if(!question) return;
@@ -4087,6 +4176,16 @@ function renderAnalise() {
   const strengths=[...eligible].filter(item=>item.correct>0).sort((a,b)=>b.rate-a.rate || b.total-a.total).slice(0,4);
   const weaknesses=[...eligible].filter(item=>item.wrong>0).sort((a,b)=>a.rate-b.rate || b.wrong-a.wrong || b.total-a.total).slice(0,4);
   const strongest=strengths[0]; const weakest=weaknesses[0];
+  const metrics=attentionMetrics(rows);
+  const scoreInfo=attentionScoreLabel(metrics.score);
+  const trend=accuracyTrend(14);
+  const windowRows=areaWindowRows(30);
+  const areaGroupsAll=aggregateAnalysisRows(windowRows,'area');
+  const areaGroups=(g=>g.length?g:areaGroupsAll)(areaGroupsAll.filter(item=>item.total>=3));
+  const bestAreas=[...areaGroups].sort((a,b)=>b.rate-a.rate || b.total-a.total).slice(0,5);
+  const worstAreas=[...areaGroups].sort((a,b)=>a.rate-b.rate || b.total-a.total).slice(0,5);
+  const attentionCard=`<div class="card"><div class="section-title"><div><span class="eyebrow">Atenção e continuidade</span><h2>Quanto tempo você sustentou o foco</h2></div><span class="badge ${scoreInfo.className}">${metrics.score===null?'Sem dados':`${metrics.score}/100 · ${scoreInfo.label}`}</span></div><div class="analysis-kpis"><div class="analysis-kpi"><span>Maior sequência contínua</span><strong>${metrics.longest?formatVideoTime(metrics.longest*60):'—'}</strong><small>sem pausa acima de 15 min</small></div><div class="analysis-kpi"><span>Tempo ativo no dia</span><strong>${metrics.totalActive?formatVideoTime(metrics.totalActive*60):'—'}</strong><small>somando todos os blocos</small></div><div class="analysis-kpi"><span>Pausas</span><strong>${metrics.breaks}</strong><small>intervalos acima de 15 min</small></div><div class="analysis-kpi"><span>Queda de rendimento</span><strong>${metrics.decline>0?`-${pct(metrics.decline)}`:'estável'}</strong><small>2ª metade vs 1ª metade do dia</small></div></div>${svgAttentionTimeline(metrics)}</div>`;
+  const skillCard=`<div class="card"><div class="section-title"><div><span class="eyebrow">Desenvolvimento de habilidades</span><h2>Tendência de precisão (14 dias)</h2></div></div>${svgTrendLine(trend)}</div><div class="grid two analysis-focus-grid"><div class="card analysis-focus strength"><div class="section-title"><div><span class="eyebrow">Melhores áreas · 30 dias</span><h2>${escapeHtml(bestAreas[0]?.name || 'Amostra insuficiente')}</h2></div></div>${renderAreaBars(bestAreas,'Ainda não há dados suficientes.')}</div><div class="card analysis-focus weakness"><div class="section-title"><div><span class="eyebrow">Piores áreas · 30 dias</span><h2>${escapeHtml(worstAreas[0]?.name || 'Nenhuma área crítica')}</h2></div></div>${renderAreaBars(worstAreas,'Ainda não há dados suficientes.')}</div></div>`;
   const executive=rows.length
     ? `${strongest?`Seu ponto mais forte foi ${strongest.name} (${pct(strongest.rate)}).`:''} ${weakest?`Priorize ${weakest.name}: ${weakest.wrong} ${weakest.wrong===1?'erro':'erros'} em ${weakest.total} ${weakest.total===1?'questão':'questões'}.`:'Nenhum ponto fraco relevante apareceu nesta amostra.'}`
     : 'Faça questões no banco ou finalize um simulado para gerar a leitura do dia.';
@@ -4098,7 +4197,7 @@ function renderAnalise() {
       <div class="analysis-kpi"><span>Tempo total</span><strong>${timed.length?formatVideoTime(timed.reduce((sum,row)=>sum+row.seconds,0)):'—'}</strong><small>mediana ${median?formatVideoTime(median):'não registrada'}</small></div>
     </div><div class="grid two analysis-focus-grid"><div class="card analysis-focus strength"><div class="section-title"><div><span class="eyebrow">Ponto mais forte</span><h2>${escapeHtml(strongest?.name || 'Amostra insuficiente')}</h2></div><span class="badge done">${strongest?pct(strongest.rate):'—'}</span></div>${renderAnalysisBars(strengths,'Ainda não há um padrão forte.')}</div><div class="card analysis-focus weakness"><div class="section-title"><div><span class="eyebrow">Pontos mais fracos</span><h2>${escapeHtml(weakest?.name || 'Nenhum erro relevante')}</h2></div><span class="badge ${weakest?'no':'done'}">${weakest?`${weakest.wrong} ${weakest.wrong===1?'erro':'erros'}`:'estável'}</span></div>${renderAnalysisBars(weaknesses,'Nenhum tema fraco nesta amostra.')}</div></div>
     <div class="card"><div class="section-title"><div><h2>Fila inteligente de revisão</h2><div class="muted">Ordenada pelo risco de repetir o erro, não pela ordem das questões.</div></div><span class="badge today">${detailed.filter(row=>row.risk.score>0).length} prioridades</span></div><div class="table-wrap"><table class="analysis-table"><thead><tr><th>Questão</th><th>Área e tema</th><th>Leitura</th><th class="num">Confiança</th><th class="num">Tempo</th><th>Próxima ação</th><th></th></tr></thead><tbody>${detailed.map((row,index)=>`<tr><td><strong>${row.runId?`Simulado · ${row.position}`:`${escapeHtml(questionCollectionLabel(row.question.collectionBlock))} · ${row.question.number}`}</strong><div class="muted">${escapeHtml(row.source)}</div></td><td><strong>${escapeHtml(row.area)}</strong><div class="muted">${escapeHtml(row.topic)}</div></td><td><span class="analysis-signal ${row.risk.className}">${escapeHtml(row.risk.label)}</span></td><td class="num">${row.confidence?`${Math.round(row.confidence)}%`:'—'}</td><td class="num">${row.seconds?formatVideoTime(row.seconds):'—'}</td><td>${escapeHtml(row.risk.action)}</td><td>${row.runId?`<button class="tiny-btn" data-analysis-open-sim="${escapeAttr(row.runId)}">Revisar</button>`:`<button class="tiny-btn" data-analysis-open-question="${escapeAttr(row.questionId)}">Abrir</button>`}</td></tr>`).join('')}</tbody></table></div></div>` : `<div class="card empty analysis-empty"><strong>Nenhuma questão registrada em ${fmtDate(date)}</strong><span>Abra o Banco de Questões ou finalize um simulado. A análise aparecerá automaticamente.</span><button class="icon-btn primary" data-analysis-open-bank>Abrir questões</button></div>`;
-  document.getElementById('analise').innerHTML=`<div class="card analysis-head"><div><span class="eyebrow">Inteligência de desempenho</span><h1>Análise diária de questões</h1><p>${escapeHtml(executive)}</p></div><div class="analysis-date-controls"><button class="icon-btn" data-analysis-day="-1" title="Dia anterior">‹</button><input class="input" id="analysisDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="icon-btn" data-analysis-day="1" title="Dia seguinte">›</button><button class="tiny-btn" id="analysisToday">Hoje</button></div></div>${content}`;
+  document.getElementById('analise').innerHTML=`<div class="card analysis-head"><div><span class="eyebrow">Inteligência de desempenho</span><h1>Análise diária de questões</h1><p>${escapeHtml(executive)}</p></div><div class="analysis-date-controls"><button class="icon-btn" data-analysis-day="-1" title="Dia anterior">‹</button><input class="input" id="analysisDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="icon-btn" data-analysis-day="1" title="Dia seguinte">›</button><button class="tiny-btn" id="analysisToday">Hoje</button></div></div>${content}${attentionCard}${skillCard}`;
   bindPlannerDateInput('analysisDate',date,value=>{ui.analysisDate=value;renderAnalise();});
   document.querySelectorAll('[data-analysis-day]').forEach(button=>button.onclick=()=>{ui.analysisDate=addDays(date,n(button.dataset.analysisDay));renderAnalise();});
   document.getElementById('analysisToday')?.addEventListener('click',()=>{ui.analysisDate=studyDateKey();renderAnalise();});
@@ -5119,7 +5218,7 @@ function renderVideoFlashcardEditor(source, lesson, schedule) {
   if(!source) return '';
   const cards = flashcardsInBuildOrder(Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []);
   const topic = videoContentLabel(source);
-  return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários. Selecione um trecho e use a barra para formatar.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>`<div class="flashcard-editor-item">${renderFlashcardMarkdownField(`data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front"` ,card.front,'Frente: pergunta ou conceito')}${renderFlashcardMarkdownField(`data-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso: resposta curta')}<button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
+  return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários. Selecione um trecho e use a barra para formatar, ou escolha o tipo Cloze para ocluir uma palavra.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>{ const sourceAttr = `data-video-card="${escapeAttr(source.id)}"`; return `<div class="flashcard-editor-item">${renderClozeAwareFlashcardFields(sourceAttr,card,'Frente: pergunta ou conceito','Verso: resposta curta')}<button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`; }).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
 }
 function addVideoFlashcard(source, lesson, schedule) {
   const video = document.getElementById('lessonVideo');
@@ -5158,6 +5257,7 @@ function updateVideoFlashcard(input) {
   if(input.dataset.cardField === 'subarea') card.topic = input.value;
   renderCache.manualCards = null;
   saveStateOnly();
+  if(input.dataset.cardField === 'cardType') renderAulas();
 }
 function removeVideoFlashcard(videoId, cardId) {
   const lesson = currentVideoLesson();
@@ -5910,7 +6010,6 @@ function renderFlashcardMarkdownToolbar() {
     <button type="button" class="flashcard-md-tool" data-fc-md-prefix="**" data-fc-md-suffix="**" title="Negrito"><strong>B</strong></button>
     <button type="button" class="flashcard-md-tool" data-fc-md-prefix="*" data-fc-md-suffix="*" title="Itálico"><em>I</em></button>
     <button type="button" class="flashcard-md-tool" data-fc-md-prefix="++" data-fc-md-suffix="++" title="Sublinhado"><u>S</u></button>
-    <button type="button" class="flashcard-md-tool" data-fc-md-line="# " title="Texto grande"><strong>H</strong></button>
     <button type="button" class="flashcard-md-tool marker" data-fc-md-prefix="==" data-fc-md-suffix="==" title="Marca-texto">Marca</button>
     <button type="button" class="flashcard-md-tool color blue" data-fc-md-prefix="{{blue|" data-fc-md-suffix="}}" title="Texto azul" aria-label="Texto azul"></button>
     <button type="button" class="flashcard-md-tool color green" data-fc-md-prefix="{{green|" data-fc-md-suffix="}}" title="Texto verde" aria-label="Texto verde"></button>
@@ -5920,6 +6019,10 @@ function renderFlashcardMarkdownToolbar() {
 }
 function renderFlashcardMarkdownField(attributes, value, placeholder) {
   return `<div class="flashcard-md-field">${renderFlashcardMarkdownToolbar()}<textarea class="textarea flashcard-markdown-input" ${attributes} placeholder="${escapeAttr(placeholder)}">${escapeHtml(value || '')}</textarea></div>`;
+}
+function renderClozeAwareFlashcardFields(sourceAttr, card, basicFrontPlaceholder, basicBackPlaceholder) {
+  const isCloze = card.cardType === 'cloze';
+  return `<label class="fc-card-type-field">Tipo de card<select class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="cardType"><option value="basic" ${isCloze?'':'selected'}>Básico (frente/verso)</option><option value="cloze" ${isCloze?'selected':''}>Cloze (ocluir palavra)</option></select></label>${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="front" id="fcEdit-${escapeAttr(card.id)}-front"`,card.front,isCloze?'Texto com lacunas, ex.: {{c1::resposta}}':basicFrontPlaceholder)}${isCloze ? `<div class="fc-cloze-tools"><button type="button" class="tiny-btn" data-fc-insert-cloze-edit="${escapeAttr(card.id)}">Marcar seleção como lacuna</button><span class="muted">Selecione o trecho a esconder e clique, ou digite {{c1::texto}}. Use c2, c3... para lacunas independentes.</span></div>` : ''}${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,isCloze?'Extra (opcional, só aparece na resposta)':basicBackPlaceholder)}`;
 }
 function bindFlashcardMarkdownTools(root=document) {
   root.querySelectorAll('[data-fc-md-prefix],[data-fc-md-line]').forEach(button => button.onclick = event => {
@@ -5990,6 +6093,11 @@ function flashcardContentWarnings(card) {
   if(/\be\/ou\b|\betc\.\b/i.test(front)) warnings.push('Evite perguntas vagas ou listas abertas.');
   return warnings;
 }
+function flashcardHasContent(card) {
+  if(!card?.front) return false;
+  if(card.cardType === 'cloze') return flashcardClozeNumbers(card.front).length > 0;
+  return Boolean(card.back);
+}
 function flashcardAllRecords() {
   const records = [...manualFlashcards(), ...(state.flashcardLibrary || [])];
   const seen = new Set();
@@ -5997,7 +6105,7 @@ function flashcardAllRecords() {
     normalizeFlashcardRecord(card);
     if(!card.id || seen.has(card.id) || card.deletedAt) return false;
     seen.add(card.id);
-    return card.front && card.back;
+    return flashcardHasContent(card);
   });
 }
 function mutableFlashcardRecord(id) {
@@ -6041,7 +6149,7 @@ function manualFlashcards() {
     const question = questionBank.find(item => item.id === questionId);
     const result = question ? questionResult(question) : null;
     const linked = result?.scheduleId ? state.schedule.find(item => item.id === result.scheduleId) : question ? scheduleForQuestion(question) : null;
-    return flashcardsInBuildOrder(Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
+    return flashcardsInBuildOrder(Array.isArray(cards) ? cards : []).filter(flashcardHasContent).map(card => ({
       ...card,
       questionId,
       scheduleId: card.scheduleId || linked?.id || '',
@@ -6051,7 +6159,7 @@ function manualFlashcards() {
       topic: card.topic || linked?.topic || question?.topic || 'Sem aula vinculada'
     }));
   });
-  const videoCards = Object.entries(state.videoFlashcards || {}).flatMap(([videoId,cards]) => flashcardsInBuildOrder(Array.isArray(cards) ? cards : []).filter(card => card.front && card.back).map(card => ({
+  const videoCards = Object.entries(state.videoFlashcards || {}).flatMap(([videoId,cards]) => flashcardsInBuildOrder(Array.isArray(cards) ? cards : []).filter(flashcardHasContent).map(card => ({
     ...card,
     videoId,
     scheduleId: card.scheduleId || '',
@@ -7734,7 +7842,7 @@ function renderQuestionFlashcardEditor(question, result) {
   const allowed = flashcardCreationAllowed(result);
   if(!allowed && !cards.length) return '';
   const reason = allowed ? flashcardCreationReason(result) : 'Flashcards já criados continuam disponíveis para edição.';
-  return `<div class="flashcard-editor"><div class="section-title"><div><h3>Criar flashcards</h3><div class="muted">${escapeHtml(reason)} Selecione um trecho e use a barra para formatar.</div></div><button class="icon-btn primary" id="addQuestionFlashcard" ${cards.length>=2 || !allowed?'disabled':''}>+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>`<div class="flashcard-editor-item">${renderFlashcardMarkdownField(`data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="front"`,card.front,'Frente: escreva a pergunta ou conceito')}${renderFlashcardMarkdownField(`data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,'Verso: escreva a resposta')}<button class="tiny-btn" data-remove-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || question.area || '')}" placeholder="Área"><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || card.topic || question.topic || '')}" placeholder="Subárea"></div>`).join('')}</div>` : '<div class="empty">Escreva até dois flashcards curtos desta questão.</div>'}<div class="topic-source">${cards.length}/2 flashcards · ${escapeHtml(question.collectionLabel || questionCollectionLabel(question.collectionBlock))} · ${escapeHtml(question.topic)}</div></div>`;
+  return `<div class="flashcard-editor"><div class="section-title"><div><h3>Criar flashcards</h3><div class="muted">${escapeHtml(reason)} Selecione um trecho e use a barra para formatar, ou escolha o tipo Cloze para ocluir uma palavra.</div></div><button class="icon-btn primary" id="addQuestionFlashcard" ${cards.length>=2 || !allowed?'disabled':''}>+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>{ const sourceAttr = `data-question-card="${escapeAttr(question.id)}"`; return `<div class="flashcard-editor-item">${renderClozeAwareFlashcardFields(sourceAttr,card,'Frente: escreva a pergunta ou conceito','Verso: escreva a resposta')}<button class="tiny-btn" data-remove-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || question.area || '')}" placeholder="Área"><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || card.topic || question.topic || '')}" placeholder="Subárea"></div>`; }).join('')}</div>` : '<div class="empty">Escreva até dois flashcards curtos desta questão.</div>'}<div class="topic-source">${cards.length}/2 flashcards · ${escapeHtml(question.collectionLabel || questionCollectionLabel(question.collectionBlock))} · ${escapeHtml(question.topic)}</div></div>`;
 }
 function renderQuestionNotes(question, result) {
   const notes = result?.notes || '';
@@ -8077,6 +8185,7 @@ function updateQuestionFlashcard(input) {
   if(input.dataset.cardField === 'subarea') card.topic = input.value;
   renderCache.manualCards = null;
   saveStateOnly();
+  if(input.dataset.cardField === 'cardType') requestAnimationFrame(() => render());
 }
 function updateLibraryFlashcard(input) {
   const card = (state.flashcardLibrary || []).find(item => item.id === input.dataset.cardId);

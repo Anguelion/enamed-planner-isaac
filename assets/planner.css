@@ -694,6 +694,9 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .flashcard-cloze-reveal{background:var(--soft-amber,#fff5d9);color:#9a5b05;padding:0 4px;border-radius:4px;font-weight:800}
 .flashcard-cloze-extra{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:14px;color:var(--muted);text-align:left}
 .fc-cloze-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:-4px 0 4px}
+.flashcard-editor-item .fc-cloze-tools,.flashcard-editor-item .fc-card-type-field,.flashcard-inline-editor .fc-cloze-tools{grid-column:1/-1}
+.fc-card-type-field{display:grid;gap:4px;font-size:12px;font-weight:800;color:var(--muted)}
+.fc-card-type-field select{font:inherit;font-weight:600;color:var(--ink)}
 .flashcard-md-tool:hover,.flashcard-md-tool:focus-visible{border-color:var(--blue);background:var(--soft-blue);outline:0}
 .flashcard-md-tool.marker{background:#fff1a8;color:#5f4a00;font-weight:800}
 .flashcard-md-tool.color{min-width:24px;width:24px;height:24px;padding:0;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 1px var(--line)}
@@ -1067,6 +1070,7 @@ body.dark .history-remove{background:#202a2a}
 .analysis-bar span{color:var(--muted);font-size:12px;white-space:nowrap}
 .analysis-focus.strength .analysis-bar .progress span{background:var(--green)}
 .analysis-focus.weakness .analysis-bar .progress span{background:var(--red)}
+.attention-chart{display:block;width:100%;height:auto;margin-top:14px}
 .analysis-table th{white-space:nowrap}
 .analysis-table td{vertical-align:middle}
 .analysis-table td:nth-child(2){min-width:220px}

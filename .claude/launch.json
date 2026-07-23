@@ -20,6 +20,12 @@
       "port": 8767
     },
     {
+      "name": "planner-repo-dev3",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-3", "-m", "http.server", "8768"],
+      "port": 8768
+    },
+    {
       "name": "ecg-dev",
       "runtimeExecutable": "py",
       "runtimeArgs": ["-3", "-m", "http.server", "8793"],
