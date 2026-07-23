@@ -139,12 +139,14 @@
     },
   ];
   const MANOBRA_MAP = Object.fromEntries(MANOBRAS.map((m) => [m.id, m]));
-  // fotos reais da aula (Semiologia Descomplicada) associadas a algumas manobras, complementando o esquema didático
+  // Espaços reservados para foto específica de cada manobra — não apontam para um slide confirmado
+  // (as pastas reais têm dezenas de imagens não identificadas individualmente); edite `src` aqui
+  // quando tiver a foto certa para cada uma.
   const MANOBRA_FOTO = {
-    murphy: { src: 'assets/semiologia-real/08-abdomen-agudo/46.jpg', cap: 'Foto real — aula de Abdômen Agudo (Semiologia Descomplicada).' },
-    blumberg: { src: 'assets/semiologia-real/08-abdomen-agudo/49.jpg', cap: 'Foto real — aula de Abdômen Agudo (Semiologia Descomplicada).' },
-    'macicez-movel': { src: 'assets/semiologia-real/07-ascite/108.jpg', cap: 'Foto real — aula de Ascite (Semiologia Descomplicada).' },
-    ftv: { src: 'assets/semiologia-real/01-exame-fisico-geral-parte-01-e-02/12.png', cap: 'Foto real — técnica de palpação (Exame Físico Geral).' },
+    murphy: { src: 'assets/semiologia-real/08-abdomen-agudo/murphy.jpg', cap: 'Sinal de Murphy' },
+    blumberg: { src: 'assets/semiologia-real/08-abdomen-agudo/blumberg.jpg', cap: 'Descompressão dolorosa (Blumberg)' },
+    'macicez-movel': { src: 'assets/semiologia-real/07-ascite/macicez-movel.jpg', cap: 'Macicez móvel de decúbito' },
+    ftv: { src: 'assets/semiologia-real/01-exame-fisico-geral-parte-01-e-02/ftv.jpg', cap: 'Frêmito toracovocal' },
   };
 
   // ---------------------------------------------------------------------------
@@ -945,6 +947,7 @@
       case 'svg': return `<figure class="semio-fig">${b.x}${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
       case 'img': return `<figure class="semio-fig semio-fig-photo"><img src="${esc(b.x)}" alt="${esc(b.cap || '')}" loading="lazy" onerror="${imgFallback}"/>${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
       case 'imggrid': return `<div class="semio-fig-row">${b.x.map((im) => `<figure class="semio-fig semio-fig-photo"><img src="${esc(im.src)}" alt="${esc(im.cap || '')}" loading="lazy" onerror="${imgFallback}"/>${im.cap ? `<figcaption>${esc(im.cap)}</figcaption>` : ''}</figure>`).join('')}</div>`;
+      case 'placeholder': return `<figure class="semio-fig semio-fig-placeholder" data-placeholder-src="${esc(b.x)}"><div class="semio-ph-box">📷<span>Espaço reservado para foto</span></div><figcaption>${esc(b.cap || '')}</figcaption></figure>`;
       case 'p':
       default: {
         const id = topId + ':' + idx;
@@ -1040,7 +1043,7 @@
     return `<button class="semio-btn ghost sm" data-back-manobras>← Manobras</button>
       <div class="semio-topic-head"><h2>${esc(m.nome)}</h2><span class="semio-tag">${esc(m.sistema)}</span></div>
       ${MANOBRA_FIG[m.id] ? `<figure class="semio-sign-fig">${MANOBRA_FIG[m.id]}<figcaption>Esquema didático próprio</figcaption></figure>` : ''}
-      ${MANOBRA_FOTO[m.id] ? `<figure class="semio-fig semio-fig-photo"><img src="${esc(MANOBRA_FOTO[m.id].src)}" alt="${esc(MANOBRA_FOTO[m.id].cap)}" loading="lazy" onerror="${imgFallback}"/><figcaption>${esc(MANOBRA_FOTO[m.id].cap)}</figcaption></figure>` : ''}
+      ${MANOBRA_FOTO[m.id] ? `<figure class="semio-fig semio-fig-placeholder" data-placeholder-src="${esc(MANOBRA_FOTO[m.id].src)}"><div class="semio-ph-box">📷<span>Espaço reservado para foto</span></div><figcaption>${esc(MANOBRA_FOTO[m.id].cap)}</figcaption></figure>` : ''}
       <div class="semio-def"><b>Finalidade</b><p>${esc(m.finalidade)}</p></div>
       <div class="semio-def"><b>Quando fazer</b><p>${esc(m.quando)}</p></div>
       <div class="semio-def"><b>Execução</b><p>${esc(m.execucao)}</p></div>
@@ -1500,6 +1503,9 @@
     .semio-fig{margin:12px 0;text-align:center}.semio-fig-svg{max-width:320px;width:100%;height:auto}
     .semio-fig figcaption{font-size:.8rem;color:var(--muted,#667085);margin-top:6px;text-align:left}
     .semio-fig-photo img{max-width:100%;width:auto;max-height:420px;border-radius:10px;border:1px solid var(--border,#cbd5e1);background:#fff}
+    .semio-ph-box{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:120px;border:2px dashed var(--border,#cbd5e1);border-radius:10px;color:var(--muted,#667085);font-size:1.4rem;background:rgba(120,120,120,.05)}
+    .semio-ph-box span{font-size:.78rem;font-weight:600}
+    .semio-fig-placeholder figcaption{text-align:center}
     .semio-fig-row{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;justify-content:center}
     .semio-fig-row .semio-fig{margin:0;flex:1 1 220px;max-width:280px}
     .semio-def{margin:9px 0}.semio-def b{color:var(--semio-acc2)}.semio-def p{margin:2px 0 0;line-height:1.5}

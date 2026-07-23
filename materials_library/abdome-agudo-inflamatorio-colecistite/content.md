@@ -4,208 +4,158 @@
 
 ## Colecistite
 
-## COLECISTITE AGUDA = INFLAMAÇÃO AGUDA DA CLASSIFICAÇÃO E TRATAMENTO
+**Colecistite aguda = inflamação aguda da vesícula biliar.**
 
-## VESÍCULA BILIAR
+### Quadro Clínico
 
-- Leve: sem nenhum critério +;
+- Dor abdominal em QSD por mais de 6 horas + náuseas e vômitos + febre + defesa abdominal;
+- **Sinal de Murphy +**: parada abrupta da inspiração à palpação profunda do ponto de Murphy (rebordo costal direito);
+- Aumento de provas inflamatórias, leucocitose.
 
-## Quadro clínico
+### Imagem
 
-- Moderada:
+**USG de abdome superior**
 
-- Dor abdominal em QSD por mais de 6 horas + | leucocitose > 18.000;
+Achados:
 
-náuseas e vômitos + febre + defesa abdominal; | massa palpável;
-
-- Sinal de Murphy +: | duração > 72 horas; Parada abrupta da inspiração à palpação | complicações locais.
-
-profunda do ponto de Murphy (rebordo
-
-- Grave: disfunção orgânica:
-
-costal direito). | hipotensão;
-
-- Aumento de provas inflamatórias, leucocitose. | IRA;
-
-## IMAGEM | RNC
-
-USG abdome superior | coagulopatia;
-
-- Espessamento (> 4 mm); | IRPA.
-
-- Edema de parede; O ideal é operar, sempre que possível.
-
+- Espessamento (> 4 mm);
+- Edema de parede;
 - Murphy ultrassonográfico;
-
-- Pacientes de alto risco, que respondem ao
-
-- Cálculo impactado; tratamento → Tardia;
-
+- Cálculo impactado;
 - Parede delaminada;
+- Edema e líquido perivesicular.
 
-- Pacientes de alto risco, sem condições
+### Diagnóstico
 
-- Edema e líquido perivesicular. cirúrgicas → Drenagem.
+- **A** – Sinais locais de inflamação;
+- **B** – Sinais sistêmicos de inflamação;
+- **C** – Imagem compatível.
 
-## DIAGNÓSTICO
+**1 de cada critério = confirmado!**
 
-- A – Sinais locais de inflamação;
+### Classificação e Tratamento
 
-- B – Sinais sistêmicos de inflamação;
+- **Leve**: sem nenhum critério positivo;
+- **Moderada**: leucocitose > 18.000; massa palpável; duração > 72 horas; complicações locais;
+- **Grave**: disfunção orgânica: hipotensão; IRA; RNC; coagulopatia; IRPA.
 
-- C – Imagem compatível.
+O ideal é operar, sempre que possível.
 
-1 de cada = confirmado!
+- Pacientes de alto risco, que respondem ao tratamento → cirurgia tardia;
+- Pacientes de alto risco, sem condições cirúrgicas → drenagem.
 
-## COLECISTITE AGUDA
+## Colecistite Aguda
 
 - Aumento de provas inflamatórias e leucocitose;
-
 - Suspeita de complicações:
+  - Dor intensa;
+  - Febre alta;
+  - Associação com náuseas e vômitos;
+  - Leucocitose > 15.000 células/mm³;
+  - Plastrão palpável.
+- Diferenciais: coledocolitíase, síndrome de Mirizzi, colangite. Avaliar presença de icterícia, TGO, TGP, FA, GGT.
 
-FISIOPATOLOGIA | Dor intensa;
+### Fisiopatologia
 
-- Obstrução do ducto cístico = liberação de | Febre alta;
-
-mediadores inflamatórios; | Associação com náuseas e vômitos;
-
-- Estase da bile = edema > distensão > | Leucocitose > 15.000 cels/mm3;
-
-inflamação > necrose; | Plastrão palpável.
-
+- Obstrução do ducto cístico = liberação de mediadores inflamatórios;
+- Estase da bile = edema > distensão > inflamação > necrose;
 - Proliferação bacteriana e infecção:
+  - **Aeróbios**: E. coli, Klebsiella, Proteus, Faecalis;
+  - **Anaeróbios**: estrepto, Clostridium, bacterioides.
+- Colecistite crônica calculosa = agudizações recorrentes com inflamação subaguda-crônica.
 
-- Diferenciais: coledocolitíase, síndrome de Aeróbios: E. Coli, Klebsiella, Proteus, Faecalis; Mirizzi, colangite: Anaeróbios: estrepto, Clostridium, bacterioides. | Avaliar presença de icterícia, TGO, TGP, FA, GGT.
-
-- Colecistite crônica calculosa = agudizações recorrentes com inflamação subaguda-crônica. DIAGNÓSTICO – CRITÉRIOS DE TOKYO
+### Diagnóstico – Critérios de Tokyo
 
 - Dor abdominal em HCD > 6 horas;
-
 - Sinais de defesa abdominal;
-
-- Sinal de Murphy +: Parada abrupta da inspiração quando realizada a palpação profunda no ponto de Murphy (rebordo costal direito); NÃO É SINÔNIMO DE DESCOMPRESSÃO Figura 1: Critérios de Tokyo para diagnóstico
-
-BRUSCA POSITIVA. de colecistite aguda.
+- **Sinal de Murphy +**: parada abrupta da inspiração quando realizada a palpação profunda no ponto de Murphy (rebordo costal direito); **não é sinônimo de descompressão brusca positiva**.
 
 ![Figura do material - página 1](figure-001-1.webp)
+
+*Figura 1: Critérios de Tokyo para diagnóstico de colecistite aguda.*
 
 ---
 
 <!-- page:2 -->
 
-## USG DE ABDOME SUPERIOR = MELHOR EXAME. TRATAMENTO
+## USG de Abdome Superior = Melhor Exame
+
+### Tratamento
 
 O ideal é operar, sempre que possível.
 
-- Pacientes de alto risco, que respondem ao
+*Figura 2: USG com colecistite aguda.*
 
-- C
-
-- - F
-
-Figura 2: USG com colecistite aguda.
-
-- Achados
+**Achados**
 
 - Espessamento (> 4 mm);
-
-- Edema de parede; C
-
+- Edema de parede;
 - Murphy ultrassonográfico;
-
 - Cálculo impactado;
-
 - Parede delaminada;
-
 - Edema e líquido perivesicular.
 
-TC de abdome
+**TC de abdome**
 
 - Avaliar complicações e diferenciais.
 
-- - Figura 3: Tomografia com colecistite aguda.
+*Figura 3: Tomografia com colecistite aguda.*
 
-- DISIDA/colecistografia C
+**DISIDA/colecistografia**
 
-- Padrão-ouro (especialmente quando há dúvida em
-
-- USG e TC);
-
-- Pouquíssimo usado – Não é necessário;
-
+- Padrão-ouro (especialmente quando há dúvida em USG e TC);
+- Pouquíssimo usado – não é necessário;
 - O exame é positivo quando não há enchimento da vesícula;
+- Falso positivo: jejum prolongado; cirrose; NPT; pancreatite. Usar colecistocinina para esvaziar a vesícula; usar morfina para aumentar o tônus do esfíncter de Oddi e evitar esvaziamento rápido.
 
-- Falso positivo: jejum prolongado; cirrose; NPT;
+## Classificação – Critérios de Tokyo
 
-pancreatite. Usar colecistocinina para esvaziar vesícula; usar morfina para aumentar o tônus do esfíncter de Oddi e evitar esvaziamento rápido.
-
-## CLASSIFICAÇÃO – CRITÉRIOS DE TOKYO
-
-- Leve: sem nenhum critério positivo.
-
-- Moderada: leucócitos > 18.000 células/mm3; massa palpável; duração > 72 horas; complicações locais.
-
-- Grave: disfunção orgânica: hipotensão; F IRA; RNC; F coagulopatia; IRPA. F tratamento → Tardia.
-
-- Pacientes de alto risco, sem condições cirúrgicas → Drenagem.
+- **Leve**: sem nenhum critério positivo.
+- **Moderada**: leucócitos > 18.000 células/mm³; massa palpável; duração > 72 horas; complicações locais.
+- **Grave**: disfunção orgânica: hipotensão; IRA; RNC; coagulopatia; IRPA. Tratamento → tardio.
+- Pacientes de alto risco, sem condições cirúrgicas → drenagem.
 
 Conforme a classificação, decidir entre:
 
 - Colecistectomia precoce;
-
 - Colecistectomia tardia;
+- Colecistostomia (drenagem).
 
-## Colecistostomia (drenagem)
-
-Fatores para decisão
+**Fatores para decisão**
 
 - ASA;
-
-- Charlson comorbidity indexx;
-
+- Charlson Comorbidity Index (CCI);
 - Resposta ao suporte inicial;
-
 - Capacidade do pronto-socorro.
 
-Colecistite aguda LEVE
+**Colecistite aguda leve**
 
-- ASA < III/CCI < 6 (= paciente BOM). Padrão-ouro = colecistectomia por VLP;
+- ASA < III/CCI < 6 (= paciente bom): padrão-ouro = colecistectomia por VLP;
+- ASA > III/CCI > 6 (= paciente ruim): ATB + terapia de suporte (jejum, analgesia, hidratação venosa) e cirurgia tardia; ATB pode ser suspenso após cirurgia; ATB: ceftriaxona + metronidazol; alternativa → meropenem, tazocin.
 
-- ASA > III/CCI > 6 (= paciente RUIM). ATB + terapia de suporte (jejum, analgesia, hidratação venosa) e cirurgia tardia: ATB pode ser suspenso após cirurgia; ATB: ceftriaxona + metronidazol; alternativa → meropenem, tazocin.
+**Colecistite aguda moderada**
 
-Colecistite aguda MODERADA
+- Medidas iniciais: analgesia, ATB (cef + metro), jejum, hidratação;
+- Resposta inicial boa: ASA < III/CCI < 6 (= paciente bom): padrão-ouro = colecistectomia por VLP;
+- ASA > III/CCI > 6 (= paciente ruim): ATB e cirurgia tardia após melhora clínica;
+- Resposta inicial ruim ou piora clínica: ATB + drenar = colecistostomia.
 
-- Medidas iniciais: analgesia, ATB (cef+metro), jejum, hidratação;
+**Colecistite aguda grave**
 
-- Resposta inicial boa: ASA < III/CCI < 6 (= paciente
-
-BOM). Padrão-ouro = colecistectomia por VLP;
-
-- ASA > III/CCI > 6 (= paciente RUIM). ATB e cirurgia tardia após melhora clínica;
-
-- Resposta inicial ruim ou piora clínica: ATB +
-
-DRENAR = COLECISTOSTOMIA. Colecistite aguda GRAVE
-
-- Suporte INTENSIVO = UTI, jejum, hidratação, analgesia,
-
-DVA, IOT;
-
+- Suporte intensivo = UTI, jejum, hidratação, analgesia, DVA, IOT;
 - Paciente bom = colecistectomia (mesma lógica da moderada);
-
 - Paciente ruim = drenagem.
 
 - Controle de foco infeccioso = esvaziar a vesícula biliar inflamada;
-
 - Métodos: colecistostomia percutânea; drenagem endoscópica; cirúrgica;
-
 - Quanto mais grave o paciente (não tolera um procedimento cirúrgico), mais indicamos a drenagem percutânea.
 
-## REFERÊNCIAS
+## Referências
 
-Figura 1: Fluxograma Medcof. Fonte: Acervo Medcof Figura 2: USG com Colecistite Aguda. Fonte: Case courtesy of Dr Luu Hanh, Radiopaedia.org, rID: 81591 Figura 3: Tomografia com Colecistite Aguda.
+Figura 1: Fluxograma Medcof. Fonte: Acervo Medcof.
 
-Fonte: Case courtesy of Luu Hanh, Radiopaedia.org, rID: 81591
+Figura 2: USG com Colecistite Aguda. Fonte: Case courtesy of Dr Luu Hanh, Radiopaedia.org, rID: 81591.
+
+Figura 3: Tomografia com Colecistite Aguda. Fonte: Case courtesy of Luu Hanh, Radiopaedia.org, rID: 81591.
 
 ![Figura do material - página 2](figure-002-1.webp)

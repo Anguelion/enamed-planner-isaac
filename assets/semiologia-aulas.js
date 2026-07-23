@@ -43,7 +43,10 @@
     for (let i = de; i <= ate; i++) items.push({ src: `assets/semiologia-real/${pasta}/${i}.jpg`, cap: `Slide ${i}` });
     return IMGGRID(items);
   };
-  const foto = (pasta, n, cap) => IMG(`assets/semiologia-real/${pasta}/${n}.jpg`, cap);
+  // Espaço reservado para uma foto específica (ex.: uma manobra/sinal em particular).
+  // Não referencia um arquivo real — evita mostrar a imagem errada de uma pasta com dezenas de slides
+  // não identificados. Fica pronto para receber o caminho certo depois (edite este bloco quando tiver a foto).
+  const foto = (pasta, n, cap) => ({ t: 'placeholder', x: `assets/semiologia-real/${pasta}/${n}.jpg`, cap });
 
   // --- alguns esquemas SVG didáticos reutilizáveis -------------------------
   const svgTorax = `<svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" class="semio-fig-svg">
@@ -341,7 +344,7 @@
             foto('01-exame-fisico-geral-parte-01-e-02', 12, 'Decúbitos de exame: dorsal, lateral D/E, ventral, sentado e ortostático.'),
             foto('01-exame-fisico-geral-parte-01-e-02', 15, 'Nomenclatura das regiões do corpo usada para localizar achados no exame.'),
             SVG(svgPercussao, 'Escala dos sons à percussão, do mais "cheio" de ar ao mais sólido: timpânico → claro pulmonar → submaciço → maciço.'),
-            foto('04-percussao', 12, 'Técnica de percussão dígito-digital (foto real da aula).'),
+            foto('04-percussao', 12, 'Técnica de percussão dígito-digital.'),
             H('Percussão'),
             P('Golpear a superfície para gerar vibração e som que informam sobre o que há embaixo. A técnica mais usada é a dígito-digital: o dedo plexímetro apoiado na pele recebe 2 golpes secos do dedo plexor, retirado rápido para não abafar o som.'),
             UL(
@@ -744,7 +747,7 @@
           id: 'm4-metodo', titulo: 'Os quatro tempos no tórax',
           blocks: [
             SVG(svgTorax, 'Divisão em ápices e bases; a linha média separa os hemitórax para comparação sistemática lado a lado.'),
-            foto('01-pontos-anatomicos-pneumotorax-derrame-pleural-posicao-do-iot', 12, 'Pontos de referência anatômica do tórax (foto real da aula).'),
+            foto('01-pontos-anatomicos-pneumotorax-derrame-pleural-posicao-do-iot', 12, 'Pontos de referência anatômica do tórax.'),
             P('O princípio de ouro do exame torácico é a comparação sistemática entre lados homólogos: sempre examine o mesmo ponto à direita e à esquerda antes de descer. A assimetria é o achado mais valioso.'),
             H('Inspeção'),
             UL(
@@ -818,7 +821,7 @@
           id: 'm5-focos', titulo: 'Precórdio, ictus e focos de ausculta',
           blocks: [
             SVG(svgTorax, 'Focos de ausculta: aórtico (2º EICD), pulmonar (2º EICE), tricúspide (4º–5º EIE junto ao esterno) e mitral (5º EIE na linha hemiclavicular = ictus).'),
-            foto('02-linhas-regioes-e-projecoes', 13, 'Linhas e pontos de referência do tórax usados para localizar os focos de ausculta (foto real da aula).'),
+            foto('02-linhas-regioes-e-projecoes', 13, 'Linhas e pontos de referência do tórax usados para localizar os focos de ausculta.'),
             P('A inspeção e palpação do precórdio precedem a ausculta. O achado mais informativo é o ictus cordis (impulso apical), normalmente no 5º espaço intercostal esquerdo, na linha hemiclavicular, com ~1–2 cm.'),
             UL(
               'Ictus desviado para baixo e para a esquerda, mais amplo e sustentado → dilatação de VE (sobrecarga de volume, ex.: insuficiência aórtica/mitral).',

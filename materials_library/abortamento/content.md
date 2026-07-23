@@ -2,161 +2,138 @@
 
 <!-- page:1 -->
 
-Aborto completo Aborto incompleto Aborto infectado Aborto retido Ameaça de abortamento Gestação anembrionada Aborto habitual
+**Tópicos abordados:** Aborto completo, Aborto incompleto, Aborto infectado, Aborto retido, Ameaça de abortamento, Gestação anembrionada, Aborto habitual.
 
-## TIPOS DE ABORTAMENTO
+## Tipos de Abortamento
 
-- Ameaça → Colo fechado, SG com ou sem embrião Conduta: Orientar e acalmar
+- **Ameaça**: colo fechado, saco gestacional (SG) com ou sem embrião. **Conduta**: orientar e acalmar.
+- **Retido**: colo fechado, gestação inviável. **Conduta**: expectante ou ativa.
+- **Incompleto**: colo aberto, conteúdo na cavidade (eco endometrial > 15-20mm). **Conduta**: esvaziamento uterino.
+- **Completo**: colo fechado ou aberto, sangramento reduz, sem conteúdo na cavidade. **Conduta**: seriar BhCG.
+- **Infectado**: sinais clínicos de infecção. **Conduta**: antibioticoterapia + esvaziamento uterino.
 
-- Retido → Colo fechado, gestação inviável Conduta: Expectante ou ativa
+## Definição
 
-- Incompleto → Colo aberto, conteúdo na cavidade (EE >15 - 20mm): Conduta: esvaziamento uterino
+- É a interrupção da gestação antes de **20-22 semanas** e/ou feto com peso **≤ 500 gramas**.
 
-- Completo → Colo fechado ou aberto, sangramento reduz, sem conteúdo na cavidade Conduta: seriar BhCG
+## Classificação
 
-- Infectado → sinais clínicos de infecção Conduta: antibioticoterapia + esvaziamento uterino
+- **Precoce**: < 12 semanas;
+- **Tardio**: ≥ 12 semanas;
+- **Espontâneo x induzido**.
 
-## DEFINIÇÃO
+## Causas
 
-- É a interrupção da gestação antes de 20-22 semanas e/ou feto com peso ≤ 500 gramas.
+**Anomalias cromossômicas:**
 
-## CLASSIFICAÇÃO
-
-- Precoce: <12 semanas;
-
-- Tardio: ≥12 semanas;
-
-- Espontâneo x induzido.
-
-CAUSAS Anomalias Cromossômicas:
-
-- Responsáveis por 70-80% dos abortamentos;
-
+- Responsáveis por **70-80%** dos abortamentos;
 - Trissomias, monossomias, poliploidias.
 
-Anatômicas/Estruturais:
+**Anatômicas/estruturais:**
 
 - Leiomiomatose;
-
 - Polipose;
-
 - Malformação mülleriana;
-
 - Incompetência istmocervical.
 
-Causas sistêmicas/metabólicas:
+**Causas sistêmicas/metabólicas:**
 
 - Diabetes mellitus;
-
 - Tireoidopatias;
-
 - Síndrome de Cushing;
-
 - Álcool/drogas;
-
 - Tabagismo;
-
 - Medicamentos;
+- **Síndrome do Anticorpo Antifosfolípide (SAAF)**: mecanismo imunológico.
 
-- Síndrome do Anticorpo Antifosfolípide (SAAF):
+> **Obs.:** as bancas examinadoras cobram o diagnóstico diferencial e a conduta!
 
-mecanismo imunológico. OBS.: as bancas examinadoras cobram o diagnóstico diferencial e a conduta! Abortamento de Repetição
+### Abortamento de Repetição
 
-- 2 ou mais consecutivas confirmadas;
+- **2 ou mais** consecutivas confirmadas;
+- **Investigação**:
+  - Hábitos e vícios;
+  - Metabólica: glicemia de jejum + TSH + obesidade;
+  - Cariótipo do casal;
+  - Anatômica: ultrassonografia transvaginal com histeroscopia ou histerossalpingografia ou ressonância de pelve;
+  - Síndrome do Anticorpo Antifosfolípide: anticorpos anti-cardiolipina + anti-β2-glicoproteína-1 + anticoagulante lúpico.
 
-- Investigação Hábitos e vícios Metabólica: Glicemia de jejum + TSH + obesidade Cariótipo do casal
+## Quadro Clínico por Tipo
 
-- Anatômica: ultrassonografia transvaginal com histeroscopia ou histerosalpingografia ou ressonância de pelve
-
-- Síndrome do Anticorpo Antifosfolípide Anticorpos anti-cardiolipina + anti-B2glicoproteína-1 + anticoagulante lúpico
-
-Ameaça
+**Ameaça**
 
 - Sangramento em pequena quantidade;
-
 - Colo uterino fechado;
-
 - Ultrassonografia (USG) evidencia imagens compatíveis com a idade gestacional (saco gestacional, com ou sem embrião na cavidade uterina).
 
-Retido
+**Retido**
 
 - Sangramento em pequena quantidade;
-
 - Colo uterino fechado;
-
 - Gestação inviável.
 
-Incompleto
+**Incompleto**
 
 - Sangramento em moderada a grande quantidade;
-
 - Colo uterino aberto;
+- Presença de conteúdo na cavidade uterina (eco endometrial **≥ 15 a 20mm**).
 
-- Presença de conteúdo na cavidade uterina (eco endometrial ≥ 15 a 20mm).
-
-Completo
+**Completo**
 
 - Sangramento em moderada ou grande quantidade, que vai reduzindo sozinho;
-
 - Colo uterino fechado ou aberto;
+- Ausência de conteúdo na cavidade uterina; eco endometrial **< 15-20mm**.
 
-- Ausência de conteúdo na cavidade uterina; eco endometrial < 15 - 20mm.
-
-Infectado
+**Infectado**
 
 - Qualquer um dos anteriores, com sinais clínicos de infecção.
 
-## ABORTO INEVITÁVEL (EM CURSO)
+## Aborto Inevitável (Em Curso)
 
 - Há dilatação do colo uterino ao exame físico;
-
 - Percepção das membranas ou embrião ao toque;
-
 - Demonstra sangramento, cólica e útero compatível com a idade gestacional;
-
 - Prescinde ultrassonografia;
-
-- É necessária uma conduta ativa pelo profissional da saúde!
+- É necessária uma **conduta ativa** pelo profissional da saúde!
 
 ---
 
 <!-- page:2 -->
 
-## EVOLUÇÃO NORMAL DA GRAVIDEZ
+## Evolução Normal da Gravidez
 
-- À medida que a gravidez evolui, alguns marcos ultrassonográficos podem ser visualizados: ≥4 semanas: saco gestacional; ≥5 semanas: vesícula vitelínica; ≥5 semanas: vesícula vitelínica; ≥6semanas: embrião.
+- À medida que a gravidez evolui, alguns marcos ultrassonográficos podem ser visualizados:
+  - **≥ 4 semanas**: saco gestacional;
+  - **≥ 5 semanas**: vesícula vitelínica;
+  - **≥ 6 semanas**: embrião.
 
-- A
+Figura 1: Ultrassonografia transvaginal com saco gestacional tópico em fundo do útero (seta fina) e reação decidual (seta tracejada).
 
-- Figura 1: Ultrassonografia transvaginal com saco gestacional tópico em fundo do útero (seta fina) e reação decidual
+Figura 2: Gestação com saco gestacional e vesícula vitelínica.
 
-(seta tracejada). Figura 2: Gestação com saco gestacional e vesícula vitelínica. SINAIS DE MAU PROGNÓSTICO
+## Sinais de Mau Prognóstico
 
 - Saco gestacional irregular;
+- Atividade cardíaca **< 100 bpm** entre 5 e 7 semanas;
+- Hematoma subcoriônico **> 25%** do diâmetro total do saco gestacional.
 
-- Atividade cardíaca < 100 bpm entre 5 e 7 semanas;
+Figura 3: Embrião visualizado dentro do saco gestacional.
 
-Figura 5: Hematoma retrocoriônico >50% da circunferência do saco g Figura 3: Embrião visualizado dentro do saco gestacional.
+Figura 5: Hematoma retrocoriônico > 50% da circunferência do saco gestacional (área vermelha).
 
-## GESTAÇÃO NÃO EVOLUTIVA
+## Gestação Não Evolutiva
 
-Gestação Anembrionada
+**Gestação Anembrionada**
 
-- Diâmetro interno médio (DIM) do saco gestacional seu interior;
-
-≥ 25 mm sem embrião e/ou vesícula vitelínica no Aborto Retido (gestação inviável)
-
-- Embrião com CCN ≥ 7 mm sem atividade cardíaca;
-
-- DIM do saco gestacional <25m e sem vesícula vitelínica → repete-se o exame ≥ 14 dias e não surge um embrião com atividade cardíaca;
-
-- DIM do saco gestacional <25m e com vesícula vitelínica → repete-se o exame ≥ 11 dias e não surge um embrião com atividade cardíaca;
+- Diâmetro interno médio (DIM) do saco gestacional **≥ 25 mm** sem embrião e/ou vesícula vitelínica em seu interior.
 
 Figura 4: Gestação anembrionada.
 
-- Hematoma subcoriônico > 25% do diâmetro total do saco gestacional.
+**Aborto Retido (gestação inviável)**
 
-gestacional (área vermelha).
+- Embrião com CCN **≥ 7 mm** sem atividade cardíaca;
+- DIM do saco gestacional < 25mm e sem vesícula vitelínica → repete-se o exame em **≥ 14 dias** e não surge um embrião com atividade cardíaca;
+- DIM do saco gestacional < 25mm e com vesícula vitelínica → repete-se o exame em **≥ 11 dias** e não surge um embrião com atividade cardíaca.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -166,69 +143,56 @@ gestacional (área vermelha).
 
 <!-- page:3 -->
 
-## CONDUTAS NOS ABORTAMENTOS ABORTAMENTO DE REPETIÇÃO
+## Condutas nos Abortamentos
 
-Gerais:
+**Gerais:**
 
-- Define-se por dois ou mais abortos
-
-- Avaliar a estabilidade hemodinâmica; consecutivos confirmados
-
-- Fazer a tipagem sanguínea:
-
-- Acomete 1/200 casais; Imunoglobulina anti-D se o pai for Rh positivo (ou
-
-- Exige investigação.
-
-desconhecido) e a mãe Rh negativo; Propedêutica:
-
+- Avaliar a estabilidade hemodinâmica;
+- Fazer a tipagem sanguínea: imunoglobulina anti-D se o pai for Rh positivo (ou desconhecido) e a mãe Rh negativo;
 - Realizar estudo anatomopatológico quando possível;
+- Orientar a contracepção e acolher as pacientes!
 
-- Cariótipo do casal;
-
-- Outros exames: sorologia para HIV, sífilis e hepatites;
-
-- Doenças sistêmicas/metabólicas: glicemia de jejum,
-
-- Orientar a contracepção e acolher as pacientes! TSH e obesidade;
-
-Ameaça de Abortamento:
-
-- Avaliar hábitos e vícios;
+**Ameaça de Abortamento:**
 
 - Vigilância clínica;
+- Orientações gerais e uso de sintomáticos.
 
-- Realizar a avaliação anatômica: USG transvaginal +
+**Abortamento Retido:**
 
-- Orientações gerais e uso de sintomáticos. histeroscopia ou histerossalpingografia; ressonância
+- Conduta expectante: esperar a eliminação em até **28 dias**;
+- Conduta ativa: misoprostol + curetagem ou AMIU (aspiração manual intrauterina).
+- Em IG > 12 semanas, há o risco da presença de espículas ósseas, portanto, deve-se aguardar eliminação do produto conceptual antes de curetar/aspirar, pelo alto risco de perfuração intrauterina.
 
-Abortamento Retido: magnética de pelve;
-
-- Conduta expectante: esperar a eliminação em até
-
-- Investigar Síndrome do Anticorpo Antifosfolípide:
-
-28 dias; | Anticorpos anticardiolipina + anti-B2z Conduta ativa: misoprostol + curetagem ou AMIU glicoproteína-1 + anticoagulante lúpico;
-
-(aspiração manual intrauterina). | Em caso de alteração de algum dos exames → | IG > 12 semanas, há o risco da presença de repetir a dosagem em, pelo menos, 12 semanas.
-
-espículas ósseas, portanto, deve-se aguardar eliminação do produto conceptual antes de curetar/ aspirar pelo alto risco de perfuração intrauterina.
-
-Abortamento Incompleto :
+**Abortamento Incompleto:**
 
 - Curetagem ou AMIU.
 
-Abortamento Completo
+**Abortamento Completo:**
 
 - Seriar beta-hCG se não houver material para anatomopatológico (excluir possibilidade de gestação molar).
 
-Abortamento Infectado:
+**Abortamento Infectado:**
 
-- Esvaziamento + antibioticoterapia: gentamicina + ampicilina + clindamicina ou metronidazol por, no mínimo, 48 horas afebril;
-
+- Esvaziamento + antibioticoterapia: gentamicina + ampicilina + clindamicina ou metronidazol, por no mínimo **48 horas afebril**;
 - Medidas para sepse, se necessário.
 
-- Verificar Figura 6 Figura 6: KIT Aspirador Manual Intrauterino
+## Abortamento de Repetição
+
+- Define-se por **dois ou mais** abortos consecutivos confirmados;
+- Acomete **1/200 casais**;
+- Exige investigação.
+
+**Propedêutica:**
+
+- Cariótipo do casal;
+- Outros exames: sorologia para HIV, sífilis e hepatites;
+- Doenças sistêmicas/metabólicas: glicemia de jejum, TSH e obesidade;
+- Avaliar hábitos e vícios;
+- Realizar a avaliação anatômica: USG transvaginal + histeroscopia ou histerossalpingografia; ressonância magnética de pelve;
+- Investigar Síndrome do Anticorpo Antifosfolípide: anticorpos anticardiolipina + anti-β2-glicoproteína-1 + anticoagulante lúpico;
+- Em caso de alteração de algum dos exames → repetir a dosagem em, pelo menos, 12 semanas.
+
+Figura 6: KIT Aspirador Manual Intrauterino.
 
 Figura 7: Representação esquemática de Translocação Robertsoniana.
 
@@ -240,16 +204,18 @@ Figura 7: Representação esquemática de Translocação Robertsoniana.
 
 <!-- page:4 -->
 
-## REFERÊNCIAS
+## Referências
 
-Figura 1: Ultrassonografia transvaginal com saco gestacional Figura 5: Hematoma retrocoriônico >50% da circunferência do tópico em fundo do útero (seta fina) e reação decidual saco gestacional (área vermelha).
+Figura 1: Ultrassonografia transvaginal com saco gestacional tópico em fundo do útero (seta fina) e reação decidual (seta tracejada). Rodgers SK, Horrow MM, Doubilet PM, Frates MC, Kennedy A, Andreotti R, Brandi K, Detti L, Horvath SK, Kamaya A, Koyama A, Lema PC, Maturen KE, Morgan T, Običan SG, Olinger K, Sohaey R, Senapati S, Strachowski LM. A Lexicon for First-Trimester US: Society of Radiologists in Ultrasound Consensus Conference Recommendations. Radiology. 2024 Aug;312(2):e240122. doi: 10.1148/radiol.240122.
 
-(seta tracejada). A Rodgers SK, Horrow MM, Doubilet PM, Frates MC, Kennedy A, Andreotti R, Brandi K, Detti L, Horvath SK, Kamaya A, Koyama A, Lema PC, Maturen KE, Morgan T, Običan SG, Olinger K, Sohaey R, Senapati S, Strachowski LM. A Lexicon for First-Trimester US: Society of Radiologists in a Ultrasound Consensus Conference Recommendations. Radiology. 2024 Aug;312(2):e240122. doi: 10.1148/radiol.240122.
+Figura 2: Gestação com saco gestacional e vesícula vitelínica. Arquivo Medcof.
 
-Figura 2: Gestação com saco gestacional e vesícula vitelínica. Arquivo Medcof. A Figura 3: Embrião visualizado dentro do saco gestacional.
+Figura 3: Embrião visualizado dentro do saco gestacional. Arquivo Medcof.
 
-Arquivo Medcof Figura 4: Gestação anembrionada. Arquivo Medcof. Arquivo Medcof. Figura 6: KIT Aspirador Manual Intrauterino.
+Figura 4: Gestação anembrionada. Arquivo Medcof.
 
-Manual Vacuum Aspiration Kit (MVA Kit). GST Corporation Limited. Disponível em: https://medium.com/@killervictor45/manual-vacuumaspiration-kit-mva-kit-991af7cca753 Figura 7: Representação esquemática de Translocação Robertsoniana.
+Figura 5: Hematoma retrocoriônico > 50% da circunferência do saco gestacional (área vermelha). Arquivo Medcof.
 
-Arquivo Medcof
+Figura 6: KIT Aspirador Manual Intrauterino. Manual Vacuum Aspiration Kit (MVA Kit). GST Corporation Limited. Disponível em: https://medium.com/@killervictor45/manual-vacuumaspiration-kit-mva-kit-991af7cca753
+
+Figura 7: Representação esquemática de Translocação Robertsoniana. Arquivo Medcof.

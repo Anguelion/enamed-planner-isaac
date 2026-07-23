@@ -2,151 +2,149 @@
 
 <!-- page:1 -->
 
-Anemia Ferropriva (CM) Anemia de Doença Crônica (CM) ANEMIAS HIPOPROLIFERATIVAS
+> ⚠️ Este material contém fluxogramas e figuras do PDF original convertidos em texto/listas — as setas e caixas foram reorganizadas na ordem mais provável.
 
-- Reticulócitos normais ou reduzidos;
+## Anemias hipoproliferativas
 
-- Microcítica: VCM <80fL| Macrocítica: VCM > 80fL.
+- Reticulócitos normais ou reduzidos.
+- **Microcítica**: VCM < 80 fL. **Macrocítica**: VCM > 80 fL.
 
-## ANEMIA FERROPRIVA
+Duas causas principais abordadas neste capítulo: **anemia ferropriva** e **anemia de doença crônica** (ambas cursam com reticulócitos hipoproliferativos).
 
-- Geralmente é microcítica e hiprocrômica;
+## Anemia ferropriva
 
+- Geralmente é **microcítica e hipocrômica**.
 - Principal causa é sangramento.
 
-Ferro, Sat Transferrina, Ferritina reticulócitos diminuídos TIBC alto Criança ou gestante? Sim Não Sangramento visível?
+**Fluxograma de investigação** (ferro, saturação de transferrina, ferritina e reticulócitos diminuídos; TIBC alto):
 
-Investigação / Condutas específicas Sim Não Pesquisa de Medidas sangue específicas oculto nas para conter a fezes + EDA + hemorragia colonoscopia Enteroscopia com cápsula endoscópica
+- Criança ou gestante?
+  - **Sim** → investigação/condutas específicas.
+  - **Não** → sangramento visível?
+    - **Sim** → medidas específicas para conter a hemorragia.
+    - **Não** → pesquisa de sangue oculto nas fezes + EDA + colonoscopia ± enteroscopia com cápsula endoscópica.
 
-- Tratamento: controle do sangramento + reposição de ferro (oral, preferencialmente).
+- **Tratamento**: controle do sangramento + reposição de ferro (oral, preferencialmente).
 
-## DEFINIÇÃO
+## Definição (anemia)
 
-- Gestantes: Hb < 11 g/dL;
+- **Gestantes**: Hb < 11 g/dL.
+- **Mulheres**: Hb < 12 g/dL.
+- **Homens**: Hb < 13 g/dL.
 
-- Mulheres: Hb < 12 g/dL;
+## Classificação
 
-- Homens: Hb < 13 g/dL.
+- Diferencia-se através dos reticulócitos (hiper e hipoproliferativa) e do volume corpuscular médio (VCM: micro, normo e macrocíticas).
 
-## CLASSIFICAÇÃO
+## Reticulócitos
 
-- Diferencia-se através dos reticulócitos (hiper e hipoproliferativa) e o volume corpuscular médio VCM (micro, normo e macrocíticas).
-
-## RETICULÓCITOS
-
-- Neste capítulo então abordaremos as anemias com reticulócitos normais ou diminuídos.
-
+- Neste capítulo abordaremos as anemias com reticulócitos normais ou diminuídos.
 - Verificar Figura 1 na próxima página.
 
-ANEMIA DE DOENÇA CRÔNICA:
+## Anemia de doença crônica
 
-- Geralmente é normocítica e normocrômica.
+- Geralmente é **normocítica e normocrômica**.
 
-Anemia de ELEVAÇÃO Doença Crônica Inflamação Hepcidina TIBC baixo Sat. transferrina Bloqueio normal / baixa Ferroportina Anemia hiproliferativa Ferritina alta NORMO NORMO
+**Fisiopatologia**: inflamação → elevação da hepcidina → bloqueio da ferroportina → TIBC baixo, saturação de transferrina normal/baixa, ferritina alta → anemia hipoproliferativa normocítica.
 
-- Tratamento: tratar causa base, se DRC (avaliar indicação de EPO).
+- **Tratamento**: tratar a causa de base; se DRC, avaliar indicação de EPO.
 
-## CORREÇÃO DOS RETICULÓCITOS
+## Correção dos reticulócitos
 
-- Corrigir quando há anemia e o valor foi dado em valor relativo (%);
-
-- Há duas formas de fazer a correção: Índice Reticulocitário Corrigido (IRC) = % reticulócitos x Ht/40; Índice Reticulocitário Corrigido (IRC) = %
-
-Reticulócitos x Hb/15.
-
+- Corrigir quando há anemia e o valor foi dado em valor relativo (%).
+- Há duas formas de fazer a correção:
+  - Índice Reticulocitário Corrigido (IRC) = % reticulócitos × Ht/40.
+  - Índice Reticulocitário Corrigido (IRC) = % reticulócitos × Hb/15.
 - Quando o valor é dado em número absoluto, não é necessária correção.
-
 - Verificar Figura 2 na próxima página.
 
 ---
 
 <!-- page:2 -->
 
-Anemias Hemolíticas Aumentados (>2% ou >100mil) Hiperproliferativa Sangramentos Agudos Aumentados (>2% ou >100mil) Hiperproliferativa Normal ou reduzidos Hipoproliferativas Figura 1: Reticulócitos e investigação de anemia.
+*Figura 1: Reticulócitos e investigação de anemia — reticulócitos aumentados (> 2% ou > 100 mil): hiperproliferativa (anemias hemolíticas, sangramentos agudos). Reticulócitos normais ou reduzidos: hipoproliferativa.*
 
-## VOLUME CORPUSCULAR MÉDIO (VCM)
+## Volume corpuscular médio (VCM)
 
-< 80 fL 80-100 fL >100 fL Figura 2: VCM e investigação de anemia.
+*Figura 2: VCM e investigação de anemia — < 80 fL (microcítica); 80-100 fL (normocítica); > 100 fL (macrocítica).*
 
-- Macrocítica: VCM > 80 fL;
+- **Macrocítica**: VCM > 100 fL.
+- **Microcítica**: VCM < 80 fL; talassemias possuem VCM ainda menor, em geral abaixo de 60 fL.
 
-- Microcítica: VCM < 80 fL|; Talassemias possuem menores VCM, em geral abaixo de 60 fL.
+## Quadro clínico
 
-## QUADRO CLÍNICO
+- Depende da velocidade de instalação.
+- Geralmente os casos mais agudos possuem mais sintomas: fadiga/astenia, dispneia, taquicardia e hipotensão postural, palidez e icterícia.
 
-- Dependem da velocidade de instalação
+**Classificação por mecanismo e VCM:**
 
-- Geralmente casos mais agudos possuem mais sintomas; Fadiga/astenia; Dispneia; Taquicardia e Hipotensão postural; Palidez e Icterícia.
+- Sangramentos agudos.
+- Carenciais (Fe, B12, ácido fólico).
+- Deficiência de EPO.
+- Distúrbios medulares: invasão medular, insuficiência medular.
 
-- Microcítica e hipocrômica;
+| VCM | Etiologias |
+|---|---|
+| Microcítica | Ferropriva, talassemia, sideroblástica |
+| Normocítica | Doença crônica |
+| Macrocítica | Megaloblástica, SMD, anemia aplástica |
 
-Sangramentos Agudos Carenciais (Fe, B12, AF) Deficiência EPO Distúrbios medulares Invasão Medular Insuficiência Medular Ferropriva Microcítica Talassemia Sideroblástica Normocítica Doença Crônica Megaloblástica Macrocítica SMD Anemia Aplástica
+- Principal causa de anemia no mundo, principalmente em países em desenvolvimento (desnutrição, parasitoses), particularmente em crianças, mulheres na menacme e gestantes.
 
-- Principal causa de anemia no mundo; Principalmente em países em desenvolvimento Particularmente em crianças, mulheres na menacme e gestantes.
+## Metabolismo do ferro
 
-(desnutrição, parasitoses);
-
-## METABOLISMO DO FERRO
-
-- Fundamental na formação dos glóbulos vermelhos por fazer parte da produção de hemoglobina;
-
-- A média de estoques é de 3 a 4g; desses estão contidos nas hemácias.
-
-- Outros estoques de ferro: Macrófagos no baço; Medula óssea; Fígado.
-
-⅔
-
+- Fundamental na formação dos glóbulos vermelhos por fazer parte da produção de hemoglobina.
+- A média de estoques é de 3 a 4 g; ⅔ desses estão contidos nas hemácias.
+- Outros estoques de ferro: macrófagos no baço, medula óssea, fígado.
 - Verificar Figura 3 na próxima página.
 
 ---
 
 <!-- page:3 -->
 
-Tabela 2: Causas de ferropenia relativa. Etiologias Detalhes Figura 3: Fisiologia da absorção de ferro pelo enterócito através da ferroportina que é regulada pelos níveis séricos de hepcidina.
+*Figura 3: Fisiologia da absorção de ferro pelo enterócito através da ferroportina, que é regulada pelos níveis séricos de hepcidina.*
 
-- Ferroportina: transporta o ferro do enterócito para corrente sanguínea;
+- **Ferroportina**: transporta o ferro do enterócito para a corrente sanguínea.
+- **Ferritina**: no estado basal (fora de estados inflamatórios/síndrome metabólica), reflete de forma adequada os valores de estoque corporal de ferro.
+- **Hepcidina**: na hipóxia/anemia, diminui; no excesso de ferro e na inflamação, aumenta. Quando aumentada, bloqueia a ferroportina e inibe a absorção do ferro, que será eliminado inalterado.
+- Subdividida basicamente em déficit de ferro absoluto e relativo.
 
-- Ferritina: no estado basal (fora de estados inflamatórios/síndrome metabólica); Reflete de forma adequada os valores de estoque corporal de ferro.
+### Tabela 1: Causas de ferropenia absoluta
 
-- Hepcidina; Na hipóxia/anemia: diminui; No excesso de ferro e na inflamação: aumenta Quando aumentada, bloqueia a ferroportina e inibe a absorção do ferro, que será eliminado inalterado.
+| Etiologia | Detalhes |
+|---|---|
+| Perda crônica | Sangramentos (digestivo, hipermenorreia) |
+| Aumento da demanda de ferro | Infância e gestação |
+| Diminuição da ingesta | Desnutrição, dieta restritiva (vegetariana) |
+| Diminuição da absorção | Cirurgia bariátrica, gastrite atrófica, doença celíaca, uso crônico de IBP, doença inflamatória intestinal |
 
-- Subdivididos basicamente em um déficit de ferro absoluto e relativo.
+**Cirurgia bariátrica e anemia ferropriva** — ambas as técnicas (bypass e sleeve) causam diminuição na absorção por três mecanismos:
 
-Tabela 1: Causas de ferropenia absoluta. Etiologias Detalhes Sangramentos (digestivo, Perda crônica hipermenorreia)
+- Diminuição da ingesta de alimentos.
+- Diminuição da produção de HCl (o Fe necessita de meio ácido para ser melhor absorvido).
+- Diminuição da área de absorção (em especial duodeno).
 
-Aumento da Infância e gestação demanda de ferro Diminuição da Desnutrição, dieta restritiva ingesta (vegetariana)
+### Tabela 2: Causas de ferropenia relativa
 
-Cirurgia bariátrica, gastrite Diminuição da atrófica, doença celíaca, absorção uso crônico de IBP, doença inflamatória intestinal Cirurgia Bariátrica e Anemia Ferropriva
+| Etiologia | Detalhes |
+|---|---|
+| Sequestro de ferro nos estoques | Aumento da hepcidina (inflamação) |
+| Falta de eritropoetina (EPO) | DRC |
 
-- Ambas as técnicas (bypass e sleeve) causam diminuição na absorção por três mecanismos; Diminuição da ingesta de alimentos; Diminuição da produção de HCl; O Fe necessita de meio ácido para ser melhor absorvido. Diminuição da área de absorção (em especial duodeno).
+**Sinais clínicos clássicos:**
 
-Aumento da hepcidina Sequestro de ferro (inflamação) nos estoques Falta de eritropoetina - EPO (DRC)
+- **Queilite angular**: inflamação no ângulo da boca. *(Figura 4)*
+- **Coiloníquia**: unha em formato de colher. *(Figura 5)*
+- **Síndrome de Plummer-Vinson**: presença de membranas no esôfago. *(Figura 6: membranas esofágicas)*
 
-- Queilite angular; Inflamação no ângulo da boca.
+## Investigação
 
-Figura 4: Queilite angular.
-
-- Coiloníquia; Unha em formato de colher.
-
-Figura 5: Coiloníquia.
-
-- Síndrome de Plummer-Vinson; Presença de membranas no esôfago.
-
-Figura 6: Membranas esofágicas (Síndrome de Plummer-Vinson).
-
-## INVESTIGAÇÃO
-
-- Ferro sérico;
-
-- Ferritina;
-
-- Saturação de transferrina;
-
-- TIBC (Total Iron-Binding Capacity);
-
-- RDW (Red Cell Distribution Width);
-
-- Mielograma é padrão-ouro; Porém não há necessidade da realização do mesmo.
+- Ferro sérico.
+- Ferritina.
+- Saturação de transferrina.
+- TIBC (Total Iron-Binding Capacity).
+- RDW (Red Cell Distribution Width).
+- Mielograma é padrão-ouro, porém não há necessidade da realização do mesmo.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -156,87 +154,84 @@ Figura 6: Membranas esofágicas (Síndrome de Plummer-Vinson).
 
 <!-- page:4 -->
 
-| O metabolismo da hepcidina: aumento da ingesta de ferro causa aumento da hepcidina e bloqueio Ferritina ↓ Fe SÉRICO ↓ da ferroportina;
+*Figura 7: Exames necessários e sugestivos de anemia ferropriva — o aumento da ingesta de ferro causa aumento da hepcidina e bloqueio da ferroportina.*
 
-Estoque de ferro Quantidade disponível
+- **Ferritina ↓** — estoque de ferro.
+- **Fe sérico ↓** — quantidade disponível.
+- **TIBC ↑** — capacidade total de ligação de ferro.
+- **Sat. transferrina ↓** — proteína carreadora.
+- **RDW ↑** — anisocitose.
+- **Hepcidina ↓** — regulação da ferroportina.
 
-- TIBC ↑ Sat. Transferrina ↓ de ligação de ferro
+## Tratamento
 
-Capacidade total Proteína carreadora
+### Condutas gerais
 
-- RDW ↑ Hepcidina ↓
-
-Anisocitose Regulação da ferroportina Figura 7: Exames necessários e sugestivos de anemia ferropriva.
-
-## TRATAMENTO
-
-Condutas gerais
-
-- Sangramentos; Em adultos é obrigatória a avaliação do trato gastrointestinal (sangue oculto, endoscopia digestiva alta, colonoscopia, cápsula endoscópica); Caso a pesquisa inicial seja negativa, avaliar indicação de cápsula endoscópica; Colonoscopia: quando alterada, metade dos casos são neoplasias (especialmente cólon); Mulheres com fluxo menstrual muito aumentado pode ser etiologia.
-
-- Má absorção;
-
+- **Sangramentos**: em adultos é obrigatória a avaliação do trato gastrointestinal (sangue oculto, endoscopia digestiva alta, colonoscopia, cápsula endoscópica).
+  - Caso a pesquisa inicial seja negativa, avaliar indicação de cápsula endoscópica.
+  - Colonoscopia: quando alterada, metade dos casos são neoplasias (especialmente de cólon).
+  - Mulheres com fluxo menstrual muito aumentado — pode ser a etiologia.
+- Má absorção.
 - Baixa ingesta (prevalente em países de 3º mundo).
 
-Reposição de ferro
+### Reposição de ferro
 
-- Feito em duas fases; Correção da anemia (1 a 2 meses); Reposição dos estoques (2 a 3 meses).
+- Feita em duas fases: correção da anemia (1 a 2 meses); reposição dos estoques (2 a 3 meses).
+- **Via de administração**: oral é a preferencial na maioria dos casos.
+- Dose diária de 60-200 mg de Fe elementar, em tomada única diária.
+- Se > 100 mg por dia: dias alternados (validado para mulheres com problemas menstruais). Se tomado em dias alternados, o bloqueio da hepcidina é evitado, pois já terá passado o pico.
 
-- Via de administração; Oral é a preferencial na maioria dos casos. A
+### Tabela 3: Anemia de doença crônica x anemia ferropriva
 
-- Dose diária de 60-200mg e Fe elementar, em tomada única diária;
+| | Anemia de doença crônica | Anemia ferropriva |
+|---|---|---|
+| Ferro sérico | Diminuído | Diminuído |
+| Sat. transferrina | Diminuído ou normal | Diminuído |
+| TIBC | Diminuído ou normal | Aumentado |
+| Ferritina | Normal ou aumentada | Diminuída |
 
-- Se > 100mg por dia; Dias alternados (Validado para mulheres com problemas menstruais); Se tomado em dias alternados, esse bloqueio é evitado, pois já terá passado o pico de hepcidina.
+### Efeitos colaterais (reposição oral de ferro)
 
-Tabela 3: Demonstrando as principais semelhanças e diferenças entr Anemia Doenç Ferro sérico Diminu Sat Transferrina Diminuído ou TIBC Diminuído ou Ferritina Normal ou au Efeitos Colaterais
+- Trato gastrointestinal, náuseas, constipação.
 
-- Trato gastrointestinal; Náuseas; Constipação.
+## Avaliação de resposta
 
-## AVALIAÇÃO DE RESPOSTA
+- Melhora dos sintomas.
+- Aumento de 2 g/dL de Hb após 3-4 semanas de tratamento.
+- Aumento de reticulócitos (mais precoce, > 100.000): com cerca de 4 dias já inicia o aumento dos reticulócitos, com pico em 10 dias.
 
-- Melhora dos sintomas; Aumento de 2g/dL após 3-4 semanas do tratamento; Aumento de reticulócitos (mais precoce, > 100.000); Com cerca de 4 dias já inicia aumento dos reticulócitos, com pico em 10 dias.
+**Resultado não esperado?** Considerar: má adesão (principal causa), dose baixa, tempo curto de tratamento, sangramento persistente, diagnóstico errado.
 
-- Resultado não esperado? Má adesão: principal causa; Dose baixa; Tempo curto de tratamento; Sangramento persistente; Diagnóstico errado.
+## Anemia de doença crônica
 
-## ANEMIA DE DOENÇA CRÔNICA
-
-- Geralmente normocítica e normocrômica;
-
-- Inflamação aumenta IL-6; Aumenta produção de hepcidina e diminui ferroportina; Bloqueio da ferroportina que leva a deficiência funcional do ferro por bloqueio dos estoques.
-
-- Saturação de transferrina e Fe sérico baixos;
-
-- Ativação do sistema retículo endotelial; Diminuição da sobrevida das hemácias.
-
+- Geralmente normocítica e normocrômica.
+- Inflamação aumenta IL-6 → aumenta a produção de hepcidina e diminui a ferroportina → bloqueio da ferroportina, levando a deficiência funcional do ferro por bloqueio dos estoques.
+- Saturação de transferrina e Fe sérico baixos.
+- Ativação do sistema retículo-endotelial → diminuição da sobrevida das hemácias.
 - Verificar Figura 8 na próxima página.
 
-Anemia da doença renal crônica
+### Anemia da doença renal crônica
 
-- A anemia da doença renal crônica (DRC) é um subtipo de anemia de doença crônica;
-
-- Baixa produção de eritropoetina (EPO): Medula óssea não é estimulada a produzir; Paciente DRC com cinética do Ferro normal.
-
-re anemia de doença crônica e anemia ferropriva. ça Crônica Anemia Ferropriva uído Diminuído u normal Diminuído u normal Aumentado umentada Diminuída
+- É um subtipo de anemia de doença crônica.
+- Baixa produção de eritropoetina (EPO): a medula óssea não é estimulada a produzir. Paciente com DRC apresenta cinética do ferro normal.
 
 ---
 
 <!-- page:5 -->
 
-Figura 8: Metabolismo do ferro, agora com destaque para o lado d da doença crônica.
+*Figura 8: Metabolismo do ferro, com destaque para o lado direito (inflamação e produção de IL-6), gerando a cascata da anemia da doença crônica.*
 
-- A anamnese, ferritina e TIBC são as principais pistas par
+*Figura 9: Fisiopatologia da anemia da doença crônica, com destaque para o componente renal.*
 
-Figura 9: Fisiopatologia da anemia da doença crônica, agora com
+- A anamnese, a ferritina e o TIBC são as principais pistas para diferenciação com a anemia ferropriva.
 
-## REFERÊNCIAS
+## Referências
 
-Figura 4:: Queilite angular. Disponível em: https://dermatologiaesaude.com.br/perleche-queiliteangular-comissurite/. Acesso em: 12 jun. 2025.
+Figura 4: Queilite angular. Disponível em: https://dermatologiaesaude.com.br/perleche-queiliteangular-comissurite/. Acesso em: 12 jun. 2025.
 
-direito (inflamação e produção de IL-6), gerando cascata da anemia ra diferenciação com a anemia ferropriva.
+Figura 5: Coiloníquia. Disponível em: https://www.msdmanuals.com/pt-br/profissional/multimedia/image/coilon%C3%ADquia. Acesso em: 12 jun. 2025.
 
-m destaque para o componente renal. Figura 5:: Coiloníquia. Disponível em: https://www.msdmanuals.com/pt-br/profissional/ multimedia/image/coilon%C3%ADquia. Acesso em: 12 jun. 2025.
-
-Figura 6:: Membranas esofágicas (Síndrome de Plummer-Vinson). Disponível em: https://www.gastrointestinalatlas.com/english/Plummer_ Vinson_Syndrome.html. Acesso em: 12 jun. 2025.
+Figura 6: Membranas esofágicas (Síndrome de Plummer-Vinson). Disponível em: https://www.gastrointestinalatlas.com/english/Plummer_Vinson_Syndrome.html. Acesso em: 12 jun. 2025.
 
 ![Figura do material - página 5](figure-005-1.webp)
 

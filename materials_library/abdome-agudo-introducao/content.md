@@ -2,132 +2,118 @@
 
 <!-- page:1 -->
 
-Abdome Agudo Abdome agudo inflamatório
+> ⚠️ Tabela reconstruída a partir de OCR (PDF original em duas colunas, texto intercalado) — confira contra a fonte original.
 
-- Intussuscepção;
+## Classificação do Abdome Agudo
 
+**Abdome agudo inflamatório**
 - Apendicite aguda;
-
-- Síndrome de Pglivie;
-
 - Vias biliares;
-
-- Outros (bezoar, wilkie).
-
-- Doença diverticular; Abdome agudo perfurativo
-
+- Doença diverticular;
 - Pancreatite aguda;
-
-- DUP;
-
 - Abscessos;
+- Megacólon tóxico;
+- DII (doença inflamatória intestinal);
+- GECA.
 
+**Abdome agudo obstrutivo**
+- Tumores;
+- Bridas;
+- Hérnias;
+- Volvos;
+- Intussuscepção;
+- Síndrome de Ogilvie;
+- Outros (bezoar, síndrome de Wilkie).
+
+**Abdome agudo perfurativo**
+- DUP (doença ulcerosa péptica);
 - Doenças que perfuram.
 
-- Megacólon tóxico; Abdome agudo vascular
-
-- DII;
-
+**Abdome agudo vascular**
 - Trombose;
-
-- Geca.
-
 - Embolia;
-
-Abdome agudo obstrutivo
-
 - Não oclusiva.
 
-- Tumores; Abdome agudo hemorrágico
-
-- Bridas;
-
+**Abdome agudo hemorrágico**
 - Gestação ectópica;
-
-- Hérnias;
-
 - Cisto hepático roto.
 
-- Volvos;
+**Outras causas de dor abdominal**
+- Não se encaixam em nenhum grupo: urológicas/ginecológicas, hematológicas, endócrinas e metabólicas, toxinas e drogas.
 
-## INTRODUÇÃO
+## Introdução
 
-Abdome agudo hemorrágico
+**Abdome agudo**: dor abdominal aguda que leva o paciente a procurar ajuda médica.
 
-- Dor abdominal súbita forte, associada a palidez,
+**1º passo**: avaliação de histórico e exame físico:
+- Dor súbita? De evolução progressiva?
+- Comorbidades? Uso de medicamentos? Antecedentes?
+- Sintomas associados? (Febre, náuseas e vômitos, diarreia)
+- Localizada? Difusa?
+- Peritonite? Distensão? Massa palpável?
+- Sinais sistêmicos?
 
-- Dor abdominal aguda que leva o paciente a procurar hipotensão e anemia.
+A partir disso, podemos classificar o paciente em grupos conforme a suspeita diagnóstica, para guiar a conduta.
 
-ajuda médica; Outras causas de dor abdominal
+### Abdome Agudo Inflamatório
 
-- 1º passo: avaliação de histórico e exame físico:
-
-- Não se encaixam em nenhum grupo. Dor súbita? De evolução progressiva? Comorbidades? Uso de medicamentos? Antecedentes? Abdome agudo inflamatório Sintomas associados? (Febre, náuseas e
-
-Localizada? Difusa? ETIOLOGIAS
-
-- Apendicite aguda, vias biliares, doença diverticular, vômitos, diarreia) pancreatite aguda, abscessos, megacólon tóxico, Peritonite? Distensão? Massa palpável? DII e GECA. Sinais sistêmicos? Abdome agudo obstrutivo
-
-A partir disso, podemos classificar o paciente em grupos
-
-- Tumores, bridas, hérnias, volvos, intussuscepção, conforme suspeita diagnóstica para guiar condutas! síndrome de Ogilvie, outros.
-
-Abdome agudo inflamatório Abdome agudo perfurativo
-
-- Caracterizado por dor de evolução progressiva, que
-
-- DUP, doenças que perfuram.
-
-se localiza; Abdome agudo hemorrágico
-
-- Sintomas sistêmicos: febre, náuseas e
-
-- Gestação ectópica, cisto hepático roto.
-
-vômitos, taquicardia; Abdome agudo vascular
-
+- Caracterizado por **dor de evolução progressiva**, que se localiza;
+- **Sintomas sistêmicos**: febre, náuseas e vômitos, taquicardia;
 - A dor é difusa e depois se localiza:
+  - Início = **dor visceral**, difusa;
+  - Progressão da inflamação = acometimento do peritônio parietal → **dor localizada**.
 
-- Trombose, embolia não oclusiva. Início = dor visceral - difusa; Outras causas de dor abdominal → progressão da inflamação = acometimento do
+**Etiologias**: apendicite aguda, vias biliares, doença diverticular, pancreatite aguda, abscessos, megacólon tóxico, DII e GECA.
 
-- Urológicas/ginecológicas, hematológicas, endócrinas e peritônio parietal - dor localizada. metabólicas, toxinas e drogas.
+### Abdome Agudo Hemorrágico
 
-Abdome agudo obstrutivo
+- **Dor abdominal súbita forte**, associada a **palidez, hipotensão e anemia**.
 
-- Tríade (dor abdominal, distensão e parada de MANEJO GERAL eliminação de fezes e flatos); Abdome agudo inflamatório
+**Etiologias**: gestação ectópica, cisto hepático roto.
 
-- Paciente realizou cirurgia prévia? Está perdendo peso?
+### Abdome Agudo Obstrutivo
 
-- Exames laboratoriais, tomografia/ USG;
+- **Tríade**: dor abdominal, distensão e parada de eliminação de fezes e flatos;
+- Paciente realizou cirurgia prévia? Está perdendo peso? Teve alterações intestinais?
+- **Bridas** = obstrução intestinal alta × **Tumores** = obstrução intestinal baixa.
 
-Teve alterações intestinais?
+**Etiologias**: tumores, bridas, hérnias, volvos, intussuscepção, síndrome de Ogilvie, outros.
 
-- Conduta: hidratação, antibiótico e cirurgia.
+### Abdome Agudo Perfurativo
 
-- Bridas = obstrução intestinal alta X Tumores = Abdome agudo obstrutivo
+- Caracterizado por uma **dor súbita, intensa, difusa e peritonite**;
+- Deve-se perguntar ao paciente se usa drogas ou faz abuso de **AINEs**.
 
-Obstrução intestinal baixa.
+**Etiologias**: DUP, doenças que perfuram.
 
-- Exame: radiografia de abdome agudo, tomografia
+### Abdome Agudo Vascular
 
-Abdome agudo perfurativo (padrão ouro);
+- **Fatores de risco para doença vascular** + dor não compatível com o exame físico;
+- Deve-se avaliar doenças vasculares associadas ou cardiológicas, como **arritmias**.
 
-- Caracterizado por uma dor súbita, intensa,
+**Etiologias**: trombose, embolia, não oclusiva.
 
-- Conduta: jejum, SNG, analgesia, hidratação difusa e peritonite; endovenosa, cirurgia em muitos casos.
+## Manejo Geral
 
-- Deve-se perguntar ao paciente se usa drogas ou Abdome agudo perfurativo abuso de AINES.
+### Abdome Agudo Inflamatório
 
-- Exame: radiografia de abdome agudo;
+- **Exames**: laboratoriais, tomografia/USG;
+- **Conduta**: hidratação, antibiótico e cirurgia.
 
-Abdome agudo vascular
+### Abdome Agudo Obstrutivo
 
-- Conduta: cirurgia de urgência.
+- **Exame**: radiografia de abdome agudo, tomografia (padrão-ouro);
+- **Conduta**: jejum, SNG (sonda nasogástrica), analgesia, hidratação endovenosa, cirurgia em muitos casos.
 
-- Fatores de risco para doença vascular + dor não Abdome agudo hemorrágico compatível com exame físico;
+### Abdome Agudo Perfurativo
 
-- Conduta: cirurgia de urgência, transfusão sanguínea.
+- **Exame**: radiografia de abdome agudo;
+- **Conduta**: cirurgia de urgência.
 
-- Deve-se avaliar doenças vasculares associadas ou Abdome agudo vascular cardiológicas, como arritmias.
+### Abdome Agudo Vascular
 
-- Conduta: gasometria, lactato, angioTc abdome, cirurgia.
+- **Conduta**: gasometria, lactato, angioTC de abdome, cirurgia.
+
+### Abdome Agudo Hemorrágico
+
+- **Conduta**: cirurgia de urgência, transfusão sanguínea.

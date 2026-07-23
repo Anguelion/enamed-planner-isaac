@@ -1,139 +1,103 @@
-# Abdome agudo Vascular
+# Abdome Agudo Vascular
 
 <!-- page:1 -->
 
-AAV Ag Tipos Arterial Ve Embolia Hipercoag Etiologia X lesão dire Trombose Clínica Súbito Dor in Embolectomia Tratamento X Anticoa Cirurgia
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## DEFINIÇÃO
+**Abdome Agudo Vascular (AAV) — visão geral**
 
-- O abdome agudo vascular é caracterizado por uma obstrução vascular da irrigação intestinal, causando isquemia de alças;
+| Tipo | Etiologia | Clínica | Tratamento |
+|---|---|---|---|
+| Arterial (embolia) | Hipercoagulabilidade / lesão direta | Início súbito, dor intensa | Embolectomia |
+| Arterial (trombose) | Aterosclerose | Dor insidiosa | Anticoagulação / cirurgia |
 
-- Possui alta morbimortalidade em pacientes graves;
+## Definição
 
-- Deve-se ter alta suspeição diagnóstica devido à inespecificidade do quadro.
+- O **abdome agudo vascular** é caracterizado por uma **obstrução vascular da irrigação intestinal**, causando isquemia de alças;
+- Possui **alta morbimortalidade** em pacientes graves;
+- Deve-se ter **alta suspeição diagnóstica** devido à inespecificidade do quadro.
 
-## EPIDEMIOLOGIA
+## Epidemiologia
 
-- Mais comum em idosos, sexo feminino, com comorbidades (cardiopata, HAS, DM);
+- Mais comum em **idosos**, sexo feminino, com comorbidades (cardiopata, HAS, DM);
+- **Arterial**:
+  - **Trombose** → aterosclerose;
+  - **Embolia** → FA, flutter, aneurisma.
+- **Venoso**: trombofilias, neoplasia, trombose de porta, trauma, abdome agudo inflamatório.
+- **Não oclusivo**: ocorre por hipofluxo (choque, UTI, drogas).
 
-- Arterial: Trombose → Aterosclerose; Embolia → FA, Flutter, aneurisma.
+## Clínica
 
-- Venoso: Trombofilias, neoplasia, trombose de porta, trauma, abdome agudo inflamatório.
-
-- Não oclusivo: Ocorre por hipofluxo (choque, UTI, drogas).
-
-## CLÍNICA
-
-- Dor abdominal intensa, súbita, periumbilical e difusa;
-
-- Evolui com distensão abdominal, sem peritonite;
-
-- Sinal clássico: desproporção da dor com exame físico;
-
+- **Dor abdominal intensa, súbita, periumbilical e difusa**;
+- Evolui com **distensão abdominal**, sem peritonite (inicialmente);
+- **Sinal clássico**: desproporção da dor em relação ao exame físico;
 - Atentar aos antecedentes!
+- **Arterial**: dor súbita e intensa;
+- **Venoso**: dor insidiosa e distensão; paciente pode ter sangramento digestivo;
+- **Não oclusivo**: distensão, leucocitose — é o mais inespecífico de todos.
 
-- Arterial: Dor súbita intensa;
+## Investigação
 
-- Venoso: Dor insidiosa e distensão. Paciente pode ter sangramento digestivo;
-
-- Não oclusivo: Distensão, leucocitose. É o mais inespecífico de todos.
-
-## INVESTIGAÇÃO
-
-## EXAMES LABORATORIAS
+### Exames Laboratoriais
 
 - Embora não sejam específicos, avaliam a gravidade;
+- **Marcadores de necrose intestinal**: CPK, DHL, lactato, amilase, D-dímero;
+- **Marcadores de infecção**: leucocitose, PCR, gasometria;
+- **Na prova**: acidose láctica com dor desproporcional = diagnóstico diferencial de abdome agudo vascular.
 
-- Marcadores de necrose intestinal: CPK, DHL, lactato amilase, D-dímero. guda Crônica enosa Não-oclusiva Angina intestinal gulabilidade, reta, estase nsidiosa distensão perda de peso agulação Papaverina Tratar comorbidades
+### Imagem
 
-Drogas, choque Aterosclerose Piora clínica, Dor pós-prandial,
+- Radiografia e ultrassom têm **baixa sensibilidade**;
+- **Angiotomografia é o exame de escolha!** Permite avaliar vascularização intestinal, falha de enchimento, edema de alças, espessamento e pneumatose intestinal;
+- **Arteriografia** é o padrão-ouro, mas é reservada para intervenção vascular!
 
-- Marcadores de infecção: Leucocitose, PCR, gasometria.
+## Conduta
 
-- Na prova: Acidose láctica com dor desproporcional =
-
-## IMAGEM
-
-- Radiografia e ultrassom têm baixa sensibilidade:
-
-diagnóstico diferencial;
-
-- ANGIOTOMOGRAFIA é o exame de escolha! Permite avaliar vascularização intestinal, falha de enchimento, edemas de alças, espessamento e pneumatose intestinal.
-
-- Arteriografia é o padrão ouro, mas é reservada para intervenção vascular!
-
-## CONDUTA
-
-- Hidratação venosa vigorosa + antibioticoterapia EV + suporte, SNG, SVD;
-
+- **Hidratação venosa vigorosa** + antibioticoterapia EV + suporte, SNG, SVD;
 - Suporte intensivo para todos;
-
-- Tratar causa base;
-
-- Anticoagulação plena +;
-
-- Discutir desobstrução arterial +;
-
-- Discutir abordagem intestinal;
-
-- Arterial: Embolia → Discutir embolectomia com Fogarty;
-
-; | Se for trombótico → Trombectomia.
-
-- Venoso: Anticoagulação plena.
-
-- Não oclusivo: Suporte intenso; Papaverina.
-
-- Indicações de LAPAROTOMIA: Dor intensa, refratária; Acidose, leucocitose; Achados na tomografia; Piora/refratariedade clínica.
+- Tratar a causa base;
+- **Anticoagulação plena**;
+- Discutir desobstrução arterial;
+- Discutir abordagem intestinal.
+- **Arterial**:
+  - Embolia → discutir **embolectomia com cateter de Fogarty**;
+  - Se for trombótico → **trombectomia**.
+- **Venoso**: anticoagulação plena.
+- **Não oclusivo**: suporte intensivo; **papaverina**.
+- **Indicações de laparotomia**:
+  - Dor intensa, refratária;
+  - Acidose, leucocitose;
+  - Achados na tomografia;
+  - Piora/refratariedade clínica.
 
 ---
 
 <!-- page:2 -->
 
-- Tática: laparotomia mediana + ressecar
+- **Tratamento**: tratar a causa base (ex.: aterosclerose);
+- Tratamento endovascular é o preferível; se não resolver, indica-se cirurgia;
+- **Tática**: laparotomia mediana + ressecar segmentos inviáveis;
+- Se paciente estiver muito compensado → anastomose primária;
+- Se a maioria dos pacientes estiver grave → damage control (peritoneostomia, idealmente a vácuo);
+- Devemos programar o **second-look em 48 horas** em pacientes muito graves, com áreas de penumbra nas alças intestinais.
 
-- Tratamento: tratar a causa base – aterosclerose;
+## Colite Isquêmica
 
-segmentos inviáveis:
-
-- Tratamento endovascular é o preferível se o clínico Se paciente estiver muito não resolver.
-
-compensado → Anastomose;
-
-## COLITE ISQUÊMICA
-
-| A maioria dos pacientes são graves e ganham damage control. (peritoneostomia idealmente a vácuo).
-
-- É caracterizada por uma isquemia transitória que é
-
-- Devemos programar o second-look em 48 horas – mais comum no cólon esquerdo decorrente de um pacientes muito graves com áreas de penumbra nas hipofluxo esplâncnico;
-
-alças intestinais.
-
-- Causas: Vasculites, trombose de veias, choque, iatrogenia/
-
-## ISQUEMIA INTESTINAL CRÔNICA
-
-procedimentos, drogas lícitas e ilícitas, pacientes em atividade física extenuante (maratona).
-
-- Mais comum em idosos, fumantes, portadores de
-
-- Paciente evolui com dor abdominal + doença aterosclerótica avançada; diarreia + enterorragia;
-
-- Pacientes apresentam dor pós-prandial, em cólica →
-
+- É caracterizada por uma **isquemia transitória**, mais comum no **cólon esquerdo**, decorrente de um hipofluxo esplâncnico;
+- **Causas**: vasculites, trombose de veias, choque, iatrogenia/procedimentos, drogas lícitas e ilícitas, pacientes em atividade física extenuante (maratona);
+- Outra causa de colite isquêmica: pós-operatório de cirurgia muito grande;
+- Paciente evolui com **dor abdominal + diarreia + enterorragia**;
 - Exames laboratoriais não são específicos;
+- **Diagnóstico**: colonoscopia!
+- **Tratamento**:
+  - Clínico e tratar causa base;
+  - Se não melhorar, é porque a colite evoluiu para um abdome agudo vascular com necrose intestinal.
 
-Perda de peso;
+## Isquemia Intestinal Crônica
 
-- Diagnóstico: colonoscopia!
-
-- Diagnóstico: a partir de história e anamnese;
-
-- Outra causa de colite isquêmica: pós-operatório de
-
-- Suspeitar quando não achar outras justificativas para uma cirurgia muito grande! dor abdominal;
-
-- Tratamento:
-
-- Padrão ouro: angiotomografia: | Clínico e tratar causa base; Visualização de obstrução de múltiplos vasos + | Se não melhorar é porque a colite evoluiu para um circulação colateral; abdome agudo vascular – necrose intestinal. USG doppler é um bom exame para triagem.
+- Mais comum em **idosos, fumantes**, portadores de doença aterosclerótica avançada;
+- Pacientes apresentam **dor pós-prandial, em cólica** → perda de peso (angina intestinal);
+- **Diagnóstico**: a partir de história e anamnese;
+- Suspeitar quando não se acham outras justificativas para a dor abdominal;
+- **Padrão-ouro**: angiotomografia — visualização de obstrução de múltiplos vasos + circulação colateral;
+- **USG Doppler** é um bom exame para triagem.

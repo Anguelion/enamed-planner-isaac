@@ -2,91 +2,73 @@
 
 <!-- page:1 -->
 
-## TRAUMA: VIAS AÉREAS
+## Trauma: Vias Aéreas
 
-Trauma VIA AÉREA DEFINITIVA = Tubo na traquéia + cuff insuflado abaixo das cordas vocais + sistema de ventilação.
+**Via aérea definitiva** = tubo na traqueia + **cuff insuflado abaixo das cordas vocais** + sistema de ventilação.
 
 - Tubo orotraqueal;
-
 - Tubo nasotraqueal;
-
 - Via cirúrgica (traqueostomia / cricotireoidostomia cirúrgica).
 
-MANEJO DA VIA AÉREA Falta de oxigenação dos tecidos é a causa mais rápida de morte no doente traumatizado!
+### Manejo da Via Aérea
 
-1º passo → Avaliar a via aérea + ofertar oxigênio:
+A **falta de oxigenação dos tecidos é a causa mais rápida de morte** no doente traumatizado!
 
-- Paciente conversa e respira? Sim → prosseguir a avaliação para a letra B; Não → prosseguir 2º passo.
+**1º passo** → Avaliar a via aérea + ofertar oxigênio:
 
-2º passo → Tentar desobstruir via aérea:
+- Paciente conversa e respira?
+  - **Sim** → prosseguir a avaliação para a letra B;
+  - **Não** → prosseguir para o 2º passo.
+
+**2º passo** → Tentar desobstruir via aérea:
 
 - Aspirar;
+- Chin-Lift e Jaw-Thrust;
+- Via aérea desobstruída?
+  - **Não** → via aérea definitiva;
+  - **Sim** → prosseguir a avaliação para a letra B e reavaliar;
+- "Letra B" — paciente ainda não ventila/respira? Trauma cranioencefálico ou torácico grave → via aérea definitiva.
 
-- Chin-Lift e Jaw-Thrust
+## Via Aérea Definitiva
 
-- Via aérea desobstruída? Não → Via aérea definitiva; Sim → Prosseguir a avaliação para a letra
+- Tubo na traqueia + **cuff insuflado abaixo das cordas vocais** + sistema de ventilação.
+- Opções de via aérea definitiva: tubo orotraqueal; tubo nasotraqueal; via aérea cirúrgica.
+- Medidas temporárias ou preparatórias:
+  - Oxigenação;
+  - Imobilização;
+  - Utilização de equipamentos não definitivos (ex.: cânula de Guedel, tubo laríngeo, máscara laríngea);
+  - **Via aérea difícil?** → sempre considerar no trauma (trauma = via aérea difícil) e sempre separar material de via aérea difícil.
 
-B e reavaliar;
-
-- “Letra B” - Paciente ainda não ventila / respira? Trauma cranioencefálico ou torácico grave → Via aérea definitiva.
-
-## VIA AÉREA DEFINITIVA
-
-- Tubo na traqueia + cuff insuflado abaixo das cordas vocais + sistema de ventilação
-
-- Opções de via aérea definitiva: Tubo orotraqueal; Tubo nasotraqueal; Via aérea cirúrgica.
-
-- Medidas temporárias ou preparatórias: Oxigenação + imobilização; Utilização de equipamentos não definitivos (ex: Sempre separar material de via aérea difícil (Trauma
-
-cânula de Guedel, tubo laríngeo, máscara laríngea); = via aérea difícil). Medidas temporárias ou preparatórias:
-
-- Oxigenação ;
-
-- Imobilização ;
-
-- Equipamentos não definitivos;
-
-- (Cânula de guedel, tubo laríngeo, máscara laríngea) ;
-
-- *Via aérea difícil? → Sempre no trauma
-
-(Separar material) . INDICAÇÕES DE VIA AÉREA DEFINITIVA
+### Indicações de Via Aérea Definitiva
 
 - Trauma maxilofacial;
-
-- Queimadura de face e de via aérea → estridor, rouquidão, escarro carbonáceo, edema de língua, queimadura de vibrissas e sobrancelhas;
-
+- Queimadura de face e de via aérea → **estridor, rouquidão, escarro carbonáceo, edema de língua, queimadura de vibrissas e sobrancelhas**;
 - Sangramento de via aérea e/ou do tubo digestivo incoercível;
-
 - Lesões inalatórias;
-
 - Apneia;
-
 - Insuficiência respiratória;
-
 - Rebaixamento do nível de consciência e agitação;
-
-- Glasgow < ou igual a 8;
-
+- **Glasgow ≤ 8**;
 - Entre outras indicações para proteção de via aérea.
 
-## INTUBAÇÃO OROTRAQUEAL
+## Intubação Orotraqueal
 
 - Material sempre preparado;
-
 - Sempre considerar via aérea difícil (trauma = via aérea difícil);
-
 - Ventilador e material para aspiração prontos;
+- Laringoscopia pela direita: laringoscópio reto ou curvo; tamanho 3,5 / 4,0 / 4,5;
+- Manobra de Sellick; intubação bimanual; tubo 7,5 / 8,0 / 8,5;
+- Intubação orotraqueal → inflar cuff + confirmar com **capnografia (padrão-ouro)**.
 
-- Laringoscopia pela direita Laringoscópio reto ou curvo; Tamanho 3,5/ 4,0 / 4,5;
+### Sequência Rápida (Assistida por Drogas)
 
-- Manobra de Sellick; Intubação bi-manual Tubo 7,5 / 8,0 / 8,5;
+- **Pré-medicação**: Fentanil (0,06 ml/kg);
+- **Pré-oxigenação**: 3 minutos;
+- **Droga de indução**: Etomidato (0,3 mg/kg);
+- **Paralisação**: Succinilcolina (1 a 2 mg/kg);
+- Intubação orotraqueal.
 
-- Intubação orotraqueal = Inflar Cuff + confirmar com capnografia (padrão ouro).
-
-Sequência Rápida (Assistida por drogas) Pré-medicação Pré-oxigenação Fentanil (0,06 ml/kg) 3 minutos Droga de indução Etomidato (0,3 mg/kg)
-
-Paralisação Succinilcolina (1 a 2 mg/kg) Intubação orotraqueal a Figura 1: Fluxograma de Intubação orotraqueal por sequência rápida.
+*Figura 1: Fluxograma de intubação orotraqueal por sequência rápida.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -94,86 +76,69 @@ Paralisação Succinilcolina (1 a 2 mg/kg) Intubação orotraqueal a Figura 1: F
 
 <!-- page:2 -->
 
-- M: Mallampati. Visualização da hipofaringe
+### Sequência Atrasada
 
-Sequência Atrasada
+- **M**: Mallampati — visualização da hipofaringe;
+- **O**: Obstrução.
 
-- O: Obstrução.
+Etapas: **pré-oxigenação** (3 minutos, oxigenação apneica, manter em próclive, cânula nasal 60s) → **dissociação** (Quetamina 1-2 mg/kg EV lento) → **paralisação** (Succinilcolina 1-2 mg/kg EV lento) → intubação orotraqueal atrasada.
 
-Dissociação Paralisação Dissociação Pré-oxigenação Paralisação
+*Figura 2: Fluxograma de intubação orotraqueal por sequência atrasada.*
 
-- Quetamina Succinicolina
-
-3 minutos (1-2mg/kg EV lento) (1-2mg/kg EV lento) C
-
-- Oxigenação apneica
-
-Manter em próclive Cânula nasal 60s
-
-- Intubação orotraqueal atrasada.
-
-Figura 2:: Fluxograma de Intubação orotraqueal por sequência
-
-- Intubação orotraqueal - sequência atrasada
+Vantagens da intubação orotraqueal em sequência atrasada:
 
 - Permite melhor oxigenação e ventilação dos pacientes;
-
 - Evita agitação;
-
 - Evita risco de broncoaspiração por ventilação;
+- Contraindicada em traumas de face e via aérea graves.
 
-- Contraindicado em traumas de face e via aérea graves.
+## Drogas Utilizadas
 
-## DROGAS UTILIZADAS
+- **Pré-medicação**:
+  - Lidocaína: pouco usada, boa em crianças;
+  - Atropina: pouco usada, evita a bradicardia;
+  - Fentanil: a mais usada, boa analgesia.
+- **Indução**:
+  - Midazolam: hipotensor, meia-vida e ação longas;
+  - Propofol: hipotensor;
+  - Cetamina: não causa hipotensão e tem efeito analgésico e amnésico;
+  - Etomidato: menor efeito hipotensor, não pode ser usado de forma contínua.
+- **Bloqueador neuromuscular**:
+  - Succinilcolina: de escolha, não usar em rabdomiólise ou hipercalemia;
+  - Rocurônio: escolha quando há contraindicação à succinilcolina.
 
-- Pré-medicação: Lidocaína: pouco usado, bom em crianças. Atropina: pouco usado, evita a bradicardia. Fentanil: o mais usado, analgésico bom.
+## Via Aérea Difícil
 
-- Indução: Midazolam: Hipotensor e meia-vida, ação longa. Propofol: Hipotensor. Cetamina: Não causa hipotensão e tem efeito analgésico e amnésico. Etomidato: Menor efeito hipotensor, não pode ser usado contínuo.
+Incapacidade de ventilar o paciente ou garantir via aérea definitiva por intubação orotraqueal por um profissional experiente.
 
-- Bloqueador neuromuscular: Succinilcolina: De escolha, não usar em rabdomiólise ou hipercalemia. Rocurônio: Escolha quando contraindicação a succinilcolina.
+**Preditores de via aérea difícil — LEMON:**
 
-## VIA AÉREA DIFÍCIL
+- **L**: Look Externally — boca pequena, pescoço curto, obesidade;
+- **E**: Evaluate 3-3-2 rule — distância entre dentes = 3 dedos; distância hioide-mento = 3 dedos; distância tireoide-mandíbula = 2 dedos;
+- **N**: Mobilização do pescoço.
 
-Incapacidade de ventilar o paciente ou garantir via I aérea definitiva por intubação orotraqueal por um v profissional experiente:
+### Como Manejar a Via Aérea Difícil?
 
-- Preditores de via aérea difícil : LEMON
+Intubação orotraqueal falhou:
 
-- L: Look Externally. Boca pequena, pescoço curto, obesidade
+- **1º** → chamar alguém mais experiente e tentar novamente;
+- **2º** → utilizar materiais de via aérea difícil (Bougie);
+- Após a **3ª tentativa** está indicada via aérea cirúrgica!
 
-- E: Evaluate 3-3-2 rule. A Distância dentes = 03 dedos Distância hióide-mento = 03 dedos Distância tireóide-mandíbula = 02 dedos
+## Via Aérea Cirúrgica
 
-- N: Mobilização do pescoço.
+- **Indicações**: edema de glote; trauma maxilofacial grave; sangramento; incapacidade de intubação (3 tentativas).
+- **Cricotireoidostomia por punção** (não é via aérea definitiva): jelco calibroso, tubo T, caneta BIC. Palpa-se a cartilagem cricoide e realiza-se a punção; pode permanecer por **30 a 40 min** — se mais que isso, o risco de hipercapnia é elevado.
+- **Cricotireoidostomia cirúrgica** (melhor escolha quando a IOT não é possível): escolha na urgência → rápida, fácil, efetiva; pode ficar até **72h**; contraindicada em **< 12 anos**.
+- **Traqueostomia**: reservada para alguns casos → demora mais, maiores riscos; fazer apenas se muita necessidade; indicada em trauma de via aérea/laringe; realizada pelo cirurgião.
 
-Como Manejar A Via Aérea Difícil?
+**Obs:** a cricotireoidostomia cirúrgica qualquer médico pode realizar; já a traqueostomia, pelo ATLS, apenas o cirurgião. Não é uma medida que pode ser tomada de maneira apressada, precisa de um ambiente mais controlado.
 
-- Intubação orotraqueal falhou:
+**Intubação orotraqueal foi correta, porém o paciente não ventila — DOPE:**
 
-- 1º → Chamar alguém mais experiente e tentar novamente;
-
-- 2º → Materiais de via aérea difícil (Bougie);
-
-- Após 3ª tentativa está indicado via aérea cirúrgica!
-
-## VIA AÉREA CIRÚRGICA
-
-- Indicações: Edema de glote; Trauma maxilofacial grave; Sangramento; Incapacidade de intubação (03 tentativas).
-
-- Cricotireoidostomia por punção (não é via aérea definitiva): Jelco calibroso, tubo T, caneta BIC. Palpa-se a cartilagem cricóide e realiza-se a punção; Pode permanecer por 30 a 40 min. Se mais que isso o risco de hipercapnia é elevado.
-
-- Cricotireoidostomia cirúrgica (melhor escolha quando a IOT não é possível): Escolha na urgência → rápida, fácil, efetiva; Pode ficar até 72h; Contra Indicação: < 12 anos.
-
-- Traqueostomia: Reservado para alguns casos → demora mais, maiores riscos. Fazer apenas se muita necessidade; Trauma de via aérea / laringe; Realizada pelo cirurgião.
-
-Obs: a cricotireoidostomia cirúrgica qualquer médico pode realizar, já a traqueostomia, pelo ATLS, apenas o cirurgião. Não é uma medida que pode ser tomada de maneira apressada, precisa de um ambiente mais controlado.
-
-Intubação orotraqueal foi correta porém o paciente não ventila: DOPE
-
-- D - deslocamento ou desconexão;
-
-- O - Obstrução;
-
-- P - Pneumotórax;
-
-- E - Equipamento.
+- **D** - Deslocamento ou desconexão;
+- **O** - Obstrução;
+- **P** - Pneumotórax;
+- **E** - Equipamento.
 
 Atentar para IOT seletiva.

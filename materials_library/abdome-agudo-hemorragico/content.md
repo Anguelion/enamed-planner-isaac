@@ -2,60 +2,68 @@
 
 <!-- page:1 -->
 
-Abdome agudo Algo sangrando dentro da barriga!! HEMATOMA DE RETO ABDOMINAL
+**Abdome agudo hemorrágico**: algo está sangrando dentro da barriga.
 
-- Dor abdominal súbita;
+**Hematoma de reto abdominal** — pistas clínicas:
 
-- Uso de anticoagulantes;
+- **Dor abdominal súbita**;
+- **Uso de anticoagulantes**;
+- **Massa abdominal palpável**.
 
-- Massa abdominal palpável;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Algo está sangrando Dor abdo dentro da barriga Suporte intensivo + Choq transfusão de sangue hipovolê Estável/ USG na sala de Respondedor emergência Fígado Tomografia Útero Aneurisma Laparoscopia x x Conse Figura 1: Fluxograma Abdome agudo hemorrágico.
+**Figura 1: Fluxograma do abdome agudo hemorrágico** (reconstrução do fluxo a partir do OCR):
 
-## CLÍNICA
+- Algo está sangrando dentro da barriga → **dor abdominal** + **choque hipovolêmico**.
+- Suporte intensivo + transfusão de sangue.
+- **USG na sala de emergência**:
+  - **Respondedor/estável** → investigar origem (fígado, útero, aneurisma) → **tomografia**.
+    - Se **respondedor** → laparoscopia ou conduta conservadora.
+    - Se **não respondedor/instável** → **laparotomia**.
 
-- Dor abdominal súbita;
+## Clínica
 
-- Choque hipovolêmico.
+- **Dor abdominal súbita**;
+- **Choque hipovolêmico**.
 
-## CAUSAS
+## Causas
 
-- Mulher em idade fértil → causas ginecológicas;
+- **Mulher em idade fértil** → causas ginecológicas;
+- **Idoso, tabagista** → aneurisma de aorta;
+- **Jovem, com histórico prévio** → tumor ou cisto hepático.
 
-- Idoso, tabagista → aneurisma de aorta;
-
-- Jovem, histórico prévio → tumor ou cisto hepático.
-
-## MANEJO
+## Manejo
 
 - Sala de emergência;
-
-- Questionar antecedentes: Coagulopatias; Uso de anticoncepcionais orais (adenoma); Tabagismo; Gravidez.
-
-- Suporte intensivo, transfusão maciça;
-
-- Coleta de exames laboratoriais e beta HCG. - Sinal de Fothergill (presença de uma massa palpável na bainha do reto)
-
-- USG x TC;
-
+- Questionar antecedentes:
+  - **Coagulopatias**;
+  - **Uso de anticoncepcionais orais** (associado a adenoma hepático);
+  - **Tabagismo**;
+  - **Gravidez**.
+- **Suporte intensivo**, transfusão maciça;
+- Coleta de exames laboratoriais e **beta-hCG**;
+- **Sinal de Fothergill** (presença de massa palpável na bainha do reto abdominal, sugestiva de hematoma de reto);
+- **USG x TC**;
 - Tratamento clínico;
-
 - Arteriografia.
 
-ominal Questionar antecedentes Mulher em idade fértil que êmico Causas ginecológicas Idosos tabagistas Instável/não respondedor Aneurismas Jovens/ + comum Laparotomia Tumores / cistos hepáticos x Arteriografia ervador
+- **USG na sala de emergência (POCUS)**:
+  - Permite realizar diagnóstico diferencial;
+  - Avalia gravidez ectópica rota, útero, fígado, aneurisma;
+  - Avalia presença de líquido livre na cavidade abdominal.
 
-- USG na sala de emergência (POCUS): Permite realizar diagnóstico diferencial; Ectópica rota, útero, fígado, aneurisma; Avalia presença de líquido livre na cavidade abdominal.
+## Paciente Estável/Respondedor
 
-## PACIENTE ESTÁVEL/RESPONDEDOR
+- **Tomografia de abdome**;
+- A depender da etiologia, considerar:
+  - **Laparoscopia**;
+  - **Arteriografia com embolização** (cisto com *blush*);
+  - Conduta **conservadora**.
 
-- Tomografia de abdome;
+## Paciente Instável/Não Respondedor
 
-- A depender da etiologia, considerar: Laparoscopia; Arteriografia com embolização (cisto com blush); Conservador.
+- **Laparotomia!**
 
-## PACIENTE INSTÁVEL/NÃO RESPONDEDOR
-
-- Laparotomia!
-
-## REFERÊNCIAS
+## Referências
 
 Figura 1: Fluxograma Abdome agudo hemorrágico. Fonte: acervo Medcof.

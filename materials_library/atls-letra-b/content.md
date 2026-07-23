@@ -2,119 +2,107 @@
 
 <!-- page:1 -->
 
-## TRAUMA DE TÓRAX I
+## Trauma de Tórax I
 
 ## Trauma de Tórax
 
-Figura 1: Fluxograma: principais lesões torácicas com risco em Risco iminent Diagnóstico clínico, tratamento imediato 1.Pneumotórax hipertensivo 2.Hemotórax maciço 3.Pneumotórax aberto 4 Tamponamento cardíaco 5.Lesão traqueobrônquica central
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Mais comum do politrauma;
+- **Mais comum** no politrauma;
+- **25% das mortes** em politraumatizados;
+- **80%** das lesões tratáveis com suporte, analgesia e drenagem;
+- **15%** necessitam de toracotomia.
 
-- 25% das mortes em politraumatizados;
+**Risco Iminente de Morte** (diagnóstico clínico, tratamento imediato):
 
-Risco Potencial de Morte Podem ou não precisar de exames Avaliação secundária Hemopneumotórax; Contusão pulmonar e tórax instável;
+1. Pneumotórax hipertensivo → drenagem de tórax;
+2. Hemotórax maciço → drenagem/toracotomia;
+3. Pneumotórax aberto → curativo em 3 pontas + drenagem;
+4. Tamponamento cardíaco → toracotomia;
+5. Lesão traqueobrônquica central → drenagem/toracotomia.
 
-Pneumomediastino; Ruptura de aorta / trauma cardíaco; Lesões traqueobrônquicas; Trauma de esôfago / Quilotórax;
+*Figura 1: Fluxograma das principais lesões torácicas com risco iminente de morte.*
 
-Síndrome do esmagamento; Fraturas / Enfisema de subcutâneo; Hérnia diafragmática. Figura 2: Principais lesões torácicas com seus potenciais riscos d minente de morte te de morte Diagnóstico clínico, tratamento imediato 1.Drenagem de tórax 2.Drenagem Toracotomia 3.Curativo em 03 pontas Drenagem 4 Toracotomia
+**Risco Potencial de Morte** (podem ou não precisar de exames na avaliação secundária):
 
-5. Drenagem Toracotomia
+- Hemopneumotórax;
+- Contusão pulmonar e tórax instável;
+- Pneumomediastino;
+- Ruptura de aorta / trauma cardíaco;
+- Lesões traqueobrônquicas;
+- Trauma de esôfago / quilotórax;
+- Síndrome do esmagamento;
+- Fraturas / enfisema de subcutâneo;
+- Hérnia diafragmática.
 
-- 80% das lesões tratáveis com suporte, analgesia e drenagem;
+*Figura 2: Principais lesões torácicas com seus potenciais riscos de morte.*
 
-- 15% necessitam de toracotomia.Risco Potencial de Morte
+**Mortes Imediatas — Prevenção:**
 
-- Verificar Figura 2
-
-Risco Iminente de Morte Diagnóstico clínico, tratamento imediato Pneumotórax hipertensivo; Hemotórax maciço;
-
-Pneumotórax aberto; Tamponamento cardíaco; Lesão traqueobrônquica central. Mortes Imediatas Prevenção Rotura de aorta;
-
-Contusão cardíaca; Lesões penetrantes graves. de morte.
+- Ruptura de aorta;
+- Contusão cardíaca;
+- Lesões penetrantes graves.
 
 ---
 
 <!-- page:2 -->
 
-## MANEJO INICIAL DO TRAUMA DE
+## Manejo Inicial do Trauma de Tórax
 
-- Conduta:
-
-## TÓRAX: | Curativo em 03 pontas (conduta imediata) → ar sai
-
-mais não entra;
-
-- ABCDE; | Drenagem de tórax → realizar assim que possível;
-
-- Diagnóstico clínico; | Avaliar necessidade de cirurgia após.
-
+- **ABCDE**;
 - Diagnóstico clínico;
-
 - Identificar lesões com risco imediato de morte e tratar imediatamente!
 
-## PNEUMOTÓRAX HIPERTENSIVO
+Conduta no pneumotórax aberto: curativo em 3 pontas (conduta imediata) → ar sai mas não entra; drenagem de tórax → realizar assim que possível; avaliar necessidade de cirurgia após.
+
+## Pneumotórax Hipertensivo
 
 - Risco iminente de morte;
-
-- Lesão pleuropulmonar → Vazamento de ar unidirecional;
-
+- Lesão pleuropulmonar → vazamento de ar unidirecional;
 - Compressão de estruturas, desvio do mediastino;
-
 - Comprometimento do retorno venoso;
-
-- Taquicardia, dispneia, dor torácica, insuficiência respiratória;
-
-- Desvio de traquéia, turgência de jugulares;
-
+- **Taquicardia, dispneia, dor torácica, insuficiência respiratória**;
+- Desvio de traqueia, turgência de jugulares;
 - MV abolidos, percussão timpânica;
+- Choque obstrutivo → óbito;
+- **Diagnóstico clínico** → tratamento imediato (na letra B);
+- **Conduta**:
+  - Punção de alívio e digitodescompressão — conduta de salvamento, temporária; realizar drenagem torácica após;
+  - Drenagem de tórax em selo d'água — **tratamento definitivo**.
 
-- Choque obstrutivo → Óbito;
+*Figura 3: Rx de tórax — pneumotórax hipertensivo à direita. Na imagem é possível ver pneumotórax no hemitórax direito e o mediastino desviado para a esquerda.*
 
-- Diagnóstico clínico → Tratamento imediato (na letra B);
-
-- Conduta:
-
-- Drenagem de Punção de Digito
-
-Tórax Alívio Descompressão
-
-- Drenagem de tórax em selo d’água - tratamento definitivo;
-
-- Punção de alívio e digito descompressão - conduta de salvamento, temporária - realizar drenagem torácica após.
-
-Figura 3: Rx tórax - Pneumotórax hipertensivo à direita. Na imagem é possível ver pneumotórax no hemitórax direito e o mediastino desviado para a esquerda.
-
-## PNEUMOTÓRAX ABERTO
+## Pneumotórax Aberto
 
 - Risco iminente de morte;
-
 - Ferimento aberto na parede torácica;
-
-- Diâmetro da lesão > 2/3 da traqueia;
-
+- Diâmetro da lesão **> 2/3 da traqueia**;
 - Entrada do ar pelo orifício;
+- Falência respiratória: mecanismo semelhante ao hipertensivo;
+- Avaliar necessidade de cirurgia após.
 
-- Falência respiratória: Mecanismo semelhante ao hipertensivo; Avaliar necessidade de cirurgia após.
+*Figura 4: Curativo de 3 pontas para pneumotórax aberto.*
 
-Figura 4: Curativo de 3 pontas para pneumotórax aberto.
-
-## HEMOTÓRAX MACIÇO
+## Hemotórax Maciço
 
 - Risco iminente de morte;
-
-- Sangue em grande quantidade no espaço pleural (1500ml);
-
+- Sangue em grande quantidade no espaço pleural (**1500 ml**);
 - Choque hipovolêmico e choque obstrutivo;
-
 - Jugulares colabadas, percussão maciça, menos desvio;
+- **Conduta**: drenagem torácica e transfusão sanguínea agressiva; autotransfusão / cell saver — se disponível.
 
-- Conduta: Drenagem torácica e transfusão sanguínea agressiva; Autotransfusão / Cell saver - se disponível.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-1500ml imediatos; 200ml/h em 02 a 04 horas; Toracotomia Necessidade contínua de de urgência! transfusão de hemocomponentes;
+**Critérios para toracotomia de urgência:**
 
-Choque hipovolêmico. Figura 5: Critérios para indicação de toracotomia de urgência. Figura 6: Rx de Tórax - Derrame pleural (Hemotórax) à esquerda.
+- 1500 ml imediatos;
+- 200 ml/h em 2 a 4 horas;
+- Necessidade contínua de transfusão de hemocomponentes;
+- Choque hipovolêmico.
 
-Na imagem é possível ver o hemitórax esquerdo velado por derrame pleural (sangue), o pulmão está apagado.
+*Figura 5: Critérios para indicação de toracotomia de urgência.*
+
+*Figura 6: Rx de tórax — derrame pleural (hemotórax) à esquerda. Na imagem é possível ver o hemitórax esquerdo velado por derrame pleural (sangue), o pulmão está apagado.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -124,82 +112,57 @@ Na imagem é possível ver o hemitórax esquerdo velado por derrame pleural (san
 
 <!-- page:3 -->
 
-Figura 7: Rx de Tórax - atelectasia do pulmão esquerdo. ** Atentar para casos em que o enunciado descreve paciente com trauma grave em IOT e no RX imagem com pulmão não expandido (atelectasia) - IOT seletiva, checar a posição do tubo endotraqueal no início do ABCDE. É diferente da imagem de hemotórax maciço!!
+*Figura 7: Rx de tórax — atelectasia do pulmão esquerdo.* **Atentar para casos em que o enunciado descreve paciente com trauma grave em IOT e no Rx aparece imagem com pulmão não expandido (atelectasia) — IOT seletiva; checar a posição do tubo endotraqueal no início do ABCDE. É diferente da imagem de hemotórax maciço!**
 
-## LESÕES TRAQUEOBRÔNQUICAS
-
-## CENTRAIS
+## Lesões Traqueobrônquicas Centrais
 
 - Risco iminente de morte;
-
-- Lesões de alta mortalidade e raras;
-
+- Lesões de **alta mortalidade** e raras;
 - Mais frequentemente próximas à carina;
-
-- Manifestações clínicas: cianose, hemoptise, enfisema de subcutâneo (frequente) e dispneia;
-
+- **Manifestações clínicas**: cianose, hemoptise, enfisema de subcutâneo (frequente) e dispneia;
 - Associadas a fraturas de costelas e pneumotórax;
-
 - Pneumotórax persistente ou com alto débito;
+- **Conduta**: drenagem de tórax → colocar 2 drenos → aspiração contínua;
+  - Paciente **instável** após conduta imediata: intubação seletiva e intervenção cirúrgica de urgência;
+  - Paciente **estável** após conduta imediata: TC multislice e broncoscopia → programar tratamento.
 
-- Conduta: Drenagem de tórax → Colocar 2 drenos →
-
-Aspiração contínua;
-
-- Paciente instável após conduta imediata: intubação seletiva e intervenção cirúrgica de urgência;
-
-- Paciente estável após conduta imediata: TC multislice e broncoscopia → programar tratamento.
-
-## TAMPONAMENTO CARDÍACO
+## Tamponamento Cardíaco
 
 - Risco iminente de morte;
-
-- Tríade de BECK: Estase jugular; Hipotensão; Abafamento de bulhas; Presente em apenas 30% dos tamponamentos;
-
+- **Tríade de Beck**: estase jugular; hipotensão; abafamento de bulhas — presente em apenas **30%** dos tamponamentos;
 - Mecanismo: sangue no pericárdio → compressão → obstrução;
-
-- Trauma penetrante + comum - (Quadrilátero de Ziegler ou Cardiac Box);
-
+- **Trauma penetrante** é o mais comum (Quadrilátero de Ziegler ou Cardiac Box);
 - Ferimentos nesta zona = alta suspeição para tamponamento;
+- **FAST** = janela pericárdica → auxílio no diagnóstico;
+- **Conduta**: toracotomia!
 
-- FAST = Janela pericárdica → auxílio no diagnóstico;
+*Figura 8: Limites anatômicos do Quadrilátero de Ziegler ou Cardiac Box.*
 
-- Conduta: Toracotomia!
-
-- Verificar Figura 8
-
-Figura 8: Limites anatômicos do Quadrilátero de Ziegler ou Cardiac Box. E a punção de Marfan?
+**E a punção de Marfan?**
 
 - Ponte para tratamento definitivo;
-
 - Procedimento heroico.
 
-E a Janela pericárdica subxifoídea?
+**E a janela pericárdica subxifoídea?**
 
 - Na dúvida diagnóstica;
-
 - Indicação de cirurgia por outro motivo;
-
 - Derrame pericárdico sem tamponamento.
 
-Figura 9: Ultrassom - janela pericárdica evidenciando derrame pericárdico.
+*Figura 9: Ultrassom — janela pericárdica evidenciando derrame pericárdico.*
 
-## TORACOTOMIA DE REANIMAÇÃO
+## Toracotomia de Reanimação
 
-Quando?
+**Quando?**
 
 - Parada cardíaca no trauma torácico;
+- **1º** → intubação, RCP, acesso e reposição: não voltou ou já estava invadido?
+- **2º** → descompressão torácica digital bilateral: não voltou?
+- **3º** → toracotomia de reanimação.
 
-- 1º → Intubação, RCP, acesso e reposição: Não voltou ou já estava invadido? r
-
-- 2º → Descompressão torácica digital bilateral: Não voltou?
-
-- 3º → Toracotomia de reanimação.
-
-O que é?
+**O que é?**
 
 - Toracotomia anterolateral esquerda feita na sala de emergência em um paciente vítima de trauma torácico que apresenta parada cardiorrespiratória;
-
 - Diferente da toracotomia de urgência.
 
 ![Figura do material - página 3](figure-003-1.webp)
@@ -208,32 +171,35 @@ O que é?
 
 <!-- page:4 -->
 
-Quando fazer? Nível IA - É para fazer! Recomendação parcial Recomendação Discutível Ferimento torácico Ferimento torácico;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Penetrante Penetrante; Paciente com sinais de vida Em paciente sem sin OU Ferimento extra torá Penetrante;
+**Quando fazer?**
 
-Em paciente com sin Como fazer?
+- **Nível IA** — é para fazer!
+  - Ferimento torácico penetrante, paciente com sinais de vida.
+- **Recomendação parcial**:
+  - Ferimento torácico penetrante, paciente sem sinais de vida;
+  - OU ferimento extratorácico penetrante, paciente com sinais de vida.
+- **Recomendação discutível**:
+  - Ferimento torácico contuso, paciente com sinais de vida;
+  - OU ferimento extratorácico penetrante, paciente sem sinais de vida.
+
+**Como fazer?**
 
 - Na sala de emergência;
-
 - Paramentação estéril;
+- Incisão anterolateral esquerda seguindo o **4º EIC**, divulsão por planos e abertura da caixa torácica;
+- Abertura do pericárdio (coração), twist pulmonar (pulmão), clampeamento da aorta descendente (abdominal);
+- Massagem cardíaca intratorácica (PCR) e revisão da hemostasia (parede).
 
-- Incisão anterolateral esquerda seguindo o 4º EIC, F divulsão por planos e abertura da caixa torácica;
+## Referências
 
-- Abertura do pericárdio (coração), twist pulmonar (pulmão), clampeamento da aorta F descendente (abdominal); R
+Figura 3: Rx tórax - Pneumotórax hipertensivo à direita. Fonte: adaptado de Radiopaedia.com
 
-- Massagem cardíaca intratorácica (PCR) e revisão da hemostasia (parede). F nais de vida; Em paciente sem sinais de vida.
+Figura 4: Curativo de 3 pontas para pneumotórax aberto. Fonte: adaptado de ATLS, Advanced Trauma Life Support. 10ª Ed, 2018. Rio de Janeiro: Elsevier, 2019.
 
-Ferimento extra torácico; Penetrante; OU ácico; Ferimento contuso; Paciente com sinais de vida. nais de vida.
+Figura 6: Rx de Tórax - Derrame pleural (Hemotórax) à esquerda. Fonte: adaptado de Case courtesy of Dr Henry Knipe, Radiopaedia.org, rID: 47300
 
-## REFERÊNCIAS
+Figura 7: Rx de Tórax - Atelectasia do pulmão esquerdo. Fonte: Radiopaedia.com
 
-Figura 3: Rx tórax - Pneumotórax hipertensivo à direita. Fonte: adaptado de Radiopaedia.com Figura 4: Curativo de 3 pontas para pneumotórax aberto.
-
-Fonte: Adaptado de ATLS, Advanced Trauma Life Support. 10a Ed, 2018. Rio de Janeiro: Elsevier, 2019.
-
-Figura 6: Rx de Tórax - Derrame pleural (Hemotórax) à esquerda. Fonte: adaptado de Case courtesy of Dr Henry Knipe, Radiopaedia.org, rID:
-
-47300 Figura 7: Rx de Tórax - atelectasia do pulmão esquerdo. Figura 9: Ultrassom - janela pericárdica evidenciando derrame pericárdico.
-
-Fonte: Radiopaedia.com
+Figura 9: Ultrassom - Janela pericárdica evidenciando derrame pericárdico. Fonte: Radiopaedia.com

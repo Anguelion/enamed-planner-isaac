@@ -2,81 +2,35 @@
 
 <!-- page:1 -->
 
-## ATAQUE ISQUÊMICO
+## Introdução
 
-## TRANSITÓRIO (AIT)
+- Déficit transitório (geralmente **< 1 hora**) sem infarto detectado em neuroimagem (RM).
+- **Etiologia**: aterosclerose de grandes vasos (aterotrombótica) e cardioembólica (mais comuns).
 
-## AIT (CM) INTRODUÇÃO
+## Conceitos Iniciais
 
-- Déficit transitório (geralmente < 1 hora) sem infarto detectado em neuroimagem (RM).
+- "Déficit neurológico focal até 24 horas" — conceito antigo (1975).
+- Episódio transitório de disfunção neurológica provocado por uma **isquemia focal do encéfalo e/ou retina**, com duração de sintomas tipicamente **< 1 hora**, na ausência de evidência de infarto agudo do encéfalo.
+- **Diagnóstico definitivo** é feito pela **ressonância magnética de crânio** (para excluir infarto: sequência de difusão **[DWI]**).
 
-- Etiologia: aterosclerose de grandes vasos
+## Quadro Clínico
 
-(aterotrombótica) e cardioembólica (+ comuns). QUADRO CLÍNICO
+- Igual ao AVC isquêmico — depende da localização. **Circulação anterior** é a mais frequente.
 
-- Igual ao AVC isquêmico – depende da localização. Circulação anterior é o mais frequente.
+### Sinais e Sintomas
 
-## DIAGNÓSTICO
+- Igual ao AVC isquêmico: depende da localização da isquemia focal (ver Tabela 1).
+- Afasia, hemiparesia contralateral, ataxia, etc.; **déficit neurológico agudo**.
 
-- Déficit neurológico súbito + RM de encéfalo - DWI Tomografia demora para detectar alteração no AVCi. Boa para afastar sangramento.
+**Tabela 1: Manifestações clínicas do AVC isquêmico conforme a artéria acometida**
 
-(afastar AVC).
-
-- Escore ABCD2 → Se ≥ 4 pontos – internar e investigar o mecanismo!
-
-## CONCEITOS INICIAIS
-
-- “Déficit neurológico focal até 24 horas” – conceito antigo (1975).
-
-- Episódio transitório de disfunção neurológica provocado por uma isquemia focal do encéfalo e/ou retina, com duração de sintomas tipicamente < 1 hora, na ausência de evidência de infarto agudo do encéfalo.
-
-- Diagnóstico definitivo é feito pela ressonância magnética de crânio (para EXCLUIR infarto: sequência difusão [DWI] ).
-
-## FATORES DE RISCO
-
-- Fibrilação atrial
-
-- Hipertensão arterial sistêmica (HAS)
-
-- Tabagismo
-
-- Dislipidemia
-
-- Diabetes mellitus
-
-- Uso excessivo de álcool
-
-Figura 1: ECG com fibrilação atrial TRATAMENTO
-
-- Etiologia aterosclerótica (ABCD2 ≥ 4) AAS 100mg/dia + Clopidogrel 75mg/dia por 21 dias Depois suspender o clopidogrel.
-
-- Etiologia cardioembólica (fibrilação atrial) Anticoagulação apenas – iniciar 24 horas após o evento.
-
-## QUADRO CLÍNICO SINAIS E SINTOMAS
-
-- Igual ao AVC isquêmico: depende da localização da isquemia focal. Tabela 1 Afasia, hemiparesia contralateral, ataxia, etc.; Déficit neurológico agudo.
-
-. Tabela 1: Manifestações clínicas do AVC isquêmico conforme a artéria acometida Território Acometido Manifestações clínicas
-
-- Hemiparesia contralateral + hipoestesia tátil fasciobraquiocrural;
-
-Artéria Cerebral Média afasia se hemisfério dominante.
-
-- Paresia com predomínio crural (distal>proximal) +
-
-Artéria Cerebral Anterior déficit sensitivo.
-
-- Abulia, mutismo, bradipsiquismo.
-
-- Hemianopsia homônima contralateral +- ataxia.
-
-Artéria Cerebral Posterior
-
-- Ataxia + disartria + disfagia + assimetria vertebrais + artéria basilar) do nível de consciência olhar conjugado.
-
-Vértebro-basilar (artérias pupilar + rebaixamento + desvio do Artéria Oftálmica
-
-- Amaurose fugaz.
+| Território Acometido | Manifestações Clínicas |
+|---|---|
+| **Artéria Cerebral Média** | Hemiparesia contralateral + hipoestesia tátil fasciobraquiocrural; afasia se hemisfério dominante. |
+| **Artéria Cerebral Anterior** | Paresia com predomínio crural (distal > proximal) + déficit sensitivo. Abulia, mutismo, bradipsiquismo. |
+| **Artéria Cerebral Posterior** | Hemianopsia homônima contralateral +/- ataxia. |
+| **Vértebro-basilar** (artérias vertebrais + artéria basilar) | Ataxia + disartria + disfagia + assimetria pupilar + rebaixamento do nível de consciência + desvio do olhar conjugado. |
+| **Artéria Oftálmica** | Amaurose fugaz. |
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -84,83 +38,65 @@ Vértebro-basilar (artérias pupilar + rebaixamento + desvio do Artéria Oftálm
 
 <!-- page:2 -->
 
-Figura 2: Vascularização do encéfalo: circulação arterial. DIAGNÓSTICO E ESTRATIFICAÇÃO C
+Figura 2: Vascularização do encéfalo: circulação arterial.
 
-- Déficit neurológico súbito + RM de encéfalo - DWI Tomografia demora para detectar alteração no AVCi. Boa para afastar sangramento. I
+## Diagnóstico e Estratificação
 
-(afastar AVC). ESCORE ABCD2
+- **Déficit neurológico súbito** + **RM de encéfalo (DWI)** para confirmar (afastar AVC).
+- **Tomografia** demora para detectar alteração no AVCi, mas é boa para afastar sangramento.
 
-- Tabela 2: Escore ABCD2
+### Escore ABCD2
 
-- Critérios Pontuação
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Idade ≥ 60 anos 1
+**Tabela 2: Escore ABCD2**
 
-Age
+| Critério | Pontuação |
+|---|---|
+| **A** – Age (idade ≥ 60 anos) | 1 |
+| **B** – Blood pressure (PA sistólica ≥ 140 ou diastólica ≥ 90 mmHg) | 1 |
+| **C** – Clinical symptoms (hemiparesia = 2; alteração da fala sem hemiparesia = 1) | 2 ou 1 |
+| **D1** – Duration (≥ 60 minutos = 2; 10 a 59 minutos = 1) | 2 ou 1 |
+| **D2** – Diabetes mellitus | 1 |
 
-- B PA sistólica ≥ 140 ou
+**Interpretação:**
+- **0–3 pontos**: baixo risco de AVC (1%)
+- **4–5 pontos**: risco moderado (4%)
+- **6–7 pontos**: alto risco de AVC (8%)
 
-Blood pressure diastólica ≥ 90 mmHg T
+- Escore ABCD2 → se **≥ 4 pontos**, internar e investigar o mecanismo!
 
-- Hemiparesia
+### Critérios de Internação
 
-- Alteração da fala 2 ( sem hemiparesia A
-
-Clinical symptoms 1
-
-- D2 z ≥ 60 minutos 2
-
-- Duration
-
-- 10 a 59 minutos 1
-
-Diabetes mellitus
-
-- Diabetes mellitus 1
-
-- 0 – 3 pontos: Baixo risco de AVC (1%)
-
-- 4 – 5 pontos: Moderado risco (4%)
-
-- 6 – 7 pontos: Alto risco de AVC (8%) CRITÉRIOS DE INTERNAÇÃO
-
-- ABCD2 ≥ 4;
-
+- **ABCD2 ≥ 4**;
 - AIT no último mês;
-
-- Estenose de grande vaso (ex.: carótida interna) ≥ 50%;
-
+- Estenose de grande vaso (ex.: carótida interna) **≥ 50%**;
 - História de arritmia cardíaca (FA) ou IAM recente.
 
-INVESTIGAÇÃO DA ETIOLOGIA Estudo de vasos (mecanismo aterotrombótico)
+### Investigação da Etiologia
 
-- Angiotomografia arterial de vasos cervicais e intracranianos OU
-
-- Angioressonância magnética arterial de vasos cervicais e intracranianos OU
-
+**Estudo de vasos (mecanismo aterotrombótico)**
+- Angiotomografia arterial de vasos cervicais e intracranianos **OU**
+- Angiorressonância magnética arterial de vasos cervicais e intracranianos **OU**
 - Ultrassom doppler de artérias carótidas e vertebrais + ultrassom doppler transcraniano.
 
-Investigação cardiológica (mecanismo cardioembólico)
-
+**Investigação cardiológica (mecanismo cardioembólico)**
 - Eletrocardiograma (ECG);
-
 - Ecocardiograma transtorácico;
-
 - Holter 24h.
 
-## TRATAMENTO
+## Tratamento
 
-## ETIOLOGIA ATEROTROMBÓTICA
+Figura 1: ECG com fibrilação atrial.
 
-## (ATEROSCLEROSE DE GRANDES VASOS) ABCD2 ≥ 4
+- **Etiologia aterosclerótica** (ABCD2 ≥ 4): **AAS 100mg/dia + Clopidogrel 75mg/dia por 21 dias**. Depois, suspender o clopidogrel.
+- **Etiologia cardioembólica** (fibrilação atrial): **anticoagulação apenas** — iniciar 24 horas após o evento.
 
-- Dose de ataque se AIT < 24 horas: AAS 160-325mg +
+### Etiologia Aterotrombótica (Aterosclerose de Grandes Vasos) — ABCD2 ≥ 4
 
-Clopidogrel 300-600mg.
-
-- AAS 100mg/dia + Clopidogrel 75mg/dia por 21 dias (DAPT) Depois, suspender um deles e manter o outro Alternativa ao Clopidogrel (mutação do
-
-(geralmente mantém AAS). CYP2C19) : ticagrelor.
+- **Dose de ataque** se AIT < 24 horas: **AAS 160-325mg + Clopidogrel 300-600mg**.
+- **AAS 100mg/dia + Clopidogrel 75mg/dia por 21 dias (DAPT)**. Depois, suspender um deles e manter o outro (geralmente mantém AAS).
+- Alternativa ao Clopidogrel (mutação do CYP2C19): **ticagrelor**.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -168,14 +104,14 @@ Clopidogrel 300-600mg.
 
 <!-- page:3 -->
 
-## REFERÊNCIAS
+**AIT de baixo risco — ABCD2 < 4**
+- **AAS 100mg/dia**, sem clopidogrel.
 
-AIT de baixo risco - ABCD2 < 4
+### Etiologia Cardioembólica
 
-- AAS 100mg/dia, sem clopidogrel.
+- **Anticoagulação plena** (heparina, DOAC ou varfarina);
+- **NÃO** associar antiagregante plaquetário.
 
-Figura 1: Fibrilação atrial ETIOLOGIA CARDIOEMBÓLICA GE Health Care. [s.d.]. Disponível em: https://www.gehealthcare.com/.
+## Referências
 
-- Anticoagulação plena (heparina, DOAC ou varfarina);
-
-- NÃO associar antiagregante plaquetário.
+Figura 1: Fibrilação atrial. GE Health Care. [s.d.]. Disponível em: https://www.gehealthcare.com/.

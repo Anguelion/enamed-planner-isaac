@@ -4,158 +4,120 @@
 
 Abdome Agudo
 
-## ABSCESSO HEPÁTICO PIOGÊNICO
+## Abscesso Hepático Piogênico
 
-- Quadro mais crônico / sub-agudo;
+**Definição**: infecção encapsulada do parênquima hepático.
 
+- Quadro mais **crônico/subagudo**;
 - Quadro intra-abdominal prévio;
-
-- Dor abdominal em HCD + Febre + hepatomegalia;
-
+- **Dor abdominal em HCD + febre + hepatomegalia**;
 - Infecção prévia / fatores de risco;
-
 - Inapetência, astenia, perda de peso, náuseas;
+- Infecção arrastada hepática; mais comum no **lobo direito**;
+- Diferencial com hepatites;
+- Icterícia (mais comum no piogênico);
+- **TTO**: ATB por tempo prolongado;
+- **Drenagem percutânea**:
+  - Abscessos **< 4 cm** = drenagem por aspiração;
+  - Abscessos **> 4 cm** = drenagem guiada e manter um dreno;
+- **Cirurgia**:
+  - Abscessos múltiplos ou loculados;
+  - Com conteúdo viscoso espesso;
+  - Ou outra doença que requeira tratamento cirúrgico;
+  - Ou refratários ao tratamento.
 
-- TTO: ATB por tempo prolongado;
+### Diagnóstico
 
-- Infecção arrastada hepática; + comum lobo direito;
+- **USG**: exame inicial;
+- **TC**: melhor exame.
 
-- Drenagem percutânea:
+## Abscesso Hepático Amebiano
 
-- Diferencial com hepatites; | Abscessos < 4 cm = Drenagem por aspiração;
+- Paciente proveniente de área endêmica;
+- Quadro de diarreia meses antes;
+- **TTO**: antimicrobianos com ação luminal (**paromomicina**) + antimicrobianos com ação tecidual (**metronidazol**).
 
-- Icterícia (+ comum no piogênico). | Abscessos > 4 cm = Drenagem guiada e manter
+## Etiologias
 
-DIAGNÓSTICO um dreno.
+### Amebiano
 
-- USG: exame inicial;
+- **Entamoeba histolytica**;
+- Áreas endêmicas;
+- Jovens, homens, imunossuprimidos.
 
-- Cirurgia:
+### Piogênico
 
-- TC: melhor exame. | Abscessos múltiplos ou loculados;
-
-AMEBIANO | Com conteúdo viscoso espesso;
-
-- Paciente proveniente de área endêmica; | Ou outra doença que requeira
-
-- Quadro de diarréia meses antes; tratamento cirúrgico;
-
-- TTO: Antimicrobianos com ação luminal | Ou refratários ao tratamento.
-
-(paromomicina) + Antimicrobianos com ação tecidual (metronidazol).
-
-Definição: infecção encapsulada do parênquima hepático.
-
-## ETIOLOGIAS
-
-Amebiano
-
-- Entamoeba histolytica;
-
-- Áreas endêmicas; Figura 1: Tomografia - abscesso hepático em lobo direito
-
-- Jovens, homens, imunossuprimidos. com realce periférico.
-
-Piogênico
-
-- Disseminação portal de infecções intra-abdominais
-
-(apendicite aguda);
-
-- Disseminação local de infecções de vias biliares
-
-(colecistite, colangite);
-
+- Disseminação portal de infecções intra-abdominais (apendicite aguda);
+- Disseminação local de infecções de vias biliares (colecistite, colangite);
 - Disseminação arterial de infecções sistêmicas (endocardite);
-
 - Criptogênico, trauma.
-
-## CLÍNICA
-
-- Quadro subagudo/crônico;
-
-- Dor abdominal em hipocôndrio direito + febre + hepatomegalia;
-
-- Inapetência, astenia, perda de peso, náuseas;
-
-- Infecção arrastada hepática, mais comum no lobo direito;
-
-- Diferencial com hepatites e abdome agudo inflamatório; Figura 2: Ultrassonografia com suspeita de abscesso hepático.
-
-- Icterícia é mais comum no piogênico.
-
-## TRATAMENTO
-
-DIAGNÓSTICO Amebiano
-
-- História, exames laboratoriais (leucocitose, enzimas
-
-- Antibiótico com ação luminal: paromomicina;
-
-hepáticas), hemocultura;
-
-- Antibiótico com ação tecidual: metronidazol;
-
-- Diagnóstico mais difícil, por isso é necessário
-
-- Tratamento por 7-10 dias;
-
-ter alta suspeição, principalmente em quadros
-
-- Drenagem raramente é necessária;
-
-mais arrastados;
-
-- O teste de fezes é negativo para amebíase (por ser um
-
-- Solicitar exame de imagem: TC de abdome ou USG; quadro arrastado).
-
-- Verificar Figura 1 .
 
 ![Figura do material - página 1](figure-001-1.webp)
 
+*Figura 1: Tomografia - abscesso hepático em lobo direito com realce periférico.*
+
+## Clínica
+
+- Quadro subagudo/crônico;
+- Dor abdominal em hipocôndrio direito + febre + hepatomegalia;
+- Inapetência, astenia, perda de peso, náuseas;
+- Infecção arrastada hepática, mais comum no lobo direito;
+- Diferencial com hepatites e abdome agudo inflamatório;
+- Icterícia é mais comum no piogênico.
+
 ![Figura do material - página 1](figure-001-2.webp)
+
+*Figura 2: Ultrassonografia com suspeita de abscesso hepático.*
+
+## Diagnóstico
+
+- História, exames laboratoriais (leucocitose, enzimas hepáticas), hemocultura;
+- Diagnóstico mais difícil, por isso é necessário ter alta suspeição, principalmente em quadros mais arrastados;
+- Solicitar exame de imagem: **TC de abdome ou USG**;
+- Verificar Figura 1.
+
+## Tratamento
+
+### Amebiano
+
+- Antibiótico com ação luminal: **paromomicina**;
+- Antibiótico com ação tecidual: **metronidazol**;
+- Tratamento por **7-10 dias**;
+- Drenagem raramente é necessária;
+- O teste de fezes é negativo para amebíase (por ser um quadro arrastado).
 
 ---
 
 <!-- page:2 -->
 
-Piogênico MICROBIOLOGIA ESPECÍFICA
+### Piogênico
 
-- Antibióticos por tempo prolongado, de 4-6 semanas:
+- Antibióticos por tempo prolongado, de **4-6 semanas**: **ceftriaxona + metronidazol**;
+- Caso sem resposta, ou de acordo com CCIH: **tazocin**.
+- **Drenagem percutânea**:
+  - Abscessos < 4 cm: drenagem por aspiração;
+  - Abscessos > 4 cm: drenagem guiada e manter um dreno;
+  - Retirar dreno quando houver débito mínimo e com controle de imagem.
+- **Cirurgia** em abscessos hepáticos:
+  - Abscessos múltiplos ou loculados;
+  - Conteúdo viscoso espesso;
+  - Refratário ao tratamento inicial;
+  - Investigar a causa base.
 
-- Bactéria mais comum: E.coli; CEFTRIAXONA + METRONIDAZOL;
+## Microbiologia Específica
 
-- Associado a doenças a distância, Caso sem resposta, ou de acordo com procedimentos: Streptococcus spp;
-
-CCIH: TAZOCIN.
-
-- Procedimentos cirúrgicos: Staphylococcus aureus;
-
-- Drenagem percutânea:
-
-- Imunossupressão, quimioterapia: Candida spp; abscessos < 4 cm: drenagem por aspiração;
-
-- Tumor colorretal, Ásia, Oceania: Klebsiella pneumoniae; abscessos > 4 cm: drenagem guiada e manter
-
+- Bactéria mais comum: **E. coli**;
+- Associado a doenças a distância, procedimentos: *Streptococcus* spp;
+- Procedimentos cirúrgicos: *Staphylococcus aureus*;
+- Imunossupressão, quimioterapia: *Candida* spp;
+- Tumor colorretal, Ásia, Oceania: *Klebsiella pneumoniae*;
 - Abscessos com culturas negativas: tuberculose;
+- Região endêmica: *Entamoeba histolytica*.
 
-um dreno;
+*Figura 1: Tomografia - abscesso hepático em lobo direito com realce periférico.*
+Fonte: Case courtesy of Ammar Ashraf, Radiopaedia.org, rID: 82036
 
-- Região endêmica: Entamoeba histolytica. Retirar dreno quando houver débito mínimo e com
-
-## REFERÊNCIAS
-
-controle de imagem.
-
-- Investigar a causa base.
-
-Cirurgia em abscessos hepáticos Figura 1: Tomografia - abscesso hepático em lobo direito
-
-- Abscessos múltiplos ou loculados; com realce periférico.
-
-- Conteúdo viscoso espesso; Fonte: Case courtesy of Ammar Ashraf, Radiopaedia.org, rID: 82036
-
-- Refratário ao tratamento inicial. Figura 2: Ultrassonografia com suspeita de abscesso hepático.
-
+*Figura 2: Ultrassonografia com suspeita de abscesso hepático.*
 Fonte: Case courtesy of Teresa Fontanilla, Radiopaedia.org, rID: 3089
+
+## Referências
