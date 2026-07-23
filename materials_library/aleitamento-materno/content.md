@@ -2,169 +2,145 @@
 
 <!-- page:1 -->
 
-## DEFINIÇÕES
+## Definições
 
-- Aleitamento materno (AM) exclusivo: até 6 meses;
+- **Aleitamento materno (AM) exclusivo**: até 6 meses.
+- **AM complementado**: pelo menos até 2 anos.
 
-- AM complementado: pelo menos até 2 anos.
+## Fases do leite humano
 
-## FASES DO LEITE HUMANO
+- **Colostro** — contém mais proteínas e fatores de proteção.
+- **Leite de transição**.
+- **Leite maduro** — contém mais lipídios, carboidratos e calorias.
 
-- Colostro (contém mais proteínas e fatores de proteção);
+## Características do leite humano
 
-- Leite de Transição;
+- **Fatores de proteção**: IgA, fator bífido, pré e probióticos, oligossacarídeos.
+- **Leite humano x leite de vaca**: o leite de vaca é excessivo! Contém mais tudo, exceto lactose.
 
-- Leite Maduro (contém mais lipídios, carboidratos e calorias).
+## Chave do sucesso do aleitamento: técnica adequada
 
-## CARACTERÍSTICAS DO LEITE HUMANO
+- **Pega**: boca bem aberta, queixo toca a mama, lábio inferior evertido, parte superior da aréola mais visível que a inferior.
+- **Posicionamento**: corpo próximo, bebê bem apoiado, rosto em frente à mama, cabeça e tronco alinhados.
 
-- Fatores de proteção: IgA, fator bífido, pré e probióticos, oligossacarídeos;
+## Definições em aleitamento materno (AM)
 
-- Leite humano x leite de vaca: o leite de vaca é excessivo! Contém mais tudo, exceto lactose. C
+- **AM exclusivo**: apenas leite materno (LM).
+- **AM predominante**: LM + outros líquidos.
+- **AM complementado**: LM + alimentos.
+- **AM misto/parcial**: LM + outro leite.
 
-## CHAVE DO SUCESSO DO ALEITAMENTO: TÉCNICA
+## Orientações em AM
 
-- ADEQUADA
+- Exclusivo até os 6 meses.
+- Livre demanda.
+- Complementado pelo menos até 2 anos.
+- Iniciar em sala de parto, na 1ª hora (**"Golden Hour"**).
 
-- Pega: boca bem aberta, queixo toca a mama, lábio inferior evertido, parte superior da aréola mais visível que inferior;
+## Lactogênese
 
-- Posicionamento: corpo próximo, bebê bem apoiado, rosto em frente a mama, cabeça e tronco alinhados;
+- **Fase I** (2ª metade da gestação): preparo da mama — estrogênio + progesterona.
+- **Fase II** (primeiros dias após o parto): ↓ progesterona, prolactina age; apojadura entre o 2º e o 4º dia, independente da sucção.
+- **Fase III** (galactopoiese): necessário sucção e esvaziamento; prolactina → produção de leite; ocitocina → ejeção de leite.
+- **Armazenamento**: medidas de higiene; armazenar em geladeira por até 12h ou congelador por até 15 dias; frasco de vidro com tampa de plástico; aquecer em banho-maria com fogo desligado; oferecer em copo/colher.
+- **Dificuldades** — corrigir a técnica, manter o AM, reavaliação precoce:
+  - **Fissura**: variar as posições, manter a mama seca.
+  - **Ingurgitamento**: esvaziar a mama.
+  - **Mastite**: antibiótico.
+  - **Candidíase**: antifúngico tópico na mãe e no bebê.
+  - **Baixo ganho de peso**: avaliar diurese, evacuação, hidratação.
 
-## DEFINIÇÕES EM ALEITAMENTO F
+## Contraindicações
 
-## MATERNO (AM)
+- **Absolutas**: mãe com HIV, HTLV ou uso de quimioterápico (QTX); RN com galactosemia.
+- **Suspensão temporária**: herpes na mama, uso de substâncias, Chagas aguda, vacina de febre amarela (se bebê < 6 meses — suspender por 10 dias).
+- **Manter com uso de máscara**: tuberculose, influenza, COVID.
 
-- AM exclusivo: apenas leite materno (LM);
+## Fases do leite materno (LM)
 
-- AM predominante: LM + outros líquidos;
+- **Colostro** (até 3-5 dias): mais proteínas, eletrólitos, fatores de proteção, vitaminas lipossolúveis (A).
+- **Leite de transição**.
+- **Leite maduro** (> 10-15 dias): mais lipídios, calorias, lactose.
 
-- AM complementado: LM + alimentos;
+## Características do LM
 
-- AM misto/parcial: LM + outro leite.
-
-## ORIENTAÇÕES EM AM
-
-- Exclusivo até os 6 meses;
-
-- Livre demanda;
-
-- Complementado pelo menos até 2 anos;
-
-- Iniciar em sala de parto, na 1ª hora (“Golden Hour”).
-
-## LACTOGÊNESE
-
-- Fase I (2ª metade da gestação): Preparo da mama – estrogênio + progesterona.
-
-- Fase II (1ºs dias após o parto): ↓ Progesterona, prolactina age; Apojadura: 2º ao 4º dia – independente da sucção.
-
-- Fase III (Galactopoiese): Necessário sucção e esvaziamento; Prolactina - produção de leite. Ocitocina - ejeção de leite.
-
-- Armazenamento: medidas de higiene, armazenar em geladeira 12h, congelador 15 dias, frasco de vidro com tampa de plástico, aquecer em banho-maria com fogo desligado, oferecer em copo/colher;
-
-- Dificuldades: corrigir técnica, manter AM, reavaliação precoce: Fissura: diferentes posições, manter a mama seca; Ingurgitamento: esvaziar a mama Mastite: antibiótico; Candidíase: antifúngico tópico mãe e bebê; Baixo ganho de peso: avaliar diurese, evacuação, hidratação.
-
-## CONTRAINDICAÇÕES
-
-- Absolutas: mãe com HIV, HTLV, uso de QTX; RN com galactosemia;
-
-- Suspensão temporária: herpes na mama, uso de substâncias, Chagas aguda, vacina de Febre
-
-Amarela (se bebê<6m–suspender 10 dias);
-
-- Manter com uso de máscara: tuberculose, influenza, COVID.
-
-## FASES DO LEITE MATERNO (LM)
-
-- Colostro (até 3-5 dias): Mais Proteínas, eletrólitos, fatores de proteção, vitaminas lipossolúveis (A).
-
-- Leite de Transição;
-
-- Leite Maduro (>10-15 dias): Mais lipídios, calorias, lactose.
-
-## CARACTERÍSTICAS DO LM
-
-- Água: 90%;
-
-- Principal carboidrato: lactose;
-
-- Principal proteína: lactoalbumina (proteínas do soro/caseína);
-
-- LC-PUFA (DHA, ARA) – desenvolvimento neurológico e retiniano;
-
-- Fatores de Proteção: IgA: proteção de mucosas; Oligossacarídeos (HMO): impedem ligação de bactérias na mucosa, modulam microbiota; Prebióticos (GOS e FOS) e probióticos; Fator bífido: bifidobactérias (acidifica as fezes); Lisozima, lactoferrina, leucócitos; Lactobacilos e Bifidobactérias – presentes no LM, formação da microbiota;
+- **Água**: 90%.
+- **Principal carboidrato**: lactose.
+- **Principal proteína**: lactoalbumina (proteínas do soro/caseína).
+- **LC-PUFA** (DHA, ARA): desenvolvimento neurológico e retiniano.
+- **Fatores de proteção**:
+  - **IgA**: proteção de mucosas.
+  - **Oligossacarídeos (HMO)**: impedem a ligação de bactérias na mucosa, modulam a microbiota.
+  - **Prebióticos** (GOS e FOS) e **probióticos**.
+  - **Fator bífido**: bifidobactérias (acidifica as fezes).
+  - Lisozima, lactoferrina, leucócitos.
+  - Lactobacilos e bifidobactérias: presentes no LM, formam a microbiota.
 
 ---
 
 <!-- page:2 -->
 
-## COMPARAÇÃO: LEITE HUMANO (LH) X LEITE DE VACA (LV)
+## Comparação: leite humano (LH) x leite de vaca (LV)
 
-Tabela 1: Diferenciação da composição do Leite Humano para o Leite de Vaca. Ca: cálcio; P: fósforo; Na: sódio; Vit.: vitamina.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original antes de memorizar os valores.
 
-Leite Proteína Lipídio Caloria Lactose + Eletrólitos Ferro Bem a Vitamina Pouca
+| Componente | Leite Humano (LH) | Leite de Vaca (LV) |
+|---|---|---|
+| Proteína | + | +++ (caseína) |
+| Lipídio | ++ | ++ |
+| Calorias | +++ | +++ |
+| Lactose | +++ | + |
+| Eletrólitos | + | +++ (excesso de Ca, P, Na) |
+| Ferro | Bem absorvido | Mal absorvido |
+| Vitaminas | Vit. D, K | Pouca vit. D, E e C |
 
-- LM Pré-termo: mais proteína, lipídio, caloria, fatores de proteção; menos lactose;
+*Tabela 1: Diferenciação da composição do leite humano em relação ao leite de vaca. Ca: cálcio; P: fósforo; Na: sódio; Vit.: vitamina.*
 
-- Fórmula infantil: LV modificado.
+- **LM pré-termo**: mais proteína, lipídio, caloria e fatores de proteção; menos lactose.
+- **Fórmula infantil**: LV modificado.
 
-## BENEFÍCIOS DO AM
+## Benefícios do AM
 
-## BEBÊ
+### Bebê
 
-- Composição nutricional adequada à demanda e capacidade digestiva/renal;
-
-- ↓ Mortalidade infantil;
-
-- ↓ Síndrome da morte súbita do lactente;
-
-- ↓ Diarreia e infecções respiratórias;
-
-- ↓ Atopia (asma, rinite, dermatite);
-
-- ↓ Doenças crônicas (obesidade, diabetes, leucemia);
-
-- Desenvolvimento cognitivo, intelectual e da cavidade oral;
-
+- Composição nutricional adequada à demanda e capacidade digestiva/renal.
+- ↓ Mortalidade infantil.
+- ↓ Síndrome da morte súbita do lactente.
+- ↓ Diarreia e infecções respiratórias.
+- ↓ Atopia (asma, rinite, dermatite).
+- ↓ Doenças crônicas (obesidade, diabetes, leucemia).
+- Desenvolvimento cognitivo, intelectual e da cavidade oral.
 - Vínculo mãe-bebê.
 
-## MÃE
+### Mãe
 
-- Vínculo mãe-bebê;
-
-- ↓ Hemorragia pós-parto;
-
-- Economia e praticidade;
-
-- ↓ Câncer de mama/ovário/endométrio;
-
-- Amenorreia lactacional;
-
+- Vínculo mãe-bebê.
+- ↓ Hemorragia pós-parto.
+- Economia e praticidade.
+- ↓ Câncer de mama/ovário/endométrio.
+- Amenorreia lactacional.
 - ↓ Diabetes tipo 2 e depressão pós-parto.
 
-## OUTROS
+### Outros
 
 - Melhor para o meio ambiente.
 
 ## NBCAL
 
-- Norma Brasileira de Comercialização de Alimentos para Lactentes e Crianças de Primeira Infância, Bicos,
-
-Chupetas e Mamadeiras (NBCAL);
-
+- **Norma Brasileira de Comercialização de Alimentos para Lactentes e Crianças de Primeira Infância, Bicos, Chupetas e Mamadeiras (NBCAL)**.
 - Proíbe propagandas desses produtos, vigia rótulos e fabricação.
 
-## TÉCNICA DO AM
+## Técnica do AM
 
-- Posicionamento: Rosto do bebê de frente para a mama; Corpo próximo ao da mãe; Bebê com cabeça e tronco alinhados; Bebê bem apoiado.
+- **Posicionamento**: rosto do bebê de frente para a mama; corpo próximo ao da mãe; bebê com cabeça e tronco alinhados; bebê bem apoiado.
 
-Humano Leite de Vaca + +++ (caseína) ++ +++ ++ +++ +++ + + +++ (excesso Ca, P, Na) absorvido Mal absorvido a Vit. D, K Pouca Vit. D, E e C Figura 1: Posicionamento adequado no aleitamento.
+*Figura 1: Posicionamento adequado no aleitamento.*
 
-- Pega: Queixo toca a mama; Lábio inferior evertido; Boca bem aberta; Aréola mais visível acima.
+- **Pega**: queixo toca a mama; lábio inferior evertido; boca bem aberta; aréola mais visível acima.
 
-Figura 2: Pega adequada no aleitamento.
+*Figura 2: Pega adequada no aleitamento.*
 
-- Técnica Inadequada: Bochecha encovada; Ruído da língua; Mama esticada ou deformada; Mamilo achatado após o AM; Dor e fissuras mamárias.
+- **Técnica inadequada**: bochecha encovada; ruído da língua; mama esticada ou deformada; mamilo achatado após o AM; dor e fissuras mamárias.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -174,218 +150,138 @@ Figura 2: Pega adequada no aleitamento.
 
 <!-- page:3 -->
 
-## ORDENHA E ARMAZENAMENTO
+## Ordenha e armazenamento
 
-- Ultrassonografia (USG) ;
+- Higiene: lavar até os cotovelos com água e sabão, lavar as mamas com água, usar touca e máscara.
+- Massagem da mama.
+- Ordenha manual (em "C") ou com bomba.
+- Desprezar os primeiros jatos.
+- Armazenar em frasco de vidro com tampa de plástico.
+- **Geladeira**: até 12 horas. **Congelador**: até 15 dias.
+- Descongelar em banho-maria (fogo desligado).
+- Oferecer via copo ou colher dosadora.
 
-- CD: Drenagem, ATB endovenoso (EV), manter AM (se
+## Dificuldades no AM
 
-- Higiene (lavar até os cotovelos com água e sabão, lavar possível nas 2 mamas), esvaziar .
-
-as mamas com água, touca, máscara) ;
-
-- Massagem da mama ; B
-
-- Ordenha manual (em “C”) ou com bomba;
-
-- Desprezar primeiros jatos ;
-
-- Armazenar em frasco de vidro com tampa de plástico;
-
-- Geladeira: até 12 horas. Congelador: 15 dias ;
-
-- Descongelar em banho-maria (fogo desligado);
-
-- Oferecer via copo, colher dosadora .
-
-## DIFICULDADES NO AM
-
-## OBJETIVO: CORRIGIR A TÉCNICA E
-
-## MANTER AM
-
-- Trauma Mamilar ;
-
-- Ingurgitamento;
-
-- Candidíase;
-
-- Mastite/ abscesso mamário;
-
-## Baixo ganho ponderal
+**Objetivo: corrigir a técnica e manter o AM.**
 
 - Trauma mamilar.
+- Ingurgitamento.
+- Candidíase.
+- Mastite/abscesso mamário.
+- Baixo ganho ponderal.
 
-## TRAUMA MAMILAR, FISSURA, DOR
+## Trauma mamilar, fissura, dor
 
-- Manter aréola seca ;
-
-- Aplicar LM ;
-
-- Iniciar pela mama menos afetada;
-
-- Interromper a mamada adequadamente;
-
-- Ordenhar antes ; S
-
-- Diferentes posições;
-
-- Não usar intermediários; C
-
+- Manter a aréola seca.
+- Aplicar LM.
+- Iniciar pela mama menos afetada.
+- Interromper a mamada adequadamente.
+- Ordenhar antes.
+- Variar as posições.
+- Não usar intermediários (bicos/protetores).
 - Analgesia materna via oral (VO).
 
-## INGURGITAMENTO MAMÁRIO
+## Ingurgitamento mamário
 
-- Fisiológico x Patológico ;
+- Fisiológico x patológico.
+- Produção maior que o consumo.
+- Bilateral, edema, dor, "empedrado", tensa.
+- **Conduta (CD)**: livre demanda; massagear e ordenhar antes e, se necessário, após; analgesia; compressa fria; sutiã firme.
 
-- Produção maior que consumo ;
+## Candidíase mamária
 
-- Bilateral, edema, dor, “empedrado”, tensa;
+- Dor, prurido, ardor/fisgadas, pele friável, descamação.
+- **CD**: manter o mamilo seco, expor à luz solar, retirar bicos.
+- Tratar mãe (tópico) e bebê (tópico oral).
+- **Diagnóstico diferencial**: fenômeno de Raynaud mamário — isquemia intermitente dos mamilos (palidez, dor intensa, fisgadas, queimação). Evitar expor os mamilos ao frio.
 
-- Conduta (CD): Livre demanda, massagear e ordenhar S antes e se necessário após, analgesia, compressa fria, M sutiã firme .
+## Mastite puerperal
 
-## CANDIDÍASE MAMÁRIA
+- Inflamação ± infecção bacteriana (*S. aureus*).
+- **Quadro clínico (QC)**: hiperemia e edema localizados, calor local, dor, febre.
+- **CD**: manter o AM; anti-inflamatórios não esteroidais (AINEs) se sem melhora em 24h; esvaziar as mamas; antibiótico (ATB) VO (cefalexina, amoxicilina com clavulanato).
 
-- Dor, prurido, ardor/fisgadas, pele friável, descamação ;
+## Abscesso mamário
 
-- CD: manter mamilo seco, luz solar, retirar bicos ;
+- **QC**: flutuação, descarga purulenta.
 
-- Tratar mãe (tópico) e bebê (tópico oral) ;
+## Não há "leite fraco"!
 
-- Diagnóstico diferencial: fenômeno de Raynaud mamário isquemia intermitente dos mamilos (palidez, dor intensa, fisgadas, queimação). Evitar expor mamilos ao frio.
+- **Avaliar sinais objetivos de baixa ingesta**:
+  - Perda de peso fisiológica (até 10%; atenção ao AM a partir de 8%). Ganho de peso esperado: 1º trimestre 20-30 g/dia.
+  - Examinar o recém-nascido (RN): desidratação, hipernatremia, letargia.
+  - Diurese e evacuação (< 4 evacuações/dia com 4 dias de vida, ou mecônio após o 5º dia).
+- Avaliar a técnica do AM.
+- **CD**: normalmente orientar a técnica, manter o AM e retorno precoce.
+- Se atraso da apojadura e sinais de ingesta insuficiente, considerar: insuficiência glandular primária (< 5%), cirurgia mamária prévia, interrupção temporária do AM (separação da mãe e do bebê).
+- **Se necessidade de suplementar**: 1ª escolha — leite materno ordenhado (LMO): copo, colher, translactação; 2ª escolha — LH do banco de leite; 3ª escolha — fórmula infantil (FI).
 
-## MASTITE PUERPERAL
+## Contraindicações e situações especiais no AM
 
-- Inflamação ± infecção bacteriana (S. aureus) ;
+- **Absolutas**:
+  - Mãe: HIV, HTLV, uso de medicamentos (quimioterápico, imunossupressor).
+  - RN: galactosemia.
+- **Amamentação cruzada**: não é recomendada.
 
-- Quadro clínico (QC): hiperemia e edema localizados, calor local, dor, febre ;
+## Situações especiais
 
-- CD: Manter AM, anti-inflamatórios não esteroidais se sem melhora em 24h (Cefalexina, Amoxicilina S com Clavulanato).
+**Suspender temporariamente:**
 
-(AINEs), esvaziar as mamas, antibiótico (ATB) VO
-
-## ABSCESSO MAMÁRIO
-
-- QC: Flutuação, descarga purulenta ;
-
-- Não há leite fraco!
-
-- Avaliar sinais objetivos de baixa ingesta: Perda de peso fisiológica (até 10%, mas a partir de 8% - atenção ao AM) . Depois ganho de peso esperado: 1º trimestre: 25-30 g/dia , 2º trimestre: Examinar recém-nascido (RN): desidratação hipernatremia, letargia; Diurese, evacuação (< 4 evacuações/dia com 4 dias ou mecônio após o 5º dia) .
-
-20 g/dia ;
-
-- Avaliar técnica do AM ;
-
-- CD: normalmente orientar técnica, manter AM e retorno precoce ;
-
-- Se atraso da apojadura e sinais de ingesta insuficiente, considerar: insuficiência glandular primária (<5%), cirurgia mamária prévia, interrupção temporária do AM
-
-(separação da mãe e bebê) ;
-
-- Se necessidade de suplementar: 1ª escolha - leite materno ordenhado (LMO): copo, colher, translactação.
-
-2ª escolha: LH do banco de leite, 3ª escolha: fórmula infantil (FI).
-
-## CONTRAINDICAÇÕES E
-
-## SITUAÇÕES ESPECIAIS NO AM
-
-- Absolutas: Mãe: HIV, HTLV, uso de medicamentos RN: Galactosemia .
-
-(quimioterápico, imunossupressor) ;
-
-- Amamentação cruzada: não é recomendada .
-
-## SITUAÇÕES ESPECIAIS
-
-Manter AM com cuidados:
-
-- Tuberculose (TB) Bacilífera: após início de tratamento
-
-(TTO) materno:
-
-| Mãe – medidas de higiene (uso de máscara cirúrgica, ambiente arejado) até que esteja abacilífera (2 semanas após início do TTO) ;
-
-| Se mastite tuberculosa: suspensão temporária; | TB multidroga resistente: separar mãe e criança até que abacilífera, oferecer LM ordenhado .
-
-- Influenza, COVID: manter AM com medidas de higiene ;
-
-- Citomegalovírus E RN <30 semanas ou <1500 g: apenas
-
-LH pasteurizado ;
-
-- Sarampo: isolamento por 4 dias, oferecer
-
-LM ordenhado ;
-
-- Coqueluche se RN: isolamento por 5 dias, oferecer
-
-LM ordenhado . Suspender temporariamente:
-
-- Herpes na mama afetada ;
-
-- Doença de Chagas em fase aguda ou lesão mamilar sangrante ;
+- **Tuberculose (TB) bacilífera**: após início do tratamento (TTO) materno, manter AM com medidas de higiene (uso de máscara cirúrgica, ambiente arejado) até que a mãe esteja abacilífera (2 semanas após início do TTO).
+  - Se mastite tuberculosa: suspensão temporária.
+  - TB multidroga-resistente: separar mãe e criança até que a mãe esteja abacilífera; oferecer LM ordenhado.
+- **Herpes na mama afetada**.
+- **Doença de Chagas** em fase aguda ou lesão mamilar sangrante.
 
 ---
 
 <!-- page:4 -->
 
-- Hanseníase:
+- **Hanseníase**: Virchowiana — suspender até 3 meses de TTO (se sulfona) ou 3 semanas (se rifampicina). Formas não contagiosas — manter.
+- **Mãe com varicela** 5 dias antes do parto ou até 2 dias após o parto: isolamento até a fase de crosta; RN recebe imunoglobulina em até 96h.
+- **Leptospirose** na fase aguda.
+- **Uso ocasional de substâncias**: álcool — 2h/dose; maconha, cocaína, crack, heroína — 24h; anfetamina e ecstasy — 24 a 36h; LSD — 48h.
 
-- Desmame guiado ou conduzido: guiado pela mãe. AM Ministério da Saúde (MS) – manter AM ; deixa de ser livre demanda, elimina mamadas noturnas. Sociedade Brasileira de Pediatria (SBP): não Adiamento e encurtamento das mamadas, distração ;
+**Manter AM com medidas de higiene:**
 
-contagiosa – manter . Virchowiana: suspender até 3 meses de TTO (se sulfona), 3 semanas (se rifampicina).
-
-- Mãe com varicela 5 dias antes do parto, 2 dias após o parto: isolamento até fase de crosta, RN recebe imunoglobulina em até 96h;
-
-- Leptospirose na fase aguda;
-
-- Uso ocasional de substâncias: Álcool - 2h/dose; Maconha, Cocaína, Crack, Heroína - 24h; Anfetamina e Ecstasy- 24 a 36h; LSD - 48h.
-
-Manter
-
-- Hepatites ;
-
-- Arboviroses;
-
-- Caxumba ;
-
-- Tabagismo;
-
-- Lactogestação;
-
+- Influenza, COVID.
+- Hepatites.
+- Arboviroses.
+- Caxumba.
+- Tabagismo.
+- Lactogestação.
 - Amamentação em tandem.
 
-## DESMAME
+**Situação especial:**
 
-## FASE DO DESENVOLVIMENTO
+- Citomegalovírus em RN < 30 semanas ou < 1500 g: apenas LH pasteurizado.
+- Sarampo: isolamento por 4 dias; oferecer LM ordenhado.
+- Coqueluche se RN: isolamento por 5 dias; oferecer LM ordenhado.
 
-- Desmame natural: entre 2-4 anos ;
+## Desmame
 
-- Desmame abrupto: deve ser evitado .
+**Fase do desenvolvimento:**
 
-## INDICATIVOS DE QUE A CRIANÇA ESTÁ
+- **Desmame natural**: entre 2-4 anos.
+- **Desmame abrupto**: deve ser evitado.
+- **Desmame guiado ou conduzido** (guiado pela mãe):
+  - Ministério da Saúde (MS): manter AM; deixa de ser livre demanda; elimina mamadas noturnas.
+  - Sociedade Brasileira de Pediatria (SBP): adiamento e encurtamento das mamadas, distração.
 
-## MADURA PARA O DESMAME
+## Indicativos de que a criança está madura para o desmame
 
-- Menos interesse nas mamadas ;
+- Menos interesse nas mamadas.
+- Aceita bem outros alimentos.
+- Segura na relação com a mãe.
+- Aceita outras formas de consolo.
+- Aceita não ser amamentada em certas ocasiões e locais.
+- Dorme sem mamar no peito.
+- Pouca ansiedade quando encorajada a não mamar.
+- Prefere brincar ou fazer outra atividade com a mãe em vez de mamar.
 
-- Aceita bem outros alimentos ;
+## Referências
 
-- Segura na relação com a mãe ;
+Figura 1: Posicionamento adequado no aleitamento. Guia alimentar para crianças brasileiras menores de 2 anos / Ministério da Saúde, Secretaria de Atenção Primária à Saúde, Departamento de Promoção da Saúde. – Brasília: Ministério da Saúde, 2019. 265 p.: il.
 
-- Aceita outras formas de consolo ;
-
-- Aceita não ser amamentada em certas ocasiões e locais ;
-
-- Dorme sem mamar no peito ;
-
-- Pouca ansiedade quando encorajada a não mamar ;
-
-- Prefere brincar ou fazer outra atividade com a mãe em vez de mamar .
-
-## REFERÊNCIAS
-
-Figura 1: Posicionamento adequado no aleitamento. Guia alimentar para crianças brasileiras menores de 2 anos / Ministério da Saúde, Secretaria de Atenção Primária à Saúde, Departamento de Promoção da Saúde. – Brasília : Ministério da Saúde, 2019. 265 p. : Il.
-
-Figura 2: Pega adequada no aleitamento. Guia alimentar para crianças brasileiras menores de 2 anos / Ministério da Saúde, Secretaria de Atenção Primária à Saúde, Departamento de Promoção da Saúde. – Brasília : Ministério da Saúde, 2019. 265 p. : Il.
+Figura 2: Pega adequada no aleitamento. Guia alimentar para crianças brasileiras menores de 2 anos / Ministério da Saúde, Secretaria de Atenção Primária à Saúde, Departamento de Promoção da Saúde. – Brasília: Ministério da Saúde, 2019. 265 p.: il.
