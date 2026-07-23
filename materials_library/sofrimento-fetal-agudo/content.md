@@ -2,105 +2,80 @@
 
 <!-- page:1 -->
 
-## CATEGORIA I (INTRAPARTO)
+## Categoria I (Intraparto)
 
-- FC entre 110-160 bpm;
-
+- FC entre **110-160 bpm**;
 - Variabilidade entre 5 a 25 bpm;
-
 - Aceleração transitória ou não!
-
 - Desaceleração tipo I (DIP I) ou não!
 
-Conduta
-
+**Conduta**
 - Expectante.
 
-## CATEGORIA II
+## Categoria II
 
 - Não é categoria I nem categoria III;
+- **Reanimação intrauterina**: mudança de decúbito, oxigênio suplementar, parar ocitocina e fluidos endovenosos.
 
-- Reanimação intrauterina: mudança de decúbito, oxigênio suplementar, parar ocitocina e fluidos endovenosos.
+## Categoria III (Intraparto)
 
-## CATEGORIA III (INTRAPARTO)
-
-- Variabilidade ausente + desacelerações tardias ou Bradicardia fetal;
-
-(tipo2) / variáveis de mau prognóstico recorrentes
-
-- Padrão Sinusoidal.
+- Variabilidade ausente + desacelerações tardias (tipo 2) / variáveis de mau prognóstico recorrentes ou bradicardia fetal;
+- Padrão sinusoidal.
 
 - Hipoxemia fetal leva à acidose;
+- **Causas agudas**: hipovolemia, hipotensão, hipertonia, taquissistolia, procidência de cordão;
+- **Causa crônica**: insuficiência placentária.
 
-- Causas agudas: Hipovolemia, hipotensão, hipertonia, taquissistolia, procidência de cordão.
+## Cardiotocografia Intraparto
 
-- Causa Crônica: Insuficiência placentária.
+### Categoria 1
 
-## CARDIOTOCOGRAFIA
-
-## INTRAPARTO
-
-## CATEGORIA 1
-
-- FC entre 110-160 bpm;
-
+- FC entre **110-160 bpm**;
 - Variabilidade entre 6-25 bpm;
-
 - Aceleração transitória ou não!
-
 - Desaceleração tipo I (DIP I) ou não!
 
 Figura 1: Cardiotocografia categoria 1.
 
-## CATEGORIA 2
+### Categoria 2
 
 - Não é nem categoria 1 nem categoria 3.
 
-## CATEGORIA 3
+### Categoria 3
 
-- Variabilidade ausente + Desacelerações tardias
+- Variabilidade ausente + desacelerações tardias (tipo 2) / variáveis de mau prognóstico recorrentes ou bradicardia fetal.
 
-(tipo2) / variáveis de mau prognóstico recorrentes ou Bradicardia fetal; Conduta
-
+**Conduta**
 - Reanimação intrauterina + parto imediato.
 
-DESACELERAÇÕES DIP I (precoce)
+### Desacelerações
 
+**DIP I (precoce)**
 - Desaceleração coincide com contração;
-
 - Estímulo vagal;
-
 - Bom prognóstico.
 
-## DIP II (TARDIA)
-
+**DIP II (tardia)**
 - Desaceleração após contração;
-
 - Hipóxia fetal (acidemia);
-
 - Mau prognóstico.
 
-## DIP III (VARIÁVEL)
-
+**DIP III (variável)**
 - Desaceleração independe da contração;
-
 - Compressão funicular;
+- Bom ou mau prognóstico.
 
-- Bom ou Mau prognóstico.
-
-- Padrão sinusoidal: Sinal de anemia fetal grave; Quadro de hipoxemia grave, com alto risco de óbito intraútero.
+**Padrão sinusoidal**: sinal de anemia fetal grave; quadro de hipoxemia grave, com alto risco de óbito intraútero.
 
 Figura 2: Cardiotocografia categoria 3, padrão sinusoidal.
 
-## DESACELERAÇÕES - TIPOS
+## Desacelerações — Tipos
 
-## TIPO 1 OU PRECOCE
+### Tipo 1 ou Precoce
 
 - Queda gradual e simétrica;
-
-- O Nadir da desaceleração coincide com o pico da contração;
-
-- Mecanismo: estimulação vagal em decorrência da compressão cefálica durante a contração.
+- O nadir da desaceleração coincide com o pico da contração;
+- **Mecanismo**: estimulação vagal em decorrência da compressão cefálica durante a contração.
 
 Figura 3: Desaceleração tipo 1.
 
@@ -112,61 +87,57 @@ Figura 3: Desaceleração tipo 1.
 
 <!-- page:2 -->
 
-## TIPO 2 OU TARDIA
+### Tipo 2 ou Tardia
 
 - Queda gradual e simétrica;
+- Nadir da desaceleração ocorre após a contração;
+- **Mecanismo**: hipóxia fetal decorrente da redução do fluxo uteroplacentário durante a contração uterina.
 
-- Nadir da desaceleração ocorre após contração;
+Figura 4: Desaceleração tipo 2 (tardia).
 
-- Mecanismo: hipóxia fetal decorrente da redução do fluxo uteroplacentário durante contração uterina.
+### Tipo 3 ou Variável
 
-fluxo uteroplacentário durante contração uterina. Figura 4: Desaceleração tipo 2 (tardia). TIPO 3 OU VARIÁVEL
-
-- Queda abrupta de frequência cardíaca fetal;
-
-- Nadir da desaceleração independe da C contração uterina;
-
-- Mecanismo: ocorre em decorrência da compressão do cordão umbilical;
-
+- Queda abrupta da frequência cardíaca fetal;
+- Nadir da desaceleração independe da contração uterina;
+- **Mecanismo**: ocorre em decorrência da compressão do cordão umbilical;
 - Pode, ou não, estar associada a sofrimento fetal.
 
-- C
+Figura 5: Desaceleração variável.
 
-- Figura 5: Desaceleração variável (variável).
-
-DIP 3 de mau prognóstico
-
+**DIP III de mau prognóstico**
 - Retorno lento à linha de base;
-
-- Duração >60s; A
-
-- Recuperação em níveis inferiores à linha de base original; A
-
+- Duração > 60s;
+- Recuperação em níveis inferiores à linha de base original;
 - Taquicardia compensatória;
+- Queda da FC abaixo de 70 bpm;
+- Morfologia em "W".
 
-- Queda da FC abaixo de 70bpm; A
+Figura 6: Cardiotocografia com desaceleração tardia de mau prognóstico.
 
-- Morfologia em “W”;
+> **Obs.**: não confundir tipo III com tipo I ou II somente pela desaceleração estar associada com uma contração.
 
-A Figura 6: Cardiotocografia com desaceleração tardia de mau prognóstico. OBS.: Não confundir tipo III com tipo I ou II, somente pela desaceleração estar associada com uma contração.
-
-## CONDUTA
+## Conduta
 
 - Expectante.
-
-- Medidas de ressuscitação intrauterina: Oxigenoterapia suplementar; Decúbito lateral esquerdo; Fluidos endovenosos; Suspender ocitocina; Correção de Hipoglicemia.
-
-- Após medidas de ressuscitação, deve-se repetir a cardiotocografia: Se melhorar → continuar assistência ao trabalho de parto; Se igual ou pior → parto pela via mais rápida.
-
+- **Medidas de ressuscitação intrauterina**: oxigenoterapia suplementar; decúbito lateral esquerdo; fluidos endovenosos; suspender ocitocina; correção de hipoglicemia.
+- Após medidas de ressuscitação, deve-se repetir a cardiotocografia:
+  - Se melhorar → continuar assistência ao trabalho de parto;
+  - Se igual ou pior → parto pela via mais rápida.
 - Ressuscitação intrauterina + parto imediato!
 
-## REFERÊNCIAS
+## Referências
 
-Figura 1: Cardiotocografia categoria 1. Arquivo Medcof Figura 2: Cardiotocografia categoria 2. Arquivo Medcof Figura 3: Cardiotocografia categoria 3, padrão sinusoidal.
+Figura 1: Cardiotocografia categoria 1. Arquivo Medcof.
 
-Arquivo Medcof Figura 4: Desaceleração tipo 1. Arquivo Medcof Figura 5: Desaceleração tipo 2 (tardia).
+Figura 2: Cardiotocografia categoria 2. Arquivo Medcof.
 
-Arquivo Medcof Figura 6: Desaceleração variável (variável). Arquivo Medcof
+Figura 3: Cardiotocografia categoria 3, padrão sinusoidal. Arquivo Medcof.
+
+Figura 4: Desaceleração tipo 1. Arquivo Medcof.
+
+Figura 5: Desaceleração tipo 2 (tardia). Arquivo Medcof.
+
+Figura 6: Desaceleração variável. Arquivo Medcof.
 
 ![Figura do material - página 2](figure-002-1.webp)
 

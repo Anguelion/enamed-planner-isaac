@@ -1,92 +1,84 @@
-# Avch Intraparenquimatoso
+# AVC Hemorrágico Intraparenquimatoso
 
 <!-- page:1 -->
 
-AVC Hemorrágico (CM) EPIDEMIOLOGIA
+## Epidemiologia
 
-- 2° AVC mais comum;
+- **2º AVC mais comum**;
+- "Perfil" do paciente: **homem hipertenso**.
 
-- “Perfil” do paciente: homem hipertenso.
-
-ETIOLOGIA:
+### Etiologia
 
 - HAS (artérias perfurantes);
-
 - Uso de anticoagulantes;
-
 - Trombose venosa cerebral (pacientes mais jovens);
-
 - Malformação arteriovenosa (pacientes mais jovens).
 
-## QUADRO CLÍNICO
+## Quadro Clínico
 
-- Depende da localização... Não tem como diferenciar de AVCi!
+- Depende da localização... Não há como diferenciar de AVCi apenas pela clínica!
 
-## CONCEITOS INICIAIS
+## Conceitos Iniciais
 
-- É o segundo tipo mais comum de AVC (15-20%); 1º é o AVC isquêmico
+- É o segundo tipo mais comum de AVC (**15-20%**); 1º é o AVC isquêmico;
+- Mortalidade estimada de até **59% em 1 ano** após o evento;
+- **Homens** são mais acometidos que as mulheres;
+- Condição que confere grande morbidade aos pacientes — até **80%** ficam com sequelas.
 
-- Mortalidade estimada de até 59% em 1 ano após o evento;
+## Etiologias Primárias
 
-- Homens são mais acometidos que as mulheres;
+### Hipertensão Arterial Sistêmica (HAS) Crônica
 
-- Condição que confere grande morbidade aos pacientes – até 80% ficam com sequelas.
-
-## ETIOLOGIAS PRIMÁRIAS
-
-## HIPERTENSÃO ARTERIAL SISTÊMICA (HAS) CRÔNICA
-
-- Principal causa
-
-- Leva a lesão nas artérias perfurantes
-
-- enfraquecimento da parede das artérias (lipohialinose);
-
-- Ruptura de microaneurismas de Charcot-Bouchard
-
-(formados pela hipertensão);
-
+- **Principal causa**;
+- Leva a lesão nas artérias perfurantes → enfraquecimento da parede das artérias (**lipo-hialinose**);
+- Ruptura de microaneurismas de **Charcot-Bouchard** (formados pela hipertensão);
 - Ocorre principalmente em núcleos da base e tálamo.
 
-Figura 1: Aneurismas de Charcot-Bouchard
+Figura 1: Aneurismas de Charcot-Bouchard.
 
-- Localização clássica Núcleos da base (>50%); Tálamo (31%); Cerebelo (7%); Tronco cerebral (7%). DIAGNÓSTICO
+**Localização clássica**
+- Núcleos da base (**> 50%**);
+- Tálamo (**31%**);
+- Cerebelo (**7%**);
+- Tronco cerebral (**7%**).
 
-- TC de crânio – lesão hiperdensa
+### Diagnóstico
 
-(“lesão esbranquiçada”). TRATAMENTO
+- **TC de crânio** — lesão hiperdensa ("lesão esbranquiçada").
 
-- Se etiologia hipertensiva – PAS ~140 mmHg.
+### Tratamento
 
+- Se etiologia hipertensiva — **PAS ~140 mmHg**.
 - Se anticoagulantes: interromper e reverter o efeito (antídoto!).
 
-## . ETIOLOGIAS SECUNDÁRIAS
+## Etiologias Secundárias
 
-- Menos comum que a hipertensiva Uso de anticoagulantes (15%); Trombose venosa cerebral (TVC); Mesmo com hemorragia, deve-se anticoagular o paciente. Malformação arteriovenosa (MAV); Neoplasias cerebrais. Principalmente melanoma.
+- Menos comum que a hipertensiva:
+  - Uso de anticoagulantes (**15%**);
+  - Trombose venosa cerebral (TVC) — mesmo com hemorragia, deve-se anticoagular o paciente;
+  - Malformação arteriovenosa (MAV);
+  - Neoplasias cerebrais — principalmente melanoma.
 
-## ANGIOPATIA AMILÓIDE
+## Angiopatia Amiloide
 
-- Fisiopatologia: deposição de peptídeo beta-amilóide na parede de vasos corticais e leptomeníngeos de pequeno e médio calibres;
+- **Fisiopatologia**: deposição de peptídeo beta-amiloide na parede de vasos corticais e leptomeníngeos de pequeno e médio calibre;
+- Importante causa de hemorragia **lobar** em adultos mais velhos (**70-80 anos**);
+- Paciente pode ter comprometimento cognitivo e déficits neurológicos transitórios (*amyloid spells*) associados.
 
-- Importante causa de hemorragia lobar em adultos mais velhos (70-80 anos);
+**Diagnóstico**
+- Apenas com biópsia/anatomopatológico (**critérios de Boston**);
+- Ressonância magnética: hemorragia intraparenquimatosa, pequenos focos de sangramento ("**microbleeds**"), foco de siderose superficial ou hemorragia subaracnóidea em convexidades.
 
-- Paciente pode ter comprometimento cognitivo e déficits neurológicos transitórios (amyloid spells) associados;
+**Tratamento**
+- Suporte; não há medicações indicadas para diminuir a progressão da doença.
 
-Diagnóstico
+### Quadro Clínico Conforme Local da Hemorragia
 
-- Apenas com biópsia/anatomopatológico (critérios de Boston);
+- **Tálamo**: hemiparesia/plegia, hemianestesia, paralisia do olhar conjugado vertical para cima;
+- **Cerebelar**: ataxia, paralisia do olhar conjugado horizontal;
+- **Hipertensão intracraniana (HIC)**: quanto maior o sangramento, maior o risco de desenvolver hipertensão intracraniana — cefaleia, náuseas, vômitos, rebaixamento do nível de consciência, crises convulsivas.
 
-- Ressonância magnética: hemorragia intraparenquimatosa, pequenos focos de sangramento hemorragia subaracnóidea em convexidades.
-
-(“microbleeds”), foco de siderose superficial ou Tratamento
-
-- Suporte, não há medicações indicadas para diminuir progressão da doença.
-
-Depende do local da hemorragia:
-
-- Tálamo: hemiparesia/plegia, hemianestesia, paralisia do olhar conjugado vertical para cima;
-
-- Cerebelar: ataxia, paralisia do olhar conjugado horizontal;
+> **Atenção!** Somente pelos sinais/sintomas não é possível distinguir AVC hemorrágico intraparenquimatoso de AVC isquêmico → é necessário realizar **TC de crânio**.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -94,49 +86,43 @@ Depende do local da hemorragia:
 
 <!-- page:2 -->
 
-Figura 2: Tomografias de crânio de pacientes com AVCh intraparenqu Figura 3: ”SPOT SIGN” - Sinal radiológico de pior prognóstico. Podemo interior da lesão, representando sangramento ativo e, portanto, sinal
+Figura 2: Tomografias de crânio de pacientes com AVCh intraparenquimatoso.
 
-- Hipertensão intracraniana (HIC) - quanto maior H o sangramento, maior o risco de desenvolver hipertensão intracraniana; Cefaleia, náuseas, vômitos, rebaixamento do nível de consciência, crises convulsivas.
+Figura 3: "Spot sign" — sinal radiológico de pior prognóstico. Podemos observar um foco de extravasamento de meio de contraste no interior da lesão, representando sangramento ativo e, portanto, sinal de hematoma em expansão.
 
-Atenção! Somente pelos sinais/sintomas não é possível distinguir AVC hemorrágico intraparenquimatoso de AVC isquêmico → É necessário realizar TC de crânio.
+## Diagnóstico
 
-## DIAGNÓSTICO
+- **Tomografia de crânio**: exame de escolha na emergência — diferenciar AVC isquêmico de hemorrágico.
+- **"Spot sign"**: extravasamento de contraste dentro do hematoma evidenciado pela tomografia com contraste. Se presente, indica que a hemorragia vai aumentar. Não tem relação com etiologia, mas sim com prognóstico.
+- Verificar Figuras 2 e 3.
 
-- Tomografia de crânio: exame de escolha na emergência: Diferenciar AVC isquêmico de hemorrágico.
+## Tratamento
 
-- “SPOT SIGN”: extravasamento de contraste dentro do hematoma evidenciado pela tomografia com contraste: Se presente, indica que a hemorragia vai aumentar; Não tem relação com etiologia, mas sim com prognóstico.
+### Controle Pressórico
 
-- Verificar Figuras 2 e 3
+- Pressão arterial: meta **PAS ~140 mmHg**; tolerável: **130-150 mmHg**;
+- **PAS < 130 mmHg**: danoso!
 
-## TRATAMENTO
+### Hemorragia Secundária ao Uso de Anticoagulantes
 
-## CONTROLE PRESSÓRICO
-
-- Pressão arterial: meta PAS ~ 140 mmHg; A Tolerável: 130-150 mmHg.
-
-- PAS < 130 mmHg: danoso! uimatoso.
-
-os observar um foco de extravasamento de meio de contraste no de hematoma em expansão. Hemorragia secundária ao uso de anticoagulantes
-
-- Suspender imediatamente e reverter o efeito da medicação; Varfarina = vitamina K EV + complexo protrombínico Dabigatrana = Idarucizumab; Inibidores do fator Xa: Andexanet alfa. Heparina: sulfato de protamina.
-
-(1ª escolha) ou plasma fresco congelado (2ª escolha);
-
+- Suspender imediatamente e reverter o efeito da medicação:
+  - **Varfarina** = vitamina K EV + complexo protrombínico (1ª escolha) ou plasma fresco congelado (2ª escolha);
+  - **Dabigatrana** = idarucizumabe;
+  - **Inibidores do fator Xa**: andexanet alfa;
+  - **Heparina**: sulfato de protamina.
 - Não há benefício em usar anticonvulsivantes profiláticos rotineiramente.
 
-Tratamento cirúrgico
+### Tratamento Cirúrgico
 
-- Hemorragias cerebelares >3cm ou volume > 14mL Risco de compressão do 4º ventrículo;
-
+- Hemorragias cerebelares **> 3cm** ou volume **> 14mL** — risco de compressão do 4º ventrículo;
 - Hidrocefalia aguda;
+- Hemorragias lobares volumosas (**> 30mL**), situadas até 1cm da superfície cortical, com deterioração clínica.
 
-- Hemorragias lobares volumosas (>30mL) Situada até 1cm da superfície cortical; Deterioração clínica.
-
-## REFERÊNCIAS
+## Referências
 
 Figura 2: Tomografias de crânio de pacientes com AVCh intraparenquimatoso. Radiopaedia. [s.d.]. Disponível em: https://radiopaedia.org/.
 
-Figura 3: ”SPOT SIGN” ATNR. [s.d.]. Disponível em: https://atnr.org/.
+Figura 3: "Spot sign". ATNR. [s.d.]. Disponível em: https://atnr.org/.
 
 ![Figura do material - página 2](figure-002-1.webp)
 

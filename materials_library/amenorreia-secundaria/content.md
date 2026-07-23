@@ -2,79 +2,63 @@
 
 <!-- page:1 -->
 
-- Ausência de menstruação por um período mínimo | IV. Hipotálamo: Amenorreia funcional.
-
-de 3 meses ou menos de 9 ciclos menstruais, no
-
+- Ausência de menstruação por um período mínimo de 3 meses ou menos de 9 ciclos menstruais, no período de um ano;
+- Etiologias:
+  - **I. Uterovaginal**: síndrome de Asherman;
+  - **II. Ovário**: SOP, IOP, síndrome de Savage;
+  - **III. Hipófise**: hiperprolactinemia, síndrome de Sheehan;
+  - **IV. Hipotálamo**: amenorreia funcional.
 - Anamnese e exame físico detalhados;
+- Afastar gravidez e dosagem de FSH:
+  - FSH baixo → disfunção hipotalâmica ou hipofisária;
+  - FSH normal → dosagem de prolactina (se prolactina alta = hiperprolactinemia; se prolactina normal = dosar TSH).
 
-período de um ano;
+## Definição
 
-- Afastar gravidez e dosagem de FSH;
+## Conceitos e Considerações Gerais
 
-- Etiologias: | FSH baixo → disfunção hipotalâmica I. Úterovaginal: Síndrome de Asherman; ou hipofisária; II. Ovário: SOP, IOP, Síndrome de Savage; | FSH normal → dosagem de prolactina (se III. Hipófise: Hiperprolactinemia, Síndrome prolactina alta = hiperprolactinemia; se de Sheehan; prolactina normal = dosar TSH);
+- **Amenorreia** é um sintoma que caracteriza a ausência de menstruação. Nem sempre precisa ser investigada, visto que existem causas fisiológicas.
 
-## DEFINIÇÃO
-
-## CONCEITOS E CONSIDERAÇÕES GERAIS
-
-- Amenorreia é um sintoma que caracteriza a ausência de menstruação. Nem sempre precisa ser investigada, visto que existem causas fisiológicas.
-
-Causas fisiológicas de amenorreia
+**Causas fisiológicas de amenorreia**
 
 - Situações em que se espera ausência de menstruação: gestação; amamentação; menopausa.
 
-De acordo com a FEBRASGO
+**De acordo com a FEBRASGO**
 
-- Ausência de menstruação por um período mínimo de 3 meses OU;
-
+- Ausência de menstruação por um período mínimo de 3 meses; OU
 - Menos de 9 ciclos menstruais no período de um ano.
 
-De acordo com outras referências em Ginecologia:
+**De acordo com outras referências em ginecologia**
 
-- Ausência de menstruação por mais de seis meses
+- Ausência de menstruação por mais de seis meses (mulheres com ciclos irregulares);
+- Ausência de menstruação por mais de três ciclos (mulheres com ciclos regulares);
+- **Criptomenorreia**: falta de exteriorização do fluxo menstrual.
 
-(mulheres com ciclos irregulares);
+*Figura 1: Eixo hipotálamo-hipófise-ovário-útero.*
 
-- Ausência de menstruação por mais de três ciclos
+## Etiologias
 
-(mulheres com ciclos regulares);
+- Para entendermos as causas da amenorreia, é importante relembrar acerca da fisiologia do ciclo menstrual;
+- No núcleo hipotalâmico é liberado o GnRH de maneira pulsátil. A depender do padrão de pulsatilidade do GnRH, vai atuar na hipófise anterior com a liberação de FSH e LH;
+- A desaceleração da frequência de pulso do GnRH na fase lútea tardia é uma alteração importante que favorece a síntese de FSH;
+- Um aumento na frequência e amplitude da secreção pulsátil de GnRH no meio do ciclo, por sua vez, favorece o aumento de LH que é necessário para ovulação e início da fase lútea;
+- O FSH/LH atuam em nível ovariano com a liberação de hormônios esteroides (estrogênio e progesterona) a depender da fase do ciclo ovulatório;
+- O estrogênio e a progesterona terão ação sistêmica e no útero, levando ao ciclo menstrual da forma como conhecemos.
 
-- Criptomenorréia: falta de exteriorização do fluxo menstrual. Figura 1: Eixo hipotálamo-hipófise-ovário-útero
+## Compartimentos
 
-## ETIOLOGIAS COMPARTIMENTOS
+- Alterações na função de cada compartimento deste eixo (hipotálamo-hipófise-ovário-útero/endométrio) resultam em diferentes etiologias de amenorreia.
 
-- Para entendermos as causas da amenorreia, é
+### IV - Hipotalâmico
 
-- Alterações na função de cada compartimento deste importante relembrar acerca da fisiologia do eixo (hipotálamo-hipófise-ovário-útero/endométrio) ciclo menstrual; resultam em diferentes etiologias de amenorreia.
+- O defeito na liberação de GnRH consequentemente leva à diminuição da produção das gonadotrofinas (LH e FSH);
+- Culmina no **hipogonadismo hipogonadotrófico**, já que as gonadotrofinas (LH e FSH) estão baixas.
 
-- No núcleo hipotalâmico é liberado o GnRH de maneira pulsátil. A depender do padrão de pulsatilidade do IV - HIPOTALÂMICO
+### III - Hipofisário
 
-GnRH, vai atuar na hipófise anterior com a liberação de
-
-- O defeito na liberação de GnRH consequentemente
-
-FSH e LH; leva à diminuição da produção das gonadotrofinas
-
-- A desaceleração da frequência de pulso do GnRH (LH e FSH);
-
-na fase lútea tardia é uma alteração importante que
-
-- Culmina no hipogonadismo hipogonadotrófico, já que favorece a síntese de FSH; as gonadotrofinas (LH e FSH) estão baixas.
-
-- Um aumento na frequência e amplitude da secreção pulsátil de GnRH no meio do ciclo, por sua vez, III - HIPOFISÁRIO favorece o aumento de LH que é necessário para
-
-- Com o defeito no funcionamento da hipófise anterior, ovulação e início da fase lútea; não ocorre a produção de LH e FSH;
-
-- O FSH/LH atuam em nível ovariano com a liberação de
-
-- Com isso, não ocorre a estimulação gonadal e, hormônios esteroides (estrogênio e progesterona) a consequentemente, não ocorre a produção de depender da fase do ciclo ovulatório; estrogênio e progesterona;
-
-- O estrogênio e a progesterona terão ação sistêmica
-
-- Culmina no hipogonadismo hipogonadotrófico, já e no útero, levando ao ciclo menstrual da forma que as gonadotrofinas (LH e FSH) estão baixas.
-
-como conhecemos.
+- Com o defeito no funcionamento da hipófise anterior, não ocorre a produção de LH e FSH;
+- Com isso, não ocorre a estimulação gonadal e, consequentemente, não ocorre a produção de estrogênio e progesterona;
+- Culmina no **hipogonadismo hipogonadotrófico**, já que as gonadotrofinas (LH e FSH) estão baixas.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -82,79 +66,68 @@ como conhecemos.
 
 <!-- page:2 -->
 
-Perda de óvulos ao longo da vida II - OVARIANO Insuficiência Ova ( r D i i a nâ n m a ic P a o r v e a m rian a a t ) ura (IOP)
+### II - Ovariano
 
-Número de
+- Ocorre por defeito das gônadas, onde, apesar da produção das gonadotrofinas pela hipófise, ou seja, com a secreção adequada de LH e FSH, não ocorre a resposta ovariana esperada;
+- É o que leva ao chamado **hipogonadismo hipergonadotrófico**, já que as gonadotrofinas (LH e FSH) estão aumentadas, como tentativa de estimular a produção ovariana.
 
-- Ocorre por defeito das gônadas, onde, apesar da
+### I - Uterovaginal
 
-- Perdaf odlícualos função ovariana antes dos 40 anos de idade;
+- Em geral, por alteração estrutural ou de via de saída, não ocorre a exteriorização do sangramento menstrual.
 
-6 a 7 milhões produção das gonadotrofinas pela hipófise, ou seja,
+> ⚠️ Legenda de figura reconstruída a partir de OCR — confira contra a fonte original.
 
-- Por c1.a00u0.0s00as vaNrasicaimdentaos, que incluem defeitos com a secreção adequada de LH e FSH, não ocorre a cromo 100 s .0 s 00 ômicos e genéDtimicinuoiçãso d, a dFeretilifidadceiências enzimáticas, resposta ovariana esperada; processos autoimunes, consequências de radio ou resposta ovariana esperada;
+*Figura 2: Decréscimo folicular ao longo da vida da mulher (número de folículos: 6 a 7 milhões ao nascimento, cerca de 1.000.000 na infância, declínio progressivo até a menopausa, com pico de fertilidade ótima seguido de declínio até a insuficiência ovariana).*
 
-Fertilidade Ótima Fim da
+## Principais Etiologias
 
-- É o que leva ao chamado hipogonadismo hipergonadotrófico, já que as gonadotrofinas (LH e produção ovariana.
+- Gestacional;
+- Lactacional;
+- Menopausa;
+- Síndrome dos ovários policísticos (SOP);
+- Hiperprolactinemia;
+- Insuficiência ovariana prematura (IOP);
+- Sinéquias intrauterinas;
+- Hipotalâmica.
 
-FSH) estão aumentadas, como tentativa de estimular a I - UTEROVAGINAL
+## Compartimento Útero-Canalicular
 
-- Em geral, por alteração estrutural ou de via de saída não ocorre a exteriorização do sangramento mentrual.
+### Síndrome de Asherman
 
-## PRINCIPAIS ETIOLOGIAS DE
-
-- Gestacional; Lactacional; Menopausa; Síndrome dos ovários policísticos (SOP); Hiperprolactinemia;
-
-Insuficiência ovariana prematura (IOP); Sinéquias intrauterinas; Hipotalâmica.
-
-## COMPARTIMENTO ÚTERO-CANALICULAR
-
-Síndrome de Asherman
-
-- Ocorre a formação de sinéquias intrauterinas secundárias a procedimentos intrauterinos (ex.:
-
-curetagens, miomectomia histeroscópica) ou outros processos inflamatórios pélvicos;
-
+- Ocorre a formação de sinéquias intrauterinas secundárias a procedimentos intrauterinos (ex.: curetagens, miomectomia histeroscópica) ou outros processos inflamatórios pélvicos;
 - As aderências são compostas por faixas de tecido conjuntivo fibromuscular que podem ou não estar circundadas por epitélio superficial ou tecido glandular;
-
 - Dor pélvica, disfunção menstrual, infertilidade, abortos de repetição;
-
 - Diagnóstico definitivo: histeroscopia mostrando a localização e extensão das aderências intrauterinas;
-
 - Todas as dosagens hormonais estão normais, visto que o problema não é gonadal (ovariano), mas canalicular;
-
 - O tratamento é a lise de aderências por histeroscopia.
 
-- COMPARTIMENTO OVARIANO
+## Compartimento Ovariano
 
-Síndrome dos ovários policísticos (SOP)
+### Síndrome dos Ovários Policísticos (SOP)
 
 - Manifesta-se clinicamente com: disfunção ovulatória (ciclos menstruais longos ou amenorreia com anovulação); sinais de hiperandrogenismo; presença de ovários com aspecto policístico à ultrassonografia;
-
 - É frequente a associação com síndrome metabólica nessas pacientes;
-
-- Na investigação hormonal, os níveis de LH encontramse superiores aos de FSH;
-
+- Na investigação hormonal, os níveis de LH encontram-se superiores aos de FSH;
 - São utilizados os critérios de Rotterdam e consenso internacional para diagnóstico;
+- É a principal causa de amenorreia secundária anovulatória.
 
-- É a principal causa de amenorréia secundária anovulatória.
+**Obs.**: a SOP é abordada em detalhes em aula específica à parte.
 
-Obs.: a SOP é abordada em detalhes em aula específica à parte. processos autoimunes, conseFeqrtiulidaêdencias de radio ou 10.000 quimioterapia sobre os ovários, infecções ou cirurgias, 1.000 Idade ocorre a depleção e a disfunção folicular;
+### Insuficiência Ovariana Prematura (IOP)
 
-Menopausa
-
+- Perda da função ovariana antes dos 40 anos de idade;
+- Por causas variadas, que incluem defeitos cromossômicos e genéticos, deficiências enzimáticas, processos autoimunes, consequências de radio ou quimioterapia sobre os ovários, infecções ou cirurgias, ocorre a depleção e a disfunção folicular;
 - A depleção folicular é a mais comum e pode ser consequência de redução do número inicial de folículos primordiais, aumento da apoptose (atresia folicular acelerada) ou destruição folicular.
 
-Figura 2: Decréscimo folicular ao longo da vida da mulher. Obs.: quando existem causas genéticas para IOP, em geral, manifesta-se como amenorreia primária.
+**Obs.**: quando existem causas genéticas para IOP, em geral, manifesta-se como amenorreia primária.
 
 - O quadro clínico é caracterizado por alteração menstrual tipo oligo/amenorreia por pelo menos 4 meses, não sendo obrigatório apresentar sintomas de hipoestrogenismo, por exemplo, fogachos;
-
 - Pode ainda permanecer como causa idiopática na maioria das vezes;
-
-- O diagnóstico é baseado no histórico clínico + dosagem de FSH > 25 mUI∕mL (ou > 40 mUI/ml), persistindo esse valor aumentado em duas dosagens com intervalo de 30 dias entre elas;
-
-- A investigação diagnóstica é obrigatória no surgimento de amenorreia anteriormente aos 30 anos de idade, com a realização de: Cariótipo (afastar Síndrome de Turner ou cromossomo Y); Pesquisa do X frágil: resulta de uma mutação em determinada região do gene FMR1, que se localiza no cromossomo X. Essa mutação é bastante peculiar e se caracteriza por aumento no número de repetições de trincas de bases (citosinaguanina-guanina). Em meninas é uma causa importante de IOP; Pesquisa de autoanticorpos para investigar uma possível ooforite autoimune: em geral, é secundária a algumas doenças como adrenalite ou póscaxumba. Nessas situações, há a produção de autoanticorpos contra os ovários.
+- O diagnóstico é baseado no histórico clínico + dosagem de FSH > 25 mUI/mL (ou > 40 mUI/mL), persistindo esse valor aumentado em duas dosagens com intervalo de 30 dias entre elas;
+- A investigação diagnóstica é obrigatória no surgimento de amenorreia anteriormente aos 30 anos de idade, com a realização de:
+  - **Cariótipo** (afastar síndrome de Turner ou cromossomo Y);
+  - **Pesquisa do X frágil**: resulta de uma mutação em determinada região do gene FMR1, que se localiza no cromossomo X. Essa mutação é bastante peculiar e se caracteriza por aumento no número de repetições de trincas de bases (citosina-guanina-guanina). Em meninas é uma causa importante de IOP;
+  - **Pesquisa de autoanticorpos** para investigar uma possível ooforite autoimune: em geral, é secundária a algumas doenças como adrenalite ou pós-caxumba. Nessas situações, há a produção de autoanticorpos contra os ovários.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -162,102 +135,88 @@ Figura 2: Decréscimo folicular ao longo da vida da mulher. Obs.: quando existem
 
 <!-- page:3 -->
 
-- Os objetivos do tratamento da IOP são
-
-- É mais frequentemente observada como causa de reverter os sintomas e reduzir as repercussões amenorreia secundária;
-
-do hipoestrogenismo;
-
-- O tratamento é feito com agonistas dopaminérgicos.
-
-- Envolve principalmente a reposição hormonal para Síndrome de Sheehan preservar a saúde óssea dessas pacientes e reduzir
-
-- Ocorre um pan-hipopituitarismo por necrose preservar a saúde óssea dessas pacientes e reduzir seu risco cardiovascular;
-
+- Os objetivos do tratamento da IOP são reverter os sintomas e reduzir as repercussões do hipoestrogenismo;
+- Envolve principalmente a reposição hormonal para preservar a saúde óssea dessas pacientes e reduzir seu risco cardiovascular;
 - Se infertilidade, considerar técnicas de reprodução assistida com oócitos doados.
 
-Síndrome de Savage ou Síndrome de Resistência Ovariana
+### Síndrome de Savage ou Síndrome de Resistência Ovariana
 
-- Cariótipo 46 XX com resistência parcial a ação das gonadotrofinas;
-
+- Cariótipo 46 XX com resistência parcial à ação das gonadotrofinas;
 - As gônadas são funcionantes, porém não há esteroidogênese por conta de uma mutação em nível de receptor ou pós-receptor das gonadotrofinas, não permitindo a ação destes hormônios;
-
-- Ausência de caracteres sexuais secundários;
-
-- Em geral, o que ocorre é a amenorreia secundária.
-
+- Ausência de caracteres sexuais secundários; em geral, o que ocorre é a amenorreia secundária;
 - O diagnóstico é feito pela presença de elevados níveis de gonadotrofinas, sem depleção folicular;
+- Pode ser feita avaliação histológica dos ovários: presença de folículos, ausência de infiltrado linfocitário;
+- O tratamento é feito com terapia hormonal.
 
-- Pode ser feita avaliação histológica dos ovários: presença de folículos, ausência de infiltrado linfocitário.
+## Compartimento Hipofisário
 
-- O tratamento é feito com terapia hormonal;
-
-COMPARTIMENTO HIPOFISÁRIO Hiperprolactinemia
+### Hiperprolactinemia
 
 - Níveis elevados de prolactina alteram a secreção pulsátil do GnRH, interferindo na liberação de gonadotrofinas e na esteroidogênese gonadal. A dopamina é o principal regulador da biossíntese e secreção da prolactina. Diante de níveis elevados de prolactina, ocorre uma elevação reflexa nos níveis de dopamina, que, por sua vez, contribui para alteração da função neuronal do GnRH;
+- Leva a um **hipogonadismo hipogonadotrófico**;
+- As principais causas são:
+  - **Medicamentos**: antagonistas dopaminérgicos (metoclopramida, tricíclicos, haloperidol);
+  - **Tumores produtores de prolactina** (adenomas hipofisários);
+  - **Hipotireoidismo**: o hormônio liberador da tireotrofina (TRH) é um dos mais potentes estimuladores da síntese de prolactina. Sendo assim, quando há hipotireoidismo (com consequente elevação de TSH e TRH), poderá haver hiperprolactinemia;
+  - **Insuficiência renal**, levando à redução da depuração do hormônio prolactina e consequente aumento de seu nível circulante.
+- O quadro clínico é caracterizado por galactorreia associada à oligomenorreia e amenorreia;
+- É mais frequentemente observada como causa de amenorreia secundária;
+- O tratamento é feito com agonistas dopaminérgicos.
 
-- Leva a um hipogonadismo hipogonadotrófico;
+### Síndrome de Sheehan
 
-- As principais causas são: Medicamentos: antagonistas dopaminérgicos Tumores produtores de prolactina Hipotireoidismo: o hormônio liberador da tireotrofina (TRH) é um dos mais potentes estimuladores da síntese de prolactina. Sendo assim, quando há hipotireoidismo (com consequente elevação de TSH e TRH), poderá haver hiperprolactinemia; Insuficiência renal, levando à redução da depuração do hormônio prolactina e consequente aumento de seu nível circulante.
-
-(metoclopramida, tricíclicos, haloperidol); (adenomas hipofisários);
-
-- O quadro clínico é caracterizado por galactorreia associada à oligomenorreia e amenorreia; - Ocorre um pan-hipopituitarismo por necrose hipofisária após hemorragia pós-parto;
-
+- Ocorre um pan-hipopituitarismo por necrose hipofisária após hemorragia pós-parto;
 - Isso porque, durante a gestação, é comum o ingurgitamento hipofisário. Em caso de sangramento exuberante no parto, ocorre consequentemente uma hipovolemia. A hipófise, que tinha um fluxo sanguíneo aumentado por conta do ingurgitamento gestacional, fica sem irrigação;
+- O quadro clínico é composto por: amenorreia; agalactia; perda de pelos pubianos e axilares; manifestações de hipotireoidismo; insuficiência suprarrenal;
+- O tratamento das deficiências hormonais em pacientes com síndrome de Sheehan é feito como em qualquer outro paciente com hipopituitarismo, devendo incluir:
+  - **Disfunção tireoidiana**: levotiroxina;
+  - **Deficiência de gonadotrofinas**: reposição de estrogênio e progesterona;
+  - **Déficit corticotrófico**: corticoide oral.
 
-- O quadro clínico é composto por: amenorreia; agalactia; perda de pelos pubianos e axilares; manifestações de hipotireoidismo; insuficiência suprarrenal.
+## Compartimento Hipotalâmico
 
-- O tratamento das deficiências hormonais em pacientes com síndrome de Sheehan é feito como em qualquer outro paciente com hipopituitarismo, devendo incluir: Disfunção tireoidiana: levotiroxina; Deficiência de gonadotrofinas: reposição de estrogênio e progesterona; Déficit corticotrófico: corticoide oral.
-
-COMPARTIMENTO HIPOTALÂMICO Amenorreia Funcional
+### Amenorreia Funcional
 
 - Algumas situações como transtornos alimentares, exercícios físicos extenuantes e estresse podem levar à supressão da secreção pulsátil de GnRH, além de reversão da secreção pulsátil do LH para os padrões pré-púberes, com supressão da produção hipofisária de LH e do FSH;
+- O tratamento deve ser guiado pela causa; exemplo: na anorexia nervosa, a recuperação da nutrição e do peso favorece a resolução da amenorreia.
 
-- O tratamento deve ser guiado pela causa; Exemplo: na anorexia nervosa, a recuperação da nutrição e do peso favorece a resolução da amenorreia.
-
-Anorexia nervosa Exercícios Estresse e bulimia extenuantes Leptina CRH Endorfinas Pulsatilidade NPY GnRH Amenorreia Figura 3: Fisiopatologia da amenorreia funcional em esquema.
+*Figura 3: Fisiopatologia da amenorreia funcional em esquema (anorexia nervosa e bulimia, exercícios extenuantes, estresse → leptina, CRH, endorfinas, NPY → supressão da pulsatilidade do GnRH → amenorreia).*
 
 ---
 
 <!-- page:4 -->
 
-## ROTEIRO DIAGNÓSTICO DE
+## Roteiro Diagnóstico
 
-FSH normal
+- Anamnese e exame físico detalhados;
+- Afastar gravidez;
+- Dosagem de FSH:
+  - **FSH baixo** → disfunção hipotalâmica ou hipofisária → neuroimagem; estrutura de SNC; teste de GnRH;
+  - **FSH normal** → dosagem de prolactina:
+    - Prolactina alta → hiperprolactinemia;
+    - Prolactina normal → dosagem de TSH:
+      - TSH alterado → tireoidopatia;
+      - TSH normal → teste da progesterona / teste do estrogênio → avaliar compartimento uterovaginal (anovulação);
+  - Insuficiência ovariana (FSH alto).
 
-Dosagem de prolactina Afastar gravidez Afastar gravidez Anamnese e exame físico detalhados Dosagem de FSH Insuficiência ovariana Figura 4: Fisiopatologia da amenorreia secundária por alteração no compartimento ovariano em esquema.
+*Figura 4: Fisiopatologia da amenorreia secundária por alteração no compartimento ovariano, em esquema.*
 
-FSH baixo Disfunção hipotalâmica ou hipofisária
+*Figura 5: Fisiopatologia da amenorreia secundária por alteração em sistema nervoso central, em esquema.*
 
-- Neuroimagem
+*Figura 6: Fisiopatologia da amenorreia secundária por alteração dos níveis de prolactina, em esquema.*
 
-- - Estrutura SNC Teste GnRH em sistema nervoso central, em esquema.
+*Figura 7: Fisiopatologia da amenorreia secundária por alteração dos níveis de hormônios tireoidianos, em esquema.*
 
-Figura 5: Fisiopatologia da amenorreia secundária por alteração
+*Figura 8: Fisiopatologia da amenorreia secundária por alteração em compartimento uterino ou vaginal.*
 
-- FSH normal dos níveis de prolactina em esquema. Prolactina NORMAL dos níveis de hormônios tireoidianos em esquema.
+## Conceitos Gerais Para Tratamento
 
-Dosagem de prolactina Prolactina ALTA Hiperprolactinemia Figura 6: Fisiopatologia da amenorreia secundária por alteração Dosagem de TSH TSH alterado Tireoidopatia Figura 7: Fisiopatologia da amenorreia secundária por alteração FSH Normal Dosagem de prolactina Dosagem de TSH Prolactina normal TSH Normal Anovulação Teste da progesterona Teste do estrogênio Uterovaginal Figura 8: Fisiopatologia da amenorreia secundária por alteração em compartimento uterino ou vaginal.
-
-## CONCEITOS GERAIS
-
-## PARA TRATAMENTO
-
+- Lembre-se: a amenorreia é um sintoma;
 - O objetivo é o tratamento direcionado para a causa!
-
-Lembre-se: a amenorreia é um sintoma;
-
 - Elucidação diagnóstica;
-
 - É possível a reversão da causa?
-
-- Evitar as consequências do hipoestrogenismo
-
-- pode afetar a saúde óssea e aumentar o risco cardiovascular;
-
+- Evitar as consequências do hipoestrogenismo — pode afetar a saúde óssea e aumentar o risco cardiovascular;
 - Avaliar o potencial reprodutivo;
-
 - Avaliar o risco do desenvolvimento de tumores gonadais.
 
 ![Figura do material - página 4](figure-004-1.webp)

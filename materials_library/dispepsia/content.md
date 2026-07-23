@@ -1,124 +1,129 @@
-# dispepsia
+# Dispepsia
 
 <!-- page:1 -->
 
-Dispepsia (CM) IBPs (CM)
+## Resumo
 
-- Sinais de alarme: > 40-60 anos [50]; História familiar de câncer gástrico (parente de Disfagia; Vômitos recorrentes; Massa abdominal; Anemia; Sangramento; Perda ponderal.
+**Dispepsia (Clínica Médica) / IBPs (Clínica Médica)**
 
-1º grau);
+**Sinais de alarme:**
 
-Sinais de alarme? Não Sim Teste não invasivo H. pylori EDA Erradicar Tratar conforme IBP 4-8 sem + IBP 4-8 sem achados Se refratariedade Fisiologia gástrica
+- Idade > 40-60 anos [50];
+- História familiar de câncer gástrico (parente de 1º grau);
+- Disfagia;
+- Vômitos recorrentes;
+- Massa abdominal;
+- Anemia;
+- Sangramento;
+- Perda ponderal.
 
-- Antro: Células G (produzem gastrina); Céls D (produzem somatostatina);
+**Fluxograma:** Sinais de alarme? Não → teste não invasivo para H. pylori → se positivo, erradicar + IBP por 4-8 semanas; se negativo, IBP por 4-8 semanas → se refratariedade, EDA. Sim → EDA → tratar conforme achados.
 
-## CONCEITOS GERAIS
+**Fisiologia gástrica (resumo):**
 
-- Vários sintomas associados à má digestão: Dor epigástrica; Plenitude pós-prandial; Náuseas e vômitos; Pirose.
+- Antro: células G (produzem gastrina); células D (produzem somatostatina);
+- Corpo: células parietais (secretoras de ácido); ECL (produzem histamina); células D;
+- Produção de ácido pelas células parietais: gastrina, histamina e ACh estimulam; somatostatina inibe.
 
-## ETIOLOGIAS
+**Antiácidos:**
 
-- As etiologias são múltiplas, sendo a dispepsia funcional uma das mais importantes: Com uma boa anamnese é possível identificar um possível agente causal.
+- Anti-H2: bloqueiam receptores de histamina;
+- IBP: bloqueiam a bomba de prótons (troca H+ por K+);
+- PCAB (vonoprazan): competição com K+ luminal (não troca K por H+).
 
-- Verificar Tabela 1 na coluna ao lado - Corpo: Células parietais (secretoras de ácido); ECL (produzem histamina); Células D.
+**Uso prolongado de IBP (> 1 ano):**
 
-- Produção ácido pelas células parietais: Gastrina, histamina e ACh estimulam; Somatostatina inibe.
-
-Antiácidos
-
-- Anti-H2: receptores de histamina;
-
-- IBP: bloqueiam bomba de próton (troca H+ por K+);
-
-- PCAB (vonoprazan): competição com K+ luminal
-
-(não vai trocar K por H+). Uso prolongado de IBP (> 1 ano)
-
-- Aumenta pólipos glândulas fúndicas;
-
-- Possível redução da absorção de: Cálcio (Ca) (osteoporose?); Ferro (Fe) (anemia?); Vitamina B12 (demência?); Magnésio (Mg).
-
-- Aumento risco de GECA, SIBO, clostridium,
-
-PBE, pneumonia/NIA;
-
+- Aumenta pólipos de glândulas fúndicas;
+- Possível redução da absorção de: cálcio (osteoporose?); ferro (anemia?); vitamina B12 (demência?); magnésio;
+- Aumento do risco de GECA, SIBO, clostridium, PBE, pneumonia/NIA;
 - Interações medicamentosas (citocromo P450);
+- Associação controversa com câncer gástrico.
 
-- Associação controversa com Ca gástrico.
+## Conceitos Gerais
 
-Tabela 1: Etiologias de dispepsia. H. pylori Funcional Úlcera Biliar Parasitoses Intolerâncias Gastroparesia Neoplasias Pancreatite (crônica)
+- Vários sintomas associados à má digestão: dor epigástrica; plenitude pós-prandial; náuseas e vômitos; pirose.
 
-Medicamentosos Doença do Refluxo GastroEsofágico (DRGE)
+## Etiologias
+
+- As etiologias são múltiplas, sendo a **dispepsia funcional** uma das mais importantes. Com uma boa anamnese, é possível identificar um possível agente causal.
+
+Tabela 1: Etiologias de dispepsia.
+
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
+
+- H. pylori;
+- Funcional;
+- Úlcera;
+- Biliar;
+- Parasitoses;
+- Intolerâncias;
+- Gastroparesia;
+- Neoplasias;
+- Pancreatite (crônica);
+- Medicamentosos;
+- Doença do Refluxo Gastroesofágico (DRGE).
 
 ---
 
 <!-- page:2 -->
 
-## ABORDAGEM
+## Abordagem
 
-| Desses, 70 a 80% são de ácido clorídrico.
+- O primeiro passo é identificar se há **sinais de alarme**:
+  - Idade > 40-60 anos [50] (na maior parte das referências, > 50 anos; Consenso Brasileiro de H. pylori 2018: > 40 anos);
+  - História familiar de câncer gástrico (parente de 1º grau);
+  - Disfagia;
+  - Vômitos recorrentes;
+  - Massa abdominal;
+  - Anemia;
+  - Sangramento;
+  - Perda ponderal.
+- Se positivo(s), há indicação de **endoscopia digestiva alta (EDA)**;
+- Se negativos, há indicação de teste não invasivo para **H. pylori**: teste respiratório ou antígeno fecal (exames pouco disponíveis):
+  - Se H. pylori positivo: erradicar e iniciar inibidor de bomba de prótons (IBP) por 4-8 semanas;
+  - Se H. pylori negativo: iniciar IBP por 4 a 8 semanas;
+  - Se refratário ao IBP, avaliar com EDA.
 
-- Células parietais: secretoras de ácido (H+);
+Figura 1: Fluxograma de dispepsia.
 
-- O primeiro passo é identificar se há sinais de alarme:
+> **Atenção**: os IBPs são os medicamentos de escolha, pois a maior parte das queixas dispépticas resulta do desbalanço entre ↓ fatores protetores da mucosa e ↑ acidez.
 
-- Células D: produtoras de somatostatina: > 40-60 anos [50]: | Feedback negativo para a secreção gástrica. Na maior parte das referências > 50 anos;
+## Fisiologia Gástrica
 
-- Células enterocromafins like (ECL): produtoras, Na maior parte das referências > 50 anos; Consenso Brasileiro de H.pylori (2018): > 40 anos. História familiar de câncer gástrico (parente de Disfagia; Vômitos recorrentes; Massa abdominal; Anemia; Sangramento; Perda ponderal.
+- Dividimos o estômago em: fundo; corpo; antro;
+- Em cada uma dessas regiões, há predominância de células especializadas.
 
-1º grau); A
-
-- Se positivo(s) há indicação de endoscopia digestiva alta (EDA);
-
-- Se negativos há indicação de teste não invasivo para Teste respiratório ou antígeno fecal (exames pouco disponíveis); Se H. pylori positivo: erradicar e iniciar inibidor de bomba de prótons (IBP) 4-8 semanas; Se H. pylori negativo: iniciar IBP por 4 a 8 semanas Se refratário ao IBP, avaliar com EDA.
-
-H. pylori:
-
-- - Figura 1: Fluxograma de dispepsia.
-
-ATENÇÃO: Os IBPs são os medicamentos de escolha pois a maior parte das queixas dispépticas são resultantes do desbalanço:
-
-↓ fatores protetores da mucosa E ↑ acidez
-
-## FISIOLOGIA GÁSTRICA
-
-- Dividimos o estômago em: Fundo; Corpo; F Antro.
-
-- Em cada uma dessas regiões temos a predominância de células especializadas.
-
-## CORPO E FUNDO GÁSTRICO
+**Corpo e fundo gástrico:**
 
 - Presença das glândulas oxínticas (70% das glândulas do estômago);
+- Responsáveis pela produção de suco gástrico (cerca de 2,5-3,0 L/dia): dos quais 70 a 80% são de ácido clorídrico;
+- Células parietais: secretoras de ácido (H+);
+- Células enterocromafins-like (ECL): produtoras, principalmente, de histamina.
 
-- Responsáveis pela produção de suco gástrico (cerca de 2,5 – 3,0 L/dia): - Células enterocromafins like (ECL): produtoras, principalmente, histamina.
-
-## ANTRO
+**Antro:**
 
 - Presença das glândulas pilóricas (30% das glândulas do estômago);
-
-- Células D: produtoras de somatostatina;
-
+- Células D: produtoras de somatostatina (feedback negativo para a secreção gástrica);
 - Células G: produtoras de gastrina.
 
 Figura 2: Topografia das principais células envolvidas na secreção.
 
-## ETAPAS DA DIGESTÃO
+## Etapas da Digestão
 
-Fase Cefálica
+**Fase Cefálica**
 
-- Ocorre desde o desejo por determinado alimento
-
-(80% por via vagal);
-
+- Ocorre desde o desejo por determinado alimento (80% por via vagal);
 - O estímulo à atividade da célula G ocorre pelo neuroestímulo via acetilcolina (ACh);
-
 - Nesse sentido, também há inibição das células D.
 
-Figura 3: Fase cefálica da digestão. Fase Gástrica
+Figura 3: Fase cefálica da digestão.
+
+**Fase Gástrica**
 
 - Ocorre distensão do antro e elevação do pH;
-
-- Também ocorrem o estímulo das células G para a produção de gastrina e a inibição das células D: A produção de gastrina tem efeito direto na célula parietal, favorecendo a hipertrofia e produção ácida; Além disso, a gastrina estimula as ECL a produzirem histamina: Principal via de estimulação das células parietais.
+- Também ocorrem o estímulo das células G para a produção de gastrina e a inibição das células D:
+  - A produção de gastrina tem efeito direto na célula parietal, favorecendo a hipertrofia e a produção ácida;
+  - Além disso, a gastrina estimula as ECL a produzirem histamina — principal via de estimulação das células parietais.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -128,61 +133,57 @@ Figura 3: Fase cefálica da digestão. Fase Gástrica
 
 <!-- page:3 -->
 
-- Por fim, também há uma via vagal com ação direta da
+- Por fim, também há uma via vagal com ação direta da acetilcolina sobre as células parietais.
 
-- Canais que trocam cloreto e HCO3-:
+Figura 4: Fase gástrica da digestão.
 
-acetilcolina sob as células parietais. | Favorecem a manutenção da homeostase do pH.
+- A partir do momento em que o alimento sai do estômago:
+  - Menor distensão do antro;
+  - Queda do pH: menor estímulo das células G; cessação do feedback negativo para as células D → leva à maior produção de somatostatina no antro e no corpo gástrico;
+  - A somatostatina inibe as células G, as células parietais e as ECL;
+  - Observa-se uma redução da produção gástrica.
 
-- Canais de K+.
+**Fase Intestinal**
 
-Figura 4: Fase gástrica da digestão. A partir do momento que o alimento sai do estômago:
-
-- Menor distensão do antro;
-
-- Queda do pH: Menor estímulo das células G; Cessação do feedback negativo para as células D → leva à maior produção de somatostatina no antro e no corpo gástrico.
-
-- A somatostatina inibe as células G, as células parietais e as ECL;
-
-- Observa-se uma redução da produção gástrica.
-
-Fase intestinal
-
-- O ácido estomacal favorece o estímulo às enterogastronas: Secretinas, CCK, GIP, VIP, PYY.
-
+- O ácido estomacal favorece o estímulo às enterogastronas: secretina, CCK, GIP, VIP, PYY;
 - Tais neuropeptídeos afetam a secreção gástrica e a motilidade;
-
 - É uma fase de feedback negativo.
 
-Figura 5: Fase intestinal da digestão, com feedback negativo. CÉLULA PARIETAL
+Figura 5: Fase intestinal da digestão, com feedback negativo.
 
-- Bombas de prótons – dependente de AT: H+ entra para lúmen e K+ entra para o intracelular.
+## Célula Parietal
 
-- Canais de íon cloreto: Trocam Cl- para formar o HCl no lúmen.
+- Canais que trocam cloreto e HCO3-: favorecem a manutenção da homeostase do pH;
+- Canais de K+;
+- Bombas de prótons, dependentes de ATP: H+ entra para o lúmen e K+ entra para o intracelular;
+- Canais de íon cloreto: trocam Cl- para formar o HCl no lúmen.
 
-Tabela 2: Principais opções de IBPs e doses. Medicação Omeprazol Pantoprazol Rabeprazol Esomeprazol Lansoprazol Dexlansoprazol Figura 6: Célula parietal e principais vias de estímulo.
+Figura 6: Célula parietal e principais vias de estímulo.
 
-a Farmacologia e fisiologia (antiácidos)
+## Farmacologia e Fisiologia (Antiácidos)
 
-- Nesse sentido, podemos bloquear a secreção ácida farmacologicamente;
+- Podemos bloquear a secreção ácida farmacologicamente:
+  - A bomba de prótons: inibidores da bomba de prótons (IBPs);
+  - Os receptores de histamina: anti-histamínicos, não tão potentes quanto os IBPs e sujeitos a taquifilaxia;
+  - O transporte de K+: bloqueadores ácidos competitivos de potássio (PCABs) — vonoprazana 10 e 20 mg. Em teoria, apresenta maior duração do bloqueio ácido; não sofre metabolização pelo citocromo P450; não depende da manutenção do jejum para melhor ação terapêutica.
 
-- A bomba de prótons: inibidor da bomba de
+## Inibidores da Bomba de Prótons
 
-## prótons (IBPs)
+- Existem diversas opções de IBPs, que diferem em: biodisponibilidade; pico plasmático; rota de excreção;
+- A relevância clínica destas diferenças não está estabelecida.
 
-- Os receptores de histamina: anti-histamínicos: Não tão potentes quanto os IBPs e sofrem o efeito de taquifilaxia.
+Tabela 2: Principais opções de IBPs e doses.
 
-- O transporte de K+: bloqueadores ácidos competitivos de potássio (PCABs): Vonoprazana 10 e 20 mg; Em teoria, apresenta maior duração do bloqueio ácido; Não sofre metabolização pelo citocromo p450; Não depende da manutenção do jejum para melhor ação terapêutica.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## INIBIDORES DA BOMBA DE
-
-- Existem diversas opções de IBPs, diferem-se em: Biodisponibilidade; Pico plasmático; Rota de excreção.
-
-- A relevância clínica destas diferenças não está estabelecida;
-
-- Verificar Tabela 2 .
-
-Dose padrão (plena) 20-40 mg/dia 40 mg/d 20 mg/d 20-40 mg/d 30 mg/d 30-60 mg/d
+| Medicação | Dose padrão (plena) |
+|---|---|
+| Omeprazol | 20-40 mg/dia |
+| Pantoprazol | 40 mg/dia |
+| Rabeprazol | 20 mg/dia |
+| Esomeprazol | 20-40 mg/dia |
+| Lansoprazol | 30 mg/dia |
+| Dexlansoprazol | 30-60 mg/dia |
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -192,24 +193,16 @@ Dose padrão (plena) 20-40 mg/dia 40 mg/d 20 mg/d 20-40 mg/d 30 mg/d 30-60 mg/d
 
 <!-- page:4 -->
 
-Malefícios dos IBPs
+## Malefícios dos IBPs
 
-- Na teoria é resultante da hipocloridria crônica:
+- Uso contínuo de IBP: uso diário por tempo > 1 ano (efeitos de longo prazo);
+- O IBP é metabolizado pelo citocromo P450, o que pode alterar a ação de outras medicações que são metabolizadas pela mesma via;
+- Apesar de haver risco teórico para alguns potenciais efeitos adversos associados, muitas condições clínicas relatadas são controversas e não apresentam correlação prática significativa.
+- Na teoria, é resultante da hipocloridria crônica:
+  - Hipergastrinemia;
+  - Colonização/alteração da microbiota intestinal;
+  - Redução da absorção de: cálcio; ferro; B12; magnésio.
 
-- Uso contínuo de IBP: uso diário de por tempo > 1 ano | Hipergastrinemia;
-
-(efeitos de longo prazo); | Colonização/alteração da microbiota intestinal;
-
-- O IBP é metabolizado pelo citocromo P450, o que | Redução da absorção de:
-
-pode alterar a ação de outras medicações que são | Cálcio; metabolizadas pela mesma via; | Ferro;
-
-- Apesar de haver risco teórico para alguns potenciais | B12;
-
-efeitos adversos associados, muitas condições | Magnésio. clínicas relatadas são controversas e não apresentam
-
-- Verificar Figura 7 .
-
-correlação prática significativa; Figura 7: Possíveis efeitos adversos com uso prolongado de IBP.
+Figura 7: Possíveis efeitos adversos com uso prolongado de IBP.
 
 ![Figura do material - página 4](figure-004-1.webp)

@@ -2,56 +2,41 @@
 
 <!-- page:1 -->
 
-## COLECISTITE - VISÃO CRÍTICA
+## Colecistite - Visão Crítica de Segurança
 
-## DE SEGURANÇA
+- **Colecistectomia VLP** = padrão-ouro;
+- Conversão / cirurgia aberta → não diminui complicações, não facilita cirurgia;
+- Quando fazer aberta? Suspeita de câncer; instabilidade hemodinâmica; coagulopatia refratária.
 
-Colecistite
+## Colecistectomia Videolaparoscópica
 
-- Colecistectomia VLP = Padrão-ouro
+- Via de acesso padrão-ouro;
+- Quando fazer aberta? Suspeita de câncer; instabilidade hemodinâmica; coagulopatia refratária.
 
-- Conversão / aberta → não diminui complicações, não facilita cirurgia.
+## Colecistectomia Segura
 
-- Quando fazer aberta? Suspeita de câncer; Instabilidade hemodinâmica;
+**Visão crítica de segurança (Visão Crítica de Strasberg):**
 
-## COLECISTECTOMIA
+1. Limpeza do trígono hepatocístico;
+2. Porção distal do platô cístico exposta;
+3. Apenas duas estruturas entrando na vesícula.
 
-## VIDEOLAPAROSCÓPICA
+**E depois:**
 
-- Via de acesso Padrão-ouro;
+- Clipar o cístico;
+- Clipar a artéria;
+- Soltar a vesícula.
 
-- Quando fazer aberta? Suspeita de câncer; Instabilidade hemodinâmica; Coagulopatia refratária.
+**Sulco de Rouviere** → limite inferior da dissecção.
 
-## COLECISTECTOMIA SEGURA
-
-- Visão crítica de segurança: Limpeza do trígono hepatocístico; Porção distal do platô cístico exposta; Apenas duas estruturas entrando na vesícula. | Coagulopatia refratária.
-
-- Visão crítica de Strasberg!
-
-1. Limpeza do trígono hepatocístico!
-
-2. Porção distal do platô cístico exposta!
-
-3. Apenas duas estruturas entrando na vesícula!
-
-E depois: | Clipar o cístico; | Clipar a artéria; | Soltar a vesícula.
-
-- Sulco de Rouviere → Limite inferior da dissecção.
-
-## COLECISTECTOMIA DIFÍCIL - FATORES DE RISCO
+## Colecistectomia Difícil - Fatores de Risco
 
 - Colecistite aguda;
-
 - Colecistite crônica recorrente;
-
 - Obesidade;
-
-- Masculino;
-
+- Sexo masculino;
 - Cirrose;
-
 - Espessamento da parede;
-
 - Episódios prévios de coledocolitíase.
 
 ![Figura do material - página 1](figure-001-1.webp)
@@ -60,76 +45,63 @@ E depois: | Clipar o cístico; | Clipar a artéria; | Soltar a vesícula.
 
 <!-- page:2 -->
 
-## COLECISTECTOMIA DIFÍCIL - ESTRATÉGIAS PREVENÇÃO
+## Colecistectomia Difícil - Estratégias de Prevenção e Resgate
 
-## DE RESGATE
+**Prevenção**
 
 - Supervisão;
-
-- Abortar;
-
 - Humildade;
-
-- Converter;
-
 - Devagar é rápido;
-
-- Colecistostomia;
-
 - Não tenha vergonha de converter;
-
-- Fundo-cística;
-
 - Não suture, não clipe sem ver;
-
-- Parcial.
-
 - Visão crítica de segurança.
 
-Fundo-cística e parcial = melhores opções.
+**Resgate**
 
-## MANEJO
+- Abortar;
+- Converter;
+- Colecistostomia;
+- Fundo-cística;
+- Parcial.
 
-## COLANGIOGRAFIA INTRA-OPERATÓRIA
+**Fundo-cística e parcial = melhores opções.**
 
-- Intraoperatório:
+## Manejo — Colangiografia Intraoperatória
 
-Quando fazer: | 1o = Colangiografia intra-operatória;
+**Quando fazer:**
 
-- Dúvida intra-operatória; | Sabe resolver? → Resolver. Até converter
+- Dúvida intraoperatória;
+- Suspeita de coledocolitíase.
 
-- Suspeita de coledocolitíase. se necessário;
+**Satisfatória quando:**
 
-Satisfatória | Não sei resolver → Drenar e encaminhar;
-
-- Visualização de hepáticos; | CPRE ou colangioRM para avaliar lesões.
-
+- Visualização de hepáticos;
 - Sem falha de enchimento;
+- Escoamento do contraste para o duodeno.
 
-- Pós-operatório:
+**Intraoperatório:**
 
-- Escoamento do contraste para o duodeno. | Resolver fase aguda (drenar, DTPH, CPR,
+1. Colangiografia intraoperatória;
+2. Sabe resolver? → resolver, até converter se necessário;
+3. Não sei resolver → drenar e encaminhar; CPRE ou colangio-RM para avaliar lesões.
 
-ATB e suporte);
+**Pós-operatório:**
 
-## LESÕES DE VIAS BILIARES
+- Resolver fase aguda (drenar, DTPH, CPRE, ATB e suporte);
+- ColangioRM / CPRE;
+- Prótese / plastia / biliodigestiva.
 
-| ColangioRM / CPRE; | Prótese / Plastia / Biliodigestiva. FATORES DE RISCO
+## Lesões de Vias Biliares
 
-- Prótese: vazamentos pequenos;
+- **Prótese**: vazamentos pequenos;
+- **Plastia**: lesões pequenas em ductos principais;
+- **Biliodigestiva**: estenoses tardias e transecções totais.
+
+### Fatores de Risco
 
 - Má visualização / confundimento de estruturas (97%);
-
-- Plastia: lesões pequenas em ductos principais;
-
 - Inflamação;
-
-- Biliodigestiva: estenoses tardias e transecções totais.
-
 - Má exposição;
-
-- Não aderência a visão crítica de segurança;
-
+- Não aderência à visão crítica de segurança;
 - Confiança errônea;
-
-- Obesidade, Mirizzi.
+- Obesidade, síndrome de Mirizzi.

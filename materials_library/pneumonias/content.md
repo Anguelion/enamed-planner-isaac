@@ -2,135 +2,130 @@
 
 <!-- page:1 -->
 
-Pneumonia (PED)
+> ⚠️ Este material teve páginas de duas colunas com texto intercalado; o conteúdo abaixo foi reorganizado por assunto usando o contexto clínico. Confira contra a fonte original em caso de dúvida.
 
-## PNEUMONIA COMUNITÁRIA
+## Pneumonia Comunitária — Resumo
 
-AIDPI Pneumonia Taquipneia Taquipneia Tosse ou dificu com tiragem Pneumonia grave ou estridor em Pneumonia co repouso líquidos, letarg Atenção: OMS não considera que a tiragem subcosta SBP ainda trazem essa recomendação em seus docu
+### Critérios de Gravidade (AIDPI x OMS)
 
-- Pneumonia complicada: PAC associada a derrame p ou abscesso pulmonar Empiema: presença macroscópica de pus, gram n
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-LDH ≥ 1000, pH < 7,2
+| Classificação | Critérios |
+|---|---|
+| **AIDPI — Pneumonia** | Taquipneia |
+| **AIDPI — Pneumonia grave** | Taquipneia com tiragem subcostal ou estridor em repouso |
+| **OMS-2013 — Pneumonia** | Tosse ou dificuldade para respirar com SpO2 < 90% ou cianose central |
+| **OMS-2013 — Pneumonia grave** | Gemência, tiragem torácica grave |
+| **OMS-2013 — Pneumonia com sinais gerais de perigo** | Impossibilidade de mamar ou ingerir líquidos, letargia ou rebaixamento do nível de consciência, convulsões |
 
-- Quais os agentes etiológicos? Crianças < 5 anos: lembrar da etiologia viral Pneumococo / S. aureus Pneumonia afebril do lactente: Chlamydia trachom Pneumonia atípica (> 5 anos): Mycoplasma pneum
+> **Atenção**: OMS não considera que a tiragem subcostal seja um indicador de hospitalização, mas o AIDPI e a SBP ainda trazem essa recomendação em seus documentos.
 
-- Como tratar? geral kg/dia cirúrgica adequada: vanc simples OU tr ceft
+- **Pneumonia complicada**: PAC associada a derrame parapneumônico ou abscesso pulmonar. **Empiema**: presença macroscópica de pus, gram positivo na bacterioscopia, glicose < 40 mg/dL, proteína > 30 g/L, LDH ≥ 1000, pH < 7,2.
 
-DP e bom estado Ambulatorial G Ceftri Penicilina cristalina Cefo OU Ampicilina Se sus Amoxicilina 50 mg/ Abordagem MRSA Toracocentese (line Drenagem pleural clind Pneumonia em < 2 meses:
+### Etiologia
 
-Suspeita de M. pneumoniae ou C. pneum Atenção: Tratamento preconizado pela SBP. Apesar d caracteriza quais são os critérios utilizados para cada
+- Crianças < 5 anos: lembrar da etiologia viral, Pneumococo / *S. aureus*;
+- Pneumonia afebril do lactente: *Chlamydia trachomatis*;
+- Pneumonia atípica (> 5 anos): *Mycoplasma pneumoniae*, *Chlamydophila pneumoniae*.
 
-- Como prevenir? Imunização – Hib (Pentavalente) / P
+### Tratamento por Gravidade
 
-- Quando internar? Menores de 3 meses Hipoxemia (<92%) Desidratação ou baixa ingesta hídrica Desconforto respiratório moderado ou important Toxemia Doença de base que contribui com gravidade (ex Presença de complicação (Derrame, Empiema, Pn Refratariedade às medidas iniciais e falta de resp OMS-2013 uldade para respirar com SpO2 < 90% ou cianose central;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Taquipneia com tiragem subcostal Gemência, tiragem torácica grave; om sinais de perigo (impossibilidade de mamar ou ingerir gia ou rebaixamento do nível de consciência, convulsões).
+| Gravidade | Ambulatorial | Grave | Muito Grave | Necrosante |
+|---|---|---|---|---|
+| Esquema | Amoxicilina 50 mg/kg/dia OU Penicilina cristalina | Ceftriaxona OU Cefotaxima; se suspeita de MRSA associar Vancomicina | Ceftriaxona OU Cefotaxima + Vancomicina + Azitromicina | Ceftriaxona OU Cefotaxima OU Cefepime + Vancomicina; avaliar abordagem cirúrgica |
+| Abordagem cirúrgica | — | Considerar drenagem pleural simples se empiema | Toracocentese (linezolida/clindamicina) | Se área de necrose extensa: VTCA ou toracoscopia |
+| Observações | Pneumonia em < 2 meses: Ampicilina + aminoglicosídeo | Suspeita de M. pneumoniae ou C. pneumoniae: associar macrolídeo ou levofloxacino | — | — |
 
-al seja um indicador de hospitalização, mas o AIDPI e a umentos. parapneumônico, empiema pleural, pneumonia necrosante na bacterioscopia, glicose < 40 mg/dL, proteína > 30 g/L, matis moniae, Chlamydophila pneumoniae Grave Muito grave Necrosante Ceftriaxona OU Cefotaxima iaxona OU OU Cefepime + otaxima Ceftriaxona OU Vancomicina Cefotaxima speita de Vancomicina Abordagem A: associar Azitromicina cirúrgica adequada:
+> **Atenção**: tratamento preconizado pela SBP. Apesar da divisão em casos graves e muito graves, a SBP não caracteriza quais são os critérios utilizados para cada uma dessas classificações.
 
-comicina Se empiema: ezolida/ Considerar drenagem pleural damicina) oseltamivir simples rocar por Se área necrose tarolina extensa: VTCA ou toracoscopia : Ampicilina + aminoglicosídeo moniae: associar macrolídeo ou levofloxacino da divisão em casos graves e muitos graves, a SBP não a uma dessas classificações.
+### Critérios de Internação
 
-Pneumocócica te x: cardiopatia; broncodisplasia) neumonia necrosante, Abscesso) posta terapêutica em 48 a 72h
+- Menores de 3 meses;
+- Hipoxemia (< 92%);
+- Desidratação ou baixa ingesta hídrica;
+- Desconforto respiratório moderado ou importante;
+- Toxemia;
+- Doença de base que contribui com gravidade (ex.: cardiopatia, broncodisplasia);
+- Presença de complicação (derrame, empiema, pneumonia necrosante, abscesso);
+- Refratariedade às medidas iniciais e falta de resposta terapêutica em 48 a 72h.
+
+### Prevenção
+
+- Imunização — Hib (Pentavalente) / Pneumocócica.
 
 ---
 
 <!-- page:2 -->
 
-## INTRODUÇÃO
+## Introdução
 
-Locais: Definição de pneumonia complicada: pneumonia
+- Principal causa de morbimortalidade em crianças no mundo todo;
+- Causa mais comum de morte em criança < 5 anos.
 
-- Principal causa de morbimortalidade em crianças no associada a derrame parapneumônico (DPP), empiema mundo todo; pleural (EP), pneumonia necrosante ou abscesso pulmonar.
+**Definição de pneumonia complicada**: pneumonia associada a derrame parapneumônico (DPP), empiema pleural (EP), pneumonia necrosante ou abscesso pulmonar.
 
-- Causa mais comum de morte em criança <5 anos.
+## Fatores de Risco
 
-- Derrame pleural: é a manifestação mais comum da
+- Desnutrição;
+- Baixa idade;
+- Comorbidades;
+- Baixo peso ao nascer;
+- Pneumonias prévias;
+- Ausência de aleitamento materno;
+- Vacinação incompleta;
+- Infecções virais respiratórias.
 
-- Causa mais comum de morte em criança <5 anos.
+> **Lembrar**: taquipneia varia com a faixa etária!
+> - < 2 meses: FR ≥ 60 irpm
+> - 2-11 meses completos: FR ≥ 50 irpm
+> - 1-4 anos completos: FR ≥ 40 irpm
+> - > 5 anos: FR ≥ 20 irpm
 
-- FATORES DE RISCO
+## Quadro Clínico
 
-- Desnutrição
-
-- Baixa idade
-
-- Comorbidades
-
-- Baixo peso ao nascer
-
-- Pneumonias prévias
-
-- Ausência de aleitamento materno
-
-- Vacinação incompleta
-
-- Infecções virais respiratórias
-
-LEMBRAR: TAQUIPNEIA VARIA COM A FAIXA ETÁRIA!
-
-- < 2 meses: frequência respiratória (FR) ≥ 60 irpm
-
-- 2-11 meses completos: FR ≥ 50 irpm
-
-- 1-4 anos completos: FR ≥ 40 irpm
-
-- > 5 anos: FR ≥ 20 irpm
-
-## QUADRO CLÍNICO
-
-- FR alterada: sinal de maior SENSIBILIDADE!
-
-- Tosse
-
-- Presença de sinais de desconforto respiratório
-
+- FR alterada: sinal de maior **SENSIBILIDADE**!
+- Tosse;
+- Presença de sinais de desconforto respiratório;
 - Pode apresentar: febre alta ou hipotermia, recusa ao seio materno/alimentação, alterações de nível de consciência e irritabilidade. Menos característico, mas pode ter sibilância ou estridor associado.
 
-## CRITÉRIOS DE GRAVIDADE
+## Critérios de Gravidade
 
-- Grave: Derrame pleural que apenas ATB não é suficiente para o tratamento (pH baixo – pH < 7 maior risco de septação / glicose baixa e DHL elevado)
+- **Grave**: derrame pleural em que apenas ATB não é suficiente para o tratamento (pH baixo — pH < 7, maior risco de septação / glicose baixa e DHL elevado);
+- **Muito grave**: choque, necessidade de VM, admissão em UTI.
 
-- Muito grave: Choque, necessidade de
+**Outras definições de pneumonia grave:**
+- **AIDPI**: presença de tiragem ou estridor em repouso;
+- **OMS**: tosse ou dificuldade para respirar com SpO2 < 90% ou cianose central; cansaço respiratório grave (gemência, tiragem torácica muito grave); pneumonia com sinais gerais de perigo (impossibilidade de mamar ou ingerir líquidos, letargia ou rebaixamento do nível de consciência, convulsões).
+- **Atenção**: OMS não considera que a tiragem subcostal seja um indicador de hospitalização, mas o AIDPI e a SBP ainda trazem essa recomendação em seus documentos.
 
-VM, admissão UTI Outras definições de pneumonia grave:
+## Complicações
 
-- AIDPI: presença de tiragem ou estridor em repouso
+**Sistêmicas**
+- Sepse, choque séptico, embolização infecciosa, falência de múltiplos órgãos, PARDS (síndrome do desconforto respiratório agudo pediátrico), coagulação intravascular disseminada (CIVD), óbito.
 
-- OMS: tosse ou dificuldade para respirar com: SpO2 < 90% ou cianose central Cansaço respiratório grave (gemência, tiragem torácica muito grave) A Pneumonia com sinais gerais de perigo líquidos, letargia ou rebaixamento do nível de consciência, convulsões)
+**Derrame pleural**: é a manifestação mais comum da PAC complicada. 3 estágios: exsudativo (simples), fibrinopurulento (complicado) e a fase de organização. EP é usado genericamente para descrever estágio avançado de DPP.
 
-(impossibilidade de mamar ou ingerir
+**Características de um empiema**: pus; identificação da bactéria no Gram; glicose < 40 mg/dL; proteína > 30 g/L; pH < 7,2; LDH ≥ 1.000 (lesão do parênquima).
 
-- Atenção: OMS não considera que a tiragem subcostal seja um indicador de hospitalização, mas o AIDPI e a SBP ainda trazem essa recomendação em L seus documentos.
+**Pneumonia necrosante**: antibioticoterapia (ATB) há pelo menos 72h e sem melhora → procurar locais extrapulmonares de infecção como pele e partes moles ou músculo-esquelético. Podem deteriorar muito rápido para choque séptico, insuficiência de múltiplos órgãos e insuficiência respiratória hipoxêmica. Principais agentes: pneumococo, *Staphylococcus aureus* e *Streptococcus pyogenes*.
 
-- COMPLICAÇÕES:
+**Abscesso pulmonar**: parede espessada + nível hidroaéreo.
 
-Sistêmicas:
+Figura 1: Raio-X e TC de tórax demonstrando abscesso pulmonar.
 
-- Sepse, choque séptico, embolização infecciosa, falência de múltiplos órgãos, PARDS (Síndrome do desconforto respiratório agudo pediátrico), coagulação intravascular disseminada (CIVD), óbito. - Derrame pleural: é a manifestação mais comum da 3 estágios: exsudativo (simples), fibrinopurulento EP é usado genericamente para descrever estágio avançado de DPP
+## Diagnóstico
 
-PAC complicada (complicado) e a fase de organização
+### Anamnese Detalhada e Exame Físico
 
-- Características de um empiema: Pus Identificação da bactéria no Gram Glicose < 40 mg/dL Proteína > 30 g/L pH < 7,2 LDH ≥ 1.000 (lesão do parênquima)
+- Nos casos de insuficiência respiratória, deve-se lembrar de diagnósticos diferenciais como bronquiolite viral aguda (BVA) e asma (sibilância na pneumonia não é comum);
+- Quadro clínico compatível é suficiente.
 
-- Pneumonia necrosante Antibioticoterapia (ATB) há pelo menos 72 h e sem melhora → procurar locais extrapulmonares de infecção como pele e partes moles ou músculo-esquelético Podem deteriorar muito rápido para choque séptico, insuficiência de múltiplos órgãos e insuficiência respiratória hipoxêmica Principais agentes: Pneumococo, Staphylococcus aureus e Streptococcus pyogenes.
+### Laboratório
 
-- Abscesso pulmonar: parede espessada + nível hidroaéreo
-
-Figura 1: Raio-X e TC de tórax demonstrando abscesso pulmonar
-
-## DIAGNÓSTICO
-
-## ANAMNESE DETALHADA E EXAME FÍSICO
-
-- Nos casos de insuficiência respiratória, devese lembrar de diagnósticos diferenciais como bronquiolite viral aguda (BVA) e asma (sibilância na pneumonia não é comum)
-
-- Quadro clínico compatível é suficiente
-
-## LABORATÓRIO
-
-- Hemograma: pouco específico, em geral, apresentase com leucocitose, mas sem diferenciar etiologia bacteriana x viral
-
-- Provas inflamatórias: podem auxiliar no acompanhamento, mas não diferencia etiologia bacteriana x viral Pró-calcitonina (PCT) não deve ser realizada de rotina
+- **Hemograma**: pouco específico, em geral apresenta-se com leucocitose, mas sem diferenciar etiologia bacteriana x viral;
+- **Provas inflamatórias**: podem auxiliar no acompanhamento, mas não diferenciam etiologia bacteriana x viral. Pró-calcitonina (PCT) não deve ser realizada de rotina.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -138,212 +133,139 @@ Figura 1: Raio-X e TC de tórax demonstrando abscesso pulmonar
 
 <!-- page:3 -->
 
-| PCT < 0,25 ng/mL = baixa probabilidade de PAC | Listeria monocytogenes: sepse neonatal precoce bacteriana ou PAC de menor gravidade → alto valor | Citomegalovírus (CMV): outros sinais de preditivo negativo para pneumonia pneumocócica infecção congênita
+- **PCT < 0,25 ng/mL** = baixa probabilidade de PAC bacteriana ou PAC de menor gravidade → alto valor preditivo negativo para pneumonia pneumocócica.
+- **Hemocultura (HMC)**: realizar na indicação de internação. Difícil isolamento, mais facilmente identificado em líquido pleural.
+- Realizar pesquisa viral em secreção respiratória sempre que possível.
+- **Testes sorológicos**: pode ser útil para *M. pneumoniae*, *C. pneumoniae* e Pneumococo, mas títulos pareados (fase aguda e convalescença) → diagnóstico retrospectivo.
+- **Líquido pleural**, como coloração de Gram, cultura e outros testes de detecção como PCR, são úteis no estabelecimento do agente etiológico. Líquido pleural oferece o melhor rendimento.
 
-- Hemocultura (HMC): realizar na indicação de
+### Imagem
 
-- 1 a 3 meses internação. Difícil isolamento, mais facilmente | VSR: pico nos 2-7 meses: rinorreia, sibilância e identificadas em líquido pleural apresenta sazonalidade.
+- **Radiografia de tórax**: não deve ser realizada de rotina para o diagnóstico em crianças sem sinais de gravidade e sem necessidade de internação. Realizar se: dúvida diagnóstica (se normal, não exclui a doença); hipoxemia; desconforto e sinais de gravidade; ausência de resposta ao tratamento em 48-72h; paciente hospitalizado → realizar PA e perfil, para diagnóstico de complicações. Não deve ser utilizado como controle após o tratamento.
+- **Ultrassonografia (USG) pulmonar**: tem um baixo custo e não possui radiação.
+- **Tomografia (TC) de tórax**: apenas se suspeita de complicações.
 
-- Realizar pesquisa viral em secreção respiratória | Parainfluenza: semelhante ao VSR em sempre que possível crianças maiores.
+## Etiologia
 
-- Testes sorológicos: pode ser útil para M. pneumoniae, | Chlamydia trachomatis: infecção genital materna, aguda e convalescença) → diagnóstico retrospectivo infiltrado intersticial.
+### Vírus
 
-C pneumoniae e Pneumoco, mas títulos pareados (fase causando um quadro afebril, subagudo com
+- Os vírus são os principais agentes (90% até 1 ano / 50% em escolares);
+- Maior incidência: vírus sincicial respiratório (VSR);
+- Outros: influenza, parainfluenza, adenovírus, rinovírus, metapneumovírus, bocavírus, SARS-CoV-2.
 
-- Líquido pleural, como coloração de Gram, cultura e | Streptococcus pneumoniae: causa mais comum de outros testes de detecção como PCR, são úteis no pneumonia bacteriana. Líquido pleural oferece o melhor rendimento. sendo um agente relacionado a pneumatoceles, abscesso e derrame pleural.
+### Bactérias
 
-estabelecimento do agente etiológico | S. aureus: frequentemente mais grave e complicada, IMAGEM: | Bordetella pertussis: pensar em quadros mais
+- Costumam ser mais graves;
+- **Pneumococo** é o principal agente — importante!
+- Outras: estreptococos do grupo A; *S. aureus*; *H. influenzae*; *M. catarrhalis*;
+- Pensar em *S. aureus* se descrição de porta de entrada, lesão de pele etc.;
+- **Pneumonias atípicas**: *Mycoplasma pneumoniae* é o agente mais importante (10-40% das PAC e 15-18% das internações por PAC).
 
-- Radiografia de tórax: não deve ser realizado de graves → cianose, vômitos, tosses em salvas, rotina para o diagnóstico em crianças sem sinais guincho respiratório de gravidade e sem necessidade de internação.
+### Etiologia por Faixa Etária
 
-- 4 meses – 5 anos tratamento. Realizar se: adenovírus, rinovírus → ainda são a causa mais Dúvida diagnóstica – se normal, não exclui a doença; frequente nessa faixa etária Hipoxemia; | S. pneumoniae: causa mais comum de Desconforto e sinais de gravidade; pneumonia bacteriana Ausência de resposta ao tratamento em 48-72h | S. aureus para diagnóstico de complicações | H. influenzae tipo B: em desaparecimento devido ao Paciente hospitalizado → realizar PA e perfil; uso da vacina.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Não deve ser utilizado como controle após o | Vírus respiratórios: VSR, parainfluenza, influenza,
+| Faixa Etária | Principais Agentes |
+|---|---|
+| **Período neonatal** | Estreptococos do grupo B: clínica de sepse precoce, pneumonia grave, bilateral, difusa. Enterobactérias também são agentes importantes: *E. coli*; *Klebsiella sp*; *Proteus sp* → infecção nosocomial, geralmente > 7 dias de vida. *Listeria monocytogenes*: sepse neonatal precoce. Citomegalovírus (CMV): outros sinais de infecção congênita. |
+| **1 a 3 meses** | VSR: pico nos 2-7 meses; rinorreia, sibilância e apresenta sazonalidade. Parainfluenza: semelhante ao VSR em crianças maiores. *Chlamydia trachomatis*: infecção genital materna, causando quadro afebril, subagudo, com infiltrado intersticial. *Streptococcus pneumoniae*: causa mais comum de pneumonia bacteriana. *S. aureus*: frequentemente mais grave e complicada, sendo um agente relacionado a pneumatoceles, abscesso e derrame pleural. *Bordetella pertussis*: pensar em quadros mais graves → cianose, vômitos, tosse em salvas, guincho respiratório. |
+| **4 meses – 5 anos** | Adenovírus, rinovírus → ainda são a causa mais frequente nessa faixa etária. *S. pneumoniae*: causa mais comum de pneumonia bacteriana. *S. aureus* para diagnóstico de complicações. *H. influenzae* tipo B: em desaparecimento devido ao uso da vacina. O *H. influenzae* não tipável é pouco frequente em PAC, podendo acometer imunodeprimidos. Vírus respiratórios: VSR, parainfluenza, influenza. |
+| **5-15 anos** | *S. pneumoniae*: causa mais comum de pneumonia bacteriana. *M. pneumoniae*: crianças mais velhas desse grupo, causa frequente com apresentação radiológica variável. *C. pneumoniae*: crianças mais velhas e adolescentes. *M. tuberculosis*: maior incidência na adolescência e na gravidez; avaliar a exposição a paciente bacilífero, se há ausência de resposta ao tratamento para os agentes comuns. |
 
-- Ultrassonografia (USG) pulmonar: tem um baixo custo | M. pneumoniae: crianças mais velhas desse grupo.
+> **Atenção**: pacientes com HIV, lembrar de infecção por *Pneumocystis jirovecii*!
 
-e não possui radiação | M. tuberculosis: avaliar a exposição a paciente
+## Prevenção — Vacinação
 
-- Tomografia (TC) de tórax: apenas se suspeita bacilífero, se há ausência de resposta ao tratamento de complicações. para os agentes comuns.
-
-- 5-15 anos
-
-## ETIOLOGIA
-
-| S. pneumoniae: causa mais comum de pneumonia bacteriana VÍRUS | M. pneumoniae: causa frequente com apresentação
-
-- Os vírus são os principais agentes ( 90% até 1 ano / radiológica variável.
-
-50% escolares) | C. pneumoniae: crianças mais
-
-- Maior incidência: vírus sincicial respiratório (VSR) velhas e adolescentes.
-
-- Outros: influenza, parainfluenza, adenovírus, rinovírus, | M. tuberculosis: maior incidência na adolescência e metapneumovírus, bocavírus, Sars-Cov-2 na gravidez.
-
-BACTÉRIAS Atenção: pacientes com HIV lembrar de infecção por
-
-- Costumam ser mais graves Pneumocystis jirovecci!
-
-- Pneumococo é o principal agente – IMPORTANTE!
-
-- Outras: Estreptococos do grupo A; S. aureus; H.
-
-## PREVENÇÃO
-
-influenzae; M. catarrhalis.
-
-- Pensar em S. aureus se descrição de porta de entrada, lesão de pele etc; VACINAÇÃO
-
-- Pneumonias atípicas: Mycoplasma pneumoniae é o
-
-- SUS - PNI - Antipneumocócica 10 agente mais importante - (10-40% das PAC e 15-18% | Após a implantação da PCV10 na rede pública em das internações por PAC) 2010, houve aumento de colonização nasofaríngea por sorotipos de pneumococo não contidos
-
-ETIOLOGIA POR FAIXA ETÁRIA na vacina.
-
-- Período neonatal | Lembrar que há pneumo 13 e pneumo 23 na rede Estreptococos do grupo B: clínica de sepse pública para situações especiais nos CRIE’s precoce, pneumonia grave, bilateral, difusa. | Na rede privada, disponível: pneumo 13, pneumo Enterobactérias também são agentes importantes: 15 e pneumo 20
-
-E. coli; Klebsiella sp; Proteus sp. → Infecção
-
-- SUS - PNI - Vacina anti-Haemophilus influenza B nosocomial, geralmente > 7 dias de vida | Implantada no Brasil em 1999, gerou grande
+- **SUS – PNI – Antipneumocócica 10**: após a implantação da PCV10 na rede pública em 2010, houve aumento de colonização nasofaríngea por sorotipos de pneumococo não contidos na vacina.
+- Lembrar que há pneumo 13 e pneumo 23 na rede pública para situações especiais nos CRIEs. Na rede privada, disponível: pneumo 13, pneumo 15 e pneumo 20.
+- **SUS – PNI – Vacina anti-*Haemophilus influenzae* B**: implantada no Brasil em 1999, gerou grande diminuição dos casos de PAC por este agente.
 
 ---
 
 <!-- page:4 -->
 
-diminuição dos casos de PAC por este agente TEMPO DE ANTIBIOTICOTERAPIA: | O H. influenzae não tipável é pouco frequente em
+## Tempo de Antibioticoterapia
 
-- Duração na pneumonia não complicada: 5 a 7 dias
-
-PAC, podendo acometer imunodeprimidos
-
-- Duração na pneumonia complicada: 3 a 4 semanas
-
-- Verificar Tabela 1
-
+- Duração na pneumonia não complicada: **5 a 7 dias**;
+- Duração na pneumonia complicada: **3 a 4 semanas**;
 - Reavaliar em 48-72 horas.
 
-## TRATAMENTO FALHA TERAPÊUTICA
+## Falha Terapêutica
 
-- Derrame / empiema pleural, pneumonia necrosante e
-
-- Antibioticoterapia empírica: Amoxicilina → primeira abscesso pulmonar;
-
-opção para tratamento ambulatorial.
-
+- Derrame / empiema pleural, pneumonia necrosante e abscesso pulmonar;
 - Outros agentes não cobertos: vírus, bactérias atípicas, primeira manifestação de tuberculose;
+- Não cumprimento do tratamento com ATB proposto: dose, intervalo e tempo;
+- Doença de base: imunossupressão, fibrose cística, asma, desnutrição, bronquiectasias não relacionadas à fibrose cística;
+- Ocorrência de quadros diferenciais: aspiração de corpo estranho, malformações pulmonares (ex.: sequestro pulmonar), hérnia diafragmática.
 
-TRATAMENTO DE ACORDO COM A SBP:
+## Tratamento de Acordo com a SBP
 
-- Não cumprimento do tratamento com ATB proposto:
+- **Antibioticoterapia empírica**: amoxicilina → primeira opção para tratamento ambulatorial;
+- **Pneumonia sem tiragem subcostal**: tratamento ambulatorial com amoxicilina oral **50 mg/kg/dia**, duas a três vezes ao dia por 7 dias;
+- **Pneumonia em < 2 meses**: ampicilina **150-200 mg/kg/dia** de 6/6h + aminoglicosídeo (amicacina 15 mg/kg/dia de 12/12h);
+- **Derrame pleural e bom estado geral**: penicilina cristalina **200.000-250.000 UI/kg/dia**, de 6/6h ou 4/4h, OU ampicilina; avaliar abordagem cirúrgica (toracocentese ou drenagem pleural simples);
+- **Grave**: ceftriaxona **50-100 mg/kg/dia** de 12/12h ou cefotaxima **150 mg/kg/dia** de 8/8h ou 6/6h; na suspeita de MRSA, associar vancomicina 40-60 mg/kg/dia, de 6/6h ou 8/8h. Opção: na suspeita de MRSA, pode-se deixar terapia única com ceftarolina;
+- **Muito grave**: ceftriaxona ou cefotaxima + vancomicina + azitromicina **10 mg/kg/dia** nos dois primeiros dias, seguida de **5 mg/kg/dia** nos dias seguintes;
+- **Necrosante**: ceftriaxona ou cefotaxima ou cefepime **150 mg/kg/dia** de 8/8h + vancomicina + avaliar abordagem cirúrgica (drenagem de tórax simples, se empiema; videotoracoscopia ou toracoscopia, se necrose extensa).
 
-- Pneumonia sem tiragem subcostal: tratamento dose, intervalo e tempo;
+> **Atenção**: tratamento descrito é o preconizado pela SBP, diretriz mais atualizada no Brasil. Apesar da divisão em casos graves e muito graves, a SBP não caracteriza quais são os critérios utilizados para cada uma dessas classificações. Portanto, essa divisão em gravidade para direcionar tratamento é feita pela SBP e **NÃO** se refere à divisão clínica de critérios de gravidade feita pela OMS.
 
-ambulatorial com Amoxicilina oral 50 mg/kg/dia duas a
+## Realmente Ainda Há Espaço para Penicilina no Tratamento da Pneumonia por Pneumococo?
 
-- Doença de base: imunossupressão, fibrose cística, três vezes ao dia por 7 dias. asma, desnutrição, bronquiectasias não relacionadas à
+- **SIREVA** (Sistema de Redes de Vigilância dos Agentes Responsáveis por Pneumonias e Meningites Bacterianas) monitora os sorotipos de pneumococo associados à doença pneumocócica invasiva. Através dele, notamos o sucesso da implementação dos subtipos vacinais, mas predomínio de doença pneumocócica causada por sorotipos não incluídos na vacina Pneumo 10, desde 2010, no PNI. Há controle de outros sorotipos não incluídos na vacina do PNI, principalmente 19A, 6C e 3.
+- Por meio desse monitoramento, além de sabermos dessa substituição de sorotipos, é possível avaliar perfil de sensibilidade. Considera-se, pelo método padrão utilizado atualmente no Brasil (BrCAST), as seguintes concentrações inibitórias mínimas (CIM) para penicilina:
+  - CIM ≤ 0,06 mg/mL = suscetível;
+  - CIM 0,125 a 2 mg/mL = suscetível, aumentando exposição em gravidade;
+  - CIM ≥ 4 mg/mL = resistente.
 
-- Pneumonia em < 2 meses: Ampicilina 150-200 mg/ fibrose cística;
+**Tabela 1: Diferentes vacinas antipneumocócicas disponíveis no Brasil**
 
-kg/dia de 6/6h + aminoglicosídeo (Amicacina 15 mg/kg/
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Ocorrência de quadros diferenciais: aspiração de dia de 12/12h). corpo estranho, malformações pulmonares (ex:
+| Vacina | Sorotipos incluídos |
+|---|---|
+| **VPC10** | 1, 4, 5, 6B, 7F, 9V, 14, 18C, 19F, 23F |
+| **VPC13** | VPC10 + 3, 6A, 19A |
+| **VPC15** | VPC13 + 22F, 33F |
+| **VPC20** | VPC15 + 8, 10A, 11A, 12F, 15B |
 
-- Derrame pleural e bom estado geral: Penicilina sequestro pulmonar), hérnia diafragmática.
-
-cristalina 200.000-250.000 UI/kg/dia, de 6/6h ou 4/4h OU Ampicilina e avaliar abordagem cirúrgica REALMENTE AINDA HÁ ESPAÇO PARA (toracocentese ou drenagem pleural simples). PENICILINA NO TRATAMENTO DA PNEUMONIA
-
-- Grave: Ceftriaxona 50-100 mg/kg/dia de 12/12h POR PNEUMOCOCO? ou Cefotaxima 150 mg/kg/dia de 8/8h ou 6/6h; na
-
-- SIREVA (Sistema de Redes de Vigilância dos suspeita de MRSA associar Vancomicina 40-60 mg/ Agentes Responsáveis por Pneumonias e Meningites kg/dia, de 6/6h ou 8/8h. Opção: na suspeita de MRSA, Bacterianas) monitora os sorotipos de pneumoco pode-se deixar terapia única com Ceftarolina. associados à doença pneumocócica invasiva. Através
-
-- Muito grave: Ceftriaxona ou Cefotaxima + dele, notamos o sucesso da implementação da dois primeiros dias, seguida de 5 mg/kg/dia nos dos subtipos vacinais, mas predomínio de doença dias seguintes pneumocócica causada por sorotipos não incluídos na
-
-Vancomicina + Azitromicina 10 mg/kg/dia nos vacina Pneumo 10, desde 2010, no PNI. Há controle
-
-- Necrosante: Ceftriaxona ou Cefotaxima ou Cefepime 150 vacina do PNI, principalmente 19A, 6C e 3;
-
-mg/kg/dia de 8/8h + Vancomicina + avaliar abordagem
-
-- Por meio desse monitoramento, além de sabermos cirúrgica (drenagem de tórax simples, se empiema; dessa substituição de sorotipos, é possível avaliar videotoracoscopia ou toracoscopia, se necrose extensa). perfil de sensibilidade. Considera-se, pelo método padrão utilizado atualmente no Brasil (BrCast), as
-
-Atenção: Tratamento descrito é o preconizado pela seguintes concentrações inibitórias mínimas (CIM) SBP, diretriz mais atualizada no Brasil. Apesar da para penicilina:
-
-divisão em casos graves e muitos graves, a SBP não | CIM < ou = a 0,06 mg/mL = suscetível caracteriza quais são os critérios utilizados para cada | CIM 0,125 a 2 mg/mL = suscetível, uma dessas classificações. Portanto, essa divisão aumentando exposição em gravidade para direcionar tratamento é feita pela | CIM > ou = 4 mg/mL = resistente SBP e NÃO se refere à divisão clínica de critérios de gravidade feita pela OMS.
-
-Tabela 1: - Diferentes vacinas antipneumócicas disponíveis no Brasil
-
-## VPC10 1 4 5 6B 7F 9V 14 18C 19F 23F
-
-## VPC13 1 4 5 6B 7F 9V 14 18C 19F 23F 3 6A 19A
-
-## VPC15 1 4 5 6B 7F 9V 14 18C 19F 23F 3 6A 19A 22F 33F
-
-## VCP20 1 4 5 6B 7F 9V 14 18C 19F 23F 3 6A 19A 22F 33F 8 10A 11A 12F 15B
-
-Legenda: Diferentes formulações da vacina pneumocócica conjugada disponíveis no Brasil com os respectivos sorotipos incluídos em cada uma delas. Lembrando que no PNI está disponível a pneumocócica 10 (VPC10) e nos centros de referência de imunobiológicos especiais (CRIE) está disponível a pneumocócica 13 (VPC13) indicada para situações específicas. Além disso, há a pneumocócica 23 disponível nos CRIE’s, também indicada para situações específicas, porém, é vacina de outra plataforma, polissacarídica (as demais são conjugadas). Abordaremos mais detalhes na aula de vacinação.
+**Legenda**: diferentes formulações da vacina pneumocócica conjugada disponíveis no Brasil com os respectivos sorotipos incluídos em cada uma delas. Lembrando que no PNI está disponível a pneumocócica 10 (VPC10) e nos centros de referência de imunobiológicos especiais (CRIE) está disponível a pneumocócica 13 (VPC13), indicada para situações específicas. Além disso, há a pneumocócica 23 disponível nos CRIEs, também indicada para situações específicas, porém é vacina de outra plataforma, polissacarídica (as demais são conjugadas). Abordaremos mais detalhes na aula de vacinação.
 
 ---
 
 <!-- page:5 -->
 
-- Pelo perfil do SIREVA, em 2024, encontrou-se, para | Sintomas são mais importantes que os sinais crianças < 5 anos, 33,3% de cepas de pneumococo clínicos ao exame físico resistente à penicilina, ou seja, CIM > ou = 4 mg/ | Manifestações extra respiratórias: artralgia, mL. O que nos leva a questionar o uso da penicilina lesões de pele para tratamento de doença pneumocócica invasiva
+- Pelo perfil do SIREVA, em 2024, encontrou-se, para crianças < 5 anos, **33,3%** de cepas de pneumococo resistentes à penicilina, ou seja, CIM ≥ 4 mg/mL. O que nos leva a questionar o uso da penicilina para tratamento de doença pneumocócica invasiva **NÃO MENÍNGEA**;
+- Apesar disso, por estudos de farmacocinética, sabe-se que apenas cepas com CIM ≥ 8 mg/mL são, de fato, resistentes nas doenças invasivas por pneumococo (não meníngeas);
+- Portanto, nas cepas de pneumococo, mesmo com CIM até 4 mg/mL, pode-se usar penicilina em **doses elevadas**, com sucesso, no tratamento de pneumonia não grave.
 
-- Pode-se utilizar para diagnóstico sorologia específica para tratamento de doença pneumocócica invasiva
+## Critérios de Internação
 
-NÃO MENÍNGEA;
+- Menores de 3 meses;
+- Hipoxemia (< 92%);
+- Desidratação ou baixa ingesta líquida via oral;
+- Desconforto respiratório moderado ou grave;
+- Toxemia/Sepse;
+- Doença de base que contribui com gravidade (cardiopatia, broncodisplasia);
+- Presença de complicações (derrame, empiema, necrotizante, abscesso);
+- Refratariedade às medidas iniciais e falta de resposta terapêutica em 48 a 72h.
 
-- Apesar disso, por estudos de farmacocinética, sabese que apenas cepas com CIM > ou = a 8 mg/mL, são, de fato, resistentes nas doenças invasivas por pneumococo (NÃO MENÍNGEAS);
+## Pneumonia Atípica
 
-- Portanto, nas cepas de pneumococo, mesmo com não grave.
+- **Idade**: crianças > 5 anos;
+- **Agente etiológico**: *Mycoplasma pneumoniae*, *Chlamydia pneumoniae*;
+- **Quadro clínico**: arrastado (evolução varia de 7 a 21 dias, podendo se estender); mal-estar, cefaleia, odinofagia; tosse seca à tosse produtiva; tosse mais intensa nas duas primeiras semanas de doença; sintomas são mais importantes que os sinais clínicos ao exame físico; manifestações extrarrespiratórias: artralgia, lesões de pele;
+- Pode-se utilizar para diagnóstico sorologia específica para *Mycoplasma pneumoniae* e para *Chlamydia pneumoniae* (ambas IgM e IgG);
+- **Raio-X**: infiltrados peri-hilares ou reticulonodulares localizados, consolidação lobar ou segmentar;
+- **Tratamento**: macrolídeo — azitromicina **10 mg/kg/dia** uma vez ao dia no primeiro dia e **5 mg/kg/dia** uma vez ao dia por 4 dias; claritromicina **15 mg/kg/dia**, em duas doses diárias, por 10 dias.
 
-CIM até 4 mg/mL, pode-se usar penicilina em DOSES ELEVADAS, com sucesso, no tratamento de pneumonia
+## Pneumonia Afebril do Lactente
 
-## CRITÉRIOS DE INTERNAÇÃO
+- **Agentes**: *C. trachomatis*; *U. urealyticum*; outros: *Mycoplasma hominis*/CMV;
+- **Quadro clínico**: ocorre entre 2 semanas e 3-4 meses de vida; nascidas de parto vaginal de mães contaminadas; história de conjuntivite associada; quadro respiratório arrastado de tosse frequente, podendo ou não gerar taquidispneia + afebril/subfebril; pode também simular o primeiro quadro viral das crianças;
+- **Exames complementares**: hemograma — eosinofilia; radiografia — infiltrados peri-hilares ou reticulonodulares localizados, consolidação lobar ou segmentar;
+- **Tratamento**: macrolídeos.
 
-- Menores de 3 meses
-
-- Hipoxemia (<92%)
-
-- Desidratação ou baixa ingesta líquida via oral
-
-- Desconforto respiratório moderado ou grave
-
-- Toxemia/Sepse
-
-- Doença de base que contribui com gravidade
-
-(Cardiopatia, broncodisplasia)
-
-- Presença de complicações (derrame, empiema, necrotizante, abscesso)
-
-- Refratariedade às medidas iniciais e falta de resposta terapêutica em 48 a 72h
-
-## PNEUMONIA ATÍPICA
-
-- Idade: crianças > 5 anos
-
-- Agente etiológico: Mycoplasma pneumoniae,
-
-Chlamydia pneumoniae
-
-- QC: arrastado (evolução varia de 7 a 21 dias, podendo se estender) Mal estar, cefaleia, odinofagia Tosse seca à tosse produtiva Tosse mais intensa nas duas primeiras semanas de doença - Pode-se utilizar para diagnóstico sorologia específica para Mycoplasma pneumoniae e para Chlamydia pneumoniae (ambas IgM e IgG)
-
-- Raio-X: infiltrados peri-hilares ou reticulonodulares localizados , consolidação lobar ou segmentar
-
-- Tratamento: Macrolídeo Azitromicina 10 mg/kg/dia uma vez ao dia no primeiro dia e 5 mg/kg/dia uma vez ao dia a por 4 dias Claritromicina 15 mg/kg/dia, em duas doses diária por 10 dias
-
-## PNEUMONIA AFEBRIL DO
-
-## LACTENTE
-
-- Agentes: C. trachomatis; U. urealyticum; Outros:
-
-Mycoplasma hominis/ CMV
-
-- Quadro clínico: Ocorre entre 2 semanas a 3-4 meses de vida. Nascidas de parto vaginal de mães contaminadas. História de conjuntivite associada; Quadro respiratório arrastado de tosse frequente, podendo ou não gerar taquidispneia + afebril / subfebril; Pode também simular o primeiro quadro viral das crianças;
-
-- Exames complementares: Hemograma: eosinofilia Radiografia: infiltrados peri-hilares ou reticulonodulares localizados, consolidação lobar ou segmentar Tratamento: macrolídeos
-
-## REFERÊNCIAS
+## Referências
 
 Figura 1: Raio-X e TC de tórax demonstrando abscesso pulmonar. Acervo próprio.

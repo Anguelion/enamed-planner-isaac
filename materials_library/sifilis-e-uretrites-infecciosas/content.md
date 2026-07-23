@@ -1,26 +1,22 @@
-# Sífilis e uretrites infecciosas
+# Sífilis e Uretrites Infecciosas
 
 <!-- page:1 -->
 
-Sífilis, Uretrites Infecciosas e outras DSTs (CM) Toda erupção cutânea sem causa determinada deve ser investigada com teste para sífilis.
+> ⚠️ Seção reconstruída a partir de OCR (PDF original em colunas, texto intercalado) — confira contra a fonte original.
 
-Manifestações precoces (<1 ano de infecção) se resolvem sozinhas.
+**Sífilis, Uretrites Infecciosas e outras ISTs**: toda erupção cutânea sem causa determinada deve ser investigada com teste para sífilis.
 
-- Formas precoces: Penicilina G benzatina, Primária Secundária Latente Precoce
+Manifestações precoces (<1 ano de infecção) não se resolvem sozinhas — necessitam tratamento.
 
-2.400.000 UI Doxiciclina 15 dias
+**Tratamento resumido**:
+- **Formas precoces** (primária, secundária, latente precoce): Penicilina G benzatina 2.400.000 UI, dose única; ou Doxiciclina por 15 dias;
+- **Formas tardias** (latente tardia, terciária): Penicilina G benzatina 7.200.000 UI (2.400.000 UI, 3x, com intervalo de 7-10 dias); ou Doxiciclina por 30 dias.
 
-- Formas Tardias - Penicilina G benzatina, 7.200.000 Latentes tardia Terciária
+## Cura = Queda de 2 Diluições
 
-UI (2.400.000UI 3x com intervalo de 7-10 dias) Doxiciclina 30 dias
-
-## CURA = QUEDA DE 2 DILUIÇÕES
-
-- 6 meses - formas precoces
-
-- 12 Meses - formas tardias persistentemente positivo…..SEROFAST
-
-Critério de cura preenchidos mas VDRL
+- **6 meses** — formas precoces;
+- **12 meses** — formas tardias;
+- Se persistentemente positivo, mesmo com critérios de cura preenchidos → **serofast**.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -30,103 +26,98 @@ Critério de cura preenchidos mas VDRL
 
 <!-- page:2 -->
 
-Treponêmicos FTA-ABS Não treponêmicos FTTAP-HAABS treponêmicos Sorologia Teste rápido CMIA VDRL/ RPR Controle de cura Cicatriz sorológica Infecção prim
+**Curso dos testes sorológicos para sífilis**: testes treponêmicos (FTA-ABS, TPHA, CMIA) e não treponêmicos (VDRL/RPR) — usados na sorologia, no controle de cura e podendo indicar cicatriz sorológica na infecção primária, secundária, latente precoce ou formas tardias.
 
-## JARISCH- HERXHEIMER
+## Jarisch-Herxheimer
 
-Alta treponemia
+- Ocorre em quadros de **alta treponemia**;
+- Lise bacteriana após o tratamento → liberação de antígenos → resposta inflamatória;
+- 24-48h após a penicilina;
+- Febre, rash, mialgia, cefaleia;
+- Piora das lesões;
+- Aumento de VDRL;
+- **Não é alergia** — tratamento sintomático.
 
-- Tratamento bacteriana antígenos
+## Introdução
 
-Lise Liberação de {
+- Mesmo antes do aparecimento da úlcera genital, o treponema já pode invadir o sistema nervoso central!
+- Sendo assim, a **neurossífilis** (precoce ou tardia) deve ser considerada como outra doença, e não como um sinônimo de sífilis terciária.
+- Verificar Figura 1 na próxima página.
 
-- 24-48hs após a penicilina
+## Etiologia e Contágio
 
-Reposta
-
-- Febre, rash, mialgia, cefaléia inflamatória
-
-- Piora das lesões
-
-- Aumento de VDRL
-
-## INTRODUÇÃO
-
-- Mesmo antes do aparecimento da úlcera genital, o treponema já pode invadir o sistema nervoso central! ser considerada como outra doença, e não como um sinônimo de sífilis terciária.
-
-Sendo assim, a neurossífilis (precoce ou tardia) deve
-
-- Verificar Figura 1 na próxima página
-
-## ETIOLOGIA E CONTÁGIO
-
-CONSIDERAÇÕES INICIAIS:
-
-- É causada pelo Treponema pallidum.
-
+**Considerações iniciais**:
+- É causada pelo *Treponema pallidum*.
 - O contágio pode ocorrer:
+  - Todo e qualquer contato sexual;
+  - Vertical (mãe → filho);
+  - Transfusões sanguíneas.
+- A sífilis **não se adquire** com acidente por objetos perfurocortantes.
 
-- Todo e qualquer contato sexual
+> ⚠️ Quadro-resumo reconstruído a partir de OCR — confira contra a fonte original.
 
-- Vertical (mãe → filho)
+**Quadro-resumo (ISTs associadas a úlceras/uretrites)**:
+- ISTs "estranhas" sem agente identificado: doxiciclina/azitromicina;
+- **Linfogranuloma venéreo**: adenopatia inguinal, unilateral, dolorosa, coalescente, com supuração, fistulização e proctite;
+- **Donovanose**: nodulação subcutânea que evolui para úlcera granulosa com sangramento fácil, sem adenite;
+- **Uretrites infecciosas**: gonococo e clamídia:
+  - Sem agente identificado ou gonococo identificado: ceftriaxona 500mg + azitromicina 1g;
+  - *Chlamydia trachomatis* identificada: azitromicina 1g.
 
-- Transfusões sanguíneas; mária secundária latente precoce formas tardia
+## Clínica — Sífilis Primária
 
-Não é alergia Tratamento sintomático
-
-- ISTs estranhas : doxiciclina / azitromicina Linfogranuloma venéreo : adenopatia inguinal, unilateral, dolorosa, coalescente, supuração, fistulização e proctite Donovanose : nodulação subcutânea que evolui para úlcera granulosa com sangramento fácil.
-
-Sem adenite
-
-- Uretrites infecciosas = gonococo e Sem agente ou identificado gonococo : Identificado clamídia : azitromicina 1g
-
-Chlamydia trachomatis ceftriaxona 500mg + azitromicina 1g
-
-- A sífilis não se adquire com acidente por objetos perfuro-cortantes;
-
-## CLÍNICA - SÍFILIS PRIMÁRIA
-
-- Período de incubação: variável, pode ser de poucos dias, mas em média de 1-2 semanas.
-
-- A lesão inicia no local de inoculação – podendo não ser visível, principalmente em mulheres; São lesões de características ulceradas, bordas infiltradas (elevadas), fundo limpo, indolor; Autolimitada: resolução em 1 - 8 semanas; Linfadenite satélite, unilateral, sem supuração.
-
-- O diagnóstico é clínico! Na sífilis primária, os testes diagnósticos ainda não são positivos!
+- **Período de incubação**: variável, pode ser de poucos dias, mas em média de 1-2 semanas;
+- A lesão inicia no local de inoculação — podendo não ser visível, principalmente em mulheres;
+- São lesões de características **ulceradas, bordas infiltradas (elevadas), fundo limpo, indolor**;
+- **Autolimitada**: resolução em 1-8 semanas;
+- Linfadenite satélite, unilateral, sem supuração;
+- **O diagnóstico é clínico!** Na sífilis primária, os testes diagnósticos ainda não são positivos!
 
 ---
 
 <!-- page:3 -->
 
-Figura 1: Curso clínico da sífilis
+Figura 1: Curso clínico da sífilis.
 
-- Microscopia de campo escuro: operacionalmente difícil e pouco disponível.
+- **Microscopia de campo escuro**: operacionalmente difícil e pouco disponível.
 
-Figura 2: Treponema pallidum em microscopia de campo escuro e exemplos de úlcera de sífilis primária
+Figura 2: *Treponema pallidum* em microscopia de campo escuro e exemplos de úlcera de sífilis primária.
 
-## ÚLCERAS GENITAIS: ABORDAGEM
+## Úlceras Genitais: Abordagem Sindrômica
 
-## SINDRÔMICA
+> ⚠️ Seção reconstruída a partir de OCR — confira contra a fonte original.
 
-Diagnósticos diferenciais:
+**Diagnósticos diferenciais — possíveis agentes etiológicos e infecção gerada**:
+- *Chlamydia trachomatis* → Linfogranuloma venéreo (LGV);
+- *Haemophilus ducreyi* → Cancroide (também chamado de cancro mole);
+- Vírus do herpes simples (tipo 2) → Herpes genital;
+- *Klebsiella granulomatis* → Donovanose;
+- *Treponema pallidum* → Sífilis.
 
-- Possíveis agentes etiológicos e infecção gerada: Figura 3: Cancróide (cancro mole) Chlamydia trachomatis → linfogranuloma venéreo – LGV; Úlcera genital com > 4 semanas: biópsia e avaliar entre Haemophilus ducreyi → Cancróide - também as causas:
+- **Úlcera genital com duração menor que 4 semanas**: deve-se tratar para sífilis e cancro mole;
+- **Úlcera genital com >4 semanas**: biópsia e avaliar entre as causas.
 
-chamada de cancro mole (dolorosa, friável,
+### Linfogranuloma Venéreo (*Chlamydia trachomatis*)
 
-- Linfogranuloma venéreo (Chlamydia trachomatis) sangrante, às vezes múltiplas) 1. 1Lesão indolor de inoculação: pápula, pústula Vírus do herpes simplex (tipo 2) → Herpes ou exulceração; Klebsiella granulomatis → Donovanose; unilateral com supuração/fistulização. Treponema pallidum → Sífilis. 3. Pode cursar com proctite/proctocolite;
+1. Lesão indolor de inoculação: pápula, pústula ou exulceração;
+2. Caracteristicamente destaca-se a linfadenopatia inguinal coalescente (1-6 semanas após), dolorosa, unilateral, com supuração/fistulização;
+3. Pode cursar com proctite/proctocolite;
+4. Tratamento: doxiciclina por 21 dias ou azitromicina por 3 semanas.
 
-genital (vesiculas que podem ulcerar, base 2. Caracteristicamente destaca-se a linfadenopatia eritematosa, queimação) inguinal coalescente (1 - 6 semanas após) dolorosa, Úlcera genital com duração menor que 4 semanas: deve- 4. Tratamento: doxiciclina 21 dias ou se tratar para sífilis e cancro mole; azitromicina 3 semanas
+### Cancro Mole (Figura 3)
 
-- Cancro mole: doloroso, múltiplos, com saída de
+- Doloroso, múltiplos, friável, sangrante, às vezes múltiplas, com saída de secreção e deixa cicatriz;
+- Tratamento: azitromicina 1g ou ceftriaxona 250mg.
 
-- Donovanose secreção e deixa cicatriz; 1. Nodulação subcutânea indolor (pseudobulbão) em
+### Herpes Genital
 
-- Tratamento: penicilina G benzatina 2.400.000 UI + região de dobras que úlcera com sangramento fácil e azitromicina 1g ou ceftriaxona 250mg. sem adenite
+- Vesículas que podem ulcerar, base eritematosa, queimação.
 
-2. Diagnóstico = biópsia (corpúsculo de Donavan)
+### Donovanose
 
-3. Tratamento: azitromicina 3 semanas ou
-
-doxiciclina 21 dias
+1. Nodulação subcutânea indolor (pseudobulbão) em região de dobras que ulcera com sangramento fácil e sem adenite;
+2. Diagnóstico: biópsia (corpúsculo de Donovan);
+3. Tratamento: azitromicina por 3 semanas ou doxiciclina por 21 dias.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -136,41 +127,36 @@ doxiciclina 21 dias
 
 <!-- page:4 -->
 
-## CLÍNICA - SÍFILIS SECUNDÁRIA
+## Clínica — Sífilis Secundária
 
-## NA SÍFILIS SECUNDÁRIA HÁ UMA
+**Na sífilis secundária há uma disseminação hematogênica e alta treponemia, com maiores títulos de VDRL!**
 
-## DISSEMINAÇÃO HEMATOGÊNICA E ALTA
-
-## TREPONEMIA, COM MAIORES TÍTULOS DE
-
-## VDRL!
-
-- Características: Rash maculopapular, descamativo nas bordas; pode ser localizado ou generalizado Atinge região palmar e plantar (farmacodermia, arboviroses e monolikes também)
+- Características: rash maculopapular, descamativo nas bordas, podendo ser localizado ou generalizado. Atinge região palmar e plantar (diagnóstico diferencial com farmacodermia, arboviroses e doenças "monolike").
 
 Figura 4: Exemplo de sífilis secundária.
 
-- Toda erupção cutânea sem causa determinada deve ser investigada como teste para sífilis
+- Toda erupção cutânea sem causa determinada deve ser investigada com teste para sífilis;
+- Podem existir sintomas sistêmicos devido à treponemia por via hematogênica: mialgia; cefaleia; diarreia; linfonodomegalia generalizada (deve ser considerada a possibilidade de doenças "monolike" e HIV); tosse seca; faringite (placas acinzentadas em mucosas).
 
-- Podem existir sintomas sistêmicos devido a treponemia por via hematogênica; Mialgia; cefaléia; diarréia Linfonodomegalia generalizada – deve ser considerada a possibilidade de doenças monolike e HIV; A Tosse seca; faringite – placas acinzentadas S em mucosas Formas atípicas de manifestações de sífilis secundária Hepatite Acometimento renal (albuminúria transitória, síndrome nefrótica ou nefrite aguda com hipertensão e insuficiência renal aguda)
+**Formas atípicas de manifestação de sífilis secundária**:
+- Hepatite;
+- Acometimento renal (albuminúria transitória, síndrome nefrótica ou nefrite aguda com hipertensão e insuficiência renal aguda);
+- **Condiloma lata (plano)**: placas esbranquiçadas, por vezes algo verrucosas, confluentes, em áreas de umidade (períneo, principalmente) — Figura 5;
+- **Lues maligna**: ulcerações com muitos sintomas sistêmicos (lembrar da comorbidade com HIV);
+- **Alopecia sifilítica** — Figura 6.
 
-- Figura 5: Condylomata lata
+Figura 7: Fluxograma diagnóstico de sífilis.
 
-Figura 7: Fluxograma diagnóstico de sífilis Figura 6: Alopécia sifilítica
+## Clínica — Sífilis Latente
 
-- Formas atípicas : Condiloma lata (plano) : placas esbranquiçadas, por vezes algo verrucosas, confluentes, em áreas de umidade (períneo, principalmente) Lues maligna: ulcerações com muitos sintomas sistêmicos (lembrar da comorbidade com HIV). Alopécia
+A forma latente (assintomática) divide-se em dois tipos:
 
-## CLÍNICA - SÍFILIS LATENTE
+- **Precoce**: até 1 ano do contato; VDRLs razoavelmente altos; recorrência de sintomas da sífilis secundária; tratar como forma precoce.
+- **Tardia**: após 1 ano (ou quando não se sabe); VDRLs baixos ou negativos; tratar como forma tardia.
 
-## A FORMA LATENTE (ASSINTOMÁTICA) DIVIDESE EM DOIS TIPOS
+Verificar Figura 7.
 
-- Precoce; Até 1 ano do contato; VDRLs razoavelmente altos Recorrência de sintomas da sífilis secundária; Tratar como forma precoce.
-
-- Verificar Figura 7
-
-- Tardia; Após 1 ano (ou quando não se sabe); VDRLs baixos ou negativos. Tratar como forma tardia! histórico de tratamento prévio, deve ser valorizado para investigar sífilis latente!
-
-ATENÇÃO: Todo e qualquer título de VDRL, sem
+**Atenção**: todo e qualquer título de VDRL, sem histórico de tratamento prévio, deve ser valorizado para investigar sífilis latente!
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -180,38 +166,39 @@ ATENÇÃO: Todo e qualquer título de VDRL, sem
 
 <!-- page:5 -->
 
-Treponêmicos FTA-ABS Não TPHA treponêmicos Sorologia Teste rápido CMIA VDRL/ RPR Controle de cura Cicatriz sorológica Infecção primária secundária latente precoce formas tardia Figura 8: Gráfico de curso dos testes
+Figura 8: Gráfico de curso dos testes.
 
-## DIAGNÓSTICO
+## Diagnóstico
 
-- O VDRL é dado de acordo com a quantidade de diluições em que ainda foi possível detectar
+### Testes Diagnósticos
 
-TESTES DIAGNÓSTICOS cardiolipina. Nesse caso 1/16 > 1/4; Curso clínico dos testes para o diagnóstico de sífilis: | Em gestantes, idosos e pacientes reumatológicos,
+- **Treponêmicos** (FTA-ABS/TPHA; ELISA; sorologia; teste rápido; CMIA) — são mais específicos.
+  - Positivam após a lesão primária, antes dos testes não treponêmicos, e permanecem positivos em altos títulos, inclusive após tratamento (**cicatriz sorológica**);
+  - Não realizam controle de cura;
+  - Por positivarem precocemente e terem melhor sensibilidade para formas tardias, os testes treponêmicos são os preconizados pelo Ministério da Saúde para o rastreio da sífilis;
+  - Obs.: em breve estará disponível teste rápido não treponêmico, mas por hora só há treponêmico.
+- **Testes não treponêmicos** — importantes para monitorar a resposta ao tratamento. Exemplos: VDRL/RPR.
+  - Enxergam uma estrutura da parede do treponema (cardiolipina), por isso se correlacionam com a treponemia;
+  - Pouco sensíveis nas formas tardias;
+  - Títulos altos na forma secundária e latente precoce;
+  - Positivam depois dos testes treponêmicos.
 
-- Treponêmicos (FTA-ABS/THPA; ELISA; Sorologia; Teste o VDRL pode ser falso positivo (até 1/8): confirmar rápido; CMIA) – são mais específicos. com teste treponêmico sempre! Positivam após a lesão primária, antes dos testes | “O VD é o que o examinador vê”→ examinador não treponêmicos, e permanecem positivos dependente. Devido a isso, valoriza-se o aumento em altos títulos, inclusive após tratamento de duas diluições ou de 4x títulos. Não realizam controle de cura. Por positivar precocemente e ter melhor sensibilidade para formas tardias, os testes treponêmicos são os preconizados pelo Ministério da Saúde para o rastreio da sífilis. Obs: em breve estará disponível teste rápido de
+- O VDRL é dado de acordo com a quantidade de diluições em que ainda foi possível detectar cardiolipina. Nesse caso, 1/16 > 1/4;
+- Em gestantes, idosos e pacientes reumatológicos, o VDRL pode ser falso-positivo (até 1/8): confirmar sempre com teste treponêmico!
+- "O VDRL é o que o examinador vê" → examinador-dependente. Devido a isso, valoriza-se o aumento de duas diluições ou de 4x nos títulos.
 
-(cicatriz sorológica); VDRL, mas por hora só há treponêmico
+**Curso dos testes**: verificar Figura 8.
 
-- Testes não treponêmicos – importantes para monitorar a resposta ao tratamento. São exemplos o VDRL/RPR – enxergam uma estrutura da parede do treponema (cardiolipina), por isso se correlacionam com a treponemia; Pouco sensíveis nas formas tardias; Títulos altos na forma secundária e latente precoce. Positivam depois dos testes treponêmicos.
+- O *screening* inicial de sífilis deve ser feito com teste treponêmico! Eles apresentam maior sensibilidade para formas latentes tardias;
+- Mas o diagnóstico fecha com ambos (treponêmico + não treponêmico).
 
-Curso dos testes:
+Figura 9: VDRL — como é realizado.
 
-- Verificar Figura 8
+## Clínica — Sífilis Terciária
 
-- O screening inicial de sífilis deve ser feito com teste treponêmicos! Eles apresentam maior sensibilidade para formas latentes tardias não treponêmico)
-
-Mas o diagnóstico fecha com ambos (treponêmico + Figura 9: VDRL: como é realizado
-
-## CLÍNICA - SÍFILIS TERCIÁRIA
-
-- Quanto mais antiga é a infecção, menores tendem a ser os títulos de VDRL
-
-- O Estudo da Sífilis não tratada de Tuskegee mostrou No geral, sífilis tardias possuem VDRLs de até 1/8. que 1/3 evolui rápido; 1/3 evolui devagar; 1/3 nunca um corte!
-
-Mas não há nada na literatura que estabeleça vai ter nada
-
+- Quanto mais antiga é a infecção, menores tendem a ser os títulos de VDRL. No geral, sífilis tardias possuem VDRLs de até 1/8. Mas não há nada na literatura que estabeleça um corte!
+- O Estudo da Sífilis Não Tratada de Tuskegee mostrou que 1/3 evolui rápido; 1/3 evolui devagar; 1/3 nunca vai ter nada.
 - Afeta qualquer órgão e sistema!
-
 - Principais acometimentos:
 
 ![Figura do material - página 5](figure-005-1.webp)
@@ -220,114 +207,104 @@ Mas não há nada na literatura que estabeleça vai ter nada
 
 <!-- page:6 -->
 
-Não sabe quando se contaminou Primária Secundária Latente Latente tardia Terciária precoce precoce Formas Precoces Penicilina G benzatina, 2.400,000 UI Doxicilina 14 dias Respondem mais - maiores chances de negativar VDRL Cura: 2 diluições em 6 meses Figura 10: Tratamento da Sífilis | Cardiovascular: aneurisma de aorta;
+> ⚠️ Fluxograma reconstruído a partir de OCR — confira contra a fonte original.
 
-| Pele e tecidos derivados do ectoderma: goma sifilítica; | Treponêmicos + em altos títulos | Não treponêmicos + em baixos títulos (<1/8)
+**Figura 10: Tratamento da sífilis**
 
-| Biópsia de tecido
+- Se não sabe quando se contaminou: primária, secundária, latente precoce (**formas precoces**) → Penicilina G benzatina 2.400.000 UI ou Doxiciclina por 14 dias. Respondem mais — maiores chances de negativar o VDRL. Cura: queda de 2 diluições em 6 meses.
+- Latente tardia, terciária (**formas tardias**) → Penicilina G benzatina 7.200.000 UI (2.400.000 UI, 3x, com intervalo de 7-10 dias) ou Doxiciclina por 28 dias. Respondem menos — serofast. Cura: queda de 2 diluições em 12 meses.
 
-- Neurossífilis não é sífilis terciária, é outra doença!
+**Principais acometimentos da sífilis terciária**:
+- Cardiovascular: aneurisma de aorta;
+- Pele e tecidos derivados do ectoderma: goma sifilítica;
+- Neurológico — mas **neurossífilis não é sífilis terciária, é outra doença!**
 
-- Lesão de sífilis terciária: pesquise neurossífilis A pessoa já está ifnectada há tanto tempo que há maiores riscos do treponema ter invadido o SNC
+**Diagnóstico da sífilis terciária**:
+- Treponêmicos positivos em altos títulos;
+- Não treponêmicos positivos em baixos títulos (<1/8);
+- Biópsia de tecido (ex.: goma sifilítica).
 
-## TRATAMENTO
+- Lesão de sífilis terciária: pesquisar neurossífilis. A pessoa já está infectada há tanto tempo que há maiores riscos de o treponema ter invadido o SNC.
 
-- Verificar Figura 10
+## Tratamento
 
-CRITÉRIOS DE CURA:
+Verificar Figura 10.
 
-- Formas precoces → maiores treponemias → reagem mais ao tratamento Queda de 2 diluições em 6 meses; Negativa em 1-2 anos.
+### Critérios de Cura
 
-- Formas tardias → menores treponemias; Queda de 2 diluições em 12 meses; Podem não negativar (serofast); VDRL persistentemente positivo em títulos baixos.
+- **Formas precoces** → maiores treponemias → reagem mais ao tratamento. Queda de 2 diluições em 6 meses; negativa em 1-2 anos.
+- **Formas tardias** → menores treponemias. Queda de 2 diluições em 12 meses; podem não negativar (**serofast**); VDRL persistentemente positivo em títulos baixos.
 
-Reação de Jarisch-Herxheimer – quando há piora com o P
+### Falha Terapêutica
 
-- Ocorre em formas com alta carga de treponemas, estando presente em ~50% das primárias e 90% das formas secundárias.
+- **Não existe resistência do treponema à penicilina!**
+- Sempre suspeitar de reinfecção.
+- **Critérios para retratamento**:
+  - Ausência de queda de VDRL em 2 diluições em 6-12 meses;
+  - Elevação de dois títulos ou mais (ex.: 1/4 → 1/16).
+- Pesquisar neurossífilis (LCR) em paciente assintomático:
+  - Soronegativos: sem critério de cura, excluindo-se possibilidade de reinfecção;
+  - PVHIV: se não preencher critério de cura, mesmo se houver reexposição.
 
-- Falha terapêutica:
+## Reação de Jarisch-Herxheimer
 
-- Não existe resistência do treponema à penicilina!
+- Ocorre em formas com **alta carga de treponemas**, estando presente em ~50% das formas primárias e 90% das formas secundárias;
+- Lise bacteriana → liberação de antígenos → resposta inflamatória, 24-48h após a penicilina;
+- Febre, rash, mialgia, cefaleia;
+- Piora das lesões;
+- Aumento de VDRL.
 
-- Sempre suspeitar de reinfecção:
+Figura 11: Reação de Jarisch-Herxheimer.
 
-- Critérios para retratamento Ausência de queda de VDRL em 2 diluições em Elevação de dois títulos ou mais (1/4 → 1/16);
+## Uretrites
 
-6-12 meses;
+### Principais Agentes Etiológicos
 
-- Pesquisar neurossífilis (LCR) em paciente assintomático: Soronegativos: sem critério de cura, em se excluindo possibilidade de re-infecção. PVHIV: se não preencher critério de cura, mesmo se houver re-exposição. Formas Tardias treponemia
+- *Chlamydia trachomatis* → Clamídia;
+- *Neisseria gonorrhoeae* → Gonorreia;
+- *Candida albicans* → Candidíase vulvovaginal;
+- *Trichomonas vaginalis* → Tricomoníase;
+- *Mycoplasma genitalium* → Infecção causada por Mycoplasma;
+- Múltiplos agentes → Vaginose bacteriana.
 
-Penicilina G benzatina 7.200.000 UI (2400.0COUI 3x com intervalo de 7-10 dias) Doxicilina 28 dias Respondem menos - serofast Cura : 2 diluições em 12 meses Alta
-
-Lise bacteriana Liberação de antígenos {
-
-- 24-48hs após a penicilina
-
-Reposta
-
-- Febre, rash, mialgia, cefaléia inflamatória
-
-- Piora das lesões
-
-- Aumento de VDRL
-
-Figura 11: Reação de Jarisch-Herxheimer
-
-## URETRITES
-
-PRINCIPAIS AGENTES ETIOLÓGICOS:
-
-- Chlamydia trachomatis → Clamídia;
-
-- Neisseria gonorrhoeae → Gonorreia;
-
-- Candida albicans → Candidose vulvovaginal;
-
-- Trichomonas vaginalis → Tricomoníase;
-
-- Mycoplasma genitalium → Infecção causada por mycoplasma;
-
-- Múltiplos agentes → vaginose bacteriana.
-
-- Neisseria gonorrhoeae e Chlamydia trachomatis; Pacientes assintomáticos com vida sexual ativa e fatores de risco → rastreio com PCR/6 meses; Pacientes sintomáticos → Gram + PCR clamídia e gonococo + cultura.
+- *Neisseria gonorrhoeae* e *Chlamydia trachomatis*:
+  - Pacientes assintomáticos com vida sexual ativa e fatores de risco → rastreio com PCR a cada 6 meses;
+  - Pacientes sintomáticos → Gram + PCR de clamídia e gonococo + cultura.
 
 ---
 
 <!-- page:7 -->
 
-Tabela 1: Tratamento de uretrites infecciosas
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## CONDIÇÃO CLINICA PRIMEIRA OPÇÃO COMENTÁRIOS
+**Tabela 1: Tratamento de uretrites infecciosas**
 
-Uretrite sem identificação do Ceftriaxona 500mg, agente etiológico MAIS Azitromicina 1000mg agente etiológico MAIS Azitrom Uretrite gonocócica e demais infecções gonocócicas NÃO Ceftriaxo complicadas (uretra, colo do útero, MAIS Azitrom reto e faringe)
+| Condição clínica | 1ª opção | Comentários |
+|---|---|---|
+| Uretrite sem identificação do agente etiológico | Ceftriaxona 500mg, IM, dose única + Azitromicina 500mg (2 comprimidos), VO, dose única | 2ª opção: Ceftriaxona 500mg, IM, dose única + Doxiciclina 100mg, 1 comprimido, VO, 2x/dia, por 7 dias |
+| Uretrite gonocócica e demais infecções gonocócicas não complicadas (uretra, colo do útero, reto e faringe) | Ceftriaxona 500mg, IM, dose única + Azitromicina 500mg (2 comprimidos), VO, dose única | — |
+| Uretrite não gonocócica / Uretrite por clamídia | Azitromicina 500mg (2 comprimidos), VO, dose única | 2ª opção: Doxiciclina 100mg, 1 comprimido, VO, 2x/dia, por 7 dias |
+| Retratamento de infecções gonocócicas | Ceftriaxona 500mg, IM + Azitromicina 1000mg (retratamento) | Para casos de falha de tratamento; possíveis reinfecções devem ser tratadas com as doses habituais |
 
-Uretrite não gonocócica Azitromic Uretrite por clamídia Azitromic Retratamento de infecções Ceftriaxo gonocócicas MAIS Azitrom TRATAMENTO:
+**Princípio importante**: o gonococo cresce melhor e mais rápido. Logo, se identificou gonococo, não se consegue ter segurança de que não haja clamídia junto. Mas, se só identificou clamídia, consegue-se ter segurança de que não tem gonococo.
 
-- Sempre lembrar do seguinte princípio Gonococo cresce melhor e mais rápido. Logo, se identificou gono, não consegue ter segurança que não tenha Chlamydia junto. Mas se só identificou tem gono.
+**Atenção**: a resolução dos sintomas pode demorar até 7 dias após a conclusão da terapia.
 
-Chlamydia, consegue ter segurança que não
+**Novidade: "Doxy-PEP"** — doxiciclina após exposição sexual para prevenir sífilis, clamídia e gonorreia.
+- Indicação: HSH (homens que fazem sexo com homens) e mulheres trans;
+- Dose: 200 mg de doxiciclina, 24-72h após a exposição;
+- Diminui o risco em 65% de ISTs.
 
-- Uretrite sem identificação do agente etiológico; 1° opção: Ceftriaxona 500mg, IM, dose única dose única; 2° opção: Ceftriaxona 500mg, IM dose única por 7 dias.
+Verificar Tabela 1.
 
-+ Azitromicina 500mg, 2 comprimidos, VO, + Doxiciclina 100mg, 1 comprimido, VO, 2x/dia,
+## Referência
 
-- Uretrite gonocócica e demais infecções gonocócicas 1° opção: Ceftriaxona 500mg, IM, dose única + 2 comprimidos, VO, dose única.
+Figura 2: *Treponema pallidum* em microscopia de campo escuro e exemplos de úlcera de sífilis primária. Jan R. Mekkes, reproduzida com permissão.
 
-NÃO complicadas (uretra, colo do útero, reto e faringe); Azitromicina 500mg,
+Figura 3: Cancroide (cancro mole). BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. Programa Nacional de DST e Aids. Manual de Bolso das Doenças Sexualmente Transmissíveis. 2. ed. Brasília: Ministério da Saúde, 2005. 108 p. Série Manuais, n. 24.
 
-- Uretrite não gonocócica ou por clamídia; 1° opção: Azitromicina 500mg, 2 comprimidos, VO, dose única; 2° opção: Doxiciclina 100mg, 1 comprimido, VO, 2x/ dia, por 7 dias;
+Figura 4: Exemplo de sífilis secundária. Jan R. Mekkes, reproduzida com permissão.
 
-ATENÇÃO : a resolução dos sintomas pode demorar até 7 dias! micina 1000mg ona 500mg, micina 1000mg A resolução dos sintomas pode cina 1000mg levar até 7 dias após a conclusão da terapia cina 1000mg Para casos de falha de tratamento.
+Figura 5: Condylomata lata. Jan R. Mekkes, reproduzida com permissão.
 
-ona 500mg, Possíveis reinfecções devem ser micina 2000mg tratadas com as doses habituais
-
-- Novidade: “Doxy-pep” Doxiciclina após exposição sexual para prevenir sífilis, clamídia e gonorreia. Indicação: HSH e mulheres trans; Dose: 200 mg de doxiciclina 24-72h após exposição; Diminui o risco em 65% de ISTs.
-
-- Verificar Tabela 1
-
-## REFERÊNCIA
-
-Figura 2: Treponema pallidum em microscopia de campo escuro e exemplos de úlcera de sífilis primária Jan R. Mekkes reproduzida com permissão ; Figura 3: Cancróide (cancro mole)
-
-BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. Programa Nacional de DST e Aids. Manual de Bolso das Doenças Sexualmente Transmissíveis. 2. ed. Brasília: Ministério da Saúde, 2005. 108 p. Série Manuais, n. 24.
-
-Figura 4: Exemplo de sífilis secundária. Jan R. Mekkes reproduzida com permissão Figura 5: Condylomata lata Jan R. Mekkes reproduzida com permissão Figura 6: Alopécia sifilítica Jan R. Mekkes reproduzida com permissão
+Figura 6: Alopecia sifilítica. Jan R. Mekkes, reproduzida com permissão.

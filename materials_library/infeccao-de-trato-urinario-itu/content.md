@@ -1,44 +1,39 @@
-# Infecção de Trato Urinário ITU
+# Infecção de Trato Urinário (ITU)
 
 <!-- page:1 -->
 
-## INFECÇÃO DO TRATO URINÁRIO (ITU)
+## Infecção do Trato Urinário (ITU)
 
-Infecção urinária (ITU) (CM) INFECÇÃO URINÁRIA NÃO COMPLICADA
+### Infecção Urinária Não Complicada (Cistite)
 
-- Tratamento
+- Mais comum em mulheres em idade fértil. Uretra feminina propicia ascensão de bactérias (E. coli);
+- **Sintomas**: disúria, polaciúria, urgência miccional, dor suprapúbica;
+- **Diagnóstico**: em mulheres, clínico; nos demais, urina 1 e urocultura (URC);
+- **Tratamento**:
+  - Ambulatorial: amoxicilina + clavulanato, cefuroxima, ciprofloxacino;
+  - Hospitalar: ceftriaxona;
+  - Fosfomicina 3g dose única; nitrofurantoína 100 mg 6/6h por 5 dias.
+- **Imagem**: solicitar se suspeita de complicações (dor refratária, refratariedade ao tratamento, sepse).
 
-(CISTITE) | Ambulatorial: Amoxicilina +Clavulanato,
+### Bacteriúria Assintomática
 
-- Mais comum em mulheres em idade fértil Cefuroxima, Ciprofloxacino Uretra feminina propicia ascensão de bactérias | Hospitalar: Ceftriaxona
+- ≥ 10⁵ UFC em cultura de urina — sem sintomas;
+- **Tratar em**: gestantes; cirurgia urológica; transplante renal recente.
 
-(E. coli)
+### Infecção Urinária Complicada (Pielonefrite)
 
-- Imagem:
+- Sintomas urinários + sistêmicos (febre, calafrios, dor lombar);
+- **Diagnóstico**: urina 1 + urocultura para todos;
+- **Tratamento**: seguir o antibiograma.
 
-- Disúria, polaciúria, urgência miccional, | Suspeita de complicações dor suprapúbica | Dor refratária, refratariedade ao
+## Epidemiologia
 
-- Diagnóstico tratamento, sepse Mulheres: clínico BACTERIÚRIA ASSINTOMÁTICA Demais: Urina 1 e urocultura (URC) z >105 UFC em cultura de urina – Sem sintomas
+- Prevalência muito maior no sexo feminino: menor comprimento da uretra; via ascendente é facilitada no intercurso sexual;
+- No sexo masculino (lembrar dos extremos de idade):
+  - < 1 ano: malformação do trato urinário;
+  - > 60 anos: doenças da próstata.
 
-- Tratamento
-
-- Tratar em: Fosfomicina 3g dose única | Gestantes Nitrofurantoína 100mg 6/6h 5 dias | Cirurgia urológica
-
-INFECÇÃO URINÁRIA COMPLICADA | Tx Renal recente (PIELONEFRITE)
-
-- Tratamento:
-
-- Sintomas urinários + sistêmicos (febre, calafrios, | Seguir o antibiograma dor lombar)
-
-- Diagnóstico Urina 1 + urocultura para todos
-
-## EPIDEMIOLOGIA
-
-- Prevalência muito maior no sexo feminino
-
-- No sexo masculino (lembrar dos extremos de idade) Menor comprimento da uretra | < 1 ano: Malformação do trato urinário Via ascendente é facilitada no intercurso sexual | > 60 anos: Doenças da próstata
-
-Figura 1: Anatomia e diferenças entre o trato urinário masculino e feminino
+*Figura 1: Anatomia e diferenças entre o trato urinário masculino e feminino.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -46,60 +41,53 @@ Figura 1: Anatomia e diferenças entre o trato urinário masculino e feminino
 
 <!-- page:2 -->
 
-## CISTITE DIAGNÓSTICO
+## Cistite
 
-- Urina tipo 1 + urocultura
+### Infecção Não Complicada
 
-## INFECÇÃO NÃO COMPLICADA
+- Infecção restrita à bexiga;
+- Ausência de sinais e sintomas sistêmicos;
+- Disúria, polaciúria, urgência, dor suprapúbica;
+- Diagnóstico é clínico (em mulheres em idade fértil);
+- Agente mais comum: E. coli.
 
-- Imagem: para avaliação de complicações
+### Diagnóstico
 
-- Infecção restrita à bexiga | Febre persistente Ausência de sinais e sintomas sistêmicos | Gravidade ou disfunção renal Ausência de sinais e sintomas sistêmicos Disúria Polaciúria T Urgência Dor suprapúbica
+- Urina tipo 1 + urocultura;
+- **Imagem**: para avaliação de complicações (febre persistente, gravidade ou disfunção renal).
 
-- Diagnóstico é clínico (em mulheres em idade fértil)
+### Exames Complementares
 
-- Agente mais comum: E. coli
+- Solicitar urina 1 + urocultura em situações especiais:
+  - Internação hospitalar recente;
+  - Urocultura prévia com germe multirresistente;
+  - Antibiótico nos últimos 3 meses.
 
-- EXAMES COMPLEMENTARES
+### Tratamento
 
-- Solicitar urina 1 + urocultura em situações especiais Internação hospitalar recente Urocultura prévia com germe multirresistente Antibiótico nos últimos 3 meses
+- Preferência a antibióticos que agem exclusivamente na via urinária: fosfomicina 3g dose única; nitrofurantoína 100 mg 6/6h;
+- Pode ser considerado sulfametoxazol + trimetoprim ou norfloxacino.
 
-- TRATAMENTO
+## Infecção de Trato Urinário Complicada — Pielonefrite e Afins
 
-- Preferência a antibióticos que agem exclusivamente na via urinária Fosfomicina 3g dose Única Nitrofurantoína 100mg 6/6h
+- Presença de sintomas sistêmicos em episódio de infecção urinária: febre e calafrios; dorsalgia ou lombalgia; dor pélvica em homens;
+- Diagnóstico diferencial em homens: prostatite;
+- Gravidade ou disfunção renal.
 
-- Pode ser considerado Sulfa+Trimetoprim D ou Norfloxacino
+### Tratamento
 
-## INFECÇÃO DE TRATO URINÁRIO
-
-- COMPLICADA
-
-- PIELONEFRITE E AFINS
-
-- Presença de sintomas sistêmicos em episódio de infecção urinária Febre e calafrios Dorsalgia ou Lombalgia Dor pélvica em homens
-
-- Diagnóstico diferencial em homens: prostatite | Gravidade ou disfunção renal
-
-## TRATAMENTO
-
-- Pacientes sem sinais de gravidade: ambulatorial Ciprofloxacino Amoxicilina + Clavulanato
-
-- Pacientes com complicações ou gestantes: parenteral Ceftriaxona
-
+- Pacientes sem sinais de gravidade: ambulatorial — ciprofloxacino; amoxicilina + clavulanato;
+- Pacientes com complicações ou gestantes: parenteral — ceftriaxona;
 - Sempre checar a urocultura e perfil de sensibilidade.
 
-## BACTERIÚRIA ASSINTOMÁTICA
+## Bacteriúria Assintomática
 
-- Presença da bactéria porém sem infecção (doença)
+- Presença da bactéria, porém sem infecção (doença);
+- Não tem impacto na população geral; tratar apenas nessas situações: gestantes; transplante renal; procedimento urológico.
 
-- Não tem impacto na população geral, tratar apenas nessas situações: Gestantes Transplante renal Procedimento urológico
+### Diagnóstico
 
-## DIAGNÓSTICO
-
-- Laboratorial Cultura com mais que 105 UFC
-
-- Sexo Feminino 2 culturas positivas
-
-- Sexo Masculino Cultura única
-
-- Sonda vesical Uma cultura única
+- Laboratorial: cultura com mais que 10⁵ UFC;
+- Sexo feminino: 2 culturas positivas;
+- Sexo masculino: cultura única;
+- Sonda vesical: uma cultura única.

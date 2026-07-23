@@ -2,45 +2,50 @@
 
 <!-- page:1 -->
 
-## RASTREAMENTO
+## Rastreamento
 
-Programas de Rastreamento Processo de Saúde-Doença, Níveis de Prevenção e Promoção de Saúde RASTREAMENTO X DIAGNÓSTICO CLÍNICO Critérios clássicos para justificar o rastreamento
+**Tópicos**: programas de rastreamento; processo saúde-doença; níveis de prevenção e promoção de saúde.
 
-- Rastreamento (screening): realizado em
+## Rastreamento x Diagnóstico Clínico
 
-- Características da doença assintomáticos, com o objetivo de detectar | Alta relevância em saúde pública precocemente doenças com impacto em | Fase assintomática detectável saúde pública. | Tratamento durante a fase assintomática
+- **Rastreamento (screening)**: realizado em assintomáticos, com o objetivo de detectar precocemente doenças com impacto em saúde pública;
+- **Diagnóstico**: confirmação diagnóstica em sintomáticos.
 
-- Diagnóstico: confirmação diagnóstica melhora desfechos em sintomáticos
+## Critérios Clássicos para Justificar o Rastreamento
 
-- Características do teste
+**Características da doença:**
 
-Tipos de Rastreamento | Alta sensibilidade (visa detectar todos
+- Alta relevância em saúde pública;
+- Fase assintomática detectável;
+- Tratamento durante a fase assintomática melhora desfechos.
 
-- Oportunístico: Realizado quando o paciente os doentes) procura o serviço por outro motivo. | Alta especificidade (evita falsos positivos)
+**Características do teste:**
 
-- Organizado: População-alvo definida, chamada
+- Alta sensibilidade (visa detectar todos os doentes);
+- Alta especificidade (evita falsos positivos).
 
-- Características da população ativa, fluxo estruturado para confirmação | Prevalência da doença justifica a intervenção diagnóstica e tratamento. É o modelo ideal. | Acesso garantido a diagnóstico e tratamento Pessoas dispostas a seguir investigação e conduta
+**Características da população:**
 
-## VIÉS - RASTREAMENTO
+- Prevalência da doença justifica a intervenção;
+- Acesso garantido a diagnóstico e tratamento;
+- Pessoas dispostas a seguir investigação e conduta.
 
-Figura 1: Gráfico: Viés do sobrediagnóstico. Riscos e Limitações
+## Tipos de Rastreamento
 
-- Viés de tempo de antecipação: Aumenta o tempo
+- **Oportunístico**: realizado quando o paciente procura o serviço por outro motivo;
+- **Organizado**: população-alvo definida, chamada ativa, fluxo estruturado para confirmação diagnóstica e tratamento. É o modelo ideal.
 
-- Sobrediagnóstico: Detecção de doenças indolentes de convívio com a doença e não mais anos de vida.
+## Viés - Rastreamento
 
-ou autolimitadas: sobretratamento Diagnóstico precoce ≠ maior sobrevida real.
+Figura 1: Gráfico do viés do sobrediagnóstico.
 
-- Viés de tempo de duração: Maior probabilidade
+**Riscos e Limitações:**
 
-- Viés de seleção: Amostra não de detectar casos com fase pré-clínica longa representa a população
-
-(doenças de evolução lenta) do que aqueles
-
-- Iatrogenias: Intervenções médicas que produzem com fase pré-clínica curta (doenças agressivas). mais malefícios do que benefícios diagnóstico precoce
-
-Tende a superestimar a sobrevida e o benefício do
+- **Sobrediagnóstico**: detecção de doenças indolentes ou autolimitadas, levando a sobretratamento;
+- **Viés de seleção**: amostra não representa a população;
+- **Iatrogenias**: intervenções médicas que produzem mais malefícios do que benefícios;
+- **Viés de tempo de antecipação**: aumenta o tempo de convívio com a doença e não os anos de vida. Diagnóstico precoce ≠ maior sobrevida real;
+- **Viés de tempo de duração**: maior probabilidade de detectar casos com fase pré-clínica longa (doenças de evolução lenta) do que aqueles com fase pré-clínica curta (doenças agressivas). Tende a superestimar a sobrevida e o benefício do diagnóstico precoce.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -48,99 +53,76 @@ Tende a superestimar a sobrevida e o benefício do
 
 <!-- page:2 -->
 
-## RASTREAMENTO (SCREENING)
+## Rastreamento (Screening)
 
-- Consequência: diferença de mortalidade pode refletir diferenças no perfil da população, e não efeito do
+### Conceito
 
-CONCEITO rastreamento em si. Rastreamento (ou screening) é uma estratégia de Viés de Antecipação (Lead Time Bias)
+- Rastreamento (ou screening) é uma estratégia de prevenção secundária, voltada para identificar precocemente doenças em fase assintomática, permitindo intervenção antes da manifestação clínica e com potencial de reduzir morbimortalidade.
 
-prevenção secundária, voltada para identificar
+- **Diagnóstico precoce ≠ rastreamento**:
+  - Diagnóstico precoce: identifica doença a partir de sinais/sintomas;
+  - Rastreamento: aplica-se a indivíduos assintomáticos.
 
-- Diagnóstico precoce antecipa o momento do precocemente doenças em fase assintomática, diagnóstico, mas não altera o tempo até o desfecho permitindo intervenção antes da manifestação clínica e final (ex: morte).
+**Rastreamento oportunístico vs. rastreamento organizado:**
 
-com potencial de reduzir morbimortalidade.
+- **Oportunístico**: ocorre durante consultas por outros motivos, sem planejamento sistematizado;
+- **Organizado**: é programado, com convocação ativa da população-alvo e controle das etapas de rastreamento.
 
-- A sobrevida parece aumentar, mas apenas porque o
+## Critérios para Rastreamento Populacional
 
-- Diagnóstico precoce ≠ Rastreamento relógio começou a contar antes. Diagnóstico precoce: identifica doença a partir de
+- Doença relevante em termos de saúde pública;
+- História natural conhecida;
+- Fase assintomática identificável;
+- Tratamento eficaz que melhore o desfecho;
+- Teste adequado, seguro, sensível e específico;
+- Teste capaz de detectar a doença na fase assintomática;
+- População de risco bem definida;
+- Alta prevalência da doença no grupo rastreado;
+- Acesso a cuidado médico e adesão às etapas diagnósticas e terapêuticas;
+- Benefício deve superar os riscos (princípio da não maleficência).
 
-- Não indica aumento real na expectativa de vida.
+Figura 2: Viés de Antecipação (Lead Time Bias).
 
-sinais/sintomas.
+## Vieses de Rastreamento
 
-- Importante: considerar esse viés ao comparar Rastreamento: aplica-se a mortalidade entre grupos rastreados e não rastreados.
+### Definição Geral
 
-indivíduos assintomáticos. Viés de Antecipação (Lead Time Bias) Rastreamento oportunístico vs. Rastreamento organizado
+- Vieses do rastreamento são distorções sistemáticas que afetam a interpretação da efetividade de programas de rastreio, sobretudo ao se comparar grupos rastreados e não rastreados. Podem superestimar benefícios, especialmente em relação à sobrevida, e mascarar os riscos do sobrediagnóstico e de tratamentos desnecessários.
 
-- Oportunístico: ocorre durante consultas por outros motivos, sem planejamento sistematizado.
+### Viés de Antecipação (Lead Time Bias)
 
-- Organizado: é programado, com convocação ativa da população-alvo e controle das etapas de rastreamento.
+- Diagnóstico precoce antecipa o momento do diagnóstico, mas não altera o tempo até o desfecho final (ex.: morte);
+- A sobrevida parece aumentar, mas apenas porque o relógio começou a contar antes;
+- Não indica aumento real na expectativa de vida;
+- Importante: considerar esse viés ao comparar a mortalidade entre grupos rastreados e não rastreados;
+- Consequência: a diferença de mortalidade pode refletir diferenças no perfil da população, e não efeito do rastreamento em si.
 
-## CRITÉRIOS PARA RASTREAMENTO
+### Viés de Duração (Length Time Bias)
 
-## POPULACIONAL
+- Doenças de evolução lenta têm maior chance de serem detectadas em programas de rastreamento periódicos;
+- Casos agressivos podem surgir e evoluir rapidamente entre os intervalos de rastreio, escapando da detecção;
+- Consequência: o rastreamento favorece a detecção de doenças menos agressivas, com melhor prognóstico, dando falsa impressão de maior efetividade do programa.
 
-- Doença relevante em termos de saúde pública
+### Viés do Sobrediagnóstico
 
-- História natural conhecida
+- Diagnóstico de doenças que não causariam sintomas ou morte durante a vida da pessoa;
+- Pode levar a intervenções desnecessárias, com iatrogenias e sofrimento evitável;
+- É uma consequência do rastreio sem critérios ou evidências claras de benefício clínico.
 
-- Fase assintomática identificável
+### Viés de Autosseleção (Self-selection Bias)
 
-- Tratamento eficaz que melhore o desfecho Figura 2: Viés de Antecipação (Lead Time Bias)
+- Ocorre quando os indivíduos que aderem ao rastreamento não representam a população geral;
+- Pessoas que aderem ao rastreamento são diferentes daquelas que não aderem;
+- Frequentemente têm melhor acesso, maior escolaridade ou preocupação com a saúde;
+- Pode ocorrer nos dois sentidos: pessoas assintomáticas ou mais saudáveis aderem mais; pessoas em maior risco (ex.: histórico familiar de câncer) também aderem mais.
 
-- Teste adequado, seguro, sensível e específico
+## Características dos Testes Diagnósticos
 
-- Teste capaz de detectar a doença na Viés de Duração (Length Time Bias) fase assintomática
-
-- Doenças de evolução lenta têm maior chance
-
-- População de risco bem definida de serem detectadas em programas de
-
-- Alta prevalência da doença no grupo rastreado rastreamento periódicos.
-
-- Acesso a cuidado médico e adesão às etapas
-
-- Casos agressivos podem surgir e evoluir rapidamente diagnósticas e terapêuticas entre os intervalos de rastreio, escapando
-
-- Benefício deve superar os riscos (princípio da da detecção.
-
-não maleficência)
-
-- Consequência: o rastreamento favorece a detecção de doenças menos agressivas, com
-
-## VIESES DE RASTREAMENTO
-
-melhor prognóstico, dando falsa impressão de maior efetividade do programa. DEFINIÇÃO GERAL Viés do Sobrediagnóstico Vieses do rastreamento são distorções sistemáticas
-
-- Diagnóstico de doenças que não causariam sintomas que afetam a interpretação da efetividade de ou morte durante a vida da pessoa.
-
-programas de rastreio, sobretudo ao se comparar
-
-- Pode levar a intervenções desnecessárias, com grupos rastreados e não rastreados. Podem iatrogenias e sofrimento evitável.
-
-superestimar benefícios, especialmente em relação à
-
-- É uma consequência do rastreio sem critérios ou sobrevida, e mascarar os riscos do sobrediagnóstico e evidências claras de benefício clínico.
-
-tratamentos desnecessários. Viés de Auto-seleção (Self-selection Bias) CARACTERÍSTICAS DOS
-
-- Ocorre quando os indivíduos que aderem ao TESTES DIAGNÓSTICOS rastreamento não representam a população geral.
-
-- Prevalência: quanto maior, maior VPP
-
-- Pessoas que aderem ao rastreamento são diferentes
-
-- Sensibilidade: detecta quem está doente daquelas que não aderem.
-
-- Especificidade: exclui quem não está doente
-
-- Frequentemente têm melhor acesso, maior
-
-- Valor preditivo positivo (VPP): chance de ter a escolaridade ou preocupação com a saúde. doença se o teste for positivo
-
-- Pode ocorrer nos dois sentidos:
-
-- Valor preditivo negativo (VPN): confiabilidade do Pessoas assintomáticas ou mais saudáveis resultado negativo aderem mais. Pessoas em maior risco (ex: histórico familiar de câncer) também aderem mais.
+- **Prevalência**: quanto maior, maior o VPP;
+- **Sensibilidade**: detecta quem está doente;
+- **Especificidade**: exclui quem não está doente;
+- **Valor preditivo positivo (VPP)**: chance de ter a doença se o teste for positivo;
+- **Valor preditivo negativo (VPN)**: confiabilidade do resultado negativo.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -148,32 +130,34 @@ tratamentos desnecessários. Viés de Auto-seleção (Self-selection Bias) CARAC
 
 <!-- page:3 -->
 
-Tabela 1: Indicações de rastreamentos de neoplasias segundo Ministério da Saúde e USPSTF Agravo MS/INCA USPSTF Atualização 2025: 25-64a, DNA-HPV.
+## Tabela de Rastreamentos
 
-Colo do útero 21–65a, citologia (A) Colo do útero Atualização 2025: 25-64a, DNA-H Repetir em 5 anos, se negativo Atualização 2025: 50–74a, mamog Mama bienal; 40–49a sob demanda.
+Tabela 1: Indicações de rastreamento de neoplasias segundo o Ministério da Saúde e a USPSTF.
 
-Colorretal 50–75a, sangue oculto Pulmão — Próstata — EXEMPLOS DE RASTREAMENTO R
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## NÃO RECOMENDADO
+| Agravo | MS/INCA | USPSTF |
+|---|---|---|
+| Colo do útero | Atualização 2025: 25-64a, DNA-HPV; repetir em 5 anos, se negativo | 21-65a, citologia (A) |
+| Mama | 50-74a, mamografia bienal; 40-49a sob demanda | Atualização 2025: 40-74a, mamografia (B) |
+| Colorretal | 50-75a, sangue oculto | 50-75a (A); 45-49a (B) |
+| Pulmão | — | 50-80a (B), ≥ 20 maços/ano e que fumam atualmente ou pararam de fumar nos últimos 15 anos |
+| Próstata | — | 55-69a, decisão individual (C) |
 
-- PSA em homens assintomáticos
+## Exemplos de Rastreamento Não Recomendado
 
-- Ecocardiograma ou cintilografia sem sintomas
+- PSA em homens assintomáticos;
+- Ecocardiograma ou cintilografia sem sintomas;
+- Tomografia de tórax em tabagistas sem indicação específica.
 
-- Tomografia de tórax em tabagistas sem indicação específica
+- Verificar Tabela 1.
 
-- Verificar Tabela 1 à prevenção quiquenária estão detalhados na ficharesumo específica sobre o tema. B d o.
+- Os conteúdos relacionados à prevenção quaternária estão detalhados na ficha-resumo específica sobre o tema.
 
-Os conteúdos relacionados à prevenção quaternária e B HPV. 21–65a, citologia (A) grafia 40–74a, mamografia (B)
+## Referências
 
-. 50–75a (A); 45–49a (B) 50–80a (B), ≥20 maços/ano e que fumam atualmente ou pararam de fumar nos últimos 15 anos 55–69a, decisão individual (C)
+Figura 1: Adaptado de: National Cancer Institute, 2018.
 
-## REFERÊNCIAS
+Figura 2: PATZ, Edward F. Jr. et al. Screening for lung cancer. The New England Journal of Medicine, v. 343, n. 22, p. 1627–1633, 30 nov. 2000.
 
-Figura 1: Adaptado de: National Cancer Institute, 2018 Figura 2: PATZ, Edward F. Jr. et al. Screening for lung cancer. The New England Journal of Medicine, v. 343, n. 22, p. 1627–1633, 30 nov. 2000.
-
-Tabela 1: Indicações de rastreamentos de neoplasias segundo Ministério da Saúde e USPSTF. BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde.
-
-Departamento de Atenção Básica. Rastreamento. Brasília: Ministério da Saúde (Cadernos de Atenção Primária, n. 29); e UNITED STATES. U.S.
-
-Preventive Services Task Force – USPSTF. Recommendation Topics: A and B Recommendations.
+Tabela 1: Indicações de rastreamentos de neoplasias segundo Ministério da Saúde e USPSTF. BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Atenção Básica. Rastreamento. Brasília: Ministério da Saúde (Cadernos de Atenção Primária, n. 29); e UNITED STATES. U.S. Preventive Services Task Force – USPSTF. Recommendation Topics: A and B Recommendations.

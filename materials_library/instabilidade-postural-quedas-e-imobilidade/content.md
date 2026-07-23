@@ -2,135 +2,169 @@
 
 <!-- page:1 -->
 
-## INSTABILIDADE POSTURAL
+## Instabilidade Postural, Quedas e Imobilidade
 
-## QUEDAS E IMOBILIDADE
+Instabilidade Postural, Quedas e Imobilidade (CM).
 
-QUEDAS E IMOBILID Instabilidade Postural, Quedas e Imobilidade (CM) INSTABILIDADE POSTURAL E QUEDAS A
+### Instabilidade Postural e Quedas
 
-- A instabilidade postural resulta em quedas, que aumentam a morbimortalidade no paciente idoso
+- A instabilidade postural resulta em quedas, que aumentam a morbimortalidade no paciente idoso.
 
-- Fatores de risco principais para quedas Queda prévia P Sexo feminino Déficit visual Distúrbio de marcha Perda de equilíbrio e força Medicações Benzodiazepínicos Drogas Z (Zolpidem) Antidepressivos S Antihipertensivos Antipsicóticos Antihistamínicos Comorbidades Epilepsia Doença de Parkinson Miopatias Hidrocefalia de pressão normal (HPN) Demências
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## E QUEDAS
+**Fatores de risco principais para quedas**
 
-- A instabilidade postural muitas vezes resulta nas quedas, que pode ser definida por: “Evento descrito por vítima ou testemunha em que a pessoa inadvertidamente vai de encontro ao solo ou a outro local em nível mais baixo que o anteriormente ocupado, consciente ou inconsciente, com lesão ou não.” F O “tropeço”, portanto, é também considerado uma queda!
+| Categoria | Fatores |
+|---|---|
+| Queda prévia | — |
+| Sexo feminino | — |
+| Déficit visual | — |
+| Distúrbio de marcha | — |
+| Perda de equilíbrio e força | — |
+| Medicações | Benzodiazepínicos, drogas Z (zolpidem), antidepressivos, anti-hipertensivos, antipsicóticos, anti-histamínicos |
+| Comorbidades | Epilepsia, doença de Parkinson, miopatias, hidrocefalia de pressão normal (HPN), demências |
 
-- Consequências das quedas: I Aumenta fragilidade; Aumenta mortalidade; Aumenta o grau de dependência; Aumenta a taxa de institucionalização; Favorece o declínio funcional;
+### Quedas
 
-- Na investigação das quedas, devemos excluir: Causas violentas; Síncope; Convulsão; Trauma esportivo.
+- A instabilidade postural muitas vezes resulta nas quedas, que podem ser definidas por: "Evento descrito por vítima ou testemunha em que a pessoa inadvertidamente vai de encontro ao solo ou a outro local em nível mais baixo que o anteriormente ocupado, consciente ou inconsciente, com lesão ou não."
+  - O "tropeço", portanto, é também considerado uma queda!
+- Consequências das quedas:
+  - Aumenta fragilidade;
+  - Aumenta mortalidade;
+  - Aumenta o grau de dependência;
+  - Aumenta a taxa de institucionalização;
+  - Favorece o declínio funcional.
+- Na investigação das quedas, devemos excluir: causas violentas; síncope; convulsão; trauma esportivo.
 
-## CLASSIFICAÇÃO DA QUEDA
+### Classificação da Queda
 
-- Baixa Energia Queda da própria altura. Queda de assento.
+- **Baixa energia**: queda da própria altura; queda de assento;
+- **Alta energia**: queda em rampa; queda em escada com altura maior que 3 degraus; presença de trauma cranioencefálico (TCE) ou ferimento corto-contuso (FCC) em face; ferimento grave.
 
-- Alta Energia DADE
+> ⚠️ Este trecho ("alta energia") estava embaralhado no OCR com os critérios da síndrome do imobilismo — confira contra a fonte original.
 
-## AVALIAÇÃO DE RISCO
+### Avaliação de Risco
 
-- Escala de Dalton: mais sensível
+- Escala de Dalton: mais sensível;
+- Escala Mobility: mais específica;
+- TUGT (*Timed Up and Go Test*): mais utilizado.
 
-- Escala Mobility: mais específica
-
-- TUGT (Timed Up and Go Test): mais utilizado
-
-## PROFILAXIA DE QUEDAS
+### Profilaxia de Quedas
 
 - Reposição de vitamina D (se deficiência);
-
 - Correção de distúrbios da força, marcha e equilíbrio;
-
 - Correção de problemas auditivos;
-
 - Revisão dos medicamentos;
-
 - Medidas para aumentar a segurança da casa;
+- Avaliação podiátrica.
 
-- Avaliação podiátrica;
+## Síndrome do Imobilismo
 
-## SÍNDROME DO IMOBILISMO
+- Especialmente doenças degenerativas e disfunções orgânicas em fase terminal;
+- Diagnóstico: 2 critérios maiores + 2 critérios menores.
 
-- Especialmente doenças degenerativas e disfunções orgânicas em fase terminal
+**Critérios maiores**
 
-- Diagnóstico: 2 critérios maiores + 2 critérios menores
+- Déficit cognitivo moderado a grave;
+- Múltiplas contraturas.
 
-- Critérios maiores: Déficit cognitivo moderado a grave; Múltiplas contraturas.
+**Critérios menores**
 
-- Critérios menores: Lesão por pressão; Disfagia; Queda quando em pé no assento; Queda em rampa; Queda em escada com altura maior que 3 degraus; Presença de trauma cranioencefálico (TCE) ou ferimento corto-contuso (FCC) em face; Ferimento grave.
+- Lesão por pressão;
+- Disfagia;
+- Dupla incontinência — fecal e urinária;
+- Afasia.
 
-Dupla incontinência – fecal e urinária; Afasia.
+**Síndrome do caidor crônico**: ≥ 2 quedas no último ano.
 
-- Síndrome do caidor crônico ≥ 2 quedas no último ano
+## Fatores de Risco para Quedas
 
-## FATORES DE RISCO PARA QUEDAS
+- Verificar Tabela 1 na próxima página.
 
-- Verificar Tabela 1 na próxima página
+## Investigação da Queda
 
-## INVESTIGAÇÃO DA QUEDA
+- Através da história clínica, espera-se identificar os fatores de risco, classicamente também divididos em fatores predisponentes e precipitantes.
 
-- Através da história clínica espera-se identificar-se os fatores de risco, classicamente também divididos em fatores predisponentes e precipitantes.
+**Anamnese**
 
-- Anamnese Perda de consciência; Cardiogênica/neurogênica; Ambiente (fator externo); Tontura; Fraqueza súbita;
+- Perda de consciência: cardiogênica/neurogênica;
+- Ambiente (fator externo);
+- Tontura;
+- Fraqueza súbita.
 
-- Exame físico: Neurogênica; Arritmia; Pressão arterial (3 medidas); Em pé e deitado (hipotensão ortostática) Exame dos pés Marcha.
+**Exame físico**
+
+- Neurogênica;
+- Arritmia;
+- Pressão arterial (3 medidas): em pé e deitado (hipotensão ortostática);
+- Exame dos pés;
+- Marcha.
 
 ---
 
 <!-- page:2 -->
 
-Tabela 1: Fatores de risco para quedas Principais Comorbidades Ambientais Mulheres, viúvos, solteiros Queda prévia** ou desquitados Distúrbio de marcha e/ou u
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-> 2 comorbidades de dispositivos de march funcional muscular benzodiazepínicos, antidepressivos, antihipertensivos, antipsicóticos, antihistamínicos ou asilar
+**Tabela 1: Fatores de risco para quedas**
 
-Maior dependência Perda de equilíbrio e forç Medicamentos: Idade Ambiente hospitalar Impulsividade Visão prejudicada Fatores predisponentes e precipitantes
+| Principais | Comorbidades | Ambientais |
+|---|---|---|
+| Queda prévia | Epilepsia | Tapetes |
+| Distúrbio de marcha e/ou uso de dispositivos de marcha | Doença de Parkinson | Degrau |
+| Perda de equilíbrio e força muscular | Miopatia/neuropatia periférica | Calçado inadequado |
+| Medicamentos: benzodiazepínicos, antidepressivos, anti-hipertensivos, antipsicóticos, anti-histamínicos | Síncope cardiogênica | Falta de barra de apoio |
+| Idade | Hidrocefalia de pressão normal (HPN) | Difícil acesso a objetos |
+| Maior dependência funcional | Demência | Ambiente hospitalar ou asilar |
+| Impulsividade | Hipotensão postural | — |
+| Visão prejudicada | Osteoartrite de joelhos | — |
+| Mulheres, viúvos, solteiros ou desquitados | > 2 comorbidades | — |
 
-- O fator predisponente equivale às características já
+**Fatores predisponentes e precipitantes**
 
-“prévias” do paciente
+- O fator predisponente equivale às características já "prévias" do paciente;
+- O fator precipitante é o que motivou a queda naquele momento.
 
-- O fator precipitante é o que motivou a queda naquele momento
+*Figura 1: Fluxograma de fatores predisponentes e precipitantes.*
 
-Figura 1: Fluxograma de fatores predisponentes e precipitantes
+## Avaliação do Risco
 
-## AVALIAÇÃO DO RISCO
+- Existem diversas escalas:
+  - Dalton: mais sensível;
+  - Mobility: mais específica;
+  - POMA/Tinetti: também cobrada em algumas provas;
+  - TUGT (*Timed Up and Go Test*): principal escala.
 
-- Existem diversas escalas (26) Dalton: mais sensível Mobility: mais específica POMA/Tinetti: também cobrada em algumas provas TUGT (Timed Up and Go Test): principal escala
+**TUGT (*Timed Up and Go Test*)**
 
-TUGT (Timed Up and Go Test)
+- Com o paciente sentado na cadeira, inicia-se a contagem do tempo para uma caminhada de 3 metros e retorno à posição original (sentado na cadeira);
+- Consegue trazer uma avaliação para: força em quadríceps; marcha; equilíbrio dinâmico;
+- Interpretação: **> 14 segundos**: tendência à queda, de acordo com a maioria das literaturas; **< 10 segundos**: não caidores; **> 32,6 segundos**: caidores.
 
-- Com o paciente sentado na cadeira, inicia-se a contagem do tempo para uma caminhada de 3 metros e retorno à posição original anterior (sentado na cadeira).
+*Figura 2: TUGT — Timed Up and Go Test.*
 
-- Consegue trazer uma avaliação para: Força em quadríceps; Marcha; Equilíbrio dinâmico.
+## Profilaxia para Quedas
 
-- Interpretação: > 14 segundos: tendência à queda, de acordo com a maioria das literaturas; < 10 segundos: não caidores; > 32,6 segundos: caidores. Epilepsia Tapetes uso ha ça apoio normal (HPN) objetos
-
-Doença de Parkinson Degrau Miopatia/Neuropatia periférica Calçado inadequado Falta de barra de Síncope cardiogênica Hidrocefalia de pressão Difícil acesso a Demência Hipotensão Postural Osteoartrite de joelhos Figura 2: TUGT - Timed Up and Go Test
-
-## PROFILAXIA PARA QUEDAS
-
-Reposição de vitamina D
+**Reposição de vitamina D**
 
 - Em casos de deficiência (< 30 ng/mL);
-
 - Associa-se com o risco de perda de força e massa muscular;
+- Associa-se com a redução da performance física e imobilidade.
 
-- Associa-se com a redução da performance física e imobilidade
+**Correção de distúrbios da força, marcha e equilíbrio**
 
-Correção de distúrbios da força, marcha e equilíbrio
+- Pode ser sugerido o uso de órteses e meios de suporte como andadores e bengalas.
 
-- Pode ser sugerido o uso de órteses e meios de suporte como andadores e bengalas
+**Correção de problemas auditivos**
 
-Correção de problemas auditivos
+- Tais déficits podem estar associados às alterações vestibulares e, consequentemente, à perda do equilíbrio.
 
-- Tais déficits podem estar associados às alterações vestibulares e, consequentemente, à perda do equilíbrio;
+**Revisão dos medicamentos**
 
-Revisão dos medicamentos
+- Avaliar os efeitos colaterais que aumentam a probabilidade de quedas, seja por alteração do sensório, seja por provocarem desequilíbrio, disautonomia ou hipotensão postural;
+- Benzodiazepínicos, alfa-agonistas e anti-histamínicos de primeira geração.
 
-- Avaliar os efeitos colaterais que aumentam a probabilidade de quedas, seja por alteração do sensório ou seja por provocarem desequilíbrio, disautonomia ou hipotensão postural;
-
-- Benzodiazepínicos, alfa-agonista e anti-histamínicos de primeira geração.
-
-Medidas para aumentar a segurança da casa
+**Medidas para aumentar a segurança da casa**
 
 - Instalação de barras em ambientes escorregadios, como banheiro;
 
@@ -142,27 +176,37 @@ Medidas para aumentar a segurança da casa
 
 <!-- page:3 -->
 
-- Retirada de móveis baixos e tapetes reduz CAUSAS DE IMOBILIDADE substancialmente o risco desses pacientes caírem.
+- Retirada de móveis baixos e tapetes reduz substancialmente o risco desses pacientes caírem.
 
-- Especialmente doenças degenerativas e disfunções
+**Avaliação podiátrica**
 
-Avaliação podiátrica orgânicas em fase terminal
+- Refere-se à avaliação do paciente no intuito de identificar as alterações cutâneas, calosidades e contraturas que podem aumentar a chance de que ele caia.
 
-- Refere-se à avaliação do paciente no intuito de identificar as alterações cutâneas, calosidades e contraturas que podem aumentar a chance de que D ele caia.
+## Causas de Imobilidade
 
-- “Conjunto de sinais e sintomas resultantes da supressão de todos os movimentos articulares que, por conseguinte, prejudica a mudança postural, compromete a independência e leva à incapacidade, à fragilidade e à morte.”
+- Especialmente doenças degenerativas e disfunções orgânicas em fase terminal;
+- "Conjunto de sinais e sintomas resultantes da supressão de todos os movimentos articulares que, por conseguinte, prejudica a mudança postural, compromete a independência e leva à incapacidade, à fragilidade e à morte."
+- Conferem critério absoluto para cuidados paliativos.
 
-- Conferem critério absoluto para cuidados paliativos
+*Figura 3: Causas de imobilidade.*
 
-Figura 3: Causas de imobilidade - Verificar Figura 3
+- Verificar Figura 3.
 
-## DIAGNÓSTICO
+## Diagnóstico
 
-- São necessários 2 critérios maiores E 2 menores
+- São necessários 2 critérios maiores E 2 critérios menores.
 
-- Critérios maiores: Déficit cognitivo moderado a grave; Múltiplas contraturas.
+**Critérios maiores**
 
-- Critérios menores: Lesão por pressão; Disfagia; Dupla incontinência (fecal e urinária); Afasia.
+- Déficit cognitivo moderado a grave;
+- Múltiplas contraturas.
+
+**Critérios menores**
+
+- Lesão por pressão;
+- Disfagia;
+- Dupla incontinência (fecal e urinária);
+- Afasia.
 
 ![Figura do material - página 3](figure-003-1.webp)
 

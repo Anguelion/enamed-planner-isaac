@@ -1,142 +1,96 @@
-# Bronquiolite
+# Bronquiolite e Coqueluche
 
 <!-- page:1 -->
 
-## BRONQUIOLITE E COQUELUCHE
+> ⚠️ Este material teve páginas de duas colunas com texto intercalado; o conteúdo abaixo foi reorganizado por assunto usando o contexto clínico. Confira contra a fonte original em caso de dúvida.
 
-Bronquiolite (PED); Coqueluche (PED) Parâmetro | Doença Bronquiolite Coqueluche Infecção de vias aéreas inferiores “Tosse comprida” Característica geral 1º episódio de sibilância Altamente contagiosa Faixa etária - mais < 2 anos < 6 meses comum Etiologia VSR Bordetella pertussis Rinorreia 3 fases:
+## Bronquiolite vs. Coqueluche — Visão Geral
 
-Com ou sem febre
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Catarral - Síndrome gripal (1-2 sem)
+| Parâmetro | Bronquiolite | Coqueluche |
+|---|---|---|
+| Característica geral | Infecção de vias aéreas inferiores; 1º episódio de sibilância | "Tosse comprida"; altamente contagiosa |
+| Faixa etária mais comum | < 2 anos | < 6 meses |
+| Etiologia | VSR | *Bordetella pertussis* |
+| Quadro clínico | Rinorreia com ou sem febre; tosse com piora progressiva; desconforto respiratório; sibilância (variação minuto a minuto); diminuição da aceitação alimentar | 3 fases: **Catarral** — síndrome gripal (1-2 sem); **Paroxística** — tosse súbita e incontrolável, pode levar a apneia e cianose (2-6 sem); **Convalescença** — tosse mais branda (2-6 sem) |
+| Diagnóstico | Clínico | Clínico |
+| Tratamento | Suporte clínico; SpO2-alvo 90-92%; CNAF/CPAP/VNI | Macrolídeo nas primeiras 3 semanas |
+| Vacinação/Profilaxia | Palivizumabe (prematuros ≤ 28 semanas: até 1 ano; DPC/DCC com repercussão: até < 2 anos); Nirsevimabe — em processo de incorporação no SUS | Gestantes: dose de dTpa a cada gestação, a partir da 20ª semana; Pentavalente aos 2, 4 e 6 meses; DTP reforço aos 15 meses e 4 anos; quimioprofilaxia com azitromicina (escolha) para contatos domiciliares |
 
-Tosse com piora progressiva
+## Bronquiolite
 
-- Paroxística - Tosse súbita e
+### Introdução
 
-Desconforto respiratório incontrolável, pode levar a apneia e Quadro clínico Sibilância cianose (2-6 sem)
+- Comum em lactentes < 2 anos;
+- Quadro compatível com infecção viral causando primeiro episódio de sibilância em criança menor de 2 anos, sem outra etiologia provável.
+- **Definição**: infecção das vias aéreas inferiores, de transmissão respiratória, causa comum de internação e morbidade.
+- Lembrar dos valores da frequência respiratória (FR), considerando taquipneia conforme a idade:
+  - < 2 meses: FR ≥ 60 irpm;
+  - 2-11 meses completos: FR ≥ 50 irpm;
+  - 1-4 anos completos: FR ≥ 40 irpm;
+  - > 5 anos: FR > 20 irpm.
 
-Diminuição da aceitação alimentar
+### Etiologia
 
-- Convalescença - Tosse mais branda
-
-*Variação minuto-minuto (2-6 sem) Parámetro | Doença Bronquiolite Coqueluche Diagnóstico Clínico Clínico Suporte clínico Macrolídeo nas primeiras 3 semanas
-
-- SpO2 90-92%
-
-Tratamento
-
-- CNAF/CPAP/VNI
-
-Palivizumabe Vacinação
-
-- Prematuros ≤28 semanas: até 1 ano
-
-- Gestantes uma dose de dTpa, a cada
-
-- DPC, DCC com repercussão: até < 2 gestação, a partir da 20° semana de anos gestação.
-
-- 5 doses, na sazonalidade
-
-- Pentavalente com 2, 4 e 6 meses
-
-Nirsevimabe - em processo de
-
-- DTP reforço com 15 meses e 4 anos incorporaçao no SUS Quimioprofilaxia - Azitromicina (escolha)
-
-- SBP:
-
-- Contatos domiciliares
-
-{ Para todas as crianças na primeira
-
-- Menores de 1 ano temporada de VSR
-
-- Imunocomprometidos
-
-Profilaxia { Até 24 meses para fator de risco:
-
-- Asmáticos moderados a graves
-
-DPC, DCC, Neuromuscular, Sd de
-
-- Gestantes no 3º trimestre
-
-Down e imunocomprometidos
-
-- Profissionais de saúde de unidade de
-
-- SBIm - atualizou indicações: pediatria/maternidade
-
-{ Menores de 8 meses de idade, cujas
-
-- Profissionais de creche e escola mães não se vacinaram na gestação: maternal
-
-{ Crianças de 8 a 23 meses de idade
-
-- Contatos com <1 ano ou indivíduos com risco para infecção grave por VSR com condição pré-existente
-
-Abrysvo
-
-- Gestante entre 24-36 semanas.
-
-| Comum em lactentes <2 anos; | Quadro compatível com infecção viral causando INTRODUÇÃO primeiro episódio de sibilância em criança menor
-
-- Lembrar dos valores da frequência respiratória (FR), de 2 anos, sem outra etiologia provável. < 2 meses: FR ≥ 60 irpm; ETIOLOGIA 2-11 meses completos: FR ≥ 50 irpm;
-
-considerando taquipneia conforme a idade:
-
-- Vírus Sincicial Respiratório (VSR): mais prevalente; 1-4 anos completos: FR ≥ 40 irpm; | Vírus de RNA; > 5 anos: FR > 20 irpm. | Família Paramyxoviridae;
-
-- Definição; | Envelopado; É uma infecção das vias aéreas inferiores, de | Proteína G - ligação do vírus à célula;
-
-transmissão respiratória, causa comum de | Proteína F - permite a fusão viral na célula; internação e morbidade; | Dois sub grupos antigênicos - A e B.
+- **Vírus Sincicial Respiratório (VSR)**: mais prevalente; vírus de RNA; família Paramyxoviridae; envelopado; proteína G (ligação do vírus à célula); proteína F (permite a fusão viral na célula); dois subgrupos antigênicos — A e B.
 
 ---
 
 <!-- page:2 -->
 
-- Rinovírus; | Anormalidade congênita cardíaca com repercussão;
-
-- Parainfluenza; | Imunodeficiência;
-
-- Metapneumovirus humano; | Doença neurológica.
-
+- Rinovírus;
+- Parainfluenza;
+- Metapneumovírus humano;
 - Influenza;
-
-- Adenovírus; DIAGNÓSTICO: CLÍNICO!
-
+- Adenovírus;
 - Coronavírus sazonal;
+- Bocavírus.
 
+### Fatores de Risco para Gravidade
+
+- Prematuridade (< 36 semanas);
+- Baixo peso ao nascer;
+- Idade menor que 3 meses;
+- Doença pulmonar crônica, especialmente broncodisplasia pulmonar;
+- Defeitos anatômicos das vias aéreas;
+- Anormalidade congênita cardíaca com repercussão;
+- Imunodeficiência;
+- Doença neurológica.
+
+### Quadro Clínico
+
+- Evolução natural da bronquiolite (verificar Figura 1);
+- Severidade em torno do terceiro e quinto dia (pico de gravidade);
+- Atentar para risco de desidratação devido à baixa aceitação;
+- Sintomas começam a melhorar a partir da primeira semana.
+- Apresentam sintomas de via aérea superior que oscilam a cada minuto: inicialmente rinorreia, com ou sem febre; evolui com piora, tosse persistente, desconforto respiratório, diminuição da aceitação alimentar; após esse período, segue a fase de convalescença;
+- Se a febre voltar nessa fase, lembrar de possíveis complicações como otite, pneumonia ou outra infecção concomitante.
+
+Figura 1: História natural dos sintomas da bronquiolite; note a variação da intensidade minuto a minuto entre o terceiro e o quinto dia.
+
+### Diagnóstico
+
+- **Diagnóstico: clínico!**
 - Podem ser usados para auxiliar no diagnóstico:
+  - **Painel viral respiratório**: identifica por biologia molecular o agente envolvido → não deve ser utilizado como rotina;
+  - **Radiografia de tórax**: apenas para os casos cuja clínica não é clássica de bronquiolite → pode apresentar espessamento peribrônquico, hiperinsuflação e atelectasia. A solicitação inadequada da radiografia aumenta a prescrição de antibioticoterapia para quadros de etiologia viral (cuidado! grande fator de confusão).
 
-- Bocavírus. | Painel viral respiratório: identifica por biologia molecular o agente envolvido → não deve ser
+### Manejo Clínico
 
-QUADRO CLÍNICO utilizado como rotina;
+**O que é feito:**
+- Suporte hídrico;
+- Monitorar saturação de oxigênio (SpO2) → saturação-alvo entre **90-92%**!
+- Suporte ventilatório, conforme necessário: cateter nasal de alto fluxo (CNAF), pressão positiva contínua nas vias aéreas (CPAP), ventilação não invasiva (VNI);
+- Oferta de oxigênio (O2) suplementar conforme necessidade;
+- Lavagem nasal e aspiração da via aérea superior;
+- Inalação com soro fisiológico.
 
-- Evolução natural da Bronquiolite; | Radiografia de tórax: apenas para os casos
-
-- Verificar Figura 1. cuja clínica não é clássica de bronquiolite →
-
-- Severidade em torno do terceiro e quinto dia (pico Pode apresentar espessamento peri brônquico, de gravidade); hiperinsuflação e atelectasia. A solicitação
-
-- Atentar para risco de desidratação devido à inadequada da radiografia aumenta a prescrição de baixa aceitação; antibioticoterapia para quadros de etiologia viral
-
-- Sintomas começam a melhorar a partir da (Cuidado! Grande fator de confusão).
-
-primeira semana.
-
-- Apresentam sintomas de via aérea superior que MANEJO CLÍNICO oscilam a cada minuto:
-
-- O que é feito? Inicialmente com sintomas como rinorreia, com ou | Suporte hídrico; Evolui com piora, tosse persistente, piora saturação de oxigênio (SpO2) → Saturação-alvo do desconforto respiratório, diminuição da entre 90-92%! aceitação alimentar; | Suporte ventilatório, conforme necessário: Cateter Após esse período, segue a fase de convalescença nasal de alto fluxo (CNAF), pressão positiva complicações como otite, pneumonia ou outra invasiva (VNI);
-
-sem febre; | Oferta de oxigênio (O2) suplementar conforme → se a febre voltar nessa fase, lembrar de contínua nas vias aéreas (CPAP), ventilação não infecção concomitante; | Lavagem nasal e aspiração da via aérea superior;
-
-- Fatores de risco para gravidade: | Inalação com soro fisiológico. Prematuridade (<36 semanas);
-
-- Não há evidência: Baixo peso ao nascer; | Teste terapêutico com Beta-2; Idade menor que 3 meses; | Solução hipertônica a 3% → algumas literaturas Doença pulmonar crônica, especialmente ainda recomendam, não é rotina; Defeitos anatômicos das vias aéreas; | Fisioterapia respiratória.
-
-broncodisplasia pulmonar; | Corticoides; Figura 1: História natural dos sintomas da Bronquiolite, note a variação da intensidade minuto a minuto entre terceiro e quinto dia.
+**Não há evidência para:**
+- Teste terapêutico com beta-2;
+- Solução hipertônica a 3% → algumas literaturas ainda recomendam, não é rotina;
+- Fisioterapia respiratória;
+- Corticoides.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -144,150 +98,146 @@ broncodisplasia pulmonar; | Corticoides; Figura 1: História natural dos sintoma
 
 <!-- page:3 -->
 
-Tabela 1.
+### Tabela 1: Indicações Terapêuticas Segundo Diferentes Sociedades
 
-- Indicações:
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## SBP
+| Medicação | SBP | AAP, 2014 | NICE, 2015 |
+|---|---|---|---|
+| Corticoide | Não indicado | Não indicado | Não indicado |
+| Broncodilatador | Não indicado de rotina | Não indicado de rotina | Não indicado de rotina |
+| Antibiótico | Não indicado de rotina | Não indicado de rotina | Não indicado de rotina |
+| Adrenalina inalatória | Em casos graves | Não indicado de rotina | — |
+| Salina hipertônica | Melhora dos sintomas em casos leves a moderados após 24h de uso | Não indicado de rotina | — |
 
-Medicação AAP, 2014 NICE, 2015 | Para TODOS os bebês na primeira temporada do VSR; | Até 24 meses: DPC prematuridade / FC/ anomalias congênitas de VA/ DCC / doenças neuromusculares Corticoide Não indicado Não indicado Não indicado de Não indicado Broncodilatador rotina de rotina Não indicado de Não indicado Antibiótico rotina de rotina Adrenalina Não indicado
+**CNAF — Cateter Nasal de Alto Fluxo — Principais características:**
+- Fornece fluxo aéreo aquecido e umidificado;
+- Fornece fluxo laminar, reduzindo a resistência das vias aéreas;
+- Fluxo tende a atingir mais áreas do pulmão, reduzindo o espaço morto;
+- Geralmente pode ser facilmente acoplado ao paciente;
+- Permite titulação da fração inalada de oxigênio;
+- Não fornece pressão positiva mensurável — quanta pressão é fornecida é controverso.
 
-- Em casos graves inalatória de rotina A sintomas em moderados após
+### Profilaxia
 
-Melhora dos Não indicado Salina hipertônica casos leves a de rotina 24h de uso
-
-- - CNAF: Principais características: Fornece fluxo aéreo aquecido e umidificado; Fornece fluxo laminar, reduzindo a resistência das vias aéreas; Fluxo tende a atingir mais áreas do pulmão, A reduzindo o espaço morto; Geralmente pode ser facilmente acoplado ao paciente; Permite titulação da fração inalada de oxigênio; Não fornece pressão positiva mensurável - quanta pressão é fornecida é controverso.
-
-PROFILAXIA Palivizumabe
-
+**Palivizumabe**
 - Imunização passiva: anticorpo monoclonal específico contra VSR;
-
-- Inibe a fusão; E
-
+- Inibe a fusão;
 - Objetivo: reduzir taxas de doença grave pelo vírus em pacientes de alto risco.
+- **Indicações**:
+  - Crianças prematuras nascidas com idade gestacional ≤ 28 semanas (até 28 semanas e 6 dias) com idade inferior a 1 ano (até 11 meses e 29 dias);
+  - Crianças com idade inferior a 2 anos (até 1 ano, 11 meses e 29 dias) com doença pulmonar crônica da prematuridade (displasia broncopulmonar) ou doença cardíaca congênita com repercussão hemodinâmica demonstrada;
+  - SBP: prematuros entre 29 e 31 semanas e 6 dias de idade gestacional.
+- **Administração**: 5 doses, com intervalo de 30 dias, durante a sazonalidade; primeira dose → 30 dias do início da sazonalidade; **15 mg/kg/dose** por via intramuscular.
 
-- Indicações: Crianças prematuras nascidas com idade gestacional ≤28 semanas (até 28 semanas e 6 dias) com idade inferior a 1 ano (até 11 meses e 29 dias); Crianças com idade inferior a 2 anos (até 1 ano, da prematuridade (displasia broncopulmonar) F ou doença cardíaca congênita com repercussão hemodinâmica demonstrada; SBP - Prematuros entre 29-31 semanas e 6 dias de idade gestacional.
-
-11 meses e 29 dias) com doença pulmonar crônica Q
-
-- Administração: F 5 doses, com intervalo de 30 dias, durante a sazonalidade; Primeira dose → 30 dias do início da sazonalidade; 15 mg/kg/dose por via intramuscular.
-
-Nirsevimabe (Beyfortus®)
-
+**Nirsevimabe (Beyfortus®)**
 - Imunização passiva: anticorpo monoclonal contra VSR;
-
 - Atividade neutralizante contra cepas A e B → inibe a fusão;
-
-- Aplicação IM, antes ou durante temporada do VSR. congênitas de VA/ DCC / doenças neuromusculares Crianças < 8 meses de idade, cujas mães não se vacinaram na gestação; Crianças de 8 a 23 meses de idade com risco para infecção grave por VSR.
-
-/ Imunocomprometidas/ Síndrome de Down. SBIm
-
+- Aplicação IM, antes ou durante a temporada do VSR.
+- **Indicações (SBP)**: para todas as crianças na primeira temporada de VSR; até 24 meses para fator de risco: DPC, DCC, doenças neuromusculares, anomalias congênitas de VA, imunocomprometidas, síndrome de Down.
+- **SBIm** — atualizou indicações: crianças < 8 meses de idade, cujas mães não se vacinaram na gestação; crianças de 8 a 23 meses de idade com risco para infecção grave por VSR.
 - Em processo de incorporação no SUS.
 
-Abrysvo® (Pfizer)
-
+**Abrysvo® (Pfizer)**
 - Imunização passiva para o bebê através da imunização ativa (vacina) na gestante;
-
 - Prevenção da doença em RN e lactentes até 6 meses de vida;
-
 - Bivalente → 2 antígenos de superfície do VSR;
-
-- IM – dose única entre 24 e 36 semanas de gestação; SBIm: Idealmente a partir de 28 semanas (Por ser licenciada pela ANVISA a partir da 24ª semana de gestação, fica a critério médico o uso antes das
-
-28 semanas).
-
+- IM — dose única entre 24 e 36 semanas de gestação; SBIm: idealmente a partir de 28 semanas (por ser licenciada pela Anvisa a partir da 24ª semana de gestação, fica a critério médico o uso antes das 28 semanas).
 - Em processo de incorporação no SUS.
 
-Associação da Abrysvo® + Nirsevimabe (SBP e SBIm)
-
+**Associação da Abrysvo® + Nirsevimabe (SBP e SBIm)**
 - Mãe imunossuprimida vacinada durante a gestação;
-
 - Parto ocorrido antes de 14 dias da vacinação materna;
+- RN de alto risco, que pode incluir, mas não se limita a: doença pulmonar crônica da prematuridade, doença cardíaca congênita hemodinamicamente significativa, imunocomprometidos, síndrome de Down, fibrose cística, doença neuromuscular e anomalias congênitas das vias aéreas.
 
-- RN de alto risco, que pode incluir, mas não se limita a:
+## Coqueluche
 
-doença pulmonar crônica da prematuridade, doença cardíaca congênita hemodinamicamente significativa, imunocomprometidos, Síndrome de Down, fibrose cística, doença neuromuscular e anomalias congênitas das vias aéreas.
+### Etiologia
 
-## COQUELUCHE
+- *Bordetella pertussis* → cocobacilo aeróbio gram-negativo, exclusivo do humano;
+- Incubação: 5-10 (5-21) dias;
+- População mais vulnerável: lactentes jovens (< 6 meses);
+- Quanto menor a criança, maior a gravidade;
+- Em adultos, sintomas frustos.
 
-## ETIOLOGIA
+### Quadro Clínico
 
-- Bordetella pertussis → cocobacilo aeróbio gram negativo, exclusivo do humano;
+**Fase catarral — "síndrome gripal"** (1-2 semanas)
+- Sintomas gripais; quadro leve; febre/coriza/tosse que progride para paroxismo.
 
-- Incubação 5-10 (5-21) dias;
-
-- População mais vulnerável: Lactentes jovens (< 6 meses);
-
-- Quanto menor a criança, maior a gravidade
-
-- Em adultos, sintomas frustros. 1-2 semanas; Sintomas gripais; Quadro leve; Febre/coriza/tosse que progride para paroxismo. 2-6 semanas; Afebril ou febre baixa; Características da tosse: Início súbito, incontrolável e sem pausa; Pode cursar com: Apneia, cianose, vômitos e som específico a inspiração (guincho); Como complicação pode ocorrer hemorragia conjuntival e petéquias em face pelo esforço durante a tosse.
-
-QUADRO CLÍNICO Fase catarral – “síndrome gripal” Fase paroxística
+**Fase paroxística** (2-6 semanas)
+- Afebril ou febre baixa;
+- Características da tosse: início súbito, incontrolável e sem pausa;
+- Pode cursar com apneia, cianose, vômitos e som específico à inspiração (guincho);
+- Como complicação, pode ocorrer hemorragia conjuntival e petéquias em face pelo esforço durante a tosse.
 
 ---
 
 <!-- page:4 -->
 
-Fase de convalescença
+**Fase de convalescença** (2-6 semanas)
+- Sem paroxismo → pode voltar a ocorrer caso haja um novo estímulo, por exemplo presença de novas infecções virais;
+- Tosse muda de padrão e fica mais branda.
+- Cada fase dura em média 2 semanas, mas a tosse pode durar mais tempo (meses!).
 
-- No caso dos contactantes ou casos confirmados, 2-6 semanas; não vacinados: Sem paroxismo → pode voltar a ocorrer caso haja | Considerando o período médio de incubação da um novo estímulo, por exemplo presença de novas coqueluche (5 e 10 dias, podendo alcançar até 21 infecções virais; dias), recomenda-se que casos de coqueluche infecções virais; Tosse muda de padrão e fica mais branda.
+**Figura 2: Sintomas mais encontrados na apresentação clínica da coqueluche**
 
-Tosse Paroxística + Guincho + Vômito 28,4 Tosse + Guincho 50,2 SS associados Tosse + Cianose 53,4 Tosse + Vômito 62,2 Tosse + Tosse Paroxística 78,1 0 20 40 60 80 100 Figura 2: Sintomas mais encontrados na apresentação clínica da coqueluche. Perceba que a tosse paroxística é mais comum que o guincho característico da doença.
+> ⚠️ Tabela/gráfico reconstruído a partir de OCR — confira contra a fonte original.
 
-Cada fase dura em média 2 semanas, mas a tosse pode durar mais tempo (meses!)
+| Sintomas associados | % |
+|---|---|
+| Tosse + tosse paroxística | 78,1 |
+| Tosse + vômito | 62,2 |
+| Tosse + cianose | 53,4 |
+| Tosse + guincho | 50,2 |
+| Tosse paroxística + guincho + vômito | 28,4 |
 
-- Exames: RX tórax: coração felpudo! Hemograma: por consequência da toxina liberada pela Bordetella, há estímulo para se gerar a linfocitose.
+Perceba que a tosse paroxística é mais comum que o guincho característico da doença.
 
-## EPIDEMIOLOGIA
+### Exames
 
-- Letalidade: Nas crianças abaixo dos 6 meses e principalmente nas <1 mês de idade a letalidade é muito maior;
+- **RX de tórax**: coração felpudo!
+- **Hemograma**: por consequência da toxina liberada pela *Bordetella*, há estímulo para se gerar linfocitose.
 
-- Alta vigilância diagnóstica; Deve-se suspeitar de coqueluche na presença de tosse paroxística, com piora na segunda semana de doença; Em vacinados a tosse pode ser atípica, mas padrão seco e persistente; Em adultos não há delimitação das fases.
+### Epidemiologia
 
-## TRATAMENTO
+- **Letalidade**: nas crianças abaixo dos 6 meses, e principalmente nas < 1 mês de idade, a letalidade é muito maior;
+- Alta vigilância diagnóstica: deve-se suspeitar de coqueluche na presença de tosse paroxística, com piora na segunda semana de doença;
+- Em vacinados, a tosse pode ser atípica, mas de padrão seco e persistente;
+- Em adultos, não há delimitação das fases.
 
-- Macrolídeos (escolha: azitromicina!), fluoroquinolonas, cefalosporinas 3a geração, meropenem, sulfametoxazol-trimetoprim.
+### Tratamento
 
-## PREVENÇÃO
+- **Macrolídeos** (escolha: azitromicina!), fluoroquinolonas, cefalosporinas de 3ª geração, meropenem, sulfametoxazol-trimetoprim.
 
-Vacinação
+### Prevenção
 
-- A vacinação pode reduzir a transmissibilidade da desenvolvem a infecção;
-
-Bordetella pertussis em indivíduos vacinados que
-
+**Vacinação**
+- A vacinação pode reduzir a transmissibilidade da *Bordetella pertussis* em indivíduos vacinados que desenvolvem a infecção;
 - É importante vacinar o bebê e todas as pessoas que convivem com ele, começando pela vacinação da gestante;
-
 - As gestantes devem receber uma dose de dTpa, a cada gestação, a partir da 20ª semana de gestação;
-
 - Pentavalente com 2, 4 e 6 meses;
+- DTP reforço com 15 meses e 4 anos.
+- No caso dos contactantes ou casos confirmados não vacinados: considerando o período médio de incubação da coqueluche (5 a 10 dias, podendo alcançar até 21 dias), recomenda-se que casos de coqueluche ou indivíduos que tiveram contato com casos confirmados, que sejam elegíveis para a vacinação, recebam a vacina com um intervalo mínimo de 15 dias após a conclusão da antibioticoterapia ou da profilaxia.
 
-- DTP reforço com 15 meses e 4 anos. dias), recomenda-se que casos de coqueluche ou indivíduos que tiveram contato com casos confirmados, que sejam elegíveis para a vacinação recebam a vacina com um intervalo mínimo de 15 dias após a conclusão da antibioticoterapia ou da profilaxia.
+**Contactantes — Quimioprofilaxia**
+- Escolha: **azitromicina 5 dias**, iniciar até 21 dias após a exposição.
 
-Contactantes - Quimioprofilaxia
+**Indicações:**
+- Comunicantes intradomiciliares;
+- Pessoas com risco de evoluir para formas graves da doença, risco aumentado de complicações e óbito: crianças < 1 ano, independentemente da situação vacinal; pessoas com condições clínicas pré-existentes que possam ser exacerbadas pela coqueluche (imunocomprometidos e indivíduos com asma moderada ou grave);
+- Pessoas que tiveram contato com casos suspeitos ou confirmados e que têm alto potencial de transmitir coqueluche para vulneráveis: gestantes no último trimestre (a partir da 32ª semana de gestação); profissionais de saúde que prestam assistência a indivíduos vulneráveis como lactentes e gestantes; pessoas que trabalham em creches, escolas maternais (babás, trabalhadores domésticos); pessoas que convivam com lactentes < 1 ano.
 
-- Escolha: Azitromicina 5 dias, iniciar até 21 dias após a exposição.
+**Isolamento**
+- Casos suspeitos ou confirmados até 5 dias após início do antibiótico;
+- Se não tratou: 21 dias após início da tosse.
 
-Indicações:
+## Referências
 
-- Comunicantes intradomiciliares.
+Figura 1: História natural dos sintomas da bronquiolite, note a variação da intensidade minuto a minuto entre terceiro e quinto dia.
 
-- Pessoas com risco para evoluir para formas graves de pela doença: Crianças com < 1 ano, independentemente da situação vacinal; Pessoas com condições clínicas pré-existentes que possam ser exacerbadas pela coqueluche moderada ou grave).
+Adaptado de: JACKSON, S. L. et al. Comorbidity of chronic diseases and depression: findings from the National Health and Nutrition Examination Survey. The Journal of Clinical Psychiatry, v. 77, n. 7, p. e852-e858, 2016. Disponível em: https://pubmed.ncbi.nlm.nih.gov/27549684/. Acesso em: 8 abr. 2025.
 
-0 coqueluche, risco aumentado de complicações e óbito (imunocomprometidos e indivíduos com asma
+Figura 2: Sintomas mais encontrados na apresentação clínica da coqueluche. Perceba que a tosse paroxística é mais comum que o guincho característico da doença.
 
-- Pessoas que tiveram contato com casos suspeitos ou confirmados e que têm alto potencial de transmitir coqueluche para vulneráveis: Gestantes no último trimestre (a partir da 32ª semana de gestação); Profissionais de saúde que prestam assistência a indivíduos vulneráveis como lactentes e gestantes; Pessoas que trabalham em creches, escolas maternais; Pessoas que convivam com lactentes < 1 ano Casos suspeitos ou confirmados até 5 dias após início do antibiótico; Se não tratou: 21 dias após início da tosse.
-
-(babás, trabalhadores domésticos). Isolamento
-
-## REFERÊNCIAS
-
-Figura 1: História natural dos sintomas da Bronquiolite, note a variação da intensidade minuto a minuto entre terceiro e quinto dia.
-
-Adaptado de: JACKSON, S. L. et al. Comorbidity of chronic diseases and depression: findings from the National Health and Nutrition Examination Survey. The Journal of Clinical Psychiatry, v. 77, n. 7, p. e852-e858, 2016.
-
-Disponível em: https://pubmed.ncbi.nlm.nih.gov/27549684/. Acesso em: 8 abr. 2025. Figura 2: Sintomas mais encontrados na apresentação clínica da coqueluche. Perceba que a tosse paroxística é mais comum que o guincho característico da doença.
-
-Adaptado de: BRASIL. Ministério da Saúde. Informe epidemiológico da coqueluche: Brasil 2018 a 2019. Brasília, DF: Ministério da Saúde, 2019.
-
-Disponível em: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-az/c/coqueluche/arquivos/informe-epidemiologico-da-coqueluche-brasil2018-a-2019.pdf. Acesso em: 8 abr. 2025.
+Adaptado de: BRASIL. Ministério da Saúde. Informe epidemiológico da coqueluche: Brasil 2018 a 2019. Brasília, DF: Ministério da Saúde, 2019. Disponível em: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-az/c/coqueluche/arquivos/informe-epidemiologico-da-coqueluche-brasil2018-a-2019.pdf. Acesso em: 8 abr. 2025.

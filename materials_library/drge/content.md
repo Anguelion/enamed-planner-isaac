@@ -2,131 +2,118 @@
 
 <!-- page:1 -->
 
-## DOENÇA DO REFLUXO
+## Doença do Refluxo Gastroesofágico (DRGE)
 
-## GASTROESOFÁGICO (DRGE)
+## Resumo
 
-GASTROESOFÁGICO DRGE (CM) Barret (CM) Sintomas → Típico: pirose e regurgitação T Atípico: Dor torácica, tosse, rouquidão… Diagnóstico t
+**DRGE (Clínica Médica) / Barrett (Clínica Médica)**
 
-1. Quadro clínico e teste terapêutico com IBP (baixo custo, pouco acurado) a
+**Sintomas:**
 
-2. EDA (invasivo, avaliar complicações e diag diferenciais, esofagite em apenas 30-40% T
+- Típico: pirose e regurgitação;
+- Atípico: dor torácica, tosse, rouquidão...
 
-3. pHmetria (± Impedâncio): padrão-ouro, porém B
+**Diagnóstico:**
 
-desconfortável - realizar apenas se refratariedade M ou programação de procedimento invasivo R Conduta: S
+1. Quadro clínico e teste terapêutico com IBP (baixo custo, pouco acurado);
+2. EDA (invasivo, avaliar complicações e diagnósticos diferenciais; esofagite em apenas 30-40%);
+3. pHmetria (± impedanciometria): padrão-ouro, porém desconfortável — realizar apenas se refratariedade ou programação de procedimento invasivo.
 
-- Sem sinais de alarme: IBP 4-8 semanas g
+**Conduta:**
 
-- Sinais de alarme ou sintomas refratários A ou recorrentes: EDA O
+- Sem sinais de alarme: IBP por 4-8 semanas;
+- Sinais de alarme ou sintomas refratários ou recorrentes: EDA;
+- Sintomas extraesofágicos isolados: a tendência atual é investigar antes do teste terapêutico.
 
-- Sintomas extraesofágicos isolados: tendência atual Q de investigar antes teste terapêutico → e
-
-## FISIOPATOLOGIA
+## Fisiopatologia
 
 - Ocorre pelo retorno do conteúdo gástrico até a mucosa esofágica.
 
-## MECANISMOS PATOLÓGICOS
+## Mecanismos Patológicos
 
-- Relaxamento transitório do esfíncter inferior do Q esôfago (EIE) quando não deveria relaxar. I
+- Relaxamento transitório do esfíncter inferior do esôfago (EIE) quando não deveria relaxar;
+- Hipotonia do esfíncter esofagiano inferior;
+- Outros mecanismos: elevação da pressão abdominal; diminuição do esvaziamento gástrico (por exemplo, em pacientes com gastroparesia); redução da salivação (a saliva é importante para o clearance esofágico); acid pocket.
 
-- Hipotonia do esfíncter esofagiano inferior.
+## Epidemiologia
 
-- Outros mecanismos: elevação da pressão abdominal;
+- Acomete cerca de **10-20%** da população ocidental.
 
-diminuição do esvaziamento gástrico, por exemplo, em pacientes com gastroparesia; redução da salivação (saliva é importante para o clearance esofágico); E acid pocket;
+## Sintomas Típicos
 
-## EPIDEMIOLOGIA
-
-- Acomete cerca de 10-20% da população ocidental.
-
-## SINTOMAS
-
-## TÍPICOS
-
-- Pirose (também conhecida como azia).
-
+- Pirose (também conhecida como azia);
 - Regurgitação.
 
-## SINTOMAS ATÍPICOS
+## Sintomas Atípicos
 
-- Dor torácica não cardíaca.
+- Dor torácica não cardíaca;
+- Globus faríngeo;
+- Tosse crônica;
+- Rouquidão;
+- Pigarro;
+- Desgaste do esmalte dentário.
 
-- Globus faríngeo. A
+## Tratamento (Resumo)
 
-- Tosse crônica. B
+- **Medidas gerais**: perda de peso, alimentação, cessar tabagismo, medicamentos;
+- **Fármacos**: IBP, PCABs, anti-H2, antiácidos, alginato, baclofeno;
+- **Invasivos**: fundoplicatura cirúrgica, tratamentos endoscópicos.
 
-- Rouquidão. C
+**Barrett**: mucosa rosa-salmão; anatomopatológico = metaplasia intestinal; risco de câncer (maior se longo > 3 cm ou com displasia).
 
-- Pigarro. D
+- Sem displasia: vigilância a cada 3-5 anos;
+- Displasia de baixo grau: repetir EDA em 6 meses ou tratamento endoscópico;
+- Displasia de alto grau: ressecção ou ablação endoscópica.
 
-- Desgaste do esmalte dentário. z O (DRGE)
+**Outras esofagites**: química, medicamentosa, infecciosa (candidíase → fluconazol; herpes → aciclovir; CMV → ganciclovir), esofagite eosinofílica.
 
-Tratamento
-
-- Medidas gerais: perda de peso, alimentação, cessar tabagismo, medicamentos
-
-- Fármacos: IBP, PCABs, AntiH2, antiácidos, alginato, baclofeno
-
-- Invasivos: Fundoplicatura cirúrgica,
-
-Tratamentos endoscópicos Barrett: Mucosa rosa salmão - AP: metaplasia intestinal Risco de câncer (maior se longo >3 cm ou displasia)
-
-Sem displasia: vigilância 3-5 anos // Displasia baixo grau: Repetir EDA em 6 meses ou tto endoscópico // Alto grau: Ressecção ou ablação endoscópica Outras esofagites:
-
-Química, medicamentosa, infecciosa (candidíase → fluconazol, herpes → aciclovir, CMV → ganciclovir), esofagite eosinofílica
-
-- Halitose → 90% dos quadros de halitose se dá por patologias na cavidade oral;
-
+- **Halitose**: 90% dos quadros de halitose se devem a patologias na cavidade oral;
 - Aftas orais.
 
-## DIAGNÓSTICO
+## Diagnóstico
 
-## QUADRO CLÍNICO + TESTE TERAPÊUTICO COM
+### Quadro Clínico + Teste Terapêutico com Inibidor da Bomba de Prótons (IBP)
 
-## INIBIDOR DA BOMBA DE PRÓTONS (IBP)
-
-- Simples e com baixo custo.
-
-- Sensibilidade 60-80%; especifi cidade 30-70%;
-
+- Simples e de baixo custo;
+- Sensibilidade 60-80%; especificidade 30-70%;
 - É positivo em outras patologias.
 
-## ENDOSCOPIA
+### Endoscopia
 
 - Tem custo inerente, além de ser um método invasivo;
-
-- É bastante utilizado, contudo demonstra baixa sensibilidade;
-
+- É bastante utilizada, contudo demonstra baixa sensibilidade;
 - É útil para a avaliação de complicações e para diagnósticos diferenciais;
+- Para o estabelecimento do diagnóstico, é necessária a presença de esofagite;
+- Cerca de 60-70% dos pacientes apresentam endoscopia sem alterações; somente em 30-40% dos casos existem achados característicos de refluxo (esofagite). A esofagite é a inflamação da mucosa esofágica, geralmente associada à DRGE.
 
-- Para o estabelecimento do diagnóstico, é necessária a presença de esofagite.
+**Classificação de Los Angeles:**
 
-- Cerca de 60-70% dos pacientes apresentam endoscopia sem alterações; Somente em 30-40% dos casos existem achados característicos de refluxo → esofagite. A esofagite é a inflamação da mucosa esofágica, geralmente associada à DRGE.
+- **A**: erosões lineares não confluentes < 5 mm;
+- **B**: erosões lineares não confluentes > 5 mm;
+- **C**: erosões confluentes que ocupam < 75% da luz do órgão;
+- **D**: erosões confluentes que ocupam > 75% da luz do órgão.
 
-- Classificação de Los Angeles:
-
-A. Erosões lineares não confluentes < 5 mm; B. Erosões lineares não confluentes > 5 mm; C. Erosões confluentes que ocupam < 75% da luz do órgão;
-
-D. Erosões confluentes que ocupam > 75% da luz do órgão;
-
-- Confira Figura 1 , Figura 2 , Figura 3 e Figura 4 na próxima página
+- Confira Figura 1, Figura 2, Figura 3 e Figura 4 na próxima página.
 
 ---
 
 <!-- page:2 -->
 
-Figura 1: Esofagite erosiva Los Angeles A. Figura 3: Esofagite erosiva Los Angeles C. Figura 2: Esofagite erosiva Los Angeles B. Figura 4: Esofagite erosiva Los Angeles D.
+Figura 1: Esofagite erosiva Los Angeles A.
 
-ATENÇÃO: Nas definições atuais, as lesões grau A não confirmam o diagnóstico. O diagnóstico de DRGE pode ser confirmado pela presença de esofagite erosiva graus B, C ou D, Barrett ou estenose péptica.
+Figura 2: Esofagite erosiva Los Angeles B.
 
-Complicações:
+Figura 3: Esofagite erosiva Los Angeles C.
+
+Figura 4: Esofagite erosiva Los Angeles D.
+
+> **Atenção**: nas definições atuais, as lesões grau A não confirmam o diagnóstico. O diagnóstico de DRGE pode ser confirmado pela presença de esofagite erosiva graus B, C ou D, Barrett ou estenose péptica.
+
+**Complicações:**
 
 - Úlcera;
-
 - Estenose;
-
-- Barrett – caracteriza-se pela mucosa do esôfago distal, em coloração “salmão”.
+- Barrett — caracteriza-se pela mucosa do esôfago distal, em coloração "salmão".
 
 Figura 5: Úlcera em transição esôfago-gástrica.
 
@@ -138,43 +125,39 @@ Figura 5: Úlcera em transição esôfago-gástrica.
 
 <!-- page:3 -->
 
-Figura 6: Estenose péptica. Figura 7: Esôfago de Barrett. Figura 8: Gráfico de pHmetria em paciente com DRGE. O gráfico acima (azul) representa o canal proximal (aferição de refluxo proximal) e o gráfico abaixo (verde) representa o canal distal (aferição de refluxo distal, com canal posicionado 5 cm acima da borda superior do esfíncter inferior). A linha vermelha em ambos os canais representa pH 4, sendo que quando o pH cai abaixo desta linha vermelha significa que houve refluxo.
+Figura 6: Estenose péptica.
 
-pHmetria Impedanciometria
+Figura 7: Esôfago de Barrett.
+
+Figura 8: Gráfico de pHmetria em paciente com DRGE. O gráfico acima (azul) representa o canal proximal (aferição de refluxo proximal) e o gráfico abaixo (verde) representa o canal distal (aferição de refluxo distal, com canal posicionado 5 cm acima da borda superior do esfíncter inferior). A linha vermelha em ambos os canais representa pH 4; quando o pH cai abaixo desta linha, significa que houve refluxo.
+
+## pHmetria
 
 - Atua pela medição do pH esofágico em 24 horas;
+- É o exame padrão-ouro, porém desconfortável;
+- Requer manometria antes e pode depender da variação do dia;
+- OBS.: o exame deve ser realizado se houver programação cirúrgica ou doença refratária. É realizado geralmente após a suspensão de IBP por, pelo menos, 7 dias, a não ser que haja certeza do diagnóstico de DRGE e se queira avaliar refratariedade ao tratamento.
+- **Avaliação**: TEA = tempo de exposição ácida (com pH < 4):
+  - TEA < 4% → descarta refluxo patológico;
+  - TEA entre 4 e 6% → há possibilidade de refluxo (evidência limítrofe para diagnóstico);
+  - TEA > 6% → estabelece diagnóstico.
+- **DeMeester** (escore com 6 variáveis) > 14,7 → sugere DRGE.
 
-- Cateter similar à pHmetria, mas dispõe de anéis
+## Impedanciometria
 
-- É o exame padrão-ouro, porém desconfortável; no cateter que identificam o movimento do bolo
-
-- Requer manometria antes e pode depender da alimentar e se o refluxo é ácido ou não;
-
-variação do dia.
-
+- Cateter similar à pHmetria, mas dispõe de anéis no cateter que identificam o movimento do bolo alimentar e se o refluxo é ácido ou não;
 - Mais cara e menos disponível;
+- Também é útil para avaliar se a refratariedade dos sintomas da DRGE é decorrente de refluxo não ácido associado.
 
-- Também é útil para avaliar se a refratariedade dos programação cirúrgica ou doença refratária. ácido associado.
+## Manejo
 
-OBS.: o exame deve ser realizado se houver sintomas da DRGE é decorrente de refluxo não Recomendações: MANEJO É realizada geralmente após a suspensão de IBP por, pelo Como abordar?
+**Como abordar?**
 
-menos, 7 dias – a não ser que haja certeza do diagnóstico
+- Ausência de sinais de alarme → IBP por 4 a 8 semanas;
+- Sinais de alarme, sintomas refratários ou recorrentes → endoscopia digestiva alta;
+- Sintomas extraesofágicos isolados? A tendência atual é recomendar investigação antes de terapia empírica.
 
-- Ausência de sinais de alarme → IBP 4 a 8 semanas;
-
-de DRGE e queira avaliar refratariedade ao tratamento.
-
-- Sinais de alarme, sintomas refratários ou sintomas
-
-- Avaliação: TEA = tempo de exposição ácida (com recorrentes? → Endoscopia digestiva alta; TEA < 4% → descarta presença de exame (se possível).
-
-pH < 4); | Suspender o uso de IBP por 2-4 semanas antes do refluxo patológico;
-
-- Sintomas extraesofágicos isolados? Tendência atual é TEA 4 e 6% → há possibilidade de refluxo (evidência recomendar investigação antes de terapia empírica limítrofe para diagnóstico);
-
-- Verificar Figura 9 na próxima página TEA > 6% → estabelece diagnóstico.
-
-- DeMeester (escore com 6 variáveis) > 14,7→ sugere DRGE.
+- Verificar Figura 9 na próxima página.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -182,79 +165,60 @@ pH < 4); | Suspender o uso de IBP por 2-4 semanas antes do refluxo patológico;
 
 <!-- page:4 -->
 
-## FLUXOGRAMA DE PIROSE REFRATÁRIA
+## Fluxograma de Pirose Refratária
 
-Figura 9: Fluxograma de Investigação de pirose refratária
+Figura 9: Fluxograma de investigação de pirose refratária.
 
-## COMO TRATAR?
+## Como Tratar?
 
-## MEDIDAS ANTIRREFLUXO
+### Medidas Antirrefluxo
 
-- Perda de peso.
-
-- Elevação da cabeceira (15 cm).
-
-- Alimentação – Considerar individualidade de cada paciente, pois podem existir variações;
-
-- Evitar alimentos gordurosos, condimentos, frituras; Evitar bebidas gaseificadas e bebidas alcoólicas; Evitar alguns medicamentos – bloqueadores do canal de cálcio;
-
+- Perda de peso;
+- Elevação da cabeceira (15 cm);
+- Alimentação: considerar a individualidade de cada paciente, pois podem existir variações;
+- Evitar alimentos gordurosos, condimentos, frituras; evitar bebidas gaseificadas e bebidas alcoólicas; evitar alguns medicamentos, como bloqueadores do canal de cálcio;
 - Não deitar após a refeição;
-
 - Fracionamento da dieta;
-
 - Cessação do tabagismo.
 
-## FÁRMACOS
+### Fármacos
 
 - IBP;
-
 - Anti-H2;
-
 - PCABs;
-
-- Procinéticos → se houver suspeita de retardo do esvaziamento gástrico associado;
-
+- Procinéticos (se houver suspeita de retardo do esvaziamento gástrico associado);
 - Antiácidos;
+- Alginato (atua no bolsão ácido — acid pocket);
+- Baclofeno.
 
-- Alginato – atua no bolsão ácido (acid pocket);
+### Cirurgia
 
-- Baclofeno. CIRURGIA
+- Fundoplicatura: Nissen (total) / Dor ou Toupet (parcial);
+- **Indicações**: desejo de cessar o uso de IBPs; má adesão medicamentosa; efeitos colaterais às medicações; hérnia volumosa; esofagite refratária; aspiração refratária.
 
-- Fundoplicatura; Nissen → total; Dor / Toupet → parcial.
+## Tratamentos Endoscópicos
 
-- Indicações: Desejo de cessar o uso de IBPs; Má adesão medicamentosa; Efeitos colaterais às medicações;
-
-Hérnia volumosa; Esofagite refratária;
-
-- Aspiração refratária.
-
-## TRATAMENTOS ENDOSCÓPICOS
-
-Indicações e recomendações:
+**Indicações e recomendações:**
 
 - Desejo de cessar o uso de IBPs;
+- Deve-se realizar manometria e pHmetria previamente ao procedimento.
 
-- Deve-se realizar manometria e pHmetria anteriormente ao procedimento.
-
-Radiofrequência Stretta;
+**Radiofrequência (Stretta):**
 
 - Estimula a proliferação de fibras de colágeno para tentar aumentar o tônus do EIE;
+- Estudos evidenciaram a redução dos sintomas, contudo não foi evidenciada redução do tempo de exposição ácida — houve redução de sensibilidade?
 
-- Estudos evidenciaram a redução dos sintomas, contudo não foi evidenciado redução do tempo de exposição ácida → houve redução de sensibilidade? Figura 10
+**TIF — Fundoplicatura Transoral sem Incisão**
 
-TIF – Fundoplicatura transoral sem incisão Figura 11 ; Contraindicações a ambos procedimentos:
+**Contraindicações a ambos os procedimentos:**
 
 - Hérnia de hiato > 2-3 cm;
-
 - Disfagia;
-
 - Esofagite grau C ou D;
-
 - Presença de estenoses;
-
 - Hipotonia importante no EIE.
 
-- Verificar Figura 10 e Figura 11 na próxima página
+- Verificar Figura 10 e Figura 11 na próxima página.
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -262,79 +226,64 @@ TIF – Fundoplicatura transoral sem incisão Figura 11 ; Contraindicações a a
 
 <!-- page:5 -->
 
-## TRATAMENTO
+## Tratamento
 
-- IBP para todos os pacientes.
+- IBP para todos os pacientes;
+- Fundoplicatura: pode ser considerada para o controle dos sintomas.
 
-- Fundoplicatura – pode ser considerada para o
+Figura 10: Tratamento endoscópico por radiofrequência para DRGE.
 
-Figura 10: Tratamento endoscópico por radiofrequência para DRGE
+Figura 11: Fundoplicatura endoscópica.
 
-- - - Figura 11: Fundoplicatura endoscópica
+## Esôfago de Barrett
 
-- L
+### Considerações Iniciais
 
-## ESÔFAGO DE BARRETT
-
-## CONSIDERAÇÕES INICIAIS
-
-- Suspeita-se quando presença de epitélio de coloração rosa-salmão em esôfago distal na endoscopia.
-
-- Anatomopatológico: evidência de epitélio colunar com metaplasia intestinal em esôfago distal. Q
-
+- Suspeita-se quando há presença de epitélio de coloração rosa-salmão em esôfago distal na endoscopia;
+- Anatomopatológico: evidência de epitélio colunar com metaplasia intestinal em esôfago distal;
 - Evolução: inflamação + cicatrização crônica → metaplasia → displasia → adenocarcinoma.
 
-- H
+Figura 12: Esôfago de Barrett.
 
-- Figura 12: Esôfago de Barrett controle dos sintomas.
+### Classificação e Seguimento
 
-## CLASSIFICAÇÃO E SEGUIMENTO
+> **Atenção**: na presença de displasia, sugere-se a revisão por patologista experiente. Um esôfago inflamado pode parecer que tem displasia quando, na verdade, é só inflamação.
 
-ATENÇÃO: na presença de displasia, sugere-se a revisão por patologista experiente. Um esôfago inflamado pode parecer que tem displasia quando, na verdade, é só inflamação.
+Tabela 1: Conduta em Esôfago de Barrett.
 
-Tabela 1: Conduta em Esôfago de Barrett Vigilância epidemiológica a cada Sem displasia 3-5 anos Nova EDA a cada 6 meses / 1 ano
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- durante o primeiro ano. Após tal período, manter seguimento anual baixo grau endoscópica alto grau
+| Achado | Conduta |
+|---|---|
+| Sem displasia | Vigilância endoscópica a cada 3-5 anos |
+| Displasia de baixo grau | Nova EDA a cada 6 meses/1 ano durante o primeiro ano; discutir ressecção ou terapia endoscópica; após esse período, manter seguimento anual |
+| Displasia de alto grau | Ressecção (mucosectomia/ESD) ou ablação endoscópica |
+| Adenocarcinoma | Proceder com estadiamento e manejo conforme o estadiamento |
 
-Displasia de Discutir ressecção ou Ablação Terapia endoscópica Displasia de Ressecção - mucosectomia/ESD Ablação Proceder com estadiamento Adenocarcinoma Manejo conforme o estadiamento
+## Extensão de Acometimento
 
-## EXTENSÃO DE ACOMETIMENTO
+**Curto:**
 
 - < 3 cm;
-
-- Sem displasia;
-
-- Risco de adenocarcinoma: 0,07% ao ano;
-
-- Risco de displasia de alto grau ou adenocarcinoma:
-
-0,29% ao ano;
-
+- Sem displasia: risco de adenocarcinoma de 0,07% ao ano;
+- Risco de displasia de alto grau ou adenocarcinoma: 0,29% ao ano;
 - Seguimento: a cada 5 anos (?).
 
-Longo:
+**Longo:**
 
-- 3 cm;
+- ≥ 3 cm;
+- Sem displasia: risco de adenocarcinoma de 0,25% ao ano;
+- Risco de displasia de alto grau ou adenocarcinoma: 0,91% ao ano;
+- Seguimento: a cada 3 anos (?).
 
-- Sem displasia; risco de adenocarcinoma: 0,25% ao ano;
+## Quando Proceder com o Rastreamento
 
-- Risco de displasia de alto grau ou adenocarcinoma:
+- Sintomas crônicos (> 5 anos) ou frequentes (> 1x/semana);
+- Deve ser associado a 2 dos critérios a seguir: homem; obesidade; > 50 anos; histórico de tabagismo; branco; histórico familiar positivo em parentes de 1º grau.
 
-0,91% ao ano;
+## Hérnia de Hiato
 
-- Seguimento: a cada 3 anos (?)
-
-## QUANDO PROCEDER COM O RASTREAMENTO
-
-- Sintomas crônicos (> 5 anos) ou frequentes (>
-
-1x/semana);
-
-- Deve ser associado a 2 dos critérios a seguir: Homem; Obesidade; > 50 anos; Histórico de tabagismo; Branco; Histórico familiar positivo para parentes de 1° grau.
-
-## HÉRNIA DE HIATO
-
-- Quando o estômago ultrapassa o hiato diafragmático e hérnia para a cavidade torácica.
+- Quando o estômago ultrapassa o hiato diafragmático e hernia para a cavidade torácica.
 
 ![Figura do material - página 5](figure-005-1.webp)
 
@@ -344,21 +293,22 @@ Longo:
 
 <!-- page:6 -->
 
-Classificação: Normal
+## Classificação
 
-- Tipo 1; F igura 14 e 15 Deslizamento → transição esôfago-gástrica acima do pinçamento diafragmático
+- **Tipo 1 (normal/deslizamento)**: transição esôfago-gástrica acima do pinçamento diafragmático (Figuras 14 e 15);
+- **Tipo 2 (rolamento)**: deslocamento cranial do fundo gástrico (Figura 16);
+- **Tipo 3 (mista)**: combinação do tipo I e II (Figura 17);
+- **Tipo 4**: herniação gástrica e de outros órgãos.
 
-- Tipo 2: figura 16 Rolamento → deslocamento cranial do fundo gástrico;
+Figura 13: Radiografia de tórax PA e perfil evidenciando hérnia de hiato.
 
-- Tipo 3; Figura 17 Mista – combinação do tipo I e II;
+Figura 14: Hérnia de hiato tipo I — imagem endoscópica em visão frontal, demonstrando junção esôfago-gástrica acima do pinçamento diafragmático.
 
-- Tipo 4 Herniação gástrica e de outros órgãos.
+Figura 15: Hérnia de hiato tipo I — imagem endoscópica em retrovisão.
 
-Figura 13: Radiografía de tórax PA e perfil evidenciando hérnia de hiato Figura 17: Representação esquemática das hérnias de hiato confo Figura 14: Hérnia de hiato tipo I - imagem endoscópica em visão frontal, demonstrando junção esôfago-gástrica acima do pinçamento diafragmático.
+Figura 16: Hérnia de hiato tipo II — imagem endoscópica em retrovisão.
 
-Figura 15: Hérnia de hiato tipo I - imagem endoscópica em retrovisão Figura 16: Hérnia de hiato tipo II - imagem endoscópica em retrovisão.
-
-orme tipo.
+Figura 17: Representação esquemática das hérnias de hiato conforme o tipo.
 
 ![Figura do material - página 6](figure-006-1.webp)
 
@@ -368,70 +318,71 @@ orme tipo.
 
 <!-- page:7 -->
 
-## OUTRAS ESOFAGITES REFERÊNCIAS
+## Outras Esofagites
 
-OBSERVE A IMAGEM A SEGUIR Figura 1: Esofagite erosiva Los Angeles A.
+**Observe a imagem a seguir**: Figura 18: Esofagite infecciosa por herpes simples — imunohistoquímica.
 
-- Imunohistoquímica → Esofagite por herpes simples. A
+## Nem Toda Esofagite É por Doença do Refluxo
 
-Figura 18: Esofagite infecciosa por herpes simples
+**Outras causas:**
 
-## NEM TODA ESOFAGITE É POR DOENÇA DO
-
-## REFLUXO
-
-Outras causas:
-
-- Química A
-
+- Química;
 - Medicamentosa;
+- Esofagite infecciosa;
+- Esofagite eosinofílica.
 
-## Esofagite infecciosa
+**Suspeitar:**
 
-- Esofagite eosinofílica. A
+- Odinofagia, disfagia;
+- Associação: imunodeprimidos (neoplasia, SIDA), DM, uso de antibióticos, uso de corticoides.
 
-Suspeitar: A
+**Candidíase:**
 
-- Odinogafia, disfagia;
+- Mais comum;
+- Caracteriza-se pela presença de placas esbranquiçadas;
+- Tratamento: fluconazol.
 
-- Associação: imunodeprimidos (neoplasia, SIDA), DM, uso de antibióticos, uso de corticoides. A
+**Herpética (HSV-1):**
 
-Candidíase:
-
-- Mais comum; F
-
-- Caracteriza-se pela presença de e placas esbranquiçadas;
-
-- Tratamento → fluconazol.
-
-Herpética (HSV-1):
-
-- Maior parte dos quadros não demonstra herpes labial concomitante;
-
+- A maior parte dos quadros não demonstra herpes labial concomitante;
 - Caracterizada pela presença de vesículas e algumas ulcerações;
+- Tratamento: aciclovir.
 
-- Tratamento → aciclovir.
+**CMV:**
 
-## CMV
+- Úlcera extensa, geralmente única;
+- Tratamento: ganciclovir.
 
-- Úlcera extensa geralmente única;
+## Referências
 
-- Tratamento → ganciclovir. Arquivo pessoal.
+Figura 1: Esofagite erosiva Los Angeles A. Arquivo pessoal.
 
-Figura 2: Esofagite erosiva Los Angeles B. Arquivo pessoal. Figura 3: Esofagite erosiva Los Angeles C.
+Figura 2: Esofagite erosiva Los Angeles B. Arquivo pessoal.
 
-Arquivo pessoal. Figura 4: Esofagite erosiva Los Angeles D. Arquivo pessoal. Figura 5: Úlcera em transição esôfago-gástrica.
+Figura 3: Esofagite erosiva Los Angeles C. Arquivo pessoal.
 
-Arquivo pessoal. Figura 6: Estenose péptica. Arquivo pessoal. Figura 7: Esôfago de Barrett. Arquivo pessoal.
+Figura 4: Esofagite erosiva Los Angeles D. Arquivo pessoal.
 
-Figura 8: Gráfico de pHmetria em paciente com DRGE. Arquivo pessoal. Figura 12: Esôfago de Barrett Arquivo pessoal.
+Figura 5: Úlcera em transição esôfago-gástrica. Arquivo pessoal.
 
-Figura 13: Radiografia de tórax PA e perfil evidenciando hérnia de hiato. Arquivo pessoal. Figura 14: Hérnia de hiato tipo I - imagem endoscópica em visão frontal, demonstrando junção esôfago-gástrica acima do pinçamento diafragmático.
+Figura 6: Estenose péptica. Arquivo pessoal.
 
-Arquivo pessoal. Figura 15: Hérnia de hiato tipo I - imagem endoscópica em retrovisão. Arquivo pessoal.
+Figura 7: Esôfago de Barrett. Arquivo pessoal.
 
-Figura 16: Hérnia de hiato tipo II - imagem endoscópica em retrovisão. Arquivo pessoal. Figura 17: Representação esquemática das hérnias de hiato conforme tipo.
+Figura 8: Gráfico de pHmetria em paciente com DRGE. Arquivo pessoal.
 
-Arquivo pessoal. Figura 18: Esofagite infecciosa por herpes simples. Fonte: https://gastropedia.pub/pt/tag/moniliase-esofagica/ Tag: monilíase esofágica
+Figura 12: Esôfago de Barrett. Arquivo pessoal.
+
+Figura 13: Radiografia de tórax PA e perfil evidenciando hérnia de hiato. Arquivo pessoal.
+
+Figura 14: Hérnia de hiato tipo I - imagem endoscópica em visão frontal, demonstrando junção esôfago-gástrica acima do pinçamento diafragmático. Arquivo pessoal.
+
+Figura 15: Hérnia de hiato tipo I - imagem endoscópica em retrovisão. Arquivo pessoal.
+
+Figura 16: Hérnia de hiato tipo II - imagem endoscópica em retrovisão. Arquivo pessoal.
+
+Figura 17: Representação esquemática das hérnias de hiato conforme tipo. Arquivo pessoal.
+
+Figura 18: Esofagite infecciosa por herpes simples. Fonte: https://gastropedia.pub/pt/tag/moniliase-esofagica/ Tag: monilíase esofágica.
 
 ![Figura do material - página 7](figure-007-1.webp)

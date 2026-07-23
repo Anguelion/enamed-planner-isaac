@@ -2,68 +2,70 @@
 
 <!-- page:1 -->
 
-Tuberculose Pulmonar Clínica e Diagnóstico (CM) ILTB (CM) ILTB (TUBERCULOSE LATENTE): PPD OU IGRA
+> ⚠️ Seção reconstruída a partir de OCR (PDF original em colunas, texto intercalado) — confira contra a fonte original.
 
-- PPD >= 5mm : PVHIV ; anti-TNF ; contactantes domiciliares ; pred > 15mg/d/30d Contactantes domiciliares : se PPD < 5 mm, repetir em 8 semanas e verificar incremento de 10mm PVHIV que são contactantes domiciliares:
+**Tuberculose Pulmonar — Clínica e Diagnóstico / ILTB**
 
-não depende de PPD e retrata mesmo que já tenha tratado
+## ILTB (Tuberculose Latente): PPD ou IGRA
 
-- PPD >= 10 mm : DM, DRC, neoplasias hematológicas e CP, pré-tx, trabalhadores, silicose
+- **PPD ≥5mm**: PVHIV; uso de anti-TNF; contactantes domiciliares; prednisona >15mg/dia por 30 dias.
+  - Contactantes domiciliares: se PPD <5mm, repetir em 8 semanas e verificar incremento de 10mm;
+  - PVHIV que são contactantes domiciliares: não depende de PPD e retrata mesmo que já tenha tratado.
+- **PPD ≥10mm**: DM, DRC, neoplasias hematológicas e de cabeça/pescoço, pré-transplante, trabalhadores do sistema prisional/saúde, silicose.
+- **Medicação**: rifapentina + isoniazida, semanal, por 12 semanas.
 
-- Medicação : rifapentina + isoniazida / semana /
+**Diagnóstico**:
+- **Sintomático respiratório**: temporalidade = tosse >3 semanas;
+- **Populações de alto risco**: qualquer tosse. Morador de rua, albergues, comunidades terapêuticas, pessoas privadas de liberdade, profissionais de saúde/sistema prisional;
+- **Laboratorial**: acredite na tuberculose apesar dos exames laboratoriais negativos. Fecha-se diagnóstico por critério clínico-epidemiológico/clínico-radiológico.
 
-12 sem ; DIAGNÓSTICO
+## Microbiologia
 
-- Sintomático respiratório : temporalidade = tosse
+### Complexo M. tuberculosis — são 7 espécies
 
-> 3 semanas Populações de alto risco : qualquer tosse Morador de área livre, albergues, comunidades terapêuticas, privados de liberdade, profissionais de saúde / prisional.
+- *M. tuberculosis*;
+- *M. africanum*;
+- *M. bovis* — Bacilo de Calmette-Guérin (BCG = *M. bovis* atenuado);
+- *M. pinnipedii*;
+- *M. canetti*;
+- *M. microti*;
+- *M. capra*.
 
-- Laboratorial: acredite na tuberculose apesar dos exames laboratoriais negativos. Fecha-se diagnóstico por critério clínicoepidemiológico / clínico-radiológico.
+Apresenta crescimento lento — o tratamento deve ser prolongado e com polifarmácia, pois os fármacos atuam apenas durante a replicação.
 
-## MICROBIOLOGIA
+- Podem viver em uma variedade de ambientes — populações extra e intracelulares;
+- Formas disseminadas, paciente imunossuprimido: pBAAR negativo em escarro, positivo em biópsia, sem granuloma.
 
-## COMPLEXO M. TUBERCULOSIS – SÃO 7
+**TRM-TB**: molecular, caro, persiste positivo mesmo após cura, sensibilidade varia com o pBAAR:
+- pBAAR+: TRM também positivo em >95%;
+- pBAAR-: sensibilidade do TRM cai para 69%;
+- pBAAR positivo/TRM negativo = suspeitar de nocardia/micobactérias não tuberculosas, mas por uma questão epidemiológica já se inicia o tratamento de TB.
 
-- M. tuberculosis;
+**Cultura**: demora até 2 meses; permite teste de sensibilidade.
 
-- M. africanum;
+**LF-LAM**: imediato, pesquisa TB doença (não ILTB) em PVHIV.
+- Indicações: paciente gravemente doente; CD4 <100 em ambulatório e <200 em internação.
 
-- M. bovis – Bacilo de Calmette-Guérin
+Figura 1: Diversas populações de bacilos dificultando o tratamento.
 
-(BCG = Bovis atenuado);
+Figura 2: pBAAR.
 
-- M. pinnipedii;
+**TC**: cavernas, paredes espessas, campos superiores, vidro-fosco, micronódulos com aspecto de árvore em brotamento, micronódulos difusos (padrão miliar).
 
-- M. canetti;
+## Curso Clínico e Fisiopatologia
 
-- M. microti;
-
-- M. capra.
-
-Apresenta crescimento lento - tratamento deve ser prolongado e com polifarmácia, pois fármacos atuam apenas durante a replicação
-
-- Podem viver em uma variedade de ambientes. Populações extra e intracelulares; Formas disseminadas, paciente imunossuprimido : pBAAR - em escarro, + em bx - sem granuloma TRM-TB: molecular, caro, persiste positivo mesmo após cura, sensibilidade varia com pBAAR pBAAR + : TRM também positivo em > 95% pBAAR - : sensibilidade de TRM cai para 69% pBAAR positivo / TRM negativo = suspeitar de nocardia / micobact. não tuberculosas mas por uma questão epidemiológica, já se inicia tratamento de TB. Cultura: demora até 2 meses, teste de sensibilidade LF-LAM: imediato, pesquisa TB doença (não Indicações : gravemente doente, CD4<100 em ambulatório e < 200 em internação
-
-Figura 1: Diversas populações de bacilos dificultando tratamento. | pBAAR: bacilífero, barato, examinadordependente, controle de cura ILTB) em PVHIV
-
-- TC: cavernas, paredes espessas, campos superiores, vidro-fosco, micronódulos aspecto árvore em brotamento, micronódulos difusos (miliar)
-
-Figura 2: pBAAR. CURSO CLÍNICO E FISIOPATOLOGIA
-
-- Verificar Figura 3 na próxima página
+- Verificar Figura 3 na próxima página.
 
 ## ILTB
 
-## LATENTE, NÃO TEM CLÍNICA
+### Latente, Não Tem Clínica
 
 - Contudo, apresenta os bacilos viáveis intramacrofágicos;
-
 - São passíveis de reativação.
 
-## EM QUEM INVESTIGAR?
+### Em Quem Investigar?
 
-- Quem tem muito risco de reativar: HIV imunossuprimidos por corticosteroides (> 15 mg/dia de prednisona por 30 dias) anti-TNF (infliximab);
-
+- Quem tem muito risco de reativar: HIV; imunossuprimidos por corticosteroides (>15mg/dia de prednisona por 30 dias); uso de anti-TNF (infliximabe);
 - Contactante domiciliar.
 
 ![Figura do material - página 1](figure-001-1.webp)
@@ -74,49 +76,36 @@ Figura 2: pBAAR. CURSO CLÍNICO E FISIOPATOLOGIA
 
 <!-- page:2 -->
 
-Atingem linfonodo Macrófagos intra-alveolares Tentam conter a infecção produzindo citocinas e recutando outras células, resultando em nódulo de Ghon Depende de resposta Figura 3: Curso clínico e fisiopatologia.
+Figura 3: Curso clínico e fisiopatologia — macrófagos intra-alveolares tentam conter a infecção produzindo citocinas e recrutando outras células, resultando no nódulo de Ghon. Atingem linfonodo. A evolução depende da resposta imune.
 
-## OUTROS PACIENTES COM INDICAÇÃO PARA
-
-## INVESTIGAÇÃO DE ILTB
+## Outros Pacientes com Indicação para Investigação de ILTB
 
 - Pessoas com alterações radiológicas fibróticas sugestivas de sequela de TB;
-
-- Pré-transplante em que realização terapia imunossupressora;
-
+- Pré-transplante em que se realizará terapia imunossupressora;
 - Pessoas com silicose;
-
 - Neoplasia de cabeça e pescoço, linfomas e outras neoplasias hematológicas;
-
-- Insuficiência renal estágio avançado/em diálise;
-
+- Insuficiência renal em estágio avançado/em diálise;
 - Diabetes mellitus;
-
 - Calcificação isolada (sem fibrose) na radiografia de tórax;
-
 - Profissionais de saúde, pessoas que vivem ou trabalham no sistema prisional.
 
-## COMO INVESTIGAR?
+## Como Investigar?
 
-- IGRA e PPD: indicam apenas o contato prévio; PPD: valores de corte:
+- **IGRA e PPD**: indicam apenas o contato prévio.
+- **PPD — valores de corte**:
+  - **≥5mm**: PVHIV, imunossuprimidos (corticoide, pré-transplante e anti-TNFα), alterações radiológicas, contactantes domiciliares;
+  - **≥10mm**: profissionais de saúde, profissionais do sistema prisional, neoplasias (cabeça/pescoço, hematológicas), silicose, TRS (terapia renal substitutiva), DM, usuários de anti-TNF e corticoide.
 
-5mm: PVHIV, imunossuprimidos (CE, pré-transplante e TNFα) alterações radiológicas, contactantes domiciliares
+> ⚠️ Fluxograma reconstruído a partir de OCR — confira contra a fonte original.
 
-- 10 mm:
+Figura 4: fluxograma de PPD em contactantes domiciliares — screening inicial: <5mm repete em 8 semanas; para ser considerado positivo, tem que haver incremento ≥10mm.
 
-Profissionais de saúde Profissionais do sistema prisional Neoplasias CP, hematológicas Silicose TSR DM Usuários de anti-TNF e CE Screening e Contactantes domiciliares < 5mm ≥ 5 mm trata repete em 8 semanas 3 mm 13 mm Para ser positivo tem que aumentar em 10 mm Figura 4
+- **PPD falso-positivos**: muito raro (alta especificidade, 97%) — vacinação BCG recente; infecção por micobactéria não tuberculosa;
+- **PPD falso-negativos**: já não tão raro (sensibilidade de 77%);
+- Verificar Tabela 1 na próxima página.
 
-- PPD falso-positivos: muito raro acontecer (alta especificidade, 97%) vacinação BCG recente; infecção por micobactéria não tuberculosa;
-
-- PPD falso-negativos: já não tão raro
-
-(sensibilidade de 77%)
-
-- Verificar Tabela 1 na próxima página
-
-- IGRA: mede produção de IFN mediante estimulação com antígenos de TB; células anteriormente sensibilizadas com os antígenos da tuberculose produzem altos níveis de interferon-gama:
-
-IGRA MS 2024: PVHIV e CD4 > 350 cels, que nunca tenham tratadoTB / ILTB (latente) 2 anos < crianças < 10 anos contactantes domiciliares de baciléfieros Pré-TMO, usuários de imunobiológicos
+- **IGRA**: mede a produção de IFN mediante estimulação com antígenos de TB; células anteriormente sensibilizadas com os antígenos da tuberculose produzem altos níveis de interferon-gama.
+- **IGRA (MS 2024)**: PVHIV com CD4 >350 células que nunca tenham tratado TB/ILTB (latente); crianças entre 2 e 10 anos contactantes domiciliares de bacilíferos; pré-TMO (transplante de medula óssea); usuários de imunobiológicos.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -124,139 +113,115 @@ IGRA MS 2024: PVHIV e CD4 > 350 cels, que nunca tenham tratadoTB / ILTB (latente
 
 <!-- page:3 -->
 
-## CLÍNICA E DIAGNÓSTICO
+## Clínica e Diagnóstico
 
-Tabela 1: Condições associadas a resultados falso-negativos da prova tuberculínica
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## EPIDEMIOLOGIA
+**Tabela 1: Condições associadas a resultados falso-negativos da prova tuberculínica**
 
-Condições associadas a resultados falso-negativos da Transmissão: prova tuberculínica
+- Tuberculina mal conservada: exposta à luz direta ou ultravioleta, congelada, contaminada com fungos, manutenção em frascos inadequados e desnaturação;
+- Leitor inexperiente ou com vício de leitura;
+- Outras doenças infecciosas agudas virais, bacterianas ou fúngicas;
+- Vacinação com vírus vivos em período menor que 15 dias;
+- Tuberculose grave ou disseminada;
+- Imunodepressão avançada (AIDS, uso de corticosteroides, outros imunossupressores e quimioterápicos);
+- Neoplasias, especialmente as de cabeça e pescoço, e doenças linfoproliferativas;
+- Desnutrição, diabetes mellitus, insuficiência renal e outras condições metabólicas;
+- Gravidez;
+- Crianças com menos de 3 meses de vida;
+- Idosos (>65 anos);
+- Febre durante o período de realização da PT e nas horas que a sucedem.
 
-- Pacientes bacilíferos (tuberculose pulmonar e laríngea prova tuberculínica ultravioleta, congelada, contaminada com fungos, manutenção em frascos inadequados e desnaturação bacterianas ou fúngicas corticosteroides, outros imunossupressores a quimioterápicos) doenças linfoproliferativas outras condições metabólicas
+## Epidemiologia
 
-Tuberculina mal conservada: exposta à luz direta ou Leitor inexperiente ou com vício de leitura Tuberculose grave ou disseminada Outras doenças infecciosas agudas virais, Imunodepressão avançada (AIDS, uso da Vacinação com vírus vivos em período menor que 15 dias Neoplasias, especialmente as de cabeça e pescoço e as Desnutrição, diabetes mellitus, insuficiência renal e Gravidez Crianças com menos de 3 meses de vida Idosos (> 65 anos)
+**Transmissão**:
+- Pacientes bacilíferos (tuberculose pulmonar e laríngea com baciloscopia positiva) sustentam a cadeia de transmissão;
+- Mecanismo: aerossol. Outras doenças transmitidas assim: sarampo, varicela e zóster disseminado.
 
-Febre durante o período da realização da PT e nas horas que a sucedem
+**Risco em populações vulneráveis**:
+- Morador de rua: **56x maior**;
+- Pessoas vivendo com HIV: **28x maior**;
+- Pessoas privadas de liberdade: **28x maior**;
+- Indígenas: **3x maior**.
+
+Consultar Figura 5 na próxima página.
 
 ## PVHIV
 
-- Que sejam contactantes domiciliares de bacilífero: Única situação em que retratamos ILTB, mesmo se já tiver tratado previamente ou tido TB doença tratada. Trata independentemente de IGRA ou PPD ou CD4
+- Que sejam contactantes domiciliares de bacilífero: única situação em que se retrata ILTB, mesmo se já tiver tratado previamente ou tido TB doença tratada. Trata-se independentemente de IGRA, PPD ou CD4;
+- CD4 ≤350 células: tratamento independentemente de teste. Tanto IGRA quanto PPD podem ser falsos negativos. Logo, o tratamento está indicado.
 
-- CD4<= 350 células: tratamento independentemente de teste Tanto IGRA quanto PPD podem ser falsos negativos.
+## Para Gestantes
 
-Logo, o tratamento está indicado
+- Tratar após o parto;
+- Rifapentina contraindicada.
 
-## PARA GESTANTES
+**Para gestantes HIV+**:
+- Tratar após o 3º mês de gestação.
 
-- Tratar após o parto.
+## Tratamento
 
-- rifapentina contra-indicada
+**Preferencial**:
+- Rifapentina + isoniazida, semanal, por 12 semanas (3 meses);
+  - Contraindicado na gestação;
+  - Abandono: 3 doses consecutivas perdidas.
 
-Para Gestantes Hiv+
+**Alternativas**:
+- Isoniazida 300mg/dia por 9 meses (270 doses) + piridoxina;
+  - A associação deve ser feita para prevenir neuropatia periférica;
+  - Abandono: 90 dias não consecutivos.
+- Rifampicina diária, por 4-6 meses (120 doses).
 
-- Tratar após o 3° mês de gestação.
+## População em Geral: Temporalidade = Toda e Qualquer Tosse >3 Semanas
 
-## TRATAMENTO
+- É uma doença de alta prevalência e grandes implicações para o paciente e para o sistema de saúde; logo, o limiar para suspeição clínica tem que ser baixo;
+- Situações especiais: verificar Figura 5 na próxima página.
 
-Preferencial:
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Rifapentina + isoniazida semanal por 12 semanas
+**Tabela 2: Sintomático respiratório em situações especiais**
 
-(3 meses):
-
-- Contraindicado na gestação;
-
-- Abandono: 3 doses consecutivas.
-
-Alternativas:
-
-- Isoniazida 300 mg/dia por 9 meses (270 doses) + piridoxina:
-
-- A associação deve ser feita para prevenir neuropatia periférica;
-
-- Abandono: 90 dias não consecutivos.
-
-- Rifampicina diária/4-6 meses (120 doses). - Pacientes bacilíferos (tuberculose pulmonar e laríngea com baciloscopia positiva) sustentam a cadeia de transmissão;
-
-- Mecanismo: aerossol: Outras doenças: sarampo, varicela e zoster disseminado.
-
-Risco em populações vulneráveis:
-
-- Morador de área livre 56x maior;
-
-- Pessoas vivendo com HIV 28x maior;
-
-- Pessoas privadas de liberdade 28x maior;
-
-- Indígenas 3x maior.
-
-- Consultar Figura 5 na próxima página
-
-## POPULAÇÃO EM GERAL: TEMPORALIDADE = TODA E
-
-## QUALQUER TOSSE > 3 SEMANAS
-
-- É uma doença de alta prevalência e grandes implicações para o paciente e para o sistema de saúde; Logo, seu limiar para suspeição clínica tem que ser baixo;
-
-- Situações especiais:
-
-- Verificar Figura 5 na próxima página
-
-Tabela 2: Sintomático respiratório em situações especiais. TEMPO/ EXAME DE
-
-## POPULAÇÃO DURAÇÃO DE ESCARRO
-
-## TOSSE SOLICITADO
-
-Pessoas em Qualquer Baciloscopia ou situação de rua duração TRM Albergues, comunidades terapêuticas de Baciloscopia ou dependentes Qualquer TRM-TB e cultura químicos ou duração com TS instituições de longa permanência Baciloscopia ou Qualquer Indígena TRM-TBe duração cultura com TS Baciloscopia ou Profissionais da Qualquer TRM-TBe cultura saúde duração com TS Qualquer duração em Baciloscopia ou Imigrantes situações TRM-TBe cultura de maior com TS vulnerabilidade Contato de TB Qualquer Baciloscopia ou pulmonar duração TRM-TB Qualquer duração.
-
-Acrescida da Baciloscopia ou investigação PVHIV TRM-TBe cultura de febre ou com TS emagrecimento ou sudorese noturna
+| População | Duração da tosse | Exame de escarro solicitado |
+|---|---|---|
+| Pessoas em situação de rua | Qualquer duração | Baciloscopia ou TRM-TB |
+| Albergues, comunidades terapêuticas, dependentes químicos, instituições de longa permanência | Qualquer duração | Baciloscopia ou TRM-TB e cultura com TS |
+| Indígenas | Qualquer duração | Baciloscopia ou TRM-TB e cultura com TS |
+| Profissionais de saúde | Qualquer duração | Baciloscopia ou TRM-TB e cultura com TS |
+| Imigrantes em situações de maior vulnerabilidade | Qualquer duração | Baciloscopia ou TRM-TB e cultura com TS |
+| Contato de TB pulmonar | Qualquer duração | Baciloscopia ou TRM-TB |
+| PVHIV | Qualquer duração, acrescida da investigação de febre, emagrecimento ou sudorese noturna | Baciloscopia ou TRM-TB e cultura com TS |
 
 ---
 
 <!-- page:4 -->
 
-75,9 43,1 84,1 52,0 26,9 Casos de tuberculose por 100 mil habitantes 9,9 a 25,6 25,6 a 45,1 45,1 a 84,1 Figura 5: Coeficiente de incidência de tuberculose (casos por 100 mi SINTOMAS CLÁSSICOS
+> ⚠️ Figura 5 contém um mapa de incidência de TB por Unidade Federativa (Brasil, 2022) cujos valores numéricos, extraídos por OCR, não puderam ser associados com segurança a cada estado — confira contra a fonte original.
+
+Figura 5: Coeficiente de incidência de tuberculose (casos por 100 mil habitantes) por Unidades da Federação. Brasil, 2022. Fonte: Sistema de Informação de Agravos de Notificação/Secretarias Estaduais de Saúde/Ministério da Saúde; Instituto Brasileiro de Geografia e Estatística.
+
+## Sintomas Clássicos
 
 - Febre vespertina;
-
 - Perda ponderal;
-
 - Sudorese noturna;
-
 - Escarro hemoptoico;
-
 - Tosse produtiva.
 
-- SINTOMAS NÃO CLÁSSICOS
+## Sintomas Não Clássicos
 
 - Síndromes abdominais agudas (inflamatórias, obstrutivas e perfurativas);
-
-- Sinais neurológico focal; amaurose; D
-
-- Figura 6: Métodos laboratoriais de diagnóstico de tuberculose. 49,4 il hab.) por Unidades de Federação. Brasil, 2022
-
-35,1 36,2 37,0 22,8 31,0 52,8 13,6 26,9 38,3 1,8 27,0 13,6 9,9 18,0 36,8 7,1 38,3 68,6 19,7 24,3 40,9 0 500 1000km
-
-- Linfadenopatias;
-
-hepatoesplenomegalia; escrofuloderma;
-
-- Lesão pustulosa; espondilodiscite; implante peritoneal;
-
-dor crônica;
-
-- Uveíte; síndrome confusional; síndrome medular;
-
-mielite transversa;
-
+- Sinais neurológicos focais; amaurose;
+- Linfadenopatias; hepatoesplenomegalia; escrofuloderma;
+- Lesão pustulosa; espondilodiscite; implante peritoneal; dor crônica;
+- Uveíte; síndrome confusional; síndrome medular; mielite transversa;
 - Síndromes compressivas; febre de origem indeterminada;
-
 - Osteomielite; convulsão.
 
-## DIAGNÓSTICO
+Figura 6: Métodos laboratoriais de diagnóstico de tuberculose.
 
-- Verificar Figura 6
+## Diagnóstico
+
+- Verificar Figura 6.
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -264,21 +229,24 @@ mielite transversa;
 
 <!-- page:5 -->
 
-## O MINISTÉRIO DA SAÚDE PRECONIZA QUE
+## O Ministério da Saúde Preconiza Que:
 
-- Qualquer exame positivo já fecha diagnóstico, mas cuidado com TRM em reinfecção! TRM pode ficar positivo por tratamento prévio, não se relaciona com infectividade Mas, de forma geral, em 1-2 anos ele se negativa.
+- Qualquer exame positivo já fecha diagnóstico, mas cuidado com o TRM em reinfecção! O TRM pode ficar positivo por tratamento prévio, não se relacionando com infectividade. Mas, de forma geral, em 1-2 anos ele se negativa;
+- Múltiplas cavernas podem demorar mais tempo para negativar.
 
-- Múltiplas cavernas pode demorar mais tempo.
+> ⚠️ Fluxograma reconstruído a partir de OCR — confira contra a fonte original.
 
-- Múltiplas cavernas pode demorar mais tempo.
+**Figura 7: Fluxograma para diagnóstico baseado no TRM-TB**
 
-Susp pu MTB detectado Paciente com TB Resistência á Resistência á rifampicina detectada rifampicina não no TRM-TB detectado no TRM Repetir o TRM-TB Iniciar tratament Encaminhar para para TB com EB referência terciária Rever tratament imediatamente após resultado do Cobrar cultura e TS Figura 7: para diagnóstico baseado no TRM-TB
+- Suspeita de tuberculose pulmonar ou laríngea → realizar TRM-TB.
+  - **MTB detectado** (paciente com TB):
+    - Resistência à rifampicina detectada no TRM-TB → encaminhar para referência terciária; cobrar cultura e teste de sensibilidade (TS);
+    - Resistência à rifampicina não detectada no TRM-TB → iniciar tratamento para TB imediatamente após o resultado.
+  - **MTB não detectado**:
+    - Mantém sintomas? Sim → repetir o TRM-TB, continuar investigação (realizar cultura e TS);
+    - Não → TB excluída.
 
-- Figura 8: Fluxograma MS para investigação de recidiva de TB (ma .
-
-peita de tuberculose ulmonar ou laríngea Realizar TRM-TB MTB não detectado Mantém sintomas? Não Sim Excluído TB Continuar investigação o Realizar M-TB cultura e TS to to o TS
-
-- anual de 2019)
+Figura 8: Fluxograma do Ministério da Saúde para investigação de recidiva de TB (Manual de Recomendações, 2019).
 
 ![Figura do material - página 5](figure-005-1.webp)
 
@@ -286,37 +254,43 @@ peita de tuberculose ulmonar ou laríngea Realizar TRM-TB MTB não detectado Man
 
 <!-- page:6 -->
 
-Tabela 3: Diagnóstico de TB em PVHIV conforme imunossupressão Pessoas Vivendo com HIV SEM IMUNODEFICIÊNCIA COM IMUNODEFICIÊCNIA GRAVE GRAVE Sintomas Respiratórios e sistêmicos Predomínio de sintomas sistêmicos Padrão radiológico típico (infiltrados Radiografia de tórax e atividades em lobo Padrão radiológico atípico superior direito)
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Apresentação extrapulmonar Ocasional Frequente Baciloscopia Frequentemente positiva Frequentemente negativa de escarro Baciloscopia de tecido Frequentemente negativa Frequentemente positiva Hemocultura Negativa Frequentemente positiva Prova tuberculínica Frequentemente positiva Frequentemente negativa Histopatológica Granulomas típicos Granulomas atípicos PEGADINHAS NO DIAGNÓSTICO
+**Tabela 3: Diagnóstico de TB em PVHIV conforme imunossupressão**
 
-- Com presença de vidro fosco perilesional:
+| Achado | Sem imunodeficiência grave | Com imunodeficiência grave |
+|---|---|---|
+| Sintomas | Respiratórios e sistêmicos | Predomínio de sintomas sistêmicos |
+| Radiografia de tórax | Padrão radiológico típico (infiltrados e cavitações em lobo superior) | Padrão radiológico atípico |
+| Apresentação extrapulmonar | Ocasional | Frequente |
+| Baciloscopia de escarro | Frequentemente positiva | Frequentemente negativa |
+| Baciloscopia de tecido | Frequentemente negativa | Frequentemente positiva |
+| Hemocultura | Negativa | Frequentemente positiva |
+| Prova tuberculínica | Frequentemente positiva | Frequentemente negativa |
+| Histopatológico | Granulomas típicos | Granulomas atípicos |
 
-- Amostras recomendadas para realização do TRM-TB; Todas as formas pulmonares: escarro; escarro induzido; lavado broncoalveolar; Na criança: lavado gástrico; Outros tecidos: Liquor; Gânglios linfáticos e outros tecidos.
+## Pegadinhas no Diagnóstico
 
-- A positividade (sensibilidade) do TRM-TB depende da baciloscopia: pBAAR +: 95%; Logo, pBAAR + com TRM-TB negativo, tem que avaliar micobactérias não tuberculosas e nocardia (aguarde cultura)
+- **Amostras recomendadas para realização do TRM-TB**: todas as formas pulmonares — escarro, escarro induzido, lavado broncoalveolar; na criança: lavado gástrico; outros tecidos: líquor, gânglios linfáticos e outros tecidos.
+- A positividade (sensibilidade) do TRM-TB depende da baciloscopia: pBAAR+: 95%; pBAAR-: sensibilidade do TRM-TB cai para 69%.
+- Logo, pBAAR+ com TRM-TB negativo tem que fazer avaliar micobactérias não tuberculosas e nocardia (aguardar cultura), mas já se inicia o esquema de tuberculose, por ela ser mais prevalente e por este ser um potencial paciente bacilífero.
+- **Padrões atípicos**: presença de vidro fosco perilesional; micronódulos em árvore em brotamento — ambos os achados podem cursar com resultados falso-negativos.
+- Verificar Tabela 3.
 
-- mas já se inicia esquema de tuberculose por Figura 9: Caverna com paredes espessadas ela ser mais prevalente e este ser um potencial paciente bacilífero PADRÕES ATÍPICOS pBAAR -: sensibilidade TRM-TB de 69%.
+Figura 9: Caverna com paredes espessadas.
 
-- Micronódulos em árvore em brotamento: logo, ambos podem ser falso negativos.
+## Tecnologia Nova: LF-LAM — Rastreio de TB Ativa em PVHIV
 
-- Verificar Tabela 3
+- Coinfecção TB-HIV: 11,4% do total de pacientes com tuberculose;
+- Urinário, imediato, à beira-leito;
+- **Indicação**: todo paciente gravemente doente; ambulatório: CD4 <100; internação: CD4 <200.
 
-## TECNOLOGIA NOVA: LF-LAM - RASTREIO TB
+## Radiologia
 
-## ATIVA EM PVHIV
+- Infinidade de padrões radiológicos;
+- O mais comum é aquele que apresenta cavernas com paredes espessadas.
 
-- Confecção TB-HIV: 11,4% do total de pacientes com tuberculose;
-
-- Urinário, imediato, a beira-leito;
-
-- Indicação: Todo paciente gravemente doente; Ambulatório: CD4 < 100; Internação: CD4 < 200.
-
-RADIOLOGIA Figura 10: Disseminação endobrônquica extensa,
-
-- Infinidade de padrões radiológicos; com consolidações.
-
-- O mais comum é o que consta a presença de cavernas com paredes espessadas;
+Figura 10: Disseminação endobrônquica extensa, com consolidações.
 
 ![Figura do material - página 6](figure-006-1.webp)
 
@@ -326,14 +300,20 @@ RADIOLOGIA Figura 10: Disseminação endobrônquica extensa,
 
 <!-- page:7 -->
 
-## REFERÊNCIAS
+## Referências
 
-Figura 2: pBAAR. researchegate Figura 3: Curso clínico e fisiopatologia. reserchegate Figura 5: Coeficiente de incidência de tuberculose (casos por 100 mil hab.) por Unidades de Federação. Brasil, 2022 Sistema de Informação de Agravos de Notificação/Secretarias Estaduais Figura 11: Disseminação hematogênica - padrão micronodular de Saúde/Ministério da Saúde; Instituto Brasileiro de Geografia e Estatística.
+Figura 2: pBAAR. ResearchGate.
 
-randômico - situação de imunossupressão. Figura 9: Caverna com paredes espessadas Arquivo pessoal Figura 10: Disseminação endobrônquica extensa, com consolidações.
+Figura 3: Curso clínico e fisiopatologia. ResearchGate.
 
-Arquivo pessoal Figura 11: Disseminação hematogênica - padrão micronodular randômico - situação de imunossupressão.
+Figura 5: Coeficiente de incidência de tuberculose (casos por 100 mil hab.) por Unidades da Federação. Brasil, 2022. Sistema de Informação de Agravos de Notificação/Secretarias Estaduais de Saúde/Ministério da Saúde; Instituto Brasileiro de Geografia e Estatística.
 
-Arquivo pessoal Figura 12: Exemplo de árvore em brotamento. Arquivo pessoal Figura 12: Exemplo de árvore em brotamento.
+Figura 9: Caverna com paredes espessadas. Arquivo pessoal.
+
+Figura 10: Disseminação endobrônquica extensa, com consolidações. Arquivo pessoal.
+
+Figura 11: Disseminação hematogênica — padrão micronodular randômico, em situação de imunossupressão. Arquivo pessoal.
+
+Figura 12: Exemplo de árvore em brotamento. Arquivo pessoal.
 
 ![Figura do material - página 7](figure-007-1.webp)

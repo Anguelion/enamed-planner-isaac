@@ -1,141 +1,126 @@
-# Trauma choque
+# Trauma — Choque
 
 <!-- page:1 -->
 
-Choque (CIR)
-
-## CHOQUE
+## Choque (CIR)
 
 - Anormalidade circulatória causando hipoperfusão tecidual e orgânica.
 
-Tabela 1: Classificação Choque Hipovolêmico. Volume perdido < 750 ml 750 - 1500 m Porcentagem < 15% 15 - 30% perdida Frequência < 100 > 100 cardíaca Frequência 14 - 20 20 - 30 respiratória Pressão arterial Normal Normal Normal ou Pressão de pulso Diminuída diminuída Débito urinário > 30 ml/h 20 - 30 ml/h Estado neurológico Ansioso Ansioso/letárg Resposta volêmica Cristalóide Cristalóide Tabela 2: Classificação resposta ao tratamento do choque hip Rápida Sinais vitais Voltam ao normal Perda estimada de Mínima (< 15%)
+> ⚠️ Tabela reconstruída a partir de OCR de colunas intercaladas, com base nos valores-padrão do ATLS — confira contra a fonte original.
 
-sangue Necessidade de Baixa sangue Tipo e correspondência a Preparação do sangue cruzada Necessidade da Possível cirurgia Presença precoce do Sim cirurgião Instabilidade
+**Tabela 1: Classificação do Choque Hipovolêmico**
 
-- Falta de permanência ou constância de certo estado ou condição; Inconstância e volubilidade.
+| | Classe I | Classe II | Classe III | Classe IV |
+|---|---|---|---|---|
+| Volume perdido | < 750 ml | 750 - 1500 ml | 1500 - 2000 ml | > 2000 ml |
+| Porcentagem perdida | < 15% | 15 - 30% | 30 - 40% | > 40% |
+| Frequência cardíaca | < 100 | > 100 | > 120 | > 140 |
+| Frequência respiratória | 14 - 20 | 20 - 30 | 30 - 40 | > 35 |
+| Pressão arterial | Normal | Normal | Diminuída | Diminuída |
+| Pressão de pulso | Normal | Diminuída | Diminuída | Diminuída |
+| Débito urinário | > 30 ml/h | 20 - 30 ml/h | 05 - 15 ml/h | Ausente |
+| Estado neurológico | Ansioso | Ansioso/letárgico | Ansioso/confuso | Confuso/letárgico |
+| Resposta volêmica | Cristaloide | Cristaloide | Cristaloide/sangue | Cristaloide/sangue |
 
-## CHOQUE HEMODINÂMICO
+> ⚠️ Tabela reconstruída a partir de OCR de colunas intercaladas — confira contra a fonte original.
 
-- Anormalidade circulatória que causa hipoperfusão tecidual e orgânica;
+**Tabela 2: Classificação da resposta ao tratamento do choque hipovolêmico**
 
-- Conjunto de sinais e sintomas = Choque; Frequência cardíaca; Frequência respiratória; Pressão arterial; Tempo de enchimento capilar; Nível de consciência; Débito urinário; Déficit de bases e lactato.
+| | Resposta Rápida | Resposta Transitória | Sem Resposta |
+|---|---|---|---|
+| Sinais vitais | Voltam ao normal | Melhoria transitória, recorrência de diminuição da pressão e aumento da frequência cardíaca | Permanecem anormais |
+| Perda estimada de sangue | Mínima (< 15%) | Moderada e em progresso (15% - 40%) | Severa (> 40%) |
+| Necessidade de sangue | Baixa | Moderada a alta | Imediata |
+| Tipo e preparação do sangue | Tipo e correspondência a sangue cruzada | Tipo específico | Liberação de sangue tipo emergência |
+| Necessidade de cirurgia | Possível | Provável | Altamente provável |
+| Presença precoce do cirurgião | Sim | Sim | Sim |
 
+## Instabilidade
+
+- Falta de permanência ou constância de certo estado ou condição; inconstância e volubilidade.
+
+## Choque Hemodinâmico
+
+- Anormalidade circulatória que causa hipoperfusão tecidual e orgânica.
+- Conjunto de sinais e sintomas = Choque:
+  - Frequência cardíaca;
+  - Frequência respiratória;
+  - Pressão arterial;
+  - Tempo de enchimento capilar;
+  - Nível de consciência;
+  - Débito urinário;
+  - Déficit de bases e lactato.
 - Conjunto de sinais e sintomas que requerem pronto diagnóstico e tratamento.
 
-ml 1500 - 2000 ml > 2000 ml 30 - 40% > 40%
+## Classificação do Choque
 
-> 120 > 140 h 05 - 15 ml/h Ausente gico Ansioso/Confuso Confuso/letárgico e Cristalóide/sangue Cristalóide/sangue povolêmico.
-
-30 - 40 > 35 Diminuída Diminuída Diminuída Diminuída Transitória Sem resposta Melhoria transitória Recorrência de diminuição do sangue Permanecem anormais Aumento da pressão e da frequência cardíaca Moderada e em progresso Severa (>40%)
-
-(15% - 40%) Moderada a alta Imediata Liberação de sangue Tipo específico emergÊncia Provável Altamente provável Sim Sim
-
-## CLASSIFICAÇÃO DO CHOQUE
-
-Hipovolêmico:
-
+**Hipovolêmico**:
 - O mais comum no trauma;
-
 - Hemorrágico até que se prove o contrário;
+- Fontes prováveis de sangramento: tórax, abdome, pelve, grandes membros, retroperitônio, na cena.
 
-- Fontes prováveis de sangramento: Tórax, Abdome, Pelve, Grandes membros, retroperitôneo, na cena;
-
-Obstrutivo/ Cardiogênico:
-
-- Impede retorno circulatório; Pneumotórax hipertensivo; Tamponamento cardíaco → Tríade de Beck: Contusão cardíaca;
-
-hipofonese de bulhas, hipotensão e turgência jugular.
+**Obstrutivo/Cardiogênico**:
+- Impede o retorno circulatório;
+- Pneumotórax hipertensivo;
+- Tamponamento cardíaco → Tríade de Beck: hipofonese de bulhas, hipotensão e turgência jugular;
+- Contusão cardíaca.
 
 ---
 
 <!-- page:2 -->
 
-Neurogênico: Reposição volêmica
+**Neurogênico**:
+- Decorre de baixa resposta simpática;
+- Geralmente associado à TRM (trauma raquimedular) grave;
+- Cursa com hipotensão e bradicardia.
+- **Tríade de Cushing** → TCE grave: bradicardia, bradipneia e hipotensão.
 
-- Decorre de alta resposta simpática;
-
-- 250/500 ml de Ringer Lactato e reavaliação constante
-
-- Geralmente associado à TRM grave; (considerar transfusão precoce);
-
-- Cursa com hipotensão e bradicardia. z (Plasma Lyte*);
-
-- Tríade de Cushing → TCE grave: bradicardia,
-
-- Transfusão se necessário.
-
-- Tríade de Cushing → TCE grave: bradicardia, bradipnéia e hipotensão. T
-
-Séptico
-
+**Séptico**:
 - Extremamente raro no contexto de trauma.
 
-## MANEJO DO CHOQUE
+## Manejo do Choque
 
-- HIPOVOLÊMICO:
+### Hipovolêmico
 
-- 1º Parar o sangramento:
+**1º Parar o sangramento**:
+- Tórax → drenagem de tórax → toracotomia;
+- Abdome → laparotomia;
+- Pelve → fixar pelve + tamponamento;
+- Membros → compressão local, torniquete e/ou fixação externa;
+- Retroperitônio → laparotomia;
+- Cena → cuidado com ressangramento após estabilização.
 
-- Tórax → Drenagem de tórax → Toracotomia;
+**2º Repor as perdas** (ao mesmo tempo):
+- 2 acessos venosos periféricos (AVP) calibrosos;
+- **Reposição volêmica**: 250/500 ml de Ringer Lactato (ou Plasma Lyte*) e reavaliação constante (considerar transfusão precoce);
+- Transfusão se necessário → sangue O -/+ e/ou tipo específico;
+- Colher exames = tipagem sanguínea + Hb/Ht + gasometria arterial +/- beta-hCG.
 
-- Abdome → Laparotomia;
+**Alternativas ao acesso venoso periférico**:
+- **Acesso intraósseo**: terço proximal da tíbia ou terço distal do fêmur; 1ª escolha para crianças (< 6 anos); pode-se infundir qualquer medicação; cuidado com osteomielite; complicações: fratura iatrogênica, erro de punção.
+- **Acesso venoso central**: subclávia, jugular, femoral (escolha no trauma); técnica asséptica com paciente bem posicionado; risco de punções arteriais, pseudoaneurisma, pneumotórax.
+- **Dissecção venosa**: veia safena (anterior e superior ao maléolo medial), a "1cm pra cima e 1cm pro lado"; técnica asséptica; incisão generosa; dissecção; ligadura distal; canulação proximal; pode infundir tudo.
 
-- Pelve → Fixar pelve + tamponamento;
+### Ácido Tranexâmico (Transamin)
 
-- Membros → Compressão local, torniquete e/ou fixação externa;
-
-- Retroperitônio → Laparotomia;
-
-- Cena → Cuidado com ressangramento após estabilização.
-
-2º Repor as perdas (ao mesmo tempo):
-
-- 02 acessos venosos periféricos (AVP) calibrosos;
-
-- Reposição volêmica: o 250/500 ml de Ringer Lactato e reavaliação constante (considerar transfusão precoce) Transfusão se necessário → sangue O - / + e/ou tipo específico.
-
-- Colher exames = Tipagem sanguínea + Hb/Ht +
-
-Gasometria arterial +- Beta hcg. H Alternativas ao acesso venoso periférico:
-
-- Acesso intra-ósseo; Terço proximal da tíbia ou Terço distal do fêmur; 1ª escolha para crianças; * < 06 anos; Pode-se infundir qualquer medicação; Cuidado com osteomielite; Complicações: fratura iatrogênica, erro de punção.
-
-- Acesso venoso central; Subclávia, Jugular, Femoral (escolha no trauma); Técnica asséptica com paciente bem posicionado; Risco de punções arteriais, pseudoaneurisma, pneumotórax.
-
-- Dissecção venosa; F Safena (anterior e superior ao maléolo medial); a d ‘1cm pra cima e 1cm pro lado’; Técnica asséptica; Incisão generosa; dissecção; Ligadura distal; canulação proximal; Pode infundir tudo. F a d
-
-- Transfusão se necessário.
-
-Transamin
-
-- Indicações: Trauma com sangramento com FC > 110 bpm e/ou
-
-PAS < 90mmHg;
-
+- **Indicações**: trauma com sangramento com FC > 110 bpm e/ou PAS < 90 mmHg;
 - Pode ser usado em até 3 horas do trauma;
+- **Administração**: 1g IV em bolus (10 min) + 1g IV ao longo de 8 horas.
 
-- A administração é feita com 1g IV em bolus (10 min) +
+## Tríade Letal
 
-1g IV ao longo de 8 horas.
+**Figura 1**: Fluxograma da Tríade Letal do choque (hipotermia, coagulopatia e acidose).
 
-## TRÍADE LETAL
-
-Figura 1: Fluxograma da Tríade letal do choque. HEMODERIVADOS
+## Hemoderivados
 
 - Concentrado de hemácias tipado;
-
 - Auto-transfusão (Cell-Saver)*;
+- Sangue total**;
+- **Protocolo de transfusão maciça**: 10 unidades de hemácias em 24 horas ou 4 bolsas em 1 hora. Ressuscitação balanceada: 1:1:1 (hemácias, plasma e plaquetas)**.
 
-- Sangue total **;
+## Referências
 
-- Protocolo de transfusão maciça: 10 unidades de hemácias em 24 horas ou 04 bolsas em 01 hora. Ressuscitação balanceada: 1:1:1
-
-(plasma e plaquetas)**.
-
-## REFERÊNCIAS
-
-Tabela1: Tabela 1. Classificação Choque Hipovolêmico. Fonte: adaptado de COLÉGIO AMERICANO DE CIRURGIÕES. Suporte avançado de vida no trauma: ATLS: manual do curso de aluno. 10. ed. Rio de Janeiro: Revinter, 2018.
-
-Tabela 2: Classificação resposta ao tratamento do choque hipovolêmico. Fonte: adaptado de COLÉGIO AMERICANO DE CIRURGIÕES. Suporte avançado de vida no trauma: ATLS: manual do curso de aluno. 10. ed. Rio de Janeiro: Revinter, 2018.
+- Tabela 1: Classificação Choque Hipovolêmico. Fonte: adaptado de COLÉGIO AMERICANO DE CIRURGIÕES. *Suporte avançado de vida no trauma: ATLS: manual do curso de aluno*. 10. ed. Rio de Janeiro: Revinter, 2018.
+- Tabela 2: Classificação resposta ao tratamento do choque hipovolêmico. Fonte: adaptado de COLÉGIO AMERICANO DE CIRURGIÕES. *Suporte avançado de vida no trauma: ATLS: manual do curso de aluno*. 10. ed. Rio de Janeiro: Revinter, 2018.
 
 ![Figura do material - página 2](figure-002-1.webp)

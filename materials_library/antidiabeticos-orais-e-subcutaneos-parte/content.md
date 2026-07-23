@@ -1,174 +1,133 @@
-# Antidiabéticos Orais e Subcutâneos - Parte
+# Antidiabéticos Orais e Subcutâneos - Parte 1
 
 <!-- page:1 -->
 
-## ANTIDIABÉTICOS ORAIS E
+## Metformina
 
-## SUBCUTÂNEOS - PARTE 1
+- **Droga inicial de escolha no tratamento do DM2**
+- Reduz a gliconeogênese → melhora a sensibilidade periférica à insulina e a captação de glicose
+- Também indicada no pré-DM e na SOP (síndrome dos ovários policísticos)
+- Efeito adverso: pancreatite (?)
+- Contraindicada com TFG < 30; ajuste de dose entre 30-45 (dose máxima 1g/dia)
 
-Antidiabéticos (CM) Diabetes (CM) METFORMINA Inibidores da DPP-4
+## Inibidores da DPP-4
 
-- Droga inicial de escolha no tratamento do DM2
+- Aumentam a secreção de insulina de forma dependente de glicose; seguros quanto à hipoglicemia e bem tolerados; alta potência
+- Neutros para o peso; reduzem eventos cardiovasculares
+- Uso em qualquer fase da DRC (com ajuste de dose, exceto linagliptina)
+- Exemplos: sitagliptina, saxagliptina, alogliptina, linagliptina, evogliptina, vildagliptina
 
-- Aumento de secreção de insulina dependente reduz a gliconeogênese. | Seguros quando a hipoglicemia e bem tolerada; Alta potência; | Neutro peso; Reduz eventos CV; | Uso em qualquer fase da DRC (ajuste de dose, Segurança hipoglicemia. exceto linagliptina).
+## Acarbose
 
-→ melhora sensibilidade periférica à insulina e de glicose
+- Efeito local; ação na glicemia pós-prandial
+- Também pode ser usada no pré-DM
+- Efeitos adversos: flatulência e meteorismo
 
-- Também indicada no pré-DM e na SOP.
+## Análogos de GLP-1
 
-- Efeito adverso: pancreatite?
+- Aumentam a secreção de insulina de forma dependente de glicose
+- Retardo do esvaziamento gástrico e redução do apetite
+- Perda de peso; rara hipoglicemia
+- Benefício de redução de inflamação e transaminases
+- Redução de albuminúria
+- Injetáveis, exceto a semaglutida (oral)
 
-- Contraindicado TFG < 30 e ajuste de dose < 45
+## Pioglitazona
 
-- Exemplos: sitagliptina, saxagliptina, alogliptina,
+- Potente efeito sensibilizador da insulina
+- Redução de mortalidade e eventos cardiovasculares em pacientes com DCV
+- Também pode ser usada no pré-DM, com benefício importante na doença hepática gordurosa não alcoólica
+- Efeitos adversos: efeitos gastrointestinais, aumento da frequência cardíaca, pancreatite aguda (?), retenção hídrica, fraturas e ganho ponderal
+- Contraindicada na IC estágios III e IV
 
-(dose máxima 1g/dia). linagliptina, evogliptina, vildagliptina. Acarbose Análogos de GLP-1
+## Sulfonilureias
 
-- Efeito local
-
-- Aumento da secreção de insulina dependente Ação na glicemia pós-prandial. de glicose
-
-- Também pode ser usada no pré-DM. | Retardo do esvaziamento gástrico e redução
-
-- Efeitos adversos: flatulência e meteorismo. do apetite;
-
-Pioglitazona | Perda de peso;
-
-- Potente efeito sensibilizador da insulina. | Rara hipoglicemia. Benefício de redução de
-
-- Redução de mortalidade e eventos CV em inflamação e transaminases pacientes com DCV.
-
-- Também pode ser usada no pré-DM, com benefício
-
-- Redução de albuminúria.
-
-importante na doença hepática gordurosa
-
-- Efeitos adversos: efeitos gastrointestinais, aumento não-alcoólica. da FC, pancreatite aguda?
-
-- Efeitos adversos: retenção hídrica, fraturas e
-
-- Injetáveis, exceto semaglutida (oral).
-
-ganho ponderal.
-
-- Contraindicado na IC estágios III e IV.
-
-Sulfonilureias
-
-- Liberação de insulina independente de glicose Alta potência e disponibilidade no SUS; Redução de complicações microvasculares do DM.
-
+- Liberação de insulina independente de glicose; alta potência e disponibilidade no SUS; redução de complicações microvasculares do DM
 - Efeitos adversos: hipoglicemias (devido ao mecanismo de ação) e ganho de peso
+- Suspender quando introduzir insulina → uso concomitante aumenta o risco de hipoglicemia
+- Exemplos: glimepirida, gliclazida e glibenclamida
 
-- Suspender quando introduzir insulina → uso concomitante aumenta o risco de hipoglicemia.
+## Metformina — Mecanismo de Ação
 
-- Exemplos: glimepirida, gliclazida e glibenclamida.
-
-## METFORMINA EFEITOS
-
-- Alta potência;
-
-MECANISMO DE AÇÃO | Redução da glicemia de jejum em 60-70 mg/dL, em
-
-- Atua através da inibição da enzima AMPK- dose máxima; Principal ação é a redução da gliconeogênese
-
-quinase; Figura 1 | Redução dos níveis de HbA1c em 1,5-2%;
-
-- Vantagens: ampla experiência com a droga, prevenção Diminuição da resistência periférica à insulina, em cardiovasculares, melhora o perfil lipídico, auxilia na tecido muscular e adiposo; perda ponderal; No intestino, causa redução do turnover
-
-(produção hepática de glicose); do DM tipo 2 em pré-DM, redução dos eventos
-
-- SOP (síndrome dos ovários policísticos):
-
-esplâncnico de glicose; | Auxilia na ovulação;
-
-- Não há efeito direto no pâncreas → baixo risco | Redução do risco de abortamento;
-
-de hipoglicemia. | Melhora dos parâmetros metabólicos;
-
+- Atua através da inibição da enzima **AMPK-quinase**
+- Principal ação é a redução da gliconeogênese (produção hepática de glicose)
+- Diminuição da resistência periférica à insulina, em tecido muscular e adiposo
+- No intestino, causa redução do turnover esplâncnico de glicose
+- Não há efeito direto no pâncreas → baixo risco de hipoglicemia
 - Verificar Figura 1 na próxima página
 
-- Pré-diabetes (reduz a progressão).
+## Metformina — Efeitos
+
+- Alta potência
+- Redução da glicemia de jejum em 60-70 mg/dL, em dose máxima
+- Redução dos níveis de HbA1c em 1,5-2%
+- Vantagens: ampla experiência com a droga, prevenção de eventos cardiovasculares, melhora do perfil lipídico, auxilia na perda ponderal, redução da progressão do DM tipo 2 em pré-DM
+- **SOP (síndrome dos ovários policísticos):**
+  - Auxilia na ovulação
+  - Redução do risco de abortamento
+  - Melhora dos parâmetros metabólicos
+- Pré-diabetes: reduz a progressão
 
 ---
 
 <!-- page:2 -->
 
-Figura 1: Efeito da metformina nos diversos órgãos EFEITOS COLATERAIS E
+Figura 1: Efeito da metformina nos diversos órgãos.
 
-- Efeitos gastrointestinais são diarreia, pirose e dor abdominal Diminuídos na versão XR, de longa liberação;
+## Metformina — Efeitos Colaterais
 
-- Deficiência da vitamina B12 Comprometimento da absorção no íleo distal.
+- Efeitos gastrointestinais: diarreia, pirose e dor abdominal — diminuídos na versão XR, de longa liberação
+- Deficiência de vitamina B12 — comprometimento da absorção no íleo distal
+- Acidose láctica (raro)
 
-- Acidose láctica (raro);
+## Contraindicações
 
-## CONTRAINDICAÇÕES
+- **Gestação:** a contraindicação tem sido questionada pelas sociedades. Na prática clínica, o uso está bem estabelecido em pacientes com uso prévio à gestação; a SBD considera opção na inviabilidade do uso da insulina
+- Clearance de creatinina < 30 mL/min → não usar
+- Clearance de creatinina entre 30-45 mL/min → ajustar dose (dose máxima: 1 g/dia)
+- Insuficiência hepática, cardíaca ou respiratória graves
 
-- Gestação: A contraindicação tem sido questionada pelas sociedades. Na prática clínica, o uso está bem estabelecido E em pacientes com uso prévio à gestação; SBD considera opção na inviabilidade do uso da insulina;
+## Pioglitazona — Mecanismo de Ação
 
-- Clearance de Creatinina < 30 mL/min → não usar Clearance de Creatinina entre 30 - 45 mL/min → ajustar dose (dose máxima: 1 g/dia). C
-
-- Insuficiência hepática, cardíaca ou respiratória graves.
-
-## PIOGLITAZONA
-
-- MECANISMO DE AÇÃO S
-
-- Atualmente, é a única representante do grupo das glitazonas;
-
-- Mecanismo é dado pela ativação do receptor PPAR1. Melhora da sinalização insulínica pós-receptor (↑ R γ:
-
-GLUT-1, GLUT-4);
-
-- 2. Inibição da lipólise e redução dos ácidos graxos livres circulantes;
-
-- 3. Redução da produção hepática de glicose;
-
-A. Redução da resistência insulínica.
-
-- Apresenta maior efeito na resistência insulínica em comparação à metformina, bem como o menor efeito na gliconeogênese.
-
+- Atualmente, é a única representante do grupo das **glitazonas**
+- Mecanismo dado pela ativação do receptor **PPAR-γ**:
+  1. Melhora da sinalização insulínica pós-receptor (↑ GLUT-1, GLUT-4)
+  2. Inibição da lipólise e redução dos ácidos graxos livres circulantes
+  3. Redução da produção hepática de glicose
+  4. Redução da resistência insulínica
+- Apresenta maior efeito na resistência insulínica em comparação à metformina, bem como o menor efeito na gliconeogênese
 - Verificar Fluxograma 1 na próxima página
 
-- EFEITOS
+## Pioglitazona — Efeitos
 
-- Redução de glicemia de jejum em 35-65 mg/dL; Redução de HbA1c em 0,5-1,4%;
+- Redução da glicemia de jejum em 35-65 mg/dL
+- Redução de HbA1c em 0,5-1,4%
+- Reduz a progressão do pré-diabetes, reduz o espessamento médio intimal carotídeo, melhora o perfil lipídico, reduz a inflamação, transaminases e fibrose na **DHGNA** (doença hepática gordurosa não alcoólica)
+- São raras as ocorrências de hipoglicemia
 
-- Ainda: Reduz a progressão do pré-diabetes, reduz o espessamento médio intimal carotídeo, melhora o perfil lipídico, reduz a inflamação, transaminases e fibrose na
+> **Obs.:** reduz fibrose na doença hepática gordurosa não alcoólica, levando à melhora histopatológica!
 
-DHGNA (doença hepática gordurosa não alcoólica);
+## Pioglitazona — Efeitos Adversos
 
-- São raras as ocorrências de hipoglicemia.
+- Retenção hídrica e insuficiência cardíaca
+- Ganho ponderal, às custas de tecido adiposo marrom
+- Anemia, fraturas, câncer de bexiga (?)
 
-OBS.: Reduz fibrose na doença hepática gordurosa não alcoólica, levando à melhora histopatológica! EFEITOS ADVERSOS
+**Contraindicações:**
+- IC (insuficiência cardíaca) classe III e IV
+- Gravidez
+- Insuficiência hepática
 
-- Retenção hídrica e insuficiência cardíaca;
+## Sulfonilureias
 
-- Ganho ponderal Às custas de tecido adiposo marrom;
+- Representantes: gliclazida, glimepirida, glibenclamida
 
-- Anemia, fraturas, câncer de bexiga(?).
+### Relembrando a Secreção de Insulina
 
-- IC (insuficiência cardíaca) classe III e IV;
-
-- Gravidez;
-
-- Insuficiência hepática.
-
-## SULFONILUREIAS
-
-- Representantes: gliclazida, glimepirida, glibenclamida;
-
-## RELEMBRANDO A SECREÇÃO DE INSULINA
-
-- A presença de glicose na circulação sanguínea estimula o receptor GLUT2 da célula beta pancreática;
-
-- Tal estímulo leva ao fechamento dos canais de potássio das células beta-pancreáticas;
-
-- O fechamento dos canais de potássio provoca uma despolarização da membrana plasmática, com abertura dos canais de cálcio;
-
-- O influxo de Ca2+ para a célula beta-pancreática
-
-- decorre na exocitose dos grânulos contendo insulina pré-formada.
+- A presença de glicose na circulação sanguínea estimula o receptor **GLUT2** da célula beta pancreática
+- Tal estímulo leva ao fechamento dos canais de potássio das células beta-pancreáticas
+- O fechamento dos canais de potássio provoca uma despolarização da membrana plasmática, com abertura dos canais de cálcio
+- O influxo de Ca²⁺ para a célula beta-pancreática decorre na exocitose dos grânulos contendo insulina pré-formada
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -176,17 +135,22 @@ OBS.: Reduz fibrose na doença hepática gordurosa não alcoólica, levando à m
 
 <!-- page:3 -->
 
-Glitazonas Ativação do PPAR-y Melhora da sinalização Inibição da lipólise e insulínica pós-receptor redução doa ácidos Redução da produção (↑ GLUT-1, GLUT-4) graxos livres circulantes hepática de glicose Diminuição da resistência Redução da glicemia insulínica Redução da insulinêmia Fluxograma 1 : Mecanismo de ação da pioglitazona MECANISMO DE AÇÃO | Há aumento da secreção de insulina pré formada,
+Fluxograma 1: Mecanismo de ação da pioglitazona
 
-- Atuam na sinalização da célula beta pancreática, independentemente da glicemia decorrente fazendo com que o receptor de potássio fique da alimentação;
+> ⚠️ Trecho reconstruído a partir de OCR de fluxograma — confira contra a fonte original.
 
-constantemente fechado;
+Glitazonas → ativação do PPAR-γ → melhora da sinalização insulínica pós-receptor (↑ GLUT-1, GLUT-4) e inibição da lipólise, com redução dos ácidos graxos livres circulantes → redução da produção hepática de glicose e diminuição da resistência insulínica → redução da glicemia e da insulinemia.
 
-- Logo, demonstra maior risco de hipoglicemia → Membrana plasmática permanece produção elevada de insulina! sempre despolarizada.
+## Sulfonilureias — Mecanismo de Ação
 
-- Verificar Figura 2 Ocorre maior influxo de grânulos contendo cálcio para a célula beta pancreática.
+- Atuam na sinalização da célula beta pancreática, fazendo com que o receptor de potássio fique constantemente fechado
+- A membrana plasmática permanece sempre despolarizada
+- Ocorre maior influxo de cálcio para a célula beta pancreática
+- Há aumento da secreção de insulina pré-formada, independentemente da glicemia decorrente da alimentação
+- Logo, demonstra maior risco de hipoglicemia → produção elevada de insulina
+- Verificar Figura 2
 
-Figura 2: Regulação da secreção da insulina nas células beta
+Figura 2: Regulação da secreção da insulina nas células beta.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -194,66 +158,47 @@ Figura 2: Regulação da secreção da insulina nas células beta
 
 <!-- page:4 -->
 
-Células entéricas DPP4 Degradação INIBIDORES DA DPP4 Células L da mucosa instestinal Fluxograma 2: Mecanismo de ação dos inibidores de DPP-4 EFEITOS I
+Fluxograma 2: Mecanismo de ação dos inibidores de DPP-4 — células entéricas produzem DPP-4, que degrada o GLP-1 produzido pelas células L da mucosa intestinal.
 
-- Redução da glicemia de jejum em 60-70 mg/dL;
+## Inibidores da DPP-4 — Efeitos
 
-- Redução da HbA1c em 1,5-2%;
+- Redução da glicemia de jejum em 60-70 mg/dL
+- Redução da HbA1c em 1,5-2%
+- Reduz complicações microvasculares, principalmente retinopatia diabética; há ampla experiência no uso da droga, além de ser disponível no SUS
 
-- Reduz complicações microvasculares, principalmente retinopatia diabética e há ampla experiência no uso da droga, além de ser disponível no SUS.
+## Inibidores da DPP-4 — Efeitos Adversos e Complicações
 
-## EFEITOS ADVERSOS E COMPLICAÇÕES
+- **Principais efeitos adversos:** hipoglicemia; ganho ponderal
+- **Principais contraindicações:** clearance de creatinina < 30 mL/min; insuficiência hepática; sinais de deficiência grave de insulina; ineficaz com pâncreas já em falência; infecções graves → aumentam o risco de hipoglicemia
 
-- Principais efeitos adversos Hipoglicemia; Ganho ponderal;
+## Acarbose — Mecanismo de Ação
 
-- Principais contraindicações: Clearance de creatinina < 30 mL/min; Insuficiência hepática; Sinais de deficiência grave de insulina; Ineficaz com pâncreas já em falência. Infecções graves → aumentam o risco de hipoglicemia.
+- Inibe a ação das glicosidases na membrana dos enterócitos → retardo na absorção intestinal dos carboidratos
+- Uso para reduzir a glicemia pós-prandial
 
-## ACARBOSE
+## Acarbose — Efeitos
 
-## MECANISMO DE AÇÃO
+- Redução da glicemia de jejum em 20-30 mg/dL
+- Redução da HbA1c em 0,5-0,8%
+- Previne DM2 em pré-DM, reduz o espessamento médio intimal carotídeo, melhora o perfil lipídico, reduz os níveis glicêmicos pós-prandiais, reduz eventos cardiovasculares
+- Rara ocorrência de hipoglicemia
 
-- Inibe a ação das glicosidases na membrana dos enterócitos E Retardo na absorção intestinal dos carboidratos. Uso para reduzir glicemia pós prandial.
+## Acarbose — Efeitos Adversos e Contraindicações
 
-## EFEITOS
+- **Principais efeitos adversos:** meteorismo e flatulência
+- **Principais contraindicações:** doenças disabsortivas intestinais; TFG < 25
 
-- Redução da glicemia de jejum em 20-30 mg/dL;
+## Inibidores da DPP-4
 
-- Redução da Hb1Ac em 0,5-0,8%;
-
-- Ainda previne DM2 em pré-DM, reduz o espessamento médio intimal carotídeo, melhora perfil lipídico, reduz os níveis glicêmicos pós-prandiais, reduz C eventos cardiovasculares
-
-- Rara ocorrência de hipoglicemia.
-
-## EFEITOS ADVERSOS E CONTRAINDICAÇÕES
-
-- Principais efeitos adversos: Meteorismo e flatulência.
-
-- Principais contraindicações: Doenças disabsortivas intestinais; TFG <25.
-
-Aumenta secreção de GLP-1 insulina Redução secreção glucagon Redução das glicemias de jejum e pós-prandial
-
-## INIBIDORES DA DPP-4
-
-- Gliptinas Sitagliptina, alogliptina, saxagliptina, vildagliptina, linagliptina, evogliptina.
-
-- Estímulo das células L da mucosa intestinal a partir da alimentação → produção do hormônio GLP-1. GLP-1 tem mecanismo no aumento da secreção de insulina, dependente do alimento e na redução da secreção do glucagon → redução das glicemias no jejum e pós-prandial.
-
-- As células entéricas também produzem a enzima DDP-4. Degrada o GLP-1, comprometendo a produção de insulina pelo pâncreas.
-
-- Inibidores de DPP-4 agem diretamente no aumento dos níveis de GLP-1 e, consequentemente, no favorecimento da secreção de insulina e na redução dos níveis de glucagon.
-
+- **Gliptinas:** sitagliptina, alogliptina, saxagliptina, vildagliptina, linagliptina, evogliptina
+- Estímulo das células L da mucosa intestinal a partir da alimentação → produção do hormônio **GLP-1**. O GLP-1 atua aumentando a secreção de insulina (dependente do alimento) e reduzindo a secreção de glucagon → redução das glicemias no jejum e pós-prandial
+- As células entéricas também produzem a enzima **DPP-4**, que degrada o GLP-1, comprometendo a produção de insulina pelo pâncreas
+- Os inibidores de DPP-4 agem diretamente no aumento dos níveis de GLP-1 e, consequentemente, no favorecimento da secreção de insulina e na redução dos níveis de glucagon
 - Verificar Fluxograma 2
+- Redução da glicemia de jejum em 20 mg/dL
+- Redução da HbA1c em 0,6-0,8%
+- Seguros, com baixos efeitos colaterais, efeito neutro no peso; podem ser usados em qualquer estágio da DRC (doença renal crônica), com ajuste de dose em alguns casos
+- Rara ocorrência de hipoglicemia
 
-- Redução da glicemia de jejum em 20 mg/dL;
-
-- Redução da HbA1c em 0,6-0,8%;
-
-- Segura, têm baixos efeitos colaterais, efeito neutro no peso, pode ser usado em qualquer estágio da alguns casos;
-
-DRC (doença renal crônica), com ajuste de dose em
-
-- Rara ocorrência de hipoglicemia.
-
-## CONTRAINDICAÇÃO
-
-- Hipersensibilidade à medicação;
+**Contraindicação:**
+- Hipersensibilidade à medicação

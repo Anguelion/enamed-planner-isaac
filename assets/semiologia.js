@@ -1452,7 +1452,7 @@
     const s = document.createElement('style');
     s.id = 'semio-styles';
     s.textContent = `
-    .semio-wrap{--semio-acc:#2f7d6f;--semio-acc2:#1f5a50;max-width:860px}
+    .semio-wrap{--semio-acc:#2f7d6f;--semio-acc2:#1f5a50;max-width:1200px;margin:0 auto;width:100%}
     .semio-muted{color:var(--muted,#667085);margin:4px 0 0}.semio-muted.sm{font-size:.82rem}
     .semio-eyebrow{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--semio-acc);font-weight:700}
     .semio-subnav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;position:sticky;top:0;background:var(--bg,#fff);padding:6px 0;z-index:2}

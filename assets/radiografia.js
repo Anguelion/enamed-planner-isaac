@@ -674,7 +674,7 @@
     .radio-trail-step.next{background:linear-gradient(90deg,rgba(18,97,245,.06),transparent);border-radius:8px;padding-left:8px;margin-left:-8px}
     .radio-trail-step.next .radio-trail-dot{border-color:var(--accent,#1261f5)}
     .radio-tag.next{background:var(--accent,#1261f5);color:#fff}
-    .radio-aula-flow{display:flex;flex-direction:column;gap:14px;max-width:760px}
+    .radio-aula-flow{display:flex;flex-direction:column;gap:14px;max-width:1200px;margin:0 auto;width:100%}
     .radio-aula-p{margin:0;line-height:1.65;font-size:15px}
     .radio-aula-tip{background:#fff8e1;border:1px solid #f0d98c;border-radius:10px;padding:12px 14px;font-size:14px;line-height:1.6;color:#5c4a10}
     :root[data-theme="dark"] .radio-aula-tip{background:#332b0f;border-color:#5c4a10;color:#f0d98c}

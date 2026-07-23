@@ -1,71 +1,83 @@
-# Abdome Agudo Inflamatório Colelitíase
+# Abdome Agudo Inflamatório - Colelitíase
 
 <!-- page:1 -->
 
-## ABDOME AGUDO INFLAMATÓRIO
+## Abdome Agudo Inflamatório
 
-## COLELITÍASE
+## Colelitíase
 
-## COLELITÍASE 4 F‘FORTY’
+> ⚠️ Trecho reconstruído a partir de OCR de duas colunas — confira contra a fonte original.
 
-- Prevalência = 20% da população
+### Colelitíase: Cálculos em Vesícula Biliar
 
-- Feminino Aumento gradual com a idade
+- **Prevalência** = até 20% da população, com aumento gradual com a idade;
+- Cerca de 20% dos 20% desenvolvem sintomas;
+- **Sintomas + cálculos = colecistectomia**.
 
-- Fértil
+### Fatores de Risco — 4 F's ("Forty")
 
-- 20% dos 20% desenvolvem sintomas
+- **F**emale (feminino);
+- **F**ertile (fértil);
+- **F**amilial (familiar);
+- **F**at (obesidade), além de "forty" (idade em torno de 40 anos).
 
-- Familiar
+### Quando Operar Assintomáticos?
 
-- Sintomas + cálculos = Colecistectomia
+- Drenagem anômala;
+- Vesícula em porcelana;
+- Adenoma, pólipos;
+- Cálculos grandes > 3 cm;
+- Microcálculos, jovens, comorbidades.
 
-- Fat
+### Epidemiologia
 
-## QUANDO OPERAR ASSINTOMÁTICOS?
+- **Prevalência** = até 20%, com aumento gradual com a idade do paciente;
+- Apenas 20% desses têm sintomas.
 
-- Drenagem anômala, Vesícula em porcelana,
+### Fisiopatologia
 
-Adenoma, Pólipos, Cálculos grandes > 3cm, Microcálculos, jovens, comorbidades
+- **Triângulo da bile**: sais biliares x lecitina x colesterol;
+- Desbalanço em um dos componentes (excesso de colesterol ou sais biliares) favorece a formação de cálculos;
+- Maioria é por excesso de colesterol;
+- Cálculos pigmentares (10%) = hemólise crônica, falciforme, talassemia, esferocitose, prótese, cirrose, infecção biliar.
 
-## COLELITÍASE: CÁLCULOS EM
+### Fatores de Risco (Detalhado)
 
-| Piora após a alimentação (alimentos gordurosos);
+- **4 F's**: "forty", fértil, familiar, feminino, fat;
+- Doença ileal, cirrose, anemia hemolítica, hipertrigliceridemia;
+- Estase biliar (DM, NPT, pós-vagotomia);
+- Doenças hemolíticas, anemia falciforme;
+- Uso de ceftriaxona, ACO, obesidade, gestação, lesão espinal;
+- Bypass gástrico;
+- Jovens (< 50 anos);
+- DM, NPT prolongada.
 
-## VESÍCULA BILIAR | Autolimitado (6h) e episódico
+### Quadro Clínico
 
-- Assintomáticos
+- Dor em HCD, tipo cólica;
+- Piora após a alimentação (alimentos gordurosos);
+- Autolimitado (6h) e episódico;
+- Assintomáticos.
 
-## EPIDEMIOLOGIA
+### Sintomas Sem Cálculos
 
-- Prevalência = até 20%; DIAGNÓSTICO Há aumento gradual com a idade do paciente;
+- Pancreatite sem causa aparente;
+- Diagnóstico diferencial preciso (gastrite, SII, etc.);
+- **Discinesia** biliar.
 
-- Ultrassom de abdome superior APENAS 20% desses têm sintomas.
+### Diagnóstico
 
-- Triângulo da bile: INDICAÇÃO CIRÚRGICA Sais biliares x lecitina x colesterol;
+- **Ultrassom de abdome superior**;
+- USG endoscópico;
+- Análise da bile;
+- Colecistografia / DISIDA.
 
-- Sintomáticos (sempre); Desbalanço em um dos componentes (excesso
+### Indicação Cirúrgica
 
+- Sintomáticos (sempre);
 - Assintomáticos se:
-
-de colesterol ou sais biliares) favorece a formação | Drenagem anômala; de cálculos. | Vesícula em porcelana;
-
-- Fatores de risco 4 F’s; | Adenoma, pólipos; “Forty”, fértil, familiar, feminino, fat; | Cálculos grandes > 3 cm (pode evoluir para Doença ileal, cirrose, anemia colecistite aguda), microcálculos (lama biliar pode hemolítica, hipertrigliceridemia; preceder evolução de pancreatite); Estase biliar (DM, NPT, pós-vagotomia); | Doenças hemolíticas, anemia falciforme; Uso de ceftriaxone, ACO, obesidade, gestação, | Bypass gástrico;
-
-lesão espinal. | Jovens (< 50 anos);
-
-- Formação do cálculo; | DM, NPT prolongada. Maioria é por excesso de colesterol; Cálculos pigmentares (10%) = hemólise crônica, SINTOMAS SEM CÁLCULOS falciforme, talassemia, esferocitose, prótese, cirrose,
-
-- Pancreatite sem causa aparente infecção biliar.
-
-- Diagnóstico diferencial preciso (Gastrite, SII, etc)
-
-- USG endoscópico
-
-QUADRO CLÍNICO:
-
-- Análise da bile
-
-- Dor em HCD
-
-- Colecistografia / DISIDA Tipo Cólica; z *Discenesia*
+  - Drenagem anômala;
+  - Vesícula em porcelana;
+  - Adenoma, pólipos;
+  - Cálculos grandes > 3 cm (pode evoluir para colecistite aguda);
+  - Microcálculos (lama biliar pode preceder evolução de pancreatite).

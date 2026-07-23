@@ -1,140 +1,150 @@
-# Descolamento prematuro de placenta
+# Descolamento Prematuro de Placenta
 
 <!-- page:1 -->
 
-## DESCOLAMENTO PREMATURO
+## Descolamento Prematuro de Placenta (DPP)
 
-## DE PLACENTA
+## Resumo
 
-Descolamento prematuro de placenta
+**Definição**
 
-## DEFINIÇÃO CONDUTA
+- Descolamento parcial ou completo da placenta, intempestiva e prematura, no corpo do útero, após a 20ª semana de gestação.
 
-- Descolamento parcial ou completo da placenta,
+**Conduta**
 
 - Monitorização maternofetal e amniotomia;
+- Parto pela via mais rápida (exceto se paciente estável e feto morto).
 
-intempestiva e prematura no corpo do útero, após a
+**Fatores de Risco**
 
-- Parto pela via mais rápida;
+- Trauma abdominal e síndromes hipertensivas.
 
-20a semana de gestação. | Exceto se paciente estável e feto morto.
-
-## FATORES DE RISCO COMPLICAÇÕES
-
-- Trauma abdominal e Síndromes hipertensivas
+**Complicações**
 
 - Óbito fetal;
-
-## CLÍNICA
-
 - Prematuridade;
-
-- Sangramento vaginal, Dor abdominal, Hipertonia,
-
 - Coagulação intravascular disseminada;
-
-Taquissistolia, Sofrimento fetal, Hemoâmnio.
-
 - Choque hemorrágico;
-
-## DIAGNÓSTICO
-
 - Útero de Couvelaire.
 
-- Eminentemente clínico
+**Clínica**
 
-## DESCOLAMENTO PREMATURO DE
+- Sangramento vaginal, dor abdominal, hipertonia, taquissistolia, sofrimento fetal, hemoâmnio.
 
-- A taxa de mortalidade perinatal é aproximadamente
+**Diagnóstico**
 
-## PLACENTA (DPP) 20 vezes maior em relação às gestações sem DPP
+- Eminentemente clínico.
 
-- A maioria das mortes perinatais ocorrem intraútero;
+- A taxa de mortalidade perinatal é aproximadamente **20 vezes maior** em relação às gestações sem DPP;
+- A maioria das mortes perinatais ocorre intraútero;
+- A prematuridade é a principal causa de mortalidade pós-natal.
 
-## DEFINIÇÃO
+## Definição
 
-- A prematuridade é a principal causa de mortalidade
+- Descolamento parcial ou completo da placenta normalmente inserida, de maneira intempestiva, antes da expulsão do feto, após a 20ª semana de gestação.
 
-- Descolamento parcial ou completo da placenta pós natal.
+## Epidemiologia
 
-normalmente inserida, de maneira intempestiva antes da expulsão do feto, após a 20a semana de gestação. FATORES DE RISCO
+- A incidência varia de **0,3 a 1%**.
 
-- A Tabela 1 exemplifica os fatores de risco para
+## Fatores de Risco
 
-EPIDEMIOLOGIA DPP associados aos fatores sociodemográifcos,
+- A Tabela 1 exemplifica os fatores de risco para DPP, associados aos fatores sociodemográficos, comportamentais e maternos.
 
-- A incidência varia de 0,3 a 1%; comportamentais e maternos.
+Tabela 1: Fatores de risco para Descolamento Prematuro de Placenta.
 
-Tabela 1: Fatores de risco para Descolamento Prematuro de Placenta Sociodemográficos e Comportamentais Idade materna ≥35 anos e < 20 anos ≥3 partos Raça negra Mães solo Tabagismo, uso de álcool e drogas Infertilidade de causa indeterminada Fatores Maternos na Gestação Atual Síndrome hipertensivas - responsável por até 50% dos casos de DPP não traumáticos Hiper-homocisteinemia Diabetes pré-gestacional Trombofilias Hipotireoidismo Anemia Malformações uterinas Rotura prematura de membranas ovulares Corioamnionite Oligoâmnio/polidrâmnio Placenta prévia Gestação múltipla Trauma (automobilístico, brevidade do cordão, versão externa, torção do útero gravídico, retração uterina intensa)
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Amniocentese/cordocentese
+**Sociodemográficos e Comportamentais:**
+
+- Idade materna ≥ 35 anos e < 20 anos;
+- ≥ 3 partos;
+- Raça negra;
+- Mães solo;
+- Tabagismo, uso de álcool e drogas;
+- Infertilidade de causa indeterminada.
+
+**Fatores Maternos na Gestação Atual:**
+
+- Síndromes hipertensivas (responsáveis por até 50% dos casos de DPP não traumáticos);
+- Hiper-homocisteinemia;
+- Diabetes pré-gestacional;
+- Trombofilias;
+- Hipotireoidismo;
+- Anemia;
+- Malformações uterinas;
+- Rotura prematura de membranas ovulares;
+- Corioamnionite;
+- Oligoâmnio/polidrâmnio;
+- Placenta prévia;
+- Gestação múltipla;
+- Trauma (automobilístico, brevidade do cordão, versão externa, torção do útero gravídico, retração uterina intensa);
+- Amniocentese/cordocentese.
 
 ---
 
 <!-- page:2 -->
 
-Figura 2: Tipos de Descolamento Prematuro de Placenta. A: Desc (subcoriônico); C: descolamento retroplacentário com exterioriza sangramento oculto.
+Figura 2: Tipos de Descolamento Prematuro de Placenta. A: descolamento subamniótico (pré-placentário); B: descolamento marginal (subcoriônico); C: descolamento retroplacentário com exteriorização do sangramento; D: descolamento retroplacentário com sangramento oculto.
 
-Síndromes Hipertensivas:
+**Síndromes Hipertensivas:**
 
-- Fator clínico mais associado com o DPP;
+- Fator clínico mais associado ao DPP;
+- Associado à hipertensão arterial crônica materna, pré-eclâmpsia sobreposta e pré-eclâmpsia grave.
 
-- Associado à hipertensão arterial crônica materna, préeclâmpsia sobreposta e pré-eclâmpsia grave.
-
-Uso de cocaína:
+**Uso de Cocaína:**
 
 - Devido à vasoconstrição aguda, que leva à isquemia, vasodilatação reflexa e quebra da integridade vascular.
 
-Tabagismo:
+**Tabagismo:**
 
-- Associado a um risco 2,5 maior de DPP e óbito fetal;
+- Associado a um risco 2,5 vezes maior de DPP e óbito fetal;
+- Mecanismo relacionado à isquemia periférica decidual, que promove a erosão de vasos.
 
-- Mecanismo relacionado à isquemia periférica decidual que promove a erosão de vasos.
+**Fatores Mecânicos (trauma):**
 
-Fatores mecânicos:
+- Costumam ser mais graves.
 
-- Costumam ser mais graves
-
-## FISIOPATOLOGIA
+## Fisiopatologia
 
 - A fisiopatologia está diretamente relacionada à região da decídua basal.
 
-Causa Base: trauma, anomalias vasculares placentárias ou placentação anômala ↓ Ruptura dos vasos maternos na decídua basal ↓ Sangue acumulado atinge a zona de clivagem deciduoplacentária e inicia a separação entre a placenta e o útero ↓ Porção descolada da placenta é incapaz de permutar gases e nutrientes Figura 1: Fisiopatologia.
+Figura 1: Fisiopatologia.
 
-- A Figura 2 destaca os tipos de DPP. colamento subamniótico (pré-placentário). B: descolamento marginal ação do sangramento; D: descolamento retroplacentário com
+- Causa base: trauma, anomalias vasculares placentárias ou placentação anômala;
+- → ruptura dos vasos maternos na decídua basal;
+- → sangue acumulado atinge a zona de clivagem deciduoplacentária e inicia a separação entre a placenta e o útero;
+- → a porção descolada da placenta é incapaz de permutar gases e nutrientes.
 
-CLASSIFICAÇÃO Classificação de Sher:
+- A Figura 2 destaca os tipos de DPP.
 
-- Grau I: Assintomático ou sangramento genital discreto sem hipertonia uterina significativa.
+## Classificação
 
-- Grau II: feto vivo, porém com vitalidade Sangramento genital moderado com hipertonia uterina; Repercussões hemodinâmicas na mãe;
+**Classificação de Sher:**
 
-. fetal prejudicada.
+- **Grau I**: assintomático ou sangramento genital discreto, sem hipertonia uterina significativa;
+- **Grau II**: feto vivo, porém com vitalidade fetal prejudicada; sangramento genital moderado com hipertonia uterina; repercussões hemodinâmicas na mãe;
+- **Grau III**: óbito fetal;
+  - IIIA: com coagulopatia instalada;
+  - IIIB: sem coagulopatia instalada.
 
-- Grau III: óbito fetal IIIA: com coagulopatia instalada; IIIB: sem coagulopatia instalada.
+## Quadro Clínico
 
-## QUADRO CLÍNICO
-
-- Sangramento vaginal vermelho escuro;
-
+- Sangramento vaginal vermelho escuro (pode estar ausente);
 - Dor abdominal súbita e intensa;
-
-- Hipertonia / Taquissistolia;
-
+- Hipertonia / taquissistolia;
 - Altura uterina aumentada (se sangramento oculto);
-
 - Sofrimento fetal agudo;
-
-- Convergência tensional (PAs e PAd mais próximas);
-
+- Convergência tensional (PAS e PAD mais próximas);
 - Hemoâmnio.
 
-Sangramento vaginal pode estar ausente. DIAGNÓSTICO
+## Diagnóstico
 
-- O diagnóstico de DPP é eminentemente clínico. Não devem ser realizados exames complementares, como a ultrassonografia, para definição diagnóstica.
+- O diagnóstico de DPP é **eminentemente clínico**. Não devem ser realizados exames complementares, como a ultrassonografia, para definição diagnóstica.
 
-CONDUTA Monitorização
+## Conduta
+
+**Monitorização**
 
 - Avaliação dos sinais vitais maternos e da vitalidade fetal.
 
@@ -146,33 +156,41 @@ CONDUTA Monitorização
 
 <!-- page:3 -->
 
-DPP Feto vivo Feto morto Feto vivo Gestante estável Parto iminente Instabilidade Sim Não materna SFA TP lento Parto Cesárea Cesárea vaginal Figura 4: Protocolo de conduta na assistência ao descolamento prem Avaliação laboratorial C
+Figura 4: Protocolo de conduta na assistência ao descolamento prematuro de placenta.
+
+> ⚠️ Fluxograma reconstruído a partir de OCR — confira contra a fonte original.
+
+- **DPP com feto morto**: gestante estável → parto vaginal; instabilidade materna → cesárea.
+- **DPP com feto vivo**: parto iminente → parto vaginal; sofrimento fetal agudo (SFA) ou trabalho de parto lento → cesárea.
+
+**Avaliação laboratorial**
 
 - Tipagem sanguínea, hemograma completo e coagulograma.
 
-Amniotomia
+**Amniotomia**
 
-- Redução do hematoma retroplacentário e da passagem de tromboplastina para a circulação materno
+- Redução do hematoma retroplacentário e da passagem de tromboplastina para a circulação materna.
 
-Figura 3: Hemoâmnio. ESTABILIDADE HEMODINÂMICA A E VITALIDADE FETAL
+Figura 3: Hemoâmnio.
 
-- A via de parto é dependente da estabilidade A hemodinâmica materna e vitalidade fetal.
+## Estabilidade Hemodinâmica e Vitalidade Fetal
 
-- Verificar Figura 4 A Feto morto vaginal maturo de placenta.
+- A via de parto é dependente da estabilidade hemodinâmica materna e da vitalidade fetal;
+- Gestante estável → parto vaginal; instável → cesárea.
 
-Gestante estável SSiimm NNããoo Parto Cesárea COMPLICAÇÕES
+## Complicações
 
-- Útero de Couvelaire: infiltração de sangue no miométrio; Maior risco de atonia
-
-- Sem necessidade de histerectomia imediata
+- **Útero de Couvelaire**: infiltração de sangue no miométrio; maior risco de atonia; sem necessidade de histerectomia imediata.
 
 Figura 5: Útero de Couvelaire.
 
-## REFERÊNCIAS
+## Referências
 
-Figura 2: Tipos de Descolamento Prematuro de Placenta. Acervo Medcof Figura 3: Hemoâmnio. Acervo Medcof Figura 5: Útero de Couvelaire.
+Figura 2: Tipos de Descolamento Prematuro de Placenta. Acervo Medcof.
 
-Acervo Medcof.
+Figura 3: Hemoâmnio. Acervo Medcof.
+
+Figura 5: Útero de Couvelaire. Acervo Medcof.
 
 ![Figura do material - página 3](figure-003-1.webp)
 

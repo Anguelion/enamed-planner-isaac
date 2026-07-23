@@ -1,66 +1,57 @@
-# Pâncreas e Vias Biliares Pancreatite Crônica
+# Pâncreas e Vias Biliares: Pancreatite Crônica
 
 <!-- page:1 -->
 
-## PÂNCREAS E VIAS BILIARES
+## Pâncreas e Vias Biliares - Pancreatite Crônica
 
-## PANCREATITE CRÔNICA
+## Resumo
 
-Principais causas:
+**Principais causas:**
 
-- ALCOOLISMO (tabagismo POTENCIALIZA o risco)
+- Alcoolismo (tabagismo potencializa o risco);
+- Idiopático (causas muitas vezes não determinadas).
 
-- Idiopático (causas muitas vezes não determinadas)
+**Demais fatores:**
 
-Demais fatores:
+- Hereditários;
+- Mutações não hereditárias;
+- Malformações (pâncreas divisum);
+- Obstruções ductais (IPMN, pós-traumático, pós-cirúrgico);
+- Autoimune.
 
-- Hereditários
+**Quadro clínico:**
 
-- Mutações não-hereditárias
+- Dor (80%);
+- Insuficiência pancreática: exócrina (diarreia, esteatorreia, desnutrição) e endócrina (diabetes pancreatogênico).
 
-- Malformações (pâncreas divisum)
+**Diagnóstico - Imagem:**
 
-- Obstruções ductais (IPMN, pós traumático, pós cirúrgico)
+- **TC**: mais disponível, menor sensibilidade, não invasivo;
+- **RM (+ colangioRM)**: menos acessível, não invasiva, mais cara;
+- **EUS**: melhor acurácia, mais cara, menos acessível e invasiva.
 
-- Autoimune
+## Recordando o Básico
 
-Quadro clínico:
+**Embriologia, Anatomia e Fisiologia:**
 
-- Dor (80%)
+> ⚠️ Trecho reconstruído a partir de OCR — confira contra a fonte original.
 
-- Insuficiência pancreática: exócrina (diarreia, esteatorreia, desnutrição) e endócrina
+- O pâncreas é formado como anexo ao tubo digestivo;
+- **Broto ventral** → origina a cabeça do pâncreas e o processo uncinado; seu ducto se funde à via biliar;
+- **Broto dorsal** → origina o corpo e a cauda do pâncreas;
+- Os brotos ventral e dorsal se aproximam e se fundem após a rotação do tubo digestivo, com o ducto da porção dorsal formando o ducto de Wirsung;
+- Uma parcela do ducto do broto dorsal se oblitera (ducto de Santorini) — no pâncreas divisum, não há fusão dos brotos, e a obliteração do ducto de Santorini com drenagem ineficaz para a papila duodenal menor leva a quadros de pancreatite de repetição.
 
-(diabetes pancreatogênico) Diagnóstico: IMAGEM
+Figura 1: Em roxo: precursor de hepatócitos e fígado; em verde: precursor da vesícula e via biliar extra-hepática.
 
-- TC: Mais disponível Menor sensibilidade Não invasivo
+**Tratamento:**
 
-- RM (+ colangioRM): Menos acessível Não invasivo Mais caro
-
-- EUS: Melhor acurácia Caro, menos acessível e invasivo
-
-## RECORDANDO O BÁSICO
-
-EMBRIOLOGIA, ANATOMIA E FISIOLOGIA:
-
-- Pâncreas é formado como anexo ao tubo digestivo. Ventral → cabeça do pâncreas e processo uncinado. Ducto da porção ventral se funde biliar Broto dorsal brotos ventral e dorsal do pâncreas se aproximam e fusi
-
-Broto dorsal e broto ventral se fundem após rotação do tubo digestivo. Rot Vesícula Brotos ventral Figura 1: Em roxo: precursor de hepatócitos e fígado. Em verde fu D.V Tratamento:
-
-- Antes de mais nada: CESSAR A CAUSA
-
-- Avaliação/acompanhamento nutricional
-
-- Analgesia escalonada
-
-- Tratamento da insuficiência pancreática
-
-- Cirurgia: melhor desfecho no controle da DOR Se tiver ducto dilatado: PANCREATOJEJUNOSTOMIA Se não tiver ducto dilatado:
-
-ressecção pancreática
-
-- Endoscopia: É alternativa, mas de menor eficácia a longo prazo. Tem boa fundamentação para tratar complicações! Primeira linha no tratamento dos pseudocistos sintomáticos Primeira linha no tratamento intervencionista da ascite pancreática / derrame pleural pancreático com ducto de porção dorsal formando ducto de Wirsung. Uma parcela do ducto do broto dorsal se oblitera obliteração do ducto de santorini com drenagem ineficaz para papila duodenal menor levando a quadros de pancreatite de repetição.
-
-(ducto de santorini) - pâncreas divisum não tem tação Porção dorsal Porçao ventral ionam após a rotação do broto ventral ao redor do intestino utura via biliar extra hepática.
+- Antes de mais nada: cessar a causa;
+- Avaliação/acompanhamento nutricional;
+- Analgesia escalonada;
+- Tratamento da insuficiência pancreática;
+- **Cirurgia**: melhor desfecho no controle da dor. Se ducto dilatado: pancreatojejunostomia. Se ducto não dilatado: ressecção pancreática;
+- **Endoscopia**: é alternativa, mas de menor eficácia a longo prazo. Tem boa fundamentação para tratar complicações! É primeira linha no tratamento dos pseudocistos sintomáticos e primeira linha no tratamento intervencionista da ascite pancreática/derrame pleural pancreático.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -68,69 +59,41 @@ ressecção pancreática
 
 <!-- page:2 -->
 
-## ESTRUTURAS ANATÔMICAS
+## Estruturas Anatômicas
 
-- Cabeça do pâncreas: em contato com a segunda porção duodenal.
+- **Cabeça do pâncreas**: em contato com a segunda porção duodenal;
+- **Processo uncinado**: porção mais inferior e medial da cabeça do pâncreas, que tem contato com os vasos mesentéricos superiores;
+- **Colo**;
+- **Corpo**;
+- **Cauda**.
 
-Cabeça
+- Verificar Figura 2;
+- Verificar Figura 3.
 
-- Processo uncinado: porção mais inferior e medial da cabeça do pâncreas que tem contato com os vasos cabeça do pâncreas que tem contato com os vasos mesentéricos superiores;
+**Vascularização:**
 
-- Colo;
+- Veia mesentérica superior (VMS), veia esplênica (drena baço, cauda e corpo pancreático, vasos gástricos curtos, recebe veia mesentérica inferior);
+- Artéria mesentérica superior;
+- Tronco celíaco (TC) se divide em artéria hepática comum, artéria gástrica esquerda e artéria esplênica.
 
-- Corpo;
+## Função Exócrina do Pâncreas
 
-- Cauda.
+- **Estímulos**: secretina e colecistocinina (CCK);
+- O pâncreas sofre estímulos hormonais (colecistocinina, secretina), sinalizando a chegada de alimentos no tubo digestivo, ativando proenzimas:
+  - Amilase pancreática: quebra macromoléculas de carboidratos;
+  - Lipase pancreática: auxilia na digestão das gorduras, junto com a bile;
+  - Outros: tripsinogênio, quimiotripsinogênio, pró-carboxipeptidase, pró-elastase, inibidor da tripsina (SPINK1).
+- Todas as pró-enzimas não são ativadas dentro do pâncreas em atividade normal. São ativadas pelas enteroquinases ao caírem no tubo digestivo.
 
-- Verificar Figura 2
+- Verificar Figura 4.
 
-- Verificar Figura 3
+- **SPINK1**: inativa enzimas enquanto estão dentro do pâncreas. Quando há alteração genética que leva ao seu defeito de ação, ocorre ativação de pró-enzimas dentro do pâncreas.
 
-- Veia mesentérica superior (VMS), veia esplênica curtos, recebe veia mesentérica inferior). Artéria mesentérica superior. Tronco celíaco (TC) se divide em artéria hepática comum, artéria gástrica esquerda e artéria esplênica.
+Figura 4: Pâncreas normal — estímulo por secretina e CCK sobre os ácinos, produzindo amilase, lipase, tripsinogênio, quimiotripsinogênio, pró-carboxipeptidase, pró-elastase e inibidor da tripsina.
 
-(drena baço, cauda e corpo pancreático, gástrico
-
-## FUNÇÃO EXÓCRINA DO PÂNCREAS
-
-- Estímulos: secretina e colecistocinina (CCK).
-
-- Pâncreas sofre estímulos hormonais (colecistoquinina, secretina) sinalizando chegada de alimentos no tubo digestivo, ativando proenzimas: Amilase pancreática - quebra macro carboidratos Lipase pancreática - auxilia na digestão das gorduras junto com bile Outros: tripsinogênio, quimiotripsinogênio, prócarboxipeptidase, pró-elastase, inibidor da tripsina (SPINK1)
-
-- Todas pró-enzimas não são ativadas dentro do pâncreas em atividade normal. São ativadas pelas enteroquinases ao cair no tubo digestivo.
-
-- Verificar Figura 4
-
-- SPINK1: inativa enzimas enquanto estão dentro do pâncreas. Quando possui alteração genética que leva a seu defeito de ação, leva a ativação de pró-enzimas dentro do pâncreas.
-
-Secretina CCK Ácinos:
-
-- Amilase
-
-- Lipase
-
-- Tripsinogêni
-
-- Quimiotripsi
-
-- Pró-carboxi
-
-- Pró-elastase
-
-- Inibidor da t
-
-Figura 4: Pâncreas Normal Cauda Corpo Processo Colo Uncinado Figura 2: Anatomia TC Veia Esplênica
-
-## VMS
-
-## AMS
+Figura 2: Anatomia — cabeça, processo uncinado, colo, corpo, cauda; tronco celíaco, veia esplênica, VMS, AMS.
 
 Figura 3: Imagem com pâncreas seccionado.
-
-- Amilase
-
-- Lipase
-
-- Tripsina io - Quimiotripsina inogênio - Carboxipeptidase ipeptidase - Elastase e tripsina (SPINK)
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -140,57 +103,44 @@ Figura 3: Imagem com pâncreas seccionado.
 
 <!-- page:3 -->
 
-## PÂNCREAS NORMAL ETIOLOGIA
+## Pâncreas Normal
 
-- Envolvimento de fatores ambientais e fatores genéticos; Fatores genéticos podem ou não ser hereditários;
+Figura 5: Microscopia de um pâncreas normal. Presença de ácinos pancreáticos na periferia, com formação de ductos das glândulas exócrinas. Ilhotas de Langerhans: células endócrinas com produção de hormônios pancreáticos (insulina, glucagon, somatostatina).
 
-- A maioria dos pacientes tem mais de uma
+## Introdução
 
-Figura 5: Microscopia de um pâncreas normal
+- **Definição**: inflamação persistente que leva à substituição progressiva do parênquima normal por fibrose;
+- Manifesta-se por: dor abdominal crônica (principal sintoma); disfunção glandular endócrina e/ou exócrina (mais tardia);
+- **Epidemiologia (EUA)**: incidência de 5 a 12/100.000 hab; prevalência de 50/100.000 hab;
+- **Histologia**: perda de ácinos e ilhotas, com substituição por fibrose, podendo formar focos de calcificação intrapancreáticos (característico de pancreatite alcoólica).
 
-- Microscopia de um pâncreas normal. Presença de ácinos pancreáticos na periferia com formação de ductos das glândulas exócrinas. Ilhotas de langerhans, células endócrinas com produção de hormônios pancreáticos (insulina, glucagon, somatostatina).
+- Verificar Figura 6.
 
-## INTRODUÇÃO
+Figura 6: Atrofia progressiva do parênquima pancreático. Seta: foco de calcificação.
 
-- Definição: inflamação persistente que leva à substituição progressiva do parênquima normal por fibrose;
+## Etiologia
 
-- Manifesta-se por: Dor abdominal crônica (principal sintoma); Disfunção glandular (endócrina e/ou exócrina)
+- Envolvimento de fatores ambientais e fatores genéticos; os fatores genéticos podem ou não ser hereditários;
+- A maioria dos pacientes tem mais de uma etiologia envolvida.
 
-(mais tardio);
+**Causas podem ser elencadas utilizando-se dois acrônimos:**
 
-- Epidemiologia (EUA): Incidência: 5 a 12 / 100.000 hab;
+- **TIGAR-O**: Tóxico-Metabólico; Idiopático; Genético; Autoimune; Recorrente; Obstrutiva.
+- **MANNHEIM**: Múltiplos; Álcool; Nicotina; Nutricionais; Hereditária; Efferent pancreatic duct (ex.: pâncreas divisum ou pâncreas anular); Imunológico; Metabólico.
 
-Prevalência: 50 / 100.000 hab;
+## Principais Causas
 
-- Histologia: Perda de ácinos e ilhotas com substituição por fibrose podendo formar focos de calcificação intra pancreáticos (característico de pancreatite alcoólica).
-
-- Verificar Figura 6 etiologia envolvida;
-
-Figura 6: Atrofia progressiva do parênquima pancreático. Seta: fo - A maioria dos pacientes tem mais de uma
-
-- Causas podem ser elencadas utilizando-se dois acrônimos:
-
-TIGAR-O: Tóxico-Metabólico; Idiopático; Genético; Autoimune; Recorrente; Obstrutiva. MANNHEIM: Múltiplos; Álcool; Nicotina; Nutricionais;
-
-Hereditária; Efferent Pancreatic Duct (ex. Pâncreas divisum, ou pâncreas anular); Imunológico; Metabólico.
-
-## PRINCIPAIS CAUSAS
-
-1º lugar: Álcool (42-77% dos casos)
+**1º lugar: álcool (42-77% dos casos)**
 
 - Ação sinérgica do cigarro junto ao álcool, de forma dose-dependente;
-
 - Menos de 5% dos alcoolistas, isoladamente, desenvolvem pancreatite crônica.
 
-2º lugar: Idiopático (28% a 80%):
+**2º lugar: idiopático (28% a 80%)**
 
-- Genes envolvidos com a pancreatite idiopática: 50% (SPINK1, CFTR): Mutações não hereditárias SPINK1 (gene inibidor da triPISCINA); CFTR (Cystic Fibrosis Transmembrane Receptorreceptor transmembrana de troca de íons associado a viscosidade da secreção de glândulas exócrinas). 1% (PRSS1 - hereditariedade). Padrão de herança autossômica dominante. Atividade anormal (aumentada) da tripsina, favorecendo inflamação crônica).
-
-(mais prevalentes)
-
-- Quando considerar causas genéticas? Pancreatite crônica juvenil (< 35 anos); Pancreatite crônica de etiologia desconhecida e histórico familiar positivo.
-
-a oco de calcificação.
+- Genes envolvidos com a pancreatite idiopática (mais prevalentes):
+  - 50%: SPINK1, CFTR (mutações não hereditárias) — SPINK1 (gene inibidor da tripsina); CFTR (Cystic Fibrosis Transmembrane Receptor — receptor transmembrana de troca de íons associado à viscosidade da secreção de glândulas exócrinas);
+  - 1%: PRSS1 (hereditariedade), padrão de herança autossômica dominante, com atividade anormal (aumentada) da tripsina, favorecendo inflamação crônica.
+- Quando considerar causas genéticas? Pancreatite crônica juvenil (< 35 anos); pancreatite crônica de etiologia desconhecida e histórico familiar positivo.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -200,45 +150,47 @@ a oco de calcificação.
 
 <!-- page:4 -->
 
-Manejo: Aconselhamento familiar x consideração para DIAGNÓSTICO medidas mais radicais (pancreatectomia total com
+**Manejo (causas genéticas):** aconselhamento familiar x consideração de medidas mais radicais (pancreatectomia total com autotransplante de ilhotas).
 
-- Exame de imagem: fundamental para o diagnóstico;
+## Diagnóstico
 
-autotransplante de ilhotas).
+- Exame de imagem: fundamental para o diagnóstico.
 
-- 1ª linha → Tomografia Computadorizada (TC) de
+**1ª linha → Tomografia Computadorizada (TC) de Abdome Superior com Contraste Endovenoso (EV):**
 
-Abdome Superior com Contraste Endovenoso (EV): MANIFESTAÇÕES CLÍNICAS | Amplamente acessível, baixo custo, MANIFESTAÇÕES CLÍNICAS Dor Abdominal:
+- Amplamente acessível, baixo custo, não invasiva e com alta sensibilidade para calcificações e complicações;
+- Desvantagem: visualização subótima do DPP (ducto pancreático principal, ou ducto de Wirsung) e baixa sensibilidade para doença inicial.
+
+Figura 8: TC de abdome com contraste EV, com pouco parênquima e focos de calcificação, com cálculo calcificado levando à dilatação do ducto de Wirsung (achados protótipos da pancreatite crônica).
+
+## Manifestações Clínicas
+
+**Dor Abdominal:**
 
 - Presente em aproximadamente 80% dos pacientes;
-
 - Não guarda relação com a extensão da doença.
+- **Aguda**: processo inflamatório (ativação de mastócitos, citocinas pró-inflamatórias e estímulo de nociceptores) → dificuldade da excreção pancreática e ativação das enzimas dentro dos ductos pancreáticos;
+- **Crônica**: aumento na pressão ductal (estenose/cálculos); dor neuropática (estímulo nociceptivo repetitivo leva ao aumento da sensibilização — central ou periférica — à dor: hiperalgesia e alodínia).
+- Alteração do padrão de dor ou associação com outros sintomas podem refletir a presença de complicações (massa inflamatória em cabeça pancreática, pseudocisto, evolução para câncer de pâncreas, etc.).
 
-- Aguda: Processo inflamatório (ativação de mastócitos, citocinas pró-inflamatórias e estímulo de nociceptores);
+**Insuficiência Pancreática:**
 
-- Crônica: Aumento na pressão ductal (estenose / cálculos) das enzimas dentro dos ductos pancreáticos; Dor neuropática (estímulo nociceptivo repetitivo leva ao aumento da sensibilização – seja ela central ou periférica – à dor: hiperalgesia e alodínia).
+- **Exócrina**: esteatorreia — não digestão adequada de gorduras, causando aumento de gordura nas fezes (associada à perda avançada de função acinar, em aproximadamente 90%); deficiência de vitaminas lipossolúveis (A, D, E, K); confere maior risco de osteoporose (23% dos casos), osteopenia (40% dos casos), 3x mais chance de fratura, emagrecimento/sarcopenia;
+- **Endócrina**: diabetes mellitus pancreatogênico — sensibilidade periférica à insulina preservada, porém sem massa suficiente de células beta pancreáticas; não é recomendada restrição calórica; hipoglicemiantes orais são recomendados se houver resistência insulínica ou capacidade secretória de insulina preservada; insulinização não é indicada como primeira linha.
 
-→ dificuldade da excreção pancreática e ativação Alteração do padrão de dor ou associação com outros sintomas podem refletir presença de complicações (massa inflamatória em cabeça pancreática, pseudocisto, evolução para câncer de pâncreas etc).
+Figura 7: Pancreatografia por RNM com cálculo calcificado dentro do pâncreas (seta amarela), com dilatação do ducto de Wirsung (em azul), dificuldade de secreção e ativação enzimática dentro do pâncreas, com dor crônica pior às alimentações.
 
-Insuficiência Pancreática:
+**2ª linha → Ressonância Magnética (RM) de Abdome Superior com Colangiorressonância:**
 
-- Exócrina: Esteatorreia - não digestão adequada de gorduras, causando aumento de gordura nas fezes aproximadamente 90%): Deficiência de vitaminas lipossolúveis (A, D, E, K); Confere maior risco de: Osteoporose (23% dos casos); Osteopenia (40% dos casos); 3x mais chance de fratura. Emagrecimento / Sarcopenia.
+- Maior acurácia para o ducto (visualiza dilatações, estenoses e ductos secundários) e para o parênquima;
+- Possibilidade de realizar RM com estímulo EV de secretina (avaliação quantitativa), que possibilita ver em tempo real o enchimento do ducto de Wirsung;
+- Menos disponível e de alto custo.
 
-(associada à perda avançada de função acinar, em
+Figura 9: RNM, corte axial ponderado em T2 (canal medular, vesícula e estômago em branco): Wirsung tortuoso, substituição do parênquima pancreático por fibrose e dilatação do ducto principal.
 
-- Endócrina: Diabetes Mellitus (pancreatogênico): Sensibilidade periférica à insulina preservada, porém não há massa suficiente de células beta-pancreáticas; Não é recomendada restrição calórica; Hipoglicemiantes orais: recomendados se resistência insulínica ou capacidade secretória de insulina preservada; Insulinização como primeira linha.
+**3ª linha → Ultrassom Endoscópico (EUS):**
 
-Figura 7: Pancreatografia por RNM com cálculo calcificado dentro do pâncreas (seta amarela) com dilatação do ducto de Wirsung (em azul) com dificuldade de secreção, ativação enzimática dentro do pâncreas com dor crônica pior às alimentações. | Amplamente acessível, baixo custo, não invasiva e alta sensibilidade para calcificações e complicações;
-
-| Desvantagem: visualização sub-ótima do DPP (ducto pancreático principal ou ducto de wirsung) e baixa sensibilidade para doença inicial.
-
-Figura 8: TC de abdome com contraste EV com pouco parênquima e focos de calcificação de parênquima com cálculo calcificado levando a dilatação do ducto de Wirsung (achados protótipos da pancreatite crônica).
-
-- 2ª Linha → Ressonância Magnética (RM) de Abdome Maior acurácia para ducto (visualiza dilatações, estenoses e ductos secundários) e parênquima; Possibilidade de realizar RM com estímulo EV de secretina (avaliação quantitativa), que possibilita ver em tempo real o enchimento do ducto de wirsung; Menos disponível e de alto custo.
-
-Superior com Colangiorressonância: Figura 9: RNM corte axial ponderado em T2 (canal medular, vesícula e estômago em branco) wirsung tortuoso, substituição do parênquima pancreático por fibrose e dilatação do ducto principal.
-
-- 3ª Linha → Ultrassom Endoscópico (EUS): Exame preferencial para a pancreatite aguda recorrente de causa inexplicada (35% evoluem para pancreatite crônica)
+- Exame preferencial para a pancreatite aguda recorrente de causa inexplicada (35% evoluem para pancreatite crônica).
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -248,65 +200,57 @@ Superior com Colangiorressonância: Figura 9: RNM corte axial ponderado em T2 (c
 
 <!-- page:5 -->
 
-| Avalia critérios do parênquima (lobularidade, | Indireto: Dosagem de atividade de quimotripsina cistos, focos hiperecóicos no parênquima e fecal ou elastase pancreática fecal (< 100 mcg/g)
+- Avalia critérios do parênquima (lobularidade, cistos, focos hiperecoicos no parênquima e cordões hiperecogênicos, que correspondem a calcificação ou cicatrizes) e dos ductos (dilatação, irregularidade, calcificações ou cálculos, ecogenicidade das paredes ductais e ductos secundários);
+- Mais invasivo, operador-dependente e requer sedação;
+- Útil para doença extremamente precoce.
 
-cordões hiperecogênicos, que correspondem
+**Critérios de Rosemont:**
 
-- Avaliação de distúrbios carenciais, anemia, diabetes e a calcificação ou cicatrizes) e do ductais outras complicações potencialmente relacionadas à cálculos, ecogenicidade das paredes ductais e ductos secundários). Mais invasivo, operador dependente e requer sedação; Útil para doença extremamente precoce.
+1. Focos hiperecoicos ou bandas;
+2. Lobularidade com "faveolamento"/"favo de mel";
+3. Margem hiperecoica do Wirsung;
+4. Ductos secundários dilatados.
 
-(dilatação, irregularidade, calcificações ou pancreatite crônica; (dilatação, irregularidade, calcificações ou Critérios de Rosemont
+- Diagnóstico: pelo menos dois dos 4 critérios, incluindo obrigatoriamente (1) ou (2).
 
-1. Focos hiperecoicos ou bandas
+Figura 10: Asterisco: calcificação ductal (área hiperecogênica); cabeça de seta: DPP dilatado; seta: focos hiperecogênicos com sombra acústica.
 
-2. Lobularidade com “faveolamento” / “favo de mel”
+- **CPRE**: pouco espaço para diagnóstico, mais utilizada para tratamento (retirada de cálculos, colocação de stents para estenoses, papilotomia da papila duodenal menor nos casos de pâncreas divisum).
 
-3. Margem hiperecoica do Wirsung
+## Laboratório
 
-4. Ductos secundários dilatados
+- Amilase e lipase são úteis para o diagnóstico de pancreatite aguda, mas não para a pancreatite crônica;
+- O laboratório deixou de ter função diagnóstica para ter função estadiadora/coadjuvante.
+- **Avaliação da função exócrina**:
+  - Direto: teste de secretina (sob estímulo, avalia o pH intraduodenal; caro, invasivo e pouco recomendado);
+  - Indireto: dosagem de atividade de quimotripsina fecal ou elastase pancreática fecal (< 100 mcg/g);
+- Avaliação de gordura fecal (teste de Sudan) → 7g/dia; perdeu espaço com o aumento da disponibilidade dos exames de imagem;
+- Avaliação de distúrbios carenciais, anemia, diabetes e outras complicações potencialmente relacionadas à pancreatite crônica.
 
-Diagnóstico: pelo menos DOIS dos 4 critérios, incluindo obrigatoriamente (1) ou (2). Figura 10: Asterisco: calcificação ductal (área hiperecogênica);
-
-Cabeça de seta: DPP dilatado; seta: focos hiperecogênicos com sombra acústica. CPRE → pouco espaço para diagnóstico, mais utilizada para tratamento (retirada de cálculos, colocação de stents para estenoses, papilotomia duodenal menor nos casos de pâncreas divisum).
-
-Laboratório
-
-- Amilase e lipase são úteis para diagnóstico de pancreatite aguda, mas não para a pancreatite crônica.
-
-- Laboratório deixou de ter função diagnóstica para ter função estadiadora / coadjuvante.
-
-- Avaliação da função exócrina: Direto: Teste de secretina (sob estímulo / avalia o pH intraduodenal / caro, invasivo e pouco recomendado) pancreatite crônica;
-
-- Avaliação de gordura fecal (teste de Sudam) → 7g/dia. Perdeu espaço com aumento da disponibilidade dos exames de imagem.
-
-TRATAMENTO CLÍNICO:
+## Tratamento Clínico
 
 - Cessar fatores de risco (abstinência alcoólica, cessação do tabagismo e remoção das demais causas, se identificáveis);
-
-- Avaliação nutricional: Rastreio de desnutrição / sarcopenia; Tratamento de distúrbios carenciais;
-
+- Avaliação nutricional: rastreio de desnutrição/sarcopenia; tratamento de distúrbios carenciais;
 - Analgesia escalonada (AINEs, antiespasmódicos, opioides fracos e adjuvantes para dor neuropática);
-
 - Trial de enzimas pancreáticas;
-
 - Tratamento do diabetes pancreatogênico;
+- Controle de dor irregular a despeito de analgesia e cessação de fatores de risco? Há obstrução ductal por cálculos/estenose? Avaliar tratamento intervencionista;
+  - Cochrane, 2015 → superioridade da cirurgia sobre a endoscopia no controle da dor;
+  - Intervenção cirúrgica precoce pode auxiliar na preservação da função pancreática.
 
-- Controle de dor IRREGULAR a despeito de analgesia e cessação de fatores de risco? Há obstrução ductal por cálculos/estenose? Avaliar tratamento INTERVENCIONISTA; Cochrane, 2015 → superioridade da Cirurgia sobre a Endoscopia no controle da dor; Intervenção cirúrgica precoce pode auxiliar na preservação da função pancreática.
+**Tratamento Endoscópico**
 
-Tratamento Endoscópico
+- Na endoscopia, pode ser realizada: papilotomia, dilatação e extração de cálculos com balão/basket (até 5 mm), dilatação de estenoses ductais (próteses em paralelo);
+- Mais recente: pancreatoscopia e litotripsia (eletro-hidráulica ou a laser).
 
-- Na endoscopia, pode ser realizada: Papilotomia, dilatação e extração de cálculos com balão / basket (até 5 mm) Dilatação de estenoses ductais Mais recente: pancreatoscopia e litotripsia
+## Tratamento Cirúrgico
 
-(próteses em paralelo) (eletro-hidráulica ou laser)
+**Ducto pancreático principal dilatado (≥ 7 mm):**
 
-## TRATAMENTO CIRÚRGICO
+- Derivações pancreato-jejunais. Pancreatojejunostomia latero-lateral;
+- **Puestow e Gillesby (1957)**: primeira descrição técnica; pancreatectomia distal e esplenectomia, com anastomose pancreatojejunal latero-lateral.
 
-Ducto pancreático principal dilatado (> ou = 7mm)
-
-- Derivações pancreato-jejunais. Pancreatojejunostomia latero-lateral.
-
-- Puestow e Gillesby (1957): Primeira descrição técnica; Pancreatectomia distal e esplenectomia com anastomose pancreato-jejunal latero-lateral.
-
-Figura 11: Técnica de Puestow
+Figura 11: Técnica de Puestow.
 
 ![Figura do material - página 5](figure-005-1.webp)
 
@@ -316,29 +260,25 @@ Figura 11: Técnica de Puestow
 
 <!-- page:6 -->
 
-- Partington e Rochelle (1960):
+- **Partington e Rochelle (1960)**: técnica mais próxima da utilizada atualmente. Melhor recomendação quando não há lesão/massa inflamatória na cabeça do pâncreas.
 
-- Frey (1987): Técnica mais próxima da utilizada atualmente. | Ressecção segmentar da cabeça do pâncreas; Melhor controle álgico (?).
+Figura 12: Esquematização da técnica de Partington-Rochelle.
 
-Melhor recomendação quando NÃO HÁ LESÃO / MASSA INFLAMATÓRIA NA CABEÇA Opção nos casos de DPP dilatado + massa NÃO HÁ LESÃO / MASSA INFLAMATÓRIA NA CABEÇA DO PÂNCREAS!
+Figuras 13 e 14: setas brancas (Wirsung aberto na transversal); seta preta (anastomose pancreatojejunal).
 
-Figura 12: Esquematização da técnica de Partington-Rochelle p a i Figura 13: e 14 Setas brancas (wirsung aberto na transversal)
+- **Frey (1987)**: ressecção segmentar da cabeça do pâncreas; melhor controle álgico (?). Opção nos casos de DPP dilatado + massa inflamatória na cabeça do pâncreas.
 
-Seta preta (anastomose pancreatojejunal). Opção nos casos de DPP dilatado + massa inflamatória na cabeça do pâncreas.
+Figura 15: Cirurgia de Frey, com ressecção segmentar da cabeça do pâncreas com incorporação à anastomose pancreatojejunal — pâncreas, duodeno, cálculos pancreáticos.
 
-Pâncreas Duodeno Cálculos pancreáticos Anastomose pancreatojejunal Figura 15: Cirurgia de Frey com ressecção segmentar da cabeça do pâncreas com incorporação à anastomose
+- **Alternativa**: ressecção da cabeça pancreática com preservação duodenal (Cirurgia de Beger). Pode ser utilizada tanto em ductos dilatados quanto não dilatados.
 
-- Alternativa: ressecção da cabeça pancreática com preservação duodenal (Cirurgia de Beger) Pode ser utilizada tanto em ductos dilatados quanto não-dilatados;
+Figura 16: Cirurgia de Beger — parte da cabeça do pâncreas foi ressecada, com incorporação por anastomose em corpo e cabeça de pâncreas, junto com colédoco intrapancreático, fazendo uma derivação em Y de Roux.
 
-Figura 16: Cirurgia de Beger parte da cabeça do pâncreas foi ressecada com incorporação por anastomose em corpo e cabeça de pâncreas junto com coledoco intrapancreático fazendo uma derivação em Y de Roux.
+**Ducto pancreático principal (DPP) < 7 mm:**
 
-Ducto pancreático principal (DPP) <7mm:
-
-- Ressecção pancreática.
-
-- Doença predominantemente na cauda pancreática: Pancreatectomia distal;
-
-- Doença predominante na cabeça pancreática: Gastroduodenopancreatectomia (GDP); Duodenopancreatectomia (DPT). Ressecção da cabeça pancreática com preservação duodenal (Beger).
+- Ressecção pancreática;
+- Doença predominante na cauda pancreática: pancreatectomia distal;
+- Doença predominante na cabeça pancreática: gastroduodenopancreatectomia (GDP)/duodenopancreatectomia (DPT); ressecção da cabeça pancreática com preservação duodenal (Beger).
 
 ![Figura do material - página 6](figure-006-1.webp)
 
@@ -348,33 +288,34 @@ Ducto pancreático principal (DPP) <7mm:
 
 <!-- page:7 -->
 
-Figura 17: Ressecção da cabeça do pâncreas com pâncreas com reconstrução com pancreatojejunal no corpo, biliodigestivo ou gastrojejunoestomia ou duodenojejunoestomia.
+Figura 17: Ressecção da cabeça do pâncreas, com reconstrução por pancreatojejunostomia no corpo, biliodigestiva ou gastrojejunostomia/duodenojejunostomia.
 
-Condições especiais
+## Condições Especiais
 
-- Doença disseminada SEM dilatação ductal: Neurólise / Bloqueio de plexo celíaco (eficácia de curto prazo) Pancreatectomia total: conduta de exceção
+- **Doença disseminada sem dilatação ductal**: neurólise/bloqueio de plexo celíaco (eficácia de curto prazo); pancreatectomia total (conduta de exceção);
+- **Suspeita de malignidade**: ressecção em caráter oncológico + linfadenectomia.
 
-- Suspeita de MALIGNIDADE: Ressecção em caráter oncológico + linfadenectomia
+## Complicações
 
-## COMPLICAÇÕES
+- **Pseudocistos**: aproximadamente 10% dos pacientes apresentam, a maioria assintomáticos; associados a piora da dor, gastroparesia, obstrução biliar, fistulização (para vísceras adjacentes ou vasos sanguíneos); primeira linha: drenagem endoscópica; se falha: cirurgia (cistojejunostomia ou cistogastrostomia).
 
-- Pseudocistos: Aproximadamente 10% dos pacientes apresentam, maioria assintomáticos; Associação com piora da dor, gastroparesia, obstrução biliar, fistulização (para vísceras adjacentes ou vasos sanguíneos); Primeira linha: drenagem endoscópica; Falha: cirurgia (cistojejunostomia ou cistogastrostomia).
+Figuras 18 e 19: Pseudocistos.
 
-Figuras 18 e 19: Pseudocistos
+- **Ascite pancreática/derrame pleural**: fistulização livre do DPP para a cavidade peritoneal ou pleural; grave; tratamento: dieta com triglicerídeos de cadeia média, jejum + NPP, octreotide, papilotomia com stent pancreático; derrame pleural → decorticação!
 
-- Ascite pancreática/derrame pleural: Fistulização livre do DPP para cavidade peritoneal ou pleural; Grave; Tratamento: dieta com triglicerídeos de cadeia média, jejum + NPP, octreotide, papilotomia com stent pancreático; Derrame pleural → decorticação!! Figura 20: Ascite pancreática.
+Figura 20: Ascite pancreática.
 
-- Trombose da Veia Esplênica: Hipertensão portal segmentar. Varizes de fundo gástrico.
+- **Trombose da veia esplênica**: hipertensão portal segmentar; varizes de fundo gástrico. O processo inflamatório crônico do pâncreas pode levar a obstruções e tromboses segmentares da veia esplênica, levando à hipertensão da veia esplênica e dos vasos gástricos breves, com drenagem venosa anômala (que vai para a ázigos ou gástrica direita), levando a varizes de fundo gástrico sem varizes esofágicas.
 
-Figura 21: Trombose da veia esplênica ocasionando hipertensão portal segmentar. Processo inflamatório crônico do pâncreas pode levar a obstruções e tromboses segmentares da veia esplênica levando à hipertensão da veia esplênica e dos vasos gástricos breves com drenagem a anômala venosa (que vai para ázigos ou gástrica direta, levando a varizes de fundo gástrico sem varizes esofágicas).
+Figura 21: Trombose da veia esplênica ocasionando hipertensão portal segmentar.
 
-- Pseudoaneurisma de artéria esplênica/gastroduodenal: Fistulização vascular para pseudocisto; Pode gerar sangramento contido, livre para cavidade ou para o tubo digestivo Geralmente quadros graves manejados por radiologia intervencionista através de embolização;
+- **Pseudoaneurisma de artéria esplênica/gastroduodenal**: fistulização vascular para pseudocisto; pode gerar sangramento contido, livre para a cavidade ou para o tubo digestivo (hemossucus pancreaticus); geralmente quadros graves manejados por radiologia intervencionista, através de embolização.
 
-(hemossucus pancreticus); Figura 22: Hemossucus pancreaticus.
+Figura 22: Hemossucus pancreaticus.
 
-- Estenose da Via Biliar distal Icterícia obstrutiva associada a processo inflamatório envolvendo colédoco distal
+- **Estenose da via biliar distal**: icterícia obstrutiva associada a processo inflamatório envolvendo o colédoco distal.
 
-- Surgimento de Câncer Perda ponderal, piora do padrão de dor deve levantar suspeita! Diagnóstico diferencial pode ser difícil Estudo inicial através de ecoendoscopia e biópsia; Caso inconclusivo, recomenda-se cirurgia com radicalidade oncológica.
+- **Surgimento de câncer**: perda ponderal, piora do padrão de dor devem levantar suspeita! Diagnóstico diferencial pode ser difícil. Estudo inicial através de ecoendoscopia e biópsia; caso inconclusivo, recomenda-se cirurgia com radicalidade oncológica.
 
 ![Figura do material - página 7](figure-007-1.webp)
 
@@ -384,36 +325,32 @@ Figura 21: Trombose da veia esplênica ocasionando hipertensão portal segmentar
 
 <!-- page:8 -->
 
-BONUS - GROOVE PANCREATITIS Figura 8: TC de abdome com contraste EV com pouco
+## Bônus - Groove Pancreatitis
 
-- Tipo de pancreatite crônica que envolve a parênquima e focos de calcificação de parênquima com cálculo porção cefálica do pâncreas e o processo calcificado levando a dilatação do ducto de Wirsung (achados inflamatório acomete o duodeno por contiguidade protótipos da pancreatite crônica).
-
-(sulco pancreatoduodenal); (sulco pancreatoduodenal); S
-
-- Mais frequentemente: homens, 5ª-6ª década de vida, P j história de alcoolismo e tabagismo;
-
+- Tipo de pancreatite crônica que envolve a porção cefálica do pâncreas, e o processo inflamatório acomete o duodeno por contiguidade (sulco pancreatoduodenal);
+- Mais frequente em: homens, 5ª-6ª década de vida, com história de alcoolismo e tabagismo;
 - Variedade de sintomas: dor epigástrica, perda ponderal, vômitos, icterícia (se envolvimento da via biliar);
+- Frequentemente pode se confundir (ou mascarar) o câncer de pâncreas (principal diagnóstico diferencial);
+- Pacientes refratários ao tratamento conservador ou sem possibilidade de afastar a hipótese de câncer: DPT/GDP.
 
-- Frequentemente pode se confundir (ou mascarar) o câncer de pâncreas (principal A diagnóstico diferencial); C o
+Figura 8: TC de abdome com contraste EV, com pouco parênquima e focos de calcificação, com cálculo calcificado levando à dilatação do ducto de Wirsung (achados protótipos da pancreatite crônica).
 
-- Pacientes refratários ao tratamento conservador ou sem possibilidade de afastar possibilidades de câncer: DPT/GDP. B h
+## Referências
 
-## REFERÊNCIAS
+Figura 5: Microscopia de um pâncreas normal. Retirado do Site Didático de Anatomia Patológica da FCM-UNICAMP, em dezembro de 2022. URL: https://anatpat.unicamp.br/lamfig14.html
 
-Figura 5: Microscopia de um pâncreas normal. A Retirado do Site Didático de Anatomia Patológica da FCM-UNICAMP, em Dezembro de 2022. URL: https://anatpat.unicamp.br/lamfig14.html Figura 6: Atrofia progressiva do parênquima pancreático. Seta:
+Figura 6: Atrofia progressiva do parênquima pancreático. Seta: foco de calcificação. Retirado do Site Didático de Anatomia Patológica da FCM-UNICAMP, em dezembro de 2022. URL: https://anatpat.unicamp.br/lamfig14.html
 
-foco de calcificação. Retirado do Site Didático de Anatomia Patológica da FCM-UNICAMP, em K Dezembro de 2022. URL: https://anatpat.unicamp.br/lamfig14.html ( Figura 7: Pancreatografia por RNM com cálculo calcificado dentro do pâncreas (seta amarela) com dilatação do ducto O de Wirsung (em azul) com dificuldade de secreção, ativação enzimática dentro do pâncreas com dor crônica pior às alimentações.
+Figura 7: Pancreatografia por RNM com cálculo calcificado dentro do pâncreas (seta amarela), com dilatação do ducto de Wirsung (em azul), dificuldade de secreção, ativação enzimática dentro do pâncreas com dor crônica pior às alimentações. Singh VK, Yadav D, Garg PK. Diagnosis and Management of Chronic Pancreatitis: A Review. JAMA. 2019;322(24):2422–2434. doi:10.1001/jama.2019.19411
 
-Singh VK, Yadav D, Garg PK. Diagnosis and Management of Chronic Pancreatitis: A Review. JAMA. 2019;322(24):2422–2434. doi:10.1001/ jama.2019.19411 Singh VK, Yadav D, Garg PK. Diagnosis and Management of Chronic Pancreatitis: A Review. JAMA. 2019;322(24):2422–2434. doi:10.1001/ jama.2019.19411 Figura 9: RNM corte axial ponderado em T2 (canal medular, vesícula e estômago em branco) wirsung tortuoso, substituição do parênquima pancreático por fibrose e dilatação do ducto principal.
+Figura 9: RNM corte axial ponderado em T2 (canal medular, vesícula e estômago em branco), Wirsung tortuoso, substituição do parênquima pancreático por fibrose e dilatação do ducto principal. Abdelmonem H, Chronic pancreatitis with pancreatic duct stones. Case study, Radiopaedia.org (Accessed on 19 Dec 2022) https://doi.org/10.53347/rID-73793
 
-Abdelmonem H, Chronic pancreatitis with pancreatic duct stones. Case study, Radiopaedia.org (Accessed on 19 Dec 2022) https://doi.
+Figura 10: Asterisco: calcificação ductal (área hiperecogênica). Beyer, Georg et al. Chronic pancreatitis. The Lancet, 2020. DOI: https://doi.org/10.1016/S0140-6736(20)31318-0
 
-org/10.53347/rID-73793 Figura 10: Asterisco: calcificação ductal (área hiperecogênica); Beyer, Georg et al. Chronic pancreatitis. The Lancet, 2020. DOI:https:// https://doi.org/10.1016/S0140-6736(20)31318-0’ Figuras 13 e 14: Setas brancas (wirsung aberto na transversal)
+Figuras 13 e 14: setas brancas (Wirsung aberto na transversal), seta preta (anastomose pancreatojejunal). Acervo pessoal do autor.
 
-Seta preta (anastomose pancreato-jejunal). Acervo pessoal do autor. Figuras 18 e 19: Pseudocistos Gaillard F, Walizai T, Bell D, et al. Pancreatic pseudocyst. Reference article, Radiopaedia.org (Accessed on 02 Jun 2025)
+Figuras 18 e 19: Pseudocistos. Gaillard F, Walizai T, Bell D, et al. Pancreatic pseudocyst. Reference article, Radiopaedia.org (Accessed on 02 Jun 2025).
 
-Figura 20: Ascite pancreática. Keshavamurthy J, Pancreatic ascites. Case study, Radiopaedia.org (Accessed on 02 Jun 2025)
+Figura 20: Ascite pancreática. Keshavamurthy J, Pancreatic ascites. Case study, Radiopaedia.org (Accessed on 02 Jun 2025).
 
-Figura 22: Hemossucus pancreaticus. Okamoto H, Fujii H. Haemosuccus Pancreaticus in Chronic Pancreatitis — Diagnosis and Treatment [Internet]. Acute and Chronic Pancreatitis. InTech;
-
-2015. Available from: http://dx.doi.org/10.5772/58952
+Figura 22: Hemossucus pancreaticus. Okamoto H, Fujii H. Haemosuccus Pancreaticus in Chronic Pancreatitis — Diagnosis and Treatment [Internet]. Acute and Chronic Pancreatitis. InTech; 2015. Available from: http://dx.doi.org/10.5772/58952

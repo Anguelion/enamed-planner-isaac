@@ -1,139 +1,99 @@
-# Pacto pela saúde
+# Pacto pela Saúde
 
 <!-- page:1 -->
 
-## PACTO PELA SAÚDE : PORTARIA Nº 399/2006
+## Pacto pela Saúde: Portaria nº 399/2006
 
-- Compromisso público entre os gestores do SUS para a consolidação do SUS
+- Compromisso público entre os gestores do SUS para a consolidação do SUS.
 
-Tabela 1: Dimensões do Pacto pela Saúde
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Compromisso com Pacto pela Vida indicadores de Reafirmação do SU Pacto em Defesa do SUS Estabelecer respons Pacto de Gestão melhorar a ge
+**Tabela 1: Dimensões do Pacto pela Saúde**
 
-## O PACTO PELA SAÚDE
+| Dimensão | Objetivo Principal |
+|---|---|
+| Pacto pela Vida | Compromisso com indicadores de melhoria da saúde a partir de prioridades sanitárias pactuadas |
+| Pacto em Defesa do SUS | Reafirmação do SUS como política pública universal e solidária; defesa da saúde como direito de cidadania |
+| Pacto de Gestão | Estabelecer responsabilidades e diretrizes entre as esferas de governo para a gestão, o financiamento e o planejamento do SUS |
 
-- Instituído pela Portaria GM/MS nº 399 de 22 de fevereiro de 2006
+## O Pacto pela Saúde
 
-- Acordo tripartite firmado entre os gestores do SUS visando aprimorar a gestão, o financiamento e a qualidade dos serviços de saúde.
-
-- Ele se desdobra em três dimensões interligadas: Pacto pela Vida Pacto em Defesa do SUS e Pacto de Gestão.
+- Instituído pela Portaria GM/MS nº 399, de 22 de fevereiro de 2006.
+- Acordo tripartite firmado entre os gestores do SUS, visando aprimorar a gestão, o financiamento e a qualidade dos serviços de saúde.
+- Ele se desdobra em três dimensões interligadas: **Pacto pela Vida**, **Pacto em Defesa do SUS** e **Pacto de Gestão**.
 
 A implantação do Pacto buscou redefinir responsabilidades coletivas por resultados sanitários, otimizar processos e instrumentos de gestão para maior efetividade, eficiência e equidade, sempre em função das necessidades de saúde da população. As prioridades são traduzidas em objetivos e metas contidos no Termo de Compromisso e Gestão.
 
-PACTO PELA VIDA É o compromisso entre os gestores do SUS em torno de prioridades sanitárias que impactam diretamente a situação de saúde da população brasileira. As prioridades são definidas por meio de metas nacionais, estaduais, regionais e municipais, com pactuação das ações necessárias para seu alcance.
+## Pacto pela Vida
 
-Prioridades Inicialmente Pactuadas (2006):
+É o compromisso entre os gestores do SUS em torno de prioridades sanitárias que impactam diretamente a situação de saúde da população brasileira. As prioridades são definidas por meio de metas nacionais, estaduais, regionais e municipais, com pactuação das ações necessárias para seu alcance.
 
-- Saúde do Idoso
+**Prioridades Inicialmente Pactuadas (2006)**:
+- Saúde do Idoso;
+- Controle do câncer do colo do útero e da mama;
+- Redução da mortalidade infantil e materna;
+- Fortalecimento da capacidade de resposta às doenças emergentes e endemias (ênfase em dengue, hanseníase, tuberculose, malária e influenza);
+- Promoção da Saúde;
+- Fortalecimento da Atenção Básica.
 
-- Controle do câncer do colo do útero e da mama
+- Reforça o princípio da **REGIONALIZAÇÃO**.
+- As prioridades são expressas em objetivos e metas no Termo de Compromisso e Gestão.
 
-- Redução da mortalidade infantil e materna
+**Outras Prioridades Acrescentadas (2008)**:
+- Saúde do Trabalhador;
+- Saúde Mental;
+- Fortalecimento da capacidade de resposta do sistema de saúde às pessoas com deficiência;
+- Atenção integral às pessoas em situação de risco de violência;
+- Saúde do Homem.
 
-- Fortalecimento da capacidade de resposta às doenças emergentes e endemias (ênfase em dengue, hanseníase, tuberculose, malária e influenza)
+## Pacto em Defesa do SUS
 
-- Promoção da Saúde
+Consiste na reafirmação do compromisso dos gestores das três esferas de governo com a consolidação da Reforma Sanitária Brasileira e a defesa dos princípios constitucionais do SUS. Visa assegurar o SUS como política pública e direito de todos os cidadãos.
 
-- Fortalecimento da Atenção Básica
+**Diretrizes e Iniciativas**:
+- **Repolitização da saúde**: retomar a essência da Reforma Sanitária, aproximando-a dos desafios atuais do SUS;
+- **Promoção da Cidadania**: estratégia de mobilização social para reafirmar a saúde como um direito;
+- **Garantia de Financiamento**: assegurar recursos compatíveis com as necessidades do sistema.
 
-- Reforça o princípio da REGIONALIZAÇÃO
-
-- As prioridades são expressas em objetivos e metas no Termo de Compromisso e Gestão m prioridades sanitárias pactuadas, visando melhorar saúde e responder às necessidades da população.
-
-Objetivo Principal US como política pública universal e solidária; Defesa da saúde como direito de cidadania.
-
-sabilidades e diretrizes entre as esferas de governo para estão, o financiamento e o planejamento do SUS.
-
-Outras Prioridades Acrescentadas (2008):
-
-- Saúde do Trabalhador
-
-- Saúde Mental
-
-- Fortalecimento da capacidade de resposta do sistema de saúde às pessoas com deficiência
-
-- Atenção integral às pessoas em situação de risco de violência
-
-- Saúde do Homem das três esferas de governo com a consolidação da constitucionais do SUS. Visa assegurar o SUS como política pública e direito de todos os cidadãos.
-
-PACTO EM DEFESA DO SUS Consiste na reafirmação do compromisso dos gestores Reforma Sanitária Brasileira e a defesa dos princípios Diretrizes e Iniciativas:
-
-- Repolitização da saúde: Retomar a essência da atuais do SUS.
-
-Reforma Sanitária, aproximando-a dos desafios
-
-- Promoção da Cidadania: Estratégia de mobilização social para reafirmar a saúde como um direito.
-
-- Garantia de Financiamento: Assegurar recursos compatíveis com as necessidades do sistema.
-
-Ações Chave:
-
-- Articulação e apoio à mobilização social pela saúde como direito.
-
-- Diálogo ampliado com a sociedade além dos limites institucionais.
-
-- Fortalecimento das relações com movimentos sociais.
-
-- Elaboração e publicação da Carta dos Direitos dos
-
-Usuários do SUS.
-
-- Regulamentação e aprovação de leis que garantam o financiamento (ex: EC nº 29).
-
+**Ações Chave**:
+- Articulação e apoio à mobilização social pela saúde como direito;
+- Diálogo ampliado com a sociedade além dos limites institucionais;
+- Fortalecimento das relações com movimentos sociais;
+- Elaboração e publicação da Carta dos Direitos dos Usuários do SUS;
+- Regulamentação e aprovação de leis que garantam o financiamento (ex.: EC nº 29);
 - Aprovação do orçamento tripartite do SUS.
 
 ---
 
 <!-- page:2 -->
 
-## PACTO DE GESTÃO
+## Pacto de Gestão
 
-- Participação e Controle Social: Reforça um princípio do sistema nas três esferas de governo, visando legalmente (Leis 8080/90 e 8142/90).
+Estabelece diretrizes e responsabilidades para a gestão do sistema nas três esferas de governo, visando aprimorar a organização e o funcionamento do SUS.
 
-Estabelece diretrizes e responsabilidades para a gestão doutrinário fundamental do SUS, assegurado aprimorar a organização e o funcionamento do SUS.
+**Aspectos Abrangidos**:
+- **Descentralização**: definição de responsabilidades para o Ministério da Saúde (políticas, cofinanciamento, cooperação técnica, regulação) e para União, Estados e Municípios (pactos intraestaduais, modelos organizacionais).
+- **Regionalização**: organização do SUS em Regiões de Saúde (baseadas em critérios sociais, culturais, econômicos e de infraestrutura) para garantir acesso, resolutividade, integralidade e equidade, reduzir desigualdades e otimizar recursos. Instrumentos incluem o Plano Diretor de Regionalização (PDR), Plano Diretor de Investimento (PDI) e Programação Pactuada e Integrada (PPI).
+- **Financiamento**: responsabilidade tripartite (União, Estados, Municípios) pelo custeio da Atenção Básica, Média e Alta Complexidade, Vigilância em Saúde, Assistência Farmacêutica e Gestão do SUS, com preferência pelo repasse fundo a fundo.
+- **Planejamento**: desenvolvimento articulado, integrado e solidário entre as três esferas, com participação social, para fortalecer os objetivos do SUS e a qualidade dos serviços.
+- **Programação Pactuada e Integrada (PPI)**: define a programação das ações de saúde em cada território, aloca recursos financeiros e explicita pactos de referência intermunicipais.
+- **Regulação**: busca que cada prestador responda a apenas um gestor (preferencialmente municipal para serviços locais, e estadual para referências intermunicipais).
+- **Participação e Controle Social**: reforça um princípio doutrinário fundamental do SUS, assegurado legalmente (Leis 8.080/90 e 8.142/90).
+- **Gestão do Trabalho e Educação na Saúde**:
+  - **Gestão do Trabalho**: valorização dos trabalhadores, tratamento de conflitos, humanização das relações, diretrizes para Planos de Carreiras, Cargos e Salários (PCCS/SUS), autonomia para suprir seus quadros.
+  - **Educação na Saúde**: fundamentada na Política Nacional de Educação Permanente em Saúde (PNEPS), visa a formação e qualificação contínua dos trabalhadores do SUS.
 
-- Gestão do Trabalho e Educação na Saúde:
+### Avanços a partir do Pacto pela Saúde
 
-Aspectos Abrangidos: | Gestão do Trabalho: Valorização dos trabalhadores,
+O Pacto impulsionou diversas políticas e inovações na gestão do SUS, como:
 
-- Descentralização: Definição de responsabilidades tratamento de conflitos, humanização das relações, para o Ministério da Saúde (políticas, co- diretrizes para Planos de Carreiras, Cargos e financiamento, cooperação técnica, regulação) e Salários (PCCS/SUS). União, Estados e Municípios para as Comissões Intergestores Bipartite (pactos autônomos para suprir seus quadros.
+- **2006**: publicação da primeira Política Nacional de Atenção Básica (PNAB);
+- **2006**: instalação da Comissão Nacional de Determinantes Sociais em Saúde (CNDSS);
+- **2006**: criação do PlanejaSUS (Sistema de Planejamento do SUS);
+- **2006**: Política Nacional de Saúde da Pessoa Idosa;
+- **2010**: Política Nacional de Promoção da Saúde;
+- **2010**: Portaria GM/MS nº 4.279/2010, com diretrizes para a organização das Redes de Atenção à Saúde (RAS) no âmbito do SUS.
 
-intraestaduais, modelos organizacionais). | Educação na Saúde: Fundamentada na Política
+## Referências
 
-- Regionalização: Organização do SUS em Regiões Nacional de Educação Permanente em Saúde de Saúde (baseadas em critérios sociais, culturais, (PNEPS), visa a formação e qualificação contínua econômicos e de infraestrutura) para garantir acesso, dos trabalhadores do SUS.
-
-resolutividade, integralidade e equidade, reduzir Avanços a partir do Pacto pela Saúde: desigualdades e otimizar recursos. Instrumentos O Pacto impulsionou diversas políticas e inovações na incluem o Plano Diretor de Regionalização (PDR), Plano gestão do SUS, como:
-
-Diretor de Investimento (PDI) e Programação Pactuada
-
-- 2006: Publicação da primeira Política Nacional de e Integrada (PPI). Atenção Básica (PNAB).
-
-- Financiamento: Responsabilidade tripartite (União,
-
-- 2006: Instalação da Comissão Nacional de
-
-Estados, Municípios) pelo custeio da Atenção Básica, Determinantes Sociais em Saúde (CNDSS). Média e Alta Complexidade, Vigilância em Saúde,
-
-- 2006: Criação do PlanejaSUS (Sistema de preferência pelo repasse fundo a fundo.
-
-Assistência Farmacêutica e Gestão do SUS, com Planejamento do SUS).
-
-- 2006: Política Nacional de Saúde da Pessoa Idosa.
-
-- Planejamento: Desenvolvimento articulado, integrado
-
-- 2010: Política Nacional de Promoção da Saúde.
-
-e solidário entre as três esferas, com participação
-
-- 2010: Portaria GM/MS nº 4279/2010, com diretrizes social, para fortalecer os objetivos do SUS e a para a organização das Redes de Atenção à Saúde qualidade dos serviços. (RAS) no âmbito do SUS.
-
-- Programação Pactuada e Integrada (PPI): Define a
-
-## REFERÊNCIAS
-
-programação das ações de saúde em cada território, aloca recursos financeiros e explicita pactos de referência intermunicipais. Tabela 1: Dimensões do Pacto pela Saúde.
-
-- Regulação: Busca que cada prestador responda BRASIL. Ministério da Saúde. Portaria nº 399, de 22 de fevereiro de a apenas um gestor (preferencialmente 2006. Divulga o Pacto pela Saúde 2006 – Consolidação do SUS e aprova municipal para serviços locais, e estadual para as Diretrizes Operacionais do referido pacto.
-
-referências intermunicipais).
+- Tabela 1: Dimensões do Pacto pela Saúde. BRASIL. Ministério da Saúde. Portaria nº 399, de 22 de fevereiro de 2006. Divulga o Pacto pela Saúde 2006 – Consolidação do SUS e aprova as Diretrizes Operacionais do referido pacto.

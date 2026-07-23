@@ -2,183 +2,112 @@
 
 <!-- page:1 -->
 
-## PUERPÉRIO PATOLÓGICO
+> ⚠️ Seção reconstruída a partir de OCR (PDF original em colunas, texto intercalado) — confira contra a fonte original.
 
-Puerpério Puerpério patológico
+## Puerpério Patológico
 
-- Morbidade febril puerperal: Temperatura de 38 ºC ou mais, por 2 dias, durante os primeiros 10 dias de pós-parto, excetuando-se as primeiras 24 horas
+**Resumo**:
+- **Morbidade febril puerperal**: temperatura de 38ºC ou mais, por 2 dias, durante os primeiros 10 dias de pós-parto, excetuando-se as primeiras 24 horas.
+- **Tríade de Bumm** para diagnóstico de endometrite: útero doloroso + útero amolecido + útero hipoinvoluído.
+- **Mastite**: processo infeccioso que acomete a mama, comumente causado por *S. aureus*.
 
-- Tríade de Bumm para diagnóstico de endometrite: útero doloroso + útero amolecido + útero hipoinvoluído;
+## Morbidade Febril Puerperal
 
-- Mastite: Processo infeccioso que acomete a mama. Comumente causado por S. aureus;
+### Definição
 
-## MORBIDADE FEBRIL PUERPERAL
+- Temperatura de **38ºC ou mais, por 2 dias**, durante os primeiros 10 dias de pós-parto, excetuando-se as primeiras 24 horas;
+- Infecção **polimicrobiana**.
 
-## DEFINIÇÃO
-
-- Temperatura de 38o ou mais, por 2 dias, durante os primeiros 10 dias de pós-parto, excetuando-se as primeiras 24 horas;
-
-- Infecção polimicrobiana.
-
-Causas
-
+**Causas**:
 - Endometrite;
-
-- Endometrite;
-
 - Endoparametrite.
 
-## ENDOMETRITE
+## Endometrite
 
-- Infecção da decídua (endométrio gestacional, que pode progredir para órgãos vizinhos).
+- Infecção da decídua (endométrio gestacional), que pode progredir para órgãos vizinhos.
 
-## FATORES DE RISCO
+### Fatores de Risco
 
-- Cesariana é o principal;
-
+- **Cesariana** é o principal;
 - Vaginose bacteriana;
-
 - Rotura prematura de membranas ovulares (RPMO);
-
 - Trabalho de parto prolongado;
-
 - Manipulação vaginal excessiva;
-
 - Corioamnionite;
-
 - Cerclagem;
-
 - Extração placentária manual;
-
 - Anemia;
-
-Tabela 1: Bactérias associadas à endometrite puerperal. Gram-positivas Aeróbicas
-
-- Estreptococos (Grupos A, B e D)
-
-- Enterococcus (faecium, faecalis)
-
-- Staphylococcus aureus
-
-Anaeróbicas
-
-- Peptostreptococcus spp.
-
-- Pectococcus spp.
-
-- Clostridium spp.
-
-Outras
-
-- Mycoplasma hominis
-
-- Chlamydia trachomatis
-
-- Ureaplasma urealiticum - Blues Puerperal: alteração transitória caracterizada por alteração de humor, frequentemente rápida, que envolve tristeza, irritabilidade, ansiedade, insônia e choro fácil;
-
-- Depressão pós-parto: alteração do humor deprimido ou perda de interesse/prazer e/ou outros sintomas que se apresentem na maior parte do dia, por quase todos os dias, por, no mínimo, 2 semanas.
-
 - Traumatismo de canal de parto;
-
 - Perda sanguínea acentuada.
 
-## AGENTES ETIOLÓGICOS
+### Agentes Etiológicos
 
-- É uma infecção tipicamente polimicrobiana;
+- É uma infecção tipicamente **polimicrobiana**;
+- Verificar Tabela 1.
 
-- Verificar Tabela 1
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-## QUADRO CLÍNICO
+**Tabela 1: Bactérias associadas à endometrite puerperal**
 
-- Febre;
+| Categoria | Bactérias |
+|---|---|
+| Gram-positivas aeróbicas | Estreptococos (Grupos A, B e D); Enterococcus (*faecium*, *faecalis*); *Staphylococcus aureus* |
+| Gram-negativas | *Escherichia coli*; *Enterobacter* spp.; *Klebsiella pneumoniae*; *Proteus mirabilis*; *Morganella morganii*; *Gardnerella vaginalis* |
+| Anaeróbicas | *Peptostreptococcus* spp.; *Pectococcus* spp.; *Clostridium* spp.; *Bacteroides bivius*; *Bacteroides melaninogenicus*; *Bacteroides disiens*; *Bacteroides fragilis*; *Fusobacterium* sp. |
+| Outras | *Mycoplasma hominis*; *Chlamydia trachomatis*; *Ureaplasma urealyticum* |
 
-- Dor pélvica;
-
-- Sensibilidade uterina;
+### Quadro Clínico
 
 - Febre (pode estar ausente);
-
+- Dor pélvica;
+- Sensibilidade uterina;
 - Drenagem uterina anormal (maior volume, pus etc.);
-
 - Colo aberto;
-
 - Subinvolução uterina.
 
-Tríade de Bumm: útero doloroso + útero amolecido + útero hipoinvoluído. TRATAMENTO
+**Tríade de Bumm**: útero doloroso + útero amolecido + útero hipoinvoluído.
 
-- Clindamicina 900 mg, EV, de 8/8 h + Gentamicina
+### Tratamento
 
-240mg (até 70kg) ou 320mg (>70kg) EV, 24/24h (preferencial). Gram-negativas
-
-- Escherichia coli
-
-- Enterobacter spp
-
-- Klebsiella pneumoniae
-
-- Proteus mirabilis
-
-- Morganella morganii
-
-- Gardnerella vaginalis
-
-- Bacteróides bivius
-
-- Bacteroides melaninogenicus
-
-- Bacteroides disens
-
-- Bacteroides fragilis
-
-- Fusobacterium sp.
+- **Clindamicina** 900 mg, EV, de 8/8h + **Gentamicina** 240 mg (até 70 kg) ou 320 mg (>70 kg), EV, 24/24h (preferencial);
+- **Alternativas**: Ampicilina-sulbactam 3 g, EV, de 6/6h; ou Metronidazol 500 mg, EV, de 12/12h (se não estiver amamentando) + Gentamicina 240 mg (até 70 kg) ou 320 mg (>70 kg), EV, 24/24h;
+- Tratamento deve ser mantido por **24-48 horas** após o último episódio febril (exceto nos casos mais graves, como aqueles com choque séptico associado).
 
 ---
 
 <!-- page:2 -->
 
-- Alternativas: QUADRO CLÍNICO Ampicilina-sulbactam 3 g, EV, de 6/6 h;
+## Tromboflebite Pélvica Séptica
 
-- Semelhante à endometrite; Metronidazol 500 mg, EV, de 12/12 h (se não estiver
+### Quadro Clínico
 
-- Febre persistente mesmo em uso de amamentando) + Gentamicina 240mg (até 70kg) ou antibioticoterapia, geralmente 3 a 5 dias pós cesárea.
+- Semelhante à endometrite;
+- Febre persistente mesmo em uso de antibioticoterapia, geralmente 3 a 5 dias pós-cesárea.
 
-320mg (>70kg) EV, 24/24h.
+### Exame Complementar
 
-- Tratamento deve ser mantido por 24 - 48 horas após EXAME COMPLEMENTAR último episódio febril (exceto nos casos mais graves,
+- Tomografia computadorizada com contraste ou ressonância nuclear magnética de pelve;
+- Observação de trombos sépticos, principalmente na veia ovariana;
+- Verificar Figura 1.
 
-- Tomografia computadorizada com contraste ou como aqueles com choque séptico associado); ressonância nuclear magnética de pelve;
+### Tratamento
 
-- Refratariedade à antibioticoterapia: | Observação de trombos sépticos principalmente na Curetagem de restos placentários; veia oovariana. Debridamento de material necrótico;
+- **Anticoagulação plena + antibioticoterapia**;
+- Refratariedade à antibioticoterapia:
+  - Curetagem de restos placentários;
+  - Debridamento de material necrótico;
+  - Drenagem de abscessos;
+  - Histerectomia: nas formas disseminadas, localizadas ou propagadas.
 
-- Verificar Figura 1 Drenagem de abscessos; Histerectomia: nas formas disseminadas, localizadas TRATAMENTO ou propagadas.
-
-- Anticoagulação plena + antibioticoterapia.
-
-## DIAGNÓSTICO DIFERENCIAL MASTITE
-
-## Mastite
+### Diagnóstico Diferencial
 
 - Infecção do trato urinário (ITU);
-
-- Condição inflamatória da mama, que pode ou não ser
-
-- Pneumonia; acompanhada de infecção.
-
+- Pneumonia;
 - Infecção de pele e partes moles;
-
-- Quando ocorre durante o aleitamento, chama-se
-
-- Infecção de episiotomia ou em laceração perineal; Mastite puerperal.
-
-## Tromboflebite pélvica séptica
-
-O principal agente etiológico é o S. aureus.
-
-- Verificar Tabela 2 na próxima página
-
+- Infecção de episiotomia ou em laceração perineal;
 - Diagnóstico de exclusão.
 
-Figura 1: Tomografia computadorizada evidenciando trombos sépticos em veia cava inferior, nas veias ilíacas comuns externas e internas, nas veias femorais comuns, bilaterais, na veia ovariana direita associada a edema nos planos adiposos da região pélvica.
+Figura 1: Tomografia computadorizada evidenciando trombos sépticos em veia cava inferior, nas veias ilíacas comuns externas e internas, nas veias femorais comuns, bilaterais, na veia ovariana direita, associada a edema nos planos adiposos da região pélvica.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -188,52 +117,64 @@ Figura 1: Tomografia computadorizada evidenciando trombos sépticos em veia cava
 
 <!-- page:3 -->
 
-Tabela 2: Condições predisponentes para o surgimento de mastite puerperal Condições Maternas Condições do Lactente Alterações da pele Fenda labial Alterações da pele Antecedente de mastite Estresse/fadiga Anemia/desnutrição Alterações do mamilo (mamilos planos ou invertidos e fissuras)
+## Mastite
 
-Infecções (respiratórias, paroníquias, candidíase local) Uso de pomadas, porta-seios e protetores mamilares Antibióticos inadequados Cirurgia mamária prévia
+- Condição inflamatória da mama, que pode ou não ser acompanhada de infecção;
+- Quando ocorre durante o aleitamento, chama-se **mastite puerperal**;
+- O principal agente etiológico é o *S. aureus*;
+- Verificar Tabela 2 a seguir.
+
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
+
+**Tabela 2: Condições predisponentes para o surgimento de mastite puerperal**
+
+| Condições maternas | Condições do lactente |
+|---|---|
+| Alterações da pele | Fenda labial |
+| Antecedente de mastite | Freio lingual curto |
+| Estresse/fadiga | Palato alto (em ogiva) |
+| Alterações do mamilo (mamilos planos ou invertidos e fissuras) | Prematuridade |
+| Infecções (respiratórias, paroníquias, candidíase local) | Doença grave |
+| Uso de pomadas, porta-seios e protetores mamilares | |
+| Antibióticos inadequados | |
+| Cirurgia mamária prévia | |
+| Anemia/desnutrição | |
+
+### Quadro Clínico
 
 - Febre: aferição por via oral (evitar axilar);
-
 - Dor, calor e rubor;
-
 - Turgência mamária;
+- Área endurecida, bom ponto de flutuação (se abscesso).
 
-- Área endurada bom ponto de flutuação (se abscesso).
+### Tratamento
 
-## TRATAMENTO
+- **Antibioticoterapia**:
+  - Cefalexina 500 mg VO 6/6h por 7 a 14 dias; ou
+  - Clindamicina 600 mg VO 6/6h por 7 a 14 dias; ou
+  - Amoxicilina 800 mg VO 8/8h por 10 a 14 dias;
+- Amamentação **não é contraindicada**, exceto se houver eliminação de pus pelo mamilo ou dor intensa não controlada.
 
-- Antibioticoterapia: Cefalexina 500mg VO 6/6h por 7 a 14 dias ou
+**Complicação**:
+- **Abscesso mamário**: neste caso a antibioticoterapia deve ser instituída e, se necessário, drenagem cirúrgica pode ser realizada.
 
-Clindamicina 600 mg VO 6/6h por 7 a 14 dias ou Amoxicilina 800mg VO 8/8h por 10 a 14 dias;
-
-- Amamentação não é contraindicada, exceto se eliminação do pus pelo mamilo ou dor intensa não controlada.
-
-COMPLICAÇÃO:
-
-- Abscesso mamário: neste caso a antibioticoterapia deve ser instituída e, se necessário, drenagem cirúrgica pode ser realizada.
-
-## BLUES PUERPERAL
+## Blues Puerperal
 
 - Alteração transitória, autolimitada, caracterizada por alteração de humor, frequentemente rápida, que envolve tristeza, irritabilidade, ansiedade, insônia e choro fácil;
+- Ocorre, geralmente, no **3º dia** pós-parto e desaparece por volta de **3 semanas** após.
 
-- Ocorre, geralmente, no 3º dia pós-parto e desaparece por volta de 3 semanas após; Fenda labial
-
-Freio lingual curto Palato alto (em ogiva) Prematuridade Doença grave
-
-## DEPRESSÃO PÓS-PARTO
+## Depressão Pós-parto
 
 - Episódio depressivo maior, com sintomas como ansiedade, irritabilidade, anedonia, desânimo persistente, ideação suicida, temor de machucar o filho;
-
+- Alteração do humor deprimido ou perda de interesse/prazer e/ou outros sintomas que se apresentem na maior parte do dia, por quase todos os dias, por, no mínimo, **2 semanas**;
 - O início dos sintomas é na 3ª ou 4ª semana do puerpério, alcançando intensidade máxima nos primeiros 6 meses.
 
+**Fatores de risco**:
 - Antecedente de depressão ou demais psicopatias;
-
-- Gestação não planejada / desejada;
-
+- Gestação não planejada/desejada;
 - Violência doméstica;
-
 - Antecedente de hiperêmese gravídica ou desordens psiquiátricas na gestação atual.
 
-## REFERÊNCIAS
+## Referências
 
-Figura 1: Tomografia computadorizada evidenciando trombos sépticos em veia cava inferior [..] ARMSTRONG, Bruna Benigna Sales; BARILI, Isabela Ceccato; MONTEIRO, Claudia Ariel Tienne; MENESSES, Fábio Arcoverde Coutinho de; COSTA, Nayana de Oliveira; SANTOSJÚNIOR, José Arimatea dos.Tromboflebite pélvica séptica extensa em puérpera: relato de caso. International Seven Journal of Health Research, São José dos Pinhais, v. 2, n. 2, p. 134–140, mar./ abr. 2023.
+Figura 1: Tomografia computadorizada evidenciando trombos sépticos em veia cava inferior [...]. ARMSTRONG, Bruna Benigna Sales; BARILI, Isabela Ceccato; MONTEIRO, Claudia Ariel Tienne; MENESSES, Fábio Arcoverde Coutinho de; COSTA, Nayana de Oliveira; SANTOS-JÚNIOR, José Arimatea dos. Tromboflebite pélvica séptica extensa em puérpera: relato de caso. International Seven Journal of Health Research, São José dos Pinhais, v. 2, n. 2, p. 134–140, mar./abr. 2023.

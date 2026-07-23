@@ -2,266 +2,270 @@
 
 <!-- page:1 -->
 
-Pneumologia
+## Pneumologia
 
-## AVALIAÇÃO DO GRAU DE MOTIVAÇÃO
+## Avaliação do Grau de Motivação
 
-Grau de Motivação Prochaska e DiClemente Sem intenção de mudar o comportamento nos Pré-contemplação próximos 6 meses Sem conflito com o hábito Consciente do problema, dúvidas quanto à perspectiva de parar Contemplação (ambivalência)
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Ainda não estão prontos para mudar seu comportamento Prepara-se para parar de Preparação fumar – nos próximos 30 dias Mudança real e significativa Ação do comportamento Para de fumar Mudança sustentada do Manutenção comportamento, mais de 6 meses Recaída Retorno ao hábito tabágico AVALIAÇÃO DO GRAU DE DEPENDÊNCIA Teste de Fagerstrom Pergunta Resposta Pontos ≤ 5 minutos 3 Quanto tempo leva entre 6 – 30 2 acordar e fumar o 1° cigarro? 31 – 60 1
+**Tabela: Grau de Motivação — Prochaska e DiClemente**
 
-> 60 minutos 0 traz mais satisfação? Qualquer outro locais proibidos?
+| Estágio | Característica |
+|---|---|
+| Pré-contemplação | Sem intenção de mudar o comportamento nos próximos 6 meses; sem conflito com o hábito |
+| Contemplação (ambivalência) | Consciente do problema, com dúvidas quanto à perspectiva de parar; ainda não está pronto para mudar o comportamento |
+| Preparação | Prepara-se para parar de fumar — nos próximos 30 dias |
+| Ação | Mudança real e significativa do comportamento; para de fumar |
+| Manutenção | Mudança sustentada do comportamento, por mais de 6 meses |
+| Recaída | Retorno ao hábito tabágico |
 
-1° da manhã 1 Qual o cigarro do dia lhe Pergunta Resposta Pontos Sim 1 É difícil não fumar em Não 0
+## Avaliação do Grau de Dependência — Teste de Fagerström
 
-> 30 3 fuma por dia? frequentemente no período da manhã? Não 0
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-21 – 30 2 Quantos cigarros 11 – 20 1 ≤ 10 0 Você fuma mais Sim 1 Sim 1 Você fuma mesmo doente? Não 0
+**Teste de Fagerström**
 
+| Pergunta | Resposta | Pontos |
+|---|---|---|
+| Quanto tempo leva entre acordar e fumar o 1º cigarro? | ≤ 5 minutos | 3 |
+| | 6-30 minutos | 2 |
+| | 31-60 minutos | 1 |
+| | > 60 minutos | 0 |
+| Qual o cigarro do dia lhe traz mais satisfação? | 1º da manhã | 1 |
+| | Qualquer outro | 0 |
+| É difícil não fumar em locais proibidos? | Sim | 1 |
+| | Não | 0 |
+| Quantos cigarros fuma por dia? | > 30 | 3 |
+| | 21-30 | 2 |
+| | 11-20 | 1 |
+| | ≤ 10 | 0 |
+| Você fuma mais frequentemente no período da manhã? | Sim | 1 |
+| | Não | 0 |
+| Você fuma mesmo doente? | Sim | 1 |
+| | Não | 0 |
+
+**Interpretação**:
 - 0-2 pontos: muito baixo;
-
 - 3-4 pontos: baixo;
-
 - 5 pontos: médio;
-
 - 6-7 pontos: elevado;
+- 8-10 pontos: muito elevado.
+- Pacientes com escore **≥ 5** se beneficiam de terapia combinada (medicamentosa e comportamental).
 
-- 8-10 pontos: muito elevado: Pacientes com escore ≥ 5 se beneficiam de terapia combinada
+## Tratamento
 
-(medicamentosa e comportamental).
-
-## TRATAMENTO
-
-- Terapia cognitivo-comportamental (SEMPRE);
-
-- Indicação de terapia medicamentosa: tabagista ativo > 5 cigarros/dia, interesse em cessar tabagismo, Fagerstrom ≥ 5;
-
-- Terapia de Reposição de Nicotina (TRN): Adesivo (atenção: irritação local) ou goma/pastilha; Dosar risco/benefício da terapia em pacientes com eventos cardiovasculares recentes.
-
-- Bupropiona: Contraindicada em epilepsia, crise convulsiva febril; Cuidado em idosos.
-
-- Vareniclina: Não disponível no Brasil; Primeira escolha em guidelines estrangeiros.
-
-- Segunda linha: Nortriptilina.
+- **Terapia cognitivo-comportamental** (SEMPRE);
+- **Indicação de terapia medicamentosa**: tabagista ativo > 5 cigarros/dia, interesse em cessar tabagismo, Fagerström ≥ 5;
+- **Terapia de Reposição de Nicotina (TRN)**: adesivo (atenção: irritação local) ou goma/pastilha. Dosar risco/benefício da terapia em pacientes com eventos cardiovasculares recentes.
+- **Bupropiona**: contraindicada em epilepsia, crise convulsiva febril. Cuidado em idosos.
+- **Vareniclina**: não disponível no Brasil; primeira escolha em guidelines estrangeiros.
+- **Segunda linha**: nortriptilina.
 
 ---
 
 <!-- page:2 -->
 
-## AVALIAÇÃO CLÍNICA
+## Avaliação Clínica
 
-ATENÇÃO! Recomenda-se cautela também com os pacientes adolescentes e idosos, pelo elevado risco de HISTÓRIA E AVALIAÇÃO INICIAL síndrome de abstinência!
+**Atenção!** Recomenda-se cautela também com os pacientes adolescentes e idosos, pelo elevado risco de síndrome de abstinência!
 
-Importante avaliar na consulta e na abordagem dos pacientes tabagistas, influenciando o EXAMES COMPLEMENTARES tratamento indicado:
+### História e Avaliação Inicial
+
+Importante avaliar na consulta e na abordagem dos pacientes tabagistas, influenciando o tratamento indicado:
+
+- **História tabágica**:
+  - Idade de início;
+  - Número de cigarros por dia;
+  - Tentativas de cessação;
+  - Tratamentos anteriores, com ou sem sucesso: a terapia foi supervisionada? Recaídas e possíveis causas;
+  - Sintomas de abstinência;
+  - Exposição passiva ao fumo;
+  - Formas de convivência com outros fumantes (casa/trabalho);
+  - Fatores associados: café após as refeições; ligações telefônicas; consumo de bebida alcoólica; ansiedade e outros.
+- Atividade física habitual e oscilações do peso corporal;
+- Sintomas como tosse, expectoração, chiado e sibilância, dispneia, dor torácica, palpitações, claudicação intermitente, tontura e desmaios: consequências do tabagismo e possíveis manifestações de doenças cujo tabagismo é fator de risco;
+- **Comorbidades**: doenças prévias ou atuais que possam interferir no curso ou no manejo do tratamento:
+  - Lesões orais e úlcera péptica;
+  - HAS, DM, cardiopatias, neoplasias e pneumopatias;
+  - História de convulsão e epilepsia;
+  - História de transtornos psiquiátricos;
+  - Uso de álcool e/ou outras drogas;
+- **Medicamentos em uso**, que podem interferir no curso ou manejo do tratamento:
+  - Antidepressivos e ansiolíticos;
+  - Antipsicóticos e anticonvulsivantes;
+  - Corticoides sistêmicos;
+  - Hipoglicemiantes orais ou insulina;
+  - Entre outros.
+- Histórico familiar com problemas de saúde, principalmente relacionados ao tabagismo. Em especial se existirem outros fumantes que convivam com o paciente;
+- Exame físico em busca de alterações ligadas ao tabagismo ou sinais de doenças associadas ao mesmo.
+
+**Situações que demandam cautela**:
+- Gravidez;
+- Amamentação;
+- Infarto agudo do miocárdio ou AVE recente;
+- Arritmias graves;
+- Uso de psicotrópicos e outras situações.
+
+### Exames Complementares
 
 - Radiografia de tórax;
+- Espirometria pré e pós-broncodilatador;
+- Eletrocardiografia;
+- Hemograma;
+- Bioquímica sérica e urinária.
 
-- História tabágica:
+**Obs.**: as medidas de CO exalado e da cotinina (urinária, sérica ou salivar) são úteis na avaliação e no seguimento do fumante e devem ser utilizadas, quando disponíveis.
 
-- Espirometria pré e pós-broncodilatador; Idade de início;
-
-- Eletrocardiografia; Número de cigarros por dia;
-
-- Hemograma; Tentativas de cessação;
-
-- Bioquímica sérica e urinária. Tratamento anteriores, com ou sem sucesso: A terapia foi supervisionada? Obs.: As medidas de CO exalado e da cotinina Recaídas e possíveis causas. (urinária, sérica ou salivar) são úteis na avaliação e Sintomas de abstinência; no seguimento do fumante e devem ser utilizadas, Exposição passiva ao fumo; quando disponíveis. Formas de convivência com outros fumantes
-
-(caso/ trabalho);
-
-## AVALIAÇÃO DO GRAU DE
-
-| Fatores associados: café após as refeições;
-
-## ligações telefônicas; consumo de bebida alcoólica; MOTIVAÇÃO
-
-ansiedade e outros.
+## Avaliação do Grau de Motivação
 
 - Grau de dependência com Teste de Fagerström;
+- Grau de motivação com modelo transteórico comportamental de Prochaska e DiClemente;
 
-- Modelo transteórico comportamental de
+**Modelo transteórico comportamental de Prochaska e DiClemente**:
+- **Pré-contemplação**: sem intenção de mudar o comportamento nos próximos 6 meses, sem conflito com o hábito.
+- **Contemplação**: o paciente está consciente do problema, e apresenta dúvidas quanto à perspectiva de parar (ambivalência); encontra-se inclinado a mudar o hábito em 6 meses.
+- **Preparação**: é o período de determinação; o indivíduo prepara-se para parar de fumar, nos próximos 30 dias — quando começa a reduzir o número de cigarros, por exemplo.
+- **Ação**: ocorre a mudança real e significativa do comportamento.
+- **Manutenção**: ocorre a mudança sustentada do comportamento, por mais de 6 meses.
+- **Recaída**: é caracterizada pelo retorno ao hábito tabágico.
+- **Conclusão**: decorre da percepção nítida sobre o hábito prejudicial prévio, com controle sobre a situação atual; o indivíduo está ciente dos benefícios do novo momento e confiante para seguir em frente.
 
-- Grau de motivação com modelo transteórico Prochaska e Diclemente;
+## Dependência
 
-comportamental de Prochaska e Diclemente;
-
-- Pré-contemplação:
-
-- Atividade física habitual e oscilações do peso corporal; | Sem intenção de mudar o comportamento nos
-
-- Sintomas como tosse, expectoração, chiado e próximos 6 meses, sem conflito com o hábito.
-
-sibilância, dispneia, dor torácica, palpitações,
-
-- Contemplação: Consequências do tabagismo e possíveis apresenta dúvidas quanto à perspectiva de manifestações de doenças cujo tabagismo é fator parar (ambivalência);
-
-claudicação intermitente, tontura e desmaios: | O paciente está consciente do problema, e de risco. | Encontra-se inclinado a mudar o hábito
-
-- Comorbidades: doenças prévias ou atuais que possam em 6 meses.
-
-interferir no curso ou no manejo do tratamento:
-
-- Preparação: Lesões orais e úlcera péptica; | É o período de determinação; HAS, DM, cardiopatias, neoplasias e pneumopatias; | O indivíduo prepara-se para parar de fumar, nos História de convulsão e epilepsia; próximos 30 dias: História de transtornos psiquiátricos; | Quando começa a reduzir o número de cigarros, Uso de álcool e/ou outras drogas; por exemplo.
-
-- Medicamentos em uso, que podem interferir no curso
-
-- Ação: Antidepressivos e ansiolíticos; do comportamento. Antipsicóticos e anticonvulsivantes;
-
-ou manejo do tratamento: | Ocorre a mudança real e significativa
-
-- Manutenção: Corticoides sistêmicos; | Ocorre a mudança sustentada do comportamento, Hipoglicemiantes orais ou insulina; por mais de 6 meses. Entre outros.
-
-- Recaída:
-
-- Histórico familiar com problemas de saúde familiares, | É caracterizada pelo retorno ao hábito tabágico.
-
-principalmente relacionados ao tabagismo. Em
-
-- Conclusão:
-
-especial se existirem outros fumantes que convivam | Decorre na percepção nítida sobre o hábito com o paciente; prejudicial prévio, com controle sobre a
-
-- Exame físico em busca de alterações ligadas situação atual;
-
-ao tabagismo ou sinais de doenças associadas | O indivíduo está ciente dos benefícios do novo ao mesmo. momento e confiante para seguir em frente.
-
-Situações que demandam cautela:
-
-## DEPENDÊNCIA
-
-- Gravidez;
-
-- Amamentação;
-
-- Infarto agudo do miocárdio ou AVE recente;
-
-- É dado pela compulsão do uso;
-
-- Arritmias graves;
-
-- Decorre na necessidade de doses mais elevadas
-
-- Uso de psicotrópicos e outras situações. (pela tolerância);
-
+- É dada pela compulsão do uso;
+- Decorre da necessidade de doses mais elevadas (pela tolerância);
 - A ausência do uso, em geral, evolui com sinais típicos de abstinência.
 
 ---
 
 <!-- page:3 -->
 
-## TIPOS DE DEPENDÊNCIA
+## Tipos de Dependência
 
-- 6-7 pontos: elevado;
+- **Física, fisiológica, química**: necessidade orgânica da nicotina;
+- **Psicológica**: dá-se pela visualização do cigarro como um "companheiro";
+- **Comportamental**: ocorre pela associação com situações diárias.
 
-- Física, fisiológica, química: necessidade orgânica
+### Teste de Fagerström
 
-- 8-10 pontos: muito elevado:
+- Mensura a intensidade da dependência física à nicotina. A partir disso, pode orientar estratégias para cessação do tabagismo.
+- Verificar Tabela 1.
 
-da nicotina; | Pacientes com escore ≥ 5 se beneficiam de terapia
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original (idêntica à tabela da página 1).
 
-- Psicológica: dá-se pela visualização do cigarro como combinada (medicamentosa e comportamental);
+**Tabela 1: Teste de Fagerström para avaliação de dependência física**
 
-um “companheiro”; | Para indivíduos com baixa dependência, pode ser um “companheiro”;
+| Pergunta | Resposta | Pontos |
+|---|---|---|
+| Quanto tempo leva entre acordar e fumar o 1º cigarro? | ≤ 5 minutos | 3 |
+| | 6-30 minutos | 2 |
+| | 31-60 minutos | 1 |
+| | > 60 minutos | 0 |
+| Qual o cigarro do dia lhe traz mais satisfação? | 1º da manhã | 1 |
+| | Qualquer outro | 0 |
+| É difícil não fumar em locais proibidos? | Sim | 1 |
+| | Não | 0 |
+| Quantos cigarros fuma por dia? | > 30 | 3 |
+| | 21-30 | 2 |
+| | 11-20 | 1 |
+| | ≤ 10 | 0 |
+| Você fuma mais frequentemente no período da manhã? | Sim | 1 |
+| | Não | 0 |
+| Você fuma mesmo doente? | Sim | 1 |
+| | Não | 0 |
 
-- Comportamental: ocorre pela associação com situações diárias.
-
-Teste de Fagerström
-
-- Mensura a intensidade da dependência física à nicotina: A partir disso, pode orientar estratégias para cessação do tabagismo.
-
-- Verificar Tabela 1 .
-
-Tabela 1: Teste de Fagerström para avaliação de dependência física. Pergunta Resposta Pontos ≤ 5 minutos 3 Quanto tempo leva entre 6 – 30 2 acordar e fumar o 1° cigarro? 31 – 60 1
-
-> 60 minutos 0 traz mais satisfação? outro locais proibidos?
-
-1° da manhã 1 Qual o cigarro do dia lhe Qualquer Sim 1 É difícil não fumar em Não 0
-
-> 30 3 dia? frequentemente no período da manhã?
-
-21 – 30 2 Quantos cigarros fuma por 11 – 20 1 ≤ 10 0 Sim 1 Você fuma mais Não 0 Sim 1 Você fuma mesmo doente?
-
-Não 0 Interpretação:
-
+**Interpretação**:
 - 0-2 pontos: muito baixo;
-
 - 3-4 pontos: baixo;
+- 5 pontos: médio — para indivíduos com baixa dependência, pode ser indicada a terapia não farmacológica;
+- 6-7 pontos: elevado;
+- 8-10 pontos: muito elevado — pacientes com escore ≥ 5 se beneficiam de terapia combinada (medicamentosa e comportamental).
 
-- 5 pontos: médio; Para indivíduos com baixa dependência, pode ser indicada a terapia não farmacológica.
+- A terapia cognitivo-comportamental sempre vai ser indicada, isolada ou em combinação à terapia farmacológica.
+- **Indicações de terapia farmacológica**:
+  - Tabagista ativo, com > 10 cigarros/dia;
+  - Interesse em parar de fumar;
+  - Teste de Fagerström ≥ 5.
+- **Medicações de primeira linha**:
+  - Terapia de reposição de nicotina (TRN);
+  - Bupropiona;
+  - Vareniclina.
+- **Medicações de segunda linha**:
+  - Nortriptilina;
+  - O uso da clonidina como terapia de segunda linha vem sendo abandonado devido ao perfil de efeitos colaterais.
 
-- A terapia cognitivo-comportamental sempre vai ser indicada, isolada ou em combinação à
-
-## terapia farmacológica
-
-- Indicações: Tabagista ativo, com > 10 cigarros/dia; Interesse em para de fumar; Teste de Fagerström ≥ 5.
-
-- Medicações de primeira linha: Terapia de reposição de nicotina (TRN); Bupropiona; Vareniclina.
-
-- Medicações de segunda linha: Nortriptilina; O uso da clonidina como terapia de segunda linha vem sendo abandonado devido ao perfil de efeitos colaterais.
-
-Terapia de Reposição de Nicotina (TRN)
+### Terapia de Reposição de Nicotina (TRN)
 
 - Formas: goma e adesivos;
+- Quando se usam as duas formas: TRN combinada;
+- **Efeitos colaterais**:
+  - Náuseas, vômitos, desconforto abdominal e diarreia;
+  - Cefaleia;
+  - Irritação da pele (adesivo): recomenda-se alternar o local de aplicação, bem como fazer o rodízio em 24 horas;
+  - Irritação oral e esofágica (goma).
+- **Perfil de segurança**:
+  - Segurança cardiovascular: seguro na doença cardiovascular estável. Aceitável nas doenças cardiovasculares agudas recentes (por exemplo, IAM);
+  - Na síndrome de abstinência, cursa com sintomas adrenérgicos e agitação.
 
-- Quando se usa as duas formas: TRN combinada;
-
-- Efeitos colaterais: Náuseas, vômitos, desconforto abdominal e diarreia; Cefaleia; Irritação da pele (adesivo): recomenda-se alternar o local de aplicação, bem como fazer o rodízio em Irritação oral e esofágica (goma).
-
-24 horas;
-
-- Perfil de segurança: Segurança cardiovascular: seguro na doença cardiovascular estável. Aceitável nas doenças cardiovasculares agudas recentes (por exemplo IAM); Na síndrome de abstinência cursa com sintomas adrenérgicos e agitação.
-
-Bupropiona
+### Bupropiona
 
 - Antagonista do receptor nicotínico, atua modulando a liberação de dopamina no SNC;
-
-- Efeitos colaterais: Redução do limiar para crises convulsivas; Risco de virada maníaca em pacientes com TAB; Insônia e agitação; Boca seca, cefaleia, tontura; Perda de apetite; Nervosismo e, eventualmente, ansiedade.
-
-- Início de ação entre 10-14 dias de uso;
-
-- Contraindicações: Convulsão ou epilepsia; Convulsão febril na infância;
+- **Efeitos colaterais**:
+  - Redução do limiar para crises convulsivas;
+  - Risco de virada maníaca em pacientes com TAB;
+  - Insônia e agitação;
+  - Boca seca, cefaleia, tontura;
+  - Perda de apetite;
+  - Nervosismo e, eventualmente, ansiedade.
+- Início de ação entre 10-14 dias de uso.
+- **Contraindicações**:
+  - Convulsão ou epilepsia;
+  - Convulsão febril na infância;
 
 ---
 
 <!-- page:4 -->
 
-## EFEITOS COLATERAIS E BENEFÍCIOS
+  - Tumor SNC ou TCE;
+  - Uso de inibidores da MAO.
 
-| Tumor SNC ou TCE;
+### Vareniclina
 
-## | Uso de inibidores da MAO. DA CESSAÇÃO DO TABAGISMO
+- Agonista parcial do receptor nicotínico.
+- **Efeitos colaterais**:
+  - Náuseas;
+  - Insônia;
+  - Boca seca, tontura;
+  - Sonhos vívidos/pesadelos.
+- Desvantagem: elevado custo.
+- Não disponível no Brasil, porém primeira escolha em guidelines estrangeiros.
 
-Vareniclina
+### Nortriptilina
 
-- Agonista parcial do receptor nicotínico; EFEITOS COLATERAIS
+- Antidepressivo tricíclico — atua no bloqueio da recaptação de noradrenalina;
+- Seu uso não foi aprovado pelo FDA;
+- **Efeitos colaterais**:
+  - Náuseas;
+  - Insônia;
+  - Sonhos vívidos/pesadelos.
 
-- Efeitos colaterais:
+**Atenção!** O uso não é recomendado em pacientes com infarto agudo do miocárdio e arritmias, devido ao potencial de induzir distúrbios de condução.
 
-- Síndrome de abstinência: Náuseas; | Disforia; Insônia; | Insônia; Boca seca, tontura; | Irritabilidade e ansiedade; Sonhos vividos/pesadelos. | Redução da concentração.
+## Efeitos Colaterais e Benefícios da Cessação do Tabagismo
 
-- Desvantagem: elevado custo;
+### Efeitos Colaterais (Síndrome de Abstinência)
 
-- Ganho ponderal:
+- Disforia;
+- Insônia;
+- Irritabilidade e ansiedade;
+- Redução da concentração.
 
-- Não disponível no Brasil, porém primeira escolha em | Aproximadamente 5 kg em 6 meses.
+**Ganho ponderal**:
+- Aproximadamente 5 kg em 6 meses.
 
-guidelines estrangeiros. Nortriptilina BENEFÍCIOS
+### Benefícios
 
-- Antidepressivo tricíclico – atua no bloqueio da
-
-- Melhora da tosse, da dispneia e da função ciliar:
-
-recaptação de noradrenalina; | Associou-se a uma redução importante do risco de
-
-- Seu uso não foi aprovado pelo FDA; infecção – mesmo no primeiro ano.
-
-- Efeitos colaterais:
-
-- Redução do risco cardiovascular: Náuseas; | Em 15 anos, o risco é semelhante a quem não fuma; Insônia; | Em pacientes pós-IAM 3 anos para o risco ser Sonhos vividos/pesadelos. semelhante a quem não fumou.
-
-- Redução do risco de neoplasia:
-
-ATENÇÃO! O uso não é recomendado em pacientes | Porém o risco ainda é maior em comparação à com infarto agudo do miocárdio e arritmias, devido ao população não fumante, mesmo após 25 anos.
-
-potencial de induzir distúrbios de condução.
-
-- Redução da mortalidade.
+- **Melhora da tosse, da dispneia e da função ciliar**: associou-se a uma redução importante do risco de infecção — mesmo no primeiro ano.
+- **Redução do risco cardiovascular**: em 15 anos, o risco é semelhante a quem não fuma; em pacientes pós-IAM, 3 anos para o risco ser semelhante a quem não fumou.
+- **Redução do risco de neoplasia**: porém o risco ainda é maior em comparação à população não fumante, mesmo após 25 anos.
+- **Redução da mortalidade**.

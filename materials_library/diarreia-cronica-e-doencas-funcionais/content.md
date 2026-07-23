@@ -2,251 +2,163 @@
 
 <!-- page:1 -->
 
-## DIARREIA CRÔNICA E
+## Diarreia Crônica, Doenças Inflamatórias Intestinais e Doenças Funcionais
 
-## DOENÇAS FUNCIONAIS
+### Doença Celíaca
 
-DOENÇAS FUNCION Diarreia crônica, Doenças Infl amatórias Intestinais e Doenças Funcionais ; DOENÇA CELÍACA I
+- **Diagnóstico:** exame inicial: antitransglutaminase IgA + IgA total; biópsia endoscópica duodenal (padrão-ouro): infiltrado linfocitário intraepitelial (> 25 para cada 100 enterócitos)
+- **Tratamento:** exclusão definitiva do glúten da dieta
 
-- Diagnóstico: exame inicial: Antitransglutaminase IgA cada 100 enterócitos)
+### Doença Inflamatória Intestinal
 
-+ IgA total; biópsia endoscópica duodenal (padrãoouro): infiltrado linfocitário intraepitelial (>25 para
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original (ver Tabela 1, página 3, para versão mais completa).
 
-- Tratamento: exclusão definitiva do glúten da dieta.
+| | Doença de Crohn (DCr) | Retocolite Ulcerativa (RCU) |
+|---|---|---|
+| **Localização** | Todo o TGI | Reto ± cólon |
+| **Quadro clínico** | Massa palpável, dor, parada de crescimento | Sangramento retal, tenesmo, urgência (QID) |
+| **Endoscopia e AP** | Saltatório e transmural, granuloma não caseoso | Mucosa e submucosa, ascendente e contínua |
+| **Complicações** | Abscessos, fístulas, fissuras, estenose | Megacólon tóxico, neoplasia intestinal |
 
-DOENÇA INFLAMATÓRIA INTESTINAL Doença de Retocolite Crohn (DCr) UIcerativa (RU) Localização Todo TGI Reto ± colo Massa (QID), Sangramento Quadro dor, parada de retal, tenesmo, clínico crescimento urgência Saltatório e Mucosa e Endoscopia transmural submucosa, e AP Granuloma não ascendentecaseoso contínua Abscessos, Megacólon Complicações fístulas, fissuras, tóxico, neoplasia estenose intestinal Tratamento:
+**Tratamento:**
+- **DCr — indução:** nutrição enteral exclusiva (NEE) → corticosteroide (CS) → anti-TNF. **Manutenção:** NEE parcial + imunomodulador ou anti-TNF
+- **RCU — indução:** derivados de 5-ASA → CS → anti-TNF. **Manutenção:** derivados de 5-ASA → tiopurina → anti-TNF
 
-- DCr - indução: Nutrição enteral exclusiva (NEE) → parcial + imunomodulador ou anti TNF.
+## Diarreia Crônica
 
-Corticosteroide (CS) → Anti TNF; manutenção: NE
+### Conceitos
 
-- RCU: indução: derivados de 5-ASA → CS → anti TNF. Manutenção: derivados de 5-ASA → tiopurina → anti TNF.
+**Perda fecal:**
+- > 10 g/kg/dia em lactentes
+- > 200 g/dia em crianças
+- Duração > 14 dias
+- Frequência > 3x/dia — exceto bebês em aleitamento materno exclusivo (AME)
+- Fator mais importante na anamnese durante investigação clínica é a mudança na consistência das fezes
 
-## DIARREIA CRÔNICA
+### Mecanismos
 
-## CONCEITOS
-
-Perda fecal
-
-- > 10 g/kg/dia em lactentes;
-
-- > 200 g/dia em crianças; I
-
-- Duração > 14 dias;
-
-- Frequência > 3x/dia - exceto bebês em aleitamento materno exclusivo (AME);
-
-- Fator mais importante na anamnese durante investigação clínica é a mudança na consistência das fezes.
-
-## MECANISMOS
-
-Osmótico: C
-
-- Substâncias não absorvidas no lúmen, aumentando a I osmolaridade luminal ↓ superfície absortiva (celíaca); ↓ enzima digestiva (lactase); I
-
+**Osmótico:**
+- Substâncias não absorvidas no lúmen, aumentando a osmolaridade luminal (↓ superfície absortiva na doença celíaca; ↓ enzima digestiva na deficiência de lactase)
 - Melhora com jejum
+- GAP osmolar fecal alto
 
-- GAP osmolar fecal alto.
+**Secretor:**
+- Fluxo ativo de eletrólitos e água para o lúmen; toxinas (cólera)
+- Mantém-se no jejum
+- GAP osmolar fecal baixo
 
-- NAIS
-
-; Doença Celíaca INTOLERÂNCIA À LACTOSE
-
-- Quadro clínico: diarreia líquida, explosiva, ácida;
-
-borborigmo, flatulência, dermatite perineal
-
-- Diagnóstico: clínico!
-
-- Tratamento: redução da lactose da dieta;
-
-repositores de lactase; avaliar repor cálcio e vitamina D.
-
-## DISTÚRBIOS GI FUNCIONAIS
-
-## SÍNDROME DO
-
-## DIARREIA FUNCIONAL
-
-## INTESTINO IRRITÁVEL
-
-- Início entre 6 meses e
-
-- Dor abdominal ≥ 4 dias/
-
-5 anos mês por 2 meses +
-
-- ≥ 4 semanas e ≥ 4 vezes z relação com a por dia evacuação ou alteração
-
-- Evacuação diária, na frequência das fezes indolor e recorrente, de ou na forma das fezes fezes malformadas e
-
-- A dor não resolve volumosas com a resolução da constipação
-
-## DISQUESIA DO LACTENTE CÓLICA DO LACTENTE
-
-- <9 meses z < 5 meses no início e
-
-- ≥ 10 minutos de esforço término dos sintomas ou choro antes da
-
-- Períodos prolongados eliminação, com ou sem e recorrentes de sucesso, de fezes choro, desconforto ou irritabilidade.
-
-- Sem causa evidente e incapacidade de solucionar ou prevenir
-
-Secretor:
-
-- Fluxo ativo de eletrólitos e água para o lúmen; Toxinas (cólera);
-
-- Se mantém no jejum
-
-- GAP osmolar fecal baixo;
-
-Inflamatório:
-
-- Citocinas; ↑ Permeabilidade >> Extravasamento de proteínas; ↑ Motilidade.
-
+**Inflamatório:**
+- Citocinas; ↑ permeabilidade → extravasamento de proteínas; ↑ motilidade
 - Principal causa: doenças inflamatórias intestinais (DII)
+- Sangue; leucócitos; ↑ calprotectina fecal
 
-- Sangue; Leucócitos; ↑ calprotectina fecal.
+> GAP osmolar fecal = 290 - 2x (Na + K fecal)
 
-GAP osmolar fecal = 290 - 2x (Na + K fecal)
+### Causas
 
-## CAUSAS
+**Infecciosas:**
+- Enteroparasitoses, giardíase, E. coli
+- Síndrome pós-enterite
 
-Infecciosas:
+**Imunomediadas:**
+- Doença celíaca e doença inflamatória intestinal
+- Enteropatias e proctocolites alérgicas — alergia à proteína do leite de vaca (APLV) é a principal
 
-- Enteroparasitoses, Giardia, E. coli;
+## Intolerância à Lactose
 
-- Síndrome pós-enterite.
+- **Quadro clínico:** diarreia líquida, explosiva, ácida; borborigmo, flatulência, dermatite perineal
+- **Diagnóstico:** clínico!
+- **Tratamento:** redução da lactose da dieta; repositores de lactase; avaliar repor cálcio e vitamina D
 
-Imunomediadas:
+## Distúrbios Gastrointestinais Funcionais
 
-- Doença celíaca e Doença inflamatória intestinal;
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Enteropatias e proctocolites alérgicas - Alergia à
+| | **Diarreia Funcional** | **Síndrome do Intestino Irritável** |
+|---|---|---|
+| **Critérios** | Início entre 6 meses e 5 anos; evacuação diária, indolor e recorrente, de fezes malformadas e volumosas; ≥ 4 semanas e ≥ 4 vezes por dia | Dor abdominal ≥ 4 dias/mês por 2 meses + relação com a evacuação ou alteração na frequência ou na forma das fezes; a dor não resolve com a resolução da constipação |
 
-Proteína do Leite de Vaca (APLV) é a principal.
+| | **Disquesia do Lactente** | **Cólica do Lactente** |
+|---|---|---|
+| **Critérios** | < 9 meses; ≥ 10 minutos de esforço ou choro antes da eliminação, com ou sem sucesso, de fezes; sem causa evidente | < 5 meses no início e término dos sintomas; períodos prolongados e recorrentes de choro, desconforto ou irritabilidade, com ou sem sucesso; incapacidade de solucionar ou prevenir |
+
+### Grupos de Riscos (Doença Celíaca)
+
+- Parentes de 1º grau com DC
+- Doenças autoimunes (diabetes tipo 1, Sjögren, tireoidite)
+- Síndromes genéticas (síndrome de Down, Turner, Williams)
+- Deficiência de IgA
 
 ---
 
 <!-- page:2 -->
 
-- Má absorção de carboidratos GRUPOS DE RISCOS
+### Má Absorção de Carboidratos
 
-- Quadro Clínico: Fezes ácidas, explosivas, assadura na
+- **Quadro clínico:** fezes ácidas, explosivas, assadura na região de fraldas no lactente
+- Intolerância à lactose, ingestão excessiva de carboidratos osmoticamente ativos
 
-- Parentes de 1º grau com DC;
+### Má Absorção de Proteínas
 
-região de fraldas no lactente
+- **Quadro clínico:** hipoalbuminemia e redução de imunoglobulinas (Ig)
+- Enteropatias perdedoras de proteínas: doença celíaca (DC); doença inflamatória intestinal (DII); enteropatia alérgica; linfangiectasia
 
-- Doenças autoimunes (Diabetes tipo 1,
+### Má Absorção de Gorduras
 
-- Intolerância à lactose, ingestão excessiva de Sjogren, Tireoidite);
+- **Quadro clínico:** fezes volumosas, brilhantes e odor fétido (esteatorreia)
+- Insuficiência pancreática exócrina (fibrose cística)
 
-carboidratos osmoticamente ativos.
+## Quadro Clínico (Doença Celíaca)
 
-- Síndrome Genética (Síndrome de Down,
+- **Clássico:** síndrome de má absorção: desnutrição, atrofia subcutânea (glútea)
+- **Menos frequente**
 
-Má absorção de proteínas: Turner, Williams);
+Figura 1: Distensão abdominal e atrofia subcutânea em região glútea.
 
-- Quadro Clínico: Hipoalbuminemia e redução de
+## Investigação Inicial
 
-- Deficiência de IgA.
+**Idade:**
+- Lactente e pré-escolar: doença celíaca e APLV
+- Adolescente: DII
 
-imunoglobulinas (Ig);
+**Estado nutricional:**
+- Perda de peso: inflamação/má absorção
+- Preservado: intolerância a carboidratos, funcional
 
-- Enteropatias perdedoras de proteínas: QUADRO CLÍNICO Doença Celíaca (DC); Clássico Doença inflamatória intestinal (DII);
+**Características das evacuações:**
+- Sangue/muco → causa inflamatória
+- Oleosa (esteatorreia) → insuficiência pancreática
+- Ácidas → intolerância aos carboidratos
 
-- Síndrome de má absorção: desnutrição, atrofia Enteropatia alérgica; subcutânea (glútea) Linfangiectasia
+**Manifestações associadas:**
+- Febre, articular, cutâneo → pensar em doenças inflamatórias e sistêmicas
+- Assadura → fezes ácidas na intolerância a carboidratos
 
-- Menos frequente
+## Investigação Inicial de Acordo com a Suspeita Clínica
 
-Má absorção de gorduras:
+**Doença celíaca:**
+- Diarreia crônica, dor, distensão abdominal (intestinal); sintomas iniciam após introdução alimentar
+- Baixa estatura; anemia ferropriva refratária; atraso puberal/irregularidade menstrual; irritabilidade/fadiga; dermatite herpetiforme (extraintestinal)
+- Antitransglutaminase IgA; IgA total
 
-- Quadro Clínico: fezes volumosas, brilhantes e odor fétido (esteatorreia);
+**DII:**
+- Calprotectina fecal
+- Sangue oculto nas fezes
 
-- Insuficiência pancreática exócrina (fibrose cística).
+**Má absorção de carboidratos:**
+- Substâncias redutoras nas fezes aumentadas
 
-## INVESTIGAÇÃO INICIAL
+**Má absorção das proteínas:**
+- Alfa-1-antitripsina fecal aumentada
 
-Idade:
+**Má absorção de gorduras:**
+- Esteatócrito
 
-- Lactente e pré-escolar: doença celíaca e APLV;
+**Diarreia infecciosa:**
+- Coprocultura
+- Parasitológico de fezes (PF)
 
-- Adolescente: DII.
-
-Estado nutricional:
-
-- Perda de peso: inflamação/má absorção;
-
-- Preservado: intolerância a carboidratos, funcional.
-
-Características das evacuações:
-
-- Sangue/muco → causa inflamatória;
-
-- Oleosa (esteatorreia) → insuficiência pancreática;
-
-- Ácidas → intolerância aos carboidratos.
-
-Manifestações associadas:
-
-- Febre; Articular; Cutâneo → pensar em doenças inflamatórias e sistêmicas.
-
-- Assadura → fezes ácidas na intolerância a carboidratos. Figura 1: Distensão abdominal e atrofia subcutânea em região glútea
-
-## INVESTIGAÇÃO INICIAL DE ACORDO COM A
-
-SUSPEITA CLÍNICA Intestinal
-
-## Doença celíaca
-
-- Diarreia crônica, dor, distensão abdominal
-
-- Anti-Transglutaminase IgA;
-
-- Sintomas iniciam após introdução alimentar
-
-- IgA total. Extraintestinal
-
-DII:
-
-- Baixa estatura
-
-- Calprotectina fecal;
-
-- Anemia ferropriva refratária
-
-- Sangue oculto nas fezes.
-
-- Atraso puberal/ irregularidade menstrual
-
-Má absorção de carboidratos:
-
-- Irritabilidade/fadiga
-
-- Substâncias redutoras nas fezes aumentadas.
-
-- Dermatite herpetiforme.
-
-Má absorção das proteínas:
-
-- Alfa-1-antitripsina fecal aumentada.
-
-Má absorção de gorduras:
-
-- Esteatócrito.
-
-Diarreia infecciosa:
-
-- Coprocultura;
-
-- Parasitológico de fezes (PF).
-
-- Enteropatia crônica imunomediada desencadeada pela ingestão de glúten;
-
-- Predisposição genética;
-
-- Manifestações sistêmicas diversas.
+- Doença celíaca: enteropatia crônica imunomediada desencadeada pela ingestão de glúten; predisposição genética; manifestações sistêmicas diversas
 
 Figura 2: Dermatite herpetiforme.
 
@@ -256,125 +168,91 @@ Figura 2: Dermatite herpetiforme.
 
 <!-- page:3 -->
 
-## DIAGNÓSTICO QUADRO CLÍNICO
+## Diagnóstico — Quadro Clínico (Doença Celíaca)
 
-Marcadores sorológicos:
+- Diarreia crônica inflamatória (sangue, muco)
+- Dor abdominal crônica
 
-- Diarreia crônica inflamatória (sangue, muco);
+**Marcadores sorológicos:**
+- Antitransglutaminase IgA
+- Antiendomísio IgA e IgG
+- Antigliadina IgA e IgG
 
-- Antitransglutaminase IgA;
+**Exame inicial:**
+- Antitransglutaminase IgA + IgA total. Solicitar frente à suspeita clínica ou como rastreio de grupos de risco
 
-- Dor abdominal crônica;
-
-- Antiendomísio IgA e IgG;
-
-- Antigliadina IgA e IgG.
-
-Exame inicial:
-
-- Antitransglutaminase IgA + IgA total Solicitar frente à suspeita clínica ou como rastreio de grupos de risco.
-
-Biópsia endoscópica duodenal (padrão ouro): I
-
-- ≥4 amostras do duodeno distal, com pelo menos ≥ 1 de E bulbo, enquanto consome dieta com glúten;
-
+**Biópsia endoscópica duodenal (padrão-ouro):**
+- ≥ 4 amostras do duodeno distal, com pelo menos ≥ 1 de bulbo, enquanto consome dieta com glúten
 - Mucosa plana, atrofia vilositária, criptas alongadas
+- Infiltrado linfocitário intraepitelial (> 25 linfócitos para cada 100 enterócitos)
 
-- Infiltrado linfocitário intraepitelial (>25 linfócitos para cada 100 enterócitos).
+**Abordagem sem biópsia (2020):**
+- IgA total normal e TGA > 10x o limite superior: solicitar antiendomísio IgA. Reagente: confirma diagnóstico
+- IgA total normal e TGA aumentado, porém < 10x o limite superior: necessário realizar biópsia de delgado
 
-- Abordagem sem biópsia (2020):
+**Situações especiais:**
+- Deficiência de IgA: utilizar antiendomísio IgG e antigliadina IgG
+- Lactentes: antitransglutaminase IgA negativa + persistência de suspeita clínica → solicitar antigliadina IgG
+- HLA DQ2 e DQ8: alto valor preditivo negativo (exclusão). Positivo indica apenas predisposição genética
 
-- IgA total normal e TGA >10x limite superior: Solicitar antiendomísio IgA: Reagente:
+### Tratamento
 
-confirma diagnóstico. P
+- Exclusão definitiva do glúten da dieta: trigo, centeio, cevada e malte. Aveia — evitar por ser frequentemente contaminada. Somente após avaliação completa
 
-- IgA total normal e TGA aumentado, porém <10x limite superior: Necessário realizar biópsia de delgado.
+### Prognóstico
 
-- Situações especiais:
+- Se dieta adequada: normalização da mucosa intestinal, normalização dos anticorpos, resolução dos sintomas
+- Transgressões: risco aumentado para neoplasias do trato gastrointestinal (TGI)
 
-- Deficiência de IgA: Utilizar Antiendomísio
+## Doença Inflamatória Intestinal
 
-IgG e Antigliadina IgG.
+- Processo inflamatório crônico do TGI, com períodos de exacerbação e remissão
 
-- Lactentes: Antitransglutaminase IgA negativa + persistência de suspeita clínica → solicitar Antigliadina IgG.
+**Epidemiologia:**
+- Pico de incidência aos 15-30 anos
+- Pode ter início precoce (< 6 anos), associada a história familiar, normalmente mais grave
 
-- HLA DQ2 e DQ8: Alto valor preditivo negativo (exclusão).
+**Etiologia — desregulação do sistema imune:**
+- Meio ambiente (dieta ocidental, alimentos ultraprocessados, exposição ao tabaco)
+- Aleitamento materno como fator de proteção
+- Microbioma intestinal
+- Fatores genéticos
 
-Positivo indica apenas predisposição genética.
+**Quadro clínico:**
+- Perda de peso/baixa curva de crescimento/atraso puberal
+- Sintomas sistêmicos (febre, artralgia, uveíte)
+- Tenesmo, abscesso, fissura ou fístula perianal, úlceras orais
 
-## TRATAMENTO
+## Investigação
 
-Exclusão definitiva do glúten da dieta:
+**Exames iniciais:**
+- Hemograma: anemia, leucocitose, plaquetose
+- ↑ VHS, PCR, alfa-1-glicoproteína ácida
+- Hipoalbuminemia
+- Sangue oculto positivo e leucócitos nas fezes
+- ↑ Calprotectina fecal
+- Diagnóstico diferencial: coprocultura e protoparasitológico de fezes
 
-- Trigo, centeio, cevada e malte. Aveia - evitar por ser frequentemente contaminada. Somente após avaliação completa.
+**Proceder a investigação:**
+- Endoscopia alta (EDA) + colonoscopia com biópsia
+- Enterorressonância ou enterotomografia
+- Sorologia (p-ANCA, ASCA)
+- Confira a Tabela 1
 
-## PROGNÓSTICO
+### Tabela 1: Comparativo entre Doença de Crohn e Retocolite Ulcerativa
 
-- Se dieta adequada - normalização da mucosa intestinal, normalização dos anticorpos, resolução dos sintomas.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Transgressões: Risco aumentado para neoplasias do trato gastrointestinal (TGI).
+| | Doença de Crohn (DCr) | Retocolite Ulcerativa (RCU) |
+|---|---|---|
+| **Localização** | Todo o TGI | Reto ± cólon |
+| **Endoscopia e AP** | Saltatório e transmural (acomete todas as camadas); característica: granuloma não caseoso | Acomete mucosa e submucosa; ascendente e contínua |
+| **Quadro clínico** | Massa palpável, dor, parada de crescimento | Sangramento retal, tenesmo, urgência |
+| **Complicações** | Abscesso, fístula, fissuras, estenose | Megacólon tóxico, neoplasia intestinal |
+| **Sorologia** | ASCA | p-ANCA |
+| **Manifestações extraintestinais** | Articular, eritema nodoso, úlceras aftosas | Hepatobiliar (colangite esclerosante, colelitíase) |
 
-## DOENÇA INFLAMATÓRIA
-
-## INTESTINAL
-
-- Processo inflamatório crônico do TGI, com períodos de exacerbação e remissão.
-
-Epidemiologia:
-
-- Pico de incidência aos 15-30 anos.
-
-- Pode ter início precoce (<6 anos), associada a história familiar, normalmente mais grave.
-
-Etiologia - Desregulação do sistema imune:
-
-- Meio ambiente (Dieta ocidental, alimentos ultraprocessados, exposição ao tabaco);
-
-- Aleitamento materno como fator de proteção;
-
-- Microbioma intestinal;
-
-- Fatores genéticos.
-
-- Perda de peso/baixa curva de crescimento/ atraso puberal;
-
-- Sintomas sistêmicos (febre, artralgia, uveíte);
-
-- Tenesmo, abscesso, fissura ou fístula perianal, úlceras orais.
-
-## INVESTIGAÇÃO
-
-Exames iniciais:
-
-- Hemograma: anemia, leucocitose, plaquetose;
-
-- ↑ VHS, PCR, alfa-1-glicoproteína ácida;
-
-- Hipoalbuminemia;
-
-- Sangue oculto positivo e leucócitos nas fezes;
-
-- ↑ Calprotectina fecal;
-
-- Diagnóstico diferencial: Coprocultura e protoparasitológico de fezes.
-
-Proceder a investigação:
-
-- Endoscopia alta (EDA) + Colonoscopia com biópsia;
-
-- Enteroressonância ou enterotomografia;
-
-- Sorologia (p-ANCA, ASCA).
-
-- Confira a Tabela 1 e Retocolite Ulcerativa.
-
-Tabela 1: Comparativo entre Doença de Crohn Doença de Retocolite Crohn (DCr) UIcerativa (RU) Localização Todo TGI Reto ± colo Saltatório e Acomete mucosa transmural (todas e submucosa.
-
-Endoscopia as camadas); Característica e AP BX: Granuloma ascendentenão caseoso; contínua Massa palpável, Sangramento retal, Quadro clínico dor, parada de tenesmo, urgência.
-
-crescimento. Abscesso, Megacólon Complicações fístula, fissuras, tóxico, neoplasia estenose. intestinal Sorologia ASCA P-ANCA Hepatobiliar Articular, eritema Manifestações (colangite nodoso, úlceras extraintestinais esclerosante, aftosas.
-
-colelitíase). Figura 3: Doença de Crohn - Aspecto saltatório de acometimento à endoscopia
+Figura 3: Doença de Crohn — aspecto saltatório de acometimento à endoscopia.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -382,91 +260,58 @@ colelitíase). Figura 3: Doença de Crohn - Aspecto saltatório de acometimento 
 
 <!-- page:4 -->
 
-Perianal - associar:
+**Perianal — associar:**
+- Drenagem de coleções e antibióticos
 
-- Drenagem de coleções e antibióticos.
+Figura 4: Doença perianal na doença de Crohn. Figura 5: Úlceras orais na Doença de Crohn.
 
-Retocolite Ulcerativa: Figura 4: Doença perianal na doença de Crohn Figura 5: Úlceras orais na Doença de Crohn
+### Retocolite Ulcerativa — Tratamento
 
-- Avaliar atividade da doença (considera scores, calprotectina fecal e risco de complicações).
+- Avaliar atividade da doença (considera scores, calprotectina fecal e risco de complicações)
+- Objetivo: limitar corticosteroides
+- Dividido em duas fases: indução de remissão e manutenção
 
-- Objetivos: limitar corticoesteroides
+**Arsenal terapêutico:**
+- Nutrição enteral exclusiva (NEE)
+- Aminossalicilatos (D. 5-ASA): mesalazina, sulfassalazina
+- Corticosteroides (CS)
+- Imunomoduladores: azatioprina (tiopurinas), metotrexato
+- Imunobiológicos (anti-TNF): infliximabe, adalimumabe
 
-- Dividido em duas fases: indução de remissão e manutenção.
+**Doença de Crohn:**
+- **Indução:** nutrição enteral exclusiva → CS → anti-TNF
+- **Manutenção:** nutrição enteral parcial + imunomoduladores ou anti-TNF
+- **Iniciar com imunobiológicos** (tratamento "top-down") se: pan-entérica; estenosante ou penetrante; perianal grave; atraso do crescimento
 
-Arsenal terapêutico:
+**Retocolite Ulcerativa:**
+- **Indução:** D. 5-ASA → CS → anti-TNF
+- **Manutenção:** D. 5-ASA → tiopurina → anti-TNF
+- A colectomia pode ser necessária, com possibilidade de ser curativa
 
-- Nutrição enteral exclusiva (NEE);
+## Intolerância à Lactose
 
-- Aminossalicilatos (D. 5-ASA):
+**Definição:**
+- Incapacidade de digerir ou de absorver lactose
+- Dissacaridase lactase: transforma lactose em glicose + galactose (absorvíveis)
 
-mesalazina, sulfassalazina;
-
-- Corticosteroides (CS);
-
-- Imunomoduladores: azatioprina
-
-(tiopurinas), metotrexato;
-
-- Imunobiológicos (anti TNF): infliximabe, adalimumabe.
-
-Doença de Crohn:
-
-- Indução: Nutrição enteral exclusiva → CS → anti TNF
-
-- Manutenção: Nutrição enteral parcial + Imunomoduladores ou anti TNF
-
-Iniciar com imunobiológicos (tratamento “topdown”) se:
-
-- Pan-entérica
-
-- Estenosante ou penetrante
-
-- Perianal grave
-
-- Atraso do crescimento.
-
-- Indução: D. 5-ASA → CS → anti TNF
-
-- Manutenção: D. 5-ASA → tiopurina → anti TNF.
-
-- A colectomia pode ser necessária, com possibilidade de ser curativa.
-
-## INTOLERÂNCIA À LACTOSE
-
-Definição:
-
-- Incapacidade de digerir ou de absorver lactose;
-
-- Dissacaridase lactase: Transforma lactose em glicose + galactose (absorvíveis).
-
-Primárias:
-
-- Ontogenética ou “Hipolactasia primária do adulto” Mais comum, sintomas iniciam a partir de 3 anos de idade
-
+**Primárias:**
+- Ontogenética ou "hipolactasia primária do adulto" — mais comum, sintomas iniciam a partir de 3 anos de idade
 - Alactasia congênita → rara, ausência completa da lactase
 
-Secundárias:
-
-- Pós gastroenterite (rotavírus)
-
+**Secundárias:**
+- Pós-gastroenterite (rotavírus)
 - Doença celíaca
+- Intolerância do prematuro
 
-- Intolerância do prematuro.
+## Quadro Clínico
 
-## QUADRO CLÍNICO
+- Relação com quantidade de lactose ingerida
+- Diarreia líquida, explosiva, ácida
+- Borborigmo, flatulência
+- Dor abdominal, dermatite perineal
+- Lactose não digerida acumula no delgado, gerando gradiente osmótico. No cólon, a lactose íntegra sofre fermentação (formação de ácidos e gases), resultando em diarreia explosiva e ácida
 
-- Relação com quantidade de lactose ingerida;
-
-- Diarreia líquida, explosiva, ácida;
-
-- Borborigmo, flatulência;
-
-- Dor abdominal, dermatite perineal.
-
-- Lactose não digerida acumula no delgado - gera gradiente osmótico No cólon: a lactose íntegra irá sofrer fermentação diarreia explosiva e ácida.
-
-(formação de ácidos e gases), resultando em Figura 6: Dermatite perineal devido às fezes ácidas na
+Figura 6: Dermatite perineal devido às fezes ácidas.
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -476,98 +321,73 @@ Secundárias:
 
 <!-- page:5 -->
 
-## DIAGNÓSTICO DISQUESIA DO LACTENTE
+## Diagnóstico (Intolerância à Lactose)
 
-- Diagnóstico clínico! Critérios Diagnósticos: Exames complementares não são necessários de z < 9 meses forma geral.
+- Diagnóstico clínico! Exames complementares não são necessários de forma geral
+- Na dúvida diagnóstica: fezes com pH baixo (< 6,0), substâncias redutoras positivas; teste de hidrogênio expirado: ↑ > 20 ppm; teste de tolerância oral: ↑ glicemia < 20 mg/dL; dosagem das dissacaridases em mucosa intestinal (biópsia), raramente necessário
 
-- Na dúvida diagnóstica: Fezes: pH baixo (<6,0), substâncias redutoras positivo C Teste de hidrogênio expirado: ↑ > 20 ppm; Teste de tolerância oral: ↑ glicemia < 20 mg/dL; Dosagem das dissacaridases em mucosa intestinal C
+**Tratamento:**
+- Redução da lactose da dieta
+- Repositores de lactase
+- Avaliar repor cálcio e vitamina D
 
-(biópsia), raramente necessário.
+## Disquesia do Lactente
 
-- Redução da lactose da dieta; C
+**Critérios diagnósticos:**
+- < 9 meses no início e término
+- ≥ 10 minutos de esforço ou choro antes da eliminação, com ou sem sucesso de fezes
 
-- Repositores de lactase; C
+## Distúrbios Gastrointestinais Funcionais
 
-- Avaliar repor cálcio e vitamina D.
-
-## DISTÚRBIOS GASTROINTESTINAIS
-
-## FUNCIONAIS
-
-- Sintomas crônicos ou recorrentes do TGI C
-
+- Sintomas crônicos ou recorrentes do TGI
 - Não explicados por anormalidades estruturais ou bioquímicas
+- Postula-se imaturidade do sistema nervoso e aspectos biopsicossociais
 
-- Postula-se imaturidade do sistema nervoso e aspectos biopsicossociais.
+### Diarreia Funcional
 
-Critérios Diagnósticos:
+**Critérios diagnósticos:**
+- Evacuação indolor de fezes volumosas e não formadas, ≥ 4 vezes por dia por ≥ 4 semanas
+- Início entre 6 e 60 meses de vida
+- Bom desenvolvimento ponderoestatural
 
-- Evacuação indolor de fezes volumosas e não formadas,
+**Conduta:**
+- Adequar a dieta: pode piorar com excesso de sucos açucarados (sorbitol, frutose) ou outros carboidratos não digeríveis
+- Orientação dos pais: benigno e não precisa de medicação
+- Resolve-se espontaneamente entre 4-5 anos
 
-≥ 4 vezes por dia por ≥ 4 semanas;
+## Síndrome do Intestino Irritável
 
-- Início entre 6 e 60 meses de vida;
+**Critérios diagnósticos:**
+- Dor abdominal ≥ 4 dias/mês por 2 meses + relação com a evacuação; alteração na frequência das fezes; alteração na forma das fezes
+- A dor não resolve com a resolução da constipação
+- Os sintomas não podem ser explicados por outra condição médica
+- Ausência de outros problemas de saúde
 
-- Bom desenvolvimento ponderoestatural.
+**Causas:**
+- Incoordenação entre a contração da musculatura abdominal e o relaxamento do assoalho pélvico
 
-Conduta: D
+**Conduta:**
+- Tranquilizar os pais
+- Não é necessário supositório ou laxantes
 
-- Adequar a dieta: pode piorar com excesso de sucos açucarados (sorbitol, frutose) ou outros carboidratos não digeríveis. h
+## Cólica do Lactente
 
-- Orientação dos pais: benigno e não precisa de medicação;
+**Critérios diagnósticos:**
+- < 5 meses no início e término
+- Períodos prolongados e recorrentes de choro, desconforto ou irritabilidade, segundo os cuidadores, sem causa evidente e incapacidade de solucionar ou prevenir a sintomatologia
+- Ganho de peso normal, sem febre ou outras doenças
 
-- Se resolve espontaneamente entre 4 - 5 anos.
-
-h
-
-## SÍNDROME DO INTESTINO IRRITÁVEL
-
-Critérios Diagnósticos:
-
-- Dor abdominal ≥ 4 dias/mês por 2 meses + 1: h Relação com a evacuação; Alteração na frequência das fezes; Alteração na forma das fezes; h A dor não resolve com a resolução da constipação; Os sintomas não podem ser explicados por outra condição médica. A
-
-- ≥ 10 minutos de esforço ou choro antes da eliminação, com ou sem sucesso de fezes;
-
-- Ausência de outros problemas de saúde.
-
-Causas:
-
-- Incoordenação entre a contração da musculatura abdominal e o relaxamento do assoalho pélvico.
-
-Conduta:
-
-- Tranquilizar os pais;
-
-- Não é necessário supositório ou laxantes.
-
-## CÓLICA DO LACTENTE
-
-Critérios Diagnósticos:
-
-- < 5 meses no início e término;
-
-- Períodos prolongados e recorrentes de choro, desconforto ou irritabilidade; segundo os cuidadores:
-
-sem causa evidente e incapacidade de solucionar ou prevenir sintomatologia.
-
-- Ganho de peso normal, sem febre ou outras doenças.
-
-Conduta:
-
+**Conduta:**
 - Tranquilização dos pais
+- Não medicamentoso → medidas comportamentais
+- Probiótico (L. reuteri DSM 17938) → reduz duração do choro
+- Muito intenso: pode ser feita prova terapêutica para APLV, seguida de teste de provocação oral
 
-- Não medicamentoso → medidas comportamentais.
+## Referências
 
-- Probiótico (L. reuteri DSM 17938) → reduz duração do choro;
-
-- Muito intenso: pode ser feita prova terapêutica para
-
-APLV seguida de teste de provocação oral.
-
-## REFERÊNCIAS
-
-Figura 1: Distensão abdominal e atrofia subcutânea em região glútea Dig Liver Dis. 2020 Oct; 52(10): 1092–1093.
-
-Figura 2: Dermatite herpetiforme. https://doi.org/10.1136/bmj.g2557 Figura 3: Doença de Crohn - Aspecto saltatório de acometimento à endoscopia https://doi.org/10.1155/2020/8832856 Figura 4: Doença perianal na doença de Crohn https://doi.org/10.1155/2020/8832856 Figura 5: Úlceras orais na Doença de Crohn.
-
-https://doi.org/10.1155/2015/830472 Figura 6: Dermatite perineal devido às fezes ácidas Arquivo pessoal da professora.
+- Figura 1: Distensão abdominal e atrofia subcutânea em região glútea. Dig Liver Dis. 2020 Oct; 52(10): 1092–1093.
+- Figura 2: Dermatite herpetiforme. https://doi.org/10.1136/bmj.g2557
+- Figura 3: Doença de Crohn — aspecto saltatório de acometimento à endoscopia. https://doi.org/10.1155/2020/8832856
+- Figura 4: Doença perianal na doença de Crohn. https://doi.org/10.1155/2020/8832856
+- Figura 5: Úlceras orais na Doença de Crohn. https://doi.org/10.1155/2015/830472
+- Figura 6: Dermatite perineal devido às fezes ácidas. Arquivo pessoal da professora.

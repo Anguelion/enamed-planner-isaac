@@ -7627,7 +7627,6 @@ function renderQuestion(question, total) {
   const isSpecialCollection = String(question.collectionBlock) === 'ineditas';
   const collectionLabel = question.collectionLabel || questionCollectionLabel(question.collectionBlock || '-');
   const draftAnswer = ui.draftAnswers[question.id] || savedProgress.draftAnswer || '';
-  const draftConfidence = savedProgress.draftConfidence || '';
   const highlights = savedProgress.textHighlights || [];
   const eliminated = savedProgress.eliminated || [];
   const dataIssue = questionDataIssue(question);
@@ -7641,7 +7640,7 @@ function renderQuestion(question, total) {
       cls = 'selected';
     }
     const isEliminated = eliminated.includes(letter);
-    return `<div class="answer-row"><button class="eliminate-btn ${isEliminated?'active':''}" data-eliminate="${letter}" title="Riscar alternativa ${letter} com J">×</button><button class="answer-option ${cls} ${isEliminated?'eliminated':''}" data-question="${question.id}" data-answer="${letter}" title="Alternativa ${letter} · tecla ${optionIndex+1}" ${result?'disabled':''}><span class="answer-letter">${letter}</span><span style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, [], false)}</span></button></div>`;
+    return `<div class="answer-row"><button class="answer-option ${cls} ${isEliminated?'eliminated':''}" data-question="${question.id}" data-answer="${letter}" title="Alternativa ${letter} · tecla ${optionIndex+1}" ${result?'disabled':''}><span class="answer-letter">${letter}</span><span style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, [], false)}</span></button><button class="eliminate-btn ${isEliminated?'active':''}" data-eliminate="${letter}" title="Riscar alternativa ${letter} com J" aria-label="Riscar alternativa ${letter}">×</button></div>`;
   }).join('');
   const timeoutText = result?.timedOut ? ' Tempo esgotado no modo contratempo.' : '';
   const feedback = result ? `<div class="question-feedback ${result.correct?'':'wrong'}"><div><strong>${result.correct?'Resposta correta.':'Resposta incorreta.'}</strong>${timeoutText} Gabarito: ${question.answer}.${!result.correct ? ' Marque este assunto para revisão.' : ''}</div>${!result.correct && linkedLesson ? `<button class="tiny-btn question-material-link" data-question-materials="${escapeAttr(linkedLesson.id)}">Revisar material da aula</button>` : ''}</div>` : '';
@@ -7661,7 +7660,6 @@ function renderQuestion(question, total) {
       ${renderQuestionImages(question)}
       ${dataIssue ? `<div class="question-data-warning"><strong>Revisar extração.</strong> ${escapeHtml(dataIssue)} Use “Editar” para corrigir com base no PDF.</div>` : ''}
       <div class="answer-list">${options}</div>
-      ${!result && !dataIssue ? renderQuestionConfidenceLine(question, draftConfidence) : ''}
       ${!result && !dataIssue ? renderQuestionPreReasoning(question, savedProgress) : ''}
       ${!result && !dataIssue ? `<div class="answer-confirm"><span class="muted">${draftAnswer ? `Alternativa ${draftAnswer} selecionada` : 'Selecione uma alternativa e confirme.'}</span><button class="icon-btn primary" id="confirmQuestionAnswer" data-selected-answer="${escapeAttr(draftAnswer)}" ${draftAnswer?'':'disabled'}>Confirmar resposta</button></div>` : ''}
       ${feedback}
@@ -7687,14 +7685,6 @@ function renderQuestionEditPanel(question) {
     <label>Comentário<textarea class="textarea" data-question-edit="comment">${escapeHtml(question.comment || '')}</textarea></label>
     <div class="question-edit-actions"><button class="icon-btn primary" id="questionEditSave">Salvar correção</button><button class="icon-btn" id="copyFullQuestion" title="Copiar enunciado, alternativas, gabarito e comentário">Copiar questão</button><button class="icon-btn" id="questionEditReset">Restaurar original</button></div>
   </div>`;
-}
-function renderQuestionConfidenceLine(question, selected) {
-  const options = [
-    ['red','Chutei / não sei'],
-    ['yellow','Na dúvida'],
-    ['green','Na certeza']
-  ];
-  return `<div class="sim-confidence question-confidence"><div class="muted" style="margin-bottom:10px">Nível de segurança antes de corrigir</div><div class="sim-confidence-track">${options.map(([value,label]) => `<button type="button" class="${selected===value?'active':''}" data-question-confidence="${value}"><span class="sim-confidence-dot ${value}"></span><span>${label}</span></button>`).join('')}</div></div>`;
 }
 function questionCommentSections(question, result) {
   const comment = String(question.comment || '').trim();
@@ -7830,12 +7820,11 @@ function renderQuestionPreReasoning(question, progress) {
 function renderQuestionReflection(question, result) {
   const confidence = Math.max(0, Math.min(100, n(result.confidence)));
   const certainty = Math.max(0, Math.min(100, n(result.certainty)));
-  const levelLabel = result.confidenceLevel === 'red' ? 'Chutei / não sei' : result.confidenceLevel === 'yellow' ? 'Na dúvida' : result.confidenceLevel === 'green' ? 'Na certeza' : 'Não marcado';
   if(result.correct) {
-    return `<div class="question-reflection"><strong>Como foi esse acerto?</strong><div class="muted">Nível marcado antes de corrigir: ${escapeHtml(levelLabel)}</div><div class="field-row"><label class="field-label">Como você acertou<select class="select" data-progress-field="correctMode"><option value="">Marcar acerto</option>${['Sabendo','Chute'].map(option => `<option ${result.correctMode===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Certeza na resposta (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="certainty" value="${certainty || ''}" placeholder="Ex.: 70"></label><label class="field-label">Confiança no tema (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 90"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label></div><div class="reflection-help">Certeza = o quanto você confiava nesta resposta. Confiança = o quanto domina o tema de forma geral.</div></div>`;
+    return `<div class="question-reflection"><strong>Como foi esse acerto?</strong><div class="field-row"><label class="field-label">Como você acertou<select class="select" data-progress-field="correctMode"><option value="">Marcar acerto</option>${['Sabendo','Chute'].map(option => `<option ${result.correctMode===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Certeza na resposta (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="certainty" value="${certainty || ''}" placeholder="Ex.: 70"></label><label class="field-label">Confiança no tema (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 90"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label></div><div class="reflection-help">Certeza = o quanto você confiava nesta resposta. Confiança = o quanto domina o tema de forma geral.</div></div>`;
   }
   const missReason = result.missReason === 'Não lembrar' ? 'Dúvida / já vi' : result.missReason;
-  return `<div class="question-reflection"><strong>Por que errei?</strong><div class="muted">Nível marcado antes de corrigir: ${escapeHtml(levelLabel)}</div><div class="field-row"><label class="field-label">Motivo do erro<select class="select" data-progress-field="missReason"><option value="">Escolher motivo</option>${['Desatenção','Dúvida / já vi','Não saber'].map(option => `<option ${missReason===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Confiança antes da correção (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 40"></label><label class="field-label">O que aconteceu?<input class="input" data-progress-field="reflection" value="${escapeAttr(result.reflection || '')}" placeholder="Comentário curto"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label></div><div class="reflection-help">Este percentual registra o quanto você acreditava que estava certo antes de ver o gabarito.</div></div>`;
+  return `<div class="question-reflection"><strong>Por que errei?</strong><div class="field-row"><label class="field-label">Motivo do erro<select class="select" data-progress-field="missReason"><option value="">Escolher motivo</option>${['Desatenção','Dúvida / já vi','Não saber'].map(option => `<option ${missReason===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Confiança antes da correção (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 40"></label><label class="field-label">O que aconteceu?<input class="input" data-progress-field="reflection" value="${escapeAttr(result.reflection || '')}" placeholder="Comentário curto"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label></div><div class="reflection-help">Este percentual registra o quanto você acreditava que estava certo antes de ver o gabarito.</div></div>`;
 }
 function renderQuestionFlashcardEditor(question, result) {
   const cards = flashcardsInBuildOrder(Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : []);
@@ -7925,12 +7914,6 @@ function bindQuestionActions(questions, question) {
   const deleteQuestion = document.getElementById('questionDelete');
   document.querySelectorAll('[data-question-materials]').forEach(button => button.onclick = e => openMaterialsForSchedule(e.currentTarget.dataset.questionMaterials));
   document.querySelectorAll('[data-question-video]').forEach(button => button.onclick = e => openVideosForSchedule(e.currentTarget.dataset.questionVideo));
-  document.querySelectorAll('[data-question-confidence]').forEach(button => button.onclick = e => {
-    const current = state.questionProgress[question.id] || {};
-    setQuestionProgress(question.id,{ draftConfidence: e.currentTarget.dataset.questionConfidence });
-    saveStateOnly({invalidate:false});
-    document.querySelectorAll('[data-question-confidence]').forEach(option => option.classList.toggle('active', option === e.currentTarget));
-  });
   const goPrev = () => navigateQuestionBy(-1);
   const goNext = () => navigateQuestionBy(1);
   if(prev) prev.onclick = goPrev;
@@ -7944,7 +7927,7 @@ function bindQuestionActions(questions, question) {
       notes: previous.notes || '',
       textHighlights: previous.textHighlights || [],
       eliminated: previous.eliminated || [],
-      draftConfidence: previous.confidenceLevel || previous.draftConfidence || '',
+      draftConfidence: '',
       attempts: previous.attempts || 0,
       selected: '',
       correct: false,
@@ -8463,7 +8446,7 @@ function answerQuestion(question, selected, timedOut=false) {
   const linkedLesson = scheduleForQuestion(question);
   const questionsDoneBefore = linkedLesson ? questionStatsForSchedule(linkedLesson.id).done : 0;
   const correct = !timedOut && selected === question.answer;
-  const draftConfidence = previous.draftConfidence || '';
+  const draftConfidence = '';
   const confidenceMap = { red: 20, yellow: 55, green: 90 };
   const confidence = confidenceMap[draftConfidence] || n(previous.confidence) || 0;
   const autoCorrectMode = correct

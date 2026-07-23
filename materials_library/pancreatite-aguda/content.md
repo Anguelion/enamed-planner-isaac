@@ -2,187 +2,157 @@
 
 <!-- page:1 -->
 
-## ABDOME AGUDO INFLAMATÓRIO PANCREATITE AGUDA PANCREATITE AGU
+## Abdome Agudo Inflamatório: Pancreatite Aguda
 
-Principais causas
+## Resumo
 
-- 1o = Litíase;
+**Principais causas:**
 
-- 2o = Alcoolismo.
+- 1º: litíase;
+- 2º: alcoolismo.
 
-## DIAGNÓSTICO
+## Diagnóstico
 
-1. Quadro clínico
+**1. Quadro clínico**
 
 - Dor abdominal em faixa;
-
 - Irradiando para o dorso;
-
 - Prece maometana;
-
 - Náuseas e vômitos.
 
-2. Exames laboratoriais
+**2. Exames laboratoriais**
 
-- Amilase Pico precoce, meia vida menor; Menos específico (03x o valor).
+- **Amilase**: pico precoce, meia-vida menor; menos específica (3x o valor);
+- **Lipase**: pico tardio, meia-vida maior; mais específica.
 
-- Lipase Pico tardio, meia vida maior; Mais específico.
-
-3. Exame de imagem
+**3. Exame de imagem**
 
 - Não é necessário no início;
+- TC: estimar gravidade/diagnóstico diferencial;
+- USG: identificar etiologia.
 
-## INTRODUÇÃO
+- Se o paciente possuir 2 dos 3 critérios positivos, já se confirma pancreatite aguda!
 
-- Possui incidência anual de 4 a 35 casos/100.000 na população geral: 20% dos casos são graves.
+## Introdução
 
-- Nos casos leves, a mortalidade é baixa (1,5%) / Casos graves, alta (17%).
+- Possui incidência anual de 4 a 35 casos/100.000 na população geral; 20% dos casos são graves;
+- Nos casos leves, a mortalidade é baixa (1,5%); nos casos graves, é alta (17%).
 
-## FISIOPATOLOGIA
+## Fisiopatologia
 
-- Ativação de enzimas pancreáticas intratecidual microcirculação → Liberação de mediadores inflamatórios → Inflamação sistêmica.
+- Ativação de enzimas pancreáticas intratecidual → autolesão pancreática → causa lesão na microcirculação → liberação de mediadores inflamatórios → inflamação sistêmica.
 
-→ Autolesão pancreática → Causa lesão na
+## Causas de Pancreatite Aguda
 
-## CAUSAS DE PANCREATITE AGUDA
+- Litíase biliar — principal causa;
+- Álcool — segunda principal causa;
+- **Outras**:
+  - Mecânicas: lama biliar, tumor, divertículos, áscaris;
+  - Tóxicas: etanol, metanol, organofosforado, veneno de escorpião;
+  - Metabólicas: hipertrigliceridemia, hipercalcemia;
+  - Medicamentosas: metronidazol, azatioprina, sulfa, tiazídicos;
+  - Infecciosas: vírus, bactérias, fungos, parasitas;
+  - Trauma;
+  - Pâncreas divisum;
+  - Pós-CPRE;
+  - Vasculares;
+  - Genéticas.
 
-- Litíase Biliar – principal causa;
+## Classificação
 
-- Álcool – segunda principal causa;
+- **Leve**: sem disfunção orgânica; sem complicação local; a mais comum;
+- **Moderada**: disfunção orgânica < 48 horas; complicação local;
+- **Grave**: disfunção orgânica persistente.
 
-- Outras: Mecânicas: lama biliar, tumor, divertículos, áscaris; Tóxicas: etanol, metanol, organofosforado, veneno de escorpião; Metabólicas: hipertrigliceridemia, hipercalcemia; Medicamentosa: metronidazol, azatioprina, sulfa, tiazídicos; Infecciosa: vírus, bacteriana, fúngica, parasitas; Trauma; Pâncreas divisum; Pós-CPRE; Vasculares; Genéticas. UDA
+## Tratamento
 
-- TC - estimar gravidade / dx diferencial;
+- Hidratação + analgesia + jejum;
+- Antibióticos: não.
 
-- USG para identificar etiologia.
-
-2 de 3 → confirma! CLASSIFICAÇÃO
-
-- Leve Sem disfunção orgânica; Sem complicação local; A mais comum.
-
-- Moderada Disfunção orgânica < 48 horas; Complicação local.
-
-- Grave Disfunção orgânica persistente.
-
-## TRATAMENTO
-
-- Hidratação + Analgesia + Jejum;
-
-- Antibióticos - Não.
-
-## 1. QUADRO CLÍNICO TÍPICO
+## 1. Quadro Clínico Típico
 
 - Dor abdominal em faixa;
-
-- Irradiando para dorso;
-
+- Irradiando para o dorso;
 - Prece maometana;
-
 - Náuseas e vômitos.
 
-## 2. EXAMES LABORATORIAIS
+## 2. Exames Laboratoriais
 
-- Amilase: Pico precoce, meia-vida menor; É menos específico – precisamos de uma amilase
+- **Amilase**: pico precoce, meia-vida menor; é menos específica — precisamos de uma amilase 3x o LSN para suspeitarmos de pancreatite aguda;
+- **Lipase**: pico tardio, meia-vida maior; é mais específica.
 
-3x o LSN para suspeitarmos de pancreatite aguda.
-
-- Lipase: Pico tardio, meia-vida maior; É mais específico.
-
-## 3. EXAMES DE IMAGEM
+## 3. Exames de Imagem
 
 - Não é necessário no início;
-
-- Pode-se fazer TC para estimar gravidade/ diagnóstico diferencial;
-
+- Pode-se fazer TC para estimar gravidade/diagnóstico diferencial;
 - USG para identificar etiologia.
 
-Se o paciente possuir 2 critérios positivos dos 3, já confirmo pancreatite aguda!!!
+- Se o paciente possuir 2 critérios positivos dos 3, já se confirma pancreatite aguda!
 
-## DETALHES
+## Detalhes
 
-Pancreatite aguda grave (necro-hemorrágica retroperitoneal):
+**Pancreatite aguda grave (necro-hemorrágica retroperitoneal):**
 
 - Sinal de Fox: equimose na bolsa escrotal;
-
 - Sinal de Cullen;
-
 - Sinal de Grey-Turner.
 
 ---
 
 <!-- page:2 -->
 
-| G – Glicose; | A - Age; | L - LDH;
+Figura 1: Sinal de Cullen (equimose periumbilical).
 
-- Figura 1: Sinal de Cullen (equimose periumbilical).
+Figura 2: Sinal de Grey-Turner (equimose em flancos).
 
-- B
+## Classificação
 
-- - - - A
+- **Leve**: sem disfunção orgânica; sem complicação local; a mais comum;
+- **Moderada**: disfunção orgânica < 48h; complicação local;
+- **Grave**: disfunção orgânica persistente.
 
-- B
+## Escores de Prognóstico
 
-- Figura 2: Sinal de Grey-Turner (equimose em flancos).
-
-## CLASSIFICAÇÃO
-
-- Leve: Sem disfunção orgânica; Sem complicação local; A mais comum.
-
-- Moderada: Disfunção orgânica < 48h; Complicação local.
-
-- Grave: Disfunção orgânica persistente.
-
-## ESCORES DE PROGNÓSTICO
-
-## RANSON
+### Ranson
 
 - Pouco específico, pouco usado, não muda conduta.
 
-- Na admissão: L - Leucócitos; E – Enzima – TGO; F - Fluídos; E – Excesso de base; C - Cálcio; H - Hematócrito; O – Oxigênio (PaO2); U – Ureia.
+> ⚠️ Trecho reconstruído a partir de OCR — confira contra a fonte original.
 
-Hidratação + analg Pancreatite Aguda Monitorização Estra Figura 3. - Após 48 h:
+- **Na admissão**: G - Glicose; A - Idade (Age); L - LDH; L - Leucócitos; E - Enzima (TGO/AST);
+- **Após 48h**: F - Fluidos (sequestro de líquidos); E - Excesso de base; C - Cálcio; H - Hematócrito (queda); O - Oxigênio (PaO2); U - Ureia.
 
-- Se o paciente tiver > 3 pontos no Ranson ele tem um pior prognóstico.
+Figura 3: Fluxograma de pancreatite aguda — hidratação + analgesia + jejum, monitorização, estratificação. TC em 48 horas (e em 07 dias, para avaliar complicações). Leve: tratar causa base e alta. Moderada e grave: semi-intensiva/UTI.
 
-## BISAP
+- Se o paciente tiver > 3 pontos no Ranson, tem pior prognóstico.
+
+### BISAP
 
 - BUN < 25 (ureia);
-
 - Rebaixamento do nível de consciência;
-
 - SIRS;
-
 - Idade > 60;
-
 - Derrame pleural.
 
-## APACHE – II
+### APACHE-II
 
 - Avalia 12 itens, idade, comorbidades;
-
 - > 8 = grave.
 
-## BALTHAZAR
+### Balthazar
 
 - Escore tomográfico, feito para avaliar complicações da pancreatite aguda;
-
-- Tomografia é feita depois de 48h se o paciente evolui com pancreatite aguda grave;
-
+- A tomografia é feita depois de 48h, se o paciente evolui com pancreatite aguda grave;
 - Quanto mais necrose e inflamação, mais grave e mais alta a morbimortalidade.
 
-OBS: lembrar que o contraste não chega na necrose.
+> **OBS**: lembrar que o contraste não chega na necrose.
 
-## TRATAMENTO INICIAL
+## Tratamento Inicial
 
-- Hidratação: Feita com ringer lactato; Hidratação adequada, avaliando sempre diurese, hematócrito e função renal.
-
-- Analgesia: Analgésicos potentes + sintomáticos.
-
-- Jejum;
-
-- Devemos ainda: Monitorar; Classificar; Descobrir a etiologia.
-
-gesia + jejum Leve: tratar causa base e alta atificação Moderada e Grave: Semi/ UTI TC em 48 horas *07 dias* (avaliar complicações )
+- **Hidratação**: feita com ringer lactato; hidratação adequada, avaliando sempre diurese, hematócrito e função renal;
+- **Analgesia**: analgésicos potentes + sintomáticos;
+- **Jejum**;
+- Devemos ainda: monitorar; classificar; descobrir a etiologia.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -190,93 +160,66 @@ gesia + jejum Leve: tratar causa base e alta atificação Moderada e Grave: Semi
 
 <!-- page:3 -->
 
-Tabela 1: Necrose encapsulada (WON). Coleção madura Heterogênea, com encapsulada densidades líquida Necrose com necrose e sólidas com encapsulada pancreática e/ou parede definida.
+Tabela 1: Necrose encapsulada (WON — walled-off necrosis).
 
-(WON) peripancreática. Completamente Ocorre após 4 encapsulada. Intra o semanas. extra pancreática Tabela 2: Pseudocisto pancreático.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Coleção encapsulada Bem definido, redon de líquido ou oval. Densidad Pseudocisto com parede homogênea de líqui pancreático inflamatória bem Completamente definida, sem encapsulado.
+- Coleção madura encapsulada, heterogênea, com densidades líquidas e sólidas, com necrose pancreática e/ou peripancreática;
+- Completamente encapsulada, com parede definida;
+- Intra ou extrapancreática;
+- Ocorre após 4 semanas.
 
-necrose. Ocorre após 4 semanas
+Tabela 2: Pseudocisto pancreático.
 
-## TRATAMENTO CONFORME
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-GRAVIDADE Pancreatite aguda leve:
+- Coleção encapsulada de líquido, com parede inflamatória bem definida, sem necrose;
+- Bem definido, redondo ou oval; densidade homogênea de líquido;
+- Completamente encapsulado;
+- Ocorre após 4 semanas.
+
+## Tratamento Conforme Gravidade
+
+**Pancreatite aguda leve:**
 
 - Retorno da dieta precoce;
+- Tratar causa base: causa biliar = operar a vesícula na mesma internação.
 
-- Tratar causa base → Causa biliar = operar vesícula na mesma internação.
-
-Pancreatite aguda grave ou moderada:
+**Pancreatite aguda grave ou moderada:**
 
 - UTI, suporte intensivo, nutrição, profilaxias e observar evolução;
-
 - Monitorizar complicações;
-
 - Considerar dieta enteral em casos graves;
+- Antibioticoterapia apenas em necrose infectada: meropenem.
 
-- Antibioticoterapia apenas em necrose infectada - Meropenem.
+## Principais Complicações
 
-## PRINCIPAIS COMPLICAÇÕES
+- **Pancreatite aguda intersticial edematosa**;
+- **Coleção peripancreática aguda**, com líquido homogêneo difuso: tratamento = observação e suporte;
+- **Coleção necrótica aguda**, com líquido heterogêneo: tratamento = observação e suporte;
+- **Walled-off necrosis** (coleção heterogênea bem delimitada), após 4 semanas: observação ou drenagem percutânea. Verificar Tabela 1;
+- **Pseudocisto**: coleção encapsulada homogênea, parede inflamatória bem definida, ausência de necrose, 4 semanas após o quadro inicial; drenagem se sintomas; derivação definitiva com o TGI é melhor; pode-se puncionar por radio-intervenção. Verificar Tabela 2.
 
-- Pancreatite aguda intersticial edematosa;
+## Necrose Pancreática = Step-up Approach
 
-- Coleção peripancreática aguda com líquido
+- Operar a pancreatite aguda na fase aguda = mortalidade de 97%;
+- O tratamento por etapas é o melhor:
+  1. Suporte clínico intensivo;
+  2. Drenagem de coleções por radio-intervenção;
+  3. Drenos, endoscopia;
+  4. VLP retroperitoneal.
+- Última opção: necrosectomia aberta (melhor após 4 semanas);
+- Detalhe: coleção infectada → melhor radio-intervenção (RI).
 
-## homogêneo difuso
+## Quando Operar a Vesícula?
 
-| Tratamento = Observação e suporte.
+**Sempre!**
 
-- Coleção necrótica aguda com líquido
-
-| Tratamento = Observação e suporte.
-
-- Walled–off necrosis (coleção heterogênea bem delimitada), após 04 semanas: Observação ou drenagem percutânea.
-
-- Verificar Tabela 1 .
-
-- Pseudocisto: Coleção encapsulada homogênea; Parede inflamatória bem definida; Ausência de necrose; 4 semanas após quadro inicial; m as ou a ndo de ido. Drenagem se sintomas; Derivação definitiva com TGI é melhor; Pode puncionar por rádio-intervenção.
-
-e
-
-- Verificar Tabela 2 .
-
-## NECROSE PANCREÁTICA = STEP-UP-APPROACH
-
-- Operar pancreatite aguda na fase aguda = mortalidade de 97%;
-
-- Tratamento por etapas é o melhor:
-
-1. Suporte clínico intensivo
-
-2. Drenagem de coleções por rádio intervenção
-
-3. + Drenos, endoscopia
-
-4. VLP retroperitoneal
-
-- Última → Necrosectomia aberta (melhor após
-
-04 semanas)
-
-- Detalhe = Coleção infectada → melhor RI
-
-## QUANDO OPERAR A VESÍCULA?
-
-## SEMPRE!! →
-
-- Casos leves → Operar na mesma internação;
-
-- Casos moderados/graves → Após resolução total
-
-(6 semanas);
-
-- Em casos de cálculo impactados no colédoco → Se possível colecistectomia tardia; Primeiro deve-se tratar a pancreatite; Após melhora, CPRE, tira-se o cálculo e opera-se a vesícula.
-
-Muito raro → CPRE!
-
-- Só não posso esperar se o paciente apresentar colangite = (CPRE na urgência);
-
-- Se não operar a vesícula → A pancreatite vai voltar e ele vai morrer.
+- Casos leves: operar na mesma internação;
+- Casos moderados/graves: após resolução total (6 semanas);
+- Em casos de cálculo impactado no colédoco: se possível, colecistectomia tardia; primeiro, deve-se tratar a pancreatite; após a melhora, faz-se CPRE, retira-se o cálculo e opera-se a vesícula. Muito raro.
+- Só não posso esperar se o paciente apresentar colangite (CPRE na urgência);
+- Se não operar a vesícula, a pancreatite vai voltar e o paciente pode morrer.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -284,12 +227,12 @@ Muito raro → CPRE!
 
 <!-- page:4 -->
 
-## REFERÊNCIAS
+## Referências
 
-Tabela 1 - Imagem: Necrose encapsulada (WON). Elgendy A, Bell D, Di Muzio B, et al. Walled-off pancreatic necrosis.
+Tabela 1 - Imagem: Necrose encapsulada (WON). Elgendy A, Bell D, Di Muzio B, et al. Walled-off pancreatic necrosis. Reference article, Radiopaedia.org (Accessed on 27 Jul 2025).
 
-Reference article, Radiopaedia.org (Accessed on 27 Jul 2025). Figura 1: Sinal de Cullen (equimose periumbilical).
+Figura 1: Sinal de Cullen (equimose periumbilical). Fonte: https://pt.wikipedia.org/wiki/Sinal_de_Cullen.
 
-Fonte: https://pt.wikipedia.org/wiki/Sinal_de_Cullen. Tabela 2 - Imagem: Pseudocisto pancreático. Figura 2: Sinal de Grey-Turner (equimose em flancos). Gaillard F, Walizai T, Bell D, et al. Pancreatic pseudocyst. Reference article, Radiopaedia.org (Accessed on 27 Jul 2025).
+Tabela 2 - Imagem: Pseudocisto pancreático. Gaillard F, Walizai T, Bell D, et al. Pancreatic pseudocyst. Reference article, Radiopaedia.org (Accessed on 27 Jul 2025).
 
-Fonte: https://medizzy.com/feed/29777240
+Figura 2: Sinal de Grey-Turner (equimose em flancos). Fonte: https://medizzy.com/feed/29777240

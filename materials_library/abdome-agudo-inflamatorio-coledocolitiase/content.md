@@ -4,154 +4,73 @@
 
 ## Coledocolitíase
 
-## COLEDOCOLITÍASE QUADRO CLÍNICO
+### Quadro Clínico
 
 - Cálculos no colédoco;
-
-- Icterícia flutuante;
-
-- Sempre procurar/avaliar essa
-
-- Cólicas;
-
-possibilidade diagnóstica;
-
-- Pancreatite aguda;
-
+- Sempre procurar/avaliar essa possibilidade diagnóstica;
 - O mais comum são cálculos pequenos, que passam;
+- Pode evoluir para icterícia obstrutiva e/ou colangite:
+  - Icterícia flutuante;
+  - Cólicas;
+  - Pancreatite aguda;
+  - Obstrução com colangite.
 
-- Obstrução com colangite.
+**Manejo inicial** = ultrassom e exames laboratoriais.
 
-- Pode evoluir para icterícia obstrutiva e/ou colangite. Manejo inicial = ultrassom e laboratoriais
+### Preditores Clínicos de Coledocolitíase
 
-## PREDITORES CLÍNICOS DE COLEDOCOLITÍASE
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Preditores ASGE ESGE Tratamento
+| Risco | Preditores ASGE | Preditores ESGE | Tratamento |
+|---|---|---|---|
+| **Alto risco** | Cálculo no colédoco visualizado no ultrassom; colangite; bilirrubina > 4 mg/dL | Cálculo em exame de imagem; colangite | CPRE |
+| **Risco intermediário** | Dilatação de via biliar no ultrassom; idade > 55 anos; alterações das enzimas hepáticas | Dilatação de via biliar no ultrassom; idade > 55 anos; alteração das enzimas hepáticas | Colangio-RM ou colangiografia intraoperatória |
+| **Baixo risco** | Ausência dos critérios anteriores | Ausência dos critérios anteriores | Colecistectomia VLP |
 
-- Cálculo no colédoco visualizado
-
-- Cálculo em exame de no ultrassom; imagem;
-
-Alto risco CPRE
-
-- Colangite;
-
-- Colangite.
-
-- Bilirrubina > 4 mb/dL.
-
-- Dilatação de via biliar no
-
-- Dilatação de via biliar no ultrassom; ultrassom; Colangio-RM
-
-Risco
-
-- Idade > 55 anos;
-
-- Idade > 55 anos; Colangiografia intermediário
-
-- Alterações das enzimas
-
-- Alteração das enzimas intraoperatória hepáticas. hepáticas.
-
-- Ausência dos critérios anteriores.
-
-- Ausência dos critérios
-
-Baixo risco anteriores. Colecistectomia VLP
-
-## COLEDOCOLITÍASE = PRESENÇA DE CÁLCULOS NO COLÉDOCO
+## Coledocolitíase = Presença de Cálculos no Colédoco
 
 - Sempre atentar para essa possibilidade, mesmo em assintomáticos;
-
 - Normalmente são cálculos pequenos que passam sem causar sintomas;
-
 - Sintomas = icterícia obstrutiva, colangite.
 
-## DIAGNÓSTICO: USG + EXAMES LABORATORIAIS
+### Diagnóstico: USG + Exames Laboratoriais
 
-Tabela 1 Preditores de coledocolitíase Preditores ASGE ESGE
+- **Alto risco** = CPRE terapêutica;
+- **Risco intermediário** = investigar com colangio-RM ou colangiografia intraoperatória;
+- **Baixo risco** = colecistectomia VLP.
 
-- Cálculo no colédoco visualizado
-
-- Cálculo em exame de imagem;
-
-no ultrassom;
-
-- Colangite.
-
-Alto risco
-
-- Colangite;
-
-- Bilirrubina > 4 mg/dL.
-
-- Dilatação de via biliar no ultrassom;
-
-- Dilatação de via biliar no ultrassom;
-
-Risco intermediário
-
-- Idade > 55 anos;
-
-- Idade > 55 anos;
-
-- Alterações das enzimas hepáticas.
-
-- Alteração das enzimas hepáticas.
-
-Baixo risco
-
-- Ausência dos critérios anteriores.
-
-- Ausência dos critérios anteriores.
-
-- Alto risco = CPRE terapêutica; COLANGIOGRAFIA INTRAOPERATÓRIA
-
-- Risco intermediário = investigar com colangio-RM ou
+**Colangiografia intraoperatória**
 
 - Sem alterações: colecistectomia;
-
-## colangiografia intraoperatória
-
-- Presença de cálculo em colédoco:
-
-- Baixo risco = colecistectomia VLP. | exploração intraoperatória;
+- Presença de cálculo em colédoco: exploração intraoperatória;
 
 ---
 
 <!-- page:2 -->
 
-| CPRE intraoperatória/pós-operatória Etiologias (padrão-ouro);
+- CPRE intraoperatória/pós-operatória (padrão-ouro); conversão para laparotomia; abordagem posterior.
 
-- Corpo estranho; conversão para laparotomia;
+### Etiologias
 
-- Estenose de via biliar; abordagem posterior.
-
+- Corpo estranho;
+- Estenose de via biliar;
 - Infecção;
-
 - Cisto;
-
-## PREDITORES DE FALHA DE CPRE
-
 - Cálculos marrons ou pretos.
 
-- Cálculo > 2 cm; Tratamento
+### Preditores de Falha de CPRE
 
+- Cálculo > 2 cm;
 - Múltiplos cálculos/intra-hepáticos;
-
-- 1.° opção = CPRE;
-
 - Abordagem prévia;
+- Colédoco > 2 cm é disfuncional (tratamento é feito por meio de biliodigestiva).
 
-- Se colédoco dilatado (> 12 mm) =
+### Tratamento
 
-- Colédoco > 2 cm é disfuncional (tratamento é feito por cirurgia biliodigestiva.
+- 1ª opção = CPRE;
+- Se colédoco dilatado (> 12 mm) = tratamento é feito por cirurgia biliodigestiva.
 
-meio de biliodigestiva).
-
-## COLEDOCOLITÍASE PRIMÁRIA
+## Coledocolitíase Primária
 
 - Paciente colecistectomizado (após 2 anos do quadro);
-
 - Em período inferior a 2 anos, os cálculos ficam retidos e considera-se coledocolitíase secundária (secundária à litíase da vesícula biliar prévia).

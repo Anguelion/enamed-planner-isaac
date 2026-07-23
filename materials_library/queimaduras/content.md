@@ -2,159 +2,153 @@
 
 <!-- page:1 -->
 
-CIRURGIA PLÁSTICA: QUEIMADOS ATENDIMENTO INICIAL Queimados INTUBAÇÃO IMEDIATA:
+> ⚠️ Este material teve páginas de duas colunas com texto intercalado; o conteúdo abaixo foi reorganizado por assunto usando o contexto clínico. Confira contra a fonte original em caso de dúvida.
 
-- Eritema ou inchaço da orofaringe ;
+## Cirurgia Plástica: Queimados — Atendimento Inicial
 
-- Rouquidão, tosse áspera ;
+### Intubação Imediata
 
+- Eritema ou inchaço da orofaringe;
+- Rouquidão, tosse áspera;
 - Estridor, taquipneia ou dispneia;
-
 - Partículas carbonáceas na face;
-
 - Queimaduras faciais extensas e profundas;
+- **40-50%** de superfície corporal queimada (SCQ).
 
-- 40-50% superfície corporal queimada (SCQ).
+### Reposição Volêmica
 
-REPOSIÇÃO VOLÊMICA :
-
-- Térmicas ;
-
+- Queimaduras térmicas;
 - Descontar volume ofertado no pré-hospitalar;
+- Regra de Wallace ("dos 9");
+- 2º e 3º grau.
 
-- Regra de Wallace (“dos 9”);
+## Introdução
 
-- 2º e 3º Grau.
+- **Principais agentes**: chama; sol; sólidos; líquidos aquecidos (escaldadura); vapor.
+- **Fatores de risco**: crianças < 5 anos; adultos: alcoolismo, senilidade, epilepsia, doenças psiquiátricas.
+- **Gravidade (3 graus)** depende de: agente causador; área corporal de contato; temperatura do agente; tempo de contato; características individuais.
 
-## INTRODUÇÃO
+## Profundidade das Lesões
 
-- Principais: Chama; Sol; Sólidos; Líquidos aquecidos
-
-(escaldadura); Vapor.
-
-- Fatores De Risco: Crianças < 5 anos; Adultos: Alcoolismo; Senilidade; Epilepsia, doenças psiquiátricas.
-
-- Gravidade (3 graus): Agente causador; Área corporal de contato; Temperatura do agente; Tempo de contato; Características individuais.
-
-## PROFUNDIDADE DAS LESÕES
-
-## PRIMEIRO GRAU
+### Primeiro Grau
 
 - Epiderme;
+- **Características**: dor; eritema;
+- **Tratamento**: analgesia, hidratação; melhora em 48-72 horas, regeneração em 7 dias.
 
-- Características: dor; eritema;
+### Segundo Grau
 
-- Tratamento: analgesia, hidratação; Melhora em 48-72 horas, regeneração em 7 dias.
+- Epiderme e derme: **superficial** — derme papilar; **profunda** — derme reticular;
+- **Características**: dor, eritema, bolhas, leito rosado ou rosa pálido;
+- **Tratamento**: analgesia, hidratação, curativo. Não-cirúrgico: 2º superficial; cirúrgico: 2º profundo;
+- **Desbridamento das flictenas**: ATLS: não desbridar! Centro de queimados: desbridar!
 
-## SEGUNDO GRAU
+### Terceiro Grau
 
-- Epiderme e derme: Superficial – derme papilar; Profunda – derme reticular.
+- Espessura total — pele, músculo, osso;
+- **Características**: indolor, branco nacarado/carbonizado, firme, coriáceo;
+- **Tratamento**: cirúrgico.
 
-- Características: Dor, eritema, bolhas, leito rosado ou rosa pálido;
+**Lesões, por grau:**
+- 1º: hiperemia, epiderme;
+- 2º superficial: bolhas, derme papilar, discromias;
+- 2º profundo: bolhas, derme reticular, excisão e enxerto;
+- 3º: espessura total, carbonizado, desbridamento e enxerto.
 
-- Tratamento: analgesia, hidratação, curativo; Não-cirúrgico: 2º superficial; Cirúrgico: 2º profundo;
+**Zonas de Jackson**
+- Coagulação (necrose): destruição celular total;
+- Estase (isquemia): "a queimadura aprofunda";
+- Hiperemia (inflamação).
 
-- Desbridamento das flictenas: ATLS: não desbridar! Centro de queimados: sim desbridar!
+## Grande Queimado
 
-## TERCEIRO GRAU
+- Crianças: **> 15%** SCQ de 2º ou 3º grau;
+- Adultos: **> 20%** SCQ de 2º ou 3º grau;
+- **Conduta**: fórmula de Parkland: **4 x SCQ x peso / 16h**; resultado infundir por hora; regular por diurese e metas.
 
-- Espessura Total - pele, músculo, osso; 2 x SCQ x peso / 16h - Resultado infundir por hora.
+## Resposta Sistêmica — SIRS
 
-Regular por diurese e metas. LESÕES :
+> ⚠️ Trecho reconstruído a partir de OCR (fluxograma) — confira contra a fonte original.
 
-- 1º hiperemia, epiderme;
+**Fase hipodinâmica** (primeiras 24-72h, > 20% SCQ)
+- Depressão cardíaca → choque hipovolêmico;
+- Resistência vascular pulmonar aumentada; resistência vascular sistêmica aumentada;
+- Vasoconstrição esplâncnica.
 
-- 2º superficial: bolhas, derme papilar, discromias ;
+**Fase hiperdinâmica** (após 24-72h)
+- Tempestade inflamatória;
+- Frequência cardíaca aumentada; débito cardíaco aumentado; permeabilidade vascular aumentada;
+- Perfusão periférica reduzida; resistência vascular sistêmica reduzida;
+- Hipermetabolismo; hipercoagulabilidade; edema intersticial.
 
-- 2º profundo: bolhas, derme reticular, excisão e enxerto ;
+Figura 1: Fluxograma da evolução do grande queimado.
 
-- 3º espessura total, carbonizado, desbridamento e enxerto.
-
-- Características: Indolor, branco nacarado/carbonizado, firme, coriáceo;
-
-- Tratamento: Cirúrgico.
-
-- Zonas De Jackson: Coagulação (necrose): Destruição celular total; Estase (isquemia): “a queimadura aprofunda”; Hiperemia (inflamação).
-
-## GRANDE QUEIMADO
-
-- Crianças - > 15% SCQ de 2° ou 3° grau;
-
-- Adultos > 20% SCQ de 2° ou 3° grau;
-
-- Conduta: Fórmula de Parkland: 4 x SCQ x peso / 16h; Resultado infundir por hora; Regular por diurese e metas.
-
-## RESPOSTA SISTÊMICA – SIRS
-
-20% SCQ FASE HIPODINÂMICA 2. FASE HIPERDINÂMICA PRIMEIRAS 24-72H Após 24-72h + Tempestade inflamatória + Frequência cardíaca + Permeabilidade vascular + Débito cardíaco
-
-- Depressão cardiaca + Perfusão periférica choque hipovolêmico
-
-+ Resistência vasc. pulmonar - Resistência vascular + Resistência vasc. sistêmica sistêmica + Vasoconstrição esplâncnica Hipermetabolismo Hipercoagulabilidade Edema intersticial Figura 1: Fluxograma da evolução do grande queimado.
-
-## LESÃO DE VIAS AÉREAS
+## Lesão de Vias Aéreas
 
 - Aumento da mortalidade;
-
-- Quadro clínico: Tosse, rouquidão, odinofagia; Queimadura intraoral, vibrissas e cílios;
+- **Quadro clínico**: tosse, rouquidão, odinofagia; queimadura intraoral, vibrissas e cílios;
 
 ---
 
 <!-- page:2 -->
 
-| Impregnação carbonácea na face e no escarro;
+- Impregnação carbonácea na face e no escarro;
+- **Manifestações clínicas**: edema facial, estridor; confusão mental; depressão respiratória;
+- Apresentação aguda e subaguda;
+- **Diagnóstico**: clínico!
 
-- Manifestações clínicas: Edema facial, estridor. | Confusão mental;
+### Tratamento
 
-- Apresentação aguda e subaguda; | Depressão respiratória;
+- **Casos leves**: O2 inalatório 100% em máscara;
+- **Casos moderados a graves**: via aérea definitiva se: franca insuficiência respiratória; piora progressiva do padrão respiratório; queimaduras extensas e profundas em face; rebaixamento do nível de consciência; queimaduras > 40-50% SCQ.
 
-- Diagnóstico: clínico!
+**Avaliação endoscópica** (padrão-ouro)
+- Eritema, edema;
+- Apagamento dos anéis traqueais;
+- Descamação da mucosa;
+- Exsudato fibrinoso;
+- Partículas carbonáceas;
+- Pneumonia.
 
-## CÁLCULO DA SUPERFÍCIE
+- **Tratamento**: sem consenso na literatura; corticoterapia; irrigação brônquica ± heparina; N-acetilcisteína endotraqueal.
 
-- Tratamento:
+## Cálculo da Superfície Corporal Queimada (SCQ)
 
-## | Casos leves: O2 inalatório 100% em máscara; CORPORAL QUEIMADA (SCQ)
+- Para queimaduras de 2º ou 3º grau;
+- **Adultos**: Regra dos 9 (Wallace);
+- **Crianças**: Wallace modificado — cabeça proporcionalmente maior;
+- Pequenas áreas: palma;
+- **Padrão-ouro**: diagrama de Lund & Browder.
 
-| Casos moderados a graves: via aérea definitiva se: | Franca insuficiência respiratória;
+Figura 2: Regra dos 9 (Wallace). Cálculo da superfície corporal queimada em adultos.
 
-- Para queimaduras de 2° ou 3° grau; Piora progressiva do padrão respiratório;
+Figura 3: Regra de Wallace modificado para crianças. Cálculo da superfície corporal queimada em crianças.
 
-- Adultos: Regra dos 9 (Wallace); Queimaduras extensas e profundas em face;
-
-- Crianças: Wallace modificado; Rebaixamento do nível de consciência; | Cabeça proporcionalmente maior; Queimaduras >40-50% SCQ. | Pequenas áreas: palma.
-
-- Avaliação endoscópica:
-
-- Padrão ouro: Eritema, edema; | Diagrama de Lund & Browder. Apagamento dos anéis traqueais; Descamação da mucosa; Exsudato fibrinoso; Partículas carbonáceas; Pneumonia
-
-- Tratamento: sem consenso na literatura; Corticoterapia; Irrigação brônquica ± heparina; N-acetilcisteína endotraqueal.
-
-Intoxicação Por CO (Monóxido De Carbono)
+## Intoxicação por CO (Monóxido de Carbono)
 
 - Em geral, a intoxicação ocorre em ambientes fechados;
+- **Diagnóstico**: gasometria arterial; HbCO > 10%; PaO2 baixa, acidose metabólica. Oxímetro de HbCO;
+- **Tratamento**: FiO2 100%; câmara hiperbárica; reduz a meia-vida da carboxi-hemoglobina.
 
-- Diagnóstico: Gasometria arterial; CC. HbCO >10%; PaO2 baixa, acidose metabólica. Oxímetro de HbCO.
+**Tabela 1: Sintomas presentes na intoxicação por carboxi-hemoglobina**
 
-- Tratamento: FiO2 100%; Câmara hiperbárica; Reduz a meia-vida da carboxi-hemoglobina.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Figura 2: Regra dos 9 (Wallace). Cálculo da superfície corporal Tabela 1: Sintomas presentes na intoxicação por carboxi- queimada em adultos.
+| Níveis de Carboxi-hemoglobina | Sintomas |
+|---|---|
+| 0-10% | Mínimos (nível normal em fumantes pesados) |
+| 10-20% | Náuseas, dor de cabeça |
+| 20-30% | Sonolência, letargia |
+| 30-40% | Confusão, agitação |
+| 40-50% | Coma, depressão respiratória |
+| > 50% | Morte |
 
-hemoglobina. Níveis de Sintomas carboxihemoglobina Mínimos (nível normal em 0 - 10% fumantes pesados)
+## Intoxicação por Cianeto
 
-10 - 20% Náuseas, dor de cabeça; 20 - 30% Sonolência, letargia 30 - 40% Confusão, agitação Coma, depressão 40 - 50% respiratória
-
-> 50% Morte
-
-INTOXICAÇÃO POR CIANETO Figura 3: Regra de Wallace modificado para crianças. Cálculo da
-
-- Alta suspeição e mortalidade; superfície corporal queimada em crianças.
-
+- Alta suspeição e mortalidade;
 - Lembrar de pacientes em ambientes fechados que pegaram fogo;
-
 - Acidose metabólica e hiperlactatemia;
-
-- Tratamento: Oxigênio 100%; Hidroxicobalamina (vit. B12).
+- **Tratamento**: oxigênio 100%; hidroxicobalamina (vit. B12).
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -164,45 +158,46 @@ INTOXICAÇÃO POR CIANETO Figura 3: Regra de Wallace modificado para crianças. 
 
 <!-- page:3 -->
 
-## REPOSIÇÃO VOLÊMICA
+## Reposição Volêmica
 
-Queimaduras de 2° e 3° grau Figura 4: Diagrama de Lund & Browder. Padrão ouro para cálculo da superfície corporal queimada.
+Queimaduras de 2º e 3º grau.
 
-## CRITÉRIOS PARA INTERNAÇÃO
+Figura 4: Diagrama de Lund & Browder. Padrão-ouro para cálculo da superfície corporal queimada.
 
-- Queimaduras de 2° e 3° graus: > 20% da SCQ; > 10% da SCQ em < 10 ou > 50 anos; Face, períneo, mão, pé, articulações;
+## Critérios para Internação
 
-- Queimaduras de 3° grau;
-
+- Queimaduras de 2º e 3º graus: **> 20%** da SCQ; **> 10%** da SCQ em **< 10** ou **> 50 anos**; face, períneo, mão, pé, articulações;
+- Queimaduras de 3º grau;
 - Suspeita de lesão inalatória;
-
 - Queimaduras circunferenciais;
-
 - Queimaduras elétricas, químicas, associadas a politraumatismo;
+- Queimaduras em pacientes com doenças crônicas, com questões sociais.
 
-- Queimaduras em pacientes com doenças crônicas, com questões sociais. Queimaduras de 2° e 3° grau
+**Reposição volêmica — queimaduras de 2º e 3º grau**
+- **> 20% SCQ** em adultos; **> 15% SCQ** em crianças;
+- Cristaloide aquecido: SF 0,9% ou Ringer lactato;
+- **Fórmula de Brooke modificada**: **2ml x peso x SCQ (%) / 16h** — resultado infundir por hora. Regular por diurese e metas.
 
->20% SC1 em adultos >15% SCQ em crianças Cristaloide aquecido SF 0,9% Ringer lactato Fórmula de brooke modificada: 2ml x Peso x SCQ (%)
-
-16h - Resultado infundir por hora Regular por diurese e metas Figura 5: Fluxograma sobre a reposição volêmica inicial no grande queimado.
+Figura 5: Fluxograma sobre a reposição volêmica inicial no grande queimado.
 
 - Fórmula = estimativa do volume a ser administrado;
+- Acompanhar reposição com parâmetros:
+  - **Diurese** — principal parâmetro: **0,5 mL/kg/h** no adulto; **1 mL/kg/h** na criança;
+  - Frequência cardíaca;
+  - PA;
+  - Lactato.
+- **Coloide**: aumento de mortalidade; alto preço; reservado em situações específicas.
+- **Crianças**: **3 mL RL x peso x SCQ**; < 30 Kg — acrescentar glicose.
 
-- Acompanhar reposição com parâmetros: Diurese – principal parâmetro; 0,5 mL/kg/h no adulto; 1 mL/kg/h na criança. Frequência cardíaca; PAi; Lactato.
-
-- Coloide: Aumento de mortalidade; Alto preço; Reservado em situações específicas.
-
-- Crianças: 3 mL RL x Peso x SCQ; < 30 Kg - acrescentar glicose.
-
-## TRATAMENTO
+## Tratamento
 
 - Escarotomia;
-
 - Desbridamento e assepsia;
-
-- Curativos estéreis: Sulfadiazina de prata 1% - Penetração intermediária; Leucopenia; Acetato de Mafenide- Alta penetração; Nitrato de cério - Imunomodulador (inibidor LPC); Placas com prata - Trocas mais espaçadas (até 7 dias); Ótimo em crianças; Custo elevado
-
-Acidose metabólica; Aplicação precoce;
+- **Curativos estéreis**:
+  - **Sulfadiazina de prata 1%** — penetração intermediária; risco de leucopenia;
+  - **Acetato de mafenide** — alta penetração; pode causar acidose metabólica; aplicação precoce;
+  - **Nitrato de cério** — imunomodulador (inibidor LPC);
+  - **Placas com prata** — trocas mais espaçadas (até 7 dias); ótimo em crianças; custo elevado.
 
 ![Figura do material - página 3](figure-003-1.webp)
 

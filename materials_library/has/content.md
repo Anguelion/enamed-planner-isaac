@@ -1,122 +1,107 @@
-# Has
+# HAS
 
 <!-- page:1 -->
 
-## HIPERTENSÃO ARTERIAL SISTÊMICA
+## Hipertensão Arterial Sistêmica
 
 Hipertensão Arterial Sistêmica (CM)
 
-## DIAGNÓSTICO HAS RESISTENTE E REFRATÁRIA
+## Diagnóstico
 
-Pressão Arterial (PA) ≥ 140 x 90 mmHg em 2 consultas
+- **Pressão Arterial (PA) ≥ 140 x 90 mmHg** em 2 consultas (SBC) OU
+- **PA ≥ 180 x 110 mmHg** medida isolada OU
+- Medidas residenciais (MRPA ou MAPA) com PA média **≥ 130 x 80 mmHg**;
+- Ao diagnóstico: estratificar risco CV e avaliar lesões de órgão-alvo;
+- MAPA e MRPA sempre que possível.
 
-- Resistente: em uso de 3 anti-hipertensivos, medidas residenciais (MRPA ou MAPA) com PA média ≥ hipertenso ou controlado com 4 drogas → 4ª
+**Classificação de PA:**
 
-(SBC) OU PA ≥ 180 x 110 mmHg medida isolada OU incluindo um diurético, em dose adequada, e ainda 130 x 80 mmHg; droga espironolactona.
+- PA normal: < 120/80;
+- Pré-hipertensão: PA consultório 120-139 e/ou 80-89 mmHg.
 
-- Ao diagnóstico: estratificar risco CV e avaliar lesões
+**Conduta:**
 
-- Refratária: em uso de 5 anti-hipertensivos, incluindo de órgão-alvo. um diurético de longa ação e espironolactona e
+1. Solicitar MRPA ou MAPA;
+2. Estratificar + MEV (mudança de estilo de vida) para todos, tratar farmacologicamente aqueles com PA ≥ 130 e/ou 80 mmHg de alto risco CV.
 
-- MAPA e MRPA sempre que possível. ainda hipertenso. Associar beta-bloqueador ou
+## HAS Resistente e Refratária
 
-TRATAMENTO: simpatolítico de ação central (ex: clonidina).
+- **Resistente**: em uso de 3 anti-hipertensivos, incluindo um diurético, em dose adequada, e ainda hipertenso, ou controlado com 4 drogas → 4ª droga espironolactona.
+- **Refratária**: em uso de 5 anti-hipertensivos, incluindo um diurético de longa ação e espironolactona, e ainda hipertenso. Associar beta-bloqueador ou simpatolítico de ação central (ex.: clonidina).
 
-- Perder peso, dieta DASH, regular o consumo de Na e
+As principais causas de HAS secundária são: SAHOS, estenose bilateral de artérias renais, coarctação de aorta, feocromocitoma, hiper e hipotireoidismo, hiperaldosteronismo primário e Síndrome de Cushing.
 
-- As principais causas de HAS secundária são:
+## Tratamento
 
-álcool, atividade física. SAHOS, estenose bilateral de artérias renais,
+- Perder peso, dieta DASH, regular o consumo de sódio e álcool, atividade física;
+- **Farmacológico**: IECA/BRA, DIU, BCC são primeira linha;
+  - Iniciar com duas medicações em doses otimizadas se estágios 2 ou 3 (PAS 160-179 mmHg e/ou PAD 100-109 mmHg ou estágio 1 de risco CV moderado ou alto);
+  - **Monoterapia**: HA estágio 1 de risco baixo; PA ≥ 130 e/ou 80 mmHg de alto risco; indivíduos frágeis; pacientes ≥ 80 anos.
 
-- Farmacológico: IECA/BRA, DIU, BCC são coarctação de aorta, feocromocitoma, hiper e primeira linha. hipotireoidismo, hiperaldosteronismo primário e Iniciar com duas medicações em doses Síndrome de Cushing.
+## Crises Hipertensivas
 
-otimizadas se estágios 2 ou 3 (PAS 160 – 179 CRISES HIPERTENSIVAS mmHg e/ou PAD 100-109 mmHg ou estágio 1 de
+- **Emergência hipertensiva** → (PA ≥ 180 x 110 mmHg) + lesão de órgão-alvo ameaçadora (ex.: dissecção de aorta, AVC, IAM);
+- **HAS crônica não controlada e pseudocrise** (PA ≥ 180 x 120 mmHg), sem lesão de órgão-alvo. Na pseudocrise a hipertensão está relacionada a outros fatores (dor, ansiedade, etc.). Se necessário, otimizar terapia anti-hipertensiva e encaminhar para retorno ambulatorial precoce;
+- Via de regra, emergência hipertensiva deve ser tratada com **nitroprussiato de sódio** ou **nitroglicerina EV** em sala de emergência.
 
-- Emergência hipertensiva → (PA ≥ 180 x 110 mmHg) + risco CV moderado ou alto). lesão de órgão alvo ameaçadora (ex. dissecção de Monoterapia: HA estágio 1 de risco baixo; PA aorta, AVC, IAM).
+## Introdução
 
-≥ 130 e/ou 80 mmHg de alto risco; indivíduos
+A Hipertensão Arterial Sistêmica (HAS) é o principal fator de risco modificável, com associação independente, linear e contínua para doenças cardiovasculares (DCV), doença renal crônica (DRC) e morte prematura.
 
-- HAS crônica não controlada e pseudocrise HAS frágeis; Pacientes ≥ 80 anos. (PA ≥ 180 x 120 mmHg), sem lesão de órgão-alvo.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-PA normal Na pseudocrise a hipertensão está relacionada a
+**Tabela 1: Fatores de risco coexistentes na hipertensão arterial (alto risco cardiovascular)**
 
-- <120/80 outros fatores (dor, ansiedade, etc). Se necessário,
-
-Pré-hipertensão otimizar terapia anti-hipertensiva e encaminhar
-
-- PA consultório 120-139 e/ou 80-89 mmHg para retorno ambulatorial precoce. 1) Solciitar MRPA ou MAPA
-
-- Via de regra, emergência hipertensiva deve ser 2) Estratificar + MEV para todos, tratar tratada com nitroprussiato de sódio ou farmacologicamente aqueles com PA ≥130 e/ou nitroglicerina EV em sala de emergência.
-
-80 mmHg de alto risco CV..
-
-## INTRODUÇÃO DIAGNÓSTICO
-
-- A Hipertensão Arterial Sistêmica (HAS) é o
-
-- Pressão Arterial (PA) ≥ 140 x 90 mmHg em 2 principal fator de risco modificável com associação consultas (SBC) OU independente, linear e contínua para doenças
-
-- PA ≥ 180 x 110 mmHg medida isolada OU cardiovasculares (DCV), doença renal crônica (DRC) e
-
-- Medidas residenciais (MRPA - medida residencial da morte prematura. PA - ou MAPA - medida ambulatorial da PA) com PA média ≥ 130 x 80 mmHg.
-
-Tabela 1: Fatores de risco coexistentes na hipertensão arterial Fatores de risco coexistentes na hipertensão arterial (alto risco cardiovascular)
-
-Sexo masculino Idade: > 55 anos no homem e > 65 na mulher DCV prematura em parentes de 1º grau (homens < 55 anos e mulheres < 65 anos)
-
-Tabagismo
+- Sexo masculino;
+- Idade: > 55 anos no homem e > 65 anos na mulher;
+- DCV prematura em parentes de 1º grau (homens < 55 anos e mulheres < 65 anos);
+- Tabagismo;
 
 ---
 
 <!-- page:2 -->
 
-Fatores de risco coexistentes na hipertensão arterial (alto risco cardiovascular) Dislipidemia: LDL - colesterol ≥ 100 mg/dL e/ou não HDL - colesterol 130mg/dL e/ou HDL - colesterol ≤ 40 mg/dL no homem e ≤ 46 mg/dL na mulher e/ou TG > 150 mg/dL na mulher e/ou TG Diabetes m Obesidade (IMC Figura 1: Técnica adequada para aferição da pressão arterial
+- Dislipidemia: LDL-colesterol ≥ 100 mg/dL e/ou não-HDL-colesterol ≥ 130 mg/dL e/ou HDL-colesterol ≤ 40 mg/dL no homem e ≤ 46 mg/dL na mulher e/ou TG > 150 mg/dL;
+- Diabetes mellitus;
+- Obesidade (IMC ≥ 30 kg/m²).
 
-## CONCEITOS
+*Figura 1: Técnica adequada para aferição da pressão arterial.*
 
-- HIPERTENSÃO ARTERIAL (HA) MASCARADA
+## Conceitos
 
-- Níveis pressóricos normais no consultório mas elevados no MAPA ou MRPA (acontece em pessoas com alta carga de estresse no cotidiano, por exemplo).
+**HA mascarada:**
 
-## HA DO AVENTAL BRANCO
+- Níveis pressóricos normais no consultório, mas elevados no MAPA ou MRPA (acontece em pessoas com alta carga de estresse no cotidiano, por exemplo).
+
+**HA do avental branco:**
 
 - PA elevada no consultório, mas normal fora dele.
 
-## HA RESISTENTE
+**HA resistente:**
 
-- Em uso de 3 anti-hipertensivos, incluindo um diurético, em dose adequada, e ainda hipertenso ou controlado com 4 drogas;
+- Em uso de 3 anti-hipertensivos, incluindo um diurético, em dose adequada, e ainda hipertenso, ou controlado com 4 drogas;
+- Mais relacionada à retenção persistente de fluidos: indicada espironolactona.
 
-- Mais relacionada à retenção persistente de fluidos:
+**HA refratária:**
 
-indicada espironolactona. HA REFRATÁRIA
-
-- Em uso de 5 anti-hipertensivos, incluindo um diurético de longa ação e espironolactona e ainda hipertenso;
-
+- Em uso de 5 anti-hipertensivos, incluindo um diurético de longa ação e espironolactona, e ainda hipertenso;
 - Mais relacionada à hiperreatividade simpática.
 
-## ETAPAS IMPORTANTES - PRIMEIRA
-
-## CONSULTA
+## Etapas Importantes — Primeira Consulta
 
 - Confirmação do diagnóstico;
+- Classificar entre HA primária ou secundária;
+  - HA secundária é aquela causada por alguma doença de base, enquanto a primária não;
+  - Quando desconfiar de HA secundária?: HA estágio 3 em < 30 anos ou > 55 anos; HAS resistente ou refratária; uso de medicações que sabidamente são hipertensivas; suspeita de feocromocitoma; SAHOS; assimetria ou ausência de pulsos em MMII; hipocalemia espontânea ou importante;
+- Estratificar o risco cardiovascular (preferencialmente com o escore PREVENT) e pesquisar ativamente lesão de órgão-alvo por meio da solicitação de:
+  - ECG (em busca de HVE);
+  - Dosagem de creatinina com TFG e pesquisa de microalbuminúria ou relação albumina/creatinina na urina (em busca de DRC);
+  - Exame de fundo de olho para pesquisar retinopatia hipertensiva;
+  - Índice Tornozelo-Braquial (ITB) para pesquisa de Doença Arterial Obstrutiva Periférica (DAOP).
 
-- Classificar entre HA primária ou secundária?;
+## Metas de PA
 
-- G > 150 mg/dL mellitus
-
-≥ 30 kg/M2)
-
-- HA secundária é aquela causada por alguma doença de base, enquanto que a primária não. Quando desconfiar de HA secundária?: HA estágio 3 <30 anos ou > 55 anos; HAS resistente ou refratária; Uso de medicações que sabidamente são hipertensivas; Suspeita de feocromocitoma; SAHOS; Assimetria ou ausência de pulsos em MMII; Hipocalemia espontânea ou importante;
-
-- Estratificar o risco cardiovascular (preferencialmente com o escore PREVENT) e pesquisar ativamente lesão de órgão-alvo por meio da solicitação de: ECG (em busca de HVE) Dosagem de creatinina com TFG e pesquisa de microalbuminúria ou relação albumina/creatinina na urina (em busca de DRC) Importante realizar o Índice Tornozelo Braquial Exame de fundo de olho para pesquisar retinopatia hipertensiva.
-
-(ITB) para pesquisa de Doença Arterial Obstrutiva Periférica (DAOP)
-
-## METAS DE PA
-
-- Atenção para a maior tolerabilidade para idosos frágeis.
-
-- Verificar Tabela 2 na próxima página
+- Atenção para a maior tolerabilidade em idosos frágeis.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -124,125 +109,112 @@ indicada espironolactona. HA REFRATÁRIA
 
 <!-- page:3 -->
 
-Tabela 2: Metas de pressão arterial Meta Meta para todos PA Sistólica (mmHg) < 130 PA Diastólica (mmHg)
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-* Para pacientes que não tolerem a meta de PA < 130/80 m
+**Tabela 2: Metas de pressão arterial**
 
-## TRATAMENTO
+| Meta | Valor para todos |
+|---|---|
+| PA Sistólica (mmHg) | < 130 |
+| PA Diastólica (mmHg) | < 80 |
 
-## TRATAMENTO NÃO FARMACOLÓGICO
+*Para pacientes que não tolerem a meta de PA < 130/80 mmHg, deve-se reduzir a PA até o valor mais baixo tolerado.*
 
-Tabela 3: Tratamento não farmacológico Medida Recomendação Manter IMC < 25 kg/m2 até 65 Manter IMC < 27 kg/m2 após 6 Controle de peso Manter circunferência abdominal < mulheres e < 94 cm nos homens.
+## Tratamento
 
-Padrão alimentar Adotar dieta DASH Restrição do Restringir o consumo diário de sódi consumo ou seja, 5 g de cloreto de só de sódio Moderação no Limitar o consumo diário de álc consumo de dose nas mulheres e pessoas com b álcool doses no homem
+### Tratamento Não Farmacológico
 
-## ATIVIDADE FÍSICA
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Tabela 4: Recomendações de prática de atividade física e exercí Redução do compo Levantar por 5 minutos a Realizar, pelo menos, 150 minutos por semana de atividad ou combinaç Treinamento físico - aeróbico comp
+**Tabela 3: Tratamento não farmacológico**
 
-- Verificar Figura 2 na próxima página canal de cálcio / IECA = inibidores da enzima conversora de angiotensina / BRA = bloqueadores do receptor de angiotensina II
+| Medida | Recomendação | Redução aproximada da PAS/PAD |
+|---|---|---|
+| Controle de peso | Manter IMC < 25 kg/m² até 65 anos; manter IMC < 27 kg/m² após 65 anos; manter circunferência abdominal < 80 cm nas mulheres e < 94 cm nos homens | 20-30% de diminuição da PA para cada 5% de perda corporal |
+| Padrão alimentar | Adotar dieta DASH | Redução de 6,7/3,5 mmHg |
+| Restrição do consumo de sódio | Restringir o consumo diário de sódio para 2,0 g, ou seja, 5 g de cloreto de sódio | Redução de 2 a 7 mmHg na PAS e de 1 a 3 mmHg na PAD, com redução progressiva de 2,4 a 1,5 g sódio/dia, respectivamente |
+| Moderação no consumo de álcool | Limitar o consumo diário de álcool a 1 dose nas mulheres e pessoas com baixo peso e 2 doses no homem | Redução de 3,31/2,04 mmHg com a redução de 3-6 para 1-2 doses/dia |
 
-DIU = diuréticos tiazídicos / BCC = bloqueadores do TRATAMENTO FARMACOLÓGICO
+### Atividade Física
 
-- IECA, BRA, BCC e DIU são medicações de primeira linha.
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- A escolha do anti-hipertensivo de primeira linha deve ser guiada pelas características de cada um deles, conforme abaixo, relacionadas ao perfil do paciente.
+**Tabela 4: Recomendações de prática de atividade física e exercício físico**
 
+- Redução do comportamento sedentário: levantar por 5 minutos a cada 30 minutos sentado;
+- Realizar, pelo menos, 150 minutos por semana de atividade física moderada ou 75 min/semana de atividade aeróbica vigorosa, ou combinação equivalente;
+- Treinamento aeróbico complementado pelo resistido — NE: A, GR: I.
+
+**Legenda**: DIU = diuréticos tiazídicos / BCC = bloqueadores do canal de cálcio / IECA = inibidores da enzima conversora de angiotensina / BRA = bloqueadores do receptor de angiotensina II.
+
+### Tratamento Farmacológico
+
+- IECA, BRA, BCC e DIU são medicações de primeira linha;
+- A escolha do anti-hipertensivo de primeira linha deve ser guiada pelas características de cada um deles, relacionadas ao perfil do paciente;
 - Otimizar as doses, preferencialmente em comprimido único.
 
-- Legenda: M: Mecanismo de ação EA: Efeitos adversos CI: Contraindicação mmHg, deve-se reduzir a PA até o valor mais baixo tolerado.
+**Legenda**: M: Mecanismo de ação; EA: Efeitos adversos; CI: Contraindicação.
 
-< 80 Redução aproximada da PAS/PAD 5 anos. 65 anos. 20-30% de diminuição da PA para cada 5% < 80 cm nas de perda corporal Redução de 6,7/3,5 mmHg Redução de 2 a 7 mmHg na PAS e de 1 a 3 io para 2,0 g, mmHg na PAD com redução progressiva de ódio.
+**IECA:**
 
-2,4 a 1,5 g sódio/dia, respectivamente. cool a 1 Redução de 3,31/2,04 mmHg com a redução baixo peso e 2 de 3-6 para 1-2 doses/dia ício físico.
-
-ortamento sedentário a cada 30 minutos sentado de física moderada ou 75 min/semana de aeróbica vigorosa, ção equivalente.
-
-plementado pelo resistido - NE: A. GR: I IECA
-
-- M: Inibe enzima conversora de angiotensina I e a degradação de bradicinina (a bradicinina promove a vasodilatação).
-
-- EA: Tosse seca (nesses casos, opta-se por trocar por introdução do remédio, pensar em estenose bilateral de artérias renais.
-
-BRA), angioedema, erupção cutânea, hipercalemia. Em caso de declínio da função renal > 30% após
-
-- CI: Na gravidez. Se K + > 5,5.
-
+- **M**: inibe a enzima conversora de angiotensina I e a degradação de bradicinina (a bradicinina promove a vasodilatação);
+- **EA**: tosse seca (nesses casos, opta-se por trocar por BRA), angioedema, erupção cutânea, hipercalemia. Em caso de declínio da função renal > 30% após introdução do remédio, pensar em estenose bilateral de artérias renais;
+- **CI**: na gravidez. Se K+ > 5,5;
 - Principais representantes: captopril, enalapril.
 
-BRA
+**BRA:**
 
-- M: Bloqueio dos receptores AT1 antagonizando a ação da angiotensina II (vasoconstritor).
-
-- EA: Hipercalemia, contraindicado na gravidez. Não associar BRA e IECA.
-
-- Principal representante: losartana
+- **M**: bloqueio dos receptores AT1, antagonizando a ação da angiotensina II (vasoconstritor);
+- **EA**: hipercalemia, contraindicado na gravidez. Não associar BRA e IECA;
+- Principal representante: losartana.
 
 ---
 
 <!-- page:4 -->
 
-Diuréticos Tiazídicos (DIU) SÍNDROME DA APNEIA OBSTRUTIVA DO SONO
+**Diuréticos Tiazídicos (DIU):**
 
-- M: Redução do volume circulante e volume
+- **M**: redução do volume circulante e volume extracelular; redução da resistência vascular periférica (RVP), principalmente após um tempo de uso;
+- **EA**: hiperuricemia (gota), hipocalemia, hipomagnesemia (arritmias), maior risco de DM tipo 2;
+- Principais representantes: hidroclorotiazida e clortalidona (diurético mais potente).
 
-- Comorbidade muito prevalente e associdada à HAS.
+**Bloqueador de canal de cálcio (BCC):**
 
-extracelular. Redução da resistência vascular periférica
+- **M**: redução da resistência vascular periférica por diminuição da concentração de cálcio nas células musculares lisas vasculares;
+- **EA**: edema maleolar, cefaleia, tontura, rubor facial, dermatite ocre, hipertrofia gengival;
+- Principais representantes: dentre os diidropiridínicos, o anlodipino e o nifedipino são os principais representantes.
 
-- Roncos, sonolência diurna, fadiga, dificuldade
+**Estágios** (determina com quantos medicamentos o tratamento irá iniciar):
 
-(RVP), principalmente após um tempo de uso. de concentração.
+- Estágio 1: PAS 140-159 e/ou PAD 90-99 (< 160x100 mmHg);
+- Estágio 2: PAS 160-179 e/ou PAD 100-109 (< 180x110 mmHg);
+- Estágio 3: PAS ≥ 180 e/ou PAD ≥ 110.
 
-- EA: Hiperuricemia (gota), hipocalemia,
+## HAS Secundária
 
-- Relacionado a obesidade e aumento na hipomagnesemia (arritmias), maior risco de DM tipo 2. circunferência cervical.
-
-- Principais representantes: Hidroclorotiazida e
-
-- Diagnóstico: polissonografia.
-
-Clortalidona (diurético mais potente). Bloqueador de canal de cálcio (BCC) RENOVASCULAR
-
-- M: Redução da resistência vascular periférica por
-
-- Sopro abdominal, EAP repetição, piora de função renal diminuição da concentração de cálcio nas células > 20% após inícios de IECA/BRA.
-
-musculares lisas vasculares.
-
-- Diagnóstico: Doppler de artérias renais, angio TC/RM,
-
-- EA: Edema maleolar, cefaléia, tontura, rubor facial, arteriografia renal (padrão ouro). Figura 3 dermatite ocre, hipertrofia gengival.
-
-- Em mulheres jovens, pensar em displasia fibromuscular
-
-- Principais representantes: dentre os como etiologia da estenose.
-
-Diidropiridínicos, o Anlodipino e o nifedipino são os
-
-- Em idosos, pensar em aterosclerose.
-
-principais representantes. Estágios COARCTAÇÃO DE AORTA
-
-- Determina com quantos medicamentos o tratamento
-
-- Desconfiar se o paciente apresentar PA e pulsos irá iniciar: reduzidos em MMII (pelo menos 10 mmHg em relação Estágio 1: PAS 140-159 e/ou PAD 90-99 aos MMSS).
-
-(<160x100 mmHg).
-
-- Rx tórax: corrosão de costelas (circulação colateral Estágio 2: PAS 160 – 179 e/ou PAD 100-109 para irrigação da parte inferior do corpo).
-
-(<180x110 mmHg).
-
-- ECO e/ou angio TC de tórax para o diagnóstico. Estágio 3: PAS ≥ 180 e/ou PAD ≥ 110.
-
-- Verificar Figuras 4 e 5 na próxima página
-
-## HAS SECUNDÁRIA
-
-Figura 2: Fluxograma de tratamento da HAS ambulatorial
+*Figura 2: Fluxograma de tratamento da HAS ambulatorial.*
 
 ![Figura do material - página 4](figure-004-1.webp)
+
+### Síndrome da Apneia Obstrutiva do Sono
+
+- Comorbidade muito prevalente e associada à HAS;
+- Roncos, sonolência diurna, fadiga, dificuldade de concentração;
+- Relacionado a obesidade e aumento na circunferência cervical;
+- Diagnóstico: polissonografia.
+
+### Renovascular
+
+- Sopro abdominal, EAP de repetição, piora de função renal > 20% após início de IECA/BRA;
+- Diagnóstico: Doppler de artérias renais, angio-TC/RM, arteriografia renal (padrão-ouro);
+- Em mulheres jovens, pensar em displasia fibromuscular como etiologia da estenose;
+- Em idosos, pensar em aterosclerose.
+
+### Coarctação de Aorta
+
+- Desconfiar se o paciente apresentar PA e pulsos reduzidos em MMII (pelo menos 10 mmHg em relação aos MMSS);
+- Rx tórax: corrosão de costelas (circulação colateral para irrigação da parte inferior do corpo);
+- ECO e/ou angio-TC de tórax para o diagnóstico.
 
 ---
 
@@ -250,31 +222,24 @@ Figura 2: Fluxograma de tratamento da HAS ambulatorial
 
 Observar ingurgitação da circulação colateral (setas brancas).
 
-## HIPERALDOSTERONISMO PRIMÁRIO
+*Figura 3: Estenose unilateral de artéria renal.*
 
-- Quando suspeitar: hipocalemia + hipertensão resistente.
+*Figura 4: Corrosão de costelas na coarctação de aorta. Ocorre por um recrutamento das artérias do tórax como circulação colateral para os membros inferiores.*
 
-- Se aldosterona/atividade de Renina > 30 ou aldosterona > 15, realizar teste confirmatório, se positivo → prosseguir com imagem das adrenais. Se aldosterona > 20 o teste confirmatório não é necessário, seguir direto para imagem.
+*Figura 5: Coarctação de aorta.*
 
-Figura 3: Estenose unilateral de artéria renal.
+## Hiperaldosteronismo Primário
 
+- Quando suspeitar: hipocalemia + hipertensão resistente;
+- Se aldosterona/atividade de renina > 30 ou aldosterona > 15, realizar teste confirmatório; se positivo → prosseguir com imagem das adrenais. Se aldosterona > 20, o teste confirmatório não é necessário, seguir direto para imagem;
 - O tratamento pode ser cirúrgico ou clínico, com espironolactona 50-300 mg/dia.
 
-Figura 4: Corrosão de costelas na coarctação de aorta Ocorre por um recrutamento das artérias do tórax como circulação colateral para os membros inferiores.
+*Figura 6: Fluxograma para investigação de HAS resistente.*
 
-Figura 6: Fluxograma para investigação de HAS resistente
+## Síndrome de Cushing
 
-## SÍNDROME DE CUSHING
-
-- O diagnóstico é firmado com cortisol urinário positivo (cortisol matinal basal e matinal 8h após dexametasona > 1,8 mcg/dL).
-
-(24h) > 55 mcg e teste de supressão do cortisol
-
+- O diagnóstico é firmado com cortisol urinário (24h) > 55 mcg e teste de supressão do cortisol positivo (cortisol matinal basal e matinal 8h após dexametasona > 1,8 mcg/dL);
 - RNM → indicada para a pesquisa de tumoração.
-
-- Verificar Figura 7 na próxima página
-
-Figura 5: Coarctação de aorta
 
 ![Figura do material - página 5](figure-005-1.webp)
 
@@ -284,53 +249,41 @@ Figura 5: Coarctação de aorta
 
 <!-- page:6 -->
 
-Figura 7: Características da Síndrome de Cushing FEOCROMOCITOMA C
+*Figura 7: Características da Síndrome de Cushing.*
 
-- Hipertensão paroxística com cefaléia, sudorese e palpitações. C
+## Feocromocitoma
 
-- Diagnóstico: metanefrinas plasmáticas livres E
-
-(ideal) ou metanefrinas + catecolaminas urinárias ó (mais acessível).
-
-- Se positivos, solicitar TC e RM para pesquisa do feocromocitoma.
-
+- Hipertensão paroxística com cefaleia, sudorese e palpitações;
+- Diagnóstico: metanefrinas plasmáticas livres (ideal) ou metanefrinas + catecolaminas urinárias (mais acessível);
+- Se positivos, solicitar TC e RM para pesquisa do feocromocitoma;
 - Tratamento cirúrgico.
 
-## OUTRAS CAUSAS DE HIPERTENSÃO
+## Outras Causas de Hipertensão Secundária
 
-## SECUNDÁRIA E
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-- Tabela 5: Outras causas de hipertensão secundária
+**Tabela 5: Outras causas de hipertensão secundária**
 
-- Diagnóstico Quadro clínico Investigação
+| Diagnóstico | Quadro clínico | Investigação |
+|---|---|---|
+| Hipotireoidismo | Ganho de peso, queda de cabelo, fraqueza, fadiga | TSH e T4 livre |
+| Hipertireoidismo | Perda de peso, palpitações, exoftalmia, hipertermia | TSH e T4 livre |
 
-- Ganho de peso, cabelo, fraqueza palpitações, exoftalmia, hipertermia
+## Crise Hipertensiva
 
-Hipotireoidismo fadiga, queda de TSH e T4 livre Perda de peso, Hipertireoidismo TSH e T4 livre
+### Conceitos
 
-## CRISE HIPERTENSIVA
+**Elevação importante da PA sem lesão progressiva de órgãos-alvo:**
 
-CONCEITOS Elevação importante da PA sem lesão progressiva de órgãos-alvo
-
-- PA elevada em contexto de sintomas inespecíficos
-
-(pseudocrise hipertensiva).
-
-- PAD ≥ 180 e/ou ≥110 mmHg sem lesão de órgão alvo
-
+- PA elevada em contexto de sintomas inespecíficos (pseudocrise hipertensiva);
+- PAS ≥ 180 e/ou PAD ≥ 110 mmHg sem lesão de órgão-alvo;
 - Conduta: combinação medicamentosa via oral com acompanhamento ambulatorial precoce (1 a 7 dias).
 
-Emergência hipertensiva
+**Emergência hipertensiva:**
 
-- PAD ≥ 180 e/ou ≥ 110 mmHg com lesão de órgão alvo aguda e progressiva
-
-- Lesões de órgão-alvo: dissecção aguda de aorta, infarto agudo do miocárdio, angina instável, edema agudo de pulmão, HAS acelerada maligna, AVCi, AVCh,
-
-HSA, síndromes hipertensivas na gestação.
-
-- Conduta: anti-hipertensivo IV (maioria das vezes:
-
-nitroprussiato ou nitroglicerina) e internação hospitalar em leito crítico.
+- PAS ≥ 180 e/ou PAD ≥ 110 mmHg com lesão de órgão-alvo aguda e progressiva;
+- Lesões de órgão-alvo: dissecção aguda de aorta, infarto agudo do miocárdio, angina instável, edema agudo de pulmão, HAS acelerada maligna, AVCi, AVCh, HSA, síndromes hipertensivas na gestação;
+- Conduta: anti-hipertensivo IV (na maioria das vezes: nitroprussiato ou nitroglicerina) e internação hospitalar em leito crítico.
 
 ![Figura do material - página 6](figure-006-1.webp)
 
@@ -338,27 +291,39 @@ nitroprussiato ou nitroglicerina) e internação hospitalar em leito crítico.
 
 <!-- page:7 -->
 
-## EMERGÊNCIAS HIPERTENSIVAS EM SITUAÇÕES ESPECIAIS
+## Emergências Hipertensivas em Situações Especiais
 
-Tabela 6: Emergências hipertensivas Retinopatia com papiledema, necrose fibrinóide de arteríolas renais (IRA Retinopatia com Hipertensão Acelerada Maligna Encefalopatia Hipertensiva Co Re AVCi AVCh Nitroglicerina ou nit Edema agudo de pulmão VNI Figura 8: Fundo de olho: papila bem delineada Retinografia revelando disco óptico de limites nítidos no olho direito..
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Figura 9: Fundo de olho: papila com contornos borrados/ mal definidos (papiledema). Borramento dos bordos do disco óptico no olho esquerdo.
+**Tabela 6: Emergências hipertensivas**
 
-m papiledema, necrose fibrinóide de arteríolas renais (IRA rapidamente progressiva) e endarterite obliterante → IRA, IC.
+| Situação | Quadro clínico | Conduta |
+|---|---|---|
+| Hipertensão Acelerada Maligna | Retinopatia com papiledema, necrose fibrinoide de arteríolas renais (IRA rapidamente progressiva) e endarterite obliterante → IRA, IC | Nitroprussiato EV |
+| Encefalopatia Hipertensiva | Confusão mental, cefaleia, náuseas e vômitos | Nitroprussiato EV |
+| AVCi | — | Reduzir a PA < 185 x 110 mmHg se trombólise. Do contrário, tolerar até 220 x 120 mmHg |
+| AVCh | — | Alvo de PAS < 160 mmHg |
+| Edema agudo de pulmão | — | Nitroglicerina ou nitroprussiato EV (IAM → nitroglicerina) + furosemida 1 mg/kg + VNI + morfina para desconforto respiratório s/n |
 
-onfusão mental, cefaléia, náuseas e vômitos. eduzir a PA < 185 x 110 mmHg se trombólise. Do contrário, tolerar até 220 x 120 mmHg Alvo de PAS < 160 mmHg.
+*Figura 8: Fundo de olho — papila bem delineada. Retinografia revelando disco óptico de limites nítidos no olho direito.*
 
-troprussiato EV (IAM → nitroglicerina) + furosemida 1mg/kg + I + morfina para desconforto respiratório s/n
+*Figura 9: Fundo de olho — papila com contornos borrados/mal definidos (papiledema). Borramento dos bordos do disco óptico no olho esquerdo.*
 
-## REFERÊNCIAS
+## Referências
 
-Figura 2: Fluxograma de tratamento da HAS ambulatorial Adaptado de: Diretrizes Brasileiras de Hipertensão Arterial – 2020. Barroso et al.
+Figura 2: Fluxograma de tratamento da HAS ambulatorial. Adaptado de: Diretrizes Brasileiras de Hipertensão Arterial – 2020. Barroso et al.
 
-Figura 3: Estenose unilateral de artéria renal. https://radiopaedia.org/cases/renal-artery-stenosis-1?lang=us https://doi.org/10.1161/CIRCULATIONAHA.108.838029 Figura 4: Corrosão das costelas na coarctação de aorta https://doi.org/10.1161/CIRCULATIONAHA.108.838029 Figura 5: Coarctação de aorta https://doi.org/10.1161/CIRCULATIONAHA.108.838029 Figura 8: Fundo de olho: papila bem delineada. https://doi.
+Figura 3: Estenose unilateral de artéria renal. https://radiopaedia.org/cases/renal-artery-stenosis-1?lang=us; https://doi.org/10.1161/CIRCULATIONAHA.108.838029
 
-org/10.1590/S0034-72802009000300009 Figura 9: Fundo de olho: papila com contornos borrados/ mal definidos (papiledema).
+Figura 4: Corrosão das costelas na coarctação de aorta. https://doi.org/10.1161/CIRCULATIONAHA.108.838029
 
-https://doi.org/10.1590/S0034-72802009000300009 Diretriz Brasileira de Hipertensão Arterial – 2025
+Figura 5: Coarctação de aorta. https://doi.org/10.1161/CIRCULATIONAHA.108.838029
+
+Figura 8: Fundo de olho: papila bem delineada. https://doi.org/10.1590/S0034-72802009000300009
+
+Figura 9: Fundo de olho: papila com contornos borrados/mal definidos (papiledema). https://doi.org/10.1590/S0034-72802009000300009
+
+Diretriz Brasileira de Hipertensão Arterial – 2025
 
 ![Figura do material - página 7](figure-007-1.webp)
 

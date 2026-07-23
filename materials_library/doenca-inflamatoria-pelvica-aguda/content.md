@@ -2,65 +2,57 @@
 
 <!-- page:1 -->
 
-## DOENÇA INFLAMATÓRIA
+## Resumo Rápido
 
-## PÉLVICA AGUDA
+**Definição**
 
-Doença inflamatória pélvica aguda DEFINIÇÃO imunossupressão, falha de antibioticoterapia por
+- Infecção sexualmente transmissível (IST) de via ascendente: cervicite → endometrite → salpingite → ooforite → peritonite;
+- Complicações: sepse (aguda), dor pélvica crônica e infertilidade (tardias);
+- Patógenos: *Chlamydia trachomatis* e *Neisseria gonorrhoeae* (gonococo).
 
-- Infecção sexualmente transmissível (IST) de via oral após 72h, gestação ou dúvida diagnóstica caráter ascendente: (apendicite? gravidez ectópica?). Cervicite → endometrite → salpingite → ooforite Tratamento
+**Diagnóstico**
 
-→ peritonite;
+- É clínico, baseado em: critérios maiores (dor pélvica/região anexial, dor à mobilização do colo uterino) + critérios menores (presunção de infecção);
+- Critérios elaborados: (1) exame de imagem sugerindo a presença de abscesso tubo-ovariano; (2) biópsia endometrial com endometrite; (3) laparoscopia com sinais de infecção pélvica.
+
+**Quando internar**: sepse, instabilidade hemodinâmica, comprometimento do estado geral, abscesso tubo-ovariano ou peritonite, imunossupressão, falha de antibioticoterapia por via oral após 72h, gestação ou dúvida diagnóstica (apendicite? gravidez ectópica?).
+
+**Tratamento**
 
 - Ambulatorial:
+  - Ceftriaxona 500 mg IM dose única OU cefotaxima 500 mg IM dose única;
+  - + doxiciclina 100 mg 12/12h por 14 dias ou azitromicina 1 g dose única;
+  - +- metronidazol 500 mg VO 12/12h por 14 dias.
+- Hospitalar:
+  - Ceftriaxona 1 g 12/12h EV + doxiciclina 100 mg 12/12h por 14 dias + metronidazol 500 mg EV 8/8h ou clindamicina 900 mg EV 8/8h; OU
+  - Clindamicina 900 mg EV 8/8h por 14 dias + gentamicina IM ou EV (dose de ataque 2 mg/kg e dose de manutenção 3-5 mg/kg/dia) por 14 dias; OU
+  - Ampicilina + sulbactam 3 g EV 6/6h por 14 dias + doxiciclina 100 mg 12/12h por 14 dias.
+- Abscesso tubo-ovariano: drenar se não melhorar com antibioticoterapia.
 
-- Complicações: sepse (aguda), dor pélvica crônica e | Ceftriaxone 500 mg IM dose única OU infertilidade (tardias); Cefotaxima 500 mg IM dose única
+**DIPA complicada**: dor pélvica crônica por aderências pélvicas; síndrome de Fitz-Hugh-Curtis (aderências peri-hepáticas).
 
-- Patógenos: Chlamydia trachomatis e Neisseria | + Doxiciclina 100 mg 12/12h por 14 dias ou gonorrhoeae (Gonococo); Azitromicina 1g dose única
+**Obs.**: na dúvida diagnóstica para DIPA: **TRATAR**!
 
-Diagnóstico | +- Metronidazol 500 mg VO 12/12h por 14 dias.
+## Doença Inflamatória Pélvica Aguda
 
-- É clínico, baseado em:
+- Infecção sexualmente transmissível de caráter ascendente;
+- Fisiopatologia: cervicite → endometrite → salpingite → ooforite → peritonite.
 
-- Hospitalar: Critérios maiores (dor pélvica/ região anexial, | Ceftriaxone 1g 12/12h EV + Doxiciclina 100 mg dor a mobilização do colo uterino) + critérios 12/12h por 14 dias + Metronidazol 500 mg EV menores (presunção de infecção); 8/8h ou Clindamicina 900 mg EV 8/8h Critérios elaborados: (1) Exame de imagem | Clindamicina 900 mg EV 8/8h por 14 dias + sugerindo a presença de abscesso tubo- Gentamicina IM ou EV: dose de ataque 2 mg/kg e ovariano, (2) Biópsia endometrial com dose de manutenção 3-5 mg/kg/dia por 14 dias.
+### Agentes Etiológicos
 
-endometrite, (3) Laparoscopia com sinais de | Ampicilina + Sulbactam 3g EV 6/6h por 14 dias + infecção pélvica. Doxiciclina 100 mg 12/12h por 14 dias.
+- *Chlamydia trachomatis*;
+- *Neisseria gonorrhoeae* (gonococo);
+- Outros agentes: anaeróbios pélvicos; bacilos gram-negativos (BGN); *Mycoplasma hominis*; *S. agalactiae*; *G. vaginalis*; *Haemophilus influenzae*; *Ureaplasma urealyticum*; *Bacteroides* spp.; *E. coli*.
 
-- Quando internar:
+### Repercussões
 
-- Abscesso tubo ovariano: drenar se não melhorar DIPA complicada - Sepse, instabilidade com antibioticoterapia.
-
-hemodinâmica, comprometimento do estado geral, abscesso tubo-ovariano ou peritonite,
-
-## DOENÇA INFLAMATÓRIA PÉLVICA
-
-- Dor pélvica crônica por aderências pélvicas;
-
-## AGUDA
-
-- Síndrome de Fitz-Hugh-Curtis (aderências peri-hepáticas).
-
-- Infecção sexualmente transmissível de caráter ascendente; OBS.: Na dúvida diagnóstica para DIPA: TRATAR!
-
-- Fisiopatologia: Cervicite → endometrite → salpingite → ooforite → peritonite.
-
-## AGENTES ETIOLÓGICOS
-
-- Chlamydia trachomatis;
-
-- Neisseria gonorrhoeae – gonococo;
-
-- Outros agentes: Anaeróbios pélvicos; BGN;
-
-Mycoplasma hominis; S. agalactiae; G. vaginalis; Haemophilus influenzae; Ureaplasma urealyticum; Bacteroides spp.; E. coli.
-
-## REPERCUSSÕES
-
-Complicações
+**Complicações**
 
 - Abscesso tubo-ovariano;
+- Infertilidade, principalmente pela redução da motilidade tubária e pelo processo aderencial;
+- Maior risco de gestação ectópica.
 
-- Infertilidade, principalmente pela redução da motilidade tubária e pelo processo aderencial; Figura 1: Síndrome de Fitz-Hugh-Curtis com aderências periz Maior risco de gestação ectópica; hepáticas.
+*Figura 1: Síndrome de Fitz-Hugh-Curtis com aderências peri-hepáticas.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -68,73 +60,51 @@ Complicações
 
 <!-- page:2 -->
 
-## CRITÉRIOS MENORES (ADICIONAIS)
+### Critérios Menores (Adicionais)
 
 - Febre;
-
 - Secreção vaginal patológica;
-
 - Marcadores inflamatórios aumentados ou leucocitose;
+- Agentes etiológicos (gonococo, clamídia ou micoplasma) isolados em secreção endocervical.
 
-- Agentes etiológicos (gonococo, clamídia ou
+*Figura 2: Abscesso tubo-ovariano em tuba uterina esquerda (setas vermelhas).*
 
-- O
+### Diagnóstico
 
-- - C
+- O diagnóstico é clínico;
+- É definido por critérios clínicos, sendo necessário: todos os critérios maiores + 1 critério menor ou 1 critério elaborado.
 
-- Figura 2: Abscesso tubo-ovariano em tuba uterina esquerda
-
-(setas vermelhas).
-
-## DIAGNÓSTICO
-
-- - O diagnóstico é clínico;
-
-- É definido por critérios clínicos, sendo necessário:
-
-todos os critérios maiores + 1 critério menor ou 1 E critério elaborado. I
-
-- CRITÉRIOS MAIORES (OBRIGATÓRIOS)
+**Critérios maiores (obrigatórios)**
 
 - Dor em baixo ventre espontânea;
-
 - Dor à palpação anexial;
-
 - Dor à mobilização do colo uterino.
 
-Figura 3: Sinal da roda dentada. Ultrassonografia por via transvaginal espessamento parietal e ecos internos (setas verdes - sinal da roda d
-
-- Septos intra-tubáreos;
-
-- Figura 4: Abscesso tubo-ovariano. Ultrassonografia por via transvagin ecos internos e conteúdo hipoecogênico (espesso), adjacente a um o micoplasma) isolados em secreção endocervical.
-
-Doppler colorido. Os achados são sugestivos de abscesso tubo-ovaria - Agentes etiológicos (gonococo, clamídia ou Outros sintomas relacionados:
+**Outros sintomas relacionados**
 
 - Dispareunia, sangramento intermenstrual;
-
 - Alteração do padrão e fluxo menstrual → endometrite;
-
 - Disúria → uretrite.
 
-## CRITÉRIOS ELABORADOS
+*Figura 3: Sinal da roda dentada. Ultrassonografia por via transvaginal evidenciando distensão líquida da tuba uterina com espessamento parietal e ecos internos (setas verdes — sinal da roda dentada), sugerindo salpingite.*
+
+*Figura 4: Abscesso tubo-ovariano. Ultrassonografia por via transvaginal evidencia formação tubária com paredes espessadas, ecos internos e conteúdo hipoecogênico (espesso), adjacente a ovário de dimensões normais, com aumento da vascularização ao Doppler colorido. Os achados são sugestivos de abscesso tubo-ovariano.*
+
+### Critérios Elaborados
 
 - A presença de qualquer um estabelece diagnóstico;
-
 - Exame de imagem (ultrassonografia transvaginal ou ressonância magnética de pelve) sugerindo a presença de abscesso tubo-ovariano;
-
 - Biópsia endometrial com endometrite;
-
 - Laparoscopia com sinais de infecção pélvica ou abscesso tubo-ovariano.
 
-EXAMES COMPLEMENTARES Imagens
+### Exames Complementares — Imagens
 
-- Típicas: Espessamento da parede tubária > 5 mm; Acúmulo de líquido nas tubas; Sinal da roda dentada: tubas dilatadas visualizadas através de um corte transversal.
-
-evidenciando distensão líquida da tuba uterina com dentada), sugerindo salpingite.
-
-- Abscesso tubo-ovariano;
-
-nal evidencia formação tuba uterina de paredes espessadas, com ovário de dimensões normais e aumento da vascularização ao ano.
+- Típicas:
+  - Espessamento da parede tubária > 5 mm;
+  - Acúmulo de líquido nas tubas;
+  - Sinal da roda dentada: tubas dilatadas visualizadas através de um corte transversal;
+  - Septos intratubários.
+- Abscesso tubo-ovariano.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -144,69 +114,57 @@ nal evidencia formação tuba uterina de paredes espessadas, com ovário de dime
 
 <!-- page:3 -->
 
-## CRITÉRIOS DE GRAVIDADE
+*Figura 5 (contexto): imagens de ultrassonografia por via transvaginal evidenciam tubas uterinas de paredes espessadas e distendidas por conteúdo hipoecogênico com debris (espesso), compatível com abscesso tubário. A imagem inferior demonstra aumento da vascularização parietal ao Doppler, favorecendo o aspecto inflamatório/infeccioso.*
 
-- Imagens de ultrassonografia por via transvaginal evidenciam tubas uterinas de paredes espessadas
+### Critérios de Gravidade
 
-AVALIAÇÃO INICIAL (seta rosa) e distendidas por conteúdo hipoecogênico
+**Avaliação inicial**
 
-- Avaliar sinais vitais e estado geral; com debris (espesso), compatível com abscesso
-
-- Pesquisar sinais de sepse; tubário. A imagem inferior demonstra aumento da
-
+- Avaliar sinais vitais e estado geral;
 - Pesquisar sinais de sepse;
+- Abdome → investigar sinais de peritonite.
 
-- Abdome → investigar sinais de peritonite;
-
-## EXAME FÍSICO GINECOLÓGICO
+### Exame Físico Ginecológico
 
 - Exame especular: presença de corrimento vaginal purulento ou turvo, com odor desagradável e colo friável;
+- Toque vaginal: dor à mobilização do colo, dor à palpação do útero e anexos, uni ou bilateralmente, e massa pélvica palpável.
 
-- Toque vaginal: dor à mobilização do colo, dor à palpação do útero e anexos, uni ou bilateralmente e massa pélvica palpável.
+*Figura 5: Abscesso tubo-ovariano no USG.*
 
-Figura 5: Abscesso tubo-ovariano no USG. tubário. A imagem inferior demonstra aumento da vascularização parietal ao Doppler, favorecendo o aspecto inflamatório / infeccioso.
-
-## DIP LEVE
+### DIP Leve
 
 - Ausência de sinais de infecção sistêmica ou sepse;
-
 - Ausência de sinais de peritonite ou massa anexial.
 
-## DIP COMPLICADA
+### DIP Complicada
 
 - Hemograma completo → avaliar leucocitose;
-
 - Provas inflamatórias (PCR e VHS) → avaliar inflamação;
-
 - Urina tipo 1 e urocultura → para diagnóstico diferencial com ITU;
-
-- Identificação do agente etiológico por biologia molecular (Clamídia ou Gonococo, se disponível);
-
+- Identificação do agente etiológico por biologia molecular (clamídia ou gonococo, se disponível);
 - Ultrassonografia transvaginal e ressonância de pelve;
-
 - Laparoscopia.
 
-## QUANDO INTERNAR?
+### Quando Internar?
 
-- Se DIP complicada: Abscesso tubo-ovariano; Imunossupressão; Falha de antibioticoterapia por via oral, após Instabilidade hemodinâmica ou sepse; Gestação; Dúvida diagnóstica → apendicite? Associação com uso de DIU.
+- Se DIP complicada;
+- Instabilidade hemodinâmica ou sepse;
+- Abscesso tubo-ovariano;
+- Imunossupressão;
+- Falha de antibioticoterapia por via oral, após 48-72 horas;
+- Gestação;
+- Dúvida diagnóstica → apendicite? gravidez ectópica?;
+- Associação com uso de DIU.
 
-48-72 horas; Gravidez ectópica?;
+### Tratamento
 
-## TRATAMENTO
+- Geralmente marcada pela infecção por gonococo e clamídia;
+- Tratar ambulatorialmente, se: ausência de sinais de infecção sistêmica ou sepse; ausência de sinais de peritonite ou massa anexial;
+- Reavaliar em 48-72 horas.
 
-- Geralmente marcada pela infecção por
+**Antibioticoterapia**: ceftriaxona 500 mg intravenoso (IV) dose única + azitromicina 1 g por via oral (VO) dose única, com ou sem metronidazol 500 mg VO 12/12h por 14 dias; OU doxiciclina 100 mg VO 12/12h por 14 dias.
 
-Gonococo e Clamídia;
-
-- Tratar ambulatorialmente, se: Ausência de sinais de infecção sistêmica ou sepse; Ausência de sinais de peritonite ou massa anexial.
-
-- Reavaliar em 48-72 horas;
-
-- Antibioticoterapia: Ceftriaxona 500 mg intravenoso dose única + 500 mg/dia por 7 dias (1 g/semana por dias com ou sem Metronidazol 500 mg VO, 12/12h, por
-
-(IV) dose única + Azitromicina 1g por via oral (VO) 2 semanas) OU Doxiciclina 100 mg VO 12/12h por 14 14 dias.
-
-- Verificar Tabela 1 na próxima página
+- Verificar Tabela 1 na próxima página.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -216,42 +174,46 @@ Gonococo e Clamídia;
 
 <!-- page:4 -->
 
-Tabela 1: Tratamento recomendado para clamídia e gonococo. Gonococo ou Clamídia Tratamento Infecção gonocócica NÃO Infecção gonocócica NÃO C complicada (uretra, colo do útero, reto e Azitromic faringe)
+> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
 
-Ceftriaxona 1g IM ou I Infecção gonocócica disseminada Azitromic Conjutivite gonocócica no adulto Azitromic Infecção por clamídia Doxiciclina 10
+**Tabela 1: Tratamento recomendado para clamídia e gonococo**
 
-- Tratamento hospitalar;
+| Gonococo ou clamídia | Tratamento |
+|---|---|
+| Infecção gonocócica NÃO complicada (uretra, colo do útero, reto e faringe) | Ceftriaxona 500 mg, IM, dose única; mais azitromicina 500 mg, 2 comprimidos, VO, dose única |
+| Infecção gonocócica disseminada | Ceftriaxona 1 g, IM ou IV ao dia, completando ao menos 7 dias de tratamento; mais azitromicina 500 mg, 2 comprimidos, VO, dose única |
+| Conjuntivite gonocócica no adulto | Ceftriaxona 1 g, IM, dose única; mais azitromicina 500 mg, 2 comprimidos, VO, dose única |
+| Infecção por clamídia | Doxiciclina 100 mg, VO, 2x/dia, por 7 dias (exceto gestantes) |
 
-- Esquemas possíveis: Ceftriaxona 1g 12/12h IV + metronidazol 500 mg IV G Clindamicina 900 mg IV 8/8h por 14 dias + gentamicina IM ou IV (dose de ataque: 2mg/kg; dose de manutenção: 3-5 mg/kg/dia por 14 dias); N Ampicilina + sulbactam 3g IV 6/6h por 14 dias + | doxiciclina 100 mg12/12h por 14 dias.
+**Tratamento hospitalar**
 
-8/8h OU clindamicina 900 mg IV 8/8h; o & OBS.: Caso paciente com melhora clínica e afebril há E 48 horas, podemos descalonar o antibiótico por via T oral e continuar o tratamento de maneira ambulatorial c Abscesso tubo-ovariano E
+- Esquemas possíveis:
+  - Ceftriaxona 1 g 12/12h IV + metronidazol 500 mg IV 8/8h OU clindamicina 900 mg IV 8/8h;
+  - Clindamicina 900 mg IV 8/8h por 14 dias + gentamicina IM ou IV (dose de ataque: 2 mg/kg; dose de manutenção: 3-5 mg/kg/dia) por 14 dias;
+  - Ampicilina + sulbactam 3 g IV 6/6h por 14 dias + doxiciclina 100 mg 12/12h por 14 dias.
+- **Obs.**: caso o paciente apresente melhora clínica e esteja afebril há 48 horas, podemos descalonar o antibiótico por via oral e continuar o tratamento de maneira ambulatorial.
 
-- Promover cobertura de anaeróbios; T
+**Abscesso tubo-ovariano**
 
-- Se ausência de melhora em 48 horas → drenar! h
+- Promover cobertura de anaeróbios;
+- Se ausência de melhora em 48 horas → drenar!
+- DIU: considerar retirar apenas se falha do tratamento clínico ou inserção recente do DIU.
 
-- DIU: Considerar retirar apenas se falha do tratamento clínico ou inserção recente do DIU. R u o
-
-## OUTROS DETALHES 7
+## Outros Detalhes
 
 - Lembrar de outras infecções sexualmente transmissíveis (ISTs) associadas: HIV, sífilis, hepatite B e C;
-
 - Orientar o rastreamento adequado das alterações cervicais relacionadas ao HPV → colpocitologia oncótica;
-
 - Orientar a avaliação e tratamento das parcerias sexuais;
-
 - DIU → caso haja indicação da retirada, proceder somente após 6 horas do início da antibioticoterapia intravenosa.
 
-REFERÊNCIAS Ceftriaxona 500mg, IM, dose única Mais cina 500mg, 2 comprimidos, VO, dose única IV ao dia, completando ao menos 7 dias de tratamento Mais cina 500mg, 2 comprimidos, VO, dose única Ceftriaxona 1g, IM, dose única cina 500mg, 2 comprimidos, VO, dose única OU 00mg, VO, 2x/dia, por 7 dias (exceto gestantes)
+## Referências
 
 Figura 1: Síndrome de Fitz-Hugh-Curtis com aderências peri-hepáticas. GUERRA, F.; COLETTA, D. Fitz-Hugh–Curtis Syndrome. New England Journal of Medicine, v. 381, n. 22, 28 nov. 2019.
 
-Figura 2: Abscesso tubo-ovariano em tuba uterina esquerda (setas vermelhas). NAJEEB LAYYOUS. Laparoscopy Photos Ovarian Cyst Ovarian Cystectomy | Dr N Layyous. Disponível em: <https://www.layyous.com/en/laparoscopy- &-hysteroscopy/laparoscopy-photos/laparoscopy-photos-4>.
+Figura 2: Abscesso tubo-ovariano em tuba uterina esquerda (setas vermelhas). NAJEEB LAYYOUS. Laparoscopy Photos Ovarian Cyst Ovarian Cystectomy | Dr N Layyous. Disponível em: <https://www.layyous.com/en/laparoscopy-&-hysteroscopy/laparoscopy-photos/laparoscopy-photos-4>.
 
-Figura 3: Sinal da roda dentada. ECTÓPICA, F.; WILLIAMS, Hugh-Curtis. Perihepatite, Hugh-Curtis, Tromboflebite V. ovariana, Linfadenopatia, Endometrite, Piométrio, Falópio, Salpingite. Doença Inflamatória Pélvica. Disponível em: https://slideplayer.
+Figura 3: Sinal da roda dentada. WILLIAMS. Perihepatite, Hugh-Curtis, Tromboflebite V. ovariana, Linfadenopatia, Endometrite, Piométrio, Falópio, Salpingite. Doença Inflamatória Pélvica. Disponível em: https://slideplayer.com.br/slide/12231585/.
 
-com.br/slide/12231585/. Figura 4: Abscesso tubo-ovariano. ECTÓPICA, F., Williams, Hugh-Curtis Perihepatite, Hugh- Curtis Tromboflebite V. ovariana, Linfadenopatia, Endometrite, Piométrio, Falópio, Salpingite. Doença Inflamatória pélvica - ppt carregar. Disponível em:
+Figura 4: Abscesso tubo-ovariano. WILLIAMS. Perihepatite, Hugh-Curtis, Tromboflebite V. ovariana, Linfadenopatia, Endometrite, Piométrio, Falópio, Salpingite. Doença Inflamatória Pélvica. Disponível em: https://slideplayer.com.br/slide/12231585/.
 
-https://slideplayer.com.br/slide/12231585/ Figura 5: Abscesso tubo-ovariano no USG. ROMOSAN, G.; VALENTIN, L. The sensitivity and specificity of transvaginal ultrasound with regard to acute pelvic inflammatory disease: a review of the literature. Archives of Gynecology and Obstetrics, v. 289, n. 4, p.
-
-705–714, 28 nov. 2013.
+Figura 5: Abscesso tubo-ovariano no USG. ROMOSAN, G.; VALENTIN, L. The sensitivity and specificity of transvaginal ultrasound with regard to acute pelvic inflammatory disease: a review of the literature. Archives of Gynecology and Obstetrics, v. 289, n. 4, p. 705–714, 28 nov. 2013.
