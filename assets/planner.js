@@ -27,6 +27,9 @@ const STUDY_TIMER_KEY = 'enamed-planner-study-timer';
 const QUESTION_TIMER_KEY = 'enamed-planner-question-timer';
 const POMODORO_KEY = 'enamed-planner-pomodoro';
 const POMODORO_CYCLES_KEY = 'enamed-planner-pomodoro-cycles';
+// Carimbo da última gravação local bem-sucedida. É ele que decide, ao abrir o
+// planner, se o estado deste aparelho está na frente do que está na nuvem.
+const LOCAL_STATE_STAMP_KEY = 'enamed-planner-state-updated-at';
 // O navegador continua local-first; quando houver internet, sincroniza com o Supabase.
 const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
@@ -138,6 +141,69 @@ const VIEW_GROUPS = {
   ferramentas:'Configuração'
 };
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+// Toda gravação local passa por aqui. Antes, um localStorage cheio fazia o
+// setItem lançar QuotaExceededError no meio de persist(): o restante do
+// handler era abortado e, pior, nada mais era salvo até recarregar. Depois de
+// horas de estudo, o F5 trazia de volta o último estado que coube no disco.
+// `var` de propósito: writeLocalState é chamada durante o bootstrap (linha ~83),
+// antes de este ponto do arquivo ser avaliado. Com `let`, a leitura cairia na
+// zona morta temporal e abortaria a inicialização.
+var localStorageWarningShown = false;
+// Esta função roda no bootstrap, antes de várias declarações `let` deste
+// arquivo, por isso todo acesso a estado externo fica protegido: um
+// ReferenceError de zona morta aqui abortaria a inicialização do planner.
+function localStateStampIso() {
+  try { return new Date(Date.now() + serverClockOffsetMs).toISOString(); }
+  catch(error) { return new Date().toISOString(); }
+}
+function dropOldestLocalBackups() {
+  // Os backups locais são a maior massa descartável no armazenamento:
+  // sacrificamos os mais antigos para que o estudo do dia caiba.
+  try {
+    if(!Array.isArray(localBackups) || !localBackups.length) return false;
+    localBackups = localBackups.slice(0, Math.max(0, localBackups.length - Math.max(1, Math.ceil(localBackups.length / 2))));
+    try { localStorage.setItem(LOCAL_BACKUPS_KEY, JSON.stringify(localBackups)); }
+    catch(error) { try { localStorage.removeItem(LOCAL_BACKUPS_KEY); } catch(nested) {} }
+    return true;
+  } catch(error) {
+    try { localStorage.removeItem(LOCAL_BACKUPS_KEY); return true; } catch(nested) { return false; }
+  }
+}
+function writeLocalState() {
+  const payload = JSON.stringify(state);
+  for(let attempt = 0; attempt < 4; attempt += 1) {
+    try {
+      localStorage.setItem(STORAGE_KEY, payload);
+      localStorage.setItem(LOCAL_STATE_STAMP_KEY, localStateStampIso());
+      localStorageWarningShown = false;
+      return true;
+    } catch(error) {
+      if(dropOldestLocalBackups()) continue;
+      console.error('Falha ao salvar no armazenamento local:', error);
+      warnLocalStorageFull();
+      return false;
+    }
+  }
+  warnLocalStorageFull();
+  return false;
+}
+function warnLocalStorageFull() {
+  // Nunca falhar em silêncio: perder horas de estudo sem aviso foi o pior
+  // sintoma do bug original.
+  try {
+    setSyncStatus('Sem espaço', 'error', 'Armazenamento do navegador cheio: o estudo não está sendo salvo neste aparelho');
+    if(localStorageWarningShown) return;
+    localStorageWarningShown = true;
+    showStudyToast('Armazenamento do navegador cheio: apague backups locais em Ferramentas agora para não perder o estudo.');
+    if(currentUser && CLOUD_SYNC_ALLOWED) { cloudDirty = true; pushCloudState(); }
+  } catch(error) {
+    // Bootstrap: DOM/estado de nuvem ainda podem não existir. O console basta.
+    console.error('Armazenamento local cheio.', error);
+  }
+}
+function localStateStamp() {
+  return Date.parse(localStorage.getItem(LOCAL_STATE_STAMP_KEY) || '') || 0;
+}
 function loadState() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
@@ -250,7 +316,7 @@ function ensureRestartFromBlockTen() {
     method: 'Blocos 10+ em ordem oficial, reiniciando em 13/07/2026. Até 2 aulas por dia útil nas férias; depois 1 aula por dia útil. Pendências do Bloco 7 distribuídas aos fins de semana.'
   };
   state.schedulePlanVersion = version;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  writeLocalState();
 }
 function carryDayLogsToRestartDates(dateMoves) {
   if(!Array.isArray(state.dayLogs) || !dateMoves?.size) return;
@@ -274,9 +340,9 @@ function carryDayLogsToRestartDates(dateMoves) {
     if(n(oldLog.mood) && !n(newLog.mood)) newLog.mood = oldLog.mood;
   });
 }
-function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); render(); }
+function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); writeLocalState(); scheduleCloudSave(); render(); }
 let saveStateOnlyTimer = null;
-function flushSaveStateOnly() { clearTimeout(saveStateOnlyTimer); saveStateOnlyTimer = null; localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); scheduleCloudSave(); }
+function flushSaveStateOnly() { clearTimeout(saveStateOnlyTimer); saveStateOnlyTimer = null; writeLocalState(); scheduleCloudSave(); }
 function saveStateOnly(options={}) {
   ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates();
   if(options.invalidate !== false) invalidateActivityRenderCache();
@@ -752,7 +818,7 @@ async function syncGamificationLedger(limit=40) {
     synced[transaction.id]=true;
     state.gamification.cloudSchemaUnavailableAt=0;
   }
-  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+  writeLocalState();
 }
 
 function applyTheme(theme) {
@@ -769,7 +835,9 @@ function applyTheme(theme) {
 
 function setSyncStatus(text, kind='', fullText='') {
   const box = document.getElementById('syncStatus');
-  document.getElementById('syncText').textContent = text;
+  const label = document.getElementById('syncText');
+  if(!box || !label) return;
+  label.textContent = text;
   box.title = fullText || text;
   box.className = `sync-status ${kind}`;
 }
@@ -1045,7 +1113,7 @@ function restoreLocalBackup(id) {
   ensureRestartFromBlockTen();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   invalidateActivityRenderCache();
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  writeLocalState();
   cloudDirty = true;
   scheduleCloudSave();
   showStudyToast(`Backup local restaurado: ${item.label}.`);
@@ -1074,6 +1142,11 @@ function invalidateQuestionBankRenderCache() {
   renderCache.questionAvailabilityScheduleKey = '';
 }
 const CLOUD_SYNC_DEBOUNCE_MS = 3 * 60 * 1000;
+// Teto de espera: o debounce sozinho reinicia a cada gravação, então uma sessão
+// contínua de estudo (que salva a cada poucos segundos) nunca chegava a enviar
+// nada para a nuvem. Este relógio não é reiniciado enquanto houver algo pendente.
+const CLOUD_SYNC_MAX_WAIT_MS = 45 * 1000;
+let cloudMaxWaitTimer = null;
 function scheduleCloudSave({immediate=false}={}) {
   if(!currentUser || !sbClient) return;
   if(!CLOUD_SYNC_ALLOWED) { setSyncStatus('Nuvem off', 'error'); return; }
@@ -1082,6 +1155,9 @@ function scheduleCloudSave({immediate=false}={}) {
   clearTimeout(syncTimer);
   setSyncStatus('Pendente', 'busy');
   syncTimer = setTimeout(pushCloudState, immediate ? 400 : CLOUD_SYNC_DEBOUNCE_MS);
+  if(!cloudMaxWaitTimer) {
+    cloudMaxWaitTimer = setTimeout(() => { cloudMaxWaitTimer = null; if(cloudDirty) { clearTimeout(syncTimer); pushCloudState(); } }, immediate ? 400 : CLOUD_SYNC_MAX_WAIT_MS);
+  }
 }
 function flushCloudSaveNow() {
   if(!currentUser || !sbClient || !CLOUD_SYNC_ALLOWED) return;
@@ -1097,6 +1173,8 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
     return;
   }
   syncInFlight = true;
+  clearTimeout(cloudMaxWaitTimer);
+  cloudMaxWaitTimer = null;
   const pushRevision = cloudRevision;
   setSyncStatus('Enviando', 'busy');
   try {
@@ -1109,7 +1187,7 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
         ensureDayLogs();
         ensureQuestionProgress();
         invalidateActivityRenderCache();
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        writeLocalState();
       }
     }
     const { data:savedRow, error } = await sbClient.from('planner_states').upsert({
@@ -1176,8 +1254,14 @@ async function pullCloudState({ firstLogin=false }={}) {
       return;
     }
     if(data?.data?.schedule?.length) {
-      state = mergePlannerActivityState(data.data, state);
-      cloudDirty = false;
+      // Ao abrir o planner, lastCloudSyncAt volta a zero e o merge padrão deixa a
+      // nuvem vencer no spread raso. Se este aparelho gravou depois do último
+      // envio aceito pelo servidor, o estudo local é o mais novo e precisa
+      // vencer os campos que o merge não sabe reconciliar item a item.
+      const localAt = localStateStamp();
+      const localIsAhead = Boolean(localAt && remoteAt && localAt > remoteAt);
+      state = mergePlannerActivityState(data.data, state, localIsAhead);
+      cloudDirty = localIsAhead;
       lastCloudSyncAt = remoteAt || Date.now();
       normalizeOfficialScheduleNames();
       ensureRestartFromBlockTen();
@@ -1186,7 +1270,7 @@ async function pullCloudState({ firstLogin=false }={}) {
       // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
       // Reaplica o cronograma oficial antes de exibir ou reenviar o estado.
       if(officialSchedule.length) applyOfficialSchedule();
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      writeLocalState();
       if(firstLogin && state.videoPlayer?.lastOpen?.lessonId) {
         ui.videoLessonId = '';
         ui.videoSourceId = '';
@@ -1297,7 +1381,7 @@ async function restoreCloudBackup(id) {
   ensureRestartFromBlockTen();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   invalidateActivityRenderCache();
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  writeLocalState();
   cloudDirty = true;
   await pushCloudState();
   showStudyToast(`Backup restaurado: ${data.label || backupDateTime(data.created_at)}.`);
@@ -2174,6 +2258,10 @@ function startAutoStudy(kind, scheduleId='', minimumSaveSeconds=0) {
 }
 function pauseAutoStudy(kind='') {
   if(!studyTimeTracker.kind || (kind && studyTimeTracker.kind !== kind) || !studyTimeTracker.startedAt) return;
+  // Grava o que já foi estudado antes de parar o relógio. Sem isso, sair da aba
+  // (ou fechar o navegador) descartava até 30 segundos e, se o usuário nunca
+  // voltasse, a sessão inteira desde o último checkpoint.
+  checkpointAutoStudyTime(true);
   studyTimeTracker.elapsedSeconds = autoStudyElapsedSeconds();
   studyTimeTracker.startedAt = 0;
   if(studyTimeTracker.displayInterval) clearInterval(studyTimeTracker.displayInterval);
@@ -2199,7 +2287,15 @@ function resumeAutoStudyForActiveView() {
     const video = document.getElementById('lessonVideo');
     const lesson = currentVideoLesson();
     if(video && !video.paused && lesson) startAutoStudy('video', videoScheduleForLesson(lesson)?.id || '');
+    return;
   }
+  // Voltar para a aba (ou para o planner depois de um F5) retoma o mesmo
+  // cronômetro de onde ele parou, em vez de deixá-lo congelado.
+  if(ui.tab === 'flashcards' && studyTimeTracker.kind === 'flashcards' && !ui.flashcardFocusPaused) {
+    startAutoStudy('flashcards', studyTimeTracker.scheduleId || '');
+    return;
+  }
+  if(ui.tab === 'questoes') ensureQuestionFocusStudyTimer();
 }
 function ensureQuestionFocusStudyTimer(question=null) {
   if(ui.tab !== 'questoes' || !questionSidebarCollapsed) return;
@@ -3026,7 +3122,7 @@ function renderRadiografia() {
   if(!state.radio) state.radio = window.RadioSim.defaultState();
   window.RadioSim.mount(el, {
     getState: () => state,
-    save: () => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){} scheduleCloudSave(); },
+    save: () => { try { writeLocalState(); } catch(e){} scheduleCloudSave(); },
     escapeHtml,
     iconSvg
   });
@@ -3037,7 +3133,7 @@ function renderSemiologia() {
   if(!state.semio) state.semio = window.SemioSim.defaultState();
   window.SemioSim.mount(el, {
     getState: () => state,
-    save: () => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){} scheduleCloudSave(); },
+    save: () => { try { writeLocalState(); } catch(e){} scheduleCloudSave(); },
     escapeHtml,
     iconSvg
   });
@@ -3111,7 +3207,7 @@ function renderEcg() {
   if(!state.ecg) state.ecg = window.EcgSim.defaultState();
   window.EcgSim.mount(el, {
     getState: () => state,
-    save: () => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){} scheduleCloudSave(); },
+    save: () => { try { writeLocalState(); } catch(e){} scheduleCloudSave(); },
     escapeHtml,
     iconSvg
   });
@@ -3591,19 +3687,13 @@ function bindSimuladoInputs(activeRun) {
   if(!activeRun) return;
   document.querySelectorAll('[data-sim-go]').forEach(button => button.onclick = e => { setSimQuestionIndex(activeRun, n(e.currentTarget.dataset.simGo)); saveStateOnly(); render(); });
   document.querySelectorAll('[data-sim-answer]').forEach(button => button.onclick = e => {
-    const highlighting = textHighlightEnabled();
-    if(highlighting && (ui.suppressAnswerClick || Date.now() < n(ui.highlightGestureUntil))) {
-      ui.suppressAnswerClick = false;
+    if(highlightGestureShouldBlockClick(e)) {
+      clearHighlightGestureState();
       e.preventDefault();
       e.stopPropagation();
       return;
     }
-    if(highlighting && (window.getSelection()?.toString() || '').trim().length > 1) return;
-    if(!highlighting) {
-      ui.suppressAnswerClick = false;
-      ui.highlightGestureUntil = 0;
-      window.getSelection()?.removeAllRanges?.();
-    }
+    clearHighlightGestureState();
     const question = activeSimQuestion(activeRun);
     if(!question) return;
     const nextAnswer = e.currentTarget.dataset.simAnswer;
@@ -5196,7 +5286,7 @@ function videoCountRing(lesson) {
 }
 function renderVideoFlashcardEditor(source, lesson, schedule) {
   if(!source) return '';
-  const cards = flashcardsInBuildOrder(Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []);
+  const cards = flashcardsNewestFirst(Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []);
   const topic = videoContentLabel(source);
   return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários. Selecione um trecho e use a barra para formatar, ou escolha o tipo Cloze para ocluir uma palavra.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>{ const sourceAttr = `data-video-card="${escapeAttr(source.id)}"`; return `<div class="flashcard-editor-item">${renderClozeAwareFlashcardFields(sourceAttr,card,'Frente: pergunta ou conceito','Verso: resposta curta')}<button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`; }).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
 }
@@ -5985,6 +6075,11 @@ function flashcardCreatedTime(card) {
 function flashcardsInBuildOrder(cards) {
   return [...cards].sort((a,b) => flashcardCreatedTime(a) - flashcardCreatedTime(b));
 }
+// Nos editores de captura (vídeo e questão) o card recém-criado precisa ficar à
+// vista, no topo, em vez de empurrar a lista para baixo a cada novo flashcard.
+function flashcardsNewestFirst(cards) {
+  return [...cards].sort((a,b) => flashcardCreatedTime(b) - flashcardCreatedTime(a));
+}
 function renderFlashcardMarkdownToolbar() {
   return `<div class="flashcard-md-toolbar" role="toolbar" aria-label="Formatação do flashcard">
     <button type="button" class="flashcard-md-tool" data-fc-md-prefix="**" data-fc-md-suffix="**" title="Negrito"><strong>B</strong></button>
@@ -6352,15 +6447,13 @@ function renderFlashcards() {
     input.onchange = e => updateVideoFlashcard(e.currentTarget);
   });
   bindFlashcardMarkdownTools(document.getElementById('flashcards') || document);
-  if(study && ui.flashcardFocusMode) {
-    if(ui.flashcardFocusPaused) pauseAutoStudy('flashcards');
-    else startAutoStudy('flashcards', study.scheduleId || '');
-  } else {
-    stopAutoStudy('flashcards');
-  }
+  // O tempo de flashcards conta sempre que houver um card aberto, dentro ou fora
+  // do modo foco. Antes, sair do foco chamava stopAutoStudy e zerava a sessão;
+  // agora só pausamos, preservando o acumulado para quando o estudo continuar.
+  if(study && !ui.flashcardFocusPaused) startAutoStudy('flashcards', study.scheduleId || '');
+  else pauseAutoStudy('flashcards');
   const focusClock = document.getElementById('flashcardFocusClock');
   if(focusClock) focusClock.onclick = () => {
-    if(!ui.flashcardFocusMode) return;
     ui.flashcardFocusPaused = !ui.flashcardFocusPaused;
     renderFlashcards();
   };
@@ -6462,10 +6555,12 @@ function renderFlashcard(card) {
   return `<article class="flashcard"><div class="flashcard-head"><div class="flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div><span class="muted">${progress.reviews} rev. · ${escapeHtml(progress.nextReview)}</span></div><div class="flashcard-meta"><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span><span class="sm2-pill">${progress.interval} dias</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">${escapeHtml(progress.status)}</span></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}</article>`;
 }
 function renderFlashcardStudy(card, queue=[]) {
-  if(!card) return '<div class="flashcard-empty-session"><div><h2>Fim da sessão</h2><div class="muted">Nenhum flashcard neste filtro agora. Troque o filtro ou crie novos cards nas questões.</div></div></div>';
+  // No modo foco todo o resto da tela fica oculto. Sem um botão aqui, terminar a
+  // sessão deixava o usuário preso na tela de fim, sem caminho de volta.
+  if(!card) return `<div class="flashcard-empty-session"><div><h2>Fim da sessão</h2><div class="muted">Nenhum flashcard neste filtro agora. Troque o filtro ou crie novos cards nas questões.</div>${ui.flashcardFocusMode ? '<button class="icon-btn primary" id="flashcardFocusToggle" type="button">Sair do modo foco</button>' : ''}</div></div>`;
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
-  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today${ui.flashcardFocusMode ? ' flashcard-focus-clock' : ''}" id="flashcardFocusClock" data-auto-study-clock data-auto-study-prefix="${ui.flashcardFocusMode ? (ui.flashcardFocusPaused ? 'Pausado ·' : 'Foco ·') : 'Fora do foco'}" title="${ui.flashcardFocusMode ? 'Clique para pausar/retomar o tempo' : 'Ative o modo foco para contar o tempo'}">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
+  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today flashcard-focus-clock" id="flashcardFocusClock" data-auto-study-clock data-auto-study-prefix="${ui.flashcardFocusPaused ? 'Pausado ·' : 'Estudando ·'}" title="Clique para pausar/retomar o tempo">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;
@@ -7806,7 +7901,7 @@ function renderQuestionReflection(question, result) {
   return `<div class="question-reflection"><strong>Por que errei?</strong><div class="field-row"><label class="field-label">Motivo do erro<select class="select" data-progress-field="missReason"><option value="">Escolher motivo</option>${['Desatenção','Dúvida / já vi','Não saber'].map(option => `<option ${missReason===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Confiança antes da correção (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 40"></label><label class="field-label">O que aconteceu?<input class="input" data-progress-field="reflection" value="${escapeAttr(result.reflection || '')}" placeholder="Comentário curto"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label></div><div class="reflection-help">Este percentual registra o quanto você acreditava que estava certo antes de ver o gabarito.</div></div>`;
 }
 function renderQuestionFlashcardEditor(question, result) {
-  const cards = flashcardsInBuildOrder(Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : []);
+  const cards = flashcardsNewestFirst(Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : []);
   const allowed = flashcardCreationAllowed(result);
   if(!allowed && !cards.length) return '';
   const reason = allowed ? flashcardCreationReason(result) : 'Flashcards já criados continuam disponíveis para edição.';
@@ -7831,19 +7926,15 @@ function updateQuestionDraftUI(questionId, selected) {
 function bindQuestionActions(questions, question) {
   if(!question) return;
   const chooseAnswer = (button, e) => {
-    const highlighting = textHighlightEnabled();
-    if(highlighting && (ui.suppressAnswerClick || Date.now() < n(ui.highlightGestureUntil))) {
-      ui.suppressAnswerClick = false;
+    if(highlightGestureShouldBlockClick(e)) {
+      clearHighlightGestureState();
       e.preventDefault();
       e.stopPropagation();
       return;
     }
-    if(highlighting && (window.getSelection()?.toString() || '').trim().length > 1) return;
-    if(!highlighting) {
-      ui.suppressAnswerClick = false;
-      ui.highlightGestureUntil = 0;
-      window.getSelection()?.removeAllRanges?.();
-    }
+    // A seleção do usuário é preservada de propósito: ele pode querer copiá-la
+    // depois de marcar a alternativa.
+    clearHighlightGestureState();
     const selected=e.currentTarget.dataset.answer;
     ui.draftAnswers[question.id] = selected;
     const current=state.questionProgress[question.id] || {};
@@ -8236,6 +8327,15 @@ function handleFlashcardKeyboard(event) {
   if(event.ctrlKey || event.metaKey || event.altKey) return;
   const target = event.target;
   if(target?.matches?.('input, textarea, select, [contenteditable="true"]')) return;
+  // Saída garantida do modo foco, inclusive quando a fila acaba e a tela de fim
+  // de sessão não mostra mais os controles.
+  if(event.key === 'Escape' && ui.flashcardFocusMode) {
+    event.preventDefault();
+    ui.flashcardFocusMode = false;
+    ui.flashcardFocusPaused = false;
+    renderFlashcards();
+    return;
+  }
   const cards = flashcardStudyQueue(flashcardAllRecords());
   const card = cards[ui.flashcardIndex];
   if(!card) return;
@@ -8633,6 +8733,22 @@ function highlightLabel(color) {
 function textHighlightEnabled() {
   return true;
 }
+// O marca-texto só existe no enunciado; as alternativas são elementos irmãos.
+// Bloquear o clique por "tempo desde o último gesto" ou por "existe seleção na
+// página" fazia a alternativa parar de responder depois de qualquer marcação —
+// e só voltava quando um render limpava a seleção (daí o truque de abrir e
+// fechar "Editar"). Agora só engolimos o clique que acontece dentro da própria
+// área destacável, que é o único caso em que ele é fim de um arrasto.
+function highlightGestureShouldBlockClick(event) {
+  if(!textHighlightEnabled()) return false;
+  if(!event?.target?.closest?.('.highlightable, .sim-highlightable')) return false;
+  if(ui.suppressAnswerClick || Date.now() < n(ui.highlightGestureUntil)) return true;
+  return (window.getSelection()?.toString() || '').trim().length > 1;
+}
+function clearHighlightGestureState() {
+  ui.suppressAnswerClick = false;
+  ui.highlightGestureUntil = 0;
+}
 const HIGHLIGHT_MENU_COLORS=['yellow','red','blue'];
 function normalizeHighlightColor(color) {
   return HIGHLIGHT_MENU_COLORS.includes(color) ? color : 'yellow';
@@ -8670,18 +8786,52 @@ function positionHighlightPopup(popup,rect) {
   popup.style.left=`${Math.round(left)}px`;
   popup.style.top=`${Math.round(Math.max(margin,top))}px`;
 }
-function showHighlightPopup({rect,editing=false,onColor,onDelete}) {
+function copyHighlightSelection(fallbackText='') {
+  const text=String((window.getSelection()?.toString() || fallbackText || '')).trim();
+  if(!text) return;
+  const done=()=>showStudyToast('Trecho copiado.');
+  if(navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(()=>copyHighlightSelectionFallback(text,done));
+    return;
+  }
+  copyHighlightSelectionFallback(text,done);
+}
+function copyHighlightSelectionFallback(text,done) {
+  // navigator.clipboard falha em contexto não seguro (http://) e em alguns
+  // navegadores móveis; o textarea temporário cobre esses casos.
+  const area=document.createElement('textarea');
+  area.value=text;
+  area.setAttribute('readonly','');
+  area.style.cssText='position:fixed;top:-1000px;opacity:0';
+  document.body.appendChild(area);
+  const previous=window.getSelection()?.rangeCount ? window.getSelection().getRangeAt(0).cloneRange() : null;
+  area.select();
+  let copied=false;
+  try { copied=document.execCommand('copy'); } catch(error) { copied=false; }
+  area.remove();
+  if(previous) { const selection=window.getSelection(); selection?.removeAllRanges(); selection?.addRange(previous); }
+  if(copied) done?.();
+  else showStudyToast('Não consegui copiar automaticamente. Use Ctrl+C com o trecho selecionado.');
+}
+function showHighlightPopup({rect,editing=false,onColor,onDelete,copyText=''}) {
   closeHighlightPopup();
   const popup=document.createElement('div');
   popup.className='highlight-popup';
   popup.setAttribute('role','dialog');
   popup.setAttribute('aria-label',editing?'Alterar destaque':'Escolher cor do destaque');
-  popup.innerHTML=`<span class="highlight-popup-label">${editing?'Alterar':'Destacar'}</span>${HIGHLIGHT_MENU_COLORS.map(color=>`<button type="button" class="highlight-popup-color ${color}" data-highlight-popup-color="${color}" aria-label="${highlightLabel(color)}" title="${highlightLabel(color)}"></button>`).join('')}${editing?'<button type="button" class="highlight-popup-delete" data-highlight-popup-delete aria-label="Apagar destaque" title="Apagar destaque">×</button>':''}`;
+  popup.innerHTML=`<span class="highlight-popup-label">${editing?'Alterar':'Destacar'}</span>${HIGHLIGHT_MENU_COLORS.map(color=>`<button type="button" class="highlight-popup-color ${color}" data-highlight-popup-color="${color}" aria-label="${highlightLabel(color)}" title="${highlightLabel(color)}"></button>`).join('')}<button type="button" class="highlight-popup-copy" data-highlight-popup-copy aria-label="Copiar trecho" title="Copiar trecho">Copiar</button>${editing?'<button type="button" class="highlight-popup-delete" data-highlight-popup-delete aria-label="Apagar destaque" title="Apagar destaque">×</button>':''}`;
   popup.addEventListener('pointerdown',event=>event.stopPropagation());
   popup.addEventListener('click',event=>{
     event.stopPropagation();
     const color=event.target.closest('[data-highlight-popup-color]')?.dataset.highlightPopupColor;
     const remove=event.target.closest('[data-highlight-popup-delete]');
+    const copy=event.target.closest('[data-highlight-popup-copy]');
+    if(copy) {
+      // Copiar não altera o destaque nem desfaz a seleção: o usuário pode
+      // colar o trecho e ainda escolher uma cor em seguida.
+      copyHighlightSelection(copyText||'');
+      return;
+    }
     if(!color&&!remove) return;
     closeHighlightPopup();
     window.getSelection()?.removeAllRanges();
@@ -8713,7 +8863,7 @@ function bindPointerHighlighter(elements,onHighlight) {
       ui.highlightGestureUntil=Date.now()+750;
       setTimeout(()=>{
         const descriptor=highlightSelectionDescriptor(element);
-        if(descriptor) showHighlightPopup({rect:descriptor.rect,onColor:color=>onHighlight(descriptor,color)});
+        if(descriptor) showHighlightPopup({rect:descriptor.rect,copyText:descriptor.text,onColor:color=>onHighlight(descriptor,color)});
       },pointerType==='touch'?220:0);
       setTimeout(()=>{ui.suppressAnswerClick=false;},800);
     };
@@ -8756,6 +8906,7 @@ function bindSavedHighlightMenus(root,onChange) {
     showHighlightPopup({
       rect:descriptor.rect,
       editing:true,
+      copyText:descriptor.text,
       onColor:color=>onChange(descriptor,color),
       onDelete:()=>onChange(descriptor,null)
     });
@@ -8961,6 +9112,11 @@ function render() {
     radiografia: renderRadiografia,
     semiologia: renderSemiologia
   };
+  // Um cronômetro só continua correndo na aba a que ele pertence. Pausar (em vez
+  // de parar) preserva o acumulado para quando o usuário voltar.
+  if(ui.tab !== 'flashcards') pauseAutoStudy('flashcards');
+  if(ui.tab !== 'aulas') pauseAutoStudy('video');
+  if(ui.tab !== 'questoes') pauseAutoStudy('questions');
   renderers[ui.tab]?.();
   persistQuestionView();
   syncRouteFromUI('replace');
@@ -9067,14 +9223,26 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 window.addEventListener('beforeunload', event => {
+  // pauseAutoStudy já grava o tempo pendente; o flush local garante que ele (e
+  // qualquer edição ainda no debounce) chegue ao disco antes do recarregamento.
   pauseAutoStudy();
   persistStudyTimerSession();
   persistQuestionTimerSession();
   saveOpenVideoPosition();
+  flushSaveStateOnly();
   if(questionTimer.running && questionTimerElapsedSeconds()>0) {
     event.preventDefault();
     event.returnValue='';
   }
+});
+// No celular o beforeunload muitas vezes não dispara; o pagehide é o último
+// evento garantido para gravar o estudo antes de a aba ser descartada.
+window.addEventListener('pagehide', () => {
+  pauseAutoStudy();
+  persistStudyTimerSession();
+  persistQuestionTimerSession();
+  flushSaveStateOnly();
+  flushCloudSaveNow();
 });
 window.addEventListener('online', () => {
   if(currentUser) pullCloudState();

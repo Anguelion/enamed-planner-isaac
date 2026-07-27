@@ -629,7 +629,10 @@ body.dark .sim-side-actions .primary{background:#2f7df6;border-color:#2f7df6}
 .highlight-popup-delete{width:28px;height:28px;flex:0 0 28px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer;color:#7d251e;font-size:18px;line-height:1;padding:0}
 .highlight-popup-delete:hover{background:#ffe1dc}
 body.dark .highlight-popup-delete{background:var(--panel)}
-@media(pointer:coarse){.highlight-popup{gap:9px;padding:9px}.highlight-popup-color,.highlight-popup-delete{width:36px;height:36px;flex-basis:36px}}
+.highlight-popup-copy{height:28px;padding:0 10px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink);font-size:12px;font-weight:800;white-space:nowrap}
+.highlight-popup-copy:hover,.highlight-popup-copy:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+body.dark .highlight-popup-copy{background:var(--panel)}
+@media(pointer:coarse){.highlight-popup{gap:9px;padding:9px}.highlight-popup-color,.highlight-popup-delete{width:36px;height:36px;flex-basis:36px}.highlight-popup-copy{height:36px;padding:0 12px}}
 .highlightable{cursor:text;-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 .question-stem.highlightable,.answer-option .highlightable{touch-action:auto}
 @media(pointer:coarse){.qbank-mode .highlightable,.sim-highlightable{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;cursor:pointer;touch-action:manipulation}.qbank-mode .answer-option,.sim-answer{touch-action:manipulation}}
