@@ -234,7 +234,7 @@ Verificar Tabela 3.
 |---|---|
 | Neisseria meningitidis | 5-7 dias |
 | Haemophilus influenzae | 7-10 dias |
-| Streptococcus agalactiae (grupo B) | 10-14 dias |
+| Streptococcus agalactiae (grupo B) | 14-21 dias |
 | Streptococcus pneumoniae | 10-14 dias |
 | Bacilos Gram-negativos | 21 dias |
 | Listeria monocytogenes | 21 dias |

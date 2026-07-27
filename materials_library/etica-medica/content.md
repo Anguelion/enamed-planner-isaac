@@ -2,187 +2,113 @@
 
 <!-- page:1 -->
 
-Questões ético-legais;
+Questões ético-legais.
 
-## ÉTICA E BIOÉTICA CÓDIGO DE ÉTICA MÉDICA
+## Ética e Bioética
 
-- Ética: Conjunto de regras e valores que orientam a
+### Conceitos Gerais
 
-- Composição: 26 princípios, 11 normas de direitos, conduta profissional e social. 117 normas de deveres, 4 disposições gerais.
+- **Ética:** conjunto de regras, princípios ou maneiras de pensar e se expressar. Representa os valores e normas que permitem às pessoas conviverem em sociedade e manterem uma relação profissional adequada;
+- **Bioética:** estudo sistemático da conduta humana, analisada à luz de valores e princípios morais, especialmente diante de dilemas decorrentes da investigação e intervenção sobre a vida, a saúde e o meio ambiente. Promove reflexão crítica acerca dos fundamentos morais que orientam a vida em sociedade.
 
-- Bioética: Análise moral de dilemas relacionados à
+### Principialismo
 
-- Capítulos: Princípios Fundamentais, Direitos, vida, saúde e meio ambiente. Responsabilidade, Sigilo, Documentos Médicos,
+Teoria bioética predominante, que se baseia em quatro princípios fundamentais:
 
-- Principialismo: Publicidade, etc. Autonomia: Decisão livre e informada
+- **Autonomia:** "a pessoa escolhe" — relaciona-se ao Termo de Consentimento Livre e Esclarecido (TCLE). O médico deve respeitar a decisão do paciente ou de seus representantes legais, exceto em situações de iminente perigo de vida, quando a beneficência prevalece.
+  - *Exemplo:* paciente Testemunha de Jeová em risco iminente pode ter a autonomia limitada em prol da vida, quando for incapaz, menor, ou houver outro impedimento à autonomia livre.
+  - Condições relacionadas: liberdade do paciente em decidir, de forma informada, livre e consciente, sobre sua conduta; capacidade de escolha e deliberação; evitar paternalismo médico; respeitar as decisões de pacientes aptos a escolher seu tratamento.
+- **Não maleficência:** "evitar danos" — relacionado ao juramento hipocrático *"Primum non nocere"* (primeiro, não causar dano). Não matar, causar dor ou sofrimento desnecessário, incapacitar, ofender ou privar o paciente de bens necessários à vida.
+- **Beneficência:** "fazer o bem" — agir em prol do bem-estar do paciente, maximizando benefícios e minimizando riscos. Relacionado ao altruísmo e à benevolência.
+- **Justiça:** "tratar com equidade" — garantir equidade, tratando igualmente os iguais e de forma desigual os desiguais, priorizando os mais vulneráveis.
 
-- Responsabilidade profissional: Proibido causar do paciente. dano por imperícia, imprudência ou negligência. Não maleficência: Evitar danos (primum
+### Para o Médico Aplicar Tais Preceitos
 
-- Iatrogenia: Dano decorrente de tratamento ou non nocere). intervenção médica. Beneficência: Atuar em benefício do paciente. SIGILO MÉDICO Justiça: Equidade e priorização dos
+- Ter intenção genuína de respeitar os princípios;
+- Conhecer as consequências das condutas;
+- Agir livre de influências externas.
 
-- Proibido revelar informações, salvo por dever legal, mais vulneráveis. justa causa ou autorização expressa.
+### Responsabilidade Profissional
 
-## PROCESSO DE MORTE
+- Proibido causar dano por imperícia, imprudência ou negligência;
+- **Iatrogenia:** dano decorrente de tratamento ou intervenção médica.
 
-- Exemplos de dever legal: doenças de notificação,
+## Sigilo Médico
 
-- Eutanásia: Médico antecipa a morte (proibida maus-tratos, Lei Maria da Penha.
+- Proibido revelar informações, salvo por dever legal, justa causa ou autorização expressa;
+- Exemplos de dever legal: doenças de notificação compulsória, maus-tratos, Lei Maria da Penha.
 
-no Brasil). PUBLICIDADE MÉDICA
+## Publicidade Médica
 
-- Suicídio assistido: Paciente provoca a própria
+- Deve ser educativa e informativa, sem sensacionalismo;
+- Proibido prometer resultados ou anunciar especialidade não registrada.
 
-- Deve ser educativa e informativa, morte (proibido). sem sensacionalismo.
-
-- Ortotanásia: Morte natural, com
-
-- Proibido prometer resultados ou anunciar cuidados paliativos. especialidade não registrada.
-
-- Distanásia: Prolongamento artificial do sofrimento. TELEMEDICINA
-
-- Mistanásia: Morte precoce por causas sociais ou
+## Telemedicina
 
 - Atendimento remoto regulamentado.
 
-má prática. O tema de Telemedicina pode ser consultado na ficha “Ferramentas da APS/ESF”
-
-## ÉTICA E BIOÉTICA
-
-Para o médico aplicar tais preceitos
-
-- Ter intenção genuína de respeitar os princípios;
-
-- Ética: Conjunto de regras, princípios ou maneiras de
-
-- Conhecer as consequências das condutas;
-
-pensar e se expressar. Representa os valores e normas
-
-- Agir livre de influências externas.
-
-que permitem às pessoas conviverem em sociedade e manterem uma relação profissional adequada. PRINCÍPIOS
-
-- Bioética: Estudo sistemático da conduta humana,
-
-- Autonomia: Relaciona-se ao Termo de analisada à luz de valores e princípios morais, Consentimento Livre e Esclarecido (TCLE). O especialmente diante de dilemas decorrentes da médico deve respeitar a decisão do paciente investigação e intervenção sobre a vida, a saúde e o ou de seus representantes legais, exceto em meio ambiente. situações de iminente perigo de vida, quando a
-
-- Promove reflexão crítica acerca dos fundamentos beneficência prevalece.
-
-morais que orientam a vida em sociedade.
-
-- Exemplo: paciente Testemunha de Jeová em risco baseia em quatro princípios fundamentais: vida quando for incapaz, menor, ou houver outro
-
-Principialismo: Teoria bioética predominante que se iminente pode ter a autonomia limitada em prol da
-
-- Autonomia: “a pessoa escolhe”; impedimento à autonomia livre.
-
-Não maleficência: “evitar danos”;
-
-- Não maleficência: Relacionado ao juramento
-
-- Beneficência: “fazer o bem”; hipocrático “Primum non nocere” (primeiro, não
-
-- Justiça: “tratar com equidade” causar dano).
-
-Condições relacionadas à ética e bioética
-
-- Não matar, causar dor ou sofrimento desnecessário,
-
-- Liberdade do paciente em decidir, de forma informada, incapacitar, ofender ou privar o paciente de bens livre e consciente, sobre sua conduta; necessários à vida.
-
-- Capacidade de escolha e deliberação;
-
-- Beneficência:
-
-- Evitar paternalismo médico;
-
-- Agir em prol do bem-estar do paciente, maximizando
-
-- Respeitar as decisões de pacientes aptos a escolher benefícios e minimizando riscos.
-
-seu tratamento.
-
-- Relacionado ao altruísmo e à benevolência.
+> O tema de Telemedicina pode ser consultado na ficha "Ferramentas da APS/ESF".
 
 ---
 
 <!-- page:2 -->
 
-- Justiça:
+## Código de Ética Médica
 
-- Garantir equidade: tratar igualmente os iguais e de forma desigual os desiguais, priorizando os mais vulneráveis.
+### Princípios Básicos
 
-## CÓDIGO DE ÉTICA MÉDICA
+- **Ética Profissional:** conjunto de normas morais e princípios que orientam a conduta do indivíduo no exercício de sua profissão, garantindo a integridade, a responsabilidade e o respeito às pessoas atendidas;
+- **Ética Médica:** segmento da ética profissional que abrange os princípios fundamentais, direitos e deveres dos médicos, regulando a relação com pacientes, familiares, colegas e instituições. Está formalizada no Código de Ética Médica (CEM), que traduz as obrigações morais da profissão em normas deontológicas e diceológicas;
+- **Resolução CFM nº 2.217**, de 27 de setembro de 2018, modificada pelas Resoluções CFM nº 2.222/2018 e 2.226/2019.
 
-Princípios básicos
+*Figura 1: Código de Ética Médica.*
 
-- Ética Profissional: Conjunto de normas morais e princípios que orientam a conduta do indivíduo no exercício de sua profissão, garantindo a integridade, a responsabilidade e o respeito às pessoas atendidas.
+- Contém as normas que devem ser seguidas pelos médicos no exercício de sua profissão, inclusive nas atividades relativas a ensino, pesquisa e administração de serviços de saúde, bem como em quaisquer outras que utilizem o conhecimento advindo do estudo da medicina;
+- Também vale para as organizações de prestação de serviços médicos;
+- Os médicos em geral também participam da fiscalização do cumprimento das normas;
+- Aborda tanto direitos quanto deveres dos médicos;
+- A transgressão das normas deontológicas sujeitará os infratores às penas disciplinares previstas em lei.
 
-- Ética Médica: Segmento da ética profissional que abrange os princípios fundamentais, direitos e deveres dos médicos, regulando a relação com pacientes, familiares, colegas e instituições. Está formalizada no Código de Ética Médica (CEM), que traduz as obrigações morais da profissão em normas deontológicas e diceológicas.
+**Composição:**
 
-- Resolução CFM n° 2.217, de 27 de setembro de 2018, Figura 1: Código de Ética Médica modificada pelas Resoluções CFM nº 2.222/2018 e 2.226/2019 Destaques no Capítulo I: Princípios Fundamentais
+- 26 princípios fundamentais do exercício da medicina;
+- 11 normas diceológicas (direitos);
+- 117 normas deontológicas (deveres);
+- 4 disposições gerais.
 
-- Contém as normas que devem ser seguidas pelos
+**Capítulos:**
 
-- III – Para exercer a medicina com honra e dignidade, médicos no exercício de sua profissão, inclusive nas o médico necessita ter boas condições de trabalho e atividades relativas a ensino, pesquisa e administração ser remunerado de forma justa.
+- I — Princípios Fundamentais;
+- II — Direitos dos Médicos;
+- III — Responsabilidade Profissional;
+- IV — Direitos Humanos;
+- V — Relação com Pacientes e Familiares;
+- VI — Doação e Transplante de Órgãos e Tecidos;
+- VII — Relação entre Médicos;
+- VIII — Remuneração Profissional;
+- IX — Sigilo Profissional;
+- X — Documentos Médicos;
+- XI — Auditoria e Perícia Médica;
+- XII — Ensino e Pesquisa Médica;
+- XIII — Publicidade Médica;
+- XIV — Disposições Gerais.
 
-de serviços de saúde, bem como em quaisquer outras
+> **Nota:** os Capítulos III a XIII iniciam com a expressão "É vedado ao médico...", indicando as proibições e obrigações deontológicas.
 
-- VII – O médico exercerá sua profissão com autonomia, que utilizem o conhecimento advindo do estudo não sendo obrigado a prestar serviços que contrariem da medicina. os ditames de sua consciência ou a quem não deseje,
+### Destaques no Capítulo I: Princípios Fundamentais
 
-- Composto por: excetuadas as situações de urgência, emergência, 26 princípios fundamentais do exercício ou quando sua recusa possa trazer danos à saúde da medicina; do paciente. 11 normas diceológicas;
+- **III** — Para exercer a medicina com honra e dignidade, o médico necessita ter boas condições de trabalho e ser remunerado de forma justa;
+- **VII** — O médico exercerá sua profissão com autonomia, não sendo obrigado a prestar serviços que contrariem os ditames de sua consciência ou a quem não deseje, excetuadas as situações de urgência, emergência, ou quando sua recusa possa trazer danos à saúde do paciente;
+- **VIII** — O médico não pode, em nenhuma circunstância ou sob nenhum pretexto, renunciar à sua liberdade profissional, nem permitir quaisquer restrições ou imposições que possam prejudicar a eficiência e a correção do seu trabalho;
+  - *Observação:* o médico legalmente habilitado pode atuar em qualquer área da medicina, mas só pode anunciar especialidade registrada no CRM (com RQE);
+- **X** — O trabalho do médico não pode ser explorado por terceiros com objetivos de lucro, finalidade política ou religiosa.
+  - *Exemplo:* laboratórios (fabricantes de medicamentos, próteses e órteses) que "oferecem" percentuais ou mimos, como viagens e passagens aéreas, aos médicos que direcionarem suas prescrições para esta ou aquela empresa;
+- **XI** — O médico guardará sigilo a respeito das informações de que detenha conhecimento no desempenho de suas funções, com exceção dos casos previstos em lei.
 
-- VIII – O médico não pode, em nenhuma circunstância 117 normas deontológicas; ou sob nenhum pretexto, renunciar à sua liberdade 4 disposições gerais. profissional, nem permitir quaisquer restrições ou
+### Publicidade Médica
 
-- Também vale para as organizações de prestação de imposições que possam prejudicar a eficiência e a serviços médicos; correção do seu trabalho.
-
-- Os médicos em geral também participam da
-
-- Observação: O médico legalmente habilitado pode fiscalização do cumprimento das normas; atuar em qualquer área da medicina, mas só pode
-
-- Aborda tanto direitos quanto deveres dos médicos; anunciar especialidade registrada no CRM (com RQE).
-
-- A transgressão das normas deontológicas sujeitará os
-
-- X – O trabalho do médico não pode ser explorado por infratores às penas disciplinares previstas em lei. terceiros com objetivos de lucro, finalidade política
-
-- Capítulo I: Princípios Fundamentais ou religiosa.
-
-- Capítulo II: Direitos dos Médicos | Exemplo: laboratórios (fabricantes de
-
-- Capítulo III: Responsabilidade Profissional medicamentos, próteses e órteses) que “oferecem”
-
-- Capítulo IV: Direitos Humanos percentuais ou mimos, como viagens e passagens
-
-- Capítulo V: Relação com Pacientes e Familiares aéreas aos médicos que direcionarem suas
-
-- Capítulo VI: Doação e Transplante de Órgãos e Tecidos prescrições para esta ou aquela empresa.
-
-- Capítulo VII: Relação entre Médicos
-
-- XI – O médico guardará sigilo a respeito das
-
-- Capítulo VIII: Remuneração Profissional informações de que detenha conhecimento no
-
-- Capítulo IX: Sigilo Profissional desempenho de suas funções, com exceção dos casos
-
-- Capítulo X: Documentos Médicos previstos em lei.
-
-- Capítulo XI: Auditoria e Perícia Médica Publicidade Médica
-
-- Capítulo XII: Ensino e Pesquisa Médica
-
-- Definição: Publicidade é a promoção de serviços,
-
-- Capítulo XIII: Publicidade Médica qualificações ou estruturas médicas. Propaganda
-
-- Capítulo XIV: Disposições Gerais refere-se à divulgação de assuntos e ações de vedado ao médico...”, indicando as proibições e
-
-Nota: Capítulos III a XIII iniciam com a expressão “É interesse da medicina.
-
-- Obrigatoriedade: Toda peça publicitária deve obrigações deontológicas. conter nome do médico, número do CRM e RQE
-
-(quando houver).
+- **Definição:** publicidade é a promoção de serviços, qualificações ou estruturas médicas. Propaganda refere-se à divulgação de assuntos e ações de interesse da medicina;
+- **Obrigatoriedade:** toda peça publicitária deve conter nome do médico, número do CRM e RQE (quando houver).
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -190,140 +116,129 @@ Nota: Capítulos III a XIII iniciam com a expressão “É interesse da medicina
 
 <!-- page:3 -->
 
-- Permissões: § 1º. Quando houver requisição judicial, o prontuário deve Divulgação de qualificação técnica, serviços, ser encaminhado diretamente ao juízo requisitante, horários, localização, valores e formas nunca entregue a terceiros.
+**Permissões:**
 
-de pagamento;
+- Divulgação de qualificação técnica, serviços, horários, localização, valores e formas de pagamento;
+- Divulgação de aparelhos e tecnologias, conforme normas da Anvisa e CFM;
+- Uso de redes sociais (Instagram, TikTok, Facebook etc.) para conteúdo informativo e educativo, sem caráter sensacionalista.
 
-- Quebra de sigilo também é prevista como crime pelo Divulgação de aparelhos e tecnologias, conforme Código Penal. Exceto em algumas condições, pois Divulgação de aparelhos e tecnologias, conforme normas da Anvisa e CFM; Uso de redes sociais (Instagram, TikTok, Facebook etc.) para conteúdo informativo e educativo, sem caráter sensacionalista.
+**Proibições:**
 
-- Proibições Prometer resultados ou garantir sucesso de tratamentos; Divulgar especialidade sem RQE registrado; Expor imagens de pacientes ou procedimentos, mesmo com autorização, quando houver risco de identificação; Práticas de autopromoção, concorrência desleal ou sensacionalismo; Fazer propaganda de medicamentos, insumos ou equipamentos sem registro na Anvisa.
+- Prometer resultados ou garantir sucesso de tratamentos;
+- Divulgar especialidade sem RQE registrado;
+- Expor imagens de pacientes ou procedimentos, mesmo com autorização, quando houver risco de identificação;
+- Práticas de autopromoção, concorrência desleal ou sensacionalismo;
+- Fazer propaganda de medicamentos, insumos ou equipamentos sem registro na Anvisa.
 
-- Uso de imagem: Permitido apenas com finalidade educativa, respeitando anonimato, pudor e direitos autorais.
+- **Uso de imagem:** permitido apenas com finalidade educativa, respeitando anonimato, pudor e direitos autorais;
+- **Responsabilidade:** o médico, diretor técnico ou presidente de entidade médica responde pelo conteúdo divulgado.
 
-- Responsabilidade: O médico, diretor técnico ou presidente de entidade médica responde pelo conteúdo divulgado.
+### Sigilo Profissional
 
-Sigilo Profissional
+- **Art. 73** — É vedado ao médico revelar fato do qual tenha conhecimento em virtude do exercício da profissão, salvo em três situações:
+  - Por motivo justo;
+  - Por dever legal;
+  - Com consentimento expresso, por escrito, do paciente.
 
-- Art. 73 – É vedado ao médico revelar fato do qual tenha conhecimento em virtude do exercício da profissão, salvo em três situações:
+**Parágrafo único** — Essa proibição permanece válida:
 
-- Por motivo justo;
+- **a)** Mesmo que o fato seja de conhecimento público ou o paciente tenha falecido;
+- **b)** Durante depoimento como testemunha — nesta hipótese, o médico deve comparecer perante a autoridade e declarar formalmente seu impedimento;
+- **c)** Na investigação de crime, quando a revelação do segredo possa expor o paciente a processo penal.
 
-- Por dever legal;
+- **Art. 75** — Fazer referência a casos clínicos identificáveis, exibir pacientes ou imagens que os tornem reconhecíveis em anúncios profissionais ou na divulgação de assuntos médicos em meios de comunicação em geral, mesmo com autorização do paciente;
+- **Art. 79** — É vedado ao médico deixar de preservar o sigilo profissional durante a cobrança de honorários, seja por meio judicial ou extrajudicial.
+  - *Exemplo:* não se deve expor diagnósticos, detalhes clínicos ou documentos médicos em processos de cobrança;
+- **Art. 89** — É vedado ao médico liberar cópias do prontuário sob sua guarda, exceto:
+  - Para atender ordem judicial;
+  - Para sua própria defesa;
+  - Quando autorizado por escrito pelo paciente.
+  - **§ 1º** Quando houver requisição judicial, o prontuário deve ser encaminhado diretamente ao juízo requisitante, nunca entregue a terceiros.
 
-- Com consentimento expresso, por escrito, do paciente.
+> A quebra de sigilo também é prevista como crime pelo Código Penal, exceto em algumas condições, pois o sigilo profissional não é absoluto.
 
-Parágrafo único: Essa proibição permanece válida: A. Mesmo que o fato seja de conhecimento público ou o paciente tenha falecido;
+### Processo de Morte — Eutanásia e Suicídio Assistido
 
-B. Durante depoimento como testemunha – nesta hipótese, o médico deve comparecer perante a autoridade e declarar formalmente seu impedimento;
+- **Eutanásia:** ação direta do médico para antecipar a morte, com o objetivo de cessar o sofrimento do paciente. **É proibida no Brasil**;
+- **Suicídio assistido:** o profissional fornece meios ou orientações para que o paciente provoque sua própria morte. **Também é proibido no Brasil**.
 
-C. Na investigação de crime, quando a revelação do segredo possa expor o paciente a processo penal.
+> **Art. 41 do Código de Ética Médica:** "É vedado ao médico abreviar a vida do paciente, ainda que a pedido deste ou de seu representante legal."
+>
+> "Nos casos de doença incurável e terminal, deve o médico oferecer todos os cuidados paliativos disponíveis, sem empreender ações diagnósticas ou terapêuticas inúteis ou obstinadas, levando sempre em consideração a vontade expressa do paciente ou, na sua impossibilidade, a de seu representante legal."
 
-- Art. 75. Fazer referência a casos clínicos identificáveis, exibir pacientes ou imagens que os tornem reconhecíveis em anúncios profissionais ou na divulgação de assuntos médicos em meios de comunicação em geral, mesmo com autorização do paciente.
+**Tabela 1: Diferenças entre Eutanásia e Suicídio Assistido**
 
-- Art. 79. É vedado ao médico deixar de preservar o sigilo profissional durante a cobrança de honorários, seja por meio judicial ou extrajudicial.
+| Papel | Eutanásia | Suicídio Assistido |
+|---|---|---|
+| Paciente | Passivo | Ativo |
+| Profissional | Ativo | Passivo |
 
-- Exemplo: não se deve expor diagnósticos, detalhes clínicos ou documentos médicos em processos de cobrança.
+**Outros conceitos:**
 
-- Art. 89. É vedado ao médico liberar cópias do prontuário sob sua guarda, exceto:
+- **Ortotanásia:** permissão da morte natural, evitando prolongamento artificial, com foco em cuidados paliativos e sedação, se necessária;
+- **Distanásia (obstinação terapêutica):** intervenções desproporcionais ou inúteis que prolongam o processo de morte, causando sofrimento;
+- **Mistanásia:** morte precoce e evitável por causas sociais, políticas, econômicas ou por má prática profissional (morte miserável).
 
-- Para atender ordem judicial;
-
-- Para sua própria defesa;
-
-- Quando autorizado por escrito pelo paciente. Código Penal. Exceto em algumas condições, pois o sigilo profissional não é absoluto. Sigilo pode ser quebrado diante de:
-
-Processo de morte Eutanásia e Suicídio Assistido
-
-- Eutanásia: Ação direta do médico para antecipar a morte, com o objetivo de cessar o sofrimento do paciente. É proibida no Brasil.
-
-- Suicídio assistido: O profissional fornece meios ou orientações para que o paciente provoque sua própria morte. Também é proibido no Brasil.
-
-Art. 41 do Código de Ética Médica: “É vedado ao médico abreviar a vida do paciente, ainda que a pedido deste ou de seu representante legal.”
-
-- “Nos casos de doença incurável e terminal, deve o médico oferecer todos os cuidados paliativos disponíveis, sem empreender ações diagnósticas ou terapêuticas inúteis ou obstinadas, levando sempre em consideração a vontade expressa do paciente ou, na sua impossibilidade, a de seu representante legal.”
-
-Tabela 1: Diferenças entre Eutanásia e Suicídio Assistido Suicídio Eutánasia Assistido Paciente Passivo Ativo Profissional Ativo Passivo Outros conceitos:
-
-- Ortotanásia: Permissão da morte natural, evitando prolongamento artificial, com foco em cuidados paliativos e sedação, se necessária.
-
-- Distanásia (obstinação terapêutica): Intervenções desproporcionais ou inúteis que prolongam o processo de morte, causando sofrimento.
-
-- Mistanásia: Morte precoce e evitável por causas sociais, políticas, econômicas ou por má prática profissional (morte miserável).
-
-Antecipar Adequar Postergar Vivível Morte Viver Vida Morrer Terapêutica Paliativa Curativa Eutanásia Obstinação E Suicídio Terapêutica Assistido Intensiva Figura 2: Dimensões da Vida e do Processo de Morte:
-
-Terapêuticas, Ética e Decisões
+*Figura 2: Dimensões da vida e do processo de morte — terapêuticas, ética e decisões (espectro entre viver/vida/curativa/antecipar e morrer/morte/paliativa-intensiva/postergar, incluindo eutanásia, suicídio assistido e obstinação terapêutica).*
 
 ---
 
 <!-- page:4 -->
 
-Ética e Pesquisa DESTAQUES NO CAPÍTULO X:
+## Ética e Pesquisa
 
-- XXIV – Sempre que participar de pesquisas DOCUMENTOS MÉDICOS envolvendo seres humanos ou qualquer animal, É vedado ao médico:
+- **XXIV** — Sempre que participar de pesquisas envolvendo seres humanos ou qualquer animal, o médico respeitará as normas éticas nacionais, bem como protegerá a vulnerabilidade dos sujeitos da pesquisa.
 
-o médico respeitará as normas éticas nacionais,
+**Pesquisa com humanos:**
 
-- Art. 86. Deixar de fornecer laudo médico ao paciente bem como protegerá a vulnerabilidade dos sujeitos ou ao seu representante legal, quando este for bem como protegerá a vulnerabilidade dos sujeitos da pesquisa: Pesquisa com humanos: Relacionado com relevância social e científica; Deve ter aprovação por Comitê de Ética e Pesquisa; Deve ter o TCLE:
+- Relacionada com relevância social e científica;
+- Deve ter aprovação por Comitê de Ética em Pesquisa;
+- Deve ter o TCLE (consentimento informado).
 
-consentimento informado. DESTAQUES NO CAPÍTULO III: RESPONSABILIDADE PROFISSIONAL É vedado ao médico:
+## Destaques no Capítulo III: Responsabilidade Profissional
 
-- Art. 1º – Causar dano ao paciente, por ação ou omissão, caracterizável como imperícia, imprudência ou negligência.
+É vedado ao médico:
 
-- Tipos de erros médicos:
+- **Art. 1º** — Causar dano ao paciente, por ação ou omissão, caracterizável como imperícia, imprudência ou negligência.
 
-- Imperícia: falta de preparo técnico ou habilidade § necessária para a prática médica. Exemplo: executar s um procedimento sem o conhecimento adequado. e
+**Tipos de erros médicos:**
 
-“Não sei / Não devo / Faço” → Fez errado o que não sabia.
+- **Imperícia:** falta de preparo técnico ou habilidade necessária para a prática médica. *Exemplo:* executar um procedimento sem o conhecimento adequado.
+  > "Não sei / Não devo / Faço" → fez errado o que não sabia.
+- **Imprudência:** agir de forma precipitada ou sem a devida cautela, mesmo conhecendo os riscos.
+  > "Sei / Devo / Faço errado" → fez errado o que sabia.
+- **Negligência:** omissão, descuido ou falta de atenção no cumprimento do dever médico.
+  > "Sei / Devo / Não faço" → não fez o que sabia e devia.
 
-- Imprudência: agir de forma precipitada ou sem a devida cautela, mesmo conhecendo os riscos.
+**Erro médico x Iatrogenia:**
 
-“Sei / Devo / Faço errado” → Fez errado o que sabia.
+- **Erro médico:** resultado adverso decorrente de conduta inadequada do profissional;
+- **Iatrogenia:** dano decorrente de intervenção médica, sem relação direta com negligência, imperícia ou imprudência. *Exemplo:* amputação de membro para evitar a disseminação de infecção.
 
-- Negligência: omissão, descuido ou falta de atenção no cumprimento do dever médico.
+> **Obs.:** o consentimento do paciente não exime a responsabilidade do médico.
 
-“Sei / Devo / Não faço” → Não fez o que sabia e devia.
+### Responsabilidade e Código de Defesa do Consumidor (CDC)
 
-- Erro médico x Iatrogenia:
+- Em saúde suplementar, o paciente é equiparado a consumidor (art. 14, CDC). O médico responde de forma **subjetiva** (depende da prova de culpa), enquanto hospitais e clínicas podem ter responsabilidade **objetiva**;
+- **Inversão do ônus da prova:** prevista no art. 6º, VIII, do CDC, em favor do paciente (hipossuficiência).
 
-- Erro médico: resultado adverso decorrente de conduta inadequada do profissional.
+## Destaques no Capítulo X: Documentos Médicos
 
-- Iatrogenia: dano decorrente de intervenção médica, sem relação direta com negligência, imperícia ou imprudência. Exemplo: amputação de membro para evitar a disseminação de infecção. Obs.: O consentimento do paciente não exime a responsabilidade do médico.
+É vedado ao médico:
 
-Responsabilidade e Código de Defesa do Consumidor (CDC)
+- **Art. 86** — Deixar de fornecer laudo médico ao paciente ou ao seu representante legal, quando este for encaminhado ou transferido para continuação do tratamento, ou em caso de solicitação de alta;
+- **Art. 88** — Negar ao paciente ou, na sua impossibilidade, ao seu representante legal, acesso ao prontuário, bem como deixar de fornecer cópia quando solicitada, ou de prestar explicações necessárias para sua compreensão, salvo se houver risco ao próprio paciente ou a terceiros;
+- **Art. 89** — Liberar cópias do prontuário sob sua guarda, exceto:
+  - Para atender ordem judicial;
+  - Para sua própria defesa;
+  - Quando autorizado por escrito pelo paciente.
+  - **§ 1º** Quando requisitado judicialmente, o prontuário deve ser encaminhado diretamente ao juízo requisitante, e não entregue a terceiros;
+- **Art. 112** — Divulgar informação sobre assunto médico de forma sensacionalista, promocional ou de conteúdo inverídico;
+- **Art. 113** — Divulgar, fora do meio científico, processo de tratamento ou descoberta cujo valor ainda não esteja cientificamente reconhecido por órgão competente;
+- **Art. 114** — Anunciar títulos científicos que não possa comprovar, bem como especialidade ou área de atuação para a qual não esteja qualificado e registrado no CRM;
+- **Art. 115** — Participar de anúncios de empresas comerciais, qualquer que seja sua natureza, utilizando-se de sua profissão;
+- **Art. 117** — Deixar de incluir, em anúncios profissionais de qualquer ordem, seu nome completo, número no CRM com o estado da Federação, e Registro de Qualificação de Especialista (RQE) quando anunciar a especialidade. Nos anúncios de estabelecimentos de saúde, devem constar o nome e o número de registro no CRM do diretor técnico.
 
-- Em saúde suplementar, o paciente é equiparado a consumidor (art. 14, CDC). O médico responde de forma subjetiva (depende da prova de culpa), enquanto hospitais e clínicas podem ter responsabilidade objetiva.
+## Referências
 
-- Inversão do ônus da prova: prevista no art. 6º, VIII, do encaminhado ou transferido para continuação do tratamento, ou em caso de solicitação de alta.
-
-CDC, em favor do paciente (hipossuficiência). ou ao seu representante legal, quando este for
-
-- Art. 88. Negar ao paciente ou, na sua impossibilidade, ao seu representante legal, acesso ao prontuário, bem como deixar de fornecer cópia quando solicitada, ou de prestar explicações necessárias para sua compreensão, salvo se houver risco ao próprio paciente ou a terceiros.
-
-- Art. 89. Liberar cópias do prontuário sob sua guarda, exceto:
-
-- para atender ordem judicial;
-
-- para sua própria defesa;
-
-- quando autorizado por escrito pelo paciente.
-
-§ 1º Quando requisitado judicialmente, o prontuário deve ser encaminhado diretamente ao juízo requisitante, e não entregue a terceiros.
-
-- Art. 112. Divulgar informação sobre assunto médico de forma sensacionalista, promocional ou de conteúdo inverídico.
-
-- Art. 113. Divulgar, fora do meio científico, processo de tratamento ou descoberta cujo valor ainda não esteja cientificamente reconhecido por órgão competente.
-
-- Art. 114. Anunciar títulos científicos que não possa comprovar, bem como especialidade ou área de atuação para a qual não esteja qualificado e registrado no CRM.
-
-- Art. 115. Participar de anúncios de empresas comerciais, qualquer que seja sua natureza, utilizandose de sua profissão.
-
-- Art. 117. Deixar de incluir, em anúncios profissionais de qualquer ordem, seu nome completo, número no CRM com o estado da Federação, e Registro de Qualificação de Especialista (RQE) quando anunciar a especialidade. Nos anúncios de estabelecimentos de saúde, devem constar o nome e o número de registro no
-
-CRM do diretor técnico.
-
-## REFERÊNCIAS
-
-Figura 1: CONSELHO FEDERAL DE MEDICINA (Brasil). Resolução CFM nº 2.217, de 27 de setembro de 2018. Aprova o Código de Ética Médica. Diário Oficial da União: seção 1, Brasília, DF, 01 nov.
-
-2018, p. 179-180.
+- Figura 1: CONSELHO FEDERAL DE MEDICINA (Brasil). Resolução CFM nº 2.217, de 27 de setembro de 2018. Aprova o Código de Ética Médica. Diário Oficial da União: seção 1, Brasília, DF, 01 nov. 2018, p. 179-180.

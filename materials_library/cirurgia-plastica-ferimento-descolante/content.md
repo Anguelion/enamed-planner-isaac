@@ -2,27 +2,20 @@
 
 <!-- page:1 -->
 
-## CIRURGIA PLÁSTICA: FERIMENTO
+## Cirurgia Plástica: Ferimento Descolante
 
-## DESCOLANTE
+*Outros temas em cirurgia plástica.*
 
-OUTROS TEMAS EM CIRURGIA PLÁSTICA Figura 1: Fluxograma: manejo do ferimento descolante em pacientes instáveis.
+*Figura 1: Fluxograma — manejo do ferimento descolante em pacientes instáveis.*
 
-Figura 2: Fluxograma: manejo do ferimento descolante em pacientes estáveis.
+*Figura 2: Fluxograma — manejo do ferimento descolante em pacientes estáveis.*
 
-## INTRODUÇÃO
+## Introdução
 
-- Fechamento primário = alto risco de falha;
-
-- Membros inferiores (90%);
-
-- Mecanismo do trauma:
-
-- Apresentação: Trauma de alta intensidade → cisalhamento da pele | Variável extensão e perda cutânea;
-
-→ descolamento da pele dos tecidos profundos | Pouco sangramento; → Comprometimento da vascularização arterial e/ | Com traumas isolados ou associados.
-
-ou venosa.
+- **Fechamento primário** = alto risco de falha;
+- **Membros inferiores** (90%);
+- **Mecanismo do trauma**: trauma de alta intensidade → cisalhamento da pele → descolamento da pele dos tecidos profundos → comprometimento da vascularização arterial e/ou venosa;
+- **Apresentação**: extensão e perda cutânea variáveis; pouco sangramento; traumas isolados ou associados.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -32,38 +25,26 @@ ou venosa.
 
 <!-- page:2 -->
 
-## TRATAMENTO DESCOLANTE OCULTO
+## Tratamento
 
-- Atendimento inicial ATLS.
+- Atendimento inicial **ATLS**.
 
-- Descolorante oculto (Morel-Lavallée) → plano
+### Paciente Instável
 
-Paciente Instável descolado nos planos profundos, logo, não há perda
+- Controle de danos;
+- Cirurgia conservadora de debridamento;
+- **Reabordagem em segundo tempo** → cirurgia revisional com retalho ou enxertia.
 
-- Controle de danos; tecidual visível;
+### Paciente Estável
 
-- Cirurgia conservadora de debridamento, associando a
+- Checar sinais de viabilidade do retalho;
+- Verificar a direção do tecido descolado;
+- Avaliar se o retalho é viável ou inviável → desbridamento, se houver necessidade, associado a alguma das seguintes opções: enxertia; retalho; fechamento primário e reposicionamento tecidual.
 
-- Diagnóstico clínico ou radiológico (TC ou RNM).
+## Descolamento Oculto (Morel-Lavallée)
 
-uma das 3 seguintes condutas:
-
-- Tratamento: Fechamento primário;
-
-- Pequeno (conservador): Curativo temporário; | Esvaziamento por punção; Retirada de enxerto da pele | Curativos compressivos;
-
-descolada e armazenamento;
-
-- Extenso ou com perda tecidual:
-
-- Reabordagem em segundo tempo → cirurgia revisional | Cirurgia:
-
-com retalho ou enxertia. | Desbridamento; Paciente Estável | Drenagem/aspiração;
-
-- Checar sinais de viabilidade do retalho; | Enxerto;
-
-- Verificar a direção do tecido descolado; | Retalho;
-
-- Avaliar se o retalho é viável ou inviável → | Escleroterapia.
-
-desbridamento se houver necessidade + alguma das seguintes opções: Enxertia; Retalho; Fechamento primário e reposicionamento tecidual.
+- Plano descolado nos planos profundos — não há perda tecidual visível;
+- **Diagnóstico**: clínico ou radiológico (TC ou RNM);
+- **Tratamento**: associar uma das 3 seguintes condutas:
+  - **Pequeno (conservador)**: curativo temporário; curativos compressivos; esvaziamento por punção;
+  - **Extenso ou com perda tecidual — cirurgia**: desbridamento; drenagem/aspiração; enxerto; retalho; escleroterapia; fechamento primário; retirada de enxerto de pele descolada e armazenamento.

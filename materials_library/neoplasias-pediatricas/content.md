@@ -72,10 +72,10 @@ Neoplasias (PED)
 |---|---|---|
 | Faixa etária | Crianças < 2 anos | Crianças de 3-4 anos |
 | Achados sistêmicos | Aumento de catecolaminas urinárias | Hipertensão arterial e hematúria |
-| Relação com linha média | Não ultrapassa linha média | Ultrapassa linha média |
+| Relação com linha média | Ultrapassa linha média | Não ultrapassa linha média |
 | Sintomas metastáticos | Frequentes | Raros |
 | Calcificações | Frequentes | Raras |
-| Efeito sobre estruturas renais | Distorce cálice pielocalicinal, desloca vasos e pode invadi-los | Desloca o rim, envolve vasos |
+| Efeito sobre estruturas renais | Desloca o rim, desloca vasos e pode invadi-los | Distorce cálice pielocalicinal, desloca vasos |
 | Malformações congênitas associadas | Raro ter malformações congênitas | Malformações congênitas associadas |
 | Prognóstico | Pior prognóstico | Melhor prognóstico |
 

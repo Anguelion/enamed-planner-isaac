@@ -2,164 +2,116 @@
 
 <!-- page:1 -->
 
-Enxertos Tabela 1: Comparação enxerto espessura total x espessura pa Enxertos de pele Espessura total
+## Enxertos de Pele
 
-- Maior espessura
+- Transferência de tecido cutâneo, **sem** suprimento sanguíneo próprio, de uma área doadora para uma área receptora;
+- **Tipos de enxerto**: pele, gordura, tendão, osso, nervo.
 
-Vantagens
+**Tabela 1**: Comparação entre enxerto de espessura total e de espessura parcial.
 
-- Melhor resultado estético
+| | Espessura total | Espessura parcial |
+|---|---|---|
+| Característica | Maior espessura | Cobertura menos espessa |
+| **Vantagens** | Melhor resultado estético; menor retração secundária | Mais áreas doadoras; integração mais fácil; epitelização da área doadora; menor retração primária |
+| **Desvantagens** | Poucas áreas doadoras; necessidade de fechamento da área doadora; maior retração primária | Maior retração secundária |
 
-- Menor retração secundária
+## Conceitos Gerais
 
-- Poucas áreas doadoras
+- Transferência de tecido sem vascularização própria.
+- **Fases da integração** (resumo): Embebição — até 48h; Inosculação — 4º ao 5º dia; Angiogênese — até o 7º dia.
 
-- Necessidade de fechamen doadora
+## Classificação
 
-Desvantagens
+### Quanto à Espessura
 
-- Maior retração primária
+- **Parcial**: Fino (Thiersch-Ollier); Intermediário (Blair-Brown); Espesso (Padgett);
+- **Total** (Wolfe-Krause).
 
-Transferência de tecido sem vascularização própria Fases da integração:
+### Quanto à Origem
 
-- Embebição - até 48h;
+**Tabela 2**: Diferenciação de origem de retirada de um enxerto.
 
-- Inosculação - 4º a 5º dia ;
+| Tipo | Origem |
+|---|---|
+| Autoenxerto | Mesmo indivíduo, mesma espécie |
+| Isoenxerto | Indivíduo diferente com mesma carga genética (gêmeo idêntico), mesma espécie |
+| Aloenxerto/Homoenxerto | Indivíduo diferente, mesma espécie |
+| Heteroenxerto/Xenoenxerto | Espécie diferente |
 
-- Angiogênese - até 7º dia.
+**Tipos de enxerto**:
 
-## CONCEITOS GERAIS
+- **Autoenxerto**: do próprio indivíduo;
+- **Isoenxerto**: gêmeo idêntico;
+- **Aloenxerto**: indivíduo da mesma espécie;
+- **Xenoenxerto**: outra espécie.
 
-- Transferência de tecido cutâneo, SEM suprimento sanguíneo próprio, de uma área doadora para uma área receptora:
+## Fases da Integração do Enxerto
 
-- Tipos de enxerto: Pele, gordura, tendão, osso, nervo.
+- **Embebição**: primeiras 24–48h; nutrição por difusão plasmática; aumento de peso do enxerto;
+- **Inosculação**: após 48h; alinhamento dos brotos vasculares;
+- **Neovascularização**: até o 7º dia; penetração de capilares.
 
-## CLASSIFICAÇÃO
-
-## QUANTO À ESPESSURA
-
-- Parcial; Fino – Thiersch-Ollier; Intermediários – Blair-Brown; Espessos – Padgett.
-
-- Total (Wolfe-Krause).
-
-QUANTO À ORIGEM Tabela 2: Diferenciação de origem de retirada de um enxerto.
-
-## TIPO ORIGEM
-
-Autoenxerto Mesmo indivíduo Mesma espécie Isoenxerto Indivíduo diferente Mesma carga genética Mesma espécie Aloenxerto/Homoenxerto Indivíduo diferente Heteroenxerto/ Xenoenxerto Espécie diferente arcial.
-
-l Espessura parcial
-
-- Mais áreas doadoras
-
-- Integração mais fácil
-
-- Epitelização da área doadora a
-
-- Menor retração primária nto da área
-
-- Maior retração secundária
-
-- Cobertura menos espessas
-
-Tipos de enxerto:
-
-- Autoenxerto: do próprio indivíduo;
-
-- Isoenxerto: gêmeo idêntico ;
-
-- Aloenxerto: indivíduo da mesma espécie ;
-
-- Xenoenxerto: outra espécie .
-
-## FASES DA INTEGRAÇÃO
-
-## DO ENXERTO
-
-- Embebição: Primeiras 24-48h; Nutrição por difusão plasmática; Aumento de peso.
-
-- Inosculação: Após 48h; Alinhamento dos brotos vasculares.
-
-- Neovascularização: Até 7º dia; Penetração de capilares.
-
-Condições essenciais para integração
+### Condições Essenciais para Integração
 
 - Leito bem vascularizado;
-
 - Imobilização;
-
 - Ausência de infecção;
-
 - Ausência de coleções na interface.
 
-Causas de perda do enxerto:
+### Causas de Perda do Enxerto
 
 - Cisalhamento;
-
-- Seroma / hematoma;
-
+- Seroma/hematoma;
 - Leito mal-vascularizado;
-
 - Infecção.
 
-Abertura Do Curativo
+### Abertura do Curativo
 
-- Em lâmina: 3 – 5 dias (geralmente 5, 3 pode ser muito precoce);
-
-- Em malha: 5 – 7 dias;
-
-- Cuidados adicionais: Trocas sequenciais do curativo; Hidratação da pele; Proteção solar; Malhas compressivas.
+- **Em lâmina**: 3–5 dias (geralmente 5; 3 pode ser muito precoce);
+- **Em malha**: 5–7 dias;
+- **Cuidados adicionais**: trocas sequenciais do curativo; hidratação da pele; proteção solar; malhas compressivas.
 
 ---
 
 <!-- page:2 -->
 
-- Reinervação (Dor > tato superficial >
+- **Reinervação** (ordem de retorno: dor > tato superficial > temperatura) → ocorre em meses;
+- **Reativação das glândulas anexiais** → ocorre em semanas;
+- **Perda tecidual** (ex.: trauma, ferimento descolante);
+- Infecções (ex.: fasciíte).
 
-- Perda tecidual (ex: Trauma, descolante);
-
-temperatura) → meses;
-
-- Infecções (fasciíte).
-
-- Reativação das glândulas anexiais→ Semanas.
-
-## CONTRAINDICAÇÕES
-
-## CONTRAÇÃO DO ENXERTO
+## Contraindicações
 
 - Feridas mal-vascularizadas;
+- Estruturas nobres (ex.: osso, cartilagem, tendão, vasos, vísceras);
+- Áreas de apoio (LPP — lesão por pressão).
 
-- Contração Primária:
+## Contração do Enxerto
 
-- Estruturas nobres (ex: osso, cartilagem, tendão, Imediatamente após a retirada do enxerto; vasos, vísceras); Proporcional à quantidade de fibras elásticas. (mais
+- **Contração primária**: ocorre imediatamente após a retirada do enxerto; proporcional à quantidade de fibras elásticas (mais espesso = maior contração primária);
+- **Contração secundária**: ocorre durante a fase de remodelamento (contração do leito da ferida por miofibroblastos); inversamente proporcional à quantidade de fibras elásticas (mais espesso = menor contração secundária).
 
-- Áreas de apoio (LPP).
+## Fatores Relevantes na Escolha do Enxerto
 
-espesso = maior contração primária).
+- **Área receptora**: extensão da lesão cutânea; local da lesão; áreas estéticas e funcionais;
+- **Área doadora**: quantidade disponível; compatibilidade com a área receptora (ex.: coloração, textura, anexos cutâneos).
 
-- Contração secundária: FATORES RELEVANTES NA ESCOLHA DO Durante a fase de remodelamento (contração do ENXERTO leito da ferida – miofibroblastos);
+## Indicações
 
-- Área receptora: Inversamente proporcional à quantidade | Extensão da lesão cutânea;
+- Reconstrução de defeitos cutâneos: neoplasias cutâneas; queimaduras.
 
-de fibras elásticas (mais espesso = menor | Local da lesão; contração secundária). | Áreas estéticas e funcionais;
+## Enxerto de Pele Parcial
 
-- Área doadora:
+**Tabela 3**: Indicações, vantagens e desvantagens do enxerto de espessura parcial.
 
-INDICAÇÕES | Quantidade disponível;
+- **Indicações**: queimaduras; feridas agudas bem vascularizadas; feridas crônicas mal vascularizadas.
+- **Vantagens**: grande oferta; integração mais fácil; possibilidade de recoletar a mesma área doadora; menor contração primária (na área receptora).
+- **Desvantagens**: qualidade limitada; não transporta anexos cutâneos; maior contração secundária (na área receptora).
 
-- Reconstrução de defeitos cutâneos: | Compatibilidade com área receptora (ex: coloração, Neoplasias cutâneas; textura, anexos cutâneos). Queimaduras;
+## Enxerto de Pele Total
 
-## ENXERTO DE PELE PARCIAL
+**Tabela 4**: Indicações, vantagens e desvantagens do enxerto de espessura total.
 
-Tabela 3: Indicações , Vantagens e Desvantagens de enxerto de espessura parcial.
-
-## INDICAÇÕES VANTAGENS DESVANTAGENS
-
-Queimaduras Grande oferta Qualidade limitada Feridas agudas bem Integração mais fácil Não transporta anexos cutâneos vascularizadas Feridas crônicas mal Possibilidade de recoletar a mesma área Maior contração secundária vascularizadas Menor contração primária (na área doadora) (na área receptora)
-
-## ENXERTO DE PELE TOTAL
-
-Tabela 4: Indicações, Vantagens e Desvantagens de enxerto de espessura total.
-
-Áreas estéticas Excelente qualidade e estabilidade Disponibilidade limitada Áreas funcionais Transporta anexos cutâneos Maior risco de não integração Menor contração secundária Leitos bem vascularizados (área receptora)
+- **Indicações**: áreas estéticas; áreas funcionais; leitos bem vascularizados (área receptora).
+- **Vantagens**: excelente qualidade e estabilidade; transporta anexos cutâneos; menor contração secundária.
+- **Desvantagens**: disponibilidade limitada; maior risco de não integração.

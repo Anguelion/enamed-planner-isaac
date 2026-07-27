@@ -2,117 +2,113 @@
 
 <!-- page:1 -->
 
-## COLOPROCTOLOGIA: CÂNCER
+## Coloproctologia: Câncer Colorretal
 
-## COLORRETAL
+**Carcinogênese do CCR:** APC → beta-catenina → K-Ras → p53.
 
-Coloproctologia Câncer colorretal Carcinogênese do CCR: APC → B-catenina → T K-Ras → P-53.
+- **Rastreamento:** 45 – 85 anos → colonoscopia a cada 10 anos.
+- **Estadiamento:** cólon (TC) x reto (RM).
 
-- Rastreamento: 45 – 85 anos → Colonoscopia a cada
+## Introdução e Considerações Gerais
 
-10 anos.
+### Definições
 
-- Estadiamento: Cólon (TC) x Reto (RM)
+- É o tumor mais comum do trato gastrointestinal.
 
-## INTRODUÇÃO E
+### Fatores de Risco
 
-## CONSIDERAÇÕES GERAIS
-
-## DEFINIÇÕES
-
-- É o tumor mais comum do trato gastrointestinal. E
-
-- FATORES DE RISCO
-
-Gerais
+**Gerais**
 
 - Sedentarismo;
-
-- Estilo de vida não saudável – dieta pobre em fibras e rica em substâncias industrializadas; com maior consumo de alimentos ultraprocessados , padrão C ocidental de alimentação;
-
-- Diabetes; E
-
-- Tabagismo; B
-
+- Estilo de vida não saudável — dieta pobre em fibras e rica em substâncias industrializadas, com maior consumo de alimentos ultraprocessados, padrão ocidental de alimentação;
+- Diabetes;
+- Tabagismo;
 - Etilismo;
-
 - Obesidade;
-
 - Idade.
 
-Hereditários
+**Hereditários**
 
-- Polipose adenomatosa familiar;
+- **Polipose adenomatosa familiar (PAF):** **100%** dos pacientes com PAF podem desenvolver CCR até os **40 anos** de idade;
+- Polipose associada à **MUTYH**;
+- **Síndrome de Lynch (HNPCC)** — também chamada de câncer colorretal hereditário não polipoide. Deve-se a mutação no **MLH1, MSH2, MSH6 e PMS2**.
 
-- Polipose associada à MUTYH;
-
-- Síndrome de Lynch (HNPCC). 100% dos pacientes que apresentam PAF podem desenvolver CCR até os 40 anos de idade. Também chamada de câncer colorretal hereditário não polipoide. Deve-se a mutação no MLH1, MSH2 E
-
-MSH6 e PMS2; Doença inflamatória intestinal
+**Doença inflamatória intestinal**
 
 - Retocolite ulcerativa;
+- Doença de Crohn — eleva em **10 – 20x** o risco de câncer colorretal;
+- O maior risco de CCR se deve ao grau de inflamação colônica associado ao tempo de atividade da doença; esses pacientes podem apresentar CCR com pior prognóstico e mais agressivo.
 
-- Doença de Crohn – eleva em 10 – 20x o risco de câncer colorretal;
-
-- Tem maior risco de CCR devido ao grau de inflamação colônica associado ao tempo de atividade de doença apresentada, esses pacientes podem apresentar CCR com pior prognóstico e mais agressivos.
-
-Colite actínica
+**Colite actínica**
 
 - Secundária à radiação abdominal;
+- Pacientes podem apresentar sangramentos esporádicos nas fezes;
+- Quadro caracterizado por telangiectasias em cólon associadas a maior rigidez do órgão em pacientes com exposição prévia à radiação nesta topografia.
 
-- Pacientes podem apresentar sangramentos esporádicos em fezes. Normalmente, Tratamento:
+**Tratamento (visão geral):**
 
-- Câncer de cólon e reto intraperitoneal: Cirurgia com margens livres + linfadenectomia - 12 linfonodos. Margem 5cm;
+- **Câncer de cólon e reto intraperitoneal:** cirurgia com margens livres + linfadenectomia (**12 linfonodos**). Margem de **5 cm**;
+- **Câncer de reto extraperitoneal (médio e distal):** neoadjuvância (QRT para T3/T4 ou N+) + retossigmoidectomia com excisão total do mesorreto.
 
-- Câncer de reto extraperitoneal (médio e distal):
-
-Neoadjuvância (QRT para T3/T4 ou N+) + Retossigmoidectomia Excisão total do Mesorreto. se como um quadro de telangiectasias em cólon associado a maior rigidez do mesmo em pacientes que tiveram exposição a radiação nesta topografia.
-
-## EPIDEMIOLOGIA
+## Epidemiologia
 
 - 2º ou 3º tipo de câncer mais comum tanto no sexo feminino como no masculino, a depender da região analisada.
 
-- Verificar Tabela 1 na próxima página
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança o pareamento entre localização primária, número de casos e percentual para homens e mulheres; conteúdo listado em texto corrido a seguir.
 
-## CARCINOGÊNESE DO CÂNCER
+**Homens** — localizações primárias mencionadas (com casos e %, conforme fragmento original): próstata (65.840 — 29,2%), cólon e reto (20.540 — 9,1%), traqueia/brônquio/pulmão (17.760 — 7,9%), estômago (13.360 — 5,9%), cavidade oral (11.200 — 5,0%), esôfago (8.690 — 3,9%), bexiga (7.590 — 3,4%), linfoma não Hodgkin (6.580 — 2,9%), laringe (6.470 — 2,9%), leucemias (5.920 — 2,6%).
 
-## EXISTE UMA SEQUÊNCIA CARCINOGÊNICA BEM ESTABELECIDA
+**Mulheres** — localizações primárias mencionadas: mama feminina (66.280 — 29,7%), cólon e reto (20.470 — 9,2%), colo de útero (16.710 — 7,5%), glândula tireoide (11.950 — 5,4%), estômago (7.870 — 3,5%), ovário (6.650 — 3,0%), corpo de útero (6.540 — 2,9%), linfoma não Hodgkin (5.450 — 2,4%), SNC (5.230 — 2,3%).
 
-- O processo leva, em média, 10 anos, na população geral.
+*Figura 1: Sequência adenoma-carcinoma no câncer colorretal (Normal → Risco → Adenoma [mutação APC, beta-catenina, K-Ras, p53] → Carcinoma → Telomerase).*
 
-OBS.: Este tempo se correlaciona com a frequência de rastreio por colonoscopia. O tempo entre um exame e o seguinte (em média, de 5 – 10 anos) dá-se por esse motivo.
+## Carcinogênese do Câncer
 
-- Sequência: (1) Epitélio normal, sem alterações; (2) demais fatores de risco; (3) Mutação do gene APC pólipos; (4) Mutação da beta-catenina – demonstra potencial displásico; (5) Mutação do gene K-Ras displásico, de baixo para alto grau; (6) Mutação do gene p53 – origem de tumor com potencial invasivo da membrana basal; (7) Evolução carcinomatosa – com mutações finais da telomerase.
+### Existe uma Sequência Carcinogênica Bem Estabelecida
 
-Agressão epitelial – tabagismo, sedentarismo e (gene supressor tumoral) – predispõe à formação de (proto-oncogene) – evolui com aumento do potencial OBS: A origem da mutação do gene p53 marca a origem do carcinoma!!! Essa alteração fornece capacidade da neoplasia em estágio inicial invadir a submucosa e dessa forma ganhar a circulação hematogênica e a linfática, tendo maior possibilidade de metastatização.
+- O processo leva, em média, **10 anos**, na população geral.
+
+> **Obs.:** Este tempo se correlaciona com a frequência de rastreio por colonoscopia. O intervalo entre um exame e o seguinte (em média, de 5 – 10 anos) se dá por esse motivo.
+
+**Sequência:**
+
+1. Epitélio normal, sem alterações;
+2. Agressão epitelial por fatores de risco (tabagismo, sedentarismo, demais fatores);
+3. Mutação do gene **APC** (gene supressor tumoral) — predispõe à formação de pólipos;
+4. Mutação da **beta-catenina** — demonstra potencial displásico;
+5. Mutação do gene **K-Ras** (proto-oncogene) — displasia evolui de baixo para alto grau;
+6. Mutação do gene **p53** — origem de tumor com potencial invasivo da membrana basal;
+7. Evolução carcinomatosa — com mutações finais da telomerase, aumentando o potencial de malignidade.
+
+> **Obs.:** A mutação do gene **p53** marca a origem do carcinoma! Essa alteração dá à neoplasia, em estágio inicial, capacidade de invadir a submucosa e, assim, ganhar a circulação hematogênica e linfática, aumentando a possibilidade de metastatização.
 
 ---
 
 <!-- page:2 -->
 
-Tabela 1: Epidemiologia do câncer no Brasil Localização Localização Casos % Casos % primária primária Próstata 65.840 29,2 Mama feminina 66.280 29,7 Próstata 65.840 29,2 Cólon e reto 20.540 9,1 Traqueia, brônquio 17.760 7,9 e pulmão Estômago 13.360 5,9 Homens Cavidade oral 11.200 5,0 Esôfago 8.690 3,9 Bexiga 7.590 3,4 Linfoma não6.580 2,9 Hodgkin Laringe 6.470 2,9 Leucemias 5.920 2,6 Normal Risco Ade APC B-catenina K-R Figura 1: Sequência adenoma-carcinoma no câncer colorretal.
+## Pólipos
 
-## PÓLIPOS
+### Pólipos Neoplásicos
 
-## PÓLIPOS NEOPLÁSICOS
+- Apresentam **displasia**, ou seja, risco de malignização;
+- A maioria dos pacientes que consomem dieta ocidental terá pólipos após os **50 anos** de idade; quanto mais displasia/atipias, crescimento e comportamento viloso, maior a capacidade de malignização e transformação neoplásica;
+- **Subtipos — Adenomas:**
+  - Tubular — melhor prognóstico;
+  - Viloso — pior prognóstico;
+  - Tubuloviloso — prognóstico intermediário.
+- **Serrilhados:** apresentam morfologia plana (principalmente durante a insuflação do cólon), com coloração semelhante à da mucosa normal, o que prejudica o diagnóstico e o tratamento endoscópico.
 
-- Apresentam displasia, isto é, risco de malignização;
+> **Dica!** Adenoma "viloso... vilão" apresenta pior prognóstico!
 
-- A maioria dos pacientes que consomem uma dieta ocidental, terão pólipos após os 50 anos de idade, quanto mais displasia ou atipias, crescimento e comportamento viloso, maior capacidade de malignização e transformação neoplásica;
+*Figura 2: Pólipo neoplásico (lesão séssil serrilhada).*
 
-- Subtipos: Adenomas: Tubular – melhor prognóstico; Viloso – pior prognóstico; Tubuloviloso – prognóstico intermediário. Serrilhados: apresentam morfologia plana, principalmente durante a insuflação do cólon, com coloração semelhante à da mucosa normal, o que prejudica o diagnóstico e o tratamento endoscópico.
+### Pólipos Não Neoplásicos
 
-- Verificar Figura 2 Mama feminina 66.280 29,7 brônquio e 12.440 5,6 pulmão tireoide enomas Carcinomas pior prognóstico!
-
-Cólon e reto 20.470 9,2 Colo de útero 16.710 7,5 Traqueia, Mulheres Glândula 11.950 5,4 Estômago 7.870 3,5 Ovário 6.650 3,0 Corpo de útero 6.540 2,9 Linfoma não5.450 2,4 Hodgkin SNC 5.230 2,3 Ras P-53 Telomerase DICA! Adenoma “viloso... vilão” apresenta Figura 2: Pólipo neoplásico (lesão séssil serrilhada).
-
-## PÓLIPOS NÃO-NEOPLÁSICOS
-
-- Não apresentam displasia;
-
-- Subtipos: Hamartomas: são compostos de elementos normalmente encontrados no tecido local, porém com crescimento desorganizado. Cuidado:
-
-pode surgir pólipo adenomatoso sobre um pólipo hamartomatoso;
+- **Não** apresentam displasia;
+- **Subtipos:**
+  - **Hamartomas:** compostos de elementos normalmente encontrados no tecido local, porém com crescimento desorganizado. *Cuidado:* pode surgir pólipo adenomatoso sobre um pólipo hamartomatoso;
+  - **Inflamatórios:** antigamente denominados "pseudopólipos"; são áreas de cicatrização da mucosa (pacientes com doença inflamatória intestinal);
+  - **Hiperplásicos:** são áreas com proliferações pequenas da mucosa.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -122,51 +118,47 @@ pode surgir pólipo adenomatoso sobre um pólipo hamartomatoso;
 
 <!-- page:3 -->
 
-Localização Manifestações clínicas | Inflamatórios: antigamente, era denominados “pseudo-pólipos”; são áreas de cicatrização da mucosa (pacientes com doença inflamatória intestinal); Hematoquezia Alteração do hábito intestinal e | Hiperplásicos: são áreas com proliferações | Hiperplásicos: são áreas com proliferações pequenas da mucosa.
+## Rastreamento
 
-## RASTREAMENTO
+### Rastreamento: 45 – 85 Anos
 
-## RASTREAMENTO: 45 – 85 ANOS
+- **Populacional:** a partir dos **45 anos**;
+- **Exames:**
+  - **Colonoscopia** a cada **10 anos** — bom custo-benefício, com capacidade de identificação de pequenos pólipos e possibilidade de polipectomia;
+  - **Teste imunoquímico fecal (TIF)** para sangue oculto — anualmente;
+  - **Sigmoidoscopia** associada ao TIF, a cada **10 anos**; ou sigmoidoscopia isolada, a cada **5 anos**;
+  - **Colonografia por tomografia computadorizada (CTC / colono virtual)** — a cada **5 anos**;
+  - **Teste de DNA fecal multitarefa (DNA-FIT)** — a cada **3 anos**;
+  - **Teste de sangue oculto nas fezes baseado em guaiaco** — anualmente.
+- **Até 85 anos** (75 – 85 anos: rastreamento individualizado): levar em consideração expectativa de vida e *performance status*;
+- **Familiares de primeiro grau com câncer colorretal:** a partir dos **40 anos** de idade, ou pelo menos **10 anos** antes da idade em que o familiar apresentou câncer colorretal. O rastreamento é sempre realizado com colonoscopia;
+- **Alto risco (PAF, Lynch, RCU, Doença de Crohn):** a depender do protocolo.
 
-- Populacional: a partir dos 45 anos;
+### Colonoscopia Virtual
 
-- Exames: Colonoscopia a cada 10 anos. Bom custo benefício, com capacidade de identificação de pequenos pólipos, e pela possibilidade de polipectomia; Teste imunoquímico fecal (TIF) para sangue oculto, anualmente; Sigmoidoscopia, a cada 10 anos associado ao Sigmoidoscopia apenas, a cada 5 anos; Colonografia por tomografia computadorizada Teste de DNA de fezes multitarefas com DNA-FIT imunoquímico DNA fecal), a cada 3 anos; Teste de sangue oculto nas fezes baseado em
+- **Indicação:** lesões intransponíveis em colonoscopia convencional, mas em cólon com capacidade de preparo;
+- Eficácia semelhante à da colonoscopia óptica para detecção de pólipos pequenos e de câncer colorretal.
 
-TIF, anualmente; (CTC), ou Colono virtual, a cada 5 anos; (DNA-DTM-MT; Também conhecido como teste Guaiac, anualmente;
+> **Cuidado:** as fezes podem simular lesões ou pólipos.
 
-- Até 85 anos (75 - 85 anos - rastreamento individualizado): levar em consideração expectativa de vida e performance status.
+## Manifestações Clínicas
 
-- Familiares de primeiro grau com câncer colorretal: A partir de 40 anos de idade ou, pelo menos, 10 anos antes da idade que o familiar apresentou câncer colorretal. O rastreamento é sempre realizado com colonoscopia;
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com total segurança o pareamento entre localização e cada manifestação; conteúdo listado em texto corrido a seguir, com base na lógica clínica do restante do texto.
 
-- Alto risco (PAF, Lynch, RCU, Doença de Crohn): a depender do protocolo.
+- **Cólon direito:** anemia (sangue oculto nas fezes), massa palpável, fadiga; dificilmente evolui com obstrução;
+- **Cólon esquerdo:** alteração do hábito intestinal e da consistência fecal; obstrução;
+- **Reto:** tenesmo, dor, calibre fecal reduzido, obstrução.
 
-- COLONOSCOPIA VIRTUAL
+*Figura 3: Manifestações clínicas e prevalência do câncer colorretal conforme a topografia.*
 
-- Indicação: Lesões intransponíveis em colonoscopia convencional, mas em cólon com capacidade de preparo;
+- Neoplasias do **cólon direito** são menos sintomáticas; principal manifestação: **anemia assintomática**;
+- Tumores do **cólon esquerdo e retossigmoide** apresentam-se mais frequentemente com sintomas obstrutivos, devido ao menor calibre do cólon nesta topografia.
 
-- Eficácia semelhante à da colonoscopia óptica para P a detecção de pólipos clinicamente pequenos e de câncer colorretal.
+## Prognóstico
 
-Cuidado: as fezes podem simular lesões ou pólipos.
-
-## MANIFESTAÇÕES CLÍNICAS
-
-Tabela 2: Manifestações clínicas. Localização Manifestações clínicas
-
-- Anemia intestinal, sangue oculto nas fezes Cólon esquerdo Alteração do hábito intestinal e consistência fecal colorretal conforme a topografia.
-
-Fadiga Cólon direito Massa palpável Dificilmente evolui com obstrução Obstrução Tenesmo Dor Reto Calibre fecal reduzido Obstrução Figura 3: Manifestações clínicas e prevalência do câncer
-
-- Neoplasias do cólon direito são menos sintomáticas; Principal manifestação: anemia assintomática;
-
-- Tumores do cólon esquerdo e retossigmoide apresentam-se mais frequentemente com sintomas obstrutivos, devido à menor dimensão do cólon nesta topografia.
-
-## PROGNÓSTICO
-
-- Tumores de cólon direito demonstram pior prognóstico em comparação àqueles do cólon esquerdo e reto;
-
-- Diagnóstico em estágios mais avançados, maior associação com a síndrome de Lynch; Síndrome de Lynch cursa com instabilidade de microssatélites, o que favorece a implantação ou então invasão da submucosa sem desenvolver o processo neoplásico de forma contígua, favorecendo o pior prognóstico.
-
-- Os tumores do cólon esquerdo em geral têm melhor prognóstico pois costumam manifestar sintomas precocemente, principalmente pela presença de sangue vivo nas fezes (hematoquezia), além de apresentar maior sensibilidade aos quadros obstrutivos devido ao menor lumen e maior crescimento intraluminal concêntrico constrictivo.
+- Tumores de **cólon direito** demonstram **pior prognóstico** em comparação aos de cólon esquerdo e reto;
+- Diagnóstico em estágios mais avançados, maior associação com a **síndrome de Lynch**; a síndrome de Lynch cursa com instabilidade de microssatélites, o que favorece a implantação/invasão da submucosa sem desenvolver o processo neoplásico de forma contígua, favorecendo o pior prognóstico;
+- Os tumores do **cólon esquerdo**, em geral, têm **melhor prognóstico**, pois costumam manifestar sintomas precocemente — principalmente pela presença de sangue vivo nas fezes (**hematoquezia**) — além de apresentar maior sensibilidade a quadros obstrutivos devido ao menor lúmen e maior crescimento intraluminal concêntrico constritivo.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -174,41 +166,63 @@ Fadiga Cólon direito Massa palpável Dificilmente evolui com obstrução Obstru
 
 <!-- page:4 -->
 
-Figura 4: Estadiamento T do câncer colorretal
+*Figura 4: Estadiamento T do câncer colorretal.*
 
-## ESTADIAMENTO
+## Estadiamento
 
-## CÂNCER DE RETO X CÂNCER DE CÓLON
+### Câncer de Reto x Câncer de Cólon
 
-Tabela 3: Câncer de reto X Câncer de Cólon Reto Cólon Tomografia de tórax e Tomografia de tórax e de de abdome superior abdome superior Ressonância magnética Tomografia de pelve de pelve CEA (antígeno CEA (antígeno carcinoembrionário) carcinoembrionário)
+| Exame | Reto | Cólon |
+|---|---|---|
+| Tomografia de tórax e de abdome superior | Sim | Sim |
+| Ressonância magnética de pelve | Sim | — |
+| Tomografia de pelve | — | Sim |
+| CEA (antígeno carcinoembrionário) | Sim | Sim |
+| Colonoscopia completa (exclusão de outras lesões sincrônicas) | Sim | Sim |
 
-Colonoscopia Colonoscopia completa completa (exclusão (exclusão de outras lesões de outras lesões sincrônicas)
+> **Obs.:** O CEA é um bom marcador prognóstico e para acompanhamento.
 
-sincrônicas) OBS.: O CEA é um bom marcador prognóstico e para acompanhamento. RESSONÂNCIA MAGNÉTICA DE PELVE – PARA ESTADIAR OS TUMORES DE RETO.
+**Ressonância magnética de pelve — para estadiar os tumores de reto:**
 
-- Devido a maior quantidade de tecido adiposo, favorece uma melhor visualização das estruturas, assim como invasão do músculo elevador do ânus;
+- Devido à maior quantidade de tecido adiposo, favorece melhor visualização das estruturas, assim como da invasão do músculo elevador do ânus;
+- Consegue identificar melhor a invasão extramural e a disseminação angiolinfática;
+- Permite localizar o tumor de reto acima (tumores altos, intraperitoneais) ou abaixo (tumores médios ou baixos, extraperitoneais) da reflexão peritoneal.
 
-- Consegue identificar melhor invasão extramural, e disseminação angiolinfática;
+### Estadiamento TNM
 
-- Ainda, há possibilidade de localizar o tumor de reto acima (tumores altos; intraperitoneais) ou abaixo reflexão peritoneal.
+| Categoria | Definição |
+|---|---|
+| Nx | Linfonodos não avaliados |
+| N0 | Sem linfonodos comprometidos |
+| N1 | 1 – 3 linfonodos positivos |
+| N2 | 4 ou mais linfonodos positivos |
+| M0 | Sem metástase |
+| M1 | Metástase à distância |
 
-(tumores médios ou baixos; extraperitoneais) da ESTADIAMENTO TNM: Tabela 4: Câncer de reto X câncer de cólon Nx Linfonodos não avaliados N0 Sem linfonodos comprometidos N1 1 – 3 linfonodos positivos N2 4 ou + linfonodos positivos M0 Sem metástase M1 Metástases à distância 0 Tis N0M0 (in situ)
+| Estádio | TNM |
+|---|---|
+| 0 | Tis N0 M0 (in situ) |
+| I | T1-T2 N0 M0 |
+| II | T3-T4 N0 M0 |
+| III | Tx N+ M0 |
+| IV | Tx Nx M1 |
 
-I T1-T2 N0M0 II T3-T4 N0M0 III Tx N+M0 IV TxNx M1
+## Tratamento
 
-- Verificar Figura 4
+### Câncer de Cólon ou Reto (Intraperitoneal)
 
-## TRATAMENTO
-
-CÂNCER DE CÓLON OU RETO (INTRAPERITONEAL):
-
-- Tratamento cirúrgico;
-
-- Quimioterapia apenas adjuvante (não se faz neoadjuvância);
-
-- Cirurgia - depende do local do tumor: Cólon direito: colectomia direita; Cólon esquerdo: colectomia esquerda; Colon transverso: transversectomia; Sigmoide: retossigmoidectomia; Em alguns casos, deve-se realizar ressecção em bloco com exérese multivisceral de focos acometidos pela neoplasia. Pode ser necessário ressecção de parte da bexiga, ureterectomia e em alguns casos até nefrectomia para controle do foco.
-
-- Linfadenectomia: ligadura dos vasos na origem com retirada de, pelo menos, 12 linfonodos: Cólon direito: artéria ileocecoapendicocólica em sua base com a mesentérica superior, e o ramo direito da cólica média, podendo ainda estender para a cólica média dependendo da localização do tumor (flexura hepática); Cólon transverso: artéria cólica média; Cólon esquerdo: artéria mesentérica inferior ramos retal superior, sigmoideana, cólica esquerda.
+- Tratamento **cirúrgico**;
+- Quimioterapia apenas **adjuvante** (não se faz neoadjuvância);
+- **Cirurgia** — depende do local do tumor:
+  - Cólon direito: colectomia direita;
+  - Cólon esquerdo: colectomia esquerda;
+  - Cólon transverso: transversectomia;
+  - Sigmoide: retossigmoidectomia;
+  - Em alguns casos, deve-se realizar ressecção em bloco com exérese multivisceral dos focos acometidos pela neoplasia — pode ser necessária ressecção de parte da bexiga, ureterectomia e, em alguns casos, até nefrectomia para controle do foco.
+- **Linfadenectomia:** ligadura dos vasos na origem, com retirada de pelo menos **12 linfonodos**:
+  - Cólon direito: artéria ileocecoapendicocólica em sua base, com a mesentérica superior e o ramo direito da cólica média, podendo estender-se para a cólica média dependendo da localização do tumor (flexura hepática);
+  - Cólon transverso: artéria cólica média;
+  - Cólon esquerdo: artéria mesentérica inferior, ramos retal superior, sigmoideano e cólica esquerda.
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -216,23 +230,32 @@ CÂNCER DE CÓLON OU RETO (INTRAPERITONEAL):
 
 <!-- page:5 -->
 
-Nódulos de cólica média Nódulos de cólica direitos Nódulos ileocólicos Nós cecais Nós apendiculares Nós ilíacos internos Nódulos retais médios Nódulos retais inferiores Para nós inguinais Figura 6: Anatomia: artérias e drenagem linfática no cólon.
+*Figura 6: Anatomia — artérias e drenagem linfática no cólon (nódulos de cólica média, nódulos de cólica direitos, nódulos ileocólicos, nós cecais, nós apendiculares, nós ilíacos internos, nódulos retais médios, nódulos retais inferiores, nós inguinais).*
 
-OBS.: A retirada de menos de 12 linfonodos na peça C cirúrgica pressupõe a realização de procedimento cirúrgico “não oncológico”, isto é, sem o estadiamento adequado. Nesses casos o paciente deve ser encaminhado à quimioterapia sistêmica, mesmo que não existam mais linfonodos comprometidos. Dessa forma a retirada incompleta de linfonodos nos dará na patologia um TNM com a avaliação do status linfonodal
+> **Obs.:** A retirada de menos de **12 linfonodos** na peça cirúrgica pressupõe a realização de procedimento cirúrgico "não oncológico", isto é, sem o estadiamento adequado. Nesses casos, o paciente deve ser encaminhado à quimioterapia sistêmica, mesmo que não existam mais linfonodos comprometidos. A retirada incompleta de linfonodos resultará, na patologia, em um TNM com status linfonodal **NX** (sem possibilidade de avaliação), impedindo o estadiamento correto do paciente.
 
-- NX (sem possibilidade de avaliação), impedindo estadiamento correto do paciente pelo menos, 5 cm! superiores (nós principais) inferiores (nódulos principais) cólica esquerda superiores
+> **Atenção!!!** A margem cirúrgica colônica deve ser de, pelo menos, **5 cm**!
 
-ATENÇÃO!!! A margem cirúrgica colônica deve ser de, Colectomia Direita Colectomia direita estendida Figura 5: Colectomia direita e direita estendida. Nós epicólicos Nós paracólicos Nós mesentéricos Nódulos mesentéricos Nódulos de Nós paraaórticos Nós sigmoides Nódulos retais Margem: 5cm CÂNCER DE RETO (EXTRAPERITONEAL)
+*Figura 5: Colectomia direita e colectomia direita estendida (nós epicólicos, nós paracólicos, nós mesentéricos superiores/inferiores, nós paraórticos, nós sigmoides, nódulos retais).*
 
-- Até cerca de 7 cm da borda anal, abaixo da reflexão peritoneal;
+### Câncer de Reto (Extraperitoneal)
 
-- Ressonância magnética é o exame mais adequado para estadiamento de lesões na região pélvica.
+- Até cerca de **7 cm** da borda anal, abaixo da reflexão peritoneal;
+- **Ressonância magnética** é o exame mais adequado para estadiamento de lesões na região pélvica — identifica invasão de estruturas adjacentes, lesões extramurais e situação do mesorreto.
 
-Identifica invasão de estruturas adjacentes, lesões extramurais, situação do mesorreto;
+**Neoadjuvância:**
 
-- Neoadjuvância: Indicações: Lesões T3 ou T4; Linfonodo positivo; Tumores distais que envolvem o esfíncter anal Envolvimento da fáscia mesorretal (pela tentativa de melhor da margem comprometida). Esquema terapêutico: Quimiorradioterapia de radioterapia; Benefícios: Downstaging tumoral; Eleva a taxa de preservação esfincteriana; Redução das taxas de recidiva local do tumor; Resposta patológica completa: ocorre em clinicamente) – proceder com Watch and wait;
-
-(pela tentativa de preservação esfincteriana); 5-fluorouracil + Leucovorin, associado à 5040cG 15 – 30% dos pacientes (o tumor desaparece
+- **Indicações:**
+  - Lesões T3 ou T4;
+  - Linfonodo positivo;
+  - Tumores distais que envolvem o esfíncter anal (pela tentativa de preservação esfincteriana);
+  - Envolvimento da fáscia mesorretal (pela tentativa de melhorar a margem comprometida).
+- **Esquema terapêutico:** quimiorradioterapia com **5-fluorouracil + Leucovorin**, associada à radioterapia (**5040 cGy**);
+- **Benefícios:**
+  - *Downstaging* tumoral;
+  - Eleva a taxa de preservação esfincteriana;
+  - Redução das taxas de recidiva local do tumor;
+  - **Resposta patológica completa** (o tumor desaparece clinicamente): ocorre em **15 – 30%** dos pacientes → proceder com *Watch and wait*.
 
 ![Figura do material - página 5](figure-005-1.webp)
 
@@ -240,45 +263,62 @@ Identifica invasão de estruturas adjacentes, lesões extramurais, situação do
 
 <!-- page:6 -->
 
-OBS.: A quimiorradioterapia convencional demonstra
+> **Obs.:** A quimiorradioterapia convencional demonstra capacidade de reduzir a taxa de recidiva local, contudo não altera a taxa sistêmica.
 
-- Amputação abdominoperineal do reto - definida com capacidade de reduzir a taxa de recidiva local, contudo reestadiamento após neoadjuvância:
+**Reestadiamento após neoadjuvância:**
 
-não altera a taxa sistêmica. | Indicação: ressonância magnética com evidência de invasão da musculatura elevadora do ânus.
+- **Indicação:** ressonância magnética com evidência de invasão da musculatura elevadora do ânus → **amputação abdominoperineal do reto**, definida como procedimento também chamado de cirurgia de Miles.
 
-| Essa cirurgia, também chamada de procedimento ATENÇÃO: O esquema padrão-ouro é dado por: neoadjuvância – aguardo de 12 semanas – cirurgia.
+> **Atenção:** o esquema padrão-ouro é dado por: neoadjuvância → aguardo de **12 semanas** → cirurgia.
 
-Figura 7: Ressonância magnética da região pélvica.
+*Figura 7: Ressonância magnética da região pélvica.*
 
-- TNT – Terapia neoadjuvante total: Esquema terapêutico é um pouco diferente, com outros quimioterápicos (por exemplo folfirinox ou mflox) + radioterapia Diminui recidiva sistêmica.
+- **TNT — Terapia Neoadjuvante Total:** esquema terapêutico um pouco diferente, com outros quimioterápicos (por exemplo, FOLFIRINOX ou mFOLFOX) + radioterapia. Diminui recidiva sistêmica.
 
-- Terapia Alvo e Imunoterapia: terapias sistêmicas alternativas em casos específicos Bevacizumab: Fármaco que promove inibição do fator de crescimento endotelial vascular suprimento tumoral; Nivolumab ou Pembrolizumab: Terapia alvo para mutações do MSH1, principalmente utilizado em pacientes que possuam instabilidade de microssatélites e Síndrome de Lynch.
+**Terapia Alvo e Imunoterapia** (terapias sistêmicas alternativas em casos específicos):
 
-(VEGF) dessa forma, inibe angiogênese e Excisão total do mesorreto
+- **Bevacizumabe:** inibe o fator de crescimento endotelial vascular (**VEGF**), suprimindo a angiogênese e o suprimento tumoral;
+- **Nivolumabe ou Pembrolizumabe:** terapia alvo para mutações do MSH1, utilizados principalmente em pacientes com instabilidade de microssatélites e síndrome de Lynch.
+
+**Excisão total do mesorreto**
 
 - É a retirada do reto acompanhado de toda a gordura adjacente que o cerca;
+- O mesorreto é composto de diversos linfonodos e vasos sanguíneos com potencial metastático; assim, a excisão total é associada à melhora das taxas de recidiva local e sistêmica;
+- **Limites:** fáscias de Denonvilliers e Waldeyer:
+  - Fáscia anterior (septo retroprostático) — Denonvilliers;
+  - Fáscia posterior (pré-sacral) — Waldeyer;
+- No reto: margem distal extraperitoneal livre de neoplasia é suficiente para ressecção **R0**! A indicação da amputação de reto depende do acometimento do esfíncter. Normalmente, a margem de segurança situa-se a **2 cm** da linha pectínea.
 
-- O mesorreto é composto de diversos linfonodos e vasos sanguíneos com potencial metastático, assim, a excisão total é associada com melhora das taxas de recidiva local e sistêmica;
+> A cirurgia de Miles é uma abordagem abdominal e perineal que envolve a retirada do espécime cirúrgico através da dissecção perineal, com ressecção do músculo elevador do ânus associada à retirada do reto distal com seu mesorreto e sigmoide, e confecção de uma colostomia definitiva.
 
-- Os limites são as fáscias de Denovelier e Waldeyer:
+## Quimioterapia Adjuvante
 
-Fáscia anterior (Septo Retroprostatico) – Denovelier; Fáscia posterior (Pre-sacral) – Waldeyer;
+- **Indicações:**
+  - Presença de linfonodos positivos (estádio III) — indicação principal;
+  - Presença de menos de **12 linfonodos** ressecados na peça cirúrgica;
+  - Tumor **T4**;
+  - Cirurgia de urgência em tumores obstruídos e perfurados;
+  - Tumores pouco diferenciados;
+  - Invasão angiolinfática e perineural.
 
-- No reto: Margem distal extraperitoneal livre de neoplasia é suficiente para ressecção R0! A indicação da amputação de reto depende do acometimento do esfíncter. Normalmente a margem de segurança situa-se a 2cm da linha pectínea. | Essa cirurgia, também chamada de procedimento de Miles, é uma abordagem abdominal e perineal que envolve a retirada do espécime cirúrgico através da dissecção perineal, com ressecção dos músculo elevador do anus associado a retirada do reto distal com seu mesorreto e sigmoide e confecção de uma colostomia definitiva.
+## Câncer de Reto Precoce
 
-## QUIMIOTERAPIA ADJUVANTE
+- Lesão precoce que alcança, no máximo, a camada mucosa e submucosa, independentemente de acometimento linfonodal;
+- **Ressecção endoscópica do câncer de reto precoce — indicações:**
+  - SM1;
+  - Menor que **4 cm** de diâmetro;
+  - Margens livres após a ressecção;
+  - Menos de **30 – 40%** da circunferência;
+  - **< 6 cm** de distância da margem anal;
+  - Ausência de sinais de comprometimento linfonodal;
+  - Ausência de metástase;
+  - Histologia bem diferenciada.
 
-- Indicações: Presença de linfonodos positivos (III) indicação principal; Presença de menos de 12 linfonodos ressecados com a peça cirúrgica; Tumor T4; Cirurgia de urgência em tumores obstruídos e perfurados; Tumores pouco diferenciados; Invasão angiolinfática e perineural.
+**Fluxograma geral de manejo — câncer de reto precoce:**
 
-## CÂNCER DE RETO PRECOCE
+Estadiamento (colonoscopia completa, cromoscopia com magnificação [Kudo], RM de pelve, TC TAP, CEA) → adenocarcinoma *in situ* ou cT1N0M0 → ESD (dissecção endoscópica da submucosa) / TEM / TEO; cT1N0M0 com fatores de risco → cirurgia/neoadjuvância.
 
-- Lesão precoce que alcança, no máximo, a camada mucosa e submucosa, independente de acometimento linfonodal;
-
-- Ressecção endoscópica do câncer de reto precoce - indicações: SM1; Menor de 4 cm de diâmetro; Margens livres após a ressecção; Menos de 30 – 40% da circunferência; < 6 cm de distância da margem anal; Ausência de sinais de comprometimento linfonodal; Ausência de metástase; Histologia bem diferenciada.
-
-FLUXOGRAMA GERAL DE MANEJO: Câncer de reto precoce Estadiamento: colonoscopia completa Cromoscopia com magnificação (Kudo)
-
-RNM de pelve TC TAP CEA Adenocarcinoma in situ C>T1N0M0 CT1N0M0 ESD Cirurgia/neoadjuvância TEM/TEO m Figura 8: Fluxograma geral de manejo do câncer de reto precoce
+*Figura 8: Fluxograma geral de manejo do câncer de reto precoce.*
 
 ![Figura do material - página 6](figure-006-1.webp)
 
@@ -286,22 +326,15 @@ RNM de pelve TC TAP CEA Adenocarcinoma in situ C>T1N0M0 CT1N0M0 ESD Cirurgia/neo
 
 <!-- page:7 -->
 
-## PADRÕES DE CRIPTA DE KUDO REFERÊNCIAS
+## Padrões de Cripta de Kudo
 
-- Chance de Câncer (Sm) no Vi aprox. 30% e Vn 90%;
+- Chance de câncer (Sm) no padrão Vi: aproximadamente **30%**; no padrão Vn: **90%**;
+- **I – IV:** ressecção endoscópica;
+- **Vi:** 30% de probabilidade de invasão submucosa → ressecção endoscópica ou cirurgia;
+- **Vn:** invasão grosseira da camada submucosa → cirurgia;
+- A cirurgia endoscópica transanal (**TEO/TEM**) ou a ressecção colonoscópica são métodos de ressecção nas neoplasias que se apresentam, na magnificação de imagem, com padrão I-IV.
 
-- I – IV – Ressecção endoscópica; Figura 2: Pólipo neoplásico (lesão séssil serrilhada).
+## Referências
 
-- Vi – 30% de probabilidade de invasão submucosa - MELLO, B. B. de. Lesões sésseis serrilhadas. 2021. Disponível em: https://
-
-Ressecção endoscópica ou Cirurgia; endoscopiaterapeutica.net/pt/assuntosgerais/lesoes-sesseis-serrilhadas/.
-
-Ressecção endoscópica ou Cirurgia; e
-
-- Vn – invasão grosseira da camada submucosa - Cirurgia;
-
-- Cirurgia endoscópica transanal (TEO/TEM) ou D ressecção colonoscópica são métodos de ressecção C o nas neoplasias que apresentam-se na magnificação de imagem de I-IV. endoscopiaterapeutica.net/pt/assuntosgerais/lesoes-sesseis-serrilhadas/.
-
-Acesso em: 16 jul. 2025. Imagem. Figura 7: Ressonância magnética da região pélvica. DI MUZIO, B. Tubulovillous adenoma of the rectum. Radiopaedia [Internet].
-
-Caso clínico publicado em: 12 jul. 2018. Disponível em: https://doi. org/10.53347/rID-61649. Acesso em: 17 jul. 2025.
+- MELLO, B. B. de. Lesões sésseis serrilhadas. 2021. Disponível em: https://endoscopiaterapeutica.net/pt/assuntosgerais/lesoes-sesseis-serrilhadas/. Acesso em: 16 jul. 2025. Imagem.
+- DI MUZIO, B. Tubulovillous adenoma of the rectum. Radiopaedia [Internet]. Caso clínico publicado em: 12 jul. 2018. Disponível em: https://doi.org/10.53347/rID-61649. Acesso em: 17 jul. 2025.

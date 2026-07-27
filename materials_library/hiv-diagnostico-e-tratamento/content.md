@@ -2,87 +2,62 @@
 
 <!-- page:1 -->
 
-HIV/AIDS (CM) CONTÁGIO E DIAGNÓSTICO | Zidovudina : anemia
+## Contágio e Diagnóstico — Visão Geral
 
-- Contágio: sexual, acidentes com perfuros, vertical megaloblástica e lipodistrofia incluindo amamentação | Abacavir: reação de hipersensibilidade
+- **Contágio**: sexual, acidentes com perfurocortantes, transmissão vertical (incluindo amamentação).
+- **Curso clínico**: contágio → eclipse viral (nenhum teste positivo) → síndrome retroviral aguda (2 semanas de infecção, quadro mononucleose-like — somente PCR positivo) → latência clínica (sorologias positivam) → AIDS.
+- **Diagnóstico**: 2 testes positivos, de fabricantes diferentes (exceção: 2 testes orais não fecham diagnóstico); 2 testes rápidos sanguíneos (se discordância, repetir ambos os TRs); teste rápido oral + teste rápido sanguíneo (se discordância, repetir ambos os TRs); ELISA 3ª geração (positiva em 30 dias) ou 4ª geração (positiva em 20 dias) + PCR > 5.000 cópias (se discordância: Western blot ou Imunoblot).
+- **Vacinação**: HPV (9-45 anos), hepatite A, hepatite B 2x, meningo C, Pneumo 13 e Pneumo 23. Vacinas vivas (SCR, varicela, dengue e febre amarela): CD4 > 350 = ok; **CD4 < 200 = não administrar**.
 
-- Curso clínico HLA-B5701 Contágio → eclipse viral (nenhum teste é Seguimento positivo) → síndrome retroviral aguda (2 semanas
+### Tratamento
 
-- CV e labs gerais de infecção): monolike - somente PCR positivo
+- **TARV padrão**: dolutegravir + lamivudina + tenofovir. Iniciar ao diagnóstico, em até 7 dias.
+- **Falha virológica**: CV > 200, repetida e confirmada.
+- **Terapia dupla** (lamivudina + dolutegravir, sem tenofovir): indicada quando não há falha prévia, carga viral indetectável há > 12 meses, com última CV < 6 meses de intervalo; não pode ter tuberculose, não pode ser gestante, não pode ter hepatite B; Clcr > 30.
+- **Blip viral**: escape de CV, em geral < 200, transitório, sem correlação com infectividade.
 
-- CD4 ao diagnóstico
+### PrEP e PEP
 
-→latência clínica (sorologias positivam) → AIDS | CD4> 500, não precisa repetir
+- **PrEP**: TDF + entricitabina; indicada para > 15 anos / > 35 kg, Clcr > 60; não ter tuberculose, não ser gestante, não ter hepatite B; reavaliação a cada 4-6 meses; rastreio de sífilis e hepatites, clamídia e gonococo anuais.
+- **PEP**: TARV por 28 dias — teste rápido antes e iniciar em até 72h.
 
-- Diagnóstico | CD4 < 350 : 6 meses
+### Efeitos Colaterais de Antirretrovirais
 
-- 2 testes positivos, fabricantes diferentes (exceção | lembrar de nessa situação já tratar ILTB de 2 testes orais) | CD4 < 200 2 testes rápidos sanguíneos (discordância: | Lembrar de solicitar LF-LAM e LF-Crag repetir ambos TRs) | investigar TB e neurocripto antes de ter clínica Teste rápido oral + teste rápido sanguíneo para prevenir SIRI.
+- **Tenofovir**: alteração do metabolismo ósseo, fosfatúria (por si só já aumenta o clearance de creatinina).
+- **Zidovudina**: anemia megaloblástica e lipodistrofia.
+- **Abacavir**: reação de hipersensibilidade — realizar teste **HLA-B5701** antes de prescrever.
 
-(discordância: repetir ambos TRs)
-
-- Vacinação: HPV (9-45a) , hepA, hepB 2x, meningoC, ELISA 3ªG (positiva em 30 dias) ou 4ªG (positiva Pnm 13 e Pnm 23.
-
-em 20 dias) + PCR > 5.000 cópias (discordância: | Vacinas vivas (SCR, varicela, dengue e Western ou Imunoblot) febre amarela)
-
-Tratamento | CD4 > 350 : ok / CD4 < 200 : não administrar
-
-- TARV padrão: dolutegravir + lamivudina + tenofovir.
-
-- Falha virológica: CV > 200 repetida e confirmada sem tenofovir (terapia dupla) | Blip viral: escape de CV, em geral < 200, Não ter tuberculose, não ser gestante, não transitório, sem correlação com infectividade ter hepatite B PreP e PEP Clcr > 30 PreP: TDF + entrecitabina; PEP = TARV / 28 dias – TR Sem falha prévia, indetectável > 12 meses com antes e iniciar em até 72hs última CV < 6 meses
-
-Iniciar ao diagnóstico / em até 7 dias. em 4 semanas
-
-- Prep: > 15 anos / 35kgs, Clcr > 60. Sífilis e hepatites /
-
-- Efeitos colaterais de antirretrovirais 4-6 meses. Clamídia e gonococo anuais. Tenofovir: metabolismo ósseo, fosfatúria (por si já aumenta clearance de creatinina)
-
-1.000,000 Queda viral prevista após início da TARV 1.00,000 10000 1000 Blip viral Baixa viremia persistente 40 Viremia muito baixa 20 Viremia residual 0 3 9 0 12 15 18 21 24 27 30 33 Tempo (meses)
+> ⚠️ Dados de tabela ambíguos no OCR original — o gráfico "Queda viral prevista após início da TARV" (eixo de cópias virais de 1.000.000 a 0, eixo de tempo de 3 a 33 meses, com curvas de "blip viral", "baixa viremia persistente", "viremia muito baixa" e "viremia residual") não pôde ser reconstruído como tabela ou gráfico — conteúdo é apenas ilustrativo da queda de carga viral ao longo do tempo após início do tratamento, sem valores numéricos confiáveis extraíveis do texto.
 
 ---
 
 <!-- page:2 -->
 
-## CONCEITOS INICIAIS
+## Conceitos Iniciais
 
-## ESTRUTURA DO HIV
+### Estrutura do HIV
 
-Figura 1: Estrutura do HIV Contato Incubação: 7-15 dias Eclipse viral SRA Latência clínica 50 CD4 /ano AIDS ELISA 4aG ELISA 3aG sod oãçartnecnoC amsalp on serodacram
+*Figura 1: Estrutura do HIV*
 
-- - - C
+*Figura 2: História natural da doença — marcadores no plasma (RNA viral, antígeno p24, IgM, IgG total) ao longo das semanas de infecção, atravessando as fases de eclipse viral, síndrome retroviral aguda (SRA) e latência clínica (queda de aproximadamente 50 células de CD4/ano). Eixos e curvas exatas do gráfico original não puderam ser reconstruídos com segurança pelo OCR.*
 
-- RNA S
+### Contágio
 
-( P24 IgM IgG Total
+- **Contato sexual**: todas as modalidades, inclusive sexo oral.
+- **Transfusão de hemocomponentes**: hemácias, plaquetas e leucócitos.
+- **Transmissão vertical**: gestação (23-30%), parto (65%), amamentação (12-27%). A amamentação é **contraindicada, mesmo se carga viral negativa**.
+- **Transmissão percutânea**: acidente com materiais biológicos.
 
-- 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+## Clínica e Diagnóstico
 
-- Semanas de infecção
+### História Natural da Doença
 
-Figura 2: História natural da doença CONTÁGIO
+*Ver Figura 2.*
 
-- Contato sexual: todas as modalidades, inclusive sexo oral.
+### Síndrome Retroviral Aguda (SRA)
 
-- Transfusão de Hemocomponentes: hemácias, plaquetas e leucócitos.
-
-- Transmissão Vertical: Gestação: 23-30%/ Parto: 65%/ A amamentação é contraindicada, mesmo se carga viral negativa.
-
-Amamentação: 12-27%;
-
-- Transmissão Percutânea: Acidente com materiais biológicos.
-
-## CLÍNICA E DIAGNÓSTICO
-
-## HISTÓRIA NATURAL DA DOENÇA
-
-- Verificar Figura 2
-
-## SÍNDROME RETROVIRAL AGUDA (SRA)
-
-- É a manifestação aguda - média de 2 semanas.
-
-Apenas 50% das pessoas infectadas pelo HIV.
-
-- Até aqui ainda não houve reconhecimento do vírus pelo sistema imune. sorologias negativas
+- É a manifestação aguda, com média de 2 semanas de duração, presente em apenas 50% das pessoas infectadas pelo HIV.
+- Até esse momento ainda não houve reconhecimento do vírus pelo sistema imune — sorologias negativas.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -90,49 +65,31 @@ Apenas 50% das pessoas infectadas pelo HIV.
 
 <!-- page:3 -->
 
-## TRATAMENTO E SEGUIMENTO
+## Tratamento e Seguimento
 
-Sorologia negativa = diagnóstico é por PCR.
+- Sorologia negativa nesta fase = diagnóstico é feito por **PCR**.
+- **Clínica de síndrome mono-like**: febre; fadiga; adenomegalia generalizada; rash cutâneo maculopapular (exantema); anorexia/perda ponderal > 10% inexplicável; faringite; cefaleia; depressão maior; úlceras orais e genitais; plaquetopenia isolada.
+- **Latência clínica**: queda anual de cerca de **50 células de CD4/ano**.
 
-- Clínica de síndrome mono-like:
+### Diagnóstico na Latência Clínica / Imunossupressão Avançada
 
-## | Febre. ALVO MOLECULAR: TERAPIA COMBINADA
+Passada a fase de síndrome retroviral aguda, o diagnóstico sorológico é possível, a partir de 3-4 semanas do contágio (latência clínica).
 
-| Fadiga.
+- **Testes sorológicos**: teste rápido (sangue ou fluido oral) — demora 1-3 meses para positivar. Imunoensaios ELISA de 4ª geração (anticorpos + p24) demoram 20 dias para positivar; a 3ª geração demora 24-28 dias, pois não identifica o p24.
+- **Testes confirmatórios**: Western blot/imunoblot — demoram 30 dias para positivar; demonstram as bandas de positivação de acordo com o antígeno. Se houver dúvida sobre o diagnóstico de HIV, indica-se repetir um teste confirmatório 4 semanas após.
+- **Confirmação do diagnóstico**: quaisquer dois testes positivos, de fabricantes diferentes, fecham o diagnóstico (exceto se forem 2 testes orais): 2 testes rápidos sanguíneos; teste rápido de fluido oral + teste rápido sanguíneo; imunoenzimáticos de 3ª/4ª geração + PCR.
+- O PCR confirma quando **> 5.000 cópias**. Caso CV < 5.000 cópias, repetir com 2-4 semanas ou fazer teste confirmatório.
 
-- Verificar Figura 4 Adenomegalia generalizada. Adenomegalia generalizada. Rash cutâneo maculopapular (exantema). Anorexia/ perda ponderal >10% inexplicável. Faringite. Cefaleia. Depressão maior. Úlceras orais e genitais. Plaquetopenia isolada.
+*Figura 3: Resumo diagnóstico HIV*
 
-- Latência clínica: Queda anual de cerca de 50 CD4 ao ano.
+### Alvo Molecular: Terapia Combinada
 
-DIAGNÓSTICO NA LATÊNCIA CLÍNICA / IMUNOSSUPRESSÃO AVANÇADA. Passada a fase de síndrome retroviral aguda, o diagnóstico sorológico é possível.
+*Figura 4: Fluxograma de alvo molecular*
 
-- Após 3-4 semanas do contágio (latência clínica):
-
-- Teste sorológicos detectam: Teste rápido (sangue ou fluido oral) - demora 1-3 meses para positivar. Imunoensaios ELISA de 4ª geração: anticorpos + p24 (demoram A terceira geração demora 24-28 dias para positivar pois não identifica o p24.
-
-20 dias para positivar).
-
-- Testes chamados de confirmatórios: Western-blot/imunoblot (demoram 30 dias para positivar): demonstra as bandas de positivação de acordo com o antígeno. Se houver dúvida sobre o diagnóstico de HIV, indica-se realizar um teste confirmatório 4 semanas após.
-
-- Confirmação do diagnóstico Quaisquer dois testes positivos (de fabricantes diferentes) fecham o diagnóstico (exceto se for 2 testes orais). 2 testes rápidos sanguíneos; Teste rápido fluido oral + teste rápido sanguíneo; Imunoenzimáticos 3/4ª geração + PCR.
-
-- O PCR confirma quando > 5000 cópias. Caso CV < 5.000 cópias, repetir com 2-4 semanas ou fazer teste confirmatório.
-
-- Verificar Figura 3
-
-Figura 3: Resumo diagnóstico HIV RNAV Transcriptase reversa
-
-## DNAV
-
-Integrase: Protease cliva Reltegravir Darunavir Dolutegravir Atazanavir Cabotegravir Lopinavir Booster Era da integrase Icterícia Ritonavir
-
-## Linfócito
-
-Nucleosídeos (análogos) Não Nucleosídeos (não análogos) Tenofovir (TDF) Nevirapina (NVP) Efavirenz (EFZ)
-
-Rim e osso (DMO) Lamivudina {3TC) Neuropsia Abacavir (ABC) Zidovudina [AZT) Etravirina (ETR) Anemia megalob.
-
-e lipodistrofia Figura 4: Fluxograma de alvo molecular
+- **Nucleosídeos (análogos)**: tenofovir (TDF), lamivudina (3TC), abacavir (ABC), zidovudina (AZT).
+- **Não nucleosídeos (não análogos)**: nevirapina (NVP), efavirenz (EFZ), etravirina (ETR).
+- **Inibidores da protease**: darunavir, atazanavir, lopinavir (associados a booster de ritonavir).
+- **Inibidores da integrase**: raltegravir, dolutegravir, cabotegravir.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -140,140 +97,114 @@ e lipodistrofia Figura 4: Fluxograma de alvo molecular
 
 <!-- page:4 -->
 
-Tabela 1: Inibidores da transcriptase reversa:
+## Esquemas e Indicações
 
-- Co-infecção com TB no momento do diagnóstico;
+- Indicações de início/priorização de esquema incluem: coinfecção com TB no momento do diagnóstico; paciente que se infectou de parceiro em uso de TARV (casais sorodiscordantes); pessoas em uso de PrEP.
 
-- Paciente que se infectou de parceiro em uso de TARV
+**TARV padrão**: tenofovir + dolutegravir + lamivudina.
 
-Nucleosídeos Não nucleosídeos (casais sorodiscordantes); (análogos) (não análogos)
+- **Grávidas**: esquema mantido.
+- **Coinfectados com TB**: dobrar a dose de dolutegravir.
 
-- Pessoas em uso de PreP;
+### Efeitos Colaterais
 
-Tenofovir (TDF) Nevirapina (NVP) Tenofovir (TDF) Nevirapina (NVP) Lamivudina (3TC) Efavirenz (EFZ) Abacavir (ABC) Etravirina (ETR)
+**Análogos de nucleosídeos:**
 
-- Zidovudina (AZT)
+- **Tenofovir**: altera o clearance de creatinina sem perda de função renal; a alteração renal é avaliada com fosfatúria, pois causa uma síndrome Fanconi-like (hipofosfatemia com fosfatúria); desmineralização óssea (por isso, realizar densitometria óssea a cada 5 anos, em geral). O TAF (tenofovir alafenamida) tem melhor perfil de efeitos colaterais.
+- **Lamivudina**: excreção renal (cuidado em paciente com doença renal crônica).
+- **Abacavir**: risco de hipersensibilidade — indica-se realizar o teste **HLA-B5701** para verificar se o paciente irá desenvolver hipersensibilidade.
+- **Zidovudina**: anemia megaloblástica, lipodistrofia, esteatose hepática.
 
-- Inibidores da protease (sempre vem associado com o booster de ritonavir). Darunavir. Atazanavir. Lopinavir.
+**Não análogos de nucleosídeos:**
 
-- Inibidores da integrase. Raltegravir. Dolutegravir. Cabotegravir.
+- **Efavirenz**: efeitos neuropsiquiátricos; meia-vida longa de 13 dias (relacionada à alta taxa de resistência primária ao efavirenz).
 
-TARV padrão: Tenofovir + Dolutegravir + lamivudina
+**Inibidores de protease:**
 
-- Grávidas : mantida Q
+- **Atazanavir**: icterícia e aumento de bilirrubina; nefrolitíase.
+- **Darunavir**: penetra melhor no SNC; alta barreira genética (muito utilizado no paciente que já teve falha prévia, pois mesmo que o vírus adquira resistência, não fica resistente ao darunavir).
 
-- Co-infectados TB: dobrar dose de dolutegravir
+**Inibidores de integrase:**
 
-- EFEITOS COLATERAIS:
+- **Dolutegravir**: em geral poucos efeitos colaterais — TGI e insônia.
 
-Análogos de nucleosídeos:
+### Genotipagem Pré-Tratamento
 
-- Tenofovir: Altera clearance de creatinina sem perda de função renal. Alteração renal é avaliada com fosfatúria, pois faz uma Síndrome Fanconi-like (hipofosfatemia com fosfatúria). Desmineralização óssea (por isso fazer densitometria óssea a cada 5 anos, em geral). E TAF: melhor perfil de efeitos colaterais. C
+- Indicada em: crianças/adolescentes e gestantes.
 
-- Lamivudina: Excreção renal (cuidado com paciente doente renal crônico);
+### Terapia Dupla: Conceito Novo no Tratamento do HIV
 
-- Abacavir: Risco de hipersensibilidade. Indica-se realizar o teste HLAB5701 para verificar se o paciente irá desenvolver hipersensibilidade;
+- **Lamivudina (3TC) + dolutegravir (DTG)**, sem tenofovir — justamente porque o tenofovir tem muitos efeitos adversos.
+- **Condições**: não pode ter hepatite B; não pode ter tuberculose; não pode ser gestante; não pode ter tido falha prévia; não pode ter DRC (Clcr > 30); carga viral indetectável há > 12 meses, com 2 CVs indetectáveis com intervalo de 6 meses.
 
-- Zidovudina: Anemia megaloblástica. Lipodistrofia. Esteatose hepática L
+> ⚠️ Atenção: esquema sujeito a constante atualização por nota técnica.
 
-Não análogos de nucleosídeos:
+### Quando Iniciar
 
-- Efavirenz: Efeitos neuropsiquiátricos. S Meia vida longa de 13 dias (relacionado com alta taxa de resistência primária ao efavirenz).
+- Em até **7 dias** do diagnóstico, para todos — pode-se dar um tempo para o paciente entender que terá que fazer uso diário de medicação e lidar com seu autoestigma.
+- **Imediatamente** para gestantes.
+- **Personalizações em neuroinfecções**: neurocriptococose — 4-6 semanas se cultura de LCR negativa; neuro-TB — 4-6 semanas via de regra, 2 semanas se CD4 < 50 células.
 
-Inibidores de protease:
+### Exames Iniciais
 
-- Atazanavir: Icterícia e aumento de bilirrubina. Nefrolitíase.
+**CD4:**
 
-- Darunavir: penetra melhor no SNC. Alta barreira P genética (muito utilizado no paciente que já teve falha prévia, pois mesmo que o vírus adquira resistência, ele não fica resistente ao Darunavir).
+- Ao diagnóstico.
+- Repetir conforme alvo: CD4 < 200 — a cada 3 meses; CD4 350-500 — anual; CD4 > 500 — não solicitar; CD4 < 350 — a cada 6 meses; se presença de infecção oportunista (IO) — a cada 3 meses.
 
-Inibidores de integrase:
+**Labs gerais**: hemograma, função renal, perfil lipídico, T3/T4 livre, vitamina D, glicemia de jejum e screening de DSTs.
 
-- Dolutegravir: em geral poucos - TGI e insônia.
+### Screening de ILTB
 
-Genotipagem pré-tratamento
-
-- Crianças/adolescentes e gestantes; TERAPIA DUPLA: CONCEITO NOVO NO
-
-## TRATAMENTO DO HIV
-
-- Lamivudina (3TC) + Dolutegravir (DTG), sem tenofovir Justamente porque o tenofovir tem muito efeito adverso Condições Não pode ter hepatite B Não pode ter tuberculose, Não pode ser gestante Não pode ter tido falha prévia Não pode ter DRC (clcr > 30) Indetectável > 12 meses, com 2 CV indetectável > Atenção: constante atualização por nota técnica!
-
-6 meses de intervalo QUANDO INICIAR:
-
-- Em até 7 dias do diagnóstico para todos pode dar um tempo para o paciente entender que terá que fazer uso diário de medicação e lidar com seu auto-estigma
-
-- Imediatamente para gestantes
-
-- Personalizações: neuroinfecções Neurocripto: 4-6 semanas se cultura de NeuroTB : 4-6 semanas via de regra. 2 semanas se
-
-LCR negativa CD4 < 50 cels. EXAMES INICIAIS: CD4
-
-- ao diagnóstico
-
-- Repetir conforme alvo CD4<200: 3m CD4<350 : 6 meses Se presença de infecção oportunista (IO) CD4 350 -500: anual CD4 > 500: não solicitar.
-
-: 3 meses Labs gerais:
-
-- HMG, FR, perfil lipídico, T3/T4L, vit.D, glicemia jejum e screening DSTs
-
-Screening ILTB
-
-- IGRA / PPD se CD4 > 350 CD4 < 350: indicado tratamento de ILTB (rifapentina Uma vez tratada TB doença ou já tratada contactante domiciliar de paciente bacilífero
-
-+ isoniazida 1x smena/ 12 sem) ILTB, nós só retratamos caso paciente seja Pesquisa TB subclínica (atenção: é diferente de ILTB)
-
-- LF-LAM (teste urinário a beira-leito que detecta antígenos da tuberculose antes mesmo de o paciente manifestar clínica Ambulatório : CD4 < 200 Internação : CD4 < 100 Gravemente doente
+- IGRA/PPD se CD4 > 350.
+- **CD4 < 350**: indicado tratamento de ILTB (rifapentina + isoniazida, 1x/semana, por 12 semanas) — uma vez tratada, só se retrata se o paciente for contactante domiciliar de paciente bacilífero ou já teve TB doença.
+- **Pesquisa de TB subclínica** (atenção: é diferente de ILTB): **LF-LAM** — teste urinário à beira-leito que detecta antígenos da tuberculose antes mesmo de o paciente manifestar clínica. Indicado em: ambulatório com CD4 < 200; internação com CD4 < 100; paciente gravemente doente.
 
 ---
 
 <!-- page:5 -->
 
-Pesquisa neurocritpo subclínica | Importante é: quando é só um blip, a CV positiva
+### Pesquisa de Neurocriptococose Subclínica
 
-- LF-Crag (teste sanguíneo a beira-leito que detecta não se sustenta antígenos da tuberculose antes mesmo de o paciente | Repete CV em 4 semanas manifestar clínica | Falha virológica CD4 < 200
+- **LF-Crag** — teste sanguíneo à beira-leito que detecta antígenos antes mesmo de o paciente manifestar clínica. Indicado em: CD4 < 200; paciente gravemente doente.
+- O princípio de realizar o LF-LAM e o LF-Crag em pacientes com CD4 baixo é detectar antígenos antes de iniciar a TARV, pois nesses casos há maior risco de síndrome de reconstituição imune (SIRI).
 
-- CV > 200 cópias persistente após início da TARV CD4 < 200 Gravemente doente pacientes com CD4 baixo é detectar antígenos antes de iniciar a TARV pois nesses casos há maior risco de síndrome de reconstituição imune (SIRI)
+### Vacinação
 
-O princípio de realizar o LF-LAM e LF-Crag em 3.6 VACINAÇÃO:
+- **Todos**: HPV (9-45 anos), influenza, Pneumo 23 e Pneumo 13, COVID, hepatite B (4 doses, dose dobrada), meningo C (ACWY), dT (3 doses) e hepatite A.
+- **Vacinas vivas** (SCR, varicela e dengue conforme faixa etária, febre amarela): CD4 > 350 → liberadas; CD4 200-350 → conforme risco epidemiológico (no geral, não administrar); **CD4 < 200 → contraindicadas** (risco de falha vacinal).
+- A vacina viva simula uma infecção; em caso de imunidade celular deprimida, a simulação da infecção pode não ser efetiva para gerar imunidade.
 
-- Todos : HPV (9-45 anos), influenza, PNM 23 e PNM
+### Blip e Falha Virológica
 
-13, COVID, hepatite B 4x dose dobrada, meningo C (ACWY), dT (3 doses) e hepatite A.
+*Ver Figura 5.*
 
-- Vacinas vivas: SCR, varicela e dengue (conforme faixa etária), febre amarela. CD4 > 350 → liberadas CD4 200-350 → conforme risco epidemiológico (no geral, não administrar). CD4 < 200 → contra-indicadas risco de falha vacinal
+- **Blip viral**: escape de CV positiva em paciente em uso de TARV, no geral até 200 cópias, mas com limite mais flexível. Repete-se a CV em 4 semanas; quando é apenas um blip, a positividade não se sustenta.
+- **CV > 200 cópias, repetida e confirmada** após um período de supressão = **falha virológica**.
+- Blip viral não se correlaciona com infectividade.
+- Paciente soropositivo bem aderente ao tratamento, com carga viral indetectável há pelo menos 6 meses, não transmite HIV — ainda que apresente uma medida de CV positiva (em geral < 200, mas pode ser maior); caso isso não se confirme em exame subsequente, será considerado um escape/blip viral.
 
-- a vacina viva simula uma infecção. Em caso de imunidade celular deprimida, a simulação da infecção pode não ser efetiva para gerar imunidade
+*Figura 5: Blip viral — CV > 200 cópias persistente após início da TARV*
 
-3.7 BLIP E FALHA VIROLÓGICA:
+> ⚠️ O gráfico "Queda viral prevista após início" (Figura 5, com eixo de cópias 1.000.000 a 0 e eixo de tempo 0 a 33 meses) apresenta o mesmo padrão de blip viral descrito no texto acima; os valores numéricos exatos do gráfico não puderam ser reconstruídos com segurança pelo OCR.
 
-- Verificar Figura 5
+### PrEP e PEP
 
-- Blip viral: escape de CV positiva em paciente em uso de TARV No geral até 200 cópias, mas apresenta limite mais flexível
-
-1.000,000 Queda viral prevista após início 1.00,000 10000 1000 Blip vir 0 3 9 0 12 15 Tempo Figura 5: Blip viral - CV > 200 cópias persistente após início da TARV
-
-- CV > 200 cópias repetida e confirmada após um período de supressão
-
-Blip viral não se correlaciona com infectividade
-
-- Paciente soropositivo bem aderente ao tratamento com carga viral indetectável pelo menos há 6 meses não transmite HIV medida de CV positiva (em geral < 200, mas pode ser maior), caso isso não se confirme em exame subsequente, será considerado um escape, um blip viral.
-
-Resumo da ópera: ainda que o paciente tenha uma PREP E PEP: o
-
-- PreP - Profilaxia Pré-Exposição: Tenofovir + Entricitabina >15 anos , > 35 kgs. Duração indeterminada (enquanto o paciente estiver em comportamento de risco). Pacientes em uso de PreP tem indicação de vacina de HPV e hepatite A. Possivelmente entrará nas diretrizes do MS a Em avaliação: cabotegravir injetável bimensal. Não autorizado se Clcr < 60 Dispensação até semestral TR ou sorologia com até 7 dias Pesquisa de sífilis e hepatite B / 4-6 meses PCR gono e clamídia anual Sob demanda da TARV ral Baixa viremia persistente o (meses)
-
-Doxypep (foco: sífilis, clamídia e gonorréia) Viremia muito baixa Viremia residual 18 21 24 27 30 33
+- **PrEP — Profilaxia Pré-Exposição**: tenofovir + entricitabina; indicada para > 15 anos, > 35 kg; duração indeterminada (enquanto o paciente estiver em comportamento de risco); não autorizado se Clcr < 60.
+  - Pacientes em uso de PrEP têm indicação de vacina de HPV e hepatite A.
+  - Em avaliação: cabotegravir injetável bimensal.
+  - Dispensação até semestral; teste rápido ou sorologia com até 7 dias; pesquisa de sífilis e hepatite B a cada 4-6 meses; PCR de gonococo e clamídia anual; possibilidade de uso sob demanda ("PrEP sob demanda").
+  - **Doxy-PEP** (foco: sífilis, clamídia e gonorreia) — possivelmente entrará nas diretrizes do Ministério da Saúde.
 
 ---
 
 <!-- page:6 -->
 
-- PEP - Profilaxia Pós-Exposição = TARV Tenofovir + Lamivudina + Dolutegravir (iniciar em até 72hs da exposição; Duração de 28 dias; Testagem inicial e repete em 1-2 meses após o término).
+- **PEP — Profilaxia Pós-Exposição**: TARV com tenofovir + lamivudina + dolutegravir; iniciar em até **72h** da exposição; duração de **28 dias**; testagem inicial e repetição em 1-2 meses após o término.
 
-## REFERÊNCIAS
+## Referências
 
-Figura 5: Blip viral Adaptado de Dahl, 2021 e Palmer, 2008. Figura 6: Esquema da PrEP oral sob demanda Adaptado de Dahl/SVSA/MS.
-
-Figura 6: Esquema da PrEP oral sob demanda
+- Figura 5: Blip viral — adaptado de Dahl, 2021 e Palmer, 2008.
+- Figura 6: Esquema da PrEP oral sob demanda — adaptado de Dahl/SVSA/MS.
 
 ![Figura do material - página 6](figure-006-1.webp)

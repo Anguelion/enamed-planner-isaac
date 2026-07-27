@@ -137,7 +137,7 @@ Tabela 1: Classificação dos Leiomiomas de acordo com a FIGO.
 | 4 | Intramural |
 | 5 | Subseroso, ≥ 50% intramural |
 | 6 | Subseroso, < 50% intramural |
-| 7 | Submucoso, pediculado |
+| 7 | Subseroso, pediculado |
 | 8 | Outros (ex: cervical, parasita) |
 
 Figura 5: Fluxograma de diagnóstico e tratamento do sangramento uterino anormal.

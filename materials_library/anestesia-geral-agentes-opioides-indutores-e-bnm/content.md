@@ -2,232 +2,207 @@
 
 <!-- page:1 -->
 
-## ANESTESIA GERAL: AGENTES
+## Anestesia Geral: Agentes, Opioides, Indutores e BNM
 
-## OPIOIDES, INDUTORES E BNM
+### Óxido Nitroso (N2O)
 
-Anestesia
-
-## ÓXIDO NITROSO (N2O) QUANDO NÃO USAR A SUCCINILCONA?
-
-- “Gás hilariante”
-
-- História pessoal ou familiar de hipertermia maligna;
-
-- Propriedades analgésicas (NMDA)
-
-- Alto risco de hipercalemia grave; (cautela nos DRC);
-
-- Mantém o drive respiratório!!
-
-- Doença neurodegenerativa envolvendo denervação;
-
-- Aumenta risco de NVPO
-
-- Distrofia muscular (miastenia gravis);
-
-- Diminui a síntese de B12 (inativa
-
-- AVE/TRM com mais de 72 horas - 6 meses, metionina sintetase)
-
-- Queimadura com mais de 48-72 horas;
-
+- "Gás hilariante"
+- Propriedades analgésicas (receptor **NMDA**)
+- **Mantém o drive respiratório**
+- Aumenta risco de **NVPO** (náusea e vômitos pós-operatórios)
+- Diminui a síntese de vitamina **B12** (inativa a metionina sintetase)
 - Gás com efeito estufa
-
-- Rabdomiólise;
-
 - Afeta os espaços fechados com ar no corpo
 
-- Hipercalemia grave (com
+### Quando Não Usar a Succinilcolina
 
-HALOGENADOS (AÇÃO GABAÉRGICA) alterações eletrocardiográficas);
+- História pessoal ou familiar de **hipertermia maligna**
+- Alto risco de **hipercalemia** grave (cautela nos DRC)
+- Doença neurodegenerativa envolvendo denervação
+- Distrofia muscular (miastenia gravis)
+- **AVE**/**TRM** com mais de 72 horas até 6 meses
+- Queimadura com mais de 48-72 horas
+- Rabdomiólise
+- Hipercalemia grave (com alterações eletrocardiográficas)
+- Sepse intra-abdominal > 5 dias
+- Cautela em pacientes com glaucoma de ângulo estreito (aumenta a PIO)
+
+### Halogenados (Ação GABAérgica)
 
 - Alcanos: Halotano (obsoleto)
+- Éteres: Sevoflurano (o mais utilizado), Desflurano, Isoflurano
+- Causam depressão miocárdica, broncodilatação e vasodilatação cerebral, com aumento do **FSC** e da **PIC**
+- **Desflurano** é o mais poluente ao meio ambiente
 
-- Sepse intra-abdominal > 5 dias;
+### Pilares da Anestesia
 
-- Éter: Sevoflurano (o mais utilizado),
+- Analgesia
+- Hipnose
+- Imobilidade
+- Homeostase
+- Reversibilidade + segurança
 
-- Cautela em pacientes com glaucoma de ângulo
+### Principais Técnicas Anestésicas
 
-Desflurano, Isoflurano estreito (Aumenta PIO);
+- Local
+- Regional
+- Geral
 
-- Causam depressão miocárdica, broncodilatação, PILARES DA ANESTESIA vasodilatação cerebral com aumento do FSC e
+### Bloqueadores Neuromusculares (Visão Geral)
 
-- Analgesia;
+- **Despolarizantes**: análogo da acetilcolina que se liga aos receptores pós-sinápticos de acetilcolina da placa motora. Isso provoca estímulo contínuo da placa, resultando em fasciculações seguidas de paralisia motora.
+- **Não despolarizantes**: atuam de forma competitiva, inibindo os receptores de acetilcolina pós-sinápticos da placa motora.
 
-PIC (halogenados)
+## Anestesia Geral
 
-- Hipnose;
+### Opioides
 
-- Desflurano é o mais poluente ao meio ambiente
+- Agonistas dos receptores **MOR** (mu), **KOR** (kappa) e **DOR** (delta).
+- Classificação quanto à potência:
+  - **Potentes**: morfina, fentanil (e derivados), hidromorfona, metadona, oxicodona.
+  - **Potência intermediária**: buprenorfina e nalbufina (agonistas parciais).
+  - **Fracos**: codeína, meperidina, tramadol, dextropropoxifeno, tapentadol.
+- **Fentanil** — opioide mais utilizado na anestesiologia:
+  - Opioide sintético; **100x mais potente que a morfina**.
+  - Pico em 3-5 min — deve-se aguardar o efeito ocorrer.
+  - Duração curta em dose única; contudo, em infusão contínua, demonstra "meia-vida contexto-sensitiva desfavorável", isto é, em pouco tempo é alcançado um acúmulo da substância muito grande no organismo, trazendo diversos malefícios.
 
-- Imobilidade;
+### Óxido Nitroso (N2O) — Inalatório (Resumo)
 
-## BLOQUEADORES NEUROMUSCULARES
+- Inerte / "gás hilariante"
+- Propriedades analgésicas (receptor NMDA)
+- Aumenta risco de NVPO
+- Gás com efeito estufa
+- Diminui síntese de vitamina B12
+- Mantém drive respiratório
 
-- Homeostase;
+### Fármacos Hipnóticos Endovenosos
 
-- Despolarizantes: Análogo da acetilcolina que se
+#### Propofol
 
-- Reversibilidade + segurança.
+- Agonista **GABAa**; emulsão lipídica — branco: 10% óleo de soja, 2,25% glicerol, 1,2% de fosfato purificado de ovos (não é contraindicado em alérgicos a ovos).
+- Apresenta dor à injeção.
+- **Dose**: 1-2 mg/kg.
+- Rápido início e término de ação: 1 minuto — perda de consciência.
+- Redistribuição: 2-8 minutos — despertar.
+- Apresenta metabolização hepática e extra-hepática.
+- **Efeitos adversos**:
+  - Cardiodepressor → hipotensão
+  - Queda de base de língua → pode causar apneia
+  - **Síndrome da Infusão do Propofol** → evento raro, porém letal. Ocorre quando a dosagem é maior que 4 mg/kg/h por período > 48 horas, geralmente em ambiente de UTI. Observa-se evolução com rabdomiólise, hiperlipidemia, acidose metabólica, cardiomiopatia aguda, hipercalemia, esteatose hepática e pancreatite aguda.
 
-liga aos receptores pós-sinápticos de acetilcolina PRINCIPAIS TÉCNICAS ANESTÉSICAS da placa motora. Isso provoca estímulo contínuo
+#### Cetamina
 
-- Local;
+- Antagonista **NMDA** (N-Metil-D-Aspartato) — provoca uma "anestesia dissociativa".
+- Broncodilatadora: mantém drive respiratório e reflexos de via aérea.
+- Hemodinamicamente estável: libera catecolaminas — pode ocorrer taquicardia e hipertensão no momento da injeção; atenção em pacientes depletados.
+- Rápido início de ação: 1 minuto — perda de consciência.
+- 10-15 minutos — duração do efeito.
+- Metabolismo hepático — norcetamina (20%-30% ativa).
+- **Efeitos adversos**: aumento da PIC; sialorreia; cistite intersticial (em qualquer dose); crise de esquizofrenia/surto psicótico; potencial de abuso; taquicardia e hipertensão.
 
-da placa, resultando em fasciculações seguidas de
+> ⚠️ A tabela original ("Tabela 1. Cetamina") traz o campo "Mecanismo Principal" como "Agonista NMDA", em contradição com o texto acima e com a farmacologia da cetamina (antagonista NMDA). Mantido como **Antagonista NMDA**, conforme consta duas vezes no texto original.
 
-- Regional;
+**Tabela 1 — Cetamina (Hipnótico)**
 
-paralisia motora.
+| Parâmetro | Valor |
+|---|---|
+| Mecanismo principal | Antagonista NMDA |
+| Concentração | 50 mg/mL (5%) |
+| Via de administração | IV, IM, IN, VO |
+| Dose habitual (IOT) | 1-2 mg/kg IV |
+| Efeitos adversos | Aumento da PIC; sialorreia; ↑FC; ↑PA |
 
-- Geral.
+#### Etomidato
 
-- Não despolarizantes: Atua de forma competitiva de forma inibitória sobre os receptores de acetilcolina pós-sinápticos da placa motora.
+- Agonista de **GABAa**.
+- Derivado de imidazol.
+- Mínima repercussão hemodinâmica.
+- Hipnótico rápido de indução: início do efeito em 2-4 minutos.
+- **Não usar em BIC** (bomba de infusão contínua), seja para sedação ou para manutenção — risco de **insuficiência adrenal**.
+- Metabolização hepática e extra-hepática.
+- **Efeitos adversos**: mioclonias; dor à injeção; náusea e vômitos.
 
-## ANESTESIA GERAL
+**Tabela 2 — Etomidato (Hipnótico)**
 
-| Causam depressão miocárdica, broncodilatação, vasodilatação cerebral com aumento do FSC e OPIOIDES PIC (halogenados);
+| Parâmetro | Valor |
+|---|---|
+| Mecanismo principal | Agonista GABAa |
+| Concentração | 2 mg/mL (0,2%) |
+| Via de administração | IV |
+| Dose habitual (IOT) | 0,3 mg/kg IV |
+| Efeitos adversos | Insuficiência adrenal; ↑NVPO; ↑convulsões; mioclonias; dor à injeção |
 
-- Agonistas dos receptores MOR (mu), KOR (kappa),
+#### Midazolam
 
-- Óxido nitroso (N2O) - inalatório:
+- Agonista GABAa.
+- Benzodiazepínico de efeito mais curto que o diazepam.
+- Efeito: 1-3 minutos (início); 10-20 minutos (duração).
+- Metabolismo hepático, com metabólitos ativos (risco de ressedação).
+- Amnésia e ansiólise em doses baixas.
+- Anticonvulsivante.
+- **Efeitos adversos**: apneia obstrutiva (em associação com opioides); delirium (principalmente em idosos); hipotensão leve; intoxicação (antagonista: **flumazenil**).
 
-DOR (delta); | Inerte/“Gás hilariante”;
+**Tabela 3 — Midazolam (Hipnótico)**
 
-- Classificação quanto a potência: potentes: | Propriedades analgésicas (receptor NMDA) ;
+| Parâmetro | Valor |
+|---|---|
+| Mecanismo principal | Agonista GABAa |
+| Concentração | 5 mg/mL (0,05%) e 1 mg/mL (0,1%)* |
+| Via de administração | IV, IM |
+| Dose habitual (IOT) | 0,2-0,4 mg/kg IV |
+| Efeitos adversos | Delirium; apneia; hipotensão; intoxicação |
 
-morfina, fentanil (e seus derivados), hidromorfona, | Aumenta risco de NVPO (náusea e vômitos metadona, oxicodona; potência intermediária: pós operatórios)
+\* Percentuais conforme constam no documento original; a conversão entre mg/mL e % pode conter erro de OCR na primeira apresentação.
 
-buprenorfina e nalbufina (agonistas parciais); | Gás com efeito estufa opioides fracos: codeína, meperidina, tramadol, | Diminui síntese de vitamina B12 dextropropoxifeno, tapentadol. | Mantém drive respiratório
+#### Dexmedetomidina
 
-- Fentanil - opioide mais utilizado na anestesiologia:
+- Alfa2-agonista.
+- Descrita no material como "7-8x menos seletiva a2/a1" (texto mantido conforme original); duração de ação mais longa.
+- Usos: sedação, analgesia, adjuvante — poupadora de opioide.
+- Mantém drive respiratório; padrão eletroencefalográfico semelhante ao do sono fisiológico.
+- **Efeitos adversos**: bradicardia, hipo/hipertensão, poliúria (por inibição do ADH), efeito anti-sialogogo.
 
-Opioide sintético; 100x mais potente que a morfina; FÁRMACOS HIPNÓTICOS ENDOVENOSOS Pico em 3-5 min. – Desse modo, deve-se aguardar o Propofol efeito ocorrer. Duração curta em dose única; contudo, Agonista GABAa; emulsão lipídica – branco: 10% óleo de em infusão contínua, demonstra “meia-vida contexto- soja; 2,25% glicerol; 1,2% de fosfato purificado de ovos sensitivo desfavorável”, isto é, em pouco tempo, é (não é contraindicado em alérgicos a ovos).
+**Tabela 4 — Dexmedetomidina (Hipnótico)**
 
-alcançado um acúmulo da substância muito grande no
-
-- Apresenta dor à injeção;
-
-organismo, trazendo diversos malefícios.
-
-- Dose: 1 – 2 mg/kg;
-
-- Rápido início e término de ação: 1 minuto – perda
-
-FÁRMACOS HIPNÓTICOS INALATÓRIOS de consciência;
-
-- Halogenados (ação GABAérgica):
-
-- Redistribuição; Alcanos; halotano – obsoleto;
-
-- 2 – 8 minutos – despertar; Éteres: sevoflurano (mais utilizado),
-
-- Apresenta metabolização hepática e extra-hepática;
-
-desflurano, isoflurano;
-
-- Efeitos adversos:
+| Parâmetro | Valor |
+|---|---|
+| Mecanismo principal | Alfa2-agonista |
+| Concentração | 200 mcg/mL (0,02%) |
+| Via de administração | IV, IM, IN |
+| Dose habitual (IOT) | Ataque: 0,5-1 mcg/kg (em 5-10 min); Manutenção: 0,2-1 mcg/kg/h IV |
+| Efeitos adversos | Bradicardia; hipo/hipertensão |
 
 ---
 
 <!-- page:2 -->
 
-| Cardiodepressor → hipotensão; | Inibição da 11B-hidroxilase → Impede a produção | Queda de base de língua → pode causar apneia; de cortisol;
+## Bloqueadores Neuromusculares (BNM)
 
-| Síndrome da Infusão do propofol → evento raro, | Aumento de náuseas e vômitos em pós-operatório; contudo, letal. Ocorre quando a dosagem é | Aumento do risco de convulsões;
+### Succinilcolina
 
-maior que 4 mg/kg/h, por período > 48 horas → | Mioclonias; maior que 4 mg/kg/h, por período > 48 horas → geralmente ocorre em ambiente de UTI;
+- **Tipo**: Despolarizante.
+- **Dose (IOT)**: 1 mg/kg (70 kg → 70 mg).
+- **Latência**: 30 segundos.
+- **Duração**: Ultracurta.
+- **Metabolismo**: Colinesterases plasmáticas.
+- **Efeitos adversos**: mialgia; bradicardia; hipercalemia; anafilaxia; gatilho para hipertermia maligna.
+- **Antídoto**: não há.
+- **Contraindicações**: hipercalemia; hipertermia maligna; deficiência de pseudocolinesterase; up-regulation de receptores extrajuncionais (situações especiais).
 
-| Ainda, observa-se evolução com rabdomiólise e hiperlipidemia; | Acidose metabólica; | Cardiomiopatia aguda;
+**Atenção — receptores extrajuncionais**: em pacientes queimados, críticos ou acamados, os receptores de acetilcolina, que normalmente se localizam na placa motora (receptores juncionais), tendem a se deslocar para fora dessa região, sendo então chamados de receptores extrajuncionais. Em período de abertura difusa dos receptores (juncionais e extrajuncionais), observa-se entrada de sódio no axônio pelos canais de sódio voltagem-dependentes e saída de potássio, agora distribuído por toda a musculatura do paciente. Nesse contexto, o uso de succinilcolina (Quelicin) aumenta exponencialmente o risco de parada cardíaca por arritmias, devido à despolarização difusa.
 
-| Hipercalemia; | Esteatose hepática; pancreatite aguda. Cetamina: Antagonista NMDA (N-Metil-D-Aspartato) – provoca uma “anestesia dissociativa”;
+### Rocurônio e Cisatracúrio
 
-- Broncodilatadora: mantém drive respiratório e reflexos de via aérea. Hemodinamicamente estável:
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança o pareamento entre doses, latências e valores de conversão para 70 kg de cada fármaco; conteúdo listado em texto corrido a seguir, agrupado pelo que é atribuível com confiança a cada bloqueador.
 
-liberação de catecolaminas – pode ocorrer taquicardia e hipertensão ao momento da injeção: atenção em pacientes depletados.
+- Ambos são **não despolarizantes** (o original grafa "adespolarizante"), de duração **intermediária**.
+- **Rocurônio**: dose citada de 0,6 mg/kg e também 1,2 mg/kg (dose de sequência rápida); latências citadas de 1-2 min e 30 segundos; metabolismo hepático (≈70%) e renal (≈30%); efeitos adversos mínimos; risco de anafilaxia.
+- **Cisatracúrio**: dose citada de 0,1-0,2 mg/kg; latência citada de 3-4 minutos; metabolismo por **reação de Hoffman** (hidrólise, órgão-independente, ≈70%) com fração adicional (≈30%) não especificada com segurança no original; efeitos adversos mínimos; risco de anafilaxia.
+- Valores de conversão para 70 kg citados no original (70 kg → 10 mg; 70 kg → 85 mg) não puderam ser atribuídos com segurança a cada fármaco.
 
-- Rápido início de ação: 1 minuto – perda de consciência;
+### Sugamadex
 
-- 10-15 minutos – duração do efeito;
-
-- Metabolismo hepático – norcetamina (20%-30% ativa);
-
-- Efeitos adversos: Aumento da PIC; sialorreia; Cistite intersticial – em qualquer dose; M Crise de esquizofrenia/surto psicótico; A Abuso.
-
-taquicardia e hipertensão;
-
-- Tabela 1.
-
-- Cetamina (Hipnótico)
-
-- Mecanismo Principal Agonista NMDA
-
-- Concentração 50 mg/mL (5%)
-
-Via de administração IV, IM, IN, VO Dose habitual (IOT) 1-2 mg/Kg IV Aumento da PIC Efeitos adversos Sialorréia ↑FC, ↑PA Etomidato Agonista de GABAa
-
-- Derivado de imidazol;
-
-- Mínima repercussão hemodinâmica;
-
-- Hipnótico rápido de indução: início do efeito:
-
-2-4 minutos;
-
-- Não usar em BIC, seja para sedação ou para manutenção Risco de insuficiência adrenal.
-
-- Metabolização hepática e extra-hepática;
-
-- Efeitos adversos: | Mioclonias; Dor com a injeção; Náusea e vômitos.
-
-Tabela 2. Etomidato (Hipnótico) Mecanismo Principal Agonista GABAa Concentração 2 mg/mL (0,2%) Via de administração IV Dose habitual (IOT) 0,3 mg/Kg IV Insuf. adrenal ↑NVPO; ↑Convulsões Efeitos adversos Mioclonias Dor à injeção Midazolam Agonista GABAa
-
-- É um benzodiazepínico de efeito mais curto que o diazepam.
-
-- Efeito: 1-3 minutos: início; 10-20 minutos: duração.
-
-- Metabolismo hepático: metabólitos ativos (risco de ressedação).
-
-- Amnésia e ansiólise em doses baixas;
-
-- Anticonvulsivante;
-
-- Efeitos adversos: Apneia obstrutiva (em associação com opioides); Delirium – principalmente em idosos; Hipotensão leve; Intoxicação – o antagonista é o flumazenil.
-
-Tabela 3. Midazolam (Hipnótico) Mecanismo Principal Agonista GABAa 5 mg/mL (0,05%) Concentração 1 mg/mL (0,1%)
-
-Via de administração IV, IM Dose habitual (IOT) 0,2-0,4 mg/Kg IV Delirium Apneia Efeitos adversos Hipotensão Intoxicação
-
----
-
-<!-- page:3 -->
-
-Dexmedetomidina Tabela 4. A2-agonista
-
-- É 7-8x menos seletiva a2/a1. Duração de ação mais longa.
-
-Dexmedotomdina (Hipnótico)
-
-- Usos: sedação, analgesia, adjuvante – Poupador
-
-- Usos: sedação, analgesia, adjuvante – Poupador de opioide;
-
-- Mantém drive respiratório; Padrão eletroencefalográfico semelhante ao do sono fisiológico;
-
-- Efeitos adversos: Bradicardia, hipo/hipertensão, poliúria – por inibição do ADH, Anti-sialogogo.
-
-## BLOQUEADORES NEUROMUSCULARES (BNM)
-
-Bloqueador neuromuscular Succinilcolina IOT 1 mg/kg Dose 30 seg Latência 70 kg → 70 mg Tipo Despolarizante Duração Ultracurta Metabolismo Colinesterases plasmáticas Mialgia;
-
-Bradicardia; Hipercalemia; Efeitos adversos Anafilaxia; Gatilho para hipertermia maligna Antídoto --------Hipercalemia; Hipertermia maligna; Deficiência de Pseudocolinesterase;
-
-Contraindicações Up-regulation de receptores extra juncionais (situações especiais) ATENÇÃO! Em pacientes queimados, críticos, acamados, os receptores de acetilcolina, que normalmente se localizam na placa motora (receptores juncionais), tendem a se deslocar para fora de tal região. Esses receptores, fora da região da placa motora, são denominados receptores extrajuncionais.
-
-Em período de abertura difusa dos receptores, juncionais e extrajuncionais, observa-se a entrada de sódio no axônio pelos canais de sódio voltagem dependente, e saída de potássio, agora tendendo a ser distribuído por toda a musculatura do paciente! Nesse momento, o uso de Quelicin (succinilcolina), aumenta exponencialmente o risco de parada cardíaca, por arritmias, pela despolarização difusa! Mecanismo Principal Alfa2-agonista Concentração 200 mcg/mL (0,02%)
-
-Via de administração IV, IM, IN Atq: 0,5-1 mcg/kg (5-10 Dose habitual (IOT) min) Manut: 0,2-1 mcg/ o kg/h IV Bradicardia Efeitos adversos Hipo/hipertensão Rocurônio Cisatracúrio 0,6 mg/kg 1 – 2 min 0,1 – 0,2 mg/kg 1,2 mg/kg 3 – 4 minutos 30 seg 70 kg → 10 mg 70 kg → 85 mg Adespolarizante Adespolarizante Intermediária Intermediária Reação de Hoffman 30% s Hepático 70% Renal 30% Hidrólise 70% Órgão independente Mínimos Mínimos Anafilaxia Anafilaxia Sugamadex 2 – 4 mg/kg --------16 mg/kg (após 1,2 mg/kg de rocurônio)
-
---------- -------s
+- **Dose padrão**: 2-4 mg/kg.
+- **Dose de reversão imediata**: 16 mg/kg (após uso de 1,2 mg/kg de rocurônio).
+- Não possui antídoto próprio descrito no material.

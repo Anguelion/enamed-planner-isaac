@@ -13,7 +13,7 @@
 | Epidemiologia | Trauma urogenital, queda a cavaleiro; causa mais comum é iatrogênica (sondagem vesical) | Quase exclusiva de fratura (fx) de pelve; 1 a 10% das fraturas; fratura do anel anterior ou diástase púbica |
 | Sinais e sintomas | Uretrorragia, retenção, hematoma | Uretrorragia, retenção, hematoma |
 | Exames complementares | UCRM — local e se lesão completa | Uretrocistografia retrógrada (A) e miccional (B) |
-| Tratamento | Penetrante: reparo primário; Meato: meatotomia; Peniana: técnicas substitutivas | Contuso: cistostomia/realinhamento endoscópico; Bulbar: UI (< 1 cm), T-T (< 2,5 cm), enxerto de mucosa; Posterior: anastomótica +- Manobras de Webster |
+| Tratamento | Penetrante: reparo primário; Meato: meatotomia; Peniana: técnicas substitutivas; Bulbar: UI (< 1 cm), T-T (< 2,5 cm), enxerto de mucosa | Contuso: cistostomia/realinhamento endoscópico; Posterior: anastomótica +- Manobras de Webster |
 | Conduta geral | Contuso: cistostomia/realinhamento endoscópico → reavaliação para tratamento definitivo; Penetrante ou fratura peniana: reparo primário | (idem) |
 
 ![Figura do material - página 1](figure-001-1.webp)

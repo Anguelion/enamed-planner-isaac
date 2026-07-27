@@ -321,15 +321,14 @@ Caso não haja cura funcional (pela doença), há necessidade de seguimento, poi
 
 **Tabela 5**: IG — 7 dias após exposições perinatais ou percutâneas / 14 dias após exposição sexual.
 
-> ⚠️ Tabela reconstruída a partir de OCR — confira contra a fonte original.
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-| Fonte AgHBs+ | Acidentado | Vacina | Ig |
-|---|---|---|---|
-| Vacinado, anti-HBs > 10 UI | Negativo | Negativo | Negativo |
-| Não vacinado | Positivo | Positivo | Negativo |
-| Anti-HBs < 10 UI / desconhecido | Positivo | Positivo | Negativo |
-| Sem resposta após segunda série (6 doses) | Negativo | Positivo 2x | Negativo |
-| Fonte desconhecida | Positivo 2x | | |
+Profilaxia pós-exposição com fonte AgHBs+, conforme situação vacinal do acidentado:
+
+- **Vacinado, anti-HBs > 10 UI**: nenhuma medida adicional (sem vacina, sem IG).
+- **Não vacinado**: iniciar esquema vacinal + IG.
+- **Anti-HBs < 10 UI ou status desconhecido**: dose de vacina + IG.
+- **Sem resposta vacinal após segunda série completa (6 doses)**: IG em 2 doses.
 
 ---
 

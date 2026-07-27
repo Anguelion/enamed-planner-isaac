@@ -49,7 +49,7 @@
 | 1 | Déficit leve de atenção | Alteração do sono | Apraxia, asterixis leve ou tremor |
 | 2 | Letargia | Comportamento inadequado, discurso lento e distorcido | Asterixis (flapping) evidente |
 | 3 | Sonolento | Desorientação grave, agressividade | Asterixis positivo; rigidez muscular; clonias; hiperreflexia; Babinski + |
-| 4 | Coma | Confusão | Postura de descerebração, asterixis ausente, rigidez |
+| 4 | Coma | — | Postura de descerebração, asterixis ausente, rigidez |
 
 ## Encefalopatia Hepática (EH)
 

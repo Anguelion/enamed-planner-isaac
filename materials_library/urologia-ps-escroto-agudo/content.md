@@ -79,7 +79,7 @@
 | Fáscia de Scarpa | Túnica dartos |
 | Aponeurose do músculo oblíquo externo | Fáscia espermática externa |
 | Músculo oblíquo interno | Cremaster e fáscia espermática média |
-| Fáscia transversalis | Fáscia espermática média |
+| Fáscia transversalis | Fáscia espermática interna |
 | Peritônio parietal | Túnica vaginal |
 
 *Figura 2: Vascularização arterial (testicular, deferencial e cremastérica) e venosa (plexo pampiniforme e veia testicular) do testículo.*

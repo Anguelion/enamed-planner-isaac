@@ -2,117 +2,77 @@
 
 <!-- page:1 -->
 
-Doenças Oportunistas no HIV (CM) PULMÃO
+## Doenças Oportunistas no HIV — Visão Geral
 
-- Se LF +, indicar punção
+### Pulmão
 
-- Pneumocistose (PCP) = febre baixa subaguda + | cultura + tinta da china dispneia dessaturação com Rx de tx normal + DHL: | Se algum positivo(leveduras encapsuladas) - Dx: clínico-radiológico = TC com asa de tto com anfotericina B lipossomal + fluconazol borboleta (vidro-fosco central); LBA possível / 5-flucitosina Tratamento: bactrim (sulfametoxazol- | Aguardar de 4-6 semanas para iniciar TARV trimetropina) + corticoide (pO2 < 70) 5 dias / | cultura em LCR negativa + melhora alternativo : clinda + primaquina: neurológica de HIC Possível piora no 3º-5º dia, melhora após.
+- **Pneumocistose (PCP)**: febre baixa subaguda + dispneia + dessaturação, com **Rx de tórax normal** + **DHL elevado**. Dx: clínico-radiológico = TC com **vidro-fosco em asa de borboleta**; LBA/PCR pneumocystis possível. Tratamento: **bactrim** (sulfametoxazol-trimetoprima) + corticoide se **pO2 < 70** por 5 dias; alternativa: clindamicina + primaquina. Possível piora no 3º-5º dia, com melhora após.
+- **Histoplasmose**: quadro clínico semelhante, com pancitopenia / pápulas / esplenomegalia; aumento de ferritina e DHL; TC com micronódulos difusos, podendo formar cavitações — diferencial com TB miliar. Dx: aspirado de medula óssea com leveduras. Tratamento: anfotericina B lipossomal (itraconazol em casos leves).
 
-(PCR pneumocysti); | Se LCR negativo: fluconazol preemptivo
+### TGI
 
-- LEMP: déficits neurológicos progressivos e
+- Principal causa de disfagia: **candidíase** (fluconazol empírico 14 dias; EDA se refratariedade).
+- Principal causa de úlceras: **CMV** (ganciclovir, avaliar fundo de olho). Úlceras em TGI também podem ser herpes simples (ou o próprio HIV).
+- Lembrar: **CMV** — se CD4 < 50, infiltrado em vidro fosco localizado.
 
-- Histoplasmose: quadro clínico semelhante, com cumulativos. Acometimento substância branca, T2 pancitopenia / pápulas / esplenomegalia: e FLAIR. Vírus JC. Tratamento = TARV Parasita do sistema retículo-endotelial -
+### NeuroAIDS
 
-- Linfoma 1ºrio SNC: igual NTX. Lesão única esplenomegalia - aumento de ferritina, DHL; subcortical. Sem edema. EBV (anti-VCA). TC com mcironódulos difusos, pode SIRI:
+- **Neurotoxoplasmose**: sinal neurológico focal / crise convulsiva — lesão em núcleos da base com realce anelar, edema que desvia linha média — associar corticoide. Dx clínico-radiológico (PCR em LCR pouco sensível, < 60%); prova terapêutica por 2-3 semanas; biópsia se refratariedade (diferenciar de linfoma de SNC). Tratamento: sulfadiazina + pirimetamina + ácido folínico / bactrim / clindamicina + pirimetamina.
+- **LEMP**: déficits neurológicos progressivos e cumulativos. Acometimento de substância branca em T2 e FLAIR. Causada pelo vírus JC. Tratamento = otimizar TARV.
+- **Linfoma 1º de SNC**: lesão única subcortical, sem edema. Associado a EBV (anti-VCA).
+- **Neurocriptococose**: parasita do sistema retículo-endotelial — esplenomegalia, aumento de ferritina e DHL. Dx: aspirado de medula óssea com leveduras. Tratamento: anfotericina B lipossomal.
 
-formar cavitações
+> ⚠️ SIRI (síndrome de reconstituição imune): piora inflamatória de 4-8 semanas após início da TARV, principalmente se CD4 < 100 — usar corticoide. Suspender TARV apenas se neurocripto ou neuroTB.
 
-- Piora inflamatória de 4-8 semanas após início de diferencial com TB miliar TARV, principalmente se CD4 < 100. Corticoide! Dx: aspirado de medula óssea com leveduras; Suspender TARV apenas se neurocripto ou neuroTB. Tratamento : anfotericina B lipossomal TGI:
+### Profilaxias Oportunistas
 
-(itraconazol casos leves).
+- **Pulmão**: PCP — sulfametoxazol-trimetoprima (bactrim) 3x/semana; Histoplasmose se CD4 < 150 — itraconazol.
+- **NeuroAIDS**: Neurotoxoplasmose — bactrim 1-2x/dia; Neurocriptococose — fluconazol *ad eternum*.
+- Pesquisar fase pré-clínica para evitar iniciar TARV e ter SIRI (síndrome de reconstituição imune).
+- **ILTB** se CD4 < 350; **LF-Crag** se CD4 < 200.
 
-- Principal causa de disfagia : candidíase (fluconazol
-
-- Lembrar ainda: empírico 14 dias – CMV (CD4 < 50 , infiltrado em em micronódulos EDA se refratariedade);
-
-/ vidro fosco localizado) - ganciclovir, avaliar
-
-- Principal causa de úlceras : CMV fundo de olho; | Mas úlceras em TGI podem ser herpes simples
-
-NeuroAIDS: (ou o próprio HIV)
-
-- Neurotoxo: sinal neurológico focal / crise | bx sempre - ganciclo / aciclovir / TARV convulsiva - lesão em núcleos da base com | CMV : viremia não é doença! Pode ter lesão realce anelar, edema que desvia linha média - por CMV com CV em sangue negativa associar corticoide: Profilaxias oportunistas: Dx clínico-radiológico: PCR em LCR é ruim (<
-
-- Pulmão: PCP : sulfametoxazol-trimetropina se refratariedade (diferenciar de linfoma SNC); cels : itraconazol; Tratamento: sulfadiazina + pirimetamina + ac.
-
-60%) - prova terapêutica por 2-3 semanas - bx (bactrim) 3x/ semana / Histoplasmose se CD4 < 150
-
-- NeuroAIDS: neurotoxo : bactrim 1-2x/dia / folínico / bactrim / clindamicina + pirimetamina. Neurocritpto : fluconazol ad. eternum;
-
-- Neurocritpo: principal causa de meningismo
-
-- CMV: sempre pesquisa ativa de retinite se Pesquisar fase pré-clínica para evitar de inicar
-
-(cefaléia, HIC) CD4 < 50 cels
-
-- ILTB se CD4 < 350 LF-Crag se CD4 < 200:
-
-TARV e ter SIRI (reconstituição imune) TB pulm. RIPE TARV Localidades CD4<50cels Ideal remotas NEURO TB RIPE TARV TARV TARV CRIPTO Fluco+anfo TARV PCP Bactrim TARV NTX Bactrim/sulfa TARV Em até 7 dias 14 dias 4-6 sem 8 sem
+> ⚠️ Trecho de tabela no OCR original (esquema TB pulmonar / Neuro TB / Cripto / PCP / Neurotoxoplasmose com RIPE, TARV, fluconazol+anfotericina, bactrim e prazos de "em até 7 dias / 14 dias / 4-6 semanas / 8 semanas") estava fragmentado de forma ambígua — não foi possível reconstruir o pareamento linha/coluna com segurança. Dados suprimidos aqui; ver seção "Profilaxia para Doenças Oportunistas" ao final, também sinalizada como ambígua.
 
 ---
 
 <!-- page:2 -->
 
-## PULMÃO
+## Pulmão
 
-| Úlceras orais; | Esplenomegalia. PNEUMOCISTOSE
+### Pneumocistose
 
-- Radiologia:
+- **Agente etiológico**: fungo, *Pneumocystis jirovecii*.
+- **História clínica**: dispneia + emagrecimento + tosse seca + febre; subagudo (1-3 semanas).
+- **Exame físico**: nada de alterado na ausculta (padrão intersticial); atentar para taquidispneia e dessaturação; comumente associado a candidíase oral.
+- **Radiologia**: dissociação clínico-radiológica — paciente mal, fraco/consumido, dispneico, dessaturando, com **Rx de tórax normal**; TC com infiltrado bilateral central em **vidro fosco (asa de borboleta)**; infiltrado micronodular difuso, podendo haver nódulos confluentes em alguns casos.
+- **Laboratório**: inespecífico — aumento de DHL; CD4 < 200; PaO2 baixa.
+- **Diagnóstico**: clínico-radiológico. Confirmatório (pouco realizado, mas altamente sensível): PCR em LBA.
 
-- Agente etiológico: fungo, pneumocystis jirovecii; | Infiltrado micronodular difuso;
+*Figura 1: Pneumocistose*
 
-- História clínica: | Em alguns casos há nódulos confluentes;
+- **Tratamento**: **bactrim** (sulfametoxazol-trimetoprima) por 21 dias. Como efeito colateral (por ser sulfa), causa alergia cutânea, nefrite intersticial aguda, intolerância gástrica e flebite; alternativa: clindamicina + primaquina. Associar **prednisona 40 mg de 12/12h por 5 dias se PaO2 ≤ 70 mmHg**.
+- Atenção: risco de IRA, síndrome de Stevens-Johnson, hipercalemia. O paciente pode piorar no 3º-5º dia de tratamento; espera-se melhora a partir do 7º dia.
 
-- História clínica: Dispnéia + emagrecimento + tosse seca + febre; Subagudo (1-3 semanas).
+### Histoplasmose
 
-- No exame físico: Nada em ausculta (é padrão intersticial); Atentar para taquidispneia e dessaturação; Comumente vemos candidíase oral.
+- **História clínica**: semelhante à PCP — emagrecimento + tosse seca subaguda + febre diária + dispneia.
+- **Exame físico**: mais florido (pneumocistose é exclusivamente pulmonar, histoplasmose é sistêmica): MV+ com roncos/estertores difusos; pele com pápulas/placas eritematosas; em alguns casos há nódulos confluentes. Diagnóstico diferencial: TB, criptococose, CMV, paracoccidioidomicose.
 
-- Na radiologia: Dissociação clínico-radiológica: o paciente em si está mal, está fraco/consumido, dispneico, dessaturando com Rx de Tx normal; TC com infiltrado bilateral central em vidro fosco
+*Figura 2: infiltrado micronodular difuso*
 
-(asa de borboleta).
+- **Laboratório**: CD4 < 100-150; pancitopenia pronunciada; DHL aumentado; ferritina aumentada.
+- **Diagnóstico**: aspirado de medula óssea com pesquisa e cultura de fungos; LBA com pesquisa e cultura de fungos; sorologia (imuno e contraimuno), positiva em 60% dos casos.
+- **Tratamento**: geral — itraconazol; casos mais graves — anfotericina B lipossomal.
 
-- Laboratório inespecífico: Aumento de DHL; CD4 < 200; PaO2 baixa.
+## Infecções Oportunistas no SNC
 
-- Diagnóstico: clínico-radiológico: Confirmatório (pouco realizado, mas altamente sensível): PCR em LBA.
+### Neurotoxoplasmose
 
-- I
-
-Figura 1: Pneumocistose
-
-- Tratamento: Bactrim - sulfametoxazol-trimetropina por 21 dias Bactrim é sulfa, e, como efeito colateral, causa muita alergia cutânea, nefrite intersticial aguda, intolerância gástrica e flebite; alternativa: clindamicina + primaquina. Associar prednisona 40mg de 12/12h por 5 dias se PaO2 ≤ 70mmHg.
-
-IRA, síndrome de steven-johnson, hipercalemia, Atenção. O paciente pode piorar no 3°- 5° dia de tratamento! Espera-se melhora a partir do 7o dia.
-
-## HISTOPLASMOSE
-
-- História clínica: semelhante à PCP: Emagrecido + tosse seca subaguda + febre diária + dispnéia.
-
-- Exame físico: mais florido - pneumocystis é exclusivo pulmonar, histoplasma é sistêmico! MV + com roncos / estertores difusamente; Pele: Pápulas / placas eritematosas; | Em alguns casos há nódulos confluentes; Diagnóstico diferencial: TB, criptococose,
-
-CMV, paracocco. Figura 2: infiltrado micronodular difuso
-
-- Laboratório geral: CD4 < 100 - 150; Pancitopenia pronunciada; DHL aumentado; Ferritina aumentada.
-
-- Diagnóstico: Aspirado de medula com pesquisa e cultura de fungos; LBA – pesquisa e cultura de fungos; Sorologia – imuno e contraimuno (positivo em 60% dos casos).
-
-- Tratamento: Geral: Itraconazol; Casos mais graves: Anfotericina B lipossomal.
-
-## INFECÇÕES OPORTUNISTAS NO
-
-## SNC
-
-## NEUROTOXOPLASMOSE
-
-- Agente etiológico: protozoário, Toxoplasma gondii;
-
-- História clínica: Alteração motora / fala / convulsão; Duração >1 semana; Confusão mental; Febre.
-
-- Exame físico: Sinal neurológico focal; Ausência de meningismo; Altíssima soroprevalência (IgG +).
-
-- Laboratório geral: IgG positivo para toxoplasmose; CD4 < 100.
-
-- Radiologia: Lesão focal, única / múltipla, centro hipodenso e realce anelar, com muito edema perilesional; Atinge preferencialmente gânglios da base; Antes de analisar LCR de qualquer paciente soropositivo, deve-se solicitar uma TC de crânio.
+- **Agente etiológico**: protozoário, *Toxoplasma gondii*.
+- **História clínica**: alteração motora / de fala / convulsão; duração > 1 semana; confusão mental; febre.
+- **Exame físico**: sinal neurológico focal; ausência de meningismo; altíssima soroprevalência (IgG+).
+- **Laboratório**: IgG positivo para toxoplasmose; CD4 < 100.
+- **Radiologia**: lesão focal, única ou múltipla, com centro hipodenso e realce anelar, com muito edema perilesional; atinge preferencialmente gânglios da base. Antes de analisar o LCR de qualquer paciente soropositivo, deve-se solicitar TC de crânio.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -122,51 +82,29 @@ CMV, paracocco. Figura 2: infiltrado micronodular difuso
 
 <!-- page:3 -->
 
-Figura 4: Linfoma primário de SNC. Figura 3: Neurotoxoplasmose
+*Figura 3: Neurotoxoplasmose · Figura 4: Linfoma primário de SNC*
 
-- Laboratório confirmatório é raramente feito na prática, PCR positivo em LCR só em 60%. Diagnóstico é clínico-radiológico;
+- Laboratório confirmatório é raramente feito na prática — PCR positivo em LCR só em 60% dos casos. Diagnóstico é clínico-radiológico.
+- **Tratamento empírico**: prova terapêutica por 2-3 semanas com clindamicina + pirimetamina; diagnóstico por melhora clínica. Se não houver melhora, é necessário investigar diagnóstico diferencial (ver Figura 5: LEMP). Associar corticoide devido ao edema perilesional.
+- Esquemas: sulfadiazina + pirimetamina + ácido folínico OU bactrim (sulfametoxazol-trimetoprima) OU biópsia estereotáxica para pesquisar diagnóstico diferencial.
 
-- Tratamento empírico: Prova terapêutica por 2-3 semanas com clindamicina + pirimetamina; Diagnóstico por melhora clínica; Se não houver melhora, é necessário fazer Figura 5: LEMP. Associar corticoide devido ao edema perilesional.
+### Neurocriptococose
 
-Sulfadiazina + pirimetamina + ácido folínico OU bactrim (sulfametoxazol-trimetropina) OU biópsia estereotáxica para pesquisar diagnóstico diferencial; NEUROCRIPTOCOCOSE
+- **Agente etiológico**: fungo, *Cryptococcus* (principalmente *neoformans*).
+- Pensar quando há neuro-AIDS sem lesão focal e com meningismo.
+- **História clínica**: sem febre; marcada hipertensão intracraniana (cefaleia intensa e refratária, progressiva, com rebaixamento do nível de consciência).
+- **Exame físico**: sem sinal neurológico focal; presença de meningismo.
+- **Laboratório**: CD4 < 200.
+- **Radiologia**: sem lesão focal (apagamento de sulcos); sem desvio de linha média.
+- **Diagnóstico**: fase pré-clínica — por ser uma das principais causas de síndrome de reconstituição imune com subdiagnóstico, é preconizado o **LF-Crag em CD4 < 200 células**, em quem nunca teve criptococose prévia.
 
-- Agente etiológico: fungo, cryptococcus;
+### Linfoma Primário de SNC e LEMP (CD4 < 50 células)
 
-(principalmente neoformans) LINFOMA PRIMÁRIO DE SNC E LEMP (CD4 < 50
-
-- Pensar quando há neuro-AIDS sem lesão focal e
-
-CELS) com meningismo;
-
-- Linfoma de SNC:
-
-- História Clínica: Sem febre; | Marcada hipertensão intracraniana (cefaléia Sempre associado ao EBV (avaliar o antiVCA+) intensa e refratária, progressiva, com RNC); Lesão idêntica à da neurotoxo, mas aqui | Sem febre;
-
-costuma ser única, subcortical, sem muito | Sem alteração focal. edema perilesional;
-
-- Exame físico: Diagnóstico é por biópsia. | Sem sinal neurológico focal;
-
-- LEMP (leucoencefalopatia multifocal progressiva): | Presença de meningismo. Déficits neurológicos focais,
-
-- Laboratório geral: Causada pelo vírus JC (poliomavírus);
-
-progressivos e cumulativos; | CD4 < 200.
-
-- Radiologia: Sem febre; | Sem lesão focal (apagamento de sulcos); Doença desmielinizante (história de | Herniação;
-
-semanas-meses); | Sem desvio de linha média.
-
-- RM com lesão em dedo-de-luva em
-
-- Diagnóstico:
-
-substância branca; | Fase pré-clínica: por ser uma das principais
-
-- Diagnóstico é por clínica + PCR de vírus JC no LCR.; causas de sind. da reconstituição imune com
-
-- Tratamento é otimizar a TARV. subdiagnóstico, é preconizado o LF-Crag em CD4 Se LF-Crag positivo: LCR:
-
-<200 cels, em quem nunca teve cripto prévia.
+- **Linfoma de SNC**: sempre associado ao EBV (avaliar anti-VCA+); lesão idêntica à da neurotoxoplasmose, mas costuma ser única, subcortical, sem muito edema perilesional; diagnóstico por biópsia.
+- **LEMP (leucoencefalopatia multifocal progressiva)**: causada pelo vírus JC (poliomavírus); déficits neurológicos focais, progressivos e cumulativos; sem febre; doença desmielinizante (história de semanas-meses).
+- **Radiologia**: RM com lesão em **dedo-de-luva** em substância branca.
+- **Diagnóstico**: clínica + PCR de vírus JC no LCR.
+- **Tratamento**: otimizar a TARV.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -176,27 +114,27 @@ substância branca; | Fase pré-clínica: por ser uma das principais
 
 <!-- page:4 -->
 
-Figura 6: Uso do LF-Crag para detecção pré-clínica de neurocripto pelo PCDT HIV 2023
+*Figura 6: Uso do LF-Crag para detecção pré-clínica de neurocriptococose pelo PCDT HIV 2023*
 
-- Se cultura ou tinta da china +: tratamento;
+**Fase pré-clínica** (LF-Crag positivo, LCR ainda sem confirmação):
 
-- Se ambos negativas: fluconazol preemptivo. Fase clínica: TC + LCR com pressão de abertura muito elevada+ antigenemia positiva (>1:128) + cultura da china;
+- Se cultura ou tinta da China positivas: tratar.
+- Se ambas negativas: fluconazol preemptivo.
 
-(5-7 dias) + microbiológico direto com tinta
+**Fase clínica**: TC + LCR com pressão de abertura muito elevada + antigenemia positiva (> 1:128) + cultura (5-7 dias) + microbiológico direto com tinta da China.
 
-- Pior prognóstico se leucócitos < 20 em LCR ou título
+- Pior prognóstico se leucócitos < 20 em LCR ou título > 1:1024.
 
-> 1:1024.
+**Tratamento** (muito prolongado):
 
-- Verificar Figura 6
+- Fase intensiva: indução com anfotericina B lipossomal + 5-flucitosina (ou fluconazol) por pelo menos 2 a 4 semanas (até negativação de cultura em LCR).
+- Fase de consolidação e fase de manutenção: ambas realizadas com fluconazol, variando a dose. Somam um período > 1 ano.
+- Não associar corticoide: menor taxa de cura microbiológica.
+- Iniciar TARV 4-6 semanas depois, com melhora clínica e resolução da HIC, e cultura de LCR negativa.
 
-- Tratamento muito prolongado: Fase intensiva: Indução com anfotericina B lipossomal + 5-flucitosina (ou fluconazol) = pelo menos 2 até 4 semanas (até negativação de cultura Figura 7: Criptococose pulmonar. Fase de consolidação e fase de manutenção: ambas realizadas com fluconazol, variando a dose. Somam
+*Figura 7: Criptococose pulmonar*
 
-em LCR);
-
-- A criptococose também pode se manifestar de um período > 1 ano; forma generalizada: Não associar corticoide: menor taxa de | Acometimento cutâneo: pápulas umbilicadas; TARV: 4-6 semanas depois. Melhora clínica, micronódulos subpleurais.
-
-cura microbiológica; | Acometimento pulmonar: nódulos/ resolução da HIC. Cultura de LCR negativa.
+- A criptococose também pode se manifestar de forma generalizada: acometimento cutâneo (pápulas umbilicadas); acometimento pulmonar (nódulos/micronódulos subpleurais).
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -206,110 +144,96 @@ cura microbiológica; | Acometimento pulmonar: nódulos/ resolução da HIC. Cul
 
 <!-- page:5 -->
 
-## SISTEMATIZANDO A NEURO-AIDS
+## Sistematizando a Neuro-AIDS
 
-- Ocorre, principalmente, quando CD4 < 50;
+> ⚠️ O esquema original (Figura 8) é um fluxograma visual comparando Neurotoxoplasmose × Neuro-TB × Neurocriptococose por apresentação clínica (sinal focal vs. meningismo/HIC) que foi corrompido pelo OCR (texto embaralhado letra a letra) e não pôde ser reconstruído com segurança. Os pontos essenciais, já descritos nas seções acima, são resumidos aqui em texto corrido:
+> - Ocorre principalmente quando **CD4 < 50**.
+> - **Neurotoxoplasmose**: história subaguda de sinal neurológico focal (fala/parte motora), sem meningismo.
+> - **Neuro-TB**: cefaleia e meningismo, com rebaixamento do nível de consciência, muita hipertensão intracraniana, acometimento de pares cranianos e vasos da base.
+> - **Neurocriptococose**: sem lesão focal, meningismo presente.
 
-- Quadro mais comum, mas CMV é sistêmico, podendo causar também: Encefalite;
+### CMV — Manifestações Sistêmicas
 
-História subaguda de sinal História cefaleia e | Neurorretinite; neurológico focal meningismo, com RNC neurológico focal meningismo, com RNC Neurotoxo Neurocripto ° Fala/parte Neuro TB Muita HIC motora ° Pares cranianos ° Sem ° Sem lesão focal meningismo ° Meningismo + ° Lesão focal com ° Vasos da base edema s ° u ° L C b i L D n c e f e 4 o s o d ã r m < t e o + ic 5 m a ú a 0 S n a l , , i N E s c e B C a m V , d s e c u s u c ° m b ° m r D L a ô L i é E e u g n e fi M l l u i s i a c n c d ã t P o i i i o o z t v s a s s o , n s - t e ° Dis D fu e n m ç ê ã ° n o T c d t ° i o a e e C : ( x a a T V H e s A t A c e n s R u N n o o V t ç c D i L v ã ( i ) C a D a o d R R + a N c a ) o o g H ni I t V iv a + Figura 8: Sistematizando a Neuro-AIDS
+- Quadro mais comum é a retinite, mas o **CMV é sistêmico**, podendo causar também: encefalite; neurorretinite; polirradiculopatia; pneumonite; diarreia/AAP; nefrite.
 
-## SIRI (IRIS) - SÍNDROME DA
+## SIRI (IRIS) — Síndrome da Reconstituição Imune
 
-## RECONSTITUIÇÃO IMUNE
+- Piora inflamatória, de início 2-4 semanas após TARV, em vigência de outra infecção grave, com piora dos sintomas e lesões, adenopatia generalizada e febre, podendo levar ao óbito.
+- Tratamento com corticoide.
+- **Quanto tempo esperar** (tratamento da doença oportunista) para iniciar a TARV:
+  - Neuro-TB: 4-6 semanas; 2 semanas se CD4 < 50 células.
+  - Neurocriptococose: 4-6 semanas; LCR com cultura negativa; HIC controlada.
 
-- Piora inflamatória, de início 2-4 semanas após TARV, em vigência de outra infecção grave, com piora dos sintomas e lesões, adenopatia generalizada e febre, podendo levar ao óbito;
+## Disfagia e Acometimento Cutâneo na AIDS
 
-- Tratamento com corticoide;
+### Candidíase
 
-- Quanto tempo eu espero, de tratamento da doença oportunista, para iniciar a TARV? Neuro TB: 4-6 semanas; 2 semanas se CD4 < 50 cels. Neurocriptococose: 4-6 semanas; LCR com cultura negativa; HIC controlada;
+- Principal causa de disfagia em AIDS.
+- **Agente etiológico**: *Candida albicans*.
+- **Característica**: exsudato branco de base eritematosa.
+- Ocorre principalmente quando **CD4 < 200**.
+- Diagnóstico é feito por EDA, mas no geral não é necessário — faz-se tratamento empírico. Se não houver melhora clínica, então se realiza EDA.
+- **Tratamento**: fluconazol 200 mg/dia por 14 dias.
 
-## DISFAGIA E ACOMETIMENTO
+### CMV
 
-## CUTÂNEO NA AIDS CANDIDÍASE
+- Principal causa de úlcera em trato gastrointestinal.
+- São poucas úlceras, pequenas, não confluentes, mas profundas, podendo até perfurar.
+- **Diagnóstico**: clínica (disfagia e dor retroesternal) + biópsia. Viremia não se correlaciona com doença.
+- Avaliar retinite por CMV com fundo de olho (risco de cegueira aguda e permanente) se **CD4 < 50 células**: fundo de olho com exsudatos algodonosos e hemorragias perivasculares.
+- **Tratamento**: ganciclovir. Se falha: foscarnet ou cidofovir.
 
-- Principal causa de disfagia em AIDS;
+### Herpes
 
-- Agente etiológico: Candida albicans;
+- Múltiplas lesões, rasas, confluentes e de base eritematosa.
+- **Tratamento**: aciclovir.
 
-- Característica: Exsudato branco de base eritematosa;
+### Sarcoma de Kaposi
 
-- Ocorre principalmente quando CD4 < 200;
+- **Agente**: herpesvírus tipo 8 (em geral em latência clínica; o sarcoma é uma doença de reativação).
+- **Clínica**: angioproliferação cutânea (lesões violáceas) e visceral (TGI e pulmão).
+- Ocorre principalmente quando **CD4 < 100**.
+- **Tratamento**: quimioterapia + radioterapia para lesões locais + TARV.
 
-- Diagnóstico é feito por EDA, mas no geral não precisa, e se faz o tratamento empírico. Se não houver melhora clínica, aí fazemos EDA;
+## HIV e Doenças Negligenciadas
 
-- Tratamento: fluconazol 200 mg/dia - 14 dias
+### Leishmaniose
 
-CMV
+- Investigar em hepatoesplenomegalia.
+- Primeira escolha: anfotericina B lipossomal ou deoxicolato.
+- Forma cutânea com falha terapêutica prévia: miltefosina.
+- Profilaxia secundária se **CD4 < 350**: anfotericina B lipossomal 2-4 semanas.
 
-- Principal causa de úlcera em trato gastrintestinal;
+### Paracoccidioidomicose
 
-- São poucas úlceras, pequenas, não confluentes mas profundas, que podem até perfurar; | Encefalite; Polirradiculopatia; Pneumonite; Diarreia / AAP; Nefrite.
-
-- Diagnóstico é por clínica (disfagia e dor retroesternal) + biópsia: Viremia não se correlaciona com doença!
-
-- Avaliar retinite por CMV com fundo de olho (risco de cegueira aguda e permanente) se CD4 < 50 cels: Fundo de Olho: exsudatos algodonosos e hemorragias perivasculares.
-
-- Tratamento com ganciclovir. Se falha, Foscarnet ou Cidofovir.
-
-## HERPES
-
-- Múltiplas lesões, rasas, confluentes e base eritematosa;
-
-- Tratamento com aciclovir.
-
-## SARCOMA DE KAPOSI
-
-- Agente: Herpesvirus tipo 8 (em geral em latência clínica, o sarcoma é uma doença de reativação);
-
-- Clínica: angioproliferação cutânea (lesões violáceas) e visceral (TGI e pulmão);
-
-- Ocorre principalmente quando CD4 < 100;
-
-- Tratamento: Quimioterapia + Radioterapia para lesões locais + TARV.
-
-## HIV E DOENÇAS NEGLIGENCIADAS
-
-## LEISHMANIOSE
-
-- Investigar em hepatoesplenomegalia a/e
-
-- Primeira escolha: anfotericina B lipossomal ou deoxicolato
-
-- Cutânea com falha terapêutica prévia: miltefosina
-
-- Profilaxia secundária se CD4 < 350: anfoBlip./
-
-2-4 semanas PARACOCOCCIDIODOMICOSE
-
-- Infiltrado reticulo-nodular + linfonodomegalias + hepatoesplenomegalia + úlceras periorais dolorosas
-
-- Diferencial com TB, Histoplasmose e linfoma
-
-- HIV+: não necessariamente espera associação com atividade agrícola
-
-- CD4 < 200
-
-- Micológico direto: pele, escarro, aspirado de linfonodo
-
-- Profilaxia secundária: CD4 - 200 - itraconazol/ bactrim/12hs até CD4 > 200 por 3 meses
+- Infiltrado retículo-nodular + linfonodomegalias + hepatoesplenomegalia + úlceras periorais dolorosas.
+- Diferencial com TB, histoplasmose e linfoma.
+- HIV+: não necessariamente com associação a atividade agrícola.
+- **CD4 < 200**.
+- Diagnóstico: micológico direto (pele, escarro, aspirado de linfonodo).
+- Profilaxia secundária: CD4 < 200 — itraconazol/bactrim 12/12h até CD4 > 200 por 3 meses.
 
 ---
 
 <!-- page:6 -->
 
-## PROFILAXIA PARA DOENÇAS OPORTUNISTAS
+## Profilaxia para Doenças Oportunistas
 
-Tabela 1: Profilaxia para doenças oportunistas Secundária (quem já tratou, Primária (quem nunca teve a Primária Doença Faixa de CD4 doença, Tuberculose CD4< 350 trate Pneumocistose CD4 < 200 CD4 < 200 e LFA + e Flucona Cripto cultura e tinta da china antígeno n em LCR negativos n Histoplasmose (no BR quase não é CD4< 150/3m feita)
+> ⚠️ Dados de tabela ambíguos no OCR original — a Tabela 1 (Profilaxia para Doenças Oportunistas) chegou com linhas e colunas embaralhadas e números fragmentados (ex.: "80 CD", "n em LCR negativos n"), não foi possível reconstruir o pareamento doença/faixa de CD4/esquema com segurança. Conteúdo listado abaixo em texto corrido, com os pontos que puderam ser identificados com confiança; trechos incertos foram omitidos.
 
-Neurotoxo CD4 < 100 80 CD Azitromicin MAC i CD4 < 50 Não se fa CMV
+- **Tuberculose**: profilaxia primária se CD4 < 350 — ILTB com rifapentina + isoniazida 1x/semana por 12 semanas.
+- **Pneumocistose**: profilaxia primária e secundária se CD4 < 200 — bactrim 800/160 mg, 3x/semana.
+- **Neurocriptococose**: rastreio com LF-Crag e, se cultura/tinta da China negativos, fluconazol preemptivo por 10 semanas (indica presença de antígeno no sangue, mas sem neuroinvasão confirmada).
+- **Histoplasmose** (no Brasil quase não é feita): CD4 < 150, reavaliar a cada 3 meses; profilaxia secundária com itraconazol 200 mg/dia até CD4 > 150 e carga viral indetectável por 6 meses.
+- **Neurotoxoplasmose**: profilaxia com bactrim ou sulfadiazina + pirimetamina + ácido folínico, se CD4 < 100, até CD4 > 200 por 3-6 meses.
+- **MAC (*Mycobacterium avium* complex)**: azitromicina 1500 mg/semana se CD4 < 50, até início da TARV.
+- **CMV**: pesquisa ativa de retinite se CD4 < 50; ganciclovir; reavaliar em 3-6 meses.
 
-## REFERÊNCIAS
+## Referências
 
-Figura 1: Pneumocistose Arquivo pessoal Figura 2: infiltrado micronodular difuso Arquivo pessoal Figura 3: neurotoxoplasmose Arquivo pessoal Figura 4: Linfoma primário de SNC.
-
-Arquivo pessoal Figura 5: LEMP Arquivo pessoal Figura 7: Criptococose pulmonar. radiopedia a (quem nunca teve a Secundária (quem já tratou, mas ainda precisa recuperar , mas está em faixa de CD4 para não ter risco de risco de ter)
-
-recorrer) e ILTB : rifapentina + isoniazida 1x/sem 12 semanas. Bactrim 800/160mg / 3x/semana azol 10 semanas (tem no sangue mas não teve neuroinvasão)
-
-Itraconazol 200mg/dia CD4> 150 e CV indetectável / 6 m Bactrim Sulfa + pirimeta + ac.folínico 00/160mg / dia Bactrim /12hs - CD4 > 200 / 6 D4> 200/3 meses meses na 1500mg/semana Até início da TARV az - Pesquisa ativa de Ganciclovir retinite CD4 > 100 3-6m
+- Figura 1: Pneumocistose — arquivo pessoal.
+- Figura 2: infiltrado micronodular difuso — arquivo pessoal.
+- Figura 3: neurotoxoplasmose — arquivo pessoal.
+- Figura 4: Linfoma primário de SNC — arquivo pessoal.
+- Figura 5: LEMP — arquivo pessoal.
+- Figura 7: Criptococose pulmonar — Radiopaedia.

@@ -240,7 +240,7 @@
 |---|---|---|---|---|
 | Aspecto | Turvo, opalescente | Límpido ou opalescente | Opalescente | Opalescente |
 | Celularidade | > 500 (neutrófilos) | 100-500 (linfócitos) | 100-1000 (neutrófilos e linfócitos) | Normal ou < 500 (linfócitos) |
-| Proteínas (VR 20-45) | Elevada (> 200) | Normal ou levemente ↑ | Normal ou levemente ↑ | Elevada (> 300) |
+| Proteínas (VR 20-45) | Elevada (> 200) | Normal ou levemente ↑ | Elevada (> 300) | Elevada (> 300) |
 | Glicose (VR 45-80) | ↓↓↓ (< 40) | Normal | Normal ou levemente ↓ | ↓↓ - ↓↓↓ (< 40) |
 | Lactato (VR < 19,6) | ↑↑↑ | Normal | Levemente ↑ | ↑ |
 

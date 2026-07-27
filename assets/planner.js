@@ -1516,7 +1516,8 @@ async function loadLocalQuestionBank() {
   const pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
   for(let start=0; start<pending.length; start+=4) {
     await Promise.all(pending.slice(start,start+4).map(block => loadQuestionBlockScript(block.script)));
-    await new Promise(resolve => requestAnimationFrame(() => resolve()));
+    // requestAnimationFrame nunca dispara com a aba oculta/em segundo plano, o que travava o carregamento pela metade.
+    await new Promise(resolve => (document.hidden ? setTimeout(resolve, 0) : requestAnimationFrame(() => resolve())));
   }
   const blocks = index.blocks
     .map(block => window.ENAMED_LOCAL_QUESTION_BANK?.[block.block]?.questions || [])

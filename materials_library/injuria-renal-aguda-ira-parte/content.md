@@ -164,7 +164,7 @@ A fração de excreção de sódio (FeNa) é determinada pela fórmula a seguir.
 | | Pré-renal | NTA |
 |---|---|---|
 | Cilindros | Cilindros hialinos (proteína de Tamm-Horsfall) | Cilindro granuloso (muddy brown) |
-| Densidade urinária (urina tipo I) | Normal/baixa (~1010) | Alta (> 1020) |
+| Densidade urinária (urina tipo I) | Alta (> 1020) | Normal/baixa (~1010) |
 | Osmolalidade urinária | > 500 mOsm/kg (concentrada) | ~300 mOsm/kg |
 | Fração de excreção de Na+ | < 1% | > 2% |
 | Sódio urinário | < 20 mEq/L | > 40 mEq/L |
