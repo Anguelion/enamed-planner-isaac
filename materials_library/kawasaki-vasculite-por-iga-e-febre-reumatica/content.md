@@ -2,169 +2,129 @@
 
 <!-- page:1 -->
 
-## KAWASAKI, VASCULITE POR IGA E
+## Visão Geral Comparativa
 
-## FEBRE REUMÁTICA
-
-Kawasaki Vasculite por IgA Febre reumática (PED) Doença Clínica Febre ≥ 5 dias + 4:
-
+**Doença de Kawasaki** — diagnóstico clínico: **febre ≥ 5 dias** + ≥ 4 dos seguintes:
 - Exantema polimorfo;
-
-Doença de
-
-- Alteração extremidades;
-
-Kawasaki
-
-- Alteração lábios/cavidade oral;
-
+- Alteração de extremidades;
+- Alteração de lábios/cavidade oral;
 - Linfadenopatia cervical;
-
 - Conjuntivite não supurativa.
 
-Púrpura palpável (na ausência de trombocitopenia) e ≥ 1: Vasculite por
+**Diagnóstico**: clínico. **Tratamento agudo**: **IGEV + AAS** (anti-inflamatório); ecocardiograma para detectar aneurisma de artérias coronárias. **Convalescença**: AAS em dose anti-trombótica.
 
+**Vasculite por IgA (Púrpura de Henoch-Schönlein)** — diagnóstico clínico: **púrpura palpável** (na ausência de trombocitopenia) e ≥ 1 dos seguintes:
 - Dor abdominal;
-
-IgA
-
 - Artrite/artralgia;
-
 - Nefrite;
+- Achado histopatológico compatível.
 
-- Histopatológico.
+**Febre Reumática** — Critérios de Jones:
+- **Critérios maiores**: cardite; artrite; coreia de Sydenham; eritema marginado; nódulos subcutâneos.
+- **Critérios menores**: febre; artralgia; prolongamento do intervalo PR; aumento de VHS e PCR.
+- **Diagnóstico**: 2 critérios maiores OU 1 maior + 2 menores + comprovação de infecção estreptocócica pelo EGA (Estreptococo beta-hemolítico do Grupo A).
+- **Tratamento**: suporte clínico, corticoide em quadros graves de cardite, penicilina para erradicação do estreptococo e profilaxia secundária.
 
-Critérios maiores:
+> ⚠️ Este bloco resume um quadro-resumo cuja diagramação original (colunas intercaladas) estava ambígua; os detalhes completos de cada doença são apresentados nas seções abaixo.
 
-- Cardite;
+### Profilaxia Secundária — Febre Reumática
 
-- Artrite;
+| Categoria | Duração |
+|---|---|
+| FR sem cardite | 5 anos após o último episódio ou até 21 anos de idade |
+| FR com cardite (insuficiência mitral leve residual ou resolução da lesão valvar) | 10 anos após o último episódio ou até fase adulta (25 anos de idade) |
+| FR com cardite (lesão valvar residual moderada a severa) | Até 40 anos de idade ou por toda a vida (depende da fonte) |
+| FR com cardite, após cirurgia valvar | Por toda a vida |
 
-- Sydenham;
+*(Regra geral: prevalece o que durar mais.)*
 
-- Eritema marginado;
+## Doença de Kawasaki
 
-Febre
-
-- Nódulos subcutâneos.
-
-reumática Critérios menores:
-
-- Febre;
-
-- Artralgia,
-
-- Prolongamento do intervalo PR;
-
-- Aumento de VHS e PCR.
-
-- Comprovação de infecção por EGA
-
-## PROFILAXIA SECUNDÁRIA – FEBRE REUMÁTICA (FR
-
-Categoria FR sem cardite FR com cardite (insuficiência mitral leve residual ou resolução da lesão valvar)
-
-FR com cardite (lesão valvar residual moderada a severa) FR com cardite, após cirurgia valvar
-
-## DOENÇA DE KAWASAKI
-
-## CONCEITO
+### Conceito
 
 - Doença febril aguda;
+- Vasculite de artérias de médio calibre, a segunda mais comum desse tipo, com preferência pelas artérias coronárias;
+- Provável etiologia infecciosa associada a predisposição genética.
 
-- Vasculite de artérias médias: segunda mais comum: Preferência pelas artérias coronárias.
+> ⚠️ Atenção ao desenvolvimento de **aneurisma coronário**!
 
-- Provável etiologia infecciosa e de predisposição genética.
+### Epidemiologia
 
-Atenção ao desenvolvimento de aneurisma coronário! Diagnóstico Tratamento AGUDO: CLÍNICO! IGEV + AAS; antiECO → Aneurisma de aa; inflamatório.
+- Acomete principalmente crianças, geralmente **< 5 anos**;
+- Pico de incidência entre **9-12 meses**;
+- Predomínio no sexo masculino;
+- Maior prevalência em pacientes de origem asiática/ilhas do Pacífico, especialmente descendentes de japoneses.
 
-coronárias. CONVALESCENÇA: AAS; anti-trombótico. Suporte: CLÍNICO! corticoide em quadros graves. 2 maiores OU Penicilina 1 maior E 2 menores Profilaxia secundária:
+### Manifestações Clínicas
 
-+ Comprovação de envolvimento valvar. infecção estreptocócica Situações especiais R) Duração 5 anos após o último episódio ou até 21 anos de idade.
-
-10 anos após o último episódio ou até fase adulta (25 anos de idade). Até 40 anos de idade ou por toda a vida*.
-
-Por toda a vida.
-
-## EPIDEMIOLOGIA
-
-- Acomete principalmente indivíduos na infância, geralmente < 5 anos;
-
-- Pico 9-12 meses;
-
-- Sexo masculino;
-
-- Há prevalência em pacientes de origem asiática/ilhas do pacífico: Descendentes de japoneses.
-
-MANIFESTAÇÕES CLÍNICAS Fase aguda (arterite necrotizante neutrofílica)
-
-- Duração: 1- 2 semanas;
-
-- Caracteriza-se pelo surgimento de febre e sinais clínicos da doença aguda.
+**Fase aguda** (arterite necrotizante neutrofílica)
+- Duração: 1-2 semanas;
+- Caracterizada pelo surgimento de febre e demais sinais clínicos da doença aguda.
 
 ---
 
 <!-- page:2 -->
 
-Fase subaguda (linfócitos, eosinófilos)
+**Fase subaguda** (infiltrado de linfócitos e eosinófilos)
+- 7-10 dias após o início da febre;
+- Caracteriza-se pelo surgimento de:
+  - Descamação de extremidades (perineal, periungueal);
+  - Trombocitose, com valores expressivos de plaquetas;
+  - **Aneurisma de artéria coronária (AAC)** — risco elevado de morte súbita nos pacientes que o desenvolvem (até 25% nos não tratados).
 
-- 7-10 dias após início da febre;
-
-- Caracteriza-se pelo surgimento de: Descamação de extremidades – perineal, periungueal; Trombocitose – com valores expressivos de plaquetas; Aneurisma de artéria coronária (AAC); Há elevado risco de morte súbita naqueles que desenvolvem AAC (até 25% em pacientes não tratados).
-
-Fase de convalescença
-
+**Fase de convalescença**
 - Ocorre de 6-8 semanas após o início da doença;
-
 - Sinais clínicos desaparecem;
-
 - Regressão da maioria dos aneurismas;
+- Perdura até que o VHS retorne ao normal.
 
-- Perdura até que VHS retorne ao normal.
+**Critérios clínicos (febre + achados principais)**
 
-Manifestações clínicas
+**Febre ≥ 5 dias** — sinal cardinal e obrigatório. Há discretas disparidades entre as fontes quanto ao número mínimo de dias:
+- Tratado Brasileiro de Pediatria (SBP, 2025): febre ≥ 5 dias;
+- UpToDate (2024): febre ≥ 5 dias; diagnóstico possível no 4º dia se sinais típicos em extremidades estiverem presentes; clínicos experientes podem diagnosticar antes do 4º dia em casos raros;
+- AHA (2024): diagnóstico pode ser feito com 4 dias de febre; médicos experientes podem diagnosticar com 3 dias;
+- Nelson (2025): febre ≥ 5 dias + ≥ 4 critérios principais;
+- SBP, Documento Científico (2020): diagnóstico possível com ≥ 4 critérios típicos no 4º dia de febre.
 
-- Febre ≥ 5 dias**- sinal cardinal e obrigatório. Discretas disparidades de acordo com a fonte avaliada: Tratado Brasileiro de Pediatria (SBP, 2025): febre UpToDate (2024): febre ≥ 5 dias; AHA (2024): diagnóstico pode ser feito com 4 dias de febre; médicos experientes podem diagnosticar com 3 dias; Nelson (2025): febre ≥ 5 dias + ≥ 4 critérios principais. Diagnóstico possível no 4.º dia se sinais típicos em extremidades estiverem presentes;
-
-≥ 5 dias; Figura 2: Exantema maculopapular. clínicos experientes podem diagnosticar antes do 4.º dia em casos raros;
-
-| SBP, Documento Científico (2020): diagnóstico possível com ≥ 4 critérios típicos no 4.º dia de febre.
-
-1. Alteração em membros (70%)
-
+**1. Alteração em membros (70%)**
 - Eritema/edema;
+- Descamação periungueal na fase subaguda (pode ocorrer descamação perineal).
 
-- Descamação periungueal na fase subaguda: Pode ocorrer descamação perineal. Figura 3: Fissura labial.
+*Figura 1: Eritema e edema de extremidades.*
 
-Figura 1: Eritema e edema de extremidades.
-
-2. Erupção cutânea polimórfica (80%–90%)
-
-- Eritema maculopapular, escarlatiniforme
-
-(exceto vesicular); Figura 4: Hiperemia conjuntival sem exsudato.
-
+**2. Erupção cutânea polimórfica (80%-90%)**
+- Eritema maculopapular, escarlatiniforme (exceto vesicular);
 - Predomínio em tronco e região inguinal.
 
-- Verificar Figura 2. 4. Linfadenopatia cervical
+*Figura 2: Exantema maculopapular.*
 
-- Unilateral e ≥ 1,5 cm.
-
-3. Alteração em lábios e cavidade oral (90%)
-
-- Fissura e eritema labiais; 5. Hiperemia conjuntival, bilateral, sem exsudato.
-
-- Língua em framboesa/morango; Outras manifestações clínicas
-
+**3. Alteração em lábios e cavidade oral (90%)**
+- Fissura e eritema labiais;
+- Língua em framboesa/morango;
 - Hiperemia oral e faríngea;
-
-- Dor abdominal, diarreia e vômitos;
-
 - Sem aftas, úlceras ou exsudato.
 
-- Fenômeno de Raynaud;
+*Figura 3: Fissura labial.*
 
+**4. Linfadenopatia cervical**
+- Unilateral e ≥ 1,5 cm.
+
+**5. Hiperemia conjuntival, bilateral, sem exsudato.**
+
+*Figura 4: Hiperemia conjuntival sem exsudato.*
+
+**Outras manifestações clínicas**
+- Dor abdominal, diarreia e vômitos;
+- Fenômeno de Raynaud;
 - Artralgia/artrite;
+- Disfunção hepática;
+- Hidropsia de vesícula biliar;
+- Irritabilidade importante;
+- Meningite asséptica;
+- Perda auditiva neurossensorial;
+- Uretrite;
+- BCGíte.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -174,225 +134,150 @@ Figura 1: Eritema e edema de extremidades.
 
 <!-- page:3 -->
 
-- Disfunção hepática; TRATAMENTO
+### Diagnóstico
 
-- Hidropsia de vesícula biliar; Doença aguda
-
-- Irritabilidade importante; Objetivo: evitar a complicação coronariana (ocorre
-
-- Meningite asséptica; em 20%-25% dos não tratados e em menos de 5%
-
-- Perda auditiva neurossensorial; dos tratados).
-
-- Perda auditiva neurossensorial;
-
-- Uretrite;
-
-- BCGíte.
-
-DIAGNÓSTICO Clínico!
-
+Clínico!
 - Febre ≥ 5 dias: critério cardinal;
+- 4-5 dos seguintes: alterações em membros; exantema polimorfo; hiperemia conjuntival sem exsudato; alterações em lábios e cavidade oral; linfadenopatia cervical.
 
-- 4-5 dos seguintes: Alterações em membros; Exantema polimorfo; Hiperemia conjuntival sem exsudato; Alterações nos lábios e cavidade oral; Linfadenopatia cervical.
-
-Forma atípica ou incompleta
-
+**Forma atípica ou incompleta**
 - Febre ≥ 5 dias;
+- 2-3 critérios clínicos;
+- PCR e/ou VHS elevados;
+- ≥ 3 das seguintes alterações propedêuticas: albumina ≤ 3,0 g/dL; anemia; elevação da ALT; plaquetas após 7 dias ≥ 450.000/mm³; leucócitos ≥ 15.000/mm³; leucocitúria ≥ 10/campo; hiponatremia; escore Z de coronárias > 2,5.
 
-- 2/3 critérios clínicos;
-
-- PCR e/ ou VHS elevados;
-
-- ≥ 3 das alterações propedêuticas: Albumina ≤ 3,0 g/dL; Anemia; Elevação da ALT; Plaquetas após 7 dias ≥ 450.000/mm3; Leucócitos ≥ 15.000/mm3; Leucocitúria ≥ 10/campo; Hiponatremia; Escore Z coronárias > 2,5.
-
-## COMPLICAÇÃO
+### Complicação
 
 - Aneurisma coronário.
 
-Fatores de risco para desenvolvimento de aneurisma coronário
-
-- < 6 meses ou > 5/8 anos;
-
+**Fatores de risco para desenvolvimento de aneurisma coronário**
+- Idade **< 6 meses** ou **> 5-8 anos**;
 - Sexo masculino;
-
 - Febre persistente;
-
 - Má resposta à imunoglobulina endovenosa (IGEV);
-
 - Neutrofilia e/ou trombocitopenia;
-
 - Hiponatremia e/ou hipoalbuminemia;
-
 - Elevação de PCR, BNP e/ou transaminases;
-
 - Etnias asiáticas e hispânicas;
-
 - Síndrome do choque do Kawasaki.
 
-Ecocardiograma
+**Ecocardiograma**
+- Quando realizar: ao diagnóstico (basal, para posterior comparação); 1 a 2-3 semanas do início da doença; 6-8 semanas do início da doença;
+- Se ecocardiograma anormal, manutenção de febre ou recorrência dos sintomas: realizar com maior frequência;
+- Compete ao cardiopediatra determinar a gravidade da alteração e a frequência de repetição dos exames alterados.
 
-- Quando realizar? Ao diagnóstico (basal, posterior comparação); 1 a 2-3 semanas do início da doença; 6-8 semanas do início da doença.
+### Tratamento
 
-- Ecocardiograma anormal/manutenção de febre/recorrência dos sintomas: fazê-lo com maior frequência! Competência do cardiopediatra ditar a gravidade da alteração e frequência de repetição dos ecocardiogramas alterados. dos tratados).
+**Doença aguda**
+- Objetivo: evitar a complicação coronariana (ocorre em 20%-25% dos não tratados e em menos de 5% dos tratados);
+- **2 g/kg de IGEV**;
+- **Ácido acetilsalicílico (AAS)** em altas doses (50-80/100 mg/kg/dia) ou doses moderadas (30-50 mg/kg/dia);
+- Deve ser realizado o mais rapidamente possível após o diagnóstico, idealmente nos primeiros 10 dias do início da doença.
 
-- 2 g/kg de IGEV;
+> ⚠️ Febre persistente e/ou sinais de inflamação sistêmica, mesmo após 10 dias de febre, devem levar à consideração da administração de IGEV.
 
-- Ácido acetilsalicílico (AAS) em altas doses (50-80/100 mg/kg/dia) ou doses moderadas (30-50 mg/kg/dia);
-
-- Deve ser realizado o mais rapidamente possível após o diagnóstico;
-
-- Idealmente, nos primeiros 10 dias do início da doença.
-
-ATENÇÃO: febre persistente e/ou sinais de inflamação sistêmica mesmo se > 10 dias de febre, considerar a administração da IGEV.
-
-Convalescença
-
+**Convalescença**
 - AAS: transição de doses anti-inflamatórias para doses antitrombóticas (3-5 mg/kg/dia);
+- Transicionar a dose após o paciente permanecer afebril por 48 horas;
+- Manter até 6-8 semanas após o início da doença;
+- Interromper se ecocardiograma normal após 6-8 semanas.
 
-- Transicionar a dose após o paciente ter permanecido afebril durante 48 horas;
-
-- Manter até 6 a 8 semanas após o início da doença;
-
-- Interromper se: ecocardiograma normal após
-
-6-8 semanas. Considerações
-
+**Considerações**
 - Considerar metilprednisolona se alto risco de AAC;
+- Resistência: manutenção de febre 36 horas após IGEV — repetir a mesma dose de IGEV; se ainda resistente, pulsoterapia com metilprednisolona;
+- Opções em caso de refratariedade: anti-TNF alfa, ciclosporina, ciclofosfamida, plasmaférese.
 
-- Resistente: manutenção de febre 36 horas após IGEV: Repetir mesma dose de IGEV; Se resistente: pulsoterapia com metilprednisolona.
-
-- Opções se houver refratariedade: anti-TNF alfa, ciclosporina, ciclofosfamida, plasmaférese.
-
-## PROGNÓSTICO
+### Prognóstico
 
 - Depende da gravidade da alteração coronariana;
+- Disfunção endotelial persistente: atenção a fatores de risco cardiovascular!
 
-- Disfunção endotelial persistente: atenção
+## Vasculite por IgA
 
-FR cardiovasculares!
-
-## VASCULITE POR IGA
-
-- Também conhecida como púrpura de
-
-Henoch-Schönlein;
-
+- Também conhecida como **púrpura de Henoch-Schönlein**;
 - Vasculite primária mais comum na infância;
-
 - Vasculite de pequenos vasos;
-
-- Vasculite leucocitoclástica + deposição de IgA;
-
-- Acomete principalmente pele, articulações, trato gastrointestinal e glomérulos.
-
-- Acomete qualquer faixa etária: 90% dos casos: 3–10 anos.
-
+- Vasculite leucocitoclástica com deposição de IgA;
+- Acomete principalmente pele, articulações, trato gastrointestinal e glomérulos;
+- Acomete qualquer faixa etária: 90% dos casos ocorrem entre **3-10 anos**;
 - Prevalência no sexo masculino;
-
-- Populações brancas e asiáticas;
-
-- A maioria dos casos seguem infecções de vias aéreas superiores (IVAS) documentada: S. pyogenes (principalmente); S. aureus; Adenovírus; Mycoplasma.
+- Mais comum em populações brancas e asiáticas;
+- A maioria dos casos segue infecção de vias aéreas superiores (IVAS) documentada por: *S. pyogenes* (principalmente); *S. aureus*; adenovírus; *Mycoplasma*.
 
 ---
 
 <!-- page:4 -->
 
-## MANIFESTAÇÕES CLÍNICAS DIAGNÓSTICO
+### Manifestações Clínicas
 
-Dermatológico: púrpura palpável
-
-- É uma manifestação característica: Tabela 1: Critérios de classificação do EULAR/PRINTO/PRES para Predomínio em regiões de ação da gravidade: vasculite por IgA.
-
-membros inferiores, topografia glútea e sacral. membros inferiores, topografia glútea e sacral.
-
+**Dermatológico: púrpura palpável**
+- Manifestação característica, com predomínio em membros inferiores, topografia glútea e sacral;
 - Eventualmente surge edema subcutâneo.
 
-Figura 5: Púrpura em extremidades. Musculoesquelético
+*Figura 5: Púrpura em extremidades.*
 
+**Musculoesquelético**
 - Artrite/artralgias;
+- Ocorre em 70%-90% dos casos;
+- Caráter oligoarticular, principalmente em membros inferiores;
+- Autolimitada, sem sequelas;
+- Pode preceder a lesão dermatológica.
 
-- Ocorre em 70%–90% dos casos;
+**Trato gastrointestinal (TGI)**
+- Dor abdominal, vômitos, diarreia, íleo paralítico e melena — pode mimetizar abdome agudo cirúrgico; ocorre em até 70%-80% dos casos;
+- Intussuscepção e perfuração podem ocorrer em < 5% dos casos.
 
-- É de caráter oligoarticular → principalmente em membros inferiores;
+**Renal**
+- Ocorre em 10%-50% dos casos;
+- É o acometimento mais grave e determinante de pior prognóstico;
+- Achados que sugerem envolvimento renal: hematúria microscópica; proteinúria; hipertensão; nefrite franca; síndrome nefrótica; injúria renal aguda ou crônica;
+- É rara a progressão para doença renal terminal: 1%-2% de todos os pacientes com vasculite por IgA; até 8% daqueles que manifestaram nefrite.
 
-- Autolimitada, não deixando sequelas;
+**Sistema Nervoso Central (SNC)**
+- Forma rara;
+- Decorre de hemorragia intracerebral, que pode se manifestar por: convulsões; cefaleias; alterações de comportamento.
 
-- Pode preceder lesão dermatológica.
+**Outras**
+- Orquite/orquiepididimite: 20% dos casos.
 
-- Trato gastrointestinal (TGI)
+### Diagnóstico
 
-- Dor abdominal, vômitos, diarreia, íleo paralítico e T melena → pode mimetizar um abdome agudo cirúrgico: S Ocorre em até 70%–80% dos casos.
+Critérios de classificação do EULAR/PRINTO/PRES: **púrpura palpável** (na ausência de trombocitopenia) associada a **≥ 1** dos seguintes critérios obrigatórios:
 
-- Intussuscepção e perfuração podem ocorrer: < 5% dos casos.
+| Critério | Definição |
+|---|---|
+| Dor abdominal | Aguda, em cólica, difusa; pode cursar com intussuscepção e sangramento no TGI |
+| Biópsia do tecido afetado | Histopatologia demonstrando deposição predominante de IgA |
+| Artrite/artralgia | Aguda, com edema, dor e/ou limitação articular |
+| Nefrite | Proteinúria, hematúria, cilindros hemáticos |
 
-- Renal C
-
-- Ocorre em 10%–50% dos casos;
-
-- Mais grave, determinante de pior prognóstico.
-
-- Acometimentos que sugerem envolvimento renal: Hematúria microscópica; Proteinúria; Hipertensão; Nefrite franca; Síndrome nefrótica; Injúria renal aguda ou crônica.
-
-- É rara a progressão para doença renal terminal: 1%–2% de todos os pacientes com vasculite por IgA; Até 8% daqueles que manifestaram nefrite.
-
-Sistema nervoso central (SNC)
-
-- É uma forma rara; P
-
-- Dá-se por hemorragia intracerebral, cuja manifestação pode ocorrer por: Convulsões; Cefaleias; Alterações de comportamento.
-
-Outras
-
-- Orquite/orquiepididimite → 20% dos casos.
-
-- Púrpura palpável (na ausência de trombocitopenia) e ≥ 1 dos seguintes obrigatório critérios devem estar presentes:
-
-Critério Aguda, cólica, difusa, intussuscepção, Dor abdominal sangramento no TGI. Biópsia do tecido afetado Histopatologia demonstrando deposição predominante de IgA.
-
-Aguda, com edema, dor e/ou Artrite/artralgia limitação articular. Proteinúria, hematúria, cilindros Nefrite hemáticos.
-
-Achados laboratoriais que corroboram o diagnóstico
-
+**Achados laboratoriais que corroboram o diagnóstico**
 - Leucocitose moderada;
-
 - Plaquetas normais ou levemente aumentadas;
-
 - Hematúria, cilindrúria, dismorfismo eritrocitário, leucocitúria, proteinúria;
-
 - Elevação de ureia e creatinina;
-
 - VHS e PCR normais ou discretamente elevados;
+- ANA, ANCA e fator reumatoide negativos.
 
-- ANA, ANCA e fator reumatoide são negativos.
+### Tratamento
 
-TRATAMENTO Suporte
-
-- Se ausência de manifestações renais ou gastrointestinais graves (maioria);
-
+**Suporte**
+- Indicado na ausência de manifestações renais ou gastrointestinais graves (maioria dos casos);
 - Foco em hidratação, nutrição e analgesia.
 
-Corticoterapia
-
-- Orquite.
-
-- Envolvimento do TGI: Dor abdominal intensa; Hemorragia digestiva; Intussuscepção.
-
+**Corticoterapia** — indicada em:
+- Orquite;
+- Envolvimento do TGI: dor abdominal intensa; hemorragia digestiva; intussuscepção;
 - Ulcerações ou necrose de pele;
-
 - Hemorragia pulmonar;
+- Vasculite cerebral.
+- **Não previne** o desenvolvimento de nefrite;
+- Feita com prednisona/prednisolona 1 mg/kg/dia por 1 a 2 semanas, com retirada paulatina para evitar rebote dos sintomas.
 
-- Vasculite cerebral;
-
-- NÃO previne o desenvolvimento da nefrite!
-
-- Feito com prednisona/prednisolona 1 mg/kg/dia por 1 a 2 semanas: Retirada paulatina para evitar rebote dos sintomas.
-
-- A maioria dos casos tem evolução favorável: Doença monocíclica; Duração média: 4 semanas.
-
-- Há recorrência em 1/3 dos quadros: Quando ocorrem, são quadros mais leves e com menor duração.
-
-- Progressão para doença renal crônica: 1%–2% de todos os pacientes com vasculite por IgA; Até 8% daqueles que manifestaram nefrite; Acompanhar pressão arterial e urina 1 desses pacientes.
+**Evolução**
+- A maioria dos casos evolui favoravelmente: doença monocíclica, com duração média de 4 semanas;
+- Recorrência em 1/3 dos quadros — quando ocorrem, são geralmente mais leves e de menor duração;
+- Progressão para doença renal crônica: 1%-2% de todos os pacientes com vasculite por IgA; até 8% daqueles que manifestaram nefrite; acompanhar pressão arterial e urina desses pacientes.
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -400,107 +285,85 @@ Corticoterapia
 
 <!-- page:5 -->
 
-Episódio inicial
+## Febre Reumática
 
-- Comprovação de infecção estreptocócica E;
+### Conceitos
 
-## CONCEITOS
-
-- 2 maiores OU 1 maior + 2 menores.
-
-- É uma complicação não supurativa de Recorrência uma faringotonsilite:
-
-- Sem cardite: 2 maiores OU 1 maior + 2 menores uma faringotonsilite: Streptococcus pyogenes → estreptococo beta-hemolítico do grupo A (EGA).
-
-- Cepa reumatogênica (1, 3, 5, 6, 18, 26) + susceptibilidade genética + tratamento inadequado;
-
-- Patogênese: mimetismo molecular.
-
+- É uma complicação não supurativa de uma faringotonsilite por **Streptococcus pyogenes** (estreptococo beta-hemolítico do grupo A — EGA);
+- Decorre da combinação de cepa reumatogênica (sorotipos 1, 3, 5, 6, 18, 26) + suscetibilidade genética + tratamento inadequado;
+- Patogênese: mimetismo molecular;
 - Doença reumática mais comum em crianças brasileiras;
-
 - É a causa de cardiopatia adquirida mais comum em países em desenvolvimento;
-
-- Idade escolar e adolescência: Raro antes dos 5 anos e após 15 anos de idade.
-
-- Fatores de risco: nível socioeconômico, aglomeração;
-
-acesso precário aos serviços de saúde. CLÍNICA E DIAGNÓSTICO
-
-- Período de latência de 2–4 semanas;
-
+- Acomete principalmente crianças em idade escolar e adolescentes; rara antes dos 5 anos e após os 15 anos de idade;
+- Fatores de risco: nível socioeconômico baixo, aglomeração, acesso precário aos serviços de saúde;
+- Período de latência de 2-4 semanas entre a faringotonsilite e o quadro reumático;
 - Doença heterogênea.
 
-Critérios de Jones (1944)
+### Clínica e Diagnóstico
 
-- Sinais maiores, sinais menores e evidência de infecção estreptocócica prévia;
+**Critérios de Jones (1944)**
+- Baseiam-se em sinais maiores, sinais menores e evidência de infecção estreptocócica prévia;
+- Última atualização: AHA, 2015.
 
-- Atualização: AHA, 2015.
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança a diagramação completa; conteúdo listado em texto corrido a seguir.
 
-Tabela 2: Critérios de Jones para febre reumática. Comprovação Critérios Critérios maiores da infecção menores estreptocócica Artralgia Cultura de Cardite (clínica BR: POLIartralgia orofaringe ou subclínica)* AR: positiva para MONOartralgia EGA Artrite* Febre BR: POLIartrite Teste antigênico BR: > 38,5 °C AR: MONOartrite rápido para EGA AR: > 38 °C ou POLIartralgia Elevação de reagentes de Aumento dos Eritema fase aguda: títulos de marginado VHS e PCR anticorpos antiBR: > 60 mm/h EGA AR: > 30 mm/h
+**Critérios maiores**
+- Cardite (clínica ou subclínica);
+- Artrite* (baixo risco: poliartrite; alto risco: monoartrite ou poliartrite);
+- Coreia de Sydenham;
+- Eritema marginado;
+- Nódulos subcutâneos.
 
-## ECG
+**Critérios menores**
+- Artralgia* (baixo risco: poliartralgia; alto risco: monoartralgia — não pode ser contabilizada junto com artrite maior);
+- Febre (baixo risco: ≥ 38,5 °C; alto risco: ≥ 38 °C);
+- Elevação de reagentes de fase aguda: VHS (baixo risco: > 60 mm/h; alto risco: > 30 mm/h) e/ou PCR;
+- Prolongamento do intervalo PR no ECG.
 
-Nódulos prolongamento subcutâneos do intervalo PR Coreia de
+**Comprovação de infecção estreptocócica**
+- Cultura de orofaringe positiva para EGA;
+- Teste antigênico rápido positivo para EGA;
+- Aumento dos títulos de anticorpos anti-EGA.
 
-- Sydenham baixo risco para febre reumática;
+*BR: característica a ser considerada para populações de baixo risco para febre reumática; AR: característica a ser considerada para populações de alto risco.*
 
-*BR: característica a ser considerada para populações de *AR: característica a ser considerada para populações de alto risco para febre reumática. - Sem cardite: 2 maiores OU 1 maior + 2 menores OU 3 menores;
+**Diagnóstico**
+- **Episódio inicial**: 2 critérios maiores OU 1 maior + 2 menores + comprovação de infecção estreptocócica;
+- **Recorrência sem cardite**: 2 maiores OU 1 maior + 2 menores OU 3 menores;
+- **Recorrência com doença cardíaca reumática estabelecida**: 2 critérios menores + evidência de infecção estreptocócica anterior.
 
-- Doença cardíaca reumática: 2 menores;
+**Situações especiais**
+- Coreia de Sydenham pode ser considerada manifestação única, dispensando os demais critérios;
+- Cardite reumática de início insidioso também é considerada situação especial.
 
-- Evidência de infecção estreptocócica anterior.
+### Manifestações Clínicas
 
-Situações especiais
-
-- Coreia de Sydenham: manifestação única;
-
-- Cardite reumática de início insidioso.
-
-MANIFESTAÇÕES CLÍNICAS Artrite
-
-- > 70% dos pacientes — forma mais frequente e precoce de apresentação;
-
-- Poliartrite migratória: acomete grandes articulações;
-
+**Artrite**
+- Presente em > 70% dos pacientes — forma mais frequente e precoce de apresentação;
+- Poliartrite migratória, acometendo grandes articulações;
 - Resposta importante a salicilatos;
-
 - Sem sequelas.
 
-Coreia de Sydenham
-
-- Acomete 5%–36% dos pacientes;
-
+**Coreia de Sydenham**
+- Acomete 5%-36% dos pacientes;
 - Longo período de latência: até 6 a 12 meses;
-
-- Labilidade emocional, piora do desempenho escolar, movimentos involuntários/ caretas que pioram ao estresse e melhoram no sono;
-
+- Labilidade emocional, piora do desempenho escolar, movimentos involuntários/caretas que pioram ao estresse e melhoram durante o sono;
 - Sem sequelas.
 
-Cardite
-
-- Acomete 50%–60% dos pacientes;
-
+**Cardite**
+- Acomete 50%-60% dos pacientes;
 - Manifestação de maior gravidade;
-
-- Pancardite;
-
-- Valvulite: manifestação primordial;
-
-- Insuficiência mitral > dupla lesão (mitral e aórtica) > insuficiência aórtica;
-
+- Caracteriza pancardite;
+- Valvulite é a manifestação primordial;
+- Frequência: insuficiência mitral > dupla lesão (mitral e aórtica) > insuficiência aórtica;
 - Doença prolongada pode cursar com estenose valvar e necessidade de substituição da valva.
 
-Eritema marginado
-
+**Eritema marginado**
 - Manifestação rara;
+- Lesão macular eritematosa e serpiginosa, de centro pálido, não pruriginosa;
+- Poupa a face.
 
-- Lesão macular eritematosa e serpiginosa, de centro pálido não pruriginoso;
-
-- Não pruriginoso;
-
-- Poupa face.
-
-Figura 6: Eritema marginado.
+*Figura 6: Eritema marginado.*
 
 ![Figura do material - página 5](figure-005-1.webp)
 
@@ -508,55 +371,47 @@ Figura 6: Eritema marginado.
 
 <!-- page:6 -->
 
-Nódulos subcutâneos
-
-- Penicilina G benzatina:
-
-- Rara (2%–5%); | 600.000 UI, IM, nos < 20 kg;
-
-- Superfícies extensoras; | 1.200.000 UI, IM, nos > 20 kg;
-
-- Surgimento tardio; | A aplicação deve ser repetida a cada 21 dias
-
-- Correlação com gravidade e cardite. (3 semanas);
-
+**Nódulos subcutâneos**
+- Rara (2%-5%);
+- Localizados em superfícies extensoras;
+- Surgimento tardio;
 - Correlação com gravidade e cardite.
 
-d Figura 7: Nódulo subcutâneo. TRATAMENTO d Erradicação do estreptococo
+*Figura 7: Nódulo subcutâneo.*
 
-- Até 9 dias após o início do quadro → para S prevenção primária; d
+### Tratamento
 
-- Para todas as formas de apresentação da febre reumática. S
+**Erradicação do estreptococo**
+- Até 9 dias após o início do quadro, para prevenção primária;
+- Indicada para todas as formas de apresentação da febre reumática;
+- Feita com **Penicilina G benzatina**:
+  - 600.000 UI, IM, em pacientes < 20 kg;
+  - 1.200.000 UI, IM, em pacientes > 20 kg;
+  - Aplicação repetida a cada 21 dias (3 semanas);
+  - Se alergia: eritromicina, azitromicina ou clindamicina.
 
-Terapia anti-inflamatória d
+**Terapia anti-inflamatória**
+- Artrite: anti-inflamatórios não esteroidais (AINEs) — primeira linha, pelo melhor perfil de segurança em relação aos salicilatos;
+- Cardite moderada-grave: glicocorticoide (discutível em casos leves).
 
-- Artrite: anti-inflamatórios não esteroidais (AINEs):
+**Tratamento da coreia** (quadros moderados-graves)
+- Haloperidol, ácido valproico, carbamazepina ou fenobarbital;
+- Corticoterapia em casos graves.
 
-primeira linha pelo melhor perfil de segurança em H relação aos salicilatos; L
+### Profilaxia Secundária
 
-- Cardite moderada-grave: glicocorticoide. Discutível em casos leves.
+- Recomendada para todo paciente com diagnóstico de febre reumática;
+- Objetivo: evitar um novo surto com cardite ou piora da lesão prévia;
+- Feita com Penicilina G benzatina a cada 21 dias (3 semanas); se alergia: eritromicina, azitromicina ou clindamicina.
 
-Tratamento da Coreia: quadros moderado-grave W
+| Categoria | Duração (o que durar mais) |
+|---|---|
+| FR sem cardite | 5 anos após o último episódio ou até 21 anos de idade |
+| FR com cardite (insuficiência mitral leve residual ou resolução da lesão valvar) | 10 anos após o último episódio ou até fase adulta (25 anos de idade) |
+| FR com cardite (lesão valvar residual moderada a severa) | Até 40 anos de idade ou por toda a vida (depende da fonte) |
+| FR com cardite, após cirurgia valvar | Por toda a vida |
 
-- Haloperidol, ácido valproico, carbamazepina p ou fenobarbital;
-
-- Corticoterapia – casos graves.
-
-PROFILAXIA SECUNDÁRIA c
-
-- É recomendada para todo paciente com diagnóstico de FR;
-
-- O objetivo é evitar um novo surto com cardite ou piora da lesão prévia; (3 semanas); Se alergia: eritromicina, azitromicina, clindamicina.
-
-Tabela 3: Profilaxia secundária na febre reumática. Duração Categoria (o que durar mais) 5 anos após o último FR sem cardite episódio ou até 21 anos de idade.
-
-FR com cardite 10 anos após o último (insuficiência mitral leve episódio ou até fase adulta residual ou resolução da (25 anos de idade).
-
-lesão valvar) FR com cardite Até 40 anos de idade ou (lesão valvar residual por toda a vida (depende moderada a severa) da fonte)*.
-
-FR com cardite, após Por toda a vida. cirurgia valvar
-
-## REFERÊNCIAS
+## Referências
 
 Figura 1: Eritema e edema de extremidades. Saguil A, Fargo M, Grogan S. Diagnosis and management of kawasaki disease. Am Fam Physician. 2015 Mar 15;91(6):365-71. PMID: 25822554.
 
@@ -566,10 +421,10 @@ Figura 3: Fissura labial. Saguil A, Fargo M, Grogan S. Diagnosis and management 
 
 Figura 4: Hiperemia conjuntival sem exsudato. Saguil A, Fargo M, Grogan S. Diagnosis and management of kawasaki disease. Am Fam Physician. 2015 Mar 15;91(6):365-71. PMID: 25822554.
 
-Figura 5: Púrpura em extremidades. HetlandLE, Susrud KS, Lindahl KH, Bygum A. Henoch-Schönlein Purpura: A Literature Review. Acta Derm Venereol. 2017 Nov 15;97(10):1160-1166. doi:
+Figura 5: Púrpura em extremidades. Hetland LE, Susrud KS, Lindahl KH, Bygum A. Henoch-Schönlein Purpura: A Literature Review. Acta Derm Venereol. 2017 Nov 15;97(10):1160-1166. doi: 10.2340/00015555-2733. PMID: 28654132.
 
-10.2340/00015555-2733. PMID: 28654132.. Figura 6: Eritema marginado. Wang CR, Lee NY, Tsai HW, Yang CC, Lee CH. Acute rheumatic fever in adult patients. Medicine (Baltimore). 2022 Jul 1;101(26):e29833. doi: 10.1097/ MD.0000000000029833. PMID: 35777053; PMCID: PMC9239616..
+Figura 6: Eritema marginado. Wang CR, Lee NY, Tsai HW, Yang CC, Lee CH. Acute rheumatic fever in adult patients. Medicine (Baltimore). 2022 Jul 1;101(26):e29833. doi: 10.1097/MD.0000000000029833. PMID: 35777053; PMCID: PMC9239616.
 
-Figura 7: Nódulo subcutâneo. Case courtesy of Dr Abdallah El-Sayed Allam, https://radiopaedia.org/ cases/39753?lang=us
+Figura 7: Nódulo subcutâneo. Case courtesy of Dr Abdallah El-Sayed Allam, https://radiopaedia.org/cases/39753?lang=us
 
 ![Figura do material - página 6](figure-006-1.webp)

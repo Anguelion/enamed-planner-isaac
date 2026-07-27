@@ -2,264 +2,215 @@
 
 <!-- page:1 -->
 
-## MEDICINA DO TRABALHO
+## Medicina do Trabalho
 
-## ACIDENTE DE TRABALHO
+## Acidente de Trabalho
 
-- Ocorre pelo exercício do trabalho a serviço de empresa, de empregador doméstico ou pelo exercício do trabalho dos segurados especiais lesão corporal ou perturbação funcional que cause morte, perda ou redução, permanente ou temporária, da capacidade para o trabalho.
+**Definição**: ocorre pelo exercício do trabalho a serviço de empresa, de empregador doméstico ou pelo exercício do trabalho dos segurados especiais, provocando lesão corporal ou perturbação funcional que cause morte, perda ou redução, permanente ou temporária, da capacidade para o trabalho (inciso VII do art. 11 da Lei 8.213/91).
 
-(inciso VII do art. 11 da Lei 8.213/91), provocando Tipos:
+### Tipos
 
-- Acidente Típico: Ocorre na execução da atividade laboral e suas causas são passíveis de identificação no ambiente de trabalho.
+- **Acidente Típico**: ocorre na execução da atividade laboral e suas causas são passíveis de identificação no ambiente de trabalho.
+- **Acidente de Trajeto**: sofrido no percurso entre casa e trabalho (ou vice-versa), em qualquer meio de transporte, desde que não haja desvios ou paradas pessoais.
+- **Doença equiparada a Acidente de Trabalho**: abrange doenças profissionais e do trabalho, quando decorrentes das condições específicas em que o trabalho é realizado.
 
-- Acidente de Trajeto: Acidente sofrido no percurso entre casa e trabalho (ou vice-versa), em qualquer meio de transporte, desde que não haja desvios ou paradas pessoais.
+### SINAN (Notificação Compulsória)
 
-- Doença equiparada a Acidente de Trabalho:
+- **Imediata (até 24h)**: acidente de trabalho
+- **Semanal**: acidentes com exposição a material biológico
+- **Finalidade**: vigilância epidemiológica e ações de prevenção em saúde pública
 
-Abrange doenças profissionais e do trabalho, quando decorrentes das condições específicas em que o trabalho é realizado.
+### CAT (Comunicação de Acidente de Trabalho – INSS)
 
-SINAN (Notificação Compulsória)
+- **Obrigatória**: emitida pela empresa ou outros autorizados, havendo ou não afastamento
+- **Prazo**: 1º dia útil (sem óbito) ou imediato (com óbito)
+- **Finalidade**: garantir direitos previdenciários (auxílios, aposentadoria)
 
-- Imediata (até 24h): Acidente de trabalho
+## Prestações da Previdência Social
 
-- Semanal: Acidentes com exposição a material biológico.
+O Regime Geral de Previdência Social (RGPS) compreende as seguintes prestações, devidas inclusive em razão de eventos decorrentes de acidente do trabalho, expressas em benefícios e serviços:
 
-- Finalidade: Vigilância epidemiológica e ações de prevenção em saúde pública.
-
-CAT (Comunicação de Acidente de Trabalho – INSS)
-
-- Obrigatória: Emitida pela empresa ou outros autorizados, havendo ou não afastamento.
-
-- Prazo: 1º dia útil (sem óbito) ou imediato
-
-(com óbito).
-
-- Finalidade: Garantir direitos previdenciários
-
-(auxílios, aposentadoria).
-
-## PRESTAÇÕES DE PREVIDÊNCIA
-
-SOCIAL O Regime Geral de Previdência Social (RGPS) compreende as seguintes prestações, devidas inclusive em razão de eventos decorrentes de acidente do trabalho, expressas em benefícios e serviços:
-
-I – Quanto ao segurado:
-
+**I – Quanto ao segurado:**
 - Aposentadoria por invalidez
-
 - Aposentadoria por idade
-
 - Aposentadoria por tempo de contribuição
-
 - Aposentadoria especial
-
 - Auxílio-doença
-
 - Salário-família
-
 - Salário-maternidade
+- Auxílio-acidente
 
-- Auxílio-acidente Tabela 1: Tipos de CAT ocupacional (profissional ou do trabalho).
-
-Tipo de CAT Finalidade Comunicar acidentes do trabalho (típico ou de trajeto) ou doença Inicial Reinício de tratamento ou afastamento por agravamento Reabertura de lesão ou sequela de acidente/ doença já comunicados.
-
-Falecimento decorrente de Comunicação acidente/doença, mesmo após a de Óbito emissão da CAT inicial.
-
-Tabela 2: Classificação de Schilling (1984) Grupo Descrição Exemplos Trabalho como causa Saturnismo necessária. (chumbo), silicose.
-
-Hipertensão Trabalho como fator arterial em II contributivo, mas não motoristas, câncer necessário. em exposição ocupacional.
-
-Trabalho como concausa (agrava Asma ocupacional, III doença preexistente distúrbios mentais, ou provoca distúrbio dermatites alérgicas.
-
-latente). II – Quanto ao dependente:
-
+**II – Quanto ao dependente:**
 - Pensão por morte
-
 - Auxílio-reclusão
 
-III – Quanto ao segurado e dependente:
-
+**III – Quanto ao segurado e dependente:**
 - Serviço social
-
 - Reabilitação profissional
 
-Acidente do trabalho é o que ocorre pelo exercício do trabalho a serviço de empresa ou de empregador doméstico ou pelo exercício do trabalho dos segurados especiais da Lei, provocando lesão corporal ou perturbação funcional que cause a morte ou a perda ou redução, permanente ou temporária, da capacidade para o trabalho.
+### Tabela 1: Tipos de CAT
+
+| Tipo de CAT | Finalidade |
+|---|---|
+| Inicial | Comunicar acidentes do trabalho (típico ou de trajeto) ou doença ocupacional (profissional ou do trabalho) |
+| Reabertura | Reinício de tratamento ou afastamento por agravamento, ou reabertura de lesão ou sequela de acidente/doença já comunicados |
+| Comunicação de Óbito | Falecimento decorrente de acidente/doença, mesmo após a emissão da CAT inicial |
+
+### Tabela 2: Classificação de Schilling (1984)
+
+| Grupo | Descrição | Exemplos |
+|---|---|---|
+| I | Trabalho como causa necessária | Saturnismo (chumbo), silicose |
+| II | Trabalho como fator contributivo, mas não necessário | Hipertensão arterial em motoristas, câncer em exposição ocupacional |
+| III | Trabalho como concausa (agrava doença preexistente ou provoca distúrbio latente) | Asma ocupacional, distúrbios mentais, dermatites alérgicas |
 
 ---
 
 <!-- page:2 -->
 
-A Lei considera como segurado especial: praticado por terceiro ou companheiro de trabalho;
+### Segurado Especial
 
-- Pessoa física que vive em imóvel rural ou próximo, | ofensa física intencional, inclusive de terceiro, por que exerce atividades rurais individualmente ou em disputa relacionada ao trabalho;
+A Lei considera como segurado especial:
 
-regime de economia familiar, mesmo que conte com | ato de imprudência, negligência ou imperícia de auxílio eventual de terceiros. terceiro ou de companheiro de trabalho;
+- Pessoa física que vive em imóvel rural ou próximo, que exerce atividades rurais individualmente ou em regime de economia familiar, mesmo que conte com auxílio eventual de terceiros.
+- **Atividades incluídas**:
+  - Produtor rural (proprietário, arrendatário, meeiro, comodatário, parceiro, usufrutuário ou assentado) que explore atividade agropecuária em área de até 4 módulos fiscais;
+  - Seringueiro ou extrativista vegetal que faça dessas atividades o principal meio de vida (nos termos da Lei 9.985/2000);
+  - Pescador artesanal ou assemelhado, com pesca como profissão habitual ou principal meio de vida.
+- **Membros da família**: cônjuge, companheiro(a) ou filho(a) maior de 16 anos que trabalhem com o grupo familiar.
 
-- Atividades incluídas: | ato de pessoa privada do uso da razão; Produtor rural (proprietário, arrendatário, meeiro, | desabamento, inundação, incêndio e outros casos comodatário, parceiro, usufrutuário ou assentado) fortuitos ou de força maior.
+**Observações**
+- Nos períodos destinados à refeição ou descanso, ou na satisfação de necessidades fisiológicas, o empregado é considerado no exercício do trabalho.
+- Não é considerada agravação de acidente do trabalho a lesão decorrente de acidente de outra origem que se associe ou se sobreponha às consequências do anterior.
 
-que explore atividade agropecuária em área de até
+### Responsabilidades
 
-- Doença proveniente de contaminação acidental do Seringueiro ou extrativista vegetal que faça
+- A empresa é responsável pela adoção e uso das medidas coletivas e individuais de proteção e segurança da saúde do trabalhador.
+- Constitui contravenção penal, punível com multa, deixar a empresa de cumprir normas de segurança e higiene do trabalho.
+- É dever da empresa prestar informações pormenorizadas sobre os riscos da operação a executar e do produto a manipular.
+- O Ministério do Trabalho e Previdência Social fiscalizará, e os sindicatos acompanharão, o cumprimento das normas.
 
-4 módulos fiscais, ou empregado no exercício de sua atividade.
+### São Consideradas Acidentes de Trabalho
 
-- Acidente sofrido pelo segurado, ainda que fora do dessas atividades o principal meio de vida (nos local e horário de trabalho: Pescador artesanal ou assemelhado, com pesca da empresa;
+- **Doença profissional**: produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da relação elaborada pelo Ministério do Trabalho e da Previdência Social.
+- **Doença do trabalho**: adquirida ou desencadeada em função de condições especiais em que o trabalho é realizado e com ele se relacione diretamente.
 
-termos da Lei 9.985/2000). | na execução de ordem ou serviço sob autoridade como profissão habitual ou principal meio de vida. | na prestação espontânea de serviço à empresa
-
-- Membros da família: cônjuge, companheiro(a) ou para evitar prejuízo ou proporcionar proveito;
-
-filho(a) maior de 16 anos que trabalhem com o | em viagem a serviço da empresa, inclusive estudo grupo familiar. financiado por esta;
-
-| no percurso residência-trabalho ou vice-versa, RESPONSABILIDADES qualquer que seja o meio de transporte.
-
-- A empresa é responsável pela adoção e uso das Observações medidas coletivas e individuais de proteção e
-
-- Nos períodos destinados à refeição ou descanso, segurança da saúde do trabalhador. ou na satisfação de necessidades fisiológicas, o
-
-- Constitui contravenção penal, punível com multa, empregado é considerado no exercício do trabalho.
-
-deixar a empresa de cumprir normas de segurança e
-
-- Não é considerada agravação de acidente do trabalho higiene do trabalho. a lesão decorrente de acidente de outra origem
-
-- É dever da empresa prestar informações que se associe ou se sobreponha às consequências pormenorizadas sobre os riscos da operação a do anterior.
-
-executar e do produto a manipular.
-
-- O Ministério do Trabalho e Previdência Social DOENÇAS RELACIONADAS AO TRABALHO fiscalizará e os sindicatos acompanharão o (CLASSIFICAÇÃO DE SCHILLING, 1984) cumprimento das normas.
-
-- Grupo I – Trabalho como causa necessária:
-
-Doenças profissionais stricto sensu e intoxicações SÃO CONSIDERADOS ACIDENTES DE agudas de origem ocupacional. Exemplo: saturnismo TRABALHO (chumbo), silicose.
-
-- Doença profissional: produzida ou desencadeada pelo
-
-- Grupo II – Trabalho como fator contributivo, mas exercício do trabalho peculiar a determinada atividade não necessário: Doenças comuns mais frequentes e constante da relação elaborada pelo Ministério do ou precoces em determinados grupos, com nexo
-
-Trabalho e da Previdência Social. causal epidemiológico. Exemplo: hipertensão
-
-- Doença do trabalho: adquirida ou desencadeada em arterial, neoplasias malignas (câncer) em função de condições especiais em que o trabalho é exposições ocupacionais.
-
-realizado e com ele se relacione diretamente
-
-- Grupo III – Trabalho como concausa: Trabalho agrava doença preexistente ou provoca distúrbio latente.
-
-NÃO SÃO CONSIDERADAS COMO DOENÇA DO Exemplo: doenças alérgicas de pele/respiratórias, TRABALHO: distúrbios mentais ocupacionais.
+### Não São Consideradas Como Doença do Trabalho
 
 - A doença degenerativa;
+- A inerente a grupo etário;
+- A que não produza incapacidade laborativa;
+- A doença endêmica adquirida por segurado habitante de região em que ela se desenvolva, salvo comprovação de relação com o trabalho.
 
-- A inerente a grupo etário; COMUNICAÇÃO DO ACIDENTE DE TRABALHO
+### Equiparam-se ao Acidente do Trabalho
 
-- A que não produza incapacidade laborativa; (CAT)
+- Acidente ligado ao trabalho que, embora não tenha sido causa única, contribuiu diretamente para morte, redução ou perda da capacidade para o trabalho, ou gerou lesão que exige atenção médica.
+- Acidente sofrido pelo segurado no local e horário do trabalho, em consequência de:
+  - Ato de agressão, sabotagem ou terrorismo praticado por terceiro ou companheiro de trabalho;
+  - Ofensa física intencional, inclusive de terceiro, por disputa relacionada ao trabalho;
+  - Ato de imprudência, negligência ou imperícia de terceiro ou de companheiro de trabalho;
+  - Ato de pessoa privada do uso da razão;
+  - Desabamento, inundação, incêndio e outros casos fortuitos ou de força maior.
+- Doença proveniente de contaminação acidental do empregado no exercício de sua atividade.
+- Acidente sofrido pelo segurado, ainda que fora do local e horário de trabalho:
+  - Na execução de ordem ou serviço sob autoridade da empresa;
+  - Na prestação espontânea de serviço à empresa para evitar prejuízo ou proporcionar proveito;
+  - Em viagem a serviço da empresa, inclusive estudo financiado por esta;
+  - No percurso residência-trabalho ou vice-versa, qualquer que seja o meio de transporte.
 
-- A doença endêmica adquirida por segurado
+### Doenças Relacionadas ao Trabalho (Classificação de Schilling, 1984)
 
-- Obrigação: Empresa ou empregador doméstico deve habitante de região em que ela se desenvolva, salvo comunicar o acidente à Previdência Social: em caso de morte, imediatamente à
+- **Grupo I – Trabalho como causa necessária**: doenças profissionais *stricto sensu* e intoxicações agudas de origem ocupacional. Exemplo: saturnismo (chumbo), silicose.
+- **Grupo II – Trabalho como fator contributivo, mas não necessário**: doenças comuns mais frequentes ou precoces em determinados grupos, com nexo causal epidemiológico. Exemplo: hipertensão arterial, neoplasias malignas (câncer) em exposições ocupacionais.
+- **Grupo III – Trabalho como concausa**: trabalho agrava doença preexistente ou provoca distúrbio latente. Exemplo: doenças alérgicas de pele/respiratórias, distúrbios mentais ocupacionais.
 
-comprovação de relação com o trabalho. | até o 1º dia útil após ocorrência; EQUIPARAM-SE AO ACIDENTE DO TRABALHO: autoridade competente.
+### Comunicação do Acidente de Trabalho (CAT)
 
-- Acidente ligado ao trabalho que, embora não tenha
-
-- Penalidade: Multa entre o limite mínimo e máximo do sido causa única, contribuiu diretamente para morte, salário de contribuição (aumentada em reincidências).
-
-redução ou perda da capacidade para o trabalho, ou
-
-- Cópia da comunicação ao acidentado/ gerou lesão que exige atenção médica. dependentes e sindicato.
-
-- Acidente sofrido pelo segurado no local e horário do
-
-- Se a empresa não comunicar, podem fazê-lo: ato de agressão, sabotagem ou terrorismo | seus dependentes,
-
-trabalho, em consequência de: | o próprio acidentado,
+- **Obrigação**: empresa ou empregador doméstico deve comunicar o acidente à Previdência Social — até o 1º dia útil após a ocorrência; em caso de morte, imediatamente à autoridade competente.
+- **Penalidade**: multa entre o limite mínimo e máximo do salário de contribuição (aumentada em reincidências).
+- Cópia da comunicação deve ser enviada ao acidentado/dependentes e ao sindicato.
+- Se a empresa não comunicar, podem fazê-lo: o próprio acidentado, seus dependentes,
 
 ---
 
 <!-- page:3 -->
 
-| sindicato,
+sindicato, médico assistente, autoridade pública.
 
-- Acidente Grave médico assistente, Conceito técnico adotado por vigilâncias: Eventos autoridade pública. que resultam em morte, mutilações graves ou
+- A comunicação por terceiros não exime a empresa da responsabilidade.
+- Sindicatos podem acompanhar a cobrança das multas.
 
-- A comunicação por terceiros não exime a empresa envolvem menores de 18 anos.
+### Acidente Grave
 
-da responsabilidade. | Exige notificação imediata para vigilância em da responsabilidade.
+**Conceito técnico adotado por vigilâncias**: eventos que resultam em morte, mutilações graves ou envolvem menores de 18 anos. Exige notificação imediata para vigilância em saúde.
 
-- Sindicatos podem acompanhar cobrança das multas.
+### CAT — Formalidades
 
 - A CAT pode ser emitida eletronicamente (eCAT).
+- Quando física, 4 vias, sendo: 1) via INSS; 2) via segurado ou dependente; 3) via sindicato da classe do trabalhador; 4) via empresa.
 
-- Quando física, 4 vias, sendo: 1) via INSS / 2) via segurado ou dependente / 3) via sindicato da classe do trabalhador/ 4) via empresa.
+### Data do Acidente
 
-Data do Acidente
+Considera-se como dia do acidente (em doenças profissionais ou do trabalho):
+- Data do início da incapacidade laborativa para atividade habitual, ou
+- Dia da segregação compulsória, ou
+- Dia do diagnóstico (o que ocorrer primeiro)
 
-- Considera-se como dia do acidente (em doenças profissionais ou do trabalho): Data do início da incapacidade laborativa para atividade habitual, ou Dia da segregação compulsória, ou Dia do diagnóstico (o que ocorrer primeiro).
+### Composições
 
-Composições Composição antiga (1999) ainda utilizado:
+**Composição antiga (1999), ainda utilizada:**
+- Quadro I: informações do emitente (empregador ou responsável pelo preenchimento)
+- Quadro II: atestado médico (preenchido pelo profissional médico)
+- Quadro III: uso exclusivo do INSS (análise administrativa e concessão de benefícios)
 
-- Quadro I: Informações do emitente (empregador ou responsável pelo preenchimento).
+**Composição atual (2017):**
+- Quadro I: informações do emitente
+- Quadro II: informações do empregador
+- Quadro III: informações do acidentado
+- Quadro IV: informações do acidente
+- Quadro V: informações do atestado médico
 
-- Quadro II: Atestado médico (preenchido pelo profissional médico).
+### Tipos de CAT
 
-- Quadro III: Uso exclusivo do INSS (análise administrativa e concessão de benefícios).
+- **CAT inicial**: utilizada para comunicar acidente do trabalho (típico ou de trajeto) ou doença ocupacional (profissional ou do trabalho).
+- **CAT de reabertura**: utilizada quando há reinício de tratamento ou afastamento em decorrência de agravamento de lesão ou sequela de acidente/doença já comunicados.
+- **CAT de comunicação de óbito**: utilizada para comunicar falecimento decorrente do acidente ou da doença ocupacional, mesmo que tenha ocorrido após a emissão da CAT inicial.
 
-Composição atual (2017):
+### Conceitos e Considerações
 
-- Quadro I: Informações do Emitente.
+As citações acima são referentes aos dispositivos legais. Todavia, é possível encontrar as seguintes classificações na literatura acadêmica e técnica dos serviços:
 
-- Quadro II: Informações do Empregador.
+- **Acidente Típico**: ocorrido durante o desempenho da atividade profissional ou em razão de circunstâncias diretamente ligadas à função. Exemplos: quedas, cortes, queimaduras, esmagamentos, fraturas.
+- **Acidente de Trajeto**: o percurso deve ser direto, sem desvios por motivos pessoais; independe do meio de transporte — da residência para o trabalho ou vice-versa; entre dois locais de trabalho da mesma empresa; entre local de refeição e o trabalho (ida e volta).
+- **Acidente Fatal**: quando resulta em óbito, imediato ou após evolução clínica, desde que comprovado o nexo causal com o acidente.
+- **Acidente com Mutilações**: se há lesões graves como amputações, politraumatismos, fraturas graves, TCE, queimaduras extensas ou lesões que resultem em incapacidade parcial ou permanente.
+- **Acidente com Crianças e Adolescentes**: todo acidente envolvendo trabalhadores < 18 anos, independentemente da gravidade — exige notificação imediata para vigilância em saúde (Portaria GM/MS 777/2004).
 
-- Quadro III: Informações do Acidentado.
+**Conceito ampliado (SUS)**: o SUS considera acidentes de trabalho graves, fatais e com crianças/adolescentes, abrangendo tanto trabalhadores formais quanto informais.
 
-- Quadro IV: Informações do Acidente.
+## Lista Nacional de Notificação Compulsória de Doenças, Agravos e Eventos de Saúde Pública
 
-- Quadro V: Informações do Atestado Médico .
+- **Acidente de trabalho com exposição a material biológico**: notificação semanal.
+- **Acidente de trabalho**: notificação imediata (até 24 horas) para SMS (Secretaria Municipal de Saúde).
 
-Tipos de CAT
+## Afastamento
 
-- CAT inicial: utilizada para comunicar acidente do trabalho (típico ou de trajeto) ou doença ocupacional
+### Dias de Afastamento
 
-(profissional ou do trabalho).
+- **Responsabilidade do empregador**: nos primeiros 15 dias consecutivos de afastamento, cabe à empresa pagar o salário integral ao segurado empregado.
+- **Responsabilidade da perícia do INSS**: a partir do 16º dia, a avaliação e o pagamento do benefício passam a ser de responsabilidade da Previdência Social.
+- **Serviço médico da empresa**: empresas com serviço médico próprio ou conveniado devem realizar o exame e abonar as faltas do empregado até o 15º dia. Apenas encaminham o trabalhador à perícia do INSS se a incapacidade ultrapassar esse período.
 
-- CAT de reabertura: utilizada quando há reinício de tratamento ou afastamento em decorrência de agravamento de lesão ou sequela de acidente/doença já comunicados.
-
-- CAT de comunicação de óbito: utilizada para comunicar falecimento decorrente do acidente ou da doença ocupacional, mesmo que tenha ocorrido após a emissão da CAT inicial.
-
-Conceitos e Considerações As citações acima são referentes aos dispositivos legais! Todavia, é possível encontrar as seguintes classificações na literatura acadêmica e técnica dos serviços:
-
-- Acidente Típico: Ocorrido durante o desempenho da atividade profissional ou em razão de circunstâncias diretamente ligadas à função. Exemplos: Quedas, cortes, queimaduras, esmagamentos, fraturas.
-
-- Acidente de Trajeto: O percurso deve ser direto, sem desvios por motivos pessoais, Independe do meio de transporte: Da residência para o trabalho ou vice-versa; Entre dois locais de trabalho da mesma empresa; Entre local de refeição e o trabalho (ida e volta). | Exige notificação imediata para vigilância em saúde (Portaria GM/MS 777/2004). Acidente Fatal: Quando resulta em óbito, imediato ou após evolução clínica, desde que comprovado o nexo causal com o acidente. Acidente com Mutilações: Se há lesões graves como amputações, politraumatismos, fraturas graves, TCE, queimaduras extensas ou lesões que resultem em incapacidade parcial ou permanente. Acidente com Crianças e Adolescentes: Todo acidente envolvendo trabalhadores <18 anos, independentemente da gravidade.
-
-Conceito ampliado (SUS):
-
-- O SUS considera acidentes de trabalho graves, fatais e com crianças/adolescentes, abrangendo tanto trabalhadores formais quanto informais.
-
-## LISTA NACIONAL DE NOTIFICAÇÃO COMPULSÓRIA DE DOENÇAS, AGRAVOS E EVENTOS DE SAÚDE PÚBLICA
-
-- Acidente de trabalho com exposição a material biológico: Notificação semanal.
-
-- Acidente de trabalho: Notificação imediata (até 24 horas) para SMS (Secretaria Municipal de Saúde).
-
-AFASTAMENTO Dias de Afastamento
-
-- Responsabilidade do empregador: Nos primeiros 15 dias consecutivos de afastamento, cabe à empresa pagar o salário integral ao segurado empregado.
-
-- Responsabilidade da perícia do INSS: A partir do 16º dia, a avaliação e o pagamento do benefício passam a ser de responsabilidade da Previdência Social.
-
-- Serviço médico da empresa: Empresas com serviço médico próprio ou conveniado devem realizar o exame e abonar as faltas do empregado até o 15º dia. Apenas encaminham o trabalhador à perícia do INSS se a incapacidade ultrapassar esse período.
-
-Benefícios
+### Benefícios
 
 - Manutenção do abono de faltas, recolhimento de FGTS.
 
-Prejuízos
+### Prejuízos
 
-- Não recebe vales, bônus, férias (se afastado por
+- Não recebe vales, bônus, férias (se afastado por > 6 meses, a depender da decisão da empresa/acordo coletivo).
 
-> 6 meses, a depender da decisão da empresa / acordo coletivo).
+## Referências
 
-## REFERÊNCIAS
+Tabela 1: BRASIL. Ministério da Saúde. Portaria GM/MS nº 6.734, de 18 de março de 2025. BRASIL. Lei nº 8.213, de 24 de julho de 1991. Dispõe sobre os Planos de Benefícios da Previdência Social e dá outras providências.
 
-Tabela 1:: BRASIL. Ministério da Saúde. Portaria GM/MS nº 6.734, de 18 de março de 2025. BRASIL. Lei nº 8.213, de 24 de julho de 1991. Dispõe sobre os Planos de Benefícios da Previdência Social e dá outras providências Tabela 2::
-
-BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Ações Programáticas Estratégicas. Doenças relacionadas ao trabalho: manual de procedimentos para os serviços de saúde. Brasília: Ministério da Saúde, 2001.
+Tabela 2: BRASIL. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Ações Programáticas Estratégicas. Doenças relacionadas ao trabalho: manual de procedimentos para os serviços de saúde. Brasília: Ministério da Saúde, 2001.

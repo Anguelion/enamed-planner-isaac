@@ -2,99 +2,83 @@
 
 <!-- page:1 -->
 
-## CIRURGIA PLÁSTICA
+## Cirurgia Plástica: Fraturas de Face
 
-## FRATURAS DE FACE
+*Outros temas em cirurgia plástica.*
 
-Outros temas em cirurgia plástica BLOW-OUT
+### Fratura Tipo Blow-Out (resumo)
 
 - Enoftalmia;
-
 - Diplopia;
-
 - Encarceramento;
+- Fraturas das paredes medial e inferior.
 
-- Fraturas: paredes medial e inferior.
+### Maxila (Le Fort) — Resumo
 
-## MAXILA (LE FORT)
+- **I**: disjunção dentoalveolar;
+- **II**: fratura piramidal;
+- **III**: disjunção craniofacial.
 
-- I disjunção dentoalveolar;
+## Atendimento Inicial
 
-- II fratura piramidal;
+- Atendimento inicial → **ATLS**.
 
-- III disjunção craniofacial.
+## Diagnóstico
 
-- Atendimento inicial → ATLS.
+- **Exame físico**: palpação (crepitação), avaliar mímica facial, dor local, hematoma, epistaxe, afundamentos, proporções da face, mordida;
+- **Exames de imagem**: TC com reconstrução 3D (exame padrão-ouro) — cortes axial, coronal e sagital.
 
-## DIAGNÓSTICO
+## Tratamento
 
-- Exame físico: palpação (crepitação), avaliar mímica facial, dor local, hematoma, epistaxe, afundamentos, proporções de face, mordida;
+- **Afastar emergências cirúrgicas**: encarceramento do músculo reto inferior; hematoma de septo nasal; hematoma retrobulbar;
+- **Reparo precoce** → 5–7 dias após a fratura (até 14 dias): maior facilidade cirúrgica e melhor resultado;
+- **Reparo tardio** → mais difícil, mais fibrose e consolidação viciosa.
 
-- Exames de imagem; TC reconstrução 3D (exame padrão-ouro) axial, coronal e sagital.
+## Fratura Frontal
 
-## TRATAMENTO
-
-- Afastar emergências cirúrgicas: Encarceramento do músculo reto inferior; Hematoma de septo nasal; Hematoma de retrobulbar; Reparo precoce → 5-7 dias após a fratura, até maior facilidade cirúrgica e melhor resultado. Reparo tardio → mais difícil, mais fibrose e consolidação viciosa.
-
-14 dias.
-
-## FRATURA FRONTAL
-
-## ANATOMIA
+### Anatomia
 
 - Tábua anterior;
-
 - Tábua posterior;
-
 - Seio frontal;
-
 - Ducto nasofrontal: comunica o seio frontal com a cavidade nasal.
 
-## APRESENTAÇÃO CLÍNICA
+### Apresentação Clínica
 
-- Laceração, hematoma; Equimose periorbital/subconjuntival;
+- Laceração, hematoma; equimose periorbital/subconjuntival;
+- Afundamento frontal → pode estar ausente pelo "preenchimento" com edema;
+- Lesão do nervo supraorbital → causa hipoestesia por lesão completa ou neuropraxia.
 
-- Afundamento frontal → pode estar ausente pelo
+### Diagnóstico
 
-“preenchimento” com edema;
+- Padrão-ouro: TC de face com reconstrução 3D.
 
-- Lesão do nervo supraorbital → causa hipoestesia por lesão completa ou neuropraxia; DIAGNÓSTICO:
+### Tratamento
 
-- Padrão-ouro: TC de face com rec 3D;
+- Se cirúrgico, reparo precoce: de 5 a 14 dias após o trauma (redução do edema).
 
-TRATAMENTO:
+## Urgências Cirúrgicas
 
-- Se cirúrgico, reparo precoce: de 5 a 14 após o trauma (redução de edema).
+- Encarceramento do músculo reto inferior;
+- Hematoma retrobulbar;
+- Hematoma de septo.
 
-## URGÊNCIAS CIRÚRGICAS
+### Complicações
 
-- Encarceramento do m. reto inferior;
+- **Rinorreia** (lesão de tábua posterior, lesão da dura-máter com escoamento de líquor pelo seio e saída pelo nariz);
+- **Pneumoencéfalo**;
+- **Meningite** (comunicação com meio externo);
+- **Fístula carotídeo-cavernosa** (complicação tardia): exoftalmia pulsátil; perda visual; proptose; HSA; paralisia dos NC III, IV, VI;
+- **Mucocele** (complicação tardia causada por falha de drenagem de secreção do epitélio respiratório, formando coleção sujeita a infecção secundária).
 
-- Hematoma retro orbital;
-
-- hematoma de septo.
-
-- Rinorreia (lesão de tábua posterior, lesão da dura máter com escoamento de líquor pelo seio e saída pelo nariz);
-
-- Pneumoencéfalo;
-
-- Meningite (comunicação com meio externo);
-
-- Fístula carotídeo-seio cavernoso (complicação tardia:
-
-- Exoftalmia pulsante: Perda visual; Proptose, HSA; Paralisia NC III, IV, VI.
-
-- Mucocele (complicação tardia causada por falha de drenagem de secreção de epitélio respiratório, formando coleção sujeita a infecção secundária).
+### Diagnóstico e Tratamento Cirúrgico
 
 - Exame físico + TC dos ossos da face.
 
-Figura 1: Fratura da tábua posterior e anterior. TRATAMENTO CIRÚRGICO
+*Figura 1: Fratura da tábua posterior e anterior.*
 
-- Indicações: Afundamento da parede anterior Fratura da parede posterior (laceração dural) → neurocirurgia; Obstrução do ducto nasofrontal (risco de mucocele, nível hidroaéreo persistente).
-
-(indicação estética);
-
-- Redução aberta com fixação interna com placas e parafusos.
+- **Indicações de tratamento cirúrgico**: afundamento da parede anterior (indicação estética); fratura da parede posterior (laceração dural) → neurocirurgia; obstrução do ducto nasofrontal (risco de mucocele, nível hidroaéreo persistente);
+- **Técnica**: redução aberta com fixação interna com placas e parafusos.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -102,93 +86,73 @@ Figura 1: Fratura da tábua posterior e anterior. TRATAMENTO CIRÚRGICO
 
 <!-- page:2 -->
 
-Figura 2: Anatomia - Ossos e paredes da órbita.
+*Figura 2: Anatomia — ossos e paredes da órbita.*
 
-## FRATURA ORBITAL
+## Fratura Orbital
 
-- Órbita é composta por sete ossos: maxila; zigomático;
+- Órbita composta por sete ossos: maxila; zigomático; osso frontal; etmoide; esfenoide; lacrimal; palatino (o osso nasal **não** faz parte da órbita);
+- Composta de quatro paredes — medial, inferior, lateral e superior — e região do ápice;
+- Paredes medial e inferior são as mais frágeis.
 
-osso frontal; etmoide; esfenoide; lacrimal; palatino (osso nasal não faz parte da órbita!)
+### Estruturas que Dão Passagem a Nervos Cranianos
 
-- Composta de quatro paredes: medial, inferior, lateral e superior e região do APEX.
+- **Ápice orbitário**: NC II (óptico);
+- **Fissura orbitária superior** (musculatura ocular externa): NC III, NC IV, NC VI; V1 (ramo oftálmico) do NC V;
+- **Fissura orbitária inferior**: V2 (ramo maxilar) do NC V;
+- **Forame infraorbital**: nervo infraorbital;
+- **Forame supraorbital**: nervo supraorbital.
 
-- Medial e inferior são as mais frágeis.
+*Figura 3: Encarceramento muscular (emergência cirúrgica).*
 
-- Verificar Figura 2
+### Apresentação Clínica
 
-Estruturas que dão passagem a nervos cranianos
+- Diplopia;
+- Hematoma retrobulbar;
+- Hemorragia subconjuntival;
+- Equimose ou hematoma periorbital;
+- Exoftalmia;
+- Enoftalmia (afundamento do olho);
+- Ptose palpebral;
+- Alteração de acuidade visual, reflexo pupilar e movimento ocular;
+- Perda da visão;
+- Entrópio, ectrópio (inversão ou eversão da pálpebra);
+- Anestesia do nervo infraorbital (parestesia na região nasal, malar e lábio superior).
 
-- Ápice orbitário: NC II (oftálmico). Figura 3: Encarceramento mvuscular (emergência cirúrgica).
-
-- Fissura orbitária superior - musculatura ocular externa:
-
-NC III, NC IV, NC VI. V1 (Ramo sensitivo) do NC V. Diagnóstico
-
-- Fissura orbitária inferior: V2 (ramo maxilar) do NC V.
+### Diagnóstico
 
 - Exame físico + TC.
 
-- Forame infraorbital: Nervo infraorbital. Tratamento Cirúrgico
+### Urgência Cirúrgica
 
-- Forame supraorbital: Nervo supraorbital.
+- Encarceramento muscular.
+
+### Tratamento Cirúrgico
+
+- Redução aberta com fixação interna com placas e parafusos.
+
+### Complicações
 
 - Diplopia persistente;
-
 - Enoftalmia acentuada;
+- Encarceramento muscular.
 
-- Encarceramento muscular;
-
-- Diplopia;
-
-- Hematoma retrobulbar;
-
-- Hemorragia subconjuntival;
-
-- Urgência cirúrgica: encarceramento muscular;
-
-- Equimose ou hematoma periorbital;
-
-- Tratamento → redução aberta com fixação interna com
-
-- Exoftalmia; placas e parafusos.
-
-- Enoftalmia (afundamento do olho); Complicações
-
-- Alteração: Acuidade visual; Reflexo pupilar;
-
-- Diplopia;
-
-Movimento ocular.
-
-- Ptose palpebral;
-
-- Perda da visão;
-
-## FRATURA TIPO BLOW OUT
-
-- Enoftalmia, exoftalmia;
+## Fratura Tipo Blow-Out
 
 - Aumento súbito da pressão intraocular;
+- Descompressão pela fratura das paredes medial e inferior (paredes mais frágeis);
+- Herniação para o seio maxilar;
+- **Encarceramento do músculo reto inferior** (paciente não consegue olhar para cima);
+- Enoftalmia (afundamento da órbita).
 
-- Entrópio, ectrópio (inversão ou eversão da pálpebra);
+### Síndrome da Fissura Orbitária Superior
 
-- Descompressão pela fratura das paredes medial e
+- Acomete NC III, IV, VI: oftalmoplegia; dor; pupila midriática não fotorreagente; imobilidade ocular; ptose palpebral;
+- Reflexo óculo-cardíaco: náuseas/vômitos, bradicardia e hipotensão.
 
-- Anestesia do nervo infraorbital (parestesia na região inferior (paredes mais frágeis); nasal, malar e lábio superior);
+### Síndrome do Ápice Orbitário
 
-- Herniação para seio maxilar;
-
-- Síndrome da fissura orbitária superior: (NC) III, IV, VI.
-
-- Encarceramento do músculo reto inferior (não | Oftalmoplegia; Dor; | Pupila midriática não-fotorreagente; Imobilidade ocular; | Hipoestesia palpebral, conjuntival e corneana. Reflexo óculo-cardíaco: náuseas/vômitos,
-
-consegue olhar para cima): | Ptose palpebral;
-
-- Síndrome do ápice orbitário:
-
-bradicardia e hipotensão. | Síndrome da fissura orbitária superior + NC
-
-- Enoftalmia (afundamento da órbita). II (amaurose).
+- Síndrome da fissura orbitária superior + NC II (amaurose);
+- Hipoestesia palpebral, conjuntival e corneana.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -196,127 +160,102 @@ bradicardia e hipotensão. | Síndrome da fissura orbitária superior + NC
 
 <!-- page:3 -->
 
-## FRATURA NASO-ÓRBITO- DIAGNÓSTICO ETMOIDAL (NOE)
+## Fratura Naso-Órbito-Etmoidal (NOE)
 
-- Exame Físico + Tc De Face.
+### Anatomia
 
-Anatomia TRATAMENTO
-
-- Cinco ossos: nasal, maxilar, frontal, lacrimal, etmóide;
-
-- Redução fechada precoce (maioria):
-
-- Cinco ossos: nasal, maxilar, frontal, lacrimal, etmóide;
-
-- Fratura Do Osso Nasal, Orbital E Etmóide;
-
-- Fraturas combinadas (66%). Frontal, zigoma, maxila;
-
+- Cinco ossos: nasal, maxilar, frontal, lacrimal, etmoide;
+- Fratura do osso nasal, orbital e etmoide;
+- Fraturas combinadas (66%): frontal, zigoma, maxila;
 - Bilaterais (66%).
 
-Apresentação Clínica
+### Apresentação Clínica
 
 - Afundamento nasal;
-
 - Equimose, hematoma;
-
 - Crepitação;
-
-- Telecanto traumático (afastamento traumático das partes moles). Desinserção do tendão cantal medial;
-
+- Telecanto traumático (afastamento traumático das partes moles); desinserção do tendão cantal medial;
 - Epífora.
 
-Classificação De Markowitz
+### Classificação de Markowitz
 
-- Tipo I: fragmento único;
+- **Tipo I**: fragmento único;
+- **Tipo II**: cominuição, tendão cantal inserido;
+- **Tipo III**: cominuição, tendão cantal desinserido.
 
-- Tipo II: cominuição, tendão cantal inserido;
+### Diagnóstico
 
-- Tipo III: cominuição, tendão cantal desinserido.
+- Exame físico + TC de face.
 
-- Exame físico + TC.
+### Tratamento
 
-Tratamento
+- **Redução fechada precoce** (maioria dos casos);
+- **Redução aberta com fixação interna** com placas e parafusos;
+- **Tratamento cirúrgico**: reposicionamento ósseo e reinserção do tendão cantal medial.
 
-- Redução aberta com fixação interna com placas e parafusos;
-
-- Tratamento cirúrgico: reposicionamento ósseo e reinserção do tendão cantal medial.
-
-## FRATURA NASAL
+## Fratura Nasal
 
 - Forças laterais, ântero-posteriores e mistas;
+- Graus de gravidade: quanto maior o grau, maior a cominuição óssea.
 
-- Graus de gravidade: quanto maior o grau, maior a cominuição óssea;
+### Classificação
 
-- Classificação: Grau I: Fx Distal Dos Ossos Nasais; Grau II: Fx Total Dos Ossos Nasais + Septo Dorsal; Grau III: NOE, Indo Das Piriformes Até Processos
+- **Grau I**: fratura distal dos ossos nasais;
+- **Grau II**: fratura total dos ossos nasais + septo dorsal;
+- **Grau III**: NOE, indo das piriformes até processos frontais da maxila, com telescopagem do septo, perda de altura nasal e queda do dorso nasal.
 
-Frontais Da Maxila E Com Telescopagem Do Septo, Com Perda De Altura Nasal E Queda Do Dorso Nasal. Figura 4: Classificação de fratura nasal.
+*Figura 4: Classificação de fratura nasal.*
+
+### Apresentação Clínica
 
 - Epistaxe;
+- Laterorrinia (desvio da linha média);
+- Obstrução nasal;
+- Fratura palpável;
+- Nariz em sela;
+- **Hematoma de septo = emergência cirúrgica** → drenagem + colocação de splint/tampão.
 
-- Laterorrinia (Desvio Da Linha Média);
+### Tratamento
 
-- Obstrução Nasal;
+- **Redução fechada precoce** (maioria): realizar de 5 a 7 dias após o trauma; até 2 horas do trauma, se laterorrinia como lesão isolada → redução incruenta com sedação e bloqueio anestésico regional;
+- **Rinoplastia aberta**: fraturas grau II/III (NOE);
+- Osteotomias, enxerto ósseo e de cartilagem.
 
-- Fratura Palpável;
-
-- Nariz Em Sela;
-
-- Hematoma De Septo = Emergência Cirúrgica; Drenagem + Colocação De Splint/Tampão. - Redução fechada precoce (maioria): Realizar de 5 a 7 dias após o trauma; Até 2 horas do trauma com laterorrinia como lesão única → redução incruenta com sedação e bloqueio anestésico regional;
-
-- Rinoplastia aberta: fraturas grau II / III (NOE);
-
-- Osteotomias, enxerto ósseo e de cartilagem;
-
-## COMPLICAÇÕES
+### Complicações
 
 - Deformidades estéticas;
-
 - Obstrução de vias aéreas;
-
 - Infecção;
-
 - Fibrose septal;
-
 - Espessamento septal;
-
-- Obstrução de via aérea;
-
 - Sinéquias.
 
-## FRATURA DE ZIGOMA E ARCO
+## Fratura de Zigoma e Arco Zigomático
 
-## ZIGOMÁTICO
+- Zigoma → músculo da mastigação;
+- **Suturas**: frontal (ZF); maxilar (ZM); temporal; esfenoidal.
 
-- Zigoma → músculo da mastigação.
-
-- Suturas: frontal (ZF); maxilar (ZM); temporal; esfenoidal.
+### Apresentação Clínica
 
 - Equimose, hematoma;
-
 - Hemorragia subconjuntival;
-
 - Distopia ocular;
-
 - Obliquidade da fenda palpebral;
-
-- Lesão do nervo infra-orbital;
-
+- Lesão do nervo infraorbital;
 - Afundamento do malar;
-
 - Trismo;
+- Maloclusão.
 
-.
+*Figura 5: Fratura de zigoma — presença de equimose, hemorragia subconjuntival, distopia ocular, obliquidade da fenda palpebral.*
 
-- Maloclusão;
-
-Figura 5: Fratura de zigoma. Presença de equimose, hemorragia subconjuntival, distopia ocular, obliquidade da fenda palpebral.
+### Diagnóstico
 
 - Exame físico + TC.
 
-- Depende: Local da fratura; Grau do desvio; Cominuição;
+### Tratamento
 
-- Não-cirúrgico: Fraturas alinhadas; Sem cominuição.
+- Depende de: local da fratura; grau do desvio; cominuição;
+- **Não cirúrgico**: fraturas alinhadas, sem cominuição.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -326,63 +265,53 @@ Figura 5: Fratura de zigoma. Presença de equimose, hemorragia subconjuntival, d
 
 <!-- page:4 -->
 
-- Cirúrgico:
+### Tratamento Cirúrgico
 
-- Tipo 3: disjunção craniofacial. Redução fechada: | Completa separação do crânio do restante da face, Fraturas de arco isoladas com desvio medial; podendo ocorrer um alongamento da face/retração; Fratura incompleta da sutura ZF; pode dar fístula liquórica. Redução aberta com fixação interna com Redução aberta com fixação interna com placas e parafusos: Fraturas cominutivas; Diástase da sutura ZF, ZMl; Desvio lateral do arco e do corpo do zigoma; Fratura de assoalho orbital;
+- **Redução fechada**: fraturas de arco isoladas com desvio medial; fratura incompleta da sutura ZF;
+- **Redução aberta com fixação interna com placas e parafusos**: fraturas cominutivas; diástase da sutura ZF, ZM; desvio lateral do arco e do corpo do zigoma; fratura de assoalho orbital.
 
-## FRATURA MAXILAR
+## Fratura Maxilar
 
 - Localizada centralmente na face e relacionada com graus de alto impacto;
-
 - Geralmente a fratura ocorre na região mais anterior e medial.
 
-- F
+*Figura 6: Maxila destacada em verde.*
 
-- - - - - - Figura 6: Maxila destacada em verde.
+### Apresentação Clínica
 
 - Dor/edema;
-
 - Equimose/hematoma;
-
 - Crepitação óssea;
-
 - Lesão do nervo infraorbital;
-
-- Má-oclusão;
-
+- Maloclusão;
 - Mordida aberta anterior;
-
 - Fratura alveolar → rompimento da gengiva;
-
 - Face alongada e retraída.
 
-## CLASSIFICAÇÃO DE LE FORT
+## Classificação de Le Fort
 
-- Tipo 1: transversal. Acima dos processos alveolares dos dentes, próximo à altura do seio piriforme, se estendendo lateralmente até os pterigóides laterais;
+- **Tipo 1**: transversal — acima dos processos alveolares dos dentes, próximo à altura do seio piriforme, estendendo-se lateralmente até os pterigóides laterais;
+- **Tipo 2**: fratura piramidal — desde os processos pterigóides posteriores, subindo em direção craniomedial, passando pela maxila e pela parede inferior da órbita, unindo-se na linha média próxima ao osso nasal com uma fratura contralateral (pode causar fístula liquórica);
+- **Tipo 3**: disjunção craniofacial — completa separação do crânio do restante da face, podendo ocorrer alongamento da face/retração; pode causar fístula liquórica.
 
-- Tipo 2: fratura piramidal. Desde os processos pterigóides posteriores, subindo em direção craniomedial, passando pela maxila e pela parede inferior da órbita, juntandose na linha média próxima ao osso nasal com uma fratura contralateral.; (pode dar fístula liquórica); Figura 7: Classificação de Le Fort.
+*Figura 7: Classificação de Le Fort.*
 
-- Objetivo: restaurar oclusão, altura e projeção da face;
+### Tratamento
 
-- Cirúrgico: redução aberta com fixação interna, com ou sem bloqueio intermaxilar, por meio de placas e parafusos.
+- **Objetivo**: restaurar oclusão, altura e projeção da face;
+- **Cirúrgico**: redução aberta com fixação interna, com ou sem bloqueio intermaxilar, por meio de placas e parafusos.
 
-## FRATURA MANDIBULAR
+## Fratura Mandibular
 
 - Sínfise, parassínfise;
-
 - Corpo;
-
 - Ângulo da mandíbula;
-
 - Ramos da mandíbula;
-
-- Côndilo, processo coronóide;
-
+- Côndilo, processo coronoide;
 - O corpo e o ângulo são mais suscetíveis a fraturas;
+- **Músculos da mastigação**: temporal; masseter; pterigóideo medial; pterigóideo lateral.
 
-- Músculos da mastigação: temporal; masseter;
-
-pterigóideo medial; pterigóideo lateral. Figura 8: Anatomia da mandíbula.
+*Figura 8: Anatomia da mandíbula.*
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -392,44 +321,42 @@ pterigóideo medial; pterigóideo lateral. Figura 8: Anatomia da mandíbula.
 
 <!-- page:5 -->
 
-## APRESENTAÇÃO REFERÊNCIAS
+## Apresentação Clínica
 
 - Dor e crepitação;
-
-- Trismo; Figura 1: Fratura da tábua posterior e anterior.
-
-- Má-oclusão; Fonte: RADIOPAEDIA. Radiopaedia.org. Disponível em: https://www.
-
-- Laceração gengival / alveolar; radiopaedia.org/. Acesso em: 23 jun. 2025
-
-- Laceração gengival / alveolar;
-
+- Trismo;
+- Maloclusão;
+- Laceração gengival/alveolar;
 - Perda dentária;
-
 - Desvio mandibular;
-
 - Parestesia do lábio inferior e dentária.
 
-## CLASSIFICAÇÃO
+## Classificação
 
-- Depende: Localização Direção da fratura Favorabilidade Condição dentária
+- Depende de: localização; direção da fratura; favorabilidade; condição dentária;
+- Fraturas favoráveis e desfavoráveis;
+- Fraturas cominutivas;
+- Fraturas em edêntulos;
+- Fraturas condilares (intracapsulares) e subcondilares.
 
-- Fraturas favoráveis e desfavoráveis
+## Tratamento
 
-- Fraturas cominutivas
+- Redução aberta com fixação interna com placas e parafusos ± bloqueio intermaxilar.
 
-- Fraturas em edêntulos
+## Referências
 
-- Fraturas condilares (intracapsulares) e subcondilares
+Figura 1: Fratura da tábua posterior e anterior. Fonte: RADIOPAEDIA. Radiopaedia.org. Disponível em: https://www.radiopaedia.org/. Acesso em: 23 jun. 2025.
 
-- Redução aberta com fixação interna com placas e parafusos ± bloqueio intermaxilar. radiopaedia.org/. Acesso em: 23 jun. 2025
+Figura 2: Anatomia - Ossos e paredes da órbita. Fonte: acervo Medcof.
 
-Figura 2: Anatomia - Ossos e paredes da órbita. Fonte: acervo Medcof. Figura 3: Encarceramento muscular (emergência cirúrgica).
+Figura 3: Encarceramento muscular (emergência cirúrgica). Fonte: acervo Medcof.
 
-Fonte: acervo Medcof. Figura 4: Classificação de fratura nasal. Fonte: acervo Medcof. Figura 5: Fratura de zigoma. Presença de equimose, hemorragia subconjuntival, distopia ocular, obliquidade da fenda palpebral.
+Figura 4: Classificação de fratura nasal. Fonte: acervo Medcof.
 
-Fonte: NELIGAN, P. Plastic surgery. 4. ed. v. 4. London: Elsevier, 2018. Figura 6: Maxila destacada em verde.
+Figura 5: Fratura de zigoma. Presença de equimose, hemorragia subconjuntival, distopia ocular, obliquidade da fenda palpebral. Fonte: NELIGAN, P. Plastic surgery. 4. ed. v. 4. London: Elsevier, 2018.
 
-Fonte: acervo Medcof. Figura 7: Classificação de Le Fort. Fonte: acervo Medcof. Figura 8: Anatomia da mandíbula.
+Figura 6: Maxila destacada em verde. Fonte: acervo Medcof.
 
-Fonte: acervo Medcof.
+Figura 7: Classificação de Le Fort. Fonte: acervo Medcof.
+
+Figura 8: Anatomia da mandíbula. Fonte: acervo Medcof.
