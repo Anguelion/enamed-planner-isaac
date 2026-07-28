@@ -143,10 +143,10 @@
   // (as pastas reais têm dezenas de imagens não identificadas individualmente); edite `src` aqui
   // quando tiver a foto certa para cada uma.
   const MANOBRA_FOTO = {
-    murphy: { src: 'assets/semiologia-real/08-abdomen-agudo/murphy.jpg', cap: 'Sinal de Murphy' },
-    blumberg: { src: 'assets/semiologia-real/08-abdomen-agudo/blumberg.jpg', cap: 'Descompressão dolorosa (Blumberg)' },
-    'macicez-movel': { src: 'assets/semiologia-real/07-ascite/macicez-movel.jpg', cap: 'Macicez móvel de decúbito' },
-    ftv: { src: 'assets/semiologia-real/01-exame-fisico-geral-parte-01-e-02/ftv.jpg', cap: 'Frêmito toracovocal' },
+    murphy: { src: 'assets/semiologia-real/08-abdomen-agudo/42.jpg', cap: 'Sinal de Murphy' },
+    blumberg: { src: 'assets/semiologia-real/08-abdomen-agudo/44.jpg', cap: 'Descompressão dolorosa (Blumberg)' },
+    'macicez-movel': { src: 'assets/semiologia-real/07-ascite/23.jpg', cap: 'Macicez móvel de decúbito' },
+    ftv: { src: 'assets/semiologia-real/01-pontos-anatomicos-pneumotorax-derrame-pleural-posicao-do-iot/35.jpg', cap: 'Frêmito toracovocal' },
   };
 
   // ---------------------------------------------------------------------------
@@ -1043,7 +1043,7 @@
     return `<button class="semio-btn ghost sm" data-back-manobras>← Manobras</button>
       <div class="semio-topic-head"><h2>${esc(m.nome)}</h2><span class="semio-tag">${esc(m.sistema)}</span></div>
       ${MANOBRA_FIG[m.id] ? `<figure class="semio-sign-fig">${MANOBRA_FIG[m.id]}<figcaption>Esquema didático próprio</figcaption></figure>` : ''}
-      ${MANOBRA_FOTO[m.id] ? `<figure class="semio-fig semio-fig-placeholder" data-placeholder-src="${esc(MANOBRA_FOTO[m.id].src)}"><div class="semio-ph-box">📷<span>Espaço reservado para foto</span></div><figcaption>${esc(MANOBRA_FOTO[m.id].cap)}</figcaption></figure>` : ''}
+      ${MANOBRA_FOTO[m.id] ? `<figure class="semio-fig semio-fig-photo"><img src="${esc(MANOBRA_FOTO[m.id].src)}" alt="${esc(MANOBRA_FOTO[m.id].cap)}" loading="lazy" onerror="${imgFallback}"/><figcaption>${esc(MANOBRA_FOTO[m.id].cap)}</figcaption></figure>` : ''}
       <div class="semio-def"><b>Finalidade</b><p>${esc(m.finalidade)}</p></div>
       <div class="semio-def"><b>Quando fazer</b><p>${esc(m.quando)}</p></div>
       <div class="semio-def"><b>Execução</b><p>${esc(m.execucao)}</p></div>

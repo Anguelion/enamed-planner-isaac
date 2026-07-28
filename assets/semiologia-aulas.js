@@ -43,10 +43,9 @@
     for (let i = de; i <= ate; i++) items.push({ src: `assets/semiologia-real/${pasta}/${i}.jpg`, cap: `Slide ${i}` });
     return IMGGRID(items);
   };
-  // Espaço reservado para uma foto específica (ex.: uma manobra/sinal em particular).
-  // Não referencia um arquivo real — evita mostrar a imagem errada de uma pasta com dezenas de slides
-  // não identificados. Fica pronto para receber o caminho certo depois (edite este bloco quando tiver a foto).
-  const foto = (pasta, n, cap) => ({ t: 'placeholder', x: `assets/semiologia-real/${pasta}/${n}.jpg`, cap });
+  // Usa a imagem numerada correspondente à aula. O renderizador tenta JPG e PNG
+  // automaticamente, pois a pasta de origem mistura os dois formatos.
+  const foto = (pasta, n, cap) => ({ t: 'img', x: `assets/semiologia-real/${pasta}/${n}.jpg`, cap });
 
   // --- alguns esquemas SVG didáticos reutilizáveis -------------------------
   const svgTorax = `<svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" class="semio-fig-svg">
