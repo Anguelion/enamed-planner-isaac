@@ -2,6 +2,7 @@ const STORAGE_KEY = 'enamed-planner-v3';
 const THEME_KEY = 'enamed-theme';
 const UI_TAB_KEY = 'enamed-planner-active-tab';
 const QUESTION_VIEW_KEY = 'enamed-planner-question-view';
+const CADERNO_VIEW_KEY = 'enamed-planner-caderno-view';
 const SIDEBAR_KEY = 'enamed-planner-sidebar-collapsed';
 const QUESTION_SIDEBAR_KEY = 'enamed-question-sidebar-collapsed';
 const QUESTION_TAGS_HIDDEN_KEY = 'enamed-question-tags-hidden';
@@ -88,7 +89,11 @@ ensureFeynman();
 ensureQuestionProgress();
 let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
-ui.cadernoReview ||= 'Todos';
+try {
+  const savedCadernoView = JSON.parse(localStorage.getItem(CADERNO_VIEW_KEY) || '{}');
+  if(savedCadernoView.review) ui.cadernoReview = savedCadernoView.review;
+} catch(error) {}
+ui.cadernoReview ||= 'Agendadas';
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
 try { Object.assign(ui, JSON.parse(localStorage.getItem(QUESTION_VIEW_KEY) || '{}')); } catch(error) {}
@@ -3402,9 +3407,9 @@ function bindCadernoErros() {
   const areaSelect = document.getElementById('cadernoArea');
   if(areaSelect) areaSelect.onchange = e => { ui.cadernoArea = e.target.value; renderCadernoErros(); };
   const reviewSelect = document.getElementById('cadernoReview');
-  if(reviewSelect) reviewSelect.onchange = e => { ui.cadernoReview = e.target.value; renderCadernoErros(); };
+  if(reviewSelect) reviewSelect.onchange = e => { ui.cadernoReview = e.target.value; localStorage.setItem(CADERNO_VIEW_KEY, JSON.stringify({review:ui.cadernoReview})); renderCadernoErros(); };
   document.getElementById('exportCadernoCsv')?.addEventListener('click', exportCadernoErrosCsv);
-  document.getElementById('startCadernoReview')?.addEventListener('click', () => { ui.cadernoReview = 'Pendentes'; renderCadernoErros(); window.scrollTo({top:0, behavior:'smooth'}); });
+  document.getElementById('startCadernoReview')?.addEventListener('click', () => { ui.cadernoReview = 'Pendentes'; localStorage.setItem(CADERNO_VIEW_KEY, JSON.stringify({review:ui.cadernoReview})); renderCadernoErros(); window.scrollTo({top:0, behavior:'smooth'}); });
   document.querySelectorAll('[data-caderno-access]').forEach(button => button.onclick = e => {
     ui.qQuestionId = e.currentTarget.dataset.cadernoAccess;
     ui.qRouteRestorePending = true;
