@@ -2647,6 +2647,9 @@ function nextErrorReviewDate(baseDate=studyDateKey(), intervalDays=1) {
   date.setDate(date.getDate() + Math.max(1, n(intervalDays) || 1));
   return studyDateKey(date);
 }
+function errorReviewInterval(reviewCount=0) {
+  return [1, 7, 21, 60][Math.min(3, Math.max(0, n(reviewCount)))];
+}
 function parsePlannerDate(value) {
   const text = String(value || '').trim();
   if(/^\d{4}-\d{2}-\d{2}$/.test(text)) return text;
@@ -3347,6 +3350,7 @@ function renderCadernoErroCard(entry) {
   const savedAt = progress.updatedAt ? new Date(progress.updatedAt).toLocaleDateString('pt-BR') : '';
   const reviewDue = progress.nextReview && progress.nextReview <= studyDateKey();
   const reviewLabel = progress.nextReview ? (reviewDue ? 'Revisão pendente' : `Revisar em ${fmtDate(progress.nextReview)}`) : '';
+  const reviewCountLabel = n(progress.reviewCount) ? `Revisões: ${n(progress.reviewCount)}` : '';
   const errorLabel = progress.missReason || progress.errorType || '';
   const noteBlock = String(progress.notes || '').trim() ? `<p class="caderno-erro-note">${escapeHtml(progress.notes)}</p>` : '';
   const ruleBlock = String(progress.correctiveRule || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">Regra para não errar novamente</span><p>${escapeHtml(progress.correctiveRule)}</p></div>` : '';
@@ -3354,7 +3358,7 @@ function renderCadernoErroCard(entry) {
     String(progress.preReasoning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que eu achava antes</span><p>${escapeHtml(progress.preReasoning)}</p></div>` : '',
     String(progress.postLearning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que sei agora</span><p>${escapeHtml(progress.postLearning)}</p></div>` : ''
   ].join('');
-  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
+  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
 }
 function exportCadernoErrosCsv() {
   const headers = ['Data','Área','Tema','Enunciado','Minha resposta','Resposta correta','Tipo de erro','Confiança','Regra corretiva','Próxima revisão','Anotação'];
@@ -3388,6 +3392,7 @@ function renderCadernoErros() {
     return acc;
   }, {})).sort((a,b) => b[1] - a[1]).slice(0, 3);
   const overconfident = allEntries.filter(entry => !entry.progress.correct && n(entry.progress.confidence) >= 80).length;
+  const unstable = allEntries.filter(entry => entry.progress.correct && n(entry.progress.confidence) > 0 && n(entry.progress.confidence) <= 40).length;
   const entries = allEntries.filter(entry => {
     const tag = questionTag(entry.question);
     if(ui.cadernoArea !== 'Todas' && tag.area !== ui.cadernoArea) return false;
@@ -3397,7 +3402,7 @@ function renderCadernoErros() {
     const haystack = normalizedTopic(`${entry.question.stem || ''} ${entry.progress.notes || ''} ${entry.progress.preReasoning || ''} ${entry.progress.postLearning || ''} ${entry.progress.correctiveRule || ''} ${entry.progress.missReason || ''}`);
     return haystack.includes(search);
   });
-  const insightCards = `<section class="grid three caderno-insights"><div class="card"><span class="eyebrow">Temas mais frequentes</span>${areaCounts.length ? areaCounts.map(([label,count]) => `<div class="stat-line"><span>${escapeHtml(label)}</span><strong>${count}</strong></div>`).join('') : '<p class="muted">Ainda sem dados.</p>'}</div><div class="card"><span class="eyebrow">Tipos de erro</span>${typeCounts.length ? typeCounts.map(([label,count]) => `<div class="stat-line"><span>${escapeHtml(label)}</span><strong>${count}</strong></div>`).join('') : '<p class="muted">Classifique seus erros para ver padrões.</p>'}</div><div class="card"><span class="eyebrow">Falsa segurança</span><strong class="metric-number">${overconfident}</strong><p class="muted">erros com confiança de 80% ou mais</p></div></section>`;
+  const insightCards = `<section class="grid three caderno-insights"><div class="card"><span class="eyebrow">Temas mais frequentes</span>${areaCounts.length ? areaCounts.map(([label,count]) => `<div class="stat-line"><span>${escapeHtml(label)}</span><strong>${count}</strong></div>`).join('') : '<p class="muted">Ainda sem dados.</p>'}</div><div class="card"><span class="eyebrow">Tipos de erro</span>${typeCounts.length ? typeCounts.map(([label,count]) => `<div class="stat-line"><span>${escapeHtml(label)}</span><strong>${count}</strong></div>`).join('') : '<p class="muted">Classifique seus erros para ver padrões.</p>'}</div><div class="card"><span class="eyebrow">Confiança versus desempenho</span><div class="stat-line"><span>Falsa segurança</span><strong>${overconfident}</strong></div><div class="stat-line"><span>Conhecimento instável</span><strong>${unstable}</strong></div><p class="muted">Confiança alta com erro e confiança baixa com acerto.</p></div></section>`;
   document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários e reflexões que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span><span><strong>${dueCount}</strong> revisões pendentes</span><button class="icon-btn primary" id="startCadernoReview" ${dueCount?'':'disabled'}>Revisar pendentes</button><button class="icon-btn" id="exportCadernoCsv">Exportar CSV</button></div></div>${insightCards}<section class="card"><div class="section-title"><div><h2>Anotações</h2><div class="muted">${dueCount ? 'Comece pelas revisões pendentes.' : 'Nenhuma revisão está vencida.'}</div></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado, regra ou motivo"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select><select class="select" id="cadernoReview"><option value="Todos" ${ui.cadernoReview === 'Todos' ? 'selected' : ''}>Todas as revisões</option><option value="Pendentes" ${ui.cadernoReview === 'Pendentes' ? 'selected' : ''}>Pendentes</option><option value="Agendadas" ${ui.cadernoReview === 'Agendadas' ? 'selected' : ''}>Agendadas</option></select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada para este filtro.</div>'}</div></section>`;
   bindCadernoErros();
 }
@@ -8250,7 +8255,11 @@ function renderQuestionFlashcardEditor(question, result) {
 }
 function renderQuestionNotes(question, result) {
   const notes = result?.notes || '';
-  return `<div class="question-notes single"><textarea class="textarea" data-progress-field="notes" aria-label="Anotação da questão">${escapeHtml(notes)}</textarea></div>`;
+  return `<div class="question-notes single"><div class="question-note-tools"><span class="muted">Modelo rápido:</span><button type="button" class="tiny-btn" data-note-template="caso">Caso clínico</button><button type="button" class="tiny-btn" data-note-template="osce">OSCE</button></div><textarea class="textarea" data-progress-field="notes" aria-label="Anotação da questão">${escapeHtml(notes)}</textarea></div>`;
+}
+function questionNoteTemplate(type) {
+  if(type === 'osce') return 'CENÁRIO:\nObjetivo da estação:\nEtapas obrigatórias:\nFalhas cometidas:\nCondutas críticas:\nRed flags:\nChecklist para repetir:\n';
+  return 'QUEIXA PRINCIPAL:\nDados relevantes:\nHipóteses diagnósticas:\nDiagnóstico mais provável:\nDiagnósticos diferenciais:\nExames indicados:\nConduta:\nPonto de decisão:\n';
 }
 function updateQuestionDraftUI(questionId, selected) {
   document.querySelectorAll('[data-question][data-answer]').forEach(button => {
@@ -8431,6 +8440,14 @@ function bindQuestionActions(questions, question) {
       updateQuestionProgressField(question, e.currentTarget);
       if(['missReason','correctMode','confidence','certainty'].includes(field)) requestAnimationFrame(() => render());
     };
+  });
+  document.querySelectorAll('[data-note-template]').forEach(button => button.onclick = e => {
+    const textarea = document.querySelector('[data-progress-field="notes"]');
+    if(!textarea) return;
+    const template = questionNoteTemplate(e.currentTarget.dataset.noteTemplate);
+    textarea.value = textarea.value.trim() ? `${textarea.value.trim()}\n\n${template}` : template;
+    updateQuestionProgressField(question, textarea);
+    textarea.focus();
   });
   const addFlashcard = document.getElementById('addQuestionFlashcard');
   if(addFlashcard) addFlashcard.onclick = () => addQuestionFlashcard(question);
@@ -8934,7 +8951,9 @@ function answerQuestion(question, selected, timedOut=false) {
     scheduleId: linkedLesson?.id || previous.scheduleId || '',
     nextReview: !correct
       ? nextErrorReviewDate(today, 1)
-      : (previous.nextReview && previous.nextReview <= today ? nextErrorReviewDate(today, 7) : previous.nextReview || '')
+      : (previous.nextReview && previous.nextReview <= today ? nextErrorReviewDate(today, errorReviewInterval(n(previous.reviewCount) + 1)) : previous.nextReview || ''),
+    reviewCount: n(previous.reviewCount) + (previous.nextReview && previous.nextReview <= today ? 1 : 0),
+    lastReviewAt: previous.nextReview && previous.nextReview <= today ? new Date().toISOString() : previous.lastReviewAt || ''
   });
   awardQuestionAnswerXP(question,state.questionProgress[question.id]);
   ui.justAnsweredId=question.id;
@@ -8962,7 +8981,11 @@ function updateQuestionProgressField(question, input) {
   const field = input.dataset.progressField;
   const current = state.questionProgress[question.id] || {};
   const value = input.type === 'number' ? n(input.value) : input.value;
-  setQuestionProgress(question.id,{ [field]: value });
+  const patch = { [field]: value };
+  if(['notes','postLearning','correctiveRule'].includes(field) && String(value || '').trim() && !current.nextReview) {
+    patch.nextReview = nextErrorReviewDate(studyDateKey(), 1);
+  }
+  setQuestionProgress(question.id, patch);
   if(field === 'postLearning') awardQuestionReviewXP(question.id,state.questionProgress[question.id]);
   if(field === 'notes') {
     const preview = document.getElementById('questionNotesPreview');
