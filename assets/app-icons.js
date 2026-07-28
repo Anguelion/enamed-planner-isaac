@@ -30,7 +30,7 @@
     decrease:{icon:'minus',tone:'neutral',weight:'regular'}, font:{icon:'text-aa',tone:'neutral',weight:'regular'},
     theme:{icon:'moon-stars',tone:'neutral'}, light:{icon:'sun',tone:'xp'}, energy:{icon:'lightning',tone:'xp'},
     target:{icon:'target',tone:'fire'}, trend:{icon:'trend-up',tone:'success'}, calendar:{icon:'calendar-check',tone:'water'},
-    tasks:{icon:'list-checks',tone:'success'}, medical:{icon:'stethoscope',tone:'water'}, graduation:{icon:'graduation-cap',tone:'simulation'},
+    tasks:{icon:'list-checks',tone:'success'}, medical:{icon:'stethoscope',tone:'water'}, heart:{icon:'heart',tone:'error'}, graduation:{icon:'graduation-cap',tone:'simulation'},
     sparkle:{icon:'sparkle',tone:'xp'}, shield:{icon:'shield-check',tone:'success'}
   });
 

@@ -131,7 +131,7 @@ const views = [
   ['painel','Dashboard','dashboard'],
   ['cronograma','Missão','mission'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'],
   ['aulas','Aulas','video'], ['questoes','Questões','question'], ['simulados','Simulados','simulation'], ['caderno-erros','Caderno de erros','caderno'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'],
-  ['prescricao','Prescrição','prescription'], ['semiologia','Semiologia','medical'], ['ecg','ECG','medical'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
+  ['prescricao','Prescrição','prescription'], ['semiologia','Semiologia','medical'], ['ecg','ECG','heart'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
   ['importar-questoes','Adicionar questões','upload'],
   ['ferramentas','Ferramentas','settings']
 ];
