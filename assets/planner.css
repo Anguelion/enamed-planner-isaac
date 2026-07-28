@@ -710,6 +710,7 @@ body.dark .question-difficulty-btn.difficulty-dificil.active{background:#4a211f;
 .flashcard-course-group{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
 .flashcard-course-group:first-of-type{border-top:0}
 .flashcard-editor{border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:8px;padding:12px;background:#fff8e8;margin-top:14px}
+.flashcard-editor-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .flashcard-editor-list{display:grid;gap:10px;margin-top:10px}
 .flashcard-editor-item{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:start}
 .flashcard-editor-item textarea{min-height:90px}
