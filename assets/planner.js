@@ -4385,9 +4385,14 @@ function buildHistoryRow(date) {
   videoEvents.forEach(t => topics.add(topicForVideoEvent(t)));
   blockEvents.forEach(t => topics.add(topicForBlockCompletion(t)));
   if(!topics.size && log.videoNames) topics.add(log.videoNames);
-  const correct = qRows.filter(r => r.correct).length;
   const videoIds = new Set(videoEvents.map(t => t.metadata?.scheduleId || t.source_id).filter(Boolean));
-  return { date, log, topics: [...topics], questions: qRows.length, correct, wrong: qRows.length - correct, flashcards: fcEvents.length, videos: videoIds.size, minutes };
+  const hasAutoQuestions = qRows.length > 0;
+  const questions = Math.max(qRows.length, n(log.questions));
+  const correct = hasAutoQuestions ? qRows.filter(r => r.correct).length : n(log.correct);
+  const wrong = hasAutoQuestions ? qRows.length - qRows.filter(r => r.correct).length : n(log.wrong);
+  const flashcards = Math.max(fcEvents.length, n(log.flashcards));
+  const videos = Math.max(videoIds.size, n(log.videos));
+  return { date, log, topics: [...topics], questions, correct, wrong, flashcards, videos, minutes };
 }
 function historyRows() {
   ensureDayLogs();
