@@ -2503,6 +2503,12 @@ function startMotivationCycle() {
     if(motivationKey() !== motivationRenderedKey) renderMotivation();
   }, 30000);
 }
+function stopMotivationCycle() {
+  if(motivationRefreshInterval) {
+    clearInterval(motivationRefreshInterval);
+    motivationRefreshInterval = null;
+  }
+}
 async function loadMotivationMessages() {
   try {
     const response = await fetch('data/motivation_messages.json', {cache:'no-store'});
