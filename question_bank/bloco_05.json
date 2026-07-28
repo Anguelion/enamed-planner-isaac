@@ -1,6 +1,6 @@
 {
   "block": 5,
-  "count": 175,
+  "count": 171,
   "questions": [
     {
       "id": "b05-semanal-q001",
@@ -873,33 +873,6 @@
       "scheduleId": "cron-42",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt"
-    },
-    {
-      "id": "b05-semanais-q29",
-      "number": 29,
-      "collectionBlock": 5,
-      "documentBlock": 5,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Questões semanais - Bloco 5",
-      "stem": "Paciente de 32 anos, primigesta, com hipertensão arterial crônica, em uso de 80mg/dia de nifedipina, encontra-se em fase ativa do trabalho de parto com 5cm de dilatação. Nesse momento, foi realizada cardiotocografia, cujo resultado levou à indicação de cesariana em função do diagnóstico de sofrimento fetal agudo. O padrão cardiotocográfico que melhor representa esse quadro é:",
-      "options": {
-        "A": "B)",
-        "C": "D)"
-      },
-      "answer": "C",
-      "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 5",
-      "images": [],
-      "comment": "Análise:\nCorreta: C.\nPor que está certa: O diagnóstico de sofrimento fetal agudo que leva à cesárea de urgência é tipamente representado por traçados de Categoria 3, que incluem desacelerações tardias recorrentes com variabilidade mínima ou ausente, ou bradicardia basal.\nPor que as outras estão erradas:\nA, B, D: Não representam padrões de Categoria 3 que exijam intervenção imediata por sofrimento fetal agudo grave sem possibilidade de manobra.\nPonto de prova: Interpretação de CTG patológica (Categoria 3).\nFlashcard sugerido: Q: Qual padrão de CTG indica sofrimento fetal agudo (Categoria 3)? A: Desacelerações tardias recorrentes com variabilidade ausente/mínima.\nPérola: Categoria 3: feto pede socorro.\nArmadilha: Indicar cesárea por desacelerações variáveis leves (Categoria 2).",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Obstetrícia",
-        "Trabalho de Parto",
-        "Hipertensão Arterial",
-        "Raciocínio Diagnóstico",
-        "Saúde Materno-Fetal"
-      ],
-      "tagSource": "Tags.txt"
     },
     {
       "id": "b05-semanal-q030",
@@ -3203,32 +3176,6 @@
       "scheduleId": "cron-46"
     },
     {
-      "id": "b05-semanais-q105",
-      "number": 105,
-      "collectionBlock": 5,
-      "documentBlock": 5,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 5",
-      "stem": "Um paciente de 40 anos, HAS, vício em opioides, é atendido no domicílio pelo SAMU e trazido ao seu departamento de emergência apresentando intensa falta de ar, diaforese e agitação. Apresenta FC: 135bpm na avaliação inicial, rítmico, com PA: 220x120, Sat: 90% com CN 5L/min e FR: 30 irpm; pulmões: estertores crepitantes nas bases e campo médio. Paciente apresenta pupilas dilatadas, piloereção e temores difusos pelo corpo. USG POCUS com linhas B nos campos da ausculta pulmonar. baseado nos dados fornecidos, responda: QUAL O QUADRO CLÍNICO DO PACIENTE, QUAL A CAUSA PROVÁVEL E QUAL TRATAMENTO DEVE SER REALIZADO AGORA?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 5",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está cena: O paciente apresenta Edema Agudo de Pulmão (estertores, linhas B) secundário a uma Emergência Hipertensiva decorrente da Síndrome de Abstinência de Opioides (pupilas dilatadas, piloereção, tremores, taquicardia). O tratamento imediato é o controle da PA com anti-hipertensivo EV e o tratamento do edema pulmonar. Como o usuário não especificou a alternativa exata, a letra A representa a anotação da hipótese diagnóstica sugerida na própria questão.\nPonto de prova: Reconhecimento de emergência hipertensiva por abstinência.\nFlashcard sugerido: Q: Abstinência de opioides causa qual tipo de crise hipertensiva? A: Emergência hipertensiva (por descarga adrenérgica).\nPérola: Opiode cortado: pupilas dilatadas e PA nas alturas.\nArmadilha: Achar que a miose é parte do quadro de abstinência (na abstinência há midríase).",
-      "tags": [
-        "Clínica Médica",
-        "Medicina Interna",
-        "Hipertensão Arterial",
-        "Dispneia",
-        "Conduta Terapêutica",
-        "Urgência e Emergência"
-      ],
-      "tagSource": "Tags.txt"
-    },
-    {
       "id": "b05-semanal-q106",
       "number": 106,
       "collectionBlock": 5,
@@ -4646,34 +4593,6 @@
       "scheduleId": "cron-45"
     },
     {
-      "id": "b05-semanais-q152",
-      "number": 152,
-      "collectionBlock": 5,
-      "documentBlock": 5,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 5",
-      "stem": "Mulher, 74 anos de idade, tabagista, tem hipertensão e diabetes. Foi encontrada confusa em casa pela filha, que há 2 dias atrás havia a visto bem. Na admissão no pronto-socorro, encontrava-se afebril, eupneica, com PA de 170×110 mmHg, FC de 102 bpm, glicemia capilar de 145 mg/dL. Ao exame neurológico, apresentou-se vigil, alerta, irritada, afirmando “estou bem, quero ir para casa”. Tinha o olhar desviado para a direita quando distraída, mas conseguia olhar para a esquerda quando instruída pelo examinador. A paciente percebia o dedo do examinador em todos os quadrantes no exame de campos visuais por confrontação. Quando solicitada a ler um texto, começava a partir do meio da página e lia apenas o lado direito das frases repetidamente. Não apresentava fraqueza muscular. Assinale a alternativa que apresenta uma imagem de ressonância magnética compatível com o quadro da paciente descrita:",
-      "options": {
-        "A": "",
-        "B": "C)",
-        "D": ""
-      },
-      "answer": "A",
-      "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 5",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A paciente apresenta heminegligência esquerda (lê apenas o lado direito, desvio do olhar para direita) sem déficit motor, o que é típico de lesão no hemisfério direito (não-dominante). O olhar desviado para o lado da lesão (direita) é clássico de AVC isquêmico na fase aguda. A imagem A provavelmente demonstra uma área de restrição à difusão (DWI) no lobo parietal/temporal direito.\nPor que as outras estão erradas:\nB, C e D: Mostram lesões em territórios errados (esquerdo, ou vértebro-basilar), que não justificariam negligência esquerda isolada.\nPonto de prova: Correlação clínico-radiológica da síndrome de heminegligência.\nFlashcard sugerido: Heminegligência esquerda + desvio do olhar para direita. Topografia? Hemisfério direito (parietal).\nPérola: Negligência = parietal direito. Olhar desvia para a lesão.\nArmadilha: Confundir negligência (direito) com afasia (esquerdo).",
-      "tags": [
-        "Clínica Médica",
-        "Endocrinologia",
-        "Tabagismo",
-        "Diabetes Mellitus",
-        "Interpretação de Exames",
-        "Pessoa Idosa"
-      ],
-      "tagSource": "Tags.txt"
-    },
-    {
       "id": "b05-semanal-q153",
       "number": 153,
       "collectionBlock": 5,
@@ -4764,32 +4683,6 @@
       ],
       "tagSource": "Tags.txt",
       "scheduleId": "cron-47"
-    },
-    {
-      "id": "b05-semanais-q156",
-      "number": 156,
-      "collectionBlock": 5,
-      "documentBlock": 5,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 5",
-      "stem": "Homem, 76a, comparece ao pronto- socorro com queixa de tontura de instalação súbita há 3h. Desde então apresenta quadro expressivo de náuseas e vômitos, com formigamento em hemiface direita. Paciente faz uso irregular de medicamentos para manejo de HAS e DM2. Tabagista ativo 40 anos-maço. Exame neurológico: nistagmo rotacional, desvio skew e hipoestesia de hemiface direita. O EXAME MAIS ACURADO PARA CONFIRMAR A HIPÓTESE DIAGNÓSTICA É:",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "01. QUESTÕES BLOCO 5 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 5",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: O quadro clínico (vertigem aguda, nistagmo rotacional, desvio skew, hipoestesia facial ipsilateral) é clássico de Síndrome de Wallenberg (AVC lateral do bulbo). O exame mais acurado para confirmar a hipótese de AVC posterior agudo é a Ressonância Magnética de crânio com difusão (embora a TC seja o inicial para descartar hemorragia, a RM confirmaria o bulbo). A banca colocou a resposta como \"A. Anote sua principal hipótese...\", o que é uma forma didática de cobrar o reconhecimento clínico.\nPor que as outras estão erradas:\nNão aplicável, pois a questão apresenta apenas a assertiva A com a instrução.\nPonto de prova: Reconhecimento clínico da Síndrome de Wallenberg (AVC lateral bulbar).\nFlashcard sugerido: Vertigem + nistagmo + skew deviation + hipoestesia facial ipsilateral? Síndrome de Wallenberg (Bulbo lateral).\nPérola: Wallenberg = bulbo lateral. Vertigem central, skew e face de um lado.\nArmadilha: Diagnosticar labirintite em paciente com sinais neurológicos centrais (skew deviation, déficit sensitivo trigeminal).",
-      "tags": [
-        "Clínica Médica",
-        "Medicina Interna",
-        "Diabetes Mellitus Tipo 2",
-        "Hipertensão Arterial",
-        "Conduta Terapêutica",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags.txt"
     },
     {
       "id": "b05-semanal-q157",

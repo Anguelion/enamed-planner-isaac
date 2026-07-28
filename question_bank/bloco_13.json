@@ -1,6 +1,6 @@
 {
   "block": 13,
-  "count": 125,
+  "count": 121,
   "questions": [
     {
       "id": "b13-violencia-sexual-q01",
@@ -29,7 +29,8 @@
         "Conhecimento Conceitual",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-tecnica-operatoria-q01",
@@ -59,7 +60,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-tecnica-operatoria-q02",
@@ -88,7 +90,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-pneumonia-q01",
@@ -118,7 +121,8 @@
         "Conhecimento Conceitual",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-derrame-pleural-q01",
@@ -147,7 +151,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-violencia-sexual-q02",
@@ -176,7 +181,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-tecnica-operatoria-q03",
@@ -205,34 +211,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
-    },
-    {
-      "id": "b13-violencia-sexual-q03",
-      "number": 8,
-      "collectionBlock": 13,
-      "documentBlock": 13,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Violência Sexual",
-      "stem": "Uma paciente de 15 anos de idade vai à consulta com o ginecologista assistente, referindo que a \"\"camisinha estourou\"\" durante relação sexual consensual há cerca de quatro semanas. Relata que o parceiro procurou um urologista e foi diagnosticado com alguma doença sexualmente transmissível (DST), sendo prescrito tratamento com azitromicina e ceftriaxone, ambos em doses únicas. A paciente queixa-se de dor em baixo ventre, náuseas e vômitos nos últimos dois dias. Nega febre. Ao exame físico, é identificado corrimento amarelo-esverdeado e com odor fétido, e demonstra dor à mobilização do colo do útero e à palpação dos anexos. Apresenta uma ultrassonografia transvaginal sem laudo, com sinais de salpingite. Demais aspectos do exame não puderam ser avaliados, pois as imagens estavam pouco nítidas. Com base nesse caso clínico e nos conhecimentos médicos correlatos, julgue o item a seguir. Pode-se considerar a paciente como vítima de estupro de vulnerável:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "B",
-      "source": "QUESTÕES BLOCO 13 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 13",
-      "images": [],
-      "comment": "Análise:\nCorreta: B.\nPor que está certa: O estupro de vulnerável se aplica a menores de 14 anos. A paciente tem 15 anos e a relação foi consensual (camisinha estourou), não configurando o crime.\nPor que as outras estão erradas:\nA: Errado, pois a paciente tem 15 anos, não sendo vulnerável pela idade.\nPonto de prova: Conceito legal de estupro de vulnerável.\nFlashcard sugerado: Menor de 14 anos = estupro de vulnerável? Sim.\nPérola: < 14 anos = vulnerável.\nArmadilha: Considerar qualquer relação de adolescente como estupro de vulnerável.",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Ginecologia",
-        "Síndrome Febril",
-        "Interpretação de Exames",
-        "Adolescência",
-        "Avaliação Clínica"
-      ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-tecnica-operatoria-q04",
@@ -262,7 +242,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-tecnica-operatoria-q05",
@@ -292,7 +273,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-violencia-sexual-q04",
@@ -321,7 +303,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-violencia-sexual-q05",
@@ -350,7 +333,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-derrame-pleural-q02",
@@ -379,7 +363,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-violencia-sexual-q06",
@@ -408,7 +393,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-tecnica-operatoria-q06",
@@ -438,7 +424,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-violencia-sexual-q07",
@@ -467,7 +454,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-semanais-q17",
@@ -496,7 +484,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-tecnica-operatoria-q07",
@@ -525,7 +514,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-violencia-sexual-q09",
@@ -554,7 +544,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-violencia-sexual-q10",
@@ -583,7 +574,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-redes-atencao-q01",
@@ -612,7 +604,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-tecnica-operatoria-q08",
@@ -642,7 +635,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-derrame-pleural-q03",
@@ -672,7 +666,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-violencia-sexual-q11",
@@ -701,34 +696,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
-    },
-    {
-      "id": "b13-violencia-sexual-q12",
-      "number": 25,
-      "collectionBlock": 13,
-      "documentBlock": 13,
-      "area": "Clínica Médica",
-      "topic": "Violência Sexual",
-      "stem": "Uma paciente vitima de estupro deseja realizar a interrupção da gravidez. A respeito desse caso clinico, julgue o item a seguir. O médico apenas devera realizar o procedimento quando a paciente apresentar documentação necessária, a saber, termo de consentimento livre e esclarecido, boletim de ocorrência policial e exame de corpo de delito.",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "B",
-      "source": "QUESTÕES BLOCO 13 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 13",
-      "images": [],
-      "comment": "Análise:\nCorreta: B.\nPor que está certa: Para aborto por estupro não se exige exame de corpo de delito nem boletim de ocorrência, basta o relato da paciente.\nPor que as outras estão erradas:\nA: A documentação exigida não inclui BO nem corpo de delito.\nPonto de prova: Documentação para aborto por estupro.\nFlashcard sugerado: Aborto por estupro exige corpo de delito? Não.\nPérola: Sem BO, sem IML, sem juiz.\nArmadilha: Exigir comprovação policial ou pericial.",
-      "tags": [
-        "Clínica Médica",
-        "Medicina Interna",
-        "Interpretação de Exames",
-        "Paciente Adulto",
-        "Avaliação Clínica",
-        "Caso Clínico"
-      ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-derrame-pleural-q04",
@@ -758,7 +727,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-pneumonia-q02",
@@ -787,7 +757,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-derrame-pleural-q05",
@@ -816,7 +787,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-violencia-sexual-q13",
@@ -845,7 +817,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-derrame-pleural-q06",
@@ -874,7 +847,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-pneumonia-q03",
@@ -903,7 +877,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-violencia-sexual-q14",
@@ -933,7 +908,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-tecnica-operatoria-q09",
@@ -963,7 +939,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-pneumonia-q04",
@@ -993,7 +970,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-derrame-pleural-q07",
@@ -1022,7 +1000,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-pneumonia-q05",
@@ -1053,7 +1032,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-derrame-pleural-q08",
@@ -1083,7 +1063,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-pneumonia-q06",
@@ -1112,7 +1093,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-pneumonia-q07",
@@ -1142,7 +1124,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-pneumonia-q08",
@@ -1172,7 +1155,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-violencia-sexual-q15",
@@ -1201,7 +1185,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-pneumonia-q09",
@@ -1231,7 +1216,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-tecnica-operatoria-q10",
@@ -1261,7 +1247,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-tecnica-operatoria-q11",
@@ -1290,7 +1277,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-violencia-sexual-q16",
@@ -1319,7 +1307,8 @@
         "Conhecimento Conceitual",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-febre-sem-sinais-q01",
@@ -1348,7 +1337,8 @@
         "Conhecimento Conceitual",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-violencia-sexual-q17",
@@ -1377,7 +1367,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-redes-atencao-q02",
@@ -1407,7 +1398,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-febre-sem-sinais-q02",
@@ -1436,7 +1428,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-pneumonia-q10",
@@ -1465,7 +1458,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-febre-sem-sinais-q03",
@@ -1494,7 +1488,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-febre-sem-sinais-q04",
@@ -1523,7 +1518,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-violencia-sexual-q18",
@@ -1552,7 +1548,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-febre-sem-sinais-q05",
@@ -1582,7 +1579,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-febre-sem-sinais-q06",
@@ -1611,7 +1609,8 @@
         "Conduta Terapêutica",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-derrame-pleural-q09",
@@ -1640,7 +1639,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-violencia-sexual-q19",
@@ -1670,7 +1670,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-febre-sem-sinais-q07",
@@ -1700,7 +1701,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-derrame-pleural-q10",
@@ -1729,7 +1731,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-derrame-pleural-q11",
@@ -1760,7 +1763,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-redes-atencao-q03",
@@ -1790,7 +1794,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-pneumonia-q11",
@@ -1820,7 +1825,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-redes-atencao-q04",
@@ -1849,7 +1855,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-febre-sem-sinais-q08",
@@ -1879,7 +1886,8 @@
         "Conduta Terapêutica",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-redes-atencao-q05",
@@ -1908,7 +1916,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-derrame-pleural-q12",
@@ -1938,7 +1947,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-febre-sem-sinais-q09",
@@ -1968,7 +1978,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-violencia-sexual-q20",
@@ -1997,7 +2008,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-redes-atencao-q06",
@@ -2027,7 +2039,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-redes-atencao-q07",
@@ -2057,7 +2070,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-febre-sem-sinais-q10",
@@ -2086,7 +2100,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-pneumonia-q12",
@@ -2115,7 +2130,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-febre-sem-sinais-q11",
@@ -2144,7 +2160,8 @@
         "Raciocínio Diagnóstico",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-febre-sem-sinais-q12",
@@ -2173,7 +2190,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-febre-sem-sinais-q13",
@@ -2202,7 +2220,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-derrame-pleural-q13",
@@ -2232,7 +2251,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-redes-atencao-q08",
@@ -2261,7 +2281,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-febre-sem-sinais-q14",
@@ -2291,7 +2312,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-violencia-sexual-q21",
@@ -2320,7 +2342,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-febre-sem-sinais-q15",
@@ -2349,7 +2372,8 @@
         "Interpretação de Exames",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-derrame-pleural-q14",
@@ -2379,7 +2403,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-febre-sem-sinais-q16",
@@ -2409,7 +2434,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-derrame-pleural-q15",
@@ -2439,7 +2465,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-redes-atencao-q09",
@@ -2468,7 +2495,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-febre-sem-sinais-q17",
@@ -2497,7 +2525,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-redes-atencao-q10",
@@ -2527,7 +2556,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-tecnica-operatoria-q12",
@@ -2556,7 +2586,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-febre-sem-sinais-q18",
@@ -2587,7 +2618,8 @@
       ],
       "tagSource": "Tags 13.txt",
       "answerAudit": "official-source",
-      "answerSource": "QUESTÕES BLOCO 13 (SEMANAIS).txt"
+      "answerSource": "QUESTÕES BLOCO 13 (SEMANAIS).txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-febre-sem-sinais-q19",
@@ -2616,7 +2648,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-pneumonia-q17",
@@ -2646,7 +2679,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-pneumonia-q15",
@@ -2678,7 +2712,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-semanais-q92",
@@ -2707,7 +2742,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-semanais-q93",
@@ -2736,7 +2772,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-126"
     },
     {
       "id": "b13-semanais-q94",
@@ -2765,7 +2802,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-semanais-q95",
@@ -2795,7 +2833,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-semanais-q96",
@@ -2824,7 +2863,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-semanais-q97",
@@ -2853,7 +2893,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-semanais-q98",
@@ -2882,7 +2923,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-derrame-pleural-q17",
@@ -2911,7 +2953,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-derrame-pleural-q23",
@@ -2941,7 +2984,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-derrame-pleural-q19",
@@ -2971,7 +3015,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-semanais-q102",
@@ -3000,7 +3045,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-semanais-q103",
@@ -3029,7 +3075,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-semanais-q104",
@@ -3058,7 +3105,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-semanais-q105",
@@ -3087,7 +3135,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-127"
     },
     {
       "id": "b13-semanais-q106",
@@ -3116,7 +3165,8 @@
         "Epidemiologia Clínica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-semanais-q107",
@@ -3146,7 +3196,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-125"
     },
     {
       "id": "b13-semanais-q108",
@@ -3175,7 +3226,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-semanais-q109",
@@ -3205,7 +3257,8 @@
         "Conduta Terapêutica",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-124"
     },
     {
       "id": "b13-violencia-sexual-q22",
@@ -3234,7 +3287,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-violencia-sexual-q28",
@@ -3263,7 +3317,8 @@
         "Conhecimento Conceitual",
         "Adolescência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-semanais-q112",
@@ -3292,7 +3347,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-semanais-q113",
@@ -3321,33 +3377,8 @@
         "Cálculo Clínico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 13.txt"
-    },
-    {
-      "id": "b13-semanais-q114",
-      "number": 114,
-      "collectionBlock": 13,
-      "documentBlock": 13,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 13",
-      "stem": "Mulher de 22 anos, previamente hígida, procura atendimento após ter sido vítima de violência sexual com penetração vaginal há cerca de 2 horas. Refere uso de dispositivo intrauterino de cobre há 3 anos e não sabe informar seu histórico vacinal para hepatite B. Diante do cenário, qual deve ser a conduta em relação à profilaxia para hepatite B?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 13 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 13",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: Sem histórico vacinal e na ausência de imunidade, a conduta é vacinar contra Hepatite B e aplicar imunoglobulina hiperimune (IGHBH).\nPor que as outras estão erradas:\nB, C, D: Outras opções não contemplam a profilaxia padrão para hepatite B.\nPonto de prova: Profilaxia de Hepatite B pós-violência sexual.\nFlashcard sugerado: Pós-estupro sem vacina Hep B? Vacina + Imunoglobulina.\nPérola: Sem vacina, toma soro e vacina.\nArmadilha: Só dar vacina.",
-      "tags": [
-        "Clínica Médica",
-        "Medicina Interna",
-        "Violência Sexual",
-        "Hepatites",
-        "Conduta Terapêutica",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-semanais-q115",
@@ -3376,7 +3407,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-semanais-q116",
@@ -3406,7 +3438,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-semanais-q117",
@@ -3435,7 +3468,8 @@
         "Conhecimento Conceitual",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-123"
     },
     {
       "id": "b13-semanais-q118",
@@ -3464,7 +3498,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-redes-atencao-q14",
@@ -3493,7 +3528,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-semanais-q120",
@@ -3522,7 +3558,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-redes-atencao-q16",
@@ -3551,7 +3588,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-redes-atencao-q17",
@@ -3580,7 +3618,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-semanais-q123",
@@ -3609,33 +3648,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 13.txt"
-    },
-    {
-      "id": "b13-semanais-q124",
-      "number": 124,
-      "collectionBlock": 13,
-      "documentBlock": 13,
-      "area": "Saúde Coletiva",
-      "topic": "Questões semanais - Bloco 13",
-      "stem": "A Reforma Psiquiátrica no Brasil impulsionou mudanças no modelo de atenção à saúde mental, promovendo a desinstitucionalização e a criação de serviços comunitários substitutivos ao hospital psiquiátrico. Para organizar e articular os diferentes pontos de atenção destinados ao cuidado de pessoas com transtornos mentais e necessidades decorrentes do uso de substâncias psicoativas, o Sistema Único de Saúde (SUS) instituiu uma rede específica, garantindo atenção integral e contínua. Qual é o nome dessa rede?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 13 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 13",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A rede criada para a atenção em saúde mental é a Rede de Atenção Psicossocial (RAPS).\nPor que as outras estão erradas:\nB, C, D, E: Não correspondem ao nome da rede.\nPonto de prova: Rede de Saúde Mental.\nFlashcard sugerado: Qual a rede de saúde mental? RAPS.\nPérola: Saúde mental = RAPS.\nArmadilha: Confundir com RAS.",
-      "tags": [
-        "Saúde Coletiva",
-        "Medicina de Família e Comunidade",
-        "Sistema Único de Saúde",
-        "Conhecimento Conceitual",
-        "Assistência Hospitalar",
-        "Avaliação Clínica"
-      ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     },
     {
       "id": "b13-semanais-q125",
@@ -3664,7 +3678,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 13.txt"
+      "tagSource": "Tags 13.txt",
+      "scheduleId": "cron-122"
     }
   ]
 }

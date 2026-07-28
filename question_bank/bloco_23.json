@@ -29,7 +29,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q002",
@@ -59,7 +60,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q003",
@@ -88,7 +90,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q004",
@@ -117,7 +120,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q005",
@@ -147,7 +151,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q006",
@@ -176,7 +181,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-211"
     },
     {
       "id": "b23-q007",
@@ -208,7 +214,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q008",
@@ -237,7 +244,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q009",
@@ -266,7 +274,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q010",
@@ -295,7 +304,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q011",
@@ -325,7 +335,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q012",
@@ -355,7 +366,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q013",
@@ -384,7 +396,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q014",
@@ -413,7 +426,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q015",
@@ -442,7 +456,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q016",
@@ -472,7 +487,8 @@
         "Raciocínio Diagnóstico",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q017",
@@ -501,7 +517,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q018",
@@ -530,7 +547,8 @@
         "Conhecimento Conceitual",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q019",
@@ -559,7 +577,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q020",
@@ -588,7 +607,8 @@
         "Raciocínio Diagnóstico",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q021",
@@ -617,7 +637,8 @@
         "Interpretação de Exames",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q022",
@@ -649,7 +670,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q023",
@@ -678,7 +700,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q024",
@@ -707,7 +730,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q025",
@@ -736,7 +760,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q026",
@@ -765,7 +790,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q027",
@@ -794,7 +820,8 @@
         "Raciocínio Diagnóstico",
         "Adolescência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q028",
@@ -823,7 +850,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q029",
@@ -852,7 +880,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q030",
@@ -881,7 +910,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q031",
@@ -911,7 +941,8 @@
         "Raciocínio Diagnóstico",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q032",
@@ -941,7 +972,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q033",
@@ -973,7 +1005,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q034",
@@ -1003,7 +1036,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q035",
@@ -1032,7 +1066,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q036",
@@ -1061,7 +1096,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q037",
@@ -1091,7 +1127,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q038",
@@ -1120,7 +1157,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q039",
@@ -1150,7 +1188,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q040",
@@ -1179,7 +1218,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q041",
@@ -1208,7 +1248,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q042",
@@ -1238,7 +1279,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q043",
@@ -1267,7 +1309,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q044",
@@ -1296,7 +1339,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q045",
@@ -1325,7 +1369,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q046",
@@ -1355,7 +1400,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q047",
@@ -1388,7 +1434,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-211"
     },
     {
       "id": "b23-q048",
@@ -1417,7 +1464,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q049",
@@ -1446,7 +1494,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q050",
@@ -1475,7 +1524,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q051",
@@ -1504,7 +1554,8 @@
         "Conhecimento Conceitual",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q052",
@@ -1533,7 +1584,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q053",
@@ -1562,7 +1614,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q054",
@@ -1591,7 +1644,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q055",
@@ -1620,7 +1674,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q056",
@@ -1649,7 +1704,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q057",
@@ -1678,7 +1734,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q058",
@@ -1707,7 +1764,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q059",
@@ -1736,7 +1794,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q060",
@@ -1766,7 +1825,8 @@
         "Raciocínio Diagnóstico",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q061",
@@ -1798,7 +1858,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q062",
@@ -1828,7 +1889,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q063",
@@ -1858,7 +1920,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q064",
@@ -1888,7 +1951,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q065",
@@ -1918,7 +1982,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q066",
@@ -1947,7 +2012,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q067",
@@ -1976,7 +2042,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q068",
@@ -2005,7 +2072,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q069",
@@ -2034,7 +2102,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-211"
     },
     {
       "id": "b23-q070",
@@ -2063,7 +2132,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-211"
     },
     {
       "id": "b23-q071",
@@ -2093,7 +2163,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-211"
     },
     {
       "id": "b23-q072",
@@ -2122,7 +2193,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-211"
     },
     {
       "id": "b23-q073",
@@ -2152,7 +2224,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q074",
@@ -2181,7 +2254,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q075",
@@ -2211,7 +2285,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q076",
@@ -2240,7 +2315,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q077",
@@ -2269,7 +2345,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q078",
@@ -2299,7 +2376,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q079",
@@ -2328,7 +2406,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q080",
@@ -2359,7 +2438,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q081",
@@ -2388,7 +2468,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-215"
     },
     {
       "id": "b23-q082",
@@ -2420,7 +2501,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q083",
@@ -2449,7 +2531,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q084",
@@ -2478,7 +2561,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q085",
@@ -2507,7 +2591,8 @@
         "Interpretação de Exames",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q086",
@@ -2536,7 +2621,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q087",
@@ -2565,7 +2651,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q088",
@@ -2595,7 +2682,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q089",
@@ -2625,7 +2713,8 @@
         "Conhecimento Conceitual",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-211"
     },
     {
       "id": "b23-q090",
@@ -2654,7 +2743,8 @@
         "Raciocínio Diagnóstico",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q091",
@@ -2683,7 +2773,8 @@
         "Raciocínio Diagnóstico",
         "Atenção Primária"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q092",
@@ -2712,7 +2803,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-214"
     },
     {
       "id": "b23-q093",
@@ -2741,7 +2833,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q094",
@@ -2770,7 +2863,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q095",
@@ -2799,7 +2893,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q096",
@@ -2829,7 +2924,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q097",
@@ -2858,7 +2954,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q098",
@@ -2887,7 +2984,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q099",
@@ -2916,7 +3014,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-213"
     },
     {
       "id": "b23-q100",
@@ -2945,7 +3044,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q101",
@@ -2974,7 +3074,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q102",
@@ -3004,7 +3105,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q103",
@@ -3033,7 +3135,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q104",
@@ -3062,7 +3165,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q105",
@@ -3092,7 +3196,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q106",
@@ -3121,7 +3226,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-212"
     },
     {
       "id": "b23-q107",
@@ -3150,7 +3256,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     },
     {
       "id": "b23-q108",
@@ -3179,7 +3286,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-210"
     }
   ]
 }

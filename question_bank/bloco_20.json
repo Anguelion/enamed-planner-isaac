@@ -1,6 +1,6 @@
 {
   "block": 20,
-  "count": 134,
+  "count": 133,
   "questions": [
     {
       "id": "b20-q001",
@@ -30,7 +30,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q002",
@@ -59,7 +60,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q003",
@@ -89,7 +91,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q004",
@@ -119,7 +122,8 @@
         "Conhecimento Conceitual",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q005",
@@ -148,7 +152,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q006",
@@ -178,7 +183,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q007",
@@ -207,7 +213,8 @@
         "Raciocínio Diagnóstico",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q008",
@@ -237,7 +244,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q009",
@@ -267,7 +275,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q010",
@@ -297,7 +306,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q011",
@@ -326,7 +336,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q012",
@@ -355,7 +366,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q013",
@@ -388,7 +400,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q014",
@@ -417,7 +430,8 @@
         "Raciocínio Diagnóstico",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q015",
@@ -446,7 +460,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q016",
@@ -475,7 +490,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q017",
@@ -504,7 +520,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q018",
@@ -533,7 +550,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q019",
@@ -562,7 +580,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q020",
@@ -591,7 +610,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q021",
@@ -620,7 +640,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q022",
@@ -649,7 +670,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q023",
@@ -678,7 +700,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q024",
@@ -707,7 +730,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q025",
@@ -736,7 +760,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q026",
@@ -765,7 +790,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q027",
@@ -794,7 +820,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q028",
@@ -823,7 +850,8 @@
         "Conhecimento Conceitual",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q029",
@@ -856,7 +884,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q030",
@@ -885,7 +914,8 @@
         "Raciocínio Diagnóstico",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q031",
@@ -915,7 +945,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q032",
@@ -945,7 +976,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q033",
@@ -975,7 +1007,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q034",
@@ -1005,7 +1038,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-semanais-q35",
@@ -1034,7 +1068,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q036",
@@ -1067,7 +1102,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q037",
@@ -1096,7 +1132,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q038",
@@ -1125,7 +1162,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q039",
@@ -1154,7 +1192,8 @@
         "Interpretação de Exames",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q040",
@@ -1183,7 +1222,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-187"
     },
     {
       "id": "b20-q041",
@@ -1213,7 +1253,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q042",
@@ -1243,7 +1284,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q043",
@@ -1272,7 +1314,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-semanais-q44",
@@ -1301,7 +1344,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q045",
@@ -1330,7 +1374,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q046",
@@ -1360,7 +1405,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q047",
@@ -1389,7 +1435,8 @@
         "Raciocínio Diagnóstico",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q048",
@@ -1418,7 +1465,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q049",
@@ -1447,7 +1495,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q050",
@@ -1479,7 +1528,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q051",
@@ -1508,7 +1558,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q052",
@@ -1538,7 +1589,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-187"
     },
     {
       "id": "b20-q053",
@@ -1567,7 +1619,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q054",
@@ -1596,7 +1649,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q055",
@@ -1625,7 +1679,8 @@
         "Raciocínio Diagnóstico",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q056",
@@ -1654,7 +1709,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q057",
@@ -1684,7 +1740,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q058",
@@ -1713,7 +1770,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q059",
@@ -1743,7 +1801,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q060",
@@ -1772,7 +1831,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q061",
@@ -1801,7 +1861,8 @@
         "Raciocínio Diagnóstico",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q062",
@@ -1831,7 +1892,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q063",
@@ -1860,7 +1922,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q064",
@@ -1889,7 +1952,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q065",
@@ -1918,7 +1982,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q066",
@@ -1947,7 +2012,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q067",
@@ -1977,7 +2043,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q068",
@@ -2007,7 +2074,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-187"
     },
     {
       "id": "b20-q069",
@@ -2040,7 +2108,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q070",
@@ -2069,7 +2138,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q071",
@@ -2098,7 +2168,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q072",
@@ -2127,7 +2198,8 @@
         "Raciocínio Diagnóstico",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q073",
@@ -2156,7 +2228,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q074",
@@ -2186,7 +2259,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q075",
@@ -2216,7 +2290,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q076",
@@ -2246,7 +2321,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q077",
@@ -2276,7 +2352,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q078",
@@ -2306,7 +2383,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-187"
     },
     {
       "id": "b20-q079",
@@ -2335,7 +2413,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q080",
@@ -2364,7 +2443,8 @@
         "Conhecimento Conceitual",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q081",
@@ -2393,7 +2473,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q082",
@@ -2423,7 +2504,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q083",
@@ -2452,7 +2534,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q084",
@@ -2482,7 +2565,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q085",
@@ -2511,7 +2595,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q086",
@@ -2541,7 +2626,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q087",
@@ -2570,7 +2656,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q088",
@@ -2600,7 +2687,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q089",
@@ -2629,7 +2717,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q090",
@@ -2661,7 +2750,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q091",
@@ -2691,7 +2781,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q092",
@@ -2720,7 +2811,8 @@
         "Epidemiologia Clínica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q093",
@@ -2749,7 +2841,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q094",
@@ -2779,7 +2872,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q095",
@@ -2808,7 +2902,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q096",
@@ -2837,7 +2932,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q097",
@@ -2867,7 +2963,8 @@
         "Interpretação de Exames",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q098",
@@ -2896,7 +2993,8 @@
         "Raciocínio Diagnóstico",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q099",
@@ -2925,7 +3023,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q100",
@@ -2955,7 +3054,8 @@
         "Conhecimento Conceitual",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q101",
@@ -2984,7 +3084,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q102",
@@ -3015,7 +3116,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q103",
@@ -3044,7 +3146,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q104",
@@ -3076,7 +3179,8 @@
         "Interpretação de Exames",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q105",
@@ -3108,7 +3212,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q106",
@@ -3137,7 +3242,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q107",
@@ -3166,7 +3272,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q108",
@@ -3195,7 +3302,8 @@
         "Raciocínio Diagnóstico",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q109",
@@ -3224,7 +3332,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-188"
     },
     {
       "id": "b20-q110",
@@ -3253,7 +3362,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q111",
@@ -3282,7 +3392,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q112",
@@ -3312,7 +3423,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q113",
@@ -3341,7 +3453,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q114",
@@ -3370,7 +3483,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q115",
@@ -3399,7 +3513,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q116",
@@ -3428,7 +3543,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q117",
@@ -3457,7 +3573,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q118",
@@ -3486,7 +3603,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q119",
@@ -3516,33 +3634,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
-    },
-    {
-      "id": "b20-semanais-q120",
-      "number": 120,
-      "collectionBlock": 20,
-      "documentBlock": 20,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Questões semanais - Bloco 20",
-      "stem": "Um recém-nascido (RN) com idade gestacional de 36 semanas, sem intercorrências durante a gestação, nasceu de parto natural, com auxílio de Fórceps, pesando 2.800g e com 47 cm. Com 16 horas de vida apresenta icterícia que atinge a zona II-III de Kramer e no exame físico apresenta uma pequena bossa serossanguinolenta, sem outras alterações. Está ativo, sugando o seio adequadamente e já eliminou mecônio. Exames laboratoriais: sangue tipo B positivo do RN; Mãe sangue tipo O positivo. Coombs direto negativo; Bilirrubinas totais: 13 mg/dL; Bilirrubina indireta: 12,2 mg/dL (Zona de Alto Risco pelo nomograma de Bhutani). De acordo com as Curvas da Academia Americana de Pediatria, qual a conduta mais adequada neste momento? ** ** ** **",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 20 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 20",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A alternativa A corresponde ao gabarito oficial. O método ou etapa que melhor esclarece a dúvida clínica e orienta a decisão seguinte é: Anote sua principal hipótese e leia nosso comentário.\nPor que as outras estão erradas:\nAs alternativas não foram preservadas integralmente no arquivo textual.\nPonto de prova: Selecionar o exame ou etapa propedêutica apropriada em Um recém-nascido (RN) com idade gestacional de 36 semanas, sem intercorrências d.\nFlashcard sugerido:\nPergunta: Qual é a resposta-chave da questão 120 sobre Um recém-nascido (RN) com idade gestacional de 36 semanas, sem intercorrências d?\nResposta: Anote sua principal hipótese e leia nosso comentário.\n\nPérola:\nAnote sua principal hipótese e leia nosso comentário.\n\nArmadilha:\nSelecionar uma afirmação parcialmente verdadeira que não responde exatamente ao que foi perguntado.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Obstetrícia",
-        "Assistência ao Parto",
-        "Conduta Terapêutica",
-        "Saúde Materno-Fetal",
-        "Avaliação Clínica"
-      ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q121",
@@ -3571,7 +3664,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q122",
@@ -3600,7 +3694,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q123",
@@ -3629,7 +3724,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q124",
@@ -3658,7 +3754,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q125",
@@ -3687,7 +3784,8 @@
         "Interpretação de Exames",
         "Período Neonatal"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q126",
@@ -3716,7 +3814,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-185"
     },
     {
       "id": "b20-q127",
@@ -3745,7 +3844,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q128",
@@ -3774,7 +3874,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-186"
     },
     {
       "id": "b20-q129",
@@ -3804,7 +3905,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q130",
@@ -3833,7 +3935,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-184"
     },
     {
       "id": "b20-q131",
@@ -3862,7 +3965,8 @@
         "Epidemiologia Clínica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q132",
@@ -3892,7 +3996,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-189"
     },
     {
       "id": "b20-q133",
@@ -3921,7 +4026,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     },
     {
       "id": "b20-q134",
@@ -3950,7 +4056,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 20.txt"
+      "tagSource": "Tags Bloco 20.txt",
+      "scheduleId": "cron-183"
     }
   ]
 }

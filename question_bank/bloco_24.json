@@ -1,6 +1,6 @@
 {
   "block": 24,
-  "count": 102,
+  "count": 101,
   "questions": [
     {
       "id": "b24-q001",
@@ -30,7 +30,8 @@
         "Fisiopatologia",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q002",
@@ -59,7 +60,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q003",
@@ -88,7 +90,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q004",
@@ -120,7 +123,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q005",
@@ -149,7 +153,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q006",
@@ -184,7 +189,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q007",
@@ -214,7 +220,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q008",
@@ -243,7 +250,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q009",
@@ -272,7 +280,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q010",
@@ -302,7 +311,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q011",
@@ -332,7 +342,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q012",
@@ -362,7 +373,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q013",
@@ -391,7 +403,8 @@
         "Raciocínio Diagnóstico",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q014",
@@ -421,7 +434,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q015",
@@ -450,7 +464,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q016",
@@ -480,7 +495,8 @@
         "Interpretação de Exames",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q017",
@@ -510,7 +526,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q018",
@@ -539,7 +556,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q019",
@@ -571,7 +589,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q020",
@@ -600,7 +619,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q021",
@@ -629,7 +649,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q022",
@@ -661,7 +682,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q023",
@@ -690,7 +712,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q024",
@@ -719,7 +742,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q025",
@@ -748,7 +772,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q026",
@@ -777,7 +802,8 @@
         "Farmacologia Clínica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q027",
@@ -806,7 +832,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q028",
@@ -835,7 +862,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q029",
@@ -864,7 +892,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q030",
@@ -893,7 +922,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q031",
@@ -923,7 +953,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q032",
@@ -952,7 +983,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q033",
@@ -981,7 +1013,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q034",
@@ -1011,7 +1044,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q035",
@@ -1040,7 +1074,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q036",
@@ -1070,7 +1105,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q037",
@@ -1100,7 +1136,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q038",
@@ -1129,7 +1166,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q039",
@@ -1159,7 +1197,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q040",
@@ -1189,7 +1228,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q041",
@@ -1218,7 +1258,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q042",
@@ -1247,7 +1288,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q043",
@@ -1276,7 +1318,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q044",
@@ -1306,7 +1349,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q045",
@@ -1335,7 +1379,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q046",
@@ -1364,7 +1409,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q047",
@@ -1393,7 +1439,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q048",
@@ -1422,7 +1469,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q049",
@@ -1451,7 +1499,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q050",
@@ -1480,7 +1529,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q051",
@@ -1509,7 +1559,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q052",
@@ -1539,7 +1590,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q053",
@@ -1568,7 +1620,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q054",
@@ -1597,7 +1650,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q055",
@@ -1626,7 +1680,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q056",
@@ -1656,7 +1711,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q057",
@@ -1685,7 +1741,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q058",
@@ -1715,7 +1772,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q059",
@@ -1746,7 +1804,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q060",
@@ -1775,7 +1834,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q061",
@@ -1805,7 +1865,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q062",
@@ -1835,7 +1896,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q063",
@@ -1864,7 +1926,8 @@
         "Conhecimento Conceitual",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q064",
@@ -1894,7 +1957,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q065",
@@ -1924,7 +1988,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q066",
@@ -1953,7 +2018,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q067",
@@ -1982,7 +2048,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q068",
@@ -2011,7 +2078,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q069",
@@ -2040,7 +2108,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q070",
@@ -2069,7 +2138,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q071",
@@ -2098,7 +2168,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q072",
@@ -2127,7 +2198,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q073",
@@ -2156,7 +2228,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q074",
@@ -2185,7 +2258,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q075",
@@ -2215,7 +2289,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q076",
@@ -2244,7 +2319,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q077",
@@ -2273,7 +2349,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q078",
@@ -2303,7 +2380,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q079",
@@ -2332,7 +2410,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-223"
     },
     {
       "id": "b24-q080",
@@ -2361,7 +2440,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q081",
@@ -2391,7 +2471,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q082",
@@ -2420,7 +2501,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q083",
@@ -2451,7 +2533,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q084",
@@ -2480,7 +2563,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-224"
     },
     {
       "id": "b24-q085",
@@ -2509,7 +2593,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q086",
@@ -2538,7 +2623,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-222"
     },
     {
       "id": "b24-q087",
@@ -2567,7 +2653,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q088",
@@ -2596,7 +2683,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q089",
@@ -2626,7 +2714,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q090",
@@ -2655,7 +2744,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q091",
@@ -2684,7 +2774,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q092",
@@ -2714,33 +2805,8 @@
         "Conhecimento Conceitual",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
-    },
-    {
-      "id": "b24-semanais-q93",
-      "number": 93,
-      "collectionBlock": 24,
-      "documentBlock": 24,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Questões semanais - Bloco 24",
-      "stem": "Uma mulher de 26 anos, gestante de 34 semanas, dá entrada no pronto- socorro com queixas de dor abdominal intensa e ausência de percepção de movimentos fetais há mais de 24 horas. A ultrassonografia realizada na admissão não revela presença de batimentos cardíacos fetais. O parto é induzido, o feto não apresenta sinais de vida ao nascimento, pesando 2340g e com comprimento de 30 cm; mesmo com as medidas de reanimação neonatal não houve sobrevida. Diante desse quadro, o médico responsável deve emitir a Declaração de Óbito (DO)?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 24 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 24",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A alternativa A corresponde ao gabarito oficial. O conceito correto, de acordo com a situação apresentada, é: Anote sua principal hipótese e leia nosso comentário.\nPor que as outras estão erradas:\nAs alternativas não foram preservadas integralmente no arquivo textual.\nPonto de prova: Dominar o conceito central de Uma mulher de 26 anos, gestante de 34 semanas, dá entrada no pronto- socorro com.\nFlashcard sugerido:\nPergunta: Qual é a resposta-chave da questão 93 sobre Uma mulher de 26 anos, gestante de 34 semanas, dá entrada no pronto- socorro com?\nResposta: Anote sua principal hipótese e leia nosso comentário.\n\nPérola:\nAnote sua principal hipótese e leia nosso comentário.\n\nArmadilha:\nSelecionar uma afirmação parcialmente verdadeira que não responde exatamente ao que foi perguntado.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Obstetrícia",
-        "Dor Abdominal",
-        "Assistência ao Parto",
-        "Interpretação de Exames",
-        "Saúde Materno-Fetal"
-      ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q094",
@@ -2769,7 +2835,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q095",
@@ -2798,7 +2865,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q096",
@@ -2827,7 +2895,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q097",
@@ -2857,7 +2926,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q098",
@@ -2886,7 +2956,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q099",
@@ -2915,7 +2986,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-221"
     },
     {
       "id": "b24-q100",
@@ -2947,7 +3019,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-219"
     },
     {
       "id": "b24-q101",
@@ -2976,7 +3049,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     },
     {
       "id": "b24-q102",
@@ -3005,7 +3079,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 24.txt"
+      "tagSource": "Tags Bloco 24.txt",
+      "scheduleId": "cron-220"
     }
   ]
 }

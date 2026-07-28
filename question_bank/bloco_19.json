@@ -1,6 +1,6 @@
 {
   "block": 19,
-  "count": 118,
+  "count": 115,
   "questions": [
     {
       "id": "b19-q001",
@@ -30,7 +30,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q002",
@@ -60,7 +61,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q003",
@@ -92,7 +94,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q004",
@@ -122,7 +125,8 @@
         "Epidemiologia Clínica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q005",
@@ -154,7 +158,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q006",
@@ -184,7 +189,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q007",
@@ -213,34 +219,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
-    },
-    {
-      "id": "b19-q008",
-      "number": 8,
-      "collectionBlock": 19,
-      "documentBlock": 20,
-      "area": "G.O.",
-      "topic": "Câncer de Colo de Útero",
-      "stem": "Um paciente de 50 anos de idade vai em consulta a UBS com queixa de corrimento vaginal acinzentado e cor odor fétido na última semana. Refere também que gostaria de realizar um check-up, pois não se consulta com médico há mais de 10 anos e está preocupada, pois a própria mãe foi diagnosticada com câncer de mama quando tinha 68 anos de idade. História médica pregressa: G6P6AO, diagnóstico prévio de sífilis tratada recentemente e coitarca aos 14 anos de idade. Tabagista de um maço de cigarro ao dia desde os 15 anos de idade. Deverá ser solicitado o exame colpocitológico para rastreamento de neoplasia de colo uterino, cuja principal fator de risco são as infecções do HPV, particularmente os subtipos 16 e 18:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "A",
-      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-20-download.pdf",
-      "sourceLabel": "Câncer de Colo de Útero",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A alternativa A corresponde ao gabarito oficial. O método ou etapa que melhor esclarece a dúvida clínica e orienta a decisão seguinte é: CERTO.\nPor que as outras estão erradas:\nB: ERRADO. A afirmação é parcialmente plausível, mas não corresponde ao detalhe decisivo cobrado no enunciado.\nPonto de prova: Selecionar o exame ou etapa propedêutica apropriada em câncer de mama.\nFlashcard sugerido:\nPergunta: Qual é a resposta-chave da questão 8 sobre câncer de mama?\nResposta: CERTO.\n\nPérola:\nCERTO.\n\nArmadilha:\nSelecionar uma afirmação parcialmente verdadeira que não responde exatamente ao que foi perguntado.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Mastologia",
-        "Câncer de Mama",
-        "Rastreamento do Câncer do Colo do Útero",
-        "Raciocínio Diagnóstico",
-        "Atenção Primária"
-      ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q009",
@@ -270,7 +250,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q010",
@@ -299,7 +280,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q011",
@@ -328,7 +310,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q012",
@@ -357,7 +340,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q013",
@@ -386,34 +370,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
-    },
-    {
-      "id": "b19-q014",
-      "number": 14,
-      "collectionBlock": 19,
-      "documentBlock": 20,
-      "area": "G.O.",
-      "topic": "Câncer de Colo de Útero",
-      "stem": "Um paciente de 50 anos de idade vai em consulta a UBS com queixa de corrimento vaginal acinzentado e cor odor fétido na última semana. Refere também que gostaria de realizar um check-up, pois não se consulta com médico há mais de 10 anos e está preocupada, pois a própria mãe foi diagnosticada com câncer de mama quando tinha 68 anos de idade. História médica pregressa: G6P6AO, diagnóstico prévio de sífilis tratada recentemente e coitarca aos 14 anos de idade. Tabagista de um maço de cigarro ao dia desde os 15 anos de idade. Considerando esse caso clínico e os conhecimentos médicos relacionados à saúde da mulher, julgue o item a seguir. O fato de ter apresentado quadro de sífilis anteriormente não eleva o risco de a paciente vir a desenvolver câncer de colo uterino:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "B",
-      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-20-download.pdf",
-      "sourceLabel": "Câncer de Colo de Útero",
-      "images": [],
-      "comment": "Análise:\nCorreta: B.\nPor que está certa: A alternativa B corresponde ao gabarito oficial. Os achados centrais — Um paciente de 50 anos de idade vai em consulta a UBS com queixa de corrimento vaginal acinzentado e cor odor fétido na última semana. Refere também; e e coitarca aos 14 anos de idade. Tabagista de um maço de cigarro ao dia desde os 15 anos de idade. — formam o padrão mais compatível com: ERRADO.\nPor que as outras estão erradas:\nA: CERTO. O diagnóstico não reúne de forma coerente os achados clínicos, laboratoriais e epidemiológicos apresentados.\nPonto de prova: Reconhecer câncer de mama pela integração dos achados do caso.\nFlashcard sugerido:\nPergunta: Qual é a resposta-chave da questão 14 sobre câncer de mama?\nResposta: ERRADO.\n\nPérola:\nERRADO.\n\nArmadilha:\nValorizar um achado isolado e deixar de integrar todo o padrão clínico.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Mastologia",
-        "Câncer de Mama",
-        "Colo do Útero",
-        "Raciocínio Diagnóstico",
-        "Atenção Primária"
-      ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q015",
@@ -443,34 +401,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
-    },
-    {
-      "id": "b19-q016",
-      "number": 16,
-      "collectionBlock": 19,
-      "documentBlock": 20,
-      "area": "G.O.",
-      "topic": "Câncer de Colo de Útero",
-      "stem": "Uma paciente de 56 anos de idade comparece à consulta com o ginecologista para revisão. Refere realizar exames ginecológicos de rastreamento, conforme orientação do médico clínico geral que a atendia até então. Informa que faz uso de cálcio, vitamina D e sinvastatina, por histórico de osteoporose identificada em densitometria óssea (DMO) prévia, e dislipidemia. Recentemente recebeu diagnóstico de nefrolitíase após crise de dor renal. Relata ser tabagista e etilista desde os 23 anos de idade, e o peso atual dela é 54 Kg. Teve dois partos vaginais prévios, menarca aos 12 anos e menopausa aos 38 anos de idade. Nega ter realizado terapia de reposição hormonal. Considerando esse caso clínico e com base nas recomendações do Ministério da Saúde para exames de rastreamento e nos conhecimentos médicos correlatos, julgue o item a seguir. A paciente poderia realizar o exame citopatológico do colo do útero a cada três anos, caso tenha dois resultados anuais consecutivos negativos:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "A",
-      "source": "AQFM---Extensivo-ENAMED-2026---Bloco-20-download.pdf",
-      "sourceLabel": "Câncer de Colo de Útero",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A alternativa A corresponde ao gabarito oficial. O método ou etapa que melhor esclarece a dúvida clínica e orienta a decisão seguinte é: CERTO.\nPor que as outras estão erradas:\nB: ERRADO. A afirmação é parcialmente plausível, mas não corresponde ao detalhe decisivo cobrado no enunciado.\nPonto de prova: Selecionar o exame ou etapa propedêutica apropriada em esse caso clínico e com base nas recomendações do Ministério da Saúde para exame.\nFlashcard sugerido:\nPergunta: Qual é a resposta-chave da questão 16 sobre esse caso clínico e com base nas recomendações do Ministério da Saúde para exame?\nResposta: CERTO.\n\nPérola:\nCERTO.\n\nArmadilha:\nSelecionar uma afirmação parcialmente verdadeira que não responde exatamente ao que foi perguntado.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Ginecologia",
-        "Transtorno por Uso de Álcool",
-        "Rastreamento",
-        "Interpretação de Exames",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q017",
@@ -500,7 +432,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q018",
@@ -530,7 +463,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-177"
     },
     {
       "id": "b19-q019",
@@ -560,7 +494,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q020",
@@ -590,7 +525,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q021",
@@ -620,7 +556,8 @@
         "Raciocínio Diagnóstico",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q022",
@@ -649,7 +586,8 @@
         "Conhecimento Conceitual",
         "Primeira Infância"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q023",
@@ -678,7 +616,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q024",
@@ -707,7 +646,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q025",
@@ -736,7 +676,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q026",
@@ -765,7 +706,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q027",
@@ -795,7 +737,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q028",
@@ -827,7 +770,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q029",
@@ -859,7 +803,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q030",
@@ -891,7 +836,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q031",
@@ -920,7 +866,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q032",
@@ -950,7 +897,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q033",
@@ -979,7 +927,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q034",
@@ -1008,7 +957,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-177"
     },
     {
       "id": "b19-q035",
@@ -1038,7 +988,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q036",
@@ -1068,7 +1019,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q037",
@@ -1097,7 +1049,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q038",
@@ -1127,7 +1080,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q039",
@@ -1156,7 +1110,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q040",
@@ -1185,7 +1140,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q041",
@@ -1215,7 +1171,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-177"
     },
     {
       "id": "b19-q042",
@@ -1244,7 +1201,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q043",
@@ -1273,7 +1231,8 @@
         "Raciocínio Diagnóstico",
         "Atenção Primária"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q044",
@@ -1302,7 +1261,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q045",
@@ -1332,7 +1292,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q046",
@@ -1361,7 +1322,8 @@
         "Epidemiologia Clínica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q047",
@@ -1390,7 +1352,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q048",
@@ -1420,7 +1383,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q049",
@@ -1450,7 +1414,8 @@
         "Conhecimento Conceitual",
         "Atenção Primária"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q050",
@@ -1482,7 +1447,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q051",
@@ -1511,7 +1477,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q052",
@@ -1541,7 +1508,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q053",
@@ -1571,7 +1539,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q054",
@@ -1600,7 +1569,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q055",
@@ -1629,7 +1599,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q056",
@@ -1661,7 +1632,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q057",
@@ -1690,7 +1662,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q058",
@@ -1719,7 +1692,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q059",
@@ -1749,7 +1723,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q060",
@@ -1779,7 +1754,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q061",
@@ -1808,7 +1784,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q062",
@@ -1837,7 +1814,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q063",
@@ -1867,7 +1845,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q064",
@@ -1896,7 +1875,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q065",
@@ -1925,7 +1905,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q066",
@@ -1954,7 +1935,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q067",
@@ -1983,7 +1965,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q068",
@@ -2013,7 +1996,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q069",
@@ -2043,7 +2027,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q070",
@@ -2072,7 +2057,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q071",
@@ -2102,7 +2088,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q072",
@@ -2131,7 +2118,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q073",
@@ -2161,7 +2149,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q074",
@@ -2190,7 +2179,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q075",
@@ -2222,7 +2212,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q076",
@@ -2252,7 +2243,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q077",
@@ -2281,7 +2273,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q078",
@@ -2310,7 +2303,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-177"
     },
     {
       "id": "b19-q079",
@@ -2340,7 +2334,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q080",
@@ -2369,7 +2364,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q081",
@@ -2403,7 +2399,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q082",
@@ -2432,7 +2429,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q083",
@@ -2461,7 +2459,8 @@
         "Interpretação de Exames",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q084",
@@ -2490,7 +2489,8 @@
         "Raciocínio Diagnóstico",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q085",
@@ -2523,7 +2523,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q086",
@@ -2552,7 +2553,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q087",
@@ -2582,7 +2584,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q088",
@@ -2611,7 +2614,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q089",
@@ -2640,7 +2644,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q090",
@@ -2670,7 +2675,8 @@
         "Raciocínio Diagnóstico",
         "Adolescência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q091",
@@ -2702,7 +2708,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q092",
@@ -2732,7 +2739,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q093",
@@ -2762,7 +2770,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q094",
@@ -2791,7 +2800,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q095",
@@ -2820,7 +2830,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q096",
@@ -2852,7 +2863,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-176"
     },
     {
       "id": "b19-q097",
@@ -2881,7 +2893,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q098",
@@ -2910,7 +2923,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q099",
@@ -2940,7 +2954,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q100",
@@ -2974,7 +2989,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-180"
     },
     {
       "id": "b19-q101",
@@ -3005,7 +3021,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q102",
@@ -3036,7 +3053,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q103",
@@ -3067,7 +3085,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q104",
@@ -3105,7 +3124,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q106",
@@ -3134,7 +3154,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q107",
@@ -3163,7 +3184,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q108",
@@ -3192,7 +3214,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-179"
     },
     {
       "id": "b19-q109",
@@ -3221,7 +3244,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q110",
@@ -3250,7 +3274,8 @@
         "Interpretação de Exames",
         "Atenção Primária"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q111",
@@ -3279,7 +3304,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q112",
@@ -3308,7 +3334,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q113",
@@ -3338,7 +3365,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q114",
@@ -3367,7 +3395,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q115",
@@ -3396,7 +3425,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q116",
@@ -3425,7 +3455,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-178"
     },
     {
       "id": "b19-q118",
@@ -3454,7 +3485,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q119",
@@ -3483,7 +3515,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     },
     {
       "id": "b19-q120",
@@ -3512,7 +3545,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-175"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "block": 16,
-  "count": 115,
+  "count": 113,
   "questions": [
     {
       "id": "b16-q001",
@@ -30,7 +30,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q002",
@@ -59,7 +60,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q003",
@@ -88,7 +90,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q004",
@@ -117,7 +120,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q005",
@@ -147,7 +151,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q006",
@@ -176,7 +181,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q007",
@@ -205,7 +211,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q008",
@@ -234,7 +241,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q009",
@@ -264,7 +272,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q010",
@@ -294,7 +303,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q011",
@@ -323,7 +333,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q012",
@@ -357,7 +368,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-semanais-q13",
@@ -386,7 +398,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q014",
@@ -416,7 +429,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q015",
@@ -445,7 +459,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q016",
@@ -474,7 +489,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q017",
@@ -503,7 +519,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q018",
@@ -532,7 +549,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q019",
@@ -561,7 +579,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q020",
@@ -591,7 +610,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q021",
@@ -621,7 +641,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q022",
@@ -650,7 +671,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q023",
@@ -679,7 +701,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q024",
@@ -708,7 +731,8 @@
         "Epidemiologia Clínica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q025",
@@ -737,7 +761,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q026",
@@ -767,7 +792,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q027",
@@ -797,7 +823,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q028",
@@ -826,7 +853,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q029",
@@ -856,7 +884,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q030",
@@ -886,7 +915,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q031",
@@ -916,7 +946,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q032",
@@ -945,7 +976,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-semanais-q33",
@@ -974,7 +1006,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q034",
@@ -1003,7 +1036,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q035",
@@ -1032,7 +1066,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q036",
@@ -1064,7 +1099,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q037",
@@ -1094,7 +1130,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q038",
@@ -1124,7 +1161,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q039",
@@ -1153,7 +1191,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q040",
@@ -1182,7 +1221,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q041",
@@ -1211,7 +1251,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q042",
@@ -1240,7 +1281,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q043",
@@ -1270,7 +1312,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q044",
@@ -1299,7 +1342,8 @@
         "Epidemiologia Clínica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q045",
@@ -1328,7 +1372,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q046",
@@ -1361,7 +1406,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q047",
@@ -1390,7 +1436,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q048",
@@ -1420,7 +1467,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q049",
@@ -1450,7 +1498,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q050",
@@ -1480,7 +1529,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q051",
@@ -1510,7 +1560,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q052",
@@ -1540,7 +1591,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q053",
@@ -1570,7 +1622,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q054",
@@ -1599,7 +1652,8 @@
         "Raciocínio Diagnóstico",
         "Adolescência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q055",
@@ -1628,7 +1682,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q056",
@@ -1657,7 +1712,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q057",
@@ -1687,7 +1743,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-semanais-q58",
@@ -1717,7 +1774,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q059",
@@ -1746,7 +1804,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q060",
@@ -1775,7 +1834,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q061",
@@ -1804,7 +1864,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q062",
@@ -1833,7 +1894,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q063",
@@ -1862,7 +1924,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q064",
@@ -1891,7 +1954,8 @@
         "Conhecimento Conceitual",
         "Adolescência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q065",
@@ -1920,7 +1984,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q066",
@@ -1949,7 +2014,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q067",
@@ -1979,7 +2045,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q068",
@@ -2009,7 +2076,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q069",
@@ -2039,7 +2107,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q070",
@@ -2068,7 +2137,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q071",
@@ -2097,7 +2167,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q072",
@@ -2126,7 +2197,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q073",
@@ -2156,7 +2228,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q074",
@@ -2186,7 +2259,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q075",
@@ -2216,7 +2290,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q076",
@@ -2246,7 +2321,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q077",
@@ -2276,7 +2352,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q078",
@@ -2306,7 +2383,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-q079",
@@ -2335,7 +2413,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q080",
@@ -2364,7 +2443,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q081",
@@ -2393,7 +2473,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q082",
@@ -2422,7 +2503,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q083",
@@ -2451,7 +2533,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q084",
@@ -2481,7 +2564,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-q085",
@@ -2510,33 +2594,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
-    },
-    {
-      "id": "b16-semanais-q86",
-      "number": 86,
-      "collectionBlock": 16,
-      "documentBlock": 16,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 16",
-      "stem": "Paciente masculino, 38 anos, previamente saudável, residente da zona rural de uma cidade do interior de Minas Gerais, é admitido no pronto-socorro com quadro de febre alta há 5 dias, associada a cefaleia intensa, mialgia difusa, náuseas, vômitos e prostração. Evoluiu nas últimas 24 horas com icterícia, oligúria e aparecimento de manchas avermelhadas nos membros inferiores. Ao exame, apresenta- se febril (39,2°C), hipotenso (PA 90/60 mmHg), taquicárdico (FC 112 bpm), com sinais de desidratação e exantema petequial em membros inferiores. A esposa relata que ele trabalha com cavalos e cães, e que retirou um “carrapato grande” da perna do marido há cerca de uma semana. Exames laboratoriais revelam: * Hemoglobina: 13,1 g/dL; * Leucócitos: 14.800/mm³ (com 12% bastonetes); * Plaquetas: 78.000/mm³; * Creatinina: 2,4 mg/dL; * Ureia: 85 mg/dL; * AST (TGO): 168 U/L; * ALT (TGP): 140 U/L; * Bilirrubina total: 3,2 mg/dL (direta: 1,8 mg/dL); * PCR: 160 mg/L; * Radiografia de tórax: infiltrado intersticial bilateral. Com base na história clínica, nos achados laboratoriais e no contexto epidemiológico, discuta quas principais hipóteses diagnósticas diferenciais, justifique a mais provável e descreva a conduta terapêutica imediata.",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 16 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 16",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A hipótese principal é febre maculosa grave: exposição a carrapato, febre alta, exantema petequial, trombocitopenia, lesão renal e pulmonar. Deve-se iniciar doxiciclina imediatamente, coletar exames confirmatórios sem atrasar tratamento, notificar e oferecer suporte intensivo.\nPor que as outras estão erradas:\nNão se aplica: a questão foi apresentada em formato discursivo, sem alternativas diagnósticas completas.\nPonto de prova: Diagnóstico diferencial entre febre maculosa, leptospirose e dengue.\nFlashcard sugerido:\nPergunta: Qual é a conduta-chave diante de suspeita de febre maculosa?\nResposta: Iniciar doxiciclina imediatamente, sem aguardar confirmação.\n\nPérola:\nCarrapato + febre + rash + plaquetopenia = doxiciclina já.\n\nArmadilha:\nEsperar sorologia porque o diagnóstico não está confirmado.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Clínica Médica",
-        "Neurologia",
-        "Cefaleia",
-        "Trombocitopenia",
-        "Conduta Terapêutica",
-        "Urgência e Emergência"
-      ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-semanais-q87",
@@ -2565,7 +2624,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q088",
@@ -2594,7 +2654,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q089",
@@ -2624,7 +2685,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q090",
@@ -2653,7 +2715,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q091",
@@ -2682,7 +2745,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q092",
@@ -2712,7 +2776,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q093",
@@ -2741,7 +2806,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q094",
@@ -2770,7 +2836,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-148"
     },
     {
       "id": "b16-q095",
@@ -2799,7 +2866,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-semanais-q96",
@@ -2828,7 +2896,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-semanais-q97",
@@ -2857,7 +2926,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-q097",
@@ -2888,33 +2958,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
-    },
-    {
-      "id": "b16-semanais-q99",
-      "number": 99,
-      "collectionBlock": 16,
-      "documentBlock": 16,
-      "area": "Cirurgia",
-      "topic": "Questões semanais - Bloco 16",
-      "stem": "Homem, 21 anos de idade, vítima de queda de nível (5m) há duas horas, é levado ao pronto socorro. Encontra-se com vias aéreas pérvias, sem alterações ventilatórias, estável hemodinamicamente, sem dor abdominal, pelve estável. Escala de coma de Glasgow 15, sem déficits neurológicos. Identificada ereção peniana indolor, referindo início do quadro após o trauma. Realizada gasometria do corpo cavernoso, de coloração vermelha, com análise gasométrica revelando pH 7,42; pCO 22 mmHg e pO 92 mmHg. Qual é a suspeita clínica e etiologia ?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 16 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 16",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: Ereção indolor após trauma, com sangue cavernoso vermelho e gasometria arterializada, caracteriza priapismo não isquêmico de alto fluxo, geralmente por fístula arteriocavernosa após lesão perineal.\nPor que as outras estão erradas:\nNão se aplica: a questão foi apresentada em formato discursivo, sem alternativas diagnósticas completas.\nPonto de prova: Priapismo não isquêmico pós-trauma.\nFlashcard sugerido:\nPergunta: Qual é a causa típica do priapismo de alto fluxo?\nResposta: Fístula arteriocavernosa após trauma perineal.\n\nPérola:\nAlto fluxo é indolor e arterializado; baixo fluxo é doloroso e hipóxico.\n\nArmadilha:\nTratar alto fluxo como emergência isquêmica sem diferenciar a gasometria.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Cirurgia",
-        "Trauma",
-        "Gasometria Arterial",
-        "Dor Abdominal",
-        "Raciocínio Diagnóstico",
-        "Urgência e Emergência"
-      ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-semanais-q100",
@@ -2944,7 +2989,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-semanais-q101",
@@ -2973,7 +3019,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-semanais-q102",
@@ -3002,7 +3049,8 @@
         "Prevenção e Rastreamento",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-semanais-q103",
@@ -3032,7 +3080,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q101",
@@ -3061,7 +3110,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-semanais-q105",
@@ -3090,7 +3140,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-semanais-q106",
@@ -3119,7 +3170,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-150"
     },
     {
       "id": "b16-q100",
@@ -3148,7 +3200,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-147"
     },
     {
       "id": "b16-semanais-q108",
@@ -3177,7 +3230,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-semanais-q109",
@@ -3207,7 +3261,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-semanais-q110",
@@ -3236,7 +3291,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-q111",
@@ -3265,7 +3321,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-149"
     },
     {
       "id": "b16-semanais-q112",
@@ -3294,7 +3351,8 @@
         "Interpretação de Exames",
         "Adolescência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-semanais-q113",
@@ -3323,7 +3381,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-151"
     },
     {
       "id": "b16-semanais-q114",
@@ -3352,7 +3411,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     },
     {
       "id": "b16-semanais-q115",
@@ -3381,7 +3441,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 16.txt"
+      "tagSource": "Tags 16.txt",
+      "scheduleId": "cron-152"
     }
   ]
 }

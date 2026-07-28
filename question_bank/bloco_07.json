@@ -1,6 +1,6 @@
 {
   "block": 7,
-  "count": 150,
+  "count": 146,
   "questions": [
     {
       "id": "b07-semanal-q001",
@@ -1959,32 +1959,6 @@
       "scheduleId": "cron-66"
     },
     {
-      "id": "b07-semanais-q65",
-      "number": 65,
-      "collectionBlock": 7,
-      "documentBlock": 7,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 7",
-      "stem": "Equipe de saúde da família constata que número expressivo de moradores de determinado bairro apresenta uma ou várias das seguintes condições: obesidade, hipertensão arterial e diabetes melito não controlados, crises de asma, ansiedade e sintomas depressivos. Os profissionais atribuem tais problemas às condições sociais nas quais os moradores vivem e trabalham. COMO SE DENOMINAM ESSAS CONDIÇÕES?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "01. QUESTÕES BLOCO 7 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 7",
-      "images": [],
-      "comment": "Análise:\nCorreta: A (Determinantes Sociais da Saúde).\nPor que está certa: As condições sociais, econômicas e ambientais em que as pessoas vivem e trabalham, e que impactam diretamente no surgimento de doenças (obesidade, HAS, DM) são definidas como Determinantes Sociais da Saúde (DSS).\nPor que as outras estão erradas: B, C, D, E não se aplicam ao conceito central do modelo de Dahlgren e Whitehead.\nPonto de prova: Conceito de Determinantes Sociais da Saúde.\nFlashcard sugerido: Condições de vida e trabalho afetando saúde = Determinantes Sociais da Saúde.\nPérola: Onde você vive e trabalha determina como você adoece.\nArmadilha: Confundir DSS com estilo de vida isolado (determinante comportamental).",
-      "tags": [
-        "Clínica Médica",
-        "Pneumologia",
-        "Asma",
-        "Hipertensão Arterial",
-        "Conhecimento Conceitual",
-        "Atenção Primária"
-      ],
-      "tagSource": "Tags.txt"
-    },
-    {
       "id": "b07-semanal-q066",
       "number": 66,
       "collectionBlock": 7,
@@ -3269,33 +3243,6 @@
       "scheduleId": "cron-69"
     },
     {
-      "id": "b07-semanais-q108",
-      "number": 108,
-      "collectionBlock": 7,
-      "documentBlock": 7,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 7",
-      "stem": "Paciente, 57 anos de idade, hospitalizada por quadro de adinamia e confusão nos últimos três dias. Encontra- se emagrecida, hidratada, com taquipneia e afebril. Familiares relatam inapetência há cerca de três meses, associada a luto recente pelo falecimento do marido. Exames laboratoriais: * Na+: 122 mEq/L; * Cr: 1,1 mg/dL; * K+: 3,5 mEq/L; * C-: 103 mEq/L; * Urina tipo 1 com densidade de 1,030. Assinale a alternativa que apresenta o exame de imagem mais compatível com o caso clínico apresentado: <br>",
-      "options": {
-        "A": "B)",
-        "C": " D)"
-      },
-      "answer": "C",
-      "source": "01. QUESTÕES BLOCO 7 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 7",
-      "images": [],
-      "comment": "Análise:\nCorreta: C.\nPor que está certa: A paciente tem hiponatremia severa (122) por provável SIADH (luto recente, inapetência, urina concentrada com densidade 1,030). O exame de imagem que mais se relaciona com SIADH grave (edema cerebral) ou para buscar a causa (pequeno tumor pulmonar, lesão CNS) é frequentemente um TC de crânio ou tórax, mas a key aponta C, que provavelmente é a imagem de Edema Cerebral difuso ou nenhuma alteração tomográfica inicial no crânio. Vou descrever a relação com o edema cerebral no SIADH severo.\nPor que as outras estão erradas: Não aplicável por ser questão de imagem.\nPonto de prova: Reconhecer complicação neurológica da hiponatremia.\nFlashcard sugerido: SIADH severo = Edema cerebral.\nPérola: Sódio baixo incha o cérebro.\nArmadilha: Achar que a densidade urinária 1.030 significa desidratação primária.",
-      "tags": [
-        "Clínica Médica",
-        "Medicina Interna",
-        "Interpretação de Exames",
-        "Paciente Adulto",
-        "Avaliação Clínica",
-        "Caso Clínico"
-      ],
-      "tagSource": "Tags.txt"
-    },
-    {
       "id": "b07-semanal-q109",
       "number": 109,
       "collectionBlock": 7,
@@ -4062,34 +4009,6 @@
       "scheduleId": "cron-64"
     },
     {
-      "id": "b07-semanal-q134",
-      "number": 134,
-      "collectionBlock": 7,
-      "documentBlock": 7,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Amenorreias",
-      "stem": "Júlia, 22 anos, estudante universitária, procura atendimento ginecológico por ausência de menstruação há 8 meses. Relata histórico de perda de peso intencional nos últimos 12 meses, com dietas restritivas e prática excessiva de exercícios físicos. Refere que seu peso atual é de 46 kg, com altura de 1,70 m (IMC: 15,9 kg/ m²). Nega atividade sexual recente e uso de anticoncepcionais. Os exames laboratoriais mostram: TSH e T4 livres normais, prolactina normal, FSH e LH em níveis baixos. Não há sinais de hiperandrogenismo. O teste da progesterona foi negativo.",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário.",
-        "B": "Diante de um quadro clínico semelhante ao de Júlia, em que fossem observados, além da deficiência energética e da amenorreia, alterações na densidade mineral óssea (baixa massa óssea), qual seria o diagnóstico e seu tratamento inicial?"
-      },
-      "answer": "A",
-      "source": "01. QUESTÕES BLOCO 7 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 7",
-      "images": [],
-      "comment": "Análise:\nCorreta: A (Hipótese: Amenorreia hipotalâmica funcional por déficit energético; Diagnóstico: Tríade da mulher atleta; Tratamento: Aumento da ingesta calórica/redução de exercício).\nPor que está certa: A pergunta pede dois conceitos. 1) O mecanismo fisiopatológico da amenorreia é a supressão do eixo hipotálamo-hipófise-gônada (HHG) devido ao balanço energético negativo severo, diminuindo o pulso de GnRH, resultando em FSH/LH baixos. 2) A adição de baixa massa óssea (decorrente de hipoestrogenismo) ao déficit energético e amenorreia forma a clássica \"Tríade da Mulher Atleta\", cujo tratamento inicial é a recuperação do peso e das taxas metabólicas através de dieta e redução do treino.\nPor que as outras estão erradas: B, C, D, E não refletem a fisiopatologia e o tratamento da tríade da atleta.\nPonto de prova: Amenorreia hipotalâmica funcional e Tríade da mulher atleta.\nFlashcard sugerido: Amenorreia + Déficit energético + Osteopenia = Tríade da mulher atleta.\nPérola: Sem comida e muito treino, o eixo desliga e o osso enfraquece.\nArmadilha: Tratar com pílula anticoncepcional sem corrigir a dieta.",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Ginecologia",
-        "Prolactina",
-        "Ciclo Menstrual",
-        "Interpretação de Exames",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
-    },
-    {
       "id": "b07-semanal-q135",
       "number": 135,
       "collectionBlock": 7,
@@ -4270,33 +4189,6 @@
       ],
       "tagSource": "Tags.txt",
       "scheduleId": "cron-65"
-    },
-    {
-      "id": "b07-semanais-q141",
-      "number": 141,
-      "collectionBlock": 7,
-      "documentBlock": 7,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Questões semanais - Bloco 7",
-      "stem": "Caso clínico: Mulher, 24 anos de idade, queixa-se de irregularidade menstrual (ciclos com intervalo de 40 dias e duração de 3 dias), aumento de pelos faciais e acne persistente na face e no tronco há cerca de três anos. Refere dificuldade para perder peso. Ao exame clínico, apresentou bom estado geral, corada, hidratada, anictérica, acianótica e afebril; peso de 78 kg, altura 1,65 m e IMC de 27,5 kg/ m²; PA de 120x80 mmHg; exame ginecológico com trofismo genital preservado, sem alterações. O exame da pele da face é apresentado na imagem a seguir: Exames laboratoriais: Glicose: 88 mg/dL Hemoglobina glicada: 5,2%; Insulina: 12 mU/L; Cálculo do HOMA-IR: 2,6 TSH: 1,2 mUI/L; Testosterona livre: 34 pmol/L; Estradiol na fase folicular: 8,3 ng/dL; LH na fase folicular: 16,9 U/L; FSH na fase folicular: 2,8 UI/L; Prolactina: 33 μg/L. Considerando a principal hipótese diagnóstica, qual é a imagem ultrassonográfica ovariana correspondente ao caso descrito?",
-      "options": {
-        "A": "B)",
-        "C": "D)"
-      },
-      "answer": "B",
-      "source": "01. QUESTÕES BLOCO 7 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 7",
-      "images": [],
-      "comment": "Análise:\nCorreta: B.\nPor que está certa: O caso clínico descreve SOP (obesidade, acne, hirsutismo, LH alto e relação LH/FSH alterada). A imagem ultrassonográfica clássica da SOP é o \"aspecto de pérolas\" ou \"fio de pérolas\", caracterizado por múltiplos folículos periféricos (2 a 9 mm) dispostos na periferia de um estroma ovariano aumentado e hiperecogênico.\nPor que as outras estão erradas: A, C, D não correspondem ao padrão clássico dos múltiplos folículos periféricos.\nPonto de prova: Imagem ultrassonográfica da SOP.\nFlashcard sugerido: SOP no USG = Múltiplos folículos periféricos (fio de pérolas).\nPérola: Ovário policístico parece colar de pérolas.\nArmadilha: Achar que cistos grandes isolados significam SOP.",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Ginecologia",
-        "Insulina",
-        "Prolactina",
-        "Raciocínio Diagnóstico",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags.txt"
     },
     {
       "id": "b07-semanal-q142",

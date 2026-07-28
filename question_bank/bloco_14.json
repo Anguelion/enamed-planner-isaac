@@ -1,6 +1,6 @@
 {
   "block": 14,
-  "count": 141,
+  "count": 136,
   "questions": [
     {
       "id": "b14-diabetes-gestacao-q01",
@@ -29,7 +29,8 @@
         "Raciocínio Diagnóstico",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q02",
@@ -59,7 +60,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-semanais-q03",
@@ -89,7 +91,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-diabetes-gestacao-q02",
@@ -118,7 +121,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-diabetes-gestacao-q03",
@@ -147,7 +151,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-diabetes-gestacao-q04",
@@ -177,7 +182,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q01",
@@ -206,7 +212,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-diabetes-gestacao-q05",
@@ -236,7 +243,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-pals-q01",
@@ -265,7 +273,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-diabetes-gestacao-q06",
@@ -294,7 +303,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-pals-q02",
@@ -324,7 +334,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-semanais-q12",
@@ -353,7 +364,8 @@
         "Raciocínio Diagnóstico",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-pals-q03",
@@ -383,7 +395,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-semanais-q14",
@@ -412,7 +425,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q15",
@@ -442,7 +456,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-cetoacidose-pediatria-q01",
@@ -471,7 +486,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-dislipidemia-q01",
@@ -501,7 +517,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-dislipidemia-q02",
@@ -530,7 +547,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-pals-q04",
@@ -559,7 +577,8 @@
         "Conduta Terapêutica",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-semanais-q20",
@@ -617,7 +636,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q22",
@@ -646,7 +666,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-semanais-q23",
@@ -675,7 +696,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-dislipidemia-q03",
@@ -705,7 +727,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-diabetes-gestacao-q08",
@@ -735,7 +758,8 @@
         "Raciocínio Diagnóstico",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q02",
@@ -764,7 +788,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-dislipidemia-q04",
@@ -793,7 +818,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-cetoacidose-pediatria-q02",
@@ -823,7 +849,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-cetoacidose-pediatria-q03",
@@ -852,7 +879,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q03",
@@ -882,7 +910,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-semanais-q31",
@@ -911,7 +940,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q04",
@@ -941,7 +971,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-cetoacidose-pediatria-q04",
@@ -970,7 +1001,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-pals-q05",
@@ -1001,7 +1033,8 @@
         "Interpretação de Exames",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-pals-q06",
@@ -1031,7 +1064,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-diabetes-gestacao-q09",
@@ -1060,7 +1094,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-cetoacidose-pediatria-q05",
@@ -1089,7 +1124,8 @@
         "Raciocínio Diagnóstico",
         "Adolescência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-diabetes-gestacao-q10",
@@ -1118,7 +1154,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-dislipidemia-q05",
@@ -1147,7 +1184,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q05",
@@ -1177,7 +1215,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-atencao-primaria-q01",
@@ -1206,7 +1245,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-semanais-q42",
@@ -1235,7 +1275,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-atencao-primaria-q02",
@@ -1264,7 +1305,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-cetoacidose-pediatria-q06",
@@ -1293,7 +1335,8 @@
         "Raciocínio Diagnóstico",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-pals-q07",
@@ -1322,7 +1365,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-atencao-primaria-q03",
@@ -1351,7 +1395,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q06",
@@ -1381,7 +1426,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-dislipidemia-q06",
@@ -1411,7 +1457,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-cetoacidose-pediatria-q07",
@@ -1441,7 +1488,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-dislipidemia-q07",
@@ -1471,7 +1519,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-dislipidemia-q08",
@@ -1500,7 +1549,8 @@
         "Raciocínio Diagnóstico",
         "Adolescência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-cetoacidose-pediatria-q08",
@@ -1530,7 +1580,8 @@
         "Fisiopatologia",
         "Adolescência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-diabetes-gestacao-q11",
@@ -1560,7 +1611,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-pals-q08",
@@ -1589,7 +1641,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-cetoacidose-pediatria-q09",
@@ -1618,7 +1671,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-dislipidemia-q09",
@@ -1647,7 +1701,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-pals-q09",
@@ -1676,7 +1731,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-cetoacidose-pediatria-q10",
@@ -1705,7 +1761,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-cetoacidose-pediatria-q11",
@@ -1734,7 +1791,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q07",
@@ -1764,7 +1822,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-pals-q10",
@@ -1794,7 +1853,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-cetoacidose-pediatria-q12",
@@ -1823,7 +1883,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-atencao-primaria-q04",
@@ -1853,7 +1914,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-cetoacidose-pediatria-q13",
@@ -1882,7 +1944,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-atencao-primaria-q05",
@@ -1911,7 +1974,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-pals-q11",
@@ -1940,7 +2004,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-pals-q12",
@@ -1969,7 +2034,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-cetoacidose-pediatria-q14",
@@ -1998,7 +2064,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-pals-q13",
@@ -2027,7 +2094,8 @@
         "Conhecimento Conceitual",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q08",
@@ -2056,7 +2124,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-pals-q14",
@@ -2086,7 +2155,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-pals-q15",
@@ -2116,7 +2186,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-cetoacidose-pediatria-q15",
@@ -2146,7 +2217,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-pals-q16",
@@ -2175,7 +2247,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-pals-q17",
@@ -2204,7 +2277,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-dislipidemia-q10",
@@ -2233,7 +2307,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-dislipidemia-q11",
@@ -2263,7 +2338,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-atencao-primaria-q06",
@@ -2292,7 +2368,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q09",
@@ -2321,7 +2398,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-atencao-primaria-q07",
@@ -2351,7 +2429,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-cetoacidose-pediatria-q16",
@@ -2381,7 +2460,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-pals-q18",
@@ -2410,7 +2490,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-atencao-primaria-q08",
@@ -2440,7 +2521,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-pals-q19",
@@ -2471,7 +2553,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-atencao-primaria-q09",
@@ -2500,7 +2583,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-cetoacidose-pediatria-q17",
@@ -2530,7 +2614,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-cetoacidose-pediatria-q18",
@@ -2560,7 +2645,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-atencao-primaria-q10",
@@ -2589,7 +2675,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-cetoacidose-pediatria-q19",
@@ -2620,7 +2707,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-pals-q20",
@@ -2650,7 +2738,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-cetoacidose-pediatria-q20",
@@ -2679,7 +2768,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-semanais-q92",
@@ -2709,7 +2799,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-semanais-q93",
@@ -2738,7 +2829,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-semanais-q94",
@@ -2767,7 +2859,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-semanais-q95",
@@ -2913,7 +3006,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q12",
@@ -2942,7 +3036,8 @@
         "Raciocínio Diagnóstico",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-semanais-q101",
@@ -2971,7 +3066,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-135"
     },
     {
       "id": "b14-semanais-q102",
@@ -3000,7 +3096,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-semanais-q103",
@@ -3029,7 +3126,8 @@
         "Cálculo Clínico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-semanais-q104",
@@ -3087,7 +3185,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q106",
@@ -3116,7 +3215,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q107",
@@ -3145,7 +3245,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q108",
@@ -3175,7 +3276,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-semanais-q109",
@@ -3204,7 +3306,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-134"
     },
     {
       "id": "b14-pals-q25",
@@ -3233,7 +3336,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-132"
     },
     {
       "id": "b14-semanais-q111",
@@ -3291,34 +3395,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
-    },
-    {
-      "id": "b14-semanais-q113",
-      "number": 113,
-      "collectionBlock": 14,
-      "documentBlock": 14,
-      "area": "Pediatria",
-      "topic": "Questões semanais - Bloco 14",
-      "stem": "Criança, sexo masculino, 6 anos de idade, portadora de asma não controlada, foi admitida na unidade de emergência em insuficiência respiratória devido à exacerbação asmática. O paciente recebeu corticosteroide sistêmico, salbutamol inalatório a cada 20 minutos por três vezes e sulfato de magnésio. Teve melhora, apenas discreta, e agora está recebendo β2- agonista endovenoso contínuo. Na evolução, o monitor do paciente começou a sinalizar alteração dos sinais vitais. As imagens a seguir apresentam os dados de monitorização dos últimos cinco minutos (prévio) e o do momento atual: Prévio: Atual: Assinale a alternativa que ilustra, corretamente, o procedimento de urgência a ser realizado no paciente descrito:",
-      "options": {
-        "A": "B)",
-        "C": "D)"
-      },
-      "answer": "D",
-      "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 14",
-      "images": [],
-      "comment": "Análise:\nCorreta: D.\nPor que está certa: A criança evoluiu de taquicardia para bradicardia severa (provavelmente por hipóxia severa na asma). A conduta para bradicardia com instabilidade que não responde à ventilação é RCP.\nPor que as outras estão erradas: Demais opções não condizem.\nPonto de prova: Manejo de bradicardia severa.\nFlashcard sugerado: Bradicardia hipóxica que não responde à ventilação? RCP.\nPérola: Criança asmática bradicardizando: alerta vermelho.\nArmadilha: Achar que é taquicardia.",
-      "tags": [
-        "Pediatria",
-        "Saúde da Criança",
-        "Asma",
-        "Insuficiência Respiratória",
-        "Conhecimento Conceitual",
-        "Urgência e Emergência"
-      ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-136"
     },
     {
       "id": "b14-semanais-q114",
@@ -3379,32 +3457,6 @@
       "tagSource": "Tags 14.txt"
     },
     {
-      "id": "b14-semanais-q116",
-      "number": 116,
-      "collectionBlock": 14,
-      "documentBlock": 14,
-      "area": "Pediatria",
-      "topic": "Questões semanais - Bloco 14",
-      "stem": "Um lactente de 5 meses é trazido à emergência pediátrica devido à palidez e arresponsividade de início súbito. Exame físico: regular estado geral; afebril; FR = 60 irpm; SatO2 = 82%; PA = 50 x 30 mmHg; pulsos periféricos finos; tempo de enchimento capilar = 4 seg. O paciente foi monitorizado e, por ora, não foi possível obter acesso venoso. O monitor cardíaco evidencia o seguinte traçado: ** ** Qual a conduta correta?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 14",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: O traçado (não exibido) provavelmente mostra TSJ. Se instável, cardioversão; se estável, adenosina.\nPonto de prova: Manejo de TSJ.\nFlashcard sugerado: TSJ instável? Cardioversão. Estável? Adenosina.\nPérola: TSJ: estabiliza e adenocarda.\nArmadilha: Não identificar a instabilidade.",
-      "tags": [
-        "Pediatria",
-        "Saúde da Criança",
-        "Conduta Terapêutica",
-        "Primeira Infância",
-        "Avaliação Clínica",
-        "Caso Clínico"
-      ],
-      "tagSource": "Tags 14.txt"
-    },
-    {
       "id": "b14-semanais-q117",
       "number": 117,
       "collectionBlock": 14,
@@ -3431,33 +3483,8 @@
         "Interpretação de Exames",
         "Adolescência"
       ],
-      "tagSource": "Tags 14.txt"
-    },
-    {
-      "id": "b14-semanais-q118",
-      "number": 118,
-      "collectionBlock": 14,
-      "documentBlock": 14,
-      "area": "Pediatria",
-      "topic": "Questões semanais - Bloco 14",
-      "stem": "Menina de 6 anos, previamente hígida, é trazida ao pronto- socorro pelos pais por quadro de dor abdominal, náuseas e vômitos há 1 dia. Pais referem que os sintomas começaram na noite de ontem e pioraram muito hoje, de forma que a criança praticamente não consegue ingerir alimentos ou líquidos. Negam outros sintomas, referindo apenas que o irmão de 4 anos da paciente está resfriado no momento. Ao exame físico: REG, descorada +/4+, desidratada (mucosas secas, prega cutânea desaparece lentamente), sonolenta (ECG 13), afebril, acianótica, taquipneia. BRNF em 2 tempos, sem sopros, TEC = 4 segundos, PA 84x40 mmHg, pulsos periféricos finos, centrais cheios. MV+, sem ruídos adventícios, respiração ofegante e profunda, FR 42 irpm. Abdome globoso, RHA+, flácido, paciente faz fácies de dor à palpação. Você coleta uma gasometria arterial e exames laboratoriais. A gasometria sai em 5 minutos: pH 7,15 - pCO2 18 - pO2 77 - HCO3- 7. Os exames laboratoriais estão ainda sem resultado. Qual a principal conduta a ser realizada no momento?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 14",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: Criança com CAD e choque (PA 84x40). A principal conduta é expansão volêmica com SF 0.9%.\nPonto de prova: Tratamento inicial de CAD em choque.\nFlashcard sugerado: CAD com choque? Expandir com SF 0.9%.\nPérola: CAD em choque: bota soro.\nArmadilha: Insulina antes de hidratar.",
-      "tags": [
-        "Pediatria",
-        "Saúde da Criança",
-        "Gasometria Arterial",
-        "Dor Abdominal",
-        "Conduta Terapêutica",
-        "Pediatria Ambulatorial"
-      ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-semanais-q119",
@@ -3574,7 +3601,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-semanais-q123",
@@ -3603,33 +3631,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
-    },
-    {
-      "id": "b14-semanais-q124",
-      "number": 124,
-      "collectionBlock": 14,
-      "documentBlock": 14,
-      "area": "Pediatria",
-      "topic": "Questões semanais - Bloco 14",
-      "stem": "Menina de 6 anos, previamente hígida, é trazida ao pronto- socorro pelos pais por quadro de dor abdominal, náuseas e vômitos há 1 dia. Pais referem que os sintomas começaram na noite de ontem e pioraram muito hoje, de forma que a criança praticamente não consegue ingerir alimentos ou líquidos. Negam outros sintomas, referindo apenas que o irmão de 4 anos da paciente está resfriado no momento. Ao exame físico: REG, descorada +/4+, desidratada (mucosas secas, prega cutânea desaparece lentamente), sonolenta (ECG 13), afebril, acianótica, taquipneia. BRNF em 2 tempos, sem sopros, TEC = 4 segundos, PA 84x40 mmHg, pulsos periféricos finos, centrais cheios. MV+, sem ruídos adventícios, respiração ofegante e profunda, FR 42 irpm. Abdome globoso, RHA+, flácido, paciente faz fácies de dor à palpação. Você coleta uma gasometria arterial e exames laboratoriais. A gasometria sai em 5 minutos: pH 7,15 - pCO2 18 - pO2 77 - HCO3- 7. Os exames laboratoriais estão ainda sem resultado. Com base nesse caso, cite a principal hipótese diagnóstica e um exame imprescindível para o diagnóstico e manejo do caso.",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 14",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está clara: Quadro de CAD. Exame imprescindível: Glicemia capilar e gasometria.\nPonto de prova: Diagnóstico de CAD.\nFlashcard sugerido: Exame essencial para CAD? Dextro e Gaso.\nPérola: Cadencie: Dextro e Gaso.\nArmadilha: Pedir USG de abdome.",
-      "tags": [
-        "Pediatria",
-        "Saúde da Criança",
-        "Gasometria Arterial",
-        "Dor Abdominal",
-        "Conduta Terapêutica",
-        "Pediatria Ambulatorial"
-      ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-semanais-q125",
@@ -3659,7 +3662,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-133"
     },
     {
       "id": "b14-semanais-q126",
@@ -3688,7 +3692,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q127",
@@ -3717,7 +3722,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q128",
@@ -3746,7 +3752,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q129",
@@ -3775,7 +3782,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q130",
@@ -3805,7 +3813,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q131",
@@ -3834,7 +3843,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q132",
@@ -3864,7 +3874,8 @@
         "Raciocínio Diagnóstico",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q133",
@@ -3893,7 +3904,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q134",
@@ -3922,7 +3934,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     },
     {
       "id": "b14-semanais-q135",
@@ -3951,7 +3964,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-atencao-primaria-q13",
@@ -3980,7 +3994,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-semanais-q137",
@@ -4010,33 +4025,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
-    },
-    {
-      "id": "b14-semanais-q138",
-      "number": 138,
-      "collectionBlock": 14,
-      "documentBlock": 14,
-      "area": "Medicina de Família e Comunidade",
-      "topic": "Questões semanais - Bloco 14",
-      "stem": "No acompanhamento de uma família na Atenção Primária à Saúde, é fundamental considerar não apenas as condições de saúde individuais, mas também a configuração familiar e os vínculos entre seus membros. Para auxiliar nessa compreensão, a equipe utiliza uma ferramenta que permite representar graficamente a composição familiar e suas relações ao longo de diferentes gerações. Qual a ferramenta utilizada para essa representação?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 14",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está clara: A ferramenta gráfica da família é o Genograma.\nPonto de prova: Ferramentas de abordagem familiar.\nFlashcard sugerido: Ferramenta gráfica da família? Genograma.\nPérola: Genograma: a árvore da família.\nArmadilha: Confundir com F.I.R.O.",
-      "tags": [
-        "Medicina de Família e Comunidade",
-        "Atenção Primária à Saúde",
-        "Conhecimento Conceitual",
-        "Atenção Primária",
-        "Avaliação Clínica",
-        "Caso Clínico"
-      ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-semanais-q139",
@@ -4065,7 +4055,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-130"
     },
     {
       "id": "b14-semanais-q140",
@@ -4124,7 +4115,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "scheduleId": "cron-131"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "block": 1,
-  "count": 107,
+  "count": 106,
   "questions": [
     {
       "id": "b01-semanal-q001",
@@ -2590,34 +2590,6 @@
       ],
       "tagSource": "Tags.txt",
       "scheduleId": "cron-8"
-    },
-    {
-      "id": "b01-semanais-q86",
-      "number": 86,
-      "collectionBlock": 1,
-      "documentBlock": 1,
-      "area": "Pediatria",
-      "topic": "Questões semanais - Bloco 1",
-      "stem": "Situação-problema para as questões 10 a 12: Mãe traz recém-nascido de 7 dias de vida com queixa de que acredita que está com “leite fraco” e que seu filho já “saiu magro da maternidade” e não está ganhando peso adequadamente. A mãe sente prazer em amamentar e não quer parar, mas teme que o leite seja insuficiente. Ao pedir para observar o RN mamando, você vê que ele mama apoiado nos braços da mãe, com a cabeça bem apoiada e, durante a mamada, ele pega predominantemente o bico do mamilo com os lábios invertidos, sugando com a boca pouco aberta, sem encovar as bochechas ou gerar ruídos. Você também observa que os mamilos da mãe não apresentam quaisquer lesões. Examinando o RN, você não encontra alterações. Você pesa o paciente, obtendo os seguintes dados: Peso atual: 3350 g \\| Peso de nascimento: 3400 g \\| Peso de alta \\(com 48h de vida\\): 3170 g Sobre a pega do paciente, cite 3 sinais de boa pega e 3 sinais de pega inadequada presentes no caso.",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 1",
-      "images": [],
-      "comment": "Questão de resposta dissertativa (caso clínico de pega ao seio) — não há alternativa de múltipla escolha a ser marcada; a resposta esperada é a identificação de sinais de boa pega (boca bem aberta, lábios evertidos, queixo tocando a mama, mais aréola visível acima do lábio superior) versus sinais de pega inadequada (lábios invertidos, boca pouco aberta, ruído de sucção, dor/lesão mamilar), presentes no enunciado (RN pega o mamilo com lábios invertidos e boca pouco aberta — sinais de pega inadequada, apesar de não haver lesão mamilar visível ainda).",
-      "tags": [
-        "Pediatria",
-        "Neonatologia",
-        "Aleitamento Materno",
-        "Técnica de Pega",
-        "Avaliação da Mamada",
-        "Ganho Ponderal"
-      ],
-      "tagSource": "Tags.txt",
-      "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
     },
     {
       "id": "b01-semanais-q87",

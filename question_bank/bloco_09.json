@@ -1,6 +1,6 @@
 {
   "block": 9,
-  "count": 158,
+  "count": 156,
   "questions": [
     {
       "id": "b09-sindromes-geriatricas-q01",
@@ -29,7 +29,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-diverticulite-q01",
@@ -59,7 +60,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-dip-q01",
@@ -88,7 +90,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-corrimentos-q01",
@@ -118,7 +121,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-diverticulite-q02",
@@ -151,7 +155,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-dip-q02",
@@ -183,7 +188,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-dermatoses-partes-moles-q01",
@@ -213,7 +219,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-geriatria-aga-q01",
@@ -242,7 +249,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-dip-q03",
@@ -271,7 +279,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-corrimentos-q02",
@@ -303,7 +312,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-dermatoses-partes-moles-q02",
@@ -335,7 +345,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-corrimentos-q03",
@@ -365,7 +376,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-dermatoses-partes-moles-q03",
@@ -394,7 +406,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dip-q04",
@@ -423,7 +436,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-ulceras-genitais-q01",
@@ -453,7 +467,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-diverticulite-q03",
@@ -482,7 +497,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-dermatite-atopica-q01",
@@ -512,7 +528,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-corrimentos-q04",
@@ -542,7 +559,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-dermatoses-partes-moles-q04",
@@ -573,7 +591,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dermatoses-partes-moles-q05",
@@ -605,7 +624,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-diverticulite-q04",
@@ -636,7 +656,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-geriatria-aga-q02",
@@ -668,7 +689,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-sindromes-geriatricas-q03",
@@ -697,7 +719,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-corrimentos-q05",
@@ -730,7 +753,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-ulceras-genitais-q02",
@@ -761,7 +785,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-geriatria-aga-q03",
@@ -790,7 +815,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-geriatria-aga-q04",
@@ -819,7 +845,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-corrimentos-q06",
@@ -848,7 +875,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-sindromes-geriatricas-q04",
@@ -880,7 +908,8 @@
       ],
       "tagSource": "Tags 9.txt",
       "answerAudit": "official-source",
-      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt"
+      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-sindromes-geriatricas-q05",
@@ -913,7 +942,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-dermatite-atopica-q02",
@@ -945,7 +975,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q03",
@@ -974,7 +1005,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q04",
@@ -1003,7 +1035,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-semanais-q34",
@@ -1032,7 +1065,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-geriatria-aga-q05",
@@ -1066,7 +1100,8 @@
       ],
       "tagSource": "Tags 9.txt",
       "answerAudit": "official-source",
-      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt"
+      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-corrimentos-q07",
@@ -1095,7 +1130,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-corrimentos-q08",
@@ -1124,7 +1160,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-dermatoses-partes-moles-q06",
@@ -1154,7 +1191,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-ulceras-genitais-q04",
@@ -1183,7 +1221,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-dip-q05",
@@ -1215,7 +1254,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-geriatria-aga-q06",
@@ -1244,7 +1284,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-dermatite-atopica-q05",
@@ -1276,7 +1317,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-corrimentos-q09",
@@ -1305,7 +1347,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-corrimentos-q10",
@@ -1334,7 +1377,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-corrimentos-q11",
@@ -1363,7 +1407,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-dermatoses-partes-moles-q07",
@@ -1392,7 +1437,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-diverticulite-q05",
@@ -1425,7 +1471,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-dip-q06",
@@ -1454,7 +1501,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-dermatoses-partes-moles-q08",
@@ -1484,7 +1532,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-semanais-q50",
@@ -1514,7 +1563,8 @@
         "Conhecimento Conceitual",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-dip-q07",
@@ -1544,7 +1594,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-corrimentos-q12",
@@ -1574,7 +1625,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q53",
@@ -1604,7 +1656,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-dermatoses-partes-moles-q09",
@@ -1633,7 +1686,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dermatoses-partes-moles-q10",
@@ -1662,7 +1716,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-ulceras-genitais-q06",
@@ -1691,7 +1746,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-sindromes-geriatricas-q06",
@@ -1720,7 +1776,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-diverticulite-q07",
@@ -1749,7 +1806,8 @@
         "Interpretação de Exames",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-diverticulite-q08",
@@ -1778,7 +1836,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-sindromes-geriatricas-q07",
@@ -1807,7 +1866,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-dip-q08",
@@ -1836,7 +1896,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-dermatite-atopica-q06",
@@ -1865,7 +1926,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-diverticulite-q09",
@@ -1894,7 +1956,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-dermatoses-partes-moles-q11",
@@ -1924,7 +1987,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-geriatria-aga-q07",
@@ -1954,7 +2018,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-dermatoses-partes-moles-q12",
@@ -1984,7 +2049,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-ulceras-genitais-q07",
@@ -2013,7 +2079,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-corrimentos-q13",
@@ -2043,7 +2110,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-ulceras-genitais-q08",
@@ -2073,7 +2141,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-semanais-q70",
@@ -2103,7 +2172,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-geriatria-aga-q08",
@@ -2132,7 +2202,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-geriatria-aga-q09",
@@ -2162,7 +2233,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-corrimentos-q14",
@@ -2191,7 +2263,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-corrimentos-q15",
@@ -2220,7 +2293,8 @@
         "Raciocínio Diagnóstico",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-diverticulite-q10",
@@ -2250,7 +2324,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-corrimentos-q16",
@@ -2280,7 +2355,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-ulceras-genitais-q09",
@@ -2310,7 +2386,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-dermatoses-partes-moles-q14",
@@ -2339,7 +2416,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-corrimentos-q17",
@@ -2369,7 +2447,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-sindromes-geriatricas-q08",
@@ -2399,7 +2478,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-dermatite-atopica-q07",
@@ -2428,7 +2508,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q08",
@@ -2458,7 +2539,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q09",
@@ -2488,7 +2570,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q10",
@@ -2517,7 +2600,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q11",
@@ -2547,7 +2631,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q12",
@@ -2576,7 +2661,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-ulceras-genitais-q10",
@@ -2605,7 +2691,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-dermatite-atopica-q13",
@@ -2635,7 +2722,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-sindromes-geriatricas-q09",
@@ -2665,7 +2753,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-dermatoses-partes-moles-q15",
@@ -2696,7 +2785,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dip-q09",
@@ -2727,7 +2817,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-dermatoses-partes-moles-q16",
@@ -2756,7 +2847,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dip-q10",
@@ -2786,7 +2878,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-dermatite-atopica-q14",
@@ -2815,7 +2908,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatoses-partes-moles-q17",
@@ -2844,7 +2938,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dermatoses-partes-moles-q18",
@@ -2876,7 +2971,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dermatoses-partes-moles-q19",
@@ -2908,7 +3004,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dermatite-atopica-q15",
@@ -2938,7 +3035,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatoses-partes-moles-q20",
@@ -2967,7 +3065,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-dermatite-atopica-q16",
@@ -2996,7 +3095,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q17",
@@ -3026,7 +3126,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q18",
@@ -3056,7 +3157,8 @@
         "Raciocínio Diagnóstico",
         "Primeira Infância"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-diverticulite-q11",
@@ -3085,7 +3187,8 @@
         "Interpretação de Exames",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-diverticulite-q12",
@@ -3114,7 +3217,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-dermatite-atopica-q19",
@@ -3145,7 +3249,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q20",
@@ -3174,7 +3279,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-semanais-q107",
@@ -3203,7 +3309,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-semanais-q108",
@@ -3261,7 +3368,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-sindromes-geriatricas-q11",
@@ -3290,7 +3398,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-semanais-q111",
@@ -3348,7 +3457,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-semanais-q113",
@@ -3377,7 +3487,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-85"
     },
     {
       "id": "b09-semanais-q114",
@@ -3406,7 +3517,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-semanais-q115",
@@ -3435,7 +3547,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-semanais-q116",
@@ -3464,7 +3577,8 @@
         "Interpretação de Exames",
         "Adolescência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-semanais-q117",
@@ -3523,7 +3637,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-semanais-q119",
@@ -3555,32 +3670,6 @@
       "tagSource": "Tags 9.txt"
     },
     {
-      "id": "b09-semanais-q120",
-      "number": 120,
-      "collectionBlock": 9,
-      "documentBlock": 9,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 9",
-      "stem": "Paciente feminina, 23 anos, previamente hígida, refere início há 2 dias de dor abdominal, inicialmente periumbilical que migrou para hipogástrio e fossa ilíaca direita, associada a disúria, polaciúria, anorexia e febre baixa (37,9ºC). Ao exame, apresenta-se em regular estado geral, estável hemodinamicamente, com dor à palpação profunda de hipogástrio e fossa ilíaca direita. Submetida a TC de abdome com contraste endovenoso, com o seguinte achado: Considerando o caso clínico e os achados da TC, indique a principal hipótese diagnóstica e a conduta a ser tomada:",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 9",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está cena: O caso clínico clássico de dor periumbilical migrando para fossa ilíaca direita, associada à febre e disúria, com achado de apêndice distendido na TC, confirma o diagnóstico de Apendicite Aguda. A presença de febre e disúria pode ocorrer por irritação do ureter direito pelo apêndice retrocecal ou inflamação adjacente. A conduta para apendicite aguda não complicada em paciente estável é a apendicectomia cirúrgica. (A questão pede \"anote sua hipótese\", caracterizando uma redação/questão discursiva de plataforma de estudo).\nPor que as outras estão erradas:\nB, C, D, E: Não se aplicam, pois a alternativa A é o comando da questão para o aluno responder livremente.\nPonto de prova: Diagnóstico clínico e radiológico de Apendicite Aguda.\nFlashcard sugerido: Hipótese diagnóstica para dor em FID com apêndice espessado na TC? R: Apendicite aguda.\nPérola: Dor migratória e apêndice inchado na TC, apendicite não tem prurido.\nArmadilha: Achar que a disúria indica ITU isolada e ignorar a dor migratória e o achado de imagem.",
-      "tags": [
-        "Clínica Médica",
-        "Medicina Interna",
-        "Dor Abdominal",
-        "Síndrome Febril",
-        "Conduta Terapêutica",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags 9.txt"
-    },
-    {
       "id": "b09-semanais-q121",
       "number": 121,
       "collectionBlock": 9,
@@ -3608,7 +3697,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-semanais-q122",
@@ -3637,7 +3727,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-dermatoses-partes-moles-q26",
@@ -3667,7 +3758,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-semanais-q124",
@@ -3697,7 +3789,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatoses-partes-moles-q28",
@@ -3736,7 +3829,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-semanais-q126",
@@ -3765,7 +3859,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-84"
     },
     {
       "id": "b09-semanais-q127",
@@ -3824,7 +3919,8 @@
         "Conhecimento Conceitual",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-86"
     },
     {
       "id": "b09-semanais-q129",
@@ -3854,7 +3950,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-semanais-q130",
@@ -3912,7 +4009,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q132",
@@ -3942,7 +4040,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q133",
@@ -3972,7 +4071,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q134",
@@ -4001,7 +4101,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q135",
@@ -4031,7 +4132,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q136",
@@ -4060,7 +4162,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q137",
@@ -4089,7 +4192,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q138",
@@ -4148,7 +4252,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-semanais-q140",
@@ -4177,7 +4282,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-semanais-q141",
@@ -4206,33 +4312,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
-    },
-    {
-      "id": "b09-semanais-q142",
-      "number": 142,
-      "collectionBlock": 9,
-      "documentBlock": 9,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Questões semanais - Bloco 9",
-      "stem": "Mulher, 33 anos, queixa- se de dor abdominal em baixo ventre há 4 dias. Há 2 dias, refere início de febre e leucorréia amarelada. Exame físico: frequência cardíaca (FC)= 89 bpm; temperatura axilar = 38,4°C; dor à palpação de hipogástrio, sem sinais de descompressão dolorosa. Exame ginecológico: colo com saída de secreção muco purulenta; ao toque, colo doloroso à mobilização; útero em AVF, tamanho normal; regiões anexiais impalpáveis, mas dolorosas. Qual tratamento deve ser proposto para essa paciente, considerando a recomendação do Ministério da Saúde?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 9",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está cena: A paciente apresenta DIP sem critérios de gravidade (sem vômitos intensos, febre 38.4ºC, sem peritonite difusa ou instabilidade). A recomendação do MS para DIP ambulatorial é Ceftriaxona 500mg IM (dose única) + Doxiciclina 100mg VO 12/12h por 14 dias + Metronidazol 500mg VO 12/12h por 14 dias. (A questão pede para anotar a hipótese).\nPor que as outras estão erradas:\nB, C, D, E: Não se aplicam, pois a alternativa A é o comando da questão para o aluno digitar o esquema de tratamento.\nPonto de prova: Tratamento ambulatorial da DIP pelo MS.\nFlashcard sugerido: Esquema ambulatorial para DIP? R: Ceftriaxona 500mg IM + Doxiciclina 14 dias + Metronidazol 14 dias.\nPérola: DIP no ambulatório, ceftriaxona, doxi e metronidazol no ato.\nArmadilha: Esquecer de associar o metronidazol no tratamento ambulatorial.",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Ginecologia",
-        "Dor Abdominal",
-        "Corrimento Vaginal",
-        "Conduta Terapêutica",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-semanais-q143",
@@ -4261,7 +4342,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-dip-q12",
@@ -4290,7 +4372,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-semanais-q145",
@@ -4319,7 +4402,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-91"
     },
     {
       "id": "b09-semanais-q146",
@@ -4349,7 +4433,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-89"
     },
     {
       "id": "b09-semanais-q147",
@@ -4379,7 +4464,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-87"
     },
     {
       "id": "b09-ulceras-genitais-q12",
@@ -4409,7 +4495,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-ulceras-genitais-q14",
@@ -4438,7 +4525,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-semanais-q150",
@@ -4498,7 +4586,8 @@
       ],
       "tagSource": "Tags 9.txt",
       "answerAudit": "official-source",
-      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt"
+      "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-semanais-q152",
@@ -4527,7 +4616,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-semanais-q153",
@@ -4556,7 +4646,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-semanais-q154",
@@ -4585,7 +4676,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-88"
     },
     {
       "id": "b09-semanais-q155",
@@ -4615,7 +4707,8 @@
         "Conhecimento Conceitual",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-semanais-q156",
@@ -4644,7 +4737,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-dermatite-atopica-q22",
@@ -4673,7 +4767,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     },
     {
       "id": "b09-semanais-q158",
@@ -4703,7 +4798,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "scheduleId": "cron-90"
     }
   ]
 }

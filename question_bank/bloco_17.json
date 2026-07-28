@@ -1,6 +1,6 @@
 {
   "block": 17,
-  "count": 143,
+  "count": 138,
   "questions": [
     {
       "id": "b17-q001",
@@ -30,7 +30,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q002",
@@ -60,7 +61,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q003",
@@ -90,34 +92,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
-    },
-    {
-      "id": "b17-q004",
-      "number": 4,
-      "collectionBlock": 17,
-      "documentBlock": 17,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Estratégia da Saúde da Família",
-      "stem": "O rastreio e o diagnóstico precoce de neoplasias fazem parte do atendimento na Rede de Atenção Primária. Considerando isso, suponha que uma mulher de 53 anos de idade procure uma unidade básica de saúde para realização de exames de rotina, e o médico da Atenção Primária perceba, na face dela, uma pequena lesão papulosa, de cor rósea, aspecto \"\"perolado\"\", com finos vasos em sua superfície. Ao ser questionada, a paciente informa que essa lesão apresentou crescimento lento e progressivo. Com base nesse caso clínico e nos conhecimentos médicos correlatos, julgue o item a seguir. Na faixa etária dessa paciente, segundo o Ministério da Saúde, está indicada a realização de mamografia a cada dois anos:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 17 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 17",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: Segundo o protocolo de rastreamento populacional referido pela banca, mulheres de risco habitual entre 50 e 69 anos devem realizar mamografia a cada dois anos. Aos 53 anos, a paciente está dentro da faixa indicada.\nRessalva técnica: A resposta segue o protocolo explicitamente cobrado no enunciado; recomendações nacionais podem ser atualizadas e diferem entre entidades.\nPor que as outras estão erradas:\nB: A afirmação não é considerada errada no protocolo citado: idade de 53 anos está na faixa de rastreamento bienal.\nPonto de prova: Faixa etária e periodicidade do rastreamento mamográfico no SUS.\nFlashcard sugerido:\nPergunta: Qual é a recomendação clássica do Ministério da Saúde para mamografia de rastreamento em risco habitual?\nResposta: Bienal dos 50 aos 69 anos, conforme o protocolo cobrado pela banca.\n\nPérola:\nRastreamento é para assintomáticas; nódulo palpável exige investigação diagnóstica.\n\nArmadilha:\nMisturar recomendações de sociedades médicas com o protocolo específico cobrado pelo Ministério da Saúde.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Mastologia",
-        "Mamografia",
-        "Saúde Mamária",
-        "Conhecimento Conceitual",
-        "Atenção Primária"
-      ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q005",
@@ -146,34 +122,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
-    },
-    {
-      "id": "b17-q006",
-      "number": 6,
-      "collectionBlock": 17,
-      "documentBlock": 17,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Estratégia da Saúde da Família",
-      "stem": "Um paciente de 50 anos de idade vai a consulta em UBS com queixa de corrimento vaginal acinzentado e com odor fétido na última semana. Refere também que gostaria de realizar check-up, pois não se consulta com médico há mais de 10 anos e está preocupada, pois a própria mãe foi diagnosticada com câncer de mama quando tinha 68 anos de idade. História médica pregressa: G6P6A0, diagnóstico prévio de sífilis tratada recentemente e coitarca aos 14 anos de idade. tabagista de um maço de cigarro ao dia desde os 15 anos de idade. Considerando esse caso clínico e os conhecimentos médicos relacionados à saúde da mulher, julgue o item a seguir. Deverá ser solicitada mamografia de rastreamento para a paciente. A história descrita de câncer na mãe, aos idade, não indicaria o rastreamento da paciente em idade mais precoce que a população de baixo risco:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 17 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 17",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A paciente tem 50 anos e risco habitual; portanto, já se enquadra no rastreamento mamográfico populacional. Câncer de mama em mãe aos 68 anos, isoladamente, não configura padrão de alto risco que obrigue início mais precoce.\nPor que as outras estão erradas:\nB: A afirmação seria errada apenas se houvesse critério de alto risco hereditário, como familiar de primeiro grau em idade jovem, múltiplos casos ou câncer de ovário associado.\nPonto de prova: Diferença entre risco habitual e alto risco familiar para câncer de mama.\nFlashcard sugerido:\nPergunta: Um único caso de câncer de mama em mãe após os 60 anos define alto risco hereditário?\nResposta: Não, isoladamente não.\n\nPérola:\nIdade jovem ao diagnóstico familiar pesa mais do que parentesco isolado.\n\nArmadilha:\nAntecipar rastreamento por qualquer história familiar, sem avaliar padrão hereditário.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Mastologia",
-        "Câncer de Mama",
-        "Saúde Mamária",
-        "Raciocínio Diagnóstico",
-        "Atenção Primária"
-      ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q007",
@@ -203,7 +153,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q008",
@@ -235,7 +186,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q009",
@@ -265,7 +217,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q010",
@@ -295,7 +248,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q011",
@@ -325,7 +279,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q012",
@@ -355,7 +310,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q013",
@@ -385,7 +341,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q014",
@@ -415,34 +372,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
-    },
-    {
-      "id": "b17-q015",
-      "number": 15,
-      "collectionBlock": 17,
-      "documentBlock": 17,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Estratégia da Saúde da Família",
-      "stem": "Uma paciente de 56 anos de idade comparece à consulta com o ginecologista para revisão. Refere realizar exames ginecológicos de rastreamento, conforme orientação do médico clínico geral que a atendia até então. Informa que faz uso de cálcio, vitamina D e sinvastatina, por histórico de osteoporose identificada em densitometria óssea (DMO) prévia, e dislipidemia. Recentemente recebeu diagnóstico de nefrolitíase após crise de dor renal. Relata ser tabagista e etilista desde os 23 anos de idade, e o peso atual dela é 54 Kg. Teve dois partos vaginais prévios, menarca aos 12 anos e menopausa aos 38 anos de idade. Nega ter realizado terapia de reposição hormonal. Considerando esse caso clínico e com base nas recomendações do Ministério da Saúde para exames de rastreamento e nos conhecimentos médicos correlatos, julgue o item a seguir. A paciente deve realizar a mamografia anualmente:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "B",
-      "source": "QUESTÕES BLOCO 17 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 17",
-      "images": [],
-      "comment": "Análise:\nCorreta: B.\nPor que está certa: Pelo protocolo de rastreamento populacional do Ministério da Saúde cobrado pela banca, a mamografia para risco habitual é bienal, e não anual. A paciente não apresenta critério familiar de alto risco que justifique periodicidade anual.\nRessalva técnica: A resposta segue a diretriz ministerial cobrada na prova; intervalos e faixas etárias podem variar entre entidades e atualizações.\nPor que as outras estão erradas:\nA: Afirmar periodicidade anual contraria o intervalo bienal do protocolo citado.\nPonto de prova: Periodicidade do rastreamento mamográfico no SUS.\nFlashcard sugerido:\nPergunta: Mamografia de rastreamento em risco habitual é anual ou bienal no protocolo clássico do MS?\nResposta: Bienal.\n\nPérola:\nRastreamento anual é recomendação de algumas sociedades, não o protocolo ministerial clássico.\n\nArmadilha:\nAplicar a recomendação de uma entidade quando a questão nomeia outra.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Mastologia",
-        "Transtorno por Uso de Álcool",
-        "Rastreamento",
-        "Prevenção e Rastreamento",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q016",
@@ -471,7 +402,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q017",
@@ -503,7 +435,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q018",
@@ -532,7 +465,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q019",
@@ -562,7 +496,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q020",
@@ -592,34 +527,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
-    },
-    {
-      "id": "b17-q021",
-      "number": 21,
-      "collectionBlock": 17,
-      "documentBlock": 17,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Estratégia da Saúde da Família",
-      "stem": "Um paciente de 50 anos de idade vai em consulta a UBS com queixa de corrimento vaginal acinzentado e cor odor fétido na última semana. Refere também que gostaria de realizar um check-up, pois não se consulta com médico há mais de 10 anos e está preocupada, pois a própria mãe foi diagnosticada com câncer de mama quando tinha 68 anos de idade. História médica pregressa: G6P6AO, diagnóstico prévio de sífilis tratada recentemente e coitarca aos 14 anos de idade. Tabagista de um maço de cigarro ao dia desde os 15 anos de idade. Considerando esse caso clínico e os conhecimentos médicos relacionados à saúde da mulher, julgue o item a seguir. Paciente multíparas, com a descrita no caso clínico, apresentam risco menor de desenvolverem câncer de mama, quando comparadas as nulíparas. Entretanto, ainda não há consenso quanto à relação entre câncer de mama e tabagismo:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 17 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 17",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: Multiparidade, sobretudo com gestações a termo, tende a reduzir o risco de câncer de mama em comparação à nuliparidade. A banca considera correta a afirmação de que a associação entre tabagismo e câncer de mama não era consensual no referencial utilizado.\nRessalva técnica: A segunda parte reflete o referencial da banca; evidências atuais sustentam associação modesta entre tabagismo, especialmente prolongado, e câncer de mama.\nPor que as outras estão erradas:\nB: Pelo referencial da questão, as duas proposições foram consideradas verdadeiras.\nPonto de prova: Fatores reprodutivos e comportamentais no risco de câncer de mama.\nFlashcard sugerido:\nPergunta: Multiparidade aumenta ou reduz o risco de câncer de mama?\nResposta: Em geral reduz, sobretudo quando as gestações ocorrem mais cedo.\n\nPérola:\nNuliparidade e primeira gestação tardia aumentam risco.\n\nArmadilha:\nTransferir automaticamente o risco do tabagismo para a mesma magnitude observada em câncer de pulmão.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Mastologia",
-        "Câncer de Mama",
-        "Saúde Mamária",
-        "Raciocínio Diagnóstico",
-        "Atenção Primária"
-      ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q022",
@@ -649,7 +558,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q023",
@@ -679,7 +589,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q024",
@@ -709,7 +620,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q025",
@@ -739,7 +651,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q026",
@@ -768,7 +681,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q027",
@@ -798,34 +712,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
-    },
-    {
-      "id": "b17-q028",
-      "number": 28,
-      "collectionBlock": 17,
-      "documentBlock": 17,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Estratégia da Saúde da Família",
-      "stem": "Marisa é uma mulher de 58 anos que veio a uma consulta de rotina, pois deseja realizar exames de \"\"check-up\"\". Ela não tem problemas de saúde nem faz uso de nenhum medicamento. Seu histórico familiar a preocupa , pois sua mãe morreu devido a um câncer de laringe e, por isso, ela deseja realizar uma endoscopia para saber se está tudo bem com sua laringe , pois foi assim que a mãe descobriu o tumor. Ela deseja também realizar o exames para verificar suas vitaminas. Quando questionada, refere ser viúva, sexualmente ativa e nega quaisquer sintomas no momento do atendimento. considerando seus conhecimentos e o caso exposto, julgue o item a seguir. Marisa é considerada uma mulher de alto risco para câncer de mama:",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "B",
-      "source": "QUESTÕES BLOCO 17 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 17",
-      "images": [],
-      "comment": "Análise:\nCorreta: B.\nPor que está certa: História materna de câncer de laringe não define síndrome hereditária de câncer de mama. Sem câncer de mama/ovário familiar relevante, mutação conhecida ou outro critério específico, Marisa permanece em risco habitual.\nPor que as outras estão erradas:\nA: A afirmação de alto risco não se sustenta pelos dados apresentados.\nPonto de prova: Critérios de alto risco para câncer de mama.\nFlashcard sugerido:\nPergunta: Câncer de laringe em familiar de primeiro grau torna uma mulher de alto risco mamário?\nResposta: Não, isoladamente.\n\nPérola:\nAlto risco mamário depende de padrão familiar específico, não de qualquer neoplasia na família.\n\nArmadilha:\nInterpretar todo câncer familiar como síndrome BRCA.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Mastologia",
-        "Câncer de Mama",
-        "Saúde Mamária",
-        "Farmacologia Clínica",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q029",
@@ -855,7 +743,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q030",
@@ -884,7 +773,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q031",
@@ -913,7 +803,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q032",
@@ -942,7 +833,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q033",
@@ -971,7 +863,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q034",
@@ -1000,7 +893,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q035",
@@ -1030,7 +924,8 @@
         "Interpretação de Exames",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q036",
@@ -1060,7 +955,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q037",
@@ -1089,7 +985,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-162"
     },
     {
       "id": "b17-q038",
@@ -1118,7 +1015,8 @@
         "Interpretação de Exames",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q039",
@@ -1147,7 +1045,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q040",
@@ -1177,7 +1076,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q041",
@@ -1209,7 +1109,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q042",
@@ -1239,7 +1140,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q043",
@@ -1268,7 +1170,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q044",
@@ -1297,7 +1200,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q045",
@@ -1327,7 +1231,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q046",
@@ -1357,7 +1262,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q047",
@@ -1386,7 +1292,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q048",
@@ -1416,7 +1323,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q049",
@@ -1446,7 +1354,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q050",
@@ -1475,7 +1384,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q051",
@@ -1505,7 +1415,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q052",
@@ -1534,7 +1445,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q053",
@@ -1563,7 +1475,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q054",
@@ -1592,7 +1505,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q055",
@@ -1621,7 +1535,8 @@
         "Interpretação de Exames",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q056",
@@ -1650,7 +1565,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q057",
@@ -1679,7 +1595,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q058",
@@ -1709,7 +1626,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q059",
@@ -1738,7 +1656,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q060",
@@ -1768,7 +1687,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-162"
     },
     {
       "id": "b17-q061",
@@ -1798,7 +1718,8 @@
         "Conduta Terapêutica",
         "Primeira Infância"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q062",
@@ -1827,7 +1748,8 @@
         "Conhecimento Conceitual",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q063",
@@ -1856,7 +1778,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q064",
@@ -1885,7 +1808,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q065",
@@ -1914,7 +1838,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q066",
@@ -1943,7 +1868,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q067",
@@ -1973,7 +1899,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q068",
@@ -2003,7 +1930,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q069",
@@ -2033,7 +1961,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q070",
@@ -2065,7 +1994,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q071",
@@ -2094,7 +2024,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q072",
@@ -2123,7 +2054,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q073",
@@ -2153,7 +2085,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q074",
@@ -2182,7 +2115,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q075",
@@ -2211,7 +2145,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q076",
@@ -2241,7 +2176,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q077",
@@ -2274,7 +2210,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q078",
@@ -2306,7 +2243,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q079",
@@ -2336,7 +2274,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q080",
@@ -2365,7 +2304,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q081",
@@ -2394,7 +2334,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q082",
@@ -2423,7 +2364,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q083",
@@ -2452,7 +2394,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q084",
@@ -2481,7 +2424,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q085",
@@ -2510,7 +2454,8 @@
         "Primeira Infância",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q086",
@@ -2540,7 +2485,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q087",
@@ -2569,7 +2515,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q088",
@@ -2598,7 +2545,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q089",
@@ -2627,7 +2575,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q090",
@@ -2657,7 +2606,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q091",
@@ -2687,7 +2637,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q092",
@@ -2716,7 +2667,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q093",
@@ -2745,7 +2697,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q094",
@@ -2775,7 +2728,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q095",
@@ -2804,7 +2758,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q096",
@@ -2834,7 +2789,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q097",
@@ -2867,7 +2823,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q098",
@@ -2896,7 +2853,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-q099",
@@ -2929,7 +2887,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-semanais-q100",
@@ -2958,7 +2917,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-semanais-q101",
@@ -2987,7 +2947,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-semanais-q102",
@@ -3016,7 +2977,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q103",
@@ -3048,7 +3010,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-semanais-q104",
@@ -3077,7 +3040,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-semanais-q105",
@@ -3107,7 +3071,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q108",
@@ -3136,7 +3101,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q106",
@@ -3165,7 +3131,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-semanais-q108",
@@ -3195,7 +3162,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q109",
@@ -3224,7 +3192,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-q107",
@@ -3254,7 +3223,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-160"
     },
     {
       "id": "b17-q110",
@@ -3283,7 +3253,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-semanais-q112",
@@ -3312,7 +3283,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-semanais-q113",
@@ -3342,7 +3314,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-semanais-q114",
@@ -3371,7 +3344,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-161"
     },
     {
       "id": "b17-semanais-q115",
@@ -3400,7 +3374,8 @@
         "Classificação Clínica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-159"
     },
     {
       "id": "b17-semanais-q116",
@@ -3430,7 +3405,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-semanais-q117",
@@ -3460,7 +3436,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q123",
@@ -3490,7 +3467,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q118",
@@ -3520,7 +3498,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-semanais-q120",
@@ -3550,7 +3529,8 @@
         "Prevenção e Rastreamento",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-semanais-q121",
@@ -3579,7 +3559,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-semanais-q122",
@@ -3608,7 +3589,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-q116",
@@ -3637,7 +3619,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-semanais-q124",
@@ -3667,7 +3650,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q124",
@@ -3697,7 +3681,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q125",
@@ -3726,7 +3711,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-q127",
@@ -3755,7 +3741,8 @@
         "Conduta Terapêutica",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-158"
     },
     {
       "id": "b17-semanais-q128",
@@ -3784,7 +3771,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q129",
@@ -3813,7 +3801,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q130",
@@ -3842,7 +3831,8 @@
         "Fisiopatologia",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-156"
     },
     {
       "id": "b17-semanais-q131",
@@ -3871,7 +3861,8 @@
         "Fisiopatologia",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q132",
@@ -3900,7 +3891,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q135",
@@ -3929,7 +3921,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q134",
@@ -3958,7 +3951,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q135",
@@ -3987,7 +3981,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q140",
@@ -4016,7 +4011,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q136",
@@ -4048,7 +4044,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q138",
@@ -4077,7 +4074,8 @@
         "Anatomia Aplicada",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q139",
@@ -4106,7 +4104,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q140",
@@ -4135,7 +4134,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-semanais-q141",
@@ -4164,7 +4164,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q142",
@@ -4193,7 +4194,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     },
     {
       "id": "b17-q143",
@@ -4223,7 +4225,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 17.txt"
+      "tagSource": "Tags Bloco 17.txt",
+      "scheduleId": "cron-157"
     }
   ]
 }

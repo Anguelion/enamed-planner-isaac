@@ -340,12 +340,33 @@ function carryDayLogsToRestartDates(dateMoves) {
     if(n(oldLog.mood) && !n(newLog.mood)) newLog.mood = oldLog.mood;
   });
 }
-function persist() { ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates(); invalidateActivityRenderCache(); writeLocalState(); scheduleCloudSave(); render(); }
-let saveStateOnlyTimer = null;
-function flushSaveStateOnly() { clearTimeout(saveStateOnlyTimer); saveStateOnlyTimer = null; writeLocalState(); scheduleCloudSave(); }
-function saveStateOnly(options={}) {
+// Passe completo de normalização do estado. É caro: com o cronograma e o banco
+// de questões carregados, reconcileCompletedBlockXP sozinho leva ~25 ms.
+var lastStateNormalizeAt = 0;
+function normalizePlannerState() {
   ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates();
-  if(options.invalidate !== false) invalidateActivityRenderCache();
+  lastStateNormalizeAt = Date.now();
+}
+function persist() { normalizePlannerState(); invalidateActivityRenderCache(); writeLocalState(); scheduleCloudSave(); render(); }
+let saveStateOnlyTimer = null;
+let pendingCacheInvalidate = false;
+function flushSaveStateOnly() {
+  clearTimeout(saveStateOnlyTimer);
+  saveStateOnlyTimer = null;
+  // A normalização sempre acontece antes de gravar: o que muda é a frequência,
+  // não a garantia de que o estado salvo está íntegro.
+  normalizePlannerState();
+  if(pendingCacheInvalidate) { invalidateActivityRenderCache(); pendingCacheInvalidate = false; }
+  writeLocalState();
+  scheduleCloudSave();
+}
+// Digitar dispara um saveStateOnly por tecla. O passe completo de normalização
+// custava ~36 ms em cada uma delas e travava o campo de texto — pior ao segurar
+// Backspace, que repete o evento dezenas de vezes por segundo. Aqui só marcamos
+// o que está pendente; o trabalho pesado acontece uma única vez, no flush, que é
+// o momento em que o estado realmente precisa estar íntegro para ser gravado.
+function saveStateOnly(options={}) {
+  if(options.invalidate !== false) pendingCacheInvalidate = true;
   clearTimeout(saveStateOnlyTimer);
   saveStateOnlyTimer = setTimeout(flushSaveStateOnly, 400);
 }
@@ -1147,6 +1168,24 @@ const CLOUD_SYNC_DEBOUNCE_MS = 3 * 60 * 1000;
 // nada para a nuvem. Este relógio não é reiniciado enquanto houver algo pendente.
 const CLOUD_SYNC_MAX_WAIT_MS = 45 * 1000;
 let cloudMaxWaitTimer = null;
+// Antes, um erro de rede ou do Supabase deixava o indicador travado em "Erro"
+// até algum outro evento (digitar, trocar de aba) tentar de novo — na prática,
+// horas de estudo podiam ficar sem subir para a nuvem sem que nada tentasse
+// reenviar sozinho. Agora todo erro agenda uma nova tentativa, com backoff.
+const CLOUD_SYNC_RETRY_BASE_MS = 5 * 1000;
+const CLOUD_SYNC_RETRY_MAX_MS = 2 * 60 * 1000;
+let cloudSyncRetryDelayMs = 0;
+let cloudRetryTimer = null;
+function scheduleCloudRetry() {
+  cloudDirty = true;
+  cloudSyncRetryDelayMs = cloudSyncRetryDelayMs ? Math.min(cloudSyncRetryDelayMs * 2, CLOUD_SYNC_RETRY_MAX_MS) : CLOUD_SYNC_RETRY_BASE_MS;
+  setSyncStatus('Erro', 'error', `Erro ao sincronizar — nova tentativa em ${Math.round(cloudSyncRetryDelayMs/1000)}s`);
+  clearTimeout(cloudRetryTimer);
+  cloudRetryTimer = setTimeout(() => {
+    cloudRetryTimer = null;
+    if(currentUser && sbClient && CLOUD_SYNC_ALLOWED) pushCloudState();
+  }, cloudSyncRetryDelayMs);
+}
 function scheduleCloudSave({immediate=false}={}) {
   if(!currentUser || !sbClient) return;
   if(!CLOUD_SYNC_ALLOWED) { setSyncStatus('Nuvem off', 'error'); return; }
@@ -1197,8 +1236,9 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
     }, { onConflict: 'user_id' }).select('updated_at').maybeSingle();
     if(error) {
       console.error('Falha ao sincronizar:', error);
-      setSyncStatus('Erro', 'error', 'Erro ao sincronizar');
+      scheduleCloudRetry();
     } else {
+      cloudSyncRetryDelayMs = 0;
       cloudDirty = cloudRevision !== pushRevision;
       // O servidor (via trigger) e quem decide o updated_at real — nao confiar no
       // relogio deste aparelho aqui, ou comparacoes entre aparelhos com relogios
@@ -1218,7 +1258,7 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
     }
   } catch(error) {
     console.error('Falha ao sincronizar:', error);
-    setSyncStatus('Erro', 'error', 'Erro ao sincronizar');
+    scheduleCloudRetry();
   } finally {
     syncInFlight = false;
   }
@@ -8239,12 +8279,33 @@ function updateQuestionFlashcard(input) {
 function updateLibraryFlashcard(input) {
   const card = (state.flashcardLibrary || []).find(item => item.id === input.dataset.cardId);
   if(!card) return;
-  card[input.dataset.cardField] = input.value;
-  if(input.dataset.cardField === 'subarea') { card.topic=input.value; card.subject=input.value; }
+  const field = input.dataset.cardField;
+  card[field] = input.value;
+  if(field === 'subarea') { card.topic=input.value; card.subject=input.value; }
   normalizeFlashcardRecord(card);
-  state.flashcardSystem.versions.push({cardId:card.id,version:card.contentVersion,kind:'correction',at:new Date().toISOString(),field:input.dataset.cardField,value:input.value});
+  recordLibraryFlashcardVersion(card, field, input.value);
   renderCache.manualCards = null;
   saveStateOnly();
+}
+// Antes, cada tecla digitada empilhava um registro de versão. Editar uma frente
+// de card gerava dezenas de entradas idênticas, que iam para o localStorage e
+// para a nuvem — peso morto que ajudava a estourar o armazenamento. Agora a
+// edição contínua do mesmo campo colapsa em um único registro.
+const LIBRARY_VERSION_COALESCE_MS = 4000;
+function recordLibraryFlashcardVersion(card, field, value) {
+  if(!Array.isArray(state.flashcardSystem?.versions)) return;
+  const versions = state.flashcardSystem.versions;
+  const last = versions[versions.length - 1];
+  const now = Date.now();
+  if(last && last.kind === 'correction' && last.cardId === card.id && last.field === field
+     && now - (Date.parse(last.at || '') || 0) < LIBRARY_VERSION_COALESCE_MS) {
+    last.value = value;
+    last.at = new Date(now).toISOString();
+    last.version = card.contentVersion;
+    return;
+  }
+  versions.push({cardId:card.id,version:card.contentVersion,kind:'correction',at:new Date(now).toISOString(),field,value});
+  if(versions.length > 2000) state.flashcardSystem.versions = versions.slice(-2000);
 }
 function removeQuestionFlashcard(questionId, cardId) {
   const cards = state.questionFlashcards[questionId] || [];

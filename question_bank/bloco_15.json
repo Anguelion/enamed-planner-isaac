@@ -1,6 +1,6 @@
 {
   "block": 15,
-  "count": 135,
+  "count": 130,
   "questions": [
     {
       "id": "b15-q001",
@@ -30,7 +30,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q002",
@@ -60,7 +61,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q003",
@@ -90,7 +92,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q004",
@@ -120,7 +123,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q005",
@@ -149,7 +153,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q006",
@@ -179,7 +184,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q007",
@@ -209,7 +215,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-semanais-q08",
@@ -239,7 +246,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q009",
@@ -268,7 +276,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q010",
@@ -297,7 +306,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q011",
@@ -326,7 +336,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q012",
@@ -356,7 +367,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q013",
@@ -388,7 +400,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q014",
@@ -417,7 +430,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q015",
@@ -447,7 +461,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q016",
@@ -476,7 +491,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q017",
@@ -505,7 +521,8 @@
         "Interpretação de Exames",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q018",
@@ -534,7 +551,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q019",
@@ -564,7 +582,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q020",
@@ -593,7 +612,8 @@
         "Interpretação de Exames",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q021",
@@ -622,7 +642,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q022",
@@ -651,7 +672,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q023",
@@ -680,7 +702,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q024",
@@ -709,7 +732,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q025",
@@ -738,7 +762,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q026",
@@ -767,34 +792,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
-    },
-    {
-      "id": "b15-q027",
-      "number": 27,
-      "collectionBlock": 15,
-      "documentBlock": 15,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Ferramentas da APS",
-      "stem": "Uma paciente, servidora pública, relata que, há 15 dias, teve contato com filhotes de gato no trabalho dela e está apresentando quadro de febre, rash e linfadenopatia cervical dolorosa. A paciente procura atendimento médico por causa desses sintomas e, após interrogatório médico, percebeu que estava em amenorréia há dois meses. Acerca desse caso clínico e tendo em vista os conhecimentos médicos correlatos, julgue o item a seguir. O exame inicial (rastreamento) que deve ser solicitado é o teste de avidez para IgG antitoxoplasma.",
-      "options": {
-        "A": "CERTO.",
-        "B": "ERRADO."
-      },
-      "answer": "B",
-      "source": "QUESTÕES BLOCO 15 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 15",
-      "images": [],
-      "comment": "Análise:\nCorreta: B (ERRADO).\nPor que está certa: O item afirma que o teste de avidez é o exame inicial de rastreamento, o que está errado. O rastreamento inicial é a sorologia (IgG e IgM). A avidez só é solicitada se houver IgG e IgM positivos.\nPor que as outras estão erradas: (A afirmação de que está CERTO está errada).\nPonto de prova: Fluxo de rastreamento de toxoplasmose na gestação.\nFlashcard sugerido: O teste de avidez de IgG é exame de rastreamento para toxoplasmose? Resposta: Não, é exame complementar para datação após IgG/IgM positivos.\nPérola: Avidez não rastreia, data.\nArmadilha: Confundir teste de triagem com teste confirmatório/de datação.",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Ginecologia",
-        "Amenorreia",
-        "Avidez de IgG",
-        "Raciocínio Diagnóstico",
-        "Paciente Adulto"
-      ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q028",
@@ -824,7 +823,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q029",
@@ -854,7 +854,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q030",
@@ -883,7 +884,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q031",
@@ -912,7 +914,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q032",
@@ -941,7 +944,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q033",
@@ -970,7 +974,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q034",
@@ -1000,7 +1005,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q035",
@@ -1029,7 +1035,8 @@
         "Conhecimento Conceitual",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q036",
@@ -1059,7 +1066,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q037",
@@ -1088,7 +1096,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q038",
@@ -1117,7 +1126,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q039",
@@ -1146,7 +1156,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q040",
@@ -1175,7 +1186,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q041",
@@ -1204,7 +1216,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q042",
@@ -1233,7 +1246,8 @@
         "Epidemiologia Clínica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q043",
@@ -1262,7 +1276,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q044",
@@ -1291,7 +1306,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q045",
@@ -1321,7 +1337,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q046",
@@ -1354,7 +1371,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q047",
@@ -1383,7 +1401,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q048",
@@ -1412,7 +1431,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q049",
@@ -1441,7 +1461,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q050",
@@ -1470,7 +1491,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q051",
@@ -1500,7 +1522,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q052",
@@ -1529,7 +1552,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q053",
@@ -1558,7 +1582,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q054",
@@ -1587,7 +1612,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q055",
@@ -1616,7 +1642,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q056",
@@ -1645,7 +1672,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q057",
@@ -1675,7 +1703,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q058",
@@ -1704,7 +1733,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q059",
@@ -1733,7 +1763,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q060",
@@ -1762,7 +1793,8 @@
         "Conhecimento Conceitual",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q061",
@@ -1792,7 +1824,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q062",
@@ -1821,7 +1854,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q063",
@@ -1851,7 +1885,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q064",
@@ -1881,7 +1916,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q065",
@@ -1911,7 +1947,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q066",
@@ -1940,7 +1977,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q067",
@@ -1969,7 +2007,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q068",
@@ -1998,7 +2037,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q069",
@@ -2028,7 +2068,8 @@
         "Raciocínio Diagnóstico",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q070",
@@ -2057,7 +2098,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q071",
@@ -2087,7 +2129,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q072",
@@ -2117,7 +2160,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q073",
@@ -2147,7 +2191,8 @@
         "Raciocínio Diagnóstico",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q074",
@@ -2177,7 +2222,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q075",
@@ -2206,7 +2252,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q076",
@@ -2235,7 +2282,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q077",
@@ -2265,59 +2313,8 @@
         "Conduta Terapêutica",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 15.txt"
-    },
-    {
-      "id": "b15-semanais-q78",
-      "number": 78,
-      "collectionBlock": 15,
-      "documentBlock": 15,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 15",
-      "stem": "Senhor José, 78 anos, comparece à Unidade Básica de Saúde (UBS) trazido por um vizinho, que se diz preocupado com sua memória e com sinais de desorganização em casa. Viúvo há cinco anos, José vive sozinho, tem baixa escolaridade (1º ano incompleto) e não possui filhos ou familiares próximos que o acompanhem regularmente. Relata esquecimentos frequentes, como deixar panelas no fogo e esquecer de tomar medicamentos para hipertensão. Tem apresentado episódios de desorientação em locais conhecidos do bairro, além de abandono progressivo do autocuidado e da higiene pessoal. A equipe da UBS identificou risco social elevado e dificuldades na adesão às propostas de cuidado. A ACS informou que a casa do paciente está em más condições de higiene e segurança. Durante a avaliação médica, foram aplicados instrumentos de rastreio cognitivo (10- CS e QMC8), ambos com resultados compatíveis com comprometimento cognitivo importante. A equipe também identificou sinais de declínio funcional e ausência de rede de apoio efetiva. Frente à complexidade do caso e aos múltiplos determinantes envolvidos, a equipe de saúde considerou a necessidade de uma abordagem interprofissional estruturada. Com base no caso apresentado, qual a ferramenta assistencial da Atenção Primária mais indicada para organizar o cuidado deste paciente?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 15 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 15",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: O caso envolve complexidade social, familiar e clínica, exigindo abordagem intersetorial e singular. A ferramenta ideal é o Projeto Terapêutico Singular (PTS).\nPonto de prova: Ferramentas de cuidado complexo na APS.\nFlashcard sugerido: Idoso com demência e risco social. Qual a melhor ferramenta? Resposta: Projeto Terapêutico Singular (PTS).\nPérola: Caso complexo = PTS.\nArmadilha: Usar protocolos clínicos rígidos.",
-      "tags": [
-        "Clínica Médica",
-        "Geriatria",
-        "Agentes Comunitários de Saúde",
-        "Conhecimento Conceitual",
-        "Pessoa Idosa",
-        "Avaliação Clínica"
-      ],
-      "tagSource": "Tags 15.txt"
-    },
-    {
-      "id": "b15-semanais-q79",
-      "number": 79,
-      "collectionBlock": 15,
-      "documentBlock": 15,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 15",
-      "stem": "Senhor José, 78 anos, comparece à Unidade Básica de Saúde (UBS) trazido por um vizinho, que se diz preocupado com sua memória e com sinais de desorganização em casa. Viúvo há cinco anos, José vive sozinho, tem baixa escolaridade (1º ano incompleto) e não possui filhos ou familiares próximos que o acompanhem regularmente. Relata esquecimentos frequentes, como deixar panelas no fogo e esquecer de tomar medicamentos para hipertensão. Tem apresentado episódios de desorientação em locais conhecidos do bairro, além de abandono progressivo do autocuidado e da higiene pessoal. A equipe da UBS identificou risco social elevado e dificuldades na adesão às propostas de cuidado. A ACS informou que a casa do paciente está em más condições de higiene e segurança. Durante a avaliação médica, foram aplicados instrumentos de rastreio cognitivo (10- CS e QMC8), ambos com resultados compatíveis com comprometimento cognitivo importante. A equipe também identificou sinais de declínio funcional e ausência de rede de apoio efetiva. Frente à complexidade do caso e aos múltiplos determinantes envolvidos, a equipe de saúde considerou a necessidade de uma abordagem interprofissional estruturada. Considerando a ferramenta assistencial da Atenção Primária mais indicada para organizar o cuidado deste paciente, quais seriam suas etapas?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 15 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 15",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: As etapas do PTS incluem avaliação biopsicossocial, plano de cuidado individualizado e acompanhamento.\nPonto de prova: Etapas de construção do PTS.\nFlashcard sugerido: Quais as etapas do PTS? Resposta: Avaliação biopsicossocial, plano individualizado e acompanhamento.\nPérola: PTS: avalia, planeja e acompanha.\nArmadilha: Ignorar a rede de apoio.",
-      "tags": [
-        "Clínica Médica",
-        "Geriatria",
-        "Agentes Comunitários de Saúde",
-        "Conhecimento Conceitual",
-        "Pessoa Idosa",
-        "Avaliação Clínica"
-      ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q080",
@@ -2347,7 +2344,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q081",
@@ -2376,7 +2374,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q082",
@@ -2405,7 +2404,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q083",
@@ -2435,7 +2435,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q084",
@@ -2465,33 +2466,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
-    },
-    {
-      "id": "b15-semanais-q85",
-      "number": 85,
-      "collectionBlock": 15,
-      "documentBlock": 15,
-      "area": "Clínica Médica",
-      "topic": "Questões semanais - Bloco 15",
-      "stem": "Em um hospital, instituiu- se que todas as interconsultas devem conter o pedido por escrito e o contato direto entre o profissional que solicita e o membro da equipe que irá realizar a interconsulta. A devolutiva da interconsulta deve seguir o mesmo trâmite. A responsabilidade de condução global do caso permanece com a equipe demandante. DE ACORDO COM A POLÍTICA NACIONAL DE HUMANIZAÇÃO DA ATENÇÃO E DA GESTÃO, A DIRETRIZ FORTALECIDA POR ESTA PROPOSTA É:",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 15 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 15",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: O caso descreve a Diretriz da \"Clínica Ampliada\" e corresponsabilidade entre equipes.\nPonto de prova: Política Nacional de Humanização.\nFlashcard sugerido: Qual diretriz da PNH norteia a interconsulta com corresponsabilidade? Resposta: Clínica Ampliada.\nPérola: Interconsulta com vínculo = Clínica Ampliada.\nArmadilha: Achar que é só uma exigência administrativa.",
-      "tags": [
-        "Clínica Médica",
-        "Medicina Interna",
-        "Conhecimento Conceitual",
-        "Assistência Hospitalar",
-        "Avaliação Clínica",
-        "Caso Clínico"
-      ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q086",
@@ -2520,7 +2496,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q087",
@@ -2549,7 +2526,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q088",
@@ -2578,7 +2556,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q089",
@@ -2608,7 +2587,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q097",
@@ -2637,7 +2617,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q095",
@@ -2667,7 +2648,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q093",
@@ -2696,7 +2678,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q092",
@@ -2726,7 +2709,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-semanais-q94",
@@ -2756,7 +2740,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q094",
@@ -2785,7 +2770,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-semanais-q96",
@@ -2843,7 +2829,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-semanais-q98",
@@ -2872,7 +2859,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q100",
@@ -2905,7 +2893,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-q099",
@@ -2938,7 +2927,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-144"
     },
     {
       "id": "b15-q098",
@@ -2969,7 +2959,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-140"
     },
     {
       "id": "b15-semanais-q102",
@@ -2998,7 +2989,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-semanais-q103",
@@ -3027,7 +3019,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-semanais-q104",
@@ -3056,7 +3049,8 @@
         "Conhecimento Conceitual",
         "Período Neonatal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-semanais-q105",
@@ -3085,7 +3079,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-semanais-q106",
@@ -3114,7 +3109,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-semanais-q107",
@@ -3144,7 +3140,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-semanais-q108",
@@ -3173,7 +3170,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q107",
@@ -3202,7 +3200,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-q110",
@@ -3231,7 +3230,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-semanais-q111",
@@ -3260,7 +3260,8 @@
         "Período Neonatal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-142"
     },
     {
       "id": "b15-semanais-q112",
@@ -3289,33 +3290,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
-    },
-    {
-      "id": "b15-semanais-q113",
-      "number": 113,
-      "collectionBlock": 15,
-      "documentBlock": 15,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Questões semanais - Bloco 15",
-      "stem": "Gestante, 32 anos, 2G1Pn, com 18 semanas, procura o pronto socorro referindo que durante relação sexual consentida há 12 horas, houve ruptura total do preservativo com ejaculação no canal vaginal. A paciente está muito preocupada, pois seu parceiro vive com HIV e não tem feito tratamento e nem seguimento clínico e laboratorial no último ano. Foi submetida a teste rápido para detecção do HIV que veio negativo. Qual é a conduta mais adequada neste momento?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 15 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 15",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: O contato sexual ocorreu há 12 horas. A conduta para exposição sexual de risco em gestante é iniciar a Profilaxia Pós-Exposição (PEP) do HIV com TARV o mais rápido possível.\nPonto de prova: PEP do HIV em gestante.\nFlashcard sugerido: Gestante com exposição sexual HIV há 12h. Conduta? Resposta: Iniciar PEP com TARV imediatamente.\nPérola: Exposição sexual < 72h: PEP para HIV!\nArmadilha: Não iniciar PEP porque o teste rápido foi negativo.",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Obstetrícia",
-        "HIV/AIDS",
-        "Conduta Terapêutica",
-        "Saúde Materno-Fetal",
-        "Avaliação Clínica"
-      ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q118",
@@ -3344,7 +3320,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-semanais-q115",
@@ -3373,7 +3350,8 @@
         "Conhecimento Conceitual",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q117",
@@ -3402,7 +3380,8 @@
         "Saúde Materno-Fetal",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-semanais-q117",
@@ -3431,7 +3410,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-semanais-q118",
@@ -3460,7 +3440,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q114",
@@ -3490,7 +3471,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-q120",
@@ -3519,7 +3501,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q125",
@@ -3549,7 +3532,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-semanais-q122",
@@ -3578,7 +3562,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-semanais-q123",
@@ -3637,7 +3622,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-141"
     },
     {
       "id": "b15-semanais-q125",
@@ -3666,7 +3652,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-semanais-q126",
@@ -3696,7 +3683,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-semanais-q127",
@@ -3725,7 +3713,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q128",
@@ -3754,7 +3743,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q129",
@@ -3783,7 +3773,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q130",
@@ -3812,7 +3803,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q131",
@@ -3841,7 +3833,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-q132",
@@ -3870,7 +3863,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-139"
     },
     {
       "id": "b15-semanais-q133",
@@ -3899,7 +3893,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-q133",
@@ -3929,7 +3924,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     },
     {
       "id": "b15-semanais-q135",
@@ -3958,7 +3954,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "scheduleId": "cron-143"
     }
   ]
 }

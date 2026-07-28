@@ -1,6 +1,6 @@
 {
   "block": 18,
-  "count": 147,
+  "count": 146,
   "questions": [
     {
       "id": "b18-q001",
@@ -29,7 +29,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q002",
@@ -59,7 +60,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q003",
@@ -91,7 +93,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q004",
@@ -120,7 +123,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q005",
@@ -152,7 +156,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q006",
@@ -182,7 +187,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q007",
@@ -211,7 +217,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q008",
@@ -241,7 +248,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q009",
@@ -270,7 +278,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q010",
@@ -299,7 +308,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q011",
@@ -329,7 +339,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q012",
@@ -358,7 +369,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q013",
@@ -387,7 +399,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q014",
@@ -417,7 +430,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q015",
@@ -447,7 +461,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q016",
@@ -477,7 +492,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q017",
@@ -507,7 +523,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q018",
@@ -537,7 +554,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q019",
@@ -567,7 +585,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q020",
@@ -597,7 +616,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q021",
@@ -626,7 +646,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q022",
@@ -655,7 +676,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q023",
@@ -685,7 +707,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q024",
@@ -714,7 +737,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q025",
@@ -743,7 +767,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q026",
@@ -772,7 +797,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q027",
@@ -802,7 +828,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q028",
@@ -832,7 +859,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q029",
@@ -862,7 +890,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q030",
@@ -892,7 +921,8 @@
         "Cálculo Clínico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q031",
@@ -921,7 +951,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q032",
@@ -950,7 +981,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q033",
@@ -980,7 +1012,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q034",
@@ -1009,7 +1042,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q035",
@@ -1039,7 +1073,8 @@
         "Classificação Clínica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q036",
@@ -1069,7 +1104,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q037",
@@ -1099,7 +1135,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q038",
@@ -1128,7 +1165,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q039",
@@ -1158,7 +1196,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q040",
@@ -1187,7 +1226,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q041",
@@ -1217,7 +1257,8 @@
         "Interpretação de Exames",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q042",
@@ -1247,7 +1288,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q043",
@@ -1276,7 +1318,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q044",
@@ -1305,7 +1348,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q045",
@@ -1338,7 +1382,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q046",
@@ -1368,7 +1413,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q047",
@@ -1397,7 +1443,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q048",
@@ -1427,7 +1474,8 @@
         "Conhecimento Conceitual",
         "Primeira Infância"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q049",
@@ -1456,7 +1504,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q050",
@@ -1485,7 +1534,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q051",
@@ -1514,7 +1564,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q052",
@@ -1544,7 +1595,8 @@
         "Raciocínio Diagnóstico",
         "Primeira Infância"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q053",
@@ -1573,7 +1625,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q054",
@@ -1602,7 +1655,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q055",
@@ -1631,7 +1685,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q056",
@@ -1663,7 +1718,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q057",
@@ -1693,7 +1749,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q058",
@@ -1722,7 +1779,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q059",
@@ -1752,7 +1810,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q060",
@@ -1781,7 +1840,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q061",
@@ -1811,7 +1871,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q062",
@@ -1841,7 +1902,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q063",
@@ -1871,7 +1933,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q064",
@@ -1900,7 +1963,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q065",
@@ -1930,7 +1994,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q066",
@@ -1959,7 +2024,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q067",
@@ -1988,7 +2054,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q068",
@@ -2017,7 +2084,8 @@
         "Conhecimento Conceitual",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q069",
@@ -2047,7 +2115,8 @@
         "Raciocínio Diagnóstico",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q070",
@@ -2076,7 +2145,8 @@
         "Interpretação de Exames",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q071",
@@ -2106,7 +2176,8 @@
         "Assistência Hospitalar",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q072",
@@ -2136,7 +2207,8 @@
         "Conhecimento Conceitual",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q073",
@@ -2165,7 +2237,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q074",
@@ -2194,7 +2267,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q075",
@@ -2224,7 +2298,8 @@
         "Conhecimento Conceitual",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q076",
@@ -2254,7 +2329,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q077",
@@ -2283,7 +2359,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q078",
@@ -2312,7 +2389,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q079",
@@ -2341,7 +2419,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q080",
@@ -2370,7 +2449,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q081",
@@ -2399,7 +2479,8 @@
         "Conhecimento Conceitual",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q082",
@@ -2428,7 +2509,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q083",
@@ -2457,7 +2539,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q084",
@@ -2486,7 +2569,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q085",
@@ -2516,7 +2600,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q086",
@@ -2545,7 +2630,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q087",
@@ -2574,7 +2660,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q088",
@@ -2603,7 +2690,8 @@
         "Interpretação de Exames",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q089",
@@ -2637,7 +2725,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q090",
@@ -2667,7 +2756,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q091",
@@ -2697,7 +2787,8 @@
         "Cálculo Clínico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q092",
@@ -2729,7 +2820,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q093",
@@ -2761,7 +2853,8 @@
         "Raciocínio Diagnóstico",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q094",
@@ -2790,7 +2883,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-172"
     },
     {
       "id": "b18-semanais-q95",
@@ -2848,7 +2942,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q097",
@@ -2877,7 +2972,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q098",
@@ -2907,7 +3003,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q099",
@@ -2937,7 +3034,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q100",
@@ -2967,7 +3065,8 @@
         "Conduta Terapêutica",
         "Primeira Infância"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q101",
@@ -2997,7 +3096,8 @@
         "Prevenção e Rastreamento",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q102",
@@ -3027,7 +3127,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q103",
@@ -3056,7 +3157,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q104",
@@ -3086,7 +3188,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q105",
@@ -3118,7 +3221,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q106",
@@ -3147,7 +3251,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q107",
@@ -3176,7 +3281,8 @@
         "Conduta Terapêutica",
         "Atenção Primária"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q108",
@@ -3208,7 +3314,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q109",
@@ -3237,7 +3344,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q110",
@@ -3266,7 +3374,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q111",
@@ -3296,7 +3405,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q112",
@@ -3325,7 +3435,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q113",
@@ -3355,7 +3466,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q114",
@@ -3384,7 +3496,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q115",
@@ -3413,7 +3526,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q116",
@@ -3442,7 +3556,8 @@
         "Interpretação de Exames",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q117",
@@ -3471,7 +3586,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-170"
     },
     {
       "id": "b18-q118",
@@ -3501,7 +3617,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q119",
@@ -3530,7 +3647,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q120",
@@ -3559,7 +3677,8 @@
         "Pessoa Idosa",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-168"
     },
     {
       "id": "b18-q121",
@@ -3589,7 +3708,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q122",
@@ -3618,7 +3738,8 @@
         "Conduta Terapêutica",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q123",
@@ -3647,7 +3768,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-169"
     },
     {
       "id": "b18-q124",
@@ -3676,7 +3798,8 @@
         "Prevenção e Rastreamento",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q125",
@@ -3705,7 +3828,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q126",
@@ -3734,7 +3858,8 @@
         "Adolescência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q127",
@@ -3763,7 +3888,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q128",
@@ -3795,7 +3921,8 @@
         "Interpretação de Exames",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q129",
@@ -3824,7 +3951,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q130",
@@ -3864,7 +3992,8 @@
         "Raciocínio Diagnóstico",
         "Adolescência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-165"
     },
     {
       "id": "b18-q131",
@@ -3893,7 +4022,8 @@
         "Conduta Terapêutica",
         "Assistência Hospitalar"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-167"
     },
     {
       "id": "b18-q132",
@@ -3925,7 +4055,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q133",
@@ -3954,7 +4085,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q134",
@@ -3983,7 +4115,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q135",
@@ -4012,7 +4145,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q136",
@@ -4041,7 +4175,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q137",
@@ -4071,7 +4206,8 @@
         "Conhecimento Conceitual",
         "Pessoa Idosa"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q138",
@@ -4100,7 +4236,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q139",
@@ -4129,7 +4266,8 @@
         "Interpretação de Exames",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q140",
@@ -4158,33 +4296,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
-    },
-    {
-      "id": "b18-semanais-q141",
-      "number": 141,
-      "collectionBlock": 18,
-      "documentBlock": 18,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Questões semanais - Bloco 18",
-      "stem": "Mulher, 57 anos, procura o ginecologista com queixa de urgência miccional, e noctúria há 3 meses. Nega perda urinária aos esforços. Já fez mudanças comportamentais e tratamento fisioterápico, sem melhora. É 4G3Pn, tem vida sexual ativa e faz uso de terapia hormonal tópica há 6 meses. O exame físico ginecológico não mostra alterações. Qual exame complementar deve ser solicitado para avaliação inicial da queixa da paciente?",
-      "options": {
-        "A": "Anote sua principal hipótese e leia nosso comentário."
-      },
-      "answer": "A",
-      "source": "QUESTÕES BLOCO 18 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 18",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A alternativa A corresponde ao gabarito oficial. O método ou etapa que melhor esclarece a dúvida clínica e orienta a decisão seguinte é: Anote sua principal hipótese e leia nosso comentário.\nPor que as outras estão erradas:\nAs alternativas não foram preservadas integralmente no arquivo textual.\nPonto de prova: Selecionar o exame ou etapa propedêutica apropriada em terapia hormonal.\nFlashcard sugerido:\nPergunta: Qual é a resposta-chave da questão 141 sobre terapia hormonal?\nResposta: Anote sua principal hipótese e leia nosso comentário.\n\nPérola:\nAnote sua principal hipótese e leia nosso comentário.\n\nArmadilha:\nSelecionar uma afirmação parcialmente verdadeira que não responde exatamente ao que foi perguntado.\n\n--------------------------------------------------------------------------------",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Uroginecologia",
-        "Incontinência Urinária",
-        "Terapia Hormonal",
-        "Conduta Terapêutica",
-        "Urgência e Emergência"
-      ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q142",
@@ -4213,7 +4326,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q143",
@@ -4243,7 +4357,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q144",
@@ -4272,7 +4387,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q145",
@@ -4302,7 +4418,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-semanais-q146",
@@ -4331,7 +4448,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     },
     {
       "id": "b18-q147",
@@ -4360,7 +4478,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "scheduleId": "cron-166"
     }
   ]
 }
