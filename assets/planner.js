@@ -2394,35 +2394,48 @@ function ensureSimTopics() {
     sim.missedTopics = sim.missedTopics.map((topic, idx) => ({ id: topic.id || `${sim.id}-miss-${idx}-${Date.now()}`, topic: topic.topic || '', scheduleId: topic.scheduleId || '', importance: topic.importance || 'Média', note: topic.note || '' }));
   });
   if(!Array.isArray(state.simuladoRuns)) state.simuladoRuns = [];
-  state.simuladoRuns = state.simuladoRuns.map((run, idx) => ({
-    id: run.id || `simrun-${idx}-${Date.now()}`,
-    name: run.name || `Simulado ENAMED ${idx + 1}`,
-    sourceType: run.sourceType || 'generated',
-    importedSimId: run.importedSimId || '',
-    createdAt: run.createdAt || new Date().toISOString(),
-    startedAt: run.startedAt || '',
-    finishedAt: run.finishedAt || '',
-    durationMinutes: Math.max(10, n(run.durationMinutes) || 300),
-    secondsLeft: Math.max(0, n(run.secondsLeft) || Math.max(10, n(run.durationMinutes) || 300) * 60),
-    elapsedSeconds: Math.max(0, n(run.elapsedSeconds)),
-    currentIndex: Math.max(0, n(run.currentIndex)),
-    paused: run.paused !== false,
-    questionIds: Array.isArray(run.questionIds) ? run.questionIds : [],
-    answers: run.answers && typeof run.answers === 'object' ? run.answers : {},
-    eliminated: run.eliminated && typeof run.eliminated === 'object' ? run.eliminated : {},
-    highlights: run.highlights && typeof run.highlights === 'object' ? run.highlights : {},
-    confidence: run.confidence && typeof run.confidence === 'object' ? run.confidence : {},
-    firstAnswers: run.firstAnswers && typeof run.firstAnswers === 'object' ? run.firstAnswers : {},
-    answerHistory: run.answerHistory && typeof run.answerHistory === 'object' ? run.answerHistory : {},
-    openedCount: run.openedCount && typeof run.openedCount === 'object' ? run.openedCount : {},
-    reviewFlags: run.reviewFlags && typeof run.reviewFlags === 'object' ? run.reviewFlags : {},
-    reviewedErrors: run.reviewedErrors && typeof run.reviewedErrors === 'object' ? run.reviewedErrors : {},
-    questionSeconds: run.questionSeconds && typeof run.questionSeconds === 'object' ? run.questionSeconds : {},
-    questionVisited: run.questionVisited && typeof run.questionVisited === 'object' ? run.questionVisited : {},
-    activeQuestionId: run.activeQuestionId || '',
-    questionTimingStart: Math.max(0, n(run.questionTimingStart)),
-    areaTargets: run.areaTargets && typeof run.areaTargets === 'object' ? run.areaTargets : defaultSimuladoTargets()
-  }));
+  // Reconstruir um objeto novo para toda tentativa em toda chamada parecia
+  // inofensivo, mas esta função roda a cada render (inclusive no flush
+  // silencioso do saveStateOnly, que NÃO re-renderiza). Isso trocava a
+  // identidade do objeto por baixo dos panos: os botões da prova (pausar,
+  // responder, eliminar alternativa, avançar) ficavam presos a uma cópia
+  // antiga, e o clique parava de fazer efeito sem nenhum erro visível — o
+  // pior caso sendo o botão "Pausar prova", que simplesmente não pausava.
+  // Por isso só reconstruímos quando falta algo de fato; do contrário,
+  // devolvemos a MESMA referência para não invalidar closures já vinculadas.
+  state.simuladoRuns = state.simuladoRuns.map((run, idx) => {
+    const fixed = {
+      id: run.id || `simrun-${idx}-${Date.now()}`,
+      name: run.name || `Simulado ENAMED ${idx + 1}`,
+      sourceType: run.sourceType || 'generated',
+      importedSimId: run.importedSimId || '',
+      createdAt: run.createdAt || new Date().toISOString(),
+      startedAt: run.startedAt || '',
+      finishedAt: run.finishedAt || '',
+      durationMinutes: Math.max(10, n(run.durationMinutes) || 300),
+      secondsLeft: Math.max(0, n(run.secondsLeft) || Math.max(10, n(run.durationMinutes) || 300) * 60),
+      elapsedSeconds: Math.max(0, n(run.elapsedSeconds)),
+      currentIndex: Math.max(0, n(run.currentIndex)),
+      paused: typeof run.paused === 'boolean' ? run.paused : true,
+      questionIds: Array.isArray(run.questionIds) ? run.questionIds : [],
+      answers: run.answers && typeof run.answers === 'object' ? run.answers : {},
+      eliminated: run.eliminated && typeof run.eliminated === 'object' ? run.eliminated : {},
+      highlights: run.highlights && typeof run.highlights === 'object' ? run.highlights : {},
+      confidence: run.confidence && typeof run.confidence === 'object' ? run.confidence : {},
+      firstAnswers: run.firstAnswers && typeof run.firstAnswers === 'object' ? run.firstAnswers : {},
+      answerHistory: run.answerHistory && typeof run.answerHistory === 'object' ? run.answerHistory : {},
+      openedCount: run.openedCount && typeof run.openedCount === 'object' ? run.openedCount : {},
+      reviewFlags: run.reviewFlags && typeof run.reviewFlags === 'object' ? run.reviewFlags : {},
+      reviewedErrors: run.reviewedErrors && typeof run.reviewedErrors === 'object' ? run.reviewedErrors : {},
+      questionSeconds: run.questionSeconds && typeof run.questionSeconds === 'object' ? run.questionSeconds : {},
+      questionVisited: run.questionVisited && typeof run.questionVisited === 'object' ? run.questionVisited : {},
+      activeQuestionId: run.activeQuestionId || '',
+      questionTimingStart: Math.max(0, n(run.questionTimingStart)),
+      areaTargets: run.areaTargets && typeof run.areaTargets === 'object' ? run.areaTargets : defaultSimuladoTargets()
+    };
+    const unchanged = Object.keys(fixed).every(key => fixed[key] === run[key]);
+    return unchanged ? run : { ...run, ...fixed };
+  });
   ensureSimuladoSundaySchedule();
 }
 function ensureSimuladoSundaySchedule() {
@@ -3338,6 +3351,21 @@ function renderCadernoErroCard(entry) {
   ].join('');
   return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
 }
+function exportCadernoErrosCsv() {
+  const headers = ['Data','Área','Tema','Enunciado','Minha resposta','Resposta correta','Tipo de erro','Confiança','Regra corretiva','Próxima revisão','Anotação'];
+  const rows = cadernoErrosEntries().map(({question, progress}) => [
+    progress.updatedAt ? new Date(progress.updatedAt).toLocaleDateString('pt-BR') : '',
+    questionTag(question).area || '', questionTag(question).topic || '', question.stem || '', progress.selected || '', question.answer || '',
+    progress.missReason || '', progress.confidence || '', progress.correctiveRule || '', progress.nextReview || '', progress.notes || ''
+  ]);
+  const csv = [headers, ...rows].map(row => row.map(value => `"${String(value ?? '').replace(/"/g, '""')}"`).join(';')).join('\r\n');
+  const blob = new Blob([`\uFEFF${csv}`], {type:'text/csv;charset=utf-8'});
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `caderno-de-erros-${studyDateKey()}.csv`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
 function renderCadernoErros() {
   const allEntries = cadernoErrosEntries();
   const areas = ['Todas', ...new Set(allEntries.map(entry => questionTag(entry.question).area).filter(Boolean))].sort();
@@ -3365,7 +3393,7 @@ function renderCadernoErros() {
     return haystack.includes(search);
   });
   const insightCards = `<section class="grid three caderno-insights"><div class="card"><span class="eyebrow">Temas mais frequentes</span>${areaCounts.length ? areaCounts.map(([label,count]) => `<div class="stat-line"><span>${escapeHtml(label)}</span><strong>${count}</strong></div>`).join('') : '<p class="muted">Ainda sem dados.</p>'}</div><div class="card"><span class="eyebrow">Tipos de erro</span>${typeCounts.length ? typeCounts.map(([label,count]) => `<div class="stat-line"><span>${escapeHtml(label)}</span><strong>${count}</strong></div>`).join('') : '<p class="muted">Classifique seus erros para ver padrões.</p>'}</div><div class="card"><span class="eyebrow">Falsa segurança</span><strong class="metric-number">${overconfident}</strong><p class="muted">erros com confiança de 80% ou mais</p></div></section>`;
-  document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários e reflexões que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span><span><strong>${dueCount}</strong> revisões pendentes</span></div></div>${insightCards}<section class="card"><div class="section-title"><div><h2>Anotações</h2><div class="muted">${dueCount ? 'Comece pelas revisões pendentes.' : 'Nenhuma revisão está vencida.'}</div></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado, regra ou motivo"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select><select class="select" id="cadernoReview"><option value="Todos" ${ui.cadernoReview === 'Todos' ? 'selected' : ''}>Todas as revisões</option><option value="Pendentes" ${ui.cadernoReview === 'Pendentes' ? 'selected' : ''}>Pendentes</option><option value="Agendadas" ${ui.cadernoReview === 'Agendadas' ? 'selected' : ''}>Agendadas</option></select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada para este filtro.</div>'}</div></section>`;
+  document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários e reflexões que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span><span><strong>${dueCount}</strong> revisões pendentes</span><button class="icon-btn primary" id="startCadernoReview" ${dueCount?'':'disabled'}>Revisar pendentes</button><button class="icon-btn" id="exportCadernoCsv">Exportar CSV</button></div></div>${insightCards}<section class="card"><div class="section-title"><div><h2>Anotações</h2><div class="muted">${dueCount ? 'Comece pelas revisões pendentes.' : 'Nenhuma revisão está vencida.'}</div></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado, regra ou motivo"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select><select class="select" id="cadernoReview"><option value="Todos" ${ui.cadernoReview === 'Todos' ? 'selected' : ''}>Todas as revisões</option><option value="Pendentes" ${ui.cadernoReview === 'Pendentes' ? 'selected' : ''}>Pendentes</option><option value="Agendadas" ${ui.cadernoReview === 'Agendadas' ? 'selected' : ''}>Agendadas</option></select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada para este filtro.</div>'}</div></section>`;
   bindCadernoErros();
 }
 function bindCadernoErros() {
@@ -3375,6 +3403,8 @@ function bindCadernoErros() {
   if(areaSelect) areaSelect.onchange = e => { ui.cadernoArea = e.target.value; renderCadernoErros(); };
   const reviewSelect = document.getElementById('cadernoReview');
   if(reviewSelect) reviewSelect.onchange = e => { ui.cadernoReview = e.target.value; renderCadernoErros(); };
+  document.getElementById('exportCadernoCsv')?.addEventListener('click', exportCadernoErrosCsv);
+  document.getElementById('startCadernoReview')?.addEventListener('click', () => { ui.cadernoReview = 'Pendentes'; renderCadernoErros(); window.scrollTo({top:0, behavior:'smooth'}); });
   document.querySelectorAll('[data-caderno-access]').forEach(button => button.onclick = e => {
     ui.qQuestionId = e.currentTarget.dataset.cadernoAccess;
     ui.qRouteRestorePending = true;
