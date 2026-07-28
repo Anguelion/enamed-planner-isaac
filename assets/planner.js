@@ -14,6 +14,7 @@ const QUESTION_IMPORT_MAX = 200;
 const QUESTION_IMPORT_DRAFT_KEY = 'soqueromed-question-import-draft';
 const LOCAL_BACKUPS_KEY = 'soqueromed-local-backups-v1';
 const LOCAL_BACKUP_LIMIT = 12;
+const AUTO_BACKUP_RETENTION_DAYS = 7;
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -2647,6 +2648,24 @@ function nextErrorReviewDate(baseDate=studyDateKey(), intervalDays=1) {
   date.setDate(date.getDate() + Math.max(1, n(intervalDays) || 1));
   return studyDateKey(date);
 }
+function maintainDailyLocalBackup() {
+  const now = Date.now();
+  const today = localISODate(new Date());
+  const retentionMs = AUTO_BACKUP_RETENTION_DAYS * 24 * 60 * 60 * 1000;
+  const latestByDay = new Set();
+  localBackups = localBackups.filter(item => {
+    if(item.reason !== 'daily') return true;
+    const created = Date.parse(item.created_at || '') || 0;
+    const day = created ? localISODate(new Date(created)) : '';
+    if(!day || now - created > retentionMs) return false;
+    if(latestByDay.has(day)) return false;
+    latestByDay.add(day);
+    return true;
+  });
+  const hasToday = localBackups.some(item => item.reason === 'daily' && localISODate(item.created_at) === today);
+  if(!hasToday) createLocalBackup(`Backup automático · ${today}`, {silent:true, reason:'daily'});
+  else saveLocalBackups();
+}
 function errorReviewInterval(reviewCount=0) {
   return [1, 7, 21, 60][Math.min(3, Math.max(0, n(reviewCount)))];
 }
@@ -3725,7 +3744,16 @@ function normalizeSimAreaName(value='') {
 }
 function simQuestionArea(question) {
   if(question?.sourceType === 'imported') return questionTag(question).area;
+  // A questão e a aula do cronograma já trazem a área correta (uma das 5
+  // ENAMED_AREAS) na maioria dos casos. Antes, essas áreas eram jogadas fora e
+  // reconstruídas por palavra-chave a partir de área+tema colados — bastava o
+  // tema ter uma palavra de outra especialidade (ex.: "rastreamento" tornando
+  // uma questão de Clínica Médica em MFC) para trocar a área de 1 em cada 5
+  // questões do banco. Agora só caímos no chute por palavra-chave quando nem
+  // a questão nem a aula vinculada já têm uma área reconhecida.
+  if(ENAMED_AREAS.includes(question.area)) return question.area;
   const linked = scheduleForQuestion(question);
+  if(linked?.area && ENAMED_AREAS.includes(linked.area)) return linked.area;
   return normalizeSimAreaName(`${question.area || ''} ${question.topic || ''} ${linked?.area || ''} ${linked?.topic || ''}`);
 }
 function questionTag(question) {
@@ -4308,8 +4336,13 @@ function applySimHighlight(run, question, descriptor, color) {
   render();
 }
 function simScore(s) { return n(s.total)>0 ? n(s.correct)/n(s.total) : 0; }
-function renderSimSummary() { const done=state.simulados.filter(s=>n(s.correct)>0); const best=done.sort((a,b)=>simScore(b)-simScore(a))[0]; const avg=done.reduce((sum,s)=>sum+simScore(s),0)/Math.max(done.length,1); return `${progress('Média atual', avg, `${done.length} simulados preenchidos`)}${best ? `<div class="item"><div class="date-chip">${Math.round(simScore(best)*100)}%</div><div><strong>${escapeHtml(best.name)}</strong><div class="muted">${fmtDate(best.date)} · meta mínima 70%</div></div><div>${simScore(best)>=.7?'<span class="badge done">Meta</span>':'<span class="badge no">Abaixo</span>'}</div></div>` : '<div class="empty">Preencha os resultados para ver evolução.</div>'}`; }
-function renderNextSim() { const next=state.simulados.filter(s=>s.date>=ui.refDate && n(s.correct)===0).sort((a,b)=>a.date.localeCompare(b.date))[0]; if(!next) return '<div class="empty">Nenhum simulado futuro aberto.</div>'; return `<div class="item"><div class="date-chip">${fmtDate(next.date).slice(0,5)}</div><div><strong>${escapeHtml(next.name)}</strong><div class="muted">${escapeHtml(next.coverage)}</div></div><span class="badge today">Próximo</span></div>`; }
+// "Feito" precisa vir de total>0 (a prova tem questões registradas), não de
+// correct>0: um simulado real onde o aluno zerou os acertos é raríssimo mas
+// possível, e usar correct como proxy de conclusão o escondia da média (o que
+// inflava a "Média atual" ao ignorar justamente o pior resultado) e o
+// devolvia para "Próximo simulado" como se nunca tivesse sido feito.
+function renderSimSummary() { const done=state.simulados.filter(s=>n(s.total)>0); const best=done.sort((a,b)=>simScore(b)-simScore(a))[0]; const avg=done.reduce((sum,s)=>sum+simScore(s),0)/Math.max(done.length,1); return `${progress('Média atual', avg, `${done.length} simulados preenchidos`)}${best ? `<div class="item"><div class="date-chip">${Math.round(simScore(best)*100)}%</div><div><strong>${escapeHtml(best.name)}</strong><div class="muted">${fmtDate(best.date)} · meta mínima 70%</div></div><div>${simScore(best)>=.7?'<span class="badge done">Meta</span>':'<span class="badge no">Abaixo</span>'}</div></div>` : '<div class="empty">Preencha os resultados para ver evolução.</div>'}`; }
+function renderNextSim() { const next=state.simulados.filter(s=>s.date>=ui.refDate && n(s.total)===0).sort((a,b)=>a.date.localeCompare(b.date))[0]; if(!next) return '<div class="empty">Nenhum simulado futuro aberto.</div>'; return `<div class="item"><div class="date-chip">${fmtDate(next.date).slice(0,5)}</div><div><strong>${escapeHtml(next.name)}</strong><div class="muted">${escapeHtml(next.coverage)}</div></div><span class="badge today">Próximo</span></div>`; }
 function renderSimTable() { return `<div class="table-wrap"><table><thead><tr><th>Simulado</th><th>Data</th><th>Cobertura</th><th class="num">Total</th><th class="num">Certas</th><th class="num">%</th><th>Fortes</th><th>Fracas</th><th>Notas</th></tr></thead><tbody>${state.simulados.map(s=>`<tr><td><strong>${escapeHtml(s.name)}</strong></td><td>${fmtDate(s.date)}</td><td>${escapeHtml(s.coverage)}</td><td class="num"><input class="mini-input" data-sim="${s.id}" data-field="total" type="number" value="${n(s.total)}"></td><td class="num"><input class="mini-input" data-sim="${s.id}" data-field="correct" type="number" value="${n(s.correct)}"></td><td class="num">${pct(simScore(s))}</td><td><input class="notes-input" data-sim="${s.id}" data-field="strong" value="${escapeAttr(s.strong)}"></td><td><input class="notes-input" data-sim="${s.id}" data-field="weak" value="${escapeAttr(s.weak)}"></td><td><input class="notes-input" data-sim="${s.id}" data-field="notes" value="${escapeAttr(s.notes)}"></td></tr>`).join('')}</tbody></table></div>`; }
 function renderMissedTopics() {
   const options = scheduleTopicOptions();
@@ -9321,6 +9354,24 @@ function showHighlightPopup({rect,editing=false,onColor,onDelete,copyText=''}) {
   setTimeout(()=>document.addEventListener('pointerdown',dismiss,{once:true}),0);
   document.addEventListener('keydown',escape,{once:true});
 }
+// No toque, o navegador ainda ajusta a seleção por um tempo depois do
+// pointerup (alças de seleção sendo arrastadas). Um atraso fixo às vezes
+// pegava a seleção pela metade — vinha vazia (parecia que não tinha
+// marcado nada, exigindo repetir o gesto) ou incompleta (marcava a palavra
+// errada). Em vez de adivinhar um tempo fixo, esperamos a seleção parar de
+// mudar entre duas leituras seguidas, com um teto de tentativas para nunca
+// travar o popup indefinidamente.
+function waitForStableSelection(element,pointerType,callback,attempt=0) {
+  const maxAttempts = pointerType==='touch' ? 8 : 3;
+  const delay = pointerType==='touch' ? 45 : 16;
+  const read=()=>(window.getSelection()?.toString()||'').replace(/\s+/g,' ').trim();
+  const previous=read();
+  setTimeout(()=>{
+    const current=read();
+    if((current && current===previous) || attempt>=maxAttempts) { callback(highlightSelectionDescriptor(element)); return; }
+    waitForStableSelection(element,pointerType,callback,attempt+1);
+  },delay);
+}
 function bindPointerHighlighter(elements,onHighlight) {
   elements.forEach(element => {
     let pointer={id:null,type:'',x:0,y:0,moved:false};
@@ -9329,12 +9380,11 @@ function bindPointerHighlighter(elements,onHighlight) {
       const pointerType=event.pointerType||pointer.type||'mouse';
       pointer={id:null,type:'',x:0,y:0,moved:false};
       ui.suppressAnswerClick=true;
-      ui.highlightGestureUntil=Date.now()+750;
-      setTimeout(()=>{
-        const descriptor=highlightSelectionDescriptor(element);
+      ui.highlightGestureUntil=Date.now()+900;
+      waitForStableSelection(element,pointerType,descriptor=>{
         if(descriptor) showHighlightPopup({rect:descriptor.rect,copyText:descriptor.text,onColor:color=>onHighlight(descriptor,color)});
-      },pointerType==='touch'?220:0);
-      setTimeout(()=>{ui.suppressAnswerClick=false;},800);
+      });
+      setTimeout(()=>{ui.suppressAnswerClick=false;},950);
     };
     if(window.PointerEvent) {
       element.addEventListener('pointerdown',event=>{
@@ -9738,6 +9788,7 @@ startMotivationCycle();
 loadMotivationMessages();
 setupSidebar();
 render();
+maintainDailyLocalBackup();
 if('requestIdleCallback' in window) requestIdleCallback(() => loadQuestionBank(), {timeout:700});
 else setTimeout(() => loadQuestionBank(), 120);
 loadOfficialSchedule();
