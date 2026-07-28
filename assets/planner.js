@@ -117,6 +117,8 @@ let cloudRevision = 0;
 let lastCloudSyncAt = 0;
 let cloudSyncPoll = null;
 let serverClockOffsetMs = 0;
+let lastSyncConflictAt = 0;
+let syncConflictCount = 0;
 let cloudBackups = [];
 let cloudBackupsLoading = false;
 let cloudBackupsReady = false;
@@ -1323,8 +1325,16 @@ async function pullCloudState({ firstLogin=false }={}) {
       // nuvem vencer no spread raso. Se este aparelho gravou depois do último
       // envio aceito pelo servidor, o estudo local é o mais novo e precisa
       // vencer os campos que o merge não sabe reconciliar item a item.
+      const validationErrors = validatePlannerStateIntegrity(data.data);
+      if(validationErrors.length) {
+        recordSyncConflict(`Invalid remote state: ${validationErrors.join('; ')}`);
+        console.error('Remote state validation failed:', validationErrors);
+        return;
+      }
       const localAt = localStateStamp();
       const localIsAhead = Boolean(localAt && remoteAt && localAt > remoteAt);
+      const hasSignificantTimestampDrift = remoteAt && Math.abs(remoteAt - Date.now()) > 60000;
+      if(hasSignificantTimestampDrift) recordSyncConflict('Significant clock drift detected');
       state = mergePlannerActivityState(data.data, state, localIsAhead);
       cloudDirty = localIsAhead;
       lastCloudSyncAt = remoteAt || Date.now();
@@ -2507,6 +2517,88 @@ function stopMotivationCycle() {
   if(motivationRefreshInterval) {
     clearInterval(motivationRefreshInterval);
     motivationRefreshInterval = null;
+  }
+}
+function validatePlannerStateIntegrity(stateToValidate) {
+  const errors = [];
+  if(!stateToValidate || typeof stateToValidate !== 'object') return ['Estado inválido: não é um objeto'];
+  if(!Array.isArray(stateToValidate.schedule)) errors.push('Cronograma não é um array');
+  if(!Array.isArray(stateToValidate.dayLogs)) errors.push('Day logs não é um array');
+  if(typeof stateToValidate.questionProgress !== 'object') errors.push('Question progress não é um objeto');
+  if(typeof stateToValidate.flashcardProgress !== 'object') errors.push('Flashcard progress não é um objeto');
+  if(typeof stateToValidate.questionFlashcards !== 'object') errors.push('Question flashcards não é um objeto');
+  if(!Array.isArray(stateToValidate.gamification?.xpTransactions)) errors.push('Gamification ledger não é um array');
+  if(stateToValidate.dayLogs?.some(log => !log.date || !/^\d{4}-\d{2}-\d{2}$/.test(log.date))) errors.push('Day logs com datas inválidas');
+  if(stateToValidate.schedule?.some(item => !item.id)) errors.push('Schedule items sem ID');
+  return errors;
+}
+function recordSyncConflict(reason = 'unknown') {
+  lastSyncConflictAt = Date.now();
+  syncConflictCount += 1;
+  console.warn(`Sync conflict detected: ${reason} (count: ${syncConflictCount})`);
+  if(syncConflictCount > 5) {
+    console.error('High conflict rate detected, creating backup');
+    createSafetyLocalBackup('após múltiplos conflitos de sincronização');
+  }
+}
+function auditActiveTimers() {
+  const timers = {
+    syncTimer: Boolean(syncTimer),
+    cloudMaxWaitTimer: Boolean(cloudMaxWaitTimer),
+    cloudRetryTimer: Boolean(cloudRetryTimer),
+    pomodoroInterval: Boolean(pomodoroInterval),
+    pomodoroAlarmInterval: Boolean(pomodoroAlarmInterval),
+    pomodoroPanelCloseTimer: Boolean(pomodoroPanelCloseTimer),
+    dailyMissionPanelCloseTimer: Boolean(dailyMissionPanelCloseTimer),
+    questionSearchRenderTimer: Boolean(questionSearchRenderTimer),
+    motivationRefreshInterval: Boolean(motivationRefreshInterval),
+    dashboardCountdownInterval: Boolean(dashboardCountdownInterval),
+    cloudSyncPoll: Boolean(cloudSyncPoll),
+    studyTimeTrackerInterval: Boolean(studyTimeTracker?.displayInterval),
+    materialEditSaveTimers: materialEditSaveTimers.size
+  };
+  const activeCount = Object.values(timers).filter(Boolean).length + (timers.materialEditSaveTimers || 0);
+  if(activeCount > 8) {
+    console.warn(`High number of active timers detected: ${activeCount}`, timers);
+  }
+  return timers;
+}
+async function testMultiDeviceSync() {
+  if(!currentUser || !sbClient) {
+    console.error('Sync test failed: user not authenticated');
+    return false;
+  }
+  try {
+    const testData = { testMark: `sync-test-${Date.now()}`, timestamp: new Date().toISOString() };
+    const testState = {...state, __syncTest: testData};
+    const { error: writeError } = await sbClient.from('planner_states').upsert({
+      user_id: currentUser.id,
+      data: testState,
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'user_id' });
+    if(writeError) {
+      console.error('Sync test write failed:', writeError);
+      return false;
+    }
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    const { data: retrieved, error: readError } = await sbClient.from('planner_states')
+      .select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
+    if(readError || !retrieved?.data?.__syncTest) {
+      console.error('Sync test read failed:', readError);
+      return false;
+    }
+    delete state.__syncTest;
+    const { error: cleanError } = await sbClient.from('planner_states').upsert({
+      user_id: currentUser.id,
+      data: state,
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'user_id' });
+    if(cleanError) console.warn('Sync test cleanup warning:', cleanError);
+    console.log('✓ Multi-device sync test passed');
+    return true;
+  } catch(error) {
+    console.error('Sync test error:', error);
+    return false;
   }
 }
 async function loadMotivationMessages() {
@@ -9363,7 +9455,7 @@ document.getElementById('accountBtn')?.addEventListener('click', async () => {
     return;
   }
   document.getElementById('authPanel').classList.toggle('hidden');
-};
+});
 document.getElementById('signInBtn').onclick = async () => {
   if(OFFLINE_FIRST || !sbClient) return;
   const email = document.getElementById('authEmail').value.trim();
