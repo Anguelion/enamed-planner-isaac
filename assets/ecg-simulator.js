@@ -561,7 +561,12 @@
         ddx: ['TV polimórfica isquêmica (QT normal)', 'FV'],
         armadilhas: ['Buscar causas de QT longo: fármacos (macrolídeos, antipsicóticos, metadona), hipoK, hipoMg.'],
         conduta: ['Sulfato de magnésio IV.', 'Instável/sem pulso: desfibrilação.', 'Suspender fármacos que alargam QT; corrigir eletrólitos.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'torsades-3.jpg', caption: 'Caso real (material de estudo pessoal) — o mais didático: repare no ritmo sinusal do início com QT longo medido (0,648 s), a salva de TV polimórfica que "torce" em torno da linha de base, e o retorno ao ritmo sinusal. É a sequência inteira do fenômeno num traçado só.' },
+        { src: 'torsades-1.jpg', caption: 'Caso real: TV polimórfica (torsades de pointes) sustentada — a amplitude cresce e diminui ciclicamente, como se os complexos girassem ao redor da linha isoelétrica.' },
+        { src: 'torsades-2.jpg', caption: 'Caso real: torsades sustentada em DI (tira de cima) que reverte espontaneamente para bradicardia sinusal (~40 bpm) no fim da tira de baixo — a bradicardia de base é justamente um dos gatilhos do QT longo.' },
+      ]
     },
     {
       id: 'avb1', name: 'BAV de 1º grau', category: 'Distúrbios de condução', level: 2,
@@ -593,7 +598,12 @@
         ddx: ['Mobitz II (PR fixo antes da queda)'],
         armadilhas: ['Geralmente supra-Hissiano/benigno; melhora com atropina.'],
         conduta: ['Assintomático: observar.', 'Sintomático: atropina.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'mobitz1-1.jpg', caption: 'Caso real (material de estudo pessoal): homem de 63 anos, diabético e tabagista, após IAM com supra na parede inferior (delta T 8h) — ritmo sinusal com FC média 60 bpm e Mobitz I. A artéria coronária direita irriga o nó AV: por isso o IAM inferior é a causa clássica de Wenckebach.' },
+        { src: 'mobitz1-2.jpg', caption: 'Caso real: mulher de 20 anos, assintomática, sem patologias prévias, em avaliação pré-operatória — Mobitz I com FC média 90 bpm. Achado incidental em pessoa jovem e saudável: lembra que o Wenckebach costuma ser benigno (tônus vagal aumentado).' },
+        { src: 'mobitz1-3.jpg', caption: 'Caso real: mulher de 64 anos usando metoprolol, clonidina e timolol 0,5% colírio — Mobitz I de causa farmacológica. Atenção à armadilha: o timolol é betabloqueador e, mesmo em colírio, é absorvido e pode bradicardizar.' },
+      ]
     },
     {
       id: 'mobitz2', name: 'BAV 2º grau Mobitz II', category: 'Distúrbios de condução', level: 3,
@@ -762,7 +772,12 @@
         ddx: ['IAM (T hiperaguda é mais larga e assimétrica)', 'Repolarização precoce'],
         armadilhas: ['Padrão sinusoidal é pré-parada — emergência absoluta.'],
         conduta: ['Gluconato de cálcio (estabiliza membrana) + insulina/glicose, beta-2, e remoção do potássio.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'hyperk-1.jpg', caption: 'Caso real (material de estudo pessoal): precordiais V2–V6 com ondas T altas, simétricas e de base estreita — as clássicas "T em tenda". Compare com a T da isquemia, que é mais larga e assimétrica.' },
+        { src: 'hyperk-2.jpg', caption: 'Caso real: V4, V5 e V6 ampliadas — repare que a T é mais alta que a própria onda R em V5/V6 e termina em ponta fina, não em cúpula.' },
+        { src: 'hyperk-3.jpg', caption: 'Caso real: traçado de 12 derivações em ritmo sinoventricular bradicárdico — hipercalemia mais avançada, com onda P já apagada e T apiculada difusa. É o estágio que antecede o alargamento do QRS e a onda sinusoidal.' },
+      ]
     },
     {
       id: 'pericarditis', name: 'Pericardite aguda', category: 'Pericárdio/pulmão/sistêmico', level: 3,
@@ -838,7 +853,10 @@
         ddx: ['SCA', 'Sobrecarga crônica de VD'],
         armadilhas: ['ECG normal NÃO exclui TEP; a taquicardia sinusal é o achado mais frequente.'],
         conduta: ['Estratificar risco (instabilidade → trombólise), anticoagulação, confirmar com angio-TC.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'tep-1.jpg', caption: 'Caso real (material de estudo pessoal): sobrecarga de ventrículo direito com padrão S1Q3T3 — eixo desviado para a direita (+100°), S em DI, Q e T invertida em DIII, com strain de VD. Atenção: este é o padrão de sobrecarga aguda de VD, que sugere TEP no contexto clínico certo, mas também aparece em sobrecarga crônica (cor pulmonale) — o traçado sozinho não fecha o diagnóstico.' },
+      ]
     },
     {
       id: 'lvh', name: 'Hipertrofia ventricular esquerda', category: 'Sobrecargas', level: 2,

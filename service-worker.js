@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v133';
+const CACHE_NAME = 'soqueromed-shell-v134';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -118,6 +118,16 @@ const APP_SHELL = [
   ,'./assets/ecg-real/stemi-ant-5.jpg'
   ,'./assets/ecg-real/stemi-ant-6.jpg'
   ,'./assets/ecg-real/pericarditis-1.jpg'
+  ,'./assets/ecg-real/hyperk-1.jpg'
+  ,'./assets/ecg-real/hyperk-2.jpg'
+  ,'./assets/ecg-real/hyperk-3.jpg'
+  ,'./assets/ecg-real/torsades-1.jpg'
+  ,'./assets/ecg-real/torsades-2.jpg'
+  ,'./assets/ecg-real/torsades-3.jpg'
+  ,'./assets/ecg-real/mobitz1-1.jpg'
+  ,'./assets/ecg-real/mobitz1-2.jpg'
+  ,'./assets/ecg-real/mobitz1-3.jpg'
+  ,'./assets/ecg-real/tep-1.jpg'
 ];
 
 self.addEventListener('install', event => {
