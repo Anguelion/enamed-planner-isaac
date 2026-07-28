@@ -1090,6 +1090,15 @@ body.dark .history-remove{background:#202a2a}
 .analysis-kpi strong{display:block;margin:8px 0 4px;font-size:28px;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
 .analysis-kpi small{font-size:12px;line-height:1.35}
 .analysis-focus-grid{align-items:stretch}
+.analysis-difficulty-card{border-top:4px solid var(--blue)}
+.question-difficulty-chart{display:grid;gap:14px}
+.question-difficulty-row-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:6px}
+.question-difficulty-row-head strong{font-size:14px}
+.question-difficulty-row-head span{color:var(--muted);font-size:12px;white-space:nowrap}
+.question-difficulty-row .progress span{background:var(--blue)}
+.question-difficulty-row.easy .progress span{background:#2ca36b}
+.question-difficulty-row.medium .progress span{background:#d99a20}
+.question-difficulty-row.hard .progress span{background:#d65b54}
 .analysis-focus{border-top:4px solid var(--green)}
 .analysis-focus.weakness{border-top-color:var(--red)}
 .analysis-bars{display:grid;gap:12px}
@@ -1432,6 +1441,7 @@ body:not(.dark) .qbank-mode .question-topbar .question-key-issue.active{border-c
 .qbank-mode .question-meta .badge.wait{border-color:#a4def0;background:#ddf7ff;color:#007c9c}
 .qbank-mode .section-title h2{font-size:20px;color:#172033}
 body:not(.dark) .qbank-mode .question-stem{margin:8px 0 26px;padding:0;border-radius:0;background:transparent;color:#131927;line-height:1.72;text-align:left}
+.qbank-mode .question-stem{max-width:none}
 .qbank-mode .question-images{margin:0 0 24px}
 .qbank-mode .answer-list{gap:18px}
 .qbank-mode .eliminate-btn{top:50%;right:16px;transform:translateY(-50%);border:0;border-radius:50%;background:#f1f3f6;color:#9da7b5;font-size:18px;font-weight:500;width:30px;height:30px;padding-bottom:1px}

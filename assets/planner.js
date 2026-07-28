@@ -4299,6 +4299,24 @@ function renderAreaBars(groups,emptyText) {
   if(!groups.length) return `<div class="empty">${escapeHtml(emptyText)}</div>`;
   return `<div class="analysis-bars">${groups.map(group=>`<div class="analysis-bar"><div><strong>${escapeHtml(group.name)}</strong><span>${group.correct}/${group.total} · ${pct(group.rate)}</span></div><div class="progress"><span style="width:${pct(group.rate)};background:${analysisRateColor(group.rate)}"></span></div></div>`).join('')}</div>`;
 }
+function questionDifficultyStats() {
+  const levels=[
+    {key:'facil',label:'Fácil',className:'easy'},
+    {key:'media',label:'Média',className:'medium'},
+    {key:'dificil',label:'Difícil',className:'hard'}
+  ];
+  const counts=Object.fromEntries(levels.map(level=>[level.key,0]));
+  questionBank.forEach(question=>{
+    const level=state.questionProgress?.[question.id]?.difficulty;
+    if(Object.prototype.hasOwnProperty.call(counts,level)) counts[level]+=1;
+  });
+  const total=Object.values(counts).reduce((sum,value)=>sum+value,0);
+  return {levels:levels.map(level=>({...level,count:counts[level.key],share:total?counts[level.key]/total:0})),total};
+}
+function renderQuestionDifficultyChart(stats) {
+  if(!stats.total) return '<div class="empty">Classifique algumas questões como Fácil, Média ou Difícil para gerar este gráfico.</div>';
+  return `<div class="question-difficulty-chart" role="img" aria-label="Distribuição das questões classificadas por dificuldade">${stats.levels.map(level=>`<div class="question-difficulty-row ${level.className}"><div class="question-difficulty-row-head"><strong>${level.label}</strong><span>${level.count} ${level.count===1?'questão':'questões'} · ${pct(level.share)}</span></div><div class="progress"><span style="width:${pct(level.share)}"></span></div></div>`).join('')}</div>`;
+}
 function areaWindowRows(daysBack) {
   const today=studyDateKey();
   const dates=[...Array(daysBack)].map((_,i)=>addDays(today,-i));
@@ -4409,6 +4427,7 @@ function renderAnalise() {
   const metrics=attentionMetrics(rows);
   const scoreInfo=attentionScoreLabel(metrics.score);
   const trend=accuracyTrend(14);
+  const difficultyStats=questionDifficultyStats();
   const windowRows=areaWindowRows(30);
   const areaGroupsAll=aggregateAnalysisRows(windowRows,'area');
   const areaGroups=(g=>g.length?g:areaGroupsAll)(areaGroupsAll.filter(item=>item.total>=3));
@@ -4425,7 +4444,7 @@ function renderAnalise() {
       <div class="analysis-kpi"><span>Tempo médio</span><strong>${timed.length?formatVideoTime(average):'—'}</strong><small>${timed.length}/${rows.length} com tempo registrado</small></div>
       <div class="analysis-kpi"><span>Calibração</span><strong>${highConfidence.length?pct(highConfidenceCorrect/highConfidence.length):'—'}</strong><small>acerto quando confiança ≥ 80%</small></div>
       <div class="analysis-kpi"><span>Tempo total</span><strong>${timed.length?formatVideoTime(timed.reduce((sum,row)=>sum+row.seconds,0)):'—'}</strong><small>mediana ${median?formatVideoTime(median):'não registrada'}</small></div>
-    </div><div class="grid two analysis-focus-grid"><div class="card analysis-focus strength"><div class="section-title"><div><span class="eyebrow">Ponto mais forte</span><h2>${escapeHtml(strongest?.name || 'Amostra insuficiente')}</h2></div><span class="badge done">${strongest?pct(strongest.rate):'—'}</span></div>${renderAnalysisBars(strengths,'Ainda não há um padrão forte.')}</div><div class="card analysis-focus weakness"><div class="section-title"><div><span class="eyebrow">Pontos mais fracos</span><h2>${escapeHtml(weakest?.name || 'Nenhum erro relevante')}</h2></div><span class="badge ${weakest?'no':'done'}">${weakest?`${weakest.wrong} ${weakest.wrong===1?'erro':'erros'}`:'estável'}</span></div>${renderAnalysisBars(weaknesses,'Nenhum tema fraco nesta amostra.')}</div></div>
+    </div><div class="card analysis-difficulty-card"><div class="section-title"><div><span class="eyebrow">Classificação do banco</span><h2>Dificuldade percebida</h2><div class="muted">Distribuição das questões classificadas no Banco de Questões.</div></div><span class="badge today">${difficultyStats.total} ${difficultyStats.total===1?'classificada':'classificadas'}</span></div>${renderQuestionDifficultyChart(difficultyStats)}</div><div class="grid two analysis-focus-grid"><div class="card analysis-focus strength"><div class="section-title"><div><span class="eyebrow">Ponto mais forte</span><h2>${escapeHtml(strongest?.name || 'Amostra insuficiente')}</h2></div><span class="badge done">${strongest?pct(strongest.rate):'—'}</span></div>${renderAnalysisBars(strengths,'Ainda não há um padrão forte.')}</div><div class="card analysis-focus weakness"><div class="section-title"><div><span class="eyebrow">Pontos mais fracos</span><h2>${escapeHtml(weakest?.name || 'Nenhum erro relevante')}</h2></div><span class="badge ${weakest?'no':'done'}">${weakest?`${weakest.wrong} ${weakest.wrong===1?'erro':'erros'}`:'estável'}</span></div>${renderAnalysisBars(weaknesses,'Nenhum tema fraco nesta amostra.')}</div></div>
     <div class="card"><div class="section-title"><div><h2>Fila inteligente de revisão</h2><div class="muted">Ordenada pelo risco de repetir o erro, não pela ordem das questões.</div></div><span class="badge today">${detailed.filter(row=>row.risk.score>0).length} prioridades</span></div><div class="table-wrap"><table class="analysis-table"><thead><tr><th>Questão</th><th>Área e tema</th><th>Leitura</th><th class="num">Confiança</th><th class="num">Tempo</th><th>Próxima ação</th><th></th></tr></thead><tbody>${detailed.map((row,index)=>`<tr><td><strong>${row.runId?`Simulado · ${row.position}`:`${escapeHtml(questionCollectionLabel(row.question.collectionBlock))} · ${row.question.number}`}</strong><div class="muted">${escapeHtml(row.source)}</div></td><td><strong>${escapeHtml(row.area)}</strong><div class="muted">${escapeHtml(row.topic)}</div></td><td><span class="analysis-signal ${row.risk.className}">${escapeHtml(row.risk.label)}</span></td><td class="num">${row.confidence?`${Math.round(row.confidence)}%`:'—'}</td><td class="num">${row.seconds?formatVideoTime(row.seconds):'—'}</td><td>${escapeHtml(row.risk.action)}</td><td>${row.runId?`<button class="tiny-btn" data-analysis-open-sim="${escapeAttr(row.runId)}">Revisar</button>`:`<button class="tiny-btn" data-analysis-open-question="${escapeAttr(row.questionId)}">Abrir</button>`}</td></tr>`).join('')}</tbody></table></div></div>` : `<div class="card empty analysis-empty"><strong>Nenhuma questão registrada em ${fmtDate(date)}</strong><span>Abra o Banco de Questões ou finalize um simulado. A análise aparecerá automaticamente.</span><button class="icon-btn primary" data-analysis-open-bank>Abrir questões</button></div>`;
   document.getElementById('analise').innerHTML=`<div class="card analysis-head"><div><span class="eyebrow">Inteligência de desempenho</span><h1>Análise diária de questões</h1><p>${escapeHtml(executive)}</p></div><div class="analysis-date-controls"><button class="icon-btn" data-analysis-day="-1" title="Dia anterior">‹</button><input class="input" id="analysisDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="icon-btn" data-analysis-day="1" title="Dia seguinte">›</button><button class="tiny-btn" id="analysisToday">Hoje</button></div></div>${content}${attentionCard}${skillCard}`;
   bindPlannerDateInput('analysisDate',date,value=>{ui.analysisDate=value;renderAnalise();});
