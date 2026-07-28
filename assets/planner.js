@@ -5551,6 +5551,7 @@ function removeVideoFlashcard(videoId, cardId) {
   delete ui.revealedCards[cardId];
   renderCache.manualCards = null;
   persist();
+  renderAulas();
 }
 function videoLessonsForSchedule(item) {
   if(!item) return [];
@@ -5963,7 +5964,11 @@ function renderAulas() {
     input.onchange = event => updateVideoFlashcard(event.currentTarget);
   });
   bindFlashcardMarkdownTools(document.getElementById('aulas') || document);
-  document.querySelectorAll('[data-remove-video-card]').forEach(button => button.onclick = event => removeVideoFlashcard(event.currentTarget.dataset.removeVideoCard, event.currentTarget.dataset.cardId));
+  document.querySelectorAll('[data-remove-video-card]').forEach(button => button.onclick = event => {
+    event.preventDefault();
+    event.stopPropagation();
+    removeVideoFlashcard(event.currentTarget.dataset.removeVideoCard, event.currentTarget.dataset.cardId);
+  });
 }
 function nextCompleteVideoSource(lesson, source) {
   if(!lesson || source?.type !== 'complete') return null;
@@ -6654,7 +6659,12 @@ function renderFlashcards() {
   document.querySelectorAll('[data-card-suspend]').forEach(button => button.onclick = e => suspendFlashcard(e.currentTarget.dataset.cardSuspend));
   document.querySelectorAll('[data-flashcard-move]').forEach(button => button.onclick = e => moveFlashcardSession(n(e.currentTarget.dataset.flashcardMove), cards.length));
   document.querySelectorAll('[data-edit-flashcard]').forEach(button => button.onclick = e => { ui.editFlashcardId = e.currentTarget.dataset.editFlashcard; renderFlashcards(); });
-  document.querySelectorAll('[data-close-flashcard-edit]').forEach(button => button.onclick = () => { ui.editFlashcardId = ''; renderFlashcards(); });
+  document.querySelectorAll('[data-close-flashcard-edit]').forEach(button => button.onclick = event => {
+    event.preventDefault();
+    event.stopPropagation();
+    ui.editFlashcardId = '';
+    renderFlashcards();
+  });
   document.querySelectorAll('[data-question-card][data-card-id][data-card-field], [data-library-card][data-card-id][data-card-field]').forEach(input => {
     input.oninput = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
@@ -6789,7 +6799,7 @@ function renderFlashcardInlineEditor(card) {
     ${renderFlashcardMarkdownField(`${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="back"`,card.back,isCloze?'Extra (opcional, só aparece na resposta)':'Verso')}
     <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || '')}" placeholder="Área">
     <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || '')}" placeholder="Assunto">
-    <button class="tiny-btn" data-close-flashcard-edit="${escapeAttr(card.id)}">Fechar edição</button>
+    <button type="button" class="tiny-btn" data-close-flashcard-edit="${escapeAttr(card.id)}">Fechar edição</button>
   </div>`;
 }
 function renderFlashcardRating(id) {
@@ -7940,6 +7950,9 @@ function renderQuestion(question, total) {
   const feedback = result ? `<div class="question-feedback ${result.correct?'':'wrong'}"><div><strong>${result.correct?'Resposta correta.':'Resposta incorreta.'}</strong>${timeoutText} Gabarito: ${question.answer}.${!result.correct ? ' Marque este assunto para revisão.' : ''}</div>${!result.correct && linkedLesson ? `<button class="tiny-btn question-material-link" data-question-materials="${escapeAttr(linkedLesson.id)}">Revisar material da aula</button>` : ''}</div>` : '';
   const comment = result && question.comment ? renderQuestionCommentPanel(question, result, highlights) : '';
   const reviewButton = result && !result.correct ? `<button class="icon-btn" id="questionFeynman">Enviar tema para Feynman</button>` : '';
+  const difficulty = ['facil','media','dificil'];
+  const difficultyLabels = { facil:'Fácil', media:'Média', dificil:'Difícil' };
+  const difficultyPicker = `<div class="question-difficulty" role="group" aria-label="Dificuldade percebida da questão"><span class="question-difficulty-label">Dificuldade:</span>${difficulty.map(level => `<button type="button" class="tiny-btn question-difficulty-btn difficulty-${level} ${savedProgress.difficulty===level?'active':''}" data-question-difficulty="${level}" aria-pressed="${savedProgress.difficulty===level}">${difficultyLabels[level]}</button>`).join('')}</div>`;
   const questionInfo = `<div class="question-info-stack"><div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>${renderQuestionTags(question)}</div>`;
   const focusInfo = questionSidebarCollapsed ? questionInfo : '';
   const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
@@ -7947,7 +7960,7 @@ function renderQuestion(question, total) {
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
-    <div class="section-title"><h2>Questão ${question.number}</h2></div>
+     <div class="section-title"><h2>Questão ${question.number}</h2>${difficultyPicker}</div>
     <div class="question-workspace"><div class="question-main">
       <div class="question-stem highlightable" data-highlight-scope="stem" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights, true, 'stem')}</div>
       ${renderQuestionImages(question)}
@@ -8201,6 +8214,16 @@ function bindQuestionActions(questions, question) {
   const fontUp = document.getElementById('questionFontUp');
   const keyIssue = document.getElementById('questionKeyIssue');
   const deleteQuestion = document.getElementById('questionDelete');
+  document.querySelectorAll('[data-question-difficulty]').forEach(button => button.onclick = e => {
+    const difficulty = e.currentTarget.dataset.questionDifficulty;
+    setQuestionProgress(question.id,{ difficulty });
+    document.querySelectorAll('[data-question-difficulty]').forEach(item => {
+      const active = item.dataset.questionDifficulty === difficulty;
+      item.classList.toggle('active',active);
+      item.setAttribute('aria-pressed',String(active));
+    });
+    saveStateOnly({invalidate:false});
+  });
   document.querySelectorAll('[data-question-materials]').forEach(button => button.onclick = e => openMaterialsForSchedule(e.currentTarget.dataset.questionMaterials));
   document.querySelectorAll('[data-question-video]').forEach(button => button.onclick = e => openVideosForSchedule(e.currentTarget.dataset.questionVideo));
   const goPrev = () => navigateQuestionBy(-1);
@@ -8495,6 +8518,7 @@ function removeQuestionFlashcard(questionId, cardId) {
   delete ui.revealedCards[cardId];
   ensureQuestionFocusStudyTimer(questionBank.find(item => item.id === questionId));
   persist();
+  render();
 }
 function resetKeyboardConfirmation() {
   ui.keyboardConfirmQuestion = '';
