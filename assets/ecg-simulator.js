@@ -899,7 +899,10 @@
         ddx: ['Erro de calibração', 'Derrame pericárdico/pleural', 'DPOC/obesidade', 'Amiloidose'],
         armadilhas: ['Baixa voltagem + taquicardia + alternância elétrica = pensar em tamponamento.'],
         conduta: ['Contextualizar; ecocardiograma se suspeita de derrame/tamponamento.'], ref: '—'
-      }
+      },
+      realImages: [
+        { src: 'low-voltage-calib-1.jpg', caption: 'Caso real (material de estudo pessoal) — a ARMADILHA, não a doença: é o MESMO paciente registrado duas vezes, à esquerda na calibração normal (N) e à direita pela metade (N/2). À direita tudo parece de baixa voltagem, mas o coração não mudou — só o ganho do aparelho. Confira sempre o pulso de calibração (o degrau "CAL" na ponta): à direita ele tem metade da altura. É o primeiro passo antes de laudar baixa voltagem.' },
+      ]
     },
   ];
 

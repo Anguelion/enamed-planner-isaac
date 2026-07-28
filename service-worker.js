@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v134';
+const CACHE_NAME = 'soqueromed-shell-v135';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -128,6 +128,7 @@ const APP_SHELL = [
   ,'./assets/ecg-real/mobitz1-2.jpg'
   ,'./assets/ecg-real/mobitz1-3.jpg'
   ,'./assets/ecg-real/tep-1.jpg'
+  ,'./assets/ecg-real/low-voltage-calib-1.jpg'
 ];
 
 self.addEventListener('install', event => {
