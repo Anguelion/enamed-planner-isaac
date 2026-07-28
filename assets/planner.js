@@ -3358,7 +3358,7 @@ function renderCadernoErroCard(entry) {
     String(progress.preReasoning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que eu achava antes</span><p>${escapeHtml(progress.preReasoning)}</p></div>` : '',
     String(progress.postLearning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que sei agora</span><p>${escapeHtml(progress.postLearning)}</p></div>` : ''
   ].join('');
-  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button>${progress.correctiveRule ? `<button class="tiny-btn" data-create-rule-card="${escapeAttr(id)}">Gerar flashcard</button>` : ''}</div></div>`;
+  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button>${progress.correctiveRule ? `<button class="tiny-btn" data-create-rule-card="${escapeAttr(id)}">Gerar flashcard</button><button class="tiny-btn" data-generate-rule-prompts="${escapeAttr(id)}">Gerar perguntas</button>` : ''}</div></div>`;
 }
 function createRuleFlashcard(entryId) {
   const entry = cadernoErrosEntries().find(item => item.id === entryId);
@@ -3381,6 +3381,30 @@ function createRuleFlashcard(entryId) {
   state.questionFlashcards[entryId] = cards;
   persist();
   showStudyToast('Flashcard criado a partir da regra corretiva.');
+  renderCadernoErros();
+}
+function generateRulePrompts(entryId) {
+  const entry = cadernoErrosEntries().find(item => item.id === entryId);
+  if(!entry || !String(entry.progress.correctiveRule || '').trim()) return;
+  state.questionFlashcards ||= {};
+  const cards = Array.isArray(state.questionFlashcards[entryId]) ? state.questionFlashcards[entryId] : [];
+  const linked = scheduleForQuestion(entry.question);
+  const rule = String(entry.progress.correctiveRule).trim();
+  const topic = entry.question.topic || entry.question.area || 'este tema';
+  const prompts = [
+    [`Qual é a regra principal para resolver questões sobre ${topic}?`, rule],
+    [`Como aplicar essa regra em uma situação clínica?`, `${rule}\n\nExplique a decisão, os dados necessários e o principal risco de ignorá-la.`]
+  ];
+  let created = 0;
+  prompts.forEach(([front, back], index) => {
+    if(cards.some(card => String(card.front || '').trim() === front)) return;
+    cards.unshift({id:`card-${entryId}-prompt-${Date.now()}-${index}`, front, back, scheduleId:linked?.id || '', block:linked?.block || entry.question.collectionBlock, area:linked?.area || entry.question.area || 'Sem área', subarea:linked?.topic || entry.question.topic || 'Caderno de erros', topic:linked?.topic || entry.question.topic || 'Caderno de erros', createdAt:new Date().toISOString()});
+    created += 1;
+  });
+  if(!created) { showStudyToast('As perguntas deste erro já foram geradas.'); return; }
+  state.questionFlashcards[entryId] = cards;
+  persist();
+  showStudyToast(`${created} pergunta${created === 1 ? '' : 's'} de recuperação gerada${created === 1 ? '' : 's'}.`);
   renderCadernoErros();
 }
 function exportCadernoErrosCsv() {
@@ -3454,6 +3478,7 @@ function bindCadernoErros() {
     render();
   });
   document.querySelectorAll('[data-create-rule-card]').forEach(button => button.onclick = e => createRuleFlashcard(e.currentTarget.dataset.createRuleCard));
+  document.querySelectorAll('[data-generate-rule-prompts]').forEach(button => button.onclick = e => generateRulePrompts(e.currentTarget.dataset.generateRulePrompts));
 }
 function renderEcg() {
   const el = document.getElementById('ecg');
