@@ -3350,6 +3350,14 @@ function bindCadernoErros() {
   document.querySelectorAll('[data-caderno-access]').forEach(button => button.onclick = e => {
     ui.qQuestionId = e.currentTarget.dataset.cadernoAccess;
     ui.qRouteRestorePending = true;
+    ui.qFocusScheduleId = '';
+    ui.qFocusQuestionIds = [];
+    ui.qFocusTarget = 0;
+    ui.qIndex = 0;
+    ui.qSearch = '';
+    ui.qSource = 'Todas';
+    ui.qTopic = 'Todos';
+    ui.justAnsweredId = '';
     ui.qStatus = 'Todas';
     ui.tab = 'questoes';
     render();
