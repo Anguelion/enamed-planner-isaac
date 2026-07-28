@@ -7501,6 +7501,10 @@ function navigateQuestionBy(delta) {
   }
   if(delta > 0 && ui.qIndex >= questions.length - 1 && showingJustAnswered) {
     ui.justAnsweredId = '';
+    ui.qIndex = 0;
+    ui.qQuestionId = '';
+    syncRouteFromUI('push');
+    render();
     showStudyToast('Parabéns! Você concluiu as questões deste filtro.');
     return;
   }
@@ -8363,6 +8367,10 @@ function bindQuestionActions(questions, question) {
     }
     if(showingJustAnswered && ui.qIndex >= questions.length - 1) {
       ui.justAnsweredId = '';
+      ui.qIndex = 0;
+      ui.qQuestionId = '';
+      syncRouteFromUI('push');
+      render();
       showStudyToast('Parabéns! Você concluiu as questões deste filtro.');
       return;
     }
