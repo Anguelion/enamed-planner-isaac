@@ -3358,7 +3358,30 @@ function renderCadernoErroCard(entry) {
     String(progress.preReasoning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que eu achava antes</span><p>${escapeHtml(progress.preReasoning)}</p></div>` : '',
     String(progress.postLearning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que sei agora</span><p>${escapeHtml(progress.postLearning)}</p></div>` : ''
   ].join('');
-  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
+  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button>${progress.correctiveRule ? `<button class="tiny-btn" data-create-rule-card="${escapeAttr(id)}">Gerar flashcard</button>` : ''}</div></div>`;
+}
+function createRuleFlashcard(entryId) {
+  const entry = cadernoErrosEntries().find(item => item.id === entryId);
+  if(!entry || !String(entry.progress.correctiveRule || '').trim()) return;
+  state.questionFlashcards ||= {};
+  const cards = Array.isArray(state.questionFlashcards[entryId]) ? state.questionFlashcards[entryId] : [];
+  if(cards.some(card => String(card.back || '').trim() === String(entry.progress.correctiveRule).trim())) {
+    showStudyToast('Este flashcard já existe.');
+    return;
+  }
+  const linked = scheduleForQuestion(entry.question);
+  cards.unshift({
+    id:`card-${entryId}-rule-${Date.now()}`,
+    front:`Qual é a regra principal desta questão?`,
+    back:String(entry.progress.correctiveRule).trim(),
+    scheduleId:linked?.id || '', block:linked?.block || entry.question.collectionBlock,
+    area:linked?.area || entry.question.area || 'Sem área', subarea:linked?.topic || entry.question.topic || 'Caderno de erros',
+    topic:linked?.topic || entry.question.topic || 'Caderno de erros', createdAt:new Date().toISOString()
+  });
+  state.questionFlashcards[entryId] = cards;
+  persist();
+  showStudyToast('Flashcard criado a partir da regra corretiva.');
+  renderCadernoErros();
 }
 function exportCadernoErrosCsv() {
   const headers = ['Data','Área','Tema','Enunciado','Minha resposta','Resposta correta','Tipo de erro','Confiança','Regra corretiva','Próxima revisão','Anotação'];
@@ -3430,6 +3453,7 @@ function bindCadernoErros() {
     ui.tab = 'questoes';
     render();
   });
+  document.querySelectorAll('[data-create-rule-card]').forEach(button => button.onclick = e => createRuleFlashcard(e.currentTarget.dataset.createRuleCard));
 }
 function renderEcg() {
   const el = document.getElementById('ecg');
