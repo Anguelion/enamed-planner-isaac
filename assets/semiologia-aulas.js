@@ -43,9 +43,9 @@
     for (let i = de; i <= ate; i++) items.push({ src: `assets/semiologia-real/${pasta}/${i}.jpg`, cap: `Slide ${i}` });
     return IMGGRID(items);
   };
-  // Usa a imagem numerada correspondente à aula. O renderizador tenta JPG e PNG
-  // automaticamente, pois a pasta de origem mistura os dois formatos.
-  const foto = (pasta, n, cap) => ({ t: 'img', x: `assets/semiologia-real/${pasta}/${n}.jpg`, cap });
+  // As imagens das aulas são inseridas manualmente pelo estudante.
+  // Mantemos os blocos antigos sem renderizar para não exibir associações automáticas incorretas.
+  const foto = (pasta, n, cap) => ({ t: 'manualimg', cap });
 
   // --- alguns esquemas SVG didáticos reutilizáveis -------------------------
   const svgTorax = `<svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" class="semio-fig-svg">

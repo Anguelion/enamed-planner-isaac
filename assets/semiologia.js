@@ -139,15 +139,8 @@
     },
   ];
   const MANOBRA_MAP = Object.fromEntries(MANOBRAS.map((m) => [m.id, m]));
-  // Espaços reservados para foto específica de cada manobra — não apontam para um slide confirmado
-  // (as pastas reais têm dezenas de imagens não identificadas individualmente); edite `src` aqui
-  // quando tiver a foto certa para cada uma.
-  const MANOBRA_FOTO = {
-    murphy: { src: 'assets/semiologia-real/08-abdomen-agudo/42.jpg', cap: 'Sinal de Murphy' },
-    blumberg: { src: 'assets/semiologia-real/08-abdomen-agudo/44.jpg', cap: 'Descompressão dolorosa (Blumberg)' },
-    'macicez-movel': { src: 'assets/semiologia-real/07-ascite/23.jpg', cap: 'Macicez móvel de decúbito' },
-    ftv: { src: 'assets/semiologia-real/01-pontos-anatomicos-pneumotorax-derrame-pleural-posicao-do-iot/35.jpg', cap: 'Frêmito toracovocal' },
-  };
+  // As fotos das manobras também ficam sob controle do estudante.
+  const MANOBRA_FOTO = {};
 
   // ---------------------------------------------------------------------------
   // 2b. BANCO DE AUSCULTA — sons reais (Littmann) com achados e quiz
@@ -883,7 +876,7 @@
   function defaultState() {
     return {
       ui: { sub: 'inicio', aulaModId: null, aulaTopicoId: null, manobraId: null, auscultaId: null, casoId: null, focus: false, fichaSistema: 'Todos', corpoSignId: null, corpoTeste: false, corpoTesteId: null, corpoView: 'ant' },
-      srs: {}, progress: {}, caseState: {}, highlights: {}, log: [],
+      srs: {}, progress: {}, caseState: {}, highlights: {}, images: {}, log: [],
       daily: { date: todayISO(), studied: 0 },
     };
   }
@@ -893,7 +886,7 @@
     if (!S.semio) S.semio = defaultState();
     const d = defaultState();
     S.semio.ui = Object.assign({}, d.ui, S.semio.ui);
-    ['srs', 'progress', 'caseState', 'highlights'].forEach((k) => { if (!S.semio[k]) S.semio[k] = {}; });
+    ['srs', 'progress', 'caseState', 'highlights', 'images'].forEach((k) => { if (!S.semio[k]) S.semio[k] = {}; });
     if (!Array.isArray(S.semio.log)) S.semio.log = [];
     if (!S.semio.daily || S.semio.daily.date !== todayISO()) S.semio.daily = { date: todayISO(), studied: 0 };
   }
@@ -945,9 +938,10 @@
       case 'doc': return `<div class="semio-doc"><span class="semio-doc-tag">Prontuário</span><code>${esc(b.x)}</code></div>`;
       case 'ul': return `<ul class="semio-ul">${b.x.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`;
       case 'svg': return `<figure class="semio-fig">${b.x}${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
-      case 'img': return `<figure class="semio-fig semio-fig-photo"><img src="${esc(b.x)}" alt="${esc(b.cap || '')}" loading="lazy" onerror="${imgFallback}"/>${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
-      case 'imggrid': return `<div class="semio-fig-row">${b.x.map((im) => `<figure class="semio-fig semio-fig-photo"><img src="${esc(im.src)}" alt="${esc(im.cap || '')}" loading="lazy" onerror="${imgFallback}"/>${im.cap ? `<figcaption>${esc(im.cap)}</figcaption>` : ''}</figure>`).join('')}</div>`;
-      case 'placeholder': return `<figure class="semio-fig semio-fig-placeholder" data-placeholder-src="${esc(b.x)}"><div class="semio-ph-box">📷<span>Espaço reservado para foto</span></div><figcaption>${esc(b.cap || '')}</figcaption></figure>`;
+      case 'img':
+      case 'imggrid':
+      case 'placeholder':
+      case 'manualimg': return '';
       case 'p':
       default: {
         const id = topId + ':' + idx;
@@ -1003,19 +997,45 @@
       <div class="semio-list">${mod.topicos.map((t) => {
         const done = S.progress['aula:' + mod.id + ':' + t.id];
         return `<button class="semio-topic" data-topico="${esc(t.id)}"><span>${esc(t.titulo)}</span>${done ? '<i class="semio-check">✓</i>' : ''}</button>`;
-      }).join('')}</div>`;
+    }).join('')}</div>`;
+  }
+  const aulaImageKey = (mod, topico) => `${mod.id}:${topico.id}`;
+  const imageId = () => (globalThis.crypto?.randomUUID ? globalThis.crypto.randomUUID() : `semio-${Date.now()}-${Math.random().toString(36).slice(2)}`);
+  function semioImageHtml(image) {
+    const alt = image.name || 'Imagem da aula';
+    if (typeof materialImageHtml === 'function') return materialImageHtml({ id: 'semiologia', title: 'Imagem da aula' }, alt, `material-image:${image.id}`);
+    return `<div class="semio-image-loading">Carregando imagem salva...</div>`;
+  }
+  function aulaImagesHtml(S, key) {
+    const images = Array.isArray(S.images?.[key]) ? S.images[key] : [];
+    if (!images.length) return '';
+    return `<div class="semio-custom-images"><div class="semio-custom-images-head"><b>Imagens desta aula</b><span class="semio-muted sm">${images.length} ${images.length === 1 ? 'imagem' : 'imagens'}</span></div>${images.map(image => `<figure class="semio-custom-image" data-semio-image-id="${esc(image.id)}">${semioImageHtml(image)}<button type="button" class="semio-btn ghost sm" data-semio-remove-image="${esc(image.id)}">Excluir imagem</button></figure>`).join('')}</div>`;
+  }
+  async function addSemioImage(file, key) {
+    if (!file?.type?.startsWith('image/')) return;
+    if (file.size > 12 * 1024 * 1024) { alert('Escolha uma imagem de até 12 MB.'); return; }
+    if (typeof storeMaterialImage !== 'function') { alert('O recurso de imagens ainda está carregando. Tente novamente.'); return; }
+    const id = await storeMaterialImage(file);
+    if (!id) return;
+    const S = st();
+    S.images[key] = Array.isArray(S.images[key]) ? S.images[key] : [];
+    S.images[key].push({ id, name: file.name || 'Imagem da aula' });
+    save();
+    paint();
   }
   function aulasDetailHtml(mod, topico) {
     const S = st();
     const focus = S.ui.focus ? ' semio-focus' : '';
+    const imageKey = aulaImageKey(mod, topico);
     const parts = topico.blocks.map((b, i) => blockHtml(b, mod.id + ':' + topico.id, i)).join('');
     return `<button class="semio-btn ghost sm" data-back-topicos>← ${esc(mod.nome)}</button>
       <div class="semio-topic-head"><h2>${esc(topico.titulo)}</h2>
         <div class="semio-topic-tools">
           <button class="semio-btn ghost sm" data-focus-toggle>🎯 Modo foco</button>
+          <label class="semio-btn ghost sm" title="Adicionar imagem à aula">🖼️ Adicionar imagem<input type="file" accept="image/*" data-semio-image-input="${esc(imageKey)}" hidden></label>
           <span class="semio-muted sm">Selecione um trecho de texto para marcá-lo. Clique numa marcação para remover.</span>
         </div></div>
-      <article class="semio-flow${focus}">${parts}</article>
+      <article class="semio-flow${focus}" data-semio-image-scope="${esc(imageKey)}">${aulaImagesHtml(S, imageKey)}${parts}<p class="semio-image-help">Você pode colar uma imagem diretamente nesta aula com Ctrl+V. Ela será comprimida e salva automaticamente.</p></article>
       <button class="semio-btn wide" data-mark-read="${esc(mod.id + ':' + topico.id)}">✓ Marcar tópico como lido</button>`;
   }
   function aulasHtml() {
@@ -1256,11 +1276,19 @@
   }
 
   let ROOT = null;
+  const semioHydratedImageIds = new Set();
+  function hydrateSemioImages() {
+    const ids = Object.values(st().images || {}).flat().map(image => image?.id).filter(Boolean).filter(id => !semioHydratedImageIds.has(id));
+    if (!ids.length || typeof loadMaterialImagesForMarkdown !== 'function') return;
+    ids.forEach(id => semioHydratedImageIds.add(id));
+    loadMaterialImagesForMarkdown(ids.map(id => `![Imagem](material-image:${id})`).join('\n')).then(() => paint());
+  }
   function paint() {
     if (!ROOT) return;
     ROOT.querySelector('.semio-subnav-slot').innerHTML = subnav();
     ROOT.querySelector('.semio-body').innerHTML = bodyHtml();
     bind();
+    hydrateSemioImages();
   }
   function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'aulas') { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; } if (sub !== 'manobras') S.ui.manobraId = null; if (sub !== 'ausculta') S.ui.auscultaId = null; if (sub !== 'casos') S.ui.casoId = null; if (sub !== 'corpo') { S.ui.corpoSignId = null; S.ui.corpoTeste = false; S.ui.corpoTesteId = null; } save(); paint(); }
 
@@ -1275,6 +1303,23 @@
     ROOT.querySelectorAll('[data-topico]').forEach((b) => b.onclick = () => { S.ui.aulaTopicoId = b.dataset.topico; save(); paint(); });
     ROOT.querySelector('[data-back-topicos]')?.addEventListener('click', () => { S.ui.aulaTopicoId = null; save(); paint(); });
     ROOT.querySelector('[data-focus-toggle]')?.addEventListener('click', () => { S.ui.focus = !S.ui.focus; save(); paint(); });
+    ROOT.querySelectorAll('[data-semio-image-input]').forEach((input) => input.addEventListener('change', (event) => {
+      addSemioImage(event.currentTarget.files?.[0], event.currentTarget.dataset.semioImageInput);
+      event.currentTarget.value = '';
+    }));
+    ROOT.querySelectorAll('[data-semio-remove-image]').forEach((button) => button.addEventListener('click', () => {
+      const scope = ROOT.querySelector('[data-semio-image-scope]')?.dataset.semioImageScope;
+      if (!scope) return;
+      S.images[scope] = (S.images[scope] || []).filter(image => image.id !== button.dataset.semioRemoveImage);
+      save(); paint();
+    }));
+    const semioImageScope = ROOT.querySelector('[data-semio-image-scope]');
+    semioImageScope?.addEventListener('paste', (event) => {
+      const image = [...(event.clipboardData?.files || [])].find(file => file.type.startsWith('image/'));
+      if (!image) return;
+      event.preventDefault();
+      addSemioImage(image, semioImageScope.dataset.semioImageScope);
+    });
     ROOT.querySelector('[data-mark-read]')?.addEventListener('click', (e) => { S.progress['aula:' + e.target.dataset.markRead] = true; save(); paint(); });
     // marca-texto: seleciona qualquer trecho do parágrafo para marcar
     ROOT.querySelectorAll('.semio-p[data-hl-id]').forEach((p) => {
@@ -1508,6 +1553,10 @@
     .semio-fig-placeholder figcaption{text-align:center}
     .semio-fig-row{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;justify-content:center}
     .semio-fig-row .semio-fig{margin:0;flex:1 1 220px;max-width:280px}
+    .semio-custom-images{margin:14px 0;padding:12px;border:1px solid var(--border,#e2e8f0);border-radius:12px;background:var(--card,#fff)}
+    .semio-custom-images-head{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px}
+    .semio-custom-image{margin:12px 0;text-align:center}.semio-custom-image figure{margin:0}.semio-custom-image img{max-width:100%;max-height:560px;border:1px solid var(--border,#cbd5e1);border-radius:10px}.semio-custom-image .semio-btn{margin-top:7px}
+    .semio-image-help{padding:9px 11px;border:1px dashed var(--border,#cbd5e1);border-radius:8px;color:var(--muted,#667085);font-size:.8rem}
     .semio-def{margin:9px 0}.semio-def b{color:var(--semio-acc2)}.semio-def p{margin:2px 0 0;line-height:1.5}
     .semio-quiz{margin-top:14px;background:var(--card,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:14px}
     .semio-audio{width:100%;margin:10px 0}

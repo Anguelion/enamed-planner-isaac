@@ -88,6 +88,7 @@ ensureFeynman();
 ensureQuestionProgress();
 let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
+ui.cadernoReview ||= 'Todos';
 ui.rankPromotion = null;
 ui.simulationRewardSummary = null;
 try { Object.assign(ui, JSON.parse(localStorage.getItem(QUESTION_VIEW_KEY) || '{}')); } catch(error) {}
@@ -2623,6 +2624,11 @@ function studyDateKey(value=new Date()) {
   return localISODate(date);
 }
 function fmtDate(s) { if(!s) return ''; const [y,m,d]=s.split('-'); return `${d}/${m}/${y}`; }
+function nextErrorReviewDate(baseDate=studyDateKey(), intervalDays=1) {
+  const date = new Date(`${baseDate}T12:00:00`);
+  date.setDate(date.getDate() + Math.max(1, n(intervalDays) || 1));
+  return studyDateKey(date);
+}
 function parsePlannerDate(value) {
   const text = String(value || '').trim();
   if(/^\d{4}-\d{2}-\d{2}$/.test(text)) return text;
@@ -3308,7 +3314,7 @@ function renderFerramentas() {
 }
 function cadernoErrosEntries() {
   return Object.entries(state.questionProgress || {})
-    .filter(([id, progress]) => String(progress?.notes || '').trim() || String(progress?.preReasoning || '').trim() || String(progress?.postLearning || '').trim())
+    .filter(([id, progress]) => !progress?.correct || String(progress?.notes || '').trim() || String(progress?.preReasoning || '').trim() || String(progress?.postLearning || '').trim() || String(progress?.correctiveRule || '').trim())
     .map(([id, progress]) => ({ id, progress, question: questionBank.find(q => q.id === id) || importedQuestionById(id) }))
     .filter(entry => entry.question)
     .sort((a, b) => Date.parse(b.progress.updatedAt || '') - Date.parse(a.progress.updatedAt || ''));
@@ -3321,25 +3327,33 @@ function renderCadernoErroCard(entry) {
   const snippet = stem.length > 160 ? `${stem.slice(0, 160)}…` : stem;
   const answerCompare = progress.answeredAt ? `<div class="caderno-answer-compare"><span class="badge ${progress.correct ? 'done' : 'no'}">${escapeHtml(String(progress.selected || '—'))}</span><span>→</span><span class="badge done">${escapeHtml(String(question.answer || '—'))}</span></div>` : '';
   const savedAt = progress.updatedAt ? new Date(progress.updatedAt).toLocaleDateString('pt-BR') : '';
+  const reviewDue = progress.nextReview && progress.nextReview <= studyDateKey();
+  const reviewLabel = progress.nextReview ? (reviewDue ? 'Revisão pendente' : `Revisar em ${fmtDate(progress.nextReview)}`) : '';
+  const errorLabel = progress.missReason || progress.errorType || '';
   const noteBlock = String(progress.notes || '').trim() ? `<p class="caderno-erro-note">${escapeHtml(progress.notes)}</p>` : '';
+  const ruleBlock = String(progress.correctiveRule || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">Regra para não errar novamente</span><p>${escapeHtml(progress.correctiveRule)}</p></div>` : '';
   const reflectionRows = [
     String(progress.preReasoning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que eu achava antes</span><p>${escapeHtml(progress.preReasoning)}</p></div>` : '',
     String(progress.postLearning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que sei agora</span><p>${escapeHtml(progress.postLearning)}</p></div>` : ''
   ].join('');
-  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
+  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button></div></div>`;
 }
 function renderCadernoErros() {
   const allEntries = cadernoErrosEntries();
   const areas = ['Todas', ...new Set(allEntries.map(entry => questionTag(entry.question).area).filter(Boolean))].sort();
   const search = normalizedTopic(ui.cadernoSearch || '');
+  const today = studyDateKey();
+  const dueCount = allEntries.filter(entry => entry.progress.nextReview && entry.progress.nextReview <= today).length;
   const entries = allEntries.filter(entry => {
     const tag = questionTag(entry.question);
     if(ui.cadernoArea !== 'Todas' && tag.area !== ui.cadernoArea) return false;
+    if(ui.cadernoReview === 'Pendentes' && !(entry.progress.nextReview && entry.progress.nextReview <= today)) return false;
+    if(ui.cadernoReview === 'Agendadas' && !(entry.progress.nextReview && entry.progress.nextReview > today)) return false;
     if(!search) return true;
-    const haystack = normalizedTopic(`${entry.question.stem || ''} ${entry.progress.notes || ''} ${entry.progress.preReasoning || ''} ${entry.progress.postLearning || ''}`);
+    const haystack = normalizedTopic(`${entry.question.stem || ''} ${entry.progress.notes || ''} ${entry.progress.preReasoning || ''} ${entry.progress.postLearning || ''} ${entry.progress.correctiveRule || ''} ${entry.progress.missReason || ''}`);
     return haystack.includes(search);
   });
-  document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários e reflexões que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span></div></div><section class="card"><div class="section-title"><div><h2>Anotações</h2></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado ou comentário"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada. Escreva um comentário em qualquer questão para ela aparecer aqui.</div>'}</div></section>`;
+  document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários e reflexões que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span><span><strong>${dueCount}</strong> revisões pendentes</span></div></div><section class="card"><div class="section-title"><div><h2>Anotações</h2><div class="muted">${dueCount ? 'Comece pelas revisões pendentes.' : 'Nenhuma revisão está vencida.'}</div></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado, regra ou motivo"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select><select class="select" id="cadernoReview"><option value="Todos" ${ui.cadernoReview === 'Todos' ? 'selected' : ''}>Todas as revisões</option><option value="Pendentes" ${ui.cadernoReview === 'Pendentes' ? 'selected' : ''}>Pendentes</option><option value="Agendadas" ${ui.cadernoReview === 'Agendadas' ? 'selected' : ''}>Agendadas</option></select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada para este filtro.</div>'}</div></section>`;
   bindCadernoErros();
 }
 function bindCadernoErros() {
@@ -3347,6 +3361,8 @@ function bindCadernoErros() {
   if(search) search.oninput = e => { ui.cadernoSearch = e.target.value; renderCadernoErros(); };
   const areaSelect = document.getElementById('cadernoArea');
   if(areaSelect) areaSelect.onchange = e => { ui.cadernoArea = e.target.value; renderCadernoErros(); };
+  const reviewSelect = document.getElementById('cadernoReview');
+  if(reviewSelect) reviewSelect.onchange = e => { ui.cadernoReview = e.target.value; renderCadernoErros(); };
   document.querySelectorAll('[data-caderno-access]').forEach(button => button.onclick = e => {
     ui.qQuestionId = e.currentTarget.dataset.cadernoAccess;
     ui.qRouteRestorePending = true;
@@ -8168,7 +8184,8 @@ function renderQuestionReflection(question, result) {
     return `<div class="question-reflection"><strong>Como foi esse acerto?</strong><div class="field-row"><label class="field-label">Como você acertou<select class="select" data-progress-field="correctMode"><option value="">Marcar acerto</option>${['Sabendo','Chute'].map(option => `<option ${result.correctMode===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Certeza na resposta (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="certainty" value="${certainty || ''}" placeholder="Ex.: 70"></label><label class="field-label">Confiança no tema (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 90"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label></div><div class="reflection-help">Certeza = o quanto você confiava nesta resposta. Confiança = o quanto domina o tema de forma geral.</div></div>`;
   }
   const missReason = result.missReason === 'Não lembrar' ? 'Dúvida / já vi' : result.missReason;
-  return `<div class="question-reflection"><strong>Por que errei?</strong><div class="field-row"><label class="field-label">Motivo do erro<select class="select" data-progress-field="missReason"><option value="">Escolher motivo</option>${['Desatenção','Dúvida / já vi','Não saber'].map(option => `<option ${missReason===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Confiança antes da correção (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 40"></label><label class="field-label">O que aconteceu?<input class="input" data-progress-field="reflection" value="${escapeAttr(result.reflection || '')}" placeholder="Comentário curto"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label></div><div class="reflection-help">Este percentual registra o quanto você acreditava que estava certo antes de ver o gabarito.</div></div>`;
+  const errorTypes = ['Desatenção','Dúvida / já vi','Não saber','Confusão entre conceitos','Interpretação inadequada','Falha de raciocínio clínico','Erro de conduta','Excesso de confiança'];
+  return `<div class="question-reflection"><strong>Por que errei?</strong><div class="field-row"><label class="field-label">Motivo do erro<select class="select" data-progress-field="missReason"><option value="">Escolher motivo</option>${errorTypes.map(option => `<option ${missReason===option?'selected':''}>${option}</option>`).join('')}</select></label><label class="field-label">Confiança antes da correção (%)<input class="input" type="number" min="0" max="100" step="5" data-progress-field="confidence" value="${confidence || ''}" placeholder="Ex.: 40"></label><label class="field-label">O que aconteceu?<input class="input" data-progress-field="reflection" value="${escapeAttr(result.reflection || '')}" placeholder="Comentário curto"></label></div><div class="reflection-writing"><label class="field-label">O que pensei antes de responder<textarea class="textarea" data-progress-field="preReasoning" placeholder="Escreva seu raciocínio antes de olhar o comentário">${escapeHtml(result.preReasoning || '')}</textarea></label><label class="field-label">O que aprendi depois do comentário<textarea class="textarea" data-progress-field="postLearning" placeholder="Explique com suas próprias palavras o que ficou da questão">${escapeHtml(result.postLearning || '')}</textarea></label><label class="field-label">Regra para não errar novamente<textarea class="textarea" data-progress-field="correctiveRule" placeholder="Ex.: Antes de marcar a conduta, verificar gravidade e contraindicações.">${escapeHtml(result.correctiveRule || '')}</textarea></label></div><div class="reflection-help">Este percentual registra o quanto você acreditava que estava certo antes de ver o gabarito.</div></div>`;
 }
 function renderQuestionFlashcardEditor(question, result) {
   ui.questionFlashcardEditorClosed ||= {};
@@ -8862,7 +8879,10 @@ function answerQuestion(question, selected, timedOut=false) {
     answeredAt: new Date().toISOString(),
     secondsSpent: measuredSeconds || previous.secondsSpent || 0,
     attempts: n(previous.attempts) + 1,
-    scheduleId: linkedLesson?.id || previous.scheduleId || ''
+    scheduleId: linkedLesson?.id || previous.scheduleId || '',
+    nextReview: !correct
+      ? nextErrorReviewDate(today, 1)
+      : (previous.nextReview && previous.nextReview <= today ? nextErrorReviewDate(today, 7) : previous.nextReview || '')
   });
   awardQuestionAnswerXP(question,state.questionProgress[question.id]);
   ui.justAnsweredId=question.id;
