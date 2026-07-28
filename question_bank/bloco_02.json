@@ -4959,7 +4959,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-14"
     }
   ]
 }

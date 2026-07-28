@@ -549,7 +549,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-69"
     },
     {
       "id": "b07-semanal-q019",
@@ -2016,7 +2017,8 @@
         "Raciocínio Diagnóstico",
         "Pediatria Ambulatorial"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-66"
     },
     {
       "id": "b07-semanal-q068",
@@ -3550,7 +3552,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-67"
     },
     {
       "id": "b07-semanal-q119",
@@ -3885,7 +3888,8 @@
         "Conduta Terapêutica",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-66"
     },
     {
       "id": "b07-semanal-q130",
@@ -4459,7 +4463,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-62"
     }
   ]
 }

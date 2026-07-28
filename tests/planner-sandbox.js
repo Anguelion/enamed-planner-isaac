@@ -89,6 +89,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
   sandbox.window.matchMedia = () => ({ matches: false, addEventListener(){}, removeEventListener(){}, addListener(){}, removeListener(){} });
   sandbox.window.getComputedStyle = () => ({ getPropertyValue: () => '' });
   sandbox.window.scrollTo = () => {};
+  sandbox.window.getSelection = () => ({ toString: () => '', rangeCount: 0, isCollapsed: true, removeAllRanges(){}, getRangeAt(){ return null; } });
   sandbox.window.innerWidth = 1280;
   sandbox.window.innerHeight = 800;
   sandbox.self = sandbox.window;
@@ -112,9 +113,29 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
   const anchor = 'let state = loadState();';
   if(!plannerSource.includes(anchor)) throw new Error('planner-sandbox: ancora "let state = loadState();" nao encontrada — planner.js mudou de forma inesperada.');
   plannerSource = plannerSource.replace(anchor, `${anchor}\nglobalThis.__getState=()=>state;\nglobalThis.__setState=(value)=>{state=value;};\nglobalThis.__getQuestionBank=()=>questionBank;\nglobalThis.__setQuestionBank=(value)=>{questionBank=value;};\n`);
+  const uiObjAnchor = /let ui = \{[^]*?\};\r?\n/;
+  if(!uiObjAnchor.test(plannerSource)) throw new Error('planner-sandbox: ancora do objeto ui nao encontrada — planner.js mudou de forma inesperada.');
+  plannerSource = plannerSource.replace(uiObjAnchor, match => `${match}globalThis.__getUi=()=>ui;\n`);
   const syncAnchor = "const CLOUD_SYNC_ALLOWED = KNOWN_SYNC_ORIGINS.includes(location.origin) || new URLSearchParams(location.search).get('allowSync') === '1';";
   if(!plannerSource.includes(syncAnchor)) throw new Error('planner-sandbox: ancora de CLOUD_SYNC_ALLOWED nao encontrada — planner.js mudou de forma inesperada.');
   plannerSource = plannerSource.replace(syncAnchor, `${syncAnchor}\nglobalThis.__getCloudSyncAllowed=()=>CLOUD_SYNC_ALLOWED;\nglobalThis.__getKnownSyncOrigins=()=>KNOWN_SYNC_ORIGINS;\n`);
+  // Mesma tecnica do anchor de `state`: expoe `let`s internas que os testes
+  // desta sessao precisam ler/escrever diretamente (nao sao propriedades do
+  // objeto global do vm porque `let`/`var` de topo de <script> classica nao viram
+  // propriedades enumeraveis do global, exceto `var`, que vira mas sem setter
+  // dedicado — por uniformidade expomos todas via getter/setter explicito).
+  const uiAnchor = 'let studyTimeTracker = loadStudyTimerSession();';
+  if(!plannerSource.includes(uiAnchor)) throw new Error('planner-sandbox: ancora de studyTimeTracker nao encontrada — planner.js mudou de forma inesperada.');
+  plannerSource = plannerSource.replace(uiAnchor, `${uiAnchor}\nglobalThis.__getStudyTimeTracker=()=>studyTimeTracker;\nglobalThis.__setStudyTimeTracker=(value)=>{studyTimeTracker=value;};\n`);
+  const cloudDirtyAnchor = 'let cloudDirty = false;';
+  if(!plannerSource.includes(cloudDirtyAnchor)) throw new Error('planner-sandbox: ancora de cloudDirty nao encontrada — planner.js mudou de forma inesperada.');
+  plannerSource = plannerSource.replace(cloudDirtyAnchor, `${cloudDirtyAnchor}\nglobalThis.__getCloudDirty=()=>cloudDirty;\nglobalThis.__setCloudDirty=(value)=>{cloudDirty=value;};\n`);
+  const localBackupsAnchor = 'let localBackups = loadLocalBackups();';
+  if(!plannerSource.includes(localBackupsAnchor)) throw new Error('planner-sandbox: ancora de localBackups nao encontrada — planner.js mudou de forma inesperada.');
+  plannerSource = plannerSource.replace(localBackupsAnchor, `${localBackupsAnchor}\nglobalThis.__getLocalBackups=()=>localBackups;\nglobalThis.__setLocalBackups=(value)=>{localBackups=value;};\n`);
+  const retryTimerAnchor = 'let cloudRetryTimer = null;';
+  if(!plannerSource.includes(retryTimerAnchor)) throw new Error('planner-sandbox: ancora de cloudRetryTimer nao encontrada — planner.js mudou de forma inesperada.');
+  plannerSource = plannerSource.replace(retryTimerAnchor, `${retryTimerAnchor}\nglobalThis.__getCloudRetryDelay=()=>cloudSyncRetryDelayMs;\nglobalThis.__setCloudRetryDelay=(value)=>{cloudSyncRetryDelayMs=value;};\nglobalThis.__getCloudRetryTimer=()=>cloudRetryTimer;\nglobalThis.__clearCloudRetryTimer=()=>{clearTimeout(cloudRetryTimer);cloudRetryTimer=null;};\n`);
   try {
     vm.runInContext(plannerSource, context, { filename: 'planner.js' });
   } catch(error) {

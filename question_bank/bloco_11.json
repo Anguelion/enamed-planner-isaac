@@ -894,7 +894,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 9
+      "globalNumber": 9,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q02",
@@ -924,7 +925,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 10
+      "globalNumber": 10,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q03",
@@ -954,7 +956,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 17
+      "globalNumber": 17,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q04",
@@ -986,7 +989,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 18
+      "globalNumber": 18,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q05",
@@ -1018,7 +1022,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 22
+      "globalNumber": 22,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q06",
@@ -1049,7 +1054,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 25
+      "globalNumber": 25,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q07",
@@ -1111,7 +1117,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 33
+      "globalNumber": 33,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q09",
@@ -1142,7 +1149,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 34
+      "globalNumber": 34,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q10",
@@ -1172,7 +1180,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 36
+      "globalNumber": 36,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q11",
@@ -1360,7 +1369,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 58
+      "globalNumber": 58,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q17",
@@ -1390,7 +1400,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 59
+      "globalNumber": 59,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q18",
@@ -1423,7 +1434,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 64
+      "globalNumber": 64,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q19",
@@ -1485,7 +1497,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 78
+      "globalNumber": 78,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q21",
@@ -1506,7 +1519,8 @@
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-12-download (3).pdf",
       "sourceLabel": "Hematopediatria 2",
       "images": [],
-      "comment": "Correta: C. Em pacientes com anemia falciforme, a Salmonella spp. é o agente mais frequentemente associado a osteomielite, apesar de o Staphylococcus aureus continuar sendo a causa mais comum de osteomielite na população geral — essa é uma associação clássica cobrada em prova."
+      "comment": "Correta: C. Em pacientes com anemia falciforme, a Salmonella spp. é o agente mais frequentemente associado a osteomielite, apesar de o Staphylococcus aureus continuar sendo a causa mais comum de osteomielite na população geral — essa é uma associação clássica cobrada em prova.",
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q22",
@@ -1549,7 +1563,8 @@
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-12-download (3).pdf",
       "sourceLabel": "Hematopediatria 2",
       "images": [],
-      "comment": "Correta: C. Criança com anemia falciforme hereditária (doença também presente na mãe), evoluindo com febre, tosse e novo infiltrado pulmonar associado a hipoxemia, define síndrome torácica aguda — complicação grave que exige internação, oxigenoterapia e antibioticoterapia de amplo espectro."
+      "comment": "Correta: C. Criança com anemia falciforme hereditária (doença também presente na mãe), evoluindo com febre, tosse e novo infiltrado pulmonar associado a hipoxemia, define síndrome torácica aguda — complicação grave que exige internação, oxigenoterapia e antibioticoterapia de amplo espectro.",
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q24",
@@ -1600,7 +1615,8 @@
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-12-download (3).pdf",
       "sourceLabel": "Hematopediatria 2",
       "images": [],
-      "comment": "Correta: C. A crise vaso-oclusiva dolorosa na doença falciforme deve ser tratada com hidratação e analgesia potente (opioide), já que a dor costuma ser intensa e refratária a analgésicos simples como dipirona ou AINE isoladamente. Transfusão (B) não é rotina na crise álgica simples, sendo reservada para complicações mais graves (STA, sequestro esplênico, AVC)."
+      "comment": "Correta: C. A crise vaso-oclusiva dolorosa na doença falciforme deve ser tratada com hidratação e analgesia potente (opioide), já que a dor costuma ser intensa e refratária a analgésicos simples como dipirona ou AINE isoladamente. Transfusão (B) não é rotina na crise álgica simples, sendo reservada para complicações mais graves (STA, sequestro esplênico, AVC).",
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q26",
@@ -1653,7 +1669,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 102
+      "globalNumber": 102,
+      "scheduleId": "cron-104"
     },
     {
       "id": "b11-hematopediatria-2-q28",
@@ -1778,7 +1795,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 15
+      "globalNumber": 15,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q04",
@@ -1810,7 +1828,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 19
+      "globalNumber": 19,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q05",
@@ -1840,7 +1859,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 23
+      "globalNumber": 23,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q06",
@@ -1902,7 +1922,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 28
+      "globalNumber": 28,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q08",
@@ -1933,7 +1954,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 35
+      "globalNumber": 35,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q09",
@@ -1995,7 +2017,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 46
+      "globalNumber": 46,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q11",
@@ -2088,7 +2111,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 55
+      "globalNumber": 55,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q14",
@@ -2119,7 +2143,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 60
+      "globalNumber": 60,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q15",
@@ -2180,7 +2205,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 65
+      "globalNumber": 65,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q17",
@@ -2210,7 +2236,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 66
+      "globalNumber": 66,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q18",
@@ -2240,7 +2267,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 73
+      "globalNumber": 73,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q19",
@@ -2270,7 +2298,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "globalNumber": 75
+      "globalNumber": 75,
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q20",
@@ -2321,7 +2350,8 @@
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-12-download (4).pdf",
       "sourceLabel": "Hematopediatria 1",
       "images": [],
-      "comment": "Correta: A. Recém-nascidos de baixo peso (<2.500g) têm reservas de ferro reduzidas e necessitam de suplementação mais precoce e em dose maior: 2 mg/kg/dia a partir de 30 dias de vida por 1 ano, seguido de 1 mg/kg/dia por mais um ano, segundo as recomendações da Sociedade Brasileira de Pediatria."
+      "comment": "Correta: A. Recém-nascidos de baixo peso (<2.500g) têm reservas de ferro reduzidas e necessitam de suplementação mais precoce e em dose maior: 2 mg/kg/dia a partir de 30 dias de vida por 1 ano, seguido de 1 mg/kg/dia por mais um ano, segundo as recomendações da Sociedade Brasileira de Pediatria.",
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q22",
@@ -2365,7 +2395,8 @@
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-12-download (4).pdf",
       "sourceLabel": "Hematopediatria 1",
       "images": [],
-      "comment": "Correta: D. Lactente sem qualquer suplementação prévia deve iniciar profilaxia com vitamina D (600 UI/dia) e ferro (1 mg/kg/dia), investigando concomitantemente possível anemia ferropriva já instalada, e não aguardar exames antes de iniciar a suplementação profilática (A incorreta)."
+      "comment": "Correta: D. Lactente sem qualquer suplementação prévia deve iniciar profilaxia com vitamina D (600 UI/dia) e ferro (1 mg/kg/dia), investigando concomitantemente possível anemia ferropriva já instalada, e não aguardar exames antes de iniciar a suplementação profilática (A incorreta).",
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q24",
@@ -2408,7 +2439,8 @@
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-12-download (4).pdf",
       "sourceLabel": "Hematopediatria 1",
       "images": [],
-      "comment": "Correta: C. A anemia ferropriva caracteriza-se por microcitose, hipocromia e aumento do RDW (anisocitose), refletindo a heterogeneidade do tamanho das hemácias durante a deficiência de ferro. Reticulócitos costumam estar normais ou baixos (não aumentados, como em A), o que ajuda a diferenciar de anemias hemolíticas."
+      "comment": "Correta: C. A anemia ferropriva caracteriza-se por microcitose, hipocromia e aumento do RDW (anisocitose), refletindo a heterogeneidade do tamanho das hemácias durante a deficiência de ferro. Reticulócitos costumam estar normais ou baixos (não aumentados, como em A), o que ajuda a diferenciar de anemias hemolíticas.",
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q26",
@@ -2459,7 +2491,8 @@
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-12-download (4).pdf",
       "sourceLabel": "Hematopediatria 1",
       "images": [],
-      "comment": "Correta: A. Manchas café-com-leite, hiperpigmentação cutânea, ausência de polegares, microcefalia, atraso de crescimento e pancitopenia formam o quadro clássico de anemia de Fanconi, uma síndrome de falência medular associada a malformações congênitas."
+      "comment": "Correta: A. Manchas café-com-leite, hiperpigmentação cutânea, ausência de polegares, microcefalia, atraso de crescimento e pancitopenia formam o quadro clássico de anemia de Fanconi, uma síndrome de falência medular associada a malformações congênitas.",
+      "scheduleId": "cron-103"
     },
     {
       "id": "b11-hematopediatria-1-q28",

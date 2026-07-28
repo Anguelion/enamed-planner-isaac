@@ -668,7 +668,8 @@
         "Ferritina",
         "Metabolismo do Ferro"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-6"
     },
     {
       "id": "b01-semanal-q023",
@@ -1091,7 +1092,8 @@
         "Neuroanatomia Pélvica",
         "Anatomia Aplicada"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanal-q037",
@@ -1303,7 +1305,8 @@
         "Tecido Conjuntivo",
         "Anatomia"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-7"
     },
     {
       "id": "b01-semanal-q044",
@@ -2124,7 +2127,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-9"
     },
     {
       "id": "b01-semanal-q074",
@@ -2187,7 +2191,8 @@
         "Queda de Hemoglobina",
         "Instabilidade Hemodinâmica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-9"
     },
     {
       "id": "b01-semanal-q073",
@@ -2250,7 +2255,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-7"
     },
     {
       "id": "b01-semanal-q071",
@@ -2343,7 +2349,8 @@
         "Dor Abdominal",
         "Diagnóstico por Imagem"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanais-q78",
@@ -2372,7 +2379,8 @@
         "Avaliação da Via Aérea",
         "Avaliação Primária"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-8"
     },
     {
       "id": "b01-semanal-q083",
@@ -2467,7 +2475,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-8"
     },
     {
       "id": "b01-semanais-q82",
@@ -2496,7 +2505,8 @@
         "Choque Hemorrágico",
         "Controle de Danos"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-8"
     },
     {
       "id": "b01-semanais-q83",
@@ -2528,7 +2538,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-8"
     },
     {
       "id": "b01-semanais-q84",
@@ -2620,7 +2631,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-5"
     },
     {
       "id": "b01-semanais-q88",
@@ -2651,7 +2663,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-5"
     },
     {
       "id": "b01-semanal-q091",
@@ -2714,7 +2727,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-5"
     },
     {
       "id": "b01-semanais-q91",
@@ -2745,7 +2759,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-5"
     },
     {
       "id": "b01-semanais-q92",
@@ -2776,7 +2791,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-5"
     },
     {
       "id": "b01-semanais-q93",
@@ -2837,7 +2853,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanais-q95",
@@ -2867,7 +2884,8 @@
         "Deficiências de Micronutrientes",
         "Alimentação Complementar"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-6"
     },
     {
       "id": "b01-semanal-q094",
@@ -2926,7 +2944,8 @@
         "Alto Risco Familiar",
         "Introdução de Alérgenos"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-5"
     },
     {
       "id": "b01-semanais-q98",
@@ -2957,7 +2976,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-8"
     },
     {
       "id": "b01-semanais-q99",
@@ -2986,7 +3006,8 @@
         "Relações Anatômicas",
         "Anatomia Cirúrgica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-7"
     },
     {
       "id": "b01-semanais-q100",
@@ -3015,7 +3036,8 @@
         "Lei 8.080",
         "Lei 8.142"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanais-q101",
@@ -3044,7 +3066,8 @@
         "Cuidado do Idoso",
         "Cessação do Tabaco"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanal-q100",
@@ -3107,7 +3130,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanais-q104",
@@ -3138,7 +3162,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanais-q105",
@@ -3169,7 +3194,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanais-q106",
@@ -3200,7 +3226,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-4"
     },
     {
       "id": "b01-semanais-q107",
@@ -3232,7 +3259,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "scheduleId": "cron-4"
     }
   ]
 }

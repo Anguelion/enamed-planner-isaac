@@ -175,6 +175,16 @@ function writeLocalState() {
     try {
       localStorage.setItem(STORAGE_KEY, payload);
       localStorage.setItem(LOCAL_STATE_STAMP_KEY, localStateStampIso());
+      // Se a tentativa anterior tinha ficado marcada como "Sem espaço", a
+      // recuperação (descartar backups antigos) já resolveu — o indicador não
+      // deve continuar preso num erro que não existe mais. currentUser pode não
+      // existir ainda durante o bootstrap, por isso tudo aqui é best-effort.
+      if(localStorageWarningShown) {
+        try {
+          if(currentUser && sbClient && CLOUD_SYNC_ALLOWED) scheduleCloudSave();
+          else setSyncStatus('Local', '', 'Espaço liberado automaticamente');
+        } catch(error) {}
+      }
       localStorageWarningShown = false;
       return true;
     } catch(error) {
@@ -926,7 +936,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   }).sort((a,b) => a.date.localeCompare(b.date));
 
   merged.flashcardSystem = { ...(remote.flashcardSystem || {}), ...(local.flashcardSystem || {}) };
-  merged.flashcardSystem.reviewLogs = mergeRecordsById(remote.flashcardSystem?.reviewLogs, local.flashcardSystem?.reviewLogs);
+  merged.flashcardSystem.reviewLogs = mergeRecordsById(remote.flashcardSystem?.reviewLogs, local.flashcardSystem?.reviewLogs, preferLocal);
   // Mesma noção de "questão igual" usada ao montar o banco (bloco + enunciado),
   // não o contentHash: assim uma correção de gabarito/alternativa continua
   // sendo tratada como a mesma questão em vez de virar uma cópia divergente.
@@ -949,7 +959,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   merged.importedQuestionTags = preferLocal ? { ...(remote.importedQuestionTags || {}), ...(local.importedQuestionTags || {}) } : { ...(local.importedQuestionTags || {}), ...(remote.importedQuestionTags || {}) };
   merged.questionFlashcards = {};
   new Set([...Object.keys(remote.questionFlashcards || {}), ...Object.keys(local.questionFlashcards || {})]).forEach(id => {
-    const cards = mergeRecordsById(remote.questionFlashcards?.[id], local.questionFlashcards?.[id]);
+    const cards = mergeRecordsById(remote.questionFlashcards?.[id], local.questionFlashcards?.[id], preferLocal);
     if(cards.length) merged.questionFlashcards[id] = cards;
   });
   const incorporationById = new Map();
@@ -984,7 +994,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     };
   });
 
-  merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions);
+  merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions, preferLocal);
   merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
   merged.gamification = mergeGamificationState(remote.gamification, local.gamification);
 
@@ -1066,13 +1076,28 @@ function mergeVideoPlayerState(remotePlayer={}, localPlayer={}, preferLocal=fals
   merged.lastOpen = {...(useLocalOpen ? localOpen : remoteOpen)};
   return merged;
 }
-function mergeRecordsById(remoteRecords, localRecords) {
+function recordRecencyTimestamp(record) {
+  return Date.parse(record?.updatedAt || record?.lastReviewedAt || record?.reviewedAt || record?.editedAt || record?.createdAt || '') || 0;
+}
+function mergeRecordsById(remoteRecords, localRecords, preferLocal=false) {
   const records = new Map();
-  [...(remoteRecords || []), ...(localRecords || [])].forEach((record,index) => {
-    const key = record?.id || `${record?.date || ''}|${record?.kind || ''}|${record?.savedAt || ''}|${index}`;
-    records.set(key, record);
-  });
-  return [...records.values()];
+  [...(remoteRecords || []).map(record => ({record, side:'remote'})), ...(localRecords || []).map(record => ({record, side:'local'}))]
+    .forEach(({record, side}, index) => {
+      const key = record?.id || `${record?.date || ''}|${record?.kind || ''}|${record?.savedAt || ''}|${index}`;
+      const previous = records.get(key);
+      if(!previous) { records.set(key, {record, side}); return; }
+      const previousTime = recordRecencyTimestamp(previous.record);
+      const currentTime = recordRecencyTimestamp(record);
+      // Sem timestamp em nenhum dos dois lados não há como saber qual é mais
+      // recente: cai no preferLocal, igual às demais uniões desta função de
+      // merge, em vez de sempre manter o último item do array (que antes
+      // deixava o dispositivo local vencer por acaso da ordem de spread).
+      const useCurrent = currentTime !== previousTime
+        ? currentTime > previousTime
+        : (side === 'local' ? preferLocal : !preferLocal);
+      if(useCurrent) records.set(key, {record, side});
+    });
+  return [...records.values()].map(({record}) => record);
 }
 function loadLocalBackups() {
   try {
@@ -4322,15 +4347,58 @@ function renderAnalise() {
   document.querySelectorAll('[data-analysis-open-sim]').forEach(button=>button.onclick=()=>{ui.activeSimRunId=button.dataset.analysisOpenSim;ui.tab='simulados';render();});
 }
 function renderAreas() { const areas=areaStats(); document.getElementById('areas').innerHTML = `<div class="grid three">${areas.slice(0,3).map(a=>metric(a.area,pct(a.progress),`${a.done} de ${a.total} concluídas`)).join('')}</div><div class="card"><div class="section-title"><h2>Desempenho por área</h2></div>${areas.map(areaLine).join('')}</div><div class="card"><div class="section-title"><h2>Pendências por área</h2></div><div class="table-wrap"><table><thead><tr><th>Área</th><th class="num">Aulas pendentes</th><th class="num">Questões</th><th class="num">Flashcards</th><th class="num">Horas</th></tr></thead><tbody>${areas.map(a=>`<tr><td><strong>${escapeHtml(a.area)}</strong></td><td class="num">${a.total-a.done}</td><td class="num">${Math.round(a.debtQ)}</td><td class="num">${Math.round(a.debtFC)}</td><td class="num">${a.hours.toFixed(1)}</td></tr>`).join('')}</tbody></table></div></div>`; }
+function dailyFlashcardEvents(date) {
+  const cards = flashcardAllRecords();
+  return (state.flashcardSystem?.reviewLogs || []).filter(log => answerDate(log.reviewedAt) === date).map(log => {
+    const card = cards.find(item => item.id === log.cardId);
+    return { log, topic: card?.topic || card?.subject || card?.subarea || 'Flashcard' };
+  });
+}
+function dailyVideoEvents(date) {
+  return (state.gamification?.xpTransactions || []).filter(t => (t.activity_type === 'video_progress' || t.activity_type === 'video_completion') && answerDate(t.occurred_at) === date);
+}
+function dailyBlockCompletions(date) {
+  return (state.gamification?.xpTransactions || []).filter(t => t.activity_type === 'block_completion' && answerDate(t.occurred_at) === date);
+}
+function topicForVideoEvent(t) {
+  const scheduleId = t.metadata?.scheduleId || t.source_id;
+  const item = scheduleId ? state.schedule.find(x => x.id === scheduleId) : null;
+  return item ? `Bloco ${item.block}: ${item.topic}` : 'Videoaula';
+}
+function topicForBlockCompletion(t) {
+  const item = state.schedule.find(x => String(x.block) === String(t.source_id));
+  return item ? `Bloco ${t.source_id} concluído · ${item.area}` : `Bloco ${t.source_id} concluído`;
+}
+function buildHistoryRow(date) {
+  const log = getDayLog(date);
+  const qRows = dailyQuestionRows(date);
+  const fcEvents = dailyFlashcardEvents(date);
+  const videoEvents = dailyVideoEvents(date);
+  const blockEvents = dailyBlockCompletions(date);
+  const questionSeconds = qRows.reduce((s,r)=>s+n(r.seconds),0);
+  const videoSeconds = videoEvents.filter(t=>t.activity_type==='video_progress').reduce((s,t)=>s+n(t.metadata?.seconds),0);
+  const manualMinutes = n(log.lessonMinutes) + n(log.materialMinutes) + n(log.simuladoMinutes) + n(log.flashcardMinutes) + n(log.questionMinutes);
+  const minutes = manualMinutes + questionSeconds/60 + videoSeconds/60;
+  const topics = new Set();
+  qRows.forEach(r => topics.add(r.topic));
+  fcEvents.forEach(e => topics.add(e.topic));
+  videoEvents.forEach(t => topics.add(topicForVideoEvent(t)));
+  blockEvents.forEach(t => topics.add(topicForBlockCompletion(t)));
+  if(!topics.size && log.videoNames) topics.add(log.videoNames);
+  const correct = qRows.filter(r => r.correct).length;
+  const videoIds = new Set(videoEvents.map(t => t.metadata?.scheduleId || t.source_id).filter(Boolean));
+  return { date, log, topics: [...topics], questions: qRows.length, correct, wrong: qRows.length - correct, flashcards: fcEvents.length, videos: videoIds.size, minutes };
+}
 function historyRows() {
   ensureDayLogs();
   const hiddenDates = new Set(state.hiddenHistoryDates || []);
-  return state.dayLogs.map(log => {
-    const dayItems = state.schedule.filter(x => x.date === log.date);
-    const doneItems = dayItems.filter(x => statusOf(x) === 'Concluído');
-    const activity = n(log.videos) + n(log.flashcards) + n(log.questions) + n(log.lessonMinutes) + n(log.flashcardMinutes) + n(log.questionMinutes) + n(log.materialMinutes) + n(log.simuladoMinutes) + doneItems.length;
-    return { log, dayItems, doneItems, activity };
-  }).filter(x => !hiddenDates.has(x.log.date) && (x.activity > 0 || x.dayItems.some(item => completedQuestions(item)>0 || completedFlashcards(item)>0 || n(item.hours)>0))).sort((a,b)=>b.log.date.localeCompare(a.log.date));
+  const dates = new Set();
+  state.dayLogs.forEach(log => { if(dayLogHasActivity(log)) dates.add(log.date); });
+  questionBank.forEach(question => { const result = questionResult(question); const d = result?.answeredAt ? answerDate(result.answeredAt) : ''; if(d) dates.add(d); });
+  (state.simuladoRuns || []).forEach(run => { const d = run.finishedAt ? answerDate(run.finishedAt) : ''; if(d) dates.add(d); });
+  (state.flashcardSystem?.reviewLogs || []).forEach(log => { const d = answerDate(log.reviewedAt); if(d) dates.add(d); });
+  (state.gamification?.xpTransactions || []).forEach(t => { if(['video_progress','video_completion','block_completion'].includes(t.activity_type)) { const d = t.occurred_at ? answerDate(t.occurred_at) : ''; if(d) dates.add(d); } });
+  return [...dates].filter(date => !hiddenDates.has(date)).map(buildHistoryRow).sort((a,b) => b.date.localeCompare(a.date));
 }
 function renderRecentActivityCard() {
   const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,5);
@@ -4338,26 +4406,22 @@ function renderRecentActivityCard() {
 }
 function renderHistorico() {
   const rows = historyRows();
-  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Aulas concluídas', rows.reduce((s,x)=>s+x.doneItems.length,0), 'no histórico por data')}${metric('Questões', Math.round(rows.reduce((s,x)=>s+n(x.log.questions),0)), 'registradas no dia')}${metric('Flashcards', Math.round(rows.reduce((s,x)=>s+n(x.log.flashcards),0)), 'registrados no dia')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+n(x.log.lessonMinutes)+n(x.log.flashcardMinutes)+n(x.log.questionMinutes)+n(x.log.materialMinutes)+n(x.log.simuladoMinutes),0))} min`, 'todas as atividades acumuladas')}</div>${renderRecentActivityCard()}<div class="card"><div class="section-title"><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div>${renderHistoryTable(rows)}</div>`;
+  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Questões respondidas', rows.reduce((s,x)=>s+x.questions,0), `${rows.reduce((s,x)=>s+x.correct,0)} acertos no total`)}${metric('Flashcards revisados', rows.reduce((s,x)=>s+x.flashcards,0), 'cards estudados')}${metric('Vídeoaulas', rows.reduce((s,x)=>s+x.videos,0), 'aulas com progresso registrado')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+x.minutes,0))} min`, 'todas as atividades acumuladas')}</div>${renderRecentActivityCard()}<div class="card"><div class="section-title"><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div>${renderHistoryTable(rows)}</div>`;
   document.querySelectorAll('[data-remove-history]').forEach(button => button.onclick = event => removeHistoryRecord(event.currentTarget.dataset.removeHistory));
 }
 function removeHistoryRecord(date) {
-  const log = state.dayLogs.find(item => item.date === date);
-  if(!log) return;
-  const confirmed = confirm(`Excluir o registro de ${fmtDate(date)} do Histórico?\n\nOs totais e tempos desse dia serão removidos. Respostas individuais, flashcards criados e vídeos marcados como assistidos continuarão salvos.`);
+  const confirmed = confirm(`Excluir o registro de ${fmtDate(date)} do Histórico?\n\nEle deixará de aparecer na lista de atividades. Respostas individuais, flashcards criados e vídeos marcados como assistidos continuarão salvos.`);
   if(!confirmed) return;
-  state.dayLogs = state.dayLogs.filter(item => item.date !== date);
-  state.dayLogs.push(defaultDayLog(date));
+  const log = state.dayLogs.find(item => item.date === date);
+  if(log) Object.assign(log, defaultDayLog(date));
   state.hiddenHistoryDates = [...new Set([...(state.hiddenHistoryDates || []), date])];
   persist();
 }
 function renderHistoryTable(rows) {
   if(!rows.length) return '<div class="empty">Ainda não há atividade registrada.</div>';
-  return `<div class="table-wrap"><table><thead><tr><th>Data</th><th>Humor</th><th>Aulas e temas</th><th class="num">Vídeos</th><th class="num">Flashcards</th><th class="num">Questões</th><th class="num">Tempo</th><th>Anotações</th><th><span class="sr-only">Excluir</span></th></tr></thead><tbody>${rows.map(({log, dayItems, doneItems}) => {
-    const topics = doneItems.length ? doneItems : dayItems.filter(x => completedQuestions(x)>0 || completedFlashcards(x)>0 || n(x.hours)>0).slice(0,4);
-    const topicText = topics.length ? topics.map(x=>`Bloco ${x.block}: ${escapeHtml(x.topic)}`).join('<br>') : escapeHtml(log.videoNames || 'Registro manual');
-    const pom = n(log.lessonMinutes)+n(log.flashcardMinutes)+n(log.questionMinutes)+n(log.materialMinutes)+n(log.simuladoMinutes);
-    return `<tr><td>${fmtDate(log.date)}</td><td>${moodLabel(log.mood)}</td><td>${topicText}</td><td class="num">${n(log.videos)}</td><td class="num">${n(log.flashcards)}</td><td class="num">${n(log.questions)}<div class="muted">${n(log.correct)} acertos · ${n(log.wrong)} erros</div></td><td class="num">${Math.round(pom)} min</td><td>${escapeHtml(log.notes)}</td><td class="history-remove-cell"><button class="history-remove" data-remove-history="${escapeAttr(log.date)}" title="Excluir registro de ${escapeAttr(fmtDate(log.date))}" aria-label="Excluir registro de ${escapeAttr(fmtDate(log.date))}">×</button></td></tr>`;
+  return `<div class="table-wrap"><table><thead><tr><th>Data</th><th>Humor</th><th>Aulas e temas</th><th class="num">Vídeos</th><th class="num">Flashcards</th><th class="num">Questões</th><th class="num">Tempo</th><th>Anotações</th><th><span class="sr-only">Excluir</span></th></tr></thead><tbody>${rows.map(({date, log, topics, questions, correct, wrong, flashcards, videos, minutes}) => {
+    const topicText = topics.length ? topics.slice(0,4).map(escapeHtml).join('<br>') : '<span class="muted">Sem tema identificado</span>';
+    return `<tr><td>${fmtDate(date)}</td><td>${moodLabel(log.mood)}</td><td>${topicText}</td><td class="num">${videos}</td><td class="num">${flashcards}</td><td class="num">${questions}${questions?`<div class="muted">${correct} acertos · ${wrong} erros</div>`:''}</td><td class="num">${Math.round(minutes)} min</td><td>${escapeHtml(log.notes)}</td><td class="history-remove-cell"><button class="history-remove" data-remove-history="${escapeAttr(date)}" title="Excluir registro de ${escapeAttr(fmtDate(date))}" aria-label="Excluir registro de ${escapeAttr(fmtDate(date))}">×</button></td></tr>`;
   }).join('')}</tbody></table></div>`;
 }
 function renderFeynman() {
@@ -8272,6 +8336,7 @@ function updateQuestionFlashcard(input) {
   ensureQuestionFocusStudyTimer(questionBank.find(item => item.id === input.dataset.questionCard));
   card[input.dataset.cardField] = input.value;
   if(input.dataset.cardField === 'subarea') card.topic = input.value;
+  card.updatedAt = new Date().toISOString();
   renderCache.manualCards = null;
   saveStateOnly();
   if(input.dataset.cardField === 'cardType') requestAnimationFrame(() => render());

@@ -3425,7 +3425,8 @@
         "Interpretação de Exames",
         "Saúde Materno-Fetal"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "scheduleId": "cron-33"
     }
   ]
 }

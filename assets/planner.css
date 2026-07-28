@@ -654,7 +654,10 @@ body.dark .highlight-popup-copy{background:var(--panel)}
 .qbank-block-number{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:var(--soft-blue);color:var(--blue);font-weight:900}
 .qbank-block-row.active{border-color:var(--blue);box-shadow:0 0 0 3px rgba(47,125,246,.14)}
 .qbank-block-row button{min-height:32px}
-.schedule-topic-link{border:0;background:transparent;padding:0;color:var(--blue);text-align:left}
+/* <button> herda white-space:pre do estilo padrão do navegador, então mesmo com
+   max-width no <strong> interno o texto não quebrava linha e estourava a
+   célula. white-space:normal + overflow-wrap cobre nomes de tema longos. */
+.schedule-topic-link{border:0;background:transparent;padding:0;color:var(--blue);text-align:left;white-space:normal;overflow-wrap:anywhere}
 .schedule-topic-link:hover{text-decoration:underline}
 .focus-box{border:1px solid #b7d6d1;border-left:4px solid var(--teal);border-radius:8px;background:#f0faf8;padding:10px;margin:12px 0;font-size:12px}
 .focus-box strong{display:block;color:var(--blue);margin-bottom:4px}
