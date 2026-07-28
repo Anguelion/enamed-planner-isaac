@@ -3341,6 +3341,7 @@ function renderPainel() {
       ${renderPersonalDailyTasks(ui.refDate)}
       ${renderDashboardMood(dashboardLog)}
       <section class="card dashboard-road-region">${renderDailyRoad(ui.refDate)}</section>
+      ${renderDailyAnalysis(ui.refDate)}
       ${renderWeeklyPerformance(ui.refDate)}
       ${renderGamificationPopover()}
     </div>
