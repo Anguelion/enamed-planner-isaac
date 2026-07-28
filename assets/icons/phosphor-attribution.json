@@ -10,6 +10,7 @@
   "icons": [
     "arrow-left",
     "arrow-right",
+    "arrows-clockwise",
     "arrows-out",
     "bone",
     "book-open-text",
@@ -48,6 +49,7 @@
     "plus",
     "shield-check",
     "sidebar-simple",
+    "sign-out",
     "sparkle",
     "squares-four",
     "star",
@@ -65,5 +67,5 @@
     "wind",
     "x"
   ],
-  "generatedAt": "2026-07-28T10:10:48.160Z"
+  "generatedAt": "2026-07-28T11:10:19.310Z"
 }

@@ -22,6 +22,7 @@
     fire:{icon:'fire',tone:'fire'}, water:{icon:'drop',tone:'water'}, earth:{icon:'mountains',tone:'earth'}, air:{icon:'wind',tone:'air'},
     class:{icon:'crown',tone:'xp'}, medal:{icon:'medal',tone:'xp'}, success:{icon:'check-circle',tone:'success'},
     warning:{icon:'warning',tone:'warning'}, error:{icon:'warning-octagon',tone:'error'}, info:{icon:'info',tone:'neutral'},
+    time:{icon:'timer',tone:'simulation'}, refresh:{icon:'arrows-clockwise',tone:'neutral',weight:'regular'}, logout:{icon:'sign-out',tone:'neutral',weight:'regular'},
     previous:{icon:'arrow-left',tone:'neutral',weight:'regular'}, next:{icon:'arrow-right',tone:'neutral',weight:'regular'},
     focus:{icon:'arrows-out',tone:'neutral',weight:'regular'}, sidebar:{icon:'sidebar-simple',tone:'neutral',weight:'regular'},
     flag:{icon:'flag',tone:'warning',weight:'regular'}, edit:{icon:'pencil-simple',tone:'neutral',weight:'regular'},
