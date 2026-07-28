@@ -2,130 +2,216 @@
 
 <!-- page:1 -->
 
-## INSUFICIÊNCIA COGNITIVA
+## Definição
 
-## DELIRIUM NO IDOSO
+- **Delirium** pode ser definido como **confusão mental aguda**, **flutuação do nível de consciência** e **alteração da atenção**, geralmente desencadeada por uma causa subjacente, como infecção, medicamentos ou distúrbios metabólicos.
+- "Síndrome cerebral orgânica sem etiologia específica caracterizada pela presença simultânea de perturbações da consciência e da atenção, percepção, do pensamento, da memória, do comportamento psicomotor, das emoções e do ritmo sono-vigília. A duração é variável, e a gravidade varia de formas leves a formas muito graves".
 
-Delirium (CM)
+### Diagnósticos Diferenciais
 
-- Pode ser definido como confusão mental aguda, | Característica 3 flutuação do nível de consciência e alteração da | Pensamento desorganizado.
+- Demência, depressão, psicoses funcionais.
 
-atenção, geralmente desencadeada por uma causa | Característica 4 subjacente, como infecção, medicamentos ou | Alteração do nível de consciência.
+### Fatores de Risco
 
-distúrbios metabólicos
+- Déficit cognitivo prévio, déficit sensorial, depressão, privação de sono, ambiente não familiar, iatrogenia/medicamentos, restrição física.
 
-- Diagnósticos diferenciais: demência, depressão,
+### Prevalência
 
-- Fatores de risco: déficit cognitivo prévio, psicoses funcionais déficit sensorial, depressão, privação de sono,
+- 1-2% idosos que vivem na comunidade;
+- Até 40% idosos admitidos em unidades de urgência;
+- 20-60% no pós-operatório;
+- 70-87% em UTI.
 
-- Prevenção e tratamento ambiente não familiar, iatrogenia/medicamentos, | Não farmacológico é padrão ouro restrição física, etc | Corrigir desidratação e
-
-- Causas: inúmeras (medicamentosas, infecciosas, distúrbios hidroeletrolíticos distúrbios hidroeletrolíticos, descompensação das | Analgesia doenças de base) | Tratar constipação
-
-- Diagnóstico: critérios CAM-ICU [Característica 1 + 2 | Suspender medicamentos com ação no SNC Característica 1 | Antipsicóticos: haloperidol, risperidona, Início agudo (dias a semanas) de alteração do olanzapina, quetiapina estado mental ou com padrão flutuante. | Benzodiazepínicos: lorazepam Característica 2 | Antagonista do receptor 5HT: trazodona Comprometimento da atenção.
-
-+ (3 OU 4) = delirium] | Farmacológico
-
-## DEFINIÇÃO
-
-- “Síndrome cerebral orgânica sem etiologia
-
-- Acomete específica caracterizada pela presença simultânea | 1 - 2% idosos que vivem na comunidade;
-
-de perturbações da consciência e da atenção, | Até 40% idosos admitidos em unidades da percepção, do pensamento, da memória, do de urgência;
-
-comportamento psicomotor, das emoções e do ritmo | 2 - 60% no pós-operatório; sono-vigília. A duração é variável, e a gravidade varia | 70 - 87% em UTI.
-
-de formas leves a formas muito graves”.
+### Prognóstico
 
 - Pior prognóstico durante e após a internação;
+- Associado a maiores taxas de mortalidade, bem como maior institucionalização;
+- Aumenta o custo de saúde e o tempo de internação.
 
-- Pode ser definido como confusão mental aguda, | Associado a maiores taxas de mortalidade, bem flutuação do nível de consciência e alteração da como maior institucionalização;
+## Critérios Diagnósticos: CAM-ICU
 
-atenção, geralmente desencadeada por uma causa | Aumenta o custo de saúde e o tempo subjacente, como infecção, medicamentos ou de internação.
+O diagnóstico de delirium requer a presença de:
 
-distúrbios metabólicos Tabela 1: Fatores de risco para Delirium Fatores de risco para Delirium Predisponentes Precipitantes Déficit cognitivo prévio Restrição física Doença grave (Apache > 16) Uso de sonda vesical Uremia Iatrogenia / medicamentos Déficit sensorial Ambiente não familiar História prévia de delirium Privação de sono Depressão Cirurgias Alcoolismo História de acidente vascular encefálico Idade > 75 anos
+**Característica 1 + 2 + (3 OU 4)**
+
+- **Característica 1**: Início agudo (dias a semanas) de alteração do estado mental ou com padrão flutuante.
+- **Característica 2**: Comprometimento da atenção.
+- **Característica 3**: Pensamento desorganizado.
+- **Característica 4**: Alteração do nível de consciência.
 
 ---
 
 <!-- page:2 -->
 
-## TIPOS
+## Tipos de Delirium
 
-## HIPERATIVO
+### Hiperativo
 
-- O idoso se manifesta com agitação psicomotora,
+- O idoso se manifesta com **agitação psicomotora**, inquietação, agressividade, desorientação, alucinações, alterações no sono, hiperatividade autonômica.
+- Relaciona-se com **intoxicação ou abstinência** de medicamentos ou álcool.
 
-HIPOATIVO inquietação, agressividade, desorientação, alucinações,
+### Hipoativo
 
-- O idoso se manifesta com sonolência, redução da alterações no sono, hiperatividade autonômica.
+- O idoso se manifesta com **sonolência**, redução da ingestão alimentar, lentificação.
+- Em geral, causado por **distúrbios metabólicos** ou processos infecciosos.
 
-ingestão alimentar, lentificação.
+### Misto
 
-- Relaciona-se com intoxicação ou abstinência de ingestão alimentar, lentificação.
+- No limbo entre os subtipos anteriores.
 
-- Em geral, causado por distúrbios metabólicos ou processos infecciosos; M
+## Etiologias do Delirium
 
-## ETIOLOGIAS
+> ⚠️ Dados de tabela severamente fragmentados no OCR original — conteúdo listado em texto corrido para precisão clínica.
 
-Tabela 2: Causas de delirium no idoso Álcool e hipnóticos Fá Fármacos antipa Substâncias Infecções Doenças cardíacas Insufic Dis Hipon Distúrbios metabólicos Transtornos do SNC Neoplasia Tum Trauma Fratura Mudança de Hospitalização (espec ambiente - Relaciona-se com intoxicação ou abstinência de medicamentos ou álcool.
+### Medicamentosas
 
-## MISTO
+- Substâncias hipnóticas (álcool e hipnóticos);
+- Fármacos antipa... (antipsicóticos?);
+- Fármacos hipotensores;
+- Bloqueadores do receptor dopaminérgico (antiparkinsonianismo, incluindo amantadina);
+- Anticonvulsivantes;
+- Antidepressivos;
+- Corticosteroides;
+- Digitálicos;
+- Bloqueadores H2;
+- Narcóticos;
+- Fenotiazinas.
 
-- No limbo entre os subtipos anteriores s/sedativos (intoxicação ou abstinência) ármacos hipotensores arkinsonianos (incluindo amantadina) ciência cardíaca congestiva stúrbios hidreletrolíticos natremia e Hipercalcemia mores primários do SNC as (especialmente de Fêmur) cialmente em unidade de terapia intensiva)
+### Infecções
 
-Anticonvulsivantes Antidepressivos Corticosteroides Digitálicos Bloqueadores H2 Narcóticos Fenotiazinas Meningite Pneumonia Septicemia Pielonefrite Arritmias Infarto do miocárdio Hipoglicemia Hipóxia Insuficiência hepática Insuficiência renal Epilepsia Doença vascular Metástases cerebrais Anestesia Queimaduras Cirurgia
+- Meningite;
+- Pneumonia;
+- Septicemia;
+- Pielonefrite.
+
+### Doenças Cardíacas
+
+- Arritmias;
+- Infarto do miocárdio;
+- Insuficiência cardíaca congestiva.
+
+### Distúrbios Metabólicos
+
+- Hipoglicemia;
+- Hipóxia;
+- Insuficiência hepática;
+- Insuficiência renal;
+- Distúrbios hidroeletrolíticos (hiponatremia, hipercalcemia).
+
+### Transtornos do SNC
+
+- Epilepsia;
+- Doença vascular;
+- Metástases cerebrais;
+- Meningite.
+
+### Trauma
+
+- Fratura (especialmente de fêmur);
+- Queimaduras;
+- Anestesia;
+- Cirurgia;
+- Mudança de ambiente (especialmente em unidade de terapia intensiva).
+
+### Neoplasia
+
+- Tumores primários do SNC.
 
 ---
 
 <!-- page:3 -->
 
-## DIAGNÓSTICO
+## Método Diagnóstico: CAM-ICU
 
-## MÉTODO DIAGNÓSTICO CAM-ICU
+- Baseado no Confusion Assessment Method for the Intensive Care Unit (CAM-ICU).
 
-- Baseado no Confusion Assessment Method for the mental ou com
+*Figura 1: Diagnóstico de delirium — CAM ICU*
 
-Intensive Care Unit (CAM-ICU) Intensive Care Unit (CAM-ICU) Carac Início agudo de Carac Comprometim Característica 3:
+## Diagnóstico Diferencial
 
-Pensamento desorganizado O De Figura 1: Diagnóstico de delirium - CAM ICU
+> ⚠️ Dados de tabela ambíguos no OCR original — conversão para texto corrido com base em padrões clínicos conhecidos. Para comparação precisa, consulte referência clínica original.
 
-## DIAGNÓSTICO DIFERENCIAL
+### Delirium
 
-- Os principais são: demência, depressão e psicoses funcionais exacerbação noturna desordenada casos prejudicada preju preju em gravidade aus auditivas sistematizado aus rápida perse cterística 1:
+- **Início**: súbito;
+- **Curso**: flutuante com padrão flutuante em 24h;
+- **Consciência**: reduzida;
+- **Atenção**: globalmente prejudicada;
+- **Cognição**: frequentemente prejudicada; orientação prejudicada e flutuante;
+- **Alucinações**: visuais ou visuais e auditivas, fugazes, pobremente sistematizadas;
+- **Ideias delirantes**: frequentemente presentes;
+- **Linguagem**: incoerente, lenta.
 
-Tabela 3: Diagnósticos diferenciais de delirium Delirium Dem Início Súbito Insi Flutuante com Curso em 24h Es Consciência Reduzida C Globalmente Normal, Atenção Globalmente Globa Cognição Frequentemente Freque Orientação prejudicada; flutua Frequentemente Freque Alucinações visuais, ou visuais e Fugazes, pobremente Freque Ideias delirantes Frequentemente Dificul Linguagem incoerente, lenta ou encontra alteração do estado m padrão flutuante cterística 2:
+### Demência
 
-mento da atenção Característica 4: OU Alteração do nívelde consciência elirium mência Depressão Psicoses funcionais Coincide com alterações da vida;
+- **Início**: insidioso;
+- **Curso**: estável;
+- **Consciência**: clara;
+- **Atenção**: globalmente normal;
+- **Cognição**: frequentemente prejudicada; memória prejudicada com ilhas de memórias intactas;
+- **Alucinações**: ausentes, exceto em casos graves;
+- **Ideias delirantes**: dificuldade/ausentes, exceto em casos graves;
+- **Linguagem**: normal ou lenta.
 
-idioso Súbito frequentemente recente Efeitos diurnos, tipicamente piora stável pela manhã; menos Estável flutuações do que delirium Clara Clara Clara exceto em Prejuízo mínimo; Pode ser s graves distrativo desordenada Memória prejudicada; ilhas de Pode ser almente memórias intactas; seletivamente udicada pensamentos prejudicada negativos entemente Seletivamente Pode ser prejudicada udicada prejudicada entemente Ausentes, exceto em Predominantemente sentes casos graves auditivas entemente Ausentes, exceto em Sustentadas e sentes casos graves sistematizadas ldade em Normal, lenta ar palavras e Normal ou rápida everação
+### Depressão
+
+- **Início**: coincide com alterações da vida;
+- **Curso**: efeitos diurnos, tipicamente piora pela manhã; menos flutuações do que delirium;
+- **Consciência**: clara;
+- **Atenção**: clara;
+- **Cognição**: prejuízo mínimo; pode ser seletivamente prejudicada (pensamentos negativos);
+- **Alucinações**: predominantemente auditivas;
+- **Ideias delirantes**: ausentes, exceto em casos graves;
+- **Linguagem**: normal ou rápida.
+
+### Psicoses Funcionais
+
+- **Início**: recente;
+- **Curso**: estável;
+- **Consciência**: clara;
+- **Atenção**: clara, exceto em casos graves distrativo;
+- **Cognição**: pode ser globalmente prejudicada;
+- **Alucinações**: frequentes, predominantemente auditivas;
+- **Ideias delirantes**: sustentadas e sistematizadas;
+- **Linguagem**: encontra dificuldade em encontrar palavras e reverberação.
 
 ---
 
 <!-- page:4 -->
 
-## PREVENÇÃO E TRATAMENTO
+## Prevenção e Tratamento
 
-## MEDIDAS GERAIS
+### Medidas Não-Farmacológicas (Padrão Ouro)
 
-- Não farmacológicas (padrão ouro)
+- **Orientação e estímulo cognitivo**;
+- **Redução de ruído noturno**, complementado por música suave e ingestão de bebida morna ao deitar;
+- **Evitar privação de sono** (atenção ao aprazamento de medicações e coleta de exames);
+- **Mobilização precoce**, evitando-se ao máximo condições restritivas;
+- **Evitar sondas, cateteres ou restrição física**;
+- **Uso de óculos e aparelhos auditivos**, se necessário;
+- **Corrigir desidratação**;
+- **Analgesia**;
+- **Corrigir distúrbio hidroeletrolítico**;
+- **Ofertar oxigênio**, quando necessário;
+- **Retirar medicamentos com ação no SNC** e ação anticolinérgica;
+- **Tratamento de constipação**.
 
-- Corrigir distúrbio hidroeletrolítico; Orientação e estímulo cognitivo;
+### Medidas Farmacológicas
 
-- Analgesia; Orientação e estímulo cognitivo; Redução de ruído noturno complementado por música suave e ingestão de bebida morna ao deitar; Evitar privação de sono (atenção ao aprazamento de medicações e coleta de exames); Mobilização precoce, evitando-se ao máximo T condições restritivas; Evitar sondas, cateteres ou restrição física; Uso de óculos e aparelhos auditivos, se necessário.
+> ⚠️ Dados de tabela parcialmente legíveis no OCR original — conteúdo estruturado com base em informações clínicas extraíveis. Verifique dosagens em referência farmacológica atual.
 
-- Corrigir desidratação;
+**Antipsicóticos:**
 
-- Ofertar oxigênio, quando necessário;
+- **Haloperidol**: 0,5 a 1,0 mg VO, 2 vezes/dia (adicional a cada 4h se necessário); dose máxima 3 a 5 mg/dia. Efeito máximo entre 30 a 60 minutos. Em geral é o fármaco de escolha. Observar efeitos extrapiramidais potenciais.
+- **Antipsicóticos atípicos**:
+  - **Risperidona**: 0,5 a 1,0 mg, 2 vezes/dia VO. Eficácia semelhante e menos efeitos extrapiramidais do que haloperidol.
+  - **Olanzapina**: 2,5 a 5 mg, 1 vez/dia VO. Aumento do intervalo QT.
+  - **Quetiapina**: 12,5 a 25 mg, 2 vezes/dia VO. Pode aumentar risco de AVE em pacientes com demência.
 
-Tabela 4: Tratamento farmacológico do delirium Fármaco Dose 0,5 a 1,0 mg VO 2 vez adicional a cada 4h Antipsicótico (efeito máxim Haloperidol 0,5 a 1,0 mg IM, obs min e repetir se nec máximo, 20 a Antipsicóticos atípicos 0,5 a 1,0 mg, 2 v Risperidona 2,5 a 5 mg, 1 v Olanzapina 12,5 a 25 mg, 2 v Quetiapina Benzodiazepínicos 0,5 a 1,0 mg VO Lorazepam repetir a ca Antagonista do receptor 5 HT 25 a 150 mg V Trazodona - Analgesia;
+**Benzodiazepínicos:**
 
-- Retirar medicamentos com ação no SNCl e ação anticolinérgica;
+- **Lorazepam**: 0,5 a 1,0 mg VO, repetir a cada 4 a 6h. Uso em abstinência ao álcool e abstinência de benzodiazepínico. Evitar IV pela curta duração de ação e indução de arritmias.
 
-- Tratamento de constipação.
+**Antagonista do receptor 5HT:**
 
-## TRATAMENTO FARMACOLÓGICO
-
-- Farmacológico Antipsicóticos: haloperidol, risperidona, olanzapina, quetiapina Benzodiazepínicos: lorazepam Antagonista do receptor 5HT: trazodona e Observações zes/dia com dose Dose máxima 3 a 5 mg/dia;
-
-Em geral é o fármaco de escolha h se necessário manutenção ½ da dose inicial, mo 4 a 6h) fracionada servar 30 a 60 Efeitos extrapiramidais potenciais cessário (efeito com dose > 3 mg a 40 min) Evitar IV pela curta duração de ação e indução de arritmias Eficácia semelhante e menos efeitos vezes/dia VO extrapiramidais do que o haloperidol vez/dia VO Aumento do intervalo QT vezes/dia VO Pode aumentar o risco de AVE em pacientes com demência Uso em abstinência ao álcool O; pode-se e de benzodiazepínico ada 4h Sonolência Sonolência VO à noite Testado apenas em estudos não controlados
+- **Trazodona**: 25 a 150 mg VO à noite. Sonolência como efeito adverso. Testado apenas em estudos não controlados.

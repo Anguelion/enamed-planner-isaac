@@ -2,244 +2,283 @@
 
 <!-- page:1 -->
 
-## CABEÇA E PESCOÇO: DIAGNÓSTICOS
+## Introdução
 
-## DIFERENCIAIS DAS MASSAS CERVICAIS
+As massas cervicais são achados comuns nas práticas médicas, como manifestação de doenças locais ou sistêmicas. Os dados importantes no raciocínio da diferenciação dos diagnósticos incluem:
 
-Massas cervicais
+- **Faixa etária**.
+- **História clínica**.
+- **Exame físico**.
 
-## ANAMNESE
+## Abordagem por Idade
 
-Idade 0-15 anos 15-40
+**Tabela 2 — Massas cervicais mais prevalentes conforme a idade:**
 
-1) Inflamatório/infeccioso Inflamatório
+| Idade | 1º lugar | 2º lugar | 3º lugar |
+|---|---|---|---|
+| **0–15 anos** | Inflamatório/infeccioso | Congênitas | Neoplasia |
+| **15–40 anos** | Inflamatório/infeccioso | Congênitas | Neoplasia |
+| **> 40 anos** | Neoplasia | Inflamatório/infeccioso | Congênitas |
 
-2) Congênitas Congê
+## Investigação Diagnóstica
 
-3) Neoplasia Neop
+A anamnese, exame físico e exames complementares devem ter foco especial na abordagem dos diagnósticos diferenciais.
 
-## BIÓPSIAS B PAAF
+### Tempo de Evolução
 
-- Método preferencial, guiada ou não por ultrassonografia (USG);
+- **< 30 dias**: Doença aguda → inflamatória/infecciosa.
+- **1–4 meses**: Doença subaguda → neoplasia.
+- **> 4 meses**: Doença crônica → congênitas, neoplásicas benignas ou inflamatórias.
 
-- Contraindicações: Lesões vasculares (ou suspeita), distúrbio de coagulação.
+### Localização da Massa
 
-- Nã e completa
+**Localização geral:**
 
-Sim Suspeita de m Investigação direcionada Imagem PAAF Não Diagnóstico? Sim Continuar investigação Pan-endoscopia Biópsia
+- **Linha média (região anterior)**: pode estar relacionada com processo inflamatório/infeccioso.
+- **Triângulos cervicais**: laterais.
+- **Altas ou baixas**: níveis cervicais (importante no estadiamento neoplásico).
 
-## TUMORES CERVICAIS
+**Triângulos cervicais:**
 
-- Achado comum nas práticas médicas como manifestação de doenças locais ou sistêmicas; 0 anos > 40 anos o/infeccioso Neoplasia ênitas Inflamatório/infeccioso plasia Congênitas
+- **Tr. Occipital**: região posterior — entre M. Esternocleidomastóideo e M. Trapézio.
+- **Tr. da Fossa Omoclavicular**: supraclavicular — entre M. Omo-hioide e clavicula.
+- **Tr. Submandibular**: abaixo da mandíbula — entre M. Digástrico ventres anterior e posterior.
+- **Tr. Submentoniano**: abaixo do mento — entre ventres anteriores do M. Digástrico.
+- **Tr. Carótico**: localização das Aa. Carótidas — entre M. Esternocleidomastóideo e M. Omo-hioide.
+- **Tr. Muscular**: entre M. Esterno-hióideo e M. Omo-hióideo.
 
-Biópsias abertas
+*Figura 2: Imagem das divisões do pescoço em triângulos.*
 
-- Indicação criteriosa - doença linfoproliferativa / tuberculose (TB);
+**Níveis cervicais:**
 
-- Piora prognóstica em alguns tipos de neoplasia ;
+- Grupamentos linfonodais do pescoço organizados segundo níveis (importante na estadiagem de neoplasias).
 
-- Planejamento de incisões ;
-
-- Sempre é a última opção.
-
-Massa cervical ão Sinais de infecção? Sim malignidade? Terapia apropriada Não Resolução Medidas auxiliares seguimento Sim FIM Manejo adequado a aberta
-
-- Dados importantes no raciocínio da diferenciação dos
-
-| Faixa etária; | História clínica; | Exame físico.
+*Figura 3: Imagem da divisão do pescoço em níveis cervicais.*
 
 ---
 
 <!-- page:2 -->
 
-Tabela 1: Etiologia dos tumores cervicais.
+## Achados Clínicos — Aspectos da Lesão
 
-## CONGÊNITAS INFLAMATÓRIAS NEOPLÁSICAS
+- **Cística**: geralmente doenças congênitas.
+- **Fibroelástica**: inflamatórias.
+- **Endurecida**: neoplasias benignas ou malignas.
+- **Endurecida e fixa**: **neoplasia maligna**.
 
-Cisto do ducto tireoglosso Linfonodo reacional Tireiode Linfangioma Abscesso cervical Sarcoma Linfangioma Abscesso Costela cervical Toxopla Hemangioma H Cisto branquial Sialoa Cisto dermoide Monon Rub Citomeg Tuber Sífilis se Figura 1: Avaliação das massas cervicais não tireoideanas em adu
+**Mobilidade:**
 
-## INVESTIGAÇÃO DIAGNÓSTICA
+- **Móvel à deglutição**: sugestivo de linfonodo reacional.
+- **Fixo à deglutição**: preocupante para malignidade.
 
-A anamnese, exame físico e exames complementares, devem ter foco especial na abordagem dos diagnósticos diferenciais.
+### Sinais e Sintomas Associados
 
-Tabela 2: Massas cervicais mais prevalentes conforme a idade do paciente. 0-15 anos 15-40 anos > 40 anos Inflamatório/ Inflamatório/ 1° Neoplasia infeccioso infeccioso Inflamatório/ 2° Congênitas Congênitas infeccioso 3° Neoplasia Neoplasia Congênitas Tempo de Evolução:
+**Febre, rash cutâneo, dor**: inflamatórias.
 
-- < 30 dias – Doença aguda: Inflamatória/infecciosa;
+**Disfagia, dispneia, disfonia, otalgia**: neoplasia.
 
-- 1 a 4 meses – Doença subaguda: Neoplasia;
+**Perda de peso**: neoplasia avançada.
 
-- > 4 meses – Doença crônica: Congênitas, Neoplásicas benignas ou inflamatórias. o cervical Sarcoma asmose Laringe adenite Linfoma nucleose Paraganglioma béola Metástase cervical galovírus Tumor marrom rculose Paratireóide ecundária ulto.
+**Sintomas de compressão (extrínseca)**: congênitas ou neoplasias benignas.
 
-HIV Glândulas salivares Infraclav. Localização do tumor:
+### Antecedentes Pessoais e Familiares
 
-- Linha média (região anterior): pode estar relacionado com processo inflamatório/infeccioso;
+- Tabagismo e etilismo.
+- História familiar de câncer.
+- HPV/HIV.
+- História de radioterapia prévia.
 
-- Triângulos cervicais;
+### Dados Epidemiológicos
 
-- Altas ou baixas;
-
-- Níveis cervicais: correspondem às cadeias linfonodais principais de drenagem linfática (importante no estadiamento neoplásico).
-
-Triângulos cervicais:
-
-- Tr. Occipital: Região posterior – entre M.
-
-Esternocleidomastóideo e M. Trapézio;
-
-- Tr. da Fossa Omoclavicular: Supraclavicular – entre o
-
-M. Omo-hioide e a clavicula;
-
-- Tr. Submandibular: Abaixo da mandíbula – entre o M.
-
-Digástrico ventres anterior e posterior;
-
-- Tr. Submentoniano: Abaixo do mento – entre os ventres anteriores do M. Digástrico;
-
-- Tr. Carótico: Localização das Aa. Carótidas – entre M.
-
-Esternocleidomastóideo e o M. Omo-hioide;
-
-- Tr. Muscular: Entre o m. Esterno-hióideo e o M.
-
-Omo-hióideo.
-
-![Figura do material - página 2](figure-002-1.webp)
+- Contatos familiares.
+- Contato com animais.
+- Viagens.
 
 ---
 
 <!-- page:3 -->
 
-Figura 2: Imagem das divisões do pescoço em triângulos (em vermelho). Níveis cervicais
+## Exame Físico
 
-- Grupamentos linfonodais do pescoço organizados.
+**Componentes do exame:**
 
-Figura 3: Imagem da divisão do pescoço em níveis cervicais.
+- Exame físico geral.
+- Orofaringoscopia.
+- Laringoscopia.
+- Palpação cervical.
 
-![Figura do material - página 3](figure-003-1.webp)
+**Importante pesquisar:**
 
-![Figura do material - página 3](figure-003-2.webp)
+- Sítio primário dos tumores.
+- Número de linfonodos comprometidos.
+- Cadeias linfonodais comprometidas.
+- **Aspecto da lesão**: cística, fibroelástica, endurecida.
+- **Características**: dor, tamanho, mobilidade, forma.
+
+*Figura 4: Orofaringoscopia de paciente.*
 
 ---
 
 <!-- page:4 -->
 
-## EXAMES COMPLEMENTARES
+## Exames Complementares
 
-Aspecto da lesão:
+### Exames Laboratoriais
 
-- Cística: geralmente são doenças congênitas;
+**Sorologias:**
 
-- Fibroelástica: inflamatórias; Exames laboratoriais:
-
-- Endurecida: neoplasias benignas ou malignas;
-
-- Sorologias:
-
-- Endurecida e fixa: neoplasia maligna. | Toxoplasmose;
-
-- Endurecida e fixa: neoplasia maligna.
-
-Sinais e sintomas associados:
-
-- Febre, rash cutâneo, dor: Inflamatórias
-
-- Disfagia, dispneia, disfonia, otalgia: Neoplasia;
-
-- Perda de peso: Neoplasia avançada;
-
-- Sintomas de compressão (extrínseca): Congênitas ou neoplasias benignas.
-
-Antecedentes pessoais e familiares:
-
-- Tabagismo e etilismo;
-
-- História familiar de câncer;
-
-- HPV/HIV;
-
-- História de radioterapia prévia.
-
-Dados epidemiológicos:
-
-- Contatos familiares;
-
-- Contato com animais;
-
-- Viagens.
-
-## EXAME FÍSICO
-
-- Exame físico geral;
-
-- Orofaringoscopia;
-
-- Laringoscopia;
-
-- Palpação cervical;
-
-- Importante pesquisar: Sítio primário dos tumores; Número de linfonodos comprometidos; Cadeias linfonodais comprometidas; Aspecto da lesão: Cística, Fibroelástica, Endurecida,
-
-Dor, Tamanho, Mobilidade, Forma. Figura 4: Orofaringoscopia de paciente. FLUXOGRAMAS PARA INVESTIGAÇ Móvel à deglutição Central Fixo á deglutição Figura 5: Fluxograma de investigação de massa cervical de localiz | Toxoplasmose;
-
-| Rubéola; | EBV; | CMV; | HIV;
-
+- Toxoplasmose.
+- Rubéola.
+- EBV.
+- CMV.
+- HIV.
 - Sífilis.
 
-- Testes cutâneos: PPD;
+**Testes cutâneos:**
 
-- Hemograma;
+- **PPD** (tuberculose).
 
-- Cultura e antibiograma.
+**Hemograma**.
 
-Exames de imagem:
+**Cultura e antibiograma**.
 
-- Ultrassonografia (USG);
+### Exames de Imagem
 
-- Tomografia computadorizada;
+- **Ultrassonografia (USG)**.
+- **Tomografia computadorizada**.
+- **Ressonância magnética**.
+- **Angiografia**.
 
-- Ressonância magnética;
+### Endoscopias
 
-- Angiografia.
+- **Nasofibrolaringoscopia**.
+- **Broncoscopia**.
+- **Endoscopia digestiva alta**.
 
-Endoscopias:
+### Biópsias
 
-- Nasofibrolaringoscopia;
+**PAAF (Punção por Agulha Fina):**
 
-- Broncoscopia;
+- **Método preferencial**, guiado ou não por USG.
+- **Contraindicações**: lesões vasculares (ou suspeita), distúrbios de coagulação.
+- **Limitações**: não avalia histologia (apenas citologia) — pode ou não ser conclusivo.
+- **Vantagem**: não prejudica o prognóstico.
 
-- Endoscopia digestiva alta.
+**Core Biopsy:** Punção por agulha grossa.
 
-Biópsias
+**Biópsia aberta (incisional ou excisional):**
 
-- Core Biopsy: Punção por agulha grossa.
-
-- PAAF: Punção por agulha fina. Método preferencial, guiado ou não por USG; Contraindicações: Lesões vasculares (ou suspeita), distúrbios de coagulação; Não avalia histologia (apenas citologia) - pode ou não ser conclusivo; Não prejudica o prognóstico.
-
-Biópsia aberta (incisional ou excisional):
-
-- Indicação deve ser criteriosa: suspeita de doença linfoproliferativa ou tuberculose ganglionar (precisam de histologia para diagnóstico);
-
-- Piora do prognóstico em alguns tipos de neoplasia;
-
-- Necessita de planejamento das incisões: preferir incisão onde fará uma cervicotomia futura, caso seja indicada;
-
-- Sempre é a última opção.
-
-- Verificar Figura 5 partes moles zação central.
-
-ÇÃO DE MASSA CERVICAL Tireoglosso Sistrunk Tireoide/Paratireoide Linfonodo Tumor de Cisto dermoide
-
-![Figura do material - página 4](figure-004-1.webp)
+- **Indicação deve ser criteriosa**: suspeita de doença linfoproliferativa ou tuberculose ganglionar (precisam de histologia para diagnóstico).
+- **Cuidado**: piora do prognóstico em alguns tipos de neoplasia.
+- **Planejamento**: preferir incisão onde fará uma cervicotomia futura, caso seja indicada.
+- **Última opção**: sempre é a última alternativa.
 
 ---
 
 <!-- page:5 -->
 
-Cisto Braquial Cístico Linfangioma CEC orofaringe HPV+ Linfonodo Cístico Lateral Fibroelástico Linfonodo Sarcoma Endurecido Tumor desmoide Pulsátil Paraganglioma Figura 6: Fluxograma de investigação de massa cervical de localizaçã Nã Sim Suspeita de m Investigação direcionada e completa Imagem PAAF Não Diagnóstico? Sim Continuar investigação Pan-endoscopia Biópsia Figura 7: Fluxograma de manejo da investigação de massas cervicais.
+## Etiologias por Tipo
 
-## REFERÊNCIAS
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-Figura 4: Orofaringoscopia de paciente. Acervo pessoal. HPV+ o Metástase Tireoide (papilífero) Reacional Sorologias CEC trato aerodigestivo Metástase Tireoide Linfoma Glândulas salivares ão lateral.
+**Tabela 1 — Etiologia dos tumores cervicais** (classificação geral):
 
-Massa cervical ão Sinais de infecção? Sim malignidade? Terapia apropriada Não Resolução Medidas auxiliares seguimento Sim FIM Manejo adequado a aberta .
+**Congênitas:**
+
+- Cisto do ducto tireoglosso
+- Linfangioma
+- Cisto branquial
+- Cisto dermoide
+- Hemangioma
+- Costela cervical
+
+**Inflamatórias:**
+
+- Linfonodo reacional
+- Abscesso cervical
+- Toxoplasmose
+- Sialadenopatia
+- Mononucleose
+- Rubéola
+- Citomegalovírus
+- Tuberculose
+- Sífilis
+
+**Neoplásicas:**
+
+- Metástase cervical
+- CEC trato aerodigestivo
+- Linfoma
+- Sarcoma
+- Tumor desmoide
+- Paraganglioma
+- Tumor marrom (paratiróide/secundário)
+- Glândulas salivares
+- Laringe
+- Infraclav.
+
+*Figura 1: Avaliação das massas cervicais não tireoideanas em adulto.*
+
+### Massas Específicas por Apresentação
+
+**Central (linha média):**
+
+- Cisto tireoglosso
+- Cisto dermoide
+- Massa tireoide/paratireoide
+
+**Lateral:**
+
+- **Cístico**: cisto branquial, linfangioma, CEC orofaringe HPV+, linfonodo cístico.
+- **Fibroelástico**: linfonodo, sarcoma.
+- **Endurecido**: tumor desmoide, linfonodo reacional, metástase (tireoide papilífero, CEC trato aerodigestivo, linfoma, glândulas salivares).
+- **Pulsátil**: paraganglioma.
+
+---
+
+## Fluxogramas de Investigação
+
+### Fluxograma 1 — Investigação de Massa Cervical por Localização
+
+*Figura 5: Fluxograma de investigação de massa cervical de localização central/lateral.*
+
+**Por localização (central vs lateral) e características clínicas → guia diagnóstico diferencial.**
+
+### Fluxograma 2 — Investigação de Massa Cervical (Manejo Geral)
+
+*Figura 6: Fluxograma de investigação de massa cervical de localização lateral.*
+
+**Suspeita de malignidade?**
+
+- **Sim**: investigação direcionada e completa → imagem → PAAF.
+- **Não**: medidas auxiliares de seguimento.
+
+**Diagnóstico confirmado?**
+
+- **Sim**: terapia apropriada → fim (manejo adequado/aberto).
+- **Não**: continuar investigação → pan-endoscopia → biópsia.
+
+### Fluxograma 3 — Manejo Geral de Massas Cervicais
+
+*Figura 7: Fluxograma de manejo da investigação de massas cervicais.*
+
+**Massa cervical → Sinais de infecção?**
+
+- **Sim**: terapia apropriada → resolução → fim.
+- **Não**: suspeita de malignidade?
+  - **Sim**: investigação direcionada e completa → diagnóstico → manejo adequado.
+  - **Não**: medidas auxiliares de seguimento.
+
+---
+
+## Referências
+
+Figura 4: Orofaringoscopia de paciente. Acervo pessoal.
+
+![Figura do material - página 2](figure-002-1.webp)
+
+![Figura do material - página 3](figure-003-1.webp)
+
+![Figura do material - página 3](figure-003-2.webp)
+
+![Figura do material - página 4](figure-004-1.webp)

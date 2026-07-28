@@ -2,65 +2,80 @@
 
 <!-- page:1 -->
 
-## CABEÇA E PESCOÇO: CÂNCER DE
+## Visão Geral — Sítios de CEC
 
-## NASOFARINGE, OROFARINGE E
+CEC do trato aerodigestivo superior — diferem-se pela epidemiologia, patologia, história natural e tratamento.
 
-## PRIMÁRIO OCULTO
+### Nasofaringe
 
-CEC do trato aerodigestivo superior Nasofaringe:
-
-- EBV.
-
-- Normalmente RT. Acesso cirúrgico difícil.
-
+- **Associado a EBV**.
+- Normalmente tratado com **RT** (acesso cirúrgico difícil).
 - Frequente metástase ao diagnóstico.
 
-Orofaringe:
+### Orofaringe
 
-- HPV + (melhor prognóstico): Não tabagistas e jovens. Massa cística volumosa.
+- **HPV+ (melhor prognóstico)**: não tabagistas e jovens; massa cística volumosa.
+- **HPV–**: álcool + tabaco; campo de cancerização.
+- Estadiamento diferente entre HPV+ e HPV–.
+- **Atenção**: tratamento não muda pelo status HPV!
 
-- HPV – Álcool + tabaco. Campo de cancerização.
+### Primário Oculto
 
-- Estadiamento diferente.
+- **N+ sem primário identificável**.
+- Locais mais comuns: criptas amigdalianas (orofaringe) e fosseta de Rosenmüller (nasofaringe).
+- Diagnóstico por **PAAF**.
+- Pesquisar 1º com rotina CEC; depois PET-CT.
 
-- Tratamento não muda pelo HPV!
+---
 
-## ANATOMIA
+## Anatomia
 
-## NASOFARINGE
+### Nasofaringe
 
-- Localiza-se da base do crânio ao palato mole.
+- Localiza-se da **base do crânio ao palato mole**.
 
-Antro nasal Cavidade Lá o b r i a o l Nasofaringe Mucosa bucal Faringe Rebordo alveolar e trígono retromolar Pavimento da boca Palato duro Lingua oral Orofaringe (dois terços anteriores) D.V B Pa a l s a e t o d a m l o ín le gua Pilar e fossa da amígdala Hipofaringe Laringe Supraglote Falsas cordas Aritnoidea Epiglote Prega ariepiglótica Glote Subglote Esôfago Figura 1: Anatomia da nasofaringe O D.V HPV + HPV −
+**Marcos importantes:**
 
-- N+ sem primário identificável.
+- Tonsila faríngea.
+- Óstio da tuba auditiva.
+- Tórus tubário.
+- **Recesso faríngeo (fosseta de Rosenmüller)**: responsável por boa parte dos CEC de nasofaringe; difícil identificação.
 
-- Locais mais comuns: criptas amigdalianas
+*Figura 1: Anatomia da nasofaringe.*
 
-(orofaringe) e fosseta de Rosenmüller (nasofaringe).
+### Orofaringe
 
-- Diagnóstico por PAAF.
+**Limites anatômicos:**
 
-- Pesquisar 1º com rotina CEC.
+- **Palato mole à valécula** (Figura 2).
+- Papilas circunvaladas (V lingual) — limite inferior.
+- Papilares amigdalianos — limites laterais.
+- Limite superior: palato mole e palato duro.
 
-- PET-CT.
+**OBS.**: apenas **2/3 anteriores** da língua fazem parte da boca; o 1/3 posterior faz parte da orofaringe. Logo, a lesão da **base da língua** faz parte da orofaringe.
 
-Marcos importantes:
+**Marcos importantes:**
 
-- Tonsila faríngea;
+- Palato mole.
+- Base da língua.
+- Loja e pilar amigdaliano.
+- Parede posterior.
 
-- Óstio da tuba auditiva;
+**Estruturas nobres:**
 
-- Tórus tubário;
+- **Espaço mastigatório**.
+- **Base do crânio**.
+- **Espaço parafaríngeo**: ramos da carótida externa, carótida interna, veia jugular interna.
 
-- Recesso faríngeo (fosseta de Rosenmüller responsável por boa parte dos CEC de nasofaringe) difícil identificação.
+*Figura 2: Orofaringe — Palato mole à valécula.*
 
-→ o surgimento de câncer na região é de OROFARINGE
+*Figura 3: Orofaringe — Palato mole à valécula.*
 
-- Palato mole à valécula (Figura 2) da boca, enquanto que o 1/3 posterior faz parte da orofaringe! Logo, a lesão da base da língua faz parte da orofaringe.
+*Figura 4: Espaço mastigatório — visão axial em ressonância magnética.*
 
-OBS.: apenas 2/3 anteriores da língua fazem parte
+*Figura 5: Anatomia da base do crânio e palato duro.*
+
+*Figura 6: Espaço parafaríngeo — região nobre.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -70,26 +85,6 @@ OBS.: apenas 2/3 anteriores da língua fazem parte
 
 <!-- page:2 -->
 
-Figura 4: Espaço mastigatório - visão axial em ressonância magnética Figura 2: Orofaringe: Palato mole à valécula Figura 3: Orofaringe: Palato mole à valécula Marcos importantes: Figura 5: Anatomia da base do crânio e palato duro
-
-- Palato mole;
-
-- Base da língua;
-
-- Loja e pilar amigdaliano;
-
-- Parede posterior.
-
-Estruturas nobres:
-
-- Espaço mastigatório;
-
-- Base do crânio;
-
-- Espaço parafaríngeo: Ramos da carótida externa; Carótida interna; Veia jugular interna.
-
-Figura 6: Espaço parafaríngeo - região nobre
-
 ![Figura do material - página 2](figure-002-1.webp)
 
 ![Figura do material - página 2](figure-002-2.webp)
@@ -98,165 +93,243 @@ Figura 6: Espaço parafaríngeo - região nobre
 
 <!-- page:3 -->
 
-## HIPOFARINGE
+## Câncer de Nasofaringe
 
-- Imuno-histoquímica → PCR viral → pesquisa de EBV.
+### Classificação Histológica
 
-- Valécula ao músculo cricofaríngeo. Estadiamento T:
+A **OMS** separa o CEC de nasofaringe em **3 categorias**:
 
-- T1: restrito à nasofaringe ou com extensão à orofaringe
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-## SÍTIOS - CÂNCER DE
+**Tabela 1 — Classificação e fatores de risco:**
 
-e/ou cavidade nasal sem o envolvimento parafaríngeo; NASOFARINGE, OROFARINGE E
+- **CEC queratinizante (Tipo I)**: bem diferenciado; forma esporádica; bastante raro.
+- **CEC não-queratinizante (Tipo II)**: indiferenciado; relacionado ao EBV; prognóstico mais favorável.
+- **CEC basaloide**: muito agressivo; alta mortalidade.
 
-- T2: extensão ao espaço parafaríngeo e/ou tecidos
+### Epidemiologia
 
-- Difere-se pela epidemiologia, patologia, história natural e tratamento.
+- **No mundo em 2020**: > 130.000 novos casos; 80.000 mortes.
+- **Homens > mulheres** (2–3 : 1).
+- **Idade**: 50–59 anos.
+- **Incidência regional**:
+  - EUA e Europa ocidental: 0,5 a 2 casos/100.000 habitantes.
+  - Brasil: 0,33 casos/100.000 habitantes.
+  - Sul da China: ~25 casos/100.000 habitantes.
 
-Epidemiologia:
+### Fatores de Risco
 
-- No mundo em 2020: >130.000 novos casos, 80.000 mortes; Homens > mulheres (2-3 : 1); Idade: 50-59 anos; EUA e Europa ocidental: 0,5 a 2 casos por
+- **Genética**.
+- **Fatores comportamentais**: alimentos em conserva, tabagismo, etilismo.
+- **Infecção por EBV**.
 
-100.000 habitantes.
+### Quadro Clínico
 
-- Brasil: 0,33 casos por 100.000 habitantes.
+- Cefaleia, diplopia, parestesia na face.
+- Obstrução nasal, epistaxe.
+- Otite média (aumenta suspeita em adultos).
+- **Diagnóstico por massa cervical** (mais comum).
 
-- Sul da China; 25 casos por 100.000 habitantes.
+**Metástase ao diagnóstico:**
 
-Fatores de risco:
+- **Linfonodal**: 75–90% (50% bilateral).
+- **Distância**: 5–11%.
 
-- Genética;
+### Diagnóstico
 
-- Fatores comportamentais: Alimentos em conserva, tabagismo, etilismo.
+- **Biópsia**: tumor primário (incisional) — preferencial.
+- **PAAF**: linfonodo cervical.
+- **Imuno-histoquímica**: PCR viral → pesquisa de EBV.
 
-- Infecção por EBV.
+### Estadiamento — Nasofaringe (TNM)
 
-A OMS separa o CEC de nasofaringe em 3 categorias (Tabela 1): Tabela 1: Fatores de risco CEC CEC não CEC basaloide queratinizante queratinizante Bastante Forma esporádica Bem diferenciado raro, muito (tipo 1) (tipo II) agressivo, alta mortalidade Indiferenciado (tipo III): Relacionado ao EBV, prognóstico mais favorável Clínica:
+**Estadiamento T:**
 
-- Cefaleia, diplopia, parestesia na face, obstrução nasal, epistaxe, otite média (aumenta suspeita em adultos), diagnóstico por massa cervical (mais comum);
+- **T1**: restrito à nasofaringe ou com extensão à orofaringe e/ou cavidade nasal, sem envolvimento parafaríngeo.
+- **T2**: extensão ao espaço parafaríngeo e/ou tecidos moles adjacentes (músculos pterigoides, musculatura pré-vertebral).
+- **T3**: invasão de osso de base de crânio, vertebral cervical, pterigoides e/ou seios paranasais.
+- **T4**: extensão intracraniana, envolvimento dos nervos cranianos, hipofaringe, órbita, parótida e/ou infiltração grosseira de tecidos moles, além do músculo pterigoide lateral.
 
-- Metástase ao diagnóstico: Linfonodal (75-90%) – 50% bilateral; Distância (5-11%).
+**Estadiamento N:**
 
-Diagnóstico:
+- **N1**: ≤ 6 cm, unilateral.
+- **N2**: ≤ 6 cm, bilateral.
+- **N3**: > 6 cm ou com extensão abaixo da cricoide.
 
-- Biópsia: tumor primário (incisional) – preferencial;
+### Tratamento
 
-- PAAF: linfonodo cervical; - T2: extensão ao espaço parafaríngeo e/ou tecidos moles adjacentes (músculos pterigoides, musculatura pré-vertebral;
+- **RT ou RT + QT**: tumor radiossensível com difícil acesso cirúrgico.
+- **Cirurgia de resgate**: quando necessário.
+- **Tratamento do pescoço**: sempre indicado.
 
-- T3: invasão de osso de base de crânio, vertebral cervical, pterigoides e/ou seios paranasais;
+### Sobrevida
 
-- T4: extensão intracraniana, envolvimento dos nervos cranianos, hipofaringe, órbita, parótida e/ou infiltração grosseira de tecidos moles, além do músculo pterigoide lateral.
+**Tabela 2 — Sobrevida global em 5 anos (CEC de nasofaringe):**
 
-Estadiamento N:
-
-- N1: ≤ 6 cm, unilateral;
-
-- N2: ≤ 6 cm, bilateral;
-
-- N3: > 6 cm ou com extensão abaixo da cricoide.
-
-Tratamento:
-
-- RT ou RT+QT → tumor radiossensível com difícil acesso cirúrgico;
-
-- Cirurgia de resgate quando necessário;
-
-- Tratamento do pescoço: sempre indicado.
-
-Tabela 2: Sobrevida do CEC de nasofaringe conforme seu estadiamento Estádio Sobrevida global 5 anos I 93% II 87% III 81% IVA 65% IVB 63%
-
-## OROFARINGE
-
-Limites anatômicos:
-
-- Papilas circunvaladas (V lingual) - limite inferior;
-
-- Papilares amigdalianos - limites laterais;
-
-- Limite superior: palato mole e palato duro.
-
-Dois tipos → HPV+ ou HPV
-
-- HPV –: relacionado ao etilismo e tabagismo;
-
-- HPV +: tumor proveniente da infecção e associado ao
-
-HPV 16 e 18;
-
-1. Melhor prognóstico → muda estadiamento;
-
-2. > 80% sobrevida a longo prazo para doença avançada.
-
-Epidemiologia e etiologia:
-
-- Homens > mulheres;
-
-- Bifásico, 30 e 55 anos;
-
-- Carga tabágica reduzida ou ausente;
-
-- Marcador indireto: p16;
-
-- Transmitido sexualmente.
-
-- Verificar Tabela 3 na próxima página
+| Estádio | Sobrevida (5 anos) |
+|---|---|
+| I | 93% |
+| II | 87% |
+| III | 81% |
+| IVA | 65% |
+| IVB | 63% |
 
 ---
 
 <!-- page:4 -->
 
-Tabela 3: Comparação do CEC de orofaringe HPV positivo e HPV negativo Status HPV Características clínicas Positivo Negativo Positivo Idade ao diagnóstico 30 e 55 anos Sexo > (4:1)
+## Câncer de Orofaringe
 
-Localização Amígdala, base da língua, Não tabagistas/etilista Exposições cannabis, muitos parceiro frequência sexo Massa cervical assintom Sinais e sintomas odinofagia ou ota Tumor primário Pequeno Acometimento linfonodal Risco de doença vo Sobrevida global 71% (8 meses)
+### Dois Tipos Principais
 
-Quadro clínico:
+**HPV–**: relacionado ao etilismo e tabagismo; campo de cancerização.
 
-- Lesão ulcerada, friável, bordas elevadas, dolorosa; M
+**HPV+**: tumor proveniente da infecção por HPV 16 e 18; melhor prognóstico (muda estadiamento); > 80% sobrevida a longo prazo para doença avançada.
 
-- Sensação de corpo estranho → voz de “batata quente”;
+### Epidemiologia e Etiologia
 
-- Alto risco de metástase cervical;
+**HPV+ (características):**
 
-- HPV → metástase cervical com degeneração cística.
+- Não tabagistas/etilistas.
+- Exposições cannabis, muitos parceiros sexuais, alta frequência de sexo.
+- Transmitido sexualmente.
+- Idade: bifásico (30 e 55 anos).
 
-Figura 7: Lesão ulcerada - CEC de orofaringe
+**HPV– (características):**
 
-- - M
+- Tabagistas, etilistas.
+- Homens > mulheres (3:1).
+- Idade: > 60 anos.
+- Carga tabágica reduzida ou ausente (HPV+).
 
-- - Figura 8: Lesão ulcerada
+**Marcador indireto de HPV+**: **p16**.
 
-Diagnóstico:
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-- Biópsia: tumor primário (incisional) – preferencial;
+**Tabela 3 — Comparação HPV+ vs HPV– (orofaringe):**
 
-- PAAF: linfonodo cervical; Negativo s 60 anos
+**HPV+**: idade 30 e 55 anos; sexo 4:1 (M > F); localização — amígdala, base da língua; não tabagistas/etilistas; massa cervical assintomática; tumor primário pequeno; risco de doença com degeneração cística de linfonodo; sobrevida global 71%.
 
-> (3:1) as, uso de os sexuais, ↑ Tabagistas, etilistas oral mática, sem de via aerodigestiva, massa cervical, algia perda ponderal olumosa Com ou sem linfadenopatia
+**HPV–**: idade > 60 anos; sexo 3:1 (M > F); localização — toda orofaringe; tabagistas, etilistas; odinofagia, otalgia, obstrução de via aerodigestiva, massa cervical, perda ponderal; tumor primário volumoso, único ou múltiplos; com ou sem linfadenopatia; acometimento linfonodal 30%.
 
-, palato mole Toda orofaringe Disfagia, odinofagia, otalgia, obstrução Volumoso, único ou múltiplos 30%
+### Quadro Clínico
 
-- Imuno-histoquímica: → pesquisa de p16 (HBV).
+- **Lesão ulcerada, friável**, bordas elevadas, dolorosa.
+- Sensação de corpo estranho → voz de "batata quente".
+- Alto risco de metástase cervical.
+- **HPV+**: metástase cervical com degeneração cística.
 
-Manejo - HPV negativo: Tabagismo Etilismo Cancerização de campo Rotina CEC CCP Figura 9: Manejo CEC de orofaringe HPV negativo
+*Figura 7: Lesão ulcerada — CEC de orofaringe.*
 
-- Exame físico completo: Orofaringoscopia; Exame de pescoço.
+*Figura 8: Lesão ulcerada.*
 
-- Exame endoscópico completo: Endoscopia digestiva alta; Laringoscopia; Broncoscopia.
+### Diagnóstico
 
-- Exame radiológico completo: TC de cabeça, pescoço e tórax com contraste.
+- **Biópsia**: tumor primário (incisional) — preferencial.
+- **PAAF**: linfonodo cervical.
+- **Imuno-histoquímica**: pesquisa de **p16** (HBV).
 
-Manejo HPV positivo:
+**Exame físico completo:**
 
-- Exame físico completo;
+- Orofaringoscopia.
+- Exame de pescoço.
 
-- Exame radiológico completo;
+**Exame endoscópico completo:**
 
-- Não se associa ao tabagismo e etilismo, portanto não se aplica o conceito de cancerização de campo pela exposição aos fatores de risco.
+- Endoscopia digestiva alta.
+- Laringoscopia.
+- Broncoscopia.
 
-Estadiamento TNM:
+**Exame radiológico completo:**
 
-- 8ª edição do TNM separa UICC/AJCC separa o estadiamento, refletindo a diferente biologia dos dois cânceres;
+- TC de cabeça, pescoço e tórax com contraste.
+
+### Manejo — HPV Negativo
+
+- Tabagismo e etilismo associados → conceito de **cancerização de campo**.
+- Rotina CEC CCP (conforme protocolo padrão de CEC de cabeça e pescoço).
+
+*Figura 9: Manejo CEC de orofaringe HPV negativo.*
+
+### Manejo — HPV Positivo
+
+- Exame físico completo.
+- Exame radiológico completo.
+- **Não se associa a tabagismo e etilismo**, portanto não se aplica o conceito de cancerização de campo pela exposição aos fatores de risco.
+
+### Estadiamento TNM — HPV Negativo
+
+A **8ª edição do TNM UICC/AJCC** separa o estadiamento, refletindo a diferente biologia dos dois cânceres.
+
+**Estadiamento T (HPV negativo):**
+
+- **T1**: ≤ 2 cm.
+- **T2**: entre 2–4 cm.
+- **T3**: > 4 cm ou extensão para face lingual da epiglote.
+- **T4a**: invade estruturas vizinhas, mas ainda é ressecável (laringe, musculatura extrínseca da língua, pterigoide medial, palato duro, mandíbula).
+- **T4b**: invade e é irressecável (mastigatório → lâminas pterigoides, pterigoide lateral, carótida, base do crânio, parede lateral da nasofaringe).
+
+**Estadiamento N (HPV negativo):**
+
+- **N1**: único ipsilateral, ≤ 3 cm.
+- **N2a**: único ipsilateral, 3–6 cm.
+- **N2b**: múltiplos ipsilaterais, 3–6 cm.
+- **N2c**: contralateral, ≤ 6 cm.
+- **N3a**: > 6 cm.
+- **N3b**: ENE+ (extravasamento extranodal).
+
+*Figura 10: Estadiamento N — HPV negativo.*
+
+### Estadiamento TNM — HPV Positivo
+
+**Particularidades:**
+
+- **T**: não tem T4b (por melhor prognóstico).
+- **N**: ipsilateral ou contralateral, maior ou menor que 6 cm.
+  - **N1**: ipsilateral.
+  - **N2**: contralateral, < 6 cm.
+  - **N3**: > 6 cm.
+- **Múltiplos linfonodos não pioram o prognóstico**.
+- **Alguns estádios III e IVa passam a I e II** (mesmo que locorregionalmente avançados).
+
+*Figura 11: Manejo e condução do CEC de orofaringe.*
+
+### Tratamento
+
+**Atenção**: Apesar da diferença no estadiamento, o **tratamento não muda** pelo status HPV.
+
+**Estadios iniciais (T1–T2, N0):**
+
+- Tratamento unimodal.
+- **Cirurgia** (ressecção per os → TORS) OU **RT**.
+
+**Estádios avançados (T3–T4, N+):**
+
+- Tratamento combinado.
+- **Cirurgia + RT adjuvante** OU **RT + QT concomitante**.
+
+**Fatores que favorecem cirurgia:**
+
+- Ressecção per os → TORS.
+- Localização favorável.
+- T4a (invasão óssea ou oral).
+- Contraindicação à RT.
+- Logística (RT diária por 6–7 semanas) — alguns pacientes não suportam.
+
+**Fatores que favorecem RT/QT:**
+
+- Indicação clara de RT adjuvante apesar de cirurgia.
+- Doença locorregionalmente avançada.
+- Candidatos ruins à cirurgia.
+- Cirurgia geraria resultados funcionalmente ruins (acesso mórbido, invasão de hipofaringe ou supraglote com necessidade de laringofaringectomia).
+- Tumor irressecável → RT/QT concomitante ou RT exclusiva.
+
+**Tratamento do pescoço:**
+
+- **N0**: considerar II, III e IV bilateral → esvaziamento seletivo supraomohioideo (I, II, III) quando possível; considerar estender para nível IV.
+- **N+**: RT ou esvaziamento radical (modificado quando possível).
+
+*Figura 11: Manejo e condução do CEC de orofaringe.*
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -266,82 +339,55 @@ Estadiamento TNM:
 
 <!-- page:5 -->
 
-Estadiamento do CEC de orofaringe HPV negativo Tratamento:
-
-- Estadiamento T do HPV negativo (lembrar 2 e 4):
-
-- Cirúrgico x RT x Cirurgia/RT x RT/QT → Como escolher? T1; ≤ 2 cm; | Estágios iniciais = tratamento unimodal; T2: entre 2 – 4 cm; | Avançados = tratamento combinado. T3: > 4 cm ou extensão para face lingual da epiglote;
-
-- Tratamento do pescoço: sempre: T4: | N0 (e N1?): RT ou esvaziamento seletivo T4a: invade estruturas vizinhas, mas ainda é supraomohioideo (I, II, III); T4b: invade e é irressecável – espaço quando possível).
-
-ressecável – laringe, musculatura extrínseca da | Considerar estender para nível IV; língua, pterigoide medial, palato duro, mandíbula; | N+: RT ou esvaziamento radical (modificado mastigatório → lâminas pterigoides, pterigoide Como escolher o tipo de tratamento:
-
-lateral, carótida, base do crânio, parede lateral
-
-- Fatores que favorecem cirurgia:
-
-da nasofaringe. | Ressecção per os → TORS;
-
-- Estadiamento N - HPV negativo: | Localização favorável; N1: único ipsilateral, ≤ 3 cm; | T4a (invasão óssea ou oral); N2a: único ipsilateral, 3-6cm; | Contraindicação à RT; N2b: múltiplos ipsilaterais, 3-6cm; | Logística (6 a 7 semanas com RT diária) – alguns N2c: contralateral, ≤ 6cm; pacientes não suportam. N3a: > 6 cm;
-
-- Fatores que favorecem o tratamento RT/QT: N3b: ENE+ (Extravasamento extranodal). | Indicação clara de RT adjuvante apesar de cirurgia;
-
-- Verificar Figura 10 | Doença locorregionalmente avançada;
-
-Particularidades do estadiamento do HPV positivo | Candidatos ruins à cirurgia;
-
-- T: não tem T4b; | Cirurgia geraria resultados funcionalmente
-
-- N: ipsilateral ou contralateral, maior ou menor ruins (acesso mórbido, invasão da que 6 cm: hipofaringe ou supraglote com necessidade N1: ipsilateral; de laringofaringectomia); N2: contralateral, < 6 cm; | Tumor irressecável → RT/QT concomitante ou RT N3: > 6 cm; exclusiva (Figura 12).
-
-- Múltiplos linfonodos não pioram o prognóstico;
-
-- Verificar Figura 11 na próxima página
-
-- Alguns estágios III e IVa passam a I e II (mesmo que locorregionalmente avançados).
-
-Figura 10: Estadiamento N - HPV negativo
-
 ![Figura do material - página 5](figure-005-1.webp)
 
 ---
 
 <!-- page:6 -->
 
-T1 -T2 cTNM T3 -T4 Pescoço negativo? Sim Não Cirurgia ± RT adjuvante cN1? RT RT QT + RT definitiva Sim Não Cirurgia ± RT adjuvante Figura 11: Manejo e condução do CEC de orofaringe Apesar da diferença no estadiamento, o tratamento T não muda.
+## Câncer Primário Oculto de Cabeça e Pescoço
 
-- CEC PRIMÁRIO OCULTO
+### Definição
 
-Definição:
+- Metástase de CEC em um ou mais linfonodos na cabeça e pescoço (não somente supraclavicular) sem primário identificável.
+- Corresponde a cerca de **1–3%** dos casos novos de CEC em cabeça e pescoço.
 
-- Metástase de CEC e 1 ou + linfonodos na cabeça e pescoço – não somente supraclavicular – sem primário identificável;
+### Diagnóstico
 
-- Corresponde a cerca de 1-3% dos casos novos de CEC em cabeça e pescoço.
+- **PAAF linfonodo** (com imuno-histoquímica para HPV e EBV).
+- **Não devem ser realizadas biópsias aleatórias** de mucosa.
 
-Diagnóstico:
+### Manejo e Condução
 
-- PAAF linfonodo (com imuno-histoquímica para
+**Estratégia geral:**
 
-HPV e EBV); I
+- Controle da doença cervical.
+- Assegurar que o primário não desenvolva nos sítios potenciais → **considerar proceder com amidalectomia** bilateral (geralmente).
 
-- Não devem ser realizadas biópsias aleatórias N de mucosa.
+**Segundo carga de doença linfonodal:**
 
-Manejo e condução: a Figura 12: Manejo e condução - CEC primário oculto de cabeça e pescoço Invasão óssea ou oral?
+- **N1**: monoterapia (esvaziamento cervical OU RT).
+- **N2–3**: terapia combinada (esvaziamento cervical + RT OU QT + RT).
 
-Não Sim QT + RT definitiva Cirurgia + RT adjuvante Tratamento → incerto!
+**Definição de tratamento:**
 
-- Controle da doença cervical;
+- **Se invasão óssea ou oral**: cirurgia + RT adjuvante.
+- **Sem invasão óssea ou oral**: QT + RT definitiva (tratamento → incerto).
 
-- Assegurar que o 1° não desenvolva nos sítios potenciais → considerar proceder com amidalectomia: N1 → monoterapia; Esvaziamento cervical ou RT de amplo campo; N2 – 3 → terapia combinada; QT + RT ou esvaziamento cervical + RT.
-
-## REFERÊNCIAS
-
-Figura 3: Cofexpress Imagem adaptada de: SHAH, Jatin P. et al. Jatin Shah’s Head and Neck Surgery and Oncology. 5. ed. Philadelphia: Elsevier, 2019. ISBN 9780323415181.
-
-Figura 4: Espaço mastigatório - visão axial em ressonância magnética HOCKING, Jeffrey. Masticator space: annotated MRI. 2016. Imagem.
-
-Disponível em: https://radiopaedia.org/cases/masticator-spaceannotated-mri. Acesso em: 11 jun. 2025.
-
-Figura 7: Lesão ulcerada - CEC de orofaringe Acervo pessoal - Dr Felipe Magnabosco Figura 8: Lesão ulcerada Acervo pessoal - Dr Felipe Magnabosco Figura 12: Manejo e condução - CEC primário oculto de cabeça e pescoço Imagem adaptada de: SHAH, Jatin P. et al. Jatin Shah’s Head and Neck Surgery and Oncology. 5. ed. Philadelphia: Elsevier, 2019. ISBN 9780323415181.
+*Figura 12: Manejo e condução — CEC primário oculto de cabeça e pescoço.*
 
 ![Figura do material - página 6](figure-006-1.webp)
+
+---
+
+## Referências
+
+Figura 3: Cofexpress. Imagem adaptada de: SHAH, Jatin P. et al. *Jatin Shah's Head and Neck Surgery and Oncology*. 5. ed. Philadelphia: Elsevier, 2019. ISBN 9780323415181.
+
+Figura 4: Espaço mastigatório — visão axial em ressonância magnética. HOCKING, Jeffrey. Masticator space: annotated MRI. 2016. Imagem. Disponível em: https://radiopaedia.org/cases/masticator-space-annotated-mri. Acesso em: 11 jun. 2025.
+
+Figura 7: Lesão ulcerada — CEC de orofaringe. Acervo pessoal — Dr. Felipe Magnabosco.
+
+Figura 8: Lesão ulcerada. Acervo pessoal — Dr. Felipe Magnabosco.
+
+Figura 12: Manejo e condução — CEC primário oculto de cabeça e pescoço. Imagem adaptada de: SHAH, Jatin P. et al. *Jatin Shah's Head and Neck Surgery and Oncology*. 5. ed. Philadelphia: Elsevier, 2019. ISBN 9780323415181.

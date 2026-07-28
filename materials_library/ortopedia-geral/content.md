@@ -2,63 +2,36 @@
 
 <!-- page:1 -->
 
-Ortopedia
+## Resumo de Mnemônicos e Direcionadores Clínicos
 
-- Dor Lombar → TÊNIS;
+- **Dor Lombar** → TÊNIS (mnemônico de indicações de imagem);
+- **Barlow e Ortolani** → manobras de rastreio para displasia do desenvolvimento do quadril (DDQ);
+- **Monoartrite aguda no PS + febre** → Punção articular (investigação urgente);
+- **Diagnóstico de DDQ** → USG até 6 meses de idade;
+- **Artrite + Uretrite + Lesão de Pele** → Ceftriaxone (tríade sugestiva de artrite gonocócica);
+- **Adolescente acima do peso com dor no quadril** → Epifisiolistese;
+- **RX com "Casca de Cebola"** → Sarcoma de Ewing;
+- **RX com "Raios de Sol"** → Osteossarcoma;
+- **Dor Articular + IVAS** → Sinovite Transitória do quadril;
+- **Dor noturna que melhora com AAS** → Osteoma Osteóide.
 
-- Barlow e Ortolani → “Orto”pedista Reduz;
+## Lombalgia
 
-- Monoartrite aguda no PS + febre → Punção;
+### Epidemiologia e Abordagem no PS
 
-- Diagnóstico na DDQ → USG até 6 Meses!!!
+- Até 90% das pessoas experimentam pelo menos um episódio de lombalgia ao longo da vida;
+- O papel do médico no pronto socorro (PS) é separar os casos de **lombalgia mecânica simples** (geralmente com resolução espontânea entre 3-14 dias) daqueles relacionados a doenças que necessitam de intervenção imediata;
+- De maneira aguda, os exames de imagem não definem conduta e têm alta proporção de falsos positivos.
 
-- Artrite + Uretrite + Lesão de Pele → Ceftriaxone;
+### Mnemônico TÊNIS — Indicações de Exame de Imagem na Lombalgia no PS
 
-- Adolescente Acima do Peso com dor no
+- **T** → **Trauma**: investigar lesão estrutural;
+- **E** → **Equino**: pacientes com alterações neurológicas sensitivas ou motoras dos membros inferiores ou alterações esfincterianas, sobretudo **síndrome da cauda equina** (o melhor exame de investigação na urgência é a **ressonância nuclear magnética**);
+- **N** → **Noturno**: dor com piora no período noturno;
+- **I** → **Idade**: pacientes muito jovens ou **> 50 anos** (não esquecer **mieloma múltiplo** e **metástases na coluna**);
+- **S** → **Secundário**: pacientes com doença de base conhecida, uso de corticoides ou imunossupressores.
 
-- Rx Casca de Cebola → Ewing; quadril → Epifisiolistese;
-
-- Rx Raios de Sol → Osteossarcoma;
-
-- Dor Articular + IVAS → Sinovite Transitória.
-
-- Dor noturna que Melhora com AAS
-
-→ Osteoma Osteóide;
-
-## LOMBALGIA
-
-- Infeccioso: Proliferação bacteriana e pus dentro da articulação;
-
-- Até 90% das pessoas vão experienciar pelo menos um | O pus é condrotóxico e destrói a episódio de lombalgia na vida; cartilagem rapidamente;
-
-- O papel do médico no pronto socorro (PS) é separar | Ocorre sobretudo em pacientes os casos de lombalgia mecânica simples (que frágeis e imunodeficientes;
-
-geralmente possui resolução espontânea entre | É uma URGÊNCIA e deve ser conduzida com 3-14 dias) daqueles relacionados a doenças que drenagem cirúrgica.
-
-necessitam de intervenção imediata. De maneira aguda, os exames de imagem não definem conduta e têm alta proporção de falsos positivos.
-
-Lembre-se:
-
-- Mnemônico para indicações de exame de imagem na lombalgia no PS, TÊNIS;
-
-- T → Trauma;
-
-- E → Equino; Pacientes com alterações neurológicas sensitivas ou motoras dos membros inferiores ou alterações esfincterianas, sobretudo síndrome da cauda equina. Nos casos de síndrome de cauda equina, o melhor exame de investigação na urgência é a ressonância nuclear magnética.
-
-- N → Noturno; Dor com piora no período noturno.
-
-- I → Idade; Pacientes muito jovens ou com idade > 50 anos.
-
-Nesses casos, não esquecer de mieloma múltiplo e metástases na coluna. Figura 1: Monoartrite infecciosa.
-
-- S → Secundário; Pacientes com doença de base conhecida, uso de corticoides ou imunossupressores.
-
-## MONOARTRITES
-
-- Assim como a lombalgia, a monoartrite também deve ser avaliada no PS de forma a identificar os pacientes que necessitam de exame de imagem ou não.
-
-- Inflamatório (GOTA): Depósito de cristais de urato monossódico, sobretudo na primeira articulação metatarsofalangeana; Epidemiologia: homem, de meia idade, etilista, alto consumo de carne; É uma doença recorrente, Figura 2: Diagnóstico diferencial entre artrite séptica e imunomediada e progressiva. artrite inflamatória.
+*Figura 1: Monoartrite infecciosa.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -66,43 +39,76 @@ Nesses casos, não esquecer de mieloma múltiplo e metástases na coluna. Figura
 
 <!-- page:2 -->
 
-- Escolha da antibioticoterapia: Mais comum: S. aureus; Lúpus eritematoso sistêmico e anemia falciforme: Usuário de drogas IV: Pseudomonas; Usuário de drogas IV: Pseudomonas; Recém-nascidos: Strepto B e Gram -; Vacinação ausente: H. influenzae B; Jovem sexualmente ativo: Gonococo; Nesse último caso, atente-se à tríade: artrite + uretrite + conjuntivite (Tríade de Reiter). Indica quadro articular imunomediado reativo, permitindo tratamento exclusivo com ceftriaxone.
+## Monoartrites
 
-Salmonella (por translocação bacteriana);
+### Epidemiologia e Abordagem
 
-## OSTEOMIELITE HEMATOGÊNICA
+- Assim como a lombalgia, a monoartrite deve ser avaliada no PS de forma a identificar pacientes que necessitam de exame de imagem ou não.
 
-- Infecção óssea, sobretudo na região metafisária (local de fluxo lento e turbilhonado), por disseminação bacteriana a partir de uma infecção de outro sítio.
+### Artrite Inflamatória — Gota
 
-- Ossos mais comumente acometidos pela osteomielite:
+**Características**
+- Depósito de **cristais de urato monossódico**, sobretudo na **primeira articulação metatarsofalangeana**;
+- Epidemiologia: homem, de meia idade, etilista, alto consumo de carne;
+- É uma doença recorrente, inflamatória e progressiva.
 
-- - Figura 3: Porcentagem de frequência de acometimento da osteomielite.
+*Figura 2: Diagnóstico diferencial entre artrite séptica e artrite inflamatória.*
 
-- Exames laboratoriais: Leucocitose e aumento de VHS e PCR: Podem ser usados como marcadores de melhora; Hemocultura positiva em apenas 50% dos casos.
+### Artrite Séptica — Escolha da Antibioticoterapia
 
-- Imagem → para o diagnóstico precoce da osteomielite: Cintilografia; Ressonância nuclear magnética; A confirmação diagnóstica é feita por biópsia, que além disso permite a cultura do foco e orientação da antibioticoterapia, que deve ser feita por 6-12 semanas. Nos casos de osteomielite crônica, o tratamento cirúrgico de desbridamento é essencial. Figura 4: Radiografia de joelho direito demonstrando osteomielite crônica em metáfise da tíbia proximal. Observe a área radioluscente, indicativa de sequestro ósseo (ou seja, processo cronificado).
+**Agentes mais comuns e epidemiologia associada**
 
-## TUMOR ÓSSEO
+| Agente | Associação/Indicação |
+|---|---|
+| **Staphylococcus aureus** | Mais comum, sem especificidade |
+| **Salmonella** | Anemia falciforme, translocação bacteriana |
+| **Pseudomonas** | Usuário de drogas IV |
+| **Streptococcus B + Gram-negativos** | Recém-nascidos |
+| **Haemophilus influenzae B** | Vacinação ausente |
+| **Neisseria gonorrhoeae** | Jovem sexualmente ativo — **Tríade de Reiter**: artrite + uretrite + conjuntivite (quadro imunomediado reativo, tratável exclusivamente com **ceftriaxone**) |
 
-## SARCOMA DE EWING
+## Osteomielite Hematogênica
 
+### Conceito
+
+- **Infecção óssea**, sobretudo na **região metafisária** (local de fluxo lento e turbilhonado), por disseminação bacteriana a partir de uma infecção de outro sítio;
+- Ossos mais comumente acometidos: ver Figura 3 (porcentagem de frequência de acometimento).
+
+### Investigação Laboratorial e Diagnóstico por Imagem
+
+**Exames laboratoriais**
+- **Leucocitose** e aumento de **VHS e PCR** — podem ser usados como marcadores de melhora;
+- **Hemocultura** positiva em apenas 50% dos casos.
+
+**Imagem — para diagnóstico precoce**
+- Cintilografia;
+- Ressonância nuclear magnética;
+- **Confirmação diagnóstica**: feita por **biópsia**, que além disso permite a cultura do foco e orientação da antibioticoterapia, que deve ser realizada por **6-12 semanas**.
+- Nos casos de **osteomielite crônica**, o **tratamento cirúrgico com desbridamento é essencial**.
+
+*Figura 3: Porcentagem de frequência de acometimento da osteomielite.*
+
+*Figura 4: Radiografia de joelho direito demonstrando osteomielite crônica em metáfise da tíbia proximal. Observe a área radioluscente, indicativa de sequestro ósseo (processo cronificado).*
+
+## Tumores Ósseos
+
+### Sarcoma de Ewing
+
+**Características clínicas e radiológicas**
 - Mimetiza um quadro infeccioso;
+- **Epidemiologia**: crianças **< 10 anos**;
+- **Radiografia**: lesão óssea com padrão em **"casca de cebola"** — depósito ósseo em camadas.
 
-- Epidemiologia: crianças < 10 anos;
+*Figura 5: Lesão óssea em "casca de cebola", característica do Sarcoma de Ewing.*
 
-- Radiografia: lesão óssea com padrão em “casca de cebola” → depósito ósseo em camadas.
+### Osteossarcoma
 
-Figura 5: Lesão óssea em “casca de cebola”, característica do
+**Características clínicas e radiológicas**
+- **Tumor ósseo primário mais comum**;
+- **Epidemiologia**: jovens, predominância masculina, **> 10 anos**;
+- **Radiografia**: **"Triângulo de Codman"** (crescimento e abaulamento periosteal) e **"raios de sol"**.
 
-## OSTEOSSARCOMA
-
-- Tumor ósseo primário mais comum;
-
-- Epidemiologia: jovens, masculino, > 10 anos;
-
-- Radiografia: “Triângulo de Codman” (crescimento e abaulamento periosteal) e “raios de sol”.
-
-Figura 6: Padrões radiológicos sugestivos de osteossarcoma. Triângulo de Codman, à esquerda, e raios de sol, à direita.
+*Figura 6: Padrões radiológicos sugestivos de osteossarcoma. Triângulo de Codman, à esquerda, e raios de sol, à direita.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -112,57 +118,53 @@ Figura 6: Padrões radiológicos sugestivos de osteossarcoma. Triângulo de Codm
 
 <!-- page:3 -->
 
-## OSTEOMA OSTEÓIDE
+### Osteoma Osteóide
 
-- Tumor benigno, que cursa com dor noturna que melhora com AAS ou anti-inflamatórios;
+**Características clínicas e radiológicas**
+- **Tumor benigno**, que cursa com **dor noturna que melhora com AAS ou anti-inflamatórios**;
+- **Epidemiologia**: pacientes jovens;
+- **Radiografia**: **formação de nidus** — área osteolítica circundada por depósito ósseo reacional denso.
 
-- Epidemiologia: pacientes jovens;
+*Figura 7: Formação de nidus à radiografia e à tomografia.*
 
-- Radiografia: formação de Nidus → área osteolítica
+## Ortopedia Pediátrica
 
-- Radiografia: formação de Nidus → área osteolítica circundada por depósito ósseo reacional denso.
+### Displasia do Desenvolvimento do Quadril (DDQ)
 
-Figura 7: Formação de Nidus à radiografia e à tomografia.
-
-## ORTOPEDIA PEDIÁTRICA
-
-## DISPLASIA DO DESENVOLVIMENTO DO
-
-## QUADRIL (DDQ)
-
-- Malformação congênita do quadril caracterizada por uma subluxação que leva ao deslocamento progressivo da cabeça do fêmur do acetábulo;
-
-- Epidemiologia: Estrogênio materno (afrouxa ligamentos), genética, fatores mecânicos;
-
+**Conceito e Epidemiologia**
+- Malformação congênita do quadril caracterizada por **subluxação** que leva ao **deslocamento progressivo da cabeça do fêmur do acetábulo**;
+- Epidemiologia: estrogênio materno (afrouxa ligamentos), genética, fatores mecânicos;
 - O diagnóstico depende da idade.
 
-0 - 6 meses:
+#### **0-6 meses**
 
-- Rastreio na maternidade pelas manobras de
+**Rastreio e Manobras**
+- Rastreio na maternidade pelas **manobras de Barlow e Ortolani**;
+- **Manobra de Barlow**: abdução e força em direção posterior da cabeça do fêmur. Se positiva, há luxação da articulação indicando sua frouxidão, e o examinador sentirá um **"clique"**;
+- **Manobra de Ortolani**: abdução do quadril, reduzindo a luxação provocada por Barlow;
+- Exame de imagem de preferência: **USG** (os ossos ainda não estão calcificados e são de difícil visualização à radiografia).
 
-Barlow e Ortolani;
+**Tratamento**
+- **Suspensório de Pavlik** (mantém o quadril em abdução).
 
-- Barlow: abdução e forçar em direção posterior a cabeça do fêmur. Na positiva, há luxação da articulação indicando sua frouxidão, e o examinador sentirá um “clique”;
+*Figura 8: Suspensório de Pavlik.*
 
-- Ortolani: abdução do quadril, reduzindo a luxação provocada por Barlow;
+*Figura 9: Manobras de Barlow e Ortolani.*
 
-- Nessa idade, o exame de imagem de preferência é o USG, uma vez que os ossos ainda não estão calcificados e são de difícil visualização à radiografia.
+#### **6-18 meses**
 
-- Tratamento: suspensório de Pavlik (mantém o quadril em abdução).
+**Achados Clínicos**
+- Tratamento precoce;
+- O acetábulo já está bem formado e as manobras de Barlow e Ortolani tendem a ser negativas;
+- Espera-se o **deslocamento cranial do fêmur**, com **encurtamento do membro**;
+- **Sinal de Hart**: limitação à abdução do quadril;
+- **Sinal de Galeazzi**: ao observar os membros inferiores em abdução, nota-se um joelho mais baixo que o outro.
 
-Figura 8: Suspensório de Pavlik. Figura 9: Manobras de Barlow e Ortolani. 6-18 meses:
+**Diagnóstico e Tratamento**
+- Diagnóstico: **radiografia**;
+- Tratamento: **gesso pélvico-podálico**.
 
-- Tratamento precoce. Nesse momento, o acetábulo já está bem formado e as manobras de Barlow e Ortolani tendem a ser negativas. Espera-se o deslocamento cranial do fêmur da criança, com encurtamento do membro;
-
-- Sinal de Hart: pela limitação à abdução do quadril;
-
-- Sinal de Galeazzi: ao observar os membros inferiores em abdução, nota-se um joelho mais baixo que o outro;
-
-- Diagnóstico nessa fase: radiografia;
-
-- Tratamento: gesso pélvico-podálico.
-
-Figura 10: Sinal de Galeazzi.
+*Figura 10: Sinal de Galeazzi.*
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -172,58 +174,71 @@ Figura 10: Sinal de Galeazzi.
 
 <!-- page:4 -->
 
-- Figura 11: Tratamento DDQ, Gesso Pélvico-Podálico.
+*Figura 11: Tratamento de DDQ com gesso pélvico-podálico.*
 
-> 18 meses:
+#### **> 18 meses**
 
-- O objetivo é evitar sequelas;
+**Achados e Tratamento**
+- Objetivo: evitar sequelas;
+- Clinicamente, é esperada a **marcha de Trendelemburg**;
+- Tratamento: **cirúrgico**, por osteotomias ou prótese de quadril.
 
-- Clinicamente, é esperada a marcha de Trendelemburg;
+### Doença de Legg-Calvé-Perthes
 
-- Tratamento: cirúrgico, por osteotomias ou prótese de quadril.
+**Conceito e Epidemiologia**
+- **Osteonecrose idiopática da cabeça do fêmur**, levando à fragmentação e colabamento ósseo;
+- O processo é autolimitado: ao retirar a carga do paciente, o reestabelecimento do fluxo sanguíneo leva à cessação da progressão e reversão da doença;
+- **Epidemiologia**: masculino, **4-8 anos**, asiáticos.
 
-## DOENÇA DE LEGG-CALVÉ-PERTHES F
+### Epifisiolistese da Cabeça Femoral
 
-- Osteonecrose idiopática da cabeça do fêmur, levando à fragmentação e colabamento ósseo. O processo é autolimitado; ao retirar a carga do paciente, o reestabelecimento do fluxo sanguíneo leva à cessação da progressão e reversão da doença;
+**Conceito e Epidemiologia**
+- **Escorregamento da cabeça femoral**;
+- Ocorre sobretudo em pacientes na puberdade, entre **8-16 anos**, no período do estirão;
+- Mais comum em negros com endocrinopatias; também em obesos baixos ou muito magros;
+- **45% é bilateral**.
 
-- Epidemiologia: Masculino, 4-8 anos, asiáticos.
+**Sinais Clínicos**
+- **Sinal do obturador**: dor do quadril referida no joelho;
+- **Sinal de Drehmann**: rotação externa do quadril à flexão do fêmur.
 
-## EPIFISIOLISTESE DA CABEÇA FEMORAL
+**Achados Radiológicos**
+- **Linha de Klein**: linha que tangencia a borda superior do colo do fêmur, que deve cortar a cabeça femoral;
+- A cabeça femoral abaixo dessa linha é chamada de **sinal de Trethowan** — patognomônico da doença.
 
-- Escorregamento da cabeça femoral;
+**Tratamento**
+- **Cirúrgico**: reposicionar a cabeça femoral nos casos agudos e fixar onde ela está nos casos crônicos para evitar progressão.
 
-- Ocorre sobretudo em pacientes na puberdade de 8-16 F anos no período do estirão. Mais comum em negros com endocrinopatias; obesos baixos ou altos muito magros. 45% é bilateral. F
+*Figura 12: Linha de Klein, normal à direita e epifisiolistese à esquerda.*
 
-- Ao exame clínico, notam-se os sinais: Sinal do OBTURADOR: dor do quadril referida F no joelho; Sinal de Drehmann: rotação externa do quadril à F flexão do fêmur.
+### Sinovite Transitória do Quadril
 
-- Linha de Klein: linha que tangencia a borda superior F do colo do fêmur, que deve cortar a cabeça femoral. A cabeça femoral abaixo dessa linha é chamada de sinal de Trethowan e é patognomônico da doença;
+**Conceito e Clínica**
+- **Quadro autoimune reativo** decorrente de infecção de vias aéreas superiores (IVAS) recentes;
+- Mais comum no quadril;
+- Mais frequente em pacientes **< 6 anos**, sendo um diagnóstico de exclusão;
+- Apresentação: paciente **afebril**, com histórico de antecedente de IVAS, **sem bloqueio articular** ou outros achados notáveis.
 
-- Tratamento: Cirúrgico (reposicionar a cabeça femoral nos casos agudos e fixar onde ela está nos casos F crônicos para evitar a progressão). Figura 12: Linha de Klein, normal à direita e epifisiolistese à esquerda.
+## Referências
 
-## SINOVITE TRANSITÓRIA DO QUADRIL
+Figura 1: Monoartrite infecciosa. Fonte: Atumalia. The Lancet, 2017.
 
-- Quadro autoimune reativo decorrente de uma infecção de vias aéreas superiores recentes. É mais comum no quadril. Mais comum em pacientes < 6 anos, sendo um diagnóstico de exclusão;
+Figura 2 e 3: Ilustrações Acervo Medcof.
 
-- Clínica: paciente afebril, história de antecedente de
+Figura 4: Radiografia de joelho direito demonstrando osteomielite crônica em metáfise de tíbia proximal. Observe a área radioluscente, indicativa de sequestro ósseo (processo cronificado). Fonte: radiopaedia.org
 
-IVAS, sem bloqueio articular ou outros comemorativos.
+Figura 5: Lesão óssea em "casca de cebola", característica do Sarcoma de Ewing. Fonte: orthobullets.com
 
-## REFERÊNCIAS
+Figura 6: Padrões radiológicos sugestivos de osteossarcoma. Triângulo de Codman, à esquerda, e raios de sol, à direita. Fonte: orthobullets.com
 
-Figura 1: Monoartrite infecciosa. Fonte: Atumalia. The Lancet, 2017. Figura 2 e 3: Ilustrações Acervo Medcof;
+Figura 7: Formação de nidus à radiografia e à tomografia. Fonte: orthobullets.com
 
-Figura 4: Radiografia de joelho direito demonstrando osteomielite crônica em metáfise de tíbia proximal. Observe a área radioluscente, indicativa de sequestro ósseo (ou seja, processo cronificado).
+Figura 8: Suspensório de Pavlik. Fonte: Acervo pessoal Medcof.
 
-Fonte: radiopaedia.org Figura 5: Lesão óssea em “casca de cebola”, característica do Sarcoma de Ewing.
+Figura 9: Manobras de Barlow e Ortolani. Fonte: Acervo pessoal Medcof.
 
-Fonte: orthobullets.com Figura 6: Padrões radiológicos sugestivos de osteossarcoma. Triângulo de codman, à esquerda, e raios de sol, à direita.
+Figura 10 e 11: Ilustrações Acervo Medcof.
 
-Fonte: orthobullets.com. Figura 7: Formação de Nidus à radiografia e à tomografia. Fonte: orthobullets.com.
-
-Figura 8: Gesso pélvico-podálico. Fonte: Acervo pessoal Medcof. Figura 9: Manobras de Barlow e Ortolani.
-
-Fonte: Acervo pessoal Medcof. Figura 10 e 11: Ilustrações Acervo Medcof; Figura 12: Linha de Klein, normal à direita e epifisiolistese à esquerda.
-
-Fonte: radiopaedia.org
+Figura 12: Linha de Klein, normal à direita e epifisiolistese à esquerda. Fonte: radiopaedia.org
 
 ![Figura do material - página 4](figure-004-1.webp)

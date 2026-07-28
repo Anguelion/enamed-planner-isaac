@@ -2,133 +2,97 @@
 
 <!-- page:1 -->
 
-Febre Reumática Endocardite (CM)
+## Febre Reumática
 
-## FEBRE REUMÁTICA ENDOCARDITE
+É uma doença inflamatória que age envolvendo articulações, coração, pele e sistema nervoso e surge após um episódio não tratado de faringite por microorganismo do grupo estreptococo.
 
-Critérios de Jones Critérios de Duke 2023 para EI definitiva
+### Critérios de Jones para Diagnóstico
 
-- Maiores: artrite (poliartrite migratória), cardite,
+Para estabelecer o diagnóstico de febre reumática, são necessários:
 
-- Critérios Patológicos nódulos subcutâneos. 2. Endocardite ativa em material/tecido intracardíaco.
+- **2 critérios maiores**, OU
+- **1 critério maior + 2 critérios menores**, com evidência de infecção recente por estreptococos.
 
-Coreia de Sydenham, eritema marginado, 1. Microorganismos + sinais clínicos de EI ativa OU
+#### Critérios Maiores
 
-- Menores: artralgia (populações de mod/alto risco),
+- **Artrite**: poliartrite migratória — em geral, de grandes articulações; é a principal manifestação;
+- **Cardite**: pancardite, mas a manifestação mais comum na fase aguda é insuficiência mitral; na crônica, estenose mitral;
+- **Coreia de Sydenham**: ocorre em 40% das apresentações; apresenta latência prolongada (6–8 semanas); caracteriza-se por movimentos irregulares e involuntários que desaparecem ao sono; presença isoladamente estabelece diagnóstico;
+- **Eritema marginado**: indolor, poupa a face; de característica centrífuga;
+- **Nódulos subcutâneos**: superfícies extensoras; podem ou não ser dolorosos (geralmente não); são raros e quase nunca ocorrem isoladamente.
 
-- Critérios Clínicos: 2 maiores OU 1 maior e 3 menores febre >= 38,5ºC, aumento de PCR ou VHS, aumento OU 5 menores do intervalo PR. | Maiores
+*Figura 1: Eritema Marginatum — de característica centrífuga.*
 
-- Diagnóstico | Evidência microbiológica típica (2 ou 3 São 2 critérios maiores OU 1 critério maior + hemoculturas dependendo do agente ou isoladamente (maior latência, 6-8 semanas) + | Imagem positiva para EI (Eco, TC cardíaca Evidência de infecção recente por PET/CT após 3 meses de um procedimento);
+**OBS.**: Para os nódulos e o eritema, vale saber que tendem a se associar às manifestações de cardite, artrite e Coreia de Sydenham.
 
-2 critérios menores OU Coreia de Sydenham PCR/sorologias) ; estreptococos (cultura, ASLO/anti DNAse B, teste | Critério Cirúrgico: evidência de EI na rápido de antígeno). inspeção cirúrgica.
+#### Critérios Menores
 
-Cardite | Menores
+- **Artralgia**: em populações de moderado a alto risco;
+- **Febre**: ≥ 38,5 °C;
+- **Aumento dos níveis de PCR/VHS**;
+- **Aumento do intervalo PR**.
 
-- Pancardite, mas a manifestação mais comum | Febre, predisposição, fenômenos vasculares, na fase aguda é insuficiência mitral, na crônica, fenômenos imunológicos, evidência estenose mitral. microbiológica que não cumpre critério
+### Diagnóstico de Cardite
 
-- Profilaxia primária: tratar menor, PET/CT < 3 meses, novo sopro faringoamigdalite estreptocócica; regurgitante no exame físico. Benzilpenicilina G benzatina, Critérios de Duke 2023 para EI provável amoxicilina, fenoximetilpenicilina;
+A cardite é a principal consequência, com maior morbidade. O acometimento mais comum é a **valvulite**:
+- **Insuficiência mitral**: de forma aguda;
+- **Estenose mitral**: de forma crônica.
 
-- 1 maior e 1 (ou dois) menores OU Clindamicina, azitromicina, claritromicina
+### Evidência de Infecção por Estreptococo
 
-- 3 menores;
+- Cultura de swab da orofaringe;
+- ASLO/Anti-DNAse B;
+- Teste rápido de detecção do antígeno.
 
-(alérgicos a penicilina); Tratamento
+### Profilaxia Primária
 
-- Profilaxia secundária: penicilina BZT de 21/21 dias.
+Realizar o **tratamento da faringoamigdalite estreptocócica**:
+- Penicilina BZT OU
+- Amoxicilina OU
+- Fenoximetilpenicilina.
+- **Pacientes alérgicos à penicilina**: clindamicina, azitromicina ou claritromicina.
 
-- O regime antimicrobiano vai depender se o Alternativas: sulfadiazina e eritromicina. paciente tem prótese recente (< 1 ano) ou não.
+### Profilaxia Secundária
 
-- Duração: depende da presença ou não de sequela Profilaxia cardíaca após o surto.
+**Esquema**: Penicilina BZT de 21/21 dias.
 
-- Para pacientes com condição predisponente, Sem cardite: até os 18 anos ou por 5 anos após o antes de procedimentos odontológicos surto (o que for mais longo) ; ou gastrointestinais (amoxicilina/ Com cardite, sem sequela: até os 25 anos ou 10 ampicilina + gentamicina) anos após o surto (o que for mais longo);
+**Alternativas**: sulfadiazina ou eritromicina.
 
-- Indicação de cirurgia cardíaca: infecção não Cardite e sequela: até os 40 anos para controlada, insuficiência cardíaca, embolização.
+**Dosagem de sulfadiazina**: < 25 kg: 500 mg ao dia; > 25 kg: 1 g ao dia.
 
-todos, estender indefinidamente se exposição ocupacional.
-
-## FEBRE REUMÁTICA
-
-| Cardite - pancardite; | É a principal consequência, com maior morbidade;
-
-- É uma doença inflamatória que age envolvendo | O acometimento mais comum é a valvulite:
-
-articulações, coração, pele e sistema nervoso e insuficiência mitral (de forma aguda), estenose surge após um episódio não tratado de faringite por mitral (de forma crônica).
-
-microorganismo do grupo estreptococo. | Coréia de Sydenham | Ocorre em 40% das apresentações; DIAGNÓSTICO | Apresenta latência prolongada: 6-8 semanas;
-
-Critérios de Jones | Caracteriza-se por movimentos irregulares e
-
-- Para estabelecer diagnóstico: 2 critérios maiores; OU involuntários, que desaparecem ao sono - a infecção recente por estreptococos. diagnóstico isoladamente!
-
-1 critério maior + 2 critérios menores, na evidência de presença de tal manifestação estabelece
-
-- Maiores: | Eritema marginado (indolor, poupa a face); Artrite - poliartrite migratória – em geral, de | Nódulos subcutâneos (superfícies extensoras); É a principal manifestação. ser dolorosos (geralmente não);
-
-grandes articulações; | Acomete superfícies extensoras e podem ou não
+**Por quanto tempo?**
+- **Sem cardite**: manter até 18 anos de idade ou por 5 anos após o surto (o que for mais longo);
+- **Com cardite, sem sequela**: manter até 25 anos de idade ou 10 anos após o surto (o que for mais longo);
+- **Cardite e sequela**: manter até 40 anos para todos os pacientes; estender indefinidamente se exposição ocupacional (indivíduos que trabalham com crianças).
 
 ---
 
 <!-- page:2 -->
 
-## ENDOCARDITE
+## Endocardite Infecciosa
 
-## CONDIÇÕES PREDISPONENTES
+### Condições Predisponentes
 
-- Lesões valvares pré-existentes, principalmente as regurgitantes;
+- **Lesões valvares pré-existentes**, principalmente as regurgitantes;
+- **Cardiopatia congênita**: CIV, Tetralogia de Fallot; em especial, aquelas de alto fluxo;
+- **Prótese valvar**;
+- **Outros dispositivos intracardíacos**: marcapasso, CDI.
 
-- - Q
+### Quadro Clínico
 
-- - Figura 1: Eritema Marginatum: de característica centrífuga são raros, e que quase nunca ocorrem isoladamente.
+- **Sopro**: em 80% dos casos;
+- **Febre**: em 80–90% dos casos;
+- **Fenômenos embólicos e imunológicos**.
 
-OBS.: Para os nódulos e o eritema, vale saber que Assim, tendem a se associar às manifestações de cardite, artrite e Coreia de Sydenham.
+### Exame Físico
 
-- Menores Artralgia; Em populações de moderado a alto risco. Febre ≥ 38.5 °C; Aumento dos níveis de PCR/ VHS; Aumento do intervalo PR.
+- **Lesões de Janeway**.
 
-- Evidência de infecção por estreptococo Cultura de Swab da orofaringe; ALSO/Anti-DNAse B; Teste rápido de detecção do antígeno.
+*Figura 2: Lesões de Janeway.*
 
-## PROFILAXIA
+- **Nódulos de Osler**.
 
-Primária Realizar o tratamento da faringoamigdalite estreptocócica;
-
-- Penicilina BZT OU
-
-- Amoxicilina OU
-
-- Fenoximetilpenicilina.
-
-- Pacientes alérgicos à penicilina: clindamicina ou azitromicina ou claritromicina.
-
-Profilaxia secundária
-
-- Esquema e manejo Penicilina BZT de 21/21 dias. Alternativa: sulfadiazina; < 25 Kg: 500mg ao dia; > Alternativa: eritromicina; 250 mg, 2x ao dia.
-
-25 Kg: 1g ao dia
-
-- Por quanto tempo? Sem cardite → Manter até 18 anos de idade ou por 5 anos após o surto (o que for mais longo); Com cardite, sem sequela → manter até 25 anos de idade ou 10 anos após o surto (o que for mais longo); Cardite e sequela; Manter até 40 anos para todos os pacientes; Estender indefinidamente, se exposição ocupacional (indivíduos que trabalham com crianças). as regurgitantes;
-
-- Cardiopatia congênita (CIV, Tetralogia de Fallot); Em especial, aquelas de alto fluxo.
-
-- Prótese valvar;
-
-- Outros dispositivos intracardíacos: marcapasso, CDI.
-
-## QUADRO CLÍNICO
-
-- Sopro: em 80% dos casos;
-
-- Febre: em 80-90% dos casos;
-
-- Fenômenos embólicos e imunológicos.
-
-## EXAME FÍSICO
-
-- Lesões de Janeway;
-
-Figura 2: Lesões de Janeway
-
-- Nódulos de Osler;
-
-Figura 3: Nódulos de Osler
+*Figura 3: Nódulos de Osler.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -138,122 +102,121 @@ Figura 3: Nódulos de Osler
 
 <!-- page:3 -->
 
-Tabela 1: Critérios de Duke 2023 para diagnóstico de endocardite infecciosa Critérios maiores
+## Critérios de Duke 2023 para Diagnóstico de Endocardite Infecciosa
 
-- Evidência microbiológica típica
+### Critérios Maiores
 
-{ 1) Hemocultura positiva (duas para micro-organismo { 2) Exames laboratoriais (PCR ou sorologias positivas
+#### Evidência Microbiológica Típica
 
-- Imagem positiva para EI detectados por ECO, TC cardíaca ou PET/CT (>3 mes
+- **Hemocultura positiva** (duas para microorganismo típico ou três para microorganismo atípico) detectada por hemoculturas;
+- Microorganismos típicos: todas as espécies de *Streptococcus*, *E. faecalis*, *Granulicatella* e *Abiotrophia* spp., *Gemella* spp., *Corynebacterium striatum* e *Corynebacterium jeikeium*, *Serratia marcescens*, *Mycobacterium chimaera*, *Candida* spp., *S. aureus*, *S. lugdunensis*, grupo HACEK, *Pseudomonas aeruginosa*, *Cutibacterium acnes*, micobactérias não-TB, estafilococos coagulase negativo.
 
-{ Lesões anatômicas ou metabólicas características d
+#### Imagem Positiva para EI
 
-- Critério cirúrgico
+- **Ecocardiografia**, **TC cardíaca** ou **PET/CT** (> 3 meses após procedimento): lesões anatômicas ou metabólicas características de EI nas valvas ou perivalvares, prótese ou materiais implantados.
 
-{ Evidência de EI documentada à inspeção direta intra **São considerados germes típicos: Todas as espécies de Streptococcus E. faecalis, Granulicatella e Abiotrophia spp., Gemella spp. Se material pro Corynebacterium striatum e Corynebacterium jeikeium, Serratia marcesc (especialmente M. chimaera), e Candida spp.
+#### Critério Cirúrgico
 
-Critério
+- **Evidência de EI documentada** à inspeção direta intraoperatória.
 
-- Febre
+### Critérios Menores
 
-{ Acima de 38ºC;
+- **Febre**: acima de 38 °C;
+- **Predisposição**: EI prévia, valvopatia, cardiopatia congênita não corrigida ou corrigida parcialmente com material protético, cardiomiopatia hipertrófica obstrutiva;
+- **Fenômenos vasculares**: infarto séptico pulmonar, espondilodiscite, embolia arterial (hemorrágicas ou isquêmicas), hemorragia conjuntival, lesões de Janeway, púrpura purulenta, aneurisma micótico, lesões intracranianas;
+- **Fenômenos imunológicos**: glomerulonefrite, nódulos de Osler, manchas de Roth, fator reumatoide positivo;
+- **Evidência microbiológica compatível com EI**: hemocultura positiva que não preenche critério maior, sorologia positiva para microorganismo ou PCR positivo (para *Coxiella*, *Bartonella*, *Tropheryma whipplei*);
+- **Critérios de imagem de material protético ou dispositivo intracardíaco**: atividade metabólica anormal detectada por PET/CT com [18F]FDG nos primeiros 3 meses após implantação;
+- **Exame físico clínico**: piora ou modificação de um sopro pré-existente, nova regurgitação valvar identificada na ausculta.
 
-- Predisposição intracardíacos, cardiomiopatia hipertrófica obstrutiva
+### Diagnóstico Definitivo
 
-{ EI prévia, valvopatia, congênitas não corrigidas, próte
+#### Critérios Patológicos
 
-- Fenômenos vasculares
+- **1) Microorganismos** em vegetação, tecido cardíaco, válvula protética, enxerto de aorta, dispositivo eletrônico intracardíaco implantável (CIED) ou em êmbolo arterial **+ sinais clínicos de EI ativa**, OU
+- **2) Endocardite ativa** com evidência histopatológica.
 
-{ Infarto séptico pulmonar, espondilodiscite, embolia a (hemorrágicas ou isquêmicas), hemorragia conjuntiv
+#### Critérios Clínicos
 
-- Fenômenos imunológicos
+- **2 maiores**, OU
+- **1 maior + 3 menores**, OU
+- **5 menores**.
 
-{ Glomerulonefrite, nódulos de Osler, manchas de Roth
+### Diagnóstico Provável
 
-- Evidência microbiológica compatível com EI;
+- **1 maior + 1 (ou dois) menores**, OU
+- **3 menores**.
 
-{ Hemocultura positiva que não preenche os critérios
+### Diagnóstico Possível
 
-- Critérios de imagem de material protético intracardíaco ou dispositivo int
+- **1 critério maior + 1 ou 2 menores**, OU
+- **3–4 menores**.
 
-{ Atividade metabólica anormal detectada por PET/CT
+**Ações adicionais**:
+- Repetir hemoculturas se negativas;
+- Repetir ecocardiografia transtorácica (ECO-TT) ou transesofágica (TE) em 5–7 dias;
+- Solicitar TC cardíaca para diagnosticar lesões valvares;
+- Solicitar imagem de corpo inteiro para adicionar critérios menores;
+- Se prótese: considerar PET/CT ou cintilografia com leucócitos marcados.
 
-- Exame físico A piora ou modificação de um sopro pré-existen clínicos)
+### Diagnóstico Excluído
 
-{ Nova regurgitação valvar identificada na ausculta, ca DIAGNÓSTICO Diagnóstico definitivo (critérios patológicos OU critérios Patológicos
-
-- 1) Microorganismos intracardíaco + sinais clínicos de Vegetação, tecido cardíaco, válvula protética, enxerto de aorta com evidência de acometimento da válvula, dispositivo eletrônico intracardíaco implantável (CIED) ou em um êmbolo arterial. OU 2) Endocardite ativa (evidência histopatológica);
-
-EI ativa; Clínicos (2 maiores OU 1 maior e 3 menores OU 5 menores) e8423b
-
-- Verificar Tabela 1
-
-Diagnóstico definitivo Critérios Patológicos Critérios Clínicos
-
-- 2 maiores OU
-
-- 1 maior e 3 menores OU
-
-- 5 menores para Coxiella, Bartonella, Tropheryma whipplei (PCR));
-
-Figura 4. os típicos** ou três para micro-organismos atípicos); de EI nas valvas ou perivalvar/prótese/materiais implantados ses);
-
-aoperatória; s (exceto pneumoniae e pyogenes), S. aureus, S. lugdunensis, grupo HACEK, otético intracardíaco, adicionar: staphylococci coagulase negativo, cens, Pseudomonas aeruginosa, Cutibacterium acnes, mycobacteria não-TB os menores eses valvares (inclui transcateter), dispositivos a, droga injetável;
-
-arterial, aneurisma micótico, lesões intracranianas val, lesões de Janeway, púrpura purulenta, etc; h, fator reumatoide positivo;
-
-maiores ou sorologia positiva para microorganismo T com [18F]FDG nos primeiros 3 meses após a implantação tracardíaco;
-
-aso a ecocardiografia não esteja disponível. nte não é suficiente. Endocardite possível s
-
-- Endocardite POSSÍVEL se: 1 critério maior e 1 ou 2 menores; 3-4 menores; Repetir hemoculturas se negativas; Repetir ECOTT ou TE em 5-7 dias; Solicitar TC cardíaca para diagnosticar lesões valvares; Solicitar imagem de corpo inteiro para adicionar critérios menores; Se prótese: considerar PET/CT ou cintilografia com leucócitos marcados.
-
-Endocardite excluída
-
-- Diagnóstico alternativo bem estabelecido que explique os sinais/sintomas OU
-
-- Ausência de recorrência infecção, mesmo com terapia antibiótica por menos de 4 dias OU
-
-- Nenhuma evidência patológica ou macroscópica de endocardite infecciosa (EI) durante a cirurgia ou autópsia, com terapia antibiótica por menos de 4 dias OU
-
-- Não atende aos critérios para possível EI, conforme descrito anteriormente.
+- Diagnóstico alternativo bem estabelecido que explique os sinais/sintomas, OU
+- Ausência de recorrência de infecção com terapia antibiótica por menos de 4 dias, OU
+- Nenhuma evidência patológica ou macroscópica de endocardite infecciosa durante cirurgia ou autópsia com terapia antibiótica por menos de 4 dias, OU
+- Não atende aos critérios para EI possível conforme descrito anteriormente.
 
 ---
 
 <!-- page:4 -->
 
-## TRATAMENTO INDICAÇÃO CIRÚRGICA
+## Tratamento
 
-- Valva nativa ou prótese tardia (cirurgia > 1 ano):
+### Valva Nativa ou Prótese Tardia (cirurgia > 1 ano)
 
-- Infecção não controlada: Ampicilina 2g, EV de 4/4 horas + Oxacilina 2g, EV, de | Febre persistente (antibioticoterapia guiada);
+- **Ampicilina** 2 g, EV, de 4/4 horas + **Oxacilina** 2 g, EV, de 4/4 horas OU **Ceftriaxona** 2 g, EV, de 12/12 horas, por **4 semanas** + **Gentamicina** 3 mg/kg, EV, 1x ao dia, por **2 semanas**.
 
-4/4 horas ou ceftriaxona 2g, EV, de 12/12 horas, por | Bacteremia persistente > 1 semana; 4 semanas + Gentamicina 3 mg/kg, EV, 1x ao dia - | Abscesso;
+### Prótese Valvar Precoce (cirurgia há menos de 1 ano)
 
-4 semanas + Gentamicina 3 mg/kg, EV, 1x ao dia por 2 semanas.
+- **Vancomicina** 15 mg/kg, EV, de 12/12 horas, por **6 semanas** OU **Daptomicina** 10 mg/kg, 1x ao dia + **Rifampicina** 300 mg, VO, de 8/8 horas, por **6 semanas**.
 
-- Prótese valvar precoce (cirurgia há menos de 1 ano): Vancomicina 15 mg/kg, EV de 12/12 horas, por semanas + Gentamicina 3 mg/kg, EV, 1x ao dia, por 2 semanas;
+## Indicação Cirúrgica
 
-6 semanas ou daptomicina 10 mg/kg 1x ao dia + Rifampicina 300 mg, VO, de 8/8 horas, por 6 PROFILAXIA
+- **Infecção não controlada**: febre persistente (antibioticoterapia guiada); bacteremia persistente > 1 semana; abscesso;
+- **Insuficiência cardíaca**: choque cardiogênico; edema agudo de pulmão;
+- **Embolização**: vegetação ≥ 10 mm com embolização recorrente a despeito do tratamento;
+- **Complicações locais**: bloqueio atrioventricular (BAV) novo; fístula;
+- **Patógeno desafiador**: fungo ou bactéria multidrogarresistente — *S. aureus* em próteses.
 
-- Indicações (pela Diretriz Brasileira de Indivíduos com condições predisponentes:
+## Profilaxia
 
-Valvopatias 2020): prótese valvar, valvopatias moderadas ou importantes (apenas procedimento odontológico), cardiopatia congênita não reparada ou corrigida parcialmente ou corrigida com material protético, B endocardite prévia; C
+### Indicações (Diretriz Brasileira de Valvopatias 2020)
 
-- Procedimentos odontológicos (com manipulação gengival): S Amoxicilina 2g, VO – 1 hora antes do procedimento; a Alérgico: clindamicina 600mg.
+Indivíduos com condições predisponentes:
+- Prótese valvar;
+- Valvopatias moderadas ou importantes (apenas procedimento odontológico);
+- Cardiopatia congênita não reparada ou corrigida parcialmente, ou corrigida com material protético;
+- Endocardite prévia.
 
-- Trato gastrointestinal ou em trato genito-urinário associado a lesão de mucosa: S Ampicilina 2g, EV + gentamicina 1,5 mg/kg, EV – 30 a min à 1 hora antes do procedimento; Alérgico, trocar ampicilina por vancomicina 1g. Após 6 horas do procedimento: ampicilina 1g, EV.
+### Procedimentos Odontológicos (com manipulação gengival)
 
-Não farmacológica
+- **Amoxicilina** 2 g, VO – 1 hora antes do procedimento;
+- **Alérgico**: clindamicina 600 mg.
 
-- Contraindicação a tatuagens e piercings. | Abscesso; BAV novo; Fístula; Complicações locais; Fungo ou bactéria multidroga resistente – S. aureus em próteses.
+### Trato Gastrointestinal ou Genito-Urinário (com lesão de mucosa)
 
-- Insuficiência cardíaca: Choque cardiogênico; Edema agudo de pulmão.
+- **Ampicilina** 2 g, EV + **Gentamicina** 1,5 mg/kg, EV – 30 min a 1 hora antes do procedimento;
+- **Alérgico**: trocar ampicilina por vancomicina 1 g;
+- **Após 6 horas do procedimento**: ampicilina 1 g, EV.
 
-- Embolização: Vegetação >= 10 mm com embolização recorrente a despeito do tratamento.
+### Medidas Não Farmacológicas
 
-## REFERÊNCIAS
+- **Contraindicação** a tatuagens e piercings.
 
-Figura 1: Eritema Marginatum: de característica centrífuga. Binotto MA, Guilherme L, Tanaka AC. Rheumatic fever. Images Paediatric Cardiol 2002; 11:12.
+## Referências
 
-Figura 2: Lesões de Janeway Silverman, M et. al. Extracardiac Manifestations of Infective Endocarditis and Their Historical Descriptions. The American Journal of Cardiology 2007 Dec 15;100(12):1802-7 Figura 3: Nódulos de Osler Silverman, M et. al. Extracardiac Manifestations of Infective Endocarditis and Their Historical Descriptions. The American Journal of Cardiology 2007 Dec 15;100(12):1802-7
+Figura 1: Eritema Marginatum — de característica centrífuga. Binotto MA, Guilherme L, Tanaka AC. Rheumatic fever. Images Paediatric Cardiol 2002; 11:12.
+
+Figura 2: Lesões de Janeway. Silverman, M et. al. Extracardiac Manifestations of Infective Endocarditis and Their Historical Descriptions. The American Journal of Cardiology 2007 Dec 15;100(12):1802-7.
+
+Figura 3: Nódulos de Osler. Silverman, M et. al. Extracardiac Manifestations of Infective Endocarditis and Their Historical Descriptions. The American Journal of Cardiology 2007 Dec 15;100(12):1802-7.

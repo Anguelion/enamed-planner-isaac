@@ -2,65 +2,27 @@
 
 <!-- page:1 -->
 
-Miopatias Autoimunes Sistêmicas - Dermatomiosite Polimiosite e Anti-sintetase (CM) Grupo de doenças caracterizadas pela lesão imune às
+## Introdução
 
-- Polimiosite: é a dermatomiosite sem pele e que diferentes partes do miócito que inclui: acomete o endomísio;
+**Miopatias Autoimunes Sistêmicas** — Grupo de doenças caracterizadas pela **lesão imune às diferentes partes do miócito**.
 
-- Dermatomiosite: acometimento perimisial e
+### Incluem:
 
-- Miopatia necrosante autoimune: fraqueza de perivascular. Caracterizada pelo acometimento rápida evolução, maiores níveis de CPK, associação proximal, leve predomínio feminimo, presença de com estatinas;
+- Dermatomiosite
+- Polimiosite
+- Síndrome antissintetase
+- Miopatia necrosante autoimune
+- Miosite por corpos de inclusão
 
-Gottron e heliótropo. Apresenta a maior associação
+### Características Gerais
 
-- Miosite por corpos de inclusão: predomina em com neoplasias; homens, mais velhos, possui lenta evolução e a
+- **Grupo heterogêneo**
+- **Raras**: incidência até 8 por milhão/ano
+- **Fraqueza muscular** de predomínio proximal e simétrica (exceto na miosite por corpos de inclusão)
 
-- Síndrome antissintetase: lembrar dos 5 sintomas fraqueza pode ser distal e assimétrica.
+Figura 1: Biópsia muscular normal.
 
-cardinais: artrite, miosite, febre, doença intersticial e “mãos de mecânico”. Associação com o Anti-Jo-1;
-
-## MIOPATIAS AUTOIMUNES
-
-- CPK: aumentada, secundariamente à destruição
-
-## SISTÊMICAS de miócitos
-
-- TGO, TGP e LDH: aumentadas, secundariamente à
-
-Incluem as miopatias inflamatórias autoimunes: destruição de miócitos;
-
-- Dermatomiosite;
-
-- Eletroneuromiografia: padrão miopático;
-
-- Síndrome antissintetase;
-
-- Ressonância magnética: inflamação ativa com edema
-
-- Polimiosite; e áreas de fibrose e lipossubstituição sequelares.
-
-- Miopatia necrosante imunomediada;
-
-- Miosite por corpos de inclusão;
-
-## MIOPATIAS INFLAMATÓRIAS
-
-## AUTOIMUNES
-
-- Grupo heterogêneo;
-
-- Fraqueza muscular de predomínio proximal e simétrica
-
-(exceto na miosite por corpos de inclusão);
-
-- Raras (incidência até 8 por milhão/ano).
-
-- Verificar Figura 1
-
-## EXAMES COMPLEMENTARES
-
-Os exames a seguir podem estar alterados em todos os subtipos de miopatias inflamatórias autoimunes: Figura 1: Biópsia muscular normal.
-
-Figura 2: Ressonância magnética de coxas - Sequência ponderada em T1 evidencia lipossubstituição (ventres musculares hipotróficos com estrias de gordura de permeio) e a sequência ponderada em T2 evidencia edema muscular (hipersinal), principalmente no ventre muscular do quadríceps.
+Figura 2: Ressonância magnética de coxas. Sequência ponderada em T1 evidencia lipossubstituição (ventres musculares hipotróficos com estrias de gordura) e sequência ponderada em T2 evidencia edema muscular (hipersinal), principalmente no ventre muscular do quadríceps.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -70,131 +32,157 @@ Figura 2: Ressonância magnética de coxas - Sequência ponderada em T1 evidenci
 
 <!-- page:2 -->
 
-## DERMATOMIOSITE
+## Exames Complementares
 
-- Predomínio em mulheres (2:1);
+**Os exames a seguir podem estar alterados em todos os subtipos:**
 
-- Picos de incidência entre 10 a 15 e 40 a 55 anos;
+- **CPK**: aumentada, secundariamente à destruição de miócitos
 
-- Acometimento perimisial e perivascular
+- **TGO, TGP e LDH**: aumentadas, secundariamente à destruição de miócitos
 
-(linfócitos T CD4+);
+- **Eletroneuromiografia**: padrão miopático
 
-- Possui autoanticorpos específicos.
+- **Ressonância magnética**: inflamação ativa com edema e áreas de fibrose e lipossubstituição sequelares
 
-Associação com neoplasias
+---
 
-- É a miopatia inflamatória autoimune com maior associação a neoplasias;
+## Dermatomiosite
 
-- Primeiros 5 anos de doença;
+### Epidemiologia e Apresentação
 
-- Aumentam o risco de neoplasia: Início >40 anos; Disfagia importante; Má resposta ao corticoide; Lesões de pele necróticas; Figura 4: Heliótropo. Autoanticorpos: anti-NXP-2 e anti-TIF-1-gama.
+- **Predomínio em mulheres**: 2:1
+- **Picos de incidência**: 10-15 anos e 40-55 anos
+- **Acometimento**: perimisial e perivascular (linfócitos T CD4+)
+- **Autoanticorpos específicos**: sim
 
-Quadro clínico Caracteriza-se por fraqueza muscular:
+### Quadro Clínico Muscular
 
-- Insidiosa (2-6 meses);
+Caracteriza-se por **fraqueza muscular**:
 
-- Predomínio proximal e simétrico;
+- Insidiosa (2-6 meses)
+- Predomínio proximal e simétrico
+- Afeta MMSS e MMII
+- Dificuldade para levantar da cadeira, subir escadas, pentear o cabelo
 
-- MMSS e MMII;
+### Lesões de Pele Típicas
 
-- Dificuldade para levantar da cadeira, subir escadas, pentear o cabelo.
+- **Heliótropo**: eritema nas pálpebras
 
-Figura 5: Pápulas de Gottron. Figura 6: Sinal do “V do decote”. Figura 3: Padrão de acometimento muscular na dermatomiosite.
+Figura 4: Heliótropo.
 
-Além disso, apresenta-se com lesões de pele típicas:
+- **Gottron**: pápulas eritematosas sobre articulações
 
-- Heliótropo;
+Figura 5: Pápulas de Gottron.
 
-- Gottron;
+- **Sinal do "V do decote"**: eritema em forma de V no peito
 
-- Sinal do “V do decote”;
+Figura 6: Sinal do "V do decote".
 
-- Sinal do “xale”;
+- **Sinal do "xale"**: eritema nos ombros e parte superior do dorso
 
-- Sinal do “coldre”.
+Figura 7: Sinal do "xale".
 
-Alguns pacientes com dermatomiosite não apresentam fraqueza muscular ou elevação de CPK, apenas lesões de pele!
+- **Sinal do "coldre"**: eritema na lateral da cintura pélvica
 
-Figura 7: Sinal do “xale”.
+Figura 8: Sinal do "coldre".
 
-![Figura do material - página 2](figure-002-1.webp)
+> Importante: alguns pacientes com dermatomiosite **não apresentam fraqueza muscular** ou elevação de CPK, apenas lesões de pele!
 
-![Figura do material - página 2](figure-002-2.webp)
+Figura 3: Padrão de acometimento muscular na dermatomiosite.
+
+### Associação com Neoplasias
+
+**É a miopatia inflamatória autoimune com MAIOR associação a neoplasias** (primeiros 5 anos de doença).
+
+**Fatores que aumentam risco de neoplasia**:
+
+- Início > 40 anos
+- Disfagia importante
+- Má resposta ao corticoide
+- Lesões de pele necróticas
+
+### Exames Complementares na Dermatomiosite
+
+- **Autoanticorpos**:
+  - **Anti-Mi-2**: "bonzinho", quadro cutâneo clássico
+  - **Anti-NXP-2 e anti-TIF-1-gama**: associação com neoplasia
+  - **Anti-MDA5**: lesões de pele ulceradas e intersticiopatia pulmonar
+
+- **Biópsia**: infiltrado perivascular e perimisial de linfócitos T CD4+
+
+- **Tomografia de tórax**: dermatomiosite também pode ter intersticiopatia associada
 
 ---
 
 <!-- page:3 -->
 
-## POLIMIOSITE
+## Polimiosite
 
-- Predomínio em mulheres (2:1);
+### Epidemiologia e Apresentação
 
-- Predomínio dos 40 aos 55 anos;
+- **Predomínio em mulheres**: 2:1
+- **Predomínio etário**: 40-55 anos
+- **Quadro clínico**: semelhante à dermatomiosite, mas **sem lesões de pele**
+- **Biópsia**: infiltrado de linfócitos T CD8+ em endomísio
+- **Autoanticorpos**: não há autoanticorpos específicos
 
-- Quadro clínico semelhante à dermatomiosite, mas sem lesões de pele;
+---
 
-Figura 8: Sinal do “coldre”. Exames complementares na dermatomiosite
+## Síndrome Antissintetase
 
-- Autoanticorpos: Anti-Mi-2: “bonzinho”, quadro cutâneo clássico; Anti-NXP-2 e anti-TIF-1-gama: associação com neoplasia; Anti-MDA5: lesões de pele ulceradas e intersticiopatia pulmonar;
+### Epidemiologia e Apresentação
 
-- Biópsia: infiltrado perivascular e perimisial de linfócitos T CD4+;
+- **Predomínio em mulheres**: 2:1
+- **Predomínio etário**: 40-55 anos
 
-- Tomografia de tórax: dermatomiosite também pode ter intersticiopatia associada.
+### Pentade Clínica (5 Sintomas Cardinais)
 
-## SÍNDROME ANTISSINTETASE
+1. **Miosite**
+2. **Doença pulmonar intersticial**
+3. **Artrite**
+4. **Fenômeno de Raynaud**
+5. **"Mãos de mecânico"** (com lesões eritematosas nas articulações e fissuras nas mãos)
 
-- Predomínio em mulheres (2:1);
+Figura 9: Mãos de mecânico e intersticiopatia em paciente com síndrome antissintetase.
 
-- Predomínio dos 40 a 55 anos;
+### Exames Complementares
 
-- Caracteriza-se clinicamente por: Miosite; Doença pulmonar intersticial; Artrite; Fenômeno de Raynaud; “Mãos de mecânico”.
+- **Autoanticorpo anti-Jo-1**: positivo (associação clássica)
+- **Tomografia de tórax**: intersticiopatia
 
-- Os exames complementares na síndrome antissintetase incluem: Autoanticorpo anti-Jo-1 positivo; Tomografia de tórax com intersticiopatia.
+---
 
-- Verificar Figura 9
+## Miopatia Necrosante Imunomediada
 
-Figura 9: Mãos de mecânico e intersticiopatia em paciente com s lesões de pele;
+### Características
 
-- Biópsia mostra infiltrado de linfócitos T CD8+ em endomísio;
+- **Predomínio em mulheres**
+- **Predomínio etário**: 40-50 anos
+- **Maiores níveis de CPK** (podem chegar a > 10.000 U/L)
+- **Fraqueza**: proximal, simétrica, de rápida evolução, mais intensa em membros inferiores
 
-- Não há autoanticorpos específicos.
+### Exames Complementares
 
-## MIOPATIA NECROSANTE IMUNOMEDIADA
+- **Biópsia**: miócitos necróticos com pouca ou nenhuma inflamação
+- **Autoanticorpos**: anti-HMGCR ou anti-SRP podem ser positivos
+- **Associação**: uso de estatinas, principalmente em idosos
 
-- Predomínio em mulheres;
+---
 
-- Predomínio dos 40 aos 50 anos;
+## Miosite por Corpos de Inclusão
 
-- Apresenta os maiores níveis de CPK (podem chegar a
+### Características
 
->10.000 U/L);
-
-- Fraqueza proximal, simétrica e de rápida evolução, sendo mais intensa em membros inferiores;
-
-- Biópsia mostra miócitos necróticos com pouca ou nenhuma inflamação;
-
-- Autoanticorpos anti-HMGCR ou anti-SRP podem ser positivos;
-
-- Associa-se ao uso de estatinas, principalmente em idosos.
-
-## MIOSITE POR CORPOS DE INCLUSÃO
-
-- Predomínio em homens (2:1);
-
-- Predomínio após os 50 anos de idade;
-
-- Evolução lenta da fraqueza;
-
-- Pode cursar com fraqueza distal e assimétrica;
-
-r
-
-- Classicamente associa-se a atrofia do antebraço e do quadríceps femoral;
-
-- Pouca resposta ao tratamento imunossupressor.
+- **Predomínio em homens**: 2:1
+- **Predomínio etário**: após 50 anos
+- **Evolução**: lenta da fraqueza
+- **Padrão de fraqueza**: pode ser **distal e assimétrica** (diferente das outras miopatias)
+- **Atrofia clássica**: do antebraço e do quadríceps femoral
+- **Resposta ao tratamento**: pouca resposta ao tratamento imunossupressor
 
 Figura 10: Atrofia dos quadríceps femorais e do antebraço.
+
+Figura 11: Atrofia da musculatura flexora dos antebraços e do quadríceps femoral.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -204,48 +192,42 @@ Figura 10: Atrofia dos quadríceps femorais e do antebraço.
 
 <!-- page:4 -->
 
-## REFERÊNCIAS
+## Tratamento das Miopatias Inflamatórias Autoimunes
 
-Figura 1: Biópsia muscular normal. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// d r h d r d r d r p j a p p j a p d r a Figura 11: Atrofia da musculatura flexora dos antebraços e do quadríceps femoral. D c TRATAMENTO DAS MIOPATIAS INFLAMATÓRIAS AUTOIMUNES
+- **Corticoterapia**: em pulsoterapia nos quadros graves
 
-- Corticoterapia (em pulsoterapia nos quadros graves); B
+- **Imunoglobulina intravenosa**: nos quadros graves ou refratários
 
-- Imunoglobulina intravenosa (nos quadros graves i t ou refratários); 1
+- **Associar corticoide a um segundo imunossupressor**, que pode ser:
+  - Metotrexato
+  - Azatioprina
+  - Micofenolato de mofetila
+  - Ciclosporina
 
-- Associar corticoide a um segundo imunossupressor, h que pode ser: metotrexato, azatioprina, micofenolato de mofetila ou ciclosporina;
+- **Reabilitação física**: exercícios físicos indicados em todas as fases da doença
 
-- Reabilitação física, sendo os exercícios físicos indicados em todas as fases da doença. da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 02 junho 2025.
+---
 
-Figura 2: Ressonância magnética de coxas. QUIZLET. Miopatias inflamatórias. [S.l.]: Quizlet, [202–]. Disponível em:
+## Referências
 
-https://quizlet.com/br/788487206/miopatias-inflamatorias-flash-cards/. Acesso em: 2 jun. 2025. Figura 4: Heliótropo.
+Figura 1: Biópsia muscular normal. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 02 junho 2025.
 
-AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 02 junho 2025.
+Figura 2: Ressonância magnética de coxas. QUIZLET. Miopatias inflamatórias. [S.l.]: Quizlet, [202–]. Disponível em: https://quizlet.com/br/788487206/miopatias-inflamatorias-flash-cards/. Acesso em: 2 jun. 2025.
 
-Figura 5: Pápulas de Gottron. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 02 junho 2025.
+Figura 4: Heliótropo. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 02 junho 2025.
 
-Figura 6: Sinal do “V do decote”. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 02 junho 2025.
+Figura 5: Pápulas de Gottron. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 02 junho 2025.
 
-Figura 7: Sinal do “xale”. CIUDAD-BLANCO, C. et al. Dermatomiositis: estudio y seguimiento de 20 pacientes. Actas Dermo-Sifiliográficas, Madrid, v. 102, n. 6, p. 448–455, jul./ago. 2011. DOI: 10.1016/j.ad.2010.10.017. Disponível em: https://www.
+Figura 6: Sinal do "V do decote". AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 02 junho 2025.
 
-actasdermo.org/es-dermatomyositis-assessment-follow-up-20patients-articulo-S1578219011000060. Acesso em: 2 jun. 2025.
+Figura 7: Sinal do "xale". CIUDAD-BLANCO, C. et al. Dermatomiositis: estudio y seguimiento de 20 pacientes. Actas Dermo-Sifiliográficas, Madrid, v. 102, n. 6, p. 448-455, jul./ago. 2011. DOI: 10.1016/j.ad.2010.10.017. Disponível em: https://www.actasdermo.org/es-dermatomyositis-assessment-follow-up-20patients-articulo-S1578219011000060. Acesso em: 2 jun. 2025.
 
-Figura 8: Sinal do “coldre”. CIUDAD-BLANCO, C. et al. Dermatomiositis: estudio y seguimiento de 20 pacientes. Actas Dermo-Sifiliográficas, Madrid, v. 102, n. 6, p. 448–455, jul./ago. 2011. DOI: 10.1016/j.ad.2010.10.017. Disponível em: https://www.
+Figura 8: Sinal do "coldre". CIUDAD-BLANCO, C. et al. Dermatomiositis: estudio y seguimiento de 20 pacientes. Actas Dermo-Sifiliográficas, Madrid, v. 102, n. 6, p. 448-455, jul./ago. 2011. DOI: 10.1016/j.ad.2010.10.017. Disponível em: https://www.actasdermo.org/es-dermatomyositis-assessment-follow-up-20patients-articulo-S1578219011000060. Acesso em: 2 jun. 2025.
 
-actasdermo.org/es-dermatomyositis-assessment-follow-up-20patients-articulo-S1578219011000060. Acesso em: 2 jun. 2025.
+Figura 9: Mãos de mecânico e intersticiopatia em paciente com síndrome antissintetase. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 02 junho 2025.
 
-Figura 9: Mãos de mecânico e intersticiopatia em paciente com síndrome antissintetase. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 02 junho 2025.
+Figura 10: Atrofia dos quadríceps femorais e do antebraço. MASTAGLIA, F. L.; NEEDHAM, M. Inclusion body myositis: A review of clinical and genetic aspects, diagnostic criteria and therapeutic approaches. Journal of Clinical Neuroscience, Amsterdam, v. 22, n. 1, p. 6-13, jan. 2015. DOI: 10.1016/j.jocn.2014.09.012. Disponível em: https://www.jocn-journal.com/article/S0967-5868(14)00619-5/fulltext. Acesso em: 2 jun. 2025.
 
-Figura 10: Atrofia dos quadríceps femorais e do antebraço. MASTAGLIA, F. L.; NEEDHAM, M. Inclusion body myositis: A review of clinical and genetic aspects, diagnostic criteria and therapeutic approaches.
-
-Journal of Clinical Neuroscience, Amsterdam, v. 22, n. 1, p. 6–13, jan. 2015. DOI: 10.1016/j.jocn.2014.09.012. Disponível em: https://www.jocn-journal.
-
-com/article/S0967-5868(14)00619-5/fulltext. Acesso em: 2 jun. 2025. Figura 11: Atrofia da musculatura flexora dos antebraços e do quadríceps femoral.
-
-BRADY, S.; POULTON, J.; MULLER, S. Inclusion body myositis: Correcting impaired mitochondrial and lysosomal autophagy as a potential therapeutic strategy. Autoimmunity Reviews, Amsterdam, v. 23, n. 11, p.
-
-103644, nov. 2024. DOI: 10.1016/j.autrev.2024.103644. Disponível em: https://www.sciencedirect.com/science/article/pii/S1568997224001356.
-
-Acesso em: 2 jun. 2025.
+Figura 11: Atrofia da musculatura flexora dos antebraços e do quadríceps femoral. BRADY, S.; POULTON, J.; MULLER, S. Inclusion body myositis: Correcting impaired mitochondrial and lysosomal autophagy as a potential therapeutic strategy. Autoimmunity Reviews, Amsterdam, v. 23, n. 11, p. 103644, nov. 2024. DOI: 10.1016/j.autrev.2024.103644. Disponível em: https://www.sciencedirect.com/science/article/pii/S1568997224001356. Acesso em: 2 jun. 2025.
 
 ![Figura do material - página 4](figure-004-1.webp)

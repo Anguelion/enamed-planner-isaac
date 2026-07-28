@@ -2,366 +2,295 @@
 
 <!-- page:1 -->
 
-Acidente com Animal Peçonhento (PED) Raiva e Tétano (PED)
+## Escorpionismo
 
-## ESCORPIONISMO
+Acidente com animal peçonhento — agravo de notificação compulsória. É o acidente de maior prevalência no meio urbano. A maioria dos casos tem evolução benigna; porém, na população pediátrica, há risco de manifestação de maior gravidade.
 
-- Leve (dor e parestesia local): observar
+### Espécies de Importância Médica
 
-- Moderado (Dor local intensa + ≥1: náuseas, vômitos, sudorese, sialorreia discreta, agitação e taquicardia)
+- **Tityus serrulatus** (amarelo) – acidentes de maior gravidade;
+- **Tityus bahiensis** e **Tityus stigmurus**.
 
-2 a 3 ampolas
+*Figura 1: Tityus serrulatus (amarelo).*
 
-## OFIDISMO
+### Classificação Clínica e Conduta
 
-Acidente Acidente Botrópico Ação do Proteolítica: Edema local, bolhas e ne veneno Coagulante; Hemorrágico.
+#### Leve
 
-ARANEÍSMO: LOXOCELES Característica:
+- **Clínica**: dor e parestesia local.
+- **Conduta**: manter em observação por 6–12 h; não é necessário soro.
 
-- Dor em queimação, lesões hemorrágicas focais, mescladas com áreas pálidas de isquemia (placa marmórea) e necrose.
+#### Moderado
 
-## TIPO DE EXPOSIÇÃO
+- **Clínica**: dor local intensa associada a ≥ 1 manifestações (náuseas, vômitos, sudorese, sialorreia discreta, agitação, taquicardia).
+- **Soroterapia**: 2 a 3 ampolas, EV.
 
-## CONTATO INDIRETO
+#### Grave
 
-- Tocar/ dar de comer;
+- **Clínica**: forma moderada + ≥ 1 manifestações (vômitos profusos e incoercíveis, sudorese profusa, sialorreia intensa, prostração, convulsão, coma, bradicardia, insuficiência cardíaca, edema agudo de pulmão, choque).
+- **Soroterapia**: 4 a 6 ampolas, EV.
 
-- Lambedura de pele íntegra;
+### Mecanismo de Ação do Veneno
 
-- Contato em pele íntegra com secreções ou excreções de animal, ainda que raivoso ou de caso humano.
+- O veneno age nos canais de sódio produzindo despolarização e liberação de catecolaminas e acetilcolina;
+- A dor local é um sintoma constante;
+- Dentre as apresentações de maior gravidade, atuar com cautela à ocorrência do choque cardiogênico.
 
-## LEVE
+### Exames Laboratoriais
 
-- Mordedura ou arranhadura superficial no tronco ou nos membros, exceto em mãos e pés;
+- **Tempo de coagulação (TC)**: alargado;
+- **Hemograma**: leucocitose, desvio à esquerda, plaquetopenia;
+- **CPK e LDH**: elevados.
 
-- Lambedura de lesões superficiais.
+### Soro Antiveneno
 
-GRAVE:
-
-- Mordedura ou arranhadura nas mucosas, no segmento cefálico, nas mãos ou nos pés;
-
-múltiplas ou extensas; profunda; causada por mamífero silvestre.
-
-- Lambedura de lesões profundas ou de mucosas;
-
-## ANIMAIS PEÇONHENTOS
-
-- Agravo de notificação compulsória.
-
-- Acidente de maior prevalência no meio urbano;
-
-- A maioria dos casos tem evolução benigna, porém, na população pediátrica, há risco de manifestação de maior gravidade.
-
-- Espécies de importância médica: Tityus serrulatus (amarelo) – acidentes de maior gravidade T. bahiensis e T. stigmurus. - Grave (forma moderada + ≥1: vômitos profusos e incoercíveis, sudorese profusa, sialorreia intensa, choque): 4 a 6 ampolas.
-
-): prostração, convulsão, coma, bradicardia, IC, EAP e Acidente Crotálico Neurotóxica; Miotóxica: rabdomiólise; LRAecrose;
-
-principal complicação e causa de óbito; Coagulante. PROFILAXIA DA RAIVA HUMANA:
-
-- Para todos os casos: lavar com água e sabão.
-
-Cão ou gato NÃO Cão ou gato PASSÍVEL
-
-## PASSÍVEL DE
-
-## DE OBSERVAÇÃO por
-
-OBSERVAÇÃO por 10 10 dias e SEM SINAIS dias ou COM SINAIS sugestivos de raiva sugestivos de raiva NÃO INDICAR NÃO INDICAR PROFILAXIA. PROFILAXIA.
-
-Observar o animal por por 10 dias → se morrer, desaparecer
-
-## VACINA
-
-ou sinais de raiva, indicar
-
-Observar o animal por por 10 dias → se morrer, desaparecer ou VACINA + SORO (SAR apresentar sinais ou IGHAR).
-
-de raiva, indicar VACINA + SORO Figura 1: Tityus serrulatus (amarelo).
-
-![Figura do material - página 1](figure-001-1.webp)
+- Soro antiescorpiônico (SAEes) ou soro antiaracnídico (SAAr).
 
 ---
 
 <!-- page:2 -->
 
-- O veneno age nos canais de sódio
+## Ofidismo (Acidentes Ofídicos)
 
-- Exames laboratoriais:
+### Principais Serpentes Associadas a Acidentes na Infância
 
-produzindo despolarização e liberação de | Tempo de coagulação (TC): alargado; catecolaminas e acetilcolina; | Hemograma: leucocitose, desvio à
+- **Gênero Bothrops** (jararaca): aproximadamente 75% dos casos;
+- **Gênero Crotalus** (cascavel): aproximadamente 10% dos casos;
+- **Gênero Lachesis** (surucucu): raro;
+- **Gênero Micrurus** (coral): raro.
 
-- A dor local é um sintoma constante e outras esquerda, plaquetopenia;
+### Acidente Botrópico (Jararaca)
 
-manifestações clínicas podem ocorrer, definindo a | CPK e LDH: elevados; manifestações clínicas podem ocorrer, definindo a gravidade e necessidade de soroterapia.
+#### Ações do Veneno
 
-| O soro pode ser soro antiescorpiônico (SAEEs) ou soro antiaracnídico (SAAr).
+- **Proteolítica**: edema local, bolhas e necrose;
+- **Coagulante**: coagulopatia de consumo, principalmente fatores X e protrombina, semelhante à coagulação intravascular disseminada (CIVD);
+- **Hemorrágica**: hemorragias alterando a membrana basal e função das plaquetas.
 
-- Dentre as apresentações de maior gravidade, devemos nos atentar à ocorrência do choque cardiogênico.
+#### Exames Laboratoriais
 
-Tabela 1: Classificação e Conduta no Acidente Escorpiônico Classificação Clínica Soro Não é necessária.
+- **Tempo de coagulação (TC)**: normal ou alterado;
+- **Hemograma**: leucocitose, desvio à esquerda;
+- **CPK e LDH**: elevados;
+- **Urina 1, eletrólitos, ureia e creatinina**: podem evidenciar leucocitúria, hematúria, proteinúria e lesão renal aguda (LRA).
 
-Leve Dor e parestesia local. Manter em observação por 6-12h Dor local intensa associada a ≥1 manifestações:
+#### Classificação Clínica e Conduta
 
-2 a 3 ampolas Moderado náuseas, vômitos, EV sudorese, sialorreia discreta, agitação e taquicardia. Forma moderada + ≥1 : vômitos profusos e incoercíveis, sudorese profusa, sialorreia intensa, 4 a 6 ampolas Grave * prostração, convulsão, EV s coma, bradicardia, insuficiência cardíaca, edema agudo de pulmão e choque.
+| Aspecto | Leve | Moderado | Grave |
+|---|---|---|---|
+| Local (dor, edema, equimose) | Ausente/discreto | Evidente | Intensa/grave |
+| Sistêmico (hemorragia, choque, anúria) | Ausente | Ausente | Presente |
+| TC | Normal ou alterado | Normal ou alterado | Normal ou alterado |
+| **Soroterapia (ampolas)** | **2–4** | **4–8** | **12** |
 
-- ACIDENTES OFÍDICOS
+*SAB = soro antibotrópico; SABC = soro antibotrópico-crotálico; SABL = soro antibotrópico-laquético.*
 
-- Principais serpentes associadas a acidentes na infância: Gênero Bothrops (jararaca): aproximadamente 75% dos casos; Gênero Crotalus (cascavel): aproximadamente 10% dos casos; Gênero Lachesis (surucucu): raro; Gênero Micrurus (coral): raro.
+#### Tratamento
 
-- Acidente Botrópico (Jararaca)
+- **Soroterapia em todos**, diferenciando a dose de acordo com a gravidade clínica;
+- Se TC permanecer alterado por 24 h após soro, é indicada dose adicional de 2 ampolas de antiveneno.
 
-- Ações do veneno: Proteolítica: Edema local, bolhas e necrose; Coagulante: coagulopatia de consumo, principalmente fator X e protrombina, semelhante à coagulação intravascular disseminada (CIVD); Hemorrágica: hemorragias alterando a membrana basal e função das plaquetas.
+### Acidente Crotálico (Cascavel)
 
-- | CPK e LDH: elevados; Urina 1, eletrólitos, uréia e creatinina evidenciando leucocitúria, hematúria.
+#### Característica
 
-Lesão Renal Aguda (LRA), proteinúria,
+- Apresenta guizo/chocalho na cauda.
 
-- Tratamento: soroterapia em todos, diferenciando a dose de acordo com a gravidade clínica. Se TC permanecer alterado por 24 h após soro, é indicada dose adicional de 2 ampolas de antiveneno.
+#### Ações do Veneno
 
-Tabela 2: Classificação e Conduta no Acidente Botrópico Clínica e Leve Moderado Grave tratamento Intensa/ grave;
+- **Neurotóxica**: paralisias musculares, causando a fácies miastênica;
+- **Miotóxicas**: rabdomiólise, que pode evoluir para lesão renal aguda (LRA) — principal complicação e causa de óbito;
+- **Coagulante**: incoagulabilidade sanguínea, porém sem alterações das plaquetas e com rara manifestação hemorrágica.
 
-Local: dor, Critério isolado Ausente/ edema e Evidente suficiente para discreto equimose classificar como grave.
-
-Sistêmico: hemorragia grave, Ausente Ausente Presente choque, anúria Tempo de Normal ou Normal ou Normal ou coagulação alterado alterado alterado Soroterapia intravenosa* 2-4 4-8 12 (ampolas)
-
-*SAB = soro antibotrópico; SABC = soro antibotrópico-crotálico; SABL = soro antibotrópico-laquético.
-
-Acidente Crotálico (Cascavel)
-
-- Apresenta guizo/chocalho na cauda;
-
-- Ações do veneno: Neurotóxica: paralisias musculares, causando a fácies miastênica; Miotóxicas: rabdomiólise, que pode evoluir para um quadro de LRA, principal complicação e causa de óbito; Coagulante: incoagulabilidade sanguínea, porém sem alterações das plaquetas e com rara manifestação hemorrágica.
+#### Manifestação Local
 
 - Pouca manifestação local (diferencia do botrópico).
 
-- Laboratoriais: TC: pode estar alterado; Hemograma: leucocitose, desvio à esquerda; CPK, LDH, aldolase, AST: elevados; Urina 1, eletrólitos, ureia e creatinina: LRA, proteinúria, leucocitúria, hematúria (mioglobina lida como Hb). Insuficiência renal por necrose tubular aguda (NTA):
+#### Exames Laboratoriais
 
-complicação mais grave, ocorrendo, geralmente, nas primeiras 48 horas.
+- **TC**: pode estar alterado;
+- **Hemograma**: leucocitose, desvio à esquerda;
+- **CPK, LDH, aldolase, AST**: elevados;
+- **Urina 1, eletrólitos, ureia e creatinina**: LRA, proteinúria, leucocitúria, hematúria (mioglobina lida como Hemoglobina).
+- **Insuficiência renal por necrose tubular aguda (NTA)**: complicação mais grave, ocorrendo geralmente nas primeiras 48 horas.
 
-- Tratamento de acordo com a gravidade:
+#### Classificação Clínica e Conduta
+
+| Aspecto | Leve | Moderado | Grave |
+|---|---|---|---|
+| Fácies miastênica/visão turva | Ausente/discreto | Evidente | Evidente tardio |
+| Mialgia | Ausente ou discreta | Discreta | Intensa |
+| TC | Normal ou alterado | Normal ou alterado | Normal ou alterado |
+| Oligúria ou anúria | Ausente | Ausente | Ausente ou presente |
+| **Soroterapia (ampolas)** | **5** | **10** | **20** |
+
+*SAB = soro antibotrópico; SABC = soro antibotrópico-crotálico; SABL = soro antibotrópico-laquético.*
+
+### Acidente Laquético (Surucucu)
+
+#### Ações do Veneno
+
+- Proteólise, sangramento e **ativação colinérgica** (o que diferencia do Botrópico);
+- Náuseas, vômitos, cólica abdominal, diarreia e hipotensão.
+
+#### Tratamento Específico
+
+- **SABL**: 5–20 ampolas.
+
+### Acidente Elapídico (Coral)
+
+#### Ação do Veneno
+
+- Veneno com ação neurotóxica (ação neurológica pura).
+
+#### Manifestação Local
+
+- Pouca manifestação local.
 
 ---
 
 <!-- page:3 -->
 
-Tabela 3: Classificação e Conduta no Acidente Crotálico
+## Araneísmo (Acidentes por Aranhas)
 
-- Forma cutâneo-visceral (hemolítica): Rara;
+### Gêneros de Importância Médica
 
-Clínica e | Inclui manifestações sistêmicas precoces com Leve Moderado Grave tratamento hemólise intravascular, como anemia, icterícia, hemoglobinúria e CIVD;
+- **Phoneutria** (armadeira);
+- **Loxosceles** (aranha-marrom — normalmente não ataca humanos);
+- **Latrodectus**.
 
-Fácies Ausente/ Discreta/ miastênica/ Evidente tardia evidente visão turva Ausente ou Mialgia Discreta Intensa discreta Tempo de Normal ou Normal ou Normal ou coagulação alterado alterado alterado Oligúria ou Ausente/ Ausente Ausente anúria presente Soroterapia intravenosa* 5 10 20 (ampolas)
+*Figura 2: A. Loxosceles; B. Phoneutria; C. Latrodectus.*
 
-*SAB = soro antibotrópico; SABC = soro antibotrópico-crotálico; SABL = soro antibotrópico-laquético.
+### Loxocélico (Aranha-Marrom)
 
-Acidentes Laquético (Surucucu)
-
-- Proteólise, sangramento e ativação colinérgica (o que diferencia do Botrópico):
-
-- Náuseas, vômitos, cólica abdominal, diarreia e hipotensão.
-
-- Tratamento específico: SABL 5-20 ampolas.
-
-Acidente Elapídico (Coral)
-
-- Veneno ação neurotóxica (ação neurológica pura);
-
-- Pouca manifestação local.
-
-## ARANEÍSMO
-
-- Gêneros de importância médica: Phoneutria - armadeira; Loxosceles - aranha-marrom (normalmente não ataca humanos).
-
-Figura 2: A. Loxosceles, B. Phoneutria, C. Latrodectus. Loxocélico
+#### Características
 
 - Não atacam;
+- Picada quase sempre indolor e imperceptível.
 
-- Picada quase sempre indolor e imperceptível;
+#### Apresentação Clínica (Forma Cutânea — mais branda)
 
-- Forma cutânea (mais branda) → instalação lenta e progressiva, em 3 fases: Incaracterística: Bolha de conteúdo seroso, edema, calor e rubor, com ou sem dor em queimação; Sugestiva: Enduração, bolha, equimoses e dor em queimação; Característica: Dor em queimação, lesões hemorrágicas focais, mescladas com áreas pálidas de isquemia (placa marmórea) e necrose; Geralmente o diagnóstico é feito nesta oportunidade. hemoglobinúria e CIVD; Os casos graves podem evoluir com LRA.
+Instalação lenta e progressiva, em 3 fases:
 
-- Soro antiloxoscélico (SALox)/ SAAr nos casos moderados-graves: Lesão sugestiva e manifestações sistêmicas associadas.
+1. **Incaracterística**: bolha de conteúdo seroso, edema, calor e rubor, com ou sem dor em queimação;
+2. **Sugestiva**: enduração, bolha, equimoses e dor em queimação;
+3. **Característica**: dor em queimação, lesões hemorrágicas focais, mescladas com áreas pálidas de isquemia (placa marmórea) e necrose — geralmente o diagnóstico é feito nesta oportunidade.
 
-Phoneutria
+#### Forma Cutâneo-Visceral (Hemolítica)
 
+- Rara;
+- Inclui manifestações sistêmicas precoces com hemólise intravascular (anemia, icterícia, hemoglobinúria, CIVD);
+- Os casos graves podem evoluir com LRA.
+
+#### Tratamento
+
+- **Soro antiloxoscélico (SALox)/SAAr**: indicado nos casos moderados-graves com lesão sugestiva e manifestações sistêmicas associadas.
+
+### Phoneutria (Armadeira)
+
+#### Apresentação
+
+- Clínica e tratamento semelhantes a acidente escorpiônico;
 - Classificação de acordo com a gravidade clínica.
 
-- Clínica e tratamento semelhantes a acidente escorpiônico.
+#### Classificação Clínica e Conduta
 
-Tabela 4: Classificação e Conduta no Acidente por Phoneutria Clínica e Leve Moderado Grave tratamento Diaforese, Dor local sialorreia, intensa + Dor local; vômitos sudorese e/ Pode haver frequentes, Clínica ou vômitos agitação e hipertonia e/ou taquicardia. muscular, agitação e/ priapismo, ou HA.
-
-EAP, choque. Soroterapia intravenosa
-
-- 2-4 5-10 com SAAr
-
-(Ampolas)
-
-## PROFILAXIA DA RAIVA HUMANA
-
-Vacina
-
-- Quatro doses, nos dias 0, 3, 7 e 14; por via intradérmica ou IM. Via intradérmica: 0,2 mL, volume deve ser dividido em 2 aplicações de 0,1 mL em cada e administradas em dois sítios distintos, independente da apresentação da vacina. O local de aplicação é na inserção do músculo deltoide ou no antebraço. Via intramuscular: dose total de 0,5 mL ou 1 mL todo o volume do frasco. O local de aplicação é no músculo deltoide ou vasto lateral da coxa em crianças menores de 2 anos. Não aplicar no glúteo.
-
-(dependendo do laboratório produtor). Administrar , Soro - Soro antirrábico (SAR) ou Imunoglobulina humana antirrábica (IGHAR)
-
-- Deve ser administrado no dia 0;
-
-- Caso não esteja disponível, aplicar mais rápido possível até o 7° dia após a aplicação da 1° dose de vacina. Após esse prazo, é contraindicado.
-
-- Infiltrar o volume total indicado, ou o máximo possível, dentro ou ao redor da(s) lesão(ões).
-
-- Se não for possível, aplicar o restante por via IM, respeitando o volume máximo de cada grupo muscular mais próximo da lesão.
-
-- Soro antirrábico: 40 UI/kg de peso.
-
-- Imunoglobulina humana antirrábica: 20 UI/kg de peso.
+| Aspecto | Leve | Moderado | Grave |
+|---|---|---|---|
+| Clínica | Dor local | Dor local intensa + pode haver ou vômitos | Diaforese, sialorreia, vômitos frequentes, agitação, hipertonia muscular, priapismo, ou hipertensão arterial, EAP, choque |
+| **Soroterapia (ampolas, SAAr)** | **2–4** | **5–10** | Conforme gravidade |
 
 ---
 
 <!-- page:4 -->
 
-Tabela 5: Profilaxia de Raiva Humana
+## Profilaxia da Raiva Humana
 
-## ANIMAL AGRESSOR
+### Classificação de Exposição
 
-Cão ou Mamíferos Cão ou Cão ou gato gato NÃO PASSÍVEL DE PASSÍVEL D OBSERVAÇÃO OBSERVAÇÃ TIPO DE EXPOSIÇÃO por 10 dias e SEM por 10 dias SINAIS sugestivos COM SINAIS de raiva. sugestivos d raiva.
+#### Contato Indireto (Categoria I)
 
-CONTATO INDIRETO:
+- Tocar/dar de comer;
+- Lambedura de pele íntegra;
+- Contato em pele íntegra com secreções ou excreções de animal, ainda que raivoso ou de caso humano;
+- **Conduta**: lavar com água e sabão; **NÃO INDICAR PROFILAXIA**.
 
-- Tocar/ dar de comer;
+#### Leve (Categoria II)
 
-- Lambedura de pele
+- Mordedura ou arranhadura superficial no tronco ou nos membros, exceto em mãos e pés;
+- Lambedura de lesões superficiais.
 
-- Lavar com
+#### Grave (Categoria III)
 
-- Lavar com água íntegra; água e e sabão;
-
-- Contato em pele íntegra sabão;
-
-- NÃO INDICAR com secreções ou
-
-- NÃO INDI excreções de animal, PROFILAX ainda que raivoso ou de caso humano.
-
-PROFILAXIA.
-
-- Lavar com água e sabão;
-
-- NÃO INICIAR
-
-PROFILAXIA:
-
-Observar o
-
-- Lavar com
-
-- Mordedura ou animal por por água e arranhadura superficial no tronco ou nos e saudável,
-
-10 dias → vivo sabão;
-
-- INICIAR membros, exceto em encerrar o PROFILAX mãos e pés;
-
-caso. Se morrer, VACINA (0
-
-- Lambedura de lesões desaparecer 7 e 14) superficiais.
-
-ou apresentar sinais de raiva, indicar VACINA (0, 3, 7 e 14).
-
-## GRAVE
-
-- Mordedura ou
-
-- Lavar com água arranhadura nas e sabão;
-
-mucosas, no segmento
-
-- NÃO INICIAR cefálico, nas mãos ou nos pés;
-
-PROFILAXIA: Observar o
-
-- Lavar com
-
-- Mordedura ou animal por por água e arranhadura múltiplas ou extensas, em qualquer e saudável,
-
-10 dias → vivo sabão;
-
-- INICIAR região do corpo;
-
-encerrar o PROFILAX
-
-- Mordedura ou caso. Se morrer, VACINA ( arranhadura profunda, desaparecer 3, 7 e 14) mesmo que puntiforme;
-
-ou apresentar SORO (SA
-
-- Lambedura de lesões sinais de raiva, ou IGHAR profundas ou de indicar VACINA mucosas, mesmo que intactas;
-
-(0, 3, 7 e 14) e 14) e SORO
-
+- Mordedura ou arranhadura nas mucosas, no segmento cefálico, nas mãos ou nos pés;
+- Mordedura ou arranhadura múltiplas ou extensas, em qualquer região do corpo;
+- Mordedura ou arranhadura profunda, mesmo que puntiforme;
+- Lambedura de lesões profundas ou de mucosas, mesmo que intactas;
 - Mordedura ou arranhadura causada por mamífero silvestre.
 
-(SAR ou IGHAR)
+### Esquema de Profilaxia por Tipo de Animal
 
-## REFERÊNCIAS
+#### Cão ou Gato Passível de Observação por 10 dias
 
-Figura 1: Tityus serrulatus (amarelo). a Manual de Controle de Escorpiões. Brasília, DF: Ministério da Saúde, D
+**Se animal permanecer vivo e saudável durante os 10 dias:**
+- **Lavar com água e sabão**;
+- **NÃO INICIAR PROFILAXIA**; encerrar o caso.
 
-2009. 72 p. Disponível em: bvsms.saude.gov.br. Acesso em: 30 jun. 2025.
+**Se animal morrer, desaparecer ou apresentar sinais de raiva:**
+- Lavar com água e sabão;
+- **INICIAR PROFILAXIA**:
+  - **Categoria II (Leve)**: VACINA (dias 0, 3, 7, 14);
+  - **Categoria III (Grave)**: VACINA (dias 0, 3, 7, 14) + SORO (SAR ou IGHAR).
 
-diversitasjournal.com.br+4 Mamíferos domésticos DE de interesse Mamíferos ÃO econômico silvestres Morcegos ou (bovídeos, (raposa, S equídeos, macaco, sagui).
+#### Cão ou Gato NÃO Passível de Observação
 
-de caprinos, suínos e ovinos).
+- **Lavar com água e sabão**;
+- **INICIAR PROFILAXIA** conforme categoria de exposição:
+  - **Categoria I**: NÃO INDICAR PROFILAXIA;
+  - **Categoria II (Leve)**: VACINA (dias 0, 3, 7, 14);
+  - **Categoria III (Grave)**: VACINA (dias 0, 3, 7, 14) + SORO (SAR ou IGHAR).
 
-- Lavar com água e m
+#### Mamíferos Domésticos de Interesse Econômico (Bovídeos, Equídeos, Caprinos, Suínos, Ovinos) e Mamíferos de Interesse Econômico
 
-- Lavar com sabão;
+- **Lavar com água e sabão**;
+- **NÃO INDICAR PROFILAXIA** (observar o animal por 10 dias; se vivo e saudável, encerrar o caso; se morrer, desaparecer ou apresentar sinais, **INICIAR PROFILAXIA** conforme categoria).
 
-- Lavar com água e
+#### Mamíferos Silvestres (Raposa, Macaco, Sagui) e Morcegos
 
-- INICIAR água e sabão;
+- **Lavar com água e sabão**;
+- **INICIAR PROFILAXIA** em todas as categorias:
+  - **Categoria I**: NÃO INDICAR PROFILAXIA;
+  - **Categoria II (Leve)**: VACINA (dias 0, 3, 7, 14);
+  - **Categoria III (Grave)**: VACINA (dias 0, 3, 7, 14) + SORO (SAR ou IGHAR).
 
-sabão; PROFILAXIA:
+### Vacina Antirrábica
 
-- NÃO INDICAR
+**Esquema**: quatro doses, nos dias **0, 3, 7 e 14** por via intradérmica ou IM.
 
-## ICAR
+#### Via Intradérmica
 
-- NÃO INDICAR * Vacina
+- Volume: **0,2 mL**;
+- Dividir em 2 aplicações de **0,1 mL** em cada e administrar em dois sítios distintos, independente da apresentação da vacina;
+- **Locais de aplicação**: na inserção do músculo deltoide ou no antebraço.
 
-PROFILAXIA. XIA. PROFILAXIA. (0,3,7,14) e SORO (SAR ou IGHAR).
+#### Via Intramuscular
 
-- Lavar com
+- Dose total: **0,5 mL ou 1 mL** (todo o volume do frasco), dependendo do laboratório produtor;
+- **Locais de aplicação**: no músculo deltoide ou vasto lateral da coxa em crianças menores de 2 anos;
+- **NÃO aplicar no glúteo**.
 
-- Lavar com m água e água e
+### Soro Antirrábico (SAR) ou Imunoglobulina Humana Antirrábica (IGHAR)
 
-- Lavar com sabão; sabão;
+- Deve ser administrado no **dia 0**;
+- Caso não esteja disponível, aplicar o mais rápido possível até o **7º dia** após a aplicação da 1ª dose de vacina. Após esse prazo, é contraindicado;
+- **Infiltrar o volume total indicado**, ou o máximo possível, dentro ou ao redor da(s) lesão(ões);
+- Se não for possível, aplicar o restante por via IM, respeitando o volume máximo de cada grupo muscular mais próximo da lesão;
+- **Dosagem**:
+  - Soro antirrábico (SAR): **40 UI/kg de peso**;
+  - Imunoglobulina humana antirrábica (IGHAR): **20 UI/kg de peso**.
 
-água e sabão;
+## Referências
 
-- INICIAR
+Figura 1: Tityus serrulatus (amarelo). BRASIL. Ministério da Saúde. Manual de Controle de Escorpiões. Brasília, DF: Ministério da Saúde, 2009. 72 p. Disponível em: bvsms.saude.gov.br. Acesso em: 30 jun. 2025.
 
-- INICIAR
-
-- INICIAR
-
-PROFILAXIA: PROFILAXIA: PROFILAXIA: XIA: VACINA (0, 3, VACINA (0, 3, VACINA (0, 3, 0, 3, 7, 14) e SORO 7, 14) e SORO 7 e 14)
-
-(SAR ou (SAR ou IGHAR) IGHAR) m
-
-- Lavar com
-
-- Lavar com
-
-- Lavar com água e água e água e sabão;
-
-sabão; sabão;
-
-- INICIAR
-
-- INICIAR
-
-- INICIAR e 3, 7 e 14) e 3, 7 e 14) e ou IGHAR).
-
-PROFILAXIA: XIA: PROFILAXIA: PROFILAXIA: VACINA (0, (0, VACINA (0, VACINA (0, 3, 7 e 14) e SORO (SAR AR SORO (SAR SORO (SAR R). ou IGHAR). ou IGHAR).
-
-Figura 2: A. Loxosceles, B. Phoneutria, C. Latrodectus. BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. Boletim Epidemiológico Vol. 53, nº 31: Panorama dos acidentes causados por aranhas no Brasil, de 2017 a 2021. Brasília, DF: Ministério da Saúde, 2022.
-
-Disponível em: gov.br. Acesso em: 30 jun. 2025.
+Figura 2: A. Loxosceles; B. Phoneutria; C. Latrodectus. BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. Boletim Epidemiológico Vol. 53, nº 31: Panorama dos acidentes causados por aranhas no Brasil, de 2017 a 2021. Brasília, DF: Ministério da Saúde, 2022. Disponível em: gov.br. Acesso em: 30 jun. 2025.

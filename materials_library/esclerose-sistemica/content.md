@@ -2,179 +2,136 @@
 
 <!-- page:1 -->
 
-Esclerose Sistêmica (CM)
+## Introdução
 
-- Doença autoimune sistêmica com fibrose cutânea e
+**Esclerose Sistêmica (CM)**
 
-- Espessamento distal às metacarpofalangeanas visceral progressiva; (4 pontos);
+- **Definição**: doença autoimune sistêmica crônica, caracterizada por **fibrose progressiva da pele e de órgãos internos**, além de vasculopatia e ativação imune.
 
-- Diferente da esclerodermia (morfeia, esclerodermia
+- **Evolução**: fibrose progressiva da pele e órgãos internos.
 
-- Úlceras digitais (2 pontos);
+- **Diferença importante**: diferente da esclerodermia (morfeia, esclerodermia linear), que cursa com espessamento cutâneo sem manifestações sistêmicas.
 
-linear), que cursa com espessamento cutâneo sem
+## Epidemiologia
 
-- Microcicatrizes digitais (3 pontos);
+- **Doença rara**: incidência estimada de 11 casos/milhão/ano
+- Estima-se cerca de **50.000 casos no Brasil**
+- **Predomínio feminino**: 4:1
+- **Maior frequência**: entre 45 e 65 anos
+- **Morbidade importante**, mesmo em formas cutâneas leves
 
-manifestações sistêmicas.
+## Fisiopatologia
 
-- Fenômeno de Raynaud (3 pontos);
+- **Disfunção endotelial e ativação imune**, evoluindo com vasculopatia obliterante
+- **Ativação de fibroblastos** e produção excessiva de colágeno e matriz extracelular
 
-Formas clínicas
+---
 
-- Telangiectasias (2 pontos);
+## Formas Clínicas
 
-- Cutânea limitada: fenômeno de Raynaud, acomete
+### Forma Cutânea Limitada
 
-- Capilaroscopia alterada (2 pontos);
+- Espessamento cutâneo restrito à **face, pescoço e áreas distais (mãos, pés)**
+- **Fenômeno de Raynaud** geralmente precede, em anos, outras manifestações:
+  - Caracteriza-se por mudança **trifásica de coloração**:
+    - Palidez (pela vasoconstrição)
+    - Cianose (pela hipóxia)
+    - Eritema (pela reperfusão)
+  - Desencadeada por **frio ou estresse**
+  - Pode acometer também pés, orelhas e nariz
+  - Pode evoluir com **úlceras digitais** e **microcicatrizes** (pitting scars)
 
-face e extremidades distal ao cotovelo e joelho;
+- **Autoanticorpo associado**: **anti-centrômero**
+- **Alta associação** com doença intersticial pulmonar e acometimento renal/cardíaco
+- Inclui a **síndrome CREST**:
+  - **C**alcinoses
+  - **R**aynaud
+  - **E**sofagopatia (doença do refluxo gastroesofágico)
+  - **S**clerodactilia (espessamento dos dedos)
+  - **T**elangiectasias
 
-- Autoanticorpos específicos (3 pontos);
+Figura 1: Fenômeno de Raynaud.
 
-autoanticorpo anti-centrômero; risco aumentado
+Figura 2: Esclerose sistêmica forma cutânea limitada. Espessamento da pele da face determinando microstomia e múltiplas telangiectasias em face e língua.
 
-- Doença intersticial pulmonar ou hipertensão de hipertensão pulmonar. Pode se manifestar como pulmonar (2 pontos).
+Figura 3: Calcinoses subcutâneas em paciente com esclerose sistêmica forma limitada.
 
-a síndrome CREST. Tratamento
+![Figura do material - página 1](figure-001-1.webp)
 
-- Cutânea difusa: espessamento rápido no
+![Figura do material - página 1](figure-001-2.webp)
 
-- Fenômeno de Raynaud e úlceras digitais:
+---
 
-tronco e regiões proximais ao cotovelo e bloqueadores de canal de cálcio, sildenafil, análogos joelhos; risco elevado de doença intersticial de prostaciclina intravenosa, bosentana (prevenção pulmonar; autoanticorpos anti-Scl-70 e anti- das úlceras);
+### Forma Cutânea Difusa
 
-RNA polimerase III.
+- Espessamento cutâneo **rápido e extenso**, envolvendo tronco, face e segmentos proximais de membros (ombros e coxas)
+- **Fenômeno de Raynaud** também precede em anos outras manifestações
+- **Risco elevado** de doença intersticial pulmonar
+- **Autoanticorpos associados**:
+  - **Anti-Scl-70** (anti-topoisomerase I)
+  - **Anti-RNA polimerase III**
 
-- Crise renal esclerodérmica: inibidores da
+> Nota: O **anti-RNA polimerase III** também está associado a risco aumentado de **crise renal esclerodérmica** e de **neoplasias**!
 
-- Sine escleroderma: sem espessamento cutâneo, ECA (iECA);
+### Forma Sine Escleroderma
 
-mas com manifestações viscerais típicas.
-
-- Fibrose cutânea: metotrexato, micofenolato de
-
-Exames complementares mofetil, ciclofosfamida, rituximabe;
-
-- FAN positivo na maioria (padrão centromérico
-
-- Doença intersticial pulmonar: micofenolato de ou nucleolar); mofetil, ciclofosfamida, rituximabe, tocilizumabe;
-
-- Autoanticorpos: anti-Scl-70 (associado a doença
-
-- Hipertensão pulmonar: bosentana, sildenafil, intersticial pulmonar), anti-centrômero (associado análogos de prostaciclina;
-
-a hipertensão pulmonar), anti-RNA polimerase III
-
-- Esofagopatia: inibidores de bomba de prótons e
-
-(risco de crise renal e neoplasias); pró-cinéticos;
-
-- Tomografia de tórax: pneumonia intersticial não
-
-- Transplante autólogo de medula óssea para formas específica (PINE) é o mais comum. agressivas precoces com acometimento
-
-Critérios de classificação cutâneo e pulmonar.
-
-- Critérios ACR/EULAR 2013; esclerose sistêmica se
-
-≥ 9 pontos;
-
-- Espessamento cutâneo proximal às metacarpofalangeanas (9 pontos, critério suficiente);
-
-- Evolui com fibrose progressiva da pele e órgãos internos.
-
-- Doença autoimune sistêmica crônica, caracterizada por fibrose progressiva da pele e de órgãos internos, FORMAS CLÍNICAS além de vasculopatia e ativação imune. Forma cutânea limitada
-
-- Espessamento cutâneo restrito à face, pescoço e
-
-EPIDEMIOLOGIA áreas distais (mãos, pés);
-
-- Doença rara: incidência estimada de 11
-
-- Fenômeno de Raynaud geralmente precede, em anos, casos/milhão/ano; outras manifestações:
-
-- Estima-se cerca de 50.000 casos no Brasil; | O fenômeno de Raynaud caracteriza-se por
-
-- Predomínio feminino (4:1); mudança trifásica de coloração (palidez, pela
-
-- Maior frequência entre 45 e 65 anos; vasoconstrição → cianose, pela hipóxia → eritema,
-
-- Importante morbidade, mesmo em formas pela reperfusão) dos dedos desencadeada por frio cutâneas leves. ou estresse; Pode acometer também pés, orelhas e nariz;
-
-FISIOPATOLOGIA | Pode evoluir com úlceras digitais e microcicatrizes
-
-- Disfunção endotelial e ativação imune, evoluindo com (pitting scars).
-
-vasculopatia obliterante;
-
-- Alta associação com hipertensão pulmonar;
-
-- Há ativação de fibroblastos e produção excessiva de
-
-- Autoanticorpo associado: anti-centrômero.
-
-colágeno e matriz extracelular;
-
-- Inclui a síndrome CREST:
+- **Acometimento visceral presente** (doença intersticial pulmonar, esofagopatia, etc.), mas **sem espessamento cutâneo**
+- Pode haver fenômeno de Raynaud e telangiectasias
+- **Risco de subdiagnóstico**
 
 ---
 
 <!-- page:2 -->
 
-| Calcinoses;
+## Exames Laboratoriais
 
-- Alta associação com doença intersticial Raynaud; pulmonar, acometimento renal (crise renal Esofagopatia (doença do refluxo gastroesofágico); esclerodérmica) e cardíaco; Esclerodactilia; Telangiectasias. O padrão de doença intersticial pulmonar mais Telangiectasias.
+### FAN (Fator Antinuclear)
 
-- F
+- **Presente na grande maioria** dos pacientes com esclerose sistêmica
+- **Padrões mais frequentes**:
+  - Nucleolar
+  - Centromérico (padrão associado ao anti-centrômero)
 
-Figura 1: Fenômeno de Raynaud.
+### CPK (Creatinofosfoquinase)
 
-- E
+- Avaliar em caso de **mialgias ou fraqueza muscular**
+- **Elevação** sugere miosite associada
 
-- Figura 2: Esclerose sistêmica forma cutânea limitada.
+### BNP (Peptídeo Natriurético Tipo B)
 
-- Espessamento da pele da face determinando microstomia e múltiplas telangiectasias em face e língua.
+- Pode estar **elevado** em hipertensão pulmonar ou disfunção cardíaca
+- Atua como fator prognóstico e marcador de gravidade
 
-- Figura 3: Calcinoses subcutâneas em paciente com esclerose sistêmica forma limitada.
+### Autoanticorpos Específicos
 
-Forma cutânea difusa O
+- **Anti-Scl-70** (anti-topoisomerase I):
+  - Associado à forma cutânea difusa
+  - Forte correlação com **doença intersticial pulmonar**
 
-- Espessamento cutâneo rápido e extenso, envolvendo tronco, face e segmentos proximais de membros
+- **Anti-centrômero**:
+  - Associado à forma cutânea limitada
+  - Frequentemente relacionado à **hipertensão pulmonar**
 
-(ombros e coxas);
+- **Anti-RNA polimerase III**:
+  - Associado à forma cutânea difusa de rápida progressão
+  - Forte associação com **crise renal esclerodérmica**
+  - Pode estar relacionado a **neoplasias**
 
-- Fenômeno de Raynaud também precede em anos outras manifestações; O padrão de doença intersticial pulmonar mais comum na esclerose sistêmica é a pneumonia intersticial não específica (PINE)!
+## Outros Exames Complementares
 
-- Autoanticorpos associados: Anti-Scl-70 (anti-topoisomerase I); Anti-RNA polimerase III.
+- **Capilaroscopia periungueal**: padrão **SD** (scleroderma pattern)
 
-O anti-RNA polimerase III também está associado a risco aumentado de crise renal esclerodérmica e de neoplasias!
+Figura 4: Capilaroscopia normal (A) e capilaroscopia com padrão SD (B). O padrão SD (scleroderma pattern) é característico da esclerose sistêmica, refletindo a vasculopatia capilar típica da doença.
 
-Forma sine escleroderma
+- **Tomografia computadorizada de tórax**: **PINE** (pneumonia intersticial não específica) é o padrão de acometimento intersticial mais comum
 
-- Acometimento visceral presente (doença intersticial pulmonar, esofagopatia, etc.), mas sem espessamento cutâneo;
+- **Manometria esofágica**: pode mostrar hipotonia do esfíncter esofágico inferior e aperistalse do terço distal do esôfago
 
-- Pode haver fenômeno de Raynaud e telangiectasias;
+- **Endoscopia digestiva alta**: pode mostrar graus variados de esofagite
 
-- Risco de subdiagnóstico.
+Figura 5: Espessamento cutâneo em paciente com esclerose sistêmica.
 
-## EXAMES LABORATORIAIS
-
-- FAN (fator antinuclear): Presente na grande maioria dos pacientes com esclerose sistêmica; Padrões mais frequentes: Nucleolar; Centromérico (padrão associado ao anti-centrômero).
-
-- CPK (creatinofosfoquinase): Avaliar em caso de mialgias ou fraqueza muscular; Elevação sugere miosite associada.
-
-- BNP (peptídeo natriurético tipo B): Pode estar elevado em hipertensão pulmonar ou disfunção cardíaca; Atua como fator prognóstico e marcador de gravidade.
-
-- Autoanticorpos específicos: Anti-Scl-70 (anti-topoisomerase I): Associado à forma cutânea difusa; Forte correlação com doença intersticial pulmonar. Anti-centrômero: Associado à forma cutânea limitada; Frequentemente relacionado à hipertensão pulmonar. Anti-RNA polimerase III: Associado à forma cutânea difusa de rápida progressão; Forte associação com crise renal esclerodérmica; Pode estar relacionado a neoplasias.
-
-## OUTROS EXAMES COMPLEMENTARES
-
-- Capilaroscopia periungueal: padrão SD
-
-(scleroderma pattern);
-
-- Tomografia computadorizada de tórax: PINE é o padrão de acometimento intersticial mais comum;
+Figura 6: Pitting scar (microcicatriz) em polegar de paciente com esclerose sistêmica.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -184,39 +141,46 @@ Forma sine escleroderma
 
 <!-- page:3 -->
 
-- Manometria esofágica: pode mostrar hipotonia do Esclerodactilia (espessamento dos dedos) associada esfíncter esofágico inferior e aperistalse do terço distal a espessamento proximal às metacarpofalangeanas.
+## Critérios de Classificação
 
-do esôfago; Observa-se também a postura da mão “em garra”.
+### Critérios ACR/EULAR 2013
 
-- Endoscopia digestiva alta: pode mostrar graus variados de esofagite.
+**≥ 9 pontos classificam como esclerose sistêmica!**
 
-variados de esofagite. Figura 4: Capilaroscopia normal (A) e capilaroscopia com padrão SD (B). O padrão SD (scleroderma pattern) é característico da esclerose sistêmica, refletindo a vasculopatia capilar típica da doença.
+Tabela 1: Critérios de Classificação para Esclerose Sistêmica ACR/EULAR 2013
 
-## CRITÉRIOS DE CLASSIFICAÇÃO
+| Achado | Pontos |
+|---|---|
+| **Espessamento cutâneo proximal às metacarpofalangeanas** (critério suficiente) | **9** |
+| **Espessamento cutâneo distal às metacarpofalangeanas** (esclerodactilia) | **4** |
+| **Úlceras digitais** | **2** |
+| **Microcicatrizes** (pitting scars) | **3** |
+| **Fenômeno de Raynaud** | **3** |
+| **Telangiectasias** | **2** |
+| **Capilaroscopia alterada** | **2** |
+| **Autoanticorpos específicos positivos** (anti-Scl-70 ou anti-centrômero ou anti-RNA polimerase III) | **3** |
+| **Doença intersticial pulmonar ou hipertensão arterial pulmonar** | **2** |
 
-- Critérios ACR/EULAR 2013;
+**Nota**: Os critérios não são aplicáveis a pacientes que possuem espessamento cutâneo que poupa os dedos.
 
-- Os critérios não são aplicáveis a pacientes que possuem espessamento cutâneo que poupa os dedos dedos, caracterizando a esclerodactilia).
+---
 
-(o espessamento da esclerose sistêmica acomete os Tabela 1: Critérios de classificação para esclerose sistêmica ACR/EULAR 2013.
+## Tratamento
 
-Achado Pontos Espessamento cutâneo proximal às metacarpofalangeanas Espessamento cutâneo distal às metacarpofalangeanas (esclerodactilia)
+**O tratamento depende das manifestações clínicas de cada paciente:**
 
-Úlcera digital 2 Microcicatriz (pitting scar) 3 Fenômeno de Raynaud 3 Autoanticorpos específicos positivos (anti-Scl-70 ou anti-centrômero ou RNA 3 polimerase III)
+### Tabela 2: Tratamento Conforme Manifestação Clínica
 
-Telangiectasias 2 Capilaroscopia alterada 2 Doença intersticial pulmonar ou hipertensão arterial pulmonar ≥9 pontos classificam como esclerose sistêmica!
-
-Figura 5: Espessamento cutâneo em paciente com esclerose sistêmica. Figura 6: Pitting scar (microcicatriz) em polegar de paciente com esclerose sistêmica.
-
-## TRATAMENTO
-
-- O tratamento depende das manifestações clínicas de cada paciente:
-
-Tabela 2: Tratamento conforme a manifestação clínica da esclerose sistêmica. Manifestação Tratamento Bloqueador de canal de cálcio Fenômeno de (ex.: nifedipino, anlodipino), Raynaud sildenafil, análogos de prostaciclina intravenosos Bloqueadores do canal de cálcio, sildenafil Úlceras digitais Bosentana previne novas úlceras Inibidores da ECA (ex.: captopril)
-
-Crise renal em doses altas, mesmo com esclerodérmica creatinina elevada Metotrexato, micofenolato Pele (fibrose ativa) de mofetila, ciclofosfamida, rituximabe Micofenolato de mofetila, Doença intersticial ciclofosfamida, rituximabe, pulmonar tocilizumabe Análogos de prostaciclina Hipertensão (ex.:iloprost), bosentana, pulmonar sildenafil Inibidor da bomba de Esofagopatia prótons, pró-cinéticos (ex.:
-
-domperidona) Transplante autólogo de medula Casos graves e óssea (melhora cutânea e precoces pulmonar intersticial)
+| Manifestação | Tratamento |
+|---|---|
+| **Fenômeno de Raynaud** | Bloqueadores do canal de cálcio (ex.: nifedipino, anlodipino); Sildenafil; Análogos de prostaciclina intravenosos |
+| **Úlceras digitais** | Bloqueadores do canal de cálcio; Sildenafil; **Bosentana** previne novas úlceras |
+| **Crise renal esclerodérmica** | **Inibidores da ECA** (ex.: captopril) em doses altas, mesmo com creatinina elevada |
+| **Pele (fibrose ativa)** | Metotrexato; Micofenolato de mofetila; Ciclofosfamida; Rituximabe |
+| **Doença intersticial pulmonar** | Micofenolato de mofetila; Ciclofosfamida; Rituximabe; Tocilizumabe |
+| **Hipertensão pulmonar** | Análogos de prostaciclina (ex.: iloprost); Bosentana; Sildenafil |
+| **Esofagopatia** | Inibidor da bomba de prótons; Pró-cinéticos (ex.: domperidona) |
+| **Casos graves e precoces** | Transplante autólogo de medula óssea (melhora cutânea e pulmonar intersticial) |
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -226,45 +190,56 @@ domperidona) Transplante autólogo de medula Casos graves e óssea (melhora cut�
 
 <!-- page:4 -->
 
-## ESCLERODERMIA REFERÊNCIAS
+## Esclerodermia
 
-- É uma condição diferente da esclerose sistêmica; Figura 1: Fenômeno de Raynaud.
+### Diferença com Esclerose Sistêmica
 
-- Caracteriza-se por espessamento e endurecimento da MYDR. Raynaud’s disease. Dermatology, Heart Attacks and Strokes, pele, devido à deposição de colágeno na derme; Symptoms. Disponível em: https://mydr.com.au/symptoms/raynaudspele, devido à deposição de colágeno na derme; S d
+- **É uma condição diferente** da esclerose sistêmica
+- Caracteriza-se por **espessamento e endurecimento da pele**, devido à deposição de colágeno na derme
+- **Sem acometimento** de órgãos internos nem manifestações sistêmicas
+- **Anticorpos específicos** para esclerose sistêmica são **negativos**
 
-- No entanto, não há acometimento de órgãos internos nem manifestações sistêmicas;
+### Formas Principais
 
-- Anticorpos específicos para a esclerose sistêmica A são negativos; d r
+#### Morfeia
 
-- Clinicamente, pode se apresentar em duas formas principais: Morfeia: Placas únicas ou múltiplas, endurecidas, com A aspecto perolado ou cor de marfim, geralmente d r localizadas em tronco ou membros; Podem ter halo lilás periférico em fase ativa.
+- Placas únicas ou múltiplas, endurecidas, com aspecto perolado ou cor de marfim
+- Geralmente localizadas em **tronco ou membros**
+- Podem ter **halo lilás periférico** em fase ativa
 
-c h b e r Figura 7: Morfeia em placas. Presença de duas placas endurecidas de aspecto d r perolado em dorso.
+Figura 7: Morfeia em placas. Presença de duas placas endurecidas de aspecto perolado em dorso.
 
-| Esclerodermia linear: | Espessamento cutâneo em faixa linear, mais comum em crianças; A | Pode afetar membros ou face (ex: “golpe de S c sabre” na fronte), com risco de limitação funcional e deformidades.
+#### Esclerodermia Linear
 
-- A d r
+- **Espessamento cutâneo em faixa linear**, mais comum em crianças
+- Pode afetar **membros ou face** (ex.: "golpe de sabre" na fronte)
+- Risco de **limitação funcional e deformidades**
 
-Figura 8: Esclerodermia linear. Symptoms. Disponível em: https://mydr.com.au/symptoms/raynaudsdisease/. Acesso em: 18 jun. 2025.
+Figura 8: Esclerodermia linear.
 
-Figura 2: Esclerose sistêmica forma cutânea limitada. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 18 junho 2025.
+---
 
-Figura 3: Calcinoses subcutâneas em paciente com esclerose sistêmica forma limitada. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 18 junho 2025..
+## Referências
 
-Figura 4: Capilaroscopia normal (A) e capilaroscopia com padrão SD (B). SOUZA, Eduardo José do Rosário e; KAYSER, Cristiane. Nailfold capillaroscopy: relevance to the practice of rheumatology. Revista Brasileira de Reumatologia, v. 55, n. 3, p. 264–272, maio/jun. 2015. DOI:
+Figura 1: Fenômeno de Raynaud. MYDR. Raynaud's disease. Dermatology, Heart Attacks and Strokes, Symptoms. Disponível em: https://mydr.com.au/symptoms/raynaudsdisease/. Acesso em: 18 jun. 2025.
 
-https://doi.org/10.1016/j.rbr.2014.09.003. Disponível em: https://www.scielo. br/j/rbr/a/pHhWJDpKm6GP4yM8pJB7bPd/?lang=en. Acesso em:
+Figura 2: Esclerose sistêmica forma cutânea limitada. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 18 junho 2025.
 
-18 jun. 2025. Tabela 1: Critérios de classificação para esclerose sistêmica ACR/EULAR 2013. Adaptado de HOLLIMAN, Kathy. ACR Issues sJIA Recommendations, SSc Classification Criteria. The Rheumatologist, 1 out. 2013. Disponível em: https://www.the-rheumatologist.org/article/acr-issues-sjiarecommendations-ssc-classification-criteria/4/. Acesso em: 18 jun. 2025.
+Figura 3: Calcinoses subcutâneas em paciente com esclerose sistêmica forma limitada. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 18 junho 2025.
 
-Figura 5: Espessamento cutâneo em paciente com esclerose sistêmica. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 18 junho 2025.
+Figura 4: Capilaroscopia normal (A) e capilaroscopia com padrão SD (B). SOUZA, Eduardo José do Rosário; KAYSER, Cristiane. Nailfold capillaroscopy: relevance to the practice of rheumatology. Revista Brasileira de Reumatologia, v. 55, n. 3, p. 264-272, maio/jun. 2015. DOI: https://doi.org/10.1016/j.rbr.2014.09.003. Disponível em: https://www.scielo.br/j/rbr/a/pHhWJDpKm6GP4yM8pJB7bPd/?lang=en. Acesso em: 18 jun. 2025.
 
-Figura 6: Pitting scar (microcicatriz) em polegar de paciente com esclerose sistêmica. ATLAS OF DIGITAL ULCERS AND LESIONS. In: Atlas of Ulcers in Systemic Sclerosis., 2018. p. 219–231. Disponível em: https://link.springer.com/ chapter/10.1007/978-3-319-98477-3_25. Acesso em: 18 jun. 2025.
+Tabela 1: Critérios de classificação para esclerose sistêmica ACR/EULAR 2013. Adaptado de HOLLIMAN, Kathy. ACR Issues sJIA Recommendations, SSc Classification Criteria. The Rheumatologist, 1 out. 2013. Disponível em: https://www.the-rheumatologist.org/article/acr-issues-sjia-recommendations-ssc-classification-criteria/4/. Acesso em: 18 jun. 2025.
 
-Tabela 2: Tratamento para cada manifestação clínica da esclerose sistêmica. Acervo Medcof. Figura 7: Morfeia em placas.
+Figura 5: Espessamento cutâneo em paciente com esclerose sistêmica. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 18 junho 2025.
 
-HAUTLEXIKON. Zirkumskripte Sklerodermie (Morphea) – Ursachen, Symptome & Therapie. Disponível em: https://online-hautarzt.net/ zirkumskripte-sklerodermie/. Acesso em: 18 jun. 2025.
+Figura 6: Pitting scar (microcicatriz) em polegar de paciente com esclerose sistêmica. ATLAS OF DIGITAL ULCERS AND LESIONS. In: Atlas of Ulcers in Systemic Sclerosis., 2018. p. 219-231. Disponível em: https://link.springer.com/chapter/10.1007/978-3-319-98477-3_25. Acesso em: 18 jun. 2025.
 
-Figura 8: Esclerodermia linear. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 18 junho 2025.
+Tabela 2: Tratamento para cada manifestação clínica da esclerose sistêmica. Acervo Medcof.
+
+Figura 7: Morfeia em placas. HAUTLEXIKON. Zirkumskripte Sklerodermie (Morphea) – Ursachen, Symptome & Therapie. Disponível em: https://online-hautarzt.net/zirkumskripte-sklerodermie/. Acesso em: 18 jun. 2025.
+
+Figura 8: Esclerodermia linear. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 18 junho 2025.
 
 ![Figura do material - página 4](figure-004-1.webp)
 

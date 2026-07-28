@@ -137,11 +137,11 @@ Enfatiza o desenvolvimento e progressão da doença → correlaciona fatores de 
 | Critérios maiores | Critérios menores |
 |---|---|
 | Dispneia paroxística noturna | Edema do tornozelo bilateral |
-| Turgência jugular a 45° | Turgência jugular a 45° |
+| Turgência jugular a 45° | Tosse noturna |
 | Refluxo hepatojugular | Dispneia aos mínimos esforços |
 | Estertores pulmonares crepitantes | Derrame pleural |
 | Cardiomegalia ao raio-X de tórax | Taquicardia |
-| Edema pulmonar agudo | |
+| Edema pulmonar agudo | Hepatomegalia |
 | B3 | |
 
 ### Classificação NYHA

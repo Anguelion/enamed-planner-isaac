@@ -2,211 +2,246 @@
 
 <!-- page:1 -->
 
-## PBF = CTB + MR + MC + T + LA
+## Visão Geral
 
-- Fluxo uteroplacentário;
+### Perfil Biofísico Fetal (PBF)
 
-Índice de Líquido Amniótico
+**Componentes** — **PBF = Cardiotocografia + Movimentos Respiratórios + Movimentos Corporais + Tônus + Líquido Amniótico**
 
-- Útil para diagnóstico diferencial de RCF x PIG e risco
+O perfil biofísico fetal integra múltiplos parâmetros para avaliar a vitalidade fetal e detectar sinais de sofrimento fetal crônico.
 
-- ≤ 5cm: oligoâmnio; de pré-eclâmpsia.
+### Estudos de Fluxo — Parâmetros Principais
 
-- 5,1 a 8cm: reduzido; Ducto Venoso
+**Índice de Líquido Amniótico (ILA)**
+- Útil para diagnóstico diferencial de **RCF (restrição de crescimento fetal) × PIG (pequeno para idade gestacional)** e risco de pré-eclâmpsia;
+- Classificação:
+  - ≤ 5 cm: oligoâmnio;
+  - 5,1 a 8 cm: reduzido;
+  - 8,1 a 18 cm: normal;
+  - 18,1 a 24,9 cm: aumentado;
+  - ≥ 25 cm: polidrâmnio.
 
-- 8,1 a 18cm: normal;
+**Maior Bolsão Vertical**
+- < 2 cm: oligoâmnio;
+- 2 a 2,9 cm: reduzido;
+- 3-8 cm: normal;
+- > 8 cm: polidrâmnio;
+- Diagnóstico diferencial de RCF × PIG.
 
-- Fluxo fetal;
+**Artéria Umbilical** — avalia fluxo feto-placentário e insuficiência placentária.
 
-- 18,1 a 24,9cm: aumentado;
+**Artéria Cerebral Média (ACM)** — avalia fluxo fetal, priorização de órgãos-nobres, estratificação de anemia fetal.
 
-- Avalia acidemia e função cardíaca;
+**Ducto Venoso** — avalia acidemia fetal e função cardíaca; **IPV > 1** = sofrimento fetal.
 
-- ≥ 25cm: polidrâmnio.
+## Investigação da Vitalidade Fetal
 
-- IPV > 1 = Sofrimento fetal.
+### Objetivo
 
-Maior Bolsão Vertical Artéria Umbilical
+Proteger o feto dos potenciais efeitos da hipoxemia (aguda ou crônica) no decorrer da gestação.
 
-- <2cm: oligoâmnio;
+### Métodos de Avaliação
 
-- Fluxo feto-placentário;
+- **Cardiotocografia**;
+- **Perfil biofísico fetal** (inclui cardiotocografia);
+- **Perfil hemodinâmico fetal**;
+- **Mobilograma** — avaliação da percepção da movimentação fetal pela gestante (idealmente 10 movimentos fetais em menos de 1 hora; se menor, necessária avaliação em pronto-socorro com cardiotocografia e/ou perfil biofísico fetal).
 
-- 2 e 2,9cm: reduzido;
+### Indicações para Monitoramento Fetal
 
-- Avalia insuficiência placentária;
+**Morbidades prévias**
+- Síndromes hipertensivas;
+- Diabetes mellitus tipos 1 e 2;
+- Lúpus eritematoso sistêmico;
+- Síndrome Antifosfolípide;
+- Tireoidopatias;
+- Hemoglobinopatias;
+- Cardiopatias;
+- Pneumopatias;
+- Neoplasias.
 
-- 3-8cm: normal;
-
-- Dx diferencial de RCF x PIG.
-
-- >8cm: polidrâmnio; Artéria Cerebral Média
-
-Oligoâmnio – Conduta
-
-- Fluxo fetal;
-
-- Expectante:
-
-- Avalia priorização de órgãos-nobres; Malformações fetais;
-
-- Estratificação de anemia fetal. Etiologia transitória hidratar, Rearranjo Hemodinâmico Fetal compensar doença etc.
-
-- Na vigência de insuficiência placentária, as
-
-- Conduta ativa (Parto): alterações hemodinâmicas ocorrem em ordem: Refratariedade clínica; | Artéria umbilical → artéria cerebral média → IG ≥ 37sem sempre; ducto venoso. IG ≥ 34sem se oligoâmnio grave;
-
-- Centralização hemodinâmica fetal ocorre quando RCF ou Insuficiência Placentária. há aumento de resistência ao fluxo na artéria umbilical com queda da resistência na artéria
-
-Atenção cerebral média: Corticoterapia se IG entre 25 e 34sem | Priorização de órgãos nobres (coração, Conduta não engloba RPMO cérebro e adrenais).
-
-Parto por via obstétrica
-
-- Alteração do ducto venoso sugere acidemia = sofrimento fetal.
-
-## DOPPLERVELOCIMETRIA OBSTÉTRICA
-
-Artérias Uterinas
-
-- Não avalia vitalidade fetal;
-
-| Aloimunização; | Colestase gravídica; AVALIAÇÃO DA VITALIDADE FETAL | Gestação prolongada; Tem por objetivo proteger o feto dos potenciais | Ruptura prematura de membranas ovulares.
-
-efeitos da hipoxemia (aguda ou crônica) no decorrer Como avaliar da gestação.
-
-- Cardiotocografia;
-
-Indicações
-
-- Perfil biofísico fetal – inclui cardiotocografia;
-
-- Morbidades prévias:
-
-- Perfil hemodinâmico fetal; Síndromes hipertensivas;
-
-- Mobilograma*. Diabetes mellitus 1 e 2; Lúpus eritematoso sistêmico; * O Ministério da Saúde, em 2022, orienta a paciente, Síndrome Antifosfolípide; através do Mobilograma, sobre a percepção da Tireoidopatias; movimentação fetal. Idealmente, deve-se perceber 10 Hemoglobinopatias; movimentos fetais em menos de 1 hora. Caso alcance Cardiopatias; valores menores, é necessária uma avaliação em Pneumopatias; ambiente de pronto-socorro com cardiotocografia Neoplasias. e/ou perfil biofísico fetal.
-
-- Morbidades gestacionais: Síndromes hipertensivas; PERFIL BIOFÍSICO FETAL Diabetes mellitus gestacional; Parâmetros Restrição do crescimento fetal (RCF);
-
-- Cardiotocografia; Malformações fetais;
-
-- Movimentos respiratórios;
+**Morbidades gestacionais**
+- Síndromes hipertensivas;
+- Diabetes mellitus gestacional;
+- Restrição do crescimento fetal (RCF);
+- Malformações fetais;
+- Aloimunização;
+- Colestase gravídica;
+- Gestação prolongada;
+- Ruptura prematura de membranas ovulares (RPMO).
 
 ---
 
 <!-- page:2 -->
 
-- Movimentos fetais;
+## Perfil Biofísico Fetal
 
-- Tônus fetal;
+### Parâmetros de Normalidade
 
-- Líquido amniótico.
+| Parâmetro | Normal (2 pontos) |
+|---|---|
+| **Cardiotocografia** (feto reativo) | 2 acelerações transitórias |
+| **Movimentos respiratórios** | 1 ou mais movimentos por 30 segundos em 30 minutos |
+| **Movimentos fetais** | 3 ou mais movimentos corporais ou de membros em 30 minutos; 1 ou mais movimentos de flexão/extensão de extremidades, abertura/fechamento das mãos |
+| **Tônus fetal** | 1 ou mais movimentos de flexão/extensão de extremidades |
+| **Líquido amniótico** | 1 bolsão vertical ≥ 2 cm |
 
-Tabela 1: Tabela 1: Parâmetros de normalidade do perfil biofísico fetal. Parâmetro Normal (2 pontos)
+> ⚠️ **Apenas o líquido amniótico é marcador de sofrimento fetal crônico.** Todos os demais parâmetros, se alterados, sugerem sofrimento fetal agudo.
 
-2 acelerações transitórias Cardiotocografia (feto reativo) Movimentos 1 ou + movimentos por respiratórios 30 segundos em 30 minutos.
+### Líquido Amniótico (LA)
 
-3 ou + movimentos corporais ou de Movimentos fetais O membros em 30 minutos.
+**Composição e Dinâmica**
+- A partir de 20 semanas é composto majoritariamente por líquido pulmonar e urina fetal;
+- **Deglutição vs. Diurese**:
+  - Deglutição > urina = LA reduzido → oligoâmnio;
+  - Urina > deglutição = LA aumentado → polidrâmnio.
 
-- 1 ou + movimentos de flexão/ abertura/fechamento das mãos.
+**Cálculo do ILA**
+- Avaliação de 4 quadrantes do abdome materno, com traçado vertical e mensuração da distância.
 
-Tônus fetal extensão de extremidades, Líquido amniótico 1 bolsão vertical ≥2cm
+### Interpretação dos Valores de Líquido Amniótico
 
-- OBS: Apenas o líquido amniótico é o marcador de sofrimento fetal crônico, todos os demais, se alterados, P sugerem sofrimento fetal agudo.
+| Maior Bolsão Vertical | Índice de Líquido Amniótico (ILA) | Classificação |
+|---|---|---|
+| 0 | 0 | **Anidrâmnio** |
+| < 1 cm | < 3 cm | **Oligoâmnio grave** |
+| < 2 cm | < 5 cm | **Oligoâmnio** |
+| 2-3 cm | 5-8 cm | **Reduzido** |
+| 3,1-8 cm | 8,1-18 cm | **Normal** |
+| — | 18,1-24,9 cm | **Aumentado** |
+| > 8 cm | ≥ 25 cm | **Polidrâmnio** |
 
-Líquido Amniótico (LA)
+*Figura 1: Avaliação do índice de líquido amniótico.*
 
-- A partir de 20 semanas é composto, majoritariamente, por líquido pulmonar e urina fetal;
+### Oligoâmnio — Causas e Conduta
 
-- Deglutição x Diurese: Deglutição > urina = LA reduzido → oligoâmnio; Urina > deglutição = LA aumentado → polidrâmnio.
+**Causas fetais**
+- RCF, malformações congênitas (doenças renais), gestação prolongada, pós-datismo.
 
-OBS: Cálculo do ILA: avaliação de 4 quadrantes do abdome materno. Procede-se com traçado vertical, e mensuração da distância.
+**Causas maternas**
+- Insuficiência uteroplacentária (vasculopatia, trombofilias, nefropatias, colagenoses, síndromes hipertensivas, diabetes);
+- Desidratação;
+- Infecção;
+- Medicações (betabloqueadores, IECA, diuréticos).
 
-Tabela 2: Interpretação dos valores de líquido amniótico. Maior Bolsão Índice de Líquido Classificação Vertical Amniótico 0 0 Anidrâmnio
+**Causas relacionadas à membrana ou placenta**
+- Síndrome de transfusão feto-fetal;
+- Ruptura prematura de membranas ovulares.
 
-- Oligoâmnio grave
+**Conduta**
+- **Expectante**: se etiologia transitória (ex: desidratação, medicação — hidratar, compensar doença etc.), ou se malformações fetais;
+- **Ativa (Parto)**: se refratariedade clínica; IG ≥ 37 semanas; IG ≥ 34 semanas com oligoâmnio grave (ILA < 3) + RCF ou insuficiência placentária.
+  - **Corticoterapia** se IG entre 25-34 semanas;
+  - Essas condutas **não englobam casos de RPMO**.
 
-< 1 cm < 3 cm
+### Interpretação dos Resultados do Perfil Biofísico Fetal
 
-- < 2 cm < 5 cm Oligoâmnio
+| Pontuação do PBF | Interpretação | Conduta |
+|---|---|---|
+| **10/10** ou **8/10** (sem cardiotocografia) | Baixo risco de hipóxia ou asfixia fetal com LA normal | Expectante |
+| **8/10 com LA normal** ou **8/8** (sem cardiotocografia) | Baixo risco | Expectante |
+| **8/10 com oligoâmnio** | Provável hipóxia fetal crônica | Depende do oligoâmnio: expectante se transitório; parto se refratário, IG ≥ 37 sem ou IG ≥ 34 sem com oligoâmnio grave |
+| **6/10 com LA normal** | Possível asfixia fetal ou resultado falso positivo | Repetir em 6-24 horas; se mantido ou pior, resolver |
+| **6/10 com oligoâmnio** | Provável asfixia fetal | Interrupção na viabilidade |
+| **4/10** | Alta probabilidade de asfixia fetal | Interrupção na viabilidade |
+| **2/10** ou **0/10** | Asfixia fetal | Interrupção na viabilidade |
 
-2 – 3 cm 5 – 8 cm Reduzido 3,1 – 8 cm 8,1 - 18 cm Normal
+## Dopplervelocimetria Obstétrica
 
-- 18,1 – 24,9 cm Aumentado
+### Aplicações Gerais
 
-> 8 cm ≥ 25 cm Polidrâmnio Figura 1: Avaliação do índice líquido amniótico.
-
-Oligoâmnio
-
-- Causas fetais: RCF, malformações congênitas (ex:
-
-doenças renais), gestação prolongada, pós-datismo;
-
-- Causas maternas: insuficiência uteroplacentária vasculopatia, trombofilias, nefropatias, colagenoses, etc.), desidratação, infecção, medicações
-
-(síndromes hipertensivas, diabetes com (betabloqueadores, IECA, diuréticos, etc.);
-
-- Membranas ou placentárias: síndrome de transfusão feto-fetal, ruptura prematura de membranas ovulares.
-
-Pontuação e Risco Tabela 3: Interpretação dos resultados do perfil biofísico fetal. Pontuação do PBF Interpretação 10/10 ou 8/10 (sem Baixo risco de hipóxia ou cardiotocografia)
-
-asfixia fetal com LA normal. 8/10 com Provável hipóxia fetal crônica oligoâmnio 6/10 com LA Possível asfixia fetal ou resultado normal falso positivo 6/10 com Provável asfixia fetal oligoâmnio 4/10 Alta probabilidade de asfixia fetal 2/10 ou 0/10 Asfixia fetal Condutas
-
-- 10/10 ou 8/10 com LA normal, ou 8/8 (sem cardiotocografia): conduta expectante;
-
-- 8/10 com oligoâmnio: depende do oligoâmnio: Expectante, se: malformações fetais ou etiologia transitória (ex: desidratação); Parto, se: Refratariedade clínica; IG ≥ 37 semanas; IG ≥ 34 semanas e oligoâmnio grave (ILA < 3); RCF ou insuficiência placentária.
-
-Oligoâmnio antes de 34 semanas: lembrar do uso de corticoide; Essas condutas não englobam casos de RPMO.
+Tem por objetivo:
+- Avaliar circulação uteroplacentária e fetomaterna;
+- Diagnóstico de RCF;
+- Estratificação de gravidade de RCF;
+- Diagnóstico diferencial de RCF × PIG;
+- Rastreamento de aneuploidias e cardiopatias;
+- Predição de anemia fetal.
 
 ---
 
 <!-- page:3 -->
 
-- 6/10 com líquido normal: repetir em 6 – 24 horas. Se mantido, ou com piora, resolver a gestação;
+### Artérias Uterinas
 
-- 6/10 com oligoâmnio: interrupção na viabilidade;
+**Função**
+- Avalia circulação uteroplacentária.
 
-- 4/10: interrupção na viabilidade;
+**Aplicações**
+- Risco de pré-eclâmpsia;
+- Risco de RCF;
+- Diagnóstico de RCF × PIG.
 
-- 2/10 ou 0/10: interrupção na viabilidade.
+**Avaliação Quantitativa**
+- **Índice de Pulsatilidade (IP)** médio entre artéria uterina direita e esquerda: alterado quando **IP médio > percentil 95 para idade gestacional (IG)**.
 
-- 2/10 ou 0/10: interrupção na viabilidade.
+**Avaliação Qualitativa**
+- **Incisura protodiastólica**: pode ser fisiológica até final do segundo trimestre; quando presente além desse período, indica risco de pré-eclâmpsia (observe o segundo pico menor no doppler).
 
-Artérias Uterinas:
+*Figura 2: Incisura protodiastólica.*
 
-- Avalia circulação uteroplacentária;
+### Artéria Umbilical
 
-- Aplicações: Risco de pré-eclâmpsia; Risco de RCF; Diagnóstico de RCF x PIG; Incisura protodiastólica – risco de pré-eclâmpsia
+**Função**
+- Avalia circulação fetomaterna.
 
-(veja o segundo pico menor, ali é a incisura).
+**Aplicações**
+- Diagnóstico de RCF;
+- Estratificação de gravidade da RCF.
 
-- Avaliação quantitativa → índice de pulsatilidade artéria esquerda): Alterado quando IP médio > percentil 95 para idade gestacional (IG).
+**Avaliação Quantitativa**
+- **IP**: alterado se **IP > percentil 95 para IG**.
 
-(IP) médio entre a artéria uterina direita e a
+**Avaliação Qualitativa**
+- **Fluxo diastólico final**: positivo, zero ou ausente (reverso).
 
-- Avaliação qualitativa: Incisura protodiastólica: pode ser fisiológica até final do segundo trimestre.
+*Figura 3: Doppler de artéria umbilical com fluxo diastólico final positivo.*
 
-Figura 2: Incisura protodiastólica. Artéria Umbilical
+*Figura 4: Doppler de artéria umbilical com fluxo diastólico final ausente.*
 
-- Avalia circulação fetomaterna;
+*Figura 5: Doppler de artéria umbilical com fluxo diastólico final reverso.*
 
-- Aplicações: Diagnóstico de RCF; Estratificação de gravidade da RCF.
+### Artéria Cerebral Média (ACM)
 
-- Avaliação quantitativa → IP: Alterado se IP > percentil 95 para IG; Avaliação qualitativa → fluxo diastólico final positivo. Figura 4: Doppler de artéria umbilical com fluxo diastólico final ausente.
-
-(presente, zero ou ausente). Figura 3: Doppler de artéria umbilical com fluxo diastólico final Figura 5: Doppler de artéria umbilical com fluxo diastólico final reverso.
-
-- Verificar Tabela 4 na próxima página.
-
-Artéria Cerebral Média
-
+**Função**
 - Avalia circulação fetal;
+- Avalia priorização de órgãos-nobres (coração, cérebro, adrenais).
 
-- Aplicações: Diagnóstico de RCF; Estratificação de gravidade da RCF; Predição de anemia fetal (ex: aloimunização); Avaliação quantitativa: IP: alterado se IP <percentil 5 para IG = vasodilatação cerebral; Relação cérebro-placentária (IP ACM/IP umbilical): Pico de Velocidade Sistólica (PVS) para estratificação de anemia fetal → avaliado em múltiplos da mediana (MoM).
+**Aplicações**
+- Diagnóstico de RCF;
+- Estratificação de gravidade de RCF;
+- Predição de anemia fetal (ex: aloimunização).
 
-alterado se <1 ou <p5 para idade gestacional. Quando alterada (vasodilatada), sugere tendência à priorização dos órgãos nobres fetais — cérebro, adrenais e coração.
+**Avaliação Quantitativa**
+- **IP**: alterado se **IP < percentil 5 para IG** = vasodilatação cerebral;
+- **Relação cérebro-placentária** (IP ACM / IP umbilical): alterada se < 1 ou < p5 para idade gestacional;
+- **Pico de Velocidade Sistólica (PVS)**: para estratificação de anemia fetal, avaliado em múltiplos da mediana (MoM).
 
-Figura 6: Dopplervelocimetria normal de artéria cerebral média.
+**Interpretação**
+- Quando vasodilatada (alterada), sugere tendência à priorização dos órgãos nobres fetais.
+
+*Figura 6: Dopplervelocimetria normal de artéria cerebral média.*
+
+### Ducto Venoso
+
+**Anatomia e Função**
+- Shunt que transporta sangue oxigenado da veia umbilical para a veia cava inferior;
+- Avalia casos mais graves de RCF precoce;
+- Avalia insuficiência cardíaca fetal (ex: hidropisia);
+- Rastreamento de aneuploidias e cardiopatias (1º trimestre).
+
+**Avaliação Quantitativa**
+- **IP Venoso (IPV)**: **IPV > percentil 95 (ou > 1,0)** = aumento de resistência.
+
+**Avaliação Qualitativa**
+- **Onda "a"**: pode estar presente, ausente ou reversa;
+- Ausência ou reversão da onda "a" = indicativo de acidose fetal, representa sobrecarga do coração direito.
+
+*Figura 7: Circulação fetal com destaque para ducto venoso.*
+
+*Figura 8: Ducto venoso com onda "a" positiva e IPV normal.*
+
+*Figura 9: Ducto venoso com IPV alterado (IPV > 1).*
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -216,56 +251,82 @@ Figura 6: Dopplervelocimetria normal de artéria cerebral média.
 
 <!-- page:4 -->
 
-Tabela 4: Valores de Referência de Doppler Obstétrico. Índices de Doppler Idade A Umb ACM RCP A Ut DV gestacional (PI) (PI) (PI) (PI)
+### Tabela de Valores de Referência — Índices de Doppler Obstétrico
 
-(IPV)5 (semanas) (p95)¹ (p5)² (p5)³ (p95)4 20 2,03 1,37 0,65 1,61 >1.0 21 1,96 1,4 0,75 1,54 >1.0 22 1,9 1,45 0,85 1,47 >1.0 23 1,85 1,47 0,92 1,41 >1.0 24 1,79 1,5 1 1,35 >1.0 25 1,74 1,51 1,05 1,3 >1.0 26 1,69 1,52 1,1 1,25 >1.0 27 1,65 1,53 1,15 1,21 >1.0 29 1,57 1,53 1,2 1,17 >1.0 28 1,61 1,53 1,23 1,13 >1.0 30 1,54 1,52 1,25 1,1 >1.0 31 1,51 1,51 1,27 1,06 >1.0 32 1,48 1,5 1,28 1,04 >1.0 33 1,46 1,47 1,27 1,01 >1.0 34 1,44 1,43 1,27 0,99 >1.0 35 1,43 1,4 1,25 0,97 >1.0 36 1,42 1,37 1,22 0,95 >1.0 37 1,41 1,32 1,17 0,94 >1.0 38 1,4 1,28 1,23 0,92 >1.0 39 1,4 1,21 1,08 0,91 >1.0 Figura 7: Circulação fetal com destaque para ducto venoso 40 1,4 1,18 1 0,9 >1.0 (círculo preto).
+> ⚠️ Dados de tabela com muitos parâmetros e idades gestacionais; conteúdo preservado em formato tabulado abaixo para precisão clínica.
 
-1 Arduini e Rizzo, 1990 / Índice de pulsatilidade da artéria umbilical (anormal > p95) 2 Arduini e Rizzo, 1990 / Índice de pulsatilidade da artéria cerebral (anormal > p5)
+| IG (semanas) | A Umb IP (p95) | ACM IP (p5) | RCP IP (p5) | A Ut IP (p95) | DV IPV |
+|---|---|---|---|---|---|
+| 20 | 2,03 | 1,37 | 0,65 | 1,61 | > 1,0 |
+| 21 | 1,96 | 1,40 | 0,75 | 1,54 | > 1,0 |
+| 22 | 1,90 | 1,45 | 0,85 | 1,47 | > 1,0 |
+| 23 | 1,85 | 1,47 | 0,92 | 1,41 | > 1,0 |
+| 24 | 1,79 | 1,50 | 1,00 | 1,35 | > 1,0 |
+| 25 | 1,74 | 1,51 | 1,05 | 1,30 | > 1,0 |
+| 26 | 1,69 | 1,52 | 1,10 | 1,25 | > 1,0 |
+| 27 | 1,65 | 1,53 | 1,15 | 1,21 | > 1,0 |
+| 28 | 1,61 | 1,53 | 1,23 | 1,13 | > 1,0 |
+| 29 | 1,57 | 1,53 | 1,20 | 1,17 | > 1,0 |
+| 30 | 1,54 | 1,52 | 1,25 | 1,10 | > 1,0 |
+| 31 | 1,51 | 1,51 | 1,27 | 1,06 | > 1,0 |
+| 32 | 1,48 | 1,50 | 1,28 | 1,04 | > 1,0 |
+| 33 | 1,46 | 1,47 | 1,27 | 1,01 | > 1,0 |
+| 34 | 1,44 | 1,43 | 1,27 | 0,99 | > 1,0 |
+| 35 | 1,43 | 1,40 | 1,25 | 0,97 | > 1,0 |
+| 36 | 1,42 | 1,37 | 1,22 | 0,95 | > 1,0 |
+| 37 | 1,41 | 1,32 | 1,17 | 0,94 | > 1,0 |
+| 38 | 1,40 | 1,28 | 1,23 | 0,92 | > 1,0 |
+| 39 | 1,40 | 1,21 | 1,08 | 0,91 | > 1,0 |
+| 40 | 1,40 | 1,18 | 1,00 | 0,90 | > 1,0 |
 
-3 Baschat, 2003 / Relação cérebro-placentário - PI ACM / PI A umb (anormal > p95) 5 Clínica Obstétrica HC - FMUSP / Ducto venoso Índice de pulsatilidade venosa (anormal > 1,0)
-
-P - percentil Ducto Venoso
-
-- Avalia circulação fetal;
-
-- Aplicações: Avaliação dos casos mais graves de RCF precoce; Figura 8: Ducto venoso com onda “a” positiva e IPV normal. Insuficiência cardíaca fetal (ex: hidropisia); Rastreamento de aneuploidias e cardiopatias
-
-(1º trimestre).
-
-- Avaliação quantitativa → IP Venoso (IPV): IPV > percentil 95 (ou > 1,0) = aumento da resistência.
-
-- Avaliação qualitativa → onda “a”: Onda “a” ausente; Onda “a” reversa.
-
-- Indicativo de acidose fetal e representa a sobrecarga do coração direito;
-
-- O ducto venoso é um shunt que joga sangue oxigenado da veia umbilical para a veia cava inferior.
-
-Figura 9: Ducto venoso com IPV alterado (IPV >1).
-
-![Figura do material - página 4](figure-004-1.webp)
-
-![Figura do material - página 4](figure-004-2.webp)
+**Legendas:**
+- IG: Idade gestacional
+- A Umb IP: Índice de pulsatilidade da artéria umbilical (anormal > p95) — Arduini e Rizzo, 1990
+- ACM IP: Índice de pulsatilidade da artéria cerebral média (anormal < p5) — Arduini e Rizzo, 1990
+- RCP IP: Relação cérebro-placentária (IP ACM / IP umbilical; anormal < p5) — Baschat, 2003
+- A Ut IP: Índice de pulsatilidade arterial uterino (anormal > p95)
+- DV IPV: Índice de pulsatilidade venosa do ducto venoso (anormal > 1,0) — Clínica Obstétrica HC-FMUSP
+- p: percentil
 
 ---
 
 <!-- page:5 -->
 
-Fluxograma 1: Adaptação hemodinâmica fetal observada no doppler obstétrico. ↑ IP AU ↓IP ACM ↑IP DV + Centralização Fetal Priorização de órgãos nobres NÃO É sofrimento fetal Adaptação Hemodinâmica
+## Rearranjo Hemodinâmico Fetal
 
-- As alterações hemodinâmicas fetais seguem uma ordem fisiopatológica, de modo que elas são, tipicamente progressivas;
+### Conceito
 
-- A centralização fetal representa a priorização dos órgãos nobres e não indica sofrimento fetal;
+Na vigência de insuficiência placentária, as alterações hemodinâmicas fetais ocorrem em ordem específica e progressiva:
+1. Aumento de resistência ao fluxo na **artéria umbilical**;
+2. Queda de resistência na **artéria cerebral média** (vasodilatação);
+3. Alterações no **ducto venoso** (sugerindo acidemia).
 
-- Verificar Fluxograma 1 .
+### Adaptação Hemodinâmica vs. Sofrimento Fetal
 
-## REFERÊNCIAS
+- **Centralização hemodinâmica fetal**: ocorre quando há aumento de resistência ao fluxo na artéria umbilical com queda concomitante na artéria cerebral média;
+- **Priorização de órgãos nobres** (coração, cérebro, adrenais): **não é sofrimento fetal**, é adaptação normal;
+- As alterações hemodinâmicas fetais são tipicamente progressivas e seguem uma ordem fisiopatológica;
+- **Alteração do ducto venoso** sugere **acidemia = sofrimento fetal**.
 
-Figura 1: Avaliação do índice líquido amniótico. Acervo Medcof Figura 2: Incisura protodiastólica. Fonte: ABIDOYE, I. A.; AYOOLA, O. O.; IDOWU, B. M.; ADERIBIGBE, A. S.; LOTO, O.
+*Fluxograma 1: Adaptação hemodinâmica fetal observada no doppler obstétrico.*
+- Aumento de IP de artérias uterinas → Diminuição de IP de ACM → Aumento de IP de ducto venoso + Centralização fetal → Priorização de órgãos nobres (não é sofrimento fetal, é adaptação) → Acidemia/Sofrimento fetal
 
-M. Uterine artery Doppler velocimetry in hypertensive disorder of pregnancy in Nigeria. Journal of Ultrasonography, v. 17, n. 71, p. 253-258, dez. 2017. Acidemia = Sofrimento Fetal Figura 3: Doppler de artéria umbilical com fluxo diastólico final positivo.
+## Referências
 
-Acervo Medcof Figura 4: Doppler de artéria umbilical com fluxo diastólico final ausente. Acervo Medcof Figura 5: Doppler de artéria umbilical com fluxo diastólico final reverso.
+Figura 1: Avaliação do índice de líquido amniótico. Acervo Medcof
 
-Acervo Medcof Figura 6: Dopplervelocimetria normal de artéria cerebral média. Acervo Medcof Figura 8: Ducto venoso com onda “a” positiva e IPV normal.
+Figura 2: Incisura protodiastólica. Fonte: ABIDOYE, I. A.; AYOOLA, O. O.; IDOWU, B. M.; ADERIBIGBE, A. S.; LOTO, O. M. Uterine artery Doppler velocimetry in hypertensive disorder of pregnancy in Nigeria. Journal of Ultrasonography, v. 17, n. 71, p. 253-258, dez. 2017.
 
-Acervo Medcof . Figura 9: Ducto venoso com IPV alterado (IPV >1). y Acervo Medcof
+Figura 3: Doppler de artéria umbilical com fluxo diastólico final positivo. Acervo Medcof
+
+Figura 4: Doppler de artéria umbilical com fluxo diastólico final ausente. Acervo Medcof
+
+Figura 5: Doppler de artéria umbilical com fluxo diastólico final reverso. Acervo Medcof
+
+Figura 6: Dopplervelocimetria normal de artéria cerebral média. Acervo Medcof
+
+Figura 7: Circulação fetal com destaque para ducto venoso. Acervo Medcof
+
+Figura 8: Ducto venoso com onda "a" positiva e IPV normal. Acervo Medcof
+
+Figura 9: Ducto venoso com IPV alterado (IPV > 1). Acervo Medcof

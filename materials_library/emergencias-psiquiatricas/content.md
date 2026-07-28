@@ -2,11 +2,7 @@
 
 <!-- page:1 -->
 
-psiquiatria (CM) AVALIAÇÃO INICIAL avaliação do risco psiquiátrico e determinação Se confirmada hipótese de transtorno mental, do encaminhamento:
-
-deve-se proceder ao manejo agudo dos sintomas e à
-
-## INTERNAÇÃO PSIQUIÁTRICA
+Psiquiatria (CM)
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -16,75 +12,29 @@ deve-se proceder ao manejo agudo dos sintomas e à
 
 <!-- page:2 -->
 
-## SUICÍDIO SÍNDROME SEROTONINÉRGICA
+## Avaliação Inicial da Emergência Psiquiátrica
 
-Fatores de risco
+### As Três Prioridades
 
-- Excesso de atividade serotoninérgica no sistema
+1. **Primeira**: garantir a segurança
+2. **Segunda**: realizar avaliação efetiva
+3. **Terceira**: facilitar a intervenção adequada
 
-Mnemônico “SAD PERSONAS”: nervoso central e periférico;
+### Fluxo Geral
 
-- S exo;
+**Avaliação do risco psiquiátrico e determinação do encaminhamento:**
 
-- Mais comumente resulta da associação:
+Se confirmada hipótese de transtorno mental, deve-se proceder ao manejo agudo dos sintomas (ex.: agitação, psicose) e investigar o risco psiquiátrico associado, definindo o encaminhamento (ex.: internação, CAPS, etc.).
 
-- A usência de cônjuge, abuso na infância, alta | IMAO (inibidor da monoamina oxidase) + hospitalar psiquiátrica recente; inibidores da recaptação de serotonina e/
-
-- D epressão, desemprego, dor crônica, desespero, ou noradrenalina ou estes isoladamente em dor psíquica, desesperança; altas doses.
-
-- P révia tentativa, personalidade vulnerável, parentes
-
-- Tríade: distúrbios cognitivos-comportamentais, com histórico de suicídio; autonômicos e neuromusculares;
-
-- E tanol e outras substâncias psicoativas,
-
-- Tratamento: além das medidas de suporte e dependência química; suspensão do fármaco, utiliza-se ciproeptadina.
-
-- R acionalidade comprometida (psicoses, déficits SÍNDROME NEUROLÉPTICA MALIGNA cognitivos), delírio, delirium;
-
-- Lembre das manifestações clínicas e laboratoriais
-
-- S uporte social deficitário, sozinho, desamparo; pelo mnemônico “Que MERDA!”:
-
-- O rganização do plano; | Mente alterada;
-
-- N ível etário extremo (jovem/idoso); | Elevação de temperatura, leucócitos e CPK;
-
-- A cesso a meios letais; | Rigidez muscular;
-
-- S aúde comprometida. | Disautonomia;
-
-Estratificação de risco e conduta | Antipsicóticos causam.
-
-- Depende de três perguntas fundamentais:
-
-- Tratamento: além das medidas de suporte e Pensa? (há ideação suicida?); suspensão do fármaco, utiliza-se dantrolene Como? (há plano?); (relaxante muscular), bromocriptina (agonista Quando? (há intenção iminente?). dopaminérgico) e lorazepam.
-
-- Baixo risco: Pensamentos suicidas ocasionais; Sem plano; Encaminhar a profissional de saúde mental/médico; Consultas com intervalos regulares.
-
-- Médio risco: Pensamentos suicidas; Plano de ação, mas sem caráter imediato; Encaminhar ao psiquiatra ou médico; Agendar consulta o mais breve possível.
-
-- Alto risco: Pensamentos suicidas; Plano suicida + meios de execução com caráter imediato; Encaminhar para hospitalização imediata.
-
-## AVALIAÇÃO INICIAL
-
-- Segunda: realizar avaliação efetiva;
-
-As três prioridades em qualquer emergência
-
-- Terceira: facilitar a intervenção adequada.
-
-psiquiátrica incluem:
-
-- Verificar Figura 1 na próxima página
-
-- Primeira: garantir a segurança;
+Ver Figura 1 e Figura 2.
 
 ---
 
 <!-- page:3 -->
 
-Figura 1: Avaliação inicial da emergência psiquiátrica. Conforme o fluxograma acima, nos casos de transtorno mental, além do manejo agudo dos sintomas (ex.: agitação, psicose, etc.), deve-se investigar o risco psiquiátrico associado e definir o encaminhamento (ex.: internação, CAPS, etc.). A Figura 2 na próxima página, aborda melhor estas duas últimas etapas:
+Figura 1: Avaliação inicial da emergência psiquiátrica. Conforme o fluxograma, nos casos de transtorno mental, além do manejo agudo dos sintomas, deve-se investigar o risco psiquiátrico associado e definir o encaminhamento.
+
+Figura 2: Estratificação do risco psiquiátrico e definição do encaminhamento.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -92,61 +42,11 @@ Figura 1: Avaliação inicial da emergência psiquiátrica. Conforme o fluxogram
 
 <!-- page:4 -->
 
-Figura 2: Estratificação do risco psiquiátrico e definição do encaminhamento.
+## Internação Psiquiátrica
 
-## INTERNAÇÃO PSIQUIÁTRICA FATORES DE RISCO
+Nos casos em que for determinada a internação psiquiátrica pelos fluxogramas anteriores, procedimentos específicos devem ser adotados (Ver Figura 3).
 
-Nos casos em que, pelos fluxogramas anteriores, for determinada a internação psiquiátrica, os seguintes MNEMÔNICO “SAD PERSONAS”:
-
-passos devem ser adotados:
-
-- S exo;
-
-- Verificar Figura 3 na próxima página
-
-- A usência de cônjuge, abuso na infância, alta hospitalar psiquiátrica recente;
-
-## SUICÍDIO
-
-- D epressão, desemprego, dor crônica, desespero, dor psíquica, desesperança;
-
-## CONCEITOS
-
-- P révia tentativa, personalidade vunerável, parentes
-
-- Intenção suicida: desejo que um ato autolesivo resulte com histórico de suicídio;
-
-em morte;
-
-- E tanol e outras substâncias psicoativas,
-
-- Ideação suicida: pensamentos passivos sobre desejar dependência química;
-
-estar morto ou pensamentos ativos sobre se matar,
-
-- R acionalidade comprometida: psicoses, déficits não acompanhados de comportamento preparatório; cognitivos, delírio, delirium;
-
-- Tentativa de suicídio: comportamento autolesivo
-
-- S uporte social deficitário, sozinho, desamparo;
-
-com consequências não fatais, acompanhado de
-
-- O rganização do plano;
-
-evidências (explícitas ou implícitas) de que a pessoa
-
-- N ível etário extremo: jovens e idosos;
-
-pretendia morrer;
-
-- A cesso a meios letais;
-
-- Suicídio: morte autoprovocada com evidências
-
-- S aúde comprometida.
-
-(explícitas ou implícitas) de que a pessoa pretendia morrer.
+Figura 3: Condutas frente à indicação de internação psiquiátrica.
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -154,61 +54,101 @@ pretendia morrer;
 
 <!-- page:5 -->
 
-O suicídio é mais frequente entre homens, devido Alta letalidade ao uso de métodos mais letais. Já as mulheres
+## Suicídio
 
-- Planejamento concreto, já com data e realizam mais tentativas de suicídio, mas com método estabelecidos;
+### Conceitos
 
-menor letalidade.
+- **Intenção suicida**: desejo que um ato autolesivo resulte em morte.
 
-- Planos de alta letalidade incluem: Pular de local alto;
+- **Ideação suicida**: pensamentos passivos sobre desejar estar morto ou pensamentos ativos sobre se matar, não acompanhados de comportamento preparatório.
 
-FATORES PROTETORES | Arma de fogo;
+- **Tentativa de suicídio**: comportamento autolesivo com consequências não fatais, acompanhado de evidências (explícitas ou implícitas) de que a pessoa pretendia morrer.
 
-- Apoio da família, de amigos e de outras | Enforcamento;
+- **Suicídio**: morte autoprovocada com evidências (explícitas ou implícitas) de que a pessoa pretendia morrer.
 
-pessoas significativas; | Ingestão de veneno;
+### Epidemiologia
 
-- Crenças religiosas, culturais e étnicas; | Ingestão de grande quantidade de fármacos
+O **suicídio é mais frequente entre homens**, devido ao uso de métodos mais letais. Já as **mulheres realizam mais tentativas de suicídio**, mas com método menor letalidade.
 
-- Envolvimento na comunidade; (muitas vezes de acesso controlado).
+### Fatores de Risco — Mnemônico "SAD PERSONAS"
 
-- Vida social satisfatória;
+- **S** — **Sexo** (masculino)
+- **A** — **Ausência de cônjuge**, abuso na infância, alta hospitalar psiquiátrica recente
+- **D** — **Depressão**, desemprego, dor crônica, desespero, dor psíquica, desesperança
+- **P** — **Prévia tentativa**, personalidade vulnerável, parentes com histórico de suicídio
+- **E** — **Etanol** e outras substâncias psicoativas, dependência química
+- **R** — **Racionalidade comprometida** (psicoses, déficits cognitivos, delírio, delirium)
+- **S** — **Suporte social deficitário**, sozinho, desamparo
+- **O** — **Organização do plano**
+- **N** — **Nível etário extremo** (jovens e idosos)
+- **A** — **Acesso a meios letais**
+- **S** — **Saúde comprometida**
 
-- Acesso fácil a meio letais (ex.: paciente possui arma
+### Fatores Protetores
 
-- Rede social significativa; em casa);
+- Apoio da família, de amigos e de outras pessoas significativas
+- Crenças religiosas, culturais e étnicas
+- Envolvimento na comunidade
+- Vida social satisfatória
+- Rede social significativa
+- Acesso a serviços e cuidados de saúde mental
+- Emprego
+- Estilo de vida saudável
+- Gravidez
+- Criança na família
 
-- Acesso a serviços e cuidados de saúde mental;
+### Características da Ideação Suicida
 
-- Elaboração de carta de despedida;
+#### Baixa Letalidade
 
-- Emprego;
+- Ideação suicida sem plano
+- Ideias crônicas de morte
+- Planos vagos ou de baixa letalidade
+- **Planos de baixa letalidade incluem**:
+  - Ingestão de pequena quantidade de medicamento de venda livre (ex.: dipirona, paracetamol em dose não letal)
+  - Cortes superficiais nos punhos ou antebraços sem risco de sangramento fatal
+  - Tentativas realizadas em local e horário com grande chance de ser interrompido
 
-- Procedimentos para não ser descoberto.
+#### Alta Letalidade
 
-- Estilo de vida saudável;
+- Planejamento concreto, já com data e procedimentos estabelecidos
+- **Acesso fácil a meios letais** (ex.: paciente possui arma em casa)
+- **Elaboração de carta de despedida**
+- **Procedimentos para não ser descoberto**
+- **Planos de alta letalidade incluem**:
+  - Pular de local alto
+  - Arma de fogo
+  - Enforcamento
+  - Ingestão de veneno
+  - Ingestão de grande quantidade de fármacos (muitas vezes de acesso controlado)
 
-- Gravidez; ESTRATIFICAÇÃO DO RISCO E CONDUTA
+### Estratificação do Risco e Conduta
 
-- Criança na família.
+**Responder a três questionamentos fundamentais:**
 
-- A fim de determinar a conduta frente a um paciente com intenção, ideação ou tentativa de suicídio, é
+1. **Pensa?** (há ideação suicida?)
+2. **Como?** (há plano?)
+3. **Quando?** (há intenção iminente?)
 
-CARACTERÍSTICAS DA IDEAÇÃO SUICIDA necessário sempre responder a três questionamentos: Baixa letalidade | Pensa? (há ideação suicida?);
+#### Baixo Risco
 
-- Ideação suicida sem plano; | Como? (há plano?);
+- Pensamentos suicidas ocasionais
+- Sem plano
+- **Conduta**: Encaminhar a profissional de saúde mental/médico; Consultas com intervalos regulares
 
-- Ideias crônicas de morte; | Quando? (há intenção iminente?).
+#### Médio Risco
 
-- Planos vagos ou de baixa letalidade;
+- Pensamentos suicidas
+- Plano de ação, mas sem caráter imediato
+- **Conduta**: Encaminhar ao psiquiatra ou médico; Agendar consulta o mais breve possível
 
-- A partir destas três perguntas, estratificamos o risco e
+#### Alto Risco
 
-- Planos de baixa letalidade incluem: determinamos a conduta, conforme mostra a Figura 4: Ingestão de pequena quantidade de medicamento
+- Pensamentos suicidas
+- Plano suicida + meios de execução com caráter imediato
+- **Conduta**: **Encaminhar para hospitalização imediata**
 
-- Verificar Figura 4 na próxima página de venda livre (ex: dipirona, paracetamol em dose não letal); Cortes superficiais nos punhos ou antebraços sem risco de sangramento fatal; Tentativas realizadas em local e horário com grande chance de ser interrompido.
-
-Figura 3: Condutas frente à indicação de internação psiquiátrica.
+Ver Figura 4.
 
 ![Figura do material - página 5](figure-005-1.webp)
 
@@ -216,42 +156,103 @@ Figura 3: Condutas frente à indicação de internação psiquiátrica.
 
 <!-- page:6 -->
 
-Figura 4: Estratificação de risco e condutas frente à intenção, ideaçã
+Figura 4: Estratificação de risco e condutas frente à intenção, ideação e tentativa de suicídio.
 
-## REAÇÕES ADVERSAS GRAVES A
+## Reações Adversas Graves a Psicofármacos
 
-## PSICOFÁRMACOS SÍNDROME SEROTONINÉRGICA
+### Síndrome Serotoninérgica
 
-- Causada por excesso de serotonina no sistema nervoso central e periférico;
+#### Conceito
 
-- Geralmente associada à combinação de: ISRS (inibidores seletivos da recaptação de serotonina)/ISRN (inibidores seletivos da recaptação de noradrenalina) + iMAO (inibidor da monoamina oxidase), ou sobredose isolada destas medicações (ex: fluoxetina, tramadol, MDMA);
+Causada por **excesso de atividade serotoninérgica** no sistema nervoso central e periférico.
 
-- Tríade clássica de sintomas: Alterações do estado mental: ansiedade, confusão, agitação, delírio; Disfunção autonômica: hipertermia, diaforese, taquicardia, hipertensão, náuseas, vômitos, diarreia; Anormalidades neuromusculares: hiperreflexia, clônus (ocular ou induzido), mioclonia, tremor, sinal de Babinski bilateral.
+#### Etiologia
 
-- Conduta: Suspender imediatamente o(s) agente(s) serotonérgico(s); Suporte clínico (hidratação, monitorização); Sedação com benzodiazepínicos; Antagonista serotoninérgico: Ciproeptadina via oral, início 12 mg + 2 mg a cada
+**Mais comumente resulta da associação:**
 
-2h se necessário. SÍNDROME NEUROLÉPTICA MALIGNA A
+- **IMAO** (inibidor da monoamina oxidase) **+** inibidores da recaptação de serotonina e/ou noradrenalina
+- Ou estes inibidores isoladamente em **altas doses**
+- Sobredose isolada destas medicações (ex.: fluoxetina, tramadol, MDMA)
 
-- Efeito adverso grave de antipsicóticos (mais comum com típicos: haloperidol, flufenazina);
+#### Quadro Clínico — Tríade
 
-- Resulta do bloqueio dopaminérgico D2 excessivo nas A seguintes estruturas: Hipotálamo, levando à desregulação térmica; A Gânglios da base, levando à rigidez muscular extrema.
+1. **Distúrbios cognitivo-comportamentais**: ansiedade, confusão, agitação, delírio
 
-- Quadro clínico típico: A Alteração do estado mental: confusão, mutismo, delirium; Rigidez muscular intensa; ão e tentativa de suicídio. Hipertermia (febre alta, progressiva); Disautonomia: taquicardia, hipotensão, taquipneia, sudorese profusa;
+2. **Distúrbios autonômicos**: hipertermia, diaforese, taquicardia, hipertensão, náuseas, vômitos, diarreia
 
-- Achados laboratoriais: Aumento de CPK (creatinoquinase), leucocitose, mioglobinúria; Há risco de injúria renal aguda por rabdomiólise.
+3. **Anormalidades neuromusculares**: hiperreflexia, clônus (ocular ou induzido), mioclonia, tremor, sinal de Babinski bilateral
 
-- Para lembrar mais facilmente das manifestações clínicas e laboratoriais, pode-se usar o mnemônico: Mente alterada; Elevação de temperatura , leucócitos e CPK; Rigidez muscular; Disautonomia; Antipsicóticos causam.
+#### Conduta
 
-“Que MERDA!”:
+- **Suspender imediatamente** o(s) agente(s) serotonérgico(s)
+- **Suporte clínico**: hidratação, monitorização
+- **Sedação** com benzodiazepínicos
+- **Antagonista serotoninérgico**: **Ciproeptadina** via oral
+  - Início: 12 mg
+  - Mais 2 mg a cada 2h se necessário
 
-- Conduta: Suspender o antipsicótico imediatamente; Medidas de suporte intensivo: hidratação, monitoramento, resfriamento externo; Fármacos específicos: Dantrolene (relaxante muscular); Bromocriptina (agonista dopaminérgico); Amantadina (agonista dopaminérgico alternativo); Lorazepam (sedação).
+---
 
-## REFERÊNCIAS
+### Síndrome Neuroléptica Maligna (SNM)
 
-Figura 1: Avaliação inicial da emergência psiquiátrica. Acervo Medcof. Figura 2: Estratificação do risco psiquiátrico e definição do encaminhamento.
+#### Conceito
 
-Acervo Medcof. Figura 3: Condutas frente à indicação de internação psiquiátrica. Acervo Medcof. Figura 4: Estratificação de risco e condutas frente à intenção, ideação e tentativa de suicídio.
+Efeito adverso grave de **antipsicóticos** (mais comum com típicos: haloperidol, flufenazina).
 
-Acervo Medcof.
+#### Mecanismo
+
+Resulta do **bloqueio dopaminérgico D2 excessivo** nas seguintes estruturas:
+
+- **Hipotálamo** → desregulação térmica
+- **Gânglios da base** → rigidez muscular extrema
+
+#### Quadro Clínico
+
+- **Alteração do estado mental**: confusão, mutismo, delirium
+- **Rigidez muscular intensa**
+- **Hipertermia** (febre alta, progressiva)
+- **Disautonomia**: taquicardia, hipotensão, taquipneia, sudorese profusa
+
+#### Achados Laboratoriais
+
+- **Aumento de CPK** (creatinoquinase)
+- **Leucocitose**
+- **Mioglobinúria**
+- **Risco de injúria renal aguda** por rabdomiólise
+
+#### Mnemônico — "Que MERDA!"
+
+- **M** — **Mente** alterada
+- **E** — **Elevação** de temperatura, leucócitos e CPK
+- **R** — **Rigidez** muscular
+- **D** — **Disautonomia**
+- **A** — **Antipsicóticos** causam
+
+#### Conduta
+
+1. **Suspender o antipsicótico imediatamente**
+
+2. **Medidas de suporte intensivo**:
+   - Hidratação
+   - Monitoramento
+   - Resfriamento externo
+
+3. **Fármacos específicos**:
+   - **Dantrolene** (relaxante muscular)
+   - **Bromocriptina** (agonista dopaminérgico)
+   - **Amantadina** (agonista dopaminérgico alternativo)
+   - **Lorazepam** (sedação)
+
+---
+
+## Referências
+
+Figura 1: Avaliação inicial da emergência psiquiátrica. Acervo Medcof.
+
+Figura 2: Estratificação do risco psiquiátrico e definição do encaminhamento. Acervo Medcof.
+
+Figura 3: Condutas frente à indicação de internação psiquiátrica. Acervo Medcof.
+
+Figura 4: Estratificação de risco e condutas frente à intenção, ideação e tentativa de suicídio. Acervo Medcof.
 
 ![Figura do material - página 6](figure-006-1.webp)

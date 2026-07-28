@@ -151,9 +151,13 @@ Obs.: os tipos 1 e 3 são defeitos quantitativos, enquanto o tipo 2 é qualitati
 2. Plaquetometria;
 3. Outros fatores de risco para sangramentos envolvidos.
 
-| | Sangramento Crítico (geralmente plaquetas < 20 mil/mm³) | Sangramento Severo | Sangramento Menor (geralmente plaquetas < 20 mil/mm³) |
-|---|---|---|---|
-| Tratamento | Imediato/urgente: transfusão de plaquetas + imunoglobulina + corticoide | Imunoglobulina + corticoide | Corticoide |
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
+
+**Conduta de tratamento conforme gravidade do sangramento:**
+
+- **Sangramento Crítico** (geralmente plaquetas < 20 mil/mm³): Imediato/urgente — transfusão de plaquetas + imunoglobulina + corticoide.
+- **Sangramento Severo**: Imunoglobulina + corticoide.
+- **Sangramento Menor**: Corticoide (nota: o OCR original não deixou clara a faixa de plaquetas para esta categoria).
 
 Figura 3: Manejo de pacientes com PTI e sangramento.
 

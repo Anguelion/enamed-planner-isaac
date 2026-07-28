@@ -2,135 +2,68 @@
 
 <!-- page:1 -->
 
-## CABEÇA E PESCOÇO: CÂNCER DE
+## Anatomia
 
-## HIPOFARINGE E LARINGE
+### Faringe
 
-CEC do trato aerodigestivo superior CÂNCER DE HIPOFARINGE T4: Invasão grosseira de estruturas adjacentes
+A faringe é divida em três regiões:
 
-- Relação estreita com supraglote (laringe);
+- **Nasofaringe**: da base do crânio ao palato mole.
+- **Orofaringe**: do palato mole à valécula.
+- **Hipofaringe**: da valécula ao músculo cricofaríngeo.
 
-- T4a: Face externa da cartilagem tireoide e/ou
+*Figura 2: Anatomia da faringe* (corte coronal com visão posterior).
 
-- Diagnóstico geralmente tardio e com doença não tecidos adjacentes (traqueia, cricoide, musculatura restrita ao órgão; intrínseca da língua, musculatura do pescoço,
+*Figura 3: Anatomia da faringe* (corte coronal).
 
-- Preferência por tratamento não operatório (embora tireoide, esôfago) não exclusivo);
+### Laringe
 
-- T4b: Lesão irressecável (espaço paravertebral,
+**Cartilagens (3 ímpares):**
 
-- Tratamento do pescoço SEMPRE! envolvimento da carótida, invasão de mediastino)
+- Epiglote
+- Tireoide
+- Cricoide
 
-CÂNCER DE LARINGE Tratamento - laringe
+**Cartilagens (3 pares):**
 
-- Supraglote: ↑ rede linfática, pior prognóstico
+- Aritenoide
+- Corniculadas
+- Cuneiformes
 
-(~ hipofaringe), disfagia; Cirurgia
+**Marcos anatômicos:**
 
-- Glote: mais comum, ↓ rede linfática, melhor RT prognóstico, disfonia; Cirurgia + RT
+- **Supraglote**: epiglote, pregas ariepiglóticas, aritenoides, falsas pregas.
+- **Glote**: pregas vocais, comissuras anterior e posterior.
+- **Infraglote**: porção inferior da glote até a borda inferior do cricoide.
 
-- Infraglote: raro, prognóstico ruim, dispneia; QT + RT
+**Unidade funcional da laringe:**
 
-## ESTADIAMENTO T - GLOTE
+- Metade da cartilagem cricoide
+- 1 aritenoide
+- 1 anteparo contralateral
 
-T1: Pregas vocais móveis
+### Fisiologia — Funções da Laringe
 
-- T1 ou T2 : Monoterapia
+- **Proteção de via aérea**: separando via respiratória da via digestiva.
+- **Fonação**.
+- **Respiração**.
 
-- T1a: apenas uma | Cirurgia
+### Inervação de Laringe
 
-- T1b: invasão de prega vocal contralateral | RT
+- **Nervo laríngeo inferior**: inervação da musculatura intrínseca da laringe (exceto músculo cricotireóideo).
+- **Nervo laríngeo superior**: divide-se em:
+  - **Ramo interno**: inervação sensitiva da supraglote e hipofaringe.
+  - **Ramo externo**: inervação do músculo cricotireóideo.
 
-T2: Paresia de pregas vocais e/ou extensão para sub
+*Figura 1: Anatomia.*
 
-- T3 ou T4: Associação de tratamento ou supraglote | Cirurgia + RT paraglótico e/ou face interna da cartilagem tireoide
-
-T3: Paralisia de pregas vocais e/ou invasão do espaço | Preservação de órgão (QT + RT)
-
-## ANATOMIA
-
-Figura 1: Anatomia.
+*Figura 4: Inervação de laringe.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
 ---
 
 <!-- page:2 -->
-
-Figura 2: Anatomia da faringe. Nasofaringe; M
-
-- Localiza-se da base do crânio ao palato mole. S
-
-Orofaringe;
-
-- Palato mole à valécula.
-
-- Hipofaringe;
-
-- Valécula ao músculo cricofaríngeo.
-
-- Anatomia da faringe:
-
-- Em corte coronal, com visão posterior. G
-
-- Hipofaringe;
-
-- Anatomia da laringe:
-
-- 3 cartilagens ímpares; Epiglote; I Tireoide; Cricoide.
-
-- 3 cartilagens pares; Aritenoide; I Corniculadas; Cuneiformes
-
-- Verificar Figura 2
-
-- C
-
-- - - - - Figura 3: Anatomia da faringe - corte coronal. MARCOS ANATÔMICOS DA LARINGE:
-
-Supraglote:
-
-- Epiglote;
-
-- Pregas ariepiglóticas;
-
-- Aritenoides;
-
-- Falsas pregas.
-
-Glote:
-
-- Pregas vocais;
-
-- Comissuras anterior e posterior
-
-Infraglote:
-
-- Porção inferior da glote até a borda inferior do cricoide.
-
-Inervação de laringe:
-
-- Nervo laríngeo inferior; Inervação da musculatura intrínseca da laringe
-
-(exceto músculo cricotireóideo);
-
-- Nervo laríngeo superior se divide em: Ramo interno: inervação sensitiva da supraglote e hipofaringe; Ramo externo: inervação do músculo cricotireóideo.
-
-- Verificar Figura 4 na próxima página
-
-## CEC DE HIPOFARINGE
-
-## INCIDÊNCIA
-
-- Seio piriforme 65 – 85%;
-
-- Parede posterior 10 – 20%;
-
-- Área pós-cricoide 5 – 15%.
-
-- Verificar Figura 5 na próxima página
-
-- Verificar Figura 6 na próxima página
-
-- Verificar Figura 7 na próxima página
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -140,47 +73,59 @@ Inervação de laringe:
 
 <!-- page:3 -->
 
-Figura 6: CEC de hipofaringe. Figura 7: CEC de hipofaringe.
+## Câncer de Hipofaringe (CEC de Hipofaringe)
 
-## EPIDEMIOLOGIA
+### Incidência
 
-- 6% dos cânceres de cabeça e pescoço
+- **Seio piriforme**: 65–85% dos casos.
+- **Parede posterior**: 10–20% dos casos.
+- **Área pós-cricoide**: 5–15% dos casos.
 
-- Incidência no mundo: 0,8 a 6 casos / 100.000 pessoas
+*Figura 5: CEC de hipofaringe.*
 
-- Mais comum em países desenvolvidos
+*Figura 6: CEC de hipofaringe.*
 
-- Masculino > feminino
+*Figura 7: CEC de hipofaringe.*
 
-- Idade: 65 a 68 anos
+### Epidemiologia
 
-## FATORES DE RISCO
+- **6%** dos cânceres de cabeça e pescoço.
+- **Incidência no mundo**: 0,8 a 6 casos/100.000 pessoas.
+- Mais comum em países desenvolvidos.
+- **Masculino > feminino**.
+- **Idade**: 65 a 68 anos.
 
-- Etilismo e tabagismo;
+### Fatores de Risco
 
-- Deficiência de ferro e vitamina C;
-
-- Exposição ocupacional;
-
+- Etilismo e tabagismo.
+- Deficiência de ferro e vitamina C.
+- Exposição ocupacional.
 - Síndrome de Plummer-Vinson (Escandinávia).
 
-Figura 4: Inervação de laringe. CARACTERÍSTICAS:
+### Características Clínicas
 
-- Relação anatômica com supraglote;
+- **Relação anatômica**: estreita com supraglote (laringe).
+- **< 15%** dos cânceres de hipofaringe são restritos ao órgão no momento do diagnóstico — ausência de sintomas de alarme.
+- O diagnóstico é feito geralmente por **progressão local ou metástase cervical**.
+- **Alta taxa de metastização**:
+  - Linfonodos acometidos em **65%** dos casos.
+  - Metástase à distância em **20%** dos casos.
+- **Sobrevida global em 5 anos**: estádios I e II: 40–70%.
+- **Alta taxa de segundos primários**: 2,1% ao ano.
+  - Principais sítios acometidos: boca, esôfago, pulmão.
 
-- < 15% dos cânceres de hipofaringe são restritos ao órgão no momento do diagnóstico - sem sintomas de alarme;
+### Prognóstico
 
-- O diagnóstico é feito geralmente por progressão local ou metástase cervical;
+**Prognóstico ruim:**
 
-- Demonstra alta taxa de metastização; Linfonodos acometidos em 65% dos casos; Metástase à distância em 20% dos casos.
+- Sintomas tardios.
+- Grande disseminação linfonodal.
+- Diagnóstico geralmente tardio com doença não restrita ao órgão.
 
-- Sobrevida global em 5 anos para os estádios I e
+### Quadro Clínico
 
-II: 40-70%;
-
-- Alta taxa de segundos primários: 2,1% ao ano; Principais sítios acometidos: boca, esôfago e pulmão.
-
-Figura 5: CEC de hipofaringe.
+- **Massa cervical e perda ponderal** — presente em casos gerais.
+- **Disfagia**: relação com hipofaringe, local onde há passagem de alimento.
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -190,97 +135,37 @@ Figura 5: CEC de hipofaringe.
 
 <!-- page:4 -->
 
-Figura 8: Anatomia da laringe. ESTADIAMENTO T; Conduta a partir do estádio:
+### Diagnóstico
 
-- T1: ≤ 2 cm e/ou limitado a 1 subsítio;
+- Suspeitar em tabagista com disfagia de duração maior que **14 dias**.
+- **Biópsia**: laringoscopia de suspensão ou broncoscopia.
 
-- Estadios I e II;
+### Estadiamento — Hipofaringe (TNM)
 
-- T2: entre 2-4 cm, sem fixação da laringe, ou invade > 1 | RT (preferencial);
+**Estadiamento T:**
 
-subsítio ou área adjacente; | Transoral + esvaziamento cervical (não indicado
+- **T1**: ≤ 2 cm e/ou limitado a 1 subsítio.
+- **T2**: entre 2–4 cm, sem fixação da laringe, ou invade > 1 subsítio ou área adjacente.
+- **T3**: > 4 cm ou fixação da laringe ou extensão para mucosa esofágica.
+- **T4a**: invasão de estruturas vizinhas, mas ressecável (cartilagem cricoide/tireoide, osso hioide, tireoide, esôfago, subcutâneo, músculos pré-laríngeos).
+- **T4b**: invasão irressecável (fáscia pré-vertebral, carótida, mediastino).
 
-- T3: > 4 cm ou fixação da laringe ou extensão para para extensão transglótica, invasão pós-cricoide e mucosa esofágica; invasão profunda do seio piriforme).
+### Tratamento — Hipofaringe
 
-- T4a: invadem estruturas vizinhas, mas ressecável;
+**Características gerais:**
 
-- Estadios III e IV: Cartilagem cricoide/tireoide; | Estratégia conservadora de órgão QT + RT. Osso hioide;
+- Preferência por tratamento não operatório (embora não exclusivo).
+- **Normalmente necessidade de laringofaringectomia + glossectomia** por margem.
+- **Morbidade**: aspiração e necessidade de traqueostomia.
+- Cirurgia geralmente reservada para resgate → faringolaringectomia.
+- **Tratamento do pescoço SEMPRE!**
 
-## CEC DE LARINGE
+**Esquema por estádio:**
 
-| Tireoide; | Esôfago; | Subcutâneo; FISIOLOGIA: | Músculos pré-laríngeos. Funções da laringe:
+- **Estadios I e II**: **RT** (preferencial) ou Transoral + esvaziamento cervical (não indicado para extensão transglótica, invasão pós-cricoide e mucosa esofágica, invasão profunda do seio piriforme).
+- **Estadios III e IV**: Estratégia conservadora de órgão — **QT + RT**.
 
-- T4b: invade e é irressecável;
-
-- Esfincteriana; Fáscia pré-vertebral; | Proteção de via aérea: separando a via respiratória Carótida; da via digestiva. Mediastino.
-
-- Fonação;
-
-- Respiração.
-
-ESTADIAMENTO N: Unidade funcional da laringe:
-
-- N1: único, ipsilateral, ≤ 3 cm;
-
-- Metade da cartilagem cricoide;
-
-- N2a: único, ipsilateral, 3 – 6 cm;
-
-- 1 Aritenoide;
-
-- N2: múltiplos, ipsilateral, 3 – 6 cm;
-
-- 1 Anteparo contralateral.
-
-- N2c: contralateral, ≤ 6 cm
-
-- Verificar Figura 8
-
-- N3a: > 6 cm;
-
-- N3b: ENE+ EPIDEMIOLOGIA:
-
-- 180.000 novos casos em 2020;
-
-TRATAMENTO:
-
-- Mortalidade anual de 100.000 casos;
-
-Preferência por tratamento não operatório:
-
-- Homens > mulheres.
-
-- Boa resposta à QT/RT;
-
-- Normalmente necessidade de laringofaringectomia + INCIDÊNCIA NO BRASIL:
-
-glossectomia por margem;
-
-- 2,9 casos/100.000 hab;
-
-- Morbidade → aspiração e necessidade
-
-- 8.000 casos novos em 2020;
-
-de traqueostomia;
-
-- 9º câncer mais frequente em homens;
-
-- Cirurgia geralmente reservada para
-
-- 15.600 mortes em 2020.
-
-resgate → faringolaringectomia. Tratamento do pescoço sempre: FATORES DE RISCO:
-
-- N+: esvaziamento cervical radical (modificado
-
-- Tabagismo e etilismo;
-
-quando possível);
-
-- Radioterapia cervical prévia.
-
-- N0: II,III e IV bilateral → considerar VI + tireoidectomia quando acometimento do ápice do seio piriforme.
+*Figura 8: Anatomia da laringe.*
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -288,246 +173,223 @@ quando possível);
 
 <!-- page:5 -->
 
-SOBREVIDA EM 5 ANOS:
+## Câncer de Laringe (CEC de Laringe)
 
-- T3: Limitado à laringe com paralisia de prega vocal e/
+### Epidemiologia
 
-- Estádios I e II: > 90% e 80%; ou invasão mais extensa (área pós-cricoide, espaço
+- **180.000** novos casos em 2020.
+- **Mortalidade anual**: 100.000 casos.
+- Homens > mulheres.
+- **Incidência no Brasil**: 2,9 casos/100.000 habitantes.
+- **8.000** casos novos em 2020.
+- **9º câncer** mais frequente em homens.
+- **15.600** mortes em 2020.
 
-- Se identificado precocemente, tem alta chance pré-epiglótico ou paraglótico, face interna da de cura. cartilagem tireoide);
+### Fatores de Risco
 
-- T4a: Invasão da face externa da cartilagem tireoide
+- Tabagismo e etilismo.
+- Radioterapia cervical prévia.
 
-PREVALÊNCIA PROGNÓSTICO: ou estruturas adjacentes (traqueia, musculatura Supraglote: intrínseca da língua, musculatura estriada do pescoço,
+### Prevalência por Localização
 
-- 1/3 dos casos; tireoide, esôfago);
+- **Supraglote**: 1/3 dos casos; ↑ rede linfática; pior prognóstico (~ hipofaringe); disfagia.
+- **Glote**: 2/3 dos casos; ↓ rede linfática; melhor prognóstico; disfonia.
+- **Infraglote**: raro (2%); prognóstico ruim; dispneia.
 
-- Prognóstico ruim:
+### Prognóstico
 
-- T4b: Lesão irressecável (espaço paravertebral, Sintomas tardios; envolvimento da carótida, Invasão de mediastino). Grande disseminação linfonodal. Estadiamento infraglote – T;
+**Melhor prognóstico (glote):**
 
-Glote:
+- Sintomas mais precoces.
+- Menor disseminação linfonodal (rede linfática reduzida, situado entre cartilagens).
 
-- T1: Limitado à subglote;
+**Pior prognóstico (supraglote e infraglote):**
 
-- 2/3 dos casos;
+- Sintomas tardios.
+- Invasão de mediastino.
+- Difícil diagnóstico.
 
-- T2: Extensão à glote com função normal ou paresia;
+### Sobrevida em 5 Anos
 
-- Melhor prognóstico:
+- **Estádios I e II**: > 90% e 80% (se identificado precocemente, alta chance de cura).
 
-- T3: Limitado à laringe com paralisia de pregas vocais e/ Sintomas mais precoces; ou invasão do espaço paraglótico e/ou face interna da Menor disseminação linfonodal (situado entre cartilagem tireoide;
+### Quadro Clínico
 
-as cartilagens).
+- **Massa cervical e perda ponderal** — presente em casos gerais.
+- **Disfagia, disfonia e dispneia/tosse**.
 
-- T4: Invasão grosseira de estruturas adjacentes
+**Por localização:**
 
-Infraglote: | T4a: Invasão da face externa da cartilagem tireoide
+- **Disfonia**: acometimento da glote; interferência na mobilidade da prega vocal.
+- **Dispneia/tosse**: infra-glote; relaciona-se com traqueia e pode obstruir passagem de ar.
 
-- Raro (2%); ou cricoide e/ou tecidos adjacentes (traqueia,
+### Diagnóstico
 
-- Prognóstico ruim: Sintomas tardios; Difícil diagnóstico. musculatura intrínseca da língua, musculatura do pescoço, tireoide, esôfago);
+- Suspeitar em tabagista com **disfonia ou disfagia**, com duração maior que **14 dias**.
+- **Exame físico completo**: palpação cervical, oroscopia, laringoscopia com nasofibroscópio.
+- **Exames complementares**:
+  - TC de face, pescoço e tórax com contraste.
+  - Endoscopia digestiva alta.
+  - Broncoscopia (quando indicado).
+- **Biópsia**: laringoscopia de suspensão ou broncoscopia.
 
-QUADRO CLÍNICO: | T4b: Lesão irressecável (espaço paravertebral,
+### Estadiamento — Laringe (TNM)
 
-- Massa cervical e perda ponderal; envolvimento da carótida, invasão de mediastino). Presente em casos gerais. Estadiamento glote – T:
+#### Estadiamento Supraglote — T
 
-- Disfagia, disfonia e dispneia/tosse.
+- **T1**: um subsítio com pregas vocais móveis.
+- **T2**: > 1 subsítio ou área adjacente (glote, mucosa da base da língua, valécula, parede medial do seio piriforme) sem fixação da laringe.
+- **T3**: limitado à laringe com paralisia de prega vocal e/ou invasão mais extensa (área pós-cricoide, espaço pré-epiglótico ou paraglótico, face interna da cartilagem tireoide).
+- **T4a**: invasão da face externa da cartilagem tireoide ou estruturas adjacentes (traqueia, musculatura intrínseca da língua, musculatura estriada do pescoço, tireoide, esôfago).
+- **T4b**: lesão irressecável (espaço paravertebral, envolvimento da carótida, invasão de mediastino).
 
-- T1: pregas vocais móveis.
+#### Estadiamento Glote — T
 
-Disfagia; | T1a: apenas uma.
+- **T1**: pregas vocais móveis.
+  - **T1a**: apenas uma.
+  - **T1b**: invasão de prega vocal contralateral.
+- **T2**: paresia de pregas vocais e/ou extensão para sub ou supraglote.
+- **T3**: paralisia de pregas vocais e/ou invasão do espaço paraglótico e/ou face interna da cartilagem tireoide.
+- **T4a**: invasão grosseira de estruturas adjacentes — face externa da cartilagem tireoide e/ou tecidos adjacentes (traqueia, cricóide, musculatura intrínseca da língua, musculatura do pescoço, tireoide, esôfago).
+- **T4b**: lesão irressecável (espaço paravertebral, envolvimento da carótida, invasão de mediastino).
 
-- Supraglote: relação com hipofaringe, local onde há | T1b: invasão de prega vocal contralateral.
+#### Estadiamento Infraglote — T
 
-passagem de alimento.
+- **T1**: limitado à subglote.
+- **T2**: extensão à glote com função normal ou paresia.
+- **T3**: limitado à laringe com paralisia de pregas vocais e/ou invasão do espaço paraglótico e/ou face interna da cartilagem tireoide.
+- **T4a**: invasão da face externa da cartilagem tireoide ou cricóide e/ou tecidos adjacentes (traqueia, musculatura intrínseca da língua, musculatura do pescoço, tireoide, esôfago).
+- **T4b**: lesão irressecável (espaço paravertebral, envolvimento da carótida, invasão de mediastino).
 
-- T2: paralisia das pregas vocais e/ou extensão para sub
+#### Estadiamento N (Regional)
 
-Disfonia; ou supraglote.
-
-- Acometimento da glote: interferência na mobilidade da
-
-- T3: paralisia de pregas vocais e/ou invasão do espaço prega vocal. paraglótico e/ou face interna da cartilagem tireoide.
-
-Dispneia/tosse;
-
-- T4: invasão grosseira de estruturas adjacentes.
-
-- Infra-glote: relaciona-se com traquéia e pode obstruir | T4a: face externa da cartilagem tireoide e/ou a passagem de ar. tecidos adjacentes (traqueia; cricóide; musculatura intrínseca da língua; musculatura do pescoço;
-
-DIAGNÓSTICO: tireoide; esôfago);
-
-- Suspeitar em tabagista com disfonia ou disfagia, com | T4b: lesão irressecável (espaço paravertebral;
-
-duração maior que 14 dias. envolvimento da carótida; Invasão de mediastino).
-
-- Biópsia Estadiamento laringe – N: Laringoscopia de suspensão ou broncoscopia.
-
-- N1: único ipsilateral, ≤ 3 cm.
-
-- N2a: único ipsilateral, 3 a 6 cm.
-
-ESTADIAMENTO:
-
-- N2b: múltiplos ipsilaterais, 3 a 6 cm.
-
-Exame físico:
-
-- N2c: contralateral, ≤ 6cm;
-
-- Orofaringoscopia.
-
-- N3a: > 6 cm;
-
-- Laringoscopia.
-
-- N3b: ENE+.
-
-- Palpação do pescoço.
-
-Exames complementares: TRATAMENTO:
-
-- Rotina CEC CCP Métodos: Exame físico completo: palpação cervical,
-
-- Cirurgia;
-
-oroscopia, laringoscopia com nasofibroscópio;
-
-- Radioterapia; TC de face, pescoço e tórax com contraste;
-
-- Cirurgia + radioterapia; Endoscopia Digestiva Alta;
-
-- Radioterapia + quimioterapia. Broncoscopia (quando indicado). Estadio T1 ou T2 (inicial): monoterapia;
-
-Estadiamento supraglote – T
-
-- Cirurgia;
-
-- T1: Um subsítio com pregas vocais móveis;
-
-- Radioterapia.
-
-- T2: > 1 subsítio ou área adjacente (glote, mucosa Estádio T3 ou T4 (tardio): associação de tratamento;
-
-da base da língua, valécula, parede medial do seio
-
-- Cirurgia + radioterapia;
-
-piriforme) sem fixação da laringe;
-
-- Preservação de órgão (quimioterapia + radioterapia).
+- **N1**: único, ipsilateral, ≤ 3 cm.
+- **N2a**: único, ipsilateral, 3–6 cm.
+- **N2b**: múltiplos, ipsilateral, 3–6 cm.
+- **N2c**: contralateral, ≤ 6 cm.
+- **N3a**: > 6 cm.
+- **N3b**: ENE+ (extensão extranodal).
 
 ---
 
 <!-- page:6 -->
 
-Fatores que influenciam o tratamento:
+### Tratamento — Laringe
 
-- Tamanho do tumor, extensão e localização;
+**Métodos:**
 
-- Função laríngea: se há funcionalidade de laringe, devese tentar preservar;
+- Cirurgia.
+- Radioterapia.
+- Cirurgia + radioterapia.
+- Radioterapia + quimioterapia.
 
-- Idade e comorbidades;
+**Preferência por tratamento não operatório:**
 
-- Idade e comorbidades;
+- Boa resposta à QT/RT.
+- Tratamento do pescoço sempre indicado.
 
-- Reserva pulmonar e deglutição;
+**Fatores que influenciam o tratamento:**
 
-- Recursos de reabilitação disponíveis;
-
-- Experiência da equipe assistente;
-
+- Tamanho do tumor, extensão e localização.
+- **Função laríngea**: se há funcionalidade de laringe, deve-se tentar preservar.
+- Idade e comorbidades.
+- Reserva pulmonar e deglutição.
+- Recursos de reabilitação disponíveis.
+- Experiência da equipe assistente.
 - Questões pessoais (ocupação, preferência).
 
-## TRATAMENTO CIRÚRGICO
+#### Tratamento por Estádio
 
-Laringectomias parciais:
+**Estadios I e II (Glote):**
 
-- Endoscópicas (cordectomias);
+- **Monoterapia**: Cirurgia (cordectomias endoscópicas) OU Radioterapia.
 
+**Estadios I e II (Supraglote e Infraglote):**
+
+- **Tratamento conservador**: Cirurgia microendoscópica parcial OU Radioterapia.
+
+**Estadios III e IV:**
+
+- **Associação de tratamento**: Cirurgia + RT OU Preservação de órgão (QT + RT).
+
+#### Tratamento Cirúrgico
+
+**Laringectomias parciais:**
+
+- Endoscópicas (cordectomias).
 - Abertas (verticais e horizontais).
 
-## Laringectomia total
+**Laringectomia total:**
 
-Desconexão de via aérea/via digestiva.
+- Desconexão de via aérea/via digestiva.
+- Traqueostomia definitiva.
+- O paciente evolui com afonia.
+- Reconstrução da faringe: primária, retalho local, microcirúrgico.
 
-- Traqueostomia definitiva;
+#### Reabilitação Vocal em Laringectomia Total
 
-- O paciente evolui com afonia;
+- **Voz esofágica**: frases curtas ou sílabas a partir de armazenamento de ar no esôfago.
+- **Laringe eletrônica**: voz robotizada.
+- **Fístula traqueo-esofágica + prótese fonatória**: fonação pela vibração da faringe; necessita troca periódica de válvula.
 
-- Reconstrução da faringe: Primária; Retalho local, microcirúrgico.
+*Figura 9: Laringe eletrônica.*
 
-## REABILITAÇÃO VOCAL EM
+*Figura 10: Laringectomia total.*
 
-- Voz esofágica;
+### Tratamento do Pescoço — Laringe
 
-- Laringe eletrônica;
+**Tabela de conduta (T, N, localização):**
 
-- Fístula traqueo-esofágica + prótese fonatória.
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-CONSIDERAÇÕES SOBRE C TRATAMENTO CIRÚRGICO: P Reabilitação da voz em laringectomia total;
+**Indicações gerais:**
 
-- Voz esofágica: frases curtas ou sílabas a partir de armazenamento de ar no esôfago;
+- **N+ (terapêutico)**: esvaziamento cervical radical ou modificado.
+- **N0 (eletivo)**:
+  - **Supraglote**: sempre indicado — TP + nível VI.
+  - **Glote**: não indicado.
+  - **Infraglote**: não indicado.
+- **Estadios II a IV (bilateral)**: considerar TP + nível VI.
+- **Estadios II a IV (contralateral)**: considerar se invasão de linha média.
+- **Se invasão de ápice do seio piriforme (supraglote)**: tireoidectomia quando acometimento; nível VI.
 
-- Laringe eletrônica: voz robotizada;
+*Figura 15: Tratamento do pescoço — CEC de laringe.*
 
-- Fístula traqueo-esofágica + prótese fonatória. Fonação pela vibração da faringe; Necessita troca periódica de válvula.
+### Algoritmos de Tratamento
 
-- Verificar Figura 9 T
+*Figura 11: Tratamento — CEC glote.*
 
-- Verificar Figura 10
+*Figura 12: Tratamento — CEC supraglote.*
 
-- CEC glo
+*Figura 13: Tratamento — CEC subglote.*
 
-Estadios I e lI Cirurgia micro Parcial aberta RT Figura 11: Tratamento – CEC glote. Figura 9: Laringe eletrônica.
-
-Figura 10: Laringectomia total. CONSIDERAÇÕES SOBRE TRATAMENTO POR RT/QT:
-
-- Adjuvância ao tratamento cirúrgico.
-
-- Utilizadas como tratamento principal em: Tumores avançados quando seria indicada laringectomia total, porém a laringe é funcionante; Tumores precoces: se preferência do paciente, apesar de piores resultados oncológicos.
-
-TRATAMENTO - CEC GLOTE:
-
-- Verificar Figura 11 ote externa da cartilagem.
-
-Estadios Ill e IV Idoso, ↓KPS, laringe não funcionante, invasão da lâmina Não Sim Parcial + LT + RT QT+RT RT adjuvante adjuvante
-
-![Figura do material - página 6](figure-006-1.webp)
+*Figura 14: Conduta prática — CEC de glote.*
 
 ---
 
 <!-- page:7 -->
 
-## TRATAMENTO – CEC SUPRAGLOTE
+### Considerações sobre Radioterapia e Quimioterapia
 
-CEC supraglote Estadios I e lI Lesões grandes / paresia de prega vocal Sim Não Parcial aberta RT Cirurgia micro Figura 12: Tratamento – CEC supraglote.
+**Quando utilizadas:**
 
-## TRATAMENTO – CEC SUBGLOTE
-
-CEC Estadios I e lI RT LT ou parcial extendida Não funcionou LT Figura 13: Tratamento – CEC subglote.
-
-## CONDUTA PRÁTICA - CEC GLOTE
-
-Laringe funcionante Sim Consegue preservar unidade funcional na cirurgia? Sim Não La Paciente tolera um pouco de broncoaspiração?
-
-Sim Não Laringectomia parcial Laringecto±m iRa Tparcial ± RT Figura 14: Conduta prática - CEC de glote. Estadios Ill e IV Idoso, ↓KPS, laringe não funcionante, invasão da lâmina externa da cartilagem.
-
-Não Sim Parcial + LT + QT+RT RT adjuvante RT adjuvante subglote Estadios Ill e IV Idoso, ↓KPS, laringe não funcionante, invasão da lâmina externa da cartilagem.
-
-Não Sim Parcial + LT + QT+RT RT adjuvante RT adjuvante e (protege vias aéreas?) Não Laringectomia total ± RT aringecRtoTm ±ia pQaTrcial ± RT Não funcionou
+- **Adjuvância** ao tratamento cirúrgico.
+- Como tratamento principal em:
+  - Tumores avançados quando seria indicada laringectomia total, porém a laringe é funcionante.
+  - Tumores precoces: se preferência do paciente, apesar de piores resultados oncológicos.
 
 ---
 
 <!-- page:8 -->
 
-II a IV bilateral Supraglote Sempre indicado TP + nível VI T1 e T2 Não indicado NO (eletivo) Glote Infraglote Tratamento do pescoço Radical modificado N+ (terapêutico)
+## Referências
 
-II a IV contralateral s Figura 15: Tratamento do pescoço - CEC de laringe
+Figura 5: CEC de hipofaringe. Acervo pessoal — Medcof — Dr. Felipe.
 
-## REFERÊNCIAS
+Figura 6: CEC de hipofaringe. Acervo pessoal — Medcof — Dr. Felipe.
 
-Figura 5: CEC de hipofaringe Acervo pessoal - Medcof - Dr Felipe Figura 6: CEC de hipofaringe Acervo pessoal - Medcof - Dr Felipe Figura 7: CEC de hipofaringe Acervo pessoal - Medcof - Dr Felipe Figura 9: Laringe eletrônica Acervo Pessoal Figura 10: Laringectomia total Acervo Pessoal T1 e T2 Não indicado II a IV (bilateral se invasão da linha média)
+Figura 7: CEC de hipofaringe. Acervo pessoal — Medcof — Dr. Felipe.
 
-T3 e T4 TP + nível VI II a IV bilateral Sempre indicado TT + nível VI se invasão de linha média ou supraglote
+Figura 9: Laringe eletrônica. Acervo Pessoal.
+
+Figura 10: Laringectomia total. Acervo Pessoal.

@@ -2,224 +2,183 @@
 
 <!-- page:1 -->
 
-Cuidado à saúde da população LGBTQIAP+
+## Cuidado à Saúde da População LGBTQIAPN+
 
-- O espectro da sexualidade humana envolve quatro pilares principais: sexo biológico, expressão de gênero, orientação sexual e identidade de gênero. Início aos 25 anos, para todos os indivíduos com colo do útero; Rastreamento independe de atividade sexual penetrativa.
+O espectro da sexualidade humana envolve quatro pilares principais:
 
-Rastreamento de Câncer de Colo do Útero RASTREAMENTO DE CÂNCER DE MAMA
+- **Sexo biológico**: definido pelos cromossomos sexuais e/ou genitália (interna e externa);
+- **Expressão de gênero**: atitudes e comportamentos de um indivíduo de acordo com as convenções sociais atribuídas a cada gênero;
+- **Orientação sexual**: diz respeito a por quem o indivíduo se interessa sexual e/ou afetivamente;
+- **Identidade de gênero**: construção sociocultural do que é ser homem/masculino ou mulher/feminino ao longo das diferentes épocas.
 
-- Homem trans sem mastectomia Igual população cis: 50 aos 69 anos, 2/2 anos
+*Figura 1: Espectro da sexualidade humana (fêmea, macho, mulher, homem, gênero fluido, andróginosidade, neutralidade).*
 
-- Mulher trans com hormonização Iniciar 5 anos após hormonização para ≥ 50 anos
+## Conceitos Gerais
 
-## CONTRACEPÇÃO
+### Cisgênero e Transgênero
 
-- Homens trans: progestagênio contínuo e manter testosterona: Evitar estradiol.
+- **Cisgênero**: indivíduo se reconhece com o gênero que lhe foi atribuído ao nascimento;
+- **Transgênero**: indivíduo não se reconhece com o gênero que lhe foi atribuído ao nascimento.
 
-## CONCEITOS GERAIS
+### Sigla LGBTQIAPN+
 
-Sexo Biológico
+- **L (lésbicas)**: mulheres que se atraem afetivossexualmente por outras mulheres;
+- **G (gays)**: homens que se atraem afetivossexualmente por outros homens;
+- **B (bissexuais)**: indivíduos que se atraem afetivossexualmente por mais de um gênero;
+- **T (transexual/transgênero/travesti)**: indivíduos que não se identificam com o gênero atribuído ao nascimento. As travestis são pessoas transfemininas que se identificam com a identidade de gênero travesti e desejam ser reconhecidas pela sociedade;
+- **Q ("queer")**: termo guarda-chuva que designa identidades sexuais ou de gênero para qualquer pessoa que não se reconhece como cis ou heterossexual;
+- **I (intersexo)**: indivíduos com diversidades na diferenciação sexual (ex.: genitália ambígua);
+- **A (assexual/agênero)**: indivíduo que não sente atração afetivossexual por outras pessoas ou pessoa que não se identifica com nenhum gênero;
+- **P (pansexual)**: indivíduos que se atraem afetivossexualmente por outros indivíduos, independentemente do gênero;
+- **N (não-binário)**: indivíduos que não se identificam 100% como homem ou 100% como mulher;
+- **+** (mais): abarca outras identidades sexuais e de gênero.
 
-- Definido pelos cromossomos sexuais e/ou genitália
+## Políticas de Saúde LGBTQIAPN+ — SUS e Saúde Suplementar
 
-(interna e externa). Expressão de Gênero
-
-- Atitudes e comportamentos de um indivíduo de acordo com as convenções sociais atribuídas a cada gênero.
-
-Orientação Sexual
-
-- Diz respeito por quem o indivíduo se interessa sexual e/ou afetivamente de gênero
-
-Fêmea Interse Sexo biol Mulher Indiví Gênero Fluido Identidade Homem Feminino Andróg Neut Figura 1: Espectro da sexualidade humana. Hormonização
-
-- Idade mínima: 18 anos;
-
-- Contraindicações: Doença tromboembólica recente, tumor hormônio-dependente, doenças hepáticas graves, condições psiquiátricas que limitem o uso correto da hormonização;
-
-Cirurgia de Redesignação Sexual
-
-- Idade mínima de 18 anos; 21 anos se cirurgias implicarem potencial efeito esterilizador.
-
-- Acompanhamento multidisciplinar ≥12 meses
-
-- Assinatura do Termo de Consentimento s Livre e Esclarecido
-
-Identidade de Gênero
-
-- Construção sociocultural do que é ser homem/ masculino ou mulher/feminino ao longo das diferentes épocas;
-
-- Cisgênero: indivíduo se reconhece com o gênero que lhe foi atribuído ao nascimento;
-
-- Transgênero: indivíduo não se reconhece com o gênero que lhe foi atribuído ao nascimento
-
-- Verificar Figura 1 exo Macho lógico íduo geno Masculino tro
-
-Atração por mulher Bissexual Pansexual Assexual Atração por homem
+- **Constituição Federal (1988)**: determina que todos são iguais perante à lei; saúde é um direito de todos e dever do Estado.
+- **Programa Brasil sem Homofobia (2004)**: reforça direito ao tratamento igualitário na saúde.
+- **Em 2008**, o processo transexualizador foi incorporado no Sistema Único de Saúde (SUS), redefinido e ampliado em 2013.
+- **Política Nacional de Saúde Integral LGBT (2011)**: objetiva promoção de saúde, bem como eliminar preconceitos institucionais; visa redução de desigualdades no acesso à saúde.
+- **Decreto n. 8727 (2016)**: determina que o nome social e a identidade de gênero sejam respeitados nas Unidades administrativas de todo o país.
+- **Em 2019**, houve entendimento que discriminação por orientação sexual e identidade de gênero enquadram-se na Lei do Racismo.
+- **Saúde Suplementar (a partir de 2023)**: por decisão da terceira turma do Supremo Tribunal de Justiça, os planos de saúde são obrigados a cobrir cirurgias de redesignação sexual.
 
 ---
 
 <!-- page:2 -->
 
-Tabela 1: Rastreamento de IST’s Quem HIV Sífilis Clamídia e Gonococo Hepatites B E C Indivíduos ≤ 30 anos Anual Conforme subgrupo e práticas sexuais Sexo anal receptivo Semestral Semestral a Anual Gays e HSH Trabalhadores do sexo Conforme subgrupo e práticas Travestis e Transexuais Semestral Semestral a anual sexuais Usuários de álcool e outras drogas HSH: homens que fazem sexo com homens.
+## Rastreamentos para a População LGBTQIAPN+
+
+### Câncer de Colo do Útero
+
+- Igual ao preconizado para mulheres cisgênero e independe de atividade sexual penetrativa;
+- Indicado para todos os indivíduos com colo do útero que já iniciaram atividade sexual (com ou sem penetração vaginal) por meio da pesquisa de DNA-HPV;
+- **Início**: aos 25 anos, para todos os indivíduos com colo do útero;
+- **Resultado negativo**: novo exame em 5 anos;
+- **Fim**: aos 64 anos.
+
+**Consideração especial**: o uso de testosterona deixa a mucosa vaginal e colo do útero mais atrofiados, podendo levar a mais resultados citológicos anormais (quando feitos).
+
+### Câncer de Mama
+
+- **Homem trans sem mastectomia**: deve ter rastreamento igual à população cisgênero feminina — 50 aos 69 anos, a cada 2 anos.
+- **Mulher trans com hormonização**: iniciar 5 anos após hormonização para ≥ 50 anos.
+
+### Câncer de Próstata
+
+- O rastreamento é discutível, porém deve seguir igualmente aos indivíduos cisgênero masculinos.
+
+### Infecções Sexualmente Transmissíveis (IST's)
+
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança a correspondência entre grupos e frequências de rastreamento; conteúdo listado em texto corrido.
+
+**Grupos e práticas de risco:**
+- **Indivíduos ≤ 30 anos**: rastreamento anual conforme subgrupo e práticas sexuais;
+- **Sexo anal receptivo**: rastreamento semestral;
+- **Gays e HSH** (homens que fazem sexo com homens): rastreamento conforme subgrupo e práticas sexuais;
+- **Trabalhadores do sexo**: rastreamento conforme subgrupo e práticas sexuais;
+- **Travestis e Transexuais**: rastreamento semestral a anual;
+- **Usuários de álcool e outras drogas**: rastreamento conforme subgrupo e práticas sexuais.
+
+**IST's a rastrear**: HIV, sífilis, clamídia, gonococo, hepatites B e C.
+
+**Achados epidemiológicos:**
+- Mulheres cis lésbicas têm índices de IST's menores do que as bissexuais;
+- **Vaginose bacteriana**: risco em lésbicas cis é maior do que em heterossexuais cis.
 
 Adaptado de: Ministério da Saúde (Brasil). Protocolo Clínico e Diretrizes Terapêuticas para Atenção Integral às Pessoas com Infecções Sexualmente Transmissíveis (IST), 2022.
 
-Sigla LGBTQIAPN+
+### Osteoporose
 
-- Decreto n. 8727 (2016)
+- **A partir dos 65 anos**, densitometria óssea de rotina para mulheres trans e travestis;
+- **Entre 50 e 64 anos**, se houver fatores de risco;
+- **Indicada para pessoas trans com gonadectomia** há ≥ 5 anos sem hormonização.
 
-- L (lésbicas): mulheres que se atraem | Determina que o nome social e a identidade afetivossexualmente por outras mulheres; de gênero sejam respeitadas nas Unidades
+### Risco Cardiovascular
 
-- G (gays): homens que se atraem afetivossexualmente administrativas de todo o país.
+- O uso de estrogênios aumenta o risco cardiovascular;
+- **Modificações de estilo de vida**: cessação de tabagismo, prática de atividade física, moderação da ingestão de álcool e alimentação saudável.
 
-por outros homens;
+## Hormonização e Cirurgia de Redesignação Sexual
 
-- Em 2019 houve entendimento que discriminação por
+### Hormonização
 
-- B (bissexuais): indivíduos que se atraem orientação sexual e identidade de gênero enquadramafetivossexualmente por mais de um gênero; se na Lei do Racismo.
+**Objetivos:**
+- Desenvolver os caracteres sexuais secundários consoante à identidade de gênero;
+- Amenizar/suprimir as características sexuais relacionadas ao sexo biológico.
 
-- T (transexual/transgênero/travesti): indivíduos que não Saúde Suplementar se identificam com o gênero atribuído ao nascimento.
+**Critérios:**
+- **Idade mínima**: 18 anos;
+- **Acompanhamento multidisciplinar**: um ano antes de começar o tratamento;
+- **Ausência de transtornos mentais** que contraindiquem.
 
-- Por decisão da terceira turma do Supremo Tribunal identificam com a identidade de gênero travesti e, obrigados a cobrir cirurgias de redesignação sexual.
+**Contraindicações:**
+- Doença tromboembólica recente;
+- Infarto agudo do miocárdio;
+- Câncer hormônio-dependente;
+- Doenças hepáticas graves;
+- Impossibilidade do uso correto da hormonização.
 
-As travestis são pessoas transfemininas que se de Justiça, a partir de 2023, os planos de saúde são assim, desejam ser reconhecidas pela sociedade;
+**Recomendações medicamentosas:**
+- **Feminização**: estradiol e antiandrogênicos;
+- **Masculinização**: testosterona;
+- Não utilizar etinilestradiol para hormonização → preferir **17-beta estradiol** (adesivo ou oral) ou valerato/cipionato de estradiol (injetável).
 
-- Q (“queer”): termo guarda-chuva que pode RASTREAMENTOS PARA A POPULAÇÃO designar identidades sexuais ou de gênero para LGBTQIAPN+ qualquer pessoa que não se reconhece como cis Câncer de Colo do Útero ou heterossexual;
+### Cirurgia de Redesignação Sexual
 
-- Igual ao preconizado para mulheres cisgênero:
+**Critérios:**
+- **Idade mínima**: 18 anos (21 anos se cirurgias implicarem potencial efeito esterilizador);
+- **Acompanhamento multidisciplinar**: ≥ 12 meses;
+- **Assinatura do Termo de Consentimento Livre e Esclarecido (TCLE)**.
 
-- I (intersexo): indivíduos com diversidades na | Está indicado para todos os indivíduos com colo diferenciação sexual (ex: genitália ambígua); do útero que já iniciaram atividade sexual (com
+**Fica vedado ao médico** prescrever bloqueadores hormonais para tratamento de incongruência de gênero ou disforia de gênero em crianças e adolescentes.
 
-- A (assexual/agênero): indivíduo que não sente atração ou sem penetração vaginal) por meio da pesquisa afetivossexual por outras pessoas; pessoa que não do DNA-HPV.
-
-se identifica com nenhum gênero ou refere não | Início aos 25 anos; ter gênero; | Resultado negativo: novo exame em 5 anos.
-
-- P (pansexual): indivíduos que se atraem | Fim aos 64 anos.
-
-afetivossexualmente por outros indivíduos, independentemente do gênero; O uso de testosterona deixa a mucosa vaginal e
-
-- N (não-binário): indivíduos que não se identificam colo do útero mais atrofiados, podendo levar a mais
-
-100% como homem ou 100% como mulheres; resultados citológicos (quando feitos) anormais.
-
-- + (mais): abarca outras identidades sexuais e de gênero. Câncer de Mama
-
-- Homem trans sem mastectomia deve ter o seu
-
-POLÍTICAS DE SAÚDE LGBTQIAPN+ - SUS E rastreamento igual à população cis feminina: SAÚDE SUPLEMENTAR
-
-- Mulher trans com hormonização: início a partir dos 50
-
-- Constituição Federal (1988) anos e após 5 anos anos de uso de hormônios. Determina que todos são iguais perante à lei; Saúde é um direito de todos e dever do Estado. Câncer de Próstata
-
-- Programa Brasil sem homofobia (2004)
-
-- O rastreamento é discutível, porém deverá seguir Reforça direito ao tratamento igualitário na saúde. igualmente aos indivíduos cis masculinos
-
-- Em 2008, o processo transexualizador é incorporado no Sistema Único de Saúde (SUS) o qual foi redefinido Infecções Sexualmente Transmissíveis (IST’s) e ampliado em 2013.
-
-- Verificar Tabela1
-
-- Política Nacional de Saúde Integral LGBT (2011)
-
-- Mulheres cis lésbicas têm índices de IST’s menores do Objetiva promoção de saúde, bem como eliminar que as bissexuais; Visa redução de desigualdades no acesso à saúde.
-
-preconceitos Institucionais;
+**Cirurgias:**
+- **Trans Feminino**: orquiectomia bilateral e penectomia, seguida de neovulvovaginoplastia e mamoplastia de aumento;
+- **Trans Masculino**: mastectomia masculinizadora, histerectomia com ooforectomia bilateral e faloplastia com escrotoplastia.
 
 ---
 
 <!-- page:3 -->
 
-- Vaginose Bacteriana: risco de lésbicas cis é maior CONTRACEPÇÃO em heterossexuais cis; Homens Trans Não existe recomendação formal para o tratamento
+## Contracepção
 
-- Testosterona não é método contraceptivo nem concomitante das parcerias → considerar nas contraindica quaisquer formas de contracepção situações de vaginose recorrente.
+### Homens Trans
 
-- Alinhar expectativas: Intolerância em menstruar ou experimentar
+- **Testosterona não é método contraceptivo** e não contraindica quaisquer formas de contracepção;
+- Usar **progestagênio contínuo e manter testosterona**: evitar estrogênios;
+- **Progestagênios** raramente causam mastalgia;
+- A indução de amenorreia geralmente é desejada;
+- **Alinhar expectativas**: intolerância em menstruar ou experimentar cólicas menstruais; efeitos dos contraceptivos nas mudanças corporais; desconforto com procedimentos pélvicos.
 
-OSTEOPOROSE cólicas menstruais; Densitometria Óssea | Efeitos dos contraceptivos nas
+Não existe recomendação formal para o tratamento concomitante das parcerias → considerar nas situações de vaginose recorrente.
 
-- A partir dos 65 anos, de rotina, para mulheres mudanças corporais; Se houver fatores de risco, iniciar entre os
+## Cuidados Específicos em Saúde Sexual
 
-trans e travestis; | Desconforto com procedimentos pélvicos.
+### Sexo Vulva-Vulva
 
-- Não utilizar estrogênios: dar preferência aos com
+- Optar por métodos de barreira: preservativos; folhas de látex (dental dam); luvas cirúrgicas; dedeiras de látex.
 
-50 e 64 anos progestagênio contínuo e métodos reversíveis de
+### Gays, HSH, Transexuais e Travestis
 
-- Indicada para pessoas trans com gonadectomia há ≥ longa duração
+- **Métodos de barreira**;
+- **Vacina para hepatite A** (sexo oral-anal);
+- **Profilaxia Pré-Exposição (PrEP) ao HIV**:
+  - Uso sob demanda: 2+1+1 → apenas para HSH;
+  - Uso contínuo: um comprimido 1x ao dia.
 
-5 anos sem hormonização. | Progestagênios raramente causam mastalgia; Risco Cardiovascular | A indução de amenorreia geralmente é desejada.
+## Saúde Reprodutiva
 
-- O uso de estrogênios aumenta o risco cardiovascular;
+### Mulheres Cis Lésbicas e Bissexuais
 
-- Mudança no estilo de vida: cessação de tabagismo, HORMONIZAÇÃO E CIRURGIA DE prática de atividade física, moderação da ingesta de REDESIGNAÇÃO SEXUAL álcool e alimentação saudável; Hormonização
+- **Gestação compartilhada**: o óvulo de uma das parceiras é fecundado com um espermatozoide de um doador anônimo e o embrião formado é transferido para o útero da outra parceira;
+- **Idade máxima** para candidatas à reprodução assistida: 50 anos.
 
-- Não utilizar etinilestradiol para hormonização → Objetivos preferir 17-beta estradiol (adesivo ou oral) ou valerato/
+### Homens Trans com Útero
 
-- Desenvolver os caracteres sexuais secundários cipionato de estradiol (injetável). consoante à identidade de gênero;
+- Podem engravidar naturalmente, porém devem **suspender uso de testosterona**.
 
-- Amenizar/suprimir as características sexuais
+### Homens Cis Gays
 
-CUIDADOS ESPECÍFICOS relacionadas ao sexo biológico; Saúde Sexual
-
-- Feminização: estradiol e antiandrogênicos;
-
-Sexo vulva-vulva
-
-- Masculinização: testosterona.
-
-- Optar por métodos de barreira: Contraindicações Preservativos;
-
-- Doença tromboembólica recente; Folhas de látex (dental dam);
-
-- Infarto agudo do miocárdio; Luvas cirúrgicas;
-
-- Câncer hormônio-dependente; Dedeiras de látex.
-
-- Doenças hepáticas graves;
-
-Gays, HSH, Transexuais e Travestis
-
-- Impossibilidade do uso correto da hormonização.
-
-- Métodos de barreira; Critérios
-
-- Vacina para hepatite A (sexo oral-anal);
-
-- A partir dos 18 anos e já confirmada incongruência
-
-- Profilaxia Pré-Exposição (PREP) ao HIV de gênero; Uso sob demanda: 2+1+1 → apenas para HSH;
-
-- Acompanhamento multidisciplinar um ano antes de Uso contínuo: um comprimido 1x ao dia. começar o tratamento;
-
-- Ausência de transtornos mentais que contraindiquem;
-
-## SAÚDE REPRODUTIVA
-
-- Assinatura do Termo de Consentimento Livre e
-
-Mulheres cis lésbicas e bissexuais Esclarecido (TCLE).
-
-- Gestação compartilhada O óvulo de uma das parceiras é fecundado com Fica vedado ao médico prescrever bloqueadores um espermatozoide de um doador anônimo e o hormonais para tratamento de incongruência embrião formado é transferido para o útero da de gênero ou disforia de gênero em outra parceira. crianças e adolescentes
-
-- A idade máxima para candidatas à reprodução assistida é de 50 anos; CIRURGIA DE REDESIGNAÇÃO SEXUAL
-
-- Homens trans com útero podem engravidar Critérios naturalmente, porém devem suspender uso
-
-- Idade mínima de 18 anos; (21 anos se de testosterona. efeito esterilizador);
-
-Homens cis gays
-
-- Acompanhamento multidisciplinar um ano antes de
-
-- Útero de substituição realizar a cirurgia; Pode ser de familiar consanguíneo de até quarto
-
-- Assinatura do TCLE. Material genético (espermatozoide) de uma das
-
-grau (prima); Cirurgias
-
-- Trans Feminino: orquiectomia bilateral e penectomia parcerias com óvulo doado. seguida de neovulvovaginoplastia e mamoplastia de aumento
-
-A idade limites para doação de gametas é de 35 anos
-
-- Trans Masculino: mastectomia masculinizadora, para as mulheres cis e de 50 anos para os homens cis. histerectomia com ooforectomia bilateral e faloplastia com escrotoplastia
+- **Útero de substituição**: pode ser de familiar consanguíneo até quarto grau (prima); material genético (espermatozoide) de uma das parcerias com óvulo doado;
+- **Idade limite para doação de gametas**: 35 anos para mulheres cis; 50 anos para homens cis.

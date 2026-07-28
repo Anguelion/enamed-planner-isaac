@@ -2,93 +2,22 @@
 
 <!-- page:1 -->
 
-Miocardite e Pericardite (CM) PERICARDITE: M
+## Resumo Inicial
 
-- Idiopático na maioria dos casos.
+### Pericardite
 
-- Dor torácica em jovem + alterações sugestivas no ECG: Supra de ST difuso Infra de PR Imagem oposta em AVR - por vezes em V1 - infra de ST e supra de PR
+- **Idiopática** na maioria dos casos
+- Dor torácica em jovem + alterações sugestivas no ECG: **supra de ST difuso**, **infra de PR**, imagem oposta em aVR (por vezes em V1: infra de ST e supra de PR)
+- **Troponina negativa**
+- **Tratamento**: AINE + colchicina
+- Corticoide em alguns casos (doenças autoimunes)
 
-- Troponina NEGATIVA.
+### Tamponamento Cardíaco
 
-- Tratamento: AINE + colchicina.
-
-- Corticoide em alguns casos (quando relacionado a doença autoimune).
-
-Tamponamento cardíaco:
-
-- Líquido no pericárdio com redução de débito cardíaco por compressão do VD.
-
-- ECOTT: Colabamento do AD e VD (especialmente) na diástole.
-
-- Verificar Figura 1
-
-- Tríade de Beck (hipotensão, turgência jugular, abafamento de bulhas) + pulso paradoxal.
-
-- Tratamento: pericardiocentese (emergência).
-
-## PERICARDITE E MIOPERICARDITE
-
-- ENTENDENDO A ANATOMIA DO PERICÁRDIO
-
-- Muito inervado = dor significativa.
-
-- Composto por: Pericárdio fibroso. Q Pericárdio seroso - dividido em: camada parietal/ camada visceral.
-
-- E
-
-- - Figura 2: Anatomia do pericárdio - histologia cardíaca
-
-## PERICARDITE
-
-- PERICARDITE = sinais e sintomas resultantes da inflamação do pericárdio.
-
-- 80% dos casos são idiopáticos, com presumida maioria etiologia viral. Sorologias virais NÃO são feitas de rotina, pois não alteram a conduta e tem correlação incerta.
-
-- Miocardite:
-
-- Clínica parecida com a da pericardite, porém com troponina POSITIVA.
-
-- Quadro clínico pode variar entre de dor torácica e taquicardia leve a choque cardiogênico.
-
-- Tratamento de suporte na maioria dos casos.
-
-- Se choque cardiogênico: indicação de biópsia endomiocárdica para descartar infecção e avaliar etiologias em que o tratamento imunossupressor possa ter benefício (corticoide +- azatioprina).
-
-Figura 1: ECOTT evidenciando tamponamento cardíaco com colabamento de AD e VD.
-
-- 20% dos casos são por outras causas (investigáveis):
-
-doenças reumatológicas, tuberculose, pós infarto transmural imediato e tardio (Sd. Dressler), neoplasia, entre outros.
-
-## QUADRO CLÍNICO
-
-- Dor torácica (> 90% dos casos): Dor pleurítica = piora com expiração profunda. Pode irradiar para o trapézio. Pode causar soluço devido à inervação do nervo frênico próxima ao pericárdio. Aliviada com inclinação do corpo para frente. Piora com decúbito.
-
-## EXAME FÍSICO
-
-- Atrito pericárdico: som áspero (arranhadura/ranger).
-
-## EXAMES COMPLEMENTARES
-
-- PCR (elevada em 80% dos casos).
-
-- Troponina (diferencial com miocardite).
-
-- ECG.
-
-- Ponderar se é válido realizar investigação reumatológica em mulheres jovens.
-
-## ELETROCARDIOGRAMA
-
-- Supra de ST difuso (traços azuis na imagem).
-
-- Infra de segmento PR difuso (setas laranjas na imagem).
-
-- Imagem correspondente oposta em avR, às vezes V1
-
-(circulada na imagem), ou seja, infra de ST e supra de PR.
-
-- Verificar Figura 3 na próxima página
+- Líquido no pericárdio com **redução de débito cardíaco** por compressão do VD
+- **Ecocardiograma (ECOTT)**: colabamento do AD e VD (especialmente) na diástole
+- **Tríade de Beck**: hipotensão + turgência jugular + abafamento de bulhas + pulso paradoxal
+- **Tratamento**: pericardiocentese (emergência)
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -98,132 +27,197 @@ doenças reumatológicas, tuberculose, pós infarto transmural imediato e tardio
 
 <!-- page:2 -->
 
-Figura 3: ECG sugestivo de pericardite. Supra de ST difuso (traços azuis), infra de segmento PR Imagem em espelho (além de aVR e V1), supra de DIII > DII, difuso (setas laranjas) e imagem correspondente oposta supra “horizontal” ou “triste”.
+## Pericardite e Miopericardite
 
-em aVR, por vezes também visualizada em V1 (circulada em vermelho). TRATAMENTO Pericardite idiopática DIAGNÓSTICO
+### Entendendo a Anatomia do Pericárdio
 
-- Associar AINE + colchicina: ibuprofeno 600mg VO 8/8h
+- Muito inervado → dor significativa
+- **Composto por**:
+  - Pericárdio fibroso
+  - Pericárdio seroso, dividido em:
+    - Camada parietal
+    - Camada visceral
 
-- Dois dos quatro abaixo: por 10-14d + colchicina 0,5mg VO 1x/d ou 12/12h. Dor típica.
+![Figura 2: Anatomia do pericárdio - histologia cardíaca](figure-002-1.webp)
 
-- Pacientes com > 70kg se beneficiam mais da Atrito pericárdico. colchicina 12/12h. Alterações eletrocardiográficas típicas.
+## Pericardite
 
-- Manter colchicina por 3 meses para Derrame pericárdico novo ou piora do prevenir recorrência.
+**Definição**: sinais e sintomas resultantes da inflamação do pericárdio.
 
-derrame prévio.
+- **80% dos casos são idiopáticos**, com presumida maioria de etiologia viral
+- Sorologias virais **NÃO são feitas de rotina**, pois não alteram a conduta e têm correlação incerta
+- **20% dos casos** por outras causas investigáveis: doenças reumatológicas, tuberculose, pós-infarto transmural (imediato e tardio — Síndrome de Dressler), neoplasia, entre outras
 
-- Corticoides - usados apenas em casos selecionados,
+### Miocardite
 
-ECG da pericardite vs ECG da SCA com supra de ST como doenças auto-imunes ou pericardite recorrente,
-
-- Na SCA com supra de ST além de contraindicações às outras terapêuticas. Imagem em espelho (além de avR e V1).
-
-## TAMPONAMENTO CARDÍACO
-
-| Supra em DIII > DII (comum em etiologias isquêmicas). | Supra horizontal ou “triste” (concavidade
-
-- Compressão das câmaras cardíacas devido ao para baixo). acúmulo de líquido no pericárdio, causando aumento
-
-- Na prova: paciente mais velho (> 50 anos) + fatores da pressão intrapericárdica.
-
-de risco. | Causa redução do enchimento ventricular com
-
-- Lembre-se: na pericardite, geralmente as provas consequente choque e aumento da pressão trazem pacientes jovens sem fatores de risco. venosa central.
-
-- Verificar Figura 4
-
-Figura 4: ECG sugestivo de SCA com supra de ST
-
-![Figura do material - página 2](figure-002-1.webp)
-
-![Figura do material - página 2](figure-002-2.webp)
+- Clínica parecida com a da pericardite, porém com **troponina positiva**
+- Quadro clínico pode variar: dor torácica e taquicardia leve até choque cardiogênico
+- **Tratamento**: de suporte na maioria dos casos
+- Se choque cardiogênico: indicação de biópsia endomiocárdica para descartar infecção e avaliar etiologias em que o tratamento imunossupressor possa ter benefício (corticoide ± azatioprina)
 
 ---
 
 <!-- page:3 -->
 
-Figura 5: ECG sugestivo de tamponamento cardíaco
+## Quadro Clínico
 
-- Não é muito comum nas pericardites idiopáticas.
+### Dor Torácica (> 90% dos casos)
 
-Ocorre mais em pericardites por tuberculose ou neoplasia.
+- **Dor pleurítica**: piora com expiração profunda
+- Pode irradiar para o trapézio
+- Pode causar soluço devido à inervação do nervo frênico próxima ao pericárdio
+- **Aliviada** com inclinação do corpo para frente
+- **Piora** com decúbito
 
-- Dispneia + dor torácica.
+### Exame Físico
 
-- Taquicardia sinusal - forma de compensar a redução do débito cardíaco.
+- **Atrito pericárdico**: som áspero (arranhadura/ranger)
 
-- Tríade de Beck → hipotensão + turgência jugular + abafamento de bulhas: não está presente em todos os casos, apenas na minoria, mas costuma cair bastante em provas!
+### Exames Complementares
 
-- Pulso paradoxal - redução da pressão sistólica > 10 mmHg na inspiração.
+- **PCR**: elevada em 80% dos casos
+- **Troponina**: diferencial com miocardite
+- **ECG**: essencial para diagnóstico
+- Ponderar se é válido realizar investigação reumatológica em mulheres jovens
 
-- Alternância elétrica e baixa voltagem (setas).
+## Eletrocardiograma
 
-- Taquicardia sinusal.
+- **Supra de ST difuso** (traços azuis na imagem)
+- **Infra de segmento PR difuso** (setas laranjas na imagem)
+- **Imagem correspondente oposta em aVR**, às vezes V1 (circulada na imagem): infra de ST e supra de PR
 
-- Verificar Figura 5 taquicardia sinusal.
-
-Alternância elétrica e baixa voltagem (setas vermelhas) e
-
-- Verificar Figura 6 e o de um paciente com tamponamento cardíaco segunda imagem.
-
-Comparação entre um ecocardiograma normal (acima) (abaixo). As câmaras direitas estão colabadas na
-
-## DIAGNÓSTICO
-
-- Clínica sugestiva associada ao ecocardiograma alterado.
-
-## TRATAMENTO
-
-- Drenagem pericárdica por pericardiocentese: Não é recomendado que seja feita às cegas. É preferível que seja guiada por USG e, se possível, realizada por um cirurgião. Figura 6: Ecocardiograma no tamponamento cardíaco
-
-- Verificar Figura 7 na próxima página
-
-![Figura do material - página 3](figure-003-1.webp)
-
-![Figura do material - página 3](figure-003-2.webp)
+![Figura 3: ECG sugestivo de pericardite](figure-003-1.webp)
 
 ---
 
 <!-- page:4 -->
 
-## MIOCARDITE
+### Diagnóstico de Pericardite
 
-- Inflamação do miocárdio, caracterizada pelo aumento de troponina.
+**Dois dos quatro critérios abaixo**:
+- Dor típica
+- Atrito pericárdico
+- Alterações eletrocardiográficas típicas
+- Derrame pericárdico novo ou piora do derrame prévio
 
-- Pode ou não estar associada a pericardite.
+### ECG da Pericardite vs. ECG da SCA com Supra de ST
 
-Figura 7: Pericardiocentese.
+| Achado | Pericardite | SCA com Supra |
+|---|---|---|
+| Supra de ST | Difuso | Imagem em espelho (além de aVR e V1) |
+| Evolução | Horizontal ou "triste" (concavidade para baixo) | Supra em DIII > DII (comum em etiologias isquêmicas) |
+| Características | Associa infra de PR | Sem infra de PR |
 
-## MENSAGENS FINAIS
+### Tamponamento Cardíaco
 
-Tabela 1:: Take-Home Message Pericardite Tam Dor torácica em jovem + alterações Líquido no per sugestivas no ECG.
+- **Compressão das câmaras cardíacas** devido ao acúmulo de líquido no pericárdio, causando aumento da pressão intrapericárdica
+- Redução do enchimento ventricular com consequente choque e aumento da pressão venosa central
+- **Não é muito comum** nas pericardites idiopáticas → ocorre mais em pericardites por tuberculose ou neoplasia
+- Paciente mais velho (> 50 anos) + fatores de risco
 
-de débito card Troponina NEGATIVA. Tríade de Bec Tratamento: AINE + colchicina.
+**Apresentação clínica**:
+- Dispneia + dor torácica
+- Taquicardia sinusal (forma de compensar a redução do débito cardíaco)
+- **Tríade de Beck**: hipotensão + turgência jugular + abafamento de bulhas (nem sempre presente, apenas na minoria, mas costuma cair bastante em provas!)
+- **Pulso paradoxal**: redução da pressão sistólica > 10 mmHg na inspiração
 
-Corticoide em alguns casos.
+**Achados no ECG**:
+- Alternância elétrica e baixa voltagem
+- Taquicardia sinusal
 
-## REFERÊNCIAS
+![Figura 4: ECG sugestivo de tamponamento cardíaco](figure-004-1.webp)
 
-Figura 1:: ECOTT evidenciando tamponamento cardíaco com colabamento de AD e VD. JAMA Network Figura 3:: ECG sugestivo de pericardite litfl.com/pericarditis-ecg-library/ - Pode ou não estar associada a pericardite.
+![Figura 5: Ecocardiograma no tamponamento cardíaco](figure-005-1.webp)
 
-- Muito variável.
+---
 
-- Pródromo viral + febre + taquicardia OU choque cardiogênico.
+<!-- page:5 -->
 
-- Taquicardia sinusal.
+## Tratamento da Pericardite Idiopática
 
-- Alterações inespecíficas da repolarização.
+- **Associar AINE + colchicina**:
+  - Ibuprofeno **600 mg VO 8/8h** por 10–14 dias
+  - Colchicina **0,5 mg VO 1x/d ou 12/12h**
+  - Pacientes com > 70 kg se beneficiam mais da colchicina **12/12h**
+  - Manter colchicina por **3 meses** para prevenir recorrência
+- **Corticoides**: usados apenas em casos selecionados (doenças autoimunes ou pericardite recorrente) ou quando há contraindicações às outras terapêuticas
 
-- Se associada à pericardite, tem as alterações comuns, como supra difuso, infra de PR, entre outras.
+## Diagnóstico de Tamponamento Cardíaco
 
-Como saber se o paciente tem apenas pericardite ou também miocardite associada? → Dosar troponina, que só se eleva na presença de miocardite.
+- Clínica sugestiva associada ao ecocardiograma alterado
 
-- Expectante na maioria dos casos, principalmente se o paciente não estiver em choque.
+## Tratamento de Tamponamento Cardíaco
 
-- Na presença de choque cardiogênico, realizamos tratamento de suporte, como drogas vasoativas, balão intra-aórtico, entre outros.
+- **Drenagem pericárdica por pericardiocentese**: **não é recomendado que seja feita às cegas**
+- **Preferível**: guiada por ultrassom
+- Se possível: realizada por um cirurgião
 
-mponamento Miocardite Clínica parecida com a da ricárdio com redução pericardite, porém com troponina díaco por compressão.
+![Figura 6: Pericardiocentese](figure-006-1.webp)
 
-POSITIVA. ck e pulso paradoxal. Tratamento de suporte na maioria : pericardiocentese. dos casos. Figura 4:: ECG sugestivo de SCA com supra de ST Litfl. Disponível em litfl.com/ Figura 5:: ECG sugestivo de tamponamento cardíaco Litfl.com/ecg-findings-in-massive-pericardial-effusion/ Figura 6:: Ecocardiograma no tamponamento cardíaco JAMA Network
+---
 
-![Figura do material - página 4](figure-004-1.webp)
+<!-- page:6 -->
+
+## Miocardite
+
+- **Inflamação do miocárdio**, caracterizada pelo **aumento de troponina**
+- Pode ou não estar associada a pericardite
+- Muito variável em apresentação
+
+### Quadro Clínico
+
+- Pródromo viral + febre + taquicardia OU choque cardiogênico
+- Taquicardia sinusal
+- Alterações inespecíficas da repolarização
+- Se associada à pericardite, tem as alterações comuns (supra difuso, infra de PR, entre outras)
+
+### Diagnóstico Diferencial com Pericardite
+
+**Como saber se o paciente tem apenas pericardite ou também miocardite associada?**
+→ **Dosar troponina**, que se eleva **apenas na presença de miocardite**
+
+### Tratamento da Miocardite
+
+- **Expectante** na maioria dos casos, principalmente se o paciente não estiver em choque
+- Na presença de choque cardiogênico: tratamento de suporte, como drogas vasoativas, balão intra-aórtico, entre outros
+
+---
+
+<!-- page:7 -->
+
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
+
+## Resumo — Mensagens Finais
+
+### Pericardite
+
+- **Apresentação**: dor torácica em jovem + alterações sugestivas no ECG (supra de ST difuso, infra de PR)
+- **Marcador**: troponina negativa
+- **Tratamento**: AINE + colchicina; corticoide em alguns casos
+
+### Tamponamento Cardíaco
+
+- **Achado**: líquido no pericárdio com redução de débito cardíaco por compressão
+- **Sinal clínico**: tríade de Beck (hipotensão, turgência jugular, abafamento de bulhas) + pulso paradoxal
+- **Conduta**: pericardiocentese (emergência)
+
+### Miocardite
+
+- **Clínica**: parecida com a da pericardite, porém com troponina positiva
+- **Tratamento**: de suporte na maioria dos casos
+
+---
+
+## Referências
+
+Figura 1: ECOTT evidenciando tamponamento cardíaco com colabamento de AD e VD. JAMA Network
+
+Figura 3: ECG sugestivo de pericardite. litfl.com/pericarditis-ecg-library/
+
+Figura 4: ECG sugestivo de SCA com supra de ST. Litfl. Disponível em: litfl.com/
+
+Figura 5: ECG sugestivo de tamponamento cardíaco. Litfl.com/ecg-findings-in-massive-pericardial-effusion/
+
+Figura 6: Ecocardiograma no tamponamento cardíaco. JAMA Network
+
+![Figura do material - página 7](figure-007-1.webp)

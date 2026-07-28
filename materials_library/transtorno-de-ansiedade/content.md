@@ -2,137 +2,74 @@
 
 <!-- page:1 -->
 
-Transtorno de Humor e Ansiosos (CM)
+## Visão Geral — Transtornos de Humor e Ansiosos
 
-- Medo é uma resposta real, imediata e adaptativa,
+- **Medo** é uma resposta real, imediata e adaptativa, mediada pela amígdala e pela noradrenalina.
+- **Ansiedade** é a antecipação de uma ameaça futura, geralmente exagerada e persistente, envolvendo o circuito córtico-estriato-tálamo-cortical.
+- **Síndrome ansiosa** é composta por sintomas físicos, cognitivos, emocionais e comportamentais.
 
-- O tratamento baseia-se em psicoterapia, mediada pela amígdala e pela noradrenalina; preferencialmente terapia cognitivoz Ansiedade é a antecipação de uma ameaça futura, comportamental focada no trauma, EMDR geralmente exagerada e persistente, envolvendo o (dessensibilização e reprocessamento por circuito córtico-estriato-tálamo-cortical; movimentos oculares) ou exposição escrita;
+### Ataque de Pânico
 
-- Síndrome ansiosa é composta
+- **Início súbito**, com pico em minutos.
+- **Necessário pelo menos 4 sintomas** como: palpitação, tremor, falta de ar, dor torácica, tontura, medo de morrer ou enlouquecer.
+- Pode ocorrer isoladamente ou no contexto do transtorno do pânico.
 
-- Inibidores seletivos da recaptação da serotonina por sintomas físicos, cognitivos, (ISRS) são a primeira escolha farmacológica:
+### Tratamento Geral
 
-emocionais e comportamentais. fluoxetina, sertralina, paroxetina; ATAQUE DE PÂNICO
+- **Psicoterapia é preferencial** e mais eficaz — preferencialmente terapia cognitivo-comportamental focada no trauma, EMDR (dessensibilização e reprocessamento por movimentos oculares) ou exposição escrita.
+- **ISRS** (Inibidores Seletivos da Recaptação da Serotonina) são a primeira escolha farmacológica: fluoxetina, sertralina, paroxetina.
+- **Benzodiazepínicos são contraindicados**, pois prejudicam o processamento do trauma e aumentam o risco de dissociação.
 
-- Benzodiazepínicos são contraindicados, pois
+### Transtorno Obsessivo-Compulsivo (TOC)
 
-- Início súbito, com pico em minutos; prejudicam o processamento do trauma e
+- Caracteriza-se por **obsessões** (pensamentos intrusivos) e/ou **compulsões** (rituais repetitivos), com duração superior a uma hora por dia ou que causem prejuízo funcional.
+- Exemplo clássico: medo de contaminação com lavagens excessivas.
+- **Insight geralmente preservado**.
+- **Tratamento**: terapia cognitivo-comportamental e ISRS (fluvoxamina, sertralina, escitalopram).
 
-- É necessário pelo menos 4 sintomas, como aumentam o risco de dissociação.
+### Ansiedade Normal vs. Transtorno de Ansiedade
 
-palpitação, tremor, falta de ar, dor torácica, TRANSTORNO OBSESSIVO-COMPULSIVO (TOC) tontura, medo de morrer ou enlouquecer;
+- **Ansiedade normal**: transitória e proporcional à ameaça, promovendo enfrentamento.
+- **Transtorno de ansiedade**: resposta persistente, desproporcional e leva à esquiva e prejuízo funcional.
 
-- Caracteriza-se por obsessões (pensamentos
+## Causas Orgânicas e Medicamentosas
 
-- Pode ocorrer isoladamente ou no contexto do intrusivos) e/ou compulsões (rituais repetitivos) transtorno do pânico. com duração superior a uma hora por dia ou que
+**Condições médicas:**
+- Disfunções da tireoide, feocromocitoma, hipoglicemia, DPOC e arritmias.
 
-ANSIEDADE NORMAL E TRANSTORNO causem prejuízo funcional; DE ANSIEDADE
-
-- Exemplo clássico: medo de contaminação com
-
-- A ansiedade normal é transitória e proporcional à lavagens excessivas.
-
-ameaça, promovendo enfrentamento;
-
-- Insight geralmente preservado;
-
-- No transtorno de ansiedade, a resposta é
-
-- O tratamento é feito com terapia cognitivopersistente, desproporcional e leva à esquiva e comportamental e ISRS (fluvoxamina, prejuízo funcional. sertralina, escitalopram).
-
-## CAUSAS ORGÂNICAS E MEDICAMENTOSAS TRATAMENTO GERAL
-
-- Entre as causas orgânicas estão disfunções
-
-- Psicoterapia é preferencial e mais eficaz;
-
-da tireoide, feocromocitoma, hipoglicemia,
-
-- A terapia cognitivo-comportamental tem
-
-DPOC e arritmias; maior evidência;
-
-- Entre os fármacos e substâncias: cafeína,
-
-- Também podem ser usadas psicoterapia corticosteroides, ISRS em fase inicial e psicodinâmica (POA) e mindfulness;
-
-abstinência de álcool ou benzodiazepínicos.
-
-- ISRS são a primeira linha de tratamento farmacológico;
-
-## TRANSTORNOS DE ANSIEDADE
-
-- Fluoxetina é mais ativadora. Sertralina, citalopram e
-
-- Sem desencadeante específico: escitalopram são bem tolerados. Escitalopram é o Transtorno de ansiedade generalizada (TAG): mais seguro;
-
-ansiedade difusa presente na maioria dos
-
-- Paroxetina deve ser evitada em gestantes;
-
-dias por pelo menos seis meses, com pelo
-
-- Fluvoxamina é mais usada no TOC;
-
-menos três sintomas como fadiga, tensão
-
-- IRSN (inibidores da recaptação de serotonina e muscular e insônia; noradrenalina) são alternativas quando não há Transtorno do pânico: ataques inesperados resposta aos ISRS ou há comorbidades dolorosas.
-
-seguidos de preocupação persistente por pelo Incluem venlafaxina e duloxetina. menos um mês. BENZODIAZEPÍNICOS
-
-- Com desencadeante específico:
-
-- Benzodiazepínicos (BZD) são indicados apenas Fobia social: medo de avaliação negativa, para uso pontual e temporário, como em como falar ou comer em público; casos de agitação, insônia, ataque de pânico e Agorafobia: medo de não conseguir escapar abstinência alcoólica;
-
-ou receber ajuda em locais como metrôs,
-
-- Nunca devem ser usados como monoterapia, de multidões ou cinemas; forma crônica ou após trauma; Fobia específica: medo irracional de objetos
-
-- A escolha do BZD considera a meia-vida:
-
-ou situações simples, como altura ou | Curta duração: alprazolam; injeções. O tratamento é exclusivamente | Intermediária: lorazepam (preferido com psicoterapia. em hepatopatas);
-
-TRANSTORNO DE ESTRESSE PÓS-TRAUMÁTICO (TEPT) | Longa: diazepam, clonazepam.
-
-- Ocorre após exposição a trauma real, com
-
-- A retirada deve ser gradual, por exemplo, revivescência (flashbacks, pesadelos), esquiva e reduzindo ¼ da dose a cada duas semanas;
-
-alterações emocionais por ≥ 1 mês;
-
-- São contraindicados no TEPT, no delirium de idosos e na intoxicação por álcool.
+**Fármacos e substâncias:**
+- Cafeína, corticosteroides, ISRS em fase inicial, abstinência de álcool ou benzodiazepínicos.
 
 ---
 
 <!-- page:2 -->
 
-## INTRODUÇÃO
+## Introdução
 
-- As respostas autonômicas ao medo envolvem predominantemente o sistema nervoso autônomo
+Os transtornos de ansiedade estão entre os quadros psiquiátricos mais prevalentes na prática clínica e nas provas de residência médica. Envolvem respostas desproporcionais de medo ou preocupação (ansiedade), frequentemente acompanhadas de sintomas físicos.
 
-- Os transtornos de ansiedade estão entre os quadros simpático, responsável pela clássica reação de “luta psiquiátricos mais prevalentes na prática clínica ou fuga”. Esse processo é mediado principalmente por e nas provas de residência médica. Envolvem noradrenalina e adrenalina;
+### Medo
 
-e nas provas de residência médica. Envolvem respostas desproporcionais de medo ou preocupação (ansiedade), frequentemente acompanhadas de sintomas físicos.
+- **Resposta emocional aguda, real e adaptativa** diante de um perigo iminente. Faz parte do sistema fisiológico de defesa ("luta ou fuga").
+- **Circuito predominante**: amígdala.
+- **Neurotransmissores**: GABA, serotonina, noradrenalina.
+- **Sintomas físicos**: taquicardia, tremores, sudorese, hiperexcitabilidade, pesadelos.
 
-- Medo: Resposta emocional aguda, real e adaptativa diante de um perigo iminente. Faz parte do sistema fisiológico de defesa (“luta ou fuga”); Circuito predominante: amígdala; Neurotransmissores envolvidos: GABA, serotonina, noradrenalina; Sintomas físicos: taquicardia, tremores, sudorese, hiperexcitabilidade, pesadelos.
+### Ansiedade
 
-- Ansiedade: Antecipação de uma ameaça futura (medo antecipatório). Pode ser adaptativa em níveis leves, mas se torna patológica quando exagerada e persistente; Circuito predominante: córtico-estriatotálamo-cortical; Sintomas típicos: tensão muscular, vigilância, comportamento de cautela/esquiva, insônia, irritabilidade, preocupação excessiva.
+- **Antecipação de uma ameaça futura** (medo antecipatório). Pode ser adaptativa em níveis leves, mas se torna patológica quando exagerada e persistente.
+- **Circuito predominante**: córtico-estriato-tálamo-cortical.
+- **Sintomas típicos**: tensão muscular, vigilância, comportamento de cautela/esquiva, insônia, irritabilidade, preocupação excessiva.
 
-## RESPOSTAS AUTONÔMICAS AO MEDO E ANSIEDADE
+## Respostas Autonômicas ao Medo e Ansiedade
 
-- Locus ceruleus
+- **Locus ceruleus**: região do tronco encefálico onde se localizam os neurônios noradrenérgicos.
+- A **amígdala** se conecta ao locus ceruleus. A ativação do locus ceruleus pela amígdala promove intensa liberação de noradrenalina, desencadeando a resposta simpática típica: **medo intenso, ataques de pânico, tremores, sudorese, taquicardia, hiperexcitabilidade e pesadelos**.
+- **Responsável pela resposta clássica de "luta ou fuga"**, mediada principalmente por noradrenalina e adrenalina.
+- **Repercussões clínicas**: hiperativação simpática sustentada aumenta risco de aterosclerose, isquemia cardíaca, elevação da pressão arterial, redução da variabilidade da frequência cardíaca, infarto do miocárdio e até morte súbita.
+- **Resposta endócrina**: A amígdala possui conexões com o hipotálamo, que se comunica com a hipófise, estimulando a liberação de hormônios adrenocorticais pela glândula adrenal. Isso aumenta os níveis séricos de cortisol. Quando essa ativação se torna crônica, o excesso de cortisol contribui para alterações metabólicas prejudiciais: resistência à insulina, dislipidemia, obesidade visceral e imunossupressão.
 
-Medo/ataques de Tremor Sudorese Taquicardia Hiperexcitabilid Pesadelos Figura 1: Resposta autonômicas ao medo e ansiedade. noradrenalina e adrenalina;
-
-- A amígdala, estrutura cerebral central na resposta ao medo, se conecta ao locus coeruleus — região do tronco encefálico onde se localizam os neurônios noradrenérgicos. A ativação do locus coeruleus pela amígdala promove uma intensa liberação de noradrenalina, desencadeando a resposta simpática típica: medo intenso ou ataques de pânico, tremores, sudorese, taquicardia, hiperexcitabilidade e até pesadelos;
-
-- Essa hiperativação simpática sustentada pode trazer repercussões clínicas importantes, como aumento do risco de aterosclerose, isquemia cardíaca, elevação da pressão arterial, redução da variabilidade da frequência cardíaca, infarto do miocárdio e até morte súbita;
-
-- Paralelamente à resposta autonômica, ocorre também uma resposta endócrina ao medo. A amígdala possui conexões com o hipotálamo, que por sua vez se comunica com a hipófise, estimulando a liberação de hormônios adrenocorticais pela glândula adrenal. Isso leva ao aumento dos níveis séricos de cortisol. Quando essa ativação se torna crônica, o excesso de cortisol contribui para alterações metabólicas prejudiciais ao organismo, como resistência à insulina, dislipidemia, obesidade visceral e imunossupressão;
-
-- Verificar Figura 1 .
-
-Receptor β1 NA Receptor α1 Amígdala e pânico a dade s
+*Figura 1: Respostas autonômicas ao medo e ansiedade — receptor β1 e α1 via amígdala e locus ceruleus.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -140,87 +77,150 @@ Receptor β1 NA Receptor α1 Amígdala e pânico a dade s
 
 <!-- page:3 -->
 
-## ATAQUE DE PÂNICO ANSIEDADE ADAPTATIVA
+## Ataque de Pânico
 
-- Tipo particular de resposta ao medo; Frente às síndromes ansiosas, é fundamental diferenciar a
-
-- Resposta abrupta de medo intenso com pico ansiedade adaptativa (ansiedade normal) dos transtornos em minutos; de ansiedade (não adaptativa):
-
-- Sintomas físicos e cognitivos intensos (descarga Tabela 1:
-
-- Sintomas físicos e cognitivos intensos (descarga adrenérgica): palpitações, tremores, dor torácica, parestesias, despersonalização, desrealização, medo de morrer ou “enlouquecer”;
-
+- **Tipo particular de resposta ao medo**.
+- **Resposta abrupta de medo intenso com pico em minutos**.
+- **Sintomas físicos e cognitivos intensos** (descarga adrenérgica): palpitações, tremores, dor torácica, parestesias, despersonalização, desrealização, medo de morrer ou "enlouquecer".
 - Pode ocorrer isoladamente ou em vários transtornos, não limitados aos transtornos de ansiedade.
 
-## FOBIA
+## Fobia
 
-- Medo irracional, intenso e desproporcional
+- **Medo irracional, intenso e desproporcional** ("desadaptativa") a um objeto ou situação específica.
+- Caracteriza-se por **esquiva e sofrimento significativo**.
+- **Tipos**: fobia social, fobia específica, agorafobia.
 
-(“desadaptativa”) a um objeto ou situação específica;
+## Síndromes Ansiosas
 
-- Caracteriza-se por esquiva e sofrimento significativo;
+- **Conjunto de sintomas físicos, cognitivos, afetivos e comportamentais** resultantes de ativação exagerada do sistema de alerta.
+- Presente em transtornos de ansiedade, mas também em outros quadros psiquiátricos e clínicos.
+- **Baseada no modelo cognitivo-comportamental**: um evento externo ou interno (como um sintoma corporal ou situação social) é interpretado de forma disfuncional pelo indivíduo (avaliação cognitiva distorcida), o que leva a uma reação emocional (medo, angústia) e, por sua vez, a alterações comportamentais e sintomas físicos. Essas reações reforçam o circuito, perpetuando o quadro.
 
-- Tipos: fobia social, fobia específica, agorafobia.
+**Modelo cognitivo-comportamental da ansiedade:**
 
-## SÍNDROMES ANSIOSAS
+Evento → Avaliação Cognitiva → Emoção → Comportamento → Reforço do Ciclo
 
-- Conjunto de sintomas físicos, cognitivos, afetivos e comportamentais resultantes de ativação exagerada do sistema de alerta;
+### Manifestações Clínicas
 
-- Presente em transtornos de ansiedade, mas também em outros quadros psiquiátricos e clínicos;
+**Pensamentos e sentimentos frequentes:**
 
-- Baseada no modelo cognitivo-comportamental: Nesse modelo, um evento externo ou interno interpretado de forma disfuncional pelo indivíduo reação emocional (medo, angústia) e, por sua vez, a alterações comportamentais e sintomas físicos. Essas reações reforçam o circuito, perpetuando o quadro.
+- "Vou ser atacado."
+- "Estão me avaliando mal."
+- "Não serei socorrido."
+- "Algo está errado com meu corpo."
+- "Preocupo-me com tudo."
+- "Estou fora de controle."
 
-(como um sintoma corporal ou situação social) é (avaliação cognitiva distorcida), o que leva a uma Modelo cognitivo-comportamental da ansiedade:
+**Sintomas físicos comuns:**
 
-Evento → Avaliação Cognitiva → Emoção → Comportamento → Reforço do Ciclo. MANIFESTAÇÕES CLÍNICAS
+- Tensão muscular
+- Dispneia/sensação de sufocamento
+- Palpitações
+- Dor torácica atípica
+- Tontura/sensação de desmaio
+- Sudorese
+- Parestesias
 
-- Pensamentos e sentimentos frequentes: “Vou ser atacado.” “Estão me avaliando mal.” “Não serei socorrido.” “Algo está errado com meu corpo.” “Preocupo-me com tudo.” “Estou fora de controle.”
+**Comportamentos associados:**
 
-- Sintomas físicos comuns: Tensão muscular; Dispneia/sensação de sufocamento; Palpitações; Dor torácica atípica; Tontura/sensação de desmaio; Sudorese; Parestesias.
+- Hipervigilância constante
+- Evitação de lugares, pessoas ou situações
+- Restrição progressiva da vida social e funcional
 
-- Comportamentos associados: Hipervigilância constante; Evitação de lugares, pessoas ou situações; Restrição progressiva da vida social e funcional. Tabela 1: Diferenciação da ansiedade adaptativa e o transtorno de ansiedade.
+> ⚠️ Tabela 1 ambígua no OCR original (Diferenciação da ansiedade adaptativa e o transtorno de ansiedade) — conteúdo essencial já descrito acima em seções separadas. A tabela comparava "Ansiedade normal" (transitória, proporcional à ameaça, promove enfrentamento) vs. "Transtorno de ansiedade" (persistente, excessiva, desproporcional, leva à esquiva e prejuízo funcional).
 
-Ansiedade normal Transtorno de ansiedade Transitória, proporcional Persistente, excessiva, à ameaça desproporcional Leva à esquiva e prejuízo Promove enfrentamento funcional ANSIEDADE SECUNDÁRIA
+## Ansiedade Secundária
 
-- Frente às síndromes ansiosas também é essencial descartar causas orgânicas (outras condições médicas) e uso de medicamentos/substâncias;
+Frente às síndromes ansiosas também é essencial descartar **causas orgânicas** (outras condições médicas) e **uso de medicamentos/substâncias**.
 
-- Ansiedade secundária à condição médica: Cardiovascular: síndromes coronarianas agudas, insuficiência cardíaca, arritmias; Pulmonar: asma, doença pulmonar obstrutiva crônica; Endócrina: disfunção tireoidiana, hiperparatireoidismo, hipoglicemia, menopausa, doença de Cushing, insulinoma, feocromocitoma; Hematológica: anemia; Neurológica: epilepsia, encefalopatia, tremor essencial.
+### Ansiedade Secundária à Condição Médica
 
-- Ansiedade secundária ao uso de medicamentos/substâncias: Corticoides; Simpaticomiméticos: efedrina, adrenalina, pseudoefedrina; Tiroxinas; Antidepressivos (tricíclicos e inibidores seletivos da recaptação da serotonina) em fases iniciais; Estimulantes: cafeína, anfetamina, aminofilina, cocaína, teofilina, metilfenidato; Descontinuação de barbitúricos, benzodiazepínicos, narcóticos, álcool e sedativos (abstinência); Broncodilatadores; Dopaminérgicos: amantadina, bromocriptina, levodopa, metoclopramida, antipsicóticos; Insulina (associada à hipoglicemia).
+**Cardiovascular**: síndromes coronarianas agudas, insuficiência cardíaca, arritmias.
+**Pulmonar**: asma, DPOC.
+**Endócrina**: disfunção tireoidiana, hiperparatireoidismo, hipoglicemia, menopausa, doença de Cushing, insulinoma, feocromocitoma.
+**Hematológica**: anemia.
+**Neurológica**: epilepsia, encefalopatia, tremor essencial.
 
-TRANSTORNOS DE ANSIEDADE Apresentam a síndrome ansiosa como manifestação primária ou principal. Podem ser subclassificados de acordo com a presença de desencadeantes.
+### Ansiedade Secundária ao Uso de Medicamentos/Substâncias
 
-- Sem desencadeante específico: TAG (transtorno de ansiedade generalizada); TP (transtorno do pânico).
+- **Corticoides**
+- **Simpaticomiméticos**: efedrina, adrenalina, pseudoefedrina
+- **Tiroxinas**
+- **Antidepressivos** (tricíclicos e ISRS) em fases iniciais
+- **Estimulantes**: cafeína, anfetamina, aminofilina, cocaína, teofilina, metilfenidato
+- **Descontinuação de**: barbitúricos, benzodiazepínicos, narcóticos, álcool, sedativos (abstinência)
+- **Broncodilatadores**
+- **Dopaminérgicos**: amantadina, bromocriptina, levodopa, metoclopramida, antipsicóticos
+- **Insulina** (associada à hipoglicemia)
 
-- Com desencadeante específico: Transtorno de ansiedade social (fobia social); Agorafobia; Fobia específica (objetos ou situações simples); Transtorno de ansiedade de separação; Transtorno de ansiedade de doença.
+## Transtornos de Ansiedade
+
+Apresentam a síndrome ansiosa como manifestação primária ou principal. Podem ser subclassificados de acordo com a presença de desencadeantes.
+
+### Sem Desencadeante Específico
+
+- **TAG** (Transtorno de Ansiedade Generalizada)
+- **TP** (Transtorno do Pânico)
+
+### Com Desencadeante Específico
+
+- Transtorno de ansiedade social (fobia social)
+- Agorafobia
+- Fobia específica (objetos ou situações simples)
+- Transtorno de ansiedade de separação
+- Transtorno de ansiedade de doença
+
+*Figura 2: Transtornos de ansiedade segundo o DSM-5 — a duração dos sintomas auxilia na diferenciação entre eles. Mínimo de 1 mês: mutismo seletivo/transtorno do pânico. Mínimo de 6 meses: TAG, transtorno de ansiedade de separação, fobia específica, agorafobia.*
 
 ---
 
 <!-- page:4 -->
 
-Figura 2: Transtornos de ansiedade segundo o DSM-5. A duração dos sintomas auxilia na diferenciação entre eles. Se mínimo de 1 mês: mutismo seletivo / transtorno do pânico; se mínimo de 6 meses: TAG, transtorno de ansiedade de separação, fobia específica, agorafobia.
+## Outros Transtornos com Síndrome Ansiosa
 
-## OUTROS TRANSTORNOS COM SÍNDROME
+Apresentam a síndrome ansiosa como manifestação de importância central, mas são classificados em outras categorias segundo o DSM-5. Possuem um desencadeante específico:
 
-## ANSIOSA
+- **TEPT** (Transtorno de Estresse Pós-Traumático)
+- **TEA** (Transtorno de Estresse Agudo)
+- **TA** (Transtorno de Adaptação)
+- **TOC** (Transtorno Obsessivo-Compulsivo)
+- Transtorno de ansiedade de doença
+- Transtorno de sintomas somáticos
 
-- Apresentam a síndrome ansiosa como manifestação de importância central, mas que são classificados em outras categorias segundo o DSM-5;
+*Figura 3: Sintomas do TAG.*
 
-- Possuem um desencadeante específico: TEPT (transtorno de estresse pós-traumático); TEA (transtorno de estresse agudo); TA (transtorno de adaptação); TOC (transtorno obsessivo compulsivo); Transtorno de ansiedade de doença; Figura 3: Sintomas do TAG. Transtorno de sintomas somáticos.
+### Transtorno de Ansiedade Generalizada (TAG)
 
-Transtorno de ansiedade generalizada (TAG) Transtorno de pânico
+- **Ansiedade e preocupação excessivas e persistentes**, de difícil controle, envolvendo vários domínios da vida (trabalho, saúde, finanças, relações interpessoais), presentes na maioria dos dias por pelo menos **6 meses**.
+- **Critérios DSM-5**:
+  - Ansiedade/preocupação excessiva na maioria dos dias por ≥ 6 meses
+  - Dificuldade de controlar a preocupação
+  - Presença de 3 ou mais dos seguintes sintomas:
+    - Inquietação ou sensação de estar com "nervos à flor da pele"
+    - Fadiga
+    - Dificuldade de concentração ou "brancos mentais"
+    - Irritabilidade
+    - Tensão muscular
+    - Alterações do sono (dificuldade para iniciar ou manter o sono; sono não reparador)
+  - Alterações funcionais ou sofrimento clinicamente significativo
 
-- Ansiedade e preocupação excessivas e persistentes, Presença de ataques de pânico inesperados e de difícil controle, envolvendo vários domínios recorrentes, seguidos de preocupação persistente e/ou da vida (trabalho, saúde, finanças, relações mudanças comportamentais desadaptativas.
+### Transtorno do Pânico
 
-interpessoais), presentes na maioria dos dias por pelo
+- **Presença de ataques de pânico inesperados e recorrentes**, seguidos de preocupação persistente e/ou mudanças comportamentais desadaptativas.
 
-- Ataques de pânico (DSM-5):
+**Ataques de pânico (DSM-5):**
 
-menos 6 meses. | Crises súbitas de medo ou desconforto intensos;
-
-- Critérios DSM-5: | Início abrupto, com pico em minutos; Ansiedade/preocupação excessiva na maioria dos | Presença de pelo menos 4 sintomas físicos/ dias por ≥6 meses; cognitivos, como: Dificuldade de controlar a preocupação; | Palpitação, sudorese, tremores, dispneia, dor Presença de 3 ou mais dos seguintes sintomas torácica, náusea; Inquietação ou sensação de estar com “nervos à | Sensação de desrealização flor da pele”; ou despersonalização; Fadiga; | Medo de morrer, enlouquecer ou Dificuldade de concentração ou perder o controle; Irritabilidade; ≥ 1 mês de: Tensão muscular; | Preocupação persistente com novos ataques ou Alterações do sono (dificuldade para iniciar ou suas consequências (ex.: infarto, “enlouquecer”); Comprometimento funcional ou sofrimento (ex.: esquiva de atividades físicas, multidões, clinicamente significativo. lugares fechados).
-
-(≥6 meses): | Tontura, parestesia, calafrios/ondas de calor; “brancos mentais”; | Pelo menos um dos ataques é seguido por manter o sono; sono não reparador). | Alterações comportamentais desadaptativas
+- **Crises súbitas de medo ou desconforto intensos**
+- **Início abrupto, com pico em minutos**
+- **Presença de pelo menos 4 sintomas físicos/cognitivos**, como:
+  - Palpitação, sudorese, tremores
+  - Dispneia, dor torácica, náusea
+  - Sensação de desrealização ou despersonalização
+  - Medo de morrer, enlouquecer ou perder o controle
+  - Tontura, parestesia, calafrios/ondas de calor
+- **Pelo menos um dos ataques é seguido por ≥ 1 mês de**:
+  - Preocupação persistente com novos ataques ou suas consequências (ex.: infarto, "enlouquecer")
+  - Alterações comportamentais desadaptativas (ex.: esquiva de atividades físicas, multidões, lugares fechados)
 
 ![Figura do material - página 4](figure-004-1.webp)
 
@@ -230,158 +230,185 @@ menos 6 meses. | Crises súbitas de medo ou desconforto intensos;
 
 <!-- page:5 -->
 
-Transtorno de ansiedade social (fobia social)
+### Transtorno de Ansiedade Social (Fobia Social)
 
-- Tipos comuns:
+- O indivíduo apresenta **medo, ansiedade ou esquiva** diante de situações sociais em que possa ser avaliado pelos outros.
+- **Exemplos comuns**: falar em público; comer ou beber em público; conhecer pessoas novas.
+- **Ideias centrais**: medo de avaliação negativa, humilhação, rejeição ou ofender alguém.
+- O **medo é reconhecido como exagerado e desproporcional** frente ao contexto real.
+- Pode levar a **prejuízo funcional importante** e comprometimento social ou ocupacional.
+- **O tratamento farmacológico não é eficaz** — preferencialmente terapia cognitivo-comportamental.
 
-- O indivíduo apresenta medo, ansiedade ou esquiva | Fobia de animais;
+### Agorafobia
 
-diante de situações sociais em que possa ser avaliado | Ambientes naturais (altura, tempestade, água);
+- Caracteriza-se por **medo ou ansiedade intensa** diante de duas ou mais das seguintes situações:
+  - Uso de transporte público (ônibus, metrô, avião)
+  - Ambientes abertos (praças, estacionamentos)
+  - Ambientes fechados (lojas, cinemas, teatros)
+  - Multidões ou filas
+  - Estar sozinho fora de casa
+- O **medo decorre da possibilidade de não conseguir escapar** ou não receber ajuda adequada caso ocorra um sintoma súbito (ex.: crise de pânico, queda, incontinência, desmaio).
+- **Essas situações**:
+  - Quase sempre geram ansiedade
+  - São frequentemente evitadas
+  - Ou só são enfrentadas com a presença de um acompanhante confiável
+- O **medo é desproporcional ao risco real** e inadequado ao contexto sociocultural.
 
-pelos outros; | Sangue-injeção-ferimentos;
+### Fobia Específica
 
-- Exemplos comuns: | Situações específicas (aviões, elevadores, dirigir); Falar em público; | Outros (engasgar, vômito, etc). Comer ou beber em público;
+- **Medo ou ansiedade intensa** diante de objetos ou situações específicas.
+- Ocorrem por **≥ 1 mês** após o contato.
+- A **resposta fóbica é**: imediata, persistente e desproporcional ao perigo real; frequentemente leva à evitação ativa da situação ou objeto.
+- **Tipos comuns**:
+  - Fobia de animais
+  - Ambientes naturais (altura, tempestade, água)
+  - Sangue-injeção-ferimentos
+  - Situações específicas (aviões, elevadores, dirigir)
+  - Outros (engasgar, vômito, etc.)
 
-- O tratamento farmacológico não é eficaz. Conhecer pessoas novas. Transtorno de estresse pós-traumático (TEPT)
+### Transtorno de Estresse Pós-Traumático (TEPT)
 
-- Ideias centrais: medo de avaliação negativa, humilhação, rejeição ou ofender alguém; História de trauma real + revivescência + evitação +
+**História de trauma real:**
 
-- O medo é reconhecido como exagerado e sintomas emocionais por ≥ 1 mês.
+- Exposição a evento com risco real ou ameaça de:
+  - Morte
+  - Lesão grave
+  - Violência sexual
+- **Formas de exposição**:
+  - Vivenciado diretamente
+  - Testemunhado
+  - Conhecimento de evento com familiar ou amigo próximo
+  - Exposição repetida a detalhes do trauma (ex.: profissionais de saúde)
+  - Não inclui: filmes, mídias ou notícias (exceto por obrigação ocupacional)
 
-desproporcional frente ao contexto real;
+**Sintomas emocionais principais** (presentes por ≥ 1 mês):
 
-- Pode levar a prejuízo funcional importante e
+- **Intrusão**: flashbacks, pesadelos, lembranças recorrentes
+- **Evitação**: pensamentos, lugares, pessoas
+- **Alterações negativas em cognição e humor**: ex., culpa, desesperança, isolamento
+- **Excitação/reatividade aumentada**: ex., irritabilidade, hipervigilância, insônia
 
-- História de trauma real:
+**TEPT difere dos transtornos relacionados ao estresse** (transtorno de estresse agudo e transtorno de adaptação).
 
-comprometimento social ou ocupacional. | Exposição a evento com risco real ou ameaça de: Agorafobia | Morte;
-
-- Caracteriza-se por medo ou ansiedade intensa diante | Lesão grave; Uso de transporte público (ônibus, metrô, avião); | Formas de exposição: Ambientes abertos (praças, estacionamentos); | Vivenciado diretamente; Ambientes fechados (lojas, cinemas, teatros); | Testemunhado; Multidões ou filas; | Conhecimento de evento com familiar ou Estar sozinho fora de casa. amigo próximo;
-
-de duas ou mais das seguintes situações: | Violência sexual.
-
-- O medo decorre da possibilidade de não conseguir | Exposição repetida a detalhes do trauma (ex:
-
-escapar ou não receber ajuda adequada caso ocorra profissionais de saúde); um sintoma súbito (ex.: crise de pânico, queda, | Não inclui: filmes, mídias ou notícias (exceto por incontinência, desmaio); obrigação ocupacional).
-
-- Essas situações:
-
-- Sintomas emocionais principais: Quase sempre geram ansiedade; | Presentes por ≥ 1 mês; São frequentemente evitadas; | Intrusão (flashbacks, pesadelos, Ou só são enfrentadas com a presença de um lembranças recorrentes);
-
-acompanhante confiável. | Evitação (pensamentos, lugares, pessoas);
-
-- O medo é desproporcional ao risco real e inadequado | Alterações negativas em cognição e humor ao contexto sociocultural. (ex.: culpa, desesperança, isolamento);
-
-Fobia específica | Excitação/reatividade aumentada (ex.: irritabilidade,
-
-- Medo ou ansiedade intensa diante de objetos ou hipervigilância, insônia).
-
-situações específicas;
-
-- Ocorrem por ≥ 1 mês após o trauma.
-
-- A resposta fóbica é: Imediata, persistente e desproporcional ao TEPT difere dos transtornos relacionados ao estresse perigo real; (transtorno de estresse agudo e transtorno de adaptação). Frequentemente leva à evitação ativa da situação ou objeto.
-
-- Verificar Tabela 2 .
-
-Tabela 2: Diferenciação entre TEPT e transtornos relacionados ao estresse. Diagnóstico Evento traumático Início dos sintomas Duração dos sintomas Até 6 meses após TEPT Sim ≥ 1 mês trauma Transtorno de estresse agudo Sim Imediato (até 3 dias) 3 dias a 1 mês (TEA)
-
-Até 3 meses do Transtorno de adaptação Não traumático* ≤ 6 meses após evento estressor
+> ⚠️ Tabela 2 ambígua no OCR — Diferenciação entre TEPT e transtornos relacionados ao estresse. Elementos identificáveis:
+> - TEPT: Evento traumático = Sim; Início ≥ 1 mês; Duração até 6 meses após trauma.
+> - TEA (Transtorno de Estresse Agudo): Evento traumático = Sim; Início imediato (até 3 dias); Duração 3 dias a 1 mês.
+> - Transtorno de Adaptação: Evento traumático = Não (até 3 meses do estressor não traumático); Duração ≤ 6 meses após evento estressor.
 
 ---
 
 <!-- page:6 -->
 
-Exemplos de estressores não traumáticos (adaptação):
+### Exemplos de Estressores Não-Traumáticos (Adaptação)
 
-- Transtorno de acumulação (hoarding):
+- Separação conjugal, mudança de cidade, falência, diagnóstico médico leve.
 
-separação conjugal, mudança de cidade, falência, | Dificuldade persistente em se desfazer de objetos, diagnóstico médico leve. mesmo inúteis;
+### Transtorno Obsessivo-Compulsivo (TOC)
 
-Transtorno obsessivo compulsivo (TOC): | Ambientes se tornam inutilizáveis.
+- **Distúrbio caracterizado por obsessões e/ou compulsões**, reconhecidos como excessivos e indesejados pelo paciente.
+- **Insight geralmente preservado**.
+- TOC caracteriza-se pela presença de **obsessões e/ou compulsões por > 1h/dia** ou com sofrimento significativo ou prejuízo funcional, social ou ocupacional.
 
-- Distúrbio caracterizado por obsessões e/ou
+**Obsessões:**
 
-- Tricotilomania:
+- Pensamentos, imagens ou impulsos recorrentes e intrusivos
+- Causam ansiedade ou desconforto
+- Exemplos: medo de contaminação, dúvida excessiva, ideias de simetria ou catástrofes
 
-- Distúrbio caracterizado por obsessões e/ou compulsões, reconhecidos como excessivos e indesejados pelo paciente (insight geralmente preservado).
+**Compulsões:**
 
-- TOC caracteriza-se pela presença de obsessões e/ou compulsões por >1h/dia ou com sofrimento significativo ou prejuízo funcional, social T ou ocupacional. A
+- Ações repetitivas ou atos mentais (ex.: lavar, verificar, contar, repetir palavras)
+- Realizadas como tentativa de reduzir a ansiedade causada pelas obsessões (são uma "resposta" às obsessões)
+- Não estão conectadas de forma realista ao que se pretende evitar
 
-- Obsessões: f Pensamentos, imagens ou impulsos f recorrentes e intrusivos; Causam ansiedade ou desconforto; Ex.: medo de contaminação, dúvida excessiva, ideias de simetria ou catástrofes.
+> ⚠️ Tabela 3 (Principais dimensões do TOC) estava muito fragmentada no OCR. Conteúdo reconstruído em texto abaixo com as principais dimensões identificáveis:
 
-- Compulsões: Ações repetitivas ou atos mentais (ex.: lavar, verificar, contar, repetir palavras); P Realizadas como tentativa de reduzir a ansiedade causada pelas obsessões (são uma “resposta” às obsessões); Não estão conectadas de forma realista ao que se pretende evitar.
+**Principais dimensões do TOC:**
 
-- Tabela 3: Principais dimensões do TOC.
+- **Contaminação**: obsessão com germes/secreções → compulsões de lavagens excessivas, banhos repetitivos
+- **Ordem/Simetria**: obsessão com simetria → compulsões de alinhar, contar, repetir ações
+- **Dúvida/Checagem**: obsessão com verificação → compulsões de verificar portas, gás, luz várias vezes
+- **Religiosidade/Moralidade**: obsessão com pensamentos ruins/escrúpulos religiosos → compulsões de rezar compulsivamente, evitar situações
+- **Acúmulo (hoarding)**: dificuldade em descartar objetos, acúmulo em excesso
 
-- Obsessões Compulsões até “ficar certo” vezes moralidade “pensamentos ruins”
+**Insight:**
 
-Contaminação Lavagens excessivas, banhos (germes, secreções) repetitivos Alinhar, contar, repetir ações Ordem/simetria Verificar portas, gás, luz várias Dúvida/checagem Religiosidade/ Rezar compulsivamente, evitar
+- A maioria dos pacientes reconhece que seus pensamentos e comportamentos são excessivos (sintomas egodistônicos).
+- Casos graves podem ter insight prejudicado.
 
-- Dificuldade em descartar objetos, acúmulo em excesso
+### Transtornos Relacionados ao TOC
 
-Acúmulo (hoarding)
+- **Transtorno dismórfico corporal**: preocupação com defeitos físicos mínimos ou inexistentes; comportamentos repetitivos (espelho, comparação, camuflagem).
+- **Tricotilomania**: arrancar os próprios cabelos repetidamente, com dificuldade de controle.
+- **Transtorno de escoriação (skin picking)**: lesionar a pele de forma repetitiva, frequentemente causando feridas.
+- **Transtorno de acumulação (hoarding)**: dificuldade persistente em se desfazer de objetos, mesmo inúteis; ambientes se tornam inutilizáveis.
 
-- Insight: A maioria dos pacientes reconhece que seus pensamentos e comportamentos são excessivos Sintomas egodistônicos; Casos graves podem ter insight prejudicado.
+## Tratamento dos Transtornos de Ansiedade
 
-(insight preservado); Transtornos relacionados ao TOC
+O tratamento não-farmacológico inclui exercícios físicos, psicoeducação e psicoterapia. O tratamento farmacológico envolve o uso de ansiolíticos. Em geral, a **combinação de fármacos com psicoterapia é mais eficaz** do que cada uma das medidas de forma isolada. Exceção: nos casos de fobia específica, em que só a psicoterapia costuma ser indicada.
 
-- Transtorno dismórfico corporal: Preocupação com defeitos físicos mínimos ou inexistentes; Comportamentos repetitivos (espelho, comparação, camuflagem). - Tricotilomania: Arrancar os próprios cabelos repetidamente, com dificuldade de controle.
+### Psicoterapia
 
-- Transtorno de escoriação (skin picking): Lesionar a pele de forma repetitiva, frequentemente causando feridas.
+- **Terapia cognitivo-comportamental (TCC)**: é a abordagem com maior evidência científica para todos os transtornos de ansiedade. Trabalha a reestruturação de pensamentos disfuncionais.
+- **Psicoterapia de orientação analítica (POA) / psicodinâmica**: útil para quem deseja entender os conflitos inconscientes ligados à ansiedade.
+- **Mindfulness**: técnicas de atenção plena que auxiliam no manejo da ansiedade e da ruminação.
 
-TRATAMENTO DOS TRANSTORNOS DE ANSIEDADE O tratamento não farmacológico inclui exercícios físicos, psicoeducação e psicoterapia. Já o tratamento farmacológico envolve o uso de ansiolíticos.
+### Ansiolíticos
 
-Em geral, a combinação de fármacos com psicoterapia é mais eficaz do que cada uma das medidas de forma isolada. Exceto nos casos de fobia específica, em que só a psicoterapia costuma ser indicada.
+**Inibidores Seletivos da Recaptação de Serotonina (ISRS):**
 
-Psicoterapia
+- **Primeira escolha**.
+- **Fluoxetina**: mais ativadora (cautela em casos de insônia ou agitação).
+- **Sertralina, citalopram, escitalopram**: bem tolerados; **escitalopram tem perfil mais seguro**.
+- **Paroxetina**: evitar em idosos e gestantes.
+- **Fluvoxamina**: mais usada em TOC.
 
-- Terapia cognitivo-comportamental (TCC): é a abordagem com maior evidência científica para todos os transtornos de ansiedade. Trabalha a reestruturação de pensamentos disfuncionais;
+**Inibidores da Recaptação de Serotonina e Noradrenalina (IRSN):**
 
-- Psicoterapia de orientação analítica (POA) / psicodinâmica: útil para quem deseja entender os conflitos inconscientes ligados à ansiedade;
+- Venlafaxina, desvenlafaxina, duloxetina.
+- Alternativa eficaz quando há resposta insuficiente aos ISRS ou comorbidade dolorosa.
 
-- Mindfulness: técnicas de atenção plena que auxiliam no manejo da ansiedade e da ruminação.
+**Outros:**
 
-Ansiolíticos
+- **Antidepressivos tricíclicos**: eficazes, mas com mais efeitos colaterais.
+- **Betabloqueadores** (ex.: propranolol): úteis em ansiedade social/de desempenho (como antes de apresentações).
+- **Anticonvulsivantes**: usados em casos específicos, como transtorno de ansiedade generalizada (TAG) resistente.
 
-- Inibidores seletivos da recaptação de serotonina (ISRS): Primeira escolha; Fluoxetina: mais ativadora (cautela em casos de insônia ou agitação); Sertralina, citalopram, escitalopram: bem tolerados; Paroxetina: evitar em idosos e gestantes; Fluvoxamina: mais usada em TOC.
+### Benzodiazepínicos
 
-escitalopram tem perfil mais seguro;
-
-- Inibidores da recaptação de serotonina e noradrenalina (IRSN): Venlafaxina, desvenlafaxina, duloxetina; Alternativa eficaz quando há resposta insuficiente aos ISRS ou comorbidade dolorosa.
-
-- Outros: Antidepressivos tricíclicos: eficazes, mas com mais efeitos colaterais; Benzodiazepínicos: uso pontual e por curto prazo, principalmente nas crises agudas; Betabloqueadores (ex.: propranolol): úteis em ansiedade social/de desempenho (como antes de apresentações); Anticonvulsivantes: usados em casos específicos, como o transtorno de ansiedade generalizada
-
-(TAG) resistente.
+- **São ansiolíticos/sedativos com potencial para dependência**.
+- **Indicações pontuais**: ataques de pânico, insônia grave ou agitação intensa; agitação psicomotora por abstinência alcoólica (inclusive delirium tremens); intoxicação por estimulantes (como cocaína).
+- **Quando não usar**: como monoterapia para transtornos ansiosos; por tempo prolongado; após eventos traumáticos agudos; em delirium de idosos; na intoxicação por álcool.
+- **A escolha do BZD considera a meia-vida**:
+  - **Curta duração** (< 5h): alprazolam, midazolam
+  - **Intermediária** (5–24h): lorazepam (preferido em hepatopatas), bromazepam
+  - **Longa** (> 24h): clonazepam, diazepam
+- **Riscos**: dependência, tolerância, prejuízo cognitivo, amnésia e sintomas de abstinência.
+- **Procedimento para retirada**: deve ser gradual, para evitar síndrome de abstinência. Exemplo: reduzir 1/4 da dose a cada 2 semanas.
+- **"Drogas Z"** (ex.: zolpidem): hipnóticos não-benzodiazepínicos. Apesar de usados para insônia, não são benzodiazepínicos, mas também exigem cautela.
 
 ---
 
 <!-- page:7 -->
 
-Benzodiazepínicos TRATAMENTO DO TEPT
+## Tratamento do TEPT
 
-- São ansiolíticos/sedativos com potencial para
+- **Psicoterapia é a base do tratamento**.
+- **Terapia cognitivo-comportamental focada no trauma** é a abordagem com melhor evidência. Inclui:
+  - Reinterpretação dos significados do trauma
+  - **Terapia de processamento cognitivo**: trabalha a ressignificação e reestruturação de pensamentos disfuncionais relacionados ao trauma
+  - **Terapia de exposição prolongada**: expõe gradualmente o paciente às memórias traumáticas de forma controlada, favorecendo a dessensibilização
+  - **Exposição escrita (narrativa)**: o paciente escreve e revisita o relato do trauma, promovendo reestruturação cognitiva
+  - **Dessensibilização e reprocessamento por movimentos oculares (EMDR)**: técnica validada que utiliza estímulos bilaterais (como movimentos oculares) durante a recordação do trauma, facilitando o reprocessamento emocional
 
-- A psicoterapia é a base do tratamento;
+### Tratamento Farmacológico do TEPT
 
-dependência. A escolha depende da meia-vida:
+- **ISRS (primeira linha)**: fluoxetina, sertralina, paroxetina.
+- **IRSN**: alternativa quando não há resposta aos ISRS.
+- **Não se deve utilizar benzodiazepínicos**: podem atrapalhar o processamento do trauma, aumentar o risco de dependência e agravar sintomas dissociativos.
 
-- A terapia cognitivo-comportamental focada no trauma Curta (<5h): midazolam, alprazolam; é a abordagem com melhor evidência. Intermediária (5–24h): lorazepam (preferido em
+## Referências
 
-- Ela inclui: Longa (>24h): clonazepam, diazepam. reinterpretação dos significados do trauma;
-
-hepatopatas), bromazepam; | Terapia de processamento cognitivo: trabalha a
-
-- Indicações pontuais: | Terapia de exposição prolongada: expõe Ataques de pânico, insônia grave ou gradualmente o paciente às memórias agitação intensa; traumáticas de forma controlada, Agitação psicomotora por: favorecendo a dessensibilização; Abstinência alcoólica (inclusive com | Exposição escrita (narrativa): o paciente escreve delirium tremens); e revisita o relato do trauma, promovendo Intoxicação por estimulantes (como cocaína). reestruturação cognitiva;
-
-- Quando não usar: | Dessensibilização e reprocessamento por Como monoterapia para transtornos ansiosos; movimentos oculares (EMDR): técnica validada Por tempo prolongado; que utiliza estímulos bilaterais (como movimentos Após eventos traumáticos agudos; oculares) durante a recordação do trauma, Em delirium de idosos; facilitando o reprocessamento emocional. Na intoxicação por álcool.
-
-- Tratamento farmacológico:
-
-- Riscos: dependência, tolerância, prejuízo cognitivo, | ISRS (primeira linha): Fluoxetina, amnésia e sintomas de abstinência; sertralina, paroxetina;
-
-- Procedimento para a retirada: | IRSN: alternativa quando não há resposta aos ISRS; Deve ser gradual, para evitar síndrome | Não se deve utilizar benzodiazepínicos:
-
-de abstinência. | Podem atrapalhar o processamento do trauma, aumentar o risco de dependência e agravar Exemplo: reduzir 1/4 da dose a cada 2 semanas. sintomas dissociativos.
-
-“Drogas Z” (ex.: zolpidem): hipnóticos não benzodiazepínicos. Apesar de serem usados para insônia, não são benzodiazepínicos, mas também exigem cautela!
+- Figura 1: Respostas autonômicas ao medo e ansiedade — receptor β1 (noradrenalina) e α1 mediados pela amígdala e locus ceruleus.
+- Figura 2: Transtornos de ansiedade segundo o DSM-5 — hierarquia diagnóstica e duração dos sintomas.
+- Figura 3: Sintomas do Transtorno de Ansiedade Generalizada.

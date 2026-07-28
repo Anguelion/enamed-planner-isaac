@@ -1,317 +1,259 @@
-# Cabeça e Pescoço - Cec do Trato Aerodigestivo Superior - Conceitos Iniciais
+# Cabeça e Pescoço - CEC do Trato Aerodigestivo Superior - Conceitos Iniciais
 
 <!-- page:1 -->
 
-## CABEÇA E PESCOÇO: CEC DO
+## Conceitos Iniciais
 
-## TRATO AERODIGESTIVO SUPERIOR
+### Cancerização de Campo
 
-## CONCEITOS INICIAIS
+- Mesmo fator de risco carcinogênico para toda a mucosa exposta.
+- **2º tumor primário** → 2ª causa de morte (25–33%).
+- Presente em **10–12%** em tabagistas.
+- Incidência de **2–7% ao ano** após diagnóstico do primário.
+- Investigação de outros primários obrigatória.
+- **Rotina de investigação é diferente do estadiamento!**
 
-CONCEITOS INICIAI CEC do trato aerodigestivo superior
+## Epidemiologia e Fatores de Risco
 
-## CANCERIZAÇÃO DE CAMPO
+### No Mundo — Câncer em Cabeça e Pescoço
 
-- Pesquisa de segundo tumor primário.
+- **900.000 casos e 400.000 mortes/ano**.
+- **5,7%** mortalidade relacionada ao câncer.
+- **90–95%** = CEC.
+- **Homens > mulheres** (2:1 a 4:1).
 
-- Rotina CEC CCP.
+### No Brasil
 
-- ROTINA CEC CCP:
+- Países em desenvolvimento: **67%** dos casos; **82%** de mortalidade.
+- **Incidência**: 20/100.000 habitantes.
 
-- Exame físico completo: palpação cervical, P oroscopia, laringoscopia com nasofibroscópio;
+### Fatores de Risco
 
-- TC de face, pescoço e tórax com contraste;
-
-- Endoscopia Digestiva Alta;
-
-- Broncoscopia (quando indicado).
-
-- ESTADIAMENTO T (QUASE TODOS): A
-
-- T1: ≤ 2 cm
-
-- T2: 2 – 4 cm
-
-- T3: > 4 cm
-
-- T4: invasão adjacente T4a: operável T4b: inoperável
-
-- ESTADIAMENTO N (QUASE TODOS):
-
-- N1: único ipsilateral, ≤ 3 cm
-
-- N2a: único ipsilateral, 3 a 6 cm
-
-## EPIDEMIOLOGIA E FATORES C DE RISCO
-
-- MUNDO - CÂNCER EM CABEÇA E PESCOÇO
-
-- 1. 900 000 casos e 400.000 mortes/ano;
-
-- 5,7% mortalidade relacionados ao câncer;
-
-- 90-95% = CEC;
-
-- Homens > mulheres (2:1 a 4:1).
-
-- NO BRASIL
-
-- Países de desenvolvimento; 67% dos casos; 82% de mortalidade.
-
-- Incidência: 20/100.000 habitantes.
-
-## FATORES DE RISCO
-
-- Tabagismo (5-25x mais risco);
-
-- Etilismo (efeito sinérgico);
-
-- Infecções virais → HPV, EBV, HCV, HIV;
-
-- Genética; M
-
-- Radiação;
-
-- Noz de bétel;
-
-- Ópio;
-
-- Carência vitamínica;
-
-- Doença periodontal, má higiene oral; E
-
-- Imunossupressão;
-
+- **Tabagismo** (5–25x mais risco).
+- **Etilismo** (efeito sinérgico).
+- **Infecções virais**: HPV, EBV, HCV, HIV.
+- Genética.
+- Radiação.
+- Noz de bétel.
+- Ópio.
+- Carência vitamínica.
+- Doença periodontal, má higiene oral.
+- Imunossupressão.
 - Exposição ambiental e ocupacional.
 
-- IS
+## Apresentação Clínica
 
-- N2b: múltiplos ipsilateral, 3 a 6 cm
+### Manifestações Clínicas Comuns
 
-- N2c: contralateral, ≤ 6 cm
+- **Lesão ulcerada**.
+- **4 Ds**: **dispneia**, **disfagia**, **disfonia**, **dor**.
+- **Massa cervical**.
 
-- N3a: > 6 cm
+### Em Casos Avançados
 
-- N3b: ENE+
-
-## PRINCÍPIOS DO TRATAMENTO
-
-- Ressecção cirúrgica com margens livres;
-
-- Esvaziamento cervical (eletivo ou terapêutico);
-
-- RT/QT (adjuvante ou como tratamento principal);
-
-- Equipe multidisciplinar.
-
-## ADJUVÂNCIA
-
-- RT: T3 (alguns) / T4 Margens comprometidas ou exíguas Invasão perineural ou vascular N+
-
-- QT: Margens comprometidas ENE+
-
-- Mesmo fator de risco carcinogênico para toda a mucosa exposta;
-
-- 2° tumor primário → 2ª causa de morte (25 – 33%); Presente em 10 – 12% em tabagistas. Incidência de 2 – 7% ao ano após o diagnóstico do primário; Investigação de outros primários;
-
-- Rotina de investigação é diferente do estadiamento!
-
-- Rotina CEC CCP - rotina propedêutica que deve ser seguida no câncer de cabeça e pescoço: Exame físico completo → palpação cervical, oroscopia, laringoscopia com nasofibroscópio; TC de face, pescoço e tórax com contraste; Endoscopia digestiva alta; Broncoscopia (quando indicada).
-
-## APRESENTAÇÃO CLÍNICA
-
-## MANIFESTAÇÕES CLÍNICAS
-
-- Lesão ulcerada;
-
-- 4 D’s → dispneia, disfagia, disfonia e dor;
-
-- Massa cervical.
-
-## EM CASOS AVANÇADOS
-
-- Sangramento;
-
-- Dor incontrolável;
-
-- Síndrome consumptiva;
-
+- Sangramento.
+- Dor incontrolável.
+- Síndrome consumptiva.
 - Insuficiência respiratória.
 
 ---
 
 <!-- page:2 -->
 
-## DIAGNÓSTICO E ESTADIAMENTO
+## Diagnóstico e Estadiamento
 
-Estadiamento – N (aplica a todos os tumores): (memorize 3 e 6): DIAGNÓSTICO
+### Rotina CEC CCP (Rotina Propedêutica)
 
-- Verificar Figura 2 na próxima página
+A rotina propedêutica que deve ser seguida no câncer de cabeça e pescoço:
 
-- Biópsia:
+- **Exame físico completo**: palpação cervical, oroscopia, laringoscopia com nasofibroscópio.
+- **TC de face, pescoço e tórax com contraste**.
+- **Endoscopia digestiva alta**.
+- **Broncoscopia** (quando indicada).
 
-- N1: único ipsilateral, ≤ 3 cm; Tumor primário – incisional;
+**Observação**: A rotina de investigação é **diferente do estadiamento**! Esta é para pesquisa de segundo tumor primário.
 
-- N2a: único ipsilateral, 3 - 6 cm; É o primeiro método.
+### Diagnóstico
 
-- N2b: múltiplos ipsilaterais, 3 - 6 cm;
+**Biópsia:**
 
-- Pesquisa viral:
+- **Tumor primário** – incisional (é o primeiro método).
 
-- N2c: contralateral, ≤ 6cm; Pesquisa do p16 (orofaringe) e/ou EBV (nasofaringe)
+**Pesquisa viral:**
 
-- N3a: > 6 cm;
+- **p16** (orofaringe) e/ou **EBV** (nasofaringe).
+- Imuno-histoquímica/PCR.
 
-- imuno-histoquímica/ PCR.
+**PAAF:**
 
-- N3b: ENE+ (extravasamento extranodal).
+- **Linfonodo cervical**.
 
-- PAAF:
+**Critério clínico de suspeita:**
 
-## TRATAMENTO
+- **Ferida que não cicatriza/disfonia por > 14 dias** → investigar/biopsiar.
 
-| Linfonodo cervical; | Ferida que não cicatriza/disfonia por > 14 dias → investigar/biopsiar; ESTRATÉGIAS | Exposição ambiental e ocupacional.
+### Estadiamento — T (Todos os Tumores)
 
-- Decisão gira em torno de prognóstico x morbidade;
+**Memorize T2 e T4:**
 
-- Ressecção cirúrgica com margens livres;
+- **T1**: ≤ **2 cm**.
+- **T2**: **2–4 cm**.
+- **T3**: > **4 cm**.
+- **T4**: invasão de estruturas adjacentes.
+  - **T4a**: operável.
+  - **T4b**: inoperável.
 
-## ESTADIAMENTO
+**Critérios de inoperabilidade (T4b):**
 
-- Esvaziamento cervical (eletivo ou terapêutico);
+- Invasão de carótida comum ou interna.
+- Invasão de fáscia pré-vertebral.
+- Invasão de espaço mastigatório (trismo).
+- Acometimento de base de crânio.
+- Acometimento do mediastino.
+- Necessidade de glossectomia total (língua fixa).
+- Necessidade de exenteração bilateral de órbita.
 
-Estadiamento – T: (memorize 2 e 4) | Terapêutico (N+): radical modificado;
+### Estadiamento — N (Todos os Tumores)
 
-- T1: ≤ 2 cm; | Eletivo (N0): depende.
+**Memorize N3a (6 cm) e N3b (ENE+):**
 
-- T2: 2 - 4 cm;
+- **N1**: único ipsilateral, ≤ **3 cm**.
+- **N2a**: único ipsilateral, **3–6 cm**.
+- **N2b**: múltiplos ipsilaterais, **3–6 cm**.
+- **N2c**: contralateral, ≤ **6 cm**.
+- **N3a**: > **6 cm**.
+- **N3b**: **ENE+** (extravasamento extranodal).
 
-- RT/QT adjuvante ou como tratamento principal:
+*Figura 2: Estadiamento — N (aplica a todos os tumores).*
 
-- T3: > 4 cm; | Não existe neoadjuvância em CEC
+### Estratégia de Tratamento
 
-- T4: invasão de estruturas adjacentes: cabeça e pescoço; T4a: operável;
-
-- Equipe multidisciplinar. T4b: inoperável;
-
-- Verificar Figura 3 na próxima página
-
-- Critérios de inoperabilidade: Invasão de carótida comum ou interna; ACESSOS CIRÚRGICOS Invasão de fáscia pré-vertebral; Per os (TORS): Invasão de espaço mastigatório (trismo);
-
-- Retirada da lesão pela boca; Acometimento de base de crânio;
-
-- TORS → ressecção transoral com auxílio de robô. Acometimento do mediastino; Tipos de retalhos: Necessidade de glossectomia total* (língua fixa);
-
-- Retalho de bochecha (cheek flap): Necessidade de exenteração bilateral de órbita*; | Pode ser realizado no lábio inferior ou superior;
-
-- Depende do sítio anatômico do tumor. | Procede-se com uma incisão no lábio
-
-- Verificar Figura 1 até o pescoço.
-
-Figura 1: Compartimentos do pescoço
-
-![Figura do material - página 2](figure-002-1.webp)
+*Figura 3: Estratégia de tratamento* (por estádio: precoce T1–T2 N0 vs avançado T4a/T4b).
 
 ---
 
 <!-- page:3 -->
 
-Figura 2: Estadiamento – N (aplica a todos os tumores): (memorize 3 e 6) Precoce Avançado T1 NO MO T4a T4b T2 NO MO 30 a 40% Cirurgia Inoperável Cirurgia conservadora agressiva RT isolada RT/QT Sobrevida 70 a 90% adjuvante Figura 3: Estratégia de tratamento.
+## Princípios do Tratamento
 
-- Retalho em viseira (visor flap): Incisão em região cervical com exposição em direção cranial.
+1. **Ressecção cirúrgica com margens livres**.
+2. **Esvaziamento cervical** (eletivo ou terapêutico).
+3. **RT/QT** (adjuvante ou como tratamento principal).
+4. **Equipe multidisciplinar**.
 
-- Composto → pull through;
+### Decisão de Tratamento
 
-- Faringotomia;
+- Decisão gira em torno de **prognóstico × morbidade**.
+- **Não existe neoadjuvância** em CEC de cabeça e pescoço.
 
-- Maxillary swing;
+### Esvaziamento Cervical
 
-- Cervicotomia em colar.
+**Terapêutico (N+):** **Esvaziamento radical ou modificado**.
 
-Figura 5: Ilustração Visor flap Figura 4: Retalho de bochecha (cheek flap)
+**Eletivo (N0):** Depende do sítio anatômico e estadiamento local.
 
-![Figura do material - página 3](figure-003-1.webp)
+## Acessos Cirúrgicos
 
-![Figura do material - página 3](figure-003-2.webp)
+### Per Os (TORS)
+
+- **Retirada da lesão pela boca**.
+- **TORS**: ressecção transoral com auxílio de robô.
+- Depende do sítio anatômico do tumor.
+
+### Retalhos Locais
+
+**Retalho de bochecha (cheek flap):**
+
+- Pode ser realizado no lábio inferior ou superior.
+- Incisão no lábio até o pescoço.
+
+*Figura 4: Retalho de bochecha.*
+
+**Retalho em viseira (visor flap):**
+
+- Incisão em região cervical com exposição em direção cranial.
+
+*Figura 5: Ilustração — visor flap.*
+
+### Acessos Abertos
+
+- **Composto → pull through** (faringotomia).
+- **Maxillary swing**.
+- **Cervicotomia em colar**.
+
+*Figura 6: Composto → pull through.*
+
+*Figura 7: Maxillary swing.*
+
+### Tipos de Retalhos Gerais
+
+- **Fechamento primário**.
+- **Fechamento por 2ª intenção**.
+- **Enxertia**.
+- **Retalhos locais**.
+- **Retalhos à distância**: pediculado × microcirúrgico.
 
 ---
 
 <!-- page:4 -->
 
-- Verificar Figura 7
+## Reconstrução
 
-## RECONSTRUÇÃO
+**Métodos de reconstrução:**
 
-- Fechamento primário;
+- **Placa/parafuso**: ruim se RT adjuvante.
+- **Prótese obturatória**: boa para avaliar recorrência.
 
-- Fechamento por 2ª intenção;
+*Figura 8: Prótese obturatória.*
 
-- Enxertia.
+## Tratamento Adjuvante (Alto Risco de Recorrência Locorregional)
 
-- Retalhos locais;
+### Indicações de Radioterapia (RT)
 
-- Retalhos à distância → pediculado x microcirúrgico;
+- **T3/T4**.
+- **Margens comprometidas (R1) ou exíguas** (< **5 mm**): quando a margem é comprometida, sempre que possível, ampliar cirurgicamente.
+- **Invasão perineural ou vascular**.
+- **N+** (2 ou + linfonodos).
 
-- Placa/ parafuso → ruim se RT adjuvante;
+### Indicações de Quimioterapia (QT)
 
-- Prótese obturatória → boa para avaliar recorrência.
-
-- Verificar Figura 8 na próxima página
-
-## TRATAMENTO ADJUVANTE (ALTO RISCO DE
-
-## RECORRÊNCIA LOCORREGIONAL)
-
-Indicações de RT:
-
-- T3/T4;
-
-- Margens comprometidas (R1) ou exíguas (<5 mm): Quando a margem é comprometida, sempre que possível, ampliar cirurgicamente.
-
-- Invasão perineural ou vascular;
-
-- N + (2 ou + linfonodos?).
-
-Indicações de QT.
-
-- Margens comprometidas;
-
-- ENE +.
-
-## SÍTIO
-
-## ALGUNS SÍTIOS
-
-- Nasofaringe;
-
-- Orofaringe;
-
-- Hipofaringe;
-
-- Boca;
-
-- Laringe;
-
-- Lábio;
-
-Figura 6: Composto → pull through
-
-- Primário oculto.
-
-Figura 7: Maxillary swing
-
-![Figura do material - página 4](figure-004-1.webp)
-
-![Figura do material - página 4](figure-004-2.webp)
+- **Margens comprometidas**.
+- **ENE+** (extravasamento extranodal).
 
 ---
 
 <!-- page:5 -->
 
-Figura 8: Prótese obturatória
+## Sítios Abordados Neste Material
 
-## REFERÊNCIAS
+- Nasofaringe.
+- Orofaringe.
+- Hipofaringe.
+- Boca.
+- Laringe.
+- Lábio.
+- Primário oculto.
 
-Figura 7: Maxillary swing Acervo pessoal - Medcof - Dr Felipe Magnabosco Figura 1: Compartimentos do pescoço DRAKE, Richard L.; VOGL, A. Wayne; MITCHELL, Adam W. M. Gray – Figura 8: Prótese obturatória anatomia clínica para estudantes. 2. ed. Rio de Janeiro: Churchill & Acervo pessoal - Medcof - Dr Felipe Magnabosco Livingstone, Elsevier, 2009. Imagem adaptada.
+*Figura 1: Compartimentos do pescoço.*
+
+![Figura do material - página 2](figure-002-1.webp)
+
+![Figura do material - página 3](figure-003-1.webp)
+
+![Figura do material - página 3](figure-003-2.webp)
+
+![Figura do material - página 4](figure-004-1.webp)
+
+![Figura do material - página 4](figure-004-2.webp)
 
 ![Figura do material - página 5](figure-005-1.webp)
+
+---
+
+## Referências
+
+Figura 1: Compartimentos do pescoço. DRAKE, Richard L.; VOGL, A. Wayne; MITCHELL, Adam W. M. *Gray — Anatomia Clínica para Estudantes*. 2. ed. Rio de Janeiro: Churchill & Livingstone, Elsevier, 2009. Imagem adaptada.
+
+Figura 7: Maxillary swing. Acervo pessoal — Medcof — Dr. Felipe Magnabosco.
+
+Figura 8: Prótese obturatória. Acervo pessoal — Medcof — Dr. Felipe Magnabosco.

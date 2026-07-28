@@ -2,155 +2,183 @@
 
 <!-- page:1 -->
 
-Incidentaloma Adrenal (CM) ≥ 1 CM
+## Definição
 
-- Risco de malignidade + Produção hormonal TC de abdome sem contraste Potencialmente maligna Benigna Indeterminada
+**Incidentaloma** (do termo "incidente" — sem querer): lesão na glândula adrenal **≥ 1 cm**, descoberta acidental durante exame de imagem solicitado por outro motivo.
 
-AVALIAÇÃO DE RISCO DE MALIGNIDADE Benignas
+**Exemplo**: paciente que chega com falta de ar, realiza TC de tórax e, como é possível visualizar o abdome superior, observa-se incidentalmente (não era o objetivo) uma lesão > 1 cm na adrenal.
 
-- Homogêneas
+**Deve-se avaliar**:
 
-- ≤ 10UH
+1. **Risco de malignidade**.
+2. Se há **produção hormonal**.
 
-- Rica em gordura Sem necessidade de exame de imagem adicional ou seguimento
+### Composição dos Incidentalomas
 
-Potencialmente malignas
+- **Adenomas corticais não funcionantes**: 70–80%.
+- **Feocromocitoma**: 1,1–11%.
+- **Hipercortisolismo subclínico**: 5–20%.
+- **Hiperaldosteronismo primário**: 1–2%.
+- **Carcinomas adrenocorticais**: < 5%.
+- **Metástases**: 0–18%.
 
-- Heterogênea
+### Características Gerais
 
-- >20UH
+- Mais comum: **unilateral**, adenomas.
+- **Lesões bilaterais**: podem estar relacionadas com doenças infiltrativas, metástases, hiperplasia adrenal.
+- **Adrenal normal**: formato de "Y invertido".
 
-- ≥ 4cm Cirurgia Rastrear MTX antes com PET-FDG
+*Figura 1: Adrenal normal.*
 
-Indeterminadas
+---
 
-- ≥ 4cm + 11 a 20 UH
+## Avaliação de Risco de Malignidade
 
-- < 4cm + >20UH
+A TC com **cortes finos de suprarrenal com contraste** (lembrar de especificar que é de suprarrenal) deve ser solicitada para avaliar:
 
-## DEFINIÇÃO
+- Tamanho.
+- Formato.
+- Atenuação (em Unidades Hounsfield — UH).
+- Washout (velocidade de eliminação do contraste).
+- Outras características.
 
-- Incidentaloma (lembrar de incidente/”sem querer”), por exemplo, pode ser um paciente que chega com falta de ar, realiza uma TC de tórax e como é possível visualizar o abdome superior, incidentalmente (não era o objetivo), observa-se uma lesão > 1 cm na adrenal.
+**OBS.**: mesmo no paciente em que o nódulo foi flagrado em TC de tórax, por exemplo, deve ser solicitada a TC com cortes finos de suprarrenal para melhor avaliação.
 
-- Lesão na adrenal ≥ 1 cm, descoberta acidental Adenomas corticais não funcionantes (70 a 80%); Feocromocitoma (1,1 a 11%); Hipercortisolismo subclínico (5 a 20%); Hiperaldosteronismo primário (1 a 2%); Carcinomas adrenocorticais (< 5%) Metástases (0-18%).
+### Estratificação por TC de Abdome Sem Contraste
 
-- Deve-se avaliar o risco de malignidade e se há produção hormonal.
+Lesões **≥ 1 cm** classificam-se em:
 
-- Mais comum: unilateral, adenomas. No caso de lesões bilaterais, podem estar relacionadas com doenças infiltrativas, metástases, hiperplasia adrenal.
+1. **Benignas** → sem necessidade de exame adicional ou seguimento.
+2. **Indeterminadas** → exame adicional (PET-CT / TC com contraste / RM) em 6–12 meses OU cirurgia.
+3. **Potencialmente malignas** → rastrear com PET-FDG OU cirurgia.
 
-## AVALIAÇÃO DO RISCO
+### Critérios de Benignidade
 
-## DE MALIGNIDADE
+- **Homogêneas**.
+- **Atenuação ≤ 10 UH**.
+- **Ricas em gordura**.
 
-- Podem ser: Adenoma; Carcinoma;
+### Critérios de Potencial Malignidade
 
-Feocromocitoma; Metástase;
+- **Heterogênea**.
+- **Atenuação > 20 UH**.
+- **Tamanho ≥ 4 cm**.
+- **Indicação**: cirurgia ou rastreamento com PET-FDG.
 
-- Para diferenciar entre ditos acima, deve ser solicitada a TC com cortes finos de suprarrenal com contraste tamanho; formato; atenuação; washout (velocidade - <4cm + heterogênea Exame de imagem adicional (PET-CT/TC com contraste/RM) Cirurgia OU Seguimento com TC sem contraste/
+### Critérios de Indeterminação
 
-(lembrar de especificar que é de suprarrenal) e avaliar: RM em 6 a 12 meses PRODUÇÃO HORMONAL TODOS
-
-- Cortisol pós 1mg de Dexametasona
-
-Se lesão indeterminada/potencialmente maligna
-
-- Metanefrinas séricas OU
-
-- Metanefrinas e catecolaminas urina 24h l Se HAS ou HipoK
-
-- Aldo/APR
-
-Se potencialmente maligna
-
-- Esteróides sexuais
-
-INDICAÇÃO CIRÚRGICA Funcionantes
-
-- Feocromocitomas OU Aldosteronomas
-
-- Produtores de cortisol → jovens/comorbidades
-
-Não Funcionantes
-
-- Potencialmente malignas
-
-- Crescimento > 20% em 6 a 12 meses da redução da densidade de contraste de uma lesão);
-
-outras caraterísticas; OBS.: mesmo no paciente em que o nódulo foi flagrado em uma TC de tórax, por exemplo, deve ser a solicitada a TC com cortes finos de suprarrenal, para melhor avaliação.
-
-- Adrenal normal: Formato de “Y invertido”.
-
-Figura 1: Adrenal normal
-
-## ADENOMAS
-
-- Tamanho menor ou igual a 3 cm;
-
-- Formato: ovalado e bem delimitado;
-
-- Atenuação menor ou igual a 10UH;
-
-- Washout: rápido (> 50%) – lesões benignas têm washout rápido;
-
-- Outros: homogêneo, sem degeneração cística ou calcificação.
-
-- Verificar Figura 2 na próxima página
-
-![Figura do material - página 1](figure-001-1.webp)
+- **Tamanho ≥ 4 cm + atenuação 11–20 UH**.
+- **Tamanho < 4 cm + atenuação > 20 UH**.
+- **Indicação**: exame adicional (PET-CT/TC com contraste/RM) em 6–12 meses OU cirurgia/seguimento com TC sem contraste/RM.
 
 ---
 
 <!-- page:2 -->
 
-Figura 2: Adenoma de adrenal
+## Características das Lesões Adrenais
 
-## FEOCROMOCITOMA
+### Adenomas
 
-- Tamanho maior ou igual a 3 cm;
+- **Tamanho**: ≤ 3 cm.
+- **Formato**: ovalado, bem delimitado.
+- **Atenuação**: ≤ 10 UH.
+- **Washout**: **rápido (> 50%)**; lesões benignas têm washout rápido.
+- **Textura**: homogênea, sem degeneração cística ou calcificação.
 
-- Formato: ovalado e bem delimitado;
+*Figura 2: Adenoma de adrenal.*
 
-- Atenuação maior ou igual a 10 UH;
+### Feocromocitoma
 
-- Washout: lento (<50%);
+- **Tamanho**: ≥ 3 cm.
+- **Formato**: ovalado, bem delimitado.
+- **Atenuação**: ≥ 10 UH.
+- **Washout**: **lento (< 50%)**.
+- **Textura**: heterogênea, unilateral.
+- **Crescimento**: > 1 cm/ano.
+- **Degeneração**: cística com pontos de calcificações.
+- **Risco de malignidade**: câncer em 10–20% dos casos.
 
-- Outros: crescimento > 1 cm/ano, heterogêneo, unilateral, degeneração cística e pontos de calcificações;
+*Figura 3: Feocromocitoma.*
 
-- Pode ser câncer em 10 a 20% dos casos.
+### Carcinoma Adrenocortical (Câncer de Adrenal)
 
-- Figura 3: Feocromocitoma
+- **Tamanho**: ≥ 4 cm.
+- **Formato**: irregular, mal delimitado.
+- **Atenuação**: ≥ 10 UH (muitas vezes > 25 UH).
+- **Washout**: **lento (< 50%)**.
+- **Crescimento**: > 0,8 cm em 3–12 meses.
+- **Textura**: heterogênea, unilateral.
+- **Degeneração**: necrose hemorrágica e calcificações.
 
-## CARCINOMA (CÂNCER
+*Figura 4: Carcinoma.*
 
-## DE ADRENAL)
+### Metástases Adrenais
 
-- Tamanho maior ou igual a 4 cm;
+- **Tamanho**: variável.
+- **Principais tumores primários**: pulmão e mama.
+- **Formato**: irregular, mal delimitado.
+- **Atenuação**: ≥ 10 UH.
+- **Washout**: **lento (< 50%)**.
+- **Textura**: heterogênea, **bilateral**.
+- **Degeneração**: cística com calcificações.
 
-- Formato: irregular e mal delimitado;
+*Figura 5: Metástase adrenal.*
 
-- Atenuação maior ou igual a 10UH, muitas vezes maior que 25UH;
+### Tabela Comparativa — Características Radiológicas
 
-- Washout: lento (<50%);
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; conteúdo listado em texto corrido.
 
-- Outros: crescimento > 0,8 cm, 3-12 meses, heterogêneo, unilateral, necrose hemorrágica e calcificações. Figura 4: Carcinoma
+**Tabela 1 — Resumo das características:**
 
-## METÁSTASES
+**Adenoma:**
 
-- Tamanho: variável;
+- Tamanho: < 3 cm
+- Forma: redondo/ovalado
+- Margens: bem definidas
+- Textura: homogênea
+- Lateralidade: unilateral
+- Atenuação: ≤ 10 UH
+- Vascularização: pouca
+- Washout: rápido (> 50–60%)
+- Necrose/calcificações: rara
 
-- Principais tumores primários que causam metástase são pulmão e mama;
+**Carcinoma:**
 
-- Formato: irregular e mal delimitado;
+- Tamanho: > 4 cm
+- Forma: irregular
+- Margens: mal definidas
+- Textura: heterogênea com densidades mistas
+- Lateralidade: unilateral
+- Atenuação: > 10 UH
+- Vascularização: vascularizado
+- Washout: lento (< 50–60%)
+- Necrose/calcificações: comum
 
-- Atenuação maior ou igual a 10UH;
+**Feocromocitoma:**
 
-- Washout: lento (<50%);
+- Tamanho: > 3 cm
+- Forma: ovalado
+- Margens: bem definidas
+- Textura: heterogênea com áreas císticas
+- Lateralidade: unilateral
+- Atenuação: > 10 UH
+- Vascularização: vascularizado
+- Washout: lento (< 50–60%)
+- Necrose/calcificações: variável
 
-Figura 5: Metástase adrenal
+**Metástases:**
 
-- Outros: heterogêneo, bilateral, degeneração cística e calcificações.
+- Tamanho: variável
+- Forma: irregular
+- Margens: mal definidas
+- Textura: heterogênea com densidades mistas
+- Lateralidade: bilateral
+- Atenuação: > 10 UH
+- Vascularização: vascularizado
+- Washout: lento (< 50–60%)
+- Necrose/calcificações: variável
 
-- Verificar Tabela 1 na próxima página
+![Figura do material - página 1](figure-001-1.webp)
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -160,46 +188,122 @@ Figura 5: Metástase adrenal
 
 <!-- page:3 -->
 
-Tabela 1: Resumão
+## Avaliação Hormonal
 
-## ADENOMA CARCINOMA FEOCROMOCITOMA METÁSTASES
+**Todos os incidentalomas devem ser avaliados** para produção de hormônios:
 
-TAMANHO < 3cm > 4cm > 3cm Variável Redondo/Oval/ Irregular/M FORMA Margens bem mal defin dqefinidas Heterogê TEXTURA Homogênea Densidades LATERALIDADE Unilateral Unilate ATENUAÇÃO ≤ 10UH > 10U VASCULARIZAÇÃO Pouca Vasculari Rápido Lento WASHOUT (> 50 – 60%) (< 50 – 6 NECROSE/ Rara Comu CALCIFICAÇÕES
+### Testes Obrigatórios (Todos)
 
-## AVALIAÇÃO HORMONAL
+- **Cortisol pós-1 mg de Dexametasona (DMS)** → detectar hipercortisolismo subclínico.
 
-- Devemos avaliar se existe produção de hormônios:
+### Se Lesão Indeterminada / Potencialmente Maligna
 
-Incidental Me Teste de supressão com 1 mg de DMS u CS > 5,0µg/dL CS ≤ 1,8 µd/dL CS > 1,8 µd/dL No Confirmado Excluído ACTH Exc HCSC HCSC CSFN feocro UFC CS no 1 mg-DST > 3 ud/dL + ACTH <10 pg/mL ou UFC (ou CSFN) elevado Confirmado HCSC Figura 6: Fluxograma de incidentaloma de adrena *AP = Aldoste RAR = Relação entre os dois acima; HCSC = Hipercortisolismo Sub de 24 horas; CS no 1 mg-DST = cortisol após 1 mg de Dexametason
+- **Metanefrinas séricas** OU
+- **Metanefrinas e catecolaminas urinárias de 24 horas**.
 
-## INDICAÇÃO CIRÚRGICA
+### Se HAS ou Hipocalemia
 
-## FUNCIONANTES (PRODUTORES)
+- **Aldosterona / atividade de renina plasmática (Aldo/APR)**.
 
-- Feocromocitoma;
+### Se Potencialmente Maligna
 
-- Aldesteronomas;
+- **Esteróides sexuais** (DHEA, androstenediona, testosterona).
 
-- Produtores de cortisol → se paciente < 50 anos + comorbidades. Oval/Irregular/ nidas bem definidas definidas ênea/ Heterogênea/áreas Heterogênea/ s mistas císticas Densidades mistas eral Unilateral Bilateral izado Vascularizado Vascularizado o Lento Lento uns Comuns Variável loma adrenal etanefrinas plasmáticas ou Metanefrinas urinárias/catecolamina ou hipocalemia) livres urinárias ormais Elevadas AP < 12 AP > 12 cluído feocromocitona omocitona Excluído Aldosterona aldosterona urinária (AU) erona Plasmática; APR = Atividade Plasmática de Renina;
+### Fluxograma de Avaliação Hormonal
 
-Margens Redondo/Oval/ Margens Margens mal UH > 10UH > 10UH 60%) (< 50 – 60%) (< 50 – 60%) AP (ng/dl) Relação AP/APR (RAR) (se houver hipertensão RAR < 27 RAR > 27 AU > 14 µg/24h* Aldosterona bclínico; CSFN = cortisol salivar à meia-noite; UFC = cortisol na urina na.l
+*Figura 6: Fluxograma de incidentaloma de adrenal.*
 
-## NÃO FUNCIONANTES
+**Teste de supressão com 1 mg de Dexametasona:**
 
-- > 4 cm;
+- **Cortisol sérico (CS) > 5,0 µg/dL**: excluído hipercortisolismo.
+- **CS ≤ 1,8 µg/dL**: confirmado hipercortisolismo subclínico.
+- **CS > 1,8 µg/dL**: necessário ACTH e UFC (cortisol livre urinário).
 
-- ≤ a 4 cm → TC > 10 UH e washout lento (malignidade);
+**Para hipercortisolismo subclínico confirmado:**
 
-- Crescimento > 1 cm em 3 a 12 meses.
+- **CS no 1 mg-DST > 3 µg/dL + ACTH < 10 pg/mL** OU **UFC (ou CSFN — cortisol salivar à meia-noite) elevado** → HCSC confirmado.
+
+**Para metanefrinas (rastreamento de feocromocitoma):**
+
+- Metanefrinas normais → feocromocitoma excluído.
+- Metanefrinas elevadas → feocromocitoma confirmado.
+
+**Para aldosteronismo primário (se HAS ou hipocalemia):**
+
+- **AP (aldosterona plasmática) < 12 ng/dL**: aldosteronismo excluído.
+- **AP > 12 ng/dL + RAR (relação AP/atividade de renina) > 27**: suspeita de aldosteronismo.
+- **AU (aldosterona urinária) > 14 µg/24 h**: aldosteronismo confirmado.
+
+---
+
+## Indicações Cirúrgicas
+
+### Funcionantes (Produtores)
+
+- **Feocromocitomas**.
+- **Aldosteronomas**.
+- **Produtores de cortisol** → se paciente < 50 anos OU comorbidades.
+
+### Não Funcionantes
+
+- **Tamanho ≥ 4 cm**.
+- **Tamanho ≤ 4 cm** + atenuação > 10 UH + washout lento (indicativo de malignidade).
+- **Crescimento > 1 cm em 3–12 meses**.
 
 ---
 
 <!-- page:4 -->
 
-## RESUMO
+## Fluxograma de Manejo Geral
 
-Incidentaloma adrenal (IA) Avaliação en Secreção autônoma de Feocromocitoma cortisol* ou aldosteronoma Cirurgia ≥ 4cm Suspeita d Não Seguimento clínico Avaliação bioquímica e TC ou, de preferência, Hormonal por até 3 anos RM por até 2 anos Surgimento de Crescimento da hiperativa endócrina lesão > 1 cm Cirurgia Figura 7: Fluxograma Incidentaloma adrenal (IA)
+*Figura 7: Fluxograma — Incidentaloma adrenal (IA).*
 
-## REFERÊNCIAS
+**Incidentaloma adrenal (IA) ≥ 1 cm:**
 
-Figura 1: Adrenal em radiologia Vilar et al. Endocrinologia Clínica. Guanabara Koogan. 7 ed. 2021 V Figura 2: Adenoma de adrenal Vilar et al. Endocrinologia Clínica. Guanabara Koogan. 7 ed. 2021 A Figura 3: Feocromocitoma Vilar et al. Endocrinologia Clínica. Guanabara Koogan. 7 ed. 2021 ndócrina IA não funcionante m < 4cm Suspeita de infecção de malignidade à TC?** Sim Considerar BAAF Sim Suspeita de CA Suspeita de metástase adrenocortical? ou linfoma Sim Sim Cirurgia Considerar BAAF*** F-FDG-PET/CT Figura 4: Carcinoma Vilar et al. Endocrinologia Clínica. Guanabara Koogan. 7ª ed. 2021 Figura 5: Metástase adrenal Vilar et al. Endocrinologia Clínica. Guanabara Koogan. 7 ed. 2021 Figura 6: Fluxograma de incidentaloma de adrena Adaptado de vilar et al 2021
+1. **Avaliação endócrina** (testes hormonais).
+2. **Secreção autônoma de cortisol OU feocromocitoma OU aldosteronoma?**
+   - **Sim**: cirurgia.
+   - **Não**: prosseguir.
+
+3. **Tamanho ≥ 4 cm?**
+   - **Sim**: suspeita de malignidade → TC ou RM; considerar BAAF ou PET-FDG-CT → cirurgia.
+   - **Não**: prosseguir.
+
+4. **Tamanho < 4 cm?**
+   - **Sim**: suspeita de CA adrenocortical ou linfoma na TC?
+     - **Sim**: considerar BAAF OU PET-FDG-CT → cirurgia.
+     - **Não**: prosseguir.
+
+5. **Suspeita de infecção ou metástase na TC?**
+   - **Sim**: considerar BAAF ou investigação específica.
+   - **Não**: seguimento clínico.
+
+6. **Surgimento de hipersecreção endócrina OU crescimento da lesão > 1 cm?**
+   - **Sim**: cirurgia.
+   - **Não**: continuar seguimento por até **2–3 anos** (TC ou RM).
+
+---
+
+## Resumo de Conduta
+
+- **IA não funcionante < 4 cm**: seguimento clínico por até 3 anos (TC sem contraste ou RM por até 2 anos).
+- **IA funcionante ou potencialmente maligna**: cirurgia.
+- **Crescimento ou surgimento de secreção hormonal**: cirurgia.
+
+---
+
+## Referências
+
+Figura 1: Adrenal em radiologia. Vilar et al. *Endocrinologia Clínica*. Guanabara Koogan, 7 ed. 2021.
+
+Figura 2: Adenoma de adrenal. Vilar et al. *Endocrinologia Clínica*. Guanabara Koogan, 7 ed. 2021.
+
+Figura 3: Feocromocitoma. Vilar et al. *Endocrinologia Clínica*. Guanabara Koogan, 7 ed. 2021.
+
+Figura 4: Carcinoma. Vilar et al. *Endocrinologia Clínica*. Guanabara Koogan, 7 ed. 2021.
+
+Figura 5: Metástase adrenal. Vilar et al. *Endocrinologia Clínica*. Guanabara Koogan, 7 ed. 2021.
+
+Figura 6: Fluxograma de incidentaloma de adrenal. Adaptado de Vilar et al. 2021.
+
+Figura 7: Fluxograma — Incidentaloma adrenal (IA). Adaptado de Vilar et al. 2021.

@@ -1,113 +1,132 @@
-# Transtornos Alimentares Transtornos Sintomas Somáticos
+# Transtornos Alimentares e Transtornos de Sintomas Somáticos
 
 <!-- page:1 -->
 
-## TRANSTORNOS ALIMENTARES
+## Transtornos Alimentares
 
-## TRANSTORNOS SINTOMAS SOMÁTICOS
+### Definição
 
-Psiquiatria (CM);
+**Perturbação persistente na alimentação ou no comportamento alimentar** que resulte em **consumo ou absorção alterada de nutrientes**, com comprometimento da saúde física ou do funcionamento psicossocial.
 
-Diferenciação entre eles Ingestão alimentar insuficiente com peso/IMC abaixo do esperado?
+> Nota: **Obesidade não é um transtorno mental/alimentar** segundo o DSM-5.
 
-- Sim: Autoimagem distorcida? Medo intenso de engordar? Sim: Anorexia nervosa (subtipos: restritivo / compulsão purgativa); Não: TARE (Transtorno alimentar restritivo/evitativo).
+### Principais Tipos
 
-- Não: Compulsão ≥1x/semana por 3 meses + comportamentos compensatórios (vômito, laxantes, etc)? Sim: Bulimia nervosa (BN); Não: Transtorno de compulsão alimentar sofrimento associado.
+- **Anorexia nervosa (AN)**
+- **Bulimia nervosa (BN)**
+- **Transtorno de compulsão alimentar (TCA)**
+- **Transtorno alimentar restritivo/evitativo (TARE)**
+- **Transtorno de ruminação (TR)**
+- **Pica**
 
-(TCA): compulsão sem compensação, com Tratamento
+> Importante: **Anorexia nervosa, bulimia nervosa e transtorno de compulsão alimentar são diagnósticos excludentes entre si**. Se critérios para anorexia nervosa forem preenchidos, este prevalece sobre bulimia nervosa e transtorno de compulsão alimentar.
 
-- Abordagem multidisciplinar: terapia familiar, TCC
-
-(terapia cognitivo comportamental), psicoterapia.
-
-- Medicamentos: Anorexia nervosa: uso limitado; pode-se considerar olanzapina; Bulimia nervosa: fluoxetina (único ISRS com eficácia comprovada);
-
-- Perturbação persistente na alimentação ou no comportamento alimentar que resulte em consumo ou absorção alterada de nutrientes, com comprometimento da saúde física ou do funcionamento psicossocial.
-
-Obesidade não é um transtorno mental/alimentar segundo o DSM-5.
-
-- Principais tipos: Anorexia nervosa (AN); Bulimia nervosa (BN); Transtorno de compulsão alimentar (TCA); Transtorno alimentar restritivo/evitativo (TARE); Transtorno de ruminação (TR); Pica.
-
-Anorexia nervosa, bulimia nervosa e transtorno de compulsão alimentar são diagnósticos excludentes entre si: se critérios para anorexia nervosa forem preenchidos, este prevalece sobre bulimia nervosa e transtorno de compulsão alimentar. | Transtorno de compulsão alimentar (TCA): lisdexanfetamina;
-
-| Evitar: bupropiona (aumenta risco de convulsões). TRANSTORNO DE SINTOMAS SOMÁTICOS
-
-- Um ou mais sintomas físicos com sofrimento significativo ou prejuízo funcional, acompanhados de: Preocupações excessivas com a gravidade dos sintomas; Ansiedade intensa relacionada à saúde; Tempo e energia excessivos dedicados aos sintomas; Duração ≥ 6 meses.
-
-- Diferenciar de: Ansiedade de doença: medo de ter doença grave, sem sintomas físicos; Transtorno neurológico funcional: sintomas motores/sensoriais incompatíveis com exames ou doenças clínicas; Transtorno factício: simula doença sem ganho externo claro; Simulação: simula doença com ganho externo transtorno de ruminação e pica podem coexistir com outros transtornos mentais (inclusive com anorexia nervosa ou transtorno de compulsão alimentar), desde que critérios diagnósticos sejam atendidos separadamente.
-
-(ex: afastamento). Transtorno alimentar restritivo/evitativo,
-
-## DIFERENCIAÇÃO ENTRE OS PRINCIPAIS
-
-TRANSTORNOS O fluxograma abaixo fornece uma abordagem diagnóstica diferencial prática entre os transtornos alimentares:
-
-- Verificar Figura 1 na próxima página
-
-Mnemônicos úteis para a diferenciação dos transtornos
-
-- A autoimagem está dIstorcIda? Se sIm, pense em: AnorexIa; BulImIa.
-
-- Se não, pense em: TARE (transtorno alimentar restritivo/evitativo) e TCA (transtorno de compulsão alimentar) não possuem a letra I em suas siglas, logo, não têm autoimagem dIstorcIda.
-
-Purga = Pulga = Bicho / ANimal
+> Nota: Transtorno de ruminação e pica **podem coexistir** com outros transtornos mentais (inclusive com anorexia nervosa ou transtorno de compulsão alimentar), desde que critérios diagnósticos sejam atendidos separadamente.
 
 ---
 
-<!-- page:2 -->
+## Diferenciação Entre Transtornos Alimentares
 
-Ingestão alimentar insuficiente causando peso e IMC abaixo do esperado para a idade? IMC < 18,5 kg/m2 (adultos)
+### Fluxograma Diagnóstico
 
-IMC < 18,5 kg/m2 IMC/idade <p5 ou Z-score <-2 (c SIM
+**Ingestão alimentar insuficiente com peso/IMC abaixo do esperado?** (IMC < 18,5 kg/m² em adultos; IMC/idade < p5 ou Z-score < -2 em crianças/adolescentes)
 
-- Autoimagem disorcida?
+#### Sim:
 
-- Acha-se obeso?
+**Autoimagem distorcida? Acha-se obeso? Medo intenso de engordar?**
 
-- Medo de engordar? purgativo)
+- **Sim** → **Anorexia Nervosa** (subtipos: restritivo / compulsão-purgativa)
+- **Não** → **TARE** (Transtorno Alimentar Restritivo/Evitativo)
 
-Sim: Anorexia nervosa (subtipos restritivo/ Não:Transtorno alimentar restritivo/evitativo (TARE) Figura 1: Fluxograma para diferenciação entre os transtornos alimenta O comportamento purgativo está presente na:
+#### Não:
 
-- Bulimia nervosa (“B” de Bicho);
+**Compulsão alimentar ≥ 1x/semana por ≥ 3 meses + comportamentos compensatórios (vômito, laxantes, etc)?**
 
-- Anorexia Nervosa subtipo compulsão purgativa (“A” e
+- **Sim** → **Bulimia Nervosa (BN)** (autoavaliação influenciada por peso e forma corporal)
+- **Não** → **Transtorno de Compulsão Alimentar (TCA)** (compulsão sem compensação, com sofrimento associado)
 
-“N” de ANimal). Figura 2: Purga lembra pulga, que é um bicho/animal. “B” de bulimia e “An” de anorexia nervosa.
-
-TRATAMENTO DOS TRANSTORNOS ALIMENTARES Abordagem sempre multidisciplinar!
-
-- Não farmacológico: Terapia familiar; TCC (terapia cognitivo comportamental); Psicoterapia. 2 (adultos) por ≥3 meses) + comportamentos compensatórios inadequados? influenciada por peso e forma corporal)
-
-(crianças e adolescentes) NÃO Compulsão alimentar recorrente ( 1x/semana Sim: Bulimia nervosa (autoavaliação Não: Transtorno de compulsão alimentar (TCA)
-
-ares.
-
-- Farmacológico: Anorexia nervosa: medicações têm aplicabilidade limitada, olanzapina pode ser considerada; Bulimia nervosa: inibidores seletivos da recaptação de serotonina (fluoxetina tem eficácia comprovada e aprovação formal); Transtorno de compulsão alimentar evitar bupropiona (risco aumentado de convulsões, especialmente em pacientes com purga ou baixo peso).
-
-(TCA): lisdexanfetamina. No tratamento dos transtornos alimentares, devemos
-
-## TRANSTORNOS DE
-
-## SINTOMAS SOMÁTICOS
-
-- Um ou mais sintomas somáticos que causam sofrimento significativo ou comprometimento funcional, com pensamentos, sentimentos ou comportamentos excessivos relacionados a esses sintomas, com duração ≥ 6 meses;
-
-- Critérios: Preocupações persistentes e desproporcionais com os sintomas; Ansiedade elevada acerca da saúde; Tempo/energia dedicados ao sintoma são excessivos.
-
-- Eles podem ser diferenciados de outros transtornos relacionados observando-se a tabela a seguir:
+Figura 1: Fluxograma para diferenciação entre os transtornos alimentares.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
 ---
 
-<!-- page:3 -->
+### Mnemônicos Úteis
 
-Tabela 1: Diferenciação entre os transtornos com queixas somáticas. Transtorno Características principais Transtorno de sintomas somáticos Transtorno de ansiedade de doença Transtorno de sintomas neurológicos funcionais (conversivo)
+#### Para Diferenciação
 
-Transtorno factício Simulação (malingering)
+**"A autoimagem está dIstorcIda?"**
 
-## REFERÊNCIAS
+- **Sim, pense em**: Anorexia; Bulimia (ambas têm a letra **I**)
+- **Não, pense em**: TARE e TCA (não possuem a letra I em suas siglas, logo, não têm autoimagem distorcida)
 
-Figura 2: Purga lembra pulga, que é um bicho/animal. SÃO FALCÃO – BIOLOGIA e GEOLOGIA. Enciclopédia Animal (Pulga / Pulgão biogeo.blogs.sapo.pt/23376.html. Acesso em: 20 jun. 2025. Há sintomas físicos + sofrimento real + exagero nas preocupações Preocupação em ter ou adquirir doença grave, mas sem sintomas somáticos Sintomas neurológicos (motores ou sensoriais) incompatíveis com doenças clínicas Produção voluntária de sintomas para assumir papel de doente (sem ganho externo claro)
+#### Purga
 
-Produção voluntária de sintomas com ganho externo evidente (ex: afastamento do trabalho) o). SãoFalcão-Biogeo.blogs.sapo.pt, 17 out. 2012. Disponível em: https://saofalcao-
+**"Purga = Pulga = Bicho/Animal"**
+
+- **B**ulimia = **B**icho (comportamento purgativo presente)
+- **AN**orexia = **AN**imal (comportamento purgativo presente no subtipo compulsão-purgativa)
+
+Figura 2: Purga lembra pulga, que é um bicho/animal. "B" de bulimia e "AN" de anorexia nervosa.
+
+---
+
+## Tratamento dos Transtornos Alimentares
+
+> **Abordagem sempre multidisciplinar!**
+
+### Não Farmacológico
+
+- **Terapia familiar**
+- **TCC** (Terapia Cognitivo-Comportamental)
+- **Psicoterapia**
+
+### Farmacológico
+
+- **Anorexia Nervosa**:
+  - Medicações têm aplicabilidade limitada
+  - **Olanzapina** pode ser considerada
+
+- **Bulimia Nervosa**:
+  - **Fluoxetina** (ISRS com eficácia comprovada e aprovação formal)
+  - Outros inibidores seletivos da recaptação de serotonina (ISRS)
+
+- **Transtorno de Compulsão Alimentar (TCA)**:
+  - **Lisdexanfetamina**
+  - **Evitar bupropiona** (risco aumentado de convulsões, especialmente em pacientes com purga ou baixo peso)
+
+---
+
+<!-- page:2 -->
+
+## Transtornos de Sintomas Somáticos
+
+### Definição
+
+**Um ou mais sintomas somáticos que causam sofrimento significativo ou comprometimento funcional**, com pensamentos, sentimentos ou comportamentos excessivos relacionados a esses sintomas.
+
+**Duração**: ≥ 6 meses
+
+### Critérios Diagnósticos
+
+- **Preocupações persistentes e desproporcionais** com os sintomas
+- **Ansiedade elevada** acerca da saúde
+- **Tempo/energia dedicados** aos sintomas são excessivos
+
+---
+
+## Diferenciação Entre Transtornos com Queixas Somáticas
+
+| Transtorno | Características Principais |
+|---|---|
+| **Transtorno de Sintomas Somáticos** | Há sintomas físicos + sofrimento real + exagero nas preocupações |
+| **Transtorno de Ansiedade de Doença** | Preocupação em ter ou adquirir doença grave, mas sem sintomas somáticos |
+| **Transtorno de Sintomas Neurológicos Funcionais (Conversivo)** | Sintomas neurológicos (motores ou sensoriais) incompatíveis com doenças clínicas |
+| **Transtorno Factício** | Produção voluntária de sintomas para assumir papel de doente (sem ganho externo claro) |
+| **Simulação (Malingering)** | Produção voluntária de sintomas com ganho externo evidente (ex: afastamento do trabalho) |
+
+---
+
+## Referências
+
+Figura 2: Purga lembra pulga, que é um bicho/animal. SÃO FALCÃO – BIOLOGIA e GEOLOGIA. Enciclopédia Animal (Pulga/Pulgão). SãoFalcão-Biogeo.blogs.sapo.pt, 17 out. 2012. Disponível em: https://saofalcao-biogeo.blogs.sapo.pt/23376.html. Acesso em: 20 jun. 2025.

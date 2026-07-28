@@ -2,157 +2,199 @@
 
 <!-- page:1 -->
 
-Hipertireoidismo e Tireotoxicose (CM) Bócio Doença de Nodular Hashitoxic Graves Tóxico Brando e HiperT Franco Brando transitóri Bócio Difuso ± Bócio Evolui co Clínica Oftalmopatia Nodular HipoT ± Dermatopatia TSH supresso TSH ↓ TSH ↓ Labs T4/T3 <1 T4/T3 <1 T4/T3 > TRAb + TRAb - TRAb USG ricamente USG nódulos USG pouc vascularizada Cintilo vasculariza Imagem Cintilo captante Cintilo pou difusamente na área captante hipercaptante dos nódulos Tionamidas Tionamidas e betaRIT Tto bloqueador Beta-blo (preferência)
+## Conceito
 
-RIT (preferência) Cirurgia Cirurgia CRISE TIREOTÓXICA
+- **Hipertireoidismo**: estado de tireotoxicose em que a origem do excesso de hormônio tireoidiano é a própria glândula tireoide.
+- **Tireotoxicose**: estado clínico causado pelo excesso de hormônios tireoidianos circulantes (T3 e T4).
 
-- Paciente já é hipertireoideo (Graves principal causa) e passa por fator de estresse
+## Quadro Clínico
 
-## Quadro clínico
+### Sinais de aceleração do metabolismo
 
-| Febre, sudorese excessiva, desidratação, arritmias, ICC, disfunção SNC
+- **Perda de peso**;
+- **Redução dos níveis de colesterol**;
+- **Osteoporose**;
+- **Aumento da frequência cardíaca e palpitações**;
+- **Taquiarritmias, fibrilação atrial (FA)**;
+- **Pressão divergente**: aumento de pressão arterial sistólica (PAS) e redução da pressão arterial diastólica (PAD).
 
-- Tratamento: betabloqueador IV (se taquicardia sem IC franca), PTU/metimazol, iodeto de potássio/ lugol, corticoesteroides
+### Hiperatividade adrenérgica
 
-- Hipertireoidismo: estado de tireotoxicose em que a origem do excesso de hormônio tireoidiano é a própria glândula tireoide.
+- **Retração palpebral**;
+- **Olhar fixo**;
+- **Tremores de extremidades**;
+- **Fraqueza muscular proximal, hiperreflexia**;
+- **Intolerância ao calor, sudorese**;
+- **Ansiedade, agitação, irritabilidade, labilidade emocional**;
+- **Hiperdefecação**;
+- **Hipermenorragia ou irregularidade menstrual**.
 
-- Sinais de aceleração do metabolismo Perda de peso; Redução dos níveis de colesterol; Osteoporose; Aumento da frequência cardíaca e palpitações; Taquiarritmias, fibrilação atrial (FA); Pressão divergente; Aumento de PAS e redução da PAD Tireoidite cose Tireotropinoma Factícea (T3) e Franco e io transitório eutireoidismo ± Exame físico om hipoT posterior da tireoide sem alterações importantes dolorosa
+### Manifestações em idosos
 
-Subaguda Brando Franco Evolui com Exame físico ± sem alterações Tireoide importantes TSH ↓ TSH ↓ TSH normal/↑ T4 ↑ e T3 ↓ >1 T4/T3 >1 T4/T3 <1 TG suprimida
-
-- TRAb - TRAb TRAb USG co USG pouco vascularização vascularização ada vascularizada diminuída aumentada uco Cintilo pouco Cintilo e captante captação aumentada diminuída
-
-USG Cintilo captação Tionamidas Beta- e beta- Betaoq bloqueador bloqueador bloqueador Corticoide Cirurgia Suspensão T3 (preferência)
-
-## TIREOTOXICOSE INDUZIDA POR AMIODARONA )
-
-- Há dois fenótipos clínicos Tipo 1: hipertireoidismo-like Tionamidas Tireoidectomia total Tipo 2: tireoidite-like Prednisona Betabloqueadores Insuficiência cardíaca congestiva (ICC) de alto débito; Aumento de eventos tromboembólicos; Sudorese, intolerância ao calor; Tremores de extremidades; Fraqueza muscular proximal, hiperreflexia; Dermopatia infiltrativa; Ansiedade, agitação, irritabilidade, labilidade emocional; Hiperdefecação; Hipermenorragia ou irregularidade menstrual.
-
-- Em idosos, quadro é atípico, não têm sinais de hiperativação adrenérgica Observa-se astenia, fraqueza, prostração, depressão grave, FA e/ou ICC refratárias ao tratamento usual.
+- Em idosos, quadro é atípico — não apresentam sinais de hiperativação adrenérgica;
+- Observa-se: **astenia, fraqueza, prostração, depressão grave, fibrilação atrial e/ou insuficiência cardíaca congestiva refratárias ao tratamento usual**.
 
 ---
 
 <!-- page:2 -->
 
-## ETIOLOGIAS
+## Etiologias
 
-| Sinal de Lid Lag | Movimento retardado da pálpebra superior
+### Hipertireoidismo Primário
 
-- Primária ao olhar para baixo, em comparação com o Autoimune: Doença de Graves (80% das causas movimento do globo ocular.
+**Autoimune:**
+- **Doença de Graves** (80% das causas de hipertireoidismo) — doença autoimune mediada por anticorpo antireceptor de TSH (TRAb);
+- **Hashitoxicose** — tireoidite de Hashimoto (inflamação e consequente destruição de folículos e coloides, liberando hormônios pré-formados na corrente sanguínea); ocorre apenas na fase inicial da doença.
 
-de hipertireoidismo)
+**Nodular:**
+- **Bócio Nodular Tóxico Uninodular (Doença de Plummer)** — um único nódulo autossuficiente;
+- **Bócio Nodular Tóxico Multinodular** — dois ou mais nódulos produtores.
 
-- Típicos de hipertireoidismo) Bócio Nodular Tóxico Uninodular/Doença de Plummer (um único nódulo) Multinodular (2 ou mais nódulos produtores); Hashitoxicose Tireoidite de Hashimoto (inflamação e consequente destruição de folículos e coloides, então ocorre a liberação na corrente sanguínea de hormônios pré-formados) Isso irá ocorrer apenas na fase inicial da doença; Tireoidites subagudas Inflamação e consequente destruição de folículos e coloides de uma região da tireoide, com liberação na corrente sanguínea de hormônios pré-formados Hipertireoidismo costuma ser transitório evoluindo para eutireoidismo e depois para hipotireoidismo OU manutenção do eutireoidismo;
+**Inflamatórias:**
+- **Tireoidites subagudas** — inflamação e consequente destruição de folículos e coloides de uma região da tireoide, com liberação de hormônios pré-formados. Hipertireoidismo costuma ser transitório, evoluindo para eutireoidismo e depois para hipotireoidismo ou manutenção do eutireoidismo.
 
-- Secundária/Terciária (Central) Tireotropinomas: Tumores hipofisários produtores de TSH;
+### Hipertireoidismo Secundário/Terciário (Central)
 
-- Produção ectópica Struma ovarii: Tumor ovariano que sintetiza T4;
+- **Tireotropinomas**: tumores hipofisários produtores de TSH.
 
-- Factícia Ingestão exógena de hormônios P.E: medicamentos para perda ponderal
+### Produção Ectópica
 
-## DOENÇA DE GRAVES
+- **Struma ovarii**: tumor ovariano que sintetiza T4.
 
-- Principal causa de hipertireoidismo (80% dos casos) Doença autoimune (TRAb - Anticorpo antireceptor de TSH) Esse anticorpo atua na glândula (onde o TSH atuaria) e acelera as funções do TSH de síntese e secreção de hormônios Inclusive, aumenta a conversão de T4 em T3)
+### Factícia
 
-Quadro clínico
+- **Ingestão exógena de hormônios** — P.E.: medicamentos para perda ponderal.
 
-- Hipertireoidismo + bócio
+## Doença de Graves
 
-- Em idosos, o bócio pode ser discreto
+- **Principal causa de hipertireoidismo** (80% dos casos);
+- **Doença autoimune** mediada por TRAb (anticorpo antireceptor de TSH);
+- O TRAb atua na glândula como o TSH atuaria, acelerando as funções de síntese e secreção de hormônios;
+- Inclusive, aumenta a conversão de T4 em T3.
 
-- Podendo haver frêmito e sopro na topografia da tireoide;
+### Apresentação clínica
 
-Oftalmopatia de Graves
+- **Hipertireoidismo + bócio** (podendo haver frêmito e sopro na topografia da tireoide);
+- Em idosos, o bócio pode ser discreto.
 
-- O TRAb se liga aos receptores dos fibroblastos D presentes na região posterior dos olhos, provocando inflamação local, resultando em proptose e hiperemia ocular.
+### Oftalmopatia de Graves
 
-- Presente em 50% dos casos de Doença de Graves.
+- O TRAb se liga aos receptores dos fibroblastos presentes na região posterior dos olhos, provocando inflamação local;
+- Resulta em **proptose** (exoftalmia) e **hiperemia ocular**;
+- **Presente em 50% dos casos** de Doença de Graves;
+- Em relação ao hipertireoidismo em si, pode:
+  - Precedê-lo em 20% dos casos;
+  - Surgir concomitantemente em 40% dos casos;
+  - Sucedê-lo em 40% dos casos.
+- A oftalmopatia pode ser transitória ou permanente.
 
-- Em relação ao hipertireoidismo em si, pode: Precedê-lo em 20% dos casos Surgir concomitantemente em 40% dos casos Sucedê-lo em 40% dos casos
+**Sinais e sintomas:**
+- **Hiperatividade adrenérgica**: retração palpebral, olhar fixo (típicos);
+- **Edema periorbital e exoftalmia** (típicos);
+- **Lesão de musculatura extrínseca** — devido à inflamação retro-ocular importante: diplopia, oftalmoplegia, ptose palpebral;
+- **Casos graves**: disfunção do nervo óptico, defeitos nos campos visuais.
 
-- A oftalmopatia pode ser transitória ou permanente
+**Escore CAS (Clinical Activity Score):**
+- A gravidade do acometimento é feita através do Escore CAS;
+- Cada uma das variáveis presentes pontua 1;
+- Se CAS ≥ 3, configura doença ativa, sendo contraindicação à radioiodoterapia.
 
-- Hiperatividade adrenérgica Retração palpebral; Olhar fixo; - Típicos Edema periorbital; Exoftalmia.
+| Sinais e Sintomas | Escores |
+|---|---|
+| Dor retrobulbar espontânea | 1 |
+| Dor à movimentação dos olhos | 1 |
+| Dor conjuntival | 1 |
+| Hiperemia palpebral | 1 |
+| Injeção conjuntival | 1 |
+| Edema palpebral | 1 |
+| Quemose | 1 |
+| Edema de carúncula | 1 |
 
-- Lesão de musculatura extrínseca – devido à inflamação retro-ocular importante Diplopia; Oftalmoplegia; Ptose palpebral;
+**Tratamento da oftalmopatia:**
+- **Corticoterapia**;
+- **Radioterapia ocular**;
+- **Imunoterapia**;
+- **Cirurgia**.
 
-- Casos graves Disfunção do nervo óptico; Defeitos nos campos visuais.
-
-- A gravidade do acometimento é feito através do Cada uma das variáveis presentes pontua 1 Se CAS ≥ 3, configura doença ativa, sendo contraindicação à radioiodoterapia
-
-Escore CAS (Clinical Activity Score)
-
-- Verificar Tabela 1 sintomas movimentação dos olhos conjuntival
-
-Tabela 1: Estratificação da oftalmopatia de Graves - Escore CAS Sinais e Escores 1 Dor retrobulbar espontânea. 2 Dor à Dor 3 Hiperemia palpebral. 4 Injeção Hiperemia 5 Edema palpebral. 6 Quemose. 7 Edema Edema de carúncula
-
-- Tratamento Corticoterapia; Radioterapia ocular; Imunoterapia; Cirurgia.
-
-Dermatopatia de Graves
+### Dermatopatia de Graves
 
 - O TRAb reage com os fibroblastos presentes no subcutâneo da pele, principalmente em região pré-tibial;
-
-- 5-10% dos casos;
-
+- Ocorre em **5-10% dos casos**;
 - Costuma estar associado à oftalmopatia e níveis elevados de TRAb;
+- Caracteriza-se por **espessamento da pele** (área pré-tibial) devido ao acúmulo de glicosaminoglicanos;
+- Também pode ocorrer **edema periférico** (pé), devido ao prejuízo ao retorno venoso.
 
-- Espessamento da pele (área pré-tibial) devido ao acúmulo de glicosaminoglicanos;
+## Bócio Uni ou Multinodular Tóxico
 
-- Também pode ocorrer edema periférico (pé), devido ao prejuízo ao retorno venoso.
+- **Quadro clínico mais brando e arrastado** (diferente do Graves);
+- A produção hormonal é reduzida (apenas no local do(s) nódulo(s)).
 
-- Verificar Figura 1 na próxima página
+**Bócio Uninodular (Doença de Plummer):**
+- Em torno dos 40 anos;
+- Hipertireoidismo quando bócio ≥ 3 cm;
+- **Indolente**.
+
+**Bócio Multinodular:**
+- Acomete pessoas de idade mais avançada (±60 anos);
+- Hipertireoidismo: produção folicular maior que da glândula;
+- **Indolente**.
 
 ---
 
 <!-- page:3 -->
 
-- Indicações para solicitar o TRAb Gestantes Com antecedente de DG (risco de tireotoxicose fetal) Diferenciação do hipertireoidismo fisiológico do
+## Exames Complementares
 
-Figura 1: Edema periférico e espessamento da pele na área prétibial BÓCIO UNI OU MULTINODULAR
+### Dicas Diagnósticas
 
-- Quadro clínico mais brando e arrastado Diferente do Graves, a produção hormonal é reduzida (apenas no local do(s) nódulo(s))
+- **Relação T3/T4 > 20**: hipertireoidismo por produção aumentada de hormônios tireoidianos;
+- **Relação T3/T4 < 20**: tireoidites com liberação de hormônios pré-formados;
+- **Tireoglobulina diminuída**: tireotoxicose factícia.
 
-- Uninodular (Doença de Plummer) Em torno dos 40 anos Hipertireoidismo quando bócio ≥ 3cm Indolente
+### Tabela 2: Relação TSH e T4 Livre nas Diversas Afecções de Tireoide
 
-- Multinodular Acomete pessoas de idade mais avançada Hipertiroidismo: produção folicular maior que da glândula Indolente
+| Afecção | TSH | T4 Livre |
+|---|---|---|
+| Doença de Graves | ↓ | ↑ |
+| Bócio Nodular Tóxico | ↓ | ↑ |
+| Hipertireoidismo subclínico | ↓ | Normal |
+| Tireotropinoma | ↑ | ↑ |
+| Tireoidites subagudas | ↓ | ↑ |
+| Tireotoxicose factícia | ↓ | ↓ |
+| Struma ovarii | ↓ | ↑ |
 
-(60 anos)
+### Dosagem do TRAb (Anticorpo Antireceptor de TSH)
 
-## EXAMES COMPLEMENTARES
+- **Presente em 95% dos casos** de Doença de Graves (DG);
+- **Hipertireoidismo clínico + Bócio + oftalmopatia**: não há necessidade de pedir TRAb para confirmar;
+- **O TRAb é importante para**:
+  - Monitorização da doença;
+  - Diferenciação do hipertireoidismo fisiológico;
+  - Gestantes com antecedente de DG (risco de tireotoxicose fetal);
+  - Pacientes eutireoideos com suspeita de oftalmopatia de Graves.
 
-## DICAS DIAGNÓSTICAS
+### Outros Marcadores Sorológicos
 
-- Relação T3/T4 > 20 Hipertireoidismo por produção aumentada de hormônios tireoidianos;
+- **Anti-TPO** (anti-tireoperoxidase) e **Anti-TG** (anti-tireoglobulina) podem estar presentes na população normal;
+- Comumente associado à **Tireoidite de Hashimoto**;
+- Mas podem estar aumentados na **Doença de Graves**.
 
-- Relação T3/T4 < 20 Tireoidites com liberação de hormônios pré-formados
+### Exames de Imagem
 
-- Tireoglobulina diminuída: tireotoxicose factícia.
+**Ultrassonografia de Tireoide:**
+- **Ecotextura heterogênea** — infiltração crônica, comum em tireoidites;
+- **Aumento de vascularização** — hiperfunção da glândula, comum na DG.
 
-Tabela 2: Relação TSH e T4L nas diversas afecções de tireoide TSH T4 livre Doença de Graves ↓ ↑ Bócio Nodular Tóxico ↓ ↑ Hipertireoidismo subclínico ↓ Normal Tireotropinoma ↑ ↑ Tireoidites subagudas ↓ ↑ Tireotoxicose factícea ↓ ↓ Struma ovarii ↓ ↑
+**Cintilografia da Tireoide:**
+- O iodo é precursor na formação de hormônios tireoidianos;
+- Locais com maior produção de T3 e T4 têm maior captação desse elemento;
+- Administra-se iodo radioativo e, onde houver maior produção de hormônios tireoidianos, a imagem ficará mais captante (preta);
+- Útil para diferenciar as causas de hipertireoidismo:
+  - **Doença de Graves**: captação de iodo **bem exacerbada e difusa**;
+  - **Tireoidites**: **supressão** (diminuição) da captação de iodo — mecanismo por destruição de folículos com hormônios pré-formados, não por hiperprodução;
+  - **Bócio Uni e Multinodular Tóxico**: **áreas nodulares específicas** na tireoide que estão captando.
 
-## DOSAGEM DO TRAB
-
-- Presente em 95% casos de doença de Graves (DG);
-
-- Hipertireoidismo clínico + Bócio + oftalmopatia: Não há necessidade de pedir TRAb para confirmar;
-
-Doença de Graves
-
-- O TRAb é importante para monitorização da doença | Diferenciação do hipertireoidismo fisiológico do Pacientes eutireoideos com suspeita de oftalmopatia de Graves;
-
-1º trimestre
-
-- Anti-TPO (anti-tireoperoxidase) e Anti-TG população normal. Comumente associado à Tireoidite de Hashimoto Mas podem estar aumentados na Doença de Graves;
-
-(anti tireoglobulina) podem estar presentes na
-
-## EXAMES DE IMAGEM
-
-- USG de tireoide Ecotextura heterogênea – infiltração crônica, comum em tireoidites; Aumento de vascularização – hiperfunção da glândula, comum na DG.
-
-- Cintilografia da tireoide O iodo é precursor na formação de hormônios tireoidianos, assim, locais onde tem maior produção de T3 e T4, tem maior captação desse elemento. Administra-se iodo radioativo e, onde houver maior produção de hormônios tireoidianos, a imagem ficará mais captante (preta). Esse exame é útil para diferenciar as causas de hipertireoidismo. Doença de Graves – captação de iodo de forma bem exacerbada e difusa Tireoidites – supressão (diminuição) da captação de iodo Mecanismo por destruição de folículos préformados e não por hiperprodução; Bócio Uni e Multinodular Tóxico Áreas nodulares específicas na tireoide que estão captando.
-
-Figura 2: Cintilografia da tireóide compatível com Doença de Graves (superior esquerda), tireoidites (superior direita), bócio multinodular (inferior esquerda), bócio uninodular (inferior direita).
+Figura 2: Cintilografia da tireoide compatível com Doença de Graves (superior esquerda), tireoidites (superior direita), bócio multinodular (inferior esquerda), bócio uninodular (inferior direita).
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -160,164 +202,175 @@ Figura 2: Cintilografia da tireóide compatível com Doença de Graves (superior
 
 <!-- page:4 -->
 
-## TRATAMENTO
+## Tratamento
 
-| Bócios muito volumosos | Oftalmopatia grave; TIONAMIDAS
+### Tionamidas
 
-- Evolução natural após RIT
+- **Drogas antitireoidianas** que reduzem a síntese de hormônio tireoidiano;
+- Úteis quando a causa do hipertireoidismo é devida a uma produção excessiva de hormônio tireoidiano;
+- **Metimazol (MMI)**: droga de escolha
+  - Efeito imunomodulador sobre o TRAb;
+  - Induz remissão em 30-50% dos casos de DG.
+- **Propiltiouracil (PTU)**: segunda linha de tratamento
+  - Causa mais efeitos colaterais e não tem efeito imunomodulador;
+  - É a escolha para uso até 16 semanas de gestação ou nos casos de intolerância/alergia ao metimazol.
 
-- Drogas antitireoidianas, reduzem síntese de | 30-50% dos casos culminam no hormônio tireoidiano hipotireoidismo permanente
+**Efeitos colaterais:**
+- **Dose-dependentes**: hepatotoxicidade, agranulocitose (graves);
+- **Leves**: rash cutâneo, urticária.
 
-- Úteis quando a causa do hipertireoidismo é devido a | 4-8 semanas: eutireoidismo uma produção excessiva de hormônio tireoidiano | 2-6 meses: hipotireoidismo
+### Tratamento Adjuvante — Betabloqueadores
 
-- Metimazol (MMI): é a droga de escolha; | < 6 meses: avaliar transitoriedade Efeito imunomodulador sobre o TRAb | > 1 ano: definitivo Induz remissão em 30-50% dos casos de DG. Tireoidectomia
+- Drogas com rápido efeito para alívio de sintomas adrenérgicos.
 
-- Propiltiouracil (PTU): segunda linha de tratamento
+**Opções:**
+- **Propranolol** 40-120 mg/dia, 2-3x/dia (melhor opção);
+- **Atenolol** 50-100 mg/dia;
+- **Alternativas**: diltiazem ou verapamil.
 
-- É a remoção da glândula Causa mais efeitos colaterais e não tem
+**Indicações:**
+- Sintomas adrenérgicos;
+- Idosos sintomáticos;
+- FC de repouso > 90 bpm ou doença cardiovascular coexistente.
 
-- Indicações efeito imunomodulador; | Hipertireoidismo + câncer de tireoide ou suspeita; É a escolha para uso até 16 semanas de gestação | Casos refratários a droga e RIT ou contraindicações ou nos casos de intolerância/alergia ao metimazol. | Bócio volumoso + sintomas compressivos;
+**Contraindicações:** asma, DPOC, bloqueio cardíaco.
 
-- Efeitos colaterais | Nem sempre é realizada a cirurgia, pelo risco São dose-dependentes; de hipoparatireoidismo devido à vascularização Graves: como hepatotoxicidade e agranulocitose; aumentada da glândula e lesão de nervo Leves: como rash cutâneo e urticária. laríngeo recorrente.
+**Quando suspender:** início do efeito das tionamidas.
 
-## SEGUIMENTO CRISE TIREOTÓXICA
+### Tratamento Definitivo
 
-- Quando se inicia uma tionamida é necessário aguardar
+#### Radioiodoterapia (RIT)
 
-4-6 semanas de tratamento para avaliar a eficácia;
+- **1ª escolha nos casos de**:
+  - Bócio nodular tóxico;
+  - Idosos, comorbidades cardiovasculares e pacientes muito sintomáticos;
+  - Recidiva de DG após tionamidas.
+- **Resolução em 80-90% dos casos**;
+- **Evolução natural após RIT**:
+  - 30-50% dos casos culminam no hipotireoidismo permanente;
+  - 4-8 semanas: eutireoidismo;
+  - 2-6 meses: hipotireoidismo;
+  - < 6 meses: avaliar transitoriedade;
+  - > 1 ano: definitivo.
 
-- Emergência médica de alta mortalidade; Através do T4L e T3 total.
+**Contraindicações:**
+- Gestantes;
+- Lactantes;
+- Mulheres que desejam engravidar em 1 ano;
+- Oftalmopatia grave.
 
-- Principal causa é Doença de Graves (DG);
+#### Tireoidectomia
 
-- Tempo de tratamento
+- **É a remoção da glândula**;
+- **Indicações**:
+  - Hipertireoidismo + câncer de tireoide ou suspeita;
+  - Casos refratários a droga e RIT ou contraindicações;
+  - Bócio volumoso + sintomas compressivos;
+  - Bócios muito volumosos.
+- **Complicações**: nem sempre é realizada a cirurgia, pelo risco de **hipoparatireoidismo** devido à vascularização aumentada da glândula e **lesão de nervo laríngeo recorrente**.
 
-- Incidência 0,2 casos/100.000 pacientes/ano; Doença de Graves: 12-18 meses;
+### Seguimento
 
-- Mortalidade 16-30%. Avaliar tratamento definitivo quando não há remissão com metimazol. FATORES PRECIPITANTES Bócio Nodular Tóxico: indeterminado;
+- Quando se inicia uma tionamida, é necessário aguardar **4-6 semanas de tratamento** para avaliar a eficácia através do T4L e T3 total.
 
-- Paciente já é hipertireoideo e passa por fator de Pode-se manter tionamidas por toda a vida ou estresse ao organismo;
-
-avaliar tratamento definitivo.
-
-- Infecção (principal)
-
-- Cirurgias
-
-## TRATAMENTO ADJUVANTE
-
-- Oferta excessiva de iodo
-
-## (BETABLOQUEADORES)
-
-- Radioiodoterapia
-
-- Propranolol 40-120 mg/dia, 2-3x/dia (melhor opção)
-
-- Interrupção abrupta de anti-tireoidianos exógenos
-
-- Atenolol 50-100 mg/dia.
-
-- Uso de amiodarona
-
-- Drogas com rápido efeito para alívio de
-
-- Condições clínicas de base sintomas adrenérgicos | Cetoacidose diabética
-
-- Indicações: | Insuficiência cardíaca Sintomas adrenérgicos | Edema pulmonar Idosos sintomáticos; | AVC FC de repouso > 90 bpm ou doença | Isquemia mesentérica cardiovascular coexistente | Transtorno bipolar e psicóticos
-
-- Contraindicações: asma, DPOC, bloqueio cardíaco;
-
-- Toxemia gravídica
-
-- Quando suspender: início do efeito das tionamidas.
-
-- Parto
-
-- Alternativas: Diltiazem ou verapamil
-
-- Trauma
-
-## TRATAMENTO DEFINITIVO QUADRO CLÍNICO
-
-Radioiodoterapia (RIT)
-
-- Febre e sudorese excessiva
-
-- 1ª escolha nos casos de:
-
-- Desidratação e IRA pré-renal Bócio nodular tóxico
-
-- Arritmias Idosos, comorbidades cardiovasculares e pacientes | Taquicardia sinusal, taquicardia supraventricular muito sintomáticos (TSV) e fibrilação atrial (FA) Recidiva de DG após tionamidas
-
-- Insuficiência cardíaca congestiva (ICC)
-
-- Resolução em 80-90% dos casos;
-
-- Disfunção do SNC
-
-- Contraindicações | Agitação, delirium, labilidade emocional, confusão, Gestantes psicose e coma Lactantes
-
-- Sinais e sintomas do TGI Mulheres que desejam engravidar em 1 ano | Náuseas, vômitos, diarreia, obstrução intestinal Lesão hepática e icterícia
+**Tempo de tratamento:**
+- **Doença de Graves**: 12-18 meses;
+  - Avaliar tratamento definitivo quando não há remissão com metimazol.
+- **Bócio Nodular Tóxico**: indeterminado;
+  - Pode-se manter tionamidas por toda a vida ou avaliar tratamento definitivo.
 
 ---
 
 <!-- page:5 -->
 
-## DIAGNÓSTICO TRATAMENTO
+## Crise Tireotóxica
 
-Critérios de Burch-Wartofsky
+- **Emergência médica de alta mortalidade**;
+- **Principal causa**: Doença de Graves (DG);
+- **Incidência**: 0,2 casos/100.000 pacientes/ano;
+- **Mortalidade**: 16-30%;
+- **Paciente já é hipertireoideo** e passa por fator de estresse ao organismo.
 
-- Verificar Tabela 3
+### Fatores Precipitantes
 
-- Disfunção termorregulatória (37,2-40ºC)
+- **Infecção** (principal);
+- **Cirurgias**;
+- **Oferta excessiva de iodo**;
+- **Radioiodoterapia**;
+- **Interrupção abrupta de anti-tireoidianos exógenos**;
+- **Uso de amiodarona**;
+- **Condições clínicas de base**:
+  - Cetoacidose diabética;
+  - Insuficiência cardíaca;
+  - Edema pulmonar;
+  - AVC;
+  - Isquemia mesentérica;
+  - Transtorno bipolar e psicóticos;
+  - Toxemia gravídica;
+  - Parto;
+  - Trauma.
 
-## TIREOTOXICOSE INDUZIDA POR
+### Quadro Clínico
 
-| 5-30 pontos;
+- **Febre** e **sudorese excessiva**;
+- **Desidratação** e **insuficiência renal aguda** (IRA) pré-renal;
+- **Arritmias**: taquicardia sinusal, taquicardia supraventricular (TSV) e fibrilação atrial (FA);
+- **Insuficiência cardíaca congestiva** (ICC);
+- **Disfunção do SNC**: agitação, delirium, labilidade emocional, confusão, psicose e coma;
+- **Sinais e sintomas do TGI**: náuseas, vômitos, diarreia, obstrução intestinal;
+- **Lesão hepática** e **icterícia**.
 
-- Efeitos no SNC – agitação, delírio, psicose, letargia, AMIODARONA convulsões e coma 0-30 pontos; AMIODARONA
+### Critérios de Burch-Wartofsky
 
-- Disfunção TGI e hepática – diarreia, náuseas, vômitos,
+| Achado | Pontos |
+|---|---|
+| **Disfunção termorregulatória** (37,2-40°C) | 5-30 |
+| **Efeitos no SNC** — agitação, delírio, psicose, letargia, convulsões e coma | 0-30 |
+| **Disfunção TGI e hepática** — diarreia, náuseas, vômitos, dor abdominal e icterícia | 0-20 |
+| **Taquicardia** (99 bpm a > 140 bpm) | 5-25 |
+| **Insuficiência cardíaca** — leve, moderada, grave (edema agudo pulmonar) | 0-15 |
+| **Fibrilação atrial** | 10 |
+| **Fator precipitante** | 10 |
 
-- É uma medicação que contém átomos de iodo; 0-20 pontos; função tireoidiana
+**Interpretação:**
+- **≥ 45 pontos**: crise tireotóxica;
+- **25-40 pontos**: crise iminente;
+- **< 25 pontos**: pouco provável.
 
-dor abdominal e icterícia | Excesso de iodo pode levar ao aumento da
+### Tratamento de Crise Tireotóxica
 
-- Taquicardia – 99bpm a > 140bpm | Ação tóxica da droga pode levar a dano ao 5-25 pontos; tecido glandular;
+| Intervenção | Objetivo | Efeito |
+|---|---|---|
+| **Beta-bloqueador IV** | Bloquear conversão periférica | Reduzir FC, tremores e melhorar enchimento cardíaco (se taquicardia sem IC franca) |
+| **PTU/Metimazol** | Inibição da síntese e conversão periférica | Parar produção (PTU também bloqueia conversão periférica) |
+| **Iodeto de potássio/Lugol** | Inibir liberação hormonal | Inibe secreção 2h após PTU/MMI |
+| **Lítio** | (se alérgico a iodo) | Controle hormonal |
+| **Corticosteroides** | Bloquear conversão periférica | Hidrocortisona ou dexametasona com ação imunomodulatória |
 
-- Insuficiência cardíaca – leve, moderada e grave
+---
 
-- A droga sofre depósito no organismo, tendo meia- 0-15 pontos;
+## Tireotoxicose Induzida por Amiodarona
 
-(edema agudo pulmonar) vida longa (40-100 dias);
+- **Amiodarona**: medicação que contém átomos de iodo;
+- **Excesso de iodo** pode levar ao aumento da função tireoidiana;
+- **Ação tóxica da droga** pode levar a dano ao tecido glandular;
+- A droga sofre **depósito no organismo**, tendo **meia-vida longa** (40-100 dias);
+- **Sempre monitorar função tireoidiana**:
+  - Tempo 0, 1, 3 e 6 meses do início do tratamento;
+  - A cada 3-6 meses durante seguimento.
 
-- Sempre monitorar função tireoidiana
+### Dois Fenótipos Clínicos
 
-- Fibrilação atrial | Tempo 0, 1, 3 e 6 meses do início do tratamento; 10 pontos; | A cada 3-6 meses durante seguimento;
+| Aspecto | Tipo 1 (Hipertireoidismo-like) | Tipo 2 (Tireoidite-like) |
+|---|---|---|
+| **Fisiopatologia** | Ação tóxica da medicação / Excesso de oferta de iodo | Tireoidite |
+| **Apresentação** | Hipertireoidismo → hipotireoidismo | Hipertireoidismo → hipotireoidismo |
+| **USG de tireoide** | ↑ vascularização | ↓ vascularização |
+| **Cintilografia da tireoide** | ↓ captação | ↓ captação |
+| **Tratamento** | Tionamidas / Tireoidectomia total | Prednisona / Betabloqueadores |
 
-- Fator precipitante
+## Referências
 
-- Há dois fenótipos clínicos 10 pontos; | Tipo 1: hipertireoidismo-like
+Figura 1: Edema periférico e espessamento da pele na área pré-tibial. Vilar, Lucio [et al]. Endocrinologia Clínica. 6ª edição. Rio de Janeiro: Guanabara Koogan, 2016.
 
-- Interpretação: | Tipo 2: tireoidite-like ≥ 45 pontos: crise tireotóxica;
-
-- Verificar Tabela 4 25-40 pontos: crise iminente; <25 pontos: pouco provável.
-
-Tabela 3: Tratamento de crise tireotóxica
-
-## INTERVENÇÃO OBJETIVO EFEITO
-
-Beta-bloqueador EV Bloquear conversar Reduzir FC, tremores e melhorar Se taquicardia sem IC franca periférica enchimento cardíaco PTU/Metimazol Inibição da síntese e conversão Parar produção Controle na produção hormonal periférica (PTU)
-
-Iodeto de potássio/Lugol Controle hormonal Inibir liberação hormonal Inibe secreção 2h após PTU/MMI Lítio se alérgicos Corticosteroides Bloquear conversão Hidrocortisona Inibe conversão periférica IA relativa Dexametasona Tabela 4: Tireotoxicose induzida por amiodarona
-
-## TIPO 1 TIPO 2
-
-(hipertireoidismo-like) (tireoidite-like) Ação tóxica da medicação Excesso de oferta de iodo Aumento da FISIOPATOLOGIA Tireoidite produção de HT Hipertireoidismo → hipotireoidismo USG de tireoide: ↑ vascularização USG de tireoide: ↓ vascularização EXAMES Cintilografia da tireoide: ↓ captação Cintilografia da tireoide: ↓ captação Tionamidas Prednisona TRATAMENTO Tireoidectomia total Betabloqueadores
-
-## REFERÊNCIAS
-
-Figura 1: Edema periférico e espessamento da pela na área pré-tibial. Vilar, Lucio [et al] . Endocrinologia Clínica. 6ª edição. Rio de Janeiro:
-
-Guanabara Koogan, 2016. Figura 2: Cintilografia de tireóide. Arquivo Pessoal.
+Figura 2: Cintilografia de tireoide. Arquivo Pessoal.

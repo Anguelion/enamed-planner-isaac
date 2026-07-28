@@ -1,173 +1,298 @@
-# Síndrome Coronariana Aguda Sem Supra de St (scassst)
+# Síndrome Coronariana Aguda Sem Supra de ST (SCASSST)
 
 <!-- page:1 -->
 
-## SÍNDROME CORONARIANA AGUDA
+## Síndrome Coronariana Aguda Sem Supra de ST (SCASSST) / IAMSSST
 
-## SEM SUPRA DE ST (SCASSST)
+### Definições
 
-## IAMSSST (CM)
+**Para diagnosticar um Infarto, precisamos de**:
+- **Curva de troponina** com pelo menos um valor acima do percentil 99, associada a **pelo menos um dos seguintes**:
+  - Sintomas
+  - Alterações isquêmicas no ECG
+  - Alterações de imagem
+  - Trombo na coronária por cateterismo ou autópsia
 
-## DEFINIÇÕES
+**Infarto Agudo do Miocárdio (IAM)**: presença de curva de troponina positiva + clínica de SCA
 
-- Infarto: curva de troponina com pelo menos um valo dos seguintes: sintomas, alterações isquêmicas no E cateterismo ou autópsia;
+**Alterações isquêmicas no ECG**:
+- Infradesnevelamento do segmento ST
+- Síndrome de Wellens (SW)
+- Supra de ST em aVR e infra de ST difuso
+- Onda T de "De Winter"
+- Alterações dinâmicas no ECG
 
-- Alterações isquêmicas no ECG: infradesnivelament
+**Classificação da SCA sem Supra de ST**:
+- **IAM sem supra de ST (IAMSSST)**: quando curva de troponina positiva
+- **Angina instável**: quando troponina negativa
 
-Wellens (SW), supra de ST em aVR e Infra de ST difus (segmento ST-T). ESCORES
+**O IAMSSST traduz lesões em geral NÃO oclusivas das coronárias** — graves, porém não totalmente oclusivas. Enquanto que o IAMCSST normalmente traduz lesão oclusiva.
 
-- HEART Score (quando há dúvida) - H- história
+### Regra de Ouro
 
-E- ECG A- Anos (idade) R- Risco (fatores) T- troponina. Investigação ambulatorial se ≤ 3;
+**Todo paciente com dor torácica deve ter um ECG feito e interpretado em até 10 minutos.**
 
-- Definiu SCA sem supra? Estratificar o risco: Escore TIMI, GRACE.
+- Na presença de **supra de ST** em duas ou mais derivações contíguas → diagnóstico imediato: IAM COM supradesnevelamento do segmento ST (IAMCSST)
+- Na ausência desse achado → procurar outras alterações isquêmicas no ECG que possam estar relacionadas a SCA
 
-## CONDUTA
+### Diagnóstico
 
-- Cateterismo mais urgente quanto mais grave o paciente: Muito alto risco (INSTABILIDADES): 2 hs; Alto risco (GRACE > 140, TIMI >5, Tropo +, infra de ST): 24 hs; Demais casos: 72 hs.
+> ⚠️ Sempre diante da suspeita de IAM, solicitar o marcador de necrose miocárdica — preferencialmente a **troponina ultrassensível (US)**.
 
-## INFARTO AGUDO DO MIOCÁRDIO
+- **Troponina positiva + clínica de SCA** = IAM sem supra de ST
+- **Troponina negativa + clínica de SCA** = angina instável
 
-- Para diagnosticar um infarto precisamos de: curva de troponina com pelo menos um valor acima do percentil Sintomas; Alterações isquêmicas no ECG; Alterações de imagem; Trombo na coronária por cateterismo ou autópsia.
-
-99, associada a pelo menos um dos seguintes:
-
-- Verificar Figura 1 na próxima página. or acima do percentil 99, associada a pelo menos um to do ST, achatamento ou inversão de onda T, síndrome de so, onda T de “De Winter”, alterações dinâmicas no ECG
-
-ECG, alterações de imagem, trombo na coronária por
-
-- Tratamento medicamentoso: AAS 300mg VO; 2º antiplaquetário (Clopidogrel, Ticagrelor, Anticoagulantes: Enoxaparina, HNF ou Fondaparinux; Enoxaparina 1 mg/kg 12/12h: 0,75 mg/kg 12/12 h se idosos (> 75 anos); 1 mg/kg 24/24 h se ClCr < 30 ml/min.
-
-Prasugrel) se CATE > 24 hs;
-
-- Todo paciente com dor torácica deve ter um ECG feito e interpretado em até 10 minutos. Na presença de supra de ST em duas ou mais derivações contíguas, l deverá ser diagnosticado imediatamente o IAM COM supradesnivelamento do segmento ST (IAMCSST).
-
-Na ausência desse achado, vamos procurar outras alterações isquêmicas no ECG que possam estar relacionadas a SCA (síndrome coronariana aguda)
-
-SEM supra de ST: | Além disso, sempre diante da suspeita de IAM, deve-se solicitar o marcador de necrose miocárdica (preferencialmente a troponina ultrassensível - US):
-
-![Figura do material - página 1](figure-001-1.webp)
-
-![Figura do material - página 1](figure-001-2.webp)
+![Figura 1: Lesões oclusiva e não oclusiva, respectivamente](figure-001-1.webp)
 
 ---
 
 <!-- page:2 -->
 
-| Troponina positiva + clínica de SCA = IAM sem
+## Eletrocardiograma e Diagnóstico do IAMSSST
 
-- Achatamento ou inversão de onda T → sugestivo de supra de ST; isquemia quando: Troponina negativa + clínica de SCA = | Onda T > 1 mm de profundidade. Presente em duas angina instável. ou mais derivações contíguas, com predomínio O IAMSSST traduz lesões em geral NÃO oclusivas positivo do QRS; O IAMSSST traduz lesões em geral NÃO oclusivas das coronárias. Graves, porém não totalmente oclusivas. Enquanto que o IAMCSST normalmente traduz lesão oclusiva.
+### Padrões Eletrocardiográficos
 
-Figura 1: Lesões oclusiva e não oclusiva, respectivamente.
+Pacientes com IAMSSST podem apresentar padrões no ECG que indicam isquemia:
 
-## ELETROCARDIOGRAMA E
+#### Infradesnevelamento do ST
 
-DIAGNÓSTICO DO IAMSSST PADRÕES ELETROCARDIOGRÁFICOS Os pacientes com IAMSSST podem apresentar padrões no ECG que indicam isquemia:
+- Pode ser classificado a partir da observação entre o ponto J e Y (80 ms do ponto J):
+  - **Ascendente**: não específico para isquemia
+  - **Descendente**: alta correlação com isquemia
+  - **Horizontal**: alta correlação com isquemia
 
-- Infradesnivelamento do ST → este pode ser classificados a partir da observação entre o ponto J e Ascendente → não específico para isquemia! Descendente → alta correlação com isquemia; Horizontal → alta correlação com isquemia.
+![Figura 2: V1, aVL, V5 e V6 com infradesnevelamento de ST](figure-002-1.webp)
 
-Y (80 ms do ponto J): Figura 2: V1, aVL, V5 e V6 (derivações que representam parede lateral) com infradesnivelamento de ST.
+![Figura 3: Infradesnevelamento de ST ascendente, descendente e horizontal; exemplos em ECG](figure-002-2.webp)
 
-Figura 3: Linha superior: infradesnivelamento de ST ascendente, descendente e horizontal, respectivamente. Linha inferior:
+#### Inversão de Onda T
 
-exemplos de infra de ST em ECG. positivo do QRS; | Dinâmica → ECG prévio sem inversão de onda T e agora com inversão.
+- **Achatamento ou inversão de onda T** → sugestivo de isquemia quando:
+  - Onda T > 1 mm de profundidade
+  - Presente em duas ou mais derivações contíguas, com predomínio positivo do QRS
+  - **Dinâmica**: ECG prévio sem inversão de onda T e agora com inversão
 
-Figura 4: Achatamento ou inversão de onda T. V4-V6 com inversão de onda T onde o QRS é predominantemente positivo.
+![Figura 4: Achatamento ou inversão de onda T em V4–V6](figure-002-3.webp)
 
-- Síndrome de Wellens (SW) → alta especificidade para estenose crítica de Descendente Anterior (DA) proximal. As alterações devem ser observadas em A → normalmente é a primeira apresentação do paciente, definida por onda T bifásica (positiva e depois negativa); B → diante da progressão da isquemia, definida por onda T profunda negativa e simétrica.
+#### Síndrome de Wellens (SW)
 
-V2-V4. É dividida em dois tipos: Figura 5: V2 e V3 com onda T bifásica. Figura 6: Onda T simétrica e negativa.
+- **Alta especificidade** para estenose crítica de Descendente Anterior (DA) proximal
+- Alterações devem ser observadas em **V2–V4**
+- Dividida em dois tipos:
+  - **Tipo A**: normalmente é a primeira apresentação do paciente, definida por **onda T bifásica** (positiva e depois negativa)
+  - **Tipo B**: diante da progressão da isquemia, definida por **onda T profunda negativa e simétrica**
 
-![Figura do material - página 2](figure-002-1.webp)
+![Figura 5: V2 e V3 com onda T bifásica](figure-002-4.webp)
 
-![Figura do material - página 2](figure-002-2.webp)
+![Figura 6: Onda T simétrica e negativa](figure-002-5.webp)
 
 ---
 
 <!-- page:3 -->
 
-- Supra de ST em AVR e infra de SR difuso →
+#### Onda T de "De Winter"
 
-- Onda T de “De Winter” (Robbert J de Winter, descrita não é IAMCSST porque não há supra em duas em 2008): Infra ST ascendente nas precordiais + onda derivações contíguas! T apiculada que começa abaixo da linha de base. Em Traduz um padrão de isquemia circunferencial = geral, associado a lesões triarteriais ou lesão grave de isquemia subendocárdica (primeira região a sofrer tronco da coronária E; No geral, representa uma alteração triarterial ou lesão grave de tronco da coronária E.
+- Descrita por Robbert J de Winter em 2008
+- **Características**: infra ST ascendente nas precordiais + onda T apiculada que começa abaixo da linha de base
+- **Significado**: em geral, associado a lesões **triarteriais ou lesão grave de tronco da coronária esquerda**
+- **Traduz**: padrão de isquemia circunferencial = isquemia subendocárdica (primeira região a sofrer isquemia no coração) difusa
 
-isquemia subendocárdica (primeira região a sofrer isquemia no coração) difusa; Figura 7: Supra ST apenas em aVR, e infra em várias derivações (V4-V6, D1, D2, aVL e aVF).
+![Figura 7: Supra de ST apenas em aVR com infra em várias derivações (V4–V6, DI, DII, aVL, aVF)](figure-003-1.webp)
 
-Figura 8: Eletrocardiograma com onda T de “De Winter” em V2-V5.
+![Figura 8: Eletrocardiograma com onda T de "De Winter" em V2–V5](figure-003-2.webp)
 
-## Escore Heart
+#### Supra de ST em aVR e Infra de ST Difuso
 
-2 pontos: altamente suspeita História 1 ponto: moderadamente suspeita Nenhum ponto: pouco/nada suspeita 2 pontos: depressão significativa do segmento S ECG 1 ponto: distúrbios de repolarização inespecifíco Nenhum ponto: pouco/nada suspeita Anos 2 pontos: ≥ 65anos 1 ponto: ≥ 45 anos e < 65 anos (idade)
+- Não é IAMCSST porque não há supra em duas derivações contíguas
+- Traduz um padrão de isquemia circunferencial
+- Representa alteração **triarterial ou lesão grave de tronco da coronária esquerda**
 
-Nenhum ponto: < 45 anos Risco 2 pontos: ≥ 3 ou história de doenças ateroscleró 1 ponto: 1 ou 2 (fatores*)
+#### Alterações Dinâmicas no ECG
 
-Nenhum ponto: nenhum 2 pontos: ≥ 3x o limite superior Troponina 1 ponto: 1 - 3x o limite superior Nenhum ponto: ≤ limite superior *hipercolesterolemia, diabetes, hipertensão, obesidade (IMC > 30 Kg/m Figura 9: Escore Heart para aplicação em caso de dúvida diagnós tronco da coronária E;
-
-- Alterações dinâmicas no ECG: Resposta / mudança no ECG perante as intervenções, comparativamente antes e depois. Exemplo: Infra de ST / Inversão de onda T que melhoram após nitratos, oxigênio, antiplaquetário e heparina.
-
-## HEART SCORE
-
-- Utilizada quando há dúvida diagnóstica se é IAM, como diante da clínica atípica e curva de troponina discreta/ questionável → usar o HEART Score apenas em casos duvidosos, confira abaixo o mnemônico: H- história; E- ECG; A- Anos (idade); R- Risco (fatores); T- troponina.
-
-- Interpretação: ≤ 3 pontos = baixo risco - seguro dar alta e realizar estudo das coronárias ambulatorialmente; 4- 7 = internação hospitalar = avaliação das coronárias. Possibilidade de teste não invasivo maiores em 6 semanas os ótica m²), tabagismo (atual ou interrupção há 3 meses), história familiar de DAC stica associada ao IAM.
-
-(ex: cintilografia). Eventos cardiovasculares ST Baixo risco = Escore Heart ≤ 3 pontos
-
-![Figura do material - página 3](figure-003-1.webp)
-
-![Figura do material - página 3](figure-003-2.webp)
+- **Resposta/mudança no ECG** perante as intervenções, comparativamente antes e depois
+- **Exemplo**: infra de ST/inversão de onda T que melhoram após nitratos, oxigênio, antiplaquetário e heparina
 
 ---
 
 <!-- page:4 -->
 
-## ESTRATIFICAÇÃO DE RISCO
+## Escore HEART
 
-grande probabilidade de precisarem de revascularização cirúrgica. Nesses casos, oferecer
+Utilizada quando há dúvida diagnóstica se é IAM, como diante da clínica atípica e curva de troponina discreta/questionável. Usar o HEART Score apenas em casos duvidosos.
 
-- Classifica estratos de risco: baixo, intermediário, alto o 2º antiplaquetário vai adiar a revascularização ou muito alto: cirúrgica, pois para operar precisa ficar 5 dias sem Risco de quê? Novo infarto, óbito, DAPT (dupla antiagregação plaquetária); Risco de quê? Novo infarto, óbito, revascularização miocárdica.
+**Mnemônico**: H (história), E (ECG), A (anos — idade), R (risco — fatores), T (troponina).
 
-- O tratamento da SCA sem supra de ST é baseado nos estratos de risco, como o escore TIMI (abaixo) - cada critério pontua 1: Idade ≥ 65 anos; Mais de um episódio de angina nas 24h; Fatores de risco (3 ou mais); Infra de ST ≥ 0,5 mm; Aumento de troponina; Cate com lesão >50%.
+### Componentes do Escore HEART
 
-- Interpretação do escore TIMI: 0-2: Baixo risco; 3-4:
+| Componente | Critério | Pontos |
+|---|---|---|
+| **História** | Altamente suspeita | 2 |
+| | Moderadamente suspeita | 1 |
+| | Pouco/nada suspeita | 0 |
+| **ECG** | Depressão significativa do segmento ST | 2 |
+| | Distúrbios de repolarização inespecífico | 1 |
+| | Pouco/nada suspeita | 0 |
+| **Anos (Idade)** | ≥ 65 anos | 2 |
+| | ≥ 45 anos e < 65 anos | 1 |
+| | < 45 anos | 0 |
+| **Risco (Fatores)*** | ≥ 3 ou história de doença aterosclerótica | 2 |
+| | 1 ou 2 | 1 |
+| | Nenhum | 0 |
+| **Troponina** | ≥ 3x o limite superior | 2 |
+| | 1–3x o limite superior | 1 |
+| | ≤ limite superior | 0 |
 
-Risco Intermediário; 5-7: Alto risco;
+*Fatores: hipercolesterolemia, diabetes, hipertensão, obesidade (IMC > 30 kg/m²), tabagismo (atual ou interrupção há 3 meses), história familiar de DAC.
 
-- Pacientes considerados de muito alto risco (precisam de cateterismo de emergência em até 2 horas): Instabilidade clínica: Dor torácica refratária; Instabilidade elétrica: Arritmias malignas, alteração dinâmica do ST-T recorrentes, especialmente supra de ST intermitente recorrente; Hemodinâmica: IC, Choque Cardiogênico ou complicações mecânicas do infarto.
+### Interpretação do Escore HEART
 
-- Pacientes considerados de alto risco (precisam de cateterismo de urgência em até 24 horas): h TIMI > 4. Escore GRACE > 140; Alterações dinâmicas do ST-T; Curva típica de troponina (diagnóstico de IAM sem supra); h Elevação transitória do ST; Alterações dinâmicas do ST/T.
+- **≤ 3 pontos = Baixo risco**: seguro dar alta e realizar estudo das coronárias ambulatorialmente
+- **4–7 = Internação hospitalar**: avaliação das coronárias; possibilidade de teste não invasivo (ex: cintilografia)
+- **≥ 8 pontos = Alto risco**: internação obrigatória e cateterismo urgente
 
-- Pacientes considerados de risco intermediário h Escore GRACE entre 109-140; h Muitas comorbidades ou fatores de risco prévios:
+![Figura 9: Escore HEART para aplicação em caso de dúvida diagnóstica associada ao IAM](figure-004-1.webp)
 
-(precisam de Cateterismo em até 72 horas): Diabetes, DRC, FEVE <40%, ATC prévia, CRVM prévia. h
+---
 
-## TRATAMENTO
+<!-- page:5 -->
 
-h SCA SEM SUPRA DE ST
+## Estratificação de Risco
 
-- Medidas iniciais: Monitor, acesso venoso, oxigênio e h exames; AAS 300mg VO;
+**Classifica estratos de risco**: baixo, intermediário, alto, muito alto.
 
-- 2º antiplaquetário (APT): (algumas entidades defendem NÃO realizar na sala de emergência): D Diretriz de IAMSSST da SBC de 2021: Alguns I d pacientes de alto e muito alto risco têm DAPT (dupla antiagregação plaquetária); Solução proposta pela Diretriz: caso o CATE seja realizado com < 24 H do início da dor do paciente, pode f azer o 2º antiplaquetário na sala da hemodinâmica, preferindo ticagrelor ou prasugrel para o paciente apenas se o CATE for feito em até tratamento não for cirúrgico, pode realizar o 2º APT na sala de emergência, normalmente Clopidogrel. Se for realizar o CATE com < 24 horas, fazer ticagrelor ou prasugrel na sala de hemodinâmica.
+**Risco de quê?** Novo infarto, óbito, revascularização miocárdica.
 
-(APT de início de ação mais rápido). Não há prejuízo 24h. Se o CATE for demorar mais de 24 horas ou o
+### Escore TIMI (Thrombolysis In Myocardial Infarction)
 
-- Anticoagulante: Enoxaparina SC 1mg/kg de 12/12h
+O tratamento da SCA sem supra de ST é baseado nos estratos de risco, como o escore TIMI. **Cada critério pontua 1**:
 
-(ajustar para idade/ClCr); Outras opções: HNF IV em BIC e fondaparinux; Alívio da dor: Nitratos ou morfina (DOR), com cautela;
+- Idade ≥ 65 anos
+- Mais de um episódio de angina nas últimas 24h
+- Fatores de risco ≥ 3 (hipertensão, diabetes, dislipidemia, obesidade, tabagismo, história familiar)
+- Infradesnevelamento de ST ≥ 0,5 mm
+- Aumento de troponina
+- Cate com lesão > 50%
 
-- Atenção! Não se faz trombólise no IAMSSST.
+**Interpretação do Escore TIMI**:
+- **0–2**: Baixo risco
+- **3–4**: Risco intermediário
+- **5–7**: Alto risco
 
-## REFERÊNCIAS
+### Escore GRACE (Global Registry of Acute Coronary Events)
 
-Figura 2: V1, aVL, V5 e V6 (derivações que representam parede lateral) com infradesnivelamento de ST.
+Classifica o risco de mortalidade e eventos cardiovasculares.
 
-https://litfl.com/ Figura 3: Linha superior: infradesnivelamento de ST ascendente, descendente e horizontal, respectivamente. Linha inferior:
+### Categorias de Risco e Conduta
 
-exemplos de infra de ST em ECG. https://litfl.com/ Figura 4: Achatamento ou inversão de onda T. V4-V6 com inversão de onda T no qual o QRS é predominantemente positivo.
+#### Pacientes Considerados de Muito Alto Risco (Cateterismo em Até 2 Horas)
 
-https://litfl.com/ Figura 5: V2 e V3 com onda T bifásica. https://litfl.com/ Figura 6: Onda T simétrica e negativa.
+**Instabilidade clínica**:
+- Dor torácica refratária
 
-https://litfl.com/ Figura 7: Supra ST apenas em aVR, e infra em várias derivações (V4-V6,D1,D2 aVL e aVF).
+**Instabilidade elétrica**:
+- Arritmias malignas
+- Alteração dinâmica do ST-T recorrentes
+- Especialmente **supra de ST intermitente recorrente**
 
-https://litfl.com/ Figura 8: Eletrocardiograma com onda T de “De Winter” em V2-V5”. https://litfl.com/ Figura 9: Escore Heart para aplicação em caso de dúvida diagnóstica associada ao IAM.
+**Hemodinâmica**:
+- Insuficiência cardíaca
+- Choque cardiogênico
+- Complicações mecânicas do infarto
+
+#### Pacientes Considerados de Alto Risco (Cateterismo em Até 24 Horas)
+
+- **TIMI > 4**
+- **Escore GRACE > 140**
+- Alterações dinâmicas do ST-T
+- Curva típica de troponina (diagnóstico de IAM sem supra)
+- Elevação transitória do ST
+- Alterações dinâmicas do ST/T
+
+#### Pacientes Considerados de Risco Intermediário (Cateterismo em Até 72 Horas)
+
+- **Escore GRACE entre 109–140**
+- Muitas comorbidades ou fatores de risco prévios: diabetes, DRC, FEVE < 40%, ATC prévia, CRVM prévia
+
+#### Pacientes Considerados de Baixo Risco (Estratégia Conservadora Possível)
+
+- Pacientes sem os critérios acima
+- Podem ser investigados de forma não invasiva
+
+---
+
+<!-- page:6 -->
+
+## Tratamento
+
+### Medidas Iniciais na SCA Sem Supra de ST
+
+- **Monitor**
+- **Acesso venoso**
+- **Oxigênio** (com alvo de saturação > 90%)
+- **Exames** (troponina, ECG seriado)
+- **AAS 300 mg VO**
+
+### Medicações
+
+#### 2º Antiplaquetário (APT)
+
+**Diretriz de IAMSSST da SBC de 2021**:
+
+Alguns pacientes de alto e muito alto risco têm indicação de **dupla antiagregação plaquetária (DAPT)**.
+
+**Solução proposta**:
+- Se o **CATE for realizado com < 24 horas** do início da dor: fazer o 2º antiplaquetário na **sala de hemodinâmica**, preferindo **ticagrelor ou prasugrel** (APT de início de ação mais rápido)
+- Se o **CATE demorar > 24 horas** ou o tratamento não for cirúrgico: pode realizar o 2º APT na **sala de emergência**, normalmente **clopidogrel**
+
+**Opções de 2º APT**:
+- Clopidogrel
+- Ticagrelor
+- Prasugrel
+
+#### Anticoagulante
+
+- **Enoxaparina SC**: 1 mg/kg de 12/12h (ajustar para idade/clearance de creatinina)
+- **Outras opções**: HNF IV em BIC, fondaparinux
+
+**Dosagens especiais**:
+- Se > 75 anos: 0,75 mg/kg de 12/12h
+- Se ClCr < 30 ml/min: 1 mg/kg de 24/24h
+
+#### Alívio da Dor
+
+- **Nitratos ou morfina** (com cautela)
+
+### Observação Importante
+
+> ⚠️ **NÃO SE FAZ TROMBÓLISE NO IAMSSST**
+
+Diferentemente do IAMCSST, a trombólise NÃO é indicada no contexto de IAMSSST.
+
+### Cateterismo
+
+**Urgência de cateterismo mais urgente quanto mais grave o paciente**:
+- **Muito alto risco**: até 2 horas
+- **Alto risco** (GRACE > 140, TIMI > 5, troponina positiva, infradesnevelamento de ST): até 24 horas
+- **Demais casos**: até 72 horas
+
+---
+
+## Referências
+
+Figura 2: V1, aVL, V5 e V6 com infradesnevelamento de ST. Disponível em: https://litfl.com/
+
+Figura 3: Infradesnevelamento de ST ascendente, descendente e horizontal; exemplos em ECG. Disponível em: https://litfl.com/
+
+Figura 4: Achatamento ou inversão de onda T em V4–V6. Disponível em: https://litfl.com/
+
+Figura 5: V2 e V3 com onda T bifásica. Disponível em: https://litfl.com/
+
+Figura 6: Onda T simétrica e negativa. Disponível em: https://litfl.com/
+
+Figura 7: Supra de ST apenas em aVR e infra em várias derivações (V4–V6, DI, DII, aVL, aVF). Disponível em: https://litfl.com/
+
+Figura 8: Eletrocardiograma com onda T de "De Winter" em V2–V5. Disponível em: https://litfl.com/
+
+Figura 9: Escore HEART para aplicação em caso de dúvida diagnóstica associada ao IAM. Disponível em: https://litfl.com/
 
 Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST–2021. Rio de Janeiro: Arquivos Brasileiros de Cardiologia, 2021.

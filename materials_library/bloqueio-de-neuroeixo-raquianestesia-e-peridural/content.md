@@ -1,111 +1,222 @@
-# Bloqueio de Neuroeixo (raquianestesia e Peridural)
+# Bloqueio de Neuroeixo (Raquianestesia e Peridural)
 
 <!-- page:1 -->
 
-## BLOQUEIO DE NEUROEIXO
+## Bloqueio de Neuroeixo
 
-## (RAQUIANESTESIA E PERIDURAL)
+### Raquianestesia vs. Peridural — Comparação
 
-Anestesia Critério Raquia Espaço suba Local de Aplicação -Líquido Cef Mais rápida ( Latência (Início do Efeito)
+> ⚠️ Dados de tabela ambíguos no OCR original. A primeira tabela comparativa apresenta múltiplas colunas com fragmentação severa e correspondência entre critérios e técnicas não legível. Conteúdo organizado em texto corrido a seguir.
 
-min Volume de Anestésico Necessário Menor volume (a Duração fixa Duração do Efeito horas, depende util Não possibilit Controle Pós-Operatório operatór Bloqueio com Sensação de Alívio da Dor cirúrgica, perd movimento n Maior risco de c Risco de Cefaleia Pós-Punção dural (devido a com Complexidade Técnica Técnica m Utilizada para c Indicações Frequentes linha umbilica cirurgias ortopé Hipotensão rá Riscos e Efeitos Colaterais bloqueio Dose única, sem Facilidade de Ajuste da Dose ajuste após
+**Raquianestesia** (espaço subaracnóideo com LCR):
+- Latência: mais rápida (minutos)
+- Volume de anestésico necessário: menor volume (apenas algumas mL)
+- Duração do efeito: fixa (2-4 horas, depende da medicação utilizada)
+- Controle pós-operatório: não possibilita analgesia pós-operatória (dose única, sem ajuste após administração)
+- Bloqueio: completo (anestesia cirúrgica, perda total de dor e movimento na área afetada)
+- Risco de cefaleia pós-punção: maior risco (devido ao contato direto com o LCR)
+- Complexidade técnica: técnica mais simples
+- Indicações frequentes: cirurgias abaixo da linha umbilical (T10), cesáreas, cirurgias ortopédicas
+- Riscos/efeitos colaterais: hipotensão rápida (devido ao bloqueio simpático), bloqueio do plexo sacral
+- Facilidade de ajuste da dose: dose única, sem possibilidade de ajuste após administração
 
-## ANATOMIA
+**Peridural** (espaço peridural, fora da dura-máter, sem atingir o LCR):
+- Latência: mais lenta (maior latência, maior resistência das meninges)
+- Volume de anestésico necessário: maior volume (necessário preencher espaço peridural)
+- Duração do efeito: ajustável (especialmente com uso de cateter para dosagem contínua)
+- Controle pós-operatório: permite o uso de cateter para analgesia pós-operatória contínua prolongada
+- Bloqueio: parcial ajustável (de acordo com a dosagem, podendo variar de analgesia leve à anestesia)
+- Risco de cefaleia pós-punção: menor risco (já que não envolve punção do espaço subaracnóideo)
+- Complexidade técnica: técnica mais complexa
+- Indicações frequentes: utilizada tanto para anestesia cirúrgica quanto para analgesia em partos ou pós-operatório
+- Riscos/efeitos colaterais: hipotensão possível, mas menos intensa e gradual
+- Facilidade de ajuste da dose: permite ajuste contínuo da dose devido ao uso do cateter
 
-## DESENVOLVIMENTO E POSIÇÃO DA MEDULA NO CANAL VERTEBRAL
+---
 
-- Primeiro trimestre de vida: medula espinhal se estende do forame magno até o final da coluna - a coluna cresce e alonga-se mais do que a medula
+## Anatomia
 
-- Ao nascimento: medula termina ao nível de L3
+### Desenvolvimento e Posição da Medula no Canal Vertebral
 
-- No adulto: 60% medula termina no nível de L1, 30% em
+- **Primeiro trimestre de vida**: medula espinhal se estende do forâmen magno até o final da coluna; a coluna cresce e alonga-se **mais do que a medula**.
 
-T12; 10% em L3
+- **Ao nascimento**: medula termina ao nível de **L3**
 
-- Por esses motivos, punção nos espaços L3, L4 e L4-L5 são as mais seguras anestesia Peridural aracnóideo (LCR Espaço peridural (fora da durafalorraquidiano). máter, sem atingir o LCR).
+- **No adulto**: 
+  - 60% → medula termina no nível de **L1**
+  - 30% → medula termina em **T12**
+  - 10% → medula termina em **L3**
 
-(menor latência, Mais lenta (maior latência, nutos). resistência das meninges). Maior volume ( preencher espaço apenas algumas ml).
+- **Por esses motivos, punção nos espaços L3, L4 e L4-L5 são as mais seguras**, pois evitam o cone medular (abaixo de L1-L2 apenas existe a **cauda equina**).
 
-peridural). e limitada (2 a 4 Duração ajustável (especialmente endo da medicação com uso de cateter para relizada). dosagem).
+### Estruturas Transpassadas na Raquianestesia
 
-Permite o uso de cateter para ta analgesia pósanalgesia pós-operatória ria contínua. prolongada. Bloqueio parcial ajustável (de mpleto (anestesia acordo com a dosagem, podendo rda total de dor e variar de analgesia leve à na área afetada).
+#### Punção Mediana
 
-anestesia). cefaleia pós-punção Menor risco de cefaleia, já que ao contato direto não envolve punção do espaço m o LCR). subaracnóideo.
+- Pele
+- Subcutâneo
+- Ligamento supraespinhoso
+- Ligamento interespinhoso
+- Ligamento amarelo
+- Espaço peridural
+- Dura-máter
+- Aracnoide
 
-mais simples. Técnica mais complexa. cirurgias abaixo da Utilizada tanto para anestesia al, como cesáreas, cirúrgica quanto para analgesia em édicas, entre outras. partos ou no pós-operatório.
+#### Punção Paramediana
 
-ápida (devido ao Hipotensão possível, mas menos o simpático). intensa e gradual. m possibilidade de Permite ajuste contínuo da dose administração. devido ao uso do cateter.
+**Preferível em idosos com calcificação de ligamentos na coluna:**
 
-## ESTRUTURAS TRANSPASSADAS NA
+- Pele
+- Subcutâneo
+- Musculatura paravertebral
+- Ligamento amarelo
+- Espaço peridural
+- Dura-máter
+- Aracnoide
 
-## RAQUIANESTESIA
-
-- Punção mediana: pele, subcutâneo, ligamento supraespinhoso, ligamento amarelo, espaço peridural, e duramater, aracnoide
-
-- Punção paramediana (preferível em idosos com calcificação de ligamentos na coluna): pele, subcutâneo, musculatura paravertebral, ligamento amarelo, espaço peridural, duramater, aracnoide
-
-- Verificar Figura 1 na próxima página
+Ver Figura 1 (Anatomia - Anestesia regional).
 
 ---
 
 <!-- page:2 -->
 
-| Menor risco de cefaléia pós-punção da dura máter.
+### Baricidade da Solução
 
-- Baricidade da solução: Isobárica (permanece disperso localmente) Hiperbárica (precipita com a gravidade - mais
+- **Isobárica**: permanece dispersa localmente
+- **Hiperbárica**: precipita com a gravidade — mais utilizado; adicionado glicose; menor risco de cefaleia pós-punção da dura-máter
 
-Figura 1: Anatomia - Anestesia regional
+---
 
-## TÉCNICAS ANESTÉSICAS –
+## Técnicas Anestésicas — Anestesia Regional
 
-## ANESTESIA REGIONAL
+### Bloqueio do Neuroeixo
 
-- Bloqueio do neuroeixo: bloqueio sensitivo, motor e autonômico; as raízes do sistema nervoso autônomo passam pela região toracolombar, gerando hipotensão e bradicardia.
+- **Mecanismo**: bloqueio sensitivo, motor e autonômico
+- **Particularidade**: as raízes do sistema nervoso autônomo passam pela região **toracolombar**, gerando **hipotensão e bradicardia**
+- **Risco importante**: estruturas anatomicamente profundas → **risco de hematoma** → pode gerar compressão da medula, produzindo lesão que pode ser **irreversível**
 
-- Anatomicamente profundos: Risco de hematoma → pode gerar compressão da medula, produzindo lesão que pode ser irreversível.
+### Contraindicações
 
-- Contraindicações: Absoluta: recusa do paciente, infecção no local de punção, aumento da PIC; Relativas: Choque, Cardiopatia, Anticoagulação, aórtica, mielopatia, estenose do canal, esclerose múltipla, tatuagem no local de punção;
+#### Absolutas
 
-Discrasia, plaquetopenia < 50.000, estenose
+- **Recusa do paciente**
+- **Infecção no local de punção**
+- **Aumento da PIC** (hipertensão intracraniana)
+- **Tatuagem no local de punção**
 
-- Raquianestesia: Atinge porção subaracnoidea, em região espinhal; Abaixo de L1-L2 – apenas existe a cauda equina: Linha de Tuffier (cristas ilíacas) – L4/L4-L5 Injeção nessa porção = desviar do cone medular. Contato direto do anestésico local, com dispersão no LCR: Redução da latência, Diminuição volume/ dose: < 4 mL. Atualmente, utiliza se agulhas finas – 27G: Ponta de lápis – Whitacre;
+#### Relativas
 
-injeção no líquor; Tabela 1: Anestesia regional - Efeitos Ordem de bloqueio Tipo de fibra Tamanho da fi Aa 12-20 A 5-12 Ayβ 3-6 ↑ A 2-5 δ B <3 C 0,4-1,2 (amielín Recuperação do | Hiperbárica (precipita com a gravidade - mais utilizado; adicionado glicose).
+- Choque
+- Cardiopatia
+- Anticoagulação
+- Estenose aórtica
+- Mielopatia
+- Estenose do canal vertebral
+- Esclerose múltipla
+- Discrasia
+- **Plaquetopenia < 50.000**
 
-- Efeitos sistêmicos da raquianestesia: Bradicardia, Hipotensão, Vasodilatação Hipotermia (Acometimento do sistema nervoso simpático T1-L2); Queda de função cardíaca (extensão até T1-T5); Bloqueio dos músculos respiratórios; Bexigoma (bloqueio do plexo sacral) pós-punção e retenção urinária (por bloqueio simpático do anestésico local).
+### Raquianestesia
 
-OBS: Ainda assim, os principais riscos são de cefaléia
+- **Acesso**: atinge porção **subaracnoide**, em região espinhal
+- **Segurança**: abaixo de L1-L2 apenas existe a **cauda equina**
+- **Referência anatômica**: **linha de Tuffier** (cristas ilíacas) = L4/L4-L5
+- **Objetivo**: injeção nessa porção = **desviar do cone medular**
+- **Ação**: contato direto do anestésico local, com **dispersão no LCR**
+  - Redução da latência
+  - Diminuição volume/dose: **< 4 mL**
+- **Equipamento atual**: agulhas finas — **27G** — "Ponta de lápis" (Whitacre)
 
-- Verificar Tabela 1
+### Efeitos Sistêmicos da Raquianestesia
 
-- Peridural (epidural): Injeção no espaço epidural. Tecnicamente mais desafiador, por ser um espaço virtual. Técnica de “perda da resistência” das estruturas rígidas. (É feita a identificação do espaço, com posterior dissecção). Atinge qualquer nível da coluna, a partir de seu mecanismo “em faixa”; Há a barreira das meninges entre o espaço e as raízes: Aumento da latência, Aumento do volume do anestésico.
+**Acometimento do sistema nervoso simpático (T1-L2):**
 
-- Punção inadvertida da meninge: Aumento do risco de cefaleia pós-punção da dura-máter. Pode ser feita em qualquer nível a depender do efeito desejado.
+- **Bradicardia**
+- **Hipotensão**
+- **Vasodilatação**
+- **Hipotermia**
+- **Queda de função cardíaca** (se extensão até T1-T5)
+- **Bloqueio dos músculos respiratórios**
+- **Bexigoma** (bloqueio do plexo sacral) pós-punção
+- **Retenção urinária** (por bloqueio simpático do anestésico local)
 
-fibra Função Somatomotor, propriocepção Toque, pressão ↓ Fuso muscular Dor e temperatura Autonômico pré ganglionar Autonômica pós nico) ganglionar, dor, temperatura o bloqueio segue a ordem inversa
+**OBS**: Ainda assim, os principais riscos são de **cefaleia**.
+
+### Peridural (Epidural)
+
+- **Acesso**: injeção no **espaço epidural**
+- **Desafio técnico**: espaço virtual; técnica de "**perda da resistência**" das estruturas rígidas (identificação do espaço com posterior dissecção)
+- **Abrangência**: atinge qualquer nível da coluna, a partir de seu mecanismo "em faixa"
+- **Barreira**: há a **barreira das meninges** entre o espaço e as raízes
+  - Aumento da latência
+  - Aumento do volume do anestésico
+- **Complicação**: punção inadvertida da meninge → aumento do risco de **cefaleia pós-punção da dura-máter**
+- **Flexibilidade**: pode ser feita em qualquer nível a depender do efeito desejado
+
+### Fibras Nervosas — Ordem de Bloqueio
+
+| Tipo de Fibra | Tamanho (μm) | Função |
+|---|---|---|
+| **Aα** | 12-20 | Somatomotor, propriocepção |
+| **Aβ** | 5-12 | Toque, pressão |
+| **Aγ** | 3-6 | Fuso muscular |
+| **Aδ** | 2-5 | Dor e temperatura |
+| **B** | < 3 | Autonômico pré-ganglionar |
+| **C** | 0,4-1,2 (amielínico) | Autonômico pós-ganglionar, dor, temperatura |
+
+**Recuperação do bloqueio segue a ordem inversa.**
 
 ---
 
 <!-- page:3 -->
 
-## CEFALEIA PÓS-PUNÇÃO DA DURA-MÁTER –
+## Cefaleia Pós-Punção da Dura-Máter (CPPD)
 
-## CPPD
+### Mecanismo
 
-- A partir do puncionamento, é gerado um orifício que permite o vazamento de líquor. → hipotensão liquórica → Vasodilatação → Tração das estruturas.
+A partir do puncionamento, é gerado um **orifício que permite o vazamento de líquor** → **hipotensão liquórica** → **vasodilatação** → **tração das estruturas**.
 
-- Principais fatores de risco: Sexo feminino, idade (10-50 anos), agulha utilizada, gestação, desidratação, histórico de cefaleia prévia e inúmeras punções.
+### Principais Fatores de Risco
 
-- Quadro clínico: Ocorre em < 72h pós-punção; Pode durar até 7 dias após a punção.
+- **Sexo feminino**
+- **Idade** (10-50 anos)
+- **Agulha utilizada** (maior calibre = maior risco)
+- **Gestação**
+- **Desidratação**
+- **Histórico de cefaleia prévia**
+- **Inúmeras punções** (múltiplas tentativas)
 
-- Cefaleia posicional – piora com ortostase → É a principal característica.
+### Quadro Clínico
 
-- Outras manifestações associadas: Diplopia, zumbido, náuseas, vômitos;
+- **Ocorre em < 72h pós-punção**
+- Pode durar até **7 dias** após a punção
+- **Cefaleia posicional** — piora com ortostase → **principal característica**
+- **Outras manifestações associadas**: diplopia, zumbido, náuseas, vômitos
+- **Autolimitado** — 7-10 dias
 
-- Autolimitado – 7-10 dias.
+### Tratamento
 
-- Tratamento geral = Hidratação.
+#### Leve ou Moderado
 
-- Leve ou moderado → Conduta conservadora Cafeína, dipirona, paracetamol, AINEs, gabapentinoide, corticoide etc
+**Conduta conservadora:**
 
-- Grave = blood-patch (curativo): Injetar sangue do próprio paciente no espaço peridural, a fim de formar um tampão sanguíneo.
+- **Hidratação** (importante!)
+- **Cafeína**
+- **Dipirona**
+- **Paracetamol**
+- **AINEs**
+- **Gabapentinoides**
+- **Corticoides** (em alguns casos)
+
+#### Grave
+
+**Curativo definitivo** = **blood-patch** (tampão sanguíneo):
+
+- Injetar **sangue do próprio paciente** no espaço peridural
+- Objetivo: formar um **tampão sanguíneo** que sela o orifício da dura-máter
+
+---
+
+## Referências
+
+Figura 1: Anatomia - Anestesia regional

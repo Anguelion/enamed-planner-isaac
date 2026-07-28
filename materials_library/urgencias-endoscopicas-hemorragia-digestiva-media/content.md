@@ -1,91 +1,89 @@
-# Urgências Endoscópicas Hemorragia Digestiva Média
+# Urgências Endoscópicas: Hemorragia Digestiva Média (HDM)
 
 <!-- page:1 -->
 
-## URGÊNCIAS ENDOSCÓPICAS
+## Definição
 
-## HEMORRAGIA DIGESTIVA MÉDIA
+**Hemorragia digestiva média** é distinta de hemorragia digestiva obscura:
 
-Endoscopia Hemorragia digestiva URGÊNCIAS EM ENDOSCOPIA
+- **HDM**: quando realizadas colonoscopia e EDA e ambas são negativas, então faz-se o diagnóstico de HDM. A topografia situa-se entre o ângulo de Treitz (ampola de Vater) até a válvula ileocecal.
+- **Hemorragia digestiva obscura**: quando investigou também o intestino delgado e não encontrou sangramento, passa-se a classificar como obscuro.
 
-- Topografia: Treitz até válvula ileocecal.
+> **Nota:** o conceito pode variar. Há quem defina o limite distal como a transição jejunoileal (diferença histológica).
 
-- Exame inicial: EDA.
+## Topografia
 
-- Se EDA e COLONO negativas: enteroscopia.
+- Treitz até válvula ileocecal (intestino delgado).
 
-## CONSIDERAÇÕES GERAIS
+## Exame Inicial
 
-## DEFINIÇÃO
+- **EDA** (primeira abordagem).
+- Se EDA e colonoscopia negativas: **enteroscopia**.
 
-- Hemorragia digestiva obscura é distinta de hemorragia digestiva média (HDM); Realizadas colonoscopia e EDA e ambas são negativas, então faz-se o diagnóstico de HDM; Investigou também o intestino delgado e não encontrou sangramento, passa-se a classificar como obscuro.
+## Lesões que Eventualmente Passam Despercebidas
 
-## LESÕES QUE EVENTUALMENTE PASSAM DESPERCEBIDAS
+### Na EDA
 
-- Na EDA: Dieulafoy, erosões de Cameron (são quebras de barreira mucosa que podem promover sangramento dentro da hérnia hiatal);
+- **Dieulafoy**;
+- **Erosões de Cameron**: quebras de barreira mucosa que podem promover sangramento dentro da hérnia hiatal.
 
-- Na colonoscopia: sangramento diverticular, angiectasias.
+### Na Colonoscopia
 
-## EXAME PADRÃO-OURO
+- Sangramento diverticular;
+- Angiectasias.
 
-- Enteroscopia.
+## Exame Padrão-Ouro
 
-## TOPOGRAFIA
+- **Enteroscopia** (avalia todo o intestino delgado em até **85%** dos casos).
 
-- Caracteriza-se como HDM o sangramento que ocorre do ângulo de Treitz (ampola de Vater) até a válvula ileocecal.
+## Investigação da HDM
 
-- Conceito pode variar. Há quem defina o limite distal como a transição jejunoileal (diferença histológica).
+### Estratégia Escalonada
 
-## INVESTIGAÇÃO
+1. **Se há sangramento importante com EDA insatisfatória**: repetir a EDA;
+2. **Alta suspeição para sangramento baixo**: repetir colonoscopia (discutível);
+3. **Se enteroscopia negativa**: foco obscuro.
+4. **Instabilidade hemodinâmica** mantida após medidas iniciais:
+   - Cirurgia ou enteroscopia intraoperatória;
+   - Arteriografia (permite intervenção por embolização).
 
-- Se há presença de sangramento importante com possibilidade de EDA ou EDA insatisfatória:
+### Alternativas Diagnósticas
 
-repetir a EDA;
+- **Enteroressonância magnética** ou **entero-TC**: se positivas, prossegue-se com a enteroscopia vista a possibilidade terapêutica.
+- **Cintilografia** ou **AngioTC**: para paciente instável após tentativa de estabilização.
+- **Arteriografia**: se o paciente realmente esteja instável, esta é a opção.
 
-- Alta suspeição para sangramento baixo: repetir colonoscopia (discutível);
+**Se refratário**: cirurgia!
 
-- Instabilidade hemodinâmica mantida após medidas iniciais: cirurgia ou enteroscopia intraoperatória;
+## Enteroscopia
 
-- Arteriografia (permite intervenção por embolização). - Se enteroscopia negativa: foco obscuro.
+### Características
 
-- Instabilidade hemodinâmica: Cirurgia / enteroscopia intraoperatória ou arteriografia.
-
-## ALTERNATIVAS NA INVESTIGAÇÃO
-
-- Enteroressonância magnética ou entero-TC: se positivas, prossegue-se com a enteroscopia visto a a possibilidade terapêutica.
-
-## SOBRE A ENTEROSCOPIA
-
-- Avalia todo o intestino delgado em até 85% dos casos;
-
-- Exame pouco disponível, requer sedação;
-
-- Exame demorado, podendo durar até 2-3 horas.
-
-- Métodos: clipe/método térmico;
-
+- Avalia todo o intestino delgado em até **85%** dos casos;
+- Exame **pouco disponível**, requer sedação;
+- Exame demorado, podendo durar até **2-3 horas**;
+- Métodos terapêuticos: clipe/método térmico;
 - Viabiliza a biópsia;
+- Há a possibilidade de **tatuagem**! Facilita a reabordagem em casos de novo sangramento e marca pontos de avaliação para determinar se todo o intestino foi avaliado.
 
-- Há a possibilidade de tatuagem! Facilita a reabordagem em casos de novo sangramento; Marcar pontos de avaliação para determinar se todo o intestino foi avaliado.
+## Cápsula Endoscópica
 
-## CÁPSULA ENDOSCÓPICA
-
-- Sem possibilidade terapêutica;
-
-- Sem possibilidade de biópsia;
+### Vantagens
 
 - Menos invasivo;
-
 - Sem necessidade de sedação;
+- Sensibilidade e especificidade semelhantes às da enteroscopia.
 
-- Sensibilidade e especificidade semelhantes às da enteroscopia;
+### Limitações
 
-- Quando não realizar? Abdome agudo obstrutivo ou obstrução intestinal; Fístula.
+- **Sem possibilidade terapêutica**;
+- **Sem possibilidade de biópsia**;
+- **Quando não realizar?**
+  - Abdome agudo obstrutivo ou obstrução intestinal;
+  - Fístula.
 
-## PACIENTE INSTÁVEL
+## Paciente Instável
 
-- Após a tentativa de estabilização, pode-se utilizar a cintilografia ou angioTC;
-
-- Caso o paciente realmente esteja instável, a opção é a arteriografia.
-
+- Após tentativa de estabilização: cintilografia ou AngioTC;
+- Se realmente instável: arteriografia;
 - Se refratário: cirurgia!

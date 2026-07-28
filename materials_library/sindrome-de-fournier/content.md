@@ -2,53 +2,62 @@
 
 <!-- page:1 -->
 
-## CIRURGIA GERAL
+## Definição
 
-- Infecção necrotizante de partes moles do períneo e em homens;
+- **Infecção necrotizante de partes moles do períneo** e em homens;
+- Acomete **fáscia**, **músculo**, **pele** e **subcutâneo**;
+- Destruição e necrose progressivas; acometimento de tecidos moles profundos.
 
-- Acomete fáscia, músculo, pele e subcutâneo;
+## Infecções de Partes Moles
 
-- Fatores de risco: Diabetes; Desnutrição; Obesidade; Imunossupressão.
+As infecções de partes moles podem ser divididas em:
 
-## INFECÇÕES DE PARTES MOLES
+- **Pele e subcutâneo**: ex. celulite;
+- **Fáscia**: ex. fasceíte;
+- **Músculo**: ex. necrose (lesão "necrotizante") ou miosite.
 
-- Podem ser divididas em: Pele e subcutâneo: Ex. celulite; Fáscia: Ex. fasceíte; Músculo: Ex. necrose (lesão “necrotizante”) ou miosite.
+**Progressão:** inflamação → infecção (supurativa) → necrose (necrotizante).
 
-- Inicia com inflamação: Progride para infecção (supurativa); Estágio final é a necrose (necrotizante).
+## Fatores de Risco
 
-- Infecção necrotizante de partes moles do períneo e em homens;
+- **Diabetes**;
+- **Desnutrição**;
+- **Obesidade**;
+- **Imunossupressão**.
 
-- Acomete fáscia, músculo, pele e subcutâneo;
+## Porta de Entrada
 
-- Repercussão: Destruição e necrose progressivas; Acometimento de tecidos moles profundos
+- **Trauma**;
+- **Cirurgias**;
+- **Lesões de pele e/ou mucosa**.
 
-(+ fáscia).
+## Quadro Clínico
 
+- Agudo e de **rápida evolução**;
+- Apresentação: **dor**, **eritema**, **calor**, **rubor**, **febre**;
+- Progressão: **secreção**, **equimose**, **necrose**, **crepitação** (presença de gases);
+- Estágio final: **sepse**.
+
+> Observação: O primeiro sintoma é frequentemente **anestesia local**, seguido pelos demais sinais.
+
+## Diagnóstico Clínico
+
+- **Diagnóstico clínico = exame físico**;
 - Diagnóstico normalmente é tardio, pois há sintomas em fase avançada;
-
-- Fatores de risco: Diabetes; Desnutrição; Obesidade; Imunossupressão.
-
-- Porta de entrada: Trauma; Cirurgias; Lesões de pele e/ou mucosa.
-
-- Quadro clínico agudo e de rápida evolução: 1o = anestesia local, seguida de: Dor; Eritema; Calor; Rubor; Febre; Final: Secreção: Equimose; Necrose; Crepitação
-
-(presença de gases); Sepse.
-
-## DIAGNÓSTICO CLÍNICO
-
 - Exame físico deve diagnosticar a doença e urgenciar o quadro!
 
-- Exames Laboratoriais: Inespecíficos; Avaliar SIRS e distúrbios hidroeletrolíticos. - Quadro clínico agudo e de rápida evolução: Dor; Eritema; Calor; Rubor; Febre; Secreção: Equimose; Necrose; Crepitação; Sepse.
+### Exames Laboratoriais
 
-- Diagnóstico clínico = exame físico;
+- Inespecíficos;
+- Avaliar SIRS e distúrbios hidroeletrolíticos.
 
-- Tratamento = Urgência cirúrgica: Antibiótico, hidratação e suporte; Desbridamento cirúrgico agressivo e reabordagens programadas.
+### Exames de Imagem
 
-- Exames de imagem: Dúvida diagnóstica em paciente estável; O exame de imagem não pode atrasar a abordagem cirúrgica! Achados: gás, espessamento de partes moles,
+- Indicados em caso de dúvida diagnóstica em paciente estável;
+- **O exame de imagem NÃO pode atrasar a abordagem cirúrgica!**
+- Achados: **gás**, **espessamento de partes moles**, **edema** e/ou **necrose**.
 
-. edema e/ou necrose. Figura 1: Tomografia com achados da Sd de Fournier: Gás, espessamento e edema.
-
-MICROBIOLOGIA Fasceíte Tipo I Tipo II Necrotizante (Polimicrobiana) (Monomicrobiana) Aeróbicos + Streptococcus Agentes Anaeróbicos beta hemolítico A Idoso, diabético, Qualquer faixa Paciente obeso, etária, sem fatores hipertenso aparentes MO varia com Pós-operatórios local; Pós cirurgia de cirurgias Detalhes contaminada ou limpas, faringite trauma assintomática
+*Figura 1: Tomografia com achados da Síndrome de Fournier: Gás, espessamento e edema.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -56,22 +65,52 @@ MICROBIOLOGIA Fasceíte Tipo I Tipo II Necrotizante (Polimicrobiana) (Monomicrob
 
 <!-- page:2 -->
 
-## TRATAMENTO
+## Microbiologia
 
-| Reabordagens: | Curativo especializado;
+> ⚠️ Dados de tabela parcialmente legíveis no OCR original — informações reorganizadas de forma clínica:
 
-- Antibiótico, hidratação e suporte: | Curativo à vácuo; Antibiótico: Deve cobrir: Gram-Positivos; | Suporte nutricional; Opções: Carbapenêmico e Clindamicina / | Fisioterapia;
+### Fasceíte Necrotizante Tipo I (Polimicrobiana)
 
-Gram-Negativos e Anaeróbios; | Controle da Dor; Vancomicina e Tazocin. | Profilaxias → TEP e úlcera de estresse;
+- Agentes: Aeróbicos + Anaeróbicos (múltiplos agentes);
+- Contexto: Idoso, diabético, paciente obeso, hipertenso.
 
-- Tratamento resolutivo é cirúrgico e urgente: | Controle de Comorbidades; Fase aguda (1a abordagem) = | Reconstrução tardia → Auxílio da CPL.
+### Fasceíte Necrotizante Tipo II (Monomicrobiana)
 
-Desbridamento agressivo!
+- Agentes: Streptococcus beta-hemolítico A (Streptococcus pyogenes);
+- Contexto: Qualquer faixa etária, sem fatores de risco aparentes.
 
-## REFERÊNCIAS
+**Observação:** O microrganismo varia com a localização e fatores de risco. Pós-operatórios de cirurgias contaminadas ou limpas, pós-trauma e faringite assintomática podem ser portas de entrada.
 
-| Cicatrização por 2a intenção; | Sonda Vesical de Demora e flexi-seal se necessário; Figura 1: Tomografia com achados da Sd de Fournier:
+## Tratamento
 
-| Em casos gravíssimos pode ser necessário Gás, espessamento e edema. desviar trânsito intestinal; Fonte: Case courtesy of Chris O’Donnell, Radiopaedia.org, rID: 16849 | Curativo;
+### Antibioticoterapia
 
-| Reabordagens programadas.
+- **Deve cobrir:** Gram-positivos, gram-negativos e anaeróbios.
+- **Opções**:
+  - Carbapenêmico + Clindamicina;
+  - Vancomicina + Tazocin.
+
+### Terapia Cirúrgica (Urgência!)
+
+- **Tratamento resolutivo é cirúrgico e urgente**;
+- **Fase aguda (1ª abordagem) = Desbridamento agressivo!**
+- **Reabordagens programadas**.
+
+### Medidas Complementares
+
+- **Hidratação e suporte**;
+- **Curativo especializado**:
+  - Curativo à vácuo;
+  - Cicatrização por 2ª intenção.
+- **Sonda vesical de demora** e flexi-seal se necessário;
+- Em casos gravíssimos pode ser necessário **desviar trânsito intestinal**;
+- **Suporte nutricional**;
+- **Fisioterapia**;
+- **Controle da dor**;
+- **Profilaxias** → TEP (tromboembolismo pulmonar) e úlcera de estresse;
+- **Controle de comorbidades**;
+- **Reconstrução tardia** → auxílio da CPL (cirurgia plástica).
+
+## Referências
+
+Figura 1: Tomografia com achados da Síndrome de Fournier: Gás, espessamento e edema. Fonte: Case courtesy of Chris O'Donnell, Radiopaedia.org, rID: 16849.

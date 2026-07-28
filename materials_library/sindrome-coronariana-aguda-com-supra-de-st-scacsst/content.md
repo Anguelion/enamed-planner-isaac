@@ -1,261 +1,318 @@
-# Síndrome Coronariana Aguda Com Supra de St (scacsst)
+# Síndrome Coronariana Aguda Com Supra de ST (SCACSST)
 
 <!-- page:1 -->
 
-## SÍNDROME CORONARIANA AGUDA
+## Síndrome Coronariana Aguda Com Supra de ST (SCACSST)
 
-## COM SUPRA DE ST (SCACSST)
+### Introdução e Paredes
 
-Síndrome Coronariana Aguda (CM); IAMCSST (CM); INTRODUÇÃO E PAREDES
+**Regra de Ouro**: todo paciente com dor torácica no pronto-socorro deve ter um ECG realizado e interpretado em **até 10 minutos**.
 
-- Todo paciente com dor torácica no prontosocorro deve ter um ECG efeito e interpretado em
+**Diagnóstico**: ECG com supra em duas ou mais derivações contíguas + clínica compatível = SCA com supra de ST
 
-10 minutos;
+### Localizando a Parede e a Artéria Culpada
 
-- ECG com supra em duas ou mais derivações contíguas + clínica compatível = SCA com
+- **Supra de V1 e V2** (septal) → artéria descendente anterior
+- **Supra de V1–V4** (anterior) → artéria descendente anterior
+- **Supra de V5, V6, DI e aVL** (lateral) → artéria circunflexa
+- **Apenas DI e aVL** (lateral alta) → artéria circunflexa
+- **Supra de V1–V6, DI e aVL** (anterior extenso) → artéria descendente anterior
+- **Supra de DII, DIII e aVF** (inferior) → artéria coronária direita (maioria); em 30% dos pacientes, pode ser a artéria circunflexa. **Supra em D3 maior que em D2 sugere acometimento da artéria coronária direita**
+- **Supra de ST inferior** (DII, DIII, aVF) → solicitar derivações **V3R e V4R** para investigar infarto de ventrículo direito (VD); se a elevação for maior que 0,5 mm, já se considera como supra
+- **Infra de ST de V1–V3** → solicitar derivações V7, V8 e V9, pois V1–V3 pode ser um "espelho" da parede posterior; **supra de ST de V7–V9 sugere infarto de parede posterior**
 
-SUPRA de ST;
+### Definições de SCA
 
-- Localizando a parede e a artéria culpada. Supra de ST em: V1 e V2 (septal); V1-V4 (anterior); V1-V6, DI e aVL a. descendente anterior; V5, V6, DI e aVL (lateral); apenas DI e avL (lateral alta) → a. circunflexa; DII, dIII e aVF (inferior) → a. coronária direita acometimento da a. coronária direita (demais = a. circunflexa).
+- **Síndrome Coronariana Aguda (SCA)**: frente ao paciente com sintomas típicos, sempre se deve realizar o ECG e interpretá-lo em, no máximo, 10 minutos, classificando assim entre:
+  - **SCA com supra de segmento ST**: infarto agudo do miocárdio (IAM) com supra de ST no ECG (IAMCSST)
+  - **SCA sem supra de segmento ST**, podendo ser:
+    - **IAM sem supra de ST (IAMSSST)**: quando curva de troponina positiva
+    - **Angina instável**: quando troponina negativa
 
-(anterior extenso) → (maioria). Supra em D3 maior que em D2 sugere
+### Diagnósticos Diferenciais
 
-- Supra de ST inferior (dII, dIII,e aVF) → solicitar as derivações V3R e V4R para investigar infarto de ventrículo direito (VD) → se a elevação for maior que 0.5 mm, já se considera como supra!
+- Miopericardite
+- Síndrome de Takotsubo
+- Dissecção de aorta
+- MINOCA (Infarto sem lesões obstrutivas nas coronárias)
 
-## INTRODUÇÃO
+### Fisiopatologia Básica
 
-- Síndrome coronariana aguda → frente ao paciente com sintomas típicos, sempre se deve realizar o eletrocardiograma (ECG) e interpretá-lo em, no máximo, 10 minutos, podendo assim classificar entre: SCA com supra de segmento ST, que, no caso, é um infarto agudo do miocárdio (IAM) com supra de ST no ECG (IAMCSST); SCA sem supra de segmento ST, podendo ser: IAM sem supra de ST (IAMSSST) → quando curva de troponina positiva; Angina instável → quando troponina negativa.
+- O achado de **supra de ST representa a oclusão total da artéria coronária**, isto é, um trombo oclusivo, geralmente relacionado à rotura de uma placa aterosclerótica
+- O **IAM sem supra geralmente ocorre por erosão de uma placa**, gerando sub-oclusão do vaso
 
-Figura 1: Fluxograma dos subtipos de SCA - Diante do Infra de ST de V1-V3, solicitar V7, V8 e V9, pois V1-V3 pode ser um “espelho” da parede posterior;
+![Figura 1: Fluxograma dos subtipos de SCA](figure-001-1.webp)
 
-## DIAGNÓSTICOS DIFERENCIAIS
-
-- Miopericardite, Sd. Takotsubo, dissecção de aorta, MINOCA.
-
-## TRATAMENTO
-
-- A primeira coisa é definir: Angioplastia primária ou trombólise. Angioplastia preferível se: 90 min no serviço ou até 120 min se transferência;
-
-1. Trombólise: AAS 300mg , clopidogrel 300 mg,
-
-enoxaparina, trombolítico. Checar critérios de reperfusão 60-90 min após;
-
-2. Angioplastia: AAS 300 mg, clopidogrel, prasugrel ou
-
-ticagrelor, enoxaparina. COMPLICAÇÕES
-
-- Choque cardiogênico, choque de VD, rotura de parede livre e CIV. Se hipotensão súbita, congestão pulmonar, sopro novo, investigar imediatamente com Ecocardiograma.
-
-- O achado de supra de ST representa a oclusão total da artéria coronária, isto é, um trombo oclusivo, geralmente relacionado à rotura de uma placa aterosclerótica;
-
-- O IAM sem supra geralmente ocorre por erosão de uma placa, gerando sub oclusão do vaso.
-
-Figura 2: Trombo oclusivo (acima) e trombo suboclusivo (abaixo)
-
-## ANATOMIA E LOCALIZAÇÃO
-
-## RELEMBRANDO A ANATOMIA
-
-- A coronária direita e o tronco da coronária esquerda são ramos diretos da aorta;
-
-- À esquerda, o tronco da coronária esquerda dará origem à artéria descendente anterior e à artéria circunflexa.
-
-![Figura do material - página 1](figure-001-1.webp)
+![Figura 2: Trombo oclusivo (acima) e trombo suboclusivo (abaixo)](figure-001-2.webp)
 
 ---
 
 <!-- page:2 -->
 
-## LOCALIZANDO A PAREDE E A ARTÉRIA
+## Anatomia e Localização
 
-## CULPADA
+### Relembrando a Anatomia
 
-- Supra de V1 e V2 → infarto septal → a descendente anterior;
+- A **coronária direita** e o **tronco da coronária esquerda** são ramos diretos da aorta
+- À esquerda, o tronco da coronária esquerda dará origem à **artéria descendente anterior** e à **artéria circunflexa**
 
-- Supra de V1-V4 → infarto de parede anterior → a descendente anterior;
+![Figura 3: Vasculatura coronariana](figure-002-1.webp)
 
-- Supra de V5, V6, D1 e aVL → infarto de parede lateral
+### Localizando a Artéria Culpada
 
-→ a circunflexa;
+- **Supra de V1 e V2** → infarto septal → artéria descendente anterior
+- **Supra de V1–V4** → infarto de parede anterior → artéria descendente anterior
+- **Supra de V5, V6, DI e aVL** → infarto de parede lateral → artéria circunflexa
+- **Apenas DI e aVL** → parede lateral alta → artéria circunflexa
+- **Supra de V1–V6, DI e aVL** → infarto anterior extenso → artéria descendente anterior
+- **Supra de DII, DIII e aVF** → infarto de parede inferior → artéria coronária direita (maioria); em 30% dos pacientes, pode ser a artéria circunflexa; supra em D3 maior que em D2 sugere acometimento da artéria coronária direita
 
-- Apenas D1 e aVL → parede lateral alta → a circunflexa;
+![Figura 4: Localizando a artéria culpada - parede septal](figure-002-2.webp)
 
-- Supra de V1-V6, D1 e aVL → infarto anterior extenso → a descendente anterior;
+![Figura 5: Localizando a artéria culpada - parede anterior](figure-002-3.webp)
 
-- Supra de D2, D3 e aVF → infarto de parede inferior → a coronária direita (maioria). Em 30% dos pacientes, a artéria acometida pode não ser a coronária direita, sugere acometimento da coronária direita.
-
-Figura 3: Vasculatura coronariana e sim a circunflexa; supra em D3 maior que em D2 Figura 4: Localizando a artéria culpada - parede septal Figura 5: Localizando a artéria culpada - parede anterior Figura 6: Localizando a artéria culpada - parede lateral
-
-![Figura do material - página 2](figure-002-1.webp)
-
-![Figura do material - página 2](figure-002-2.webp)
+![Figura 6: Localizando a artéria culpada - parede lateral](figure-002-4.webp)
 
 ---
 
 <!-- page:3 -->
 
-Figura 7: Localizando a artéria culpada - parede lateral alta Figura 8: Localizando a artéria culpada - infarto anterior extenso Figura 9: Localizando a artéria culpada - parede inferior com supra em D3 maior que em D2 OUTROS PADRÕES | Supra discordante do QRS >= 5MM.
+![Figura 7: Localizando a artéria culpada - parede lateral alta](figure-003-1.webp)
 
-- O supra de V1-V3 está presente no BRE (bloqueio | No supra discordante do QRS = QRS de ramo esquerdo). Para diferenciar de um predominantemente negativo + supra (positivo) supra isquêmico (infarto) utilizam-se os critérios - sozinho, não fecha critério para supra de Sgarbossa; isquêmico, devendo-se ter pelo menos um dos
+![Figura 8: Localizando a artéria culpada - infarto anterior extenso](figure-003-2.webp)
 
-- Critérios de Sgarbossa (favoráveis à isquemia): outros critérios associados Infra V1-V3;
+### Outros Padrões
 
-- Verificar Figura 10 e Figura 11 na próxima página Supra concordante com o QRS(> 1 MM);
+#### Bloqueio de Ramo Esquerdo (BRE) com Supra de ST
 
-![Figura do material - página 3](figure-003-1.webp)
+- **O supra de V1–V3 está presente no BRE** (bloqueio de ramo esquerdo)
+- Para diferenciar de um supra isquêmico (infarto), utilizam-se os **critérios de Sgarbossa**:
+  - **Supra discordante do QRS ≥ 5 mm** — sozinho, não fecha critério para supra isquêmico, devendo-se ter pelo menos um dos outros critérios associados
+  - **Infra V1–V3**
+  - **Supra concordante com o QRS (> 1 mm)** — sugere paciente com BRE que está apresentando um infarto concomitante
 
-![Figura do material - página 3](figure-003-2.webp)
+![Figura 10: BRE com supra de V1–V3](figure-003-3.webp)
+
+![Figura 11: Supra com critério Sgarbossa positivo](figure-003-4.webp)
 
 ---
 
 <!-- page:4 -->
 
-Sugere paciente com BRE que está apresentando um
+#### Infarto de Ventrículo Direito (VD)
 
-- Verificar Figura 12 infarto concomitante.
+- **Diante do supra de ST inferior** (DII, DIII, aVF) → solicitar as derivações **V3R e V4R** para investigar infarto de VD
+- Em V3R e V4R, se a elevação for **maior que 0,5 mm**, já se considera como supra
+- Nos outros casos, deve ser > 1 mm
 
-- Diante do infra de ST de V1-V3, deve-se também
+#### Infarto Posterior
 
-- Supra de ST inferior (dII, dIII,e aVF) → solicitar as solicitar as derivações V7, V8 e V9, pois V1-V3 pode derivações V3R e V4R para investigar infarto de ser um “espelho” da parede posterior. Supra de ST de ventrículo direito (VD). Em V3R e V4R, se a elevação for V7-V9 sugere infarto de parede posterior maior que 0,5 mm, já se considera como supra. Nos
+- **Diante do infra de ST de V1–V3**, solicitar as derivações V7, V8 e V9, pois V1–V3 pode ser um "espelho" da parede posterior
+- **Supra de ST de V7–V9** sugere infarto de parede posterior
 
-- Verificar Figura 13 outros casos, deve ser > 1 mm
+![Figura 12: Supra de ST inferior com infarto de VD associado](figure-004-1.webp)
 
-Figura 10: BRE com supra de V1-V3. Figura 11: Supra com critério Sgarbossa positivo Figura 12: Supra de ST inferior com infarto de VD associado
-
-![Figura do material - página 4](figure-004-1.webp)
-
-![Figura do material - página 4](figure-004-2.webp)
+![Figura 13: Supra de ST posterior](figure-004-2.webp)
 
 ---
 
 <!-- page:5 -->
 
-Figura 13: Supra de ST posterior
+## Condições que Mimetizam o IAM
 
-## CONDIÇÕES QUE MIMETIZAM O
+### Miopericardite
 
-## IAM
+- **Miopericardite**: no ECG da pericardite → **supra difuso** + **infra do segmento PR**; supra sem imagem em espelho (além de aVR e V1); **supra "feliz"** (supra com concavidade para cima)
 
-## MIOPERICARDITE
+![Figura 14: Miocardite](figure-005-1.webp)
 
-- ECG: no ECG da pericardite → supra difuso + infra do segmento PR; supra sem imagem em espelho (além de avR e V1); supra “FELIZ” (supra com concavidade para CIMA);
+### Síndrome de Takotsubo
 
-Figura 14: Miocardite
+- Possível ter supra e dor torácica
+- No momento do cateterismo → achado de **balonamento apical com hipercinesia da base**
+- **Ausência de lesões obstrutivas** nas coronárias
 
-- Takotsubo: possível ter supra e dor torácica; no momento do cateterismo → achado de balonamento apical com hipercinesia da base. Ausência de lesões obstrutivas nas coronárias.
+![Figura 15: Balonamento apical com hipercinesia da base](figure-005-2.webp)
 
-Figura 15: Balonamento apical com hipercinesia da base Figura 16: Balonamento apical com hipercinesia da base no ECO Figura 17: Balonamento apical com hipercinesia da base na RNM
+![Figura 16: Balonamento apical com hipercinesia da base no ecocardiograma](figure-005-3.webp)
 
-## DIAGNÓSTICO
-
-- O Infarto com supra de ST é um diagnóstico clínico-eletrocardiográfico; Paciente com clínica típica (ex: dor torácica, dispneia, sintomas associados, irradiação da dor para braços ou mandíbula) + ECG com supra em 2 ou mais derivações contíguas; Não espere a troponina para iniciar o tratamento!
-
-- NA SCA com supra ST, as medidas iniciais são: Sala de emergência; Monitorizar; Acesso venoso; Oxigênio (com alvo de saturação > 90%); Solicitar exames (ex.: troponina): a troponina tem relação prognóstica, mas não diagnóstica.
-
-- Exame Físico (EF) sumário, procurando diagnóstico diferencial e complicação;
-
-![Figura do material - página 5](figure-005-1.webp)
-
-![Figura do material - página 5](figure-005-2.webp)
+![Figura 17: Balonamento apical com hipercinesia da base na ressonância nuclear magnética](figure-005-4.webp)
 
 ---
 
 <!-- page:6 -->
 
-## DIAGNÓSTICOS DIFERENCIAIS TRATAMENTO
+### Dissecção de Aorta (Stanford A)
 
-- Principalmente Dissecção de Aorta Stanford A, especialmente se supra de ST em parede inferior; CONDUTA PRINCIPAL Para realizar esta investigação, deve-se avaliar no
+- **Principalmente suspeitar se**: supra de ST em parede inferior
 
-- Objetivo principal: no infarto com supra, a nossa exame físico inicial: palpação do pulso e aferição prioridade é a desobstrução da coronária, seja por exame físico inicial: palpação do pulso e aferição da PA nos 4 membros: divergência de pressão entre os membros, especialmente quando PA em membros inferiores é menor que em superiores → considerar dissecção de aorta. Buscar sopro de associado a sintomatologia → considerar dissecção de aorta. Déficits neurológicos associados: quando a dissecção segue em direção às carótidas, pode haver déficit neurológico (= dor torácica + AVC); Pode haver supra de ST quando a dissecção da aorta atinge o óstio de alguma coronária, mais comumente a direita. Figura 18
+**Investigação no exame físico inicial**:
+- **Palpação do pulso e aferição da pressão arterial** nos 4 membros
+- **Divergência de pressão** entre os membros, especialmente quando PA em membros inferiores é menor que em superiores → **considerar dissecção de aorta**
+- **Sopro de insuficiência aórtica** na ausculta; tal achado associado a sintomatologia → **considerar dissecção de aorta**
+- **Déficits neurológicos**: quando a dissecção segue em direção às carótidas, pode haver déficit neurológico (dor torácica + AVC)
+- **Pode haver supra de ST** quando a dissecção da aorta atinge o óstio de alguma coronária, mais comumente a direita
 
-IAo (insuficiência aórtica) na ausculta; Tal achado
+![Figura 18: Supra de ST na parede inferior com dissecção de aorta](figure-006-1.webp)
 
-- Figura 18: Supra ST na parede inferior
-
-- O mesmo paciente do ECG acima realizou um
-
-- Ecocardiograma, evidenciando lâmina de dissecção na aorta. O mesmo paciente também apresentava sopro de insuficiência aórtica.
-
-## PESQUISA DE COMPLICAÇÕES
-
-- Exemplos: choque cardiogênico e infarto de VD;
-
-- Avaliar PA e FC → taquicardia pode ser um sinal inicial de choque cardiogênico;
-
-- Ausculta pulmonar e avaliação do PVJ - pulso venoso jugular: choque com pulmão limpo e IAM inferior: → pensar em infarto de VD;
-
-- Congestão franca, choque, iam anterior extenso parede anterior.
-
-→ pensar em choque cardiogênico por infarto de Figura 19: Flap de dissecção da aorta no Ecocardiograma prioridade é a desobstrução da coronária, seja por meio da angioplastia ou trombólise, a depender da disponibilidade de recursos;
-
-- A Angioplastia Primária sempre será a preferência: Se houver hemodinâmica no hospital → angioplastia primária (em até 90 min do primeiro contato com o hospital, preferencialmente 60 minutos); Não há cateterismo no hospital → transferência para abrir a artéria em até 120 min por meio da angioplastia primária;
-
-- Trombólise: Se não é possível que o paciente esteja na sala de hemodinâmica em até 120 min; Paciente está com dor há menos de 12 horas! → Não trombolisar se dor > 12 horas. Contraindicações absolutas: AVCi/TCE 3 meses;
-
-sangramento/neoplasia SNC; lesão vascular cerebral (MAV); sangramento ativo/discrasias; dissecção aguda de aorta;
-
-SCA com supra ST no Hospital sem cateterismo:
-
-- Medidas iniciais: sala de emergência, monitor, acesso venoso, oxigênio (sat > 90%), exames;
-
-- AAS 300 mg VO;
-
-- Inibidor de ADP (clopidogrel, prasugrel, ticagrelor);
-
-Ataque: clopidogrel 300 mg, 75 mg se > 75a; não usar ticagrelor ou prasugrel na trombólise;
-
-- Anticoagulante: enoxaparina 30 mg EV (bolus), e depois 1 mg/kg SC 12/12h (>75 anos: sem ataque e 0,75 mg/kg SC 12/12 h); HNF IV em BIC; fondaparinux.
-
-- Trombolítico, ex.: alteplase 15 mg EV em bolus; depois em 60 min;
-
-0.75 mg/kg EV em 30 min; depois, 0.5 mg/kg EV Tabela 1: Tratamento do IAMCSST O tempo de porta-agulha deve ser de 30 minutos, desde a chegada ao serviço até a administração do trombolítico.
-
-Critérios de reperfusão (após 90min) para saber se o trombolítico deu certo: Resolução da dor; Redução do supra em 50%;
-
-Arritmias de reperfusão (RIVA, extrassístoles ventriculares, TVNS); Pico precoce de marcador (tardio).
-
-Precisa de cateterismo (CATE) SEMPRE: Se conseguiu a reperfusão → prazo de 2 a 24h para realizar o cateterismo;
-
-Se ausência de reperfusão → angioplastia de resgate (urgência! CATE o mais rápido possível).
-
-![Figura do material - página 6](figure-006-1.webp)
-
-![Figura do material - página 6](figure-006-2.webp)
+![Figura 19: Flap de dissecção da aorta no ecocardiograma](figure-006-2.webp)
 
 ---
 
 <!-- page:7 -->
 
-## REFERÊNCIAS
+## Diagnóstico
 
-SCA com supra ST no hospital COM cateterismo (angioplastia primária): | Medidas iniciais: monitor, acesso venoso, Figura 4: Localizando a artéria culpada - parede septal oxigênio, exames; Disponível em litfl.com/.
+- **O infarto com supra de ST é um diagnóstico clínico-eletrocardiográfico**
+- Paciente com clínica típica (ex: dor torácica, dispneia, sintomas associados, irradiação da dor para braços ou mandíbula) + ECG com supra em 2 ou mais derivações contíguas
+- **NÃO ESPERE A TROPONINA PARA INICIAR O TRATAMENTO!**
 
-| AAS 300 mg VO; Figura 5: | AAS 300 mg VO; | Clopidogrel com ataque de 600 mg; ou ticagrelor ou prasugrel (podem ser utilizados).
+### Medidas Iniciais na SCA com Supra de ST
 
-| Anticoagulante: manutenção com 1 mg/kg SC 12/12h HNF IV em BIC. EVITAR o fondaparinux. | Cateterismo e angioplastia;
+- **Sala de emergência**
+- **Monitorizar**
+- **Acesso venoso**
+- **Oxigênio** (com alvo de saturação > 90%)
+- **Solicitar exames** (ex.: troponina) — a troponina tem relação prognóstica, mas não diagnóstica
+- **Exame físico sumário**, procurando diagnóstico diferencial e complicações
 
-Tratamento adicional na SCA com supra ST: | Nitratos ou morfina (DOR) → evitar se indícios de infarto de VD, instabilidade hemodinâmica ou se realizou uso de sildenafil (nitratos) nas últimas 24h.
+---
 
-| Betabloqueador → VO em até 24h na ausência de contraindicação (que indica risco de choque cardiogênico): sinais de IC; idade > 70; Pas < 100;
+<!-- page:8 -->
 
-FC >110. Essa indicação tem sido revisto realizarmos essa medicação via oral após estabilização e principalmente após angioplastia. Sempre garantir boa perfusão e estabilidade.
+## Pesquisa de Complicações
 
-| IECA → em até 24h. Mais efetivo se: FEVE < 40%, ou se paciente com hipertensão arterial. | Todos os pacientes devem receber alta com estatina → iniciar em até 24h;
+**Exemplos**: choque cardiogênico, infarto de VD, rotura de parede livre, CIV.
 
-## MINOCA
+**Se hipotensão súbita, congestão pulmonar, sopro novo** → investigar imediatamente com ecocardiograma.
 
-- Infarto com coronárias sem lesões obstrutivas estenose < 50% É um diagnóstico transitório e não final. Principais causas: erosão e ruptura de placa não vistas no cateterismo; espasmo coronário; Ultrassom Intravascular (IVUS), Tomografia de e RNM auxiliam na investigação etiológica Figura 5: Localizando a artéria culpada - parede anterior
+### Avaliação Clínica
 
-dissecção de coronária; infarto tipo 2. Coerência Óptica (OCT) — imagem intracoronária — Disponível em litfl.com/.
+- **Avaliar PA e FC** → taquicardia pode ser um sinal inicial de choque cardiogênico
+- **Ausculta pulmonar e avaliação do PVJ** (pulso venoso jugular):
+  - Choque com pulmão limpo e IAM inferior → **pensar em infarto de VD**
+  - Congestão franca, choque, IAM anterior extenso da parede anterior → **pensar em choque cardiogênico** por infarto de parede anterior
 
-Figura 6: Localizando a artéria culpada - parede lateral Disponível em litfl.com/. Figura 7: Localizando a artéria culpada - parede lateral alta Disponível em litfl.com/.
+---
 
-Figura 8: Localizando a artéria culpada - infarto anterior extenso Disponível em litfl.com/. Figura 9: Localizando a artéria culpada - parede inferior com supra em D3 maior que em D2 Disponível em litfl.com/.
+## Tratamento
 
-Figura 10: BRE com supra de V1-V3 Disponível em litfl.com/. Figura 11: Supra com critério Sgarbossa positivo Disponível em emergencymedicinecases.com Figura 12: Supra de ST inferior com infarto de VD associado Disponível em litfl.com/.
+### Objetivo Principal
 
-Figura 13: Supra de ST posterior Disponível em litfl.com/. Figura 15: Balonamento apical com hipercinesia da base https://doi.org/10.1590/S0103-507X2013000100012 Figura 16: Balonamento apical com hipercinesia da base no ECO https://doi.org/10.1016/j.ijcard.2016.02.012 Figura 17: Balonamento apical com hipercinesia da base na RNM https://doi.org/10.1016/j.ijcard.2016.02.012 Figura 18: Supra ST na parede inferior.
+- **Desobstrução da coronária**, seja por meio da angioplastia ou trombólise, a depender da disponibilidade de recursos
 
-Disponível em litfl.com/. Figura 19: Flap de dissecção da aorta no Ecocardiograma Disponível em litfl.com/.
+### Escolha da Estratégia de Reperfusão
 
-—
+#### Angioplastia Primária (Preferência)
+
+- **Requerimento**: hemodinâmica no hospital
+- **Prazo**: em até **90 minutos** do primeiro contato com o hospital (preferencialmente 60 minutos)
+- Se não há cateterismo no hospital → transferência para abrir a artéria em até **120 minutos** por meio da angioplastia primária
+
+#### Trombólise
+
+- Se não é possível que o paciente esteja na sala de hemodinâmica em até 120 minutos
+- **Paciente deve estar com dor há menos de 12 horas**
+- **NÃO trombolisar se dor > 12 horas**
+
+**Tempo de porta-agulha**: deve ser de **30 minutos**, desde a chegada ao serviço até a administração do trombolítico
+
+**Critérios de reperfusão** (após 90 minutos) para saber se o trombolítico funcionou:
+- Resolução da dor
+- Redução do supra em 50%
+- Arritmias de reperfusão (RIVA, extrassístoles ventriculares, TVNS)
+- Pico precoce de marcador
+
+**Cateterismo**: sempre necessário
+- Se conseguiu a reperfusão → prazo de **2 a 24h** para realizar o cateterismo
+- Se ausência de reperfusão → **angioplastia de resgate** (urgência! CATE o mais rápido possível)
+
+---
+
+<!-- page:9 -->
+
+### Medicações na SCA com Supra de ST
+
+#### SCA com Supra de ST no Hospital SEM Cateterismo (Trombólise)
+
+**Medidas iniciais**:
+- Sala de emergência
+- Monitor
+- Acesso venoso
+- Oxigênio (saturação > 90%)
+- Exames
+
+**Medicação**:
+- **AAS**: 300 mg VO
+- **Inibidor de ADP**:
+  - **Clopidogrel**: 300 mg de ataque; 75 mg se > 75 anos
+  - **NÃO usar ticagrelor ou prasugrel** na trombólise
+- **Anticoagulante**:
+  - **Enoxaparina**: 30 mg EV (bolus), depois 1 mg/kg SC 12/12h (> 75 anos: sem ataque e 0,75 mg/kg SC 12/12h)
+  - **HNF IV** em BIC
+  - Fondaparinux
+- **Trombolítico** (ex: **Alteplase**):
+  - 15 mg EV em bolus
+  - Depois 0,75 mg/kg EV em 30 minutos
+  - Depois 0,5 mg/kg EV em 60 minutos
+
+#### SCA com Supra de ST no Hospital COM Cateterismo (Angioplastia Primária)
+
+**Medidas iniciais**:
+- Monitor
+- Acesso venoso
+- Oxigênio
+- Exames
+
+**Medicação**:
+- **AAS**: 300 mg VO
+- **Inibidor de ADP**:
+  - **Clopidogrel**: ataque de 600 mg
+  - **Ticagrelor** ou **prasugrel** (podem ser utilizados)
+- **Anticoagulante**:
+  - Manutenção com 1 mg/kg SC 12/12h
+  - HNF IV em BIC
+  - **EVITAR fondaparinux**
+- **Cateterismo e angioplastia**
+
+#### Contraindicações Absolutas para Trombólise
+
+- AVCi/TCE nos últimos 3 meses
+- Sangramento/neoplasia do SNC
+- Lesão vascular cerebral (MAV)
+- Sangramento ativo/discrasias
+- Dissecção aguda de aorta
+
+#### Tratamento Adicional na SCA com Supra de ST
+
+- **Nitratos ou morfina** (para dor) → evitar se indícios de infarto de VD, instabilidade hemodinâmica ou se paciente usou sildenafil nas últimas 24 horas
+- **Betabloqueador** → VO em até 24h na ausência de contraindicação (sinais de IC, idade > 70, PAS < 100, FC > 110); essa indicação tem sido revista; realizamos essa medicação via oral após estabilização e principalmente após angioplastia; sempre garantir boa perfusão e estabilidade
+- **IECA** → em até 24h; mais efetivo se FEVE < 40% ou se paciente com hipertensão arterial
+- **Estatina** → todos os pacientes devem receber alta com estatina; iniciar em até 24h
+
+### Tabela 1: Tratamento do IAMCSST
+
+> ⚠️ Dados de tabela ambíguos no OCR original — não foi possível reconstruir com segurança; resumo do tratamento apresentado em seções acima em texto corrido.
+
+---
+
+## MINOCA (Infarto com Coronárias sem Lesões Obstrutivas)
+
+- **Definição**: infarto com estenose < 50%
+- **Característica**: diagnóstico transitório e não final
+- **Principais causas**:
+  - Erosão e ruptura de placa não vistas no cateterismo
+  - Espasmo coronário
+  - Dissecção de coronária
+  - Infarto tipo 2
+- **Investigação**: **Ultrassom Intravascular (IVUS)**, **Tomografia de Coerência Óptica (OCT)** — imagem intracoronária — e **RNM** auxiliam na investigação etiológica
+
+---
+
+## Referências
+
+Figuras: disponíveis em litfl.com/ e emergencymedicinecases.com
+
+Figura 15, 16, 17: https://doi.org/10.1590/S0103-507X2013000100012 e https://doi.org/10.1016/j.ijcard.2016.02.012
+
+Figura 18, 19: disponível em litfl.com/

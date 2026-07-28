@@ -2,39 +2,46 @@
 
 <!-- page:1 -->
 
-Ortopedia - Traumatologia ortopédica TRAUMATOLOGIA
+## Considerações Iniciais
 
-- Fraturas Extra-articulares = Consolidação Indireta:
+### Estrutura Óssea
 
-Estabilidade RELATIVA.
+- O tecido ósseo apresenta duas composições principais:
+  - **Epífise**: porção mais próxima à articulação, de composição esponjosa, menos densa;
+  - **Metáfise**: região intermediária;
+  - **Diáfise**: corpo ósseo, de conteúdo mais denso, predominantemente cortical (reticular).
+- As fraturas podem ocorrer em qualquer porção do osso.
 
-- Fraturas Articulares = Consolidação direta (SEM calo): Estabilidade ABSOLUTA .
+### Classificação Geral das Fraturas
 
-Classificação de Gustilo TIPO I TIPO II Tamanho <1cm 1-10cm Cefalosporina de Contaminação Baixa 1ª ou 2ª geração Baixa Moderada Penicilina +- Metro
+**Quanto à relação com a articulação**
+- **Fraturas extra-articulares**: não acometem a superfície articular, são de menor complexidade, requerem intervenção mais simples. **Consolidação indireta** (com formação de calo ósseo) — requerem **estabilidade relativa**.
+- **Fraturas articulares**: apresentam traço em direção à articulação, são mais complexas, requerem intervenção mais agressiva. **Consolidação direta** (sem calo ósseo) — requerem **estabilidade absoluta**.
 
-- Paciente estável e boas condições do membro = tratamento DEFINITIVO .
+### Abordagem nas Fraturas Expostas
 
-- Paciente Instável ou Lesão Complexa: Score de MESS : 2 a 6: Controle de Danos; 7+: Amputação.
+**Regra dos 5 A's** (ordem de prioridades):
+1. **ATLS** (avaliação e estabilização inicial);
+2. **Antibioticoterapia** precoce (mesmo na suspeita);
+3. **Anti-tetânica** (profilaxia);
+4. **Alinhar** (garantir perfusão vascular — não esperar ausência de pulsos para iniciar tratamento);
+5. **Analgesia**.
 
-## CONSIDERAÇÕES INICIAIS
+**Metas terapêuticas gerais**
+- **Salvar a vida** > salvar o membro > recuperação funcional.
 
-- O tecido ósseo: O osso, em porção mais próxima à articulação, apresenta composição esponjosa, sendo menos denso; No corpo, o conteúdo tende a ser mais denso, predominantemente reticular. É chamada de porção cortical.
+### Decisão de Tratamento Definitivo vs. Controle de Danos
 
-- As fraturas podem ocorrer em qualquer porção do osso; Epífise: porção mais próxima à articulação; Metáfise: região intermediária; Diáfise: corpo ósseo. - Fraturas Expostas = regra dos 5 A’s + Classificação de Gustilo & Anderson.
+- Paciente estável e boas condições do membro → **tratamento definitivo**;
+- Paciente instável ou lesão complexa → usar **Score de MESS** para orientar decisão:
+  - **MESS 2-6**: controle de danos;
+  - **MESS 7+**: consideração de amputação.
 
-- ATLS + Antibiótico + Analgesia + é possível primária não é possível vascular onidazol
+### Quadro Comparativo: Fratura de Ossos Longos + Alteração Neurológica/Respiratória + Petéquias
 
-Alinhar + Antitetânica. & Anderson TIPO III A Cobertura >10cm Cobertura + Aminoglicosídeo C Reparo Alta
+- Suspeita de **síndrome de embolia gordurosa (SEG)**.
 
-- Fratura de Ossos Longos + Alteração NC +Alteração Resp +- Petéquias = SEG.
-
-- Trauma em Membros + DOR desproporcional + P***
-
-Edema = SCA.
-
-- Não esperar Ausência de Pulsos para tratar!
-
-Figura 1: Estruturas do osso
+*Figura 1: Estruturas do osso.*
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -42,57 +49,57 @@ Figura 1: Estruturas do osso
 
 <!-- page:2 -->
 
-## CLASSIFICAÇÃO DAS FRATURAS
+## Classificação das Fraturas
 
-## QUANTO AO TIPO/PADRÃO
+### Quanto ao Tipo/Padrão
 
-- Simples – traço único;
+- **Simples**: traço único;
+- **Em cunha**: perda de fragmento ósseo em forma de cunha;
+- **Cominutiva**: multifragmentadas, decorrentes de mecanismos de trauma de maior energia.
 
-- Fraturas em cunha;
+*Figura 2: Escala de gravidade.*
 
-- Fraturas em cunha;
+*Figura 3: Tipos de fraturas.*
 
-- Cominutiva – multifragmentadas; - mecanismos do trauma de maior energia.
+## Consolidação das Fraturas
 
-- - Figura 2: Escala de gravidade
+### Fisiopatologia
 
-- QUANTO AO LOCAL DE ACOMETIMENTO:
+- Mediante uma fratura, ocorre o estímulo para formação de novo tecido;
+- Evolução do processo:
+  1. **Hematoma fraturário**;
+  2. **Fase inflamatória**;
+  3. **Calo cartilaginoso**: presente cerca de 2 semanas após a fratura;
+  4. **Calo ósseo**: após 6-8 semanas — considerado como fratura consolidada;
+  5. **Remodelamento**: pode durar meses.
 
-- Extra-articular; Não acometem a superfície articular; São de menor complexidade; Requerem intervenção mais simples.
+*Figura 4: Fisiopatologia da consolidação.*
 
-- Articular; C Apresentam traço em direção à articulação; São mais complexas, requerendo intervenção mais agressiva.
+### Consolidação Indireta/Secundária
 
-- Figura 3: tipos de fraturas
+**Mecanismo**
+- Existe um tecido intermediário entre o hematoma fraturário e o calo ósseo;
+- O processo de consolidação é mantido através de **estabilidade relativa** — não há manipulação direta do foco de fratura;
+- É garantido o mínimo de estabilidade para que as porções ósseas formem o calo cartilaginoso.
 
-## CONSOLIDAÇÃO DAS FRATURAS
+**Métodos de imobilização/estabilização**
+- **Tutor intramedular** (hastes intramedulares): posicionadas de modo percutâneo, promovem algum grau de micromovimento.
 
-## FISIOPATOLOGIA
+  *Figura 5: Fixador interno.*
 
-- Mediante uma fratura, ocorre o estímulo para formação de um novo tecido;
+- **Fixadores externos**: úteis para tratamento provisório ou como tratamento definitivo da fratura.
 
-- Evolução da consolidação: Hematoma fraturário; Fase inflamatória; Calo cartilaginoso; presente cerca de 2 semanas após a fratura. Calo ósseo: após 6 - 8 semanas – considerada como fratura consolidada; Consolidação → Remodelamento, que pode durar meses. Figura 4: Fisiopatologia
+  *Figura 6: Fixador externo.*
 
-## CONSOLIDAÇÃO INDIRETA/SECUNDÁRIA
+- **Gesso**: redução funcional, correção de eixo, rotação e comprimento; síntese maleável.
 
-- Existe um tecido intermediário entre o hematoma fraturário e o calo ósseo. O processo de consolidação é mantido através de uma estabilidade relativa, isto é, não há manipulação direta do foco de fratura;
+  *Figura 7: Gesso.*
 
-- Nesse sentido, é garantido o mínimo de estabilidade para que as porções ósseas formam o calo cartilaginoso;
+**Considerações**
+- Tipo de consolidação → formação de calo ósseo: **não realizar fixações em regiões articulares ou em microcompartimentos**, pois promove desgaste, alterações funcionais ou comprometimento da cartilagem adjacente;
+- Biomecanicamente, a presença do calo na região metafisária ou diafisária **não interfere na capacidade funcional do membro**.
 
-- Exemplo: “Tutor intramedular” – hastes intramedulares posicionadas de modo percutâneo, que promovem algum grau de micromovimento; Figura 5
-
-- Fixadores externos – úteis para tratamento provisório;
-
-sendo também utilizados com finalidade de tratamento definitivo da fratura. Figura 6
-
-- Gesso: Redução funcional; correção do eixo, rotação e comprimento; síntese maleável. Figura 7
-
-CONSIDERAÇÕES:
-
-- Tipo de consolidação → Formação de um calo ósseo: Não realizar fixações em regiões articulares, ou em microcompartimentos, por promover desgaste, alterações funcionais ou comprometimento da cartilagem adjacente.
-
-- Biomecanicamente, a presença do calo na região metafisária ou diafisária não interfere na capacidade funcional do membro.
-
-Figura 5: Fixador interno
+*Figura 8: Fratura consolidada.*
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -102,31 +109,22 @@ Figura 5: Fixador interno
 
 <!-- page:3 -->
 
-Figura 8: Fratura consolidada
+### Consolidação Direta/Primária
 
-## FRATURA EXPOSTA
+**Mecanismo**
+- O processo de consolidação é mantido através de **estabilidade absoluta** — o processo consolidativo ocorre **sem a formação de calo ósseo**;
+- Requer contato direto entre os fragmentos ósseos e compressão entre eles;
+- Normalmente feita com **placas e parafusos**.
 
-Figura 6: Fixador externo Figura 9: Fratura exposta. Figura 7: Gesso
+**Condições requeridas**
+- **Redução anatômica**: reposicionamento anatômico exato dos fragmentos;
+- **Compressão interfragmentária**: compressão adequada entre os fragmentos;
+- **Síntese rígida**: fixação que evite qualquer movimentação entre os fragmentos ósseos.
 
-## DEFINIÇÃO
+**Indicação**
+- Requer **intervenção cirúrgica**.
 
-## CONSOLIDAÇÃO DIRETA/PRIMÁRIA
-
-- Contato entre a fratura e o meio externo:
-
-- O processo de consolidação é mantido através exteriorização do osso ou contato do hematoma de uma estabilidade absoluta, isto é, o processo fraturário com o meio ambiente;
-
-consolidativo ocorre sem a formação do calo ósseo.
-
-- Condições requeridas: METAS TERAPÊUTICAS: Redução anatômica;
-
-- Salvar a vida > salvar o membro > Compressão interfragmentária; recuperação funcional Síntese rígida.
-
-- Regra dos 5 A’s:
-
-- Para isso, é preciso uma intervenção cirúrgica; | ATLS; Compressão adequada entre os fragmentos + | Antibioticoterapia precoce (mesmo na suspeita); Não haja movimentação entre os | Anti-tetânica; Normalmente, faz-se uso de placas e parafusos. | Alinhar (garantir perfusão).
-
-fragmentos ósseos. | Analgesia;
+*Figura 9: Fratura exposta.*
 
 ![Figura do material - página 3](figure-003-1.webp)
 
@@ -134,80 +132,91 @@ fragmentos ósseos. | Analgesia;
 
 <!-- page:4 -->
 
-## CLASSIFICAÇÃO DE GUSTILO & ANDERSON
+## Fraturas Expostas
 
-OS 5 P’S DOR PARESTESIA PARESIA EDEMA OCINÍLC xD TIPO I TIPO II Tamanho <1cm 1-10cm Cefalosporina de Contaminação Baixa 1ª ou 2ª geração Baixa Moderada Penicilina +- Metronida Figura 10: Classificação de Gustilo & Anderson de fraturas expostas.
+### Definição
 
-## TRATAMENTO OPERATÓRIO
+- Contato entre a fratura e o meio externo: **exteriorização do osso** ou **contato do hematoma fraturário com o meio ambiente**.
 
-- Gustilo & Anderson até tipo III A: pode ser feito tratamento definitivo na primeira cirurgia.
+### Classificação de Gustilo & Anderson
 
-- Instabilidade clínica ou lesão grave de partes moles: controle de danos (curativo a vácuo, fixador externo, amputação).
+> ⚠️ Dados de tabela ambíguos no OCR original — a diagramação intercalava células; conteúdo reconstruído a seguir com as informações clinicamente validadas.
 
-- Score de MESS: auxílio na tomada de decisão quanto à amputação na fratura exposta: Vai de 2 a 14; Itens avaliados: gravidade da lesão, perfusão, Q choque, idade; 2-6: sem necessidade de amputação; 7 ou +: pode haver necessidade de amputação.
+| Tipo | Tamanho da Ferida | Contaminação | Antibioticoterapia |
+|---|---|---|---|
+| **Tipo I** | < 1 cm | Baixa | **Cefalosporina** de 1ª ou 2ª geração |
+| **Tipo II** | 1-10 cm | Baixa a moderada | **Penicilina** + **Metronidazol** |
+| **Tipo III A** | > 10 cm | Alta; cobertura primária possível | **Penicilina** + **Metronidazol** + **Aminoglicosídeo** |
+| **Tipo III B** | > 10 cm | Alta; cobertura primária não é possível | **Penicilina** + **Metronidazol** + **Aminoglicosídeo** |
+| **Tipo III C** | Qualquer | Alta; lesão vascular que requer reparo | **Penicilina** + **Metronidazol** + **Aminoglicosídeo** |
 
-## SÍNDROME COMPARTIMENTAL
+*Figura 10: Classificação de Gustilo & Anderson de fraturas expostas.*
 
-- DEFINIÇÕES:
+### Tratamento Operatório
 
-- Isquemia do membro determinada por expansão de tecidos moles no compartimento envolvido por uma fáscia;
+- **Gustilo & Anderson até Tipo III A**: pode ser feito **tratamento definitivo** na primeira cirurgia;
+- **Instabilidade clínica ou lesão grave de partes moles**: **controle de danos** (curativo a vácuo, fixador externo, amputação);
+- **Score de MESS**: auxílio na tomada de decisão quanto à amputação na fratura exposta:
+  - Vai de 2 a 14;
+  - Itens avaliados: gravidade da lesão, perfusão, choque, idade;
+  - **2-6**: sem necessidade de amputação;
+  - **7 ou mais**: pode haver necessidade de amputação.
 
-Figura 11: Os 5 P’s da síndrome compartimental aguda. TIPO III A Cobertura é possível >10cm Cobertura B primária não é possível + Aminoglicosídeo C Reparo vascular Alta azol
+## Síndrome Compartimental
 
-- Ocorre quando a diferença entre a pressão arterial diastólica (PAD) e a pressão do compartimento (PIC) é menor do que 30 mmHg, levando ao colapso de pequenos vasos;
+### Definição
 
-- Mais comum em fraturas de tíbia e antebraço;
+- **Isquemia do membro** determinada por **expansão de tecidos moles** no compartimento envolvido por uma fáscia;
+- Ocorre quando a diferença entre a **pressão arterial diastólica (PAD)** e a **pressão intracompartimental (PIC)** é **menor que 30 mmHg**, levando ao colapso de pequenos vasos;
+- Mais comum em fraturas de **tíbia e antebraço**;
+- Também ocorre em situações sem fratura: acidentes ofídicos, choques elétricos, esmagamentos.
 
-- Também ocorre em situações sem fratura como acidentes ofídicos, choques elétricos e esmagamentos.
+### Quadro Clínico — Os 5 P's
 
-QUADRO CLÍNICO:
+1. **Pain** (**dor desproporcional** — principal achado);
+2. **Parestesia** (formigamento, alterações sensoriais);
+3. **Paresia** (fraqueza muscular);
+4. **Palidez** (aspecto pálido do membro);
+5. **Pulso ausente** (achado tardio — não esperar para iniciar tratamento).
 
-- 5 P’s:
+*Figura 11: Os 5 P's da síndrome compartimental aguda.*
 
-- Pain (dor desproporcional), parestesia, paresia, palidez, pulso ausente;
+### Diagnóstico e Tratamento
 
-- Diagnóstico e tratamento realizados em até 6 horas evita sequelas irreversíveis;
-
-- Tratamento cirúrgico inicial: dermatofascioepimisiotomia.
-
-- Verificar Figura 11 .
-
-## 11 12 1 10 2 9 3 8 4 7 6 5 PULSO PALIDEZ AUSENTE
+- **Diagnóstico**: clínico, baseado na tríade de dor desproporcional + trauma/edema;
+- **Tratamento realizado até 6 horas** evita sequelas irreversíveis;
+- **Tratamento cirúrgico inicial**: **dermatofascioepimisiotomia** (libertação cirúrgica dos compartimentos).
 
 ---
 
 <!-- page:5 -->
 
-HIPOXEMIA 95% ALTERAÇÃO NC 60% PETÉQUIAS 33% 24-48h Figura 12: Síndrome da embolia gordurosa.
+## Síndrome da Embolia Gordurosa
 
-## SÍNDROME DA EMBOLIA
+### Definição
 
-## GORDUROSA
+- **Embolia gordurosa ocorre em 95% das fraturas de ossos longos**, mas a síndrome se manifesta na minoria dos casos;
+- Pode haver embolia para qualquer órgão;
+- Ocorre em geral **24-48 horas após o trauma**.
 
-## DEFINIÇÕES
+### Apresentação Clínica
 
-- Embolia gordurosa ocorre em 95% das fraturas de ossos longos, mas a síndrome se manifesta na minoria dos casos
+**Principais sinais** (tríade clássica):
+- **Hipoxemia** (95% dos casos com síndrome);
+- **Alteração de nível de consciência** (60%);
+- **Petéquias** (33%).
 
-- Pode have;r embolia para qualquer órgão;
+*Figura 12: Síndrome da embolia gordurosa.*
 
-- Em geral 24-48h após o trauma;
+### Diagnóstico
 
-- Principais sinais: hipoxemia, alteração de nível de consciência e petéquias.
+- **Clínico, de exclusão**: descartar reação transfusional, trauma de tórax com hipoxemia.
 
-- Verificar Figura 12 Fratura de
+### Tratamento
 
-## OSSOS LONGOS
+- **Suporte** (oxigenação, ventilação conforme necessário);
+- **Fixação precoce da fratura** — previne ocorrência da síndrome da embolia gordurosa.
 
-## DIAGNÓSTICO
+## Referências
 
-- Clínico de exclusão: descartar reação transfusional, trauma de tórax com hipoxemia.
-
-TRATAMENTO:
-
-- Suporte;
-
-- Fixação precoce da fratura - previne ocorrência da embolia gordurosa.
-
-## REFERÊNCIAS
-
-Todas as figuras = Acervo Medcof
+Todas as figuras: Acervo Medcof.

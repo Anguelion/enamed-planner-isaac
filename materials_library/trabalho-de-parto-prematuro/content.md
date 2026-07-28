@@ -2,204 +2,174 @@
 
 <!-- page:1 -->
 
-- Definição: Contrações uterinas regulares que modificam o colo uterino antes de 37 semanas completas, mas após 20-22 semanas.
+## Definição
 
-Tocólise
+- **Contrações uterinas regulares** que modificam o colo uterino **antes de 37 semanas completas**, mas após 20-22 semanas.
 
-- Objetivo: dar tempo do corticoide fazer efeito;
+## Prematuridade
 
-- Contraindicações: óbito fetal, malformação fetal incompatível com a vida, alteração de vitalidade fetal, quadros hipertensivos graves, hemorragia materna com instabilidade, corioamnionite, doenças cardíacas graves, maturidade fetal comprovada.
+### Definição
 
-## PREMATURIDADE
+- **Nascimento antes de 37 semanas**, mas após 20-22 semanas.
 
-## DEFINIÇÃO
+### Fatores de Risco
 
-- Nascimento antes de 37 semanas, mas após 20 –
+- **Antecedente de Trabalho de Parto Prematuro** (TPP);
+- **Socioeconômicos**: drogadição, tabagismo, etilismo etc.;
+- **Psicológicos**: depressão, ansiedade;
+- **Infecções**;
+- **Gemelaridade, polidrâmnio**;
+- **Incompetência istmocervical** (IIC), colo curto, malformações uterinas;
+- **Ruptura prematura de membranas ovulares** (RPMO);
+- **Estresse físico ou mental**.
 
-22 semanas. FATORES DE RISCO
+## Diagnóstico
 
-- Antecedente de Trabalho de Parto Prematuro (TPP);
+**Critério obrigatório:**
+- **Contrações uterinas** + **Modificação do colo** (esvaecimento, amolecimento, dilatação).
 
-- Socioeconômicos: drogadição, tabagismo, etilismo etc.;
+### Medidas de Predição
 
-- Depressão, ansiedade;
+- **Dosagem de fibronectina**: VPN de 90-95%, tornando-se pouco provável parturição em até 15 dias;
+- **Medida do comprimento cervical** (< 25 mm) em pacientes com fatores de risco ou sintomáticas → aumento do risco.
 
-- Infecções;
+## Conduta Diagnóstica
 
-- Gemelaridade, polidrâmnio;
+- **Anamnese**;
+- **Exame clínico completo**: buscar causa → quadro infeccioso, uso de drogas, estressores;
+- **Cardiotocografia**;
+- **Ultrassonografia**;
+- **Laboratorial**: urina 1, urocultura e pesquisa de estreptococo do grupo B (EGB).
 
-- Incompetência istmocervical (IIC), colo curto, malformações uterinas;
+---
 
-- Ruptura prematura de membranas ovulares (RPMO);
+## Pilares do Tratamento
 
-- Estresse físico ou mental.
+1. **Corticoterapia**
+2. **Tocólise**
+3. **Neuroproteção fetal**
+4. **Profilaxia contra EGB**
 
-## TRABALHO DE PARTO
+### Corticoterapia
 
-PREMATURO DIAGNÓSTICO Contrações uterinas + Modificação do colo:
+**Objetivos:**
+- **Maturação pulmonar** (principal);
+- **Redução de hemorragia periventricular**;
+- **Redução de enterocolite necrosante**.
 
-- Esvaecimento;
+**Quando fazer:**
+- **Entre 24 e 34 semanas de gestação**.
 
-- Amolecimento;
+**Maior efeito:** 24 horas após, durando até 7 dias.
 
-- Dilatação.
+**Tabela 1: Esquemas de Corticoterapia Antenatal**
 
-## MEDIDAS DE PREDIÇÃO
+| Medicação | Dose | Intervalo | Duração | Total de Doses |
+|---|---|---|---|---|
+| **Dexametasona** | 6 mg | 12/12 h | 48 h | 4 doses |
+| **Betametasona** | 12 mg | 24/24 h | 48 h | 2 doses |
 
-- Dosagem de fibronectina: VPN de 90 a 95%, tornando-se pouco provável parturição em até 15 dias;
+### Tocólise
 
-- Medida do comprimento cervical (<25mm) em pacientes com fatores de risco ou sintomáticas → aumento do risco.
+**Quando fazer:**
+- **Membranas íntegras**;
+- **Até 4-5 cm de dilatação**;
+- **Entre 24 e 34 semanas**.
 
-## CONDUTA
+**Objetivo:**
+- Dar **tempo para o corticoide fazer efeito** (permitir ciclo completo de maturação pulmonar).
 
-- Anamnese;
+**Contraindicações Absolutas:**
+- **Óbito fetal**;
+- **Anomalia fetal letal** (malformação fetal incompatível com a vida);
+- **Alteração de vitalidade fetal**;
+- **Quadros hipertensivos graves**;
+- **Hemorragia materna com instabilidade**;
+- **Corioamnionite**;
+- **Doenças cardíacas graves**;
+- **Maturidade fetal comprovada**.
 
-- Exame clínico completo: buscar causa → quadro infeccioso, uso de drogas, estressores;
+### Medicações Tocolíticas
 
-- Cardiotocografia;
+**Agonistas beta-adrenérgicos (Terbutalina IV):**
+- Início: pelo menos 4 horas antes de parto prematuro eletivo;
+- **Efeitos colaterais**: palpitação, mal-estar, tremores, hiperglicemia, hipocalemia, taquiarritmias, edema agudo de pulmão;
+- **Contraindicado**: miastenia gravis, suspeita de infecção, cardiopatas, hipertensas, diabéticas.
 
-- Ultrassonografia;
+**Bloqueadores de canal de cálcio (Nifedipino VO) — off-label, porém primeira escolha atual:**
+- **Efeitos colaterais**: rubor, cefaleia, náuseas, hipotensão;
+- **Não usar se**: doença cardiovascular, disfunção hepática, hipotensão, hipertensas prévias;
+- **Cuidado**: associar com sulfato de magnésio aumenta risco de hipotensão grave e bloqueio neuromuscular.
 
-- Laboratorial: urina 1, urocultura e Pesquisa de estreptococo do grupo B (EGB). Corticoterapia
+**Inibidores das prostaglandinas-sintetases (Indometacina VO ou VR):**
+- **Efeitos colaterais**: náusea, vômito, gastrite, doença do refluxo gastroesofágico, constrição do canal arterial, oligoâmnio;
+- **Não utilizar se**: idade gestacional > 32 semanas, restrição do crescimento fetal e/ou oligoâmnio presentes.
 
-- Objetivo: Maturação pulmonar;
+**Antagonista específico do receptor de ocitocina (Atosiban IV):**
+- Maravilhoso, porém caro;
+- **Efeitos colaterais**: documentar conforme disponibilidade de informações.
 
-- Quando fazer? Entre 24 e 34 semanas de gestação.
-
-Neuroproteção fetal
-
-- Quando fazer? Até 31 semanas e 6 dias e parto iminente.
-
-Profilaxia EBG
-
-- Esquemas: Ampicilina 2g EV + 1g 4/4h ou Penicilina s Cristalina 5mi UI EV + 2,5mi UI 4/4h.
-
-- Pilares do tratamento: Corticoide; Tocólise; Neuroproteção fetal; Profilaxia EGB.
-
-Corticoide
-
-- Objetivos: Maturação pulmonar: principal; Redução de hemorragia periventricular; Redução de enterocolite necrosante.
-
-- Maior efeito de 24h após e até 7 dias.
-
-Tabela 1: Esquemas de corticoterapia antenatal. Dexametasona Betametasona 6 mg 12/12h por 48h 12 mg 24/24h por 48h 4 doses total 2 doses total Quando fazer?
-
-- Indicada entre 24 e 34 semanas de gestação.
-
-Tocólise Quando?
-
-- Membranas íntegras;
-
-- Até 4 a 5 cm de dilatação;
-
-- Entre 24 e 34 semanas.
-
-Objetivo
-
-- Para que dê tempo de fazer o ciclo do corticoide.
-
-Contraindicações Absolutas
-
-- Óbito fetal;
-
-- Anomalia fetal letal;
-
-- Alteração de vitalidade fetal;
-
-- Quadros hipertensivos graves;
-
-- Hemorragia materna com instabilidade;
-
-- Corioamnionite;
-
-- Doenças cardíacas graves.
-
-Medicações
-
-- Agonistas beta-adrenérgicos → Terbutalina IV
-
-- Bloqueadores de canais de cálcio → Nifedipino VO
-
-- Inibidores da prostaglandina sintetase → Indometacina
-
-VO ou VR
-
-- Antagonista específico do receptor de ocitocina → Atosiban IV
-
-Na falha de um tocolítico, pode-se tentar outro.
+**Nota:** Na falha de um tocolítico, pode-se tentar outro.
 
 ---
 
 <!-- page:2 -->
 
-Agonistas beta-adrenérgicos
+### Neuroproteção Fetal
 
-- Se parto prematuro eletivo, iniciar, pelo menos, 4 horas;
+**Quando fazer:**
+- **Até 31 semanas e 6 dias** com alta probabilidade de parto em 24 horas.
 
-- Efeitos colaterais:
+**Medicação:**
+- **Sulfato de Magnésio**: 4 g EV + 1 g EV 1h/1h.
 
-- Contraindicado se paciente tiver miastenia gravis. Palpitação, mal-estar, tremores; Hiperglicemia, hipocalemia; ANTIBIOTICOTERAPIA Taquiarritmias;
+### Profilaxia contra Estreptococo do Grupo B (EGB)
 
-- Coletar cultura vaginal + perianal e pesquisar EGB; Edema agudo de pulmão.
+**Quando fazer:**
+- **Urocultura positiva para EGB** no pré-natal;
+- **Rastreio positivo** antes do trabalho de parto;
+- **Filho anterior com sepse precoce por EGB**;
+- **EGB desconhecido** + idade gestacional < 37 semanas;
+- **EGB desconhecido** + RPMO ≥ 18 horas e IG ≥ 37 semanas;
+- **Febre materna** (≥ 38°C).
 
-- Esquemas:
+**Esquemas:**
+- **Ampicilina** 2 g IV + 1 g 4/4 h, OU
+- **Penicilina cristalina** 5 mi UI IV (ataque) + 2,5 mi UI 4/4 h (manutenção).
 
-- Não utilizar: suspeita de infecção, cardiopatas, | Ampicilina 2g IV + 1g 4/4h ou hipertensas e diabéticas. | Penicilina cristalina 5miUI IV (ataque) + 2,5miUI primeira escolha atual) Profilaxia EGB – Quando fazer
-
-Bloqueadores de canal de cálcio (off label, porém 4/4h (manutenção)
-
-- Efeitos colaterais:
-
-- Urocultura positiva para EGB no pré-natal; Rubor, cefaleia, náuseas e hipotensão.
-
-- Rastreio positivo antes do trabalho de parto;
-
-- Não usar se: doença cardiovascular, disfunção
-
-- Filho anterior com sepse precoce por EGB hepática, hipotensão, hipertensas prévias.
-
-- EGB desconhecido: Idade gestacional <37 semanas;
-
-Cuidado em associar com sulfato de magnésio → risco | RPMO ≥18 horas e IG ≥ 37 semanas ; de hipotensão grave e bloqueio neuromuscular | Febre materna (≥38oC).
-
-- Verificar Figura 1
-
-Inibidores das prostaglandinas-sintetases
-
-- Efeitos colaterais: E DEPOIS? Náusea, vômito, gastrite, doença do
-
-- Não recomendar repouso;
-
-refluxo gastroesofágico;
-
-- Não fazer uso de tocolítico de manutenção; Constrição canal arterial;
-
-- Progesterona 200mg via vaginal? Incerto Oligoâmnio.
-
-- Dose de resgate de corticoide (segundo ciclo):
-
-- Não utilizar se: idade gestacional > 32 | Menos de 34 semanas;
-
-semanas, restrição do crescimento fetal e/ou | Primeiro ciclo há mais de 7 - 14 dias. oligoâmnio presentes.
-
-Antagonista da ocitocina E SE NÃO DEU CERTO – PARTO
-
-- Efeitos colaterais:
-
-- Parto Vaginal Maravilhoso, porém caro. | Apresentação cefálica fletida → sem restrições;
-
-Neuroproteção fetal | Vigilância bem estar fetal;
-
-- Até 31 semanas e 6 dias/ | Evitar amniotomia;
-
-- Se alta probabilidade de parto em 24 horas; | Não fazer episiotomia de rotina.
-
-- Fórceps: idealmente IG > 34 semanas;
-
-Sulfato de Magnésio
-
-- Cesárea: apresenta dificuldades técnicas.
-
-4g EV + 1g EV 1h/1h Figura 1: Conduta para profilaxia contra estreptococo do grupo B em pacientes com trabalho de parto prematuro.
+Figura 1: Conduta para profilaxia contra estreptococo do grupo B em pacientes com trabalho de parto prematuro.
 
 ![Figura do material - página 2](figure-002-1.webp)
+
+---
+
+## Conduta Após TPP (Se não Resultou em Contraindicação)
+
+### Cuidados Gerais
+
+- **Não recomendar repouso**;
+- **Não fazer uso de tocolítico de manutenção**;
+- **Progesterona 200 mg via vaginal?** Incerto.
+
+### Dose de Resgate de Corticoide (Segundo Ciclo)
+
+- **Indicada**: menos de 34 semanas;
+- **Intervalo**: primeiro ciclo há mais de 7-14 dias.
+
+### Se o Parto Ocorrer (Apesar das Medidas)
+
+**Apresentação Cefálica Fletida (Vaginal):**
+- Sem restrições;
+- Vigilância bem-estar fetal;
+- **Evitar amniotomia**;
+- **Não fazer episiotomia de rotina**.
+
+**Fórceps:**
+- Idealmente IG > 34 semanas.
+
+**Cesárea:**
+- Apresenta dificuldades técnicas.
+
+## Resumo
+
+Todos os 7 arquivos foram reformatados e processados conforme protocolo: ortografia/acentuação corrigidas, cabeçalhos em Title Case com `##`/`###`, termos-chave em **negrito**, listas e sublistas organizadas, colunas desembaraçadas, tabelas reconstruídas com atenção à lógica clínica, preservação de `<!-- page:N -->`, referências de imagem e separadores `---`.

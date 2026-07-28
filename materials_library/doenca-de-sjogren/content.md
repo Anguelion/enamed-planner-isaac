@@ -2,67 +2,43 @@
 
 <!-- page:1 -->
 
-Sjogren (CM)
+## Introdução
 
-- Infiltração linfocítica de glândulas exócrinas; CRITÉRIOS DE CLASSIFICAÇÃO
+**Síndrome de Sjögren (CM)**
 
-- Mulheres (10:1) de meia-idade (> 45 anos).
+- **Fisiopatologia**: infiltração linfocitária de glândulas exócrinas
+- **Predomínio em mulheres**: 10:1
+- **Faixa etária**: meia-idade (> 45 anos)
+- **Associação**: pode ser isolado ou estar associado a outras doenças reumatológicas (ex.: doença de Sjögren associada à artrite reumatoide)
 
-- Critérios ACR/EULAR (2016), necessitando
+---
 
-## MANIFESTAÇÕES CLÍNICAS ≥ 4 pontos
+## Manifestações Clínicas
 
-- Exócrina (60%):
+### Exocrinopatia (60% dos casos)
 
-- Biópsia de glândula salivar com sialoadenite Xeroftalmia: ardor, prurido, turvação; linfocítica focal (3 pontos); Xerostomia: disgeusia, cáries, boca seca;
+**Manifestações locais:**
 
-- Anti-Ro positivo (3 pontos); Parotidite, secura vaginal, xerose
+- **Xeroftalmia** (olhos secos):
+  - Ardor, dor e prurido ocular
+  - Turvação visual
+  
+- **Xerostomia** (boca seca):
+  - Alteração do paladar (disgeusia)
+  - Dificuldade para mastigar e deglutir
+  - Cáries recorrentes e perda dentária
+  
+- **Xerotraqueia** (secura traqueal)
 
-- Teste de Schirmer positivo (≤5 mm/5 min), cutânea, xerotraqueia. fluxo salivar reduzido (≤0,1 ml/min), teste ocular
+- **Xerose cutânea** (pele seca)
 
-- Extraglandular (40%): com fluoresceína ou verde-lissamina positivo (1 Articular: poliartrite não erosiva; ponto cada). Pulmonar: PINE (padrão intersticial mais comum), TRATAMENTO
+- **Secura vaginal** (desconforto genital, especialmente em mulheres pós-menopáusicas)
 
-PIL (mais específica), bronquiolite;
-
-- Não farmacológico: óculos, chiclete, umidificador, Hemato: anemia crônica, linfopenia; evitar tricíclicos, exercício físico para fadiga; Neurológico: neuropatias periféricas;
-
-- Farmacológico: lágrima/saliva artificial, pilocarpina, Cutâneo: púrpura (vasculite); hidroxicloroquina (articular), corticoide (fase Renal: acidose tubular renal distal; aguda), rituximabe (grave/refratário). Fadiga crônica. COMPLICAÇÕES
-
-## EXAMES LABORATORIAIS
-
-- Linfoma não Hodgkin MALT. Maior risco: aumento
-
-- Anti-Ro/SSA em 30–60% e anti-La/SSB persistente de parótidas, linfadenopatia, púrpura e em 15–40%; consumo de complemento.
-
-- FAN: nuclear pontilhado fino;
-
-- FR em altos títulos e consumo de C4 podem indicar crioglobulinemia.
-
-## INTRODUÇÃO
-
-- Predomínio em mulheres (10:1);
-
-- Meia-idade (> 45 anos);
-
-- Fisiopatologia: infiltração linfocitária de glândulas exócrinas;
-
-- Pode ser isolado ou estar associado a outras doenças reumatológicas (ex.: doença de Sjögren associada à artrite reumatoide).
-
-## MANIFESTAÇÕES CLÍNICAS
+- **Parotidites de repetição**: aumento doloroso e recorrente das parótidas
 
 Figura 1: Xerostomia.
 
-## EXOCRINOPATIA
-
-- Presente isoladamente em até 60% dos casos;
-
-- Pode cursar com: Xeroftalmia (olhos secos): Ardor, dor e prurido ocular; Turvação visual. Xerostomia (boca seca): Alteração do paladar (disgeusia); Dificuldade para mastigar e deglutir; Cáries recorrentes e perda dentária.
-
-- Verificar Figura 1 Xerotraqueia (secura traqueal); Figura 2: Paciente com doença de Sjögren e parotidite bilateral. Xerose cutânea (pele seca); Secura vaginal (desconforto genital, especialmente EXTRAGLANDULAR em mulheres pós-menopáusicas);
-
-- Presente em cerca de 40% dos casos; Parotidites de repetição:
-
-- Articular: Aumento doloroso e recorrente das parótidas. | Artrite e artralgia semelhante ao LES; Poliartrite simétrica;
+Figura 2: Paciente com doença de Sjögren e parotidite bilateral.
 
 ![Figura do material - página 1](figure-001-1.webp)
 
@@ -72,51 +48,109 @@ Figura 1: Xerostomia.
 
 <!-- page:2 -->
 
-| Predomínio de pequenas articulações;
+### Manifestações Extraglandulares (40% dos casos)
 
-- FAN: padrão nuclear pontilhado fino (NPF), positivo Em geral, não erosiva. em até 80%;
+#### Articular
 
-- Pulmonar:
+- Artrite e artralgia semelhante ao LES
+- Poliartrite simétrica (predomínio de pequenas articulações)
+- Em geral, **não erosiva**
 
-- Fator reumatoide: positivo em cerca de 30% (pode Doença intersticial pulmonar: sugerir presença de crioglobulinemia); PINE (pneumonia intersticial não específica): é o
+#### Pulmonar
 
-- Consumo de C4: podem ser sugestivos da presença PINE (pneumonia intersticial não específica): é o padrão mais prevalente; PIL (pneumonia intersticial linfocítica): é o padrão mais específico; Doença obstrutiva das vias aéreas (bronquiolite).
+**Doença intersticial pulmonar:**
 
-- Figura 3: Pneumonia intersticial linfocítica (PIL).
+- **PINE** (pneumonia intersticial não específica): padrão mais prevalente
+- **PIL** (pneumonia intersticial linfocítica): padrão mais específico
+- Doença obstrutiva das vias aéreas (bronquiolite)
 
-Observe a formação de múltiplos cistos no parênquima pulmonar.
+Figura 3: Pneumonia intersticial linfocítica (PIL). Observe a formação de múltiplos cistos no parênquima pulmonar.
 
-- Hematológico: Linfopenia, leucopenia, plaquetopenia; Anemia hemolítica autoimune e anemia de doença crônica.
+#### Hematológico
 
-- Cutâneo: Vasculite leucocitoclástica; Púrpuras palpáveis, especialmente em membros inferiores.
+- Linfopenia
+- Leucopenia
+- Plaquetopenia
+- Anemia hemolítica autoimune
+- Anemia de doença crônica
 
-- Neurológico: Predomínio de acometimento periférico; Mononeuropatia, polineuropatia sensitiva e/ ou motora; Neuropatia de fibras finas; Padrão desmielinizante central em alguns casos.
+#### Cutâneo
 
-- Sistêmico geral: A fadiga é muito prevalente e de difícil manejo nos pacientes com Sjögren.
+- **Vasculite leucocitoclástica**
+- **Púrpuras palpáveis**, especialmente em membros inferiores
 
-- Renal: Nefrite tubulointersticial com infiltrado linfocítico é o mais comum; E a acidose tubular renal distal (tipo 1) é a principal manifestação clínica: Hipocalemia, nefrolitíase e nefrocalcinose.
+#### Neurológico
 
-- Anti-Ro/SSA: positivo em 30–60%, associa-se às manifestações clássicas da doença e ao lúpus neonatal e bloqueio atrioventricular congênito em bebês de pacientes com Sjögren;
+- Predomínio de acometimento periférico
+- Mononeuropatia
+- Polineuropatia sensitiva e/ou motora
+- Neuropatia de fibras finas
+- Padrão desmielinizante central (em alguns casos)
 
-- Anti-La/SSB: presente em 15–40%, geralmente associado ao anti-Ro; - Consumo de C4: podem ser sugestivos da presença de crioglobulinemia;
+#### Renal
 
-- Crioglobulina: podem ser positiva em 10% dos pacientes, é marcadora de pior prognóstico.
+- **Nefrite tubulointersticial** com infiltrado linfocítico (mais comum)
+- **Acidose tubular renal distal (tipo 1)** — principal manifestação clínica:
+  - Hipocalemia
+  - Nefrolitíase
+  - Nefrocalcinose
 
-A doença de Sjögren é uma das etiologias associadas à crioglobulinemia. Elevados títulos de fator reumatoide, consumo de complemento (principalmente de C4) e presença de púrpura palpável devem motivar a pesquisa de crioglobulina.
+#### Sistêmico Geral
 
-## CRITÉRIOS DE CLASSIFICAÇÃO
+- **Fadiga crônica** — muito prevalente e de difícil manejo nos pacientes com Sjögren
 
-- Critérios ACR (Colégio Americano de Reumatologia)/
+---
 
-EULAR (Liga Europeia contra o Reumatismo de 2016);
+## Exames Laboratoriais
 
-- Os critérios devem ser aplicados em pacientes com sintomas de xeroftalmia, xerostomia ou acometimento extraglandular compatível com a doença de Sjögren.
+### Sorologia
 
-Tabela 1: Critérios de classificação para o Sjögren ACR/EULAR 2016. Critério Pontos Biópsia de glândula salivar com infiltrado linfocítico focal 3 (focus score ≥1)
+- **Anti-Ro/SSA**: positivo em **30-60%**
+  - Associa-se às manifestações clássicas da doença
+  - Associa-se a **lúpus neonatal** e **bloqueio atrioventricular congênito** em bebês de pacientes com Sjögren
 
-Anti-Ro positivo 3 Testes de coloração ocular positivos (fluoresceína/verde-lissamina) Teste de Schirmer ≤ 5 mm/5 min 1 Fluxo salivar não estimulado ≤ 0,1 mL/min 1 ≥4 pontos classificam como doença de Sjögren!
+- **Anti-La/SSB**: presente em **15-40%**
+  - Geralmente associado ao anti-Ro
 
-Figura 4: Biópsia de glândula salivar menor.
+- **FAN**: padrão **nuclear pontilhado fino (NPF)**, positivo em até **80%**
+
+- **Fator reumatoide**: positivo em cerca de **30%**
+  - Pode sugerir presença de crioglobulinemia
+
+### Consumo de Complemento e Crioglobulina
+
+- **Consumo de C4**: pode ser sugestivo da presença de **crioglobulinemia**
+
+- **Crioglobulina**: pode ser positiva em **10% dos pacientes**
+  - Marcadora de pior prognóstico
+
+**Nota importante**: A doença de Sjögren é uma das etiologias associadas à crioglobulinemia. Elevados títulos de fator reumatoide, consumo de complemento (principalmente de C4) e presença de púrpura palpável devem motivar a pesquisa de crioglobulina.
+
+---
+
+## Critérios de Classificação
+
+### Critérios ACR/EULAR (2016)
+
+**Aplicável em pacientes com sintomas de xeroftalmia, xerostomia ou acometimento extraglandular compatível com a doença de Sjögren.**
+
+**Necessário ≥ 4 pontos para classificação:**
+
+| Critério | Pontos |
+|---|---|
+| **Biópsia de glândula salivar** com infiltrado linfocítico focal (focus score ≥ 1) | 3 |
+| **Anti-Ro positivo** | 3 |
+| **Testes de coloração ocular positivos** (fluoresceína/verde-lissamina) | 1 |
+| **Teste de Schirmer ≤ 5 mm/5 min** | 1 |
+| **Fluxo salivar não estimulado ≤ 0,1 mL/min** | 1 |
+
+**≥ 4 pontos = classificam como doença de Sjögren!**
+
+### Investigações Complementares
+
+Figura 4: Biópsia de glândula salivar menor. Observam-se infiltrados linfocitários focais ao redor de ductos, característicos de sialoadenite linfocítica, achado típico da síndrome de Sjögren.
+
+Figura 5: Teste de Schirmer. É considerado positivo quando a umidificação da tira de papel filtro posicionada no fórnice inferior é ≤ 5 mm após 5 minutos, indicando redução da produção de lágrima.
 
 ![Figura do material - página 2](figure-002-1.webp)
 
@@ -126,56 +160,62 @@ Figura 4: Biópsia de glândula salivar menor.
 
 <!-- page:3 -->
 
-Observam-se infiltrados linfocitários focais ao redor de
+## Tratamento
 
-- Rituximabe: reservado para formas graves ou ductos, característicos de sialoadenite linfocítica, achado refratárias, como acometimento neurológico, típico da síndrome de Sjögren. pulmonar, vasculites sistêmicas extensas, ou em casos associados à crioglobulinemia.
+### Não Farmacológico
 
-Figura 5: Teste de Schirmer. É considerado positivo quando a umidificação da tira de papel filtro posicionada no fórnice inferior é ≤ 5 mm após 5 minutos, indicando redução da produção de lágrima.
+- **Óculos de proteção lateral**
+- **Chicletes/pastilhas sem açúcar**
+- **Hidratantes para a pele**
+- **Umidificadores de ambiente**
+- **Suspender fármacos** que agravam a secura (ex.: antidepressivos tricíclicos)
+- **Exercício físico** para a fadiga
 
-## TRATAMENTO
+### Farmacológico
 
-## NÃO FARMACOLÓGICO
+- **Colírios lubrificantes e saliva artificial**: para alívio sintomático da secura ocular e oral
 
-- Óculos de proteção lateral;
+- **Pilocarpina**: secretagogo que estimula a secreção das glândulas exócrinas, indicada em casos com resquício funcional glandular
 
-- Chicletes/pastilhas sem açúcar;
+- **Corticosteroides**: utilizados em fases agudas, para controle de parotidite recorrente e manifestações extraglandulares
 
-- Hidratantes para a pele;
+- **Hidroxicloroquina**: com efeito imunomodulador, especialmente útil em manifestações articulares
 
-- Umidificadores de ambiente;
+- **Rituximabe**: reservado para formas **graves ou refratárias**, como:
+  - Acometimento neurológico
+  - Doença pulmonar grave
+  - Vasculites sistêmicas extensas
+  - Casos associados à crioglobulinemia
 
-- Suspender fármacos que agravam a secura (ex.:
+---
 
-antidepressivos tricíclicos);
+## Complicações
 
-- Exercício físico para a fadiga.
+### Principal Complicação
 
-## FARMACOLÓGICO
+**Transformação linfomatosa**, especialmente para **linfoma não Hodgkin tipo MALT** (tecido linfoide associado à mucosa)
 
-- Colírios lubrificantes e saliva artificial: para alívio sintomático da secura ocular e oral;
+### Fatores de Risco para Transformação Linfomatosa
 
-- Pilocarpina: secretagogo que estimula a secreção das glândulas exócrinas, indicada em casos com resquício funcional glandular;
+- **Parotidite persistente** (aumento endurecido, assimétrico ou unilateral da parótida)
+- **Linfadenopatia generalizada**
+- **Púrpura cutânea** (sugere crioglobulinemia)
+- **Hipocomplementemia** (também sugere crioglobulinemia)
 
-- Corticosteroides: utilizados em fases agudas, para controle de parotidite recorrente e manifestações extraglandulares;
+**Nota importante**: Crioglobulinemia é um marcador de maior risco para complicações graves e para linfoma na doença de Sjögren!
 
-- Hidroxicloroquina: com efeito imunomodulador, é especialmente útil em manifestações articulares; COMPLICAÇÕES
+---
 
-- A principal complicação do Sjögren é a transformação linfomatosa, especialmente para linfoma não Hodgkin tipo MALT (tecido linfoide associado à mucosa);
+## Referências
 
-- Fatores de risco para transformação linfomatosa: Parotidite persistente (aumento endurecido, assimétrico ou unilateral da parótida); Linfadenopatia generalizada; Púrpura cutânea (sugere crioglobulinemia); Hipocomplementemia (também sugere crioglobulinemia).
+Figura 1: Xerostomia. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 17 junho 2025.
 
-Crioglobulinemia é um marcador de maior risco para complicações graves e para linfoma na doença de Sjögren!
+Figura 2: Paciente com doença de Sjögren e parotidite bilateral. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 17 junho 2025.
 
-## REFERÊNCIAS
+Figura 3: Pneumonia intersticial linfocítica (PIL). LYMPHOID interstitial pneumonia. Last revised by Yuranga Weerakkody on 11 Jun. 2025. Radiopaedia. Disponível em: https://radiopaedia.org/articles/lymphoid-interstitial-pneumonia. Acesso em: 17 jun. 2025.
 
-Figura 1: Xerostomia. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 17 junho 2025.
+Figura 4: Biópsia de glândula salivar menor. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 17 junho 2025.
 
-Figura 2: Paciente com doença de Sjögren e parotidite bilateral. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 17 junho 2025.
-
-Figura 3: Pneumonia intersticial linfocítica (PIL). LYMPHOID interstitial pneumonia. Last revised by Yuranga Weerakkody on 11 Jun. 2025. Radiopaedia. Disponível em: https://radiopaedia.org/articles/ lymphoid-interstitial-pneumonia. Acesso em: 17 jun. 2025.
-
-Figura 4: Biópsia de glândula salivar menor. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 17 junho 2025.
-
-Figura 5: Teste de Schirmer. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https:// rheumatology.org/image-library. Acesso em: 17 junho 2025.
+Figura 5: Teste de Schirmer. AMERICAN COLLEGE OF RHEUMATOLOGY. Biblioteca de Imagens da Reumatologia. Atlanta, GA: ACR, c2025. Disponível em: https://rheumatology.org/image-library. Acesso em: 17 junho 2025.
 
 ![Figura do material - página 3](figure-003-1.webp)

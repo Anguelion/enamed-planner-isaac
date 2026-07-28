@@ -1,277 +1,254 @@
-# Urgências Endoscópicas HDB
+# Urgências Endoscópicas: Hemorragia Digestiva Baixa (HDB)
 
 <!-- page:1 -->
 
-Endoscopia; Hemorragia digestiva
+## Epidemiologia
 
-- HDB maciça: trata como HDA (monitorização, estabilização, EDA, arteriografia, cirurgia)
+- **80%-93%** dos casos cessam espontaneamente;
+- Demonstra baixa mortalidade: aproximadamente **3%**.
 
-- HDB não maciça: EDA!! Se negativa, preparo de cólon e colonoscopia em 24h
+### Indicadores de Gravidade
 
-## EPIDEMIOLOGIA
+- Instabilidade hemodinâmica;
+- Uso de anticoagulantes;
+- Necessidade de transfusão;
+- Ressangramento no intervalo de 24 horas.
 
-## CONSIDERAÇÕES GERAIS
+## Etiologia
 
-- 80%-93% dos casos cessam espontaneamente;
+- **Doença diverticular**: 30%-65% (principal causa em adulto);
+- **Angiodisplasia**: mais frequente em jovens;
+- **Colite isquêmica** e doença orificial: 5%-20%;
+- **Pós-polipectomia**;
+- **Neoplasia/DII** (doença inflamatória intestinal).
 
-- Demonstra baixa mortalidade: aproximadamente 3%;
+## Clínica
 
-- Indicadores de gravidade; Instabilidade hemodinâmica; Uso de anticoagulantes; Necessidade de transfusão; Ressangramento no intervalo de 24 horas.
+### Manifestações Clínicas
 
-## ETIOLOGIA
+**Enterorragia**: sangramento com características diarreicas, de modo explosivo, precedido de cólicas, de coloração vermelho-vivo em geral.
 
-- De acordo com idade. Doença diverticular – 30%-65% Colite isquêmica e doença orificial – 5%-20% Angiodisplasia – mais frequente em jovens; Pós-polipectomia; Neoplasia/DII.
+**Hematoquezia**: sangramento associado/entremeado às fezes, seja de coloração vermelho-vivo ou com algum coágulo residual.
 
-## CLÍNICA
-
-Manifestações Clínicas
-
-- Exteriorização (enterorragia, hematoquezia); Enterorragia: sangramento com características diarreicas, de modo explosivo, precedido de cólicas, de coloração vermelho-vivo em geral; Hematoquezia: sangramento associado/ entremeado às fezes, seja de coloração vermelhovivo ou com algum coágulo residual.
-
-Exames laboratoriais
+### Exames Laboratoriais
 
 - Anemia hipocrômica/microcítica.
 
-História
+### História
 
 - Comorbidades;
+- Colonoscopia recente;
+- Uso de medicações (AINEs).
 
-- Colonoscopia recente; uso de medicações (AINEs).
+## Manejo Inicial
 
-## MANEJO INICIAL
+- Acesso venoso, monitorização, estabilidade (mesma forma que HDA);
+- **Exame físico: toque retal!!!**
+- **Anuscopia** – útil para diagnóstico diferencial com doenças orificiais.
 
-- Dá-se da mesma forma como a HDA: acesso venoso, monitorização, estabilidade;
+## Estratégia de Abordagem
 
-- Exame físico: toque retal!!!
+**HDB maciça**: trata como HDA (monitorização, estabilização, EDA, arteriografia, cirurgia).
 
-- Anuscopia – útil para diagnóstico diferencial com doenças orificiais.
+**HDB não maciça**: EDA em primeiro lugar. Se negativa, preparo de cólon e colonoscopia em 24h.
 
-## ABORDAGEM INICIAL
+### Endoscopia Digestiva Alta (EDA)
 
-Endoscopia digestiva alta;
-
-- Primeiro exame;
-
+- Primeiro exame realizado;
 - Útil para descartar sangramento de origem alta;
+- **10%-15%** das hematoquezias têm origem alta (enteroscopia é terapêutica).
 
-- 10%-15% das hematoquezias têm origem alta; | COLONO positiva? Trata segundo etiologia COLONO negativa? Cintilo, arterio, angioTC TUDO NEGATIVO? Investiga como HDM
+### Colonoscopia
 
-(enteroscopia é terapêutica) Colonoscopia;
-
-- A grande vantagem é que a colonoscopia pode ser diagnóstica e terapêutica;
-
-- Necessita de estabilidade hemodinâmica;
-
-- Preparo de cólon é necessário; De preferência com manitol e PEG; Lembre-se do efeito catártico do sangue;
-
+- **Grande vantagem**: pode ser diagnóstica E terapêutica;
+- Necessita de **estabilidade hemodinâmica**;
+- **Preparo de cólon é necessário**: de preferência com manitol e PEG. Lembre-se do efeito catártico do sangue;
 - A sedação pode piorar a estabilidade;
+- Viabiliza **tatuagem** para posterior abordagem cirúrgica;
+- **Não precisa de sangramento ativo**: basta coágulos e coto vascular visível.
 
-- Viabiliza tatuagem para posterior abordagem cirúrgica;
+**Se não visualizado o foco de sangramento:**
 
-- Não precisa de sangramento ativo: basta coágulos e coto vascular visível;
+- Repetir o exame em 24-48 horas;
+- Se houver ressangramento: AngioTC ou cintilografia.
 
-- Caso não seja visualizado o foco de sangramento: Repetir o exame em 24-48 horas; Caso haja ressangramento, outra opção é fazer angioTC ou cintilografia.
+**Contraindicações:**
 
-- Contraindicações: Suspeita de perfuração; Instabilidade hemodinâmica; Colite grave – risco de perfuração ou de translocação bacteriana.
+- Suspeita de perfuração;
+- Instabilidade hemodinâmica;
+- Colite grave (risco de perfuração ou translocação bacteriana).
 
-Outras medidas
+### Outras Medidas Iniciais
 
-- Transfusão antes do exame endoscópico se: RNI > 2,5; Plaquetas < 50.000/mm³;
+**Transfusão antes do exame endoscópico se:**
 
-, | Hb < 5 g/dL.
+- RNI > 2,5;
+- Plaquetas < 50.000/mm³;
+- Hb < 5 g/dL.
 
-- Sonda nasogástrica para descartar sangramento alto
+**Sonda nasogástrica**: para descartar sangramento alto (discutível e pouco utilizado).
 
-(discutível e pouco utilizado);
+## Métodos Diagnósticos Alternativos
 
-## ALTERNATIVAS DIAGNÓSTICAS
+### Cintilografia com 99Tc
 
-Cintilografia com 99Tc
+- Indicado em: sangramento não identificado na colonoscopia;
+- Identifica sangramento do fluxo > **0,1 mL/min**;
+- Exige sangramento ativo;
+- Não é preciso quanto ao sítio (indica apenas a topografia do abdome);
+- Pode ser repetido ao longo de 24 horas.
 
-- Sangramento não identificado na colonoscopia;
+### AngioTC
 
-- Identifica sangramento do fluxo > 0,1 mL/min; No entanto, exige sangramento ativo.
-
-- Não é preciso quanto ao sítio do sangramento indica apenas a topografia do abdome que está sendo afetada;
-
-- Pode ser repetido! (ao longo de 24 horas).
-
-ANGIOTC;
-
-- Identifica sangramentos de 0,3 – 0,5 mL/min;
-
-- Exige estabilidade hemodinâmica
-
-- É um exame mais disponível;
-
+- Identifica sangramentos de **0,3–0,5 mL/min**;
+- Exige estabilidade hemodinâmica;
+- Exame mais disponível;
 - Avalia o abdome como um todo;
-
 - Deve ser feito com uso de contraste;
-
 - Não é terapêutica.
+
+### Arteriografia
+
+- **Indicado em pacientes com instabilidade hemodinâmica**;
+- Identifica sangramento com fluxo entre **0,5–1,0 mL/min**;
+- Exige sangramento ativo;
+- **Pode ser terapêutica**, com auxílio da embolização! Atenção para a possibilidade de isquemia!
 
 ---
 
 <!-- page:2 -->
 
-## ARTERIOGRAFIA LESÕES VASCULARES
+## Lesões Vasculares Específicas
 
-- Indicado em pacientes com instabilidade hemodinâmica; DIEULAFOY:
+### Lesão de Dieulafoy
 
-- Identifica sangramento com fluxo entre
+- Pode acontecer em qualquer lugar do trato digestivo (HDA; HDB);
+- O vaso é normal, mas ocorre de forma anômala;
+- **Normalidade**: vasos vão se afilando ao passar pela parede do trato digestivo, de fora para dentro.
+- **Patologicamente**: o vaso é normal (não é uma causa aneurismática), mas não se afila ao passar pela muscular, alcançando a mucosa com um calibre de até 3 mm e percorre a mucosa tortuosamente.
+- Previamente assintomático, não necessita injúria da mucosa;
+- **Tratamento**: em geral terapia térmica; também pode ser usado clipe ou ligadura elástica.
 
-- PODE ACONTECER EM QUALQUER LUGAR DO TRATO
+### Doença Diverticular dos Cólons
 
-0,5 – 1,0 mL/min; DIGESTIVO (HDA; HDB); 0,5 – 1,0 mL/min;
+- É a principal causa em adulto de HDB;
+- A maioria dos casos apresenta cessação espontânea do sangramento (**> 70%** dos casos);
+- O sangramento é **arterial**!
+- O divertículo ocorre no local onde o vaso arterial penetra na camada muscular da parede. Áreas de fragilidade formam uma protrusão, com consequente formação dos divertículos do cólon.
 
-- Exige sangramento ativo;
+**Distribuição:**
 
-- Pode ser terapêutica, com auxílio da embolização! Atenção para a possibilidade de isquemia!
+- **Cólon esquerdo**: local com maiores taxas de ocorrência de doença diverticular e mais diverticulite;
+- **Cólon direito**: sangra mais!
 
-## DOENÇA DIVERTICULAR DOS
+**Prognóstico**: após cada episódio de sangramento, o risco de sangramento aumenta.
 
-## CÓLONS
+**Tratamento**:
 
-- É a principal causa em adulto, de HDB;
+- Necessita de preparo para a colonoscopia;
+- **Clipe**: para vaso sangrando;
+- **Ligadura elástica**: viável (gastroscópio);
+- **Injeção de adrenalina**: atenção para a possibilidade de necrose e perfuração;
+- **Métodos térmicos**;
+- **Tatuagem** do local de sangramento para posterior abordagem cirúrgica, caso seja necessário.
 
-- A maioria dos casos apresenta cessação espontânea do sangramento (> 70% dos casos);
+*Figura 1: Doença diverticular dos cólons.*
 
-- O sangramento é arterial!
-
-- O divertículo ocorre no local onde o vaso arterial penetra na camada muscular da parede. Em tais A áreas de fragilidade, há uma área de protrusão, com a consequente formação dos divertículos do cólon.
-
-- C
-
-- Figura 1: Doença diverticular dos cólons.
-
-- Cólon esquerdo: Local com maiores taxas de ocorrência de doença diverticular e mais diverticulite;
-
-- Cólon direito: sangra mais!
-
-- Após cada episódio de sangramento, o risco de sangramento aumenta. I
-
-- Tratamento: necessita de preparo para a colonoscopia; Clipe: vaso sangrando; Ligadura elástica é viável (gastroscópio); Injeção de adrenalina – atenção para a possibilidade de necrose e perfuração; Métodos térmicos; Q Tatuar o local de sangramento para posterior abordagem cirúrgica, caso seja necessário.
-
-- DIGESTIVO (HDA; HDB);
-
-- NORMALIDADE: vasos vão se afilando ao passar pela parede do trato digestivo, de fora para dentro,
-
-- Alguns vasos de forma anômala não se afilam ao passar pela muscular, alcançando a mucosa com um calibre de até 3mm e percorre a mucosa tortuosamente.
-
-- PATOLOGICAMENTE O VASO É NORMAL (não é uma causa aneurismática)
-
-- Previamente assintomático, não necessita injúria da mucosa!
-
-- Tratamento: em geral terapia térmica; também pode ser usado clipe ou ligadura elástica.
-
-## ANGIECTASIAS
+### Angiectasias (Angiodisplasias e Telangiectasias)
 
 - Malformações vasculares degenerativas;
-
-- Demonstra relação com: Idade; DRC; Algumas síndromes genéticas (Síndrome de Heyde,
-
-Osler-Weber- Rendu).
-
+- Demonstra relação com: idade; DRC (doença renal crônica); algumas síndromes genéticas (Síndrome de Heyde, Osler-Weber-Rendu);
 - São mais comuns no cólon proximal (ceco e cólon ascendente) e delgado.
 
-## CLASSIFICAÇÃO: PARA ANGIECTASIAS E
+**Classificação (Yano-Yamamoto):**
 
-## TELANGIECTASIAS (YANO YAMAMOTO)
+- **Tipo 1a**: eritema pontilhado (sangramento < 1 mm), com ou sem babação. Tratamento: métodos térmicos (argônio).
+- **Tipo 1b**: sangramento com alguns milímetros, com ou sem babação. Tratamento: métodos térmicos (argônio).
+- **Tipo 2a**: lesões pontilhadas (< 1 mm) com sangramento pulsátil. Tratamento: métodos mecânicos (clipe).
+- **Tipo 2b**: protrusão pulsátil, sem dilatação venosa ao redor. Tratamento: métodos mecânicos (clipe).
+- **Tipo 3**: protrusão pulsátil, com dilatação venosa ao redor. Tratamento: métodos mistos (clipe, combinar métodos).
+- **Tipo 4**: outras lesões não classificadas em nenhuma das categorias listadas acima.
 
-- Venoso: tratamento com métodos térmicos (argônio); 1a: eritema pontilhado (sangramento < 1 mm), com ou sem babação; 1b: sangramento com alguns milímetros, com ou sem babação.
+**Resumido:**
 
-- Arterial: tratamento com métodos mecânicos (clipe); 2a: lesões pontilhadas (< 1 mm) com sangramento pulsátil; 2b: protrusão pulsátil, sem dilatação venosa ao redor.
-
-- Misto: clipe, combinar métodos; 3: protrusão pulsátil, com dilatação venosa ao redor.
-
-- Tipo 4: outras lesões não classificadas em nenhuma das categorias listadas acima.
-
-## COLOPATIA ISQUÊMICA
-
-Informações Importantes
-
-- É mais prevalente em idosos, com alguma comorbidade cardiovascular;
-
-- Algum fator precipita a descompensação; Diarreia; Sangramento (em outro sítio).
-
-Quadro clínico
-
-- É crônico;
-
-- Será comentado durante as aulas de cirurgia vascular!
-
-![Figura do material - página 2](figure-002-1.webp)
+- **Venoso** (Tipos 1): tratamento com métodos térmicos (argônio);
+- **Arterial** (Tipos 2): tratamento com métodos mecânicos (clipe);
+- **Misto** (Tipo 3): clipe, combinar métodos.
 
 ---
 
 <!-- page:3 -->
 
-## OUTRAS COMORBIDADES
+## Outras Comorbidades e Causas de HDB
 
-Diagnóstico
+### Colite Isquêmica
 
-- A colonoscopia tem função mais diagnóstica do que terapêutica; NEOPLASIA
+- É mais prevalente em idosos com alguma comorbidade cardiovascular;
+- Algum fator precipita a descompensação: diarreia; sangramento (em outro sítio);
+- É crônica;
+- *Obs.: será comentado durante as aulas de cirurgia vascular!*
 
-- A lesão demonstra local bem delimitado;
+**Pontos críticos de vascularização** (Griffith e Sudeck):
+
+- **Griffith**: ocorre no ângulo esplênico, na separação entre a vascularização da artéria mesentérica superior e inferior;
+- **Sudeck**: ocorre no sigmóide, na separação entre os territórios da artéria mesentérica inferior e da artéria retal superior.
+
+### Neoplasia
 
 - A colonoscopia é fundamental para o diagnóstico;
-
+- A lesão demonstra local bem delimitado;
 - Edema e, eventualmente, ulceração;
+- A colonoscopia tem função mais diagnóstica do que terapêutica;
+- **Nos casos de tumores friáveis, não há nada endoscópico a se fazer**;
+- **Realizar biópsia ou não? SIM!**
 
-- Tratamento clínico ou endoscópico?
-
-- Pontos críticos de vascularização → Griffith e Sudeck; | Nos casos de tumores friáveis, não há nada Griffith: ocorre no ângulo esplênico, na separação endoscópico a se fazer.
-
-entre a vascularização da artéria mesentérica
-
-- Realizar biópsia ou não? SIM! superior e inferior; Sudeck: ocorre no sigmóide, na separação entre DOENÇA INFLAMATÓRIA INTESTINAL os territórios da artéria mesentérica inferior e da
+### Doença Inflamatória Intestinal (DII)
 
 - Retocolite ulcerativa e doença de Crohn;
+- A DII é um diagnóstico diferencial;
+- O tratamento principal é controlar a doença de base.
 
-artéria retal superior.
+**Tratamento:**
 
-- O tratamento principal é controlar a doença de base;
-
-- A DII é um diagnóstico diferencial.
-
+- Focal ou difuso? Em caso de doença difusa, não existem muitas opções a partir da colonoscopia;
 - Tratamento endoscópico;
+- Compensação clínica: choque, hipotensão, causas cardiovasculares (?);
+- Antibioticoterapia de amplo espectro. Atenção à translocação bacteriana pela fragilidade mucosa;
+- Manejar a causa-base: revascularização (arteriografia com angioplastia? cirurgia?).
 
-Tratamento | Focal ou difuso? Em caso de doença difusa, não
+### Doenças Orificiais
 
-- Compensação clínica: choque, hipotensão, existem muitas opções a partir da colonoscopia.
+- **Doença hemorroidária** pode vir a ocasionar HDB maciça;
+- **Varizes de reto** não se caracterizam como doença hemorroidária.
 
-causas cardiovasculares (?);
+**Diagnóstico:**
 
-- Antibioticoterapia de amplo espectro; DOENÇAS ORIFICIAIS Atenção à translocação bacteriana pela
+- Toque retal;
+- Anuscopia;
+- Colonoscopia com retrovisão (não é o exame padrão-ouro para entrada).
 
-- Doença hemorroidária pode vir a ocasionar fragilidade mucosa. HDB maciça;
+**Tratamento endoscópico:**
 
-- Manejar a causa-base: Revascularização (arteriografia
+- **Ligadura elástica** (eficaz e seguro);
+- **Argônio**: método de escolha;
+- **Métodos alternativos**: clipe metálico, método térmico, injeção;
+- **Anemia ou sangramento recorrente?** Indicação de tratamento com argônio.
 
-- Varizes de reto não se caracterizam como com angioplastia? cirurgia?). doença hemorroidária;
+### Retite Actínica
 
-- Diagnóstico
+- **ATENÇÃO À HISTÓRIA PRÉVIA DE RADIOTERAPIA!!!**
+- Ocorre em homens e mulheres (próstata, colo de útero);
+- Endoarterite → isquemia → neovascularização;
+- Exige preparo adequado;
+- **Métodos alternativos**:
+  - Enema de sucralfato;
+  - Hemospray;
+  - Clipe (?);
+  - Formol.
 
-## RETITE ACTÍNICA
+### Sangramento Pós-Polipectomia
 
-| Toque retal; | Anuscopia;
+- Polipectomia de rotina;
+- Opções terapêuticas: clipe metálico, método térmico, injeção.
 
-- ATENÇÃO À HISTÓRIA PRÉVIA DE RADIOTERAPIA!!! | Colonoscopia: Entrada com retrovisão; Não é o
-
-- Ocorre em homens e mulheres (próstata, colo exame padrão-ouro.
-
-de útero).
-
-- Tratamento endoscópico: ligadura elástica
-
-- Endoarterite → isquemia → neovascularização (eficaz e seguro).
-
-- Exige preparo adequado, o método de escolha é o argônio; SANGRAMENTO PÓS-POLIPECTOMIA
-
-- Métodos alternativos:
-
-- Polipectomia de rotina; Enema de sucralfato;
-
-- Opções: clipe metálico, método térmico, injeção. Hemospray; Clipe (?); Formol.
-
-- Anemia ou sangramento recorrente? Indicação de tratamento com argônio.
+![Figura do material - página 2](figure-002-1.webp)

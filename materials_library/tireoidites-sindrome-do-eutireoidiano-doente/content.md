@@ -2,264 +2,275 @@
 
 <!-- page:1 -->
 
-## TIREOIDITES & SÍNDROME
+## Doença Autoimune da Tireoide
 
-## DO EUTIREOIDIANO DOENTE
+### Fisiopatologia
 
-Tireoidites (CM)
+- Anticorpos ocasionam reação inflamatória na tireoide:
+  - **Anti-TPO**: age na tireoperoxidase;
+  - **Anti-TG**: age na tireoglobulina;
+  - **TRAb**: age no receptor de TSH.
 
-## TIREOIDITES
+### Evolução das Doenças
 
-Linfocític Aguda PósEtiologia Bacteriana Auto Imunodeprimidos, Mulher crianças e idosos, Anti-TPO malformação congênita no 1ºT ou a Aspectos S. aureus, S. pyogenes e Recidiva Clínicos S. pneumoniae hipotire Súbito, doloroso, perm assimétrico, sinais Quatro fa flogísticos e febre Leucocitose com desvio VHS n + VHS elevado Altera TSH/T4L normal confor Achados Lab USG com processo USG supurativo vasculariza Dx: PAAF pouco Tto Antibioticoterapia Beta-bl SÍNDROME DO EUTIREOIDIANO DOENTE
+- **Hashimoto** (predomínio de anti-TPO e anti-TG):
+  - Hashitoxicose (liberação de hormônios pré-formados);
+  - Hipertireoidismo inicial e após hipotireoidismo definitivo.
 
-- Presente em 70 a 80% dos pacientes internados em UTI ↓TSH ~ 0,1 – 0,5 ↓T4 e T3 totais T4 e T3 livres → métodos indiretos (convencionais) →↓
+- **Tireoidites subagudas** (inflamação parcial — com liberação de hormônios pré-formados):
+  - Hipertireoidismo inicial e eutireoidismo ou hipotireoidismo depois.
 
-## DOENÇA AUTOIMUNE DA
+- **Doença de Graves**:
+  - TRAb inibitório: hipotireoidismo, pois inibe função do TRAb estimulatório (maioria das vezes): hipertireoidismo.
 
-## TIREOIDE FISIOPATOLOGIA
+## Classificação das Tireoidites
 
-- Anticorpos ocasionam reação inflamatória na tireoide: tireoidite Anti-TPO: age na tireoperoxidase; Anti-TG: age na tireoglobulina; TRAb: age no receptor de TSH.
+### Tabela 1: Classificação das Tireoidites
 
-Evolução das doenças
-
-- Hashimoto (predomínio de anti-TPO e anti-TG) Hashitoxicose (liberação de hormônios pré-formados) Hipertireoidismo inicial e após hipotireoidismo definitivo.
-
-- Subagudas (inflamação parcial – com liberação de hormônios pré-formados) Hipertireoidismo inicial e eutireoidismo ou hipotireoidismo depois.
-
-- Doença de Graves ca Indolor/ oimune Pós-Viral Idiopática r, 30-60a Autolimitado Mulher, 40-60a aumentado ↑ incidência no Fibrose extensa da após o parto verão (enterovírus) glândula tireoide ante e risco Próromo + Crescimento eoidismo cervicalgia com cervical indolor manente irradiação + tosse Sintomas ases clínicas Quatro fases clínicas compressivos
-
-De Quervain Riedel -parto
-
-## VHS > 50
-
-normal Altera TSH/T4L TSH/T4L Cintilo normal conforme fase rme fase Diagnóstico: USG baixa G baixa biópsia a céu vascularização ação e cintilo aberto e cintilo pouco captante captante AINE/corticoide: dor Cirurgia loqueador Beta-bloqueador:
-
-Bom prognóstico hiperT
-
-- Conduta Expectante Fase de recuperação: ↑TSH ~ 10 a 20 ↑T4 e T3 totais ↓T3 reverso
-
-- TRAb inibitório: hipotireoidismo, pois inibe função do TRAb estimulatório (maioria das vezes): Hipertireoidismo
-
-TSH na glândula OU
-
-## CLASSIFICAÇÃO DAS TIREOIDITES
-
-Tabela 1: Classificação das tireoidites Classificação Tipos Etiologia Bacteriana/ Aguda Aguda fúngica Granulomatosa/ Viral DeQuervain Subaguda Linfocítica Indolor Autoimune Linfocítica Autoimune Pós-parto Hashimoto Autoimune Crônica Riedel Idiopática
+| Classificação | Tipos | Etiologia |
+|---|---|---|
+| **Aguda** | Bacteriana/Fúngica | Aguda infecciosa |
+| **Subaguda** | Viral | DeQuervain |
+| **Subaguda** | Linfocítica Indolor | Autoimune |
+| **Crônica** | Autoimune (Linfocítica Autoimune) | Hashimoto |
+| **Crônica** | Autoimune Pós-parto | Pós-parto |
+| **Crônica** | Idiopática | Riedel |
 
 ---
 
 <!-- page:2 -->
 
-## TIREOIDITE AGUDA/INFECCIOSA TIREOIDITE DE DEQUERVAIN
+## Tireoidite Aguda/Infecciosa
 
-- Fatores de risco
+### Fatores de Risco
 
-- Também denominado: Imunodeprimidos; | Tireoidite subaguda dolorosa; Doença tireoidiana prévia; | Tireoidite de células gigantes; Doença tireoidiana prévia; Idosos; Crianças Persistência do cisto tireoglosso/fístula do seio piriforme
+- **Imunodeprimidos**;
+- **Doença tireoidiana prévia**;
+- **Idosos**;
+- **Crianças**;
+- **Persistência do cisto tireoglosso/fístula do seio piriforme**.
 
-- Etiologias 70% dos casos: S. aureus, S. pyogenes e
+### Etiologias
 
-- S. pneumoniae; Imunodeprimidos: Aspergillus, C. albicans e
+- **70% dos casos**: *Staphylococcus aureus*, *Streptococcus pyogenes* e *Streptococcus pneumoniae*;
+- **Imunodeprimidos**: *Aspergillus*, *Candida albicans* e *Pneumocystis jirovecii*.
 
-P. jirovecii. QUADRO CLÍNICO
+### Quadro Clínico
 
-- Início súbito, assimétrico e doloroso;
+- **Início súbito, assimétrico e doloroso**;
+- **Sinais flogísticos locais importantes**;
+- **Linfadenopatia cervical**;
+- **Febre, sudorese, disfonia, disfagia**;
+- **Irradiação dolorosa para mandíbula ou ouvido**;
+- **Hipertireoidismo** (quando acometimento difuso).
 
-- Sinais flogísticos locais importantes; Q
+### Exames Complementares
 
-- Linfadenopatia cervical;
+- **Leucocitose com desvio e elevação do VHS**;
+- **TSH e T4L**: normais;
+- **Anticorpos**: podem ou não ser detectáveis;
+- **Cintilografia da tireoide**: normal; hipocaptação na região envolvida pode acontecer;
+- **USG cervical**: abscesso/processo supurativo;
+- **Confirmação diagnóstica**: **PAAF** — citologia + bacterioscopia + cultura.
 
-- Febre, sudorese, disfonia, disfagia;
+### Tratamento
 
-- Irradiação dolorosa para mandíbula ou ouvido;
+- **Antibioticoterapia de amplo espectro ± drenagem de abscesso**.
 
-- Hipertireoidismo (quando acometimento difuso)
+---
 
-## EXAMES COMPLEMENTARES
+## Tireoidite de DeQuervain
 
-- Leucocitose com desvio e elevação do VHS;
+### Denominações Alternativas
 
-- TSH e T4L normais;
+- **Tireoidite subaguda dolorosa**;
+- **Tireoidite de células gigantes**;
+- **Tireoidite granulomatosa**.
 
-- Anticorpos podem ou não ser detectáveis;
+### Epidemiologia
 
-- Cintilografia da tireoide: normal Hipocaptação na região envolvida pode acontecer;
+- **3ª-4ª década de vida**;
+- **Causa mais comum de dor na tireoide**;
+- **Autolimitada**, após quadro de infecção de vias aéreas superiores (IVAS).
 
-- USG cervical: abscesso/ processo supurativo;
+### Etiologias
 
-- Confirmação diagnóstica: PAAF Citologia + bacterioscopia + cultura.
+- **Maior incidência no verão** (enterovírus);
+- **Vírus**: adenovírus, ecovírus, coxsackie, EBV, caxumba, sarampo, doença da arranhadura do gato, encefalite de Saint Louis, H1N1, COVID-19.
 
-## TRATAMENTO
+### Quadro Clínico
 
-- Antibioticoterapia de amplo espectro ± drenagem abscesso
+**Pródromo:**
+- Mal-estar;
+- Artralgia;
+- Mialgia;
+- Faringite;
+- Febre baixa.
 
-Hipertireoidismo Eutireoidismo Hipo 0 2 4 6 Meses Figura 1: Evolução natural da tireoidite de DeQuervain | Tireoidite de células gigantes;
+**Fase ativa:**
+- **Dor cervical com irradiação para mandíbula**;
+- **Tosse, dor à deglutição e à movimentação do pescoço**;
+- Evolução com **hipertireoidismo ou hipotireoidismo** podem ocorrer;
+- **História natural**: hipertireoidismo inicial, hipotireoidismo transitório posterior em alguns casos.
 
-| Tireoidite granulomatosa.
+### Exames Complementares
 
-- 3-4ª década de vida
+**Fase de hipertireoidismo:**
+- **VHS (> 50) e PCR aumentados**;
+- **Transaminases aumentadas**;
+- **TG, T3, T4 aumentados**;
+- **TSH suprimido**;
+- **Elevação anti-TPO e AAT**;
+- **Cintilografia**: hipocaptante.
 
-- Causa mais comum de dor na tireoide;
+**Fase de hipotireoidismo:**
+- **T4L baixo**;
+- **TSH aumentado**;
+- **Anticorpos**: costumam ser normais;
+- **Cintilografia**: pode persistir hipocaptante, normalizando-se apenas na recuperação.
 
-- Autolimitado, após quadro de infecção de vias aéreas superiores (IVAS);
+### Tratamento
 
-- Etiologias: Maior incidência no verão (enterovírus); Adenovírus, Ecovírus, Coxsackie, EBV, Caxumba, sarampo, doença da arranhadura do gato Encefalite de Saint Louis
+- **Autolimitada**;
+- **AINEs e corticoterapia**: controle da dor;
+- **Beta-bloqueadores**: sintomas adrenérgicos;
+- **Não usar tionamidas**.
 
-## H1N1, COVID-19. QUADRO CLÍNICO
-
-- Pródromo: Mal-estar; Artralgia; Mialgia; Faringite; Febre baixa;
-
-- Dor cervical com irradiação para mandíbula;
-
-- Tosse, dor à deglutição e à movimentação do pescoço;
-
-- Evolução com hipertireoidismo ou hipotireoidismo podem ocorrer;
-
-- História natural: hipertireoidismo inicial, hipotireoidismo transitório posterior em alguns casos.
-
-- Verificar Figura 1 otireoidismo Eutireoidismo
-
-T4 e T
-
-## RAIU/24 h
-
-## TSH
-
-6 8 10
+Figura 1: Evolução natural da tireoidite de DeQuervain
 
 ---
 
 <!-- page:3 -->
 
-## EXAMES COMPLEMENTARES EXAMES COMPLEMENTARES
+## Tireoidite Linfocítica Subaguda Indolor
 
-- VHS (> 50) e PCR aumentados
+- **Doença espontânea de etiologia autoimune**;
+- **Mais comum em**: sexo feminino, dos 30-60 anos;
+- **Pode ser recidivante**;
+- **Pode evoluir para hipotireoidismo permanente**.
 
-- Função tireoidiana
+### Quatro Fases Clínicas
 
-- Transaminases aumentadas ; | Hipotireoidismo ou hipertireoidismo;
+**Fase 1 — Hipertireoidismo (6 semanas a 3-4 meses):**
+- Aumento de **T3 e T4 livre e TG**;
+- Diminuição do **TSH**;
+- Cintilografia com **hipocaptação**;
+- Aumento de **anti-TPO e AAT**;
+- **VHS normal**;
+- USG demonstra diminuição da vascularização.
 
-- Anticorpos costumam ser normais;
+**Fase 2 — Eutireoidismo:**
+- Normalização dos parâmetros.
 
-- Cintilografia: hipocaptante;
+**Fase 3 — Hipotireoidismo (8 a 12 semanas):**
+- Queda de T3 e T4;
+- Elevação de TSH.
 
-- Fase de hipertireoidismo
+**Fase 4 — Recuperação funcional:**
+- Normalização dos parâmetros.
 
-- Elevação anti-TPO e AAT;
+### Tratamento
 
-- Fase de hipertireoidismo TG, T3, T4 aumentados TSH suprimido Cintilografia: hipocaptante
+- **Beta-bloqueador**: se sintomas de hipertireoidismo;
+- **Levotiroxina**: se hipotireoidismo clínico.
 
-- Fase de hipotireoidismo T4L baixo TSH aumentado Anticorpos costumam ser normais Cintilografia: pode persistir hipocaptante, normalizando-se apenas na recuperação
+## Tireoidite Linfocítica Subaguda Pós-Parto
 
-- Autolimitada;
+- **Igual à tireoidite linfocítica indolor**, porém ocorrendo no pós-parto;
+- **Recidiva comum** e alto risco de hipotireoidismo definitivo;
+- **Anti-TPO aumentado**: no 1º trimestre OU imediatamente após o parto/abortamento.
 
-- AINEs e corticoterapia: controle da dor;
+### Fatores de Risco
 
-- Beta-bloqueadores: sintomas adrenérgicos;
+- **Outras doenças autoimunes**;
+- **História familiar de doença autoimune da tireoide**.
 
-- Não usar tionamidas
+### Quadro Clínico
 
-## TIREOIDITE LINFOCÍTICA
+- **Apenas hipertireoidismo ou hipotireoidismo transitório**;
+- **Hipertireoidismo → hipotireoidismo → eutireoidismo**;
+- **Elevação anti-TPO e AAT**.
 
-## SUBAGUDA INDOLOR
+### Tratamento
 
-- Doença espontânea de etiologia autoimune;
+- **Beta-bloqueador**: se sintomas de hipertireoidismo;
+- **Levotiroxina**: se hipotireoidismo clínico;
+- **Tratar por 8-12 semanas e descontinuar medicação**;
+- **Reavaliar em 4-6 semanas**.
 
-- Mais comum em sexo feminino, dos 30-60 anos;
+---
 
-- Pode ser recidivante
+## Tireoidite de Riedel
 
-- Hipotireoidismo permanente
+- **Fibrose extensa da glândula tireoide**;
+- **Tireoidite crônica**.
 
-- Quatro fases: Hipertireoidismo (6 semanas a 3-4 meses): Aumento de T3 e T4 livre e TG; Diminuição do TSH; Cintilografia com hipocaptação; Aumento de Anti-TPO e AAT VHS normal; USG demonstra diminuição da vascularização. Eutireoidismo Hipotireoidismo (8 a 12 semanas) Recuperação funcional
+### Epidemiologia
 
-oligo/assintomática TRATAMENTO
+- **Sexo feminino**, 4ª a 6ª década;
+- **Muito semelhante ao carcinoma anaplásico**.
 
-- Beta-bloqueador: se sintomas de hipertireoidismo;
+### Quadro Clínico
 
-- Levotiroxina: se hipotireoidismo clínico.
+- **Crescimento cervical indolor** com progressão e evolução variáveis;
+- **Hipotireoidismo** (se acometimento extenso);
+- **Sintomas compressivos** (respiratórios);
+- **Dor é incomum**.
 
-## SUBAGUDA PÓS-PARTO
+### Exames Complementares
 
-- Igual a indolor, porém no pós-parto
+- **Cintilografia**: normal;
+- **PAAF**: não elucidativa;
+- **Diagnóstico**: **biópsia a céu aberto** (diferencial principal é com carcinoma anaplásico de tireoide).
 
-- Recidiva comum e alto risco de hipotireoidismo definitivo;
+### Tratamento e Prognóstico
 
-- Anti-TPO aumentado no 1º trimestre OU imediatamente após o parto/abortamento;
-
-- Fatores de risco Outras doenças autoimunes; História familiar de doença autoimune da tireoide.
-
-## QUADRO CLÍNICO
-
-- Apenas hipertireoidismo ou hipotireoidismo transitório
-
-- Hipertireoidismo → hipotireoidismo → eutireoidismo - Elevação anti-TPO e AAT;
-
-- Beta-bloqueador: se sintomas de hipertireoidismo;
-
-- Levotiroxina: se hipotireoidismo clínico Tratar por 8-12 semanas e descontinuar medicação Reavaliar em 4-6 semanas.
-
-## TIREOIDITE DE RIEDEL
-
-- Fibrose extensa da glândula tireoide
-
-- Crescimento cervical indolor e progressão e evolução variáveis Muito semelhante ao carcinoma anaplásico.
-
-- Sexo feminino, 4ª a 6ª década;
-
-- Hipotireoidismo se acometimento extenso;
-
-- Tireoidite crônica.
-
-- Sintomas compreensivos;
-
-- Sintomas respiratórios;
-
-- Dor é incomum;
-
-- Cintilografia: normal;
-
-- PAAF: não elucidativa;
-
-- Diagnóstico: biópsia a céu aberto (diferencial principal é com carcinoma anaplásico de tireoide).
-
-- Cirúrgico;
-
-- Bom prognóstico.
-
-## SÍNDROME DO EUTIREOIDIANO
-
-## DOENTE
-
-## FISIOPATOLOGIA
-
-- Paciente crítico, internado em UTI Adaptações fisiológicas no organismo para
-
-“poupar energias”
-
-- Queda na Deiodinase tipo 1 e 2 (D1 e D2) na periferia Diminuição da conversão periférica de T4 em
-
-T3: ↓ T3
-
-- Aumento da função da Deiodinase tipo 3 (D3) na periferia ↑ conversão periférica de T4 em T3 reverso
-
-(inativa): ↓ T3
-
-- Aumento da D2 (SNC) ↑ conversão periférica de T4 em T3: ↓ TSH (já inibido por citocinas inflamatórias)
-
-- Estado inflamatório crônico: ↓ TBG Culminando em ↓ T4 e o T3 totais o
+- **Cirúrgico**;
+- **Bom prognóstico**.
 
 ---
 
 <!-- page:4 -->
 
-- Expectante: aaguardar 2 semanas – acompanhar ambulatorialmente;
+## Síndrome do Eutireoidiano Doente
 
-- Benefício de tratamento medicamentoso em cardiopatias graves (controverso);
+- **Presente em 70-80% dos pacientes internados em UTI**;
+- Paciente crítico, internado em UTI com **adaptações fisiológicas no organismo para "poupar energias"**.
 
-- Não pedir função tireoidiana em pacientes internados em UTI Exceto se suspeita de coma mixedematoso ou de crise tireotóxica.
+### Fisiopatologia
 
-## REFERÊNCIAS
+**Alterações de Deiodinases:**
+- **Queda na Deiodinase tipo 1 e 2 (D1 e D2)** na periferia:
+  - Diminuição da conversão periférica de T4 em T3: **↓ T3**.
 
-Figura 1: Evolução natural da tireoidite de DeQuervain Vilar, Lucio [et al] . Endocrinologia Clínica. 7ª edição. Rio de Janeiro:
+- **Aumento da função da Deiodinase tipo 3 (D3)** na periferia:
+  - ↑ conversão periférica de T4 em **T3 reverso** (inativa): **↓ T3**.
 
-Guanabara Koogan, 2021 (modificado)
+- **Aumento da D2 (SNC)**:
+  - ↑ conversão periférica de T4 em T3: **↓ TSH** (já inibido por citocinas inflamatórias).
+
+**Estado Inflamatório:**
+- **Estado inflamatório crônico**: **↓ TBG** (globulina transportadora de tiroxina);
+- Culminando em: **↓ T4 e T3 totais**.
+
+### Padrões Laboratoriais
+
+- **↓ TSH** ~ 0,1-0,5;
+- **↓ T4 e T3 totais**;
+- **T4 e T3 livres** → métodos indiretos (convencionais) → **↓**.
+
+**Fases:**
+- **Fase de recuperação**:
+  - ↑ TSH ~ 10 a 20;
+  - ↑ T4 e T3 totais;
+  - ↓ T3 reverso.
+
+### Conduta
+
+- **Expectante**: aguardar 2 semanas — acompanhar ambulatorialmente;
+- **Benefício de tratamento medicamentoso**: em cardiopatias graves (controverso);
+- **Não pedir função tireoidiana** em pacientes internados em UTI — **exceto se suspeita de coma mixedematoso ou de crise tireotóxica**.
+
+## Referências
+
+Figura 1: Evolução natural da tireoidite de DeQuervain. Vilar, Lucio [et al]. Endocrinologia Clínica. 7ª edição. Rio de Janeiro: Guanabara Koogan, 2021 (modificado).

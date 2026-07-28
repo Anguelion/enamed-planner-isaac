@@ -3085,16 +3085,6 @@ function simulationGamificationStats() {
   const active=rewards.filter(reward=>reward.openedAt&&reward.expiresAt&&Date.parse(reward.expiresAt)>Date.now());
   return {completed:completed.length,reviewed:reviewed.length,average:completed.length?completed.reduce((sum,item)=>sum+n(item.eligibility.scorePercent),0)/completed.length:0,fragments:n(rankProgress.fragments),medallionsAvailable:Math.max(0,n(rankProgress.simulationMedallions)-n(rankProgress.simulationMedallionsUsed)),activeRewards:active,sealedRewards:rewards.filter(reward=>!reward.openedAt)};
 }
-function renderSimulationGamificationDashboard() {
-  if(!Gamification) return '';
-  const stats=simulationGamificationStats();
-  const active=stats.activeRewards.sort((a,b)=>Date.parse(a.expiresAt)-Date.parse(b.expiresAt))[0];
-  const remaining=active?Math.max(0,Date.parse(active.expiresAt)-Date.now()):0;
-  const hours=Math.floor(remaining/3600000);
-  const minutes=Math.floor(remaining%3600000/60000);
-  const elementCard=active?`<div class="gamification-sim-element"><span class="eyebrow">Buff elemental ativo</span><strong>${active.elements.map(elementLabel).join(' + ')} · ${escapeHtml(active.rarityLabel||active.rarity)}</strong><span>x${String(active.multiplier).replace('.',',')} · ${hours}h ${minutes}min restantes</span></div>`:`<div class="gamification-sim-element muted"><span class="eyebrow">Buff elemental</span><strong>Nenhum buff ativo</strong><span>Corrija integralmente um simulado para liberar uma recompensa.</span></div>`;
-  return `<section class="card gamification-simulation-card"><div class="section-title"><div><span class="eyebrow">Jornada de simulados</span><h2>Ascensão e elementos</h2></div><button class="tiny-btn" onclick="ui.tab='simulados';render()">Abrir simulados</button></div><div class="gamification-sim-metrics"><div><strong>${stats.completed}</strong><span>concluídos</span></div><div><strong>${stats.reviewed}</strong><span>corrigidos</span></div><div><strong>${Math.round(stats.average)}%</strong><span>média</span></div><div><strong>${stats.fragments}/3</strong><span>fragmentos</span></div><div><strong>${stats.medallionsAvailable}</strong><span>medalhões livres</span></div></div>${elementCard}${stats.sealedRewards.length?`<button class="icon-btn primary" data-open-sealed-reward="${escapeAttr(stats.sealedRewards[0].id)}">Revelar ${stats.sealedRewards.length} recompensa${stats.sealedRewards.length===1?'':'s'}</button>`:''}</section>`;
-}
 function renderSimuladoEstatisticas() {
   if(!Gamification) return '';
   const stats=simulationGamificationStats();
@@ -3156,7 +3146,7 @@ function renderWeeklyPerformance(date) {
     videos:{label:'Aulas',values:data.snapshots.map(snapshot=>snapshot.videos),format:value=>`${Math.round(value)}`,summary:data.snapshots.reduce((sum,snapshot)=>sum+snapshot.videos,0)},
     simulados:{label:'Simulados',values:data.simulations,format:value=>`${Math.round(value)}`,summary:data.simulations.reduce((sum,value)=>sum+value,0)}
   };
-  const metric=metrics[metrics[ui.weeklyMetric] ? ui.weeklyMetric : 'hours'];
+  const metric=metrics[ui.weeklyMetric] || metrics['hours'];
   const max=Math.max(1,...metric.values);
   const summary=[
     ['Tempo',formatDailyStudyTime(metrics.hours.summary)],
@@ -4411,8 +4401,9 @@ function renderRecentActivityCard() {
 }
 function renderHistorico() {
   const rows = historyRows();
-  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Questões respondidas', rows.reduce((s,x)=>s+x.questions,0), `${rows.reduce((s,x)=>s+x.correct,0)} acertos no total`)}${metric('Flashcards revisados', rows.reduce((s,x)=>s+x.flashcards,0), 'cards estudados')}${metric('Vídeoaulas', rows.reduce((s,x)=>s+x.videos,0), 'aulas com progresso registrado')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+x.minutes,0))} min`, 'todas as atividades acumuladas')}</div>${renderRecentActivityCard()}<div class="card"><div class="section-title"><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div>${renderHistoryTable(rows)}</div>`;
+  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Questões respondidas', rows.reduce((s,x)=>s+x.questions,0), `${rows.reduce((s,x)=>s+x.correct,0)} acertos no total`)}${metric('Flashcards revisados', rows.reduce((s,x)=>s+x.flashcards,0), 'cards estudados')}${metric('Vídeoaulas', rows.reduce((s,x)=>s+x.videos,0), 'aulas com progresso registrado')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+x.minutes,0))} min`, 'todas as atividades acumuladas')}</div>${renderRecentActivityCard()}<div class="card"><div class="section-title"><div><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div><button class="tiny-btn critical" id="clearAllHistoryBtn">🗑 Limpar tudo</button></div>${renderHistoryTable(rows)}</div>`;
   document.querySelectorAll('[data-remove-history]').forEach(button => button.onclick = event => removeHistoryRecord(event.currentTarget.dataset.removeHistory));
+  document.getElementById('clearAllHistoryBtn')?.addEventListener('click', clearAllHistory);
 }
 function removeHistoryRecord(date) {
   const confirmed = confirm(`Excluir o registro de ${fmtDate(date)} do Histórico?\n\nEle deixará de aparecer na lista de atividades. Respostas individuais, flashcards criados e vídeos marcados como assistidos continuarão salvos.`);
@@ -4421,6 +4412,15 @@ function removeHistoryRecord(date) {
   if(log) Object.assign(log, defaultDayLog(date));
   state.hiddenHistoryDates = [...new Set([...(state.hiddenHistoryDates || []), date])];
   persist();
+  renderHistorico();
+}
+function clearAllHistory() {
+  const confirmed = confirm('⚠️ Deseja apagar TODO o histórico de atividades?\n\nIsso limpará todas as datas registradas. Respostas individuais, flashcards criados e vídeos marcados como assistidos continuarão salvos. Esta ação não pode ser desfeita.\n\nDeseja continuar?');
+  if(!confirmed) return;
+  state.dayLogs = [];
+  state.hiddenHistoryDates = [];
+  persist();
+  renderHistorico();
 }
 function renderHistoryTable(rows) {
   if(!rows.length) return '<div class="empty">Ainda não há atividade registrada.</div>';
@@ -5445,7 +5445,9 @@ function removeVideoFlashcard(videoId, cardId) {
     lesson?.videos?.find(item => item.id === videoId),
     videoScheduleForLesson(lesson)
   );
-  state.videoFlashcards[videoId] = (state.videoFlashcards[videoId] || []).filter(card => card.id !== cardId);
+  state.videoFlashcards[videoId] = (state.videoFlashcards[videoId] || []).map(card =>
+    card.id === cardId ? {...card, deletedAt: new Date().toISOString()} : card
+  );
   delete state.flashcardProgress[cardId];
   delete ui.revealedCards[cardId];
   renderCache.manualCards = null;
@@ -5838,7 +5840,7 @@ function renderAulas() {
     if(button) {
       button.setAttribute('aria-pressed',String(ui.videoFocusMode));
       button.title=ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes';
-      button.textContent=ui.videoFocusMode?'Sair do foco':'⛶ Foco';
+      button.innerHTML=ui.videoFocusMode?'Sair do foco':`${iconSvg('focus',{weight:'regular'})} Foco`;
     }
   });
   document.querySelectorAll('[data-video-questions]').forEach(button => button.onclick = event => openQuestionsForSchedule(event.currentTarget.dataset.videoQuestions));
@@ -6020,7 +6022,7 @@ function bindVideoPlayer(source, schedule, lesson) {
   document.getElementById('videoForward10')?.addEventListener('click', () => { manualSeek=true; resume=setVideoTime(video.currentTime+10); saveVideoResume(source.id, resume); saveStateOnly(); });
   const rateSelect = document.getElementById('videoPlaybackRate');
   if(rateSelect) {
-    rateSelect.value = String(rememberVideoPlaybackRate(n(storedProgress.playbackRate) || n(ui.videoPlaybackRate) || 1));
+    rateSelect.value = String(rememberVideoPlaybackRate(n(ui.videoPlaybackRate) || n(storedProgress.playbackRate) || 1));
     rateSelect.addEventListener('change', event => {
       const rate = rememberVideoPlaybackRate(Number(event.target.value));
       video.defaultPlaybackRate=rate;
@@ -6413,7 +6415,13 @@ function flashcardDueForecast(days=7) {
     const date = new Date(start);
     date.setDate(date.getDate() + index);
     const iso = localISODate(date);
-    return { date: iso, count: cards.filter(card => flashcardProgress(card).nextReview <= iso).length };
+    // Hoje absorve o que já está atrasado (como no Anki); os demais dias
+    // contam só quem vence exatamente naquela data, senão o total nunca
+    // caía e todo dia futuro mostrava o mesmo número acumulado.
+    const count = index === 0
+      ? cards.filter(card => flashcardProgress(card).nextReview <= iso).length
+      : cards.filter(card => flashcardProgress(card).nextReview === iso).length;
+    return { date: iso, count };
   });
 }
 function flashcardStudyQueue(all=manualFlashcards()) {
@@ -6784,7 +6792,7 @@ function adjustFlashcardDayCount(timestamp, delta) {
   const date = studyDateKey(timestamp);
   if(!date || !delta) return;
   const log = getDayLog(date);
-  log.flashcards = Math.max(n(log.manualFlashcards), n(log.flashcards) + delta);
+  log.flashcards = Math.max(0, n(log.flashcards) + delta);
   log.flashcardsOn = n(log.flashcards) > 0 || n(log.flashcardMinutes) > 0;
 }
 function moveFlashcardSession(delta, total) {
@@ -6873,6 +6881,8 @@ function importAnkiTsv(event) {
   reader.onload = () => {
     const lines = String(reader.result || '').split(/\r?\n/).filter(line => line.trim() && !line.startsWith('#'));
     let imported = 0;
+    const importTimestamp = Date.now();
+    const importNonce = Math.random().toString(16).slice(2);
     lines.forEach((line, index) => {
       const cols = line.split('\t');
       const front = ankiUnescape(cols[0] || '').trim();
@@ -6883,7 +6893,7 @@ function importAnkiTsv(event) {
       const questionId = `anki-import-${normalizedTopic(area)}-${normalizedTopic(subarea)}`;
       if(!Array.isArray(state.questionFlashcards[questionId])) state.questionFlashcards[questionId] = [];
       state.questionFlashcards[questionId].unshift({
-        id: `card-anki-${Date.now()}-${index}-${Math.random().toString(16).slice(2)}`,
+        id: `card-anki-${importTimestamp}-${importNonce}-${index}`,
         front,
         back,
         scheduleId: '',
@@ -8379,7 +8389,9 @@ function recordLibraryFlashcardVersion(card, field, value) {
 }
 function removeQuestionFlashcard(questionId, cardId) {
   const cards = state.questionFlashcards[questionId] || [];
-  state.questionFlashcards[questionId] = cards.filter(card => card.id !== cardId);
+  state.questionFlashcards[questionId] = cards.map(card =>
+    card.id === cardId ? {...card, deletedAt: new Date().toISOString()} : card
+  );
   delete state.flashcardProgress[cardId];
   delete ui.revealedCards[cardId];
   ensureQuestionFocusStudyTimer(questionBank.find(item => item.id === questionId));
@@ -8490,9 +8502,11 @@ function handleFlashcardKeyboard(event) {
   if(event.code === 'Space') {
     if(event.repeat) return;
     event.preventDefault();
-    if(ui.revealedCards[card.id]) {
-      reviewFlashcard(card.id, 3);
-    } else {
+    // Espaço só revela. Antes, apertar Espaço de novo com a resposta já
+    // revelada avaliava o card como "Bom" (3) sem aviso nenhum — bastava
+    // apertar a tecla duas vezes por hábito para distorcer o agendamento
+    // do card sem querer. Avaliação agora só acontece pelas teclas 1–4.
+    if(!ui.revealedCards[card.id]) {
       ui.revealedCards[card.id] = true;
       renderFlashcards();
     }
@@ -9317,8 +9331,17 @@ document.addEventListener('keydown', event => {
   else if(key === 'f' || event.key === '[') { event.preventDefault(); event.stopPropagation(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
   else if(key === 'j' || event.key === '=') { event.preventDefault(); event.stopPropagation(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
 }, true);
+document.getElementById('headerTrailBtn')?.addEventListener('click', () => { ui.tab='cronograma'; render(); });
+document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.tab='painel'; ui.pomodoroOpen=!ui.pomodoroOpen; render(); });
 document.getElementById('headerSyncBtn')?.addEventListener('click', () => forcePlannerSync());
-document.getElementById('accountBtn').onclick = async () => {
+document.getElementById('headerLogoutBtn')?.addEventListener('click', async () => {
+  if(!currentUser) { alert('Você não está logado.'); return; }
+  const confirmed = confirm('Tem certeza que deseja sair?\n\nSeus dados locais continuarão salvos. Você precisará fazer login novamente para sincronizar.');
+  if(!confirmed) return;
+  if(syncTimer) clearTimeout(syncTimer);
+  await sbClient.auth.signOut();
+});
+document.getElementById('accountBtn')?.addEventListener('click', async () => {
   if(OFFLINE_FIRST) return;
   if(currentUser) {
     if(syncTimer) {

@@ -2,674 +2,460 @@
 
 <!-- page:1 -->
 
-## POLÍTICAS PÚBLICAS DE SAÚDE I
+## Políticas Específicas de Saúde em Populações Vulneráveis
 
-## POPULAÇÕES ESPECIAIS
+---
 
-Politicas Específicas de Saúde em Populações Vulneráveis; SAÚDE INDÍGENA (SASISUS) – LEI Nº 9.836/1999 Política Nacional de Atenção à Saúde dos Povos Indígenas (PNASPI)
+## Saúde Indígena (SASISUS) – Lei nº 9.836/1999
 
-- Atenção integral respeitando a cultura e práticas tradicionais.
+*Política Nacional de Atenção à Saúde dos Povos Indígenas (PNASPI).*
 
-- Organização por DSEI e Pólos-Base.
+### Fundamentos Legais
 
-- Equipes multidisciplinares com AIS.
+- **Lei nº 9.836/1999**: acrescenta dispositivos à Lei nº 8.080/1990, criando o Subsistema de Atenção à Saúde Indígena (SasiSUS), componente do SUS.
+- **Decreto nº 7.336/2010**: cria a Secretaria Especial de Saúde Indígena (SESAI), vinculada ao Ministério da Saúde, como órgão gestor do SasiSUS.
+- **Portaria nº 755/2012**: dispõe sobre o controle social no SasiSUS.
+- **Lei nº 14.021/2020**: dispõe sobre medidas emergenciais e temporárias de proteção social voltadas ao enfrentamento da Covid-19 em territórios indígenas, quilombolas, de pescadores artesanais e demais povos e comunidades tradicionais.
 
-- Articulação com o SUS (APS, média e alta complexidade).
+*Figura 1: Subsistema de Atenção à Saúde Indígena.*
 
-- Controle social: CLSI, CONDISI, FPCONDISI.
+### Propósito
 
-- DSEI: Distritos Sanitários Especiais Indígenas
+Garantir atenção integral à saúde dos povos indígenas, respeitando suas culturas, conhecimentos tradicionais e diversidade social e geográfica.
 
-- Pólos-Base: Referência das comunidades dentro dos DSEI. Tipo I: localizados nas comunidades indígenas. Tipo II: urbanos, vinculados à rede municipal.
+### Princípios do SASISUS
 
-- CASAI: Apoio logístico e acolhimento em tratamentos fora da aldeia.
+- **Financiamento integral pela União**, com complementação quando aplicável;
+- **Abordagem intercultural e diferenciada**, valorizando sistemas tradicionais de saúde indígena;
+- **Integração com os três níveis de atenção do SUS** (primária, secundária e terciária);
+- **Organização baseada em Distritos Sanitários Especiais Indígenas (DSEI)**;
+- **Descentralização, regionalização, hierarquização e controle social participativo**.
 
-Figura 1: Subsistema de Atenção à Saúde Indígena. SAÚDE DA POPULAÇÃO NEGRA – PNSIPN (PORTARIA 992/2009)
+### Diretrizes Principais
 
-Marca Política: Reconhecimento do racismo como determinante social das desigualdades em saúde. Objetivo Geral: Promover a saúde integral da população negra, priorizando a redução das desigualdades étnico-raciais, o combate ao racismo e discriminação nas instituições e serviços do SUS.
+- Atenção integral respeitando a cultura e práticas tradicionais;
+- Organização por DSEI e Pólos-Base;
+- Equipes multidisciplinares com Agentes Indígenas de Saúde (AIS);
+- Articulação com o SUS (APS, média e alta complexidade);
+- Controle social: CLSI, CONDISI, FPCONDISI;
+- Formação de recursos humanos com enfoque intercultural;
+- Monitoramento contínuo das ações de saúde indígena;
+- Articulação com sistemas tradicionais de saúde;
+- Uso racional de medicamentos;
+- Ações específicas para situações emergenciais e vulnerabilidades;
+- Ética em pesquisas e ações de saúde em comunidades indígenas;
+- Promoção de ambientes saudáveis;
+- Controle social e participação indígena em todas as etapas.
 
-Diretrizes Principais:
+### Estrutura Organizacional
 
-- Inclusão do tema nas formações em saúde.
+#### Distritos Sanitários Especiais Indígenas (DSEI)
 
-- Fortalecimento do Movimento Negro no controle social e valorização de saberes populares e de matriz africana.
+- **Modelo de organização** de serviços de saúde para territórios etno-culturais, com base populacional, geográfica e administrativa;
+- Critérios de delimitação: população, área geográfica e perfil epidemiológico; relações sociais, vias de acesso e distribuição demográfica tradicional;
+- **34 DSEI no Brasil**, abrangendo todas as regiões;
+- Para cada DSEI, podem existir várias comunidades indígenas; e várias comunidades de um mesmo DSEI podem ter como referência um Polo-Base;
+- Cada DSEI executa ações de atenção primária e vigilância em saúde para a população indígena do território correspondente.
 
-- Monitoramento com recorte étnico-racial.
+#### Equipes Multidisciplinares
 
-- Educação popular e comunicação antirracista. - Produção e uso de dados com o quesito cor.
+- Médicos, enfermeiros, odontólogos, auxiliares de enfermagem e agentes indígenas de saúde (AIS);
+- **Apoio Técnico**: antropólogos, educadores, engenheiros sanitaristas e outros especialistas;
+- **Critérios de Dimensionamento**: número de habitantes, dispersão populacional, perfil epidemiológico e necessidades específicas de controle de endemias.
 
-Autodeclaração de Raça/Cor: Critério oficial no SUS; pode ser feita por familiares em casos de óbito, RN ou impossibilidade do usuário.
+#### Pólos-Base
 
-Eixos Prioritários:
+- **Referência das comunidades** dentro dos DSEI;
+- **Tipo I**: localizados nas comunidades indígenas;
+- **Tipo II**: urbanos, vinculados à rede municipal.
 
-- Redução de desigualdades em:
+**Funções:**
+- Resolver a maioria dos agravos à saúde na APS, atuando em conjunto com as equipes multidisciplinares;
+- Demandas que não forem atendidas no grau de resolutividade dos Pólos-Base deverão ser referenciadas para a rede de serviços do SUS, de acordo com a realidade de cada Distrito Sanitário Especial Indígena.
 
-- Mortalidade materna e infantil; Violência letal;
+#### CASAI — Casa de Apoio à Saúde Indígena
 
-Doença falciforme, tuberculose, HIV/Aids, hanseníase; Câncer de mama e colo do útero; Transtornos mentais e uso de substâncias
+- **Estrutura de apoio** para indígenas que precisam de tratamento fora da aldeia;
+- **Funções**: acolhimento de pacientes e acompanhantes; apoio logístico para consultas, exames e internações; assistência de enfermagem 24h, educação em saúde e atividades de integração cultural.
 
-- Atenção à saúde da mulher negra (gestação, climatério, aborto).
+#### DSEI — Distritos Sanitários Especiais Indígenas
 
-- Redes de cuidado para mulheres negras em situação de violência.
+- **Órgão de coordenação**: coordena ações, financia e supervisiona os DSEI, garantindo logística, estrutura e articulação intersetorial.
 
-- Ações específicas para populações quilombolas.
+#### Secretaria Especial de Saúde Indígena (SESAI)
 
-Controle Social:
+- **Órgão do Ministério da Saúde** responsável pela gestão do SasiSUS.
 
-- Participação do Movimento Negro nos Conselhos de Saúde.
+### Atenção nas Aldeias
 
-- Monitoramento da equidade nas políticas públicas.
+- **Prestada diretamente pelos AIS**, com apoio periódico das equipes multidisciplinares;
+- **Primeira referência** para os Agentes Indígenas de Saúde (AIS).
 
-## SAÚDE DA POPULAÇÃO LGBT: PORTARIA
+### Financiamento
 
-MS Nº 2.836/2011
+- **Responsabilidade principal da União**;
+- Pode contar com complementação de Estados, Municípios e parcerias internacionais;
+- Recursos adicionais em emergências e calamidades;
+- A União instituirá mecanismo de financiamento específico para os Estados, o Distrito Federal e os Municípios, sempre que houver necessidade de atenção secundária e terciária fora dos territórios indígenas (incluído pela Lei nº 14.021, de 2020).
 
-- Visa garantir saúde integral, combater discriminação e reduzir desigualdades de identidade de gênero e orientação sexual no SUS.
+### Controle Social
 
-Marca: Reconhecimento da discriminação e exclusão como determinantes sociais da saúde da população LGBTQIA+, com foco na equidade e integralidade.
+- **CLSI** (Conselhos Locais de Saúde Indígena): característica permanente e consultiva; composto por representantes indígenas, com competência de manifestar e acompanhar as ações e os serviços de atenção à Saúde Indígena e determinantes ambientais nas comunidades;
+- **CONDISI** (Conselho Distrital de Saúde Indígena): cada DSEI tem um CONDISI responsável por fiscalizar, debater e apresentar políticas para o fortalecimento da saúde em suas regiões. Órgão colegiado de caráter permanente e deliberativo; composição paritária em relação aos usuários (50% de representantes dos usuários, eleitos pelas respectivas comunidades indígenas). São 34 CONDSI ao todo, um por DSEI;
+- **FPCONDISI** (Fórum de Presidentes de Conselhos Distritais de Saúde Indígena): caráter consultivo; assessora a SESAI em relação à Política Nacional de Atenção à Saúde dos Povos Indígenas (PNASPI).
 
-Eixos Estratégicos:
-
-1. Acesso integral à saúde com uso do nome social.
-
-2. Promoção e vigilância com inclusão de gênero/
-
-sexualidade nos sistemas de informação.
-
-3. Educação permanente e popular antidiscriminatória.
-
-4. Monitoramento com indicadores específicos.
-
-Conceitos-chave:
-
-- Sexo biológico ≠ identidade de gênero ≠ orientação sexual.
-
-- Sexo biológico: Conjunto de características anatômicas, fisiológicas e cromossômicas atribuídas no nascimento (ex: genitália externa, cariótipo, padrão hormonal).
-
-- Identidade de gênero: Vivência e identificação de gênero, podendo ou não corresponder ao sexo atribuído ao nascer (ex: cis, trans, não-binárie).
-
-- Expressão de gênero: Modo como a pessoa se apresenta e é percebida socialmente;
-
-não determina identidade de gênero nem orientação sexual.
-
-- Orientação sexual/afetiva: Atração afetiva, sexual e/ou romântica por pessoas de um ou mais gêneros
-
-(ex: hetero, homo, bi, pan, entre outros.).
-
-- Intersexo: Pessoas cujas características
-
-![Figura do material - página 1](figure-001-1.webp)
+*Figura 3: Distribuição dos 34 DSEI no Território Brasileiro.*
 
 ---
 
 <!-- page:2 -->
 
-sexuais (anatômicas, hormonais ou cromossômicas)
+## Saúde da População Negra – PNSIPN (Portaria 992/2009)
 
-- Acompanhamento multiprofissional.
+*Política Nacional de Saúde Integral da População Negra.*
 
-não se enquadram nas definições binárias de
+### Marca da Política
 
-- Hormonização: a partir de 18 anos.
+**Reconhecimento do racismo como determinante social das desigualdades em saúde.**
 
-masculino ou feminino.
+### Objetivo Geral
 
-- Cirurgias de afirmação de gênero: a partir de
+Promover a saúde integral da população negra, priorizando a **redução das desigualdades étnico-raciais**, o combate ao racismo e discriminação nas instituições e serviços do SUS.
 
-- Nome social: Designação pela qual a pessoa trans 21 anos.
+### Diretrizes Gerais
 
-se identifica e deve ser respeitada em todos os
+- Inclusão do tema racismo e saúde da população negra na formação e educação permanente de trabalhadores da saúde;
+- Fortalecimento do Movimento Social Negro nas instâncias de controle social do SUS;
+- Produção e disseminação de conhecimento científico e tecnológico sobre saúde da população negra;
+- Valorização e reconhecimento de saberes e práticas populares, incluindo aqueles preservados por religiões de matriz africana;
+- Monitoramento e avaliação das ações de combate ao racismo institucional e redução das desigualdades raciais;
+- Processos de informação e comunicação que desconstruam estigmas, valorizem a identidade negra e reduzam vulnerabilidades.
 
-- Projeto Terapêutico Singular (PTS) obrigatório.
+### Eixos Prioritários
 
-se identifica e deve ser respeitada em todos os registros, atendimentos e documentos do SUS, T independentemente do registro civil. C Processo Transexualizador no SUS:
+Redução de desigualdades em:
+- Mortalidade materna e infantil;
+- Violência letal;
+- **Doença falciforme**, tuberculose, HIV/Aids, hanseníase;
+- Câncer de mama e colo do útero;
+- Transtornos mentais e uso de substâncias;
+- Atenção à saúde da mulher negra (gestação, climatério, abortamento);
+- Redes de cuidado para mulheres negras em situação de violência;
+- Ações específicas para populações quilombolas.
 
-- Garantir cuidado integral a travestis e transexuais no SUS: ambulatorial, hormonal e cirúrgico, com respeito à autonomia e identidade de gênero.
+### Racismo Institucional
 
-ASPECTOS ATRIBUÍDO Construções sociais sobre gênero D.V Figura 2: Principais definições em gênero e sexualidade SAÚDE INDÍGENA (LEI SÉRGIO P AROUCA) D Estabelece o Subsistema de Atenção à Saúde Indígena (SasiSUS) no âmbito do SUS.
+**Definido como** o conjunto de práticas, normas e comportamentos discriminatórios que, intencionalmente ou não, colocam pessoas negras em desvantagem no acesso aos serviços de saúde.
 
-## FUNDAMENTOS LEGAIS
+**Manifesta-se por meio de**: omissões, estereótipos, desumanização, atendimento diferenciado e barreiras de acesso.
 
-- Lei nº 9.836/1999: Acrescenta dispositivos à Lei nº
+### Autodeclaração de Raça/Cor
 
-8.080/1990, criando o Subsistema de Atenção à Saúde Indígena (SasiSUS), componente do SUS.
+- O SUS adota o critério da **autodeclaração** (Portaria MS nº 344/2017), em que o(a) usuário(a) define sua raça/cor;
+- Em casos de recém-nascidos, óbitos ou impossibilidade por parte do usuário, a declaração é feita por familiares ou responsáveis;
+- A autodeclaração remete à percepção de cada um em relação à sua raça/cor, o que implica considerar não somente traços físicos, mas também origem étnico-racial, aspectos socioculturais e a construção subjetiva do sujeito;
+- **Critério oficial no SUS**: pode ser feita por familiares em casos de óbito, RN ou impossibilidade do usuário.
 
-- Decreto nº 7.336/2010: Cria a Secretaria Especial de
+### Estratégias de Gestão
 
-Saúde Indígena (SESAI), vinculada ao Ministério da Saúde, como órgão gestor do SasiSUS.
+- Ações afirmativas e metas específicas para combate ao racismo institucional;
+- Redução das disparidades étnico-raciais nas condições de saúde e nos agravos, considerando as necessidades locorregionais;
+- Qualificação da atenção à saúde da mulher negra (gestação, climatério, abortamento);
+- Redes integradas para mulheres negras em situação de violência (sexual, doméstica, intrafamiliar);
+- Estabelecimento de metas específicas para a melhoria dos indicadores de saúde da população negra, com especial atenção para as populações quilombolas;
+- Fortalecimento da atenção à saúde mental, em especial aqueles com transtornos decorrentes do uso de álcool e outras drogas;
+- Inclusão do quesito cor nos instrumentos de coleta de dados nos sistemas de informação do SUS;
+- Educação permanente em saúde, comunicação e educação popular antirracista.
 
-- Portaria nº 755/2012: Dispõe sobre o controle social no SasiSUS.
+### Controle Social
 
-- Lei nº 14.021/2020: dispõe sobre medidas emergenciais e temporárias de proteção social voltadas ao enfrentamento da Covid-19 em territórios indígenas, quilombolas, de pescadores artesanais e demais povos e comunidades tradicionais. - Projeto Terapêutico Singular (PTS) obrigatório.
+A PNSIPN reforça a participação popular e o controle social como instrumentos fundamentais:
+- **Conselhos de Saúde** (municipais, estaduais e nacional) com representação do movimento negro;
+- Monitoramento das políticas públicas para garantia da equidade.
 
-Tema de atualizações recorrentes em Resoluções do Conselho Federal de Medicina
+### Responsabilidades das Esferas de Gestão
 
-- Resolução nº 1.955/2010
+#### Federal
 
-- Resolução nº 2.265/2019
+- Implementar a PNSIPN em âmbito nacional;
+- Definir e gerir recursos orçamentários e financeiros, pactuados na CIT;
+- Incluir a política no Plano Nacional de Saúde e no PPA setorial;
+- Coordenar, monitorar e avaliar a política em nível nacional;
+- Garantir a inclusão do quesito cor nos sistemas de informação do SUS;
+- Prestar cooperação técnica e financeira a Estados, DF e Municípios;
+- Apoiar a criação de instâncias de promoção da equidade em saúde da população negra;
+- Incluir a política na formação profissional e educação permanente de trabalhadores da saúde;
+- Estabelecer indicadores e instrumentos de avaliação;
+- Fortalecer a gestão participativa e o controle social;
+- Apoiar educação popular em saúde e produção de conhecimento sobre racismo;
+- Garantir a inclusão da PNSIPN no Plano Estadual de Saúde e no PPA setorial.
 
-- Resolução nº 2.427/2025 possível função reprodutiva
+#### Estadual
 
-OS À SEXUALIDADE Gênero designado ao nascimento Gênero (identidade/experiência) Sexo de registro civil Praticas sexuais Desejo Sexual Atração Orientação Afetiva Sentimento Romântica Relacionamento Características do corpo Genitália Ovário, testículo, útero e orgãos com Cromossomos Dependentes de hormônios Expressão de gênero Papéis sociais de gênero Estrutura de relacionamento(s)
+- Apoiar a implementação da política em articulação com o nível federal;
+- Definir e gerir recursos financeiros, pactuados na CIB;
+- Coordenar, monitorar e avaliar a política no âmbito estadual;
+- Implantar instâncias estaduais de promoção da equidade;
+- Apoiar a implantação de instâncias municipais;
+- Incluir a política na educação permanente de profissionais;
+- Estabelecer indicadores de monitoramento e avaliação;
+- Promover ações intersetoriais e articulação com organizações governamentais e não-governamentais.
 
-Desejo reprodutivo/Reprodução Família/Parentalidade
+#### Municipal
 
-## POLÍTICA NACIONAL DE ATENÇÃO À SAÚDE
-
-## DOS POVOS INDÍGENAS (PNASPI)
-
-- Instituída pela Portaria GM/MS nº 254/2002.
-
-- Propósito: Garantir atenção integral à saúde dos povos indígenas, respeitando suas culturas, conhecimentos tradicionais e diversidade social e geográfica.
-
-- Diretrizes: Organização dos serviços em DSEI e Pólos-Base. Formação de recursos humanos com enfoque intercultural. Monitoramento contínuo das ações de saúde indígena. Articulação com sistemas tradicionais de saúde. Uso racional de medicamentos. Ações específicas para situações emergenciais e vulnerabilidades. Ética em pesquisas e ações de saúde em comunidades indígenas. Promoção de ambientes saudáveis. Controle social e participação indígena em todas as etapas.
+- Implementar a PNSIPN no âmbito municipal;
+- Identificar necessidades da população negra do município;
+- Implantar instâncias locais de promoção da equidade;
+- Estabelecer indicadores e mecanismos especiais de monitoramento;
+- Promover educação permanente de trabalhadores de saúde;
+- Incentivar controle social e participação popular;
+- Apoiar ações de educação popular e comunicação sobre saúde da população negra;
+- Garantir a inclusão da PNSIPN no Plano Municipal de Saúde e no PPA.
 
 ---
 
 <!-- page:3 -->
 
-Financiamento
+## Saúde da População LGBT – Portaria MS nº 2.836/2011
 
-- Atenção nas Aldeias: prestada diretamente pelos AIS,
+*Política Nacional de Saúde Integral de Lésbicas, Gays, Bissexuais, Travestis e Transexuais.*
 
-- Responsabilidade principal da União. com apoio periódico das equipes multidisciplinares.
+**Marca**: Reconhecimento da discriminação e exclusão como determinantes sociais da saúde da população LGBTQIA+, com foco na equidade e integralidade.
 
-- Pode contar com complementação de Estados, Pólos-Base
+### Objetivo Geral
 
-Municípios e parcerias internacionais.
+Promover a saúde integral de lésbicas, gays, bissexuais, travestis e transexuais, eliminando a discriminação e o preconceito institucional, bem como contribuindo para a redução das desigualdades e a consolidação do SUS como sistema universal, integral e equitativo.
 
-- Primeira referência para os Agentes Indígenas de
+### Eixos Estratégicos
 
-- Recursos adicionais em emergências e calamidades. Saúde (AIS).
+#### Eixo 1: Acesso da População LGBT à Atenção Integral à Saúde
 
-- A União instituirá mecanismo de financiamento
+Foca em mecanismos gerenciais para equidade, informação, comunicação, intersetorialidade, participação social, **uso do nome social** e qualificação de profissionais e serviços, incluindo saúde mental.
 
-- Para cada DSEI, podemos ter várias comunidades específico para os Estados, o Distrito Federal e os Indígenas; e várias comunidades de um mesmo DSEI atenção secundária e terciária fora dos territórios | Tipo I: Dentro das comunidades indígenas.
+#### Eixo 2: Ações de Promoção e Vigilância em Saúde para a População LGBT
 
-Municípios, sempre que houver necessidade de podem ter como referência um Polo Base indígenas. (Incluído pela Lei no 14.021, de 2020); | Tipo II: Em áreas urbanas, vinculados à rede municipal de saúde.
+Abrange o aperfeiçoamento dos instrumentos de vigilância em saúde (incluindo orientação sexual e identidade de gênero), qualificação e difusão de informações e indicadores, e estratégias de vigilância e prevenção da violência.
 
-Dever-se-á obrigatoriamente levar em consideração
+#### Eixo 3: Educação Permanente e Educação Popular em Saúde com Foco na População LGBT
 
-- Função: Resolver a maioria dos agravos à a realidade local e as especificidades da cultura dos saúde na APS, atuando em conjunto com as povos indígenas e o modelo a ser adotado para a equipes multidisciplinares.
+Visa garantir educação em saúde para gestores, profissionais, conselheiros e lideranças sociais sobre o enfrentamento às discriminações e especificidades em saúde LGBT.
 
-atenção à saúde indígena, que se deve pautar por uma
+#### Eixo 4: Monitoramento e Avaliação das Ações Propostas
 
-- As demandas que não forem atendidas no grau abordagem diferenciada e global, contemplando os de resolutividade dos Pólos-Base deverão ser aspectos de assistência à saúde, saneamento básico, referenciadas para a rede de serviços do SUS, de nutrição, habitação, meio ambiente, demarcação de acordo com a realidade de cada Distrito Sanitário terras, educação sanitária e integração institucional. Especial Indígena
+Inclui quesitos de orientação sexual e identidade de gênero em sistemas de informação e prontuários, com indicadores de morbimortalidade e acesso à atenção integral.
 
-CASAI: Casa de Apoio à Saúde Indígena Princípios do SASISUS
+### Conceitos-Chave
 
-- Estrutura de apoio para indígenas que precisam de
+#### Sexo Biológico
 
-- Financiamento integral pela União, com tratamento fora da aldeia.
+Características anatômicas, fisiológicas e cromossômicas atribuídas no nascimento (ex.: genitália externa, cariótipo, padrão hormonal). Pode incluir variações intersexo.
 
-complementação quando aplicável.
+#### Identidade de Gênero
 
-- Funções:
+Vivência interna e individual de gênero, autodeterminada, que pode ou não coincidir com o sexo atribuído ao nascer.
 
-- Abordagem intercultural e diferenciada, valorizando | Acolhimento de pacientes e acompanhantes.
+- **Cisgênero (cis)**: pessoa que se reconhece com o gênero designado ao nascimento;
+- **Transgênero (trans)**: pessoa que não se identifica com o gênero designado ao nascer;
+- **Mulheres trans/travestis**: designadas como homens ao nascer, mas se reconhecem como mulheres/travestis — sempre usar artigos e pronomes femininos;
+- **Homens trans**: designados como mulheres ao nascer, mas se reconhecem como homens;
+- **Não-binário**: pessoas que não se identificam exclusivamente como homem ou mulher — exemplos: gênero-fluído, agênero.
 
-sistemas tradicionais de saúde indígena. | Apoio logístico para consultas,
+#### Expressão de Gênero
 
-- Integração com os três níveis de atenção do SUS exames e internações.
+Como a pessoa se apresenta e é percebida socialmente. **Observação**: não define orientação sexual ou identidade de gênero.
 
-(primária, secundária e terciária). | Assistência de enfermagem 24h, educação em
+#### Orientação Sexual, Afetiva e Romântica
 
-- Organização baseada em Distritos Sanitários Especiais saúde e atividades de integração cultural.
+Direção do desejo afetivo, erótico e/ou sexual (ou romântico) de uma pessoa.
 
-Indígenas (DSEI). Controle Social
+- **Homossexual**: atração por pessoas do mesmo gênero;
+- **Heterossexual**: atração por pessoas de gênero diferente;
+- **Bissexual**: atração por mais de um gênero;
+- **Pansexual**: atração por pessoas independentemente do gênero;
+- **Polissexual**: atração por alguns gêneros, mas não todos;
+- **Assexual**: ausência ou pouca atração sexual (pode haver atração romântica, sensorial etc.);
+- **Termos técnicos em saúde**: HSH (homem que faz sexo com homem); MSM (mulher que faz sexo com mulher) — usados em políticas de prevenção de ISTs.
 
-- Descentralização, regionalização, hierarquização e
+#### Intersexo
 
-- CLSI (Conselhos Locais de Saúde Indígena):
+Pessoas cujas características corporais (genitália, cromossomos, órgãos reprodutivos) não seguem o padrão binário macho-fêmea.
 
-controle social participativo. característica permanente e consultiva e é composto Distritos Sanitários Especiais Indígenas (DSEI) por representantes indígenas, com competência de
+- **Pontos-chave**: evitar termos como "hermafrodita" ou "pseudo-hermafrodita" (estigmatizantes); intersexualidade não é uma condição patológica (maioria das pessoas é saudável); cirurgias precoces sem finalidade funcional são consideradas mutilação e devem ser evitadas; podem identificar-se com qualquer gênero (cis ou trans).
 
-- Modelo de organização de serviços de saúde para manifestar e acompanhar as ações e os serviços de territórios etno-culturais, com base populacional, atenção à Saúde Indígena e determinantes ambientais geográfica e administrativa. nas comunidades.
+#### Sexualidade
 
-- Critérios de delimitação:
+"Um aspecto central do bem-estar humano, que envolve sexo, identidade de gênero, papéis de gênero, orientação sexual, erotismo, prazer, intimidade e reprodução. A sexualidade é expressa e experienciada em pensamentos, fantasias, desejos, crenças, atitudes, valores, comportamentos, práticas, papéis e/ou relacionamentos" (OMS).
 
-- Cada Distrito Sanitário Especial Indígena (DSEI): tem População, área geográfica e perfil epidemiológico. um Conselho Distrital de Saúde Indígena (CONDISI) Relações sociais, vias de acesso e distribuição responsável por fiscalizar, debater e apresentar demográfica tradicional. políticas para o fortalecimento da saúde em suas
+**Importância clínica**: confundir esses conceitos gera falhas no cuidado, estigmas e abandono dos serviços de saúde.
 
-- Atuação: regiões. São órgãos colegiados de caráter permanente Rede de atenção primária dentro das e deliberativo e tem composição paritária em terras indígenas. relação aos usuários, ou seja, cinquenta por cento de Articulação com a rede regional do SUS para média representantes dos usuários, eleitos pelas respectivas e alta densidade tecnológica. comunidades indígenas da área de abrangência de 34 DSEI no Brasil (abrangendo todas as regiões). cada (DSEI/SESAI/ MS). São 34 CONDSI ao todo, um
+#### Nome Social
 
-- Cada DSEI executa ações de atenção primária e por DSEI.
+- Designação pela qual a pessoa trans se identifica e é socialmente reconhecida;
+- Aquele escolhido pela própria pessoa, independentemente do seu registro civil;
+- **O nome civil não deve ser tornado público**;
+- O nome civil pode ser retificado;
+- **Gênero e nome social devem ser respeitados em todo o âmbito do SUS** – desde a recepção ao consultório até qualquer documento emitido pelo serviço de saúde, como receitas, exames e no cartão do SUS.
 
-vigilância em saúde para a população indígena do
+### Termos Relacionados à Vivência Trans
 
-- Fórum de Presidentes de Conselhos Distritais de território correspondente. Saúde Indígena (FPCONDISI): Com caráter consultivo,
+- **Aquendar**: ato de esconder o pênis tracionando-o para trás, junto do escroto, fixando-os com fita adesiva ou roupa íntima para esse fim (entre outras técnicas);
+- **Binder**: faixa compressiva utilizada para esconder o volume mamário — utilizado com objetivo de tornar as mamas menos visíveis e a silhueta com uma leitura social masculina;
+- **Packer**: prótese externa em formato de pênis e saco escroto — utilizado com objetivo de conferir volume genital sob a roupa, urinar em pé (através de um canal interno) e/ou penetração.
 
-- Equipes Multidisciplinares: médicos, enfermeiros, o Fórum de Presidentes dos Conselhos Distritais de odontólogos, auxiliares de enfermagem e agentes Saúde Indígena (FPCONDISI), assessora a SESAI em indígenas de saúde (AIS). relação à Política Nacional de Atenção à Saúde dos
+#### Queer, Crossdressing e Drag
 
-- Apoio Técnico: antropólogos, educadores, Povos Indígenas (PNASPI), no âmbito do Subsistema engenheiros sanitaristas e outros especialistas. de Atenção à Saúde Indígena do Sistema Único de
+- **Queer**: identidade que questiona normas de gênero e sexualidade, abrangendo múltiplas vivências;
+- **Crossdresser (CD)**: pessoa que usa roupas associadas a outro gênero por bem-estar ou expressão pessoal, geralmente em contextos específicos;
+- **Drag queen/king**: performance artística de estereótipos de gênero, sem ligação obrigatória com identidade de gênero ou orientação sexual.
 
-- Critérios de Dimensionamento: número Saúde (SasiSUS).
+### Sigla LGBTQIA+
 
-de habitantes, dispersão populacional, perfil Secretaria Especial de Saúde Indígena (SESAI) epidemiológico e necessidades específicas de
+- **L**: Lésbicas;
+- **G**: Gays;
+- **B**: Bissexuais;
+- **T**: Transgênero (homens trans, mulheres trans, travestis, pessoas não-binárias);
+- **Q**: Queer;
+- **I**: Intersexo;
+- **A**: Assexuais;
+- **+**: Outras identidades e orientações, como pansexualidade e polissexualidade.
 
-- Órgão do Ministério da Saúde responsável pela gestão controle de endemias. do SasiSUS.
+### Abordagem de Sexualidade nas Consultas — Comunicação Clínica: Habilidades
+
+- **Abordar sexualidade** melhora os desfechos de saúde e a satisfação das pessoas;
+- As pessoas desejam conversar sobre sua sexualidade na consulta, mas raramente o fazem antes de o profissional perguntar;
+- **É essencial usar pronomes** de acordo com a identidade de gênero e deixar explícito que toda a diversidade sexual e de gênero será acolhida sem julgamento;
+- Uma estratégia possível é o uso de **termos neutros e inclusivos**;
+- **Termos objetivos, simples e adequados** ao contexto cultural facilitam a abordagem de temas delicados como práticas e comportamentos sexuais;
+- **Profissionais de saúde não devem fazer suposições** e nem presumir a orientação sexual, a identidade de gênero e o desejo reprodutivo das pessoas que atendem;
+- **Evitar o pressuposto de cisheterossexualidade**: não tratar as pessoas como se fossem cisgênero e heterossexuais;
+- **Naturalizar a abordagem** da sexualidade;
+- Quando identificado algum sinal de constrangimento: pode-se informar que aquelas perguntas são feitas a todas as pessoas, além da possibilidade de interrupção da conversa sobre o tema;
+- **Utilizar o atributo da APS de longitudinalidade**;
+- **Usar o MCCP** (modelo de cuidado centrado na pessoa).
 
 ---
 
 <!-- page:4 -->
 
-## COORDENA AÇÕES, FINANCIA E SUPERVISIONA OS DSEI, GARANTINDO LOGÍSTICA
+## Processo Transexualizador no SUS
 
-## ESTRUTURA E ARTICULAÇÃO INTERSETORIAL
+### Histórico Normativo
 
-Figura 3: Distribuição dos 34 DSEI no Território Brasileiro.
+- **Portaria nº 1.707/2008** → atualizada pela **Portaria nº 2.803/2013**;
+- **Tema de atualizações recorrentes** em Resoluções do Conselho Federal de Medicina:
+  - Resolução nº 1.955/2010;
+  - Resolução nº 2.265/2019;
+  - Resolução nº 2.427/2025.
 
-## SAÚDE DA POPULAÇÃO NEGRA
+### Objetivo
 
-- Monitoramento e avaliação das ações de combate ao racismo institucional e redução das
+Redefinir, ampliar e regulamentar o **cuidado integral a pessoas travestis e transexuais** no SUS, garantindo o direito à saúde, à autonomia e à identidade de gênero, com foco em ações ambulatoriais, hormonais e cirúrgicas.
 
-- Política Nacional de Saúde Integral da População desigualdades raciais.
+### Ações Contempladas
 
-Negra (PNSIPN)
+- Acompanhamento multiprofissional;
+- Hormonização (a partir de 18 anos);
+- Cirurgias de afirmação de gênero (a partir de 21 anos);
+- Projeto Terapêutico Singular (PTS) obrigatório.
 
-- Processos de informação e comunicação que Instituída pela Portaria no 992/2009 do Ministério desconstruam estigmas, valorizem a identidade negra da Saúde e reduzam vulnerabilidades.
+### Procedimentos de Afirmação de Gênero — Comparação entre Critérios
 
-## MARCA DA PNSIPN RACISMO INSTITUCIONAL
+**Tabela 1**: Procedimento de Afirmação de Gênero segundo critérios do SUS e do CFM.
 
-- Reconhecimento do racismo, das desigualdades
+| Procedimento | SUS (Portaria nº 2.803/2013) | CFM nº 2.265/2019 | CFM nº 2.427/2025 |
+|---|---|---|---|
+| **Bloqueio Puberal** | A partir do estágio Tanner II, com acompanhamento multiprofissional, aprovação ética e consentimento do adolescente e responsáveis | Não normatizado | Vedado em qualquer idade |
+| **Hormonização** | A partir de 18 anos | A partir de 16 anos, com PTS, consentimento do adolescente e responsáveis | Apenas a partir de 18 anos (Hormonioterapia) |
+| **Cirurgia de Afirmação de Gênero** | A partir de 18 anos, com critérios clínicos e psicológicos definidos (sem esterilização) | A partir de 21 anos (vedado antes dos 21 anos de idade) | A partir de 18 anos; 21 anos quando as cirurgias implicarem potencial efeito esterilizador |
 
-- Definido como o conjunto de práticas, normas étnico-raciais e do racismo institucional como e comportamentos discriminatórios que, determinantes sociais da saúde, com foco na intencionalmente ou não, colocam pessoas negras em promoção da equidade em saúde. desvantagem no acesso aos serviços de saúde.
+### Nota Importante sobre Resolução CFM nº 2.427/2025
 
-- Manifesta-se por meio de omissões, estereótipos,
+A **Resolução nº 2.427/2025 foi suspensa pela Justiça Federal** no dia 25 de julho de 2025, restaurando as normas anteriores (CFM nº 2.265/2019).
 
-OBJETIVO GERAL desumanização, atendimento diferenciado e barreiras
+**Motivações da suspensão:**
+- **Vício formal**: Resolução foi elaborada sem debate com sociedade civil, especialistas de diversas áreas (psicologia, serviço social, sociologia, etc.) e sem processo participativo, diferentemente da Resolução anterior (CFM 2.265/2019);
+- **Vício material**: A norma previa ações consideradas como violação da privacidade, intimidade e dignidade humana.
 
-- Promover a saúde integral da população negra, de acesso.
+**Atenção**: Os critérios acerca do Processo de Afirmação de Gênero, ainda amplamente conhecido como "Processo Transexualizador", estão em intensa disputa em 2025. Deve haver atenção contínua com atualizações recorrentes.
 
-priorizando a redução das desigualdades étnicoraciais, o combate ao racismo e à discriminação AUTODECLARAÇÃO DE RAÇA/COR institucional nos serviços do SUS.
+### Responsabilidades e Atribuições
 
-- O SUS adota o critério da autodeclaração (Portaria
+#### Ministério da Saúde
 
-MS nº 344/2017), em que o(a) usuário(a) define DIRETRIZES GERAIS sua raça/cor.
+- Apoia técnica e politicamente;
+- Conduz pactuações na CIT;
+- Distribui a Carta dos Direitos dos Usuários (garantindo nome social);
+- Define estratégias para direitos reprodutivos;
+- Articula ações para adolescentes LGBT e populações em situação carcerária/violência;
+- Elabora protocolos clínicos (inclui quesitos de orientação sexual e identidade de gênero em sistemas de informação e prontuários);
+- Define hormônios, próteses, mastectomia, histerectomia;
+- Fomenta pesquisas;
+- Apoia movimentos sociais.
 
-- Inclusão do tema racismo e saúde da população
+#### Secretarias Estaduais de Saúde
 
-- Em casos de recém-nascidos, óbitos ou negra na formação e educação permanente de impossibilidade por parte do usuário, a declaração é trabalhadores da saúde. feita por familiares ou responsáveis.
+- Definem estratégias e planos de ação estaduais;
+- Conduzem pactuações na CIB;
+- Coordenam e avaliam a implementação;
+- Promovem a inclusão da política nos planos estaduais e PPAs;
+- Incentivam espaços de equidade;
+- Promovem ações intersetoriais e educativas.
 
-- Fortalecimento do Movimento Social Negro nas
+#### Secretarias Municipais de Saúde
 
-- A autodeclaração remete à percepção de cada um instâncias de controle social do SUS. em relação à sua raça/cor, o que implica considerar
+- Implementam a política no município;
+- Identificam necessidades de saúde locais;
+- Incluem a política nos planos municipais e PPAs setoriais;
+- Estabelecem monitoramento e avaliação;
+- Articulam com outros setores sociais;
+- Implantam práticas educativas para melhorar a visibilidade e o respeito a LGBT.
 
-- Produção e disseminação de conhecimento científico não somente seus traços físicos, mas também à e tecnológico sobre saúde da população negra. origem étnico-racial, aos aspectos socioculturais e à
+#### Distrito Federal
 
-- Valorização e reconhecimento de saberes e práticas construção subjetiva do sujeito.
+- Possui os mesmos direitos e obrigações de Estados e Municípios.
 
-populares, incluindo aqueles preservados por religiões de matriz africana.
+### Diretrizes Principais
 
-![Figura do material - página 4](figure-004-1.webp)
+I. Respeito aos direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais, contribuindo para a eliminação do estigma e da discriminação decorrentes das homofobias, como a lesbofobia, gayfobia, bifobia e transfobia, consideradas na determinação social de sofrimento e de doença;
 
----
+II. Contribuição para a promoção da cidadania e da inclusão da população LGBT por meio da articulação com as diversas políticas sociais, de educação, trabalho, segurança;
 
-<!-- page:5 -->
+III. Inclusão da diversidade populacional nos processos de formulação, implementação de outras políticas e programas voltados para grupos específicos no SUS, envolvendo orientação sexual, identidade de gênero, ciclos de vida, raça-etnia e território;
 
-## ALGUMAS ESTRATÉGIAS DE GESTÃO
+IV. Eliminação das homofobias e demais formas de discriminação que geram a violência contra a população LGBT no âmbito do SUS, contribuindo para as mudanças na sociedade em geral;
 
-- Garantir a inclusão da PNSIPN no Plano Estadual de
+V. Implementação de ações, serviços e procedimentos no SUS, com vistas ao alívio do sofrimento, dor e adoecimento relacionados aos aspectos de inadequação de identidade, corporal e psíquica de pessoas transexuais e travestis;
 
-- Ações afirmativas e metas específicas para combate Saúde e no PPA setorial.
+VI. Difusão das informações pertinentes ao acesso, à qualidade da atenção e às ações para o enfrentamento da discriminação, em todos os níveis de gestão do SUS;
 
-ao racismo institucional.
+VII. Inclusão da temática da orientação sexual e identidade de gênero de lésbicas, gays, bissexuais, travestis e transexuais nos processos de educação permanente desenvolvidos pelo SUS, incluindo os trabalhadores da saúde, os integrantes dos Conselhos de Saúde e as lideranças sociais;
 
-- Implantar instâncias estaduais de promoção da equidade.
+VIII. Produção de conhecimentos científicos e orientação tecnológicos visando à melhoria da condição de saúde da população LGBT;
 
-- Redução das disparidades étnico-raciais nas
+IX. Fortalecimento da representação do movimento social organizado da população LGBT nos Conselhos de Saúde, Conferências e demais instâncias de participação social.
 
-- Apoiar a implantação de instâncias municipais.
+### Atenção Especializada e Processo Transexualizador
 
-condições de saúde e nos agravos, considerando as
+Garante o acesso ao processo transexualizador no SUS, a redução de riscos e danos relacionados ao uso de hormônios e medicamentos, além do aperfeiçoamento das tecnologias voltadas às demandas de travestis e transexuais.
 
-- Incluir a política na educação permanente necessidades locorregionais, sobretudo na: de profissionais. Mortalidade materna e infantil.
+### Prevenção e Cuidado Integral
 
-- Estabelecer indicadores de Violência letal. monitoramento e avaliação. Doença falciforme,
+Contempla ações para reduzir morbidade e mortalidade, garantir atenção à saúde de adolescentes e idosos LGBT, fortalecer o cuidado em ISTs/HIV/Aids, hepatites virais, prevenção de cânceres ginecológicos e de próstata, e assegurar direitos sexuais e reprodutivos.
 
-- Promover ações intersetoriais e articulação com Tuberculose, organizações governamentais e não-governamentais. HIV/Aids, Municipal Hanseníase.
+### Combate ao Preconceito e Promoção da Inclusão
 
-- Implementar a PNSIPN no âmbito municipal. Câncer de colo uterino e mama.
+Busca eliminar discriminação nos serviços de saúde, assegurar o uso do nome social, promover o respeito, fortalecer a participação social da população LGBT e combater problemas relacionados à saúde mental, autoestima e exclusão.
 
-- Definir e gerir recursos, pactuados na CIB. Transtornos mentais
+### Educação Permanente e Produção de Conhecimento
 
-- Coordenar, monitorar e avaliar ações locais.
+Prevê a inclusão do tema das discriminações nos processos de educação permanente de trabalhadores da saúde e o fomento a estudos e pesquisas voltadas às necessidades da população LGBT.
 
-- Qualificação da atenção à saúde da mulher negra
+## Referências
 
-- Garantir a inclusão da PNSIPN no Plano Municipal de
+Figura 1: Subsistema de Atenção à Saúde Indígena. Fonte: BRASIL. Lei nº 9.836, de 23 de setembro de 1999.
 
-(gestação, climatério, abortamento). Saúde e no PPA.
+Figura 2: Principais definições em gênero e sexualidade. Adaptado de TAVARES, Leonardo Ferreira Galvão. Saúde LGBTQIA+: Práticas de Cuidado Transdisciplinar. Revista Brasileira de Sexualidade Humana, v. 34, p. 1152-1152, 2023.
 
-- Redes integradas para mulheres negras em situação
+Figura 3: Distribuição dos 34 DSEI no Território Brasileiro. Fonte: Desai/Funasa/MS.
 
-- Identificar necessidades da população negra de violência (sexual, doméstica, intrafamiliar). do município.
-
-- Estabelecimento de metas específicas para a melhoria
-
-- Implantar instâncias locais de promoção da equidade.
-
-dos indicadores de saúde da população negra, com
-
-- Estabelecer indicadores e mecanismos especial atenção para as populações quilombolas de monitoramento.
-
-- Fortalecimento da atenção à saúde mental, em
-
-- Promover educação permanente de trabalhadores especial aqueles com transtornos decorrentes do uso de saúde.
-
-de álcool e outras droga
-
-- Incentivar controle social e participação popular.
-
-- Inclusão do quesito cor nos instrumentos de coleta de
-
-- Apoiar ações de educação popular e comunicação dados nos sistemas de informação do SUS; sobre saúde da população negra.
-
-- Educação permanente em saúde, comunicação e Controle Social educação popular antirracista.
-
-- A PNSIPN reforça a participação popular e o controle social como instrumentos fundamentais:
-
-RESPONSABILIDADES DAS ESFERAS DE | Conselhos de Saúde (municipais, estaduais e GESTÃO nacional) com representação do movimento negro.
-
-Federal | Monitoramento das políticas públicas para garantia
-
-- Implementar a PNSIPN em âmbito nacional. da equidade.
-
-- Definir e gerir recursos orçamentários e financeiros,
-
-## SAÚDE DA POPULAÇÃO
-
-pactuados na CIT.
-
-- Incluir a política no Plano Nacional de Saúde e no LGBTQIAPN+
-
-PPA setorial.
-
-- Coordenar, monitorar e avaliar a política em CONCEITOS-CHAVE nível nacional.
-
-- Sexo biológico: Características anatômicas,
-
-- Garantir a inclusão do quesito cor nos sistemas de fisiológicas e cromossômicas atribuídas no informação do SUS. nascimento (genitália externa, cariótipo, padrão
-
-- Prestar cooperação técnica e financeira a Estados, hormonal). Pode incluir variações intersexo.
-
-DF e Municípios.
-
-- Identidade de gênero: Vivência interna e individual
-
-- Apoiar a criação de instâncias de promoção da de gênero, que pode ou não corresponder ao sexo de equidade em saúde da população negra. nascimento (ex.: mulher, homem, pessoa não binária).
-
-- Incluir a política na formação profissional e educação
-
-- Orientação sexual: Direção do desejo afetivo e/ permanente de trabalhadores da saúde. ou sexual (heterossexual, homossexual, bissexual,
-
-- Estabelecer indicadores e instrumentos de avaliação. pansexual etc.).
-
-- Fortalecer a gestão participativa e o controle social.
-
-- Importância clínica: Confundir esses conceitos gera
-
-- Apoiar educação popular em saúde e produção de falhas no cuidado, estigmas e abandono dos serviços conhecimento sobre racismo. de saúde.
-
-Estadual
-
-- Sexualidade: “Um aspecto central do bem- estar
-
-- Apoiar a implementação da política em articulação humano, que envolve sexo, identidade de gênero, com o nível federal. papéis de gênero, orientação sexual, erotismo, prazer,
-
-- Definir e gerir recursos financeiros, pactuados na CIB. intimidade e reprodução. A sexualidade é expressa e
-
-- Coordenar, monitorar e avaliar a política no experienciada em pensamentos, fantasias, desejos, âmbito estadual. crenças, atitudes, valores, comportamentos, práticas, papéis e/ou relacionamentos” (OMS).
-
----
-
-<!-- page:6 -->
-
-LGBTQIA+ Pessoas Intersexo
-
-- Representa pessoas que não são cisgêneras,
-
-- Pessoas cujas características corporais (genitália, heterossexuais, endossexo (pessoa que não é cromossomos, órgãos reprodutivos) não seguem o intersexo) e alossexuais (pessoas que sentem atração padrão binário macho-fêmea.
-
-sexual por outras pessoas).
-
-- Pontos-chave:
-
-- Acrônimo: | Evitar termos como “hermafrodita” ou “pseudo- L: Lésbicas. hermafrodita” (estigmatizantes). G: Gays. | Intersexualidade não é uma condição patológica (a B: Bissexuais. maioria das pessoas é saudável). T: Transgênero (homens trans, mulheres trans, | Cirurgias precoces sem finalidade funcional são travestis, pessoas não binárias). consideradas mutilação e devem ser evitadas. Q: Queer. | Podem identificar-se com qualquer gênero (cis I: Intersexo. ou trans). A: Assexuais. Queer, Crossdressing e Drag +: Outras identidades e orientações, como
-
-- Queer: Identidade que questiona normas de gênero e pansexualidade e polissexualidade. sexualidade, abrangendo múltiplas vivências.
-
-Identidade de Gênero
-
-- Crossdresser (CD): Pessoa que usa roupas associadas
-
-- Vivência interna e individual de gênero, a outro gênero por bem-estar ou expressão pessoal, autodeterminada, que pode ou não coincidir com o geralmente em contextos específicos.
-
-sexo atribuído ao nascer.
-
-- Drag queen/king: Performance artística de
-
-- Cisgênero (cis): Pessoa que se reconhece com o estereótipos de gênero, sem ligação obrigatória com gênero designado ao nascimento. identidade de gênero ou orientação sexual.
-
-- Transgênero (trans): Pessoa que não se identifica Práticas Sexuais com o gênero designado ao nascer.
-
-- Definição: Qualquer atividade que envolva prazer sexual, Mulheres trans/travestis: Designadas como com ou sem contato genital, individual ou coletiva.
-
-homens ao nascer, mas se reconhecem como
-
-- Não confundir prática sexual com orientação sexual.
-
-mulheres/travestis. Sempre usar artigos e Nome social pronomes femininos.
-
-- Designação pela qual a pessoa trans se identifica e é Homens trans: Designados como mulheres ao socialmente reconhecida nascer, mas se reconhecem como homens
-
-- Aquele escolhido pela própria pessoa,
-
-- Não binário: Pessoas que não se identificam independentemente do seu registro civil.
-
-exclusivamente como homem ou mulher.
-
-- O nome civil não deve ser tornado público. Exemplos de identidades: gênero-fluído, agênero
-
-- O nome civil pode ser retificado.
-
-Expressão de Gênero
-
-- Gênero e nome social devem ser respeitados em todo
-
-- Como a pessoa se apresenta e é o âmbito do Sistema Único de Saúde (SUS) – desde percebida socialmente a recepção ao consultório até qualquer documento
-
-- Observação: Não define orientação sexual ou emitido pelo serviço de saúde, como receitas, exames identidade de gênero. e no cartão do SUS.
-
-Orientação Sexual, Afetiva e Romântica Abordagem de Sexualidade nas Consultas - Comunicação
-
-- Direção do desejo afetivo, erótico e/ou sexual (ou Clínica: Habilidades romântico) de uma pessoa.
-
-- Abordar sexualidade melhora os desfechos de saúde e
-
-- Conceitos mais comuns: a satisfação das pessoas. Homossexual: Atração por pessoas do
-
-- As pessoas desejam conversar sobre sua sexualidade mesmo gênero. na consulta, mas raramente o fazem antes de o Heterossexual: Atração por pessoas de profissional perguntar.
-
-gênero diferente.
-
-- É essencial usar pronomes de acordo com a Bissexual: Atração por mais de um gênero. identidade de gênero e deixar explícito que toda Pansexual: Atração por pessoas a diversidade sexual e de gênero será acolhida independentemente do gênero. sem julgamento. Polissexual: Atração por alguns gêneros, mas
-
-- Uma estratégia possível é o uso de termos não todos. neutros e inclusivos. Assexual: Ausência ou pouca atração sexual (pode
-
-- Termos objetivos, simples e adequados ao contexto haver atração romântica, sensorial etc.). cultural facilitam a abordagem de temas delicados
-
-- Termos técnicos em saúde: como práticas e comportamentos sexuais. HSH (Homem que faz sexo com homem).
-
-- Profissionais de saúde não devem fazer suposições MSM (Mulher que faz sexo com mulher). e nem presumir a orientação sexual, a identidade de
-
-Usados em políticas de prevenção de ISTs gênero e o desejo reprodutivo das pessoas que atendem.
-
-- Evitar o pressuposto de cisheterossexualidade:
-
-tratando as pessoas como se fossem cisgênero e heterossexuais.
-
----
-
-<!-- page:7 -->
-
-- Naturalizar a abordagem da sexualidade.
-
-- Atenção Especializada e Processo Transexualizador:
-
-- Quando identificado algum sinal de constrangimento: Garante o acesso ao processo transexualizador Pode-se informar que aquelas perguntas são feitas no SUS, a redução de riscos e danos relacionados a todas as pessoas, além da possibilidade de ao uso de hormônios e medicamentos, além do interrupção da conversa sobre o tema. aperfeiçoamento das tecnologias voltadas às
-
-- Utilizar o atributo da APS de longitudinalidade demandas de travestis e transexuais
-
-- Usar o MCCP
-
-- Prevenção e Cuidado Integral: Contempla ações para
-
-Termos relacionados à vivência trans reduzir morbidade e mortalidade, garantir atenção
-
-- Aquendar: Ato de esconder o pênis tracionando-o à saúde de adolescentes e idosos LGBT, fortalecer o para trás, junto do escroto, fixando-os com fita cuidado em ISTs/HIV/Aids, hepatites virais, prevenção adesiva ou roupa íntima para esse fim (entre de cânceres ginecológicos e de próstata, e assegurar outras técnicas); direitos sexuais e reprodutivos
-
-- Binder: Faixa compressiva utilizada para esconder o
-
-- Combate ao Preconceito e Promoção da Inclusão:
-
-volume mamário. Utilizado com o objetivo de tornar Busca eliminar discriminação nos serviços de saúde, as mamas menos visíveis e a silhueta com uma leitura assegurar o uso do nome social, promover o respeito, social masculina; fortalecer a participação social da população LGBT
-
-- Packer: Prótese externa em formato de pênis e saco e combater problemas relacionados à saúde mental, escroto. Utilizado com objetivo de conferir volume autoestima e exclusão genital sob a roupa, urinar em pé (através de um canal
-
-- Educação Permanente e Produção de interno) e/ou penetração. Conhecimento: Prevê a inclusão do tema das discriminações nos processos de educação
-
-## POLÍTICA NACIONAL DE SAÚDE
-
-permanente de trabalhadores da saúde e o fomento
-
-## INTEGRAL DE LÉSBICAS, GAYS, a estudos e pesquisas voltadas às necessidades
-
-BISSEXUAIS, TRAVESTIS E da população LGBT Diretrizes
-
-## TRANSEXUAIS
-
-I. Respeito aos direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais, contribuindo
-
-- Instituída pela Portaria nº 2.836, de 1º de para a eliminação do estigma e da discriminação dezembro de 2011 decorrentes das homofobias, como a lesbofobia,
-
-Marca da Política gayfobia, bifobia e transfobia, consideradas na O reconhecimento dos efeitos da discriminação e da determinação social de sofrimento e de doença;
-
-exclusão no processo de saúde-doença da população II. Contribuição para a promoção da cidadania e da LGBT. Suas diretrizes e seus objetivos estão, portanto, inclusão da população LGBT por meio da articulação voltados para mudanças na determinação social com as diversas políticas sociais, de educação, da saúde, com vistas à redução das desigualdades trabalho, segurança;
-
-relacionadas à saúde destes grupos sociais. III. Inclusão da diversidade populacional nos processos Objetivo Geral de formulação, implementação de outras políticas e
-
-- Promover a saúde integral de lésbicas, gays, programas voltados para grupos específicos no SUS, bissexuais, travestis e transexuais, eliminando a envolvendo orientação sexual, identidade de gênero, discriminação e o preconceito institucional, bem ciclos de vida, raça-etnia e território;
-
-como contribuindo para a redução das desigualdades IV. Eliminação das homofobias e demais formas de e a consolidação do SUS como sistema universal, discriminação que geram a violência contra a integral e equitativo. população LGBT no âmbito do SUS, contribuindo para Objetivos Específicos as mudanças na sociedade em geral;
-
-- A Política apresenta 24 objetivos específicos, que V. Implementação de ações, serviços e procedimentos se organizam em torno de eixos fundamentais para no SUS, com vistas ao alívio do sofrimento, dor garantir a equidade, combater a discriminação e e adoecimento relacionados aos aspectos de promover a saúde integral dessa população. inadequação de identidade, corporal e psíquica
-
-Alguns dos grandes temas dos objetivos específicos, de relativos às pessoas transexuais e travestis;
-
-maneira ampla, são: VI. Difusão das informações pertinentes ao acesso,
-
-- Gestão e Equidade no SUS: Envolve a criação de à qualidade da atenção e às ações para o mecanismos de gestão para alcançar maior equidade, enfrentamento da discriminação, em todos os níveis com atenção especial às especificidades de raça, de gestão do SUS;
-
-cor, etnia e território, além da ampliação do acesso VII. Inclusão da temática da orientação sexual e e da qualificação da rede de serviços de saúde para identidade de gênero de lésbicas, gays, bissexuais, atender à população LGBT travestis e transexuais nos processos de educação
-
-- Informação, Monitoramento e Avaliação: Trata da permanente desenvolvidos pelo SUS, incluindo coleta, análise e divulgação de dados sobre a saúde os trabalhadores da saúde, os integrantes dos formulação de políticas baseadas em evidências
-
-LGBT, permitindo o monitoramento de indicadores e a Conselhos de Saúde e as lideranças sociais;
-
----
-
-<!-- page:8 -->
-
-VIII. Produção de conhecimentos científicos e orientação sexual e identidade de gênero), qualificação tecnológicos visando à melhoria da condição de e difusão de informações e indicadores, e estratégias saúde da população LGBT; de vigilância e prevenção da violência IX. Fortalecimento da representação do movimento
-
-- Eixo 3: Educação permanente e educação social organizado da população LGBT nos Conselhos popular em saúde com foco na população LGBT:
-
-de Saúde, Conferências e demais instâncias de Visa garantir educação em saúde para gestores, participação social. profissionais, conselheiros e lideranças sociais sobre Responsabilidades e Atribuições o enfrentamento às discriminações e especificidades
-
-- Ministério da Saúde: Apoia técnica e politicamente, em saúde LGBT conduz pactuações na CIT, distribui a Carta dos
-
-- Eixo 4: Monitoramento e avaliação das ações de estratégias para direitos reprodutivos, articula ações propostas, com indicadores de morbimortalidade e para adolescentes LGBT e populações em situação acesso à atenção integral carcerária/violência, elabora protocolos clínicos inclui quesitos de orientação sexual e identidade de
-
-Direitos dos Usuários (garantindo nome social), define saúde para a população LGBT: Baseado nas ações (hormônios, próteses, mastectomia, histerectomia), PROCESSO TRANSEXUALIZADOR NO SUS
-
-- Instituição: Portaria nº 1.707/2008 → atualizada pela gênero em sistemas de informação e prontuários, Portaria nº 2.803/2013.
-
-fomenta pesquisas e apoia movimentos sociais
-
-- Objetivo: Redefinir, ampliar e regulamentar o
-
-- Secretarias Estaduais de Saúde: Definem estratégias cuidado integral a pessoas travestis e transexuais e planos de ação estaduais, conduzem pactuações no SUS, garantindo o direito à saúde, à autonomia na CIB, coordenam e avaliam a implementação, e à identidade de gênero, com foco em ações promovem a inclusão da política nos planos estaduais ambulatoriais, hormonais e cirúrgicas.
-
-e PPAs, incentivam espaços de equidade, e promovem
-
-- Ações contempladas:
-
-ações intersetoriais e educativas | Acompanhamento multiprofissional.
-
-- Secretarias Municipais de Saúde: Implementam a | Hormonização (a partir de 18 anos).
-
-política no município, identificam necessidades de | Cirurgias de afirmação de gênero (a partir de saúde locais, incluem a política nos planos municipais 21 anos).
-
-e PPAs setoriais, estabelecem monitoramento e | Projeto Terapêutico Singular (PTS). avaliação, articulam com outros setores sociais, Diretrizes do CFM e implantam práticas educativas para melhorar a
-
-- Resolução nº 2.265/2019 (inicialmente revogada visibilidade e o respeito a LGBT pela Resolução nº 2.427/2025):
-
-- Distrito Federal: Possui os mesmos direitos e | Bloqueio puberal: A partir do estágio Tanner II, obrigações de Estados e Municípios com consentimento.
-
-Estruturada em quatro eixos estratégicos | Hormonização: A partir de 16 anos.
-
-- Eixo 1: Acesso da população LGBT à Atenção Integral | Cirurgia de afirmação de gênero: A partir de 18 anos.
-
-à Saúde: Foca em mecanismos gerenciais para
-
-- Resolução nº 2.427/2025:
-
-equidade, informação, comunicação, intersetorialidade, | Bloqueio puberal: Vedado. participação social, uso do nome social e qualificação | Hormonioterapia: Apenas a partir de 18 anos.
-
-de profissionais e serviços, incluindo saúde mental | Cirurgias: A partir de 18 anos (21 anos quando
-
-- Eixo 2: Ações de Promoção e Vigilância em Saúde houver risco de esterilização) para a população LGBT: Abrange o aperfeiçoamento
-
-- Verificar Tabela 1 dos instrumentos de vigilância em saúde (incluindo
-
-Tabela 1: Procedimento de Afirmação de Gênero segundo critérios do SUS e do CFM. SUS (Portaria nº Procedimento CFM nº 2.265/2019 CFM nº 2.427/2025 2.803/2013)
-
-A partir do estágio Tanner II, com acompanhamento Bloqueio Puberal Não normatizado multiprofissional, aprovação Vedado em qualquer idade ética e consentimento do adolescente e responsáveis A partir de 16 anos, com PTS, Hormonização A partir de 18 anos consentimento do adolescente Apenas a partir de 18 anos (Hormonioterapia)
-
-e responsáveis A partir de 18 anos. Vedado Cirurgia de Afirmação A partir de 18 anos, com antes dos 21 (vinte e um)
-
-de Gênero (sem A partir de 21 anos critérios clínicos e psicológicos anos de idade quando esterilização) definidos as cirurgias implicarem potencial efeito esterilizador
-
----
-
-<!-- page:9 -->
-
-## REFERÊNCIAS
-
-- Atenção: A Resolução nº 2.427/2025 foi suspensa pela as normas anteriores (CFM nº 2.265/2019) Figura 1: Subsistema de Atenção à Saúde Indígena.
-
-Justiça Federal dia 25 de julho de 2025, restaurando Motivação da suspensão: Embasado em BRASIL. Lei nº 9.836, de 23 de setembro de 1999.
-
-- Vício formal: Resolução foi elaborada sem debate
-
-- Vício formal: Resolução foi elaborada sem debate com sociedade civil, especialistas de diversas áreas processo participativo, diferentemente da Resolução anterior (CFM 2.265/2019).
-
-(psicologia, serviço social, sociologia, etc.) e sem
-
-- Vício material: A norma previa ações consideradas como violação da privacidade, intimidade e dignidade humana.
-
-Os critérios acerca do Processo de Afirmação de Gênero, ainda amplamente conhecido como “Processo Transexualizador”, estão em intensa disputa em 2025. Deve haver atenção contínua com atualizações recorrentes Figura 2: Principais definições em gênero e sexualidade Adaptado de TAVARES, Leonardo Ferreira Galvão. SAÚDE LGBTQIA+:
-
-PRÁTICAS DE CUIDADO TRANSDISCIPLINAR. Revista Brasileira de Sexualidade Humana, v. 34, p. 1152-1152, 2023.
-
-Figura 3: Distribuição dos 34 DSEI no Território Brasileiro. Desai/Funasa/ MS Tabela 1: Procedimento de Afirmação de Gênero segundo critérios do SUS e do CFM.
-
-Adaptado de: BRASIL. Ministério da Saúde. Portaria nº 2.803, de 19 de novembro de 2013. Redefine e amplia o Processo Transexualizador no Sistema Único de Saúde (SUS). Diário Oficial da União, Brasília, DF, 20 nov.
-
-2013. Seção 1. CONSELHO FEDERAL DE MEDICINA (Brasil). Resolução CFM
-
-n° 2.265, de 20 de setembro de 2019. Dispõe sobre o cuidado médico à pessoa com incongruência de gênero. Diário Oficial da União, Brasília, DF, 9 jan. 2020. Seção I, p. 96. CONSELHO FEDERAL DE MEDICINA (Brasil).
-
-Resolução CFM n° 2.427, de 8 de abril de 2025. Dispõe sobre critérios éticos para o cuidado médico da pessoa com incongruência de gênero.
-
-Diário Oficial da União, Brasília, DF, 15 abr. 2025. Seção I.
+**Tabela 1**: Procedimento de Afirmação de Gênero segundo critérios do SUS e do CFM. Adaptado de: BRASIL. Ministério da Saúde. Portaria nº 2.803, de 19 de novembro de 2013. Redefine e amplia o Processo Transexualizador no Sistema Único de Saúde (SUS). Diário Oficial da União, Brasília, DF, 20 nov. 2013. Seção 1. CONSELHO FEDERAL DE MEDICINA (Brasil). Resolução CFM nº 2.265, de 20 de setembro de 2019. Dispõe sobre o cuidado médico à pessoa com incongruência de gênero. Diário Oficial da União, Brasília, DF, 9 jan. 2020. Seção I, p. 96. CONSELHO FEDERAL DE MEDICINA (Brasil). Resolução CFM nº 2.427, de 8 de abril de 2025. Dispõe sobre critérios éticos para o cuidado médico da pessoa com incongruência de gênero. Diário Oficial da União, Brasília, DF, 15 abr. 2025. Seção I.

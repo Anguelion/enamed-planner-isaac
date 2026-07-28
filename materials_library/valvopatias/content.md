@@ -2,304 +2,294 @@
 
 <!-- page:1 -->
 
-Valvopatias (CM)
+## Semiologia Cardiovascular
 
-## ALTERAÇÕES SEMIOLÓGICAS
+### Pulso Venoso Jugular
 
-Normal
+É um pulso proveniente da **veia jugular interna**, sendo diretamente ligado ao funcionamento do **átrio direito**. Na prática, observa-se a veia jugular externa pela praticidade do acesso no exame físico.
 
-- a.contração atrial
+#### Gráfico em Condições de Normalidade
 
-- c.Fechamento tricúspide
+- **Onda A**: contração atrial;
+- **Descenso X**: relaxamento atrial;
+- **Onda C**: fechamento da tricúspide;
+- **Onda V**: enchimento atrial;
+- **Descenso Y**: abertura da tricúspide.
 
-- x.relaxamento atrial
+*Figura 1: Pulso venoso jugular.*
 
-- v.enchimento atrial
+#### Alterações Clínicas na Curva do Pulso Venoso Jugular
 
-- Y.abertura tricúspide de B2 (inspiração).
+- **Onda A gigante**: estenose tricúspide, disfunção de VD;
+- **Onda A em "canhão"**: BAVT (bloqueio atrioventricular total);
+- **Onda A ausente**: fibrilação atrial;
+- **Onda V gigante**: insuficiência tricúspide — pela regurgitação, causa maior enchimento atrial.
 
-Pulso Venoso Jugular Desdobramento Desdobramento fisiológico de B2
+*Figura 2: Onda A gigante.*
 
-Etiologia Semio Sinal de Doenças da valva pulso em aórtica ou doenças d’água Insuficiência da aorta (síndrome Corriga Aórtica de Marfan, HAS, de Mulle sífilis) de Quin diverg Pulso p et tardu Degenerativa sistólico Estenose Aórtica (ou reumática) aórtico c tardio e ab de Etiologia Semio Sopro dias Estenose Mitral Reumática rufl Secundária (dilatação anel/ Sopro s Insuficiência Mitral VE/isquemia) regurgita Reumática Prolapso área m da valva mitral Tratamento: valvopatia grave, sintomática = troca valva As medicações ajudam com os sintomas mas não alter Doenças Principais alterações Associadas
+*Figura 3: Onda V gigante.*
 
-- • BAVT
+### Ausculta Cardíaca
 
-- Onda a em “canhão” z •FA
+#### Focos de Ausculta
 
-- Onda a ausente z •Estenose
+1. Aórtico;
+2. Pulmonar;
+3. Aórtico acessório;
+4. Tricúspide;
+5. Mitral.
 
-- Onda a gigante tricúspide ou
+*Figura 4: Focos de ausculta.*
 
-- Onda v gigante disfunção VD
+**Nota**: ausculta em campânula evidencia os sons graves — útil para ausculta de B3, B4 e ruflar mitral.
 
-- •Insuficiência tri.
+### Ciclo Cardíaco
 
-- Persistente: ins e exp (pior na insp).
+*Figura 5: Ciclo cardíaco.*
 
-- BRD, HP
+#### B1 — Primeiro Som Cardíaco
 
-- Fixo: ins e exp igualmente
+Caracteriza o **fechamento das valvas atrioventriculares**: mitral e tricúspide.
 
-- CIA
+#### B2 — Segundo Som Cardíaco
 
-- Paradoxal: apenas na exp.
+Caracteriza o **fechamento das valvas aórtica e pulmonar**.
 
-- BRE, disf. VE.
+##### Desdobramento Fisiológico de B2
 
-(oposto do fisiológico) Sinais de ologia Outros Gravidade Musset, m martelo a ou de Tratar também Presença dos sinais an, sinal a aorta se diâmetro semiológicos.
+Na inspiração, há redução da pressão intratorácica, favorecendo o retorno venoso ao lado direito do coração. Assim, o enchimento ventricular direito é prolongado, denotando o atraso no fechamento da valva pulmonar (P2), na inspiração.
 
-er, sinal > 45mm. ncke, PA gente parvus
+- **Desdobramento persistente de B2**: BRD ou hipertensão pulmonar → acontece na inspiração e na expiração, mas é pior na inspiração;
+- **Desdobramento fixo**: CIA → desdobramento igualmente presente na inspiração e na expiração;
+- **Desdobramento paradoxal de B2**: BRE → oposto do fisiológico, presente apenas na expiração.
 
-- EAo paradoxal: TC us, sopro Presença dos sinais
+#### B3 — Terceiro Som Cardíaco
 
-- com escore de em foco semiológicos cálcio com pico Área valvar < 1cm²
+Protodiastólico (isto é, ocorre logo após B2). Para fins de avaliação, considere **disfunção sistólica** (fração de ejeção reduzida).
 
-- Eao BF, BG: eco com bafamento Gmed > 40 mmHg dobutamina ologia Outros stólico em <1,5 cm² Gmed > Varfarina sempre.
+#### B4 — Quarto Som Cardíaco
 
-B2 Sinais de Gravidade Área valvar Associação com FA: flar 10mmHg Estalido de Perda do reforço abertura precoce. pré-sistólico do sopro.
-
-Irradiação do sopro para as costas sistólico Ictus desviado para IM secundária: tratar ativo em baixo e para a E B1 doença de base.
-
-mitral. hipofonética. Parâmetros Eco ar. ram o desfecho.
+Telediastólico: assemelha-se com desdobramento de B1. Para fins de avaliação, considerar **disfunção diastólica** — coração pouco complacente e, muitas vezes, hipertrófico.
 
 ---
 
 <!-- page:2 -->
 
-## SEMIOLOGIA CARDIOVASCULAR
+## Sopros Cardíacos
 
-Onda V gigante
+### Definição
 
-## PULSO VENOSO JUGULAR
+Vibrações audíveis causadas pelo aumento da turbulência na passagem do sangue pela circulação.
 
-É um pulso proveniente da veia jugular interna, sendo diretamente ligado ao funcionamento do átrio direito.
+### Identificação do Sopro
 
-diretamente ligado ao funcionamento do átrio direito. Na prática, observa-se a veia jugular externa pela praticidade do acesso no exame físico.
+Depende de:
+- **Foco**: mitral, aórtico, tricúspide ou pulmonar;
+- **Momento no ciclo**: sístole ou diástole;
+- **Aspecto**: ejetivo, regurgitativo, aspirativo ou em ruflar.
 
-- Gráfico em condições de normalidade Onda A = contração atrial; Descenso X = relaxamento atrial; Onda C = fechamento da tricúspide; Onda V = enchimento atrial; A Descenso Y = abertura da tricúspide. F alterações clínicas na curva do pulso venoso jugular:
+*Figura 6: Pico lento e descenso tardio.*
 
-Figura 1: Pulso venoso jugular A partir de tal análise, é possível avaliar determinadas Onda A gigante: estenose tricúspide, disfunção de VD;
+### Sopros de Focos Aórtico e Pulmonar
 
-Figura 2: Onda A gigante
+- **Sístole**: não abre adequadamente (**estenose aórtica** ou pulmonar) — aspecto ejetivo;
+- **Diástole**: não fecha apropriadamente (**insuficiência aórtica** ou pulmonar) — aspecto aspirativo.
 
-- Pode ser considerada uma fusão das ondas A e C.
+### Sopros de Focos Mitral e Tricúspide
 
-- Onda A em “canhão”: BAVT;
+- **Sístole**: não fecha adequadamente (**insuficiência mitral** ou tricúspide) — aspecto regurgitativo;
+- **Diástole**: não abre apropriadamente (**estenose mitral** ou tricúspide) — aspecto em "ruflar".
 
-- Onda A ausente: fibrilação atrial; C
+---
 
-- Figura 5: Ciclo cardíaco Figura 3: Onda V gigante
+## Estenose Aórtica
 
-- Insuficiência tricúspide – pela regurgitação, causa maior enchimento atrial, correspondido pela onda V gigante.
+### Quadro Clínico
 
-AUSCULTA CARDÍACA Focos de ausculta
+**Tríade clássica**: **angina + síncope + dispneia aos esforços**.
 
-1. Aórtico;
+#### Angina
 
-2. Pulmonar;
+Desbalanço da oferta/demanda de oxigênio.
 
-3. Aórtico acessório;
+#### Síncope
 
-4. Tricúspide;
+Pode ser causada por **débito cardíaco fixo** (PA = RVP × DC):
+- Em situações de esforço físico, há tendência de vasodilatação;
+- Porém, à medida que o débito cardíaco permanece fixo, não é possível compensar a menor resistência periférica;
+- Assim, há evolução com hipotensão e síncope.
 
-5. Mitral.
+#### Dispneia aos Esforços
 
-Figura 4: Focos de ausculta
+É o sintoma mais comum, em virtude do quadro de **disfunção diastólica associada ao débito cardíaco fixo**.
 
-- Ausculta em campânula: evidencia os sons graves;
+#### Hemorragia Digestiva Associada à Estenose Aórtica
 
-- É útil para ausculta de B3, B4 e ruflar mitral.
+- **Síndrome de Heyde** (descrita em 1958): na passagem do FvW (fator de Von Willebrand) pela valva aórtica, há clivagem do fator;
+- Em geral, ocorre em conjunto com **angiodisplasias do intestino**;
+- Tratamento: troca de valva aórtica.
 
-## CICLO CARDÍACO
+#### Fibrose e Taquiarritmias; Bradiarritmias
 
-- Verificar Figura 5
+Associadas à doença.
 
-![Figura do material - página 2](figure-002-1.webp)
+### Exame Físico
 
-![Figura do material - página 2](figure-002-2.webp)
+**Pulso parvus et tardus** — sentido na carótida → sinal de gravidade.
+
+*Figura 8: Características semiológicas (sopro) das valvopatias.*
+
+- **Sopro sistólico em foco aórtico** com pico tardio e abafamento de B2;
+- **Fenômeno de Gallavardin**: descreve-se como um sopro piante em foco mitral, em pacientes com estenose aórtica grave — indica calcificação da aorta.
+
+### Critérios de Gravidade (Ecocardiograma)
+
+- **Gradiente médio VE-Aórtica ≥ 40 mmHg**;
+- **Área valvar (AV) ≤ 1 cm²**.
+
+### Estenose Aórtica de Baixo Fluxo e Baixo Gradiente
+
+#### Parâmetros
+
+- **Área valvar (AV) ≤ 1 cm²**;
+- **FEVE ≤ 40%**;
+- **Gradiente médio VE-Aórtica < 40 mmHg**.
+
+#### Conduta
+
+**Ecocardiograma com dobutamina**: é útil para avaliar o que surgiu primeiro — fração de ejeção reduzida ou estenose aórtica grave com reserva contrátil (aumento ≥ 20% do volume sistólico ejetado e/ou aumento > 10 mmHg no gradiente médio VE/Aorta).
+
+Se a área valvar **aumentar > 0,2 cm²**, quer dizer que a fração de ejeção está reduzida por outra etiologia (isto é, a área valvar estava < 1 cm² simplesmente porque estava passando pouco volume, em face da FEVE reduzida).
+
+Se houver **reserva contrátil e o gradiente VE-Aorta aumentar e a AV permanecer reduzida** → fração de ejeção reduzida secundária à estenose aórtica grave.
+
+### Estenose Aórtica Paradoxal
+
+#### Parâmetros
+
+- **Área valvar ≤ 1 cm²**;
+- **FEVE preservada**;
+- **Gradiente médio VE-Aórtica < 40 mmHg**;
+- **Volume sistólico < 35 mL/m²**.
+
+#### Conduta
+
+Tomografia com escore de cálcio da valva aórtica:
+- Se escore de cálcio > **1.300 em mulheres** ou **2.000 em homens**, está indicada intervenção.
 
 ---
 
 <!-- page:3 -->
 
-- B1 Fechamento das valvas atrioventriculares:
+## Insuficiência Aórtica
 
-mitral e tricúspide. ESTENOSE AÓRTICA
+**Sopro diastólico, de caráter aspirativo**, mais audível em foco aórtico e aórtico acessório.
 
-- B2 Quadro clínico Caracteriza o fechamento das valvas Tríade: angina + síncope + dispneia aos esforços.
+### Etiologia
 
-aórtica e pulmonar;
+- **Doenças da valva aórtica ou doenças da aorta**;
+- Exemplos: **Síndrome de Marfan, HAS, sífilis**.
 
-- Angina: desbalanço da oferta/demanda de oxigênio; Desdobramento fisiológico de B2 caracterizado Síncope pode ser causa por pelo atraso de P2 na inspiração;
+### Exame Físico — Sinais Semiológicos de Gravidade
 
-- Débito cardíaco fixo (PA = RVP x DC): em situações Na inspiração, há redução da pressão de esforço físico, há tendência de vasodilatação. Denota, então, o atraso no fechamento da valva hipotensão e síncope;
+- **Sinal de Musset**: tremor da cabeça a cada batimento cardíaco;
+- **Pulso em martelo d'água ou de Corrigan**: distensão rápida e queda abrupta (a manobra pode ser sensibilizada com elevação do membro superior do paciente);
+- **Sinal de Muller**: pulsação da úvula;
+- **Sinal de Quincke**: pulsação do leito ungueal;
+- **PA divergente**: exemplo: 140 × 40 mmHg.
 
-intratorácica, favorecendo o retorno venoso ao No entanto, à medida que o débito cardíaco lado direito do coração. Assim, o enchimento permanece fixo, não é possível compensar a menor ventricular direito é prolongado; resistência periférica. Assim, há evolução com pulmonar (P2), na inspiração.
+---
 
-- Fibrose e taquiarritmias; Desdobramento persistente de B2:
+## Estenose Mitral
 
-- Bradiarritmias. BRD ou hipertensão pulmonar → acontece Dispneia aos esforços na inspiração e na expiração, mas é pior
+**Sopro diastólico em ruflar** em foco mitral com reforço pré-sistólico.
 
-- É o sintoma mais comum, em virtude do quadro de na inspiração. disfunção diastólica associada ao débito cardíaco fixo. CIA → desdobramento igualmente presente na Hemorragia digestiva associada à EAo inspiração e na expiração.
+### Etiologia
 
-- Síndrome de Heyde (descrita em 1958); Desdobramento paradoxal de B2:
+- **Reumática** — principal etiologia;
+- É a **principal sequela tardia da doença reumática**.
 
-- Na passagem do FvW pela valva aórtica, há clivagem BRE → oposto do fisiológico, presente apenas do fator de Von Willebrand;
+### Epidemiologia
 
-na expiração;
+- Acomete mais **mulheres jovens**;
+- Neste sentido, é frequente o diagnóstico na **gestação** — a paciente inicia um quadro clínico de cardiopatia.
 
-- Em geral, ocorre em conjunto com angiodisplasias
+### Característica do Sopro
 
-- B3 do intestino; Protodiastólico (isto é, ocorre logo após B2);
+- **Sopro diastólico em ruflar**;
+- **Localização**: foco mitral;
+- **Apresenta reforço pré-sistólico**.
 
-- Tratamento: troca de valva aórtica. Para fins de avaliação, considere disfunção sistólica!
+### Sinais de Gravidade no Exame Físico
 
-Ou seja, fração de ejeção reduzida. DICA! Para a prova, idoso + síncope + sopro?
+- **Fácies mitralis**;
 
-- B4 Estenose aórtica! Telediastólico: se assemelha com desdobramento de B1; Exame físico Para fins de avaliação, considerar disfunção Pulso parvus et tardus – sentido na carótida → sinal diastólica. Isto é, coração pouco complacente e, de gravidade;
+*Figura 7: Paciente com fácies mitralis.*
 
-muitas vezes, hipertrófico.
+- **Estalido de abertura precoce**;
+- **B1 hiperfonética**;
+- **B2 hiperfonética** (hipertensão pulmonar);
+- **Congestão pulmonar**;
+- **Presença de insuficiência tricúspide**;
+- **Sopro de Graham Steel** (regurgitação pulmonar na hipertensão pulmonar).
 
-## SOPROS CARDÍACOS
+**DICA!** A estenose mitral poupa o ventrículo esquerdo! Caso exista disfunção ventricular associada, considerar outro diagnóstico associado!
 
-- Definição São vibrações audíveis causadas pelo aumento da turbulência na passagem do sangue pela circulação. Figura 6: Pico lento e descenso tardio
+### Associações — Fibrilação Atrial
 
-Etiologia Identificação
-
-- Sopro sistólico em foco aórtico com pico tardio e
-
-- Depende de identificação do foco, momento no ciclo abafamento de B2;
-
-cardíaco e aspecto.
-
-- Fenômeno de Gallavardin: descreve-se como um Foco: mitral, aórtico, tricúspide e pulmonar; sopro piante em foco mitral, em pacientes com Momento no ciclo: sístole ou diástole; estenose aórtica grave, indica calcificação da aorta. Aspecto: ejetivo, regurgitativo, aspirativo e em Ecocardiograma ruflar. Figura 8
-
-- Critérios de gravidade:
-
-Sopros de focos aórtico e pulmonar
-
-- Sístole: não abre adequadamente (estenose aórtica ou Gradiente médio VE-Ao ≥ 40 mmHg. Área valvar pulmonar), aspecto ejetivo; (AV) ≤ 1 cm2;
-
-- Diástole: não fecha apropriadamente (insuficiência aórtica e pulmonar), aspecto aspirativo. Estenose aórtica de baixo fluxo e baixo gradiente
-
-Sopros de focos mitral e tricúspide
-
-- Parâmetros:
-
-- Sístole: não fecha adequadamente (insuficiência mitral e tricúspide), aspecto regurgitativo; Área valvar (AV) ≤ 1 cm2. FEVE ≤ 40%. Gradiente médio
-
-- Diástole: não abre apropriadamente (estenose mitral e VE-Ao < 40 mmHg;
-
-tricúspide), aspecto em “ruflar”.
+- **Frequente!** O paciente deve ser **anticoagulado, sempre com varfarina**;
+- Existem piores desfechos associados ao uso de DOACs, independentemente do CHA2DS2-VASc;
+- Pelo quadro de fibrilação, ocorre **perda do reforço pré-sistólico do sopro**, pela ausência de contração atrial.
 
 ---
 
 <!-- page:4 -->
 
-- Conduta: ecocardiograma com dobutamina: Associações - fibrilação atrial: frequente! É útil para avaliar o que surgiu primeiro: a fração
+## Insuficiência Mitral
 
-- O paciente deve ser anticoagulado, sempre de ejeção reduzida ou a estenose aórtica grave com varfarina! Na presença de reserva contrátil (aumento ≥ 20% | Existem piores desfechos associados ao uso do volume sistólico ejetado e/ou aumento > 10 de DOACs.
+### Primária
 
-(dobutamina favorece o inotropismo). | Independentemente do CHA2DS2-VASc. mmHg no gradiente médio VE/Aorta), se a área
+**Doença do aparato valvar** — cúspides, cordoalhas, cordas tendíneas.
 
-- Pelo quadro de fibrilação, ocorre perda do reforço prévalvar AUMENTAR > 0,2 cm², quer dizer que a fração sistólico do sopro, pela ausência de contração atrial.
+#### Etiologia
 
-de ejeção está reduzida por outra etiologia, ou seja, a área valvar estava < 1 cm² simplesmente porque DICA! A estenose mitral poupa o ventrículo esquerdo!
+- **Reumática** (mais comum);
+- **Prolapso da valva mitral** (segunda mais comum) — protusão das cúspides para o átrio ≥ 2 mm.
 
-estava passando pouco volume por ali, em face da Caso exista disfunção ventricular associada, FEVE reduzida; considerar outro diagnóstico associado!
+#### Característica do Sopro
 
-| Se houver reserva contrátil e o gradiente VE-AO aumentar e a AV permancer reduzida fração de Sinais de gravidade no exame físico incluem ejeção reduzida secundária à EAo grave.
+- Sopro **sistólico** em **foco mitral**;
+- Aspecto **regurgitativo**;
+- **Irradiação do sopro para as costas**.
 
-- Fácies mitralis;
+#### Exame Físico
 
-Estenose aórtica paradoxal
+- **B1 hipofonética** ou ausente;
+- **Ictus desviado para baixo e para a esquerda**;
+- **Sopro de alta frequência**.
 
-- Estalido de abertura precoce;
+### Secundária
 
-- Parâmetros: área valvar ≤ 1 cm2; FEVE preservada;
-
-- B1 hiperfonética;
-
-gradiente médio VE-Ao < 40 mmHg. Volume sistólico <
-
-- B2 hiperfonética (hipertensão pulmonar);
-
-35 mL/m2;
-
-- Congestão pulmonar;
-
-- Conduta: tomografia com escore de cálcio da valva
-
-- Presença de insuficiência tricúspide;
-
-aórtica se escore de cálcio > 1.300 em mulheres ou
-
-- Sopro de Graham Steel (regurgitação pulmonar na
-
-2.000 em homens, está indicada intervenção. hipertensão pulmonar).
-
-## INSUFICIÊNCIA AÓRTICA
-
-É um sopro diastólico, de caráter aspirativo, mais audível em foco aórtico e aórtico acessório. Etiologia
-
-- Doenças da valva aórtica ou doenças da aorta;
-
-- Alguns exemplos: Síndrome de Marfan, HAS, sífilis.
-
-Exame físico
-
-- Sinais semiológicos marcam gravidade: Sinal de Musset: tremor da cabeça a cada batimento cardíaco; Pulso em martelo d’água ou de Corrigan: distensão rápida e queda abrupta;
-
-A manobra pode ser sensibilizada com elevação do membro superior do paciente.
-
-- Sinal de Muller: pulsação da úvula;
-
-- Sinal de Quincke: pulsação do leito ungueal;
-
-- PA divergente, exemplo: 140 x 40 mmHg.
-
-## ESTENOSE MITRAL
-
-Sopro diastólico em ruflar em foco mitral com reforço pré-sistólico. Figura 7: Paciente com faceis mitralis Etiologia
-
-- Reumática – principal! INSUFICIÊNCIA MITRAL É a principal sequela tardia da doença! Primária x secundária
-
-Epidemiologia Primária
-
-- Acomete mais mulheres jovens;
-
-- Doença do aparato valvar - cúspides, cordoalhas,
-
-- Neste sentido, é frequente o diagnóstico na gestação. cordas tendíneas; A paciente inicia um quadro clínico de cardiopatia.
-
-- Reumática (mais comum);
-
-Característica do sopro
-
-- Prolapso da valva mitral (segunda mais comum)
-
-- Sopro diastólico em ruflar; protusão das cúspides para o Ae >= 2mm;
-
-- Localização: foco mitral; Secundária
-
-- Apresenta reforço pré-sistólico.
-
-- Dilatação do anel valvar, do VE ou isquemia → muito comum na insuficiência cardíaca → tratar causa de base.
-
-![Figura do material - página 4](figure-004-1.webp)
+- **Dilatação do anel valvar, do VE ou isquemia** — muito comum na insuficiência cardíaca;
+- Conduta: **tratar a causa de base**;
+- **IM secundária**: tratar a doença de base.
 
 ---
 
-<!-- page:5 -->
+## Tratamento das Valvopatias
 
-Figura 8: Características semiológicas (sopro) das valvopatias
+- **Valvopatia grave** (parâmetros ecocardiográficos) **e sintomática** → abordar com **troca valvar**;
+- **O tratamento clínico é apenas sintomático**, não sendo capaz de reduzir a mortalidade;
+- **Pré-operatório de cirurgia cardíaca**: em geral, pedir **CATE ou angioTC de coronárias se o paciente > 40 anos**.
 
-## TRATAMENTO DAS VALVOPATIAS REFERÊNCIAS
+**DICA!** Para a prova: idoso + síncope + sopro? **Estenose aórtica!**
 
-- Valvopatia grave (parâmetros ecocardiográficos) e Figura 7: Paciente com faceis mitralis sintomática → abordar com troca valvar; BRAUNWALD, E. Tratado de doenças cardiovasculares. 9. ed. São Paulo: O tratamento clínico é apenas sintomático, não Elsevier, 2018.
+## Referências
 
-sendo capaz de reduzir a mortalidade.
+Figura 7: Paciente com fácies mitralis.
 
-- Pré-operatório de cirurgia cardíaca. Em geral, pedir CATE ou angioTC de coronárias se o paciente > 40 anos.
+BRAUNWALD, E. Tratado de doenças cardiovasculares. 9. ed. São Paulo: Elsevier, 2018.
+
+![Figura do material - página 4](figure-004-1.webp)
 
 ![Figura do material - página 5](figure-005-1.webp)
