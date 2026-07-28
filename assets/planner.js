@@ -9384,7 +9384,7 @@ function render() {
   ensureDailyMissionWidget();
   updateDailyMissionWidget();
 }
-document.getElementById('exportBtn').onclick = () => {
+document.getElementById('exportBtn')?.addEventListener('click', () => {
   const backup=fullPlannerBackup();
   const blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});
   const a=document.createElement('a');
@@ -9392,23 +9392,23 @@ document.getElementById('exportBtn').onclick = () => {
   a.download=`backup-completo-soqueromed-${localISODate(new Date())}.json`;
   a.click();
   URL.revokeObjectURL(a.href);
-};
-document.getElementById('importFile').onchange = e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); createSafetyLocalBackup('antes de importar JSON'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); };
-document.getElementById('printBtn').onclick = () => {
+});
+document.getElementById('importFile')?.addEventListener('change', e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); createSafetyLocalBackup('antes de importar JSON'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); });
+document.getElementById('printBtn')?.addEventListener('click', () => {
   const previousTab=ui.tab;
   ui.tab='painel';
   render();
   const restore=()=>{ window.removeEventListener('afterprint',restore); ui.tab=previousTab; render(); };
   window.addEventListener('afterprint',restore);
   requestAnimationFrame(()=>window.print());
-};
-document.getElementById('themeToggle').onclick = event => {
+});
+document.getElementById('themeToggle')?.addEventListener('click', event => {
   event.preventDefault();
   event.stopPropagation();
   applyTheme(document.body.classList.contains('dark') ? 'light' : 'dark');
   updateAutoStudyIndicator();
   updatePomodoroWidget();
-};
+});
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 document.addEventListener('keydown', event => {
   if((event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'l') {
@@ -9470,7 +9470,7 @@ document.getElementById('accountBtn')?.addEventListener('click', async () => {
   }
   document.getElementById('authPanel').classList.toggle('hidden');
 });
-document.getElementById('signInBtn').onclick = async () => {
+document.getElementById('signInBtn')?.addEventListener('click', async () => {
   if(OFFLINE_FIRST || !sbClient) return;
   const email = document.getElementById('authEmail').value.trim();
   const password = document.getElementById('authPassword').value;
@@ -9479,7 +9479,7 @@ document.getElementById('signInBtn').onclick = async () => {
   message.textContent = 'Entrando...';
   const { error } = await sbClient.auth.signInWithPassword({ email, password });
   message.textContent = error ? 'Não foi possível entrar. Confira o e-mail e a senha e tente novamente.' : 'Conta conectada.';
-};
+});
 document.addEventListener('visibilitychange', () => {
   if(document.visibilityState === 'hidden') {
     pauseAutoStudy();
