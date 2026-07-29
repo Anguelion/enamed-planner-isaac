@@ -3974,7 +3974,7 @@ function renderCasoDoDia() {
   } else if(progress.gaveUp) {
     statusHtml = `<div class="caso-result caso-result-lose"><span class="caso-result-icon">💡</span><div><strong>Diagnóstico revelado</strong><span>${escapeHtml(item.diagnosis)}</span></div></div>`;
   }
-  const answerForm = finished ? '' : `<div class="caso-answer-row"><input class="input" id="casoDoDiaGuess" placeholder="Qual é o diagnóstico?" autocomplete="off"><button class="icon-btn primary" id="casoDoDiaSubmit">Responder</button><button class="icon-btn" id="casoDoDiaSkip">${revealed>=TOTAL_CASO_HINTS?'Revelar':'Pular pista'}</button></div>`;
+  const answerForm = finished ? '' : `<div class="caso-answer-row"><div class="caso-guess-wrap"><input class="input" id="casoDoDiaGuess" placeholder="Qual é o diagnóstico?" autocomplete="off"><div class="caso-suggestions" id="casoDoDiaSuggestions" hidden></div></div><button class="icon-btn primary" id="casoDoDiaSubmit">Responder</button><button class="icon-btn" id="casoDoDiaSkip">${revealed>=TOTAL_CASO_HINTS?'Revelar':'Pular pista'}</button></div>`;
   const feedback = progress.lastFeedback ? `<div class="caso-feedback ${progress.lastFeedback.ok?'ok':'no'}">${escapeHtml(progress.lastFeedback.text)}</div>` : '';
   const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?`<div class="caso-explanation">${escapeHtml(item.explanation).replace(/\n/g,'<br>')}</div>`:''}` : '';
   return `<section class="card caso-do-dia-card ${finished?'is-finished':''}">
@@ -4019,8 +4019,32 @@ function bindCasoDoDia() {
     }
   });
   document.getElementById('casoDoDiaGuess')?.addEventListener('keydown', event => {
-    if(event.key === 'Enter') document.getElementById('casoDoDiaSubmit')?.click();
+    if(event.key === 'Enter') { document.getElementById('casoDoDiaSuggestions').hidden = true; document.getElementById('casoDoDiaSubmit')?.click(); }
+    if(event.key === 'Escape') document.getElementById('casoDoDiaSuggestions').hidden = true;
   });
+  const guessInput = document.getElementById('casoDoDiaGuess');
+  const suggestionsBox = document.getElementById('casoDoDiaSuggestions');
+  const renderSuggestions = () => {
+    if(!guessInput || !suggestionsBox) return;
+    const raw = guessInput.value.trim();
+    const q = window.CasoDoDia?.normalize(raw) || '';
+    if(q.length < 2) { suggestionsBox.hidden = true; suggestionsBox.innerHTML = ''; return; }
+    const matches = (window.CasoDoDia?.allDiagnoses() || []).filter(d => window.CasoDoDia.normalize(d).includes(q)).slice(0, 8);
+    if(!matches.length) { suggestionsBox.hidden = true; suggestionsBox.innerHTML = ''; return; }
+    suggestionsBox.innerHTML = matches.map(d => `<button type="button" class="caso-suggestion-item" data-caso-suggestion="${escapeAttr(d)}">${escapeHtml(d)}</button>`).join('');
+    suggestionsBox.hidden = false;
+  };
+  guessInput?.addEventListener('input', renderSuggestions);
+  guessInput?.addEventListener('focus', renderSuggestions);
+  suggestionsBox?.addEventListener('mousedown', event => {
+    const button = event.target.closest('[data-caso-suggestion]');
+    if(!button) return;
+    event.preventDefault();
+    guessInput.value = button.dataset.casoSuggestion;
+    suggestionsBox.hidden = true;
+    guessInput.focus();
+  });
+  guessInput?.addEventListener('blur', () => { setTimeout(() => { if(suggestionsBox) suggestionsBox.hidden = true; }, 150); });
   document.getElementById('casoDoDiaSkip')?.addEventListener('click', () => {
     progress.lastFeedback = null;
     advance();

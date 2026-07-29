@@ -52,5 +52,17 @@
     return loadPromise;
   }
 
-  window.CasoDoDia = { load, todayCase, isCorrectGuess, TOTAL_HINTS };
+  function allDiagnoses() {
+    const seen = new Set();
+    const list = [];
+    CASES.forEach(c => {
+      const key = normalize(c.diagnosis);
+      if (seen.has(key)) return;
+      seen.add(key);
+      list.push(c.diagnosis);
+    });
+    return list.sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  }
+
+  window.CasoDoDia = { load, todayCase, isCorrectGuess, allDiagnoses, normalize, TOTAL_HINTS };
 })();
