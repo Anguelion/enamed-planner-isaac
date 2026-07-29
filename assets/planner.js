@@ -886,7 +886,7 @@ function setSyncStatus(text, kind='', fullText='') {
   const label = document.getElementById('syncText');
   if(!box || !label) return;
   label.textContent = text;
-  box.title = fullText || text;
+  box.title = `${fullText || text} · clique para detalhes`;
   box.className = `sync-status ${kind}`;
 }
 function showStudyToast(message) {
@@ -2860,6 +2860,11 @@ function getSyncTelemetryReport() {
     clockDriftMs: serverClockOffsetMs,
     retryCount: cloudRetryCount
   };
+}
+function toggleSyncTelemetryDashboard() {
+  const existing = document.querySelector('[data-telemetry-panel]');
+  if(existing) { existing.remove(); return; }
+  showSyncTelemetryDashboard();
 }
 function showSyncTelemetryDashboard() {
   const report = getSyncTelemetryReport();
@@ -10032,6 +10037,7 @@ document.addEventListener('keydown', event => {
 document.getElementById('headerTrailBtn')?.addEventListener('click', () => { ui.tab='cronograma'; render(); });
 document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.tab='painel'; ui.pomodoroOpen=!ui.pomodoroOpen; render(); });
 document.getElementById('headerSyncBtn')?.addEventListener('click', () => forcePlannerSync());
+document.getElementById('syncStatus')?.addEventListener('click', () => toggleSyncTelemetryDashboard());
 document.getElementById('headerLogoutBtn')?.addEventListener('click', async () => {
   if(!currentUser) { alert('Você não está logado.'); return; }
   const confirmed = confirm('Tem certeza que deseja sair?\n\nSeus dados locais continuarão salvos. Você precisará fazer login novamente para sincronizar.');

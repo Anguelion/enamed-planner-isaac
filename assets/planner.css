@@ -11,7 +11,8 @@ h1{font-size:24px;line-height:1.15;margin:0;font-weight:800}
 .icon-btn,.tab{border:1px solid var(--line);background:var(--panel);border-radius:999px;min-height:38px;padding:8px 12px;color:var(--ink);box-shadow:0 1px 0 rgba(18,63,89,.03)}
 .icon-btn:hover,.tab:hover{border-color:var(--teal);box-shadow:var(--focus)}
 .icon-btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
-.sync-status{display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--panel);border-radius:8px;min-height:38px;padding:8px 10px;font-size:12px;font-weight:700;color:var(--muted)}
+.sync-status{display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--panel);border-radius:8px;min-height:38px;padding:8px 10px;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer}
+.sync-status:hover{border-color:var(--teal)}
 .study-toast{position:fixed;right:22px;bottom:22px;z-index:1000;display:flex;align-items:center;gap:14px;max-width:min(420px,calc(100vw - 32px));padding:15px 17px;border:1px solid var(--green);border-radius:12px;background:var(--surface,#fff);box-shadow:0 14px 34px rgba(15,35,48,.18);color:var(--ink);font-size:15px}
 .study-toast button{border:0;background:transparent;color:var(--muted);font-size:22px;line-height:1;cursor:pointer}
 body.dark .study-toast{background:#202a2a;color:var(--ink);box-shadow:0 14px 34px rgba(0,0,0,.35)}
