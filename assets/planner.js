@@ -3560,6 +3560,7 @@ function weeklyDashboardData(date) {
 }
 function renderWeeklyPerformance(date) {
   const data=weeklyDashboardData(date);
+  const todayKey=studyDateKey();
   const metrics={
     hours:{label:'Horas',values:data.snapshots.map(snapshot=>snapshot.totalMinutes),format:value=>formatDailyStudyTime(value),summary:data.snapshots.reduce((sum,snapshot)=>sum+snapshot.totalMinutes,0)},
     questions:{label:'Questões',values:data.snapshots.map(snapshot=>snapshot.questions),format:value=>`${Math.round(value)}`,summary:data.snapshots.reduce((sum,snapshot)=>sum+snapshot.questions,0)},
@@ -3575,7 +3576,7 @@ function renderWeeklyPerformance(date) {
     ['Revisões',Math.round(metrics.flashcards.summary)],
     ['Aulas',Math.round(metrics.videos.summary)]
   ];
-  return `<section class="card dashboard-weekly-card"><div class="section-title"><div><span class="eyebrow">Últimos 7 dias</span><h2>Desempenho semanal</h2></div></div><div class="weekly-metric-tabs">${Object.entries(metrics).map(([key,item])=>`<button class="tiny-btn ${key===ui.weeklyMetric?'active':''}" data-weekly-metric="${key}" aria-pressed="${key===ui.weeklyMetric}">${item.label}</button>`).join('')}</div><div class="dashboard-bars weekly-bars">${data.dates.map((day,index)=>`<div><span style="height:${Math.max(8,Math.round(metric.values[index]/max*100))}%" title="${escapeAttr(metric.format(metric.values[index]))}" data-bar-value="${escapeAttr(metric.format(metric.values[index]))}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${day}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section><section class="card dashboard-weekly-summary"><span class="eyebrow">Resumo da semana</span><div>${summary.map(([label,value])=>`<article><strong>${escapeHtml(String(value))}</strong><small>${label}</small></article>`).join('')}</div><p class="muted">Exibindo ${escapeHtml(metric.label.toLowerCase())} no gráfico.</p></section>`;
+  return `<section class="card dashboard-weekly-card"><div class="section-title"><div><span class="eyebrow">Últimos 7 dias</span><h2>Desempenho semanal</h2></div></div><div class="weekly-metric-tabs">${Object.entries(metrics).map(([key,item])=>`<button class="tiny-btn ${key===ui.weeklyMetric?'active':''}" data-weekly-metric="${key}" aria-pressed="${key===ui.weeklyMetric}">${item.label}</button>`).join('')}</div><div class="dashboard-bars weekly-bars">${data.dates.map((day,index)=>`<div class="${day===todayKey?'is-today':''}"><span style="height:${Math.max(8,Math.round(metric.values[index]/max*100))}%" title="${escapeAttr(metric.format(metric.values[index]))}" data-bar-value="${escapeAttr(metric.format(metric.values[index]))}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${day}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section><section class="card dashboard-weekly-summary"><span class="eyebrow">Resumo da semana</span><div>${summary.map(([label,value])=>`<article><strong>${escapeHtml(String(value))}</strong><small>${label}</small></article>`).join('')}</div><p class="muted">Exibindo ${escapeHtml(metric.label.toLowerCase())} no gráfico.</p></section>`;
 }
 function renderRecentDashboardActivity() {
   const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,5);

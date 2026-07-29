@@ -2323,6 +2323,7 @@ body.dark .tab.active .tab-icon{background:#172331}
 .dashboard-bars>div>span{position:relative;width:70%;min-height:6px;justify-self:center;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,var(--blue),var(--cyan))}
 .dashboard-bars>div>span.show-value::after{content:attr(data-bar-value);position:absolute;left:50%;bottom:100%;transform:translateX(-50%);margin-bottom:6px;padding:3px 7px;border-radius:6px;background:var(--ink);color:#fff;font-size:11px;font-weight:700;white-space:nowrap;z-index:5}
 .dashboard-bars small{font-size:10px;color:var(--muted);text-transform:capitalize}
+.dashboard-bars>div.is-today>span{box-shadow:0 0 0 2px var(--blue),inset 0 0 0 1px var(--blue)}
 .gamification-card--compact{display:grid;align-content:start;gap:9px}
 .gamification-card--compact .section-title{align-items:center;margin:0}
 .gamification-card--compact .rank-character{width:52px;height:72px;object-fit:contain}
