@@ -4040,10 +4040,10 @@ function renderCasoDoDia() {
 const TOTAL_CASO_HINTS = 6;
 document.addEventListener('click', event => {
   const box = document.getElementById('casoDoDiaSuggestions');
-  if(!box) return;
+  if(!box || box.hidden) return;
   const wrap = document.getElementById('casoDoDiaGuess')?.closest('.caso-guess-wrap');
   if(wrap && wrap.contains(event.target)) return;
-  if(!box.hidden) box.hidden = true;
+  box.hidden = true;
 });
 function bindCasoDoDia() {
   const item = window.CasoDoDia?.todayCase(ui.refDate);
