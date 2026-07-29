@@ -10208,15 +10208,15 @@ function renderInlineMarkdown(text) {
 function escapeHtml(s) { return String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
 function escapeAttr(s) { return escapeHtml(s).replace(/\n/g,' '); }
 function escapeRegExp(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-function ensureViewData(tab) {
-  if(['questoes','simulados','analise'].includes(tab)) loadQuestionBank();
-  if(['simulados','analise'].includes(tab)) loadImportedSimulados();
-  if(tab === 'materiais') loadMaterialLibrary();
-  if(tab === 'prescricao') loadPrescriptionCatalog();
+async function ensureViewData(tab) {
+  if(['questoes','simulados','analise'].includes(tab)) await loadQuestionBank();
+  if(['simulados','analise'].includes(tab)) await loadImportedSimulados();
+  if(tab === 'materiais') await loadMaterialLibrary();
+  if(tab === 'prescricao') await loadPrescriptionCatalog();
 }
-function render() {
+async function render() {
   sessionStorage.setItem(UI_TAB_KEY, ui.tab);
-  ensureViewData(ui.tab);
+  await ensureViewData(ui.tab);
   renderMotivation();
   renderTabs();
   const renderers = {
