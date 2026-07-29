@@ -3644,6 +3644,11 @@ function simuladoErrorProgressById() {
       const existing = map.get(question.id);
       if(existing && Date.parse(existing.finishedAt || '') >= Date.parse(run.finishedAt || '')) return;
       const confidenceLevel = run.confidence?.[question.id] || '';
+      const reviewed = Boolean(run.reviewedErrors?.[question.id]);
+      // Sem isto, o erro do simulado aparecia no Caderno mas nunca entrava na
+      // fila de "revisão pendente" (nunca ganhava nextReview) e ficava para
+      // sempre invisível ao contador de pendências. "Marcar erro como
+      // revisado" na tela do simulado já existe e agora conta como a revisão.
       map.set(question.id, {
         selected,
         correct: false,
@@ -3651,7 +3656,8 @@ function simuladoErrorProgressById() {
         updatedAt: run.finishedAt,
         finishedAt: run.finishedAt,
         confidence: { red: 20, yellow: 55, green: 90 }[confidenceLevel] || 0,
-        reviewed: Boolean(run.reviewedErrors?.[question.id]),
+        reviewed,
+        nextReview: reviewed ? '' : studyDateKey(),
         eliminated: Array.isArray(run.eliminated?.[question.id]) ? run.eliminated[question.id] : [],
         missReason: '', notes: '', preReasoning: '', postLearning: '', correctiveRule: '',
         sourceRunId: run.id, sourceRunName: run.name
