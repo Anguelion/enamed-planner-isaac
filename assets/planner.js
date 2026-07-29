@@ -36,7 +36,9 @@ const LOCAL_STATE_STAMP_KEY = 'enamed-planner-state-updated-at';
 const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
-const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) || null;
+const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+  auth: { persistSession: true, autoRefreshToken: true, storage: window.localStorage, storageKey: 'soqueromed-auth' }
+}) || null;
 const MATERIAL_IMAGE_BUCKET = 'materials-images';
 // As chaves acima sao fixas no codigo: qualquer copia destes arquivos (um
 // servidor local de teste, uma porta nova, etc.) fala com o MESMO projeto
