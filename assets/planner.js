@@ -126,6 +126,8 @@ let cloudSyncPoll = null;
 let serverClockOffsetMs = 0;
 let lastSyncConflictAt = 0;
 let syncConflictCount = 0;
+let timerAuditInterval = null;
+let syncTelemetry = { pushCount: 0, pullCount: 0, mergeCount: 0, errorCount: 0, lastPushAt: 0, lastPullAt: 0 };
 let cloudBackups = [];
 let cloudBackupsLoading = false;
 let cloudBackupsReady = false;
@@ -1210,15 +1212,28 @@ const CLOUD_SYNC_RETRY_BASE_MS = 5 * 1000;
 const CLOUD_SYNC_RETRY_MAX_MS = 2 * 60 * 1000;
 let cloudSyncRetryDelayMs = 0;
 let cloudRetryTimer = null;
+let cloudRetryCount = 0;
+const CLOUD_SYNC_MAX_RETRIES = 8;
 function scheduleCloudRetry() {
   cloudDirty = true;
-  cloudSyncRetryDelayMs = cloudSyncRetryDelayMs ? Math.min(cloudSyncRetryDelayMs * 2, CLOUD_SYNC_RETRY_MAX_MS) : CLOUD_SYNC_RETRY_BASE_MS;
-  setSyncStatus('Erro', 'error', `Erro ao sincronizar — nova tentativa em ${Math.round(cloudSyncRetryDelayMs/1000)}s`);
+  cloudRetryCount += 1;
+  if(cloudRetryCount > CLOUD_SYNC_MAX_RETRIES) {
+    console.error('Max sync retries exceeded, creating safety backup');
+    recordSyncTelemetry('push', true);
+    createSafetyLocalBackup(`após ${cloudRetryCount} tentativas de sincronização`);
+    setSyncStatus('Erro', 'error', 'Sincronização com falha — dados salvos localmente');
+    cloudRetryCount = 0;
+    return;
+  }
+  const jitter = Math.random() * 0.2;
+  cloudSyncRetryDelayMs = cloudSyncRetryDelayMs ? Math.min(cloudSyncRetryDelayMs * 2.5, CLOUD_SYNC_RETRY_MAX_MS) : CLOUD_SYNC_RETRY_BASE_MS;
+  const delayWithJitter = Math.round(cloudSyncRetryDelayMs * (1 + jitter));
+  setSyncStatus('Erro', 'error', `Erro ao sincronizar — nova tentativa em ${Math.round(delayWithJitter/1000)}s (${cloudRetryCount}/${CLOUD_SYNC_MAX_RETRIES})`);
   clearTimeout(cloudRetryTimer);
   cloudRetryTimer = setTimeout(() => {
     cloudRetryTimer = null;
     if(currentUser && sbClient && CLOUD_SYNC_ALLOWED) pushCloudState();
-  }, cloudSyncRetryDelayMs);
+  }, delayWithJitter);
 }
 function scheduleCloudSave({immediate=false}={}) {
   if(!currentUser || !sbClient) return;
@@ -1270,9 +1285,12 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
     }, { onConflict: 'user_id' }).select('updated_at').maybeSingle();
     if(error) {
       console.error('Falha ao sincronizar:', error);
+      recordSyncTelemetry('push', true);
       scheduleCloudRetry();
     } else {
+      recordSyncTelemetry('push', false);
       cloudSyncRetryDelayMs = 0;
+      cloudRetryCount = 0;
       cloudDirty = cloudRevision !== pushRevision;
       // O servidor (via trigger) e quem decide o updated_at real — nao confiar no
       // relogio deste aparelho aqui, ou comparacoes entre aparelhos com relogios
@@ -1342,7 +1360,9 @@ async function pullCloudState({ firstLogin=false }={}) {
       const localIsAhead = Boolean(localAt && remoteAt && localAt > remoteAt);
       const hasSignificantTimestampDrift = remoteAt && Math.abs(remoteAt - Date.now()) > 60000;
       if(hasSignificantTimestampDrift) recordSyncConflict('Significant clock drift detected');
+      recordSyncTelemetry('merge', false);
       state = mergePlannerActivityState(data.data, state, localIsAhead);
+      recordSyncTelemetry('pull', false);
       cloudDirty = localIsAhead;
       lastCloudSyncAt = remoteAt || Date.now();
       normalizeOfficialScheduleNames();
@@ -1367,6 +1387,7 @@ async function pullCloudState({ firstLogin=false }={}) {
     }
   } catch(error) {
     console.error('Falha ao buscar dados:', error);
+    recordSyncTelemetry('pull', true);
     setSyncStatus('Erro', 'error', 'Erro ao sincronizar');
   }
 }
@@ -2620,6 +2641,37 @@ async function testMultiDeviceSync() {
     console.error('Sync test error:', error);
     return false;
   }
+}
+function recordSyncTelemetry(event, isError = false) {
+  if(event === 'push') { syncTelemetry.pushCount++; syncTelemetry.lastPushAt = Date.now(); }
+  else if(event === 'pull') { syncTelemetry.pullCount++; syncTelemetry.lastPullAt = Date.now(); }
+  else if(event === 'merge') syncTelemetry.mergeCount++;
+  if(isError) syncTelemetry.errorCount++;
+}
+function startTimerAudit() {
+  if(timerAuditInterval) return;
+  timerAuditInterval = setInterval(() => {
+    const timers = auditActiveTimers();
+    const errorRate = syncTelemetry.errorCount / Math.max(1, syncTelemetry.pushCount + syncTelemetry.pullCount);
+    if(errorRate > 0.1) {
+      console.warn(`High sync error rate: ${(errorRate*100).toFixed(1)}%`, syncTelemetry);
+    }
+  }, 300000);
+}
+function stopTimerAudit() {
+  if(timerAuditInterval) {
+    clearInterval(timerAuditInterval);
+    timerAuditInterval = null;
+  }
+}
+function getSyncTelemetryReport() {
+  return {
+    ...syncTelemetry,
+    errorRate: syncTelemetry.errorCount / Math.max(1, syncTelemetry.pushCount + syncTelemetry.pullCount),
+    timeSinceLastPush: Date.now() - syncTelemetry.lastPushAt,
+    timeSinceLastPull: Date.now() - syncTelemetry.lastPullAt,
+    conflictRate: syncConflictCount / Math.max(1, syncTelemetry.pullCount)
+  };
 }
 async function loadMotivationMessages() {
   try {
@@ -4069,7 +4121,7 @@ function bindSimuladoInputs(activeRun) {
   };
   const cancel = document.getElementById('cancelSimulado');
   if(cancel) cancel.onclick = () => {
-    if(confirm('Cancelar este simulado? As respostas serão apagadas e ele não será corrigido.')) cancelSimuladoRun(activeRun);
+    if(confirm('Cancelar este simulado? Ele será marcado como abandonado e preservado no histórico, sem correção nem XP de conclusão.')) cancelSimuladoRun(activeRun);
   };
   const sendWeak = document.getElementById('sendSimWeakToFeynman');
   if(sendWeak) sendWeak.onclick = () => sendSimWeakTopicsToFeynman(activeRun);
@@ -4267,7 +4319,26 @@ function finishSimuladoRun(run) {
   persist();
 }
 function cancelSimuladoRun(run) {
-  deleteSimuladoRun(run,{cancelled:true});
+  // "Cancelar simulado" sempre chamou deleteSimuladoRun, apagando a tentativa
+  // por completo — mas a tela de resultado, a lista de provas e as
+  // estatísticas todas já checavam run.abandonedAt (com textos como "esta
+  // tentativa foi preservada no histórico") e esse campo nunca era definido
+  // em lugar nenhum do código. A funcionalidade de "abandonar preservando no
+  // histórico, sem XP" existia na interface mas nunca foi ligada a nada.
+  if(!run) return;
+  if(simuladoTimer.interval && simuladoTimer.runId === run.id) clearInterval(simuladoTimer.interval);
+  simuladoTimer.interval = null;
+  simuladoTimer.runId = '';
+  if(studyTimeTracker.kind === 'simulado') stopAutoStudy('simulado');
+  finishSimQuestionTiming(run);
+  run.paused = true;
+  run.abandonedAt = new Date().toISOString();
+  run.updatedAt = run.abandonedAt;
+  if(ui.activeSimRunId === run.id) ui.activeSimRunId = '';
+  ui.simulationLibraryOpen = true;
+  persist();
+  syncRouteFromUI('replace');
+  showStudyToast('Simulado abandonado. A tentativa foi preservada no histórico, sem XP de conclusão, fragmento ou recompensa elemental.');
 }
 function deleteSimuladoRun(run,{cancelled=false}={}) {
   if(!run) return;
@@ -9794,3 +9865,4 @@ else setTimeout(() => loadQuestionBank(), 120);
 loadOfficialSchedule();
 loadVideoCatalog();
 initCloud();
+startTimerAudit();
