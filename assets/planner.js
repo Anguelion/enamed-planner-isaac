@@ -3983,7 +3983,7 @@ function splitCasoExplanation(text) {
     special: buckets[3].join(' ').trim()
   };
 }
-function renderCasoExplanation(explanation) {
+function renderCasoExplanation(explanation, kids) {
   const { concept, quadro, treatment, special } = splitCasoExplanation(explanation);
   const block = (icon, label, text, extraClass) => text ? `<div class="caso-explanation-block ${extraClass||''}"><div class="caso-explanation-label"><span aria-hidden="true">${icon}</span>${label}</div><p>${escapeHtml(text)}</p></div>` : '';
   return `<div class="caso-explanation">${
@@ -3994,6 +3994,8 @@ function renderCasoExplanation(explanation) {
     block('💊','Tratamento', treatment, 'caso-explanation-treatment')
   }${
     block('⚠️','Casos especiais', special, 'caso-explanation-special')
+  }${
+    kids ? `<div class="caso-explanation-block caso-explanation-kids"><div class="caso-explanation-label"><span aria-hidden="true">🧒</span>Para uma criança de 10 anos</div><p>${escapeHtml(kids)}</p></div>` : ''
   }</div>`;
 }
 function casoDoDiaProgress(caseKey) {
@@ -4023,7 +4025,7 @@ function renderCasoDoDia() {
   const wrongList = Array.isArray(progress.wrongGuesses) && progress.wrongGuesses.length
     ? `<div class="caso-wrong-guesses"><span class="caso-wrong-label">Tentativas erradas:</span><div class="caso-wrong-chips">${progress.wrongGuesses.map(g => `<span class="caso-wrong-chip">${escapeHtml(g)}</span>`).join('')}</div></div>`
     : '';
-  const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?renderCasoExplanation(item.explanation):''}` : '';
+  const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?renderCasoExplanation(item.explanation, item.kids):''}` : '';
   return `<section class="card caso-do-dia-card ${finished?'is-finished':''}">
     <div class="caso-head"><span class="eyebrow">Caso do dia · #${item.number}</span><div class="caso-dots">${dots}</div></div>
     <h2 class="caso-question">${escapeHtml(item.question || 'Qual é o diagnóstico?')}</h2>
@@ -4041,8 +4043,8 @@ document.addEventListener('click', event => {
   if(!box) return;
   const wrap = document.getElementById('casoDoDiaGuess')?.closest('.caso-guess-wrap');
   if(wrap && wrap.contains(event.target)) return;
-  box.hidden = true;
-}, true);
+  if(!box.hidden) box.hidden = true;
+});
 function bindCasoDoDia() {
   const item = window.CasoDoDia?.todayCase(ui.refDate);
   if(!item) return;
@@ -4101,9 +4103,13 @@ function bindCasoDoDia() {
     const button = event.target.closest('[data-caso-suggestion]');
     if(!button) return;
     event.preventDefault();
+    event.stopPropagation();
     guessInput.value = button.dataset.casoSuggestion;
     suggestionsBox.hidden = true;
     guessInput.focus();
+  });
+  suggestionsBox?.addEventListener('click', event => {
+    event.stopPropagation();
   });
   guessInput?.addEventListener('blur', () => { setTimeout(() => { if(suggestionsBox) suggestionsBox.hidden = true; }, 150); });
   document.getElementById('casoDoDiaSkip')?.addEventListener('click', () => {

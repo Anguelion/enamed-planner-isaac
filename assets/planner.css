@@ -2624,4 +2624,7 @@ body.dark .tab.active .tab-icon{background:#172331}
 .caso-explanation-treatment .caso-explanation-label{color:var(--green)}
 .caso-explanation-special{border-left-color:var(--amber);background:var(--soft-amber)}
 .caso-explanation-special .caso-explanation-label{color:var(--amber)}
+.caso-explanation-kids{border-left-style:dashed;border-left-color:var(--cyan);background:linear-gradient(135deg,var(--soft-blue),var(--soft-green) 140%)}
+.caso-explanation-kids .caso-explanation-label{color:var(--blue)}
+.caso-explanation-kids p{font-size:14px;line-height:1.7}
 @media(max-width:760px){.caso-answer-row{flex-direction:column}.caso-answer-row .input,.caso-answer-row .icon-btn{width:100%}}
