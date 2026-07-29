@@ -1177,6 +1177,9 @@ th{font-size:12px;letter-spacing:.02em}
 .caderno-reflection-label{display:block;font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.02em}
 body.dark .caderno-reflection-row{background:#202a2a}
 .caderno-answer-compare{display:flex;align-items:center;gap:6px;margin-top:6px}
+.caderno-erro-editor{display:grid;gap:8px;margin-top:8px;padding:10px;border-radius:8px;border:1px solid var(--line);background:#fbfcf8}
+.caderno-erro-editor textarea{min-height:64px}
+body.dark .caderno-erro-editor{background:#202a2a}
 .caderno-insights{margin:14px 0}
 .caderno-insights .card{min-height:126px}
 .stat-line{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}

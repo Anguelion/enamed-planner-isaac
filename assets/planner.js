@@ -88,7 +88,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 try {
   const savedCadernoView = JSON.parse(localStorage.getItem(CADERNO_VIEW_KEY) || '{}');
@@ -3702,7 +3702,16 @@ function renderCadernoErroCard(entry) {
     String(progress.preReasoning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que eu achava antes</span><p>${escapeHtml(progress.preReasoning)}</p></div>` : '',
     String(progress.postLearning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que sei agora</span><p>${escapeHtml(progress.postLearning)}</p></div>` : ''
   ].join('');
-  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}${progress.sourceRunId ? `<span class="badge wait">Simulado: ${escapeHtml(progress.sourceRunName || '')}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}" ${progress.sourceRunId ? `data-caderno-access-run="${escapeAttr(progress.sourceRunId)}"` : ''}>Acessar</button>${progress.correctiveRule ? `<button class="tiny-btn" data-create-rule-card="${escapeAttr(id)}">Gerar flashcard</button><button class="tiny-btn" data-generate-rule-prompts="${escapeAttr(id)}">Gerar perguntas</button>` : ''}</div></div>`;
+  // Motivo do erro, regra corretiva e anotação só eram editáveis pela tela de
+  // resposta da aba Questões (renderQuestionReflection). Uma entrada vinda de
+  // simulado não passa por lá — o botão "Acessar" leva de volta para a prova,
+  // não para esse formulário — então nunca haveria como preencher esses
+  // campos para ela. Este editor inline funciona para qualquer entrada.
+  const editorOpen = ui.cadernoEditId === id;
+  const cadernoErrorTypes = ['Desatenção','Dúvida / já vi','Não saber','Confusão entre conceitos','Interpretação inadequada','Falha de raciocínio clínico','Erro de conduta','Excesso de confiança'];
+  const editor = editorOpen ? `<div class="caderno-erro-editor"><label class="field-label">Motivo do erro<select class="select" data-caderno-field="missReason" data-caderno-entry="${escapeAttr(id)}"><option value="">Escolher motivo</option>${cadernoErrorTypes.map(option => `<option ${progress.missReason===option?'selected':''}>${escapeHtml(option)}</option>`).join('')}</select></label><label class="field-label">Regra para não errar novamente<textarea class="textarea" data-caderno-field="correctiveRule" data-caderno-entry="${escapeAttr(id)}" placeholder="Ex.: Antes de marcar a conduta, verificar gravidade e contraindicações.">${escapeHtml(progress.correctiveRule || '')}</textarea></label><label class="field-label">Anotação<textarea class="textarea" data-caderno-field="notes" data-caderno-entry="${escapeAttr(id)}" placeholder="Comentário curto">${escapeHtml(progress.notes || '')}</textarea></label><button class="tiny-btn" data-caderno-edit-close="${escapeAttr(id)}">Fechar edição</button></div>` : '';
+  const editToggle = `<button class="tiny-btn" data-caderno-edit-toggle="${escapeAttr(id)}">${editorOpen ? 'Fechar edição' : 'Editar motivo / regra / anotação'}</button>`;
+  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}${progress.sourceRunId ? `<span class="badge wait">Simulado: ${escapeHtml(progress.sourceRunName || '')}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}${editor}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}" ${progress.sourceRunId ? `data-caderno-access-run="${escapeAttr(progress.sourceRunId)}"` : ''}>Acessar</button>${editToggle}${progress.correctiveRule ? `<button class="tiny-btn" data-create-rule-card="${escapeAttr(id)}">Gerar flashcard</button><button class="tiny-btn" data-generate-rule-prompts="${escapeAttr(id)}">Gerar perguntas</button>` : ''}</div></div>`;
 }
 function createRuleFlashcard(entryId) {
   const entry = cadernoErrosEntries().find(item => item.id === entryId);
@@ -3836,6 +3845,38 @@ function bindCadernoErros() {
   });
   document.querySelectorAll('[data-create-rule-card]').forEach(button => button.onclick = e => createRuleFlashcard(e.currentTarget.dataset.createRuleCard));
   document.querySelectorAll('[data-generate-rule-prompts]').forEach(button => button.onclick = e => generateRulePrompts(e.currentTarget.dataset.generateRulePrompts));
+  document.querySelectorAll('[data-caderno-edit-toggle]').forEach(button => button.onclick = e => {
+    const id = e.currentTarget.dataset.cadernoEditToggle;
+    ui.cadernoEditId = ui.cadernoEditId === id ? '' : id;
+    renderCadernoErros();
+  });
+  document.querySelectorAll('[data-caderno-edit-close]').forEach(button => button.onclick = () => {
+    ui.cadernoEditId = '';
+    renderCadernoErros();
+  });
+  document.querySelectorAll('[data-caderno-field]').forEach(el => {
+    const entryId = el.dataset.cadernoEntry;
+    const field = el.dataset.cadernoField;
+    if(field === 'missReason') {
+      el.onchange = () => { updateCadernoField(entryId, field, el.value); renderCadernoErros(); };
+    } else {
+      el.oninput = () => updateCadernoField(entryId, field, el.value, { commit: false });
+      el.onblur = () => { updateCadernoField(entryId, field, el.value); renderCadernoErros(); };
+    }
+  });
+}
+function updateCadernoField(entryId, field, value, { commit = true } = {}) {
+  // Uma entrada vinda de simulado só existe em memória (sintetizada a partir
+  // de run.answers, não de state.questionProgress). O primeiro campo editado
+  // nela precisa "promovê-la" copiando resposta/gabarito/origem também, senão
+  // o card perde a comparação de resposta e o selo "Simulado: ..." assim que
+  // vira uma entrada de verdade.
+  if(!state.questionProgress[entryId]) {
+    const synthesized = simuladoErrorProgressById().get(entryId);
+    if(synthesized) setQuestionProgress(entryId, synthesized);
+  }
+  setQuestionProgress(entryId, { [field]: value });
+  if(commit) persist(); else saveStateOnly({ invalidate: false });
 }
 function renderEcg() {
   const el = document.getElementById('ecg');
