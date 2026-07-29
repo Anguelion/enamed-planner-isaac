@@ -3966,8 +3966,9 @@ function renderCasoDoDia() {
   const progress = casoDoDiaProgress(caseKey);
   const finished = progress.solved || progress.gaveUp;
   const revealed = Math.min(TOTAL_CASO_HINTS, Math.max(1, n(progress.revealed) || 1));
-  const dots = Array.from({length:TOTAL_CASO_HINTS}, (_,i) => `<span class="caso-dot ${i<revealed?'is-lit':''} ${progress.solved && i===revealed-1?'is-win':''}"></span>`).join('');
-  const hintsHtml = item.hints.slice(0, revealed).map((text,i) => `<div class="caso-hint ${i===revealed-1 && !finished ? 'is-current':''}"><span class="caso-hint-num">${i+1}</span><span class="caso-hint-text">${escapeHtml(text)}</span></div>`).join('');
+  const shown = finished ? TOTAL_CASO_HINTS : revealed;
+  const dots = Array.from({length:TOTAL_CASO_HINTS}, (_,i) => `<span class="caso-dot ${i<shown?'is-lit':''} ${progress.solved && i===revealed-1?'is-win':''}"></span>`).join('');
+  const hintsHtml = item.hints.slice(0, shown).map((text,i) => `<div class="caso-hint ${i===revealed-1 && !finished ? 'is-current':''}"><span class="caso-hint-num">${i+1}</span><span class="caso-hint-text">${escapeHtml(text)}</span></div>`).join('');
   let statusHtml = '';
   if(progress.solved) {
     statusHtml = `<div class="caso-result caso-result-win"><span class="caso-result-icon">🎉</span><div><strong>Você acertou!</strong><span>${escapeHtml(item.diagnosis)}</span></div></div>`;

@@ -32,6 +32,8 @@
     return hits >= needed;
   }
 
+  const START_DATE_ISO = '2026-07-29';
+
   function daysSinceEpoch(date) {
     return Math.floor(date.getTime() / 86400000);
   }
@@ -39,7 +41,9 @@
   function todayCase(refDateISO) {
     if (!CASES.length) return null;
     const d = refDateISO ? new Date(refDateISO + 'T00:00:00') : new Date();
-    const idx = ((daysSinceEpoch(d) % CASES.length) + CASES.length) % CASES.length;
+    const start = new Date(START_DATE_ISO + 'T00:00:00');
+    const offset = daysSinceEpoch(d) - daysSinceEpoch(start);
+    const idx = ((offset % CASES.length) + CASES.length) % CASES.length;
     return CASES[idx];
   }
 
@@ -47,7 +51,10 @@
     if (loadPromise) return loadPromise;
     loadPromise = fetch('data/casos_do_dia.json', { cache: 'no-store' })
       .then(r => r.ok ? r.json() : [])
-      .then(data => { CASES = Array.isArray(data) ? data : []; return CASES; })
+      .then(data => {
+        CASES = (Array.isArray(data) ? data : []).slice().sort((a, b) => (a.number || 0) - (b.number || 0));
+        return CASES;
+      })
       .catch(() => { CASES = []; return CASES; });
     return loadPromise;
   }
