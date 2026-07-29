@@ -3956,6 +3956,20 @@ function bindLegacyImportCard() {
     syncGamificationLedger();
   }));
 }
+function splitCasoExplanation(text) {
+  const raw = String(text || '');
+  const regex = /\.\s+(?=(?:O tratamento|O manejo|A conduta|O acompanhamento)\b)/g;
+  let lastEnd = -1, match;
+  while ((match = regex.exec(raw))) lastEnd = match.index + match[0].length;
+  if (lastEnd === -1) return { concept: raw.trim(), treatment: '' };
+  return { concept: raw.slice(0, lastEnd).trim(), treatment: raw.slice(lastEnd).trim() };
+}
+function renderCasoExplanation(explanation) {
+  const { concept, treatment } = splitCasoExplanation(explanation);
+  const conceptHtml = `<div class="caso-explanation-block"><div class="caso-explanation-label"><span aria-hidden="true">🧠</span>Conceito</div><p>${escapeHtml(concept)}</p></div>`;
+  const treatmentHtml = treatment ? `<div class="caso-explanation-block caso-explanation-treatment"><div class="caso-explanation-label"><span aria-hidden="true">💊</span>Tratamento</div><p>${escapeHtml(treatment)}</p></div>` : '';
+  return `<div class="caso-explanation">${conceptHtml}${treatmentHtml}</div>`;
+}
 function casoDoDiaProgress(caseKey) {
   if(!state.casoDoDia[caseKey] || typeof state.casoDoDia[caseKey] !== 'object') {
     state.casoDoDia[caseKey] = { revealed:1, wrongCount:0, solved:false, gaveUp:false, explanationOpen:false };
@@ -3983,7 +3997,7 @@ function renderCasoDoDia() {
   const wrongList = Array.isArray(progress.wrongGuesses) && progress.wrongGuesses.length
     ? `<div class="caso-wrong-guesses"><span class="caso-wrong-label">Tentativas erradas:</span><div class="caso-wrong-chips">${progress.wrongGuesses.map(g => `<span class="caso-wrong-chip">${escapeHtml(g)}</span>`).join('')}</div></div>`
     : '';
-  const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?`<div class="caso-explanation">${escapeHtml(item.explanation).replace(/\n/g,'<br>')}</div>`:''}` : '';
+  const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?renderCasoExplanation(item.explanation):''}` : '';
   return `<section class="card caso-do-dia-card ${finished?'is-finished':''}">
     <div class="caso-head"><span class="eyebrow">Caso do dia · #${item.number}</span><div class="caso-dots">${dots}</div></div>
     <h2 class="caso-question">${escapeHtml(item.question || 'Qual é o diagnóstico?')}</h2>

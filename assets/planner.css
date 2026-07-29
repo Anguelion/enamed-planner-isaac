@@ -2614,5 +2614,10 @@ body.dark .tab.active .tab-icon{background:#172331}
 .caso-result strong{display:block;font-size:14.5px;color:var(--ink)}
 .caso-result span{font-size:13.5px;color:var(--muted)}
 .caso-explain-toggle{width:max-content}
-.caso-explanation{font-size:13.5px;line-height:1.6;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px}
+.caso-explanation{display:grid;gap:10px}
+.caso-explanation-block{border-radius:var(--radius-sm);padding:14px 16px;background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--teal)}
+.caso-explanation-block p{margin:0;font-size:13.5px;line-height:1.65;color:var(--ink)}
+.caso-explanation-label{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.caso-explanation-treatment{border-left-color:var(--green);background:var(--soft-green)}
+.caso-explanation-treatment .caso-explanation-label{color:var(--green)}
 @media(max-width:760px){.caso-answer-row{flex-direction:column}.caso-answer-row .input,.caso-answer-row .icon-btn{width:100%}}
