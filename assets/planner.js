@@ -440,6 +440,7 @@ function ensureQuestionProgress() {
   state.flashcardSystem.profile = { targetRetention:0.9, maximumInterval:3650, fuzz:true, leechThreshold:8, ...state.flashcardSystem.profile };
   if(!state.importedQuestionTags || typeof state.importedQuestionTags !== 'object') state.importedQuestionTags = {};
   if(!state.dashboardSettings || typeof state.dashboardSettings !== 'object') state.dashboardSettings = {};
+  if(!state.casoDoDia || typeof state.casoDoDia !== 'object') state.casoDoDia = {};
   if(!state.videoPlayer || typeof state.videoPlayer !== 'object') state.videoPlayer = {};
   if(!state.videoPlayer.bookmarks || typeof state.videoPlayer.bookmarks !== 'object') state.videoPlayer.bookmarks = {};
   Object.entries(state.videoPlayer.bookmarks).forEach(([sourceId,entries]) => {
@@ -3626,16 +3627,55 @@ function renderFerramentas() {
     persist();
   });
 }
+// Um erro cometido DENTRO de um simulado nunca gravava em state.questionProgress
+// (o simulado guarda tudo em run.answers/run.confidence), então essas questões
+// jamais apareciam aqui, apesar do texto da tela prometer "todos os comentários
+// e reflexões que você escreveu nas questões, reunidos num só lugar". Esta
+// função sintetiza uma entrada por questão errada de cada simulado finalizado
+// (não abandonado), ficando de fora quando já existe uma entrada "de verdade"
+// vinda da prática avulsa para a mesma questão (que tem reflexão mais rica).
+function simuladoErrorProgressById() {
+  const map = new Map();
+  (state.simuladoRuns || []).forEach(run => {
+    if(!run.finishedAt || run.abandonedAt) return;
+    simRunQuestions(run).forEach(question => {
+      const selected = run.answers?.[question.id] || '';
+      if(!selected || selected === question.answer) return;
+      const existing = map.get(question.id);
+      if(existing && Date.parse(existing.finishedAt || '') >= Date.parse(run.finishedAt || '')) return;
+      const confidenceLevel = run.confidence?.[question.id] || '';
+      map.set(question.id, {
+        selected,
+        correct: false,
+        answeredAt: run.finishedAt,
+        updatedAt: run.finishedAt,
+        finishedAt: run.finishedAt,
+        confidence: { red: 20, yellow: 55, green: 90 }[confidenceLevel] || 0,
+        reviewed: Boolean(run.reviewedErrors?.[question.id]),
+        eliminated: Array.isArray(run.eliminated?.[question.id]) ? run.eliminated[question.id] : [],
+        missReason: '', notes: '', preReasoning: '', postLearning: '', correctiveRule: '',
+        sourceRunId: run.id, sourceRunName: run.name
+      });
+    });
+  });
+  return map;
+}
 function cadernoErrosEntries() {
   // setQuestionProgress grava um registro assim que a resposta é apenas
   // rascunhada (tecla 1-5, antes de confirmar) — nesse momento não existe
   // "correct" ainda, então "!progress.correct" também era verdadeiro para
   // questões nunca respondidas de fato. Isso enchia o Caderno de Erros com
   // questões só espiadas, nunca confirmadas. Erro real exige answeredAt.
-  return Object.entries(state.questionProgress || {})
+  const practice = Object.entries(state.questionProgress || {})
     .filter(([id, progress]) => (progress?.answeredAt && !progress?.correct) || String(progress?.notes || '').trim() || String(progress?.preReasoning || '').trim() || String(progress?.postLearning || '').trim() || String(progress?.correctiveRule || '').trim())
     .map(([id, progress]) => ({ id, progress, question: questionBank.find(q => q.id === id) || importedQuestionById(id) }))
-    .filter(entry => entry.question)
+    .filter(entry => entry.question);
+  const practiceIds = new Set(practice.map(entry => entry.id));
+  const simuladoErrors = [...simuladoErrorProgressById().entries()]
+    .filter(([id]) => !practiceIds.has(id))
+    .map(([id, progress]) => ({ id, progress, question: questionBank.find(q => q.id === id) || importedQuestionById(id) }))
+    .filter(entry => entry.question);
+  return [...practice, ...simuladoErrors]
     .sort((a, b) => Date.parse(b.progress.updatedAt || '') - Date.parse(a.progress.updatedAt || ''));
 }
 function renderCadernoErroCard(entry) {
@@ -3656,7 +3696,7 @@ function renderCadernoErroCard(entry) {
     String(progress.preReasoning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que eu achava antes</span><p>${escapeHtml(progress.preReasoning)}</p></div>` : '',
     String(progress.postLearning || '').trim() ? `<div class="caderno-reflection-row"><span class="caderno-reflection-label">O que sei agora</span><p>${escapeHtml(progress.postLearning)}</p></div>` : ''
   ].join('');
-  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}">Acessar</button>${progress.correctiveRule ? `<button class="tiny-btn" data-create-rule-card="${escapeAttr(id)}">Gerar flashcard</button><button class="tiny-btn" data-generate-rule-prompts="${escapeAttr(id)}">Gerar perguntas</button>` : ''}</div></div>`;
+  return `<div class="item caderno-erro-item"><div><div class="caderno-erro-head"><strong>${escapeHtml(source)}</strong><span class="muted">Salvo em ${escapeHtml(savedAt)}</span></div><div class="caderno-erro-tags"><span class="badge today">${escapeHtml(tag.area)}</span>${tag.topic ? `<span class="badge today">${escapeHtml(tag.topic)}</span>` : ''}${errorLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(errorLabel)}</span>` : ''}${reviewLabel ? `<span class="badge ${reviewDue ? 'no' : 'today'}">${escapeHtml(reviewLabel)}</span>` : ''}${reviewCountLabel ? `<span class="badge today">${escapeHtml(reviewCountLabel)}</span>` : ''}${progress.sourceRunId ? `<span class="badge wait">Simulado: ${escapeHtml(progress.sourceRunName || '')}</span>` : ''}</div><p class="caderno-erro-stem">${escapeHtml(snippet)}</p>${noteBlock}${ruleBlock}${reflectionRows}${answerCompare}</div><div class="caderno-erro-actions"><button class="icon-btn" data-caderno-access="${escapeAttr(id)}" ${progress.sourceRunId ? `data-caderno-access-run="${escapeAttr(progress.sourceRunId)}"` : ''}>Acessar</button>${progress.correctiveRule ? `<button class="tiny-btn" data-create-rule-card="${escapeAttr(id)}">Gerar flashcard</button><button class="tiny-btn" data-generate-rule-prompts="${escapeAttr(id)}">Gerar perguntas</button>` : ''}</div></div>`;
 }
 function createRuleFlashcard(entryId) {
   const entry = cadernoErrosEntries().find(item => item.id === entryId);
@@ -3853,12 +3893,90 @@ function bindLegacyImportCard() {
     syncGamificationLedger();
   }));
 }
+function casoDoDiaProgress(caseKey) {
+  if(!state.casoDoDia[caseKey] || typeof state.casoDoDia[caseKey] !== 'object') {
+    state.casoDoDia[caseKey] = { revealed:1, wrongCount:0, solved:false, gaveUp:false, explanationOpen:false };
+  }
+  return state.casoDoDia[caseKey];
+}
+function renderCasoDoDia() {
+  const item = window.CasoDoDia?.todayCase(ui.refDate);
+  if(!item) return `<section class="card caso-do-dia-card is-empty"><span class="eyebrow">Caso do dia</span><h2>Carregando caso clínico…</h2><p class="muted">O banco de casos está sendo preparado.</p></section>`;
+  const caseKey = `caso-${item.number}`;
+  const progress = casoDoDiaProgress(caseKey);
+  const finished = progress.solved || progress.gaveUp;
+  const revealed = Math.min(TOTAL_CASO_HINTS, Math.max(1, n(progress.revealed) || 1));
+  const dots = Array.from({length:TOTAL_CASO_HINTS}, (_,i) => `<span class="caso-dot ${i<revealed?'is-lit':''} ${progress.solved && i===revealed-1?'is-win':''}"></span>`).join('');
+  const hintsHtml = item.hints.slice(0, revealed).map((text,i) => `<div class="caso-hint ${i===revealed-1 && !finished ? 'is-current':''}"><span class="caso-hint-num">${i+1}</span><span class="caso-hint-text">${escapeHtml(text)}</span></div>`).join('');
+  let statusHtml = '';
+  if(progress.solved) {
+    statusHtml = `<div class="caso-result caso-result-win"><span class="caso-result-icon">🎉</span><div><strong>Você acertou!</strong><span>${escapeHtml(item.diagnosis)}</span></div></div>`;
+  } else if(progress.gaveUp) {
+    statusHtml = `<div class="caso-result caso-result-lose"><span class="caso-result-icon">💡</span><div><strong>Diagnóstico revelado</strong><span>${escapeHtml(item.diagnosis)}</span></div></div>`;
+  }
+  const answerForm = finished ? '' : `<div class="caso-answer-row"><input class="input" id="casoDoDiaGuess" placeholder="Qual é o diagnóstico?" autocomplete="off"><button class="icon-btn primary" id="casoDoDiaSubmit">Responder</button><button class="icon-btn" id="casoDoDiaSkip">${revealed>=TOTAL_CASO_HINTS?'Revelar':'Pular pista'}</button></div>`;
+  const feedback = progress.lastFeedback ? `<div class="caso-feedback ${progress.lastFeedback.ok?'ok':'no'}">${escapeHtml(progress.lastFeedback.text)}</div>` : '';
+  const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?`<div class="caso-explanation">${escapeHtml(item.explanation).replace(/\n/g,'<br>')}</div>`:''}` : '';
+  return `<section class="card caso-do-dia-card ${finished?'is-finished':''}">
+    <div class="caso-head"><span class="eyebrow">Caso do dia · #${item.number}</span><div class="caso-dots">${dots}</div></div>
+    <h2 class="caso-question">${escapeHtml(item.question || 'Qual é o diagnóstico?')}</h2>
+    <div class="caso-hints">${hintsHtml}</div>
+    ${statusHtml}
+    ${feedback}
+    ${answerForm}
+    ${explanationToggle}
+  </section>`;
+}
+const TOTAL_CASO_HINTS = 6;
+function bindCasoDoDia() {
+  const item = window.CasoDoDia?.todayCase(ui.refDate);
+  if(!item) return;
+  const caseKey = `caso-${item.number}`;
+  const progress = casoDoDiaProgress(caseKey);
+  const finish = (won) => {
+    if(won) progress.solved = true; else progress.gaveUp = true;
+    persist();
+  };
+  const advance = () => {
+    if(progress.revealed >= TOTAL_CASO_HINTS) { finish(false); return; }
+    progress.revealed = Math.min(TOTAL_CASO_HINTS, n(progress.revealed) + 1);
+    persist();
+  };
+  document.getElementById('casoDoDiaSubmit')?.addEventListener('click', () => {
+    const input = document.getElementById('casoDoDiaGuess');
+    const guess = input?.value || '';
+    if(!guess.trim()) return;
+    const correct = window.CasoDoDia?.isCorrectGuess(guess, item.diagnosis);
+    if(correct) {
+      progress.lastFeedback = { ok:true, text:'Boa! Diagnóstico correto.' };
+      finish(true);
+    } else if(progress.revealed >= TOTAL_CASO_HINTS) {
+      progress.lastFeedback = null;
+      finish(false);
+    } else {
+      progress.lastFeedback = { ok:false, text:'Não foi dessa vez — próxima pista liberada.' };
+      advance();
+    }
+  });
+  document.getElementById('casoDoDiaGuess')?.addEventListener('keydown', event => {
+    if(event.key === 'Enter') document.getElementById('casoDoDiaSubmit')?.click();
+  });
+  document.getElementById('casoDoDiaSkip')?.addEventListener('click', () => {
+    progress.lastFeedback = null;
+    advance();
+  });
+  document.getElementById('casoDoDiaExplainToggle')?.addEventListener('click', () => {
+    progress.explanationOpen = !progress.explanationOpen;
+    persist();
+  });
+}
 function renderPainel() {
   const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
     <div class="dashboard-global-head"><div><h1>Seu dia de estudos</h1></div><div class="dashboard-head-tools"><label class="dashboard-date-control"><span>Data do painel</span><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"></label>${renderCountdown()}</div></div>
     <div class="dashboard-desktop-grid">
       ${renderContinueStudying()}
+      ${renderCasoDoDia()}
       ${renderPersonalDailyTasks(ui.refDate)}
       ${renderDashboardMood(dashboardLog)}
       <section class="card dashboard-road-region">${renderDailyRoad(ui.refDate)}</section>
@@ -3870,6 +3988,7 @@ function renderPainel() {
   bindPlannerDateInput('dashboardDate', ui.refDate, date => { ui.refDate=date; render(); });
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
   bindPersonalDailyTasks(ui.refDate);
+  bindCasoDoDia();
   bindGamificationDashboard();
   document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
   document.querySelectorAll('[data-dashboard-open-flashcards]').forEach(button=>button.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Aprendendo';render();}));
@@ -10117,6 +10236,7 @@ document.addEventListener('keydown', handleFlashcardUndoKeyboard);
 document.addEventListener('keydown', handleQuestionKeyboard);
 startMotivationCycle();
 loadMotivationMessages();
+window.CasoDoDia?.load().then(() => { if(ui.tab === 'painel') renderPainel(); });
 setupSidebar();
 render();
 maintainDailyLocalBackup();

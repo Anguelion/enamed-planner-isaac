@@ -2571,3 +2571,34 @@ body.dark .tab.active .tab-icon{background:#172331}
 .material-focus-mode .library-layout{grid-template-columns:1fr}
 .material-focus-mode .material-reader{max-width:1100px;width:100%;margin:0 auto}
 @media(max-width:760px){.material-block-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-height:44vh}.material-focus-mode .material-reader{max-width:none}}
+
+/* Caso do dia: mini game diagnóstico com 6 pistas progressivas */
+.dashboard-desktop-grid>.caso-do-dia-card{grid-column:1/-1;border-left:5px solid var(--teal);background:linear-gradient(135deg,var(--panel),var(--soft-green) 140%)}
+.caso-do-dia-card{display:grid;gap:14px}
+.caso-do-dia-card.is-empty{opacity:.7}
+.caso-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.caso-dots{display:flex;gap:6px}
+.caso-dot{width:9px;height:9px;border-radius:50%;background:var(--line);transition:background .2s,transform .2s}
+.caso-dot.is-lit{background:var(--teal)}
+.caso-dot.is-win{background:var(--green);transform:scale(1.25)}
+.caso-question{margin:0;font-size:19px;color:var(--ink)}
+.caso-hints{display:grid;gap:10px}
+.caso-hint{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start;padding:10px 12px;border-radius:var(--radius-sm);background:rgba(2,172,210,.06);border:1px solid transparent;animation:casoHintIn .35s ease}
+.caso-hint.is-current{border-color:var(--teal);background:var(--soft-green)}
+.caso-hint-num{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;font-size:12px}
+.caso-hint-text{font-size:14.5px;line-height:1.45;color:var(--ink)}
+@keyframes casoHintIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.caso-answer-row{display:flex;gap:8px;flex-wrap:wrap}
+.caso-answer-row .input{flex:1 1 220px}
+.caso-feedback{font-size:13.5px;font-weight:600;padding:8px 12px;border-radius:var(--radius-sm)}
+.caso-feedback.ok{color:var(--green);background:var(--soft-green)}
+.caso-feedback.no{color:var(--red);background:var(--soft-red)}
+.caso-result{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--radius-sm)}
+.caso-result-win{background:var(--soft-green)}
+.caso-result-lose{background:var(--soft-amber)}
+.caso-result-icon{font-size:26px}
+.caso-result strong{display:block;font-size:14.5px;color:var(--ink)}
+.caso-result span{font-size:13.5px;color:var(--muted)}
+.caso-explain-toggle{width:max-content}
+.caso-explanation{font-size:13.5px;line-height:1.6;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px}
+@media(max-width:760px){.caso-answer-row{flex-direction:column}.caso-answer-row .input,.caso-answer-row .icon-btn{width:100%}}
