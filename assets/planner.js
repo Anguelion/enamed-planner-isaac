@@ -4062,6 +4062,15 @@ function bindSimuladoInputs(activeRun) {
     const question = activeSimQuestion(activeRun);
     if(!question) return;
     const nextAnswer = e.currentTarget.dataset.simAnswer;
+    // Riscar uma alternativa (eliminar) é o aluno dizendo "descartei esta".
+    // Sem este bloqueio, um clique no meio do texto riscado ainda marcava a
+    // alternativa como resposta final — contradizendo a própria eliminação.
+    // É preciso desmarcar o risco (botão ×) antes de poder escolhê-la.
+    const eliminated = Array.isArray(activeRun.eliminated?.[question.id]) ? activeRun.eliminated[question.id] : [];
+    if(eliminated.includes(nextAnswer)) {
+      showStudyToast('Esta alternativa está riscada. Clique no × para desfazer antes de escolhê-la.');
+      return;
+    }
     const previousAnswer = activeRun.answers?.[question.id] || '';
     if(!activeRun.firstAnswers[question.id]) activeRun.firstAnswers[question.id] = nextAnswer;
     if(previousAnswer && previousAnswer !== nextAnswer) {
