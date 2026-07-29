@@ -3801,6 +3801,19 @@ function bindCadernoErros() {
   document.getElementById('exportCadernoCsv')?.addEventListener('click', exportCadernoErrosCsv);
   document.getElementById('startCadernoReview')?.addEventListener('click', () => { ui.cadernoReview = 'Pendentes'; localStorage.setItem(CADERNO_VIEW_KEY, JSON.stringify({review:ui.cadernoReview})); renderCadernoErros(); window.scrollTo({top:0, behavior:'smooth'}); });
   document.querySelectorAll('[data-caderno-access]').forEach(button => button.onclick = e => {
+    // Um erro sintetizado a partir de um simulado não tem state.questionProgress
+    // (a resposta vive em run.answers): abrir isso na aba Questões mostraria a
+    // questão como "nunca respondida", contradizendo o próprio card. Em vez
+    // disso, "Acessar" leva de volta para a revisão daquele simulado.
+    const runId = e.currentTarget.dataset.cadernoAccessRun;
+    if(runId && state.simuladoRuns.some(run => run.id === runId)) {
+      ui.activeSimRunId = runId;
+      ui.simulationLibraryOpen = false;
+      ui.tab = 'simulados';
+      syncRouteFromUI('push');
+      render();
+      return;
+    }
     ui.qQuestionId = e.currentTarget.dataset.cadernoAccess;
     ui.qRouteRestorePending = true;
     ui.qFocusScheduleId = '';
