@@ -128,6 +128,12 @@ let lastSyncConflictAt = 0;
 let syncConflictCount = 0;
 let timerAuditInterval = null;
 let syncTelemetry = { pushCount: 0, pullCount: 0, mergeCount: 0, errorCount: 0, lastPushAt: 0, lastPullAt: 0 };
+let autoSyncTestInterval = null;
+let lastAutoSyncTest = 0;
+const TELEMETRY_HISTORY_KEY = 'enamed-sync-telemetry-history';
+const TELEMETRY_HISTORY_LIMIT = 100;
+let autoRecoveryInterval = null;
+let offlineStartedAt = 0;
 let cloudBackups = [];
 let cloudBackupsLoading = false;
 let cloudBackupsReady = false;
@@ -2573,6 +2579,84 @@ function validatePlannerStateIntegrity(stateToValidate) {
   if(stateToValidate.schedule?.some(item => !item.id)) errors.push('Schedule items sem ID');
   return errors;
 }
+function performDataIntegrityCheck(stateToCheck = state) {
+  const issues = [];
+  const warnings = [];
+
+  if(!stateToCheck.schedule || stateToCheck.schedule.length === 0) {
+    issues.push('Cronograma vazio');
+  }
+
+  const duplicateIds = new Set();
+  const seenIds = new Set();
+  stateToCheck.schedule?.forEach(item => {
+    if(seenIds.has(item.id)) duplicateIds.add(item.id);
+    seenIds.add(item.id);
+  });
+  if(duplicateIds.size > 0) {
+    issues.push(`Schedule items com IDs duplicados: ${Array.from(duplicateIds).join(', ')}`);
+  }
+
+  const orphanProgress = Object.keys(stateToCheck.questionProgress || {}).filter(id =>
+    !stateToCheck.schedule?.some(item => item.id === id)
+  );
+  if(orphanProgress.length > 0) {
+    warnings.push(`${orphanProgress.length} progresso de questões sem schedule correspondente`);
+  }
+
+  const corruptedFlashcards = Object.entries(stateToCheck.questionFlashcards || {})
+    .flatMap(([qId, cards]) => Array.isArray(cards) ? cards.map(c => ({...c, qId})) : [])
+    .filter(card => !card.id || typeof card.front !== 'string');
+  if(corruptedFlashcards.length > 0) {
+    issues.push(`${corruptedFlashcards.length} flashcards corrompidos`);
+  }
+
+  const dayLogGaps = (stateToCheck.dayLogs || []).filter(log =>
+    n(log.questions) > 0 && n(log.correct) + n(log.wrong) !== n(log.questions)
+  );
+  if(dayLogGaps.length > 5) {
+    warnings.push(`${dayLogGaps.length} day logs com inconsistência entre total e correct+wrong`);
+  }
+
+  return { issues, warnings, healthy: issues.length === 0 };
+}
+function repairDataCorruption(corrupted = state) {
+  const issues = performDataIntegrityCheck(corrupted);
+  let repaired = false;
+
+  if(!corrupted.schedule || corrupted.schedule.length === 0) {
+    console.warn('Cannot repair empty schedule');
+    return false;
+  }
+
+  const validIds = new Set(corrupted.schedule.map(item => item.id));
+  const orphanQProgress = Object.entries(corrupted.questionProgress || {})
+    .filter(([id]) => !validIds.has(id))
+    .map(([id]) => id);
+
+  if(orphanQProgress.length > 0) {
+    orphanQProgress.forEach(id => delete corrupted.questionProgress[id]);
+    console.warn(`Removido ${orphanQProgress.length} progresso órfão`);
+    repaired = true;
+  }
+
+  const validFlashcards = Object.fromEntries(
+    Object.entries(corrupted.questionFlashcards || {}).map(([qId, cards]) => [
+      qId,
+      (Array.isArray(cards) ? cards : []).filter(card => card?.id && typeof card.front === 'string')
+    ])
+  );
+
+  if(Object.values(validFlashcards).some((cards, i) =>
+    cards.length !== Object.values(corrupted.questionFlashcards || {})[i]?.length
+  )) {
+    corrupted.questionFlashcards = validFlashcards;
+    console.warn('Removidos flashcards corrompidos');
+    repaired = true;
+  }
+
+  return repaired;
+}
 function recordSyncConflict(reason = 'unknown') {
   lastSyncConflictAt = Date.now();
   syncConflictCount += 1;
@@ -2647,6 +2731,57 @@ function recordSyncTelemetry(event, isError = false) {
   else if(event === 'pull') { syncTelemetry.pullCount++; syncTelemetry.lastPullAt = Date.now(); }
   else if(event === 'merge') syncTelemetry.mergeCount++;
   if(isError) syncTelemetry.errorCount++;
+  persistSyncTelemetry();
+}
+function persistSyncTelemetry() {
+  try {
+    const history = JSON.parse(localStorage.getItem(TELEMETRY_HISTORY_KEY) || '[]');
+    const entry = { ...getSyncTelemetryReport(), timestamp: new Date().toISOString() };
+    history.push(entry);
+    if(history.length > TELEMETRY_HISTORY_LIMIT) history.shift();
+    localStorage.setItem(TELEMETRY_HISTORY_KEY, JSON.stringify(history));
+  } catch(e) {
+    console.warn('Failed to persist telemetry:', e);
+  }
+}
+function getTelemetryHistory() {
+  try {
+    return JSON.parse(localStorage.getItem(TELEMETRY_HISTORY_KEY) || '[]');
+  } catch(e) {
+    return [];
+  }
+}
+function startAutoRecovery() {
+  if(autoRecoveryInterval) return;
+  window.addEventListener('online', () => {
+    console.log('Internet reconnected, attempting sync recovery');
+    if(currentUser && cloudDirty) {
+      setSyncStatus('Recuperando', 'busy');
+      pushCloudState();
+    }
+  });
+  window.addEventListener('offline', () => {
+    console.warn('Internet disconnected');
+    offlineStartedAt = Date.now();
+    setSyncStatus('Offline', 'error', 'Modo offline - dados serão sincronizados ao reconectar');
+  });
+  autoRecoveryInterval = setInterval(async () => {
+    if(!navigator.onLine) return;
+    const health = await performHealthCheck();
+    if(!health.healthy) {
+      console.warn('Health check failed:', health);
+      if(Date.now() - (health.telemetry?.lastPushAt || 0) > 600000) {
+        console.warn('No successful sync in 10+ minutes, attempting recovery');
+        if(currentUser && cloudDirty) pushCloudState();
+      }
+    }
+  }, 120000);
+}
+function stopAutoRecovery() {
+  if(autoRecoveryInterval) {
+    clearInterval(autoRecoveryInterval);
+    autoRecoveryInterval = null;
+  }
 }
 function startTimerAudit() {
   if(timerAuditInterval) return;
@@ -2664,14 +2799,96 @@ function stopTimerAudit() {
     timerAuditInterval = null;
   }
 }
+function startAutoSyncTest() {
+  if(autoSyncTestInterval) return;
+  autoSyncTestInterval = setInterval(async () => {
+    const now = Date.now();
+    if(now - lastAutoSyncTest < 86400000) return;
+    if(!currentUser || !sbClient) return;
+    lastAutoSyncTest = now;
+    const result = await testMultiDeviceSync();
+    if(!result) {
+      console.warn('Auto sync test failed');
+      recordSyncTelemetry('pull', true);
+    } else {
+      console.log('✓ Auto sync test passed');
+    }
+  }, 3600000);
+}
+function stopAutoSyncTest() {
+  if(autoSyncTestInterval) {
+    clearInterval(autoSyncTestInterval);
+    autoSyncTestInterval = null;
+  }
+}
+async function performHealthCheck() {
+  const report = { timestamp: new Date().toISOString(), checks: {} };
+  try {
+    if(!sbClient) {
+      report.checks.supabase = { status: 'unavailable', reason: 'Client not initialized' };
+      return report;
+    }
+    const { data, error } = await sbClient.from('planner_states').select('count', { count: 'exact' }).limit(1);
+    report.checks.supabase = error ? { status: 'error', reason: error.message } : { status: 'ok' };
+  } catch(e) {
+    report.checks.supabase = { status: 'error', reason: e.message };
+  }
+  try {
+    const online = navigator.onLine;
+    report.checks.network = { status: online ? 'ok' : 'offline' };
+  } catch(e) {
+    report.checks.network = { status: 'unknown' };
+  }
+  report.checks.storage = { status: 'ok', available: true };
+  try {
+    localStorage.setItem('_health_check', '1');
+    localStorage.removeItem('_health_check');
+  } catch(e) {
+    report.checks.storage = { status: 'error', reason: 'Storage quota exceeded' };
+  }
+  report.telemetry = getSyncTelemetryReport();
+  report.healthy = Object.values(report.checks).every(c => c.status === 'ok' || c.status === 'offline');
+  return report;
+}
 function getSyncTelemetryReport() {
   return {
     ...syncTelemetry,
     errorRate: syncTelemetry.errorCount / Math.max(1, syncTelemetry.pushCount + syncTelemetry.pullCount),
     timeSinceLastPush: Date.now() - syncTelemetry.lastPushAt,
     timeSinceLastPull: Date.now() - syncTelemetry.lastPullAt,
-    conflictRate: syncConflictCount / Math.max(1, syncTelemetry.pullCount)
+    conflictRate: syncConflictCount / Math.max(1, syncTelemetry.pullCount),
+    clockDriftMs: serverClockOffsetMs,
+    retryCount: cloudRetryCount
   };
+}
+function showSyncTelemetryDashboard() {
+  const report = getSyncTelemetryReport();
+  const timers = auditActiveTimers();
+  const html = `
+    <div style="position:fixed;top:60px;right:20px;width:320px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:1000;font-size:12px;font-family:monospace">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <strong>Telemetria de Sync</strong>
+        <button onclick="this.closest('[data-telemetry-panel]').remove()" style="border:0;background:transparent;cursor:pointer;font-size:16px">×</button>
+      </div>
+      <div style="display:grid;gap:6px;color:var(--muted)">
+        <div>Push: ${report.pushCount} (${(report.errorRate*100).toFixed(1)}% erro)</div>
+        <div>Pull: ${report.pullCount}</div>
+        <div>Merge: ${report.mergeCount}</div>
+        <div>Conflitos: ${syncConflictCount}</div>
+        <div>Retry: ${report.retryCount}/${CLOUD_SYNC_MAX_RETRIES}</div>
+        <div>Clock drift: ${report.clockDriftMs}ms</div>
+        <div style="margin-top:8px;border-top:1px solid var(--line);padding-top:8px">
+          <div>Timers ativos: ${Object.values(timers).filter(Boolean).length + (timers.materialEditSaveTimers || 0)}</div>
+        </div>
+      </div>
+    </div>
+  `;
+  const existing = document.querySelector('[data-telemetry-panel]');
+  if(existing) existing.remove();
+  const panel = document.createElement('div');
+  panel.setAttribute('data-telemetry-panel', 'true');
+  panel.innerHTML = html;
+  document.body.appendChild(panel);
 }
 async function loadMotivationMessages() {
   try {
@@ -3405,8 +3622,13 @@ function renderFerramentas() {
   });
 }
 function cadernoErrosEntries() {
+  // setQuestionProgress grava um registro assim que a resposta é apenas
+  // rascunhada (tecla 1-5, antes de confirmar) — nesse momento não existe
+  // "correct" ainda, então "!progress.correct" também era verdadeiro para
+  // questões nunca respondidas de fato. Isso enchia o Caderno de Erros com
+  // questões só espiadas, nunca confirmadas. Erro real exige answeredAt.
   return Object.entries(state.questionProgress || {})
-    .filter(([id, progress]) => !progress?.correct || String(progress?.notes || '').trim() || String(progress?.preReasoning || '').trim() || String(progress?.postLearning || '').trim() || String(progress?.correctiveRule || '').trim())
+    .filter(([id, progress]) => (progress?.answeredAt && !progress?.correct) || String(progress?.notes || '').trim() || String(progress?.preReasoning || '').trim() || String(progress?.postLearning || '').trim() || String(progress?.correctiveRule || '').trim())
     .map(([id, progress]) => ({ id, progress, question: questionBank.find(q => q.id === id) || importedQuestionById(id) }))
     .filter(entry => entry.question)
     .sort((a, b) => Date.parse(b.progress.updatedAt || '') - Date.parse(a.progress.updatedAt || ''));
@@ -9875,3 +10097,7 @@ loadOfficialSchedule();
 loadVideoCatalog();
 initCloud();
 startTimerAudit();
+startAutoSyncTest();
+startAutoRecovery();
+if('requestIdleCallback' in window) requestIdleCallback(performHealthCheck, {timeout:2000});
+else setTimeout(performHealthCheck, 500);
