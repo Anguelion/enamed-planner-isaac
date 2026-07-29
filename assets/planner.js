@@ -3956,19 +3956,44 @@ function bindLegacyImportCard() {
     syncGamificationLedger();
   }));
 }
+function splitCasoExplanationSentences(text) {
+  return String(text || '')
+    .split(/(?<=[.!?])\s+(?=[A-ZÀ-ÖØ-Þ])/)
+    .map(s => s.trim())
+    .filter(Boolean);
+}
+const CASO_QUADRO_RE = /^(A apresenta[çc][ãa]o|O quadro (cl[íi]nico|cl[áa]ssico)|Os sintomas|A tr[íi]ade|Clinicamente|O achado|Os achados|A dor|A cl[íi]nica|Cl[íi]nicamente)\b/i;
+const CASO_TRAT_RE = /^(O tratamento|O manejo|A conduta|O acompanhamento)\b/i;
+const CASO_ESPECIAL_RE = /^(Em (casos|gestantes|crian[çc]as|idosos|pacientes)|Nos casos|Quando |Especialmente em|J[áa] em|Por outro lado|[ÉE] importante (ressaltar|destacar|notar)|Vale (destacar|ressaltar)|Entretanto|Contudo|Cabe (ressaltar|destacar)|Uma exce[çc][ãa]o|Em situa[çc][õo]es (especiais|particulares))\b/i;
 function splitCasoExplanation(text) {
-  const raw = String(text || '');
-  const regex = /\.\s+(?=(?:O tratamento|O manejo|A conduta|O acompanhamento)\b)/g;
-  let lastEnd = -1, match;
-  while ((match = regex.exec(raw))) lastEnd = match.index + match[0].length;
-  if (lastEnd === -1) return { concept: raw.trim(), treatment: '' };
-  return { concept: raw.slice(0, lastEnd).trim(), treatment: raw.slice(lastEnd).trim() };
+  const sentences = splitCasoExplanationSentences(text);
+  const buckets = [[], [], [], []];
+  let state = 0;
+  sentences.forEach(s => {
+    if (state === 0 && CASO_QUADRO_RE.test(s)) state = 1;
+    if (state <= 1 && CASO_TRAT_RE.test(s)) state = 2;
+    if (state === 2 && CASO_ESPECIAL_RE.test(s)) state = 3;
+    buckets[state].push(s);
+  });
+  return {
+    concept: buckets[0].join(' ').trim(),
+    quadro: buckets[1].join(' ').trim(),
+    treatment: buckets[2].join(' ').trim(),
+    special: buckets[3].join(' ').trim()
+  };
 }
 function renderCasoExplanation(explanation) {
-  const { concept, treatment } = splitCasoExplanation(explanation);
-  const conceptHtml = `<div class="caso-explanation-block"><div class="caso-explanation-label"><span aria-hidden="true">🧠</span>Conceito</div><p>${escapeHtml(concept)}</p></div>`;
-  const treatmentHtml = treatment ? `<div class="caso-explanation-block caso-explanation-treatment"><div class="caso-explanation-label"><span aria-hidden="true">💊</span>Tratamento</div><p>${escapeHtml(treatment)}</p></div>` : '';
-  return `<div class="caso-explanation">${conceptHtml}${treatmentHtml}</div>`;
+  const { concept, quadro, treatment, special } = splitCasoExplanation(explanation);
+  const block = (icon, label, text, extraClass) => text ? `<div class="caso-explanation-block ${extraClass||''}"><div class="caso-explanation-label"><span aria-hidden="true">${icon}</span>${label}</div><p>${escapeHtml(text)}</p></div>` : '';
+  return `<div class="caso-explanation">${
+    block('🧠','Conceito', concept)
+  }${
+    block('🩺','Quadro clínico', quadro, 'caso-explanation-quadro')
+  }${
+    block('💊','Tratamento', treatment, 'caso-explanation-treatment')
+  }${
+    block('⚠️','Casos especiais', special, 'caso-explanation-special')
+  }</div>`;
 }
 function casoDoDiaProgress(caseKey) {
   if(!state.casoDoDia[caseKey] || typeof state.casoDoDia[caseKey] !== 'object') {
