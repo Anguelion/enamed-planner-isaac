@@ -3976,6 +3976,9 @@ function renderCasoDoDia() {
   }
   const answerForm = finished ? '' : `<div class="caso-answer-row"><div class="caso-guess-wrap"><input class="input" id="casoDoDiaGuess" placeholder="Qual é o diagnóstico?" autocomplete="off"><div class="caso-suggestions" id="casoDoDiaSuggestions" hidden></div></div><button class="icon-btn primary" id="casoDoDiaSubmit">Responder</button><button class="icon-btn" id="casoDoDiaSkip">${revealed>=TOTAL_CASO_HINTS?'Revelar':'Pular pista'}</button></div>`;
   const feedback = progress.lastFeedback ? `<div class="caso-feedback ${progress.lastFeedback.ok?'ok':'no'}">${escapeHtml(progress.lastFeedback.text)}</div>` : '';
+  const wrongList = Array.isArray(progress.wrongGuesses) && progress.wrongGuesses.length
+    ? `<div class="caso-wrong-guesses"><span class="caso-wrong-label">Tentativas erradas:</span><div class="caso-wrong-chips">${progress.wrongGuesses.map(g => `<span class="caso-wrong-chip">${escapeHtml(g)}</span>`).join('')}</div></div>`
+    : '';
   const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?`<div class="caso-explanation">${escapeHtml(item.explanation).replace(/\n/g,'<br>')}</div>`:''}` : '';
   return `<section class="card caso-do-dia-card ${finished?'is-finished':''}">
     <div class="caso-head"><span class="eyebrow">Caso do dia · #${item.number}</span><div class="caso-dots">${dots}</div></div>
@@ -3983,6 +3986,7 @@ function renderCasoDoDia() {
     <div class="caso-hints">${hintsHtml}</div>
     ${statusHtml}
     ${feedback}
+    ${wrongList}
     ${answerForm}
     ${explanationToggle}
   </section>`;
@@ -4010,12 +4014,17 @@ function bindCasoDoDia() {
     if(correct) {
       progress.lastFeedback = { ok:true, text:'Boa! Diagnóstico correto.' };
       finish(true);
-    } else if(progress.revealed >= TOTAL_CASO_HINTS) {
-      progress.lastFeedback = null;
-      finish(false);
     } else {
-      progress.lastFeedback = { ok:false, text:'Não foi dessa vez — próxima pista liberada.' };
-      advance();
+      if(!Array.isArray(progress.wrongGuesses)) progress.wrongGuesses = [];
+      const trimmed = guess.trim();
+      if(trimmed && !progress.wrongGuesses.some(g => g.toLowerCase() === trimmed.toLowerCase())) progress.wrongGuesses.push(trimmed);
+      if(progress.revealed >= TOTAL_CASO_HINTS) {
+        progress.lastFeedback = null;
+        finish(false);
+      } else {
+        progress.lastFeedback = { ok:false, text:'Não foi dessa vez — próxima pista liberada.' };
+        advance();
+      }
     }
   });
   document.getElementById('casoDoDiaGuess')?.addEventListener('keydown', event => {

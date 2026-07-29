@@ -2602,6 +2602,10 @@ body.dark .tab.active .tab-icon{background:#172331}
 .caso-feedback{font-size:13.5px;font-weight:600;padding:8px 12px;border-radius:var(--radius-sm)}
 .caso-feedback.ok{color:var(--green);background:var(--soft-green)}
 .caso-feedback.no{color:var(--red);background:var(--soft-red)}
+.caso-wrong-guesses{display:flex;flex-direction:column;gap:6px}
+.caso-wrong-label{font-size:12px;color:var(--muted);font-weight:600}
+.caso-wrong-chips{display:flex;flex-wrap:wrap;gap:6px}
+.caso-wrong-chip{font-size:12.5px;color:var(--red);background:var(--soft-red);border-radius:999px;padding:4px 10px;text-decoration:line-through;text-decoration-thickness:1.5px}
 .caso-result{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--radius-sm)}
 .caso-result-win{background:var(--soft-green)}
 .caso-result-lose{background:var(--soft-amber)}
