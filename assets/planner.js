@@ -3962,17 +3962,18 @@ function splitCasoExplanationSentences(text) {
     .map(s => s.trim())
     .filter(Boolean);
 }
-const CASO_QUADRO_RE = /^(A apresenta[çc][ãa]o|O quadro (cl[íi]nico|cl[áa]ssico)|Os sintomas|A tr[íi]ade|Clinicamente|O achado|Os achados|A dor|A cl[íi]nica|Cl[íi]nicamente)\b/i;
-const CASO_TRAT_RE = /^(O tratamento|O manejo|A conduta|O acompanhamento)\b/i;
-const CASO_ESPECIAL_RE = /^(Em (casos|gestantes|crian[çc]as|idosos|pacientes)|Nos casos|Quando |Especialmente em|J[áa] em|Por outro lado|[ÉE] importante (ressaltar|destacar|notar)|Vale (destacar|ressaltar)|Entretanto|Contudo|Cabe (ressaltar|destacar)|Uma exce[çc][ãa]o|Em situa[çc][õo]es (especiais|particulares))\b/i;
+const CASO_QUADRO_RE = /(quadro cl[íi]nico|quadro cl[áa]ssico|apresenta[çc][ãa]o cl[íi]nica|apresenta[çc][ãa]o t[íi]pica|apresenta[çc][ãa]o cl[áa]ssica|sintomas? incluem|sinais incluem|achados? incluem|achados-chave (s[ãa]o|incluem)|manifesta-se|manifesta[çc][õo]es incluem|tr[íi]ade cl[áa]ssica|cursam? com|caracterizad[ao] por|conjunto [ée] (muito )?cl[áa]ssico|apresenta[çc][ãa]o (t[íi]pica |cl[áa]ssica )?combina|quadro costuma combinar|costuma combinar|combina sintomas)/i;
+const CASO_TRAT_RE = /(\bo tratamento\b|\btratamento consiste\b|\btratamento inclui\b|\btratamento envolve\b|\btratamento de escolha\b|\btratamento padr[ãa]o\b|\btratamento inicial\b|\btratamento (?:é|deve)\b|\bo manejo\b|\bmanejo inclui\b|\bmanejo envolve\b|\bmanejo (?:é|consiste|deve)\b|\ba conduta\b|\bconduta inclui\b|\bconduta (?:é|envolve|inicial)\b|\babordagem inicial envolve\b|\babordagem envolve\b|\bo acompanhamento\b)/i;
+const CASO_ESPECIAL_RE = /(\bem gestantes\b|\bem crian[çc]as\b|\bem idosos\b|\bem pacientes\b|\bnos casos\b|\bentretanto\b|\bcontudo\b|\b[ée] importante\b|\bvale destacar\b|\bvale ressaltar\b|\bcabe ressaltar\b|\buma exce[çc][ãa]o\b|\bsitua[çc][õo]es especiais\b|\bpor outro lado\b|\bj[áa] em\b|\bespecialmente em\b|\bdeve-se sempre\b|\b[ée] fundamental\b)/i;
 function splitCasoExplanation(text) {
   const sentences = splitCasoExplanationSentences(text);
   const buckets = [[], [], [], []];
   let state = 0;
   sentences.forEach(s => {
-    if (state === 0 && CASO_QUADRO_RE.test(s)) state = 1;
-    if (state <= 1 && CASO_TRAT_RE.test(s)) state = 2;
-    if (state === 2 && CASO_ESPECIAL_RE.test(s)) state = 3;
+    const incoming = state;
+    if (incoming === 0 && CASO_QUADRO_RE.test(s)) state = 1;
+    if (incoming <= 1 && CASO_TRAT_RE.test(s)) state = 2;
+    if (incoming === 2 && CASO_ESPECIAL_RE.test(s)) state = 3;
     buckets[state].push(s);
   });
   return {
@@ -4037,11 +4038,11 @@ function renderCasoDoDia() {
 const TOTAL_CASO_HINTS = 6;
 document.addEventListener('click', event => {
   const box = document.getElementById('casoDoDiaSuggestions');
-  if(!box || box.hidden) return;
+  if(!box) return;
   const wrap = document.getElementById('casoDoDiaGuess')?.closest('.caso-guess-wrap');
   if(wrap && wrap.contains(event.target)) return;
   box.hidden = true;
-});
+}, true);
 function bindCasoDoDia() {
   const item = window.CasoDoDia?.todayCase(ui.refDate);
   if(!item) return;
