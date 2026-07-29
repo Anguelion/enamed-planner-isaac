@@ -30,7 +30,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Existe um remédio para evitar gravidez depois de uma violência, e o melhor deles é um comprimido chamado levonorgestrel, porque funciona muito bem e deixa a pessoa passar menos mal (menos enjoo) do que outras opções mais antigas."
     },
     {
       "id": "b13-tecnica-operatoria-q01",
@@ -61,7 +62,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "O remédio que tira a dor age primeiro nos fios mais finos do nervo, por isso a dor some primeiro, depois o frio, depois o calor, depois o toque, e só por último a força dos músculos para se mexer."
     },
     {
       "id": "b13-tecnica-operatoria-q02",
@@ -91,7 +93,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Quando o corte no lábio atravessa tudo até dentro da boca, o médico precisa costurar em três camadas separadas — por dentro, o músculo e depois a pele por fora — para o ferimento cicatrizar direito."
     },
     {
       "id": "b13-pneumonia-q01",
@@ -122,7 +125,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Existe um remédio forte contra uma bactéria perigosa, mas ele não funciona nos pulmões porque uma substância que reveste os pulmões o desativa, então para infecção pulmonar o médico escolhe outros remédios."
     },
     {
       "id": "b13-derrame-pleural-q01",
@@ -152,7 +156,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "O líquido que se acumulou ao redor do pulmão foi analisado e não está complicado, e como o paciente já está melhorando com o remédio, o certo é continuar com o mesmo tratamento e só ir observando, sem precisar de mais nada."
     },
     {
       "id": "b13-violencia-sexual-q02",
@@ -182,7 +187,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Para interromper uma gravidez que veio de uma violência, não é preciso levar boletim policial nem provar nada na justiça — basta a equipe do hospital conversar com a pessoa e ela assinar um papel dizendo que concorda com o procedimento."
     },
     {
       "id": "b13-tecnica-operatoria-q03",
@@ -212,7 +218,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Para costurar um órgão como a bexiga, que guarda o xixi, o médico usa um fio que o corpo consegue dissolver sozinho depois, porque um fio que fica lá para sempre pode virar uma pedrinha incômoda."
     },
     {
       "id": "b13-tecnica-operatoria-q04",
@@ -243,7 +250,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Existe um fio de costura cirúrgica fininho e único, que o corpo absorve sozinho e quase não causa irritação na pele — por isso é uma ótima escolha quando se quer o mínimo de incômodo."
     },
     {
       "id": "b13-tecnica-operatoria-q05",
@@ -274,7 +282,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Quanto mais o remédio anestésico consegue se misturar na gordura das células do nervo, melhor ele entra e mais forte é o seu efeito para tirar a dor."
     },
     {
       "id": "b13-violencia-sexual-q04",
@@ -304,7 +313,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Contando direitinho as semanas, o tempo da gravidez bate com a data da violência que a menina sofreu, então ela e a família podem pedir para interromper a gestação, já que isso é permitido nesses casos."
     },
     {
       "id": "b13-violencia-sexual-q05",
@@ -334,7 +344,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Para proteger contra o vírus HIV depois de uma violência, o remédio só funciona se for tomado em até três dias — como já se passaram semanas, não dá mais para usar esse remédio específico, mas ainda dá tempo de prevenir outras infecções."
     },
     {
       "id": "b13-derrame-pleural-q02",
@@ -364,7 +375,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Quando alguém tem febre e líquido acumulado ao redor do pulmão, o primeiro passo é sempre colher uma amostra desse líquido com uma agulha para descobrir do que se trata, antes de decidir qualquer outro tratamento."
     },
     {
       "id": "b13-violencia-sexual-q06",
@@ -394,7 +406,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Depois de uma violência sexual, a pessoa recebe um conjunto de remédios ao mesmo tempo: um para evitar gravidez, um combo atual contra o HIV e antibióticos para as infecções bacterianas mais comuns."
     },
     {
       "id": "b13-tecnica-operatoria-q06",
@@ -425,7 +438,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Os anestésicos são como chaves fracas que só abrem a porta da dor quando o ambiente não está muito ácido; e essas chaves trancam a passagem de um sal (sódio) nos nervos, não a de outro (cálcio)."
     },
     {
       "id": "b13-violencia-sexual-q07",
@@ -455,7 +469,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "No Brasil, quando a gravidez vem de uma violência, a lei permite interromper até um certo ponto da gestação, e não é preciso levar nenhum boletim de ocorrência da polícia para isso."
     },
     {
       "id": "b13-semanais-q17",
@@ -485,7 +500,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Para fazer esse procedimento depois de uma violência, o hospital pede alguns papéis próprios da equipe de saúde — um relato da pessoa, uma avaliação médica e um termo de consentimento — mas nunca um boletim de ocorrência da polícia."
     },
     {
       "id": "b13-tecnica-operatoria-q07",
@@ -515,7 +531,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Para costurar a parte de dentro da boca, o médico usa um fio que se dissolve sozinho, assim ninguém precisa voltar para tirar o ponto de um lugar tão incômodo de mexer."
     },
     {
       "id": "b13-violencia-sexual-q09",
@@ -545,7 +562,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Mesmo sem ter feito boletim de ocorrência, e não importando qual seja o trabalho da pessoa, ela tem o mesmo direito de qualquer outra de interromper uma gravidez causada por violência."
     },
     {
       "id": "b13-violencia-sexual-q10",
@@ -575,7 +593,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Ela não precisa passar pela polícia nem pedir permissão a um juiz para ter o direito de interromper essa gravidez."
     },
     {
       "id": "b13-redes-atencao-q01",
@@ -605,7 +624,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Faltavam duas coisas importantes para o sistema de saúde daquela região funcionar bem: gente para visitar e cadastrar as famílias, e exames especializados disponíveis rápido o suficiente para todo mundo."
     },
     {
       "id": "b13-tecnica-operatoria-q08",
@@ -636,7 +656,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "O fio de seda usado em cirurgia vem do casulo de uma lagartinha chamada bicho-da-seda, e o fio chamado 'catgut', apesar do nome parecido, não vem de gatos — vem do intestino de ovelhas ou bois."
     },
     {
       "id": "b13-derrame-pleural-q03",
@@ -667,7 +688,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "O líquido do pulmão não é do tipo mais simples, mas também não parece uma infecção comum. Quando isso acontece sem explicação clara, o médico deve pensar em um coágulo preso no pulmão e pedir um exame de imagem para confirmar."
     },
     {
       "id": "b13-violencia-sexual-q11",
@@ -697,7 +719,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Toda unidade de saúde, desde o postinho do bairro até o hospital, precisa estar preparada para acolher e cuidar de uma adolescente que sofreu violência sexual — não é só trabalho do especialista."
     },
     {
       "id": "b13-derrame-pleural-q04",
@@ -728,7 +751,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Uma parte do pulmão encolheu porque algo entalou e bloqueou a passagem de ar — em pessoas com dificuldade de engolir, é comum que um pedacinho de comida ou objeto entre no lugar errado e cause esse bloqueio."
     },
     {
       "id": "b13-pneumonia-q02",
@@ -758,7 +782,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Num fumante que tosse com sangue e vive tendo a mesma infecção no pulmão sem melhorar de vez, o médico precisa pensar que pode haver algo entupindo a passagem de ar, o que causa infecção repetida e acúmulo de líquido."
     },
     {
       "id": "b13-derrame-pleural-q05",
@@ -788,7 +813,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Quando a pessoa tem infecção no pulmão junto com líquido acumulado ao redor dele, o próximo passo é colher uma amostra desse líquido com uma agulha para descobrir exatamente do que se trata."
     },
     {
       "id": "b13-violencia-sexual-q13",
@@ -818,7 +844,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Quando a gravidez ameaça a vida da mãe, o aborto pode ser feito em qualquer fase, sem prazo, avaliado por pelo menos dois médicos; já no caso de violência sexual, também não é preciso boletim de ocorrência."
     },
     {
       "id": "b13-derrame-pleural-q06",
@@ -848,7 +875,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Quando o líquido do pulmão vira pus de verdade (uma infecção grave), um dos sinais no exame é uma enzima aparecendo bem alta no resultado."
     },
     {
       "id": "b13-pneumonia-q03",
@@ -878,7 +906,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Febre, dor no peito que piora ao respirar fundo e um som mais 'cheio' ao bater na parte de baixo das costas mostram que uma infecção bacteriana no pulmão já juntou líquido ao redor dele."
     },
     {
       "id": "b13-violencia-sexual-q14",
@@ -909,7 +938,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "O médico pode atender o pedido dela com um relatório da própria equipe de saúde e a aprovação de mais dois profissionais, sem precisar de boletim de ocorrência nem se importar com a profissão dela."
     },
     {
       "id": "b13-tecnica-operatoria-q09",
@@ -940,7 +970,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Se depois de aplicar o anestésico a dor continua, na maioria das vezes é porque o remédio ainda está numa forma que não consegue atravessar a parede do nervo — não porque a dose foi baixa demais nem porque já é sinal de perigo."
     },
     {
       "id": "b13-pneumonia-q04",
@@ -971,7 +1002,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Esse senhor está confuso, respirando muito rápido e com a pressão baixa — tudo isso junto mostra uma pneumonia grave, que precisa de UTI e de um antibiótico forte."
     },
     {
       "id": "b13-derrame-pleural-q07",
@@ -1001,7 +1033,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Quando a tireoide está muito preguiçosa, o líquido que se acumula no pulmão costuma ser do tipo mais simples e aguado, diferente das outras causas dessa lista, que dão um líquido mais 'grosso'."
     },
     {
       "id": "b13-pneumonia-q05",
@@ -1033,7 +1066,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Um catarro com cheiro muito forte e podre, numa pessoa que bebe muito álcool, é sinal clássico de uma bolsa de pus se formando dentro do pulmão, e o tratamento é começar antibiótico logo."
     },
     {
       "id": "b13-derrame-pleural-q08",
@@ -1064,7 +1098,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Comparando os valores do líquido do pulmão com os do sangue, dá para ver que ele é do tipo mais simples e aguado, e a causa mais provável para esse tipo de líquido é o coração não estar bombeando bem."
     },
     {
       "id": "b13-pneumonia-q06",
@@ -1094,7 +1129,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Essa pessoa tem uma doença crônica de pulmão que piorou bastante, com falta de ar grave, e nesse caso um antibiótico mais potente, que cobre vários tipos de bactéria de uma vez, é a melhor escolha."
     },
     {
       "id": "b13-pneumonia-q07",
@@ -1125,7 +1161,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "A bactéria que mais causa pneumonia pega fora do hospital tem um nome comprido, pneumococo, e é ela a principal suspeita quando alguém adoece assim."
     },
     {
       "id": "b13-pneumonia-q08",
@@ -1156,7 +1193,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "O placar de gravidade da pneumonia até dava para tratar em casa, mas como o senhor está sozinho, quase não enxerga por causa de uma cirurgia recente e não tem quem cuide dele por alguns dias, o mais seguro é internar mesmo assim."
     },
     {
       "id": "b13-violencia-sexual-q15",
@@ -1186,7 +1224,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Como ela já usa um método bem eficiente para não engravidar, não é preciso dar mais um remédio extra para evitar a gravidez depois da violência."
     },
     {
       "id": "b13-pneumonia-q09",
@@ -1217,7 +1256,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Para descobrir rápido se a infecção é causada por esse micróbio bem diferente dos outros, o melhor é buscar seu material genético direto na secreção do nariz ou garganta e completar com um exame de sangue que procura defesas contra ele."
     },
     {
       "id": "b13-tecnica-operatoria-q10",
@@ -1248,7 +1288,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Cada remédio anestésico tem uma dose máxima segura calculada pelo peso da pessoa, e para esse paciente de 60 kg, sem o remédio que aperta os vasinhos de sangue, o volume seguro é de cerca de 30 mL."
     },
     {
       "id": "b13-tecnica-operatoria-q11",
@@ -1278,7 +1319,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Numa área do corpo que estica bastante, como a frente do joelho, o melhor fio é um fio único que não some sozinho, porque ele aguenta a tensão da pele se mexendo sem se romper."
     },
     {
       "id": "b13-violencia-sexual-q16",
@@ -1308,7 +1350,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "O primeiro passo é acolher a pessoa, cuidar dos ferimentos e começar os remédios de proteção — só depois disso ela deve ser orientada a ir à delegacia, se quiser."
     },
     {
       "id": "b13-febre-sem-sinais-q01",
@@ -1338,7 +1381,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Esse bebê tão pequeno está com sinais de que o corpo está lutando muito contra uma infecção (coração acelerado, mãos frias), então o médico precisa pedir uma bateria completa de exames de sangue e urina para achar e tratar a causa rápido."
     },
     {
       "id": "b13-violencia-sexual-q17",
@@ -1368,7 +1412,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Logo no primeiro atendimento, fazem-se testes rápidos para descobrir se já existem certas infecções, e ao mesmo tempo já se começam os remédios que previnem tanto os vírus quanto as bactérias transmitidas na violência."
     },
     {
       "id": "b13-redes-atencao-q02",
@@ -1399,7 +1444,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Um ambulatório de especialista, como o de cardiologia, é um exemplo de atendimento de nível médio — não é o postinho simples, nem o hospital de casos gravíssimos."
     },
     {
       "id": "b13-febre-sem-sinais-q02",
@@ -1429,7 +1475,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Uma criança que está com febre baixa mas continua ativa e bem disposta não precisa de exame nenhum agora — só um remédio para baixar a febre e ficar de olho em como ela se comporta."
     },
     {
       "id": "b13-pneumonia-q10",
@@ -1459,7 +1506,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Apesar de ela ter ficado com falta de ar deitada, o que lembra problema de coração, os exames e o raio-X mostram que é mesmo uma infecção no pulmão, então o tratamento certo é um antibiótico específico para isso."
     },
     {
       "id": "b13-febre-sem-sinais-q03",
@@ -1489,7 +1537,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Um bebê tão pequeno com febre alta sem explicação precisa fazer exames de urina, de sangue e, se possível, um teste para vírus, mesmo estando com boa aparência, porque nessa idade o risco de uma infecção grave é maior."
     },
     {
       "id": "b13-febre-sem-sinais-q04",
@@ -1519,7 +1568,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Numa criança de 2 anos com febre sem sintoma nenhum que explique, mas que está bem-disposta, a principal suspeita é uma infecção na urina, então o exame mais importante a pedir é o de xixi."
     },
     {
       "id": "b13-violencia-sexual-q18",
@@ -1549,7 +1599,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "O remédio para evitar gravidez e os remédios de proteção contra infecções devem ser dados logo, sem esperar para saber se o agressor tem alguma doença — a proteção não depende disso."
     },
     {
       "id": "b13-febre-sem-sinais-q05",
@@ -1580,7 +1631,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Um bebê tão pequeno com sinais claros de infecção na urina precisa ficar internado e tomar antibiótico direto na veia, porque nessa idade não dá para arriscar tratar só em casa."
     },
     {
       "id": "b13-febre-sem-sinais-q06",
@@ -1610,7 +1662,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Para saber com certeza se a urina de um bebê pequeno está infectada, o médico precisa coletar a amostra de um jeito bem cuidadoso, com uma sondinha ou uma agulha fininha, porque o saquinho colado na pele costuma sujar o resultado."
     },
     {
       "id": "b13-derrame-pleural-q09",
@@ -1640,7 +1693,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "No raio-X, quando há líquido acumulado ao redor do pulmão, aparece uma curva característica na base, e, se for muita quantidade, o coração e as estruturas do meio do peito são empurrados para o lado oposto."
     },
     {
       "id": "b13-violencia-sexual-q19",
@@ -1671,7 +1725,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "O atendimento deve avaliar a saúde da pessoa, começar os remédios de proteção contra infecções e gravidez, e também coletar amostras do corpo que podem ajudar a identificar quem fez a violência — tudo isso feito pela equipe de saúde, sem esperar a polícia."
     },
     {
       "id": "b13-febre-sem-sinais-q07",
@@ -1702,7 +1757,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Existe uma lista de pistas que ajuda o médico a saber se um bebê com febre corre pouco risco de infecção grave — duas delas são a criança ter sido sempre saudável antes e a urina não mostrar muitas células de defesa."
     },
     {
       "id": "b13-derrame-pleural-q10",
@@ -1732,7 +1788,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Os números do líquido do pulmão (muito ácido, com pouco açúcar e uma enzima bem alta) mostram que a infecção já complicou, então agora é preciso colocar um tubo para drenar o líquido, e não só trocar o remédio."
     },
     {
       "id": "b13-derrame-pleural-q11",
@@ -1764,7 +1821,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "A imagem do raio-X mostra uma linha reta separando ar (em cima) de líquido (embaixo) dentro do peito, o que indica que há tanto ar quanto líquido acumulados ao redor do pulmão ao mesmo tempo."
     },
     {
       "id": "b13-redes-atencao-q03",
@@ -1795,7 +1853,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Além do postinho de saúde e do pronto-socorro, os gestores podem, com boa justificativa e combinando entre eles, criar outras portas de entrada para o sistema de saúde, dependendo da necessidade de cada região."
     },
     {
       "id": "b13-pneumonia-q11",
@@ -1826,7 +1885,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Quando a pneumonia é grave, com confusão mental e respiração muito acelerada, o médico precisa colher vários exames de sangue e também testar para gripe, além de já internar o paciente."
     },
     {
       "id": "b13-redes-atencao-q04",
@@ -1856,7 +1916,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Para um pedaço do mapa ser considerado uma 'Região de Saúde' de verdade, ele precisa ter, no mínimo, um postinho de saúde funcionando — não precisa ter hospital grande nem serviço superespecializado."
     },
     {
       "id": "b13-febre-sem-sinais-q08",
@@ -1887,7 +1948,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Além da idade do bebê, o médico precisa saber como ele está se comportando no geral, se as vacinas estão em dia, e pedir um exame de urina — são essas as pistas principais para decidir o que fazer."
     },
     {
       "id": "b13-redes-atencao-q05",
@@ -1917,7 +1979,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "As unidades de pronto atendimento e os serviços de urgência fazem parte do nível intermediário de cuidado, não do nível mais simples do postinho de bairro."
     },
     {
       "id": "b13-derrame-pleural-q12",
@@ -1948,7 +2011,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "O líquido do pulmão está muito ácido, com pouco açúcar e cheio de células de defesa, sinal de uma infecção grave formando pus lá dentro — por isso é preciso colocar um dreno e dar antibiótico ao mesmo tempo."
     },
     {
       "id": "b13-febre-sem-sinais-q09",
@@ -1979,7 +2043,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "O ibuprofeno serve para baixar a febre e aliviar dor de leve a moderada — não serve para prevenir crise de asma, convulsão ou tratar infecção diretamente."
     },
     {
       "id": "b13-violencia-sexual-q20",
@@ -2009,7 +2074,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "A lei brasileira que permite o aborto em caso de violência sexual não coloca um prazo máximo de quantas semanas de gravidez — diferente de uma norma técnica do Ministério da Saúde, que sugere um limite prático, a lei em si não tem esse prazo."
     },
     {
       "id": "b13-redes-atencao-q06",
@@ -2040,7 +2106,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Uma pressão alta que já está sob controle deve ser acompanhada no postinho de saúde perto de casa, e não no hospital de emergência — cada nível de cuidado cuida do que é da sua responsabilidade, para o sistema funcionar melhor para todo mundo."
     },
     {
       "id": "b13-redes-atencao-q07",
@@ -2071,7 +2138,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Na rede de atenção à saúde, o cuidado funciona melhor quando vários profissionais de diferentes áreas trabalham juntos e conversam entre si, em vez de cada um cuidar sozinho e sem se comunicar."
     },
     {
       "id": "b13-febre-sem-sinais-q10",
@@ -2101,7 +2169,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Existe um remédio para dor e febre que nunca deve ser dado a crianças porque pode causar uma doença rara e grave no fígado e no cérebro; já outros remédios comuns são seguros, mas não se deve misturar vários tipos ao mesmo tempo tentando controlar a febre."
     },
     {
       "id": "b13-pneumonia-q12",
@@ -2131,7 +2200,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Essa pessoa toma remédios especiais para o corpo não rejeitar o rim transplantado, e um tipo comum de antibiótico briga com esses remédios — por isso o médico escolhe outro antibiótico que não atrapalha o tratamento do transplante."
     },
     {
       "id": "b13-febre-sem-sinais-q11",
@@ -2161,7 +2231,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Para esse bebê com febre e sem outros sintomas, a única coisa realmente necessária é examinar a urina — não é preciso fazer exame de líquido da coluna nem usar um antibiótico específico sem confirmação primeiro."
     },
     {
       "id": "b13-febre-sem-sinais-q12",
@@ -2191,7 +2262,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Um recém-nascido com menos de um mês que tem febre, mesmo que pareça bem, precisa ser internado e investigado a fundo, porque nessa fase da vida qualquer febre pode esconder uma infecção séria."
     },
     {
       "id": "b13-febre-sem-sinais-q13",
@@ -2221,7 +2293,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Uma criança que não tomou as vacinas contra certas bactérias perigosas está mais desprotegida, então quando ela tem febre sem causa aparente, o médico precisa investigar bem mais fundo, incluindo o líquido que envolve o cérebro."
     },
     {
       "id": "b13-derrame-pleural-q13",
@@ -2252,7 +2325,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Quando um lado do peito encolhe, fica com som mais 'cheio' ao bater e sem ar entrando, isso mostra que uma parte do pulmão perdeu volume e murchou."
     },
     {
       "id": "b13-redes-atencao-q08",
@@ -2282,7 +2356,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "As regiões de saúde são formadas por cidades vizinhas que têm coisas em comum, como cultura e economia, e é o postinho de saúde da atenção primária que organiza e coordena o caminho do paciente dentro do sistema."
     },
     {
       "id": "b13-febre-sem-sinais-q14",
@@ -2313,7 +2388,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Quando uma criança tem febre sem nenhuma pista de onde vem, a causa bacteriana grave mais comum, de longe, é uma infecção escondida na urina."
     },
     {
       "id": "b13-violencia-sexual-q21",
@@ -2343,7 +2419,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Tudo deve acontecer ao mesmo tempo: o remédio para evitar gravidez, os remédios contra infecções, o apoio emocional e a coleta de provas — nada disso deve esperar o resultado de exame nenhum."
     },
     {
       "id": "b13-febre-sem-sinais-q15",
@@ -2373,7 +2450,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Um bebê de só uma semana de vida com febre é tratado como se pudesse ter uma infecção grave espalhada pelo corpo, então precisa internar, colher vários exames, inclusive do líquido da coluna, e já começar antibiótico na veia."
     },
     {
       "id": "b13-derrame-pleural-q14",
@@ -2404,7 +2482,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Quando o líquido ao redor do pulmão tem células de câncer e volta sempre que é retirado, a solução é colocar um dreno e depois 'colar' as duas camadas que envolvem o pulmão para o líquido parar de se formar."
     },
     {
       "id": "b13-febre-sem-sinais-q16",
@@ -2435,7 +2514,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Uma criança maior de um ano, vacinada em dia, com febre baixa e se sentindo bem pode ir para casa com acompanhamento diário, sem precisar fazer exame de sangue agora."
     },
     {
       "id": "b13-derrame-pleural-q15",
@@ -2466,7 +2546,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Um líquido do pulmão cheio de um tipo específico de célula de defesa, meio ácido e com pouco açúcar, é bem característico de tuberculose."
     },
     {
       "id": "b13-redes-atencao-q09",
@@ -2496,7 +2577,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Como ele já teve um infarto e agora está sendo acompanhado por um especialista para evitar que aconteça de novo, isso é um atendimento de nível médio com o objetivo de prevenir a doença voltar, já que ela já apareceu uma vez."
     },
     {
       "id": "b13-febre-sem-sinais-q17",
@@ -2526,7 +2608,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Uma criança pequena com febre há vários dias, mas que está bem e ativa, precisa principalmente de um exame de urina — não é preciso começar antibiótico antes de saber o resultado."
     },
     {
       "id": "b13-redes-atencao-q10",
@@ -2557,7 +2640,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "A lei que organiza as regiões de saúde não usa a palavra 'hospital de alta complexidade' como uma categoria separada — ela fala de outras ações, como atenção básica, urgência, saúde mental e vigilância."
     },
     {
       "id": "b13-tecnica-operatoria-q12",
@@ -2587,7 +2671,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Existe um remédio que, junto com o anestésico, aperta os vasinhos de sangue para durar mais tempo, mas ele não pode ser usado em partes do corpo que têm pouca circulação de reserva, como dedos, nariz, orelha e pênis, porque pode cortar o sangue daquele pedacinho."
     },
     {
       "id": "b13-febre-sem-sinais-q18",
@@ -2619,7 +2704,8 @@
       "tagSource": "Tags 13.txt",
       "answerAudit": "official-source",
       "answerSource": "QUESTÕES BLOCO 13 (SEMANAIS).txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Mesmo o bebê parecendo bem, com menos de 3 meses de vida a febre precisa ser investigada com exames de sangue, urina e um teste de vírus antes de decidir se vai precisar de antibiótico."
     },
     {
       "id": "b13-febre-sem-sinais-q19",
@@ -2649,7 +2735,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Para saber se um bebê entre 1 e 3 meses com febre corre risco alto ou baixo de infecção grave, os exames principais são o de sangue e o de urina."
     },
     {
       "id": "b13-pneumonia-q17",
@@ -2680,7 +2767,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Na pneumonia grave, o médico escolhe o antibiótico pensando em fatores de risco específicos: se a pessoa já teve uma bactéria resistente antes, se tem uma doença pulmonar que favorece outra bactéria mais complicada, ou se engasgou com comida — cada situação pede um reforço diferente no remédio."
     },
     {
       "id": "b13-pneumonia-q15",
@@ -2713,7 +2801,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Febre alta, confusão mental, um sal do sangue baixo e o fígado meio alterado, em quem esteve num hotel recentemente, são pistas fortes de uma bactéria específica — o exame certo é um teste na urina, e o remédio é um antibiótico específico."
     },
     {
       "id": "b13-semanais-q92",
@@ -2743,7 +2832,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Se o único ponto de risco da pessoa no cálculo de gravidade da pneumonia é a idade, ainda assim ela pode ser tratada em casa, porque a pontuação total continua baixa."
     },
     {
       "id": "b13-semanais-q93",
@@ -2773,7 +2863,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-126"
+      "scheduleId": "cron-126",
+      "kids": "Uma pontuação bem alta nesse cálculo de gravidade da pneumonia mostra que o caso é muito sério, e o lugar certo para tratar é a UTI."
     },
     {
       "id": "b13-semanais-q94",
@@ -2803,7 +2894,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Quando uma bactéria que normalmente vive na pele aparece em só um dos vários frascos do exame de sangue, geralmente é só sujeira da coleta, e não uma infecção de verdade — o problema real aqui é uma pneumonia pega no próprio hospital, que precisa de um antibiótico mais amplo."
     },
     {
       "id": "b13-semanais-q95",
@@ -2834,7 +2926,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Com essa pontuação de gravidade, o tratamento certo é internar numa enfermaria comum, sem precisar de UTI, e usar dois antibióticos na veia ao mesmo tempo."
     },
     {
       "id": "b13-semanais-q96",
@@ -2864,7 +2957,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Dor no peito e o líquido estar concentrado de um lado só são pistas de que esse líquido é do tipo mais 'inflamado', cheio de proteína, enquanto o inchaço geral do corpo é sinal do tipo mais simples e aguado."
     },
     {
       "id": "b13-semanais-q97",
@@ -2894,7 +2988,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Numa crise muito grave dessa doença crônica de pulmão, com respiração ofegante e pouco oxigênio no sangue, o antibiótico escolhido precisa cobrir tanto as bactérias mais comuns quanto as mais atípicas, por isso a combinação de dois remédios é a mais indicada."
     },
     {
       "id": "b13-semanais-q98",
@@ -2924,7 +3019,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Dor no peito e o líquido estar concentrado de um lado só são pistas de que esse líquido é do tipo mais 'inflamado', cheio de proteína, e não do tipo mais simples que costuma vir junto com inchaço no corpo todo."
     },
     {
       "id": "b13-derrame-pleural-q17",
@@ -2954,7 +3050,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Os sintomas, como suor noturno e emagrecimento, e o líquido do pulmão apontam fortemente para tuberculose, mas como a cultura ainda não confirmou, o próximo passo é pegar um pedacinho da membrana que envolve o pulmão para examinar de perto e fechar o diagnóstico."
     },
     {
       "id": "b13-derrame-pleural-q23",
@@ -2985,7 +3082,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Mesmo em quem já tem problema de coração, que costuma dar um líquido mais simples, se os números do líquido do pulmão mostrarem muita acidez e uma enzima bem alta, isso indica que apareceu outra complicação junto, e é preciso drenar."
     },
     {
       "id": "b13-derrame-pleural-q19",
@@ -3016,7 +3114,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Esse conjunto de sinais no exame do peito — som mais 'cheio' ao bater, ausência de ar entrando e uma voz que soa estranha bem na linha entre o som cheio e o normal — é a marca registrada de um líquido acumulado ao redor do pulmão."
     },
     {
       "id": "b13-semanais-q102",
@@ -3046,7 +3145,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Os números do líquido mostram uma infecção grave formando pus dentro do peito, então é preciso internar, colocar um dreno e usar antibióticos que cobrem bem esse tipo de infecção."
     },
     {
       "id": "b13-semanais-q103",
@@ -3076,7 +3176,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Antes de partir para exames mais avançados ou biópsia de uma possível massa, o primeiro passo é sempre analisar o líquido que se acumulou ao redor do pulmão."
     },
     {
       "id": "b13-semanais-q104",
@@ -3106,7 +3207,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "Febre à tarde, suor à noite e emagrecimento, junto com um líquido do pulmão rico em um tipo de célula de defesa, são sinais tão característicos de tuberculose que o médico já pode começar o tratamento mesmo sem esperar a cultura confirmar."
     },
     {
       "id": "b13-semanais-q105",
@@ -3136,7 +3238,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-127"
+      "scheduleId": "cron-127",
+      "kids": "O quadro é de uma infecção pulmonar comum com um pouco de líquido ao redor, mas sem sinais de complicação — então é só continuar com o antibiótico, sem precisar drenar."
     },
     {
       "id": "b13-semanais-q106",
@@ -3166,7 +3269,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Antes de uma cirurgia, estar desnutrido aumenta bastante o risco de complicações, como infecção e dificuldade de cicatrizar — por isso cuidar da alimentação da pessoa é tão importante quanto a própria operação."
     },
     {
       "id": "b13-semanais-q107",
@@ -3197,7 +3301,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-125"
+      "scheduleId": "cron-125",
+      "kids": "Cada anestésico tem uma dose máxima segura calculada pelo peso da pessoa; para esse paciente de 70 kg, sem o remédio que aperta os vasinhos de sangue, o limite fica em torno de 280 mg."
     },
     {
       "id": "b13-semanais-q108",
@@ -3227,7 +3332,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Essa criança está bem, só com febre normal — o certo é explicar para a mãe que é uma coisa benigna, dar um remédio para baixar a febre quando precisar, e não misturar dois remédios diferentes tentando controlar tudo o tempo todo."
     },
     {
       "id": "b13-semanais-q109",
@@ -3258,7 +3364,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-124"
+      "scheduleId": "cron-124",
+      "kids": "Para esse bebê de 2 meses com febre, o certo é colher exames de sangue, urina e de vírus ali mesmo na unidade e esperar o resultado antes de liberar, além de ensinar a mãe a usar o remédio para febre direitinho."
     },
     {
       "id": "b13-violencia-sexual-q22",
@@ -3288,7 +3395,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Mesmo que ela não lembre tudo o que aconteceu por causa do álcool, o atendimento deve avaliar e já começar os remédios de proteção contra infecções e gravidez, junto com apoio emocional, sem esperar resultado de exame."
     },
     {
       "id": "b13-violencia-sexual-q28",
@@ -3318,7 +3426,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "O remédio que evita a infecção pelo HIV só funciona se começar até três dias depois do ocorrido — como já se passaram mais de três dias, não adianta mais começar esse remédio."
     },
     {
       "id": "b13-semanais-q112",
@@ -3348,7 +3457,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Quem já usa um método bem eficiente para não engravidar não precisa tomar mais um remédio extra para evitar gravidez depois da violência, porque já está protegida."
     },
     {
       "id": "b13-semanais-q113",
@@ -3378,7 +3488,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Fazendo as contas direitinho, o tempo de gravidez bate exatamente com a data da violência que ela sofreu, então ela pode interromper a gestação só contando o que aconteceu para a equipe de saúde, sem precisar de mais provas."
     },
     {
       "id": "b13-semanais-q115",
@@ -3408,7 +3519,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Existe uma alteração genética rara e grave em que o bebê tem tantos problemas que não consegue sobreviver fora da barriga da mãe — diferente de outras condições da lista, que podem ser tratadas depois do nascimento."
     },
     {
       "id": "b13-semanais-q116",
@@ -3439,7 +3551,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "Mesmo que a data contada não bata exatamente com o tempo da gravidez, isso não impede o aborto legal; e a pessoa responsável pelo hospital não pode recusar o procedimento para todo mundo só porque ela pessoalmente discorda — essa recusa só pode ser individual, de cada profissional."
     },
     {
       "id": "b13-semanais-q117",
@@ -3469,7 +3582,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-123"
+      "scheduleId": "cron-123",
+      "kids": "O primeiro atendimento deve incluir logo os remédios que previnem tanto infecções causadas por vírus quanto por bactérias."
     },
     {
       "id": "b13-semanais-q118",
@@ -3499,7 +3613,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Para um paciente com diabetes que vive indo à emergência, o melhor é montar um caminho de cuidado organizado que conecte o postinho de saúde com os especialistas, em vez de cada um cuidar sozinho sem se falar."
     },
     {
       "id": "b13-redes-atencao-q14",
@@ -3529,7 +3644,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Essa família reúne várias dificuldades ao mesmo tempo — um idoso acamado, ninguém que saiba ler para organizar os remédios, desemprego em casa — e por isso ela é classificada como de risco muito alto, precisando de atenção redobrada da equipe de saúde."
     },
     {
       "id": "b13-semanais-q120",
@@ -3559,7 +3675,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "O genograma é como um desenho da árvore da família que ajuda o médico a enxergar não só quem é parente de quem, mas também os padrões de saúde e as coisas que causam estresse dentro daquela família."
     },
     {
       "id": "b13-redes-atencao-q16",
@@ -3589,7 +3706,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Esse conceito significa que o postinho de saúde deve ser o primeiro lugar que a pessoa procura sempre que tem uma necessidade nova de saúde, funcionando como a porta de entrada principal do sistema."
     },
     {
       "id": "b13-redes-atencao-q17",
@@ -3619,7 +3737,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Para ajudar essa jovem grávida que vive na rua, o certo é cadastrá-la no postinho mais perto de onde ela dorme, chamar a assistência social e outras organizações para apoiar, e encaminhá-la para um acompanhamento de gravidez mais cuidadoso — nunca internar à força ou culpar ela pela situação."
     },
     {
       "id": "b13-semanais-q123",
@@ -3649,7 +3768,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Quando o médico organiza uma forma de os especialistas ajudarem a equipe do postinho a resolver os casos mais complicados sem precisar encaminhar todo mundo, isso mostra a habilidade da atenção primária de coordenar o cuidado entre os diferentes níveis."
     },
     {
       "id": "b13-semanais-q125",
@@ -3679,7 +3799,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 13.txt",
-      "scheduleId": "cron-122"
+      "scheduleId": "cron-122",
+      "kids": "Conhecer bem a comunidade ao redor ajuda a equipe de saúde a entender as necessidades reais das famílias e envolver todo mundo no planejamento do cuidado, enquanto respeitar as crenças e a cultura de cada pessoa torna o atendimento mais sensível e humano."
     }
   ]
 }

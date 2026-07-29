@@ -8730,7 +8730,7 @@ function renderQuestion(question, total) {
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
-     <div class="section-title"><h2>Questão ${question.number}</h2>${difficultyPicker}</div>
+     <div class="section-title"><h2>Questão ${question.number}</h2></div>
     <div class="question-workspace"><div class="question-main">
       <div class="question-stem highlightable" data-highlight-scope="stem" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights, true, 'stem')}</div>
       ${renderQuestionImages(question)}
@@ -8744,6 +8744,7 @@ function renderQuestion(question, total) {
       ${result ? renderQuestionFlashcardEditor(question, result) : ''}
       ${renderQuestionNotes(question, savedProgress)}
       <div class="question-nav"><div><button class="icon-btn" id="questionPrev" ${ui.qIndex===0?'disabled':''}>‹ Anterior</button> <button class="icon-btn" id="questionNext">Próxima ›</button></div><div>${reviewButton} ${result?'<button class="icon-btn" id="questionRedo">Refazer</button>':''}</div></div>
+      ${difficultyPicker}
     </div></div></div>`;
 }
 function renderQuestionImages(question) {
@@ -8777,7 +8778,8 @@ function questionCommentSections(question, result) {
     pearl: parsed.pearl || pearl || 'Revise o conceito central desta questão.',
     error: result.correct
       ? (parsed.error || `Você acertou. Guarde por que a alternativa ${question.answer} resolve melhor o enunciado.`)
-      : (parsed.error || `Você marcou ${result.selected || '-'}${selectedText ? ` (${selectedText})` : ''}. O gabarito é ${question.answer}${answerText ? ` (${answerText})` : ''}.`)
+      : (parsed.error || `Você marcou ${result.selected || '-'}${selectedText ? ` (${selectedText})` : ''}. O gabarito é ${question.answer}${answerText ? ` (${answerText})` : ''}.`),
+    kids: question.kids || ''
   };
 }
 function parseStructuredComment(comment) {
@@ -8807,13 +8809,15 @@ function parseStructuredComment(comment) {
 }
 function renderQuestionCommentPanel(question, result, highlights=[]) {
   const current = state.questionProgress[question.id] || {};
-  const allowedTabs = ['analysis','pearl','error'];
+  const hasKids = Boolean(question.kids);
+  const allowedTabs = hasKids ? ['analysis','pearl','error','kids'] : ['analysis','pearl','error'];
   const tab = allowedTabs.includes(current.commentTab) ? current.commentTab : 'pearl';
   const sections = questionCommentSections(question, result);
   const tabs = [
     ['analysis','Análise','◉'],
     ['pearl','Pérola','✦'],
-    ['error','Armadilha','!']
+    ['error','Armadilha','!'],
+    ...(hasKids ? [['kids','Criança','🧒']] : [])
   ];
   const nextDisabled = ui.qIndex >= filteredQuestions().length - 1 ? 'disabled' : '';
   const declaredAnswer = String(question.comment || '').match(/(?:^|\n)\s*(?:Correta|Gabarito)\s*:\s*([A-E])\b/i)?.[1]?.toUpperCase() || '';
