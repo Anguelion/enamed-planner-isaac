@@ -2596,6 +2596,7 @@ body.dark .tab.active .tab-icon{background:#172331}
 .caso-guess-wrap{position:relative;flex:1 1 220px}
 .caso-guess-wrap .input{width:100%}
 .caso-suggestions{position:absolute;z-index:20;top:calc(100% + 4px);left:0;right:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow);max-height:220px;overflow-y:auto;display:flex;flex-direction:column}
+.caso-suggestions[hidden]{display:none}
 .caso-suggestion-item{all:unset;box-sizing:border-box;width:100%;padding:9px 12px;font-size:13.5px;color:var(--ink);cursor:pointer;border-bottom:1px solid var(--line)}
 .caso-suggestion-item:last-child{border-bottom:none}
 .caso-suggestion-item:hover{background:var(--soft-green)}
