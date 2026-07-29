@@ -2598,6 +2598,7 @@ body.dark .tab.active .tab-icon{background:#172331}
 .caso-suggestion-item{all:unset;box-sizing:border-box;width:100%;padding:9px 12px;font-size:13.5px;color:var(--ink);cursor:pointer;border-bottom:1px solid var(--line)}
 .caso-suggestion-item:last-child{border-bottom:none}
 .caso-suggestion-item:hover{background:var(--soft-green)}
+.caso-suggestion-empty{padding:10px 12px;font-size:13px;color:var(--muted)}
 .caso-feedback{font-size:13.5px;font-weight:600;padding:8px 12px;border-radius:var(--radius-sm)}
 .caso-feedback.ok{color:var(--green);background:var(--soft-green)}
 .caso-feedback.no{color:var(--red);background:var(--soft-red)}

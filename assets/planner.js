@@ -4026,11 +4026,12 @@ function bindCasoDoDia() {
   const suggestionsBox = document.getElementById('casoDoDiaSuggestions');
   const renderSuggestions = () => {
     if(!guessInput || !suggestionsBox) return;
+    const all = window.CasoDoDia?.allDiagnoses() || [];
+    if(!all.length) { suggestionsBox.hidden = true; suggestionsBox.innerHTML = ''; return; }
     const raw = guessInput.value.trim();
     const q = window.CasoDoDia?.normalize(raw) || '';
-    if(q.length < 2) { suggestionsBox.hidden = true; suggestionsBox.innerHTML = ''; return; }
-    const matches = (window.CasoDoDia?.allDiagnoses() || []).filter(d => window.CasoDoDia.normalize(d).includes(q)).slice(0, 8);
-    if(!matches.length) { suggestionsBox.hidden = true; suggestionsBox.innerHTML = ''; return; }
+    const matches = q ? all.filter(d => window.CasoDoDia.normalize(d).includes(q)) : all;
+    if(!matches.length) { suggestionsBox.hidden = true; suggestionsBox.innerHTML = '<div class="caso-suggestion-empty">Nenhum diagnóstico encontrado.</div>'; suggestionsBox.hidden = false; return; }
     suggestionsBox.innerHTML = matches.map(d => `<button type="button" class="caso-suggestion-item" data-caso-suggestion="${escapeAttr(d)}">${escapeHtml(d)}</button>`).join('');
     suggestionsBox.hidden = false;
   };
@@ -7307,11 +7308,11 @@ function renderFlashcards() {
   </div>
   <div class="card flashcard-library-card"><div class="section-title"><h3>Biblioteca</h3><button class="icon-btn" id="flashcardToggleLibrary">${ui.flashcardShowLibrary?'Ocultar':'Mostrar'} cards (${cards.length})</button></div>${ui.flashcardShowLibrary ? (groups.length ? groups.map(renderFlashcardGroup).join('') : '<div class="empty">Nenhum card neste filtro.</div>') : '<div class="muted">A biblioteca fica recolhida durante a revisão para reduzir distrações.</div>'}</div>`;
   const filter = document.getElementById('flashcardFilter');
-  if(filter) filter.onchange = e => { ui.flashcardFilter=e.target.value; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
+  if(filter) filter.onchange = e => { ui.flashcardFilter=e.target.value; ui.flashcardSubject=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
   const area = document.getElementById('flashcardArea');
-  if(area) area.onchange = e => { ui.flashcardArea=e.target.value; ui.flashcardSubarea='Todas'; ui.flashcardDeck=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
+  if(area) area.onchange = e => { ui.flashcardArea=e.target.value; ui.flashcardSubarea='Todas'; ui.flashcardDeck=''; ui.flashcardSubject=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
   const subarea = document.getElementById('flashcardSubarea');
-  if(subarea) subarea.onchange = e => { ui.flashcardSubarea=e.target.value; ui.flashcardDeck=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
+  if(subarea) subarea.onchange = e => { ui.flashcardSubarea=e.target.value; ui.flashcardDeck=''; ui.flashcardSubject=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
   const clearDeck = document.getElementById('flashcardClearDeck');
   if(clearDeck) clearDeck.onclick = () => { ui.flashcardDeck=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
   const toggleLibrary = document.getElementById('flashcardToggleLibrary');
@@ -7330,7 +7331,7 @@ function renderFlashcards() {
   if(newLimit) newLimit.onchange = e => { state.flashcardSettings.newLimit = Math.max(0,n(e.target.value)); persist(); };
   const reviewLimit = document.getElementById('flashcardReviewLimit');
   if(reviewLimit) reviewLimit.onchange = e => { state.flashcardSettings.reviewLimit = Math.max(0,n(e.target.value)); persist(); };
-  document.querySelectorAll('[data-fc-block]').forEach(button => button.onclick = e => { ui.flashcardBlock=e.currentTarget.dataset.fcBlock; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); });
+  document.querySelectorAll('[data-fc-block]').forEach(button => button.onclick = e => { ui.flashcardBlock=e.currentTarget.dataset.fcBlock; ui.flashcardSubject=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); });
   document.querySelectorAll('[data-fc-subject]').forEach(button => button.onclick = e => { ui.flashcardSubject=e.currentTarget.dataset.fcSubject; ui.flashcardFilter='Todos'; ui.flashcardIndex=0; ui.flashcardSessionDone=false; renderFlashcards(); });
   const newCard = document.getElementById('newFlashcardBtn');
   if(newCard) newCard.onclick = () => { ui.flashcardEditorOpen=true; ui.flashcardNewCardType='basic'; renderFlashcards(); };

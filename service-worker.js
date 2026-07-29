@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v136';
+const CACHE_NAME = 'soqueromed-shell-v137';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -11,7 +11,8 @@ const APP_SHELL = [
   './assets/radiografia.js?v=20260719-4',
   './assets/semiologia-aulas.js?v=20260720-2',
   './assets/semiologia.js?v=20260720-7',
-  './assets/planner.js?v=20260728-1',
+  './assets/caso-do-dia.js?v=20260729-2',
+  './assets/planner.js?v=20260728-2',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
@@ -166,6 +167,7 @@ self.addEventListener('fetch', event => {
 
   const networkFirst = url.pathname.includes('/question_bank/')
     || url.pathname.endsWith('/assets/planner.js')
+    || url.pathname.endsWith('/assets/caso-do-dia.js')
     || url.pathname.endsWith('/assets/ecg-simulator.js')
     || url.pathname.endsWith('/assets/radiografia.js')
     || url.pathname.endsWith('/assets/semiologia.js')
