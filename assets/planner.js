@@ -9496,7 +9496,12 @@ function answerQuestion(question, selected, timedOut=false) {
     nextReview: !correct
       ? nextErrorReviewDate(today, 1)
       : (previous.nextReview && previous.nextReview <= today ? nextErrorReviewDate(today, errorReviewInterval(n(previous.reviewCount) + 1)) : previous.nextReview || ''),
-    reviewCount: n(previous.reviewCount) + (previous.nextReview && previous.nextReview <= today ? 1 : 0),
+    // Errar uma revisão pendente ainda somava +1 aqui, então duas questões
+    // erradas seguidas (uma revisão que falhou, depois um acerto) já entravam
+    // no degrau de 21 dias em vez do primeiro degrau de 7 — o oposto do que
+    // uma questão problemática precisa. Errar agora zera a caixa (Leitner),
+    // igual o reset de nextReview logo acima já faz.
+    reviewCount: !correct ? 0 : n(previous.reviewCount) + (previous.nextReview && previous.nextReview <= today ? 1 : 0),
     lastReviewAt: previous.nextReview && previous.nextReview <= today ? new Date().toISOString() : previous.lastReviewAt || ''
   });
   awardQuestionAnswerXP(question,state.questionProgress[question.id]);
