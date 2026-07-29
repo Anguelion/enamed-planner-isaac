@@ -8670,6 +8670,14 @@ function bindQuestionActions(questions, question) {
     // depois de marcar a alternativa.
     clearHighlightGestureState();
     const selected=e.currentTarget.dataset.answer;
+    // Mesma lógica do simulado: uma alternativa riscada foi descartada pelo
+    // aluno, então um clique nela não deve virar rascunho de resposta — ele
+    // precisa desmarcar o risco (botão ×) primeiro.
+    const eliminatedNow = Array.isArray(state.questionProgress[question.id]?.eliminated) ? state.questionProgress[question.id].eliminated : [];
+    if(eliminatedNow.includes(selected)) {
+      showStudyToast('Esta alternativa está riscada. Clique no × para desfazer antes de escolhê-la.');
+      return;
+    }
     ui.draftAnswers[question.id] = selected;
     const current=state.questionProgress[question.id] || {};
     setQuestionProgress(question.id,{ draftAnswer:selected });
@@ -9084,6 +9092,12 @@ function handleQuestionKeyboard(event) {
   if(/^[1-5]$/.test(event.key)) {
     const letter = String.fromCharCode(64 + Number(event.key));
     if(!Object.prototype.hasOwnProperty.call(question.options || {}, letter)) return;
+    const eliminatedNow = Array.isArray(state.questionProgress[question.id]?.eliminated) ? state.questionProgress[question.id].eliminated : [];
+    if(eliminatedNow.includes(letter)) {
+      event.preventDefault();
+      showStudyToast('Esta alternativa está riscada. Aperte J sobre ela ou clique no × para desfazer antes de escolhê-la.');
+      return;
+    }
     event.preventDefault();
     ui.draftAnswers[question.id] = letter;
     const current = state.questionProgress[question.id] || {};
@@ -9179,6 +9193,15 @@ function handleSimuladoKeyboard(event) {
   if(/^[1-5]$/.test(event.key)) {
     const letter = String.fromCharCode(64 + Number(event.key));
     if(!Object.prototype.hasOwnProperty.call(question.options || {}, letter)) return;
+    // Mesma trava do clique: tecla numérica não deve marcar uma alternativa
+    // já riscada (o atalho de teclado ficava fora da correção feita para o
+    // mouse, então dava pra contornar a trava simplesmente digitando 1-5).
+    const eliminatedNow = Array.isArray(run.eliminated?.[question.id]) ? run.eliminated[question.id] : [];
+    if(eliminatedNow.includes(letter)) {
+      event.preventDefault();
+      showStudyToast('Esta alternativa está riscada. Aperte J sobre ela ou clique no × para desfazer antes de escolhê-la.');
+      return;
+    }
     event.preventDefault();
     run.answers[question.id] = letter;
     saveStateOnly();
