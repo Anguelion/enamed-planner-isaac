@@ -696,12 +696,14 @@ function scheduleForQuestion(question) {
     || null;
 }
 function backfillQuestionScheduleLinks() {
-  const version = 'question-schedule-linking-v2';
+  const version = 'question-schedule-linking-v3';
   if(state.questionScheduleLinkVersion === version) return 0;
   let linked = 0;
   questionBank.forEach(question => {
     const progress = state.questionProgress?.[question.id];
-    if(!progress?.answeredAt || progress.scheduleId) return;
+    if(!progress?.answeredAt) return;
+    const existing = progress.scheduleId && state.schedule.find(item => item.id === progress.scheduleId);
+    if(existing && questionMatchesSchedule(question, existing)) return;
     const lesson = scheduleForQuestion(question);
     if(!lesson) return;
     progress.scheduleId = lesson.id;
