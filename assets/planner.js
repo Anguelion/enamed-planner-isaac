@@ -1094,6 +1094,11 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   });
 
   merged.flashcardLibrary = mergeRecordsById(remote.flashcardLibrary, local.flashcardLibrary, preferLocal);
+  merged.videoFlashcards = {};
+  new Set([...Object.keys(remote.videoFlashcards || {}), ...Object.keys(local.videoFlashcards || {})]).forEach(id => {
+    const cards = mergeRecordsById(remote.videoFlashcards?.[id], local.videoFlashcards?.[id], preferLocal);
+    if(cards.length) merged.videoFlashcards[id] = cards;
+  });
   merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions, preferLocal);
   merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
   merged.gamification = mergeGamificationState(remote.gamification, local.gamification);
