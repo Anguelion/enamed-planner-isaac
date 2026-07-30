@@ -1079,7 +1079,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   // atividade sincronizável. Manter a estrutura local impede que um cronograma
   // remoto corrompido (por exemplo, todas as aulas na mesma data) contamine
   // todos os aparelhos; da nuvem entram apenas os campos de progresso.
-  const remoteSchedule = new Map((remote.schedule || []).map(item => [item.id, item]));
+  const remoteSchedule = new Map((remote.schedule || []).map(item => [scheduleIdRemap.get(item.id) || item.id, item]));
   const scheduleBase = Array.isArray(local.schedule) && local.schedule.length ? local.schedule : (remote.schedule || []);
   merged.schedule = scheduleBase.map(item => {
     const remoteItem = remoteSchedule.get(item.id);
