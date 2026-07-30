@@ -588,6 +588,27 @@ const TOPIC_ALIASES = {
   'doencas relacionadas ao trabalho': 'principais doencas e agravos relacionados ao trabalho'
 };
 function canonicalTopic(value='') { const normalized = normalizedTopic(value); return TOPIC_ALIASES[normalized] || normalized; }
+function repairUniformScheduleDates() {
+  const schedule = Array.isArray(state.schedule) ? state.schedule : [];
+  const dates = [...new Set(schedule.map(item => item.date).filter(Boolean))];
+  if(schedule.length < 20 || dates.length !== 1 || state.scheduleRepairVersion === 'uniform-date-v1') return false;
+  const seedSchedule = Array.isArray(seed.schedule) ? seed.schedule : [];
+  const byOrder = new Map(seedSchedule.map(item => [`${n(item.block)}:${n(item.lessonOrder)}`, item]));
+  const byTopic = new Map(seedSchedule.map(item => [`${n(item.block)}:${canonicalTopic(item.topic)}`, item]));
+  const repaired = schedule.map(item => {
+    const source = byOrder.get(`${n(item.block)}:${n(item.lessonOrder)}`) || byTopic.get(`${n(item.block)}:${canonicalTopic(item.topic)}`);
+    if(!source?.date) return item;
+    return { ...item, originalDate: source.date, date: source.date, day: weekdayName(source.date), catchUp: false };
+  });
+  const matched = repaired.filter((item,index) => item.date !== schedule[index].date).length;
+  if(matched < Math.floor(schedule.length * 0.8)) return false;
+  state.schedule = repaired;
+  state.schedulePlanVersion = '';
+  ensureRestartFromBlockTen();
+  state.scheduleRepairVersion = 'uniform-date-v1';
+  writeLocalState();
+  return true;
+}
 const VIDEO_SCHEDULE_OVERRIDES = {
   '8:cofbasics lesoes elementares pediatria': { block:9, topic:'CofBasics - Lesões Elementares (Pediatria)' },
   '9:dor pelvica': { block:12, topic:'Dor Pélvica' },
@@ -6179,8 +6200,9 @@ async function loadOfficialSchedule() {
     if(!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
     officialSchedule = Array.isArray(payload.items) ? payload.items : [];
+    const repaired = repairUniformScheduleDates();
     const changed = applyOfficialSchedule();
-    if(changed) render();
+    if(repaired || changed) render();
   } catch(error) {
     console.warn('Cronograma oficial do Medplanner indisponível:', error);
   }
