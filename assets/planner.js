@@ -1467,9 +1467,12 @@ function restorePlannerBackupFile(file) {
     try {
       const imported = JSON.parse(String(reader.result || ''));
       if(!imported || typeof imported !== 'object' || !Array.isArray(imported.schedule) || !imported.schedule.length) throw new Error('Backup sem cronograma');
-      if(!confirm('Restaurar este backup neste aparelho? O estado atual será salvo em uma cópia automática antes da troca.')) return;
+      if(!confirm('Mesclar este backup neste aparelho? O estado atual será salvo em uma cópia automática; datas do cronograma e progresso serão combinados.')) return;
       createSafetyLocalBackup('antes de restaurar arquivo do PC');
-      state = imported;
+      // O backup pode ter as datas antigas e conter progresso que não está mais
+      // no aparelho. Mantemos a estrutura local corrigida e unimos os registros
+      // de atividade dos dois estados, evitando apagar questões, tempo ou XP.
+      state = mergePlannerActivityState(imported, state, true);
       normalizeOfficialScheduleNames();
       ensureRestartFromBlockTen();
       ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
