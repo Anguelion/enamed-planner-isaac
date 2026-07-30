@@ -926,10 +926,57 @@ function showStudyToast(message) {
   document.body.append(toast);
   setTimeout(() => toast.remove(), 6500);
 }
+function scheduleIdentityKey(item) {
+  if(!item || typeof item !== 'object') return '';
+  const topic = canonicalTopic(item.topic || item.title || '');
+  const area = canonicalTopic(item.area || '');
+  const block = String(item.block ?? '').trim();
+  const order = String(item.lessonOrder ?? item.row ?? '').trim();
+  return `${block}|${order}|${topic}|${area}`;
+}
+function buildScheduleIdRemap(remoteSchedule, localSchedule) {
+  const remap = new Map();
+  const localItems = Array.isArray(localSchedule) ? localSchedule : [];
+  const byExact = new Map(localItems.map(item => [scheduleIdentityKey(item), item]).filter(([key,item]) => key && item?.id));
+  const byBlockTopic = new Map();
+  const byTopicArea = new Map();
+  localItems.forEach(item => {
+    if(!item?.id) return;
+    const blockTopic = `${String(item.block ?? '').trim()}|${canonicalTopic(item.topic || '')}`;
+    const topicArea = `${canonicalTopic(item.topic || '')}|${canonicalTopic(item.area || '')}`;
+    if(blockTopic !== '|') byBlockTopic.set(blockTopic, item);
+    if(topicArea !== '|') byTopicArea.set(topicArea, item);
+  });
+  (Array.isArray(remoteSchedule) ? remoteSchedule : []).forEach(remoteItem => {
+    if(!remoteItem?.id) return;
+    let match = byExact.get(scheduleIdentityKey(remoteItem));
+    if(!match) match = byBlockTopic.get(`${String(remoteItem.block ?? '').trim()}|${canonicalTopic(remoteItem.topic || '')}`);
+    if(!match) match = byTopicArea.get(`${canonicalTopic(remoteItem.topic || '')}|${canonicalTopic(remoteItem.area || '')}`);
+    if(match?.id) remap.set(remoteItem.id, match.id);
+  });
+  return remap;
+}
+function remapScheduleRecord(record, remap) {
+  if(!record || typeof record !== 'object' || !remap?.size) return record;
+  const scheduleId = record.scheduleId || record.lessonId;
+  const mapped = scheduleId && remap.get(scheduleId);
+  if(!mapped) return record;
+  const clone = structuredClone(record);
+  if(clone.scheduleId) clone.scheduleId = mapped;
+  if(clone.lessonId) clone.lessonId = mapped;
+  return clone;
+}
 function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   const remote = remoteState && typeof remoteState === 'object' ? structuredClone(remoteState) : {};
   const local = localState && typeof localState === 'object' ? localState : {};
   const merged = preferLocal ? { ...remote, ...local } : { ...local, ...remote };
+  const scheduleIdRemap = buildScheduleIdRemap(remote.schedule, local.schedule);
+  if(scheduleIdRemap.size) {
+    Object.keys(remote.questionProgress || {}).forEach(id => { remote.questionProgress[id] = remapScheduleRecord(remote.questionProgress[id], scheduleIdRemap); });
+    remote.studySessions = (remote.studySessions || []).map(record => remapScheduleRecord(record, scheduleIdRemap));
+    remote.flashcardLibrary = (remote.flashcardLibrary || []).map(record => remapScheduleRecord(record, scheduleIdRemap));
+    remote.flashcardSystem = { ...(remote.flashcardSystem || {}), reviewLogs: (remote.flashcardSystem?.reviewLogs || []).map(record => remapScheduleRecord(record, scheduleIdRemap)) };
+  }
 
   const remoteProgress = remote.questionProgress || {};
   const localProgress = local.questionProgress || {};
