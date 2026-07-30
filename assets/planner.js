@@ -210,7 +210,10 @@ function dropOldestLocalBackups() {
     try { localStorage.removeItem(LOCAL_BACKUPS_KEY); return true; } catch(nested) { return false; }
   }
 }
-let allowLargeProgressDrop = false;
+// `var` de propósito: writeLocalState roda no bootstrap antes desta linha ser
+// avaliada; com `let` a leitura cai na zona morta temporal e derruba o app
+// inteiro (foi exatamente isso que travou a tela em alguns aparelhos).
+var allowLargeProgressDrop = false;
 function progressFingerprint(s) {
   const sumLens = obj => Object.values(obj || {}).reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
   return {
