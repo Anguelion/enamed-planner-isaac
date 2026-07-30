@@ -30,7 +30,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Às vezes um remédio causa um efeito ruim, e o médico confunde esse efeito com uma doença nova e dá outro remédio para tratá-lo — isso se chama prescrição em cascata, e pode machucar ainda mais o idoso."
     },
     {
       "id": "b09-diverticulite-q01",
@@ -61,7 +62,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "O intestino grosso pode ter uns \"bolsinhos\" chamados divertículos que inflamam de vez em quando. A primeira vez que isso acontece costuma ser mais perigosa e tem mais chance de furar do que as vezes seguintes."
     },
     {
       "id": "b09-dip-q01",
@@ -91,7 +93,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Quando aparece um cisto no ovário com aparência esquisita, meio embaçada, os médicos pedem uma ressonância magnética para ver se é endometriose, uma doença em que um tecido que devia ficar só dentro do útero aparece em outros lugares."
     },
     {
       "id": "b09-corrimentos-q01",
@@ -122,7 +125,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Um cheiro forte e ruim na secreção, junto com células cobertas de bactérias vistas no microscópio, mostra vaginose bacteriana — um desequilíbrio das bactérias ali, tratado com um remédio chamado metronidazol."
     },
     {
       "id": "b09-diverticulite-q02",
@@ -156,7 +160,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Mesmo doendo bastante, se o exame de imagem não mostra nenhum furo ou bolsa de pus, o médico trata só com remédio e repouso, sem precisar operar."
     },
     {
       "id": "b09-dip-q02",
@@ -189,7 +194,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Febre, dor forte na barriga e uma bolsa de pus perto do ovário, vista no exame, mostram uma infecção grave que precisa de internação e remédio para infecção direto na veia."
     },
     {
       "id": "b09-dermatoses-partes-moles-q01",
@@ -220,7 +226,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Quando a infecção do nariz entupido passa para trás do olho e ele fica saltado e dói para se mexer, é um sinal grave que exige internação e remédio na veia, porque pode ameaçar a visão."
     },
     {
       "id": "b09-geriatria-aga-q01",
@@ -250,7 +257,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Quando uma pessoa idosa está sempre cansada, emagrece sem querer, anda mais devagar e não consegue nem caminhar um quarteirão, isso mostra que o corpo dela está ficando fragilizado — um alerta importante para cuidar mais dela."
     },
     {
       "id": "b09-dip-q03",
@@ -280,7 +288,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Numa infecção da região pélvica que já está formando uma bolsinha perto do ovário, além dos remédios para as bactérias mais comuns, é preciso acrescentar um remédio que combate as bactérias que vivem sem oxigênio."
     },
     {
       "id": "b09-corrimentos-q02",
@@ -313,7 +322,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Uma secreção esverdeada, com bolhinhas e cheiro forte, junto com a vagina toda vermelha e irritada, indica uma infecção causada por um bichinho chamado Trichomonas."
     },
     {
       "id": "b09-dermatoses-partes-moles-q02",
@@ -346,7 +356,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Uma infecção na pálpebra com uma casquinha de pus, mas sem afetar o movimento do olho, é tratada com antibiótico tomado em casa, porque ainda não é grave o suficiente para precisar de internação."
     },
     {
       "id": "b09-corrimentos-q03",
@@ -377,7 +388,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Às vezes existem bactérias \"boas\" demais na vagina, o que deixa o ambiente ácido demais e machuca as células — isso se chama vaginose citolítica, bem diferente de quando faltam essas bactérias boas."
     },
     {
       "id": "b09-dermatoses-partes-moles-q03",
@@ -407,7 +419,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Um bebê bem pequenininho com coceira forte à noite e bolinhas espalhadas pelo corpo, inclusive nas mãozinhas e pezinhos, tem sarna. Como ele é muito novo, usa-se uma pomada de enxofre, mais segura que os remédios normais para essa idade."
     },
     {
       "id": "b09-dip-q04",
@@ -437,7 +450,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Febre alta, dor muito forte na barriga e pus saindo do colo do útero mostram uma infecção pélvica grave, que precisa de internação no hospital para tomar antibiótico direto na veia."
     },
     {
       "id": "b09-ulceras-genitais-q01",
@@ -468,7 +482,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Uma ferida dolorida na região genital, com pus, e um gânglio inchado na virilha que também solta pus por um único buraco, é sinal de uma infecção chamada cancro mole."
     },
     {
       "id": "b09-diverticulite-q03",
@@ -498,7 +513,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Quando alguém com histórico de \"bolsinhos\" inflamados no intestino sente dor e febre de novo, o exame que melhor mostra o problema é a tomografia com contraste; fazer uma colonoscopia nessa hora é perigoso porque pode furar o intestino inflamado."
     },
     {
       "id": "b09-dermatite-atopica-q01",
@@ -529,7 +545,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Alguns cremes para pele seca formam uma capinha que impede a água de evaporar da pele e protege contra coisas que irritam de fora — são os chamados hidratantes oclusivos."
     },
     {
       "id": "b09-corrimentos-q04",
@@ -560,7 +577,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Como essa infecção passa de uma pessoa para outra durante o sexo, o remédio precisa ser tomado pelos dois parceiros ao mesmo tempo, mesmo que um deles não sinta nada."
     },
     {
       "id": "b09-dermatoses-partes-moles-q04",
@@ -592,7 +610,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Uma mancha vermelha numa dobra do pescoço do bebê, com outras manchinhas pequenas ao redor como se fossem satélites, é sinal de um fungo que gosta de lugares quentes e úmidos como as dobrinhas da pele."
     },
     {
       "id": "b09-dermatoses-partes-moles-q05",
@@ -625,7 +644,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Quando a infecção ao redor do olho é grave, atrás da \"parede\" que protege o olho, é sempre necessário fazer uma tomografia para ver até onde a infecção chegou."
     },
     {
       "id": "b09-diverticulite-q04",
@@ -657,7 +677,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Depois de uma cirurgia no apêndice, se a pessoa fica com febre alta e dor embaixo das costelas do lado direito, pode ter se formado uma bolsa de pus no fígado, e o tratamento é drenar esse pus e usar antibiótico na veia."
     },
     {
       "id": "b09-geriatria-aga-q02",
@@ -690,7 +711,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Uma idosa com a pressão baixa e tonturas corre um risco grande de cair e se machucar feio, então essa é a maior preocupação nesse momento, mais do que outras doenças crônicas."
     },
     {
       "id": "b09-sindromes-geriatricas-q03",
@@ -720,7 +742,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "O maior sinal de que um idoso pode cair de novo é ele já ter caído no ano passado — isso é mais importante do que outros fatores para prever novas quedas."
     },
     {
       "id": "b09-corrimentos-q05",
@@ -754,7 +777,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Na vaginose bacteriana o teste do cheiro dá positivo, o ambiente da vagina fica mais alcalino (não ácido), certas bactérias fazem parte da flora normal em pequena quantidade, e não é preciso tratar o parceiro."
     },
     {
       "id": "b09-ulceras-genitais-q02",
@@ -786,7 +810,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Quando não dá para fazer exames de laboratório, o médico decide o tratamento de uma ferida genital observando se existem bolhinhas: se tiver, trata-se como herpes; se não tiver, trata-se como sífilis e cancro mole."
     },
     {
       "id": "b09-geriatria-aga-q03",
@@ -816,7 +841,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Cuidar bem da saúde ao longo da vida toda, desde antes de nascer até a velhice, é a ideia por trás do \"envelhecimento ativo\" — não é algo que só começa aos 60 anos."
     },
     {
       "id": "b09-geriatria-aga-q04",
@@ -846,7 +872,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Quando uma pessoa idosa começa a esquecer as coisas, mas os exames de tireoide e vitamina B12 estão normais e ela não parece triste, o esquecimento pode estar mesmo relacionado ao início de um quadro de demência."
     },
     {
       "id": "b09-corrimentos-q06",
@@ -876,7 +903,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Uma menina pequena com corrimento claro, sem cheiro forte e sem sinais de machucado, geralmente só precisa de cuidados de higiene simples, como roupas de algodão e lavagem correta, sem necessidade de investigar abuso."
     },
     {
       "id": "b09-sindromes-geriatricas-q04",
@@ -909,7 +937,8 @@
       "tagSource": "Tags 9.txt",
       "answerAudit": "official-source",
       "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Só dar conselhos sem nenhuma ação prática não ajuda muito a evitar quedas em idosos; o que realmente funciona é fazer exercício, ajustar remédios perigosos, melhorar a casa e tratar a catarata."
     },
     {
       "id": "b09-sindromes-geriatricas-q05",
@@ -943,7 +972,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Idosos que comem pouca proteína têm mais chance de perder força e dificuldade para andar, porque o corpo deles precisa de mais proteína do que o de um adulto jovem para manter os músculos fortes."
     },
     {
       "id": "b09-dermatite-atopica-q02",
@@ -976,7 +1006,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Coceira forte, pele com bolinhas e casquinhas no rosto, poupando o nariz e a boca, e nas dobras dos braços, é dermatite atópica, uma alergia de pele cujo primeiro cuidado é hidratar bastante a pele."
     },
     {
       "id": "b09-dermatite-atopica-q03",
@@ -1006,7 +1037,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Quando a pele da dermatite atópica está bem inflamada, com bolhinhas e líquido saindo, o tratamento é usar um creme de corticoide junto com compressas molhadas, que ajudam a secar e acalmar a pele."
     },
     {
       "id": "b09-dermatite-atopica-q04",
@@ -1036,7 +1068,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Em crianças mais velhas, a dermatite atópica costuma aparecer nas dobras do corpo, como cotovelo, joelho, pescoço e pernas, diferente dos bebês, que têm mais lesões no rosto e na parte de fora dos braços e pernas."
     },
     {
       "id": "b09-semanais-q34",
@@ -1066,7 +1099,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Feridas na genital causadas por infecção sexual geralmente são sífilis, cancro mole, donovanose, herpes ou linfogranuloma — já a gonorreia e a clamídia costumam causar corrimento, não feridas."
     },
     {
       "id": "b09-geriatria-aga-q05",
@@ -1101,7 +1135,8 @@
       "tagSource": "Tags 9.txt",
       "answerAudit": "official-source",
       "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Para saber se um idoso está ficando fragilizado, os médicos olham coisas como perder peso sem querer, ficar mais fraco nas mãos e andar mais devagar — e não ganho de peso, que seria o contrário."
     },
     {
       "id": "b09-corrimentos-q07",
@@ -1131,7 +1166,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Corrimento branco com cheiro meio azedo, sem bolhas, com o ambiente vaginal muito ácido e cheio de bactérias boas, é a vaginose citolítica — não uma infecção, mas um desequilíbrio dessas bactérias que normalmente protegem."
     },
     {
       "id": "b09-corrimentos-q08",
@@ -1161,7 +1197,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Cheiro forte de peixe junto com o colo do útero sangrando fácil e secreção amarelo-esverdeada mostram que a pessoa pode ter duas coisas ao mesmo tempo: vaginose bacteriana e uma inflamação do colo causada por Trichomonas."
     },
     {
       "id": "b09-dermatoses-partes-moles-q06",
@@ -1192,7 +1229,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Uma ferida que começou como uma bolha de pus e foi ficando mais funda, com uma casca grossa e escura bem grudada, é chamada de ectima — uma infecção bacteriana que vai mais fundo na pele do que o impetigo comum."
     },
     {
       "id": "b09-ulceras-genitais-q04",
@@ -1222,7 +1260,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "O cancro mole é causado por uma bactéria chamada Haemophilus ducreyi — diferente da bactéria que causa a sífilis."
     },
     {
       "id": "b09-dip-q05",
@@ -1255,7 +1294,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Um cisto grande no ovário que não mostra nenhum sangue circulando nele no exame de ultrassom, junto com dor forte e repentina, indica que o ovário torceu sobre si mesmo, cortando sua própria circulação."
     },
     {
       "id": "b09-geriatria-aga-q06",
@@ -1285,7 +1325,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "O IVCF-20 é um questionário rápido usado para saber se um idoso está mais frágil, e uma das perguntas é justamente quantas vezes ele caiu no último ano — ele não pergunta sobre dinheiro ou renda."
     },
     {
       "id": "b09-dermatite-atopica-q05",
@@ -1318,7 +1359,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Quando a pele de uma criança com dermatite atópica piora de repente, cheia de bolhinhas com um furinho no meio, pode ser que o vírus do herpes tenha infectado a pele machucada — o tratamento é um remédio antiviral, nunca corticoide, que pioraria tudo."
     },
     {
       "id": "b09-corrimentos-q09",
@@ -1348,7 +1390,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Numa grávida, corrimento amarelado, com bolhas e cheiro forte, que piora depois do sexo, é sinal de infecção por Trichomonas, tratada com um remédio chamado metronidazol, seguro nessa fase da gravidez."
     },
     {
       "id": "b09-corrimentos-q10",
@@ -1378,7 +1421,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Corrimento amarelado com cheiro forte e a pele ao redor da vagina irritada, numa menina pequena, geralmente é uma inflamação simples causada por falta de higiene adequada, tratada com cuidados de limpeza e, se preciso, antibiótico."
     },
     {
       "id": "b09-corrimentos-q11",
@@ -1408,7 +1452,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Quando a infecção por Candida volta muitas vezes no ano e é mais grave, o exame de PCR ajuda a descobrir exatamente qual tipo do fungo está causando o problema, para escolher o remédio certo."
     },
     {
       "id": "b09-dermatoses-partes-moles-q07",
@@ -1438,7 +1483,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Pálpebra inchada e vermelha, mas o olho se mexendo bem e sem sair do lugar, é celulite pré-septal — uma infecção mais superficial e menos perigosa que a que fica atrás do olho."
     },
     {
       "id": "b09-diverticulite-q05",
@@ -1472,7 +1518,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "O primeiro ataque de diverticulite tende a ser o mais grave; nem toda diverticulite precisa de cirurgia, colonoscopia logo depois ou antibiótico obrigatório."
     },
     {
       "id": "b09-dip-q06",
@@ -1502,7 +1549,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Um cisto no ovário com um anelzinho de sangue circulando ao redor dele, visto no ultrassom, geralmente é só um cisto que sangrou um pouquinho sozinho, e dá para tratar só com repouso e remédio para dor, sem cirurgia."
     },
     {
       "id": "b09-dermatoses-partes-moles-q08",
@@ -1533,7 +1581,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Depois de ter catapora, se a criança fica com o pescoço muito inchado, roxo e entra em choque mesmo recebendo soro, pode ser uma infecção grave chamada síndrome do choque tóxico, que precisa de um antibiótico especial e remédio para sustentar a pressão."
     },
     {
       "id": "b09-semanais-q50",
@@ -1564,7 +1613,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Quando o intestino precisa ser cortado numa emergência e não dá para juntar as duas pontas na hora, o cirurgião fecha uma ponta e traz a outra para fora da barriga — essa operação se chama cirurgia de Hartmann."
     },
     {
       "id": "b09-dip-q07",
@@ -1595,7 +1645,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Um exame de ultrassom mostrando as trompas como uma \"roda dentada\", junto com febre, indica uma infecção pélvica que precisa de internação e antibióticos na veia até a febre passar, podendo depois trocar para remédio em comprimido."
     },
     {
       "id": "b09-corrimentos-q12",
@@ -1626,7 +1677,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "O exame com uma gotinha de soda cáustica ajuda a ver o fungo Candida; a cultura não é feita de rotina, e para evitar que a candidíase volte sempre, o tratamento preventivo dura 6 meses, não 2."
     },
     {
       "id": "b09-semanais-q53",
@@ -1657,7 +1709,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Na fase secundária da sífilis, quando a bactéria já se espalhou pelo corpo, pode aparecer uma lesão bem contagiosa chamada condiloma plano, parecida com uma verruga achatada."
     },
     {
       "id": "b09-dermatoses-partes-moles-q09",
@@ -1687,7 +1740,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Febre, olho inchado, doendo para mexer e meio saltado para fora — isso é celulite orbitária, uma infecção que passou para trás do olho e é bem mais grave que a infecção só na pálpebra."
     },
     {
       "id": "b09-dermatoses-partes-moles-q10",
@@ -1717,7 +1771,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "A pitiríase versicolor é causada por um fungo que já mora na nossa pele e só cresce demais com calor e suor — como não passa de pessoa para pessoa com facilidade, quem tem pode continuar treinando esportes normalmente."
     },
     {
       "id": "b09-ulceras-genitais-q06",
@@ -1747,7 +1802,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Se uma ferida genital não cicatriza depois de 4 semanas, os médicos pedem uma biópsia, pegar um pedacinho para analisar, porque aí pode ser algo além de uma simples infecção."
     },
     {
       "id": "b09-sindromes-geriatricas-q06",
@@ -1777,7 +1833,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Com o passar dos anos, os pulmões perdem elasticidade e algumas vias aéreas pequenas fecham antes da hora, fazendo com que uma parte do ar respirado não seja bem aproveitada."
     },
     {
       "id": "b09-diverticulite-q07",
@@ -1807,7 +1864,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Uma bolsa de pus grande no fígado quase nunca melhora só com antibiótico — geralmente é preciso também drenar esse pus para o tratamento funcionar bem."
     },
     {
       "id": "b09-diverticulite-q08",
@@ -1837,7 +1895,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Se a diverticulite é leve, a pessoa não tem febre nem outras doenças e o exame não mostra complicação, dá para tratar em casa, às vezes até sem precisar de antibiótico."
     },
     {
       "id": "b09-sindromes-geriatricas-q07",
@@ -1867,7 +1926,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Mesmo quem já teve catapora quando criança pode, na velhice, sofrer com a reativação desse mesmo vírus, causando cobreiro — por isso existe uma vacina específica para prevenir isso nos idosos."
     },
     {
       "id": "b09-dip-q08",
@@ -1897,7 +1957,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Febre alta, dor forte na barriga, sangramento depois do sexo e muita dor quando o médico mexe no colo do útero formam o quadro clássico de uma infecção da região pélvica."
     },
     {
       "id": "b09-dermatite-atopica-q06",
@@ -1927,7 +1988,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Bebê com coceira forte, lesões no rosto que poupam a área ao redor do nariz e da boca, pele grossa nas dobras dos braços, e pais com alergias respiratórias — tudo isso junto aponta para dermatite atópica."
     },
     {
       "id": "b09-diverticulite-q09",
@@ -1957,7 +2019,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Dor, febre baixinha e uma \"bolota\" que dá para sentir apertando a barriga sugerem uma diverticulite com uma bolsa de infecção formada — e o exame que confirma isso é a tomografia com contraste."
     },
     {
       "id": "b09-dermatoses-partes-moles-q11",
@@ -1988,7 +2051,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Olho saltado, dificuldade para mexer o olho e febre alta em uma criança são sinais graves de infecção atrás do olho, que exige internação, antibiótico na veia e tomografia para ver o tamanho do problema."
     },
     {
       "id": "b09-geriatria-aga-q07",
@@ -2019,7 +2083,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Uma idosa muito cansada, que perdeu peso sem querer e anda bem devagar tem três sinais que, juntos, mostram que ela está com síndrome da fragilidade."
     },
     {
       "id": "b09-dermatoses-partes-moles-q12",
@@ -2050,7 +2115,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Bebê pequeno com coceira e bolinhas espalhadas pelo corpo, inclusive nas mãos e pés, e outros parentes com o mesmo problema, tem sarna — e mesmo sendo bem novo, pode usar um creme especial para tratar."
     },
     {
       "id": "b09-ulceras-genitais-q07",
@@ -2080,7 +2146,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Depois que o teste rápido para sífilis dá positivo, o próximo passo é pedir um exame de sangue chamado VDRL, que ajuda a confirmar a doença e a acompanhar se o tratamento está funcionando."
     },
     {
       "id": "b09-corrimentos-q13",
@@ -2111,7 +2178,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Uma massa parecida com \"cacho de uva\" saindo da vagina de uma menina pequena, com sangramento, é sinal de um tumor raro chamado sarcoma botrioide, e precisa ser investigado rapidamente."
     },
     {
       "id": "b09-ulceras-genitais-q08",
@@ -2142,7 +2210,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Várias feridas pequenas, dolorosas e agrupadas na região genital, que apareceram depois de uma infecção na garganta, são sinal de herpes genital, tratado com um remédio antiviral."
     },
     {
       "id": "b09-semanais-q70",
@@ -2173,7 +2242,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Quando uma larva de verme de cachorro ou gato entra na pele e faz um caminho vermelho e coçando embaixo dela, chamado bicho geográfico, o tratamento costuma ser um creme, e só em casos espalhados usa-se remédio para tomar."
     },
     {
       "id": "b09-geriatria-aga-q08",
@@ -2203,7 +2273,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Para saber em que fase está uma demência mais avançada, com perda de memória grave e dependência para as tarefas do dia a dia, os médicos usam escalas específicas que medem o nível de funcionalidade e a gravidade da demência."
     },
     {
       "id": "b09-geriatria-aga-q09",
@@ -2234,7 +2305,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Quando um idoso emagrece sem motivo aparente, as causas mais comuns no consultório costumam ser tristeza profunda, problemas leves do estômago ou intestino, ou câncer."
     },
     {
       "id": "b09-corrimentos-q14",
@@ -2264,7 +2336,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Corrimento amarelado, ardência, colo do útero vermelho e o ambiente vaginal menos ácido do que o normal apontam para uma infecção por Trichomonas."
     },
     {
       "id": "b09-corrimentos-q15",
@@ -2294,7 +2367,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Corrimento esverdeado com bolhas, colo do útero parecendo um morango cheio de pontinhos vermelhos e ambiente vaginal bem alcalino são sinais bem característicos da infecção por Trichomonas, ainda mais importante de tratar numa grávida."
     },
     {
       "id": "b09-diverticulite-q10",
@@ -2325,7 +2399,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Uma bolsa de pus de 6 cm ao lado do intestino inflamado é grande demais para o corpo resolver sozinho com remédio; precisa ser drenada com uma agulha guiada por imagem, além do antibiótico na veia."
     },
     {
       "id": "b09-corrimentos-q16",
@@ -2356,7 +2431,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Ter tido candidíase três vezes no ano ainda não é considerado \"candidíase de repetição\" — isso só vale a partir de 4 ou mais vezes no mesmo ano."
     },
     {
       "id": "b09-ulceras-genitais-q09",
@@ -2387,7 +2463,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Uma ferida dolorida, com bordas irregulares, fundo sujo e um gânglio bem inchado e dolorido na virilha é sinal de cancro mole; como às vezes a sífilis vem junto, o tratamento inclui remédio para as duas doenças."
     },
     {
       "id": "b09-dermatoses-partes-moles-q14",
@@ -2417,7 +2494,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Febre, pele ficando vermelha nas dobras e depois formando bolhas que descamam fácil, como se a pele estivesse escaldando, sem afetar olhos ou boca, é uma infecção da pele causada por uma bactéria que solta uma toxina."
     },
     {
       "id": "b09-corrimentos-q17",
@@ -2448,7 +2526,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Corrimento acinzentado e com bolhas, cheiro forte de peixe que piora com um teste específico, e células cobertas de bactérias no microscópio, é vaginose bacteriana, tratada com metronidazol tomado por via oral."
     },
     {
       "id": "b09-sindromes-geriatricas-q08",
@@ -2479,7 +2558,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Além da vacina anual contra a gripe, o calendário do idoso inclui vacinas contra hepatite B, febre amarela, reforço contra tétano e difteria, e uma vacina especial contra pneumonia."
     },
     {
       "id": "b09-dermatite-atopica-q07",
@@ -2509,7 +2589,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Manchinhas vermelhas que aparecem nos primeiros dias de vida do bebê, sem afetar as mãos e os pés, sem causar nenhum incômodo, costumam ser o eritema tóxico do recém-nascido — algo benigno que passa sozinho."
     },
     {
       "id": "b09-dermatite-atopica-q08",
@@ -2540,7 +2621,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Em bebês, a dermatite atópica costuma aparecer no rosto e na parte de fora dos bracinhos e perninhas, mas quase sempre poupa a área da fralda, que fica protegida pela umidade."
     },
     {
       "id": "b09-dermatite-atopica-q09",
@@ -2571,7 +2653,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Bolinhas da cor da pele com um furinho no meio, espalhadas pelo corpo, são molusco contagioso, causado por um vírus."
     },
     {
       "id": "b09-dermatite-atopica-q10",
@@ -2601,7 +2684,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "As alergias costumam aparecer em uma certa ordem ao longo da infância, e a dermatite atópica, alergia de pele, geralmente é a primeira a surgir, antes da rinite e da asma."
     },
     {
       "id": "b09-dermatite-atopica-q11",
@@ -2632,7 +2716,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Bolinhas com uma pequena bolha no meio, formando linhas e em pares nos bracinhos e perninhas depois de uma ida ao campo, são reações a picadas de inseto, chamadas de estrófulo."
     },
     {
       "id": "b09-dermatite-atopica-q12",
@@ -2662,7 +2747,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Vermelhidão nas nádegas e na virilha do bebê que poupa exatamente as dobrinhas da pele é a clássica assadura por fralda, causada pelo contato prolongado com xixi e cocô."
     },
     {
       "id": "b09-ulceras-genitais-q10",
@@ -2692,7 +2778,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Quando uma ferida genital não tem bolhas e apareceu há menos de 4 semanas, o Ministério da Saúde recomenda tratar ao mesmo tempo para sífilis e cancro mole, mesmo sem ter os exames prontos."
     },
     {
       "id": "b09-dermatite-atopica-q13",
@@ -2723,7 +2810,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Essas bolinhas e pústulas que aparecem na pele do recém-nascido logo depois do parto, poupando mãos e pés, e que desaparecem sozinhas, não têm uma causa infecciosa conhecida — são consideradas uma reação benigna e transitória da pele do bebê."
     },
     {
       "id": "b09-sindromes-geriatricas-q09",
@@ -2754,7 +2842,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Mesmo quem já teve cobreiro deve tomar a vacina contra ele depois de um tempo, de 6 meses a 1 ano após a crise, porque ela ajuda a evitar que a doença volte."
     },
     {
       "id": "b09-dermatoses-partes-moles-q15",
@@ -2786,7 +2875,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Quando a tinha do couro cabeludo é causada por um fungo chamado Microsporum e não melhora com um remédio, o tratamento mais eficaz passa a ser outro remédio chamado griseofulvina."
     },
     {
       "id": "b09-dip-q09",
@@ -2818,7 +2908,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Um cisto grande no ovário sem sinal de câncer, numa mulher jovem, muitas vezes é só um cisto funcional que aparece e some sozinho ao longo do ciclo — por isso o médico pede para repetir o ultrassom depois da menstruação, em vez de operar logo."
     },
     {
       "id": "b09-dermatoses-partes-moles-q16",
@@ -2848,7 +2939,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "O diagnóstico da síndrome do choque tóxico causada por Staphylococcus é feito principalmente pelos sinais que o corpo apresenta — não é obrigatório encontrar a bactéria em exame de cultura para confirmar."
     },
     {
       "id": "b09-dip-q10",
@@ -2879,7 +2971,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Se uma infecção pélvica não melhora depois de alguns dias de antibiótico numa mulher que usa DIU de cobre, a solução é retirar o DIU, porque ele pode estar mantendo a infecção."
     },
     {
       "id": "b09-dermatite-atopica-q14",
@@ -2909,7 +3002,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Quando a dermatite atópica infecciona, ficando com casquinhas amareladas de pus, usar corticoide em comprimido é um erro, porque isso pode piorar a infecção; o certo é hidratar, dar anti-histamínico para a coceira e antibiótico para a bactéria."
     },
     {
       "id": "b09-dermatoses-partes-moles-q17",
@@ -2939,7 +3033,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Em crianças, uma infecção mais séria ao redor do olho costuma exigir antibiótico direto na veia, para garantir que ele chegue rápido e forte o suficiente para combater a infecção."
     },
     {
       "id": "b09-dermatoses-partes-moles-q18",
@@ -2972,7 +3067,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Uma mancha careca no couro cabeludo, com casca grossa, pus, cabelos quebrados e um gânglio inchado atrás da cabeça, é uma reação inflamada forte causada por um fungo — chamada de kerion celsi."
     },
     {
       "id": "b09-dermatoses-partes-moles-q19",
@@ -3005,7 +3101,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Feridas com uma casquinha amarelada, parecendo mel, que apareceram depois de uma picada de inseto e foram se espalhando, são impetigo, uma infecção de pele por bactéria, tratada com higiene e antibiótico."
     },
     {
       "id": "b09-dermatite-atopica-q15",
@@ -3036,7 +3133,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Na dermatite atópica, além de hidratar bastante a pele, é importante usar sabonetes com pH ácido, parecido com o da própria pele, porque isso ajuda a manter a barreira da pele mais forte contra bactérias."
     },
     {
       "id": "b09-dermatoses-partes-moles-q20",
@@ -3066,7 +3164,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "A infestação causada por um ácaro chamado Sarcoptes scabiei, pego pelo contato próximo e prolongado com outra pessoa infectada, se chama escabiose, popularmente conhecida como sarna."
     },
     {
       "id": "b09-dermatite-atopica-q16",
@@ -3096,7 +3195,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Vermelhidão com bolinhas na região da fralda, causada por um fungo, é tratada com um creme antifúngico — nunca com pomadas de corticoide, que pioram a infecção."
     },
     {
       "id": "b09-dermatite-atopica-q17",
@@ -3127,7 +3227,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "O eritema tóxico do recém-nascido, aquelas bolinhas amareladas que somem sozinhas em poucos dias, não é causado por vírus, bactéria ou doença autoimune, sendo entendido como uma reação da pele do bebê se adaptando ao novo ambiente."
     },
     {
       "id": "b09-dermatite-atopica-q18",
@@ -3158,7 +3259,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Crostas amareladas e oleosas no couro cabeludo, sobrancelhas, atrás das orelhas e nas dobras de um bebê, sem muita coceira, são a dermatite seborreica, a chamada crosta láctea, diferente da dermatite atópica que causa mais coceira."
     },
     {
       "id": "b09-diverticulite-q11",
@@ -3188,7 +3290,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Nos casos mais graves de diverticulite com infecção espalhada pela barriga toda, hoje em dia nem sempre é preciso fazer a cirurgia clássica que deixa uma bolsa temporária; em pacientes estáveis, muitas vezes já dá para juntar as pontas do intestino na mesma cirurgia."
     },
     {
       "id": "b09-diverticulite-q12",
@@ -3218,7 +3321,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Uma bolsa de pus bem pequena ao lado do intestino inflamado, sem sinais de infecção grave, geralmente já melhora só com antibiótico, sem precisar de drenagem."
     },
     {
       "id": "b09-dermatite-atopica-q19",
@@ -3250,7 +3354,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Vermelhidão com bolinhas de pus na região da fralda que também pega as dobrinhas da pele é candidíase de fralda, tratada com um creme antifúngico, além da limpeza e do creme de barreira."
     },
     {
       "id": "b09-dermatite-atopica-q20",
@@ -3280,7 +3385,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Enrolar a pele com um curativo úmido depois de passar o creme ajuda o remédio a ser mais absorvido, deixa a pele mais hidratada e impede que a criança se coce — sendo um bom tratamento extra para dermatite atópica grave."
     },
     {
       "id": "b09-semanais-q107",
@@ -3310,7 +3416,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Um idoso que fica irritado, esquece as coisas e se isola, mas com a memória testada normal, pode estar na verdade tendo dificuldade para ouvir — por isso o próximo passo é fazer um exame de audição."
     },
     {
       "id": "b09-semanais-q108",
@@ -3339,7 +3446,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "kids": "O comprometimento cognitivo leve é quando a pessoa se queixa de esquecimento e o teste de memória mostra alguma alteração, mas ela ainda consegue fazer suas tarefas do dia a dia normalmente — diferente da demência."
     },
     {
       "id": "b09-semanais-q109",
@@ -3369,7 +3477,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Um idoso que já caiu duas vezes no ano, usa um remédio para próstata que pode baixar a pressão e tem problemas de visão e audição, deve trocar esse remédio por um mais seguro e corrigir os problemas sensoriais para evitar novas quedas."
     },
     {
       "id": "b09-sindromes-geriatricas-q11",
@@ -3399,7 +3508,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "Quando exames mostram que o esquecimento leve de uma pessoa está ligado a uma proteína chamada beta-amiloide, relacionada ao Alzheimer, existe um remédio mais novo, feito para atacar exatamente essa proteína."
     },
     {
       "id": "b09-semanais-q111",
@@ -3428,7 +3538,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "kids": "Uma dor que continua queimando e dando choques no local onde teve cobreiro, mesmo meses depois, é chamada de dor pós-herpética, e o tratamento combina um remédio que ajuda tanto com a dor quanto com a tristeza e outro que acalma os nervos."
     },
     {
       "id": "b09-geriatria-aga-q13",
@@ -3458,7 +3569,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Quando uma pessoa idosa vai perdendo a memória aos poucos e também a capacidade de cuidar de si mesma, o que sugere doença de Alzheimer, o remédio mais indicado no início é um que ajuda o cérebro a usar melhor uma substância chamada acetilcolina."
     },
     {
       "id": "b09-semanais-q113",
@@ -3488,7 +3600,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-85"
+      "scheduleId": "cron-85",
+      "kids": "A vacina tríplice viral, contra sarampo, caxumba e rubéola, não faz parte da vacinação de rotina para idosos, ao contrário de outras como a de gripe, hepatite B e o reforço contra tétano."
     },
     {
       "id": "b09-semanais-q114",
@@ -3518,7 +3631,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Uma pessoa que perde o interesse pelas coisas e pelas pessoas de um jeito muito estranho, além de perder a fala e a capacidade de fazer contas, pode ter um tipo de demência que começa afetando o comportamento, chamada demência frontotemporal."
     },
     {
       "id": "b09-semanais-q115",
@@ -3548,7 +3662,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Se durante uma cirurgia para tirar o apêndice ele parece normal, o cirurgião deve olhar o resto da barriga para procurar outra causa para a dor, em vez de simplesmente fechar."
     },
     {
       "id": "b09-semanais-q116",
@@ -3578,7 +3693,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Existe uma pontuação que soma sinais como dor, febre e alterações no sangue para dizer o quanto é provável que seja apendicite; quando a pontuação é alta, a cirurgia é indicada."
     },
     {
       "id": "b09-semanais-q117",
@@ -3607,7 +3723,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "kids": "Durante a cirurgia de retirada da vesícula, existe um pequeno gânglio que costuma ficar bem perto da artéria que alimenta a vesícula, servindo como uma pista para o cirurgião encontrá-la com segurança."
     },
     {
       "id": "b09-semanais-q118",
@@ -3638,7 +3755,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "A tomografia com contraste é o exame mais confiável para saber se uma diverticulite tem alguma complicação, como abscesso."
     },
     {
       "id": "b09-semanais-q119",
@@ -3667,7 +3785,8 @@
         "Conduta Terapêutica",
         "Urgência e Emergência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "kids": "Quando um câncer de vesícula biliar é descoberto por acaso numa cirurgia e está bem no começo, só na camada mais superficial, sem invadir mais fundo, muitas vezes não é preciso operar de novo — só acompanhar."
     },
     {
       "id": "b09-semanais-q121",
@@ -3698,7 +3817,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Apêndice furado com infecção espalhada e uma bolsa de pus ao redor é tratado com cirurgia para tirar o apêndice, drenar o pus e usar antibiótico."
     },
     {
       "id": "b09-semanais-q122",
@@ -3728,7 +3848,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Quando o câncer de vesícula já invadiu um pouco mais fundo, antes de decidir uma nova cirurgia maior, é preciso fazer exames de imagem do corpo todo para ver se ele já se espalhou para outros lugares."
     },
     {
       "id": "b09-dermatoses-partes-moles-q26",
@@ -3759,7 +3880,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Como o ácaro da sarna pode sobreviver um tempo fora do corpo, é importante lavar as roupas de cama e de vestir em água quente, ou deixá-las guardadas num saco plástico fechado por uns 3 dias, para não pegar a doença de novo."
     },
     {
       "id": "b09-semanais-q124",
@@ -3790,7 +3912,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Bolinhas que viram bolhas e depois formam casquinhas cor de mel, contagiando outras pessoas da família, são impetigo — uma infecção de pele por bactéria que se trata com antibiótico e boa higiene."
     },
     {
       "id": "b09-dermatoses-partes-moles-q28",
@@ -3830,7 +3953,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Poucas feridas pequenas com casquinha cor de mel ao redor do nariz de uma criança são tratadas apenas com um creme antibiótico, sem precisar de remédio para tomar."
     },
     {
       "id": "b09-semanais-q126",
@@ -3860,7 +3984,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-84"
+      "scheduleId": "cron-84",
+      "kids": "Febre, dor no olho, olho saltado e dificuldade de mexê-lo numa criança são sinais de infecção grave atrás do olho, que precisa de internação, tomografia e antibióticos fortes na veia."
     },
     {
       "id": "b09-semanais-q127",
@@ -3890,7 +4015,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "kids": "Proptose, olho saltado, febre e dificuldade de mexer o olho numa criança que teve uma sinusite mal tratada mostram que a infecção passou do nariz para trás do olho — a sinusite é a principal causa dessa complicação grave."
     },
     {
       "id": "b09-semanais-q128",
@@ -3920,7 +4046,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-86"
+      "scheduleId": "cron-86",
+      "kids": "Olho inchado e vermelho, mas que ainda enxerga e se mexe bem, sem estar saltado, é uma infecção mais leve na frente do olho."
     },
     {
       "id": "b09-semanais-q129",
@@ -3951,7 +4078,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Coceira forte formando pequenos túneis na pele, entre os dedos, na barriga e nas axilas, é sarna, tratada com um creme especial."
     },
     {
       "id": "b09-semanais-q130",
@@ -3980,7 +4108,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "kids": "Para tratar sarna com um remédio para tomar, em vez de creme, em crianças com mais de 15 kg, o remédio usado é a ivermectina."
     },
     {
       "id": "b09-semanais-q131",
@@ -4010,7 +4139,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Depois da menopausa, a vagina fica mais seca e o ambiente menos ácido, causando ardência e desconforto no sexo — isso se chama vaginite atrófica, e o tratamento é um creme de estrogênio usado direto na vagina."
     },
     {
       "id": "b09-semanais-q132",
@@ -4041,7 +4171,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Usar antibiótico pode matar as bactérias boas que protegem a vagina, deixando espaço para o fungo Candida crescer demais e causar candidíase."
     },
     {
       "id": "b09-semanais-q133",
@@ -4072,7 +4203,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Numa grávida com corrimento branco em grumos e coceira, causado por Candida, o tratamento de primeira escolha é um creme antifúngico usado direto na vagina, não remédio por via oral."
     },
     {
       "id": "b09-semanais-q134",
@@ -4102,7 +4234,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Corrimento claro, sem cheiro, com bastante das bactérias boas e sem nenhum sinal de infecção, é só a secreção normal e saudável da vagina, sem doença nenhuma."
     },
     {
       "id": "b09-semanais-q135",
@@ -4133,7 +4266,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Quando a candidíase volta sempre, principalmente depois de tomar antibiótico, o tratamento envolve primeiro atacar forte a infecção e depois continuar tomando um remedinho uma vez por semana durante 6 meses, para evitar que ela volte."
     },
     {
       "id": "b09-semanais-q136",
@@ -4163,7 +4297,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Coceira, corrimento branco sem cheiro, ambiente muito ácido e que não melhora com remédio para fungo é sinal de vaginose citolítica, causada por bactérias boas em excesso, não por Candida."
     },
     {
       "id": "b09-semanais-q137",
@@ -4193,7 +4328,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Usar hormônio masculino pode deixar a vagina mais seca, com menos bactérias protetoras, permitindo que outras bactérias causem uma inflamação chamada vaginite aeróbia."
     },
     {
       "id": "b09-semanais-q138",
@@ -4222,7 +4358,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "kids": "A Candida gosta de ambiente ácido, não alcalino, não é sempre tratada com o mesmo remédio, o diagnóstico definitivo não é só olhando, e encontrar o fungo no exame nem sempre significa que a pessoa está doente por causa dele."
     },
     {
       "id": "b09-semanais-q139",
@@ -4253,7 +4390,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Uma infecção pélvica que começou logo depois de colocar um DIU é tratada com antibiótico de amplo espectro, e o DIU pode ser mantido no início, sendo retirado só se a pessoa não melhorar em alguns dias."
     },
     {
       "id": "b09-semanais-q140",
@@ -4283,7 +4421,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Corrimento com cheiro ruim, dor quando o médico mexe no colo do útero e nos ovários, com febre, fecham o diagnóstico de uma infecção pélvica."
     },
     {
       "id": "b09-semanais-q141",
@@ -4313,7 +4452,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Uma bolsa de pus perto do ovário, com febre e dor muito forte, precisa de internação e de um combo de antibióticos na veia para tratar direito."
     },
     {
       "id": "b09-semanais-q143",
@@ -4343,7 +4483,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Para fechar o diagnóstico de infecção pélvica não é obrigatório sentir dor especificamente do lado da barriga; basta ter dor abdominal mais dor ao mexer no colo do útero ou nos ovários."
     },
     {
       "id": "b09-dip-q12",
@@ -4373,7 +4514,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Dor pélvica que não passa e dificuldade para engravidar, com \"colas\" internas encontradas numa cirurgia, geralmente são sequelas de uma infecção pélvica antiga que deixou cicatrizes."
     },
     {
       "id": "b09-semanais-q145",
@@ -4403,7 +4545,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-91"
+      "scheduleId": "cron-91",
+      "kids": "Uma bolsa de pus grande perto do ovário, com febre e dor, exige internação para tomar antibióticos fortes direto na veia, mas ainda não precisa de cirurgia se a pessoa estiver estável."
     },
     {
       "id": "b09-semanais-q146",
@@ -4434,7 +4577,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-89"
+      "scheduleId": "cron-89",
+      "kids": "Mesmo um abscesso um pouco menor perto do ovário, se vier com febre, precisa de internação e antibiótico na veia antes de pensar em qualquer coisa mais invasiva."
     },
     {
       "id": "b09-semanais-q147",
@@ -4465,7 +4609,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-87"
+      "scheduleId": "cron-87",
+      "kids": "Uma ferida única, que não dói, com bordas durinhas, e gânglios na virilha que também não doem, é sífilis no começo, tratada com uma única injeção de penicilina."
     },
     {
       "id": "b09-ulceras-genitais-q12",
@@ -4496,7 +4641,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Ferida única, indolor, com bordas bem definidas, junto com gânglios na virilha que também não doem, é sífilis primária, tratada com uma dose única de penicilina."
     },
     {
       "id": "b09-ulceras-genitais-q14",
@@ -4526,7 +4672,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Febre, dor na virilha e bolhinhas na região genital são sinais de uma infecção por herpes."
     },
     {
       "id": "b09-semanais-q150",
@@ -4555,7 +4702,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 9.txt"
+      "tagSource": "Tags 9.txt",
+      "kids": "Gânglio dolorido na virilha, febre, e um exame de sangue positivo para a bactéria da clamídia mostram uma infecção chamada linfogranuloma venéreo."
     },
     {
       "id": "b09-ulceras-genitais-q15",
@@ -4587,7 +4735,8 @@
       "tagSource": "Tags 9.txt",
       "answerAudit": "official-source",
       "answerSource": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Feridas agrupadas, rasas e dolorosas, com um gânglio inchado e dolorido na virilha, são sinais do cancro mole."
     },
     {
       "id": "b09-semanais-q152",
@@ -4617,7 +4766,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Várias feridas rasas e dolorosas, febre baixa e gânglios inchados nos dois lados da virilha, depois de um novo parceiro sexual, apontam para uma primeira crise de herpes genital, tratada com um remédio antiviral."
     },
     {
       "id": "b09-semanais-q153",
@@ -4647,7 +4797,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Uma ferida única, sem dor, com bordas elevadas e o fundo limpo, é o sinal clássico da sífilis no início, tratada com uma injeção de penicilina."
     },
     {
       "id": "b09-semanais-q154",
@@ -4677,7 +4828,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-88"
+      "scheduleId": "cron-88",
+      "kids": "Sem esperar o resultado dos exames, uma ferida genital sem bolhas e recente, com menos de 4 semanas, já deve ser tratada logo para as duas causas mais prováveis: sífilis e cancro mole."
     },
     {
       "id": "b09-semanais-q155",
@@ -4708,7 +4860,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Em crianças um pouco maiores, a dermatite atópica costuma ficar mais tempo nas dobras dos braços e joelhos, deixando a pele mais grossa e com maior risco de pegar uma infecção bacteriana por cima."
     },
     {
       "id": "b09-semanais-q156",
@@ -4738,7 +4891,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Comidas que a mãe come, como o leite de vaca, podem passar pelo leite materno e piorar as lesões de pele de um bebê com dermatite atópica — diferente da dermatite seborreica, que não tem relação com alimentos."
     },
     {
       "id": "b09-dermatite-atopica-q22",
@@ -4768,7 +4922,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Na dermatite atópica, usar bastante creme hidratante depois do banho, cerca de 200 gramas por semana, é uma das medidas mais importantes para manter a pele protegida e menos seca."
     },
     {
       "id": "b09-semanais-q158",
@@ -4799,7 +4954,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "scheduleId": "cron-90"
+      "scheduleId": "cron-90",
+      "kids": "Coceira forte no rosto, couro cabeludo e nos bracinhos e perninhas de um bebê, que piora à noite e quando ele toma leite de vaca, poupando a área da fralda, é dermatite atópica."
     }
   ]
 }

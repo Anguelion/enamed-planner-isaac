@@ -31,7 +31,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Quase 9 em cada 10 hérnias no diafragma são do tipo em que uma parte do estômago escorrega para cima, o que estraga a válvula que segura o suco do estômago lá embaixo — por isso causa azia."
     },
     {
       "id": "b15-q002",
@@ -62,7 +63,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Esse programa do governo tem o papel de dar formação técnica para os agentes de saúde que visitam as casas das famílias, em todo o país."
     },
     {
       "id": "b15-q003",
@@ -93,7 +95,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quanto mais tempo dura a gravidez, maior a chance desse micróbio passar da mãe para o bebê, mesmo que o perigo para o bebê seja maior quando a infecção acontece bem no início."
     },
     {
       "id": "b15-q004",
@@ -124,7 +127,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando o exame mostra que os anticorpos da mãe já estão 'fortes e maduros' (alta avidez), isso quer dizer que ela pegou a doença há bastante tempo, antes mesmo de engravidar, então o bebê não corre risco."
     },
     {
       "id": "b15-q005",
@@ -154,7 +158,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois dessa cirurgia de emagrecimento, a ligação nova entre o estômago e o intestino pode ir estreitando aos poucos, dificultando a passagem da comida — por isso a comida sólida não desce direito."
     },
     {
       "id": "b15-q006",
@@ -185,7 +190,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Para fazer a picadinha nas costas e coletar o líquido que envolve a medula, o médico usa como referência uma linha imaginária entre os ossos do quadril, que aponta para o lugar certo da coluna."
     },
     {
       "id": "b15-q007",
@@ -216,7 +222,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Em pessoas mais velhas, além dos micróbios mais comuns, existe uma bactéria chamada Listeria que também costuma causar essa infecção nas membranas do cérebro."
     },
     {
       "id": "b15-semanais-q08",
@@ -247,7 +254,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Uma dor forte, de repente, atrás do olho, que dura só minutos mas se repete várias vezes ao dia, com olho vermelho e nariz entupido do mesmo lado, é tratada rapidinho respirando oxigênio puro."
     },
     {
       "id": "b15-q009",
@@ -277,7 +285,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Sempre que se encontra uma ferida no estômago, o médico precisa tirar um pedacinho para examinar no microscópio, porque ela pode, às vezes, esconder um câncer."
     },
     {
       "id": "b15-q010",
@@ -307,7 +316,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando os dois exames de sangue da toxoplasmose dão positivos e não havia exame anterior para comparar, o médico já começa o remédio de proteção e pede um teste extra para saber se a infecção é recente ou antiga."
     },
     {
       "id": "b15-q011",
@@ -337,7 +347,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Um resultado de exame que mostra 'anticorpos fortes e maduros' indica que a infecção aconteceu há muito tempo — antes da gravidez —, então não há perigo para o bebê e nenhum tratamento é necessário."
     },
     {
       "id": "b15-q012",
@@ -368,7 +379,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Existe um exame que mede o ácido subindo pelo esôfago durante 24 horas, e uma hérnia em que parte do estômago rola para o lado do esôfago, chamada de hérnia de rolamento."
     },
     {
       "id": "b15-q013",
@@ -401,7 +413,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois da cirurgia de emagrecimento, um pedaço do intestino pode ficar preso e torcido dentro de um buraco formado pela própria cirurgia, causando dor forte — isso só se resolve operando de novo."
     },
     {
       "id": "b15-q014",
@@ -431,7 +444,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Uma bactéria chamada H. pylori, que vive no estômago, é a principal responsável por causar esse tipo de câncer no estômago."
     },
     {
       "id": "b15-q015",
@@ -462,7 +476,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Quando alguém sente azia frequente sem sinais preocupantes, o primeiro remédio a tentar é um comprimido que reduz o ácido do estômago, tomado por cerca de dois meses."
     },
     {
       "id": "b15-q016",
@@ -492,7 +507,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Essa política de saúde quer unir quem cuida das pessoas com quem ensina os profissionais, para melhorar como o sistema de saúde funciona para todo mundo."
     },
     {
       "id": "b15-q017",
@@ -522,7 +538,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Assar bem a carne até ficar bem quente por dentro mata o parasita da toxoplasmose escondido nela, por isso essa é uma das formas de proteger o bebê durante a gravidez."
     },
     {
       "id": "b15-q018",
@@ -552,7 +569,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Se o exame de sangue mostra que a mãe respondeu bem ao remédio (os anticorpos caíram bastante) e o bebê nasceu sem sintomas, ele precisa fazer um exame de sangue e só recebe tratamento se o resultado for bem mais alto que o da mãe."
     },
     {
       "id": "b15-q019",
@@ -583,7 +601,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Depois da cirurgia de emagrecimento, se a barriga fica bem inchada e dolorida e a pessoa fica com febre e coração acelerado, é sinal de que a costura entre o estômago e o intestino pode estar vazando — por isso é preciso fazer uma tomografia rápido."
     },
     {
       "id": "b15-q020",
@@ -613,7 +632,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Para tratar essa bactéria do estômago, o médico geralmente usa um remédio que reduz o ácido junto com dois antibióticos diferentes, tudo ao mesmo tempo."
     },
     {
       "id": "b15-q021",
@@ -643,7 +663,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quem tem azia quase todo dia, sem sinais de alerta como perda de peso ou dificuldade de engolir, deve começar tomando remédio para reduzir o ácido; se não melhorar, faz-se um exame que mede o ácido subindo pelo esôfago."
     },
     {
       "id": "b15-q022",
@@ -673,7 +694,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Quando não se sabe se a carga viral da mãe estava controlada no parto, o bebê recebe três remédios de proteção contra o HIV, por segurança extra."
     },
     {
       "id": "b15-q023",
@@ -703,7 +725,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Ensinar sobre saúde funciona melhor quando é uma conversa de mão dupla, valorizando o que as pessoas já sabem, em vez de só passar informação de cima para baixo."
     },
     {
       "id": "b15-q024",
@@ -733,7 +756,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Quando um exame de sangue mostra que a mãe já teve a doença há muito tempo (os anticorpos são antigos e fortes), ela está protegida e o bebê não corre perigo, então a gravidez segue normalmente."
     },
     {
       "id": "b15-q025",
@@ -763,7 +787,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Quando a médica não encontra alteração ao examinar o paciente, ela pode colher o líquido da coluna com segurança, para saber se a infecção é causada por bactéria ou por vírus e assim escolher o tratamento certo."
     },
     {
       "id": "b15-q026",
@@ -793,7 +818,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Uma dor de cabeça que muda de padrão e passa a acordar a pessoa de madrugada é um sinal de alerta e precisa de exame de imagem para descobrir a causa, e não deve ser tratada só como uma crise mais forte de enxaqueca de sempre."
     },
     {
       "id": "b15-q028",
@@ -824,7 +850,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "No líquido da coluna dessa pessoa apareceram bem menos células de defesa e menos açúcar do que o normal, o que combina com uma infecção causada pelo bacilo da tuberculose, não com fungo (que daria outro exame positivo)."
     },
     {
       "id": "b15-q029",
@@ -855,7 +882,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Pessoas que bebem muito álcool ou têm as defesas do corpo enfraquecidas correm risco extra de uma bactéria chamada Listeria causar infecção nas membranas do cérebro."
     },
     {
       "id": "b15-q030",
@@ -885,7 +913,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Uma dor muito forte ao redor de um dos olhos, com olho vermelho, lágrimas e nariz entupido, que vai e volta várias vezes por dia, melhora rápido respirando oxigênio puro."
     },
     {
       "id": "b15-q031",
@@ -915,7 +944,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Dor na barriga que se espalha para as costas, muito emagrecimento e cocô mais gorduroso podem ser sinais de um tumor no pâncreas, órgão que ajuda a digerir a gordura da comida."
     },
     {
       "id": "b15-q032",
@@ -945,7 +975,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Quando alguém toma remédio para azia e ainda tem anemia (sangue fraco), é preciso investigar melhor com uma câmera que olha por dentro do estômago, para ver se há algo sangrando escondido."
     },
     {
       "id": "b15-q033",
@@ -975,7 +1006,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois da cirurgia de emagrecimento, o intestino que absorve ferro fica sendo pulado, então é comum a pessoa ficar com sangue fraco, cansaço e unhas fracas — o tratamento é repor ferro pela veia."
     },
     {
       "id": "b15-q034",
@@ -1006,7 +1038,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "É importante cozinhar bem a carne até ficar bem quentinha por dentro, pois o calor mata o parasita da toxoplasmose que pode estar escondido nela."
     },
     {
       "id": "b15-q035",
@@ -1036,7 +1069,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Quando o bebê nasce antes do tempo e a mãe tem HIV, ele recebe três remédios de proteção, porque nascer prematuro já aumenta o risco de o vírus ter passado para ele."
     },
     {
       "id": "b15-q036",
@@ -1067,7 +1101,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Uma dor de cabeça forte só de um lado, com olho vermelho e nariz escorrendo, que já apareceu antes e melhorou respirando oxigênio puro, é chamada de cefaleia em salvas."
     },
     {
       "id": "b15-q037",
@@ -1097,7 +1132,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois da cirurgia de emagrecimento, o corpo pode absorver menos uma vitamina (a vitamina A) que ajuda a enxergar à noite e a manter os olhos e a pele saudáveis — por isso a pessoa fica com visão ruim no escuro e olhos secos."
     },
     {
       "id": "b15-q038",
@@ -1127,7 +1163,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Ensinar sobre saúde na comunidade ajuda as pessoas a entenderem que cuidar da própria saúde é um direito delas, participando ativamente das decisões, e não só recebendo ordens do médico."
     },
     {
       "id": "b15-q039",
@@ -1157,7 +1194,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando os anticorpos da mãe estão 'fracos e novinhos' (baixa avidez), isso mostra que a infecção é recente, então ela precisa começar logo um remédio para proteger o bebê."
     },
     {
       "id": "b15-q040",
@@ -1187,7 +1225,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Para ver se o bebê pegou a doença ainda dentro da barriga, o médico coleta um pouco do líquido que envolve o bebê (líquido amniótico) e faz um exame bem sensível nele."
     },
     {
       "id": "b15-q041",
@@ -1217,7 +1256,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando se confirma que o bebê pegou a infecção dentro da barriga, usa-se uma combinação de três remédios que atravessam a placenta e tratam diretamente o bebê."
     },
     {
       "id": "b15-q042",
@@ -1247,7 +1287,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "A dor de cabeça em salvas, com crises fortes de um lado só, aparece com mais frequência em homens do que em mulheres."
     },
     {
       "id": "b15-q043",
@@ -1277,7 +1318,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Dor de cabeça latejante de um lado só, que vem com luzes ou pontos brilhantes antes de começar, enjoo e incômodo com luz e barulho, é a enxaqueca — e o remédio específico para essas crises se chama triptano."
     },
     {
       "id": "b15-q044",
@@ -1307,7 +1349,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando um exame de sangue positivo para uma doença não vem acompanhado de outro anticorpo esperado, o médico repete o exame semanas depois e começa um remédio de proteção enquanto espera, para não arriscar o bebê."
     },
     {
       "id": "b15-q045",
@@ -1338,7 +1381,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Esse tipo raro de enxaqueca, que causa fraqueza de um lado do corpo e roda na família, acontece por causa de um defeito genético em uma peça que controla a passagem de cálcio nas células nervosas."
     },
     {
       "id": "b15-q046",
@@ -1372,7 +1416,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Quando uma pessoa está com dor de cabeça forte, febre e sonolência, e o exame do líquido da coluna mostra sinais de infecção grave, o médico não espera resultado de nenhum outro exame para começar os antibióticos na veia."
     },
     {
       "id": "b15-q047",
@@ -1402,7 +1447,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Um bebê que nasce bem pequeno e antes do tempo, de mãe que só começou a tomar remédio contra o HIV depois da metade da gravidez, também recebe três remédios de proteção, porque nascer cedo aumenta o risco."
     },
     {
       "id": "b15-q048",
@@ -1432,7 +1478,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Uma dor de cabeça forte, de um lado só, que acorda a pessoa à noite, é um sinal de alerta que precisa ser investigado com exame de imagem da cabeça, mesmo que a pessoa já tenha enxaqueca de outras vezes."
     },
     {
       "id": "b15-q049",
@@ -1462,7 +1509,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando os dois exames de sangue da toxoplasmose dão positivos logo no começo da gravidez, o próximo passo é pedir um exame que mostra se os anticorpos são recentes ou antigos, para decidir o que fazer."
     },
     {
       "id": "b15-q050",
@@ -1492,7 +1540,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Um bebê que nasce pequeno para o tempo de gravidez, com cabeça inchada por líquido, calcificações espalhadas no cérebro e olho de peixe (coriorretinite), pega essas alterações de uma infecção chamada citomegalovírus, pega dentro da barriga da mãe."
     },
     {
       "id": "b15-q051",
@@ -1523,7 +1572,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Quando o exame do líquido da coluna do bebê está alterado, mesmo que a mãe tenha sido bem tratada para sífilis, o bebê precisa de um antibiótico mais forte, tomado na veia, por mais dias."
     },
     {
       "id": "b15-q052",
@@ -1553,7 +1603,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Quando aparecem muitas células de defesa no líquido da coluna, junto com proteína alta e açúcar muito baixo, isso costuma indicar uma infecção mais grave, como tuberculose ou um fungo, e não uma infecção viral comum."
     },
     {
       "id": "b15-q053",
@@ -1583,7 +1634,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "No primeiro dia depois de uma cirurgia de estômago, quando a pessoa respira mais rápido e o coração bate um pouco mais rápido, mas a barriga está bem, geralmente é o pulmão que precisa de fisioterapia para respirar melhor, e não uma complicação grave."
     },
     {
       "id": "b15-q054",
@@ -1613,7 +1665,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "A toxoplasmose pega os olhos do bebê e deixa a proteína do líquido da coluna alta quando afeta o cérebro, sendo essa combinação bem característica dessa doença."
     },
     {
       "id": "b15-q055",
@@ -1643,7 +1696,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois de uma cirurgia bem demorada, se a pessoa acorda com dor nas costas e xixi mais escuro, pode ser que os músculos tenham sofrido demais durante a operação (rabdomiólise) — o tratamento é hidratar bastante e dar um remédio que protege os rins."
     },
     {
       "id": "b15-q056",
@@ -1673,7 +1727,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois de uma cirurgia de emagrecimento, vômitos que não param podem fazer faltar uma vitamina do complexo B chamada tiamina, causando fraqueza, formigamento, visão embaçada e confusão mental — o tratamento é repor essa vitamina rapidamente."
     },
     {
       "id": "b15-q057",
@@ -1704,7 +1759,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Quando uma pessoa fica com febre alta, dor de cabeça forte e mudanças de comportamento repentinas, e o exame de imagem mostra alteração numa parte específica do cérebro, o médico começa logo um remédio contra o vírus herpes, sem esperar a confirmação final do exame."
     },
     {
       "id": "b15-q058",
@@ -1734,7 +1790,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Se a mãe teve a doença confirmada durante a gravidez, o bebê precisa de um tratamento com três remédios que dura um ano inteiro, mesmo que ele pareça saudável."
     },
     {
       "id": "b15-q059",
@@ -1764,7 +1821,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Uma criança de quase 5 anos que ainda não fala direito, não olha nos olhos e tem rituais rígidos precisa de um plano de cuidado feito especialmente para ela e sua família, considerando tudo o que a torna única."
     },
     {
       "id": "b15-q060",
@@ -1794,7 +1852,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "A maioria dos bebês que pegam essa infecção dentro da barriga da mãe nasce sem sintomas nenhum, mesmo que às vezes o problema seja grave."
     },
     {
       "id": "b15-q061",
@@ -1825,7 +1884,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Esse plano de cuidado individualizado olha para a saúde da pessoa, sua mente, sua vida social e as pessoas que a apoiam, tudo junto."
     },
     {
       "id": "b15-q062",
@@ -1855,7 +1915,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Se um bebê que já foi tratado para sífilis continua com um exame de sangue levemente alterado depois de mais de um ano, isso não é normal e precisa ser tratado de novo, pois o exame deveria ter zerado."
     },
     {
       "id": "b15-q063",
@@ -1886,7 +1947,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Quando a mãe tem hepatite B, o bebê recebe a vacina contra essa doença logo nas primeiras horas de vida, não importa o peso; já outra vacina (BCG) espera o bebê ganhar mais peso."
     },
     {
       "id": "b15-q064",
@@ -1917,7 +1979,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Mudança repentina de comportamento, com pensamentos estranhos, agressividade e febre em uma pessoa jovem, sem histórico de doença mental, pode ser uma infecção no cérebro, e não um problema psiquiátrico."
     },
     {
       "id": "b15-q065",
@@ -1948,7 +2011,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Essa dor de cabeça latejante, que vem desde criança e é precedida de luzes especiais, é mais comum em mulheres, tem forte relação com a genética da família, e melhora com remédios anti-inflamatórios nas crises mais longas."
     },
     {
       "id": "b15-q066",
@@ -1978,7 +2042,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Quando o remédio de primeira linha para uma bactéria do estômago não funciona, o médico troca por outra combinação de remédios que inclui um mineral protetor do estômago (bismuto)."
     },
     {
       "id": "b15-q067",
@@ -2008,7 +2073,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Depois dos três meses de gravidez, o exame que mede a maturidade dos anticorpos deixa de ser útil, então se os dois exames de sangue dão positivos, o médico já parte para o tratamento com três remédios."
     },
     {
       "id": "b15-q068",
@@ -2038,7 +2104,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Quando a mãe grávida não seguiu bem o remédio contra o HIV, o bebê corre mais risco de ter pegado o vírus, por isso ele precisa de três remédios de proteção, em vez de só um."
     },
     {
       "id": "b15-q069",
@@ -2069,7 +2136,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Um bebê que não mexe uma perninha ou bracinho porque dói (parece paralisado, mas não é) e tem fígado e baço maiores é um sinal clássico de sífilis pega dentro da barriga da mãe."
     },
     {
       "id": "b15-q070",
@@ -2099,7 +2167,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Se o bebê nasce sem sintomas e o exame de sangue dele é bem menor que o da mãe, mesmo que o tratamento dela tenha sido um pouco atrasado, ele é considerado apenas 'exposto' à doença, e não precisa de tratamento imediato, só de acompanhamento."
     },
     {
       "id": "b15-q071",
@@ -2130,7 +2199,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando um exame que examina diretamente o líquido ao redor do bebê confirma a infecção, o tratamento certo é uma combinação de três remédios para proteger o bebê."
     },
     {
       "id": "b15-q072",
@@ -2161,7 +2231,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Uma dor de cabeça que já vem desde a adolescência e piora ao ponto de a pessoa usar analgésico quase todo dia pode virar uma enxaqueca mais forte e constante, precisando de um remédio preventivo especial."
     },
     {
       "id": "b15-q073",
@@ -2192,7 +2263,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Uma dor de cabeça que volta várias vezes ao longo dos anos, sempre parecida, pode ser causada por um vírus da família do herpes que se esconde no corpo e volta de vez em quando a causar essa infecção nas membranas do cérebro."
     },
     {
       "id": "b15-q074",
@@ -2223,7 +2295,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Para prevenir aquela dor forte de um lado do rosto que vem em crises várias vezes ao dia, o remédio preventivo mais indicado é um que ajuda a relaxar os vasos sanguíneos."
     },
     {
       "id": "b15-q075",
@@ -2253,7 +2326,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Uma dor forte tipo choque elétrico no rosto, causada por um nervo sendo comprimido por um vaso sanguíneo, é tratada primeiro com um remédio anticonvulsivante, e se ele causar efeitos ruins, troca-se por outro remédio parecido."
     },
     {
       "id": "b15-q076",
@@ -2283,7 +2357,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Se um bebê nasce de mãe que nunca fez o teste ou tratamento para sífilis, ele precisa de vários exames — mesmo parecendo saudável — para o médico decidir o melhor tratamento."
     },
     {
       "id": "b15-q077",
@@ -2314,7 +2389,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Se a mãe pegou toxoplasmose no fim da gravidez e o bebê nasce sem sintomas, ele ainda assim toma o tratamento completo com três remédios por um ano inteiro, para garantir proteção."
     },
     {
       "id": "b15-q080",
@@ -2345,7 +2421,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Uma dor de cabeça, febre e mudança repentina de comportamento em jovem saudável, sem outra explicação, pode ser uma infecção grave no cérebro, e por isso a fungo Cryptococcus não costuma dar açúcar normal no líquido da coluna, diferente do que se pensa."
     },
     {
       "id": "b15-q081",
@@ -2375,7 +2452,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando os dois exames de sangue da toxoplasmose dão positivos, o médico pede um exame extra que mostra se a infecção é recente ou antiga, além de já começar um remédio de proteção."
     },
     {
       "id": "b15-q082",
@@ -2405,7 +2483,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Ensinar habilidades de saúde para a comunidade funciona melhor quando é feito junto com outros setores (como educação e assistência social), pensando em tudo o que influencia a vida das pessoas."
     },
     {
       "id": "b15-q083",
@@ -2436,7 +2515,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Um bebê com cabeça pequena, convulsões, calcificações no cérebro e surdez, filho de mãe que teve febre leve e resfriado no início da gravidez, pode ter pego uma infecção chamada citomegalovírus dentro da barriga."
     },
     {
       "id": "b15-q084",
@@ -2467,7 +2547,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Para descobrir se um bebê recém-nascido pegou uma infecção chamada citomegalovírus, o exame mais rápido e confiável é coletar um pouco da saliva dele."
     },
     {
       "id": "b15-q086",
@@ -2497,7 +2578,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois de uma cirurgia de emagrecimento, se a pessoa fica com coração acelerado, pressão baixa e pele pálida logo no primeiro dia, é sinal de que pode estar sangrando por dentro, no lugar onde foi feita a costura da cirurgia."
     },
     {
       "id": "b15-q087",
@@ -2527,7 +2609,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois da cirurgia de emagrecimento, se aparecem pedras na vesícula e no canal da bile, é preciso operar direto para tirar tudo, porque o exame que normalmente resolveria isso pela boca não consegue mais chegar lá."
     },
     {
       "id": "b15-q088",
@@ -2557,7 +2640,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Saber avaliar informações de saúde de forma crítica significa não só entender o que está escrito, mas também pensar se é confiável e participar das decisões sobre a própria saúde."
     },
     {
       "id": "b15-q089",
@@ -2588,7 +2672,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Uma boa conversa entre médico e paciente escuta a história de vida da pessoa inteira, não só os sintomas, levando em conta seus sentimentos e sua realidade social."
     },
     {
       "id": "b15-q097",
@@ -2618,7 +2703,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Uma dor de cabeça nova e forte em uma pessoa mais velha, que nunca teve isso antes, precisa ser investigada com exame de imagem, para garantir que não é algo mais sério escondido."
     },
     {
       "id": "b15-q095",
@@ -2649,7 +2735,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Uma dor de cabeça que aperta os dois lados da cabeça, ligada a estresse e tensão nos músculos, pode melhorar com massagem e técnicas de relaxamento nos pontos doloridos."
     },
     {
       "id": "b15-q093",
@@ -2679,7 +2766,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Para prevenir enxaqueca em pessoas com excesso de peso e asma, o remédio ideal ajuda a controlar a dor e ainda auxilia a emagrecer, sem prejudicar a respiração."
     },
     {
       "id": "b15-q092",
@@ -2710,7 +2798,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Quando alguém toma remédio para dor de cabeça quase todo dia, sem melhorar, o próprio remédio em excesso pode estar causando mais dor de cabeça — a solução é parar aos poucos e começar um remédio preventivo."
     },
     {
       "id": "b15-semanais-q94",
@@ -2741,7 +2830,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Uma dor forte atrás de um olho, que vem várias vezes ao dia sempre no mesmo período, com olho inchado e vermelho, é a cefaleia em salvas, e quando é muito forte ou não melhora, o médico pede um exame de imagem para garantir que não há outra causa escondida."
     },
     {
       "id": "b15-q094",
@@ -2771,7 +2861,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Uma dor de cabeça que aperta a nuca e desce para os ombros, sem outros sintomas graves, costuma ser causada por tensão muscular, e melhora com anti-inflamatório e massagem relaxante."
     },
     {
       "id": "b15-semanais-q96",
@@ -2800,7 +2891,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "kids": "A dor forte de um lado do rosto, com olho lacrimejando e nariz entupido, que se repete várias vezes ao dia sempre no mesmo horário, melhora respirando oxigênio puro na crise, e se previne com um remédio que relaxa os vasos sanguíneos."
     },
     {
       "id": "b15-q090",
@@ -2830,7 +2922,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Quando a enxaqueca dura vários dias seguidos e não melhora com os remédios de sempre, o médico usa uma combinação de remédio para enjoo com um anti-inflamatório mais forte na veia."
     },
     {
       "id": "b15-semanais-q98",
@@ -2860,7 +2953,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Uma pessoa com doença de Crohn, que toma remédio que baixa as defesas do corpo, começa a ter febre, dor de cabeça e confusão — o exame de imagem mostra alteração numa parte do cérebro que é típica de uma infecção causada pelo vírus do herpes, tratada com remédio antiviral na veia."
     },
     {
       "id": "b15-q100",
@@ -2894,7 +2988,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Quando alguém tem febre alta, dor de cabeça forte, confusão e convulsões, e o exame de imagem mostra alteração no cérebro, o médico começa logo o remédio contra o vírus herpes, além de coletar o líquido da coluna."
     },
     {
       "id": "b15-q099",
@@ -2928,7 +3023,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-144"
+      "scheduleId": "cron-144",
+      "kids": "Um adulto com febre, confusão mental e um exame do líquido da coluna com muitas células de defesa (linfócitos) recebe o remédio contra o vírus herpes, que é a causa mais provável desse tipo de infecção no cérebro."
     },
     {
       "id": "b15-q098",
@@ -2960,7 +3056,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-140"
+      "scheduleId": "cron-140",
+      "kids": "Uma criança com febre, convulsão e manchinhas roxas na pele, além de sinais de que o corpo está indo mal (choque), precisa de soro na veia rapidamente e do antibiótico certo para uma infecção grave causada pela bactéria da meningite chamada meningococo."
     },
     {
       "id": "b15-semanais-q102",
@@ -2990,7 +3087,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Quando uma pessoa que já fez cirurgia de emagrecimento tem dor de barriga forte, sem conseguir fazer cocô nem soltar gases, o mais provável é que um pedaço do intestino ficou preso em um buraco criado pela própria cirurgia — só resolve operando."
     },
     {
       "id": "b15-semanais-q103",
@@ -3020,7 +3118,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Depois de uma cirurgia de emagrecimento, dor de barriga forte com vômitos e prisão de ventre pode indicar que um pedaço do intestino ficou torcido dentro de um espaço criado pela cirurgia — a tomografia mostra um sinal de torção característico."
     },
     {
       "id": "b15-semanais-q104",
@@ -3050,7 +3149,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Um bebê que nasce pequeno, filho de mãe que fez pouco pré-natal e teve exame de sífilis alterado no início da gravidez, precisa de vários exames extras (líquido da coluna, sangue, raio-X dos ossos) para o médico decidir o melhor tratamento, mesmo que os títulos do bebê pareçam baixos."
     },
     {
       "id": "b15-semanais-q105",
@@ -3080,7 +3180,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando o exame do líquido da coluna do bebê mostra alteração, mesmo que ele pareça saudável, é preciso tratar com penicilina por mais dias, porque o remédio comum não trata bem a infecção que chegou ao cérebro."
     },
     {
       "id": "b15-semanais-q106",
@@ -3110,7 +3211,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Nesse caso, mesmo com o tratamento da mãe pouco documentado, o esquema de acompanhamento correto é dar antibiótico por dez dias, porque o exame do líquido do bebê deu alterado."
     },
     {
       "id": "b15-semanais-q107",
@@ -3141,7 +3243,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Logo depois que o bebê nasce, se a mãe tem HIV mas já está bem tratada, o corte do cordão umbilical deve ser feito um pouco depois (não imediatamente), e o bebê deve ser lavado com água comum, nunca com álcool."
     },
     {
       "id": "b15-semanais-q108",
@@ -3171,7 +3274,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Um bebê pequeno para o tempo de gestação, com baço maior, manchas no olho e calcificações espalhadas pelo cérebro, tem os sinais clássicos de toxoplasmose pega ainda dentro da barriga."
     },
     {
       "id": "b15-q107",
@@ -3201,7 +3305,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Se o bebê nasceu bem e sem sintomas, e a infecção do feto não foi confirmada por exame específico durante a gravidez, o médico não começa logo o tratamento forte, mas pede vários exames de acompanhamento no bebê antes de decidir."
     },
     {
       "id": "b15-q110",
@@ -3231,7 +3336,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando a mãe começou o tratamento do HIV a tempo e chegou ao parto com o vírus bem controlado, ainda assim, nesse caso, o gabarito considera que o bebê recebe o esquema mais completo de remédios, por segurança."
     },
     {
       "id": "b15-semanais-q111",
@@ -3261,7 +3367,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-142"
+      "scheduleId": "cron-142",
+      "kids": "Um bebê com fígado e baço maiores, olho com manchas e calcificações espalhadas e cabeça inchada por líquido tem os sinais típicos de toxoplasmose pega dentro da barriga da mãe."
     },
     {
       "id": "b15-semanais-q112",
@@ -3291,7 +3398,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Uma gestante com dois exames de sangue positivos para toxoplasmose logo no início da gravidez precisa começar um remédio de proteção e fazer um exame extra para saber se a infecção é recente."
     },
     {
       "id": "b15-q118",
@@ -3321,7 +3429,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Se o exame de sangue de sífilis volta a subir bem depois de tratada, é sinal de que a pessoa pegou a doença de novo, e por isso precisa ser tratada outra vez."
     },
     {
       "id": "b15-semanais-q115",
@@ -3351,7 +3460,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando a gestante tem exame positivo para sífilis e não tem comprovante de ter sido tratada antes, o médico já começa o tratamento e pede o exame de sangue para acompanhar a resposta."
     },
     {
       "id": "b15-q117",
@@ -3381,7 +3491,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Se a gestante trabalha mexendo com terra (jardinagem) e o exame de toxoplasmose vem alterado já mais avançado na gravidez, o remédio mais forte para proteger o bebê é iniciado direto, sem precisar do exame de maturidade dos anticorpos."
     },
     {
       "id": "b15-semanais-q117",
@@ -3411,7 +3522,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Quando o exame de sangue mostra que a gestante já teve toxoplasmose antes de engravidar (anticorpos antigos, sem sinal de infecção nova), ela está protegida e não precisa repetir o exame."
     },
     {
       "id": "b15-semanais-q118",
@@ -3441,7 +3553,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Se o exame de sangue de sífilis sobe bastante depois de a gestante ter sido tratada, é sinal de que ela pegou a doença de novo, então ela e o parceiro precisam ser tratados outra vez."
     },
     {
       "id": "b15-q114",
@@ -3472,7 +3585,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "Repetir o exame de sangue de toxoplasmose ao longo da gravidez, em gestantes que ainda não tiveram a doença, serve para descobrir bem cedo se elas pegaram a infecção, e assim proteger o bebê a tempo."
     },
     {
       "id": "b15-q120",
@@ -3502,7 +3616,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "A Atenção Primária de Saúde deve ser a porta de entrada principal do sistema de saúde, atendendo as pessoas assim que elas precisam, antes de encaminhar para outros serviços."
     },
     {
       "id": "b15-q125",
@@ -3533,7 +3648,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "O médico de família precisa reconhecer os diferentes tipos de crises que uma família pode passar ao longo da vida, para saber a melhor forma de ajudar em cada momento."
     },
     {
       "id": "b15-semanais-q122",
@@ -3563,7 +3679,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Uma equipe de saúde que reúne vários profissionais diferentes, como nutricionista e psicólogo, precisa ter pelo menos um desses dois trabalhando um bom número de horas por semana."
     },
     {
       "id": "b15-semanais-q123",
@@ -3593,7 +3710,8 @@
         "Atenção Primária",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 15.txt"
+      "tagSource": "Tags 15.txt",
+      "kids": "Quando pessoas com doenças de longo prazo têm dificuldade de seguir o tratamento, criar grupos na unidade de saúde para trocarem experiências ajuda muito mais do que só entregar folhetos."
     },
     {
       "id": "b15-semanais-q124",
@@ -3623,7 +3741,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-141"
+      "scheduleId": "cron-141",
+      "kids": "O sistema público de saúde deve acolher e cuidar imediatamente de qualquer pessoa que chegue precisando de ajuda, mesmo que ela não more perto daquela unidade."
     },
     {
       "id": "b15-semanais-q125",
@@ -3653,7 +3772,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Para acompanhar uma doença ao longo do tempo, o correto é a pessoa ser atendida na unidade de saúde perto de onde ela realmente mora, para manter um vínculo contínuo com a equipe."
     },
     {
       "id": "b15-semanais-q126",
@@ -3684,7 +3804,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Quando uma equipe de saúde comum pede ajuda a especialistas para cuidar melhor de um caso difícil, o paciente continua sendo cuidado pela equipe que já o conhece, e não é transferido para outro lugar."
     },
     {
       "id": "b15-semanais-q127",
@@ -3714,7 +3835,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "As equipes de saúde formadas por vários profissionais diferentes ajudam e completam o trabalho das equipes tradicionais de saúde da família, sem substituí-las."
     },
     {
       "id": "b15-q128",
@@ -3744,7 +3866,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Quando o remédio para azia é usado por bastante tempo numa ferida mais grave no esôfago, é importante repetir o exame de câmera depois do tratamento para confirmar que cicatrizou."
     },
     {
       "id": "b15-q129",
@@ -3774,7 +3897,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Quando alguém tem azia por vários meses, já fez uma câmera no estômago normal e o remédio não resolveu de vez, o exame que mede o ácido no esôfago precisa ser feito sem tomar o remédio, para dar um resultado confiável."
     },
     {
       "id": "b15-q130",
@@ -3804,7 +3928,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Quando alguém tem azia frequente que só melhora um pouco com o remédio, o próximo passo é fazer a câmera no estômago de novo, para ver se há alguma coisa nova que explique isso."
     },
     {
       "id": "b15-q131",
@@ -3834,7 +3959,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "O exame de câmera no estômago pode dar normal mesmo quando a pessoa realmente tem refluxo, então não dá para descartar o diagnóstico só porque a câmera não mostrou nada."
     },
     {
       "id": "b15-q132",
@@ -3864,7 +3990,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-139"
+      "scheduleId": "cron-139",
+      "kids": "Para confirmar que alguém tem uma alteração chamada esôfago de Barrett, é preciso examinar um pedacinho da mucosa no microscópio e encontrar um tipo especial de célula (metaplasia), não basta só olhar pela câmera."
     },
     {
       "id": "b15-semanais-q133",
@@ -3894,7 +4021,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Quando a câmera mostra uma ferida (esofagite) causada pelo refluxo, o tratamento certo é tomar remédio para reduzir o ácido por cerca de dois meses."
     },
     {
       "id": "b15-q133",
@@ -3925,7 +4053,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Uma alteração chamada esôfago de Barrett pode aparecer mesmo em pessoas que nunca tiveram uma ferida muito grave no esôfago causada pelo refluxo."
     },
     {
       "id": "b15-semanais-q135",
@@ -3955,7 +4084,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 15.txt",
-      "scheduleId": "cron-143"
+      "scheduleId": "cron-143",
+      "kids": "Quando o refluxo é leve, com uma hérnia pequena, o tratamento é com remédio para reduzir o ácido, além de perder peso e cuidar da alimentação — sem precisar de cirurgia."
     }
   ]
 }

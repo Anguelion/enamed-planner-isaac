@@ -900,6 +900,8 @@ body.dark .question-difficulty-btn.difficulty-dificil.active{background:#4a211f;
 .analysis-chip.proof span{background:var(--soft-amber);color:var(--amber)}
 .analysis-chip.flashcard{border-left-color:var(--teal);background:#effafa}
 .analysis-chip.flashcard span{background:#dff5f2;color:var(--teal)}
+.sim-comment-stack{display:grid;gap:12px;margin-top:10px}
+.sim-comment-stack .question-comment-card{padding:14px}
 .dashboard-road{gap:18px}
 .road-path{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .road-path:before{top:54px;height:4px;background:linear-gradient(90deg,var(--teal),var(--cyan),var(--amber));opacity:.22}
@@ -1745,27 +1747,49 @@ body.dark .schedule-study-icon.done{background:#153a31;color:#63d5ae}body.dark .
 
 /* Comentarios das questoes com contraste real no modo escuro. */
 body.dark .qbank-mode .question-comment,
-body.dark .qbank-mode .question-comment-card{background:#25213a;border-color:#514876;color:#f4f1ff}
+body.dark .sim-review-item .question-comment,
+body.dark .qbank-mode .question-comment-card,
+body.dark .sim-review-item .question-comment-card{background:#25213a;border-color:#514876;color:#f4f1ff}
 body.dark .qbank-mode .question-comment strong,
-body.dark .qbank-mode .question-comment-card strong{color:#c9b8ff}
-body.dark .qbank-mode .question-comment-card.analysis{background:#102d35;border-color:#2388a2;color:#e3f9ff}
-body.dark .qbank-mode .question-comment-card.analysis strong{color:#70dcf7}
-body.dark .qbank-mode .question-comment-card.error{background:#342319;border-color:#9a5d28;color:#fff0df}
-body.dark .qbank-mode .question-comment-card.error strong{color:#ffb774}
-body.dark .qbank-mode .question-comment-card.kids{background:#0e2e35;border-color:#1d7a92;color:#e3f9ff}
-body.dark .qbank-mode .question-comment-card.kids strong{color:#67e8f9}
-body.dark .qbank-mode .analysis-chip{background:#20252d;border-color:#46505e;color:#f5f7fb}
-body.dark .qbank-mode .analysis-chip p{color:#f5f7fb}
-body.dark .qbank-mode .analysis-chip.correct{background:#142e25;border-color:#318b68}
-body.dark .qbank-mode .analysis-chip.correct span{background:#1f4939;color:#8ce5bd}
-body.dark .qbank-mode .analysis-chip.why{background:#16283b;border-color:#397dbd}
-body.dark .qbank-mode .analysis-chip.why span{background:#203e5c;color:#9ed0ff}
-body.dark .qbank-mode .analysis-chip.wrong{background:#351e20;border-color:#b95052}
-body.dark .qbank-mode .analysis-chip.wrong span{background:#55292c;color:#ffaaaa}
-body.dark .qbank-mode .analysis-chip.proof{background:#312918;border-color:#a77a28}
-body.dark .qbank-mode .analysis-chip.proof span{background:#4b3b1c;color:#ffd37b}
-body.dark .qbank-mode .analysis-chip.flashcard{background:#153033;border-color:#2f9299}
-body.dark .qbank-mode .analysis-chip.flashcard span{background:#20484c;color:#8ce1e5}
+body.dark .sim-review-item .question-comment strong,
+body.dark .qbank-mode .question-comment-card strong,
+body.dark .sim-review-item .question-comment-card strong{color:#c9b8ff}
+body.dark .qbank-mode .question-comment-card.analysis,
+body.dark .sim-review-item .question-comment-card.analysis{background:#102d35;border-color:#2388a2;color:#e3f9ff}
+body.dark .qbank-mode .question-comment-card.analysis strong,
+body.dark .sim-review-item .question-comment-card.analysis strong{color:#70dcf7}
+body.dark .qbank-mode .question-comment-card.error,
+body.dark .sim-review-item .question-comment-card.error{background:#342319;border-color:#9a5d28;color:#fff0df}
+body.dark .qbank-mode .question-comment-card.error strong,
+body.dark .sim-review-item .question-comment-card.error strong{color:#ffb774}
+body.dark .qbank-mode .question-comment-card.kids,
+body.dark .sim-review-item .question-comment-card.kids{background:#0e2e35;border-color:#1d7a92;color:#e3f9ff}
+body.dark .qbank-mode .question-comment-card.kids strong,
+body.dark .sim-review-item .question-comment-card.kids strong{color:#67e8f9}
+body.dark .qbank-mode .analysis-chip,
+body.dark .sim-review-item .analysis-chip{background:#20252d;border-color:#46505e;color:#f5f7fb}
+body.dark .qbank-mode .analysis-chip p,
+body.dark .sim-review-item .analysis-chip p{color:#f5f7fb}
+body.dark .qbank-mode .analysis-chip.correct,
+body.dark .sim-review-item .analysis-chip.correct{background:#142e25;border-color:#318b68}
+body.dark .qbank-mode .analysis-chip.correct span,
+body.dark .sim-review-item .analysis-chip.correct span{background:#1f4939;color:#8ce5bd}
+body.dark .qbank-mode .analysis-chip.why,
+body.dark .sim-review-item .analysis-chip.why{background:#16283b;border-color:#397dbd}
+body.dark .qbank-mode .analysis-chip.why span,
+body.dark .sim-review-item .analysis-chip.why span{background:#203e5c;color:#9ed0ff}
+body.dark .qbank-mode .analysis-chip.wrong,
+body.dark .sim-review-item .analysis-chip.wrong{background:#351e20;border-color:#b95052}
+body.dark .qbank-mode .analysis-chip.wrong span,
+body.dark .sim-review-item .analysis-chip.wrong span{background:#55292c;color:#ffaaaa}
+body.dark .qbank-mode .analysis-chip.proof,
+body.dark .sim-review-item .analysis-chip.proof{background:#312918;border-color:#a77a28}
+body.dark .qbank-mode .analysis-chip.proof span,
+body.dark .sim-review-item .analysis-chip.proof span{background:#4b3b1c;color:#ffd37b}
+body.dark .qbank-mode .analysis-chip.flashcard,
+body.dark .sim-review-item .analysis-chip.flashcard{background:#153033;border-color:#2f9299}
+body.dark .qbank-mode .analysis-chip.flashcard span,
+body.dark .sim-review-item .analysis-chip.flashcard span{background:#20484c;color:#8ce1e5}
 body.dark .sidebar-brand-copy,
 body.dark .header-context strong,
 body.dark .qbank-mode .section-title h2{color:#f2f7f5}

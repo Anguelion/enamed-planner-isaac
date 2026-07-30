@@ -37,7 +37,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Os exames mostravam sinais de um coração machucado por falta de sangue, então o jeito certo é dar remédio para abrir os vasos e afinar o sangue, e mandar rápido para um exame que olha as artérias do coração por dentro."
     },
     {
       "id": "b22-q002",
@@ -68,7 +69,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-205"
+      "scheduleId": "cron-205",
+      "kids": "Quando esse tipo de câncer no estômago é descoberto bem no começo, os médicos conseguem curar quase todo mundo, por isso é tão importante descobrir cedo."
     },
     {
       "id": "b22-q003",
@@ -99,7 +101,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Esse tipo de dor no peito acontece porque os vasinhos que levam sangue ao coração se apertam de repente (como uma cãibra), e não porque estão entupidos."
     },
     {
       "id": "b22-q004",
@@ -130,7 +133,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-205"
+      "scheduleId": "cron-205",
+      "kids": "Esse caroço duro perto do umbigo é um sinal de que um câncer que começou em outro lugar da barriga já espalhou células para lá."
     },
     {
       "id": "b22-q005",
@@ -161,7 +165,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-205"
+      "scheduleId": "cron-205",
+      "kids": "Existe um tipo de câncer de estômago que passa de pai/mãe para filho por causa de um errinho em um gene chamado E-caderina, e quem herda esse erro tem um risco bem alto de desenvolver o câncer um dia."
     },
     {
       "id": "b22-q006",
@@ -192,7 +197,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-205"
+      "scheduleId": "cron-205",
+      "kids": "Uma doença chamada anemia perniciosa deixa o estômago mais fraco para se defender, e isso aumenta a chance de aparecer câncer ali."
     },
     {
       "id": "b22-q007",
@@ -223,7 +229,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-206"
+      "scheduleId": "cron-206",
+      "kids": "Se a pessoa teve um derrame (AVC) há pouco tempo, não se pode usar o remédio que desmancha coágulos no coração, porque ele pode fazer sangrar dentro do cérebro."
     },
     {
       "id": "b22-q008",
@@ -256,7 +263,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "As manchas na pele apareceram porque o remédio usado (um antibiótico) não combinava com a doença real, que era causada por um vírus (mononucleose) e não por bactéria, então o certo é parar o antibiótico."
     },
     {
       "id": "b22-q009",
@@ -286,7 +294,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando o infarto também atinge o lado direito do coração, alguns remédios que abrem os vasos sanguíneos podem fazer a pressão despencar perigosamente, por isso é preciso ter cuidado extra com essa parte do coração."
     },
     {
       "id": "b22-q010",
@@ -317,7 +326,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando a aorta (a artéria mais grossa do corpo) está rasgando por dentro, primeiro se usa remédio para deixar o coração bater mais devagar e mais fraco, para não piorar o rasgo."
     },
     {
       "id": "b22-q011",
@@ -348,7 +358,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando o infarto acontece na parte de baixo do coração, esse dano aparece em certas posições específicas do aparelho que desenha o coração (eletrocardiograma)."
     },
     {
       "id": "b22-q012",
@@ -379,7 +390,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "A aorta tem partes diferentes, e quando o rasgo acontece bem no início dela (perto do coração), isso é classificado de um jeito especial nos exames."
     },
     {
       "id": "b22-q013",
@@ -410,7 +422,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Essa doença de pele que deixa as bochechas bem vermelhas e depois espalha manchas pelo corpo é causada por um vírus chamado parvovírus."
     },
     {
       "id": "b22-q014",
@@ -441,7 +454,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Existe uma doença do coração que imita um infarto, dando os mesmos sintomas, mas sem ter nenhuma artéria entupida - geralmente aparece depois de um susto ou tristeza muito grande."
     },
     {
       "id": "b22-q015",
@@ -472,7 +486,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-206"
+      "scheduleId": "cron-206",
+      "kids": "Nessa doença, a parede da artéria mais grossa do corpo rasga por dentro, e o sangue entra nessa rachadura formando um segundo caminho falso dentro da parede do vaso."
     },
     {
       "id": "b22-q016",
@@ -503,7 +518,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "A escarlatina é causada por uma bactéria (não pelo germe que a alternativa citava), a toxina dela deixa a pele com uma erupção, a língua fica vermelha e inchada, e também aparecem certas marcas na pele - por isso essas partes estavam certas, mas a parte do remédio ideal estava errada."
     },
     {
       "id": "b22-q017",
@@ -534,7 +550,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Existem doenças do trabalho, como as dores nos músculos e ossos por movimentos repetidos, que o trabalho ajuda a causar mas não é a única causa possível - elas entram num grupo especial dessa classificação."
     },
     {
       "id": "b22-q018",
@@ -565,7 +582,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Depois de uma cirurgia no estômago, comer doce demais faz o açúcar entrar rápido demais no intestino, puxando água e causando mal-estar, palpitação e diarreia - por isso é melhor comer pouco açúcar, em porções pequenas, e não misturar líquido com comida sólida."
     },
     {
       "id": "b22-q019",
@@ -599,7 +617,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-205"
+      "scheduleId": "cron-205",
+      "kids": "Esse tumor nasce de umas células especiais do intestino chamadas células de Cajal, aparece mais no estômago, no intestino fino e no reto, e os médicos o identificam procurando uma marca chamada CD117."
     },
     {
       "id": "b22-q020",
@@ -629,7 +648,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Os sinais (dor que piora ao respirar fundo, alterações espalhadas no eletrocardiograma e exames de inflamação alterados) mostram uma inflamação ao redor do coração, e para isso o tratamento certo são remédios anti-inflamatórios, não os remédios usados no infarto."
     },
     {
       "id": "b22-q021",
@@ -660,7 +680,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "A dor que piora ao apertar o local e ao mexer o braço, sem outros sinais de alerta, é sugestiva de uma inflamação nas cartilagens das costelas (não do coração), então o certo é tratar a dor e tranquilizar o paciente."
     },
     {
       "id": "b22-q022",
@@ -690,7 +711,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Depois de um infarto tratado com sucesso, os remédios que a pessoa leva para casa são para afinar o sangue e baixar o colesterol, ajudando a evitar um novo entupimento."
     },
     {
       "id": "b22-q023",
@@ -720,7 +742,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Diante de dor no peito que pode ser do coração, com alta pressão e batimento acelerado, o primeiro remédio a dar rapidinho é uma aspirina, e a pessoa deve ficar internada para observação."
     },
     {
       "id": "b22-q024",
@@ -751,7 +774,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Quando um bebê tem febre alta por alguns dias e, assim que a febre passa, aparecem manchinhas vermelhas pelo corpo, é uma doença causada por um vírus da família do herpes, e ela pode causar uma convulsão provocada pela febre."
     },
     {
       "id": "b22-q025",
@@ -782,7 +806,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "As pessoas que se machucaram enquanto estavam trabalhando (até o entregador de bico e a empregada doméstica) contam como acidente de trabalho e precisam ser notificadas, mas quem estava apenas indo para a faculdade não estava trabalhando, então não entra nessa notificação."
     },
     {
       "id": "b22-q026",
@@ -812,7 +837,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "A garganta com pus, a língua vermelha e áspera, as manchinhas que começam no peito e depois descascam a pele das mãos e pés são sinais clássicos de uma infecção de garganta por bactéria que também afeta a pele."
     },
     {
       "id": "b22-q027",
@@ -842,7 +868,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Trabalhar por muitos anos na construção civil pode fazer a pessoa respirar um material chamado asbesto, que deixa cicatrizes nos pulmões e placas calcificadas ao redor deles, causando falta de ar e tosse."
     },
     {
       "id": "b22-q028",
@@ -873,7 +900,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Mesmo sendo jovens e trabalhando informalmente numa fabriquinha, os ferimentos que eles tiveram enquanto trabalhavam contam como acidente de trabalho e devem ser notificados, não importa a idade nem se o emprego é formal."
     },
     {
       "id": "b22-q029",
@@ -903,7 +931,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Uma dor no peito que dura só uns 5 minutinhos e passa rápido não é o padrão típico de alerta para um problema sério no coração - o que preocupa mais é dor em repouso, que vai piorando ou que é forte e recente."
     },
     {
       "id": "b22-q030",
@@ -934,7 +963,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "O que realmente ajuda a diminuir o esgotamento dos médicos (burnout) é mudar como o trabalho é organizado, como os plantões e a carga de trabalho, e melhorar o trabalho em equipe, mais do que apenas ensinar técnicas individuais."
     },
     {
       "id": "b22-q031",
@@ -966,7 +996,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando o coração está sob esforço muito grande (pressão e batimento bem altos) numa possível dissecção da aorta, o primeiro remédio é um que faz o coração bater mais devagar, para depois cuidar da pressão."
     },
     {
       "id": "b22-q032",
@@ -999,7 +1030,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "A dor que melhora quando a pessoa se inclina para frente é típica de uma inflamação ao redor do coração, e o tratamento nesse caso é um remédio para diminuir a inflamação (corticoide), não os remédios usados no infarto."
     },
     {
       "id": "b22-q033",
@@ -1030,7 +1062,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Existem duas formas de reconectar o estômago depois de tirar um pedaço dele: uma liga ao duodeno e outra ao jejuno (uma parte mais abaixo do intestino) - a segunda é escolhida quando a úlcera é mais complicada."
     },
     {
       "id": "b22-q034",
@@ -1061,7 +1094,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-205"
+      "scheduleId": "cron-205",
+      "kids": "Uma bactéria chamada Helicobacter pylori, que infecta o estômago, é o fator de risco mais importante para esse tipo de câncer, mais do que fumar, beber ou a alimentação."
     },
     {
       "id": "b22-q035",
@@ -1091,7 +1125,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando o infarto atinge a parte de baixo do coração e, dias depois, aparece um sopro forte com queda de pressão, é sinal de que uma cordinha que segura a válvula do coração se rompeu."
     },
     {
       "id": "b22-q036",
@@ -1121,7 +1156,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "As alterações vistas no aparelho do coração (eletrocardiograma) mostram que o músculo do coração está sofrendo por falta de sangue, mesmo sem apontar exatamente qual artéria está entupida."
     },
     {
       "id": "b22-q037",
@@ -1154,7 +1190,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Esse padrão específico no exame do coração indica que a artéria mais importante do coração, que alimenta a maior parte dele, está com um bloqueio grave."
     },
     {
       "id": "b22-q038",
@@ -1185,7 +1222,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Depois de um susto ou emoção muito forte, o coração pode ficar temporariamente fraco e incharzinho na ponta, imitando um infarto sem realmente ter entupimento - é a chamada síndrome do coração partido."
     },
     {
       "id": "b22-q039",
@@ -1216,7 +1254,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Não importa se as jovens trabalhadoras eram registradas oficialmente ou só chamadas nos dias de mais produção - todas se machucaram fazendo o trabalho, então todas contam como acidente de trabalho."
     },
     {
       "id": "b22-q040",
@@ -1246,7 +1285,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando os exames de risco do coração (escores) mostram alto risco, mesmo sem a troponina alterada, o certo é fazer logo um exame que olha as artérias do coração por dentro (cateterismo) em até um dia."
     },
     {
       "id": "b22-q041",
@@ -1276,7 +1316,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Febre alta que passa e, na sequência, aparecem manchinhas rosadas no corpo de um bebê sem mais nada de errado é sinal de uma infecção viral simples, então basta cuidar dos sintomas e ficar de olho em sinais de piora."
     },
     {
       "id": "b22-q042",
@@ -1307,7 +1348,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "O papel do médico do trabalho, quando alguém se machuca fazendo um trabalho pesado, é olhar os riscos do ambiente e ajudar a mudar as tarefas para caber nas novas limitações da pessoa, evitando que ela se machuque de novo."
     },
     {
       "id": "b22-q043",
@@ -1337,7 +1379,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Cada uma dessas doenças de pele tem seu jeito de aparecer: bolhinhas nas mãos, pés e boca é uma; febre alta com olhos vermelhos, mãos inchadas e gânglios no pescoço é outra (Kawasaki); e manchas assintomáticas na pele é uma terceira (Gianotti-Crosti)."
     },
     {
       "id": "b22-q044",
@@ -1367,7 +1410,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Tosse, coriza, olhos vermelhos, febre alta e depois manchas que começam atrás das orelhas e no rosto, junto com pontinhos brancos na boca, são sinais clássicos do sarampo."
     },
     {
       "id": "b22-q045",
@@ -1397,7 +1441,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "A varicela (catapora) costuma ser uma doença leve na maioria das crianças, mas os pais precisam saber que, embora rara, ela pode às vezes trazer complicações sérias."
     },
     {
       "id": "b22-q046",
@@ -1427,7 +1472,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Na roséola, os gânglios do pescoço e atrás das orelhas costumam inchar poucos dias depois de começar a febre, e isso ajuda a reconhecer a doença."
     },
     {
       "id": "b22-q047",
@@ -1458,7 +1504,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "As bolinhas com coceira nas mãos, pés e tronco de um bebê, junto com a mãe tendo coceira parecida nas axilas há mais tempo, é sinal de escabiose (sarna), causada por um bichinho microscópico na pele, e o tratamento é um creme especial que mata esse bichinho."
     },
     {
       "id": "b22-q048",
@@ -1488,7 +1535,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Quando uma criança pega sarampo, as outras crianças que convivem com ela na creche e ainda não estão bem vacinadas podem tomar a vacina tríplice viral rapidinho (em até 3 dias) para se proteger, dependendo da idade e da situação de vacinação de cada uma."
     },
     {
       "id": "b22-q049",
@@ -1518,7 +1566,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-206"
+      "scheduleId": "cron-206",
+      "kids": "Quando o eletrocardiograma mostra um bloqueio no coração que não existia há 2 meses, junto com todos os sinais de infarto, o cuidado é tratar como o tipo mais grave de infarto e chamar a equipe que desentope a artéria o quanto antes."
     },
     {
       "id": "b22-q050",
@@ -1548,7 +1597,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando a troponina (substância que indica dano ao coração) começa a subir e a dor não passa com o remédio de alívio rápido, o certo é dar remédios para abrir os vasos e afinar o sangue, e encaminhar para o exame que olha as artérias por dentro logo em seguida."
     },
     {
       "id": "b22-q051",
@@ -1578,7 +1628,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Na inflamação ao redor do coração (pericardite), o eletrocardiograma costuma mostrar uma elevação espalhada em várias partes do desenho do coração, diferente do infarto que afeta só uma área."
     },
     {
       "id": "b22-q052",
@@ -1608,7 +1659,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Dor nas costas há um mês, sem sinais de perigo (sem febre, sem perda de peso, sem alteração nos nervos), geralmente não precisa de exames de imagem - o tratamento é remédio para dor, relaxante muscular e incentivo a se exercitar."
     },
     {
       "id": "b22-q053",
@@ -1639,7 +1691,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Toda vez que alguém se machuca durante o trabalho, mesmo que o ferimento seja pequeno, a empresa deve preencher o documento oficial que avisa sobre o acidente de trabalho."
     },
     {
       "id": "b22-q054",
@@ -1669,7 +1722,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-205"
+      "scheduleId": "cron-205",
+      "kids": "Para esse câncer no meio do estômago, sem espalhar para outros órgãos, a cirurgia certa retira parte do estômago (não o estômago inteiro) e limpa bem os gânglios linfáticos ao redor."
     },
     {
       "id": "b22-q055",
@@ -1703,7 +1757,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando não existe um hospital especializado por perto e a viagem até lá demoraria muito (mais de 2 horas), o melhor é dar logo o remédio que desfaz o coágulo (trombolítico) ali mesmo, junto com os remédios que afinam o sangue."
     },
     {
       "id": "b22-q056",
@@ -1736,7 +1791,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Para confirmar que é uma inflamação ao redor do coração (pericardite), os médicos procuram pelo menos duas de quatro pistas: a dor típica, um som de atrito ao ouvir o coração, líquido ao redor do coração, ou alterações no eletrocardiograma."
     },
     {
       "id": "b22-q057",
@@ -1767,7 +1823,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Depois de uma inflamação no coração causada por vírus (miocardite), a pessoa só pode voltar a fazer exercício com segurança quando estiver sem sintomas e com os exames normalizados, o que geralmente demora de 3 a 6 meses, sempre acompanhado por médico."
     },
     {
       "id": "b22-q058",
@@ -1798,7 +1855,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-206"
+      "scheduleId": "cron-206",
+      "kids": "Um remédio chamado nitroprussiato de sódio pode, sem querer, piorar a falta de sangue no coração durante um infarto, então ele deve ser evitado nesses casos."
     },
     {
       "id": "b22-q059",
@@ -1828,7 +1886,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Trabalhar muitos anos perto de máquinas barulhentas sem proteção nos ouvidos pode causar perda de audição, e quando isso é identificado, o médico deve avisar o sistema de saúde, preencher o documento de acidente de trabalho e encaminhar a pessoa para um centro especializado."
     },
     {
       "id": "b22-q060",
@@ -1858,7 +1917,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Respirar poeira de pedra por muitos anos numa mina de ouro, sem proteção, pode causar uma doença pulmonar chamada silicose, que deixa bolinhas nos pulmões e falta de ar que piora aos poucos."
     },
     {
       "id": "b22-q061",
@@ -1888,7 +1948,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Febre alta por 3 dias que passa e, logo depois, aparecem manchas rosadas espalhando do tronco para o resto do corpo é a roséola, causada por um vírus da família do herpes - não existe vacina específica para prevenir essa doença."
     },
     {
       "id": "b22-q062",
@@ -1918,7 +1979,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Respirar poeira de amianto por muito tempo pode causar não só doenças nos pulmões, mas também vários tipos de câncer, incluindo em locais como pulmão, laringe, ovário e até estômago."
     },
     {
       "id": "b22-q063",
@@ -1948,7 +2010,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "No sarampo, quando a criança tem as defesas do corpo fracas, podem aparecer complicações sérias nos pulmões, fígado e cérebro, mas convulsões causadas só pela febre não são consideradas uma dessas complicações típicas."
     },
     {
       "id": "b22-q064",
@@ -1978,7 +2041,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "No eritema infeccioso, a vermelhidão começa nas bochechas (parecendo um tapa) e depois se espalha pelos braços e pernas formando um desenho rendado na pele."
     },
     {
       "id": "b22-q065",
@@ -2008,7 +2072,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Quem pode preencher o documento de acidente de trabalho é a empresa, mas se ela não fizer isso, o próprio trabalhador, o sindicato ou até o médico que o atendeu podem preencher."
     },
     {
       "id": "b22-q066",
@@ -2038,7 +2103,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Quando a dor nas costas de um trabalhador está ligada ao trabalho pesado, a equipe de saúde deve avisar o sistema de vigilância, encaminhar para um especialista e continuar cuidando da pessoa, sem cortar o acompanhamento."
     },
     {
       "id": "b22-q067",
@@ -2068,7 +2134,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Uma dor nas costas de poucas semanas, sem sinais de alerta como febre, perda de peso ou fraqueza nas pernas, costuma ser benigna - o melhor é explicar isso ao paciente, dar remédio para dor e incentivar atividade leve, revendo depois de um mês."
     },
     {
       "id": "b22-q068",
@@ -2098,7 +2165,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "As manchinhas vermelhas que apareceram depois de tomar o antibiótico não eram alergia à droga, e sim um sinal de que a doença real era mononucleose (causada por vírus) - por isso o certo é parar o antibiótico e só cuidar dos sintomas com repouso."
     },
     {
       "id": "b22-q069",
@@ -2129,7 +2197,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-205"
+      "scheduleId": "cron-205",
+      "kids": "Uma substância chamada grelina, produzida no estômago, é conhecida como o 'hormônio da fome' porque avisa ao cérebro que está na hora de comer."
     },
     {
       "id": "b22-q070",
@@ -2159,7 +2228,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Certas manchinhas na parte de trás da garganta, chamadas de sinal de Nagayama, ajudam a identificar a roséola (exantema súbito) em bebês."
     },
     {
       "id": "b22-q071",
@@ -2190,7 +2260,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Crianças com pouca vitamina A no corpo correm mais risco de ter complicações graves quando pegam sarampo."
     },
     {
       "id": "b22-q072",
@@ -2220,7 +2291,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Quando várias pessoas ficam mal depois de mexer com veneno de plantas (agrotóxico), o médico deve tratar os sintomas, pedir exames, avisar o sistema de saúde sobre o caso e pedir ajuda de uma equipe especializada em saúde do trabalhador."
     },
     {
       "id": "b22-q073",
@@ -2251,7 +2323,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Uma criança com catapora que tem doença crônica de pulmão e mora com uma tia grávida sem imunidade precisa tomar um remédio antiviral (aciclovir) para reduzir o risco de complicações e de espalhar a doença."
     },
     {
       "id": "b22-q074",
@@ -2281,7 +2354,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Febre alta por muitos dias, garganta com pus, gânglios inchados, fígado e baço maiores e manchas pelo corpo, junto com um exame de sangue mostrando células de defesa de aparência estranha, é o padrão típico da mononucleose."
     },
     {
       "id": "b22-q076",
@@ -2311,7 +2385,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "A perda de audição causada por barulho muito forte pode até parecer igual nos dois ouvidos, mas nem sempre é exatamente a mesma coisa dos dois lados - o importante é saber que, uma vez afastado do barulho, ela para de piorar."
     },
     {
       "id": "b22-q077",
@@ -2342,7 +2417,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Quando alguém trabalha muitos anos com venenos de plantas sem proteção, o corpo pode ficar intoxicado aos poucos, e o exame que confirma isso mede uma substância do sangue chamada acetilcolinesterase, que fica baixa nesses casos."
     },
     {
       "id": "b22-q078",
@@ -2372,7 +2448,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "As pessoas que estavam trabalhando na hora da explosão, incluindo o entregador, contam como vítimas de acidente de trabalho, mas a criança que só estava passando na rua com a mãe não estava trabalhando, então não entra nessa notificação."
     },
     {
       "id": "b22-q079",
@@ -2404,7 +2481,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando o remédio que desentope a artéria não funciona direito (a dor continua forte), o jeito é ajustar os remédios para dor e encaminhar rápido para um exame que desentope o vaso manualmente (cateterismo de resgate)."
     },
     {
       "id": "b22-q080",
@@ -2436,7 +2514,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "O jeito que o eletrocardiograma desenha o problema ajuda a descobrir qual das artérias do coração está entupida - nesse caso, os sinais apontam para a artéria da frente do coração."
     },
     {
       "id": "b22-q081",
@@ -2466,7 +2545,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Dependendo de qual parte do desenho do eletrocardiograma está alterada, dá para saber qual parte do coração foi afetada, e existe uma escala (Killip) que ajuda a prever o risco de complicações desse paciente."
     },
     {
       "id": "b22-q082",
@@ -2496,7 +2576,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-206"
+      "scheduleId": "cron-206",
+      "kids": "Nem todo remédio bom para o coração serve para todo mundo automaticamente - remédios que protegem os rins e o coração (IECA) precisam ser avaliados antes de dar de rotina para todos os pacientes."
     },
     {
       "id": "b22-q083",
@@ -2526,7 +2607,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando alguém tem sinais de infarto mas o exame que olha as artérias por dentro não mostra entupimento, pode ser que um vaso tenha rasgado sozinho (dissecção espontânea da coronária) - isso é mais comum em mulheres perto do parto."
     },
     {
       "id": "b22-q084",
@@ -2561,7 +2643,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando a pressão cai muito depois do remédio que desentope o vaso, o jeito é dar um pouco de soro para melhorar a pressão, completar a dose do remédio que afina o sangue, e mandar para o exame que desentope na hora (cateterismo de resgate)."
     },
     {
       "id": "b22-q085",
@@ -2591,7 +2674,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Quando o infarto já está avançado e o paciente está muito mal (pressão baixa, confuso), o mais importante e urgente é desentupir a artéria do coração o quanto antes, junto com apoio para manter a pressão e a respiração."
     },
     {
       "id": "b22-q086",
@@ -2621,7 +2705,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Depois de um infarto tratado, é melhor começar o programa de reabilitação (exercícios supervisionados) o mais cedo possível, porque isso ajuda o coração a se recuperar melhor."
     },
     {
       "id": "b22-q087",
@@ -2654,7 +2739,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Alguns remédios modernos contra câncer (que ativam o sistema de defesa do corpo) podem, por engano, fazer as defesas atacarem o próprio coração - quando isso acontece, o remédio precisa ser parado e se usa corticoide para acalmar essa reação."
     },
     {
       "id": "b22-q088",
@@ -2684,7 +2770,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Uma pessoa muito alta, com dedos compridos e articulações soltas (sinais de uma doença do tecido conjuntivo) que tem dor forte nas costas e perde o pulso numa perna está tendo um rasgo na artéria principal do corpo (dissecção de aorta)."
     },
     {
       "id": "b22-q089",
@@ -2723,7 +2810,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-206"
+      "scheduleId": "cron-206",
+      "kids": "Quando o coração fica muito fraco de repente depois de uma infecção viral, com pressão baixa e batimento acelerado, é preciso dar remédios para sustentar a pressão e planejar um exame que confirma a inflamação no músculo do coração (miocardite)."
     },
     {
       "id": "b22-q090",
@@ -2754,7 +2842,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Um som de atrito no coração, dor que piora ao respirar e melhora ao inclinar para frente, com exames do coração normais, é sinal de inflamação ao redor do coração (pericardite), tratada com aspirina e colchicina."
     },
     {
       "id": "b22-q091",
@@ -2785,7 +2874,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "As bolhinhas na boca, mãos e pés que fazem uma criança recusar comida (principalmente coisas ácidas, porque doem na boca) são da doença mão-pé-boca; ela não precisa ser notificada uma a uma, mas se aparecerem vários casos juntos, isso deve ser avisado à vigilância em saúde."
     },
     {
       "id": "b22-q092",
@@ -2818,7 +2908,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "As lesões de pele mostradas na imagem são causadas pelo vírus da varicela, que provoca as famosas bolinhas de água (catapora)."
     },
     {
       "id": "b22-q093",
@@ -2848,7 +2939,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Depois de vários dias de febre alta que passa, aparecer uma vermelhidão pelo corpo pode parecer alergia, mas na verdade é o sinal clássico da roséola (exantema súbito), uma doença viral comum em bebês."
     },
     {
       "id": "b22-q094",
@@ -2878,7 +2970,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Tosse, coriza, olhos vermelhos, febre alta e depois manchas vermelhas pelo corpo, junto com pontinhos brancos na boca, indicam uma infecção causada por um vírus da família paramixovírus - é o sarampo."
     },
     {
       "id": "b22-q095",
@@ -2910,7 +3003,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "As lesões de pele mostradas na imagem são causadas por uma bactéria chamada estreptococo."
     },
     {
       "id": "b22-q096",
@@ -2941,7 +3035,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Tosse, coriza, febre, depois conjuntivite, cansaço e manchas vermelhas que começam atrás das orelhas e descem pelo corpo, terminando com uma descamação fina, são sinais clássicos do sarampo."
     },
     {
       "id": "b22-q097",
@@ -2971,7 +3066,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Quando uma criança pega sarampo, os irmãozinhos que moram com ela recebem proteções diferentes conforme a idade: o bebê pequeno (que ainda não pode tomar a vacina) recebe uma injeção de anticorpos prontos, e o irmão mais velho pode ser vacinado."
     },
     {
       "id": "b22-q098",
@@ -3002,7 +3098,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-204"
+      "scheduleId": "cron-204",
+      "kids": "Febre alta por alguns dias que passa e, logo depois, manchinhas aparecem primeiro no tronco e depois se espalham para os braços e pernas é o padrão clássico do exantema súbito (roséola)."
     },
     {
       "id": "b22-q099",
@@ -3032,7 +3129,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Quando alguém que trabalhou muitos anos respirando poeira de sílica também tem um teste de tuberculose positivo, o médico não deve tratar de cara - primeiro precisa confirmar com mais exames antes de começar o remédio para tuberculose, mas já pode notificar as duas doenças."
     },
     {
       "id": "b22-q100",
@@ -3062,7 +3160,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Quando alguém que trabalhou muitos anos numa mina de sílica desenvolve uma doença grave nos pulmões, o correto é avisar que foi causada pelo trabalho, tirar a pessoa definitivamente daquele ambiente, ajudar a recuperar a respiração com fisioterapia, vacinar contra gripe e pneumonia, e acompanhar com exames todo ano."
     },
     {
       "id": "b22-q101",
@@ -3092,7 +3191,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Um encanador que trabalhou muitos anos perto do amianto (asbesto) desenvolveu um câncer raro na membrana que envolve o pulmão - essa doença tem uma relação direta e comprovada com aquele tipo de trabalho."
     },
     {
       "id": "b22-q102",
@@ -3122,7 +3222,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Depois de ser picado por uma cobra no trabalho no campo, o certo é lavar o local com água e sabão, deixar a perna elevada, avisar o sistema de saúde, levar para um hospital que tenha o soro certo e verificar se a vacina contra tétano está em dia."
     },
     {
       "id": "b22-q103",
@@ -3153,7 +3254,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Para não sentir mais dor no cotovelo por causa de movimentos repetidos no trabalho (como digitar muito), o melhor é fazer pausas regulares e ajustar a postura e o ambiente de trabalho, em vez de imobilizar o braço ou parar de se mexer."
     },
     {
       "id": "b22-q104",
@@ -3183,7 +3285,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Testes feitos com as mãos (como bater de leve no pulso) ajudam a suspeitar de um nervo apertado no punho, mas sozinhos eles não são muito confiáveis - por isso não devem ser usados como única prova para fechar o diagnóstico."
     },
     {
       "id": "b22-q106",
@@ -3213,7 +3316,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "A perda de audição causada por barulho forte no trabalho aparece de um jeito bem característico no exame de audição, com uma queda especial numa certa faixa de som chamada entalhe."
     },
     {
       "id": "b22-q107",
@@ -3243,7 +3347,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Todo acidente que acontece durante o trabalho precisa ser avisado ao sistema de saúde, para que os médicos e o governo possam acompanhar e prevenir novos casos parecidos."
     },
     {
       "id": "b22-q108",
@@ -3274,7 +3379,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Quando trabalhadores adoecem por causa de produtos químicos no trabalho, a empresa é quem deve preencher o documento oficial de acidente de trabalho, mas se ela não fizer isso, o próprio trabalhador ou o sindicato podem preencher."
     },
     {
       "id": "b22-q109",
@@ -3304,7 +3410,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-207"
+      "scheduleId": "cron-207",
+      "kids": "Para o formigamento nas mãos que acorda a pessoa à noite (por um nervo apertado no punho), o primeiro tratamento não é remédio nem cirurgia, e sim usar uma tala à noite para manter o punho numa posição que não aperte o nervo."
     },
     {
       "id": "b22-q110",
@@ -3334,7 +3441,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Para avisar o sistema de saúde sobre uma doença causada por movimento repetitivo no trabalho, não é obrigatório ter um exame especial confirmando - o diagnóstico clínico já é suficiente para notificar."
     },
     {
       "id": "b22-q111",
@@ -3364,7 +3472,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Existem doenças que o trabalho não causa sozinho, mas que pioram ou 'acordam' um problema que a pessoa já tinha escondido, como certas alergias - essas entram num grupo especial dessa classificação de doenças do trabalho."
     },
     {
       "id": "b22-q112",
@@ -3394,7 +3503,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "Um soldador que trabalhou 30 anos com solda elétrica e desenvolveu feridas que não cicatrizam no rosto pode ter um câncer de pele ligado à sua profissão, e isso deve ser avisado ao sistema de saúde assim que for confirmado por exame."
     },
     {
       "id": "b22-q113",
@@ -3424,7 +3534,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-203"
+      "scheduleId": "cron-203",
+      "kids": "Trabalhar muitos anos perto de produtos químicos (em fábricas, fundições ou lidando com certos venenos de plantas) pode danificar o cérebro aos poucos, causando problemas de memória, atenção e outras funções importantes."
     },
     {
       "id": "b22-q114",
@@ -3455,7 +3566,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-202"
+      "scheduleId": "cron-202",
+      "kids": "As alergias de pele causadas pelo trabalho muitas vezes não são registradas porque as pessoas se automedicam; descobrir o que causou a alergia é fundamental para tratar e prevenir, e isso pode afetar bastante a vida e o trabalho da pessoa - mas as medidas de prevenção não se resumem só a usar equipamento de proteção, também é preciso mudar processos e educar os trabalhadores."
     }
   ]
 }

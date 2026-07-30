@@ -31,7 +31,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "Na síndrome HELLP, o médico não precisa fazer sempre cesárea: ele escolhe o jeito de o bebê nascer olhando o que é mais seguro para a mãe e o bebê naquele momento, seja parto normal ou cesárea."
     },
     {
       "id": "b16-q002",
@@ -61,7 +62,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "O remédio que a grávida tomava (captopril) pode fazer mal para o rim do bebê, então o médico troca por um remédio seguro para grávida (metildopa) e também pede para comer com pouco sal."
     },
     {
       "id": "b16-q003",
@@ -91,7 +93,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O rapaz ficou com o fígado inflamado, por isso a pele ficou amarela e o xixi escuro. Como ele usa agulhas para se drogar, o vírus mais provável de ter entrado no corpo dele foi o da hepatite B, que passa pelo sangue."
     },
     {
       "id": "b16-q004",
@@ -121,7 +124,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "O remédio para evitar convulsão (sulfato de magnésio) acumulou demais no corpo da mãe, deixando-a sonolenta e sem um reflexo importante do joelho. Por isso o médico precisa dar o antídoto, que é o cálcio, para desfazer esse efeito."
     },
     {
       "id": "b16-q005",
@@ -152,7 +156,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida tem pressão muito alta com dor de cabeça forte, dor na barriga e problemas na visão, sinais de perigo. Por isso ela precisa tomar o remédio que protege contra convulsões (sulfato de magnésio), e não outro remédio mais fraco."
     },
     {
       "id": "b16-q006",
@@ -182,7 +187,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Para evitar que as pessoas peguem a doença transmitida pelo xixi de ratos, a prefeitura precisa cuidar do ambiente: tirar comida e esconderijos dos ratos, matar os ratos que já estão lá, e ensinar as pessoas a se protegerem."
     },
     {
       "id": "b16-q007",
@@ -212,7 +218,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O homem ficou com o fígado inflamado por um vírus que pegou usando agulhas compartilhadas. Como ele está conseguindo comer e beber bem e não tem sinais de fígado gravemente comprometido, o tratamento é só cuidar dos sintomas e evitar remédios que sobrecarregam o fígado."
     },
     {
       "id": "b16-q008",
@@ -242,7 +249,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "Além do remédio para baixar a pressão, a médica precisa dar outro remédio (sulfato de magnésio) só para proteger o cérebro da grávida contra convulsões. Esse remédio não serve para baixar a pressão, serve para evitar uma crise convulsiva."
     },
     {
       "id": "b16-q009",
@@ -273,7 +281,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "Quando um testículo dói de repente, existem várias doenças diferentes que podem parecer a mesma coisa, então o médico precisa pensar em várias possibilidades diferentes, não só na torção do testículo."
     },
     {
       "id": "b16-q010",
@@ -304,7 +313,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "O testículo do menino torceu e ficou sem circulação de sangue, o que é uma emergência. Como não tem aparelho de ultrassom no hospital mas tem sala de cirurgia, o melhor é operar na hora, porque quanto mais rápido, maior a chance de salvar o testículo."
     },
     {
       "id": "b16-q011",
@@ -334,7 +344,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A moça teve um período de gripe, cansaço e enjoo que melhorou bem na hora em que ela ficou amarela. Isso é bem típico de uma inflamação do fígado causada por vírus, diferente de outras doenças que causariam outros sinais junto."
     },
     {
       "id": "b16-q012",
@@ -369,7 +380,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Quando há uma quantidade muito grande de células doentes sendo destruídas rapidamente no corpo, isso solta substâncias que podem fazer mal aos rins. Por isso o médico precisa medir essas substâncias no sangue para saber se isso está acontecendo e cuidar antes que piore."
     },
     {
       "id": "b16-semanais-q13",
@@ -399,7 +411,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "Dor testicular súbita, o testículo que quase não se mexe e o reflexo da perna que sumiu são sinais clássicos de que o testículo torceu, e a falta de aparelho de ultrassom não deve atrasar o cuidado."
     },
     {
       "id": "b16-q014",
@@ -430,7 +443,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Existe um exame de sangue que mostra que a pessoa está protegida contra a hepatite B, seja porque já teve a doença e se curou, seja porque tomou a vacina. Esse exame se chama anti-HBs."
     },
     {
       "id": "b16-q015",
@@ -460,7 +474,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A dor estava só numa pontinha de cima do testículo, e o reflexo da perna continuava funcionando normalmente. Isso é sinal de que não foi o testículo inteiro que torceu, mas sim um pequeno apêndice dele, algo mais simples que se trata só com remédio anti-inflamatório e repouso, sem precisar de cirurgia."
     },
     {
       "id": "b16-q016",
@@ -490,7 +505,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "Um caroço duro no testículo que não dói e que a luz não atravessa (diferente de um saco cheio de líquido) é um sinal de alerta forte para tumor, então o médico deve pensar logo em câncer de testículo até provar o contrário."
     },
     {
       "id": "b16-q017",
@@ -520,7 +536,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "Existe um teste antigo, que é levantar o testículo para ver se a dor melhora, e muita gente pensa que ele confirma se é infecção e não torção. Mas esse teste não é confiável, então não se deve confiar nele sozinho para decidir o tratamento."
     },
     {
       "id": "b16-q018",
@@ -550,7 +567,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "Quando a pressão da grávida fica muito alta por um tempo, acima de um certo limite, isso é considerado grave, e por isso ela precisa ser internada na maternidade, mais do que outros sinais como a quantidade de proteína na urina."
     },
     {
       "id": "b16-q019",
@@ -580,7 +598,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Quando o cirurgião destorce o testículo durante a operação e vê que ele voltou a ficar rosado e saudável, ele costura os dois testículos, o que torceu e o do outro lado, para que fiquem presos no lugar certo e não torçam de novo."
     },
     {
       "id": "b16-q020",
@@ -611,7 +630,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Esses remédios contra malária podem bagunçar o ritmo do coração, e se a pessoa também estiver tomando outro remédio que faz o mesmo efeito, o risco de o coração bater de forma perigosa fica ainda maior."
     },
     {
       "id": "b16-q021",
@@ -642,7 +662,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Quando a doença transmitida pelo xixi de rato já está grave, o antibiótico precisa ser aplicado direto na veia, e a penicilina cristalina é uma boa escolha para isso, bem diferente da penicilina que se toma em dose única no músculo."
     },
     {
       "id": "b16-q022",
@@ -672,7 +693,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida está com pressão alta, dor de cabeça forte que não passa e ganhou peso rápido demais. Mesmo sem a pressão estar extremamente alta, esses sinais juntos são preocupantes o bastante para internar e investigar com exames urgentes, em vez de mandar ela para casa."
     },
     {
       "id": "b16-q023",
@@ -702,7 +724,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Febre, dor nas panturrilhas, olhos avermelhados, xixi escuro e potássio baixo no sangue são pistas de uma doença transmitida por água contaminada com xixi de rato. Para confirmar, existe um exame de sangue especial que procura anticorpos contra essa bactéria."
     },
     {
       "id": "b16-q024",
@@ -732,7 +755,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Quando alguém pode estar com febre amarela pega na mata, ainda mais depois de macacos aparecerem mortos por perto, o médico precisa avisar as autoridades de saúde na mesma hora, mesmo antes de ter certeza. O exame de sangue que confirma só funciona direito depois de alguns dias de doença, se a pessoa não tiver tomado a vacina."
     },
     {
       "id": "b16-q025",
@@ -762,7 +786,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "A menina tem um caroço duro na barriga e também os olhos se mexem de um jeito estranho e descontrolado, junto com abalos no corpo. Essa combinação de sintomas é bem característica de um tipo de tumor que nasce perto do rim, chamado neuroblastoma."
     },
     {
       "id": "b16-q026",
@@ -793,7 +818,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida está com pressão muito alta, dor de cabeça e visão embaçada, então precisa do remédio que protege contra convulsão (sulfato de magnésio), e o time médico já deixa preparado ao lado da cama o remédio que serve de antídoto, caso o outro remédio faça mal demais."
     },
     {
       "id": "b16-q027",
@@ -824,7 +850,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Quando o médico desconfia de uma doença grave transmitida por carrapato, mesmo que o paciente não tenha visto nenhum carrapato nele, ele não pode esperar o resultado do exame de sangue para começar o remédio, porque a demora pode ser perigosa. Além disso, essa doença precisa ser avisada para todos os níveis de saúde, da cidade até o governo federal."
     },
     {
       "id": "b16-q028",
@@ -854,7 +881,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "Em bebês bem pequenos, um caroço duro na barriga costuma ser um tipo de tumor chamado neuroblastoma, diferente do tumor de rim que é mais comum em crianças maiores. Quanto mais novo o bebê, melhores costumam ser as chances, e às vezes esse tumor até desaparece sozinho."
     },
     {
       "id": "b16-q029",
@@ -885,7 +913,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Um exame de sangue mostrou que a pessoa já teve contato com o vírus da hepatite A no passado, ou tomou a vacina, e está protegida contra ele. Isso é diferente de estar doente agora."
     },
     {
       "id": "b16-q030",
@@ -916,7 +945,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Cada tipo de hepatite pode causar problemas diferentes em outras partes do corpo, não só no fígado. Duas complicações citadas, uma nos vasos sanguíneos e outra nos rins, são mais ligadas à hepatite B do que à hepatite C, ao contrário do que a frase dizia."
     },
     {
       "id": "b16-q031",
@@ -947,7 +977,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "O testículo do menino está vermelho, inchado e sem o reflexo normal, sinais fortes de torção. O certo é já pedir o exame de imagem que mostra a circulação de sangue e, ao mesmo tempo, chamar o time de cirurgia, para não perder tempo."
     },
     {
       "id": "b16-q032",
@@ -977,7 +1008,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Existe um jeito diferente de descrever as fases da vida de uma família quando ela é de classe popular, mais simples que o modelo tradicional: jovem solteiro, família com filhos, e família mais velha, sem passar por todas aquelas etapas específicas do modelo clássico."
     },
     {
       "id": "b16-semanais-q33",
@@ -1007,7 +1039,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Quando o exame de sangue mostra que a pessoa já teve contato com o vírus da hepatite C, é preciso fazer outro exame para saber se o vírus ainda está ativo no corpo, porque só o primeiro exame não garante isso."
     },
     {
       "id": "b16-q034",
@@ -1037,7 +1070,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Grupos de pessoas com problemas parecidos ajudam umas as outras porque se identificam entre si, e os grupos de saúde na comunidade funcionam melhor quando todos participam junto, não quando só uma pessoa fala e os outros só escutam."
     },
     {
       "id": "b16-q035",
@@ -1067,7 +1101,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida está com a pressão um pouco alta pela primeira vez depois de mais da metade da gravidez, mas ainda não dá para saber se é só pressão alta da gravidez ou algo mais sério. Por isso o médico precisa pedir exames para ver se tem proteína na urina ou se algum órgão está sendo afetado, antes de decidir o tratamento."
     },
     {
       "id": "b16-q036",
@@ -1100,7 +1135,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O rapaz morava numa área que enche de água na chuva, teve dor forte nas pernas, olhos vermelhos e ficou amarelo. Tudo isso é bem característico da doença que se pega através de água suja com xixi de rato."
     },
     {
       "id": "b16-q037",
@@ -1131,7 +1167,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida está com pressão alta mas os exames de sangue e urina estão normais, então ainda não é pré-eclâmpsia, que precisa de outros sinais além da pressão alta. É apenas pressão alta da gravidez, que também pode precisar de tratamento."
     },
     {
       "id": "b16-q038",
@@ -1162,7 +1199,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "O rapaz acordou com dor muito forte no testículo, que ficou virado para o lado errado e não melhora quando é levantado, sinais de torção. Nesse caso a prova escolheu pedir o ultrassom com aparelho especial que vê a circulação de sangue, mas isso só vale se não atrasar a cirurgia."
     },
     {
       "id": "b16-q039",
@@ -1192,7 +1230,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A menina está com dor nos ossos, febre, gânglios inchados, fígado e baço grandes, manchinhas roxas na pele e ficou pálida. Tudo isso mostra que a medula óssea, a fábrica de células do sangue, está sendo tomada por uma doença, no caso um tipo de leucemia."
     },
     {
       "id": "b16-q040",
@@ -1222,7 +1261,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida já está com 40 semanas, a pressão está controlada, o bebê está bem e o colo do útero já está favorável para o parto. Então o melhor é induzir o parto normal, sem precisar esperar mais nem fazer mais exames."
     },
     {
       "id": "b16-q041",
@@ -1252,7 +1292,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Antes de resolver os problemas de uma comunidade, o agente de saúde precisa conhecer de verdade o lugar onde as pessoas vivem, como é o transporte, os morros e as dificuldades, e envolver a própria comunidade para pensar soluções juntos."
     },
     {
       "id": "b16-q042",
@@ -1282,7 +1323,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A mulher voltou de uma viagem à Amazônia e começou a ter febre muito alta a cada dois dias, seguida de muito calor e suor. Isso é bem típico de malária, e o exame que confirma é olhar o sangue dela no microscópio para ver o parasita."
     },
     {
       "id": "b16-q043",
@@ -1313,7 +1355,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "HELLP é o nome de três problemas que acontecem juntos na grávida: as hemácias se quebram, o fígado sofre e as plaquetas ficam baixas, sem precisar ter convulsão para isso acontecer."
     },
     {
       "id": "b16-q044",
@@ -1343,7 +1386,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Nesse surto, a hepatite A, que normalmente se pega pela comida ou água suja, se espalhou principalmente por contato sexual entre homens jovens, porque o vírus sai pelas fezes e pode passar em certos tipos de contato íntimo."
     },
     {
       "id": "b16-q045",
@@ -1373,7 +1417,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Para desenhar a árvore da família de um jeito completo, chamada genograma, é preciso mostrar pelo menos três gerações, não só duas, para conseguir ver se os problemas se repetem de pai para filho."
     },
     {
       "id": "b16-q046",
@@ -1407,7 +1452,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Olhando o desenho da família, dá para perceber que o pai e o marido têm comportamentos parecidos, como beber demais, o que é um sinal de que esse tipo de problema pode estar se repetindo de uma geração para a outra."
     },
     {
       "id": "b16-q047",
@@ -1437,7 +1483,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Depois de saber que a pessoa teve contato com o vírus da hepatite C, existe um exame, a elastografia (ou às vezes uma biópsia), que mostra o quanto o fígado já foi afetado pela doença."
     },
     {
       "id": "b16-q048",
@@ -1468,7 +1515,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O rapaz ficou muito doente com febre, dor nas pernas e olhos vermelhos, e depois o rim parou de funcionar direito, a pele ficou muito amarela e teve um pouco de sangramento no pulmão. Essa combinação grave é causada pela doença que se pega através de água com xixi de rato contaminado, na sua forma mais perigosa."
     },
     {
       "id": "b16-q049",
@@ -1499,7 +1547,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "Os exames de sangue mostram que essa mulher está mesmo infectada pelo vírus da hepatite B, e não só teve contato: um dos marcadores mostra que o vírus está bem ativo, se multiplicando no corpo dela."
     },
     {
       "id": "b16-q050",
@@ -1530,7 +1579,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O carrapato que transmite a febre maculosa pega a bactéria de um animal que ajuda a espalhar essa doença entre os carrapatos, e esse animal é a capivara."
     },
     {
       "id": "b16-q051",
@@ -1561,7 +1611,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Quando se desenha a árvore de uma família com um casal formado por um homem e uma mulher, existe uma regra: o quadrado do homem fica do lado esquerdo e o círculo da mulher do lado direito, ligados por uma linha que mostra que tipo de relação eles têm."
     },
     {
       "id": "b16-q052",
@@ -1592,7 +1643,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O rim que para de funcionar direito na doença transmitida por água com xixi de rato sofre um tipo específico de dano nos tubinhos dele, diferente de outros tipos de problema renal."
     },
     {
       "id": "b16-q053",
@@ -1623,7 +1675,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A leucemia mais comum em crianças costuma causar cansaço, dor nos ossos, febre, sangramentos fáceis e gânglios inchados, porque as células ruins tomam conta da medula óssea, que é onde o sangue é fabricado."
     },
     {
       "id": "b16-q054",
@@ -1653,7 +1706,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "O menino tem um caroço na perna que dói há meses, perdeu peso, e o raio-x mostra um osso sendo destruído com camadas em volta parecendo cascas de cebola. Isso é bem característico de um tipo de câncer ósseo que costuma aparecer no meio do osso."
     },
     {
       "id": "b16-q055",
@@ -1683,7 +1737,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "A equipe de saúde olhou os dados de toda a comunidade, viu qual doença estava mais fora de controle, no caso o diabetes, e decidiu focar esforços ali. Isso é pensar na saúde de todo o bairro, não só de uma pessoa por vez."
     },
     {
       "id": "b16-q056",
@@ -1713,7 +1768,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "Quando muitas células de câncer morrem de uma vez, depois da quimioterapia, elas soltam substâncias no sangue que sobem, como fósforo e potássio, e não descem como a frase errada dizia. Por isso ficar de olho nesses valores é importante para evitar problemas no coração e nos rins."
     },
     {
       "id": "b16-q057",
@@ -1744,7 +1800,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Os exames mostram que essa pessoa já teve contato com o vírus da hepatite B no passado, lutou contra ele e se curou sozinha, ficando com proteção natural, diferente de quem só tomou a vacina."
     },
     {
       "id": "b16-semanais-q58",
@@ -1775,7 +1832,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Quando o vírus da hepatite C entra no corpo, o material genético dele (RNA) aparece no sangue bem antes dos anticorpos. Por isso, o exame que encontra esse RNA é o jeito mais rápido de descobrir a infecção logo no início."
     },
     {
       "id": "b16-q059",
@@ -1805,7 +1863,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "Sangue na urina, prisão de ventre, um caroço na barriga e pressão alta numa criança pequena são sinais bem típicos de um tumor que nasce no rim."
     },
     {
       "id": "b16-q060",
@@ -1835,7 +1894,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida toma um remédio para pressão que pode prejudicar o bebê, então precisa trocar por outro seguro e também tomar uma aspirina em dose baixa para ajudar a prevenir complicações, além de fazer exames para ver se algum órgão dela já está sendo afetado pela pressão alta."
     },
     {
       "id": "b16-q061",
@@ -1865,7 +1925,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida estava com pressão muito alta, dor forte, sangramento e o coração do bebê batendo devagar, sinais de que a placenta estava descolando e o bebê estava em perigo. Por isso, depois de estabilizar a mãe, o médico precisa tirar o bebê rápido, fazendo uma cesárea de urgência."
     },
     {
       "id": "b16-q062",
@@ -1895,7 +1956,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "Uma bolinha (massa) só de um lado da barriga, bem separadinha, junto com xixi cor de sangue, é o jeito clássico como aparece um tumor no rim chamado tumor de Wilms."
     },
     {
       "id": "b16-q063",
@@ -1925,7 +1987,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A criança suava muito, ficava vermelha e nervosa, com pressão alta e uma bolinha na barriga: isso acontece quando um tumor chamado neuroblastoma libera substâncias que aceleram o corpo. Por isso se pede um exame de urina e sangue que mede essas substâncias, além de uma tomografia para ver o tumor."
     },
     {
       "id": "b16-q064",
@@ -1955,7 +2018,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Existe uma ferramenta chamada PRACTICE que ajuda o médico a entender como a família toda está lidando com um problema, como papéis, sentimentos e forma de conversar. Ela serve exatamente para entender por que ninguém está ajudando a criança a tomar a insulina direito."
     },
     {
       "id": "b16-q065",
@@ -1985,7 +2049,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "A criança estava com sinais de um câncer no sangue (leucemia), e quando esse tipo de câncer é tratado, muitas células doentes morrem de uma vez e liberam substâncias que fazem mal para o corpo. Por isso, antes de qualquer outra coisa, dá-se bastante soro (sem potássio nem fósforo) e um remédio que evita o ácido úrico alto, para proteger os rins e o coração."
     },
     {
       "id": "b16-q066",
@@ -2015,7 +2080,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A menina estava com poucas defesas no sangue (bem baixinhas) por causa da quimioterapia, e febre nessa situação é muito perigosa. Por isso, além de colher exames, ela precisa ficar internada e tomar antibiótico forte na veia logo, e como estava com pouco sangue também recebe uma transfusão."
     },
     {
       "id": "b16-q067",
@@ -2046,7 +2112,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "Quando um bebê tem os olhos se mexendo rápido e desordenado, junto com tremores e desequilíbrio, os médicos sabem que isso pode ser sinal de um tumor chamado neuroblastoma, que às vezes faz o corpo reagir assim mesmo estando longe do cérebro."
     },
     {
       "id": "b16-q068",
@@ -2077,7 +2144,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Existe um teste chamado APGAR familiar que pergunta para a família o quanto ela está satisfeita com como se ajudam, se dão carinho e resolvem problemas juntos. Foi justamente isso que a pergunta descreveu."
     },
     {
       "id": "b16-q069",
@@ -2108,7 +2176,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Quando os médicos avaliam o quanto uma família precisa de mais cuidado, coisas como a pessoa ficar acamada, ter dificuldade física para se mover e morar em lugar sem saneamento básico contam muitos pontos, porque tornam a família mais vulnerável."
     },
     {
       "id": "b16-q070",
@@ -2138,7 +2207,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Quando o médico vai até a casa do paciente, ele consegue ver como a pessoa realmente vive, o que ajuda a entender melhor os problemas e a planejar um tratamento que funcione de verdade, e não serve só para ver se o remédio está sendo tomado certo."
     },
     {
       "id": "b16-q071",
@@ -2168,7 +2238,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "O bebê tinha rosto e características que lembram a síndrome de Down. Crianças com essa síndrome têm mais chance de ter um problema no sangue logo depois de nascer, então é importante fazer um hemograma para checar isso."
     },
     {
       "id": "b16-q072",
@@ -2198,7 +2269,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Quando uma leucemia (câncer do sangue) começa a ser tratada, muitas células ruins morrem rápido e soltam substâncias no sangue, causando alterações como potássio alto, fósforo alto e ácido úrico alto, enquanto o cálcio cai. Por isso esses são os problemas que se espera monitorar nesse paciente."
     },
     {
       "id": "b16-q073",
@@ -2229,7 +2301,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "O menino tinha dor nos ossos, febre há muito tempo, gânglios inchados, fígado e baço maiores e manchas roxas na pele. Tudo isso junto é sinal de que a medula óssea está sendo tomada por células de leucemia, então essa é a explicação mais provável."
     },
     {
       "id": "b16-q074",
@@ -2260,7 +2333,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Um exame chamado ecomapa desenha quem ajuda a pessoa fora da própria família, como vizinhos, igreja e serviços de saúde. Como o idoso mora sozinho e precisa de apoio externo, esse é o instrumento certo para descobrir quem pode dar essa ajuda."
     },
     {
       "id": "b16-q075",
@@ -2291,7 +2365,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Um adolescente com gânglio no pescoço que cresce aos poucos, junto com febre, suor à noite e perda de peso, é o jeito clássico como aparece um tipo de câncer chamado linfoma de Hodgkin."
     },
     {
       "id": "b16-q076",
@@ -2322,7 +2397,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Quando uma criança que está fazendo quimioterapia tem febre, isso é considerado uma emergência, porque ela pode estar com poucas defesas no corpo. Por isso, o certo é já começar antibiótico forte na veia e colher exames ao mesmo tempo, sem esperar os resultados."
     },
     {
       "id": "b16-q077",
@@ -2353,7 +2429,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A criança tinha dor nas pernas, febre há muito tempo, gânglios inchados, fígado e baço maiores e manchas roxas. Esse conjunto de sinais mostra que a medula óssea está doente, o que é típico de uma leucemia chamada leucemia linfoblástica aguda."
     },
     {
       "id": "b16-q078",
@@ -2384,7 +2461,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "O osteossarcoma é um tumor que gosta de aparecer nos ossos perto do joelho, porque é ali que o osso cresce mais rápido nas crianças. Por isso o fêmur (osso da coxa) é o local mais comum desse câncer."
     },
     {
       "id": "b16-q079",
@@ -2414,7 +2492,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O jovem tinha dor e inchaço no testículo, com mais sangue passando por ali no exame de imagem, o que mostra uma inflamação chamada epididimite, geralmente causada por uma infecção sexualmente transmissível. O tratamento certo é um antibiótico em dose única na veia mais outro remédio tomado por alguns dias."
     },
     {
       "id": "b16-q080",
@@ -2444,7 +2523,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A moça estava com febre, dor na barriga e o fígado dolorido, viajando para um lugar com risco de febre amarela e sem estar vacinada. Como os sintomas eram recentes, o exame que encontra o próprio vírus no sangue é o melhor para descobrir a doença logo no começo."
     },
     {
       "id": "b16-q081",
@@ -2474,7 +2554,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O homem tinha febre alta, mas o coração batia mais devagar do que se espera (isso se chama sinal de Faget), além de icterícia e sangue ruim para coagular, tudo isso em uma área com risco de febre amarela. Como não existe remédio específico contra esse vírus, o mais importante é avisar a vigilância em saúde e cuidar bem do paciente com suporte intensivo."
     },
     {
       "id": "b16-q082",
@@ -2504,7 +2585,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "Depois de ficar horas dentro da água suja da enchente com arranhões na pele, existe risco de pegar uma doença chamada leptospirose, que entra pelo corte na pele. Por isso, se indica um remédio em dose única para tentar evitar que a doença se desenvolva."
     },
     {
       "id": "b16-q083",
@@ -2534,7 +2616,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O homem estava com a pele bem amarela, os rins não funcionando direito, potássio baixo e um problema nos pulmões, tudo isso depois de febre e dores no corpo. Essa combinação é a forma mais grave de uma doença chamada leptospirose, conhecida como síndrome de Weil."
     },
     {
       "id": "b16-q084",
@@ -2565,7 +2648,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A maioria dos casos de leptospirose não deixa a pessoa amarela e costuma passar sozinha com o tempo. Como o paciente estava com sintomas leves, pode ser tratado em casa com antibiótico e acompanhamento, sem precisar ficar internado."
     },
     {
       "id": "b16-q085",
@@ -2595,7 +2679,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "O homem tinha pele amarela, rins ruins, sangue com poucas plaquetas, pressão baixa e um problema grave nos pulmões, tudo depois de contato com água de enchente. Esse quadro grave de leptospirose precisa de internação, com antibiótico forte na veia e muito cuidado com o coração, os rins e a respiração."
     },
     {
       "id": "b16-semanais-q87",
@@ -2625,7 +2710,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "O homem estava com pele amarela, rins parando de funcionar, potássio baixo, choque e depois sangue saindo dos pulmões, após visitar uma área rural com animais e condições ruins de higiene. Esse conjunto de sinais é bem característico da forma grave da leptospirose, então o certo é tratar com bastante soro e o antibiótico indicado para essa doença."
     },
     {
       "id": "b16-q088",
@@ -2655,7 +2741,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Existem exames que, sem precisar cortar o fígado, conseguem estimar o quanto ele está cicatrizado (fibrosado). Os valores de elastografia, APRI e FIB4 escolhidos são os que combinam com um grau de cicatriz avançado, mas ainda sem ser a forma mais grave (cirrose)."
     },
     {
       "id": "b16-q089",
@@ -2686,7 +2773,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Quando o primeiro tratamento contra a hepatite C não funciona, os médicos usam uma combinação diferente e mais forte de remédios para dar uma segunda chance de curar a doença."
     },
     {
       "id": "b16-q090",
@@ -2716,7 +2804,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Para quem nunca tratou a hepatite C antes e já tem sinais de fígado bem afetado, mas ainda funcionando bem (cirrose compensada), o tratamento recomendado é uma combinação de dois remédios antivirais tomados por 12 semanas, sem precisar de um terceiro remédio extra."
     },
     {
       "id": "b16-q091",
@@ -2746,7 +2835,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Quando os dois exames que mostram contato com o vírus da hepatite B e proteção contra ele estão negativos, isso quer dizer que a pessoa nunca teve contato com o vírus nem está protegida, então ela precisa ser vacinada."
     },
     {
       "id": "b16-q092",
@@ -2777,7 +2867,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Os exames da moça mostram que ela já teve contato com o vírus da hepatite B no passado, se curou sozinha e ficou com proteção natural contra ele, mesmo sem nunca ter tomado a vacina."
     },
     {
       "id": "b16-q093",
@@ -2807,7 +2898,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "O homem tem o vírus da hepatite B se multiplicando bastante no corpo, mas o fígado dele ainda não está inflamado (os exames do fígado estão normais). Por enquanto, o certo é só acompanhar de perto com exames regulares, sem precisar começar remédio ainda."
     },
     {
       "id": "b16-q094",
@@ -2837,7 +2929,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-148"
+      "scheduleId": "cron-148",
+      "kids": "Quando o corpo tem menos defesas (imunossupressão), o vírus da hepatite consegue causar dano mais rápido ao fígado, fazendo a cicatriz (fibrose) avançar mais depressa."
     },
     {
       "id": "b16-q095",
@@ -2867,7 +2960,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Ter o vírus da hepatite B no sangue não significa sempre precisar de remédio. Só se trata quando os exames mostram que o fígado já está machucado ou quando a pessoa tem parentes com risco alto de câncer de fígado."
     },
     {
       "id": "b16-semanais-q96",
@@ -2897,7 +2991,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "O jovem tinha dor e inchaço no testículo, mas alguns sinais do exame (reflexo presente, melhora com repouso) apontavam mais para uma inflamação do que para uma torção grave. Por isso, o certo era dar remédio para dor, ficar de olho no paciente e esperar pouco tempo pelo ultrassom, sem pressa de operar."
     },
     {
       "id": "b16-semanais-q97",
@@ -2927,7 +3022,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "O exame de imagem mostrou que a bexiga rasgou para dentro da barriga (não só para fora dela), e esse tipo de rompimento precisa ser consertado com cirurgia."
     },
     {
       "id": "b16-q097",
@@ -2959,7 +3055,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "O jovem usou cocaína e ficou com o pênis duro e dolorido por muitas horas sem melhorar sozinho. Isso acontece porque o sangue fica preso lá dentro sem circular, ficando parado e ácido, o que é confirmado num exame de gasometria feito ali mesmo."
     },
     {
       "id": "b16-semanais-q100",
@@ -2990,7 +3087,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "Para diminuir o risco de pré-eclâmpsia (uma pressão alta perigosa na gravidez), pode-se dar cálcio para a grávida a partir de 12 semanas, especialmente quando ela não come muito cálcio na alimentação."
     },
     {
       "id": "b16-semanais-q101",
@@ -3020,7 +3118,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A pressão da grávida subiu, ela ganhou peso rápido e ficou com inchaço nas mãos e pés, sinais de que a pré-eclâmpsia pode estar se somando à pressão alta que ela já tinha. Por isso é preciso internar, fazer exames completos do sangue e do fígado, ajustar o remédio e planejar o parto com segurança perto de 37 semanas."
     },
     {
       "id": "b16-semanais-q102",
@@ -3050,7 +3149,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A aspirina em dose baixa, quando começada cedo na gravidez (antes de 16 semanas) e mantida até perto do parto, ajuda a evitar a pré-eclâmpsia e não aumenta o risco de parto prematuro. Já vitaminas como C e E não mostraram esse benefício."
     },
     {
       "id": "b16-semanais-q103",
@@ -3081,7 +3181,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A mulher teve um ataque (convulsão) e pressão alta dois dias depois do parto, o que é sinal de eclâmpsia, uma complicação grave que pode acontecer mesmo depois do bebê nascer. O tratamento é dar um remédio para evitar novas convulsões (sulfato de magnésio) e controlar a pressão rapidamente."
     },
     {
       "id": "b16-q101",
@@ -3111,7 +3212,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida estava com pressão muito alta e perto da data de nascer o bebê. Depois de controlar a pressão e proteger contra convulsões, se a mãe e o bebê estiverem bem, é possível tentar o parto normal com ajuda de um remédio para provocar as contrações, em vez de já partir direto para a cesárea."
     },
     {
       "id": "b16-semanais-q105",
@@ -3141,7 +3243,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida tinha dor de cabeça, visão embaçada, dor na barriga, pressão muito alta e exames alterados do fígado e das plaquetas, sinais de uma pré-eclâmpsia grave. O tratamento é dar o remédio que protege contra convulsões e preparar para o parto."
     },
     {
       "id": "b16-semanais-q106",
@@ -3171,7 +3274,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-150"
+      "scheduleId": "cron-150",
+      "kids": "A grávida estava com pressão muito alta e dor na boca do estômago, sinais de pré-eclâmpsia grave. O tratamento certo é internar, fazer os exames, usar um remédio rápido para baixar a pressão, dar o remédio que protege contra convulsões e, depois de estabilizar, provocar o parto."
     },
     {
       "id": "b16-q100",
@@ -3201,7 +3305,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-147"
+      "scheduleId": "cron-147",
+      "kids": "A grávida tinha dor de cabeça, visão alterada, dor na barriga e plaquetas baixas, sinais de uma complicação grave chamada síndrome HELLP, que afeta o sangue e o fígado. Por isso são pedidos exames que avaliam as células do sangue, o fígado e sinais de destruição das hemácias."
     },
     {
       "id": "b16-semanais-q108",
@@ -3231,7 +3336,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "O ecomapa é um desenho que mostra como a família se conecta com o mundo lá fora, como escola e igreja, enquanto o genograma mostra a árvore da família, com pelo menos três gerações."
     },
     {
       "id": "b16-semanais-q109",
@@ -3262,7 +3368,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Existem quatro jeitos de estudar a saúde de um bairro: o diagnóstico de saúde da comunidade avalia tudo com método; o território é o lugar onde as pessoas vivem e se relacionam; a estimativa rápida participativa envolve a própria comunidade contando sua realidade; e o diagnóstico de demanda entende o que as pessoas precisam dos serviços de saúde."
     },
     {
       "id": "b16-semanais-q110",
@@ -3292,7 +3399,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "O ecomapa é o desenho que mostra todas as conexões da família com o mundo ao redor, como escola, trabalho e igreja, ajudando a equipe a ver onde a família pode receber mais apoio."
     },
     {
       "id": "b16-q111",
@@ -3322,7 +3430,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-149"
+      "scheduleId": "cron-149",
+      "kids": "Quando muitas pessoas de um bairro adoecem por causa de dificuldades sociais, o melhor caminho é primeiro entender junto com a comunidade quais são os problemas, e depois montar um plano de ação que envolva várias áreas, não só atender uma pessoa de cada vez."
     },
     {
       "id": "b16-semanais-q112",
@@ -3352,7 +3461,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "A criança que fez quimioterapia estava com febre, dor na barriga e diarreia, com poucas defesas no sangue, sinais de uma infecção intestinal grave chamada colite neutropênica. O tratamento precisa cobrir vários tipos de bactérias, incluindo as que vivem sem oxigênio, além de deixar a criança em jejum e dar remédios para os sintomas."
     },
     {
       "id": "b16-semanais-q113",
@@ -3382,7 +3492,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-151"
+      "scheduleId": "cron-151",
+      "kids": "A menina com câncer no sangue tinha febre há dias e um tumor de crescimento muito rápido, o linfoma de Burkitt. Quando o tratamento começa, muitas células do tumor morrem de uma vez e liberam substâncias que fazem mal ao corpo, causando a chamada síndrome de lise tumoral."
     },
     {
       "id": "b16-semanais-q114",
@@ -3412,7 +3523,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "A menina estava muito mal: sonolenta, com a pele fria, pressão baixa e pouco oxigênio, sinais de choque grave provavelmente causado por uma infecção, já que ela estava fazendo tratamento de câncer. É preciso dar soro, colher exames e já começar antibióticos fortes que cubram bactérias perigosas, sem esperar os resultados."
     },
     {
       "id": "b16-semanais-q115",
@@ -3442,7 +3554,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 16.txt",
-      "scheduleId": "cron-152"
+      "scheduleId": "cron-152",
+      "kids": "A criança com leucemia tinha febre e poucas defesas no sangue (neutropenia), o que é considerado uma emergência mesmo parecendo bem no exame físico. Por isso ela precisa ficar internada, fazer exames e já receber antibiótico forte pela veia."
     }
   ]
 }

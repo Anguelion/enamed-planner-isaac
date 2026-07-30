@@ -30,7 +30,8 @@
         "Atendimento Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "O corpo do menino estava atacando por engano as próprias plaquetas (as células que ajudam o sangue a fechar feridas), por isso apareceram aquelas manchas roxas. Como ele não tinha nenhum sangramento grave, o médico só precisa acompanhar de perto e deixar o corpo se recuperar sozinho."
     },
     {
       "id": "b01-semanal-q002",
@@ -60,7 +61,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "A mãe estava com uma infecção dolorida no peito, mas isso não faz mal para o bebê e o remédio que ela toma é seguro. Por isso ela deve continuar amamentando dos dois lados, porque isso ajuda a esvaziar o peito e a curar mais rápido."
     },
     {
       "id": "b01-semanal-q003",
@@ -90,7 +92,8 @@
         "Fisiopatologia"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando o corpo perde hemácias rápido demais, a medula óssea trabalha a toda velocidade para repor, soltando muitas células jovens no sangue. Isso é o que acontece numa doença chamada deficiência de G6PD, que faz as hemácias se romperem com facilidade."
     },
     {
       "id": "b01-semanal-q004",
@@ -120,7 +123,8 @@
         "Ciências Básicas"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "A parte de baixo da barriga da mulher, que sustenta os órgãos como uma rede, é formada por um grupo de músculos que trabalham juntos: o levantador do ânus, que tem três partes, e outro músculo chamado coccígeo."
     },
     {
       "id": "b01-semanal-q005",
@@ -150,7 +154,8 @@
         "Interpretação Laboratorial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando o corpo está lutando contra uma inflamação por muito tempo, ele mesmo tranca o ferro guardado, como se escondesse comida do inimigo. Por isso o ferro no sangue fica baixo, mas a capacidade de carregar mais ferro também fica baixa - isso mostra que o problema é a inflamação, não a falta de ferro na comida."
     },
     {
       "id": "b01-semanal-q006",
@@ -181,7 +186,8 @@
         "Prioridades no Trauma"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Quando alguém sofre um acidente grave e fica com o nível de consciência baixo, antes de qualquer outra coisa os médicos precisam garantir que a pessoa consiga respirar direito, colocando um tubo para ajudar. Isso vem antes até de cuidar da pressão baixa."
     },
     {
       "id": "b01-semanal-q008",
@@ -211,7 +217,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Quando o bebê começa a comer coisas além do leite, as frutas devem ser oferecidas naturais - raspadinhas, amassadas ou em pedacinhos - e não em forma de suco, porque assim ele aproveita as fibras e vitaminas de verdade."
     },
     {
       "id": "b01-semanal-q007",
@@ -241,7 +248,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Quando o bebê começa a comer coisas além do leite, as frutas devem ser oferecidas naturais - raspadinhas, amassadas ou em pedacinhos - e não em forma de suco, porque assim ele aproveita as fibras e vitaminas de verdade."
     },
     {
       "id": "b01-semanal-q009",
@@ -273,7 +281,8 @@
         "Diagnóstico Diferencial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando as plaquetas do sangue ficam muito baixas e aparecem sangramentos na boca e manchas roxas na perna, sem nenhuma outra causa aparente, isso indica que o corpo está destruindo essas células por engano, numa forma mais séria desse problema."
     },
     {
       "id": "b01-semanal-q010",
@@ -303,7 +312,8 @@
         "Diagnóstico Diferencial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando a medula óssea está mandando muitas células novas de sangue para repor as que estão sendo destruídas ou perdidas rápido, isso não acontece na falta de ferro - porque aí o problema é a fábrica de sangue não ter matéria-prima suficiente, e não uma destruição acelerada."
     },
     {
       "id": "b01-semanal-q011",
@@ -334,7 +344,8 @@
         "Coluna Cervical"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Quando alguém está gravemente ferido, os médicos não perdem tempo perguntando tudo sobre a pessoa antes de agir - eles cuidam primeiro do que pode matar rapidamente, e só depois conversam com calma para entender a história completa."
     },
     {
       "id": "b01-semanal-q012",
@@ -365,7 +376,8 @@
         "Diagnóstico Diferencial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "Existe um tipo de cisto na parede da vagina que se forma a partir de restos de um canal que existia quando o bebê ainda era um embrião, e ele aparece na parte de cima, do lado."
     },
     {
       "id": "b01-semanal-q013",
@@ -396,7 +408,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Um bebê que mama só no peito pode fazer cocô várias vezes por dia, meio mole e amarelado, e isso é completamente normal - não é diarreia, então a mãe deve continuar amamentando normalmente."
     },
     {
       "id": "b01-semanal-q014",
@@ -426,7 +439,8 @@
         "Anatomia Cirúrgica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "O vaso sanguíneo que leva sangue para o útero da mulher nasce de uma artéria grande da pelve, num de seus ramos da frente."
     },
     {
       "id": "b01-semanal-q015",
@@ -457,7 +471,8 @@
         "Reticulócitos"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "O homem perdeu muito sangue devagar, ao longo do tempo, pelo intestino, e por isso seu corpo teve tempo de se adaptar à quantidade baixa de sangue, funcionando bem mesmo com valores que pareceriam perigosos se tivessem caído de repente."
     },
     {
       "id": "b01-semanal-q016",
@@ -487,7 +502,8 @@
         "Anatomia Cirúrgica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "Perto de um ligamento da pelve passam dois nervos importantes, um de cada lado dele. Por isso, quando o médico precisa costurar algo ali durante uma cirurgia, ele costura bem no meio para não machucar nenhum dos dois."
     },
     {
       "id": "b01-semanal-q017",
@@ -517,7 +533,8 @@
         "Gestão da Equipe"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Quando a equipe de saúde decide organizar quem recebe visita em casa primeiro, dando prioridade para quem mais precisa, isso é um jeito de tratar as pessoas de forma justa, dando mais atenção a quem tem mais necessidade."
     },
     {
       "id": "b01-semanal-q018",
@@ -547,7 +564,8 @@
         "Suplementação de Micronutrientes"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Bebês que vão crescer com uma alimentação sem nenhum produto animal podem comer normalmente frutas, verduras e grãos, mas precisam tomar um remedinho extra de vitamina B12 e de ferro, porque essas coisas são difíceis de conseguir só com plantas."
     },
     {
       "id": "b01-semanal-q019",
@@ -577,7 +595,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Antigamente as pessoas achavam que alimentos como ovo e peixe podiam causar alergia se dados cedo demais, mas hoje os médicos sabem que eles podem ser oferecidos ao bebê desde os 6 meses, sem precisar esperar."
     },
     {
       "id": "b01-semanal-q020",
@@ -608,7 +627,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "O bebê ficou anêmico porque estava tomando leite de vaca puro demais, que atrapalha a absorção do ferro. Por isso o médico limita a quantidade desse leite, começa a comida salgada e dá um remédio de ferro mais forte para tratar a anemia que já apareceu."
     },
     {
       "id": "b01-semanal-q021",
@@ -639,7 +659,8 @@
         "Diagnóstico Laboratorial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando uma pessoa mais velha fica com anemia por falta de ferro, sem nenhum outro sintoma, os médicos costumam suspeitar de um sangramento escondido no estômago, então o primeiro exame a fazer é olhar lá dentro com uma câmera."
     },
     {
       "id": "b01-semanais-q22",
@@ -669,7 +690,8 @@
         "Metabolismo do Ferro"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Na anemia por falta de ferro, tudo fica pequeno e baixo: as hemácias ficam menores, têm menos cor e o estoque de ferro guardado no corpo também cai. No Brasil, a causa mais comum disso é simplesmente comer pouco ferro na alimentação."
     },
     {
       "id": "b01-semanal-q023",
@@ -700,7 +722,8 @@
         "Manejo Terapêutico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando uma pessoa está com muito pouco sangue e sentindo falta de ar e cansaço forte, o primeiro passo é dar uma transfusão de sangue para ela melhorar rápido, e só depois os médicos vão investigar com calma qual é a causa."
     },
     {
       "id": "b01-semanal-q024",
@@ -730,7 +753,8 @@
         "Políticas Públicas"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "As regras principais do sistema de saúde brasileiro dizem que ele deve atender todo mundo, cuidar da pessoa por completo e ter a gestão dividida entre o governo federal, os estados e as cidades."
     },
     {
       "id": "b01-semanal-q025",
@@ -760,7 +784,8 @@
         "Políticas Públicas"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Um grande movimento de pessoas lutando por um sistema de saúde melhor no Brasil conseguiu que a saúde virasse um direito garantido escrito na Constituição do país, o que deu origem ao sistema de saúde que existe até hoje."
     },
     {
       "id": "b01-semanal-q026",
@@ -790,7 +815,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Quando o peito da mãe fica muito cheio e duro, dificultando o bebê de pegar direito, a solução é continuar amamentando, ensinar a pega correta e tirar um pouco de leite na mão antes de cada mamada para amolecer a região."
     },
     {
       "id": "b01-semanal-q027",
@@ -822,7 +848,8 @@
       "tagSource": "Tags.txt",
       "scheduleId": "cron-6",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "kids": "O guia oficial de alimentação infantil recomenda cuidado com o sal na comida do bebê por bastante tempo, não só até completar 1 aninho - por isso, restringir a regra apenas ao primeiro ano não representa certinho o que o guia realmente recomenda."
     },
     {
       "id": "b01-semanal-q028",
@@ -852,7 +879,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Às vezes a mãe acha que está com pouco leite só porque o peito parece menos cheio e o bebê quer mamar com mais frequência. Isso costuma ser uma fase passageira de crescimento do bebê, e a solução é fazer coisas simples, como amamentar mais vezes, sem precisar de remédio ou fórmula."
     },
     {
       "id": "b01-semanal-q029",
@@ -882,7 +910,8 @@
         "Alimentação Complementar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Comer, na mesma refeição, alimentos com vitamina C, como laranja, junto com comida rica em ferro ajuda o corpo a absorver esse ferro muito melhor."
     },
     {
       "id": "b01-semanal-q030",
@@ -912,7 +941,8 @@
         "Redes de Atenção"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "No sistema de saúde, cuidar da pessoa por completo, em todas as fases da doença, e deixar a população participar das decisões através de conselhos são partes importantes das regras do SUS. Já organizar os serviços por região não significa juntar tudo nas grandes cidades, e sim distribuir direitinho pelo território."
     },
     {
       "id": "b01-semanal-q031",
@@ -942,7 +972,8 @@
         "História da Saúde"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Antes do SUS existir, só quem tinha carteira de trabalho assinada tinha direito a atendimento de saúde, como se fosse um seguro. Um grande encontro nacional de saúde, em 1986, foi o passo decisivo que abriu caminho para a saúde virar um direito de todo mundo."
     },
     {
       "id": "b01-semanal-q032",
@@ -972,7 +1003,8 @@
         "Promoção da Saúde"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Cuidar da pessoa não só quando ela fica doente, mas também prevenindo problemas, promovendo saúde e ajudando na recuperação, olhando pra ela como um todo - isso é o que chamamos de integralidade no sistema de saúde."
     },
     {
       "id": "b01-semanal-q033",
@@ -1002,7 +1034,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Quando a mãe precisa voltar a trabalhar mas quer continuar dando leite materno pro bebê, ela pode tirar o leite do peito e guardar direitinho, para que outra pessoa consiga dar para o bebê depois, sem precisar trocar por fórmula."
     },
     {
       "id": "b01-semanal-q034",
@@ -1033,7 +1066,8 @@
         "Comportamento do Recém-Nascido"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "O bebê estava ganhando peso direitinho, e o fato de mamar bastante e soltar uma golfadinha de vez em quando é super normal nessa idade - o médico só precisa tranquilizar a mãe e continuar acompanhando."
     },
     {
       "id": "b01-semanal-q035",
@@ -1063,7 +1097,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Quando chega a hora de o bebê começar a comer outras coisas além do leite, por volta dos 6 meses, ele já pode experimentar frutas e uma refeição completa com vários grupos de alimentos praticamente ao mesmo tempo, sem precisar esperar semana por semana para introduzir cada coisa."
     },
     {
       "id": "b01-semanais-q36",
@@ -1093,7 +1128,8 @@
         "Anatomia Aplicada"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Existe um nervo chamado pudendo que é o principal responsável por sentir e mexer os músculos da região entre as pernas."
     },
     {
       "id": "b01-semanal-q037",
@@ -1124,7 +1160,8 @@
         "Doença Autoimune"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "O corpo da moça estava com uma doença chamada lúpus, que faz o sistema de defesa atacar o próprio corpo, e por causa dela as próprias defesas também estavam destruindo as hemácias do sangue. O tratamento para parar essa destruição é um remédio que acalma o sistema de defesa, chamado corticoide."
     },
     {
       "id": "b01-semanal-q038",
@@ -1154,7 +1191,8 @@
         "Primeiro Ano de Vida"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "O leite de vaca puro tem proteína demais para um bebê pequeno digerir, o que sobrecarrega os rins dele - por isso não se deve dar esse leite antes de 1 ano."
     },
     {
       "id": "b01-semanal-q039",
@@ -1184,7 +1222,8 @@
         "Hidratação do Lactente"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Nos dois primeiros anos de vida, a gordura da comida é muito importante para o cérebro da criança crescer bem, então não se deve tirar a gordura da comida dela achando que faz mal."
     },
     {
       "id": "b01-semanal-q040",
@@ -1215,7 +1254,8 @@
         "Fisiologia da Lactação"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "O leite da mãe tem como principal proteína uma substância chamada lactoalbumina e como principal açúcar a lactose - são essas duas coisas que dão a maior parte da nutrição do leite materno."
     },
     {
       "id": "b01-semanal-q041",
@@ -1245,7 +1285,8 @@
         "Lactente"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Mesmo bebês que tomam mamadeira desde cedo, e não leite da mãe, só devem começar a comer outras coisas além do leite quando completarem 6 meses, não antes."
     },
     {
       "id": "b01-semanal-q042",
@@ -1276,7 +1317,8 @@
         "Reposição de Cobalamina"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando falta muita vitamina B12 no corpo e isso já está causando formigamento nas pernas e dificuldade para pensar, o remédio precisa ser aplicado com injeção, porque assim ele funciona mais rápido e com mais força do que em comprimido."
     },
     {
       "id": "b01-semanais-q43",
@@ -1306,7 +1348,8 @@
         "Anatomia"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "Os órgãos da pelve da mulher ficam pendurados no lugar certo por causa de um conjunto de ligamentos, entre eles os que seguram a bexiga e o canal que leva o xixi para fora."
     },
     {
       "id": "b01-semanal-q044",
@@ -1336,7 +1379,8 @@
         "Recordatório Alimentar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Existem alimentos que passam por tanta fábrica e recebem tantos ingredientes extras que quase não sobra nada do alimento original - como presunto, biscoito industrializado e suco em pó. Esses são chamados de ultraprocessados e devem ser evitados."
     },
     {
       "id": "b01-semanal-q045",
@@ -1366,7 +1410,8 @@
         "Políticas Públicas"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "O sistema de saúde brasileiro foi criado com a ideia de que todo mundo tem direito a atendimento, que quem precisa mais deve ser priorizado, e que a gestão deve ser dividida entre o governo federal, os estados e as cidades, e não ficar toda concentrada em Brasília."
     },
     {
       "id": "b01-semanal-q046",
@@ -1397,7 +1442,8 @@
         "Lactente"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Muita gente acha que carne de porco, peixe e temperos como alho e gengibre não podem ser dados para bebês, mas isso é mito - essas coisas podem, sim, fazer parte da comida do bebê, respeitando os costumes de cada família e região."
     },
     {
       "id": "b01-semanal-q047",
@@ -1428,7 +1474,8 @@
         "Ultraprocessados"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "A comida do bebê deve ser amassada ou cortada em pedacinhos, nunca batida no liquidificador ou passada na peneira, porque ele precisa aprender a mastigar."
     },
     {
       "id": "b01-semanal-q048",
@@ -1458,7 +1505,8 @@
         "Modelo Sanitarista Campanhista"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "No começo do século 20, o Brasil obrigou todo mundo a tomar vacina contra a varíola, e muita gente não gostou disso e se revoltou. Enquanto isso, o jeito de cuidar da saúde pública da época era baseado em campanhas de vacinação, fiscalização e limpeza das cidades."
     },
     {
       "id": "b01-semanal-q049",
@@ -1488,7 +1536,8 @@
         "Neonatologia"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Uma mãe com tuberculose no pulmão, sem machucado no peito, pode continuar dando leite pro bebê, só precisando ficar um tempinho separada dele enquanto começa o tratamento, diferente de outras doenças que realmente impedem totalmente a amamentação."
     },
     {
       "id": "b01-semanal-q050",
@@ -1518,7 +1567,8 @@
         "Transmissão Vertical"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Se a mãe tiver um desses três vírus perigosos no exame de sangue - HIV ou os dois tipos de HTLV - ela não deve amamentar de jeito nenhum, porque esses vírus podem passar pelo leite para o bebê."
     },
     {
       "id": "b01-semanal-q051",
@@ -1548,7 +1598,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Uma criança de 7 meses já deve comer refeições completas com vários grupos de alimentos, tomar gotinhas de vitamina D e ferro todo dia, e pode comer a mesma comida saudável que o resto da família, sem precisar de panela separada."
     },
     {
       "id": "b01-semanal-q052",
@@ -1578,7 +1629,8 @@
         "Alojamento Conjunto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "É normal um bebê recém-nascido perder um pouquinho de peso nos primeiros dias, até 10% do peso que ele nasceu, então perder 5% não é motivo de preocupação."
     },
     {
       "id": "b01-semanal-q053",
@@ -1608,7 +1660,8 @@
         "Segurança Alimentar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "O leite que a mãe tira do peito pode ficar guardado no congelador por até 15 dias, mas nunca deve ser esquentado no micro-ondas ou fervido, porque isso destrói o que tem de bom nele."
     },
     {
       "id": "b01-semanal-q054",
@@ -1638,7 +1691,8 @@
         "Aleitamento Materno"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Quando o bebê completa 6 meses e vai começar a comer, o primeiro passo é oferecer uma refeição de sal completa e uma fruta, mantendo o leite materno."
     },
     {
       "id": "b01-semanal-q055",
@@ -1670,7 +1724,8 @@
         "Atendimento Pré-Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Quando alguém sofre um acidente muito grave e perde um pedaço do corpo com sangramento forte, a primeira coisa a fazer é amarrar bem apertado acima do ferimento para estancar o sangue, antes de qualquer outra coisa."
     },
     {
       "id": "b01-semanal-q056",
@@ -1700,7 +1755,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "A mãe achava que tinha pouco leite porque o peito parecia menos cheio e o bebê queria mamar toda hora - isso costuma ser só uma fase passageira em que o bebê está crescendo mais rápido, e a solução é continuar amamentando bastante, sem oferecer nenhum outro líquido."
     },
     {
       "id": "b01-semanal-q057",
@@ -1731,7 +1787,8 @@
         "Manejo Terapêutico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando alguém tem anemia por falta de ferro que não melhora e os exames comuns do estômago e intestino não acham nada, os médicos usam uma cápsula bem pequena com câmera que a pessoa engole, para procurar o sangramento escondido no meio do intestino."
     },
     {
       "id": "b01-semanal-q058",
@@ -1761,7 +1818,8 @@
         "Seguimento Precoce"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Esse bebê perdeu peso demais desde que nasceu, mais do que o considerado normal. Por isso o médico precisa olhar com cuidado como ele está mamando e marcar um retorno rapidinho, em só 2 dias, para ver se ele está se recuperando."
     },
     {
       "id": "b01-semanal-q059",
@@ -1792,7 +1850,8 @@
         "Interpretação do Hemograma"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Na anemia por falta de ferro, a quantidade de células novas de sangue sendo produzidas fica normal ou até baixa, porque o problema não é destruição de sangue, e sim a fábrica não ter ferro suficiente para produzir mais."
     },
     {
       "id": "b01-semanal-q060",
@@ -1823,7 +1882,8 @@
         "Conduta Terapêutica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Quando o corpo destrói as próprias hemácias por engano, causando anemia com pele amarelada e baço maior, o primeiro remédio a usar é um corticoide, que ajuda a acalmar essa reação errada do corpo."
     },
     {
       "id": "b01-semanal-q061",
@@ -1854,7 +1914,8 @@
         "Conduta Terapêutica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "A cirurgia de tirar o baço só é usada quando o problema das plaquetas baixas dura muito tempo, muitos meses, e não melhora com remédio - não é algo que se faz logo quando o problema aparece de repente."
     },
     {
       "id": "b01-semanal-q062",
@@ -1884,7 +1945,8 @@
         "Saúde Materno-Infantil"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "As únicas situações que realmente proíbem totalmente a amamentação são: a mãe ter HIV ou HTLV, ou o bebê ter uma doença rara em que o corpo dele não consegue processar o açúcar do leite."
     },
     {
       "id": "b01-semanal-q063",
@@ -1914,7 +1976,8 @@
         "Anatomia"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "Os órgãos da pelve da mulher ficam pendurados no lugar certo por causa de um conjunto de ligamentos, entre eles os que seguram a bexiga e o canal que leva o xixi para fora."
     },
     {
       "id": "b01-semanal-q064",
@@ -1944,7 +2007,8 @@
         "Legislação em Saúde"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Cuidar da saúde de forma completa significa oferecer atendimento em todos os níveis, desde o postinho de saúde até o hospital mais complexo, de um jeito conectado, sem deixar a pessoa na mão."
     },
     {
       "id": "b01-semanal-q065",
@@ -1974,7 +2038,8 @@
         "Políticas Públicas"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "A ideia de que toda pessoa tem direito a ser atendida na saúde, e que é obrigação do governo garantir isso, é o que chamamos de princípio da universalidade."
     },
     {
       "id": "b01-semanal-q066",
@@ -2004,7 +2069,8 @@
         "Ciências Básicas"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "Um músculo pequeno, chamado transverso profundo do períneo, se entrelaça com o músculo que fecha o ânus, formando junto com outros músculos o ponto central de sustentação dessa região."
     },
     {
       "id": "b01-semanal-q067",
@@ -2035,7 +2101,8 @@
         "Esteroides Sexuais"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "Quando o corpo da mulher tem pouco hormônio estrogênio circulando, como depois da menopausa, a parede de dentro da vagina fica mais fininha, e no exame aparecem principalmente células mais profundas, chamadas basais."
     },
     {
       "id": "b01-semanal-q068",
@@ -2066,7 +2133,8 @@
         "Períneo"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "A ponta do clitóris é coberta por uma pele especial que não tem as pequenas glândulas de gordura que a pele normal costuma ter."
     },
     {
       "id": "b01-semanal-q069",
@@ -2096,7 +2164,8 @@
         "Atendimento Pré-Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Quando alguém está sangrando muito forte de um ferimento no braço, a rua não é lugar de tentar costurar o vaso sanguíneo - o certo é apertar bem a ferida e, se não parar, amarrar um torniquete acima dela, além de repor soro no corpo."
     },
     {
       "id": "b01-semanais-q70",
@@ -2128,7 +2197,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Esse homem tinha uma contagem baixa de um tipo de célula de defesa no sangue, mas sem estar doente e sem nenhum outro sinal de problema. Isso é comum e normal em algumas pessoas, ligado a uma característica genética do sangue, sem precisar de exames mais invasivos."
     },
     {
       "id": "b01-semanal-q074",
@@ -2162,7 +2232,8 @@
       "tagSource": "Tags.txt",
       "scheduleId": "cron-9",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "kids": "Esse paciente tinha o exame de ferro guardado no corpo alto, mas isso não era por causa de doença genética do ferro - era porque ele tinha pressão alta, diabetes e estava acima do peso, condições que fazem esse exame subir mesmo sem sobra real de ferro no corpo."
     },
     {
       "id": "b01-semanais-q72",
@@ -2192,7 +2263,8 @@
         "Instabilidade Hemodinâmica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Numa pancreatite bem grave, os sucos do próprio pâncreas podem corroer um vaso sanguíneo perto dele, formando um pontinho fraco que pode estourar de repente - foi isso que causou a queda súbita do sangue e a instabilidade desse paciente, exigindo um exame de imagem dos vasos e, se necessário, um procedimento para tampar esse vaso por dentro."
     },
     {
       "id": "b01-semanal-q073",
@@ -2223,7 +2295,8 @@
         "Etilismo"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-9"
+      "scheduleId": "cron-9",
+      "kids": "Esse senhor bebia bastante há muitos anos, e isso pode fazer faltar vitaminas importantes que o corpo precisa para fabricar sangue, além de vírus poderem causar o mesmo problema. Por isso, antes de exames mais invasivos, o médico primeiro mede essas vitaminas e verifica se há alguma infecção viral por trás da queda das células do sangue."
     },
     {
       "id": "b01-semanais-q74",
@@ -2256,7 +2329,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "Depois de uma pancreatite, um vasinho de sangue perto do baço pode ficar fraco e estourar de repente, causando dor forte e sinais de choque - foi isso que aconteceu com essa paciente."
     },
     {
       "id": "b01-semanal-q071",
@@ -2289,7 +2363,8 @@
       "tagSource": "Tags.txt",
       "scheduleId": "cron-8",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "kids": "Quando um bebê começa a se desenvolver fora do lugar certo, fora do útero, e o local onde ele está rompe, causando sangramento forte dentro da barriga, isso é uma emergência que precisa de cirurgia imediata para estancar o sangramento, e não pode esperar."
     },
     {
       "id": "b01-semanal-q070",
@@ -2320,7 +2395,8 @@
         "Diagnóstico Diferencial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Uma dor muito forte na barriga que aparece de repente, junto com pressão baixa e coração acelerado numa mulher jovem, faz pensar que um bebê estava se formando no lugar errado e o local rompeu, causando sangramento interno grave."
     },
     {
       "id": "b01-semanais-q77",
@@ -2350,7 +2426,8 @@
         "Diagnóstico por Imagem"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Essa senhora estava tomando um remédio que afina o sangue e teve crises de tosse forte, o que pode ter rompido um vasinho dentro do músculo da barriga, formando um caroço de sangue que não passa para o outro lado. Como ainda tinha sangramento ativo, o remédio precisou ser suspenso e um médico especialista tampou o vaso por dentro, sem precisar cortar a barriga."
     },
     {
       "id": "b01-semanais-q78",
@@ -2380,7 +2457,8 @@
         "Avaliação Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Mesmo com o rosto bastante machucado, mas com a via aérea funcionando e o paciente conversando normalmente, os médicos não devem parar tudo para operar o rosto - eles continuam checando o corpo inteiro com calma e só depois de terminar essa checagem completa é que pedem os exames de imagem."
     },
     {
       "id": "b01-semanal-q083",
@@ -2413,7 +2491,8 @@
       "tagSource": "Tags.txt",
       "scheduleId": "cron-8",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "kids": "O menino bateu o baço na queda, mas como sua pressão e batimento cardíaco estavam normais e o exame não mostrou sangramento ativo saindo do vaso, os médicos não precisam operar - só repõem soro e observam de perto num lugar bem monitorado."
     },
     {
       "id": "b01-semanais-q80",
@@ -2444,7 +2523,8 @@
       ],
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "kids": "Depois de colocar um cateter numa veia grande do pescoço, o pulmão furou sem querer e o ar escapou para o lugar errado, aparecendo no raio-x. Por isso é preciso colocar um dreno para tirar esse ar e, ao mesmo tempo, retirar o cateter que estava mal posicionado."
     },
     {
       "id": "b01-semanais-q81",
@@ -2476,7 +2556,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Um ferimento na região entre as pernas, sem sinal de lesão grave dentro da barriga e sem machucar o final do intestino, pode ser tratado limpando bem o local, checando se o canal do cocô está machucado, estancando o sangramento e usando antibiótico, sem precisar fazer uma cirurgia maior."
     },
     {
       "id": "b01-semanais-q82",
@@ -2506,7 +2587,8 @@
         "Controle de Danos"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Esse rapaz quebrou a pelve e estava sangrando dentro da barriga, e quando ficou pior de repente, a prioridade foi abrir a barriga para estancar o sangramento e prender bem os ossos da pelve quebrada - o problema na aorta, que não estava sangrando ativamente, podia esperar."
     },
     {
       "id": "b01-semanais-q83",
@@ -2539,7 +2621,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "O menino bateu o baço na queda, mas como sua pressão e batimento cardíaco estavam normais e o exame não mostrou sangramento ativo saindo do vaso, os médicos não precisam operar - só repõem soro e observam de perto num lugar bem monitorado."
     },
     {
       "id": "b01-semanais-q84",
@@ -2569,7 +2652,8 @@
         "Tipos de Dreno",
         "Radiografia de Controle"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "kids": "O tubinho fino colocado no peito para tirar o ar que vazou do pulmão pode ser retirado quando, depois de um dia inteiro, não sai mais nenhuma bolha de ar por ele - isso mostra que o pulmão já se colou de volta no lugar certo."
     },
     {
       "id": "b01-semanal-q078",
@@ -2600,7 +2684,8 @@
         "Anatomia Vascular"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Uma pancada forte na cabeça pode romper uma artéria que fica entre o crânio e o cérebro, formando um sangramento que empurra e comprime o cérebro rapidamente - esse tipo de sangramento é causado pela lesão dessa artéria."
     },
     {
       "id": "b01-semanais-q87",
@@ -2632,7 +2717,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Esse bebê estava ganhando peso direitinho, mas a mãe tinha o peito bem machucado, o que geralmente acontece quando o bebê não está pegando o peito do jeito certo. Por isso o médico precisa ensinar a pega correta, sem precisar trocar por fórmula."
     },
     {
       "id": "b01-semanais-q88",
@@ -2664,7 +2750,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Não existe uma regra que obrigue parar de amamentar exatamente quando a criança completa 2 anos - o ideal é continuar enquanto mãe e filho quiserem, mesmo depois dessa idade."
     },
     {
       "id": "b01-semanal-q091",
@@ -2696,7 +2783,8 @@
       "tagSource": "Tags.txt",
       "scheduleId": "cron-5",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "kids": "Quando o peito da mãe fica machucado e o bebê está demorando para recuperar o peso, o primeiro passo não é trocar por fórmula ou usar mamadeira - é corrigir o jeito como o bebê pega o peito e acompanhar de perto em poucos dias."
     },
     {
       "id": "b01-semanais-q90",
@@ -2728,7 +2816,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Amamentar traz muitos benefícios, tanto para o bebê quanto para a mãe, inclusive reduzindo o risco de alguns tipos de câncer nela, mas não existe uma ligação comprovada entre amamentar e ter menos câncer no intestino grosso."
     },
     {
       "id": "b01-semanais-q91",
@@ -2760,7 +2849,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Um bebê que chora e tem cólica logo depois de mamar, enquanto a mãe está com o peito machucado, pode estar engolindo ar por causa de uma pega errada no peito - por isso o primeiro passo é corrigir a forma como ele mama, e não trocar de leite ou dar remédio."
     },
     {
       "id": "b01-semanais-q92",
@@ -2792,7 +2882,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Uma mãe recém-diagnosticada com tuberculose no pulmão, já tomando o remédio certo, pode continuar amamentando - só precisa lavar bem as mãos e usar máscara durante as mamadas nas duas primeiras semanas de tratamento, quando ainda existe risco de passar a doença."
     },
     {
       "id": "b01-semanais-q93",
@@ -2821,7 +2912,8 @@
         "Diagnóstico Diferencial",
         "Manejo Materno-Infantil"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "kids": "A vermelhidão e coceira no peito da mãe, junto com a dor tipo ferroada, eram sinais de uma infecção por fungo no mamilo. O tratamento é passar um creme antifungo no peito da mãe, dar uma gotinha de remédio antifungo na boca do bebê, e parar de usar aquele bico de silicone que estava ajudando o fungo a se manter ali."
     },
     {
       "id": "b01-semanais-q94",
@@ -2854,7 +2946,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Essa menina não gosta de experimentar comidas novas por causa da textura, cheiro ou aparência delas, sentindo bastante desconforto com isso - não é medo de engordar nem problema para engolir, é uma seletividade ligada aos sentidos, comum em crianças pequenas."
     },
     {
       "id": "b01-semanais-q95",
@@ -2885,7 +2978,8 @@
         "Alimentação Complementar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Uma alimentação totalmente vegetal, sem nenhum produto animal, tem um risco maior de faltar vitamina B12 e vitamina A no corpo do bebê, porque essas vitaminas vêm principalmente de carne, ovo e leite."
     },
     {
       "id": "b01-semanal-q094",
@@ -2915,7 +3009,8 @@
         "Puericultura"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-6"
+      "scheduleId": "cron-6",
+      "kids": "Não existe nenhum alimento nutritivo que precise ser proibido para o bebê durante o primeiro ano de vida, incluindo os que passam a impressão de dar alergia, que também podem ser oferecidos desde os 6 meses."
     },
     {
       "id": "b01-semanais-q97",
@@ -2945,7 +3040,8 @@
         "Introdução de Alérgenos"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-5"
+      "scheduleId": "cron-5",
+      "kids": "Mesmo quando um irmãozinho mais velho tem alergia grave a algum alimento, isso não significa que o bebê deva evitar esses alimentos - ele pode comer de tudo normalmente, seguindo o valor nutritivo e os costumes da família, sem precisar de exames especiais antes."
     },
     {
       "id": "b01-semanais-q98",
@@ -2977,7 +3073,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-8"
+      "scheduleId": "cron-8",
+      "kids": "Numa cirurgia para tirar os gânglios da pelve em certos casos de câncer, o médico segue limites bem definidos no corpo para saber até onde cortar - de um lado, esse limite é a borda de um músculo grande da região, chamado psoas."
     },
     {
       "id": "b01-semanais-q99",
@@ -3007,7 +3104,8 @@
         "Anatomia Cirúrgica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-7"
+      "scheduleId": "cron-7",
+      "kids": "Existe um ligamento na pelve da mulher, chamado cardinal, que carrega dentro dele os vasos sanguíneos que levam sangue para o útero."
     },
     {
       "id": "b01-semanais-q100",
@@ -3037,7 +3135,8 @@
         "Lei 8.142"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Duas das regras mais importantes do sistema de saúde são: todo mundo tem direito a ser atendido, e quem precisa mais deve receber mais atenção, de um jeito justo."
     },
     {
       "id": "b01-semanais-q101",
@@ -3067,7 +3166,8 @@
         "Cessação do Tabaco"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Essa senhora tem dificuldades bem específicas - problemas para se locomover e ninguém para cuidar do filho enquanto ela sai - por isso o cuidado de saúde dela precisa ser ajustado à sua situação particular, e não igual ao de todo mundo. Isso é adaptar o cuidado a quem tem mais dificuldade."
     },
     {
       "id": "b01-semanal-q100",
@@ -3099,7 +3199,8 @@
       "tagSource": "Tags.txt",
       "scheduleId": "cron-4",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
+      "kids": "O sistema de saúde do Brasil nasceu de um momento em que o jeito antigo de cuidar da saúde, ligado só a quem trabalhava com carteira assinada, estava em crise, junto com pessoas lutando por mais saúde para todos e o país voltando a ser uma democracia."
     },
     {
       "id": "b01-semanais-q103",
@@ -3131,7 +3232,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Nesse caso, o resultado de um exame importante se perdeu e ninguém percebeu que faltava, cada consulta pareceu não conversar direito com a anterior - isso mostra uma falha em conectar todas as etapas do cuidado da mesma pessoa, e foi isso que atrasou o tratamento e deixou o bebê nascer doente."
     },
     {
       "id": "b01-semanais-q104",
@@ -3163,7 +3265,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Para cuidar bem de pessoas em situação de rua, que mudam de lugar com frequência e têm pouco vínculo com os serviços, o melhor caminho é montar um plano de cuidado feito sob medida para cada pessoa, com vários serviços trabalhando juntos e compartilhando informação."
     },
     {
       "id": "b01-semanais-q105",
@@ -3195,7 +3298,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Duas regras de organização do sistema de saúde estão certas nessa questão: passar a gestão da saúde para estados e cidades sem perder o comando único em cada nível, e organizar os serviços em redes conectadas, levando em conta quantas pessoas moram ali e quais doenças são mais comuns."
     },
     {
       "id": "b01-semanais-q106",
@@ -3227,7 +3331,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "No começo do século 20, havia diferentes formas de tentar melhorar a saúde da população; uma delas, mais ligada à prevenção, defendia coisas como saneamento básico, cuidados com bebês e exames antes do casamento, e teve apoio de uma fundação internacional no combate a doenças no campo."
     },
     {
       "id": "b01-semanais-q107",
@@ -3260,7 +3365,8 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "scheduleId": "cron-4"
+      "scheduleId": "cron-4",
+      "kids": "Quando faltam testes de dengue e a cidade decide mandar os poucos que tem para os lugares que atendem os casos mais graves primeiro, isso é um jeito de tratar as pessoas de forma justa, dando prioridade a quem precisa mais - mas também mostra um problema de organização e falta de recursos dos próprios serviços de saúde."
     }
   ]
 }

@@ -30,7 +30,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando a vontade de fazer xixi piora de repente, antes de tratar qualquer outra coisa o médico precisa checar se não é uma infecção escondida causando isso, por isso pede um exame de urina antes de qualquer outro tratamento."
     },
     {
       "id": "b18-q002",
@@ -61,7 +62,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "A senhora perde xixi tanto quando tosse quanto quando sente vontade forte, isso é uma incontinência mista. Como a força necessária para o xixi escapar foi bem baixa no exame, isso mostra que a válvula que segura a urina está fraca por dentro, e não é só um problema de posição."
     },
     {
       "id": "b18-q003",
@@ -94,7 +96,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Esse homem tem risco maior de câncer de próstata por causa da idade, da cor da pele e do histórico na família, e os exames vieram alterados. Por isso o próximo passo é pegar um pedacinho da próstata para examinar de perto, porque só assim dá para ter certeza se é câncer."
     },
     {
       "id": "b18-q004",
@@ -124,7 +127,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "O menino está em choque, ou seja, o corpinho não está recebendo sangue suficiente, e não melhorou com o primeiro soro. Então o médico precisa dar mais soro na veia de novo, tentando encher o tanque de líquido do corpo antes de partir para remédios mais fortes."
     },
     {
       "id": "b18-q005",
@@ -157,7 +161,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Existe um ponto de medida no exame que só é usado quando a mulher ainda tem colo do útero. Como essa senhora não tem mais colo, esse ponto simplesmente não existe para ser medido nela."
     },
     {
       "id": "b18-q006",
@@ -188,7 +193,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quem bebe muito álcool por muito tempo fica com pouca vitamina B1 no corpo, e isso pode machucar o cérebro. Por isso, antes de dar açúcar na veia, os médicos dão essa vitamina primeiro, para proteger o cérebro dessa pessoa."
     },
     {
       "id": "b18-q007",
@@ -218,7 +224,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Quando o testículo fica duro e cresce muito sem ter batido em nada, o médico já pensa em tumor. Antes de operar, colhe-se sangue para ver certas substâncias que ajudam a acompanhar o problema, e depois o testículo é retirado por um corte na virilha, nunca cortando direto no saquinho, para não espalhar as células doentes."
     },
     {
       "id": "b18-q008",
@@ -249,7 +256,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Quando o fígado está muito doente, ele não consegue mais limpar direito uma substância chamada amônia, que vem da comida. Essa substância se acumula e afeta o cérebro, deixando a pessoa confusa e sonolenta."
     },
     {
       "id": "b18-q009",
@@ -279,7 +287,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Para começar a investigar o xixi que escapa, o médico usa perguntas, exame físico e um examezinho simples de urina. O exame mais complicado, que estuda a bexiga por dentro, só é pedido depois, em casos especiais, não faz parte do primeiro passo."
     },
     {
       "id": "b18-q010",
@@ -309,7 +318,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Quando alguém fica bravo e fala palavras duras porque está sofrendo, a atitude certa é mostrar que entende aquele sentimento, sem brigar de volta. Isso acalma a pessoa e ajuda a conversa a continuar depois."
     },
     {
       "id": "b18-q011",
@@ -340,7 +350,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "O exame mostrou que a bexiga dessa senhora se contrai sozinha, sem ela mandar, causando vontade urgente de fazer xixi. O tratamento começa com hábitos e um treino da bexiga, podendo somar um remedinho depois, não é caso de cirurgia."
     },
     {
       "id": "b18-q012",
@@ -370,7 +381,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Encontraram uma bolinha na glândula perto do rim sem querer, num exame de rotina. Mesmo sem sintomas, é preciso testar com exames de sangue e urina se essa bolinha está produzindo hormônios escondidos, antes de decidir qualquer outra coisa."
     },
     {
       "id": "b18-q013",
@@ -400,7 +412,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Achou-se um caroço no rim, mas pequeno, com menos de 4 centímetros. Nesses casos, o melhor é tirar só o pedaço doente do rim e deixar o resto funcionando, em vez de tirar o rim inteiro."
     },
     {
       "id": "b18-q014",
@@ -431,7 +444,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "As veias inchadas no esôfago, chamadas varizes, podem estourar e sangrar. Quanto maior a pressão dentro delas, maior o risco de estourarem, por isso uma pressão bem alta encontrada no exame é sinal de perigo."
     },
     {
       "id": "b18-q015",
@@ -462,7 +476,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Um remédio afrouxa o músculo na saída da bexiga, como abrir uma torneira apertada, ajudando o xixi a sair mais fácil na hora. O outro remédio faz a próstata encolher aos poucos, com o tempo. Juntos, os dois ajudam o jato de xixi a melhorar."
     },
     {
       "id": "b18-q016",
@@ -493,7 +508,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Para tratar a bexiga que se contrai demais e sem avisar, dá para usar remédios que acalmam esse músculo, junto com um treino chamado biofeedback, que ensina a pessoa a controlar melhor a bexiga. Não é um problema que precisa de cirurgia logo de cara."
     },
     {
       "id": "b18-q017",
@@ -524,7 +540,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Quando o líquido dentro da barriga de quem tem doença de fígado fica infectado, cheio de células de defesa, o remédio certo para combater essa infecção é um antibiótico direto na veia, chamado cefotaxima."
     },
     {
       "id": "b18-q018",
@@ -555,7 +572,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Somando os pontos de cada exame, como a bilirrubina, a albumina, o tempo de coagulação e os sinais no corpo, esse paciente fica com uma pontuação que classifica seu fígado num grupo intermediário de gravidade, nem o mais leve, nem o mais grave."
     },
     {
       "id": "b18-q019",
@@ -586,7 +604,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Numa conversa para ajudar alguém a parar de beber, existe uma etapa em que o profissional tenta descobrir quais são os próprios motivos e pensamentos da pessoa para querer mudar, em vez de simplesmente mandar ela parar."
     },
     {
       "id": "b18-q020",
@@ -617,7 +636,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Quando o fígado acumula gordura demais em alguém acima do peso, a atitude mais importante não é remédio, e sim ajudar a pessoa a emagrecer aos poucos, isso já melhora bastante o fígado."
     },
     {
       "id": "b18-q021",
@@ -647,7 +667,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando o xixi escapa com uma pressão bem baixa durante o exame, isso mostra que a válvula que segura a urina está fraca por dentro, não é só um problema de posição dos órgãos."
     },
     {
       "id": "b18-q022",
@@ -677,7 +698,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Antes de tratar o xixi que escapa, é bom pedir para a pessoa anotar, por alguns dias, quantas vezes e quanto ela urina e quando perde urina. Esse diário ajuda o médico a entender o problema e ver se o tratamento está funcionando depois."
     },
     {
       "id": "b18-q023",
@@ -708,7 +730,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Pelos números medidos no exame, não existe nenhum órgão descendo de verdade, o que parece incomodar é só o colo do útero maior do que o normal, sem o útero estar caindo."
     },
     {
       "id": "b18-q024",
@@ -738,7 +761,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Mesmo tomando remédio, esse senhor continua com dificuldade para urinar e já teve várias vezes em que a bexiga travou. Quando o remédio não resolve mais, a solução é uma cirurgia por dentro da uretra para desobstruir a saída da urina."
     },
     {
       "id": "b18-q025",
@@ -768,7 +792,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "O aumento do saquinho era só líquido acumulado, não um tumor, por isso a luz do exame passa através dele. Como não é câncer, os hormônios do sangue vêm normais."
     },
     {
       "id": "b18-q026",
@@ -798,7 +823,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Na régua que mede o quanto um órgão desceu, existe um grau em que a parte mais baixa do prolapso fica bem perto da abertura, entre um centímetro para dentro e um para fora dela."
     },
     {
       "id": "b18-q027",
@@ -829,7 +855,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "O xixi escapou só quando ela fez força, como tossir ou espirrar, e a pressão medida no exame foi alta. Isso é a incontinência urinária de esforço, o tipo mais simples, ligado à força feita, não a um problema grave na válvula."
     },
     {
       "id": "b18-q028",
@@ -860,7 +887,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "De novo, pelos números do exame, o que estava incomodando não era um órgão caindo, e sim o colo do útero maior do que deveria."
     },
     {
       "id": "b18-q029",
@@ -891,7 +919,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Essa criança está com a pressão baixa e o coração não está bombeando direito depois de pegar uma doença parecida com a de Kawasaki, ligada à Covid que teve antes. Por isso, precisa de ajuda para respirar com aparelhos e remédios que fortalecem o coração desde já, não dá para esperar, porque a pressão já está baixa."
     },
     {
       "id": "b18-q030",
@@ -922,7 +951,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Essa criança com uma válvula do cérebro infectada está com sinais de uma infecção grave espalhada pelo corpo, não é falta de água. O time do hospital precisa medir os sinais vitais, dar oxigênio, pegar uma veia rápido, coletar os exames de sepse, começar o antibiótico logo na primeira hora sem esperar o resultado das culturas, porque a fonte provável é a válvula infectada, e sim, ela precisa de soro na veia, mesmo estando com boa consciência."
     },
     {
       "id": "b18-q031",
@@ -952,7 +982,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Esse senhor tem dificuldade para urinar por causa da próstata que cresceu com a idade. O primeiro passo não é operar, e sim começar com um remédio que relaxa a saída da bexiga e beber menos água à noite, para ele dormir melhor."
     },
     {
       "id": "b18-q032",
@@ -982,7 +1013,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Com a próstata maior e sem caroços, a suspeita é de um crescimento benigno, não câncer. Para confirmar e ver como está o jato de xixi, pede-se um exame de sangue e um exame que mede a força do jato urinário."
     },
     {
       "id": "b18-q033",
@@ -1013,7 +1045,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "O tumor no rim é grande, com 8 centímetros, e já tem gânglios aumentados perto dele, mas não espalhou para outros lugares do corpo. Por isso, a cirurgia certa é tirar o rim inteiro junto com esses gânglios."
     },
     {
       "id": "b18-q034",
@@ -1043,7 +1076,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Para ajudar o xixi a sair mais fácil em quem tem a próstata crescida, o tipo de remédio usado é o que relaxa o músculo da saída da bexiga."
     },
     {
       "id": "b18-q035",
@@ -1074,7 +1108,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Para saber o quão doente está o fígado de alguém com cirrose, os médicos olham cinco coisas: a bilirrubina no sangue, a albumina, se tem líquido acumulado na barriga, quanto tempo o sangue demora para coagular, e se a pessoa está confusa."
     },
     {
       "id": "b18-q036",
@@ -1105,7 +1140,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Várias coisas aumentam o risco de infecção no líquido da barriga em quem tem cirrose, como pouca proteína nesse líquido, sangramento de varizes, bilirrubina alta e um fígado muito doente. Só estar acima do peso, sozinho, não é um desses fatores de risco."
     },
     {
       "id": "b18-q037",
@@ -1136,7 +1172,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando o rim para de funcionar direito por causa de um fígado muito doente, o tratamento que funciona melhor é usar dois remédios juntos: um que aperta os vasos sanguíneos e albumina, que ajuda a segurar líquido dentro deles."
     },
     {
       "id": "b18-q038",
@@ -1166,7 +1203,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "A infecção do líquido da barriga em quem tem cirrose se trata com um antibiótico forte direto na veia."
     },
     {
       "id": "b18-q039",
@@ -1197,7 +1235,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Para tratar uma criança em choque por infecção grave, o soro usado para repor líquido deve ser um tipo mais simples e balanceado, e não um tipo mais grosso chamado coloide, desde que a criança não esteja com sinais de excesso de líquido no corpo."
     },
     {
       "id": "b18-q040",
@@ -1227,7 +1266,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Um testículo que já teve histórico de ficar preso lá dentro na infância tem mais risco de tumor quando cresce. Por isso, quando aparece um caroço duro e sem dor, o médico pede ultrassom e exames de sangue para investigar câncer."
     },
     {
       "id": "b18-q041",
@@ -1258,7 +1298,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Nesse caso de choque causado por uma pneumonia grave, quase tudo estava certo, exceto uma frase: não é necessário pensar logo em fungos como causa só por causa da gravidade e da idade da criança, o mais provável continua sendo uma bactéria."
     },
     {
       "id": "b18-q042",
@@ -1289,7 +1330,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Quando o médico olha as células do câncer de próstata no microscópio, dá uma nota para o padrão mais comum e outra para o segundo mais comum delas. Quando o padrão mais comum já é o mais desorganizado possível, mesmo a soma final sendo igual à de outro caso, esse é o tumor com as células mais bagunçadas de todos."
     },
     {
       "id": "b18-q043",
@@ -1319,7 +1361,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "O útero e a parede da vagina dessa senhora desceram só um pouquinho e ela não sente nada com isso. Nesse caso, não precisa operar nem usar nenhum aparelhinho, só observar e acompanhar com o tempo."
     },
     {
       "id": "b18-q044",
@@ -1349,7 +1392,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Esse atleta tem pressão alta difícil de controlar e o potássio do sangue muito baixo, mas os hormônios de um tipo de tumor mais perigoso vieram normais. Isso aponta para outro tipo de nodulozinho na glândula perto do rim, que pode ser visto numa tomografia com contraste."
     },
     {
       "id": "b18-q045",
@@ -1383,7 +1427,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Mais uma vez, olhando os números medidos no exame, o que incomodava não é um órgão caindo de verdade, e sim o colo do útero maior do que o normal."
     },
     {
       "id": "b18-q046",
@@ -1414,7 +1459,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Essa criança com febre alta e manchas roxas que apareceram rápido pode estar com uma infecção muito grave que se espalha pelo sangue. O time precisa dar soro na veia, começar antibiótico rápido, pedir exames, e também dar um remédio de proteção para quem mora junto com ela, porque essa doença pode passar para outras pessoas próximas."
     },
     {
       "id": "b18-q047",
@@ -1444,7 +1490,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Como a próstata desse senhor está bem grande e os sintomas incomodam, além de mudar hábitos, como beber menos líquido à noite, o tratamento usa dois remédios juntos: um que relaxa a saída da bexiga na hora, e outro que encolhe a próstata aos poucos."
     },
     {
       "id": "b18-q048",
@@ -1475,7 +1522,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Esse bebê com febre, coração acelerado e sinais de mal-estar pode estar com uma infecção grave espalhada pelo corpo. Por isso, o time colhe vários exames de uma vez, como sangue completo, culturas, gases do sangue, açúcar e exame de urina, para descobrir de onde vem a infecção e ver se algum órgão já está sofrendo."
     },
     {
       "id": "b18-q049",
@@ -1505,7 +1553,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "O remédio usado para acalmar a bexiga hiperativa bloqueia um tipo de receptor que também existe nas glândulas da saliva. Por isso, um efeito colateral comum desse remédio é deixar a boca seca."
     },
     {
       "id": "b18-q050",
@@ -1535,7 +1584,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "O órgão descer fica mais fácil de acontecer com o passar da idade, com coisas que aumentam a pressão na barriga, como estar acima do peso ou tossir muito por causa de doença pulmonar, e com o número de partos normais que a mulher teve."
     },
     {
       "id": "b18-q051",
@@ -1565,7 +1615,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Quando o médico anota a consulta de um jeito organizado, numa das partes ele escreve só o que observou de verdade: como a pessoa está, as emoções percebidas, o exame físico e os resultados de exames, não as suas suspeitas."
     },
     {
       "id": "b18-q052",
@@ -1596,7 +1647,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Esse bebê teve febre por muitos dias, e agora está cansado, com o coração acelerado, os pulmões cheios de líquido e o coração aumentado no raio-x. Isso mostra que o problema não é o pulmão nem uma infecção espalhada pelo corpo, e sim o próprio coração que não está bombeando direito."
     },
     {
       "id": "b18-q053",
@@ -1626,7 +1678,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Um caroço duro no testículo que não deixa passar luz, diferente de um cisto cheio de líquido, é sinal de tumor. O tratamento é retirar o testículo."
     },
     {
       "id": "b18-q054",
@@ -1656,7 +1709,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Uma ferida no pênis que não cicatriza há meses, mesmo com pomada, precisa ser investigada com uma biópsia, porque pode ser um câncer, não só uma infecção comum."
     },
     {
       "id": "b18-q055",
@@ -1686,7 +1740,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Sangue na urina em quem fuma há muitos anos levanta a suspeita de um tumor na bexiga. O exame que confirma é olhar por dentro da bexiga com uma câmera e tirar um pedacinho para examinar de perto."
     },
     {
       "id": "b18-q056",
@@ -1719,7 +1774,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Esse paciente com doença de fígado está confuso, com a barriga cheia de líquido infectado. O tratamento junta várias coisas: uma sonda para dar remédio que limpa o intestino, antibiótico forte na veia, albumina para ajudar a segurar líquido nos vasos, e um remédio que tira o excesso de líquido do corpo."
     },
     {
       "id": "b18-q057",
@@ -1750,7 +1806,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Esse senhor idoso já teve várias vezes a bexiga travando por causa da próstata grande, e o exame de sangue da próstata veio numa faixa que não pede biópsia agora. A orientação certa é encaminhar para um especialista avaliar uma cirurgia que desobstrui a saída da urina por dentro da uretra."
     },
     {
       "id": "b18-q058",
@@ -1780,7 +1837,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "O líquido da barriga desse senhor tem características diferentes do líquido comum de quem tem cirrose, o que aponta para outra causa, como uma infecção por tuberculose na barriga. Por isso, pede-se um exame no próprio líquido que ajuda a descobrir essa causa."
     },
     {
       "id": "b18-q059",
@@ -1811,7 +1869,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Para tratar o inchaço da barriga causado pela cirrose, o tratamento principal é comer menos sal e tomar um remédio diurético específico, podendo juntar outro se precisar."
     },
     {
       "id": "b18-q060",
@@ -1841,7 +1900,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Para começar a tratar a dificuldade de urinar causada pela próstata grande, o primeiro remédio a ser usado é o que relaxa o músculo da saída da bexiga."
     },
     {
       "id": "b18-q061",
@@ -1872,7 +1932,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Quando a bexiga fica muito cheia e a pessoa não consegue fazer xixi, primeiro os médicos tentam colocar uma sondinha rápida; se não der certo, uma sonda que fica mais tempo; e só se nada disso funcionar, fazem um furinho na barriga para tirar o xixi acumulado."
     },
     {
       "id": "b18-q062",
@@ -1903,7 +1964,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Muitos tumores de próstata no começo não dão nenhum sintoma, alguns homens vivem anos com esse câncer sem que ele os mate, e quem tem parentes com a doença, é afrodescendente ou tem uma mutação genética especial corre mais risco de desenvolvê-la."
     },
     {
       "id": "b18-q063",
@@ -1934,7 +1996,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Quando o fígado não funciona bem, toxinas se acumulam no sangue e afetam o cérebro; nesse paciente os tremores e a confusão mental indicam um grau intermediário dessa alteração."
     },
     {
       "id": "b18-q064",
@@ -1964,7 +2027,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Antes de pensar em exames mais complicados, o médico primeiro pede um exame simples de urina para descartar uma infecção como causa da urgência para fazer xixi."
     },
     {
       "id": "b18-q065",
@@ -1995,7 +2059,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "As feridas (chamadas úlceras de Hunner) encontradas dentro da bexiga, junto com a dor e o desconforto para urinar, mostram que a bexiga está cronicamente inflamada, o que se chama cistite intersticial."
     },
     {
       "id": "b18-q066",
@@ -2025,7 +2090,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando os remédios comuns não seguram bem a vontade urgente de fazer xixi, os médicos podem aplicar toxina botulínica na bexiga para relaxar o músculo e diminuir os espasmos."
     },
     {
       "id": "b18-q067",
@@ -2055,7 +2121,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Esse paciente tem dor após comer e histórico de bebida alcoólica, então os médicos suspeitam que o líquido na barriga venha do pâncreas inflamado, por isso pedem para medir a amilase nesse líquido."
     },
     {
       "id": "b18-q068",
@@ -2085,7 +2152,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "O novo jeito de diagnosticar sepse grave em crianças olha para coisas como quanto oxigênio o sangue está levando, a pressão arterial e as plaquetas — foi isso que ajudou a confirmar a gravidade dessa criança."
     },
     {
       "id": "b18-q069",
@@ -2116,7 +2184,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Quando o acúmulo de líquido na barriga vem do coração fraco (e não do fígado doente), o exame mostra uma diferença grande entre a albumina do sangue e a do líquido, mas com bastante proteína no líquido também."
     },
     {
       "id": "b18-q070",
@@ -2146,7 +2215,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "A cirurgia para consertar o abaixamento dos órgãos da pelve resolve esse problema, mas depois dela algumas mulheres podem passar a perder um pouco de xixi quando fazem esforço, porque o suporte que antes escondia esse problema foi corrigido."
     },
     {
       "id": "b18-q071",
@@ -2177,7 +2247,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando os exames mostram que o coração e a respiração da criança não estão bem, o tratamento certo é dar soro na veia, começar antibióticos logo, e usar remédios para apertar os vasos sanguíneos se a pressão não melhorar."
     },
     {
       "id": "b18-q072",
@@ -2208,7 +2279,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Se o líquido da barriga tem muitas células de defesa mas a cultura não encontra nenhuma bactéria, ainda assim o médico trata com antibiótico, porque esse tipo de infecção (ascite neutrofílica) também precisa de remédio, mesmo sem confirmar o micróbio."
     },
     {
       "id": "b18-q073",
@@ -2238,7 +2310,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "A frase que mostra o médico entendendo os medos e sentimentos do paciente sobre sua doença, e não só os sintomas físicos, é a que representa esse primeiro passo do método: ouvir a experiência da pessoa com a doença."
     },
     {
       "id": "b18-q074",
@@ -2268,7 +2341,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Quando uma criança está em choque, ou seja, o corpo não está levando sangue suficiente para os órgãos, a primeira coisa a fazer é dar soro na veia bem rápido."
     },
     {
       "id": "b18-q075",
@@ -2299,7 +2373,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Antes de fechar o diagnóstico mais grave para os rins desse paciente, é importante primeiro verificar se não existe um bloqueio nas vias urinárias, porque isso mudaria o prognóstico."
     },
     {
       "id": "b18-q076",
@@ -2330,7 +2405,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Quando a infecção do líquido da barriga deixa a pressão baixa e o coração acelerado, o tratamento certo é dar soro com albumina na veia junto com um antibiótico forte."
     },
     {
       "id": "b18-q077",
@@ -2360,7 +2436,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Na parte 'Subjetivo' do prontuário, o médico anota a história contada pelo próprio paciente e o motivo que o trouxe à consulta."
     },
     {
       "id": "b18-q078",
@@ -2390,7 +2467,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Câncer de próstata não é tratado com quimioterapia e hormônio antiestrogênico como primeira escolha; isso é usado em outros tipos de câncer, não nesse caso, por isso essa opção está errada."
     },
     {
       "id": "b18-q079",
@@ -2420,7 +2498,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "No tratamento do choque grave por infecção, além de dar soro e remédios para o coração, é muito importante corrigir os níveis de sais do corpo, como o cálcio, e deixar o açúcar do sangue normal."
     },
     {
       "id": "b18-q080",
@@ -2450,7 +2529,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Em bebês recém-nascidos, a infecção grave pode não dar febre nem outros sinais óbvios; às vezes o único sinal é o bebê mamar menos, ficar mole ou sonolento."
     },
     {
       "id": "b18-q081",
@@ -2480,7 +2560,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Para acompanhar como uma criança com choque grave está evoluindo, os médicos observam sinais simples como batimento do coração, quantidade de xixi, respiração, pressão e nível de consciência."
     },
     {
       "id": "b18-q082",
@@ -2510,7 +2591,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "A vontade urgente de fazer xixi que às vezes escapa antes de chegar ao banheiro, sem outros problemas, é chamada de bexiga hiperativa molhada."
     },
     {
       "id": "b18-q083",
@@ -2540,7 +2622,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Antes de remédios ou cirurgias, o primeiro tratamento para a bexiga hiperativa é mudar hábitos do dia a dia, como diminuir café e líquidos à noite."
     },
     {
       "id": "b18-q084",
@@ -2570,7 +2653,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "O exame urodinâmico, que estuda como a bexiga se enche e esvazia, só é indicado quando os tratamentos mais simples já foram tentados e não funcionaram."
     },
     {
       "id": "b18-q085",
@@ -2601,7 +2685,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Não se faz cirurgia para tirar o baço só porque a pessoa tem plaquetas baixas por causa da pressão alta nas veias do fígado; isso não é indicado para prevenir sangramento, por isso essa afirmação está errada."
     },
     {
       "id": "b18-q086",
@@ -2631,7 +2716,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "O novo jeito de identificar sepse grave em crianças avalia quatro sistemas do corpo: respiração, coração, cérebro e a coagulação do sangue."
     },
     {
       "id": "b18-q087",
@@ -2661,7 +2747,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Para crianças com choque por infecção grave, o antibiótico precisa ser dado em até uma hora; já as crianças com infecção grave mas sem choque podem recebê-lo em até três horas."
     },
     {
       "id": "b18-q088",
@@ -2691,7 +2778,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Como essa jovem tem febre à tarde, perda de peso e leucócitos na urina sem infecção comum, o próximo exame é procurar o bacilo da tuberculose na urina."
     },
     {
       "id": "b18-q089",
@@ -2726,7 +2814,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Além da história clínica, contar as plaquetas e medir o fibrinogênio, uma proteína da coagulação, ajuda a identificar sepse nessa paciente, porque os dois estão diminuídos, mostrando o corpo em choque grave."
     },
     {
       "id": "b18-q090",
@@ -2757,7 +2846,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "O remédio chamado lactulose ajuda a diminuir a quantidade de amônia, uma substância tóxica, que sobe para o cérebro, e a dose certa é aquela que faz a pessoa evacuar cerca de três vezes por dia."
     },
     {
       "id": "b18-q091",
@@ -2788,7 +2878,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Em crianças, o choque causado por infecção pode aparecer antes mesmo da pressão cair, e existem vários sinais, como batimentos rápidos, pele fria e pouco xixi, que juntos ajudam a identificar esse problema."
     },
     {
       "id": "b18-q092",
@@ -2821,7 +2912,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Depois de tratar a confusão mental causada pelo fígado doente, é importante começar um remédio que baixa a pressão nas veias do fígado e ajuda a prevenir sangramentos futuros."
     },
     {
       "id": "b18-q093",
@@ -2854,7 +2946,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "O exame que olha por dentro da bexiga mostrou feridas características, o que confirma que essa dor pélvica crônica é causada pela síndrome da bexiga dolorosa."
     },
     {
       "id": "b18-q094",
@@ -2884,7 +2977,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-172"
+      "scheduleId": "cron-172",
+      "kids": "Antes de exames complicados, o primeiro passo para investigar a vontade urgente de fazer xixi é um simples exame de urina, para descartar uma infecção."
     },
     {
       "id": "b18-semanais-q95",
@@ -2913,7 +3007,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags Bloco 18.txt"
+      "tagSource": "Tags Bloco 18.txt",
+      "kids": "A dor que piora quando a bexiga enche e melhora depois de urinar é sinal de uma doença da bexiga; o exame que confirma isso é olhar por dentro dela e encontrar as feridas típicas chamadas úlceras de Hunner."
     },
     {
       "id": "b18-q096",
@@ -2943,7 +3038,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Na perda de urina por esforço verdadeira, o xixi escapa quando a pessoa tosse ou pula, mesmo que a bexiga não esteja completamente cheia."
     },
     {
       "id": "b18-q097",
@@ -2973,7 +3069,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Os ligamentos que seguram o útero no lugar certo são os principais responsáveis por evitar que os órgãos da pelve caiam quando enfraquecem."
     },
     {
       "id": "b18-q098",
@@ -3004,7 +3101,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Na parte 'Objetivo' do prontuário, o médico escreve o que ele mesmo encontrou no exame físico e os resultados dos exames, e não o que o paciente contou."
     },
     {
       "id": "b18-q099",
@@ -3035,7 +3133,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "A melhor forma de cuidar dessa paciente é valorizar o interesse dela pela dieta que encontrou, conversar com respeito sobre o que é confiável naquele artigo, e decidir juntos o tratamento, incluindo as opções com mais evidência científica."
     },
     {
       "id": "b18-q100",
@@ -3066,7 +3165,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Diante de uma criança em choque por infecção com sinais de convulsão, a conduta certa é dar soro rapidamente na veia, colher exames de sangue para achar o micróbio, e começar o antibiótico forte sem esperar o resultado, porque cada minuto conta."
     },
     {
       "id": "b18-q101",
@@ -3097,7 +3197,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Para uma idosa com várias doenças graves e sofrimento, o mais importante não é seguir cada regra separada para cada doença, mas sim conversar com a família e focar no que traz conforto e qualidade de vida para ela."
     },
     {
       "id": "b18-q102",
@@ -3128,7 +3229,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "A parte 'Subjetivo' do prontuário deve mostrar que o médico realmente escutou a pessoa, entendendo não só os sintomas, mas também o que a doença significa para ela."
     },
     {
       "id": "b18-q103",
@@ -3158,7 +3260,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Para entender como o paciente vive sua doença, o médico deve explorar quatro coisas: os sentimentos dele, as ideias que tem sobre o problema, como isso afeta seu dia a dia, e o que ele espera do tratamento."
     },
     {
       "id": "b18-q104",
@@ -3189,7 +3292,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Uma criança com câncer, sem defesas no sangue e com sinais de choque, precisa receber soro rapidamente na veia, ter sangue coletado para descobrir o micróbio, tomar antibióticos fortes de imediato e, se a pressão continuar baixa, usar remédio para apertar os vasos."
     },
     {
       "id": "b18-q105",
@@ -3222,7 +3326,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Como os exames desse paciente vieram tranquilos, sem nódulos, próstata pequena e PSA normal para a idade, não é preciso fazer biópsia agora; basta repetir o PSA daqui a um ano."
     },
     {
       "id": "b18-q106",
@@ -3252,7 +3357,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "O método que ajuda o médico a cuidar melhor do paciente tem quatro partes: fortalecer a relação entre os dois, entender a pessoa como um todo, fazer um plano de cuidado junto com o paciente, e entender como ele vive a doença."
     },
     {
       "id": "b18-q107",
@@ -3282,7 +3388,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Antes de simplesmente prescrever insulina, o médico deve primeiro entender por que o paciente tem medo dela, esclarecer as dúvidas, e decidir juntos o próximo passo do tratamento."
     },
     {
       "id": "b18-q108",
@@ -3315,7 +3422,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "A parte do método que fala sobre olhar para a pessoa inteira, sua família, seu contexto de vida, e não só a doença, é chamada de 'entender a pessoa como um todo'."
     },
     {
       "id": "b18-q109",
@@ -3345,7 +3453,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Só dois dos itens listados são realmente partes desse método, fortalecer a relação médico-paciente e conhecer o contexto do paciente, e a soma dos números deles dá seis."
     },
     {
       "id": "b18-q110",
@@ -3375,7 +3484,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Para esse senhor com sintomas de próstata aumentada mas sem sinais graves, o primeiro tratamento é um remédio que relaxa o músculo da bexiga e da próstata, e depois se observa se ele melhora."
     },
     {
       "id": "b18-q111",
@@ -3406,7 +3516,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "A forma moderna de conversar com o paciente valoriza ouvir sua história de vida completa, não só os sintomas, incluindo os sentimentos e o contexto social dele, para ajudar no diagnóstico e no tratamento."
     },
     {
       "id": "b18-q112",
@@ -3436,7 +3547,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Esse homem tem sinais de infecção no líquido da barriga, muitas células de defesa presentes, então mesmo aguardando a cultura, o certo é já começar o antibiótico logo."
     },
     {
       "id": "b18-q113",
@@ -3467,7 +3579,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Quando o exame do líquido da barriga mostra pouca diferença entre a albumina do sangue e a do líquido, a causa mais provável não é o fígado, e sim um câncer espalhado pela membrana que envolve os órgãos da barriga."
     },
     {
       "id": "b18-q114",
@@ -3497,7 +3610,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Esse líquido na barriga vem do pâncreas, não do fígado, então fazer um procedimento que serve para baixar a pressão das veias do fígado não faz sentido nesse caso."
     },
     {
       "id": "b18-q115",
@@ -3527,7 +3641,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Como o inchaço não melhorou só com um diurético, o médico pode adicionar um segundo remédio mantendo o primeiro, para ajudar o corpo a eliminar mais líquido."
     },
     {
       "id": "b18-q116",
@@ -3557,7 +3672,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Como o potássio do sangue subiu e os rins pioraram, é preciso parar os diuréticos e o remédio para pressão, porque eles podem estar piorando esse quadro."
     },
     {
       "id": "b18-q117",
@@ -3587,7 +3703,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-170"
+      "scheduleId": "cron-170",
+      "kids": "Para tratar a confusão mental causada pelo fígado doente, deve-se manter uma alimentação normal em proteína, sem cortar tudo, parar os diuréticos, dar lactulose e albumina, e investigar melhor o líquido da barriga."
     },
     {
       "id": "b18-q118",
@@ -3618,7 +3735,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "A massa sólida no rim, junto com sangue na urina e dor no lado do corpo em um fumante, é sinal clássico de um tipo de câncer do rim chamado carcinoma de células renais."
     },
     {
       "id": "b18-q119",
@@ -3648,7 +3766,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Antes de decidir se tira ou não a lesão na glândula que fica em cima do rim, o médico primeiro precisa saber se ela está produzindo hormônios em excesso, porque isso muda a conduta."
     },
     {
       "id": "b18-q120",
@@ -3678,7 +3797,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-168"
+      "scheduleId": "cron-168",
+      "kids": "Depois de uma cirurgia de próstata com bastante líquido usado para lavar a área, o paciente pode ficar confuso e enjoado porque absorveu água em excesso, diluindo o sal do sangue; o tratamento é corrigir esse sal."
     },
     {
       "id": "b18-q121",
@@ -3709,7 +3829,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Quando a bexiga fica muito cheia depois de uma cirurgia e o paciente não consegue urinar sozinho, o certo é colocar uma sonda para esvaziar a bexiga com cuidado, evitando infecção."
     },
     {
       "id": "b18-q122",
@@ -3739,7 +3860,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Quando a próstata fica muito grande, mais de 80 gramas, e os remédios não ajudam mais, a cirurgia indicada é retirar parte dela por dentro da bexiga."
     },
     {
       "id": "b18-q123",
@@ -3769,7 +3891,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169"
+      "scheduleId": "cron-169",
+      "kids": "Para esse paciente com sintomas leves e próstata pequena, o primeiro remédio a tentar é o alfabloqueador, que relaxa o músculo e facilita o xixi."
     },
     {
       "id": "b18-q124",
@@ -3799,7 +3922,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "A gestante não pode ser demitida do trabalho sem um motivo muito grave, e o médico deve explicar isso a ela, além de ajustar os remédios com cuidado."
     },
     {
       "id": "b18-q125",
@@ -3829,7 +3953,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Para entender de verdade o que a paciente está sentindo, e não só tratar a dor de barriga com remédios, o médico deve perguntar sobre seus sentimentos, ideias, como isso afeta seu dia a dia e suas expectativas; isso ajuda a descobrir que ela está sofrendo de solidão."
     },
     {
       "id": "b18-q126",
@@ -3859,7 +3984,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "O adolescente pode receber orientação sobre prevenção de doenças e remédios preventivos sem precisar contar para um adulto, porque isso é um direito dele ao atendimento confidencial."
     },
     {
       "id": "b18-q127",
@@ -3889,7 +4015,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "O primeiro passo desse método de cuidado é explorar como a pessoa se sente com sua doença: seus sentimentos, suas ideias sobre o problema, como isso atrapalha sua vida e o que ela espera do tratamento."
     },
     {
       "id": "b18-q128",
@@ -3922,7 +4049,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "Quando o lactato do sangue está alto e alguns sinais indicam que o coração não está bombeando sangue suficiente, o tratamento certo é aumentar os remédios que fortalecem o batimento do coração."
     },
     {
       "id": "b18-q129",
@@ -3952,7 +4080,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Essa criança já recebeu bastante soro mas continua com sinais graves de choque, então o próximo passo é começar um remédio direto na veia para ajudar o coração a bombear sangue com mais força."
     },
     {
       "id": "b18-q130",
@@ -3993,7 +4122,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-165"
+      "scheduleId": "cron-165",
+      "kids": "O exame de ultrassom feito rapidamente à beira do leito ajuda a confirmar, junto com os outros sinais do coração e pulmão, qual é o problema súbito que está causando a falta de ar grave nessa adolescente."
     },
     {
       "id": "b18-q131",
@@ -4023,7 +4153,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-167"
+      "scheduleId": "cron-167",
+      "kids": "Como essa criança já teve uma infecção urinária grave tratada no hospital recentemente e voltou com febre, o mais seguro é já começar soro e um antibiótico mais forte, pensando numa nova infecção pega no próprio hospital."
     },
     {
       "id": "b18-q132",
@@ -4056,7 +4187,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "A fita cirúrgica colocada para tratar a perda de urina funciona sustentando a uretra por baixo, evitando que ela se mova quando a pessoa faz esforço."
     },
     {
       "id": "b18-q133",
@@ -4086,7 +4218,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando a fisioterapia não resolve a perda de urina ao esforço, a cirurgia indicada é colocar uma fita de sustentação por baixo da uretra."
     },
     {
       "id": "b18-q134",
@@ -4116,7 +4249,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Se depois da cirurgia da fita a mulher passa a ter dificuldade para fazer xixi, pode ser necessário voltar à cirurgia para afrouxar um pouco essa fita."
     },
     {
       "id": "b18-q135",
@@ -4146,7 +4280,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando a mulher tem os dois tipos de perda de urina juntos, de esforço e de urgência, o primeiro tratamento a tentar é a fisioterapia para fortalecer os músculos da pelve."
     },
     {
       "id": "b18-q136",
@@ -4176,7 +4311,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Essa paciente tem dois problemas ao mesmo tempo: contrações da bexiga que ela não controla e um colo da bexiga que se move demais durante o esforço; por isso a incontinência dela é chamada de mista."
     },
     {
       "id": "b18-q137",
@@ -4207,7 +4343,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Aqui, além das contrações involuntárias da bexiga, a pressão baixa medida no exame mostra que o músculo que segura a urina também está fraco; então essa incontinência também é mista, mas por um motivo um pouco diferente."
     },
     {
       "id": "b18-q138",
@@ -4237,7 +4374,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando a uretra se move demais e o músculo que segura o xixi está fraco, o tratamento indicado é a cirurgia da fita de sustentação."
     },
     {
       "id": "b18-q139",
@@ -4267,7 +4405,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Uma pressão bem alta nesse exame de perda de urina mostra que o problema é a uretra se movendo demais durante o esforço, e não uma fraqueza do músculo que segura o xixi."
     },
     {
       "id": "b18-q140",
@@ -4297,7 +4436,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Para essa paciente com urgência para fazer xixi que também tem glaucoma, o remédio mais seguro é um que relaxa a bexiga sem os efeitos que pioram a pressão do olho, por isso escolhem esse tipo de remédio e não os outros."
     },
     {
       "id": "b18-q142",
@@ -4327,7 +4467,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "O exame urodinâmico, na parte chamada cistometria, mede a pressão dentro da bexiga enquanto ela enche e mostra se há contrações que a pessoa não consegue controlar."
     },
     {
       "id": "b18-q143",
@@ -4358,7 +4499,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "A dor pélvica que piora com a bexiga cheia e melhora depois de urinar, junto com as feridas encontradas no exame, mostra que essa paciente tem a síndrome da bexiga dolorosa."
     },
     {
       "id": "b18-q144",
@@ -4388,7 +4530,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "A dor que aumenta quando a bexiga enche e some depois do xixi é sinal de uma doença da bexiga; para confirmar, o médico olha por dentro dela e procura as feridas típicas chamadas úlceras de Hunner."
     },
     {
       "id": "b18-q145",
@@ -4419,7 +4562,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "O melhor exame para descobrir o tipo exato de perda de urina em mulheres é o teste urodinâmico, que estuda como a bexiga se enche e esvazia."
     },
     {
       "id": "b18-semanais-q146",
@@ -4449,7 +4593,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando a urina escapa com os mínimos esforços, como um espirro leve, isso sugere que o músculo que deveria segurar o xixi está bem fraco, o que se chama deficiência esfincteriana intrínseca."
     },
     {
       "id": "b18-q147",
@@ -4479,7 +4624,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-166"
+      "scheduleId": "cron-166",
+      "kids": "Quando o exame mostra que a bexiga se contrai sozinha, sem a pessoa mandar, mesmo enquanto ainda está enchendo, isso define a bexiga hiperativa, que causa aquela vontade urgente de fazer xixi."
     }
   ]
 }

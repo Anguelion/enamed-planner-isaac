@@ -30,7 +30,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "A mãe tinha diabetes na gravidez sem saber, e o açúcar alto no sangue dela fez o bebê fabricar sangue grosso demais, com muitas células vermelhas. Esse sangue grosso entupiu os vasinhos da placenta, como uma mangueira entupida, e por isso o bebê não resistiu."
     },
     {
       "id": "b14-semanais-q02",
@@ -61,7 +62,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Quando o suco do estômago sobe para o esôfago por muito tempo (azia crônica), ele pode machucar tanto a parede que as células mudam de tipo, o que se chama Esôfago de Barrett. Com o tempo, esse machucado pode virar um tipo de câncer chamado adenocarcinoma."
     },
     {
       "id": "b14-semanais-q03",
@@ -92,7 +94,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "O esôfago é como um tubo que liga a boca ao estômago, e ele é mais apertado em três pontos: perto da garganta, no meio do peito onde cruza com outras estruturas, e onde atravessa o diafragma para chegar ao estômago."
     },
     {
       "id": "b14-diabetes-gestacao-q02",
@@ -122,7 +125,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Se o açúcar no sangue em jejum já está muito alto logo no começo da gravidez, isso significa que a mulher já tinha diabetes antes mesmo de engravidar, então ela precisa de um acompanhamento mais cuidadoso desde já."
     },
     {
       "id": "b14-diabetes-gestacao-q03",
@@ -152,7 +156,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Quando o exame de açúcar em jejum dá um valor bem alto duas vezes seguidas, os médicos sabem que essa diabetes já existia antes da gravidez, e não é o tipo de diabetes que só aparece durante a gestação."
     },
     {
       "id": "b14-diabetes-gestacao-q04",
@@ -183,7 +188,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Para descobrir se uma grávida tem diabetes que só aparece na gestação, o exame certo é dar para ela beber um líquido bem doce e medir o açúcar no sangue antes e depois. Isso é feito entre a 24ª e a 28ª semana de gravidez."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q01",
@@ -213,7 +219,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Esse senhor tem várias coisas juntas: açúcar meio alto no sangue, gordura ruim alta, gordura boa baixa e barriga grande. Quando tudo isso aparece junto, os médicos chamam de síndrome metabólica, que aumenta o risco de problemas no coração."
     },
     {
       "id": "b14-diabetes-gestacao-q05",
@@ -244,7 +251,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Mesmo essa mulher já tendo tido diabetes numa gravidez anterior, os números do exame de açúcar dessa vez deram todos dentro do normal. Então ela não tem diabetes gestacional agora, só precisa continuar se cuidando."
     },
     {
       "id": "b14-pals-q01",
@@ -274,7 +282,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando o coração de uma criança bate devagar demais por falta de ar, e não por um problema do próprio coração, a primeira coisa a fazer é ajudar ela a respirar com uma bolsinha de oxigênio. Só depois disso é que se pensa em outras medidas."
     },
     {
       "id": "b14-diabetes-gestacao-q06",
@@ -304,7 +313,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Quando o exame confirma que a grávida tem diabetes gestacional, ela continua sendo acompanhada na unidade de saúde perto de casa, mas passa também a ser cuidada por uma equipe especializada em gestações de risco."
     },
     {
       "id": "b14-pals-q02",
@@ -335,7 +345,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando o coração de uma pessoa está tremendo de um jeito desorganizado, em vez de bater direito, o primeiro passo é dar um choque elétrico nele, e só depois continuar com as compressões no peito."
     },
     {
       "id": "b14-semanais-q12",
@@ -365,7 +376,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Uma ferida no final do esôfago, perto do estômago, em quem já tem azia crônica há anos, geralmente é um tipo de câncer chamado adenocarcinoma. Para saber o quanto ele se espalhou pelo corpo, os médicos fazem tomografias de várias partes do corpo."
     },
     {
       "id": "b14-pals-q03",
@@ -396,7 +408,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando o coração de alguém para de bater por causa de uma alergia muito grave, o remédio que ajuda o coração a voltar a bater precisa ser colocado direto na veia, porque é a forma mais rápida de fazer efeito nesse momento de emergência."
     },
     {
       "id": "b14-semanais-q14",
@@ -426,7 +439,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Essa mulher tem azia muito forte que não melhora com remédio e também está com bastante peso a mais. Uma cirurgia que corta e reorganiza o estômago ajuda a resolver os dois problemas ao mesmo tempo: o peso e a azia."
     },
     {
       "id": "b14-semanais-q15",
@@ -457,7 +471,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Esse paciente vai fazer um tratamento com remédios fortes e radiação bem na região do estômago, então não pode receber comida por um tubo colocado ali. Os médicos preferem colocar o tubo de alimentação mais abaixo, no intestino, para ele não atrapalhar o tratamento."
     },
     {
       "id": "b14-cetoacidose-pediatria-q01",
@@ -487,7 +502,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Quando o açúcar no sangue da criança já baixou bastante durante o tratamento, os médicos começam a dar um soro com um pouquinho de açúcar junto, para poder continuar usando a insulina sem deixar o açúcar cair demais."
     },
     {
       "id": "b14-dislipidemia-q01",
@@ -518,7 +534,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "O remédio para baixar o colesterol pode, em alguns casos, machucar os músculos do corpo inteiro. Quando isso acontece, a pessoa sente dor muscular forte e o xixi fica escuro, porque pedacinhos do músculo destruído estão saindo pela urina."
     },
     {
       "id": "b14-dislipidemia-q02",
@@ -548,7 +565,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Fazendo as contas com os valores de gordura no sangue dessa senhora, o colesterol ruim dela está abaixo do limite que os médicos consideram seguro para quem tem diabetes, então ela já está bem controlada nesse quesito."
     },
     {
       "id": "b14-pals-q04",
@@ -578,7 +596,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Esse bebê está com o coração batendo bem devagar e pouco oxigênio no sangue por causa de uma infecção respiratória. Antes de qualquer remédio, o mais importante é ajudar ele a respirar melhor com uma bolsinha que empurra ar para os pulmões."
     },
     {
       "id": "b14-semanais-q20",
@@ -607,7 +626,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Sentir uma azia de vez em quando depois de comer muito ou beber álcool é normal e não quer dizer que a pessoa tenha a doença do refluxo. Já quem tem azia toda semana, ou sintomas estranhos como rouquidão e pneumonias repetidas, provavelmente tem mesmo a doença."
     },
     {
       "id": "b14-diabetes-gestacao-q07",
@@ -637,7 +657,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Para saber se a grávida tem diabetes gestacional, ela faz um exame com açúcar entre a 24ª e a 28ª semana de gravidez, e basta que só um dos três resultados medidos esteja alto para fechar o diagnóstico."
     },
     {
       "id": "b14-semanais-q22",
@@ -667,7 +688,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Essa mulher já fez vários exames, tentou o remédio direito e mesmo assim a azia continua atrapalhando sua vida. Como os exames já mostraram claramente o problema, não precisa repetir tudo de novo: já dá para indicar a cirurgia que corrige o refluxo."
     },
     {
       "id": "b14-semanais-q23",
@@ -697,7 +719,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Depois do tratamento com remédios fortes, o tumor original sumiu, mas um exame mais sensível ainda mostra um gânglio suspeito. Como ainda sobrou uma parte doente, a solução é operar para retirar tudo o que restou."
     },
     {
       "id": "b14-dislipidemia-q03",
@@ -728,7 +751,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Existe uma gordura especial no sangue que aumenta o risco de problemas no coração por conta própria, não só porque é gordura, mas porque ela também ajuda a formar coágulos e inflama os vasos sanguíneos."
     },
     {
       "id": "b14-diabetes-gestacao-q08",
@@ -759,7 +783,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "O exame do açúcar dessa grávida mostrou dois valores acima do limite considerado normal, um em jejum e outro uma hora depois de beber o líquido doce, o que já é suficiente para confirmar que ela tem diabetes gestacional."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q02",
@@ -789,7 +814,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Colocar aveia na comida ajuda a deixar o açúcar da refeição mais devagar para entrar no sangue, porque a aveia tem fibras que fazem a digestão ser mais lenta. Diferente do que diziam sobre o leite, as frutas e o óleo de coco, que não têm o efeito ruim que a influenciadora falou."
     },
     {
       "id": "b14-dislipidemia-q04",
@@ -819,7 +845,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Essa senhora tem várias doenças ao mesmo tempo, como lúpus, diabetes e pressão alta, e já está com sinais de que os rins e os ossos estão fracos. Por isso ela precisa de um remédio para proteger o rim, um colesterol mais forte, insulina para controlar melhor o açúcar e um remédio para fortalecer os ossos."
     },
     {
       "id": "b14-cetoacidose-pediatria-q02",
@@ -850,7 +877,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Quando uma criança chega numa emergência com diabetes descompensada, a primeira coisa a fazer é repor o soro que o corpo perdeu, hidratando ela pela veia. Só depois disso é que se pensa em dar insulina."
     },
     {
       "id": "b14-cetoacidose-pediatria-q03",
@@ -880,7 +908,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Quando se trata essa emergência de diabetes com insulina, o fósforo do sangue entra para dentro das células junto com o açúcar, e isso faz o nível de fósforo no sangue cair. Por isso os médicos ficam de olho para o coração não sofrer com essa queda."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q03",
@@ -911,7 +940,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Quando uma pessoa com peso alto acha que está tudo bem com sua saúde, o médico não deve brigar nem forçar mudanças de uma vez. É melhor primeiro entender como essa pessoa pensa sobre sua própria saúde, para depois conseguir ajudá-la a mudar de verdade."
     },
     {
       "id": "b14-semanais-q31",
@@ -941,7 +971,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Quando a pessoa tem os sintomas clássicos de azia e o exame de endoscopia já mostra feridas causadas pelo ácido no esôfago, isso já é suficiente para confirmar a doença do refluxo, sem precisar de mais um exame para medir o ácido."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q04",
@@ -972,7 +1003,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Os remédios modernos para emagrecer que imitam um hormônio do intestino costumam dar enjoo, e como fazem a pessoa perder peso rápido, também podem aumentar a chance de formar pedra na vesícula."
     },
     {
       "id": "b14-cetoacidose-pediatria-q04",
@@ -1002,7 +1034,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Nessa emergência de diabetes, o corpo da criança está sem quase nenhuma insulina, e mesmo que o potássio pareça normal no exame de sangue, o corpo todo já perdeu bastante potássio pela urina."
     },
     {
       "id": "b14-pals-q05",
@@ -1034,7 +1067,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Essa bebê está com o coração batendo de um jeito perigoso e rápido demais, e como ela está muito mal, com pouca força nos pulsos, a solução é dar um choque elétrico programado para o coração voltar ao ritmo certo."
     },
     {
       "id": "b14-pals-q06",
@@ -1065,7 +1099,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "O coração dessa menina está tentando bater, aparece no monitor, mas não está bombeando sangue de verdade, então ela não tem pulso. Nesse caso, os médicos fazem as compressões no peito e dão adrenalina rápido, sempre procurando a causa, que aqui provavelmente é a falta de oxigênio."
     },
     {
       "id": "b14-diabetes-gestacao-q09",
@@ -1095,7 +1130,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "O exame de açúcar dessa grávida deu um valor que já confirma diabetes gestacional, então o primeiro passo é ela comer com menos carboidratos e ficar de olho nos níveis de açúcar, sem precisar de remédio ainda."
     },
     {
       "id": "b14-cetoacidose-pediatria-q05",
@@ -1125,7 +1161,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "O potássio dessa adolescente já está alto no sangue, então os médicos hidratam ela primeiro e esperam para repor mais potássio depois, só quando ele começar a baixar ou quando ela voltar a fazer xixi."
     },
     {
       "id": "b14-diabetes-gestacao-q10",
@@ -1155,7 +1192,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "O exame de açúcar em jejum dessa grávida deu um valor que já fecha o diagnóstico de diabetes gestacional, e o tratamento começa com dieta com menos carboidrato e exercício físico, sem precisar de remédio de cara."
     },
     {
       "id": "b14-dislipidemia-q05",
@@ -1185,7 +1223,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Esse paciente tem um risco bem alto de problemas no coração e já está tomando a dose máxima do remédio para baixar o colesterol, mas o colesterol ruim ainda não chegou na meta. Nesse caso, junta-se outro remédio ao invés de trocar o primeiro."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q05",
@@ -1216,7 +1255,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Essa senhora está com os primeiros sinais de que pode desenvolver diabetes no futuro, mas por enquanto os médicos preferem não dar remédio, só recomendar dieta e exercício, porque ainda não se sabe com certeza se os remédios ajudam a evitar a diabetes nessa fase."
     },
     {
       "id": "b14-atencao-primaria-q01",
@@ -1246,7 +1286,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "Para cuidar bem de uma doença que dura muito tempo, como o colesterol alto, é melhor que a pessoa seja acompanhada sempre no posto de saúde perto de onde ela mora, porque assim a equipe consegue conhecê-la melhor e acompanhar sua saúde ao longo do tempo."
     },
     {
       "id": "b14-semanais-q42",
@@ -1276,7 +1317,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Essa mulher tem uma dor que não é bem a azia típica, e o remédio não resolveu totalmente. Antes de decidir por uma cirurgia, os médicos precisam fazer exames que medem a pressão e o ácido no esôfago, para confirmar se é mesmo refluxo."
     },
     {
       "id": "b14-atencao-primaria-q02",
@@ -1306,7 +1348,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "O problema aqui é que o posto de saúde e o especialista não conseguiram trocar as informações da paciente direito, pois as receitas se perderam e os sistemas não conversam entre si. Isso mostra uma falha na parte de organizar e juntar o cuidado entre os diferentes lugares que atendem a mesma pessoa."
     },
     {
       "id": "b14-cetoacidose-pediatria-q06",
@@ -1336,7 +1379,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Nessa emergência de diabetes das crianças, a insulina é dada bem devagarinho, numa bomba contínua, numa dose pequena calculada pelo peso. Nunca se dá uma dose grande de uma vez só."
     },
     {
       "id": "b14-pals-q07",
@@ -1366,7 +1410,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando o coração de uma criança para completamente de bater, sem nenhum ritmo aparecendo no monitor, o remédio certo para tentar fazer ele voltar a bater é a adrenalina."
     },
     {
       "id": "b14-atencao-primaria-q03",
@@ -1396,7 +1441,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "O médico conseguiu conversar rapidamente com a equipe especializada em saúde mental para ajustar o remédio do filho de Marina, sem precisar esperar dois meses. Isso é um exemplo de como o posto de saúde consegue se articular bem com outros serviços para resolver o problema."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q06",
@@ -1427,7 +1473,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Antes de dizer que a gordura no fígado é só por causa do excesso de peso e do açúcar alto, os médicos precisam primeiro descartar outras causas de doença no fígado, como vírus, remédios ou doenças genéticas."
     },
     {
       "id": "b14-dislipidemia-q06",
@@ -1458,7 +1505,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Esse paciente já tem diabetes, fuma e tem problema nas artérias das pernas, um risco bem alto para o coração. Por isso, ele precisa do tipo de remédio mais forte para baixar o colesterol ruim, e não de uma dose fraca."
     },
     {
       "id": "b14-cetoacidose-pediatria-q07",
@@ -1489,7 +1537,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Esse adolescente está começando com diabetes tipo 1, mas ainda sem uma emergência grave. O tratamento certo é começar a usar insulina, aprender a medir o próprio açúcar, se alimentar direito e fazer exercícios com acompanhamento."
     },
     {
       "id": "b14-dislipidemia-q07",
@@ -1520,7 +1569,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Mesmo já tomando o remédio para baixar o triglicerídeo, um tipo de gordura do sangue, esse paciente continua com o valor muito alto, o que pode machucar o pâncreas. Por isso, junta-se óleo de peixe ao tratamento, em vez de trocar o remédio."
     },
     {
       "id": "b14-dislipidemia-q08",
@@ -1550,7 +1600,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Esse paciente tem diabetes há muitos anos e já está com sinais de que os rins estão sendo prejudicados, perdendo proteína na urina. Por isso, a meta do colesterol ruim dele precisa ser bem mais baixa que o normal, porque o risco dele é muito alto."
     },
     {
       "id": "b14-cetoacidose-pediatria-q08",
@@ -1581,7 +1632,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "O que causa essa emergência do diabetes é a falta quase total de insulina no corpo. Sem a insulina, o corpo passa a quebrar a gordura de forma descontrolada para conseguir energia, e isso produz substâncias que deixam o sangue ácido."
     },
     {
       "id": "b14-diabetes-gestacao-q11",
@@ -1612,7 +1664,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Quando mais de um quarto das medidas de açúcar da grávida estão fora do normal mesmo com a dieta, é hora de começar a usar insulina, internar para acompanhar de perto e checar se o bebê está bem."
     },
     {
       "id": "b14-pals-q08",
@@ -1642,7 +1695,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Depois que o coração de uma criança volta a bater após uma parada, ela não deve ficar com o sangue mais ácido do que o normal de propósito. O certo é manter tudo equilibrado, sem medo de fazer o que for preciso, incluindo colocar um tubo para respirar se necessário."
     },
     {
       "id": "b14-cetoacidose-pediatria-q09",
@@ -1672,7 +1726,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Na primeira hora de tratamento dessa emergência do diabetes, os médicos só fazem a reposição de soro na veia e, se precisar, de potássio. A insulina só entra depois, mais para frente."
     },
     {
       "id": "b14-dislipidemia-q09",
@@ -1702,7 +1757,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Um dos remédios para emagrecer atrapalha a absorção de gordura no intestino, mas isso faz o corpo absorver mais de uma substância chamada oxalato, o que pode formar pedra no rim."
     },
     {
       "id": "b14-pals-q09",
@@ -1732,7 +1788,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando o coração de uma criança bate devagar demais por causa de um estímulo de um nervo, por exemplo durante a colocação de um tubo na garganta, o remédio que ajuda é a atropina."
     },
     {
       "id": "b14-cetoacidose-pediatria-q10",
@@ -1762,7 +1819,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Para saber o quão grave está a emergência de diabetes dessa menina, o exame mais importante é a gasometria do sangue, que mostra o quanto o sangue dela está ácido."
     },
     {
       "id": "b14-cetoacidose-pediatria-q11",
@@ -1792,7 +1850,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "O objetivo principal do tratamento não é baixar o açúcar rapidinho, e sim corrigir o desequilíbrio ácido do sangue e limpar as substâncias tóxicas produzidas. Baixar o açúcar rápido demais pode até ser perigoso."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q07",
@@ -1823,7 +1882,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Esse paciente já tentou emagrecer com dieta sem sucesso, tem diabetes e pressão alta, está bem preparado psicologicamente e não tem nenhum problema que impeça a cirurgia. Então não existe nenhum motivo na lista que o impeça de fazer a cirurgia para emagrecer."
     },
     {
       "id": "b14-pals-q10",
@@ -1854,7 +1914,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Esse menino está com o coração batendo muito rápido de um jeito perigoso, e como ele está mal, com pressão baixa e muito cansado para respirar, a solução é dar um choque elétrico programado numa dose pequena calculada pelo peso dele."
     },
     {
       "id": "b14-cetoacidose-pediatria-q12",
@@ -1884,7 +1945,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Um dos maiores riscos para o cérebro da criança inchar durante o tratamento dessa emergência de diabetes é justamente dar um remédio chamado bicarbonato de sódio, por isso os médicos evitam usar esse remédio."
     },
     {
       "id": "b14-atencao-primaria-q04",
@@ -1915,7 +1977,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "O jeito certo de organizar a saúde básica é focar em ajudar as pessoas a não ficarem doentes e cuidar delas de um jeito completo, e não só tratar doenças depois que elas já apareceram."
     },
     {
       "id": "b14-cetoacidose-pediatria-q13",
@@ -1945,7 +2008,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Quando uma criança chega numa emergência com essa complicação do diabetes, geralmente ela está desidratada, com o coração acelerado, respirando fundo e rápido, e sentindo dor na barriga. Ela costuma perder o apetite, e não comer mais do que o normal."
     },
     {
       "id": "b14-atencao-primaria-q05",
@@ -1975,7 +2039,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "O acesso é uma das características que ajudam a atenção primária a funcionar bem: ela deve ser a porta de entrada preferida do sistema de saúde, e isso envolve tanto a distância até o posto de saúde quanto a forma como as consultas são organizadas."
     },
     {
       "id": "b14-pals-q11",
@@ -2005,7 +2070,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Depois de já estar sendo ventilada com a bolsinha, essa bebê continua com o coração batendo muito devagar e a pele pálida, então chegou a hora de começar as compressões no peito."
     },
     {
       "id": "b14-pals-q12",
@@ -2035,7 +2101,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando o coração de uma criança está num ritmo que pode ser tratado com choque elétrico, os remédios que ajudam durante a reanimação são a adrenalina e um remédio que estabiliza o ritmo do coração."
     },
     {
       "id": "b14-cetoacidose-pediatria-q14",
@@ -2065,7 +2132,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Nessa criança, o sangue fica ácido de um jeito específico, que os médicos identificam através de uma conta que mostra um resultado maior que o normal. O sódio costuma ficar mais baixo, e o potássio pode estar baixo ou normal."
     },
     {
       "id": "b14-pals-q13",
@@ -2095,7 +2163,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando duas pessoas estão socorrendo uma criança sem pulso, elas fazem 15 compressões para 2 respirações. E assim que tiver um aparelho de choque disponível, ele deve ser usado logo, sem esperar."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q08",
@@ -2125,7 +2194,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Existe um hormônio que faz o cérebro sentir mais fome, diferente dos outros hormônios citados, que fazem a pessoa comer menos."
     },
     {
       "id": "b14-pals-q14",
@@ -2156,7 +2226,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Esse jovem, que já fez cirurgias no coração antes, está muito mal com o coração acelerado, quase sem responder e com a pressão baixa. A conduta certa é dar um choque elétrico programado numa dose pequena calculada pelo peso dele."
     },
     {
       "id": "b14-pals-q15",
@@ -2187,7 +2258,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Essa criança está com o coração disparado e sinais de que o corpo não está recebendo sangue suficiente, como mãos frias, tontura e pressão baixa. O tratamento é dar um choque elétrico programado para organizar o ritmo do coração."
     },
     {
       "id": "b14-cetoacidose-pediatria-q15",
@@ -2218,7 +2290,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Nessa emergência do diabetes, a insulina só começa a ser dada de 1 a 2 horas depois de já ter iniciado a hidratação, porque isso ajuda a evitar que o cérebro inche. E o diagnóstico é confirmado quando o sangue está bem ácido, com bicarbonato baixo."
     },
     {
       "id": "b14-pals-q16",
@@ -2248,7 +2321,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "O aparelho que mede o gás carbônico que a criança solta mostrou um valor baixo durante a reanimação, o que significa que as compressões e as respirações precisam ser feitas com mais força e qualidade."
     },
     {
       "id": "b14-pals-q17",
@@ -2278,7 +2352,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando o coração desse bebê para completamente, mesmo depois de checar os fios, o remédio certo para tentar fazer o coração voltar a bater é a adrenalina na veia, numa dose bem calculada pelo peso dele."
     },
     {
       "id": "b14-dislipidemia-q10",
@@ -2308,7 +2383,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Essa mulher tem o colesterol ruim bem alto e um risco importante para o coração, já que a mãe teve infarto cedo e ela tem peso e pressão elevados. O tratamento certo é começar logo com o tipo mais forte de remédio para baixar o colesterol."
     },
     {
       "id": "b14-dislipidemia-q11",
@@ -2339,7 +2415,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Essa senhora tem diabetes e já está com sinais de que os rins estão começando a ser afetados, com um pouco de proteína na urina. Por isso, ela precisa começar já, ao mesmo tempo, um remédio forte para o colesterol e outro para proteger os rins e controlar a pressão."
     },
     {
       "id": "b14-atencao-primaria-q06",
@@ -2369,7 +2446,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "Deixar o posto de saúde aberto por mais tempo, incluindo mais cedo e mais tarde, ajuda quem trabalha fora da cidade a conseguir ser atendido. Isso é um jeito de melhorar o acesso das pessoas ao serviço de saúde."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q09",
@@ -2399,7 +2477,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "O valor do açúcar em jejum dessa mulher não chega a contar como critério oficial da síndrome metabólica, mas o fato de a insulina dela estar alta mostra que o corpo está com dificuldade de usar a insulina direito, que é justamente o problema central dessa síndrome."
     },
     {
       "id": "b14-atencao-primaria-q07",
@@ -2430,7 +2509,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "As quatro características mais importantes que fazem a atenção primária funcionar bem são: ser a porta de entrada do sistema, acompanhar a pessoa ao longo do tempo, cuidar dela de forma completa e se articular bem com outros serviços de saúde."
     },
     {
       "id": "b14-cetoacidose-pediatria-q16",
@@ -2461,7 +2541,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Para confirmar que essa criança está com essa complicação do diabetes, os exames precisam mostrar açúcar alto no sangue, o sangue mais ácido que o normal, e a presença de substâncias tóxicas na urina."
     },
     {
       "id": "b14-pals-q18",
@@ -2491,7 +2572,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Quando uma criança não responde nem a um chamado forte, o primeiro passo não é sair fazendo compressões sozinho: é pedir ajuda e pedir para trazerem o aparelho de choque o quanto antes."
     },
     {
       "id": "b14-atencao-primaria-q08",
@@ -2522,7 +2604,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "O médico do posto de saúde encaminhou o paciente para o especialista, recebeu as informações de volta e continuou cuidando dele pedindo os exames necessários. Isso mostra que a comunicação entre os diferentes níveis de atendimento funcionou bem."
     },
     {
       "id": "b14-pals-q19",
@@ -2554,7 +2637,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "A sequência certa para socorrer alguém desmaiado é: primeiro checar se a pessoa responde, chamar a ambulância e pedir um aparelho de choque, depois checar rapidamente se ela tem pulso e respiração, e só então começar as compressões, na proporção de 30 compressões para 2 respirações."
     },
     {
       "id": "b14-atencao-primaria-q09",
@@ -2584,7 +2668,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "A atenção primária deve tratar cada pessoa considerando suas diferenças culturais, e não atender todo mundo do mesmo jeitinho, ignorando quem cada paciente é."
     },
     {
       "id": "b14-cetoacidose-pediatria-q17",
@@ -2615,7 +2700,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "O passo mais importante no início do tratamento dessa emergência do diabetes é corrigir a desidratação da criança com soro na veia, isso vem antes até da insulina."
     },
     {
       "id": "b14-cetoacidose-pediatria-q18",
@@ -2646,7 +2732,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Antes de começar a dar insulina numa criança com essa emergência, os médicos sempre checam o nível de potássio no sangue, porque a insulina faz o potássio cair rápido e isso pode ser perigoso para o coração."
     },
     {
       "id": "b14-atencao-primaria-q10",
@@ -2676,7 +2763,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "Quando a enfermeira já avalia a paciente e organiza a consulta médica para os próximos dias, isso mostra que o posto de saúde está funcionando bem como a porta de entrada do sistema, mesmo sem uma consulta médica imediata."
     },
     {
       "id": "b14-cetoacidose-pediatria-q19",
@@ -2708,7 +2796,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Antes de tratar o potássio alto no sangue dessa criança, é importante garantir que ela esteja fazendo xixi normalmente, porque se os rins não estiverem funcionando bem, o potássio pode ficar ainda mais perigoso."
     },
     {
       "id": "b14-pals-q20",
@@ -2739,7 +2828,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "O ritmo do coração desse menino está bagunçado e ele não tem pulso, o que é um tipo de emergência que pode ser tratada com choque elétrico, numa dose calculada pelo peso dele."
     },
     {
       "id": "b14-cetoacidose-pediatria-q20",
@@ -2769,7 +2859,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "O açúcar dessa menina já baixou bastante, mas o sangue dela continua ácido, então os médicos ainda precisam manter a insulina funcionando e, para isso, colocam um pouco de açúcar no soro para o nível não cair demais."
     },
     {
       "id": "b14-semanais-q92",
@@ -2800,7 +2891,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Existe um remédio mais novo para baixar o colesterol chamado ácido bempedoico, que age de um jeito parecido com o das estatinas, mas usando outro caminho dentro das células do fígado."
     },
     {
       "id": "b14-semanais-q93",
@@ -2830,7 +2922,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Quando o colesterol ruim de uma pessoa está muito alto, o médico já indica o remédio mais forte para baixá-lo, mesmo sem calcular o risco individual dela para doenças do coração."
     },
     {
       "id": "b14-semanais-q94",
@@ -2860,7 +2953,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "O principal alvo do tratamento para prevenir problemas no coração é baixar o colesterol ruim, que é considerado o vilão mais importante entre as gorduras do sangue."
     },
     {
       "id": "b14-semanais-q95",
@@ -2889,7 +2983,8 @@
         "Conduta Terapêutica",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Esse jovem tem o colesterol ruim muito alto, o que sugere que ele nasceu com uma tendência genética para isso, herdada da família. Por causa desse risco alto, a meta do tratamento dele precisa ser bem rigorosa, com o colesterol ruim bem baixo."
     },
     {
       "id": "b14-semanais-q96",
@@ -2918,7 +3013,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Esse senhor já tem uma placa de gordura formada dentro da artéria do pescoço, o que mostra que o problema já começou de verdade. Por isso, ele precisa do remédio mais forte para baixar o colesterol, e não pode esperar mais tempo."
     },
     {
       "id": "b14-semanais-q97",
@@ -2947,7 +3043,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Quando uma pessoa nasce com uma tendência genética para ter o colesterol muito alto, o tratamento com o remédio mais forte já deve começar logo, sem precisar esperar meses tentando só dieta e exercício."
     },
     {
       "id": "b14-semanais-q98",
@@ -2977,7 +3074,8 @@
         "Conhecimento Conceitual",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Esse senhor tem pressão alta e o pai dele teve um infarto ainda jovem, o que coloca ele num grupo de risco alto para o coração. Por isso, a meta do colesterol ruim dele precisa ser bem baixa."
     },
     {
       "id": "b14-semanais-q99",
@@ -3007,7 +3105,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Esse paciente junta diabetes, pressão alta e o hábito de fumar, o que o coloca num grupo de risco bem alto para o coração. Por isso, ele precisa de um remédio forte para o colesterol, com uma meta bem baixa para o colesterol ruim."
     },
     {
       "id": "b14-sindrome-metabolica-obesidade-q12",
@@ -3037,7 +3136,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Esse senhor tem uma proteína chamada ferritina alta no sangue, mas isso é porque ele tem inflamação relacionada ao excesso de peso e às outras doenças, e não porque ele tem uma doença genética que acumula ferro no corpo."
     },
     {
       "id": "b14-semanais-q101",
@@ -3067,7 +3167,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-135"
+      "scheduleId": "cron-135",
+      "kids": "Esse senhor tem diabetes e já teve um infarto antes, então o remédio de escolha para controlar o açúcar dele deve incluir, além da metformina, uma classe de remédio que também ajuda a proteger o coração."
     },
     {
       "id": "b14-semanais-q102",
@@ -3097,7 +3198,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "O colesterol ruim não entra na lista de critérios usados para diagnosticar a síndrome metabólica, mesmo estando alto. Os critérios olham para outras coisas, como açúcar, triglicerídeos, colesterol bom e cintura."
     },
     {
       "id": "b14-semanais-q103",
@@ -3127,7 +3229,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Na doença de fígado gordo ligada ao metabolismo, é comum a ferritina estar um pouco alta só por causa da inflamação, e isso não significa que a pessoa tenha uma doença genética de acúmulo de ferro, principalmente se outro exame estiver normal."
     },
     {
       "id": "b14-semanais-q104",
@@ -3156,7 +3259,8 @@
         "Raciocínio Diagnóstico",
         "Paciente Adulto"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "O triglicerídeo desse paciente está extremamente alto, o que pode causar uma inflamação grave no pâncreas. Por isso, o remédio certo para começar é um fibrato, que é mais eficiente para baixar esse tipo específico de gordura rapidamente."
     },
     {
       "id": "b14-semanais-q105",
@@ -3186,7 +3290,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Esse homem já tentou dieta e exercício sem sucesso e tem peso bem alto junto com apneia do sono e pressão alta. O próximo passo indicado é um remédio que ajuda bastante a emagrecer, antes mesmo de pensar em cirurgia."
     },
     {
       "id": "b14-semanais-q106",
@@ -3216,7 +3321,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "O cálculo de um escore que avalia o risco de cicatriz no fígado deu um resultado que preocupa, então o próximo passo é fazer um exame chamado elastografia, que mede a rigidez do fígado sem precisar de biópsia."
     },
     {
       "id": "b14-semanais-q107",
@@ -3246,7 +3352,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Esse paciente tem gordura no fígado mas os exames de sangue do fígado estão normais. O primeiro passo, antes de qualquer outro exame, é calcular um escore que ajuda a estimar o risco de o fígado já ter alguma cicatriz."
     },
     {
       "id": "b14-semanais-q108",
@@ -3277,7 +3384,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Esse paciente tem uma mudança nas células do final do esôfago causada pelo refluxo, mas sem sinais de que essas células estão virando câncer ainda. O tratamento é continuar com o remédio para o ácido e fazer endoscopias de tempos em tempos para vigiar."
     },
     {
       "id": "b14-semanais-q109",
@@ -3307,7 +3415,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-134"
+      "scheduleId": "cron-134",
+      "kids": "Ter uma pequena hérnia no diafragma junto com o refluxo não significa, sozinho, que a pessoa precisa operar. Isso só é decidido quando os sintomas continuam incomodando muito mesmo com o tratamento."
     },
     {
       "id": "b14-pals-q25",
@@ -3337,7 +3446,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-132"
+      "scheduleId": "cron-132",
+      "kids": "Esse menino engasgou e ficou muito tempo sem oxigênio antes do coração parar de vez, então mesmo com um ritmo que pode ser chocado, é importante dar a adrenalina logo durante a reanimação, porque a causa da parada foi a falta de ar."
     },
     {
       "id": "b14-semanais-q111",
@@ -3366,7 +3476,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "O coração desse menino está batendo muito rápido de um jeito que não é normal, sem aquela ondinha que indica o comando certo do coração. Como ele está mal, com pressão baixa e mãos frias, o tratamento certo é o choque elétrico programado, e não antibiótico ou soro apenas."
     },
     {
       "id": "b14-semanais-q112",
@@ -3396,7 +3507,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-136"
+      "scheduleId": "cron-136",
+      "kids": "Depois de já estar sendo ventilada, essa criança continua com o coração batendo muito devagar e mal levando sangue para o corpo, então é hora de começar as compressões no peito."
     },
     {
       "id": "b14-semanais-q114",
@@ -3425,7 +3537,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Quando o monitor mostra que o coração parece ter parado de vez, antes de dar qualquer remédio, os médicos primeiro checam se os fios e os aparelhos estão conectados direito, para ter certeza de que a leitura está correta."
     },
     {
       "id": "b14-semanais-q115",
@@ -3454,7 +3567,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Esse menino está com o coração muito acelerado, mas ainda está bem, com pressão boa e pulsos fortes. Como a manobra que tenta acalmar o coração sem remédio não funcionou, o próximo passo é dar um remédio na veia que ajuda a organizar o ritmo."
     },
     {
       "id": "b14-semanais-q117",
@@ -3484,7 +3598,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Durante a parada do coração dessa menina, o ritmo visto no monitor não é do tipo que se trata com choque elétrico, então o remédio certo para tentar reanimá-la é a adrenalina."
     },
     {
       "id": "b14-semanais-q119",
@@ -3513,7 +3628,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Com essa história de sede, muito xixi, perda de peso e agora sonolência, a suspeita é de uma emergência de diabetes, e o primeiro exame a pedir é o que mede a acidez do sangue junto com o açúcar."
     },
     {
       "id": "b14-semanais-q120",
@@ -3542,7 +3658,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Diante desses sinais de emergência do diabetes, os exames certos são a medida do açúcar e a acidez do sangue, e o tratamento começa com soro na veia. Só depois de uma hora é que se começa a insulina, e o potássio só é reposto se estiver baixo o suficiente."
     },
     {
       "id": "b14-semanais-q121",
@@ -3572,7 +3689,8 @@
         "Conduta Terapêutica",
         "Adolescência"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "A complicação mais temida durante o tratamento dessa emergência do diabetes é o cérebro inchar, e um sinal de alerta para isso é quando os olhos da pessoa começam a reagir de forma diferente um do outro à luz."
     },
     {
       "id": "b14-semanais-q122",
@@ -3602,7 +3720,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "A complicação mais grave dessa emergência do diabetes em crianças é o inchaço do cérebro, e o mais preocupante é que ele às vezes já pode estar começando desde o momento em que a criança chega ao hospital."
     },
     {
       "id": "b14-semanais-q123",
@@ -3632,7 +3751,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Nessa emergência do diabetes, o sangue fica ácido de um jeito específico, que os médicos identificam através de uma conta que fica maior que o normal."
     },
     {
       "id": "b14-semanais-q125",
@@ -3663,7 +3783,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-133"
+      "scheduleId": "cron-133",
+      "kids": "Para confirmar essa emergência do diabetes nessa menina, o exame de sangue precisa mostrar que ele está mais ácido que o normal, com um valor específico de acidez ou bicarbonato baixo, além do açúcar estar bem alto."
     },
     {
       "id": "b14-semanais-q126",
@@ -3693,7 +3814,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "O exame confirmou que essa grávida tem diabetes gestacional, e isso aumenta a chance de o bebê nascer com o açúcar no sangue muito baixo logo depois do parto, porque ele se acostumou a receber muito açúcar da mãe."
     },
     {
       "id": "b14-semanais-q127",
@@ -3723,7 +3845,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Como o exame de açúcar dela deu normal, não precisa repetir agora, só refazer entre a 24ª e a 28ª semana. Enquanto isso, ela deve se cuidar para não pegar toxoplasmose, evitando comida crua, água não filtrada e contato com gatos."
     },
     {
       "id": "b14-semanais-q128",
@@ -3753,7 +3876,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Os três resultados do exame de açúcar dessa grávida deram todos dentro do normal, então ela não tem diabetes gestacional e não precisa repetir o exame."
     },
     {
       "id": "b14-semanais-q129",
@@ -3783,7 +3907,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Um valor de açúcar em jejum bem alto logo no início da gravidez já mostra que essa mulher tinha diabetes antes mesmo de engravidar."
     },
     {
       "id": "b14-semanais-q130",
@@ -3814,7 +3939,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Essa grávida está com uma anemia importante, e isso pode fazer o aparelhinho que mede o açúcar na ponta do dedo mostrar valores que não são totalmente confiáveis."
     },
     {
       "id": "b14-semanais-q131",
@@ -3844,7 +3970,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "No diabetes da gravidez, a maioria das mulheres consegue controlar o açúcar só com dieta e exercício, mas quando o jejum continua alto, usa-se uma insulina de ação mais longa à noite, e em mulheres com muito peso a mais, às vezes é preciso usar uma dose maior de insulina desde o início."
     },
     {
       "id": "b14-semanais-q132",
@@ -3875,7 +4002,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Dois exames de açúcar em jejum, com valores parecidos e um pouco acima do normal, confirmam que essa grávida tem diabetes gestacional."
     },
     {
       "id": "b14-semanais-q133",
@@ -3905,7 +4033,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Como os valores de açúcar de jejum e de madrugada dessa grávida estão altos, a solução é aumentar a insulina de ação mais longa que ela toma à noite, e também a insulina rápida da manhã."
     },
     {
       "id": "b14-semanais-q134",
@@ -3935,7 +4064,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "Esse idoso está acamado, não sabe ler, tem várias doenças e sua família também está passando por dificuldades. Juntando tudo isso, essa família é classificada como de risco máximo, mesmo tendo saneamento básico em casa."
     },
     {
       "id": "b14-semanais-q135",
@@ -3965,7 +4095,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "A parte da atenção primária que cuida de conectar bem o paciente com os diferentes serviços de saúde ao longo do tratamento, garantindo que nada se perca no caminho, se chama coordenação do cuidado."
     },
     {
       "id": "b14-atencao-primaria-q13",
@@ -3995,7 +4126,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "O atributo chamado acesso de primeiro contato significa que o posto de saúde deve ser o primeiro lugar procurado quando a pessoa tem um problema novo de saúde, funcionando como a porta de entrada principal do sistema."
     },
     {
       "id": "b14-semanais-q137",
@@ -4026,7 +4158,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "Para descobrir problemas de saúde escondidos e cuidar melhor das pessoas ao longo do tempo, a estratégia mais eficaz é os agentes comunitários irem até a casa das pessoas, com um roteiro organizado, em vez de só esperar elas aparecerem no posto."
     },
     {
       "id": "b14-semanais-q139",
@@ -4056,7 +4189,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-130"
+      "scheduleId": "cron-130",
+      "kids": "Quando o médico do posto organiza uma forma de discutir os casos difíceis com especialistas, sem precisar sempre encaminhar o paciente para longe, isso é um exemplo de como a atenção primária consegue se coordenar bem com o resto do sistema de saúde."
     },
     {
       "id": "b14-semanais-q140",
@@ -4086,7 +4220,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 14.txt"
+      "tagSource": "Tags 14.txt",
+      "kids": "Olhando a árvore da família de Mônica, dá para perceber que o marido dela está repetindo comportamentos parecidos com os do pai dele, como beber demais, o que preocupa porque o pai morreu jovem por causa disso."
     },
     {
       "id": "b14-semanais-q141",
@@ -4116,7 +4251,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 14.txt",
-      "scheduleId": "cron-131"
+      "scheduleId": "cron-131",
+      "kids": "O exame de sífilis dessa grávida sumiu no sistema do laboratório logo no início do pré-natal e ninguém percebeu a tempo. Essa falha em garantir que as informações e o tratamento cheguem direitinho a quem precisa é o que os médicos chamam de falha na coordenação do cuidado, e foi isso que permitiu que o bebê nascesse com a doença."
     }
   ]
 }

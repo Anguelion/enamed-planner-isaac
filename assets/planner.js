@@ -4511,8 +4511,20 @@ function renderSimuladoReview(run, rows, result) {
     const profile = simResultClassification(row, {slowLimit});
     const changes = row.changes ? ` · ${row.changes} alteração${row.changes===1?'':'ões'} (${escapeHtml(row.firstAnswer || '—')} → ${escapeHtml(row.selected || '—')})` : '';
     const reviewAction=row.correct?'':`<button class="tiny-btn ${row.reviewed?'done':''}" data-review-sim-error="${escapeAttr(row.question.id)}">${row.reviewed?'Erro revisado ✓':'Marcar erro como revisado'}</button>`;
-    return `<div class="sim-review-item ${row.correct?'':'wrong'}"><div class="sim-question-head"><div><strong>Questão ${index+1} · ${escapeHtml(tag.area)}</strong><div class="muted">${escapeHtml(tag.topic)}${tag.subtopic?` · ${escapeHtml(tag.subtopic)}`:''}</div></div><span class="badge ${row.correct?'done':'no'}">${escapeHtml(profile)}</span></div><div class="muted">Sua resposta: ${escapeHtml(row.selected || 'em branco')} · Gabarito: ${escapeHtml(row.question.answer)} · Tempo: ${row.seconds ? formatVideoTime(row.seconds) : 'não registrado'}${changes} · Reaberta: ${row.opened || 0}x</div>${reviewAction}<div class="field-row" style="margin-top:8px"><input class="input" data-imported-tag="${row.question.id}" data-field="area" value="${escapeAttr(tag.area)}" placeholder="Área ENAMED"><input class="input" data-imported-tag="${row.question.id}" data-field="topic" value="${escapeAttr(tag.topic)}" placeholder="Tema principal"><input class="input" data-imported-tag="${row.question.id}" data-field="subtopic" value="${escapeAttr(tag.subtopic)}" placeholder="Subtema"></div>${row.question.comment?`<details class="material-original-toggle" style="margin-top:8px"><summary>Comentário da questão</summary><div class="markdown-preview">${renderMarkdown(row.question.comment)}</div></details>`:''}${renderQuestionFlashcardEditor(row.question, row)}</div>`;
+    return `<div class="sim-review-item ${row.correct?'':'wrong'}"><div class="sim-question-head"><div><strong>Questão ${index+1} · ${escapeHtml(tag.area)}</strong><div class="muted">${escapeHtml(tag.topic)}${tag.subtopic?` · ${escapeHtml(tag.subtopic)}`:''}</div></div><span class="badge ${row.correct?'done':'no'}">${escapeHtml(profile)}</span></div><div class="muted">Sua resposta: ${escapeHtml(row.selected || 'em branco')} · Gabarito: ${escapeHtml(row.question.answer)} · Tempo: ${row.seconds ? formatVideoTime(row.seconds) : 'não registrado'}${changes} · Reaberta: ${row.opened || 0}x</div>${reviewAction}<div class="field-row" style="margin-top:8px"><input class="input" data-imported-tag="${row.question.id}" data-field="area" value="${escapeAttr(tag.area)}" placeholder="Área ENAMED"><input class="input" data-imported-tag="${row.question.id}" data-field="topic" value="${escapeAttr(tag.topic)}" placeholder="Tema principal"><input class="input" data-imported-tag="${row.question.id}" data-field="subtopic" value="${escapeAttr(tag.subtopic)}" placeholder="Subtema"></div>${renderSimuladoCommentPanel(row)}${renderQuestionFlashcardEditor(row.question, row)}</div>`;
   }).join('')}<div class="sim-review-progress"><strong>Revisão dos erros: ${reviewedCount}/${wrongRows.length}</strong><span>${wrongRows.length===reviewedCount?'Revisão completa: fragmento e recompensa liberados.':'Leia os comentários e marque cada erro depois de revisá-lo.'}</span></div></div>`;
+}
+function renderSimuladoCommentPanel(row) {
+  if(!row.question.comment) return '';
+  const sections = questionCommentSections(row.question, row);
+  const hasKids = Boolean(row.question.kids);
+  const cards = [
+    ['analysis','Análise'],
+    ['pearl','Pérola'],
+    ['error','Armadilha'],
+    ...(hasKids ? [['kids','Explicação simples']] : [])
+  ].map(([key,label]) => `<div class="question-comment-card ${key}"><strong>${escapeHtml(label)}</strong><div>${renderCommentSectionContent(key, sections[key], [])}</div></div>`).join('');
+  return `<details class="material-original-toggle" style="margin-top:8px"><summary>Comentário da questão</summary><div class="sim-comment-stack">${cards}</div></details>`;
 }
 function bindSimuladoInputs(activeRun) {
   document.getElementById('toggleSimulationLibrary')?.addEventListener('click',()=>{ui.simulationLibraryOpen=!ui.simulationLibraryOpen;render();});
@@ -4627,7 +4639,7 @@ function bindSimuladoInputs(activeRun) {
   };
   const cancel = document.getElementById('cancelSimulado');
   if(cancel) cancel.onclick = () => {
-    if(confirm('Cancelar este simulado? Ele será marcado como abandonado e preservado no histórico, sem correção nem XP de conclusão.')) cancelSimuladoRun(activeRun);
+    if(confirm('Cancelar este simulado? A tentativa e todas as respostas serão apagadas definitivamente, como se você nunca tivesse feito.')) deleteSimuladoRun(activeRun,{cancelled:true});
   };
   const sendWeak = document.getElementById('sendSimWeakToFeynman');
   if(sendWeak) sendWeak.onclick = () => sendSimWeakTopicsToFeynman(activeRun);
@@ -4823,28 +4835,6 @@ function finishSimuladoRun(run) {
   upsertManualSimFromRun(run, result);
   processSimulationCompletionGamification(run);
   persist();
-}
-function cancelSimuladoRun(run) {
-  // "Cancelar simulado" sempre chamou deleteSimuladoRun, apagando a tentativa
-  // por completo — mas a tela de resultado, a lista de provas e as
-  // estatísticas todas já checavam run.abandonedAt (com textos como "esta
-  // tentativa foi preservada no histórico") e esse campo nunca era definido
-  // em lugar nenhum do código. A funcionalidade de "abandonar preservando no
-  // histórico, sem XP" existia na interface mas nunca foi ligada a nada.
-  if(!run) return;
-  if(simuladoTimer.interval && simuladoTimer.runId === run.id) clearInterval(simuladoTimer.interval);
-  simuladoTimer.interval = null;
-  simuladoTimer.runId = '';
-  if(studyTimeTracker.kind === 'simulado') stopAutoStudy('simulado');
-  finishSimQuestionTiming(run);
-  run.paused = true;
-  run.abandonedAt = new Date().toISOString();
-  run.updatedAt = run.abandonedAt;
-  if(ui.activeSimRunId === run.id) ui.activeSimRunId = '';
-  ui.simulationLibraryOpen = true;
-  persist();
-  syncRouteFromUI('replace');
-  showStudyToast('Simulado abandonado. A tentativa foi preservada no histórico, sem XP de conclusão, fragmento ou recompensa elemental.');
 }
 function deleteSimuladoRun(run,{cancelled=false}={}) {
   if(!run) return;

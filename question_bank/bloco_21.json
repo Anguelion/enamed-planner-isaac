@@ -30,7 +30,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-195"
+      "scheduleId": "cron-195",
+      "kids": "Existe um exame de raio-X especial em que os médicos injetam um líquido para ver se as \"trompas\" (os canais por onde o óvulo passa) estão entupidas, porque isso pode ser o que está dificultando a gravidez."
     },
     {
       "id": "b21-q002",
@@ -60,7 +61,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-194"
+      "scheduleId": "cron-194",
+      "kids": "Às vezes, quando as pessoas ficam mais velhas, é normal esquecer coisinhas pequenas de vez em quando. Como todos os exames desse senhor deram certinhos, isso não quer dizer que ele está doente."
     },
     {
       "id": "b21-q003",
@@ -90,7 +92,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-199"
+      "scheduleId": "cron-199",
+      "kids": "Quando uma pessoa idosa e fragilizada fica internada e de repente fica muito confusa e agitada, os médicos usam um remédio específico para acalmar essa confusão com segurança."
     },
     {
       "id": "b21-q004",
@@ -121,7 +124,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-198"
+      "scheduleId": "cron-198",
+      "kids": "Quando o fígado está doente, o sangue pode ficar \"engarrafado\" numa veia importante. Os médicos então criam um atalho ligando essa veia direto a outra que vai para o coração, para aliviar a pressão."
     },
     {
       "id": "b21-q005",
@@ -152,7 +156,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-194"
+      "scheduleId": "cron-194",
+      "kids": "No começo dessa doença que afeta a memória, o corpo ainda se mexe e reage normalmente nos testes físicos; só mais para frente, quando a doença avança, é que aparecem alterações no exame do corpo."
     },
     {
       "id": "b21-q006",
@@ -182,7 +187,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-196"
+      "scheduleId": "cron-196",
+      "kids": "Essa criança tem alguns sinais de que a dengue pode estar piorando, como manchinhas na prova do laço e a barriga dolorida. Por isso, o mais seguro é ficar internada sendo observada de perto, e não ir para casa."
     },
     {
       "id": "b21-q007",
@@ -215,7 +221,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-197"
+      "scheduleId": "cron-197",
+      "kids": "Depois de examinar o local, o médico percebe que o problema é simples e vai melhorar só com cuidados de alimentação e higiene, sem precisar de remédios fortes ou cirurgia."
     },
     {
       "id": "b21-q008",
@@ -245,7 +252,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-195"
+      "scheduleId": "cron-195",
+      "kids": "Como essa mulher já fez uma cirurgia para não engravidar e agora quer um bebê de novo, antes de pensar em desfazer essa cirurgia, o médico prefere checar se não existe algum outro motivo dificultando a gravidez."
     },
     {
       "id": "b21-q009",
@@ -276,7 +284,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-197"
+      "scheduleId": "cron-197",
+      "kids": "As veias inchadas perto do ânus (hemorroidas) têm graus de gravidade. Quando elas saem para fora e a pessoa precisa empurrá-las de volta com o dedo, isso já é considerado um grau mais avançado."
     },
     {
       "id": "b21-q010",
@@ -307,7 +316,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-198"
+      "scheduleId": "cron-198",
+      "kids": "Quando o médico desconfia de uma ferida no estômago (úlcera) causando sangramento, ele já começa a dar um remédio para diminuir o ácido do estômago na hora, mesmo antes de terminar todos os exames, porque isso ajuda e é seguro."
     },
     {
       "id": "b21-q011",
@@ -337,7 +347,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-193"
+      "scheduleId": "cron-193",
+      "kids": "Essa é uma feridinha antiga que fica soltando um pouco de secreção de vez em quando, sem ser uma emergência. Por isso, a pessoa é encaminhada para um especialista resolver com calma, sem precisar correr para o pronto-socorro."
     },
     {
       "id": "b21-q012",
@@ -368,7 +379,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-194"
+      "scheduleId": "cron-194",
+      "kids": "Muitos remédios comuns, como os usados para alergia, convulsão ou inflamação, podem deixar o cérebro de uma pessoa idosa e doente mais confuso. Por isso os médicos precisam ficar de olho nessa lista de remédios."
     },
     {
       "id": "b21-q013",
@@ -399,7 +411,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-197"
+      "scheduleId": "cron-197",
+      "kids": "Para hemorroidas no começo, que sangram pouco e ainda não saem para fora, só melhorar a alimentação para evitar prisão de ventre já costuma resolver, sem precisar de cirurgia ou outros exames ainda."
     },
     {
       "id": "b21-q014",
@@ -430,7 +443,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-198"
+      "scheduleId": "cron-198",
+      "kids": "Às vezes um vasinho de sangue anormal e escondido, embaixo da camada que reveste o estômago, sangra bastante de repente, mesmo que todo o resto do estômago pareça normal."
     },
     {
       "id": "b21-q015",
@@ -460,7 +474,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-196"
+      "scheduleId": "cron-196",
+      "kids": "Os médicos colocam um aparelho de pressão no braço e esperam alguns minutos; se aparecerem 10 ou mais pontinhos vermelhos (como pequenos hematomas), isso é um sinal de alerta para dengue."
     },
     {
       "id": "b21-q016",
@@ -490,7 +505,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-197"
+      "scheduleId": "cron-197",
+      "kids": "Depois que uma infecção perto do ânus foi drenada há um tempo, se ficar um probleminha crônico soltando secreção, o melhor é marcar uma cirurgia tranquila mais para frente, sem ser correndo."
     },
     {
       "id": "b21-q017",
@@ -520,7 +536,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-198"
+      "scheduleId": "cron-198",
+      "kids": "Depois que os médicos já trataram a ferida sangrante do estômago com a câmera especial e a pessoa está estável, eles mantêm ela internada, dando um remédio forte para o ácido na veia e observando os sinais vitais de perto, sem precisar de cirurgia."
     },
     {
       "id": "b21-q018",
@@ -551,7 +568,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-194"
+      "scheduleId": "cron-194",
+      "kids": "Algumas doenças de memória acontecem porque os vasinhos de sangue bem pequenos dentro do cérebro vão se estragando com o tempo, como canos entupidos. Um tipo disso tem até nome de um médico: doença de Binswanger."
     },
     {
       "id": "b21-q019",
@@ -581,7 +599,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-193"
+      "scheduleId": "cron-193",
+      "kids": "Mesmo parecendo esquecimento, os exames dessa senhora mostram que na verdade é a tristeza (depressão) que está fazendo ela parecer mais esquecida, e não uma doença de memória de verdade."
     },
     {
       "id": "b21-q020",
@@ -611,7 +630,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-193"
+      "scheduleId": "cron-193",
+      "kids": "Quando um bairro fica poluído por causa de fábricas antigas, o time de vigilância em saúde tem o trabalho de descobrir quem foi afetado e ajudar os postos de saúde a cuidar dessas pessoas logo cedo."
     },
     {
       "id": "b21-q021",
@@ -642,7 +662,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-193"
+      "scheduleId": "cron-193",
+      "kids": "A senhora está esquecendo de tomar remédio direito, repetindo as mesmas coisas e ficando mais distante há quase um ano. Esse conjunto de sinais mostra um quadro de demência, então alguém precisa ajudar a cuidar dela no dia a dia."
     },
     {
       "id": "b21-q022",
@@ -672,7 +693,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-196"
+      "scheduleId": "cron-196",
+      "kids": "O que faz a dengue ficar perigosa é quando os vasinhos de sangue começam a \"vazar\" líquido para fora deles, e não só a queda das plaquetas."
     },
     {
       "id": "b21-q023",
@@ -702,7 +724,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-195"
+      "scheduleId": "cron-195",
+      "kids": "Depois de raspar o útero (curetagem) mais de uma vez, pode se formar uma cicatriz por dentro que atrapalha a menstruação e a gravidez. Isso se chama síndrome de Asherman."
     },
     {
       "id": "b21-q024",
@@ -732,7 +755,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-197"
+      "scheduleId": "cron-197",
+      "kids": "Quando existe uma bolsa de infecção dolorida e inchada perto do ânus, com febre, o jeito mais rápido de resolver é drenar essa infecção na hora, sem esperar mais exames."
     },
     {
       "id": "b21-q025",
@@ -762,7 +786,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-198"
+      "scheduleId": "cron-198",
+      "kids": "Uma pessoa idosa que ficou confusa depois de uma cirurgia, com febre e respirando rápido, pode estar com uma infecção escondida (como pneumonia) causando essa confusão. Por isso o médico trata a infecção com remédio na veia, internado."
     },
     {
       "id": "b21-q026",
@@ -792,7 +817,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-194"
+      "scheduleId": "cron-194",
+      "kids": "Essa doença começa mudando o comportamento da pessoa, como acumular coisas e largar a higiene, antes de mexer na memória. Isso é diferente da demência mais comum, que começa esquecendo as coisas."
     },
     {
       "id": "b21-q027",
@@ -822,7 +848,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-194"
+      "scheduleId": "cron-194",
+      "kids": "O marido está com dificuldades de memória, mas quem está cuidando dele, a esposa, também está muito cansada. Por isso o médico precisa conversar com ela sozinha, para saber como ela está se sentindo."
     },
     {
       "id": "b21-q028",
@@ -852,7 +879,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-197"
+      "scheduleId": "cron-197",
+      "kids": "Dor forte ao evacuar junto com um pouquinho de sangue vivo no papel, principalmente quando as fezes são duras, geralmente é sinal de um pequeno corte (fissura) na pele perto do ânus."
     },
     {
       "id": "b21-q029",
@@ -883,7 +911,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-196"
+      "scheduleId": "cron-196",
+      "kids": "Dor de barriga e muitos vômitos numa criança com dengue são sinais de alerta. Por isso ela precisa ficar internada recebendo soro na veia, e não pode ir para casa."
     },
     {
       "id": "b21-q030",
@@ -918,7 +947,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-193"
+      "scheduleId": "cron-193",
+      "kids": "Depois de limpar uma infecção grave perto do ânus, às vezes os médicos precisam desviar o caminho das fezes temporariamente por uma abertura na barriga (colostomia), para a ferida cicatrizar sem sujar de novo."
     },
     {
       "id": "b21-q031",

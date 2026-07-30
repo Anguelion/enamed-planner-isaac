@@ -31,7 +31,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "Quando o bebê demora demais para nascer (passa de 40 semanas), o médico começa a checar se ele está bem usando um exame chamado perfil biofísico fetal, feito duas vezes por semana, para garantir que tudo continua seguro até o parto."
     },
     {
       "id": "b02-semanal-q002",
@@ -64,7 +65,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O pulmão do homem ficou cheio de ar preso, empurrando tudo lá dentro e dificultando a respiração. Antes de qualquer outra coisa, o médico precisa espetar uma agulha bem rápido no lado do peito para deixar esse ar escapar e aliviar a pressão."
     },
     {
       "id": "b02-semanal-q003",
@@ -95,7 +97,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O desenho do batimento do coração do bebê ficou parecido com ondas do mar, o que é sinal de que ele pode estar com anemia grave, muitas vezes causada por um vírus (parvovírus B19) que ataca as células que fazem sangue novo."
     },
     {
       "id": "b02-semanal-q004",
@@ -125,7 +128,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "O corpo da criança não cresce sempre no mesmo ritmo: às vezes cresce rápido, às vezes mais devagar. No primeiro aninho de vida, o peso do bebê fica cerca de três vezes maior, mas a altura aumenta só pela metade, não dobra."
     },
     {
       "id": "b02-semanal-q005",
@@ -155,7 +159,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina já começou a desenvolver os seios, por isso é sinal de que a puberdade dela está começando e o estirão de crescimento também vem logo; já o menino, que ainda tem os testículos pequenos, ainda não chegou na fase de crescer rápido."
     },
     {
       "id": "b02-semanal-q006",
@@ -187,7 +192,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Os hormônios da menina mostram que os ovários dela não estão respondendo direito, então, junto com a baixa altura, isso pode ser um problema genético (Síndrome de Turner). Por isso o médico pede um exame que olha os cromossomos dela."
     },
     {
       "id": "b02-semanal-q007",
@@ -218,7 +224,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O aparelho que escuta o coração do bebê tem algumas regras: ele acelera quando o bebê se mexe (não quando a mãe se mexe), o batimento normal fica entre 110 e 160 por minuto, e é bom a mãe não ficar de jejum antes do exame porque isso deixa o bebê preguiçoso no traçado."
     },
     {
       "id": "b02-semanal-q008",
@@ -248,7 +255,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "Quando a barriga da grávida fica muito grande, deitar de costas no fim da gravidez pode apertar um vaso sanguíneo importante e diminuir o sangue que chega ao coração, por isso é melhor deitar de lado."
     },
     {
       "id": "b02-semanal-q009",
@@ -280,7 +288,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O exame do coração do bebê não estava mostrando reação suficiente, mas como a passagem do parto (colo do útero) ainda não estava pronta, o médico decide observar mais um pouco e usar um remédio para preparar essa passagem antes de pensar em outras coisas."
     },
     {
       "id": "b02-semanal-q010",
@@ -311,7 +320,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "No começo da gravidez, o corpo da mãe guarda gordura como reserva; perto do final, ele usa essa gordura guardada para dar energia extra ao bebê que está crescendo mais rápido."
     },
     {
       "id": "b02-semanal-q011",
@@ -342,7 +352,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Existe uma espécie de fábrica no ovário que transforma um hormônio parecido com o masculino em hormônio feminino (estrogênio), e quem liga essa fábrica é o FSH, ativando uma peça chamada aromatase."
     },
     {
       "id": "b02-semanal-q012",
@@ -373,7 +384,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O coração da mulher estava sendo apertado por sangue preso ao redor dele depois da facada, e isso é tão perigoso que os médicos precisam abrir o peito dela imediatamente na cirurgia para aliviar essa pressão e estancar o sangramento."
     },
     {
       "id": "b02-semanal-q013",
@@ -403,7 +415,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Quando o pesinho do bebê fica um pouco abaixo do esperado para a idade dele, mas não extremamente baixo, os médicos chamam isso de peso baixo para a idade."
     },
     {
       "id": "b02-semanal-q014",
@@ -434,7 +447,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Depois que o óvulo sai do ovário, um hormônio chamado progesterona entra em ação e transforma a parede do útero, deixando de fazer ela crescer e preparando-a para receber um bebê, caso ele apareça."
     },
     {
       "id": "b02-semanal-q015",
@@ -464,7 +478,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Mesmo que uma criança já seja um pouco baixinha, o que mais preocupa o médico é ela estar crescendo muito devagar comparado ao esperado, e foi isso que fez a menina do caso precisar de mais exames."
     },
     {
       "id": "b02-semanal-q016",
@@ -495,7 +510,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "O coração dessa mulher está tão fraco que ela sente falta de ar mesmo parada, sem fazer esforço nenhum, e os remédios não estão resolvendo, por isso os médicos classificam esse caso como o estágio mais grave da doença do coração."
     },
     {
       "id": "b02-semanal-q017",
@@ -526,7 +542,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Um dos remédios que o homem toma para a pressão (chamado enalapril) tem um efeito colateral comum: ele faz uma substância se acumular no corpo e isso irrita a garganta, causando uma tosse seca."
     },
     {
       "id": "b02-semanal-q018",
@@ -556,7 +573,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "O coração dessa grávida tem uma válvula estreita desde a infância, e como na gravidez o coração precisa bombear muito mais sangue que o normal, essa válvula não aguenta e o sangue se acumula no pulmão, dificultando a respiração."
     },
     {
       "id": "b02-semanal-q019",
@@ -588,7 +606,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O exame mostrou que uma víscera da barriga do rapaz estava sangrando bastante depois da batida de carro, e como ele não estava bem, os médicos precisam abrir a barriga dele na cirurgia para estancar o sangramento rapidamente."
     },
     {
       "id": "b02-semanal-q020",
@@ -619,7 +638,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Quando o número que mostra a relação entre peso e altura de uma criança fica um pouquinho acima do esperado, mas não muito, os médicos chamam isso de risco de sobrepeso, um alerta para cuidar da alimentação antes que vire um problema maior."
     },
     {
       "id": "b02-semanal-q021",
@@ -651,7 +671,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "A bala atravessou o peito do rapaz e deixou ar e sangue lá dentro, apertando o pulmão. Por isso os médicos colocam um tubo (dreno) entre as costelas para tirar esse ar e sangue e deixar o pulmão respirar de novo."
     },
     {
       "id": "b02-semanal-q022",
@@ -682,7 +703,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "O coração dessa senhora não está bombeando bem, e o corpo dela está acumulando líquido (pernas inchadas, pulmão cheio de água), mas o sangue ainda circula razoavelmente bem pelo corpo. O tratamento é tirar esse excesso de líquido, nunca colocar mais soro."
     },
     {
       "id": "b02-semanal-q023",
@@ -713,7 +735,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "O rosto do homem ficou muito machucado no acidente, com sinais de que os ossos ao redor dos olhos também quebraram. Por isso os médicos não podem colocar o tubo de respiração pelo nariz, pois poderia entrar no lugar errado perto do cérebro, e usam a boca em vez disso."
     },
     {
       "id": "b02-semanal-q024",
@@ -744,7 +767,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "Existe um remédio especial (sacubitril-valsartana) feito para ajudar corações que ficaram fracos e não conseguem bombear direito o sangue, ele é usado justamente para esse tipo de problema do coração."
     },
     {
       "id": "b02-semanal-q025",
@@ -775,7 +799,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "A pressão desse senhor está muito alta, então o médico precisa começar o remédio na hora, sem esperar. Só não pode ser aquele tipo de remédio (diurético) que pode piorar a dor nas juntas que ele já tem (gota)."
     },
     {
       "id": "b02-semanal-q026",
@@ -806,7 +831,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Um dos remédios para pressão alta (anlodipino) tem um efeito colateral bem comum: ele abre demais os vasinhos sanguíneos das pernas e faz um pouco de líquido se acumular ali, inchando os pés e tornozelos."
     },
     {
       "id": "b02-semanal-q027",
@@ -837,7 +863,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "Para um coração fraco como o do Gabriel, existem alguns tipos de remédios que realmente ajudam a pessoa viver mais tempo, e o médico escolhe uma combinação com esses remédios especiais, evitando os que só aliviam sintomas sem prolongar a vida."
     },
     {
       "id": "b02-semanal-q028",
@@ -869,7 +896,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "As dores de parto da gestante pararam depois do remédio para dor, e o colo do útero não mudou nada no novo exame. Como está tudo estável, ela pode ir para casa, só com a orientação de voltar se sentir algum sinal de alerta."
     },
     {
       "id": "b02-semanal-q029",
@@ -900,7 +928,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Mesmo que o machucado do homem pareça ser só na perna, ninguém pode tirar o colarinho que protege o pescoço dele até fazer uma foto (raio-x ou tomografia) que garanta que a coluna do pescoço não quebrou escondida."
     },
     {
       "id": "b02-semanal-q030",
@@ -930,7 +959,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Com 1 aninho de vida, um bebê que nasceu com 3,3 kg e 50 cm normalmente chega perto de 10,5 kg e 75 cm: o peso quase triplicou e a altura cresceu pela metade."
     },
     {
       "id": "b02-semanal-q031",
@@ -960,7 +990,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "No começo, os primeiros óvulos (folículos) do ovário começam a crescer sozinhos, sem precisar de nenhum hormônio do cérebro mandando ordem; só depois de um tempo é que eles passam a precisar do hormônio FSH para continuar crescendo."
     },
     {
       "id": "b02-semanal-q032",
@@ -990,7 +1021,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Para o médico enxergar bem o colo do útero num exame chamado colposcopia, o melhor momento é pouco antes da mulher ovular, porque nessa fase o muco fica mais fino e não atrapalha a visão."
     },
     {
       "id": "b02-semanal-q033",
@@ -1022,7 +1054,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Nessa imagem de ultrassom, feita por dentro (via vaginal, que enxerga melhor), o desenho do útero mostra que ele está na fase em que o hormônio estrogênio está mandando, preparando o forro do útero para crescer."
     },
     {
       "id": "b02-semanal-q034",
@@ -1053,7 +1086,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Quando alguém quase se afoga mas ainda tosse e só tem um pouco de espuma saindo da boca ou nariz, isso é classificado como o grau mais leve de afogamento, sem estar gravemente mal."
     },
     {
       "id": "b02-semanal-q035",
@@ -1083,7 +1117,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "A placenta não consegue fabricar sozinha todos os hormônios femininos porque falta uma peça (uma enzima) na sua fábrica química. Por isso ela pega uma matéria-prima pronta que vem da glândula suprarrenal do bebê para completar essa produção."
     },
     {
       "id": "b02-semanal-q036",
@@ -1113,7 +1148,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "A azia que muitas grávidas sentem acontece porque um hormônio da gravidez (progesterona) deixa os músculos do corpo mais soltos, inclusive o que fecha a passagem entre o estômago e o esôfago, deixando o suco do estômago subir."
     },
     {
       "id": "b02-semanal-q037",
@@ -1143,7 +1179,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "O menino tem 14 anos, os seios cresceram um pouco e os testículos dele continuam bem pequenos, o que não é o esperado para essa idade. Isso levanta a suspeita de um problema genético, e por isso o médico pede exames de hormônio e um exame que olha os cromossomos."
     },
     {
       "id": "b02-semanal-q038",
@@ -1173,7 +1210,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "O sangue da grávida fica mais grosso e pronto para coagular, porque o corpo aumenta algumas proteínas que ajudam a formar coágulos. Isso é uma proteção natural para o parto, mas também aumenta um pouco o risco de trombose."
     },
     {
       "id": "b02-semanal-q039",
@@ -1203,7 +1241,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "O menino é baixinho porque seus pais também são baixos. Os ossos dele estão crescendo no ritmo certo para a idade, só que a altura final dele vai ser parecida com a da família, e isso é normal, não é doença."
     },
     {
       "id": "b02-semanal-q040",
@@ -1233,7 +1272,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "Durante a gravidez, aparecem veias mais visíveis na pele das mamas, formando um desenho como uma rede. Isso é totalmente normal e faz parte das mudanças do corpo para preparar a amamentação."
     },
     {
       "id": "b02-semanal-q041",
@@ -1263,7 +1303,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O peito do rapaz bateu muito forte no acidente e o coração dele ficou apertado por sangue acumulado ao redor. Depois de garantir que ele está respirando, o próximo passo é tirar esse sangue que está sufocando o coração com uma agulha."
     },
     {
       "id": "b02-semanal-q042",
@@ -1293,7 +1334,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Como o homem bateu de carro devagar, usava cinto e o airbag funcionou, e ele está bem acordado e sem dor, os médicos podem virá-lo com cuidado em bloco para examinar a coluna, e se estiver tudo certo, já podem tirar o colar sem precisar de raio-x."
     },
     {
       "id": "b02-semanal-q043",
@@ -1323,7 +1365,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "A mulher está com um tubo ajudando ela a respirar, mas um dos pulmões dela não está recebendo ar. Antes de fazer qualquer outra coisa, o médico precisa checar se o tubo escorregou fundo demais e está entrando só num dos pulmões."
     },
     {
       "id": "b02-semanal-q044",
@@ -1353,7 +1396,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A mancha que coça na barriga da menina apareceu bem no lugar do piercing, o que é uma alergia de contato comum. Já o pescoço largo, a altura baixa e a falta de menstruação dela apontam para uma condição genética chamada Síndrome de Turner."
     },
     {
       "id": "b02-semanal-q045",
@@ -1384,7 +1428,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "O menino cresceu bem rápido nos últimos meses (o típico estirão da puberdade) e seus pais são altos, então não há nada de errado: ele só está vivendo a fase de crescimento acelerado, sem necessidade de exames."
     },
     {
       "id": "b02-semanal-q046",
@@ -1414,7 +1459,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "Nos meninos, a puberdade segue uma ordem certinha: primeiro os testículos crescem, depois o pênis fica mais comprido, e só depois é que ele fica mais grosso."
     },
     {
       "id": "b02-semanal-q047",
@@ -1444,7 +1490,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Dentro do ovário existem duas equipes de células trabalhando juntas: uma fabrica um hormônio parecido com o masculino, e a outra pega esse hormônio e transforma em hormônio feminino (estrogênio)."
     },
     {
       "id": "b02-semanal-q048",
@@ -1475,7 +1522,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "Mesmo tomando os remédios certos para o coração fraco, o homem continua com falta de ar. Nesse caso, o médico pode adicionar mais dois remédios que ajudam a aliviar mais os sintomas."
     },
     {
       "id": "b02-semanal-q049",
@@ -1507,7 +1555,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Fazendo as contas do peso e da altura desse menino de 12 anos, o resultado mostra que ele está bem acima do esperado, o que é classificado como obesidade, e não apenas sobrepeso."
     },
     {
       "id": "b02-semanal-q050",
@@ -1538,7 +1587,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Para esse senhor de pele negra com pressão alta, os remédios que costumam funcionar melhor logo de início são os que relaxam os vasinhos sanguíneos, em vez de outros tipos que funcionam menos bem nessa população."
     },
     {
       "id": "b02-semanal-q051",
@@ -1569,7 +1619,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "Quando uma pessoa sente falta de ar até fazendo coisas leves do dia a dia, mas se sente bem quando está parada e descansando, os médicos classificam isso como um grau intermediário-alto de cansaço do coração."
     },
     {
       "id": "b02-semanal-q052",
@@ -1599,7 +1650,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina começou a desenvolver os seios com 9 anos e alguns meses, o que está dentro da faixa normal de início da puberdade (entre 8 e 13 anos), não precisa se preocupar nem fazer exames extras."
     },
     {
       "id": "b02-semanal-q053",
@@ -1629,7 +1681,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Dependendo de quais partes do corpo perderam a sensação e a força, os médicos conseguem descobrir exatamente em qual andar da coluna a lesão aconteceu; nesse caso, os sinais mostram que foi bem na altura do pescoço."
     },
     {
       "id": "b02-semanal-q054",
@@ -1659,7 +1712,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "O rosto do rapaz ficou tão machucado, com muito sangramento na boca, que não dá para colocar o tubo de respirar pela boca com segurança. Então os médicos precisam abrir uma pequena passagem de ar direto no pescoço para ele conseguir respirar."
     },
     {
       "id": "b02-semanal-q055",
@@ -1690,7 +1744,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "Dentro do líquido que envolve o bebê na barriga da mãe, existe uma substância chamada creatinina que se mantém sempre na mesma quantidade durante toda a gravidez, diferente de outras que vão mudando."
     },
     {
       "id": "b02-semanal-q056",
@@ -1721,7 +1776,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Para saber se uma criança está mesmo mais baixa do que deveria, o médico olha principalmente a altura dela comparada com outras crianças da mesma idade, e não o peso ou outras medidas."
     },
     {
       "id": "b02-semanal-q057",
@@ -1751,7 +1807,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Um bebê que nasceu com 3 kg e 50 cm, aos 3 meses de vida, já deve estar com o peso dobrado (perto de 6 kg) e uns 9 cm a mais de altura, porque nessa fase o crescimento é bem rápido."
     },
     {
       "id": "b02-semanal-q058",
@@ -1782,7 +1839,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Como a pressão desse senhor não está tão alta e ele não gostou do remédio, o médico pode tentar primeiro só com mudanças na alimentação e no exercício, acompanhando de perto antes de insistir num remédio que faz mal a ele."
     },
     {
       "id": "b02-semanal-q059",
@@ -1812,7 +1870,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O homem levou uma facada no peito e está perdendo muito sangue, tão grave que nem o soro está conseguindo estabilizar ele. Nesse caso extremo, os médicos precisam abrir o peito dele imediatamente na emergência para estancar o sangramento."
     },
     {
       "id": "b02-semanal-q060",
@@ -1842,7 +1901,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "A cicatriz do umbigo é como uma marca no mapa do corpo: ela corresponde exatamente a um nível da coluna, então quando alguém perde a sensibilidade a partir dali, os médicos sabem que a lesão está nessa altura."
     },
     {
       "id": "b02-semanal-q061",
@@ -1872,7 +1932,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "É bem comum que um seio comece a crescer antes do outro quando a puberdade está começando; essa diferença de tamanho é normal e não precisa de nenhum exame extra."
     },
     {
       "id": "b02-semanal-q062",
@@ -1902,7 +1963,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "O coração desse senhor bombeia até uma quantidade normal de sangue, mas está duro e não relaxa direito, causando inchaço e falta de ar. O remédio que realmente ajuda nesse tipo de problema é uma classe chamada inibidor de SGLT2."
     },
     {
       "id": "b02-semanal-q063",
@@ -1933,7 +1995,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "A cabecinha do bebê cresce rápido nos primeiros meses de vida (uns 2 cm por mês no início, depois mais devagar), então uma menina que nasceu com 32 cm de perímetro da cabeça deve estar com cerca de 42,5 cm aos 9 meses."
     },
     {
       "id": "b02-semanal-q064",
@@ -1963,7 +2026,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "Quando um menino desenvolve um pouco de seio na puberdade, o que está crescendo ali é o tecido de glândula (igual ao das mulheres), e não apenas gordura acumulada."
     },
     {
       "id": "b02-semanal-q065",
@@ -1995,7 +2059,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "A jovem tem crises de dor de cabeça, suor e coração acelerado indo e vindo, o que é bem característico de um tumor raro numa glândula perto do rim que solta hormônios em explosões."
     },
     {
       "id": "b02-semanal-q066",
@@ -2025,7 +2090,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O pulmão esquerdo do rapaz está cheio de ar preso empurrando tudo para o lado, dificultando a respiração e até deslocando estruturas do pescoço. A solução imediata é furar o tórax com uma agulha para liberar esse ar."
     },
     {
       "id": "b02-semanal-q067",
@@ -2055,7 +2121,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "Aos 12 anos, um menino com os testículos começando a crescer e alguns pelinhos finos ao redor do pênis está exatamente na fase normal e esperada de início da puberdade."
     },
     {
       "id": "b02-semanal-q068",
@@ -2085,7 +2152,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Aos 4 meses de vida, um bebê costuma ter dobrado o peso do nascimento, crescido cerca de 12 cm em altura e a cabecinha aumentado bastante, é um período de crescimento bem acelerado."
     },
     {
       "id": "b02-semanal-q069",
@@ -2117,7 +2185,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Calculando o peso e a altura dessa criança de 10 anos, o resultado fica numa faixa que indica sobrepeso, um pouco acima do que é considerado saudável para a idade."
     },
     {
       "id": "b02-semanal-q070",
@@ -2148,7 +2217,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina de 6 anos já está desenvolvendo os seios, crescendo muito rápido e seus ossos estão adiantados para a idade dela. Tudo isso mostra que o comando do cérebro que liga a puberdade foi acionado cedo demais."
     },
     {
       "id": "b02-semanal-q071",
@@ -2179,7 +2249,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "Quando o médico examina a barriga da grávida no início da gestação e sente que uma parte do útero (o istmo) ficou bem molinha, isso é um sinal que ajuda a confirmar a gravidez."
     },
     {
       "id": "b02-semanal-q072",
@@ -2210,7 +2281,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "A menina não é baixinha só por genética: ela está crescendo bem devagar e os ossos dela estão muito atrasados para a idade, mesmo os pais sendo de estatura normal. Isso aponta para uma falta do hormônio do crescimento no corpo dela."
     },
     {
       "id": "b02-semanal-q073",
@@ -2240,7 +2312,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Para a menstruação acontecer certinha todo mês, é preciso que a comunicação entre o cérebro e os ovários esteja funcionando bem, e que a tireoide e as glândulas suprarrenais também não estejam bagunçando esse sistema."
     },
     {
       "id": "b02-semanal-q074",
@@ -2271,7 +2344,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Quando o médico está tentando colocar o tubo de respiração e não consegue ver bem a garganta, existe uma manobra de empurrar delicadamente a cartilagem do pescoço que ajuda a enxergar melhor o caminho certo."
     },
     {
       "id": "b02-semanal-q075",
@@ -2302,7 +2376,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O exame que avalia a saúde do bebê antes de nascer tem 5 partes, cada uma valendo pontos, e como tudo estava normal nesse bebê, a nota final foi a nota máxima."
     },
     {
       "id": "b02-semanal-q076",
@@ -2333,7 +2408,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O coração dessa pessoa está sendo apertado por sangue acumulado ao redor dele depois de uma batida forte no peito, e como o quadro é grave, a solução é abrir o peito na cirurgia de emergência para aliviar essa pressão."
     },
     {
       "id": "b02-semanal-q077",
@@ -2364,7 +2440,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A descrição do exame da menina não segue direitinho as etapas certas usadas pelos médicos para classificar a puberdade, então não dá para dizer com certeza em que fase ela está sem mais detalhes."
     },
     {
       "id": "b02-semanal-q078",
@@ -2394,7 +2471,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "É comum que meninos de 13-14 anos tenham um pequeno inchaço nos seios por causa do desequilíbrio temporário de hormônios da puberdade, geralmente isso passa sozinho com o tempo, sem precisar de tratamento."
     },
     {
       "id": "b02-semanal-q079",
@@ -2424,7 +2502,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina de 14 anos ainda não teve nenhuma mudança da puberdade e é bem baixinha, mas os ossos dela estão na idade certa. Isso sugere que os ovários dela podem não estar funcionando direito."
     },
     {
       "id": "b02-semanal-q080",
@@ -2455,7 +2534,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "Para essa senhora cujo coração bombeia normal mas não relaxa bem, causando inchaço e falta de ar, o remédio que mais ajuda a evitar internações e complicações é da classe chamada SGLT2i."
     },
     {
       "id": "b02-semanal-q081",
@@ -2486,7 +2566,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "O senhor já toma três remédios fortes para a pressão e mesmo assim ela continua alta. Nesse caso, o próximo remédio a ser adicionado é a espironolactona, que costuma funcionar bem nessa situação."
     },
     {
       "id": "b02-semanal-q082",
@@ -2517,7 +2598,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina não desenvolveu a puberdade, é baixinha e tem o pescoço meio largo. O exame que olha os cromossomos dela mostra que falta uma cópia de um cromossomo, isso é a Síndrome de Turner."
     },
     {
       "id": "b02-semanal-q083",
@@ -2547,7 +2629,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "Nas meninas, o primeiro sinal de que a puberdade está começando é o crescimento dos seios, não os pelos nem a menstruação."
     },
     {
       "id": "b02-semanal-q084",
@@ -2580,7 +2663,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O coração do bebê reagiu um pouquinho quando fizeram um barulho perto da barriga da mãe, mas a reação foi fraca; isso é classificado como um bebê hiporreativo, que precisa de mais atenção, mas não é uma emergência."
     },
     {
       "id": "b02-semanal-q085",
@@ -2611,7 +2695,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "O rim desse homem piorou muito depois que ele começou a tomar um remédio para pressão, e o médico ouviu um barulho estranho na barriga dele perto do umbigo. Tudo isso aponta para um estreitamento na artéria que leva sangue ao rim."
     },
     {
       "id": "b02-semanal-q086",
@@ -2641,7 +2726,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Aos 2 meses de vida, um bebê que nasceu com 3,5 kg costuma pesar cerca de 4,9 kg e medir cerca de 56 cm; no primeiro ano, o peso costuma triplicar e a altura crescer bastante."
     },
     {
       "id": "b02-semanal-q087",
@@ -2671,7 +2757,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "A menina de 13 anos ainda não menstruou e é bem baixinha, o que faz o médico suspeitar de um problema genético nos ovários. Por isso, o exame mais importante a pedir é o que olha os cromossomos dela."
     },
     {
       "id": "b02-semanal-q088",
@@ -2704,7 +2791,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O desenho do batimento cardíaco do bebê ficou parecido com ondas repetidas e regulares, o que é um sinal muito preocupante, indicando alto risco para a vida do bebê."
     },
     {
       "id": "b02-semanal-q089",
@@ -2734,7 +2822,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "As gengivas inflamadas são comuns na gravidez por causa dos hormônios, e é importante cuidar delas porque essa inflamação pode aumentar o risco de o bebê nascer antes da hora, por isso a grávida deve ir ao dentista."
     },
     {
       "id": "b02-semanal-q090",
@@ -2765,7 +2854,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "Mesmo com uma parte do exame do bebê não mostrando reação perfeita, todas as outras partes do exame estavam boas, então a nota final ficou alta, o que significa baixo risco para o bebê."
     },
     {
       "id": "b02-semanal-q091",
@@ -2796,7 +2886,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Depois que o óvulo sai do ovário, uma estrutura chamada corpo lúteo aparece e começa a fabricar o hormônio progesterona, que prepara o útero para receber um possível bebê."
     },
     {
       "id": "b02-semanal-q092",
@@ -2826,7 +2917,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Esse senhor tem pressão alta e também diabetes, então precisa de dois remédios juntos desde o início para conseguir controlar bem a pressão e também proteger os rins dele."
     },
     {
       "id": "b02-semanal-q093",
@@ -2858,7 +2950,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "Para esse senhor cujo coração relaxa mal, mesmo bombeando quantidade normal de sangue, os remédios que ajudam de verdade são dois tipos específicos que protegem o coração e reduzem o inchaço."
     },
     {
       "id": "b02-semanal-q094",
@@ -2888,7 +2981,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "A bala perfurou o peito do rapaz e deixou sangue acumulado lá dentro, apertando o pulmão. A solução é colocar um tubo (dreno) numa área segura entre as costelas para tirar esse sangue."
     },
     {
       "id": "b02-semanal-q095",
@@ -2918,7 +3012,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina de 7 anos e meio já está desenvolvendo os seios e os ossos dela estão bem mais adiantados do que deveriam para a idade, isso mostra que o comando do cérebro que liga a puberdade foi acionado cedo demais."
     },
     {
       "id": "b02-semanal-q096",
@@ -2948,7 +3043,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Não importa quantos machucados a pessoa tenha, a primeira coisa que os médicos sempre checam ao atender alguém gravemente ferido é se ela está conseguindo respirar direito."
     },
     {
       "id": "b02-semanal-q097",
@@ -2980,7 +3076,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina de 3 anos começou a ter pelos, acne e o clitóris cresceu de um jeito que não é normal para a idade dela. Esses sinais fortes demais fazem o médico suspeitar de um tumor numa glândula perto do rim produzindo hormônios em excesso."
     },
     {
       "id": "b02-semanal-q098",
@@ -3010,7 +3107,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Quando o hormônio estrogênio produzido pelo óvulo em crescimento fica bem alto, ele avisa o cérebro para soltar uma grande quantidade de outro hormônio (LH), e é esse aviso que faz a ovulação acontecer."
     },
     {
       "id": "b02-semanal-q099",
@@ -3040,7 +3138,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "Quando um menino pequeno começa a ter sinais de puberdade, mas os testículos continuam do tamanho de criança, isso mostra que o excesso de hormônio não está vindo dos testículos, e sim de algum outro lugar do corpo."
     },
     {
       "id": "b02-semanal-q100",
@@ -3071,7 +3170,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina começou a ter o broto do seio aparecendo, mas ainda não tem nenhum pelo pubiano; cada uma dessas mudanças tem sua própria etapa numa tabela que os médicos usam para acompanhar a puberdade."
     },
     {
       "id": "b02-semanal-q101",
@@ -3101,7 +3201,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "Cada detalhe do exame, como o tamanho do broto mamário, a quantidade e o tipo de pelos, e o tamanho dos testículos, ajuda o médico a colocar cada criança no estágio certinho da tabela que mede o avanço da puberdade."
     },
     {
       "id": "b02-semanal-q102",
@@ -3131,7 +3232,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Existe uma equipe de células no ovário que, sob o comando de um hormônio chamado FSH, pega um hormônio parecido com o masculino e o transforma em hormônio feminino (estrogênio)."
     },
     {
       "id": "b02-semanal-q103",
@@ -3164,7 +3266,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "O menino é baixinho e os ossos dele estão um pouco atrasados para a idade, mas os pais dele também não são muito altos, então o que ele tem é uma mistura de atraso temporário no crescimento com a tendência genética da família."
     },
     {
       "id": "b02-semanal-q104",
@@ -3194,7 +3297,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Enquanto o bebê ainda está na barriga da mãe, o crescimento dele depende principalmente da boa alimentação da mãe e de hormônios produzidos pela placenta; o hormônio do crescimento só ganha importância depois que ele nasce."
     },
     {
       "id": "b02-semanal-q105",
@@ -3224,7 +3328,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "No exame que avalia a saúde do bebê, o tônus muscular dele é a última coisa a desaparecer quando as coisas vão mal, então, se o bebê perde até o tônus, isso é um sinal de que ele está passando por uma falta de oxigênio muito grave."
     },
     {
       "id": "b02-semanal-q106",
@@ -3254,7 +3359,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A puberdade começa de verdade lá no cérebro, quando uma região chamada hipotálamo passa a liberar, em pequenos pulsos, um hormônio que dá o start em toda a cadeia de mudanças do corpo."
     },
     {
       "id": "b02-semanal-q107",
@@ -3284,7 +3390,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Quando o crescimento em altura de uma criança fica comprometido, isso costuma mostrar que ela está passando por um problema de saúde de longa duração, diferente do peso, que reage mais rápido a problemas recentes."
     },
     {
       "id": "b02-semanal-q108",
@@ -3314,7 +3421,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "Uma faca ficou cravada no peito da pessoa e o pulmão dela está cheio de ar preso, dificultando muito a respiração. A conduta certa é aliviar esse ar preso com uma agulha em outro ponto do peito, nunca tirar a faca fora do hospital, pois ela pode estar segurando um sangramento."
     },
     {
       "id": "b02-semanal-q109",
@@ -3344,7 +3452,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Esse senhor tem pressão alta e os rins um pouco fracos. A combinação de remédios mais segura para ele é manter o que já protege o rim e adicionar outro tipo que não atrapalha a função renal."
     },
     {
       "id": "b02-semanal-q110",
@@ -3375,7 +3484,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Existem dois tipos de remédio para pressão que parecem parecidos, mas nunca devem ser usados juntos, porque a combinação pode machucar os rins e deixar o potássio do sangue muito alto."
     },
     {
       "id": "b02-semanal-q111",
@@ -3405,7 +3515,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "No caso de um tumor raro que solta hormônios do tipo adrenalina, certos remédios comuns contra dor e enjoo podem, na verdade, piorar tudo, provocando uma crise ainda pior de pressão alta, por isso devem ser evitados."
     },
     {
       "id": "b02-semanal-q112",
@@ -3436,7 +3547,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Essa senhora tem diabetes e já começou a ter um sinal de que os rins estão sendo afetados. Por isso, o médico precisa começar logo dois tipos de remédio: um para a pressão que protege os rins e outro para baixar o colesterol."
     },
     {
       "id": "b02-semanal-q113",
@@ -3466,7 +3578,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Uma moça jovem teve os rins piorando muito rápido depois de começar um remédio para pressão; em pessoas jovens, essa reação costuma apontar para um estreitamento incomum nas artérias dos rins, não ligado a colesterol."
     },
     {
       "id": "b02-semanal-q114",
@@ -3496,7 +3609,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Para ajudar a controlar a pressão sem remédio, os médicos recomendam comer bem menos sal, fazer uns 30 minutos de exercício quase todo dia, parar de fumar e cuidar do estresse."
     },
     {
       "id": "b02-semanal-q115",
@@ -3526,7 +3640,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Depois de adicionar um segundo remédio para a pressão, os rins do paciente pioraram e o potássio do sangue subiu. A solução é reduzir esse remédio e trocar por outro tipo que não cause esse problema."
     },
     {
       "id": "b02-semanal-q116",
@@ -3556,7 +3671,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-12"
+      "scheduleId": "cron-12",
+      "kids": "Essa senhora já toma quatro remédios fortes para a pressão em doses altas e mesmo assim continua com a pressão alta, isso é chamado de hipertensão resistente de verdade, e a solução é adicionar um quinto tipo de remédio."
     },
     {
       "id": "b02-semanal-q117",
@@ -3586,7 +3702,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "O coração desse homem está sendo tratado com remédios importantes que ajudam a viver mais tempo, mas ele começou a sentir tontura por causa da pressão baixa. A solução é diminuir o remédio que tira líquido do corpo, e não mexer nos remédios mais importantes."
     },
     {
       "id": "b02-semanal-q118",
@@ -3617,7 +3734,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-19"
+      "scheduleId": "cron-19",
+      "kids": "Depois de um susto ou emoção muito forte, o coração de algumas pessoas pode ficar temporariamente fraco numa parte específica, formando um desenho parecido com um balão no exame de imagem, isso é chamado de síndrome do coração partido."
     },
     {
       "id": "b02-semanal-q119",
@@ -3648,7 +3766,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Essa mulher se queimou dentro de uma casa em chamas e está com a voz rouca e queimaduras no rosto, o que é sinal de que a via aérea dela também foi afetada pela fumaça quente. Por isso, os médicos colocam o tubo de respiração cedo, antes que o inchaço feche a garganta."
     },
     {
       "id": "b02-semanal-q120",
@@ -3679,7 +3798,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O rapaz bateu a barriga numa queda, mas está bem e estável. Mesmo assim, como a batida foi na região das costas perto do rim, o exame mais indicado é uma tomografia com contraste para ver se há algum machucado escondido."
     },
     {
       "id": "b02-semanal-q121",
@@ -3709,7 +3829,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O pescoço do rapaz foi cortado por uma faca e o exame mostrou um problema numa artéria, mas como ele está estável, os médicos podem consertar esse vaso por dentro, usando um pequeno tubo colocado por um cateter, sem precisar abrir o pescoço."
     },
     {
       "id": "b02-semanal-q122",
@@ -3739,7 +3860,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O fígado desse homem rachou fundo e estava sangrando bastante depois do atropelamento. Como ele estava instável, os médicos fazem uma cirurgia rápida para estancar o sangramento e deixam o reparo completo para depois, quando ele estiver mais estável."
     },
     {
       "id": "b02-semanal-q123",
@@ -3769,7 +3891,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Quando alguém precisa tirar o baço, que ajuda a combater infecções, é muito importante tomar algumas vacinas especiais depois, porque sem o baço o corpo fica mais vulnerável a certas bactérias perigosas."
     },
     {
       "id": "b02-semanal-q124",
@@ -3800,7 +3923,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "O baço do adolescente ficou machucado na queda de bicicleta, mas ele está estável e o exame não mostra sangramento ativo. Por isso, a conduta é observar bem de perto numa UTI, sem precisar de cirurgia ou transfusão agora."
     },
     {
       "id": "b02-semanal-q125",
@@ -3831,7 +3955,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Um mês depois de bater a cabeça, o sangue que se acumulou embaixo do crânio desse senhor idoso ficou mais líquido e escuro no exame de imagem, é um hematoma crônico, que demorou para dar sintomas como confusão e fraqueza."
     },
     {
       "id": "b02-semanal-q126",
@@ -3861,7 +3986,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Quando é preciso abrir uma passagem de ar de emergência no pescoço para alguém respirar, a complicação mais comum que pode acontecer depois é a pessoa ficar com a voz mais rouca."
     },
     {
       "id": "b02-semanal-q127",
@@ -3894,7 +4020,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O sangue acumulado dentro do crânio do homem está empurrando o cérebro para o lado e ele está piorando, ficando mais sonolento, então a cirurgia para tirar esse sangue precisa ser feita com urgência."
     },
     {
       "id": "b02-semanal-q128",
@@ -3925,7 +4052,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Quando uma pessoa está com o tubo de respiração na garganta, ela não consegue falar, então os médicos colocam uma letra especial no lugar da nota de fala na escala que mede o nível de consciência, em vez de simplesmente zerar aquele item."
     },
     {
       "id": "b02-semanal-q129",
@@ -3956,7 +4084,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O diagnóstico do pulmão cheio de ar preso empurrando tudo é feito só olhando os sinais do paciente, sem precisar esperar por nenhum exame de imagem, o tratamento deve ser feito na hora."
     },
     {
       "id": "b02-semanal-q130",
@@ -3987,7 +4116,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "O homem levou um golpe forte no pescoço, mas está estável, sem sinais graves. O exame mais indicado agora é uma tomografia com contraste para ver se algum vaso sanguíneo ou outra estrutura do pescoço foi afetada."
     },
     {
       "id": "b02-semanal-q131",
@@ -4017,7 +4147,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Quando alguém bate a cabeça e ao mesmo tempo está sangrando muito na barriga, os médicos primeiro cuidam do sangramento, que pode matar rápido, antes de se preocupar só com a cabeça."
     },
     {
       "id": "b02-semanal-q132",
@@ -4047,7 +4178,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "Quando uma pessoa recebe muitas bolsas de sangue de uma vez, uma substância que evita que o sangue coagule dentro da bolsa acaba roubando um pouco do cálcio do corpo do paciente, causando uma queda desse mineral."
     },
     {
       "id": "b02-semanal-q133",
@@ -4077,7 +4209,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-17"
+      "scheduleId": "cron-17",
+      "kids": "O pescoço do rapaz está sangrando muito e a compressão com a mão não está segurando. Uma manobra que ajuda enquanto ele é levado correndo para a cirurgia é colocar uma sondinha com balãozinho dentro do ferimento para tamponar o sangramento."
     },
     {
       "id": "b02-semanal-q134",
@@ -4109,7 +4242,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-18"
+      "scheduleId": "cron-18",
+      "kids": "O dreno que foi colocado no peito do Matheus para tirar o ar preso não está funcionando direito porque ficou mal posicionado, a solução é ajustar ou trocar esse tubo, não é um problema mais grave nos brônquios."
     },
     {
       "id": "b02-semanal-q135",
@@ -4141,7 +4275,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "A cabecinha desse bebê cresceu menos do que deveria nesses 6 meses, e ao mesmo tempo ele está ficando um pouco pesado demais para a altura, dois sinais que merecem atenção do pediatra."
     },
     {
       "id": "b02-semanal-q136",
@@ -4171,7 +4306,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Bebês que nasceram prematuros costumam correr atrás do crescimento normal nos primeiros anos, e a primeira medida a se equiparar às crianças nascidas na hora certa costuma ser o tamanho da cabecinha."
     },
     {
       "id": "b02-semanal-q137",
@@ -4201,7 +4337,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "É possível uma criança estar, ao mesmo tempo, um pouco mais baixa do que deveria e acima do peso ideal: são dois problemas diferentes que podem acontecer juntos e precisam ser cuidados separadamente."
     },
     {
       "id": "b02-semanal-q138",
@@ -4233,7 +4370,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "A menina é baixinha porque os pais dela também são de estatura baixa, e como ela está crescendo no ritmo certo, isso é considerado uma característica de família, não uma doença."
     },
     {
       "id": "b02-semanal-q139",
@@ -4263,7 +4401,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "O crescimento tem fases certinhas, e o mais importante para saber se está tudo bem não é uma medida isolada, mas acompanhar várias medidas de altura ao longo do tempo."
     },
     {
       "id": "b02-semanal-q140",
@@ -4295,7 +4434,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "A bebê prematura estava ganhando peso muito bem, recuperando rapidinho o que faltava por ter nascido cedo demais, então o certo é continuar só com o leite da mãe, sem precisar complementar com fórmula."
     },
     {
       "id": "b02-semanal-q141",
@@ -4325,7 +4465,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "Para crianças que não conseguem ficar de pé ou deitar retinhas por causa de uma doença que afeta os movimentos, os médicos medem o comprimento de um osso da perna e usam uma fórmula para calcular a altura aproximada dela."
     },
     {
       "id": "b02-semanal-q142",
@@ -4355,7 +4496,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-15"
+      "scheduleId": "cron-15",
+      "kids": "O menino é baixinho, mas os pais dele têm altura normal, e os ossos dele estão um pouco atrasados para a idade, isso é um atraso temporário chamado atraso constitucional, que costuma se resolver sozinho mais tarde."
     },
     {
       "id": "b02-semanal-q143",
@@ -4385,7 +4527,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina de 7 anos já tem um pouco de seio, mas ela está crescendo no ritmo normal e os ossos dela estão na idade certa, isso é apenas um desenvolvimento isolado dos seios, sem outros sinais de puberdade adiantada, então só precisa de acompanhamento."
     },
     {
       "id": "b02-semanal-q144",
@@ -4416,7 +4559,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A menina de quase 7 anos está com os seios crescendo, cheiro de suor, crescendo muito rápido e com os ossos adiantados. Os exames confirmam que a puberdade dela começou cedo demais por um comando do próprio cérebro, e o tratamento é um remédio que pausa esse processo."
     },
     {
       "id": "b02-semanal-q145",
@@ -4446,7 +4590,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "O menino de 3 anos está tendo sinais de puberdade, mas os testículos dele continuam do tamanho de criança, isso mostra que o excesso de hormônio vem de outro lugar, provavelmente da glândula suprarrenal, e é isso que os exames vão investigar."
     },
     {
       "id": "b02-semanal-q146",
@@ -4476,7 +4621,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-16"
+      "scheduleId": "cron-16",
+      "kids": "A bebê de 1 ano está com pelos, clitóris crescido e espinhas, sinais fortes demais para a idade dela, o que faz o médico suspeitar de um tumor numa glândula perto do rim produzindo hormônios masculinos em excesso."
     },
     {
       "id": "b02-semanal-q148",
@@ -4506,7 +4652,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "A dor de cabeça que algumas mulheres sentem perto da menstruação acontece porque a queda do hormônio estrogênio nesse período deixa o sistema que acalma o cérebro menos ativo, favorecendo a crise de enxaqueca."
     },
     {
       "id": "b02-semanal-q148",
@@ -4536,7 +4683,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "A dor de cabeça que algumas mulheres sentem perto da menstruação acontece porque a queda do hormônio estrogênio nesse período deixa o sistema que acalma o cérebro menos ativo, favorecendo a crise de enxaqueca."
     },
     {
       "id": "b02-semanal-q149",
@@ -4567,7 +4715,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Depois da ovulação, o hormônio progesterona prepara o forro do útero, deixando-o pronto e aconchegante para receber um possível bebê."
     },
     {
       "id": "b02-semanal-q150",
@@ -4598,7 +4747,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-13"
+      "scheduleId": "cron-13",
+      "kids": "Na segunda metade do ciclo menstrual, a progesterona é o hormônio que manda, deixando o forro do útero estável e preparado, caso um óvulo fecundado precise se instalar ali."
     },
     {
       "id": "b02-semanal-q151",
@@ -4628,7 +4778,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "Durante a gravidez, o coração da mãe bombeia mais sangue, a pressão cai um pouco no meio da gestação, os rins filtram mais e a progesterona relaxa os músculos, o que explica sintomas como azia."
     },
     {
       "id": "b02-semanal-q152",
@@ -4659,7 +4810,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "Na gravidez, o pulmão fica um pouco mais espremido porque o útero empurra o diafragma para cima, sobrando menos espaço de ar de reserva, é por isso que infecções respiratórias, como a gripe, podem ficar mais graves em grávidas."
     },
     {
       "id": "b02-semanal-q153",
@@ -4689,7 +4841,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "Existem vários sinais que ajudam a confirmar uma gravidez no exame físico: um deles é sentir uma parte do útero bem molinha, e outro é notar a vagina com uma cor mais arroxeada."
     },
     {
       "id": "b02-semanal-q154",
@@ -4719,7 +4872,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "Na gravidez, o coração da mãe bate um pouco mais rápido, bombeia mais sangue a cada batida e, no total, trabalha bombeando bem mais sangue do que fora da gestação."
     },
     {
       "id": "b02-semanal-q155",
@@ -4749,7 +4903,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "Quando não dá para fazer o exame completo do bebê, existe uma versão simplificada que olha só duas coisas: o batimento do coração dele e a quantidade de líquido ao redor dele."
     },
     {
       "id": "b02-semanal-q156",
@@ -4779,7 +4934,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O bebê está crescendo menos do que deveria e os exames mostram que o sangue está chegando mal até ele através do cordão umbilical. Como ele ainda é prematuro, o médico dá um remédio para amadurecer os pulmões e programa o parto para dois dias depois."
     },
     {
       "id": "b02-semanais-q157",
@@ -4808,7 +4964,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags.txt"
+      "tagSource": "Tags.txt",
+      "kids": "Mesmo depois de fazer um barulho perto da barriga para tentar acordar o bebê, o coração dele não acelerou como deveria, esse traçado é chamado de não reativo e merece mais atenção."
     },
     {
       "id": "b02-semanal-q158",
@@ -4838,7 +4995,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O sistema nervoso do bebê que controla as variações naturais dos batimentos do coração só fica completamente maduro entre a 24ª e a 28ª semana de gravidez, e é por isso que antes disso o coraçãozinho bate de um jeito mais fixo."
     },
     {
       "id": "b02-semanal-q159",
@@ -4870,7 +5028,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O traçado do coração do bebê dessa gestante com pressão alta mostrou pouca variação e pouca reação. Diante disso, o próximo passo não é correr para a cesárea, mas fazer um exame mais completo para entender melhor como o bebê está."
     },
     {
       "id": "b02-semanal-q160",
@@ -4900,7 +5059,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "Quando o bebê para de crescer direito ainda bem cedo na gravidez, isso costuma estar bastante ligado a problemas na placenta, como acontece quando a mãe tem pressão alta da gravidez."
     },
     {
       "id": "b02-semanal-q161",
@@ -4930,7 +5090,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-20"
+      "scheduleId": "cron-20",
+      "kids": "O coração do bebê ficou batendo devagar demais bem na hora do parto, e como ele já está bem posicionado e descido no canal, o médico usa um instrumento especial para girar a cabecinha dele com cuidado e ajudar o parto a acontecer rápido."
     },
     {
       "id": "b02-semanais-q162",
@@ -4960,7 +5121,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-14"
+      "scheduleId": "cron-14",
+      "kids": "No exame do coração do bebê durante o trabalho de parto, os batimentos caem sempre um tempinho depois de cada contração, esse padrão é um sinal de que o bebê pode estar recebendo menos oxigênio do que precisa."
     }
   ]
 }

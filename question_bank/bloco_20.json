@@ -31,7 +31,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Quando os rins ficam inflamados de repente, o corpo incha, a pressão sobe e aparece sangue no xixi — isso se chama síndrome nefrítica. Uma infecção nas válvulas do coração (endocardite) pode espalhar germes que danificam os rins e causar esse quadro."
     },
     {
       "id": "b20-q002",
@@ -61,7 +62,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Quando os exames mostram uma massa grande e suspeita na barriga, com líquido acumulado e sinais de que pode ser câncer, o jeito mais seguro de descobrir a certeza e já tratar é abrir a barriga em cirurgia, num hospital preparado para isso, desde que a pessoa esteja em condições de passar pela operação."
     },
     {
       "id": "b20-q003",
@@ -92,7 +94,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Existem células que, vistas no microscópio, parecem um anel com uma pedrinha — por isso se chamam 'em anel de sinete'. Esse tipo de célula aparece no tumor de Krukenberg, que costuma ser um câncer que nasceu em outro lugar do corpo, como o estômago, e viajou até o ovário."
     },
     {
       "id": "b20-q004",
@@ -123,7 +126,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Se um tumor aperta os dois tubos que levam o xixi dos rins até a bexiga, o xixi fica empacado e os rins incham de tanta pressão. A solução é colocar um tubinho ligado direto no rim (nefrostomia), dos dois lados, para o xixi conseguir sair e aliviar essa pressão."
     },
     {
       "id": "b20-q005",
@@ -153,7 +157,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Depois da menopausa, sangramento vaginal é sempre um sinal de alerta. Quando os exames mostram um câncer mais agressivo crescendo dentro do revestimento do útero, que não depende de hormônio e cresce mais rápido, ele é chamado de câncer de endométrio do tipo II."
     },
     {
       "id": "b20-q006",
@@ -184,7 +189,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "O câncer que nasce dentro do útero (endométrio) tem mais chance de aparecer em quem está com peso acima do normal, tem diabetes ou tem ciclos de menstruação irregulares, porque essas situações deixam o corpo exposto a mais hormônio estrogênio por mais tempo."
     },
     {
       "id": "b20-q007",
@@ -214,7 +220,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "A mãe tem sangue tipo O e o bebê tipo A — essa diferença faz o corpo do bebê destruir um pouco mais rápido suas próprias hemácias (as células vermelhas do sangue), soltando bilirrubina extra e deixando a pele amarelada. Isso se chama incompatibilidade ABO."
     },
     {
       "id": "b20-q008",
@@ -245,7 +252,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Quando uma mulher depois da menopausa tem sangramento e o exame de imagem mostra a camada interna do útero mais grossa do que deveria, o melhor jeito de descobrir a causa é olhar por dentro do útero com uma câmera bem fininha — a histeroscopia."
     },
     {
       "id": "b20-q009",
@@ -276,7 +284,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Sensibilidade é a capacidade do teste de encontrar quem realmente está doente. Entre 50 pessoas que tinham o vírus, o teste só errou uma — encontrou 49 de 50, ou seja, acertou 98% das vezes entre quem estava mesmo doente."
     },
     {
       "id": "b20-q010",
@@ -307,7 +316,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando um bebê de 2 meses fica amarelado, faz cocô bem clarinho (sem cor) e xixi escuro, é sinal de que a bile não está saindo direito do fígado — geralmente porque os canaizinhos que levam a bile nasceram fechados. Isso se chama atresia de vias biliares."
     },
     {
       "id": "b20-q011",
@@ -337,7 +347,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando os canais da bile ficam fechados desde o nascimento e o tratamento demora demais, o fígado vai se enchendo de cicatrizes (fibrose) até parar de funcionar direito. Nesse estágio avançado, a solução é trocar o fígado por um novo, no transplante hepático."
     },
     {
       "id": "b20-q012",
@@ -367,7 +378,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Quando o câncer no revestimento do útero é bem inicial e pouco agressivo, e a mulher ainda quer ter filhos, dá para tentar tratar com hormônio (progesterona em dose alta) em vez de tirar o útero, tentando preservar a fertilidade."
     },
     {
       "id": "b20-q013",
@@ -401,7 +413,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando o nível de bilirrubina no sangue do bebê está bem alto para a idade dele, o tratamento é colocar sob uma luz especial (fototerapia) que ajuda a quebrar essa substância amarela, e repetir o exame de sangue rapidinho, em poucas horas, para ver se está melhorando."
     },
     {
       "id": "b20-q014",
@@ -431,7 +444,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando a pele fica amarela, coça muito e os exames mostram que a bile está entupida (e não o fígado inflamado), a suspeita é de um tumor perto da saída da bile no intestino. Para confirmar, faz-se um ultrassom e uma tomografia da barriga."
     },
     {
       "id": "b20-q015",
@@ -461,7 +475,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Bebês têm mais chance de ficar bem amarelados quando já tiveram um irmão que precisou de luz especial (fototerapia) para tratar icterícia, ou quando são meninos — esses são sinais de alerta que os médicos observam."
     },
     {
       "id": "b20-q016",
@@ -491,7 +506,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Esse tumor tem uma mistura de vários tecidos diferentes ainda imaturos — um pouco de cartilagem, músculo e até tecido nervoso — porque nasce de células muito primitivas que ainda não decidiram em que iriam se transformar. Isso é típico do teratoma imaturo."
     },
     {
       "id": "b20-q017",
@@ -521,7 +537,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Quando a cirurgia já confirma na hora que o câncer do útero ainda está bem no comecinho, sem invadir profundamente, não é preciso tirar os gânglios linfáticos da barriga, porque o risco desse procedimento maior não compensa nesse estágio inicial."
     },
     {
       "id": "b20-q018",
@@ -551,7 +568,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Para um câncer de útero bem inicial, que ainda não passou de metade da parede do útero, o tratamento indicado é tirar o útero junto com as trompas e os ovários, sem precisar de cirurgias mais extensas."
     },
     {
       "id": "b20-q019",
@@ -581,7 +599,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Quando um cisto do ovário tem partes com relevos (papilas) cobertas por células estranhas que estão invadindo o tecido ao redor, isso já não é um cisto benigno — é um câncer chamado cistoadenocarcinoma seroso."
     },
     {
       "id": "b20-q020",
@@ -611,7 +630,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Existe um tumor no pâncreas que libera uma substância que faz a pessoa ter diarreia muito líquida e perder muito potássio pelo corpo. Esse tumor se chama vipoma, e esse conjunto de sintomas tem nome: síndrome de Verner-Morrison."
     },
     {
       "id": "b20-q021",
@@ -641,7 +661,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Às vezes um tumor pequeno e não-canceroso no ovário pode causar líquido acumulado na barriga e até no pulmão, mesmo sem ser câncer espalhado. Esse conjunto de sinais tem um nome: síndrome de Meigs."
     },
     {
       "id": "b20-q022",
@@ -671,7 +692,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Como o tumor do ovário nessa síndrome costuma ser benigno, o tratamento é só tirar cirurgicamente o ovário e a trompa do lado afetado — ao remover o tumor, o líquido na barriga e no pulmão costuma desaparecer sozinho."
     },
     {
       "id": "b20-q023",
@@ -701,7 +723,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "O tumor que mais costuma causar esse conjunto de sintomas (líquido na barriga e no pulmão) é um tipo de nódulo sólido e benigno do ovário chamado fibroma."
     },
     {
       "id": "b20-q024",
@@ -731,7 +754,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Existe um gene chamado BRCA-1 que ajuda a consertar erros no DNA. Quando ele vem com defeito (mutação), a pessoa fica com mais chance de desenvolver câncer de mama e de ovário ao longo da vida."
     },
     {
       "id": "b20-q025",
@@ -761,7 +785,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Um cisto arredondado, com bordas bem definidas e cheio só de líquido (sem partes sólidas), visto na ultrassonografia de uma mulher jovem, geralmente é só um cisto simples e benigno, sem motivo para preocupação."
     },
     {
       "id": "b20-q026",
@@ -791,7 +816,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Quando o cisto do ovário tem partes com relevos cobertas por células estranhas que invadem o tecido vizinho, isso indica um câncer chamado cistadenocarcinoma seroso, e não um cisto comum."
     },
     {
       "id": "b20-q027",
@@ -821,7 +847,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Alguns cânceres, como o de mama, podem fazer as defesas do corpo atacarem por engano os rins, causando uma lesão chamada nefropatia membranosa. Isso faz muita proteína vazar na urina (por isso ela fica espumosa) e o corpo incha, principalmente ao redor dos olhos e nas pernas."
     },
     {
       "id": "b20-q028",
@@ -851,7 +878,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Depois de um esforço físico muito intenso no calor, os músculos podem se romper e liberar substâncias que sobrecarregam os rins, causando insuficiência renal. Quando o potássio no sangue fica muito alto e não baixa mesmo com remédios, é preciso usar a máquina de diálise para tirar esse excesso e proteger o coração."
     },
     {
       "id": "b20-q029",
@@ -885,7 +913,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Depois de uma pancreatite grave, algumas semanas depois pode se formar uma bolsa cheia de líquido perto do pâncreas — é o pseudocisto de pâncreas, que causa sensação de estômago cheio e enjoo depois de comer."
     },
     {
       "id": "b20-q030",
@@ -915,7 +944,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Muita proteína saindo na urina, inchaço nas pernas e colesterol alto formam a síndrome nefrótica. Quando o exame de sangue mostra um anticorpo (FAN) bem positivo, a causa provável é uma doença autoimune chamada lúpus, em que o corpo ataca por engano os próprios rins."
     },
     {
       "id": "b20-q031",
@@ -946,7 +976,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Quando uma lesão nos rins que causa perda de proteína (nefropatia membranosa) aparece numa pessoa mais velha e o exame que costuma achar a causa mais comum dá negativo, o médico deve procurar um câncer escondido — começando por examinar o pulmão com tomografia, principalmente em quem já fumou."
     },
     {
       "id": "b20-q032",
@@ -977,7 +1008,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "A especificidade mostra se o teste consegue identificar corretamente quem NÃO tem a doença. Das 100 pessoas sem leishmaniose, só 10 tiveram resultado errado (falso positivo), então o teste acertou 90 de 100 — ou seja, 90% de especificidade."
     },
     {
       "id": "b20-q033",
@@ -1008,7 +1040,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Mesmo quando o teste de Coombs direto dá negativo, a diferença entre o tipo de sangue da mãe (O) e do bebê (B) ainda pode fazer o corpo do bebê destruir mais hemácias e causar icterícia patológica — o Coombs negativo não descarta essa possibilidade."
     },
     {
       "id": "b20-q034",
@@ -1039,7 +1072,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Mulheres que nunca tiveram filhos têm mais risco de câncer de ovário. Mas, ao contrário do que parece, entre elas as que tiveram dificuldade para engravidar (infertilidade) têm risco ainda mais alto, e não mais baixo — por isso essa afirmação está errada."
     },
     {
       "id": "b20-semanais-q35",
@@ -1069,7 +1103,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Mesmo um teste bom pode errar bastante quando a doença é rara: por causa dos falsos positivos, só 33 em cada 100 pessoas com teste positivo realmente têm a doença."
     },
     {
       "id": "b20-q036",
@@ -1103,7 +1138,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando a bilirrubina do bebê está alta para a idade dele nas primeiras horas de vida, o tratamento indicado é colocar sob uma luz especial forte o bastante — a fototerapia — que ajuda o corpinho a eliminar esse excesso mais rápido."
     },
     {
       "id": "b20-q037",
@@ -1133,7 +1169,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "O pior tipo de câncer de endométrio é aquele mais agressivo no microscópio, que já invadiu o colo do útero e os vasinhos linfáticos, e que tem uma alteração num gene chamado p53 — tudo isso junto indica um prognóstico ruim."
     },
     {
       "id": "b20-q038",
@@ -1163,7 +1200,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando o tumor no pâncreas está bem perto de um vaso sanguíneo importante, mas ainda não o envolve completamente (menos da metade da volta dele), é possível fazer quimioterapia antes da cirurgia para tentar encolher o tumor e permitir retirá-lo depois."
     },
     {
       "id": "b20-q039",
@@ -1193,7 +1231,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Os bebês recém-nascidos têm as células vermelhas do sangue com vida mais curta do que a de um adulto. Isso faz elas se quebrarem mais rápido, liberando mais bilirrubina de uma vez, o que deixa a pele amarelada nos primeiros dias."
     },
     {
       "id": "b20-q040",
@@ -1223,7 +1262,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-187"
+      "scheduleId": "cron-187",
+      "kids": "Quando um adulto desenvolve de repente muito inchaço no corpo com muita proteína saindo na urina, sem outra doença por trás explicando, a causa mais comum é uma lesão nos rins chamada glomerulopatia membranosa."
     },
     {
       "id": "b20-q041",
@@ -1254,7 +1294,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Alguns remédios, como um grupo de antibióticos chamado aminoglicosídeos, podem machucar diretamente as células dos rins e causar insuficiência renal. Esse tipo de causa, que vem de dentro do próprio rim, é chamada de causa renal, diferente de quando o problema vem antes ou depois do rim."
     },
     {
       "id": "b20-q042",
@@ -1285,7 +1326,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Os médicos usam uma tabela para saber o quão grave está a lesão nos rins. No estágio mais leve, a creatinina (que mostra como o rim está filtrando o sangue) sobe entre 1,5 e quase 2 vezes o valor normal da pessoa, ou aumenta pelo menos 0,3 mg/dL em pouco tempo."
     },
     {
       "id": "b20-q043",
@@ -1315,7 +1357,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Mesmo um teste que acerta bastante pode dar muitos resultados positivos errados quando a doença é rara na população. Nessa conta, só 31% das pessoas que testam positivo para hanseníase realmente têm a doença — a maioria dos positivos são falsos alarmes."
     },
     {
       "id": "b20-semanais-q44",
@@ -1345,7 +1388,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "A dor que piora ao comer, o emagrecimento e a gordura nas fezes, numa pessoa que bebe álcool há muitos anos, mostram que o pâncreas ficou inflamado de forma crônica; por isso o tratamento é aliviar a dor e ajustar a alimentação, sem precisar de internação como numa crise aguda."
     },
     {
       "id": "b20-q045",
@@ -1375,7 +1419,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Quando aparece sangue na urina com hemácias deformadas, pressão alta e uma quantidade moderada de proteína perdida, é a síndrome nefrítica. Uma das causas mais comuns é uma doença dos rins chamada nefropatia por IgA, em que um anticorpo se deposita e inflama os rins."
     },
     {
       "id": "b20-q046",
@@ -1406,7 +1451,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "O nódulo com sombra no ultrassom é um tipo de tumor de ovário geralmente benigno (teratoma), que em cerca de 10 em cada 100 casos aparece nos dois ovários ao mesmo tempo."
     },
     {
       "id": "b20-q047",
@@ -1436,7 +1482,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "O bebê tomou um remédio que quebrou suas hemácias porque ele tem uma doença genética (falta de uma enzima chamada G6PD); por isso ficou anêmico e muito amarelo, e não porque o sangue dele e da mãe são incompatíveis."
     },
     {
       "id": "b20-q048",
@@ -1466,7 +1513,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "O sinal visto no ultrassom mostra que os canais que levam a bile do fígado até o intestino nasceram fechados; o tratamento é uma cirurgia (de Kasai) para tentar abrir esse caminho o quanto antes."
     },
     {
       "id": "b20-q049",
@@ -1496,7 +1544,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Como o corpo perdeu sangue no acidente, os rins estão recebendo pouco sangue; por isso a primeira coisa a fazer é repor líquido no corpo, antes de qualquer outro tratamento."
     },
     {
       "id": "b20-q050",
@@ -1529,7 +1578,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Comparando como a creatinina de cada paciente se comportou ao longo do tempo dá para saber quem já tinha um problema renal antigo e quem teve uma piora rápida por cima dele."
     },
     {
       "id": "b20-q051",
@@ -1559,7 +1609,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Como os rins dela estão bem fracos, um dos remédios (metformina) fica perigoso e precisa ser parado; e a dose de insulina deve diminuir, porque ela está tendo sinais de açúcar baixo no sangue, como tontura e muita fome."
     },
     {
       "id": "b20-q052",
@@ -1590,7 +1641,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-187"
+      "scheduleId": "cron-187",
+      "kids": "O exame de sangue que ajuda a confirmar esse tipo de problema no rim procura um anticorpo que ataca uma proteína chamada PLA2 nos filtros dos rins."
     },
     {
       "id": "b20-q053",
@@ -1620,7 +1672,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Fumar cigarro é o hábito que mais aumenta o risco de desenvolver esse tipo de câncer."
     },
     {
       "id": "b20-q054",
@@ -1650,7 +1703,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Quando se testa gente mais jovem, que tem menos chance de ter a doença, mesmo um teste positivo acerta menos vezes, porque há muito mais gente saudável sendo testada junto."
     },
     {
       "id": "b20-q055",
@@ -1680,7 +1734,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Fezes bem claras e icterícia que não passa em bebê são sinal de alerta grave, porque a bile não está saindo do fígado; por isso é preciso internar rápido, dar vitamina K e fazer exames de sangue e ultrassom para descobrir a causa."
     },
     {
       "id": "b20-q056",
@@ -1710,7 +1765,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Para tratar esse espessamento benigno do revestimento do útero por muito tempo, o melhor jeito é colocar um dispositivo dentro do útero que libera aos poucos um hormônio e evita que o problema volte."
     },
     {
       "id": "b20-q057",
@@ -1741,7 +1797,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Os remédios que ela tomou (anti-inflamatório e antibiótico) causaram uma reação alérgica que inflamou o rim por dentro; por isso aparecem células de alergia no sangue e células brancas na urina, mesmo sem ser uma infecção."
     },
     {
       "id": "b20-q058",
@@ -1771,7 +1828,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Quando os rins estão filtrando muito pouco, bem abaixo do normal, a doença renal crônica já está no estágio mais grave, o estágio 5."
     },
     {
       "id": "b20-q059",
@@ -1802,7 +1860,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "A leptospirose (doença que pega em água de enchente contaminada) machuca principalmente o espaço entre os pequenos tubos dos rins, causando uma inflamação chamada nefrite tubulointersticial."
     },
     {
       "id": "b20-q060",
@@ -1832,7 +1891,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Como os rins do paciente já estão bem fracos, o remédio metformina fica perigoso porque pode se acumular no corpo e fazer mal; por isso ele deve ser trocado, enquanto os outros remédios ajudam a proteger o rim."
     },
     {
       "id": "b20-q061",
@@ -1862,7 +1922,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "O bebê teve um parto difícil (uso de vácuo) e agora está com febre, corpo duro e rígido e sinais de infecção grave; por isso é preciso medir a bilirrubina, o sódio no sangue e fazer uma ressonância da cabeça para ver o que está acontecendo no cérebro."
     },
     {
       "id": "b20-q062",
@@ -1893,7 +1954,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Quando os rins param de funcionar bem, o corpo passa a respirar mais rápido para compensar o ácido que se acumula no sangue, o que faz o CO2 baixar e aparecem substâncias ácidas extras no exame de sangue."
     },
     {
       "id": "b20-q063",
@@ -1923,7 +1985,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Em crianças, os tumores mais comuns no ovário costumam ser apenas ciscos simples que aparecem e somem sozinhos, ligados ao próprio funcionamento normal do ovário."
     },
     {
       "id": "b20-q064",
@@ -1953,7 +2016,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "A chance de o resultado positivo do teste estar certo depende também de quantas pessoas na população têm a doença: se poucas pessoas têm HIV por perto, mesmo um teste positivo pode errar mais."
     },
     {
       "id": "b20-q065",
@@ -1983,7 +2047,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Sensibilidade é a capacidade do teste de dar positivo em quem realmente tem a doença."
     },
     {
       "id": "b20-q066",
@@ -2013,7 +2078,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Um teste pode ser muito bom para confirmar quem não tem a doença (alta especificidade) e, ao mesmo tempo, não ser tão bom para pegar todo mundo que tem a doença (baixa sensibilidade); as duas coisas não andam sempre juntas."
     },
     {
       "id": "b20-q067",
@@ -2044,7 +2110,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quase toda icterícia de bebê é causada por excesso de uma bilirrubina que ainda não passou pelo fígado, menos quando os canais da bile estão fechados de nascença, que é um problema diferente, na bilirrubina que já passou pelo fígado."
     },
     {
       "id": "b20-q068",
@@ -2075,7 +2142,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-187"
+      "scheduleId": "cron-187",
+      "kids": "A cocaína deixa a pessoa agitada, com pressão alta e destrói músculo, o que pode entupir os rins; por isso o mais importante no início é dar bastante soro na veia para proteger os rins."
     },
     {
       "id": "b20-q069",
@@ -2109,7 +2177,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "A imagem mostra uma lesão dentro do pâncreas que vai liberando muco aos poucos e entope o canal, causando pancreatites repetidas mesmo sem pedra na vesícula."
     },
     {
       "id": "b20-q070",
@@ -2139,7 +2208,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Esse tipo de problema no rim, que não aparece nem no microscópio comum nem nos exames de anticorpos, costuma responder muito bem a remédios que diminuem a inflamação (corticoide), curando a proteína perdida na urina em poucas semanas."
     },
     {
       "id": "b20-q071",
@@ -2169,7 +2239,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "O diabetes desde criança machucou aos poucos os rins dele, e como a função renal ainda está só um pouco alterada, o tratamento é com remédios que protegem o rim e baixam a pressão e o açúcar ao mesmo tempo."
     },
     {
       "id": "b20-q072",
@@ -2199,7 +2270,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Nos primeiros dias de vida, o fígado do bebê ainda não tem uma enzima madura o suficiente para processar toda a bilirrubina, e isso por si só já deixa a pele amarelada, sem precisar de nenhuma doença."
     },
     {
       "id": "b20-q073",
@@ -2229,7 +2301,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Sensibilidade é a proporção de pessoas doentes que o teste consegue identificar corretamente como positivas; aqui, de 100 pessoas doentes, 98 deram positivo, então a sensibilidade é 98%."
     },
     {
       "id": "b20-q074",
@@ -2260,7 +2333,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Quando o músculo se rompe muito (por calor e esforço extremo) e solta uma proteína que entope o rim, o melhor tratamento é dar bastante soro fisiológico na veia, para lavar essa proteína para fora e proteger os rins."
     },
     {
       "id": "b20-q075",
@@ -2291,7 +2365,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Mesmo com os rins bem fracos, os remédios que protegem o coração e os rins (como os que baixam a pressão agindo num sistema hormonal específico) continuam sendo importantes, só que precisam de acompanhamento mais de perto do potássio no sangue."
     },
     {
       "id": "b20-q076",
@@ -2322,7 +2397,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Quando esse tipo de lesão no rim aparece ligado ao excesso de peso, emagrecer é a atitude mais importante para impedir que o problema no rim piore."
     },
     {
       "id": "b20-q077",
@@ -2353,7 +2429,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Quando os remédios já não conseguem mais controlar o cansaço extremo, o emagrecimento e a sonolência causados pelos rins parados, é hora de começar a diálise, mesmo que a pressão esteja controlada."
     },
     {
       "id": "b20-q078",
@@ -2384,7 +2461,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-187"
+      "scheduleId": "cron-187",
+      "kids": "Quando a pessoa perde muita proteína na urina, ela também perde uma proteína que ajuda a evitar coágulos (antitrombina III), e por isso fica com mais risco de formar trombose nas veias."
     },
     {
       "id": "b20-q079",
@@ -2414,7 +2492,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Mesmo quando as mães têm sangue negativo, se o tipo sanguíneo dela (O) for diferente do tipo do bebê (A), o corpo da mãe pode atacar um pouco as hemácias do bebê e causar essa icterícia leve."
     },
     {
       "id": "b20-q080",
@@ -2444,7 +2523,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Mesmo sendo mais provável que o sangramento seja só porque o revestimento do útero ficou fino com a menopausa, ainda assim é preciso fazer pelo menos um ultrassom para descartar coisas mais graves."
     },
     {
       "id": "b20-q081",
@@ -2474,7 +2554,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Os rins produzem um hormônio que avisa a medula óssea para fazer mais hemácias; quando os rins ficam doentes, esse hormônio diminui e a pessoa fica anêmica."
     },
     {
       "id": "b20-q082",
@@ -2505,7 +2586,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Existe um remédio (finerenona) que ajuda a proteger o rim de quem tem diabetes, desde que os rins ainda estejam filtrando o suficiente e o potássio no sangue esteja normal."
     },
     {
       "id": "b20-q083",
@@ -2535,7 +2617,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Quando uma mulher já na menopausa tem sangramento vaginal e o ultrassom mostra o revestimento do útero mais espesso que o normal, o próximo passo é olhar por dentro do útero com uma câmera e tirar um pedacinho para biópsia."
     },
     {
       "id": "b20-q084",
@@ -2566,7 +2649,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Não é normal aparecer aquele tipo específico de resíduo (cilindro granuloso) na urina quando o problema do rim é só por falta de sangue chegando nele; esse achado costuma indicar lesão direta dentro do rim, não só falta de fluxo."
     },
     {
       "id": "b20-q085",
@@ -2596,7 +2680,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando a icterícia do bebê é causada por alguma substância do leite materno, parar de amamentar por um ou dois dias e depois voltar costuma fazer a bilirrubina cair, confirmando essa causa."
     },
     {
       "id": "b20-q086",
@@ -2627,7 +2712,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Remédios que protegem o rim ao agir num sistema hormonal (IECA ou BRA) devem ser usados em quem tem doença renal crônica com perda de proteína na urina, mesmo que a pessoa não tenha pressão alta."
     },
     {
       "id": "b20-q087",
@@ -2657,7 +2743,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Quando os rins filtram pouco, o cálcio e o fósforo do corpo saem do equilíbrio e um hormônio (PTH) sobe para compensar; isso mostra que o osso já está sendo afetado e por isso é preciso acompanhar de perto, em poucos meses."
     },
     {
       "id": "b20-q088",
@@ -2688,7 +2775,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Olhar até onde a pele amarela chega no corpo do bebê (rosto, tronco, pernas) dá só uma ideia aproximada, não é um jeito confiável de saber o quanto a bilirrubina está alta; para isso é preciso medir no sangue."
     },
     {
       "id": "b20-q089",
@@ -2718,7 +2806,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Quando aparece uma massa e a pele fica bem amarela com coceira numa pessoa idosa, o melhor exame para ver de uma vez o pâncreas e os canais de bile é a tomografia computadorizada."
     },
     {
       "id": "b20-q090",
@@ -2751,7 +2840,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "As dores repetidas na barriga que melhoravam com remédio, num homem que bebe muito álcool há décadas, mostram que o pâncreas dele já está cronicamente danificado, não é uma crise nova."
     },
     {
       "id": "b20-q091",
@@ -2782,7 +2872,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Como a lesão encontrada era bem inicial e superficial, sem invadir vasos e com as bordas livres de doença, dá para só acompanhar com exames regulares, sem precisar de cirurgia, o que é importante porque ela quer engravidar."
     },
     {
       "id": "b20-q092",
@@ -2812,7 +2903,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Quando o teste erra bastante em quem não tem a doença (baixa especificidade) e a doença é rara, a maioria dos resultados positivos vai ser de gente que na verdade está saudável (falso positivo)."
     },
     {
       "id": "b20-q093",
@@ -2842,7 +2934,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Uma icterícia leve, com o bebê bem, mamando bem e o valor da bilirrubina ainda dentro do esperado para a idade, só precisa ser acompanhada de perto, sem remédio nem exame extra por enquanto."
     },
     {
       "id": "b20-q094",
@@ -2873,7 +2966,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "As calcificações no pâncreas, a perda de peso e a gordura nas fezes mostram que o pâncreas desse paciente já foi destruído de forma permanente pelo álcool; por isso ele precisa de reposição de enzimas e cuidado com a alimentação, não dá mais para reverter o problema."
     },
     {
       "id": "b20-q095",
@@ -2903,7 +2997,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "A mãe é O positivo e o bebê é A positivo, então pode haver uma incompatibilidade leve de tipo sanguíneo; um exame chamado eluato ajuda a confirmar que os anticorpos da mãe estão mesmo atacando as hemácias do bebê."
     },
     {
       "id": "b20-q096",
@@ -2933,7 +3028,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Além de medir a bilirrubina, é importante checar o hemograma, a forma das hemácias e fazer o teste do eluato para saber se essa icterícia é por destruição das hemácias do bebê."
     },
     {
       "id": "b20-q097",
@@ -2964,7 +3060,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Quando aparece muita proteína e sangue na urina de alguém com diabetes mas ainda sem muita perda de função do rim, é importante procurar outras causas além do diabetes, incluindo um exame de anticorpo (anti-PLA2R) e biópsia do rim."
     },
     {
       "id": "b20-q098",
@@ -2994,7 +3091,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "No microscópio comum o rim parece normal, mas no microscópio mais potente os pequenos \"pezinhos\" das células filtradoras estão achatados; esse é o padrão típico de uma doença chamada lesão mínima, que costuma responder bem a corticoide."
     },
     {
       "id": "b20-q099",
@@ -3024,7 +3122,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "O exame do rim mostrando um espessamento com pontinhos (espículas) e um padrão em grade de anticorpos é o retrato clássico da glomerulonefrite membranosa."
     },
     {
       "id": "b20-q100",
@@ -3055,7 +3154,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Ter sangue na urina em dois exames diferentes com meses de intervalo, mesmo com a função renal normal, já é o suficiente para dizer que a pessoa tem uma doença renal crônica, que precisa de acompanhamento."
     },
     {
       "id": "b20-q101",
@@ -3085,7 +3185,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Depois de um exercício muito forte que machucou os músculos e soltou substâncias tóxicas para os rins, o mais importante logo de início é dar bastante soro na veia para lavar essas substâncias e proteger os rins."
     },
     {
       "id": "b20-q102",
@@ -3117,7 +3218,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "A dor muscular intensa que não melhora e a piora da função renal em um paciente de risco sugerem uma doença que ataca diretamente o rim; por isso é preciso biopsiar o rim para confirmar e, se for o caso, tratar com corticoide."
     },
     {
       "id": "b20-q103",
@@ -3147,7 +3249,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Fazer pouco xixi por um dia inteiro já é suficiente, sozinho, para dizer que os rins desse paciente estão passando por uma lesão aguda, mesmo sem esperar outros exames."
     },
     {
       "id": "b20-q104",
@@ -3180,7 +3283,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "As hemácias quebradas, as plaquetas baixas e o rim ruim, sem outra causa clara, mostram que um sistema de defesa do sangue (complemento) ficou descontrolado e machucou por dentro os vasinhos do rim."
     },
     {
       "id": "b20-q105",
@@ -3213,7 +3317,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "O potássio muito alto no sangue está deixando o coração em risco (visto no traçado do ECG); por isso, antes de qualquer outra coisa, precisa dar cálcio na veia para proteger o coração enquanto se trata a causa."
     },
     {
       "id": "b20-q106",
@@ -3243,7 +3348,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "A cor de coca-cola na urina e o CK alto mostram que o músculo se rompeu (talvez pela agitação e cocaína); o tratamento mais importante logo de início é hidratar bastante na veia para proteger os rins."
     },
     {
       "id": "b20-q107",
@@ -3273,7 +3379,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "O remédio usado no tratamento do câncer dela (que ativa o sistema de defesa do corpo) pode causar uma reação alérgica que inflama o rim por dentro, mesmo sem sintomas óbvios."
     },
     {
       "id": "b20-q108",
@@ -3303,7 +3410,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Depois de um choque grave (acidente com muita perda de sangue), mesmo já estável, o rim pode continuar lesionado porque as células que revestem os pequenos tubos morreram por falta de oxigênio durante a crise."
     },
     {
       "id": "b20-q109",
@@ -3333,7 +3441,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-188"
+      "scheduleId": "cron-188",
+      "kids": "Antes de mexer nos remédios do diabetes, é importante primeiro checar como estão os rins dele, porque isso vai guiar a escolha certa dos próximos remédios."
     },
     {
       "id": "b20-q110",
@@ -3363,7 +3472,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Como ele já faz diálise, dores de cabeça fortes e pressão muito alta podem, na verdade, ser sinal de que ele está com excesso de líquido no corpo; por isso pesar o paciente ajuda a decidir se precisa tirar líquido na diálise."
     },
     {
       "id": "b20-q111",
@@ -3393,7 +3503,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Um caroço na vesícula maior que 1 centímetro tem mais chance de ser perigoso, então o melhor é tirar a vesícula inteira em vez de só acompanhar."
     },
     {
       "id": "b20-q112",
@@ -3424,7 +3535,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Dor forte do lado direito da barriga com febre e vômitos, num paciente com anemia falciforme, é sinal de infecção na vesícula; deve-se fazer ultrassom e já começar o antibiótico, sem esperar o resultado do exame."
     },
     {
       "id": "b20-q113",
@@ -3454,7 +3566,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Como o tumor no pâncreas ainda não invadiu as artérias importantes e não tem metástase, a cirurgia para retirar o tumor é o tratamento indicado logo de início."
     },
     {
       "id": "b20-q114",
@@ -3484,7 +3597,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Quando o câncer descoberto por acaso na vesícula é bem inicial, só atingindo a camada mais superficial, não é preciso operar de novo; basta acompanhar o paciente."
     },
     {
       "id": "b20-q115",
@@ -3514,7 +3628,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Esse tumor nos canais de bile, sem metástase, pode ser tratado tirando parte do fígado junto com os gânglios da região."
     },
     {
       "id": "b20-q116",
@@ -3544,7 +3659,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Essa cirurgia serve para abrir e drenar o canal do pâncreas quando ele está muito dilatado, aliviando a dor da pancreatite crônica."
     },
     {
       "id": "b20-q117",
@@ -3574,7 +3690,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Um cisto no pâncreas que já mostrou células de câncer no exame da agulha precisa ser retirado com cirurgia, não só acompanhado."
     },
     {
       "id": "b20-q118",
@@ -3604,7 +3721,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Os três sinais clássicos desse cisto nos canais de bile são dor na barriga, pele amarela e um caroço que dá para sentir; febre não faz parte desse grupo típico."
     },
     {
       "id": "b20-q119",
@@ -3635,7 +3753,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Como o tipo sanguíneo da mãe (O) é diferente do bebê (B), a suspeita é de uma incompatibilidade leve que quebra as hemácias do bebê; por isso já se indica luz especial (fototerapia) e um exame (eluato) para confirmar."
     },
     {
       "id": "b20-q121",
@@ -3665,7 +3784,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Esse bebê está mais amarelo, mama pouco e tem tipos sanguíneos diferentes da mãe, o que sugere que as próprias defesas da mãe estão destruindo hemácias dele; por isso já se começa a luz especial e se repete o exame de bilirrubina em poucas horas para acompanhar de perto."
     },
     {
       "id": "b20-q122",
@@ -3695,7 +3815,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Como o bebê tem tipo sanguíneo diferente da mãe e a bilirrubina já está alta, o mais seguro é começar a luz especial (fototerapia) logo e repetir o exame de sangue em poucas horas para ver se está melhorando."
     },
     {
       "id": "b20-q123",
@@ -3725,7 +3846,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Depois da cirurgia para tentar consertar os canais de bile fechados (Kasai), é comum o bebê ter uma infecção nesses canais (colangite) quando aparece febre e piora da icterícia; por isso é essencial começar antibióticos fortes rápido."
     },
     {
       "id": "b20-q124",
@@ -3755,7 +3877,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando a icterícia do bebê aparece depois de 24 horas de vida, ele está bem, mama direito e os exames não mostram sinal de destruição de hemácias, é só a icterícia normal do recém-nascido, que precisa apenas ser reavaliada em um ou dois dias."
     },
     {
       "id": "b20-q125",
@@ -3785,7 +3908,8 @@
         "Período Neonatal"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Um bebê de poucos dias, ativo, mamando bem, com icterícia leve e exames sem sinal de doença grave, está apresentando a icterícia comum que quase todo recém-nascido tem nos primeiros dias."
     },
     {
       "id": "b20-q126",
@@ -3815,7 +3939,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-185"
+      "scheduleId": "cron-185",
+      "kids": "Quando os canais de bile nasceram fechados (atresia biliar) e a cirurgia não resolveu, o fígado vai piorando até precisar de um transplante para a criança sobreviver."
     },
     {
       "id": "b20-q127",
@@ -3845,7 +3970,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Mulheres com essa mutação genética (BRCA2) têm um risco bem maior de câncer de ovário; por isso recomenda-se retirar preventivamente os ovários e as trompas por volta dos 40 anos."
     },
     {
       "id": "b20-q128",
@@ -3875,7 +4001,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-186"
+      "scheduleId": "cron-186",
+      "kids": "Quando aparece uma massa no ovário que é parte sólida e parte líquida, com um marcador de sangue um pouco alterado, a melhor forma de investigar e já tratar ao mesmo tempo é uma cirurgia por vídeo (laparoscopia)."
     },
     {
       "id": "b20-q129",
@@ -3906,7 +4033,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Esse tipo de tumor de ovário (disgerminoma) é o câncer de células germinativas mais comum, aparece mais em mulheres jovens e responde bem à radioterapia."
     },
     {
       "id": "b20-q130",
@@ -3936,7 +4064,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-184"
+      "scheduleId": "cron-184",
+      "kids": "Como o tumor de ovário dela era do tipo \"borderline\" (no limite entre benigno e maligno) e sem espalhar para outros lugares, e ela ainda quer ter filhos, basta acompanhar com exames, sem precisar de cirurgia mais agressiva."
     },
     {
       "id": "b20-q131",
@@ -3966,7 +4095,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Quando metade das pessoas com aquele sintoma realmente tem a infecção (prevalência de 50%), um teste positivo bom (80% sensível, 90% específico) aumenta bastante a certeza de que a pessoa está mesmo doente, chegando perto de 89%."
     },
     {
       "id": "b20-q132",
@@ -3997,7 +4127,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-189"
+      "scheduleId": "cron-189",
+      "kids": "Um teste muito sensível é ótimo para descartar a doença quando dá negativo, e um teste muito específico é ótimo para confirmar a doença quando dá positivo."
     },
     {
       "id": "b20-q133",
@@ -4027,7 +4158,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "Combinando quantas pessoas realmente tinham a doença com quantas o teste acertou, dá para calcular que, quando o teste dá positivo, há 78,3% de chance de a pessoa realmente estar doente, e quando dá negativo, há 92,6% de chance de ela estar mesmo saudável."
     },
     {
       "id": "b20-q134",
@@ -4057,7 +4189,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 20.txt",
-      "scheduleId": "cron-183"
+      "scheduleId": "cron-183",
+      "kids": "A razão de verossimilhança positiva compara o quanto o teste costuma dar positivo em quem tem a doença com o quanto ele dá positivo por engano em quem não tem."
     }
   ]
 }

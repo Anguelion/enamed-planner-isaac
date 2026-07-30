@@ -31,7 +31,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-98"
+      "scheduleId": "cron-98",
+      "kids": "Quando o intestino fica preso por causa de uma cicatriz de uma cirurgia antiga e não há sinal de perigo grave, o médico primeiro tenta desentupir com repouso do estômago, soro na veia e uma sondinha, sem precisar operar de novo na hora."
     },
     {
       "id": "b10-ivas-q01",
@@ -62,7 +63,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Bebês bem pequenos (menos de 2 anos) têm mais risco de complicação se pegarem o vírus da gripe de verdade, então mesmo parecendo um resfriado leve, o médico já dá um remédio contra esse vírus logo no início."
     },
     {
       "id": "b10-ivas-q02",
@@ -93,7 +95,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Existe um remédio inalado que a criança respira e que desincha rápido a garganta de quem está com aquela tosse parecida com latido de cachorro, mas o efeito passa em pouco tempo, então o médico precisa observar porque os sintomas podem voltar."
     },
     {
       "id": "b10-rotura-membranas-q01",
@@ -123,7 +126,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando a bolsa da grávida estoura perto do fim da gravidez e o bebê já está quase pronto para nascer, o melhor é ajudar o parto a acontecer, cuidando também para proteger o bebê de uma bactéria que pode estar na mãe."
     },
     {
       "id": "b10-fibromialgia-q01",
@@ -153,7 +157,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "A senhora sente dor espalhada pelo corpo todo, além de cansaço e sono ruim, o que é um tipo de dor chamado fibromialgia, quando o cérebro passa a sentir mais dor do que deveria; um remédio que ajuda o cérebro a controlar isso é o mais indicado, mesmo ela tendo também um desgaste normal nas juntas por causa da idade."
     },
     {
       "id": "b10-rotura-membranas-q02",
@@ -183,7 +188,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Para saber se a bolsa da grávida realmente estourou, os médicos usam um papelzinho que muda de cor com o líquido, porque o líquido do bebê não é ácido como o suco normal da vagina, e sim parecido com sabão; um número de corte tão baixo não ajudaria a diferenciar isso direito."
     },
     {
       "id": "b10-artrites-q01",
@@ -214,7 +220,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Para confirmar que as mãos estão doendo e inchando por causa da artrite reumatoide, quando o corpo ataca por engano as próprias juntas, os médicos pedem dois exames de sangue que procuram sinais específicos dessa confusão nas defesas do corpo."
     },
     {
       "id": "b10-rotura-membranas-q03",
@@ -244,7 +251,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "O bebê está chegando muito cedo (com apenas 27 semanas) e de bumbum para baixo, o que é mais arriscado num parto normal, então o médico dá um remédio para proteger o cérebro dele, um antibiótico para evitar infecção, e faz uma cesárea."
     },
     {
       "id": "b10-fibromialgia-q02",
@@ -274,7 +282,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Alguns remédios usados na fibromialgia não servem só para tirar a dor: eles também podem ajudar a pessoa a voltar a fazer as coisas do dia a dia, então dizer que eles só aliviam a dor e não ajudam em mais nada está errado."
     },
     {
       "id": "b10-rotura-membranas-q04",
@@ -305,7 +314,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando a bolsa da grávida estoura antes da hora e não há contrações nem febre, o médico evita colocar o dedo lá dentro para não levar bactérias, colhe um exame procurando uma bactéria específica e dá um remédio para amadurecer o pulmão do bebê."
     },
     {
       "id": "b10-ivas-q03",
@@ -336,7 +346,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "As infecções de ouvido nas crianças são causadas quase sempre pelas mesmas três bactérias, e saber quais são ajuda o médico a escolher o remédio certo."
     },
     {
       "id": "b10-rotura-membranas-q05",
@@ -366,7 +377,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "A causa mais comum de pouca água ao redor do bebê é a bolsa ter furado e ir vazando aos poucos, mesmo que outros problemas também possam causar isso às vezes."
     },
     {
       "id": "b10-rotura-membranas-q06",
@@ -397,7 +409,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Se durante a gravidez foi encontrada, na urina da mãe, uma bactéria chamada estreptococo do grupo B, isso já é motivo suficiente para dar um antibiótico protetor durante o parto, mesmo sem repetir o exame depois."
     },
     {
       "id": "b10-artrites-q02",
@@ -428,7 +441,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Existem algumas pistas que ajudam o médico a saber se a artrite reumatoide de uma pessoa vai ser mais difícil de controlar, como um exame de sangue bem alterado; essas pistas não significam que a doença nunca causa problema nas juntas nem que ela afeta só homens."
     },
     {
       "id": "b10-semanais-q15",
@@ -459,7 +473,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Quando um joelho fica quente, vermelho e muito dolorido ao mesmo tempo que a pessoa está com febre e uma possível infecção no sangue (por causa de um cateter usado na hemodiálise), o médico suspeita que uma bactéria entrou na junta, e a forma de confirmar é tirando um pouco do líquido de dentro dela com uma agulha para examinar."
     },
     {
       "id": "b10-artrites-q04",
@@ -489,7 +504,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Mesmo que a pessoa já tenha tido crise de gota antes, se o líquido tirado da junta vier com uma quantidade enorme de células de defesa, o médico precisa pensar que pode ser uma infecção bacteriana também, porque as duas coisas podem acontecer juntas."
     },
     {
       "id": "b10-semanais-q17",
@@ -520,7 +536,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando a bolsa da grávida estourou e aparecem sinais de infecção, como febre na mãe e o coração do bebê batendo muito rápido, o tratamento é dar antibiótico logo e fazer o bebê nascer, sem precisar esperar mais tempo."
     },
     {
       "id": "b10-ivas-q04",
@@ -551,7 +568,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Existe um remédio contra o vírus da gripe que a pessoa não engole, mas sim inala pela boca, como se fosse uma bombinha."
     },
     {
       "id": "b10-indicadores-saude-q01",
@@ -581,7 +599,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Para saber quem tem mais chance de morrer de uma doença do coração, o certo é comparar o número de mortes com o total de pessoas daquele grupo, e fazendo essa conta os homens tiveram um risco maior do que as mulheres."
     },
     {
       "id": "b10-indicadores-saude-q02",
@@ -612,7 +631,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Quando um bebê morre entre o sétimo e o vigésimo sétimo dia de vida, isso tem um nome específico, usado para contar quantos bebês morrem cedo em um lugar."
     },
     {
       "id": "b10-abdome-obstrutivo-perfurativo-q02",
@@ -643,7 +663,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-98"
+      "scheduleId": "cron-98",
+      "kids": "Quando o médico aperta a barriga de uma pessoa idosa que está presa há dias sem evacuar e sente uma sensação de estalinhos, como se apertasse uma bolinha cheia de areia, isso é sinal de que tem um monte de cocô endurecido preso ali, e um raio-x simples ajuda a confirmar."
     },
     {
       "id": "b10-artrites-q05",
@@ -674,7 +695,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Para uma pessoa com crises repetidas de gota e os rins um pouco fracos, o remédio que baixa o ácido úrico precisa começar em dose bem pequena, junto com outro remédio que evita novas crises enquanto o primeiro faz efeito; além disso, um dos remédios de pressão que ele toma piora o ácido úrico e deveria ser trocado por outro."
     },
     {
       "id": "b10-ivas-q05",
@@ -704,7 +726,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Bolinhas e feridinhas pequenas só no fundo da boca, perto da garganta, junto com febre alta, são causadas por um vírus chamado coxsackie, numa doença chamada herpangina."
     },
     {
       "id": "b10-rotura-membranas-q08",
@@ -735,7 +758,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando a bolsa estoura muito cedo e o bebê e a mãe estão bem, sem infecção nem contrações, o melhor é a gestante ficar internada recebendo remédios para amadurecer o pulmão do bebê e prevenir infecção, ganhando tempo dentro da barriga com segurança."
     },
     {
       "id": "b10-indicadores-saude-q03",
@@ -766,7 +790,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Para saber quantas pessoas que pegaram uma doença acabaram morrendo por causa dela, divide-se o número de mortes pelo número total de doentes, e não pela população toda da cidade."
     },
     {
       "id": "b10-ivas-q06",
@@ -797,7 +822,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Uma criança com nariz escorrendo, tosse leve e febre, mas respirando normal e brincando bem nos intervalos sem febre, provavelmente só está com um resfriado comum causado por vírus, sem precisar de antibiótico."
     },
     {
       "id": "b10-ivas-q07",
@@ -827,7 +853,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Quando um bebê com sintomas de gripe começa a ter dificuldade para respirar e o oxigênio no sangue dele cai, ele precisa ser internado, receber oxigênio e tomar o remédio contra o vírus da gripe imediatamente, sem esperar o resultado do exame."
     },
     {
       "id": "b10-fibromialgia-q03",
@@ -857,7 +884,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Quando uma pessoa sente dor espalhada pelo corpo, dorme mal, fica cansada e com a memória ruim, sem nenhum exame de sangue alterado, isso é fibromialgia; um remedinho tomado à noite pode ajudar a dormir melhor e sentir menos dor, sempre junto com exercício físico."
     },
     {
       "id": "b10-indicadores-saude-q04",
@@ -887,7 +915,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Se o bebê nasceu e o coração bateu ou ele respirou nem que fosse por poucos segundos, ele conta como um nascimento de verdade, mesmo tendo morrido logo depois; e a morte da mãe também entra nas estatísticas, porque a doença dela piorou por causa da gravidez."
     },
     {
       "id": "b10-ivas-q08",
@@ -917,7 +946,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Em crianças maiores, uma dor de ouvido leve de um lado só, com febre baixinha, pode esperar 2 ou 3 dias só com remédio para dor, sem precisar de antibiótico de cara, desde que o médico consiga reavaliar a criança depois."
     },
     {
       "id": "b10-rotura-membranas-q09",
@@ -948,7 +978,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando se desconfia que a bolsa da grávida estourou, o primeiro passo é olhar com um instrumento especial se dá para ver o líquido saindo, sem precisar colocar o dedo lá dentro, o que poderia levar bactérias para perto do bebê."
     },
     {
       "id": "b10-fibromialgia-q04",
@@ -978,7 +1009,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Dor no corpo inteiro há muito tempo, que piora quando toca no local, junto com sono ruim e cansaço, mas com todos os exames de sangue normais, aponta para fibromialgia."
     },
     {
       "id": "b10-artrites-q06",
@@ -1008,7 +1040,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Quando existe uma ferida infectada no pé e, ao mesmo tempo, uma junta fica quente e muito dolorida, a bactéria da ferida pode ter viajado pelo sangue até a articulação; mesmo que o exame do líquido não encontre a bactéria, o médico continua tratando como infecção, porque esse teste às vezes falha em encontrar o germe."
     },
     {
       "id": "b10-artrites-q07",
@@ -1038,7 +1071,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Um jovem com dor nas costas que piora de manhã e melhora se movendo, junto com olho vermelho que volta de vez em quando, pode ter uma doença que inflama a coluna; o exame que ajuda a enxergar isso é um raio-x da bacia, e o remédio inicial é um anti-inflamatório."
     },
     {
       "id": "b10-artrites-q08",
@@ -1069,7 +1103,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Dor nas costas que começa antes dos 40 anos, piora de noite, melhora com exercício e ainda dificulta respirar fundo (porque o tórax fica mais rígido) é bem típica de uma doença chamada espondilite anquilosante."
     },
     {
       "id": "b10-indicadores-saude-q05",
@@ -1099,7 +1134,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Quando se pega o número de mortes por uma causa e divide pelo total de todas as mortes, esse cálculo mostra qual fatia das mortes pertence àquela causa específica."
     },
     {
       "id": "b10-indicadores-saude-q06",
@@ -1130,7 +1166,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "No Brasil, para cada mil bebês que nascem vivos, cerca de doze ou treze morrem antes de completar um ano, um número bem menor do que era há décadas, mas ainda maior do que em países como o Japão."
     },
     {
       "id": "b10-rotura-membranas-q10",
@@ -1161,7 +1198,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Com 33 semanas, bolsa rota e sem contrações nem sinal de infecção, a grávida deve ficar internada recebendo antibiótico preventivo e remédio para amadurecer o pulmão do bebê, ganhando mais tempo antes do parto."
     },
     {
       "id": "b10-fibromialgia-q05",
@@ -1192,7 +1230,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Na fibromialgia, ficar parada o dia todo piora as coisas; o melhor é se exercitar aos poucos, no ritmo que o corpo aguenta, junto com um remedinho que ajuda a controlar a dor e o sono."
     },
     {
       "id": "b10-semanais-q40",
@@ -1223,7 +1262,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Ter líquido parado atrás do tímpano sem estar infectado é diferente de uma infecção de ouvido de verdade; isso é considerado um problema crônico quando dura três meses ou mais, e remédios como anti-histamínico ou descongestionante não resolvem esse tipo de líquido parado."
     },
     {
       "id": "b10-ivas-q10",
@@ -1254,7 +1294,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Lavar o nariz com soro funciona como um chuveirinho que arrasta a sujeira e o muco para fora, ajudando a respirar melhor, sem usar nenhum remédio, só a força da água."
     },
     {
       "id": "b10-indicadores-saude-q07",
@@ -1284,7 +1325,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Quando os médicos ficam melhores em descobrir uma doença, mais gente que já tinha o problema (mas ninguém sabia) passa a ser contada, e por isso o número de casos conhecidos aumenta, mesmo sem mais gente ficando doente de verdade."
     },
     {
       "id": "b10-indicadores-saude-q08",
@@ -1314,7 +1356,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "No Brasil, entre as doenças que não passam de pessoa para pessoa, as do coração e dos vasos sanguíneos são as que mais matam."
     },
     {
       "id": "b10-ivas-q11",
@@ -1345,7 +1388,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Quando a garganta dói, mas a criança também tem nariz escorrendo e tosse, é bem provável que seja um vírus, não a bactéria estreptococo, então o tratamento é só cuidar dos sintomas e observar."
     },
     {
       "id": "b10-indicadores-saude-q09",
@@ -1375,7 +1419,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Quando os médicos calculam quantas pessoas doentes morreram por causa de uma doença, esse número mostra o quão grave ela é, não o quanto ela se espalha entre as pessoas."
     },
     {
       "id": "b10-ivas-q12",
@@ -1406,7 +1451,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Nariz escorrendo bastante é uma pista de que a dor de garganta é causada por vírus, e não pela bactéria estreptococo, que costuma vir sem essa coriza."
     },
     {
       "id": "b10-artrites-q09",
@@ -1436,7 +1482,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Depois de uma diarreia, algumas pessoas desenvolvem dor e inchaço nas juntas porque o corpo reage exageradamente; um exame genético mostra que essa pessoa tem mais chance de o problema voltar ou durar mais tempo."
     },
     {
       "id": "b10-fibromialgia-q06",
@@ -1466,7 +1513,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Dor pelo corpo todo, cansaço, sono ruim e intestino solto com muco (mas sem sangue) apontam para fibromialgia junto com um intestino sensível; o tratamento mistura exercício, um remedinho em dose baixa para dormir melhor e conversar com um psicólogo, sem precisar logo de exames muito invasivos."
     },
     {
       "id": "b10-artrites-q10",
@@ -1496,7 +1544,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Dor e inchaço nas mesmas juntas dos dois lados do corpo, com rigidez de manhã por muito tempo, é típico de artrite reumatoide, mesmo quando um dos exames de sangue específicos dá negativo; o remédio inicial é um que ajusta o sistema de defesa que está exagerado."
     },
     {
       "id": "b10-ivas-q13",
@@ -1528,7 +1577,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Se o teste rápido mostrar que a garganta está infectada pela bactéria estreptococo, o remédio certo continua sendo o mais simples, mesmo que a criança tenha tomado outro antibiótico há pouco tempo para outra doença."
     },
     {
       "id": "b10-ivas-q15",
@@ -1559,7 +1609,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Quando uma criança está com aquele barulho estridente ao respirar mesmo parada e com falta de ar, o tratamento é dar um remédio inalado que desincha rápido a garganta, junto com outro remédio que segura o efeito por mais tempo."
     },
     {
       "id": "b10-ivas-q16",
@@ -1590,7 +1641,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Quando aparecem bolhinhas na membrana que fecha o ouvido por dentro, junto com dor forte, essa doença tem um nome diferente da infecção de ouvido comum: é a otite com bolhas."
     },
     {
       "id": "b10-indicadores-saude-q10",
@@ -1621,7 +1673,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Dizer que 28,7% das mortes foram por doença do coração significa que, se juntarmos 100 pessoas que morreram, cerca de 29 delas morreram por essa doença; isso não é o mesmo que dizer que cada pessoa da população tem 28,7% de chance de morrer disso."
     },
     {
       "id": "b10-ivas-q17",
@@ -1652,7 +1705,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Febre alta com a gengiva toda inflamada e sangrando, junto com várias feridinhas espalhadas pela boca inteira, é causada pelo vírus do herpes na primeira vez que ele aparece; o tratamento é cuidar da dor, manter a criança bem hidratada e, em casos mais fortes, dar um remédio contra o vírus."
     },
     {
       "id": "b10-ivas-q18",
@@ -1682,7 +1736,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "O muco do nariz ficar mais grosso e amarelado depois de alguns dias é uma parte normal de um resfriado por vírus, e não significa automaticamente que virou uma infecção bacteriana."
     },
     {
       "id": "b10-ivas-q19",
@@ -1712,7 +1767,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "A bactéria que mais causa dor de ouvido nos bebês, entre as mais conhecidas, é o pneumococo."
     },
     {
       "id": "b10-ivas-q20",
@@ -1742,7 +1798,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Quando uma criança com sintomas de gripe (febre, dor no corpo, dor de cabeça) piora e passa a ter falta de ar com o oxigênio baixo, ela precisa ser internada e tomar o remédio contra o vírus da gripe na hora, sem esperar a confirmação do exame."
     },
     {
       "id": "b10-semanais-q59",
@@ -1772,7 +1829,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Quando uma pessoa jovem, sexualmente ativa, tem uma junta inchada, os tendões da mão doloridos e umas bolinhas de pus na pele, o médico pensa numa bactéria transmitida sexualmente chamada gonococo, mesmo que o exame do líquido da junta às vezes dê negativo."
     },
     {
       "id": "b10-semanais-q60",
@@ -1803,7 +1861,8 @@
         "Paciente Adulto",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 10.txt"
+      "tagSource": "Tags 10.txt",
+      "kids": "Existe uma doença parecida com a gota, mas causada por outro tipo de cristal, em formato de losango, que aparece azul quando olhado de um certo jeito no microscópio."
     },
     {
       "id": "b10-semanais-q61",
@@ -1833,7 +1892,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Sempre que o médico receita um remédio forte para dor depois de uma cirurgia, ele precisa explicar os efeitos que esse remédio pode causar, como enjoo, prisão de ventre ou sonolência exagerada, e ficar de olho nisso."
     },
     {
       "id": "b10-artrites-q12",
@@ -1863,7 +1923,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Quem tem crises de gota repetidas precisa começar um remédio que baixa o ácido úrico para sempre, mas continua tomando o remédio que evita crise por mais um tempo, para não piorar a dor logo no começo do tratamento."
     },
     {
       "id": "b10-semanais-q63",
@@ -1893,7 +1954,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Antes de começar um remédio forte que baixa as defesas do corpo, a pessoa deve tomar as vacinas que não usam o vírus vivo, porque as vacinas com vírus vivo podem ser perigosas quando as defesas estão fracas."
     },
     {
       "id": "b10-artrites-q16",
@@ -1925,7 +1987,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Uma doença de cristais nas juntas tem ligação com o ferro alto no corpo, o hormônio da paratireoide alto e o magnésio baixo, e não o magnésio alto, que é a pegadinha dessa questão."
     },
     {
       "id": "b10-semanais-q65",
@@ -1954,7 +2017,8 @@
         "Urgência e Emergência",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 10.txt"
+      "tagSource": "Tags 10.txt",
+      "kids": "Dor que pula de uma junta para outra, febre e bolinhas de pus na pele, depois de dor nos punhos e tornozelos, apontam para uma bactéria transmitida sexualmente chamada gonococo."
     },
     {
       "id": "b10-semanais-q66",
@@ -1985,7 +2049,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Quando os remédios comuns para artrite reumatoide são usados direito, na dose certa, por tempo suficiente (cerca de seis meses) e a doença continua ativa, aí sim é hora de partir para um remédio mais avançado."
     },
     {
       "id": "b10-fibromialgia-q10",
@@ -2015,7 +2080,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "O quadro dessa senhora parece muito com fibromialgia, mas o exame de sangue também mostra a tireoide funcionando devagar demais, o que também precisa ser tratado, porque pode estar piorando os sintomas dela."
     },
     {
       "id": "b10-fibromialgia-q11",
@@ -2045,7 +2111,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Um exame de sangue chamado FAN pode dar positivo mesmo em pessoas saudáveis, então ele sozinho não prova que existe uma doença autoimune; o mais importante é olhar para os sintomas, que aqui combinam com fibromialgia."
     },
     {
       "id": "b10-fibromialgia-q12",
@@ -2075,7 +2142,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Mesmo em quem já tem artrite reumatoide, se as juntas não estão inchadas e os exames de inflamação estão quase normais, a dor generalizada pode ser fibromialgia junto, e o tratamento nesse caso é exercício e um remedinho para dor, não aumentar o remédio da artrite."
     },
     {
       "id": "b10-fibromialgia-q07",
@@ -2105,7 +2173,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "O primeiro passo para tratar a fibromialgia é explicar para a pessoa o que está acontecendo e ajudá-la a começar a se exercitar aos poucos, antes mesmo de pensar em remédios fortes."
     },
     {
       "id": "b10-fibromialgia-q13",
@@ -2135,7 +2204,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Quando alguém sente dor espalhada pelo corpo há muito tempo, principalmente mulheres, e todos os exames e as fotos do corpo por dentro estão normais, a explicação mais provável é fibromialgia."
     },
     {
       "id": "b10-semanais-q72",
@@ -2165,7 +2235,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-99"
+      "scheduleId": "cron-99",
+      "kids": "Ter próteses de silicone no corpo não explica sozinho uma dor espalhada e cansaço; quando não há inflamação nas juntas, o mais provável ainda é fibromialgia."
     },
     {
       "id": "b10-semanais-q73",
@@ -2194,7 +2265,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 10.txt"
+      "tagSource": "Tags 10.txt",
+      "kids": "Na fibromialgia, além da dor, o sintoma que quase sempre aparece junto é o cansaço extremo."
     },
     {
       "id": "b10-fibromialgia-q14",
@@ -2224,7 +2296,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-100"
+      "scheduleId": "cron-100",
+      "kids": "Na fibromialgia, não é só o corpo que dói: o sono ruim, o humor abalado e a dificuldade para se concentrar ou lembrar das coisas também fazem parte da doença."
     },
     {
       "id": "b10-semanais-q75",
@@ -2254,7 +2327,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-98"
+      "scheduleId": "cron-98",
+      "kids": "Quando uma dor de barriga é muito mais forte do que o médico consegue explicar só apertando a barriga, e a pessoa tem um problema de coração que solta coágulos, ele pensa que um vaso que alimenta o intestino pode estar entupido, e faz uma tomografia com contraste para confirmar rápido."
     },
     {
       "id": "b10-semanais-q76",
@@ -2284,7 +2358,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-98"
+      "scheduleId": "cron-98",
+      "kids": "Em quem já fez cirurgia na barriga antes, a causa mais comum de o intestino ficar entupido depois é uma cicatriz interna que gruda as alças (chamada de brida), e um certo desenho no raio-x, parecido com moedas empilhadas, indica que é o intestino fino, não o grosso."
     },
     {
       "id": "b10-semanais-q77",
@@ -2316,7 +2391,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-98"
+      "scheduleId": "cron-98",
+      "kids": "Quando um tumor entope o intestino grosso e a válvula que separa o intestino fino do grosso deixa passar pressão para trás, o intestino fino também incha; se além disso a barriga mostra sinal de infecção grave, é preciso operar."
     },
     {
       "id": "b10-semanais-q78",
@@ -2346,7 +2422,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-98"
+      "scheduleId": "cron-98",
+      "kids": "Quando aparece uma bolha de gás dentro de uma área machucada do pâncreas, junto com febre e piora do paciente, isso quer dizer que aquela área está infectada, e o primeiro remédio a dar é um antibiótico forte, antes de pensar em cirurgia."
     },
     {
       "id": "b10-semanais-q79",
@@ -2376,7 +2453,8 @@
         "Pediatria Ambulatorial",
         "Avaliação Clínica"
       ],
-      "tagSource": "Tags 10.txt"
+      "tagSource": "Tags 10.txt",
+      "kids": "Quando a garganta parece infectada pela bactéria estreptococo, o médico faz um teste rápido; se ele der negativo, ainda dá tempo de esperar o resultado de outro exame antes de começar o antibiótico, sem prejudicar o tratamento."
     },
     {
       "id": "b10-semanais-q80",
@@ -2407,7 +2485,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 10.txt"
+      "tagSource": "Tags 10.txt",
+      "kids": "Quando a membrana que fecha o ouvido por dentro aparece inchada para fora e opaca na foto do exame, isso é sinal de infecção de ouvido comum."
     },
     {
       "id": "b10-semanais-q81",
@@ -2438,7 +2517,8 @@
         "Avaliação Clínica",
         "Caso Clínico"
       ],
-      "tagSource": "Tags 10.txt"
+      "tagSource": "Tags 10.txt",
+      "kids": "Quando a inflamação é no canal do ouvido, com dor ao mexer na orelha, o problema é diferente da infecção do ouvido por dentro: é uma infecção do canal externo."
     },
     {
       "id": "b10-semanais-q82",
@@ -2468,7 +2548,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando o remédio comum para dor de ouvido não funciona e a criança também está com o olho vermelho e com secreção, o médico troca para uma versão mais forte do antibiótico, porque a bactéria provável é resistente ao remédio simples."
     },
     {
       "id": "b10-semanais-q83",
@@ -2498,7 +2579,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-98"
+      "scheduleId": "cron-98",
+      "kids": "Quando dor de ouvido e olho vermelho com secreção aparecem juntos numa criança, a bactéria mais provável por trás dos dois problemas é a mesma."
     },
     {
       "id": "b10-semanais-q84",
@@ -2528,7 +2610,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Uma criança com aquele barulho ao respirar mesmo parada, agitada e com dificuldade para respirar, precisa de um remédio inalado que desincha rápido, junto com outro que ajuda por mais tempo."
     },
     {
       "id": "b10-semanais-q85",
@@ -2559,7 +2642,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Quando a infecção de ouvido é a primeira vez, sem complicações, e a criança não tomou antibiótico recentemente, o remédio de primeira escolha é o mais simples, chamado amoxicilina."
     },
     {
       "id": "b10-ivas-q27",
@@ -2589,7 +2673,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-96"
+      "scheduleId": "cron-96",
+      "kids": "Dor de garganta forte, sem nariz escorrendo ou tosse, com pintinhos vermelhos no céu da boca e um gânglio inchado no pescoço, é bem típico da bactéria estreptococo do grupo A."
     },
     {
       "id": "b10-semanais-q87",
@@ -2620,7 +2705,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando a grávida com a bolsa rota começa a ter febre, coração acelerado (dela e do bebê) e dor na barriga, é sinal de infecção lá dentro, e o bebê precisa nascer logo, não importa quantas semanas de gravidez ela tenha."
     },
     {
       "id": "b10-rotura-membranas-q11",
@@ -2650,7 +2736,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Bolsa rota antes da hora, sem contração nem febre, é tratada com a gestante internada, tomando antibiótico preventivo e sendo observada com cuidado, ganhando tempo dentro do hospital."
     },
     {
       "id": "b10-semanais-q89",
@@ -2680,7 +2767,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando a grávida já fez duas cesarianas antes e o colo do útero ainda está bem fechado, mesmo com a bolsa rota, é mais seguro fazer outra cesariana do que tentar induzir o parto normal."
     },
     {
       "id": "b10-semanais-q90",
@@ -2710,7 +2798,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-97"
+      "scheduleId": "cron-97",
+      "kids": "Quando a mãe é alérgica de um jeito grave à penicilina e não se sabe se ela tem aquela bactéria que pode fazer mal ao bebê, o remédio protetor usado no parto precisa ser diferente, um que não tenha risco de causar a mesma reação alérgica."
     },
     {
       "id": "b10-semanais-q91",
@@ -2740,7 +2829,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Para saber qual grupo de pessoas tem mais chance de morrer, o certo é comparar a taxa, que leva em conta o tamanho de cada grupo, e não só o número total de mortes ou a fatia de cada causa."
     },
     {
       "id": "b10-semanais-q92",
@@ -2770,7 +2860,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Duas ideias sobre como contar mortes estão certas: uma mostra qual causa é mais comum entre todas as mortes, e outra mostra um gráfico da idade das pessoas que morrem; mas um índice específico foi descrito ao contrário — ele conta as mortes em pessoas com 50 anos ou mais, não menos."
     },
     {
       "id": "b10-semanais-q93",
@@ -2800,7 +2891,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Para uma população não diminuir com o tempo, cada mulher precisaria ter, em média, cerca de 2,1 filhos; se a média é 1,8, isso está abaixo do necessário para manter o mesmo número de pessoas no futuro."
     },
     {
       "id": "b10-semanais-q94",
@@ -2830,7 +2922,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "scheduleId": "cron-95"
+      "scheduleId": "cron-95",
+      "kids": "Para saber qual cidade teve a doença mais grave, é preciso dividir o número de mortes pelo número de doentes em cada uma, não apenas olhar quantas pessoas morreram no total; fazendo essa conta, uma das cidades teve a maior proporção de mortes entre os doentes."
     }
   ]
 }

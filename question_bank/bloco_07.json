@@ -30,7 +30,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Os médicos deram hormônios pra ver se a menstruação viria, mas ela não veio, porque o lugar onde o sangue nasce (o útero) ficou com cicatrizes por dentro e não consegue mais sangrar, mesmo com os hormônios certos."
     },
     {
       "id": "b07-semanal-q002",
@@ -61,7 +62,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Essa pessoa tem cromossomos de menino (XY), mas o corpo dela não consegue \"ouvir\" o hormônio masculino, então ela cresce com corpo de menina por fora, só que sem útero por dentro."
     },
     {
       "id": "b07-semanal-q003",
@@ -92,7 +94,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "O remédio que a paciente toma para a cabeça mexe com um hormônio chamado prolactina (o mesmo que ajuda a produzir leite). Quando ele fica alto demais, atrapalha a menstruação de vir."
     },
     {
       "id": "b07-semanal-q004",
@@ -122,7 +125,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "A menina tem menstruação bagunçada, espinhas e ganhou peso, sinais de um desequilíbrio hormonal comum. Só que o ultrassom não mostrou vários cistinhos nos ovários, apenas um simples, então é um tipo mais leve da mesma doença."
     },
     {
       "id": "b07-semanal-q005",
@@ -153,7 +157,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Quando o sódio do sangue está muito baixo por muito tempo, corrigir aos poucos é importante, mas o potássio também pode cair junto durante o tratamento e precisa ser repost, senão o corpo fica desequilibrado."
     },
     {
       "id": "b07-semanal-q006",
@@ -183,7 +188,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "A mulher parou de menstruar e começou a sair um pouco de leite do peito, mesmo sem estar grávida ou amamentando. Isso é sinal de que um hormônio chamado prolactina está alto, e por isso o médico precisa medi-lo."
     },
     {
       "id": "b07-semanal-q007",
@@ -213,7 +219,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "A menina sente irritação e vontade de doce antes da menstruação, mas ela continua menstruando, só que com intervalos bem mais longos que o normal. Isso mostra que os ovários dela não estão liberando o óvulo direito todo mês."
     },
     {
       "id": "b07-semanal-q008",
@@ -244,7 +251,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Essa doença que mistura menstruação irregular, espinhas e pelos em excesso costuma vir acompanhada de um problema em que o corpo tem dificuldade de usar bem o açúcar do sangue, parecido com o que acontece antes do diabetes."
     },
     {
       "id": "b07-semanal-q009",
@@ -275,7 +283,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Essa senhora tem um problema crônico nos pulmões que faz o gás carbônico se acumular no sangue. O corpo tenta compensar guardando mais bicarbonato, mas mesmo assim o sangue ficou ácido, mostrando que o problema piorou de repente."
     },
     {
       "id": "b07-semanal-q010",
@@ -305,7 +314,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Os exames mostraram um hormônio do leite (prolactina) alto e outro hormônio que avisa os ovários para trabalhar (FSH) baixo. Isso pode acontecer quando existe um pequeno tumor na hipófise ou quando a tireoide está funcionando devagar demais."
     },
     {
       "id": "b07-semanal-q011",
@@ -335,7 +345,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Essa menina nunca menstruou porque nasceu sem útero, mas os ovários dela funcionam normalmente, por isso os seios cresceram do jeito esperado."
     },
     {
       "id": "b07-semanal-q012",
@@ -365,7 +376,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Os ovários dessa mulher pararam de funcionar antes da hora, por isso ficaram pequenos. Como eles não respondem mais, o corpo grita mais forte mandando um hormônio (FSH) bem alto para tentar acordá-los."
     },
     {
       "id": "b07-semanal-q013",
@@ -395,7 +407,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Essa adolescente nasceu sem útero e com o canal vaginal incompleto, mas os ovários e os pelos do corpo são normais. O tratamento é fazer uma cirurgia para criar um canal vaginal, já que não tem como criar um útero."
     },
     {
       "id": "b07-semanal-q014",
@@ -425,7 +438,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "A menina de 13 anos ainda não menstruou, mas o corpo dela já está passando pelas mudanças certas na hora certa (seios e pelos crescendo). Depois desses sinais, a menstruação costuma vir em até uns 2 ou 3 anos, então está tudo normal."
     },
     {
       "id": "b07-semanal-q015",
@@ -455,7 +469,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "Essa mulher teve uma inflamação no pâncreas provavelmente causada por uma pedrinha bem pequena na vesícula, tão pequena que o ultrassom comum não conseguiu ver. Por isso, o médico precisa de um exame mais sensível, feito por dentro, para encontrar essa pedrinha escondida."
     },
     {
       "id": "b07-semanal-q016",
@@ -486,7 +501,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "O paciente está com uma infecção grave que deixou seu corpo tão cansado que a respiração ficou fraca, acumulando gás carbônico no sangue e deixando-o ácido. O corpo tentou ajudar segurando um pouco de bicarbonato, mas isso precisa ser tratado junto com o combate à infecção."
     },
     {
       "id": "b07-semanal-q017",
@@ -519,7 +535,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "A infecção que subiu da bexiga até o rim e virou um bolsão de pus foi causada por uma bactéria que normalmente vive no intestino (E. coli) e sobe pelo caminho da urina, sendo essa a causa mais comum desse tipo de problema."
     },
     {
       "id": "b07-semanais-q18",
@@ -550,7 +567,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "O sangue tem várias substâncias dissolvidas nele, mas o sódio é a que mais pesa na hora de definir o quão \"concentrado\" o sangue está, por isso ele é o principal responsável por esse equilíbrio."
     },
     {
       "id": "b07-semanal-q019",
@@ -581,7 +599,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Essa mulher tem um desequilíbrio hormonal comum e quer engravidar, então não pode tomar pílula anticoncepcional. Um remédio chamado metformina ajuda o corpo a usar melhor o açúcar do sangue, o que também melhora a menstruação, diminui os hormônios masculinos em excesso e ajuda a ovular."
     },
     {
       "id": "b07-semanal-q020",
@@ -615,7 +634,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Essa mulher tem o mesmo desequilíbrio hormonal, mas não quer engravidar agora. Por isso, o tratamento certo é a pílula anticoncepcional, que ajuda a regular a menstruação e a diminuir os pelos e as espinhas causados pelo excesso de hormônio masculino."
     },
     {
       "id": "b07-semanal-q021",
@@ -646,7 +666,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Quando um hormônio chamado prolactina fica muito alto no corpo, ele bloqueia a menstruação e faz sair um pouco de leite dos seios, mesmo sem gravidez."
     },
     {
       "id": "b07-semanal-q022",
@@ -677,7 +698,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Todas essas doenças impedem a primeira menstruação de vir, menos uma: a síndrome de Asherman só aparece depois que a menstruação já tinha começado, porque ela é causada por cicatrizes que se formam dentro do útero depois de algum procedimento."
     },
     {
       "id": "b07-semanal-q023",
@@ -708,7 +730,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "O coração desse senhor está batendo devagar, e o exame do coração mostrou sinais de que o potássio no sangue está alto demais. O remédio que protege o coração enquanto se resolve o problema é o cálcio aplicado na veia."
     },
     {
       "id": "b07-semanal-q024",
@@ -739,7 +762,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Quando o sódio do sangue fica perigosamente baixo, com risco de convulsão ou coma, o tratamento é dar um soro bem mais concentrado de sal (a 3%), aplicado devagar e com cuidado."
     },
     {
       "id": "b07-semanal-q025",
@@ -769,7 +793,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Como essa mulher já teve infecção de urina há pouco tempo e está tendo de novo, o médico precisa fazer um exame para descobrir exatamente qual bactéria está causando o problema antes de escolher o remédio certo."
     },
     {
       "id": "b07-semanal-q026",
@@ -800,7 +825,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "A criança está tendo uma crise convulsiva demorada e já tem uma veia puncionada para receber remédio. Nesse caso, o remédio mais rápido e eficaz para parar a crise é aplicado direto na veia."
     },
     {
       "id": "b07-semanal-q027",
@@ -831,7 +857,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "O bebê teve uma convulsão porque a febre subiu rápido, mas depois ficou bem, ativo e sem nenhum sinal de algo grave no exame. Esse tipo de convulsão ligada à febre costuma ser inofensivo, então a criança pode ir para casa com orientações."
     },
     {
       "id": "b07-semanal-q028",
@@ -862,7 +889,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Para saber se uma pancada na cabeça de uma criança pequena é perigosa, os médicos olham a forma como ela aconteceu. Uma queda de pouca altura, até meio metro, geralmente não é considerada um tipo de acidente grave."
     },
     {
       "id": "b07-semanal-q029",
@@ -892,7 +920,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Os sintomas dessa jovem são bem típicos de uma infecção simples da bexiga, então um exame comum de urina já é suficiente para o médico ter certeza e começar o tratamento, sem precisar de exames mais complicados."
     },
     {
       "id": "b07-semanal-q030",
@@ -922,7 +951,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Duas situações que deixam o corpo mais vulnerável a uma infecção de urina virar um problema mais sério são estar grávida e ter diabetes, porque ambas mudam o jeito como o corpo se defende das bactérias."
     },
     {
       "id": "b07-semanal-q031",
@@ -952,7 +982,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Essa adolescente nunca menstruou porque os \"canos\" que formariam o útero não se desenvolveram direito, mas como os ovários funcionam bem, o resto do corpo (seios, quadris) cresceu normalmente."
     },
     {
       "id": "b07-semanal-q032",
@@ -983,7 +1014,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Bebês bem pequenos, com menos de 1 ano, podem ter uma infecção grave nas meninges do cérebro sem mostrar sinais óbvios. Por isso, quando um bebê dessa idade tem uma convulsão com febre, os médicos preferem coletar um pouco do líquido que envolve o cérebro para garantir que não é nada grave."
     },
     {
       "id": "b07-semanal-q033",
@@ -1013,7 +1045,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Quando uma mulher para de menstruar e não está grávida, os médicos costumam pedir três exames de sangue principais primeiro: um da tireoide, um da prolactina (hormônio do leite) e um dos ovários (FSH), porque essas são as causas mais comuns."
     },
     {
       "id": "b07-semanal-q034",
@@ -1043,7 +1076,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Mesmo com a menstruação regular e os exames de hormônio normais, o excesso de pelos que começou na puberdade ainda pode ser causado pelo mesmo desequilíbrio hormonal mais comum nas mulheres, porque às vezes os exames de sangue não pegam o problema todo."
     },
     {
       "id": "b07-semanal-q035",
@@ -1074,7 +1108,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "O sangue desse senhor está ácido porque um problema no corpo (não no pulmão) consumiu o \"estoque\" de bicarbonato. Os pulmões estão respirando mais rápido para tentar ajudar a equilibrar, e as contas do exame mostram que essa ajuda está na medida certa."
     },
     {
       "id": "b07-semanal-q036",
@@ -1104,7 +1139,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Na doença que mexe com os ovários, um hormônio chamado LH costuma ficar mais alto que o hormônio parceiro dele (FSH), e essa diferença entre os dois é um sinal comum encontrado nos exames."
     },
     {
       "id": "b07-semanal-q037",
@@ -1134,7 +1170,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Antes de decidir que essa moça tem o desequilíbrio hormonal mais comum dos ovários, o médico precisa primeiro descartar outras doenças que causam sintomas parecidos, como problemas de tireoide, prolactina alta ou uma forma leve de um problema na glândula adrenal."
     },
     {
       "id": "b07-semanal-q038",
@@ -1164,7 +1201,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Essa jovem tem os sintomas clássicos de uma infecção simples da bexiga pela primeira vez, então o médico já pode começar o remédio direto, sem precisar esperar por um exame de cultura da urina."
     },
     {
       "id": "b07-semanal-q039",
@@ -1194,7 +1232,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Quando os ovários param de funcionar antes da hora, o corpo tenta chamá-los para trabalhar mandando um hormônio (FSH) bem alto, mas como eles não respondem, os hormônios que os ovários produziriam ficam baixos."
     },
     {
       "id": "b07-semanal-q040",
@@ -1224,7 +1263,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "Esse senhor está internado há dias com uma inflamação grave no pâncreas. Mesmo assim, alimentá-lo por uma sondinha que leva a comida direto para o intestino é importante para manter o intestino saudável e evitar infecções, enquanto não há sinais de que a área machucada infeccionou."
     },
     {
       "id": "b07-semanal-q041",
@@ -1255,7 +1295,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "A diarreia faz o corpo perder potássio pelas fezes, e a insulina empurra o potássio para dentro das células. As duas coisas juntas fazem o potássio do sangue cair."
     },
     {
       "id": "b07-semanal-q042",
@@ -1286,7 +1327,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Quando o potássio do sangue sobe demais, ele bagunça o jeito como os músculos e o coração funcionam, podendo causar fraqueza, dificuldade de respirar, batimentos descontrolados e até parar o coração. É por isso que esse desequilíbrio é tão perigoso."
     },
     {
       "id": "b07-semanal-q043",
@@ -1317,7 +1359,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Esse homem tem um problema no rim que o impede de jogar fora o ácido do corpo direito, deixando o sangue ácido e formando pedrinhas de cálcio nos rins, além de fazer o potássio cair. Esse conjunto de sinais aponta para um tipo específico desse problema renal."
     },
     {
       "id": "b07-semanal-q044",
@@ -1347,7 +1390,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Uma criança tem mais chance de ter outra convulsão ligada à febre no futuro se alguém da família também já teve esse tipo de convulsão quando criança."
     },
     {
       "id": "b07-semanal-q045",
@@ -1377,7 +1421,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "A criança está tendo uma crise convulsiva que não para, e os médicos não conseguiram pegar uma veia para aplicar o remédio. Nesse caso, existe um remédio que pode ser aplicado direto no músculo e funciona rápido para parar a crise."
     },
     {
       "id": "b07-semanal-q046",
@@ -1407,7 +1452,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "Durante a cirurgia, a vesícula da paciente estava tão inflamada e grudada nos órgãos vizinhos que o cirurgião não conseguia ver com segurança os canais que levam a bile. Para não cortar algo errado, ele decide tirar só a parte da frente da vesícula e limpar o resto, em vez de arriscar tirar tudo."
     },
     {
       "id": "b07-semanal-q047",
@@ -1438,7 +1484,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "No tratamento de uma crise convulsiva que não para, o primeiro remédio usado é de uma família chamada benzodiazepínicos, porque agem rápido e são mais seguros. Um remédio mais antigo (fenobarbital) não é mais a primeira escolha, porque pode fazer a pessoa parar de respirar direito ou a pressão cair."
     },
     {
       "id": "b07-semanal-q048",
@@ -1468,7 +1515,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Para fechar o diagnóstico da doença que mexe com os ovários, os médicos usam sinais específicos: ciclos menstruais irregulares e sinais de excesso de hormônio masculino, como pelos em excesso. A diferença entre dois hormônios (LH e FSH) não entra oficialmente nessa lista de critérios."
     },
     {
       "id": "b07-semanal-q049",
@@ -1501,7 +1549,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "Essa mulher está muito doente na UTI, e mesmo sem ter pedra na vesícula, ela desenvolveu uma inflamação ali, porque em pacientes muito graves a vesícula pode inflamar sozinha, sem precisar de cálculo."
     },
     {
       "id": "b07-semanal-q050",
@@ -1531,7 +1580,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Os sintomas dessa mulher jovem são de uma infecção simples e baixa nas vias urinárias (só na bexiga), sem sinais de gravidade, então o tratamento indicado é um antibiótico simples e eficaz para esse tipo de infecção."
     },
     {
       "id": "b07-semanal-q051",
@@ -1561,7 +1611,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Mesmo depois de parar a pílula há tempo suficiente para a menstruação voltar sozinha, essa mulher continua sem menstruar e ainda ganhou pelos em excesso. Como os outros exames de hormônio deram normais, a causa mais provável é o mesmo desequilíbrio hormonal comum dos ovários, que a pílula só estava escondendo."
     },
     {
       "id": "b07-semanal-q052",
@@ -1592,7 +1643,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Esse senhor bebeu muito álcool e ficou com o sangue bem ácido por causa disso e também por estar com diarreia. Ao mesmo tempo, ele está respirando tão rápido que isso também mexeu no equilíbrio do sangue, criando três problemas diferentes acontecendo juntos."
     },
     {
       "id": "b07-semanal-q053",
@@ -1623,7 +1675,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Nas cidades brasileiras, nem todo mundo tem acesso à água tratada e à rede de esgoto, principalmente quem mora em bairros mais pobres. Para resolver isso de verdade, é preciso investir em políticas públicas que priorizem essas populações, porque a falta de saneamento básico deixa as pessoas mais doentes."
     },
     {
       "id": "b07-semanal-q054",
@@ -1654,7 +1707,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "O jeito de acompanhar o crescimento do corpo de uma menina na puberdade é observando duas coisas: o desenvolvimento dos seios e a quantidade de pelos na região íntima. Só ter pelos, sem os seios terem crescido, não quer dizer que tudo está funcionando bem."
     },
     {
       "id": "b07-semanal-q055",
@@ -1685,7 +1739,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Esse senhor está com uma infecção grave no pulmão que deixou o sangue ácido por um lado, mas ele também está respirando rápido demais tentando compensar, criando dois problemas de equilíbrio do sangue ao mesmo tempo."
     },
     {
       "id": "b07-semanal-q056",
@@ -1715,7 +1770,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Essa criança está tendo uma crise convulsiva que já dura muito tempo. O primeiro remédio a ser usado é da família dos benzodiazepínicos, de preferência na veia, mas se não tiver acesso à veia, pode ser dado no músculo, pelo nariz ou por trás (via retal)."
     },
     {
       "id": "b07-semanal-q057",
@@ -1745,7 +1801,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Essa adolescente já passou pelas mudanças do corpo esperadas na puberdade (seios, pelos), só que a menstruação não veio. Como os hormônios parecem estar funcionando bem, o problema mais provável está na formação do próprio útero ou canal vaginal, e é isso que precisa ser investigado."
     },
     {
       "id": "b07-semanal-q058",
@@ -1775,7 +1832,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Esse senhor tem um câncer no pulmão que está fazendo seu corpo reter água demais, deixando o sódio do sangue perigosamente baixo, o que causou a convulsão. O tratamento de emergência é dar um soro concentrado de sal na veia para subir o sódio rapidamente e com segurança."
     },
     {
       "id": "b07-semanal-q059",
@@ -1805,7 +1863,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "As doenças de uma população têm muito a ver com as condições em que as pessoas vivem, como ter emprego e renda suficiente. Por isso, políticas que melhoram o emprego e a renda das pessoas acabam também melhorando a saúde de todo mundo."
     },
     {
       "id": "b07-semanal-q060",
@@ -1836,7 +1895,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Para melhorar a saúde de um jeito justo para todo mundo, não basta só o sistema de saúde agir sozinho. É preciso que a população participe das decisões, que se use o conhecimento científico, e que diferentes áreas do governo trabalhem juntas."
     },
     {
       "id": "b07-semanal-q061",
@@ -1866,7 +1926,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Uma crise convulsiva ligada à febre que dura menos de 15 minutos é considerada leve. Mas se ela passa de 30 minutos, seja de uma vez só ou em crises seguidas sem a criança se recuperar entre elas, os médicos consideram isso uma emergência bem mais séria."
     },
     {
       "id": "b07-semanal-q062",
@@ -1897,7 +1958,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Essa mulher tem menstruação irregular desde sempre, ganhou peso, tem espinhas e um escurecimento na pele das dobras do corpo. Esse escurecimento é sinal de que o corpo está tendo dificuldade de usar bem a insulina, algo muito comum no mesmo desequilíbrio hormonal que mexe com os ovários."
     },
     {
       "id": "b07-semanal-q063",
@@ -1927,7 +1989,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "A diarreia que esse senhor teve fez seu corpo perder bicarbonato, a substância que ajuda a deixar o sangue menos ácido. Por isso o sangue dele ficou ácido, mesmo sem nenhum ácido extra sendo criado."
     },
     {
       "id": "b07-semanal-q064",
@@ -1957,7 +2020,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Essa criança está tendo uma convulsão que já dura 20 minutos sem parar. O remédio mais indicado para interromper a crise rapidamente é de uma família chamada benzodiazepínicos."
     },
     {
       "id": "b07-semanal-q066",
@@ -1987,7 +2051,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Quando uma pessoa com corpo de menina por fora nunca menstrua e o exame mostra que não tem útero, existem duas explicações possíveis: ou essa parte do corpo simplesmente não se formou (mas os ovários são normais), ou a pessoa tem cromossomos de menino e um corpo que não responde ao hormônio masculino, fazendo o útero nunca se formar."
     },
     {
       "id": "b07-semanais-q67",
@@ -2018,7 +2083,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "O menino teve febre por dois dias e uma convulsão generalizada, mas depois do episódio o exame dele estava normal. Isso é uma convulsão simples ligada à febre, bem comum e sem gravidade nessa idade."
     },
     {
       "id": "b07-semanal-q068",
@@ -2049,7 +2115,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Para prevenir doenças respiratórias em um bairro, mais importante do que só tratar quem já está doente é ensinar as famílias a melhorar a ventilação e a umidade das casas, atacando a causa do problema antes que ele apareça."
     },
     {
       "id": "b07-semanal-q069",
@@ -2080,7 +2147,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Para prevenir diabetes e pressão alta em uma cidade inteira, uma das melhores estratégias é incentivar as pessoas a se exercitarem juntas, como em grupos de caminhada nos parques, porque isso muda o estilo de vida de toda a comunidade."
     },
     {
       "id": "b07-semanal-q070",
@@ -2111,7 +2179,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Quando uma pessoa fica muito ansiosa e começa a respirar rápido demais, ela solta gás carbônico em excesso pela respiração, o que deixa o sangue menos ácido do que o normal. Isso é bem comum em crises de ansiedade."
     },
     {
       "id": "b07-semanal-q071",
@@ -2142,7 +2211,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Se os exames dessa adolescente que nunca menstruou mostrarem um hormônio chamado FSH bem alto, isso indica que o problema está nos ovários, que não estão respondendo, um padrão que aparece na síndrome de Turner."
     },
     {
       "id": "b07-semanal-q072",
@@ -2172,7 +2242,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Ter bactérias na urina sem sentir nenhum sintoma geralmente não precisa de tratamento. As duas exceções importantes são quando a mulher está grávida ou quando alguém vai passar por uma cirurgia nas vias urinárias, porque nesses casos a bactéria pode causar complicações sérias."
     },
     {
       "id": "b07-semanal-q073",
@@ -2202,7 +2273,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Para tratar uma infecção simples da bexiga nas mulheres, os remédios de primeira escolha são dois antibióticos específicos que funcionam bem e têm menos chance da bactéria ficar resistente a eles."
     },
     {
       "id": "b07-semanal-q074",
@@ -2232,7 +2304,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Normalmente não é preciso fazer uma cultura da urina para tratar uma infecção simples de bexiga. Mas se os sintomas não melhorarem ou voltarem rápido, em menos de um mês depois do tratamento, aí sim vale a pena investigar qual bactéria está causando o problema."
     },
     {
       "id": "b07-semanal-q075",
@@ -2263,7 +2336,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Uma coisa que dificulta as pessoas seguirem o tratamento certinho é morar muito longe do posto de saúde, porque a distância torna mais difícil ir às consultas e buscar os remédios."
     },
     {
       "id": "b07-semanal-q076",
@@ -2293,7 +2367,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Um bebê bem pequeno que caiu de uma altura considerável precisa de um exame de imagem da cabeça, mesmo parecendo bem depois, porque nessa idade um sangramento pode não dar sinais logo de cara."
     },
     {
       "id": "b07-semanal-q077",
@@ -2324,7 +2399,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Existem dois tipos de coisas que afetam a saúde das pessoas: umas mais \"de cima\", como as leis e políticas de um país, e outras mais do dia a dia, como onde a pessoa mora e trabalha. As de cima influenciam as do dia a dia, moldando as chances de cada um ficar mais ou menos doente."
     },
     {
       "id": "b07-semanal-q078",
@@ -2355,7 +2431,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Esse senhor está com o sangue muito ácido porque alguma substância ou processo no corpo dele está produzindo ácido em excesso, e os pulmões estão tentando ajudar respirando mais rápido para soltar gás carbônico."
     },
     {
       "id": "b07-semanal-q079",
@@ -2385,7 +2462,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "As leis e políticas mais amplas de um país, como as que decidem sobre educação, trabalho e economia, são a base que determina como será a saúde das pessoas mais tarde, antes mesmo de elas chegarem ao médico."
     },
     {
       "id": "b07-semanal-q080",
@@ -2416,7 +2494,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Essa crise convulsiva ligada à febre durou mais de 10 minutos, o que já é tempo suficiente para os médicos classificarem como um tipo mais preocupante de convulsão febril, diferente das crises curtas e simples."
     },
     {
       "id": "b07-semanal-q081",
@@ -2447,7 +2526,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Esse bebê tem menos de 1 ano e teve uma convulsão junto com febre. Nessa idade, uma infecção grave nas meninges do cérebro pode não dar sinais claros, então os médicos preferem coletar um pouco do líquido que envolve o cérebro para ter certeza, mesmo já sabendo que ele tem uma infecção de ouvido."
     },
     {
       "id": "b07-semanal-q082",
@@ -2478,7 +2558,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Quando alguém usa uma sondinha na bexiga por muito tempo dentro do hospital, os micróbios que aparecem costumam ser bem fortes e resistentes aos remédios, porque já viveram no ambiente do hospital cheio de antibióticos."
     },
     {
       "id": "b07-semanal-q083",
@@ -2511,7 +2592,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Os músculos dele quebraram muito depois da corrida e isso jogou uma quantidade perigosa de potássio no sangue, o que pode parar o coração. Por isso, antes de qualquer outra coisa, o médico dá um remédio (cálcio) para proteger o coração enquanto resolve o resto."
     },
     {
       "id": "b07-semanal-q084",
@@ -2541,7 +2623,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "A sondinha no nariz tirou muito líquido do estômago dela, e isso levou junto uma quantidade grande de potássio. Sem potássio suficiente, o intestino fica \"preguiçoso\" e para de funcionar direito."
     },
     {
       "id": "b07-semanal-q085",
@@ -2572,7 +2655,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Quando a cabeça de uma criança bate muito forte e ela fica bem sonolenta (não consegue nem respirar direito sozinha), é preciso colocar um tubo para ajudar a respirar, porque o cérebro machucado não controla bem a respiração."
     },
     {
       "id": "b07-semanal-q086",
@@ -2603,7 +2687,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Se a febre da infecção nos rins não passa mesmo depois de alguns dias tomando o remédio certo, o médico pede um exame de imagem (ultrassom) para ver se apareceu alguma complicação, como um abscesso."
     },
     {
       "id": "b07-semanal-q087",
@@ -2634,7 +2719,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Ajudar as pessoas a plantar e comprar comida de verdade, sem venenos, é uma forma de cuidar da saúde de todo mundo antes mesmo de alguém ficar doente."
     },
     {
       "id": "b07-semanal-q088",
@@ -2664,7 +2750,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "A criança caiu, vomitou uma vez só, mas está bem acordada e sem outros sinais preocupantes. Nesse caso, não precisa fazer tomografia agora - só fica em observação no hospital por um tempinho para garantir que está tudo bem."
     },
     {
       "id": "b07-semanal-q089",
@@ -2695,7 +2782,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Um tipo de antibiótico (as fluoroquinolonas) não deve mais ser a primeira escolha para infecção urinária simples, porque as bactérias já aprenderam a resistir a ele e ele pode causar efeitos ruins."
     },
     {
       "id": "b07-semanal-q090",
@@ -2727,7 +2815,8 @@
       "tagSource": "Tags.txt",
       "scheduleId": "cron-66",
       "answerAudit": "official-source",
-      "answerSource": "01. QUESTÕES BLOCO 7 (SEMANAIS).txt"
+      "answerSource": "01. QUESTÕES BLOCO 7 (SEMANAIS).txt",
+      "kids": "A criança caiu, vomitou duas vezes, mas está com o exame todo normal e sem hematoma na cabeça. Isso é considerado baixo risco, então pode ir para casa com os pais avisados sobre o que observar, sem precisar de tomografia nem internação."
     },
     {
       "id": "b07-semanal-q091",
@@ -2758,7 +2847,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "O bebê teve febre e duas convulsões em menos de um dia, o que é mais preocupante. Por isso, o médico precisa coletar um pouco do líquido que envolve o cérebro para garantir que não seja uma infecção grave ali dentro, já que ele tem dor de ouvido também."
     },
     {
       "id": "b07-semanal-q092",
@@ -2788,7 +2878,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Um remédio muito forte usado em excesso, como aspirina, pode deixar o sangue mais ácido de um jeito específico, diferente de quando alguém tem diarreia."
     },
     {
       "id": "b07-semanal-q093",
@@ -2819,7 +2910,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Os remédios usados para parar convulsões agem numa parte do cérebro chamada GABA, e não na dopamina como se pensava nessa questão. Além disso, os dois remédios citados se dissolvem bem em gordura, então a explicação dada estava errada em tudo."
     },
     {
       "id": "b07-semanal-q094",
@@ -2849,7 +2941,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "A senhora tem bactéria na urina mas não sente nada (sem dor, sem febre). Quando isso acontece sem sintomas, geralmente não é preciso tratar com remédio, mesmo sendo diabética."
     },
     {
       "id": "b07-semanal-q095",
@@ -2879,7 +2972,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "O corpo dela está em choque grave e produzindo muito ácido láctico, o que deixa o sangue ácido. Não há sinal de que o pulmão esteja causando problema extra, então o distúrbio principal é esse ácido em excesso."
     },
     {
       "id": "b07-semanal-q096",
@@ -2910,7 +3004,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Fazendo as contas dos números do exame de sangue, dá para perceber que há dois problemas juntos: um ácido a mais no sangue e a respiração tentando compensar rápido demais. Isso costuma acontecer em intoxicações por remédios como aspirina."
     },
     {
       "id": "b07-semanal-q097",
@@ -2940,7 +3035,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Os números do exame mostram dois tipos diferentes de acidez no sangue ao mesmo tempo, um relacionado a uma substância que se acumula (como o ácido láctico da infecção grave) e outro relacionado à perda de bicarbonato pelo corpo."
     },
     {
       "id": "b07-semanal-q098",
@@ -2970,7 +3066,8 @@
         "Assistência Hospitalar"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Um remédio para tirar o excesso de água do corpo (furosemida) também faz o corpo perder potássio, cálcio e magnésio, além de deixar o sangue menos ácido."
     },
     {
       "id": "b07-semanal-q099",
@@ -3000,7 +3097,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "O remédio para diabetes que ele tomava (metformina) se acumulou porque os rins não estavam funcionando bem, e isso fez o corpo produzir muito ácido láctico, deixando o sangue perigosamente ácido."
     },
     {
       "id": "b07-semanal-q100",
@@ -3030,7 +3128,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Um remédio para emagrecer (diurético) fez o corpo perder muito sal e potássio, deixando o sangue mais alcalino - por isso ele ficou confuso e fraco."
     },
     {
       "id": "b07-semanal-q101",
@@ -3060,7 +3159,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "O sangue dele está ácido por dois motivos ao mesmo tempo: o corpo produzindo ácido a mais e o pulmão, que deveria ajudar a soprar fora o gás carbônico, não estava compensando o suficiente."
     },
     {
       "id": "b07-semanal-q102",
@@ -3091,7 +3191,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-68"
+      "scheduleId": "cron-68",
+      "kids": "Um remédio que bloqueia uma enzima chamada anidrase carbônica faz o rim perder bicarbonato pela urina, causando um tipo específico de acidez no sangue."
     },
     {
       "id": "b07-semanal-q103",
@@ -3121,7 +3222,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Um dos remédios que ela toma para depressão pode fazer o corpo reter muita água e diluir demais o sal do sangue. Isso é perigoso e precisa de correção com cuidado, porque corrigir rápido demais pode machucar o cérebro."
     },
     {
       "id": "b07-semanal-q104",
@@ -3151,7 +3253,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "O cérebro machucado dele está mandando os rins jogarem fora sal e água em excesso, deixando o corpo desidratado e com pouco sal no sangue ao mesmo tempo."
     },
     {
       "id": "b07-semanal-q105",
@@ -3182,7 +3285,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Quando o potássio do sangue fica muito alto, o coração começa a mostrar isso no exame de eletrocardiograma, principalmente com um alargamento de uma parte do traçado - é um sinal de perigo para o coração."
     },
     {
       "id": "b07-semanal-q106",
@@ -3212,7 +3316,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Ele está fazendo muito xixi e bebendo muita água porque um hormônio do cérebro que controla a quantidade de água no corpo está em falta - a causa vem do próprio cérebro, não dos rins."
     },
     {
       "id": "b07-semanal-q107",
@@ -3242,7 +3347,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Um remédio para pressão alta que ele toma faz o corpo perder sal pela urina, deixando o sal do sangue muito baixo. Por isso, é preciso parar de beber tanta água e comer mais sal para corrigir."
     },
     {
       "id": "b07-semanal-q109",
@@ -3273,7 +3379,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Depois de se exercitar muito e comer muito doce, o corpo dele jogou o potássio para dentro das células e ele ficou fraco. Para não acontecer de novo, é melhor evitar comer muito doce, muito sal e fazer exercícios muito cansativos."
     },
     {
       "id": "b07-semanal-q110",
@@ -3304,7 +3411,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-69"
+      "scheduleId": "cron-69",
+      "kids": "Um tumor no pulmão fez o corpo dele produzir hormônio em excesso e reter muita água, diluindo o sal do sangue de forma perigosa. Como ele ficou confuso, é preciso dar um soro bem concentrado de sal rapidamente para ajudar o cérebro."
     },
     {
       "id": "b07-semanal-q111",
@@ -3334,7 +3442,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Ela tem uma infecção nos rins com febre, mas está bem estável. Pode-se dar o antibiótico forte primeiro na injeção e depois continuar em casa com comprimido, sem precisar ficar internada."
     },
     {
       "id": "b07-semanal-q112",
@@ -3364,7 +3473,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Para uma infecção simples da bexiga, existem remédios rápidos e eficazes que resolvem sem precisar de tratamentos longos ou muito fortes, que são reservados para infecções mais graves."
     },
     {
       "id": "b07-semanal-q113",
@@ -3396,7 +3506,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "O rim dela já está destruído há muito tempo por causa de infecções repetidas, formando até uma massa. Quando o rim não tem mais jeito de ser salvo, o melhor é tirá-lo com cirurgia."
     },
     {
       "id": "b07-semanal-q114",
@@ -3428,7 +3539,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-63"
+      "scheduleId": "cron-63",
+      "kids": "Depois de melhorar com o antibiótico, se o exame mostra uma bactéria mais resistente, o médico troca para um remédio mais forte que também pode ser tomado em casa, sem precisar ficar internada."
     },
     {
       "id": "b07-semanal-q115",
@@ -3458,7 +3570,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "Quando a vesícula biliar (uma bolsinha perto do fígado) inflama por causa de pedras e a pessoa tem febre e dor, o certo é dar antibiótico e operar para tirar a vesícula rapidamente, em até 3 dias."
     },
     {
       "id": "b07-semanal-q116",
@@ -3488,7 +3601,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "A pessoa ficou amarela e com febre porque uma pedrinha entupiu o canal que leva a bile do fígado. Quando o exame já mostra essa pedra, faz-se um procedimento (endoscopia especial) para tirá-la de lá."
     },
     {
       "id": "b07-semanal-q117",
@@ -3522,7 +3636,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "O senhor teve inflamação no pâncreas por causa de uma pedra na vesícula, e depois piorou com febre e sinais de que a pedra ainda está entupindo o canal da bile. Por isso, é preciso fazer o procedimento para tirar a pedra e dar antibiótico."
     },
     {
       "id": "b07-semanais-q118",
@@ -3553,7 +3668,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "O pseudocisto do pâncreas é uma bolsa de líquido bem encapsulada, sem partes mortas dentro, que pode ser tratada por um tubinho colocado pela endoscopia, e raramente pode sangrar se machucar um vaso sanguíneo por perto."
     },
     {
       "id": "b07-semanal-q119",
@@ -3583,7 +3699,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Quando o pâncreas inflama muito, o melhor tratamento inicial é deixar o estômago vazio, dar bastante soro (do tipo Ringer) e remédios para dor e enjoo, cuidando bem da hidratação da pessoa."
     },
     {
       "id": "b07-semanal-q120",
@@ -3614,7 +3731,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "Quando alguém tem febre, dor e fica amarelo por causa de uma pedra entupindo o canal da bile com infecção, o primeiro passo é estabilizar a pessoa com soro e antibiótico antes de pensar em tirar a pedra."
     },
     {
       "id": "b07-semanal-q121",
@@ -3645,7 +3763,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Existem vários jeitos de medir quão grave está uma inflamação no pâncreas: alguns usam exames de sangue, outros usam imagens como a tomografia, e cada um serve para uma coisa diferente."
     },
     {
       "id": "b07-semanal-q122",
@@ -3675,7 +3794,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-67"
+      "scheduleId": "cron-67",
+      "kids": "Mesmo sem sentir nada, quando o ultrassom mostra várias pedrinhas bem pequenas na vesícula, o médico recomenda operar para tirá-la, porque essas pedrinhas pequenas têm mais chance de causar uma inflamação grave no pâncreas."
     },
     {
       "id": "b07-semanal-q123",
@@ -3707,7 +3827,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "A criança caiu de uma altura pequena, chorou e vomitou só uma vez, mas está bem e o exame está normal. Nesse caso, pode ir para casa com os pais orientados sobre o que observar."
     },
     {
       "id": "b07-semanal-q124",
@@ -3737,7 +3858,8 @@
         "Primeira Infância"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "O bebê teve febre alta e uma convulsão rápida, e depois ficou bem de novo. Isso é uma convulsão febril simples, que não precisa de exames complicados nem de internação - só orientar os pais e liberar para casa."
     },
     {
       "id": "b07-semanal-q125",
@@ -3767,7 +3889,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Dar remédio para baixar a febre não impede que a criança tenha uma nova convulsão, e usar remédio para parar a convulsão na hora não muda se ela vai ou não ter epilepsia no futuro."
     },
     {
       "id": "b07-semanal-q126",
@@ -3797,7 +3920,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "O menino está em coma e o aparelho do coração mostra um ritmo estranho que não tem a ver com a respiração. Isso costuma acontecer quando há muita pressão dentro da cabeça, provavelmente por um sangramento no cérebro."
     },
     {
       "id": "b07-semanal-q127",
@@ -3827,7 +3951,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Depois de um trauma forte na cabeça, os médicos tentam manter a pressão dentro do crânio baixa (abaixo de um certo número), e não alta, porque pressão alta lá dentro machuca ainda mais o cérebro."
     },
     {
       "id": "b07-semanal-q128",
@@ -3858,7 +3983,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Quando a convulsão por febre é mais longa ou repete no mesmo dia, ela é chamada de complexa. A maioria das crianças fica bem no final, mas essas convulsões complexas aumentam um pouco o risco de ter epilepsia no futuro, então é bom acompanhar com o médico."
     },
     {
       "id": "b07-semanais-q129",
@@ -3889,7 +4015,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "Como o bebê tem menos de 1 ano e teve febre com convulsão, é importante colher um pouco do líquido que envolve o cérebro para garantir que não é uma infecção grave escondida, mesmo já tendo dor de ouvido diagnosticada."
     },
     {
       "id": "b07-semanal-q130",
@@ -3919,7 +4046,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-66"
+      "scheduleId": "cron-66",
+      "kids": "O homem teve duas convulsões seguidas e não acordou direito depois. Isso é uma emergência (a convulsão não parou de verdade), então precisa de remédio forte na veia para parar as crises o quanto antes."
     },
     {
       "id": "b07-semanal-q131",
@@ -3950,7 +4078,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Quando uma pessoa nasce com dois úteros, dois colos e duas vaginas separados, isso é chamado de útero didelfo, e geralmente não atrapalha a mulher a engravidar."
     },
     {
       "id": "b07-semanal-q132",
@@ -3980,7 +4109,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "As mamas dela cresceram normalmente, mas ela quase não tem pelos e não tem útero. Isso acontece porque o corpo dela não responde ao hormônio masculino, então é preciso tirar as gônadas internas (que têm risco de virar tumor) e depois repor hormônios."
     },
     {
       "id": "b07-semanal-q133",
@@ -4010,7 +4140,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Ela desenvolveu mamas e pelos normalmente, mas não tem útero. Isso é diferente do caso anterior porque aqui os pelos existem - o problema é que o útero simplesmente não se formou (síndrome de Rokitansky)."
     },
     {
       "id": "b07-semanal-q135",
@@ -4041,7 +4172,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Os exames mostraram que ela tem uma parede extra dividindo o útero por dentro (útero septado), o que aumenta muito o risco de perder a gravidez. O tratamento é tirar essa parede com uma cirurgia por dentro, sem cortar a barriga."
     },
     {
       "id": "b07-semanal-q136",
@@ -4071,7 +4203,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Uma pessoa pode ter os cromossomos de menino (XY) mas o corpo não responder ao hormônio masculino, ficando com aparência de menina por fora - essa é a síndrome de Morris."
     },
     {
       "id": "b07-semanal-q137",
@@ -4102,7 +4235,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "Ela tem aparência de menina, mamas normais, mas nível de hormônio masculino muito alto e nenhum útero. Isso mostra que por dentro ela tem cromossomos de menino (XY), mas o corpo não reconhece esse hormônio."
     },
     {
       "id": "b07-semanal-q138",
@@ -4132,7 +4266,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-64"
+      "scheduleId": "cron-64",
+      "kids": "A menina é baixinha, não menstruou e tem pouco desenvolvimento das mamas, com os ovários bem pequenos. Esse conjunto de sinais é típico de quem nasce com apenas um cromossomo X, em vez de dois."
     },
     {
       "id": "b07-semanal-q139",
@@ -4162,7 +4297,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "A pílula anticoncepcional ajuda a diminuir um hormônio (LH) que estimula demais o ovário a produzir hormônios masculinos, o que é o principal problema da síndrome dos ovários policísticos."
     },
     {
       "id": "b07-semanal-q140",
@@ -4192,7 +4328,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Antes de começar qualquer tratamento para os sintomas dela (irregularidade, acne, pelos), o médico precisa fazer exames de sangue e ultrassom para confirmar que é mesmo síndrome dos ovários policísticos e não outra doença parecida."
     },
     {
       "id": "b07-semanal-q142",
@@ -4222,7 +4359,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-65"
+      "scheduleId": "cron-65",
+      "kids": "Como ela quer engravidar e tem dificuldade para ovular por causa da síndrome dos ovários policísticos, o melhor tratamento é perder peso com hábitos saudáveis e usar um remédio (letrozol) que ajuda a liberar o óvulo."
     },
     {
       "id": "b07-semanal-q143",
@@ -4252,7 +4390,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Uma política de saúde brasileira reconhece que o preconceito e o tratamento desigual dentro das instituições (racismo institucional) prejudicam diretamente a saúde da população negra."
     },
     {
       "id": "b07-semanal-q144",
@@ -4282,7 +4421,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "O médico pode ajudar a paciente individualmente, mas para resolver de verdade um problema como esse, que vem do trabalho pesado e da necessidade financeira, é preciso que existam políticas públicas que ajudem muita gente ao mesmo tempo."
     },
     {
       "id": "b07-semanal-q145",
@@ -4313,7 +4453,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Para as políticas de saúde funcionarem bem, é importante que elas se adaptem à realidade de cada região, que o governo trabalhe junto com a sociedade, e que o objetivo seja diminuir as desigualdades que podem ser evitadas."
     },
     {
       "id": "b07-semanal-q146",
@@ -4344,7 +4485,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "As iniquidades em saúde são as diferenças entre as pessoas que são injustas e poderiam ser evitadas - elas vêm da forma desigual como as condições sociais são distribuídas, e por isso precisam de ações em várias áreas juntas para serem resolvidas."
     },
     {
       "id": "b07-semanal-q147",
@@ -4374,7 +4516,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Plantar hortas comunitárias e organizar caminhadas para quem já tem diabetes ajuda a controlar a doença e evitar complicações, agindo diretamente nos hábitos diários das pessoas daquela comunidade."
     },
     {
       "id": "b07-semanal-q148",
@@ -4404,7 +4547,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "As leis do governo que dão vantagens para empresas de comida ultraprocessada e não controlam bem a propaganda para crianças são a causa mais distante e ampla da obesidade infantil, porque moldam o que chega até o prato da criança."
     },
     {
       "id": "b07-semanal-q149",
@@ -4434,7 +4578,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "Construir casas maiores e mais arejadas para os garimpeiros, antes mesmo de eles ficarem doentes, é a melhor forma de evitar que a tuberculose se espalhe, porque muda o ambiente onde eles vivem."
     },
     {
       "id": "b07-semanais-q150",
@@ -4464,7 +4609,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-62"
+      "scheduleId": "cron-62",
+      "kids": "As políticas de saúde podem agir em diferentes níveis: umas mudam coisas grandes do país inteiro, como a economia, e outras melhoram condições do dia a dia das pessoas, como moradia e alimentação."
     }
   ]
 }
