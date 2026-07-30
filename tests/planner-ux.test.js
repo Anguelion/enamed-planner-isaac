@@ -147,7 +147,7 @@ test('integração móvel mantém correções de autenticação, flashcard e lay
   assert.match(planner,/if\(button\)\s*\{\s*button\.textContent = 'Sair'/);
   assert.doesNotMatch(planner,/id="addQuestionFlashcard"/);
   assert.match(planner,/data-add-question-flashcard=/);
-  assert.match(css,/@media\(max-width:1024px\)\{[\s\S]*?\.video-layout,\.video-focus-mode\{grid-template-columns:1fr\}/);
+  assert.match(css,/@media\(max-width:1024px\)\{[\s\S]*?\.video-layout,\.video-focus-mode\{grid-template-columns:minmax\(0,1fr\)\}/);
   assert.match(css,/\.qbank-mode \.question-card\{overflow:visible\}/);
 });
 

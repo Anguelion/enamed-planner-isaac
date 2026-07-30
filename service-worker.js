@@ -1,18 +1,18 @@
-const CACHE_NAME = 'soqueromed-shell-v146';
+const CACHE_NAME = 'soqueromed-shell-v147';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260729-1',
+  './assets/planner.css?v=20260729-2',
   './assets/app-icons.js?v=20260716-3',
   './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-4',
-  './assets/planner-ux.js?v=20260729-1',
+  './assets/planner-ux.js?v=20260729-2',
   './assets/ecg-simulator.js?v=20260719-4',
   './assets/radiografia.js?v=20260719-4',
   './assets/semiologia-aulas.js?v=20260720-2',
   './assets/semiologia.js?v=20260720-7',
   './assets/caso-do-dia.js?v=20260729-4',
-  './assets/planner.js?v=20260729-1',
+  './assets/planner.js?v=20260729-2',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',

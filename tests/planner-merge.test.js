@@ -81,6 +81,33 @@ test('merge de dailyTasks preserva exclusao mais recente e compacta duplicatas',
   assert.equal(merged.dailyTasks[0].status, 'deleted');
 });
 
+test('merge do cronograma preserva as datas oficiais locais e incorpora apenas o progresso remoto', () => {
+  const ctx = loadPlannerSandbox();
+  const remote = {
+    schedule: [
+      { id: 's1', date: '2026-07-28', day: 'Terça', block: 1, topic: 'Aula 1', manualQ: 8, manualFC: 4, hours: 2 },
+      { id: 's2', date: '2026-07-28', day: 'Terça', block: 2, topic: 'Aula 2', manualQ: 0, manualFC: 0, hours: 0 }
+    ]
+  };
+  const local = {
+    schedule: [
+      { id: 's1', date: '2026-04-09', day: 'Quinta', block: 1, topic: 'Aula 1', manualQ: 2, manualFC: 1, hours: 0 },
+      { id: 's2', date: '2026-04-13', day: 'Segunda', block: 2, topic: 'Aula 2', manualQ: 0, manualFC: 0, hours: 0 }
+    ]
+  };
+
+  const merged = ctx.mergePlannerActivityState(remote, local, false);
+  assert.deepStrictEqual(
+    plain(merged.schedule.map(item => item.date)),
+    ['2026-04-09', '2026-04-13'],
+    'uma data repetida vinda da nuvem não pode substituir o plano oficial deste aparelho'
+  );
+  assert.equal(merged.schedule[0].day, 'Quinta');
+  assert.equal(merged.schedule[0].manualQ, 8, 'o progresso remoto continua sendo incorporado');
+  assert.equal(merged.schedule[0].manualFC, 4);
+  assert.equal(merged.schedule[0].hours, 2);
+});
+
 test('isEditingTextField: detecta textarea e input de texto, ignora checkbox e nada focado', () => {
   const ctx = loadPlannerSandbox();
   ctx.document.activeElement = { tagName: 'TEXTAREA' };

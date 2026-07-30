@@ -24,7 +24,6 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
       .catch(() => {});
   });
 }
-const LOCAL_PLANNER_URL = 'http://127.0.0.1:8765/enamed_planner.html?videoSource=local#/aulas';
 const STUDY_TIMER_KEY = 'enamed-planner-study-timer';
 const QUESTION_TIMER_KEY = 'enamed-planner-question-timer';
 const POMODORO_KEY = 'enamed-planner-pomodoro';
@@ -1006,15 +1005,21 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   });
   merged.dailyTasks = PlannerUX?.compactOccurrences ? PlannerUX.compactOccurrences([...tasksById.values()]) : [...tasksById.values()];
 
-  const localSchedule = new Map((local.schedule || []).map(item => [item.id, item]));
-  merged.schedule = (remote.schedule || local.schedule || []).map(item => {
-    const localItem = localSchedule.get(item.id);
-    if(!localItem) return item;
+  // Datas, bloco, tema e ordem fazem parte do plano local/oficial e não são
+  // atividade sincronizável. Manter a estrutura local impede que um cronograma
+  // remoto corrompido (por exemplo, todas as aulas na mesma data) contamine
+  // todos os aparelhos; da nuvem entram apenas os campos de progresso.
+  const remoteSchedule = new Map((remote.schedule || []).map(item => [item.id, item]));
+  const scheduleBase = Array.isArray(local.schedule) && local.schedule.length ? local.schedule : (remote.schedule || []);
+  merged.schedule = scheduleBase.map(item => {
+    const remoteItem = remoteSchedule.get(item.id);
+    if(!remoteItem) return structuredClone(item);
     return {
       ...item,
-      manualQ: Math.max(n(item.manualQ ?? item.q), n(localItem.manualQ ?? localItem.q)),
-      manualFC: Math.max(n(item.manualFC ?? item.fc), n(localItem.manualFC ?? localItem.fc)),
-      hours: Math.max(n(item.hours), n(localItem.hours))
+      manualQ: Math.max(n(item.manualQ ?? item.q), n(remoteItem.manualQ ?? remoteItem.q)),
+      manualFC: Math.max(n(item.manualFC ?? item.fc), n(remoteItem.manualFC ?? remoteItem.fc)),
+      hours: Math.max(n(item.hours), n(remoteItem.hours)),
+      notes: preferLocal ? (item.notes || remoteItem.notes || '') : (remoteItem.notes || item.notes || '')
     };
   });
 
@@ -3349,7 +3354,12 @@ function observePlannerHeaderHeight() {
   else window.addEventListener('resize',update,{passive:true});
 }
 function navigateToTab(nextTab,{push=true}={}) {
-  if(!nextTab || ui.tab===nextTab) return true;
+  if(!nextTab) return false;
+  if(ui.tab===nextTab) {
+    syncRouteFromUI('replace');
+    render();
+    return true;
+  }
   const previousSnapshot=navigationSnapshot();
   if(!prepareViewTransition(nextTab)) return false;
   history.replaceState(previousSnapshot,'',window.location.href);
@@ -3394,7 +3404,12 @@ function renderTabs() {
   document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => navigateToTab(b.dataset.tab));
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id===ui.tab));
   if(window.matchMedia('(max-width: 1180px)').matches) {
-    requestAnimationFrame(() => document.querySelector('.tab.active')?.scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'}));
+    requestAnimationFrame(() => {
+      const active=document.querySelector('.tab.active');
+      const tabs=document.getElementById('tabs');
+      const vertical=tabs && getComputedStyle(tabs).flexDirection==='column';
+      active?.scrollIntoView({block:vertical?'center':'nearest',inline:vertical?'nearest':'center',behavior:'auto'});
+    });
   }
 }
 function resumePomodoroSession() {
@@ -3518,26 +3533,27 @@ function renderContinueStudying() {
 }
 function openDashboardActivity(button) {
   const type=button.dataset.dashboardContinue;
+  let nextTab='';
   if(type==='video') {
     ui.videoLessonId=button.dataset.continueLesson||'';
     ui.videoSourceId=button.dataset.continueSource||'';
-    ui.tab='aulas';
+    nextTab='aulas';
   } else if(type==='question') {
     ui.qQuestionId=button.dataset.continueQuestion||'';
     ui.qRouteRestorePending=true;
     ui.qStatus='Todas';
-    ui.tab='questoes';
+    nextTab='questoes';
   } else if(type==='simulado') {
     ui.activeSimRunId=button.dataset.continueRun||'';
     ui.simulationLibraryOpen=false;
-    ui.tab='simulados';
+    nextTab='simulados';
   } else if(type==='flashcard') {
-    ui.tab='flashcards';
+    nextTab='flashcards';
   } else {
     document.querySelector('.dashboard-road')?.scrollIntoView({behavior:'smooth',block:'start'});
     return;
   }
-  render();
+  navigateToTab(nextTab);
 }
 function renderManualStudyEntry(date) {
   const studyDate = ui.manualStudyDate || date;
@@ -3912,9 +3928,7 @@ function bindCadernoErros() {
     if(runId && state.simuladoRuns.some(run => run.id === runId)) {
       ui.activeSimRunId = runId;
       ui.simulationLibraryOpen = false;
-      ui.tab = 'simulados';
-      syncRouteFromUI('push');
-      render();
+      navigateToTab('simulados');
       return;
     }
     ui.qQuestionId = e.currentTarget.dataset.cadernoAccess;
@@ -3928,8 +3942,7 @@ function bindCadernoErros() {
     ui.qTopic = 'Todos';
     ui.justAnsweredId = '';
     ui.qStatus = 'Todas';
-    ui.tab = 'questoes';
-    render();
+    navigateToTab('questoes');
   });
   document.querySelectorAll('[data-create-rule-card]').forEach(button => button.onclick = e => createRuleFlashcard(e.currentTarget.dataset.createRuleCard));
   document.querySelectorAll('[data-generate-rule-prompts]').forEach(button => button.onclick = e => generateRulePrompts(e.currentTarget.dataset.generateRulePrompts));
@@ -4238,10 +4251,9 @@ function renderPainel() {
     if(target === 'daily-questions' && scheduleId) { openQuestionsForSchedule(scheduleId); return; }
     if(target === 'daily-flashcards' && scheduleId) { openFlashcardsForSchedule(scheduleId); return; }
     if(target === 'daily-video' && scheduleId) { openVideosForSchedule(scheduleId); return; }
-    if(target === 'daily-questions') ui.tab = 'questoes';
-    else if(target === 'daily-flashcards') ui.tab = 'flashcards';
+    if(target === 'daily-questions') { navigateToTab('questoes'); return; }
+    else if(target === 'daily-flashcards') { navigateToTab('flashcards'); return; }
     else { openDayVideos(ui.refDate); return; }
-    render();
   });
   bindScheduleInputs();
 }
@@ -5226,8 +5238,8 @@ function svgTrendLine(series) {
 function openQuestionFromAnalysis(questionId) {
   const question=questionBank.find(item=>item.id===questionId);
   if(!question) return;
-  ui.tab='questoes'; ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=question.collectionBlock!==undefined?String(question.collectionBlock):'Todos'; ui.qSource='Todas'; ui.qTopic=question.topic || 'Todos'; ui.qStatus='Todas'; ui.justAnsweredId='';
-  const list=filteredQuestions(); ui.qIndex=Math.max(0,list.findIndex(item=>item.id===questionId)); render();
+  ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=question.collectionBlock!==undefined?String(question.collectionBlock):'Todos'; ui.qSource='Todas'; ui.qTopic=question.topic || 'Todos'; ui.qStatus='Todas'; ui.justAnsweredId='';
+  const list=filteredQuestions(); ui.qIndex=Math.max(0,list.findIndex(item=>item.id===questionId)); navigateToTab('questoes');
 }
 function renderAnalise() {
   const date=ui.analysisDate || studyDateKey();
@@ -6087,14 +6099,13 @@ async function openMaterialsForSchedule(scheduleId) {
   if(!item) return;
   await loadMaterialLibrary();
   const documents = materialLibrary.filter(doc => doc.scheduleId === scheduleId);
-  ui.tab = 'materiais';
   ui.materialBlock = String(item.block || 'Todos');
   ui.materialScheduleId = scheduleId;
   ui.materialDocId = documents[0]?.id || '';
   ui.materialSearch = '';
   ui.materialEditMode = false;
   ui.materialFocusMode = false;
-  render();
+  navigateToTab('materiais');
 }
 async function loadMaterialLibraryNow() {
   let baseDocs = [];
@@ -6477,8 +6488,7 @@ function openVideosForSchedule(scheduleId) {
     ui.videoSearch = '';
     ui.videoLessonId = lessons[0].id;
     ui.videoSourceId = '';
-    ui.tab = 'aulas';
-    render();
+    navigateToTab('aulas');
     return;
   }
   const lesson = playableLessons.find(entry => !lessonVideoCompleted(entry)) || playableLessons[0];
@@ -6488,8 +6498,7 @@ function openVideosForSchedule(scheduleId) {
   ui.videoSearch = '';
   ui.videoLessonId = lesson.id;
   ui.videoSourceId = nextSource.id;
-  ui.tab = 'aulas';
-  render();
+  navigateToTab('aulas');
 }
 function openDayVideos(date) {
   const lessons = state.schedule.filter(item => item.date === date).sort(byDate);
@@ -6682,7 +6691,7 @@ function renderAulas() {
   sourceSwitch.className='video-source-switch';
   sourceSwitch.setAttribute('role','group');
   sourceSwitch.setAttribute('aria-label','Fonte das videoaulas');
-  sourceSwitch.innerHTML=`<span>Fonte</span><button type="button" data-video-source-mode="local" class="${usingR2?'':'active'}" title="${isLocalPlanner()?'Usar os vídeos deste computador':'Abrir a versão local do planner'}">PC offline</button><button type="button" data-video-source-mode="online" class="${usingR2?'active':''}" title="Usar os vídeos disponíveis no R2">R2 online</button>`;
+  sourceSwitch.innerHTML=`<span>Fonte</span><button type="button" data-video-source-mode="local" class="${usingR2?'':'active'}" ${isLocalPlanner()?'':'disabled'} title="${isLocalPlanner()?'Usar os vídeos deste computador':'Disponível apenas no computador que executa o servidor offline'}">PC offline</button><button type="button" data-video-source-mode="online" class="${usingR2?'active':''}" title="Usar os vídeos disponíveis no R2">R2 online</button>`;
   mount.querySelector('.video-filter')?.append(sourceSwitch);
   const sourceBadge=mount.querySelector('.video-sidebar .section-title .badge');
   if(sourceBadge) {
@@ -6693,7 +6702,7 @@ function renderAulas() {
     const mode=event.currentTarget.dataset.videoSourceMode;
     saveOpenVideoPosition();
     if(mode === 'local' && !isLocalPlanner()) {
-      window.location.href=LOCAL_PLANNER_URL;
+      showStudyToast('O modo PC offline só funciona no computador que está executando o servidor local.');
       return;
     }
     ui.videoSourceMode=mode;
@@ -7564,7 +7573,7 @@ function openQuickFlashcardCapture() {
   if(existing && n(existing.cardsCreated)>=2) { alert('Esta origem já tem dois cards de captura rápida. Edite ou divida um card na aba Flashcards.'); return; }
   state.flashcardSystem.captureSessions.push({key:source.key,cardsCreated:n(existing?.cardsCreated),maxCards:2,lastOpenedAt:new Date().toISOString()});
   state.flashcardSystem.captureSessions=state.flashcardSystem.captureSessions.filter((item,index,array)=>array.findIndex(other=>other.key===item.key)===index);
-  ui.flashcardCaptureSource=source; ui.tab='flashcards'; ui.flashcardEditorOpen=true; sessionStorage.setItem(UI_TAB_KEY,'flashcards'); render();
+  ui.flashcardCaptureSource=source; ui.flashcardEditorOpen=true; sessionStorage.setItem(UI_TAB_KEY,'flashcards'); navigateToTab('flashcards');
 }
 function saveWorkspaceFlashcard() {
   const cardType = ui.flashcardNewCardType === 'cloze' ? 'cloze' : 'basic';
@@ -8169,7 +8178,6 @@ function openQuestionsForSchedule(scheduleId) {
   // A ligação por bloco + tema é mais confiável do que um scheduleId legado
   // criado antes da normalização dos nomes das aulas.
   const linked = linkedByTopic.length ? linkedByTopic : direct;
-  ui.tab = 'questoes';
   ui.qFocusScheduleId = linked.length ? item.id : '';
   ui.qFocusQuestionIds = linked.map(question => question.id);
   ui.qBlock = item.block ? String(item.block) : 'Todos';
@@ -8182,13 +8190,11 @@ function openQuestionsForSchedule(scheduleId) {
   ui.qQuestionId = '';
   ui.justAnsweredId = '';
   resetKeyboardConfirmation();
-  syncRouteFromUI('push');
-  render();
+  navigateToTab('questoes');
 }
 function openFlashcardsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
-  ui.tab = 'flashcards';
   ui.flashcardBlock = item.block ? String(item.block) : 'Todos';
   ui.flashcardArea = item.area || 'Todas';
   ui.flashcardSubarea = item.topic || 'Todas';
@@ -8197,7 +8203,7 @@ function openFlashcardsForSchedule(scheduleId) {
   ui.flashcardFilter = 'Todos';
   ui.flashcardDeck = '';
   ui.flashcardIndex = 0;
-  render();
+  navigateToTab('flashcards');
 }
 function filteredQuestions() {
   const focusQuestionIds = new Set(Array.isArray(ui.qFocusQuestionIds) ? ui.qFocusQuestionIds : []);
@@ -8524,7 +8530,6 @@ function renderIncorporationHistory() {
 function openIncorporatedQuestion(questionId) {
   const question = state.importedQuestions.find(item => item.id === questionId);
   if(!question) return;
-  ui.tab = 'questoes';
   ui.qBlock = question.collectionBlock ? String(question.collectionBlock) : 'Todos';
   ui.qSource = 'Todas';
   ui.qTopic = 'Todos';
@@ -8534,7 +8539,7 @@ function openIncorporatedQuestion(questionId) {
   ui.qFocusScheduleId = '';
   ui.qFocusQuestionIds = [];
   ui.qFocusTarget = 0;
-  render();
+  navigateToTab('questoes');
 }
 function deleteIncorporatedQuestion(questionId) {
   const question = state.importedQuestions.find(item => item.id === questionId);
