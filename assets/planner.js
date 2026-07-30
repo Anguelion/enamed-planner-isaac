@@ -10737,14 +10737,13 @@ window.CasoDoDia?.load().then(() => { if(ui.tab === 'painel') renderPainel(); })
 setupSidebar();
 observePlannerHeaderHeight();
 resumePomodoroSession();
-try {
-  render();
-} catch(error) {
+function showBootFailureRecovery(error, extraNote) {
   console.error('Falha ao iniciar o app:', error);
   const root = document.getElementById('app') || document.body;
   root.innerHTML = `<div style="max-width:520px;margin:15vh auto;padding:24px;font-family:system-ui,sans-serif;text-align:center">
     <h2>Não consegui abrir o app agora</h2>
     <p>Isso costuma acontecer quando o cache do navegador fica com uma versão incompleta. Seu progresso está salvo — só o carregamento falhou.</p>
+    ${extraNote ? `<p>${extraNote}</p>` : ''}
     <button id="recoveryReloadBtn" style="padding:12px 20px;font-size:16px;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer">Limpar cache e tentar de novo</button>
   </div>`;
   document.getElementById('recoveryReloadBtn')?.addEventListener('click', async () => {
@@ -10757,6 +10756,13 @@ try {
     location.reload();
   });
 }
+window.addEventListener('unhandledrejection', event => {
+  if(document.getElementById('recoveryReloadBtn')) return;
+  const bodyHasContent = (document.getElementById('app') || document.body).children.length > 5;
+  if(bodyHasContent) return;
+  showBootFailureRecovery(event.reason, 'Se preferir, entre novamente com sua conta para continuar de onde parou.');
+});
+render().catch(error => showBootFailureRecovery(error));
 maintainDailyLocalBackup();
 if('requestIdleCallback' in window) requestIdleCallback(() => loadQuestionBank(), {timeout:700});
 else setTimeout(() => loadQuestionBank(), 120);
