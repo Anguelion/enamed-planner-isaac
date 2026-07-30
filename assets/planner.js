@@ -3132,6 +3132,8 @@ function lessonQuestionTarget(item) {
 }
 function lessonFlashcardTarget() { return LESSON_MIN_FLASHCARDS; }
 function statusOf(item) {
+  const blockCompletionLedger = state.gamification?.xpTransactions?.some(transaction => transaction.activity_type === 'block_completion' && String(transaction.source_id) === String(item?.block));
+  if(blockCompletionLedger) return 'Concluído';
   const videoDone = scheduleVideoCompleted(item);
   if(videoDone && completedQuestions(item) >= lessonQuestionTarget(item) && completedFlashcards(item) >= lessonFlashcardTarget(item)) return 'Concluído';
   if(videoDone || n(item.hours) > 0 || completedQuestions(item) > 0 || completedFlashcards(item) > 0) return 'Aguardando';
