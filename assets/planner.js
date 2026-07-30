@@ -10707,7 +10707,26 @@ window.CasoDoDia?.load().then(() => { if(ui.tab === 'painel') renderPainel(); })
 setupSidebar();
 observePlannerHeaderHeight();
 resumePomodoroSession();
-render();
+try {
+  render();
+} catch(error) {
+  console.error('Falha ao iniciar o app:', error);
+  const root = document.getElementById('app') || document.body;
+  root.innerHTML = `<div style="max-width:520px;margin:15vh auto;padding:24px;font-family:system-ui,sans-serif;text-align:center">
+    <h2>Não consegui abrir o app agora</h2>
+    <p>Isso costuma acontecer quando o cache do navegador fica com uma versão incompleta. Seu progresso está salvo — só o carregamento falhou.</p>
+    <button id="recoveryReloadBtn" style="padding:12px 20px;font-size:16px;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer">Limpar cache e tentar de novo</button>
+  </div>`;
+  document.getElementById('recoveryReloadBtn')?.addEventListener('click', async () => {
+    try {
+      const regs = await navigator.serviceWorker?.getRegistrations?.() || [];
+      await Promise.all(regs.map(reg => reg.unregister()));
+      const keys = await caches?.keys?.() || [];
+      await Promise.all(keys.map(key => caches.delete(key)));
+    } catch(cleanupError) { console.warn('Falha ao limpar cache:', cleanupError); }
+    location.reload();
+  });
+}
 maintainDailyLocalBackup();
 if('requestIdleCallback' in window) requestIdleCallback(() => loadQuestionBank(), {timeout:700});
 else setTimeout(() => loadQuestionBank(), 120);
