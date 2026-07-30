@@ -85,7 +85,19 @@ let materialGlobalSearchTimer = null;
 let importedSimuladosLoadPromise = null;
 let pomodoroLastSavedSecond = -1;
 let pomodoroLastTickedSecond = -1;
-const seed = JSON.parse(document.getElementById('seed').textContent);
+// Essa é a primeira linha que executa de verdade no script. O JSON embutido no
+// HTML (~160KB numa linha só) chega truncado em algumas redes móveis/aparelhos
+// mais fracos; sem este try/catch, um JSON.parse malformado aqui derrubava o
+// arquivo inteiro sem nenhum erro visível — nem os handlers de erro definidos
+// mais abaixo chegam a existir quando isso acontece.
+let seed;
+try {
+  seed = JSON.parse(document.getElementById('seed')?.textContent || '');
+  if(!seed || typeof seed !== 'object' || !Array.isArray(seed.schedule)) throw new Error('seed sem cronograma válido');
+} catch(error) {
+  console.error('Falha ao carregar os dados iniciais (seed corrompido/truncado):', error);
+  seed = { schedule: [] };
+}
 let state = loadState();
 ensureGamificationState();
 ensureImportedQuestions();
