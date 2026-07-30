@@ -24,7 +24,7 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
       .catch(() => {});
   });
 }
-const LOCAL_PLANNER_URL = 'http://127.0.0.1:8765/enamed_planner.html?tab=aulas&videoSource=local';
+const LOCAL_PLANNER_URL = 'http://127.0.0.1:8765/enamed_planner.html?videoSource=local#/aulas';
 const STUDY_TIMER_KEY = 'enamed-planner-study-timer';
 const QUESTION_TIMER_KEY = 'enamed-planner-question-timer';
 const POMODORO_KEY = 'enamed-planner-pomodoro';
@@ -111,6 +111,7 @@ let pomodoroAlarmInterval = null;
 let pomodoroPanelCloseTimer = null;
 let dailyMissionPanelCloseTimer = null;
 let questionSearchRenderTimer = null;
+let cadernoSearchRenderTimer = null;
 let pomodoro = loadPomodoroSession();
 let simuladoTimer = { interval: null, runId: '' };
 let motivationRefreshInterval = null;
@@ -118,6 +119,8 @@ let motivationRenderedKey = '';
 let activeVideoProgressCleanup = null;
 let dashboardCountdownInterval = null;
 let highlightUndoStack = [];
+let highlightPopupDismissHandler = null;
+let highlightPopupEscapeHandler = null;
 let currentUser = null;
 let syncTimer = null;
 let syncInFlight = false;
@@ -898,7 +901,8 @@ function showStudyToast(message) {
   toast.className = 'study-toast';
   toast.setAttribute('role','status');
   toast.innerHTML = `<strong>✓ ${escapeHtml(message)}</strong><button type="button" aria-label="Fechar">×</button>`;
-  toast.querySelector('button').onclick = () => toast.remove();
+  const closeButton=toast.querySelector('button');
+  if(closeButton) closeButton.onclick = () => toast.remove();
   document.body.append(toast);
   setTimeout(() => toast.remove(), 6500);
 }
@@ -1235,7 +1239,7 @@ function scheduleCloudRetry() {
     return;
   }
   const jitter = Math.random() * 0.2;
-  cloudSyncRetryDelayMs = cloudSyncRetryDelayMs ? Math.min(cloudSyncRetryDelayMs * 2.5, CLOUD_SYNC_RETRY_MAX_MS) : CLOUD_SYNC_RETRY_BASE_MS;
+  cloudSyncRetryDelayMs = cloudSyncRetryDelayMs ? Math.min(cloudSyncRetryDelayMs * 2, CLOUD_SYNC_RETRY_MAX_MS) : CLOUD_SYNC_RETRY_BASE_MS;
   const delayWithJitter = Math.round(cloudSyncRetryDelayMs * (1 + jitter));
   setSyncStatus('Erro', 'error', `Erro ao sincronizar — nova tentativa em ${Math.round(delayWithJitter/1000)}s (${cloudRetryCount}/${CLOUD_SYNC_MAX_RETRIES})`);
   clearTimeout(cloudRetryTimer);
@@ -1723,16 +1727,31 @@ async function loadImportedSimuladosNow() {
 function updateAccountUI() {
   const panel = document.getElementById('authPanel');
   const button = document.getElementById('accountBtn');
+  const logoutButton = document.getElementById('headerLogoutBtn');
   if(currentUser) {
     document.body.classList.remove('auth-locked');
-    panel.classList.add('hidden');
-    button.textContent = 'Sair';
-    button.title = currentUser.email || 'Sair da conta';
+    panel?.classList.add('hidden');
+    if(button) {
+      button.textContent = 'Sair';
+      button.title = currentUser.email || 'Sair da conta';
+    }
+    logoutButton?.classList.remove('hidden');
+    if(logoutButton) logoutButton.title = currentUser.email ? `Sair de ${currentUser.email}` : 'Sair da conta';
+  } else if(isLocalPlanner()) {
+    document.body.classList.remove('auth-locked');
+    panel?.classList.add('hidden');
+    button?.classList.add('hidden');
+    logoutButton?.classList.add('hidden');
+    setSyncStatus('Local', '', 'Modo local neste aparelho');
   } else {
     document.body.classList.add('auth-locked');
-    panel.classList.remove('hidden');
-    button.textContent = 'Entrar';
-    button.title = 'Entrar para sincronizar';
+    panel?.classList.remove('hidden');
+    if(button) {
+      button.classList.remove('hidden');
+      button.textContent = 'Entrar';
+      button.title = 'Entrar para sincronizar';
+    }
+    logoutButton?.classList.add('hidden');
     setSyncStatus('Local', '', 'Somente neste aparelho');
   }
 }
@@ -2159,6 +2178,7 @@ function setPomodoroPanelOpen(open) {
   const panel=document.getElementById('pomodoroPanel');
   if(!fruit || !panel) return;
   if(pomodoroPanelCloseTimer) clearTimeout(pomodoroPanelCloseTimer);
+  if(open) setDailyMissionPanelOpen(false);
   fruit.setAttribute('aria-expanded', String(open));
   fruit.title=open?'Fechar pomodoro':'Abrir pomodoro';
   fruit.setAttribute('aria-label', fruit.title);
@@ -2229,6 +2249,7 @@ function setDailyMissionPanelOpen(open) {
   const panel=document.getElementById('dailyMissionPanel');
   if(!trigger || !panel) return;
   if(dailyMissionPanelCloseTimer) clearTimeout(dailyMissionPanelCloseTimer);
+  if(open) setPomodoroPanelOpen(false);
   trigger.setAttribute('aria-expanded', String(open));
   if(open) {
     panel.hidden=false;
@@ -2237,6 +2258,7 @@ function setDailyMissionPanelOpen(open) {
     const rect=trigger.getBoundingClientRect();
     const panelWidth=Math.min(360, Math.max(260, window.innerWidth - 24));
     const opensRight=(window.innerWidth - rect.right) >= panelWidth + 8;
+    panel.style.setProperty('--daily-mission-mobile-top',`${Math.min(window.innerHeight-16,rect.bottom+8)}px`);
     panel.classList.toggle('open-right', opensRight);
     panel.classList.toggle('open-left', !opensRight);
     requestAnimationFrame(()=>panel.classList.add('is-open'));
@@ -2262,8 +2284,8 @@ function updateDailyMissionWidget() {
     if(target==='daily-questions' && scheduleId) { openQuestionsForSchedule(scheduleId); return; }
     if(target==='daily-flashcards' && scheduleId) { openFlashcardsForSchedule(scheduleId); return; }
     if(target==='daily-video' && scheduleId) { openVideosForSchedule(scheduleId); return; }
-    if(target==='daily-questions') { ui.tab='questoes'; render(); return; }
-    if(target==='daily-flashcards') { ui.tab='flashcards'; render(); return; }
+    if(target==='daily-questions') { navigateToTab('questoes'); return; }
+    if(target==='daily-flashcards') { navigateToTab('flashcards'); return; }
     openDayVideos(ui.refDate);
   });
 }
@@ -3296,21 +3318,60 @@ function syncRouteFromUI(mode='replace') {
   } else if(current!==hash) history.replaceState(navigationSnapshot(),'',hash);
   else history.replaceState(navigationSnapshot(),'',window.location.href);
 }
-function navigateToTab(nextTab,{push=true}={}) {
-  if(ui.tab==='questoes'&&nextTab!=='questoes'&&!settleQuestionTimerBeforeLeave()) return false;
+function closeTransientPanels() {
+  setPomodoroPanelOpen(false);
+  setDailyMissionPanelOpen(false);
+  document.querySelectorAll('.dashboard-gamification-popover[open]').forEach(details => details.removeAttribute('open'));
+}
+function pauseOpenVideo() {
+  const video=document.getElementById('lessonVideo');
+  if(!video) return;
+  saveOpenVideoPosition();
+  video.pause();
+}
+function prepareViewTransition(nextTab,{confirmQuestion=true}={}) {
+  if(ui.tab===nextTab) return true;
+  if(confirmQuestion && ui.tab==='questoes' && nextTab!=='questoes' && !settleQuestionTimerBeforeLeave()) return false;
   if(autoStudyIsRunning()) stopAutoStudy();
-  if(ui.tab==='aulas') saveOpenVideoPosition();
+  if(ui.tab==='aulas') pauseOpenVideo();
+  closeTransientPanels();
+  return true;
+}
+function isInteractiveTarget(target) {
+  return Boolean(target?.matches?.('input,textarea,select,button,a,summary,video,audio,[role="button"],[contenteditable="true"]') || target?.closest?.('[contenteditable="true"]'));
+}
+function observePlannerHeaderHeight() {
+  const header=document.querySelector('.app-header');
+  if(!header) return;
+  const update=()=>document.documentElement.style.setProperty('--app-header-height',`${Math.ceil(header.getBoundingClientRect().height)}px`);
+  update();
+  if('ResizeObserver' in window) new ResizeObserver(update).observe(header);
+  else window.addEventListener('resize',update,{passive:true});
+}
+function navigateToTab(nextTab,{push=true}={}) {
+  if(!nextTab || ui.tab===nextTab) return true;
+  const previousSnapshot=navigationSnapshot();
+  if(!prepareViewTransition(nextTab)) return false;
+  history.replaceState(previousSnapshot,'',window.location.href);
   ui.tab=nextTab;
   if(nextTab==='simulados'&&ui.activeSimRunId) ui.simulationLibraryOpen=false;
-  syncRouteFromUI(push?'push':'replace');
+  const hash=PlannerUX?.buildRoute(currentRouteState())||`#/${nextTab}`;
+  if(push) history.pushState(navigationSnapshot(),'',hash);
+  else history.replaceState(navigationSnapshot(),'',hash);
   render();
+  requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'auto'}));
   return true;
 }
 function restoreNavigation(event) {
   const parsed=PlannerUX?.parseRoute(window.location.hash)||{tab:'painel'};
   const snapshot=event?.state;
+  const nextTab=parsed.tab||snapshot?.ui?.tab||'painel';
+  if(!prepareViewTransition(nextTab)) {
+    history.forward();
+    return;
+  }
   if(snapshot?.ui) Object.assign(ui,snapshot.ui);
-  ui.tab=parsed.tab||snapshot?.ui?.tab||'painel';
+  ui.tab=nextTab;
   if(parsed.questionId) { ui.qQuestionId=parsed.questionId; ui.qRouteRestorePending=true; }
   if(parsed.videoId) ui.videoSourceId=parsed.videoId;
   if(parsed.attemptId) {
@@ -3332,9 +3393,22 @@ function renderTabs() {
   }).join('');
   document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => navigateToTab(b.dataset.tab));
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id===ui.tab));
-  if(window.matchMedia('(max-width: 820px)').matches) {
+  if(window.matchMedia('(max-width: 1180px)').matches) {
     requestAnimationFrame(() => document.querySelector('.tab.active')?.scrollIntoView({block:'nearest', inline:'center', behavior:'smooth'}));
   }
+}
+function resumePomodoroSession() {
+  if(!pomodoro.mode) return;
+  if(pomodoro.running) {
+    pomodoro.remaining=Math.max(0,Math.ceil((pomodoro.endAt-Date.now())/1000));
+    if(pomodoro.remaining<=0) {
+      finishPomodoroPhase();
+      return;
+    }
+    if(pomodoroInterval) clearInterval(pomodoroInterval);
+    pomodoroInterval=setInterval(updatePomodoro,1000);
+  }
+  updatePomodoroWidget();
 }
 function setupSidebar() {
   const toggle = document.getElementById('sidebarToggle');
@@ -3811,7 +3885,18 @@ function renderCadernoErros() {
 }
 function bindCadernoErros() {
   const search = document.getElementById('cadernoSearch');
-  if(search) search.oninput = e => { ui.cadernoSearch = e.target.value; renderCadernoErros(); };
+  if(search) search.oninput = e => {
+    ui.cadernoSearch = e.target.value;
+    const selectionStart=e.target.selectionStart;
+    const selectionEnd=e.target.selectionEnd;
+    if(cadernoSearchRenderTimer) clearTimeout(cadernoSearchRenderTimer);
+    cadernoSearchRenderTimer=setTimeout(()=>{
+      renderCadernoErros();
+      const restored=document.getElementById('cadernoSearch');
+      restored?.focus({preventScroll:true});
+      restored?.setSelectionRange?.(selectionStart,selectionEnd);
+    },180);
+  };
   const areaSelect = document.getElementById('cadernoArea');
   if(areaSelect) areaSelect.onchange = e => { ui.cadernoArea = e.target.value; renderCadernoErros(); };
   const reviewSelect = document.getElementById('cadernoReview');
@@ -4142,7 +4227,7 @@ function renderPainel() {
   bindCasoDoDia();
   bindGamificationDashboard();
   document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
-  document.querySelectorAll('[data-dashboard-open-flashcards]').forEach(button=>button.addEventListener('click',()=>{ui.tab='flashcards';ui.flashcardFilter='Aprendendo';render();}));
+  document.querySelectorAll('[data-dashboard-open-flashcards]').forEach(button=>button.addEventListener('click',()=>{ui.flashcardFilter='Aprendendo';navigateToTab('flashcards');}));
   document.querySelectorAll('[data-weekly-metric]').forEach(button=>button.addEventListener('click',event=>{ui.weeklyMetric=event.currentTarget.dataset.weeklyMetric;renderPainel();}));
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
   startDashboardCountdown();
@@ -4753,16 +4838,22 @@ function startSimuladoTimer(run, shouldRender=true) {
   if(simuladoTimer.interval && simuladoTimer.runId === run.id) return;
   if(simuladoTimer.interval) clearInterval(simuladoTimer.interval);
   run.paused = false;
+  run.timerDeadlineAt = Date.now() + Math.max(0,n(run.secondsLeft)) * 1000;
   startAutoStudy('simulado', '');
   simuladoTimer.runId = run.id;
   simuladoTimer.interval = setInterval(() => tickSimuladoTimer(run.id), 1000);
   if(shouldRender) persist();
 }
 function pauseSimuladoTimer(run, shouldRender=true) {
+  if(!run.paused && run.timerDeadlineAt) {
+    run.secondsLeft=Math.max(0,Math.ceil((n(run.timerDeadlineAt)-Date.now())/1000));
+    run.elapsedSeconds=Math.max(0,n(run.durationMinutes)*60-n(run.secondsLeft));
+  }
   if(simuladoTimer.interval) clearInterval(simuladoTimer.interval);
   simuladoTimer.interval = null;
   simuladoTimer.runId = '';
   run.paused = true;
+  run.timerDeadlineAt = 0;
   run.updatedAt = new Date().toISOString();
   stopAutoStudy('simulado');
   if(shouldRender) persist();
@@ -4770,7 +4861,8 @@ function pauseSimuladoTimer(run, shouldRender=true) {
 function tickSimuladoTimer(runId) {
   const run = state.simuladoRuns.find(item => item.id === runId);
   if(!run || run.finishedAt || run.paused) return;
-  run.secondsLeft = Math.max(0, n(run.secondsLeft) - 1);
+  if(!run.timerDeadlineAt) run.timerDeadlineAt=Date.now()+Math.max(0,n(run.secondsLeft))*1000;
+  run.secondsLeft = Math.max(0, Math.ceil((n(run.timerDeadlineAt)-Date.now())/1000));
   run.elapsedSeconds = Math.max(0, n(run.durationMinutes) * 60 - n(run.secondsLeft));
   run.updatedAt = new Date().toISOString();
   const clock = document.getElementById('simuladoClock');
@@ -5180,9 +5272,9 @@ function renderAnalise() {
   bindPlannerDateInput('analysisDate',date,value=>{ui.analysisDate=value;renderAnalise();});
   document.querySelectorAll('[data-analysis-day]').forEach(button=>button.onclick=()=>{ui.analysisDate=addDays(date,n(button.dataset.analysisDay));renderAnalise();});
   document.getElementById('analysisToday')?.addEventListener('click',()=>{ui.analysisDate=studyDateKey();renderAnalise();});
-  document.querySelector('[data-analysis-open-bank]')?.addEventListener('click',()=>{ui.tab='questoes';ui.qStatus='Não respondidas';render();});
+  document.querySelector('[data-analysis-open-bank]')?.addEventListener('click',()=>{ui.qStatus='Não respondidas';navigateToTab('questoes');});
   document.querySelectorAll('[data-analysis-open-question]').forEach(button=>button.onclick=()=>openQuestionFromAnalysis(button.dataset.analysisOpenQuestion));
-  document.querySelectorAll('[data-analysis-open-sim]').forEach(button=>button.onclick=()=>{ui.activeSimRunId=button.dataset.analysisOpenSim;ui.tab='simulados';render();});
+  document.querySelectorAll('[data-analysis-open-sim]').forEach(button=>button.onclick=()=>{ui.activeSimRunId=button.dataset.analysisOpenSim;navigateToTab('simulados');});
 }
 function renderAreas() { const areas=areaStats(); document.getElementById('areas').innerHTML = `<div class="grid three">${areas.slice(0,3).map(a=>metric(a.area,pct(a.progress),`${a.done} de ${a.total} concluídas`)).join('')}</div><div class="card"><div class="section-title"><h2>Desempenho por área</h2></div>${areas.map(areaLine).join('')}</div><div class="card"><div class="section-title"><h2>Pendências por área</h2></div><div class="table-wrap"><table><thead><tr><th>Área</th><th class="num">Aulas pendentes</th><th class="num">Questões</th><th class="num">Flashcards</th><th class="num">Horas</th></tr></thead><tbody>${areas.map(a=>`<tr><td><strong>${escapeHtml(a.area)}</strong></td><td class="num">${a.total-a.done}</td><td class="num">${Math.round(a.debtQ)}</td><td class="num">${Math.round(a.debtFC)}</td><td class="num">${a.hours.toFixed(1)}</td></tr>`).join('')}</tbody></table></div></div>`; }
 function dailyFlashcardEvents(date) {
@@ -6403,7 +6495,7 @@ function openDayVideos(date) {
   const lessons = state.schedule.filter(item => item.date === date).sort(byDate);
   const next = lessons.find(item => videoSourcesForSchedule(item).some(video => !state.videoPlayer.watched[video.id])) || lessons.find(item => videoSourcesForSchedule(item).length);
   if(next) openVideosForSchedule(next.id);
-  else { ui.tab='aulas'; ui.videoBlock=String(currentScheduleBlock()); render(); }
+  else { ui.videoBlock=String(currentScheduleBlock()); navigateToTab('aulas'); }
 }
 function markAwaitingScheduleVideosWatched() {
   const version = 'awaiting-schedule-videos-2026-07-11-v2';
@@ -8904,7 +8996,7 @@ function renderQuestionFlashcardEditor(question, result) {
   const allowed = flashcardCreationAllowed(result);
   if(!allowed && !cards.length) return '';
   const reason = allowed ? flashcardCreationReason(result) : 'Flashcards já criados continuam disponíveis para edição.';
-  return `<div class="flashcard-editor"><div class="section-title"><div><h3>Criar flashcards</h3><div class="muted">${escapeHtml(reason)} Selecione um trecho e use a barra para formatar, ou escolha o tipo Cloze para ocluir uma palavra.</div></div><div class="flashcard-editor-actions"><button type="button" class="icon-btn primary" id="addQuestionFlashcard" ${cards.length>=2 || !allowed?'disabled':''}>+ Flashcard</button><button type="button" class="tiny-btn" data-close-question-flashcards="${escapeAttr(question.id)}" title="Fechar criador de flashcards">Fechar</button></div></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>{ const sourceAttr = `data-question-card="${escapeAttr(question.id)}"`; return `<div class="flashcard-editor-item">${renderClozeAwareFlashcardFields(sourceAttr,card,'Frente: escreva a pergunta ou conceito','Verso: escreva a resposta')}<button type="button" class="tiny-btn" data-remove-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" title="Excluir flashcard">×</button><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || question.area || '')}" placeholder="Área"><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || card.topic || question.topic || '')}" placeholder="Subárea"></div>`; }).join('')}</div>` : '<div class="empty">Escreva até dois flashcards curtos desta questão.</div>'}<div class="topic-source">${cards.length}/2 flashcards · ${escapeHtml(question.collectionLabel || questionCollectionLabel(question.collectionBlock))} · ${escapeHtml(question.topic)}</div></div>`;
+  return `<div class="flashcard-editor"><div class="section-title"><div><h3>Criar flashcards</h3><div class="muted">${escapeHtml(reason)} Selecione um trecho e use a barra para formatar, ou escolha o tipo Cloze para ocluir uma palavra.</div></div><div class="flashcard-editor-actions"><button type="button" class="icon-btn primary" data-add-question-flashcard="${escapeAttr(question.id)}" ${cards.length>=2 || !allowed?'disabled':''}>+ Flashcard</button><button type="button" class="tiny-btn" data-close-question-flashcards="${escapeAttr(question.id)}" title="Fechar criador de flashcards">Fechar</button></div></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>{ const sourceAttr = `data-question-card="${escapeAttr(question.id)}"`; return `<div class="flashcard-editor-item">${renderClozeAwareFlashcardFields(sourceAttr,card,'Frente: escreva a pergunta ou conceito','Verso: escreva a resposta')}<button type="button" class="tiny-btn" data-remove-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" title="Excluir flashcard">×</button><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || question.area || '')}" placeholder="Área"><input class="input" data-question-card="${escapeAttr(question.id)}" data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || card.topic || question.topic || '')}" placeholder="Subárea"></div>`; }).join('')}</div>` : '<div class="empty">Escreva até dois flashcards curtos desta questão.</div>'}<div class="topic-source">${cards.length}/2 flashcards · ${escapeHtml(question.collectionLabel || questionCollectionLabel(question.collectionBlock))} · ${escapeHtml(question.topic)}</div></div>`;
 }
 function renderQuestionNotes(question, result) {
   const notes = result?.notes || '';
@@ -9110,8 +9202,6 @@ function bindQuestionActions(questions, question) {
     updateQuestionProgressField(question, textarea);
     textarea.focus();
   });
-  const addFlashcard = document.getElementById('addQuestionFlashcard');
-  if(addFlashcard) addFlashcard.onclick = () => addQuestionFlashcard(question);
   document.querySelectorAll('[data-comment-tab]').forEach(button => button.onclick = e => {
     const current = state.questionProgress[question.id] || {};
     setQuestionProgress(question.id,{ commentTab: e.currentTarget.dataset.commentTab });
@@ -9349,7 +9439,7 @@ function handleQuestionKeyboard(event) {
   if(ui.tab === 'flashcards') return handleFlashcardKeyboard(event);
   if(ui.tab !== 'questoes' || event.ctrlKey || event.metaKey || event.altKey) return;
   const target = event.target;
-  if(target?.matches?.('input, textarea, select, [contenteditable="true"]')) return;
+  if(isInteractiveTarget(target)) return;
   if(event.key === 'ArrowRight') { event.preventDefault(); navigateQuestionBy(1); return; }
   if(event.key === 'ArrowLeft') { event.preventDefault(); navigateQuestionBy(-1); return; }
   if(event.key === 'ArrowDown') { event.preventDefault(); window.scrollBy({ top: Math.max(280, window.innerHeight * .72), behavior: 'smooth' }); return; }
@@ -9402,7 +9492,7 @@ function handleQuestionKeyboard(event) {
 function handleFlashcardKeyboard(event) {
   if(event.ctrlKey || event.metaKey || event.altKey) return;
   const target = event.target;
-  if(target?.matches?.('input, textarea, select, [contenteditable="true"]')) return;
+  if(isInteractiveTarget(target)) return;
   // Saída garantida do modo foco, inclusive quando a fila acaba e a tela de fim
   // de sessão não mostra mais os controles.
   if(event.key === 'Escape' && ui.flashcardFocusMode) {
@@ -9454,7 +9544,7 @@ function handleFlashcardKeyboard(event) {
 function handleSimuladoKeyboard(event) {
   if(event.ctrlKey || event.metaKey || event.altKey) return;
   const target = event.target;
-  if(target?.matches?.('input, textarea, select, [contenteditable="true"]')) return;
+  if(isInteractiveTarget(target)) return;
   const run = state.simuladoRuns.find(item => item.id === ui.activeSimRunId);
   if(!run || run.finishedAt) return;
   const question = activeSimQuestion(run);
@@ -9709,11 +9799,16 @@ function startQuestionTimer(question) {
     beepQuestionTimer();
   }
   renderQuestionClock();
+  let lastTickAt=Date.now();
   questionTimer.interval = setInterval(() => {
-    questionTimer.elapsedSeconds += 1;
+    const now=Date.now();
+    const elapsedTick=Math.max(1,Math.floor((now-lastTickAt)/1000));
+    lastTickAt=now;
+    questionTimer.elapsedSeconds += elapsedTick;
     if(questionTimer.mode === 'countdown') {
-      questionTimer.secondsLeft -= 1;
-      if(questionTimer.secondsLeft === 15 && !questionTimer.beeped) {
+      const previousSeconds=questionTimer.secondsLeft;
+      questionTimer.secondsLeft = Math.max(0,questionTimer.secondsLeft-elapsedTick);
+      if(previousSeconds > 15 && questionTimer.secondsLeft <= 15 && !questionTimer.beeped) {
         questionTimer.beeped = true;
         beepQuestionTimer();
       }
@@ -9875,6 +9970,10 @@ function highlightSelectionDescriptor(element) {
   return {text:selected,occurrence,element,scope:element.dataset.highlightScope||'stem',block:element.dataset.materialBlock||'',rect};
 }
 function closeHighlightPopup() {
+  if(highlightPopupDismissHandler) document.removeEventListener('pointerdown',highlightPopupDismissHandler);
+  if(highlightPopupEscapeHandler) document.removeEventListener('keydown',highlightPopupEscapeHandler);
+  highlightPopupDismissHandler=null;
+  highlightPopupEscapeHandler=null;
   document.querySelector('.highlight-popup')?.remove();
 }
 function positionHighlightPopup(popup,rect) {
@@ -9941,17 +10040,17 @@ function showHighlightPopup({rect,editing=false,onColor,onDelete,copyText=''}) {
   });
   document.body.appendChild(popup);
   positionHighlightPopup(popup,rect);
-  const dismiss=event=>{
+  highlightPopupDismissHandler=event=>{
     if(!popup.contains(event.target)) closeHighlightPopup();
   };
-  const escape=event=>{
+  highlightPopupEscapeHandler=event=>{
     if(event.key==='Escape') {
       closeHighlightPopup();
       window.getSelection()?.removeAllRanges();
     }
   };
-  setTimeout(()=>document.addEventListener('pointerdown',dismiss,{once:true}),0);
-  document.addEventListener('keydown',escape,{once:true});
+  setTimeout(()=>document.addEventListener('pointerdown',highlightPopupDismissHandler),0);
+  document.addEventListener('keydown',highlightPopupEscapeHandler);
 }
 // No toque, o navegador ainda ajusta a seleção por um tempo depois do
 // pointerup (alças de seleção sendo arrastadas). Um atraso fixo às vezes
@@ -10062,13 +10161,13 @@ function undoLastHighlight() {
 function handleHighlightUndoKeyboard(event) {
   if(!(event.ctrlKey || event.metaKey) || event.shiftKey || event.altKey || event.key.toLowerCase() !== 'z') return;
   const target = event.target;
-  if(target?.matches?.('input, textarea, select, [contenteditable="true"]') || target?.closest?.('[contenteditable="true"]')) return;
+  if(isInteractiveTarget(target)) return;
   if(undoLastHighlight()) event.preventDefault();
 }
 function handleFlashcardUndoKeyboard(event) {
   if(ui.tab !== 'flashcards' || !(event.ctrlKey || event.metaKey) || event.shiftKey || event.altKey || event.key.toLowerCase() !== 'z') return;
   const target = event.target;
-  if(target?.matches?.('input, textarea, select, [contenteditable="true"]') || target?.closest?.('[contenteditable="true"]')) return;
+  if(isInteractiveTarget(target)) return;
   event.preventDefault();
   if(event.repeat) return;
   undoFlashcardReview();
@@ -10292,7 +10391,7 @@ document.addEventListener('keydown', event => {
   }
   if(ui.tab !== 'aulas' || event.altKey || event.ctrlKey || event.metaKey) return;
   const target = event.target;
-  if(target?.matches?.('input,textarea,select,[contenteditable="true"]')) return;
+  if(isInteractiveTarget(target)) return;
   const video = document.getElementById('lessonVideo');
   if(!video) return;
   const rates = [0.75,1,1.25,1.5,1.75,2];
@@ -10303,8 +10402,8 @@ document.addEventListener('keydown', event => {
   else if(key === 'f' || event.key === '[') { event.preventDefault(); event.stopPropagation(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
   else if(key === 'j' || event.key === '=') { event.preventDefault(); event.stopPropagation(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
 }, true);
-document.getElementById('headerTrailBtn')?.addEventListener('click', () => { ui.tab='cronograma'; render(); });
-document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.tab='painel'; ui.pomodoroOpen=!ui.pomodoroOpen; render(); });
+document.getElementById('headerTrailBtn')?.addEventListener('click', () => navigateToTab('cronograma'));
+document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.pomodoroOpen=!ui.pomodoroOpen; navigateToTab('painel'); });
 document.getElementById('headerSyncBtn')?.addEventListener('click', () => forcePlannerSync());
 document.getElementById('syncStatus')?.addEventListener('click', () => toggleSyncTelemetryDashboard());
 document.getElementById('headerLogoutBtn')?.addEventListener('click', async () => {
@@ -10330,7 +10429,8 @@ document.getElementById('accountBtn')?.addEventListener('click', async () => {
   }
   document.getElementById('authPanel').classList.toggle('hidden');
 });
-document.getElementById('signInBtn')?.addEventListener('click', async () => {
+document.getElementById('authForm')?.addEventListener('submit', async event => {
+  event.preventDefault();
   if(OFFLINE_FIRST || !sbClient) return;
   const email = document.getElementById('authEmail').value.trim();
   const password = document.getElementById('authPassword').value;
@@ -10378,9 +10478,29 @@ window.addEventListener('online', () => {
 window.addEventListener('popstate', restoreNavigation);
 document.addEventListener('keydown', handleHighlightUndoKeyboard);
 document.addEventListener('click', event => {
+  const addQuestionCardButton=event.target.closest?.('[data-add-question-flashcard]');
+  if(addQuestionCardButton) {
+    const questionId=addQuestionCardButton.dataset.addQuestionFlashcard;
+    const question=questionBank.find(item=>item.id===questionId) || importedQuestionById(questionId);
+    if(question) addQuestionFlashcard(question);
+    return;
+  }
+  if(!event.target.closest?.('#globalPomodoro')) setPomodoroPanelOpen(false);
+  if(!event.target.closest?.('#globalDailyMission')) setDailyMissionPanelOpen(false);
   const box = document.getElementById('materialGlobalSearchResults');
   const wrap = document.getElementById('materialGlobalSearchWrap');
   if(box && !box.hidden && wrap && !wrap.contains(event.target)) box.hidden = true;
+});
+document.addEventListener('input', event => {
+  const input=event.target;
+  if(!input?.matches?.('input[placeholder="dd/mm/aaaa"]')) return;
+  const digits=input.value.replace(/\D/g,'').slice(0,8);
+  input.value=[digits.slice(0,2),digits.slice(2,4),digits.slice(4,8)].filter(Boolean).join('/');
+});
+document.addEventListener('keydown', event => {
+  if(event.key!=='Escape') return;
+  closeTransientPanels();
+  document.querySelectorAll('.rank-promotion-overlay,.simulation-reward-overlay,.video-continuation-overlay').forEach(overlay=>overlay.querySelector('button')?.click());
 });
 document.addEventListener('keydown', handleFlashcardUndoKeyboard);
 document.addEventListener('keydown', handleQuestionKeyboard);
@@ -10388,6 +10508,8 @@ startMotivationCycle();
 loadMotivationMessages();
 window.CasoDoDia?.load().then(() => { if(ui.tab === 'painel') renderPainel(); });
 setupSidebar();
+observePlannerHeaderHeight();
+resumePomodoroSession();
 render();
 maintainDailyLocalBackup();
 if('requestIdleCallback' in window) requestIdleCallback(() => loadQuestionBank(), {timeout:700});

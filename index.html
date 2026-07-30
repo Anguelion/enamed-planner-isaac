@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1261f5">
 <meta name="application-name" content="SÓqueroMed">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -13,7 +13,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/planner.css?v=20260728-6">
+  <link rel="stylesheet" href="assets/planner.css?v=20260729-1">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body class="offline-priority">
@@ -22,14 +22,14 @@
     <div class="login-mark">SQ</div>
     <h1>SÓqueroMed</h1>
     <p class="login-copy">Seu espaço privado de estudo para organizar aulas, questões, flashcards e revisões.</p>
-    <div class="auth-box">
-      <input class="input" id="authEmail" type="email" autocomplete="email" placeholder="Seu e-mail">
-      <input class="input" id="authPassword" type="password" autocomplete="current-password" minlength="6" placeholder="Sua senha">
+    <form class="auth-box" id="authForm">
+      <input class="input" id="authEmail" type="email" autocomplete="email" inputmode="email" enterkeyhint="next" placeholder="Seu e-mail">
+      <input class="input" id="authPassword" type="password" autocomplete="current-password" minlength="6" enterkeyhint="go" placeholder="Sua senha">
       <div class="auth-actions">
-        <button class="icon-btn primary" id="signInBtn">Entrar</button>
+        <button class="icon-btn primary" id="signInBtn" type="submit">Entrar</button>
       </div>
       <div class="auth-message" id="authMessage">Acesso restrito à conta autorizada.</div>
-    </div>
+    </form>
   </div>
 </section>
 <aside class="app-sidebar" id="appSidebar">
@@ -80,14 +80,14 @@
 <script src="question_bank/index.js?v=20260714-5"></script>
   <script src="assets/app-icons.js?v=20260728-1"></script>
   <script src="assets/gamification.js?v=20260715-4"></script>
-  <script src="assets/planner-ux.js?v=20260716-6"></script>
+  <script src="assets/planner-ux.js?v=20260729-1"></script>
   <script src="assets/ecg-simulator.js?v=20260720-4"></script>
   <script src="assets/radiografia-aulas.js?v=20260719-2"></script>
   <script src="assets/radiografia.js?v=20260719-4"></script>
   <script src="assets/semiologia-aulas.js?v=20260720-2"></script>
   <script src="assets/semiologia.js?v=20260720-7"></script>
   <script src="assets/caso-do-dia.js?v=20260729-4"></script>
-  <script src="assets/planner.js?v=20260728-8"></script>
+  <script src="assets/planner.js?v=20260729-1"></script>
 
 </body>
 </html>

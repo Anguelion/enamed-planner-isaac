@@ -15,6 +15,11 @@ test('rotas reproduzem questão, vídeo e tentativa de simulado',()=>{
   routes.forEach(route=>assert.deepEqual(UX.parseRoute(UX.buildRoute(route)),route));
 });
 
+test('hash vazio preserva a precedência da query e Semiologia possui rota estável',()=>{
+  assert.deepEqual(UX.parseRoute(''),{tab:''});
+  assert.deepEqual(UX.parseRoute(UX.buildRoute({tab:'semiologia'})),{tab:'semiologia'});
+});
+
 test('data local respeita America/Fortaleza',()=>{
   assert.equal(UX.localDateKey(new Date('2026-07-17T01:30:00.000Z')),'2026-07-16');
 });
@@ -131,6 +136,19 @@ test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
   assert.ok(views.includes("['importar-questoes'"));
   const groups=planner.match(/const VIEW_GROUPS = \{([\s\S]*?)\n\};/)?.[1]||'';
   assert.match(groups,/'importar-questoes':'Outros'/);
+});
+
+test('integração móvel mantém correções de autenticação, flashcard e layouts estreitos',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+  assert.match(html,/id="authForm"/);
+  assert.match(planner,/if\(button\)\s*\{\s*button\.textContent = 'Sair'/);
+  assert.doesNotMatch(planner,/id="addQuestionFlashcard"/);
+  assert.match(planner,/data-add-question-flashcard=/);
+  assert.match(css,/@media\(max-width:1024px\)\{[\s\S]*?\.video-layout,\.video-focus-mode\{grid-template-columns:1fr\}/);
+  assert.match(css,/\.qbank-mode \.question-card\{overflow:visible\}/);
 });
 
 test('marca-texto usa seletor flutuante único e permite editar marcações salvas',()=>{

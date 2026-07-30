@@ -6,7 +6,7 @@
   'use strict';
 
   const TIME_ZONE='America/Fortaleza';
-  const ROUTE_TABS=new Set(['painel','cronograma','pendencias','aulas','questoes','analise','flashcards','materiais','simulados','prescricao','areas','historico','feynman','importar-questoes','ferramentas','caderno-erros','ecg','radiografia']);
+  const ROUTE_TABS=new Set(['painel','cronograma','pendencias','aulas','questoes','analise','flashcards','materiais','simulados','prescricao','areas','historico','feynman','importar-questoes','ferramentas','caderno-erros','ecg','radiografia','semiologia']);
   const ROUTE_ALIASES={dashboard:'painel',missao:'cronograma',videos:'aulas'};
 
   function safeDecode(value=''){
@@ -15,7 +15,7 @@
   function safeEncode(value=''){return encodeURIComponent(String(value));}
   function parseRoute(hash=''){
     const parts=String(hash||'').replace(/^#\/?/,'').split('/').filter(Boolean).map(safeDecode);
-    if(!parts.length) return {tab:'painel'};
+    if(!parts.length) return {tab:''};
     const requested=ROUTE_ALIASES[parts[0]]||parts[0];
     if(requested==='questoes') return {tab:'questoes',questionId:parts[1]||''};
     if(requested==='aulas') return {tab:'aulas',videoId:parts[1]||''};
