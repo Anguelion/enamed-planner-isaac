@@ -1541,6 +1541,33 @@ function restorePlannerBackupFile(file) {
   };
   reader.readAsText(file);
 }
+function restorePlannerBackupFileReplace(file) {
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const imported = JSON.parse(String(reader.result || ''));
+      if(!imported || typeof imported !== 'object' || !Array.isArray(imported.schedule) || !imported.schedule.length) throw new Error('Backup sem cronograma');
+      if(!confirm('Substituir TUDO neste aparelho por este arquivo de backup, sem mesclar? Uma cópia do estado atual será salva antes.')) return;
+      createSafetyLocalBackup('antes de substituir tudo pelo arquivo do PC');
+      state = imported;
+      normalizeOfficialScheduleNames();
+      ensureRestartFromBlockTen();
+      ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+      invalidateActivityRenderCache();
+      writeLocalState();
+      cloudDirty = true;
+      if(currentUser && sbClient) pushCloudState({skipRemoteMerge:true});
+      showStudyToast('Backup restaurado por completo neste aparelho.');
+      render();
+    } catch(error) {
+      console.warn('Backup do computador inválido:', error);
+      alert('Não consegui restaurar este arquivo. Escolha um backup JSON do SÓqueroMed.');
+    }
+  };
+  reader.readAsText(file);
+}
+window.restorePlannerBackupFileReplace = restorePlannerBackupFileReplace;
 function backupDateTime(value) {
   const date = new Date(value);
   return Number.isNaN(date.getTime()) ? 'Data indisponível' : date.toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'});
@@ -1644,7 +1671,7 @@ function renderCloudBackupCard() {
         : cloudBackups.length
           ? `<div class="cloud-backup-list">${cloudBackups.map(item => `<div class="cloud-backup-row"><div><strong>${escapeHtml(item.label || 'Backup sem nome')}</strong><small>${backupDateTime(item.created_at)}</small></div><div class="cloud-backup-actions"><button class="tiny-btn" data-restore-cloud-backup="${escapeAttr(item.id)}">Restaurar</button><button class="icon-btn danger" title="Excluir backup" data-delete-cloud-backup="${escapeAttr(item.id)}">${iconSvg('delete',{weight:'regular'})}</button></div></div>`).join('')}</div>`
           : '<div class="muted">Ainda não há backups na nuvem.</div>';
-  return `<div class="card cloud-backup-card"><div class="section-title"><div><h2>Sincronização e backups</h2><div class="muted">O estudo salva automaticamente; crie cópias recuperáveis quando quiser.</div></div><span class="backup-status ${online?'online':'offline'}">${online?'Conta conectada':'Somente local'}</span></div><div class="cloud-backup-controls"><input class="input" id="cloudBackupLabel" maxlength="80" placeholder="Nome opcional do backup"><button class="icon-btn" id="syncNowBtn" type="button">${iconSvg('history')}<span>Sincronizar agora</span></button><button class="icon-btn" id="forcePushCloudBtn" type="button">${iconSvg('upload')}<span>Enviar este aparelho</span></button><button class="icon-btn primary" id="createCloudBackup" type="button">${iconSvg('save')}<span>Salvar backup</span></button><button class="icon-btn" id="downloadBackupPcBtn" type="button">${iconSvg('download')}<span>Baixar no PC</span></button><button class="icon-btn" id="chooseBackupPcBtn" type="button">${iconSvg('upload')}<span>Restaurar do PC</span></button><input class="hidden" id="backupImportPcInput" type="file" accept=".json,application/json"></div><div class="backup-section"><strong>Backups locais</strong>${localBody}</div><div class="backup-section"><strong>Backups na nuvem</strong>${body}</div></div>`;
+  return `<div class="card cloud-backup-card"><div class="section-title"><div><h2>Sincronização e backups</h2><div class="muted">O estudo salva automaticamente; crie cópias recuperáveis quando quiser.</div></div><span class="backup-status ${online?'online':'offline'}">${online?'Conta conectada':'Somente local'}</span></div><div class="cloud-backup-controls"><input class="input" id="cloudBackupLabel" maxlength="80" placeholder="Nome opcional do backup"><button class="icon-btn" id="syncNowBtn" type="button">${iconSvg('history')}<span>Sincronizar agora</span></button><button class="icon-btn" id="forcePushCloudBtn" type="button">${iconSvg('upload')}<span>Enviar este aparelho</span></button><button class="icon-btn primary" id="createCloudBackup" type="button">${iconSvg('save')}<span>Salvar backup</span></button><button class="icon-btn" id="downloadBackupPcBtn" type="button">${iconSvg('download')}<span>Baixar no PC</span></button><button class="icon-btn" id="chooseBackupPcBtn" type="button">${iconSvg('upload')}<span>Restaurar do PC</span></button><input class="hidden" id="backupImportPcInput" type="file" accept=".json,application/json"><button class="icon-btn danger" id="chooseBackupPcReplaceBtn" type="button">${iconSvg('upload')}<span>Restaurar do PC (substituir tudo)</span></button><input class="hidden" id="backupImportPcReplaceInput" type="file" accept=".json,application/json"></div><div class="backup-section"><strong>Backups locais</strong>${localBody}</div><div class="backup-section"><strong>Backups na nuvem</strong>${body}</div></div>`;
 }
 function bindCloudBackupCard() {
   document.getElementById('syncNowBtn')?.addEventListener('click', forcePlannerSync);
@@ -1654,6 +1681,11 @@ function bindCloudBackupCard() {
   document.getElementById('chooseBackupPcBtn')?.addEventListener('click', () => document.getElementById('backupImportPcInput')?.click());
   document.getElementById('backupImportPcInput')?.addEventListener('change', event => {
     restorePlannerBackupFile(event.target.files?.[0]);
+    event.target.value = '';
+  });
+  document.getElementById('chooseBackupPcReplaceBtn')?.addEventListener('click', () => document.getElementById('backupImportPcReplaceInput')?.click());
+  document.getElementById('backupImportPcReplaceInput')?.addEventListener('change', event => {
+    restorePlannerBackupFileReplace(event.target.files?.[0]);
     event.target.value = '';
   });
   document.querySelectorAll('[data-restore-cloud-backup]').forEach(button => button.addEventListener('click', event => restoreCloudBackup(event.currentTarget.dataset.restoreCloudBackup)));
