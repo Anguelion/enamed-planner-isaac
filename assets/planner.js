@@ -17,6 +17,13 @@ const LOCAL_BACKUP_LIMIT = 12;
 const AUTO_BACKUP_RETENTION_DAYS = 7;
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
+// Apps instalados (PWA/WebAPK) no Android às vezes restauram a página antiga
+// da memória (bfcache) em vez de rodar o JS do zero, mesmo depois de limpar os
+// dados do app pelo sistema — o script continua de pé com referências para um
+// armazenamento que já não existe mais, travando sem lançar nenhum erro.
+window.addEventListener('pageshow', event => {
+  if (event.persisted) location.reload();
+});
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./service-worker.js', { updateViaCache:'none' })
