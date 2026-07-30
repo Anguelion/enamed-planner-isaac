@@ -1093,6 +1093,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     };
   });
 
+  merged.flashcardLibrary = mergeRecordsById(remote.flashcardLibrary, local.flashcardLibrary, preferLocal);
   merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions, preferLocal);
   merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
   merged.gamification = mergeGamificationState(remote.gamification, local.gamification);
