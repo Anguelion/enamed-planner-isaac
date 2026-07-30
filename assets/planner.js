@@ -127,6 +127,7 @@ let cloudDirty = false;
 let cloudRevision = 0;
 let lastCloudSyncAt = 0;
 let cloudSyncPoll = null;
+let cloudPushPoll = null;
 let serverClockOffsetMs = 0;
 let lastSyncConflictAt = 0;
 let syncConflictCount = 0;
@@ -1518,11 +1519,37 @@ async function pullCloudState({ firstLogin=false }={}) {
     setSyncStatus('Erro', 'error', 'Erro ao sincronizar');
   }
 }
+let remoteUpdateAvailableAt = 0;
+// Em vez de puxar e mesclar sozinho em segundo plano (era a origem dos bugs de
+// sincronização), só avisamos que há algo novo; quem decide puxar é a pessoa.
+async function checkForRemoteUpdate() {
+  if(!currentUser || !sbClient || !CLOUD_SYNC_ALLOWED || syncInFlight) return;
+  try {
+    const { data, error } = await sbClient.from('planner_states').select('updated_at').eq('user_id', currentUser.id).maybeSingle();
+    if(error || !data?.updated_at) return;
+    const remoteAt = Date.parse(data.updated_at) || 0;
+    if(remoteAt > Math.max(lastCloudSyncAt || 0, localStateStamp())) {
+      remoteUpdateAvailableAt = remoteAt;
+      setSyncStatus('Nova versão', 'busy', 'Há uma versão mais nova na nuvem — clique para puxar');
+    }
+  } catch(error) { console.warn('Falha ao checar nuvem:', error); }
+}
+async function pullRemoteUpdateNow() {
+  if(!currentUser || !sbClient || !CLOUD_SYNC_ALLOWED) return;
+  remoteUpdateAvailableAt = 0;
+  await pullCloudState({firstLogin:true});
+  showStudyToast('Dados mais recentes da nuvem foram puxados para este aparelho.');
+  if(ui.tab === 'ferramentas') renderFerramentas();
+}
 function startCloudSyncPolling() {
   if(cloudSyncPoll) clearInterval(cloudSyncPoll);
   cloudSyncPoll = setInterval(() => {
-    if(currentUser && !document.hidden && !syncInFlight) pullCloudState();
+    if(currentUser && !document.hidden && !syncInFlight) checkForRemoteUpdate();
   }, 60000);
+  if(cloudPushPoll) clearInterval(cloudPushPoll);
+  cloudPushPoll = setInterval(() => {
+    if(currentUser && !syncInFlight) pushCloudState();
+  }, 5 * 60000);
 }
 function fullPlannerBackup() {
   checkpointAutoStudyTime(true);
@@ -1733,7 +1760,7 @@ function bindCloudBackupCard() {
   if(currentUser && !cloudBackupsReady && !cloudBackupsLoading && !cloudBackupsError) loadCloudBackups().then(() => { if(ui.tab === 'ferramentas') renderFerramentas(); });
 }
 window.addEventListener('focus', () => {
-  if(currentUser && !syncInFlight) pullCloudState();
+  if(currentUser && !syncInFlight) checkForRemoteUpdate();
 });
 document.addEventListener('click', event => {
   const bar = event.target.closest('.dashboard-bars.weekly-bars>div>span');
@@ -1741,7 +1768,7 @@ document.addEventListener('click', event => {
   if(bar) bar.classList.toggle('show-value');
 });
 document.addEventListener('visibilitychange', () => {
-  if(!document.hidden && currentUser && !syncInFlight) pullCloudState();
+  if(!document.hidden && currentUser && !syncInFlight) checkForRemoteUpdate();
 });
 function loadQuestionBank() {
   if(!questionBankLoadPromise) questionBankLoadPromise = loadQuestionBankNow();
@@ -10602,7 +10629,10 @@ document.addEventListener('keydown', event => {
 document.getElementById('headerTrailBtn')?.addEventListener('click', () => navigateToTab('cronograma'));
 document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.pomodoroOpen=!ui.pomodoroOpen; navigateToTab('painel'); });
 document.getElementById('headerSyncBtn')?.addEventListener('click', () => forcePlannerSync());
-document.getElementById('syncStatus')?.addEventListener('click', () => toggleSyncTelemetryDashboard());
+document.getElementById('syncStatus')?.addEventListener('click', () => {
+  if(remoteUpdateAvailableAt) { pullRemoteUpdateNow(); return; }
+  toggleSyncTelemetryDashboard();
+});
 document.getElementById('headerLogoutBtn')?.addEventListener('click', async () => {
   if(!currentUser) { alert('Você não está logado.'); return; }
   const confirmed = confirm('Tem certeza que deseja sair?\n\nSeus dados locais continuarão salvos. Você precisará fazer login novamente para sincronizar.');
@@ -10643,7 +10673,7 @@ document.addEventListener('visibilitychange', () => {
     persistQuestionTimerSession();
   }
   if(document.visibilityState === 'visible') {
-    if(currentUser) pullCloudState();
+    if(currentUser) checkForRemoteUpdate();
     resumeAutoStudyForActiveView();
   }
 });
@@ -10670,7 +10700,7 @@ window.addEventListener('pagehide', () => {
   flushCloudSaveNow();
 });
 window.addEventListener('online', () => {
-  if(currentUser) pullCloudState();
+  if(currentUser) checkForRemoteUpdate();
 });
 window.addEventListener('popstate', restoreNavigation);
 document.addEventListener('keydown', handleHighlightUndoKeyboard);
