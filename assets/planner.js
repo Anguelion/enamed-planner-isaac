@@ -190,7 +190,38 @@ function dropOldestLocalBackups() {
     try { localStorage.removeItem(LOCAL_BACKUPS_KEY); return true; } catch(nested) { return false; }
   }
 }
+let allowLargeProgressDrop = false;
+function progressFingerprint(s) {
+  const sumLens = obj => Object.values(obj || {}).reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
+  return {
+    flashcards: (Array.isArray(s?.flashcardLibrary) ? s.flashcardLibrary.length : 0) + sumLens(s?.questionFlashcards) + sumLens(s?.videoFlashcards),
+    questions: Object.keys(s?.questionProgress || {}).length
+  };
+}
+// Os incidentes de "sumiu progresso" sempre vieram de uma gravação silenciosa
+// (merge com bug, cache velho, restauração ruim) por cima de dados maiores.
+// Antes de sobrescrever, comparamos com o que já estava salvo: se a queda for
+// grande, guardamos o estado maior em backup e avisamos, em vez de só apagar.
+function guardAgainstSilentProgressLoss() {
+  if(allowLargeProgressDrop) return;
+  try {
+    const previous = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+    if(!previous) return;
+    const before = progressFingerprint(previous);
+    const after = progressFingerprint(state);
+    const bigDrop = (metric) => before[metric] >= 20 && after[metric] < before[metric] * 0.5;
+    if(bigDrop('flashcards') || bigDrop('questions')) {
+      localBackups = [
+        { id:`local-backup-${Date.now()}-${Math.random().toString(36).slice(2,8)}`, label:`Cópia de segurança automática (antes de queda de progresso)`, created_at:new Date().toISOString(), reason:'queda-detectada', data:{ ...previous, backupInfo:{ format:'soqueromed-completo', version:3, exportedAt:new Date().toISOString() } } },
+        ...localBackups
+      ].slice(0, LOCAL_BACKUP_LIMIT);
+      saveLocalBackups();
+      showStudyToast('Detectei uma queda grande em questões/flashcards e salvei uma cópia de segurança em Ferramentas > Backups locais antes de continuar.');
+    }
+  } catch(error) { console.warn('Falha ao checar queda de progresso:', error); }
+}
 function writeLocalState() {
+  guardAgainstSilentProgressLoss();
   const payload = JSON.stringify(state);
   for(let attempt = 0; attempt < 4; attempt += 1) {
     try {
@@ -1259,12 +1290,14 @@ function restoreLocalBackup(id) {
   if(!item?.data?.schedule?.length) { alert('Não consegui abrir esse backup local.'); return; }
   if(!confirm('Restaurar este backup local neste aparelho? O estado atual será salvo antes de restaurar.')) return;
   createSafetyLocalBackup('antes de restaurar backup local');
+  allowLargeProgressDrop = true;
   state = structuredClone(item.data);
   normalizeOfficialScheduleNames();
   ensureRestartFromBlockTen();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   invalidateActivityRenderCache();
   writeLocalState();
+  allowLargeProgressDrop = false;
   cloudDirty = true;
   scheduleCloudSave();
   showStudyToast(`Backup local restaurado: ${item.label}.`);
@@ -1550,12 +1583,14 @@ function restorePlannerBackupFileReplace(file) {
       if(!imported || typeof imported !== 'object' || !Array.isArray(imported.schedule) || !imported.schedule.length) throw new Error('Backup sem cronograma');
       if(!confirm('Substituir TUDO neste aparelho por este arquivo de backup, sem mesclar? Uma cópia do estado atual será salva antes.')) return;
       createSafetyLocalBackup('antes de substituir tudo pelo arquivo do PC');
+      allowLargeProgressDrop = true;
       state = imported;
       normalizeOfficialScheduleNames();
       ensureRestartFromBlockTen();
       ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
       invalidateActivityRenderCache();
       writeLocalState();
+      allowLargeProgressDrop = false;
       cloudDirty = true;
       if(currentUser && sbClient) pushCloudState({skipRemoteMerge:true});
       showStudyToast('Backup restaurado por completo neste aparelho.');
@@ -1639,12 +1674,15 @@ async function restoreCloudBackup(id) {
   if(!confirm('Restaurar esta cópia neste aparelho? O estado atual será substituído e depois sincronizado.')) return;
   const { data, error } = await sbClient.from('planner_backups').select('data,label,created_at').eq('id',id).eq('user_id',currentUser.id).maybeSingle();
   if(error || !data?.data?.schedule?.length) { alert('Não consegui abrir esse backup.'); return; }
+  createSafetyLocalBackup('antes de restaurar backup da nuvem');
+  allowLargeProgressDrop = true;
   state = data.data;
   normalizeOfficialScheduleNames();
   ensureRestartFromBlockTen();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   invalidateActivityRenderCache();
   writeLocalState();
+  allowLargeProgressDrop = false;
   cloudDirty = true;
   await pushCloudState();
   showStudyToast(`Backup restaurado: ${data.label || backupDateTime(data.created_at)}.`);
