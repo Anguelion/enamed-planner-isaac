@@ -31,7 +31,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "Um remédio forte (antibiótico) matou as bactérias boas do intestino da senhora, e aí um micróbio chamado Clostridium difficile, que era controlado por essas bactérias boas, cresceu demais e causou a diarreia."
     },
     {
       "id": "b24-q002",
@@ -61,7 +62,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Colocar o aparelho de escutar embaixo da faixa que aperta o braço atrapalha a medição, então o número da pressão pode sair errado."
     },
     {
       "id": "b24-q003",
@@ -91,7 +93,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Esse remédio protege os rins, que já são fracos nessa criança, além de baixar a pressão, por isso é a melhor escolha."
     },
     {
       "id": "b24-q004",
@@ -124,7 +127,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "A pressão dela está normal para a idade e ela já está fazendo dieta e exercício direitinho, então só precisa continuar assim e medir de novo daqui a um ano."
     },
     {
       "id": "b24-q005",
@@ -154,7 +158,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "Fazendo uma câmera dentro do intestino (colonoscopia) e tirando um pedacinho para examinar, os médicos encontram um tipo de inflamação (granuloma) que aparece na doença de Crohn, explicando a diarreia, as feridas na boca e o olho vermelho."
     },
     {
       "id": "b24-q006",
@@ -190,7 +195,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Comparando a pressão do menino com a tabela de crianças da mesma idade e altura, o valor encontrado já é alto o suficiente para ser considerado hipertensão em estágio inicial."
     },
     {
       "id": "b24-q007",
@@ -221,7 +227,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Um tumor no topo do pulmão pode apertar nervos que passam ali perto, causando dor no braço e problemas no olho (pálpebra caída, pupila pequena, sem suor de um lado) — esse conjunto de sinais tem nome próprio."
     },
     {
       "id": "b24-q008",
@@ -251,7 +258,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Como o caroço no pulmão é pequeno e tem bastante cálcio no meio, isso é sinal de que é uma coisa antiga e não perigosa, então só precisa repetir o exame de imagem depois de um ano para conferir."
     },
     {
       "id": "b24-q009",
@@ -281,7 +289,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "Os exames mostraram inflamação contínua do reto até parte do intestino grosso, o que é a marca da retocolite ulcerativa, e o remédio usado para acalmar essa inflamação no início é um corticoide."
     },
     {
       "id": "b24-q010",
@@ -312,7 +321,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Essa doença do intestino (intestino irritável) é diagnosticada quando os sintomas já duram tempo suficiente e os médicos descartam outras doenças mais graves primeiro."
     },
     {
       "id": "b24-q011",
@@ -343,7 +353,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Um exame de sangue que procura certos anticorpos é muito confiável para descobrir a doença celíaca, e quanto mais alto o resultado, mais machucado está o intestino."
     },
     {
       "id": "b24-q012",
@@ -374,7 +385,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Para descobrir se os ossos estão fracos (osteoporose), faz-se um exame chamado densitometria óssea, e quando o resultado fica bem abaixo do esperado para adultos jovens, confirma a doença."
     },
     {
       "id": "b24-q013",
@@ -404,7 +416,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Como a colonoscopia dela deu normal, ela não emagreceu e a dor sempre melhora quando vai ao banheiro, o quadro combina com o intestino irritável, e não com uma doença inflamatória mais grave."
     },
     {
       "id": "b24-q014",
@@ -435,7 +448,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Esse remédio ajuda o corpo a construir osso novo, por isso é usado quando o risco de quebrar um osso é muito alto."
     },
     {
       "id": "b24-q015",
@@ -465,7 +479,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Quando o rouquidão aparece porque um nervo da garganta foi afetado, isso mostra que o tumor já cresceu e afetou gânglios importantes perto do meio do peito, o que é mais grave."
     },
     {
       "id": "b24-q016",
@@ -496,7 +511,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como a pressão dela está muito alta e ela tem sintomas de sofrimento, o tratamento precisa ser rápido e cuidadoso, baixando a pressão aos poucos, cerca de um quarto do valor, ao longo de várias horas, para não fazer mal ao corpo."
     },
     {
       "id": "b24-q017",
@@ -527,7 +543,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Para dizer que alguém tem a síndrome do intestino irritável, a dor de barriga precisa acontecer toda semana nos últimos três meses e vir acompanhada de pelo menos duas mudanças ligadas ao xixi... digo, ao cocô (indo ao banheiro ou mudando o formato das fezes)."
     },
     {
       "id": "b24-q018",
@@ -557,7 +574,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "O excesso de peso aumenta o risco de vários tipos de câncer, mas não do câncer de pulmão, que está mais ligado ao cigarro."
     },
     {
       "id": "b24-q019",
@@ -590,7 +608,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Como o senhor teve a mesma pneumonia repetindo várias vezes no mesmo lugar do pulmão e emagreceu bastante, é importante pegar um pedacinho daquela área para examinar e descobrir se é algo mais sério, como um tumor."
     },
     {
       "id": "b24-q020",
@@ -620,7 +639,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Pessoas magras, de pele clara e que têm doenças como artrite reumatoide correm mais risco de ter ossos fracos."
     },
     {
       "id": "b24-q021",
@@ -650,7 +670,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Como o caroço no pulmão é pequeno, redondo e tem cálcio, ele parece ser uma coisa antiga e sem perigo, então só é preciso acompanhar com consultas de rotina."
     },
     {
       "id": "b24-q022",
@@ -683,7 +704,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "O menino está acima do peso e sua pressão está um pouco alta, mas para ter certeza do diagnóstico é preciso medir a pressão de novo em outros dias, além de já começar a melhorar a alimentação e os exercícios de toda a família."
     },
     {
       "id": "b24-q023",
@@ -713,7 +735,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Como o senhor morreu por causa de um acidente de carro (mesmo tendo passado várias semanas), isso é considerado morte por causa externa, e por lei o corpo precisa ser examinado pelo Instituto Médico Legal, não pelo médico da família."
     },
     {
       "id": "b24-q024",
@@ -743,7 +766,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Segundo os pediatras brasileiros, a pressão da criança é considerada normal quando fica abaixo de um certo valor da tabela, que leva em conta o sexo, a idade e a altura dela."
     },
     {
       "id": "b24-q025",
@@ -773,7 +797,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Entre os exames que todo paciente com pressão alta precisa fazer, o açúcar no sangue em jejum não está na lista obrigatória, mesmo sendo importante em outras situações."
     },
     {
       "id": "b24-q026",
@@ -803,7 +828,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Quem deve preencher o atestado é o médico que já acompanhava o idoso em casa, e a causa da morte deve seguir a ordem certa: primeiro a pneumonia (o que causou a morte), depois a doença pulmonar crônica que ele já tinha, e por último os outros problemas que ele carregava, como pressão alta e paralisia do AVC."
     },
     {
       "id": "b24-q027",
@@ -833,7 +859,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "Os sintomas dela — diarreia com sangue e muco, urgência para ir ao banheiro e perda de peso — combinam com uma inflamação crônica do intestino chamada retocolite ulcerativa."
     },
     {
       "id": "b24-q028",
@@ -863,7 +890,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Os rins doentes fazem o corpo reter muito fósforo e produzir pouca vitamina D ativa, então uma glândula (paratireoide) trabalha demais tentando corrigir isso, o que enfraquece e deforma os ossos — é a chamada osteíte fibrosa."
     },
     {
       "id": "b24-q029",
@@ -893,7 +921,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Como o exame de sangue mostrou cálcio muito alto e um hormônio (PTH) elevado ao mesmo tempo, é preciso investigar as glândulas do pescoço (paratireoides) com exames de imagem, pois elas podem estar produzindo hormônio demais."
     },
     {
       "id": "b24-q030",
@@ -923,7 +952,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Além de parar de tomar os remédios que machucam os rins, a senhora precisa de cálcio, vitamina D, fisioterapia e um remédio injetável (denosumabe) que é mais seguro para quem tem os rins fracos."
     },
     {
       "id": "b24-q031",
@@ -954,7 +984,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "Como o quadro é grave e os antibióticos comuns já não funcionaram, os médicos devem pegar amostras das fezes para confirmar o micróbio causador (com dois testes juntos) e já começar um remédio mais forte, tomado pela boca."
     },
     {
       "id": "b24-q032",
@@ -984,7 +1015,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "O excesso de trabalho, cobrança e medo de ser demitido deixou o homem esgotado (síndrome de burnout) e também desenvolveu uma tristeza profunda que é a depressão — as duas coisas apareceram juntas."
     },
     {
       "id": "b24-q033",
@@ -1014,7 +1046,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Como ela já teve um osso da coluna quebrando sozinho (fratura por fragilidade), o remédio que mais protege contra novas quebras de osso é um da família dos bisfosfonatos."
     },
     {
       "id": "b24-q034",
@@ -1045,7 +1078,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Os sintomas dela — dor, sangramento, perda de peso e dor do lado direito da barriga — combinam com uma inflamação crônica do intestino chamada doença de Crohn."
     },
     {
       "id": "b24-q035",
@@ -1075,7 +1109,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "A alternativa errada é dizer que remédios contra depressão de ação bem longa são sempre a melhor escolha para idosos: na verdade em idosos deve-se preferir remédios de meia-vida mais curta, porque ficam menos tempo acumulados no corpo e causam menos efeitos colaterais."
     },
     {
       "id": "b24-q036",
@@ -1106,7 +1141,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Para uma depressão leve, o posto de saúde deve acompanhar o paciente com consultas regulares e apoio psicológico ali mesmo, sem precisar logo de um especialista ou de remédios fortes."
     },
     {
       "id": "b24-q037",
@@ -1137,7 +1173,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Como os ossos dela estão fracos mas ela nunca quebrou nenhum, o tratamento indicado é um remédio para fortalecer os ossos tomado por via oral, junto com vitamina D para ajudar a absorver o cálcio."
     },
     {
       "id": "b24-q038",
@@ -1167,7 +1204,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Mesmo sendo a menor cirurgia ainda segura contra o câncer, para esse tumor no meio do lobo do pulmão é preciso retirar o lobo inteiro, não só um pedacinho."
     },
     {
       "id": "b24-q039",
@@ -1198,7 +1236,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "O câncer de pulmão está fazendo o corpo produzir um hormônio (ADH) em excesso, o que faz o corpo reter água demais e o sal do sangue ficar muito diluído, causando confusão mental e inchaço."
     },
     {
       "id": "b24-q040",
@@ -1229,7 +1268,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Esse tipo de câncer de pulmão cresce e se espalha rápido, então o tratamento certo é remédio para todo o corpo (quimioterapia) junto com radiação para a área afetada, e não cirurgia."
     },
     {
       "id": "b24-q041",
@@ -1259,7 +1299,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Em crianças, para saber se a pressão está alta, os médicos comparam com uma tabela que leva em conta o sexo, a idade e a altura: valores muito altos indicam hipertensão e valores um pouco altos indicam pré-hipertensão."
     },
     {
       "id": "b24-q042",
@@ -1289,7 +1330,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "A faixa que aperta o braço para medir a pressão precisa ter uma largura que seja mais ou menos a metade do tamanho ao redor do braço, senão o resultado sai errado."
     },
     {
       "id": "b24-q043",
@@ -1319,7 +1361,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como as três medidas de pressão do adolescente ficaram sempre acima do valor esperado para a idade dele, isso já é considerado o primeiro estágio de hipertensão."
     },
     {
       "id": "b24-q044",
@@ -1350,7 +1393,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como a pressão dela ficou repetidamente alta em várias consultas, o próximo passo é confirmar com um aparelho que mede a pressão o dia inteiro (MAPA), antes de partir para outros exames ou remédios."
     },
     {
       "id": "b24-q045",
@@ -1380,7 +1424,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Em vez de dar mais remédios, o melhor é ajudar o paciente a dormir melhor de forma natural, com hábitos de sono, exercício e perda de peso, já que ele ganhou peso com o antidepressivo."
     },
     {
       "id": "b24-q046",
@@ -1410,7 +1455,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Para diagnosticar depressão, além da tristeza, o outro sintoma mais importante é perder o interesse e o prazer em coisas que antes eram divertidas."
     },
     {
       "id": "b24-q047",
@@ -1440,7 +1486,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Como o paciente já melhorou com o remédio antes e agora piorou de repente com sangue e muco, é preciso pensar que outra infecção pode estar se somando à doença, não só considerar que a doença piorou sozinha."
     },
     {
       "id": "b24-q048",
@@ -1470,7 +1517,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "A tristeza constante, a perda de interesse pelas coisas que gostava, a dificuldade de concentração e principalmente os pensamentos de se machucar mostram que esse adolescente está com depressão."
     },
     {
       "id": "b24-q049",
@@ -1500,7 +1548,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Mesmo sem ter sofrido violência, a mulher tem direito de saber tudo sobre a lei e sobre sua saúde com sigilo, e o médico deve explicar quais sinais de perigo procurar caso ela decida interromper a gravidez, sem julgá-la nem denunciá-la."
     },
     {
       "id": "b24-q050",
@@ -1530,7 +1579,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Como ela já tem osteoporose confirmada, o tratamento certo junta um remédio para fortalecer o osso (bisfosfonato) com exercícios físicos regulares e reposição de cálcio e vitamina D."
     },
     {
       "id": "b24-q051",
@@ -1560,7 +1610,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Os sintomas dela — tristeza, cansaço, falta de concentração e sono ruim por meses — mostram uma depressão, e o tratamento indicado é começar com um remédio da classe mais usada e mais segura para isso, pesando os riscos e benefícios antes."
     },
     {
       "id": "b24-q052",
@@ -1591,7 +1642,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como a pressão da menina está normal e igual à de seis meses atrás, basta manter os bons hábitos e remarcar a próxima aferição também para daqui a seis meses, sem precisar de exames extras agora."
     },
     {
       "id": "b24-q053",
@@ -1621,7 +1673,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Quando a pressão sobe muito rápido e já está machucando algum órgão, o remédio na veia mais usado para baixar a pressão com segurança e rapidez é o nitroprussiato de sódio."
     },
     {
       "id": "b24-q054",
@@ -1651,7 +1704,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Para medir a pressão certinho no braço direito da criança, a parte que aperta (bolsa do manguito) precisa ter uma largura de cerca de 40% da volta do braço e cobrir quase todo o braço no comprimento."
     },
     {
       "id": "b24-q055",
@@ -1681,7 +1735,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Quase todas as condições citadas fazem o médico começar a medir a pressão da criança mais cedo do que o normal, menos ter Síndrome de Down sozinha, sem nenhum outro problema junto."
     },
     {
       "id": "b24-q056",
@@ -1712,7 +1767,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Quando uma pessoa já quebrou um osso por ele estar fraco, ela precisa de remédio para osteoporose mesmo que o exame de densidade óssea não mostre um número muito baixo."
     },
     {
       "id": "b24-q057",
@@ -1742,7 +1798,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como a pressão da menina ficou um pouco alta e ela está com sobrepeso, o primeiro passo é orientar alimentação e exercício, e medir a pressão de novo em uma ou duas semanas para confirmar, sem já iniciar remédio."
     },
     {
       "id": "b24-q058",
@@ -1773,7 +1830,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Como o policial está triste, sem energia, bebendo mais e já pensou que não faria falta se morresse, é importante o médico perguntar diretamente se ele já pensou em um plano para se machucar, pois isso ajuda a entender o risco real, sem medo de que a pergunta piore a situação."
     },
     {
       "id": "b24-q059",
@@ -1805,7 +1863,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Ao preencher o atestado de óbito, a ordem certa das causas é começar pelo problema mais imediato (a falta de ar grave) e terminar pela causa mais antiga e de base (o tabagismo, que levou à doença pulmonar crônica, que levou à pneumonia)."
     },
     {
       "id": "b24-q060",
@@ -1835,7 +1894,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Na declaração de óbito de uma gestante, primeiro se coloca o problema que causou a morte diretamente (o sangramento no cérebro), depois a doença da gravidez que causou esse sangramento (pressão alta grave da gravidez), e por último, em outra parte do documento, o diabetes que ela já tinha antes."
     },
     {
       "id": "b24-q061",
@@ -1866,7 +1926,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Como o senhor morreu em casa por causa de doenças que ele já tinha havia anos, o médico que o acompanhava pode examinar o corpo e preencher a declaração de óbito, sem precisar mandar para o Instituto Médico Legal, pois não foi um acidente nem crime."
     },
     {
       "id": "b24-q062",
@@ -1897,7 +1958,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "O coração dela já está engrossando (hipertrofia) por causa da pressão alta que não baixa, então além de melhorar os hábitos, já é hora de começar um remédio para baixar a pressão."
     },
     {
       "id": "b24-q063",
@@ -1927,7 +1989,8 @@
         "Pediatria Ambulatorial"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Todas as afirmações sobre quando medir a pressão das crianças estão certas: uma vez por ano depois dos 3 anos, em toda consulta se tiver sobrepeso, e antes dos 3 anos se tiver algum fator de risco especial."
     },
     {
       "id": "b24-q064",
@@ -1958,7 +2021,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Mesmo sendo uma morte em casa e esperada, o médico que acompanhava o paciente deve preencher a declaração de óbito normalmente, explicando a sequência de doenças que levaram à morte."
     },
     {
       "id": "b24-q065",
@@ -1989,7 +2053,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "Essa combinação de dor nas juntas indo e voltando, diarreia que não passa e problemas na visão é típica de uma doença rara causada por uma bactéria que afeta o intestino, chamada doença de Whipple."
     },
     {
       "id": "b24-q066",
@@ -2019,7 +2084,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "A médica que cuidava dele deve preencher o atestado, colocando primeiro o problema mais recente que causou a morte (falta de ar grave), depois a pneumonia, depois a gripe que começou tudo, e em outra parte as doenças antigas dele (AVC e pressão alta)."
     },
     {
       "id": "b24-q067",
@@ -2049,7 +2115,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Como a perda do filho foi há poucos dias e é uma reação normal de luto (não uma doença), o melhor é a equipe do posto de saúde acompanhar essa mãe de perto e oferecer apoio, sem precisar logo de remédios ou de um psiquiatra."
     },
     {
       "id": "b24-q068",
@@ -2079,7 +2146,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "O câncer está fazendo o corpo produzir hormônio (ADH) demais, o que deixa o xixi mais concentrado e o sal do sangue mais diluído — isso é a síndrome de secreção inapropriada de ADH."
     },
     {
       "id": "b24-q069",
@@ -2109,7 +2177,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Quando a pressão de uma criança fica alta por muito tempo, o coração e os vasos sanguíneos podem começar a sofrer alterações, como o coração ficando mais grosso, mesmo antes de dar sintomas."
     },
     {
       "id": "b24-q070",
@@ -2139,7 +2208,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Como o homem morreu depois de um acidente de trabalho (queda), mesmo tendo ficado internado várias semanas, a morte é considerada por causa externa e o corpo precisa ser examinado pelo Instituto Médico Legal."
     },
     {
       "id": "b24-q071",
@@ -2169,7 +2239,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Como ele mesmo já suspeita que a causa é a falta de exercício e não quer remédio nem terapia agora, o melhor primeiro passo é reforçar e incentivar que ele volte a se exercitar, e reavaliar depois."
     },
     {
       "id": "b24-q072",
@@ -2199,7 +2270,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Para prescrever remédios como a caneta emagrecedora (semaglutida), depois da nova regra, o médico precisa usar uma receita especial em duas vias, que fica registrada."
     },
     {
       "id": "b24-q073",
@@ -2229,7 +2301,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Como o paciente está com muitas evacuações de sangue e sinais de gravidade (pressão baixa, coração acelerado, anemia), a doença inflamatória do intestino precisa ser tratada com corticoide na veia, em dose adequada para o caso grave."
     },
     {
       "id": "b24-q074",
@@ -2259,7 +2332,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "O exame de PCR nas fezes é muito sensível para achar o micróbio Clostridioides difficile, mas ele pode dar positivo mesmo em pessoas que só carregam o micróbio sem estar doentes, por isso o resultado precisa ser interpretado junto com os sintomas do paciente."
     },
     {
       "id": "b24-q075",
@@ -2290,7 +2364,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Para essa síndrome do intestino irritável, o primeiro passo sem remédios é cortar alimentos que fermentam muito no intestino (os FODMAPs), acompanhado por um nutricionista."
     },
     {
       "id": "b24-q076",
@@ -2320,7 +2395,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "Como todos os exames deram normais e a dor melhora depois de ir ao banheiro, o quadro é do intestino irritável, e o tratamento começa com dieta e remédios leves para as cólicas, sem precisar de exames invasivos."
     },
     {
       "id": "b24-q077",
@@ -2350,7 +2426,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Na cirurgia da doença de Crohn, o jeito de juntar os pedaços do intestino (anastomose) precisa ser escolhido conforme o quanto a doença está grave e onde ela está localizada."
     },
     {
       "id": "b24-q078",
@@ -2381,7 +2458,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "A dor nas juntas grandes que aparece e desaparece junto com a atividade da doença intestinal é a manifestação fora do intestino mais ligada diretamente à doença de Crohn."
     },
     {
       "id": "b24-q079",
@@ -2411,7 +2489,8 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-223"
+      "scheduleId": "cron-223",
+      "kids": "Como o paciente está sangrando muito e não parou mesmo depois de repor sangue e soro, é preciso operar de urgência tirando o intestino grosso doente e fazendo uma abertura temporária (ileostomia), guardando o reto para decidir depois."
     },
     {
       "id": "b24-q080",
@@ -2441,7 +2520,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "O sinal mais característico, visto no microscópio, que ajuda a diferenciar a doença de Crohn de outras doenças do intestino é um tipo de inflamação chamado granuloma não caseoso."
     },
     {
       "id": "b24-q081",
@@ -2472,7 +2552,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Como ela já quebrou o osso do quadril sozinho (fratura de fragilidade), isso já indica osteoporose de risco muito alto, então precisa de cálcio, vitamina D e um remédio que estimula a formação de osso novo (teriparatida)."
     },
     {
       "id": "b24-q082",
@@ -2502,7 +2583,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Na tuberculose, certas células de defesa (granulomas) produzem vitamina D ativa em excesso, o que aumenta demais a absorção de cálcio e sobe o cálcio no sangue."
     },
     {
       "id": "b24-q083",
@@ -2534,7 +2616,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Como ela já quebrou vários ossos (quadril, coluna e pulso) sem quase nenhum trauma, isso é osteoporose de risco muito alto, então o tratamento indicado é um remédio injetável que ajuda a formar osso novo (teriparatida), junto com cálcio e vitamina D."
     },
     {
       "id": "b24-q084",
@@ -2564,7 +2647,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-224"
+      "scheduleId": "cron-224",
+      "kids": "Pelo exame de densidade óssea, a coluna dela já mostra osteoporose, e como ela tem os rins fracos, o remédio mais seguro nesse caso é o denosumabe, que não precisa ser eliminado pelos rins."
     },
     {
       "id": "b24-q085",
@@ -2594,7 +2678,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Antes de decidir a cirurgia, é importante checar se os gânglios no meio do peito têm células de câncer, usando um exame com uma câmera guiada por ultrassom (EBUS) ou uma pequena cirurgia (mediastinoscopia)."
     },
     {
       "id": "b24-q086",
@@ -2624,7 +2709,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-222"
+      "scheduleId": "cron-222",
+      "kids": "Esse tipo de nódulo (em vidro fosco) cresce muito devagar, então a conduta é acompanhar com tomografias de tempos em tempos, sem precisar operar ou biopsiar logo de cara."
     },
     {
       "id": "b24-q087",
@@ -2654,7 +2740,8 @@
         "Adolescência"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como a pressão dela subiu muito rápido e já está causando convulsão e problemas na visão (por causa do remédio pós-transplante), é preciso monitorar a pressão de forma bem precisa e baixar com um remédio forte na veia, de forma controlada ao longo de várias horas."
     },
     {
       "id": "b24-q088",
@@ -2684,7 +2771,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Para medir a pressão certinho, a parte que aperta o braço da criança precisa ter o tamanho proporcional ao braço dela: cerca de 9 cm de largura e 18 cm de comprimento."
     },
     {
       "id": "b24-q089",
@@ -2715,7 +2803,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como foi a primeira vez que a pressão dele deu um pouco alta, antes de decidir qualquer coisa é preciso medir de novo mais duas vezes e tirar a média, para ter certeza do resultado."
     },
     {
       "id": "b24-q090",
@@ -2745,7 +2834,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como a pressão do adolescente ficou bem alta em três medidas confirmadas, isso já é o estágio mais grave de hipertensão, então é preciso investigar a causa e considerar remédio."
     },
     {
       "id": "b24-q091",
@@ -2775,7 +2865,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Mesmo não sendo o médico que sempre cuidou do paciente, o médico plantonista que constatou a morte pode e deve preencher o atestado de óbito, já que ele estava presente e tem acesso ao histórico do doente."
     },
     {
       "id": "b24-q092",
@@ -2806,7 +2897,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Como a senhora não tem sinais de violência, morreu de doença natural e não há legista por perto, a lei permite que o único médico do lugar, que já cuidava dela, preencha o atestado de óbito."
     },
     {
       "id": "b24-q094",
@@ -2836,7 +2928,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Cada situação tem uma pessoa certa para preencher o atestado: morte natural no hospital é do médico que cuidava do paciente; morte natural em casa sem médico legista disponível pode ser de qualquer médico da região; morte por acidente é do legista; e um bebê que morreu ainda dentro da barriga com poucas semanas não precisa de atestado de óbito."
     },
     {
       "id": "b24-q095",
@@ -2866,7 +2959,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "O remédio antigo para ansiedade que ele estava tomando (nortriptilina) está causando boca seca, intestino preso e tontura ao levantar, então o melhor é trocar por um remédio mais moderno e com menos desses efeitos colaterais (fluoxetina)."
     },
     {
       "id": "b24-q096",
@@ -2896,7 +2990,8 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Como ela está triste, sem prazer, sem paciência e com pensamentos negativos há semanas (não só nos primeiros dias após o parto), isso já é uma depressão pós-parto de verdade, e precisa de remédio e explicação sobre a doença, não só tranquilizá-la achando que é só uma tristeza passageira dos primeiros dias."
     },
     {
       "id": "b24-q097",
@@ -2927,7 +3022,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Estudos mostram que, na depressão leve, o remédio antidepressivo não funciona muito melhor do que um remédio de mentira (placebo), por isso nesses casos vale mais investir em conversa e mudança de hábitos antes de remédio forte."
     },
     {
       "id": "b24-q098",
@@ -2957,7 +3053,8 @@
         "Pessoa Idosa"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "Como a senhora já tentou se matar antes e agora tem um plano concreto para fazer de novo, ela precisa ser levada para um serviço de emergência com ajuda de alguém de confiança, mesmo que ela não queira ir, porque sua vida está em risco imediato."
     },
     {
       "id": "b24-q099",
@@ -2987,7 +3084,8 @@
         "Atenção Primária"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-221"
+      "scheduleId": "cron-221",
+      "kids": "O ganho de peso, o cansaço mesmo dormindo e a sonolência do dia junto com a depressão que não melhora direito com o remédio sugerem que ele também pode ter uma doença em que a respiração para várias vezes durante o sono (apneia do sono)."
     },
     {
       "id": "b24-q100",
@@ -3020,7 +3118,8 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-219"
+      "scheduleId": "cron-219",
+      "kids": "Mesmo tendo perdido tanta coisa, ela dorme demais, come mais e fica muito sensível quando sente que as pessoas não gostam dela — esses sinais (ao contrário do que normalmente se espera na depressão) mostram um tipo chamado depressão com características atípicas."
     },
     {
       "id": "b24-q101",
@@ -3050,7 +3149,8 @@
         "Saúde Materno-Fetal"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "O que diferencia a depressão que aparece depois do parto das outras depressões é o medo e a culpa ligados especificamente ao bebê: a mãe sente que não dá conta de cuidar dele e chega a temer machucá-lo."
     },
     {
       "id": "b24-q102",
@@ -3080,7 +3180,8 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 24.txt",
-      "scheduleId": "cron-220"
+      "scheduleId": "cron-220",
+      "kids": "Para tratar a depressão, os remédios mais usados como primeira escolha são os que aumentam a serotonina no cérebro (chamados ISRS), por serem eficazes e terem menos efeitos colaterais."
     }
   ]
 }
