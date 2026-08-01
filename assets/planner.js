@@ -10655,7 +10655,12 @@ document.addEventListener('keydown', event => {
 }, true);
 document.getElementById('headerTrailBtn')?.addEventListener('click', () => navigateToTab('cronograma'));
 document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.pomodoroOpen=!ui.pomodoroOpen; navigateToTab('painel'); });
-document.getElementById('headerSyncBtn')?.addEventListener('click', () => forcePlannerSync());
+document.getElementById('headerSendBtn')?.addEventListener('click', () => forcePushThisDeviceToCloud());
+document.getElementById('headerReceiveBtn')?.addEventListener('click', () => {
+  if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para receber dados da nuvem.'); return; }
+  if(!confirm('Puxar e mesclar os dados mais recentes da nuvem neste aparelho?')) return;
+  pullRemoteUpdateNow();
+});
 document.getElementById('syncStatus')?.addEventListener('click', () => {
   if(remoteUpdateAvailableAt) { pullRemoteUpdateNow(); return; }
   toggleSyncTelemetryDashboard();
