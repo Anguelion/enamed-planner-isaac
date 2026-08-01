@@ -1369,8 +1369,27 @@ let cloudSyncRetryDelayMs = 0;
 let cloudRetryTimer = null;
 let cloudRetryCount = 0;
 const CLOUD_SYNC_MAX_RETRIES = 8;
-function scheduleCloudRetry() {
+// Erro de permissão/sessão expirada não se resolve tentando de novo — ficar
+// reagendando por até ~8min só atrasa o aviso de que é preciso entrar de novo.
+function isRetryableSyncError(error) {
+  const code = String(error?.code || '');
+  const message = String(error?.message || '').toLowerCase();
+  if(['42501','PGRST301','PGRST302'].includes(code)) return false;
+  if(/jwt|permission denied|not authorized|unauthorized/.test(message)) return false;
+  return true;
+}
+function scheduleCloudRetry(error) {
   cloudDirty = true;
+  if(error && !isRetryableSyncError(error)) {
+    console.error('Erro de sincronização não recuperável por retry:', error);
+    recordSyncTelemetry('push', true);
+    createSafetyLocalBackup('sessão ou permissão inválida ao sincronizar');
+    setSyncStatus('Erro', 'error', 'Sessão ou permissão inválida — saia e entre novamente para sincronizar');
+    cloudRetryCount = 0;
+    cloudSyncRetryDelayMs = 0;
+    clearTimeout(cloudRetryTimer);
+    return;
+  }
   cloudRetryCount += 1;
   if(cloudRetryCount > CLOUD_SYNC_MAX_RETRIES) {
     console.error('Max sync retries exceeded, creating safety backup');
@@ -1408,7 +1427,18 @@ function flushCloudSaveNow() {
   clearTimeout(syncTimer);
   pushCloudState();
 }
-async function pushCloudState({skipRemoteMerge=false}={}) {
+// Duas abas do mesmo navegador (ou dois processos) podem chamar pushCloudState
+// quase ao mesmo tempo; sem coordenação, ambas leem a mesma versão remota,
+// mesclam separadamente e uma sobrescreve o merge da outra ao gravar por
+// último. A Web Locks API serializa isso entre abas da mesma origem — cada
+// aba espera a vez antes de ler+mesclar+gravar na nuvem.
+const CLOUD_SYNC_LOCK_NAME = 'enamed-planner-cloud-sync';
+async function pushCloudState(opts) {
+  if(!navigator.locks) return pushCloudStateImpl(opts);
+  try { return await navigator.locks.request(CLOUD_SYNC_LOCK_NAME, () => pushCloudStateImpl(opts)); }
+  catch(error) { return pushCloudStateImpl(opts); }
+}
+async function pushCloudStateImpl({skipRemoteMerge=false}={}) {
   if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
   if(syncInFlight) {
     clearTimeout(syncTimer);
@@ -1441,7 +1471,7 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
     if(error) {
       console.error('Falha ao sincronizar:', error);
       recordSyncTelemetry('push', true);
-      scheduleCloudRetry();
+      scheduleCloudRetry(error);
     } else {
       recordSyncTelemetry('push', false);
       cloudSyncRetryDelayMs = 0;
@@ -1465,7 +1495,7 @@ async function pushCloudState({skipRemoteMerge=false}={}) {
     }
   } catch(error) {
     console.error('Falha ao sincronizar:', error);
-    scheduleCloudRetry();
+    scheduleCloudRetry(error);
   } finally {
     syncInFlight = false;
   }
@@ -2002,7 +2032,17 @@ function updateAccountUI() {
 function isLocalPlanner() {
   return location.protocol === 'file:' || ['localhost','127.0.0.1','::1'].includes(location.hostname);
 }
+// Pede ao navegador para não descartar localStorage/IndexedDB sob pressão de
+// espaço. O navegador pode recusar; best-effort, não bloqueia nada se falhar.
+async function requestPersistentStorage() {
+  try {
+    if(!navigator.storage?.persist) return;
+    const already = await navigator.storage.persisted?.();
+    if(!already) await navigator.storage.persist();
+  } catch(error) { console.warn('Não foi possível solicitar armazenamento persistente:', error); }
+}
 async function initCloud() {
+  requestPersistentStorage();
   if(OFFLINE_FIRST) {
     document.body.classList.remove('auth-locked');
     const button = document.getElementById('accountBtn');
