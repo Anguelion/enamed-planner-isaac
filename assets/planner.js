@@ -432,7 +432,7 @@ function normalizePlannerState() {
   ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates();
   lastStateNormalizeAt = Date.now();
 }
-function persist() { normalizePlannerState(); invalidateActivityRenderCache(); writeLocalState(); scheduleCloudSave(); render(); }
+function persist() { normalizePlannerState(); invalidateActivityRenderCache(); writeLocalState(); if(currentUser && sbClient) { cloudDirty = true; setSyncStatus('Não enviado', '', 'Use o botão Enviar para mandar para a nuvem'); } render(); }
 let saveStateOnlyTimer = null;
 let pendingCacheInvalidate = false;
 function flushSaveStateOnly() {
@@ -1148,6 +1148,11 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   });
 
   merged.flashcardLibrary = mergeRecordsById(remote.flashcardLibrary, local.flashcardLibrary, preferLocal);
+  merged.casoDoDia = {};
+  new Set([...Object.keys(remote.casoDoDia || {}), ...Object.keys(local.casoDoDia || {})]).forEach(key => {
+    const r = remote.casoDoDia?.[key] || {}, l = local.casoDoDia?.[key] || {};
+    merged.casoDoDia[key] = { revealed: Math.max(n(r.revealed), n(l.revealed)), wrongCount: Math.max(n(r.wrongCount), n(l.wrongCount)), solved: Boolean(r.solved || l.solved), gaveUp: Boolean(r.gaveUp || l.gaveUp), explanationOpen: Boolean(l.explanationOpen || r.explanationOpen) };
+  });
   merged.videoFlashcards = {};
   new Set([...Object.keys(remote.videoFlashcards || {}), ...Object.keys(local.videoFlashcards || {})]).forEach(id => {
     const cards = mergeRecordsById(remote.videoFlashcards?.[id], local.videoFlashcards?.[id], preferLocal);
@@ -1564,14 +1569,9 @@ async function pullRemoteUpdateNow() {
   if(ui.tab === 'ferramentas') renderFerramentas();
 }
 function startCloudSyncPolling() {
+  // Sincronização agora é só manual (botões Enviar/Receber) — sem polling em segundo plano.
   if(cloudSyncPoll) clearInterval(cloudSyncPoll);
-  cloudSyncPoll = setInterval(() => {
-    if(currentUser && !document.hidden && !syncInFlight) checkForRemoteUpdate();
-  }, 60000);
   if(cloudPushPoll) clearInterval(cloudPushPoll);
-  cloudPushPoll = setInterval(() => {
-    if(currentUser && !syncInFlight) pushCloudState();
-  }, 5 * 60000);
 }
 function fullPlannerBackup() {
   checkpointAutoStudyTime(true);
@@ -1786,16 +1786,10 @@ function bindCloudBackupCard() {
   document.querySelectorAll('[data-delete-local-backup]').forEach(button => button.addEventListener('click', event => deleteLocalBackup(event.currentTarget.dataset.deleteLocalBackup)));
   if(currentUser && !cloudBackupsReady && !cloudBackupsLoading && !cloudBackupsError) loadCloudBackups().then(() => { if(ui.tab === 'ferramentas') renderFerramentas(); });
 }
-window.addEventListener('focus', () => {
-  if(currentUser && !syncInFlight) checkForRemoteUpdate();
-});
 document.addEventListener('click', event => {
   const bar = event.target.closest('.dashboard-bars.weekly-bars>div>span');
   document.querySelectorAll('.dashboard-bars.weekly-bars>div>span.show-value').forEach(el => { if(el !== bar) el.classList.remove('show-value'); });
   if(bar) bar.classList.toggle('show-value');
-});
-document.addEventListener('visibilitychange', () => {
-  if(!document.hidden && currentUser && !syncInFlight) checkForRemoteUpdate();
 });
 function loadQuestionBank() {
   if(!questionBankLoadPromise) questionBankLoadPromise = loadQuestionBankNow();
@@ -10705,7 +10699,6 @@ document.addEventListener('visibilitychange', () => {
     persistQuestionTimerSession();
   }
   if(document.visibilityState === 'visible') {
-    if(currentUser) checkForRemoteUpdate();
     resumeAutoStudyForActiveView();
   }
 });
@@ -10730,9 +10723,6 @@ window.addEventListener('pagehide', () => {
   persistQuestionTimerSession();
   flushSaveStateOnly();
   flushCloudSaveNow();
-});
-window.addEventListener('online', () => {
-  if(currentUser) checkForRemoteUpdate();
 });
 window.addEventListener('popstate', restoreNavigation);
 document.addEventListener('keydown', handleHighlightUndoKeyboard);
