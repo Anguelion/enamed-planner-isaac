@@ -670,6 +670,10 @@ const VIDEO_SCHEDULE_OVERRIDES = {
 };
 function priorityClass(priority='') { return `priority-${normalizedTopic(priority) || 'baixa'}`; }
 function priorityBar(item) { return `<span class="schedule-priority-bar ${priorityClass(item.priority)}" title="Prioridade ${escapeAttr(item.priority || 'Baixa')}"></span>`; }
+function priorityLegend() {
+  const items = [['alta','Alta'],['media','Média'],['baixa','Baixa']];
+  return `<div class="priority-legend muted">Prioridade: ${items.map(([cls,label])=>`<span class="priority-legend-item"><span class="priority-legend-dot priority-${cls}"></span>${label}</span>`).join('')}</div>`;
+}
 function lessonDisplayTitle(item, fallback='') {
   const topic = item?.topic || fallback;
   const order = n(item?.lessonOrder);
@@ -876,8 +880,7 @@ function reconcileCompletedBlockXP() {
   const observed=new Set(state.gamification.observedCompletedBlockIds.map(String));
   completed.filter(blockId=>!observed.has(blockId)).forEach(blockId=>{
     const lessons=state.schedule.filter(item=>String(item.block)===blockId);
-    const occurredAt=lessons.map(item=>item.date).filter(Boolean).sort().at(-1) || new Date().toISOString();
-    awardGamificationXP({activity_type:'block_completion',source_type:'block',source_id:blockId,source_event_id:`block:${blockId}:first-completion`,base_xp:n(state.gamification?.rules?.block?.completionBonus)||100,reason:'block_completion',occurred_at:occurredAt,metadata:{academicProgress:true,lessonCount:lessons.length}});
+    awardGamificationXP({activity_type:'block_completion',source_type:'block',source_id:blockId,source_event_id:`block:${blockId}:first-completion`,base_xp:n(state.gamification?.rules?.block?.completionBonus)||100,reason:'block_completion',occurred_at:new Date().toISOString(),metadata:{academicProgress:true,lessonCount:lessons.length}});
     observed.add(blockId);
   });
   state.gamification.observedCompletedBlockIds=[...observed];
@@ -2281,6 +2284,21 @@ function repairDailyActivityData() {
     log.flashcardsOn = log.flashcards > 0 || n(log.flashcardMinutes) > 0;
   });
   state.activityDataRepairs.flashcardsDailyV2 = { repairedAt:new Date().toISOString(), studyDate:today };
+  repairFutureBlockCompletionDates();
+}
+// Blocos concluídos ficavam registrados na "Atividades realizadas" com a data
+// da última aula agendada no cronograma (podendo ser meses no futuro), em vez
+// da data em que o bloco foi de fato concluído. Corrige o que já foi salvo.
+function repairFutureBlockCompletionDates() {
+  if(!state.activityDataRepairs || typeof state.activityDataRepairs !== 'object') state.activityDataRepairs = {};
+  if(state.activityDataRepairs.blockCompletionDatesV1) return;
+  const now = new Date();
+  (state.gamification?.xpTransactions || []).forEach(t => {
+    if(t.activity_type !== 'block_completion') return;
+    const occurred = new Date(t.occurred_at || '');
+    if(!Number.isNaN(occurred.getTime()) && occurred.getTime() > now.getTime()) t.occurred_at = now.toISOString();
+  });
+  state.activityDataRepairs.blockCompletionDatesV1 = { repairedAt: now.toISOString() };
 }
 function dayLogHasActivity(log) {
   return n(log?.videos) + n(log?.flashcards) + n(log?.questions) + n(log?.lessonMinutes) + n(log?.flashcardMinutes) + n(log?.questionMinutes) + n(log?.materialMinutes) + n(log?.simuladoMinutes) > 0
@@ -4554,7 +4572,7 @@ function renderCronograma() {
   const areas = ['Todas', ...new Set(state.schedule.map(x=>x.area).filter(Boolean).sort())];
   const rows = filteredSchedule();
   const changed = lastChangedLesson();
-  document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2>Blocos do cronograma</h2><div class="muted">${changed ? `Última aula: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}<div class="toolbar"><input class="input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}"><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select><select class="select" id="statusFilter">${['Todos','Concluído','Aguardando','Não Iniciado'].map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select><button class="icon-btn" id="clearFilters">Limpar filtros</button></div></div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${renderScheduleTable(rows, true)}</div>`;
+  document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2>Blocos do cronograma</h2><div class="muted">${changed ? `Última aula: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}<div class="toolbar"><input class="input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}"><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select><select class="select" id="statusFilter">${['Todos','Concluído','Aguardando','Não Iniciado'].map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select><button class="icon-btn" id="clearFilters">Limpar filtros</button></div></div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
   enhanceScheduleStudyIcons();
   document.getElementById('search').oninput = debounce(e => {
     const value=e.target.value;

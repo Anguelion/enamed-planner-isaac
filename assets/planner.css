@@ -1067,6 +1067,9 @@ body.dark .metric-card:before{background:linear-gradient(180deg,#2f7df6,var(--cy
 .schedule-topic-link.priority-chip.priority-diamante{background:#8de3ef;color:#053b40}
 .schedule-topic-link.priority-chip strong{color:inherit}
 .pending-lesson-title .schedule-topic-link.priority-chip{margin-left:0}
+.priority-legend{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:11px;margin:6px 0 10px}
+.priority-legend-item{display:inline-flex;align-items:center;gap:4px}
+.priority-legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%}
 .video-lesson-choice{position:relative;padding-left:15px;overflow:hidden}
 .video-priority-bar{position:absolute;left:0;top:0;bottom:0;width:5px}
 .pending-list{display:grid;gap:8px}
