@@ -1834,7 +1834,7 @@ body.dark .question-tag-order{background:rgba(255,255,255,.08)}
 .qbank-mode .question-heading{min-width:0}
 .qbank-mode .question-info-stack{margin-top:10px;min-width:0}
 .qbank-mode .question-info-stack .question-meta{margin-bottom:7px}
-.qbank-mode.sidebar-collapsed .question-topbar{position:sticky;top:0;z-index:30;display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px;min-height:70px;overflow:visible;isolation:isolate}
+.qbank-mode.sidebar-collapsed .question-topbar{position:static;display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px;min-height:70px;overflow:visible;isolation:isolate}
 .qbank-mode.sidebar-collapsed .question-topbar>.question-heading{flex:1 1 190px;min-width:0}
 .qbank-mode.sidebar-collapsed .question-topbar>.question-tool-strip{flex:1 1 100%;width:100%;justify-content:flex-start;min-width:0;overflow:visible}
 .qbank-mode.sidebar-collapsed .question-topbar .question-info-stack{max-width:100%;overflow:visible}
