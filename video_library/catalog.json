@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T02:54:12.404Z",
+  "generatedAt": "2026-08-02T03:51:07.867Z",
   "source": "E:\\MedCof 2026",
   "lessons": [
     {
@@ -1213,24 +1213,24 @@
       "folderOrder": 2,
       "videos": [
         {
-          "id": "b07|Clínica Médica|Distúrbios de Sódio e Potássio|Disturbios do Sódio e Potássio COFEXPRESS",
-          "title": "Disturbios do Sódio e Potássio COFEXPRESS",
+          "id": "b07|Clínica Médica|Distúrbios de Sódio e Potássio|01 - Disturbios do Sódio",
+          "title": "01 - Disturbios do Sódio",
+          "type": "complete",
+          "relativePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/01 - Disturbios do Sódio.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b07|Clínica Médica|Distúrbios de Sódio e Potássio|02 - Distúrbios do Potássio",
+          "title": "02 - Distúrbios do Potássio",
+          "type": "complete",
+          "relativePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/02 - Distúrbios do Potássio.mp4",
+          "extension": ".mp4"
+        },
+        {
+          "id": "b07|Clínica Médica|Distúrbios de Sódio e Potássio|02.1 e 02.1 - Disturbios do Sódio e Potássio COFEXPRESS",
+          "title": "02.1 e 02.1 - Disturbios do Sódio e Potássio COFEXPRESS",
           "type": "express",
-          "relativePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Disturbios do Sódio e Potássio COFEXPRESS.mp4",
-          "extension": ".mp4"
-        },
-        {
-          "id": "b07|Clínica Médica|Distúrbios de Sódio e Potássio|Disturbios do Sódio",
-          "title": "Disturbios do Sódio",
-          "type": "complete",
-          "relativePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Disturbios do Sódio.mp4",
-          "extension": ".mp4"
-        },
-        {
-          "id": "b07|Clínica Médica|Distúrbios de Sódio e Potássio|Distúrbios do Potássio",
-          "title": "Distúrbios do Potássio",
-          "type": "complete",
-          "relativePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Distúrbios do Potássio.mp4",
+          "relativePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/02.1 e 02.1 - Disturbios do Sódio e Potássio COFEXPRESS.mp4",
           "extension": ".mp4"
         }
       ]
@@ -1694,17 +1694,17 @@
       "folderOrder": 1,
       "videos": [
         {
-          "id": "b10|Saúde Coletiva|Indicadores de Saúde|01 - 1 aula - Indicadores de saúde Parte",
-          "title": "01 - 1 aula - Indicadores de saúde Parte",
+          "id": "b10|Saúde Coletiva|Indicadores de Saúde|01 - Indicadores de saúde Parte 1",
+          "title": "01 - Indicadores de saúde Parte 1",
           "type": "complete",
-          "relativePath": "Bloco 10/01 - Saúde Coletiva/01 - Indicadores de Saúde/01 - 1 aula - Indicadores de saúde Parte.mp4",
+          "relativePath": "Bloco 10/01 - Saúde Coletiva/01 - Indicadores de Saúde/01 - Indicadores de saúde Parte 1.mp4",
           "extension": ".mp4"
         },
         {
-          "id": "b10|Saúde Coletiva|Indicadores de Saúde|01 - 2 aula - Indicadores de saúde Parte",
-          "title": "01 - 2 aula - Indicadores de saúde Parte",
+          "id": "b10|Saúde Coletiva|Indicadores de Saúde|01 - Indicadores de saúde Parte 2",
+          "title": "01 - Indicadores de saúde Parte 2",
           "type": "complete",
-          "relativePath": "Bloco 10/01 - Saúde Coletiva/01 - Indicadores de Saúde/01 - 2 aula - Indicadores de saúde Parte.mp4",
+          "relativePath": "Bloco 10/01 - Saúde Coletiva/01 - Indicadores de Saúde/01 - Indicadores de saúde Parte 2.mp4",
           "extension": ".mp4"
         },
         {
@@ -2810,17 +2810,17 @@
       "folderOrder": 3,
       "videos": [
         {
-          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|Infecção de Trato Urinário e Meningite COFEXPRESS",
-          "title": "Infecção de Trato Urinário e Meningite COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/Infecção de Trato Urinário e Meningite COFEXPRESS.mp4",
+          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|03 - Infecção de Trato Urinário e Meningite",
+          "title": "03 - Infecção de Trato Urinário e Meningite",
+          "type": "complete",
+          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03 - Infecção de Trato Urinário e Meningite.mp4",
           "extension": ".mp4"
         },
         {
-          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|Infecção de Trato Urinário e Meningite",
-          "title": "Infecção de Trato Urinário e Meningite",
-          "type": "complete",
-          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/Infecção de Trato Urinário e Meningite.mp4",
+          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|03.1 - Infecção de Trato Urinário e Meningite COFEXPRESS",
+          "title": "03.1 - Infecção de Trato Urinário e Meningite COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03.1 - Infecção de Trato Urinário e Meningite COFEXPRESS.mp4",
           "extension": ".mp4"
         }
       ]
@@ -2934,22 +2934,6 @@
       ]
     },
     {
-      "id": "b18|g o|cofbasics propedeutica em uroginecologia",
-      "block": 18,
-      "area": "G.O",
-      "title": "CofBasics - Propedêutica em Uroginecologia",
-      "folderOrder": 0,
-      "videos": [
-        {
-          "id": "b18|G.O|CofBasics - Propedêutica em Uroginecologia|CofBasics - Propedêutica em Uroginecologia",
-          "title": "CofBasics - Propedêutica em Uroginecologia",
-          "type": "complete",
-          "relativePath": "Bloco 18/02 - G.O/CofBasics - Propedêutica em Uroginecologia/CofBasics - Propedêutica em Uroginecologia.mp4",
-          "extension": ".mp4"
-        }
-      ]
-    },
-    {
       "id": "b18|go|uroginecologia",
       "block": 18,
       "area": "GO",
@@ -2980,17 +2964,17 @@
       "folderOrder": 3,
       "videos": [
         {
-          "id": "b18|Pediatria|Sepse e Choque Séptico Pediátrico|03 - 1 aula - Sepse e Choque Séptico Pediátrico Enamed",
-          "title": "03 - 1 aula - Sepse e Choque Séptico Pediátrico Enamed",
+          "id": "b18|Pediatria|Sepse e Choque Séptico Pediátrico|03 - Sepse e Choque Séptico Pediátrico Enamed Parte 1",
+          "title": "03 - Sepse e Choque Séptico Pediátrico Enamed Parte 1",
           "type": "complete",
-          "relativePath": "Bloco 18/03 - Pediatria/03 - Sepse e Choque Séptico Pediátrico/03 - 1 aula - Sepse e Choque Séptico Pediátrico Enamed.mp4",
+          "relativePath": "Bloco 18/03 - Pediatria/03 - Sepse e Choque Séptico Pediátrico/03 - Sepse e Choque Séptico Pediátrico Enamed Parte 1.mp4",
           "extension": ".mp4"
         },
         {
-          "id": "b18|Pediatria|Sepse e Choque Séptico Pediátrico|03 - 2 aula - Sepse e Choque Séptico Pediátrico",
-          "title": "03 - 2 aula - Sepse e Choque Séptico Pediátrico",
+          "id": "b18|Pediatria|Sepse e Choque Séptico Pediátrico|03 - Sepse e Choque Séptico Pediátrico Parte 2",
+          "title": "03 - Sepse e Choque Séptico Pediátrico Parte 2",
           "type": "complete",
-          "relativePath": "Bloco 18/03 - Pediatria/03 - Sepse e Choque Séptico Pediátrico/03 - 2 aula - Sepse e Choque Séptico Pediátrico.mp4",
+          "relativePath": "Bloco 18/03 - Pediatria/03 - Sepse e Choque Séptico Pediátrico/03 - Sepse e Choque Séptico Pediátrico Parte 2.mp4",
           "extension": ".mp4"
         },
         {
