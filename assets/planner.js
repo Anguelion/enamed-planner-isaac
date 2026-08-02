@@ -6615,7 +6615,12 @@ function videoParts(lesson) {
       || topic.match(/\b(\d+)\s*(?:a|o|ª|º)?\s*aula\b/i)
       || topic.match(/^(\d+)\s*[-.]\s*/);
     const number = partMatch ? Number(partMatch[1]) : (/\bparte$/i.test(topic) ? 1 : 0);
-    const key = number ? `part-${number}` : `topic-${topicKey}`;
+    // Alguns arquivos de origem repetem o mesmo número por engano (dois
+    // COFEXPRESS com o mesmo prefixo "01.1", por exemplo). Se a parte já tem
+    // um vídeo do mesmo tipo, não mescla — cria uma parte própria pelo texto
+    // restante, em vez de sobrepor um COFEXPRESS/aula completa pelo outro.
+    let key = number ? `part-${number}` : `topic-${topicKey}`;
+    if(number && groups.has(key) && groups.get(key).videos.some(v => v.type === video.type)) key = `part-${number}-${topicKey}`;
     const label = number ? `Parte ${String(number).padStart(2,'0')}` : (topic || 'Aula');
     const sourceOrder = n(video.folderOrder) || 999;
     const contentOrder = videoContentOrder(topic) || sourceOrder;
