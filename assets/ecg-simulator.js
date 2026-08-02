@@ -1427,17 +1427,13 @@
   // As posições são offsets de caractere no texto puro do bloco (marks não mudam
   // o texto, só envolvem trechos), então funcionam mesmo depois de re-render.
   // ---------------------------------------------------------------------------
+  function normalizeEcgMark(raw) {
+    if (Array.isArray(raw)) return { s: raw[0], e: raw[1], c: 'yellow', n: '' };
+    return { s: raw?.s, e: raw?.e, c: raw?.c || 'yellow', n: raw?.n || '' };
+  }
   function mergeRanges(ranges) {
     if (!ranges || !ranges.length) return [];
-    const sorted = ranges.map((r) => [r[0], r[1]]).sort((a, b) => a[0] - b[0]);
-    const out = [sorted[0].slice()];
-    for (let i = 1; i < sorted.length; i++) {
-      const [s, e] = sorted[i];
-      const last = out[out.length - 1];
-      if (s <= last[1]) last[1] = Math.max(last[1], e);
-      else out.push([s, e]);
-    }
-    return out;
+    return ranges.map(normalizeEcgMark).filter((r) => Number.isFinite(Number(r.s)) && Number(r.e) > Number(r.s)).sort((a, b) => Number(a.s) - Number(b.s));
   }
   function hlHtml(blockKey, text) {
     text = text == null ? '' : String(text);
@@ -1445,10 +1441,10 @@
     const ranges = (S && S.highlights && S.highlights[blockKey]) || [];
     if (!ranges.length) return esc(text);
     let out = '', pos = 0;
-    ranges.forEach((r, i) => {
-      const s = clamp(r[0], 0, text.length), e = clamp(r[1], 0, text.length);
+    ranges.map(normalizeEcgMark).forEach((r, i) => {
+      const s = clamp(r.s, 0, text.length), e = clamp(r.e, 0, text.length);
       if (s > pos) out += esc(text.slice(pos, s));
-      if (e > s) out += `<mark class="ecg-hl" data-hl-mark="${escapeAttrLocal(blockKey)}|${i}">${esc(text.slice(s, e))}</mark>`;
+      if (e > s && s >= pos) out += `<mark class="ecg-hl${r.n ? ' skill-hl-has-note' : ''}" data-hl-mark="${escapeAttrLocal(blockKey)}|${i}" data-hl-color="${escapeAttrLocal(r.c)}" style="background:${window.SkillHighlighter?.colorHex(r.c) || '#ffe066'}"${r.n ? ` title="${escapeAttrLocal(r.n)}"` : ''}>${esc(text.slice(s, e))}</mark>`;
       pos = Math.max(pos, e);
     });
     if (pos < text.length) out += esc(text.slice(pos));
@@ -1458,11 +1454,11 @@
     tag = tag || 'p';
     return `<${tag} class="ecg-hl-block" data-hl-block="${escapeAttrLocal(blockKey)}">${hlHtml(blockKey, text)}</${tag}>`;
   }
-  function addHighlight(blockKey, s, e) {
+  function addHighlight(blockKey, s, e, color, note) {
     const S = st();
     if (!S.highlights) S.highlights = {};
     const arr = S.highlights[blockKey] || [];
-    arr.push([s, e]);
+    arr.push({ s, e, c: color || 'yellow', n: note || '' });
     S.highlights[blockKey] = mergeRanges(arr);
   }
   let HL_POPOVER = null;
@@ -1498,26 +1494,20 @@
         const e0 = textOffsetInBlock(blockEl, range.endContainer, range.endOffset);
         const s = Math.min(s0, e0), e = Math.max(s0, e0);
         const rect = range.getBoundingClientRect();
-        const pop = document.createElement('div');
-        pop.className = 'ecg-hl-popover';
-        pop.style.left = Math.max(8, Math.min(window.innerWidth - 96, rect.left + rect.width / 2 - 40)) + 'px';
-        pop.style.top = Math.max(8, rect.top - 44) + 'px';
-        pop.innerHTML = '<button type="button">🖍 Marcar</button>';
-        pop.querySelector('button').onclick = () => {
-          addHighlight(blockEl.dataset.hlBlock, s, e);
+        if (window.SkillHighlighter) {
+          window.SkillHighlighter.open({ rect, onSave: (color, note) => {
+          addHighlight(blockEl.dataset.hlBlock, s, e, color, note);
           window.getSelection().removeAllRanges();
-          hideHlPopover();
           save();
           mountBody();
-        };
-        document.body.appendChild(pop);
-        HL_POPOVER = pop;
+          }});
+        }
       }, 10);
     };
     document.addEventListener('mouseup', onSelChange);
     document.addEventListener('touchend', onSelChange);
     document.addEventListener('mousedown', (e) => { if (HL_POPOVER && !HL_POPOVER.contains(e.target)) hideHlPopover(); });
-    // Tocar num trecho já marcado remove a marcação (toggle).
+    // Tocar num trecho marcado abre a edição de cor, comentário ou exclusão.
     document.addEventListener('click', (e) => {
       const mark = e.target.closest && e.target.closest('mark.ecg-hl');
       if (!mark) return;
@@ -1527,10 +1517,11 @@
       const S = st();
       const arr = S.highlights && S.highlights[blockKey];
       if (arr && Number.isInteger(idx) && arr[idx]) {
-        arr.splice(idx, 1);
-        if (!arr.length) delete S.highlights[blockKey];
-        save();
-        mountBody();
+        const current = normalizeEcgMark(arr[idx]);
+        window.SkillHighlighter?.open({ rect: mark.getBoundingClientRect(), color: current.c, note: current.n, editing: true,
+          onSave: (color, note) => { arr[idx] = { ...current, c: color, n: note || '' }; save(); mountBody(); },
+          onDelete: () => { arr.splice(idx, 1); if (!arr.length) delete S.highlights[blockKey]; save(); mountBody(); }
+        });
       }
     });
   }

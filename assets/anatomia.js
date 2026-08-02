@@ -18,7 +18,7 @@
   let ui = { section:'Todas', status:'all', search:'', articleId:null, limit:24, loading:false, error:'', lightbox:null };
 
   function defaultState(){
-    return { completed:{}, favorites:{}, recent:[], lastArticleId:null, startedAt:new Date().toISOString() };
+    return { completed:{}, favorites:{}, recent:[], highlights:{}, lastArticleId:null, startedAt:new Date().toISOString() };
   }
 
   function store(){
@@ -26,6 +26,7 @@
     if(!state.anatomia || typeof state.anatomia !== 'object') state.anatomia = defaultState();
     state.anatomia.completed ||= {};
     state.anatomia.favorites ||= {};
+    state.anatomia.highlights ||= {};
     state.anatomia.recent = Array.isArray(state.anatomia.recent) ? state.anatomia.recent : [];
     return state.anatomia;
   }
@@ -169,10 +170,94 @@
     const favorite = !!store().favorites[article.id];
     return `${topbar(data)}<div class="anat-reader-shell">
       <aside class="anat-reader-nav"><button type="button" data-anat-catalog>${icon('previous')} Voltar ao catálogo</button><span class="anat-kicker">${esc(article.section)}</span><h2>Conteúdo da trilha</h2><div>${related.map((item,index) => `<button type="button" data-anat-open="${item.id}" class="${item.id === article.id ? 'active' : ''} ${store().completed[item.id] ? 'complete' : ''}"><i>${store().completed[item.id] ? icon('success') : index + 1}</i><span>${esc(item.title)}</span></button>`).join('')}</div></aside>
-      <section class="anat-reader"><header><div><span class="anat-kicker">${esc(article.section)} · ${article.readingMinutes} min de leitura</span><h1>${esc(article.title)}</h1><p>${article.imageCount} ${article.imageCount === 1 ? 'ilustração anatômica' : 'ilustrações anatômicas'} nesta página</p></div><button type="button" data-anat-favorite="${article.id}" class="anat-reader-favorite ${favorite ? 'active' : ''}">${icon('heart')}<span>${favorite ? 'Favorita' : 'Favoritar'}</span></button></header>
+      <section class="anat-reader"><header><div><span class="anat-kicker">${esc(article.section)} · ${article.readingMinutes} min de leitura</span><h1>${esc(article.title)}</h1><p>${article.imageCount} ${article.imageCount === 1 ? 'ilustração anatômica' : 'ilustrações anatômicas'} nesta página</p><small class="anat-highlight-hint">Selecione um trecho para destacar e, se quiser, comentar.</small></div><button type="button" data-anat-favorite="${article.id}" class="anat-reader-favorite ${favorite ? 'active' : ''}">${icon('heart')}<span>${favorite ? 'Favorita' : 'Favoritar'}</span></button></header>
         <article class="anat-content">${html}</article>
         <footer class="anat-reader-footer"><button type="button" data-anat-complete="${article.id}" class="${completed ? 'complete' : ''}">${completed ? icon('success') + ' Página concluída' : 'Marcar como concluída'}</button><nav>${previous ? `<button type="button" data-anat-open="${previous.id}">${icon('previous')} Anterior</button>` : '<span></span>'}${next ? `<button type="button" data-anat-open="${next.id}">Próxima ${icon('next')}</button>` : '<span></span>'}</nav></footer>
       </section></div>${ui.lightbox ? `<div class="anat-lightbox" data-anat-close-lightbox><button type="button" aria-label="Fechar">×</button><img src="${esc(ui.lightbox)}" alt="Imagem anatômica ampliada"></div>` : ''}`;
+  }
+
+  function anatomyTextOffset(block, node, offset){
+    let total = 0;
+    const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+    let current;
+    while((current = walker.nextNode())){
+      if(current === node) return total + offset;
+      total += current.textContent.length;
+    }
+    return total;
+  }
+  function wrapAnatomyRange(block, mark, index){
+    const start = Math.max(0, Number(mark.s) || 0);
+    const end = Math.min(block.textContent.length, Number(mark.e) || 0);
+    if(end <= start) return;
+    const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+    let total = 0, startNode = null, endNode = null, startOffset = 0, endOffset = 0, node;
+    while((node = walker.nextNode())){
+      const next = total + node.textContent.length;
+      if(!startNode && start >= total && start <= next){ startNode = node; startOffset = start - total; }
+      if(end >= total && end <= next){ endNode = node; endOffset = end - total; break; }
+      total = next;
+    }
+    if(!startNode || !endNode) return;
+    const range = document.createRange();
+    range.setStart(startNode, startOffset);
+    range.setEnd(endNode, endOffset);
+    const highlight = document.createElement('mark');
+    highlight.className = `anat-saved-highlight skill-hl-${mark.c || 'yellow'}${mark.n ? ' skill-hl-has-note' : ''}`;
+    highlight.dataset.anatHighlightIndex = index;
+    highlight.style.background = root.SkillHighlighter?.colorHex(mark.c) || '#ffe066';
+    if(mark.n) highlight.title = mark.n;
+    try { highlight.appendChild(range.extractContents()); range.insertNode(highlight); } catch(error) { /* conteúdo importado pode ter estruturas não marcáveis */ }
+  }
+  function repaintAnatomyArticle(data, article, pageScrollTop){
+    host.innerHTML = readerView(data, article, articleCache.get(article.id));
+    wireAnatomyHighlighter(data, article);
+    const restore = () => { if(document.scrollingElement) document.scrollingElement.scrollTop = pageScrollTop; };
+    restore(); requestAnimationFrame(restore);
+  }
+  function wireAnatomyHighlighter(data, article){
+    const content = host.querySelector('.anat-content');
+    if(!content || !root.SkillHighlighter) return;
+    const articleMarks = store().highlights[article.id] || {};
+    const blocks = [...content.querySelectorAll('p,li,h2,h3,h4,blockquote,td,th')].filter(block => block.textContent.trim());
+    blocks.forEach((block, blockIndex) => {
+      block.dataset.anatHlBlock = blockIndex;
+      const marks = Array.isArray(articleMarks[blockIndex]) ? articleMarks[blockIndex] : [];
+      marks.map((mark,index) => ({mark,index})).sort((a,b) => (Number(b.mark.s) || 0) - (Number(a.mark.s) || 0)).forEach(item => wrapAnatomyRange(block, item.mark, item.index));
+    });
+    content.addEventListener('mouseup', () => setTimeout(() => {
+      const selection = window.getSelection();
+      if(!selection || selection.isCollapsed || !selection.rangeCount) return;
+      const range = selection.getRangeAt(0);
+      const startElement = range.startContainer.nodeType === 3 ? range.startContainer.parentElement : range.startContainer;
+      const endElement = range.endContainer.nodeType === 3 ? range.endContainer.parentElement : range.endContainer;
+      const block = startElement?.closest?.('[data-anat-hl-block]');
+      if(!block || block !== endElement?.closest?.('[data-anat-hl-block]') || !content.contains(block)) return;
+      const start = anatomyTextOffset(block, range.startContainer, range.startOffset);
+      const end = anatomyTextOffset(block, range.endContainer, range.endOffset);
+      if(start === end || Math.abs(end - start) > 1200) return;
+      const rect = range.getBoundingClientRect();
+      root.SkillHighlighter.open({ rect, onSave:(color,note) => {
+        const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0;
+        const state = store();
+        state.highlights[article.id] ||= {};
+        state.highlights[article.id][block.dataset.anatHlBlock] ||= [];
+        state.highlights[article.id][block.dataset.anatHlBlock].push({ s:Math.min(start,end), e:Math.max(start,end), c:color, n:note });
+        selection.removeAllRanges(); save(); repaintAnatomyArticle(data, article, pageScrollTop);
+      }});
+    }, 0));
+    content.querySelectorAll('[data-anat-highlight-index]').forEach(markElement => markElement.addEventListener('click', event => {
+      event.stopPropagation();
+      const block = markElement.closest('[data-anat-hl-block]');
+      const list = store().highlights[article.id]?.[block.dataset.anatHlBlock];
+      const index = Number(markElement.dataset.anatHighlightIndex);
+      const mark = list?.[index];
+      if(!mark) return;
+      root.SkillHighlighter.open({ rect:markElement.getBoundingClientRect(), color:mark.c, note:mark.n, editing:true,
+        onSave:(color,note) => { const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0; list[index] = {...mark,c:color,n:note}; save(); repaintAnatomyArticle(data,article,pageScrollTop); },
+        onDelete:() => { const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0; list.splice(index,1); save(); repaintAnatomyArticle(data,article,pageScrollTop); }
+      });
+    }));
   }
 
   async function openArticle(id, data){
@@ -192,6 +277,7 @@
       save();
       ui.loading = false;
       host.innerHTML = readerView(data, article, html);
+      wireAnatomyHighlighter(data, article);
       host.scrollIntoView({ behavior:'smooth', block:'start' });
     } catch(error) {
       ui.loading = false;
@@ -223,8 +309,8 @@
       if(complete){ const id = Number(complete.dataset.anatComplete); store().completed[id] ? delete store().completed[id] : store().completed[id] = new Date().toISOString(); save(); openArticle(id, data); return; }
       if(target.closest('[data-anat-more]')){ ui.limit += 24; renderData(data); return; }
       const image = target.closest('[data-anat-image]');
-      if(image){ ui.lightbox = image.dataset.anatImage; const article = data.articles.find(item => item.id === ui.articleId); host.innerHTML = readerView(data, article, articleCache.get(article.id)); return; }
-      if(target.closest('[data-anat-close-lightbox]')){ ui.lightbox = null; const article = data.articles.find(item => item.id === ui.articleId); host.innerHTML = readerView(data, article, articleCache.get(article.id)); }
+      if(image){ ui.lightbox = image.dataset.anatImage; const article = data.articles.find(item => item.id === ui.articleId); host.innerHTML = readerView(data, article, articleCache.get(article.id)); wireAnatomyHighlighter(data, article); return; }
+      if(target.closest('[data-anat-close-lightbox]')){ ui.lightbox = null; const article = data.articles.find(item => item.id === ui.articleId); host.innerHTML = readerView(data, article, articleCache.get(article.id)); wireAnatomyHighlighter(data, article); }
     };
     host.oninput = event => {
       if(!event.target.matches('[data-anat-search]')) return;

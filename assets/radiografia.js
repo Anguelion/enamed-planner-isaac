@@ -810,9 +810,10 @@
   const HL_COLORS = [
     { id: 'yellow', hex: '#ffe066', label: 'Amarelo' },
     { id: 'red', hex: '#ffa8a8', label: 'Vermelho' },
+    { id: 'blue', hex: '#91c8ff', label: 'Azul' },
   ];
   function hlColorHex(id) { return (HL_COLORS.find((c) => c.id === id) || HL_COLORS[0]).hex; }
-  function normalizeMark(raw) { return typeof raw === 'string' ? { t: raw, c: 'yellow' } : { t: raw.t, c: raw.c || 'yellow' }; }
+  function normalizeMark(raw) { return typeof raw === 'string' ? { t: raw, c: 'yellow', n: '' } : { t: raw.t, c: raw.c || 'yellow', n: raw.n || '' }; }
   let HL_POPOVER = null;
   function hideHlPopover() { if (HL_POPOVER) { HL_POPOVER.remove(); HL_POPOVER = null; } }
   function positionHlPopover(pop, rect) {
@@ -822,7 +823,11 @@
     pop.style.top = Math.max(8, rect.top - h - 8) + 'px';
   }
   // Após selecionar um trecho: mostra só as cores, natural como marcar com caneta de verdade.
-  function showHlColorPopover(rect, activeColor, onPick, onDelete) {
+  function showHlColorPopover(rect, activeColor, onPick, onDelete, activeNote) {
+    if (window.SkillHighlighter) {
+      window.SkillHighlighter.open({ rect, color: activeColor || 'yellow', note: activeNote || '', editing: !!onDelete, onSave: onPick, onDelete });
+      return;
+    }
     hideHlPopover();
     const pop = document.createElement('div');
     pop.className = 'radio-hl-pop';
@@ -859,11 +864,11 @@
         const blockEl = holder.closest('[data-hl-block]');
         const blockIndex = +blockEl.dataset.hlBlock;
         const rect = range.getBoundingClientRect();
-        showHlColorPopover(rect, null, (color) => {
+        showHlColorPopover(rect, null, (color, note) => {
           const S = st();
           S.highlights[topico.id] = S.highlights[topico.id] || {};
           S.highlights[topico.id][blockIndex] = S.highlights[topico.id][blockIndex] || [];
-          S.highlights[topico.id][blockIndex].push({ t: text, c: color });
+          S.highlights[topico.id][blockIndex].push({ t: text, c: color, n: note || '' });
           save(); window.getSelection().removeAllRanges(); hideHlPopover(); mountBody();
         }, null);
       }, 0);
@@ -875,11 +880,12 @@
         const blockIndex = +blockEl.dataset.hlBlock;
         const hlIdx = +m.dataset.hlIdx;
         const rect = m.getBoundingClientRect();
-        showHlColorPopover(rect, m.dataset.hlColor, (color) => {
+        const currentMark = normalizeMark((st().highlights[topico.id] && st().highlights[topico.id][blockIndex] || [])[hlIdx] || {});
+        showHlColorPopover(rect, m.dataset.hlColor, (color, note) => {
           const S = st();
           const arr = S.highlights[topico.id] && S.highlights[topico.id][blockIndex];
           if (!arr || !arr[hlIdx]) return;
-          arr[hlIdx] = { t: normalizeMark(arr[hlIdx]).t, c: color };
+          arr[hlIdx] = { t: normalizeMark(arr[hlIdx]).t, c: color, n: note || '' };
           save(); hideHlPopover(); mountBody();
         }, () => {
           const S = st();
@@ -887,7 +893,7 @@
           if (!arr || !arr[hlIdx]) return;
           arr.splice(hlIdx, 1);
           save(); hideHlPopover(); mountBody();
-        });
+        }, currentMark.n);
       };
     });
   }
@@ -1210,7 +1216,7 @@
       // evita marcar dentro de uma <mark> já existente
       const before = html.slice(0, i), after = html.slice(i + needle.length);
       if (/<mark[^>]*>[^<]*$/.test(before)) return;
-      html = before + `<mark class="radio-hl" data-hl-idx="${idx}" data-hl-color="${m.c}" style="background:${hlColorHex(m.c)}">` + needle + '</mark>' + after;
+      html = before + `<mark class="radio-hl${m.n ? ' skill-hl-has-note' : ''}" data-hl-idx="${idx}" data-hl-color="${m.c}" style="background:${hlColorHex(m.c)}"${m.n ? ` title="${esc(m.n)}"` : ''}>` + needle + '</mark>' + after;
     });
     return html;
   }

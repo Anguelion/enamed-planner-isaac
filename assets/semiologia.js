@@ -441,12 +441,12 @@
       comoPesquisar: 'Macicez móvel de decúbito (mais sensível): a interface timpanismo/macicez desloca ao virar o paciente. Piparote é mais específico, menos sensível.',
       significado: 'Hipertensão portal (cirrose), ICC, síndrome nefrótica, carcinomatose. Sinal semilunar de macicez em flancos.',
       quiz: { p: 'Qual manobra é a MAIS sensível para detectar ascite?', ops: ['Piparote', 'Macicez móvel de decúbito', 'Circulação colateral', 'Sinal de Murphy'], correct: 1, exp: 'A macicez móvel detecta volumes menores que o piparote.' } },
-    { id: 'baqueteamento', nome: 'Baqueteamento digital', cat: 'Inspeção', x: 32, y: 258,
+    { id: 'baqueteamento', nome: 'Baqueteamento digital', cat: 'Inspeção', x: 28, y: 246,
       oQue: 'Alargamento das falanges distais com perda do ângulo ungueal (>180°).',
       comoPesquisar: 'Sinal de Schamroth: unir o dorso das unhas dos indicadores — o losango normal desaparece no baqueteamento.',
       significado: 'Hipoxemia crônica, doenças pulmonares (fibrose, câncer, bronquiectasia), cardiopatias cianóticas, hepatopatia.',
       quiz: { p: 'O sinal de Schamroth positivo (perda do losango entre as unhas) indica:', ops: ['Cianose periférica', 'Baqueteamento digital', 'Edema', 'Icterícia'], correct: 1, exp: 'A perda do losango de Schamroth confirma baqueteamento.' } },
-    { id: 'perfusao', nome: 'Enchimento capilar', cat: 'Palpação', x: 188, y: 258,
+    { id: 'perfusao', nome: 'Enchimento capilar', cat: 'Palpação', x: 194, y: 246,
       oQue: 'Tempo para o leito ungueal reperfundir após compressão.',
       comoPesquisar: 'Comprima a polpa/unha por ~5 s, solte e conte o tempo de retorno da cor.',
       significado: 'Normal ≤ 2 s. Prolongado sugere má perfusão periférica (choque, desidratação, vasoconstrição/frio).',
@@ -482,12 +482,12 @@
       comoPesquisar: 'Palpe do QID em direção ao hipocôndrio E na inspiração; se difícil, use o decúbito lateral direito (Schuster). Percuta o espaço de Traube.',
       significado: 'Baço palpável já indica aumento (≈2–3×). Causas: hipertensão portal, infecções, doenças hematológicas.',
       quiz: { p: 'Sobre o baço no exame físico:', ops: ['É palpável normalmente', 'Só se torna palpável quando bem aumentado', 'Nunca é palpável mesmo aumentado', 'É percutido no epigástrio'], correct: 1, exp: 'O baço normal não é palpável; palpá-lo já significa aumento.' } },
-    { id: 'eritema-palmar', nome: 'Eritema palmar', cat: 'Inspeção', view: 'ant', x: 188, y: 258,
+    { id: 'eritema-palmar', nome: 'Eritema palmar', cat: 'Inspeção', view: 'ant', x: 176, y: 270,
       oQue: 'Vermelhidão simétrica das eminências tenar e hipotenar, poupando o centro da palma.',
       comoPesquisar: 'Inspeção das palmas; empalidece à pressão e retorna.',
       significado: 'Associado a hepatopatia crônica e hiperestrogenismo (também gestação e hipertireoidismo). Compõe os estigmas de doença hepática com aranhas vasculares.',
       quiz: { p: 'Eritema palmar + aranhas vasculares em homem de meia-idade sugere:', ops: ['Anemia', 'Estigmas de hepatopatia crônica', 'Insuficiência renal', 'Hipotireoidismo'], correct: 1, exp: 'Ambos são estigmas de hepatopatia/hiperestrogenismo.' } },
-    { id: 'tremor', nome: 'Tremor / flapping', cat: 'Inspeção', view: 'ant', x: 44, y: 250,
+    { id: 'tremor', nome: 'Tremor / flapping', cat: 'Inspeção', view: 'ant', x: 44, y: 270,
       oQue: 'Movimento involuntário oscilatório; o flapping (asterixis) é a perda súbita e intermitente do tônus.',
       comoPesquisar: 'Peça para estender os braços e dorsifletir as mãos ("parar o trânsito"): no asterixis surgem quedas bruscas em batida de asa.',
       significado: 'Asterixis → encefalopatia metabólica (hepática, urêmica, hipercápnica). Tremor de repouso → parkinsonismo; tremor de ação → essencial/cerebelar.',
@@ -805,6 +805,7 @@
       <path d="M78 58 h44" stroke="#8a4a3a" stroke-width="1" stroke-dasharray="2 2"/>
       <text x="100" y="92" font-size="10" fill="#667085" text-anchor="middle">Mucosa seca + turgor lentificado</text>`),
   };
+  const SIGN_IMAGE = Object.fromEntries(CORPO_SINAIS.map((s) => [s.id, `assets/semiologia-sinais/${s.id}.webp`]));
   const CAT_COR = { 'Inspeção': '#3a6ea5', 'Palpação': '#2f7d6f', 'Percussão': '#b45309', 'Ausculta': '#8b5cf6' };
 
   const signsInView = (view) => CORPO_SINAIS.filter((s) => (s.view || 'ant') === view);
@@ -921,10 +922,25 @@
       case 'p':
       default: {
         const id = topId + ':' + idx;
-        const inner = marks[id] != null ? marks[id] : esc(b.x);
+        const saved = marks[id];
+        const inner = Array.isArray(saved) ? applySemioHighlights(b.x, saved) : (saved != null ? saved : esc(b.x));
         return `<p class="semio-p" data-hl-id="${esc(id)}">${inner}</p>`;
       }
     }
+  }
+
+  function normalizeSemioMark(raw) { return typeof raw === 'string' ? { t:raw, c:'yellow', n:'' } : { t:raw?.t || '', c:raw?.c || 'yellow', n:raw?.n || '' }; }
+  function applySemioHighlights(text, marks) {
+    let html = esc(text);
+    marks.forEach((raw, index) => {
+      const mark = normalizeSemioMark(raw);
+      const needle = esc(mark.t);
+      if (!needle) return;
+      const position = html.indexOf(needle);
+      if (position < 0 || /<mark[^>]*>[^<]*$/.test(html.slice(0, position))) return;
+      html = html.slice(0, position) + `<mark class="semio-hl-mark${mark.n ? ' skill-hl-has-note' : ''}" data-semio-hl-index="${index}" data-semio-hl-color="${esc(mark.c)}" style="background:${window.SkillHighlighter?.colorHex(mark.c) || '#ffe066'}"${mark.n ? ` title="${esc(mark.n)}"` : ''}>${needle}</mark>` + html.slice(position + needle.length);
+    });
+    return html;
   }
 
   // ---- Início ----
@@ -1199,7 +1215,7 @@
     const cor = CAT_COR[s.cat] || '#2f7d6f';
     return `<div class="semio-sign-detail">
       <div class="semio-sign-head"><span class="semio-cat" style="background:${cor}">${esc(s.cat)}</span><h3>${esc(s.nome)}</h3></div>
-      ${SIGN_FIG[s.id] ? `<figure class="semio-sign-fig">${SIGN_FIG[s.id]}<figcaption>Ilustração original — esquema didático</figcaption></figure>` : ''}
+      ${SIGN_IMAGE[s.id] ? `<figure class="semio-sign-fig"><img class="semio-sign-photo" src="${esc(SIGN_IMAGE[s.id])}" alt="${esc(s.nome)}" loading="lazy" decoding="async"><figcaption>Imagem clínica ilustrativa</figcaption></figure>` : (SIGN_FIG[s.id] ? `<figure class="semio-sign-fig">${SIGN_FIG[s.id]}<figcaption>Ilustração original — esquema didático</figcaption></figure>` : '')}
       <div class="semio-def"><b>O que é</b><p>${esc(s.oQue)}</p></div>
       <div class="semio-def"><b>Como pesquisar</b><p>${esc(s.comoPesquisar)}</p></div>
       <div class="semio-def"><b>Significado clínico</b><p>${esc(s.significado)}</p></div>
@@ -1385,34 +1401,46 @@
       addSemioImage(image, semioImageScope.dataset.semioImageScope);
     });
     ROOT.querySelector('[data-mark-read]')?.addEventListener('click', (e) => { S.progress['aula:' + e.target.dataset.markRead] = true; save(); paint(); });
-    // marca-texto: seleciona qualquer trecho do parágrafo para marcar
+    const repaintSemioAt = (pageScrollTop) => { paint(); const restore = () => { if (document.scrollingElement) document.scrollingElement.scrollTop = pageScrollTop; }; restore(); requestAnimationFrame(restore); };
+    // marca-texto: seleciona qualquer trecho do parágrafo para marcar e comentar
     ROOT.querySelectorAll('.semio-p[data-hl-id]').forEach((p) => {
       p.addEventListener('mouseup', () => {
         const sel = window.getSelection();
         if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
         const range = sel.getRangeAt(0);
         if (!p.contains(range.commonAncestorContainer)) return;
-        if (range.startContainer.nodeType !== Node.TEXT_NODE || range.endContainer.nodeType !== Node.TEXT_NODE) return;
-        const mark = document.createElement('mark');
-        mark.className = 'semio-hl-mark';
-        try { range.surroundContents(mark); } catch (err) { return; }
-        sel.removeAllRanges();
-        const topId = S.ui.aulaModId + ':' + S.ui.aulaTopicoId;
-        S.highlights[topId] = S.highlights[topId] || {};
-        S.highlights[topId][p.dataset.hlId] = p.innerHTML;
-        save();
+        const text = range.toString();
+        const commonElement = range.commonAncestorContainer.nodeType === Node.TEXT_NODE ? range.commonAncestorContainer.parentElement : range.commonAncestorContainer;
+        if (!text.trim() || text.length > 1200 || commonElement?.closest?.('mark.semio-hl-mark')) return;
+        window.SkillHighlighter?.open({ rect:range.getBoundingClientRect(), onSave:(color, note) => {
+          const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0;
+          const topId = S.ui.aulaModId + ':' + S.ui.aulaTopicoId;
+          S.highlights[topId] = S.highlights[topId] || {};
+          const previous = S.highlights[topId][p.dataset.hlId];
+          S.highlights[topId][p.dataset.hlId] = Array.isArray(previous) ? previous : [];
+          S.highlights[topId][p.dataset.hlId].push({ t:text, c:color, n:note || '' });
+          sel.removeAllRanges(); save(); repaintSemioAt(pageScrollTop);
+        }});
       });
     });
     ROOT.querySelectorAll('.semio-hl-mark').forEach((mk) => mk.onclick = (e) => {
       e.stopPropagation();
       const p = mk.closest('.semio-p[data-hl-id]');
       if (!p) return;
-      mk.replaceWith(...mk.childNodes);
-      p.normalize();
       const topId = S.ui.aulaModId + ':' + S.ui.aulaTopicoId;
       S.highlights[topId] = S.highlights[topId] || {};
-      S.highlights[topId][p.dataset.hlId] = p.innerHTML;
-      save();
+      const saved = S.highlights[topId][p.dataset.hlId];
+      const index = Number(mk.dataset.semioHlIndex);
+      if (Array.isArray(saved) && Number.isInteger(index) && saved[index]) {
+        const current = normalizeSemioMark(saved[index]);
+        window.SkillHighlighter?.open({ rect:mk.getBoundingClientRect(), color:current.c, note:current.n, editing:true,
+          onSave:(color,note) => { const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0; saved[index] = {...current,c:color,n:note || ''}; save(); repaintSemioAt(pageScrollTop); },
+          onDelete:() => { const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0; saved.splice(index,1); save(); repaintSemioAt(pageScrollTop); }
+        });
+        return;
+      }
+      // Compatibilidade com marcações antigas, salvas como HTML.
+      mk.replaceWith(...mk.childNodes); p.normalize(); S.highlights[topId][p.dataset.hlId] = p.innerHTML; save();
     });
 
     // Manobras
@@ -1599,8 +1627,8 @@
     .semio-flow{line-height:1.62;margin:6px 0}
     .semio-h{margin:18px 0 6px;font-size:1.05rem;color:var(--semio-acc2)}
     .semio-p{margin:9px 0;border-radius:4px}
-    .semio-hl-mark{background:rgba(255,214,79,.6);border-radius:2px;padding:0 1px;cursor:pointer}
-    .semio-hl-mark:hover{background:rgba(255,193,7,.75)}
+    .semio-hl-mark{background:rgba(255,214,79,.6);color:inherit;border-radius:2px;padding:0 1px;cursor:pointer}
+    .semio-hl-mark:hover{filter:brightness(.94)}
     .semio-ul{margin:8px 0;padding-left:20px}.semio-ul li{margin:5px 0}
     .semio-callout{display:flex;gap:10px;padding:11px 13px;border-radius:12px;margin:10px 0;font-size:.9rem;line-height:1.5}
     .semio-callout-ic{flex:none}
@@ -1664,6 +1692,7 @@
     .semio-cat{font-size:.7rem;color:#fff;padding:3px 9px;border-radius:999px;font-weight:700}
     .semio-sign-fig{margin:6px 0 10px;text-align:center;background:var(--card,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:10px}
     .semio-sign-svg{width:100%;max-width:260px;height:auto}
+    .semio-sign-photo{display:block;width:100%;max-width:520px;max-height:360px;object-fit:contain;margin:0 auto;border-radius:9px}
     .semio-sign-fig figcaption{font-size:.72rem;color:var(--muted,#667085);margin-top:4px}
     @media(max-width:640px){.semio-corpo{grid-template-columns:1fr}.semio-corpo-fig{position:static;max-width:200px;margin:0 auto}}
     .semio-focus .semio-callout,.semio-focus .semio-doc{opacity:1}
