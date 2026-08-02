@@ -78,6 +78,7 @@
   }
 
   function guideHtml(){
+    injectStyles();
     return `<div class="skill-hl-guide" aria-label="Marca-texto disponível"><strong>✒ Marca-texto</strong><span class="skill-hl-guide-colors" aria-hidden="true">${COLORS.map(color => `<i style="background:${color.hex}"></i>`).join('')}</span><small>Selecione um trecho para escolher a cor e escrever um comentário.</small><b>Salvamento automático</b></div>`;
   }
 

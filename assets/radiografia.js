@@ -234,6 +234,7 @@
     },
     {
       id: 'silhueta', nome: 'Sinal da silhueta', regiao: 'Tórax', level: 2,
+      reais: [{ src: 'assets/radio-real/complementos/sinal-silhueta.webp', caption: 'Exemplos anotados do sinal da silhueta conforme o contorno cardíaco ou diafragmático apagado.' }],
       def: 'Apagamento de um contorno normal indica que a opacidade contacta essa estrutura (mesma densidade, sem interface de ar).',
       mec: 'Duas densidades de água em contato perdem a interface. Localiza a lesão pelo contorno que some.',
       doencas: ['Pneumonia da língula (apaga borda cardíaca E)', 'Lobo médio (apaga borda cardíaca D)', 'Lobo inferior (apaga diafragma, mas preserva borda cardíaca)'],
@@ -275,6 +276,7 @@
     },
     {
       id: 'sulco', nome: 'Sinal do sulco profundo (deep sulcus)', regiao: 'Tórax', level: 3, urgente: true,
+      reais: [{ src: 'assets/radio-real/complementos/sulco-profundo.webp', caption: 'Radiografia em decúbito mostrando seio costofrênico direito anormalmente profundo e hipertransparente.' }],
       def: 'Seio costofrênico anormalmente profundo e radiotransparente no paciente em decúbito.',
       mec: 'Ar pleural sobe para a porção mais alta — que no supino é o seio costofrênico ântero-inferior.',
       doencas: ['Pneumotórax em decúbito (UTI/portátil)'],
@@ -303,6 +305,10 @@
     },
     {
       id: 'graocafe', nome: 'Grão de café (coffee bean)', regiao: 'Abdome', level: 3, urgente: true,
+      reais: [
+        { src: 'assets/radio-real/complementos/grao-cafe-volvo-sigmoide.webp', caption: 'Volvo de sigmoide: sinal do grão de café clássico.' },
+        { src: 'assets/radio-real/complementos/grao-cafe-invertido-volvo-ceco.webp', caption: 'Diferencial: grão de café invertido/bola de futebol americano no volvo de ceco.' },
+      ],
       def: 'Alça distendida em U invertido com parede central espessa que simula a fenda de um grão de café.',
       mec: 'Volvo de sigmoide: alça fecha em torno do mesentério, distende maciçamente e aponta para o quadrante superior.',
       doencas: ['Volvo de sigmoide'],
@@ -317,6 +323,7 @@
     },
     {
       id: 'duplabolha', nome: 'Dupla bolha (double bubble)', regiao: 'Abdome', level: 2,
+      reais: [{ src: 'assets/radio-real/complementos/dupla-bolha.webp', caption: 'Radiografia mostrando gás no estômago e duodeno proximal, com ausência de gás distal.' }],
       def: 'Duas bolhas de gás no andar superior do abdome, com ausência de gás distal.',
       mec: 'Gás no estômago (esquerda) e no duodeno proximal dilatado (direita), separados pelo piloro.',
       doencas: ['Atresia duodenal', 'Estenose/membrana duodenal', 'Pâncreas anular', 'Má-rotação com bandas de Ladd'],
@@ -332,6 +339,11 @@
     },
     {
       id: 'rigler', nome: 'Sinal de Rigler (dupla parede)', regiao: 'Abdome', level: 3, urgente: true,
+      reais: [
+        { src: 'assets/radio-real/complementos/rigler-dupla-parede.webp', caption: 'Sinal de Rigler: as duas faces da parede intestinal ficam visíveis.' },
+        { src: 'assets/radio-real/complementos/ligamento-falciforme.webp', caption: 'Sinal associado de pneumoperitônio: ligamento falciforme delineado pelo ar livre.' },
+        { src: 'assets/radio-real/complementos/chilaiditi.webp', caption: 'Diferencial importante: sinal de Chilaiditi, com haustrações entre o fígado e o diafragma.' },
+      ],
       def: 'Parede intestinal visível dos dois lados (luz E cavidade peritoneal), por ar em ambas as faces.',
       mec: 'Pneumoperitônio: ar livre delineia a serosa externa, normalmente invisível.',
       doencas: ['Perfuração de víscera oca'],
@@ -361,6 +373,10 @@
     },
     {
       id: 'raiossol', nome: 'Raios de sol (sunburst)', regiao: 'Osso', level: 3, urgente: true,
+      reais: [
+        { src: 'assets/radio-real/complementos/raios-de-sol-sunburst.webp', caption: 'Reação periosteal espiculada em raios de sol.' },
+        { src: 'assets/radio-real/complementos/reacao-periosteal-casca-cebola.webp', caption: 'Diferencial: reação periosteal lamelada em casca de cebola.' },
+      ],
       def: 'Espículas ósseas finas irradiando perpendicularmente da cortical.',
       mec: 'Reação periosteal AGRESSIVA: o tumor cresce rápido e o periósteo se ossifica ao longo dos vasos perpendiculares.',
       doencas: ['Osteossarcoma', 'Metástases (algumas)'],
@@ -375,6 +391,7 @@
     },
     {
       id: 'codman', nome: 'Triângulo de Codman', regiao: 'Osso', level: 3,
+      reais: [{ src: 'assets/radio-real/complementos/triangulo-codman.webp', caption: 'Elevação triangular do periósteo na margem de uma lesão óssea agressiva.' }],
       def: 'Ângulo de periósteo elevado e ossificado na borda da lesão, sem cobrir seu centro.',
       mec: 'O tumor cresce mais rápido que o periósteo consegue ossificar; só as bordas se ossificam.',
       doencas: ['Osteossarcoma', 'Sarcoma de Ewing', 'Osteomielite agressiva'],
@@ -389,6 +406,10 @@
     },
     {
       id: 'bambu', nome: 'Coluna em bambu', regiao: 'Coluna', level: 3,
+      reais: [
+        { src: 'assets/radio-real/complementos/coluna-bambu.webp', caption: 'Sindesmófitos marginais contínuos produzindo o aspecto de coluna em bambu.' },
+        { src: 'assets/radio-real/complementos/trilho-de-trem.webp', caption: 'Sinal associado do trilho de trem por ossificação ligamentar.' },
+      ],
       def: 'Coluna com aspecto fundido e contínuo por sindesmófitos verticais que unem os corpos vertebrais.',
       mec: 'Ossificação do ânulo fibroso (sindesmófitos finos e verticais) na espondilite anquilosante.',
       doencas: ['Espondilite anquilosante'],
@@ -402,6 +423,10 @@
     },
     {
       id: 'marfim', nome: 'Vértebra em marfim (ivory vertebra)', regiao: 'Coluna', level: 3,
+      reais: [
+        { src: 'assets/radio-real/complementos/vertebra-marfim.webp', caption: 'Corpo vertebral difusamente esclerótico, com altura preservada.' },
+        { src: 'assets/radio-real/complementos/corduroy-veludo.webp', caption: 'Diferencial: padrão trabecular em veludo/corduroy do hemangioma vertebral.' },
+      ],
       def: 'Corpo vertebral difusamente esclerótico (branco), com tamanho e contorno preservados.',
       mec: 'Aumento da densidade óssea por infiltração blástica ou aposição.',
       doencas: ['Metástase osteoblástica (próstata, mama)', 'Linfoma', 'Doença de Paget'],
@@ -415,6 +440,7 @@
     },
     {
       id: 'sailelbow', nome: 'Sinal da vela (sail sign) — cotovelo', regiao: 'Osso', level: 2,
+      reais: [{ src: 'assets/radio-real/complementos/sinal-vela-cotovelo.webp', caption: 'Perfil do cotovelo mostrando elevação do coxim gorduroso anterior e visualização do posterior.' }],
       def: 'Coxim gorduroso anterior elevado e triangular ("vela") no perfil do cotovelo.',
       mec: 'Derrame/hematoma articular desloca a gordura anterior; o coxim posterior (normalmente invisível) pode aparecer.',
       doencas: ['Fratura da cabeça do rádio (adulto)', 'Fratura supracondiliana (criança)'],
@@ -717,6 +743,21 @@
     body.radio-focus-on .radio-aula-tip{font-size:15.5px;line-height:1.75}
     body.radio-focus-on .radio-aula-figure{max-width:100%}
     .radio-focus-exit{position:fixed;top:14px;right:16px;z-index:500;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+    #radiografia{--radio-ink:#172526;--radio-green:#1d6359;--radio-deep:#153f3a;--radio-paper:#fffdf8;--radio-cream:#f3efe5;--radio-rust:#a3543a;color:var(--radio-ink)}
+    .radio-course-topbar{position:sticky;top:10px;z-index:40;display:flex;align-items:center;gap:22px;padding:10px 16px;border:1px solid var(--border,#dde4e1);border-radius:18px;background:color-mix(in srgb,var(--card,#fff) 94%,transparent);box-shadow:0 10px 30px rgba(25,48,45,.07);backdrop-filter:blur(14px)}
+    .radio-course-brand{display:flex;align-items:center;gap:10px;border:0;background:none;color:var(--radio-ink);padding:0;cursor:pointer;text-align:left}.radio-course-brand>i{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--radio-green);color:#fff;font:700 18px Georgia,serif}.radio-course-brand small,.radio-course-brand b{display:block}.radio-course-brand small{text-transform:uppercase;letter-spacing:.12em;font-size:9px;color:var(--radio-green)}.radio-course-brand b{font:600 21px Georgia,serif}
+    .radio-course-topbar .radio-subnav{margin-left:auto;flex:1;justify-content:flex-end;flex-wrap:wrap;min-width:0}.radio-course-topbar .radio-subnav button{border:0;background:transparent;padding:8px 8px;color:var(--muted,#63706f);font-size:12px;white-space:nowrap}.radio-course-topbar .radio-subnav button.active{background:rgba(29,99,89,.11);color:var(--radio-green)}
+    .radio-editorial-hero{min-height:430px;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,#e1ece7 0%,#f5f0e5 65%);display:grid;grid-template-columns:minmax(0,1.08fr) minmax(330px,.92fr);gap:44px;padding:52px;position:relative}.radio-editorial-hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(29,99,89,.14);border-radius:50%;left:-120px;bottom:-150px}.radio-hero-copy{position:relative;z-index:1}.radio-kicker{text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:850;color:var(--radio-green)}.radio-editorial-hero h1{font:500 clamp(39px,5vw,68px)/.98 Georgia,serif;letter-spacing:-.045em;color:#173f39;margin:16px 0 20px}.radio-editorial-hero h1 em{color:var(--radio-rust);font-weight:400}.radio-editorial-hero p{max-width:610px;font-size:16px;line-height:1.65;color:#526966}.radio-hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}.radio-primary,.radio-secondary{border:0;border-radius:12px;padding:12px 17px;font-weight:800;cursor:pointer}.radio-primary{background:var(--radio-green);color:#fff}.radio-secondary{border:1px solid rgba(29,99,89,.24);background:rgba(255,255,255,.48);color:var(--radio-green)}
+    .radio-hero-visual{position:relative;min-height:320px}.radio-hero-film{position:absolute;inset:3% 4% 3% 2%;border:8px solid rgba(255,255,255,.88);border-radius:22px;background:#091011 center/contain no-repeat;box-shadow:0 22px 55px rgba(18,45,41,.25);transform:rotate(2deg)}.radio-hero-film:after{content:"IMAGING · STUDY";position:absolute;right:14px;bottom:12px;color:rgba(255,255,255,.7);font:700 9px/1 system-ui;letter-spacing:.15em}.radio-hero-seal{position:absolute;left:-18px;bottom:14px;width:102px;height:102px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--radio-rust);color:#fff;border:6px solid rgba(255,255,255,.86);box-shadow:0 12px 30px rgba(67,43,32,.2);font:600 13px/1.15 Georgia,serif;transform:rotate(-8deg)}
+    .radio-metric-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid var(--border,#dde4e1);border-radius:18px;overflow:hidden;background:var(--border,#dde4e1)}.radio-metric-strip>div{background:var(--card,#fff);padding:18px 20px}.radio-metric-strip b{display:block;font:600 27px Georgia,serif;color:var(--radio-deep)}.radio-metric-strip span{font-size:11px;color:var(--muted,#63706f)}
+    .radio-home-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:24px 0 13px}.radio-home-heading h2{font:500 31px Georgia,serif;margin:6px 0 0}.radio-path-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}.radio-path-card{border:1px solid var(--border,#dde4e1);border-radius:19px;background:var(--card,#fff);padding:22px;display:flex;flex-direction:column;min-height:190px}.radio-path-card:first-child{background:linear-gradient(145deg,#173f39,#235e55);color:#fff}.radio-path-card:first-child .radio-muted{color:rgba(255,255,255,.72)}.radio-path-card h3{font:600 21px Georgia,serif;margin:9px 0}.radio-path-card .radio-btn{margin-top:auto;align-self:flex-start}
+    .radio-module-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.radio-module-card{display:grid;grid-template-columns:150px 1fr;min-height:190px;padding:0;border:1px solid var(--border,#dde4e1);border-radius:20px;overflow:hidden;background:var(--card,#fff);color:inherit;cursor:pointer;text-align:left;transition:.2s}.radio-module-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(28,60,55,.11);border-color:rgba(29,99,89,.35)}.radio-module-cover{position:relative;background:#10191a center/cover no-repeat}.radio-module-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(25deg,rgba(10,37,33,.64),transparent)}.radio-module-cover i{position:absolute;left:15px;bottom:14px;z-index:1;color:#fff;font:600 36px Georgia,serif}.radio-module-copy{padding:23px 21px;display:flex;flex-direction:column}.radio-module-copy h3{font:600 21px/1.2 Georgia,serif;margin:8px 0}.radio-module-copy p{line-height:1.5;margin:0}.radio-module-copy small{margin-top:auto;padding-top:14px;color:var(--radio-green);font-weight:800}
+    .radio-topic-catalog-head{padding:38px;border-radius:24px;background:var(--radio-cream);margin-bottom:18px}.radio-topic-catalog-head h1{font:500 clamp(34px,4vw,52px) Georgia,serif;margin:10px 0 5px}.radio-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.radio-topic-card{border:1px solid var(--border,#dde4e1);border-radius:16px;background:var(--card,#fff);padding:20px;text-align:left;color:inherit;cursor:pointer}.radio-topic-card:hover{border-color:var(--radio-green)}.radio-topic-card span{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--radio-green);font-weight:800}.radio-topic-card h3{font:600 19px/1.3 Georgia,serif;margin:8px 0 12px}
+    .radio-reader-shell{display:grid;grid-template-columns:275px minmax(0,1fr);gap:14px;align-items:start}.radio-reader-nav{position:sticky;top:92px;max-height:calc(100vh - 108px);overflow:auto;border:1px solid var(--border,#dde4e1);border-radius:20px;background:var(--card,#fff);padding:20px}.radio-reader-nav>button:first-child{border:0;background:none;color:var(--radio-green);font-weight:800;padding:0 0 18px;cursor:pointer}.radio-reader-nav h2{font:600 21px Georgia,serif;margin:8px 0 18px}.radio-reader-list{display:flex;flex-direction:column;gap:5px}.radio-reader-list button{display:flex;align-items:flex-start;gap:9px;width:100%;border:0;border-radius:10px;background:transparent;padding:10px;text-align:left;color:var(--muted,#63706f);cursor:pointer}.radio-reader-list button i{flex:none;width:23px;height:23px;border:1px solid var(--border,#dde4e1);border-radius:50%;display:grid;place-items:center;font:normal 700 10px system-ui}.radio-reader-list button.active{background:rgba(29,99,89,.1);color:var(--radio-deep)}.radio-reader-list button.active i{background:var(--radio-green);border-color:var(--radio-green);color:#fff}.radio-reader{border:1px solid var(--border,#e4e0d7);border-radius:22px;background:var(--radio-paper);overflow:hidden;min-width:0}.radio-reader-head{padding:48px clamp(32px,6vw,78px) 34px;border-bottom:1px solid #e6e1d7}.radio-reader-head h1{font:500 clamp(2.5rem,4.6vw,4.7rem)/.98 Georgia,serif;letter-spacing:-.045em;margin:14px 0;color:var(--radio-ink)}.radio-reader-head p{color:var(--muted,#63706f);line-height:1.5}.radio-reader-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.radio-reader .radio-aula-flow{max-width:880px;padding:42px clamp(30px,6vw,72px) 48px;gap:19px}.radio-reader .radio-aula-p{font-size:16px;line-height:1.8}.radio-reader .radio-aula-figure{max-width:100%;margin:10px 0}.radio-reader .radio-aula-figure img{max-height:650px}.radio-reader-footer{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #e6e1d7;padding:20px clamp(30px,6vw,72px)}
+    .radio-reader-nav>button:first-child{display:block;width:100%;text-align:left}.radio-reader-nav>.radio-kicker{display:block}
+    body.radio-focus-on .radio-course-topbar,body.radio-focus-on .radio-reader-nav,body.radio-focus-on .radio-reader-head,body.radio-focus-on .radio-reader-footer{display:none!important}body.radio-focus-on .radio-reader-shell{display:block}body.radio-focus-on .radio-reader{border:0}
+    @media(max-width:1050px){.radio-course-topbar{display:block}.radio-course-brand{margin-bottom:8px}.radio-course-topbar .radio-subnav{margin-left:0}.radio-editorial-hero{grid-template-columns:1fr minmax(290px,.72fr);padding:42px}.radio-reader-shell{grid-template-columns:235px minmax(0,1fr)}}
+    @media(max-width:780px){.radio-editorial-hero{grid-template-columns:1fr;padding:38px 27px}.radio-hero-visual{height:280px}.radio-metric-strip{grid-template-columns:repeat(2,1fr)}.radio-path-grid,.radio-module-catalog,.radio-topic-grid{grid-template-columns:1fr}.radio-reader-shell{display:block}.radio-reader-nav{position:static;max-height:none;margin-bottom:12px}.radio-reader-head{padding:34px 25px}.radio-reader .radio-aula-flow{padding:32px 25px}.radio-module-card{grid-template-columns:115px 1fr}.radio-reader-footer{padding:18px 25px}}
     `;
     document.head.appendChild(style);
   }
@@ -736,7 +777,7 @@
     return `<div class="radio-figure" data-anno="${opts.anno ? 1 : 0}" data-inv="0" data-zoom="0" data-radio-viewer>
       ${inner}
       <div class="radio-viewer-bar">
-        <button class="radio-btn ghost sm" data-vw="anno">${opts.anno ? 'Ocultar' : 'Mostrar'} anotação</button>
+        ${imgObj.svg ? `<button class="radio-btn ghost sm" data-vw="anno">${opts.anno ? 'Ocultar' : 'Mostrar'} anotação</button>` : ''}
         <button class="radio-btn ghost sm" data-vw="inv">Inverter</button>
         <button class="radio-btn ghost sm" data-vw="zoom">Zoom</button>
         ${meta ? `<span class="radio-muted" style="margin-left:auto;align-self:center">${esc(meta)}</span>` : ''}
@@ -914,34 +955,12 @@
     const dueSinais = SINAIS.filter((s) => { const r = S.srs[s.id]; return r && r.attempts > 0 && r.dueISO <= todayISO(); });
     const prog = trailProgress(S);
     const nxt = nextStep(S);
-    return `<div class="radio-hero">
-        <div class="radio-stat"><span class="radio-muted">Tentativas</span><b>${attempts}</b></div>
-        <div class="radio-stat"><span class="radio-muted">Acerto</span><b>${acc}%</b></div>
-        <div class="radio-stat"><span class="radio-muted">Sinais a revisar</span><b>${dueSinais.length}</b></div>
-        <div class="radio-stat"><span class="radio-muted">Trilha</span><b>${prog.pct}%</b></div>
-      </div>
-      <div class="radio-grid">
-        <div class="radio-card">
-          <span class="radio-muted">Sinal do dia</span>
-          <h3>${esc(sod.nome)}</h3>
-          <p class="radio-muted">${esc(sod.def)}</p>
-          <button class="radio-btn wide" data-radio-open-sinal="${sod.id}">Estudar sinal</button>
-        </div>
-        <div class="radio-card">
-          <span class="radio-muted">Sua trilha de estudo</span>
-          <h3>${prog.done ? 'Continuar de onde parou' : 'Comece do zero'} — ${prog.pct}%</h3>
-          <div class="radio-progress"><i style="width:${prog.pct}%"></i></div>
-          <p class="radio-muted">${nxt ? 'Próximo: ' + esc(nxt.t) : 'Trilha concluída — hora de revisar.'}</p>
-          <button class="radio-btn wide" data-radio-goto="trilha">${prog.done ? 'Continuar trilha' : 'Começar agora'}</button>
-        </div>
-        <div class="radio-card">
-          <span class="radio-muted">Treine a interpretação</span>
-          <h3>Casos guiados</h3>
-          <p class="radio-muted">Fluxo completo: técnica → detecção → localização → laudo. O diagnóstico só aparece no fim.</p>
-          <button class="radio-btn wide" data-radio-goto="casos">Abrir Casos</button>
-        </div>
-      </div>
-      <p class="radio-muted">Build 1 · núcleo de ensino sintético. Esquemas são didáticos (SVG), não radiografias reais — o visualizador já aceita imagens reais quando o banco estiver pronto.</p>`;
+    const mods = (window.RadioAulas && window.RadioAulas.MODULOS) || [];
+    const cover = mods.flatMap((mod) => mod.topicos).flatMap((topic) => topic.blocks).find((block) => block.type === 'img')?.src || '';
+    return `<section class="radio-editorial-hero"><div class="radio-hero-copy"><span class="radio-kicker">Curso visual · do essencial ao laudo</span><h1>Aprenda a ver.<br><em>Interprete com método.</em></h1><p>Um percurso visual por radiografia, tomografia, ressonância e ultrassom — organizado para transformar imagens em raciocínio clínico.</p><div class="radio-hero-actions"><button class="radio-primary" data-radio-goto="aulas">Explorar as aulas →</button><button class="radio-secondary" data-radio-goto="trilha">Seguir a trilha</button></div></div><div class="radio-hero-visual"><div class="radio-hero-film"${cover ? ` style="background-image:url('${esc(cover)}')"` : ''}></div><div class="radio-hero-seal">Imagem<br>+ clínica</div></div></section>
+      <section class="radio-metric-strip"><div><b>${mods.length || 7}</b><span>módulos visuais</span></div><div><b>${prog.pct}%</b><span>da trilha concluída</span></div><div><b>${acc}%</b><span>de acerto</span></div><div><b>${dueSinais.length}</b><span>sinais para revisar</span></div></section>
+      <div class="radio-home-heading"><div><span class="radio-kicker">Seu percurso</span><h2>Estude, reconheça e aplique</h2></div></div>
+      <section class="radio-path-grid"><article class="radio-path-card"><span class="radio-kicker" style="color:#b7ded5">Próximo passo</span><h3>${nxt ? esc(nxt.t) : 'Trilha concluída'}</h3><p class="radio-muted">${prog.done}/${prog.total} etapas concluídas. Continue na ordem certa, do fundamento à interpretação.</p><button class="radio-btn" data-radio-goto="trilha">${prog.done ? 'Continuar trilha' : 'Começar agora'} →</button></article><article class="radio-path-card"><span class="radio-kicker">Sinal do dia</span><h3>${esc(sod.nome)}</h3><p class="radio-muted">${esc(sod.def)}</p><button class="radio-btn ghost" data-radio-open-sinal="${sod.id}">Estudar sinal</button></article><article class="radio-path-card"><span class="radio-kicker">Prática clínica</span><h3>Casos guiados</h3><p class="radio-muted">Técnica, detecção, localização e laudo sem revelar o diagnóstico antes da hora.</p><button class="radio-btn ghost" data-radio-goto="casos">Abrir casos</button></article></section>`;
   }
 
   // ---------- FUNDAMENTOS ----------
@@ -1033,11 +1052,15 @@
       }).join('')}</div>`).join('');
   }
   function sinalDetailHtml(s) {
+    const realImages = s.reais || [];
+    const visual = realImages.length
+      ? `${viewer({ src: realImages[0].src })}<p class="radio-muted" style="margin-top:8px">${esc(realImages[0].caption)}</p>
+          ${realImages.slice(1).map((img) => `${viewer({ src: img.src })}<p class="radio-muted" style="margin-top:8px">${esc(img.caption)}</p>`).join('')}
+          <details style="margin-top:12px"><summary class="radio-muted" style="cursor:pointer">Ver também o esquema didático</summary>${viewer({ svg: s.svg }, { anno: false })}</details>`
+      : `${viewer({ svg: s.svg }, { anno: false })}<p class="radio-muted" style="margin-top:8px">Ative a anotação para ver o achado marcado.</p>`;
     return `<button class="radio-btn ghost sm" data-radio-back-sinal>← Voltar aos sinais</button>
       <div class="radio-two" style="margin-top:12px">
-        <div>${viewer({ svg: s.svg }, { anno: false })}
-          <p class="radio-muted" style="margin-top:8px">Ative a anotação para ver o achado marcado.</p>
-        </div>
+        <div>${visual}</div>
         <div class="radio-teach">
           <div class="radio-tags">${regBadge(s.regiao)}<span class="radio-tag">nível ${s.level}</span>${s.urgente ? badge('alta') : ''}</div>
           <h3 style="margin:6px 0 0">${esc(s.nome)}</h3>
@@ -1186,21 +1209,13 @@
   function aulasModulosList() {
     const mods = (window.RadioAulas && window.RadioAulas.MODULOS) || [];
     if (!mods.length) return '<p class="radio-muted">Carregando aulas…</p>';
-    return `<p class="radio-muted" style="margin-top:0">Aulas com imagens reais (radiografia, TC, RM e USG), organizadas como no guia original — 7 módulos, do básico ao trauma e neurorradiologia.</p>
-      <div class="radio-grid">${mods.map((m) => `<div class="radio-card radio-region-btn" data-radio-open-mod="${m.id}">
-        <div class="radio-tags"><span class="radio-tag">Módulo ${m.id}</span><span class="radio-tag">${m.topicos.length} tópicos</span></div>
-        <h3>${esc(m.nome)}</h3><p class="radio-muted">${esc(m.resumo)}</p>
-      </div>`).join('')}</div>`;
+    return `<section class="radio-topic-catalog-head"><span class="radio-kicker">Biblioteca radiológica</span><h1>Curso completo</h1><p class="radio-muted">Sete módulos com imagens reais, do princípio físico ao trauma e à neurorradiologia.</p></section><div class="radio-module-catalog">${mods.map((m) => { const cover = m.topicos.flatMap((topic) => topic.blocks).find((block) => block.type === 'img')?.src || ''; return `<button class="radio-module-card" data-radio-open-mod="${m.id}"><span class="radio-module-cover"${cover ? ` style="background-image:url('${esc(cover)}')"` : ''}><i>${String(m.id).padStart(2,'0')}</i></span><span class="radio-module-copy"><span class="radio-kicker">Módulo ${String(m.id).padStart(2,'0')}</span><h3>${esc(m.nome)}</h3><p class="radio-muted">${esc(m.resumo)}</p><small>${m.topicos.length} tópicos · Abrir módulo →</small></span></button>`; }).join('')}</div>`;
   }
   function aulasTopicosList(mod) {
-    return `<button class="radio-btn ghost sm" data-radio-back-mod>← Voltar aos módulos</button>
-      <div style="margin:10px 0"><span class="radio-tag">Módulo ${mod.id}</span><h2 style="margin:6px 0 0">${esc(mod.nome)}</h2><p class="radio-muted">${esc(mod.resumo)}</p></div>
-      <div class="radio-grid">${mod.topicos.map((t) => {
+    return `<section class="radio-topic-catalog-head"><button class="radio-btn ghost sm" data-radio-back-mod>← Voltar ao curso</button><div style="margin-top:22px"><span class="radio-kicker">Módulo ${String(mod.id).padStart(2,'0')}</span><h1>${esc(mod.nome)}</h1><p class="radio-muted">${esc(mod.resumo)}</p></div></section><div class="radio-topic-grid">${mod.topicos.map((t,index) => {
         const nImg = t.blocks.filter((b) => b.type === 'img').length;
         const nTxt = t.blocks.filter((b) => b.type === 'p' || b.type === 'tip').length;
-        return `<div class="radio-card radio-region-btn" data-radio-open-topico="${t.id}">
-        <h3>${esc(t.titulo)}</h3><span class="radio-muted">${nImg ? nImg + ' imagens' : 'Sem imagens'} · ${nTxt} blocos de texto</span>
-      </div>`;
+        return `<button class="radio-topic-card" data-radio-open-topico="${t.id}"><span>Aula ${String(index+1).padStart(2,'0')}</span><h3>${esc(t.titulo)}</h3><small class="radio-muted">${nImg ? nImg + ' imagens' : 'Sem imagens'} · ${nTxt} blocos de leitura</small></button>`;
       }).join('')}</div>`;
   }
   // Marca-texto: reaplica os trechos salvos como <mark> por cima do texto plano do bloco.
@@ -1238,16 +1253,14 @@
       }
       return `<p class="radio-aula-p" data-hl-block="${i}"><span data-hl-target>${applyHighlights(b.text, marks[i])}</span></p>`;
     });
-    return `<button class="radio-btn ghost sm" data-radio-back-topico>← Voltar a ${esc(mod.nome)}</button>
-      <div style="margin:10px 0"><span class="radio-tag">Módulo ${mod.id}</span><h2 style="margin:6px 0 0">${esc(topico.titulo)}</h2>
-        <p class="radio-muted" style="margin:4px 0 0">Selecione qualquer trecho do texto para marcar com marca-texto. Toque numa imagem para ampliar.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px">
+    const topicIndex = mod.topicos.findIndex((topic) => topic.id === topico.id);
+    const previous = mod.topicos[topicIndex - 1], next = mod.topicos[topicIndex + 1];
+    return `<div class="radio-reader-shell"><aside class="radio-reader-nav"><button data-radio-back-topico>← Voltar ao módulo</button><span class="radio-kicker">Módulo ${String(mod.id).padStart(2,'0')}</span><h2>${esc(mod.nome)}</h2><div class="radio-reader-list">${mod.topicos.map((topic,index) => `<button class="${topic.id === topico.id ? 'active' : ''}" data-radio-open-topico="${topic.id}"><i>${index+1}</i><span>${esc(topic.titulo)}</span></button>`).join('')}</div></aside><section class="radio-reader"><header class="radio-reader-head"><span class="radio-kicker">Módulo ${String(mod.id).padStart(2,'0')} · Aula ${topicIndex+1}</span><h1>${esc(topico.titulo)}</h1><p>Leitura radiológica orientada · selecione trechos para marcar e toque nas imagens para ampliar.</p><div class="radio-reader-tools">
           <button class="radio-btn ghost sm radio-focus-btn" data-radio-focus-toggle>🎯 Modo foco</button>
           ${Object.keys(marks).length ? `<button class="radio-btn ghost sm" data-radio-clear-hl>Limpar marcações deste tópico</button>` : ''}
-        </div>
-      </div>
+        </div></header>
       <div class="radio-aula-flow">${window.SkillHighlighter?.guideHtml?.() || ''}${hiddenImages.length ? `<div class="radio-hidden-toolbar"><span>${hiddenImages.length} ${hiddenImages.length === 1 ? 'imagem está oculta' : 'imagens estão ocultas'} nesta aula.</span><button type="button" data-radio-restore-course-images="${esc(topico.id)}">Restaurar imagens</button></div>` : ''}${parts.join('')}</div>
-      <button class="radio-btn radio-focus-exit" data-radio-focus-toggle style="display:none">✕ Sair do modo foco</button>`;
+      <footer class="radio-reader-footer">${previous ? `<button class="radio-btn ghost" data-radio-open-topico="${previous.id}">← Anterior</button>` : '<span></span>'}${next ? `<button class="radio-btn" data-radio-open-topico="${next.id}">Próxima aula →</button>` : '<span></span>'}</footer></section></div><button class="radio-btn radio-focus-exit" data-radio-focus-toggle style="display:none">✕ Sair do modo foco</button>`;
   }
   function aulasHtml() {
     const S = st();
@@ -1450,11 +1463,7 @@
     if (!S.radio.daily) S.radio.daily = d.daily;
 
     container.innerHTML = `<div class="radio-wrap">
-      <div class="section-title" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
-        <div><span class="eyebrow">Radiologia</span><h2 style="margin:0">Radiografia</h2>
-        <p class="radio-muted" style="margin:4px 0 0">Aprender a interpretar — densidades, método, sinais e casos guiados. Funciona offline. Esquemas didáticos; visualizador pronto para imagens reais.</p></div>
-      </div>
-      ${subnav()}
+      <header class="radio-course-topbar"><button class="radio-course-brand" data-radio-sub="inicio"><i>R</i><span><small>Habilidade</small><b>Radiologia</b></span></button>${subnav()}</header>
       <div class="radio-body"></div>
     </div>`;
     container.querySelectorAll('.radio-subnav [data-radio-sub]').forEach((b) => b.onclick = () => go(b.dataset.radioSub));

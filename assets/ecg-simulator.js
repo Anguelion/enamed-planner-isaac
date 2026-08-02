@@ -1332,6 +1332,16 @@
     .ecg-hl-popover{position:fixed;z-index:2100;background:#1c1f26;color:#fff;border-radius:8px;padding:6px;display:flex;gap:4px;box-shadow:0 8px 24px rgba(0,0,0,.4)}
     .ecg-hl-popover button{border:0;background:transparent;color:#fff;font-size:16px;padding:6px 10px;border-radius:6px;cursor:pointer}
     .ecg-hl-popover button:hover{background:rgba(255,255,255,.15)}
+    #ecg{--ecg-ink:#192526;--ecg-green:#20665d;--ecg-deep:#153f3a;--ecg-paper:#fffdf8;--ecg-cream:#f4efe5;--ecg-coral:#b55447;color:var(--ecg-ink)}
+    .ecg-course-topbar{position:sticky;top:10px;z-index:40;display:flex;align-items:center;gap:22px;padding:10px 16px;border:1px solid var(--line,#dde4e1);border-radius:18px;background:color-mix(in srgb,var(--panel,#fff) 94%,transparent);box-shadow:0 10px 30px rgba(25,48,45,.07);backdrop-filter:blur(14px)}.ecg-course-brand{display:flex;align-items:center;gap:10px;border:0;background:none;color:var(--ecg-ink);padding:0;cursor:pointer;text-align:left}.ecg-course-brand>i{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--ecg-green);color:#fff;font:700 17px Georgia,serif}.ecg-course-brand small,.ecg-course-brand b{display:block}.ecg-course-brand small{text-transform:uppercase;letter-spacing:.12em;font-size:9px;color:var(--ecg-green)}.ecg-course-brand b{font:600 21px Georgia,serif}.ecg-course-topbar .ecg-subnav{margin-left:auto;flex:1;justify-content:flex-end;flex-wrap:wrap;min-width:0}.ecg-course-topbar .ecg-subnav button{border:0;background:transparent;padding:8px 8px;color:var(--muted,#63706f);font-size:12px;white-space:nowrap}.ecg-course-topbar .ecg-subnav button.active{background:rgba(32,102,93,.11);color:var(--ecg-green)}
+    .ecg-editorial-hero{min-height:430px;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,#e1ece7 0%,#f5eee6 66%);display:grid;grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);gap:42px;padding:52px;position:relative}.ecg-editorial-hero:after{content:"";position:absolute;width:270px;height:270px;border-radius:50%;border:1px solid rgba(32,102,93,.14);left:-115px;bottom:-140px}.ecg-hero-copy{position:relative;z-index:1}.ecg-kicker{text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:850;color:var(--ecg-green)}.ecg-editorial-hero h1{font:500 clamp(39px,5vw,67px)/.98 Georgia,serif;letter-spacing:-.045em;color:#173f39;margin:16px 0 20px}.ecg-editorial-hero h1 em{color:var(--ecg-coral);font-weight:400}.ecg-editorial-hero p{max-width:600px;font-size:16px;line-height:1.65;color:#526966}.ecg-hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}.ecg-primary,.ecg-secondary{border:0;border-radius:12px;padding:12px 17px;font-weight:800;cursor:pointer}.ecg-primary{background:var(--ecg-green);color:#fff}.ecg-secondary{border:1px solid rgba(32,102,93,.24);background:rgba(255,255,255,.5);color:var(--ecg-green)}
+    .ecg-hero-monitor{align-self:center;position:relative;padding:18px;border:8px solid rgba(255,255,255,.88);border-radius:22px;background:#11181a;box-shadow:0 22px 55px rgba(18,45,41,.24);transform:rotate(1.5deg)}.ecg-hero-monitor .ecg-canvas-shell{border:0;background:#fff}.ecg-hero-monitor>span{display:flex;justify-content:space-between;color:rgba(255,255,255,.65);font-size:9px;letter-spacing:.12em;margin-top:10px}.ecg-hero-pulse{position:absolute;right:-15px;top:-18px;width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:var(--ecg-coral);border:6px solid rgba(255,255,255,.9);color:#fff;font:600 13px Georgia,serif;text-align:center;transform:rotate(7deg)}
+    .ecg-metric-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;border:1px solid var(--line,#dde4e1);border-radius:18px;overflow:hidden;background:var(--line,#dde4e1)}.ecg-metric-strip>div{background:var(--panel,#fff);padding:18px 20px}.ecg-metric-strip b{display:block;font:600 27px Georgia,serif;color:var(--ecg-deep)}.ecg-metric-strip span{font-size:11px;color:var(--muted,#63706f)}.ecg-home-heading{margin:24px 0 13px}.ecg-home-heading h2{font:500 31px Georgia,serif;margin:6px 0 0}.ecg-path-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}.ecg-path-card{border:1px solid var(--line,#dde4e1);border-radius:19px;background:var(--panel,#fff);padding:22px;display:flex;flex-direction:column;min-height:185px}.ecg-path-card:first-child{background:linear-gradient(145deg,#173f39,#235e55);color:#fff}.ecg-path-card:first-child .ecg-muted{color:rgba(255,255,255,.72)}.ecg-path-card h3{font:600 21px Georgia,serif;margin:9px 0}.ecg-path-card .ecg-btn{margin-top:auto;align-self:flex-start}
+    .ecg-course-head{padding:39px;border-radius:24px;background:var(--ecg-cream);margin-bottom:17px}.ecg-course-head h1{font:500 clamp(35px,4vw,53px) Georgia,serif;margin:10px 0 6px}.ecg-course-progress{height:8px;border-radius:99px;background:rgba(32,102,93,.13);overflow:hidden;margin-top:18px}.ecg-course-progress i{display:block;height:100%;background:var(--ecg-green);border-radius:inherit}.ecg-module-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.ecg-module-card{border:1px solid var(--line,#dde4e1);border-radius:20px;background:var(--panel,#fff);padding:24px;min-width:0}.ecg-module-card>header{display:flex;align-items:start;justify-content:space-between;gap:12px;padding-bottom:15px;border-bottom:1px solid var(--line,#e6e9e7)}.ecg-module-card h2{font:600 22px/1.2 Georgia,serif;margin:7px 0 0}.ecg-module-number{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:50%;background:rgba(32,102,93,.1);color:var(--ecg-green);font:700 15px Georgia,serif}.ecg-lesson-list{display:flex;flex-direction:column;gap:6px;margin-top:14px}.ecg-lesson-list button{display:grid;grid-template-columns:25px 1fr auto;align-items:center;gap:9px;border:0;border-radius:11px;background:transparent;padding:10px;text-align:left;color:inherit;cursor:pointer}.ecg-lesson-list button:hover{background:rgba(32,102,93,.07)}.ecg-lesson-list button i{width:23px;height:23px;border:1px solid var(--line,#dde4e1);border-radius:50%;display:grid;place-items:center;font:normal 700 10px system-ui}.ecg-lesson-list button.done i{background:var(--ecg-green);border-color:var(--ecg-green);color:#fff}.ecg-lesson-list small{font-size:9px;color:var(--muted,#63706f);text-transform:uppercase;letter-spacing:.06em}
+    .ecg-reader-shell{display:grid;grid-template-columns:280px minmax(0,1fr);gap:14px;align-items:start}.ecg-reader-nav{position:sticky;top:92px;max-height:calc(100vh - 108px);overflow:auto;border:1px solid var(--line,#dde4e1);border-radius:20px;background:var(--panel,#fff);padding:20px}.ecg-reader-nav>button{border:0;background:none;color:var(--ecg-green);font-weight:800;padding:0 0 18px;cursor:pointer}.ecg-reader-nav h2{font:600 21px Georgia,serif;margin:8px 0 16px}.ecg-reader-nav .ecg-lesson-list button.active{background:rgba(32,102,93,.1);color:var(--ecg-deep)}.ecg-reader-nav .ecg-lesson-list button.active i{background:var(--ecg-green);border-color:var(--ecg-green);color:#fff}.ecg-reader{border:1px solid var(--line,#e4e0d7);border-radius:22px;background:var(--ecg-paper);overflow:hidden;min-width:0}.ecg-reader-head{padding:48px clamp(32px,6vw,78px) 34px;border-bottom:1px solid #e6e1d7}.ecg-reader-head h1{font:500 clamp(2.5rem,4.6vw,4.7rem)/.98 Georgia,serif;letter-spacing:-.045em;margin:14px 0;color:var(--ecg-ink)}.ecg-reader-head p{color:var(--muted,#63706f)}.ecg-reader-body{max-width:900px;margin:0 auto;padding:38px clamp(30px,6vw,72px) 45px}.ecg-reader-body>.ecg-card{border:0;border-radius:0;background:transparent;padding:0;margin:28px 0}.ecg-reader-body>.ecg-card h4{font:800 10px system-ui!important;letter-spacing:.11em!important;color:var(--ecg-green)!important}.ecg-reader-body .ecg-hl-block{font-size:16px;line-height:1.8}.ecg-reader-body .ecg-article-figure{border-radius:15px;margin:25px 0}.ecg-reader-body .ecg-article-figure figcaption{padding:15px 17px;line-height:1.6}.ecg-reader-demo{padding:0 clamp(30px,6vw,72px);margin-top:32px}.ecg-reader-footer{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #e6e1d7;padding:20px clamp(30px,6vw,72px)}
+    .ecg-reader-nav>button{display:block;width:100%;text-align:left}.ecg-reader-nav>.ecg-kicker{display:block}
+    @media(max-width:1050px){.ecg-course-topbar{display:block}.ecg-course-brand{margin-bottom:8px}.ecg-course-topbar .ecg-subnav{margin-left:0}.ecg-editorial-hero{grid-template-columns:1fr minmax(300px,.75fr);padding:42px}.ecg-reader-shell{grid-template-columns:235px minmax(0,1fr)}}
+    @media(max-width:780px){.ecg-editorial-hero{grid-template-columns:1fr;padding:38px 27px}.ecg-hero-monitor{margin-top:20px}.ecg-metric-strip{grid-template-columns:repeat(2,1fr)}.ecg-path-grid,.ecg-module-catalog{grid-template-columns:1fr}.ecg-reader-shell{display:block}.ecg-reader-nav{position:static;max-height:none;margin-bottom:12px}.ecg-reader-head{padding:34px 25px}.ecg-reader-body{padding:30px 25px}.ecg-reader-demo{padding:0 25px}.ecg-reader-footer{padding:18px 25px}}
     `;
     document.head.appendChild(style);
   }
@@ -1355,27 +1365,12 @@
     const totalAtt = S.log.length;
     const totalCorrect = S.log.filter((l) => l.correct).length;
     const acc = totalAtt ? Math.round((totalCorrect / totalAtt) * 100) : 0;
+    const doneCount = TRILHA_LESSONS.filter((lesson) => S.trilha.done?.[lesson.id]).length;
+    const nextLesson = TRILHA_LESSONS.find((lesson) => !S.trilha.done?.[lesson.id]) || TRILHA_LESSONS[0];
     save();
-    return `
-    <div class="ecg-hero">
-      <div class="ecg-stat"><span class="ecg-muted">Precisão total</span><b>${acc}%</b><span class="ecg-muted">${totalAtt} interpretações</span></div>
-      <div class="ecg-stat"><span class="ecg-muted">Revisões pendentes</span><b>${due.length}</b><span class="ecg-muted">${due.length ? 'Abra a aba Revisão' : 'Em dia'}</span></div>
-      <div class="ecg-stat"><span class="ecg-muted">Tema mais fraco</span><b style="font-size:16px">${weak ? esc(weak.name) : '—'}</b><span class="ecg-muted">${weak ? 'Priorize no treino' : 'Sem dados ainda'}</span></div>
-      <div class="ecg-stat"><span class="ecg-muted">Condições no banco</span><b>${CONDITIONS.length}</b><span class="ecg-muted">${CATEGORIES.length} categorias</span></div>
-    </div>
-    <div class="ecg-card">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
-        <h3>ECG do dia — ${esc(eod.name)} ${badge(eod.urgency)}</h3>
-        <button class="ecg-btn ghost" data-ecg-open="${eod.id}">Ver interpretação</button>
-      </div>
-      <div class="ecg-canvas-shell"><canvas data-ecg-canvas="${eod.id}"></canvas></div>
-      <p class="ecg-muted">Aplique o método sistemático antes de revelar o laudo.</p>
-    </div>
-    <div class="ecg-grid-cards">
-      <div class="ecg-card"><h3>Treino rápido (5 min)</h3><p class="ecg-muted">Reconhecimento com traçados sorteados e correção em camadas.</p><button class="ecg-btn" data-ecg-start-quiz="mixed">Começar treino</button></div>
-      <div class="ecg-card"><h3>Revisão adaptativa</h3><p class="ecg-muted">${due.length ? `${due.length} condição(ões) no ponto de revisão.` : 'Nada vencido — volte amanhã.'}</p><button class="ecg-btn ghost" data-ecg-sub-go="revisao">Abrir revisão</button></div>
-      <div class="ecg-card"><h3>Método de leitura</h3><p class="ecg-muted">A sequência de 19 passos que o simulador cobra nos níveis iniciais.</p><button class="ecg-btn ghost" data-ecg-sub-go="metodo">Ver método</button></div>
-    </div>`;
+    return `<section class="ecg-editorial-hero"><div class="ecg-hero-copy"><span class="ecg-kicker">Curso prático · do ritmo ao diagnóstico</span><h1>Leia o traçado.<br><em>Entenda o coração.</em></h1><p>Uma trilha visual e progressiva para dominar ondas, intervalos, ritmos e emergências sem depender de memorização solta.</p><div class="ecg-hero-actions"><button class="ecg-primary" data-ecg-lesson="${nextLesson.id}">${doneCount ? 'Continuar estudando' : 'Começar o curso'} →</button><button class="ecg-secondary" data-ecg-sub-go="trilha">Explorar a trilha</button></div></div><div class="ecg-hero-monitor"><div class="ecg-canvas-shell"><canvas data-ecg-canvas="${eod.id}"></canvas></div><span><b>ECG DO DIA · ${esc(eod.name)}</b><i>25 mm/s · 10 mm/mV</i></span><div class="ecg-hero-pulse">ritmo<br>+ clínica</div></div></section>
+      <section class="ecg-metric-strip"><div><b>${doneCount}/${TRILHA_LESSONS.length}</b><span>lições concluídas</span></div><div><b>${acc}%</b><span>de precisão</span></div><div><b>${due.length}</b><span>revisões pendentes</span></div><div><b>${CONDITIONS.length}</b><span>condições no banco</span></div></section>
+      <div class="ecg-home-heading"><span class="ecg-kicker">Seu percurso</span><h2>Aprenda, reconheça e pratique</h2></div><section class="ecg-path-grid"><article class="ecg-path-card"><span class="ecg-kicker" style="color:#b7ded5">Próxima lição</span><h3>${esc(nextLesson.title)}</h3><p class="ecg-muted">Continue do ponto certo da trilha, do zero ao avançado.</p><button class="ecg-btn" data-ecg-lesson="${nextLesson.id}">Abrir lição →</button></article><article class="ecg-path-card"><span class="ecg-kicker">Treino rápido</span><h3>Reconhecimento em 5 min</h3><p class="ecg-muted">Traçados sorteados e correção em camadas para consolidar padrões.</p><button class="ecg-btn ghost" data-ecg-start-quiz="mixed">Começar treino</button></article><article class="ecg-path-card"><span class="ecg-kicker">Prioridade de hoje</span><h3>${weak ? esc(weak.name) : 'Método sistemático'}</h3><p class="ecg-muted">${weak ? 'Seu tema com menor desempenho.' : 'Siga os 19 passos em todo traçado.'}</p><button class="ecg-btn ghost" data-ecg-sub-go="${weak ? 'revisao' : 'metodo'}">${weak ? 'Abrir revisão' : 'Ver método'}</button></article></section>`;
   }
 
   // ---- Método ---------------------------------------------------------------
@@ -1628,29 +1623,15 @@
     const pct = Math.round((doneCount / total) * 100);
     // primeira lição não concluída = "próxima"
     const next = TRILHA_LESSONS.find((l) => !done[l.id]) || TRILHA_LESSONS[0];
-    let html = `
-    <div class="ecg-card">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
-        <div><h3 style="margin:0">Sua trilha de ECG</h3><p class="ecg-muted" style="margin:4px 0 0">Do zero ao avançado, na ordem certa. ${doneCount}/${total} lições concluídas.</p></div>
-        <button class="ecg-btn" data-ecg-lesson="${next.id}">${doneCount ? 'Continuar' : 'Começar'} →</button>
-      </div>
-      <div style="height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:12px"><div style="height:100%;width:${pct}%;background:var(--accent,#1261f5)"></div></div>
-    </div>`;
-    TRILHA.forEach((mod) => {
+    let html = `<section class="ecg-course-head"><span class="ecg-kicker">Percurso de aprendizagem</span><h1>Sua trilha de ECG</h1><p class="ecg-muted">Do primeiro quadradinho às emergências: ${doneCount}/${total} lições concluídas.</p><button class="ecg-btn" data-ecg-lesson="${next.id}" style="margin-top:14px">${doneCount ? 'Continuar de onde parou' : 'Começar agora'} →</button><div class="ecg-course-progress"><i style="width:${pct}%"></i></div></section><div class="ecg-module-catalog">`;
+    TRILHA.forEach((mod,modIndex) => {
       const modDone = mod.lessons.filter((l) => done[l.id]).length;
-      html += `<div class="ecg-card">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3 style="margin:0;font-size:14px">${esc(mod.module)}</h3><span class="ecg-tag">${modDone}/${mod.lessons.length}</span></div>
-        <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px">
-        ${mod.lessons.map((l) => {
+      html += `<section class="ecg-module-card"><header><div><span class="ecg-kicker">Módulo ${String(modIndex+1).padStart(2,'0')}</span><h2>${esc(mod.module.replace(/^\d+\s*·\s*/,''))}</h2></div><span class="ecg-module-number">${modDone}/${mod.lessons.length}</span></header><div class="ecg-lesson-list">${mod.lessons.map((l,index) => {
           const isDone = !!done[l.id];
-          return `<button class="ecg-opt" data-ecg-lesson="${l.id}" style="display:flex;align-items:center;gap:10px">
-            <span style="flex:0 0 22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;background:${isDone ? '#1a7f37' : 'var(--line)'};color:${isDone ? '#fff' : 'var(--muted)'}">${isDone ? '✓' : ''}</span>
-            <span style="flex:1">${esc(l.title)}</span>
-            <span class="ecg-tag">${LEVEL_LABEL[l.level]}</span></button>`;
-        }).join('')}
-        </div></div>`;
+          return `<button class="${isDone ? 'done' : ''}" data-ecg-lesson="${l.id}"><i>${isDone ? '✓' : index+1}</i><span>${esc(l.title)}</span><small>${LEVEL_LABEL[l.level]}</small></button>`;
+        }).join('')}</div></section>`;
     });
-    return html;
+    return html + '</div>';
   }
 
   // Traçados reais (scans de ECGs reais do material de estudo do usuário, usados apenas
@@ -1693,11 +1674,10 @@
     }
     if (lesson.gotoMethod) actions += `<button class="ecg-btn ghost" data-ecg-sub-go="metodo">Ver o método completo</button>`;
     const quiz = (lesson.quiz || []).filter((id) => CONDITION_MAP[id]);
-    return `
-    <div class="ecg-toolbar"><button class="ecg-btn ghost" data-ecg-sub-go="trilha">← Trilha</button>
-      <h3 style="margin:0">${esc(lesson.title)}</h3><span class="ecg-tag">${LEVEL_LABEL[lesson.level]}</span></div>
-    ${demo ? `<div class="ecg-canvas-shell"><canvas data-ecg-canvas="${demo.id}"></canvas></div>` : ''}
-    <div class="ecg-card">
+    const module = TRILHA.find((item) => item.lessons.some((candidate) => candidate.id === lesson.id));
+    const moduleIndex = TRILHA.indexOf(module);
+    const lessonIndex = module.lessons.findIndex((candidate) => candidate.id === lesson.id);
+    return `<div class="ecg-reader-shell"><aside class="ecg-reader-nav"><button data-ecg-sub-go="trilha">← Voltar à trilha</button><span class="ecg-kicker">Módulo ${String(moduleIndex+1).padStart(2,'0')}</span><h2>${esc(module.module.replace(/^\d+\s*·\s*/,''))}</h2><div class="ecg-lesson-list">${module.lessons.map((item,index) => `<button class="${item.id === lesson.id ? 'active' : ''} ${S.trilha.done?.[item.id] ? 'done' : ''}" data-ecg-lesson="${item.id}"><i>${S.trilha.done?.[item.id] ? '✓' : index+1}</i><span>${esc(item.title)}</span></button>`).join('')}</div></aside><section class="ecg-reader"><header class="ecg-reader-head"><span class="ecg-kicker">Módulo ${String(moduleIndex+1).padStart(2,'0')} · Lição ${lessonIndex+1}</span><h1>${esc(lesson.title)}</h1><p>${LEVEL_LABEL[lesson.level]} · leitura orientada com traçados e prática.</p></header>${demo ? `<div class="ecg-reader-demo"><div class="ecg-canvas-shell"><canvas data-ecg-canvas="${demo.id}"></canvas></div></div>` : ''}<div class="ecg-reader-body">${window.SkillHighlighter?.guideHtml?.() || ''}<div class="ecg-card">
       <h4 style="margin:0 0 4px;text-transform:uppercase;font-size:12px;letter-spacing:.04em;color:var(--muted)">Para começar</h4>
       <p class="ecg-hl-block" data-hl-block="${lesson.id}:base" style="margin:0">${hlHtml(lesson.id + ':base', lesson.base)}</p>
     </div>
@@ -1708,10 +1688,7 @@
       ${actions ? `<div class="ecg-conf" style="margin-top:14px">${actions}</div>` : ''}
     </div>
     ${quiz.length ? `<div class="ecg-card"><h3 style="margin:0 0 6px;font-size:15px">Praticar agora</h3><p class="ecg-muted" style="margin:0 0 10px">Fixe com um treino rápido dos padrões desta lição.</p><button class="ecg-btn" data-ecg-lesson-quiz="${quiz.join(',')}">Treinar (${quiz.length})</button></div>` : ''}
-    <div class="ecg-toolbar" style="margin-top:4px">
-      ${prev ? `<button class="ecg-btn ghost" data-ecg-lesson="${prev.id}">← Anterior</button>` : ''}
-      <button class="ecg-btn" data-ecg-lesson-done="${lesson.id}" style="margin-left:auto">${isDone ? '✓ Concluída' : 'Concluir'}${nxt ? ' e avançar →' : ''}</button>
-    </div>`;
+    </div><footer class="ecg-reader-footer">${prev ? `<button class="ecg-btn ghost" data-ecg-lesson="${prev.id}">← Anterior</button>` : '<span></span>'}<button class="ecg-btn" data-ecg-lesson-done="${lesson.id}">${isDone ? '✓ Concluída' : 'Concluir'}${nxt ? ' e avançar →' : ''}</button></footer></section></div>`;
   }
 
   // ---- Treino / Revisão -----------------------------------------------------
@@ -1940,7 +1917,7 @@
     if (!el) return;
     const body = el.querySelector('.ecg-body');
     body.innerHTML = bodyHtml();
-    if (body.querySelector('.ecg-hl-block') && window.SkillHighlighter?.guideHtml) body.insertAdjacentHTML('afterbegin', window.SkillHighlighter.guideHtml());
+    if (body.querySelector('.ecg-hl-block') && !body.querySelector('.ecg-reader-shell') && window.SkillHighlighter?.guideHtml) body.insertAdjacentHTML('afterbegin', window.SkillHighlighter.guideHtml());
     el.querySelectorAll('.ecg-subnav button').forEach((b) => b.classList.toggle('active', b.dataset.ecgSub === st().ui.sub));
     wireBody();
     renderCanvases();
@@ -2233,10 +2210,7 @@
     if (!S.ecg.hiddenCourseImages) S.ecg.hiddenCourseImages = {};
 
     container.innerHTML = `<div class="ecg-wrap">
-      <div class="section-title" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
-        <div><span class="eyebrow">Cardiologia</span><h2 style="margin:0">Simulador de ECG</h2><p class="ecg-muted" style="margin:4px 0 0">Traçados gerados por síntese de forma de onda — funciona offline. Curso · reconhecimento · simulação · revisão adaptativa.</p></div>
-      </div>
-      ${subnav()}
+      <header class="ecg-course-topbar"><button class="ecg-course-brand" data-ecg-sub="inicio"><i>ECG</i><span><small>Habilidade</small><b>Eletrocardiografia</b></span></button>${subnav()}</header>
       <div class="ecg-body"></div>
       <div class="ecg-lightbox" data-ecg-lightbox>
         <button class="ecg-lightbox-close" data-ecg-lightbox-close aria-label="Fechar">✕</button>
