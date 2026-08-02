@@ -79,6 +79,7 @@ td.num,th.num{text-align:right}
 .mini-input{width:76px;border:1px solid var(--line);border-radius:6px;padding:6px;background:var(--panel)}
 .notes-input{min-width:180px;width:100%;border:1px solid var(--line);border-radius:6px;padding:6px;background:var(--panel)}
 .badge{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:800;white-space:nowrap}
+[data-auto-study-clock]{cursor:pointer}
 .badge.done{background:var(--soft-green);color:var(--green)}
 .badge.wait{background:var(--soft-amber);color:var(--amber)}
 .badge.no{background:var(--soft-red);color:var(--red)}
