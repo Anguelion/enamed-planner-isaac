@@ -1058,6 +1058,15 @@ body.dark .metric-card:before{background:linear-gradient(180deg,#2f7df6,var(--cy
 .priority-baixa{background:#fb365d}
 .priority-bonus{background:#9c4ce8}
 .priority-diamante{background:#8de3ef}
+/* Chip colorido: o nome da aula fica escrito dentro da cor de prioridade, em vez de ao lado de uma barrinha fina. */
+.schedule-topic-link.priority-chip{display:inline-block;padding:4px 10px;border-radius:8px;color:#0d2b12;font-weight:700}
+.schedule-topic-link.priority-chip.priority-alta{background:#7ed86a}
+.schedule-topic-link.priority-chip.priority-media{background:#f5c13b}
+.schedule-topic-link.priority-chip.priority-baixa{background:#fb365d;color:#3a0410}
+.schedule-topic-link.priority-chip.priority-bonus{background:#9c4ce8;color:#fff}
+.schedule-topic-link.priority-chip.priority-diamante{background:#8de3ef;color:#053b40}
+.schedule-topic-link.priority-chip strong{color:inherit}
+.pending-lesson-title .schedule-topic-link.priority-chip{margin-left:0}
 .video-lesson-choice{position:relative;padding-left:15px;overflow:hidden}
 .video-priority-bar{position:absolute;left:0;top:0;bottom:0;width:5px}
 .pending-list{display:grid;gap:8px}
