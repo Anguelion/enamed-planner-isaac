@@ -6585,6 +6585,15 @@ function videoDeclaredPartNumber(video) {
   const match = title.match(/\bparte\s*(\d+)\b|\b(\d+)\s*(?:a|o|ª|º)?\s*parte\b/i);
   return match ? Number(match[1] || match[2]) : 0;
 }
+// Vídeos de aula completa às vezes usam "01 - 1 aula - Tema" / "01 - 2 aula - Tema"
+// para numerar as partes. Esse número de ordem some depois da limpeza do prefixo em
+// videoContentLabel, então quando os dois arquivos completos ficam com o mesmo texto
+// restante (ex.: ambos terminam em "Parte" sem dígito), o agrupamento por número
+// precisa recuperar essa ordem original em vez de assumir "parte 1" para os dois.
+function videoDeclaredAulaOrder(video) {
+  const match = String(video?.title || '').match(/^\d+(?:\.\d+)?\s*-\s*(\d+)\s*aula\s*-/i);
+  return match ? Number(match[1]) : 0;
+}
 function videoParts(lesson) {
   const allVideos = lesson?.videos || [];
   const summaryExpress = videoSummaryExpressVideos(lesson);
@@ -6617,7 +6626,7 @@ function videoParts(lesson) {
       || topic.match(/\b(\d+)\s*(?:a|o|ª|º)?\s*parte\b/i)
       || topic.match(/\b(\d+)\s*(?:a|o|ª|º)?\s*aula\b/i)
       || topic.match(/^(\d+)\s*[-.]\s*/);
-    const number = partMatch ? Number(partMatch[1]) : (/\bparte$/i.test(topic) ? 1 : 0);
+    const number = partMatch ? Number(partMatch[1]) : (/\bparte$/i.test(topic) ? (videoDeclaredAulaOrder(video) || 1) : 0);
     // Alguns arquivos de origem repetem o mesmo número por engano (dois
     // COFEXPRESS com o mesmo prefixo "01.1", por exemplo). Se a parte já tem
     // um vídeo do mesmo tipo, não mescla — cria uma parte própria pelo texto
