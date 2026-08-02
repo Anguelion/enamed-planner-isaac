@@ -6553,7 +6553,8 @@ function displayVideoLessons() {
 }
 function videoContentLabel(video) {
   const cleaned = String(video?.title || '')
-    .replace(/^\d+\s*[-.]\s*/i, '')
+    // remove nosso prefixo de organização: "06 - ", "01.1 - " (COFEXPRESS) e "06 - 2 aula - "
+    .replace(/^\d+(?:\.\d+)?\s*-\s*(?:\d+\s*aula\s*-\s*)?/i, '')
     .replace(/\bcof[\s_-]*express\b/ig, '')
     .replace(/\benamed\b/ig, '')
     .replace(/\s*[-.]\s*$/g, '')

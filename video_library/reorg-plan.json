@@ -7,6 +7,8 @@
           "order": 1,
           "topic": "Indicadores de Saúde",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Indicadores de Saúde",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 10\\01 - Saúde Coletiva\\01 - Indicadores de Saúde",
           "targetDir": "Bloco 10\\01 - Saúde Coletiva\\01 - Indicadores de Saúde",
@@ -34,6 +36,8 @@
           "order": 2,
           "topic": "Infecção de Vias Aéreas Superiores",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Infecção de Vias Aéreas Superiores",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 10\\02 - Medicina de Família e Comunidade\\02 - Infecção de Vias Aéreas Superiores",
           "targetDir": "Bloco 10\\02 - Medicina de Família e Comunidade\\02 - Infecção de Vias Aéreas Superiores",
@@ -53,6 +57,8 @@
           "order": 3,
           "topic": "Rotura Prematura de Membranas Ovulares",
           "scheduleArea": "G.O",
+          "matchedTitle": "Rotura Prematura de Membranas Ovulares",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 10\\03 - G.O\\03 - Rotura Prematura de Membranas Ovulares",
           "targetDir": "Bloco 10\\03 - GO\\03 - Rotura Prematura de Membranas Ovulares",
@@ -72,6 +78,8 @@
           "order": 4,
           "topic": "Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Abdome Agudo Obstrutivo - Perfurativo",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 10\\04 - Cirurgia\\04 - Abdome Agudo Obstrutivo - Perfurativo",
           "targetDir": "Bloco 10\\04 - Cirurgia\\04 - Abdome agudo obstrutivo, perfurativo, vascular e hemorrágico",
@@ -91,6 +99,8 @@
           "order": 5,
           "topic": "Artrites",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Artrites",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 10\\05 - Clínica Médica\\05 - Artrites",
           "targetDir": "Bloco 10\\05 - Clínica Médica\\05 - Artrites",
@@ -110,6 +120,8 @@
           "order": 6,
           "topic": "Fibromialgia",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Fibromialgia",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 10\\05 - Clínica Médica\\06 - Fibromialgia",
           "targetDir": "Bloco 10\\05 - Clínica Médica\\06 - Fibromialgia",
@@ -134,6 +146,8 @@
           "order": 1,
           "topic": "Hematopediatria 1",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Hematopediatria 1",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 11\\01 - Pediatria\\01 - Hematopediatria 1",
           "targetDir": "Bloco 11\\01 - Pediatria\\01 - Hematopediatria 1",
@@ -153,6 +167,8 @@
           "order": 2,
           "topic": "Hematopediatria 2",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Hematopediatria 2",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 11\\01 - Pediatria\\02 - Hematopediatria 2",
           "targetDir": "Bloco 11\\01 - Pediatria\\02 - Hematopediatria 2",
@@ -172,6 +188,8 @@
           "order": 3,
           "topic": "Hérnias",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Hérnias",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 11\\02 - Cirurgia\\03 - Hérnias",
           "targetDir": "Bloco 11\\02 - Cirurgia\\03 - Hérnias",
@@ -191,6 +209,8 @@
           "order": 4,
           "topic": "Coagulopatias",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Coagulopatias",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 11\\03 - Clínica Médica\\04 - Coagulopatias",
           "targetDir": "Bloco 11\\03 - Clínica Médica\\04 - Coagulopatias",
@@ -210,6 +230,8 @@
           "order": 5,
           "topic": "Onco-hematologia",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Onco-hematologia",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 11\\03 - Clínica Médica\\05 - Onco-hematologia",
           "targetDir": "Bloco 11\\03 - Clínica Médica\\05 - Onco-hematologia",
@@ -229,6 +251,8 @@
           "order": 6,
           "topic": "Estudos Epidemiológicos",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Estudos Epidemiológicos",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 11\\04 - Saúde Coletiva\\06 - Estudos Epidemiológicos",
           "targetDir": "Bloco 11\\04 - Saúde Coletiva\\06 - Estudos Epidemiológicos",
@@ -247,17 +271,10 @@
         {
           "order": 7,
           "topic": "CofBasics - Associação e Causalidade (Saúde Coletiva)",
-          "scheduleArea": "CofBasics",
-          "currentArea": "CofBasics",
-          "currentDir": "Bloco 11\\05 - CofBasics\\07 - CofBasics - Associação e Causalidade",
-          "targetDir": "Bloco 11\\05 - CofBasics\\07 - CofBasics - Associação e Causalidade (Saúde Coletiva)",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 11/05 - CofBasics/07 - CofBasics - Associação e Causalidade/CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO.mp4",
-              "toName": "07 - CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO.mp4"
-            }
-          ]
+          "area": "CofBasics",
+          "status": "no-confident-match",
+          "bestGuessTitle": "Hematopediatria 1",
+          "bestGuessScore": 0
         }
       ]
     },
@@ -268,6 +285,8 @@
           "order": 1,
           "topic": "Medidas de Associação",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Medidas de Associação",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 12\\01 - Saúde Coletiva\\01 - Medidas de Associação",
           "targetDir": "Bloco 12\\01 - Saúde Coletiva\\01 - Medidas de Associação",
@@ -275,7 +294,7 @@
           "videoRenames": [
             {
               "from": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01. Medidas de Associação.mp4",
-              "toName": "01 - . Medidas de Associação.mp4"
+              "toName": "01 - Medidas de Associação.mp4"
             },
             {
               "from": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/Medidas de Associação COFEXPRESS.mp4",
@@ -287,6 +306,8 @@
           "order": 2,
           "topic": "Diarreia Aguda",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Diarreia Aguda",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 12\\02 - Medicina de Família e Comunidade\\02 - Diarreia Aguda",
           "targetDir": "Bloco 12\\02 - Medicina de Família e Comunidade\\02 - Diarreia Aguda",
@@ -306,6 +327,8 @@
           "order": 3,
           "topic": "Sangramento Uterino Anormal",
           "scheduleArea": "G.O",
+          "matchedTitle": "Sangramento Uterino Anormal",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 12\\03 - G.O\\03 - Sangramento Uterino Anormal",
           "targetDir": "Bloco 12\\03 - GO\\03 - Sangramento Uterino Anormal",
@@ -324,26 +347,17 @@
         {
           "order": 4,
           "topic": "Dor Pélvica",
-          "scheduleArea": "G.O",
-          "currentArea": "G.O",
-          "currentDir": "Bloco 12\\03 - G.O\\04 - Endometriose",
-          "targetDir": "Bloco 12\\03 - GO\\04 - Dor Pélvica",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4",
-              "toName": "04 - Endometriose.mp4"
-            },
-            {
-              "from": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4",
-              "toName": "04.1 - Endometriose COFEXPRESS.mp4"
-            }
-          ]
+          "area": "G.O",
+          "status": "no-confident-match",
+          "bestGuessTitle": "Medidas de Associação",
+          "bestGuessScore": 0
         },
         {
           "order": 5,
           "topic": "Perioperatório do cirurgiao",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Perioperatório do Cirurgião",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 12\\04 - Cirurgia\\05 - Perioperatório do Cirurgião",
           "targetDir": "Bloco 12\\04 - Cirurgia\\05 - Perioperatório do cirurgiao",
@@ -363,9 +377,11 @@
           "order": 6,
           "topic": "Taquiarritmias e ACL/BLS",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Taquiarritmias e ACL - BLS",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 12\\05 - Clínica Médica\\06 - Taquiarritmias e ACL - BLS",
-          "targetDir": "Bloco 12\\05 - Clínica Médica\\06 - Taquiarritmias e ACL\\BLS",
+          "targetDir": "Bloco 12\\05 - Clínica Médica\\06 - Taquiarritmias e ACLBLS",
           "needsMove": true,
           "videoRenames": [
             {
@@ -382,6 +398,8 @@
           "order": 7,
           "topic": "Bradiarritmias e síncope",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Bradiarritmias e Síncope",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 12\\05 - Clínica Médica\\07 - Bradiarritmias e Síncope",
           "targetDir": "Bloco 12\\05 - Clínica Médica\\07 - Bradiarritmias e síncope",
@@ -406,6 +424,8 @@
           "order": 1,
           "topic": "Redes de Atenção à Saúde e Níveis de Atenção",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Redes de Atenção à Saúde",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 13\\01 - Saúde Coletiva\\01 - Redes de Atenção à Saúde",
           "targetDir": "Bloco 13\\01 - Saúde Coletiva\\01 - Redes de Atenção à Saúde e Níveis de Atenção",
@@ -425,6 +445,8 @@
           "order": 2,
           "topic": "Violência Sexual",
           "scheduleArea": "G.O",
+          "matchedTitle": "Violência Sexual",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 13\\02 - G.O\\02 - Violência Sexual",
           "targetDir": "Bloco 13\\02 - GO\\02 - Violência Sexual",
@@ -452,6 +474,8 @@
           "order": 3,
           "topic": "Febre Sem Sinais Localizatórios",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Febre Sem Sinais Localizatórios",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 13\\03 - Clínica Médica\\03 - Febre Sem Sinais Localizatórios",
           "targetDir": "Bloco 13\\03 - Pediatria\\03 - Febre Sem Sinais Localizatórios",
@@ -471,6 +495,8 @@
           "order": 4,
           "topic": "Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Técnica Operatória - Fios e Anestésicos",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 13\\03 - Clínica Médica\\04 - Técnica Operatória - Fios e Anestésicos",
           "targetDir": "Bloco 13\\04 - Cirurgia\\04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais",
@@ -490,9 +516,11 @@
           "order": 5,
           "topic": "Pneumonia: PAC e hospitalar",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Pneumonia - PAC e Hospitalar",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 13\\03 - Clínica Médica\\05 - Pneumonia - PAC e Hospitalar",
-          "targetDir": "Bloco 13\\05 - Clínica Médica\\05 - Pneumonia: PAC e hospitalar",
+          "targetDir": "Bloco 13\\05 - Clínica Médica\\05 - Pneumonia PAC e hospitalar",
           "needsMove": true,
           "videoRenames": [
             {
@@ -509,6 +537,8 @@
           "order": 6,
           "topic": "Derrame pleural",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Derrame Pleural",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 13\\03 - Clínica Médica\\06 - Derrame Pleural",
           "targetDir": "Bloco 13\\05 - Clínica Médica\\06 - Derrame pleural",
@@ -533,6 +563,8 @@
           "order": 1,
           "topic": "Atenção Primária à Saúde",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Atenção Primária à Saúde",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 14\\01 - Saúde Coletiva\\01 - Atenção Primária à Saúde",
           "targetDir": "Bloco 14\\01 - Saúde Coletiva\\01 - Atenção Primária à Saúde",
@@ -552,6 +584,8 @@
           "order": 2,
           "topic": "Diabetes na Gestação",
           "scheduleArea": "G.O",
+          "matchedTitle": "Diabetes na Gestação",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 14\\02 - G.O\\02 - Diabetes na Gestação",
           "targetDir": "Bloco 14\\02 - GO\\02 - Diabetes na Gestação",
@@ -571,6 +605,8 @@
           "order": 3,
           "topic": "Suporte Avançado de Vida em Pediatria (PALS)",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "PALS - Suporte Avançado Pediatria",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 14\\03 - Pediatria\\03 - PALS - Suporte Avançado Pediatria",
           "targetDir": "Bloco 14\\03 - Pediatria\\03 - Suporte Avançado de Vida em Pediatria (PALS)",
@@ -590,6 +626,8 @@
           "order": 4,
           "topic": "Cetoacidose diabética na Pediatria",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Cetoacidose Diabética na Pediatria",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 14\\03 - Pediatria\\04 - Cetoacidose Diabética na Pediatria",
           "targetDir": "Bloco 14\\03 - Pediatria\\04 - Cetoacidose diabética na Pediatria",
@@ -609,6 +647,8 @@
           "order": 5,
           "topic": "Esôfago no ENAMED",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Esôfago no ENAMED",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 14\\04 - Cirurgia\\05 - Esôfago no ENAMED",
           "targetDir": "Bloco 14\\04 - Cirurgia\\05 - Esôfago no ENAMED",
@@ -628,9 +668,11 @@
           "order": 6,
           "topic": "Dislipidemia: classificação, diagnóstico e tratamento",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Dislipidemia",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 14\\05 - Clínica Médica\\06 - Dislipidemia",
-          "targetDir": "Bloco 14\\05 - Clínica Médica\\06 - Dislipidemia: classificação, diagnóstico e tratamento",
+          "targetDir": "Bloco 14\\05 - Clínica Médica\\06 - Dislipidemia classificação, diagnóstico e tratamento",
           "needsMove": true,
           "videoRenames": [
             {
@@ -647,6 +689,8 @@
           "order": 7,
           "topic": "Síndrome metabólica e Obesidade",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Síndrome Metabólica e Obesidade",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 14\\05 - Clínica Médica\\07 - Síndrome Metabólica e Obesidade",
           "targetDir": "Bloco 14\\05 - Clínica Médica\\07 - Síndrome metabólica e Obesidade",
@@ -671,6 +715,8 @@
           "order": 1,
           "topic": "Ferramentas da APS",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Ferramentas da APS",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 15\\01 - Saúde Coletiva\\01 - Ferramentas da APS",
           "targetDir": "Bloco 15\\01 - Saúde Coletiva\\01 - Ferramentas da APS",
@@ -690,6 +736,8 @@
           "order": 2,
           "topic": "Cefaleias",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Cefaleias",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 15\\02 - Medicina de Família e Comunidade\\02 - Cefaleias",
           "targetDir": "Bloco 15\\02 - Medicina de Família e Comunidade\\02 - Cefaleias",
@@ -709,6 +757,8 @@
           "order": 3,
           "topic": "Infecções na Gravidez",
           "scheduleArea": "G.O",
+          "matchedTitle": "Infecções na Gravidez",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 15\\03 - G.O\\03 - Infecções na Gravidez",
           "targetDir": "Bloco 15\\03 - GO\\03 - Infecções na Gravidez",
@@ -728,6 +778,8 @@
           "order": 4,
           "topic": "Infecções Congênitas",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Infecções Congênitas",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 15\\04 - Pediatria\\04 - Infecções Congênitas",
           "targetDir": "Bloco 15\\04 - Pediatria\\04 - Infecções Congênitas",
@@ -747,6 +799,8 @@
           "order": 5,
           "topic": "Cirurgia Bariatrica",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Cirurgia Bariátrica",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 15\\05 - Cirurgia\\05 - Cirurgia Bariátrica",
           "targetDir": "Bloco 15\\05 - Cirurgia\\05 - Cirurgia Bariatrica",
@@ -766,6 +820,8 @@
           "order": 6,
           "topic": "Meningites",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Meningites",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 15\\06 - Clínica Médica\\06 - Meningites",
           "targetDir": "Bloco 15\\06 - Clínica Médica\\06 - Meningites",
@@ -790,6 +846,8 @@
           "order": 1,
           "topic": "Icterícias febris e febre maculosa",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Icterícias Febris e Febre Maculosa",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 16\\01 - Medicina de Família e Comunidade\\01 - Icterícias Febris e Febre Maculosa",
           "targetDir": "Bloco 16\\01 - Medicina de Família e Comunidade\\01 - Icterícias febris e febre maculosa",
@@ -809,6 +867,8 @@
           "order": 2,
           "topic": "Hepatites Virais",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Hepatites Virais",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 16\\01 - Medicina de Família e Comunidade\\02 - Hepatites Virais",
           "targetDir": "Bloco 16\\01 - Medicina de Família e Comunidade\\02 - Hepatites Virais",
@@ -828,6 +888,8 @@
           "order": 3,
           "topic": "Abordagem Familiar e Comunitária",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Abordagem Familiar e Comunitária",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 16\\01 - Medicina de Família e Comunidade\\03 - Abordagem Familiar e Comunitária",
           "targetDir": "Bloco 16\\01 - Medicina de Família e Comunidade\\03 - Abordagem Familiar e Comunitária",
@@ -847,6 +909,8 @@
           "order": 4,
           "topic": "Síndromes Hipertensivas na Gestação",
           "scheduleArea": "G.O",
+          "matchedTitle": "Síndromes Hipertensivas na Gestação",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 16\\02 - G.O\\04 - Síndromes Hipertensivas na Gestação",
           "targetDir": "Bloco 16\\02 - GO\\04 - Síndromes Hipertensivas na Gestação",
@@ -866,6 +930,8 @@
           "order": 5,
           "topic": "Neoplasias Pediátricas",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Neoplasias Pediátricas",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 16\\03 - Pediatria\\05 - Neoplasias Pediátricas",
           "targetDir": "Bloco 16\\03 - Pediatria\\05 - Neoplasias Pediátricas",
@@ -885,6 +951,8 @@
           "order": 6,
           "topic": "Urologia do Pronto Socorro",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Urologia do Pronto Socorro",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 16\\04 - Cirurgia\\06 - Urologia do Pronto Socorro",
           "targetDir": "Bloco 16\\04 - Cirurgia\\06 - Urologia do Pronto Socorro",
@@ -909,6 +977,8 @@
           "order": 1,
           "topic": "Estratégia da Saúde da Família",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Estratégia da Saúde da Família",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 17\\01 - Saúde Coletiva\\01 - Estratégia da Saúde da Família",
           "targetDir": "Bloco 17\\01 - Saúde Coletiva\\01 - Estratégia da Saúde da Família",
@@ -928,6 +998,8 @@
           "order": 2,
           "topic": "Mastologia",
           "scheduleArea": "G.O",
+          "matchedTitle": "Mastologia",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 17\\02 - G.O\\02 - Mastologia",
           "targetDir": "Bloco 17\\02 - GO\\02 - Mastologia",
@@ -954,26 +1026,17 @@
         {
           "order": 3,
           "topic": "Infecção de Trato Urinário e Meningite",
-          "scheduleArea": "Pediatria",
-          "currentArea": "Pediatria",
-          "currentDir": "Bloco 17\\03 - Pediatria\\03 - ITU e Meningite (Pediatria)",
-          "targetDir": "Bloco 17\\03 - Pediatria\\03 - Infecção de Trato Urinário e Meningite",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/Infecção de Trato Urinário e Meningite.mp4",
-              "toName": "03 - Infecção de Trato Urinário e Meningite.mp4"
-            },
-            {
-              "from": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/Infecção de Trato Urinário e Meningite COFEXPRESS.mp4",
-              "toName": "03.1 - Infecção de Trato Urinário e Meningite COFEXPRESS.mp4"
-            }
-          ]
+          "area": "Pediatria",
+          "status": "no-confident-match",
+          "bestGuessTitle": "ITU e Meningite (Pediatria)",
+          "bestGuessScore": 0.5
         },
         {
           "order": 4,
           "topic": "Trauma Urológico",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Trauma Urológico",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 17\\04 - Cirurgia\\04 - Trauma Urológico",
           "targetDir": "Bloco 17\\04 - Cirurgia\\04 - Trauma Urológico",
@@ -993,6 +1056,8 @@
           "order": 5,
           "topic": "SRAG + suportes ventilatórios",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "SRAG + Suportes Ventilatórios",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 17\\05 - Clínica Médica\\05 - SRAG + Suportes Ventilatórios",
           "targetDir": "Bloco 17\\05 - Clínica Médica\\05 - SRAG + suportes ventilatórios",
@@ -1012,6 +1077,8 @@
           "order": 6,
           "topic": "Intoxicações",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Intoxicações",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 17\\06 - Medicina de Família e Comunidade\\06 - Intoxicações",
           "targetDir": "Bloco 17\\05 - Clínica Médica\\06 - Intoxicações",
@@ -1030,17 +1097,10 @@
         {
           "order": 7,
           "topic": "CofBasics - Propedêutica Mamária (G.O)",
-          "scheduleArea": "CofBasics",
-          "currentArea": "CofBasics",
-          "currentDir": "Bloco 17\\07 - CofBasics\\07 - CofBasics - Propedêutica Mamária",
-          "targetDir": "Bloco 17\\06 - CofBasics\\07 - CofBasics - Propedêutica Mamária (G.O)",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 17/07 - CofBasics/07 - CofBasics - Propedêutica Mamária/CofBasics - Propedêutica Mamária (G.O).mp4",
-              "toName": "07 - CofBasics - Propedêutica Mamária (G.O).mp4"
-            }
-          ]
+          "area": "CofBasics",
+          "status": "no-confident-match",
+          "bestGuessTitle": "Estratégia da Saúde da Família",
+          "bestGuessScore": 0
         }
       ]
     },
@@ -1051,6 +1111,8 @@
           "order": 1,
           "topic": "MCCP - Método Clínico Centrado na Pessoa e ReSOAP",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "MCCP - Método Clínico Centrado na Pessoa",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 18\\01 - Medicina de Família e Comunidade\\01 - MCCP - Método Clínico Centrado na Pessoa",
           "targetDir": "Bloco 18\\01 - Medicina de Família e Comunidade\\01 - MCCP - Método Clínico Centrado na Pessoa e ReSOAP",
@@ -1070,6 +1132,8 @@
           "order": 2,
           "topic": "Uroginecologia",
           "scheduleArea": "G.O",
+          "matchedTitle": "Uroginecologia",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 18\\02 - G.O\\02 - Uroginecologia",
           "targetDir": "Bloco 18\\02 - GO\\02 - Uroginecologia",
@@ -1089,6 +1153,8 @@
           "order": 3,
           "topic": "Sepse e Choque Séptico Pediátrico",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Sepse e Choque Séptico Pediátrico",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 18\\03 - Pediatria\\03 - Sepse e Choque Séptico Pediátrico",
           "targetDir": "Bloco 18\\03 - Pediatria\\03 - Sepse e Choque Séptico Pediátrico",
@@ -1112,6 +1178,8 @@
           "order": 4,
           "topic": "Uro-oncologia",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Uro-oncologia",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 18\\04 - Clínica Médica\\04 - Uro-oncologia",
           "targetDir": "Bloco 18\\04 - Cirurgia\\04 - Uro-oncologia",
@@ -1131,6 +1199,8 @@
           "order": 5,
           "topic": "Hiperplasia prostatica benigna",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Hiperplasia Prostática Benigna",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 18\\04 - Clínica Médica\\05 - Hiperplasia Prostática Benigna",
           "targetDir": "Bloco 18\\04 - Cirurgia\\05 - Hiperplasia prostatica benigna",
@@ -1150,6 +1220,8 @@
           "order": 6,
           "topic": "Cirrose Hepática 1",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Cirrose Hepática 1",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 18\\04 - Clínica Médica\\06 - Cirrose Hepática 1",
           "targetDir": "Bloco 18\\05 - Clínica Médica\\06 - Cirrose Hepática 1",
@@ -1169,6 +1241,8 @@
           "order": 7,
           "topic": "Cirrose Hepática 2",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Cirrose Hepática 2",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 18\\04 - Clínica Médica\\07 - Cirrose Hepática 2",
           "targetDir": "Bloco 18\\05 - Clínica Médica\\07 - Cirrose Hepática 2",
@@ -1188,8 +1262,9 @@
           "order": 8,
           "topic": "CofBasics - Propedêutica em Uroginecologia (G.O)",
           "area": "CofBasics",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 18\\06 - CofBasics\\08 - CofBasics - Propedêutica em Uroginecologia (G.O)"
+          "status": "no-confident-match",
+          "bestGuessTitle": "Uroginecologia",
+          "bestGuessScore": 1
         }
       ]
     },
@@ -1200,6 +1275,8 @@
           "order": 1,
           "topic": "Doenças negligenciadas",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Doenças Negligenciadas",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 19\\01 - Medicina de Família e Comunidade\\01 - Doenças Negligenciadas",
           "targetDir": "Bloco 19\\01 - Medicina de Família e Comunidade\\01 - Doenças negligenciadas",
@@ -1219,6 +1296,8 @@
           "order": 2,
           "topic": "Hanseníase",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Hanseníase",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 19\\01 - Medicina de Família e Comunidade\\02 - Hanseníase",
           "targetDir": "Bloco 19\\01 - Medicina de Família e Comunidade\\02 - Hanseníase",
@@ -1238,6 +1317,8 @@
           "order": 3,
           "topic": "Habilidades de Comunicação",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Habilidades de Comunicação",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 19\\01 - Medicina de Família e Comunidade\\03 - Habilidades de Comunicação",
           "targetDir": "Bloco 19\\01 - Medicina de Família e Comunidade\\03 - Habilidades de Comunicação",
@@ -1257,6 +1338,8 @@
           "order": 4,
           "topic": "Câncer de Colo de Útero",
           "scheduleArea": "G.O",
+          "matchedTitle": "Câncer de Colo de Útero",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 19\\02 - G.O\\04 - Câncer de Colo de Útero",
           "targetDir": "Bloco 19\\02 - GO\\04 - Câncer de Colo de Útero",
@@ -1276,6 +1359,8 @@
           "order": 5,
           "topic": "Triagens Neonatais e Hipoglicemia",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Triagens Neonatais e Hipoglicemia",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 19\\03 - Clínica Médica\\05 - Triagens Neonatais e Hipoglicemia",
           "targetDir": "Bloco 19\\03 - Pediatria\\05 - Triagens Neonatais e Hipoglicemia",
@@ -1295,6 +1380,8 @@
           "order": 6,
           "topic": "Nodulos hepaticos benignos",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Nódulos Hepáticos Benignos",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 19\\03 - Clínica Médica\\06 - Nódulos Hepáticos Benignos",
           "targetDir": "Bloco 19\\04 - Cirurgia\\06 - Nodulos hepaticos benignos",
@@ -1319,6 +1406,8 @@
           "order": 1,
           "topic": "Testes diagnósticos",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Testes Diagnósticos",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 20\\01 - Saúde Coletiva\\01 - Testes Diagnósticos",
           "targetDir": "Bloco 20\\01 - Saúde Coletiva\\01 - Testes diagnósticos",
@@ -1338,6 +1427,8 @@
           "order": 2,
           "topic": "Outros Cânceres Ginecológicos",
           "scheduleArea": "G.O",
+          "matchedTitle": "Outros Cânceres Ginecológicos",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 20\\02 - G.O\\02 - Outros Cânceres Ginecológicos",
           "targetDir": "Bloco 20\\02 - GO\\02 - Outros Cânceres Ginecológicos",
@@ -1365,6 +1456,8 @@
           "order": 3,
           "topic": "Icterícia e Colestase Neonatal",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Icterícia e Colestase Neonatal",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 20\\03 - Pediatria\\03 - Icterícia e Colestase Neonatal",
           "targetDir": "Bloco 20\\03 - Pediatria\\03 - Icterícia e Colestase Neonatal",
@@ -1384,6 +1477,8 @@
           "order": 4,
           "topic": "Adenocarcinoma de pancreas, tumores periampulares e pancreatite crônica",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Adenocarcinoma de Pâncreas",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 20\\04 - Cirurgia\\04 - Adenocarcinoma de Pâncreas",
           "targetDir": "Bloco 20\\04 - Cirurgia\\04 - Adenocarcinoma de pancreas, tumores periampulares e pancreatite crônica",
@@ -1403,6 +1498,8 @@
           "order": 5,
           "topic": "Glomerulopatias",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Glomerulopatias",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 20\\05 - Clínica Médica\\05 - Glomerulopatias",
           "targetDir": "Bloco 20\\05 - Clínica Médica\\05 - Glomerulopatias",
@@ -1422,6 +1519,8 @@
           "order": 6,
           "topic": "Injúria renal aguda",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Injúria Renal Aguda",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 20\\05 - Clínica Médica\\06 - Injúria Renal Aguda",
           "targetDir": "Bloco 20\\05 - Clínica Médica\\06 - Injúria renal aguda",
@@ -1441,6 +1540,8 @@
           "order": 7,
           "topic": "Doença Renal Crônica",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Doença Renal Crônica",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 20\\05 - Clínica Médica\\07 - Doença Renal Crônica",
           "targetDir": "Bloco 20\\05 - Clínica Médica\\07 - Doença Renal Crônica",
@@ -1465,6 +1566,8 @@
           "order": 1,
           "topic": "Vigilância em Saúde",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Vigilância em Saúde",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 21\\01 - Saúde Coletiva\\01 - Vigilância em Saúde",
           "targetDir": "Bloco 21\\01 - Saúde Coletiva\\01 - Vigilância em Saúde",
@@ -1488,6 +1591,8 @@
           "order": 2,
           "topic": "Insuficiência cognitiva no idoso",
           "scheduleArea": "Saúde Mental",
+          "matchedTitle": "Insuficiência Cognitiva no Idoso",
+          "matchScore": 1,
           "currentArea": "Saúde Mental",
           "currentDir": "Bloco 21\\02 - Saúde Mental\\02 - Insuficiência Cognitiva no Idoso",
           "targetDir": "Bloco 21\\02 - Saúde Mental\\02 - Insuficiência cognitiva no idoso",
@@ -1507,6 +1612,8 @@
           "order": 3,
           "topic": "Infertilidade",
           "scheduleArea": "G.O",
+          "matchedTitle": "Infertilidade",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 21\\03 - G.O\\03 - Infertilidade",
           "targetDir": "Bloco 21\\03 - GO\\03 - Infertilidade",
@@ -1526,6 +1633,8 @@
           "order": 4,
           "topic": "Dengue na Pediatria",
           "scheduleArea": "G.O",
+          "matchedTitle": "Dengue na Pediatria",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 21\\04 - Pediatria\\04 - Dengue na Pediatria",
           "targetDir": "Bloco 21\\03 - GO\\04 - Dengue na Pediatria",
@@ -1545,6 +1654,8 @@
           "order": 5,
           "topic": "Hemorroidas e Doenças orificiais",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Hemorroidas e Doenças Orificiais",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 21\\05 - Cirurgia\\05 - Hemorroidas e Doenças Orificiais",
           "targetDir": "Bloco 21\\04 - Cirurgia\\05 - Hemorroidas e Doenças orificiais",
@@ -1564,6 +1675,8 @@
           "order": 6,
           "topic": "Hemorragia digestiva alta",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Hemorragia Digestiva Alta",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 21\\06 - Clínica Médica\\06 - Hemorragia Digestiva Alta",
           "targetDir": "Bloco 21\\04 - Cirurgia\\06 - Hemorragia digestiva alta",
@@ -1591,6 +1704,8 @@
           "order": 7,
           "topic": "Sindrome de Fournier",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Síndrome de Fournier",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 21\\05 - Cirurgia\\07 - Síndrome de Fournier",
           "targetDir": "Bloco 21\\04 - Cirurgia\\07 - Sindrome de Fournier",
@@ -1615,6 +1730,8 @@
           "order": 1,
           "topic": "Saúde do Trabalhador",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Saúde do Trabalhador",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 22\\01 - Saúde Coletiva\\01 - Saúde do Trabalhador",
           "targetDir": "Bloco 22\\01 - Saúde Coletiva\\01 - Saúde do Trabalhador",
@@ -1633,26 +1750,17 @@
         {
           "order": 2,
           "topic": "Principais Doenças e Agravos Relacionados ao Trabalho",
-          "scheduleArea": "Saúde Coletiva",
-          "currentArea": "Saúde Coletiva",
-          "currentDir": "Bloco 22\\01 - Saúde Coletiva\\02 - Doenças Relacionadas ao Trabalho",
-          "targetDir": "Bloco 22\\01 - Saúde Coletiva\\02 - Principais Doenças e Agravos Relacionados ao Trabalho",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho.mp4",
-              "toName": "02 - Principais Doenças e Agravos Relacionados ao Trabalho.mp4"
-            },
-            {
-              "from": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS.mp4",
-              "toName": "02.1 - Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS.mp4"
-            }
-          ]
+          "area": "Saúde Coletiva",
+          "status": "no-confident-match",
+          "bestGuessTitle": "Doenças Relacionadas ao Trabalho",
+          "bestGuessScore": 0.75
         },
         {
           "order": 3,
           "topic": "Exantemáticas",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Exantemáticas",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 22\\02 - Pediatria\\03 - Exantemáticas",
           "targetDir": "Bloco 22\\02 - Pediatria\\03 - Exantemáticas",
@@ -1672,6 +1780,8 @@
           "order": 4,
           "topic": "Adenocarcinoma Gastrico e GIST",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Adenocarcinoma Gástrico e GIST",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 22\\04 - Cirurgia\\04 - Adenocarcinoma Gástrico e GIST",
           "targetDir": "Bloco 22\\03 - Cirurgia\\04 - Adenocarcinoma Gastrico e GIST",
@@ -1691,6 +1801,8 @@
           "order": 5,
           "topic": "Síndromes Coronarianas Agudas",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Síndromes Coronarianas Agudas",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 22\\03 - Clínica Médica\\05 - Síndromes Coronarianas Agudas",
           "targetDir": "Bloco 22\\04 - Clínica Médica\\05 - Síndromes Coronarianas Agudas",
@@ -1714,6 +1826,8 @@
           "order": 6,
           "topic": "Dor Torácica Não Anginosa",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Dor Torácica Não Anginosa",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 22\\03 - Clínica Médica\\06 - Dor Torácica Não Anginosa",
           "targetDir": "Bloco 22\\04 - Clínica Médica\\06 - Dor Torácica Não Anginosa",
@@ -1738,6 +1852,8 @@
           "order": 1,
           "topic": "Ética Médica",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Ética Médica",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 23\\01 - Saúde Coletiva\\01 - Ética Médica",
           "targetDir": "Bloco 23\\01 - Saúde Coletiva\\01 - Ética Médica",
@@ -1757,9 +1873,11 @@
           "order": 2,
           "topic": "Oftalmologia: afecções comuns",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Oftalmologia - Afecções Comuns",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 23\\02 - Clínica Médica\\02 - Oftalmologia - Afecções Comuns",
-          "targetDir": "Bloco 23\\02 - Medicina de Família e Comunidade\\02 - Oftalmologia: afecções comuns",
+          "targetDir": "Bloco 23\\02 - Medicina de Família e Comunidade\\02 - Oftalmologia afecções comuns",
           "needsMove": true,
           "videoRenames": [
             {
@@ -1776,6 +1894,8 @@
           "order": 3,
           "topic": "Otorrino para o clínico",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Otorrino para o Clínico",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 23\\02 - Clínica Médica\\03 - Otorrino para o Clínico",
           "targetDir": "Bloco 23\\02 - Medicina de Família e Comunidade\\03 - Otorrino para o clínico",
@@ -1795,6 +1915,8 @@
           "order": 4,
           "topic": "Climatério",
           "scheduleArea": "G.O",
+          "matchedTitle": "Climatério",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 23\\03 - G.O\\04 - Climatério",
           "targetDir": "Bloco 23\\03 - GO\\04 - Climatério",
@@ -1814,6 +1936,8 @@
           "order": 5,
           "topic": "Genética",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Genética",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 23\\04 - Pediatria\\05 - Genética",
           "targetDir": "Bloco 23\\04 - Pediatria\\05 - Genética",
@@ -1833,6 +1957,8 @@
           "order": 6,
           "topic": "Cancer colorretal",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Câncer Colorretal",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 23\\02 - Clínica Médica\\06 - Câncer Colorretal",
           "targetDir": "Bloco 23\\05 - Cirurgia\\06 - Cancer colorretal",
@@ -1851,17 +1977,10 @@
         {
           "order": 7,
           "topic": "CofBasics: Psicofarmacologia (Saúde Mental)",
-          "scheduleArea": "CofBasics",
-          "currentArea": "CofBasics",
-          "currentDir": "Bloco 23\\05 - CofBasics\\07 - CofBasics - Psicofarmacologia",
-          "targetDir": "Bloco 23\\06 - CofBasics\\07 - CofBasics: Psicofarmacologia (Saúde Mental)",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 23/05 - CofBasics/07 - CofBasics - Psicofarmacologia/CofBasics Psicofarmacologia (Saúde Mental).mp4",
-              "toName": "07 - CofBasics Psicofarmacologia (Saúde Mental).mp4"
-            }
-          ]
+          "area": "CofBasics",
+          "status": "no-confident-match",
+          "bestGuessTitle": "Ética Médica",
+          "bestGuessScore": 0
         }
       ]
     },
@@ -1872,6 +1991,8 @@
           "order": 1,
           "topic": "Declaração de Óbito, Atestados e Laudos",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Declaração de Óbito, Atestados e Laudos",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 24\\01 - Saúde Coletiva\\01 - Declaração de Óbito, Atestados e Laudos",
           "targetDir": "Bloco 24\\01 - Saúde Coletiva\\01 - Declaração de Óbito, Atestados e Laudos",
@@ -1891,6 +2012,8 @@
           "order": 2,
           "topic": "Síndrome Depressiva",
           "scheduleArea": "Saúde Mental",
+          "matchedTitle": "Síndrome Depressiva",
+          "matchScore": 1,
           "currentArea": "Saúde Mental",
           "currentDir": "Bloco 24\\02 - Saúde Mental\\02 - Síndrome Depressiva",
           "targetDir": "Bloco 24\\02 - Saúde Mental\\02 - Síndrome Depressiva",
@@ -1910,6 +2033,8 @@
           "order": 3,
           "topic": "Hipertensão Arterial",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Hipertensão Arterial (Pediatria)",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 24\\03 - Pediatria\\03 - Hipertensão Arterial (Pediatria)",
           "targetDir": "Bloco 24\\03 - Pediatria\\03 - Hipertensão Arterial",
@@ -1929,6 +2054,8 @@
           "order": 4,
           "topic": "Câncer de pulmão",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Câncer de Pulmão",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 24\\04 - Clínica Médica\\04 - Câncer de Pulmão",
           "targetDir": "Bloco 24\\04 - Cirurgia\\04 - Câncer de pulmão",
@@ -1948,6 +2075,8 @@
           "order": 5,
           "topic": "Diarreias",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Diarreias",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 24\\04 - Clínica Médica\\05 - Diarreias",
           "targetDir": "Bloco 24\\05 - Clínica Médica\\05 - Diarreias",
@@ -1975,6 +2104,8 @@
           "order": 6,
           "topic": "Osteoporose e Distúrbios do Cálcio",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Osteoporose e Distúrbios do Cálcio",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 24\\04 - Clínica Médica\\06 - Osteoporose e Distúrbios do Cálcio",
           "targetDir": "Bloco 24\\05 - Clínica Médica\\06 - Osteoporose e Distúrbios do Cálcio",
@@ -1999,6 +2130,8 @@
           "order": 1,
           "topic": "Arboviroses",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Arboviroses",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 25\\01 - Medicina de Família e Comunidade\\01 - Arboviroses",
           "targetDir": "Bloco 25\\01 - Medicina de Família e Comunidade\\01 - Arboviroses",
@@ -2018,6 +2151,8 @@
           "order": 2,
           "topic": "Parasitoses",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Parasitoses",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 25\\01 - Medicina de Família e Comunidade\\02 - Parasitoses",
           "targetDir": "Bloco 25\\01 - Medicina de Família e Comunidade\\02 - Parasitoses",
@@ -2037,6 +2172,8 @@
           "order": 3,
           "topic": "Planejamento Familiar",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Planejamento Familiar",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 25\\01 - Medicina de Família e Comunidade\\03 - Planejamento Familiar",
           "targetDir": "Bloco 25\\01 - Medicina de Família e Comunidade\\03 - Planejamento Familiar",
@@ -2056,6 +2193,8 @@
           "order": 4,
           "topic": "Síndrome Ansiosa",
           "scheduleArea": "Saúde Mental",
+          "matchedTitle": "Síndrome Ansiosa",
+          "matchScore": 1,
           "currentArea": "Saúde Mental",
           "currentDir": "Bloco 25\\02 - Saúde Mental\\04 - Síndrome Ansiosa",
           "targetDir": "Bloco 25\\02 - Saúde Mental\\04 - Síndrome Ansiosa",
@@ -2075,6 +2214,8 @@
           "order": 5,
           "topic": "Síndrome Maníaca",
           "scheduleArea": "Saúde Mental",
+          "matchedTitle": "Síndrome Maníaca",
+          "matchScore": 1,
           "currentArea": "Saúde Mental",
           "currentDir": "Bloco 25\\02 - Saúde Mental\\05 - Síndrome Maníaca",
           "targetDir": "Bloco 25\\02 - Saúde Mental\\05 - Síndrome Maníaca",
@@ -2094,6 +2235,8 @@
           "order": 6,
           "topic": "Cirurgia vascular no ENAMED",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Cirurgia Vascular no ENAMED",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 25\\03 - Cirurgia\\06 - Cirurgia Vascular no ENAMED",
           "targetDir": "Bloco 25\\03 - Cirurgia\\06 - Cirurgia vascular no ENAMED",
@@ -2113,6 +2256,8 @@
           "order": 7,
           "topic": "HIV",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "HIV",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 25\\04 - Clínica Médica\\07 - HIV",
           "targetDir": "Bloco 25\\04 - Clínica Médica\\07 - HIV",
@@ -2137,50 +2282,57 @@
           "order": 1,
           "topic": "Atenção à Saúde de Populações Específicas",
           "area": "Saúde Coletiva",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 26\\01 - Saúde Coletiva\\01 - Atenção à Saúde de Populações Específicas"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 2,
           "topic": "Violências",
           "area": "Saúde Coletiva",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 26\\01 - Saúde Coletiva\\02 - Violências"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 3,
           "topic": "Peçonhentos, Raiva e Tétano",
           "area": "Medicina de Família e Comunidade",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 26\\02 - Medicina de Família e Comunidade\\03 - Peçonhentos, Raiva e Tétano"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 4,
           "topic": "Cuidado à Saúde LGBTQIAPN+",
           "area": "Medicina de Família e Comunidade",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 26\\02 - Medicina de Família e Comunidade\\04 - Cuidado à Saúde LGBTQIAPN+"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 5,
           "topic": "Violência e Maus Tratos Infantis",
           "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 26\\03 - Pediatria\\05 - Violência e Maus Tratos Infantis"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 6,
           "topic": "Cirurgia Plastica no ENAMED",
           "area": "Cirurgia",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 26\\04 - Cirurgia\\06 - Cirurgia Plastica no ENAMED"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 7,
           "topic": "Valvopatias, Febre reumática e Endocardite",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 26\\05 - Clínica Médica\\07 - Valvopatias, Febre reumática e Endocardite"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         }
       ]
     },
@@ -2191,50 +2343,57 @@
           "order": 1,
           "topic": "Doenças Virais e Pandêmicas",
           "area": "Medicina de Família e Comunidade",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 27\\01 - Medicina de Família e Comunidade\\01 - Doenças Virais e Pandêmicas"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 2,
           "topic": "Acidentes com Animais Peçonhentos",
           "area": "Medicina de Família e Comunidade",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 27\\01 - Medicina de Família e Comunidade\\02 - Acidentes com Animais Peçonhentos"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 3,
           "topic": "Dermatologia na APS",
           "area": "Medicina de Família e Comunidade",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 27\\01 - Medicina de Família e Comunidade\\03 - Dermatologia na APS"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 4,
           "topic": "Síndrome Psicótica",
           "area": "Saúde Mental",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 27\\02 - Saúde Mental\\04 - Síndrome Psicótica"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 5,
           "topic": "Sofrimento Fetal Crônico",
           "area": "G.O",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 27\\03 - GO\\05 - Sofrimento Fetal Crônico"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 6,
           "topic": "Reumatologia Pediátrica",
           "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 27\\04 - Pediatria\\06 - Reumatologia Pediátrica"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 7,
           "topic": "Ortopedia no ENAMED",
           "area": "Cirurgia",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 27\\05 - Cirurgia\\07 - Ortopedia no ENAMED"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         }
       ]
     },
@@ -2245,50 +2404,57 @@
           "order": 1,
           "topic": "Emergências Psiquiátricas",
           "area": "Saúde Mental",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 28\\01 - Saúde Mental\\01 - Emergências Psiquiátricas"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 2,
           "topic": "Transtornos alimentares, somatoformes e de personalidade",
           "area": "Saúde Mental",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 28\\01 - Saúde Mental\\02 - Transtornos alimentares, somatoformes e de personalidade"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 3,
           "topic": "Psiquiatria na Infância e Adolescência",
           "area": "Saúde Mental",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 28\\01 - Saúde Mental\\03 - Psiquiatria na Infância e Adolescência"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 4,
           "topic": "Pneumologia Pediátrica",
           "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 28\\02 - Pediatria\\04 - Pneumologia Pediátrica"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 5,
           "topic": "Anestesiologia no ENAMED",
           "area": "Cirurgia",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 28\\03 - Cirurgia\\05 - Anestesiologia no ENAMED"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 6,
           "topic": "Colagenoses: Lupus e SAF",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 28\\04 - Clínica Médica\\06 - Colagenoses: Lupus e SAF"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 7,
           "topic": "Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 28\\04 - Clínica Médica\\07 - Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         }
       ]
     },
@@ -2299,50 +2465,57 @@
           "order": 1,
           "topic": "Hipotireoidismo",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 29\\01 - Clínica Médica\\01 - Hipotireoidismo"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 2,
           "topic": "Hipertireoidismo",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 29\\01 - Clínica Médica\\02 - Hipertireoidismo"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 3,
           "topic": "Nódulos e Câncer de Tireoide",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 29\\01 - Clínica Médica\\03 - Nódulos e Câncer de Tireoide"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 4,
           "topic": "Prematuridade",
           "area": "G.O",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 29\\02 - GO\\04 - Prematuridade"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 5,
           "topic": "Cirurgia Pediátrica no ENAMED",
           "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 29\\03 - Pediatria\\05 - Cirurgia Pediátrica no ENAMED"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 6,
           "topic": "Ética em Pediatria",
           "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 29\\03 - Pediatria\\06 - Ética em Pediatria"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 7,
           "topic": "Nefrolitíase",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 29\\01 - Clínica Médica\\07 - Nefrolitíase"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         }
       ]
     },
@@ -2353,57 +2526,65 @@
           "order": 1,
           "topic": "Transtornos relacionados a Substâncias - Álcool",
           "area": "Saúde Mental",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 30\\01 - Saúde Mental\\01 - Transtornos relacionados a Substâncias - Álcool"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 2,
           "topic": "Vacinação",
           "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 30\\02 - Pediatria\\02 - Vacinação"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 3,
           "topic": "Reanimação Neonatal",
           "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 30\\02 - Pediatria\\03 - Reanimação Neonatal"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 4,
           "topic": "Cabeça e pescoço para o ENAMED",
           "area": "Cirurgia",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 30\\03 - Cirurgia\\04 - Cabeça e pescoço para o ENAMED"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 5,
           "topic": "Encerramento Cirurgia ENAMED",
           "area": "Cirurgia",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 30\\03 - Cirurgia\\05 - Encerramento Cirurgia ENAMED"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 6,
           "topic": "Alergologia: reações de hipersensibilidade, rinite e angioedema",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 30\\04 - Clínica Médica\\06 - Alergologia: reações de hipersensibilidade, rinite e angioedema"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 7,
           "topic": "Sepse, anafilaxia e outros choques",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 30\\04 - Clínica Médica\\07 - Sepse, anafilaxia e outros choques"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         },
         {
           "order": 8,
           "topic": "Adrenal e Cushing",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 30\\04 - Clínica Médica\\08 - Adrenal e Cushing"
+          "status": "no-confident-match",
+          "bestGuessTitle": null,
+          "bestGuessScore": 0
         }
       ]
     },
@@ -2414,17 +2595,19 @@
           "order": 1,
           "topic": "História e Princípios do SUS",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "História e Princípios do SUS",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 01\\01 - Saúde Coletiva\\01 - História e Princípios do SUS",
           "targetDir": "Bloco 01\\01 - Saúde Coletiva\\01 - História e Princípios do SUS",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 01/01 - Saúde Coletiva/01 - História e Princípios do SUS/História e Princípios do SUS.mp4",
+              "from": "Bloco 01/01 - Saúde Coletiva/01 - História e Princípios do SUS/01 - História e Princípios do SUS.mp4",
               "toName": "01 - História e Princípios do SUS.mp4"
             },
             {
-              "from": "Bloco 01/01 - Saúde Coletiva/01 - História e Princípios do SUS/História e Princípios do SUS COFEXPRESS.mp4",
+              "from": "Bloco 01/01 - Saúde Coletiva/01 - História e Princípios do SUS/01.1 - História e Princípios do SUS COFEXPRESS.mp4",
               "toName": "01.1 - História e Princípios do SUS COFEXPRESS.mp4"
             }
           ]
@@ -2433,17 +2616,19 @@
           "order": 2,
           "topic": "Aleitamento Materno",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Aleitamento Materno",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 01\\02 - Medicina de Família e Comunidade\\02 - Aleitamento Materno",
           "targetDir": "Bloco 01\\02 - Medicina de Família e Comunidade\\02 - Aleitamento Materno",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 01/02 - Medicina de Família e Comunidade/02 - Aleitamento Materno/1.2.1.2 Aleitamento Materno.mp4",
+              "from": "Bloco 01/02 - Medicina de Família e Comunidade/02 - Aleitamento Materno/02 - Aleitamento Materno.mp4",
               "toName": "02 - Aleitamento Materno.mp4"
             },
             {
-              "from": "Bloco 01/02 - Medicina de Família e Comunidade/02 - Aleitamento Materno/Aleitamento Materno COFEXPRESS (2).mp4",
+              "from": "Bloco 01/02 - Medicina de Família e Comunidade/02 - Aleitamento Materno/02.1 - Aleitamento Materno COFEXPRESS (2).mp4",
               "toName": "02.1 - Aleitamento Materno COFEXPRESS.mp4"
             }
           ]
@@ -2452,17 +2637,19 @@
           "order": 3,
           "topic": "Alimentação Infantil",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Alimentação Infantil",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 01\\02 - Medicina de Família e Comunidade\\03 - Alimentação Infantil",
           "targetDir": "Bloco 01\\02 - Medicina de Família e Comunidade\\03 - Alimentação Infantil",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 01/02 - Medicina de Família e Comunidade/03 - Alimentação Infantil/Alimentação Infantil.mp4",
+              "from": "Bloco 01/02 - Medicina de Família e Comunidade/03 - Alimentação Infantil/03 - Alimentação Infantil.mp4",
               "toName": "03 - Alimentação Infantil.mp4"
             },
             {
-              "from": "Bloco 01/02 - Medicina de Família e Comunidade/03 - Alimentação Infantil/Alimentação Infantil COFEXPRESS.mp4",
+              "from": "Bloco 01/02 - Medicina de Família e Comunidade/03 - Alimentação Infantil/03.1 - Alimentação Infantil COFEXPRESS.mp4",
               "toName": "03.1 - Alimentação Infantil COFEXPRESS.mp4"
             }
           ]
@@ -2471,17 +2658,19 @@
           "order": 4,
           "topic": "Introdução ao Sistema Reprodutor Feminino",
           "scheduleArea": "G.O",
-          "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 01\\03 - Clínica Médica\\04 - Introdução ao Sistema Reprodutor Feminino",
+          "matchedTitle": "Introdução ao Sistema Reprodutor Feminino",
+          "matchScore": 1,
+          "currentArea": "GO",
+          "currentDir": "Bloco 01\\03 - GO\\04 - Introdução ao Sistema Reprodutor Feminino",
           "targetDir": "Bloco 01\\03 - GO\\04 - Introdução ao Sistema Reprodutor Feminino",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 01/03 - Clínica Médica/04 - Introdução ao Sistema Reprodutor Feminino/Anatomia e Embriologia Femininas.mp4",
+              "from": "Bloco 01/03 - GO/04 - Introdução ao Sistema Reprodutor Feminino/04 - Anatomia e Embriologia Femininas.mp4",
               "toName": "04 - Anatomia e Embriologia Femininas.mp4"
             },
             {
-              "from": "Bloco 01/03 - Clínica Médica/04 - Introdução ao Sistema Reprodutor Feminino/Anatomia e Embriologia Femininas COFEXPRESS.mp4",
+              "from": "Bloco 01/03 - GO/04 - Introdução ao Sistema Reprodutor Feminino/04.1 - Anatomia e Embriologia Femininas COFEXPRESS.mp4",
               "toName": "04.1 - Anatomia e Embriologia Femininas COFEXPRESS.mp4"
             }
           ]
@@ -2490,17 +2679,19 @@
           "order": 5,
           "topic": "Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Trauma - Conceitos iniciais ATLS",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 01\\04 - Cirurgia\\05 - Trauma - Conceitos iniciais ATLS",
           "targetDir": "Bloco 01\\04 - Cirurgia\\05 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
           "needsMove": true,
           "videoRenames": [
             {
-              "from": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS.mp4",
+              "from": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS.mp4",
               "toName": "05 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS.mp4"
             },
             {
-              "from": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS.mp4",
+              "from": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05.1 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS.mp4",
               "toName": "05.1 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS.mp4"
             }
           ]
@@ -2509,21 +2700,23 @@
           "order": 6,
           "topic": "Avaliação do Hemograma e Anemias",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Avaliação do Hemograma e Anemias",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 01\\03 - Clínica Médica\\06 - Avaliação do Hemograma e Anemias",
+          "currentDir": "Bloco 01\\05 - Clínica Médica\\06 - Avaliação do Hemograma e Anemias",
           "targetDir": "Bloco 01\\05 - Clínica Médica\\06 - Avaliação do Hemograma e Anemias",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 01/03 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/Anemias.mp4",
+              "from": "Bloco 01/05 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/06 - 1 aula - Anemias.mp4",
               "toName": "06 - 1 aula - Anemias.mp4"
             },
             {
-              "from": "Bloco 01/03 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/Avaliação do Hemograma e Anemias.mp4",
+              "from": "Bloco 01/05 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/06 - 2 aula - Avaliação do Hemograma e Anemias.mp4",
               "toName": "06 - 2 aula - Avaliação do Hemograma e Anemias.mp4"
             },
             {
-              "from": "Bloco 01/03 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/Anemias COFEXPRESS.mp4",
+              "from": "Bloco 01/05 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/06.1 - Anemias COFEXPRESS.mp4",
               "toName": "06.1 - Anemias COFEXPRESS.mp4"
             }
           ]
@@ -2537,14 +2730,20 @@
           "order": 1,
           "topic": "HAS Ambulatorial",
           "scheduleArea": "Medicina de Família e Comunidade",
-          "currentArea": "CofBasics",
-          "currentDir": "Bloco 02\\06 - CofBasics\\01 - CofBasics - Avaliação de Vitalidade Fetal (G.O)",
+          "matchedTitle": "HAS Ambulatorial",
+          "matchScore": 1,
+          "currentArea": "Medicina de Família e Comunidade",
+          "currentDir": "Bloco 02\\01 - Medicina de Família e Comunidade\\01 - HAS Ambulatorial",
           "targetDir": "Bloco 02\\01 - Medicina de Família e Comunidade\\01 - HAS Ambulatorial",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 02/06 - CofBasics/01 - CofBasics - Avaliação de Vitalidade Fetal (G.O)/CofBasics - Avaliação de Vitalidade Fetal (G.O).mp4",
-              "toName": "01 - CofBasics - Avaliação de Vitalidade Fetal (G.O).mp4"
+              "from": "Bloco 02/01 - Medicina de Família e Comunidade/01 - HAS Ambulatorial/01 - HAS Ambulatorial.mp4",
+              "toName": "01 - HAS Ambulatorial.mp4"
+            },
+            {
+              "from": "Bloco 02/01 - Medicina de Família e Comunidade/01 - HAS Ambulatorial/01.1 - HAS Ambulatorial COFEXPRESS.mp4",
+              "toName": "01.1 - HAS Ambulatorial COFEXPRESS.mp4"
             }
           ]
         },
@@ -2552,17 +2751,19 @@
           "order": 2,
           "topic": "Ciclo Menstrual",
           "scheduleArea": "G.O",
-          "currentArea": "G.O",
-          "currentDir": "Bloco 02\\02 - G.O\\02 - Ciclo Menstrual",
+          "matchedTitle": "Ciclo Menstrual",
+          "matchScore": 1,
+          "currentArea": "GO",
+          "currentDir": "Bloco 02\\02 - GO\\02 - Ciclo Menstrual",
           "targetDir": "Bloco 02\\02 - GO\\02 - Ciclo Menstrual",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 02/02 - G.O/02 - Ciclo Menstrual/Ciclo Menstrual.mp4",
+              "from": "Bloco 02/02 - GO/02 - Ciclo Menstrual/02 - Ciclo Menstrual.mp4",
               "toName": "02 - Ciclo Menstrual.mp4"
             },
             {
-              "from": "Bloco 02/02 - G.O/02 - Ciclo Menstrual/Ciclo Menstrual COFEXPRESS.mp4",
+              "from": "Bloco 02/02 - GO/02 - Ciclo Menstrual/02.1 - Ciclo Menstrual COFEXPRESS.mp4",
               "toName": "02.1 - Ciclo Menstrual COFEXPRESS.mp4"
             }
           ]
@@ -2571,17 +2772,19 @@
           "order": 3,
           "topic": "Gestação inicial",
           "scheduleArea": "G.O",
-          "currentArea": "G.O",
-          "currentDir": "Bloco 02\\02 - G.O\\03 - Gestação inicial",
+          "matchedTitle": "Gestação inicial",
+          "matchScore": 1,
+          "currentArea": "GO",
+          "currentDir": "Bloco 02\\02 - GO\\03 - Gestação inicial",
           "targetDir": "Bloco 02\\02 - GO\\03 - Gestação inicial",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 02/02 - G.O/03 - Gestação inicial/Modificações do Organismo Materno.mp4",
+              "from": "Bloco 02/02 - GO/03 - Gestação inicial/03 - Modificações do Organismo Materno.mp4",
               "toName": "03 - Modificações do Organismo Materno.mp4"
             },
             {
-              "from": "Bloco 02/02 - G.O/03 - Gestação inicial/Modificações do Organismo Materno COFEXPRESS.mp4",
+              "from": "Bloco 02/02 - GO/03 - Gestação inicial/03.1 - Modificações do Organismo Materno COFEXPRESS.mp4",
               "toName": "03.1 - Modificações do Organismo Materno COFEXPRESS.mp4"
             }
           ]
@@ -2590,17 +2793,19 @@
           "order": 4,
           "topic": "Crescimento e Baixa Estatura",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Crescimento e Baixa Estatura",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 02\\03 - Pediatria\\04 - Crescimento e Baixa Estatura",
           "targetDir": "Bloco 02\\03 - Pediatria\\04 - Crescimento e Baixa Estatura",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/Crescimento e Baixa Estatura.mp4",
+              "from": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/04 - Crescimento e Baixa Estatura.mp4",
               "toName": "04 - Crescimento e Baixa Estatura.mp4"
             },
             {
-              "from": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/Crescimento e Baixa Estatura COFEXPRESS.mp4",
+              "from": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/04.1 - Crescimento e Baixa Estatura COFEXPRESS.mp4",
               "toName": "04.1 - Crescimento e Baixa Estatura COFEXPRESS.mp4"
             }
           ]
@@ -2609,17 +2814,19 @@
           "order": 5,
           "topic": "Puberdade",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Puberdade",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 02\\03 - Pediatria\\05 - Puberdade",
           "targetDir": "Bloco 02\\03 - Pediatria\\05 - Puberdade",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 02/03 - Pediatria/05 - Puberdade/Puberdade.mp4",
+              "from": "Bloco 02/03 - Pediatria/05 - Puberdade/05 - Puberdade.mp4",
               "toName": "05 - Puberdade.mp4"
             },
             {
-              "from": "Bloco 02/03 - Pediatria/05 - Puberdade/Puberdade COFEXPRESS.mp4",
+              "from": "Bloco 02/03 - Pediatria/05 - Puberdade/05.1 - Puberdade COFEXPRESS.mp4",
               "toName": "05.1 - Puberdade COFEXPRESS.mp4"
             }
           ]
@@ -2628,17 +2835,19 @@
           "order": 6,
           "topic": "ATLS - Letra A",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "ATLS - Letra A",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 02\\04 - Cirurgia\\06 - ATLS - Letra A",
           "targetDir": "Bloco 02\\04 - Cirurgia\\06 - ATLS - Letra A",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/ATLS - Letra A.mp4",
+              "from": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/06 - ATLS - Letra A.mp4",
               "toName": "06 - ATLS - Letra A.mp4"
             },
             {
-              "from": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/ATLS - Letra A COFEXPRESS.mp4",
+              "from": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/06.1 - ATLS - Letra A COFEXPRESS.mp4",
               "toName": "06.1 - ATLS - Letra A COFEXPRESS.mp4"
             }
           ]
@@ -2647,17 +2856,19 @@
           "order": 7,
           "topic": "ATLS - Letra B",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "ATLS - Letra B",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 02\\04 - Cirurgia\\07 - ATLS - Letra B",
           "targetDir": "Bloco 02\\04 - Cirurgia\\07 - ATLS - Letra B",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/ATLS - Letra B.mp4",
+              "from": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/07 - ATLS - Letra B.mp4",
               "toName": "07 - ATLS - Letra B.mp4"
             },
             {
-              "from": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/ATLS - Letra B COFEXPRESS.mp4",
+              "from": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/07.1 - ATLS - Letra B COFEXPRESS.mp4",
               "toName": "07.1 - ATLS - Letra B COFEXPRESS.mp4"
             }
           ]
@@ -2666,17 +2877,19 @@
           "order": 8,
           "topic": "Insuficiência Cardíaca",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Insuficiência Cardíaca",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 02\\05 - Clínica Médica\\08 - Insuficiência Cardíaca",
           "targetDir": "Bloco 02\\05 - Clínica Médica\\08 - Insuficiência Cardíaca",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/Insuficiência Cardíaca.mp4",
+              "from": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/08 - Insuficiência Cardíaca.mp4",
               "toName": "08 - Insuficiência Cardíaca.mp4"
             },
             {
-              "from": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/Insuficiência Cardíaca COFEXPRESS.mp4",
+              "from": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/08.1 - Insuficiência Cardíaca COFEXPRESS.mp4",
               "toName": "08.1 - Insuficiência Cardíaca COFEXPRESS.mp4"
             }
           ]
@@ -2685,8 +2898,9 @@
           "order": 9,
           "topic": "CofBasics - Avaliação de Vitalidade Fetal (G.O)",
           "area": "CofBasics",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 02\\06 - CofBasics\\09 - CofBasics - Avaliação de Vitalidade Fetal (G.O)"
+          "status": "no-confident-match",
+          "bestGuessTitle": "HAS Ambulatorial",
+          "bestGuessScore": 0
         }
       ]
     },
@@ -2697,14 +2911,28 @@
           "order": 1,
           "topic": "Legislação do SUS",
           "scheduleArea": "Saúde Coletiva",
-          "currentArea": "Pediatria",
-          "currentDir": "Bloco 03\\05 - Pediatria\\01 - Nefrologia Pediátrica",
+          "matchedTitle": "Legislação do SUS",
+          "matchScore": 1,
+          "currentArea": "Saúde Coletiva",
+          "currentDir": "Bloco 03\\01 - Saúde Coletiva\\01 - Legislação do SUS",
           "targetDir": "Bloco 03\\01 - Saúde Coletiva\\01 - Legislação do SUS",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 03/05 - Pediatria/01 - Nefrologia Pediátrica/Nefrologia Pediátrica.mp4",
-              "toName": "01 - Nefrologia Pediátrica.mp4"
+              "from": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/01 - 1 aula - Legislação do SUS 1 Leis Orgânicas da Saúde.mp4",
+              "toName": "01 - 1 aula - Legislação do SUS 1 Leis Orgânicas da Saúde.mp4"
+            },
+            {
+              "from": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/01 - 2 aula - Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde.mp4",
+              "toName": "01 - 2 aula - Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde.mp4"
+            },
+            {
+              "from": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/01.1 - Legislação do SUS 1 Leis Orgânicas da Saúde COFEXPRESS.mp4",
+              "toName": "01.1 - Legislação do SUS 1 Leis Orgânicas da Saúde COFEXPRESS.mp4"
+            },
+            {
+              "from": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/01.1 - Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde COFEXPRESS.mp4",
+              "toName": "01.1 - Legislação do SUS 2 NOBs, NOAS e Pacto pela Saúde COFEXPRESS.mp4"
             }
           ]
         },
@@ -2712,14 +2940,20 @@
           "order": 2,
           "topic": "Assistência ao Pré-Natal",
           "scheduleArea": "Medicina de Família e Comunidade",
-          "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 03\\03 - Clínica Médica\\02 - Doença Pulmonar Obstrutiva Crônica (DPOC)",
+          "matchedTitle": "Assistência ao Pré-Natal",
+          "matchScore": 1,
+          "currentArea": "Medicina de Família e Comunidade",
+          "currentDir": "Bloco 03\\02 - Medicina de Família e Comunidade\\02 - Assistência ao Pré-Natal",
           "targetDir": "Bloco 03\\02 - Medicina de Família e Comunidade\\02 - Assistência ao Pré-Natal",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 03/03 - Clínica Médica/02 - Doença Pulmonar Obstrutiva Crônica (DPOC)/Doença Pulmonar Obstrutiva Crônica (DPOC).mp4",
-              "toName": "02 - Doença Pulmonar Obstrutiva Crônica (DPOC).mp4"
+              "from": "Bloco 03/02 - Medicina de Família e Comunidade/02 - Assistência ao Pré-Natal/02 - Assistência ao Pré-Natal.mp4",
+              "toName": "02 - Assistência ao Pré-Natal.mp4"
+            },
+            {
+              "from": "Bloco 03/02 - Medicina de Família e Comunidade/02 - Assistência ao Pré-Natal/02.1 - Assistência ao Pré-Natal COFEXPRESS.mp4",
+              "toName": "02.1 - Assistência ao Pré-Natal COFEXPRESS.mp4"
             }
           ]
         },
@@ -2727,17 +2961,19 @@
           "order": 3,
           "topic": "Tabagismo",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Tabagismo",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 03\\02 - Medicina de Família e Comunidade\\03 - Tabagismo",
           "targetDir": "Bloco 03\\02 - Medicina de Família e Comunidade\\03 - Tabagismo",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 03/02 - Medicina de Família e Comunidade/03 - Tabagismo/Tabagismo.mp4",
+              "from": "Bloco 03/02 - Medicina de Família e Comunidade/03 - Tabagismo/03 - Tabagismo.mp4",
               "toName": "03 - Tabagismo.mp4"
             },
             {
-              "from": "Bloco 03/02 - Medicina de Família e Comunidade/03 - Tabagismo/Tabagismo COFEXPRESS.mp4",
+              "from": "Bloco 03/02 - Medicina de Família e Comunidade/03 - Tabagismo/03.1 - Tabagismo COFEXPRESS.mp4",
               "toName": "03.1 - Tabagismo COFEXPRESS.mp4"
             }
           ]
@@ -2746,13 +2982,19 @@
           "order": 4,
           "topic": "Nefrologia Pediátrica",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Nefrologia Pediátrica",
+          "matchScore": 1,
           "currentArea": "Pediatria",
-          "currentDir": "Bloco 03\\05 - Pediatria\\04 - Nefrologia Pediátrica",
+          "currentDir": "Bloco 03\\03 - Pediatria\\04 - Nefrologia Pediátrica",
           "targetDir": "Bloco 03\\03 - Pediatria\\04 - Nefrologia Pediátrica",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 03/05 - Pediatria/04 - Nefrologia Pediátrica/Nefrologia Pediátrica COFEXPRESS.mp4",
+              "from": "Bloco 03/03 - Pediatria/04 - Nefrologia Pediátrica/04 - Nefrologia Pediátrica.mp4",
+              "toName": "04 - Nefrologia Pediátrica.mp4"
+            },
+            {
+              "from": "Bloco 03/03 - Pediatria/04 - Nefrologia Pediátrica/04.1 - Nefrologia Pediátrica COFEXPRESS.mp4",
               "toName": "04.1 - Nefrologia Pediátrica COFEXPRESS.mp4"
             }
           ]
@@ -2761,17 +3003,19 @@
           "order": 5,
           "topic": "ATLS - Letra C e X",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "ATLS - Letra C e X",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 03\\04 - Cirurgia\\05 - ATLS - Letra C e X",
           "targetDir": "Bloco 03\\04 - Cirurgia\\05 - ATLS - Letra C e X",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 03/04 - Cirurgia/05 - ATLS - Letra C e X/ATLS - Letra C e X.mp4",
+              "from": "Bloco 03/04 - Cirurgia/05 - ATLS - Letra C e X/05 - ATLS - Letra C e X.mp4",
               "toName": "05 - ATLS - Letra C e X.mp4"
             },
             {
-              "from": "Bloco 03/04 - Cirurgia/05 - ATLS - Letra C e X/ATLS - Letra C e X COFEXPRESS.mp4",
+              "from": "Bloco 03/04 - Cirurgia/05 - ATLS - Letra C e X/05.1 - ATLS - Letra C e X COFEXPRESS.mp4",
               "toName": "05.1 - ATLS - Letra C e X COFEXPRESS.mp4"
             }
           ]
@@ -2780,17 +3024,19 @@
           "order": 6,
           "topic": "Espirometria Básica e Asma",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Espirometria Básica e Asma",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 03\\03 - Clínica Médica\\06 - Espirometria Básica e Asma",
+          "currentDir": "Bloco 03\\05 - Clínica Médica\\06 - Espirometria Básica e Asma",
           "targetDir": "Bloco 03\\05 - Clínica Médica\\06 - Espirometria Básica e Asma",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 03/03 - Clínica Médica/06 - Espirometria Básica e Asma/Espirometria Básica e Asma.mp4",
+              "from": "Bloco 03/05 - Clínica Médica/06 - Espirometria Básica e Asma/06 - Espirometria Básica e Asma.mp4",
               "toName": "06 - Espirometria Básica e Asma.mp4"
             },
             {
-              "from": "Bloco 03/03 - Clínica Médica/06 - Espirometria Básica e Asma/Espirometria Básica e Asma COFEXPRESS.mp4",
+              "from": "Bloco 03/05 - Clínica Médica/06 - Espirometria Básica e Asma/06.1 - Espirometria Básica e Asma COFEXPRESS.mp4",
               "toName": "06.1 - Espirometria Básica e Asma COFEXPRESS.mp4"
             }
           ]
@@ -2799,13 +3045,19 @@
           "order": 7,
           "topic": "Doença Pulmonar Obstrutiva Crônica (DPOC)",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Doença Pulmonar Obstrutiva Crônica (DPOC)",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 03\\03 - Clínica Médica\\07 - DPOC",
+          "currentDir": "Bloco 03\\05 - Clínica Médica\\07 - Doença Pulmonar Obstrutiva Crônica (DPOC)",
           "targetDir": "Bloco 03\\05 - Clínica Médica\\07 - Doença Pulmonar Obstrutiva Crônica (DPOC)",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 03/03 - Clínica Médica/07 - DPOC/Doença Pulmonar Obstrutiva Crônica (DPOC) COFEXPRESS.mp4",
+              "from": "Bloco 03/05 - Clínica Médica/07 - Doença Pulmonar Obstrutiva Crônica (DPOC)/07 - Doença Pulmonar Obstrutiva Crônica (DPOC).mp4",
+              "toName": "07 - Doença Pulmonar Obstrutiva Crônica (DPOC).mp4"
+            },
+            {
+              "from": "Bloco 03/05 - Clínica Médica/07 - Doença Pulmonar Obstrutiva Crônica (DPOC)/07.1 - Doença Pulmonar Obstrutiva Crônica (DPOC) COFEXPRESS.mp4",
               "toName": "07.1 - Doença Pulmonar Obstrutiva Crônica (DPOC) COFEXPRESS.mp4"
             }
           ]
@@ -2819,18 +3071,28 @@
           "order": 1,
           "topic": "Diabetes: diagnóstico e abordagem laboratorial",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Diabetes diagnóstico e abordagem laboratorial",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
-          "currentDir": "Bloco 04\\04 - Medicina de Família e Comunidade\\01 - Diabetes Classificação, Fisiopatologia e Diagnostico do DM",
-          "targetDir": "Bloco 04\\01 - Medicina de Família e Comunidade\\01 - Diabetes: diagnóstico e abordagem laboratorial",
-          "needsMove": true,
+          "currentDir": "Bloco 04\\01 - Medicina de Família e Comunidade\\01 - Diabetes diagnóstico e abordagem laboratorial",
+          "targetDir": "Bloco 04\\01 - Medicina de Família e Comunidade\\01 - Diabetes diagnóstico e abordagem laboratorial",
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 04/04 - Medicina de Família e Comunidade/01 - Diabetes Classificação, Fisiopatologia e Diagnostico do DM/Diabetes Classificação, Fisiopatologia e Diagnóstico do DM.mp4",
-              "toName": "01 - Diabetes Classificação, Fisiopatologia e Diagnóstico do DM.mp4"
+              "from": "Bloco 04/01 - Medicina de Família e Comunidade/01 - Diabetes diagnóstico e abordagem laboratorial/01 - 1 aula - Diabetes Classificação, Fisiopatologia e Diagnóstico do DM.mp4",
+              "toName": "01 - 1 aula - Diabetes Classificação, Fisiopatologia e Diagnóstico do DM.mp4"
             },
             {
-              "from": "Bloco 04/04 - Medicina de Família e Comunidade/01 - Diabetes Classificação, Fisiopatologia e Diagnostico do DM/Diabetes Classificação, Fisiopatologia e Diagnóstico do DM COFEXPRESS.mp4",
+              "from": "Bloco 04/01 - Medicina de Família e Comunidade/01 - Diabetes diagnóstico e abordagem laboratorial/01 - 2 aula - Diabetes Tratamento e complicações crônicas.mp4",
+              "toName": "01 - 2 aula - Diabetes Tratamento e complicações crônicas.mp4"
+            },
+            {
+              "from": "Bloco 04/01 - Medicina de Família e Comunidade/01 - Diabetes diagnóstico e abordagem laboratorial/01.1 - Diabetes Classificação, Fisiopatologia e Diagnóstico do DM COFEXPRESS.mp4",
               "toName": "01.1 - Diabetes Classificação, Fisiopatologia e Diagnóstico do DM COFEXPRESS.mp4"
+            },
+            {
+              "from": "Bloco 04/01 - Medicina de Família e Comunidade/01 - Diabetes diagnóstico e abordagem laboratorial/01.1 - Diabetes Tratamento e Complicações Crônicas COFEXPRESS.mp4",
+              "toName": "01.1 - Diabetes Tratamento e Complicações Crônicas COFEXPRESS.mp4"
             }
           ]
         },
@@ -2838,39 +3100,57 @@
           "order": 2,
           "topic": "Estática Fetal",
           "scheduleArea": "G.O",
-          "currentArea": "Medicina de Família e Comunidade",
-          "currentDir": "Bloco 04\\04 - Medicina de Família e Comunidade\\02 - Diabetes Tratamento e complicações crônicas",
+          "matchedTitle": "Estática Fetal",
+          "matchScore": 1,
+          "currentArea": "GO",
+          "currentDir": "Bloco 04\\02 - GO\\02 - Estática Fetal",
           "targetDir": "Bloco 04\\02 - GO\\02 - Estática Fetal",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 04/04 - Medicina de Família e Comunidade/02 - Diabetes Tratamento e complicações crônicas/Diabetes Tratamento e complicações crônicas.mp4",
-              "toName": "02 - Diabetes Tratamento e complicações crônicas.mp4"
+              "from": "Bloco 04/02 - GO/02 - Estática Fetal/02 - Estática Fetal Estudo do Trajeto de Parto e Estática Fetal.mp4",
+              "toName": "02 - Estática Fetal Estudo do Trajeto de Parto e Estática Fetal.mp4"
             },
             {
-              "from": "Bloco 04/04 - Medicina de Família e Comunidade/02 - Diabetes Tratamento e complicações crônicas/Diabetes Tratamento e Complicações Crônicas COFEXPRESS.mp4",
-              "toName": "02.1 - Diabetes Tratamento e Complicações Crônicas COFEXPRESS.mp4"
+              "from": "Bloco 04/02 - GO/02 - Estática Fetal/02.1 - Estática Fetal Estudo do Trajeto de Parto e Estática Fetal COFEXPRESS.mp4",
+              "toName": "02.1 - Estática Fetal Estudo do Trajeto de Parto e Estática Fetal COFEXPRESS.mp4"
             }
           ]
         },
         {
           "order": 3,
           "topic": "Assistência ao Parto",
-          "area": "G.O",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 04\\02 - GO\\03 - Assistência ao Parto"
+          "scheduleArea": "G.O",
+          "matchedTitle": "Assistência ao Parto",
+          "matchScore": 1,
+          "currentArea": "GO",
+          "currentDir": "Bloco 04\\02 - GO\\03 - Assistência ao Parto",
+          "targetDir": "Bloco 04\\02 - GO\\03 - Assistência ao Parto",
+          "needsMove": false,
+          "videoRenames": [
+            {
+              "from": "Bloco 04/02 - GO/03 - Assistência ao Parto/03 - Assistência ao Parto Mecanismo e Assistência ao Parto.mp4",
+              "toName": "03 - Assistência ao Parto Mecanismo e Assistência ao Parto.mp4"
+            },
+            {
+              "from": "Bloco 04/02 - GO/03 - Assistência ao Parto/03.1 - Assistência ao Parto Mecanismo e Assistência ao Parto COFEXPRESS.mp4",
+              "toName": "03.1 - Assistência ao Parto Mecanismo e Assistência ao Parto COFEXPRESS.mp4"
+            }
+          ]
         },
         {
           "order": 4,
           "topic": "Gastropediatria",
           "scheduleArea": "G.O",
-          "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 04\\01 - Clínica Médica\\04 - Gastropediatria",
+          "matchedTitle": "Gastropediatria",
+          "matchScore": 1,
+          "currentArea": "GO",
+          "currentDir": "Bloco 04\\02 - GO\\04 - Gastropediatria",
           "targetDir": "Bloco 04\\02 - GO\\04 - Gastropediatria",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 04/01 - Clínica Médica/04 - Gastropediatria/Gastropediatria.mp4",
+              "from": "Bloco 04/02 - GO/04 - Gastropediatria/04 - Gastropediatria.mp4",
               "toName": "04 - Gastropediatria.mp4"
             }
           ]
@@ -2879,17 +3159,19 @@
           "order": 5,
           "topic": "ATLS - Letra D",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "ATLS - Letra D",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 04\\03 - Cirurgia\\05 - ATLS - Letra D",
           "targetDir": "Bloco 04\\03 - Cirurgia\\05 - ATLS - Letra D",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 04/03 - Cirurgia/05 - ATLS - Letra D/ATLS - Letra D.mp4",
+              "from": "Bloco 04/03 - Cirurgia/05 - ATLS - Letra D/05 - ATLS - Letra D.mp4",
               "toName": "05 - ATLS - Letra D.mp4"
             },
             {
-              "from": "Bloco 04/03 - Cirurgia/05 - ATLS - Letra D/ATLS - Letra D COFEXPRESS.mp4",
+              "from": "Bloco 04/03 - Cirurgia/05 - ATLS - Letra D/05.1 - ATLS - Letra D COFEXPRESS.mp4",
               "toName": "05.1 - ATLS - Letra D COFEXPRESS.mp4"
             }
           ]
@@ -2897,26 +3179,42 @@
         {
           "order": 6,
           "topic": "ATLS - Letra E e seguimento do tratamento do politrauma",
-          "area": "Cirurgia",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 04\\03 - Cirurgia\\06 - ATLS - Letra E e seguimento do tratamento do politrauma"
+          "scheduleArea": "Cirurgia",
+          "matchedTitle": "ATLS - Letra E e seguimento do tratamento do politrauma",
+          "matchScore": 1,
+          "currentArea": "Cirurgia",
+          "currentDir": "Bloco 04\\03 - Cirurgia\\06 - ATLS - Letra E e seguimento do tratamento do politrauma",
+          "targetDir": "Bloco 04\\03 - Cirurgia\\06 - ATLS - Letra E e seguimento do tratamento do politrauma",
+          "needsMove": false,
+          "videoRenames": [
+            {
+              "from": "Bloco 04/03 - Cirurgia/06 - ATLS - Letra E e seguimento do tratamento do politrauma/06 - ATLS - Letra E e seguimento do tratamento do politrauma.mp4",
+              "toName": "06 - ATLS - Letra E e seguimento do tratamento do politrauma.mp4"
+            },
+            {
+              "from": "Bloco 04/03 - Cirurgia/06 - ATLS - Letra E e seguimento do tratamento do politrauma/06.1 - ATLS - Letra E e seguimento do tratamento do politrauma COFEXPRESS.mp4",
+              "toName": "06.1 - ATLS - Letra E e seguimento do tratamento do politrauma COFEXPRESS.mp4"
+            }
+          ]
         },
         {
           "order": 7,
           "topic": "Diabetes: hipoglicemia e emergências hiperglicêmicas (CAD e EHH)",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Diabetes hipoglicemia e emergências hiperglicêmicas (CAD e EHH)",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 04\\01 - Clínica Médica\\07 - Diabetes - hipoglicemia e emergências",
-          "targetDir": "Bloco 04\\04 - Clínica Médica\\07 - Diabetes: hipoglicemia e emergências hiperglicêmicas (CAD e EHH)",
-          "needsMove": true,
+          "currentDir": "Bloco 04\\04 - Clínica Médica\\07 - Diabetes hipoglicemia e emergências hiperglicêmicas (CAD e EHH)",
+          "targetDir": "Bloco 04\\04 - Clínica Médica\\07 - Diabetes hipoglicemia e emergências hiperglicêmicas (CAD e EHH)",
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 04/01 - Clínica Médica/07 - Diabetes - hipoglicemia e emergências/Emergências Hiperglicêmicas (CAD e EHH).mp4",
+              "from": "Bloco 04/04 - Clínica Médica/07 - Diabetes hipoglicemia e emergências hiperglicêmicas (CAD e EHH)/07 - Emergências Hiperglicêmicas (CAD e EHH).mp4",
               "toName": "07 - Emergências Hiperglicêmicas (CAD e EHH).mp4"
             },
             {
-              "from": "Bloco 04/01 - Clínica Médica/07 - Diabetes - hipoglicemia e emergências/Emergências Hiperglicêmicas (CAD e EHH) COFEXPRESS..mp4",
-              "toName": "07.1 - Emergências Hiperglicêmicas (CAD e EHH) COFEXPRESS..mp4"
+              "from": "Bloco 04/04 - Clínica Médica/07 - Diabetes hipoglicemia e emergências hiperglicêmicas (CAD e EHH)/07.1 - Emergências Hiperglicêmicas (CAD e EHH) COFEXPRESS.mp4",
+              "toName": "07.1 - Emergências Hiperglicêmicas (CAD e EHH) COFEXPRESS.mp4"
             }
           ]
         }
@@ -2929,43 +3227,61 @@
           "order": 1,
           "topic": "Sofrimento Fetal Agudo",
           "scheduleArea": "G.O",
-          "currentArea": "Pediatria",
-          "currentDir": "Bloco 05\\02 - Pediatria\\01 - Pneumonias",
+          "matchedTitle": "Sofrimento Fetal Agudo",
+          "matchScore": 1,
+          "currentArea": "GO",
+          "currentDir": "Bloco 05\\01 - GO\\01 - Sofrimento Fetal Agudo",
           "targetDir": "Bloco 05\\01 - GO\\01 - Sofrimento Fetal Agudo",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 05/02 - Pediatria/01 - Pneumonias/Pneumonias.mp4",
-              "toName": "01 - Pneumonias.mp4"
+              "from": "Bloco 05/01 - GO/01 - Sofrimento Fetal Agudo/01 - Sofrimento Fetal Agudo.mp4",
+              "toName": "01 - Sofrimento Fetal Agudo.mp4"
             },
             {
-              "from": "Bloco 05/02 - Pediatria/01 - Pneumonias/Pneumonias COFEXPRESS.mp4",
-              "toName": "01.1 - Pneumonias COFEXPRESS.mp4"
+              "from": "Bloco 05/01 - GO/01 - Sofrimento Fetal Agudo/01.1 - R1 - Sofrimento Fetal Agudo COFEXPRESS.mp4",
+              "toName": "01.1 - R1 - Sofrimento Fetal Agudo COFEXPRESS.mp4"
             }
           ]
         },
         {
           "order": 2,
           "topic": "Pneumonias",
-          "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 05\\02 - Pediatria\\02 - Pneumonias"
+          "scheduleArea": "Pediatria",
+          "matchedTitle": "Pneumonias",
+          "matchScore": 1,
+          "currentArea": "Pediatria",
+          "currentDir": "Bloco 05\\02 - Pediatria\\02 - Pneumonias",
+          "targetDir": "Bloco 05\\02 - Pediatria\\02 - Pneumonias",
+          "needsMove": false,
+          "videoRenames": [
+            {
+              "from": "Bloco 05/02 - Pediatria/02 - Pneumonias/02 - Pneumonias.mp4",
+              "toName": "02 - Pneumonias.mp4"
+            },
+            {
+              "from": "Bloco 05/02 - Pediatria/02 - Pneumonias/02.1 - Pneumonias COFEXPRESS.mp4",
+              "toName": "02.1 - Pneumonias COFEXPRESS.mp4"
+            }
+          ]
         },
         {
           "order": 3,
           "topic": "Bronquiolite e Tuberculose",
           "scheduleArea": "Pediatria",
+          "matchedTitle": "Bronquiolite e Tuberculose",
+          "matchScore": 1,
           "currentArea": "Pediatria",
           "currentDir": "Bloco 05\\02 - Pediatria\\03 - Bronquiolite e Tuberculose",
           "targetDir": "Bloco 05\\02 - Pediatria\\03 - Bronquiolite e Tuberculose",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 05/02 - Pediatria/03 - Bronquiolite e Tuberculose/Bronquiolite e Turberculose.mp4",
+              "from": "Bloco 05/02 - Pediatria/03 - Bronquiolite e Tuberculose/03 - Bronquiolite e Turberculose.mp4",
               "toName": "03 - Bronquiolite e Turberculose.mp4"
             },
             {
-              "from": "Bloco 05/02 - Pediatria/03 - Bronquiolite e Tuberculose/Bronquiolite e Turberculose COFEXPRESS.mp4",
+              "from": "Bloco 05/02 - Pediatria/03 - Bronquiolite e Tuberculose/03.1 - Bronquiolite e Turberculose COFEXPRESS.mp4",
               "toName": "03.1 - Bronquiolite e Turberculose COFEXPRESS.mp4"
             }
           ]
@@ -2974,17 +3290,19 @@
           "order": 4,
           "topic": "Queimaduras",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Queimaduras",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 05\\03 - Cirurgia\\04 - Queimaduras",
           "targetDir": "Bloco 05\\03 - Cirurgia\\04 - Queimaduras",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 05/03 - Cirurgia/04 - Queimaduras/Queimaduras.mp4",
+              "from": "Bloco 05/03 - Cirurgia/04 - Queimaduras/04 - Queimaduras.mp4",
               "toName": "04 - Queimaduras.mp4"
             },
             {
-              "from": "Bloco 05/03 - Cirurgia/04 - Queimaduras/Queimaduras COFEXPRESS.mp4",
+              "from": "Bloco 05/03 - Cirurgia/04 - Queimaduras/04.1 - Queimaduras COFEXPRESS.mp4",
               "toName": "04.1 - Queimaduras COFEXPRESS.mp4"
             }
           ]
@@ -2993,17 +3311,19 @@
           "order": 5,
           "topic": "Urgência e Emergência Hipertensiva",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Urgência e Emergência Hipertensiva",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 05\\04 - Clínica Médica\\05 - Urgência e Emergência Hipertensiva",
           "targetDir": "Bloco 05\\04 - Clínica Médica\\05 - Urgência e Emergência Hipertensiva",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 05/04 - Clínica Médica/05 - Urgência e Emergência Hipertensiva/Urgência e Emergência Hipertensiva.mp4",
+              "from": "Bloco 05/04 - Clínica Médica/05 - Urgência e Emergência Hipertensiva/05 - Urgência e Emergência Hipertensiva.mp4",
               "toName": "05 - Urgência e Emergência Hipertensiva.mp4"
             },
             {
-              "from": "Bloco 05/04 - Clínica Médica/05 - Urgência e Emergência Hipertensiva/Urgência e Emergência Hipertensiva COFEXPRESS.mp4",
+              "from": "Bloco 05/04 - Clínica Médica/05 - Urgência e Emergência Hipertensiva/05.1 - Urgência e Emergência Hipertensiva COFEXPRESS.mp4",
               "toName": "05.1 - Urgência e Emergência Hipertensiva COFEXPRESS.mp4"
             }
           ]
@@ -3012,17 +3332,19 @@
           "order": 6,
           "topic": "Neurovascular 1",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Neurovascular 1",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 05\\04 - Clínica Médica\\06 - Neurovascular 1",
           "targetDir": "Bloco 05\\04 - Clínica Médica\\06 - Neurovascular 1",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 05/04 - Clínica Médica/06 - Neurovascular 1/AVC isquêmico e AIT.mp4",
+              "from": "Bloco 05/04 - Clínica Médica/06 - Neurovascular 1/06 - AVC isquêmico e AIT.mp4",
               "toName": "06 - AVC isquêmico e AIT.mp4"
             },
             {
-              "from": "Bloco 05/04 - Clínica Médica/06 - Neurovascular 1/AVC isquêmico e AIT COFEXPRESS.mp4",
+              "from": "Bloco 05/04 - Clínica Médica/06 - Neurovascular 1/06.1 - AVC isquêmico e AIT COFEXPRESS.mp4",
               "toName": "06.1 - AVC isquêmico e AIT COFEXPRESS.mp4"
             }
           ]
@@ -3031,17 +3353,19 @@
           "order": 7,
           "topic": "Neurovascular 2",
           "scheduleArea": "Clínica Médica",
+          "matchedTitle": "Neurovascular 2",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
           "currentDir": "Bloco 05\\04 - Clínica Médica\\07 - Neurovascular 2",
           "targetDir": "Bloco 05\\04 - Clínica Médica\\07 - Neurovascular 2",
           "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 05/04 - Clínica Médica/07 - Neurovascular 2/AVC hemorrágico e HSA.mp4",
+              "from": "Bloco 05/04 - Clínica Médica/07 - Neurovascular 2/07 - AVC hemorrágico e HSA.mp4",
               "toName": "07 - AVC hemorrágico e HSA.mp4"
             },
             {
-              "from": "Bloco 05/04 - Clínica Médica/07 - Neurovascular 2/AVC hemorrágico e HSA COFEXPRESS.mp4",
+              "from": "Bloco 05/04 - Clínica Médica/07 - Neurovascular 2/07.1 - AVC hemorrágico e HSA COFEXPRESS.mp4",
               "toName": "07.1 - AVC hemorrágico e HSA COFEXPRESS.mp4"
             }
           ]
@@ -3049,32 +3373,18 @@
         {
           "order": 8,
           "topic": "CofBasics - Semiologia Neurológica e Topografia da Lesão (Clínica Médica)",
-          "scheduleArea": "CofBasics",
-          "currentArea": "CofBasics",
-          "currentDir": "Bloco 05\\05 - CofBasics\\08 - CofBasics - Semiologia Neurológica e Topografia",
-          "targetDir": "Bloco 05\\05 - CofBasics\\08 - CofBasics - Semiologia Neurológica e Topografia da Lesão (Clínica Médica)",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 05/05 - CofBasics/08 - CofBasics - Semiologia Neurológica e Topografia/Semiologia Neurológica e Topografia da Lesão.mp4",
-              "toName": "08 - Semiologia Neurológica e Topografia da Lesão.mp4"
-            }
-          ]
+          "area": "CofBasics",
+          "status": "no-confident-match",
+          "bestGuessTitle": "Bronquiolite e Tuberculose",
+          "bestGuessScore": 0.33
         },
         {
           "order": 9,
           "topic": "CofBasics - Processo de Saúde e Doença (Saúde Coletiva)",
-          "scheduleArea": "CofBasics",
-          "currentArea": "CofBasics",
-          "currentDir": "Bloco 05\\05 - CofBasics\\09 - CofBasics - Processo Saúde-Doença",
-          "targetDir": "Bloco 05\\05 - CofBasics\\09 - CofBasics - Processo de Saúde e Doença (Saúde Coletiva)",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 05/05 - CofBasics/09 - CofBasics - Processo Saúde-Doença/Processo de Saúde e Doença COFBASICS.mp4",
-              "toName": "09 - Processo de Saúde e Doença COFBASICS.mp4"
-            }
-          ]
+          "area": "CofBasics",
+          "status": "no-confident-match",
+          "bestGuessTitle": "Bronquiolite e Tuberculose",
+          "bestGuessScore": 0.33
         }
       ]
     },
@@ -3085,6 +3395,8 @@
           "order": 1,
           "topic": "Níveis de Prevenção",
           "scheduleArea": "Saúde Coletiva",
+          "matchedTitle": "Níveis de Prevenção",
+          "matchScore": 1,
           "currentArea": "Saúde Coletiva",
           "currentDir": "Bloco 06\\01 - Saúde Coletiva\\01 - Níveis de Prevenção",
           "targetDir": "Bloco 06\\01 - Saúde Coletiva\\01 - Níveis de Prevenção",
@@ -3108,11 +3420,17 @@
           "order": 2,
           "topic": "Sífilis e uretrites infecciosas",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Sífilis e uretrites infecciosas",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 06\\02 - Clínica Médica\\02 - Sífilis e Uretrites Infecciosas",
+          "currentDir": "Bloco 06\\02 - Clínica Médica\\06 - Sífilis e uretrites infecciosas",
           "targetDir": "Bloco 06\\02 - Medicina de Família e Comunidade\\02 - Sífilis e uretrites infecciosas",
           "needsMove": true,
           "videoRenames": [
+            {
+              "from": "Bloco 06/02 - Clínica Médica/06 - Sífilis e uretrites infecciosas/Sífilis e uretrites infecciosas.mp4",
+              "toName": "02 - Sífilis e uretrites infecciosas.mp4"
+            },
             {
               "from": "Bloco 06/02 - Clínica Médica/02 - Sífilis e Uretrites Infecciosas/Sífilis e uretrites infecciosas COFEXPRESS.mp4",
               "toName": "02.1 - Sífilis e uretrites infecciosas COFEXPRESS.mp4"
@@ -3123,11 +3441,17 @@
           "order": 3,
           "topic": "Tuberculose (adulto)",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Tuberculose (Adulto)",
+          "matchScore": 1,
           "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 06\\02 - Clínica Médica\\03 - Tuberculose (adulto)",
+          "currentDir": "Bloco 06\\02 - Clínica Médica\\06 - Tuberculose (Adulto)",
           "targetDir": "Bloco 06\\02 - Medicina de Família e Comunidade\\03 - Tuberculose (adulto)",
           "needsMove": true,
           "videoRenames": [
+            {
+              "from": "Bloco 06/02 - Clínica Médica/06 - Tuberculose (Adulto)/Tuberculose (adulto).mp4",
+              "toName": "03 - Tuberculose (adulto).mp4"
+            },
             {
               "from": "Bloco 06/02 - Clínica Médica/03 - Tuberculose (adulto)/Tuberculose (adulto) COFEXPRESS.mp4",
               "toName": "03.1 - Tuberculose (adulto) COFEXPRESS.mp4"
@@ -3138,11 +3462,17 @@
           "order": 4,
           "topic": "Pediatria Geral",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Pediatria Geral",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
-          "currentDir": "Bloco 06\\03 - Medicina de Família e Comunidade\\04 - Pediatria Geral",
+          "currentDir": "Bloco 06\\03 - Medicina de Família e Comunidade\\06 - Pediatria Geral",
           "targetDir": "Bloco 06\\02 - Medicina de Família e Comunidade\\04 - Pediatria Geral",
           "needsMove": true,
           "videoRenames": [
+            {
+              "from": "Bloco 06/03 - Medicina de Família e Comunidade/06 - Pediatria Geral/PEDIATRIA GERAL.mp4",
+              "toName": "04 - PEDIATRIA GERAL.mp4"
+            },
             {
               "from": "Bloco 06/03 - Medicina de Família e Comunidade/04 - Pediatria Geral/PEDIATRIA GERAL COFEXPRESS.mp4",
               "toName": "04.1 - PEDIATRIA GERAL COFEXPRESS.mp4"
@@ -3153,6 +3483,8 @@
           "order": 5,
           "topic": "Transtornos Psiquiátricos no Pós-Parto",
           "scheduleArea": "Saúde Mental",
+          "matchedTitle": "Transtornos Psiquiátricos no Pós-Parto",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 06\\04 - G.O\\05 - Transtornos Psiquiátricos no Pós-Parto",
           "targetDir": "Bloco 06\\03 - Saúde Mental\\05 - Transtornos Psiquiátricos no Pós-Parto",
@@ -3172,6 +3504,8 @@
           "order": 6,
           "topic": "Puerpério",
           "scheduleArea": "G.O",
+          "matchedTitle": "Puerpério",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 06\\04 - G.O\\06 - Puerpério",
           "targetDir": "Bloco 06\\04 - GO\\06 - Puerpério",
@@ -3191,6 +3525,8 @@
           "order": 7,
           "topic": "Abdome agudo - introduçao e abordagem sindrômica",
           "scheduleArea": "Cirurgia",
+          "matchedTitle": "Abdome Agudo - Introdução",
+          "matchScore": 1,
           "currentArea": "Cirurgia",
           "currentDir": "Bloco 06\\05 - Cirurgia\\07 - Abdome Agudo - Introdução",
           "targetDir": "Bloco 06\\05 - Cirurgia\\07 - Abdome agudo - introduçao e abordagem sindrômica",
@@ -3215,18 +3551,20 @@
           "order": 1,
           "topic": "Determinação Social do Processo Saúde-Doença e Promoção de Saúde",
           "scheduleArea": "Saúde Coletiva",
-          "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 07\\06 - Clínica Médica\\01 - Gasometria Arterial e distúrbios ácido-base",
+          "matchedTitle": "Determinação Social do Processo Saúde-Doença e Promoção de Saúde",
+          "matchScore": 1,
+          "currentArea": "Saúde Coletiva",
+          "currentDir": "Bloco 07\\01 - Saúde Coletiva\\01 - Determinação Social do Processo Saúde-Doença e Promoção de Saúde",
           "targetDir": "Bloco 07\\01 - Saúde Coletiva\\01 - Determinação Social do Processo Saúde-Doença e Promoção de Saúde",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 07/06 - Clínica Médica/01 - Gasometria Arterial e distúrbios ácido-base/Gasometria Arterial e distúrbios ácido-base.mp4",
-              "toName": "01 - Gasometria Arterial e distúrbios ácido-base.mp4"
+              "from": "Bloco 07/01 - Saúde Coletiva/01 - Determinação Social do Processo Saúde-Doença e Promoção de Saúde/Determinação Social do Processo Saúde-Doença e Promoção de Saúde.mp4",
+              "toName": "01 - Determinação Social do Processo Saúde-Doença e Promoção de Saúde.mp4"
             },
             {
-              "from": "Bloco 07/06 - Clínica Médica/01 - Gasometria Arterial e distúrbios ácido-base/Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4",
-              "toName": "01.1 - Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4"
+              "from": "Bloco 07/01 - Saúde Coletiva/01 - Determinação Social do Processo Saúde-Doença e Promoção de Saúde/Processo de Saúde e Doença COFEXPRESS.mp4",
+              "toName": "01.1 - Processo de Saúde e Doença COFEXPRESS.mp4"
             }
           ]
         },
@@ -3234,22 +3572,20 @@
           "order": 2,
           "topic": "Infecção Urinária na Prática Clínica",
           "scheduleArea": "Medicina de Família e Comunidade",
-          "currentArea": "Clínica Médica",
-          "currentDir": "Bloco 07\\06 - Clínica Médica\\02 - Distúrbios de Sódio e Potássio",
+          "matchedTitle": "Infecção Urinária na Prática Clínica",
+          "matchScore": 1,
+          "currentArea": "Medicina de Família e Comunidade",
+          "currentDir": "Bloco 07\\02 - Medicina de Família e Comunidade\\02 - Infecção Urinária na Prática Clínica",
           "targetDir": "Bloco 07\\02 - Medicina de Família e Comunidade\\02 - Infecção Urinária na Prática Clínica",
-          "needsMove": true,
+          "needsMove": false,
           "videoRenames": [
             {
-              "from": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Disturbios do Sódio.mp4",
-              "toName": "02 - 1 aula - Disturbios do Sódio.mp4"
+              "from": "Bloco 07/02 - Medicina de Família e Comunidade/02 - Infecção Urinária na Prática Clínica/Infecção Urinária na Prática Clínica.mp4",
+              "toName": "02 - Infecção Urinária na Prática Clínica.mp4"
             },
             {
-              "from": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Distúrbios do Potássio.mp4",
-              "toName": "02 - 2 aula - Distúrbios do Potássio.mp4"
-            },
-            {
-              "from": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Disturbios do Sódio e Potássio COFEXPRESS.mp4",
-              "toName": "02.1 - Disturbios do Sódio e Potássio COFEXPRESS.mp4"
+              "from": "Bloco 07/02 - Medicina de Família e Comunidade/02 - Infecção Urinária na Prática Clínica/Infecção Urinária na Prática Clínica COFEXPRESS.mp4",
+              "toName": "02.1 - Infecção Urinária na Prática Clínica COFEXPRESS.mp4"
             }
           ]
         },
@@ -3257,6 +3593,8 @@
           "order": 3,
           "topic": "Amenorreias",
           "scheduleArea": "G.O",
+          "matchedTitle": "Amenorreias",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 07\\03 - G.O\\03 - Amenorreias",
           "targetDir": "Bloco 07\\03 - GO\\03 - Amenorreias",
@@ -3276,6 +3614,8 @@
           "order": 4,
           "topic": "Síndrome dos Ovários Policísticos",
           "scheduleArea": "G.O",
+          "matchedTitle": "Síndrome dos Ovários Policísticos",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 07\\03 - G.O\\04 - Síndrome dos Ovários Policísticos",
           "targetDir": "Bloco 07\\03 - GO\\04 - Síndrome dos Ovários Policísticos",
@@ -3294,26 +3634,42 @@
         {
           "order": 5,
           "topic": "Convulsões na emergência e Traumatismo Cranioencefálico Leve",
-          "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 07\\04 - Pediatria\\05 - Convulsões na emergência e Traumatismo Cranioencefálico Leve"
+          "scheduleArea": "Pediatria",
+          "matchedTitle": "Convulsões na emergência e Traumatismo Cranioencefálico Leve",
+          "matchScore": 1,
+          "currentArea": "Pediatria",
+          "currentDir": "Bloco 07\\04 - Pediatria\\06 - Convulsões na emergência e Traumatismo Cranioencefálico Leve",
+          "targetDir": "Bloco 07\\04 - Pediatria\\05 - Convulsões na emergência e Traumatismo Cranioencefálico Leve",
+          "needsMove": true,
+          "videoRenames": [
+            {
+              "from": "Bloco 07/04 - Pediatria/06 - Convulsões na emergência e Traumatismo Cranioencefálico Leve/Convulsões na Emergencia TCE Leve.mp4",
+              "toName": "05 - Convulsões na Emergencia TCE Leve.mp4"
+            },
+            {
+              "from": "Bloco 07/04 - Pediatria/06 - Convulsões na emergência e Traumatismo Cranioencefálico Leve/Convulsões na Emergencia TCE Leve COFEXPRESS.mp4",
+              "toName": "05.1 - Convulsões na Emergencia TCE Leve COFEXPRESS.mp4"
+            }
+          ]
         },
         {
           "order": 6,
           "topic": "Abdome agudo inflamatório - vias biliares",
           "scheduleArea": "Cirurgia",
-          "currentArea": "Pediatria",
-          "currentDir": "Bloco 07\\04 - Pediatria\\06 - Convulsões na emergência e Traumatismo Cranioencefálico Leve",
+          "matchedTitle": "Abdome agudo inflamatório - vias biliares",
+          "matchScore": 1,
+          "currentArea": "Cirurgia",
+          "currentDir": "Bloco 07\\05 - Cirurgia\\07 - Abdome agudo inflamatório - vias biliares",
           "targetDir": "Bloco 07\\05 - Cirurgia\\06 - Abdome agudo inflamatório - vias biliares",
           "needsMove": true,
           "videoRenames": [
             {
-              "from": "Bloco 07/04 - Pediatria/06 - Convulsões na emergência e Traumatismo Cranioencefálico Leve/Convulsões na Emergencia TCE Leve.mp4",
-              "toName": "06 - Convulsões na Emergencia TCE Leve.mp4"
+              "from": "Bloco 07/05 - Cirurgia/07 - Abdome agudo inflamatório - vias biliares/Abdome agudo inflamatório - vias biliares.mp4",
+              "toName": "06 - Abdome agudo inflamatório - vias biliares.mp4"
             },
             {
-              "from": "Bloco 07/04 - Pediatria/06 - Convulsões na emergência e Traumatismo Cranioencefálico Leve/Convulsões na Emergencia TCE Leve COFEXPRESS.mp4",
-              "toName": "06.1 - Convulsões na Emergencia TCE Leve COFEXPRESS.mp4"
+              "from": "Bloco 07/05 - Cirurgia/07 - Abdome agudo inflamatório - vias biliares/Abdome agudo inflamatório - vias biliares COFEXPRESS.mp4",
+              "toName": "06.1 - Abdome agudo inflamatório - vias biliares COFEXPRESS.mp4"
             }
           ]
         },
@@ -3321,18 +3677,20 @@
           "order": 7,
           "topic": "Gasometria Arterial e distúrbios ácido-base",
           "scheduleArea": "Clínica Médica",
-          "currentArea": "Cirurgia",
-          "currentDir": "Bloco 07\\05 - Cirurgia\\07 - Abdome agudo inflamatório - vias biliares",
+          "matchedTitle": "Gasometria Arterial e distúrbios ácido-base",
+          "matchScore": 1,
+          "currentArea": "Clínica Médica",
+          "currentDir": "Bloco 07\\06 - Clínica Médica\\01 - Gasometria Arterial e distúrbios ácido-base",
           "targetDir": "Bloco 07\\06 - Clínica Médica\\07 - Gasometria Arterial e distúrbios ácido-base",
           "needsMove": true,
           "videoRenames": [
             {
-              "from": "Bloco 07/05 - Cirurgia/07 - Abdome agudo inflamatório - vias biliares/Abdome agudo inflamatório - vias biliares.mp4",
-              "toName": "07 - Abdome agudo inflamatório - vias biliares.mp4"
+              "from": "Bloco 07/06 - Clínica Médica/01 - Gasometria Arterial e distúrbios ácido-base/Gasometria Arterial e distúrbios ácido-base.mp4",
+              "toName": "07 - Gasometria Arterial e distúrbios ácido-base.mp4"
             },
             {
-              "from": "Bloco 07/05 - Cirurgia/07 - Abdome agudo inflamatório - vias biliares/Abdome agudo inflamatório - vias biliares COFEXPRESS.mp4",
-              "toName": "07.1 - Abdome agudo inflamatório - vias biliares COFEXPRESS.mp4"
+              "from": "Bloco 07/06 - Clínica Médica/01 - Gasometria Arterial e distúrbios ácido-base/Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4",
+              "toName": "07.1 - Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4"
             }
           ]
         },
@@ -3340,8 +3698,9 @@
           "order": 8,
           "topic": "Distúrbios do Sódio e do Potássio",
           "area": "Clínica Médica",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 07\\06 - Clínica Médica\\08 - Distúrbios do Sódio e do Potássio"
+          "status": "no-confident-match",
+          "bestGuessTitle": "Distúrbios de Sódio e Potássio",
+          "bestGuessScore": 0.8
         }
       ]
     },
@@ -3352,18 +3711,28 @@
           "order": 1,
           "topic": "Síndrome dispeptica: dispepsia, fisiologia gastrica, DRGE",
           "scheduleArea": "Medicina de Família e Comunidade",
-          "currentArea": "Saúde Mental",
-          "currentDir": "Bloco 08\\06 - Saúde Mental\\01 - Transtorno do desenvolvimento e aprendizagem",
-          "targetDir": "Bloco 08\\01 - Medicina de Família e Comunidade\\01 - Síndrome dispeptica: dispepsia, fisiologia gastrica, DRGE",
+          "matchedTitle": "Síndrome Dispeptica",
+          "matchScore": 1,
+          "currentArea": "Medicina de Família e Comunidade",
+          "currentDir": "Bloco 08\\01 - Medicina de Família e Comunidade\\01 - Síndrome Dispeptica",
+          "targetDir": "Bloco 08\\01 - Medicina de Família e Comunidade\\01 - Síndrome dispeptica dispepsia, fisiologia gastrica, DRGE",
           "needsMove": true,
           "videoRenames": [
             {
-              "from": "Bloco 08/06 - Saúde Mental/01 - Transtorno do desenvolvimento e aprendizagem/Transtornos do neurodesenvolvimento TEA TDAH TOD.mp4",
-              "toName": "01 - Transtornos do neurodesenvolvimento TEA TDAH TOD.mp4"
+              "from": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome Dispeptica/Dispepsia.mp4",
+              "toName": "01 - 1 aula - Dispepsia.mp4"
             },
             {
-              "from": "Bloco 08/06 - Saúde Mental/01 - Transtorno do desenvolvimento e aprendizagem/Transtornos do neurodesenvolvimento TEA TDAH TOD COFEXPRESS.mp4",
-              "toName": "01.1 - Transtornos do neurodesenvolvimento TEA TDAH TOD COFEXPRESS.mp4"
+              "from": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome Dispeptica/DRGE.mp4",
+              "toName": "01 - 2 aula - DRGE.mp4"
+            },
+            {
+              "from": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome Dispeptica/Dispepsia COFEXPRESS.mp4",
+              "toName": "01.1 - Dispepsia COFEXPRESS.mp4"
+            },
+            {
+              "from": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome Dispeptica/DRGE COFEXPRESS.mp4",
+              "toName": "01.1 - DRGE COFEXPRESS.mp4"
             }
           ]
         },
@@ -3371,6 +3740,8 @@
           "order": 2,
           "topic": "Desenvolvimento Infantil",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Desenvolvimento Infantil",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 08\\01 - Medicina de Família e Comunidade\\02 - Desenvolvimento Infantil",
           "targetDir": "Bloco 08\\01 - Medicina de Família e Comunidade\\02 - Desenvolvimento Infantil",
@@ -3390,6 +3761,8 @@
           "order": 3,
           "topic": "Rastreamentos",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Rastreamentos",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 08\\01 - Medicina de Família e Comunidade\\03 - Rastreamentos",
           "targetDir": "Bloco 08\\01 - Medicina de Família e Comunidade\\03 - Rastreamentos",
@@ -3409,39 +3782,70 @@
           "order": 4,
           "topic": "Transtornos do desenvolvimento e aprendizagem",
           "area": "Saúde Mental",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 08\\02 - Saúde Mental\\04 - Transtornos do desenvolvimento e aprendizagem"
+          "status": "no-confident-match",
+          "bestGuessTitle": "Transtorno do desenvolvimento e aprendizagem",
+          "bestGuessScore": 0.8
         },
         {
           "order": 5,
           "topic": "Sangramentos da Primeira Metade da Gestação",
-          "area": "G.O",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 08\\03 - GO\\05 - Sangramentos da Primeira Metade da Gestação"
+          "scheduleArea": "G.O",
+          "matchedTitle": "Sangramentos da Primeira Metade da Gestação",
+          "matchScore": 1,
+          "currentArea": "G.O",
+          "currentDir": "Bloco 08\\03 - G.O\\07 - Sangramentos da Primeira Metade da Gestação",
+          "targetDir": "Bloco 08\\03 - GO\\05 - Sangramentos da Primeira Metade da Gestação",
+          "needsMove": true,
+          "videoRenames": [
+            {
+              "from": "Bloco 08/03 - G.O/07 - Sangramentos da Primeira Metade da Gestação/Sangramentos da Primeira Metade da Gestação.mp4",
+              "toName": "05 - Sangramentos da Primeira Metade da Gestação.mp4"
+            },
+            {
+              "from": "Bloco 08/03 - G.O/07 - Sangramentos da Primeira Metade da Gestação/Sangramentos da Primeira Metade da Gestação COFEXPRESS.mp4",
+              "toName": "05.1 - Sangramentos da Primeira Metade da Gestação COFEXPRESS.mp4"
+            }
+          ]
         },
         {
           "order": 6,
           "topic": "Sangramentos da Segunda Metade da Gestação",
-          "area": "G.O",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 08\\03 - GO\\06 - Sangramentos da Segunda Metade da Gestação"
+          "scheduleArea": "G.O",
+          "matchedTitle": "Sangramentos da Segunda Metade da Gestação",
+          "matchScore": 1,
+          "currentArea": "G.O",
+          "currentDir": "Bloco 08\\03 - G.O\\08 - Sangramentos da Segunda Metade da Gestação",
+          "targetDir": "Bloco 08\\03 - GO\\06 - Sangramentos da Segunda Metade da Gestação",
+          "needsMove": true,
+          "videoRenames": [
+            {
+              "from": "Bloco 08/03 - G.O/08 - Sangramentos da Segunda Metade da Gestação/R1 - Sangramentos da Segunda Metade da Gestação.mp4",
+              "toName": "06 - R1 - Sangramentos da Segunda Metade da Gestação.mp4"
+            },
+            {
+              "from": "Bloco 08/03 - G.O/08 - Sangramentos da Segunda Metade da Gestação/Outros Sangramentos de Segunda Metade da Gestação COFEXPRESS.mp4",
+              "toName": "06.1 - Outros Sangramentos de Segunda Metade da Gestação COFEXPRESS.mp4"
+            }
+          ]
         },
         {
           "order": 7,
           "topic": "Abdome agudo inflamatório - apendicite",
           "scheduleArea": "Cirurgia",
-          "currentArea": "G.O",
-          "currentDir": "Bloco 08\\03 - G.O\\07 - Sangramentos da Primeira Metade da Gestação",
+          "matchedTitle": "Abdome agudo inflamatório - apendicite",
+          "matchScore": 1,
+          "currentArea": "Cirurgia",
+          "currentDir": "Bloco 08\\04 - Cirurgia\\08 - Abdome agudo inflamatório - apendicite",
           "targetDir": "Bloco 08\\04 - Cirurgia\\07 - Abdome agudo inflamatório - apendicite",
           "needsMove": true,
           "videoRenames": [
             {
-              "from": "Bloco 08/03 - G.O/07 - Sangramentos da Primeira Metade da Gestação/Sangramentos da Primeira Metade da Gestação.mp4",
-              "toName": "07 - Sangramentos da Primeira Metade da Gestação.mp4"
+              "from": "Bloco 08/04 - Cirurgia/08 - Abdome agudo inflamatório - apendicite/Abdome agudo inflamatório - apendicite.mp4",
+              "toName": "07 - Abdome agudo inflamatório - apendicite.mp4"
             },
             {
-              "from": "Bloco 08/03 - G.O/07 - Sangramentos da Primeira Metade da Gestação/Sangramentos da Primeira Metade da Gestação COFEXPRESS.mp4",
-              "toName": "07.1 - Sangramentos da Primeira Metade da Gestação COFEXPRESS.mp4"
+              "from": "Bloco 08/04 - Cirurgia/08 - Abdome agudo inflamatório - apendicite/Abdome agudo inflamatório - apendicite COFEXPRESS.mp4",
+              "toName": "07.1 - Abdome agudo inflamatório - apendicite COFEXPRESS.mp4"
             }
           ]
         },
@@ -3449,18 +3853,28 @@
           "order": 8,
           "topic": "Pancreatite aguda e crônica",
           "scheduleArea": "Clínica Médica",
-          "currentArea": "Cirurgia",
-          "currentDir": "Bloco 08\\04 - Cirurgia\\08 - Abdome agudo inflamatório - apendicite",
+          "matchedTitle": "Pancreatite Aguda e Crônica",
+          "matchScore": 1,
+          "currentArea": "Clínica Médica",
+          "currentDir": "Bloco 08\\02 - Clínica Médica\\08 - Pancreatite Aguda e Crônica",
           "targetDir": "Bloco 08\\05 - Clínica Médica\\08 - Pancreatite aguda e crônica",
           "needsMove": true,
           "videoRenames": [
             {
-              "from": "Bloco 08/04 - Cirurgia/08 - Abdome agudo inflamatório - apendicite/Abdome agudo inflamatório - apendicite.mp4",
-              "toName": "08 - Abdome agudo inflamatório - apendicite.mp4"
+              "from": "Bloco 08/02 - Clínica Médica/08 - Pancreatite Aguda e Crônica/Pancreatite aguda e crônica 1ª Parte.mp4",
+              "toName": "08 - 1 aula - Pancreatite aguda e crônica 1ª Parte.mp4"
             },
             {
-              "from": "Bloco 08/04 - Cirurgia/08 - Abdome agudo inflamatório - apendicite/Abdome agudo inflamatório - apendicite COFEXPRESS.mp4",
-              "toName": "08.1 - Abdome agudo inflamatório - apendicite COFEXPRESS.mp4"
+              "from": "Bloco 08/02 - Clínica Médica/08 - Pancreatite Aguda e Crônica/Pancreatite aguda e crônica 2ª parte.mp4",
+              "toName": "08 - 2 aula - Pancreatite aguda e crônica 2ª parte.mp4"
+            },
+            {
+              "from": "Bloco 08/02 - Clínica Médica/08 - Pancreatite Aguda e Crônica/Pancreatite aguda e crônica 1ª Parte COFEXPRESS.mp4",
+              "toName": "08.1 - Pancreatite aguda e crônica 1ª Parte COFEXPRESS.mp4"
+            },
+            {
+              "from": "Bloco 08/02 - Clínica Médica/08 - Pancreatite Aguda e Crônica/Pancreatite aguda e crônica 2ª parte COFEXPRESS.mp4",
+              "toName": "08.1 - Pancreatite aguda e crônica 2ª parte COFEXPRESS.mp4"
             }
           ]
         }
@@ -3473,6 +3887,8 @@
           "order": 1,
           "topic": "Introdução a Geriatria e Avaliação Geriátrica Ampla",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Introdução a Geriatria e Avaliação Geriátrica Ampla",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 09\\01 - Medicina de Família e Comunidade\\01 - Introdução a Geriatria e Avaliação Geriátrica Ampla",
           "targetDir": "Bloco 09\\01 - Medicina de Família e Comunidade\\01 - Introdução a Geriatria e Avaliação Geriátrica Ampla",
@@ -3492,6 +3908,8 @@
           "order": 2,
           "topic": "Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso",
+          "matchScore": 1,
           "currentArea": "Medicina de Família e Comunidade",
           "currentDir": "Bloco 09\\01 - Medicina de Família e Comunidade\\02 - Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso",
           "targetDir": "Bloco 09\\01 - Medicina de Família e Comunidade\\02 - Síndromes Geriátricas, Vacinação do Idoso e Iatrogenia no Idoso",
@@ -3511,6 +3929,8 @@
           "order": 3,
           "topic": "Dermatoses e Infecções de Partes Moles",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Dermatoses e Infecções de Partes Moles",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 09\\03 - G.O\\03 - Dermatoses e Infecções de Partes Moles",
           "targetDir": "Bloco 09\\01 - Medicina de Família e Comunidade\\03 - Dermatoses e Infecções de Partes Moles",
@@ -3530,6 +3950,8 @@
           "order": 4,
           "topic": "Corrimentos Vaginais",
           "scheduleArea": "Medicina de Família e Comunidade",
+          "matchedTitle": "Corrimentos Vaginais",
+          "matchScore": 1,
           "currentArea": "G.O",
           "currentDir": "Bloco 09\\03 - G.O\\04 - Corrimentos Vaginais",
           "targetDir": "Bloco 09\\01 - Medicina de Família e Comunidade\\04 - Corrimentos Vaginais",
@@ -3549,18 +3971,20 @@
           "order": 5,
           "topic": "Úlceras Genitais",
           "scheduleArea": "Medicina de Família e Comunidade",
-          "currentArea": "G.O",
-          "currentDir": "Bloco 09\\03 - G.O\\05 - Dor pélvica",
+          "matchedTitle": "Úlceras Genitais",
+          "matchScore": 1,
+          "currentArea": "Clínica Médica",
+          "currentDir": "Bloco 09\\02 - Clínica Médica\\05 - Úlceras Genitais",
           "targetDir": "Bloco 09\\01 - Medicina de Família e Comunidade\\05 - Úlceras Genitais",
           "needsMove": true,
           "videoRenames": [
             {
-              "from": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica.mp4",
-              "toName": "05 - Dor Pélvica.mp4"
+              "from": "Bloco 09/02 - Clínica Médica/05 - Úlceras Genitais/Úlceras Genitais.mp4",
+              "toName": "05 - Úlceras Genitais.mp4"
             },
             {
-              "from": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica COFEXPRESS.mp4",
-              "toName": "05.1 - Dor Pélvica COFEXPRESS.mp4"
+              "from": "Bloco 09/02 - Clínica Médica/05 - Úlceras Genitais/Úlceras Genitais COFEXPRESS.mp4",
+              "toName": "05.1 - Úlceras Genitais COFEXPRESS.mp4"
             }
           ]
         },
@@ -3568,72 +3992,153 @@
           "order": 6,
           "topic": "Doença Inflamatória Pélvica Aguda",
           "area": "G.O",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 09\\02 - GO\\06 - Doença Inflamatória Pélvica Aguda"
+          "status": "no-confident-match",
+          "bestGuessTitle": "Dor pélvica",
+          "bestGuessScore": 0.5
         },
         {
           "order": 7,
           "topic": "Dermatite Atópica e Lesões Benignas do Recém-Nascido",
-          "area": "Pediatria",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 09\\03 - Pediatria\\07 - Dermatite Atópica e Lesões Benignas do Recém-Nascido"
+          "scheduleArea": "Pediatria",
+          "matchedTitle": "Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+          "matchScore": 1,
+          "currentArea": "Pediatria",
+          "currentDir": "Bloco 09\\04 - Pediatria\\08 - Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+          "targetDir": "Bloco 09\\03 - Pediatria\\07 - Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+          "needsMove": true,
+          "videoRenames": [
+            {
+              "from": "Bloco 09/04 - Pediatria/08 - Dermatite Atópica e Lesões Benignas do Recém-Nascido/Dermatite Atópica e Lesões Benignas do Recém-Nascido.mp4",
+              "toName": "07 - Dermatite Atópica e Lesões Benignas do Recém-Nascido.mp4"
+            },
+            {
+              "from": "Bloco 09/04 - Pediatria/08 - Dermatite Atópica e Lesões Benignas do Recém-Nascido/Dermatite Atópica e Lesões Benignas do Recém-Nascido COFEXPRESS.mp4",
+              "toName": "07.1 - Dermatite Atópica e Lesões Benignas do Recém-Nascido COFEXPRESS.mp4"
+            }
+          ]
         },
         {
           "order": 8,
           "topic": "Abdome agudo inflamatório - diverticulite e abcesso hepático",
           "scheduleArea": "Cirurgia",
-          "currentArea": "Pediatria",
-          "currentDir": "Bloco 09\\04 - Pediatria\\08 - Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+          "matchedTitle": "Abdome agudo inflamatório - diverticulite e abcesso hepático",
+          "matchScore": 1,
+          "currentArea": "Cirurgia",
+          "currentDir": "Bloco 09\\05 - Cirurgia\\09 - Abdome agudo inflamatório - diverticulite e abcesso hepático",
           "targetDir": "Bloco 09\\04 - Cirurgia\\08 - Abdome agudo inflamatório - diverticulite e abcesso hepático",
           "needsMove": true,
           "videoRenames": [
             {
-              "from": "Bloco 09/04 - Pediatria/08 - Dermatite Atópica e Lesões Benignas do Recém-Nascido/Dermatite Atópica e Lesões Benignas do Recém-Nascido.mp4",
-              "toName": "08 - Dermatite Atópica e Lesões Benignas do Recém-Nascido.mp4"
+              "from": "Bloco 09/05 - Cirurgia/09 - Abdome agudo inflamatório - diverticulite e abcesso hepático/Abdome agudo inflamatório - diverticulite e abscesso hepático.mp4",
+              "toName": "08 - Abdome agudo inflamatório - diverticulite e abscesso hepático.mp4"
             },
             {
-              "from": "Bloco 09/04 - Pediatria/08 - Dermatite Atópica e Lesões Benignas do Recém-Nascido/Dermatite Atópica e Lesões Benignas do Recém-Nascido COFEXPRESS.mp4",
-              "toName": "08.1 - Dermatite Atópica e Lesões Benignas do Recém-Nascido COFEXPRESS.mp4"
+              "from": "Bloco 09/05 - Cirurgia/09 - Abdome agudo inflamatório - diverticulite e abcesso hepático/Abdome agudo inflamatório - diverticulite e abcesso hepático COFEXPRESS.mp4",
+              "toName": "08.1 - Abdome agudo inflamatório - diverticulite e abcesso hepático COFEXPRESS.mp4"
             }
           ]
         },
         {
           "order": 9,
           "topic": "CofBasics - Lesões Elementares (Pediatria)",
-          "scheduleArea": "CofBasics",
-          "currentArea": "CofBasics",
-          "currentDir": "Bloco 09\\06 - CofBasics\\09 - CofBasics - Bioestatística",
-          "targetDir": "Bloco 09\\05 - CofBasics\\09 - CofBasics - Lesões Elementares (Pediatria)",
-          "needsMove": true,
-          "videoRenames": [
-            {
-              "from": "Bloco 09/06 - CofBasics/09 - CofBasics - Bioestatística/CofBasics - Fundamentos de Bioestatística (Saúde Coletiva).mp4",
-              "toName": "09 - CofBasics - Fundamentos de Bioestatística (Saúde Coletiva).mp4"
-            }
-          ]
+          "area": "CofBasics",
+          "status": "no-confident-match",
+          "bestGuessTitle": "Dermatite Atópica e Lesões Benignas do Recém-Nascido",
+          "bestGuessScore": 0.25
         },
         {
           "order": 10,
           "topic": "CofBasics - Fundamentos de Bioestatística (Saúde Coletiva)",
           "area": "CofBasics",
-          "status": "no-video-yet",
-          "targetDir": "Bloco 09\\05 - CofBasics\\10 - CofBasics - Fundamentos de Bioestatística (Saúde Coletiva)"
+          "status": "no-confident-match",
+          "bestGuessTitle": "Dermatoses e Infecções de Partes Moles",
+          "bestGuessScore": 0.17
         }
       ]
     }
   },
-  "unmatchedLessons": [
+  "bonusLessonsUntouched": [
+    {
+      "block": 2,
+      "title": "CofBasics - Avaliação de Vitalidade Fetal (G.O)",
+      "area": "CofBasics"
+    },
+    {
+      "block": 5,
+      "title": "CofBasics - Semiologia Neurológica e Topografia",
+      "area": "CofBasics"
+    },
+    {
+      "block": 5,
+      "title": "CofBasics - Processo Saúde-Doença",
+      "area": "CofBasics"
+    },
     {
       "block": 8,
-      "folderOrder": 9,
       "title": "CofBasics - Lesões Elementares (Pediatria)",
       "area": "CofBasics"
     },
     {
+      "block": 9,
+      "title": "CofBasics - Bioestatística",
+      "area": "CofBasics"
+    },
+    {
+      "block": 11,
+      "title": "CofBasics - Associação e Causalidade",
+      "area": "CofBasics"
+    },
+    {
+      "block": 17,
+      "title": "CofBasics - Propedêutica Mamária",
+      "area": "CofBasics"
+    },
+    {
       "block": 18,
-      "folderOrder": 0,
       "title": "CofBasics - Propedêutica em Uroginecologia",
       "area": "G.O"
+    },
+    {
+      "block": 23,
+      "title": "CofBasics - Psicofarmacologia",
+      "area": "CofBasics"
+    }
+  ],
+  "lowConfidence": [
+    {
+      "block": 6,
+      "title": "Prevenção Quaternária e Quinquenária",
+      "area": "Saúde Coletiva"
+    },
+    {
+      "block": 7,
+      "title": "Distúrbios de Sódio e Potássio",
+      "area": "Clínica Médica"
+    },
+    {
+      "block": 8,
+      "title": "Transtorno do desenvolvimento e aprendizagem",
+      "area": "Saúde Mental"
+    },
+    {
+      "block": 9,
+      "title": "Dor pélvica",
+      "area": "G.O"
+    },
+    {
+      "block": 12,
+      "title": "Endometriose",
+      "area": "G.O"
+    },
+    {
+      "block": 17,
+      "title": "ITU e Meningite (Pediatria)",
+      "area": "Pediatria"
+    },
+    {
+      "block": 22,
+      "title": "Doenças Relacionadas ao Trabalho",
+      "area": "Saúde Coletiva"
     }
   ]
 }

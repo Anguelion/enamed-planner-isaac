@@ -94,12 +94,38 @@ for (const blockDir of blockDirs) {
   }
 }
 
+// Mescla aulas que acabaram espalhadas em mais de uma pasta (mesmo bloco + mesmo título,
+// mas em áreas/pastas diferentes) — bagunça pré-existente comum quando um vídeo COFEXPRESS
+// foi baixado numa pasta de área duplicada/errada separada da aula principal.
+const mergedByKey = new Map();
+const splitAcrossFolders = [];
+for (const lesson of lessons) {
+  const key = `${lesson.block}|${slug(lesson.title)}`;
+  if (!mergedByKey.has(key)) { mergedByKey.set(key, lesson); continue; }
+  const existing = mergedByKey.get(key);
+  if (existing.area !== lesson.area) {
+    splitAcrossFolders.push({ block: lesson.block, title: lesson.title, areas: [existing.area, lesson.area] });
+  }
+  // a pasta com o vídeo "complete" é a canônica; se a que já estava no mapa só tem
+  // vídeo "express" (órfão) e a nova tem o completo, a nova vira a base da mesclagem.
+  const existingHasComplete = existing.videos.some(v => v.type === 'complete');
+  const incomingHasComplete = lesson.videos.some(v => v.type === 'complete');
+  if (!existingHasComplete && incomingHasComplete) {
+    lesson.videos.push(...existing.videos);
+    mergedByKey.set(key, lesson);
+  } else {
+    existing.videos.push(...lesson.videos);
+  }
+}
+const mergedLessons = [...mergedByKey.values()];
+issues.splitAcrossFolders = splitAcrossFolders;
+
 // Compara com o catálogo anterior para reportar o que sumiu/apareceu.
 let previous = null;
 try { previous = JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch (e) {}
 if (previous) {
   const prevVideoIds = new Set(previous.lessons.flatMap(l => l.videos.map(v => v.id)));
-  const newVideoIds = new Set(lessons.flatMap(l => l.videos.map(v => v.id)));
+  const newVideoIds = new Set(mergedLessons.flatMap(l => l.videos.map(v => v.id)));
   for (const id of prevVideoIds) if (!newVideoIds.has(id)) issues.missingExpected.push(id);
   for (const id of newVideoIds) if (!prevVideoIds.has(id)) issues.orphanFiles.push(id);
 }
@@ -107,18 +133,19 @@ if (previous) {
 const catalog = {
   generatedAt: new Date().toISOString(),
   source: ROOT,
-  lessons
+  lessons: mergedLessons
 };
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 if (previous) fs.writeFileSync(OUT + '.bak', JSON.stringify(previous, null, 2), 'utf8');
 fs.writeFileSync(OUT, JSON.stringify(catalog, null, 2), 'utf8');
 
-const totalVideos = lessons.reduce((sum, l) => sum + l.videos.length, 0);
+const totalVideos = mergedLessons.reduce((sum, l) => sum + l.videos.length, 0);
 console.log(`Blocos encontrados: ${blockDirs.length}`);
-console.log(`Aulas: ${lessons.length}  |  Vídeos: ${totalVideos}`);
+console.log(`Aulas: ${mergedLessons.length}  |  Vídeos: ${totalVideos}`);
 if (issues.badBlockFolders.length) console.log(`Pastas de bloco com nome inesperado: ${issues.badBlockFolders.join(', ')}`);
 if (issues.emptyLessons.length) console.log(`Aulas sem nenhum vídeo (${issues.emptyLessons.length}):\n  - ${issues.emptyLessons.join('\n  - ')}`);
+if (issues.splitAcrossFolders.length) console.log(`Aulas com arquivos espalhados em pastas diferentes, mescladas no catálogo (${issues.splitAcrossFolders.length}):\n  - ${issues.splitAcrossFolders.map(s => `Bloco ${s.block} "${s.title}": ${s.areas.join(' + ')}`).join('\n  - ')}`);
 if (previous) {
   console.log(`Vídeos que sumiram do catálogo anterior (${issues.missingExpected.length})`);
   console.log(`Vídeos novos que não estavam no catálogo anterior (${issues.orphanFiles.length})`);
