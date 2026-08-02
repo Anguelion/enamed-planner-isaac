@@ -67,7 +67,8 @@ const LESSON_MIN_QUESTIONS = 10;
 const LESSON_MIN_FLASHCARDS = 10;
 const DAILY_QUESTION_TARGET = 20;
 const DAILY_FLASHCARD_TARGET = 30;
-const FLASHCARD_SPEED_TARGET_SECONDS = 20;
+const FLASHCARD_SPEED_TARGET_SECONDS = 30;
+const FLASHCARD_SPEED_WARNING_SECONDS = 15;
 const STUDY_DAY_START_HOUR = 5;
 const ENAMED_AREAS = ['Clínica Médica','Pediatria','Ginecologia e Obstetrícia','Cirurgia Geral','Medicina de Família e Comunidade'];
 let questionBank = [];
@@ -2719,6 +2720,18 @@ function updateAutoStudyIndicator() {
     const cardSeconds = ui.flashcardCardStartedAt ? Math.round((Date.now() - ui.flashcardCardStartedAt) / 1000) : 0;
     speedClock.textContent = `⚡ ${cardSeconds}s`;
     speedClock.classList.toggle('flashcard-speed-over', cardSeconds > target);
+    const speedCardId = ui.flashcardSpeedCardId;
+    if(speedCardId && !ui.revealedCards[speedCardId]) {
+      const remaining = target - cardSeconds;
+      if(remaining <= FLASHCARD_SPEED_WARNING_SECONDS && remaining > 0 && !ui.flashcardSpeedBeeped) {
+        ui.flashcardSpeedBeeped = true;
+        beepFlashcardSpeed();
+      }
+      if(cardSeconds >= target) {
+        ui.revealedCards[speedCardId] = true;
+        renderFlashcards();
+      }
+    }
   }
 }
 function autoStudyElapsedSeconds(now=Date.now()) {
@@ -3098,6 +3111,10 @@ async function performHealthCheck() {
   try {
     if(!sbClient) {
       report.checks.supabase = { status: 'unavailable', reason: 'Client not initialized' };
+      return report;
+    }
+    if(!CLOUD_SYNC_ALLOWED) {
+      report.checks.supabase = { status: 'unavailable', reason: 'Sync desativado nesta origem' };
       return report;
     }
     const { data, error } = await sbClient.from('planner_states').select('count', { count: 'exact' }).limit(1);
@@ -7528,6 +7545,8 @@ function normalizeFlashcardRecord(card) {
   card.cardType = card.cardType === 'cloze' ? 'cloze' : 'basic';
   card.weeklyBlockId = String(card.weeklyBlockId ?? card.block ?? '');
   card.subjectId = String(card.subjectId ?? card.scheduleId ?? '');
+  card.area = card.area || 'Sem área';
+  card.subarea = card.subarea || card.topic || 'Sem assunto';
   card.subject = card.subject || card.subarea || card.topic || 'Sem assunto';
   card.sourceType = card.sourceType || (card.questionId ? 'question' : card.videoId ? 'video' : card.source === 'Anki' ? 'import' : 'manual');
   card.sourceReference = card.sourceReference || card.questionId || card.videoId || card.scheduleId || '';
@@ -7761,7 +7780,7 @@ function renderFlashcards() {
   const study = ui.flashcardSessionDone ? null : cards[ui.flashcardIndex];
   ui.flashcardCurrentCardId = study?.id || '';
   if(ui.flashcardSpeedMode && ui.flashcardFocusMode && study && !ui.flashcardFocusPaused) {
-    if(ui.flashcardSpeedCardId !== study.id) { ui.flashcardSpeedCardId = study.id; ui.flashcardCardStartedAt = Date.now(); }
+    if(ui.flashcardSpeedCardId !== study.id) { ui.flashcardSpeedCardId = study.id; ui.flashcardCardStartedAt = Date.now(); ui.flashcardSpeedBeeped = false; }
   } else if(!ui.flashcardFocusPaused) {
     ui.flashcardSpeedCardId = '';
     ui.flashcardCardStartedAt = 0;
@@ -7772,11 +7791,11 @@ function renderFlashcards() {
   const subjects = [...new Set(blockCards.map(card => card.subject || card.subarea || card.topic).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   document.getElementById('flashcards').classList.toggle('flashcard-focus-mode', ui.flashcardFocusMode);
   document.getElementById('flashcards').innerHTML = `<div class="grid cards">${metric('Cards no ENAMED', all.length, 'captura rápida limitada por origem; criação livre aqui')}${metric('Aprendendo agora', due, 'fila global por data')}${metric('Revisados hoje', reviewsToday, `${newToday} novos`) }${metric('Maduros', mature, 'estabilidade de 21+ dias')}</div>
-  <div class="card flashcard-command"><div><h2>Flashcards</h2><div class="muted">Capture, organize e revise por bloco e assunto. A agenda usa um perfil FSRS local com retenção de ${Math.round(n(state.flashcardSystem.profile.targetRetention)*100)}%.</div></div><div class="flashcard-command-actions"><button class="icon-btn primary" id="newFlashcardBtn">+ Novo card</button><button class="icon-btn" id="flashcardUndoBtn">Desfazer</button><button class="icon-btn" id="flashcardBackupBtn">Backup</button><button class="icon-btn" id="ankiExportBtn">Exportar</button></div></div>
+  <div class="card flashcard-command"><div><h2>Flashcards</h2><div class="muted">Capture, organize e revise por bloco e assunto. A agenda usa um perfil FSRS local com retenção de ${Math.round(n(state.flashcardSystem.profile.targetRetention)*100)}%.</div></div><div class="flashcard-command-actions"><button class="icon-btn primary" id="newFlashcardBtn">+ Novo card</button><button class="icon-btn" id="flashcardUndoBtn">Desfazer</button><button class="icon-btn" id="flashcardBackupBtn">Backup</button><button class="icon-btn" id="ankiExportBtn">Exportar</button><button class="icon-btn" id="ankiImportBtn" title="Importar cards de um arquivo exportado do Anki (.tsv)">Importar do Anki</button></div></div>
   <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">
   <div class="flashcard-filters"><select class="select" id="flashcardFilter">${['Aprendendo','Revisando','Todos','Novos','Difíceis','Maduros','Suspensos'].map(value => `<option ${ui.flashcardFilter===value?'selected':''}>${value}</option>`).join('')}</select><select class="select" id="flashcardArea">${areas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select><label class="flashcard-target">Novos/dia <input class="mini-input" id="flashcardNewLimit" type="number" min="0" value="${n(state.flashcardSettings.newLimit)}"></label><label class="flashcard-target">Revisões/dia <input class="mini-input" id="flashcardReviewLimit" type="number" min="0" value="${n(state.flashcardSettings.reviewLimit)}"></label><span class="muted">${forecast.map(item => `${fmtDate(item.date).slice(0,5)}: ${item.count}`).join(' · ')}</span></div>
   <div class="flashcards-workspace">
-    <aside class="flashcards-panel flashcard-block-panel"><div class="section-title"><h3>Blocos</h3><span class="badge today">${blocks.length-1}</span></div><button class="flashcard-block-choice ${selectedBlock==='Todos'?'active':''}" data-fc-block="Todos">Todos os blocos <span>${all.length}</span></button>${blocks.slice(1).map(block => `<button class="flashcard-block-choice ${String(selectedBlock)===String(block)?'active':''}" data-fc-block="${escapeAttr(block)}">Bloco ${escapeHtml(block)} <span>${all.filter(card=>String(card.weeklyBlockId||card.block)===String(block)).length}</span></button>`).join('')}<div class="muted flashcard-shortcuts">Espaço revela · 1–4 avalia<br>E edita · S suspende · Z desfaz</div></aside>
+    <aside class="flashcards-panel flashcard-block-panel"><div class="section-title"><h3>Blocos</h3><span class="badge today">${blocks.length-1}</span></div><button class="flashcard-block-choice ${selectedBlock==='Todos'?'active':''}" data-fc-block="Todos">Todos os blocos <span>${all.length}</span></button>${blocks.slice(1).map(block => `<button class="flashcard-block-choice ${String(selectedBlock)===String(block)?'active':''}" data-fc-block="${escapeAttr(block)}">Bloco ${escapeHtml(block)} <span>${all.filter(card=>String(card.weeklyBlockId||card.block)===String(block)).length}</span></button>`).join('')}<div class="section-title flashcard-deck-title"><h3>Decks</h3>${ui.flashcardDeck?'<button class="tiny-btn" id="flashcardClearDeck">Limpar</button>':''}</div><div class="flashcard-deck-list">${groupFlashcardDecks(all).slice(0,12).map(renderFlashcardDeck).join('') || '<div class="muted">Os decks aparecem conforme você organiza cards por área e assunto.</div>'}</div><div class="muted flashcard-shortcuts">Espaço revela · 1–4 avalia<br>E edita · S suspende · Z desfaz</div></aside>
     <div class="flashcards-panel flashcard-review-column">${ui.flashcardEditorOpen ? renderFlashcardWorkspaceEditor() : renderFlashcardStudy(study, cards)}<div class="flashcard-subject-strip"><div class="section-title"><h3>Assuntos${selectedBlock==='Todos'?'':' · Bloco '+escapeHtml(selectedBlock)}</h3><span>${subjects.length}</span></div><div class="flashcard-subject-list">${subjects.map(subject => `<button class="flashcard-subject-chip" data-fc-subject="${escapeAttr(subject)}">${escapeHtml(subject)} <span>${blockCards.filter(card=>(card.subject||card.subarea||card.topic)===subject).length}</span></button>`).join('') || '<span class="muted">Os assuntos aparecerão aqui conforme os cards forem criados.</span>'}</div></div></div>
     <aside class="flashcards-panel flashcard-indicator-panel"><details class="flashcard-indicator-toggle" ${due>0?'open':''}><summary>Estatísticas e fila<span class="muted">${due>0?`${due} atrasados`:'tudo em dia'}</span></summary><div>${renderFlashcardIndicators(all, cards, reviewed, due)}<div class="section-title"><h3>Radar de fragilidade</h3></div>${renderFlashcardRadar(all)}<div class="section-title"><h3>Próximos dias</h3></div><div class="flashcard-forecast">${forecast.map(item=>`<div><span>${fmtDate(item.date).slice(0,5)}</span><strong>${item.count}</strong></div>`).join('')}</div></div></details></aside>
   </div>
@@ -7794,9 +7813,11 @@ function renderFlashcards() {
   const focusToggle = document.getElementById('flashcardFocusToggle');
   if(focusToggle) focusToggle.onclick = () => { ui.flashcardFocusMode = !ui.flashcardFocusMode; ui.flashcardFocusPaused = false; renderFlashcards(); };
   const speedToggle = document.getElementById('flashcardSpeedToggle');
-  if(speedToggle) speedToggle.onclick = () => { ui.flashcardSpeedMode = !ui.flashcardSpeedMode; ui.flashcardSpeedCardId = ''; ui.flashcardCardStartedAt = 0; renderFlashcards(); };
+  if(speedToggle) speedToggle.onclick = () => { ui.flashcardSpeedMode = !ui.flashcardSpeedMode; ui.flashcardSpeedCardId = ''; ui.flashcardCardStartedAt = 0; ui.flashcardSpeedBeeped = false; renderFlashcards(); };
   const exportBtn = document.getElementById('ankiExportBtn');
   if(exportBtn) exportBtn.onclick = exportAnkiTsv;
+  document.getElementById('ankiImportBtn')?.addEventListener('click', () => document.getElementById('ankiImportFile')?.click());
+  document.getElementById('ankiImportFile')?.addEventListener('change', importAnkiTsv);
   const backupBtn = document.getElementById('flashcardBackupBtn');
   if(backupBtn) backupBtn.onclick = exportFlashcardBackup;
   const undoBtn = document.getElementById('flashcardUndoBtn');
@@ -7824,6 +7845,9 @@ function renderFlashcards() {
     insertMarkdownAtSelection(textarea, `{{c${nextNumber}::`, `}}`);
     if(!hadSelection) textarea.setSelectionRange(insertStart + prefixLength, insertStart + prefixLength);
   };
+  document.getElementById('fcNewFront')?.addEventListener('input', updateFlashcardContentWarnings);
+  document.getElementById('fcNewBack')?.addEventListener('input', updateFlashcardContentWarnings);
+  updateFlashcardContentWarnings();
   document.querySelectorAll('[data-flashcard-deck]').forEach(button => button.onclick = e => { ui.flashcardDeck = e.currentTarget.dataset.flashcardDeck; const [areaValue, subareaValue] = ui.flashcardDeck.split('|'); ui.flashcardArea=areaValue || 'Todas'; ui.flashcardSubarea=subareaValue || 'Todas'; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); });
   document.querySelectorAll('[data-reveal-card]').forEach(button => button.onclick = e => {
     ui.revealedCards[e.currentTarget.dataset.revealCard] = true;
@@ -7875,7 +7899,14 @@ function renderFlashcardWorkspaceEditor() {
   const contentFields = cardType === 'cloze'
     ? `<label>Texto com lacunas${renderFlashcardMarkdownField('id="fcNewCloze"','','Ex.: O agente mais comum da meningite bacteriana é {{c1::Streptococcus pneumoniae}}.')}</label><div class="fc-cloze-tools"><button type="button" class="tiny-btn" id="fcInsertCloze">Marcar seleção como lacuna</button><span class="muted">Selecione o trecho a esconder e clique, ou digite {{c1::texto}}. Use c2, c3... para lacunas independentes.</span></div><label>Extra (opcional, só aparece na resposta)${renderFlashcardMarkdownField('id="fcNewClozeExtra"','','Explicação adicional, mnemônico, referência...')}</label>`
     : `<label>Frente${renderFlashcardMarkdownField('id="fcNewFront"','','Pergunta, decisão clínica ou conceito discriminativo')}</label><label>Verso${renderFlashcardMarkdownField('id="fcNewBack"','','Resposta curta, objetiva e revisável')}</label>`;
-  return `<div class="flashcard-editor workspace-editor"><div class="section-title"><div><h2>Novo flashcard</h2><div class="muted">Criação livre na aba Flashcards. Use uma ideia por card.${source.key?` Origem: ${escapeHtml(source.label||source.key)}.`:''}</div></div><button class="icon-btn" data-fc-cancel>Cancelar</button></div><div class="fc-editor-grid"><label>Tipo de card<select id="fcNewCardType"><option value="basic" ${cardType==='basic'?'selected':''}>Básico (frente/verso)</option><option value="cloze" ${cardType==='cloze'?'selected':''}>Cloze (lacunas)</option></select></label><label>Bloco<select id="fcNewBlock">${blocks.map(block=>`<option value="${escapeAttr(block)}" ${String(block)===String(source.block)?'selected':''}>Bloco ${escapeHtml(block)}</option>`).join('')}</select></label><label>Assunto<input id="fcNewSubject" class="input" value="${escapeAttr(source.subject||'')}" placeholder="Ex.: Diabetes: diagnóstico"></label><label>Tipo de origem<select id="fcNewSourceType"><option value="manual">Manual</option><option value="question" ${source.type==='question'?'selected':''}>Questão</option><option value="video" ${source.type==='video'?'selected':''}>Videoaula</option><option value="material" ${source.type==='material'?'selected':''}>Material</option></select></label><label>Referência<input id="fcNewSourceRef" class="input" value="${escapeAttr(source.reference||'')}" placeholder="Aula, questão ou material"></label></div>${contentFields}<label>Tags<input id="fcNewTags" class="input" placeholder="ex.: diabetes diagnóstico alto-rendimento"></label><div class="muted">A origem fica registrada para você voltar ao ponto de estudo. O agendamento começa como card novo.</div><button class="icon-btn primary" data-fc-save>Salvar flashcard</button></div>`;
+  const warningsBox = cardType === 'basic' ? `<div class="fc-content-warnings" id="fcContentWarnings"></div>` : '';
+  return `<div class="flashcard-editor workspace-editor"><div class="section-title"><div><h2>Novo flashcard</h2><div class="muted">Criação livre na aba Flashcards. Use uma ideia por card.${source.key?` Origem: ${escapeHtml(source.label||source.key)}.`:''}</div></div><button class="icon-btn" data-fc-cancel>Cancelar</button></div><div class="fc-editor-grid"><label>Tipo de card<select id="fcNewCardType"><option value="basic" ${cardType==='basic'?'selected':''}>Básico (frente/verso)</option><option value="cloze" ${cardType==='cloze'?'selected':''}>Cloze (lacunas)</option></select></label><label>Bloco<select id="fcNewBlock">${blocks.map(block=>`<option value="${escapeAttr(block)}" ${String(block)===String(source.block)?'selected':''}>Bloco ${escapeHtml(block)}</option>`).join('')}</select></label><label>Assunto<input id="fcNewSubject" class="input" value="${escapeAttr(source.subject||'')}" placeholder="Ex.: Diabetes: diagnóstico"></label><label>Tipo de origem<select id="fcNewSourceType"><option value="manual">Manual</option><option value="question" ${source.type==='question'?'selected':''}>Questão</option><option value="video" ${source.type==='video'?'selected':''}>Videoaula</option><option value="material" ${source.type==='material'?'selected':''}>Material</option></select></label><label>Referência<input id="fcNewSourceRef" class="input" value="${escapeAttr(source.reference||'')}" placeholder="Aula, questão ou material"></label></div>${contentFields}${warningsBox}<label>Tags<input id="fcNewTags" class="input" placeholder="ex.: diabetes diagnóstico alto-rendimento"></label><div class="muted">A origem fica registrada para você voltar ao ponto de estudo. O agendamento começa como card novo.</div><button class="icon-btn primary" data-fc-save>Salvar flashcard</button></div>`;
+}
+function updateFlashcardContentWarnings() {
+  const box = document.getElementById('fcContentWarnings');
+  if(!box) return;
+  const warnings = flashcardContentWarnings({front: document.getElementById('fcNewFront')?.value, back: document.getElementById('fcNewBack')?.value});
+  box.innerHTML = warnings.length ? warnings.map(text => `<div class="fc-content-warning">${iconSvg('warning',{weight:'regular'})}${escapeHtml(text)}</div>`).join('') : '';
 }
 function openQuickFlashcardCapture() {
   let source={type:'manual',key:`manual-${localISODate(new Date())}`,label:'Captura rápida'};
@@ -7910,9 +7941,11 @@ function saveWorkspaceFlashcard() {
 function groupFlashcardDecks(cards) {
   const map = new Map();
   cards.forEach(card => {
-    const key = `${card.area}|${card.subarea}`;
+    const area = card.area || 'Sem área';
+    const subarea = card.subarea || 'Sem assunto';
+    const key = `${area}|${subarea}`;
     const progress = flashcardProgress(card);
-    if(!map.has(key)) map.set(key,{key,area:card.area,subarea:card.subarea,total:0,due:0,mature:0});
+    if(!map.has(key)) map.set(key,{key,area,subarea,total:0,due:0,mature:0});
     const deck = map.get(key);
     deck.total++;
     if(isFlashcardDue(card)) deck.due++;
@@ -10196,6 +10229,20 @@ function renderQuestionClock() {
   }
   const status=document.getElementById('questionTimerStatus');
   if(status) status.textContent=questionTimer.status || (questionTimer.running?'Em andamento':'Pronto');
+}
+function beepFlashcardSpeed() {
+  try {
+    const context = ui.flashcardSpeedAudioContext || new (window.AudioContext || window.webkitAudioContext)();
+    ui.flashcardSpeedAudioContext = context;
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    oscillator.frequency.value = 660;
+    gain.gain.value = 0.12;
+    oscillator.connect(gain);
+    gain.connect(context.destination);
+    oscillator.start();
+    oscillator.stop(context.currentTime + 0.18);
+  } catch(error) {}
 }
 function beepQuestionTimer() {
   try {
