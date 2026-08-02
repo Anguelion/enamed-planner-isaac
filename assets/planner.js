@@ -6605,9 +6605,17 @@ function videoParts(lesson) {
   contentVideos.forEach(video => {
     const topic = videoContentLabel(video);
     const topicKey = normalizedTopic(topic) || 'aula';
-    const match = topic.match(/\bparte\s*(\d+)\b|\b(\d+)\s*(?:a|o|ª|º)?\s*parte\b/i);
-    const number = match ? Number(match[1] || match[2]) : (/\bparte$/i.test(topic) ? 1 : 0);
-    const key = number ? `part-${topicKey}-${number}` : `topic-${topicKey}`;
+    // Vídeo completo e COFEXPRESS do mesmo trecho usam convenções de nome
+    // diferentes ("Parte (1)" vs "Parte 1 COFEXPRESS", "1 aula - Tema" vs
+    // "1 - Tema COFEXPRESS"). Extrai o número declarado em qualquer uma dessas
+    // formas para poder juntar os dois sob a mesma parte, em vez de comparar o
+    // texto restante (que nunca bate entre as duas convenções).
+    const partMatch = topic.match(/\bparte\s*\(?\s*(\d+)\s*\)?/i)
+      || topic.match(/\b(\d+)\s*(?:a|o|ª|º)?\s*parte\b/i)
+      || topic.match(/\b(\d+)\s*(?:a|o|ª|º)?\s*aula\b/i)
+      || topic.match(/^(\d+)\s*[-.]\s*/);
+    const number = partMatch ? Number(partMatch[1]) : (/\bparte$/i.test(topic) ? 1 : 0);
+    const key = number ? `part-${number}` : `topic-${topicKey}`;
     const label = number ? `Parte ${String(number).padStart(2,'0')}` : (topic || 'Aula');
     const sourceOrder = n(video.folderOrder) || 999;
     const contentOrder = videoContentOrder(topic) || sourceOrder;
