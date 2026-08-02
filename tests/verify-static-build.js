@@ -11,6 +11,7 @@ const required=[
   'assets/planner.css',
   'assets/anatomia.css',
   'assets/planner-refresh.css',
+  'assets/anatomia/search-index.json',
   'assets/app-icons.js',
   'assets/icons/phosphor-sprite.svg',
   'assets/gamification.js',
@@ -25,12 +26,12 @@ const required=[
 const failures=[];
 for(const relative of required) {
   if(!fs.existsSync(path.join(root,relative))) failures.push(`arquivo ausente: ${relative}`);
-  if(!['service-worker.js','assets/icons/phosphor-sprite.svg'].includes(relative) && !html.includes(relative)) failures.push(`referência ausente no HTML: ${relative}`);
+  if(!['service-worker.js','assets/icons/phosphor-sprite.svg','assets/anatomia/search-index.json'].includes(relative) && !html.includes(relative)) failures.push(`referência ausente no HTML: ${relative}`);
 }
 const scriptOrder=['assets/app-icons.js','assets/gamification.js','assets/planner-ux.js','assets/anatomia.js','assets/planner.js'];
 for(let index=1;index<scriptOrder.length;index++) if(html.indexOf(scriptOrder[index-1])>html.indexOf(scriptOrder[index])) failures.push(`${scriptOrder[index-1]} deve carregar antes de ${scriptOrder[index]}`);
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
-for(const relative of ['assets/planner.css','assets/anatomia.css','assets/planner-refresh.css','assets/app-icons.js','assets/icons/phosphor-sprite.svg','assets/gamification.js','assets/planner-ux.js','assets/anatomia.js','assets/anatomia/catalog.json','assets/planner.js',...['fire','water','earth','air'].map(name=>`assets/rpg/element-${name}.svg`),...['aldeao','aprendiz','escudeiro','soldado','cavaleiro','capitao','barao','duque','rei','imperador'].map(name=>`assets/rpg/classes/${name}.png`)]) {
+for(const relative of ['assets/planner.css','assets/anatomia.css','assets/planner-refresh.css','assets/app-icons.js','assets/icons/phosphor-sprite.svg','assets/gamification.js','assets/planner-ux.js','assets/anatomia.js','assets/anatomia/catalog.json','assets/anatomia/search-index.json','assets/planner.js',...['fire','water','earth','air'].map(name=>`assets/rpg/element-${name}.svg`),...['aldeao','aprendiz','escudeiro','soldado','cavaleiro','capitao','barao','duque','rei','imperador'].map(name=>`assets/rpg/classes/${name}.png`)]) {
   if(!sw.includes(relative)) failures.push(`asset não versionado no service worker: ${relative}`);
 }
 // O service worker cacheia cada script/CSS com sua própria query "?v=..."; se essa

@@ -13,9 +13,10 @@
   };
   const articleCache = new Map();
   let catalogPromise = null;
+  let searchIndexPromise = null;
   let bridge = null;
   let host = null;
-  let ui = { section:'Todas', status:'all', search:'', articleId:null, limit:24, loading:false, error:'', lightbox:null };
+  let ui = { section:'Todas', status:'all', search:'', articleId:null, limit:24, loading:false, error:'', lightbox:null, readerNavCollapsed:false };
 
   function defaultState(){
     return { completed:{}, favorites:{}, recent:[], highlights:{}, lastArticleId:null, startedAt:new Date().toISOString() };
@@ -45,6 +46,14 @@
     return catalogPromise;
   }
 
+  async function loadSearchIndex(){
+    if(!searchIndexPromise) searchIndexPromise = fetch(`${BASE}search-index.json`).then(response => {
+      if(!response.ok) throw new Error(`Índice de pesquisa indisponível (${response.status})`);
+      return response.json();
+    });
+    return searchIndexPromise;
+  }
+
   function progress(data){
     const completed = data.articles.filter(article => store().completed[article.id]).length;
     return { completed, total:data.articles.length, percent:data.articles.length ? Math.round(completed / data.articles.length * 100) : 0 };
@@ -54,14 +63,30 @@
     return data.articles.filter(article => section === 'Todas' || article.memberships.some(item => item.section === section));
   }
 
+  function matchesSearch(article, content, search){
+    const terms = normalize(search).split(/\s+/).filter(Boolean);
+    const searchable = normalize(`${article.title} ${article.section} ${content || ''}`);
+    return !terms.length || terms.every(term => searchable.includes(term));
+  }
+
   function filteredArticles(data){
-    const query = normalize(ui.search);
     return sectionArticles(data, ui.section).filter(article => {
       if(ui.status === 'done' && !store().completed[article.id]) return false;
       if(ui.status === 'todo' && store().completed[article.id]) return false;
       if(ui.status === 'favorite' && !store().favorites[article.id]) return false;
-      return !query || normalize(`${article.title} ${article.section}`).includes(query);
+      return matchesSearch(article, data.searchIndex?.[article.id], ui.search);
     });
+  }
+
+  function searchExcerpt(data, article){
+    const query = normalize(ui.search).split(/\s+/).filter(Boolean)[0];
+    const text = String(data.searchIndex?.[article.id] || '').replace(/\s+/g, ' ').trim();
+    if(!query || !text) return '';
+    const position = normalize(text).indexOf(query);
+    if(position < 0) return '';
+    const start = Math.max(0, position - 72);
+    const end = Math.min(text.length, position + query.length + 118);
+    return `${start ? '…' : ''}${text.slice(start, end).trim()}${end < text.length ? '…' : ''}`;
   }
 
   function topbar(data){
@@ -107,12 +132,12 @@
     </div>`;
   }
 
-  function articleCard(article){
+  function articleCard(article, excerpt=''){
     const completed = !!store().completed[article.id];
     const favorite = !!store().favorites[article.id];
     return `<article class="anat-article-card ${completed ? 'is-complete' : ''}">
       <button class="anat-card-cover ${article.cover ? '' : 'is-empty'}" type="button" data-anat-open="${article.id}" ${article.cover ? `style="background-image:url('${imageUrl(article.cover)}')"` : ''}><span>${icon(SECTION_META[article.section]?.icon || 'medical')}</span>${completed ? `<i class="anat-done">${icon('success')}</i>` : ''}</button>
-      <div class="anat-card-copy"><span class="anat-kicker">${esc(article.section)}</span><h3><button type="button" data-anat-open="${article.id}">${esc(article.title)}</button></h3><div><span>${article.readingMinutes} min · ${article.imageCount} ${article.imageCount === 1 ? 'imagem' : 'imagens'}</span><button type="button" data-anat-favorite="${article.id}" aria-label="${favorite ? 'Remover dos favoritos' : 'Favoritar'}" class="${favorite ? 'active' : ''}">${icon('heart')}</button></div></div>
+      <div class="anat-card-copy"><span class="anat-kicker">${esc(article.section)}</span><h3><button type="button" data-anat-open="${article.id}">${esc(article.title)}</button></h3>${excerpt ? `<p class="anat-search-match">${esc(excerpt)}</p>` : ''}<div><span>${article.readingMinutes} min · ${article.imageCount} ${article.imageCount === 1 ? 'imagem' : 'imagens'}</span><button type="button" data-anat-favorite="${article.id}" aria-label="${favorite ? 'Remover dos favoritos' : 'Favoritar'}" class="${favorite ? 'active' : ''}">${icon('heart')}</button></div></div>
     </article>`;
   }
 
@@ -124,7 +149,7 @@
         <label class="anat-search">${icon('search')}<input type="search" value="${esc(ui.search)}" placeholder="Buscar osso, músculo, órgão…" data-anat-search></label></section>
       <nav class="anat-filter-row" aria-label="Áreas de anatomia"><button class="${ui.section === 'Todas' ? 'active' : ''}" type="button" data-anat-section="Todas">Todas</button>${SECTIONS.map(section => `<button class="${ui.section === section ? 'active' : ''}" type="button" data-anat-section="${esc(section)}">${esc(section)}</button>`).join('')}</nav>
       <nav class="anat-status-row" aria-label="Progresso"><button class="${ui.status === 'all' ? 'active' : ''}" type="button" data-anat-status="all">Todas</button><button class="${ui.status === 'todo' ? 'active' : ''}" type="button" data-anat-status="todo">Para estudar</button><button class="${ui.status === 'done' ? 'active' : ''}" type="button" data-anat-status="done">Concluídas</button><button class="${ui.status === 'favorite' ? 'active' : ''}" type="button" data-anat-status="favorite">Favoritas</button></nav>
-      ${visible.length ? `<div class="anat-article-grid">${visible.map(articleCard).join('')}</div>${visible.length < list.length ? `<button class="anat-load-more" type="button" data-anat-more>Mostrar mais <span>${visible.length} de ${list.length}</span></button>` : ''}` : `<div class="anat-empty">${icon('search')}<h2>Nenhuma página encontrada</h2><p>Tente outro termo ou ajuste os filtros.</p></div>`}
+      ${visible.length ? `<div class="anat-article-grid">${visible.map(article => articleCard(article, searchExcerpt(data, article))).join('')}</div>${visible.length < list.length ? `<button class="anat-load-more" type="button" data-anat-more>Mostrar mais <span>${visible.length} de ${list.length}</span></button>` : ''}` : `<div class="anat-empty">${icon('search')}<h2>Nenhuma página encontrada</h2><p>Tente outro termo ou ajuste os filtros.</p></div>`}
     </div>`;
   }
 
@@ -168,8 +193,8 @@
     const next = related[currentIndex + 1];
     const completed = !!store().completed[article.id];
     const favorite = !!store().favorites[article.id];
-    return `${topbar(data)}<div class="anat-reader-shell">
-      <aside class="anat-reader-nav"><button type="button" data-anat-catalog>${icon('previous')} Voltar ao catálogo</button><span class="anat-kicker">${esc(article.section)}</span><h2>Conteúdo da trilha</h2><div>${related.map((item,index) => `<button type="button" data-anat-open="${item.id}" class="${item.id === article.id ? 'active' : ''} ${store().completed[item.id] ? 'complete' : ''}"><i>${store().completed[item.id] ? icon('success') : index + 1}</i><span>${esc(item.title)}</span></button>`).join('')}</div></aside>
+    return `${topbar(data)}<div class="anat-reader-shell ${ui.readerNavCollapsed ? 'is-nav-collapsed' : ''}">
+      <aside class="anat-reader-nav"><div class="anat-reader-nav-toolbar"><button type="button" data-anat-catalog class="anat-reader-back">${icon('previous')} <span>Voltar ao catálogo</span></button><button type="button" class="anat-reader-nav-toggle" data-anat-nav-toggle aria-expanded="${ui.readerNavCollapsed ? 'false' : 'true'}" aria-label="${ui.readerNavCollapsed ? 'Expandir sumário' : 'Minimizar sumário'}" title="${ui.readerNavCollapsed ? 'Expandir sumário' : 'Minimizar sumário'}">${icon('sidebar')}</button></div><div class="anat-reader-nav-body"><span class="anat-kicker">${esc(article.section)}</span><h2>Conteúdo da trilha</h2><div>${related.map((item,index) => `<button type="button" data-anat-open="${item.id}" class="${item.id === article.id ? 'active' : ''} ${store().completed[item.id] ? 'complete' : ''}"><i>${store().completed[item.id] ? icon('success') : index + 1}</i><span>${esc(item.title)}</span></button>`).join('')}</div></div></aside>
       <section class="anat-reader"><header><div><span class="anat-kicker">${esc(article.section)} · ${article.readingMinutes} min de leitura</span><h1>${esc(article.title)}</h1><p>${article.imageCount} ${article.imageCount === 1 ? 'ilustração anatômica' : 'ilustrações anatômicas'} nesta página</p></div><button type="button" data-anat-favorite="${article.id}" class="anat-reader-favorite ${favorite ? 'active' : ''}">${icon('heart')}<span>${favorite ? 'Favorita' : 'Favoritar'}</span></button></header>
         <div class="anat-highlight-guide">${root.SkillHighlighter?.guideHtml?.() || '<small class="anat-highlight-hint">Selecione um trecho para destacar e comentar.</small>'}</div><article class="anat-content">${html}</article>
         <footer class="anat-reader-footer"><button type="button" data-anat-complete="${article.id}" class="${completed ? 'complete' : ''}">${completed ? icon('success') + ' Página concluída' : 'Marcar como concluída'}</button><nav>${previous ? `<button type="button" data-anat-open="${previous.id}">${icon('previous')} Anterior</button>` : '<span></span>'}${next ? `<button type="button" data-anat-open="${next.id}">Próxima ${icon('next')}</button>` : '<span></span>'}</nav></footer>
@@ -295,6 +320,16 @@
     host.onclick = event => {
       const target = event.target.closest('button,a,img');
       if(!target) return;
+      const navToggle = target.closest('[data-anat-nav-toggle]');
+      if(navToggle){
+        ui.readerNavCollapsed = !ui.readerNavCollapsed;
+        const shell = host.querySelector('.anat-reader-shell');
+        shell?.classList.toggle('is-nav-collapsed', ui.readerNavCollapsed);
+        navToggle.setAttribute('aria-expanded', String(!ui.readerNavCollapsed));
+        navToggle.setAttribute('aria-label', ui.readerNavCollapsed ? 'Expandir sumário' : 'Minimizar sumário');
+        navToggle.title = ui.readerNavCollapsed ? 'Expandir sumário' : 'Minimizar sumário';
+        return;
+      }
       const open = target.closest('[data-anat-open]');
       if(open){ event.preventDefault(); openArticle(open.dataset.anatOpen, data); return; }
       if(target.closest('[data-anat-home]')){ ui = {...ui, section:'home', articleId:null, search:'', status:'all', limit:24}; renderData(data); return; }
@@ -331,7 +366,8 @@
     ui.section = 'home';
     host.innerHTML = `<div class="anat-reader-loading"><span></span><h2>Preparando o Atlas de Anatomia</h2><p>Organizando páginas e imagens do curso…</p></div>`;
     try {
-      const data = await loadCatalog();
+      const [data, searchIndex] = await Promise.all([loadCatalog(), loadSearchIndex()]);
+      data.searchIndex = searchIndex;
       bindEvents(data);
       renderData(data);
     } catch(error) {
@@ -339,5 +375,5 @@
     }
   }
 
-  root.AnatomiaCourse = { defaultState, mount };
+  root.AnatomiaCourse = { defaultState, mount, test:{ matchesSearch } };
 })(typeof window !== 'undefined' ? window : globalThis);

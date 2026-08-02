@@ -1,17 +1,18 @@
-const CACHE_NAME = 'soqueromed-shell-v178';
+const CACHE_NAME = 'soqueromed-shell-v179';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
   './assets/planner.css?v=20260802-7',
-  './assets/anatomia.css?v=20260802-7',
+  './assets/anatomia.css?v=20260802-8',
   './assets/planner-refresh.css?v=20260802-1',
   './assets/app-icons.js?v=20260802-1',
   './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-4',
   './assets/planner-ux.js?v=20260802-1',
   './assets/skill-highlighter.js?v=20260802-3',
-  './assets/anatomia.js?v=20260802-5',
+  './assets/anatomia.js?v=20260802-6',
   './assets/anatomia/catalog.json',
+  './assets/anatomia/search-index.json',
   './assets/ecg-simulator.js?v=20260802-10',
   './assets/radiografia-aulas.js?v=20260802-3',
   './assets/radiografia.js?v=20260802-11',
@@ -178,6 +179,7 @@ self.addEventListener('fetch', event => {
     || url.pathname.endsWith('/assets/anatomia.css')
     || url.pathname.endsWith('/assets/planner-refresh.css')
     || url.pathname.endsWith('/assets/anatomia/catalog.json')
+    || url.pathname.endsWith('/assets/anatomia/search-index.json')
     || url.pathname.endsWith('/assets/caso-do-dia.js')
     || url.pathname.endsWith('/assets/ecg-simulator.js')
     || url.pathname.endsWith('/assets/radiografia.js')

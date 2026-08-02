@@ -62,4 +62,5 @@ const summary = {
 };
 
 fs.writeFileSync(path.join(destinationRoot, 'catalog.json'), `${JSON.stringify({ summary, articles: catalog }, null, 2)}\n`);
+require('./build-anatomia-search-index');
 console.log(`Anatomia importada: ${summary.articleCount} páginas e ${summary.imageCount} referências de imagem.`);
