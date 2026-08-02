@@ -890,7 +890,7 @@
   function defaultState() {
     return {
       ui: { sub: 'inicio', aulaModId: null, aulaTopicoId: null, manobraId: null, auscultaId: null, casoId: null, focus: false, fichaSistema: 'Todos', corpoSignId: null, corpoTeste: false, corpoTesteId: null, corpoView: 'ant' },
-      srs: {}, progress: {}, caseState: {}, highlights: {}, images: {}, log: [],
+      srs: {}, progress: {}, caseState: {}, highlights: {}, images: {}, hiddenAtlasImages: {}, log: [],
       daily: { date: todayISO(), studied: 0 },
     };
   }
@@ -900,7 +900,7 @@
     if (!S.semio) S.semio = defaultState();
     const d = defaultState();
     S.semio.ui = Object.assign({}, d.ui, S.semio.ui);
-    ['srs', 'progress', 'caseState', 'highlights', 'images'].forEach((k) => { if (!S.semio[k]) S.semio[k] = {}; });
+    ['srs', 'progress', 'caseState', 'highlights', 'images', 'hiddenAtlasImages'].forEach((k) => { if (!S.semio[k]) S.semio[k] = {}; });
     if (!Array.isArray(S.semio.log)) S.semio.log = [];
     if (!S.semio.daily || S.semio.daily.date !== todayISO()) S.semio.daily = { date: todayISO(), studied: 0 };
   }
@@ -953,7 +953,12 @@
       case 'ul': return `<ul class="semio-ul">${b.x.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`;
       case 'svg': return `<figure class="semio-fig">${b.x}${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
       case 'img': return `<figure class="semio-fig semio-fig-photo"><button type="button" class="semio-image-button" data-semio-lightbox="${esc(b.x)}" aria-label="Ampliar imagem: ${esc(b.cap || 'Imagem da aula')}"><img src="${esc(b.x)}" alt="${esc(b.cap || 'Imagem da aula')}" loading="lazy" onerror="${imgFallback}"></button>${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
-      case 'imggrid': return `<details class="semio-atlas"><summary><span><b>Atlas visual complementar</b><small>${b.x.length} imagens desta aula, organizadas em sequência</small></span><i aria-hidden="true">+</i></summary><div class="semio-atlas-grid">${b.x.map((image, imageIndex) => `<figure class="semio-fig semio-fig-photo"><button type="button" class="semio-image-button" data-semio-lightbox="${esc(image.src)}" aria-label="Ampliar ${esc(image.cap || `imagem ${imageIndex + 1}`)}"><img src="${esc(image.src)}" alt="${esc(image.cap || `Imagem ${imageIndex + 1}`)}" loading="lazy" onerror="${imgFallback}"></button><figcaption>${esc(image.cap || `Imagem ${imageIndex + 1}`)}</figcaption></figure>`).join('')}</div></details>`;
+      case 'imggrid': {
+        const atlasId = `${topId}:${idx}`;
+        const hidden = b.x.filter((image) => S.hiddenAtlasImages[`${atlasId}|${image.src}`]);
+        const visible = b.x.filter((image) => !S.hiddenAtlasImages[`${atlasId}|${image.src}`]);
+        return `<details class="semio-atlas" data-semio-atlas-id="${esc(atlasId)}"><summary><span><b>Atlas visual complementar</b><small>${visible.length} ${visible.length === 1 ? 'imagem visível' : 'imagens visíveis'}${hidden.length ? ` · ${hidden.length} ocultas` : ''}</small></span><i aria-hidden="true">+</i></summary>${hidden.length ? `<div class="semio-atlas-toolbar"><span>As imagens removidas continuam seguras no curso.</span><button type="button" data-semio-restore-atlas="${esc(hidden.map((image) => image.src).join('|'))}" data-semio-atlas-target="${esc(atlasId)}">Restaurar ${hidden.length} ${hidden.length === 1 ? 'imagem' : 'imagens'}</button></div>` : ''}<div class="semio-atlas-grid">${visible.map((image, imageIndex) => `<figure class="semio-fig semio-fig-photo"><button type="button" class="semio-atlas-remove" data-semio-hide-atlas="${esc(image.src)}" data-semio-atlas-target="${esc(atlasId)}" aria-label="Remover ${esc(image.cap || `imagem ${imageIndex + 1}`)} deste atlas" title="Remover do atlas">×</button><button type="button" class="semio-image-button" data-semio-lightbox="${esc(image.src)}" aria-label="Ampliar ${esc(image.cap || `imagem ${imageIndex + 1}`)}"><img src="${esc(image.src)}" alt="${esc(image.cap || `Imagem ${imageIndex + 1}`)}" loading="lazy" onerror="${imgFallback}"></button><figcaption>${esc(image.cap || `Imagem ${imageIndex + 1}`)}</figcaption></figure>`).join('') || '<p class="semio-atlas-empty">Todas as imagens deste atlas estão ocultas. Use “Restaurar imagens” acima para recuperá-las.</p>'}</div></details>`;
+      }
       case 'placeholder':
       case 'manualimg': return '';
       case 'p':
@@ -1380,6 +1385,35 @@
       document.addEventListener('keydown', function closeSemioLightbox(event) { if (event.key === 'Escape') { lightbox.remove(); document.removeEventListener('keydown', closeSemioLightbox); } });
       document.body.appendChild(lightbox);
     }));
+    const repaintAtlasAt = (atlasId, pageScrollTop, atlasScrollTop) => {
+      paint();
+      const restorePosition = () => {
+        const atlas = [...ROOT.querySelectorAll('.semio-atlas')].find((item) => item.dataset.semioAtlasId === atlasId);
+        if (!atlas) return;
+        atlas.setAttribute('open', '');
+        const grid = atlas.querySelector('.semio-atlas-grid');
+        if (grid) grid.scrollTop = atlasScrollTop;
+        if (document.scrollingElement) document.scrollingElement.scrollTop = pageScrollTop;
+      };
+      restorePosition();
+      requestAnimationFrame(restorePosition);
+    };
+    ROOT.querySelectorAll('[data-semio-hide-atlas]').forEach((button) => button.addEventListener('click', () => {
+      const src = button.dataset.semioHideAtlas;
+      const atlasId = button.dataset.semioAtlasTarget;
+      if (!src) return;
+      const atlasScrollTop = button.closest('.semio-atlas')?.querySelector('.semio-atlas-grid')?.scrollTop || 0;
+      const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0;
+      S.hiddenAtlasImages[`${atlasId}|${src}`] = true;
+      save(); repaintAtlasAt(atlasId, pageScrollTop, atlasScrollTop);
+    }));
+    ROOT.querySelectorAll('[data-semio-restore-atlas]').forEach((button) => button.addEventListener('click', () => {
+      const atlasId = button.dataset.semioAtlasTarget;
+      const atlasScrollTop = button.closest('.semio-atlas')?.querySelector('.semio-atlas-grid')?.scrollTop || 0;
+      const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0;
+      (button.dataset.semioRestoreAtlas || '').split('|').filter(Boolean).forEach((src) => { delete S.hiddenAtlasImages[`${atlasId}|${src}`]; });
+      save(); repaintAtlasAt(atlasId, pageScrollTop, atlasScrollTop);
+    }));
     ROOT.querySelectorAll('[data-semio-remove-image]').forEach((button) => button.addEventListener('click', () => {
       const scope = ROOT.querySelector('[data-semio-image-scope]')?.dataset.semioImageScope;
       if (!scope) return;
@@ -1623,6 +1657,7 @@
     .semio-fig-photo img{max-width:100%;width:auto;max-height:420px;border-radius:10px;border:1px solid var(--border,#cbd5e1);background:#fff}
     .semio-image-button{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}.semio-image-button img{display:block;margin:0 auto}
     .semio-atlas{margin:30px 0;border:1px solid #dbe4df;border-radius:16px;background:color-mix(in srgb,var(--semio-paper) 88%,#dceae4);overflow:hidden}.semio-atlas>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 20px;cursor:pointer;color:var(--semio-acc2)}.semio-atlas>summary::-webkit-details-marker{display:none}.semio-atlas>summary span b,.semio-atlas>summary span small{display:block}.semio-atlas>summary span b{font:700 1.05rem Georgia,serif}.semio-atlas>summary span small{font-size:.7rem;color:var(--muted,#667085);margin-top:4px}.semio-atlas>summary>i{width:30px;height:30px;border:1px solid #a8beb5;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:1.2rem;transition:transform .2s}.semio-atlas[open]>summary>i{transform:rotate(45deg)}.semio-atlas-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0 14px 16px;max-height:720px;overflow:auto}.semio-atlas-grid .semio-fig{margin:0;padding:8px;border:1px solid #e1e5e1;border-radius:11px;background:var(--semio-paper)}.semio-atlas-grid .semio-fig img{width:100%;height:170px;object-fit:contain;border:0}.semio-atlas-grid .semio-fig figcaption{text-align:center;font-size:.65rem;margin:6px 0 0}
+    .semio-atlas-grid .semio-fig{position:relative}.semio-atlas-remove{position:absolute;right:7px;top:7px;z-index:2;width:28px;height:28px;display:grid;place-items:center;border:1px solid rgba(121,61,43,.2);border-radius:50%;background:rgba(255,253,248,.94);color:#9d432b;font-size:1.1rem;line-height:1;cursor:pointer;box-shadow:0 3px 10px rgba(28,42,38,.12)}.semio-atlas-remove:hover{background:#a9472d;color:#fff}.semio-atlas-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 14px 12px;padding:10px 12px;border-radius:10px;background:rgba(31,103,92,.08);font-size:.7rem;color:var(--muted,#667085)}.semio-atlas-toolbar button{border:0;background:transparent;color:var(--semio-acc);font-size:.7rem;font-weight:800;cursor:pointer;white-space:nowrap}.semio-atlas-empty{grid-column:1/-1;margin:8px;padding:28px;text-align:center;color:var(--muted,#667085);font-size:.8rem}
     .semio-lightbox{position:fixed;inset:0;z-index:3000;background:rgba(7,18,16,.94);display:grid;place-items:center;padding:30px;cursor:zoom-out}.semio-lightbox img{max-width:min(95vw,1500px);max-height:90vh;object-fit:contain;border-radius:8px;background:#fff}.semio-lightbox>button{position:fixed;right:22px;top:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:1.7rem;cursor:pointer}
     .semio-ph-box{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:120px;border:2px dashed var(--border,#cbd5e1);border-radius:10px;color:var(--muted,#667085);font-size:1.4rem;background:rgba(120,120,120,.05)}
     .semio-ph-box span{font-size:.78rem;font-weight:600}
