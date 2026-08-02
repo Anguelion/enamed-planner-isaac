@@ -2235,7 +2235,7 @@ body.dark .tab.active .tab-icon{background:#172331}
 
 @media(min-width:1200px){
   #painel.view.active{gap:16px}
-  #painel .card{height:100%;padding:20px}
+  #painel .card{height:100%;padding:20px;overflow:hidden}
   .dashboard-global-head{align-items:center;min-height:64px}
   .dashboard-global-head h1{font-size:31px}
   .dashboard-date-control{grid-template-columns:auto 154px;font-size:12px}
@@ -2264,7 +2264,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-desktop-grid>.dashboard-mood .mood-btn small{font-size:12px;white-space:normal}
   .dashboard-desktop-grid h2{font-size:20px}
   .dashboard-desktop-grid .eyebrow{font-size:11px}
-  .dashboard-desktop-grid>.daily-analysis .daily-analysis-grid{grid-template-columns:repeat(4,minmax(0,1fr));height:calc(100% - 44px);gap:10px}
+  .dashboard-desktop-grid>.daily-analysis .daily-analysis-grid{grid-template-columns:repeat(4,minmax(0,1fr));min-height:calc(100% - 44px);gap:10px}
   .dashboard-desktop-grid>.daily-analysis .daily-analysis-tile{grid-template-columns:1fr;align-content:start;gap:8px;padding:14px}
   .dashboard-desktop-grid>.daily-analysis .daily-analysis-icon{width:40px;height:40px}
   .dashboard-desktop-grid>.daily-analysis .daily-analysis-label{font-size:12px}
@@ -2474,13 +2474,14 @@ body.dark .tab.active .tab-icon{background:#172331}
 .dashboard-today-focus .mood-btn{display:grid;place-items:center;gap:3px;min-height:56px;padding:7px 4px;border:1px solid var(--line);border-radius:9px;background:var(--soft-blue)}
 .dashboard-today-focus .mood-btn.active{border-color:var(--green);background:var(--soft-green)}
 .dashboard-today-focus .mood-btn>span{font-size:21px;line-height:1}
-.dashboard-today-focus .mood-btn small{font-size:11px;font-weight:800;white-space:nowrap}
-.dashboard-review-compact{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
+.dashboard-today-focus .mood-btn small{font-size:11px;font-weight:800;text-align:center;white-space:normal;overflow-wrap:break-word}
+.dashboard-review-compact{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
 .dashboard-review-compact>div{display:flex;align-items:center;gap:8px;min-width:0}
 .dashboard-review-compact .dashboard-review-icon{flex:0 0 auto}
-.dashboard-review-compact strong,.dashboard-review-compact small{display:block}
+.dashboard-review-compact strong,.dashboard-review-compact small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dashboard-review-compact strong{font-size:13px}
 .dashboard-review-compact small{margin-top:2px;font-size:11px;color:var(--muted)}
+.dashboard-review-compact .tiny-btn{flex-shrink:0}
 
 .dashboard-weekly-card{display:grid;grid-template-rows:auto auto 1fr;gap:10px}
 .weekly-week-nav{display:flex;align-items:center;gap:8px}
