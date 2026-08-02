@@ -29,6 +29,20 @@
   const esc = (s) => String(s ?? '').replace(/[&<>'"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
   const shuffle = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
+  const MODULE_ART = {
+    1: 'assets/semiologia-real/01-anatomia-semiologica/14.jpg',
+    2: 'assets/semiologia-real/anamnese-focada-oficial/1.jpg',
+    3: 'assets/semiologia-real/01-exame-fisico-geral-parte-01-e-02/12.png',
+    4: 'assets/semiologia-real/01-exame-geral-cranio-e-face/109.png',
+    5: 'assets/semiologia-real/01-pontos-anatomicos-pneumotorax-derrame-pleural-posicao-do-iot/12.jpg',
+    6: 'assets/semiologia-real/01-anatomia-vascular-central-e-anatomia-arterial/12.jpg',
+    7: 'assets/semiologia-real/06-figado-baco-rins-e-bexiga/29.jpg',
+    8: 'assets/semiologia-real/07-semiologia-dermatologica-pt-1/12.jpg',
+    9: 'assets/semiologia-real/01-exame-do-membro-superior/12.jpg',
+    10: 'assets/semiologia-real/02-metodos-de-exame/12.jpg',
+  };
+  const moduleArt = (id) => MODULE_ART[id] || MODULE_ART[1];
+
   let BRIDGE = null;
   const st = () => BRIDGE.getState().semio;
   const save = () => BRIDGE.save();
@@ -938,8 +952,8 @@
       case 'doc': return `<div class="semio-doc"><span class="semio-doc-tag">Prontuário</span><code>${esc(b.x)}</code></div>`;
       case 'ul': return `<ul class="semio-ul">${b.x.map((li) => `<li>${esc(li)}</li>`).join('')}</ul>`;
       case 'svg': return `<figure class="semio-fig">${b.x}${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
-      case 'img':
-      case 'imggrid':
+      case 'img': return `<figure class="semio-fig semio-fig-photo"><button type="button" class="semio-image-button" data-semio-lightbox="${esc(b.x)}" aria-label="Ampliar imagem: ${esc(b.cap || 'Imagem da aula')}"><img src="${esc(b.x)}" alt="${esc(b.cap || 'Imagem da aula')}" loading="lazy" onerror="${imgFallback}"></button>${b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : ''}</figure>`;
+      case 'imggrid': return `<details class="semio-atlas"><summary><span><b>Atlas visual complementar</b><small>${b.x.length} imagens desta aula, organizadas em sequência</small></span><i aria-hidden="true">+</i></summary><div class="semio-atlas-grid">${b.x.map((image, imageIndex) => `<figure class="semio-fig semio-fig-photo"><button type="button" class="semio-image-button" data-semio-lightbox="${esc(image.src)}" aria-label="Ampliar ${esc(image.cap || `imagem ${imageIndex + 1}`)}"><img src="${esc(image.src)}" alt="${esc(image.cap || `Imagem ${imageIndex + 1}`)}" loading="lazy" onerror="${imgFallback}"></button><figcaption>${esc(image.cap || `Imagem ${imageIndex + 1}`)}</figcaption></figure>`).join('')}</div></details>`;
       case 'placeholder':
       case 'manualimg': return '';
       case 'p':
@@ -958,45 +972,70 @@
     const m = metrics();
     const topicsTotal = mods.reduce((n, mod) => n + mod.topicos.length, 0);
     const topicsDone = Object.keys(S.progress).filter((k) => k.startsWith('aula:')).length;
-    return `<div class="semio-hero">
-        <div><span class="semio-eyebrow">Habilidade clínica</span>
-        <h2 style="margin:2px 0 0">Semiologia — Build 1</h2>
-        <p class="semio-muted">Aprender a examinar de verdade: do normal ao patológico, com finalidade, interpretação, evidência (LR) e red flags. Funciona offline.</p></div>
-      </div>
-      <div class="semio-grid3">
-        <div class="semio-stat"><span>${topicsDone}/${topicsTotal}</span><small>tópicos lidos</small></div>
-        <div class="semio-stat"><span>${m.acc}%</span><small>acerto no treino</small></div>
-        <div class="semio-stat ${m.dueCount ? 'due' : ''}"><span>${m.dueCount}</span><small>revisões devidas</small></div>
-      </div>
-      <div class="semio-cards">
-        <button class="semio-card" data-go="aulas"><b>📚 Aulas</b><span>7 módulos · das bases do método aos sistemas</span></button>
-        <button class="semio-card" data-go="manobras"><b>🩺 Manobras</b><span>técnica + finalidade + evidência + quiz</span></button>
-        <button class="semio-card" data-go="casos"><b>🧩 Casos guiados</b><span>representação → hipóteses → red flag → conduta</span></button>
-        <button class="semio-card" data-go="fichas"><b>⚡ Fichas rápidas</b><span>revisão de véspera e beira-leito</span></button>
-      </div>
-      <p class="semio-note">Build 1 cobre o núcleo do briefing (Fundamentos, Anamnese, Exame geral, Respiratório, Cardiovascular, Abdome, Neurológico). Próximas builds: demais sistemas, OSCE, banco de questões e repetição espaçada avançada.</p>`;
+    const pct = topicsTotal ? Math.round((topicsDone / topicsTotal) * 100) : 0;
+    return `<section class="semio-hero">
+        <div class="semio-hero-copy">
+          <span class="semio-eyebrow">Habilidade clínica essencial</span>
+          <h1>Do sintoma ao sinal.<br>Do sinal ao diagnóstico.</h1>
+          <p>Aprenda a observar, perguntar e examinar com método — conectando técnica, raciocínio clínico e segurança do paciente.</p>
+          <div class="semio-hero-actions">
+            <button class="semio-btn semio-btn-primary" data-go="aulas">Explorar as aulas <span aria-hidden="true">→</span></button>
+            <button class="semio-btn ghost" data-go="manobras">Treinar manobras</button>
+          </div>
+        </div>
+        <div class="semio-hero-art" aria-hidden="true">
+          <div class="semio-art-main"><img src="${moduleArt(1)}" alt=""></div>
+          <div class="semio-art-small"><img src="${moduleArt(7)}" alt=""></div>
+          <div class="semio-art-seal"><strong>${mods.length}</strong><span>módulos<br>clínicos</span></div>
+        </div>
+      </section>
+      <section class="semio-progress-strip" aria-label="Seu progresso em Semiologia">
+        <div class="semio-progress-copy"><span>Seu percurso</span><strong>${pct}% concluído</strong></div>
+        <div class="semio-progress semio-progress-large"><div style="width:${pct}%"></div></div>
+        <div class="semio-progress-metrics">
+          <span><strong>${topicsDone}</strong> de ${topicsTotal} tópicos</span>
+          <span><strong>${m.acc}%</strong> de acerto</span>
+          <span class="${m.dueCount ? 'is-due' : ''}"><strong>${m.dueCount}</strong> revisões</span>
+        </div>
+      </section>
+      <section class="semio-home-section">
+        <div class="semio-section-heading"><div><span class="semio-eyebrow">Prática orientada</span><h2>Escolha como estudar hoje</h2></div><p>Conteúdo teórico e treino clínico reunidos em uma única trilha.</p></div>
+        <div class="semio-feature-grid">
+          <button class="semio-feature-card is-wide" data-go="aulas"><span class="semio-feature-icon">A</span><span><b>Aulas por sistemas</b><small>${mods.length} módulos, do método clínico ao exame neurológico</small></span><i>→</i></button>
+          <button class="semio-feature-card" data-go="corpo"><span class="semio-feature-icon">C</span><span><b>Corpo semiológico</b><small>Explore sinais por região</small></span><i>→</i></button>
+          <button class="semio-feature-card" data-go="manobras"><span class="semio-feature-icon">M</span><span><b>Manobras</b><small>Técnica, utilidade e evidência</small></span><i>→</i></button>
+          <button class="semio-feature-card" data-go="ausculta"><span class="semio-feature-icon">Au</span><span><b>Ausculta</b><small>Reconheça sons e achados</small></span><i>→</i></button>
+          <button class="semio-feature-card" data-go="casos"><span class="semio-feature-icon">Ca</span><span><b>Casos guiados</b><small>Decida passo a passo</small></span><i>→</i></button>
+          <button class="semio-feature-card" data-go="fichas"><span class="semio-feature-icon">F</span><span><b>Fichas rápidas</b><small>Revisão para o beira-leito</small></span><i>→</i></button>
+        </div>
+      </section>
+      <section class="semio-home-section semio-module-preview">
+        <div class="semio-section-heading"><div><span class="semio-eyebrow">Conteúdo da trilha</span><h2>Estude por módulos</h2></div><button class="semio-text-link" data-go="aulas">Ver todos <span>→</span></button></div>
+        ${aulasModulosHtml(true)}
+      </section>`;
   }
 
   // ---- Aulas ----
-  function aulasModulosHtml() {
+  function aulasModulosHtml(compact = false) {
     const S = st();
     const mods = (window.SemioAulas && window.SemioAulas.MODULOS) || [];
-    return `<div class="semio-list">${mods.map((mod) => {
+    const list = compact ? mods.slice(0, 4) : mods;
+    return `${compact ? '' : `<div class="semio-catalog-head"><span class="semio-eyebrow">Biblioteca clínica</span><h1>Aulas de Semiologia</h1><p>Do primeiro encontro com o paciente ao exame físico de cada sistema.</p></div>`}<div class="semio-module-grid">${list.map((mod) => {
       const done = mod.topicos.filter((t) => S.progress['aula:' + mod.id + ':' + t.id]).length;
-      return `<button class="semio-mod" data-mod="${mod.id}">
-        <div class="semio-mod-num">${mod.id}</div>
-        <div class="semio-mod-body"><b>${esc(mod.nome)}</b><span>${esc(mod.resumo)}</span>
-          <div class="semio-progress"><div style="width:${Math.round((done / mod.topicos.length) * 100)}%"></div></div>
-          <small>${done}/${mod.topicos.length} tópicos</small></div></button>`;
+      const pct = Math.round((done / mod.topicos.length) * 100);
+      return `<button class="semio-module-card" data-mod="${mod.id}">
+        <span class="semio-module-cover"><img src="${moduleArt(mod.id)}" alt=""><i>${String(mod.id).padStart(2, '0')}</i></span>
+        <span class="semio-module-content"><small>Módulo ${String(mod.id).padStart(2, '0')}</small><b>${esc(mod.nome)}</b><span>${esc(mod.resumo)}</span>
+          <span class="semio-module-progress"><span style="width:${pct}%"></span></span><em>${done}/${mod.topicos.length} tópicos concluídos</em></span></button>`;
     }).join('')}</div>`;
   }
   function aulasTopicosHtml(mod) {
     const S = st();
-    return `<button class="semio-btn ghost sm" data-back-mods>← Módulos</button>
-      <h2 class="semio-topic-title">${esc(mod.nome)}</h2>
-      <div class="semio-list">${mod.topicos.map((t) => {
+    const done = mod.topicos.filter((t) => S.progress['aula:' + mod.id + ':' + t.id]).length;
+    return `<div class="semio-topic-catalog-head" style="--semio-cover:url('${moduleArt(mod.id)}')"><button class="semio-back-link" data-back-mods>← Todos os módulos</button><span class="semio-eyebrow">Módulo ${String(mod.id).padStart(2, '0')}</span><h1>${esc(mod.nome)}</h1><p>${esc(mod.resumo)}</p><span>${done}/${mod.topicos.length} tópicos concluídos</span></div>
+      <div class="semio-topic-catalog">${mod.topicos.map((t, index) => {
         const done = S.progress['aula:' + mod.id + ':' + t.id];
-        return `<button class="semio-topic" data-topico="${esc(t.id)}"><span>${esc(t.titulo)}</span>${done ? '<i class="semio-check">✓</i>' : ''}</button>`;
+        return `<button class="semio-topic-card" data-topico="${esc(t.id)}"><span class="semio-topic-index">${String(index + 1).padStart(2, '0')}</span><span class="semio-topic-card-copy"><small>Aula ${index + 1}</small><b>${esc(t.titulo)}</b></span><i class="${done ? 'is-done' : ''}">${done ? '✓' : '→'}</i></button>`;
     }).join('')}</div>`;
   }
   const aulaImageKey = (mod, topico) => `${mod.id}:${topico.id}`;
@@ -1028,15 +1067,26 @@
     const focus = S.ui.focus ? ' semio-focus' : '';
     const imageKey = aulaImageKey(mod, topico);
     const parts = topico.blocks.map((b, i) => blockHtml(b, mod.id + ':' + topico.id, i)).join('');
-    return `<button class="semio-btn ghost sm" data-back-topicos>← ${esc(mod.nome)}</button>
-      <div class="semio-topic-head"><h2>${esc(topico.titulo)}</h2>
-        <div class="semio-topic-tools">
-          <button class="semio-btn ghost sm" data-focus-toggle>🎯 Modo foco</button>
-          <label class="semio-btn ghost sm" title="Adicionar imagem à aula">🖼️ Adicionar imagem<input type="file" accept="image/*" data-semio-image-input="${esc(imageKey)}" hidden></label>
-          <span class="semio-muted sm">Selecione um trecho de texto para marcá-lo. Clique numa marcação para remover.</span>
-        </div></div>
-      <article class="semio-flow${focus}" data-semio-image-scope="${esc(imageKey)}">${aulaImagesHtml(S, imageKey)}${parts}<p class="semio-image-help">Você pode colar uma imagem diretamente nesta aula com Ctrl+V. Ela será comprimida e salva automaticamente.</p></article>
-      <button class="semio-btn wide" data-mark-read="${esc(mod.id + ':' + topico.id)}">✓ Marcar tópico como lido</button>`;
+    const topicIndex = mod.topicos.findIndex((t) => t.id === topico.id);
+    const isDone = !!S.progress['aula:' + mod.id + ':' + topico.id];
+    return `<div class="semio-reader-shell">
+      <aside class="semio-reader-nav">
+        <button class="semio-back-link" data-back-mods>← Voltar aos módulos</button>
+        <span class="semio-eyebrow">Módulo ${String(mod.id).padStart(2, '0')}</span><h2>${esc(mod.nome)}</h2>
+        <div class="semio-reader-topic-list">${mod.topicos.map((t, index) => {
+          const done = S.progress['aula:' + mod.id + ':' + t.id];
+          return `<button class="${t.id === topico.id ? 'is-current' : ''}" data-topico="${esc(t.id)}"><span>${index + 1}</span><b>${esc(t.titulo)}</b>${done ? '<i>✓</i>' : ''}</button>`;
+        }).join('')}</div>
+      </aside>
+      <section class="semio-reader">
+        <header class="semio-reader-head">
+          <div><span class="semio-eyebrow">Módulo ${String(mod.id).padStart(2, '0')} · Aula ${topicIndex + 1}</span><h1>${esc(topico.titulo)}</h1><p>Leitura clínica orientada</p></div>
+          <div class="semio-reader-actions"><button class="semio-btn ghost sm" data-focus-toggle>Modo foco</button><label class="semio-btn ghost sm" title="Adicionar imagem à aula">Adicionar imagem<input type="file" accept="image/*" data-semio-image-input="${esc(imageKey)}" hidden></label></div>
+        </header>
+        <article class="semio-flow${focus}" data-semio-image-scope="${esc(imageKey)}">${aulaImagesHtml(S, imageKey)}${parts}<p class="semio-image-help">Dica: selecione um trecho para marcá-lo. Você também pode colar uma imagem aqui com Ctrl+V.</p></article>
+        <footer class="semio-reader-footer"><button class="semio-btn ghost" data-back-topicos>← Ver tópicos</button><button class="semio-btn semio-btn-primary" data-mark-read="${esc(mod.id + ':' + topico.id)}">${isDone ? '✓ Tópico concluído' : 'Marcar como concluído'}</button></footer>
+      </section>
+    </div>`;
   }
   function aulasHtml() {
     const S = st();
@@ -1268,19 +1318,23 @@
   const SUBS = [['inicio', 'Início'], ['aulas', 'Aulas'], ['corpo', 'Corpo'], ['manobras', 'Manobras'], ['ausculta', 'Ausculta'], ['casos', 'Casos'], ['fichas', 'Fichas'], ['desempenho', 'Desempenho']];
   function subnav() {
     const cur = st().ui.sub;
-    return `<div class="semio-subnav">${SUBS.map(([k, l]) => `<button class="semio-sub ${k === cur ? 'on' : ''}" data-sub="${k}">${l}</button>`).join('')}</div>`;
+    return `<header class="semio-topbar"><button class="semio-brand semio-sub" data-sub="inicio"><span class="semio-brand-mark">S</span><span><small>Habilidade</small><b>Semiologia</b></span></button><nav class="semio-subnav" aria-label="Navegação de Semiologia">${SUBS.map(([k, l]) => `<button class="semio-sub ${k === cur ? 'on' : ''}" data-sub="${k}">${l}</button>`).join('')}</nav></header>`;
   }
   function bodyHtml() {
-    switch (st().ui.sub) {
-      case 'aulas': return aulasHtml();
-      case 'corpo': return corpoHtml();
-      case 'manobras': return manobrasHtml();
-      case 'ausculta': return auscultaHtml();
-      case 'casos': return casosHtml();
-      case 'fichas': return fichasHtml();
-      case 'desempenho': return desempenhoHtml();
-      default: return inicioHtml();
+    const sub = st().ui.sub;
+    let html;
+    switch (sub) {
+      case 'aulas': html = aulasHtml(); break;
+      case 'corpo': html = corpoHtml(); break;
+      case 'manobras': html = manobrasHtml(); break;
+      case 'ausculta': html = auscultaHtml(); break;
+      case 'casos': html = casosHtml(); break;
+      case 'fichas': html = fichasHtml(); break;
+      case 'desempenho': html = desempenhoHtml(); break;
+      default: html = inicioHtml();
     }
+    const isReader = sub === 'aulas' && !!st().ui.aulaTopicoId;
+    return `<div class="semio-view semio-view-${esc(sub)}${isReader ? ' is-reader' : ''}">${html}</div>`;
   }
 
   let ROOT = null;
@@ -1306,14 +1360,25 @@
     ROOT.querySelectorAll('[data-go]').forEach((b) => b.onclick = () => go(b.dataset.go));
 
     // Aulas
-    ROOT.querySelectorAll('[data-mod]').forEach((b) => b.onclick = () => { S.ui.aulaModId = +b.dataset.mod; S.ui.aulaTopicoId = null; save(); paint(); });
-    ROOT.querySelector('[data-back-mods]')?.addEventListener('click', () => { S.ui.aulaModId = null; save(); paint(); });
+    ROOT.querySelectorAll('[data-mod]').forEach((b) => b.onclick = () => { S.ui.sub = 'aulas'; S.ui.aulaModId = +b.dataset.mod; S.ui.aulaTopicoId = null; save(); paint(); });
+    ROOT.querySelector('[data-back-mods]')?.addEventListener('click', () => { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; save(); paint(); });
     ROOT.querySelectorAll('[data-topico]').forEach((b) => b.onclick = () => { S.ui.aulaTopicoId = b.dataset.topico; save(); paint(); });
     ROOT.querySelector('[data-back-topicos]')?.addEventListener('click', () => { S.ui.aulaTopicoId = null; save(); paint(); });
     ROOT.querySelector('[data-focus-toggle]')?.addEventListener('click', () => { S.ui.focus = !S.ui.focus; save(); paint(); });
     ROOT.querySelectorAll('[data-semio-image-input]').forEach((input) => input.addEventListener('change', (event) => {
       addSemioImage(event.currentTarget.files?.[0], event.currentTarget.dataset.semioImageInput);
       event.currentTarget.value = '';
+    }));
+    ROOT.querySelectorAll('[data-semio-lightbox]').forEach((button) => button.addEventListener('click', () => {
+      const image = button.querySelector('img');
+      const src = image?.currentSrc || image?.src || button.dataset.semioLightbox;
+      if (!src) return;
+      const lightbox = document.createElement('div');
+      lightbox.className = 'semio-lightbox';
+      lightbox.innerHTML = `<button type="button" aria-label="Fechar imagem ampliada">×</button><img src="${esc(src)}" alt="${esc(image?.alt || 'Imagem clínica ampliada')}">`;
+      lightbox.addEventListener('click', (event) => { if (event.target === lightbox || event.target.closest('button')) lightbox.remove(); });
+      document.addEventListener('keydown', function closeSemioLightbox(event) { if (event.key === 'Escape') { lightbox.remove(); document.removeEventListener('keydown', closeSemioLightbox); } });
+      document.body.appendChild(lightbox);
     }));
     ROOT.querySelectorAll('[data-semio-remove-image]').forEach((button) => button.addEventListener('click', () => {
       const scope = ROOT.querySelector('[data-semio-image-scope]')?.dataset.semioImageScope;
@@ -1505,7 +1570,7 @@
     const s = document.createElement('style');
     s.id = 'semio-styles';
     s.textContent = `
-    .semio-wrap{--semio-acc:#2f7d6f;--semio-acc2:#1f5a50;max-width:1200px;margin:0 auto;width:100%}
+    .semio-wrap{--semio-acc:#1f675c;--semio-acc2:#164b44;--semio-cream:#f4f0e7;--semio-paper:#fffdf8;--semio-ink:#172526;max-width:none;margin:0;width:100%;min-width:0;color:var(--semio-ink)}
     .semio-muted{color:var(--muted,#667085);margin:4px 0 0}.semio-muted.sm{font-size:.82rem}
     .semio-eyebrow{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--semio-acc);font-weight:700}
     .semio-subnav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;position:sticky;top:0;background:var(--bg,#fff);padding:6px 0;z-index:2}
@@ -1556,6 +1621,9 @@
     .semio-fig{margin:12px 0;text-align:center}.semio-fig-svg{max-width:320px;width:100%;height:auto}
     .semio-fig figcaption{font-size:.8rem;color:var(--muted,#667085);margin-top:6px;text-align:left}
     .semio-fig-photo img{max-width:100%;width:auto;max-height:420px;border-radius:10px;border:1px solid var(--border,#cbd5e1);background:#fff}
+    .semio-image-button{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}.semio-image-button img{display:block;margin:0 auto}
+    .semio-atlas{margin:30px 0;border:1px solid #dbe4df;border-radius:16px;background:color-mix(in srgb,var(--semio-paper) 88%,#dceae4);overflow:hidden}.semio-atlas>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 20px;cursor:pointer;color:var(--semio-acc2)}.semio-atlas>summary::-webkit-details-marker{display:none}.semio-atlas>summary span b,.semio-atlas>summary span small{display:block}.semio-atlas>summary span b{font:700 1.05rem Georgia,serif}.semio-atlas>summary span small{font-size:.7rem;color:var(--muted,#667085);margin-top:4px}.semio-atlas>summary>i{width:30px;height:30px;border:1px solid #a8beb5;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:1.2rem;transition:transform .2s}.semio-atlas[open]>summary>i{transform:rotate(45deg)}.semio-atlas-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0 14px 16px;max-height:720px;overflow:auto}.semio-atlas-grid .semio-fig{margin:0;padding:8px;border:1px solid #e1e5e1;border-radius:11px;background:var(--semio-paper)}.semio-atlas-grid .semio-fig img{width:100%;height:170px;object-fit:contain;border:0}.semio-atlas-grid .semio-fig figcaption{text-align:center;font-size:.65rem;margin:6px 0 0}
+    .semio-lightbox{position:fixed;inset:0;z-index:3000;background:rgba(7,18,16,.94);display:grid;place-items:center;padding:30px;cursor:zoom-out}.semio-lightbox img{max-width:min(95vw,1500px);max-height:90vh;object-fit:contain;border-radius:8px;background:#fff}.semio-lightbox>button{position:fixed;right:22px;top:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:1.7rem;cursor:pointer}
     .semio-ph-box{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:120px;border:2px dashed var(--border,#cbd5e1);border-radius:10px;color:var(--muted,#667085);font-size:1.4rem;background:rgba(120,120,120,.05)}
     .semio-ph-box span{font-size:.78rem;font-weight:600}
     .semio-fig-placeholder figcaption{text-align:center}
@@ -1608,6 +1676,40 @@
     @media(max-width:640px){.semio-corpo{grid-template-columns:1fr}.semio-corpo-fig{position:static;max-width:200px;margin:0 auto}}
     .semio-focus .semio-callout,.semio-focus .semio-doc{opacity:1}
     @media(max-width:560px){.semio-grid3{grid-template-columns:1fr 1fr}.semio-cards{grid-template-columns:1fr}.semio-tbl td:first-child{white-space:normal}}
+
+    /* Nova experiência editorial de Semiologia */
+    .semio-wrap button,.semio-wrap label{font:inherit}
+    .semio-subnav-slot{position:sticky;top:0;z-index:20;margin:-4px 0 0}
+    .semio-topbar{min-height:70px;display:flex;align-items:center;gap:24px;padding:10px 24px;border:1px solid color-mix(in srgb,var(--semio-acc) 16%,transparent);border-radius:18px;background:color-mix(in srgb,var(--bg,#fff) 92%,transparent);box-shadow:0 12px 35px rgba(27,58,52,.08);backdrop-filter:blur(16px)}
+    .semio-brand{display:flex;align-items:center;gap:10px;border:0;background:transparent;color:var(--semio-ink);padding:0;cursor:pointer;flex:none;text-align:left}
+    .semio-brand-mark{width:38px;height:38px;border-radius:12px;background:var(--semio-acc);color:#fff;display:grid;place-items:center;font:700 1.35rem Georgia,serif;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+    .semio-brand small,.semio-brand b{display:block;line-height:1.05}.semio-brand small{text-transform:uppercase;letter-spacing:.13em;font-size:.58rem;color:var(--semio-acc);font-weight:800;margin-bottom:4px}.semio-brand b{font:700 1rem Georgia,serif}
+    .semio-subnav{display:flex;gap:4px;flex-wrap:nowrap;overflow-x:auto;margin:0;padding:2px;position:static;background:transparent;scrollbar-width:none;flex:1;justify-content:flex-start}
+    .semio-subnav::-webkit-scrollbar{display:none}.semio-sub{white-space:nowrap;border:0;background:transparent;color:var(--muted,#667085);padding:9px 11px;border-radius:9px;font-size:.79rem}.semio-sub:hover{color:var(--semio-acc);background:rgba(31,103,92,.07)}.semio-sub.on{background:rgba(31,103,92,.11);color:var(--semio-acc2);box-shadow:none}
+    .semio-body{min-width:0}.semio-view{width:100%;min-width:0}.semio-view:not(.is-reader){max-width:1240px;margin:0 auto;padding:28px 12px 50px}
+    .semio-eyebrow{font-size:.7rem;letter-spacing:.15em;color:var(--semio-acc);font-weight:800}
+
+    .semio-hero{min-height:480px;margin:0;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);align-items:center;gap:42px;padding:50px 58px;border-radius:28px;background:linear-gradient(135deg,#173e38 0%,#215f55 60%,#2f7569 100%);color:#fff;overflow:hidden;position:relative}
+    .semio-hero:before{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.09);border-radius:50%;left:-190px;bottom:-260px}
+    .semio-hero-copy{position:relative;z-index:1;max-width:650px}.semio-hero .semio-eyebrow{color:#c8d8ae}.semio-hero h1{font:500 clamp(2.7rem,5vw,5.1rem)/.96 Georgia,serif;letter-spacing:-.045em;margin:16px 0 22px}.semio-hero-copy>p{font-size:1.02rem;line-height:1.7;color:#dbe8e4;max-width:590px;margin:0}
+    .semio-hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.semio-btn{border-radius:11px;padding:10px 15px}.semio-btn-primary{background:#efe7d7;color:#183d38;border-color:#efe7d7}.semio-btn-primary:hover{background:#fff8e9}.semio-hero .semio-btn.ghost{border-color:rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.05)}
+    .semio-hero-art{height:390px;position:relative}.semio-art-main,.semio-art-small{position:absolute;overflow:hidden;border-radius:26px;border:7px solid rgba(255,255,255,.92);box-shadow:0 22px 50px rgba(4,25,21,.28);background:#e9eee9}.semio-art-main{inset:0 76px 38px 0;transform:rotate(-2deg)}.semio-art-small{width:42%;height:46%;right:2px;bottom:0;transform:rotate(4deg)}.semio-art-main img,.semio-art-small img{width:100%;height:100%;object-fit:cover}.semio-art-main img{object-position:center}.semio-art-small img{object-position:center 35%}
+    .semio-art-seal{position:absolute;right:3px;top:4px;width:105px;height:105px;border-radius:50%;display:grid;place-content:center;text-align:center;background:#cbd8aa;color:#173e38;box-shadow:0 12px 30px rgba(4,25,21,.22);transform:rotate(6deg)}.semio-art-seal strong{font:700 2rem/.9 Georgia,serif}.semio-art-seal span{font-size:.62rem;line-height:1.25;text-transform:uppercase;letter-spacing:.09em;margin-top:4px;font-weight:800}
+    .semio-progress-strip{display:grid;grid-template-columns:170px minmax(180px,1fr) auto;align-items:center;gap:24px;margin:18px 0 50px;padding:20px 28px;border-radius:17px;background:var(--semio-paper);border:1px solid #e6e0d5;box-shadow:0 10px 30px rgba(44,56,52,.05)}.semio-progress-copy span,.semio-progress-copy strong{display:block}.semio-progress-copy span{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted,#667085);font-weight:800}.semio-progress-copy strong{font:700 1.15rem Georgia,serif;margin-top:3px}.semio-progress-large{height:8px;margin:0;background:#e6e4dd}.semio-progress-large>div{background:linear-gradient(90deg,#1f675c,#6d9b84)}.semio-progress-metrics{display:flex;gap:20px;color:var(--muted,#667085);font-size:.75rem}.semio-progress-metrics strong{color:var(--semio-ink);font-size:.92rem}.semio-progress-metrics .is-due strong{color:#b04f2d}
+    .semio-home-section{margin:0 0 54px}.semio-section-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:20px}.semio-section-heading h2,.semio-catalog-head h1,.semio-topic-catalog-head h1{font-family:Georgia,serif;color:var(--semio-ink);letter-spacing:-.025em}.semio-section-heading h2{font-size:clamp(1.8rem,3vw,2.65rem);margin:7px 0 0}.semio-section-heading>p{max-width:410px;color:var(--muted,#667085);line-height:1.55;margin:0}.semio-text-link{border:0;background:none;color:var(--semio-acc);font-weight:800;cursor:pointer;white-space:nowrap}
+    .semio-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.semio-feature-card{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:14px;text-align:left;padding:20px;border:1px solid #e5e1d8;border-radius:16px;background:var(--semio-paper);color:var(--semio-ink);cursor:pointer;transition:transform .18s,border-color .18s,box-shadow .18s}.semio-feature-card:hover{transform:translateY(-2px);border-color:#94b5aa;box-shadow:0 12px 26px rgba(35,68,61,.08)}.semio-feature-card.is-wide{grid-column:span 2}.semio-feature-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#e1ece7;color:var(--semio-acc);font:700 .95rem Georgia,serif}.semio-feature-card b,.semio-feature-card small{display:block}.semio-feature-card b{font-size:.96rem}.semio-feature-card small{font-size:.75rem;color:var(--muted,#667085);margin-top:4px;line-height:1.4}.semio-feature-card>i{font-style:normal;color:var(--semio-acc);font-size:1.15rem}
+    .semio-module-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.semio-module-card{display:grid;grid-template-columns:150px 1fr;min-height:168px;padding:0;text-align:left;overflow:hidden;border:1px solid #e4ded2;border-radius:18px;background:var(--semio-paper);color:var(--semio-ink);cursor:pointer;transition:transform .18s,box-shadow .18s}.semio-module-card:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(40,62,56,.09)}.semio-module-cover{position:relative;min-height:168px;background:#dfe8e3}.semio-module-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(16,49,43,.56))}.semio-module-cover img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.semio-module-cover i{position:absolute;left:13px;bottom:11px;z-index:1;color:#fff;font:700 1.5rem Georgia,serif;font-style:normal}.semio-module-content{display:flex;flex-direction:column;padding:20px;min-width:0}.semio-module-content>small{text-transform:uppercase;letter-spacing:.12em;color:var(--semio-acc);font-size:.62rem;font-weight:800}.semio-module-content>b{font:700 1.12rem/1.2 Georgia,serif;margin:6px 0}.semio-module-content>span:not(.semio-module-progress){font-size:.73rem;color:var(--muted,#667085);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.semio-module-progress{height:4px;background:#e2e4df;border-radius:99px;overflow:hidden;margin:auto 0 5px}.semio-module-progress>span{height:100%;display:block;background:var(--semio-acc)}.semio-module-content>em{font-size:.65rem;color:var(--muted,#667085);font-style:normal}
+    .semio-catalog-head{padding:30px 5px 26px;max-width:740px}.semio-catalog-head h1{font-size:clamp(2.5rem,5vw,4.4rem);line-height:1;margin:10px 0 14px}.semio-catalog-head p{font-size:1rem;color:var(--muted,#667085);line-height:1.6}.semio-topic-catalog-head{min-height:310px;padding:32px 38px;margin-bottom:18px;border-radius:24px;display:flex;flex-direction:column;justify-content:end;color:#fff;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(17,52,46,.96),rgba(25,76,67,.72)),var(--semio-cover) center/cover}.semio-topic-catalog-head .semio-back-link{position:absolute;top:25px;left:30px;color:#fff}.semio-topic-catalog-head .semio-eyebrow{color:#cfdbb5}.semio-topic-catalog-head h1{color:#fff;font-size:clamp(2.2rem,5vw,4rem);max-width:760px;margin:9px 0}.semio-topic-catalog-head p{max-width:680px;color:#d9e5e1;margin:0 0 10px;line-height:1.5}.semio-topic-catalog-head>span:last-child{font-size:.72rem;color:#cfdbb5;font-weight:700}
+    .semio-back-link{border:0;background:transparent;padding:0;color:var(--semio-acc);font-size:.76rem;font-weight:800;cursor:pointer;text-align:left}.semio-topic-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.semio-topic-card{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;min-height:90px;text-align:left;padding:16px 18px;border:1px solid #e5e1d8;border-radius:15px;background:var(--semio-paper);color:var(--semio-ink);cursor:pointer}.semio-topic-card:hover{border-color:#91b2a7}.semio-topic-index{font:700 1.2rem Georgia,serif;color:#97a5a0}.semio-topic-card-copy small,.semio-topic-card-copy b{display:block}.semio-topic-card-copy small{font-size:.61rem;text-transform:uppercase;letter-spacing:.1em;color:var(--semio-acc);margin-bottom:4px}.semio-topic-card-copy b{font-size:.86rem;line-height:1.35}.semio-topic-card>i{font-style:normal;color:var(--semio-acc)}.semio-topic-card>i.is-done{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#dfece6}
+    .semio-view.is-reader{padding:18px 0 40px}.semio-reader-shell{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;max-width:1460px;margin:0 auto}.semio-reader-nav{position:sticky;top:92px;max-height:calc(100vh - 110px);overflow:auto;padding:24px;border:1px solid #e4e0d7;border-radius:18px;background:var(--semio-paper)}.semio-reader-nav>.semio-eyebrow{display:block;margin:28px 0 8px}.semio-reader-nav>h2{font:700 1.28rem/1.15 Georgia,serif;margin:0 0 20px}.semio-reader-topic-list{display:flex;flex-direction:column;gap:4px}.semio-reader-topic-list button{display:grid;grid-template-columns:25px 1fr auto;align-items:start;gap:9px;padding:10px 8px;border:0;border-radius:9px;text-align:left;background:transparent;color:var(--muted,#667085);cursor:pointer}.semio-reader-topic-list button:hover,.semio-reader-topic-list button.is-current{background:#e7efeb;color:var(--semio-acc2)}.semio-reader-topic-list button>span{width:22px;height:22px;border:1px solid #d3ddd8;border-radius:50%;display:grid;place-items:center;font-size:.62rem}.semio-reader-topic-list button>b{font-size:.72rem;line-height:1.35}.semio-reader-topic-list button>i{font-style:normal;color:var(--semio-acc)}
+    .semio-reader{border:1px solid #e4e0d7;border-radius:22px;background:var(--semio-paper);overflow:hidden;min-width:0}.semio-reader-head{min-height:245px;padding:50px clamp(34px,7vw,96px) 34px;border-bottom:1px solid #e6e1d7;display:flex;justify-content:space-between;align-items:start;gap:24px}.semio-reader-head h1{font:500 clamp(2.7rem,5vw,4.9rem)/.98 Georgia,serif;letter-spacing:-.045em;margin:15px 0;color:var(--semio-ink);max-width:850px}.semio-reader-head p{color:var(--muted,#667085);font-size:.85rem;margin:0}.semio-reader-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.semio-reader-actions .semio-btn{white-space:nowrap}.semio-flow{max-width:900px;margin:0 auto;padding:48px clamp(34px,6vw,76px) 38px;font-size:1.02rem;line-height:1.78;color:#243132}.semio-flow .semio-h{font:700 1.55rem/1.2 Georgia,serif;margin:32px 0 12px;color:var(--semio-acc2)}.semio-flow .semio-p{margin:0 0 19px}.semio-flow .semio-ul{margin:8px 0 22px}.semio-flow .semio-ul li{margin:8px 0}.semio-flow .semio-callout{padding:17px 19px;margin:23px 0;border-radius:14px}.semio-reader-footer{display:flex;justify-content:space-between;gap:14px;align-items:center;border-top:1px solid #e6e1d7;padding:22px clamp(34px,6vw,76px)}
+    .semio-reader-head h1{font-size:clamp(2.5rem,4vw,4.15rem)}
+    .semio-view:not(.semio-view-inicio):not(.semio-view-aulas)>.semio-topic-title:first-child{font:700 clamp(2rem,4vw,3.4rem) Georgia,serif;margin:22px 0 8px}.semio-view:not(.semio-view-inicio):not(.semio-view-aulas){max-width:1120px}
+    body.dark .semio-wrap{--semio-paper:#1b2524;--semio-ink:#edf4f1;--semio-cream:#16201f}.dark .semio-topbar,.dark .semio-module-card,.dark .semio-feature-card,.dark .semio-progress-strip,.dark .semio-reader,.dark .semio-reader-nav{border-color:#34413e}.dark .semio-hero{background:linear-gradient(135deg,#122b27,#1b4a42)}.dark .semio-module-progress,.dark .semio-progress-large{background:#35413f}.dark .semio-topic-catalog{color:#edf4f1}.dark .semio-flow{color:#dce6e2}
+    @media(max-width:1050px){.semio-topbar{display:block}.semio-brand{margin-bottom:8px}.semio-subnav{justify-content:flex-start}.semio-hero{grid-template-columns:1fr minmax(300px,.75fr);padding:42px}.semio-reader-shell{grid-template-columns:240px minmax(0,1fr)}.semio-reader-head{display:block}.semio-reader-actions{justify-content:flex-start;margin-top:22px}}
+    @media(max-width:780px){.semio-view:not(.is-reader){padding:18px 0 36px}.semio-topbar{border-radius:14px;padding:10px 14px}.semio-hero{grid-template-columns:1fr;min-height:auto;padding:42px 28px}.semio-hero-art{height:300px}.semio-progress-strip{grid-template-columns:1fr;gap:12px;margin-bottom:38px}.semio-progress-metrics{justify-content:space-between;flex-wrap:wrap}.semio-section-heading{display:block}.semio-section-heading>p{margin-top:10px}.semio-feature-grid,.semio-module-grid,.semio-topic-catalog{grid-template-columns:1fr}.semio-feature-card.is-wide{grid-column:auto}.semio-reader-shell{display:block}.semio-reader-nav{position:static;max-height:none;margin-bottom:12px;padding:18px}.semio-reader-nav>h2{margin-bottom:12px}.semio-reader-topic-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.semio-reader-head{min-height:0;padding:34px 26px}.semio-flow{padding:34px 26px;font-size:.98rem}.semio-reader-footer{padding:20px 26px}.semio-topic-catalog-head{padding:30px 26px}.semio-topic-catalog-head .semio-back-link{left:25px}.semio-module-card{grid-template-columns:125px 1fr}}
+    @media(max-width:520px){.semio-hero{padding:34px 22px}.semio-hero h1{font-size:2.55rem}.semio-hero-art{height:250px}.semio-art-main{right:45px}.semio-art-seal{width:82px;height:82px}.semio-progress-strip{padding:18px}.semio-progress-metrics{gap:10px}.semio-module-card{grid-template-columns:100px 1fr}.semio-module-content{padding:15px}.semio-module-content>span:not(.semio-module-progress){display:none}.semio-reader-topic-list{grid-template-columns:1fr}.semio-reader-head h1{font-size:2.45rem}.semio-reader-actions{display:grid}.semio-reader-footer{align-items:stretch;flex-direction:column-reverse}.semio-reader-footer .semio-btn{width:100%}}
+    @media(max-width:520px){.semio-atlas-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.semio-atlas-grid .semio-fig img{height:130px}}
     `;
     document.head.appendChild(s);
   }

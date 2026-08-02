@@ -43,9 +43,10 @@
     for (let i = de; i <= ate; i++) items.push({ src: `assets/semiologia-real/${pasta}/${i}.jpg`, cap: `Slide ${i}` });
     return IMGGRID(items);
   };
-  // As imagens das aulas são inseridas manualmente pelo estudante.
-  // Mantemos os blocos antigos sem renderizar para não exibir associações automáticas incorretas.
-  const foto = (pasta, n, cap) => ({ t: 'manualimg', cap });
+  const galeriaIds = (pasta, ...ids) => IMGGRID(ids.map((id) => ({ src: `assets/semiologia-real/${pasta}/${id}.jpg`, cap: `Slide ${id}` })));
+  // Imagem selecionada e posicionada no ponto exato da explicação correspondente.
+  // A interface resolve automaticamente se o arquivo da pasta é JPG ou PNG.
+  const foto = (pasta, n, cap) => IMG(`assets/semiologia-real/${pasta}/${n}.jpg`, cap);
 
   // --- alguns esquemas SVG didáticos reutilizáveis -------------------------
   const svgTorax = `<svg viewBox="0 0 320 250" xmlns="http://www.w3.org/2000/svg" class="semio-fig-svg">
@@ -123,6 +124,7 @@
             ),
             P('Encerre sempre verificando expectativas e preocupações ("O que mais te preocupa nisso?") e combinando o próximo passo. Muitas queixas importantes só aparecem na porta — a chamada "doorknob complaint" — justamente porque não houve espaço antes.'),
             WARN('Centralidade da pessoa: use linguagem não estigmatizante ("pessoa que usa álcool", não "alcoólatra"), respeite diversidade e adapte a consulta a deficiência, baixa escolaridade e diferenças culturais. A forma como você pergunta determina o que o paciente se sente seguro para contar.'),
+            galeria('aula-01-um-passeio-pelos-seculos', 12, 18),
           ],
         },
         {
@@ -140,6 +142,7 @@
             H('Segurança e controle de infecção'),
             P('Higienize as mãos antes e depois de cada contato (os "5 momentos" da OMS) e limpe o diafragma do estetoscópio entre pacientes — o estetoscópio carrega a mesma carga bacteriana da palma da mão. Posicione o paciente com segurança, previna quedas e interrompa qualquer manobra que cause dor não prevista.'),
             WARN('Limites do estudante: você reconhece sinais de gravidade e chama ajuda — não conduz sozinho instabilidade hemodinâmica, via aérea ameaçada, rebaixamento de consciência ou dor torácica de alto risco. Saber a hora de pedir supervisão é competência, não fraqueza.'),
+            galeria('aula-03-como-se-portar-no-hospital', 12, 13),
           ],
         },
         {
@@ -205,6 +208,7 @@
               'História social — moradia, trabalho, alimentação, sono, tabagismo, álcool, outras substâncias, sexualidade, viagens.'
             ),
             TIP('A "identificação" não é burocracia: idade, sexo e procedência já reordenam a lista de diagnósticos antes da primeira queixa. Dor no peito em homem de 60 anos tabagista ≠ dor no peito em mulher de 22 anos ansiosa — mesmo sintoma, probabilidades pré-teste opostas.'),
+            galeriaIds('anamnese-focada-oficial', 1, 2, 5, 6, 7, 8, 11),
           ],
         },
         {
@@ -226,6 +230,8 @@
             WARN('O que piora e o que melhora costuma ser o dado mais discriminativo de todos. Dor torácica que piora com esforço e alivia com repouso grita angina; que piora com a respiração sugere causa pleurítica/pericárdica; que piora à palpação aponta parede torácica. A mesma dor, três caminhos diferentes.'),
             H('Registro'),
             DOC('HMA (exemplo): "Paciente refere dor torácica retroesternal há 2 dias, em aperto, iniciada aos esforços e aliviada com repouso, irradiando para MSE, associada a sudorese, sem relação com respiração ou palpação. Nega febre. Episódios progressivamente mais frequentes."'),
+            galeria('aula-03-e-04-qpd-partes-1-e-2', 12, 17),
+            galeria('aula-07-hma-parte-3', 12, 15),
           ],
         },
         {
@@ -241,6 +247,7 @@
             ),
             TIP('Dor visceral "migra" e se localiza quando o peritônio parietal é atingido. O exemplo clássico é a apendicite: começa periumbilical (visceral, mal localizada) e migra para a fossa ilíaca direita (somática, bem localizada) quando inflama o peritônio local. Essa migração vale mais que qualquer manobra isolada.'),
             WARN('Red flags de dor que exigem atenção imediata: início súbito e máximo desde o começo (thunderclap na cefaleia → HSA; dor lombar "rasgando" → dissecção de aorta), dor desproporcional ao exame (isquemia mesentérica), dor + febre + rigidez, primeira dor intensa após os 50 anos, e dor que desperta do sono.'),
+            galeria('aula-09-semiologia-da-dor', 12, 18),
           ],
         },
         {
@@ -259,6 +266,8 @@
             ),
             TIP('Regra prática: aprofunde o sistema da queixa e faça uma varredura leve dos demais. Numa dispneia, esmiúce cardio e respiratório (ortopneia, DPN, tosse, edema) e apenas pincele o resto. Interrogatório completo não é perguntar tudo — é perguntar o que muda a conduta.'),
             WARN('Sintomas constitucionais (febre + perda de peso + sudorese noturna) são a tríade que sempre acende o alerta de neoplasia, tuberculose e doença sistêmica. Nunca os deixe passar como "cansaço".'),
+            galeria('aula-12-febre-online', 8, 36),
+            galeria('aula-13-dispneia-online', 8, 26),
           ],
         },
       ],

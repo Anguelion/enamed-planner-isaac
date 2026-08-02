@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v164';
+const CACHE_NAME = 'soqueromed-shell-v166';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -13,8 +13,8 @@ const APP_SHELL = [
   './assets/ecg-simulator.js?v=20260720-4',
   './assets/radiografia-aulas.js?v=20260719-2',
   './assets/radiografia.js?v=20260719-4',
-  './assets/semiologia-aulas.js?v=20260720-2',
-  './assets/semiologia.js?v=20260802-1',
+  './assets/semiologia-aulas.js?v=20260802-3',
+  './assets/semiologia.js?v=20260802-3',
   './assets/caso-do-dia.js?v=20260729-4',
   './assets/planner.js?v=20260802-8',
   './assets/icons/icon-192.png',
