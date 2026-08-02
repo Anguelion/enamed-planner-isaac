@@ -30,6 +30,20 @@ const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 for(const relative of ['assets/planner.css','assets/app-icons.js','assets/icons/phosphor-sprite.svg','assets/gamification.js','assets/planner-ux.js','assets/planner.js',...['fire','water','earth','air'].map(name=>`assets/rpg/element-${name}.svg`),...['aldeao','aprendiz','escudeiro','soldado','cavaleiro','capitao','barao','duque','rei','imperador'].map(name=>`assets/rpg/classes/${name}.png`)]) {
   if(!sw.includes(relative)) failures.push(`asset não versionado no service worker: ${relative}`);
 }
+// O service worker cacheia cada script/CSS com sua própria query "?v=..."; se essa
+// versão ficar desatualizada em relação ao index.html, o app instalado continua
+// servindo offline uma versão antiga do arquivo até o usuário limpar o cache — um
+// tipo de bug silencioso que já aconteceu aqui (ver docs/PROJECT_HANDOFF.md e o
+// histórico de auditoria). Falhar o build nesse caso obriga a versão do service
+// worker a andar junto com a do index.html a cada deploy.
+const versionedAssets=['assets/planner.css','assets/app-icons.js','assets/gamification.js','assets/planner-ux.js','assets/ecg-simulator.js','assets/radiografia-aulas.js','assets/radiografia.js','assets/semiologia-aulas.js','assets/semiologia.js','assets/caso-do-dia.js','assets/planner.js','question_bank/index.js'];
+for(const relative of versionedAssets) {
+  const htmlMatch=html.match(new RegExp(`${relative.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}(\\?v=[\\w-]+)?`));
+  const swMatch=sw.match(new RegExp(`\\./${relative.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}(\\?v=[\\w-]+)?`));
+  const htmlVersion=htmlMatch?.[1]||'';
+  const swVersion=swMatch?.[1]||'';
+  if(htmlVersion!==swVersion) failures.push(`versão divergente entre index.html e service-worker.js para ${relative}: html="${htmlVersion}" sw="${swVersion}"`);
+}
 const iconRuntime=fs.readFileSync(path.join(root,'assets/app-icons.js'),'utf8');
 if(/(?:unpkg|jsdelivr|iconify|https?:\/\/[^'" ]+\.(?:svg|js))/i.test(iconRuntime)) failures.push('sistema de ícones contém dependência externa de runtime');
 if(failures.length) {

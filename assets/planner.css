@@ -144,13 +144,6 @@ body.dark .daily-analysis-tile{background:linear-gradient(145deg,#182128,#18313a
 .hidden{display:none!important}
 .score-pill{display:inline-flex;border-radius:999px;padding:5px 8px;background:var(--soft-blue);color:var(--blue);font-weight:800;font-size:12px;margin-top:8px}
 .reschedule-note{border-left:4px solid var(--teal);padding:10px 12px;background:#eef8f8;border-radius:6px;color:#315154}
-.motivation-bar{width:100%;max-width:none;margin:0 auto;padding:0 clamp(18px,2.4vw,48px) 14px;color:#315154;font-weight:800}
-.motivation-pill{display:block;overflow:hidden;border:1px solid #cfe1df;background:#eef8f8;border-radius:8px;white-space:nowrap}
-.motivation-marquee{display:inline-block;padding:10px 12px 10px 100%;animation:motivation-marquee 34s linear infinite}
-.motivation-pill:hover .motivation-marquee{animation-play-state:paused}@keyframes motivation-marquee{from{transform:translateX(0)}
-to{transform:translateX(-100%)}
-}@media(prefers-reduced-motion:reduce){.motivation-marquee{animation:none;padding-left:12px;white-space:normal}
-}
 .pomodoro-card{border:1px solid var(--line);border-radius:8px;background:#fbfcf8;padding:14px;margin-top:14px}
 .global-daily-mission{position:relative;z-index:44}
 .daily-mission-trigger{display:flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 1px 0 rgba(18,63,89,.03)}
@@ -374,6 +367,14 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .backup-section{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding-top:10px;border-top:1px solid var(--line);min-width:0}
 .backup-section>strong{font-size:14px;color:var(--ink)}
 .backup-warning{padding:10px 12px;border-left:4px solid var(--amber);border-radius:6px;background:#fff8e5;color:#80610d;font-weight:700}
+.personal-backup-picker>summary{cursor:pointer;list-style:none}
+.personal-backup-picker>summary::-webkit-details-marker{display:none}
+.personal-backup-categories{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin-top:8px}
+.personal-backup-category{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface,#fff);cursor:pointer}
+.personal-backup-category input{margin-top:3px;width:16px;height:16px;flex:none;accent-color:var(--blue)}
+.personal-backup-category strong{display:block;font-size:13px}
+.personal-backup-category small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.personal-backup-note{font-size:12px;color:var(--muted)}
 .checkin-stamp{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900;color:var(--muted);background:#fff}
 .checkin-stamp.checked{border-color:var(--blue);color:var(--blue);background:var(--soft-blue)}
 .checkin-stamp.complete{border-color:var(--green);color:var(--green);background:#fff}
@@ -1300,7 +1301,7 @@ body.dark .reader-toc{background:rgba(24,31,40,.94)}
 .material-markdown{font-size:16px}
 }
 @media(max-width:820px){main{padding:14px 10px}
-.header-inner,.tabs,.motivation-bar{padding-left:12px;padding-right:12px}
+.header-inner,.tabs{padding-left:12px;padding-right:12px}
 .header-actions{overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}
 .sync-status{min-width:max-content}
 .card{padding:14px}
@@ -1336,7 +1337,7 @@ body.dark .reader-toc{background:rgba(24,31,40,.94)}
 }
 @media print{
 body,body:before{background:#fff!important;color:#111!important}
-.app-header,.header-actions,.tabs,.motivation-bar,button,input,select,textarea{display:none!important}
+.app-header,.header-actions,.tabs,button,input,select,textarea{display:none!important}
 main{display:block;max-width:none;padding:0}
 .view{display:none!important}.view.active{display:block!important}
 .card,.library-overview,.road-step{box-shadow:none!important;border:1px solid #bbb!important;break-inside:avoid}
@@ -1420,7 +1421,6 @@ body.dark .sidebar-toggle{background:#18313a;color:#8fd4e7}
   #syncText{display:none}
   .sync-status{padding:8px;min-height:38px;min-width:38px;justify-content:center}
   .header-inner{display:block;min-height:auto;padding:8px 10px}
-  .motivation-bar{padding-bottom:8px}
 }
 @media print{.app-sidebar{display:none!important}.app-header,main{margin-left:0!important;width:100%!important}}
 
@@ -1457,7 +1457,6 @@ body.sidebar-collapsed .sidebar-brand{grid-template-columns:48px;padding:18px 32
 body.sidebar-collapsed .app-sidebar .tab{min-height:52px}
 .app-header{background:rgba(255,255,255,.96);border-color:#e4e7ec}
 .header-inner{min-height:72px}.header-context strong{color:#16233c;font-size:16px}.header-context span{font-size:13px}
-.motivation-pill{border-color:#dce8f5;background:#f3f8ff;color:#37516c}
 main{padding:30px clamp(22px,2.5vw,48px);gap:22px}
 .view.active{gap:22px}
 .card{border-color:#e3e7ec;border-radius:12px;box-shadow:var(--shadow);padding:20px}
@@ -1827,7 +1826,6 @@ body.dark .header-context strong,
 body.dark .qbank-mode .section-title h2{color:#f2f7f5}
 body.dark .sidebar-brand-copy small,
 body.dark .header-context span{color:#a9b9b5}
-body.dark .motivation-pill{border-color:#355064;background:#172731;color:#d9ecf8}
 body.dark .qbank-mode .question-counts div,
 body.dark .qbank-mode .confidence-box{border-color:var(--test-line);background:#15191e;color:var(--test-text)}
 body.dark .qbank-mode .question-filter-panel{border-color:var(--test-line);background:#15191e}
@@ -2138,9 +2136,10 @@ body.dark .tab.active .tab-icon{background:#172331}
 }
 
 /* Dashboard density: mobile stays comfortable; desktop gets a true 12-column composition. */
-.dashboard-global-head{display:flex;align-items:flex-end;justify-content:flex-start;gap:32px;padding:2px 2px 0}
-.dashboard-global-head h1{margin:2px 0 0;font-size:clamp(24px,2vw,32px);line-height:1.1;letter-spacing:0}
-.dashboard-date-control{display:grid;grid-template-columns:auto minmax(170px,210px);align-items:center;gap:8px;color:var(--muted);font-size:13px;font-weight:800}
+.dashboard-global-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 20px;padding:2px 2px 0}
+.dashboard-greeting{min-width:0;flex:1 1 280px}
+.dashboard-global-head h1{margin:2px 0 0;font-size:clamp(20px,2vw,32px);line-height:1.25;letter-spacing:0;overflow-wrap:break-word}
+.dashboard-date-control{display:block;flex:0 0 auto;color:var(--muted);font-size:13px;font-weight:800}
 .dashboard-date-input-row{display:flex;align-items:center;gap:6px}
 .dashboard-date-input-row .input{flex:1;min-width:0}
 .dashboard-date-input-row .tiny-btn{flex:0 0 auto}
@@ -2212,17 +2211,12 @@ body.dark .tab.active .tab-icon{background:#172331}
   .header-inner{padding-top:9px;padding-bottom:9px}
   .header-context strong{font-size:17px}
   .header-context span{font-size:12px}
-  .motivation-bar{padding-bottom:7px}
-  .motivation-marquee{padding-top:7px;padding-bottom:7px}
 }
 @media(min-width:1600px){
   .app-header,main{max-width:1760px;margin-right:auto}
   main{padding-top:18px;padding-bottom:32px}
   .app-header{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,35%);align-items:center}
   .header-inner{padding-right:12px}
-  .motivation-bar{min-width:0;padding:7px 18px 7px 0}
-  .motivation-pill{width:100%}
-  .motivation-marquee{display:block;padding:7px 10px;overflow:hidden;text-overflow:ellipsis;animation:none}
   .dashboard-primary-column{grid-column:span 9}
   .dashboard-side-column{grid-column:span 3}
   .dashboard-road-region{grid-column:span 9}
@@ -2273,7 +2267,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   #painel .card{height:100%;padding:20px;overflow:hidden}
   .dashboard-global-head{align-items:center;min-height:64px}
   .dashboard-global-head h1{font-size:31px}
-  .dashboard-date-control{grid-template-columns:auto 190px;font-size:12px}
+  .dashboard-date-control{font-size:12px}
   .dashboard-date-control .input{min-height:40px}
   .dashboard-desktop-grid{gap:18px;align-items:stretch}
   .dashboard-desktop-grid>.continue-study-card,
@@ -2314,7 +2308,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-review-list small{grid-area:foot;font-size:11px}
   .dashboard-bars{height:156px;padding-top:4px}
   .dashboard-bars small{font-size:12px}
-  .gamification-card--compact .rank-character{width:76px;height:102px}
+  .gamification-card--compact .rank-character{width:130px;height:182px}
   .gamification-card--compact h2{font-size:20px}
   .gamification-card--compact .compact-xp{font-size:29px}
   .dashboard-recent-list{gap:2px}
@@ -2349,7 +2343,6 @@ body.dark .tab.active .tab-icon{background:#172331}
 }
 @media(max-width:620px){
   .dashboard-global-head{align-items:stretch;display:grid}
-  .dashboard-date-control{grid-template-columns:auto 1fr}
   .continue-study-card{grid-template-columns:auto minmax(0,1fr)}
   .continue-study-card>.icon-btn{grid-column:1/-1;width:100%}
   .dashboard-mood .mood-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -2388,12 +2381,14 @@ body.dark .tab.active .tab-icon{background:#172331}
 .dashboard-bars>div>span.show-value::after{content:attr(data-bar-value);position:absolute;left:50%;bottom:100%;transform:translateX(-50%);margin-bottom:6px;padding:3px 7px;border-radius:6px;background:var(--ink);color:#fff;font-size:11px;font-weight:700;white-space:nowrap;z-index:5}
 .dashboard-bars small{font-size:10px;color:var(--muted);text-transform:capitalize}
 .dashboard-bars>div.is-today>span{box-shadow:0 0 0 2px var(--blue),inset 0 0 0 1px var(--blue)}
-.gamification-card--compact{display:grid;align-content:start;gap:9px}
+.gamification-card--compact{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:14px}
+.gamification-compact-avatar{display:flex;justify-content:center;align-items:center}
+.gamification-compact-info{display:grid;align-content:start;gap:9px;min-width:0}
 .gamification-card--compact .section-title{align-items:center;margin:0}
-.gamification-card--compact .rank-character{width:52px;height:72px;object-fit:contain}
+.gamification-card--compact .rank-character{width:100px;height:140px;object-fit:contain}
 .gamification-card--compact h2{font-size:18px;line-height:1.2}
 .gamification-card--compact .compact-xp{font-size:25px;color:var(--blue)}
-.gamification-card--compact>.progress{height:9px}
+.gamification-compact-info>.progress{height:9px}
 .compact-rank-next{color:var(--muted);font-size:11px;line-height:1.35}
 .dashboard-recent-list{display:grid;gap:4px}
 .dashboard-recent-list>div{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:7px;padding:7px 0;border-bottom:1px solid var(--line)}
@@ -2447,7 +2442,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-desktop-grid>.continue-study-card>.icon-btn{width:100%;min-width:0}
   .dashboard-desktop-grid>.dashboard-mood .mood-btn{min-height:104px;padding:10px 7px}
   .dashboard-desktop-grid>.dashboard-mood .mood-btn small{font-size:12px}
-  .dashboard-desktop-grid>.gamification-card--compact .rank-character{width:76px;height:102px}
+  .dashboard-desktop-grid>.gamification-card--compact .rank-character{width:130px;height:182px}
   .dashboard-desktop-grid>.gamification-card--compact h2,
   .dashboard-desktop-grid>.gamification-card--compact .compact-xp{overflow-wrap:normal;word-break:normal}
   .dashboard-desktop-grid>.dashboard-review-card .dashboard-review-list>div{grid-template-columns:36px 42px minmax(0,1fr);grid-template-areas:'icon count label' 'icon count foot'}

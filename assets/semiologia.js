@@ -1059,11 +1059,19 @@
           return `<button class="semio-topic" data-manobra="${esc(m.id)}"><span>${esc(m.nome)}</span>${done ? '<i class="semio-check">✓</i>' : ''}</button>`;
         }).join('')}</div>`).join('')}`;
   }
+  const manobraImageKey = (m) => 'manobra:' + m.id;
   function manobraDetailHtml(m) {
+    const S = st();
+    const imageKey = manobraImageKey(m);
+    const hasCustomImages = Array.isArray(S.images?.[imageKey]) && S.images[imageKey].length > 0;
     return `<button class="semio-btn ghost sm" data-back-manobras>← Manobras</button>
-      <div class="semio-topic-head"><h2>${esc(m.nome)}</h2><span class="semio-tag">${esc(m.sistema)}</span></div>
-      ${MANOBRA_FIG[m.id] ? `<figure class="semio-sign-fig">${MANOBRA_FIG[m.id]}<figcaption>Esquema didático próprio</figcaption></figure>` : ''}
-      ${MANOBRA_FOTO[m.id] ? `<figure class="semio-fig semio-fig-photo"><img src="${esc(MANOBRA_FOTO[m.id].src)}" alt="${esc(MANOBRA_FOTO[m.id].cap)}" loading="lazy" onerror="${imgFallback}"/><figcaption>${esc(MANOBRA_FOTO[m.id].cap)}</figcaption></figure>` : ''}
+      <div class="semio-topic-head"><h2>${esc(m.nome)}</h2><span class="semio-tag">${esc(m.sistema)}</span>
+        <div class="semio-topic-tools"><label class="semio-btn ghost sm" title="Adicionar imagem à manobra">🖼️ Adicionar imagem<input type="file" accept="image/*" data-semio-image-input="${esc(imageKey)}" hidden></label></div>
+      </div>
+      <div data-semio-image-scope="${esc(imageKey)}">${aulaImagesHtml(S, imageKey)}
+      ${!hasCustomImages && MANOBRA_FIG[m.id] ? `<figure class="semio-sign-fig">${MANOBRA_FIG[m.id]}<figcaption>Esquema didático próprio</figcaption></figure>` : ''}
+      ${!hasCustomImages && MANOBRA_FOTO[m.id] ? `<figure class="semio-fig semio-fig-photo"><img src="${esc(MANOBRA_FOTO[m.id].src)}" alt="${esc(MANOBRA_FOTO[m.id].cap)}" loading="lazy" onerror="${imgFallback}"/><figcaption>${esc(MANOBRA_FOTO[m.id].cap)}</figcaption></figure>` : ''}
+      <p class="semio-image-help">Cole uma imagem com Ctrl+V ou use "Adicionar imagem" para trocar o esquema padrão pela sua própria foto ou ilustração.</p></div>
       <div class="semio-def"><b>Finalidade</b><p>${esc(m.finalidade)}</p></div>
       <div class="semio-def"><b>Quando fazer</b><p>${esc(m.quando)}</p></div>
       <div class="semio-def"><b>Execução</b><p>${esc(m.execucao)}</p></div>

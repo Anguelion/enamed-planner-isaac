@@ -15,6 +15,11 @@ const QUESTION_IMPORT_DRAFT_KEY = 'soqueromed-question-import-draft';
 const LOCAL_BACKUPS_KEY = 'soqueromed-local-backups-v1';
 const LOCAL_BACKUP_LIMIT = 12;
 const AUTO_BACKUP_RETENTION_DAYS = 7;
+// O backup diário automático (feito ao virar o dia de estudo, 5h) precisa sobreviver
+// pelo menos esse tempo mesmo que uma rajada de backups manuais/de segurança aconteça
+// no mesmo dia — sem essa proteção, o corte por quantidade (LOCAL_BACKUP_LIMIT) podia
+// derrubar o backup do dia antes mesmo de ele completar 24h.
+const DAILY_BACKUP_PROTECT_DAYS = 2;
 const R2_VIDEO_BASE_URL = 'https://pub-61c30ac3d3724992b527355137d4faa5.r2.dev';
 
 // Apps instalados (PWA/WebAPK) no Android às vezes restauram a página antiga
@@ -152,10 +157,6 @@ let lastSyncConflictAt = 0;
 let syncConflictCount = 0;
 let timerAuditInterval = null;
 let syncTelemetry = { pushCount: 0, pullCount: 0, mergeCount: 0, errorCount: 0, lastPushAt: 0, lastPullAt: 0 };
-let autoSyncTestInterval = null;
-let lastAutoSyncTest = 0;
-const TELEMETRY_HISTORY_KEY = 'enamed-sync-telemetry-history';
-const TELEMETRY_HISTORY_LIMIT = 100;
 let autoRecoveryInterval = null;
 let offlineStartedAt = 0;
 let cloudBackups = [];
@@ -403,28 +404,6 @@ function ensureRestartFromBlockTen() {
   state.schedulePlanVersion = version;
   writeLocalState();
 }
-function carryDayLogsToRestartDates(dateMoves) {
-  if(!Array.isArray(state.dayLogs) || !dateMoves?.size) return;
-  dateMoves.forEach((newDate, oldDate) => {
-    const oldLog = state.dayLogs.find(log => log.date === oldDate);
-    if(!oldLog) return;
-    let newLog = state.dayLogs.find(log => log.date === newDate);
-    if(!newLog) {
-      newLog = defaultDayLog(newDate);
-      state.dayLogs.push(newLog);
-    }
-    ['flashcards','flashcardMinutes','videos','lessonMinutes','questions','correct','wrong','questionMinutes'].forEach(field => {
-      if(n(oldLog[field]) && !n(newLog[field])) newLog[field] = oldLog[field];
-    });
-    ['flashcardsOn','videosOn','questionsOn'].forEach(field => {
-      if(oldLog[field] && !newLog[field]) newLog[field] = oldLog[field];
-    });
-    ['videoNames','notes','pace'].forEach(field => {
-      if(oldLog[field] && !newLog[field]) newLog[field] = oldLog[field];
-    });
-    if(n(oldLog.mood) && !n(newLog.mood)) newLog.mood = oldLog.mood;
-  });
-}
 // Passe completo de normalização do estado. É caro: com o cronograma e o banco
 // de questões carregados, reconcileCompletedBlockXP sozinho leva ~25 ms.
 var lastStateNormalizeAt = 0;
@@ -604,6 +583,14 @@ const TOPIC_ALIASES = {
   'trauma conceitos iniciais atls': 'trauma conceitos iniciais e atendimento inicial ao trauma atls',
   'introducao ao sist reprodutor feminino': 'introducao ao sistema reprodutor feminino',
   'avaliacao das anemias': 'avaliacao do hemograma e anemias',
+  'purpura trombocitopenica imune': 'avaliacao do hemograma e anemias',
+  'anemia de doenca cronica': 'avaliacao do hemograma e anemias',
+  'anemia e hemotransfusao': 'avaliacao do hemograma e anemias',
+  'anemia ferropriva': 'avaliacao do hemograma e anemias',
+  'anemia hemolitica autoimune': 'avaliacao do hemograma e anemias',
+  'deficiencia de vitamina b12': 'avaliacao do hemograma e anemias',
+  'hiperferritinemia': 'avaliacao do hemograma e anemias',
+  'pancitopenia': 'avaliacao do hemograma e anemias',
   'cofbasics vitalidade fetal': 'cofbasics avaliacao de vitalidade fetal g o',
   'atls letra e e politrauma': 'atls letra e e seguimento do tratamento do politrauma',
   'diabetes diagnostico e abordagem ambulatorial': 'diabetes diagnostico e abordagem laboratorial',
@@ -669,7 +656,6 @@ const VIDEO_SCHEDULE_OVERRIDES = {
   '18:cofbasics propedeutica em uroginecologia': { block:18, order:8 }
 };
 function priorityClass(priority='') { return `priority-${normalizedTopic(priority) || 'baixa'}`; }
-function priorityBar(item) { return `<span class="schedule-priority-bar ${priorityClass(item.priority)}" title="Prioridade ${escapeAttr(item.priority || 'Baixa')}"></span>`; }
 function priorityLegend() {
   const items = [['alta','Alta'],['media','Média'],['baixa','Baixa']];
   return `<div class="priority-legend muted">Prioridade: ${items.map(([cls,label])=>`<span class="priority-legend-item"><span class="priority-legend-dot priority-${cls}"></span>${label}</span>`).join('')}</div>`;
@@ -1266,16 +1252,33 @@ function mergeRecordsById(remoteRecords, localRecords, preferLocal=false) {
     });
   return [...records.values()].map(({record}) => record);
 }
+// O backup diário (reason:'daily') não entra na disputa por espaço do corte por
+// quantidade enquanto estiver dentro da janela de proteção — só backups
+// manuais/de segurança são cortados quando o total passa de LOCAL_BACKUP_LIMIT.
+// Depois da janela, quem decide se ele fica ou sai é maintainDailyLocalBackup
+// (retenção por dias, um por dia).
+function capBackupList(list) {
+  const protectMs = DAILY_BACKUP_PROTECT_DAYS * 24 * 60 * 60 * 1000;
+  const now = Date.now();
+  const protectedDaily = [];
+  const rest = [];
+  (list || []).forEach(item => {
+    const isProtected = item?.reason === 'daily' && (now - (Date.parse(item.created_at || '') || 0)) < protectMs;
+    (isProtected ? protectedDaily : rest).push(item);
+  });
+  return [...protectedDaily, ...rest.slice(0, Math.max(0, LOCAL_BACKUP_LIMIT - protectedDaily.length))]
+    .sort((a,b) => (Date.parse(b.created_at || '') || 0) - (Date.parse(a.created_at || '') || 0));
+}
 function loadLocalBackups() {
   try {
     const backups = JSON.parse(localStorage.getItem(LOCAL_BACKUPS_KEY) || '[]');
-    return Array.isArray(backups) ? backups.filter(item => item?.id && item?.data).slice(0, LOCAL_BACKUP_LIMIT) : [];
+    return Array.isArray(backups) ? capBackupList(backups.filter(item => item?.id && item?.data)) : [];
   } catch(error) {
     return [];
   }
 }
 function saveLocalBackups() {
-  let backups = localBackups.slice(0, LOCAL_BACKUP_LIMIT);
+  let backups = capBackupList(localBackups);
   while(backups.length) {
     try {
       localStorage.setItem(LOCAL_BACKUPS_KEY, JSON.stringify(backups));
@@ -1292,7 +1295,7 @@ function saveLocalBackups() {
 function createLocalBackup(label='', {silent=false, reason='manual'}={}) {
   const payload = fullPlannerBackup();
   const createdAt = payload.backupInfo.exportedAt;
-  localBackups = [
+  localBackups = capBackupList([
     {
       id:`local-backup-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,
       label:String(label || '').trim() || `Backup local de ${backupDateTime(createdAt)}`,
@@ -1301,7 +1304,7 @@ function createLocalBackup(label='', {silent=false, reason='manual'}={}) {
       data:payload
     },
     ...localBackups
-  ].slice(0, LOCAL_BACKUP_LIMIT);
+  ]);
   saveLocalBackups();
   if(!silent) showStudyToast('Backup local salvo neste aparelho.');
   if(ui.tab === 'ferramentas') renderFerramentas();
@@ -1443,6 +1446,10 @@ async function pushCloudState(opts) {
 }
 async function pushCloudStateImpl({skipRemoteMerge=false}={}) {
   if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
+  // Garante que o backup automático do dia de estudo já existe antes de qualquer
+  // sincronização nova poder sobrescrever o estado local (idempotente: só cria se
+  // ainda não existir um para o dia de estudo atual).
+  maintainDailyLocalBackup();
   if(syncInFlight) {
     clearTimeout(syncTimer);
     syncTimer = setTimeout(() => pushCloudState({skipRemoteMerge}), 700);
@@ -1513,6 +1520,7 @@ function isEditingTextField() {
 }
 async function pullCloudState({ firstLogin=false }={}) {
   if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
+  maintainDailyLocalBackup();
   if(!firstLogin && isEditingTextField()) return;
   if(cloudDirty && !firstLogin) {
     await pushCloudState();
@@ -1601,10 +1609,15 @@ async function pullRemoteUpdateNow() {
   showStudyToast('Dados mais recentes da nuvem foram puxados para este aparelho.');
   if(ui.tab === 'ferramentas') renderFerramentas();
 }
+// Sincronização real (puxar/mesclar) é só manual (botões Enviar/Receber) — isso não
+// muda. Mas sem nenhum aviso, o aparelho nunca fica sabendo que a nuvem tem algo mais
+// novo. checkForRemoteUpdate só lê o updated_at (sem mesclar, sem gravar nada) e
+// acende o indicador "Nova versão" — quem decide puxar continua sendo a pessoa.
 function startCloudSyncPolling() {
-  // Sincronização agora é só manual (botões Enviar/Receber) — sem polling em segundo plano.
   if(cloudSyncPoll) clearInterval(cloudSyncPoll);
   if(cloudPushPoll) clearInterval(cloudPushPoll);
+  checkForRemoteUpdate();
+  cloudSyncPoll = setInterval(checkForRemoteUpdate, 5 * 60 * 1000);
 }
 function fullPlannerBackup() {
   checkpointAutoStudyTime(true);
@@ -1617,18 +1630,95 @@ function fullPlannerBackup() {
   };
   return backup;
 }
-function downloadPlannerBackupFile() {
-  const backup = fullPlannerBackup();
-  const blob = new Blob([JSON.stringify(backup, null, 2)], {type:'application/json'});
+function downloadBackupPayload(payload, filename) {
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'});
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = `backup-soqueromed-${localISODate(new Date())}.json`;
+  link.download = filename;
   document.body.append(link);
   link.click();
   link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 0);
+}
+function downloadPlannerBackupFile() {
+  downloadBackupPayload(fullPlannerBackup(), `backup-soqueromed-${localISODate(new Date())}.json`);
   showStudyToast('Backup completo salvo no computador.');
+}
+// Categorias do backup manual e seletivo (diferente dos automáticos, que são sempre
+// completos): a pessoa escolhe o que exportar. Caderno de erros sozinho extrai só a
+// reflexão escrita em cada questão (sem a resposta em si); marcando Questões junto, o
+// registro completo (com resposta) já cobre tudo.
+const PERSONAL_BACKUP_CATEGORIES = [
+  {id:'hours', label:'Horas estudadas', hint:'Registros diários de tempo e sessões de estudo'},
+  {id:'questions', label:'Questões', hint:'Respostas, edições e flashcards vinculados às questões'},
+  {id:'caderno', label:'Caderno de erros', hint:'Anotações e revisões — sem as respostas, se "Questões" não estiver marcado'},
+  {id:'flashcards', label:'Flashcards', hint:'Biblioteca de flashcards e flashcards de vídeo-aula'},
+  {id:'videos', label:'Vídeo-aulas', hint:'Aulas assistidas, posição, marcadores e favoritos'},
+  {id:'simulados', label:'Simulados', hint:'Tentativas e resumos de simulados realizados'}
+];
+function questionProgressForCaderno(progress) {
+  const out = {};
+  Object.entries(progress || {}).forEach(([id, record]) => {
+    const hasReflection = record && (record.notes || record.preReasoning || record.postLearning || record.correctiveRule || record.missReason || record.nextReview || n(record.reviewCount));
+    if(!hasReflection) return;
+    out[id] = {
+      notes: record.notes || '', preReasoning: record.preReasoning || '', postLearning: record.postLearning || '',
+      correctiveRule: record.correctiveRule || '', missReason: record.missReason || '', nextReview: record.nextReview || '',
+      reviewCount: n(record.reviewCount), confidence: n(record.confidence)
+    };
+  });
+  return out;
+}
+function personalPlannerBackup(selectedIds) {
+  checkpointAutoStudyTime(true);
+  const ids = new Set(selectedIds || []);
+  // O cronograma sempre entra: sem ele o arquivo não passa na validação de
+  // "Restaurar do PC" (que exige schedule não-vazio) e fica sem contexto nenhum.
+  const backup = { schedule: structuredClone(state.schedule || []) };
+  if(ids.has('hours')) {
+    backup.dayLogs = structuredClone(state.dayLogs || []);
+    backup.studySessions = structuredClone(state.studySessions || []);
+  }
+  if(ids.has('questions')) {
+    ['questionProgress','questionProgressDeleted','questionEdits','questionFlashcards','questionLogged','deletedQuestions','importedQuestionTags'].forEach(key => {
+      backup[key] = structuredClone(state[key] || {});
+    });
+    backup.importedQuestions = structuredClone(state.importedQuestions || []);
+  } else if(ids.has('caderno')) {
+    backup.questionProgress = questionProgressForCaderno(state.questionProgress);
+  }
+  if(ids.has('flashcards')) {
+    backup.flashcardLibrary = structuredClone(state.flashcardLibrary || []);
+    backup.flashcardSystem = structuredClone(state.flashcardSystem || {});
+    backup.flashcardProgress = structuredClone(state.flashcardProgress || {});
+    backup.videoFlashcards = structuredClone(state.videoFlashcards || {});
+  }
+  if(ids.has('videos')) backup.videoPlayer = structuredClone(state.videoPlayer || {});
+  if(ids.has('simulados')) {
+    backup.simuladoRuns = structuredClone(state.simuladoRuns || []);
+    backup.simulados = structuredClone(state.simulados || []);
+  }
+  backup.backupInfo = {
+    format:'soqueromed-pessoal',
+    version:1,
+    exportedAt:new Date().toISOString(),
+    categories:[...ids],
+    includes: PERSONAL_BACKUP_CATEGORIES.filter(category => ids.has(category.id)).map(category => category.label)
+  };
+  return backup;
+}
+function downloadPersonalBackupFile() {
+  const checked = [...document.querySelectorAll('[data-personal-backup-category]:checked')].map(input => input.dataset.personalBackupCategory);
+  if(!checked.length) { showStudyToast('Marque ao menos uma categoria para baixar.'); return; }
+  downloadBackupPayload(personalPlannerBackup(checked), `backup-soqueromed-pessoal-${localISODate(new Date())}.json`);
+  showStudyToast('Backup personalizado salvo no computador.');
+}
+function downloadLocalBackupFile(id) {
+  const item = localBackups.find(backup => backup.id === id);
+  if(!item?.data) { showStudyToast('Não encontrei esse backup para baixar.'); return; }
+  downloadBackupPayload(item.data, `backup-soqueromed-${localISODate(new Date(item.created_at || Date.now()))}-${item.id.slice(-6)}.json`);
+  showStudyToast('Backup salvo no computador.');
 }
 function restorePlannerBackupFile(file) {
   if(!file) return;
@@ -1663,6 +1753,10 @@ function restorePlannerBackupFileReplace(file) {
     try {
       const imported = JSON.parse(String(reader.result || ''));
       if(!imported || typeof imported !== 'object' || !Array.isArray(imported.schedule) || !imported.schedule.length) throw new Error('Backup sem cronograma');
+      if(imported.backupInfo?.format === 'soqueromed-pessoal') {
+        alert('Este é um backup personalizado (só algumas categorias) — substituir tudo apagaria o resto do seu estudo. Use "Restaurar do PC" (mesclar) em vez disso.');
+        return;
+      }
       if(!confirm('Substituir TUDO neste aparelho por este arquivo de backup, sem mesclar? Uma cópia do estado atual será salva antes.')) return;
       createSafetyLocalBackup('antes de substituir tudo pelo arquivo do PC');
       allowLargeProgressDrop = true;
@@ -1780,7 +1874,7 @@ async function deleteCloudBackup(id) {
 function renderCloudBackupCard() {
   const online = Boolean(currentUser && sbClient);
   const localBody = localBackups.length
-    ? `<div class="cloud-backup-list">${localBackups.map(item => `<div class="cloud-backup-row"><div><strong>${escapeHtml(item.label || 'Backup local')}</strong><small>${backupDateTime(item.created_at)} · neste aparelho</small></div><div class="cloud-backup-actions"><button class="tiny-btn" data-restore-local-backup="${escapeAttr(item.id)}">Restaurar</button><button class="icon-btn danger" title="Excluir backup local" data-delete-local-backup="${escapeAttr(item.id)}">${iconSvg('delete',{weight:'regular'})}</button></div></div>`).join('')}</div>`
+    ? `<div class="cloud-backup-list">${localBackups.map(item => `<div class="cloud-backup-row"><div><strong>${escapeHtml(item.label || 'Backup local')}</strong><small>${backupDateTime(item.created_at)} · neste aparelho</small></div><div class="cloud-backup-actions"><button class="tiny-btn" data-restore-local-backup="${escapeAttr(item.id)}">Restaurar</button><button class="icon-btn" title="Baixar este backup para o PC" data-download-local-backup="${escapeAttr(item.id)}">${iconSvg('download',{weight:'regular'})}</button><button class="icon-btn danger" title="Excluir backup local" data-delete-local-backup="${escapeAttr(item.id)}">${iconSvg('delete',{weight:'regular'})}</button></div></div>`).join('')}</div>`
     : '<div class="muted">Ainda não há backups locais neste aparelho.</div>';
   const body = !online
     ? '<div class="muted">Entre na conta para sincronizar e usar cópias de segurança entre PC, tablet e celular.</div>'
@@ -1791,7 +1885,8 @@ function renderCloudBackupCard() {
         : cloudBackups.length
           ? `<div class="cloud-backup-list">${cloudBackups.map(item => `<div class="cloud-backup-row"><div><strong>${escapeHtml(item.label || 'Backup sem nome')}</strong><small>${backupDateTime(item.created_at)}</small></div><div class="cloud-backup-actions"><button class="tiny-btn" data-restore-cloud-backup="${escapeAttr(item.id)}">Restaurar</button><button class="icon-btn danger" title="Excluir backup" data-delete-cloud-backup="${escapeAttr(item.id)}">${iconSvg('delete',{weight:'regular'})}</button></div></div>`).join('')}</div>`
           : '<div class="muted">Ainda não há backups na nuvem.</div>';
-  return `<div class="card cloud-backup-card"><div class="section-title"><div><h2>Sincronização e backups</h2><div class="muted">O estudo salva automaticamente; crie cópias recuperáveis quando quiser.</div></div><span class="backup-status ${online?'online':'offline'}">${online?'Conta conectada':'Somente local'}</span></div><div class="cloud-backup-controls"><input class="input" id="cloudBackupLabel" maxlength="80" placeholder="Nome opcional do backup"><button class="icon-btn" id="syncNowBtn" type="button">${iconSvg('history')}<span>Sincronizar agora</span></button><button class="icon-btn" id="forcePushCloudBtn" type="button">${iconSvg('upload')}<span>Enviar</span></button><button class="icon-btn" id="receiveCloudBtn" type="button">${iconSvg('download')}<span>Receber</span></button><button class="icon-btn primary" id="createCloudBackup" type="button">${iconSvg('save')}<span>Salvar backup</span></button><button class="icon-btn" id="downloadBackupPcBtn" type="button">${iconSvg('download')}<span>Baixar no PC</span></button><button class="icon-btn" id="chooseBackupPcBtn" type="button">${iconSvg('upload')}<span>Restaurar do PC</span></button><input class="hidden" id="backupImportPcInput" type="file" accept=".json,application/json"><button class="icon-btn danger" id="chooseBackupPcReplaceBtn" type="button">${iconSvg('upload')}<span>Restaurar do PC (substituir tudo)</span></button><input class="hidden" id="backupImportPcReplaceInput" type="file" accept=".json,application/json"></div><div class="backup-section"><strong>Backups locais</strong>${localBody}</div><div class="backup-section"><strong>Backups na nuvem</strong>${body}</div></div>`;
+  const personalBackupPicker = `<details class="backup-section personal-backup-picker"><summary class="tiny-btn">Backup personalizado (escolher o que baixar)</summary><div class="personal-backup-categories">${PERSONAL_BACKUP_CATEGORIES.map(category => `<label class="personal-backup-category"><input type="checkbox" data-personal-backup-category="${category.id}" checked><span><strong>${escapeHtml(category.label)}</strong><small>${escapeHtml(category.hint)}</small></span></label>`).join('')}</div><div class="personal-backup-note">O cronograma (datas e temas) sempre entra no arquivo, para ele ficar válido. Desmarque só as categorias que não quiser levar.</div><button class="icon-btn primary" id="downloadPersonalBackupBtn" type="button">${iconSvg('download')}<span>Baixar selecionados</span></button></details>`;
+  return `<div class="card cloud-backup-card"><div class="section-title"><div><h2>Sincronização e backups</h2><div class="muted">O estudo salva automaticamente; crie cópias recuperáveis quando quiser.</div></div><span class="backup-status ${online?'online':'offline'}">${online?'Conta conectada':'Somente local'}</span></div><div class="cloud-backup-controls"><input class="input" id="cloudBackupLabel" maxlength="80" placeholder="Nome opcional do backup"><button class="icon-btn" id="syncNowBtn" type="button">${iconSvg('history')}<span>Sincronizar agora</span></button><button class="icon-btn" id="forcePushCloudBtn" type="button">${iconSvg('upload')}<span>Enviar</span></button><button class="icon-btn" id="receiveCloudBtn" type="button">${iconSvg('download')}<span>Receber</span></button><button class="icon-btn primary" id="createCloudBackup" type="button">${iconSvg('save')}<span>Salvar backup</span></button><button class="icon-btn" id="downloadBackupPcBtn" type="button">${iconSvg('download')}<span>Baixar no PC</span></button><button class="icon-btn" id="chooseBackupPcBtn" type="button">${iconSvg('upload')}<span>Restaurar do PC</span></button><input class="hidden" id="backupImportPcInput" type="file" accept=".json,application/json"><button class="icon-btn danger" id="chooseBackupPcReplaceBtn" type="button">${iconSvg('upload')}<span>Restaurar do PC (substituir tudo)</span></button><input class="hidden" id="backupImportPcReplaceInput" type="file" accept=".json,application/json"></div>${personalBackupPicker}<div class="backup-section"><strong>Backups locais</strong>${localBody}</div><div class="backup-section"><strong>Backups na nuvem</strong>${body}</div></div>`;
 }
 function bindCloudBackupCard() {
   document.getElementById('syncNowBtn')?.addEventListener('click', forcePlannerSync);
@@ -1803,6 +1898,7 @@ function bindCloudBackupCard() {
   });
   document.getElementById('createCloudBackup')?.addEventListener('click', () => createCloudBackup(document.getElementById('cloudBackupLabel')?.value));
   document.getElementById('downloadBackupPcBtn')?.addEventListener('click', downloadPlannerBackupFile);
+  document.getElementById('downloadPersonalBackupBtn')?.addEventListener('click', downloadPersonalBackupFile);
   document.getElementById('chooseBackupPcBtn')?.addEventListener('click', () => document.getElementById('backupImportPcInput')?.click());
   document.getElementById('backupImportPcInput')?.addEventListener('change', event => {
     restorePlannerBackupFile(event.target.files?.[0]);
@@ -1816,6 +1912,7 @@ function bindCloudBackupCard() {
   document.querySelectorAll('[data-restore-cloud-backup]').forEach(button => button.addEventListener('click', event => restoreCloudBackup(event.currentTarget.dataset.restoreCloudBackup)));
   document.querySelectorAll('[data-delete-cloud-backup]').forEach(button => button.addEventListener('click', event => deleteCloudBackup(event.currentTarget.dataset.deleteCloudBackup)));
   document.querySelectorAll('[data-restore-local-backup]').forEach(button => button.addEventListener('click', event => restoreLocalBackup(event.currentTarget.dataset.restoreLocalBackup)));
+  document.querySelectorAll('[data-download-local-backup]').forEach(button => button.addEventListener('click', event => downloadLocalBackupFile(event.currentTarget.dataset.downloadLocalBackup)));
   document.querySelectorAll('[data-delete-local-backup]').forEach(button => button.addEventListener('click', event => deleteLocalBackup(event.currentTarget.dataset.deleteLocalBackup)));
   if(currentUser && !cloudBackupsReady && !cloudBackupsLoading && !cloudBackupsError) loadCloudBackups().then(() => { if(ui.tab === 'ferramentas') renderFerramentas(); });
 }
@@ -2864,6 +2961,26 @@ function motivationPeriod(hour) {
   if(hour >= 19 && hour < 22) return 'night';
   return 'rest';
 }
+const GREETING_BY_PERIOD = {
+  morning:["Bom dia, Isaac! Vai começar a luta?","Bom dia, Isaac! Bora atacar o cronograma de hoje.","Bom dia, Isaac! Café tomado, hora de estudar."],
+  afternoon:["Boa tarde, Isaac! Como está indo o estudo hoje?","Boa tarde, Isaac! Ainda dá tempo de fechar mais um bloco.","Boa tarde, Isaac! Bora manter o ritmo."],
+  evening:["Boa noite, Isaac! Ainda dá tempo de revisar mais um pouco.","Boa noite, Isaac! Fecha o dia com uma revisão rápida?","Boa noite, Isaac! Reta final do dia de estudos."],
+  lateNight:["Boa noite, Isaac. Alguém está acordado até tarde estudando...","Isaac, já é tarde — vale a pena descansar também.","Boa madrugada, Isaac. Sua dedicação não passa despercebida."]
+};
+function greetingPeriod(hour) {
+  if(hour >= 5 && hour < 12) return 'morning';
+  if(hour >= 12 && hour < 18) return 'afternoon';
+  if(hour >= 18 && hour < 23) return 'evening';
+  return 'lateNight';
+}
+function greetingMessage() {
+  const now = new Date();
+  const period = greetingPeriod(now.getHours());
+  const messages = GREETING_BY_PERIOD[period] || GREETING_BY_PERIOD.morning;
+  const slot = Math.floor(now.getTime() / (30 * 60 * 1000));
+  const periodSeed = [...period].reduce((sum, letter) => sum + letter.charCodeAt(0), 0);
+  return messages[(slot * 37 + periodSeed) % messages.length];
+}
 function motivationMessage() {
   const now = new Date();
   const period = motivationPeriod(now.getHours());
@@ -2890,12 +3007,6 @@ function startMotivationCycle() {
     if(motivationKey() !== motivationRenderedKey) renderMotivation();
   }, 30000);
 }
-function stopMotivationCycle() {
-  if(motivationRefreshInterval) {
-    clearInterval(motivationRefreshInterval);
-    motivationRefreshInterval = null;
-  }
-}
 function validatePlannerStateIntegrity(stateToValidate) {
   const errors = [];
   if(!stateToValidate || typeof stateToValidate !== 'object') return ['Estado inválido: não é um objeto'];
@@ -2908,84 +3019,6 @@ function validatePlannerStateIntegrity(stateToValidate) {
   if(stateToValidate.dayLogs?.some(log => !log.date || !/^\d{4}-\d{2}-\d{2}$/.test(log.date))) errors.push('Day logs com datas inválidas');
   if(stateToValidate.schedule?.some(item => !item.id)) errors.push('Schedule items sem ID');
   return errors;
-}
-function performDataIntegrityCheck(stateToCheck = state) {
-  const issues = [];
-  const warnings = [];
-
-  if(!stateToCheck.schedule || stateToCheck.schedule.length === 0) {
-    issues.push('Cronograma vazio');
-  }
-
-  const duplicateIds = new Set();
-  const seenIds = new Set();
-  stateToCheck.schedule?.forEach(item => {
-    if(seenIds.has(item.id)) duplicateIds.add(item.id);
-    seenIds.add(item.id);
-  });
-  if(duplicateIds.size > 0) {
-    issues.push(`Schedule items com IDs duplicados: ${Array.from(duplicateIds).join(', ')}`);
-  }
-
-  const orphanProgress = Object.keys(stateToCheck.questionProgress || {}).filter(id =>
-    !stateToCheck.schedule?.some(item => item.id === id)
-  );
-  if(orphanProgress.length > 0) {
-    warnings.push(`${orphanProgress.length} progresso de questões sem schedule correspondente`);
-  }
-
-  const corruptedFlashcards = Object.entries(stateToCheck.questionFlashcards || {})
-    .flatMap(([qId, cards]) => Array.isArray(cards) ? cards.map(c => ({...c, qId})) : [])
-    .filter(card => !card.id || typeof card.front !== 'string');
-  if(corruptedFlashcards.length > 0) {
-    issues.push(`${corruptedFlashcards.length} flashcards corrompidos`);
-  }
-
-  const dayLogGaps = (stateToCheck.dayLogs || []).filter(log =>
-    n(log.questions) > 0 && n(log.correct) + n(log.wrong) !== n(log.questions)
-  );
-  if(dayLogGaps.length > 5) {
-    warnings.push(`${dayLogGaps.length} day logs com inconsistência entre total e correct+wrong`);
-  }
-
-  return { issues, warnings, healthy: issues.length === 0 };
-}
-function repairDataCorruption(corrupted = state) {
-  const issues = performDataIntegrityCheck(corrupted);
-  let repaired = false;
-
-  if(!corrupted.schedule || corrupted.schedule.length === 0) {
-    console.warn('Cannot repair empty schedule');
-    return false;
-  }
-
-  const validIds = new Set(corrupted.schedule.map(item => item.id));
-  const orphanQProgress = Object.entries(corrupted.questionProgress || {})
-    .filter(([id]) => !validIds.has(id))
-    .map(([id]) => id);
-
-  if(orphanQProgress.length > 0) {
-    orphanQProgress.forEach(id => delete corrupted.questionProgress[id]);
-    console.warn(`Removido ${orphanQProgress.length} progresso órfão`);
-    repaired = true;
-  }
-
-  const validFlashcards = Object.fromEntries(
-    Object.entries(corrupted.questionFlashcards || {}).map(([qId, cards]) => [
-      qId,
-      (Array.isArray(cards) ? cards : []).filter(card => card?.id && typeof card.front === 'string')
-    ])
-  );
-
-  if(Object.values(validFlashcards).some((cards, i) =>
-    cards.length !== Object.values(corrupted.questionFlashcards || {})[i]?.length
-  )) {
-    corrupted.questionFlashcards = validFlashcards;
-    console.warn('Removidos flashcards corrompidos');
-    repaired = true;
-  }
-
-  return repaired;
 }
 function recordSyncConflict(reason = 'unknown') {
   lastSyncConflictAt = Date.now();
@@ -3018,68 +3051,11 @@ function auditActiveTimers() {
   }
   return timers;
 }
-async function testMultiDeviceSync() {
-  if(!currentUser || !sbClient) {
-    console.error('Sync test failed: user not authenticated');
-    return false;
-  }
-  try {
-    const testData = { testMark: `sync-test-${Date.now()}`, timestamp: new Date().toISOString() };
-    const testState = {...state, __syncTest: testData};
-    const { error: writeError } = await sbClient.from('planner_states').upsert({
-      user_id: currentUser.id,
-      data: testState,
-      updated_at: new Date().toISOString()
-    }, { onConflict: 'user_id' });
-    if(writeError) {
-      console.error('Sync test write failed:', writeError);
-      return false;
-    }
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    const { data: retrieved, error: readError } = await sbClient.from('planner_states')
-      .select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
-    if(readError || !retrieved?.data?.__syncTest) {
-      console.error('Sync test read failed:', readError);
-      return false;
-    }
-    delete state.__syncTest;
-    const { error: cleanError } = await sbClient.from('planner_states').upsert({
-      user_id: currentUser.id,
-      data: state,
-      updated_at: new Date().toISOString()
-    }, { onConflict: 'user_id' });
-    if(cleanError) console.warn('Sync test cleanup warning:', cleanError);
-    console.log('✓ Multi-device sync test passed');
-    return true;
-  } catch(error) {
-    console.error('Sync test error:', error);
-    return false;
-  }
-}
 function recordSyncTelemetry(event, isError = false) {
   if(event === 'push') { syncTelemetry.pushCount++; syncTelemetry.lastPushAt = Date.now(); }
   else if(event === 'pull') { syncTelemetry.pullCount++; syncTelemetry.lastPullAt = Date.now(); }
   else if(event === 'merge') syncTelemetry.mergeCount++;
   if(isError) syncTelemetry.errorCount++;
-  persistSyncTelemetry();
-}
-function persistSyncTelemetry() {
-  try {
-    const history = JSON.parse(localStorage.getItem(TELEMETRY_HISTORY_KEY) || '[]');
-    const entry = { ...getSyncTelemetryReport(), timestamp: new Date().toISOString() };
-    history.push(entry);
-    if(history.length > TELEMETRY_HISTORY_LIMIT) history.shift();
-    localStorage.setItem(TELEMETRY_HISTORY_KEY, JSON.stringify(history));
-  } catch(e) {
-    console.warn('Failed to persist telemetry:', e);
-  }
-}
-function getTelemetryHistory() {
-  try {
-    return JSON.parse(localStorage.getItem(TELEMETRY_HISTORY_KEY) || '[]');
-  } catch(e) {
-    return [];
-  }
 }
 function startAutoRecovery() {
   if(autoRecoveryInterval) return;
@@ -3107,12 +3083,6 @@ function startAutoRecovery() {
     }
   }, 120000);
 }
-function stopAutoRecovery() {
-  if(autoRecoveryInterval) {
-    clearInterval(autoRecoveryInterval);
-    autoRecoveryInterval = null;
-  }
-}
 function startTimerAudit() {
   if(timerAuditInterval) return;
   timerAuditInterval = setInterval(() => {
@@ -3122,34 +3092,6 @@ function startTimerAudit() {
       console.warn(`High sync error rate: ${(errorRate*100).toFixed(1)}%`, syncTelemetry);
     }
   }, 300000);
-}
-function stopTimerAudit() {
-  if(timerAuditInterval) {
-    clearInterval(timerAuditInterval);
-    timerAuditInterval = null;
-  }
-}
-function startAutoSyncTest() {
-  if(autoSyncTestInterval) return;
-  autoSyncTestInterval = setInterval(async () => {
-    const now = Date.now();
-    if(now - lastAutoSyncTest < 86400000) return;
-    if(!currentUser || !sbClient) return;
-    lastAutoSyncTest = now;
-    const result = await testMultiDeviceSync();
-    if(!result) {
-      console.warn('Auto sync test failed');
-      recordSyncTelemetry('pull', true);
-    } else {
-      console.log('✓ Auto sync test passed');
-    }
-  }, 3600000);
-}
-function stopAutoSyncTest() {
-  if(autoSyncTestInterval) {
-    clearInterval(autoSyncTestInterval);
-    autoSyncTestInterval = null;
-  }
 }
 async function performHealthCheck() {
   const report = { timestamp: new Date().toISOString(), checks: {} };
@@ -3252,21 +3194,25 @@ function nextErrorReviewDate(baseDate=studyDateKey(), intervalDays=1) {
   date.setDate(date.getDate() + Math.max(1, n(intervalDays) || 1));
   return studyDateKey(date);
 }
+// Usa o mesmo corte de dia de estudo (5h, STUDY_DAY_START_HOUR) que o resto do app usa
+// para dayLogs, em vez da meia-noite do calendário: assim o backup automático nasce
+// logo no início do dia de estudo, antes de qualquer sincronização nova mexer no
+// estado, e não no meio de uma sessão que já passou da meia-noite.
 function maintainDailyLocalBackup() {
   const now = Date.now();
-  const today = localISODate(new Date());
+  const today = studyDateKey();
   const retentionMs = AUTO_BACKUP_RETENTION_DAYS * 24 * 60 * 60 * 1000;
   const latestByDay = new Set();
   localBackups = localBackups.filter(item => {
     if(item.reason !== 'daily') return true;
     const created = Date.parse(item.created_at || '') || 0;
-    const day = created ? localISODate(new Date(created)) : '';
+    const day = created ? studyDateKey(new Date(created)) : '';
     if(!day || now - created > retentionMs) return false;
     if(latestByDay.has(day)) return false;
     latestByDay.add(day);
     return true;
   });
-  const hasToday = localBackups.some(item => item.reason === 'daily' && localISODate(item.created_at) === today);
+  const hasToday = localBackups.some(item => item.reason === 'daily' && studyDateKey(item.created_at) === today);
   if(!hasToday) createLocalBackup(`Backup automático · ${today}`, {silent:true, reason:'daily'});
   else saveLocalBackups();
 }
@@ -3546,13 +3492,6 @@ function renderDailyMissionPanel(date) {
   }
   return `<div class="daily-mission-panel-head"><h3>${iconSvg('sparkle')}Trilha do dia</h3><button class="daily-mission-close" type="button" aria-label="Fechar trilha do dia">${iconSvg('close')}</button></div><div class="daily-mission-week">${weekRow}</div>${card}`;
 }
-function toggleRoadCheckin(date, id) {
-  if(!state.dailyCheckins || typeof state.dailyCheckins !== 'object') state.dailyCheckins = {};
-  if(!state.dailyCheckins[date]) state.dailyCheckins[date] = {};
-  if(state.dailyCheckins[date][id]) delete state.dailyCheckins[date][id];
-  else state.dailyCheckins[date][id] = new Date().toISOString();
-  persist();
-}
 function countdownParts(date) {
   const target = new Date(`${date || localISODate(new Date())}T23:59:59`);
   const diff = Math.max(0, target.getTime() - Date.now());
@@ -3633,6 +3572,14 @@ function pauseOpenVideo() {
   if(!video) return;
   saveOpenVideoPosition();
   video.pause();
+  // O <video> não é destruído ao trocar de aba (só fica escondido), então sem isso o
+  // navegador continuava baixando o MP4 do R2 em segundo plano mesmo fora da aba
+  // Aulas. O preload="auto" agressivo é intencional e deve continuar enquanto a aula
+  // está aberta (protege de travar em internet fraca), só não faz sentido consumir
+  // R2/dados do celular parado em outra aba. A posição já foi salva acima; ao reabrir
+  // a aula, bindVideoPlayer recria o <video> com a fonte e retoma do mesmo ponto.
+  video.removeAttribute('src');
+  video.load();
 }
 function prepareViewTransition(nextTab,{confirmQuestion=true}={}) {
   if(ui.tab===nextTab) return true;
@@ -3921,7 +3868,7 @@ function renderGamificationDashboard(compact=false) {
   const segmentTotal=academicRank.isMaxRank?30:academicRank.nextRank.currentRangeStart-academicRank.currentRangeStart;
   const segmentDone=academicRank.isMaxRank?30:academicRank.completedBlocks-academicRank.currentRangeStart;
   const availableMedallions=Math.max(0,n(state.gamification.rankProgress?.simulationMedallions)-n(state.gamification.rankProgress?.simulationMedallionsUsed));
-  if(compact) return `<section class="card gamification-card gamification-card--compact"><div class="section-title"><div><span class="eyebrow">Gamificação</span><h2>${escapeHtml(rank.name)} · Nível ${profile.level}</h2></div>${classAsset}</div><strong class="compact-xp">${Math.round(n(profile.totalXP))} XP</strong><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP</span><span>${academicRank.completedBlocks}/30 blocos</span></div><small class="compact-rank-next">${progressText}</small></section>`;
+  if(compact) return `<section class="card gamification-card gamification-card--compact"><div class="gamification-compact-avatar">${classAsset}</div><div class="gamification-compact-info"><div class="section-title"><div><span class="eyebrow">Gamificação</span><h2>${escapeHtml(rank.name)} · Nível ${profile.level}</h2></div></div><strong class="compact-xp">${Math.round(n(profile.totalXP))} XP</strong><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP</span><span>${academicRank.completedBlocks}/30 blocos</span></div><small class="compact-rank-next">${progressText}</small></div></section>`;
   return `<section class="card gamification-card"><div class="gamification-head"><div class="gamification-rank">${classAsset}<div><span class="eyebrow">Classe RPG</span><h2>${escapeHtml(rank.name)} <small>· Nível ${profile.level}</small></h2><p>Blocos acadêmicos: <strong>${academicRank.completedBlocks}/30</strong>${rank.accelerated?` · <strong>aceleração ativa</strong>`:''}</p></div></div><div class="gamification-progress"><div class="section-title"><div><span class="eyebrow">Experiência</span><h2>${Math.round(n(profile.totalXP))} XP acumulados</h2></div><span class="badge today">Nível ${profile.level}</span></div><div class="progress"><span style="width:${pct(profile.progress)}"></span></div><div class="gamification-progress-label"><span>${Math.round(n(profile.xpWithinLevel))}/${Math.round(n(profile.xpForNextLevel))} XP neste nível</span><span>faltam ${Math.round(n(profile.remainingXP))} XP</span></div></div></div><div class="rank-progress-panel"><div><strong>${rank.isMaxRank?'Imperador':`Próxima classe acadêmica: ${escapeHtml(academicRank.nextRank?.name||rank.nextRank?.name||'Imperador')}`}</strong><span>${progressText}</span></div><div class="progress" aria-label="Progresso acadêmico para a próxima classe"><span style="width:${academicRank.progressPercent}%"></span></div><small>${segmentDone}/${segmentTotal} blocos · ${availableMedallions} medalhão livre</small></div>${history.length?`<div class="xp-history-mini">${history.map(transaction=>`<div><span><strong>${escapeHtml(gamificationActivityLabel(transaction))}</strong><small>${fmtDate(String(transaction.occurred_at||'').slice(0,10))}${transaction.is_legacy?' · Legado':''}${transaction.metadata?.element?` · ${elementLabel(transaction.metadata.element)}`:''}</small></span><b class="${n(transaction.final_xp)<0?'negative':''}">${n(transaction.final_xp)>0?'+':''}${roundDisplayXP(transaction.final_xp)} XP</b></div>`).join('')}</div>`:'<div class="muted">O histórico de XP aparecerá após uma atividade nova ou uma importação retroativa confirmada.</div>'}</section>`;
 }
 
@@ -3969,22 +3916,6 @@ function renderWeeklyPerformance(date) {
     ['Aulas',Math.round(metrics.videos.summary)]
   ];
   return `<section class="card dashboard-weekly-card"><div class="section-title"><div><span class="eyebrow">Semana</span><h2>Desempenho semanal</h2></div><div class="weekly-week-nav"><button class="tiny-btn" data-weekly-week-nav="-1" aria-label="Semana anterior">&larr;</button><span class="weekly-week-range">${escapeHtml(`${new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit'}).format(new Date(`${data.dates[0]}T12:00:00`))} - ${new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit'}).format(new Date(`${data.dates[6]}T12:00:00`))}`)}</span><button class="tiny-btn" data-weekly-week-nav="1" aria-label="Próxima semana" ${ui.weeklyWeekOffset>=0?'disabled':''}>&rarr;</button></div></div><div class="weekly-metric-tabs">${Object.entries(metrics).map(([key,item])=>`<button class="tiny-btn ${key===ui.weeklyMetric?'active':''}" data-weekly-metric="${key}" aria-pressed="${key===ui.weeklyMetric}">${item.label}</button>`).join('')}</div><div class="dashboard-bars weekly-bars">${data.dates.map((day,index)=>`<div class="${day===todayKey?'is-today':''}"><span style="height:${Math.max(8,Math.round(metric.values[index]/max*100))}%" title="${escapeAttr(metric.format(metric.values[index]))}" data-bar-value="${escapeAttr(metric.format(metric.values[index]))}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${day}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section><section class="card dashboard-weekly-summary"><span class="eyebrow">Resumo da semana</span><div>${summary.map(([label,value])=>`<article><strong>${escapeHtml(String(value))}</strong><small>${label}</small></article>`).join('')}</div><p class="muted">Exibindo ${escapeHtml(metric.label.toLowerCase())} no gráfico.</p></section>`;
-}
-function renderRecentDashboardActivity() {
-  const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,5);
-  return `<section class="card dashboard-recent-card"><div class="section-title"><div><span class="eyebrow">Histórico</span><h2>Atividade recente</h2></div><button class="tiny-btn" data-dashboard-open-history>Ver histórico</button></div><div class="dashboard-recent-list">${transactions.length?transactions.map(item=>`<div><span>${iconSvg(item.activity_type==='video_progress'||item.activity_type==='video_completion'?'play':item.activity_type==='flashcard_review'?'cards':'brain')}</span><strong>${escapeHtml(gamificationActivityLabel(item))}</strong><time>${new Date(item.occurred_at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</time></div>`).join(''):'<div class="muted">Suas próximas atividades aparecerão aqui.</div>'}</div></section>`;
-}
-function renderDashboardPlanning(t) {
-  const pending=state.schedule.filter(item=>item.date<=ui.refDate&&statusOf(item)!=='Concluído').sort(byPendingBlockOrder);
-  const target=t.next || pending[0] || null;
-  const targetContent=target
-    ? `<div class="dashboard-target-main"><div><span class="eyebrow">Próximo alvo</span><h2>${escapeHtml(target.topic)}</h2><p>${fmtDate(target.date)} · Bloco ${target.block} · ${escapeHtml(target.area)}</p><div class="dashboard-target-progress"><span>${Math.max(0,lessonQuestionTarget(target)-completedQuestions(target))} questões restantes</span><span>${Math.max(0,lessonFlashcardTarget(target)-completedFlashcards(target))} flashcards restantes</span></div></div><button class="icon-btn primary" data-dashboard-open-target="${escapeAttr(target.id)}">Abrir</button></div>`
-    : `<div class="dashboard-target-empty"><strong>Você está em dia.</strong><span>Não há uma aula pendente para priorizar agora.</span></div>`;
-  const queue=pending.slice(0,5);
-  return `<section class="card dashboard-target-card"><div class="section-title"><div><span class="eyebrow">Planejamento</span><h2>Onde focar agora</h2></div>${target?badgeStatus(statusOf(target)):''}</div>${targetContent}</section><section class="card dashboard-queue-card"><div class="section-title"><div><span class="eyebrow">Pendências</span><h2>Fila para destravar</h2></div><button class="tiny-btn" data-dashboard-open-pending>Ver todas</button></div><div class="dashboard-queue-list">${queue.length?queue.map(item=>`<div><span class="date-chip">B${escapeHtml(String(item.block))}</span><div><button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(item.id)}"><strong>${escapeHtml(item.topic)}</strong></button><small>${escapeHtml(item.area)} · ${Math.max(0,lessonQuestionTarget(item)-completedQuestions(item))} Q · ${Math.max(0,lessonFlashcardTarget(item)-completedFlashcards(item))} FC</small></div>${badgeStatus(statusOf(item))}</div>`).join(''):'<div class="empty">Nenhuma pendência aberta até esta data.</div>'}</div></section>`;
-}
-function renderDashboardAcademicEvolution(areas) {
-  return `<section class="card dashboard-radar-card"><div class="section-title"><div><span class="eyebrow">Evolução acadêmica</span><h2>Radar de áreas</h2></div><button class="tiny-btn" data-dashboard-open-areas>Ver áreas</button></div><div class="dashboard-area-list">${areas.slice(0,6).map(areaLine).join('') || '<div class="empty">As áreas aparecerão quando houver aulas no cronograma.</div>'}</div></section><section class="card dashboard-sim-summary-card"><div class="section-title"><div><span class="eyebrow">Evolução acadêmica</span><h2>Simulados</h2></div><button class="tiny-btn" data-dashboard-open-simulations>Abrir</button></div>${renderSimSummary()}</section>`;
 }
 function renderRadiografia() {
   const el = document.getElementById('radiografia');
@@ -4524,7 +4455,7 @@ function bindCasoDoDia() {
 function renderPainel() {
   const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
-    <div class="dashboard-global-head"><div><h1>Seu dia de estudos</h1></div><div class="dashboard-head-tools"><label class="dashboard-date-control"><span>Data do painel</span><div class="dashboard-date-input-row"><button class="tiny-btn" id="dashboardDatePrev" type="button" aria-label="Dia anterior">‹</button><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="tiny-btn" id="dashboardDateNext" type="button" aria-label="Dia seguinte">›</button></div></label>${renderCountdown()}</div></div>
+    <div class="dashboard-global-head"><div class="dashboard-greeting"><h1>${escapeHtml(greetingMessage())}</h1></div><label class="dashboard-date-control"><span class="sr-only">Data do painel</span><div class="dashboard-date-input-row"><button class="tiny-btn" id="dashboardDatePrev" type="button" aria-label="Dia anterior">‹</button><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="tiny-btn" id="dashboardDateNext" type="button" aria-label="Dia seguinte">›</button></div></label><div class="dashboard-head-tools">${renderCountdown()}</div></div>
     <div class="dashboard-desktop-grid">
       ${renderContinueStudying()}
       ${renderCasoDoDia()}
@@ -4562,11 +4493,6 @@ function renderPainel() {
   });
   bindScheduleInputs();
 }
-function renderMiniList(items) {
-  if(!items.length) return '<div class="empty">Sem pendências nesse filtro.</div>';
-  return items.map(x => `<div class="item"><div class="date-chip">${fmtDate(x.date).slice(0,5)}</div><div><button class="schedule-topic-link" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button><div class="muted">Bloco ${x.block} · ${escapeHtml(x.area)} · faltam ${Math.max(0,lessonQuestionTarget(x)-completedQuestions(x))} questões e ${Math.max(0,lessonFlashcardTarget(x)-completedFlashcards(x))} flashcards</div></div><div>${badgeStatus(statusOf(x))}</div></div>`).join('');
-}
-function areaLine(a) { return `<div class="area-bar"><strong>${escapeHtml(a.area)}</strong><div class="bar"><span style="width:${pct(a.progress)}"></span></div><span>${pct(a.progress)}</span></div>`; }
 function renderPendencias() {
   const items = state.schedule.filter(x => x.date <= ui.refDate && statusOf(x)!=='Concluído').sort(byPendingBlockOrder);
   const t=totals();
@@ -4599,6 +4525,7 @@ function renderCronograma() {
   document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.scheduleBlock='Atual'; render(); };
   bindScheduleInputs();
 }
+function areaLine(a) { return `<div class="area-bar"><strong>${escapeHtml(a.area)}</strong><div class="bar"><span style="width:${pct(a.progress)}"></span></div><span>${pct(a.progress)}</span></div>`; }
 function renderPendingLessons(items) {
   if(!items.length) return '<div class="empty">Nenhuma pendência até esta data.</div>';
   return `<div class="pending-list">${items.map(item => {
@@ -6890,23 +6817,6 @@ function openDayVideos(date) {
   if(next) openVideosForSchedule(next.id);
   else { ui.videoBlock=String(currentScheduleBlock()); navigateToTab('aulas'); }
 }
-function markAwaitingScheduleVideosWatched() {
-  const version = 'awaiting-schedule-videos-2026-07-11-v2';
-  if(state.videoPlayer.scheduleWatchVersion === version) return 0;
-  let count = 0;
-  state.schedule.filter(item => statusOf(item) === 'Aguardando').forEach(item => {
-    videoLessonsForSchedule(item).forEach(lesson => {
-      videoParts(lesson).forEach(part => {
-      const video = part.videos.find(entry => entry.type === 'complete') || part.videos[0];
-      if(!video) return;
-      if(!state.videoPlayer.watched[video.id]) { state.videoPlayer.watched[video.id] = true; count += 1; }
-      });
-    });
-  });
-  state.videoPlayer.scheduleWatchVersion = version;
-  if(count) saveStateOnly();
-  return count;
-}
 function markCompletedLessonsThroughBlockNine() {
   const version = 'watched-lessons-through-block-09-2026-07-13-v1';
   if(state.videoPlayer.completedLessonMigration === version) return 0;
@@ -8164,23 +8074,6 @@ function moveFlashcardSession(delta, total) {
   ui.revealedCards = {};
   renderFlashcards();
 }
-function nextSm2Progress(current, quality) {
-  const q = Math.max(0, Math.min(5, Math.round(n(quality))));
-  let ease = Math.max(1.3, n(current.ease) || 2.5);
-  let repetitions = Math.max(0, n(current.repetitions) || 0);
-  let interval = Math.max(0, n(current.interval) || 0);
-  if(q < 3) {
-    repetitions = 0;
-    interval = 1;
-  } else {
-    repetitions += 1;
-    if(repetitions === 1) interval = 1;
-    else if(repetitions === 2) interval = 6;
-    else interval = Math.max(1, Math.round(interval * ease));
-  }
-  ease = Math.max(1.3, ease + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02)));
-  return { ease, repetitions, interval };
-}
 function suspendFlashcard(id) {
   const current = state.flashcardProgress[id] || {};
   state.flashcardProgress[id] = { ...current, status:'Suspenso', nextReview:'2099-12-31' };
@@ -8302,17 +8195,6 @@ function reconcileQuestionProgressWithAnswers() {
     if(reconcileQuestionProgressForQuestion(rawQuestion)) changed = true;
   });
   if(changed) saveStateOnly();
-}
-function questionConfidenceStats() {
-  const rows = Object.values(state.questionProgress || {}).filter(item => item && item.answeredAt);
-  const withConfidence = rows.filter(item => n(item.confidence));
-  const avgConfidence = withConfidence.length ? Math.round(withConfidence.reduce((sum,item) => sum + n(item.confidence), 0) / withConfidence.length) : 0;
-  const knownCorrect = rows.filter(item => item.correct && item.correctMode === 'Sabendo').length;
-  const luckyCorrect = rows.filter(item => item.correct && item.correctMode === 'Chute').length;
-  const attention = rows.filter(item => item.missReason === 'Desatenção').length;
-  const memory = rows.filter(item => item.missReason === 'Dúvida / já vi' || item.missReason === 'Não lembrar').length;
-  const knowledge = rows.filter(item => item.missReason === 'Não saber').length;
-  return { avgConfidence, knownCorrect, luckyCorrect, attention, memory, knowledge };
 }
 function questionBankSummary() {
   if(renderCache.questionSummary) return renderCache.questionSummary;
@@ -10690,11 +10572,6 @@ function renderMaterialMarkdown(text, doc) {
   if(codeOpen) html+='</code></pre>';
   return html;
 }
-function renderInlineMarkdown(text) {
-  return escapeHtml(text)
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/`([^`]+)`/g, '<code>$1</code>');
-}
 function escapeHtml(s) { return String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
 function escapeAttr(s) { return escapeHtml(s).replace(/\n/g,' '); }
 function escapeRegExp(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -10803,7 +10680,6 @@ document.addEventListener('keydown', event => {
   else if(key === 'f' || event.key === '[') { event.preventDefault(); event.stopPropagation(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
   else if(key === 'j' || event.key === '=') { event.preventDefault(); event.stopPropagation(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
 }, true);
-document.getElementById('headerTrailBtn')?.addEventListener('click', () => navigateToTab('cronograma'));
 document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.pomodoroOpen=!ui.pomodoroOpen; navigateToTab('painel'); });
 document.getElementById('headerSendBtn')?.addEventListener('click', () => forcePushThisDeviceToCloud());
 document.getElementById('headerReceiveBtn')?.addEventListener('click', () => {
@@ -10948,13 +10824,15 @@ window.addEventListener('unhandledrejection', event => {
 });
 render().catch(error => showBootFailureRecovery(error));
 maintainDailyLocalBackup();
+// Se o planner ficar aberto atravessando a virada do dia de estudo (5h), o backup
+// automático não pode esperar o próximo F5 — reavalia periodicamente.
+setInterval(maintainDailyLocalBackup, 15 * 60 * 1000);
 if('requestIdleCallback' in window) requestIdleCallback(() => loadQuestionBank(), {timeout:700});
 else setTimeout(() => loadQuestionBank(), 120);
 loadOfficialSchedule();
 loadVideoCatalog();
 initCloud();
 startTimerAudit();
-startAutoSyncTest();
 startAutoRecovery();
 if('requestIdleCallback' in window) requestIdleCallback(performHealthCheck, {timeout:2000});
 else setTimeout(performHealthCheck, 500);

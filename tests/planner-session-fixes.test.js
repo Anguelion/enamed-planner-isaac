@@ -38,12 +38,12 @@ test('mergePlannerActivityState com carimbo local mais novo: o estudo feito no a
     flashcardLibrary: [{ id: 'lib1' }],
     questionProgress: { q1: { selected: 'C', answeredAt: '2026-07-27T20:00:00.000Z' } }
   };
-  // Regra antiga (preferLocal sempre false no pull): o spread raso do topo do
-  // merge deixava os campos que nao tem reconciliacao por chave (videoFlashcards,
-  // flashcardLibrary) do jeito que a nuvem definir — no caso de uma nuvem sem
-  // esses dados, eles somem.
+  // videoFlashcards e flashcardLibrary agora sao unidos por id (mergeRecordsById),
+  // nao um spread raso — o estudo feito no aparelho sobrevive nos dois casos,
+  // com ou sem preferLocal, porque a nuvem simplesmente nao tem esses ids ainda.
   const semPreferencia = ctx.mergePlannerActivityState(remote, local, false);
-  assert.equal(Object.keys(semPreferencia.videoFlashcards || {}).length, 0, 'documenta o comportamento antigo: sem preferLocal, o campo nao reconciliado por chave e perdido');
+  assert.equal(Object.keys(semPreferencia.videoFlashcards).length, 1, 'sem preferLocal, o flashcard de video feito no aparelho ainda sobrevive (uniao por id)');
+  assert.equal(semPreferencia.flashcardLibrary.length, 1, 'sem preferLocal, a biblioteca de flashcards ainda sobrevive (uniao por id)');
   // Regra nova: quando o carimbo local e mais novo que o remoto, pullCloudState
   // agora chama o merge com preferLocal=true.
   const comPreferencia = ctx.mergePlannerActivityState(remote, local, true);
