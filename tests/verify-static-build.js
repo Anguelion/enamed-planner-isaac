@@ -10,6 +10,7 @@ const html=fs.readFileSync(htmlPath,'utf8');
 const required=[
   'assets/planner.css',
   'assets/anatomia.css',
+  'assets/planner-refresh.css',
   'assets/app-icons.js',
   'assets/icons/phosphor-sprite.svg',
   'assets/gamification.js',
@@ -29,7 +30,7 @@ for(const relative of required) {
 const scriptOrder=['assets/app-icons.js','assets/gamification.js','assets/planner-ux.js','assets/anatomia.js','assets/planner.js'];
 for(let index=1;index<scriptOrder.length;index++) if(html.indexOf(scriptOrder[index-1])>html.indexOf(scriptOrder[index])) failures.push(`${scriptOrder[index-1]} deve carregar antes de ${scriptOrder[index]}`);
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
-for(const relative of ['assets/planner.css','assets/anatomia.css','assets/app-icons.js','assets/icons/phosphor-sprite.svg','assets/gamification.js','assets/planner-ux.js','assets/anatomia.js','assets/anatomia/catalog.json','assets/planner.js',...['fire','water','earth','air'].map(name=>`assets/rpg/element-${name}.svg`),...['aldeao','aprendiz','escudeiro','soldado','cavaleiro','capitao','barao','duque','rei','imperador'].map(name=>`assets/rpg/classes/${name}.png`)]) {
+for(const relative of ['assets/planner.css','assets/anatomia.css','assets/planner-refresh.css','assets/app-icons.js','assets/icons/phosphor-sprite.svg','assets/gamification.js','assets/planner-ux.js','assets/anatomia.js','assets/anatomia/catalog.json','assets/planner.js',...['fire','water','earth','air'].map(name=>`assets/rpg/element-${name}.svg`),...['aldeao','aprendiz','escudeiro','soldado','cavaleiro','capitao','barao','duque','rei','imperador'].map(name=>`assets/rpg/classes/${name}.png`)]) {
   if(!sw.includes(relative)) failures.push(`asset não versionado no service worker: ${relative}`);
 }
 // O service worker cacheia cada script/CSS com sua própria query "?v=..."; se essa
@@ -38,7 +39,7 @@ for(const relative of ['assets/planner.css','assets/anatomia.css','assets/app-ic
 // tipo de bug silencioso que já aconteceu aqui (ver docs/PROJECT_HANDOFF.md e o
 // histórico de auditoria). Falhar o build nesse caso obriga a versão do service
 // worker a andar junto com a do index.html a cada deploy.
-const versionedAssets=['assets/planner.css','assets/anatomia.css','assets/app-icons.js','assets/gamification.js','assets/planner-ux.js','assets/anatomia.js','assets/ecg-simulator.js','assets/radiografia-aulas.js','assets/radiografia.js','assets/semiologia-aulas.js','assets/semiologia.js','assets/caso-do-dia.js','assets/planner.js','question_bank/index.js'];
+const versionedAssets=['assets/planner.css','assets/anatomia.css','assets/planner-refresh.css','assets/app-icons.js','assets/gamification.js','assets/planner-ux.js','assets/anatomia.js','assets/ecg-simulator.js','assets/radiografia-aulas.js','assets/radiografia.js','assets/semiologia-aulas.js','assets/semiologia.js','assets/caso-do-dia.js','assets/planner.js','question_bank/index.js'];
 for(const relative of versionedAssets) {
   const htmlMatch=html.match(new RegExp(`${relative.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}(\\?v=[\\w-]+)?`));
   const swMatch=sw.match(new RegExp(`\\./${relative.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}(\\?v=[\\w-]+)?`));
