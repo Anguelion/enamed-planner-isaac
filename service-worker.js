@@ -1,19 +1,22 @@
-const CACHE_NAME = 'soqueromed-shell-v163';
+const CACHE_NAME = 'soqueromed-shell-v164';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
   './assets/planner.css?v=20260802-7',
-  './assets/app-icons.js?v=20260728-1',
+  './assets/anatomia.css?v=20260802-4',
+  './assets/app-icons.js?v=20260802-1',
   './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-4',
-  './assets/planner-ux.js?v=20260729-2',
+  './assets/planner-ux.js?v=20260802-1',
+  './assets/anatomia.js?v=20260802-2',
+  './assets/anatomia/catalog.json',
   './assets/ecg-simulator.js?v=20260720-4',
   './assets/radiografia-aulas.js?v=20260719-2',
   './assets/radiografia.js?v=20260719-4',
   './assets/semiologia-aulas.js?v=20260720-2',
   './assets/semiologia.js?v=20260802-1',
   './assets/caso-do-dia.js?v=20260729-4',
-  './assets/planner.js?v=20260802-7',
+  './assets/planner.js?v=20260802-8',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
@@ -169,6 +172,9 @@ self.addEventListener('fetch', event => {
 
   const networkFirst = url.pathname.includes('/question_bank/')
     || url.pathname.endsWith('/assets/planner.js')
+    || url.pathname.endsWith('/assets/anatomia.js')
+    || url.pathname.endsWith('/assets/anatomia.css')
+    || url.pathname.endsWith('/assets/anatomia/catalog.json')
     || url.pathname.endsWith('/assets/caso-do-dia.js')
     || url.pathname.endsWith('/assets/ecg-simulator.js')
     || url.pathname.endsWith('/assets/radiografia.js')

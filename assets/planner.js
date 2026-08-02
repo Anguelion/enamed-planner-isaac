@@ -171,14 +171,14 @@ const views = [
   ['painel','Dashboard','dashboard'],
   ['cronograma','Missão','mission'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'],
   ['aulas','Aulas','video'], ['questoes','Questões','question'], ['simulados','Simulados','simulation'], ['caderno-erros','Caderno de erros','caderno'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'],
-  ['prescricao','Prescrição','prescription'], ['semiologia','Semiologia','medical'], ['ecg','ECG','heart'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
+  ['prescricao','Prescrição','prescription'], ['anatomia','Anatomia','xray'], ['semiologia','Semiologia','medical'], ['ecg','ECG','heart'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
   ['importar-questoes','Adicionar questões','upload'],
   ['ferramentas','Ferramentas','settings']
 ];
 const VIEW_GROUPS = {
   cronograma:'Meus estudos', historico:'Meus estudos', areas:'Meus estudos', analise:'Meus estudos',
   aulas:'Conteúdo', questoes:'Conteúdo', simulados:'Conteúdo', 'caderno-erros':'Conteúdo', flashcards:'Conteúdo', materiais:'Conteúdo',
-  prescricao:'Habilidade', semiologia:'Habilidade', ecg:'Habilidade', radiografia:'Habilidade', feynman:'Habilidade',
+  prescricao:'Habilidade', anatomia:'Habilidade', semiologia:'Habilidade', ecg:'Habilidade', radiografia:'Habilidade', feynman:'Habilidade',
   'importar-questoes':'Outros',
   ferramentas:'Configuração'
 };
@@ -3933,6 +3933,17 @@ function renderSemiologia() {
   if(!window.SemioSim) { el.innerHTML = `<section class="card"><p class="muted">Carregando módulo de semiologia…</p></section>`; return; }
   if(!state.semio) state.semio = window.SemioSim.defaultState();
   window.SemioSim.mount(el, {
+    getState: () => state,
+    save: () => { try { writeLocalState(); } catch(e){} scheduleCloudSave(); },
+    escapeHtml,
+    iconSvg
+  });
+}
+function renderAnatomia() {
+  const el = document.getElementById('anatomia');
+  if(!window.AnatomiaCourse) { el.innerHTML = `<section class="card"><p class="muted">Carregando curso de anatomia…</p></section>`; return; }
+  if(!state.anatomia) state.anatomia = window.AnatomiaCourse.defaultState();
+  window.AnatomiaCourse.mount(el, {
     getState: () => state,
     save: () => { try { writeLocalState(); } catch(e){} scheduleCloudSave(); },
     escapeHtml,
@@ -10601,6 +10612,7 @@ async function render() {
     historico: renderHistorico,
     feynman: renderFeynman,
     prescricao: renderPrescription,
+    anatomia: renderAnatomia,
     ferramentas: renderFerramentas,
     'caderno-erros': renderCadernoErros,
     ecg: renderEcg,

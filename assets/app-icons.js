@@ -18,7 +18,7 @@
     history:{icon:'clock-counter-clockwise',tone:'neutral'}, feynman:{icon:'chat-centered-text',tone:'earth'},
     upload:{icon:'upload-simple',tone:'neutral'}, download:{icon:'download-simple',tone:'neutral'}, prescription:{icon:'first-aid-kit',tone:'success'}, areas:{icon:'chart-line-up',tone:'water'},
     caderno:{icon:'note-pencil',tone:'error'}, xray:{icon:'bone',tone:'neutral'},
-    add:{icon:'plus',tone:'neutral',weight:'regular'}, close:{icon:'x',tone:'neutral',weight:'regular'}, dice:{icon:'dice-five',tone:'simulation'},
+    add:{icon:'plus',tone:'neutral',weight:'regular'}, close:{icon:'x',tone:'neutral',weight:'regular'}, search:{icon:'magnifying-glass',tone:'neutral',weight:'regular'}, dice:{icon:'dice-five',tone:'simulation'},
     fire:{icon:'fire',tone:'fire'}, water:{icon:'drop',tone:'water'}, earth:{icon:'mountains',tone:'earth'}, air:{icon:'wind',tone:'air'},
     class:{icon:'crown',tone:'xp'}, medal:{icon:'medal',tone:'xp'}, success:{icon:'check-circle',tone:'success'},
     warning:{icon:'warning',tone:'warning'}, error:{icon:'warning-octagon',tone:'error'}, info:{icon:'info',tone:'neutral'},
