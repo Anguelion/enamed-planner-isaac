@@ -108,7 +108,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 try {
   const savedCadernoView = JSON.parse(localStorage.getItem(CADERNO_VIEW_KEY) || '{}');
@@ -4618,9 +4618,16 @@ function enhanceScheduleStudyIcons() {
   document.querySelectorAll('.schedule-table tbody tr').forEach(row => {
     const videoToggle=row.querySelector('[data-toggle-schedule-video]');
     const openVideo=row.querySelector('[data-open-schedule-videos]');
-    const scheduleId=videoToggle?.dataset.toggleScheduleVideo || openVideo?.dataset.openScheduleVideos;
-    const item=state.schedule.find(entry=>entry.id===scheduleId);
     const topicLine=row.querySelector('.schedule-topic-line');
+    // A aula é identificada pelo link do tema (ou por qualquer input da linha), que
+    // existem sempre. Antes o id vinha só dos botões de vídeo: quando a aula ficava
+    // sem vídeo disponível, a linha inteira saía sem ícone de vídeo, questões E
+    // flashcards. Questões e flashcards não dependem de vídeo e não podem sumir.
+    const scheduleId=topicLine?.querySelector('[data-open-schedule-questions]')?.dataset.openScheduleQuestions
+      || row.querySelector('[data-id]')?.dataset.id
+      || videoToggle?.dataset.toggleScheduleVideo
+      || openVideo?.dataset.openScheduleVideos;
+    const item=state.schedule.find(entry=>entry.id===scheduleId);
     if(!item || !topicLine) return;
     const hoursInput=row.querySelector('[data-field="hours"]');
     if(hoursInput && !row.querySelector('.schedule-hours-readable')) {
@@ -5593,7 +5600,35 @@ function renderAnalise() {
   document.querySelectorAll('[data-analysis-open-question]').forEach(button=>button.onclick=()=>openQuestionFromAnalysis(button.dataset.analysisOpenQuestion));
   document.querySelectorAll('[data-analysis-open-sim]').forEach(button=>button.onclick=()=>{ui.activeSimRunId=button.dataset.analysisOpenSim;navigateToTab('simulados');});
 }
-function renderAreas() { const areas=areaStats(); document.getElementById('areas').innerHTML = `<div class="grid three">${areas.slice(0,3).map(a=>metric(a.area,pct(a.progress),`${a.done} de ${a.total} concluídas`)).join('')}</div><div class="card"><div class="section-title"><h2>Desempenho por área</h2></div>${areas.map(areaLine).join('')}</div><div class="card"><div class="section-title"><h2>Pendências por área</h2></div><div class="table-wrap"><table><thead><tr><th>Área</th><th class="num">Aulas pendentes</th><th class="num">Questões</th><th class="num">Flashcards</th><th class="num">Horas</th></tr></thead><tbody>${areas.map(a=>`<tr><td><strong>${escapeHtml(a.area)}</strong></td><td class="num">${a.total-a.done}</td><td class="num">${Math.round(a.debtQ)}</td><td class="num">${Math.round(a.debtFC)}</td><td class="num">${a.hours.toFixed(1)}</td></tr>`).join('')}</tbody></table></div></div>`; }
+function areaChartData() {
+  const todayDow=new Date(`${studyDateKey()}T12:00:00`).getDay();
+  const sundayKey=PlannerUX.addDays(studyDateKey(),(-todayDow)+7*(ui.areaChartWeekOffset||0));
+  const dates=Array.from({length:7},(_,index)=>PlannerUX.addDays(sundayKey,index));
+  const snapshots=dates.map(day=>dailyStudySnapshot(day));
+  const moods=dates.map(day=>n(getDayLog(day).mood));
+  return {dates,snapshots,moods};
+}
+function renderAreaCharts() {
+  const data=areaChartData();
+  const todayKey=studyDateKey();
+  const moodLabel=value=>value>=3?'Motivado':value===2?'Mais ou menos':value===1?'Lento':'Sem registro';
+  const metrics={
+    mood:{label:'Humor',values:data.moods,format:moodLabel},
+    hours:{label:'Horas estudadas',values:data.snapshots.map(s=>s.totalMinutes),format:value=>formatDailyStudyTime(value)},
+    flashcards:{label:'Flashcards estudados',values:data.snapshots.map(s=>s.flashcards),format:value=>`${Math.round(value)}`},
+    videos:{label:'Videoaulas',values:data.snapshots.map(s=>s.videos),format:value=>`${Math.round(value)}`}
+  };
+  const key=metrics[ui.areaChartMetric]?ui.areaChartMetric:'hours';
+  const metric=metrics[key];
+  const max=Math.max(1,...metric.values);
+  return `<section class="card area-charts-card"><div class="section-title"><div><span class="eyebrow">Semana</span><h2>Gráficos</h2></div><div class="weekly-week-nav"><button class="tiny-btn" data-area-chart-week-nav="-1" aria-label="Semana anterior">&larr;</button><span class="weekly-week-range">${escapeHtml(`${new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit'}).format(new Date(`${data.dates[0]}T12:00:00`))} - ${new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit'}).format(new Date(`${data.dates[6]}T12:00:00`))}`)}</span><button class="tiny-btn" data-area-chart-week-nav="1" aria-label="Próxima semana" ${ui.areaChartWeekOffset>=0?'disabled':''}>&rarr;</button></div></div><label class="area-chart-picker">Gráfico<select class="select" id="areaChartMetric">${Object.entries(metrics).map(([k,item])=>`<option value="${k}" ${k===key?'selected':''}>${item.label}</option>`).join('')}</select></label><div class="dashboard-bars weekly-bars">${data.dates.map((day,index)=>`<div class="${day===todayKey?'is-today':''}"><span style="height:${Math.max(8,Math.round(metric.values[index]/max*100))}%" title="${escapeAttr(metric.format(metric.values[index]))}" data-bar-value="${escapeAttr(metric.format(metric.values[index]))}"></span><small>${new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(new Date(`${day}T12:00:00`)).replace('.','')}</small></div>`).join('')}</div></section>`;
+}
+function renderAreas() {
+  const areas=areaStats();
+  document.getElementById('areas').innerHTML = `<div class="grid three">${areas.slice(0,3).map(a=>metric(a.area,pct(a.progress),`${a.done} de ${a.total} concluídas`)).join('')}</div><div class="card"><div class="section-title"><h2>Pendências por área</h2></div><div class="table-wrap"><table><thead><tr><th>Área</th><th class="num">Aulas pendentes</th><th class="num">Questões</th><th class="num">Flashcards</th><th class="num">Horas</th></tr></thead><tbody>${areas.map(a=>`<tr><td><strong>${escapeHtml(a.area)}</strong></td><td class="num">${a.total-a.done}</td><td class="num">${Math.round(a.debtQ)}</td><td class="num">${Math.round(a.debtFC)}</td><td class="num">${a.hours.toFixed(1)}</td></tr>`).join('')}</tbody></table></div></div><div class="card"><div class="section-title"><h2>Desempenho por área</h2></div>${areas.map(areaLine).join('')}</div>${renderAreaCharts()}`;
+  document.getElementById('areaChartMetric').onchange = event => { ui.areaChartMetric=event.target.value; renderAreas(); };
+  document.querySelectorAll('[data-area-chart-week-nav]').forEach(button=>button.onclick=()=>{ ui.areaChartWeekOffset=Math.min(0,(ui.areaChartWeekOffset||0)+Number(button.dataset.areaChartWeekNav)); renderAreas(); });
+}
 function dailyFlashcardEvents(date) {
   const cards = flashcardAllRecords();
   return (state.flashcardSystem?.reviewLogs || []).filter(log => answerDate(log.reviewedAt) === date).map(log => {
@@ -6451,11 +6486,21 @@ async function loadOfficialSchedule() {
 }
 function videoAssetUrl(video) {
   const localPath = String(video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
-  const onlinePath = String(video.onlinePath || video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
+  const onlinePath = String(video.onlinePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
   const localUrl = `video_library/media/${localPath}`;
   // A cópia local continua funcionando sem internet; o site publicado usa o R2.
   const useR2 = usesR2VideoSource();
-  return useR2 ? `${R2_VIDEO_BASE_URL}/video_library/media/${onlinePath}` : localUrl;
+  if(!useR2) return localUrl;
+  // Sem onlinePath o arquivo não está no R2 neste momento. Devolver o caminho local
+  // aqui só geraria um 404 disfarçado; melhor a aula ficar listada e avisar.
+  return onlinePath ? `${R2_VIDEO_BASE_URL}/video_library/media/${onlinePath}` : '';
+}
+// Um vídeo pode estar no catálogo e não estar tocável agora (fora do R2 nesta rotação
+// de 10 GB, ou sem cópia local). Continua contando para a lista, para as partes da
+// aula e para "assistida" — só não reproduz.
+function videoPlayableNow(video) {
+  if(!video) return false;
+  return usesR2VideoSource() ? Boolean(video.onlinePath) : Boolean(video.relativePath);
 }
 function usesR2VideoSource() {
   return ui.videoSourceMode === 'online' || (ui.videoSourceMode === 'auto' && !isLocalPlanner());
@@ -6518,9 +6563,11 @@ function displayVideoLessons() {
   if(renderCache.videoDisplay) return renderCache.videoDisplay;
   const groups = new Map();
   videoCatalog.forEach(raw => {
-    const availableVideos = usesR2VideoSource()
-      ? raw.videos.filter(video => video.onlinePath)
-      : raw.videos;
+    // O catálogo é a lista completa de aulas, sempre. O R2 só guarda 10 GB por vez e
+    // os arquivos entram e saem de lá; filtrar a lista por onlinePath fazia a aula
+    // completa desaparecer, o que quebrava a contagem de "aula realizada" e apagava
+    // os ícones do cronograma. O que falta no R2 aparece listado e marcável, só não toca.
+    const availableVideos = raw.videos;
     availableVideos.forEach(video => {
       const schedule = videoScheduleForVideo(raw, video) || videoScheduleForLesson(raw);
       const key = schedule ? `schedule:${schedule.id}` : `video:${raw.id}`;
@@ -6539,8 +6586,9 @@ function displayVideoLessons() {
       if(!group.videos.some(current => current.id === video.id)) group.videos.push({ ...video, lessonTopic: raw.title, folderOrder:raw.folderOrder });
     });
   });
-  // Os blocos finais já aparecem na rota de estudo mesmo antes do envio dos MP4s.
-  state.schedule.filter(item => !usesR2VideoSource() && n(item.block) >= 25).forEach(schedule => {
+  // Os blocos finais já aparecem na rota de estudo mesmo antes do envio dos MP4s,
+  // online e offline — a lista de aulas é a mesma nos dois modos.
+  state.schedule.filter(item => n(item.block) >= 25).forEach(schedule => {
     const key = `schedule:${schedule.id}`;
     if(groups.has(key)) return;
     groups.set(key, {
@@ -6814,7 +6862,7 @@ function visibleVideoLessons() {
 function openVideosForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   const lessons = videoLessonsForSchedule(item);
-  if(!lessons.length) { alert(usesR2VideoSource() ? 'Ainda não há vídeo disponível no R2 para esta aula.' : 'Ainda não há vídeo local vinculado a esta aula.'); return; }
+  if(!lessons.length) { alert('Ainda não há videoaula vinculada a esta aula no catálogo.'); return; }
   const playableLessons = lessons.filter(lesson => lesson.videos?.length);
   if(!playableLessons.length) {
     ui.videoBlock = String(lessons[0].block);
@@ -6826,7 +6874,10 @@ function openVideosForSchedule(scheduleId) {
   }
   const lesson = playableLessons.find(entry => !lessonVideoCompleted(entry)) || playableLessons[0];
   const nextPart = videoParts(lesson).find(part => !part.videos.some(video => state.videoPlayer.watched[video.id])) || videoParts(lesson)[0];
-  const nextSource = nextPart.videos.find(video => !state.videoPlayer.watched[video.id]) || nextPart.videos[0];
+  const nextSource = nextPart.videos.find(video => videoPlayableNow(video) && !state.videoPlayer.watched[video.id])
+    || nextPart.videos.find(video => !state.videoPlayer.watched[video.id])
+    || nextPart.videos.find(video => videoPlayableNow(video))
+    || nextPart.videos[0];
   ui.videoBlock = String(lesson.block);
   ui.videoSearch = '';
   ui.videoLessonId = lesson.id;
@@ -6923,10 +6974,19 @@ function currentVideoLesson() {
   if(!visible.some(lesson => lesson.id === ui.videoLessonId)) ui.videoLessonId = visible[0].id;
   return displayVideoLessons().find(lesson => lesson.id === ui.videoLessonId) || visible[0];
 }
+// Escolha automática: prefere um vídeo que toque agora, mas a escolha manual do
+// usuário sempre vence — dá para abrir a aula completa fora do R2 só para marcá-la.
+function preferredVideoSource(lesson) {
+  const videos = lesson?.videos || [];
+  if(!videos.length) return null;
+  return videos.find(video => videoPlayableNow(video) && !state.videoPlayer.watched[video.id])
+    || videos.find(video => videoPlayableNow(video))
+    || videos[0];
+}
 function currentVideoSource(lesson) {
   if(!lesson?.videos?.length) return null;
-  if(!lesson.videos.some(video => video.id === ui.videoSourceId)) ui.videoSourceId = lesson.videos[0].id;
-  return lesson.videos.find(video => video.id === ui.videoSourceId) || lesson.videos[0];
+  if(!lesson.videos.some(video => video.id === ui.videoSourceId)) ui.videoSourceId = preferredVideoSource(lesson).id;
+  return lesson.videos.find(video => video.id === ui.videoSourceId) || preferredVideoSource(lesson);
 }
 function saveOpenVideoPosition() {
   const video = document.getElementById('lessonVideo');
@@ -7002,8 +7062,17 @@ function renderAulas() {
   const progressRecord = source ? state.videoPlayer.progress?.[source.id] || {} : {};
   const resume = source ? (PlannerUX?.resumeTime(progressRecord) ?? n(state.videoPlayer.resume[source.id])) : 0;
   const watched = source ? state.videoPlayer.watched[source.id] : false;
+  const pinnedState = state.videoPlayer.pinned || {};
+  const pinnedActive = Boolean(lesson && source && pinnedState.enabled && pinnedState.lessonId === lesson.id && pinnedState.sourceId === source.id);
   const usingR2 = usesR2VideoSource();
-  mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas ${usingR2?'online':'locais'} · ordem do cronograma</div></div><span class="badge today">${usingR2?'R2':'offline'}</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><div class="video-reader-actions"><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Voltar ao layout completo':`${iconSvg('focus',{weight:'regular'})} Foco`}</button><span class="badge today" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro">Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${schedule ? `<button class="tiny-btn" data-video-materials="${escapeAttr(schedule.id)}">Material da aula</button>` : ''}${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map(bookmark => `<div class="video-bookmark ${bookmark.starred?'starred':''}" data-video-bookmark-id="${escapeAttr(bookmark.id)}"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span class="video-bookmark-label">${escapeHtml(bookmark.label || 'Ponto importante')}</span><button type="button" class="video-bookmark-star ${bookmark.starred?'active':''}" data-video-bookmark-star="${escapeAttr(bookmark.id)}" title="${bookmark.starred?'Desmarcar ponto-chave':'Marcar como ponto-chave'}" aria-label="${bookmark.starred?'Desmarcar ponto-chave':'Marcar ponto-chave'}">${iconSvg('xp',{weight:bookmark.starred?'duotone':'regular'})}</button><button class="delete-bookmark" data-video-bookmark-delete="${escapeAttr(bookmark.id)}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
+  const sourcePlayable = source ? videoPlayableNow(source) : false;
+  const sourceUrl = source ? videoAssetUrl(source) : '';
+  const unavailableNote = source && !sourcePlayable
+    ? `<div class="video-unavailable">${usingR2
+        ? 'Este arquivo não está no R2 agora. A aula continua na lista: você pode marcá-la como assistida, salvar pontos e criar flashcards. Quando reenviar o vídeo com o mesmo nome, ele volta a tocar aqui.'
+        : 'Não encontrei o arquivo local desta aula. Ela continua na lista e pode ser marcada como assistida.'}</div>`
+    : '';
+  mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas · ordem do cronograma</div></div><span class="badge today">${usingR2?'R2':'offline'}</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><div class="video-reader-actions"><button class="icon-btn video-pin-toggle ${pinnedActive?'active':''}" id="toggleVideoPin" type="button" aria-pressed="${pinnedActive}" title="${pinnedActive?'Desfixar vídeo':'Fixar vídeo'}" aria-label="${pinnedActive?'Desfixar vídeo':'Fixar vídeo'}">📌</button><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Voltar ao layout completo':`${iconSvg('focus',{weight:'regular'})} Foco`}</button><span class="badge today" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro">Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player ${sourcePlayable?'':'is-unavailable'}" id="lessonVideo" controls preload="metadata"${sourcePlayable?` src="${escapeAttr(sourceUrl)}"`:''}>Seu navegador não conseguiu abrir este vídeo.</video>${unavailableNote}<div class="video-controls"><div class="video-transport"><button class="icon-btn" id="videoBack10" title="Voltar 10 segundos" aria-label="Voltar 10 segundos">↶</button><button class="icon-btn" id="videoForward10" title="Avançar 10 segundos" aria-label="Avançar 10 segundos">↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select></div><button class="icon-btn video-watched-toggle ${watched?'active':''}" id="videoMarkWatched" aria-pressed="${watched}" title="${watched?'Desmarcar assistida':'Marcar assistida'}" aria-label="${watched?'Desmarcar assistida':'Marcar assistida'}">${iconSvg('success',{weight:watched?'duotone':'regular'})}<span>Assistido</span></button>${schedule ? `<button class="icon-btn" data-video-materials="${escapeAttr(schedule.id)}" title="Material da aula" aria-label="Material da aula">${iconSvg('materials')}</button>` : ''}${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map(bookmark => `<div class="video-bookmark ${bookmark.starred?'starred':''}" data-video-bookmark-id="${escapeAttr(bookmark.id)}"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span class="video-bookmark-label">${escapeHtml(bookmark.label || 'Ponto importante')}</span><button type="button" class="video-bookmark-star ${bookmark.starred?'active':''}" data-video-bookmark-star="${escapeAttr(bookmark.id)}" title="${bookmark.starred?'Desmarcar ponto-chave':'Marcar como ponto-chave'}" aria-label="${bookmark.starred?'Desmarcar ponto-chave':'Marcar ponto-chave'}">${iconSvg('xp',{weight:bookmark.starred?'duotone':'regular'})}</button><button class="delete-bookmark" data-video-bookmark-delete="${escapeAttr(bookmark.id)}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
   const renderedVideo=mount.querySelector('#lessonVideo');
   if(renderedVideo) {
     const stage=document.createElement('div');
@@ -7019,6 +7088,10 @@ function renderAulas() {
     cleanFrameToggle.setAttribute('aria-label','Ocultar controles para capturar a imagem');
     cleanFrameToggle.title='Clique para ocultar os controles';
     stage.append(cleanFrameToggle);
+    // O aviso de arquivo indisponível vira sobreposição dentro do palco: a coluna do
+    // player é um grid fechado e um irmão solto empurraria os controles para fora.
+    const unavailable=mount.querySelector('.video-unavailable');
+    if(unavailable) stage.append(unavailable);
   }
   const sourceSwitch=document.createElement('div');
   sourceSwitch.className='video-source-switch';
@@ -7074,8 +7147,11 @@ function renderAulas() {
       if(!listedVideo) return;
       const kind = listedVideo.type === 'express' ? 'COFEXPRESS' : 'Aula completa';
       const assisted = state.videoPlayer.watched[listedVideo.id] ? '<span class="video-playlist-watched">Assistida</span>' : '';
-      button.innerHTML = `<span class="video-playlist-kind">${kind}${assisted}</span><strong>${escapeHtml(videoContentLabel(listedVideo))}</strong>`;
-      button.title = `${kind}: ${videoContentLabel(listedVideo)}`;
+      const playable = videoPlayableNow(listedVideo);
+      const offline = playable ? '' : `<span class="video-playlist-offline">${usingR2?'fora do R2':'sem arquivo'}</span>`;
+      button.innerHTML = `<span class="video-playlist-kind">${kind}${assisted}${offline}</span><strong>${escapeHtml(videoContentLabel(listedVideo))}</strong>`;
+      button.title = `${kind}: ${videoContentLabel(listedVideo)}${playable?'':' (arquivo indisponível agora — a aula continua marcável)'}`;
+      button.classList.toggle('video-tab-unavailable', !playable);
     });
   }
   document.querySelectorAll('[data-video-seek]').forEach(button => {
@@ -7110,7 +7186,7 @@ function renderAulas() {
     const selectedLesson=displayVideoLessons().find(item => item.id===ui.videoLessonId);
     if(selectedLesson) ui.videoBlock=String(selectedLesson.block);
     ui.videoSearch='';
-    ui.videoSourceId=selectedLesson?.videos?.[0]?.id||'';
+    ui.videoSourceId=preferredVideoSource(selectedLesson)?.id||'';
     setVideoLastOpen(ui.videoLessonId, ui.videoSourceId);
     saveStateOnly();
     syncRouteFromUI('push');
@@ -7133,17 +7209,8 @@ function renderAulas() {
   document.querySelectorAll('[data-video-questions]').forEach(button => button.onclick = event => openQuestionsForSchedule(event.currentTarget.dataset.videoQuestions));
   document.querySelectorAll('[data-video-materials]').forEach(button => button.onclick = event => openMaterialsForSchedule(event.currentTarget.dataset.videoMaterials));
   bindVideoPlayer(source, schedule, lesson);
-  const watchedButton = document.getElementById('videoMarkWatched');
-  if(watchedButton && lesson && source) {
-    const pinButton = document.createElement('button');
-    const pinned = state.videoPlayer.pinned || {};
-    pinButton.className = 'tiny-btn';
-    pinButton.id = 'toggleVideoPin';
-    pinButton.textContent = pinned.enabled && pinned.lessonId === lesson.id && pinned.sourceId === source.id ? 'Desfixar vídeo' : 'Fixar vídeo';
-    pinButton.title = 'Manter este vídeo aberto ao voltar para a aba';
-    pinButton.onclick = () => togglePinnedVideo(lesson, source);
-    watchedButton.insertAdjacentElement('afterend', pinButton);
-  }
+  const pinButton = document.getElementById('toggleVideoPin');
+  if(pinButton && lesson && source) pinButton.onclick = () => togglePinnedVideo(lesson, source);
   const addVideoCard = document.getElementById('addVideoFlashcard');
   if(addVideoCard) addVideoCard.onclick = () => addVideoFlashcard(source, lesson, schedule);
   document.querySelectorAll('[data-video-card][data-card-id][data-card-field]').forEach(input => {
@@ -7789,8 +7856,8 @@ function renderFlashcards() {
   <div class="flashcard-filters"><select class="select" id="flashcardFilter">${['Aprendendo','Revisando','Todos','Novos','Difíceis','Maduros','Suspensos'].map(value => `<option ${ui.flashcardFilter===value?'selected':''}>${value}</option>`).join('')}</select><select class="select" id="flashcardArea">${areas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select><label class="flashcard-target">Novos/dia <input class="mini-input" id="flashcardNewLimit" type="number" min="0" value="${n(state.flashcardSettings.newLimit)}"></label><label class="flashcard-target">Revisões/dia <input class="mini-input" id="flashcardReviewLimit" type="number" min="0" value="${n(state.flashcardSettings.reviewLimit)}"></label><span class="muted">${forecast.map(item => `${fmtDate(item.date).slice(0,5)}: ${item.count}`).join(' · ')}</span></div>
   <div class="flashcards-workspace">
     <aside class="flashcards-panel flashcard-block-panel"><div class="section-title"><h3>Blocos</h3><span class="badge today">${blocks.length-1}</span></div><button class="flashcard-block-choice ${selectedBlock==='Todos'?'active':''}" data-fc-block="Todos">Todos os blocos <span>${all.length}</span></button>${blocks.slice(1).map(block => `<button class="flashcard-block-choice ${String(selectedBlock)===String(block)?'active':''}" data-fc-block="${escapeAttr(block)}">Bloco ${escapeHtml(block)} <span>${all.filter(card=>String(card.weeklyBlockId||card.block)===String(block)).length}</span></button>`).join('')}<div class="muted flashcard-shortcuts">Espaço revela · 1–4 avalia<br>E edita · S suspende · Z desfaz</div></aside>
-    <main class="flashcards-panel flashcard-review-column">${ui.flashcardEditorOpen ? renderFlashcardWorkspaceEditor() : renderFlashcardStudy(study, cards)}<div class="flashcard-subject-strip"><div class="section-title"><h3>Assuntos${selectedBlock==='Todos'?'':' · Bloco '+escapeHtml(selectedBlock)}</h3><span>${subjects.length}</span></div><div class="flashcard-subject-list">${subjects.map(subject => `<button class="flashcard-subject-chip" data-fc-subject="${escapeAttr(subject)}">${escapeHtml(subject)} <span>${blockCards.filter(card=>(card.subject||card.subarea||card.topic)===subject).length}</span></button>`).join('') || '<span class="muted">Os assuntos aparecerão aqui conforme os cards forem criados.</span>'}</div></div></main>
-    <aside class="flashcards-panel flashcard-indicator-panel">${renderFlashcardIndicators(all, cards, reviewed, due)}<div class="section-title"><h3>Radar de fragilidade</h3></div>${renderFlashcardRadar(all)}<div class="section-title"><h3>Próximos dias</h3></div><div class="flashcard-forecast">${forecast.map(item=>`<div><span>${fmtDate(item.date).slice(0,5)}</span><strong>${item.count}</strong></div>`).join('')}</div></aside>
+    <div class="flashcards-panel flashcard-review-column">${ui.flashcardEditorOpen ? renderFlashcardWorkspaceEditor() : renderFlashcardStudy(study, cards)}<div class="flashcard-subject-strip"><div class="section-title"><h3>Assuntos${selectedBlock==='Todos'?'':' · Bloco '+escapeHtml(selectedBlock)}</h3><span>${subjects.length}</span></div><div class="flashcard-subject-list">${subjects.map(subject => `<button class="flashcard-subject-chip" data-fc-subject="${escapeAttr(subject)}">${escapeHtml(subject)} <span>${blockCards.filter(card=>(card.subject||card.subarea||card.topic)===subject).length}</span></button>`).join('') || '<span class="muted">Os assuntos aparecerão aqui conforme os cards forem criados.</span>'}</div></div></div>
+    <aside class="flashcards-panel flashcard-indicator-panel"><details class="flashcard-indicator-toggle" ${due>0?'open':''}><summary>Estatísticas e fila<span class="muted">${due>0?`${due} atrasados`:'tudo em dia'}</span></summary><div>${renderFlashcardIndicators(all, cards, reviewed, due)}<div class="section-title"><h3>Radar de fragilidade</h3></div>${renderFlashcardRadar(all)}<div class="section-title"><h3>Próximos dias</h3></div><div class="flashcard-forecast">${forecast.map(item=>`<div><span>${fmtDate(item.date).slice(0,5)}</span><strong>${item.count}</strong></div>`).join('')}</div></div></details></aside>
   </div>
   <div class="card flashcard-library-card"><div class="section-title"><h3>Biblioteca</h3><button class="icon-btn" id="flashcardToggleLibrary">${ui.flashcardShowLibrary?'Ocultar':'Mostrar'} cards (${cards.length})</button></div>${ui.flashcardShowLibrary ? (groups.length ? groups.map(renderFlashcardGroup).join('') : '<div class="empty">Nenhum card neste filtro.</div>') : '<div class="muted">A biblioteca fica recolhida durante a revisão para reduzir distrações.</div>'}</div>`;
   const filter = document.getElementById('flashcardFilter');
