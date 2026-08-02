@@ -2120,9 +2120,12 @@ body.dark .tab.active .tab-icon{background:#172331}
 }
 
 /* Dashboard density: mobile stays comfortable; desktop gets a true 12-column composition. */
-.dashboard-global-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:2px 2px 0}
+.dashboard-global-head{display:flex;align-items:flex-end;justify-content:flex-start;gap:32px;padding:2px 2px 0}
 .dashboard-global-head h1{margin:2px 0 0;font-size:clamp(24px,2vw,32px);line-height:1.1;letter-spacing:0}
-.dashboard-date-control{display:grid;grid-template-columns:auto minmax(142px,170px);align-items:center;gap:8px;color:var(--muted);font-size:13px;font-weight:800}
+.dashboard-date-control{display:grid;grid-template-columns:auto minmax(170px,210px);align-items:center;gap:8px;color:var(--muted);font-size:13px;font-weight:800}
+.dashboard-date-input-row{display:flex;align-items:center;gap:6px}
+.dashboard-date-input-row .input{flex:1;min-width:0}
+.dashboard-date-input-row .tiny-btn{flex:0 0 auto}
 .dashboard-date-control .input{min-height:42px}
 .dashboard-desktop-grid{display:grid;gap:18px}
 .dashboard-primary-column,.dashboard-side-column,.dashboard-progress-region{display:grid;gap:18px;align-content:start;min-width:0}
@@ -2252,7 +2255,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   #painel .card{height:100%;padding:20px;overflow:hidden}
   .dashboard-global-head{align-items:center;min-height:64px}
   .dashboard-global-head h1{font-size:31px}
-  .dashboard-date-control{grid-template-columns:auto 154px;font-size:12px}
+  .dashboard-date-control{grid-template-columns:auto 190px;font-size:12px}
   .dashboard-date-control .input{min-height:40px}
   .dashboard-desktop-grid{gap:18px;align-items:stretch}
   .dashboard-desktop-grid>.continue-study-card,
@@ -2283,7 +2286,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-desktop-grid>.daily-analysis .daily-analysis-icon{width:40px;height:40px}
   .dashboard-desktop-grid>.daily-analysis .daily-analysis-label{font-size:12px}
   .dashboard-desktop-grid>.daily-analysis .daily-analysis-tile strong{font-size:27px}
-  .dashboard-desktop-grid>.daily-analysis .daily-analysis-tile small{min-height:31px;font-size:12px}
+  .dashboard-desktop-grid>.daily-analysis .daily-analysis-tile small{min-height:31px;font-size:12px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
   .dashboard-desktop-grid>.daily-analysis .daily-analysis-progress{margin-top:auto}
   .dashboard-review-list{gap:9px}
   .dashboard-review-list>div{grid-template-columns:36px 42px minmax(0,1fr);grid-template-areas:'icon count label' 'icon count foot';gap:1px 9px;padding:9px 10px}
@@ -2311,6 +2314,10 @@ body.dark .tab.active .tab-icon{background:#172331}
   .dashboard-desktop-grid>.gamification-card--compact,
   .dashboard-desktop-grid>.dashboard-gamification-popover,
   .dashboard-desktop-grid>.dashboard-recent-card{grid-column:span 4}
+}
+
+@media(min-width:1200px){
+  .dashboard-desktop-grid>.dashboard-gamification-popover{grid-row:1;grid-column:5/-1;min-height:230px}
 }
 
 @media(max-width:1199px){
@@ -2490,13 +2497,13 @@ body.dark .tab.active .tab-icon{background:#172331}
 .dashboard-today-focus .mood-btn.active{border-color:var(--green);background:var(--soft-green)}
 .dashboard-today-focus .mood-btn>span{font-size:21px;line-height:1}
 .dashboard-today-focus .mood-btn small{font-size:11px;font-weight:800;text-align:center;white-space:normal;overflow-wrap:break-word}
-.dashboard-review-compact{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
+.dashboard-review-compact{display:grid;gap:8px;padding-top:10px;border-top:1px solid var(--line)}
 .dashboard-review-compact>div{display:flex;align-items:center;gap:8px;min-width:0}
 .dashboard-review-compact .dashboard-review-icon{flex:0 0 auto}
-.dashboard-review-compact strong,.dashboard-review-compact small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dashboard-review-compact strong,.dashboard-review-compact small{display:block;overflow-wrap:break-word}
 .dashboard-review-compact strong{font-size:13px}
 .dashboard-review-compact small{margin-top:2px;font-size:11px;color:var(--muted)}
-.dashboard-review-compact .tiny-btn{flex-shrink:0}
+.dashboard-review-compact .tiny-btn{width:100%}
 
 .dashboard-weekly-card{display:grid;grid-template-rows:auto auto 1fr;gap:10px}
 .weekly-week-nav{display:flex;align-items:center;gap:8px}

@@ -10,3 +10,4 @@ video_library/media/
 *.mov
 *.avi
 backup-*.json
+backups/

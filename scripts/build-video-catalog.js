@@ -13,6 +13,21 @@ const ROOT = process.argv[2] || 'E:\\MedCof 2026';
 const OUT = path.join(__dirname, '..', 'video_library', 'catalog.json');
 const VIDEO_EXT = new Set(['.mp4', '.mkv', '.avi', '.mov', '.webm', '.m4v']);
 
+// O caminho público no R2 é independente do nome atual no disco. Ao regenerar o
+// catálogo, reaproveitamos a associação anterior por caminho exato ou por tamanho
+// único do arquivo, para que renomear/mover uma aula não quebre o vídeo online.
+let previous = null;
+try { previous = JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch (e) {}
+const previousVideos = previous?.lessons?.flatMap(lesson => lesson.videos || []) || [];
+const previousByPath = new Map(previousVideos.map(video => [video.relativePath, video]));
+const previousBySize = new Map();
+for (const video of previousVideos) {
+  const size = Number(video.size);
+  if (!Number.isFinite(size) || size <= 0) continue;
+  if (!previousBySize.has(size)) previousBySize.set(size, []);
+  previousBySize.get(size).push(video);
+}
+
 function slug(text) {
   return String(text || '')
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove acentos
@@ -81,15 +96,23 @@ for (const blockDir of blockDirs) {
       const videos = files.map(file => {
         const extension = path.extname(file.name);
         const videoTitle = stripVideoOrderPrefix(file.name.slice(0, -extension.length));
-        const relativePath = path.relative(ROOT, path.join(lessonPath, file.name)).split(path.sep).join('/');
+        const absolutePath = path.join(lessonPath, file.name);
+        const relativePath = path.relative(ROOT, absolutePath).split(path.sep).join('/');
+        const size = fs.statSync(absolutePath).size;
         const type = /cofexpress/i.test(videoTitle) ? 'express' : 'complete';
-        return {
+        const priorByPath = previousByPath.get(relativePath);
+        const priorBySize = previousBySize.get(size) || [];
+        const prior = priorByPath || (priorBySize.length === 1 ? priorBySize[0] : null);
+        const video = {
           id: `${blockId}|${areaName}|${lessonTitle}|${videoTitle}`,
           title: videoTitle,
           type,
           relativePath,
-          extension
+          extension,
+          size
         };
+        if (prior?.onlinePath) video.onlinePath = prior.onlinePath;
+        return video;
       });
 
       lessons.push({
@@ -131,8 +154,6 @@ const mergedLessons = [...mergedByKey.values()];
 issues.splitAcrossFolders = splitAcrossFolders;
 
 // Compara com o catálogo anterior para reportar o que sumiu/apareceu.
-let previous = null;
-try { previous = JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch (e) {}
 if (previous) {
   const prevVideoIds = new Set(previous.lessons.flatMap(l => l.videos.map(v => v.id)));
   const newVideoIds = new Set(mergedLessons.flatMap(l => l.videos.map(v => v.id)));

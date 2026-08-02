@@ -2269,6 +2269,7 @@ function bindPersonalDailyTasks(date) {
 function defaultDayLog(date) { return { date, mood: 0, pace: '', flashcardsOn: false, flashcards: 0, manualFlashcards: 0, flashcardMinutes: 0, videosOn: false, videos: 0, videoNames: '', lessonMinutes: 0, questionsOn: false, questions: 0, correct: 0, wrong: 0, questionMinutes: 0, materialMinutes: 0, simuladoMinutes: 0, notes: '' }; }
 function repairDailyActivityData() {
   if(!state.activityDataRepairs || typeof state.activityDataRepairs !== 'object') state.activityDataRepairs = {};
+  stripSimuladoReminderMarkers();
   const today = studyDateKey();
   if(!today) return;
   const reviewsByDate = new Map();
@@ -2804,24 +2805,26 @@ function ensureSimuladoSundaySchedule() {
   if(!state.dashboardSettings || typeof state.dashboardSettings !== 'object') state.dashboardSettings = {};
   const sims = [...state.simulados].sort((a,b) => String(a.date || '').localeCompare(String(b.date || '')));
   const start = new Date('2026-07-19T12:00:00');
-  const oldDates = new Set(sims.map(sim => sim.date).filter(Boolean));
   sims.forEach((sim, index) => {
     const date = new Date(start);
     date.setDate(start.getDate() + index * 21);
     sim.date = localISODate(date);
   });
-  if(Array.isArray(state.dayLogs)) {
-    state.dayLogs.forEach(log => {
-      if(/SIMULADO/i.test(String(log.videoNames || ''))) log.videoNames = String(log.videoNames).replace(/🏆\s*SIMULADO\s*\d+\s*→[^|]*/gi, '').replace(/\s{2,}/g, ' ').trim();
-    });
-  }
-  sims.forEach((sim, index) => {
-    const log = getDayLog(sim.date);
-    const marker = `🏆 SIMULADO ${index + 1} → abra a aba Simulados`;
-    log.videoNames = [String(log.videoNames || '').trim(), marker].filter(Boolean).join(' · ');
-  });
   state.dashboardSettings.simuladoSundayVersion = version;
   return true;
+}
+// Um simulado agendado (data futura, ainda não feito) não é uma atividade
+// concluída. ensureSimuladoSundaySchedule já não grava esse marcador, mas
+// versões antigas do estado (ex.: trazidas de volta por sync de outro
+// dispositivo) ainda podem tê-lo — por isso isso roda a cada carregamento,
+// não só uma vez.
+function stripSimuladoReminderMarkers() {
+  if(!Array.isArray(state.dayLogs)) return;
+  state.dayLogs.forEach(log => {
+    if(/SIMULADO/i.test(String(log.videoNames || ''))) {
+      log.videoNames = String(log.videoNames).replace(/🏆\s*SIMULADO\s*\d+\s*→[^|]*/gi, '').replace(/\s{2,}/g, ' ').trim();
+    }
+  });
 }
 function defaultSimuladoTargets() { return Object.fromEntries(ENAMED_AREAS.map(area => [area, 20])); }
 function scheduleTopicOptions() {
@@ -6447,11 +6450,12 @@ async function loadOfficialSchedule() {
   }
 }
 function videoAssetUrl(video) {
-  const relativePath = String(video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
-  const localUrl = `video_library/media/${relativePath}`;
+  const localPath = String(video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
+  const onlinePath = String(video.onlinePath || video.relativePath || '').split('/').map(part => encodeURIComponent(part)).join('/');
+  const localUrl = `video_library/media/${localPath}`;
   // A cópia local continua funcionando sem internet; o site publicado usa o R2.
   const useR2 = usesR2VideoSource();
-  return useR2 ? `${R2_VIDEO_BASE_URL}/video_library/media/${relativePath}` : localUrl;
+  return useR2 ? `${R2_VIDEO_BASE_URL}/video_library/media/${onlinePath}` : localUrl;
 }
 function usesR2VideoSource() {
   return ui.videoSourceMode === 'online' || (ui.videoSourceMode === 'auto' && !isLocalPlanner());
@@ -6514,7 +6518,10 @@ function displayVideoLessons() {
   if(renderCache.videoDisplay) return renderCache.videoDisplay;
   const groups = new Map();
   videoCatalog.forEach(raw => {
-    raw.videos.forEach(video => {
+    const availableVideos = usesR2VideoSource()
+      ? raw.videos.filter(video => video.onlinePath)
+      : raw.videos;
+    availableVideos.forEach(video => {
       const schedule = videoScheduleForVideo(raw, video) || videoScheduleForLesson(raw);
       const key = schedule ? `schedule:${schedule.id}` : `video:${raw.id}`;
       if(!groups.has(key)) groups.set(key, {
@@ -6533,7 +6540,7 @@ function displayVideoLessons() {
     });
   });
   // Os blocos finais já aparecem na rota de estudo mesmo antes do envio dos MP4s.
-  state.schedule.filter(item => n(item.block) >= 25).forEach(schedule => {
+  state.schedule.filter(item => !usesR2VideoSource() && n(item.block) >= 25).forEach(schedule => {
     const key = `schedule:${schedule.id}`;
     if(groups.has(key)) return;
     groups.set(key, {
@@ -6807,7 +6814,7 @@ function visibleVideoLessons() {
 function openVideosForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   const lessons = videoLessonsForSchedule(item);
-  if(!lessons.length) { alert('Ainda não há vídeo local vinculado a esta aula.'); return; }
+  if(!lessons.length) { alert(usesR2VideoSource() ? 'Ainda não há vídeo disponível no R2 para esta aula.' : 'Ainda não há vídeo local vinculado a esta aula.'); return; }
   const playableLessons = lessons.filter(lesson => lesson.videos?.length);
   if(!playableLessons.length) {
     ui.videoBlock = String(lessons[0].block);
@@ -6996,7 +7003,7 @@ function renderAulas() {
   const resume = source ? (PlannerUX?.resumeTime(progressRecord) ?? n(state.videoPlayer.resume[source.id])) : 0;
   const watched = source ? state.videoPlayer.watched[source.id] : false;
   const usingR2 = usesR2VideoSource();
-  mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas locais · ordem do cronograma</div></div><span class="badge today">offline</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><div class="video-reader-actions"><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Voltar ao layout completo':`${iconSvg('focus',{weight:'regular'})} Foco`}</button><span class="badge today" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro">Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo local.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${schedule ? `<button class="tiny-btn" data-video-materials="${escapeAttr(schedule.id)}">Material da aula</button>` : ''}${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map(bookmark => `<div class="video-bookmark ${bookmark.starred?'starred':''}" data-video-bookmark-id="${escapeAttr(bookmark.id)}"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span class="video-bookmark-label">${escapeHtml(bookmark.label || 'Ponto importante')}</span><button type="button" class="video-bookmark-star ${bookmark.starred?'active':''}" data-video-bookmark-star="${escapeAttr(bookmark.id)}" title="${bookmark.starred?'Desmarcar ponto-chave':'Marcar como ponto-chave'}" aria-label="${bookmark.starred?'Desmarcar ponto-chave':'Marcar como ponto-chave'}">${iconSvg('xp',{weight:bookmark.starred?'duotone':'regular'})}</button><button class="delete-bookmark" data-video-bookmark-delete="${escapeAttr(bookmark.id)}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
+  mount.innerHTML = `<div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}"><aside class="card video-sidebar"><div class="section-title"><div><h2>Videoaulas</h2><div class="muted">${catalogLessons.length} aulas ${usingR2?'online':'locais'} · ordem do cronograma</div></div><span class="badge today">${usingR2?'R2':'offline'}</span></div><div class="video-filter"><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Blocos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>B${String(block).padStart(2,'0')}</option>`).join('')}</select><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Buscar aula ou tema"></div><div class="video-lesson-list">${visible.map(item => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''}" data-video-lesson="${escapeAttr(item.id)}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small>B${String(item.block).padStart(2,'0')} · ${escapeHtml(item.area)}${linked ? ` · ${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="empty">Nenhuma aula encontrada.</div>'}</div></aside><section class="card video-player-card">${!lesson || !source ? '<div class="video-empty">Escolha uma aula no painel ao lado.</div>' : `<div class="video-reader-head"><div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="muted">Bloco ${lesson.block} · ${escapeHtml(lesson.area)}${schedule ? ` · ${lesson.videos.length} ${lesson.videos.length===1?'vídeo disponível':'vídeos disponíveis'}` : ''}</div></div><div class="video-reader-actions"><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Voltar ao layout completo':`${iconSvg('focus',{weight:'regular'})} Foco`}</button><span class="badge today" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro">Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'assistida':'em estudo'}</span></div></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player" id="lessonVideo" controls preload="metadata" src="${escapeAttr(videoAssetUrl(source))}">Seu navegador não conseguiu abrir este vídeo.</video><div class="video-controls"><button class="tiny-btn" id="videoBack10" title="Voltar 10 segundos">↶ 10 s</button><button class="tiny-btn" id="videoForward10" title="Avançar 10 segundos">10 s ↷</button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===1?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select><button class="tiny-btn" id="videoMarkWatched">${watched?'Desmarcar assistida':'Marcar assistida'}</button>${schedule ? `<button class="tiny-btn" data-video-materials="${escapeAttr(schedule.id)}">Material da aula</button>` : ''}${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn" data-video-questions="${escapeAttr(schedule.id)}">Questões do assunto →</button>` : ''}<span class="muted">${resume ? `Retomar em ${formatVideoTime(resume)}` : 'Progresso salvo neste computador'}</span></div><div class="video-bookmarks"><div class="section-title"><div><h3>Pontos importantes</h3><div class="muted">Salve trechos como tratamento, diagnóstico ou conduta.</div></div></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Ex.: tratamento de primeira linha"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map(bookmark => `<div class="video-bookmark ${bookmark.starred?'starred':''}" data-video-bookmark-id="${escapeAttr(bookmark.id)}"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span class="video-bookmark-label">${escapeHtml(bookmark.label || 'Ponto importante')}</span><button type="button" class="video-bookmark-star ${bookmark.starred?'active':''}" data-video-bookmark-star="${escapeAttr(bookmark.id)}" title="${bookmark.starred?'Desmarcar ponto-chave':'Marcar como ponto-chave'}" aria-label="${bookmark.starred?'Desmarcar ponto-chave':'Marcar ponto-chave'}">${iconSvg('xp',{weight:bookmark.starred?'duotone':'regular'})}</button><button class="delete-bookmark" data-video-bookmark-delete="${escapeAttr(bookmark.id)}" title="Excluir ponto">×</button></div>`).join('') || '<div class="muted" style="margin-top:10px">Ainda não há pontos salvos nesta aula.</div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section></div>`;
   const renderedVideo=mount.querySelector('#lessonVideo');
   if(renderedVideo) {
     const stage=document.createElement('div');
@@ -7033,6 +7040,8 @@ function renderAulas() {
     }
     ui.videoSourceMode=mode;
     localStorage.setItem(VIDEO_SOURCE_KEY, mode);
+    renderCache.videoDisplay=null;
+    renderCache.videoLessons.clear();
     if(mode === 'online') pushCloudState();
     renderAulas();
   });

@@ -7,9 +7,10 @@
     "icons:build": "node scripts/build-icons.js",
     "questions:audit": "node scripts/audit-question-bank.js",
     "questions:index": "node scripts/audit-question-bank.js --fix-index",
+    "videos:r2:reconcile": "node scripts/reconcile-r2-video-catalog.js --write",
     "offline:sync": "node scripts/sync-offline-entry.js",
     "test": "node --test --test-force-exit tests/*.test.js",
-    "lint": "node --check assets/app-icons.js && node --check assets/gamification.js && node --check assets/planner-ux.js && node --check assets/planner.js && node --check scripts/audit-question-bank.js && node --check scripts/build-icons.js && node --check scripts/sync-offline-entry.js && node --check tests/verify-static-build.js && node --check tests/planner-sandbox.js && node --check tests/planner-merge.test.js && node --check tests/planner-session-fixes.test.js",
+    "lint": "node --check assets/app-icons.js && node --check assets/gamification.js && node --check assets/planner-ux.js && node --check assets/planner.js && node --check scripts/audit-question-bank.js && node --check scripts/build-icons.js && node --check scripts/reconcile-r2-video-catalog.js && node --check scripts/sync-offline-entry.js && node --check tests/verify-static-build.js && node --check tests/planner-sandbox.js && node --check tests/planner-merge.test.js && node --check tests/planner-session-fixes.test.js",
     "build": "node scripts/build-icons.js && node scripts/audit-question-bank.js && node tests/verify-static-build.js"
   },
   "devDependencies": {
