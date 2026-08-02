@@ -28,6 +28,16 @@ function stripOrderPrefix(name) {
   return { order: null, name: name.trim() };
 }
 
+// O provedor do curso reorganiza e renomeia os arquivos de vídeo periodicamente
+// (ex.: "01 - 1 aula - Tema" vira "01 - Tema Parte 1" meses depois). Se o prefixo
+// numérico entrar no id/title do vídeo, cada reorganização muda o id e orfaniza
+// flashcards, progresso e bookmarks já salvos (que referenciam o título "limpo").
+// Por isso o vídeo usa o mesmo corte de prefixo das pastas — só o relativePath
+// mantém o nome de arquivo real, que é o que precisa bater com o disco.
+function stripVideoOrderPrefix(name) {
+  return name.replace(/^\d+(?:\.\d+)?\s*-\s*(?:\d+\s*aula\s*-\s*)?/i, '').trim() || name.trim();
+}
+
 function blockNumber(name) {
   const match = name.match(/(\d+)/);
   return match ? parseInt(match[1], 10) : null;
@@ -70,7 +80,7 @@ for (const blockDir of blockDirs) {
 
       const videos = files.map(file => {
         const extension = path.extname(file.name);
-        const videoTitle = file.name.slice(0, -extension.length);
+        const videoTitle = stripVideoOrderPrefix(file.name.slice(0, -extension.length));
         const relativePath = path.relative(ROOT, path.join(lessonPath, file.name)).split(path.sep).join('/');
         const type = /cofexpress/i.test(videoTitle) ? 'express' : 'complete';
         return {
