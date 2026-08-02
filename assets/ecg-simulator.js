@@ -983,6 +983,7 @@
       log: [],        // histórico de tentativas
       seenIntro: false,
       highlights: {}, // marca-texto: { blockKey: [[start,end], ...] }
+      hiddenCourseImages: {}, // traçados reais ocultados pelo estudante
     };
   }
   function ensureSrs(st, id) {
@@ -1307,6 +1308,7 @@
     .ecg-table th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted,#5b6472)}
     /* Artigo com imagens intercaladas no texto (substitui a antiga grade de miniaturas) */
     .ecg-article-figure{margin:16px 0;border:1px solid var(--line,#dce1ec);border-radius:12px;overflow:hidden;background:var(--panel,#fff)}
+    .ecg-article-figure{position:relative}.ecg-real-remove{position:absolute;right:10px;top:10px;z-index:3;width:32px;height:32px;border:1px solid rgba(145,58,39,.25);border-radius:50%;background:rgba(255,255,255,.94);color:#9d432b;font-size:19px;line-height:1;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.17)}.ecg-real-remove:hover{background:#a9472d;color:#fff}.ecg-hidden-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:10px 0 2px;padding:11px 14px;border:1px solid rgba(43,95,91,.2);border-radius:11px;background:rgba(43,95,91,.07);font-size:12px;color:var(--muted,#5b6472)}.ecg-hidden-toolbar button{border:0;background:transparent;color:#25685f;font-weight:800;cursor:pointer;white-space:nowrap}
     .ecg-article-figure img{display:block;width:100%;height:auto;cursor:zoom-in;touch-action:pan-y}
     .ecg-article-figure figcaption{padding:12px 14px;font-size:14px;line-height:1.5;color:var(--ink)}
     .ecg-real-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
@@ -1667,12 +1669,17 @@
   function realArticle(obj, opts) {
     const imgs = obj.realImages;
     if (!imgs || !imgs.length) return '';
+    const imageScope = obj.id || 'geral';
+    const hidden = imgs.filter((im) => st().hiddenCourseImages[`${imageScope}|${im.src}`]);
+    const visible = imgs.filter((im) => !st().hiddenCourseImages[`${imageScope}|${im.src}`]);
     const heading = (opts && opts.heading) || 'Comparando com traçados reais';
     const intro = (opts && opts.intro) || 'Estes são registros reais (material de estudo pessoal) — o traçado sintético é limpo/idealizado; aqui você vê o ruído e a variação de um exame de verdade. Toque na imagem para ampliar.';
     return `<div class="ecg-card">
       <h3 style="margin:0 0 4px;font-size:15px">${esc(heading)}</h3>
       <p class="ecg-muted" style="margin:0 0 4px">${esc(intro)}</p>
-      ${imgs.map((im) => `<figure class="ecg-article-figure" data-ecg-real-open="${esc(im.src)}" data-ecg-real-caption="${escapeAttrLocal(im.caption)}">
+      ${hidden.length ? `<div class="ecg-hidden-toolbar"><span>${hidden.length} ${hidden.length === 1 ? 'imagem está oculta' : 'imagens estão ocultas'} nesta seção.</span><button type="button" data-ecg-restore-course-images="${esc(imageScope)}">Restaurar imagens</button></div>` : ''}
+      ${visible.map((im) => `<figure class="ecg-article-figure" data-ecg-real-open="${esc(im.src)}" data-ecg-real-caption="${escapeAttrLocal(im.caption)}">
+        <button type="button" class="ecg-real-remove" data-ecg-hide-course-image="${esc(im.src)}" data-ecg-image-scope="${esc(imageScope)}" aria-label="Remover este traçado da aula" title="Remover da aula">×</button>
         <img src="${REAL_IMG_BASE}${esc(im.src)}" alt="${escapeAttrLocal(im.caption)}" loading="eager">
         <figcaption>${esc(im.caption)}</figcaption>
       </figure>`).join('')}
@@ -2146,6 +2153,19 @@
       const opener = root()._openLightbox;
       if (opener) opener(fig.dataset.ecgRealOpen, fig.dataset.ecgRealCaption);
     }));
+    const remountEcgAt = (pageScrollTop) => { mountBody(); const restore = () => { if (document.scrollingElement) document.scrollingElement.scrollTop = pageScrollTop; }; restore(); requestAnimationFrame(restore); };
+    el.querySelectorAll('[data-ecg-hide-course-image]').forEach((button) => (button.onclick = (event) => {
+      event.stopPropagation();
+      const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0;
+      st().hiddenCourseImages[`${button.dataset.ecgImageScope}|${button.dataset.ecgHideCourseImage}`] = true;
+      save(); remountEcgAt(pageScrollTop);
+    }));
+    el.querySelectorAll('[data-ecg-restore-course-images]').forEach((button) => (button.onclick = () => {
+      const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0;
+      const prefix = `${button.dataset.ecgRestoreCourseImages}|`;
+      Object.keys(st().hiddenCourseImages).filter((key) => key.startsWith(prefix)).forEach((key) => { delete st().hiddenCourseImages[key]; });
+      save(); remountEcgAt(pageScrollTop);
+    }));
     el.querySelectorAll('[data-ecg-sub]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.viewer = null; S.ui.bankId = null; S.ui.lesson = null; S._quiz = null; go(b.dataset.ecgSub); }));
     el.querySelectorAll('[data-ecg-sub-go]').forEach((b) => (b.onclick = () => { const S = st(); S.ui.viewer = null; S.ui.bankId = null; S.ui.lesson = null; go(b.dataset.ecgSubGo); }));
     el.querySelectorAll('[data-ecg-open]').forEach((b) => (b.onclick = () => openCondition(b.dataset.ecgOpen, null)));
@@ -2217,6 +2237,7 @@
     if (!S.ecg.trilha) S.ecg.trilha = d.trilha;
     if (!S.ecg.trilha.done) S.ecg.trilha.done = {};
     if (!S.ecg.highlights) S.ecg.highlights = {};
+    if (!S.ecg.hiddenCourseImages) S.ecg.hiddenCourseImages = {};
 
     container.innerHTML = `<div class="ecg-wrap">
       <div class="section-title" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">

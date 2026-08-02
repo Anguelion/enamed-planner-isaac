@@ -809,62 +809,19 @@
 
   const signsInView = (view) => CORPO_SINAIS.filter((s) => (s.view || 'ant') === view);
   const VIEW_LABEL = { ant: 'anterior', post: 'posterior', maos: 'mãos e unhas', cabeca: 'cabeça e olhos' };
+  const CORPO_FIGURAS = {
+    ant: { vb: '0 0 220 470', src: 'assets/semiologia-corpo/anterior.png' },
+    post: { vb: '0 0 220 470', src: 'assets/semiologia-corpo/posterior.png' },
+    maos: { vb: '0 0 220 260', src: 'assets/semiologia-corpo/maos-unhas.png' },
+    cabeca: { vb: '0 0 240 220', src: 'assets/semiologia-corpo/cabeca-olhos.png' },
+  };
 
   function figureFor(view) {
-    const skin = 'fill="#e7d3bf" stroke="#b89c82" stroke-width="1.4" stroke-linejoin="round"';
-    if (view === 'maos') {
-      return { vb: '0 0 220 260', inner: `<g ${skin}>
-        <rect x="66" y="150" width="94" height="86" rx="26"/>
-        <rect x="78" y="66" width="18" height="98" rx="9"/>
-        <rect x="101" y="52" width="18" height="112" rx="9"/>
-        <rect x="124" y="62" width="18" height="102" rx="9"/>
-        <rect x="147" y="82" width="17" height="82" rx="8"/>
-        <rect x="40" y="150" width="17" height="60" rx="8" transform="rotate(-38 48 178)"/>
-        </g>
-        <g fill="#f3e6d6" stroke="#c9ac8f" stroke-width="1">
-        <rect x="80" y="68" width="14" height="12" rx="4"/>
-        <rect x="103" y="54" width="14" height="12" rx="4"/>
-        <rect x="126" y="64" width="14" height="12" rx="4"/>
-        <rect x="148" y="84" width="13" height="11" rx="4"/>
-        </g>` };
-    }
-    if (view === 'cabeca') {
-      return { vb: '0 0 240 220', inner: `<g ${skin}>
-        <path d="M58 96 Q60 20 120 18 Q180 20 182 96 Q182 170 120 200 Q58 170 58 96 Z"/>
-        <path d="M56 96 q-14 2 -12 20 q2 14 14 12"/>
-        <path d="M184 96 q14 2 12 20 q-2 14 -14 12"/>
-        </g>
-        <g fill="none" stroke="#c9ac8f" stroke-width="1.4">
-        <path d="M72 92 Q92 80 112 92 Q92 104 72 92 Z"/>
-        <path d="M128 92 Q148 80 168 92 Q148 104 128 92 Z"/>
-        <path d="M118 100 L114 138 Q120 142 126 138"/>
-        <path d="M100 166 Q120 176 140 166"/>
-        <path d="M70 74 Q88 66 108 74"/><path d="M132 74 Q152 66 170 74"/>
-        </g>
-        <circle cx="92" cy="92" r="5" fill="#5b4636"/><circle cx="148" cy="92" r="5" fill="#5b4636"/>` };
-    }
-    // corpo inteiro (anterior/posterior) — silhueta simétrica reaproveitada
-    const body = `<g ${skin}>
-        <ellipse cx="110" cy="40" rx="25" ry="29"/>
-        <path d="M101 66 h18 v14 q-9 5 -18 0 Z"/>
-        <path d="M74 92 C 82 82 138 82 146 92 L160 132 L150 148 L142 130 L146 214 Q110 230 74 214 L78 130 L70 148 L60 132 Z"/>
-        <path d="M60 132 L44 214 L36 296 q10 6 16 0 L58 216 L74 150 Z"/>
-        <path d="M160 132 L176 214 L184 296 q-10 6 -16 0 L162 216 L146 150 Z"/>
-        <ellipse cx="44" cy="302" rx="11" ry="14"/>
-        <ellipse cx="176" cy="302" rx="11" ry="14"/>
-        <path d="M78 216 L74 330 L84 430 q9 5 16 0 L104 300 L108 224 Z"/>
-        <path d="M142 216 L146 330 L136 430 q-9 5 -16 0 L116 300 L112 224 Z"/>
-        <ellipse cx="90" cy="440" rx="12" ry="9"/>
-        <ellipse cx="130" cy="440" rx="12" ry="9"/>
-      </g>`;
-    const detail = view === 'post'
-      ? `<g fill="none" stroke="#cbb79f" stroke-width="1.2">
-          <line x1="110" y1="96" x2="110" y2="236" stroke-width="1.6"/>
-          <path d="M96 120 q-14 6 -18 24"/><path d="M124 120 q14 6 18 24"/>
-          <line x1="90" y1="238" x2="130" y2="238"/>
-        </g>`
-      : `<line x1="110" y1="88" x2="110" y2="222" stroke="#cbb79f" stroke-width="1" stroke-dasharray="3 4"/>`;
-    return { vb: '0 0 220 470', inner: body + detail };
+    const fig = CORPO_FIGURAS[view] || CORPO_FIGURAS.ant;
+    return {
+      vb: fig.vb,
+      inner: `<image href="${fig.src}" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"/>`,
+    };
   }
 
   function bodySvg(activeId, testeMode, view) {

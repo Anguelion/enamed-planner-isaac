@@ -560,6 +560,7 @@
       progress: {},     // marcadores de conclusão de módulos
       trail: {},        // passos da trilha concluídos { stepId: dataISO }
       highlights: {},   // marca-texto por aula: { topicoId: { blockIndex: [trechos...] } }
+      hiddenCourseImages: {}, // imagens ocultadas pelo estudante, sem apagar os arquivos originais
       daily: { day: null, sinalOfDay: null },
       caseState: {},    // etapa atual por caso
     };
@@ -680,6 +681,7 @@
     :root[data-theme="dark"] .radio-aula-tip{background:#332b0f;border-color:#5c4a10;color:#f0d98c}
     @media(prefers-color-scheme:dark){.radio-aula-tip{background:#332b0f;border-color:#5c4a10;color:#f0d98c}}
     .radio-aula-figure{margin:4px 0;border:1px solid var(--border,#dce1ec);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;max-width:520px}
+    .radio-aula-figure{position:relative}.radio-aula-remove{position:absolute;right:9px;top:9px;z-index:3;width:31px;height:31px;border:1px solid rgba(145,58,39,.25);border-radius:50%;background:rgba(255,255,255,.94);color:#9d432b;font-size:19px;line-height:1;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.16)}.radio-aula-remove:hover{background:#a9472d;color:#fff}.radio-hidden-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 14px;border:1px solid rgba(43,95,91,.2);border-radius:11px;background:rgba(43,95,91,.07);font-size:12px;color:var(--muted,#5b6472)}.radio-hidden-toolbar button{border:0;background:transparent;color:#25685f;font-weight:800;cursor:pointer;white-space:nowrap}
     .radio-aula-figure img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;background:#05070a}
     .radio-aula-figure figcaption{padding:8px 12px;font-size:12.5px;color:var(--muted,#5b6472);border-top:1px solid var(--border,#eef1f7);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
     .radio-aula-ampliar{white-space:nowrap;opacity:.75}
@@ -1215,9 +1217,12 @@
   function aulasTopicoDetail(mod, topico) {
     const S = st();
     const marks = (S.highlights && S.highlights[topico.id]) || {};
+    const hiddenImages = topico.blocks.filter((b) => b.type === 'img' && S.hiddenCourseImages[`${topico.id}|${b.src}`]);
     const parts = topico.blocks.map((b, i) => {
       if (b.type === 'img') {
+        if (S.hiddenCourseImages[`${topico.id}|${b.src}`]) return '';
         return `<figure class="radio-aula-figure" data-aula-img="${i}" data-aula-src="${esc(b.src)}" data-aula-cap="${esc(b.caption || '')}">
+          <button type="button" class="radio-aula-remove" data-radio-hide-course-image="${esc(b.src)}" data-radio-image-topic="${esc(topico.id)}" aria-label="Remover esta imagem da aula" title="Remover da aula">×</button>
           <img src="${esc(b.src)}" alt="${esc(b.caption || topico.titulo)}" loading="lazy"/>
           <figcaption>${esc(b.caption || '')} <span class="radio-aula-ampliar">🔍 toque para ampliar</span></figcaption>
         </figure>`;
@@ -1235,7 +1240,7 @@
           ${Object.keys(marks).length ? `<button class="radio-btn ghost sm" data-radio-clear-hl>Limpar marcações deste tópico</button>` : ''}
         </div>
       </div>
-      <div class="radio-aula-flow">${parts.join('')}</div>
+      <div class="radio-aula-flow">${hiddenImages.length ? `<div class="radio-hidden-toolbar"><span>${hiddenImages.length} ${hiddenImages.length === 1 ? 'imagem está oculta' : 'imagens estão ocultas'} nesta aula.</span><button type="button" data-radio-restore-course-images="${esc(topico.id)}">Restaurar imagens</button></div>` : ''}${parts.join('')}</div>
       <button class="radio-btn radio-focus-exit" data-radio-focus-toggle style="display:none">✕ Sair do modo foco</button>`;
   }
   function aulasHtml() {
@@ -1308,6 +1313,19 @@
     el.querySelectorAll('[data-radio-open-mod]').forEach((b) => b.onclick = () => { const S = st(); S.ui.aulaModId = +b.dataset.radioOpenMod; S.ui.aulaTopicoId = null; save(); mountBody(); });
     el.querySelectorAll('[data-radio-back-mod]').forEach((b) => b.onclick = () => { st().ui.aulaModId = null; save(); mountBody(); });
     el.querySelectorAll('[data-radio-open-topico]').forEach((b) => b.onclick = () => { toggleFocusMode(false); st().ui.aulaTopicoId = b.dataset.radioOpenTopico; save(); mountBody(); });
+    const remountRadioAt = (pageScrollTop) => { mountBody(); const restore = () => { if (document.scrollingElement) document.scrollingElement.scrollTop = pageScrollTop; }; restore(); requestAnimationFrame(restore); };
+    el.querySelectorAll('[data-radio-hide-course-image]').forEach((button) => button.onclick = (event) => {
+      event.stopPropagation();
+      const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0;
+      st().hiddenCourseImages[`${button.dataset.radioImageTopic}|${button.dataset.radioHideCourseImage}`] = true;
+      save(); remountRadioAt(pageScrollTop);
+    });
+    el.querySelectorAll('[data-radio-restore-course-images]').forEach((button) => button.onclick = () => {
+      const pageScrollTop = document.scrollingElement?.scrollTop || window.scrollY || 0;
+      const prefix = `${button.dataset.radioRestoreCourseImages}|`;
+      Object.keys(st().hiddenCourseImages).filter((key) => key.startsWith(prefix)).forEach((key) => { delete st().hiddenCourseImages[key]; });
+      save(); remountRadioAt(pageScrollTop);
+    });
     el.querySelectorAll('[data-radio-back-topico]').forEach((b) => b.onclick = () => { toggleFocusMode(false); st().ui.aulaTopicoId = null; save(); mountBody(); });
     el.querySelectorAll('[data-radio-clear-hl]').forEach((b) => b.onclick = () => {
       const topico = currentAulaTopico(); if (!topico) return;
@@ -1421,7 +1439,7 @@
     if (!S.radio) S.radio = defaultState();
     const d = defaultState();
     S.radio.ui = Object.assign({}, d.ui, S.radio.ui);
-    ['srs', 'progress', 'caseState', 'trail', 'highlights'].forEach((k) => { if (!S.radio[k]) S.radio[k] = {}; });
+    ['srs', 'progress', 'caseState', 'trail', 'highlights', 'hiddenCourseImages'].forEach((k) => { if (!S.radio[k]) S.radio[k] = {}; });
     if (!S.radio.log) S.radio.log = [];
     if (!S.radio.daily) S.radio.daily = d.daily;
 
