@@ -32,6 +32,7 @@
       .skill-hl-colors{display:flex;align-items:center;gap:9px;margin-bottom:11px}.skill-hl-colors>span{color:#bfc6d0;font-size:11px;margin-right:auto}.skill-hl-swatch{width:27px;height:27px;border:2px solid rgba(255,255,255,.42);border-radius:50%;cursor:pointer;padding:0;transition:.15s}.skill-hl-swatch:hover{transform:scale(1.08);border-color:#fff}.skill-hl-swatch.active{border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.16)}
       .skill-hl-note{display:block;width:100%;min-height:66px;max-height:150px;resize:vertical;box-sizing:border-box;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:#15191f;color:#fff;padding:9px 10px;outline:0;font:12px/1.45 inherit}.skill-hl-note:focus{border-color:#91c8ff}.skill-hl-note::placeholder{color:#87909d}
       .skill-hl-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:11px}.skill-hl-actions button{border:0;border-radius:9px;padding:8px 12px;font-weight:750;cursor:pointer}.skill-hl-save{background:#f4f6f8;color:#20242b}.skill-hl-delete{margin-right:auto;background:rgba(255,111,111,.13);color:#ffb0b0}.skill-hl-has-note{outline:1px dotted rgba(22,40,55,.48);outline-offset:2px}
+      .skill-hl-guide{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 22px;padding:12px 14px;border:1px solid rgba(39,101,91,.2);border-radius:12px;background:rgba(39,101,91,.065);color:#526763;font:12px/1.4 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.skill-hl-guide strong{color:#205f56}.skill-hl-guide-colors{display:flex;gap:5px}.skill-hl-guide-colors i{display:block;width:14px;height:14px;border-radius:50%;border:1px solid rgba(20,35,38,.16)}.skill-hl-guide small{font-size:11px;color:inherit}.skill-hl-guide b{margin-left:auto;color:#205f56;font-size:11px}
       @media(max-width:560px){.skill-hl-popup{left:10px!important;right:10px!important;bottom:10px!important;top:auto!important;width:auto}}
     `;
     document.head.appendChild(style);
@@ -76,5 +77,9 @@
     return panel;
   }
 
-  root.SkillHighlighter = { COLORS, colorHex, open, close };
+  function guideHtml(){
+    return `<div class="skill-hl-guide" aria-label="Marca-texto disponível"><strong>✒ Marca-texto</strong><span class="skill-hl-guide-colors" aria-hidden="true">${COLORS.map(color => `<i style="background:${color.hex}"></i>`).join('')}</span><small>Selecione um trecho para escolher a cor e escrever um comentário.</small><b>Salvamento automático</b></div>`;
+  }
+
+  root.SkillHighlighter = { COLORS, colorHex, guideHtml, open, close };
 })(typeof window !== 'undefined' ? window : globalThis);

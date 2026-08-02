@@ -827,17 +827,22 @@
 
   function bodySvg(activeId, testeMode, view) {
     const list = signsInView(view);
+    const editing = !testeMode && !!st().ui.corpoEdit;
+    const customPositions = st().hotspotPositions || {};
     const hotspots = list.map((s, i) => {
       const on = s.id === activeId;
       const cor = CAT_COR[s.cat] || '#2f7d6f';
       const label = testeMode ? '?' : (i + 1);
-      return `<g class="semio-hot ${on ? 'on' : ''}" data-sign="${esc(s.id)}" style="cursor:pointer">
-        <circle cx="${s.x}" cy="${s.y}" r="${on ? 11 : 9}" fill="${cor}" stroke="#fff" stroke-width="2" opacity="${on ? 1 : .88}"/>
-        <text x="${s.x}" y="${s.y + 3.5}" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">${label}</text>
+      const saved = customPositions[s.id];
+      const x = Number.isFinite(Number(saved?.x)) ? Number(saved.x) : s.x;
+      const y = Number.isFinite(Number(saved?.y)) ? Number(saved.y) : s.y;
+      return `<g class="semio-hot ${on ? 'on' : ''}${editing ? ' editable' : ''}" data-sign="${esc(s.id)}"${editing ? ` tabindex="0" role="button" aria-label="Mover ponto ${label}: ${esc(s.nome)}"` : ''} style="cursor:${editing ? 'move' : 'pointer'}">
+        <circle cx="${x}" cy="${y}" r="${on ? 11 : 9}" fill="${cor}" stroke="#fff" stroke-width="2" opacity="${on ? 1 : .88}"/>
+        <text x="${x}" y="${y + 3.5}" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">${label}</text>
       </g>`;
     }).join('');
     const fig = figureFor(view);
-    return `<svg viewBox="${fig.vb}" xmlns="http://www.w3.org/2000/svg" class="semio-body-svg" role="img" aria-label="Figura (${VIEW_LABEL[view] || 'anterior'}) com sinais semiológicos">
+    return `<svg viewBox="${fig.vb}" xmlns="http://www.w3.org/2000/svg" class="semio-body-svg${editing ? ' editing' : ''}" role="img" aria-label="Figura (${VIEW_LABEL[view] || 'anterior'}) com sinais semiológicos${editing ? ' em edição' : ''}">
       ${fig.inner}${hotspots}
     </svg>`;
   }
@@ -847,8 +852,8 @@
   // ---------------------------------------------------------------------------
   function defaultState() {
     return {
-      ui: { sub: 'inicio', aulaModId: null, aulaTopicoId: null, manobraId: null, auscultaId: null, casoId: null, focus: false, fichaSistema: 'Todos', corpoSignId: null, corpoTeste: false, corpoTesteId: null, corpoView: 'ant' },
-      srs: {}, progress: {}, caseState: {}, highlights: {}, images: {}, hiddenAtlasImages: {}, log: [],
+      ui: { sub: 'inicio', aulaModId: null, aulaTopicoId: null, manobraId: null, auscultaId: null, casoId: null, focus: false, fichaSistema: 'Todos', corpoSignId: null, corpoTeste: false, corpoTesteId: null, corpoView: 'ant', corpoEdit: false },
+      srs: {}, progress: {}, caseState: {}, highlights: {}, images: {}, hiddenAtlasImages: {}, hotspotPositions: {}, log: [],
       daily: { date: todayISO(), studied: 0 },
     };
   }
@@ -858,7 +863,7 @@
     if (!S.semio) S.semio = defaultState();
     const d = defaultState();
     S.semio.ui = Object.assign({}, d.ui, S.semio.ui);
-    ['srs', 'progress', 'caseState', 'highlights', 'images', 'hiddenAtlasImages'].forEach((k) => { if (!S.semio[k]) S.semio[k] = {}; });
+    ['srs', 'progress', 'caseState', 'highlights', 'images', 'hiddenAtlasImages', 'hotspotPositions'].forEach((k) => { if (!S.semio[k]) S.semio[k] = {}; });
     if (!Array.isArray(S.semio.log)) S.semio.log = [];
     if (!S.semio.daily || S.semio.daily.date !== todayISO()) S.semio.daily = { date: todayISO(), studied: 0 };
   }
@@ -1061,7 +1066,7 @@
           <div><span class="semio-eyebrow">Módulo ${String(mod.id).padStart(2, '0')} · Aula ${topicIndex + 1}</span><h1>${esc(topico.titulo)}</h1><p>Leitura clínica orientada</p></div>
           <div class="semio-reader-actions"><button class="semio-btn ghost sm" data-focus-toggle>Modo foco</button><label class="semio-btn ghost sm" title="Adicionar imagem à aula">Adicionar imagem<input type="file" accept="image/*" data-semio-image-input="${esc(imageKey)}" hidden></label></div>
         </header>
-        <article class="semio-flow${focus}" data-semio-image-scope="${esc(imageKey)}">${aulaImagesHtml(S, imageKey)}${parts}<p class="semio-image-help">Dica: selecione um trecho para marcá-lo. Você também pode colar uma imagem aqui com Ctrl+V.</p></article>
+        <article class="semio-flow${focus}" data-semio-image-scope="${esc(imageKey)}">${aulaImagesHtml(S, imageKey)}${window.SkillHighlighter?.guideHtml?.() || ''}${parts}<p class="semio-image-help">Você também pode colar uma imagem aqui com Ctrl+V.</p></article>
         <footer class="semio-reader-footer"><button class="semio-btn ghost" data-back-topicos>← Ver tópicos</button><button class="semio-btn semio-btn-primary" data-mark-read="${esc(mod.id + ':' + topico.id)}">${isDone ? '✓ Tópico concluído' : 'Marcar como concluído'}</button></footer>
       </section>
     </div>`;
@@ -1229,25 +1234,35 @@
     const S = st();
     if (S.ui.corpoTeste) return corpoTesteHtml();
     const view = S.ui.corpoView || 'ant';
+    const editing = !!S.ui.corpoEdit;
     const active = S.ui.corpoSignId;
     const s = active && SINAL_MAP[active];
     const list = signsInView(view);
     const done = Object.keys(S.progress).filter((k) => k.startsWith('sign:')).length;
     return `<div class="semio-topic-head"><h2>Corpo Semiológico</h2>
-      <button class="semio-btn ghost sm" data-corpo-teste>🎯 Modo teste</button></div>
+      <div class="semio-corpo-actions">
+        <button class="semio-btn ghost sm ${editing ? 'on' : ''}" data-corpo-edit>${editing ? '✓ Concluir edição' : '✥ Editar pontos'}</button>
+        ${editing ? '' : '<button class="semio-btn ghost sm" data-corpo-teste>🎯 Modo teste</button>'}
+      </div></div>
       <div class="semio-chips" style="margin-top:2px">
         <button class="semio-chip ${view === 'ant' ? 'on' : ''}" data-corpo-view="ant">Anterior</button>
         <button class="semio-chip ${view === 'post' ? 'on' : ''}" data-corpo-view="post">Posterior</button>
         <button class="semio-chip ${view === 'maos' ? 'on' : ''}" data-corpo-view="maos">Mãos e unhas</button>
         <button class="semio-chip ${view === 'cabeca' ? 'on' : ''}" data-corpo-view="cabeca">Cabeça e olhos</button>
       </div>
-      <p class="semio-muted">Toque num ponto da figura (ou na lista) para estudar o sinal. ${done}/${CORPO_SINAIS.length} sinais praticados no total.</p>
-      <div class="semio-corpo">
+      <p class="semio-muted">${editing ? 'Arraste os números sobre a figura. Para ajuste fino, selecione um ponto e use as setas do teclado (Shift + seta move 5 unidades). As posições são salvas automaticamente.' : `Toque num ponto da figura (ou na lista) para estudar o sinal. ${done}/${CORPO_SINAIS.length} sinais praticados no total.`}</p>
+      <div class="semio-corpo ${editing ? 'is-editing' : ''}">
         <div class="semio-corpo-fig">${bodySvg(active, false, view)}
           <div class="semio-legend">${Object.entries(CAT_COR).filter(([k]) => list.some((x) => x.cat === k)).map(([k, v]) => `<span><i style="background:${v}"></i>${esc(k)}</span>`).join('')}</div>
         </div>
         <div class="semio-corpo-side">
-          ${s ? corpoSignDetailHtml(s) : `<ol class="semio-sign-list">${list.map((x, i) => `<li><button data-sign="${esc(x.id)}"><span class="semio-num" style="background:${CAT_COR[x.cat]}">${i + 1}</span>${esc(x.nome)}${st().progress['sign:' + x.id] ? ' <i class="semio-check">✓</i>' : ''}</button></li>`).join('')}</ol>`}
+          ${editing ? `<section class="semio-point-editor">
+            <h3>Posicionar pontos — ${esc(VIEW_LABEL[view])}</h3>
+            <p>Arraste cada número até o local desejado. Você pode trocar de aba sem sair da edição.</p>
+            <ol class="semio-edit-sign-list">${list.map((x, i) => `<li><span class="semio-num" style="background:${CAT_COR[x.cat]}">${i + 1}</span><span>${esc(x.nome)}</span></li>`).join('')}</ol>
+            <button class="semio-btn ghost sm" data-corpo-reset-points>Restaurar esta vista</button>
+            <small>Isso remove apenas os ajustes da aba ${esc(VIEW_LABEL[view])}.</small>
+          </section>` : (s ? corpoSignDetailHtml(s) : `<ol class="semio-sign-list">${list.map((x, i) => `<li><button data-sign="${esc(x.id)}"><span class="semio-num" style="background:${CAT_COR[x.cat]}">${i + 1}</span>${esc(x.nome)}${st().progress['sign:' + x.id] ? ' <i class="semio-check">✓</i>' : ''}</button></li>`).join('')}</ol>`)}
         </div>
       </div>`;
   }
@@ -1330,7 +1345,80 @@
     bind();
     hydrateSemioImages();
   }
-  function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'aulas') { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; } if (sub !== 'manobras') S.ui.manobraId = null; if (sub !== 'ausculta') S.ui.auscultaId = null; if (sub !== 'casos') S.ui.casoId = null; if (sub !== 'corpo') { S.ui.corpoSignId = null; S.ui.corpoTeste = false; S.ui.corpoTesteId = null; } save(); paint(); }
+  function go(sub) { const S = st(); S.ui.sub = sub; if (sub !== 'aulas') { S.ui.aulaModId = null; S.ui.aulaTopicoId = null; } if (sub !== 'manobras') S.ui.manobraId = null; if (sub !== 'ausculta') S.ui.auscultaId = null; if (sub !== 'casos') S.ui.casoId = null; if (sub !== 'corpo') { S.ui.corpoSignId = null; S.ui.corpoTeste = false; S.ui.corpoTesteId = null; S.ui.corpoEdit = false; } save(); paint(); }
+
+  function bindCorpoEditor() {
+    const S = st();
+    if (!S.ui.corpoEdit) return;
+    const svg = ROOT.querySelector('.semio-body-svg');
+    if (!svg) return;
+    const vb = svg.viewBox.baseVal;
+    const margin = 11;
+    let drag = null;
+
+    const pointerToSvg = (event) => {
+      const point = svg.createSVGPoint();
+      point.x = event.clientX;
+      point.y = event.clientY;
+      const matrix = svg.getScreenCTM();
+      return matrix ? point.matrixTransform(matrix.inverse()) : point;
+    };
+    const moveHotspot = (hot, nextX, nextY) => {
+      const x = Math.round(clamp(nextX, vb.x + margin, vb.x + vb.width - margin) * 10) / 10;
+      const y = Math.round(clamp(nextY, vb.y + margin, vb.y + vb.height - margin) * 10) / 10;
+      const circle = hot.querySelector('circle');
+      const text = hot.querySelector('text');
+      circle?.setAttribute('cx', x);
+      circle?.setAttribute('cy', y);
+      text?.setAttribute('x', x);
+      text?.setAttribute('y', y + 3.5);
+      S.hotspotPositions[hot.dataset.sign] = { x, y };
+    };
+
+    svg.querySelectorAll('.semio-hot.editable').forEach((hot) => {
+      hot.addEventListener('pointerdown', (event) => {
+        if (event.button !== 0) return;
+        event.preventDefault();
+        const point = pointerToSvg(event);
+        const circle = hot.querySelector('circle');
+        drag = {
+          hot,
+          pointerId: event.pointerId,
+          offsetX: Number(circle?.getAttribute('cx') || 0) - point.x,
+          offsetY: Number(circle?.getAttribute('cy') || 0) - point.y,
+          moved: false,
+        };
+        hot.classList.add('dragging');
+        hot.setPointerCapture?.(event.pointerId);
+      });
+      hot.addEventListener('keydown', (event) => {
+        const directions = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
+        const direction = directions[event.key];
+        if (!direction) return;
+        event.preventDefault();
+        const step = event.shiftKey ? 5 : 1;
+        const circle = hot.querySelector('circle');
+        moveHotspot(hot, Number(circle?.getAttribute('cx') || 0) + direction[0] * step, Number(circle?.getAttribute('cy') || 0) + direction[1] * step);
+        save();
+      });
+    });
+
+    svg.addEventListener('pointermove', (event) => {
+      if (!drag || event.pointerId !== drag.pointerId) return;
+      event.preventDefault();
+      const point = pointerToSvg(event);
+      moveHotspot(drag.hot, point.x + drag.offsetX, point.y + drag.offsetY);
+      drag.moved = true;
+    });
+    const finishDrag = (event) => {
+      if (!drag || event.pointerId !== drag.pointerId) return;
+      drag.hot.classList.remove('dragging');
+      if (drag.moved) save();
+      drag = null;
+    };
+    svg.addEventListener('pointerup', finishDrag);
+    svg.addEventListener('pointercancel', finishDrag);
+  }
 
   function bind() {
     const S = st();
@@ -1463,10 +1551,13 @@
     ROOT.querySelectorAll('[data-ficha-sis]').forEach((b) => b.onclick = () => { S.ui.fichaSistema = b.dataset.fichaSis; save(); paint(); });
 
     // Corpo
-    ROOT.querySelectorAll('[data-sign]').forEach((b) => b.onclick = () => { S.ui.corpoSignId = b.dataset.sign; save(); paint(); });
+    ROOT.querySelectorAll('[data-sign]').forEach((b) => b.onclick = () => { if (S.ui.corpoEdit) return; S.ui.corpoSignId = b.dataset.sign; save(); paint(); });
     ROOT.querySelectorAll('[data-corpo-view]').forEach((b) => b.onclick = () => { S.ui.corpoView = b.dataset.corpoView; S.ui.corpoSignId = null; save(); paint(); });
-    ROOT.querySelector('[data-corpo-teste]')?.addEventListener('click', () => { S.ui.corpoTeste = true; S.ui.corpoTesteId = null; save(); paint(); });
+    ROOT.querySelector('[data-corpo-edit]')?.addEventListener('click', () => { S.ui.corpoEdit = !S.ui.corpoEdit; S.ui.corpoSignId = null; S.ui.corpoTeste = false; S.ui.corpoTesteId = null; save(); paint(); });
+    ROOT.querySelector('[data-corpo-reset-points]')?.addEventListener('click', () => { signsInView(S.ui.corpoView || 'ant').forEach((sign) => { delete S.hotspotPositions[sign.id]; }); save(); paint(); });
+    ROOT.querySelector('[data-corpo-teste]')?.addEventListener('click', () => { S.ui.corpoEdit = false; S.ui.corpoTeste = true; S.ui.corpoTesteId = null; save(); paint(); });
     ROOT.querySelector('[data-corpo-estudo]')?.addEventListener('click', () => { S.ui.corpoTeste = false; S.ui.corpoTesteId = null; save(); paint(); });
+    bindCorpoEditor();
     bindQuizSign();
     bindQuizTeste();
   }
@@ -1677,24 +1768,37 @@
     .semio-tbl{width:100%;border-collapse:collapse;font-size:.86rem}
     .semio-tbl td{border-bottom:1px solid var(--border,#eef2f6);padding:7px 6px;vertical-align:top}
     .semio-tbl td:first-child{font-weight:600;white-space:nowrap;color:var(--semio-acc2);width:34%}
+    .semio-corpo-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .semio-corpo-actions .semio-btn.on{background:var(--semio-acc);border-color:var(--semio-acc);color:#fff}
     .semio-corpo{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:start;margin-top:8px}
     .semio-corpo-fig{position:sticky;top:56px}
     .semio-body-svg{width:100%;max-width:220px;height:auto;background:var(--card,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:14px}
+    .semio-corpo.is-editing{grid-template-columns:minmax(280px,360px) 1fr;gap:22px}
+    .semio-corpo.is-editing .semio-corpo-fig{max-width:360px}
+    .semio-corpo.is-editing .semio-body-svg{max-width:360px;touch-action:none;border-color:var(--semio-acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--semio-acc) 14%,transparent)}
     .semio-hot text{pointer-events:none}
     .semio-hot:hover circle{opacity:1;r:11}
+    .semio-hot.editable circle{stroke-width:2.5;filter:drop-shadow(0 2px 2px rgba(15,23,42,.35))}
+    .semio-hot.editable:focus{outline:none}.semio-hot.editable:focus circle{stroke:#fde68a;stroke-width:4}
+    .semio-hot.editable.dragging circle{opacity:1;r:12;stroke:#fde68a;stroke-width:4}
     .semio-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;font-size:.72rem;color:var(--muted,#667085)}
     .semio-legend span{display:flex;align-items:center;gap:4px}.semio-legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
     .semio-sign-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
     .semio-sign-list button{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:var(--card,#fff);border:1px solid var(--border,#e2e8f0);border-radius:10px;padding:9px 11px;cursor:pointer;font-size:.88rem}
     .semio-sign-list button:hover{border-color:var(--semio-acc)}
     .semio-num{flex:none;width:22px;height:22px;border-radius:6px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:700}
+    .semio-point-editor{border:1px solid color-mix(in srgb,var(--semio-acc) 28%,var(--border,#e2e8f0));border-radius:14px;padding:16px;background:color-mix(in srgb,var(--semio-acc) 5%,var(--card,#fff))}
+    .semio-point-editor h3{margin:0 0 6px}.semio-point-editor p{margin:0 0 12px;color:var(--muted,#667085);line-height:1.45}
+    .semio-edit-sign-list{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:7px}
+    .semio-edit-sign-list li{display:flex;align-items:center;gap:8px;min-width:0;font-size:.82rem}.semio-edit-sign-list li>span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .semio-point-editor>small{display:block;margin-top:7px;color:var(--muted,#667085)}
     .semio-sign-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:4px}.semio-sign-head h3{margin:0}
     .semio-cat{font-size:.7rem;color:#fff;padding:3px 9px;border-radius:999px;font-weight:700}
     .semio-sign-fig{margin:6px 0 10px;text-align:center;background:var(--card,#f8fafc);border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:10px}
     .semio-sign-svg{width:100%;max-width:260px;height:auto}
     .semio-sign-photo{display:block;width:100%;max-width:520px;max-height:360px;object-fit:contain;margin:0 auto;border-radius:9px}
     .semio-sign-fig figcaption{font-size:.72rem;color:var(--muted,#667085);margin-top:4px}
-    @media(max-width:640px){.semio-corpo{grid-template-columns:1fr}.semio-corpo-fig{position:static;max-width:200px;margin:0 auto}}
+    @media(max-width:640px){.semio-corpo,.semio-corpo.is-editing{grid-template-columns:1fr}.semio-corpo-fig{position:static;max-width:200px;margin:0 auto}.semio-corpo.is-editing .semio-corpo-fig{max-width:300px}.semio-corpo.is-editing .semio-body-svg{max-width:300px}}
     .semio-focus .semio-callout,.semio-focus .semio-doc{opacity:1}
     @media(max-width:560px){.semio-grid3{grid-template-columns:1fr 1fr}.semio-cards{grid-template-columns:1fr}.semio-tbl td:first-child{white-space:normal}}
 

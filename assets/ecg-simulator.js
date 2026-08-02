@@ -1938,7 +1938,9 @@
     stopAnimation(); // encerra qualquer animação da tela anterior
     const el = root();
     if (!el) return;
-    el.querySelector('.ecg-body').innerHTML = bodyHtml();
+    const body = el.querySelector('.ecg-body');
+    body.innerHTML = bodyHtml();
+    if (body.querySelector('.ecg-hl-block') && window.SkillHighlighter?.guideHtml) body.insertAdjacentHTML('afterbegin', window.SkillHighlighter.guideHtml());
     el.querySelectorAll('.ecg-subnav button').forEach((b) => b.classList.toggle('active', b.dataset.ecgSub === st().ui.sub));
     wireBody();
     renderCanvases();

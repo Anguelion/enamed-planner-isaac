@@ -1246,7 +1246,7 @@
           ${Object.keys(marks).length ? `<button class="radio-btn ghost sm" data-radio-clear-hl>Limpar marcações deste tópico</button>` : ''}
         </div>
       </div>
-      <div class="radio-aula-flow">${hiddenImages.length ? `<div class="radio-hidden-toolbar"><span>${hiddenImages.length} ${hiddenImages.length === 1 ? 'imagem está oculta' : 'imagens estão ocultas'} nesta aula.</span><button type="button" data-radio-restore-course-images="${esc(topico.id)}">Restaurar imagens</button></div>` : ''}${parts.join('')}</div>
+      <div class="radio-aula-flow">${window.SkillHighlighter?.guideHtml?.() || ''}${hiddenImages.length ? `<div class="radio-hidden-toolbar"><span>${hiddenImages.length} ${hiddenImages.length === 1 ? 'imagem está oculta' : 'imagens estão ocultas'} nesta aula.</span><button type="button" data-radio-restore-course-images="${esc(topico.id)}">Restaurar imagens</button></div>` : ''}${parts.join('')}</div>
       <button class="radio-btn radio-focus-exit" data-radio-focus-toggle style="display:none">✕ Sair do modo foco</button>`;
   }
   function aulasHtml() {
