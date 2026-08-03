@@ -362,17 +362,30 @@ Regras:
     if(!s || !cfg.key) return;
     const d = doenca(s.doencaId);
     pendingIA[sessionId] = true; render();
+    const contents = s.dialogo.filter(l => l.texto && l.texto.trim()).map(l => ({ role: l.quem==='paciente' ? 'model' : 'user', parts:[{ text:l.texto }] }));
+    const body = { systemInstruction:{ parts:[{ text: iaSystemPrompt(d, s.paciente) }] }, contents, generationConfig:{ temperature:0.85, maxOutputTokens:350 } };
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(cfg.model)}:generateContent?key=${encodeURIComponent(cfg.key)}`;
+    const maxAttempts = 3;
     try {
-      const contents = s.dialogo.filter(l => l.texto && l.texto.trim()).map(l => ({ role: l.quem==='paciente' ? 'model' : 'user', parts:[{ text:l.texto }] }));
-      const body = { systemInstruction:{ parts:[{ text: iaSystemPrompt(d, s.paciente) }] }, contents, generationConfig:{ temperature:0.85, maxOutputTokens:200 } };
-      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(cfg.model)}:generateContent?key=${encodeURIComponent(cfg.key)}`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) });
-      if(!resp.ok) { const errText = await resp.text().catch(()=>''); throw new Error(`HTTP ${resp.status} ${errText.slice(0,200)}`); }
-      const json = await resp.json();
-      const texto = (json.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join('').trim();
-      s.dialogo.push({ quem:'paciente', texto: texto || '(o paciente ficou em silêncio — resposta vazia da IA)' });
+      for(let attempt = 0; attempt < maxAttempts; attempt++){
+        let resp;
+        try { resp = await fetch(url, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) }); }
+        catch(networkErr) { if(attempt < maxAttempts-1) { await new Promise(r=>setTimeout(r, 1000*(attempt+1))); continue; } throw networkErr; }
+        if(resp.status === 503 && attempt < maxAttempts-1) { await new Promise(r=>setTimeout(r, 1200*(attempt+1))); continue; }
+        if(!resp.ok) { const errText = await resp.text().catch(()=>''); throw new Error(`HTTP ${resp.status} ${errText.slice(0,200)}`); }
+        const json = await resp.json();
+        const candidate = json.candidates?.[0];
+        const parts = candidate?.content?.parts || [];
+        let texto = parts.map(p=>p.text||'').join('').trim();
+        if(!texto && json.promptFeedback?.blockReason) texto = `(a resposta foi bloqueada pelo filtro de segurança do Gemini: ${json.promptFeedback.blockReason}. Tente reformular a pergunta.)`;
+        else if(!texto) texto = '(o paciente ficou em silêncio — resposta vazia da IA. Tente perguntar de novo.)';
+        else if(candidate?.finishReason && candidate.finishReason !== 'STOP') texto += ` [resposta interrompida: ${candidate.finishReason} — tente novamente ou aumente o modelo]`;
+        s.dialogo.push({ quem:'paciente', texto });
+        break;
+      }
     } catch(err) {
       console.warn('Consulta IA:', err);
-      s.dialogo.push({ quem:'paciente', texto:`(erro ao consultar a IA: ${err.message||err}. Confira sua chave em "Configurar IA".)` });
+      s.dialogo.push({ quem:'paciente', texto:`(erro ao consultar a IA: ${err.message||err}. Confira sua chave/modelo em "Configurar IA".)` });
     } finally {
       pendingIA[sessionId] = false;
       s.updatedAt = new Date().toISOString();
@@ -482,7 +495,7 @@ Regras:
       ${iaPanelOpen ? renderIaPanel(iaCfg) : ''}
       ${store().ui.box ? `<section class="card cc-box cc-box-inline"><div class="cc-box-head"><h3>Caixa de doenças</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div><div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', s.doencaId)}</div></section>` : ''}
       ${d ? '' : '<div class="empty">Escolha uma condição na caixa acima para receber as perguntas dirigidas.</div>'}
-      ${d ? `<section class="cc-caso card"><div><span class="eyebrow">Caso simulado</span><h2>${esc(s.paciente.nome)}${s.paciente.idade?` · ${esc(s.paciente.idade)} anos`:''}${s.paciente.sexo?` · ${esc(s.paciente.sexo)}`:''}</h2><p><strong>Queixa:</strong> ${esc(d.queixa)}</p><p class="muted">${esc(d.perfil)}</p></div><div class="cc-progress"><span>Roteiro coberto</span><strong>${pct}%</strong><i style="--p:${pct}%"></i><small>${feitas} de ${total} perguntas-chave</small></div></section>` : ''}
+      ${d ? `<section class="cc-caso card"><div class="cc-avatar">${avatarSvg(avatarCategoria(s.paciente))}</div><div class="cc-caso-info"><span class="eyebrow">Caso simulado</span><h2>${esc(s.paciente.nome)}${s.paciente.idade?` · ${esc(s.paciente.idade)} anos`:''}${s.paciente.sexo?` · ${esc(s.paciente.sexo)}`:''}</h2><p><strong>Queixa:</strong> ${esc(d.queixa)}</p><p class="muted">${esc(d.perfil)}</p></div><div class="cc-progress"><span>Roteiro coberto</span><strong>${pct}%</strong><i style="--p:${pct}%"></i><small>${feitas} de ${total} perguntas-chave</small></div></section>` : ''}
       <div class="cc-layout">
         <aside class="cc-steps card">
           <h3>Etapas do método</h3>
@@ -527,6 +540,31 @@ Regras:
     </div>`;
   }
 
+  function avatarCategoria(p){
+    const idade = parseInt(p?.idade, 10);
+    const sexo = normaliza(p?.sexo||'');
+    if(!isNaN(idade)){
+      if(idade < 12) return sexo==='masculino' ? 'menino' : sexo==='feminino' ? 'menina' : 'crianca';
+      if(idade >= 60) return sexo==='feminino' ? 'idosa' : 'idoso';
+    }
+    if(sexo==='feminino') return 'mulher';
+    if(sexo==='masculino') return 'homem';
+    return 'pessoa';
+  }
+  function avatarSvg(cat){
+    const skin = '#f0c9a0';
+    const base = inner => `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(cat)}">${inner}</svg>`;
+    switch(cat){
+      case 'homem': return base(`<circle cx="32" cy="32" r="32" fill="#dbe7f5"/><path d="M14 58c2-12 10-18 18-18s16 6 18 18" fill="#4a6fa5"/><circle cx="32" cy="26" r="12" fill="${skin}"/><path d="M20 22c2-8 8-12 12-12s10 4 12 12c-4-2-8-3-12-3s-8 1-12 3z" fill="#3a3a3a"/>`);
+      case 'mulher': return base(`<circle cx="32" cy="32" r="32" fill="#f6dde7"/><path d="M13 58c2-12 10-18 19-18s17 6 19 18" fill="#c3608a"/><path d="M14 20c0-11 8-18 18-18s18 7 18 18c0 4-1 8-3 12 1 6 2 12 2 18H17c0-6 1-12 2-18-2-4-3-8-3-12z" fill="#6b4226"/><circle cx="32" cy="27" r="11" fill="${skin}"/>`);
+      case 'idoso': return base(`<circle cx="32" cy="32" r="32" fill="#e4e9ec"/><path d="M14 58c2-12 10-18 18-18s16 6 18 18" fill="#7c8b99"/><circle cx="32" cy="28" r="11" fill="#eccca3"/><path d="M20 22c2-6 6-10 12-10s10 4 12 10c-4-2-8-2-12-2s-8 0-12 2z" fill="#c9c9c9"/>`);
+      case 'idosa': return base(`<circle cx="32" cy="32" r="32" fill="#efe3ea"/><path d="M13 58c2-12 10-18 19-18s17 6 19 18" fill="#9c7c94"/><circle cx="32" cy="28" r="11" fill="#eccca3"/><path d="M17 22c2-9 8-13 15-13s13 4 15 13c-2 3-2 7-2 7-2-3-3-4-3-4-2 3-18 3-20 0 0 0-1 1-3 4 0 0 0-4-2-7z" fill="#d8d3d8"/>`);
+      case 'menino': return base(`<circle cx="32" cy="32" r="32" fill="#dff0e4"/><path d="M16 58c2-11 9-16 16-16s14 5 16 16" fill="#5aa9c9"/><circle cx="32" cy="31" r="13" fill="${skin}"/><path d="M18 25c2-7 7-11 14-11s12 4 14 11c-4-2-9-3-14-3s-10 1-14 3z" fill="#4a4a4a"/>`);
+      case 'menina': return base(`<circle cx="32" cy="32" r="32" fill="#fdeadb"/><path d="M16 58c2-11 9-16 16-16s14 5 16 16" fill="#e08fb0"/><path d="M17 27c0-9 6-15 15-15s15 6 15 15c0 3-1 6-2 9-2-2-3-3-3-3 0 3-18 3-20 0 0 0-1 1-3 3-1-3-2-6-2-9z" fill="#8a5a3c"/><circle cx="32" cy="31" r="13" fill="${skin}"/>`);
+      case 'crianca': return base(`<circle cx="32" cy="32" r="32" fill="#fff3d6"/><path d="M16 58c2-11 9-16 16-16s14 5 16 16" fill="#e0b23c"/><circle cx="32" cy="31" r="13" fill="${skin}"/><path d="M18 25c2-7 7-11 14-11s12 4 14 11c-4-2-9-3-14-3s-10 1-14 3z" fill="#6b4226"/>`);
+      default: return base(`<circle cx="32" cy="32" r="32" fill="#e6e6ee"/><path d="M14 58c2-12 10-18 18-18s16 6 18 18" fill="#8f8fae"/><circle cx="32" cy="27" r="11" fill="#d7c3ac"/>`);
+    }
+  }
   function renderIaPanel(cfg){
     return `<section class="card cc-ia-panel">
       <div class="section-title"><h3>Configurar IA (Google AI Studio / Gemini)</h3><button class="tiny-btn" id="ccIaClose">Fechar</button></div>
@@ -622,8 +660,8 @@ Regras:
     root.querySelector('#ccToggleBox').onclick = () => { st.ui.box = !st.ui.box; save(); render(); };
     root.querySelector('#ccTopMetodo').onchange = e => { s.metodoId = e.target.value; s.etapaAtiva = ''; touch(); render(); };
     root.querySelector('#ccTopNome').onchange = e => { s.paciente.nome = e.target.value.trim() || 'Paciente simulado'; touch(); render(); };
-    root.querySelector('#ccTopIdade').onchange = e => { s.paciente.idade = e.target.value; touch(); };
-    root.querySelector('#ccTopSexo').onchange = e => { s.paciente.sexo = e.target.value; touch(); };
+    root.querySelector('#ccTopIdade').onchange = e => { s.paciente.idade = e.target.value; touch(); render(); };
+    root.querySelector('#ccTopSexo').onchange = e => { s.paciente.sexo = e.target.value; touch(); render(); };
     root.querySelectorAll('[data-cc-step]').forEach(btn => btn.onclick = () => { s.etapaAtiva = btn.dataset.ccStep; touch(); render(); });
     const iaBtn = root.querySelector('#ccIaConfig');
     if(iaBtn) iaBtn.onclick = () => { iaPanelOpen = !iaPanelOpen; render(); };
