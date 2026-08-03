@@ -2,6 +2,8 @@
   'use strict';
 
   const STORAGE_KEY = 'soqueromed-mascot-chat-v1';
+  const USAGE_STORAGE_KEY = 'soqueromed-mascot-usage-v1';
+  const DAILY_QUESTION_LIMIT = 20;
   const MAX_HISTORY_MESSAGES = 6;
   const MAX_QUESTION_LENGTH = 1200;
   let history = loadHistory();
@@ -56,7 +58,7 @@
       <section class="ai-mascot-panel" role="dialog" aria-label="Mascote tutor" aria-hidden="true">
         <header class="ai-mascot-header">
           <div class="ai-mascot-avatar" aria-hidden="true"><img src="assets/dr-sotero.png" alt=""></div>
-          <div><strong>Dr. Sotero</strong><small>Seu mascote tutor</small></div>
+          <div><strong>Dr. Sotero</strong><small>Seu mascote tutor</small><span class="ai-mascot-usage" aria-live="polite"></span></div>
           <button class="ai-mascot-clear" type="button" title="Limpar conversa" aria-label="Limpar conversa">Limpar</button>
           <button class="ai-mascot-close" type="button" title="Fechar" aria-label="Fechar">×</button>
         </header>
@@ -83,6 +85,33 @@
   const form = root.querySelector('.ai-mascot-form');
   const input = root.querySelector('#aiMascotInput');
   const submitButton = form.querySelector('button');
+  const usage = root.querySelector('.ai-mascot-usage');
+
+  function usageToday() {
+    const today = new Date().toISOString().slice(0, 10);
+    try {
+      const saved = JSON.parse(localStorage.getItem(USAGE_STORAGE_KEY) || '{}');
+      return saved.date === today && Number.isFinite(saved.count) ? saved : { date: today, count: 0 };
+    } catch {
+      return { date: today, count: 0 };
+    }
+  }
+
+  function renderUsage() {
+    const current = usageToday();
+    usage.textContent = `${Math.max(0, DAILY_QUESTION_LIMIT - current.count)} perguntas restantes hoje`;
+    const exhausted = current.count >= DAILY_QUESTION_LIMIT;
+    input.disabled = exhausted || sending;
+    submitButton.disabled = exhausted || sending;
+    return !exhausted;
+  }
+
+  function registerQuestion() {
+    const current = usageToday();
+    current.count += 1;
+    try { localStorage.setItem(USAGE_STORAGE_KEY, JSON.stringify(current)); } catch {}
+    renderUsage();
+  }
 
   function appendMessage(role, text) {
     const message = document.createElement('div');
@@ -122,6 +151,12 @@
 
   async function sendQuestion(question) {
     if (sending || !question) return;
+    if (!renderUsage()) {
+      status.textContent = `Limite de ${DAILY_QUESTION_LIMIT} perguntas atingido. Tente novamente amanhã.`;
+      status.className = 'ai-mascot-status is-error';
+      return;
+    }
+    registerQuestion();
     const priorHistory = history.slice(-MAX_HISTORY_MESSAGES);
     history.push({ role: 'user', text: question });
     history = history.slice(-MAX_HISTORY_MESSAGES);
@@ -167,8 +202,7 @@
       status.classList.add('is-error');
     } finally {
       sending = false;
-      input.disabled = false;
-      submitButton.disabled = false;
+      renderUsage();
       if (!status.classList.contains('is-error')) status.textContent = '';
       status.classList.toggle('is-active', Boolean(status.textContent));
       input.focus();
@@ -204,4 +238,5 @@
   });
 
   renderMessages();
+  renderUsage();
 })();
