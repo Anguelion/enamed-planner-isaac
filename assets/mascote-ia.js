@@ -26,6 +26,24 @@
     return [view?.id, heading?.textContent?.trim()].filter(Boolean).join(' — ').slice(0, 300);
   }
 
+  function plainText(value) {
+    return String(value || '')
+      .replace(/```[\s\S]*?```/g, (block) => block.replace(/```[^\n]*\n?/g, ''))
+      .replace(/^\s{0,3}#{1,6}\s*/gm, '')
+      .replace(/^\s{0,3}>\s?/gm, '')
+      .replace(/^\s*[-*+]\s+/gm, '')
+      .replace(/^\s*\d+[.)]\s+/gm, '')
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/__([^_]+)__/g, '$1')
+      .replace(/\*([^*\n]+)\*/g, '$1')
+      .replace(/_([^_\n]+)_/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/[ \t]+\n/g, '\n')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+  }
+
   function createInterface() {
     const root = document.createElement('div');
     root.className = 'ai-mascot-root';
@@ -71,7 +89,7 @@
     const label = document.createElement('small');
     label.textContent = role === 'model' ? 'Dr. Sotero' : 'Você';
     const content = document.createElement('div');
-    content.textContent = text;
+    content.textContent = plainText(text);
     message.append(label, content);
     messages.appendChild(message);
   }
@@ -120,6 +138,10 @@
       });
       if (error) {
         let message = 'Não consegui responder agora. Tente novamente.';
+        const statusCode = Number(error.context?.status || 0);
+        if (statusCode === 404) message = 'A função mascote-ia ainda não foi publicada no Supabase.';
+        if (statusCode === 401) message = 'Sua sessão expirou. Saia e entre novamente no aplicativo.';
+        if (statusCode === 402) message = 'O Supabase restringiu a função por limite de uso. Verifique o painel de cobrança.';
         try {
           const details = await error.context?.json();
           if (details?.error) message = details.error;
@@ -128,11 +150,18 @@
       }
       if (!data?.answer) throw new Error(data?.error || 'O mascote não retornou uma resposta.');
 
-      history.push({ role: 'model', text: String(data.answer) });
+      history.push({ role: 'model', text: plainText(data.answer) });
       history = history.slice(-MAX_HISTORY_MESSAGES);
       saveHistory();
       renderMessages();
     } catch (error) {
+      // Não deixe uma pergunta que falhou no histórico: repetir após um erro
+      // criaria dois turnos "user" seguidos e o Gemini pode rejeitar a conversa.
+      if (history.at(-1)?.role === 'user' && history.at(-1)?.text === question) {
+        history.pop();
+        saveHistory();
+        renderMessages();
+      }
       status.textContent = error instanceof Error ? error.message : 'Não consegui responder agora.';
       status.classList.add('is-error');
     } finally {
