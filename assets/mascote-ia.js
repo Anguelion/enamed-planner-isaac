@@ -1,7 +1,7 @@
 (function initMascotChat() {
   'use strict';
 
-  const STORAGE_KEY = 'soqueromed-mascot-chat-v1';
+  const STORAGE_KEY = 'soqueromed-mascot-chat-v2';
   const USAGE_STORAGE_KEY = 'soqueromed-mascot-usage-v2';
   const DAILY_TOKEN_LIMIT = 50000;
   const MAX_HISTORY_MESSAGES = 6;
@@ -128,7 +128,7 @@
   function renderMessages() {
     messages.replaceChildren();
     if (!history.length) {
-      appendMessage('model', 'Oi! Eu sou o Dr. Sotero. Posso explicar conceitos, revisar alternativas e ajudar você a raciocinar para o ENAMED. Qual é a sua dúvida?');
+      appendMessage('model', 'Digite sua dúvida sobre medicina ou seus estudos.');
     } else {
       history.forEach((message) => appendMessage(message.role, message.text));
     }

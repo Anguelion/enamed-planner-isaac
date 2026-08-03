@@ -21,7 +21,7 @@ const APP_SHELL = [
   './assets/semiologia.js?v=20260802-9',
   './assets/caso-do-dia.js?v=20260729-4',
   './assets/planner.js?v=20260802-9',
-  './assets/mascote-ia.js?v=20260802-8',
+  './assets/mascote-ia.js?v=20260802-9',
   './assets/dr-sotero.png',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
