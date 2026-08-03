@@ -31,13 +31,13 @@
     root.className = 'ai-mascot-root';
     root.innerHTML = `
       <button class="ai-mascot-launcher" type="button" aria-label="Conversar com o mascote" aria-expanded="false">
-        <span class="ai-mascot-face" aria-hidden="true"><span>+</span></span>
+        <span class="ai-mascot-face" aria-hidden="true"><img src="assets/dr-sotero.png" alt=""></span>
         <span class="ai-mascot-launcher-label">Tire uma dúvida</span>
       </button>
       <section class="ai-mascot-panel" role="dialog" aria-label="Mascote tutor" aria-hidden="true">
         <header class="ai-mascot-header">
-          <div class="ai-mascot-avatar" aria-hidden="true"><span>+</span></div>
-          <div><strong>Medinho</strong><small>Seu mascote tutor</small></div>
+          <div class="ai-mascot-avatar" aria-hidden="true"><img src="assets/dr-sotero.png" alt=""></div>
+          <div><strong>Dr. Sotero</strong><small>Seu mascote tutor</small></div>
           <button class="ai-mascot-clear" type="button" title="Limpar conversa" aria-label="Limpar conversa">Limpar</button>
           <button class="ai-mascot-close" type="button" title="Fechar" aria-label="Fechar">×</button>
         </header>
@@ -69,7 +69,7 @@
     const message = document.createElement('div');
     message.className = `ai-mascot-message ${role === 'model' ? 'is-mascot' : 'is-user'}`;
     const label = document.createElement('small');
-    label.textContent = role === 'model' ? 'Medinho' : 'Você';
+    label.textContent = role === 'model' ? 'Dr. Sotero' : 'Você';
     const content = document.createElement('div');
     content.textContent = text;
     message.append(label, content);
@@ -79,7 +79,7 @@
   function renderMessages() {
     messages.replaceChildren();
     if (!history.length) {
-      appendMessage('model', 'Oi! Eu sou o Medinho. Posso explicar conceitos, revisar alternativas e ajudar você a raciocinar para o ENAMED. Qual é a sua dúvida?');
+      appendMessage('model', 'Oi! Eu sou o Dr. Sotero. Posso explicar conceitos, revisar alternativas e ajudar você a raciocinar para o ENAMED. Qual é a sua dúvida?');
     } else {
       history.forEach((message) => appendMessage(message.role, message.text));
     }
@@ -108,7 +108,7 @@
     history = history.slice(-MAX_HISTORY_MESSAGES);
     saveHistory();
     renderMessages();
-    setSending(true, 'Medinho está pensando…');
+    setSending(true, 'Dr. Sotero está pensando…');
 
     try {
       if (typeof sbClient === 'undefined' || !sbClient) throw new Error('O serviço de login não está disponível.');
