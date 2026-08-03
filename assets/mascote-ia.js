@@ -3,11 +3,81 @@
 
   const STORAGE_KEY = 'soqueromed-mascot-chat-v2';
   const USAGE_STORAGE_KEY = 'soqueromed-mascot-usage-v2';
+  const PROFILE_STORAGE_KEY = 'soqueromed-mascot-profile-v1';
   const DAILY_TOKEN_LIMIT = 50000;
   const MAX_HISTORY_MESSAGES = 6;
   const MAX_QUESTION_LENGTH = 1200;
   let history = loadHistory();
+  let profile = loadProfile();
   let sending = false;
+  let activeReviewId = null;
+  let profileSyncTimer = null;
+  let profileCloudUnavailable = false;
+
+  const REVIEW_INTERVALS = [1, 3, 7, 14, 30];
+
+  function loadProfile() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(PROFILE_STORAGE_KEY) || '{}');
+      return {
+        events: Array.isArray(saved.events) ? saved.events.slice(-200) : [],
+        reviews: Array.isArray(saved.reviews) ? saved.reviews.slice(-100) : [],
+        updatedAt: saved.updatedAt || '',
+      };
+    } catch {
+      return { events: [], reviews: [], updatedAt: '' };
+    }
+  }
+
+  function saveProfile() {
+    profile.updatedAt = new Date().toISOString();
+    try { localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile)); } catch {}
+    scheduleProfileSync();
+  }
+
+  function scheduleProfileSync() {
+    if (profileCloudUnavailable || typeof sbClient === 'undefined' || !sbClient) return;
+    clearTimeout(profileSyncTimer);
+    profileSyncTimer = window.setTimeout(syncProfileToCloud, 1200);
+  }
+
+  async function syncProfileToCloud() {
+    try {
+      const { data: sessionData } = await sbClient.auth.getSession();
+      const userId = sessionData?.session?.user?.id;
+      if (!userId) return;
+      const { error } = await sbClient.from('ai_tutor_profiles').upsert({ user_id: userId, state: profile, updated_at: profile.updatedAt || new Date().toISOString() });
+      if (error) profileCloudUnavailable = true;
+    } catch {
+      profileCloudUnavailable = true;
+    }
+  }
+
+  async function loadProfileFromCloud() {
+    if (typeof sbClient === 'undefined' || !sbClient) return;
+    try {
+      const { data: sessionData } = await sbClient.auth.getSession();
+      const userId = sessionData?.session?.user?.id;
+      if (!userId) return;
+      const { data, error } = await sbClient.from('ai_tutor_profiles').select('state,updated_at').eq('user_id', userId).maybeSingle();
+      if (error) {
+        profileCloudUnavailable = true;
+        return;
+      }
+      const remote = data?.state;
+      if (remote && new Date(remote.updatedAt || data.updated_at).getTime() > new Date(profile.updatedAt || 0).getTime()) {
+        profile = {
+          events: Array.isArray(remote.events) ? remote.events.slice(-200) : [],
+          reviews: Array.isArray(remote.reviews) ? remote.reviews.slice(-100) : [],
+          updatedAt: remote.updatedAt || data.updated_at,
+        };
+        try { localStorage.setItem(PROFILE_STORAGE_KEY, JSON.stringify(profile)); } catch {}
+        renderReviews();
+      }
+    } catch {
+      profileCloudUnavailable = true;
+    }
+  }
 
   function loadHistory() {
     try {
@@ -62,7 +132,27 @@
           <button class="ai-mascot-clear" type="button" title="Limpar conversa" aria-label="Limpar conversa">Limpar</button>
           <button class="ai-mascot-close" type="button" title="Fechar" aria-label="Fechar">×</button>
         </header>
+        <div class="ai-mascot-controls">
+          <label>Modo<select class="ai-mascot-mode">
+            <option value="tutor">Tutor</option><option value="socratic">Socrático</option><option value="preceptor">Preceptor</option>
+            <option value="osce">OSCE</option><option value="case">Caso clínico</option><option value="recall">Active recall</option>
+            <option value="compare">Comparar</option><option value="redflags">Red flags</option><option value="exam">Prova</option>
+          </select></label>
+          <label>Ajuda<select class="ai-mascot-intervention">
+            <option value="complete">Resposta completa</option><option value="partial">Explicação parcial</option>
+            <option value="progressive_hints">Pistas graduais</option><option value="small_hints">Pista pequena</option><option value="questions">Só perguntas</option>
+          </select></label>
+          <label>Nível<select class="ai-mascot-difficulty"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <div class="ai-mascot-control-actions"><button class="ai-mascot-review" type="button">Revisões: 0</button><button class="ai-mascot-profile" type="button">Perfil</button></div>
+        </div>
         <div class="ai-mascot-messages" aria-live="polite"></div>
+        <div class="ai-mascot-reflection" hidden>
+          <small>Como foi sua recuperação?</small>
+          <button type="button" data-correct="true" data-confidence="high">Acertei com certeza</button>
+          <button type="button" data-correct="true" data-confidence="low">Acertei com dúvida</button>
+          <button type="button" data-correct="false" data-confidence="low">Errei com dúvida</button>
+          <button type="button" data-correct="false" data-confidence="high">Errei com certeza</button>
+        </div>
         <div class="ai-mascot-status" role="status"></div>
         <form class="ai-mascot-form">
           <label class="sr-only" for="aiMascotInput">Digite sua dúvida</label>
@@ -86,6 +176,12 @@
   const input = root.querySelector('#aiMascotInput');
   const submitButton = form.querySelector('button');
   const usage = root.querySelector('.ai-mascot-usage');
+  const modeSelect = root.querySelector('.ai-mascot-mode');
+  const interventionSelect = root.querySelector('.ai-mascot-intervention');
+  const difficultySelect = root.querySelector('.ai-mascot-difficulty');
+  const reviewButton = root.querySelector('.ai-mascot-review');
+  const profileButton = root.querySelector('.ai-mascot-profile');
+  const reflection = root.querySelector('.ai-mascot-reflection');
 
   function usageToday() {
     const now = new Date();
@@ -112,6 +208,63 @@
     current.tokens += Math.max(1, Math.round(amount));
     try { localStorage.setItem(USAGE_STORAGE_KEY, JSON.stringify(current)); } catch {}
     renderUsage();
+  }
+
+  function dueReviews() {
+    const now = Date.now();
+    return profile.reviews.filter((item) => !item.completed && new Date(item.dueAt).getTime() <= now);
+  }
+
+  function renderReviews() {
+    const count = dueReviews().length;
+    reviewButton.textContent = `Revisões: ${count}`;
+    reviewButton.classList.toggle('has-due', count > 0);
+  }
+
+  function learnerProfileSummary() {
+    const recent = profile.events.slice(-40);
+    if (!recent.length) return '';
+    const errors = recent.filter((event) => !event.correct);
+    const overconfident = errors.filter((event) => event.confidence === 'high');
+    const topics = new Map();
+    errors.forEach((event) => topics.set(event.topic, (topics.get(event.topic) || 0) + 1));
+    const weakest = [...topics.entries()].sort((a, b) => b[1] - a[1]).slice(0, 4).map(([topic, count]) => `${topic} (${count} erros)`).join(', ');
+    return `Últimas ${recent.length} autoavaliações: ${errors.length} erros, ${overconfident.length} erros com alta confiança. Fragilidades recorrentes: ${weakest || 'ainda não identificadas'}.`;
+  }
+
+  function topicForCurrentTurn() {
+    const userTurn = [...history].reverse().find((message) => message.role === 'user')?.text || 'Revisão médica';
+    return plainText(userTurn).replace(/\s+/g, ' ').slice(0, 90);
+  }
+
+  function recordReflection(correct, confidence) {
+    const topic = topicForCurrentTurn();
+    const now = new Date();
+    profile.events.push({ topic, correct, confidence, mode: modeSelect.value, at: now.toISOString() });
+    profile.events = profile.events.slice(-200);
+
+    if (activeReviewId) {
+      const review = profile.reviews.find((item) => item.id === activeReviewId);
+      if (review) {
+        review.step = correct ? Math.min(REVIEW_INTERVALS.length, Number(review.step || 0) + 1) : 0;
+        if (review.step >= REVIEW_INTERVALS.length) review.completed = true;
+        else {
+          const due = new Date(now);
+          due.setDate(due.getDate() + REVIEW_INTERVALS[review.step]);
+          review.dueAt = due.toISOString();
+        }
+      }
+      activeReviewId = null;
+    } else if (!correct || confidence === 'low') {
+      const firstDelay = !correct && confidence === 'high' ? 1 : !correct ? 3 : 7;
+      const due = new Date(now);
+      due.setDate(due.getDate() + firstDelay);
+      profile.reviews.push({ id: `${now.getTime()}-${Math.random().toString(36).slice(2, 7)}`, prompt: topic, dueAt: due.toISOString(), step: 0, completed: false });
+      profile.reviews = profile.reviews.slice(-100);
+    }
+    saveProfile();
+    reflection.hidden = true;
+    renderReviews();
   }
 
   function appendMessage(role, text) {
@@ -170,7 +323,15 @@
       if (!sessionData?.session) throw new Error('Entre na sua conta para conversar com o mascote.');
 
       const { data, error } = await sbClient.functions.invoke('mascote-ia', {
-        body: { question, history: priorHistory, context: currentContext() },
+        body: {
+          question,
+          history: priorHistory,
+          context: currentContext(),
+          mode: modeSelect.value,
+          intervention: interventionSelect.value,
+          difficulty: Number(difficultySelect.value),
+          learnerProfile: learnerProfileSummary(),
+        },
       });
       if (error) {
         let message = 'Não consegui responder agora. Tente novamente.';
@@ -193,6 +354,7 @@
       history = history.slice(-MAX_HISTORY_MESSAGES);
       saveHistory();
       renderMessages();
+      reflection.hidden = false;
     } catch (error) {
       // Não deixe uma pergunta que falhou no histórico: repetir após um erro
       // criaria dois turnos "user" seguidos e o Gemini pode rejeitar a conversa.
@@ -219,8 +381,31 @@
     saveHistory();
     status.textContent = '';
     status.className = 'ai-mascot-status';
+    reflection.hidden = true;
     renderMessages();
     input.focus();
+  });
+  reviewButton.addEventListener('click', () => {
+    const review = dueReviews()[0];
+    if (!review) {
+      status.textContent = 'Nenhuma revisão pendente hoje.';
+      status.className = 'ai-mascot-status is-active';
+      return;
+    }
+    activeReviewId = review.id;
+    modeSelect.value = 'recall';
+    interventionSelect.value = 'questions';
+    input.value = `Faça uma revisão por recuperação ativa sobre: ${review.prompt}`;
+    input.focus();
+  });
+  profileButton.addEventListener('click', () => {
+    status.textContent = learnerProfileSummary() || 'O perfil será formado após suas autoavaliações.';
+    status.className = 'ai-mascot-status is-active';
+  });
+  reflection.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-correct]');
+    if (!button) return;
+    recordReflection(button.dataset.correct === 'true', button.dataset.confidence);
   });
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -242,4 +427,6 @@
 
   renderMessages();
   renderUsage();
+  renderReviews();
+  loadProfileFromCloud();
 })();
