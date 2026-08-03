@@ -1,10 +1,11 @@
-const CACHE_NAME = 'soqueromed-shell-v179';
+const CACHE_NAME = 'soqueromed-shell-v180';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
   './assets/planner.css?v=20260802-7',
   './assets/anatomia.css?v=20260802-8',
   './assets/planner-refresh.css?v=20260802-1',
+  './assets/mascote-ia.css?v=20260802-1',
   './assets/app-icons.js?v=20260802-1',
   './assets/icons/phosphor-sprite.svg',
   './assets/gamification.js?v=20260715-4',
@@ -20,6 +21,7 @@ const APP_SHELL = [
   './assets/semiologia.js?v=20260802-9',
   './assets/caso-do-dia.js?v=20260729-4',
   './assets/planner.js?v=20260802-8',
+  './assets/mascote-ia.js?v=20260802-1',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
@@ -178,6 +180,7 @@ self.addEventListener('fetch', event => {
     || url.pathname.endsWith('/assets/anatomia.js')
     || url.pathname.endsWith('/assets/anatomia.css')
     || url.pathname.endsWith('/assets/planner-refresh.css')
+    || url.pathname.endsWith('/assets/mascote-ia.css')
     || url.pathname.endsWith('/assets/anatomia/catalog.json')
     || url.pathname.endsWith('/assets/anatomia/search-index.json')
     || url.pathname.endsWith('/assets/caso-do-dia.js')
@@ -187,6 +190,7 @@ self.addEventListener('fetch', event => {
     || url.pathname.endsWith('/assets/semiologia-aulas.js')
     || url.pathname.endsWith('/assets/gamification.js')
     || url.pathname.endsWith('/assets/planner.css')
+    || url.pathname.endsWith('/assets/mascote-ia.js')
     || url.pathname.includes('/video_library/')
     || url.pathname.includes('/data/');
   if (networkFirst) {
