@@ -340,7 +340,7 @@
   const IA_MODEL_LS = 'cc_gemini_model';
   let iaPanelOpen = false;
   const pendingIA = {};
-  function iaConfig(){ return { key: localStorage.getItem(IA_KEY_LS)||'', enabled: localStorage.getItem(IA_ENABLED_LS)==='1', model: localStorage.getItem(IA_MODEL_LS)||'gemini-2.0-flash' }; }
+  function iaConfig(){ return { key: localStorage.getItem(IA_KEY_LS)||'', enabled: localStorage.getItem(IA_ENABLED_LS)==='1', model: localStorage.getItem(IA_MODEL_LS)||'gemini-3.6-flash' }; }
   function iaSetConfig(cfg){ if(cfg.key!==undefined) localStorage.setItem(IA_KEY_LS, cfg.key); if(cfg.enabled!==undefined) localStorage.setItem(IA_ENABLED_LS, cfg.enabled?'1':'0'); if(cfg.model!==undefined) localStorage.setItem(IA_MODEL_LS, cfg.model); }
   function iaSystemPrompt(d, paciente){
     if(!d) return 'Você é um paciente simulado em um treino de habilidades clínicas. Responda como leigo, em 1 a 3 frases, sem jargão médico e sem revelar diagnóstico.';
@@ -632,7 +632,7 @@ Regras:
     const iaSave = root.querySelector('#ccIaSave');
     if(iaSave) iaSave.onclick = () => {
       const key = (root.querySelector('#ccIaKey').value||'').trim();
-      const model = (root.querySelector('#ccIaModel').value||'gemini-2.0-flash').trim();
+      const model = (root.querySelector('#ccIaModel').value||'gemini-3.6-flash').trim();
       const enabled = root.querySelector('#ccIaEnabled').checked;
       if(enabled && !key) { alert('Cole sua chave de API antes de ativar.'); return; }
       iaSetConfig({ key, model, enabled });
@@ -641,7 +641,7 @@ Regras:
     const iaTest = root.querySelector('#ccIaTest');
     if(iaTest) iaTest.onclick = async () => {
       const key = (root.querySelector('#ccIaKey').value||'').trim();
-      const model = (root.querySelector('#ccIaModel').value||'gemini-2.0-flash').trim();
+      const model = (root.querySelector('#ccIaModel').value||'gemini-3.6-flash').trim();
       const resultEl = root.querySelector('#ccIaTestResult');
       if(!key) { resultEl.textContent = 'Cole a chave primeiro.'; return; }
       resultEl.textContent = 'Testando…';
