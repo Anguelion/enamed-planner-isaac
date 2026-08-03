@@ -1364,7 +1364,10 @@ const CLOUD_SYNC_DEBOUNCE_MS = 3 * 60 * 1000;
 // Teto de espera: o debounce sozinho reinicia a cada gravação, então uma sessão
 // contínua de estudo (que salva a cada poucos segundos) nunca chegava a enviar
 // nada para a nuvem. Este relógio não é reiniciado enquanto houver algo pendente.
-const CLOUD_SYNC_MAX_WAIT_MS = 45 * 1000;
+// Durante edição contínua, um envio completo a cada 45s gerava vários GB de
+// egress porque o estado pessoal já passa de 3 MB. O debounce ainda envia após
+// 3 min de inatividade; este teto só limita sessões sem pausa.
+const CLOUD_SYNC_MAX_WAIT_MS = 5 * 60 * 1000;
 let cloudMaxWaitTimer = null;
 // Antes, um erro de rede ou do Supabase deixava o indicador travado em "Erro"
 // até algum outro evento (digitar, trocar de aba) tentar de novo — na prática,
@@ -1463,15 +1466,23 @@ async function pushCloudStateImpl({skipRemoteMerge=false}={}) {
   setSyncStatus('Enviando', 'busy');
   try {
     if(!skipRemoteMerge) {
-      const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
-      const remoteAt = Date.parse(remoteRow?.updated_at || '') || 0;
-      if(remoteRow?.updated_at) updateServerClockOffset(remoteRow.updated_at);
-      if(!remoteError && remoteRow?.data && remoteAt > lastCloudSyncAt) {
-        state = mergePlannerActivityState(remoteRow.data, state, true);
-        ensureDayLogs();
-        ensureQuestionProgress();
-        invalidateActivityRenderCache();
-        writeLocalState();
+      // A linha completa tem vários MB. Primeiro consulta só o carimbo (poucos
+      // bytes) e baixa `data` apenas quando outro aparelho realmente gravou uma
+      // versão mais nova. Antes, cada push baixava o estado inteiro mesmo quando
+      // nada remoto havia mudado, consumindo a franquia mensal de egress.
+      const { data:remoteMeta, error:remoteMetaError } = await sbClient.from('planner_states').select('updated_at').eq('user_id', currentUser.id).maybeSingle();
+      const remoteAt = Date.parse(remoteMeta?.updated_at || '') || 0;
+      if(remoteMeta?.updated_at) updateServerClockOffset(remoteMeta.updated_at);
+      if(!remoteMetaError && remoteAt > lastCloudSyncAt) {
+        const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
+        if(!remoteError && remoteRow?.data) {
+          if(remoteRow.updated_at) updateServerClockOffset(remoteRow.updated_at);
+          state = mergePlannerActivityState(remoteRow.data, state, true);
+          ensureDayLogs();
+          ensureQuestionProgress();
+          invalidateActivityRenderCache();
+          writeLocalState();
+        }
       }
     }
     const { data:savedRow, error } = await sbClient.from('planner_states').upsert({
