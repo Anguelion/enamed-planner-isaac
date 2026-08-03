@@ -332,6 +332,55 @@
   const sessao = () => store().sessions.find(s => s.id === store().activeId) || null;
   const uid = () => `cc-${Date.now()}-${Math.random().toString(36).slice(2,6)}`;
 
+  /* ---------------------------- IA (Gemini / Google AI Studio) ----------------------------
+   * A chave fica só no localStorage deste navegador — nunca entra no `state` sincronizado
+   * com a nuvem do planner. As chamadas vão direto do navegador para a API do Google. */
+  const IA_KEY_LS = 'cc_gemini_api_key';
+  const IA_ENABLED_LS = 'cc_gemini_enabled';
+  const IA_MODEL_LS = 'cc_gemini_model';
+  let iaPanelOpen = false;
+  const pendingIA = {};
+  function iaConfig(){ return { key: localStorage.getItem(IA_KEY_LS)||'', enabled: localStorage.getItem(IA_ENABLED_LS)==='1', model: localStorage.getItem(IA_MODEL_LS)||'gemini-2.0-flash' }; }
+  function iaSetConfig(cfg){ if(cfg.key!==undefined) localStorage.setItem(IA_KEY_LS, cfg.key); if(cfg.enabled!==undefined) localStorage.setItem(IA_ENABLED_LS, cfg.enabled?'1':'0'); if(cfg.model!==undefined) localStorage.setItem(IA_MODEL_LS, cfg.model); }
+  function iaSystemPrompt(d, paciente){
+    if(!d) return 'Você é um paciente simulado em um treino de habilidades clínicas. Responda como leigo, em 1 a 3 frases, sem jargão médico e sem revelar diagnóstico.';
+    return `Você é um paciente simulado em um treino de habilidades clínicas para estudantes de medicina. Nunca revele que é uma IA, nunca use termos médicos técnicos, nunca diga o nome da doença ou do diagnóstico.
+Seu nome é ${paciente.name||'paciente'}${paciente.age?`, ${paciente.age} anos`:''}${paciente.sex?`, sexo ${paciente.sex}`:''}.
+Perfil do caso: ${d.perfil}
+Queixa principal: ${d.queixa}
+Fatos clínicos que você deve manter consistentes (não invente algo que contradiga isto): ${d.achados && d.achados.length ? d.achados.join(' | ') : 'sem achados pré-definidos; seja plausível e consistente com o perfil.'}
+Sinais de alarme da condição (só mencione se o estudante perguntar diretamente sobre esses sintomas específicos, respondendo de forma realista para o quadro): ${(d.redflags||[]).join(' | ')}
+Regras:
+- Responda como pessoa leiga, em 1 a 3 frases, em português coloquial brasileiro.
+- Não dê diagnóstico, não use jargão médico, não diga "eu tenho [doença]".
+- Se perguntarem algo não coberto pelos fatos acima, responda de forma plausível e coerente com o perfil, sem contradizer o que já foi dito.
+- Se o estudante fizer algo que não é uma pergunta ao paciente (pedir exame, dar orientação), reaja como um paciente reagiria a ouvir aquilo.`;
+  }
+  async function callGemini(sessionId){
+    const cfg = iaConfig();
+    const s = store().sessions.find(x => x.id === sessionId);
+    if(!s || !cfg.key) return;
+    const d = doenca(s.doencaId);
+    pendingIA[sessionId] = true; render();
+    try {
+      const contents = s.dialogo.filter(l => l.texto && l.texto.trim()).map(l => ({ role: l.quem==='paciente' ? 'model' : 'user', parts:[{ text:l.texto }] }));
+      const body = { systemInstruction:{ parts:[{ text: iaSystemPrompt(d, s.paciente) }] }, contents, generationConfig:{ temperature:0.85, maxOutputTokens:200 } };
+      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(cfg.model)}:generateContent?key=${encodeURIComponent(cfg.key)}`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) });
+      if(!resp.ok) { const errText = await resp.text().catch(()=>''); throw new Error(`HTTP ${resp.status} ${errText.slice(0,200)}`); }
+      const json = await resp.json();
+      const texto = (json.candidates?.[0]?.content?.parts||[]).map(p=>p.text||'').join('').trim();
+      s.dialogo.push({ quem:'paciente', texto: texto || '(o paciente ficou em silêncio — resposta vazia da IA)' });
+    } catch(err) {
+      console.warn('Consulta IA:', err);
+      s.dialogo.push({ quem:'paciente', texto:`(erro ao consultar a IA: ${err.message||err}. Confira sua chave em "Configurar IA".)` });
+    } finally {
+      pendingIA[sessionId] = false;
+      s.updatedAt = new Date().toISOString();
+      save(); render();
+      const list = root.querySelector('#ccDialogoList'); if(list) list.scrollTop = list.scrollHeight;
+    }
+  }
+
   function novaSessao(data){
     return { id: uid(), createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(),
       metodoId: data.metodoId || 'mccp', doencaId: data.doencaId || '',
@@ -416,6 +465,7 @@
     const total = totalPerguntas(m, d);
     const feitas = s.asked.length;
     const pct = total ? Math.round(feitas / total * 100) : 0;
+    const iaCfg = iaConfig();
     return `<div class="cc-wrap cc-session">
       <div class="cc-safety"><strong>TREINO SIMULADO</strong><span>Paciente fictício. Nenhuma conduta aqui serve para atendimento real.</span></div>
       <header class="cc-top">
@@ -425,9 +475,11 @@
         <label class="cc-top-field cc-narrow">Idade<input class="input" id="ccTopIdade" type="number" value="${esc(s.paciente.idade)}"></label>
         <label class="cc-top-field cc-narrow">Sexo<select class="select" id="ccTopSexo"><option value="">—</option><option${s.paciente.sexo==='Feminino'?' selected':''}>Feminino</option><option${s.paciente.sexo==='Masculino'?' selected':''}>Masculino</option></select></label>
         <button class="icon-btn" id="ccToggleBox">${store().ui.box?'Fechar caixa de doenças':'Trocar doença'}</button>
+        <button class="icon-btn ${iaCfg.enabled&&iaCfg.key?'cc-ia-on':''}" id="ccIaConfig">${iaCfg.enabled&&iaCfg.key?'🤖 IA ativada':'🤖 Configurar IA'}</button>
         <button class="icon-btn" id="ccCopiar">Copiar consulta</button>
         <button class="icon-btn primary" id="ccFinalizar">${s.finalizada?'Reabrir':'Finalizar'}</button>
       </header>
+      ${iaPanelOpen ? renderIaPanel(iaCfg) : ''}
       ${store().ui.box ? `<section class="card cc-box cc-box-inline"><div class="cc-box-head"><h3>Caixa de doenças</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div><div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', s.doencaId)}</div></section>` : ''}
       ${d ? '' : '<div class="empty">Escolha uma condição na caixa acima para receber as perguntas dirigidas.</div>'}
       ${d ? `<section class="cc-caso card"><div><span class="eyebrow">Caso simulado</span><h2>${esc(s.paciente.nome)}${s.paciente.idade?` · ${esc(s.paciente.idade)} anos`:''}${s.paciente.sexo?` · ${esc(s.paciente.sexo)}`:''}</h2><p><strong>Queixa:</strong> ${esc(d.queixa)}</p><p class="muted">${esc(d.perfil)}</p></div><div class="cc-progress"><span>Roteiro coberto</span><strong>${pct}%</strong><i style="--p:${pct}%"></i><small>${feitas} de ${total} perguntas-chave</small></div></section>` : ''}
@@ -451,7 +503,7 @@
           <div class="cc-anot"><h4>Sua anotação nesta etapa</h4><textarea class="textarea" id="ccNota" data-etapa="${etapa.id}" placeholder="Escreva aqui como se estivesse registrando o que a pessoa respondeu, o que você pensou e o que decidiu.">${esc(s.notas[etapa.id]||'')}</textarea></div>
           <div class="cc-dialogo">
             <div class="section-title"><h4>Transcrição da consulta</h4><button class="tiny-btn" id="ccLimparDialogo">Limpar</button></div>
-            <div class="cc-dialogo-list" id="ccDialogoList">${s.dialogo.map((l,i)=>`<div class="cc-linha ${l.quem}"><span>${l.quem==='medico'?'Você':esc(s.paciente.nome)}</span><p>${esc(l.texto)}</p><button class="tiny-btn" data-cc-del-linha="${i}" title="Remover">×</button></div>`).join('') || '<div class="empty">Clique numa pergunta ao lado ou escreva abaixo para começar a conversa.</div>'}</div>
+            <div class="cc-dialogo-list" id="ccDialogoList">${s.dialogo.map((l,i)=>`<div class="cc-linha ${l.quem}"><span>${l.quem==='medico'?'Você':esc(s.paciente.nome)}</span><p>${esc(l.texto)}</p><button class="tiny-btn" data-cc-del-linha="${i}" title="Remover">×</button></div>`).join('') || (pendingIA[s.id]?'':'<div class="empty">Clique numa pergunta ao lado ou escreva abaixo para começar a conversa.</div>')}${pendingIA[s.id]?`<div class="cc-linha paciente cc-typing"><span>${esc(s.paciente.nome)}</span><p>digitando…</p></div>`:''}</div>
             <div class="cc-dialogo-input">
               <select class="select" id="ccQuem"><option value="medico">Você (médico)</option><option value="paciente">${esc(s.paciente.nome)}</option></select>
               <input class="input" id="ccFala" placeholder="Digite sua fala e pressione Enter">
@@ -475,6 +527,17 @@
     </div>`;
   }
 
+  function renderIaPanel(cfg){
+    return `<section class="card cc-ia-panel">
+      <div class="section-title"><h3>Configurar IA (Google AI Studio / Gemini)</h3><button class="tiny-btn" id="ccIaClose">Fechar</button></div>
+      <p class="muted">A chave fica salva só neste navegador (localStorage) e nunca é enviada para a nuvem do planner. As chamadas vão direto do seu navegador para a API do Google — não digite dados de pessoas reais nas mensagens.</p>
+      <label>Chave de API (Google AI Studio)<input class="input" id="ccIaKey" type="password" placeholder="AIza..." value="${esc(cfg.key)}"></label>
+      <label>Modelo<input class="input" id="ccIaModel" value="${esc(cfg.model)}"></label>
+      <label class="cc-ia-check"><input type="checkbox" id="ccIaEnabled" ${cfg.enabled?'checked':''}> Usar IA para as respostas do paciente</label>
+      <div class="cc-ia-actions"><button class="icon-btn primary" id="ccIaSave">Salvar</button><button class="icon-btn" id="ccIaTest">Testar conexão</button></div>
+      <div id="ccIaTestResult" class="muted"></div>
+    </section>`;
+  }
   function renderPergunta(s, key, texto, tipo){
     const feita = s.asked.includes(key);
     return `<div class="cc-q${feita?' feita':''}"><button type="button" data-cc-ask="${esc(key)}" data-texto="${esc(texto)}" data-tipo="${tipo}">${esc(texto)}</button><span>${feita?'✓':'+'}</span></div>`;
@@ -562,13 +625,41 @@
     root.querySelector('#ccTopIdade').onchange = e => { s.paciente.idade = e.target.value; touch(); };
     root.querySelector('#ccTopSexo').onchange = e => { s.paciente.sexo = e.target.value; touch(); };
     root.querySelectorAll('[data-cc-step]').forEach(btn => btn.onclick = () => { s.etapaAtiva = btn.dataset.ccStep; touch(); render(); });
+    const iaBtn = root.querySelector('#ccIaConfig');
+    if(iaBtn) iaBtn.onclick = () => { iaPanelOpen = !iaPanelOpen; render(); };
+    const iaClose = root.querySelector('#ccIaClose');
+    if(iaClose) iaClose.onclick = () => { iaPanelOpen = false; render(); };
+    const iaSave = root.querySelector('#ccIaSave');
+    if(iaSave) iaSave.onclick = () => {
+      const key = (root.querySelector('#ccIaKey').value||'').trim();
+      const model = (root.querySelector('#ccIaModel').value||'gemini-2.0-flash').trim();
+      const enabled = root.querySelector('#ccIaEnabled').checked;
+      if(enabled && !key) { alert('Cole sua chave de API antes de ativar.'); return; }
+      iaSetConfig({ key, model, enabled });
+      iaPanelOpen = false; render();
+    };
+    const iaTest = root.querySelector('#ccIaTest');
+    if(iaTest) iaTest.onclick = async () => {
+      const key = (root.querySelector('#ccIaKey').value||'').trim();
+      const model = (root.querySelector('#ccIaModel').value||'gemini-2.0-flash').trim();
+      const resultEl = root.querySelector('#ccIaTestResult');
+      if(!key) { resultEl.textContent = 'Cole a chave primeiro.'; return; }
+      resultEl.textContent = 'Testando…';
+      try {
+        const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(key)}`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ contents:[{ role:'user', parts:[{ text:'Responda apenas "ok".' }] }] }) });
+        if(!resp.ok) { const t = await resp.text().catch(()=>''); throw new Error(`HTTP ${resp.status} ${t.slice(0,150)}`); }
+        resultEl.textContent = 'Conexão funcionando.';
+      } catch(err) { resultEl.textContent = `Falhou: ${err.message||err}`; }
+    };
     root.querySelectorAll('[data-cc-ask]').forEach(btn => btn.onclick = () => {
       const key = btn.dataset.ccAsk, texto = btn.dataset.texto;
       if(!s.asked.includes(key)) s.asked.push(key);
       s.dialogo.push({ quem:'medico', texto });
       const d = doenca(s.doencaId);
-      if(btn.dataset.tipo === 'doenca' && /^(Examinar|Considerar|Conduta):/.test(texto)) { /* item de raciocínio, sem resposta do paciente */ }
-      else { const r = respostaDoPaciente(s, d); if(r) s.dialogo.push({ quem:'paciente', texto:r }); }
+      const reasoning = btn.dataset.tipo === 'doenca' && /^(Examinar|Considerar|Conduta):/.test(texto);
+      const cfg = iaConfig();
+      if(!reasoning && cfg.enabled && cfg.key) { touch(); render(); callGemini(s.id); return; }
+      if(!reasoning) { const r = respostaDoPaciente(s, d); if(r) s.dialogo.push({ quem:'paciente', texto:r }); }
       touch(); render();
       const list = root.querySelector('#ccDialogoList'); if(list) list.scrollTop = list.scrollHeight;
     });
@@ -579,9 +670,12 @@
     const fala = root.querySelector('#ccFala');
     const addFala = () => {
       const texto = (fala.value || '').trim(); if(!texto) return;
-      s.dialogo.push({ quem: root.querySelector('#ccQuem').value, texto });
+      const quem = root.querySelector('#ccQuem').value;
+      s.dialogo.push({ quem, texto });
       fala.value = ''; touch(); render();
       const f = root.querySelector('#ccFala'); if(f) f.focus();
+      const cfg = iaConfig();
+      if(quem === 'medico' && cfg.enabled && cfg.key) callGemini(s.id);
     };
     if(fala){ fala.onkeydown = e => { if(e.key === 'Enter'){ e.preventDefault(); addFala(); } }; root.querySelector('#ccAddFala').onclick = addFala; }
     root.querySelectorAll('[data-cc-del-linha]').forEach(btn => btn.onclick = () => { s.dialogo.splice(Number(btn.dataset.ccDelLinha), 1); touch(); render(); });
