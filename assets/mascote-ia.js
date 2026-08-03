@@ -2,8 +2,8 @@
   'use strict';
 
   const STORAGE_KEY = 'soqueromed-mascot-chat-v1';
-  const USAGE_STORAGE_KEY = 'soqueromed-mascot-usage-v1';
-  const DAILY_QUESTION_LIMIT = 20;
+  const USAGE_STORAGE_KEY = 'soqueromed-mascot-usage-v2';
+  const DAILY_TOKEN_LIMIT = 50000;
   const MAX_HISTORY_MESSAGES = 6;
   const MAX_QUESTION_LENGTH = 1200;
   let history = loadHistory();
@@ -88,27 +88,28 @@
   const usage = root.querySelector('.ai-mascot-usage');
 
   function usageToday() {
-    const today = new Date().toISOString().slice(0, 10);
+    const now = new Date();
+    const today = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, '0'), String(now.getDate()).padStart(2, '0')].join('-');
     try {
       const saved = JSON.parse(localStorage.getItem(USAGE_STORAGE_KEY) || '{}');
-      return saved.date === today && Number.isFinite(saved.count) ? saved : { date: today, count: 0 };
+      return saved.date === today && Number.isFinite(saved.tokens) ? saved : { date: today, tokens: 0 };
     } catch {
-      return { date: today, count: 0 };
+      return { date: today, tokens: 0 };
     }
   }
 
   function renderUsage() {
     const current = usageToday();
-    usage.textContent = `${Math.max(0, DAILY_QUESTION_LIMIT - current.count)} perguntas restantes hoje`;
-    const exhausted = current.count >= DAILY_QUESTION_LIMIT;
+    usage.textContent = `${Math.max(0, DAILY_TOKEN_LIMIT - current.tokens).toLocaleString('pt-BR')} tokens restantes hoje`;
+    const exhausted = current.tokens >= DAILY_TOKEN_LIMIT;
     input.disabled = exhausted || sending;
     submitButton.disabled = exhausted || sending;
     return !exhausted;
   }
 
-  function registerQuestion() {
+  function registerTokens(amount) {
     const current = usageToday();
-    current.count += 1;
+    current.tokens += Math.max(1, Math.round(amount));
     try { localStorage.setItem(USAGE_STORAGE_KEY, JSON.stringify(current)); } catch {}
     renderUsage();
   }
@@ -152,11 +153,10 @@
   async function sendQuestion(question) {
     if (sending || !question) return;
     if (!renderUsage()) {
-      status.textContent = `Limite de ${DAILY_QUESTION_LIMIT} perguntas atingido. Tente novamente amanhã.`;
+      status.textContent = `Limite diário de ${DAILY_TOKEN_LIMIT.toLocaleString('pt-BR')} tokens atingido. Tente novamente amanhã.`;
       status.className = 'ai-mascot-status is-error';
       return;
     }
-    registerQuestion();
     const priorHistory = history.slice(-MAX_HISTORY_MESSAGES);
     history.push({ role: 'user', text: question });
     history = history.slice(-MAX_HISTORY_MESSAGES);
@@ -185,6 +185,9 @@
         throw new Error(message);
       }
       if (!data?.answer) throw new Error(data?.error || 'O mascote não retornou uma resposta.');
+
+      const measuredTokens = Number(data.usage?.totalTokens) || Math.ceil((question.length + String(data.answer).length) / 4);
+      registerTokens(measuredTokens);
 
       history.push({ role: 'model', text: plainText(data.answer) });
       history = history.slice(-MAX_HISTORY_MESSAGES);

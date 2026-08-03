@@ -180,7 +180,16 @@ Deno.serve(async (request) => {
       return json({ error: reason ? "Essa pergunta não pôde ser respondida com segurança." : "O mascote não encontrou uma resposta." }, 422, origin);
     }
 
-    return json({ answer, model: GEMINI_MODEL }, 200, origin);
+    const usageMetadata = result?.usageMetadata || {};
+    return json({
+      answer,
+      model: GEMINI_MODEL,
+      usage: {
+        promptTokens: Number(usageMetadata.promptTokenCount) || 0,
+        outputTokens: Number(usageMetadata.candidatesTokenCount) || 0,
+        totalTokens: Number(usageMetadata.totalTokenCount) || 0,
+      },
+    }, 200, origin);
   } catch (error) {
     console.error("Mascot request failed", error instanceof Error ? error.message : "unknown error");
     return json({ error: "A resposta demorou demais ou houve uma falha de conexão." }, 504, origin);
