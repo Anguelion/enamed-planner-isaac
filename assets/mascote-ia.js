@@ -2,7 +2,7 @@
   'use strict';
 
   const STORAGE_KEY = 'soqueromed-mascot-chat-v1';
-  const MAX_HISTORY_MESSAGES = 8;
+  const MAX_HISTORY_MESSAGES = 6;
   const MAX_QUESTION_LENGTH = 1200;
   let history = loadHistory();
   let sending = false;
@@ -31,6 +31,7 @@
       .replace(/```[\s\S]*?```/g, (block) => block.replace(/```[^\n]*\n?/g, ''))
       .replace(/^\s{0,3}#{1,6}\s*/gm, '')
       .replace(/^\s{0,3}>\s?/gm, '')
+      .replace(/^\s*(?:[-*_]\s*){3,}$/gm, '')
       .replace(/^\s*[-*+]\s+/gm, '')
       .replace(/^\s*\d+[.)]\s+/gm, '')
       .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
