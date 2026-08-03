@@ -319,6 +319,76 @@
         perguntas:['Combinando: vamos fazer X, e vocês devem voltar se…','Nesta idade, é importante cuidar de… já pensaram nisso?'] } ] }
   ];
 
+  /* Respostas do paciente para as perguntas de cada método, na mesma ordem de `perguntas`.
+   * '@campo' busca a fala específica da doença em `perspectiva`; '' = não cabe resposta
+   * do paciente (é raciocínio seu ou fala dirigida a outro profissional). */
+  const RESPOSTAS_METODO = {
+    m1:['@abertura','@historia','@funcao','@ideias','@preocupacoes','@expectativas','Acho que é isso. Falei tudo que estava me incomodando.'],
+    m2:['@contexto','Trabalho o dia todo e chego em casa acabado.','Dá pra me virar, mas remédio caro pesa no orçamento.','@emocao','Minha fé me ajuda muito a aguentar as coisas.'],
+    m3:['@exame','Pode apertar, eu aviso se doer.','Entendi, doutor. Obrigado por explicar desse jeito.'],
+    m4:['@entendimento','Pode explicar as duas, quero entender direitinho.','Acho que consigo fazer isso, sim.','@expectativas'],
+    m5:['@emocao','Pode marcar que eu venho.','Anotei. Se aparecer isso eu procuro atendimento na hora.','@resumo'],
+    s1:['@abertura','@historia','Melhora quando eu descanso e piora quando eu forço.','Tenho o que já te falei, e tomo esses remédios mesmo.','Durmo mal, como correndo e não faço exercício nenhum.'],
+    s2:['@exame','Trouxe sim, estão aqui na pasta.'],
+    s3:['','',''],
+    s4:['','','',''],
+    c1:['Prazer, doutor. Pode me chamar pelo primeiro nome.','@abertura','Tem outra coisinha, mas o principal é isso mesmo.','Vamos começar por essa que me incomoda mais.'],
+    c2:['@historia','É como se apertasse, sabe? Não é uma fisgada.','@resumo','@ideias'],
+    c3:['@exame','Pode deixar, eu aviso se incomodar.'],
+    c4:['@entendimento','Prefiro o essencial, sem muito termo difícil.','Ficou claro até aqui, sim.','Acho que dá pra fazer. Só o horário que é mais complicado.'],
+    c5:['Entendi o combinado, doutor.','Certo. Se acontecer isso eu procuro na hora.','@resumo','@duvida'],
+    a1:['Meu nome é esse mesmo que está no cartão.','Trabalho aqui perto e moro na região.','@abertura'],
+    a2:['@historia','Começou aos poucos e foi piorando com o tempo.','É bem incômodo, uns 7 de 10.','Melhora com repouso e piora quando eu me esforço.','Vem junto com aquele cansaço que eu falei.','Tomei um remédio de farmácia, ajudou pouco.'],
+    a3:['Febre não tive. Cansaço sim, e não perdi peso.','Dor de cabeça de vez em quando; a vista está normal.','Falta de ar quando me esforço. Dor no peito não.','Azia às vezes; o intestino está normal.','Pra urinar está tudo normal, sem ardência.','Durmo mal e ando meio ansioso.','Dor nas juntas de vez em quando; a pele está boa.'],
+    a4:['Tenho o que já comentei. Operei uma vez, faz tempo.','Alergia a remédio nenhuma que eu saiba.','Tomo os que falei e às vezes um chá que minha mãe faz.','Bebo socialmente; sobre cigarro já te contei.','Como correndo, durmo mal e não me exercito.','Na minha família tem pressão alta e diabetes.','@contexto'],
+    a5:['@exame'],
+    a6:['','',''],
+    so1:['É bem aqui, ó (aponta com o dedo).','Começou de repente, eu estava parado quando veio.','É tipo um aperto, um peso.','Vai um pouco pro lado e pras costas.','Veio com enjoo e um suor frio.','É mais constante, mas piora à noite.','Piora quando eu me mexo e melhora se eu fico parado.','Agora uns 6. No pior momento foi 9.'],
+    ol1:['Começou aos poucos, faz umas semanas.','Sinto mais aqui nessa região.','Dura um bom tempo, às vezes o dia todo.','É um incômodo meio surdo, constante.','Piora quando eu me esforço.','Melhora se eu paro e descanso um pouco.','De manhã costuma ser pior.','Uns 6 de 10, e me atrapalha pra trabalhar.'],
+    sb1:[''], sb2:[''], sb3:[''], sb4:['',''],
+    ab1:['','','','',''],
+    ab2:['Alergia a remédio eu não tenho.','Tomo os remédios que já falei, nada além disso.','Tenho o que comentei e já operei uma vez.','Comi hoje de manhã, umas sete horas.','Foi tudo muito rápido, doutor, mal vi o que aconteceu.'],
+    ab3:['','',''],
+    ic1:['@ideias','@preocupacoes','@expectativas','@funcao','Um parente meu teve algo parecido e não terminou bem.'],
+    ba1:['@contexto','@emocao','@preocupacoes','Vou levando como dá, tentando não pensar muito.','Obrigado, doutor. Faz diferença ouvir isso.'],
+    sp1:['Podemos sim, doutor.','Queria minha esposa aqui comigo, por favor.'],
+    sp2:['@entendimento','Me disseram que os exames iam mostrar melhor o que era.'],
+    sp3:['Prefiro saber tudo. Não gosto de ficar no escuro.','Está bem, doutor.'],
+    sp4:['(fica em silêncio) Pode falar.','Pode continuar, doutor.'],
+    sp5:['É... foi um baque ouvir isso.','Obrigado por entender.','Preciso de um minuto, se puder.','Tenho medo de sofrer e de deixar minha família.'],
+    sp6:['Entendi. Saber que vou ter acompanhamento me tranquiliza.','Isso me alivia bastante, doutor.','@duvida'],
+    nu1:['É, estou com medo mesmo.','Obrigado, doutor. Ninguém tinha falado assim comigo.','Faço o que posso por ela.','Isso ajuda muito, de verdade.','@preocupacoes'],
+    em1:['@abertura','Já parei outras coisas antes, na força de vontade.','Pode falar, doutor, eu escuto.'],
+    em2:['Me acalma, me distrai depois de um dia ruim.','Me custa saúde e dinheiro, isso eu sei.','Acho que estaria bem pior do que hoje.','Seria bom. Eu me sentiria orgulhoso de mim.'],
+    em3:['Uns 8. É importante sim.','Porque já vi o que aconteceu com gente próxima de mim.','Capacidade uns 4. Já tentei e falhei antes.','Se eu tivesse um acompanhamento mais de perto.'],
+    em4:['Posso começar diminuindo aos poucos já essa semana.','O fim de semana e a companhia dos amigos.','Minha esposa me apoia bastante nisso.','Pode marcar que eu venho conversar.'],
+    r1:['',''], r2:['','',''], r3:['',''], r4:['',''],
+    p1:['','',''],
+    p2:['Seria conseguir voltar a trabalhar.','Dá pra tentar, sim.'],
+    p3:['','Eu faço a minha parte, e minha filha me ajuda com o resto.'],
+    p4:['Pode marcar, doutor.','Melhorou um pouco, mas ainda tem coisa pra ajustar.'],
+    ap1:['@contexto','Sou mais próximo da minha filha. Com meu irmão a gente não se fala.','Na família tem pressão alta e diabetes.','Minha mãe faleceu ano passado e isso mexeu com todo mundo.'],
+    ap2:['Às vezes. Quando eu preciso mesmo, eles ajudam.','Às vezes. A gente não conversa muito sobre problema.','Sim, eles apoiam o que eu quero fazer.','Sim, carinho não falta lá em casa.','Quase nunca. Cada um na sua correria.'],
+    ap3:['Eles acham que eu não me cuido direito.','Eu cuido da minha mãe e minha filha cuida de mim.','A gente segura as pontas e reza bastante.','Faria sim, acho que ajudaria a gente se entender.'],
+    g1:['Banho e roupa eu faço sozinho.','Telefone eu uso. O dinheiro quem cuida é minha filha.','Não pego mais ônibus sozinho. Cozinhar eu ainda faço.','Ando devagar, me segurando nos móveis.'],
+    g2:['Esqueço nomes e onde deixei as coisas.','Uma vez me perdi voltando da padaria.','Ando meio pra baixo, sim.','Durmo mal, acordo várias vezes de madrugada.'],
+    g3:['@apoio','Como pouco e perdi uns quilos ultimamente.','Enxergo mal. Faz anos que não troco o óculos.','Não, ninguém me maltrata.'],
+    g4:['Caí duas vezes esse ano.','Escapa um pouco de urina, sim. Me deixa constrangido.','Tomo bastante remédio, uns sete.','Quero continuar me virando sozinho.'],
+    ps1:['@abertura','Já tive algo parecido antes, mas não cheguei a tratar.','Acelerado desse jeito, nunca me aconteceu.','Bebo de vez em quando, mais quando fico mal.','Internação eu nunca tive.'],
+    ps2:['Ouvir voz não. Às vezes acho que escuto meu nome.','Sinto que as pessoas me olham diferente na rua.','Meus pensamentos ficam acelerados à noite.','Acho que estou doente, sim. Queria melhorar.'],
+    ps3:['Já pensei que seria melhor não acordar.','Não cheguei a pensar em como, não.','@apoio','Podemos sim, doutor.'],
+    pn1:['Foi no dia 12 do mês passado, anotei no aplicativo.','É a minha primeira gestação.','Tenho enjoo de manhã e uma azia que não passa.','Sinto ele mexer bastante, ainda mais à noite.'],
+    pn2:['@exame','Pode escutar, doutor. Fico ansiosa nessa hora.'],
+    pn3:['Trouxe sim, estão aqui.','Acho que estão em dia. Trouxe o cartão pra o senhor ver.','Nada demais desde a última, só o enjoo mesmo.'],
+    pn4:['Sei mais ou menos, mas queria que o senhor anotasse pra mim.','Queria parto normal, se der certo.','Tenho meu marido e minha mãe. Me sinto segura, sim.'],
+    pd1:['(a criança) Oi... tô com dodói.','A gente veio porque ele não está bem, doutor.','Pode sim. Prefiro conversar sozinho mesmo.'],
+    pd2:['A gestação foi tranquila, parto normal, nasceu com 3 quilos.','Não teve nada de errado ao nascer.','Mamou até um ano. Hoje come de tudo, mas enjeita verdura.','Ele já anda, fala bastante e brinca com os priminhos.','Dorme bem, umas dez horas por noite.'],
+    pd3:['Trouxemos a caderneta, está aqui.','Vai na creche e gosta de lá.','O avô fuma na varanda. Moramos em casa própria.','Ando cansada, mas tenho ajuda do meu marido.'],
+    pd4:['@exame','Pode ver sim, doutor.'],
+    pd5:['Entendi, doutor.','Não tinha pensado nisso. Vou cuidar disso em casa.']
+  };
+  METODOS.forEach(m => m.etapas.forEach(e => { e.resp = RESPOSTAS_METODO[e.id] || e.perguntas.map(() => ''); }));
+
   /* ================================== ESTADO ================================== */
   function defaultState(){ return { sessions: [], activeId:'', ui:{ view:'home', box:true } }; }
   let B = null;                                  // bridge
@@ -332,67 +402,8 @@
   const sessao = () => store().sessions.find(s => s.id === store().activeId) || null;
   const uid = () => `cc-${Date.now()}-${Math.random().toString(36).slice(2,6)}`;
 
-  /* ---------------------------- IA (Gemini / Google AI Studio) ----------------------------
-   * A chave fica só no localStorage deste navegador — nunca entra no `state` sincronizado
-   * com a nuvem do planner. As chamadas vão direto do navegador para a API do Google. */
-  const IA_KEY_LS = 'cc_gemini_api_key';
-  const IA_ENABLED_LS = 'cc_gemini_enabled';
-  const IA_MODEL_LS = 'cc_gemini_model';
-  let iaPanelOpen = false;
-  const pendingIA = {};
-  function iaConfig(){ return { key: localStorage.getItem(IA_KEY_LS)||'', enabled: localStorage.getItem(IA_ENABLED_LS)==='1', model: localStorage.getItem(IA_MODEL_LS)||'gemini-3.6-flash' }; }
-  function iaSetConfig(cfg){ if(cfg.key!==undefined) localStorage.setItem(IA_KEY_LS, cfg.key); if(cfg.enabled!==undefined) localStorage.setItem(IA_ENABLED_LS, cfg.enabled?'1':'0'); if(cfg.model!==undefined) localStorage.setItem(IA_MODEL_LS, cfg.model); }
-  function iaSystemPrompt(d, paciente){
-    if(!d) return 'Você é um paciente simulado em um treino de habilidades clínicas. Responda como leigo, em 1 a 3 frases, sem jargão médico e sem revelar diagnóstico.';
-    return `Você é um paciente simulado em um treino de habilidades clínicas para estudantes de medicina. Nunca revele que é uma IA, nunca use termos médicos técnicos, nunca diga o nome da doença ou do diagnóstico.
-Seu nome é ${paciente.name||'paciente'}${paciente.age?`, ${paciente.age} anos`:''}${paciente.sex?`, sexo ${paciente.sex}`:''}.
-Perfil do caso: ${d.perfil}
-Queixa principal: ${d.queixa}
-Fatos clínicos que você deve manter consistentes (não invente algo que contradiga isto): ${d.achados && d.achados.length ? d.achados.join(' | ') : 'sem achados pré-definidos; seja plausível e consistente com o perfil.'}
-Sinais de alarme da condição (só mencione se o estudante perguntar diretamente sobre esses sintomas específicos, respondendo de forma realista para o quadro): ${(d.redflags||[]).join(' | ')}
-Regras:
-- Responda como pessoa leiga, em 1 a 3 frases, em português coloquial brasileiro.
-- Não dê diagnóstico, não use jargão médico, não diga "eu tenho [doença]".
-- Se perguntarem algo não coberto pelos fatos acima, responda de forma plausível e coerente com o perfil, sem contradizer o que já foi dito.
-- Se o estudante fizer algo que não é uma pergunta ao paciente (pedir exame, dar orientação), reaja como um paciente reagiria a ouvir aquilo.`;
-  }
-  async function callGemini(sessionId){
-    const cfg = iaConfig();
-    const s = store().sessions.find(x => x.id === sessionId);
-    if(!s || !cfg.key) return;
-    const d = doenca(s.doencaId);
-    pendingIA[sessionId] = true; render();
-    const contents = s.dialogo.filter(l => l.texto && l.texto.trim()).map(l => ({ role: l.quem==='paciente' ? 'model' : 'user', parts:[{ text:l.texto }] }));
-    const body = { systemInstruction:{ parts:[{ text: iaSystemPrompt(d, s.paciente) }] }, contents, generationConfig:{ temperature:0.85, maxOutputTokens:350 } };
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(cfg.model)}:generateContent?key=${encodeURIComponent(cfg.key)}`;
-    const maxAttempts = 3;
-    try {
-      for(let attempt = 0; attempt < maxAttempts; attempt++){
-        let resp;
-        try { resp = await fetch(url, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) }); }
-        catch(networkErr) { if(attempt < maxAttempts-1) { await new Promise(r=>setTimeout(r, 1000*(attempt+1))); continue; } throw networkErr; }
-        if(resp.status === 503 && attempt < maxAttempts-1) { await new Promise(r=>setTimeout(r, 1200*(attempt+1))); continue; }
-        if(!resp.ok) { const errText = await resp.text().catch(()=>''); throw new Error(`HTTP ${resp.status} ${errText.slice(0,200)}`); }
-        const json = await resp.json();
-        const candidate = json.candidates?.[0];
-        const parts = candidate?.content?.parts || [];
-        let texto = parts.map(p=>p.text||'').join('').trim();
-        if(!texto && json.promptFeedback?.blockReason) texto = `(a resposta foi bloqueada pelo filtro de segurança do Gemini: ${json.promptFeedback.blockReason}. Tente reformular a pergunta.)`;
-        else if(!texto) texto = '(o paciente ficou em silêncio — resposta vazia da IA. Tente perguntar de novo.)';
-        else if(candidate?.finishReason && candidate.finishReason !== 'STOP') texto += ` [resposta interrompida: ${candidate.finishReason} — tente novamente ou aumente o modelo]`;
-        s.dialogo.push({ quem:'paciente', texto });
-        break;
-      }
-    } catch(err) {
-      console.warn('Consulta IA:', err);
-      s.dialogo.push({ quem:'paciente', texto:`(erro ao consultar a IA: ${err.message||err}. Confira sua chave/modelo em "Configurar IA".)` });
-    } finally {
-      pendingIA[sessionId] = false;
-      s.updatedAt = new Date().toISOString();
-      save(); render();
-      const list = root.querySelector('#ccDialogoList'); if(list) list.scrollTop = list.scrollHeight;
-    }
-  }
+  /* Limpeza da integração de IA que existiu em versões anteriores deste módulo. */
+  try { ['cc_gemini_api_key','cc_gemini_enabled','cc_gemini_model'].forEach(k => localStorage.removeItem(k)); } catch(e){}
 
   function novaSessao(data){
     return { id: uid(), createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(),
@@ -478,7 +489,6 @@ Regras:
     const total = totalPerguntas(m, d);
     const feitas = s.asked.length;
     const pct = total ? Math.round(feitas / total * 100) : 0;
-    const iaCfg = iaConfig();
     return `<div class="cc-wrap cc-session">
       <div class="cc-safety"><strong>TREINO SIMULADO</strong><span>Paciente fictício. Nenhuma conduta aqui serve para atendimento real.</span></div>
       <header class="cc-top">
@@ -488,14 +498,12 @@ Regras:
         <label class="cc-top-field cc-narrow">Idade<input class="input" id="ccTopIdade" type="number" value="${esc(s.paciente.idade)}"></label>
         <label class="cc-top-field cc-narrow">Sexo<select class="select" id="ccTopSexo"><option value="">—</option><option${s.paciente.sexo==='Feminino'?' selected':''}>Feminino</option><option${s.paciente.sexo==='Masculino'?' selected':''}>Masculino</option></select></label>
         <button class="icon-btn" id="ccToggleBox">${store().ui.box?'Fechar caixa de doenças':'Trocar doença'}</button>
-        <button class="icon-btn ${iaCfg.enabled&&iaCfg.key?'cc-ia-on':''}" id="ccIaConfig">${iaCfg.enabled&&iaCfg.key?'🤖 IA ativada':'🤖 Configurar IA'}</button>
         <button class="icon-btn" id="ccCopiar">Copiar consulta</button>
         <button class="icon-btn primary" id="ccFinalizar">${s.finalizada?'Reabrir':'Finalizar'}</button>
       </header>
-      ${iaPanelOpen ? renderIaPanel(iaCfg) : ''}
       ${store().ui.box ? `<section class="card cc-box cc-box-inline"><div class="cc-box-head"><h3>Caixa de doenças</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div><div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', s.doencaId)}</div></section>` : ''}
       ${d ? '' : '<div class="empty">Escolha uma condição na caixa acima para receber as perguntas dirigidas.</div>'}
-      ${d ? `<section class="cc-caso card"><div class="cc-avatar">${avatarSvg(avatarCategoria(s.paciente))}</div><div class="cc-caso-info"><span class="eyebrow">Caso simulado</span><h2>${esc(s.paciente.nome)}${s.paciente.idade?` · ${esc(s.paciente.idade)} anos`:''}${s.paciente.sexo?` · ${esc(s.paciente.sexo)}`:''}</h2><p><strong>Queixa:</strong> ${esc(d.queixa)}</p><p class="muted">${esc(d.perfil)}</p></div><div class="cc-progress"><span>Roteiro coberto</span><strong>${pct}%</strong><i style="--p:${pct}%"></i><small>${feitas} de ${total} perguntas-chave</small></div></section>` : ''}
+      ${d ? `<section class="cc-caso card"><div class="cc-avatar">${avatarSvg(avatarCategoria(s.paciente))}</div><div class="cc-caso-info"><span class="eyebrow">Paciente à sua frente</span><h2>${esc(s.paciente.nome)}${s.paciente.idade?` · ${esc(s.paciente.idade)} anos`:''}${s.paciente.sexo?` · ${esc(s.paciente.sexo)}`:''}</h2><p><strong>Queixa:</strong> ${esc(d.queixa)}</p>${renderBalao(s)}</div><div class="cc-progress"><span>Roteiro coberto</span><strong>${pct}%</strong><i style="--p:${pct}%"></i><small>${feitas} de ${total} perguntas-chave</small></div></section>` : ''}
       <div class="cc-layout">
         <aside class="cc-steps card">
           <h3>Etapas do método</h3>
@@ -510,13 +518,13 @@ Regras:
           <div class="cc-orient"><h4>Como conduzir</h4><ul>${etapa.orientacoes.map(o=>`<li>${esc(o)}</li>`).join('')}</ul></div>
           <div class="cc-perguntas">
             <h4>Frases e perguntas do método</h4>
-            <div class="cc-q-list">${etapa.perguntas.map((q,i)=>renderPergunta(s, `${etapa.id}-m${i}`, q, 'metodo')).join('')}</div>
+            <div class="cc-q-list">${etapa.perguntas.map((q,i)=>renderPergunta(s, `${etapa.id}-m${i}`, q, 'metodo', i)).join('')}</div>
             ${d ? renderPerguntasDoenca(s, d, etapa) : ''}
           </div>
           <div class="cc-anot"><h4>Sua anotação nesta etapa</h4><textarea class="textarea" id="ccNota" data-etapa="${etapa.id}" placeholder="Escreva aqui como se estivesse registrando o que a pessoa respondeu, o que você pensou e o que decidiu.">${esc(s.notas[etapa.id]||'')}</textarea></div>
           <div class="cc-dialogo">
             <div class="section-title"><h4>Transcrição da consulta</h4><button class="tiny-btn" id="ccLimparDialogo">Limpar</button></div>
-            <div class="cc-dialogo-list" id="ccDialogoList">${s.dialogo.map((l,i)=>`<div class="cc-linha ${l.quem}"><span>${l.quem==='medico'?'Você':esc(s.paciente.nome)}</span><p>${esc(l.texto)}</p><button class="tiny-btn" data-cc-del-linha="${i}" title="Remover">×</button></div>`).join('') || (pendingIA[s.id]?'':'<div class="empty">Clique numa pergunta ao lado ou escreva abaixo para começar a conversa.</div>')}${pendingIA[s.id]?`<div class="cc-linha paciente cc-typing"><span>${esc(s.paciente.nome)}</span><p>digitando…</p></div>`:''}</div>
+            <div class="cc-dialogo-list" id="ccDialogoList">${s.dialogo.map((l,i)=>`<div class="cc-linha ${l.quem}"><span>${l.quem==='medico'?'Você':esc(s.paciente.nome)}</span><p>${i===animarIndice?'':esc(l.texto)}</p><button class="tiny-btn" data-cc-del-linha="${i}" title="Remover">×</button></div>`).join('') || '<div class="empty">Clique numa pergunta para trazê-la ao campo abaixo, edite se quiser e envie. A pessoa só responde ao que você digitar.</div>'}</div>
             <div class="cc-dialogo-input">
               <select class="select" id="ccQuem"><option value="medico">Você (médico)</option><option value="paciente">${esc(s.paciente.nome)}</option></select>
               <input class="input" id="ccFala" placeholder="Digite sua fala e pressione Enter">
@@ -565,20 +573,14 @@ Regras:
       default: return base(`<circle cx="32" cy="32" r="32" fill="#e6e6ee"/><path d="M14 58c2-12 10-18 18-18s16 6 18 18" fill="#8f8fae"/><circle cx="32" cy="27" r="11" fill="#d7c3ac"/>`);
     }
   }
-  function renderIaPanel(cfg){
-    return `<section class="card cc-ia-panel">
-      <div class="section-title"><h3>Configurar IA (Google AI Studio / Gemini)</h3><button class="tiny-btn" id="ccIaClose">Fechar</button></div>
-      <p class="muted">A chave fica salva só neste navegador (localStorage) e nunca é enviada para a nuvem do planner. As chamadas vão direto do seu navegador para a API do Google — não digite dados de pessoas reais nas mensagens.</p>
-      <label>Chave de API (Google AI Studio)<input class="input" id="ccIaKey" type="password" placeholder="AIza..." value="${esc(cfg.key)}"></label>
-      <label>Modelo<input class="input" id="ccIaModel" value="${esc(cfg.model)}"></label>
-      <label class="cc-ia-check"><input type="checkbox" id="ccIaEnabled" ${cfg.enabled?'checked':''}> Usar IA para as respostas do paciente</label>
-      <div class="cc-ia-actions"><button class="icon-btn primary" id="ccIaSave">Salvar</button><button class="icon-btn" id="ccIaTest">Testar conexão</button></div>
-      <div id="ccIaTestResult" class="muted"></div>
-    </section>`;
+  function renderBalao(s){
+    const indice = s.dialogo.map(l => l.quem).lastIndexOf('paciente');
+    if(indice < 0) return `<p class="muted cc-balao-vazio">Pergunte alguma coisa no campo de conversa — a resposta aparece aqui.</p>`;
+    return `<div class="cc-balao" id="ccBalao">${indice===animarIndice?'':esc(s.dialogo[indice].texto)}</div>`;
   }
-  function renderPergunta(s, key, texto, tipo){
+  function renderPergunta(s, key, texto, tipo, indice){
     const feita = s.asked.includes(key);
-    return `<div class="cc-q${feita?' feita':''}"><button type="button" data-cc-ask="${esc(key)}" data-texto="${esc(texto)}" data-tipo="${tipo}">${esc(texto)}</button><span>${feita?'✓':'+'}</span></div>`;
+    return `<div class="cc-q${feita?' feita':''}"><button type="button" data-cc-ask="${esc(key)}" data-texto="${esc(texto)}" data-tipo="${tipo}" data-indice="${indice}">${esc(texto)}</button><span>${feita?'✓':'+'}</span></div>`;
   }
 
   function perguntasDaDoenca(d, etapa){
@@ -594,7 +596,7 @@ Regras:
   function renderPerguntasDoenca(s, d, etapa){
     const list = perguntasDaDoenca(d, etapa);
     if(!list.length) return '';
-    return `<h4 class="cc-q-title">Dirigido a: ${esc(d.nome)}</h4><div class="cc-q-list">${list.map((q,i)=>renderPergunta(s, `${etapa.id}-d${i}`, q, 'doenca')).join('')}</div>`;
+    return `<h4 class="cc-q-title">Dirigido a: ${esc(d.nome)}</h4><div class="cc-q-list">${list.map((q,i)=>renderPergunta(s, `${etapa.id}-d${i}`, q, 'doenca', i)).join('')}</div>`;
   }
 
   function totalPerguntas(m, d){
@@ -615,12 +617,182 @@ Regras:
     const prox = m.etapas[idx+1];
     return prox ? `Etapa coberta. Avance para "${prox.titulo}".` : 'Roteiro completo. Feche com resumo, sinais de alarme e retorno — depois finalize a consulta.';
   }
-  function respostaDoPaciente(s, d){
-    if(!d || !d.achados || !d.achados.length) return null;
-    const i = s.revelados % d.achados.length;
-    s.revelados++;
-    return d.achados[i];
+  /* ======================= MOTOR DE RESPOSTA DO PACIENTE =======================
+   * O paciente só fala quando VOCÊ digita. O texto digitado é comparado com o banco
+   * de perguntas (as da doença e as do método) e a resposta correspondente é usada,
+   * com variação natural na forma de falar. */
+  const STOP = new Set(['que','como','qual','quais','voce','esta','tem','isso','para','pra','com','uma','dos','das','por','mais','seu','sua','sr','sra','doutor','doutora','você','mas','nao','sim','pode','poderia','me','fala','conta','sobre','algum','alguma','ate','tambem','quando','onde','porque','tudo','bem','aqui','hoje','agora','ele','ela','eles','elas','meu','minha','muito','ser','estar','ter','fazer','disso','dessa','desse','tipo','vez','coisa','gente','tinha','teve','foi','vai','ainda','depois','antes','desde','entre','sempre','nunca','nada','algo','outro','outra']);
+  function tokens(t){ return normaliza(t).replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w => w.length > 2 && !STOP.has(w)); }
+  function pontuacao(perguntaTokens, digitadoTokens){
+    if(!perguntaTokens.length || !digitadoTokens.length) return 0;
+    const set = new Set(digitadoTokens);
+    let acertos = 0;
+    perguntaTokens.forEach(w => {
+      if(set.has(w)) { acertos += 1; return; }
+      for(const dw of digitadoTokens){ if(w.length > 4 && (dw.startsWith(w.slice(0,5)) || w.startsWith(dw.slice(0,5)))) { acertos += 0.7; return; } }
+    });
+    return acertos / Math.sqrt(perguntaTokens.length);
   }
+  /* Frases digitadas que puxam a perspectiva da pessoa (SIFE, contexto, emoção…). */
+  const GATILHOS = [
+    { campo:'ideias', chaves:['acha que e','acha que causa','causando','imagina que','o que voce acha','na sua opiniao','acha que pode ser'] },
+    { campo:'preocupacoes', chaves:['preocupa','medo','receio','assusta','teme','aflige'] },
+    { campo:'expectativas', chaves:['esperava','espera da consulta','o que voce esperava','gostaria que eu','veio buscar','quer que eu faca'] },
+    { campo:'funcao', chaves:['dia a dia','atrapalha','limita','deixou de fazer','impede','trabalho por causa','rotina'] },
+    { campo:'contexto', chaves:['mora com','quem mora','sua casa','sua renda','sua moradia','apoio em casa','como e sua familia','sobre sua familia','no que voce trabalha','qual sua profissao'] },
+    { campo:'emocao', chaves:['se sente','sentindo com','como esta seu animo','emocional','humor'] },
+    { campo:'entendimento', chaves:['ja ouviu','sabe sobre','entendeu','ja te explicaram','conhece sobre','o que sabe'] },
+    { campo:'apoio', chaves:['pode contar','quem te ajuda','quem cuida','tem apoio','alguem te acompanha'] },
+    { campo:'historia', chaves:['desde o comeco','me conta a historia','como comecou tudo','conte desde'] },
+    { campo:'abertura', chaves:['te traz aqui','motivo da consulta','o que te trouxe','no que posso ajudar','o que houve'] }
+  ];
+  /* Variações de forma: mudam o jeito de falar sem mudar o conteúdo clínico. */
+  const PREFIXOS = ['','','','Olha, ','Então, ','Ah, ','Pois é, ','Deixa eu ver... ','Sabe, ','Bom, ','É, '];
+  const SUFIXOS = ['','','','','',' Sabe?',' É isso mesmo.',' Pelo menos é o que eu sinto.',' Foi bem assim.',' Não sei se ajuda.'];
+  const SEM_RESPOSTA = [
+    'Isso eu não sei responder, doutor.',
+    'Nunca prestei atenção nisso, pra ser sincero.',
+    'Hum... não sei dizer, desculpa.',
+    'Não me lembro bem disso agora.',
+    'Acho que não, mas não tenho certeza.',
+    'Essa eu não sei, doutor.',
+    'Nunca ninguém me perguntou isso antes.',
+    'Não sei te dizer ao certo.'
+  ];
+  const NAO_ENTENDI = [
+    'Desculpa, não entendi bem o que o senhor perguntou.',
+    'Como assim, doutor? Pode explicar de outro jeito?',
+    'Não sei se entendi a pergunta.',
+    'Pode repetir? Não peguei direito.'
+  ];
+  const sorteia = arr => arr[Math.floor(Math.random()*arr.length)];
+  function limpaAchado(t){ return String(t||'').replace(/^["“”']+|["“”']+$/g,'').trim(); }
+  function varia(texto){
+    let t = limpaAchado(texto);
+    if(!t) return t;
+    if(/^\(/.test(t)) return t; // falas com marcação de acompanhante ficam como estão
+    const pre = sorteia(PREFIXOS);
+    if(pre) t = pre + t.charAt(0).toLowerCase() + t.slice(1);
+    const suf = sorteia(SUFIXOS);
+    if(suf && !/[!?]$/.test(t)) t = t.replace(/\.?$/, '.') + suf;
+    return t;
+  }
+  /* Estado da animação de digitação do paciente. */
+  let digitandoEm = '';
+  let digitandoTimer = null;
+  let animTimer = null;
+  let animarIndice = -1;   // índice da fala que está sendo "digitada" na tela
+  function rolarDialogo(){ const list = root && root.querySelector('#ccDialogoList'); if(list) list.scrollTop = list.scrollHeight; }
+  /* Encerra a animação em curso sem perder nada: a fala que estava sendo digitada
+   * aparece completa e a resposta que ainda ia sair é entregue na hora. */
+  function finalizarAnimacao(){
+    clearInterval(animTimer); animTimer = null;
+    clearTimeout(digitandoTimer); digitandoTimer = null;
+    animarIndice = -1;
+    digitandoEm = '';
+  }
+  function animarUltimaFala(){
+    const s = sessao();
+    if(!s || animarIndice < 0 || animarIndice !== s.dialogo.length - 1) return;
+    const alvo = root.querySelector('#ccDialogoList .cc-linha:last-child p');
+    const linha = s.dialogo[animarIndice];
+    if(!alvo || !linha) { animarIndice = -1; return; }
+    const balao = root.querySelector('#ccBalao');
+    const texto = linha.texto;
+    let i = 0;
+    clearInterval(animTimer);
+    clearTimeout(digitandoTimer);
+    // pausa curta com os pontinhos, como alguém formulando a resposta
+    alvo.innerHTML = '<i></i><i></i><i></i>';
+    alvo.classList.add('cc-pensando');
+    if(balao){ balao.innerHTML = '<i></i><i></i><i></i>'; balao.classList.add('digitando'); }
+    digitandoTimer = setTimeout(() => {
+    alvo.classList.remove('cc-pensando'); alvo.textContent = '';
+    if(balao){ balao.classList.remove('digitando'); balao.textContent = ''; }
+    animTimer = setInterval(() => {
+      i += Math.random() < 0.25 ? 2 : 1;
+      const parcial = texto.slice(0, i);
+      alvo.textContent = parcial;
+      if(balao) balao.textContent = parcial;
+      rolarDialogo();
+      if(i >= texto.length){
+        clearInterval(animTimer);
+        alvo.textContent = texto;
+        if(balao) balao.textContent = texto;
+        animarIndice = -1;
+        const f = root.querySelector('#ccFala'); if(f) f.focus();
+      }
+    }, 24);
+    }, 600);
+  }
+  /* Marca como feita a pergunta do roteiro que corresponde ao que foi digitado. */
+  function marcarPerguntaFeita(s, texto){
+    const m = metodo(s.metodoId), d = doenca(s.doencaId);
+    const alvo = tokens(texto);
+    if(!alvo.length) return;
+    let melhor = { score:0, key:'' };
+    m.etapas.forEach(e => {
+      (e.perguntas||[]).forEach((q,i) => { const sc = pontuacao(tokens(q), alvo); if(sc > melhor.score) melhor = { score:sc, key:`${e.id}-m${i}` }; });
+      perguntasDaDoenca(d, e).forEach((q,i) => { const sc = pontuacao(tokens(q), alvo); if(sc > melhor.score) melhor = { score:sc, key:`${e.id}-d${i}` }; });
+    });
+    if(melhor.score >= 1.1 && melhor.key && !s.asked.includes(melhor.key)) s.asked.push(melhor.key);
+  }
+  /* Encontra a melhor resposta para o que foi digitado. */
+  function respostaParaTexto(d, m, textoDigitado){
+    if(!d) return sorteia(NAO_ENTENDI);
+    const alvo = tokens(textoDigitado);
+    if(!alvo.length) return sorteia(NAO_ENTENDI);
+    const texto = normaliza(textoDigitado);
+    let melhor = { score:0, resposta:null };
+
+    // 1) perguntas dirigidas à doença → achado de mesmo índice
+    (d.perguntas||[]).forEach((q, i) => {
+      const s = pontuacao(tokens(q), alvo);
+      const r = (d.achados||[])[i];
+      if(r && s > melhor.score) melhor = { score:s, resposta:r };
+    });
+    // 2) gatilhos de perspectiva — só valem se nenhuma pergunta da doença casou melhor
+    GATILHOS.forEach(g => {
+      const bateu = g.chaves.some(c => texto.includes(c));
+      if(!bateu) return;
+      const r = (d.perspectiva||{})[g.campo] || PERSPECTIVA_PADRAO[g.campo];
+      if(r && melhor.score < 1.15) melhor = { score:1.15, resposta:r };
+    });
+    // 3) perguntas do método escolhido
+    (m?.etapas||[]).forEach(e => (e.perguntas||[]).forEach((q, i) => {
+      const marca = (e.resp||[])[i];
+      if(!marca) return;
+      const s = pontuacao(tokens(q), alvo) * 0.9;
+      if(s <= melhor.score) return;
+      let r = marca;
+      if(typeof marca === 'string' && marca.startsWith('@')) r = (d.perspectiva||{})[marca.slice(1)] || PERSPECTIVA_PADRAO[marca.slice(1)];
+      if(r) melhor = { score:s, resposta:r };
+    }));
+    // 4) campos de perspectiva por semelhança direta
+    Object.entries(d.perspectiva||{}).forEach(([campo, r]) => {
+      if(!r) return;
+      const s = pontuacao(tokens(campo === 'abertura' ? 'o que traz motivo consulta' : campo), alvo) * 0.8;
+      if(s > melhor.score) melhor = { score:s, resposta:r };
+    });
+
+    if(melhor.score < 0.75 || !melhor.resposta) return sorteia(Math.random() < 0.65 ? SEM_RESPOSTA : NAO_ENTENDI);
+    return varia(melhor.resposta);
+  }
+  const PERSPECTIVA_PADRAO = {
+    abertura:'É por causa disso que eu vim, doutor. Começou faz um tempo e não melhorou.',
+    ideias:'Sinceramente não sei o que é. Já pensei em várias coisas, mas nada certo.',
+    preocupacoes:'Fico com medo de ser algo grave e eu estar deixando passar.',
+    expectativas:'Queria entender o que está acontecendo e sair daqui com um caminho.',
+    funcao:'Isso tem atrapalhado bastante minha rotina, não consigo tocar o dia normalmente.',
+    contexto:'Moro com minha família, e o trabalho anda puxado. Dá pra me virar, mas com dificuldade.',
+    emocao:'Confesso que ando preocupado com isso, sim.',
+    entendimento:'Já ouvi falar, mas ninguém nunca me explicou direito.',
+    apoio:'Tenho minha família, eles me ajudam no que precisa.',
+    concorda:'Por mim tudo bem, doutor. Se o senhor acha melhor assim, eu topo.',
+    duvida:'Acho que entendi. Se surgir dúvida eu volto a perguntar.',
+    exame:'Pode examinar, doutor, fique à vontade.',
+    resumo:'É isso mesmo que eu falei, o senhor entendeu certinho.'
+  };
 
   /* ================================= EVENTOS ================================= */
   function bind(){
@@ -656,50 +828,21 @@ Regras:
     const s = sessao();
     if(st.ui.view !== 'sessao' || !s) return;
     const touch = () => { s.updatedAt = new Date().toISOString(); save(); };
-    root.querySelector('#ccBack').onclick = () => { st.ui.view = 'home'; st.activeId = ''; save(); render(); };
+    root.querySelector('#ccBack').onclick = () => { finalizarAnimacao(); st.ui.view = 'home'; st.activeId = ''; save(); render(); };
     root.querySelector('#ccToggleBox').onclick = () => { st.ui.box = !st.ui.box; save(); render(); };
     root.querySelector('#ccTopMetodo').onchange = e => { s.metodoId = e.target.value; s.etapaAtiva = ''; touch(); render(); };
     root.querySelector('#ccTopNome').onchange = e => { s.paciente.nome = e.target.value.trim() || 'Paciente simulado'; touch(); render(); };
     root.querySelector('#ccTopIdade').onchange = e => { s.paciente.idade = e.target.value; touch(); render(); };
     root.querySelector('#ccTopSexo').onchange = e => { s.paciente.sexo = e.target.value; touch(); render(); };
-    root.querySelectorAll('[data-cc-step]').forEach(btn => btn.onclick = () => { s.etapaAtiva = btn.dataset.ccStep; touch(); render(); });
-    const iaBtn = root.querySelector('#ccIaConfig');
-    if(iaBtn) iaBtn.onclick = () => { iaPanelOpen = !iaPanelOpen; render(); };
-    const iaClose = root.querySelector('#ccIaClose');
-    if(iaClose) iaClose.onclick = () => { iaPanelOpen = false; render(); };
-    const iaSave = root.querySelector('#ccIaSave');
-    if(iaSave) iaSave.onclick = () => {
-      const key = (root.querySelector('#ccIaKey').value||'').trim();
-      const model = (root.querySelector('#ccIaModel').value||'gemini-3.6-flash').trim();
-      const enabled = root.querySelector('#ccIaEnabled').checked;
-      if(enabled && !key) { alert('Cole sua chave de API antes de ativar.'); return; }
-      iaSetConfig({ key, model, enabled });
-      iaPanelOpen = false; render();
-    };
-    const iaTest = root.querySelector('#ccIaTest');
-    if(iaTest) iaTest.onclick = async () => {
-      const key = (root.querySelector('#ccIaKey').value||'').trim();
-      const model = (root.querySelector('#ccIaModel').value||'gemini-3.6-flash').trim();
-      const resultEl = root.querySelector('#ccIaTestResult');
-      if(!key) { resultEl.textContent = 'Cole a chave primeiro.'; return; }
-      resultEl.textContent = 'Testando…';
-      try {
-        const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(key)}`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ contents:[{ role:'user', parts:[{ text:'Responda apenas "ok".' }] }] }) });
-        if(!resp.ok) { const t = await resp.text().catch(()=>''); throw new Error(`HTTP ${resp.status} ${t.slice(0,150)}`); }
-        resultEl.textContent = 'Conexão funcionando.';
-      } catch(err) { resultEl.textContent = `Falhou: ${err.message||err}`; }
-    };
+    root.querySelectorAll('[data-cc-step]').forEach(btn => btn.onclick = () => { finalizarAnimacao(); s.etapaAtiva = btn.dataset.ccStep; touch(); render(); });
+    // Clicar numa pergunta só a coloca no campo de digitação: quem conduz a fala é você.
     root.querySelectorAll('[data-cc-ask]').forEach(btn => btn.onclick = () => {
-      const key = btn.dataset.ccAsk, texto = btn.dataset.texto;
-      if(!s.asked.includes(key)) s.asked.push(key);
-      s.dialogo.push({ quem:'medico', texto });
-      const d = doenca(s.doencaId);
-      const reasoning = btn.dataset.tipo === 'doenca' && /^(Examinar|Considerar|Conduta):/.test(texto);
-      const cfg = iaConfig();
-      if(!reasoning && cfg.enabled && cfg.key) { touch(); render(); callGemini(s.id); return; }
-      if(!reasoning) { const r = respostaDoPaciente(s, d); if(r) s.dialogo.push({ quem:'paciente', texto:r }); }
-      touch(); render();
-      const list = root.querySelector('#ccDialogoList'); if(list) list.scrollTop = list.scrollHeight;
+      const campo = root.querySelector('#ccFala');
+      if(!campo) return;
+      const quemSel = root.querySelector('#ccQuem'); if(quemSel) quemSel.value = 'medico';
+      campo.value = btn.dataset.texto;
+      campo.focus();
+      campo.setSelectionRange(campo.value.length, campo.value.length);
     });
     const nota = root.querySelector('#ccNota');
     if(nota){ nota.oninput = () => { s.notas[nota.dataset.etapa] = nota.value; }; nota.onblur = () => touch(); }
@@ -709,15 +852,26 @@ Regras:
     const addFala = () => {
       const texto = (fala.value || '').trim(); if(!texto) return;
       const quem = root.querySelector('#ccQuem').value;
+      finalizarAnimacao();
       s.dialogo.push({ quem, texto });
-      fala.value = ''; touch(); render();
+      fala.value = '';
+      if(quem === 'medico'){
+        marcarPerguntaFeita(s, texto);
+        const d = doenca(s.doencaId);
+        const resposta = respostaParaTexto(d, metodo(s.metodoId), texto);
+        // A resposta já entra na conversa e é salva; a animação é só de exibição.
+        s.dialogo.push({ quem:'paciente', texto: resposta });
+        animarIndice = s.dialogo.length - 1;
+        touch(); render(); rolarDialogo();
+        animarUltimaFala();
+        return;
+      }
+      touch(); render(); rolarDialogo();
       const f = root.querySelector('#ccFala'); if(f) f.focus();
-      const cfg = iaConfig();
-      if(quem === 'medico' && cfg.enabled && cfg.key) callGemini(s.id);
     };
     if(fala){ fala.onkeydown = e => { if(e.key === 'Enter'){ e.preventDefault(); addFala(); } }; root.querySelector('#ccAddFala').onclick = addFala; }
-    root.querySelectorAll('[data-cc-del-linha]').forEach(btn => btn.onclick = () => { s.dialogo.splice(Number(btn.dataset.ccDelLinha), 1); touch(); render(); });
-    root.querySelector('#ccLimparDialogo').onclick = () => { if(!confirm('Apagar toda a transcrição desta consulta?')) return; s.dialogo = []; s.revelados = 0; touch(); render(); };
+    root.querySelectorAll('[data-cc-del-linha]').forEach(btn => btn.onclick = () => { finalizarAnimacao(); s.dialogo.splice(Number(btn.dataset.ccDelLinha), 1); touch(); render(); });
+    root.querySelector('#ccLimparDialogo').onclick = () => { if(!confirm('Apagar toda a transcrição desta consulta?')) return; finalizarAnimacao(); s.dialogo = []; s.revelados = 0; touch(); render(); };
     root.querySelector('#ccFinalizar').onclick = () => { s.finalizada = !s.finalizada; touch(); render(); };
     root.querySelector('#ccCopiar').onclick = () => {
       const texto = exportar(s);
