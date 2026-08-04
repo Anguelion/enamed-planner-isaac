@@ -108,7 +108,7 @@ let state = loadState();
 ensureGamificationState();
 ensureImportedQuestions();
 normalizeOfficialScheduleNames();
-ensureRestartFromBlockTen();
+ensureSchedulePlan();
 ensureDayLogs();
 ensureDailyTasks();
 ensureSimTopics();
@@ -339,6 +339,27 @@ function nextWeekday(date) {
   while([0,6].includes(new Date(`${d}T12:00:00`).getDay())) d = addDays(d, 1);
   return d;
 }
+function daysBetween(from, to) {
+  return Math.round((Date.parse(`${to}T12:00:00`) - Date.parse(`${from}T12:00:00`)) / 86400000);
+}
+function planWeekLabel(date, vacationUntil) {
+  // Os rótulos continuam a contagem do plano de 13/07 (uma segunda-feira), senão
+  // o cronograma voltaria para "semana 1" no meio de agosto. Constante local de
+  // propósito: estas funções rodam no bootstrap, antes das constantes de topo
+  // de arquivo serem inicializadas.
+  const weekAnchor = '2026-07-13';
+  const index = Math.max(0, Math.floor(daysBetween(weekAnchor, date) / 7)) + 1;
+  return `${date <= vacationUntil ? 'Férias' : 'Aulas'}.${index}`;
+}
+// Ordem de estudo: bloco, depois a aula dentro do bloco. `row`/data só entram
+// como desempate para estados antigos, que ainda não tinham lessonOrder.
+function byPlanOrder(a, b) {
+  return n(a.block) - n(b.block) || n(a.lessonOrder) - n(b.lessonOrder) || n(a.row) - n(b.row) || byDate(a, b);
+}
+function ensureSchedulePlan() {
+  ensureRestartFromBlockTen();
+  ensureCatchUpFromCoagulopathies();
+}
 function ensureRestartFromBlockTen() {
   const version = 'block10-restart-2026-07-13-v2';
   if(state.schedulePlanVersion === version) return;
@@ -355,7 +376,7 @@ function ensureRestartFromBlockTen() {
     item.catchUp = false;
   });
 
-  const lessons = schedule.filter(item => n(item.block) >= startBlock).sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row) || byDate(a,b));
+  const lessons = schedule.filter(item => n(item.block) >= startBlock).sort(byPlanOrder);
   let date = restartDate;
   let slot = 0;
   lessons.forEach((item, index) => {
@@ -403,6 +424,78 @@ function ensureRestartFromBlockTen() {
     method: 'Blocos 10+ em ordem oficial, reiniciando em 13/07/2026. Até 2 aulas por dia útil nas férias; depois 1 aula por dia útil. Pendências do Bloco 7 distribuídas aos fins de semana.'
   };
   state.schedulePlanVersion = version;
+  writeLocalState();
+}
+// Dias de simulado já são a missão do dia: não recebem aula nova.
+function simuladoDateSet() {
+  return new Set((Array.isArray(state.simulados) ? state.simulados : []).map(sim => sim?.date).filter(Boolean));
+}
+// Ritmo da recuperação a partir de 04/08/2026, agora contando fim de semana.
+// Até 09/08 ainda são férias (dia inteiro livre); de 10/08 em diante o dia
+// divide espaço com as aulas da faculdade, e o domingo fica mais leve.
+function catchUpLessonsForDate(date, { vacationUntil, simuladoDates }) {
+  if(simuladoDates.has(date)) return 0;
+  if(date <= vacationUntil) return 3;
+  return new Date(`${date}T12:00:00`).getDay() === 0 ? 1 : 2;
+}
+function ensureCatchUpFromCoagulopathies() {
+  const version = 'coagulopatias-catchup-2026-08-04-v1';
+  if(state.catchUpPlanVersion === version) return;
+  const schedule = Array.isArray(state.schedule) ? state.schedule : [];
+  if(!schedule.length) return;
+  const restartDate = '2026-08-04';
+  const vacationUntil = '2026-08-09';
+  const options = { vacationUntil, simuladoDates: simuladoDateSet() };
+  // Ponto de partida: a aula de Coagulopatias (Bloco 11), onde o estudo parou.
+  // Tudo antes dela já foi estudado e fica com as datas que tinha.
+  const startBlock = 11;
+  const fallbackOrder = 4;
+
+  const lessons = schedule.filter(item => n(item.block) >= startBlock).sort(byPlanOrder);
+  const startIndex = lessons.findIndex(item => n(item.block) === startBlock && normalizedTopic(item.topic).includes('coagulopatias'));
+  // Sem a aula pelo nome (estado antigo com outro título), cai na posição dela
+  // no cronograma oficial do bloco 11.
+  const pending = startIndex >= 0
+    ? lessons.slice(startIndex)
+    : lessons.filter(item => n(item.block) > startBlock || n(item.lessonOrder) >= fallbackOrder);
+  if(!pending.length) return;
+
+  let date = restartDate;
+  let perDay = catchUpLessonsForDate(date, options);
+  let slot = 0;
+  pending.forEach(item => {
+    // Pula os dias sem espaço para aula (simulado) antes de encaixar a próxima.
+    for(let guard = 0; perDay <= 0 && guard < 30; guard += 1) {
+      date = addDays(date, 1);
+      perDay = catchUpLessonsForDate(date, options);
+    }
+    if(!item.originalDate) item.originalDate = item.date;
+    item.date = date;
+    item.day = weekdayName(date);
+    item.week = planWeekLabel(date, vacationUntil);
+    item.catchUp = false;
+    slot += 1;
+    if(slot >= perDay) {
+      slot = 0;
+      date = addDays(date, 1);
+      perDay = catchUpLessonsForDate(date, options);
+    }
+  });
+
+  state.reschedule = {
+    ...(state.reschedule || {}),
+    fromBlock: startBlock,
+    fromTopic: 'Coagulopatias',
+    restartDate,
+    vacationUntil,
+    classReturnDate: '2026-08-10',
+    weekdaysOnly: false,
+    includeWeekends: true,
+    skipSimuladoDays: true,
+    lastLessonDate: pending.at(-1)?.date || '',
+    method: 'Recuperação a partir de Coagulopatias (Bloco 11) em 04/08/2026, agora com fins de semana. Até 09/08 (férias), 3 aulas por dia; de 10/08 em diante, 2 aulas por dia de segunda a sábado e 1 no domingo. Dias de simulado ficam sem aula nova.'
+  };
+  state.catchUpPlanVersion = version;
   writeLocalState();
 }
 // Passe completo de normalização do estado. É caro: com o cronograma e o banco
@@ -646,7 +739,8 @@ function repairUniformScheduleDates() {
   if(matched < Math.floor(schedule.length * 0.8)) return false;
   state.schedule = repaired;
   state.schedulePlanVersion = '';
-  ensureRestartFromBlockTen();
+  state.catchUpPlanVersion = '';
+  ensureSchedulePlan();
   state.scheduleRepairVersion = 'uniform-date-v1';
   writeLocalState();
   return true;
@@ -1328,7 +1422,7 @@ function restoreLocalBackup(id) {
   allowLargeProgressDrop = true;
   state = structuredClone(item.data);
   normalizeOfficialScheduleNames();
-  ensureRestartFromBlockTen();
+  ensureSchedulePlan();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   invalidateActivityRenderCache();
   writeLocalState();
@@ -1574,7 +1668,7 @@ async function pullCloudState({ firstLogin=false }={}) {
       cloudDirty = localIsAhead;
       lastCloudSyncAt = remoteAt || Date.now();
       normalizeOfficialScheduleNames();
-      ensureRestartFromBlockTen();
+      ensureSchedulePlan();
       ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
       invalidateActivityRenderCache();
       // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
@@ -1746,7 +1840,7 @@ function restorePlannerBackupFile(file) {
       // de atividade dos dois estados, evitando apagar questões, tempo ou XP.
       state = mergePlannerActivityState(imported, state, true);
       normalizeOfficialScheduleNames();
-      ensureRestartFromBlockTen();
+      ensureSchedulePlan();
       ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
       invalidateActivityRenderCache();
       persist();
@@ -1774,7 +1868,7 @@ function restorePlannerBackupFileReplace(file) {
       allowLargeProgressDrop = true;
       state = imported;
       normalizeOfficialScheduleNames();
-      ensureRestartFromBlockTen();
+      ensureSchedulePlan();
       ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
       invalidateActivityRenderCache();
       writeLocalState();
@@ -1866,7 +1960,7 @@ async function restoreCloudBackup(id) {
   allowLargeProgressDrop = true;
   state = data.data;
   normalizeOfficialScheduleNames();
-  ensureRestartFromBlockTen();
+  ensureSchedulePlan();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   invalidateActivityRenderCache();
   writeLocalState();
@@ -3988,7 +4082,7 @@ function renderFerramentas() {
     if(!confirm('Voltar aos dados originais importados do Excel? Esta alteração também será sincronizada.')) return;
     state=structuredClone(seed);
     normalizeOfficialScheduleNames();
-    ensureRestartFromBlockTen();
+    ensureSchedulePlan();
     persist();
   });
 }
@@ -10713,7 +10807,7 @@ document.getElementById('exportBtn')?.addEventListener('click', () => {
   a.click();
   URL.revokeObjectURL(a.href);
 });
-document.getElementById('importFile')?.addEventListener('change', e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); createSafetyLocalBackup('antes de importar JSON'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); });
+document.getElementById('importFile')?.addEventListener('change', e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); createSafetyLocalBackup('antes de importar JSON'); state=data; normalizeOfficialScheduleNames(); ensureSchedulePlan(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); });
 document.getElementById('printBtn')?.addEventListener('click', () => {
   const previousTab=ui.tab;
   ui.tab='painel';
