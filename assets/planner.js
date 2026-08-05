@@ -483,11 +483,11 @@ function catchUpLessonsForDate(date, { simuladoDates }) {
   return [0,6].includes(new Date(`${date}T12:00:00`).getDay()) ? 1 : 2;
 }
 function ensureCatchUpFromCoagulopathies() {
-  const version = 'coagulopatias-catchup-2026-08-04-v2';
+  const version = 'coagulopatias-catchup-2026-08-05-v3';
   if(state.catchUpPlanVersion === version) return;
   const schedule = Array.isArray(state.schedule) ? state.schedule : [];
   if(!schedule.length) return;
-  const restartDate = '2026-08-04';
+  const restartDate = '2026-08-05';
   const vacationUntil = '2026-08-09';
   const options = { simuladoDates: simuladoDateSet() };
   // Ponto de partida: a aula de Coagulopatias (Bloco 11), onde o estudo parou.
@@ -542,7 +542,7 @@ function ensureCatchUpFromCoagulopathies() {
     lessonsBeforeExam: untilExam.length,
     lastBlockBeforeExam: n(untilExam.at(-1)?.block) || 0,
     lastLessonDate: pending.at(-1)?.date || '',
-    method: 'Retomada a partir de Coagulopatias (Bloco 11) em 04/08/2026, com fins de semana: 2 aulas por dia útil e 1 no sábado e no domingo. Dias de simulado ficam sem aula nova. O ENAMED é em 13/09/2026 e o cronograma não cabe até lá — o que sobrar fica agendado depois da prova, sem forçar o ritmo.'
+    method: 'Retomada a partir de Coagulopatias (Bloco 11) em 05/08/2026, com fins de semana: 2 aulas por dia útil e 1 no sábado e no domingo. Dias de simulado ficam sem aula nova. O ENAMED é em 13/09/2026 e o cronograma não cabe até lá — o que sobrar fica agendado depois da prova, sem forçar o ritmo.'
   };
   syncSimuladoCoverage();
   state.catchUpPlanVersion = version;

@@ -1,7 +1,7 @@
 'use strict';
 
 // Testes do plano de retomada a partir de Coagulopatias (Bloco 11), que
-// reagenda o cronograma a partir de 04/08/2026 contando os fins de semana, num
+// reagenda o cronograma a partir de 05/08/2026 contando os fins de semana, num
 // ritmo sustentavel (nao um sprint) porque o ENAMED e em 13/09/2026 e o
 // cronograma inteiro nao cabe ate a prova. Usa o mesmo sandbox de vm dos
 // outros testes do planner.
@@ -11,7 +11,7 @@ const assert = require('node:assert/strict');
 const { loadPlannerSandbox } = require('./planner-sandbox.js');
 
 const plain = value => JSON.parse(JSON.stringify(value));
-const RESTART = '2026-08-04';
+const RESTART = '2026-08-05';
 const EXAM_DATE = '2026-09-13';
 const weekday = date => new Date(`${date}T12:00:00`).getDay();
 
@@ -27,7 +27,7 @@ function lessonsFrom(ctx) {
   return { state, schedule, fromBlock11, startIndex, pending: fromBlock11.slice(startIndex) };
 }
 
-test('plano de retomada: o cronograma volta a andar em 04/08/2026 na aula de Coagulopatias', () => {
+test('plano de retomada: o cronograma volta a andar em 05/08/2026 na aula de Coagulopatias', () => {
   const ctx = loadPlannerSandbox();
   const { fromBlock11, startIndex, pending } = lessonsFrom(ctx);
   assert.ok(startIndex >= 0, 'a aula de Coagulopatias precisa existir no Bloco 11');
@@ -71,7 +71,7 @@ test('plano de retomada: ritmo sustentavel (2 aulas em dia util, 1 no fim de sem
     assert.ok(count <= limit, `${date} ficou com ${count} aulas (limite ${limit})`);
   });
 
-  assert.equal(perDay.get('2026-08-04'), 2, 'dia util leva 2 aulas, mesmo logo na retomada');
+  assert.equal(perDay.get('2026-08-05'), 2, 'dia util leva 2 aulas, mesmo logo na retomada');
   assert.equal(perDay.get('2026-08-09'), undefined, '09/08 e dia de simulado, sem aula nova');
   assert.equal(weekday('2026-08-08'), 6);
   assert.equal(perDay.get('2026-08-08'), 1, 'sabado leva 1 aula');
