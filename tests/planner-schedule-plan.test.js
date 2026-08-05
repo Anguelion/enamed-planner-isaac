@@ -1,8 +1,10 @@
 'use strict';
 
-// Testes do plano de recuperacao a partir de Coagulopatias (Bloco 11), que
-// reagenda o cronograma a partir de 04/08/2026 contando os fins de semana.
-// Usa o mesmo sandbox de vm dos outros testes do planner.
+// Testes do plano de retomada a partir de Coagulopatias (Bloco 11), que
+// reagenda o cronograma a partir de 04/08/2026 contando os fins de semana, num
+// ritmo sustentavel (nao um sprint) porque o ENAMED e em 13/09/2026 e o
+// cronograma inteiro nao cabe ate a prova. Usa o mesmo sandbox de vm dos
+// outros testes do planner.
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -10,7 +12,7 @@ const { loadPlannerSandbox } = require('./planner-sandbox.js');
 
 const plain = value => JSON.parse(JSON.stringify(value));
 const RESTART = '2026-08-04';
-const VACATION_UNTIL = '2026-08-09';
+const EXAM_DATE = '2026-09-13';
 const weekday = date => new Date(`${date}T12:00:00`).getDay();
 
 function lessonsFrom(ctx) {
@@ -25,7 +27,7 @@ function lessonsFrom(ctx) {
   return { state, schedule, fromBlock11, startIndex, pending: fromBlock11.slice(startIndex) };
 }
 
-test('plano de recuperacao: o cronograma volta a andar em 04/08/2026 na aula de Coagulopatias', () => {
+test('plano de retomada: o cronograma volta a andar em 04/08/2026 na aula de Coagulopatias', () => {
   const ctx = loadPlannerSandbox();
   const { fromBlock11, startIndex, pending } = lessonsFrom(ctx);
   assert.ok(startIndex >= 0, 'a aula de Coagulopatias precisa existir no Bloco 11');
@@ -45,7 +47,7 @@ test('plano de recuperacao: o cronograma volta a andar em 04/08/2026 na aula de 
   });
 });
 
-test('plano de recuperacao: fins de semana entram no ritmo e dias de simulado ficam livres', () => {
+test('plano de retomada: ritmo sustentavel (2 aulas em dia util, 1 no fim de semana) e dias de simulado ficam livres', () => {
   const ctx = loadPlannerSandbox();
   const { state, pending } = lessonsFrom(ctx);
 
@@ -62,24 +64,56 @@ test('plano de recuperacao: fins de semana entram no ritmo e dias de simulado fi
     assert.ok(!perDay.has(date), `o simulado de ${date} nao pode dividir o dia com aula nova`);
   });
 
+  // Sem o "modo ferias" de 3 aulas por dia: o ritmo agora e uniforme, porque
+  // forcar mais nao cabe ate a prova sem queimar o Isaac antes dela.
   perDay.forEach((count, date) => {
-    const limit = date <= VACATION_UNTIL ? 3 : (weekday(date) === 0 ? 1 : 2);
+    const limit = weekday(date) === 0 || weekday(date) === 6 ? 1 : 2;
     assert.ok(count <= limit, `${date} ficou com ${count} aulas (limite ${limit})`);
   });
 
-  // Ritmo de ferias ate 09/08, carga reduzida depois da volta as aulas.
-  assert.equal(perDay.get('2026-08-04'), 3, 'nas ferias o dia leva 3 aulas');
-  assert.equal(perDay.get('2026-08-10'), 2, 'com a faculdade de volta, o dia util leva 2 aulas');
-  assert.equal(perDay.get('2026-08-16'), 1, 'domingo fica mais leve, com 1 aula');
-  assert.equal(pending.at(-1).date, '2026-10-13', 'a ultima videoaula do plano cai em 13/10/2026');
+  assert.equal(perDay.get('2026-08-04'), 2, 'dia util leva 2 aulas, mesmo logo na retomada');
+  assert.equal(perDay.get('2026-08-09'), undefined, '09/08 e dia de simulado, sem aula nova');
+  assert.equal(weekday('2026-08-08'), 6);
+  assert.equal(perDay.get('2026-08-08'), 1, 'sabado leva 1 aula');
 
   assert.equal(state.reschedule.includeWeekends, true);
   assert.equal(state.reschedule.weekdaysOnly, false);
   assert.equal(state.reschedule.fromTopic, 'Coagulopatias');
   assert.equal(state.reschedule.restartDate, RESTART);
+  assert.equal(state.reschedule.examDate, EXAM_DATE);
 });
 
-test('plano de recuperacao: rodar de novo nao mexe nas datas nem perde a data original', () => {
+test('plano de retomada: o cronograma nao cabe ate a prova, e isso fica explicito no estado (sem forcar o ritmo)', () => {
+  const ctx = loadPlannerSandbox();
+  const { state, pending } = lessonsFrom(ctx);
+  const untilExam = pending.filter(item => item.date < EXAM_DATE);
+  const afterExam = pending.filter(item => item.date >= EXAM_DATE);
+
+  assert.ok(untilExam.length < pending.length, 'no ritmo sustentavel, nao dá tempo de ver tudo antes da prova');
+  assert.ok(afterExam.length > 0, 'o que sobra fica agendado depois da prova, em vez de desaparecer');
+  assert.equal(state.reschedule.lessonsBeforeExam, untilExam.length);
+  assert.equal(state.reschedule.lastBlockBeforeExam, untilExam.at(-1).block);
+
+  // A contagem regressiva do painel aponta para a prova, nao para o fim do cronograma.
+  assert.equal(state.dashboardSettings.countdownDate, EXAM_DATE);
+});
+
+test('plano de retomada: o ensaio (simulado) antes da prova cai antes de 13/09, nao depois', () => {
+  const ctx = loadPlannerSandbox();
+  const state = plain(ctx.__getState());
+  const sims = [...state.simulados].sort((a, b) => a.date.localeCompare(b.date));
+  const lastBeforeExam = [...sims].reverse().find(sim => sim.date < EXAM_DATE);
+  const firstAfterExam = sims.find(sim => sim.date > EXAM_DATE);
+  assert.ok(lastBeforeExam, 'precisa haver pelo menos um simulado antes da prova, para servir de ensaio final');
+  assert.ok(firstAfterExam, 'os simulados de blocos que so terminam depois da prova continuam existindo, so que depois dela');
+  // A cobertura de cada simulado antes da prova reflete o que de fato foi
+  // estudado até aquela data (nao um recorte fixo herdado do plano antigo).
+  sims.filter(sim => sim.date <= EXAM_DATE).forEach(sim => {
+    assert.match(sim.coverage, /Blocos 1–\d+/, `${sim.name} precisa ter uma cobertura de blocos calculada`);
+  });
+});
+
+test('plano de retomada: rodar de novo nao mexe nas datas nem perde a data original', () => {
   const ctx = loadPlannerSandbox();
   const before = lessonsFrom(ctx).pending.map(item => `${item.topic}@${item.date}`);
   ctx.ensureSchedulePlan();
@@ -92,6 +126,7 @@ test('plano de recuperacao: rodar de novo nao mexe nas datas nem perde a data or
 
 test('planWeekLabel: os rotulos de semana continuam a contagem do plano anterior', () => {
   const ctx = loadPlannerSandbox();
+  const VACATION_UNTIL = '2026-08-09';
   assert.equal(ctx.planWeekLabel('2026-08-04', VACATION_UNTIL), 'Férias.4');
   assert.equal(ctx.planWeekLabel('2026-08-10', VACATION_UNTIL), 'Aulas.5');
   assert.equal(ctx.planWeekLabel('2026-08-16', VACATION_UNTIL), 'Aulas.5');

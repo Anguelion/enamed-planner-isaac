@@ -356,9 +356,53 @@ function planWeekLabel(date, vacationUntil) {
 function byPlanOrder(a, b) {
   return n(a.block) - n(b.block) || n(a.lessonOrder) - n(b.lessonOrder) || n(a.row) - n(b.row) || byDate(a, b);
 }
+// Data do ENAMED 2026 informada pelo Isaac. Fica numa função (e não numa
+// constante de topo de arquivo) porque estas rotinas rodam no bootstrap, antes
+// das constantes de topo serem inicializadas.
+function enamedExamDate() { return '2026-09-13'; }
 function ensureSchedulePlan() {
   ensureRestartFromBlockTen();
+  ensureExamDatePlan();
   ensureCatchUpFromCoagulopathies();
+}
+// A prova é em 13/09/2026: a contagem regressiva aponta para ela e o último
+// ensaio (simulado) precisa cair antes dela, não depois.
+function ensureExamDatePlan() {
+  const version = 'enamed-2026-09-13-v1';
+  if(state.examPlanVersion === version) return;
+  const examDate = enamedExamDate();
+  // Fixa a cadência de domingos antes de mexer nas datas: senão a migração dos
+  // simulados rodaria depois, no ensureSimTopics, e desfaria o ajuste.
+  ensureSimuladoSundaySchedule();
+  if(!state.dashboardSettings || typeof state.dashboardSettings !== 'object') state.dashboardSettings = {};
+  state.dashboardSettings.countdownDate = examDate;
+  const finalRehearsal = '2026-09-06';
+  const sims = Array.isArray(state.simulados) ? [...state.simulados].sort((a,b) => String(a.date||'').localeCompare(String(b.date||''))) : [];
+  const firstAfterExam = sims.find(sim => String(sim.date || '') > examDate);
+  if(firstAfterExam && !sims.some(sim => sim.date === finalRehearsal)) {
+    if(!firstAfterExam.originalDate) firstAfterExam.originalDate = firstAfterExam.date;
+    firstAfterExam.date = finalRehearsal;
+    firstAfterExam.rescheduled = true;
+  }
+  state.examPlanVersion = version;
+  writeLocalState();
+}
+// Até a prova o simulado precisa cobrir o que realmente foi estudado, senão ele
+// mede um recorte antigo do cronograma.
+function syncSimuladoCoverage() {
+  const schedule = Array.isArray(state.schedule) ? state.schedule : [];
+  const blocks = [...new Set(schedule.map(item => n(item.block)).filter(Boolean))].sort((a,b) => a-b);
+  (Array.isArray(state.simulados) ? state.simulados : [])
+    .filter(sim => sim.date && sim.date <= enamedExamDate())
+    .forEach(sim => {
+      const openBlocks = new Set(schedule.filter(item => !item.date || item.date >= sim.date).map(item => n(item.block)));
+      let covered = 0;
+      for(const block of blocks) {
+        if(openBlocks.has(block)) break;
+        covered = block;
+      }
+      if(covered) sim.coverage = `Blocos 1–${covered}`;
+    });
 }
 function ensureRestartFromBlockTen() {
   const version = 'block10-restart-2026-07-13-v2';
@@ -430,22 +474,22 @@ function ensureRestartFromBlockTen() {
 function simuladoDateSet() {
   return new Set((Array.isArray(state.simulados) ? state.simulados : []).map(sim => sim?.date).filter(Boolean));
 }
-// Ritmo da recuperação a partir de 04/08/2026, agora contando fim de semana.
-// Até 09/08 ainda são férias (dia inteiro livre); de 10/08 em diante o dia
-// divide espaço com as aulas da faculdade, e o domingo fica mais leve.
-function catchUpLessonsForDate(date, { vacationUntil, simuladoDates }) {
+// Ritmo da retomada a partir de 04/08/2026, contando fim de semana. Não é um
+// ritmo de recuperação total: a prova é em 13/09 e o cronograma inteiro não cabe
+// até lá, então o objetivo é um ritmo que dê para manter — 2 aulas por dia útil
+// e 1 no fim de semana.
+function catchUpLessonsForDate(date, { simuladoDates }) {
   if(simuladoDates.has(date)) return 0;
-  if(date <= vacationUntil) return 3;
-  return new Date(`${date}T12:00:00`).getDay() === 0 ? 1 : 2;
+  return [0,6].includes(new Date(`${date}T12:00:00`).getDay()) ? 1 : 2;
 }
 function ensureCatchUpFromCoagulopathies() {
-  const version = 'coagulopatias-catchup-2026-08-04-v1';
+  const version = 'coagulopatias-catchup-2026-08-04-v2';
   if(state.catchUpPlanVersion === version) return;
   const schedule = Array.isArray(state.schedule) ? state.schedule : [];
   if(!schedule.length) return;
   const restartDate = '2026-08-04';
   const vacationUntil = '2026-08-09';
-  const options = { vacationUntil, simuladoDates: simuladoDateSet() };
+  const options = { simuladoDates: simuladoDateSet() };
   // Ponto de partida: a aula de Coagulopatias (Bloco 11), onde o estudo parou.
   // Tudo antes dela já foi estudado e fica com as datas que tinha.
   const startBlock = 11;
@@ -482,6 +526,8 @@ function ensureCatchUpFromCoagulopathies() {
     }
   });
 
+  const examDate = enamedExamDate();
+  const untilExam = pending.filter(item => item.date < examDate);
   state.reschedule = {
     ...(state.reschedule || {}),
     fromBlock: startBlock,
@@ -492,9 +538,13 @@ function ensureCatchUpFromCoagulopathies() {
     weekdaysOnly: false,
     includeWeekends: true,
     skipSimuladoDays: true,
+    examDate,
+    lessonsBeforeExam: untilExam.length,
+    lastBlockBeforeExam: n(untilExam.at(-1)?.block) || 0,
     lastLessonDate: pending.at(-1)?.date || '',
-    method: 'Recuperação a partir de Coagulopatias (Bloco 11) em 04/08/2026, agora com fins de semana. Até 09/08 (férias), 3 aulas por dia; de 10/08 em diante, 2 aulas por dia de segunda a sábado e 1 no domingo. Dias de simulado ficam sem aula nova.'
+    method: 'Retomada a partir de Coagulopatias (Bloco 11) em 04/08/2026, com fins de semana: 2 aulas por dia útil e 1 no sábado e no domingo. Dias de simulado ficam sem aula nova. O ENAMED é em 13/09/2026 e o cronograma não cabe até lá — o que sobrar fica agendado depois da prova, sem forçar o ritmo.'
   };
+  syncSimuladoCoverage();
   state.catchUpPlanVersion = version;
   writeLocalState();
 }
