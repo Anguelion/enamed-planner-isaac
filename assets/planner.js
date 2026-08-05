@@ -7523,7 +7523,14 @@ function bindVideoPlayer(source, schedule, lesson) {
     setCleanFrame(true);
   });
   const storedProgress=state.videoPlayer.progress?.[source.id]||{};
-  let resume = PlannerUX?.resumeTime(storedProgress) ?? n(state.videoPlayer.resume[source.id]);
+  const progressResume=PlannerUX?.resumeTime(storedProgress) ?? n(storedProgress.currentTime);
+  const checkpointResume=n(state.videoPlayer.resume[source.id]);
+  const progressUpdatedAt=timestampOf(storedProgress.updatedAt);
+  const checkpointUpdatedAt=timestampOf(state.videoPlayer.resumeUpdatedAt?.[source.id]);
+  // O checkpoint e o registro completo coexistem por compatibilidade. Se uma busca
+  // manual acabou de acontecer, o checkpoint pode ser mais novo que o registro
+  // completo; nesse caso ele é a fonte correta para a retomada.
+  let resume = checkpointUpdatedAt > progressUpdatedAt ? checkpointResume : progressResume;
   let lastCheckpoint = Math.floor(resume);
   let restoringPosition = false;
   let manualSeek = false;
@@ -7564,10 +7571,22 @@ function bindVideoPlayer(source, schedule, lesson) {
     return safeTarget;
   };
   video.addEventListener('seeking', () => { if(!restoringPosition) manualSeek = true; });
+  let resumeApplied = false;
   const applyResume = () => {
-    if(!manualSeek && resume > 0 && resume < (video.duration || Infinity) - .1) setVideoTime(resume);
+    if(resumeApplied || manualSeek || resume <= 0 || resume >= (video.duration || Infinity) - .1) return;
+    resumeApplied = true;
+    setVideoTime(resume);
+    // Alguns MP4s locais aceitam a primeira busca antes de o índice do arquivo
+    // estabilizar e voltam silenciosamente ao início. As verificações garantem a
+    // retomada sem interferir se a pessoa já buscou outro trecho manualmente.
+    [180,650].forEach(delay => setTimeout(() => {
+      if(!manualSeek && Math.abs((video.currentTime || 0) - resume) > 1) setVideoTime(resume);
+    }, delay));
   };
   video.addEventListener('loadedmetadata', applyResume, {once:true});
+  video.addEventListener('loadeddata', applyResume, {once:true});
+  video.addEventListener('canplay', applyResume, {once:true});
+  if(video.readyState >= 1) queueMicrotask(applyResume);
   video.addEventListener('loadedmetadata', applyPreferredRate);
   video.addEventListener('canplay', applyPreferredRate);
   video.addEventListener('playing', applyPreferredRate);
@@ -7599,7 +7618,7 @@ function bindVideoPlayer(source, schedule, lesson) {
       if(Number(button.dataset.videoSeek) <= currentSecond) activeChapter = index;
     });
     chapterButtons.forEach((button, index) => button.closest('.video-bookmark')?.classList.toggle('active', index === activeChapter));
-    if(currentSecond >= lastCheckpoint + 10) {
+    if(currentSecond >= lastCheckpoint + 5) {
       lastCheckpoint = currentSecond;
       saveProgress();
     }
@@ -11241,6 +11260,7 @@ window.addEventListener('pagehide', () => {
   pauseAutoStudy();
   persistStudyTimerSession();
   persistQuestionTimerSession();
+  saveOpenVideoPosition();
   flushSaveStateOnly();
   flushCloudSaveNow();
 });
