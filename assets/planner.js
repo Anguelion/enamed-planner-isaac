@@ -6304,7 +6304,7 @@ function renderMateriais() {
     stopAutoStudy('material');
     renderMateriais();
   });
-  document.querySelectorAll('[data-material-block]').forEach(button => button.onclick = () => {
+  document.querySelectorAll('.materials-collection-card[data-material-block]').forEach(button => button.onclick = () => {
     ui.materialBlock=button.dataset.materialBlock;
     ui.materialScheduleId='';
     ui.materialDocId='';
@@ -7569,7 +7569,10 @@ function bindVideoPlayer(source, schedule, lesson) {
     const safeTarget = Math.max(0, Math.min(Number(seconds) || 0, Number.isFinite(video.duration) ? Math.max(0, video.duration - .1) : Number(seconds) || 0));
     restoringPosition = true;
     video.currentTime = safeTarget;
-    setTimeout(() => { restoringPosition = false; }, 60);
+    // A busca inicial pode emitir `seeking` com atraso em arquivos locais grandes.
+    // Mantemos a janela de restauração ativa até depois das tentativas de
+    // estabilização, evitando confundir esse evento com uma busca do usuário.
+    setTimeout(() => { restoringPosition = false; }, 1500);
     return safeTarget;
   };
   video.addEventListener('seeking', () => { if(!restoringPosition) manualSeek = true; });

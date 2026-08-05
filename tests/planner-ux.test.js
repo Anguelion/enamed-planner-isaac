@@ -164,3 +164,10 @@ test('marca-texto usa seletor flutuante único e permite editar marcações salv
   assert.match(css,/\.highlight-popup\{position:fixed;/);
   assert.match(css,/@media\(pointer:coarse\)\{\.highlight-popup/);
 });
+
+test('parágrafos do material não recebem a navegação dos cartões de bloco',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  assert.match(planner,/querySelectorAll\('\.materials-collection-card\[data-material-block\]'\)/);
+  assert.doesNotMatch(planner,/querySelectorAll\('\[data-material-block\]'\)\.forEach\(button => button\.onclick/);
+});

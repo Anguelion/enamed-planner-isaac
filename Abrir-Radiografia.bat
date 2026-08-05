@@ -19,7 +19,7 @@ REM Abre o navegador na aba Radiografia (apos 2s, ja com o servidor no ar)
 start "" /b cmd /c "timeout /t 2 /nobreak >nul & start "" http://localhost:8794/index.html#/radiografia"
 
 REM Sobe o servidor estatico nesta pasta (mantem a janela viva)
-py -3 -m http.server 8794
+py -3 scripts\serve_planner.py --port 8794 --directory "%cd%"
 
 REM Se o Python nao estiver disponivel, avisa e nao fecha a janela
 if errorlevel 1 (
