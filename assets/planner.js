@@ -6708,7 +6708,7 @@ function videoCountRing(lesson) {
 }
 function renderVideoFlashcardEditor(source, lesson, schedule) {
   if(!source) return '';
-  const cards = flashcardsNewestFirst(Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []);
+  const cards = flashcardsNewestFirst((Array.isArray(state.videoFlashcards?.[source.id]) ? state.videoFlashcards[source.id] : []).filter(card => !card.deletedAt));
   const topic = videoContentLabel(source);
   return `<div class="flashcard-editor video-flashcards"><div class="section-title"><div><h3>Flashcards deste vídeo</h3><div class="muted">Crie todos os cartões necessários. Selecione um trecho e use a barra para formatar, ou escolha o tipo Cloze para ocluir uma palavra.</div></div><button class="icon-btn primary" id="addVideoFlashcard">+ Flashcard</button></div>${cards.length ? `<div class="flashcard-editor-list">${cards.map(card=>{ const sourceAttr = `data-video-card="${escapeAttr(source.id)}"`; return `<div class="flashcard-editor-item">${renderClozeAwareFlashcardFields(sourceAttr,card,'Frente: pergunta ou conceito','Verso: resposta curta')}<button class="tiny-btn" data-remove-video-card="${escapeAttr(source.id)}" data-card-id="${escapeAttr(card.id)}" title="Remover flashcard">×</button></div>`; }).join('')}</div>` : '<div class="empty">Nenhum flashcard criado para este vídeo.</div>'}<div class="topic-source">${cards.length} ${cards.length===1?'flashcard':'flashcards'} · ${escapeHtml(schedule?.topic || lesson?.title || topic)} · ${escapeHtml(topic)}</div></div>`;
 }
@@ -7233,19 +7233,31 @@ function bindVideoPlayer(source, schedule, lesson) {
   const cleanFrameToggle=document.getElementById('toggleVideoCleanFrame');
   let cleanFrame=false;
   const setCleanFrame=enabled => {
-    cleanFrame=Boolean(enabled && video.paused);
+    cleanFrame=Boolean(enabled);
     video.controls=!cleanFrame;
     videoStage?.classList.toggle('clean-frame',cleanFrame);
     if(cleanFrameToggle) {
-      cleanFrameToggle.setAttribute('aria-label',cleanFrame?'Restaurar controles do vídeo':'Ocultar controles para capturar a imagem');
-      cleanFrameToggle.title=cleanFrame?'Clique para restaurar os controles':'Clique para ocultar os controles';
+      cleanFrameToggle.setAttribute('aria-label',cleanFrame?'Clique para mostrar os controles':'Clique fora do centro para ocultar os controles');
+      cleanFrameToggle.title=cleanFrame?'Clique para mostrar os controles':'Clique fora do centro para ocultar os controles, ou no centro para pausar/reproduzir';
     }
   };
+  // Estilo YouTube: clicando fora do centro do vídeo, a interface some e deixa a
+  // imagem livre; um novo clique (em qualquer ponto) traz a interface de volta.
+  // Clicar no centro alterna play/pause sem mexer na interface.
   cleanFrameToggle?.addEventListener('click',event=>{
     event.preventDefault();
     event.stopPropagation();
-    if(!video.paused) return;
-    setCleanFrame(!cleanFrame);
+    if(cleanFrame) { setCleanFrame(false); return; }
+    const rect=cleanFrameToggle.getBoundingClientRect();
+    const dx=event.clientX-(rect.left+rect.width/2);
+    const dy=event.clientY-(rect.top+rect.height/2);
+    const centerRadius=Math.min(rect.width,rect.height)*.18;
+    if(Math.hypot(dx,dy)<=centerRadius) {
+      if(video.paused) video.play().catch(()=>{});
+      else video.pause();
+      return;
+    }
+    setCleanFrame(true);
   });
   const storedProgress=state.videoPlayer.progress?.[source.id]||{};
   let resume = PlannerUX?.resumeTime(storedProgress) ?? n(state.videoPlayer.resume[source.id]);
@@ -7888,6 +7900,11 @@ function renderFlashcards() {
     ui.editFlashcardId = '';
     renderFlashcards();
   });
+  document.querySelectorAll('[data-delete-flashcard]').forEach(button => button.onclick = event => {
+    event.preventDefault();
+    event.stopPropagation();
+    deleteFlashcardFromEditor(event.currentTarget);
+  });
   document.querySelectorAll('[data-question-card][data-card-id][data-card-field], [data-library-card][data-card-id][data-card-field]').forEach(input => {
     input.oninput = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => e.currentTarget.dataset.libraryCard ? updateLibraryFlashcard(e.currentTarget) : updateQuestionFlashcard(e.currentTarget);
@@ -8032,6 +8049,7 @@ function renderFlashcardInlineEditor(card) {
     <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="area" value="${escapeAttr(card.area || '')}" placeholder="Área">
     <input class="input" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-card-field="subarea" value="${escapeAttr(card.subarea || '')}" placeholder="Assunto">
     <button type="button" class="tiny-btn" data-close-flashcard-edit="${escapeAttr(card.id)}">Fechar edição</button>
+    <button type="button" class="tiny-btn danger" ${sourceAttr} data-card-id="${escapeAttr(card.id)}" data-delete-flashcard title="Excluir este flashcard permanentemente">Excluir card</button>
   </div>`;
 }
 function renderFlashcardRating(id) {
@@ -8148,6 +8166,27 @@ function suspendFlashcard(id) {
   state.flashcardProgress[id] = { ...current, status:'Suspenso', nextReview:'2099-12-31' };
   delete ui.revealedCards[id];
   persist();
+}
+function deleteFlashcardFromEditor(el) {
+  const cardId = el.dataset.cardId;
+  if(!cardId || !confirm('Excluir este flashcard? Esta ação não pode ser desfeita.')) return;
+  const now = new Date().toISOString();
+  if(el.dataset.videoCard) {
+    const cards = state.videoFlashcards[el.dataset.videoCard] || [];
+    state.videoFlashcards[el.dataset.videoCard] = cards.map(card => card.id === cardId ? {...card, deletedAt:now} : card);
+  } else if(el.dataset.questionCard) {
+    const cards = state.questionFlashcards[el.dataset.questionCard] || [];
+    state.questionFlashcards[el.dataset.questionCard] = cards.map(card => card.id === cardId ? {...card, deletedAt:now} : card);
+  } else if(el.dataset.libraryCard) {
+    const card = (state.flashcardLibrary || []).find(item => item.id === cardId);
+    if(card) card.deletedAt = now;
+  }
+  delete state.flashcardProgress[cardId];
+  delete ui.revealedCards[cardId];
+  ui.editFlashcardId = '';
+  renderCache.manualCards = null;
+  persist();
+  render();
 }
 function ankiEscape(value='') {
   return String(value).replace(/\r?\n/g, '<br>').replace(/\t/g, ' ');
@@ -9344,7 +9383,7 @@ function renderQuestionReflection(question, result) {
 function renderQuestionFlashcardEditor(question, result) {
   ui.questionFlashcardEditorClosed ||= {};
   if(ui.questionFlashcardEditorClosed[question.id]) return `<div class="flashcard-edit-toggle"><button type="button" class="tiny-btn" data-open-question-flashcards="${escapeAttr(question.id)}">Abrir flashcards</button></div>`;
-  const cards = flashcardsNewestFirst(Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : []);
+  const cards = flashcardsNewestFirst((Array.isArray(state.questionFlashcards[question.id]) ? state.questionFlashcards[question.id] : []).filter(card => !card.deletedAt));
   const allowed = flashcardCreationAllowed(result);
   if(!allowed && !cards.length) return '';
   const reason = allowed ? flashcardCreationReason(result) : 'Flashcards já criados continuam disponíveis para edição.';

@@ -965,12 +965,10 @@ body.dark .video-source-switch button.active{background:#26343b;color:#8fd4e7}
 .video-player.is-unavailable{background:#0d1720}
 .video-unavailable{grid-column:1;grid-row:2/4;align-self:center;padding:16px 18px;border-radius:8px;background:rgba(13,23,32,.82);color:#e7f1f7;font-size:13px;line-height:1.45;text-align:center}
 .video-stage .video-unavailable{position:absolute;inset:0;z-index:4;display:grid;align-content:center;justify-items:center;grid-column:auto;grid-row:auto;pointer-events:none;padding:20px clamp(20px,10%,90px);background:rgba(13,23,32,.86)}
-.video-clean-frame-toggle{position:absolute;z-index:3;inset:0 0 54px;display:none;border:0;padding:0;background:transparent;cursor:pointer}
+.video-clean-frame-toggle{position:absolute;z-index:3;inset:0 0 54px;display:block;border:0;padding:0;background:transparent;cursor:pointer}
 .video-clean-frame-toggle span{display:none}
-.video-stage.is-paused .video-clean-frame-toggle{display:block}
-.video-stage.clean-frame .video-clean-frame-toggle{inset:10px 10px auto auto;display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;padding:0;border:0;border-radius:50%;background:rgba(13,23,32,.45);color:rgba(255,255,255,.75);box-shadow:none;cursor:pointer;opacity:.55;transition:opacity .15s,background .15s}
-.video-stage.clean-frame .video-clean-frame-toggle:hover{opacity:1;background:rgba(13,23,32,.7)}
-.video-stage.clean-frame .video-clean-frame-toggle span{display:inline;font-size:13px;line-height:1}
+.video-stage.clean-frame .video-clean-frame-toggle{inset:0;cursor:pointer}
+.video-stage.clean-frame .video-clean-frame-toggle span{display:inline-flex;position:absolute;top:10px;right:10px;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:rgba(13,23,32,.45);color:rgba(255,255,255,.75);font-size:13px;line-height:1;opacity:.55;pointer-events:none}
 .video-controls{grid-column:1;grid-row:4;display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:0}
 .video-controls .icon-btn{width:34px;height:34px;min-height:0;padding:0;display:grid;place-items:center;border-radius:8px}
 .video-transport{display:flex;align-items:center;gap:6px}
