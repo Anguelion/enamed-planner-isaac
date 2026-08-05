@@ -3490,10 +3490,11 @@ function blockStatusTitle(status) {
 function renderBlockStrip() {
   const current = String(currentScheduleBlock());
   const pinned = Boolean(ui.scheduleBlockPinned) && ui.scheduleBlock!=='Todos';
-  return `<div class="block-strip"><button class="icon-btn block-pin-toggle ${pinned?'active':''}" id="blockPinToggle" title="${pinned?`Bloco ${escapeAttr(ui.scheduleBlock)} fixado — clique para destravar`:'Fixar o bloco selecionado'}" ${ui.scheduleBlock==='Todos'?'disabled':''}>${pinned?'📌 Fixado':'📌 Fixar'}</button><button class="block-chip block-chip-all ${ui.scheduleBlock==='Todos'?'active':''}" data-schedule-block="Todos" title="Todos os blocos" aria-label="Todos os blocos">${iconSvg('dashboard')}</button>${scheduleBlocks().map(block => {
+  return `<div class="block-strip" role="toolbar" aria-label="Escolher bloco do cronograma"><button class="icon-btn block-pin-toggle ${pinned?'active':''}" id="blockPinToggle" type="button" title="${pinned?`Bloco ${escapeAttr(ui.scheduleBlock)} fixado — clique para destravar`:'Manter o bloco selecionado ao limpar os filtros'}" aria-pressed="${pinned}" ${ui.scheduleBlock==='Todos'?'disabled':''}>${iconSvg('flag',{weight:pinned?'duotone':'regular'})}<span>${pinned?'Fixado':'Fixar'}</span></button><button class="block-chip block-chip-all ${ui.scheduleBlock==='Todos'?'active':''}" type="button" data-schedule-block="Todos" title="Ver todos os blocos" aria-label="Ver todos os blocos" aria-pressed="${ui.scheduleBlock==='Todos'}">${iconSvg('dashboard')}</button>${scheduleBlocks().map(block => {
     const status = blockStatus(block);
     const weekCurrent = block === current;
-    return `<button class="block-chip ${String(ui.scheduleBlock)===block?'active':''} ${status} ${weekCurrent?'week-current':''}" title="${escapeAttr(weekCurrent?'Bloco desta semana':blockStatusTitle(status))}" data-schedule-block="${escapeAttr(block)}">${escapeHtml(block)}</button>`;
+    const active = String(ui.scheduleBlock)===block || (ui.scheduleBlock==='Atual' && weekCurrent);
+    return `<button class="block-chip ${active?'active':''} ${status} ${weekCurrent?'week-current':''}" type="button" title="${escapeAttr(weekCurrent?'Bloco atual':blockStatusTitle(status))}" data-schedule-block="${escapeAttr(block)}" aria-label="Bloco ${escapeAttr(block)} — ${escapeAttr(weekCurrent?'atual':blockStatusTitle(status).toLowerCase())}" aria-pressed="${active}"><span>${escapeHtml(block)}</span>${weekCurrent?'<small>Atual</small>':''}</button>`;
   }).join('')}</div>`;
 }
 function dayRoadItems(date) {
@@ -4654,16 +4655,25 @@ function renderCronograma() {
   const areas = ['Todas', ...new Set(state.schedule.map(x=>x.area).filter(Boolean).sort())];
   const rows = filteredSchedule();
   const changed = lastChangedLesson();
+  const currentBlock = String(currentScheduleBlock());
+  const selectedBlock = ui.scheduleBlock==='Atual' ? currentBlock : String(ui.scheduleBlock);
+  const selectedItems = selectedBlock==='Todos' ? state.schedule : state.schedule.filter(item => String(item.block)===selectedBlock);
+  const selectedDone = selectedItems.filter(item => statusOf(item)==='Concluído').length;
+  const selectedProgress = Math.round(selectedDone / Math.max(1,selectedItems.length) * 100);
+  const filterCount = Number(Boolean(ui.search.trim())) + Number(ui.area!=='Todas') + Number(ui.status!=='Todos') + Number(ui.priority!=='Todas');
   const statusOptions=['Todos','Concluído','Aguardando','Não Iniciado'];
   const priorityOptions=['Todas','Alta','Média','Baixa'];
-  const toolbar=`<div class="schedule-toolbar">
-    <input class="input schedule-toolbar-search" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}">
-    <select class="select schedule-toolbar-select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select>
-    <select class="select schedule-toolbar-select" id="statusFilter">${statusOptions.map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select>
-    <select class="select schedule-toolbar-select" id="priorityFilter">${priorityOptions.map(p=>`<option ${p===ui.priority?'selected':''}>${escapeHtml(p)}</option>`).join('')}</select>
-    <button class="icon-btn schedule-toolbar-clear" id="clearFilters">Limpar</button>
+  const toolbar=`<div class="schedule-toolbar" role="search" aria-label="Filtrar cronograma">
+    <label class="schedule-search-field"><span class="sr-only">Buscar no cronograma</span>${iconSvg('search',{weight:'regular'})}<input class="input schedule-toolbar-search" id="search" placeholder="Buscar tema, área ou data" value="${escapeAttr(ui.search)}"></label>
+    <div class="schedule-filter-group">
+      <label class="schedule-filter"><span>Área</span><select class="select schedule-toolbar-select" id="areaFilter" aria-label="Filtrar por área">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select></label>
+      <label class="schedule-filter"><span>Status</span><select class="select schedule-toolbar-select" id="statusFilter" aria-label="Filtrar por status">${statusOptions.map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select></label>
+      <label class="schedule-filter"><span>Prioridade</span><select class="select schedule-toolbar-select" id="priorityFilter" aria-label="Filtrar por prioridade">${priorityOptions.map(p=>`<option ${p===ui.priority?'selected':''}>${escapeHtml(p)}</option>`).join('')}</select></label>
+    </div>
+    <button class="icon-btn schedule-toolbar-clear ${filterCount?'has-filters':''}" id="clearFilters" type="button" ${filterCount?'': 'disabled'}>${iconSvg('close',{weight:'regular'})}<span>Limpar${filterCount?` (${filterCount})`:''}</span></button>
   </div>`;
-  document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2 class="schedule-title">Blocos do cronograma</h2><div class="muted">${changed ? `Última aula: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}${toolbar}</div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
+  const missionLabel = selectedBlock==='Todos' ? 'Visão geral' : `Bloco ${selectedBlock}`;
+  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Missão</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div><div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${toolbar}</section><div class="card schedule-list-card"><div class="section-title"><div><h2>Cronograma editável</h2><span class="muted">Acompanhe e atualize o progresso de cada aula.</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
   enhanceScheduleStudyIcons();
   document.getElementById('search').oninput = debounce(e => {
     const value=e.target.value;
