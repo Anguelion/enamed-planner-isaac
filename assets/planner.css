@@ -2834,6 +2834,20 @@ body.dark .tab.active .tab-icon{background:#172331}
 .caso-dot{width:9px;height:9px;border-radius:50%;background:var(--line);transition:background .2s,transform .2s}
 .caso-dot.is-lit{background:var(--teal)}
 .caso-dot.is-win{background:var(--green);transform:scale(1.25)}
+.caso-diagnosis-title{position:relative;isolation:isolate;display:grid;justify-items:center;gap:4px;overflow:hidden;text-align:center;margin:2px 0 4px;padding:22px 56px 20px;border:1px solid;border-radius:calc(var(--radius-sm) + 4px);animation:casoDiagnosisIn .45s cubic-bezier(.2,.8,.2,1)}
+.caso-diagnosis-title::before{content:"";position:absolute;z-index:-1;inset:-80% 18%;border-radius:50%;filter:blur(24px);opacity:.7}
+.caso-diagnosis-icon{display:grid;place-items:center;width:32px;height:32px;margin-bottom:2px;border-radius:50%;color:#fff;font-size:18px;font-weight:800;box-shadow:0 6px 16px rgba(15,23,42,.12)}
+.caso-diagnosis-kicker{font-size:11.5px;font-weight:800;letter-spacing:.11em;line-height:1.3;text-transform:uppercase}
+.caso-diagnosis-title h2{margin:0;max-width:760px;color:var(--ink);font-size:clamp(22px,3vw,32px);line-height:1.15;letter-spacing:-.025em;text-wrap:balance}
+.caso-diagnosis-title-win{border-color:color-mix(in srgb,var(--green) 34%,transparent);background:linear-gradient(135deg,color-mix(in srgb,var(--soft-green) 82%,var(--panel)),var(--panel))}
+.caso-diagnosis-title-win::before{background:var(--soft-green)}
+.caso-diagnosis-title-win .caso-diagnosis-icon{background:var(--green)}
+.caso-diagnosis-title-win .caso-diagnosis-kicker{color:var(--green)}
+.caso-diagnosis-title-learn{border-color:color-mix(in srgb,var(--amber) 38%,transparent);background:linear-gradient(135deg,color-mix(in srgb,var(--soft-amber) 84%,var(--panel)),var(--panel))}
+.caso-diagnosis-title-learn::before{background:var(--soft-amber)}
+.caso-diagnosis-title-learn .caso-diagnosis-icon{background:var(--amber)}
+.caso-diagnosis-title-learn .caso-diagnosis-kicker{color:color-mix(in srgb,var(--amber) 82%,var(--ink))}
+@keyframes casoDiagnosisIn{from{opacity:0;transform:translateY(-8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
 .caso-question{margin:0;font-size:19px;color:var(--ink)}
 .caso-hints{display:grid;gap:10px}
 .caso-hint{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start;padding:10px 12px;border-radius:var(--radius-sm);background:rgba(2,172,210,.06);border:1px solid transparent;animation:casoHintIn .35s ease}
@@ -2877,7 +2891,7 @@ body.dark .tab.active .tab-icon{background:#172331}
 .caso-explanation-kids{border-left-style:dashed;border-left-color:var(--cyan);background:linear-gradient(135deg,var(--soft-blue),var(--soft-green) 140%)}
 .caso-explanation-kids .caso-explanation-label{color:var(--blue)}
 .caso-explanation-kids p{font-size:14px;line-height:1.7}
-@media(max-width:760px){.caso-answer-row{flex-direction:column}.caso-answer-row .input,.caso-answer-row .icon-btn{width:100%}}
+@media(max-width:760px){.caso-diagnosis-title{padding:18px 20px 17px}.caso-answer-row{flex-direction:column}.caso-answer-row .input,.caso-answer-row .icon-btn{width:100%}}
 
 /* Correções responsivas consolidadas — celular e tablet */
 :root{--app-header-height:104px}

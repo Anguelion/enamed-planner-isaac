@@ -4510,11 +4510,19 @@ function renderCasoDoDia() {
   const shown = finished ? TOTAL_CASO_HINTS : revealed;
   const dots = Array.from({length:TOTAL_CASO_HINTS}, (_,i) => `<span class="caso-dot ${i<shown?'is-lit':''} ${progress.solved && i===revealed-1?'is-win':''}"></span>`).join('');
   const hintsHtml = item.hints.slice(0, shown).map((text,i) => `<div class="caso-hint ${i===revealed-1 && !finished ? 'is-current':''}"><span class="caso-hint-num">${i+1}</span><span class="caso-hint-text">${escapeHtml(text)}</span></div>`).join('');
-  let statusHtml = '';
+  let diagnosisTitle = '';
   if(progress.solved) {
-    statusHtml = `<div class="caso-result caso-result-win"><span class="caso-result-icon">🎉</span><div><strong>Você acertou!</strong><span>${escapeHtml(item.diagnosis)}</span></div></div>`;
+    diagnosisTitle = `<div class="caso-diagnosis-title caso-diagnosis-title-win" role="status">
+      <span class="caso-diagnosis-icon" aria-hidden="true">✓</span>
+      <span class="caso-diagnosis-kicker">Você acertou!</span>
+      <h2>${escapeHtml(item.diagnosis)}</h2>
+    </div>`;
   } else if(progress.gaveUp) {
-    statusHtml = `<div class="caso-result caso-result-lose"><span class="caso-result-icon">💡</span><div><strong>Diagnóstico revelado</strong><span>${escapeHtml(item.diagnosis)}</span></div></div>`;
+    diagnosisTitle = `<div class="caso-diagnosis-title caso-diagnosis-title-learn" role="status">
+      <span class="caso-diagnosis-icon" aria-hidden="true">✦</span>
+      <span class="caso-diagnosis-kicker">Aprenda hoje sobre:</span>
+      <h2>${escapeHtml(item.diagnosis)}</h2>
+    </div>`;
   }
   const answerForm = finished ? '' : `<div class="caso-answer-row"><div class="caso-guess-wrap"><input class="input" id="casoDoDiaGuess" placeholder="Qual é o diagnóstico?" autocomplete="off"><div class="caso-suggestions" id="casoDoDiaSuggestions" hidden></div></div><button class="icon-btn primary" id="casoDoDiaSubmit">Responder</button><button class="icon-btn" id="casoDoDiaSkip">${revealed>=TOTAL_CASO_HINTS?'Revelar':'Pular pista'}</button></div>`;
   const feedback = progress.lastFeedback ? `<div class="caso-feedback ${progress.lastFeedback.ok?'ok':'no'}">${escapeHtml(progress.lastFeedback.text)}</div>` : '';
@@ -4524,9 +4532,9 @@ function renderCasoDoDia() {
   const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?renderCasoExplanation(item.explanation, item.kids):''}` : '';
   return `<section class="card caso-do-dia-card ${finished?'is-finished':''}">
     <div class="caso-head"><span class="eyebrow">Caso do dia · #${item.number}</span><div class="caso-dots">${dots}</div></div>
+    ${diagnosisTitle}
     <h2 class="caso-question">${escapeHtml(item.question || 'Qual é o diagnóstico?')}</h2>
     <div class="caso-hints">${hintsHtml}</div>
-    ${statusHtml}
     ${feedback}
     ${wrongList}
     ${answerForm}
