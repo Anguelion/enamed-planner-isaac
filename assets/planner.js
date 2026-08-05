@@ -115,7 +115,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleDay: '', scheduleWeekAnchor: studyDateKey(), refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 try {
   const savedCadernoView = JSON.parse(localStorage.getItem(CADERNO_VIEW_KEY) || '{}');
@@ -3436,7 +3436,8 @@ function filteredSchedule() {
     const okStatus = ui.status==='Todos' || st===ui.status;
     const okPriority = ui.priority==='Todas' || x.priority===ui.priority;
     const okBlock = ui.scheduleBlock==='Todos' || (ui.scheduleBlock==='Atual' ? String(x.block)===currentBlock : String(x.block)===String(ui.scheduleBlock));
-    return okText && okArea && okStatus && okPriority && okBlock;
+    const okDay = !ui.scheduleDay || x.date===ui.scheduleDay;
+    return okText && okArea && okStatus && okPriority && okBlock && okDay;
   }).sort(byDate);
 }
 function metric(label,value,foot='') { return `<div class="card metric-card"><div class="metric-label">${label}</div><div class="metric-value">${value}</div><div class="metric-foot">${foot}</div></div>`; }
@@ -3496,6 +3497,18 @@ function renderBlockStrip() {
     const active = String(ui.scheduleBlock)===block || (ui.scheduleBlock==='Atual' && weekCurrent);
     return `<button class="block-chip ${active?'active':''} ${status} ${weekCurrent?'week-current':''}" type="button" title="${escapeAttr(weekCurrent?'Bloco atual':blockStatusTitle(status))}" data-schedule-block="${escapeAttr(block)}" aria-label="Bloco ${escapeAttr(block)} — ${escapeAttr(weekCurrent?'atual':blockStatusTitle(status).toLowerCase())}" aria-pressed="${active}"><span>${escapeHtml(block)}</span>${weekCurrent?'<small>Atual</small>':''}</button>`;
   }).join('')}</div>`;
+}
+function renderScheduleDayPicker() {
+  const today=studyDateKey();
+  const anchor=ui.scheduleWeekAnchor || today;
+  const days=currentWeekDates(anchor);
+  const labels=['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'];
+  const currentBlock=String(currentScheduleBlock());
+  const countForDay=day => state.schedule.filter(item => {
+    const inBlock=ui.scheduleBlock==='Todos' || (ui.scheduleBlock==='Atual' ? String(item.block)===currentBlock : String(item.block)===String(ui.scheduleBlock));
+    return item.date===day && inBlock;
+  }).length;
+  return `<div class="mission-days"><div class="mission-days-head"><div><h3>Aulas por dia</h3><span>Escolha uma data para ver somente as aulas daquele dia</span></div><button class="tiny-btn mission-day-all ${ui.scheduleDay?'':'active'}" type="button" data-schedule-day="" aria-pressed="${!ui.scheduleDay}">Todas as aulas</button></div><div class="mission-week"><button class="mission-week-nav" type="button" data-schedule-week="-7" aria-label="Semana anterior">${iconSvg('previous',{weight:'regular'})}</button>${days.map((day,index)=>{const count=countForDay(day);const selected=ui.scheduleDay===day;const isToday=day===today;return `<button class="mission-day ${selected?'active':''} ${isToday?'today':''}" type="button" data-schedule-day="${day}" aria-pressed="${selected}" aria-label="${labels[index]}, ${fmtDate(day)}: ${count} ${count===1?'aula':'aulas'}"><span>${labels[index]}</span><strong>${day.slice(8,10)}</strong><small>${isToday?'Hoje':`${count} ${count===1?'aula':'aulas'}`}</small></button>`;}).join('')}<button class="mission-week-nav" type="button" data-schedule-week="7" aria-label="Próxima semana">${iconSvg('next',{weight:'regular'})}</button><button class="tiny-btn mission-today-button" type="button" data-schedule-today>${iconSvg('calendar',{weight:'regular'})}<span>Ir para hoje</span></button></div></div>`;
 }
 function dayRoadItems(date) {
   const lessons = state.schedule.filter(x => x.date === date).sort(byDate);
@@ -4660,7 +4673,7 @@ function renderCronograma() {
   const selectedItems = selectedBlock==='Todos' ? state.schedule : state.schedule.filter(item => String(item.block)===selectedBlock);
   const selectedDone = selectedItems.filter(item => statusOf(item)==='Concluído').length;
   const selectedProgress = Math.round(selectedDone / Math.max(1,selectedItems.length) * 100);
-  const filterCount = Number(Boolean(ui.search.trim())) + Number(ui.area!=='Todas') + Number(ui.status!=='Todos') + Number(ui.priority!=='Todas');
+  const filterCount = Number(Boolean(ui.search.trim())) + Number(ui.area!=='Todas') + Number(ui.status!=='Todos') + Number(ui.priority!=='Todas') + Number(Boolean(ui.scheduleDay));
   const statusOptions=['Todos','Concluído','Aguardando','Não Iniciado'];
   const priorityOptions=['Todas','Alta','Média','Baixa'];
   const toolbar=`<div class="schedule-toolbar" role="search" aria-label="Filtrar cronograma">
@@ -4673,8 +4686,13 @@ function renderCronograma() {
     <button class="icon-btn schedule-toolbar-clear ${filterCount?'has-filters':''}" id="clearFilters" type="button" ${filterCount?'': 'disabled'}>${iconSvg('close',{weight:'regular'})}<span>Limpar${filterCount?` (${filterCount})`:''}</span></button>
   </div>`;
   const missionLabel = selectedBlock==='Todos' ? 'Visão geral' : `Bloco ${selectedBlock}`;
-  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Missão</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div><div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${toolbar}</section><div class="card schedule-list-card"><div class="section-title"><div><h2>Cronograma editável</h2><span class="muted">Acompanhe e atualize o progresso de cada aula.</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
+  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Missão</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div><div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section><div class="card schedule-list-card"><div class="section-title"><div><h2>${ui.scheduleDay?`Aulas de ${fmtDate(ui.scheduleDay)}`:'Cronograma editável'}</h2><span class="muted">${ui.scheduleDay?'Mostrando somente as aulas da data selecionada.':'Acompanhe e atualize o progresso de cada aula.'}</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
   enhanceScheduleStudyIcons();
+  const blockStrip=document.querySelector('#cronograma .block-strip');
+  if(blockStrip) {
+    requestAnimationFrame(()=>{ blockStrip.scrollLeft=n(ui.scheduleBlockScrollLeft); });
+    blockStrip.addEventListener('scroll',()=>{ ui.scheduleBlockScrollLeft=blockStrip.scrollLeft; },{passive:true});
+  }
   document.getElementById('search').oninput = debounce(e => {
     const value=e.target.value;
     const cursor=e.target.selectionStart;
@@ -4691,6 +4709,7 @@ function renderCronograma() {
   };
   document.querySelectorAll('[data-schedule-block]').forEach(button => button.onclick = e => {
     if(ui.scheduleBlockPinned) return;
+    ui.scheduleBlockScrollLeft=blockStrip?.scrollLeft || ui.scheduleBlockScrollLeft;
     ui.scheduleBlock = e.currentTarget.dataset.scheduleBlock;
     render();
     requestAnimationFrame(() => {
@@ -4698,7 +4717,22 @@ function renderCronograma() {
       if(picked) { picked.classList.add('block-chip-pulse'); setTimeout(() => picked.classList.remove('block-chip-pulse'), 500); }
     });
   });
-  document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.priority='Todas'; if(!ui.scheduleBlockPinned) ui.scheduleBlock='Atual'; render(); };
+  document.querySelectorAll('[data-schedule-day]').forEach(button => button.onclick = e => {
+    ui.scheduleDay=e.currentTarget.dataset.scheduleDay || '';
+    if(ui.scheduleDay) ui.refDate=ui.scheduleDay;
+    render();
+  });
+  document.querySelectorAll('[data-schedule-week]').forEach(button => button.onclick = e => {
+    ui.scheduleWeekAnchor=PlannerUX.addDays(ui.scheduleWeekAnchor || studyDateKey(),n(e.currentTarget.dataset.scheduleWeek));
+    render();
+  });
+  document.querySelector('[data-schedule-today]')?.addEventListener('click',()=>{
+    ui.scheduleWeekAnchor=studyDateKey();
+    ui.scheduleDay=studyDateKey();
+    ui.refDate=studyDateKey();
+    render();
+  });
+  document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.priority='Todas'; ui.scheduleDay=''; if(!ui.scheduleBlockPinned) ui.scheduleBlock='Atual'; render(); };
   bindScheduleInputs();
 }
 function areaLine(a) { return `<div class="area-bar"><strong>${escapeHtml(a.area)}</strong><div class="bar"><span style="width:${pct(a.progress)}"></span></div><span>${pct(a.progress)}</span></div>`; }
@@ -8971,10 +9005,24 @@ function renderQuestionBank() {
   const question = questions[ui.qIndex];
   ui.qQuestionId = question?.id || '';
   const activeQuestion = question ? applyQuestionEdits(question) : null;
+  const answerRate = summary.answered ? Math.round((summary.correct / summary.answered) * 100) : 0;
+  const pendingCount = Math.max(0, questionBank.length - summary.answered);
   document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
+    <header class="qbank-overview">
+      <div class="qbank-overview-copy"><span class="qbank-eyebrow">Treino inteligente</span><h1>Central de questões</h1><p>Pratique com foco, acompanhe sua evolução e transforme erros em revisão.</p></div>
+      <div class="qbank-overview-metrics" aria-label="Resumo do banco de questões">
+        <div><span>Banco</span><strong>${questionBank.length.toLocaleString('pt-BR')}</strong><small>questões</small></div>
+        <div><span>Progresso</span><strong>${summary.answered.toLocaleString('pt-BR')}</strong><small>resolvidas</small></div>
+        <div class="${answerRate >= 70 ? 'positive' : ''}"><span>Precisão</span><strong>${answerRate}%</strong><small>${summary.correct} acertos</small></div>
+      </div>
+      <div class="qbank-quick-actions" role="group" aria-label="Filtros rápidos">
+        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Não respondidas'?'active':''}" data-question-quick-filter="Não respondidas"><span class="quick-filter-dot pending"></span><strong>Continuar treino</strong><small>${pendingCount.toLocaleString('pt-BR')} pendentes</small></button>
+        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Erradas'?'active':''}" data-question-quick-filter="Erradas"><span class="quick-filter-dot errors"></span><strong>Revisar erros</strong><small>${(summary.answered-summary.correct).toLocaleString('pt-BR')} para rever</small></button>
+        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas'?'active':''}" data-question-quick-filter="Todas"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>Todos os temas</small></button>
+      </div>
+    </header>
     <aside class="card question-sidebar">
-      <div class="section-title"><h2>Banco privado</h2><div class="question-sidebar-actions"><span class="badge today">${questionBank.length} questões</span><button class="icon-btn" id="collapseQuestionSidebar" title="Fechar painel do banco" aria-label="Fechar painel do banco">×</button></div></div>
-      <div class="muted">Organizado por blocos do planner e coleções especiais.</div>
+      <div class="section-title"><div><span class="qbank-panel-eyebrow">Seu desempenho</span><h2>Visão geral</h2></div><div class="question-sidebar-actions"><button class="icon-btn" id="collapseQuestionSidebar" title="Ocultar painel e focar na questão" aria-label="Ocultar painel e focar na questão">${iconSvg('sidebar',{weight:'regular'})}</button></div></div>
       <div class="question-counts"><div><strong>${summary.answered}</strong><span class="muted">Feitas</span></div><div><strong>${summary.correct}</strong><span class="muted">Certas</span></div><div><strong>${summary.answered-summary.correct}</strong><span class="muted">Erros</span></div></div>
       <div class="question-issue-actions"><button class="question-issue-summary ${flagged?'has-items':''} ${showingFlagged?'active':''}" id="showQuestionIssues" aria-pressed="${showingFlagged}" ${flagged?'':'disabled'}><span>⚑</span><strong>${flagged}</strong><span>${showingFlagged ? 'gabaritos suspeitos exibidos' : flagged===1?'gabarito suspeito':'gabaritos suspeitos'}</span></button>${flagged?'<button class="icon-btn question-issue-clear" id="clearQuestionIssues" title="Limpar todas as marcações" aria-label="Limpar todas as marcações de gabarito suspeito">×</button>':''}</div>
       ${progress('Aproveitamento', summary.correct/Math.max(summary.answered,1), `${summary.correct} de ${summary.answered}`)}
@@ -8985,10 +9033,11 @@ function renderQuestionBank() {
       <details class="question-filter-panel" open><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
       <div class="question-filter">
         <label class="search-field question-search-field"><span aria-hidden="true">⌕</span><input class="input" id="questionSearch" value="${escapeAttr(ui.qSearch)}" placeholder="Buscar enunciado, tema ou tag" autocomplete="off"></label>
-        <select class="select" id="questionBlock">${blocks.map(block => `<option value="${escapeAttr(block)}" ${block===String(ui.qBlock)?'selected':''}>${block === 'Todos' ? 'Todas as questões' : escapeHtml(questionCollectionLabel(block))}</option>`).join('')}</select>
-        <select class="select" id="questionSource">${sources.map(source => `<option value="${escapeAttr(source)}" ${source===ui.qSource?'selected':''}>${escapeHtml(source)}</option>`).join('')}</select>
-        <select class="select" id="questionTopic">${topics.map(topic => `<option value="${escapeAttr(topic)}" ${topic===ui.qTopic?'selected':''}>${escapeHtml(topic)}</option>`).join('')}</select>
-        <select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select>
+        <label class="question-filter-field"><span>Coleção</span><select class="select" id="questionBlock">${blocks.map(block => `<option value="${escapeAttr(block)}" ${block===String(ui.qBlock)?'selected':''}>${block === 'Todos' ? 'Todas as questões' : escapeHtml(questionCollectionLabel(block))}</option>`).join('')}</select></label>
+        <label class="question-filter-field"><span>Fonte</span><select class="select" id="questionSource">${sources.map(source => `<option value="${escapeAttr(source)}" ${source===ui.qSource?'selected':''}>${escapeHtml(source)}</option>`).join('')}</select></label>
+        <label class="question-filter-field"><span>Tema</span><select class="select" id="questionTopic">${topics.map(topic => `<option value="${escapeAttr(topic)}" ${topic===ui.qTopic?'selected':''}>${escapeHtml(topic)}</option>`).join('')}</select></label>
+        <label class="question-filter-field"><span>Status</span><select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select></label>
+        <button type="button" class="tiny-btn question-clear-filters" id="questionClearFilters">Limpar filtros</button>
       </div></details>
     </aside>
     <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : renderQuestionEmptyState(ui.qFocusScheduleId ? 'Você concluiu as questões desta aula.' : 'Nenhuma questão corresponde a este filtro.')}</div>
@@ -8999,6 +9048,8 @@ function renderQuestionBank() {
   document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionTopic').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qTopic=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionStatus').onchange = e => { ui.qStatus=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  document.querySelectorAll('[data-question-quick-filter]').forEach(button => button.onclick = e => { ui.qStatus=e.currentTarget.dataset.questionQuickFilter; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
+  document.getElementById('questionClearFilters').onclick = () => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qStatus='Todas'; ui.qSearch=''; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); };
   const questionSearch = document.getElementById('questionSearch');
   questionSearch.oninput = e => {
     ui.qSearch = e.target.value;
@@ -9393,7 +9444,8 @@ function renderQuestion(question, total) {
   const questionInfo = `<div class="question-info-stack"><div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>${renderQuestionTags(question)}</div>`;
   const focusInfo = questionSidebarCollapsed ? questionInfo : '';
   const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
-  return `<div class="question-topbar"><button class="icon-btn" id="questionTopPrev" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><strong>${ui.qIndex+1} de ${total}</strong><div class="muted">${escapeHtml(question.sourceLabel || question.source || '')}</div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Sair do modo foco e abrir painel':'Entrar no modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${iconSvg(questionSidebarCollapsed?'sidebar':'focus',{weight:'regular'})}</button><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Abrir relógio">${iconSvg('simulation',{weight:'regular'})}</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">${iconSvg('flag',{weight:'regular'})}</button><button class="icon-btn" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn danger" id="questionDelete" title="Excluir questão">${iconSvg('delete',{weight:'regular'})}</button><button class="icon-btn" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div></div>${renderQuestionTimer(question, result)}<div class="question-body">
+  const sessionProgress = total ? Math.round(((ui.qIndex + 1) / total) * 100) : 0;
+  return `<div class="question-topbar"><button class="icon-btn question-top-nav" id="questionTopPrev" aria-label="Questão anterior" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><div class="question-heading-line"><span class="qbank-eyebrow">Sessão atual</span><strong>${ui.qIndex+1} <span>de ${total}</span></strong></div><div class="muted">${escapeHtml(question.sourceLabel || question.source || 'Banco privado')}</div><div class="question-session-progress" aria-label="${sessionProgress}% desta sessão"><span style="width:${sessionProgress}%"></span></div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Abrir painel lateral':'Modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${iconSvg(questionSidebarCollapsed?'sidebar':'focus',{weight:'regular'})}</button><div class="question-font-control" aria-label="Tamanho do texto"><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button></div><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Cronômetro">${iconSvg('simulation',{weight:'regular'})}</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">${iconSvg('flag',{weight:'regular'})}</button><button class="icon-btn question-edit-action" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn danger question-delete-action" id="questionDelete" title="Excluir questão">${iconSvg('delete',{weight:'regular'})}</button></div><button class="icon-btn question-top-nav" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div>${renderQuestionTimer(question, result)}<div class="question-body">
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
     ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
