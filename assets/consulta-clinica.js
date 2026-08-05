@@ -390,7 +390,7 @@
   METODOS.forEach(m => m.etapas.forEach(e => { e.resp = RESPOSTAS_METODO[e.id] || e.perguntas.map(() => ''); }));
 
   /* ================================== ESTADO ================================== */
-  function defaultState(){ return { sessions: [], activeId:'', ui:{ view:'home', box:true } }; }
+  function defaultState(){ return { sessions: [], activeId:'', ui:{ view:'home', box:true, perguntasOcultas:false, ocultarFeitas:false, orientOculta:false } }; }
   let B = null;                                  // bridge
   let root = null;                               // container
   const esc = (v) => (B && B.escapeHtml ? B.escapeHtml(String(v==null?'':v)) : String(v==null?'':v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])));
@@ -514,14 +514,6 @@
           <div class="cc-step-note"><strong>${esc(m.sigla)}</strong><p>${esc(m.uso)}</p></div>
         </aside>
         <section class="cc-main card">
-          <div class="cc-etapa-head"><span class="eyebrow">${esc(F[etapa.foco]||'Etapa')}</span><h2>${esc(etapa.titulo)}</h2><p class="muted">${esc(etapa.objetivo)}</p></div>
-          <div class="cc-orient"><h4>Como conduzir</h4><ul>${etapa.orientacoes.map(o=>`<li>${esc(o)}</li>`).join('')}</ul></div>
-          <div class="cc-perguntas">
-            <h4>Frases e perguntas do método</h4>
-            <div class="cc-q-list">${etapa.perguntas.map((q,i)=>renderPergunta(s, `${etapa.id}-m${i}`, q, 'metodo', i)).join('')}</div>
-            ${d ? renderPerguntasDoenca(s, d, etapa) : ''}
-          </div>
-          <div class="cc-anot"><h4>Sua anotação nesta etapa</h4><textarea class="textarea" id="ccNota" data-etapa="${etapa.id}" placeholder="Escreva aqui como se estivesse registrando o que a pessoa respondeu, o que você pensou e o que decidiu.">${esc(s.notas[etapa.id]||'')}</textarea></div>
           <div class="cc-dialogo">
             <div class="section-title"><h4>Transcrição da consulta</h4><button class="tiny-btn" id="ccLimparDialogo">Limpar</button></div>
             <div class="cc-dialogo-list" id="ccDialogoList">${s.dialogo.map((l,i)=>`<div class="cc-linha ${l.quem}"><span>${l.quem==='medico'?'Você':esc(s.paciente.nome)}</span><p>${i===animarIndice?'':esc(l.texto)}</p><button class="tiny-btn" data-cc-del-linha="${i}" title="Remover">×</button></div>`).join('') || '<div class="empty">Clique numa pergunta para trazê-la ao campo abaixo, edite se quiser e envie. A pessoa só responde ao que você digitar.</div>'}</div>
@@ -531,6 +523,10 @@
               <button class="tiny-btn" id="ccAddFala">Adicionar</button>
             </div>
           </div>
+          <div class="cc-etapa-head"><span class="eyebrow">${esc(F[etapa.foco]||'Etapa')}</span><h2>${esc(etapa.titulo)}</h2><p class="muted">${esc(etapa.objetivo)}</p></div>
+          ${renderPerguntasBloco(s, d, etapa)}
+          <details class="cc-orient"${store().ui.orientOculta?'':' open'} id="ccOrient"><summary>Como conduzir esta etapa</summary><ul>${etapa.orientacoes.map(o=>`<li>${esc(o)}</li>`).join('')}</ul></details>
+          <div class="cc-anot"><h4>Sua anotação nesta etapa</h4><textarea class="textarea" id="ccNota" data-etapa="${etapa.id}" placeholder="Escreva aqui como se estivesse registrando o que a pessoa respondeu, o que você pensou e o que decidiu.">${esc(s.notas[etapa.id]||'')}</textarea></div>
         </section>
         <aside class="cc-coach card">
           <h3>Painel de orientação</h3>
@@ -580,7 +576,30 @@
   }
   function renderPergunta(s, key, texto, tipo, indice){
     const feita = s.asked.includes(key);
-    return `<div class="cc-q${feita?' feita':''}"><button type="button" data-cc-ask="${esc(key)}" data-texto="${esc(texto)}" data-tipo="${tipo}" data-indice="${indice}">${esc(texto)}</button><span>${feita?'✓':'+'}</span></div>`;
+    return `<div class="cc-q${feita?' feita':''}"><button type="button" data-cc-ask="${esc(key)}" data-texto="${esc(texto)}" data-tipo="${tipo}" data-indice="${indice}">${esc(texto)}</button><span>${feita?'✓':'+'}</span><button type="button" class="cc-q-hide" data-cc-ocultar="${esc(key)}" title="Ocultar esta pergunta">×</button></div>`;
+  }
+  /* Bloco de perguntas com opções de ocultar: o roteiro inteiro, as já feitas
+   * ou uma pergunta específica. */
+  function renderPerguntasBloco(s, d, etapa){
+    const ui = store().ui;
+    const ocultas = s.perguntasOcultas || (s.perguntasOcultas = []);
+    const visivel = item => !ocultas.includes(item.key) && (!ui.ocultarFeitas || !s.asked.includes(item.key));
+    const doMetodo = etapa.perguntas.map((q,i) => ({ q, i, key:`${etapa.id}-m${i}`, tipo:'metodo' })).filter(visivel);
+    const daDoenca = perguntasDaDoenca(d, etapa).map((q,i) => ({ q, i, key:`${etapa.id}-d${i}`, tipo:'doenca' })).filter(visivel);
+    const escondidasAqui = ocultas.filter(k => k.startsWith(`${etapa.id}-`)).length;
+    const cabecalho = `<div class="section-title cc-perguntas-head"><h4>Perguntas sugeridas</h4><div class="cc-perguntas-acoes">
+      <button class="tiny-btn${ui.ocultarFeitas?' active':''}" id="ccOcultarFeitas" title="Some com as perguntas que você já fez">${ui.ocultarFeitas?'Mostrando só as pendentes':'Ocultar as já feitas'}</button>
+      ${escondidasAqui?`<button class="tiny-btn" id="ccRestaurarOcultas">Restaurar ${escondidasAqui} oculta${escondidasAqui>1?'s':''}</button>`:''}
+      <button class="tiny-btn" id="ccTogglePerguntas">${ui.perguntasOcultas?'Mostrar perguntas':'Ocultar perguntas'}</button>
+    </div></div>`;
+    if(ui.perguntasOcultas) return `<div class="cc-perguntas recolhido">${cabecalho}</div>`;
+    const listaMetodo = doMetodo.length
+      ? `<div class="cc-q-list">${doMetodo.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i)).join('')}</div>`
+      : '<p class="muted cc-q-vazio">Nenhuma pergunta do método visível nesta etapa.</p>';
+    const listaDoenca = d && daDoenca.length
+      ? `<h4 class="cc-q-title">Dirigido a: ${esc(d.nome)}</h4><div class="cc-q-list">${daDoenca.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i)).join('')}</div>`
+      : '';
+    return `<div class="cc-perguntas">${cabecalho}<h4 class="cc-q-title">Frases e perguntas do método</h4>${listaMetodo}${listaDoenca}</div>`;
   }
 
   function perguntasDaDoenca(d, etapa){
@@ -591,12 +610,6 @@
     if(etapa.foco === 'sintese') return (d.hipoteses||[]).map(x => `Considerar: ${x}`);
     if(etapa.foco === 'plano' || etapa.foco === 'fechamento') return d.conduta.map(x => `Conduta: ${x}`);
     return d.perguntas;
-  }
-
-  function renderPerguntasDoenca(s, d, etapa){
-    const list = perguntasDaDoenca(d, etapa);
-    if(!list.length) return '';
-    return `<h4 class="cc-q-title">Dirigido a: ${esc(d.nome)}</h4><div class="cc-q-list">${list.map((q,i)=>renderPergunta(s, `${etapa.id}-d${i}`, q, 'doenca', i)).join('')}</div>`;
   }
 
   function totalPerguntas(m, d){
@@ -835,6 +848,21 @@
     root.querySelector('#ccTopIdade').onchange = e => { s.paciente.idade = e.target.value; touch(); render(); };
     root.querySelector('#ccTopSexo').onchange = e => { s.paciente.sexo = e.target.value; touch(); render(); };
     root.querySelectorAll('[data-cc-step]').forEach(btn => btn.onclick = () => { finalizarAnimacao(); s.etapaAtiva = btn.dataset.ccStep; touch(); render(); });
+    root.querySelector('#ccTogglePerguntas')?.addEventListener('click', () => { st.ui.perguntasOcultas = !st.ui.perguntasOcultas; save(); render(); });
+    root.querySelector('#ccOcultarFeitas')?.addEventListener('click', () => { st.ui.ocultarFeitas = !st.ui.ocultarFeitas; save(); render(); });
+    root.querySelector('#ccRestaurarOcultas')?.addEventListener('click', () => {
+      const etapaId = (s.etapaAtiva || metodo(s.metodoId).etapas[0].id);
+      s.perguntasOcultas = (s.perguntasOcultas || []).filter(k => !k.startsWith(`${etapaId}-`));
+      touch(); render();
+    });
+    root.querySelectorAll('[data-cc-ocultar]').forEach(btn => btn.onclick = event => {
+      event.stopPropagation();
+      const key = btn.dataset.ccOcultar;
+      s.perguntasOcultas = s.perguntasOcultas || [];
+      if(!s.perguntasOcultas.includes(key)) s.perguntasOcultas.push(key);
+      touch(); render();
+    });
+    root.querySelector('#ccOrient')?.addEventListener('toggle', event => { st.ui.orientOculta = !event.target.open; save(); });
     // Clicar numa pergunta só a coloca no campo de digitação: quem conduz a fala é você.
     root.querySelectorAll('[data-cc-ask]').forEach(btn => btn.onclick = () => {
       const campo = root.querySelector('#ccFala');

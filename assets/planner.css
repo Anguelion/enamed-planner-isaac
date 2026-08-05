@@ -1815,9 +1815,9 @@ body.dark .cc-safety{background:#332a18;color:#ffe6ad;border-color:#765c25}
 .cc-orient ul{margin:0;padding-left:18px}.cc-orient li{margin:3px 0}
 .cc-q-title{margin-top:16px}
 .cc-q-list{display:grid;gap:6px;margin-bottom:8px}
-.cc-q{display:grid;grid-template-columns:minmax(0,1fr) 22px;align-items:center;gap:8px}
-.cc-q button{width:100%;text-align:left;padding:9px 11px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--text);font:inherit;font-size:13.5px;cursor:pointer;line-height:1.4}
-.cc-q button:hover{border-color:var(--primary)}
+.cc-q{display:grid;grid-template-columns:minmax(0,1fr) 22px 22px;align-items:center;gap:8px}
+.cc-q button:not(.cc-q-hide){width:100%;text-align:left;padding:9px 11px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--text);font:inherit;font-size:13.5px;cursor:pointer;line-height:1.4}
+.cc-q button:not(.cc-q-hide):hover{border-color:var(--primary)}
 .cc-q.feita button{border-color:#9bd7bd;background:color-mix(in srgb,#16a178 8%,var(--panel))}
 .cc-q>span{text-align:center;color:var(--muted);font-weight:700}
 .cc-q.feita>span{color:#16a178}
@@ -1828,6 +1828,17 @@ body.dark .cc-safety{background:#332a18;color:#ffe6ad;border-color:#765c25}
 .cc-linha.paciente{border-left:3px solid #e89a22}
 .cc-linha span{grid-column:1/-1;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .cc-linha p{margin:2px 0 0}
+.cc-perguntas-head{align-items:flex-start;gap:10px;flex-wrap:wrap}
+.cc-perguntas-acoes{display:flex;gap:6px;flex-wrap:wrap}
+.cc-perguntas-acoes .tiny-btn.active{border-color:var(--brand);color:var(--brand)}
+.cc-perguntas.recolhido{padding-bottom:2px}
+.cc-q-vazio{font-size:14px;margin:4px 0 8px}
+.cc-q-hide{width:22px;height:22px;line-height:1;border:0;border-radius:50%;background:transparent;color:var(--muted);font-size:16px;cursor:pointer;opacity:.25;transition:opacity .15s}
+.cc-q:hover .cc-q-hide,.cc-q-hide:focus{opacity:1}
+.cc-q-hide:hover{background:var(--line);color:var(--text)}
+.cc-orient{margin:10px 0 14px}
+.cc-orient>summary{cursor:pointer;font-weight:700;font-size:14px;padding:6px 0}
+.cc-dialogo{margin-bottom:16px}
 .cc-dialogo-input{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-top:8px}
 .cc-dialogo-input select{grid-column:1/-1;width:100%}
 .cc-dialogo-input input{min-width:0;width:100%}
