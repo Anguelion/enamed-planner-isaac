@@ -525,6 +525,8 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
   max-width: 660px;
 }
 
+#flashcards .flashcard-command-copy > div { min-width: 0; }
+
 #flashcards .flashcard-command-icon {
   width: 58px;
   height: 58px;
@@ -757,7 +759,7 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
   #flashcards .flashcard-command h1 { font-size: 28px; }
   #flashcards .flashcard-command .muted { font-size: 12px; }
   #flashcards .flashcard-command-actions { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  #flashcards .flashcard-command-actions .icon-btn { width: 100%; justify-content: center; min-width: 0; font-size: 12px; }
+  #flashcards .flashcard-command-actions .icon-btn { width: 100%; justify-content: center; min-width: 0; padding-inline: 8px; font-size: 11px; line-height: 1.25; white-space: normal; }
   #flashcards .flashcard-command-actions .icon-btn.primary { grid-column: 1 / -1; }
   #flashcards .flashcard-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   #flashcards .flashcard-metrics .metric-card { min-height: 98px; padding: 14px; }

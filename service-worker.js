@@ -20,7 +20,7 @@ const APP_SHELL = [
   './assets/semiologia-aulas.js?v=20260802-3',
   './assets/semiologia.js?v=20260802-9',
   './assets/caso-do-dia.js?v=20260729-4',
-  './assets/planner.js?v=20260805-4',
+  './assets/planner.js?v=20260805-5',
   './assets/mascote-ia.js?v=20260802-10',
   './assets/dr-sotero.png',
   './assets/icons/icon-192.png',

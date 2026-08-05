@@ -7136,7 +7136,7 @@ function currentVideoLesson() {
     }
   }
   const pinned = state.videoPlayer?.pinned;
-  if(pinned?.enabled) {
+  if(pinned?.enabled && !ui.videoSearch) {
     const pinnedLesson = displayVideoLessons().find(lesson => lesson.id === pinned.lessonId);
     const blockAllowsPinned = !ui.videoBlock || ui.videoBlock === 'Todos' || String(pinnedLesson?.block) === String(ui.videoBlock);
     if(pinnedLesson && blockAllowsPinned) {
@@ -7148,7 +7148,7 @@ function currentVideoLesson() {
     }
   }
   const lastOpen = state.videoPlayer?.lastOpen;
-  if(!ui.videoLessonId && lastOpen?.lessonId) {
+  if(!ui.videoLessonId && !ui.videoSearch && lastOpen?.lessonId) {
     const rememberedLesson = displayVideoLessons().find(lesson => lesson.id === lastOpen.lessonId);
     const blockAllowsLastOpen = !ui.videoBlock || ui.videoBlock === 'Todos' || String(rememberedLesson?.block) === String(ui.videoBlock);
     if(rememberedLesson && blockAllowsLastOpen) {
