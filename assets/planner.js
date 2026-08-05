@@ -115,7 +115,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', scheduleBlock: 'Atual', refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 try {
   const savedCadernoView = JSON.parse(localStorage.getItem(CADERNO_VIEW_KEY) || '{}');
@@ -3385,8 +3385,9 @@ function filteredSchedule() {
     const okText = !q || [x.topic,x.area,x.week,x.priority,x.notes,x.date].join(' ').toLowerCase().includes(q);
     const okArea = ui.area==='Todas' || x.area===ui.area;
     const okStatus = ui.status==='Todos' || st===ui.status;
+    const okPriority = ui.priority==='Todas' || x.priority===ui.priority;
     const okBlock = ui.scheduleBlock==='Todos' || (ui.scheduleBlock==='Atual' ? String(x.block)===currentBlock : String(x.block)===String(ui.scheduleBlock));
-    return okText && okArea && okStatus && okBlock;
+    return okText && okArea && okStatus && okPriority && okBlock;
   }).sort(byDate);
 }
 function metric(label,value,foot='') { return `<div class="card metric-card"><div class="metric-label">${label}</div><div class="metric-value">${value}</div><div class="metric-foot">${foot}</div></div>`; }
@@ -3419,7 +3420,8 @@ function blockStatusTitle(status) {
 }
 function renderBlockStrip() {
   const current = String(currentScheduleBlock());
-  return `<div class="block-strip"><button class="block-chip ${ui.scheduleBlock==='Todos'?'active':''}" data-schedule-block="Todos">Todos</button>${scheduleBlocks().map(block => {
+  const pinned = Boolean(ui.scheduleBlockPinned) && ui.scheduleBlock!=='Todos';
+  return `<div class="block-strip"><button class="icon-btn block-pin-toggle ${pinned?'active':''}" id="blockPinToggle" title="${pinned?`Bloco ${escapeAttr(ui.scheduleBlock)} fixado — clique para destravar`:'Fixar o bloco selecionado'}" ${ui.scheduleBlock==='Todos'?'disabled':''}>${pinned?'📌 Fixado':'📌 Fixar'}</button><button class="block-chip ${ui.scheduleBlock==='Todos'?'active':''}" data-schedule-block="Todos">Todos</button>${scheduleBlocks().map(block => {
     const status = blockStatus(block);
     const weekCurrent = block === current;
     return `<button class="block-chip ${String(ui.scheduleBlock)===block?'active':''} ${status} ${weekCurrent?'week-current':''}" title="${escapeAttr(weekCurrent?'Bloco desta semana':blockStatusTitle(status))}" data-schedule-block="${escapeAttr(block)}">${escapeHtml(block)}</button>`;
@@ -4583,7 +4585,7 @@ function renderCronograma() {
   const areas = ['Todas', ...new Set(state.schedule.map(x=>x.area).filter(Boolean).sort())];
   const rows = filteredSchedule();
   const changed = lastChangedLesson();
-  document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2>Blocos do cronograma</h2><div class="muted">${changed ? `Última aula: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}<div class="toolbar"><input class="input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}"><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select><select class="select" id="statusFilter">${['Todos','Concluído','Aguardando','Não Iniciado'].map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select><button class="icon-btn" id="clearFilters">Limpar filtros</button></div></div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
+  document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2>Blocos do cronograma</h2><div class="muted">${changed ? `Última aula: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}<div class="toolbar"><input class="input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}"><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select><select class="select" id="statusFilter">${['Todos','Concluído','Aguardando','Não Iniciado'].map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select><select class="select" id="priorityFilter">${['Todas','Alta','Média','Baixa'].map(p=>`<option ${p===ui.priority?'selected':''}>${escapeHtml(p)}</option>`).join('')}</select><button class="icon-btn" id="clearFilters">Limpar filtros</button></div></div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
   enhanceScheduleStudyIcons();
   document.getElementById('search').oninput = debounce(e => {
     const value=e.target.value;
@@ -4594,7 +4596,13 @@ function renderCronograma() {
   }, 220);
   document.getElementById('areaFilter').onchange = e => { ui.area=e.target.value; render(); };
   document.getElementById('statusFilter').onchange = e => { ui.status=e.target.value; render(); };
+  document.getElementById('priorityFilter').onchange = e => { ui.priority=e.target.value; render(); };
+  document.getElementById('blockPinToggle').onclick = () => {
+    ui.scheduleBlockPinned = !ui.scheduleBlockPinned;
+    render();
+  };
   document.querySelectorAll('[data-schedule-block]').forEach(button => button.onclick = e => {
+    if(ui.scheduleBlockPinned) return;
     ui.scheduleBlock = e.currentTarget.dataset.scheduleBlock;
     render();
     requestAnimationFrame(() => {
@@ -4602,7 +4610,7 @@ function renderCronograma() {
       if(picked) { picked.classList.add('block-chip-pulse'); setTimeout(() => picked.classList.remove('block-chip-pulse'), 500); }
     });
   });
-  document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.scheduleBlock='Atual'; render(); };
+  document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.priority='Todas'; if(!ui.scheduleBlockPinned) ui.scheduleBlock='Atual'; render(); };
   bindScheduleInputs();
 }
 function areaLine(a) { return `<div class="area-bar"><strong>${escapeHtml(a.area)}</strong><div class="bar"><span style="width:${pct(a.progress)}"></span></div><span>${pct(a.progress)}</span></div>`; }
