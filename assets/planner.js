@@ -3490,7 +3490,7 @@ function blockStatusTitle(status) {
 function renderBlockStrip() {
   const current = String(currentScheduleBlock());
   const pinned = Boolean(ui.scheduleBlockPinned) && ui.scheduleBlock!=='Todos';
-  return `<div class="block-strip"><button class="icon-btn block-pin-toggle ${pinned?'active':''}" id="blockPinToggle" title="${pinned?`Bloco ${escapeAttr(ui.scheduleBlock)} fixado — clique para destravar`:'Fixar o bloco selecionado'}" ${ui.scheduleBlock==='Todos'?'disabled':''}>${pinned?'📌 Fixado':'📌 Fixar'}</button><button class="block-chip ${ui.scheduleBlock==='Todos'?'active':''}" data-schedule-block="Todos">Todos</button>${scheduleBlocks().map(block => {
+  return `<div class="block-strip"><button class="icon-btn block-pin-toggle ${pinned?'active':''}" id="blockPinToggle" title="${pinned?`Bloco ${escapeAttr(ui.scheduleBlock)} fixado — clique para destravar`:'Fixar o bloco selecionado'}" ${ui.scheduleBlock==='Todos'?'disabled':''}>${pinned?'📌 Fixado':'📌 Fixar'}</button><button class="block-chip block-chip-all ${ui.scheduleBlock==='Todos'?'active':''}" data-schedule-block="Todos" title="Todos os blocos" aria-label="Todos os blocos">${iconSvg('dashboard')}</button>${scheduleBlocks().map(block => {
     const status = blockStatus(block);
     const weekCurrent = block === current;
     return `<button class="block-chip ${String(ui.scheduleBlock)===block?'active':''} ${status} ${weekCurrent?'week-current':''}" title="${escapeAttr(weekCurrent?'Bloco desta semana':blockStatusTitle(status))}" data-schedule-block="${escapeAttr(block)}">${escapeHtml(block)}</button>`;
