@@ -151,6 +151,7 @@ test('scheduleCloudRetry: nao ultrapassa o teto de espera mesmo apos muitas falh
 
 test('flashcards: sair do modo foco pausa o cronometro sem zera-lo, e retomar continua do mesmo ponto', () => {
   const ctx = loadPlannerSandbox();
+  const ui = ctx.__getUi();
   ctx.startAutoStudy('flashcards', 'sched-1');
   const tracker = ctx.__getStudyTimeTracker();
   tracker.startedAt -= 90 * 1000; // finge 90s de estudo decorridos
@@ -158,10 +159,30 @@ test('flashcards: sair do modo foco pausa o cronometro sem zera-lo, e retomar co
   ctx.pauseAutoStudy('flashcards');
   assert.equal(ctx.autoStudyIsRunning('flashcards'), false, 'pausar para de contar');
   assert.equal(ctx.autoStudyElapsedSeconds(), 90, 'pausar nao pode zerar o tempo ja estudado — esse era o bug do modo foco');
-  ctx.startAutoStudy('flashcards', 'sched-1');
+  ui.tab = 'flashcards';
+  ui.flashcardFocusMode = false;
+  ui.flashcardFocusPaused = false;
+  ctx.resumeAutoStudyForActiveView();
+  assert.equal(ctx.autoStudyIsRunning('flashcards'), false, 'fora do modo foco o tempo nao pode voltar a correr');
+  ui.flashcardFocusMode = true;
+  ctx.resumeAutoStudyForActiveView();
   assert.equal(ctx.autoStudyIsRunning('flashcards'), true);
   assert.equal(ctx.autoStudyElapsedSeconds(), 90, 'retomar continua exatamente de onde parou, sem perder nem duplicar tempo');
   ctx.stopAutoStudy();
+});
+
+test('questoes: cronometro automatico roda somente com o modo foco ativo', () => {
+  const ctx = loadPlannerSandbox();
+  const ui = ctx.__getUi();
+  ui.tab = 'questoes';
+  ctx.setQuestionFocusMode(false);
+  ctx.ensureQuestionFocusStudyTimer();
+  assert.equal(ctx.autoStudyIsRunning('questions'), false, 'painel aberto nao deve contabilizar tempo de questoes');
+  ctx.setQuestionFocusMode(true);
+  ctx.ensureQuestionFocusStudyTimer({ id:'question-focus-test' });
+  assert.equal(ctx.autoStudyIsRunning('questions'), true, 'entrar no modo foco deve iniciar a contagem');
+  ctx.setQuestionFocusMode(false);
+  assert.equal(ctx.autoStudyIsRunning('questions'), false, 'sair do modo foco deve encerrar a contagem');
 });
 
 test('renderFlashcardStudy: tela de fim de sessao no modo foco oferece saida; fora do foco nao exibe o botao', () => {

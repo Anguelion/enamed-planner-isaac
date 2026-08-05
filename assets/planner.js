@@ -2940,7 +2940,7 @@ function resumeAutoStudyForActiveView() {
   }
   // Voltar para a aba (ou para o planner depois de um F5) retoma o mesmo
   // cronômetro de onde ele parou, em vez de deixá-lo congelado.
-  if(ui.tab === 'flashcards' && studyTimeTracker.kind === 'flashcards' && !ui.flashcardFocusPaused) {
+  if(ui.tab === 'flashcards' && ui.flashcardFocusMode && studyTimeTracker.kind === 'flashcards' && !ui.flashcardFocusPaused) {
     startAutoStudy('flashcards', studyTimeTracker.scheduleId || '');
     return;
   }
@@ -8162,16 +8162,20 @@ function renderFlashcards() {
     input.onchange = e => updateVideoFlashcard(e.currentTarget);
   });
   bindFlashcardMarkdownTools(document.getElementById('flashcards') || document);
-  // O tempo de flashcards conta sempre que houver um card aberto, dentro ou fora
-  // do modo foco. Antes, sair do foco chamava stopAutoStudy e zerava a sessão;
-  // agora só pausamos, preservando o acumulado para quando o estudo continuar.
-  if(study && !ui.flashcardFocusPaused) startAutoStudy('flashcards', study.scheduleId || '');
+  // Flashcards so contam tempo durante o modo foco. Sair do foco pausa (sem
+  // zerar) para que uma nova entrada continue exatamente de onde parou.
+  if(ui.flashcardFocusMode && study && !ui.flashcardFocusPaused) startAutoStudy('flashcards', study.scheduleId || '');
   else pauseAutoStudy('flashcards');
   const focusClock = document.getElementById('flashcardFocusClock');
-  if(focusClock) focusClock.onclick = () => {
-    ui.flashcardFocusPaused = !ui.flashcardFocusPaused;
-    renderFlashcards();
-  };
+  if(focusClock && !ui.flashcardFocusMode) {
+    focusClock.textContent = 'Tempo só no foco';
+    focusClock.title = 'Entre no modo foco para iniciar o cronômetro';
+  } else if(focusClock) {
+    focusClock.onclick = () => {
+      ui.flashcardFocusPaused = !ui.flashcardFocusPaused;
+      renderFlashcards();
+    };
+  }
 }
 function renderFlashcardIndicators(all, queue, reviewed, due) {
   const retention = reviewed ? Math.round(all.filter(card => flashcardProgress(card).lastRating >= 3).length / reviewed * 100) : 0;
