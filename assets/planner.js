@@ -8701,6 +8701,29 @@ function bindQuestionTagFilters() {
     renderQuestionBank();
   });
 }
+function backToQuestionSelection() {
+  ui.qFocusScheduleId = '';
+  ui.qFocusQuestionIds = [];
+  ui.qFocusTarget = 0;
+  ui.qBlock = 'Todos';
+  ui.qSource = 'Todas';
+  ui.qTopic = 'Todos';
+  ui.qStatus = 'Todas';
+  ui.qSearch = '';
+  ui.qIndex = 0;
+  ui.qQuestionId = '';
+  ui.justAnsweredId = '';
+  resetKeyboardConfirmation();
+  if(questionSidebarCollapsed) setQuestionFocusMode(false);
+  syncRouteFromUI('push');
+  render();
+}
+function renderQuestionEmptyState(message) {
+  return `<div class="empty question-session-end"><div>${escapeHtml(message)}</div><button class="icon-btn primary" id="backToQuestionBlocksBtn" type="button">‹ Escolher novo bloco de questões</button></div>`;
+}
+function bindQuestionEmptyState() {
+  document.getElementById('backToQuestionBlocksBtn')?.addEventListener('click', backToQuestionSelection);
+}
 function refreshQuestionSearchResults() {
   const searchInput = document.getElementById('questionSearch');
   const keepSearchFocus = document.activeElement === searchInput;
@@ -8712,9 +8735,10 @@ function refreshQuestionSearchResults() {
   const activeQuestion = question ? applyQuestionEdits(question) : null;
   const card = document.querySelector('#questoes .question-card');
   if(!card) return;
-  card.innerHTML = activeQuestion ? renderQuestion(activeQuestion, questions.length) : '<div class="empty">Nenhuma questão corresponde a esta busca.</div>';
+  card.innerHTML = activeQuestion ? renderQuestion(activeQuestion, questions.length) : renderQuestionEmptyState('Nenhuma questão corresponde a esta busca.');
   bindQuestionTagFilters();
   bindQuestionActions(questions, activeQuestion);
+  bindQuestionEmptyState();
   updateAutoStudyIndicator();
   if(keepSearchFocus && searchInput?.isConnected) requestAnimationFrame(() => {
     searchInput.focus({ preventScroll:true });
@@ -8843,7 +8867,7 @@ function renderQuestionBank() {
         <select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select>
       </div></details>
     </aside>
-    <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : '<div class="empty">Nenhuma questão corresponde a este filtro.</div>'}</div>
+    <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : renderQuestionEmptyState(ui.qFocusScheduleId ? 'Você concluiu as questões desta aula.' : 'Nenhuma questão corresponde a este filtro.')}</div>
   </div>`;
   document.getElementById('questionBlock').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('collapseQuestionSidebar').onclick = () => setQuestionFocusMode(true);
@@ -8873,6 +8897,7 @@ function renderQuestionBank() {
   document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
   bindQuestionTagFilters();
   bindQuestionActions(questions, activeQuestion);
+  bindQuestionEmptyState();
   if(questionSidebarCollapsed && activeQuestion && !autoStudyIsRunning('questions')) startAutoStudy('questions',scheduleForQuestion(activeQuestion)?.id || '',60);
   updateAutoStudyIndicator();
 }

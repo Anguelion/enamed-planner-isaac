@@ -94,6 +94,7 @@ td.num,th.num{text-align:right}
 .today-layout{grid-template-columns:360px 1fr}
 .day-picker{display:flex;gap:8px;align-items:center}
 .empty{padding:28px;text-align:center;color:var(--muted)}
+.question-session-end{display:flex;flex-direction:column;align-items:center;gap:14px}
 .audit{display:grid;gap:8px}
 .audit-row{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;border-top:1px solid var(--line);padding-top:10px}
 .audit-row:first-child{border-top:0;padding-top:0}
