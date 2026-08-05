@@ -171,3 +171,18 @@ test('parágrafos do material não recebem a navegação dos cartões de bloco',
   assert.match(planner,/querySelectorAll\('\.materials-collection-card\[data-material-block\]'\)/);
   assert.doesNotMatch(planner,/querySelectorAll\('\[data-material-block\]'\)\.forEach\(button => button\.onclick/);
 });
+
+test('cabeçalho desktop oferece histórico interno com voltar, avançar e atalhos',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+  assert.match(html,/id="headerHistoryBack"[^>]*disabled/);
+  assert.match(html,/id="headerHistoryForward"[^>]*disabled/);
+  assert.match(planner,/function updatePlannerHistoryButtons/);
+  assert.match(planner,/history\.back\(\)/);
+  assert.match(planner,/history\.forward\(\)/);
+  assert.match(planner,/event\.altKey[\s\S]*?event\.key==='ArrowLeft'/);
+  assert.match(css,/\.header-history\{display:inline-flex/);
+  assert.match(css,/@media\(max-width:1024px\)\{[\s\S]*?\.header-history\{display:none\}/);
+});

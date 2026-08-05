@@ -3685,6 +3685,22 @@ function startDashboardCountdown() {
   update();
   dashboardCountdownInterval = setInterval(update, 60000);
 }
+const PLANNER_HISTORY_MAX_KEY = 'enamed-planner-history-max';
+let plannerHistoryIndex = Math.max(0, Number(history.state?.plannerHistoryIndex) || 0);
+let plannerHistoryMax = Math.max(plannerHistoryIndex, Number(sessionStorage.getItem(PLANNER_HISTORY_MAX_KEY)) || 0);
+function updatePlannerHistoryButtons() {
+  const back=document.getElementById('headerHistoryBack');
+  const forward=document.getElementById('headerHistoryForward');
+  if(back) back.disabled=plannerHistoryIndex<=0;
+  if(forward) forward.disabled=plannerHistoryIndex>=plannerHistoryMax;
+}
+function pushPlannerHistoryState(hash) {
+  plannerHistoryIndex+=1;
+  plannerHistoryMax=plannerHistoryIndex;
+  sessionStorage.setItem(PLANNER_HISTORY_MAX_KEY,String(plannerHistoryMax));
+  history.pushState(navigationSnapshot(),'',hash);
+  updatePlannerHistoryButtons();
+}
 function currentRouteState() {
   const activeRun=state.simuladoRuns?.find(run=>run.id===ui.activeSimRunId);
   return {
@@ -3698,6 +3714,7 @@ function currentRouteState() {
 }
 function navigationSnapshot() {
   return {
+    plannerHistoryIndex,
     route:currentRouteState(),
     ui:{
       tab:ui.tab,qBlock:ui.qBlock,qSource:ui.qSource,qTopic:ui.qTopic,qStatus:ui.qStatus,qSearch:ui.qSearch,qIndex:ui.qIndex,qQuestionId:ui.qQuestionId,
@@ -3714,9 +3731,10 @@ function syncRouteFromUI(mode='replace') {
   const current=`${window.location.hash||''}`;
   if(mode==='push') {
     history.replaceState(navigationSnapshot(),'',window.location.href);
-    history.pushState(navigationSnapshot(),'',hash);
+    pushPlannerHistoryState(hash);
   } else if(current!==hash) history.replaceState(navigationSnapshot(),'',hash);
   else history.replaceState(navigationSnapshot(),'',window.location.href);
+  updatePlannerHistoryButtons();
 }
 function closeTransientPanels() {
   setPomodoroPanelOpen(false);
@@ -3769,7 +3787,7 @@ function navigateToTab(nextTab,{push=true}={}) {
   ui.tab=nextTab;
   if(nextTab==='simulados'&&ui.activeSimRunId) ui.simulationLibraryOpen=false;
   const hash=PlannerUX?.buildRoute(currentRouteState())||`#/${nextTab}`;
-  if(push) history.pushState(navigationSnapshot(),'',hash);
+  if(push) pushPlannerHistoryState(hash);
   else history.replaceState(navigationSnapshot(),'',hash);
   render();
   requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'auto'}));
@@ -3778,6 +3796,7 @@ function navigateToTab(nextTab,{push=true}={}) {
 function restoreNavigation(event) {
   const parsed=PlannerUX?.parseRoute(window.location.hash)||{tab:'painel'};
   const snapshot=event?.state;
+  if(Number.isFinite(Number(snapshot?.plannerHistoryIndex))) plannerHistoryIndex=Math.max(0,Number(snapshot.plannerHistoryIndex));
   const nextTab=parsed.tab||snapshot?.ui?.tab||'painel';
   if(!prepareViewTransition(nextTab)) {
     history.forward();
@@ -3785,6 +3804,7 @@ function restoreNavigation(event) {
   }
   if(snapshot?.ui) Object.assign(ui,snapshot.ui);
   ui.tab=nextTab;
+  updatePlannerHistoryButtons();
   if(parsed.questionId) { ui.qQuestionId=parsed.questionId; ui.qRouteRestorePending=true; }
   if(parsed.videoId) ui.videoSourceId=parsed.videoId;
   if(parsed.attemptId) {
@@ -11159,6 +11179,13 @@ document.getElementById('themeToggle')?.addEventListener('click', event => {
 });
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 document.addEventListener('keydown', event => {
+  if(event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey && (event.key==='ArrowLeft' || event.key==='ArrowRight')) {
+    event.preventDefault();
+    if(event.repeat) return;
+    const button=document.getElementById(event.key==='ArrowLeft'?'headerHistoryBack':'headerHistoryForward');
+    if(button && !button.disabled) button.click();
+    return;
+  }
   if((event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === 'l') {
     event.preventDefault();
     if(event.repeat) return;
@@ -11193,6 +11220,8 @@ document.addEventListener('keydown', event => {
   else if(key === 'j' || event.key === '=') { event.preventDefault(); event.stopPropagation(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
 }, true);
 document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.pomodoroOpen=!ui.pomodoroOpen; navigateToTab('painel'); });
+document.getElementById('headerHistoryBack')?.addEventListener('click', () => { if(plannerHistoryIndex>0) history.back(); });
+document.getElementById('headerHistoryForward')?.addEventListener('click', () => { if(plannerHistoryIndex<plannerHistoryMax) history.forward(); });
 document.getElementById('headerSendBtn')?.addEventListener('click', () => forcePushThisDeviceToCloud());
 document.getElementById('headerReceiveBtn')?.addEventListener('click', () => {
   if(!currentUser || !sbClient) { showStudyToast('Entre na sua conta para receber dados da nuvem.'); return; }

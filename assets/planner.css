@@ -8,6 +8,14 @@ button{cursor:pointer}
 h1{font-size:24px;line-height:1.15;margin:0;font-weight:800}
 .sub{color:var(--muted);font-size:13px;margin-top:4px}
 .header-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.header-leading{display:flex;align-items:center;gap:14px;min-width:0}
+.header-history{display:inline-flex;flex:0 0 auto;padding:3px;border:1px solid var(--line);border-radius:999px;background:var(--panel);box-shadow:0 3px 10px rgba(18,63,89,.06)}
+.header-history button{display:grid;place-items:center;width:34px;height:32px;padding:0;border:0;border-radius:999px;background:transparent;color:var(--blue);font-size:19px;font-weight:800;line-height:1;transition:background .16s,color .16s,transform .16s}
+.header-history button:not(:disabled):hover{background:var(--soft-blue);transform:translateY(-1px)}
+.header-history button:focus-visible{outline:3px solid color-mix(in srgb,var(--blue) 24%,transparent);outline-offset:1px}
+.header-history button:disabled{color:var(--muted);cursor:default;opacity:.35}
+body.dark .header-history{background:#202a2a;border-color:#344241}
+body.dark .header-history button:not(:disabled):hover{background:#18313a;color:#8fd4e7}
 .icon-btn,.tab{border:1px solid var(--line);background:var(--panel);border-radius:999px;min-height:38px;padding:8px 12px;color:var(--ink);box-shadow:0 1px 0 rgba(18,63,89,.03)}
 .icon-btn:hover,.tab:hover{border-color:var(--teal);box-shadow:var(--focus)}
 .icon-btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
@@ -1460,6 +1468,7 @@ body.dark .sidebar-toggle{background:#18313a;color:#8fd4e7}
   .app-header,body.sidebar-collapsed .app-header{width:100%}
   main{padding-bottom:calc(var(--mobile-nav-height) + 16px)}
   .header-context{display:none}
+  .header-history{display:none}
   #syncText{display:none}
   .sync-status{padding:8px;min-height:38px;min-width:38px;justify-content:center}
   .header-inner{display:block;min-height:auto;padding:8px 10px}

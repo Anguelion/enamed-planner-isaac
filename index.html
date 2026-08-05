@@ -13,7 +13,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/planner.css?v=20260805-3">
+  <link rel="stylesheet" href="assets/planner.css?v=20260805-4">
   <link rel="stylesheet" href="assets/anatomia.css?v=20260802-8">
   <link rel="stylesheet" href="assets/planner-refresh.css?v=20260805-2">
   <link rel="stylesheet" href="assets/mascote-ia.css?v=20260802-7">
@@ -46,7 +46,13 @@
 </aside>
 <header class="app-header">
   <div class="header-inner">
-    <div class="header-context"><strong>Central de estudos</strong><span>Seu percurso para o ENAMED, organizado em um só lugar.</span></div>
+    <div class="header-leading">
+      <nav class="header-history" aria-label="Histórico de navegação">
+        <button type="button" id="headerHistoryBack" aria-label="Voltar para a tela anterior" title="Voltar (Alt + ←)" disabled>←</button>
+        <button type="button" id="headerHistoryForward" aria-label="Avançar para a próxima tela" title="Avançar (Alt + →)" disabled>→</button>
+      </nav>
+      <div class="header-context"><strong>Central de estudos</strong><span>Seu percurso para o ENAMED, organizado em um só lugar.</span></div>
+    </div>
     <div class="header-actions">
       <div class="sync-status" id="syncStatus" title="Estado da sincronização"><span class="sync-dot"></span><span id="syncText">Local</span></div>
       <button class="icon-btn primary header-tool" id="printBtn" title="Imprimir estatísticas" aria-label="Imprimir estatísticas" data-app-icon="analysis"></button>
@@ -94,7 +100,7 @@
   <script src="assets/caso-do-dia.js?v=20260729-4"></script>
   <script src="assets/consulta-doencas.js?v=20260803-2"></script>
   <script src="assets/consulta-clinica.js?v=20260803-3"></script>
-  <script src="assets/planner.js?v=20260805-7"></script>
+  <script src="assets/planner.js?v=20260805-8"></script>
   <script src="assets/mascote-ia.js?v=20260802-10"></script>
 
 </body>
