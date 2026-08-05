@@ -62,6 +62,13 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
   };
   const originUrl = new URL(origin);
   const locationStub = { protocol: originUrl.protocol, hostname: originUrl.hostname, search: '', hash: '', href: `${origin}/`, origin };
+  const historyStub = {
+    state: null,
+    pushState(state) { this.state = state; },
+    replaceState(state) { this.state = state; },
+    back() {},
+    forward() {}
+  };
   const sandbox = {
     window: {},
     document: documentStub,
@@ -69,6 +76,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
     location: locationStub,
     localStorage: storage(),
     sessionStorage: storage(),
+    history: historyStub,
     console,
     URLSearchParams,
     URL,
@@ -83,6 +91,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
     Intl
   };
   sandbox.window.location = locationStub;
+  sandbox.window.history = historyStub;
   sandbox.window.addEventListener = () => {};
   sandbox.window.removeEventListener = () => {};
   sandbox.window.supabase = undefined;

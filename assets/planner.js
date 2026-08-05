@@ -3686,8 +3686,11 @@ function startDashboardCountdown() {
   dashboardCountdownInterval = setInterval(update, 60000);
 }
 const PLANNER_HISTORY_MAX_KEY = 'enamed-planner-history-max';
-let plannerHistoryIndex = Math.max(0, Number(history.state?.plannerHistoryIndex) || 0);
-let plannerHistoryMax = Math.max(plannerHistoryIndex, Number(sessionStorage.getItem(PLANNER_HISTORY_MAX_KEY)) || 0);
+const initialPlannerHistoryIndex = Number(history.state?.plannerHistoryIndex);
+const plannerHistoryRestored = Number.isFinite(initialPlannerHistoryIndex);
+let plannerHistoryIndex = plannerHistoryRestored ? Math.max(0,initialPlannerHistoryIndex) : 0;
+let plannerHistoryMax = plannerHistoryRestored ? Math.max(plannerHistoryIndex,Number(sessionStorage.getItem(PLANNER_HISTORY_MAX_KEY))||0) : 0;
+if(!plannerHistoryRestored) sessionStorage.setItem(PLANNER_HISTORY_MAX_KEY,'0');
 function updatePlannerHistoryButtons() {
   const back=document.getElementById('headerHistoryBack');
   const forward=document.getElementById('headerHistoryForward');
@@ -3719,6 +3722,7 @@ function navigationSnapshot() {
     ui:{
       tab:ui.tab,qBlock:ui.qBlock,qSource:ui.qSource,qTopic:ui.qTopic,qStatus:ui.qStatus,qSearch:ui.qSearch,qIndex:ui.qIndex,qQuestionId:ui.qQuestionId,
       videoBlock:ui.videoBlock,videoSearch:ui.videoSearch,videoLessonId:ui.videoLessonId,videoSourceId:ui.videoSourceId,
+      materialsSection:ui.materialsSection,materialBlock:ui.materialBlock,materialSpecialty:ui.materialSpecialty,materialScheduleId:ui.materialScheduleId,materialDocId:ui.materialDocId,materialSearch:ui.materialSearch,materialFocusMode:ui.materialFocusMode,
       activeSimRunId:ui.activeSimRunId,simulationLibraryOpen:ui.simulationLibraryOpen
     },
     scrollY:window.scrollY
@@ -3796,7 +3800,10 @@ function navigateToTab(nextTab,{push=true}={}) {
 function restoreNavigation(event) {
   const parsed=PlannerUX?.parseRoute(window.location.hash)||{tab:'painel'};
   const snapshot=event?.state;
-  if(Number.isFinite(Number(snapshot?.plannerHistoryIndex))) plannerHistoryIndex=Math.max(0,Number(snapshot.plannerHistoryIndex));
+  if(Number.isFinite(Number(snapshot?.plannerHistoryIndex))) {
+    plannerHistoryIndex=Math.max(0,Number(snapshot.plannerHistoryIndex));
+    plannerHistoryMax=Math.max(plannerHistoryMax,plannerHistoryIndex);
+  }
   const nextTab=parsed.tab||snapshot?.ui?.tab||'painel';
   if(!prepareViewTransition(nextTab)) {
     history.forward();
