@@ -4,7 +4,7 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './assets/planner.css?v=20260805-3',
   './assets/anatomia.css?v=20260802-8',
-  './assets/planner-refresh.css?v=20260802-1',
+  './assets/planner-refresh.css?v=20260805-2',
   './assets/mascote-ia.css?v=20260802-7',
   './assets/app-icons.js?v=20260802-1',
   './assets/icons/phosphor-sprite.svg',

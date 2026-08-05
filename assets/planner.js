@@ -8813,6 +8813,51 @@ function applyQuestionEdits(question) {
     edited: true
   };
 }
+function questionLessonResumePlan() {
+  const ordered = (state.schedule || []).filter(item => !item.catchUp).slice().sort(byDate);
+  const lastId = state.questionSettings?.lastOpenedScheduleId || ui.qFocusScheduleId || '';
+  const lastItem = ordered.find(item => item.id === lastId) || null;
+  const lessonState = item => {
+    const target = lessonQuestionTarget(item);
+    const completed = completedQuestions(item);
+    return { item, target, completed, remaining:Math.max(0,target-completed), pending:target>0 && completed<target };
+  };
+  const last = lastItem ? lessonState(lastItem) : null;
+  if(last?.pending) return { ...last, kind:'resume', lastCompleted:false };
+
+  const startIndex = lastItem ? ordered.findIndex(item => item.id === lastItem.id) + 1 : 0;
+  const candidates = [...ordered.slice(startIndex), ...ordered.slice(0,startIndex)].map(lessonState);
+  const currentBlock = String(currentScheduleBlock());
+  const next = (!lastItem ? candidates.find(entry => String(entry.item.block)===currentBlock && entry.pending) : null)
+    || candidates.find(entry => entry.pending)
+    || null;
+  if(next) return { ...next, kind:lastItem?'next':'start', lastCompleted:Boolean(lastItem) };
+  return { item:lastItem, target:last?.target || 0, completed:last?.completed || 0, remaining:0, pending:false, kind:'complete', lastCompleted:Boolean(lastItem) };
+}
+function exploreQuestionBank() {
+  ui.qFocusScheduleId='';
+  ui.qFocusQuestionIds=[];
+  ui.qFocusTarget=0;
+  ui.qBlock='Todos';
+  ui.qSource='Todas';
+  ui.qTopic='Todos';
+  ui.qStatus='Todas';
+  ui.qSearch='';
+  ui.qIndex=0;
+  ui.qQuestionId='';
+  ui.justAnsweredId='';
+  resetKeyboardConfirmation();
+  render();
+}
+function continueQuestionTraining() {
+  const plan = questionLessonResumePlan();
+  if(!plan.item || !plan.pending) {
+    showStudyToast(plan.item ? `Você já concluiu a meta de questões de todas as aulas disponíveis.` : 'Ainda não há uma aula com questões disponível para continuar.');
+    return;
+  }
+  if(plan.lastCompleted) showStudyToast(`Meta da última aula concluída. Abrindo a próxima: ${plan.item.topic}.`);
+  openQuestionsForSchedule(plan.item.id);
+}
 function openQuestionsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
@@ -8842,6 +8887,9 @@ function openQuestionsForSchedule(scheduleId) {
   ui.qIndex = 0;
   ui.qQuestionId = '';
   ui.justAnsweredId = '';
+  state.questionSettings.lastOpenedScheduleId = item.id;
+  state.questionSettings.lastOpenedAt = new Date().toISOString();
+  saveStateOnly({invalidate:false});
   resetKeyboardConfirmation();
   navigateToTab('questoes');
 }
@@ -9071,6 +9119,11 @@ function renderQuestionBank() {
   const activeQuestion = question ? applyQuestionEdits(question) : null;
   const answerRate = summary.answered ? Math.round((summary.correct / summary.answered) * 100) : 0;
   const pendingCount = Math.max(0, questionBank.length - summary.answered);
+  const resumePlan = questionLessonResumePlan();
+  const resumeTitle = resumePlan.kind === 'next' ? 'Próxima aula' : resumePlan.kind === 'complete' ? 'Meta concluída' : resumePlan.kind === 'start' ? 'Começar treino' : 'Continuar treino';
+  const resumeDetail = resumePlan.item
+    ? `${resumePlan.item.topic} · ${resumePlan.pending ? `${resumePlan.remaining} questões` : `${resumePlan.completed}/${resumePlan.target} feitas`}`
+    : `${pendingCount.toLocaleString('pt-BR')} pendentes`;
   document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
     <header class="qbank-overview">
       <div class="qbank-overview-copy"><span class="qbank-eyebrow">Treino inteligente</span><h1>Central de questões</h1><p>Pratique com foco, acompanhe sua evolução e transforme erros em revisão.</p></div>
@@ -9080,9 +9133,9 @@ function renderQuestionBank() {
         <div class="${answerRate >= 70 ? 'positive' : ''}"><span>Precisão</span><strong>${answerRate}%</strong><small>${summary.correct} acertos</small></div>
       </div>
       <div class="qbank-quick-actions" role="group" aria-label="Filtros rápidos">
-        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Não respondidas'?'active':''}" data-question-quick-filter="Não respondidas"><span class="quick-filter-dot pending"></span><strong>Continuar treino</strong><small>${pendingCount.toLocaleString('pt-BR')} pendentes</small></button>
+        <button type="button" class="qbank-quick-filter ${ui.qFocusScheduleId?'active':''}" id="continueQuestionTraining"><span class="quick-filter-dot pending"></span><strong>${escapeHtml(resumeTitle)}</strong><small title="${escapeAttr(resumeDetail)}">${escapeHtml(resumeDetail)}</small></button>
         <button type="button" class="qbank-quick-filter ${ui.qStatus==='Erradas'?'active':''}" data-question-quick-filter="Erradas"><span class="quick-filter-dot errors"></span><strong>Revisar erros</strong><small>${(summary.answered-summary.correct).toLocaleString('pt-BR')} para rever</small></button>
-        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas'?'active':''}" data-question-quick-filter="Todas"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>Todos os temas</small></button>
+        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas' && ui.qBlock==='Todos' && !ui.qFocusScheduleId && !ui.qSearch?'active':''}" id="exploreQuestionBank"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>Todos os blocos</small></button>
       </div>
     </header>
     <aside class="card question-sidebar">
@@ -9112,8 +9165,10 @@ function renderQuestionBank() {
   document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionTopic').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qTopic=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('questionStatus').onchange = e => { ui.qStatus=e.target.value; ui.qIndex=0; ui.justAnsweredId=''; render(); };
-  document.querySelectorAll('[data-question-quick-filter]').forEach(button => button.onclick = e => { ui.qStatus=e.currentTarget.dataset.questionQuickFilter; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
-  document.getElementById('questionClearFilters').onclick = () => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qStatus='Todas'; ui.qSearch=''; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); };
+  document.querySelectorAll('[data-question-quick-filter]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qStatus=e.currentTarget.dataset.questionQuickFilter; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
+  document.getElementById('continueQuestionTraining').onclick = continueQuestionTraining;
+  document.getElementById('exploreQuestionBank').onclick = exploreQuestionBank;
+  document.getElementById('questionClearFilters').onclick = exploreQuestionBank;
   const questionSearch = document.getElementById('questionSearch');
   questionSearch.oninput = e => {
     ui.qSearch = e.target.value;
