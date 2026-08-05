@@ -3490,7 +3490,7 @@ function blockStatusTitle(status) {
 function renderBlockStrip() {
   const current = String(currentScheduleBlock());
   const pinned = Boolean(ui.scheduleBlockPinned) && ui.scheduleBlock!=='Todos';
-  return `<div class="block-strip" role="toolbar" aria-label="Escolher bloco do cronograma"><button class="icon-btn block-pin-toggle ${pinned?'active':''}" id="blockPinToggle" type="button" title="${pinned?`Bloco ${escapeAttr(ui.scheduleBlock)} fixado — clique para destravar`:'Manter o bloco selecionado ao limpar os filtros'}" aria-pressed="${pinned}" ${ui.scheduleBlock==='Todos'?'disabled':''}>${iconSvg('flag',{weight:pinned?'duotone':'regular'})}<span>${pinned?'Fixado':'Fixar'}</span></button><button class="block-chip block-chip-all ${ui.scheduleBlock==='Todos'?'active':''}" type="button" data-schedule-block="Todos" title="Ver todos os blocos" aria-label="Ver todos os blocos" aria-pressed="${ui.scheduleBlock==='Todos'}">${iconSvg('dashboard')}</button>${scheduleBlocks().map(block => {
+  return `<div class="block-strip" role="toolbar" aria-label="Escolher bloco do cronograma"><button class="icon-btn block-pin-toggle ${pinned?'active':''}" id="blockPinToggle" type="button" title="${pinned?`Bloco ${escapeAttr(ui.scheduleBlock)} fixado — clique para destravar`:'Fixar o bloco selecionado'}" aria-label="${pinned?`Desfixar bloco ${escapeAttr(ui.scheduleBlock)}`:'Fixar o bloco selecionado'}" aria-pressed="${pinned}" ${ui.scheduleBlock==='Todos'?'disabled':''}>${iconSvg('flag',{weight:pinned?'duotone':'regular'})}</button><button class="block-chip block-chip-all ${ui.scheduleBlock==='Todos'?'active':''}" type="button" data-schedule-block="Todos" title="Ver todos os blocos" aria-label="Ver todos os blocos" aria-pressed="${ui.scheduleBlock==='Todos'}">${iconSvg('dashboard')}</button>${scheduleBlocks().map(block => {
     const status = blockStatus(block);
     const weekCurrent = block === current;
     const active = String(ui.scheduleBlock)===block || (ui.scheduleBlock==='Atual' && weekCurrent);
@@ -4718,6 +4718,15 @@ function renderScheduleTable(rows, editable=false) {
 }
 function enhanceScheduleStudyIcons() {
   const currentBlock=n(currentScheduleBlock());
+  const today=studyDateKey();
+  const currentLesson=(state.schedule || [])
+    .filter(item=>!item.catchUp && n(item.block)===currentBlock && statusOf(item)!=='Concluído')
+    .sort((a,b)=>{
+      const aFuture=a.date>=today;
+      const bFuture=b.date>=today;
+      if(aFuture!==bFuture) return aFuture?-1:1;
+      return aFuture ? byDate(a,b) : byDate(b,a);
+    })[0] || null;
   document.querySelectorAll('.schedule-table tbody tr').forEach(row => {
     const videoToggle=row.querySelector('[data-toggle-schedule-video]');
     const openVideo=row.querySelector('[data-open-schedule-videos]');
@@ -4739,13 +4748,16 @@ function enhanceScheduleStudyIcons() {
       readable.textContent=`${formatStudyHours(item.hours)} vinculadas à aula`;
       hoursInput.insertAdjacentElement('afterend',readable);
     }
-    if(item.date===studyDateKey()) {
-      row.classList.add('schedule-today-row');
+    const isToday=item.date===today;
+    const isCurrent=!isToday && item.id===currentLesson?.id;
+    if(isToday || isCurrent) {
+      if(isToday) row.classList.add('schedule-today-row');
+      else row.classList.add('schedule-current-row');
       const dateCell=row.querySelector('.schedule-date-cell');
       if(dateCell && !dateCell.querySelector('.schedule-today-marker')) {
         const marker=document.createElement('span');
-        marker.className='schedule-today-marker';
-        marker.innerHTML='<span>Hoje</span><b aria-hidden="true">→</b>';
+        marker.className=`schedule-today-marker ${isCurrent?'current':''}`;
+        marker.innerHTML=`<span>${isToday?'Hoje':'Aula atual'}</span><b aria-hidden="true">→</b>`;
         dateCell.prepend(marker);
       }
     }
