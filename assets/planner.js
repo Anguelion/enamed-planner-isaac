@@ -553,6 +553,10 @@ function ensureQuestionProgress() {
   if(!state.prescriptionLab.library || typeof state.prescriptionLab.library !== 'object') state.prescriptionLab.library = {medications:[],exams:[],others:[]};
   ['medications','exams','others'].forEach(key => { if(!Array.isArray(state.prescriptionLab.library[key])) state.prescriptionLab.library[key]=[]; });
   if(!Array.isArray(state.hiddenHistoryDates)) state.hiddenHistoryDates = [];
+  if(!state.historyHiddenAt || typeof state.historyHiddenAt !== 'object') state.historyHiddenAt = {};
+  state.hiddenHistoryDates.forEach(date => {
+    if(!state.historyHiddenAt[date]) state.historyHiddenAt[date] = state.historyClearedAt || new Date().toISOString();
+  });
   if(!state.dashboardSettings.countdownDate) {
     state.dashboardSettings.countdownDate = [...(state.schedule || [])].map(x => x.date).filter(Boolean).sort().at(-1) || '2026-11-01';
   }
@@ -1057,6 +1061,20 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   const remote = remoteState && typeof remoteState === 'object' ? structuredClone(remoteState) : {};
   const local = localState && typeof localState === 'object' ? localState : {};
   const merged = preferLocal ? { ...remote, ...local } : { ...local, ...remote };
+  const remoteHiddenAt = remote.historyHiddenAt && typeof remote.historyHiddenAt === 'object' ? remote.historyHiddenAt : {};
+  const localHiddenAt = local.historyHiddenAt && typeof local.historyHiddenAt === 'object' ? local.historyHiddenAt : {};
+  merged.historyHiddenAt = {};
+  new Set([...Object.keys(remoteHiddenAt), ...Object.keys(localHiddenAt)]).forEach(date => {
+    const remoteTime = timestampOf(remoteHiddenAt[date]);
+    const localTime = timestampOf(localHiddenAt[date]);
+    merged.historyHiddenAt[date] = localTime >= remoteTime ? localHiddenAt[date] : remoteHiddenAt[date];
+  });
+  merged.hiddenHistoryDates = [...new Set([
+    ...(Array.isArray(remote.hiddenHistoryDates) ? remote.hiddenHistoryDates : []),
+    ...(Array.isArray(local.hiddenHistoryDates) ? local.hiddenHistoryDates : []),
+    ...Object.keys(merged.historyHiddenAt)
+  ])];
+  merged.historyClearedAt = timestampOf(local.historyClearedAt) >= timestampOf(remote.historyClearedAt) ? (local.historyClearedAt || '') : (remote.historyClearedAt || '');
   const scheduleIdRemap = buildScheduleIdRemap(remote.schedule, local.schedule);
   if(scheduleIdRemap.size) {
     Object.keys(remote.questionProgress || {}).forEach(id => { remote.questionProgress[id] = remapScheduleRecord(remote.questionProgress[id], scheduleIdRemap); });
@@ -2442,7 +2460,6 @@ function repairDailyActivityData() {
 // da data em que o bloco foi de fato concluído. Corrige o que já foi salvo.
 function repairFutureBlockCompletionDates() {
   if(!state.activityDataRepairs || typeof state.activityDataRepairs !== 'object') state.activityDataRepairs = {};
-  if(state.activityDataRepairs.blockCompletionDatesV1) return;
   const now = new Date();
   (state.gamification?.xpTransactions || []).forEach(t => {
     if(t.activity_type !== 'block_completion') return;
@@ -2457,11 +2474,42 @@ function dayLogHasActivity(log) {
 }
 function reviveHiddenHistoryDates() {
   if(!Array.isArray(state.hiddenHistoryDates) || !state.hiddenHistoryDates.length) return;
-  const activeDates = new Set((state.dayLogs || []).filter(dayLogHasActivity).map(log => log.date));
-  state.hiddenHistoryDates = state.hiddenHistoryDates.filter(date => !activeDates.has(date));
+  if(!state.historyHiddenAt || typeof state.historyHiddenAt !== 'object') state.historyHiddenAt = {};
+  state.hiddenHistoryDates = state.hiddenHistoryDates.filter(date => {
+    const hiddenAt = timestampOf(state.historyHiddenAt[date] || state.historyClearedAt);
+    const latestActivityAt = latestHistoryActivityTimestamp(date);
+    if(hiddenAt && latestActivityAt > hiddenAt) {
+      return false;
+    }
+    return true;
+  });
+}
+function latestHistoryActivityTimestamp(date) {
+  let latest = 0;
+  const include = value => {
+    if(answerDate(value) !== date) return;
+    const timestamp = timestampOf(value);
+    if(timestamp > Date.now() + 5 * 60 * 1000) return;
+    latest = Math.max(latest, timestamp);
+  };
+  Object.values(state.questionProgress || {}).forEach(progress => include(progress?.answeredAt));
+  (state.simuladoRuns || []).forEach(run => include(run?.finishedAt));
+  (state.flashcardSystem?.reviewLogs || []).forEach(log => include(log?.reviewedAt));
+  (state.gamification?.xpTransactions || []).forEach(transaction => include(transaction?.occurred_at));
+  (state.studySessions || []).forEach(session => include(session?.savedAt));
+  (state.dayLogs || []).filter(log => log.date === date).forEach(log => include(log.updatedAt));
+  return latest;
+}
+function hideHistoryDates(dates, hiddenAt=nowIso()) {
+  if(!state.historyHiddenAt || typeof state.historyHiddenAt !== 'object') state.historyHiddenAt = {};
+  const validDates = [...new Set((dates || []).filter(Boolean))];
+  validDates.forEach(date => {
+    if(timestampOf(hiddenAt) >= timestampOf(state.historyHiddenAt[date])) state.historyHiddenAt[date] = hiddenAt;
+  });
+  state.hiddenHistoryDates = [...new Set([...(state.hiddenHistoryDates || []), ...validDates])];
 }
 function getDayLog(date) { ensureDayLogs(); let log = state.dayLogs.find(x=>x.date===date); if(!log) { log = defaultDayLog(date); state.dayLogs.push(log); } return log; }
-function setDayLog(date, field, value) { const log = getDayLog(date); log[field] = value; persist(); }
+function setDayLog(date, field, value) { const log = getDayLog(date); log[field] = value; log.updatedAt = nowIso(); persist(); }
 function emptyStudyTimer() { return { kind:'', scheduleId:'', startedAt:0, elapsedSeconds:0, committedSeconds:0, minimumSaveSeconds:0, lastSavedAt:0, interval:null, displayInterval:null }; }
 function loadStudyTimerSession() {
   try {
@@ -2796,6 +2844,7 @@ function commitAutoStudyTime(tracker, seconds) {
   if(!tracker?.kind || !seconds) return 0;
   const studyDate = studyDateKey();
   const log = getDayLog(studyDate);
+  log.updatedAt = nowIso();
   const minutes = seconds / 60;
   if(tracker.kind === 'video') {
     log.videosOn = true;
@@ -3402,7 +3451,27 @@ function currentScheduleBlock() {
   return next?.block || scheduleBlocks()[0] || '';
 }
 function lastChangedLesson() {
-  return state.schedule.filter(item => item.notes || n(item.manualQ)!==n(item.q) || n(item.manualFC)!==n(item.fc) || n(item.hours)>0).sort((a,b)=>byDate(b,a))[0] || null;
+  const scheduleById = new Map((state.schedule || []).map(item => [item.id, item]));
+  const activityBySchedule = new Map();
+  const record = (scheduleId, value) => {
+    const timestamp = timestampOf(value);
+    if(!scheduleById.has(scheduleId) || !timestamp || timestamp > Date.now() + 5 * 60 * 1000) return;
+    if(timestamp > n(activityBySchedule.get(scheduleId))) activityBySchedule.set(scheduleId, timestamp);
+  };
+  (state.studySessions || []).forEach(session => record(session.scheduleId, session.savedAt));
+  Object.values(state.questionProgress || {}).forEach(progress => record(progress?.scheduleId, progress?.answeredAt || progress?.updatedAt));
+  (state.flashcardSystem?.reviewLogs || []).forEach(review => record(review?.scheduleId, review?.reviewedAt));
+  (state.gamification?.xpTransactions || []).forEach(transaction => record(transaction?.metadata?.scheduleId, transaction?.occurred_at));
+  record(state.videoPlayer?.lastOpen?.lessonId, state.videoPlayer?.lastOpen?.updatedAt);
+  const actual = [...activityBySchedule.entries()].sort((a,b) => b[1]-a[1])[0];
+  if(actual) return { ...scheduleById.get(actual[0]), date:studyDateKey(new Date(actual[1])), activityAt:new Date(actual[1]).toISOString() };
+  // Registros legados não têm horário da atividade. Nesse caso, só aceitamos
+  // aulas cuja data planejada já chegou; uma aula futura nunca pode ser exibida
+  // como "última aula".
+  const today = studyDateKey();
+  return state.schedule
+    .filter(item => item.date && item.date <= today && (item.notes || n(item.manualQ)!==n(item.q) || n(item.manualFC)!==n(item.fc) || n(item.hours)>0))
+    .sort((a,b)=>byDate(b,a))[0] || null;
 }
 function blockStatus(block) {
   const items = state.schedule.filter(item => String(item.block) === String(block));
@@ -3637,7 +3706,6 @@ function closeTransientPanels() {
   setPomodoroPanelOpen(false);
   setDailyMissionPanelOpen(false);
   document.querySelectorAll('.dashboard-gamification-popover[open]').forEach(details => details.removeAttribute('open'));
-  document.querySelectorAll('.schedule-filter[open]').forEach(details => details.removeAttribute('open'));
 }
 function pauseOpenVideo() {
   const video=document.getElementById('lessonVideo');
@@ -4589,23 +4657,11 @@ function renderCronograma() {
   const statusOptions=['Todos','Concluído','Aguardando','Não Iniciado'];
   const priorityOptions=['Todas','Alta','Média','Baixa'];
   const toolbar=`<div class="schedule-toolbar">
-    <div class="schedule-search ${ui.search?'is-open':''}">
-      <button type="button" class="icon-btn schedule-search-toggle" id="scheduleSearchToggle" title="Buscar" aria-label="Buscar">${iconSvg('search')}</button>
-      <input class="input schedule-search-input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}">
-    </div>
-    <details class="schedule-filter" name="scheduleFilter">
-      <summary class="icon-btn" title="Área${ui.area!=='Todas'?': '+escapeAttr(ui.area):''}" aria-label="Filtrar por área">${iconSvg('areas')}${ui.area!=='Todas'?'<span class="schedule-filter-dot"></span>':''}</summary>
-      <div class="schedule-filter-panel"><label>Área</label><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select></div>
-    </details>
-    <details class="schedule-filter" name="scheduleFilter">
-      <summary class="icon-btn" title="Status${ui.status!=='Todos'?': '+ui.status:''}" aria-label="Filtrar por status">${iconSvg('success')}${ui.status!=='Todos'?'<span class="schedule-filter-dot"></span>':''}</summary>
-      <div class="schedule-filter-panel"><label>Status</label><select class="select" id="statusFilter">${statusOptions.map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select></div>
-    </details>
-    <details class="schedule-filter" name="scheduleFilter">
-      <summary class="icon-btn" title="Prioridade${ui.priority!=='Todas'?': '+ui.priority:''}" aria-label="Filtrar por prioridade">${iconSvg('flag')}${ui.priority!=='Todas'?'<span class="schedule-filter-dot"></span>':''}</summary>
-      <div class="schedule-filter-panel"><label>Prioridade</label><select class="select" id="priorityFilter">${priorityOptions.map(p=>`<option ${p===ui.priority?'selected':''}>${escapeHtml(p)}</option>`).join('')}</select></div>
-    </details>
-    <button class="icon-btn" id="clearFilters" title="Limpar filtros" aria-label="Limpar filtros">${iconSvg('refresh')}</button>
+    <input class="input schedule-toolbar-search" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}">
+    <select class="select schedule-toolbar-select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select>
+    <select class="select schedule-toolbar-select" id="statusFilter">${statusOptions.map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select>
+    <select class="select schedule-toolbar-select" id="priorityFilter">${priorityOptions.map(p=>`<option ${p===ui.priority?'selected':''}>${escapeHtml(p)}</option>`).join('')}</select>
+    <button class="icon-btn schedule-toolbar-clear" id="clearFilters">Limpar</button>
   </div>`;
   document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2 class="schedule-title">Blocos do cronograma</h2><div class="muted">${changed ? `Última aula: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}${toolbar}</div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
   enhanceScheduleStudyIcons();
@@ -4616,7 +4672,6 @@ function renderCronograma() {
     renderCronograma();
     requestAnimationFrame(() => { const input=document.getElementById('search'); if(input) { input.focus(); input.setSelectionRange(cursor,cursor); } });
   }, 220);
-  document.getElementById('scheduleSearchToggle').onclick = () => { document.getElementById('search')?.focus(); };
   document.getElementById('areaFilter').onchange = e => { ui.area=e.target.value; render(); };
   document.getElementById('statusFilter').onchange = e => { ui.status=e.target.value; render(); };
   document.getElementById('priorityFilter').onchange = e => { ui.priority=e.target.value; render(); };
@@ -5690,11 +5745,14 @@ function topicForBlockCompletion(t) {
   return item ? `Bloco ${t.source_id} concluído · ${item.area}` : `Bloco ${t.source_id} concluído`;
 }
 function buildHistoryRow(date) {
-  const log = getDayLog(date);
-  const qRows = dailyQuestionRows(date);
-  const fcEvents = dailyFlashcardEvents(date);
-  const videoEvents = dailyVideoEvents(date);
-  const blockEvents = dailyBlockCompletions(date);
+  const storedLog = getDayLog(date);
+  const hiddenAt = timestampOf(state.historyHiddenAt?.[date]);
+  const afterClear = value => !hiddenAt || timestampOf(value) > hiddenAt;
+  const log = hiddenAt && !afterClear(storedLog.updatedAt) ? defaultDayLog(date) : storedLog;
+  const qRows = dailyQuestionRows(date).filter(row => afterClear(row.answeredAt));
+  const fcEvents = dailyFlashcardEvents(date).filter(event => afterClear(event.log?.reviewedAt));
+  const videoEvents = dailyVideoEvents(date).filter(event => afterClear(event.occurred_at));
+  const blockEvents = dailyBlockCompletions(date).filter(event => afterClear(event.occurred_at));
   const questionSeconds = qRows.reduce((s,r)=>s+n(r.seconds),0);
   const videoSeconds = videoEvents.filter(t=>t.activity_type==='video_progress').reduce((s,t)=>s+n(t.metadata?.seconds),0);
   const manualMinutes = n(log.lessonMinutes) + n(log.materialMinutes) + n(log.simuladoMinutes) + n(log.flashcardMinutes) + n(log.questionMinutes);
@@ -5717,16 +5775,27 @@ function buildHistoryRow(date) {
 function historyRows() {
   ensureDayLogs();
   const hiddenDates = new Set(state.hiddenHistoryDates || []);
+  const today = studyDateKey();
   const dates = new Set();
   state.dayLogs.forEach(log => { if(dayLogHasActivity(log)) dates.add(log.date); });
   questionBank.forEach(question => { const result = questionResult(question); const d = result?.answeredAt ? answerDate(result.answeredAt) : ''; if(d) dates.add(d); });
   (state.simuladoRuns || []).forEach(run => { const d = run.finishedAt ? answerDate(run.finishedAt) : ''; if(d) dates.add(d); });
   (state.flashcardSystem?.reviewLogs || []).forEach(log => { const d = answerDate(log.reviewedAt); if(d) dates.add(d); });
   (state.gamification?.xpTransactions || []).forEach(t => { if(['video_progress','video_completion','block_completion'].includes(t.activity_type)) { const d = t.occurred_at ? answerDate(t.occurred_at) : ''; if(d) dates.add(d); } });
-  return [...dates].filter(date => !hiddenDates.has(date)).map(buildHistoryRow).sort((a,b) => b.date.localeCompare(a.date));
+  return [...dates].filter(date => date <= today && !hiddenDates.has(date)).map(buildHistoryRow).sort((a,b) => b.date.localeCompare(a.date));
 }
 function renderRecentActivityCard() {
-  const transactions=[...(state.gamification?.xpTransactions||[])].sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||'')).slice(0,5);
+  const hiddenDates = new Set(state.hiddenHistoryDates || []);
+  const transactions=[...(state.gamification?.xpTransactions||[])]
+    .filter(item => {
+      const timestamp = timestampOf(item.occurred_at);
+      const date = answerDate(item.occurred_at);
+      const hiddenAt = timestampOf(state.historyHiddenAt?.[date]);
+      if(!timestamp || timestamp > Date.now() + 5 * 60 * 1000 || hiddenDates.has(date) || (hiddenAt && timestamp <= hiddenAt)) return false;
+      return true;
+    })
+    .sort((a,b)=>Date.parse(b.occurred_at||'')-Date.parse(a.occurred_at||''))
+    .slice(0,5);
   return `<section class="card"><div class="section-title"><div><span class="eyebrow">Ledger de XP</span><h2>Atividade recente</h2></div></div><div class="dashboard-recent-list">${transactions.length?transactions.map(item=>`<div><span>${iconSvg(item.activity_type==='video_progress'||item.activity_type==='video_completion'?'play':item.activity_type==='flashcard_review'?'cards':'brain')}</span><strong>${escapeHtml(gamificationActivityLabel(item))}</strong><time>${new Date(item.occurred_at).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</time></div>`).join(''):'<div class="muted">Suas próximas atividades aparecerão aqui.</div>'}</div></section>`;
 }
 function renderHistorico() {
@@ -5740,15 +5809,17 @@ function removeHistoryRecord(date) {
   if(!confirmed) return;
   const log = state.dayLogs.find(item => item.date === date);
   if(log) Object.assign(log, defaultDayLog(date));
-  state.hiddenHistoryDates = [...new Set([...(state.hiddenHistoryDates || []), date])];
+  hideHistoryDates([date]);
   persist();
   renderHistorico();
 }
 function clearAllHistory() {
   const confirmed = confirm('⚠️ Deseja apagar TODO o histórico de atividades?\n\nIsso limpará todas as datas registradas. Respostas individuais, flashcards criados e vídeos marcados como assistidos continuarão salvos. Esta ação não pode ser desfeita.\n\nDeseja continuar?');
   if(!confirmed) return;
+  const clearedAt = nowIso();
+  hideHistoryDates(historyRows().map(row => row.date), clearedAt);
+  state.historyClearedAt = clearedAt;
   state.dayLogs = [];
-  state.hiddenHistoryDates = [];
   persist();
   renderHistorico();
 }
@@ -10998,7 +11069,6 @@ document.addEventListener('click', event => {
   }
   if(!event.target.closest?.('#globalPomodoro')) setPomodoroPanelOpen(false);
   if(!event.target.closest?.('#globalDailyMission')) setDailyMissionPanelOpen(false);
-  document.querySelectorAll('.schedule-filter[open]').forEach(details => { if(!details.contains(event.target)) details.removeAttribute('open'); });
   const box = document.getElementById('materialGlobalSearchResults');
   const wrap = document.getElementById('materialGlobalSearchWrap');
   if(box && !box.hidden && wrap && !wrap.contains(event.target)) box.hidden = true;

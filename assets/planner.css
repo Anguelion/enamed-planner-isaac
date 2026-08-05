@@ -71,20 +71,12 @@ h3{font-size:14px;margin:0 0 8px}
 .warn{color:var(--amber)}
 .toolbar{display:grid;grid-template-columns:1fr 160px 160px 150px;gap:10px}
 .input,.select{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:38px;padding:8px 10px;color:var(--ink)}
-.schedule-title{font-size:15px}
-.schedule-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.schedule-search{display:flex;align-items:center;min-width:0}
-.schedule-search-toggle{flex:0 0 auto;border-radius:999px}
-.schedule-search-input{width:0;min-width:0;min-height:0;padding:0;margin-left:0;border:none;background:transparent;opacity:0;transition:width .18s ease,padding .18s ease,margin .18s ease,opacity .12s ease}
-.schedule-search:focus-within .schedule-search-input,.schedule-search.is-open .schedule-search-input{width:200px;min-height:38px;padding:8px 10px;margin-left:6px;border:1px solid var(--line);background:var(--panel);opacity:1}
-.schedule-filter{position:relative}
-.schedule-filter>summary{list-style:none;cursor:pointer;position:relative}
-.schedule-filter>summary::-webkit-details-marker{display:none}
-.schedule-filter[open]>summary{border-color:var(--teal);box-shadow:var(--focus)}
-.schedule-filter-dot{position:absolute;top:4px;right:4px;width:7px;height:7px;border-radius:999px;background:var(--blue);box-shadow:0 0 0 2px var(--panel)}
-.schedule-filter-panel{position:absolute;left:0;top:calc(100% + 8px);z-index:12;display:grid;gap:6px;width:200px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:var(--shadow)}
-.schedule-filter-panel label{font-size:12px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.02em}
-.schedule-toolbar .icon-btn{width:38px;height:38px;min-height:38px;padding:0;display:inline-flex;align-items:center;justify-content:center}
+.schedule-title{font-size:14px}
+.schedule-toolbar{display:flex;flex-wrap:nowrap;align-items:center;gap:6px;overflow-x:auto}
+.schedule-toolbar .input,.schedule-toolbar .select{min-height:30px;padding:4px 8px;font-size:12px;border-radius:8px}
+.schedule-toolbar-search{flex:1 1 140px;min-width:90px}
+.schedule-toolbar-select{flex:0 1 96px;min-width:70px}
+.schedule-toolbar-clear{flex:0 0 auto;min-height:30px;padding:4px 10px;font-size:12px;white-space:nowrap}
 .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--panel)}
 table{width:100%;border-collapse:collapse;min-width:900px}
 th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:middle;font-size:13px}
@@ -400,7 +392,7 @@ body.dark .pomodoro-fruit{background:#1b222c}body.dark .pomodoro-fruit.active{ba
 .countdown-ring small{display:block;color:var(--muted);font-size:11px;font-weight:800;margin-top:6px}
 .countdown-detail{font-size:13px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
 .block-strip{display:flex;gap:8px;overflow:auto;padding:4px 0 10px}
-.block-chip{border:1px solid var(--line);background:#fff;border-radius:999px;min-width:46px;min-height:36px;font-weight:900;position:relative;padding-left:15px}
+.block-chip{border:1px solid var(--line);background:#fff;border-radius:999px;min-width:30px;min-height:26px;padding:2px 10px 2px 15px;font-size:12px;font-weight:900;position:relative}
 .block-chip:before{content:"";position:absolute;left:7px;top:50%;transform:translateY(-50%);width:7px;height:7px;border-radius:50%;background:var(--line)}
 .block-chip.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 0 0 3px rgba(18,97,245,.3)}
 @keyframes block-chip-pulse{0%{box-shadow:0 0 0 0 rgba(18,97,245,.55)}100%{box-shadow:0 0 0 16px rgba(18,97,245,0)}}

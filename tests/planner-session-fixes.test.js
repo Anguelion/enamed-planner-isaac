@@ -174,3 +174,58 @@ test('renderFlashcardStudy: tela de fim de sessao no modo foco oferece saida; fo
   const semFoco = ctx.renderFlashcardStudy(null, []);
   assert.ok(!semFoco.includes('flashcardFocusToggle'), 'fora do modo foco o botao extra nao deve poluir a tela');
 });
+
+test('historico: Limpar tudo cria marcadores persistentes e o merge da nuvem nao ressuscita datas antigas', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  state.dayLogs = [
+    { ...ctx.defaultDayLog('2025-12-29'), questions: 12, correct: 8, wrong: 4, updatedAt: '2025-12-29T18:00:00.000Z' }
+  ];
+  state.hiddenHistoryDates = [];
+  state.historyHiddenAt = {};
+  ctx.confirm = () => true;
+
+  assert.equal(ctx.historyRows().length, 1, 'o registro antigo existe antes da limpeza');
+  ctx.clearAllHistory();
+  assert.equal(ctx.historyRows().length, 0, 'a lista fica vazia imediatamente apos Limpar tudo');
+  assert.ok(state.hiddenHistoryDates.includes('2025-12-29'), 'a data apagada fica marcada para nao ser reconstruida');
+
+  const merged = ctx.mergePlannerActivityState(
+    { schedule: state.schedule, dayLogs: [{ ...ctx.defaultDayLog('2025-12-29'), questions: 12, updatedAt: '2025-12-29T18:00:00.000Z' }] },
+    state,
+    true
+  );
+  ctx.__setState(merged);
+  ctx.normalizePlannerState();
+  assert.equal(ctx.historyRows().length, 0, 'um registro velho vindo da nuvem continua oculto');
+});
+
+test('historico ignora atividades datadas no futuro', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  state.dayLogs = [{ ...ctx.defaultDayLog('2027-12-29'), questions: 10, updatedAt: '2027-12-29T18:00:00.000Z' }];
+  state.hiddenHistoryDates = [];
+  state.historyHiddenAt = {};
+  assert.equal(ctx.historyRows().length, 0, 'uma atividade futura incorreta nunca deve aparecer na tabela');
+});
+
+test('ultima aula usa a data real da atividade e ignora progresso apenas agendado no futuro', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  state.schedule = [
+    { id: 'aula-passada', topic: 'Aula realmente estudada', date: '2026-07-20', q: 0, manualQ: 1, fc: 0, manualFC: 0, hours: 0, notes: '' },
+    { id: 'adrenal-futura', topic: 'Adrenal e Cushing', date: '2027-01-10', q: 0, manualQ: 0, fc: 0, manualFC: 0, hours: 3, notes: '' }
+  ];
+  state.studySessions = [];
+  state.questionProgress = {};
+  state.flashcardSystem = { ...(state.flashcardSystem || {}), reviewLogs: [] };
+  state.gamification = { ...(state.gamification || {}), xpTransactions: [] };
+  state.videoPlayer = { ...(state.videoPlayer || {}), lastOpen: { lessonId:'', sourceId:'', updatedAt:'' } };
+
+  assert.equal(ctx.lastChangedLesson().id, 'aula-passada', 'uma aula futura nao pode vencer so por ter horas no cronograma');
+
+  state.studySessions = [{ id:'sessao-real', scheduleId:'adrenal-futura', savedAt:'2026-08-04T18:30:00.000Z', seconds:600 }];
+  const changed = ctx.lastChangedLesson();
+  assert.equal(changed.id, 'adrenal-futura', 'aula futura pode ser a ultima quando existe atividade real vinculada');
+  assert.equal(changed.date, '2026-08-04', 'a data exibida vem da atividade, nao do agendamento de 2027');
+});
