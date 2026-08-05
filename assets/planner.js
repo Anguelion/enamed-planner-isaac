@@ -3637,6 +3637,7 @@ function closeTransientPanels() {
   setPomodoroPanelOpen(false);
   setDailyMissionPanelOpen(false);
   document.querySelectorAll('.dashboard-gamification-popover[open]').forEach(details => details.removeAttribute('open'));
+  document.querySelectorAll('.schedule-filter[open]').forEach(details => details.removeAttribute('open'));
 }
 function pauseOpenVideo() {
   const video=document.getElementById('lessonVideo');
@@ -4585,7 +4586,28 @@ function renderCronograma() {
   const areas = ['Todas', ...new Set(state.schedule.map(x=>x.area).filter(Boolean).sort())];
   const rows = filteredSchedule();
   const changed = lastChangedLesson();
-  document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2>Blocos do cronograma</h2><div class="muted">${changed ? `Última aula: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}<div class="toolbar"><input class="input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}"><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select><select class="select" id="statusFilter">${['Todos','Concluído','Aguardando','Não Iniciado'].map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select><select class="select" id="priorityFilter">${['Todas','Alta','Média','Baixa'].map(p=>`<option ${p===ui.priority?'selected':''}>${escapeHtml(p)}</option>`).join('')}</select><button class="icon-btn" id="clearFilters">Limpar filtros</button></div></div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
+  const statusOptions=['Todos','Concluído','Aguardando','Não Iniciado'];
+  const priorityOptions=['Todas','Alta','Média','Baixa'];
+  const toolbar=`<div class="schedule-toolbar">
+    <div class="schedule-search ${ui.search?'is-open':''}">
+      <button type="button" class="icon-btn schedule-search-toggle" id="scheduleSearchToggle" title="Buscar" aria-label="Buscar">${iconSvg('search')}</button>
+      <input class="input schedule-search-input" id="search" placeholder="Buscar tema, área, data..." value="${escapeAttr(ui.search)}">
+    </div>
+    <details class="schedule-filter" name="scheduleFilter">
+      <summary class="icon-btn" title="Área${ui.area!=='Todas'?': '+escapeAttr(ui.area):''}" aria-label="Filtrar por área">${iconSvg('areas')}${ui.area!=='Todas'?'<span class="schedule-filter-dot"></span>':''}</summary>
+      <div class="schedule-filter-panel"><label>Área</label><select class="select" id="areaFilter">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select></div>
+    </details>
+    <details class="schedule-filter" name="scheduleFilter">
+      <summary class="icon-btn" title="Status${ui.status!=='Todos'?': '+ui.status:''}" aria-label="Filtrar por status">${iconSvg('success')}${ui.status!=='Todos'?'<span class="schedule-filter-dot"></span>':''}</summary>
+      <div class="schedule-filter-panel"><label>Status</label><select class="select" id="statusFilter">${statusOptions.map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select></div>
+    </details>
+    <details class="schedule-filter" name="scheduleFilter">
+      <summary class="icon-btn" title="Prioridade${ui.priority!=='Todas'?': '+ui.priority:''}" aria-label="Filtrar por prioridade">${iconSvg('flag')}${ui.priority!=='Todas'?'<span class="schedule-filter-dot"></span>':''}</summary>
+      <div class="schedule-filter-panel"><label>Prioridade</label><select class="select" id="priorityFilter">${priorityOptions.map(p=>`<option ${p===ui.priority?'selected':''}>${escapeHtml(p)}</option>`).join('')}</select></div>
+    </details>
+    <button class="icon-btn" id="clearFilters" title="Limpar filtros" aria-label="Limpar filtros">${iconSvg('refresh')}</button>
+  </div>`;
+  document.getElementById('cronograma').innerHTML = `<div class="card"><div class="section-title"><div><h2 class="schedule-title">Blocos do cronograma</h2><div class="muted">${changed ? `Última aula: ${escapeHtml(changed.topic)} (${fmtDate(changed.date)})` : 'Acompanhe a semana pelos blocos.'}</div></div></div>${renderBlockStrip()}${toolbar}</div><div class="card"><div class="section-title"><h2>Cronograma editável</h2><span class="muted">${rows.length} itens</span></div>${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
   enhanceScheduleStudyIcons();
   document.getElementById('search').oninput = debounce(e => {
     const value=e.target.value;
@@ -4594,6 +4616,7 @@ function renderCronograma() {
     renderCronograma();
     requestAnimationFrame(() => { const input=document.getElementById('search'); if(input) { input.focus(); input.setSelectionRange(cursor,cursor); } });
   }, 220);
+  document.getElementById('scheduleSearchToggle').onclick = () => { document.getElementById('search')?.focus(); };
   document.getElementById('areaFilter').onchange = e => { ui.area=e.target.value; render(); };
   document.getElementById('statusFilter').onchange = e => { ui.status=e.target.value; render(); };
   document.getElementById('priorityFilter').onchange = e => { ui.priority=e.target.value; render(); };
@@ -10975,6 +10998,7 @@ document.addEventListener('click', event => {
   }
   if(!event.target.closest?.('#globalPomodoro')) setPomodoroPanelOpen(false);
   if(!event.target.closest?.('#globalDailyMission')) setDailyMissionPanelOpen(false);
+  document.querySelectorAll('.schedule-filter[open]').forEach(details => { if(!details.contains(event.target)) details.removeAttribute('open'); });
   const box = document.getElementById('materialGlobalSearchResults');
   const wrap = document.getElementById('materialGlobalSearchWrap');
   if(box && !box.hidden && wrap && !wrap.contains(event.target)) box.hidden = true;
