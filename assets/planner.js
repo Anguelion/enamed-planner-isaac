@@ -109,6 +109,7 @@ ensureGamificationState();
 ensureImportedQuestions();
 normalizeOfficialScheduleNames();
 ensureRestartFromBlockTen();
+ensureRestartFromCoagulopatia();
 ensureDayLogs();
 ensureDailyTasks();
 ensureSimTopics();
@@ -404,7 +405,6 @@ function ensureRestartFromBlockTen() {
   };
   state.schedulePlanVersion = version;
   writeLocalState();
-  ensureRestartFromCoagulopatia();
 }
 function ensureRestartFromCoagulopatia() {
   const version = 'coagulopatia-restart-2026-08-05-v1';
