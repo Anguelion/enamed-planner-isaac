@@ -126,7 +126,7 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleDay: '', scheduleWeekAnchor: studyDateKey(), refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleDay: '', scheduleWeekAnchor: studyDateKey(), refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'specialty', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.scheduleBlockFocusPending ||= ui.scheduleBlock||'Atual';
 ui.scheduleWeekScrollLeft = n(ui.scheduleWeekScrollLeft);
@@ -3923,7 +3923,7 @@ function navigationSnapshot() {
     plannerHistoryIndex,
     route:currentRouteState(),
     ui:{
-      tab:ui.tab,qBlock:ui.qBlock,qSource:ui.qSource,qTopic:ui.qTopic,qStatus:ui.qStatus,qSearch:ui.qSearch,qIndex:ui.qIndex,qQuestionId:ui.qQuestionId,
+      tab:ui.tab,qBrowseMode:ui.qBrowseMode,qSpecialty:ui.qSpecialty,qBlock:ui.qBlock,qSource:ui.qSource,qTopic:ui.qTopic,qStatus:ui.qStatus,qSearch:ui.qSearch,qIndex:ui.qIndex,qQuestionId:ui.qQuestionId,
       videoBlock:ui.videoBlock,videoSearch:ui.videoSearch,videoLessonId:ui.videoLessonId,videoSourceId:ui.videoSourceId,
       scheduleBlock:ui.scheduleBlock,scheduleBlockPinned:ui.scheduleBlockPinned,scheduleBlockScrollLeft:ui.scheduleBlockScrollLeft,scheduleDay:ui.scheduleDay,scheduleWeekAnchor:ui.scheduleWeekAnchor,scheduleWeekScrollLeft:ui.scheduleWeekScrollLeft,scheduleStarFilter:ui.scheduleStarFilter,
       materialsSection:ui.materialsSection,materialBlock:ui.materialBlock,materialSpecialty:ui.materialSpecialty,materialScheduleId:ui.materialScheduleId,materialDocId:ui.materialDocId,materialSearch:ui.materialSearch,materialFocusMode:ui.materialFocusMode,
@@ -9322,7 +9322,7 @@ function parseQuestionBatch(text, defaults={}) {
       collectionBlock: meta.collection_block || meta.block || defaults.collection_block || defaults.block || scheduledLesson?.block || (meta.destination === 'simulado' || defaults.destination === 'simulado' ? `simulado:${meta.simulado_name || defaults.simulado_name || 'Novo simulado'}` : ''),
       collectionLabel: meta.collection || defaults.collection || (meta.destination === 'simulado' || defaults.destination === 'simulado' ? meta.simulado_name || defaults.simulado_name || 'Novo simulado' : ''), documentBlock: meta.document_block || '',
       sourceLabel: meta.source_label || defaults.source_label || meta.institution || defaults.institution || 'Importação manual',
-      area: meta.area || defaults.area || scheduledLesson?.area || '', specialty: meta.specialty || '', topic: meta.topic || defaults.topic || scheduledLesson?.topic || '', subtopic: meta.subtopic || '',
+      area: meta.area || defaults.area || scheduledLesson?.area || '', specialty: meta.specialty || defaults.specialty || '', topic: meta.topic || defaults.topic || scheduledLesson?.topic || '', subtopic: meta.subtopic || defaults.subtopic || '',
       difficulty: meta.difficulty || defaults.difficulty || '', institution: meta.institution || defaults.institution || '', examYear: meta.year || defaults.year || '',
       tags: String(meta.tags || defaults.tags || '').split('|').map(tag => tag.trim()).filter(Boolean), stem: sections.stem.join('\n').replace(/\[\[IMAGE:[^\]]+\]\]/gi, '').trim(), options, answer,
       comment: sections.comment.join('\n').trim(), pearl: sections.pearl.join('\n').trim(), trap: sections.trap.join('\n').trim(), source: sections.source.join('\n').trim(),
@@ -9429,6 +9429,7 @@ function exploreQuestionBank() {
   ui.qFocusQuestionIds=[];
   ui.qFocusTarget=0;
   ui.qBlock='Todos';
+  ui.qSpecialty='Todas';
   ui.qSource='Todas';
   ui.qTopic='Todos';
   ui.qStatus='Todas';
@@ -9511,7 +9512,7 @@ function openFlashcardsForSchedule(scheduleId) {
 }
 function filteredQuestions() {
   const focusQuestionIds = new Set(Array.isArray(ui.qFocusQuestionIds) ? ui.qFocusQuestionIds : []);
-  const cacheKey = JSON.stringify([ui.qFocusScheduleId || '', [...focusQuestionIds], ui.qBlock, ui.qSource, ui.qTopic, ui.qStatus, normalizedTopic(ui.qSearch || ''), ui.justAnsweredId || '', n(ui.qFocusTarget), questionBank.length]);
+  const cacheKey = JSON.stringify([ui.qFocusScheduleId || '', [...focusQuestionIds], ui.qBrowseMode, ui.qSpecialty, ui.qBlock, ui.qSource, ui.qTopic, ui.qStatus, normalizedTopic(ui.qSearch || ''), ui.justAnsweredId || '', n(ui.qFocusTarget), questionBank.length]);
   if(renderCache.questionFilterKey === cacheKey && Array.isArray(renderCache.questionFilterResults)) return renderCache.questionFilterResults;
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   const filtered = questionBank.filter(question => {
@@ -9526,8 +9527,10 @@ function filteredQuestions() {
     ].filter(Boolean).join(' '));
     const searchOk = !query || searchable.includes(query);
     const focusOk = !ui.qFocusScheduleId || (focusQuestionIds.size ? focusQuestionIds.has(question.id) : questionMatchesSchedule(question, focusItem));
-    const blockOk = ui.qBlock === 'Todos' || String(question.collectionBlock) === String(ui.qBlock);
-    const sourceOk = ui.qSource === 'Todas' || question.sourceLabel === ui.qSource;
+    const specialty = question.specialty || question.area || 'Sem especialidade';
+    const specialtyOk = ui.qBrowseMode !== 'specialty' || ui.qSpecialty === 'Todas' || specialty === ui.qSpecialty;
+    const blockOk = ui.qBrowseMode !== 'block' || ui.qBlock === 'Todos' || String(question.collectionBlock) === String(ui.qBlock);
+    const sourceOk = ui.qSource === 'Todas' || (question.sourceLabel || question.source) === ui.qSource;
     const topicOk = ui.qTopic === 'Todos' || question.topic === ui.qTopic;
     const statusOk = question.id === ui.justAnsweredId
       || ui.qStatus === 'Todas'
@@ -9535,7 +9538,7 @@ function filteredQuestions() {
       || (ui.qStatus === 'Erradas' && result && !result.correct)
       || (ui.qStatus === 'Certas' && result?.correct)
       || (ui.qStatus === 'Gabarito suspeito' && Boolean(state.questionProgress[question.id]?.answerKeyIssue));
-    return searchOk && focusOk && blockOk && sourceOk && topicOk && statusOk;
+    return searchOk && focusOk && specialtyOk && blockOk && sourceOk && topicOk && statusOk;
   });
   if(!ui.qFocusScheduleId || !n(ui.qFocusTarget)) {
     renderCache.questionFilterKey = cacheKey;
@@ -9579,6 +9582,7 @@ function backToQuestionSelection() {
   ui.qFocusQuestionIds = [];
   ui.qFocusTarget = 0;
   ui.qBlock = 'Todos';
+  ui.qSpecialty = 'Todas';
   ui.qSource = 'Todas';
   ui.qTopic = 'Todos';
   ui.qStatus = 'Todas';
@@ -9641,6 +9645,8 @@ function setQuestionFocusMode(enabled) {
 function persistQuestionView() {
   if(ui.tab !== 'questoes') return;
   localStorage.setItem(QUESTION_VIEW_KEY, JSON.stringify({
+    qBrowseMode: ui.qBrowseMode,
+    qSpecialty: ui.qSpecialty,
     qBlock: ui.qBlock,
     qSource: ui.qSource,
     qTopic: ui.qTopic,
@@ -9703,12 +9709,18 @@ function renderQuestionBank() {
   const flagged = summary.flagged;
   const showingFlagged = ui.qStatus === 'Gabarito suspeito';
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
+  if(!['specialty','block'].includes(ui.qBrowseMode)) ui.qBrowseMode = 'specialty';
+  const specialties = ['Todas', ...new Set(questionBank.map(q => q.specialty || q.area || 'Sem especialidade').filter(Boolean))]
+    .sort((a,b)=>a === 'Todas' ? -1 : b === 'Todas' ? 1 : a.localeCompare(b, 'pt-BR'));
+  if(!specialties.includes(ui.qSpecialty)) ui.qSpecialty = 'Todas';
   const blocks = ['Todos', ...new Set(questionBank.map(q => q.collectionBlock).filter(Boolean).map(String))]
     .sort((a,b)=>a === 'Todos' ? -1 : b === 'Todos' ? 1 : questionCollectionSort(a)-questionCollectionSort(b));
-  const scopedByBlock = questionBank.filter(q => ui.qBlock === 'Todos' || String(q.collectionBlock) === String(ui.qBlock));
-  const sources = ['Todas', ...new Set(scopedByBlock.map(q => q.sourceLabel || q.source).filter(Boolean))];
+  const scopedByPrimary = questionBank.filter(q => ui.qBrowseMode === 'block'
+    ? ui.qBlock === 'Todos' || String(q.collectionBlock) === String(ui.qBlock)
+    : ui.qSpecialty === 'Todas' || (q.specialty || q.area || 'Sem especialidade') === ui.qSpecialty);
+  const sources = ['Todas', ...new Set(scopedByPrimary.map(q => q.sourceLabel || q.source).filter(Boolean))];
   if(ui.qSource !== 'Todas' && !sources.includes(ui.qSource)) ui.qSource = 'Todas';
-  const scopedBySource = scopedByBlock.filter(q => ui.qSource === 'Todas' || q.sourceLabel === ui.qSource);
+  const scopedBySource = scopedByPrimary.filter(q => ui.qSource === 'Todas' || (q.sourceLabel || q.source) === ui.qSource);
   const topics = ['Todos', ...new Set(scopedBySource.map(q => q.topic))];
   if(ui.qTopic !== 'Todos' && !topics.includes(ui.qTopic)) ui.qTopic = 'Todos';
   const questions = filteredQuestions();
@@ -9752,8 +9764,14 @@ function renderQuestionBank() {
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel" open><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
       <div class="question-filter">
+        <div class="question-browse-tabs" role="tablist" aria-label="Organizar questões por">
+          <button type="button" role="tab" data-question-browse="specialty" aria-selected="${ui.qBrowseMode==='specialty'}" class="${ui.qBrowseMode==='specialty'?'active':''}">Por especialidade</button>
+          <button type="button" role="tab" data-question-browse="block" aria-selected="${ui.qBrowseMode==='block'}" class="${ui.qBrowseMode==='block'?'active':''}">Por bloco</button>
+        </div>
         <label class="search-field question-search-field"><span aria-hidden="true">⌕</span><input class="input" id="questionSearch" value="${escapeAttr(ui.qSearch)}" placeholder="Buscar enunciado, tema ou tag" autocomplete="off"></label>
-        <label class="question-filter-field"><span>Coleção</span><select class="select" id="questionBlock">${blocks.map(block => `<option value="${escapeAttr(block)}" ${block===String(ui.qBlock)?'selected':''}>${block === 'Todos' ? 'Todas as questões' : escapeHtml(questionCollectionLabel(block))}</option>`).join('')}</select></label>
+        ${ui.qBrowseMode === 'specialty'
+          ? `<label class="question-filter-field"><span>Especialidade</span><select class="select" id="questionSpecialty">${specialties.map(specialty => `<option value="${escapeAttr(specialty)}" ${specialty===ui.qSpecialty?'selected':''}>${specialty === 'Todas' ? 'Todas as especialidades' : escapeHtml(specialty)}</option>`).join('')}</select></label>`
+          : `<label class="question-filter-field"><span>Bloco</span><select class="select" id="questionBlock">${blocks.map(block => `<option value="${escapeAttr(block)}" ${block===String(ui.qBlock)?'selected':''}>${block === 'Todos' ? 'Todos os blocos' : escapeHtml(questionCollectionLabel(block))}</option>`).join('')}</select></label>`}
         <label class="question-filter-field"><span>Fonte</span><select class="select" id="questionSource">${sources.map(source => `<option value="${escapeAttr(source)}" ${source===ui.qSource?'selected':''}>${escapeHtml(source)}</option>`).join('')}</select></label>
         <label class="question-filter-field"><span>Tema</span><select class="select" id="questionTopic">${topics.map(topic => `<option value="${escapeAttr(topic)}" ${topic===ui.qTopic?'selected':''}>${escapeHtml(topic)}</option>`).join('')}</select></label>
         <label class="question-filter-field"><span>Status</span><select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select></label>
@@ -9762,7 +9780,11 @@ function renderQuestionBank() {
     </aside>
     <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : renderQuestionEmptyState(ui.qFocusScheduleId ? 'Você concluiu as questões desta aula.' : 'Nenhuma questão corresponde a este filtro.')}</div>
   </div>`;
-  document.getElementById('questionBlock').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  document.querySelectorAll('[data-question-browse]').forEach(button => button.onclick = e => { ui.qBrowseMode=e.currentTarget.dataset.questionBrowse; ui.qSpecialty='Todas'; ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
+  const questionBlock = document.getElementById('questionBlock');
+  if(questionBlock) questionBlock.onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  const questionSpecialty = document.getElementById('questionSpecialty');
+  if(questionSpecialty) questionSpecialty.onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qSpecialty=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('collapseQuestionSidebar').onclick = () => setQuestionFocusMode(true);
   document.getElementById('questionFocusToggle')?.addEventListener('click', () => setQuestionFocusMode(!questionSidebarCollapsed));
   document.getElementById('questionSource').onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qSource=e.target.value; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
@@ -9779,7 +9801,7 @@ function renderQuestionBank() {
     clearTimeout(questionSearchRenderTimer);
     questionSearchRenderTimer = setTimeout(refreshQuestionSearchResults,140);
   };
-  document.getElementById('showQuestionIssues').onclick = () => { ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qSearch=''; ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); };
+  document.getElementById('showQuestionIssues').onclick = () => { ui.qBlock='Todos'; ui.qSpecialty='Todas'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qSearch=''; ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); };
   document.getElementById('clearQuestionIssues')?.addEventListener('click', () => {
     if(!confirm(`Limpar as ${flagged} marcações de gabarito suspeito?`)) return;
     questionBank.forEach(question => {
@@ -9791,7 +9813,7 @@ function renderQuestionBank() {
   });
   const clearFocus = document.getElementById('clearQuestionFocus');
   if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qQuestionId=''; ui.qIndex=0; render(); };
-  document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
+  document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qBrowseMode='block'; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSpecialty='Todas'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
   bindQuestionTagFilters();
   bindQuestionActions(questions, activeQuestion);
   bindQuestionEmptyState();
@@ -9992,6 +10014,10 @@ function cleanupImportDraft(mode) {
   renderQuestionImporter();
 }
 function enhanceQuestionImporterUi() {
+  const importToolbar = document.querySelector('.import-toolbar');
+  if(importToolbar && !document.getElementById('openQuestionTxt')) {
+    importToolbar.insertAdjacentHTML('afterbegin', '<label class="tiny-btn import-open-txt">Abrir arquivo TXT<input id="openQuestionTxt" type="file" accept=".txt,text/plain,text/tab-separated-values" hidden></label>');
+  }
   const defaults = document.querySelector('.import-defaults');
   if(defaults && !defaults.querySelector('[data-import-default="destination"]')) {
     defaults.insertAdjacentHTML('afterbegin', '<label>Destino<select class="select" data-import-default="destination"><option value="bank">Banco de questões</option><option value="simulado">Simulado separado</option></select></label><label>Nome do simulado<input class="input" data-import-default="simulado_name" placeholder="Ex.: ENARE 2024"></label>');
@@ -10048,6 +10074,24 @@ function enhanceQuestionImporterUi() {
 function bindQuestionImporter() {
   const source = document.getElementById('importSource');
   source?.addEventListener('input', () => { updateImportDraftFromForm(); const count=document.getElementById('importCharCount'); if(count) count.textContent=`${source.value.length} caracteres`; });
+  document.getElementById('openQuestionTxt')?.addEventListener('change', async event => {
+    const file = event.currentTarget.files?.[0];
+    if(!file || !source) return;
+    try {
+      source.value = await file.text();
+      source.dispatchEvent(new Event('input'));
+      questionImportDraft.defaults = {...importDefaultFields(), ...(questionImportDraft.defaults || {})};
+      if(!questionImportDraft.defaults.source_label) questionImportDraft.defaults.source_label = file.name;
+      questionImportDraft.questions = parseQuestionBatch(questionImportDraft.text, questionImportDraft.defaults);
+      questionImportDraft.report = parseQuestionBatch.lastReport;
+      saveQuestionImportDraft();
+      renderQuestionImporter();
+      showStudyToast(`${file.name} carregado e interpretado.`);
+    } catch(error) {
+      console.error('Falha ao abrir TXT de questões:', error);
+      alert('Não foi possível abrir este arquivo TXT. Confira se ele está salvo em UTF-8.');
+    }
+  });
   document.querySelectorAll('[data-import-default]').forEach(input => input.addEventListener('change', updateImportDraftFromForm));
   document.getElementById('importExample')?.addEventListener('click', () => { source.value=importExampleText(); source.dispatchEvent(new Event('input')); });
   document.getElementById('clearImportText')?.addEventListener('click', () => { source.value=''; questionImportDraft.questions=[]; source.dispatchEvent(new Event('input')); renderQuestionImporter(); });
@@ -11028,6 +11072,8 @@ function persistQuestionTimerSession() {
       status:questionTimer.status
     },
     ui:{
+      qBrowseMode:ui.qBrowseMode,
+      qSpecialty:ui.qSpecialty,
       qBlock:ui.qBlock,
       qSource:ui.qSource,
       qTopic:ui.qTopic,

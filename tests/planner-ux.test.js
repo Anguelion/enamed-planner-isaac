@@ -138,6 +138,18 @@ test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
   assert.match(groups,/'importar-questoes':'Outros'/);
 });
 
+test('banco de questões oferece navegação por especialidade, bloco e arquivo TXT',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(planner,/data-question-browse="specialty"/);
+  assert.match(planner,/data-question-browse="block"/);
+  assert.match(planner,/id="questionSpecialty"/);
+  assert.match(planner,/id="openQuestionTxt"/);
+  assert.match(planner,/specialty: meta\.specialty \|\| defaults\.specialty/);
+  assert.match(css,/\.question-browse-tabs/);
+});
+
 test('integração móvel mantém correções de autenticação, flashcard e layouts estreitos',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
