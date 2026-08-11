@@ -185,6 +185,34 @@ test('questoes: cronometro automatico roda somente com o modo foco ativo', () =>
   assert.equal(ctx.autoStudyIsRunning('questions'), false, 'sair do modo foco deve encerrar a contagem');
 });
 
+test('Missão abre as questões restantes depois que a meta de 10 da aula foi concluída', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  const lesson = { id:'lesson-extra', block:99, topic:'Cardiologia avançada', area:'Clínica Médica', manualQ:0, q:0 };
+  state.schedule = [lesson];
+  state.questionProgress = {};
+  const questions = Array.from({length:15}, (_,index) => ({
+    id:`extra-${index+1}`,
+    collectionBlock:99,
+    topic:lesson.topic,
+    sourceLabel:lesson.topic,
+    stem:`Questão ${index+1}`,
+    options:{A:'A',B:'B',C:'C',D:'D'},
+    answer:'A'
+  }));
+  questions.slice(0,10).forEach(question => {
+    state.questionProgress[question.id] = { answeredAt:'2026-08-11T10:00:00.000Z', selected:'A', correct:true, scheduleId:lesson.id };
+  });
+  ctx.__setQuestionBank(questions);
+  ctx.invalidateQuestionBankRenderCache();
+
+  const plan = ctx.questionSessionPlan(lesson, questions);
+  assert.equal(plan.target, 10, 'a meta visual da aula continua limitada a 10');
+  assert.equal(plan.openingExtras, true, 'ao concluir a meta, a sessão passa para as questões extras');
+  assert.equal(plan.focusTarget, 15, 'o novo alvo alcança o fim do banco vinculado à aula');
+  assert.deepEqual(plain(plan.unanswered.map(question => question.id)), ['extra-11','extra-12','extra-13','extra-14','extra-15']);
+});
+
 test('renderFlashcardStudy: tela de fim de sessao no modo foco oferece saida; fora do foco nao exibe o botao', () => {
   const ctx = loadPlannerSandbox();
   const ui = ctx.__getUi();

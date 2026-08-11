@@ -86,7 +86,7 @@ test('merge do cronograma preserva as datas oficiais locais e incorpora apenas o
   const ctx = loadPlannerSandbox();
   const remote = {
     schedule: [
-      { id: 's1', date: '2026-07-28', day: 'Terça', block: 1, topic: 'Aula 1', manualQ: 8, manualFC: 4, hours: 2 },
+      { id: 's1', date: '2026-07-28', day: 'Terça', block: 1, topic: 'Aula 1', manualQ: 8, manualFC: 4, hours: 2, starred: true, starredUpdatedAt: '2026-08-10T10:00:00.000Z' },
       { id: 's2', date: '2026-07-28', day: 'Terça', block: 2, topic: 'Aula 2', manualQ: 0, manualFC: 0, hours: 0 }
     ]
   };
@@ -107,6 +107,7 @@ test('merge do cronograma preserva as datas oficiais locais e incorpora apenas o
   assert.equal(merged.schedule[0].manualQ, 8, 'o progresso remoto continua sendo incorporado');
   assert.equal(merged.schedule[0].manualFC, 4);
   assert.equal(merged.schedule[0].hours, 2);
+  assert.equal(merged.schedule[0].starred, true, 'a estrela mais recente deve sincronizar sem alterar a data oficial local');
 });
 
 test('isEditingTextField: detecta textarea e input de texto, ignora checkbox e nada focado', () => {

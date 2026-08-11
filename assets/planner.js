@@ -123,6 +123,7 @@ ui.legacyImportPreview = null;
 ui.scheduleBlockFocusPending ||= ui.scheduleBlock||'Atual';
 ui.scheduleWeekScrollLeft = n(ui.scheduleWeekScrollLeft);
 ui.scheduleWeekFocusPending ||= ui.scheduleDay||'Todos';
+ui.scheduleStarFilter ||= 'Todas';
 try {
   const savedCadernoView = JSON.parse(localStorage.getItem(CADERNO_VIEW_KEY) || '{}');
   if(savedCadernoView.review) ui.cadernoReview = savedCadernoView.review;
@@ -1198,7 +1199,10 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
       manualQ: Math.max(n(item.manualQ ?? item.q), n(remoteItem.manualQ ?? remoteItem.q)),
       manualFC: Math.max(n(item.manualFC ?? item.fc), n(remoteItem.manualFC ?? remoteItem.fc)),
       hours: Math.max(n(item.hours), n(remoteItem.hours)),
-      notes: preferLocal ? (item.notes || remoteItem.notes || '') : (remoteItem.notes || item.notes || '')
+      notes: preferLocal ? (item.notes || remoteItem.notes || '') : (remoteItem.notes || item.notes || ''),
+      ...((timestampOf(item.starredUpdatedAt) >= timestampOf(remoteItem.starredUpdatedAt))
+        ? {starred:Boolean(item.starred),starredUpdatedAt:item.starredUpdatedAt||''}
+        : {starred:Boolean(remoteItem.starred),starredUpdatedAt:remoteItem.starredUpdatedAt||''})
     };
   });
 
@@ -3446,9 +3450,10 @@ function filteredSchedule() {
     const okArea = ui.area==='Todas' || x.area===ui.area;
     const okStatus = ui.status==='Todos' || st===ui.status;
     const okPriority = ui.priority==='Todas' || x.priority===ui.priority;
+    const okStar = ui.scheduleStarFilter!=='Com estrela' || Boolean(x.starred);
     const okBlock = ui.scheduleBlock==='Todos' || (ui.scheduleBlock==='Atual' ? String(x.block)===currentBlock : String(x.block)===String(ui.scheduleBlock));
     const okDay = !ui.scheduleDay || x.date===ui.scheduleDay;
-    return okText && okArea && okStatus && okPriority && okBlock && okDay;
+    return okText && okArea && okStatus && okPriority && okStar && okBlock && okDay;
   }).sort(byDate);
 }
 function metric(label,value,foot='') { return `<div class="card metric-card"><div class="metric-label">${label}</div><div class="metric-value">${value}</div><div class="metric-foot">${foot}</div></div>`; }
@@ -3733,7 +3738,7 @@ function navigationSnapshot() {
     ui:{
       tab:ui.tab,qBlock:ui.qBlock,qSource:ui.qSource,qTopic:ui.qTopic,qStatus:ui.qStatus,qSearch:ui.qSearch,qIndex:ui.qIndex,qQuestionId:ui.qQuestionId,
       videoBlock:ui.videoBlock,videoSearch:ui.videoSearch,videoLessonId:ui.videoLessonId,videoSourceId:ui.videoSourceId,
-      scheduleBlock:ui.scheduleBlock,scheduleBlockPinned:ui.scheduleBlockPinned,scheduleBlockScrollLeft:ui.scheduleBlockScrollLeft,scheduleDay:ui.scheduleDay,scheduleWeekAnchor:ui.scheduleWeekAnchor,scheduleWeekScrollLeft:ui.scheduleWeekScrollLeft,
+      scheduleBlock:ui.scheduleBlock,scheduleBlockPinned:ui.scheduleBlockPinned,scheduleBlockScrollLeft:ui.scheduleBlockScrollLeft,scheduleDay:ui.scheduleDay,scheduleWeekAnchor:ui.scheduleWeekAnchor,scheduleWeekScrollLeft:ui.scheduleWeekScrollLeft,scheduleStarFilter:ui.scheduleStarFilter,
       materialsSection:ui.materialsSection,materialBlock:ui.materialBlock,materialSpecialty:ui.materialSpecialty,materialScheduleId:ui.materialScheduleId,materialDocId:ui.materialDocId,materialSearch:ui.materialSearch,materialFocusMode:ui.materialFocusMode,
       activeSimRunId:ui.activeSimRunId,simulationLibraryOpen:ui.simulationLibraryOpen
     },
@@ -4734,7 +4739,7 @@ function renderCronograma() {
   const selectedItems = selectedBlock==='Todos' ? state.schedule : state.schedule.filter(item => String(item.block)===selectedBlock);
   const selectedDone = selectedItems.filter(item => statusOf(item)==='Concluído').length;
   const selectedProgress = Math.round(selectedDone / Math.max(1,selectedItems.length) * 100);
-  const filterCount = Number(Boolean(ui.search.trim())) + Number(ui.area!=='Todas') + Number(ui.status!=='Todos') + Number(ui.priority!=='Todas') + Number(Boolean(ui.scheduleDay));
+  const filterCount = Number(Boolean(ui.search.trim())) + Number(ui.area!=='Todas') + Number(ui.status!=='Todos') + Number(ui.priority!=='Todas') + Number(ui.scheduleStarFilter!=='Todas') + Number(Boolean(ui.scheduleDay));
   const statusOptions=['Todos','Concluído','Aguardando','Não Iniciado'];
   const priorityOptions=['Todas','Alta','Média','Baixa'];
   const toolbar=`<div class="schedule-toolbar" role="search" aria-label="Filtrar cronograma">
@@ -4743,6 +4748,7 @@ function renderCronograma() {
       <label class="schedule-filter"><span>Área</span><select class="select schedule-toolbar-select" id="areaFilter" aria-label="Filtrar por área">${areas.map(a=>`<option ${a===ui.area?'selected':''}>${escapeHtml(a)}</option>`).join('')}</select></label>
       <label class="schedule-filter"><span>Status</span><select class="select schedule-toolbar-select" id="statusFilter" aria-label="Filtrar por status">${statusOptions.map(s=>`<option ${s===ui.status?'selected':''}>${escapeHtml(s)}</option>`).join('')}</select></label>
       <label class="schedule-filter"><span>Prioridade</span><select class="select schedule-toolbar-select" id="priorityFilter" aria-label="Filtrar por prioridade">${priorityOptions.map(p=>`<option ${p===ui.priority?'selected':''}>${escapeHtml(p)}</option>`).join('')}</select></label>
+      <label class="schedule-filter"><span>Estrelas</span><select class="select schedule-toolbar-select" id="scheduleStarFilter" aria-label="Filtrar aulas com estrela"><option ${ui.scheduleStarFilter==='Todas'?'selected':''}>Todas</option><option ${ui.scheduleStarFilter==='Com estrela'?'selected':''}>Com estrela (${state.schedule.filter(item=>item.starred).length})</option></select></label>
     </div>
     <button class="icon-btn schedule-toolbar-clear ${filterCount?'has-filters':''}" id="clearFilters" type="button" ${filterCount?'': 'disabled'}>${iconSvg('close',{weight:'regular'})}<span>Limpar${filterCount?` (${filterCount})`:''}</span></button>
   </div>`;
@@ -4793,6 +4799,17 @@ function renderCronograma() {
   document.getElementById('areaFilter').onchange = e => { ui.area=e.target.value; render(); };
   document.getElementById('statusFilter').onchange = e => { ui.status=e.target.value; render(); };
   document.getElementById('priorityFilter').onchange = e => { ui.priority=e.target.value; render(); };
+  document.getElementById('scheduleStarFilter').onchange = e => {
+    ui.scheduleStarFilter=e.target.value.startsWith('Com estrela')?'Com estrela':'Todas';
+    if(ui.scheduleStarFilter==='Com estrela') {
+      ui.scheduleBlock='Todos';
+      ui.scheduleBlockPinned=false;
+      ui.scheduleBlockFocusPending='Todos';
+      ui.scheduleDay='';
+      ui.scheduleWeekFocusPending='Todos';
+    }
+    render();
+  };
   document.getElementById('blockPinToggle').onclick = () => {
     ui.scheduleBlockPinned = !ui.scheduleBlockPinned;
     render();
@@ -4828,7 +4845,7 @@ function renderCronograma() {
     ui.refDate=studyDateKey();
     render();
   });
-  document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.priority='Todas'; ui.scheduleDay=''; ui.scheduleWeekFocusPending='Todos'; if(!ui.scheduleBlockPinned) { ui.scheduleBlock='Atual'; ui.scheduleBlockFocusPending='Atual'; } render(); };
+  document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.priority='Todas'; ui.scheduleStarFilter='Todas'; ui.scheduleDay=''; ui.scheduleWeekFocusPending='Todos'; if(!ui.scheduleBlockPinned) { ui.scheduleBlock='Atual'; ui.scheduleBlockFocusPending='Atual'; } render(); };
   bindScheduleInputs();
 }
 function areaLine(a) { return `<div class="area-bar"><strong>${escapeHtml(a.area)}</strong><div class="bar"><span style="width:${pct(a.progress)}"></span></div><span>${pct(a.progress)}</span></div>`; }
@@ -4844,7 +4861,7 @@ function renderPendingLessons(items) {
 }
 function renderScheduleTable(rows, editable=false) {
   if(!rows.length) return '<div class="empty">Nada para mostrar aqui.</div>';
-  return `<div class="table-wrap"><table class="schedule-table"><thead><tr><th>Data</th><th>Bloco</th><th>Tema</th><th>Área</th><th>Status</th><th class="num">Questões</th><th class="num">Banco</th><th class="num">Flashcards</th><th class="num">Horas</th><th class="num">Progresso</th><th>Anotações</th></tr></thead><tbody>${rows.map(x => { const bank=questionStatsForSchedule(x.id); const cards=flashcardStatsForSchedule(x.id); const videoCount=plannedVideoCountForSchedule(x); const videoDone=scheduleVideoCompleted(x); return `<tr><td class="schedule-date-cell">${fmtDate(x.date)}<div class="muted">${x.day}</div></td><td class="schedule-block-cell">${x.block ?? ''}</td><td class="schedule-topic-cell"><div class="schedule-topic-line"><button class="schedule-topic-link priority-chip ${priorityClass(x.priority)}" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button>${videoCount?` <button class="tiny-btn" data-open-schedule-videos="${escapeAttr(x.id)}" title="Abrir videoaula">▶</button><button class="tiny-btn" data-toggle-schedule-video="${escapeAttr(x.id)}" title="Marcar videoaula como vista">${videoDone?'Vídeo ✓':'Vídeo'}</button>`:''}</div><div class="schedule-meta muted">Meta: ${lessonQuestionTarget(x)} questões · ${lessonFlashcardTarget(x)} flashcards · ${x.metaH} h${videoCount?` · ${videoCount} vídeo${videoCount===1?'':'s'}`:''}</div></td><td>${escapeHtml(x.area)}</td><td>${badgeStatus(statusOf(x))}</td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="q" type="number" min="0" step="1" value="${completedQuestions(x)}"><div class="auto-progress">Banco ${bank.done}${n(x.manualQ) ? ` · manual ${n(x.manualQ)}` : ''}</div></td><td class="num"><button class="tiny-btn" data-open-schedule-questions="${escapeAttr(x.id)}">Abrir</button><div class="bank-result"><strong>${bank.done}</strong> feitas<br>${bank.correct} certas · ${bank.done?pct(bank.rate):'-'}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="fc" type="number" min="0" step="1" value="${n(x.manualFC)+cards.reviews}"><div class="auto-progress">Revisões ${cards.reviews}${n(x.manualFC) ? ` · manual ${n(x.manualFC)}` : ''}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="hours" type="number" min="0" step="0.25" value="${n(x.hours)}"></td><td class="num">${pct(progressOf(x))}</td><td><input class="notes-input" data-id="${x.id}" data-field="notes" value="${escapeAttr(x.notes)}"></td></tr>`; }).join('')}</tbody></table></div>`;
+  return `<div class="table-wrap"><table class="schedule-table"><thead><tr><th>Data</th><th>Bloco</th><th>Tema</th><th>Área</th><th>Status</th><th class="num">Questões</th><th class="num">Banco</th><th class="num">Flashcards</th><th class="num">Horas</th><th class="num">Progresso</th><th>Anotações</th></tr></thead><tbody>${rows.map(x => { const bank=questionStatsForSchedule(x.id); const cards=flashcardStatsForSchedule(x.id); const videoCount=plannedVideoCountForSchedule(x); const videoDone=scheduleVideoCompleted(x); return `<tr class="${x.starred?'schedule-starred-row':''}"><td class="schedule-date-cell">${fmtDate(x.date)}<div class="muted">${x.day}</div></td><td class="schedule-block-cell">${x.block ?? ''}</td><td class="schedule-topic-cell"><div class="schedule-topic-line">${editable?`<button type="button" class="schedule-star-toggle ${x.starred?'active':''}" data-toggle-schedule-star="${escapeAttr(x.id)}" aria-pressed="${Boolean(x.starred)}" title="${x.starred?'Remover estrela':'Marcar aula com estrela'}" aria-label="${x.starred?'Remover estrela de':'Marcar com estrela'} ${escapeAttr(x.topic)}">${x.starred?'★':'☆'}</button>`:''}<button class="schedule-topic-link priority-chip ${priorityClass(x.priority)}" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button>${videoCount?` <button class="tiny-btn" data-open-schedule-videos="${escapeAttr(x.id)}" title="Abrir videoaula">▶</button><button class="tiny-btn" data-toggle-schedule-video="${escapeAttr(x.id)}" title="Marcar videoaula como vista">${videoDone?'Vídeo ✓':'Vídeo'}</button>`:''}</div><div class="schedule-meta muted">Meta: ${lessonQuestionTarget(x)} questões · ${lessonFlashcardTarget(x)} flashcards · ${x.metaH} h${videoCount?` · ${videoCount} vídeo${videoCount===1?'':'s'}`:''}</div></td><td>${escapeHtml(x.area)}</td><td>${badgeStatus(statusOf(x))}</td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="q" type="number" min="0" step="1" value="${completedQuestions(x)}"><div class="auto-progress">Banco ${bank.done}${n(x.manualQ) ? ` · manual ${n(x.manualQ)}` : ''}</div></td><td class="num"><button class="tiny-btn" data-open-schedule-questions="${escapeAttr(x.id)}">Abrir</button><div class="bank-result"><strong>${bank.done}</strong> feitas<br>${bank.correct} certas · ${bank.done?pct(bank.rate):'-'}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="fc" type="number" min="0" step="1" value="${n(x.manualFC)+cards.reviews}"><div class="auto-progress">Revisões ${cards.reviews}${n(x.manualFC) ? ` · manual ${n(x.manualFC)}` : ''}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="hours" type="number" min="0" step="0.25" value="${n(x.hours)}"></td><td class="num">${pct(progressOf(x))}</td><td><input class="notes-input" data-id="${x.id}" data-field="notes" value="${escapeAttr(x.notes)}"></td></tr>`; }).join('')}</tbody></table></div>`;
 }
 function enhanceScheduleStudyIcons() {
   const currentBlock=n(currentScheduleBlock());
@@ -4897,14 +4914,24 @@ function enhanceScheduleStudyIcons() {
     const stateClass=done=>done?'done':colorable?'missing':'future';
     const videoDone=scheduleVideoCompleted(item);
     const questionDone=completedQuestions(item)>=lessonQuestionTarget(item);
+    const questionBankRemaining=Math.max(0,n(availableQuestionsForLesson(item))-questionStatsForSchedule(item.id).done);
     const flashcardDone=completedFlashcards(item)>=lessonFlashcardTarget(item);
     const icons=document.createElement('span');
     icons.className='schedule-study-icons';
-    icons.innerHTML=`${plannedVideoCountForSchedule(item)>0?`<button class="schedule-study-icon ${stateClass(videoDone)}" data-open-schedule-videos="${escapeAttr(item.id)}" title="${videoDone?'Videoaula concluída':'Videoaula pendente'}" aria-label="Videoaula">${iconSvg('play')}</button>`:''}<button class="schedule-study-icon ${stateClass(questionDone)}" data-open-schedule-questions="${escapeAttr(item.id)}" title="${completedQuestions(item)}/${lessonQuestionTarget(item)} questões" aria-label="Questões">${iconSvg('brain')}</button><button class="schedule-study-icon ${stateClass(flashcardDone)}" data-open-schedule-flashcards="${escapeAttr(item.id)}" title="${completedFlashcards(item)}/${lessonFlashcardTarget(item)} flashcards" aria-label="Flashcards">${iconSvg('cards')}</button>`;
+    icons.innerHTML=`${plannedVideoCountForSchedule(item)>0?`<button class="schedule-study-icon ${stateClass(videoDone)}" data-open-schedule-videos="${escapeAttr(item.id)}" title="${videoDone?'Videoaula concluída':'Videoaula pendente'}" aria-label="Videoaula">${iconSvg('play')}</button>`:''}<button class="schedule-study-icon ${stateClass(questionDone)} ${questionDone&&questionBankRemaining?'has-extra':''}" data-open-schedule-questions="${escapeAttr(item.id)}" title="${questionDone&&questionBankRemaining?`Meta concluída · ${questionBankRemaining} questões extras disponíveis`:`${completedQuestions(item)}/${lessonQuestionTarget(item)} questões`}" aria-label="Questões${questionDone&&questionBankRemaining?`, ${questionBankRemaining} extras disponíveis`:''}">${iconSvg('brain')}${questionDone&&questionBankRemaining?`<small>+${questionBankRemaining}</small>`:''}</button><button class="schedule-study-icon ${stateClass(flashcardDone)}" data-open-schedule-flashcards="${escapeAttr(item.id)}" title="${completedFlashcards(item)}/${lessonFlashcardTarget(item)} flashcards" aria-label="Flashcards">${iconSvg('cards')}</button>`;
     topicLine.append(icons);
   });
 }
 function bindScheduleInputs() {
+  document.querySelectorAll('[data-toggle-schedule-star]').forEach(button => button.onclick = event => {
+    event.preventDefault();
+    event.stopPropagation();
+    const item=state.schedule.find(entry=>entry.id===event.currentTarget.dataset.toggleScheduleStar);
+    if(!item) return;
+    item.starred=!item.starred;
+    item.starredUpdatedAt=nowIso();
+    persist();
+  });
   document.querySelectorAll('[data-id][data-field]').forEach(el => el.onchange = e => { const item = state.schedule.find(x=>x.id===e.target.dataset.id); if(!item) return; const f=e.target.dataset.field; if(f==='q') item.manualQ=Math.max(0, n(e.target.value) - questionStatsForSchedule(item.id).done); else if(f==='fc') item.manualFC=Math.max(0, n(e.target.value) - flashcardStatsForSchedule(item.id).reviews); else item[f] = f==='notes' ? e.target.value : n(e.target.value); persist(); });
   document.querySelectorAll('[data-open-schedule-questions]').forEach(button => button.onclick = e => openQuestionsForSchedule(e.currentTarget.dataset.openScheduleQuestions));
   document.querySelectorAll('[data-open-schedule-flashcards]').forEach(button => button.onclick = e => openFlashcardsForSchedule(e.currentTarget.dataset.openScheduleFlashcards));
@@ -9085,24 +9112,34 @@ function continueQuestionTraining() {
   if(plan.lastCompleted) showStudyToast(`Meta da última aula concluída. Abrindo a próxima: ${plan.item.topic}.`);
   openQuestionsForSchedule(plan.item.id);
 }
+function questionSessionPlan(item, linked) {
+  const target=lessonQuestionTarget(item);
+  const completed=completedQuestions(item);
+  const unanswered=linked.filter(question=>!questionResult(question)?.answeredAt);
+  const bankCompleted=questionStatsForSchedule(item.id).done;
+  const targetRemaining=Math.max(0,target-completed);
+  const openingExtras=targetRemaining===0&&unanswered.length>0;
+  const sessionSize=openingExtras ? unanswered.length : Math.min(targetRemaining,unanswered.length);
+  return {target,completed,unanswered,bankCompleted,openingExtras,sessionSize,focusTarget:bankCompleted+sessionSize};
+}
 function openQuestionsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
-  const completed = completedQuestions(item);
-  const target = lessonQuestionTarget(item);
-  if(target === 0) {
-    showStudyToast(`Ainda não há questões vinculadas a ${item.topic}.`);
-    return;
-  }
-  if(completed >= target) {
-    showStudyToast(`Parabéns, você já concluiu esta lista. ${completed} de ${target} questões realizadas em ${item.topic}.`);
-    return;
-  }
   const linkedByTopic = questionBank.filter(question => questionMatchesSchedule(question, item));
   const direct = questionBank.filter(question => question.scheduleId === item.id && String(question.collectionBlock) === String(item.block));
   // A ligação por bloco + tema é mais confiável do que um scheduleId legado
   // criado antes da normalização dos nomes das aulas.
   const linked = linkedByTopic.length ? linkedByTopic : direct;
+  const plan=questionSessionPlan(item,linked);
+  const {target,unanswered,openingExtras}=plan;
+  if(target === 0 || !linked.length) {
+    showStudyToast(`Ainda não há questões vinculadas a ${item.topic}.`);
+    return;
+  }
+  if(!unanswered.length) {
+    showStudyToast(`Você concluiu todas as ${linked.length} questões disponíveis em ${item.topic}.`);
+    return;
+  }
   ui.qFocusScheduleId = linked.length ? item.id : '';
   ui.qFocusQuestionIds = linked.map(question => question.id);
   ui.qBlock = item.block ? String(item.block) : 'Todos';
@@ -9110,7 +9147,9 @@ function openQuestionsForSchedule(scheduleId) {
   ui.qTopic = 'Todos';
   ui.qStatus = 'Não respondidas';
   ui.qSearch = '';
-  ui.qFocusTarget = target;
+  // qFocusTarget é absoluto porque filteredQuestions subtrai o total já
+  // respondido. Depois da meta, ampliamos o alvo até o fim do banco da aula.
+  ui.qFocusTarget = plan.focusTarget;
   ui.qIndex = 0;
   ui.qQuestionId = '';
   ui.justAnsweredId = '';
@@ -9118,6 +9157,7 @@ function openQuestionsForSchedule(scheduleId) {
   state.questionSettings.lastOpenedAt = new Date().toISOString();
   saveStateOnly({invalidate:false});
   resetKeyboardConfirmation();
+  if(openingExtras) showStudyToast(`Meta de ${target} concluída. Abrindo as ${unanswered.length} questões restantes de ${item.topic}.`);
   navigateToTab('questoes');
 }
 function openFlashcardsForSchedule(scheduleId) {
@@ -9371,7 +9411,7 @@ function renderQuestionBank() {
       <div class="question-issue-actions"><button class="question-issue-summary ${flagged?'has-items':''} ${showingFlagged?'active':''}" id="showQuestionIssues" aria-pressed="${showingFlagged}" ${flagged?'':'disabled'}><span>⚑</span><strong>${flagged}</strong><span>${showingFlagged ? 'gabaritos suspeitos exibidos' : flagged===1?'gabarito suspeito':'gabaritos suspeitos'}</span></button>${flagged?'<button class="icon-btn question-issue-clear" id="clearQuestionIssues" title="Limpar todas as marcações" aria-label="Limpar todas as marcações de gabarito suspeito">×</button>':''}</div>
       ${progress('Aproveitamento', summary.correct/Math.max(summary.answered,1), `${summary.correct} de ${summary.answered}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
-      ${focusItem ? (() => { const target=lessonQuestionTarget(focusItem); const completed=questionStatsForSchedule(focusItem.id).done; const remaining=Math.max(0,target-completed); return `<div class="focus-box"><strong>Foco da pendência</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `Faltam ${remaining} questões` : 'Meta concluída'}</strong><span>${Math.min(completed,target)} de ${target}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
+      ${focusItem ? (() => { const target=lessonQuestionTarget(focusItem); const completed=questionStatsForSchedule(focusItem.id).done; const lessonCompleted=completedQuestions(focusItem); const remaining=Math.max(0,n(ui.qFocusTarget)-completed); const extras=lessonCompleted>=target&&remaining>0; return `<div class="focus-box"><strong>${extras?'Questões extras':'Foco da pendência'}</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `${extras?'Restam':'Faltam'} ${remaining} questões` : extras?'Banco concluído':'Meta concluída'}</strong><span>${extras?`Meta de ${target} concluída`:`${Math.min(lessonCompleted,target)} de ${target}`}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
       <details class="question-filter-panel"><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? 'Todas' : questionCollectionLabel(ui.qBlock))}</span></summary>
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel" open><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>

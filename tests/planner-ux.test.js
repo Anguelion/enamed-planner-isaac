@@ -199,6 +199,32 @@ test('Missão centraliza somente a seleção nova e pesquisa em todos os blocos'
   assert.match(planner,/weekStrip\.addEventListener\('scroll'/);
 });
 
+test('Missão permite favoritar aulas futuras e filtrá-las em todos os blocos',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(planner,/data-toggle-schedule-star=/);
+  assert.match(planner,/item\.starred=!item\.starred/);
+  assert.match(planner,/starredUpdatedAt=nowIso\(\)/);
+  assert.match(planner,/ui\.scheduleStarFilter!=='Com estrela' \|\| Boolean\(x\.starred\)/);
+  assert.match(planner,/id="scheduleStarFilter"/);
+  assert.match(planner,/ui\.scheduleBlock='Todos';[\s\S]*?ui\.scheduleDay='';/);
+  assert.match(css,/\.schedule-star-toggle\.active/);
+  assert.match(css,/\.schedule-table \.schedule-starred-row>td/);
+});
+
+test('Missão sinaliza e abre questões extras após a meta da aula',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(planner,/function questionSessionPlan\(item, linked\)/);
+  assert.match(planner,/const openingExtras=targetRemaining===0&&unanswered\.length>0/);
+  assert.match(planner,/openingExtras \? unanswered\.length : Math\.min\(targetRemaining,unanswered\.length\)/);
+  assert.match(planner,/Meta de \$\{target\} concluída\. Abrindo as \$\{unanswered\.length\} questões restantes/);
+  assert.match(planner,/questionDone&&questionBankRemaining\?'has-extra':''/);
+  assert.match(css,/\.schedule-study-icon\.has-extra/);
+});
+
 test('cabeçalho desktop oferece histórico interno com voltar, avançar e atalhos',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
