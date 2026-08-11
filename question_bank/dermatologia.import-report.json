@@ -1,0 +1,229 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 4 (Quinta-feira)__17 - Dermatologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 4 (Quinta-feira)::17 - Dermatologia",
+  "notes": 735,
+  "imported": 708,
+  "skipped": [
+    {
+      "noteId": 1741654795724,
+      "number": "1794c",
+      "topic": "Dermatoses Infecciosas",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    },
+    {
+      "noteId": 1741654795727,
+      "number": "1797c",
+      "topic": "Dermatoses Infecciosas",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    },
+    {
+      "noteId": 1748054612596,
+      "number": "1757b",
+      "topic": "Hanseníase",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1748054612597,
+      "number": "1758b",
+      "topic": "Hanseníase",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1748054612619,
+      "number": "1780b",
+      "topic": "Hanseníase",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777203529,
+      "number": "1742b.1",
+      "topic": "Piodermites",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777203532,
+      "number": "1745b.1",
+      "topic": "Piodermites",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777203533,
+      "number": "1746b.1",
+      "topic": "Piodermites",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777636023,
+      "number": "1712j",
+      "topic": "Leishmaniose tegumentar",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777636024,
+      "number": "1713j",
+      "topic": "Leishmaniose tegumentar",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777636035,
+      "number": "1724j",
+      "topic": "Leishmaniose tegumentar",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777880068,
+      "number": "1709d",
+      "topic": "Oncologia Cutânea (Câncer de Pele)",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777880121,
+      "number": "1762d",
+      "topic": "Oncologia Cutânea (Câncer de Pele)",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777880142,
+      "number": "1783d",
+      "topic": "Oncologia Cutânea (Câncer de Pele)",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780777880144,
+      "number": "1785d",
+      "topic": "Oncologia Cutânea (Câncer de Pele)",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408672,
+      "number": "1722k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408698,
+      "number": "1748k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408699,
+      "number": "1749k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408700,
+      "number": "1750k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408701,
+      "number": "1751k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408702,
+      "number": "1752k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408703,
+      "number": "1753k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408716,
+      "number": "1766k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779408737,
+      "number": "1787k",
+      "topic": "Miscelânea",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779636700,
+      "number": "1733i",
+      "topic": "Síndromes Verrucosas",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779636701,
+      "number": "1734i",
+      "topic": "Síndromes Verrucosas",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    },
+    {
+      "noteId": 1780779636715,
+      "number": "1748i",
+      "topic": "Síndromes Verrucosas",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Histologia e Fisiologia da Pele e Lesões Elementares",
+      "imported": 49,
+      "block": "anki:dermatologia-histologia-e-fisiologia-da-pele-e-lesoes-elementares"
+    },
+    {
+      "topic": "Dermatoses Infecciosas",
+      "imported": 98,
+      "block": "anki:dermatologia-dermatoses-infecciosas"
+    },
+    {
+      "topic": "Hanseníase",
+      "imported": 96,
+      "block": "anki:dermatologia-hanseniase"
+    },
+    {
+      "topic": "Piodermites",
+      "imported": 94,
+      "block": "anki:dermatologia-piodermites"
+    },
+    {
+      "topic": "Leishmaniose tegumentar",
+      "imported": 21,
+      "block": "anki:dermatologia-leishmaniose-tegumentar"
+    },
+    {
+      "topic": "Oncologia Cutânea (Câncer de Pele)",
+      "imported": 96,
+      "block": "anki:dermatologia-oncologia-cutanea-cancer-de-pele"
+    },
+    {
+      "topic": "Dermatoses Papuloescamosas",
+      "imported": 35,
+      "block": "anki:dermatologia-dermatoses-papuloescamosas"
+    },
+    {
+      "topic": "Dermatoses Vesicobolhosas",
+      "imported": 24,
+      "block": "anki:dermatologia-dermatoses-vesicobolhosas"
+    },
+    {
+      "topic": "Farmacodermias",
+      "imported": 60,
+      "block": "anki:dermatologia-farmacodermias"
+    },
+    {
+      "topic": "Miscelânea",
+      "imported": 90,
+      "block": "anki:dermatologia-miscelanea"
+    },
+    {
+      "topic": "Síndromes Verrucosas",
+      "imported": 45,
+      "block": "anki:dermatologia-sindromes-verrucosas"
+    }
+  ],
+  "mediaReferenced": 169,
+  "mediaExtracted": 166
+}

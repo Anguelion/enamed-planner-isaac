@@ -10201,7 +10201,7 @@ function renderQuestion(question, total) {
       cls = 'selected';
     }
     const isEliminated = eliminated.includes(letter);
-    return `<div class="answer-row"><button class="answer-option ${cls} ${isEliminated?'eliminated':''}" data-question="${question.id}" data-answer="${letter}" title="Alternativa ${letter} · tecla ${optionIndex+1}" ${result?'disabled':''}><span class="answer-letter">${letter}</span><span style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, [], false)}</span></button><button class="eliminate-btn ${isEliminated?'active':''}" data-eliminate="${letter}" title="Riscar alternativa ${letter} com J" aria-label="Riscar alternativa ${letter}">×</button></div>`;
+    return `<div class="answer-row"><button class="answer-option ${cls} ${isEliminated?'eliminated':''}" data-question="${question.id}" data-answer="${letter}" title="Alternativa ${letter} · tecla ${optionIndex+1}" ${result?'disabled':''}><span class="answer-letter">${letter}</span><span class="answer-content" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(text, [], false)}${renderQuestionImageList(question.optionImages?.[letter], `Alternativa ${letter} da questão ${question.number}`)}</span></button><button class="eliminate-btn ${isEliminated?'active':''}" data-eliminate="${letter}" title="Riscar alternativa ${letter} com J" aria-label="Riscar alternativa ${letter}">×</button></div>`;
   }).join('');
   const timeoutText = result?.timedOut ? ' Tempo esgotado no modo contratempo.' : '';
   const feedback = result ? `<div class="question-feedback ${result.correct?'':'wrong'}"><div><strong>${result.correct?'Resposta correta.':'Resposta incorreta.'}</strong>${timeoutText} Gabarito: ${question.answer}.${!result.correct ? ' Marque este assunto para revisão.' : ''}</div>${!result.correct && linkedLesson ? `<button class="tiny-btn question-material-link" data-question-materials="${escapeAttr(linkedLesson.id)}">Revisar material da aula</button>` : ''}</div>` : '';
@@ -10236,9 +10236,12 @@ function renderQuestion(question, total) {
     </div></div></div>`;
 }
 function renderQuestionImages(question) {
-  if(!question.images?.length) return '';
+  return renderQuestionImageList(question.images, `Questão ${question.number}`);
+}
+function renderQuestionImageList(images, altPrefix='Imagem da questão') {
+  if(!images?.length) return '';
   const urls = window.ENAMED_IMPORTED_ASSET_URLS || {};
-  return `<div class="question-images">${question.images.map((image, index) => { const src = typeof image === 'string' ? image : image.url || urls[image.assetId] || ''; return src ? `<img loading="lazy" decoding="async" src="${escapeAttr(src)}" alt="Imagem da questão ${question.number}${question.images.length > 1 ? `.${index + 1}` : ''}">` : `<div class="question-image-pending">Imagem pendente: ${escapeHtml(image.alias || 'sem nome')}</div>`; }).join('')}</div>`;
+  return `<span class="question-images">${images.map((image, index) => { const src = typeof image === 'string' ? image : image.url || urls[image.assetId] || ''; return src ? `<img loading="lazy" decoding="async" src="${escapeAttr(src)}" alt="${escapeAttr(altPrefix)}${images.length > 1 ? ` · imagem ${index + 1}` : ''}">` : `<span class="question-image-pending">Imagem pendente: ${escapeHtml(image.alias || 'sem nome')}</span>`; }).join('')}</span>`;
 }
 function renderQuestionEditPanel(question) {
   const optionLetters = ['A','B','C','D','E'].filter(letter => question.options?.[letter] !== undefined);
@@ -10317,7 +10320,7 @@ function renderQuestionCommentPanel(question, result, highlights=[]) {
   return `<div class="question-comment-panel">
     <div class="comment-quick-nav"><button class="icon-btn" id="commentPrevQuestion" ${ui.qIndex===0?'disabled':''}>‹</button><button class="icon-btn primary" id="commentNextQuestion">Próx ›</button></div>
     <div class="comment-tabs">${tabs.map(([value,label,icon]) => `<button class="${tab===value?'active':''} ${value}" data-comment-tab="${value}"><span>${icon}</span>${escapeHtml(label)}</button>`).join('')}</div>
-    <div class="question-comment-card ${escapeAttr(tab)}"><strong>${escapeHtml(tabs.find(item => item[0] === tab)?.[1] || 'Comentário')}</strong><div>${renderCommentSectionContent(tab, sections[tab] || sections.analysis, highlights)}</div></div>
+    <div class="question-comment-card ${escapeAttr(tab)}"><strong>${escapeHtml(tabs.find(item => item[0] === tab)?.[1] || 'Comentário')}</strong><div>${renderCommentSectionContent(tab, sections[tab] || sections.analysis, highlights)}</div>${tab==='analysis' ? renderQuestionImageList(question.commentImages, `Comentário da questão ${question.number}`) : ''}</div>
   </div>`;
 }
 function renderCommentSectionContent(tab, text, highlights=[]) {

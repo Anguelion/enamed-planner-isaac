@@ -196,11 +196,12 @@ def extract_media(extracted: Path, slug: str) -> dict[str, str]:
     return urls
 
 
-def update_index(entry: dict) -> None:
+def update_index(entries: list[dict]) -> None:
     index_path = BANK_ROOT / "index.json"
     index = json.loads(index_path.read_text(encoding="utf-8"))
-    blocks = [item for item in index["blocks"] if item.get("block") != entry["block"]]
-    blocks.append(entry)
+    replaced = {entry["block"] for entry in entries}
+    blocks = [item for item in index["blocks"] if item.get("block") not in replaced]
+    blocks.extend(entries)
     index["blocks"] = blocks
     index["total"] = sum(int(item.get("count", 0)) for item in blocks)
     index["generatedAt"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -241,24 +242,34 @@ def main() -> None:
             package.extractall(extracted)
         collection = choose_collection(extracted)
         connection = sqlite3.connect(collection)
-        first_card = connection.execute("select did from cards order by id limit 1").fetchone()
-        full_deck = deck_name(connection, first_card[0] if first_card else 1)
-        deck_parts = full_deck.split("::")
-        leaf = deck_parts[-1]
-        label = re.sub(r"^\d+\s*-\s*", "", leaf).strip() or apkg.stem
-        topic = args.topic or label
-        inferred_specialty = re.sub(r"^\d+\s*-\s*", "", deck_parts[-2]).strip() if len(deck_parts) > 1 else "Importado do Anki"
+        notes = connection.execute(
+            "select n.id,n.guid,n.mid,n.tags,n.flds,min(c.did) "
+            "from notes n join cards c on c.nid=n.id group by n.id,n.guid,n.mid,n.tags,n.flds order by n.id"
+        ).fetchall()
+        deck_cache = {did: deck_name(connection, did) for did in {row[5] for row in notes}}
+        first_full_deck = deck_cache[notes[0][5]] if notes else "Importado do Anki"
+        first_parts = first_full_deck.split("::")
+        inferred_specialty = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", first_parts[-2]).strip() if len(first_parts) > 1 else "Importado do Anki"
         specialty = args.specialty or inferred_specialty
         area = args.area or specialty
-        slug = slugify(args.slug or f"{specialty}-{topic}")
-        block = args.block or f"anki:{slug}"
-        media_urls = extract_media(extracted, slug)
+        multiple_decks = len(deck_cache) > 1 and not args.topic
+        if multiple_decks and args.block:
+            parser.error("--block só pode ser usado com um único tema; remova a opção para preservar os subbaralhos.")
+        first_label = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", first_parts[-1]).strip() or apkg.stem
+        media_slug = slugify(args.slug or (specialty if multiple_decks else f"{specialty}-{args.topic or first_label}"))
+        media_urls = extract_media(extracted, media_slug)
 
-        notes = connection.execute("select id,guid,mid,tags,flds from notes order by id").fetchall()
         names_by_model = {}
-        questions = []
+        groups = {}
         skipped = []
-        for note_id, guid, model_id, raw_tags, fields in notes:
+        for note_id, guid, model_id, raw_tags, fields, deck_id in notes:
+            full_deck = deck_cache[deck_id]
+            parts = full_deck.split("::")
+            label = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", parts[-1]).strip() or apkg.stem
+            topic = args.topic or label
+            group_slug = slugify(args.slug or f"{specialty}-{topic}") if not multiple_decks else slugify(f"{args.slug or specialty}-{topic}")
+            block = args.block or f"anki:{group_slug}"
+            group = groups.setdefault(block, {"slug": group_slug, "label": label, "topic": topic, "questions": []})
             names = names_by_model.setdefault(model_id, field_names(connection, model_id))
             values = fields.split("\x1f")
             record = {name.lower(): values[index] if index < len(values) else "" for index, name in enumerate(names)}
@@ -271,27 +282,34 @@ def main() -> None:
             reason = ""
             if not clean_html(stem_raw):
                 reason = "enunciado ausente"
-            elif len(options) < 2:
-                reason = "questão discursiva ou com menos de duas alternativas"
+            elif len(options) < 4:
+                reason = "questão discursiva ou com menos de quatro alternativas"
             elif len(answers) != 1 or answers[0] not in options:
                 reason = "gabarito ausente, múltiplo ou incompatível"
             if reason:
-                skipped.append({"noteId": note_id, "number": clean_html(record.get("number", "")), "reason": reason})
+                skipped.append({"noteId": note_id, "number": clean_html(record.get("number", "")), "topic": topic, "reason": reason})
                 continue
 
             refs = image_names(stem_raw)
             images = [media_urls[name] for name in refs if name in media_urls]
+            option_images = {
+                letter.upper(): [media_urls[name] for name in image_names(record.get(letter, "")) if name in media_urls]
+                for letter in "abcdefghij"
+                if image_names(record.get(letter, ""))
+            }
             explanation = clean_html(record.get("explanation", ""))
             reference = clean_html(record.get("ref", ""))
+            comment_image_names = image_names(record.get("explanation", "")) + image_names(record.get("ref", ""))
+            comment_images = [media_urls[name] for name in comment_image_names if name in media_urls]
             comment = explanation
             if reference:
                 comment = f"{comment}\n\nFonte: {reference}".strip()
-            number = clean_html(record.get("number", "")) or str(len(questions) + 1)
+            number = clean_html(record.get("number", "")) or str(len(group["questions"]) + 1)
             tags = [tag for tag in raw_tags.strip().split() if tag]
             tags.extend([specialty, topic, "Anki"])
             stable_id = hashlib.sha1(str(guid or note_id).encode("utf-8")).hexdigest()[:16]
-            questions.append({
-                "id": f"anki-{slug}-{stable_id}",
+            group["questions"].append({
+                "id": f"anki-{group_slug}-{stable_id}",
                 "number": number,
                 "sourceNumber": number,
                 "collectionBlock": block,
@@ -307,6 +325,8 @@ def main() -> None:
                 "source": apkg.name,
                 "sourceLabel": f"Anki · {label}",
                 "images": images,
+                "optionImages": option_images,
+                "commentImages": comment_images,
                 "comment": comment,
                 "tags": list(dict.fromkeys(tags)),
                 "ankiNoteId": str(note_id),
@@ -314,37 +334,53 @@ def main() -> None:
             })
 
         connection.close()
-        payload = {"block": block, "label": f"Anki · {label}", "count": len(questions), "questions": questions}
-        json_name = f"{slug}.json"
-        js_name = f"{slug}.js"
-        pretty = json.dumps(payload, ensure_ascii=False, indent=2)
-        compact = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
-        (BANK_ROOT / json_name).write_text(pretty + "\n", encoding="utf-8")
-        (BANK_ROOT / js_name).write_text(
-            f"window.ENAMED_LOCAL_QUESTION_BANK=window.ENAMED_LOCAL_QUESTION_BANK||{{}};window.ENAMED_LOCAL_QUESTION_BANK[{json.dumps(block)}]={compact};\n",
-            encoding="utf-8",
-        )
+        imported = sum(len(group["questions"]) for group in groups.values())
         report = {
             "source": apkg.name,
-            "deck": full_deck,
+            "deck": "::".join(first_parts[:-1]) if multiple_decks else first_full_deck,
             "notes": len(notes),
-            "imported": len(questions),
+            "imported": imported,
             "skipped": skipped,
-            "mediaReferenced": sum(len(question["images"]) for question in questions),
+            "topics": [
+                {"topic": group["topic"], "imported": len(group["questions"]), "block": block}
+                for block, group in groups.items()
+            ],
+            "mediaReferenced": sum(
+                len(question["images"])
+                + sum(len(images) for images in question["optionImages"].values())
+                + len(question["commentImages"])
+                for group in groups.values()
+                for question in group["questions"]
+            ),
             "mediaExtracted": len(media_urls),
         }
-        report_name = f"{slug}.import-report.json"
+        report_name = f"{media_slug}.import-report.json"
         (BANK_ROOT / report_name).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        update_index({
-            "block": block,
-            "label": f"Anki · {label}",
-            "file": json_name,
-            "script": js_name,
-            "count": len(questions),
-            "special": True,
-            "sourceType": "anki",
-            "report": report_name,
-        })
+        entries = []
+        for block, group in groups.items():
+            questions = group["questions"]
+            slug = group["slug"]
+            payload = {"block": block, "label": f"Anki · {group['label']}", "count": len(questions), "questions": questions}
+            json_name = f"{slug}.json"
+            js_name = f"{slug}.js"
+            pretty = json.dumps(payload, ensure_ascii=False, indent=2)
+            compact = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+            (BANK_ROOT / json_name).write_text(pretty + "\n", encoding="utf-8")
+            (BANK_ROOT / js_name).write_text(
+                f"window.ENAMED_LOCAL_QUESTION_BANK=window.ENAMED_LOCAL_QUESTION_BANK||{{}};window.ENAMED_LOCAL_QUESTION_BANK[{json.dumps(block)}]={compact};\n",
+                encoding="utf-8",
+            )
+            entries.append({
+                "block": block,
+                "label": f"Anki · {group['label']}",
+                "file": json_name,
+                "script": js_name,
+                "count": len(questions),
+                "special": True,
+                "sourceType": "anki",
+                "report": report_name,
+            })
+        update_index(entries)
         print(json.dumps(report, ensure_ascii=False, indent=2))
 
 

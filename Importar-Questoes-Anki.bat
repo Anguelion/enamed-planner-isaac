@@ -6,10 +6,15 @@ if "%~1"=="" (
   pause
   exit /b 1
 )
-python "%~dp0scripts\import-anki-apkg.py" "%~1"
-if errorlevel 1 (
+set "IMPORT_ERROR=0"
+for %%F in (%*) do (
+  echo Importando: %%~nxF
+  python "%~dp0scripts\import-anki-apkg.py" "%%~fF"
+  if errorlevel 1 set "IMPORT_ERROR=1"
+)
+if "%IMPORT_ERROR%"=="1" (
   echo.
-  echo A importacao encontrou um erro. O arquivo original nao foi alterado.
+  echo Uma das importacoes encontrou um erro. Os arquivos originais nao foram alterados.
 ) else (
   echo.
   echo Importacao concluida. Abra novamente o planner para ver as questoes.

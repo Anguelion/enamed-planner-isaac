@@ -7,17 +7,27 @@
     {
       "noteId": 1780778247512,
       "number": "1731e",
-      "reason": "questão discursiva ou com menos de duas alternativas"
+      "topic": "Dermatoses Eczematosas",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
     },
     {
       "noteId": 1780778247513,
       "number": "1732e",
-      "reason": "questão discursiva ou com menos de duas alternativas"
+      "topic": "Dermatoses Eczematosas",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
     },
     {
       "noteId": 1780778247514,
       "number": "1733e",
-      "reason": "questão discursiva ou com menos de duas alternativas"
+      "topic": "Dermatoses Eczematosas",
+      "reason": "questão discursiva ou com menos de quatro alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Dermatoses Eczematosas",
+      "imported": 96,
+      "block": "anki:dermatologia-dermatoses-eczematosas"
     }
   ],
   "mediaReferenced": 6,
