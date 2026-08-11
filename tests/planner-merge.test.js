@@ -48,7 +48,7 @@ test('merge de materials: conteudo do lado mais recente, destaques (highlights) 
   const ctx = loadPlannerSandbox();
   const remote = {
     materials: {
-      'doc-a': { edited: true, content: 'versao remota antiga', updatedAt: '2026-01-01T00:00:00.000Z', highlights: [{ text: 'trecho-remoto', color: 'yellow', block: 1, occurrence: 0 }] }
+      'doc-a': { edited: true, content: 'versao remota antiga', updatedAt: '2026-01-01T00:00:00.000Z', lastReadAt: '2026-03-01T00:00:00.000Z', lastHeadingText: 'Conduta', highlights: [{ text: 'trecho-remoto', color: 'yellow', block: 1, occurrence: 0 }] }
     }
   };
   const local = {
@@ -61,6 +61,7 @@ test('merge de materials: conteudo do lado mais recente, destaques (highlights) 
   assert.equal(merged.materials['doc-a'].content, 'versao local nova');
   const highlightTexts = plain(merged.materials['doc-a'].highlights.map(h => h.text).sort());
   assert.deepStrictEqual(highlightTexts, ['trecho-local', 'trecho-remoto'], 'grifos de ambos os lados devem sobreviver ao merge');
+  assert.equal(merged.materials['doc-a'].lastHeadingText, 'Conduta', 'a posicao de leitura mais recente deve sobreviver sem trocar o conteudo editado');
   assert.equal(merged.materials['doc-b'].content, 'documento so local', 'documento exclusivo de um lado nao pode sumir');
 });
 

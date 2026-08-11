@@ -88,6 +88,9 @@ let questionBankLoadPromise = null;
 let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
 let materialGlobalSearchTimer = null;
+let materialReadingCleanup = null;
+let materialReadingRestoreDocId = '';
+let materialReadingLastSavedAt = 0;
 let importedSimuladosLoadPromise = null;
 let pomodoroLastSavedSecond = -1;
 let pomodoroLastTickedSecond = -1;
@@ -1237,11 +1240,16 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     const remoteDoc = remoteMaterials[docId] || {};
     const localDoc = localMaterials[docId] || {};
     const base = timestampOf(localDoc.updatedAt) >= timestampOf(remoteDoc.updatedAt) ? localDoc : remoteDoc;
+    const reading = timestampOf(localDoc.lastReadAt) >= timestampOf(remoteDoc.lastReadAt) ? localDoc : remoteDoc;
     const highlightsByKey = new Map();
     [...(remoteDoc.highlights || []), ...(localDoc.highlights || [])].forEach(highlight => {
       highlightsByKey.set(`${highlight.text}|${highlight.color}|${highlight.block}|${highlight.occurrence}`, highlight);
     });
-    merged.materials[docId] = { ...base, highlights: [...highlightsByKey.values()] };
+    merged.materials[docId] = {
+      ...base,
+      ...Object.fromEntries(['lastReadAt','lastHeadingId','lastHeadingText','lastScrollRatio','lastTitle','lastArea','lastBlock','lastCategory'].map(key => [key,reading[key]])),
+      highlights: [...highlightsByKey.values()]
+    };
   });
 
   return merged;
@@ -3949,6 +3957,12 @@ function latestDashboardActivity() {
     const card=state.flashcardLibrary?.find(item=>item.id===review.cardId);
     candidates.push({type:'flashcard',icon:'cards',title:card?.front||card?.question||'Revisão de flashcards',module:card?.deck||card?.topic||'Flashcards',updatedAt:review.reviewedAt,position:'Continuar revisão',cardId:review.cardId||''});
   });
+  const lastMaterial=lastReadMaterialMeta();
+  if(lastMaterial) candidates.push({
+    type:'material',icon:'materials',title:lastMaterial.meta.lastTitle||'Material de estudo',
+    module:lastMaterial.meta.lastArea||'Materiais',updatedAt:lastMaterial.meta.lastReadAt,
+    position:lastMaterial.meta.lastHeadingText?`Retomar em ${lastMaterial.meta.lastHeadingText}`:'Continuar leitura',docId:lastMaterial.docId
+  });
   return candidates.sort((a,b)=>(Date.parse(b.updatedAt)||0)-(Date.parse(a.updatedAt)||0))[0]||null;
 }
 function dashboardActivityTimestamp(value) {
@@ -3959,9 +3973,9 @@ function dashboardActivityTimestamp(value) {
 function renderContinueStudying() {
   const activity=latestDashboardActivity();
   if(!activity) return `<section class="card continue-study-card is-empty"><span class="continue-study-icon">${iconSvg('play')}</span><div><span class="eyebrow">Prioridade</span><h2>Continuar estudando</h2><p>A primeira atividade que você abrir ficará disponível aqui para retomada.</p></div><button class="icon-btn primary" data-dashboard-continue="empty">Abrir trilha</button></section>`;
-  return `<section class="card continue-study-card"><span class="continue-study-icon">${iconSvg(activity.icon)}</span><div class="continue-study-copy"><span class="eyebrow">Continuar estudando</span><h2>${escapeHtml(activity.title)}</h2><p>${escapeHtml(activity.module)} · ${escapeHtml(activity.position)}</p><small>Última atividade: ${escapeHtml(dashboardActivityTimestamp(activity.updatedAt))}</small></div><button class="icon-btn primary" data-dashboard-continue="${escapeAttr(activity.type)}" data-continue-lesson="${escapeAttr(activity.lessonId||'')}" data-continue-source="${escapeAttr(activity.sourceId||'')}" data-continue-question="${escapeAttr(activity.questionId||'')}" data-continue-run="${escapeAttr(activity.runId||'')}">${iconSvg('next')}<span>Retomar</span></button></section>`;
+  return `<section class="card continue-study-card"><span class="continue-study-icon">${iconSvg(activity.icon)}</span><div class="continue-study-copy"><span class="eyebrow">Continuar estudando</span><h2>${escapeHtml(activity.title)}</h2><p>${escapeHtml(activity.module)} · ${escapeHtml(activity.position)}</p><small>Última atividade: ${escapeHtml(dashboardActivityTimestamp(activity.updatedAt))}</small></div><button class="icon-btn primary" data-dashboard-continue="${escapeAttr(activity.type)}" data-continue-lesson="${escapeAttr(activity.lessonId||'')}" data-continue-source="${escapeAttr(activity.sourceId||'')}" data-continue-question="${escapeAttr(activity.questionId||'')}" data-continue-run="${escapeAttr(activity.runId||'')}" data-continue-material="${escapeAttr(activity.docId||'')}">${iconSvg('next')}<span>Retomar</span></button></section>`;
 }
-function openDashboardActivity(button) {
+async function openDashboardActivity(button) {
   const type=button.dataset.dashboardContinue;
   let nextTab='';
   if(type==='video') {
@@ -3979,6 +3993,12 @@ function openDashboardActivity(button) {
     nextTab='simulados';
   } else if(type==='flashcard') {
     nextTab='flashcards';
+  } else if(type==='material') {
+    await loadMaterialLibrary();
+    const doc=materialLibrary.find(item=>item.id===(button.dataset.continueMaterial||''));
+    if(!doc) return;
+    prepareMaterialDocOpen(doc,true);
+    nextTab='materiais';
   } else {
     document.querySelector('.dashboard-road')?.scrollIntoView({behavior:'smooth',block:'start'});
     return;
@@ -6209,21 +6229,38 @@ function renderMaterialGlobalSearchResults(matches, query) {
     : `<div class="materials-global-search-empty">Nenhum resultado para "${escapeHtml(query)}"</div>`;
   box.querySelectorAll('[data-global-search-doc]').forEach(button => button.onclick = () => openMaterialDocGlobal(button.dataset.globalSearchDoc));
 }
+function lastReadMaterialMeta() {
+  return Object.entries(state.materials||{}).map(([docId,meta])=>({docId,meta:meta||{}}))
+    .filter(item=>item.meta.lastReadAt)
+    .sort((a,b)=>timestampOf(b.meta.lastReadAt)-timestampOf(a.meta.lastReadAt))[0] || null;
+}
+function prepareMaterialDocOpen(doc, restore=true) {
+  if(!doc) return;
+  ui.materialDocId=doc.id;
+  ui.materialSearch='';
+  ui.materialFocusMode=false;
+  ui.materialEditMode=false;
+  ui.materialScheduleId=doc.scheduleId||'';
+  if(doc.category==='especialidade') {
+    ui.materialsSection='especialidades';
+    ui.materialSpecialty=doc.area||'Todos';
+  } else {
+    ui.materialsSection='apostila';
+    ui.materialBlock=doc.block?String(doc.block):'Todos';
+  }
+  materialReadingRestoreDocId=restore?doc.id:'';
+}
+function renderLastReadMaterialCard(currentDocId='') {
+  const last=lastReadMaterialMeta();
+  if(!last || last.docId===currentDocId) return '';
+  const meta=last.meta;
+  return `<aside class="material-resume-card"><span class="material-resume-icon">${iconSvg('materials')}</span><div><span class="eyebrow">Sua última leitura</span><strong>${escapeHtml(meta.lastTitle||'Material de estudo')}</strong><small>${meta.lastHeadingText?`Você parou em: ${escapeHtml(meta.lastHeadingText)}`:'Retome de onde parou'}</small></div><button type="button" class="icon-btn primary" data-material-resume="${escapeAttr(last.docId)}">Continuar leitura ${iconSvg('next')}</button></aside>`;
+}
 function openMaterialDocGlobal(docId) {
   const doc = materialLibrary.find(item => item.id === docId);
   if(!doc) return;
   ui.materialGlobalSearch='';
-  ui.materialDocId=doc.id;
-  ui.materialSearch='';
-  ui.materialFocusMode=false;
-  if(doc.category==='especialidade') {
-    ui.materialsSection='especialidades';
-    ui.materialSpecialty=doc.area || 'Todos';
-  } else {
-    ui.materialsSection='apostila';
-    ui.materialBlock=doc.block ? String(doc.block) : 'Todos';
-    ui.materialScheduleId=doc.scheduleId || '';
-  }
+  prepareMaterialDocOpen(doc,true);
   stopAutoStudy('material');
   renderMateriais();
 }
@@ -6232,6 +6269,7 @@ function renderEspecialidadeFolder(group, selectedId) {
   return `<details class="material-folder" data-material-folder ${open?'open':''}><summary><span>${escapeHtml(group.topic)}</span><span class="folder-count">${group.documents.length}</span></summary><div class="folder-options">${group.documents.map(doc => `<button class="material-choice ${doc.id===selectedId?'active':''}" data-material-doc="${doc.id}"><strong>${escapeHtml(doc.title)}</strong><span class="topic-source">${n(doc.imageCount) ? `${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}` : 'Somente texto'}</span></button>`).join('')}</div></details>`;
 }
 function renderMateriais() {
+  if(materialReadingCleanup) { materialReadingCleanup(); materialReadingCleanup=null; }
   const section = ui.materialsSection === 'especialidades' ? 'especialidades' : 'apostila';
   const baseDocs = materialLibrary.filter(doc => doc.category !== 'especialidade');
   const specialtyDocs = materialLibrary.filter(doc => doc.category === 'especialidade');
@@ -6280,7 +6318,7 @@ function renderMateriais() {
   }
   const globalSearchBar = `<div class="materials-global-search search-field" id="materialGlobalSearchWrap"><span aria-hidden="true">⌕</span><input class="input" id="materialGlobalSearch" type="search" autocomplete="off" placeholder="Pesquisar tema, assunto ou termo em todos os materiais" value="${escapeAttr(ui.materialGlobalSearch)}"><button type="button" class="materials-global-search-clear" id="materialGlobalSearchClear" aria-label="Limpar pesquisa" ${ui.materialGlobalSearch?'':'hidden'}>×</button><div class="materials-global-search-results" id="materialGlobalSearchResults" hidden></div></div>`;
   const totalTopics = new Set(materialLibrary.map(doc=>`${doc.area||''}|${doc.topic||doc.scheduleId||doc.title}`)).size;
-  document.getElementById('materiais').innerHTML = `<div class="materials-shell ${ui.materialFocusMode?'material-focus-mode':''}"><header class="materials-topbar"><div class="materials-hero-main"><div class="materials-breadcrumb"><span>Biblioteca</span><b>•</b> Conteúdo para revisão</div><div class="materials-title-row"><span class="materials-icon">${iconSvg('materials')}</span><div><span class="eyebrow">Central de materiais</span><h1>Estude com tudo no lugar.</h1><p>Resumos e referências organizados para você encontrar, revisar e avançar sem perder tempo.</p></div></div>${globalSearchBar}</div><div class="materials-hero-stats"><div><strong>${materialLibrary.length}</strong><span>materiais</span></div><div><strong>${totalTopics}</strong><span>temas</span></div><div><strong>${figures}</strong><span>figuras</span></div></div><div class="materials-hero-controls">${sectionTabs}<div class="materials-filters">${filtersHtml}</div></div></header><div class="library-layout ${layoutOpen?'':'materials-block-only'}">${sidebar}<section class="card material-reader">${reader}</section></div></div>`;
+  document.getElementById('materiais').innerHTML = `<div class="materials-shell ${ui.materialFocusMode?'material-focus-mode':''}"><header class="materials-topbar"><div class="materials-hero-main"><div class="materials-breadcrumb"><span>Biblioteca</span><b>•</b> Conteúdo para revisão</div><div class="materials-title-row"><span class="materials-icon">${iconSvg('materials')}</span><div><span class="eyebrow">Central de materiais</span><h1>Estude com tudo no lugar.</h1><p>Resumos e referências organizados para você encontrar, revisar e avançar sem perder tempo.</p></div></div>${globalSearchBar}</div><div class="materials-hero-stats"><div><strong>${materialLibrary.length}</strong><span>materiais</span></div><div><strong>${totalTopics}</strong><span>temas</span></div><div><strong>${figures}</strong><span>figuras</span></div></div><div class="materials-hero-controls">${sectionTabs}<div class="materials-filters">${filtersHtml}</div></div></header>${renderLastReadMaterialCard(selected?.id||'')}<div class="library-layout ${layoutOpen?'':'materials-block-only'}">${sidebar}<section class="card material-reader">${reader}</section></div></div>`;
   const globalSearchInput = document.getElementById('materialGlobalSearch');
   const globalSearchClear = document.getElementById('materialGlobalSearchClear');
   if(globalSearchInput) {
@@ -6346,8 +6384,8 @@ function renderMateriais() {
   });
   const search = document.getElementById('materialSearch');
   if(search) search.oninput = e => { ui.materialSearch=e.target.value; applyMaterialSearch(e.target.value); };
-  document.querySelectorAll('[data-material-doc]').forEach(button => button.onclick = e => { ui.materialDocId=e.currentTarget.dataset.materialDoc; ui.materialScheduleId=materialLibrary.find(doc=>doc.id===ui.materialDocId)?.scheduleId || ''; ui.materialFocusMode=false; stopAutoStudy('material'); renderMateriais(); });
-  document.querySelectorAll('[data-material-heading]').forEach(button => button.onclick = e => document.getElementById(e.currentTarget.dataset.materialHeading)?.scrollIntoView({behavior:'smooth',block:'start'}));
+  document.querySelectorAll('[data-material-doc]').forEach(button => button.onclick = e => { const doc=materialLibrary.find(item=>item.id===e.currentTarget.dataset.materialDoc); prepareMaterialDocOpen(doc,true); stopAutoStudy('material'); renderMateriais(); });
+  document.querySelector('[data-material-resume]')?.addEventListener('click',event=>openMaterialDocGlobal(event.currentTarget.dataset.materialResume));
   bindMaterialReader(selected);
   if(selected && ui.materialFocusMode) {
     const readerHead=document.querySelector('#materiais .reader-head');
@@ -6378,6 +6416,14 @@ function renderMaterialFolder(group, selectedId) {
   const open = group.documents.some(doc => doc.id === selectedId) || group.key === ui.materialScheduleId || Boolean(ui.materialSearch);
   return `<details class="material-folder ${group.key===ui.materialScheduleId?'linked':''}" data-material-folder ${open?'open':''}><summary><span>${group.block===999?'':`B${String(group.block).padStart(2,'0')} · `}${escapeHtml(group.topic)}</span><span class="folder-count">${group.documents.length}</span></summary><div class="folder-options">${group.documents.map(doc => `<button class="material-choice ${doc.id===selectedId?'active':''}" data-material-doc="${doc.id}"><strong>${escapeHtml(doc.title)}</strong><span class="topic-source">${n(doc.imageCount) ? `${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}` : 'Somente texto'}</span></button>`).join('')}</div></details>`;
 }
+function materialReadingHeadings(markdown) {
+  return String(markdown||'').split(/\r?\n/).map((line,index)=>{
+    const match=line.trim().match(/^(#{2,4})\s+(.+)$/);
+    if(!match) return null;
+    const text=match[2].trim();
+    return {text,level:match[1].length,id:materialHeadingId(text,index)};
+  }).filter(Boolean);
+}
 function renderMaterialReader(doc) {
   if(!doc) {
     const linked = ui.materialScheduleId ? state.schedule.find(item => item.id === ui.materialScheduleId) : null;
@@ -6388,13 +6434,12 @@ function renderMaterialReader(doc) {
   const markdown = effectiveMaterialMarkdown(doc, sourceMarkdown);
   if(doc.markdown && markdown === undefined) loadMaterialMarkdown(doc);
   loadMaterialImagesForMarkdown(doc, markdown || '');
-  const toc = materialSections(markdown || '').filter(section => section.level >= 2).slice(0,40).map(section => ({text:section.title}));
+  const tocItems = materialReadingHeadings(markdown || '');
   const markdownHtml = doc.markdown
     ? (markdown === undefined ? '<div class="empty">Carregando texto do resumo...</div>' : ui.materialEditMode ? renderMaterialEditor(doc, markdown) : `<article class="material-markdown material-reading-mode">${renderMaterialMarkdown(markdown, doc)}</article>`)
     : '<div class="empty">Texto estruturado ainda não gerado para este material.</div>';
-  const tocItems = toc.map(item => ({...item,id:materialHeadingId(item.text)}));
   const meta = materialEditMeta(doc.id);
-  return `<div class="reader-head"><div><span class="eyebrow">${doc.block?`Bloco ${String(doc.block).padStart(2,'0')}`:'Material complementar'} · ${escapeHtml(doc.area || 'Revisão')}</span><h2>${escapeHtml(doc.title)}</h2><div class="muted">Vinculado a ${escapeHtml(doc.topic || 'conteúdo complementar')}</div></div><span class="badge ${meta.edited?'wait':'done'}">${meta.edited?'Editado neste computador':n(doc.imageCount)?`${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}`:'Texto limpo'}</span></div><div class="material-reader-toolbar"><div><button class="icon-btn primary" id="materialEditToggle">${ui.materialEditMode?'Concluir edição':'Editar Markdown'}</button><button class="icon-btn" id="materialFocusToggle" aria-pressed="${ui.materialFocusMode}">${ui.materialFocusMode?'Sair do foco':'Foco'}</button><button class="icon-btn" id="materialExportMarkdown">Exportar .md</button>${meta.edited?'<button class="icon-btn" id="materialRestoreOriginal">Restaurar original</button>':''}</div><div class="material-highlight-toolbar"><span class="muted">Selecione um trecho para destacar.</span><button class="tiny-btn" id="clearMaterialHighlights">Limpar todos</button></div></div>${!ui.materialEditMode && tocItems.length?`<nav class="reader-toc" aria-label="Seções do resumo">${tocItems.map(item=>`<button class="tiny-btn" data-material-heading="${item.id}">${escapeHtml(item.text)}</button>`).join('')}</nav>`:''}${markdownHtml}`;
+  return `<div class="reader-head"><div><span class="eyebrow">${doc.block?`Bloco ${String(doc.block).padStart(2,'0')}`:'Material complementar'} · ${escapeHtml(doc.area || 'Revisão')}</span><h2>${escapeHtml(doc.title)}</h2><div class="muted">Vinculado a ${escapeHtml(doc.topic || 'conteúdo complementar')}</div></div><span class="badge ${meta.edited?'wait':'done'}">${meta.edited?'Editado neste computador':n(doc.imageCount)?`${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}`:'Texto limpo'}</span></div><div class="material-reader-toolbar"><div><button class="icon-btn primary" id="materialEditToggle">${ui.materialEditMode?'Concluir edição':'Editar Markdown'}</button><button class="icon-btn" id="materialFocusToggle" aria-pressed="${ui.materialFocusMode}">${ui.materialFocusMode?'Sair do foco':'Foco'}</button><button class="icon-btn" id="materialExportMarkdown">Exportar .md</button>${meta.edited?'<button class="icon-btn" id="materialRestoreOriginal">Restaurar original</button>':''}</div><div class="material-highlight-toolbar"><span class="muted">Selecione um trecho para destacar.</span><button class="tiny-btn" id="clearMaterialHighlights">Limpar todos</button></div></div>${!ui.materialEditMode && tocItems.length?`<nav class="reader-toc" aria-label="Seções do resumo">${tocItems.map(item=>`<button class="tiny-btn" data-material-heading="${item.id}" aria-current="false">${escapeHtml(item.text)}</button>`).join('')}</nav>`:''}${markdownHtml}`;
 }
 async function loadMaterialMarkdown(doc) {
   if(!doc?.markdown || materialMarkdownCache[doc.id] !== undefined) return;
@@ -6414,8 +6459,95 @@ function materialEditMeta(docId) {
   if(!Array.isArray(state.materials[docId].highlights)) state.materials[docId].highlights = [];
   return state.materials[docId];
 }
+function rememberMaterialReading(doc,heading,scrollRatio,force=false) {
+  if(!doc) return;
+  const meta=materialEditMeta(doc.id);
+  const headingId=heading?.id||heading?.dataset?.materialHeadingAnchor||'';
+  const headingText=heading?.text||heading?.dataset?.materialHeadingText||'';
+  const headingChanged=Boolean(headingId && headingId!==meta.lastHeadingId);
+  meta.lastReadAt=nowIso();
+  meta.lastTitle=doc.title||meta.lastTitle||'';
+  meta.lastArea=doc.area||meta.lastArea||'';
+  meta.lastBlock=doc.block||meta.lastBlock||'';
+  meta.lastCategory=doc.category||meta.lastCategory||'';
+  if(headingId) meta.lastHeadingId=headingId;
+  if(headingText) meta.lastHeadingText=headingText;
+  if(Number.isFinite(scrollRatio)) meta.lastScrollRatio=Math.max(0,Math.min(1,scrollRatio));
+  const now=Date.now();
+  if(force||headingChanged||now-materialReadingLastSavedAt>5000) {
+    materialReadingLastSavedAt=now;
+    saveStateOnly({invalidate:false});
+  }
+}
+function bindMaterialReadingProgress(doc) {
+  const article=document.querySelector('#materiais .material-reading-mode');
+  const toc=document.querySelector('#materiais .reader-toc');
+  if(!article||!toc) return;
+  const headings=[...article.querySelectorAll('[data-material-heading-anchor]')];
+  const buttons=[...toc.querySelectorAll('[data-material-heading]')];
+  if(!headings.length||!buttons.length) return;
+  let frame=0;
+  let activeId='';
+  const ratio=()=>{
+    const rect=article.getBoundingClientRect();
+    const total=Math.max(1,rect.height-window.innerHeight);
+    return Math.max(0,Math.min(1,(-rect.top)/total));
+  };
+  const activate=(heading,force=false)=>{
+    if(!heading) return;
+    const id=heading.dataset.materialHeadingAnchor||heading.id;
+    const changed=id!==activeId;
+    activeId=id;
+    buttons.forEach(button=>{
+      const current=button.dataset.materialHeading===id;
+      button.classList.toggle('active',current);
+      button.setAttribute('aria-current',current?'location':'false');
+      if(current&&changed) toc.scrollTo({left:Math.max(0,button.offsetLeft-(toc.clientWidth-button.offsetWidth)/2),behavior:'smooth'});
+    });
+    rememberMaterialReading(doc,heading,ratio(),force||changed);
+  };
+  const update=()=>{
+    frame=0;
+    const headerHeight=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--app-header-height'))||104;
+    const threshold=headerHeight+76;
+    let current=headings[0];
+    for(const heading of headings) {
+      if(heading.getBoundingClientRect().top<=threshold) current=heading;
+      else break;
+    }
+    activate(current);
+  };
+  const onScroll=()=>{ if(!frame) frame=requestAnimationFrame(update); };
+  window.addEventListener('scroll',onScroll,{passive:true});
+  buttons.forEach(button=>button.addEventListener('click',()=>{
+    const heading=document.getElementById(button.dataset.materialHeading);
+    if(!heading) return;
+    materialReadingRestoreDocId='';
+    activate(heading,true);
+    heading.scrollIntoView({behavior:'smooth',block:'start'});
+  }));
+  materialReadingCleanup=()=>{
+    window.removeEventListener('scroll',onScroll);
+    if(frame) cancelAnimationFrame(frame);
+    const current=headings.find(heading=>(heading.dataset.materialHeadingAnchor||heading.id)===activeId)||headings[0];
+    rememberMaterialReading(doc,current,ratio(),true);
+  };
+  const restore=materialReadingRestoreDocId===doc.id;
+  const savedMeta=materialEditMeta(doc.id);
+  const initial=headings.find(heading=>(heading.dataset.materialHeadingAnchor||heading.id)===savedMeta.lastHeadingId)
+    || headings.find(heading=>heading.dataset.materialHeadingText===savedMeta.lastHeadingText)
+    || headings[0];
+  activate(initial,true);
+  if(restore) {
+    materialReadingRestoreDocId='';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>initial.scrollIntoView({behavior:'auto',block:'start'})));
+  } else requestAnimationFrame(update);
+}
 function cleanMaterialExtraction(text) {
-  const lines = String(text || '').normalize('NFC').replace(/\u00a0/g,' ').split(/\r?\n/);
+  const lines = String(text || '').normalize('NFC').replace(/\u00a0/g,' ')
+    .replace(/\\r\\n\\r\\n|\\n\\n|\\r\\r/g,'\n\n')
+    .replace(/\\r\\n(?=\s*[-#>*])|\\[nr](?=\s*[-#>*])/g,'\n')
+    .split(/\r?\n/);
   const cleaned = lines.map((line,index) => {
     let value = line.replace(/[ \t]+/g,' ').replace(/\s+([,.;:!?])/g,'$1').trimEnd();
     const next = lines[index + 1] || '';
@@ -6625,6 +6757,7 @@ function applyMaterialHighlight(doc, descriptor, color) {
 }
 function bindMaterialReader(doc) {
   if(!doc) return;
+  rememberMaterialReading(doc,null,undefined,true);
   document.getElementById('materialEditToggle')?.addEventListener('click',() => { ui.materialEditMode=!ui.materialEditMode; renderMateriais(); });
   document.getElementById('materialFocusToggle')?.addEventListener('click',() => { ui.materialFocusMode=!ui.materialFocusMode; renderMateriais(); });
   document.getElementById('materialExportMarkdown')?.addEventListener('click',() => exportMaterialMarkdown(doc,effectiveMaterialMarkdown(doc)||''));
@@ -6640,6 +6773,7 @@ function bindMaterialReader(doc) {
   if(reading) {
     bindPointerHighlighter(reading.querySelectorAll('[data-material-block]'),(descriptor,color)=>applyMaterialHighlight(doc,descriptor,color));
     bindSavedHighlightMenus(reading,(descriptor,color)=>applyMaterialHighlight(doc,descriptor,color));
+    bindMaterialReadingProgress(doc);
   }
   const scope=document.getElementById('materialEditScope');
   if(scope) scope.onchange=event => { ui.materialEditScope=event.target.value; ui.materialSectionIndex=0; renderMateriais(); };
@@ -6695,12 +6829,15 @@ async function openMaterialsForSchedule(scheduleId) {
   if(!item) return;
   await loadMaterialLibrary();
   const documents = materialLibrary.filter(doc => doc.scheduleId === scheduleId);
-  ui.materialBlock = String(item.block || 'Todos');
-  ui.materialScheduleId = scheduleId;
-  ui.materialDocId = documents[0]?.id || '';
-  ui.materialSearch = '';
-  ui.materialEditMode = false;
-  ui.materialFocusMode = false;
+  if(documents[0]) prepareMaterialDocOpen(documents[0],true);
+  else {
+    ui.materialBlock = String(item.block || 'Todos');
+    ui.materialScheduleId = scheduleId;
+    ui.materialDocId = '';
+    ui.materialSearch = '';
+    ui.materialEditMode = false;
+    ui.materialFocusMode = false;
+  }
   navigateToTab('materiais');
 }
 async function loadMaterialLibraryNow() {
@@ -11031,8 +11168,9 @@ function renderFlashcardMarkdown(text, {cloze}={}) {
     return inline(line);
   }).join('<br>');
 }
-function materialHeadingId(text) {
-  return `material-heading-${normalizedTopic(text).replace(/\s+/g,'-').slice(0,72)}`;
+function materialHeadingId(text,index='') {
+  const suffix=index===''?'':`-${index}`;
+  return `material-heading-${normalizedTopic(text).replace(/\s+/g,'-').slice(0,64)}${suffix}`;
 }
 function replaceHighlightedOccurrence(html,target,item) {
   let occurrence=0;
@@ -11049,6 +11187,10 @@ function renderMaterialInlineMarkdown(text,doc,blockKey='') {
     if(target) html=replaceHighlightedOccurrence(html,target,item);
   });
   return html
+    .replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g,'<span class="material-fraction"><span>$1</span><span>$2</span></span>')
+    .replace(/\\(Delta|delta|theta|Theta|alpha|beta|gamma|mu|sigma|pi|times|rightarrow)\b/g,(match,name)=>({Delta:'Δ',delta:'δ',theta:'θ',Theta:'Θ',alpha:'α',beta:'β',gamma:'γ',mu:'μ',sigma:'σ',pi:'π',times:'×',rightarrow:'→'}[name]||match))
+    .replace(/\^\\circ\b/g,'°')
+    .replace(/\\([*|>])/g,'$1')
     .replace(/==([^=]+)==/g,'<mark>$1</mark>')
     .replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>')
     .replace(/\*([^*]+)\*/g,'<em>$1</em>')
@@ -11081,19 +11223,22 @@ function renderMaterialMarkdown(text, doc) {
     const tableHeader=raw.includes('|') && /^\|?\s*:?-{3,}/.test(next);
     if(tableHeader) {
       closeList();
+      const tableLine=index;
       const rows=[];
       const cells=value=>value.replace(/^\||\|$/g,'').split('|').map(cell=>cell.trim());
       rows.push(cells(raw));
       index+=2;
       while(index<lines.length && lines[index].includes('|')) { rows.push(cells(lines[index].trim())); index+=1; }
       index-=1;
-      html+=`<div class="material-table-wrap"><table><thead><tr>${rows[0].map((cell,column)=>`<th data-material-block="table-${index}-0-${column}">${renderMaterialInlineMarkdown(cell,doc,`table-${index}-0-${column}`)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map((row,rowIndex)=>`<tr>${row.map((cell,column)=>`<td data-material-block="table-${index}-${rowIndex+1}-${column}">${renderMaterialInlineMarkdown(cell,doc,`table-${index}-${rowIndex+1}-${column}`)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+      const columnCount=rows[0].length;
+      const normalizedRows=rows.slice(1).map(row=>row.length>columnCount?[...row.slice(0,columnCount-1),row.slice(columnCount-1).join(' ')]:[...row,...Array(Math.max(0,columnCount-row.length)).fill('')]);
+      html+=`<div class="material-table-wrap"><table><thead><tr>${rows[0].map((cell,column)=>`<th data-material-block="table-${tableLine}-0-${column}">${renderMaterialInlineMarkdown(cell,doc,`table-${tableLine}-0-${column}`)}</th>`).join('')}</tr></thead><tbody>${normalizedRows.map((row,rowIndex)=>`<tr>${row.map((cell,column)=>`<td data-material-block="table-${tableLine}-${rowIndex+1}-${column}">${renderMaterialInlineMarkdown(cell,doc,`table-${tableLine}-${rowIndex+1}-${column}`)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
       continue;
     }
     if(raw.includes('|')) raw=raw.replace(/\s*\|\s*/g,' ');
     if(raw==='---') { closeList(); html+='<hr>'; continue; }
     const heading=raw.match(/^(#{1,4})\s+(.+)$/);
-    if(heading) { closeList(); const level=heading[1].length,title=heading[2].trim(),key=`heading-${index}`; html+=`<h${level}${level===2?` id="${materialHeadingId(title)}"`:''} data-material-block="${key}">${renderMaterialInlineMarkdown(title,doc,key)}</h${level}>`; continue; }
+    if(heading) { closeList(); const level=heading[1].length,title=heading[2].trim(),key=`heading-${index}`,headingAttrs=level>=2?` id="${materialHeadingId(title,index)}" data-material-heading-anchor="${materialHeadingId(title,index)}" data-material-heading-text="${escapeAttr(title)}"`:''; html+=`<h${level}${headingAttrs} data-material-block="${key}">${renderMaterialInlineMarkdown(title,doc,key)}</h${level}>`; continue; }
     if(raw.startsWith('> ')) { closeList(); const key=`quote-${index}`; html+=`<blockquote data-material-block="${key}">${renderMaterialInlineMarkdown(raw.slice(2),doc,key)}</blockquote>`; continue; }
     const image=raw.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
     if(image) { closeList(); html+=materialImageHtml(doc,image[1],image[2]); continue; }
@@ -11122,6 +11267,7 @@ async function ensureViewData(tab) {
 async function render() {
   sessionStorage.setItem(UI_TAB_KEY, ui.tab);
   await ensureViewData(ui.tab);
+  if(ui.tab!=='materiais'&&materialReadingCleanup) { materialReadingCleanup(); materialReadingCleanup=null; }
   renderMotivation();
   renderTabs();
   const renderers = {

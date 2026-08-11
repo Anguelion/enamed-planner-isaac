@@ -172,6 +172,21 @@ test('parágrafos do material não recebem a navegação dos cartões de bloco',
   assert.doesNotMatch(planner,/querySelectorAll\('\[data-material-block\]'\)\.forEach\(button => button\.onclick/);
 });
 
+test('leitor de materiais salva a seção ativa, oferece retomada e normaliza tabelas',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(planner,/function bindMaterialReadingProgress/);
+  assert.match(planner,/lastHeadingId/);
+  assert.match(planner,/data-material-resume=/);
+  assert.match(planner,/data-dashboard-continue="\$\{escapeAttr\(activity\.type\)\}"[\s\S]*data-continue-material=/);
+  assert.match(planner,/const normalizedRows=rows\.slice\(1\)/);
+  assert.match(planner,/replace\(\/\\\\r\\\\n\\\\r\\\\n\|\\\\n\\\\n\|\\\\r\\\\r\/g/);
+  assert.match(css,/\.reader-toc \.tiny-btn\.active/);
+  assert.match(css,/\.material-resume-card\{/);
+  assert.match(css,/\.material-table-wrap th,.material-table-wrap td\{/);
+});
+
 test('cabeçalho desktop oferece histórico interno com voltar, avançar e atalhos',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
