@@ -187,6 +187,9 @@ test('leitor de materiais salva a seção ativa, oferece retomada e normaliza ta
   assert.match(css,/\.reader-toc \.tiny-btn\.active/);
   assert.match(css,/\.material-resume-card\{/);
   assert.match(css,/\.material-table-wrap th,.material-table-wrap td\{/);
+  assert.match(css,/\.material-table-wrap tbody\{display:table-row-group!important\}/);
+  assert.match(css,/\.material-table-wrap tr\{display:table-row!important\}/);
+  assert.match(css,/display:table-cell!important/);
   assert.match(css,/\.material-table-wrap td::before\{content:attr\(data-label\)/);
   assert.match(css,/grid-template-columns:minmax\(105px,36%\) minmax\(0,1fr\)/);
 });

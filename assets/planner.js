@@ -6860,12 +6860,17 @@ function cleanMaterialExtraction(text) {
     .replace(/\\r\\n\\r\\n|\\n\\n|\\r\\r/g,'\n\n')
     .replace(/\\r\\n(?=\s*[-#>*])|\\[nr](?=\s*[-#>*])/g,'\n')
     .split(/\r?\n/);
+  let tableOpen=false;
   const cleaned = lines.map((line,index) => {
     let value = line.replace(/[ \t]+/g,' ').replace(/\s+([,.;:!?])/g,'$1').trimEnd();
     const next = lines[index + 1] || '';
-    const tableLike = value.includes('|') && /^\s*\|?\s*:?-{3,}/.test(next);
-    if(value.includes('|') && !tableLike && !/^\s*\|?\s*:?-{3,}/.test(value)) value = value.replace(/\s*\|\s*/g,' ');
+    const tableStarts = value.includes('|') && /^\s*\|?\s*:?-{3,}(?:\s*\|\s*:?-{3,})+\s*\|?\s*$/.test(next);
+    if(tableStarts) tableOpen=true;
+    const tableRow=tableOpen && value.includes('|');
+    if(value.includes('|') && !tableRow && !/^\s*\|?\s*:?-{3,}/.test(value)) value = value.replace(/\s*\|\s*/g,' ');
     if(/^\s*[|¦]+\s*$/.test(value)) return '';
+    if(tableOpen && !value.trim()) tableOpen=false;
+    else if(tableOpen && !value.includes('|')) tableOpen=false;
     return value;
   }).join('\n');
   return cleaned.replace(/([A-Za-zÀ-ÖØ-öø-ÿ])-\n\s*([a-zà-öø-ÿ])/g,'$1$2').replace(/\n{3,}/g,'\n\n').trim() + '\n';

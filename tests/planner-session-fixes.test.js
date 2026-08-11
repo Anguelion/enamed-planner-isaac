@@ -16,6 +16,17 @@ const { loadPlannerSandbox } = require('./planner-sandbox.js');
 // tests/planner-merge.test.js.
 const plain = value => JSON.parse(JSON.stringify(value));
 
+test('limpeza de materiais preserva todas as linhas de tabelas Markdown', () => {
+  const ctx = loadPlannerSandbox();
+  const source = '| Parâmetro | Ferropriva | Doença Crônica |\n| --- | --- | --- |\n| Ferritina | Baixa | Normal/Alta |\n| TIBC | Alto | Baixo |\n\nTexto após a tabela | sem virar coluna';
+  const cleaned = ctx.cleanMaterialExtraction(source);
+  assert.match(cleaned,/\| Ferritina \| Baixa \| Normal\/Alta \|/);
+  assert.match(cleaned,/\| TIBC \| Alto \| Baixo \|/);
+  assert.match(cleaned,/Texto após a tabela sem virar coluna/);
+  const html = ctx.renderMaterialMarkdown(cleaned,{id:'table-test'});
+  assert.match(html,/<tbody><tr><td[^>]*>Ferritina<\/td><td[^>]*>Baixa<\/td><td[^>]*>Normal\/Alta<\/td><\/tr>/);
+});
+
 test('flashcardsNewestFirst: card recem-criado aparece primeiro na tela de captura', () => {
   const ctx = loadPlannerSandbox();
   const cards = [
