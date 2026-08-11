@@ -1,0 +1,73 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 3 (Quarta-feira)::10 - Hematologia::07 - Hemostasia I - Conceitos Básicos e Anticoagulantes",
+  "notes": 63,
+  "imported": 54,
+  "skipped": [
+    {
+      "noteId": 1742439651968,
+      "number": "1008b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "questão ignorada por não possuir letra no gabarito fornecido"
+    },
+    {
+      "noteId": 1742439651979,
+      "number": "1019b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    },
+    {
+      "noteId": 1742439651982,
+      "number": "1022b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    },
+    {
+      "noteId": 1742439651996,
+      "number": "1036b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    },
+    {
+      "noteId": 1742439652002,
+      "number": "1042b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    },
+    {
+      "noteId": 1742439652013,
+      "number": "1053b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    },
+    {
+      "noteId": 1742439652015,
+      "number": "1055b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    },
+    {
+      "noteId": 1742439693073,
+      "number": "1001b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1742439693079,
+      "number": "1007b",
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "reason": "gabarito ausente, múltiplo ou incompatível"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Hemostasia I - Conceitos Básicos e Anticoagulantes",
+      "imported": 54,
+      "block": "anki:hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes"
+    }
+  ],
+  "mediaReferenced": 2,
+  "mediaExtracted": 67,
+  "answerKeyOverrides": 61,
+  "answerKeyIgnored": 1
+}

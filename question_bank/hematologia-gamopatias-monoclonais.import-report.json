@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 3 (Quarta-feira)::10 - Hematologia::09 - Gamopatias Monoclonais",
+  "notes": 65,
+  "imported": 64,
+  "skipped": [
+    {
+      "noteId": 1742516587502,
+      "number": "1009j",
+      "topic": "Gamopatias Monoclonais",
+      "reason": "questão ignorada por não possuir letra no gabarito fornecido"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Gamopatias Monoclonais",
+      "imported": 64,
+      "block": "anki:hematologia-gamopatias-monoclonais"
+    }
+  ],
+  "mediaReferenced": 11,
+  "mediaExtracted": 67,
+  "answerKeyOverrides": 64,
+  "answerKeyIgnored": 1
+}
