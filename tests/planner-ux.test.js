@@ -249,6 +249,16 @@ test('navegação lateral é criada uma vez e somente atualiza o item ativo',()=
   assert.doesNotMatch(planner,/document\.querySelectorAll\('#tabs \.tab'\)\.forEach\(b => b\.onclick/);
 });
 
+test('Videoaulas preserva o filtro Todos e pesquisa em todos os blocos',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const currentLesson=planner.slice(planner.indexOf('function currentVideoLesson()'),planner.indexOf('function preferredVideoSource'));
+  assert.match(planner,/ui\.videoSearch=value;\s*if\(value\.trim\(\)\) ui\.videoBlock='Todos';/);
+  assert.match(planner,/if\(selectedLesson&&ui\.videoBlock!=='Todos'\) ui\.videoBlock=String\(selectedLesson\.block\);/);
+  assert.doesNotMatch(currentLesson,/ui\.videoBlock\s*=\s*String\((?:pinnedLesson|rememberedLesson|selectedLesson)\.block\)/);
+  assert.match(currentLesson,/if\(!ui\.videoBlock\) ui\.videoBlock=String\(routedLesson\.block\);/);
+});
+
 test('edições do cronograma atualizam somente a linha e reutilizam eventos delegados',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');

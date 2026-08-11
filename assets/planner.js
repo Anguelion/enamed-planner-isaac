@@ -7623,8 +7623,7 @@ function currentVideoLesson() {
     const routedLesson=displayVideoLessons().find(item=>item.videos?.some(video=>video.id===ui.videoSourceId));
     if(routedLesson) {
       ui.videoLessonId=routedLesson.id;
-      ui.videoBlock=String(routedLesson.block);
-      ui.videoSearch='';
+      if(!ui.videoBlock) ui.videoBlock=String(routedLesson.block);
       return routedLesson;
     }
   }
@@ -7635,8 +7634,6 @@ function currentVideoLesson() {
     if(pinnedLesson && blockAllowsPinned) {
       ui.videoLessonId = pinnedLesson.id;
       ui.videoSourceId = pinnedLesson.videos.some(video => video.id === pinned.sourceId) ? pinned.sourceId : pinnedLesson.videos[0]?.id || '';
-      ui.videoBlock = String(pinnedLesson.block);
-      ui.videoSearch = '';
       return pinnedLesson;
     }
   }
@@ -7647,16 +7644,11 @@ function currentVideoLesson() {
     if(rememberedLesson && blockAllowsLastOpen) {
       ui.videoLessonId = rememberedLesson.id;
       ui.videoSourceId = rememberedLesson.videos.some(video => video.id === lastOpen.sourceId) ? lastOpen.sourceId : rememberedLesson.videos[0]?.id || '';
-      ui.videoBlock = String(rememberedLesson.block);
-      ui.videoSearch = '';
       return rememberedLesson;
     }
   }
   const selectedLesson = displayVideoLessons().find(lesson => lesson.id === ui.videoLessonId);
-  if(selectedLesson) {
-    ui.videoBlock = String(selectedLesson.block);
-    return selectedLesson;
-  }
+  if(selectedLesson) return selectedLesson;
   const visible = visibleVideoLessons();
   if(!visible.length) return null;
   if(!visible.some(lesson => lesson.id === ui.videoLessonId)) ui.videoLessonId = visible[0].id;
@@ -7878,6 +7870,7 @@ function renderAulas() {
     const value=event.target.value;
     const cursor=event.target.selectionStart;
     ui.videoSearch=value;
+    if(value.trim()) ui.videoBlock='Todos';
     ui.videoLessonId='';
     ui.videoSourceId='';
     renderAulas();
@@ -7888,7 +7881,7 @@ function renderAulas() {
     saveOpenVideoPosition();
     ui.videoLessonId=event.currentTarget.dataset.videoLesson;
     const selectedLesson=displayVideoLessons().find(item => item.id===ui.videoLessonId);
-    if(selectedLesson) ui.videoBlock=String(selectedLesson.block);
+    if(selectedLesson&&ui.videoBlock!=='Todos') ui.videoBlock=String(selectedLesson.block);
     ui.videoSearch='';
     ui.videoSourceId=preferredVideoSource(selectedLesson)?.id||'';
     setVideoLastOpen(ui.videoLessonId, ui.videoSourceId);
