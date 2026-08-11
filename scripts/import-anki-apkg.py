@@ -360,6 +360,18 @@ def main() -> None:
                 summary["nonObjective"] = summary["total"] - summary["objective"]
                 summary["missingAnswer"] = summary["objective"] - summary["withAnswer"]
                 summary["label"] = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", name.split("::")[-1]).strip()
+                parts = name.split("::")
+                listed_specialty = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", parts[-2]).strip() if len(parts) > 1 else "Importado do Anki"
+                summary["slug"] = slugify(f"{listed_specialty}-{summary['label']}")
+                summary["block"] = f"anki:{summary['slug']}"
+                existing_path = BANK_ROOT / f"{summary['slug']}.json"
+                summary["alreadyImported"] = existing_path.exists()
+                summary["importedCount"] = 0
+                if existing_path.exists():
+                    try:
+                        summary["importedCount"] = int(json.loads(existing_path.read_text(encoding="utf-8")).get("count", 0))
+                    except (OSError, ValueError):
+                        pass
                 result.append(summary)
             connection.close()
             print(json.dumps({"decks": result}, ensure_ascii=False, indent=2))

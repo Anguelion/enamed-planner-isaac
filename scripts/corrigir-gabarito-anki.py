@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Interface visual para aplicar um gabarito externo a um APKG e reimportá-lo."""
+"""Interface visual unificada para analisar, importar e corrigir APKGs."""
 
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ IMPORTER = ROOT / "scripts" / "import-anki-apkg.py"
 class AnswerKeyApp:
     def __init__(self, root: tk.Tk, initial_apkg: str = "") -> None:
         self.root = root
-        self.root.title("Corrigir gabarito de questões Anki")
+        self.root.title("Importar e corrigir questões Anki")
         self.root.geometry("820x690")
         self.root.minsize(680, 560)
         self.apkg_path = tk.StringVar(value=initial_apkg)
@@ -31,10 +31,10 @@ class AnswerKeyApp:
 
         container = ttk.Frame(root, padding=22)
         container.pack(fill="both", expand=True)
-        ttk.Label(container, text="Corrigir gabarito do APKG", font=("Segoe UI", 18, "bold")).pack(anchor="w")
+        ttk.Label(container, text="Importar e corrigir APKG", font=("Segoe UI", 18, "bold")).pack(anchor="w")
         ttk.Label(
             container,
-            text="Cole uma resposta por linha. Se todas as linhas estiverem numeradas, elas serão ordenadas automaticamente e repetições idênticas serão removidas. Questões discursivas são ignoradas.",
+            text="O programa analisa todas as aulas e importa automaticamente as que já têm gabarito. Para uma aula incompleta, selecione-a e cole o gabarito numerado abaixo.",
             wraplength=750,
         ).pack(anchor="w", pady=(6, 18))
 
@@ -105,17 +105,45 @@ class AnswerKeyApp:
             if result.returncode:
                 raise RuntimeError((result.stderr or result.stdout or "Erro desconhecido").strip())
             decks = json.loads(result.stdout)["decks"]
-            self.root.after(0, self.finish_analysis, decks)
+            automatic_reports = []
+            ready = [deck for deck in decks if not deck["missingAnswer"] and not deck.get("alreadyImported")]
+            for position, deck in enumerate(ready, 1):
+                self.root.after(
+                    0,
+                    self.status.set,
+                    f"Importando automaticamente {position}/{len(ready)}: {deck['label']}…",
+                )
+                imported = subprocess.run(
+                    [sys.executable, str(IMPORTER), str(apkg), "--deck", deck["name"]],
+                    cwd=ROOT,
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    env={**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8"},
+                )
+                if imported.returncode:
+                    raise RuntimeError((imported.stderr or imported.stdout or "Erro desconhecido").strip())
+                report = json.loads(imported.stdout)
+                deck["alreadyImported"] = True
+                deck["importedCount"] = report.get("imported", 0)
+                automatic_reports.append(report)
+            self.root.after(0, self.finish_analysis, decks, automatic_reports)
         except Exception as error:
             self.root.after(0, self.finish_error, str(error))
 
-    def finish_analysis(self, decks: list[dict]) -> None:
+    def finish_analysis(self, decks: list[dict], automatic_reports: list[dict]) -> None:
         displays = []
         self.deck_lookup = {}
         for deck in decks:
             lesson = deck["name"].split("::")[-1]
             missing = deck["missingAnswer"]
-            situation = f"{missing} sem gabarito" if missing else "gabarito detectado"
+            if missing:
+                situation = f"precisa corrigir {missing} gabaritos"
+            elif deck.get("alreadyImported"):
+                situation = f"importada ({deck.get('importedCount', deck['objective'])})"
+            else:
+                situation = "pronta para importar"
             composition = f"{deck['objective']} objetivas"
             if deck.get("nonObjective"):
                 composition += f" + {deck['nonObjective']} subjetivas"
@@ -127,6 +155,18 @@ class AnswerKeyApp:
             first_missing = next((display for display in displays if self.deck_lookup[display]["missingAnswer"]), displays[0])
             self.deck_display.set(first_missing)
             self.deck_selected()
+            missing_count = sum(bool(deck["missingAnswer"]) for deck in decks)
+            if missing_count:
+                imported_now = len(automatic_reports)
+                prefix = f"{imported_now} aulas foram importadas automaticamente. " if imported_now else ""
+                self.status.set(prefix + f"{missing_count} aulas precisam de correção; selecione a primeira delas.")
+            elif automatic_reports:
+                self.status.set(f"Concluído: {len(automatic_reports)} aulas importadas automaticamente.")
+                messagebox.showinfo(
+                    "Importação concluída",
+                    f"Todas as {len(automatic_reports)} aulas com gabarito foram importadas.\n\n"
+                    "Atualize o Planner com Ctrl+R ou feche e abra o aplicativo.",
+                )
         else:
             self.status.set("Nenhuma aula com questões objetivas foi encontrada.")
 
@@ -140,6 +180,7 @@ class AnswerKeyApp:
             f"Aula escolhida: {deck['label']}. São {deck['objective']} objetivas e "
             f"{deck.get('nonObjective', 0)} subjetivas; deixe as subjetivas numeradas, mas sem letra."
         )
+        self.run_button.configure(text="Corrigir e importar esta aula")
         self.run_button.configure(state="normal")
 
     def start_import(self) -> None:
@@ -191,6 +232,7 @@ class AnswerKeyApp:
         imported = report.get("imported", 0)
         topic = (report.get("topics") or [{}])[0].get("topic", "aula escolhida")
         self.status.set(f"{topic}: {imported} questões importadas com sucesso.")
+        self.answer_text.delete("1.0", "end")
         messagebox.showinfo(
             "Concluído",
             f"{topic}: {imported} questões importadas.\n\n"
