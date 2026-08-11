@@ -45,6 +45,20 @@ test('índice de materiais encontra aula, subtítulo e palavras do conteúdo', (
   assert.equal(ctx.materialSearchEntryMatches(entry,['cardiologia']),false);
 });
 
+test('anotações do material reúnem destaques sem repetir trechos', () => {
+  const ctx = loadPlannerSandbox();
+  const highlights = [
+    { text:'Ferritina baixa sugere deficiência de ferro.' },
+    { text:'VCM reduzido exige diagnóstico diferencial.' },
+    { text:'Ferritina baixa sugere deficiência de ferro.' }
+  ];
+  const first = ctx.mergeMaterialNotesWithHighlights('Revisar antes do simulado.', highlights);
+  assert.match(first,/Revisar antes do simulado\./);
+  assert.equal((first.match(/Ferritina baixa/g)||[]).length,1);
+  assert.equal((first.match(/VCM reduzido/g)||[]).length,1);
+  assert.equal(ctx.mergeMaterialNotesWithHighlights(first,highlights),first,'clicar novamente deve ser idempotente');
+});
+
 test('flashcardsNewestFirst: card recem-criado aparece primeiro na tela de captura', () => {
   const ctx = loadPlannerSandbox();
   const cards = [

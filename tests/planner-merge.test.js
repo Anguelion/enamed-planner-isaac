@@ -65,6 +65,25 @@ test('merge de materials: conteudo do lado mais recente, destaques (highlights) 
   assert.equal(merged.materials['doc-b'].content, 'documento so local', 'documento exclusivo de um lado nao pode sumir');
 });
 
+test('merge de materials preserva anotações e conclusão por seus próprios carimbos', () => {
+  const ctx = loadPlannerSandbox();
+  const remote = { materials: { doc: {
+    content:'texto remoto novo', updatedAt:'2026-08-11T14:00:00.000Z',
+    notes:'anotação remota antiga', notesUpdatedAt:'2026-08-11T10:00:00.000Z',
+    completed:true, completedAt:'2026-08-11T13:00:00.000Z', completedUpdatedAt:'2026-08-11T13:00:00.000Z'
+  } } };
+  const local = { materials: { doc: {
+    content:'texto local antigo', updatedAt:'2026-08-11T12:00:00.000Z',
+    notes:'anotação local nova', notesUpdatedAt:'2026-08-11T15:00:00.000Z',
+    completed:false, completedAt:'', completedUpdatedAt:'2026-08-11T11:00:00.000Z'
+  } } };
+  const merged=ctx.mergePlannerActivityState(remote,local,false).materials.doc;
+  assert.equal(merged.content,'texto remoto novo');
+  assert.equal(merged.notes,'anotação local nova','a anotação mais recente não pode ser substituída junto com o conteúdo');
+  assert.equal(merged.completed,true,'a conclusão mais recente deve sobreviver independentemente da anotação');
+  assert.equal(merged.completedAt,'2026-08-11T13:00:00.000Z');
+});
+
 test('merge de dailyTasks preserva exclusao mais recente e compacta duplicatas', () => {
   const ctx = loadPlannerSandbox();
   const remote = {

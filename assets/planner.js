@@ -85,6 +85,7 @@ let materialMarkdownCache = {};
 let materialImageCache = new Map();
 let flashcardImageCache = new Map();
 let materialEditSaveTimers = new Map();
+let materialNotesSaveTimers = new Map();
 let materialDbPromise = null;
 let materialLibraryStatus = 'Carregando resumos...';
 let importedSimulados = [];
@@ -1427,6 +1428,8 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     const localDoc = localMaterials[docId] || {};
     const base = timestampOf(localDoc.updatedAt) >= timestampOf(remoteDoc.updatedAt) ? localDoc : remoteDoc;
     const reading = timestampOf(localDoc.lastReadAt) >= timestampOf(remoteDoc.lastReadAt) ? localDoc : remoteDoc;
+    const notes = timestampOf(localDoc.notesUpdatedAt) >= timestampOf(remoteDoc.notesUpdatedAt) ? localDoc : remoteDoc;
+    const completion = timestampOf(localDoc.completedUpdatedAt) >= timestampOf(remoteDoc.completedUpdatedAt) ? localDoc : remoteDoc;
     const highlightsByKey = new Map();
     [...(remoteDoc.highlights || []), ...(localDoc.highlights || [])].forEach(highlight => {
       highlightsByKey.set(`${highlight.text}|${highlight.color}|${highlight.block}|${highlight.occurrence}`, highlight);
@@ -1434,6 +1437,11 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     merged.materials[docId] = {
       ...base,
       ...Object.fromEntries(['lastReadAt','lastHeadingId','lastHeadingText','lastScrollRatio','lastTitle','lastArea','lastBlock','lastCategory'].map(key => [key,reading[key]])),
+      notes: typeof notes.notes === 'string' ? notes.notes : '',
+      notesUpdatedAt: notes.notesUpdatedAt || '',
+      completed: Boolean(completion.completed),
+      completedAt: completion.completedAt || '',
+      completedUpdatedAt: completion.completedUpdatedAt || '',
       highlights: [...highlightsByKey.values()]
     };
   });
@@ -6786,7 +6794,8 @@ function renderMaterialReader(doc) {
     ? (markdown === undefined ? '<div class="empty">Carregando texto do resumo...</div>' : ui.materialEditMode ? renderMaterialEditor(doc, markdown) : `<article class="material-markdown material-reading-mode">${renderMaterialMarkdown(markdown, doc)}</article>`)
     : '<div class="empty">Texto estruturado ainda não gerado para este material.</div>';
   const meta = materialEditMeta(doc.id);
-  return `<div class="reader-head"><div><span class="eyebrow">${doc.block?`Bloco ${String(doc.block).padStart(2,'0')}`:'Material complementar'} · ${escapeHtml(doc.area || 'Revisão')}</span><h2>${escapeHtml(doc.title)}</h2><div class="muted">Vinculado a ${escapeHtml(doc.topic || 'conteúdo complementar')}</div></div><span class="badge ${meta.edited?'wait':'done'}">${meta.edited?'Editado neste computador':n(doc.imageCount)?`${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}`:'Texto limpo'}</span></div><div class="material-reader-toolbar"><div><button class="icon-btn primary" id="materialEditToggle">${ui.materialEditMode?'Concluir edição':'Editar Markdown'}</button><button class="icon-btn" id="materialFocusToggle" aria-pressed="${ui.materialFocusMode}">${ui.materialFocusMode?'Sair do foco':'Foco'}</button><button class="icon-btn" id="materialExportMarkdown">Exportar .md</button>${meta.edited?'<button class="icon-btn" id="materialRestoreOriginal">Restaurar original</button>':''}</div><div class="material-highlight-toolbar"><span class="muted">Selecione um trecho para destacar.</span><button class="tiny-btn" id="clearMaterialHighlights">Limpar todos</button></div></div>${!ui.materialEditMode && tocItems.length?`<nav class="reader-toc" aria-label="Seções do resumo">${tocItems.map(item=>`<button class="tiny-btn" data-material-heading="${item.id}" aria-current="false">${escapeHtml(item.text)}</button>`).join('')}</nav>`:''}${markdownHtml}`;
+  const reviewFooter = markdown !== undefined && !ui.materialEditMode ? renderMaterialReviewFooter(doc,meta) : '';
+  return `<div class="reader-head"><div><span class="eyebrow">${doc.block?`Bloco ${String(doc.block).padStart(2,'0')}`:'Material complementar'} · ${escapeHtml(doc.area || 'Revisão')}</span><h2>${escapeHtml(doc.title)}</h2><div class="muted">Vinculado a ${escapeHtml(doc.topic || 'conteúdo complementar')}</div></div><span class="badge ${meta.edited?'wait':'done'}">${meta.edited?'Editado neste computador':n(doc.imageCount)?`${n(doc.imageCount)} figura${n(doc.imageCount)===1?'':'s'}`:'Texto limpo'}</span></div><div class="material-reader-toolbar"><div><button class="icon-btn primary" id="materialEditToggle">${ui.materialEditMode?'Concluir edição':'Editar Markdown'}</button><button class="icon-btn" id="materialFocusToggle" aria-pressed="${ui.materialFocusMode}">${ui.materialFocusMode?'Sair do foco':'Foco'}</button><button class="icon-btn" id="materialExportMarkdown">Exportar .md</button>${meta.edited?'<button class="icon-btn" id="materialRestoreOriginal">Restaurar original</button>':''}</div><div class="material-highlight-toolbar"><span class="muted">Selecione um trecho para destacar.</span><button class="tiny-btn" id="clearMaterialHighlights">Limpar todos</button></div></div>${!ui.materialEditMode && tocItems.length?`<nav class="reader-toc" aria-label="Seções do resumo">${tocItems.map(item=>`<button class="tiny-btn" data-material-heading="${item.id}" aria-current="false">${escapeHtml(item.text)}</button>`).join('')}</nav>`:''}${markdownHtml}${reviewFooter}`;
 }
 async function loadMaterialMarkdown(doc) {
   if(!doc?.markdown || materialMarkdownCache[doc.id] !== undefined) return;
@@ -6804,7 +6813,23 @@ async function loadMaterialMarkdown(doc) {
 function materialEditMeta(docId) {
   if(!state.materials[docId] || typeof state.materials[docId] !== 'object') state.materials[docId] = {};
   if(!Array.isArray(state.materials[docId].highlights)) state.materials[docId].highlights = [];
+  if(typeof state.materials[docId].notes !== 'string') state.materials[docId].notes = '';
+  if(typeof state.materials[docId].completed !== 'boolean') state.materials[docId].completed = false;
   return state.materials[docId];
+}
+function materialHighlightTexts(highlights=[]) {
+  return [...new Set(highlights.map(item=>String(item?.text||'').trim()).filter(Boolean))];
+}
+function mergeMaterialNotesWithHighlights(notes='',highlights=[]) {
+  const current=String(notes||'').trimEnd();
+  const additions=materialHighlightTexts(highlights).filter(text=>!current.includes(text));
+  if(!additions.length) return current;
+  return `${current}${current?'\n\n':''}Trechos destacados:\n${additions.map(text=>`- ${text}`).join('\n')}`;
+}
+function renderMaterialReviewFooter(doc,meta=materialEditMeta(doc.id)) {
+  const highlights=materialHighlightTexts(meta.highlights);
+  const completedDate=meta.completedAt ? new Date(meta.completedAt).toLocaleDateString('pt-BR') : '';
+  return `<section class="material-review-footer ${meta.completed?'completed':''}" aria-labelledby="materialReviewTitle"><div class="material-review-head"><div><span class="eyebrow">Fechamento da leitura</span><h3 id="materialReviewTitle">O que fica deste material?</h3><p>Marque a leitura e guarde, no mesmo lugar, o que você quer revisar depois.</p></div><label class="material-complete-toggle"><input type="checkbox" id="materialCompleted" ${meta.completed?'checked':''}><span><strong>${meta.completed?'Material concluído':'Marcar como concluído'}</strong><small>${meta.completed?(completedDate?`Concluído em ${completedDate}`:'Leitura finalizada'):'Você pode desmarcar a qualquer momento'}</small></span></label></div><div class="material-review-grid"><div class="material-highlight-summary"><div class="material-review-section-title"><strong>Trechos destacados</strong><span>${highlights.length}</span></div>${highlights.length?`<ul>${highlights.map(text=>`<li>${escapeHtml(text)}</li>`).join('')}</ul>`:'<p class="muted">Os trechos que você destacar durante a leitura aparecerão aqui automaticamente.</p>'}</div><div class="material-notes-field"><span><label for="materialNotes"><strong>Anotações para lembrar</strong></label><small id="materialNotesStatus">Salvo automaticamente</small></span><textarea class="textarea" id="materialNotes" placeholder="Ex.: revisar este diagnóstico diferencial antes do simulado..." spellcheck="true">${escapeHtml(meta.notes)}</textarea><button type="button" class="icon-btn" id="materialAppendHighlights" ${highlights.length?'':'disabled'}>Adicionar destaques às anotações</button></div></div></section>`;
 }
 function rememberMaterialReading(doc,heading,scrollRatio,force=false) {
   if(!doc) return;
@@ -7122,6 +7147,40 @@ function bindMaterialReader(doc) {
     meta.highlights=[];
     saveStateOnly();
     renderMateriais();
+  });
+  document.getElementById('materialCompleted')?.addEventListener('change',event => {
+    const meta=materialEditMeta(doc.id);
+    const changedAt=nowIso();
+    meta.completed=event.currentTarget.checked;
+    meta.completedAt=meta.completed ? changedAt : '';
+    meta.completedUpdatedAt=changedAt;
+    meta.updatedAt=changedAt;
+    saveStateOnly();
+    renderMateriais();
+  });
+  const notes=document.getElementById('materialNotes');
+  const saveNotes=() => {
+    if(!notes) return;
+    const meta=materialEditMeta(doc.id);
+    const changedAt=nowIso();
+    meta.notes=notes.value;
+    meta.notesUpdatedAt=changedAt;
+    meta.updatedAt=changedAt;
+    const status=document.getElementById('materialNotesStatus');
+    if(status) status.textContent='Salvando...';
+    clearTimeout(materialNotesSaveTimers.get(doc.id));
+    materialNotesSaveTimers.set(doc.id,setTimeout(() => {
+      saveStateOnly();
+      const current=document.getElementById('materialNotesStatus');
+      if(current) current.textContent='Salvo e sincronizado';
+    },300));
+  };
+  if(notes) notes.oninput=saveNotes;
+  document.getElementById('materialAppendHighlights')?.addEventListener('click',() => {
+    if(!notes) return;
+    notes.value=mergeMaterialNotesWithHighlights(notes.value,materialEditMeta(doc.id).highlights);
+    saveNotes();
+    notes.focus();
   });
   const reading=document.querySelector('.material-reading-mode');
   if(reading) {
