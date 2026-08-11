@@ -32,6 +32,37 @@ def slugify(value: str) -> str:
     return clean or "anki-import"
 
 
+def clean_deck_label(value: str) -> str:
+    return re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", value).strip()
+
+
+def canonical_specialty(value: str) -> str:
+    """Une nomes que devem aparecer como uma única especialidade no planner."""
+    if slugify(value) in {"ginecologia", "obstetricia", "ginecologia-e-obstetricia"}:
+        return "Ginecologia e Obstetrícia"
+    return value
+
+
+def infer_deck_specialty(parts: list[str]) -> tuple[str, str, int]:
+    """Encontra a especialidade mesmo quando há subbaralhos dentro do tema."""
+    for index, part in enumerate(parts):
+        candidate = clean_deck_label(part)
+        if slugify(candidate) in {"ginecologia", "obstetricia", "ginecologia-e-obstetricia"}:
+            return candidate, canonical_specialty(candidate), index
+    fallback_index = max(0, len(parts) - 2)
+    raw = clean_deck_label(parts[fallback_index]) or "Importado do Anki"
+    return raw, canonical_specialty(raw), fallback_index
+
+
+def inferred_group_slug(full_deck: str, storage_specialty: str, topic: str, specialty_index: int) -> str:
+    parts = full_deck.split("::")
+    if specialty_index < len(parts) - 2:
+        # Inclui a numeração do último nível para não sobrescrever aulas irmãs
+        # que possuem o mesmo título dentro de um tema-pai.
+        return slugify(f"{storage_specialty}-{topic}-{parts[-1]}")
+    return slugify(f"{storage_specialty}-{topic}")
+
+
 def zstd_path() -> str:
     found = shutil.which("zstd")
     if not found:
@@ -361,10 +392,11 @@ def main() -> None:
                 summary = summaries[name]
                 summary["nonObjective"] = summary["total"] - summary["objective"]
                 summary["missingAnswer"] = summary["objective"] - summary["withAnswer"]
-                summary["label"] = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", name.split("::")[-1]).strip()
+                summary["label"] = clean_deck_label(name.split("::")[-1])
                 parts = name.split("::")
-                listed_specialty = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", parts[-2]).strip() if len(parts) > 1 else "Importado do Anki"
-                summary["slug"] = slugify(f"{listed_specialty}-{summary['label']}")
+                listed_specialty, display_specialty, specialty_index = infer_deck_specialty(parts)
+                summary["specialty"] = display_specialty
+                summary["slug"] = inferred_group_slug(name, listed_specialty, summary["label"], specialty_index)
                 summary["block"] = f"anki:{summary['slug']}"
                 existing_path = BANK_ROOT / f"{summary['slug']}.json"
                 summary["alreadyImported"] = existing_path.exists()
@@ -386,14 +418,25 @@ def main() -> None:
             deck_cache = {did: name for did, name in deck_cache.items() if name == args.deck}
         first_full_deck = deck_cache[notes[0][5]] if notes else "Importado do Anki"
         first_parts = first_full_deck.split("::")
-        inferred_specialty = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", first_parts[-2]).strip() if len(first_parts) > 1 else "Importado do Anki"
-        specialty = args.specialty or inferred_specialty
-        area = args.area or specialty
+        storage_specialty, inferred_specialty, first_specialty_index = infer_deck_specialty(first_parts)
+        specialty = canonical_specialty(args.specialty) if args.specialty else inferred_specialty
+        if args.specialty:
+            storage_specialty = args.specialty
         multiple_decks = len(deck_cache) > 1 and not args.topic
         if multiple_decks and args.block:
             parser.error("--block só pode ser usado com um único tema; remova a opção para preservar os subbaralhos.")
-        first_label = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", first_parts[-1]).strip() or apkg.stem
-        media_slug = slugify(args.slug or (specialty if multiple_decks else f"{specialty}-{args.topic or first_label}"))
+        first_label = clean_deck_label(first_parts[-1]) or apkg.stem
+        if args.slug:
+            media_slug = slugify(args.slug)
+        elif multiple_decks:
+            media_slug = slugify(storage_specialty)
+        else:
+            media_slug = inferred_group_slug(
+                first_full_deck,
+                storage_specialty,
+                args.topic or first_label,
+                first_specialty_index,
+            )
         media_urls = extract_media(extracted, media_slug)
 
         names_by_model = {}
@@ -433,9 +476,17 @@ def main() -> None:
         for note_position, (note_id, guid, model_id, raw_tags, fields, deck_id) in enumerate(notes):
             full_deck = deck_cache[deck_id]
             parts = full_deck.split("::")
-            label = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", parts[-1]).strip() or apkg.stem
+            label = clean_deck_label(parts[-1]) or apkg.stem
             topic = args.topic or label
-            group_slug = slugify(args.slug or f"{specialty}-{topic}") if not multiple_decks else slugify(f"{args.slug or specialty}-{topic}")
+            deck_storage_specialty, deck_specialty, specialty_index = infer_deck_specialty(parts)
+            if args.specialty:
+                deck_storage_specialty = args.specialty
+                deck_specialty = canonical_specialty(args.specialty)
+            question_specialty = deck_specialty if multiple_decks else specialty
+            if args.slug:
+                group_slug = slugify(args.slug if not multiple_decks else f"{args.slug}-{topic}")
+            else:
+                group_slug = inferred_group_slug(full_deck, deck_storage_specialty, topic, specialty_index)
             block = args.block or f"anki:{group_slug}"
             group = groups.setdefault(block, {"slug": group_slug, "label": label, "topic": topic, "questions": []})
             names = names_by_model.setdefault(model_id, field_names(connection, model_id))
@@ -487,7 +538,7 @@ def main() -> None:
                 comment = f"{comment}\n\nFonte: {reference}".strip()
             number = clean_html(record.get("number", "")) or str(len(group["questions"]) + 1)
             tags = [tag for tag in raw_tags.strip().split() if tag]
-            tags.extend([specialty, topic, "Anki"])
+            tags.extend([question_specialty, topic, "Anki"])
             stable_id = hashlib.sha1(str(guid or note_id).encode("utf-8")).hexdigest()[:16]
             group["questions"].append({
                 "id": f"anki-{group_slug}-{stable_id}",
@@ -496,8 +547,8 @@ def main() -> None:
                 "collectionBlock": block,
                 "collectionLabel": f"Anki · {label}",
                 "documentBlock": "",
-                "area": area,
-                "specialty": specialty,
+                "area": args.area or question_specialty,
+                "specialty": question_specialty,
                 "topic": topic,
                 "subtopic": "",
                 "stem": clean_html(stem_raw),

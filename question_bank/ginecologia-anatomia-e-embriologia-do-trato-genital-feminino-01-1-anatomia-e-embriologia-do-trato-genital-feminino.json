@@ -1,17 +1,17 @@
 {
-  "block": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+  "block": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
   "label": "Anki · Anatomia e embriologia do trato genital feminino",
   "count": 100,
   "questions": [
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-b8cec9b79df79baf",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-b8cec9b79df79baf",
       "number": "0201a1",
       "sourceNumber": "0201a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "\"O epitélio vaginal sofre influência hormonal ao longo da vida, mudando as características citológicas de acordo com a predominância da ação dos vários esteroides envolvidos.\"\n\nSegundo o enunciado acima, assinale a alternativa correta.",
@@ -34,7 +34,7 @@
         "#Ginecologia",
         "#Hormônios",
         "#Menopausa",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -42,14 +42,14 @@
       "ankiGuid": "Hws3EAA!7P"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-410cdf59d88c23a6",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-410cdf59d88c23a6",
       "number": "0202a1",
       "sourceNumber": "0202a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "No contexto do suporte pélvico, qual estrutura participa ativamente da sustentação do útero?",
@@ -81,7 +81,7 @@
         "#LigamentosPélvicos",
         "#Prolapso",
         "#SuporteUterino",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -89,14 +89,14 @@
       "ankiGuid": "M@10TW4mZ_"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-bbdbefe1ea6d4041",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-bbdbefe1ea6d4041",
       "number": "0203a1",
       "sourceNumber": "0203a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "O conhecimento anatômico da pelve é fundamental para o ginecologista. Um dos principais acidentes ósseos é a espinha isquiática, projeção óssea na superfície medial do ísquio, facilmente palpável pela vagina. Pode-se afirmar que a espinha isquiática serve como ponto de:",
@@ -127,7 +127,7 @@
         "#AssoalhoPélvico",
         "#Ginecologia",
         "#Prolapso",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -135,14 +135,14 @@
       "ankiGuid": "kj-T:9)U6h"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-df1b8a3c85ec550e",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-df1b8a3c85ec550e",
       "number": "0204a1",
       "sourceNumber": "0204a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Mulher, 44 anos, G2PC2, com quadro de sangramento uterino anormal secundário a leiomiomatose uterina, está sendo submetida a histerectomia vaginal (sem prolapso uterino o colega médico iniciou a cirurgia e pediu para que você entrasse em campo, pois ele está tendo dificuldades técnicas. A cirurgia encontra-se no tempo mostrado na figura:\n\nTempo cirúrgico\n\nEm qual tempo cirúrgico você está assumindo a cirurgia?",
@@ -167,7 +167,7 @@
         "#HisterectomiaVaginal",
         "#Leiomioma",
         "#TécnicaCirúrgica",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -175,14 +175,14 @@
       "ankiGuid": "yp9Z,<Q:2:"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-5822c243d5a072c1",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-5822c243d5a072c1",
       "number": "0205a1",
       "sourceNumber": "0205a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A ligadura bilateral de artéria hipogástrica é um método seguro e eficaz para controlar hemorragias em pacientes com alto risco de sangramento obstétrico, podendo ser definitiva não só para a preservação uterina, mas também para controle efetivo de sangramento em pacientes já histerectomizadas. Sua realização deve ser feita 2cm abaixo da bifurcação das artérias ilíacas comuns, com o objetivo de preservar 3 ramos posteriores importantes desses vasos. Quais são esses ramos?",
@@ -214,7 +214,7 @@
         "#Ginecologia",
         "#HemorragiaObstétrica",
         "#Obstetrícia",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -222,14 +222,14 @@
       "ankiGuid": "PYJ8.bX3,L"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-fb2616dacccb5d24",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-fb2616dacccb5d24",
       "number": "0206a1",
       "sourceNumber": "0206a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Mulher, de 54 anos de idade, foi submetida a histerectomia total com linfadenectomia pélvica para tratamento de câncer de colo de útero estadio I. No retorno pós-operatório, foi observada abdução da perna esquerda e ausência de sensação tátil na face medial da coxa. Qual foi a provável estrutura lesada no intraoperatório?",
@@ -258,7 +258,7 @@
         "#Linfadenectomia",
         "#NervoObturatório",
         "#Oncologia",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -266,14 +266,14 @@
       "ankiGuid": "g;G9%Es%nt"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-237d43421e88a90b",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-237d43421e88a90b",
       "number": "0207a1",
       "sourceNumber": "0207a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Em relação à inervação dos músculos do assoalho pélvico e do períneo, assinale a alternativa CORRETA:",
@@ -302,7 +302,7 @@
         "#BloqueioAnestésico",
         "#NervoPudendo",
         "#Obstetrícia",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -310,14 +310,14 @@
       "ankiGuid": "qFiIo%+/dh"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-f47a4f2d5c62ad27",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-f47a4f2d5c62ad27",
       "number": "0208a1",
       "sourceNumber": "0208a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Durante laparoscopia, qual das seguintes estruturas anatômicas poderá auxiliar a identificação topográfica do ureter?",
@@ -340,7 +340,7 @@
         "#CirurgiaPélvica",
         "#LaparoscopiaGinecológica",
         "#Ureter",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -348,14 +348,14 @@
       "ankiGuid": "Pm,Qx;loI;"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-c47930eb3c9036da",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-c47930eb3c9036da",
       "number": "0209a1",
       "sourceNumber": "0209a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A anatomia cirúrgica do ureter é",
@@ -378,7 +378,7 @@
         "#Pelve",
         "#Ureter",
         "#Urologia",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -386,14 +386,14 @@
       "ankiGuid": "MVTn6#j]^Z"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-8ebf0bf346558309",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-8ebf0bf346558309",
       "number": "0210a1",
       "sourceNumber": "0210a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Durante uma histerectomia abdominal, o cirurgião deve identificar e ligar a artéria uterina para evitar sangramento excessivo. Ao fazer isso, ele precisa tomar cuidado para evitar lesionar qual estrutura anatômica adjacente que passa imediatamente inferior à artéria uterina?",
@@ -416,7 +416,7 @@
         "#Ginecologia",
         "#Histerectomia",
         "#Ureter",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -424,14 +424,14 @@
       "ankiGuid": "bW$3EGq#+Y"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-8989605ad70d1881",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-8989605ad70d1881",
       "number": "0211a1",
       "sourceNumber": "0211a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Assinale a alternativa CORRETA sobre as relações anatômicas dos órgãos genitais femininos.",
@@ -454,7 +454,7 @@
         "#Ginecologia",
         "#LigamentoCardinal",
         "#Ureter",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -462,14 +462,14 @@
       "ankiGuid": "t7%8BB8LWR"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-5fe58221785515bc",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-5fe58221785515bc",
       "number": "0212a1",
       "sourceNumber": "0212a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Na Figura 1 abaixo, a seta indica o(s):\n\nFigura 1",
@@ -494,7 +494,7 @@
         "#Ginecologia",
         "#Medicina",
         "#Vulva",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -502,14 +502,14 @@
       "ankiGuid": "tJ%7(?|MNb"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-72eaf82e54312fbb",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-72eaf82e54312fbb",
       "number": "0213a1",
       "sourceNumber": "0213a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "O músculo levantador do ânus é uma estrutura essencial para a sustentação do assoalho pélvico, desempenhando um papel fundamental na continência urinária e fecal, além de contribuir para a função sexual. O que descreve corretamente as porções que compõem o músculo levantador do ânus são:",
@@ -532,7 +532,7 @@
         "#Coloproctologia",
         "#Ginecologia",
         "#Urologia",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -540,14 +540,14 @@
       "ankiGuid": "s/V>q:hGw7"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-3e4b71ed7208c046",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-3e4b71ed7208c046",
       "number": "0214a1",
       "sourceNumber": "0214a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Na histerectomia abdominal subtotal, que estrutura NÃO é retirada durante a cirurgia?",
@@ -570,7 +570,7 @@
         "#Ginecologia",
         "#Histerectomia",
         "#Útero",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -578,14 +578,14 @@
       "ankiGuid": "s+h%|$%|P="
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-54e90dfe8fe2fdb6",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-54e90dfe8fe2fdb6",
       "number": "0215a1",
       "sourceNumber": "0215a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Na histerectomia vaginal, qual o primeiro ligamento a ser pinçado e seccionado?",
@@ -608,7 +608,7 @@
         "#Ginecologia",
         "#Histerectomia",
         "#LigamentosUterinos",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -616,14 +616,14 @@
       "ankiGuid": "x4#4;+XW)O"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-13aed90e27059f79",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-13aed90e27059f79",
       "number": "0216a1",
       "sourceNumber": "0216a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A cavidade pélvica possui uma vascularização complexa. Marque a artéria que é ramo direto da artéria aorta.",
@@ -646,7 +646,7 @@
         "#ArtériaOvariana",
         "#Ginecologia",
         "#VascularizaçãoPélvica",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -654,14 +654,14 @@
       "ankiGuid": "v}H{-EGBsL"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-b452e216e54dd462",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-b452e216e54dd462",
       "number": "0217a1",
       "sourceNumber": "0217a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A artéria retal média é um ramo da artéria",
@@ -684,7 +684,7 @@
         "#IlíacaInterna",
         "#Reto",
         "#VascularizaçãoPélvica",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -692,14 +692,14 @@
       "ankiGuid": "yJ1:UV#AOH"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-84e0b482e584fbae",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-84e0b482e584fbae",
       "number": "0218a1",
       "sourceNumber": "0218a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Em relação à anatomia da pelve feminina, de extrema importância em cirurgias ginecológicas, a estrutura que tem retorno venoso para a veia renal esquerda é:",
@@ -722,7 +722,7 @@
         "#CirurgiaGinecológica",
         "#DrenagemVenosa",
         "#VeiaOvariana",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -730,14 +730,14 @@
       "ankiGuid": "Iy+B}Z&W.:"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-bb8d292368b2a6ce",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-bb8d292368b2a6ce",
       "number": "0219a1",
       "sourceNumber": "0219a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Paciente, de 45 anos, submetida à histerectomia abdominal por adenomiose.\n\nQual estrutura está pinçada (indicada pela letra A) na imagem acima?",
@@ -762,7 +762,7 @@
         "#Ginecologia",
         "#Histerectomia",
         "#Residência",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -770,14 +770,14 @@
       "ankiGuid": "rJ)A{*1&ry"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-0b5fbe8a7155829e",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-0b5fbe8a7155829e",
       "number": "0220a1",
       "sourceNumber": "0220a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Assinale a opção que indica a melhor conduta para o tratamento dos grânulos de Fordyce na vulva.",
@@ -800,7 +800,7 @@
         "#LesõesBenignas",
         "#Residência",
         "#Vulva",
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -808,14 +808,14 @@
       "ankiGuid": "j-m%1:(sy}"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-07bf5e994c140086",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-07bf5e994c140086",
       "number": "0221a1",
       "sourceNumber": "0221a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "O toque vaginal é parte do exame ginecológico e precisa ser orientado da seguinte maneira:",
@@ -834,7 +834,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -842,14 +842,14 @@
       "ankiGuid": "w=DExzgHj4"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-fe886626423b4c3e",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-fe886626423b4c3e",
       "number": "0222a1",
       "sourceNumber": "0222a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Durante cirurgia ginecológica, o cirurgião secciona inadvertidamente a veia ovariana esquerda, que normalmente desemboca na veia:",
@@ -867,7 +867,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -875,14 +875,14 @@
       "ankiGuid": "zE|=W&+x#>"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-83ed5bf62f40b264",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-83ed5bf62f40b264",
       "number": "0223a1",
       "sourceNumber": "0223a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Leia o trecho abaixo e responda corretamente. “As(Os) são dois cilindros com 7 a 14 cm de comprimento que se estendem da extremidade superior do ovário aos cornos do útero, possuindo uma abertura para este órgão e outra para a cavidade pélvica.” Assinale a alternativa que preencha a lacuna acima corretamente.",
@@ -900,7 +900,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -908,14 +908,14 @@
       "ankiGuid": "tk<kgr$)y_"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-a932827cbf95485f",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-a932827cbf95485f",
       "number": "0224a1",
       "sourceNumber": "0224a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Leia as assertivas abaixo e assinale a sequência correta. ( ) A vagina é cilíndrica, achatada no sentido ântero-posterior, geralmente colapsada esboçando um H em corte transversal. ( ) A inervação da vagina se faz pelo plexo hipogástrico e na extremidade distal pelo nervo pudendo. ( ) O vestíbulo é a saliência arredondada proeminente, constituída por tecido fibroadiposo, situada à frente da sínfise pública, triangular de base superior, coberta de pelos após a puberdade.",
@@ -933,7 +933,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -941,14 +941,14 @@
       "ankiGuid": "QTA^1&4rC3"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-bbc0834ffd10bc1a",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-bbc0834ffd10bc1a",
       "number": "0225a1",
       "sourceNumber": "0225a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Em condições de normalidade, o ângulo uretrovesical posterior tem aproximadamente de:",
@@ -966,7 +966,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -974,14 +974,14 @@
       "ankiGuid": "Krl@)eqREy"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-8f4786f74e95ff2b",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-8f4786f74e95ff2b",
       "number": "0226a1",
       "sourceNumber": "0226a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Assinale a alternativa CORRETA sobre drenagem venosa da veia ovariana:",
@@ -999,7 +999,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1007,14 +1007,14 @@
       "ankiGuid": "I+HPX2Jb>["
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-97900ec6b71e5688",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-97900ec6b71e5688",
       "number": "0227a1",
       "sourceNumber": "0227a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre anatomia pélvica, analise as proposições abaixo e assinale (V) para Verdadeiro ou (F) para Falso. ( ) Os ligamentos redondos não contribuem de forma significativa para a sustentação uterina. ( ) A secção do ligamento redondo normalmente é o primeiro passo na histerectomia abdominal ou laparoscópica. ( ) As artérias ovarianas são ramos diretamente da aorta, imediatamente abaixo dos vasos renais, fazem anastomose com o ramo ascendente da artéria uterina. Essas anastomoses contribuem para o suprimento sanguíneo do útero e anexos. ( ) Os órgãos pélvicos são nutridos por ramos viscerais da artéria ilíaca (hipogástrica) interna e por ramos diretos da aorta abdominal. ( ) O tecido conectivo que se fixa na lateral do útero e ao colo uterino é chamado de paramétrio e continua ao longo da vagina com o nome paracolpo. O paramétrio é formado por estruturas clinicamente conhecidas como ligamento transverso do colo (cardinal) e ligamento uterossacral. Assinale a alternativa que apresenta a sequência correta.",
@@ -1033,7 +1033,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1041,14 +1041,14 @@
       "ankiGuid": "Ggn:5L1Jgg"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-654ee7f36acd2385",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-654ee7f36acd2385",
       "number": "0228a1",
       "sourceNumber": "0228a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre vascularização da pelve e períneo, é CORRETO afirmar que:",
@@ -1066,7 +1066,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1074,14 +1074,14 @@
       "ankiGuid": "G.S_xR~_cZ"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-2749ce2ba78dd657",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-2749ce2ba78dd657",
       "number": "0229a1",
       "sourceNumber": "0229a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Observe a imagem abaixo e assinale a alternativa que indica o ponto no qual a anestesia local da cérvice deve ser evitada para que não haja um acidente de punção do principal suprimento arterial do colo uterino.",
@@ -1101,7 +1101,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1109,14 +1109,14 @@
       "ankiGuid": "h<[_k_|e)n"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-1cd14ced12a65603",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-1cd14ced12a65603",
       "number": "0230a1",
       "sourceNumber": "0230a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "No exame pélvico bimanual, a posição do útero é identificada conforme figura a seguir:\n\nA figura acima apresenta um:",
@@ -1136,7 +1136,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1144,14 +1144,14 @@
       "ankiGuid": "I;-S3T^[WZ"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-dfd977f9cdd7800f",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-dfd977f9cdd7800f",
       "number": "0231a1",
       "sourceNumber": "0231a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A porção da tuba uterina que apresenta vários processos digitiformes delicados, conhecidos como fímbrias, que se projetam em direção ao ovário é:",
@@ -1169,7 +1169,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1177,14 +1177,14 @@
       "ankiGuid": "eUo~kVpf#|"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-4bc48fc0cf64d329",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-4bc48fc0cf64d329",
       "number": "0232a1",
       "sourceNumber": "0232a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A artéria ovariana origina-se da artéria:",
@@ -1203,7 +1203,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1211,14 +1211,14 @@
       "ankiGuid": "r}B0Vxlj[P"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-70a4b63f77c94bea",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-70a4b63f77c94bea",
       "number": "0233a1",
       "sourceNumber": "0233a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Considere os ligamentos a seguir: I. ligamentos redondos; II. ligamentos cardinais; III. ligamentos largos; IV. ligamentos uterossacrais. São ligamentos uterinos:",
@@ -1237,7 +1237,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1245,14 +1245,14 @@
       "ankiGuid": "d>xYj4:sP;"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-14b845154869ec0a",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-14b845154869ec0a",
       "number": "0234a1",
       "sourceNumber": "0234a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A principal inervação do períneo é realizada pelo nervo",
@@ -1271,7 +1271,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1279,14 +1279,14 @@
       "ankiGuid": "J@Ku6w)%;>"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-2a8e92bdd126222c",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-2a8e92bdd126222c",
       "number": "0235a1",
       "sourceNumber": "0235a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Vaso importante de ligadura na Histerectomia que tem anatomia de proximidade com o ureter. O enunciado refere-se à artéria",
@@ -1305,7 +1305,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1313,14 +1313,14 @@
       "ankiGuid": "B,^8C|sE@"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-a19e7fe26e54da3c",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-a19e7fe26e54da3c",
       "number": "0236a1",
       "sourceNumber": "0236a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A formação dos ductos paramesonéfricos dá origem a quais estruturas principais na mulher?",
@@ -1338,7 +1338,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1346,14 +1346,14 @@
       "ankiGuid": "JJL*7Xci2V"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-25058b776a5a3fa2",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-25058b776a5a3fa2",
       "number": "0237a1",
       "sourceNumber": "0237a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Qual é a afirmação correta do desenvolvimento embrionário das gônadas femininas?",
@@ -1371,7 +1371,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1379,14 +1379,14 @@
       "ankiGuid": "K[w@D5).`U"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-f97d5f399c99697c",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-f97d5f399c99697c",
       "number": "0238a1",
       "sourceNumber": "0238a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A origem embriológica das trompas de falópio é:",
@@ -1404,7 +1404,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1412,14 +1412,14 @@
       "ankiGuid": "G*fyNma`ia"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-158c9b3cace8fdb6",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-158c9b3cace8fdb6",
       "number": "0239a1",
       "sourceNumber": "0239a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "As alterações anatômicas congênitas no sistema reprodutor feminino podem ser de origem genética, parada no desenvolvimento, exposição anormal a hormônios ou agressões ambientais. Entender a complexa embriologia normal auxilia muito no diagnóstico as possíveis associações com alterações genitourinárias e ao planejamento terapêutico. Sobre estas patologias, é CORRETO afirmar:",
@@ -1437,7 +1437,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1445,14 +1445,14 @@
       "ankiGuid": "dK?$O3+pkE"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-a08c42feab3737ed",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-a08c42feab3737ed",
       "number": "0240a1",
       "sourceNumber": "0240a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Uma paciente de 18 anos de idade relatou ter dificuldade em manter relações sexuais, pois sente muita dor durante a penetração. Ao exame ginecológico, foi detectada a existência de dois colos uterinos e um septo vaginal longitudinal. O ginecologista informou à paciente que se trata de um útero didelfo. Com base nessa situação hipotética e em relação a essa afecção, é correto afirmar que",
@@ -1471,7 +1471,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1479,14 +1479,14 @@
       "ankiGuid": "xx?=Y1eZ{B"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-014223a93a0fc8e4",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-014223a93a0fc8e4",
       "number": "0241a1",
       "sourceNumber": "0241a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Paciente, 30 anos de idade, assintomática, faz uso de contraceptivo hormonal oral combinado com fluxo menstrual regular e deseja engravidar. Realiza exame ultrassonográfico para avaliação do trato genital e, devido ao resultado deste exame, solicita-se o exame de imagem apresentado a seguir:\n\nConsiderando a imagem apresentada, qual é a conduta inicial mais adequada?",
@@ -1506,7 +1506,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1514,14 +1514,14 @@
       "ankiGuid": "kRP//ES@r~"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-b4564ca4dd15c23e",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-b4564ca4dd15c23e",
       "number": "0242a1",
       "sourceNumber": "0242a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Qual malformação uterina está menos relacionada com a interrupção da gestação?",
@@ -1539,7 +1539,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1547,14 +1547,14 @@
       "ankiGuid": "oH}aD#R<0:"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-091f2b4b6731758e",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-091f2b4b6731758e",
       "number": "0243a1",
       "sourceNumber": "0243a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Uma paciente de 24 anos, sem queixas ginecológicas, realiza exame de rotina que evidencia duas cérvices uterinas e septo longitudinal na porção superior da vagina. A ultrassonografia transvaginal no corte transversal evidencia dois cornos uterinos separados, cada um com uma cavidade. Nesse cenário clínico, a paciente deve ser orientada da seguinte forma:",
@@ -1573,7 +1573,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1581,14 +1581,14 @@
       "ankiGuid": "BvwLpD7ld`"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-6fef2e726900cdbe",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-6fef2e726900cdbe",
       "number": "0244a1",
       "sourceNumber": "0244a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Na histerossalpingografia para investigação de infertilidade em uma paciente de 33 anos, foram identificados dois corpos e dois colos uterinos. É CORRETO afirmar que, durante o desenvolvimento intrauterino desta paciente, NÃO houve:",
@@ -1607,7 +1607,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1615,14 +1615,14 @@
       "ankiGuid": "JbS{cd->@^"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-9645cca0db5875ad",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-9645cca0db5875ad",
       "number": "0245a1",
       "sourceNumber": "0245a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "É correto afirmar a respeito da embriologia dos órgãos genitais da mulher:",
@@ -1640,7 +1640,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1648,14 +1648,14 @@
       "ankiGuid": "IkMeLE,q7<"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-50362fecf1005f1d",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-50362fecf1005f1d",
       "number": "0246a1",
       "sourceNumber": "0246a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Uma mulher teve o diagnóstico de útero didelfo. Isso significa que:",
@@ -1673,7 +1673,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1681,14 +1681,14 @@
       "ankiGuid": "m8<DcT3Gh;"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-b35e51bdc183040d",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-b35e51bdc183040d",
       "number": "0247a1",
       "sourceNumber": "0247a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Meninas com amenorreia primária devem ser sempre investigadas quanto à possibilidade de malformações genitais. Em relação à Síndrome de Mayer-Rokitansky-Kuster-Hauser (MRKH), avalie se as afirmativas a seguir são falsas (F) ou verdadeiras (V). ( ) É oriunda de uma agenesia mülleriana. ( ) Há ausência do corpo uterino. Colo, vagina e genitália externa normais. ( ) Há ausência do útero e parte superior da vagina. Genitália externa normal. ( ) É oriunda de uma insensibilidade androgênica completa. Genitália externa feminina normal. As afirmativas são, respectivamente,",
@@ -1707,7 +1707,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1715,14 +1715,14 @@
       "ankiGuid": "bGEFKGWvw<"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-bf964f5fc7272948",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-bf964f5fc7272948",
       "number": "0248a1",
       "sourceNumber": "0248a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre os eventos relacionados à embriogênese, marque V para as afirmativas verdadeiras e F para as falsas. ( ) Na presença de dois cromossomos X e na ausência de um cromossomo Y, os ovários se desenvolvem. ( ) Na presença de dois cromossomos X e na ausência de um cromossomo Y, os ductos mesonéfricos ou ductos de Wolff regridem. ( ) Na presença de dois cromossomos X e na ausência de um cromossomo Y, os ductos mesonéfricos ou ductos de Wolff se desenvolvem. ( ) Há estreita relação entre os sistemas genital e urinário, e ambos se desenvolvem a partir do mesoderme intermediário. As afirmativas são, respectivamente,",
@@ -1741,7 +1741,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1749,14 +1749,14 @@
       "ankiGuid": "ke#XX-KGg_"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-888599adfac6deb1",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-888599adfac6deb1",
       "number": "0249a1",
       "sourceNumber": "0249a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Os estados intersexuais agrupam indivíduos que apresentam discordância de um ou mais dos fatores determinantes do sexo. Quanto a tais situações, podemos afirmar:",
@@ -1775,7 +1775,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1783,14 +1783,14 @@
       "ankiGuid": "b.`y_i3DV7"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-4ac991bb9d1d2ee7",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-4ac991bb9d1d2ee7",
       "number": "0250a1",
       "sourceNumber": "0250a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A presença de dois corpos uterinos completamente separados por um septo longitudinal devido à falha completa de fusão dos ductos de Müller corresponde a",
@@ -1809,7 +1809,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1817,14 +1817,14 @@
       "ankiGuid": "Od7Tj#(U&`"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-047de92f387221e2",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-047de92f387221e2",
       "number": "0251a1",
       "sourceNumber": "0251a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Na embriologia, o tubérculo genital, na mulher, dará origem à seguinte estrutura anatômica:",
@@ -1843,7 +1843,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1851,14 +1851,14 @@
       "ankiGuid": "I%J}~tIqio"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-8f272c53e83bd52d",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-8f272c53e83bd52d",
       "number": "0252a1",
       "sourceNumber": "0252a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Mulher de 28 anos de idade, nuligesta, vem para consulta ginecológica de rotina. Não tem queixas no momento. Ao realizar o exame especular para coleta de citologia, são identificados dois colos uterinos. A ultrassonografia transvaginal solicitada posteriormente indica que há duas cavidades uterinas. Considerando as malformações Mullerianas, a principal hipótese diagnóstica corresponde à ausência de:",
@@ -1877,7 +1877,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1885,14 +1885,14 @@
       "ankiGuid": "v2U0L9m$Z2"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-939366a335d226ae",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-939366a335d226ae",
       "number": "0253a1",
       "sourceNumber": "0253a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A falha de fusão dos ductos de Muller originar:",
@@ -1910,7 +1910,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1918,14 +1918,14 @@
       "ankiGuid": "gMTZ0vm<t)"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-6b8fb7fdd32f6589",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-6b8fb7fdd32f6589",
       "number": "0254a1",
       "sourceNumber": "0254a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A diferenciação da genitália externa feminina é um processo passivo, determinado pela ausência de estimulação androgênica. Considerando os acontecimentos no processo embriológico do trato genital inferior, assinale a alternativa CORRETA.",
@@ -1944,7 +1944,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1952,14 +1952,14 @@
       "ankiGuid": "n](x-Utnci"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-dc4921fd81383bac",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-dc4921fd81383bac",
       "number": "0255a1",
       "sourceNumber": "0255a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Paciente com 20 anos de idade veio ao ambulatório de ginecologia para mostrar exame ecográfico demonstrando útero com duas cavidades. Assintomática, usa pílula combinada como método contraceptivo. O exame ginecológico revelou dois colos. Realizou ressonância nuclear magnética que demonstrou útero com dois corpos e colo duplicado. Ovários normais. De acordo com o exposto acima, assinale a alternativa CORRETA quanto ao diagnóstico e à fisiopatologia.",
@@ -1978,7 +1978,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -1986,14 +1986,14 @@
       "ankiGuid": "JB[~uuPIYy"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-def9c3bec8aea7f0",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-def9c3bec8aea7f0",
       "number": "0256a1",
       "sourceNumber": "0256a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Assinale qual a indicação adequada para realização de histeroscopia cirúrgica.",
@@ -2011,7 +2011,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2019,14 +2019,14 @@
       "ankiGuid": "tQbl-:)LIA"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-103fc32844cb166c",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-103fc32844cb166c",
       "number": "0257a1",
       "sourceNumber": "0257a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Em relação às anomalias uterinas congênitas, atribua V (verdadeiro) ou F (falso) às afirmativas a seguir. ( ) A fertilização in vitro com óvulo de doadora jovem é a melhor opção reprodutiva para pacientes com síndrome de Mayer-Rokitansky-Kuster-Hauser. ( ) A metroplastia é recomendada nos casos de útero didelfo e útero bicorno. ( ) Mulheres com anomalia uterina congênita têm risco aumentado de insuficiência istmocervical. ( ) Para uma paciente com útero bicorno, recomenda-se a transferência de um único embrião. ( ) A associação entre anomalias uterinas e renais é comum. Assinale a alternativa que contém, de cima para baixo, a sequência correta.",
@@ -2045,7 +2045,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2053,14 +2053,14 @@
       "ankiGuid": "o1J$|S;gP8"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-c29c3609a327fadd",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-c29c3609a327fadd",
       "number": "0258a1",
       "sourceNumber": "0258a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Mulher de 20 anos, nuligesta, ciclos regulares, sem dismenorreia. Relata que quando introduz o coletor menstrual percebe uma \"bola\" na vagina. No exame stonegicológico: abaulamento de 5 cm em paredes vaginal lateral direita de consistência cística.\n\nDe acordo com o exame físico e a imagem radiológica da figura, qual o diagnóstico?",
@@ -2080,7 +2080,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2088,14 +2088,14 @@
       "ankiGuid": "j_y2hc;;0J"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-cfd23a5991718199",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-cfd23a5991718199",
       "number": "0259a1",
       "sourceNumber": "0259a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Qual é a anomalia mülleriana mais comum?",
@@ -2113,7 +2113,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2121,14 +2121,14 @@
       "ankiGuid": "vQyv?+{9$2"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-5251374bca03c098",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-5251374bca03c098",
       "number": "0260a1",
       "sourceNumber": "0260a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A principal utilidade da ultrassonografia transvaginal 3D na avaliação das malformações mullerianas é",
@@ -2146,7 +2146,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2154,14 +2154,14 @@
       "ankiGuid": "jadtV<+LtB"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-b4b872494d03196b",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-b4b872494d03196b",
       "number": "0261a1",
       "sourceNumber": "0261a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Participam da formação da vagina, porções superiores e inferiores, respectivamente:",
@@ -2179,7 +2179,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2187,14 +2187,14 @@
       "ankiGuid": "g&M&Oh6fa^"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-a248efce61c68762",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-a248efce61c68762",
       "number": "0262a1",
       "sourceNumber": "0262a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Os ductos de Müller, ou ductos paramesonésicos, são um par de ductos do embrião que descem a partir da porção lateral da crista urogenital até à eminência mülleriana, no seio urogenital primitivo. Eles formam algumas estruturas na mulher. São elas, exceto:",
@@ -2213,7 +2213,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2221,14 +2221,14 @@
       "ankiGuid": "ip8Hac4V5K"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-909490cea7d19172",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-909490cea7d19172",
       "number": "0263a1",
       "sourceNumber": "0263a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Uma paciente de 18 anos de idade, com queixa clínica de sangramento uterino anormal, realizou ultrassonografia transvaginal, que revelou a presença de útero septado ou bicorno. O médico solicitou histeroscopia ambulatorial para elucidação diagnóstica. Com base nesse caso clínico, assinale a alternativa correta.",
@@ -2247,7 +2247,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2255,14 +2255,14 @@
       "ankiGuid": "o5,l3%uE[e"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-c23d573121fca921",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-c23d573121fca921",
       "number": "0264a1",
       "sourceNumber": "0264a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Assinale quais órgãos são oriundos dos ductos de Müller.",
@@ -2280,7 +2280,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2288,14 +2288,14 @@
       "ankiGuid": "m8XE;>W2,_"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-850099977fe68684",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-850099977fe68684",
       "number": "0265a1",
       "sourceNumber": "0265a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Mulher, paciente de clínica privada, encontrava-se com 38 anos quando resolveu gestar, porém, cursou com 3 perdas gestacionais espontâneas, consecutivas e precoces. Nunca havia gestado anteriormente ou sido submetida a qualquer procedimento intrauterino. Negava também história pessoal ou familiar de trombose. A causa cromossômica do abortamento habitual foi afastada pelos exames de cariotipagem normais dos produtos dos abortamentos, assim como dos cariotípos do casal. Porém no estudo da anatomia uterina da referida paciente foi identificado um septo uterino parcial. Indique o exame de imagem considerado padrão ouro para reconhecimento da patologia descrita no caso.",
@@ -2313,7 +2313,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2321,14 +2321,14 @@
       "ankiGuid": "q]XX<EJNX%"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-f29c1f614c52d4de",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-f29c1f614c52d4de",
       "number": "0266a1",
       "sourceNumber": "0266a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Qual é o exame mais indicado para a avaliação das malformações mullerianas?",
@@ -2346,7 +2346,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2354,14 +2354,14 @@
       "ankiGuid": "y$yj%4X`JD"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-148ed66af30a8f4e",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-148ed66af30a8f4e",
       "number": "0267a1",
       "sourceNumber": "0267a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Em ambos os sexos, a genitária externa se desenvolve embriologicamente do(a):",
@@ -2380,7 +2380,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2388,14 +2388,14 @@
       "ankiGuid": "yWD+|J=+Qe"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-e8cf6086374d6c87",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-e8cf6086374d6c87",
       "number": "0268a1",
       "sourceNumber": "0268a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A época em que a mulher tem maior número de folículos ovarianos é:",
@@ -2414,7 +2414,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2422,14 +2422,14 @@
       "ankiGuid": "mD!dOp/`37"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-0fd1a5e1cc18460a",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-0fd1a5e1cc18460a",
       "number": "0269a1",
       "sourceNumber": "0269a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "O desenvolvimento da genitária interna feminina durante o período embrionário é dependente",
@@ -2447,7 +2447,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2455,14 +2455,14 @@
       "ankiGuid": "mUd>uZ*N@n"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-150dd4f58f072ccc",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-150dd4f58f072ccc",
       "number": "0270a1",
       "sourceNumber": "0270a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre a embriologia do trato genital, assinale a alternativa correta:",
@@ -2480,7 +2480,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2488,14 +2488,14 @@
       "ankiGuid": "tW_bg#JG(L"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-19b0e68c5235633f",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-19b0e68c5235633f",
       "number": "0271a1",
       "sourceNumber": "0271a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Mulher, 27 anos de idade, com ciclos menstruais regulares, variando entre 28 e 32 dias, deseja calcular seu período fértil para tentar engravidar. Com base no método da tabelinha, qual é o intervalo mais provável do período fértil?",
@@ -2514,7 +2514,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2522,14 +2522,14 @@
       "ankiGuid": "Q]hT9p#k3P"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-43320226a68e9127",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-43320226a68e9127",
       "number": "0272a1",
       "sourceNumber": "0272a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre o ciclo menstrual fisiológico da mulher, assinale a opção INCORRETA:",
@@ -2549,7 +2549,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2557,14 +2557,14 @@
       "ankiGuid": "v[w/cLr2[r"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-39b2f1a3cf539b63",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-39b2f1a3cf539b63",
       "number": "0273a1",
       "sourceNumber": "0273a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre as mudanças hormonais e endometriais durante a fase lútea do ciclo menstrual, é CORRETO afirmar:",
@@ -2582,7 +2582,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2590,14 +2590,14 @@
       "ankiGuid": "j[1(+3B71@"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-1a072ff1f02382d6",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-1a072ff1f02382d6",
       "number": "0274a1",
       "sourceNumber": "0274a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Uma paciente de 30 anos, com ciclos menstruais regulares, busca orientação sobre planejamento familiar. Ela relata que deseja engravidar, mas não entende como identificar o período fértil. Qual é a orientação mais apropriada?",
@@ -2615,7 +2615,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2623,14 +2623,14 @@
       "ankiGuid": "NTG-w^Ig|X"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-316fd7d796e54e07",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-316fd7d796e54e07",
       "number": "0275a1",
       "sourceNumber": "0275a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "No ciclo menstrual, quais hormônios são produzidos pelo folículo dominante e estimulam o crescimento do endométrio na fase proliferativa?",
@@ -2648,7 +2648,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2656,14 +2656,14 @@
       "ankiGuid": "C*Vf|Y)Rz>"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-56b7319cc49b6061",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-56b7319cc49b6061",
       "number": "0276a1",
       "sourceNumber": "0276a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Qual é a principal função da progesterona na fase lútea do ciclo?",
@@ -2681,7 +2681,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2689,14 +2689,14 @@
       "ankiGuid": "DI4q:E]t<`"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-d9d5cf54d03dc5f4",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-d9d5cf54d03dc5f4",
       "number": "0277a1",
       "sourceNumber": "0277a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre a fisiologia e a importância do hormônio folículo-estimulante (FSH) no ciclo menstrual, é correto afirmar que:",
@@ -2714,7 +2714,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2722,14 +2722,14 @@
       "ankiGuid": "C%5&fr@DsJ"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-f6aae51912268862",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-f6aae51912268862",
       "number": "0278a1",
       "sourceNumber": "0278a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre a fisiologia do ciclo menstrual, é correto afirmar que:",
@@ -2747,7 +2747,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2755,14 +2755,14 @@
       "ankiGuid": "QWZ4ozl){G"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-3917def894a4d322",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-3917def894a4d322",
       "number": "0279a1",
       "sourceNumber": "0279a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Considerando-se a \"teoria das duas células e duas gonadotrofinas ou teoria da dupla célula\" do desenvolvimento folicular:\n\nI. - \"A\" corresponde ao colesterol.\n\nII. - \"Ligante 1\" é o FSH e \"Ligante 2\" é o LH.\n\nIII. - \"Enzima Z\" corresponde à Enzima Aromatase, responsável pela aromatização de Androgênios (\"C\") em Estradiol (\"D\").\n\nIV. - \"Células Y\" representa as Células da Granulosa, onde Colesterol (\"A\") é convertido em Andrógenos (\"B\"). V. - \"Células Y\" representa as Células da Teca, onde Colesterol (\"A\") é convertido em Andrógenos (\"B\").\n\nConsiderando-se as afirmativas acima, são verdadeiras:",
@@ -2783,7 +2783,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2791,14 +2791,14 @@
       "ankiGuid": "FdMz!PqAH6"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-2cdbe21616700202",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-2cdbe21616700202",
       "number": "0280a1",
       "sourceNumber": "0280a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Qual estrutura produz gonadotrofinas?",
@@ -2818,7 +2818,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2826,14 +2826,14 @@
       "ankiGuid": "cLr{kVGCm1"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-c1bb4df0c88d221b",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-c1bb4df0c88d221b",
       "number": "0281a1",
       "sourceNumber": "0281a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Em um livro de ginecologia estava escrito: \"o recrutamento folicular é mediado pelo X. Pouco antes da ovulação ocorre aumento de Y que provoca a súbita elevação de Z\". Nesta frase, X, Y e Z correspondem a, respectivamente:",
@@ -2851,7 +2851,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2859,14 +2859,14 @@
       "ankiGuid": "Ij#n)N?Tj$"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-7e53b37d2c4ab2fd",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-7e53b37d2c4ab2fd",
       "number": "0282a1",
       "sourceNumber": "0282a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Na esteroidogênese ovariana, assinale a alternativa que contém a associação correta:",
@@ -2884,7 +2884,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2892,14 +2892,14 @@
       "ankiGuid": "nj*D;*Ivn["
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-cc884ebe85f83494",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-cc884ebe85f83494",
       "number": "0283a1",
       "sourceNumber": "0283a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A esteroidogênese ovariana:",
@@ -2917,7 +2917,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2925,14 +2925,14 @@
       "ankiGuid": "dbQz{GJIr!"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-c29b2ddf3fd2914b",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-c29b2ddf3fd2914b",
       "number": "0284a1",
       "sourceNumber": "0284a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Durante o ciclo menstrual, o pico de qual hormônio é responsável pela ovulação?",
@@ -2950,7 +2950,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2958,14 +2958,14 @@
       "ankiGuid": "NMZ16%Q`fM"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-f7d7d2ddafb1c1b8",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-f7d7d2ddafb1c1b8",
       "number": "0285a1",
       "sourceNumber": "0285a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Sobre o ciclo menstrual, é sabido que ele é composto de uma engrenagem fisiológica complexa, que envolve a regulação de hormônios hipotalâmicos, hipofisários e ovarianos. Pode-se afirmar, tendo em vista os conhecimentos sobre a dinâmica do eixo hipotálamo-hipófise-ovário, que o:",
@@ -2984,7 +2984,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -2992,14 +2992,14 @@
       "ankiGuid": "AGiR![~k{W"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-df27596e93000363",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-df27596e93000363",
       "number": "0286a1",
       "sourceNumber": "0286a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Quando os ciclos ovarianos se tornam ovulatórios, o corpo lúteo resultante da ovulação passa a secretar progesterona juntamente com estradiol. Sendo correto o item:",
@@ -3017,7 +3017,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3025,14 +3025,14 @@
       "ankiGuid": "pcmVbeol@!"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-892fd285f0e6033f",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-892fd285f0e6033f",
       "number": "0287a1",
       "sourceNumber": "0287a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Existem receptores para os hormônios sexuais (estrogênios, androgênios e progesterona) em praticamente todos os tecidos e órgãos do corpo da mulher. Dessa forma, eles atuam e apresentam funções específicas em todo o organismo feminino. Sendo correto o item:",
@@ -3050,7 +3050,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3058,14 +3058,14 @@
       "ankiGuid": "hXoGP-5;&z"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-c81affdf8e2ee4ab",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-c81affdf8e2ee4ab",
       "number": "0288a1",
       "sourceNumber": "0288a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "O estradiol exerce um efeito cardioprotetor:",
@@ -3083,7 +3083,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3091,14 +3091,14 @@
       "ankiGuid": "Be5q]wGZ?b"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-87662003d42791aa",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-87662003d42791aa",
       "number": "0289a1",
       "sourceNumber": "0289a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Analise o gráfico a seguir, que representa a variação das concentrações hormonais, no ciclo menstrual normal.\n\nNo gráfico, os números 1, 2, 3 e 4 representam, respectivamente,",
@@ -3118,7 +3118,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3126,14 +3126,14 @@
       "ankiGuid": "m3E|`r>?aI"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-47e89c18a883cf69",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-47e89c18a883cf69",
       "number": "0290a1",
       "sourceNumber": "0290a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Assinale a alternativa CORRETA sobre as inibinas no ciclo fisiológico.",
@@ -3151,7 +3151,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3159,14 +3159,14 @@
       "ankiGuid": "lvhwop`1&@"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-58c128ae3fdd85cd",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-58c128ae3fdd85cd",
       "number": "0291a1",
       "sourceNumber": "0291a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Para que ocorra o ciclo menstrual com descamação cíclica e ordenada do endométrio, são necessárias as seguintes condições:",
@@ -3184,7 +3184,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3192,14 +3192,14 @@
       "ankiGuid": "Bskw|U9gAe"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-b527775d5c88231f",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-b527775d5c88231f",
       "number": "0292a1",
       "sourceNumber": "0292a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Mulher, 34 anos, que quer engravidar, realiza ultrassonografias seriadas a fim de programar o coito. Laudo da US de hoje: 5 imagens no ovário direito, regulares, anecóicas, homogêneas, com menos de 10mm em seu maior diâmetro; no ovário esquerdo, 1 imagem de bordas irregulares, com conteúdo heterogêneo, parcialmente hipoecogênico, presença de halo vascular ao Doppler; endométrio de aspecto hiperecogênico, homogêneo, medindo 9,5mm de espessura; fundo de saco posterior com pequena quantidade de líquido livre. Pode-se afirmar, sobre a ovulação e fase do ciclo menstrual, que essa paciente:",
@@ -3217,7 +3217,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3225,14 +3225,14 @@
       "ankiGuid": "B),|9Qq7t}"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-40d862c95d66068c",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-40d862c95d66068c",
       "number": "0293a1",
       "sourceNumber": "0293a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Mulher, 34 anos, que quer engravidar, realiza ultrassonografias seriadas a fim de programar o coito. Laudo da US de hoje: 5 imagens no ovário direito, regulares, anecóicas, homogêneas, com menos de 10mm em seu maior diâmetro; no ovário esquerdo, 1 imagem de bordas irregulares, com conteúdo heterogêneo, parcialmente hipoecogênico, presença de halo vascular ao Doppler; endométrio de aspecto hiperecogênico, homogêneo, medindo 9,5mm de espessura; fundo de saco posterior com pequena quantidade de líquido livre. Sobre a ovulação e fase do ciclo menstrual, pode-se afirmar, que essa paciente:",
@@ -3250,7 +3250,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3258,14 +3258,14 @@
       "ankiGuid": "l+[_inMI<q"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-e6d3d2fe41b6814d",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-e6d3d2fe41b6814d",
       "number": "0294a1",
       "sourceNumber": "0294a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Em uma mulher com saúde normal na menacme, é correto afirmar que a ovulação ocorre:",
@@ -3283,7 +3283,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3291,14 +3291,14 @@
       "ankiGuid": "g%f^60R75J"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-ce8e06bdac141fd4",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-ce8e06bdac141fd4",
       "number": "0295a1",
       "sourceNumber": "0295a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "São enzimas que impedem que o ovário seja incapaz de produzir mineralocorticoides ou glicocorticoides: I. 21-hidroxilase. II. 11-β-hidroxilase. III. 18-hidroxilase redutase. Quais estão corretas?",
@@ -3316,7 +3316,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3324,14 +3324,14 @@
       "ankiGuid": "F[UK]gfBP/"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-5b550d36b0a3e2e4",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-5b550d36b0a3e2e4",
       "number": "0296a1",
       "sourceNumber": "0296a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Paciente de 17 anos, com vida sexual ativa, referiu, na consulta, que seus ciclos menstruais variavam de 25-34 dias, com 4 dias de sangramento, acompanhado de dismenorreia. Foi realizado exame especular no 19º dia do ciclo.\n\nCom base nesse exame, o que se esperaria encontrar ao exame ultrassonográfico do endométrio e do ovário?",
@@ -3351,7 +3351,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3359,14 +3359,14 @@
       "ankiGuid": "A88IcFu[0t"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-6e2ee596cf5d70de",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-6e2ee596cf5d70de",
       "number": "0297a1",
       "sourceNumber": "0297a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "A principal função da progesterona durante a fase lútea do ciclo menstrual é:",
@@ -3384,7 +3384,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3392,14 +3392,14 @@
       "ankiGuid": "d<dp3OrBBz"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-e2e8150797156e8b",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-e2e8150797156e8b",
       "number": "0298a1",
       "sourceNumber": "0298a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "O ciclo menstrual é um processo fisiológico complexo e cíclico que ocorre nas mulheres em idade reprodutiva, com o objetivo de preparar o organismo para uma possível gravidez. Assim, avalie as proposições: I. A fase folicular inicia-se no primeiro dia da menstruação e se estende até o pico do Hormônio Luteinizante (LH), momento em que ocorre a ovulação. II. Durante a fase folicular, o aumento dos níveis do Hormônio Folículo-Estimulante (FSH) estimula o recrutamento e desenvolvimento dos folículos ovarianos, que passam a produzir estradiol e inibina B. III. O folículo dominante, que se destaca durante o desenvolvimento folicular, possui uma maior quantidade de receptores de FSH e maior atividade da enzima aromatase, permitindo que ele continue seu desenvolvimento mesmo com a diminuição dos níveis de FSH. Está CORRETO o que se afirma em:",
@@ -3417,7 +3417,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3425,14 +3425,14 @@
       "ankiGuid": "F6ebn0xJG&"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-46f1a6fbd67229f2",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-46f1a6fbd67229f2",
       "number": "0299a1",
       "sourceNumber": "0299a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Em relação à prevenção de doenças em adolescentes, qual é o momento recomendado para a primeira consulta ao ginecologista, segundo o ACOG?",
@@ -3450,7 +3450,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
@@ -3458,14 +3458,14 @@
       "ankiGuid": "M]^UjWl8.Q"
     },
     {
-      "id": "anki-anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino-142652d75d441953",
+      "id": "anki-ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino-142652d75d441953",
       "number": "02100a1",
       "sourceNumber": "02100a1",
-      "collectionBlock": "anki:anatomia-e-embriologia-do-trato-genital-feminino-anatomia-e-embriologia-do-trato-genital-feminino",
+      "collectionBlock": "anki:ginecologia-anatomia-e-embriologia-do-trato-genital-feminino-01-1-anatomia-e-embriologia-do-trato-genital-feminino",
       "collectionLabel": "Anki · Anatomia e embriologia do trato genital feminino",
       "documentBlock": "",
-      "area": "Anatomia e Embriologia do Trato Genital Feminino",
-      "specialty": "Anatomia e Embriologia do Trato Genital Feminino",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
       "topic": "Anatomia e embriologia do trato genital feminino",
       "subtopic": "",
       "stem": "Após referir ciclos irregulares e dificuldade de identificar a “janela fértil”, uma paciente de 38 anos realiza uma ultrassonografia transvaginal para controle de ovulação. No décimo sexto dia do ciclo menstrual, é identificada uma imagem anecoica com anel vascular ao redor sugestiva de corpo lúteo. Em relação a essa fase do ciclo menstrual, é correto afirmar que:",
@@ -3484,7 +3484,7 @@
       "commentImages": [],
       "comment": "",
       "tags": [
-        "Anatomia e Embriologia do Trato Genital Feminino",
+        "Ginecologia e Obstetrícia",
         "Anatomia e embriologia do trato genital feminino",
         "Anki"
       ],
