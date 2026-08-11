@@ -460,10 +460,21 @@ function normalizePlannerState() {
   ensureImportedQuestions(); ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress(); ensureGamificationState(); reconcileCompletedBlockXP(); reviveHiddenHistoryDates();
   lastStateNormalizeAt = Date.now();
 }
-function persist() { normalizePlannerState(); invalidateActivityRenderCache(); writeLocalState(); if(currentUser && sbClient) { cloudDirty = true; setSyncStatus('Não enviado', '', 'Use o botão Enviar para mandar para a nuvem'); } render(); }
+// Alteracoes acionadas por clique devem aparecer antes do passe caro de
+// normalizacao/serializacao. A gravacao continua garantida por flush nos eventos
+// visibilitychange, pagehide e beforeunload; aqui apenas cedemos um frame para o
+// navegador pintar a resposta primeiro.
+function persist() {
+  invalidateActivityRenderCache();
+  if(currentUser && sbClient) { cloudDirty = true; setSyncStatus('Não enviado', '', 'Use o botão Enviar para mandar para a nuvem'); }
+  render();
+  scheduleStateFlushAfterPaint();
+}
 let saveStateOnlyTimer = null;
 let pendingCacheInvalidate = false;
+let stateFlushFrameGeneration = 0;
 function flushSaveStateOnly() {
+  stateFlushFrameGeneration += 1;
   clearTimeout(saveStateOnlyTimer);
   saveStateOnlyTimer = null;
   // A normalização sempre acontece antes de gravar: o que muda é a frequência,
@@ -480,8 +491,22 @@ function flushSaveStateOnly() {
 // o momento em que o estado realmente precisa estar íntegro para ser gravado.
 function saveStateOnly(options={}) {
   if(options.invalidate !== false) pendingCacheInvalidate = true;
+  stateFlushFrameGeneration += 1;
   clearTimeout(saveStateOnlyTimer);
   saveStateOnlyTimer = setTimeout(flushSaveStateOnly, 400);
+}
+function scheduleStateFlushAfterPaint() {
+  const generation = ++stateFlushFrameGeneration;
+  clearTimeout(saveStateOnlyTimer);
+  saveStateOnlyTimer = null;
+  const schedule = () => {
+    if(generation !== stateFlushFrameGeneration) return;
+    saveStateOnlyTimer = setTimeout(() => {
+      if(generation === stateFlushFrameGeneration) flushSaveStateOnly();
+    }, 0);
+  };
+  if(typeof requestAnimationFrame === 'function') requestAnimationFrame(schedule);
+  else setTimeout(schedule, 0);
 }
 document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'hidden') { if(saveStateOnlyTimer) flushSaveStateOnly(); flushCloudSaveNow(); } });
 window.addEventListener('beforeunload', () => { if(saveStateOnlyTimer) flushSaveStateOnly(); flushCloudSaveNow(); });
@@ -2404,7 +2429,7 @@ function bindPersonalDailyTasks(date) {
     state.dailyTasks = PlannerUX?.deleteOccurrence ? PlannerUX.deleteOccurrence(state.dailyTasks,task.id,now) : state.dailyTasks.map(item=>item.id===task.id?{...item,status:'deleted',deletedAt:now,updatedAt:now}:item);
     const template=state.taskTemplates.find(item=>item.id===task.templateId);
     if(template?.recurrence==='none') { template.active=false; template.updatedAt=now; }
-    persist(); render();
+    persist();
   }));
   document.querySelectorAll('[data-task-priority]').forEach(button => button.addEventListener('click', event => {
     const task = state.dailyTasks.find(item => item.id === event.currentTarget.dataset.taskPriority);
@@ -3841,14 +3866,27 @@ function restoreNavigation(event) {
   requestAnimationFrame(()=>window.scrollTo({top:Math.max(0,n(snapshot?.scrollY)),behavior:'auto'}));
 }
 function renderTabs() {
-  let lastGroup;
-  document.getElementById('tabs').innerHTML = views.map(([id,label,icon]) => {
-    const group = VIEW_GROUPS[id] || null;
-    const header = group && group !== lastGroup ? `<div class="tab-group-label">${escapeHtml(group)}</div>` : '';
-    lastGroup = group;
-    return `${header}<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${ui.tab===id?'active':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`;
-  }).join('');
-  document.querySelectorAll('#tabs .tab').forEach(b => b.onclick = () => navigateToTab(b.dataset.tab));
+  const tabs=document.getElementById('tabs');
+  if(tabs && tabs.dataset.plannerTabsReady!=='1') {
+    let lastGroup;
+    tabs.innerHTML = views.map(([id,label,icon]) => {
+      const group = VIEW_GROUPS[id] || null;
+      const header = group && group !== lastGroup ? `<div class="tab-group-label">${escapeHtml(group)}</div>` : '';
+      lastGroup = group;
+      return `${header}<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`;
+    }).join('');
+    tabs.addEventListener('click',event=>{
+      const button=event.target.closest?.('.tab[data-tab]');
+      if(button && tabs.contains(button)) navigateToTab(button.dataset.tab);
+    });
+    tabs.dataset.plannerTabsReady='1';
+  }
+  tabs?.querySelectorAll('.tab[data-tab]').forEach(button => {
+    const active=button.dataset.tab===ui.tab;
+    button.classList.toggle('active',active);
+    if(active) button.setAttribute('aria-current','page');
+    else button.removeAttribute('aria-current');
+  });
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id===ui.tab));
   if(window.matchMedia('(max-width: 1180px)').matches) {
     requestAnimationFrame(() => {
@@ -8707,7 +8745,6 @@ function deleteFlashcardFromEditor(el) {
   ui.editFlashcardId = '';
   renderCache.manualCards = null;
   persist();
-  render();
 }
 function ankiEscape(value='') {
   return String(value).replace(/\r?\n/g, '<br>').replace(/\t/g, ' ');

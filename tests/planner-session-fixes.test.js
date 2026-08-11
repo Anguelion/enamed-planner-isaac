@@ -82,6 +82,17 @@ test('saveStateOnly nao normaliza o estado inteiro a cada tecla; flushSaveStateO
   assert.equal(chamadas, 1, 'o flush (debounce) roda a normalizacao uma unica vez, nao uma vez por tecla');
 });
 
+test('persist deixa a resposta visual acontecer antes da normalizacao e preserva o flush imediato', () => {
+  const ctx = loadPlannerSandbox();
+  let chamadas = 0;
+  const originalEnsure = ctx.ensureDayLogs;
+  ctx.ensureDayLogs = (...args) => { chamadas++; return originalEnsure(...args); };
+  ctx.persist();
+  assert.equal(chamadas, 0, 'o manipulador de clique nao deve bloquear esperando a normalizacao completa');
+  ctx.flushSaveStateOnly();
+  assert.equal(chamadas, 1, 'o flush ainda normaliza e grava o estado integralmente');
+});
+
 test('recordLibraryFlashcardVersion: edicao continua do mesmo campo colapsa em um unico registro de versao', () => {
   const ctx = loadPlannerSandbox();
   const state = ctx.__getState();

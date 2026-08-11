@@ -239,3 +239,12 @@ test('cabeçalho desktop oferece histórico interno com voltar, avançar e atalh
   assert.match(css,/\.header-history\{display:inline-flex/);
   assert.match(css,/@media\(max-width:1024px\)\{[\s\S]*?\.header-history\{display:none\}/);
 });
+
+test('navegação lateral é criada uma vez e somente atualiza o item ativo',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  assert.match(planner,/tabs\.dataset\.plannerTabsReady!=='1'/);
+  assert.match(planner,/tabs\.addEventListener\('click'/);
+  assert.match(planner,/button\.classList\.toggle\('active',active\)/);
+  assert.doesNotMatch(planner,/document\.querySelectorAll\('#tabs \.tab'\)\.forEach\(b => b\.onclick/);
+});
