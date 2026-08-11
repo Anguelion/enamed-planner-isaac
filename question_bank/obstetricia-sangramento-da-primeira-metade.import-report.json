@@ -1,0 +1,49 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::06 - Sangramento da Primeira Metade",
+  "notes": 100,
+  "imported": 95,
+  "skipped": [
+    {
+      "noteId": 1779655459838,
+      "number": "0303x",
+      "topic": "Sangramento da Primeira Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779655459907,
+      "number": "0372x",
+      "topic": "Sangramento da Primeira Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779655459932,
+      "number": "0397x",
+      "topic": "Sangramento da Primeira Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779655459933,
+      "number": "0398x",
+      "topic": "Sangramento da Primeira Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779655459934,
+      "number": "0399x",
+      "topic": "Sangramento da Primeira Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Sangramento da Primeira Metade",
+      "imported": 95,
+      "block": "anki:obstetricia-sangramento-da-primeira-metade"
+    }
+  ],
+  "mediaReferenced": 5,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

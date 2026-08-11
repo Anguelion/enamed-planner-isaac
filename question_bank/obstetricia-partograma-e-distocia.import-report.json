@@ -1,0 +1,85 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::20 - Partograma e Distocia",
+  "notes": 95,
+  "imported": 84,
+  "skipped": [
+    {
+      "noteId": 1779907860735,
+      "number": "0306l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860746,
+      "number": "0317l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860776,
+      "number": "0347l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860780,
+      "number": "0351l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860793,
+      "number": "0364l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860794,
+      "number": "0365l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860798,
+      "number": "0369l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860799,
+      "number": "0370l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860811,
+      "number": "0382l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860812,
+      "number": "0383l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907860818,
+      "number": "0389l",
+      "topic": "Partograma e Distocia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Partograma e Distocia",
+      "imported": 84,
+      "block": "anki:obstetricia-partograma-e-distocia"
+    }
+  ],
+  "mediaReferenced": 51,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

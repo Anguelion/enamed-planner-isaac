@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::23 - Parto Vaginal Operatório",
+  "notes": 98,
+  "imported": 98,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Parto Vaginal Operatório",
+      "imported": 98,
+      "block": "anki:obstetricia-parto-vaginal-operatorio"
+    }
+  ],
+  "mediaReferenced": 11,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

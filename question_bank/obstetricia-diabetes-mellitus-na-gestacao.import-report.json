@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::09 - Diabetes Mellitus na Gestação",
+  "notes": 100,
+  "imported": 100,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Diabetes Mellitus na Gestação",
+      "imported": 100,
+      "block": "anki:obstetricia-diabetes-mellitus-na-gestacao"
+    }
+  ],
+  "mediaReferenced": 7,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

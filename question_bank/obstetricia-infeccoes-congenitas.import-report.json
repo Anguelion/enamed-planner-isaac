@@ -1,0 +1,43 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::10 - Infecções Congênitas",
+  "notes": 100,
+  "imported": 96,
+  "skipped": [
+    {
+      "noteId": 1779792320416,
+      "number": "0313s",
+      "topic": "Infecções Congênitas",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779792320454,
+      "number": "0351s",
+      "topic": "Infecções Congênitas",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779792320455,
+      "number": "0352s",
+      "topic": "Infecções Congênitas",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779792320456,
+      "number": "0353s",
+      "topic": "Infecções Congênitas",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Infecções Congênitas",
+      "imported": 96,
+      "block": "anki:obstetricia-infeccoes-congenitas"
+    }
+  ],
+  "mediaReferenced": 4,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

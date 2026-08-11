@@ -1,0 +1,31 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::03 - Pré-Natal",
+  "notes": 100,
+  "imported": 98,
+  "skipped": [
+    {
+      "noteId": 1779910901451,
+      "number": "0313b",
+      "topic": "Pré-Natal",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779910901517,
+      "number": "0379b",
+      "topic": "Pré-Natal",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Pré-Natal",
+      "imported": 98,
+      "block": "anki:obstetricia-pre-natal"
+    }
+  ],
+  "mediaReferenced": 4,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

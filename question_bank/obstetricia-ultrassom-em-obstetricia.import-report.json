@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::04 - Ultrassom em Obstetrícia",
+  "notes": 100,
+  "imported": 100,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Ultrassom em Obstetrícia",
+      "imported": 100,
+      "block": "anki:obstetricia-ultrassom-em-obstetricia"
+    }
+  ],
+  "mediaReferenced": 7,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

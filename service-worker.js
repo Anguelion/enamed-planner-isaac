@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v246';
+const CACHE_NAME = 'soqueromed-shell-v270';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -28,7 +28,7 @@ const APP_SHELL = [
   './assets/icons/icon-512-maskable.png',
   './assets/icons/apple-touch-icon.png',
   './assets/icons/icon-32.png',
-  './question_bank/index.js?v=20260811150933',
+  './question_bank/index.js?v=20260811165506',
   './assets/rpg/element-fire.svg',
   './assets/rpg/element-water.svg',
   './assets/rpg/element-earth.svg',

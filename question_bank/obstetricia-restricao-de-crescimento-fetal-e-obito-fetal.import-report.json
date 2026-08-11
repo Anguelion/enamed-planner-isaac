@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::13 - Restrição de Crescimento Fetal e Óbito Fetal",
+  "notes": 94,
+  "imported": 93,
+  "skipped": [
+    {
+      "noteId": 1779790612149,
+      "number": "0308g",
+      "topic": "Restrição de Crescimento Fetal e Óbito Fetal",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Restrição de Crescimento Fetal e Óbito Fetal",
+      "imported": 93,
+      "block": "anki:obstetricia-restricao-de-crescimento-fetal-e-obito-fetal"
+    }
+  ],
+  "mediaReferenced": 18,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

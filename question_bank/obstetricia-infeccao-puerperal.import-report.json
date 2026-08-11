@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::25 - Infecção Puerperal",
+  "notes": 41,
+  "imported": 40,
+  "skipped": [
+    {
+      "noteId": 1779906980776,
+      "number": "0302Q",
+      "topic": "Infecção Puerperal",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Infecção Puerperal",
+      "imported": 40,
+      "block": "anki:obstetricia-infeccao-puerperal"
+    }
+  ],
+  "mediaReferenced": 2,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

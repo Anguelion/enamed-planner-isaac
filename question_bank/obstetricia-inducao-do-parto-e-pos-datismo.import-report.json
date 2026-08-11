@@ -1,0 +1,31 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::22 - Indução do Parto e Pós-Datismo",
+  "notes": 58,
+  "imported": 56,
+  "skipped": [
+    {
+      "noteId": 1779907219975,
+      "number": "0306p",
+      "topic": "Indução do Parto e Pós-Datismo",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779907220007,
+      "number": "0338p",
+      "topic": "Indução do Parto e Pós-Datismo",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Indução do Parto e Pós-Datismo",
+      "imported": 56,
+      "block": "anki:obstetricia-inducao-do-parto-e-pos-datismo"
+    }
+  ],
+  "mediaReferenced": 0,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

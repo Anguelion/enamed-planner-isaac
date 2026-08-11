@@ -1,0 +1,37 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::07 - Abortamento de Repetição",
+  "notes": 66,
+  "imported": 63,
+  "skipped": [
+    {
+      "noteId": 1779905918772,
+      "number": "0303u",
+      "topic": "Abortamento de Repetição",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779905918800,
+      "number": "0331u",
+      "topic": "Abortamento de Repetição",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779905918801,
+      "number": "0332u",
+      "topic": "Abortamento de Repetição",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Abortamento de Repetição",
+      "imported": 63,
+      "block": "anki:obstetricia-abortamento-de-repeticao"
+    }
+  ],
+  "mediaReferenced": 0,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

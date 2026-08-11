@@ -1,0 +1,43 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::16 - Sangramento da Segunda Metade",
+  "notes": 100,
+  "imported": 96,
+  "skipped": [
+    {
+      "noteId": 1779657070373,
+      "number": "0303y",
+      "topic": "Sangramento da Segunda Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779657070447,
+      "number": "0377y",
+      "topic": "Sangramento da Segunda Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779657070448,
+      "number": "0378y",
+      "topic": "Sangramento da Segunda Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779657070449,
+      "number": "0379y",
+      "topic": "Sangramento da Segunda Metade",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Sangramento da Segunda Metade",
+      "imported": 96,
+      "block": "anki:obstetricia-sangramento-da-segunda-metade"
+    }
+  ],
+  "mediaReferenced": 5,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

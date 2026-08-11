@@ -1,0 +1,37 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::12 - Gestação Múltipla",
+  "notes": 100,
+  "imported": 97,
+  "skipped": [
+    {
+      "noteId": 1779906176435,
+      "number": "0382t",
+      "topic": "Gestação Múltipla",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779906176436,
+      "number": "0383t",
+      "topic": "Gestação Múltipla",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1779906176437,
+      "number": "0384t",
+      "topic": "Gestação Múltipla",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Gestação Múltipla",
+      "imported": 97,
+      "block": "anki:obstetricia-gestacao-multipla"
+    }
+  ],
+  "mediaReferenced": 6,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::21 - Assistência ao Parto",
+  "notes": 62,
+  "imported": 62,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Assistência ao Parto",
+      "imported": 62,
+      "block": "anki:obstetricia-assistencia-ao-parto"
+    }
+  ],
+  "mediaReferenced": 3,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}
