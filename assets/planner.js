@@ -11549,7 +11549,8 @@ function renderMaterialMarkdown(text, doc) {
       index-=1;
       const columnCount=rows[0].length;
       const normalizedRows=rows.slice(1).map(row=>row.length>columnCount?[...row.slice(0,columnCount-1),row.slice(columnCount-1).join(' ')]:[...row,...Array(Math.max(0,columnCount-row.length)).fill('')]);
-      html+=`<div class="material-table-wrap"><table><thead><tr>${rows[0].map((cell,column)=>`<th data-material-block="table-${tableLine}-0-${column}">${renderMaterialInlineMarkdown(cell,doc,`table-${tableLine}-0-${column}`)}</th>`).join('')}</tr></thead><tbody>${normalizedRows.map((row,rowIndex)=>`<tr>${row.map((cell,column)=>`<td data-material-block="table-${tableLine}-${rowIndex+1}-${column}">${renderMaterialInlineMarkdown(cell,doc,`table-${tableLine}-${rowIndex+1}-${column}`)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+      const columnLabels=rows[0].map(cell=>String(cell||'').replace(/[*_`~]/g,'').trim());
+      html+=`<div class="material-table-wrap" style="--material-columns:${columnCount}"><table><thead><tr>${rows[0].map((cell,column)=>`<th scope="col" data-material-block="table-${tableLine}-0-${column}">${renderMaterialInlineMarkdown(cell,doc,`table-${tableLine}-0-${column}`)}</th>`).join('')}</tr></thead><tbody>${normalizedRows.map((row,rowIndex)=>`<tr>${row.map((cell,column)=>`<td data-label="${escapeAttr(columnLabels[column]||`Coluna ${column+1}`)}" data-material-block="table-${tableLine}-${rowIndex+1}-${column}">${renderMaterialInlineMarkdown(cell,doc,`table-${tableLine}-${rowIndex+1}-${column}`)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
       continue;
     }
     if(raw.includes('|')) raw=raw.replace(/\s*\|\s*/g,' ');

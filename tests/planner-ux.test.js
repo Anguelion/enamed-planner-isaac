@@ -181,10 +181,14 @@ test('leitor de materiais salva a seção ativa, oferece retomada e normaliza ta
   assert.match(planner,/data-material-resume=/);
   assert.match(planner,/data-dashboard-continue="\$\{escapeAttr\(activity\.type\)\}"[\s\S]*data-continue-material=/);
   assert.match(planner,/const normalizedRows=rows\.slice\(1\)/);
+  assert.match(planner,/const columnLabels=rows\[0\]\.map/);
+  assert.match(planner,/data-label="\$\{escapeAttr\(columnLabels\[column\]/);
   assert.match(planner,/replace\(\/\\\\r\\\\n\\\\r\\\\n\|\\\\n\\\\n\|\\\\r\\\\r\/g/);
   assert.match(css,/\.reader-toc \.tiny-btn\.active/);
   assert.match(css,/\.material-resume-card\{/);
   assert.match(css,/\.material-table-wrap th,.material-table-wrap td\{/);
+  assert.match(css,/\.material-table-wrap td::before\{content:attr\(data-label\)/);
+  assert.match(css,/grid-template-columns:minmax\(105px,36%\) minmax\(0,1fr\)/);
 });
 
 test('Missão centraliza somente a seleção nova e pesquisa em todos os blocos',()=>{
