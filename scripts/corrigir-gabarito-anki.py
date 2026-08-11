@@ -178,17 +178,24 @@ class AnswerKeyApp:
                 detail = (result.stderr or result.stdout or "Erro desconhecido").strip()
                 self.root.after(0, self.finish_error, detail)
             else:
-                self.root.after(0, self.finish_success)
+                report = json.loads(result.stdout)
+                self.root.after(0, self.finish_success, report)
         except Exception as error:
             self.root.after(0, self.finish_error, str(error))
         finally:
             if key_path:
                 key_path.unlink(missing_ok=True)
 
-    def finish_success(self) -> None:
+    def finish_success(self, report: dict) -> None:
         self.run_button.configure(state="normal")
-        self.status.set("Gabarito aplicado e APKG importado com sucesso.")
-        messagebox.showinfo("Concluído", "O gabarito foi conferido, aplicado e importado. Abra novamente o planner para ver a atualização.")
+        imported = report.get("imported", 0)
+        topic = (report.get("topics") or [{}])[0].get("topic", "aula escolhida")
+        self.status.set(f"{topic}: {imported} questões importadas com sucesso.")
+        messagebox.showinfo(
+            "Concluído",
+            f"{topic}: {imported} questões importadas.\n\n"
+            "Atualize o Planner com Ctrl+R ou feche e abra o aplicativo para carregar a nova aula.",
+        )
 
     def finish_error(self, detail: str) -> None:
         self.run_button.configure(state="normal")
