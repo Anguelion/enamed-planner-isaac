@@ -1,0 +1,37 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__03 - Obstetrícia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::03 - Obstetrícia::26 - Bacia Obstétrica Pelvimetria e Estática Fetal",
+  "notes": 120,
+  "imported": 117,
+  "skipped": [
+    {
+      "noteId": 1751856913077,
+      "number": "0316v",
+      "topic": "Bacia Obstétrica Pelvimetria e Estática Fetal",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1751856913124,
+      "number": "0363v",
+      "topic": "Bacia Obstétrica Pelvimetria e Estática Fetal",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1751856913125,
+      "number": "0364v",
+      "topic": "Bacia Obstétrica Pelvimetria e Estática Fetal",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Bacia Obstétrica Pelvimetria e Estática Fetal",
+      "imported": 117,
+      "block": "anki:obstetricia-bacia-obstetrica-pelvimetria-e-estatica-fetal"
+    }
+  ],
+  "mediaReferenced": 30,
+  "mediaExtracted": 253,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

@@ -205,6 +205,21 @@ def multiple_choice_data(record: dict) -> tuple[dict[str, str], list[str]]:
     return options, answers
 
 
+def is_objective_question(stem: str, options: dict[str, str]) -> bool:
+    if not stem or len(options) < 2:
+        return False
+    option_markers = {slugify(value) for value in options.values()}
+    if any(
+        marker in option_markers
+        for marker in {
+            "questao-nao-segue-formato-de-multipla-escolha",
+            "questao-nao-e-de-multipla-escolha",
+        }
+    ):
+        return False
+    return True
+
+
 def preserve_existing_images(group: dict) -> None:
     existing_path = BANK_ROOT / f"{group['slug']}.json"
     if not existing_path.exists():
@@ -382,7 +397,7 @@ def main() -> None:
                 full_deck = deck_cache[deck_id]
                 summary = summaries.setdefault(full_deck, {"name": full_deck, "total": 0, "objective": 0, "withAnswer": 0})
                 summary["total"] += 1
-                if not stem or len(options) < 2:
+                if not is_objective_question(stem, options):
                     continue
                 summary["objective"] += 1
                 if len(answers) == 1 and answers[0] in options:
@@ -405,6 +420,22 @@ def main() -> None:
                     try:
                         summary["importedCount"] = int(json.loads(existing_path.read_text(encoding="utf-8")).get("count", 0))
                     except (OSError, ValueError):
+                        pass
+                report_path = BANK_ROOT / f"{summary['slug']}.import-report.json"
+                if summary["missingAnswer"] and report_path.exists():
+                    try:
+                        previous_report = json.loads(report_path.read_text(encoding="utf-8"))
+                        correction_applied = (
+                            previous_report.get("deck") == name
+                            and int(previous_report.get("answerKeyOverrides", 0)) > 0
+                            and int(previous_report.get("imported", 0)) == summary["objective"]
+                            and summary["importedCount"] == summary["objective"]
+                        )
+                        if correction_applied:
+                            summary["originalMissingAnswer"] = summary["missingAnswer"]
+                            summary["missingAnswer"] = 0
+                            summary["correctedAnswerKey"] = True
+                    except (OSError, ValueError, TypeError):
                         pass
                 result.append(summary)
             connection.close()
@@ -451,7 +482,7 @@ def main() -> None:
                 record = {name.lower(): values[index] if index < len(values) else "" for index, name in enumerate(names)}
                 stem = clean_html(record.get("question", record.get("front", "")))
                 options, _ = multiple_choice_data(record)
-                if stem and len(options) >= 2:
+                if is_objective_question(stem, options):
                     objective_count += 1
             expected_count = len(notes) if numbered_answer_key else objective_count
             if numbered_answer_key and len(answer_key) < expected_count:
@@ -494,7 +525,8 @@ def main() -> None:
             record = {name.lower(): values[index] if index < len(values) else "" for index, name in enumerate(names)}
             stem_raw = record.get("question", record.get("front", ""))
             options, answers = multiple_choice_data(record)
-            if answer_key and clean_html(stem_raw) and len(options) >= 2:
+            objective = is_objective_question(clean_html(stem_raw), options)
+            if answer_key and objective:
                 if numbered_answer_key:
                     supplied_answer = answer_key[note_position]
                 else:
@@ -514,7 +546,7 @@ def main() -> None:
             reason = ""
             if not clean_html(stem_raw):
                 reason = "enunciado ausente"
-            elif len(options) < 2:
+            elif not objective:
                 reason = "questão discursiva ou com menos de duas alternativas"
             elif len(answers) != 1 or answers[0] not in options:
                 reason = "gabarito ausente, múltiplo ou incompatível"
