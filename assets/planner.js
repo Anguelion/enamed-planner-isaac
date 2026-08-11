@@ -4772,7 +4772,7 @@ function renderCasoDoDia() {
   if(progress.solved) {
     diagnosisTitle = `<div class="caso-diagnosis-title caso-diagnosis-title-win" role="status">
       <span class="caso-diagnosis-icon" aria-hidden="true">✓</span>
-      <span class="caso-diagnosis-kicker">Você acertou!</span>
+      <span class="caso-diagnosis-kicker">Você acertou! <strong class="caso-hint-score" aria-label="Acertou com ${revealed} de ${TOTAL_CASO_HINTS} pistas">(${revealed} de ${TOTAL_CASO_HINTS})</strong></span>
       <h2>${escapeHtml(item.diagnosis)}</h2>
     </div>`;
   } else if(progress.gaveUp) {
