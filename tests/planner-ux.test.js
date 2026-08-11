@@ -194,6 +194,16 @@ test('leitor de materiais salva a seção ativa, oferece retomada e normaliza ta
   assert.match(css,/grid-template-columns:minmax\(105px,36%\) minmax\(0,1fr\)/);
 });
 
+test('busca de materiais usa índice preparado, cache incremental e atraso de digitação',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  assert.match(planner,/function prepareMaterialSearchIndex\(\)/);
+  assert.match(planner,/const narrowing=materialSearchCache\.query && q\.startsWith\(materialSearchCache\.query\)/);
+  assert.match(planner,/entry\.title\.includes\(term\)\|\|entry\.lesson\.includes\(term\)\|\|entry\.specialty\.includes\(term\)\|\|entry\.headings\.includes\(term\)\|\|entry\.content\.includes\(term\)/);
+  assert.match(planner,/setTimeout\(\(\) => renderMaterialGlobalSearchResults[\s\S]*?, 160\)/);
+  assert.match(planner,/prepareMaterialSearchIndex\(\);\s*materialLibraryStatus\s*=/);
+});
+
 test('Missão centraliza somente a seleção nova e pesquisa em todos os blocos',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
@@ -230,6 +240,7 @@ test('Missão sinaliza e abre questões extras após a meta da aula',()=>{
   assert.match(planner,/Meta de \$\{target\} concluída\. Abrindo as \$\{unanswered\.length\} questões restantes/);
   assert.match(planner,/questionDone&&questionBankRemaining\?'has-extra':''/);
   assert.match(css,/\.schedule-study-icon\.has-extra/);
+  assert.match(css,/\.schedule-study-icon\.done\.has-extra\{border-color:#20a477;background:#e8f8f1;color:#14825d\}/);
 });
 
 test('cabeçalho desktop oferece histórico interno com voltar, avançar e atalhos',()=>{

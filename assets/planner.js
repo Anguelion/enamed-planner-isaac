@@ -93,6 +93,8 @@ let questionBankLoadPromise = null;
 let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
 let materialGlobalSearchTimer = null;
+let materialSearchIndex = [];
+let materialSearchCache = {query:'',matches:[]};
 let materialReadingCleanup = null;
 let materialReadingRestoreDocId = '';
 let materialReadingLastSavedAt = 0;
@@ -6508,28 +6510,61 @@ function especialidadesGroups(docs) {
   });
   return [...map.values()].map(group => ({...group,documents:group.documents.sort((a,b)=>a.title.localeCompare(b.title,'pt-BR'))})).sort((a,b)=>a.topic.localeCompare(b.topic,'pt-BR'));
 }
-function materialSearchHaystack(doc) {
-  if(doc.__haystack === undefined) {
-    const headings = (doc.headings||[]).map(item => item.text).join(' ');
-    doc.__haystack = `${normalizedTopic(doc.title)} ${normalizedTopic(doc.area)} ${normalizedTopic(doc.topic)} ${normalizedTopic(headings)} ${doc.searchText||''}`;
-  }
-  return doc.__haystack;
+function buildMaterialSearchEntry(doc) {
+  return {
+    doc,
+    title:normalizedTopic(doc.title),
+    lesson:normalizedTopic(doc.topic || doc.scheduleId),
+    specialty:normalizedTopic(doc.area),
+    headings:normalizedTopic((doc.headings||[]).map(item=>item.text).join(' ')),
+    content:String(doc.searchText||''),
+    editedVersion:'',
+    editedContent:''
+  };
 }
-function searchMaterialLibrary(query) {
+function prepareMaterialSearchIndex() {
+  materialSearchIndex=materialLibrary.map(buildMaterialSearchEntry);
+  materialSearchCache={query:'',matches:materialSearchIndex};
+}
+function invalidateMaterialSearchIndex(docId='') {
+  materialSearchCache={query:'',matches:materialSearchIndex};
+  const entries=docId ? materialSearchIndex.filter(entry=>entry.doc.id===docId) : materialSearchIndex;
+  entries.forEach(entry=>{ entry.editedVersion=''; entry.editedContent=''; });
+}
+function materialSearchEntryMatches(entry,terms) {
+  const meta=state.materials[entry.doc.id];
+  const editedVersion=meta?.edited && typeof meta.content==='string' ? `${meta.updatedAt||''}:${meta.content.length}` : '';
+  if(editedVersion!==entry.editedVersion) {
+    entry.editedVersion=editedVersion;
+    entry.editedContent=editedVersion ? normalizedTopic(meta.content) : '';
+  }
+  return terms.every(term=>entry.title.includes(term)||entry.lesson.includes(term)||entry.specialty.includes(term)||entry.headings.includes(term)||entry.content.includes(term)||entry.editedContent.includes(term));
+}
+function materialSearchEntryScore(entry,q) {
+  if(entry.title===q) return 0;
+  if(entry.title.startsWith(q)) return 5;
+  if(entry.title.includes(q)) return 10;
+  if(entry.lesson.startsWith(q)) return 15;
+  if(entry.lesson.includes(q)) return 20;
+  if(entry.headings.includes(q)) return 25;
+  if(entry.specialty.includes(q)) return 30;
+  return 40;
+}
+function searchMaterialLibrary(query,limit=30) {
   const q = normalizedTopic(query);
   if(!q) return [];
   const terms = q.split(' ').filter(Boolean);
   if(!terms.length) return [];
-  const matches = materialLibrary.filter(doc => { const hay=materialSearchHaystack(doc); return terms.every(term => hay.includes(term)); });
+  if(!materialSearchIndex.length && materialLibrary.length) prepareMaterialSearchIndex();
+  const narrowing=materialSearchCache.query && q.startsWith(materialSearchCache.query);
+  const pool=narrowing ? materialSearchCache.matches : materialSearchIndex;
+  const matches=pool.filter(entry=>materialSearchEntryMatches(entry,terms));
   matches.sort((a,b) => {
-    const at=normalizedTopic(a.title), bt=normalizedTopic(b.title);
-    const aStarts=at.startsWith(q)?0:1, bStarts=bt.startsWith(q)?0:1;
-    if(aStarts!==bStarts) return aStarts-bStarts;
-    const aHit=at.includes(q)?0:1, bHit=bt.includes(q)?0:1;
-    if(aHit!==bHit) return aHit-bHit;
-    return at.length-bt.length;
+    const score=materialSearchEntryScore(a,q)-materialSearchEntryScore(b,q);
+    return score || a.title.length-b.title.length || a.title.localeCompare(b.title,'pt-BR');
   });
-  return matches.slice(0,30);
+  materialSearchCache={query:q,matches};
+  return matches.slice(0,limit).map(entry=>entry.doc);
 }
 function renderMaterialGlobalSearchResults(matches, query) {
   const box=document.getElementById('materialGlobalSearchResults');
@@ -6638,7 +6673,7 @@ function renderMateriais() {
       ui.materialGlobalSearch = e.target.value;
       if(globalSearchClear) globalSearchClear.hidden = !ui.materialGlobalSearch;
       clearTimeout(materialGlobalSearchTimer);
-      materialGlobalSearchTimer = setTimeout(() => renderMaterialGlobalSearchResults(searchMaterialLibrary(ui.materialGlobalSearch), ui.materialGlobalSearch), 120);
+      materialGlobalSearchTimer = setTimeout(() => renderMaterialGlobalSearchResults(searchMaterialLibrary(ui.materialGlobalSearch), ui.materialGlobalSearch), 160);
     };
     globalSearchInput.onfocus = () => { if(ui.materialGlobalSearch) renderMaterialGlobalSearchResults(searchMaterialLibrary(ui.materialGlobalSearch), ui.materialGlobalSearch); };
     globalSearchInput.onkeydown = e => {
@@ -6926,6 +6961,7 @@ function queueMaterialEditSave(doc,markdown) {
   meta.edited=true;
   meta.content=markdown;
   meta.updatedAt=nowIso();
+  invalidateMaterialSearchIndex(doc.id);
   const status=document.getElementById('materialAutosave');
   if(status) status.textContent='Salvando...';
   clearTimeout(materialEditSaveTimers.get(doc.id));
@@ -7053,6 +7089,7 @@ async function restoreOriginalMaterial(doc) {
   meta.edited=false;
   meta.content='';
   meta.updatedAt=nowIso();
+  invalidateMaterialSearchIndex(doc.id);
   ui.materialEditMode=false;
   saveStateOnly();
   renderMateriais();
@@ -7125,11 +7162,7 @@ function bindMaterialReader(doc) {
 }
 function applyMaterialSearch(value) {
   const query = normalizedTopic(value);
-  const visibleIds = new Set(materialLibrary.filter(doc => {
-    const docMeta=state.materials[doc.id];
-    const editedText=docMeta?.edited && typeof docMeta.content==='string' ? normalizedTopic(docMeta.content) : '';
-    return !query || doc.searchText.includes(query) || editedText.includes(query) || normalizedTopic(doc.title).includes(query) || (doc.headings||[]).some(item => normalizedTopic(item.text).includes(query));
-  }).map(doc=>doc.id));
+  const visibleIds = new Set((query ? searchMaterialLibrary(query,materialLibrary.length) : materialLibrary).map(doc=>doc.id));
   document.querySelectorAll('[data-material-doc]').forEach(button => button.classList.toggle('hidden', !visibleIds.has(button.dataset.materialDoc)));
   document.querySelectorAll('[data-material-folder]').forEach(folder => {
     const anyVisible = [...folder.querySelectorAll('[data-material-doc]')].some(button => !button.classList.contains('hidden'));
@@ -7178,6 +7211,7 @@ async function loadMaterialLibraryNow() {
     console.warn('Biblioteca de especialidades ainda não disponível:', error);
   }
   materialLibrary = [...baseDocs, ...specialtyDocs];
+  prepareMaterialSearchIndex();
   materialLibraryStatus = materialLibrary.length ? `${materialLibrary.length} resumos disponíveis` : 'Biblioteca em preparação';
   if(ui.tab === 'materiais') renderMateriais();
 }

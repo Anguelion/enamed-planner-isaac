@@ -27,6 +27,24 @@ test('limpeza de materiais preserva todas as linhas de tabelas Markdown', () => 
   assert.match(html,/<tbody><tr><td[^>]*>Ferritina<\/td><td[^>]*>Baixa<\/td><td[^>]*>Normal\/Alta<\/td><\/tr>/);
 });
 
+test('índice de materiais encontra aula, subtítulo e palavras do conteúdo', () => {
+  const ctx = loadPlannerSandbox();
+  const doc = {
+    id:'busca-material',
+    title:'Anemias Microcíticas',
+    topic:'Avaliação do Hemograma',
+    area:'Clínica Médica',
+    headings:[{text:'Diagnóstico diferencial pela ferritina'}],
+    searchText:'hepcidina ferroportina reticulocitos tratamento'
+  };
+  const entry=ctx.buildMaterialSearchEntry(doc);
+  assert.equal(ctx.materialSearchEntryMatches(entry,['anemias']),true);
+  assert.equal(ctx.materialSearchEntryMatches(entry,['hemograma']),true);
+  assert.equal(ctx.materialSearchEntryMatches(entry,['diagnostico','ferritina']),true);
+  assert.equal(ctx.materialSearchEntryMatches(entry,['hepcidina','tratamento']),true);
+  assert.equal(ctx.materialSearchEntryMatches(entry,['cardiologia']),false);
+});
+
 test('flashcardsNewestFirst: card recem-criado aparece primeiro na tela de captura', () => {
   const ctx = loadPlannerSandbox();
   const cards = [
