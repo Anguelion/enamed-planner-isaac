@@ -9386,7 +9386,7 @@ function questionDataIssue(question) {
   const validation=PlannerUX?.validateQuestionRecord?.(question);
   if(validation && !validation.valid) return validation.reasons.join(' ');
   const letters = Object.keys(question.options || {});
-  if(letters.length < 4) return 'Questão discursiva ou alternativas ausentes na extração original.';
+  if(letters.length < 2) return 'Questão discursiva ou alternativas ausentes na extração original.';
   if(!letters.includes(question.answer)) return `O gabarito ${question.answer || 'não informado'} não está entre as alternativas disponíveis.`;
   const blank = letters.filter(letter => !String(question.options?.[letter] || '').trim());
   if(blank.length) return `A extração original deixou ${blank.length === 1 ? 'a alternativa' : 'as alternativas'} ${blank.join(', ')} sem texto.`;

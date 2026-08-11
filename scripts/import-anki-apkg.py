@@ -113,7 +113,7 @@ def clean_html(value: str) -> str:
 
 
 def parse_answer_key_text(text: str) -> list[str]:
-    answers = []
+    rows = []
     for line_number, raw_line in enumerate(text.splitlines(), 1):
         line = raw_line.strip()
         if not line or line.startswith("#"):
@@ -121,10 +121,22 @@ def parse_answer_key_text(text: str) -> list[str]:
         letters = re.findall(r"(?<![A-Za-zÀ-ÿ])([A-J])(?![A-Za-zÀ-ÿ])", line, flags=re.I)
         if not letters:
             raise ValueError(f"Linha {line_number} do gabarito sem uma letra isolada entre A e J: {raw_line!r}.")
-        answers.append(letters[-1].upper())
-    if not answers:
+        numbered = re.match(r"^(?:quest(?:ão|ao)?\s*)?(\d+)\s*(?:[.)\-–—:]|\s)", line, flags=re.I)
+        rows.append({"line": line_number, "number": int(numbered.group(1)) if numbered else None, "answer": letters[-1].upper()})
+    if not rows:
         raise ValueError("O arquivo de gabarito está vazio.")
-    return answers
+    if all(row["number"] is not None for row in rows):
+        by_number = {}
+        for row in rows:
+            previous = by_number.get(row["number"])
+            if previous and previous["answer"] != row["answer"]:
+                raise ValueError(
+                    f"O número {row['number']} aparece com respostas diferentes: "
+                    f"{previous['answer']} e {row['answer']}."
+                )
+            by_number.setdefault(row["number"], row)
+        rows = [by_number[number] for number in sorted(by_number)]
+    return [row["answer"] for row in rows]
 
 
 def load_answer_key(path: Path | None) -> list[str]:
@@ -137,6 +149,47 @@ def image_names(value: str) -> list[str]:
     return re.findall(r"<img\b[^>]*\bsrc=[\"']([^\"']+)", value, flags=re.I)
 
 
+def multiple_choice_data(record: dict) -> tuple[dict[str, str], list[str]]:
+    answers = [item.strip().upper() for item in record.get("answers", "").split(",") if item.strip()]
+    populated = [
+        (letter, clean_html(record.get(letter, "")))
+        for letter in "abcdefghij"
+        if clean_html(record.get(letter, ""))
+    ]
+    embedded_answer = ""
+    if not answers and len(populated) >= 3 and re.fullmatch(r"[A-J]", populated[-1][1], flags=re.I):
+        embedded_answer = populated[-1][1].upper()
+        populated = populated[:-1]
+    options = {letter.upper(): value for letter, value in populated}
+    if not answers and embedded_answer:
+        answers = [embedded_answer]
+    return options, answers
+
+
+def preserve_existing_images(group: dict) -> None:
+    existing_path = BANK_ROOT / f"{group['slug']}.json"
+    if not existing_path.exists():
+        return
+    try:
+        existing_payload = json.loads(existing_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    existing_by_note = {
+        str(question.get("ankiNoteId", "")): question
+        for question in existing_payload.get("questions", [])
+        if question.get("ankiNoteId")
+    }
+    for question in group["questions"]:
+        previous = existing_by_note.get(str(question.get("ankiNoteId", "")))
+        if not previous:
+            continue
+        for field in ("images", "commentImages"):
+            if not question.get(field) and previous.get(field):
+                question[field] = previous[field]
+        if not question.get("optionImages") and previous.get("optionImages"):
+            question["optionImages"] = previous["optionImages"]
+
+
 def choose_collection(extracted: Path) -> Path:
     candidates = []
     modern = extracted / "collection.anki21b"
@@ -144,6 +197,9 @@ def choose_collection(extracted: Path) -> Path:
         decoded = extracted / "collection-modern.anki2"
         decompress(modern, decoded)
         candidates.append(decoded)
+    version_21 = extracted / "collection.anki21"
+    if version_21.exists():
+        candidates.append(version_21)
     legacy = extracted / "collection.anki2"
     if legacy.exists():
         candidates.append(legacy)
@@ -254,6 +310,8 @@ def main() -> None:
     parser.add_argument("--topic")
     parser.add_argument("--block")
     parser.add_argument("--answer-key", type=Path, help="TXT com uma letra por linha, na ordem das questões objetivas")
+    parser.add_argument("--deck", help="Nome completo do subbaralho que deve ser importado")
+    parser.add_argument("--list-decks", action="store_true", help="Lista as aulas e a situação dos gabaritos sem importar")
     args = parser.parse_args()
     apkg = args.apkg.resolve()
     if not apkg.is_file():
@@ -270,6 +328,37 @@ def main() -> None:
             "from notes n join cards c on c.nid=n.id group by n.id,n.guid,n.mid,n.tags,n.flds order by n.id"
         ).fetchall()
         deck_cache = {did: deck_name(connection, did) for did in {row[5] for row in notes}}
+        if args.list_decks:
+            names_by_model = {}
+            summaries = {}
+            for _, _, model_id, _, fields, deck_id in notes:
+                names = names_by_model.setdefault(model_id, field_names(connection, model_id))
+                values = fields.split("\x1f")
+                record = {name.lower(): values[index] if index < len(values) else "" for index, name in enumerate(names)}
+                stem = clean_html(record.get("question", record.get("front", "")))
+                options, answers = multiple_choice_data(record)
+                if not stem or len(options) < 2:
+                    continue
+                full_deck = deck_cache[deck_id]
+                summary = summaries.setdefault(full_deck, {"name": full_deck, "objective": 0, "withAnswer": 0})
+                summary["objective"] += 1
+                if len(answers) == 1 and answers[0] in options:
+                    summary["withAnswer"] += 1
+            result = []
+            for name in sorted(summaries):
+                summary = summaries[name]
+                summary["missingAnswer"] = summary["objective"] - summary["withAnswer"]
+                summary["label"] = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", name.split("::")[-1]).strip()
+                result.append(summary)
+            connection.close()
+            print(json.dumps({"decks": result}, ensure_ascii=False, indent=2))
+            return
+        if args.deck:
+            if args.deck not in deck_cache.values():
+                connection.close()
+                raise ValueError(f"A aula selecionada não foi encontrada no APKG: {args.deck}")
+            notes = [row for row in notes if deck_cache[row[5]] == args.deck]
+            deck_cache = {did: name for did, name in deck_cache.items() if name == args.deck}
         first_full_deck = deck_cache[notes[0][5]] if notes else "Importado do Anki"
         first_parts = first_full_deck.split("::")
         inferred_specialty = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", first_parts[-2]).strip() if len(first_parts) > 1 else "Importado do Anki"
@@ -293,8 +382,8 @@ def main() -> None:
                 values = fields.split("\x1f")
                 record = {name.lower(): values[index] if index < len(values) else "" for index, name in enumerate(names)}
                 stem = clean_html(record.get("question", record.get("front", "")))
-                option_count = sum(bool(clean_html(record.get(letter, ""))) for letter in "abcdefghij")
-                if stem and option_count >= 4:
+                options, _ = multiple_choice_data(record)
+                if stem and len(options) >= 2:
                     objective_count += 1
             if len(answer_key) != objective_count:
                 connection.close()
@@ -315,19 +404,15 @@ def main() -> None:
             values = fields.split("\x1f")
             record = {name.lower(): values[index] if index < len(values) else "" for index, name in enumerate(names)}
             stem_raw = record.get("question", record.get("front", ""))
-            options = {}
-            for letter in "abcdefghij":
-                if clean_html(record.get(letter, "")):
-                    options[letter.upper()] = clean_html(record[letter])
-            answers = [item.strip().upper() for item in record.get("answers", "").split(",") if item.strip()]
-            if answer_key and clean_html(stem_raw) and len(options) >= 4:
+            options, answers = multiple_choice_data(record)
+            if answer_key and clean_html(stem_raw) and len(options) >= 2:
                 answers = [answer_key[answer_key_index]]
                 answer_key_index += 1
             reason = ""
             if not clean_html(stem_raw):
                 reason = "enunciado ausente"
-            elif len(options) < 4:
-                reason = "questão discursiva ou com menos de quatro alternativas"
+            elif len(options) < 2:
+                reason = "questão discursiva ou com menos de duas alternativas"
             elif len(answers) != 1 or answers[0] not in options:
                 reason = "gabarito ausente, múltiplo ou incompatível"
             if reason:
@@ -378,6 +463,8 @@ def main() -> None:
             })
 
         connection.close()
+        for group in groups.values():
+            preserve_existing_images(group)
         imported = sum(len(group["questions"]) for group in groups.values())
         report = {
             "source": apkg.name,

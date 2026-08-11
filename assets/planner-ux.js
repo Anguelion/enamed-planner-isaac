@@ -178,7 +178,7 @@
     const answer=String(question.answer||'').trim().toUpperCase();
     const reasons=[];
     if(!String(question.stem||'').trim()) reasons.push('Enunciado ausente.');
-    if(options.length<4) reasons.push(`Apenas ${options.length} alternativa${options.length===1?'':'s'} válida${options.length===1?'':'s'}.`);
+    if(options.length<2) reasons.push(`Apenas ${options.length} alternativa${options.length===1?'':'s'} válida${options.length===1?'':'s'}.`);
     if(!answer) reasons.push('Gabarito ausente.');
     else if(!letters.includes(answer)) reasons.push(`O gabarito ${answer} não corresponde a uma alternativa válida.`);
     return {valid:reasons.length===0,reasons,answer,optionLetters:letters,optionCount:options.length};

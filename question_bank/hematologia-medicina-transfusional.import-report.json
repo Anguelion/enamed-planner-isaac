@@ -1,0 +1,17 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia__03 - Anemias Microcíticas.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 3 (Quarta-feira)::10 - Hematologia::02 - Medicina Transfusional",
+  "notes": 60,
+  "imported": 60,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Medicina Transfusional",
+      "imported": 60,
+      "block": "anki:hematologia-medicina-transfusional"
+    }
+  ],
+  "mediaReferenced": 0,
+  "mediaExtracted": 0,
+  "answerKeyOverrides": 60
+}

@@ -13,7 +13,7 @@ const normalize=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036
 const validQuestion=question=>{
   const options=Object.entries(question.options||{}).filter(([,text])=>String(text||'').trim());
   const letters=options.map(([letter])=>String(letter).trim().toUpperCase());
-  return Boolean(String(question.stem||'').trim())&&options.length>=4&&letters.includes(String(question.answer||'').trim().toUpperCase());
+  return Boolean(String(question.stem||'').trim())&&options.length>=2&&letters.includes(String(question.answer||'').trim().toUpperCase());
 };
 
 let rawTotal=0;

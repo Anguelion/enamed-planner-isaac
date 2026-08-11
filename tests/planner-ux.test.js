@@ -92,9 +92,9 @@ test('cancelar simulado remove a tentativa e o resumo automático sem afetar os 
 });
 
 test('validação rejeita questões incompletas e gabaritos incompatíveis',()=>{
-  assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um',B:'Dois',C:'Três'},answer:'A'}).valid,false);
+  assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um'},answer:'A'}).valid,false);
+  assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Certo',B:'Errado'},answer:'B'}).valid,true);
   assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um',B:'Dois',C:'Três',D:'Quatro'},answer:'E'}).valid,false);
-  assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um',B:'Dois',C:'Três',D:'Quatro'},answer:'D'}).valid,true);
 });
 
 test('progresso mais novo preserva edições posteriores à resposta',()=>{
