@@ -93,6 +93,80 @@ test('persist deixa a resposta visual acontecer antes da normalizacao e preserva
   assert.equal(chamadas, 1, 'o flush ainda normaliza e grava o estado integralmente');
 });
 
+test('resetActivityStateFromDate limpa atividade de 11/08 em diante sem alterar o histórico anterior', () => {
+  const ctx = loadPlannerSandbox();
+  const target = {
+    schedule: [
+      {id:'antes',date:'2026-08-10',q:3,fc:2,manualQ:3,manualFC:2,hours:2},
+      {id:'depois',date:'2026-08-11',q:30,fc:20,manualQ:30,manualFC:20,hours:4}
+    ],
+    dayLogs: [
+      {date:'2026-08-10',questions:3,questionMinutes:5},
+      {date:'2026-08-11',questions:30,correct:20,wrong:10,questionMinutes:45,lessonMinutes:90}
+    ],
+    questionProgress: {
+      anterior:{answeredAt:'2026-08-10T18:00:00.000Z',selected:'A'},
+      indevida:{answeredAt:'2026-08-11T18:00:00.000Z',selected:'B'}
+    },
+    questionLogged:{anterior:'2026-08-10',indevida:'2026-08-11'},
+    questionProgressDeleted:{},
+    studySessions:[
+      {id:'s1',date:'2026-08-10',seconds:300},
+      {id:'s2',date:'2026-08-11',scheduleId:'antes',seconds:3600}
+    ],
+    flashcardLibrary:[{id:'fc1',front:'Frente',back:'Verso',reps:5}],
+    flashcardProgress:{fc1:{reviews:5,lastReviewedAt:'2026-08-11T19:00:00.000Z'}},
+    flashcardReviewHistory:[{cardId:'fc1',reviewedAt:'2026-08-11T19:00:00.000Z'}],
+    flashcardSystem:{reviewLogs:[{id:'r1',cardId:'fc1',reviewedAt:'2026-08-11T19:00:00.000Z',before:{id:'fc1',front:'Frente',back:'Verso',reps:0}}],undoStack:[{reviewId:'r1'}]},
+    videoPlayer:{watched:{v1:true},watchedAt:{v1:'2026-08-11T20:00:00.000Z'},progress:{},resume:{},resumeUpdatedAt:{},bookmarks:{}},
+    simuladoRuns:[{id:'run1',finishedAt:'2026-08-11T21:00:00.000Z'}],
+    simulados:[{id:'sim1',date:'2026-08-11',total:100,correct:80,strong:'x',weak:'y',notes:'z',missedTopics:[{id:'m1'}]}],
+    gamification:{xpTransactions:[{id:'xp0',occurred_at:'2026-08-10T12:00:00.000Z'},{id:'xp1',occurred_at:'2026-08-11T21:00:00.000Z'}],importBatches:[],rankProgress:{},elementRewards:[]}
+  };
+  const summary=ctx.resetActivityStateFromDate(target,'2026-08-11','2026-08-11T22:00:00.000Z');
+  assert.equal(summary.changed,true);
+  assert.equal(target.schedule[0].manualQ,3,'atividade anterior ao corte deve permanecer');
+  assert.equal(target.schedule[0].hours,1,'minutos indevidos devem ser retirados até de uma aula antiga');
+  assert.deepEqual({q:target.schedule[1].manualQ,fc:target.schedule[1].manualFC,hours:target.schedule[1].hours},{q:0,fc:0,hours:0});
+  assert.equal(target.dayLogs[0].questions,3);
+  assert.equal(target.dayLogs[1].questions,0);
+  assert.ok(target.questionProgress.anterior);
+  assert.equal(target.questionProgress.indevida,undefined);
+  assert.equal(target.questionProgressDeleted.indevida,'9999-12-31T23:59:59.999Z');
+  assert.deepEqual(target.studySessions.map(item=>item.id),['s1']);
+  assert.equal(target.flashcardSystem.reviewLogs.length,0);
+  assert.equal(target.flashcardProgress.fc1,undefined);
+  assert.equal(target.videoPlayer.watched.v1,undefined);
+  assert.equal(target.simuladoRuns.length,0);
+  assert.equal(target.simulados[0].total,0);
+  assert.deepEqual(target.gamification.xpTransactions.map(item=>item.id),['xp0']);
+  assert.equal(target.activityReset.version,'activity-from-2026-08-11-v1');
+});
+
+test('merge com aparelho antigo não ressuscita atividade removida e preserva estudo novo do estado limpo', () => {
+  const ctx = loadPlannerSandbox();
+  const clean = {
+    activityReset:{version:'activity-from-2026-08-11-v1',cutoff:'2026-08-11',appliedAt:'2026-08-11T12:00:00.000Z'},
+    schedule:[{id:'aula',date:'2026-08-11',manualQ:2,manualFC:0,hours:0}],
+    dayLogs:[{date:'2026-08-11',questions:2,correct:2,questionMinutes:3}],
+    questionProgress:{nova:{answeredAt:'2026-08-11T15:00:00.000Z',updatedAt:'2026-08-11T15:00:00.000Z',selected:'A',correct:true}},
+    questionProgressDeleted:{},questionLogged:{nova:'2026-08-11'},studySessions:[],flashcardSystem:{reviewLogs:[]},flashcardProgress:{},gamification:{xpTransactions:[],importBatches:[]}
+  };
+  const stale = {
+    schedule:[{id:'aula',date:'2026-08-11',manualQ:99,manualFC:99,hours:9}],
+    dayLogs:[{date:'2026-08-11',questions:99,correct:50,wrong:49,questionMinutes:120}],
+    questionProgress:{fantasma:{answeredAt:'2026-08-20T15:00:00.000Z',updatedAt:'2026-08-20T15:00:00.000Z',selected:'B'}},
+    questionProgressDeleted:{},questionLogged:{fantasma:'2026-08-20'},studySessions:[{id:'fake',date:'2026-08-20',seconds:7200}],flashcardSystem:{reviewLogs:[]},flashcardProgress:{},gamification:{xpTransactions:[],importBatches:[]}
+  };
+  const merged=ctx.mergePlannerActivityState(clean,stale,false);
+  assert.ok(merged.questionProgress.nova,'a resposta legítima criada depois da limpeza deve sobreviver');
+  assert.equal(merged.questionProgress.fantasma,undefined,'a resposta do aparelho antigo não pode voltar');
+  assert.equal(merged.dayLogs.find(log=>log.date==='2026-08-11').questions,2);
+  assert.equal(merged.schedule[0].manualQ,2);
+  assert.equal(merged.studySessions.length,0);
+  assert.equal(merged.activityReset.version,'activity-from-2026-08-11-v1');
+});
+
 test('recordLibraryFlashcardVersion: edicao continua do mesmo campo colapsa em um unico registro de versao', () => {
   const ctx = loadPlannerSandbox();
   const state = ctx.__getState();

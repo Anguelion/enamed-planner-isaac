@@ -248,3 +248,14 @@ test('navegação lateral é criada uma vez e somente atualiza o item ativo',()=
   assert.match(planner,/button\.classList\.toggle\('active',active\)/);
   assert.doesNotMatch(planner,/document\.querySelectorAll\('#tabs \.tab'\)\.forEach\(b => b\.onclick/);
 });
+
+test('edições do cronograma atualizam somente a linha e reutilizam eventos delegados',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  assert.match(planner,/data-schedule-row=/);
+  assert.match(planner,/function updateScheduleRow\(item\)/);
+  assert.match(planner,/persist\(\{render:false,invalidate:false\}\);[\s\S]*?updateScheduleRow\(item\)/);
+  assert.match(planner,/if\(scheduleInputsDelegated\) return;/);
+  assert.match(planner,/document\.addEventListener\('change',event=>/);
+  assert.doesNotMatch(planner,/document\.querySelectorAll\('\[data-id\]\[data-field\]'\)\.forEach/);
+});

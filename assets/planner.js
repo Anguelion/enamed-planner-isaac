@@ -15,6 +15,11 @@ const QUESTION_IMPORT_DRAFT_KEY = 'soqueromed-question-import-draft';
 const LOCAL_BACKUPS_KEY = 'soqueromed-local-backups-v1';
 const LOCAL_BACKUP_LIMIT = 12;
 const AUTO_BACKUP_RETENTION_DAYS = 7;
+const ACTIVITY_RESET_VERSION = 'activity-from-2026-08-11-v1';
+const ACTIVITY_RESET_DATE = '2026-08-11';
+// Tombstone propositalmente posterior a qualquer resposta importada com relógio
+// adiantado. Ao responder novamente, setQuestionProgress remove o tombstone.
+const ACTIVITY_RESET_TOMBSTONE_AT = '9999-12-31T23:59:59.999Z';
 // O backup diário automático (feito ao virar o dia de estudo, 5h) precisa sobreviver
 // pelo menos esse tempo mesmo que uma rajada de backups manuais/de segurança aconteça
 // no mesmo dia — sem essa proteção, o corte por quantidade (LOCAL_BACKUP_LIMIT) podia
@@ -172,7 +177,28 @@ let cloudBackups = [];
 let cloudBackupsLoading = false;
 let cloudBackupsReady = false;
 let cloudBackupsError = '';
+let activityResetSummary=null;
 let localBackups = loadLocalBackups();
+if(!activityResetMarker(state)) {
+  const backup=createSafetyLocalBackup('antes de limpar atividades de 11/08/2026 em diante');
+  if(backup) {
+    allowLargeProgressDrop=true;
+    const resetSummary=resetActivityStateFromDate(state,ACTIVITY_RESET_DATE,nowIso());
+    activityResetSummary=resetSummary;
+    ensureGamificationState();
+    ensureDayLogs(); ensureQuestionProgress();
+    localStorage.removeItem(STUDY_TIMER_KEY);
+    localStorage.removeItem(QUESTION_TIMER_KEY);
+    studyTimeTracker=emptyStudyTimer();
+    questionTimer={mode:'countdown',sessionActive:false,pausedByUser:false,running:false,interval:null,questionId:'',secondsLeft:0,elapsedSeconds:0,beeped:false,status:'',audioContext:null};
+    writeLocalState();
+    allowLargeProgressDrop=false;
+    cloudDirty=true;
+    console.info('Atividades de 11/08/2026 em diante removidas com backup local.',resetSummary);
+  } else {
+    console.error('Limpeza de atividades cancelada: não foi possível criar o backup local de segurança.');
+  }
+}
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
 let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
 let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) === '1';
@@ -312,6 +338,115 @@ function loadState() {
     }
   } catch(e) {}
   return structuredClone(seed);
+}
+function activityResetMarker(value) {
+  return value?.activityReset?.version===ACTIVITY_RESET_VERSION ? value.activityReset : null;
+}
+function activityDateOnOrAfter(value, cutoff=ACTIVITY_RESET_DATE) {
+  if(!value) return false;
+  const direct=String(value).match(/^\d{4}-\d{2}-\d{2}/)?.[0] || '';
+  const date=direct || studyDateKey(value);
+  return Boolean(date && date>=cutoff);
+}
+function mutableFlashcardRecordInState(target,id) {
+  return [
+    ...(target.flashcardLibrary || []),
+    ...Object.values(target.questionFlashcards || {}).flat(),
+    ...Object.values(target.videoFlashcards || {}).flat()
+  ].find(card=>card?.id===id) || null;
+}
+function resetActivityStateFromDate(target, cutoff=ACTIVITY_RESET_DATE, appliedAt=new Date().toISOString()) {
+  if(!target || typeof target!=='object') return {changed:false};
+  const summary={dayLogs:0,schedule:0,questions:0,sessions:0,flashcardReviews:0,videos:0,simulados:0,xp:0,changed:false};
+  const resetLog=log=>({ ...defaultDayLog(log.date) });
+  target.dayLogs=(target.dayLogs || []).map(log=>{
+    if(!activityDateOnOrAfter(log?.date,cutoff)) return log;
+    if(dayLogHasActivity(log) || n(log?.mood) || String(log?.pace||'').trim()) summary.dayLogs+=1;
+    return resetLog(log);
+  });
+  (target.schedule || []).forEach(item=>{
+    if(!activityDateOnOrAfter(item?.date,cutoff)) return;
+    if(n(item.manualQ??item.q)||n(item.manualFC??item.fc)||n(item.hours)) summary.schedule+=1;
+    item.q=0; item.fc=0; item.manualQ=0; item.manualFC=0; item.hours=0;
+  });
+
+  if(!target.questionProgressDeleted || typeof target.questionProgressDeleted!=='object') target.questionProgressDeleted={};
+  Object.entries(target.questionProgress || {}).forEach(([id,progress])=>{
+    if(!activityDateOnOrAfter(progress?.answeredAt,cutoff)) return;
+    target.questionProgressDeleted[id]=ACTIVITY_RESET_TOMBSTONE_AT;
+    delete target.questionProgress[id];
+    summary.questions+=1;
+  });
+  Object.entries(target.questionLogged || {}).forEach(([id,date])=>{ if(activityDateOnOrAfter(date,cutoff)) delete target.questionLogged[id]; });
+
+  const sessions=Array.isArray(target.studySessions)?target.studySessions:[];
+  const removedSessions=sessions.filter(session=>activityDateOnOrAfter(session?.date||session?.savedAt,cutoff));
+  target.studySessions=sessions.filter(session=>!activityDateOnOrAfter(session?.date||session?.savedAt,cutoff));
+  summary.sessions=sessions.length-target.studySessions.length;
+  const removedSecondsByLesson=new Map();
+  removedSessions.forEach(session=>{
+    if(session?.scheduleId) removedSecondsByLesson.set(session.scheduleId,n(removedSecondsByLesson.get(session.scheduleId))+n(session.seconds));
+  });
+  (target.schedule||[]).forEach(item=>{
+    const seconds=n(removedSecondsByLesson.get(item.id));
+    if(!seconds||activityDateOnOrAfter(item?.date,cutoff)) return;
+    item.hours=Math.max(0,Math.round((n(item.hours)-seconds/3600)*10000)/10000);
+  });
+
+  if(!target.flashcardSystem || typeof target.flashcardSystem!=='object') target.flashcardSystem={};
+  const reviews=Array.isArray(target.flashcardSystem.reviewLogs)?target.flashcardSystem.reviewLogs:[];
+  const removedReviews=reviews.filter(review=>activityDateOnOrAfter(review?.reviewedAt,cutoff));
+  const earliestByCard=new Map();
+  removedReviews.slice().sort((a,b)=>timestampOf(a.reviewedAt)-timestampOf(b.reviewedAt)).forEach(review=>{
+    if(review?.cardId&&!earliestByCard.has(review.cardId)) earliestByCard.set(review.cardId,review);
+  });
+  earliestByCard.forEach((review,cardId)=>{
+    const card=mutableFlashcardRecordInState(target,cardId);
+    if(card&&review.before&&typeof review.before==='object') Object.assign(card,structuredClone(review.before));
+    if(target.flashcardProgress&&typeof target.flashcardProgress==='object') delete target.flashcardProgress[cardId];
+  });
+  const removedReviewIds=new Set(removedReviews.map(review=>review?.id).filter(Boolean));
+  target.flashcardSystem.reviewLogs=reviews.filter(review=>!activityDateOnOrAfter(review?.reviewedAt,cutoff));
+  target.flashcardSystem.undoStack=(target.flashcardSystem.undoStack||[]).filter(entry=>!removedReviewIds.has(entry?.reviewId));
+  target.flashcardReviewHistory=(target.flashcardReviewHistory||[]).filter(entry=>!activityDateOnOrAfter(entry?.reviewedAt,cutoff));
+  summary.flashcardReviews=removedReviews.length;
+
+  if(target.videoPlayer&&typeof target.videoPlayer==='object') {
+    const player=target.videoPlayer;
+    Object.entries(player.watchedAt||{}).forEach(([sourceId,date])=>{
+      if(!activityDateOnOrAfter(date,cutoff)) return;
+      delete player.watchedAt[sourceId]; delete player.watched?.[sourceId]; summary.videos+=1;
+    });
+    Object.entries(player.progress||{}).forEach(([sourceId,progress])=>{ if(activityDateOnOrAfter(progress?.updatedAt,cutoff)) delete player.progress[sourceId]; });
+    Object.entries(player.resumeUpdatedAt||{}).forEach(([sourceId,date])=>{ if(activityDateOnOrAfter(date,cutoff)) { delete player.resumeUpdatedAt[sourceId]; delete player.resume?.[sourceId]; } });
+    Object.entries(player.bookmarks||{}).forEach(([sourceId,bookmarks])=>{ player.bookmarks[sourceId]=(bookmarks||[]).filter(point=>!activityDateOnOrAfter(point?.updatedAt||point?.createdAt,cutoff)); });
+    if(activityDateOnOrAfter(player.lastOpen?.updatedAt,cutoff)) player.lastOpen={lessonId:'',sourceId:'',updatedAt:''};
+  }
+
+  const runs=Array.isArray(target.simuladoRuns)?target.simuladoRuns:[];
+  target.simuladoRuns=runs.filter(run=>!activityDateOnOrAfter(run?.finishedAt||run?.startedAt||run?.createdAt,cutoff));
+  summary.simulados=runs.length-target.simuladoRuns.length;
+  (target.simulados||[]).forEach(sim=>{
+    if(!activityDateOnOrAfter(sim?.date,cutoff)) return;
+    if(n(sim.total)||n(sim.correct)||String(sim.strong||sim.weak||sim.notes||'').trim()) summary.simulados+=1;
+    sim.total=0; sim.correct=0; sim.strong=''; sim.weak=''; sim.notes=''; sim.missedTopics=[];
+  });
+
+  if(target.gamification&&typeof target.gamification==='object') {
+    const ledger=Array.isArray(target.gamification.xpTransactions)?target.gamification.xpTransactions:[];
+    target.gamification.xpTransactions=ledger.filter(entry=>!activityDateOnOrAfter(entry?.occurred_at,cutoff));
+    summary.xp=ledger.length-target.gamification.xpTransactions.length;
+    target.gamification.importBatches=(target.gamification.importBatches||[]).filter(batch=>!activityDateOnOrAfter(batch?.committed_at||batch?.created_at,cutoff));
+    ['fragmentEvents','medallionEvents','promotionHistory'].forEach(key=>{
+      if(Array.isArray(target.gamification.rankProgress?.[key])) target.gamification.rankProgress[key]=target.gamification.rankProgress[key].filter(event=>!activityDateOnOrAfter(event?.occurredAt||event?.createdAt||event?.at,cutoff));
+    });
+    target.gamification.elementRewards=(target.gamification.elementRewards||[]).filter(event=>!activityDateOnOrAfter(event?.occurredAt||event?.createdAt||event?.awardedAt,cutoff));
+  }
+  Object.keys(target.casoDoDia||{}).forEach(date=>{ if(activityDateOnOrAfter(date,cutoff)) delete target.casoDoDia[date]; });
+  Object.keys(target.dailyCheckins||{}).forEach(date=>{ if(activityDateOnOrAfter(date,cutoff)) delete target.dailyCheckins[date]; });
+  target.activityReset={version:ACTIVITY_RESET_VERSION,cutoff,appliedAt};
+  summary.changed=Object.entries(summary).some(([key,value])=>key!=='changed'&&n(value)>0);
+  return summary;
 }
 function ensureGamificationState() {
   if(!state || typeof state !== 'object') return;
@@ -464,10 +599,10 @@ function normalizePlannerState() {
 // normalizacao/serializacao. A gravacao continua garantida por flush nos eventos
 // visibilitychange, pagehide e beforeunload; aqui apenas cedemos um frame para o
 // navegador pintar a resposta primeiro.
-function persist() {
-  invalidateActivityRenderCache();
+function persist(options={}) {
+  if(options.invalidate !== false) invalidateActivityRenderCache();
   if(currentUser && sbClient) { cloudDirty = true; setSyncStatus('Não enviado', '', 'Use o botão Enviar para mandar para a nuvem'); }
-  render();
+  if(options.render !== false) render();
   scheduleStateFlushAfterPaint();
 }
 let saveStateOnlyTimer = null;
@@ -1090,9 +1225,24 @@ function remapScheduleRecord(record, remap) {
   return clone;
 }
 function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
-  const remote = remoteState && typeof remoteState === 'object' ? structuredClone(remoteState) : {};
-  const local = localState && typeof localState === 'object' ? localState : {};
+  let remote = remoteState && typeof remoteState === 'object' ? structuredClone(remoteState) : {};
+  let local = localState && typeof localState === 'object' ? localState : {};
+  const remoteReset=activityResetMarker(remote);
+  const localReset=activityResetMarker(local);
+  // Um aparelho antigo não pode ressuscitar a atividade removida. Limpamos só
+  // o lado ainda sem o marcador, preservando estudo legítimo feito depois da
+  // limpeza no aparelho que já recebeu a correção.
+  if(remoteReset&&!localReset) {
+    local=structuredClone(local);
+    resetActivityStateFromDate(local,remoteReset.cutoff||ACTIVITY_RESET_DATE,remoteReset.appliedAt);
+    Object.keys(remote.questionProgress||{}).forEach(id=>{ delete local.questionProgressDeleted?.[id]; });
+  } else if(localReset&&!remoteReset) {
+    resetActivityStateFromDate(remote,localReset.cutoff||ACTIVITY_RESET_DATE,localReset.appliedAt);
+    Object.keys(local.questionProgress||{}).forEach(id=>{ delete remote.questionProgressDeleted?.[id]; });
+  }
   const merged = preferLocal ? { ...remote, ...local } : { ...local, ...remote };
+  const resetMarker=localReset||remoteReset||activityResetMarker(local)||activityResetMarker(remote);
+  if(resetMarker) merged.activityReset=structuredClone(resetMarker);
   const remoteHiddenAt = remote.historyHiddenAt && typeof remote.historyHiddenAt === 'object' ? remote.historyHiddenAt : {};
   const localHiddenAt = local.historyHiddenAt && typeof local.historyHiddenAt === 'object' ? local.historyHiddenAt : {};
   merged.historyHiddenAt = {};
@@ -1232,6 +1382,8 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   });
 
   merged.flashcardLibrary = mergeRecordsById(remote.flashcardLibrary, local.flashcardLibrary, preferLocal);
+  if(remoteReset&&!localReset) merged.flashcardProgress={...(local.flashcardProgress||{}),...(remote.flashcardProgress||{})};
+  else if(localReset&&!remoteReset) merged.flashcardProgress={...(remote.flashcardProgress||{}),...(local.flashcardProgress||{})};
   merged.casoDoDia = {};
   new Set([...Object.keys(remote.casoDoDia || {}), ...Object.keys(local.casoDoDia || {})]).forEach(key => {
     const r = remote.casoDoDia?.[key] || {}, l = local.casoDoDia?.[key] || {};
@@ -4899,7 +5051,39 @@ function renderPendingLessons(items) {
 }
 function renderScheduleTable(rows, editable=false) {
   if(!rows.length) return '<div class="empty">Nada para mostrar aqui.</div>';
-  return `<div class="table-wrap"><table class="schedule-table"><thead><tr><th>Data</th><th>Bloco</th><th>Tema</th><th>Área</th><th>Status</th><th class="num">Questões</th><th class="num">Banco</th><th class="num">Flashcards</th><th class="num">Horas</th><th class="num">Progresso</th><th>Anotações</th></tr></thead><tbody>${rows.map(x => { const bank=questionStatsForSchedule(x.id); const cards=flashcardStatsForSchedule(x.id); const videoCount=plannedVideoCountForSchedule(x); const videoDone=scheduleVideoCompleted(x); return `<tr class="${x.starred?'schedule-starred-row':''}"><td class="schedule-date-cell">${fmtDate(x.date)}<div class="muted">${x.day}</div></td><td class="schedule-block-cell">${x.block ?? ''}</td><td class="schedule-topic-cell"><div class="schedule-topic-line">${editable?`<button type="button" class="schedule-star-toggle ${x.starred?'active':''}" data-toggle-schedule-star="${escapeAttr(x.id)}" aria-pressed="${Boolean(x.starred)}" title="${x.starred?'Remover estrela':'Marcar aula com estrela'}" aria-label="${x.starred?'Remover estrela de':'Marcar com estrela'} ${escapeAttr(x.topic)}">${x.starred?'★':'☆'}</button>`:''}<button class="schedule-topic-link priority-chip ${priorityClass(x.priority)}" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button>${videoCount?` <button class="tiny-btn" data-open-schedule-videos="${escapeAttr(x.id)}" title="Abrir videoaula">▶</button><button class="tiny-btn" data-toggle-schedule-video="${escapeAttr(x.id)}" title="Marcar videoaula como vista">${videoDone?'Vídeo ✓':'Vídeo'}</button>`:''}</div><div class="schedule-meta muted">Meta: ${lessonQuestionTarget(x)} questões · ${lessonFlashcardTarget(x)} flashcards · ${x.metaH} h${videoCount?` · ${videoCount} vídeo${videoCount===1?'':'s'}`:''}</div></td><td>${escapeHtml(x.area)}</td><td>${badgeStatus(statusOf(x))}</td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="q" type="number" min="0" step="1" value="${completedQuestions(x)}"><div class="auto-progress">Banco ${bank.done}${n(x.manualQ) ? ` · manual ${n(x.manualQ)}` : ''}</div></td><td class="num"><button class="tiny-btn" data-open-schedule-questions="${escapeAttr(x.id)}">Abrir</button><div class="bank-result"><strong>${bank.done}</strong> feitas<br>${bank.correct} certas · ${bank.done?pct(bank.rate):'-'}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="fc" type="number" min="0" step="1" value="${n(x.manualFC)+cards.reviews}"><div class="auto-progress">Revisões ${cards.reviews}${n(x.manualFC) ? ` · manual ${n(x.manualFC)}` : ''}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="hours" type="number" min="0" step="0.25" value="${n(x.hours)}"></td><td class="num">${pct(progressOf(x))}</td><td><input class="notes-input" data-id="${x.id}" data-field="notes" value="${escapeAttr(x.notes)}"></td></tr>`; }).join('')}</tbody></table></div>`;
+  return `<div class="table-wrap"><table class="schedule-table"><thead><tr><th>Data</th><th>Bloco</th><th>Tema</th><th>Área</th><th>Status</th><th class="num">Questões</th><th class="num">Banco</th><th class="num">Flashcards</th><th class="num">Horas</th><th class="num">Progresso</th><th>Anotações</th></tr></thead><tbody>${rows.map(x => { const bank=questionStatsForSchedule(x.id); const cards=flashcardStatsForSchedule(x.id); const videoCount=plannedVideoCountForSchedule(x); const videoDone=scheduleVideoCompleted(x); return `<tr data-schedule-row="${escapeAttr(x.id)}" class="${x.starred?'schedule-starred-row':''}"><td class="schedule-date-cell">${fmtDate(x.date)}<div class="muted">${x.day}</div></td><td class="schedule-block-cell">${x.block ?? ''}</td><td class="schedule-topic-cell"><div class="schedule-topic-line">${editable?`<button type="button" class="schedule-star-toggle ${x.starred?'active':''}" data-toggle-schedule-star="${escapeAttr(x.id)}" aria-pressed="${Boolean(x.starred)}" title="${x.starred?'Remover estrela':'Marcar aula com estrela'}" aria-label="${x.starred?'Remover estrela de':'Marcar com estrela'} ${escapeAttr(x.topic)}">${x.starred?'★':'☆'}</button>`:''}<button class="schedule-topic-link priority-chip ${priorityClass(x.priority)}" data-open-schedule-questions="${escapeAttr(x.id)}"><strong>${escapeHtml(x.topic)}</strong></button>${videoCount?` <button class="tiny-btn" data-open-schedule-videos="${escapeAttr(x.id)}" title="Abrir videoaula">▶</button><button class="tiny-btn" data-toggle-schedule-video="${escapeAttr(x.id)}" title="Marcar videoaula como vista">${videoDone?'Vídeo ✓':'Vídeo'}</button>`:''}</div><div class="schedule-meta muted">Meta: ${lessonQuestionTarget(x)} questões · ${lessonFlashcardTarget(x)} flashcards · ${x.metaH} h${videoCount?` · ${videoCount} vídeo${videoCount===1?'':'s'}`:''}</div></td><td>${escapeHtml(x.area)}</td><td data-schedule-status>${badgeStatus(statusOf(x))}</td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="q" type="number" min="0" step="1" value="${completedQuestions(x)}"><div class="auto-progress">Banco ${bank.done}${n(x.manualQ) ? ` · manual ${n(x.manualQ)}` : ''}</div></td><td class="num"><button class="tiny-btn" data-open-schedule-questions="${escapeAttr(x.id)}">Abrir</button><div class="bank-result"><strong>${bank.done}</strong> feitas<br>${bank.correct} certas · ${bank.done?pct(bank.rate):'-'}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="fc" type="number" min="0" step="1" value="${n(x.manualFC)+cards.reviews}"><div class="auto-progress">Revisões ${cards.reviews}${n(x.manualFC) ? ` · manual ${n(x.manualFC)}` : ''}</div></td><td class="num"><input class="mini-input" data-id="${x.id}" data-field="hours" type="number" min="0" step="0.25" value="${n(x.hours)}"></td><td class="num" data-schedule-progress>${pct(progressOf(x))}</td><td><input class="notes-input" data-id="${x.id}" data-field="notes" value="${escapeAttr(x.notes)}"></td></tr>`; }).join('')}</tbody></table></div>`;
+}
+function updateScheduleMissionProgress() {
+  const panel=document.querySelector('#cronograma .mission-progress');
+  if(!panel) return;
+  const selectedBlock=ui.scheduleBlock==='Atual' ? String(currentScheduleBlock()) : String(ui.scheduleBlock);
+  const items=selectedBlock==='Todos' ? state.schedule : state.schedule.filter(item=>String(item.block)===selectedBlock);
+  const done=items.filter(item=>statusOf(item)==='Concluído').length;
+  const percent=Math.round(done/Math.max(1,items.length)*100);
+  const label=selectedBlock==='Todos' ? 'Visão geral' : `Bloco ${selectedBlock}`;
+  panel.setAttribute('aria-label',`${percent}% concluído em ${label}`);
+  const copy=panel.querySelector(':scope>div:first-child');
+  if(copy) copy.innerHTML=`<span>${escapeHtml(label)}</span><strong>${done}<small>/${items.length}</small></strong><small>aulas concluídas</small>`;
+  const ring=panel.querySelector('.mission-progress-ring');
+  if(ring) { ring.style.setProperty('--mission-progress',`${percent*3.6}deg`); const value=ring.querySelector('span'); if(value) value.textContent=`${percent}%`; }
+}
+function updateScheduleRow(item) {
+  if(!item) return;
+  const row=document.querySelector(`[data-schedule-row="${CSS.escape(item.id)}"]`);
+  if(!row) return;
+  const status=row.querySelector('[data-schedule-status]');
+  const progressCell=row.querySelector('[data-schedule-progress]');
+  if(status) status.innerHTML=badgeStatus(statusOf(item));
+  if(progressCell) progressCell.textContent=pct(progressOf(item));
+  const hours=row.querySelector('.schedule-hours-readable');
+  if(hours) hours.textContent=`${formatStudyHours(item.hours)} vinculadas à aula`;
+  const bank=questionStatsForSchedule(item.id);
+  const cards=flashcardStatsForSchedule(item.id);
+  const qHelp=row.querySelector('[data-field="q"] + .auto-progress');
+  const fcHelp=row.querySelector('[data-field="fc"] + .auto-progress');
+  if(qHelp) qHelp.textContent=`Banco ${bank.done}${n(item.manualQ)?` · manual ${n(item.manualQ)}`:''}`;
+  if(fcHelp) fcHelp.textContent=`Revisões ${cards.reviews}${n(item.manualFC)?` · manual ${n(item.manualFC)}`:''}`;
+  updateScheduleMissionProgress();
 }
 function enhanceScheduleStudyIcons() {
   const currentBlock=n(currentScheduleBlock());
@@ -4960,23 +5144,47 @@ function enhanceScheduleStudyIcons() {
     topicLine.append(icons);
   });
 }
+let scheduleInputsDelegated=false;
 function bindScheduleInputs() {
-  document.querySelectorAll('[data-toggle-schedule-star]').forEach(button => button.onclick = event => {
-    event.preventDefault();
-    event.stopPropagation();
-    const item=state.schedule.find(entry=>entry.id===event.currentTarget.dataset.toggleScheduleStar);
+  if(scheduleInputsDelegated) return;
+  scheduleInputsDelegated=true;
+  document.addEventListener('change',event=>{
+    const input=event.target.closest?.('[data-id][data-field]');
+    if(!input) return;
+    const item=state.schedule.find(entry=>entry.id===input.dataset.id);
     if(!item) return;
-    item.starred=!item.starred;
-    item.starredUpdatedAt=nowIso();
-    persist();
+    const field=input.dataset.field;
+    if(field==='q') item.manualQ=Math.max(0,n(input.value)-questionStatsForSchedule(item.id).done);
+    else if(field==='fc') item.manualFC=Math.max(0,n(input.value)-flashcardStatsForSchedule(item.id).reviews);
+    else item[field]=field==='notes'?input.value:n(input.value);
+    persist({render:false,invalidate:false});
+    updateScheduleRow(item);
   });
-  document.querySelectorAll('[data-id][data-field]').forEach(el => el.onchange = e => { const item = state.schedule.find(x=>x.id===e.target.dataset.id); if(!item) return; const f=e.target.dataset.field; if(f==='q') item.manualQ=Math.max(0, n(e.target.value) - questionStatsForSchedule(item.id).done); else if(f==='fc') item.manualFC=Math.max(0, n(e.target.value) - flashcardStatsForSchedule(item.id).reviews); else item[f] = f==='notes' ? e.target.value : n(e.target.value); persist(); });
-  document.querySelectorAll('[data-open-schedule-questions]').forEach(button => button.onclick = e => openQuestionsForSchedule(e.currentTarget.dataset.openScheduleQuestions));
-  document.querySelectorAll('[data-open-schedule-flashcards]').forEach(button => button.onclick = e => openFlashcardsForSchedule(e.currentTarget.dataset.openScheduleFlashcards));
-  document.querySelectorAll('[data-open-schedule-videos]').forEach(button => button.onclick = e => openVideosForSchedule(e.currentTarget.dataset.openScheduleVideos));
-  document.querySelectorAll('[data-toggle-schedule-video]').forEach(button => button.onclick = e => {
-    const item = state.schedule.find(entry => entry.id === e.currentTarget.dataset.toggleScheduleVideo);
-    if(item) setScheduleVideosWatched(item.id, !scheduleVideoCompleted(item));
+  document.addEventListener('click',event=>{
+    const star=event.target.closest?.('[data-toggle-schedule-star]');
+    if(star) {
+      event.preventDefault(); event.stopPropagation();
+      const item=state.schedule.find(entry=>entry.id===star.dataset.toggleScheduleStar);
+      if(!item) return;
+      item.starred=!item.starred; item.starredUpdatedAt=nowIso();
+      if(ui.scheduleStarFilter==='Com estrela') { persist(); return; }
+      const starAction=item.starred?'Remover estrela':'Marcar aula com estrela';
+      star.classList.toggle('active',item.starred); star.setAttribute('aria-pressed',String(item.starred)); star.setAttribute('title',starAction); star.setAttribute('aria-label',`${starAction} de ${item.topic}`); star.textContent=item.starred?'★':'☆';
+      star.closest('tr')?.classList.toggle('schedule-starred-row',item.starred);
+      persist({render:false,invalidate:false});
+      return;
+    }
+    const questions=event.target.closest?.('[data-open-schedule-questions]');
+    if(questions) { openQuestionsForSchedule(questions.dataset.openScheduleQuestions); return; }
+    const flashcards=event.target.closest?.('[data-open-schedule-flashcards]');
+    if(flashcards) { openFlashcardsForSchedule(flashcards.dataset.openScheduleFlashcards); return; }
+    const videos=event.target.closest?.('[data-open-schedule-videos]');
+    if(videos) { openVideosForSchedule(videos.dataset.openScheduleVideos); return; }
+    const videoToggle=event.target.closest?.('[data-toggle-schedule-video]');
+    if(videoToggle) {
+      const item=state.schedule.find(entry=>entry.id===videoToggle.dataset.toggleScheduleVideo);
+      if(item) setScheduleVideosWatched(item.id,!scheduleVideoCompleted(item));
+    }
   });
 }
 function renderSimulados() {
@@ -11633,7 +11841,9 @@ window.addEventListener('unhandledrejection', event => {
   if(bodyHasContent) return;
   showBootFailureRecovery(event.reason, 'Se preferir, entre novamente com sua conta para continuar de onde parou.');
 });
-render().catch(error => showBootFailureRecovery(error));
+render().then(()=>{
+  if(activityResetSummary) showStudyToast('Limpeza concluída: atividades de 11/08/2026 em diante foram zeradas. A cópia anterior está em Ferramentas > Backups locais.');
+}).catch(error => showBootFailureRecovery(error));
 maintainDailyLocalBackup();
 // Se o planner ficar aberto atravessando a virada do dia de estudo (5h), o backup
 // automático não pode esperar o próximo F5 — reavalia periodicamente.
