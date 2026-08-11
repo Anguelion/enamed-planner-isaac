@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 3 (Quarta-feira)::10 - Hematologia::05 - Anemias Hemolíticas",
+  "notes": 99,
+  "imported": 98,
+  "skipped": [
+    {
+      "noteId": 1742515350359,
+      "number": "1018f",
+      "topic": "Anemias Hemolíticas",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Anemias Hemolíticas",
+      "imported": 98,
+      "block": "anki:hematologia-anemias-hemoliticas"
+    }
+  ],
+  "mediaReferenced": 6,
+  "mediaExtracted": 67,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

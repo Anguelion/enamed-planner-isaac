@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 3 (Quarta-feira)::10 - Hematologia::04 - Anemias Macrocíticas",
+  "notes": 100,
+  "imported": 100,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Anemias Macrocíticas",
+      "imported": 100,
+      "block": "anki:hematologia-anemias-macrociticas"
+    }
+  ],
+  "mediaReferenced": 3,
+  "mediaExtracted": 67,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

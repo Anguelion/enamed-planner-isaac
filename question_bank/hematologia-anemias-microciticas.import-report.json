@@ -1,0 +1,37 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 3 (Quarta-feira)::10 - Hematologia::03 - Anemias Microcíticas",
+  "notes": 100,
+  "imported": 97,
+  "skipped": [
+    {
+      "noteId": 1742510701768,
+      "number": "1056d",
+      "topic": "Anemias Microcíticas",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1742510701769,
+      "number": "1057d",
+      "topic": "Anemias Microcíticas",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1742510701770,
+      "number": "1058d",
+      "topic": "Anemias Microcíticas",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Anemias Microcíticas",
+      "imported": 97,
+      "block": "anki:hematologia-anemias-microciticas"
+    }
+  ],
+  "mediaReferenced": 4,
+  "mediaExtracted": 67,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

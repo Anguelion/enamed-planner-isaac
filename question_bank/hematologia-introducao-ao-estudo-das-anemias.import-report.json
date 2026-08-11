@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 3 (Quarta-feira)::10 - Hematologia::01 - Introdução ao Estudo das Anemias",
+  "notes": 90,
+  "imported": 90,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Introdução ao Estudo das Anemias",
+      "imported": 90,
+      "block": "anki:hematologia-introducao-ao-estudo-das-anemias"
+    }
+  ],
+  "mediaReferenced": 30,
+  "mediaExtracted": 67,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}
