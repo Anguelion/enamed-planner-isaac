@@ -1,0 +1,31 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::11 - Úlceras Genitais",
+  "notes": 42,
+  "imported": 40,
+  "skipped": [
+    {
+      "noteId": 1780580432190,
+      "number": "0215w",
+      "topic": "Úlceras Genitais",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1780580432196,
+      "number": "0221w",
+      "topic": "Úlceras Genitais",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Úlceras Genitais",
+      "imported": 40,
+      "block": "anki:ginecologia-ulceras-genitais"
+    }
+  ],
+  "mediaReferenced": 2,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

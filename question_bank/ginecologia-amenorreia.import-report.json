@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::03 - Amenorreia",
+  "notes": 99,
+  "imported": 98,
+  "skipped": [
+    {
+      "noteId": 1779712420084,
+      "number": "0255d",
+      "topic": "Amenorreia",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Amenorreia",
+      "imported": 98,
+      "block": "anki:ginecologia-amenorreia"
+    }
+  ],
+  "mediaReferenced": 1,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

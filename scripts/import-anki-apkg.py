@@ -21,6 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BANK_ROOT = ROOT / "question_bank"
 MEDIA_ROOT = BANK_ROOT / "media"
+NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 
 def slugify(value: str) -> str:
@@ -44,6 +45,7 @@ def decompress(source: Path, target: Path) -> None:
         check=True,
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
+        creationflags=NO_WINDOW,
     )
 
 

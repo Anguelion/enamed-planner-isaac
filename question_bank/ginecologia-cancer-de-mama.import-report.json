@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::28 - Câncer de Mama",
+  "notes": 100,
+  "imported": 99,
+  "skipped": [
+    {
+      "noteId": 1741827516168,
+      "number": "0212o",
+      "topic": "Câncer de Mama",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Câncer de Mama",
+      "imported": 99,
+      "block": "anki:ginecologia-cancer-de-mama"
+    }
+  ],
+  "mediaReferenced": 5,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

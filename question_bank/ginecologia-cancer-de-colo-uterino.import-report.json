@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::24 - Câncer de Colo Uterino",
+  "notes": 100,
+  "imported": 100,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Câncer de Colo Uterino",
+      "imported": 100,
+      "block": "anki:ginecologia-cancer-de-colo-uterino"
+    }
+  ],
+  "mediaReferenced": 4,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

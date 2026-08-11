@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::19 - Prolapsos de Órgãos Pélvicos",
+  "notes": 45,
+  "imported": 44,
+  "skipped": [
+    {
+      "noteId": 1780578231487,
+      "number": "0237k",
+      "topic": "Prolapsos de Órgãos Pélvicos",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Prolapsos de Órgãos Pélvicos",
+      "imported": 44,
+      "block": "anki:ginecologia-prolapsos-de-orgaos-pelvicos"
+    }
+  ],
+  "mediaReferenced": 4,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

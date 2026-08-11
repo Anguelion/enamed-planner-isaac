@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::10 - Doença Inflamatória Pélvica (DIP)",
+  "notes": 64,
+  "imported": 64,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Doença Inflamatória Pélvica (DIP)",
+      "imported": 64,
+      "block": "anki:ginecologia-doenca-inflamatoria-pelvica-dip"
+    }
+  ],
+  "mediaReferenced": 1,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

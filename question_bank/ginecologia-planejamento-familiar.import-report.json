@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::21 - Planejamento Familiar",
+  "notes": 100,
+  "imported": 99,
+  "skipped": [
+    {
+      "noteId": 1779713829444,
+      "number": "0231c",
+      "topic": "Planejamento Familiar",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Planejamento Familiar",
+      "imported": 99,
+      "block": "anki:ginecologia-planejamento-familiar"
+    }
+  ],
+  "mediaReferenced": 1,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::26 - Câncer do Corpo do Útero",
+  "notes": 88,
+  "imported": 88,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Câncer do Corpo do Útero",
+      "imported": 88,
+      "block": "anki:ginecologia-cancer-do-corpo-do-utero"
+    }
+  ],
+  "mediaReferenced": 2,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::07 - Síndrome dos Ovários Policísticos",
+  "notes": 90,
+  "imported": 90,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Síndrome dos Ovários Policísticos",
+      "imported": 90,
+      "block": "anki:ginecologia-sindrome-dos-ovarios-policisticos"
+    }
+  ],
+  "mediaReferenced": 0,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

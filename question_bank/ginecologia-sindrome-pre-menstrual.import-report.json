@@ -1,0 +1,18 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::05 - Síndrome Pré-Menstrual",
+  "notes": 17,
+  "imported": 17,
+  "skipped": [],
+  "topics": [
+    {
+      "topic": "Síndrome Pré-Menstrual",
+      "imported": 17,
+      "block": "anki:ginecologia-sindrome-pre-menstrual"
+    }
+  ],
+  "mediaReferenced": 0,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}

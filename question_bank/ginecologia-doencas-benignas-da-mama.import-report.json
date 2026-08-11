@@ -1,0 +1,43 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 1 (Segunda-feira)__02 - Ginecologia.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 1 (Segunda-feira)::02 - Ginecologia::17 - Doenças Benignas da Mama",
+  "notes": 100,
+  "imported": 96,
+  "skipped": [
+    {
+      "noteId": 1780579149664,
+      "number": "0261n",
+      "topic": "Doenças Benignas da Mama",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1780579149665,
+      "number": "0262n",
+      "topic": "Doenças Benignas da Mama",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1780579149666,
+      "number": "0263n",
+      "topic": "Doenças Benignas da Mama",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1780579149693,
+      "number": "0290n",
+      "topic": "Doenças Benignas da Mama",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "topics": [
+    {
+      "topic": "Doenças Benignas da Mama",
+      "imported": 96,
+      "block": "anki:ginecologia-doencas-benignas-da-mama"
+    }
+  ],
+  "mediaReferenced": 8,
+  "mediaExtracted": 200,
+  "answerKeyOverrides": 0,
+  "answerKeyIgnored": 0
+}
