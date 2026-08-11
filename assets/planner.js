@@ -120,6 +120,9 @@ ensureFeynman();
 ensureQuestionProgress();
 let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleDay: '', scheduleWeekAnchor: studyDateKey(), refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
+ui.scheduleBlockFocusPending ||= ui.scheduleBlock||'Atual';
+ui.scheduleWeekScrollLeft = n(ui.scheduleWeekScrollLeft);
+ui.scheduleWeekFocusPending ||= ui.scheduleDay||'Todos';
 try {
   const savedCadernoView = JSON.parse(localStorage.getItem(CADERNO_VIEW_KEY) || '{}');
   if(savedCadernoView.review) ui.cadernoReview = savedCadernoView.review;
@@ -3730,6 +3733,7 @@ function navigationSnapshot() {
     ui:{
       tab:ui.tab,qBlock:ui.qBlock,qSource:ui.qSource,qTopic:ui.qTopic,qStatus:ui.qStatus,qSearch:ui.qSearch,qIndex:ui.qIndex,qQuestionId:ui.qQuestionId,
       videoBlock:ui.videoBlock,videoSearch:ui.videoSearch,videoLessonId:ui.videoLessonId,videoSourceId:ui.videoSourceId,
+      scheduleBlock:ui.scheduleBlock,scheduleBlockPinned:ui.scheduleBlockPinned,scheduleBlockScrollLeft:ui.scheduleBlockScrollLeft,scheduleDay:ui.scheduleDay,scheduleWeekAnchor:ui.scheduleWeekAnchor,scheduleWeekScrollLeft:ui.scheduleWeekScrollLeft,
       materialsSection:ui.materialsSection,materialBlock:ui.materialBlock,materialSpecialty:ui.materialSpecialty,materialScheduleId:ui.materialScheduleId,materialDocId:ui.materialDocId,materialSearch:ui.materialSearch,materialFocusMode:ui.materialFocusMode,
       activeSimRunId:ui.activeSimRunId,simulationLibraryOpen:ui.simulationLibraryOpen
     },
@@ -4747,13 +4751,42 @@ function renderCronograma() {
   enhanceScheduleStudyIcons();
   const blockStrip=document.querySelector('#cronograma .block-strip');
   if(blockStrip) {
-    requestAnimationFrame(()=>{ blockStrip.scrollLeft=n(ui.scheduleBlockScrollLeft); });
+    requestAnimationFrame(()=>{
+      const focusKey=ui.scheduleBlockFocusPending;
+      const active=focusKey ? blockStrip.querySelector(`[data-schedule-block="${CSS.escape(focusKey==='Atual'?String(currentScheduleBlock()):String(focusKey))}"]`) : null;
+      if(active) {
+        blockStrip.scrollLeft=Math.max(0,active.offsetLeft-(blockStrip.clientWidth-active.offsetWidth)/2);
+        ui.scheduleBlockScrollLeft=blockStrip.scrollLeft;
+      } else blockStrip.scrollLeft=n(ui.scheduleBlockScrollLeft);
+      ui.scheduleBlockFocusPending='';
+    });
     blockStrip.addEventListener('scroll',()=>{ ui.scheduleBlockScrollLeft=blockStrip.scrollLeft; },{passive:true});
+  }
+  const weekStrip=document.querySelector('#cronograma .mission-week');
+  if(weekStrip) {
+    requestAnimationFrame(()=>{
+      const focusDay=ui.scheduleWeekFocusPending;
+      const active=focusDay&&focusDay!=='Todos' ? weekStrip.querySelector(`[data-schedule-day="${CSS.escape(focusDay)}"]`) : null;
+      if(active) {
+        weekStrip.scrollLeft=Math.max(0,active.offsetLeft-(weekStrip.clientWidth-active.offsetWidth)/2);
+        ui.scheduleWeekScrollLeft=weekStrip.scrollLeft;
+      } else if(focusDay==='Todos') {
+        weekStrip.scrollLeft=0;
+        ui.scheduleWeekScrollLeft=0;
+      } else weekStrip.scrollLeft=n(ui.scheduleWeekScrollLeft);
+      ui.scheduleWeekFocusPending='';
+    });
+    weekStrip.addEventListener('scroll',()=>{ ui.scheduleWeekScrollLeft=weekStrip.scrollLeft; },{passive:true});
   }
   document.getElementById('search').oninput = debounce(e => {
     const value=e.target.value;
     const cursor=e.target.selectionStart;
     ui.search=value;
+    if(value.trim()&&ui.scheduleBlock!=='Todos') {
+      ui.scheduleBlock='Todos';
+      ui.scheduleBlockPinned=false;
+      ui.scheduleBlockFocusPending='Todos';
+    }
     renderCronograma();
     requestAnimationFrame(() => { const input=document.getElementById('search'); if(input) { input.focus(); input.setSelectionRange(cursor,cursor); } });
   }, 220);
@@ -4765,9 +4798,10 @@ function renderCronograma() {
     render();
   };
   document.querySelectorAll('[data-schedule-block]').forEach(button => button.onclick = e => {
-    if(ui.scheduleBlockPinned) return;
     ui.scheduleBlockScrollLeft=blockStrip?.scrollLeft || ui.scheduleBlockScrollLeft;
     ui.scheduleBlock = e.currentTarget.dataset.scheduleBlock;
+    if(ui.scheduleBlock==='Todos') ui.scheduleBlockPinned=false;
+    ui.scheduleBlockFocusPending=ui.scheduleBlock;
     render();
     requestAnimationFrame(() => {
       const picked = document.querySelector(`[data-schedule-block="${CSS.escape(ui.scheduleBlock)}"]`);
@@ -4776,20 +4810,25 @@ function renderCronograma() {
   });
   document.querySelectorAll('[data-schedule-day]').forEach(button => button.onclick = e => {
     ui.scheduleDay=e.currentTarget.dataset.scheduleDay || '';
+    ui.scheduleWeekFocusPending=ui.scheduleDay||'Todos';
     if(ui.scheduleDay) ui.refDate=ui.scheduleDay;
     render();
   });
   document.querySelectorAll('[data-schedule-week]').forEach(button => button.onclick = e => {
     ui.scheduleWeekAnchor=PlannerUX.addDays(ui.scheduleWeekAnchor || studyDateKey(),n(e.currentTarget.dataset.scheduleWeek));
+    ui.scheduleDay='';
+    ui.scheduleWeekScrollLeft=0;
+    ui.scheduleWeekFocusPending='Todos';
     render();
   });
   document.querySelector('[data-schedule-today]')?.addEventListener('click',()=>{
     ui.scheduleWeekAnchor=studyDateKey();
     ui.scheduleDay=studyDateKey();
+    ui.scheduleWeekFocusPending=ui.scheduleDay;
     ui.refDate=studyDateKey();
     render();
   });
-  document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.priority='Todas'; ui.scheduleDay=''; if(!ui.scheduleBlockPinned) ui.scheduleBlock='Atual'; render(); };
+  document.getElementById('clearFilters').onclick = () => { ui.search=''; ui.area='Todas'; ui.status='Todos'; ui.priority='Todas'; ui.scheduleDay=''; ui.scheduleWeekFocusPending='Todos'; if(!ui.scheduleBlockPinned) { ui.scheduleBlock='Atual'; ui.scheduleBlockFocusPending='Atual'; } render(); };
   bindScheduleInputs();
 }
 function areaLine(a) { return `<div class="area-bar"><strong>${escapeHtml(a.area)}</strong><div class="bar"><span style="width:${pct(a.progress)}"></span></div><span>${pct(a.progress)}</span></div>`; }

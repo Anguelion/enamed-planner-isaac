@@ -187,6 +187,18 @@ test('leitor de materiais salva a seção ativa, oferece retomada e normaliza ta
   assert.match(css,/\.material-table-wrap th,.material-table-wrap td\{/);
 });
 
+test('Missão centraliza somente a seleção nova e pesquisa em todos os blocos',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  assert.match(planner,/ui\.scheduleBlockFocusPending=ui\.scheduleBlock/);
+  assert.match(planner,/active\.offsetLeft-\(blockStrip\.clientWidth-active\.offsetWidth\)\/2/);
+  assert.match(planner,/blockStrip\.addEventListener\('scroll',\(\)=>\{ ui\.scheduleBlockScrollLeft=blockStrip\.scrollLeft; \}/);
+  assert.doesNotMatch(planner,/if\(ui\.scheduleBlockPinned\) return;/);
+  assert.match(planner,/if\(value\.trim\(\)&&ui\.scheduleBlock!=='Todos'\) \{[\s\S]*?ui\.scheduleBlock='Todos';[\s\S]*?ui\.scheduleBlockPinned=false;/);
+  assert.match(planner,/ui\.scheduleWeekFocusPending=ui\.scheduleDay\|\|'Todos'/);
+  assert.match(planner,/weekStrip\.addEventListener\('scroll'/);
+});
+
 test('cabeçalho desktop oferece histórico interno com voltar, avançar e atalhos',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
