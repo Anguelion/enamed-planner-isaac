@@ -60,7 +60,11 @@ class AnswerKeyApp:
         self.answer_text.pack(side="left", fill="both", expand=True)
         scrollbar.pack(side="right", fill="y")
 
-        example = ttk.Label(container, text="Aceita: A  ·  1. A  ·  1 A  ·  1 - A  ·  Questão 1: A", foreground="#5b6472")
+        example = ttk.Label(
+            container,
+            text="Aceita: 1. A  ·  1 A  ·  1 - A  ·  Questão 1: A  ·  Para ignorar: 15 - anulada",
+            foreground="#5b6472",
+        )
         example.pack(anchor="w", pady=(7, 12))
         self.run_button = ttk.Button(container, text="Conferir, corrigir e importar", command=self.start_import)
         self.run_button.pack(anchor="e")
@@ -112,7 +116,10 @@ class AnswerKeyApp:
             lesson = deck["name"].split("::")[-1]
             missing = deck["missingAnswer"]
             situation = f"{missing} sem gabarito" if missing else "gabarito detectado"
-            display = f"{lesson} — {deck['objective']} questões · {situation}"
+            composition = f"{deck['objective']} objetivas"
+            if deck.get("nonObjective"):
+                composition += f" + {deck['nonObjective']} subjetivas"
+            display = f"{lesson} — {composition} · {situation}"
             displays.append(display)
             self.deck_lookup[display] = deck
         self.deck_combo.configure(values=displays)
@@ -128,8 +135,11 @@ class AnswerKeyApp:
         if not deck:
             self.run_button.configure(state="disabled")
             return
-        self.answer_label.configure(text=f"Gabarito de {deck['label']} — {deck['objective']} letras, uma por linha")
-        self.status.set(f"Aula escolhida: {deck['label']}. Cole {deck['objective']} respostas no retângulo.")
+        self.answer_label.configure(text=f"Gabarito de {deck['label']} — mantenha a numeração original")
+        self.status.set(
+            f"Aula escolhida: {deck['label']}. São {deck['objective']} objetivas e "
+            f"{deck.get('nonObjective', 0)} subjetivas; deixe as subjetivas numeradas, mas sem letra."
+        )
         self.run_button.configure(state="normal")
 
     def start_import(self) -> None:

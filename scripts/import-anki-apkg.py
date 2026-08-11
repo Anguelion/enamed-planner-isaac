@@ -112,36 +112,42 @@ def clean_html(value: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", value).strip()
 
 
-def parse_answer_key_text(text: str) -> list[str]:
+def parse_answer_key_text(text: str) -> tuple[list[str | None], bool]:
     rows = []
     for line_number, raw_line in enumerate(text.splitlines(), 1):
         line = raw_line.strip()
         if not line or line.startswith("#"):
             continue
+        numbered = re.match(r"^(?:quest(?:ão|ao)?\s*)?(\d+)(?:\s*(?:[.)\-–—:]|\s)|$)", line, flags=re.I)
         letters = re.findall(r"(?<![A-Za-zÀ-ÿ])([A-J])(?![A-Za-zÀ-ÿ])", line, flags=re.I)
-        if not letters:
-            raise ValueError(f"Linha {line_number} do gabarito sem uma letra isolada entre A e J: {raw_line!r}.")
-        numbered = re.match(r"^(?:quest(?:ão|ao)?\s*)?(\d+)\s*(?:[.)\-–—:]|\s)", line, flags=re.I)
-        rows.append({"line": line_number, "number": int(numbered.group(1)) if numbered else None, "answer": letters[-1].upper()})
+        if not letters and not numbered:
+            continue
+        rows.append({
+            "line": line_number,
+            "number": int(numbered.group(1)) if numbered else None,
+            "answer": letters[-1].upper() if letters else None,
+        })
     if not rows:
-        raise ValueError("O arquivo de gabarito está vazio.")
+        raise ValueError("Nenhuma questão numerada ou letra de gabarito foi encontrada.")
     if all(row["number"] is not None for row in rows):
         by_number = {}
         for row in rows:
             previous = by_number.get(row["number"])
-            if previous and previous["answer"] != row["answer"]:
+            if previous and previous["answer"] and row["answer"] and previous["answer"] != row["answer"]:
                 raise ValueError(
                     f"O número {row['number']} aparece com respostas diferentes: "
                     f"{previous['answer']} e {row['answer']}."
                 )
-            by_number.setdefault(row["number"], row)
-        rows = [by_number[number] for number in sorted(by_number)]
-    return [row["answer"] for row in rows]
+            if not previous or (not previous["answer"] and row["answer"]):
+                by_number[row["number"]] = row
+        highest = max(by_number)
+        return ([by_number.get(number, {}).get("answer") for number in range(1, highest + 1)], True)
+    return ([row["answer"] for row in rows if row["answer"]], False)
 
 
-def load_answer_key(path: Path | None) -> list[str]:
+def load_answer_key(path: Path | None) -> tuple[list[str | None], bool]:
     if path is None:
-        return []
+        return ([], False)
     return parse_answer_key_text(path.read_text(encoding="utf-8-sig"))
 
 
@@ -317,7 +323,10 @@ def main() -> None:
     if not apkg.is_file():
         parser.error(f"Arquivo não encontrado: {apkg}")
 
-    with tempfile.TemporaryDirectory(prefix="enamed-apkg-") as temp_name:
+    # No Windows, o SQLite pode manter o arquivo extraído bloqueado por alguns
+    # instantes durante a propagação de um erro de validação. Não deixe essa
+    # limpeza temporária esconder a mensagem útil sobre o gabarito.
+    with tempfile.TemporaryDirectory(prefix="enamed-apkg-", ignore_cleanup_errors=True) as temp_name:
         extracted = Path(temp_name)
         with zipfile.ZipFile(apkg) as package:
             package.extractall(extracted)
@@ -337,16 +346,18 @@ def main() -> None:
                 record = {name.lower(): values[index] if index < len(values) else "" for index, name in enumerate(names)}
                 stem = clean_html(record.get("question", record.get("front", "")))
                 options, answers = multiple_choice_data(record)
+                full_deck = deck_cache[deck_id]
+                summary = summaries.setdefault(full_deck, {"name": full_deck, "total": 0, "objective": 0, "withAnswer": 0})
+                summary["total"] += 1
                 if not stem or len(options) < 2:
                     continue
-                full_deck = deck_cache[deck_id]
-                summary = summaries.setdefault(full_deck, {"name": full_deck, "objective": 0, "withAnswer": 0})
                 summary["objective"] += 1
                 if len(answers) == 1 and answers[0] in options:
                     summary["withAnswer"] += 1
             result = []
             for name in sorted(summaries):
                 summary = summaries[name]
+                summary["nonObjective"] = summary["total"] - summary["objective"]
                 summary["missingAnswer"] = summary["objective"] - summary["withAnswer"]
                 summary["label"] = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", name.split("::")[-1]).strip()
                 result.append(summary)
@@ -374,7 +385,7 @@ def main() -> None:
         names_by_model = {}
         groups = {}
         skipped = []
-        answer_key = load_answer_key(args.answer_key)
+        answer_key, numbered_answer_key = load_answer_key(args.answer_key)
         if answer_key:
             objective_count = 0
             for _, _, model_id, _, fields, _ in notes:
@@ -385,14 +396,27 @@ def main() -> None:
                 options, _ = multiple_choice_data(record)
                 if stem and len(options) >= 2:
                     objective_count += 1
-            if len(answer_key) != objective_count:
+            expected_count = len(notes) if numbered_answer_key else objective_count
+            if numbered_answer_key and len(answer_key) < expected_count:
+                answer_key.extend([None] * (expected_count - len(answer_key)))
+            elif len(answer_key) != expected_count:
                 connection.close()
+                target = f'a aula "{first_label}"' if args.deck else "o APKG"
+                supplied = sum(answer is not None for answer in answer_key)
+                answer_word = "resposta" if supplied == 1 else "respostas"
+                expected_description = (
+                    f"{expected_count} posições contando objetivas e subjetivas"
+                    if numbered_answer_key
+                    else f"{objective_count} questões objetivas"
+                )
                 raise ValueError(
-                    f"O gabarito possui {len(answer_key)} linhas, mas o APKG tem {objective_count} questões objetivas válidas. "
-                    "Cole exatamente uma letra para cada questão objetiva."
+                    f"O gabarito possui {supplied} {answer_word}, mas {target} tem {expected_description}. "
+                    "Mantenha a numeração original, inclusive nas questões subjetivas sem letra."
                 )
         answer_key_index = 0
-        for note_id, guid, model_id, raw_tags, fields, deck_id in notes:
+        answer_key_overrides = 0
+        answer_key_ignored = 0
+        for note_position, (note_id, guid, model_id, raw_tags, fields, deck_id) in enumerate(notes):
             full_deck = deck_cache[deck_id]
             parts = full_deck.split("::")
             label = re.sub(r"^\d+(?:\.\d+)?\s*-\s*", "", parts[-1]).strip() or apkg.stem
@@ -406,8 +430,22 @@ def main() -> None:
             stem_raw = record.get("question", record.get("front", ""))
             options, answers = multiple_choice_data(record)
             if answer_key and clean_html(stem_raw) and len(options) >= 2:
-                answers = [answer_key[answer_key_index]]
-                answer_key_index += 1
+                if numbered_answer_key:
+                    supplied_answer = answer_key[note_position]
+                else:
+                    supplied_answer = answer_key[answer_key_index]
+                    answer_key_index += 1
+                if supplied_answer is None:
+                    answer_key_ignored += 1
+                    skipped.append({
+                        "noteId": note_id,
+                        "number": clean_html(record.get("number", "")),
+                        "topic": topic,
+                        "reason": "questão ignorada por não possuir letra no gabarito fornecido",
+                    })
+                    continue
+                answers = [supplied_answer]
+                answer_key_overrides += 1
             reason = ""
             if not clean_html(stem_raw):
                 reason = "enunciado ausente"
@@ -484,7 +522,8 @@ def main() -> None:
                 for question in group["questions"]
             ),
             "mediaExtracted": len(media_urls),
-            "answerKeyOverrides": answer_key_index,
+            "answerKeyOverrides": answer_key_overrides,
+            "answerKeyIgnored": answer_key_ignored,
         }
         report_name = f"{media_slug}.import-report.json"
         (BANK_ROOT / report_name).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
