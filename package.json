@@ -8,6 +8,7 @@
     "anatomia:search-index": "node scripts/build-anatomia-search-index.js",
     "questions:audit": "node scripts/audit-question-bank.js",
     "questions:index": "node scripts/audit-question-bank.js --fix-index",
+    "questions:import-apkg": "python scripts/import-anki-apkg.py",
     "videos:r2:reconcile": "node scripts/reconcile-r2-video-catalog.js --write",
     "offline:sync": "node scripts/sync-offline-entry.js",
     "test": "node --test --test-force-exit tests/*.test.js",

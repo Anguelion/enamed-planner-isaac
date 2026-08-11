@@ -2278,7 +2278,7 @@ async function loadLocalQuestionBank() {
   // Pequenos lotes preservam a rolagem e os toques durante a carga inicial.
   const pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
   for(let start=0; start<pending.length; start+=4) {
-    await Promise.all(pending.slice(start,start+4).map(block => loadQuestionBlockScript(block.script)));
+    await Promise.all(pending.slice(start,start+4).map(block => loadQuestionBlockScript(`${block.script}?v=${encodeURIComponent(index.generatedAt || '')}`)));
     // requestAnimationFrame nunca dispara com a aba oculta/em segundo plano, o que travava o carregamento pela metade.
     await new Promise(resolve => (document.hidden ? setTimeout(resolve, 0) : requestAnimationFrame(() => resolve())));
   }
@@ -9205,12 +9205,15 @@ function questionBankSummary() {
   return renderCache.questionSummary;
 }
 function questionCollectionLabel(value) {
+  const indexed = window.ENAMED_LOCAL_QUESTION_INDEX?.blocks?.find(entry => String(entry.block) === String(value));
+  if(indexed?.label) return indexed.label;
   if(String(value) === 'ineditas') return 'Inéditas por Macroárea';
-  return `Bloco ${value}`;
+  return /^\d+$/.test(String(value)) ? `Bloco ${value}` : String(value || 'Banco geral');
 }
 function questionCollectionSort(questionOrBlock) {
   const value = typeof questionOrBlock === 'object' ? questionOrBlock.collectionBlock ?? questionOrBlock.block : questionOrBlock;
-  return String(value) === 'ineditas' ? 999 : n(value);
+  if(String(value) === 'ineditas') return 999;
+  return /^\d+$/.test(String(value)) ? n(value) : 998;
 }
 function normalizeQuestionText(value='') {
   const source = normalizeMedicalTypography(value)

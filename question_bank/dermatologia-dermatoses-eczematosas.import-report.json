@@ -1,0 +1,25 @@
+{
+  "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 4 (Quinta-feira)__17 - Dermatologia__05 - Dermatoses Eczematosas.apkg",
+  "deck": "Z - Residência médica (Questões + Osler)::Residência Médica::Grupo 4 (Quinta-feira)::17 - Dermatologia::05 - Dermatoses Eczematosas",
+  "notes": 99,
+  "imported": 96,
+  "skipped": [
+    {
+      "noteId": 1780778247512,
+      "number": "1731e",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1780778247513,
+      "number": "1732e",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    },
+    {
+      "noteId": 1780778247514,
+      "number": "1733e",
+      "reason": "questão discursiva ou com menos de duas alternativas"
+    }
+  ],
+  "mediaReferenced": 6,
+  "mediaExtracted": 6
+}
