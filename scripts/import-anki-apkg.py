@@ -11,6 +11,7 @@ import re
 import shutil
 import sqlite3
 import subprocess
+import sys
 import tempfile
 import zipfile
 from datetime import datetime, timezone
@@ -109,6 +110,27 @@ def clean_html(value: str) -> str:
     value = re.sub(r"[ \t]+", " ", value)
     value = re.sub(r" *\n *", "\n", value)
     return re.sub(r"\n{3,}", "\n\n", value).strip()
+
+
+def parse_answer_key_text(text: str) -> list[str]:
+    answers = []
+    for line_number, raw_line in enumerate(text.splitlines(), 1):
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        letters = re.findall(r"(?<![A-Za-zÀ-ÿ])([A-J])(?![A-Za-zÀ-ÿ])", line, flags=re.I)
+        if not letters:
+            raise ValueError(f"Linha {line_number} do gabarito sem uma letra isolada entre A e J: {raw_line!r}.")
+        answers.append(letters[-1].upper())
+    if not answers:
+        raise ValueError("O arquivo de gabarito está vazio.")
+    return answers
+
+
+def load_answer_key(path: Path | None) -> list[str]:
+    if path is None:
+        return []
+    return parse_answer_key_text(path.read_text(encoding="utf-8-sig"))
 
 
 def image_names(value: str) -> list[str]:
@@ -231,6 +253,7 @@ def main() -> None:
     parser.add_argument("--specialty")
     parser.add_argument("--topic")
     parser.add_argument("--block")
+    parser.add_argument("--answer-key", type=Path, help="TXT com uma letra por linha, na ordem das questões objetivas")
     args = parser.parse_args()
     apkg = args.apkg.resolve()
     if not apkg.is_file():
@@ -262,6 +285,24 @@ def main() -> None:
         names_by_model = {}
         groups = {}
         skipped = []
+        answer_key = load_answer_key(args.answer_key)
+        if answer_key:
+            objective_count = 0
+            for _, _, model_id, _, fields, _ in notes:
+                names = names_by_model.setdefault(model_id, field_names(connection, model_id))
+                values = fields.split("\x1f")
+                record = {name.lower(): values[index] if index < len(values) else "" for index, name in enumerate(names)}
+                stem = clean_html(record.get("question", record.get("front", "")))
+                option_count = sum(bool(clean_html(record.get(letter, ""))) for letter in "abcdefghij")
+                if stem and option_count >= 4:
+                    objective_count += 1
+            if len(answer_key) != objective_count:
+                connection.close()
+                raise ValueError(
+                    f"O gabarito possui {len(answer_key)} linhas, mas o APKG tem {objective_count} questões objetivas válidas. "
+                    "Cole exatamente uma letra para cada questão objetiva."
+                )
+        answer_key_index = 0
         for note_id, guid, model_id, raw_tags, fields, deck_id in notes:
             full_deck = deck_cache[deck_id]
             parts = full_deck.split("::")
@@ -279,6 +320,9 @@ def main() -> None:
                 if clean_html(record.get(letter, "")):
                     options[letter.upper()] = clean_html(record[letter])
             answers = [item.strip().upper() for item in record.get("answers", "").split(",") if item.strip()]
+            if answer_key and clean_html(stem_raw) and len(options) >= 4:
+                answers = [answer_key[answer_key_index]]
+                answer_key_index += 1
             reason = ""
             if not clean_html(stem_raw):
                 reason = "enunciado ausente"
@@ -353,6 +397,7 @@ def main() -> None:
                 for question in group["questions"]
             ),
             "mediaExtracted": len(media_urls),
+            "answerKeyOverrides": answer_key_index,
         }
         report_name = f"{media_slug}.import-report.json"
         (BANK_ROOT / report_name).write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -385,4 +430,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (ValueError, RuntimeError) as error:
+        print(f"Erro: {error}", file=sys.stderr)
+        raise SystemExit(2)
