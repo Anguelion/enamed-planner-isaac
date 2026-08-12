@@ -41,6 +41,8 @@ SPECIALTIES = {
     "Preventiva": "Medicina Preventiva",
     "Psiquiatria": "Psiquiatria",
     "Reumatologia": "Reumatologia",
+    "Clinica médica": "Clínica Médica",
+    "Gineco e obstetricia": "Ginecologia e Obstetrícia",
 }
 
 
@@ -219,6 +221,10 @@ def main() -> None:
     if not source_root.is_dir():
         parser.error(f"Pasta não encontrada: {source_root}")
 
+    is_med_collection = source_root.name.upper() == "MED"
+    collection_name = "MED" if is_med_collection else "Medcurso"
+    collection_slug = "med" if is_med_collection else "medcurso"
+    source_type = "med" if is_med_collection else "medcurso"
     txt_files = sorted(source_root.rglob("*.txt"), key=lambda path: (-len(path.relative_to(source_root).parts), str(path)))
     image_extensions = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"}
     image_index: dict[str, list[Path]] = {}
@@ -226,6 +232,16 @@ def main() -> None:
         if image_path.is_file() and image_path.suffix.lower() in image_extensions:
             image_index.setdefault(image_path.stem, []).append(image_path)
     seen_by_specialty: dict[str, set[str]] = {}
+    current_index = json.loads((BANK_ROOT / "index.json").read_text(encoding="utf-8"))
+    for existing_entry in current_index.get("blocks", []):
+        if existing_entry.get("sourceType") == source_type or existing_entry.get("sourceType") not in {"medcurso", "med"}:
+            continue
+        existing_path = BANK_ROOT / str(existing_entry.get("file", ""))
+        if not existing_path.is_file():
+            continue
+        existing_payload = json.loads(existing_path.read_text(encoding="utf-8"))
+        for existing_question in existing_payload.get("questions", []):
+            seen_by_specialty.setdefault(existing_question.get("specialty", ""), set()).add(str(existing_question.get("number", "")))
     entries = []
     reports = []
     totals = {"found": 0, "imported": 0, "duplicates": 0, "nonObjective": 0, "annulled": 0, "missingAnswer": 0, "images": 0}
@@ -237,8 +253,8 @@ def main() -> None:
         topic = txt_path.stem
         if txt_path.parent == source_root / folder_name and topic.upper() == "PED":
             topic = "PED — questões adicionais"
-        slug = slugify(f"medcurso-{folder_name}-{topic}")
-        block = f"medcurso:{slug}"
+        slug = slugify(f"{collection_slug}-{folder_name}-{topic}")
+        block = f"{collection_slug}:{slug}"
         text = txt_path.read_text(encoding="utf-8-sig", errors="replace")
         split = re.split(r"(?im)^\s*Gabarito\s*$", text, maxsplit=1)
         if len(split) != 2:
@@ -275,11 +291,11 @@ def main() -> None:
                 images.append(f"question_bank/media/medcurso/{slug}/{source_image.name}")
             totals["images"] += len(images)
             imported.append({
-                "id": f"medcurso-{slugify(folder_name)}-{slugify(topic)}-{question_id}",
+                "id": f"{collection_slug}-{slugify(folder_name)}-{slugify(topic)}-{question_id}",
                 "number": question_id,
                 "sourceNumber": question_id,
                 "collectionBlock": block,
-                "collectionLabel": f"Medcurso · {topic}",
+                "collectionLabel": f"{collection_name} · {topic}",
                 "documentBlock": "",
                 "area": specialty,
                 "specialty": specialty,
@@ -289,18 +305,18 @@ def main() -> None:
                 "options": options,
                 "answer": answer,
                 "source": str(relative).replace("\\", "/"),
-                "sourceLabel": f"Medcurso · {topic}",
+                "sourceLabel": f"{collection_name} · {topic}",
                 "images": images,
                 "optionImages": {},
                 "commentImages": [],
                 "comment": clean_comment(comments.get(question_id, "")),
-                "tags": [specialty, topic, "Medcurso"],
+                "tags": [specialty, topic, collection_name],
                 "answerSource": answer_source,
             })
         if not imported:
             reports.append({"file": str(relative), "topic": topic, "imported": 0, "skipped": skipped})
             continue
-        payload = {"block": block, "label": f"Medcurso · {topic}", "count": len(imported), "questions": imported}
+        payload = {"block": block, "label": f"{collection_name} · {topic}", "count": len(imported), "questions": imported}
         pretty = json.dumps(payload, ensure_ascii=False, indent=2)
         browser_payload = {
             **payload,
@@ -330,12 +346,12 @@ def main() -> None:
         totals["imported"] += len(imported)
         entries.append({
             "block": block,
-            "label": f"Medcurso · {topic}",
+            "label": f"{collection_name} · {topic}",
             "file": f"{slug}.json",
             "script": f"{slug}.js",
             "count": len(imported),
             "special": True,
-            "sourceType": "medcurso",
+            "sourceType": source_type,
             "report": report_name,
             "commentsScript": comments_name,
         })
@@ -355,7 +371,7 @@ def main() -> None:
         **totals,
         "reports": reports,
     }
-    (BANK_ROOT / "medcurso.import-report.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (BANK_ROOT / f"{collection_slug}.import-report.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: value for key, value in summary.items() if key != "reports"}, ensure_ascii=False, indent=2))
 
 

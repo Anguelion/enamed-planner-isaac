@@ -1,0 +1,100 @@
+{
+  "block": "med:med-preventiva-med-pre-03",
+  "label": "MED · MED PRE 03",
+  "count": 3,
+  "questions": [
+    {
+      "id": "med-preventiva-med-pre-03-82124",
+      "number": "82124",
+      "sourceNumber": "82124",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Acerca das doenças dos cuidados de saúde em pessoas idosas, julgue o item a seguir.\nConsiderando-se a prevenção de doenças cardiovasculares, quanto maior o risco cardiovascular\nglobal, menor o benefício potencial de uma intervenção terapêutica ou preventiva.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "B",
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Esse conceito de risco cardiovascular global é muito importante, uma vez que nos permite ter uma ideia mais clara da patogênse, da prevenção e do tratamento da doença aterosclerótica, que tem uma causa multifatorial. Entendemos que quando atuamos sobre um fator de risco isolado, os benefícios são relativamente pequenos porque os fatores de risco só são, de fato, significativos quando atuam juntos. No estudo de Framingham, como exemplo, um paciente hipertenso tem um risco de 8% de apresentar um acidente cardiovascular nos próximos 8 anos. No entanto, se esse fator de risco estiver associado ao colesterol elevado, o risco sobe para 21%. Nesse sentido, quanto maior o risco cardiovascular, mais fatores de risco atuando juntos é maior a eficácia de uma intervenção terapêutica e ou preventiva. Assim, concluímos que a afirmativa está errada. Resposta letra B.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-82120",
+      "number": "82120",
+      "sourceNumber": "82120",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Com relação às ações de vigilância de doenças transmissíveis e não transmissíveis,\njulgue o item a seguir. Para se determinar o\nprovável período de exposição dos casos em surto por\nveículo comum, pode-se utilizar o método do período médio de incubação, no qual se identifica a\ndata do pico da epidemia e calcula-se retrospectivamente, com base no período médio de\nincubação, o dia provável de exposição.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "A",
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A afirmativa faz todo o sentido… Vamos primeiro relembrar o que é surto. É um epidemia restrita a um espaço delimitado geograficamente. Agora vamos supor que um jantar com alimentos contaminados tenha sido servido. Tão logo os pacientes apresentam sintomas (diarreia, por exemplo) na data de pico da epidemia, eu posso calcular, retrospectivamente, quando houve a contaminação através do PERÍODO MÉDIO DE INCUBAÇÃO da doença que eu achar que causou tal moléstia. Isso é muito praticado em casos de surtos e a afirmativa estava perfeita. Logo, resposta letra A.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-80707",
+      "number": "80707",
+      "sourceNumber": "80707",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Um pesquisador iniciou estudo sobre hipertensão arterial em determinada população\ncom cem indivíduos. Para isso, verificou que\na prevalência dessa doença era de 0,17. Após um\nperíodo, verificou que a incidência de hipertensão arterial foi 0,02. Considerando que não houve\nintervenção terapêutica, óbitos ou nascimentos nesse período, a quantidade de hipertensos ao final\ndesse período foi igual a:",
+      "options": {
+        "A": "2.",
+        "B": "15.",
+        "C": "17.",
+        "D": "19.",
+        "E": "21."
+      },
+      "answer": "D",
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão de matemática. Vamos lá De 100 pessoas, tínhamos 0,17 de prevalência, ou seja, 17 casos. Nesse período, a incidência foi de 0,02, ou seja, de 2 casos. Portanto, ao final do período estudado tínhamos 19 casos. Resposta letra D.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    }
+  ]
+}

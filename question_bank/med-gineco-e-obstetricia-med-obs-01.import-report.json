@@ -1,0 +1,1973 @@
+{
+  "file": "Gineco e obstetricia\\MED OBS 01\\MED OBS 01.txt",
+  "specialty": "Ginecologia e Obstetrícia",
+  "topic": "MED OBS 01",
+  "found": 500,
+  "imported": 9,
+  "skipped": [
+    {
+      "id": "343760",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "343765",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "345479",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "345484",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "281140",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "281141",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "283332",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "283337",
+      "reason": "anulada"
+    },
+    {
+      "id": "251882",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "251883",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "183182",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "182643",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "182674",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "159035",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "135920",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "108746",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "108813",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "84468",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "50105",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "50110",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "50029",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "37058",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "29410",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "29414",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "372052",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "372053",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "372054",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "372056",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "372057",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "372058",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "372059",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "372060",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "343217",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "314221",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "313458",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "314227",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "275998",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "276000",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "279071",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "278652",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "279073",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "278660",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "231367",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "249315",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "249430",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "249240",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "249440",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "249257",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "201784",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "201788",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "219914",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "216351",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "212223",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "212198",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "215500",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "212205",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "215268",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "212234",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "215537",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "212218",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "215208",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "180151",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "183629",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "181286",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "183560",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "181293",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "183586",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "183555",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "181336",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "181364",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "183591",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "183547",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "181381",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "152632",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "152653",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "161215",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "161218",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "158782",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "158775",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "158780",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "161361",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "158816",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "131411",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "131413",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "134353",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "134120",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "110588",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "109782",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "109726",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "110055",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "109774",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "109778",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "109790",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "86827",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "86833",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "86843",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "86591",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "86595",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "108593",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "108601",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "13123",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "13126",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "13128",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "362441",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "362437",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "362434",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "327263",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "327271",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298243",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298248",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "286742",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "252253",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "252254",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "208438",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "208296",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "208321",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "176063",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "176067",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "176044",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "129798",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "129774",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "129794",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "107666",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "107679",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "103869",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "103804",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "87419",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "81952",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "81984",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "81047",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "61527",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "26491",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "26493",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "26512",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "26647",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "26673",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "26675",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "13250",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "7415",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "9963",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "7511",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "7510",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "294472",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "294473",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "294474",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "230157",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230158",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230159",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "206007",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "206010",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "206015",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "176302",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "176303",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "176307",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152302",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152221",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152224",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152227",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "106546",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "106548",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "62848",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "49332",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "34930",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "11142",
+      "reason": "anulada"
+    },
+    {
+      "id": "11148",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "13323",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "13325",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "343373",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "314297",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "314298",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "314299",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "281896",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "250014",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "250015",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "215599",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "157706",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "134724",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "292877",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "292882",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "234085",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "234086",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "234087",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "234090",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "199763",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "173007",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "173016",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "150849",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "126938",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "126950",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "102183",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "65675",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "65667",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "51122",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "51241",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "141596",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "45345",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "45342",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "30859",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "30897",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "37013",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "37443",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "37448",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "37449",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "37453",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "25348",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "25352",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "22939",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "24384",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "24385",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "27704",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "27709",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "27711",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "13469",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "7270",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "8895",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "9163",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "349688",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "365606",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "322203",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337571",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337572",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337573",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337574",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337575",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337576",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "305331",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "305343",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "305345",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298918",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298919",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "298920",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298921",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298922",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298923",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298924",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274399",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274406",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "284344",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "261284",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "250148",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "250149",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "250150",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "250151",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "239330",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "239331",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "211960",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "196716",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "214397",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "154322",
+      "reason": "anulada"
+    },
+    {
+      "id": "154335",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "135044",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "105549",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "105557",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "79663",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "79670",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "82070",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "82074",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "49188",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37958",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37959",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "32174",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "29757",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27535",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27551",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "13855",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "7554",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "7560",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "7564",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "334897",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "343464",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "307118",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "301304",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "301305",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "301306",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "301307",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "301308",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "273326",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "273330",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "263358",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "291490",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "268913",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "291528",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274665",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "291539",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "291551",
+      "reason": "anulada"
+    },
+    {
+      "id": "263433",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "244489",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "230603",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "230611",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "227439",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "230619",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "202963",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "206116",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "206118",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "168499",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "168496",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "168467",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "133993",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "133995",
+      "reason": "anulada"
+    },
+    {
+      "id": "104751",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "111332",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "111339",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "111338",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "97748",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "80731",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "97743",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "97762",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "138702",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "138703",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "138705",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "75536",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "137675",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "137542",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "137676",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "137677",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "137678",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "137679",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "137590",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "138513",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "138588",
+      "reason": "anulada"
+    },
+    {
+      "id": "30998",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "22175",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "22176",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "8679",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "354117",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "368196",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "359181",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "352167",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "359186",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "321167",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "320430",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337646",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "336290",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "336294",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "306697",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "291618",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "291622",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "304865",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "313321",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "260676",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "257355",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "287343",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "287347",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "283914",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "287892",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "287896",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "287898",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "227083",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "234415",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "227088",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "232123",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "227265",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "255644",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "246378",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "246381",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "243019",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "246382",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "246756",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "246766",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "199531",
+      "reason": "anulada"
+    },
+    {
+      "id": "202766",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "199494",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "220302",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "196788",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "196730",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "196738",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "196762",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "215143",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "212910",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "212916",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "212959",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "172551",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "172559",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "172821",
+      "reason": "anulada"
+    },
+    {
+      "id": "172780",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "172792",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "188035",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "155454",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "155458",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "155408",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "155379",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "155385",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "148620",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "137836",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "126892",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "126903",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "127227",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "131694",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "131693",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "100970",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "106377",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "106444",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "106447",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "77359",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "77330",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "77335",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "77494",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "59368",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "59468",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "59477",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "59051",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "59061",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "59089",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "59037",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "59045",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "43331",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "43954",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "43984",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "43990",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "43992",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "32502",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "27335",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27345",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "27350",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "9414",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9416",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "9420",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "8146",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "366915",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "363891",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "363913",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "354783",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "354782",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "354781",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "346416",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "346418",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "346421",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "339797",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "339800",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "339805",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "339806",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337440",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337444",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337446",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337447",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "337448",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "330120",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "334835",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "334836",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "334837",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "334168",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "334838",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "334170",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "342672",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "321615",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "334172",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "321616",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "342674",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "321619",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "300895",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "302856",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "302858",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "311926",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "311932",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "317186",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "316343",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "315815",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "316347",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "317193",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "316348",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "311943",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "315822",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "300865",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "295407",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "300871",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "313253",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "316380",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "265831",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274449",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "265840",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274453",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "265847",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274458",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274465",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274466",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274467",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274468",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "281841",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "277446",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "281301",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274795",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "282016",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "274797",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "257764",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "257766",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "258223",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "273200",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "252739",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "252742",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "231952",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "247431",
+      "reason": "duplicada na mesma especialidade"
+    }
+  ]
+}

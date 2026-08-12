@@ -1,0 +1,133 @@
+{
+  "block": "med:med-gineco-e-obstetricia-med-obs-05",
+  "label": "MED · MED OBS 05",
+  "count": 4,
+  "questions": [
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-05-17865",
+      "number": "17865",
+      "sourceNumber": "17865",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-05",
+      "collectionLabel": "MED · MED OBS 05",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 05",
+      "subtopic": "",
+      "stem": "Caracteriza-se por alta prevalência e manifesta-se em torno do terceiro dia de\npuerpério, com humor instável, tristeza, choro\nfácil e perturbações do sono. Tem curta duração e\nevolução benigna. Isto se trata de:",
+      "options": {
+        "A": "esquizofrenia",
+        "B": "hipomania",
+        "C": "neurose traumática",
+        "D": "maternity blues",
+        "E": "psicose puerperal"
+      },
+      "answer": "D",
+      "source": "Gineco e obstetricia/MED OBS 05/MED OBS 05.txt",
+      "sourceLabel": "MED · MED OBS 05",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Perceba que o enunciado fala a respeito de um processo benigno, que se inicia no terceiro dia de puerpério e possui ALTA PREVALÊNCIA. Quando vamos analisar as assertivas, encontramos esquizofrenia, hipomania, neurose traumática e psicose puerperal que sabemos ser de baixíssima incidência, além de não ser um processo benigno como o do caso. O blues da gravidez (ou maternity blues) ocorre entre o 2 e 5 dia do puerpério, que acomete cerca de 70% das pacientes e é auto limitado e benigno. Portanto, o nosso gabarito é a letra D.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 05",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-05-19257",
+      "number": "19257",
+      "sourceNumber": "19257",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-05",
+      "collectionLabel": "MED · MED OBS 05",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 05",
+      "subtopic": "",
+      "stem": "Os mecanismos de trabalho de parto são essencialmente processos de acomodação\ndo feto à passagem óssea que deve atravessar.\nConsequentemente, o tamanho e o formato da\npelve são extremamente importantes em obstetrícia. Acerca da anatomia pélvica, julgue o item a\nseguir. A conjugata obstétrica é o menor diâmetro antero-posterior do estreito superior da pelve\nfeminina adulta por onde passa a apresentação fetal durante a descida.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "A",
+      "source": "Gineco e obstetricia/MED OBS 05/MED OBS 05.txt",
+      "sourceLabel": "MED · MED OBS 05",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar O diâmetro anteroposterior do estreito superior pode ser dividido em 1) Conjugata Anatômica ou Vera Anatômica formada pela linha que une a borda superior da sínfise púbica e o promontório, que representa uma distância de 11 cm. 2) Conjugata Obstétrica ou Vera Obstétrica corresponde a distância entre o promontório e a face interna (ou face ou borda posterior) da sínfise púbica. Representa o espaço real do trajeto da cabeça fetal, que mede aproximadamente 10,5 cm. É por onde passa a apresentação fetal durante a descida. 3) Conjugata Diagonal ou Diagonalis definida pela linha que une o promontório e a borda inferior da sínfise púbica, que mede 12 cm. Na avaliação pelo toque vaginal, esta é a medida empregada para estimativa do diâmetro da conjugata obstétrica (vera obstétrica) na pelvimetria clínica. Em geral, o diâmeto da conjugata obstétrica é 1,5 cm menor que a conjugata diagonalis. Perceba que o enunciado define perfeitamente o que chamamos de conjugata obstétrica e portanto, o nosso gabarito é a letra A, assertiva CORRETA.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 05",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-05-19258",
+      "number": "19258",
+      "sourceNumber": "19258",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-05",
+      "collectionLabel": "MED · MED OBS 05",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 05",
+      "subtopic": "",
+      "stem": "Os mecanismos de trabalho de parto são essencialmente processos de acomodação\ndo feto à passagem óssea que deve atravessar.\nConsequentemente, o tamanho e o formato da\npelve são extremamente importantes em obstetrícia. Acerca da anatomia pélvica, julgue o item a\nseguir. As espinhas ciáticas servem como referência para a medida do diâmetro transverso da\npelve média e para a identificação da altura da apresentação do feto, segundo os planos De Lee e\nHodge.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "A",
+      "source": "Gineco e obstetricia/MED OBS 05/MED OBS 05.txt",
+      "sourceLabel": "MED · MED OBS 05",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar A espinha ciática é uma protuberância da bacia que faz parte do estreito médio da bacia (estreito mais apertado da bacia). Esse é um importante ponto de referência que utilizamos para determinar a altura da apresentação, para saber se a cabeça fetal está descendo pela bacia. Como é o local mais estreito da bacia, dizemos que é o plano 0 de De Lee. Quando o vértice fetal está acima do plano 0, colocamos em centimetros negativos o marco de De Lee e quando está abaixo do plano 0, colocamos em centimetros positivos o marco de De Lee. Ou seja, as espinhas ciáticas servem como referênia para a medida do diâmetro transverso da pelve média e para a identificação da altura da apresentação do feto. Portanto, assertiva CORRETA e gabarito letra A.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 05",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-05-8120",
+      "number": "8120",
+      "sourceNumber": "8120",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-05",
+      "collectionLabel": "MED · MED OBS 05",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 05",
+      "subtopic": "",
+      "stem": "Gestante, 4º mês de gravidez, procura o ambulatório trazendo resultado de exames\nsolicitados no pré-natal. O HBsAg foi positivo e as transaminases normais. Como devemos\nprogramar este parto?",
+      "options": {
+        "A": "Parto Cesário, para evitar contaminação do recém-nato, com 40 semanas.",
+        "B": "A indicação do tipo de parto será obstétrico.",
+        "C": "Parto Cesário, para evitar contaminação do recém-nato, quando completar 36 semanas.",
+        "D": "Devemos ao máximo evitar o parto cesário, pois o procedimento cirúrgico pode facilitar a\ncontaminação do recém-nato.",
+        "E": "Devemos induzir o parto pélvico quando completar 38 semanas."
+      },
+      "answer": "B",
+      "source": "Gineco e obstetricia/MED OBS 05/MED OBS 05.txt",
+      "sourceLabel": "MED · MED OBS 05",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O risco para a transmissão vertical do vírus B é elevado (até 90% de chance de transmissão em mulheres HBeAg positivo fase de replicação viral - e 10 a 30% nas mulheres HBeAg negativo). O risco de transmissão parece ocorrer principalmente no momento do parto, pela passagem fetal pelo canal vaginal, com exposição do recém-nascido a sangue ou líquido amniótico (onde está presente o HBV), sendo rara a transmissão intrauterina. A indicação da cesariana como via de parto com intuito de prevenir a transmissão vertical não apresenta evidências científicas e não deve ser indicada. Após o nascimento, deve-se proceder com a imediata vacinação (1ª dose) da criança, associada à imunoglobulina humana anti-hepatite B (dentro das primeiras 12 horas após o nascimento). Este procedimento (seguido das duas doses de vacina subsequentes 30 e 180 dias) evita a transmissão do vírus B da mãe para a criança em 90% dos casos. O aleitamento pode ser realizado preferencialmente após a administração da primeira dose da vacina contra o vírus B e da imunoglobulina. Logo, a resposta da questão é a alternativa B.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 05",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    }
+  ]
+}

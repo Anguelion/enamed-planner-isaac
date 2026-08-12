@@ -1,0 +1,361 @@
+{
+  "block": "med:med-gineco-e-obstetricia-med-gin-01",
+  "label": "MED · MED GIN 01",
+  "count": 11,
+  "questions": [
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-34956",
+      "number": "34956",
+      "sourceNumber": "34956",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Paciente comparece ao consultório de ginecologista para avaliação de rotina. Nega\nfluxo vaginal patológico ou prurido genital. Ao\nexame físico, útero intrapélvico, móvel, ovários não\npalpáveis, secreção vaginal fisiológica. Resultado do preventivo: citologia negativa para neoplasia.\nMicroflora: Candida sp. Colposcopia: colo epitelizado. A melhor conduta, no momento, é:",
+      "options": {
+        "A": "indicar metronidazol 500 mg, via oral, 12 em 12h, por 7 dias.",
+        "B": "indicar fluconazol 150 mg, via oral, dose única.",
+        "C": "expectar, não sendo necessário tratamento.",
+        "D": "indicar miconazol 2%, creme vaginal, por 7 noites.",
+        "E": "indicar decnidazol 2 g, via oral, dose única."
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão simples. Para respondê-la bastava obedecer a um importante preceito na ginecologia NÃO SE TRATA O PREVENTIVO (O EXAME CITOLÓGICO) DE UMA PACIENTE. Perceba a paciente é assintomática, o exame ginecológico é normal, a secreção vaginal é fisiológica e a citologia é negativa para neoplasia com achado de Candida sp., mas NÃO é necessário tratamento Não esqueça que a Candida é um fungo Gram-positivo comensal dos aparelhos gastrointestinal e reprodutor feminino, que pode ser encontrado no ecossistema vaginal de aproximadamente 20 a 50% das mulheres saudáveis. Como a paciente não apresenta sinais e sintomas de candidíase, a conduta é expectante. Resposta Letra C.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-34977",
+      "number": "34977",
+      "sourceNumber": "34977",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Jovem, 18 anos de idade, apresenta quadro de dor pélvica aguda, sensibilidade anexial\ne dor à mobilização do colo uterino, além de\nVHS e PCR elevados. Segundo o Center for Disease\nControl and Prevention (CDC), o tratamento apropriado é:",
+      "options": {
+        "A": "azitromicina 1g, dose única + ciprofloxacina 500mg, dose única .",
+        "B": "ceftriaxone 250mg, intramuscular, dose única + doxiciclina 100mg, via oral, 2 vezes por dia, por\n14 dias, + metronidazol 500mg, via oral, 2\nvezes por dia, por 14 dias .",
+        "C": "levofloxacina 500mg, via oral, dose única + doxiciclina 100mg, via oral, 2 vezes por dia, por 7\ndias.",
+        "D": "penicilina benzatina 2400000UI, dose única.",
+        "E": "penicilina benzatina 2400000UI, semanal, por 3 semanas."
+      },
+      "answer": "B",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Tradicionalmente, o diagnóstico de DIP baseia-se na presença de três critérios maiores (dor em abdome inferior, dor à mobilização do colo uterino, dor à mobilização dos anexos) mais um critério menor (ex VHS e PCR elevados) ou na presença de apenas um critério elaborado. De acordo com o quadro apresentado pela paciente está indicado tratamento ambulatorial. Ele aplica-se a mulheres que apresentam quadro clínico leve, exame abdominal e ginecológico sem sinais de pelviperitonite, que possam ingerir medicação por via oral e que não estejam incluídas nos critérios para tratamento hospitalar. O regime recomendado pelo CDC inclui - Ceftriaxone 250 mg, IM, dose única mais - Doxiciclina 100 mg, VO de 12 12 horas, por 14 dias por 14 dias. A doxiciclina venosa é extremamente dolorosa e traz alto índice de flebite. Como sua biodisponibilidade é equivalente entre a VO e IV, a via oral deve ser sempre preferida. com ou sem - Metronidazol 500 mg VO de 12 12h por 14 dias sua associação a esse esquema se deve à cobertura limitada dos agentes aos anaeróbios, além de sua efetividade contra a vaginose bacteriana, que é frequentemente associada à DIP. Resposta da questão letra B.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-37607",
+      "number": "37607",
+      "sourceNumber": "37607",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Antônia, 17 anos, G2P0A2, procurou Dr. Danilo pois apresentava secreção vaginal. Ao\nrealizar o exame especular, Dr. Danilo observou secreção purulenta no canal cervical e\nsangramento fácil, quando manipulado para coleta de swab endocervical. A paciente não\napresentava dor pélvica espontânea nem ao toque bimanual. Qual(is) o(s) agente(s) etiológico(s)\nmais provável(is) e tratamento indicado?",
+      "options": {
+        "A": "Gardinerella vaginalis ? Metronidazol creme\nvaginal.",
+        "B": "Gardinerella vaginalis e Trichomonas\nvaginalis- Secnidazol 2 gramas, via oral.",
+        "C": "Neisseria gonorrhoeae ? Azitromicina 1\ngrama, via oral.",
+        "D": "Neisseria gonorrhoeae e Chlamydia\ntrachomatis ? Ciprofloxacina 500 mg, via oral,\ndose única e azitromicina 1 grama, via oral,\ndose única."
+      },
+      "answer": "D",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "As cervicites de apresentam com alguns sintomas genitais leves, como corrimento vaginal, dispareunia ou disúria, associados à presença de cervicite mucopurulenta. O colo uterino pode ficar edemaciado, sangrando facilmente ao toque da espátula de Ayre. Pode ser encontrada a presença de secreção muco purulenta no orifício externo do colo uterino. As pacientes podem apresentar, ainda, síndrome uretral e sangramento vaginal pós-coito. Os principais agentes envolvidos são o gonococo e a clamídia e o tratamento clássico envolve a administração em dose única oral de ciprofloxacina 500 mg e azitromicina de 1,0 g. Atualmente a ciprofloxacina vem sendo substituída pela dose intramuscular de ceftriaxone, baseado no alto de índice de resistência que o gonococo tem apresentado a este agente. Desta forma, a letra D responde a questão.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-36999",
+      "number": "36999",
+      "sourceNumber": "36999",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Uma mulher casada, de 25 anos de idade vem à Unidade Básica de Saúde com queixa\nde prurido vulvar, disúria e corrimento\nvaginal branco. No exame físico, o médico encontrou\nescoriações vulvares e eritema da mucosa vaginal. O pH do corrimento vaginal realizado com a fita\nfoi de 3,5. Qual a conduta mais apropriada?",
+      "options": {
+        "A": "Fluconazol (150mg) por via oral para o casal.",
+        "B": "O exame e tratamento do parceiro\nusualmente não são necessários.",
+        "C": "Creme vaginal de imidazol, diariamente, de 3\na 7 dias e fluconazol (150mg) por via oral\n\npara o esposo.",
+        "D": "Creme vaginal de imidazol diariamente, de 3\na 7 dias e solicitar exames rotineiros das\nprincipais DSTs para o casal."
+      },
+      "answer": "A",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A paciente apresenta claramente um quadro de vulvovaginite. O prurido vulvar, o corrimento branco e o pH mais baixo (inferior a 4,5) apontam para a candidíase como a patologia mais provável. Um exame a fresco da secreção poderia demonstrar a presença de esporos ou hifas. A cândida é parte integrante da flora vaginal de várias mulheres e apresenta baixa transmissão sexual. Mas, apesar da via sexual não ser a principal forma de transmissão na candidíase, ela pode ocorrer. Não há necessidade de tratamento do parceiro sexual, o que já torna incorretas as letras A, C e D. O fluconazol oral, na dose de 150 mg é uma das drogas de escolha para candidíase e os derivados imidazólicos também são opções terapêuticas. Assim, a resposta correta está na letra B.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "inferred"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-37016",
+      "number": "37016",
+      "sourceNumber": "37016",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Gestante de 28 semanas, assintomática, realizou VDRL que foi positivo com titulação\n1:32. Durante a história, identificou-se que a\ndoença tem menos de 1 ano de evolução. Qual a\nmelhor opção terapêutica?",
+      "options": {
+        "A": "Penicilina Cristalina 18 milhões UI por dia,\ndurante 10 dias.",
+        "B": "Penicilina G benzatina 2,4 milhões UI em\ndose única.",
+        "C": "Penicilina G benzatina 2,4 milhões UI/semana\ndurante 2 semanas.",
+        "D": "Penicilina G benzatina 2,4 milhões UI/semana\ndurante 3 semanas."
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A sífilis durante a gestação está associada a vários eventos adversos, como crescimento intrauterino restrito, óbito fetal, óbito neonatal, parto prematuro e anomalias congênitas. Segundo o Ministério da Saúde, toda gestante com VDRL positivo e 1 8, considerar o resultado positivo em qualquer titulação como sífilis em atividade e iniciar o tratamento do casal. A penicilina benzatina deve ser administrada via intramuscular na dose de 2,4 milhões de UI para sífilis primária 4,8 milhões de UI para sífilis secundária e para a latente recente (menos de um ano de evolução) e 7,2 milhões de IU para sífilis terciária, latente tardia ou de duração desconhecida. Desta forma, trata-se de uma sífilis latente recente e a resposta da questão está na letra C.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-37962",
+      "number": "37962",
+      "sourceNumber": "37962",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Julgue o item, referente aos corrimentos vaginais. Os critérios diagnósticos de Amsel\npara a vaginose bacteriana compreendem: corrimento vaginal fino, homogêneo,branco\nacinzentado; pH vaginal maior que 4,5; teste das aminas\n\npositivo e presença de células indicadoras no exame microscópico.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "A",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Os critérios de Amsel correspondem aos critérios diagnósticos da vaginose bacteriana (VB). A presença de três dos quatro critérios fecha o diagnóstico de VB - Corrimento homogêneo, fino, branco-acinzentado - pH vaginal 4,5 (em geral 4,7 a 5,7). -Teste das Aminas (Whiff Test) positivo adição de uma ou duas gotas de hidróxido de potássio a 10% na secreção coletada do fundo-de-saco vaginal depositada em uma lâmina, com aparecimento imediato de odor desagradável de peixe. - Visualização de Clue Cells ou células guia ou células indicadoras no exame microscópico a fresco da secreção vaginal. Consequentemente, a assertiva está correta.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "inferred"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-37963",
+      "number": "37963",
+      "sourceNumber": "37963",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Julgue o item, referente aos corrimentos vaginais. No quadro clínico da tricomoníase,\nobserva-se corrimento vaginal fétido, amarelo\nbolhoso, associado a colpite focal (colo em\nframboesa). Prurido, disúria e dispareunia completam o quadro.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "A",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A queixa mais comum da tricomoníase é de corrimento. Este está presente em apenas 35% dos casos, e é normalmente abundante, amarelo ou amarelo-esverdeado (mais comum), mal cheiroso e bolhoso. O pH vaginal é maior que 5, o que se observa em 70% dos casos, e normalmente se encontra entre 5 e 6. Na tricomoníase, o eritema vulvar ou escoriação não são comuns. São comuns os sintomas inflamatórios da vagina, como ardência, hiperemia e edema. Algumas pacientes referem dispareunia superficial, prurido vulvar ocasional e disúria. Um achado peculiar da tricomoníase é a colpite focal ou difusa caracterizada por um colo em framboesa ou colo em morango. Ele ocorre devido à dilatação capilar e hemorragias puntiformes. Esta alteração é vista a olho nu em apenas 2% dos casos, mas na colposcopia é evidente em até 90%. É um achado altamente específico da tricomoníase. Assim, a assertiva está correta.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "inferred"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-138601",
+      "number": "138601",
+      "sourceNumber": "138601",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Em consulta médica no posto de saúde, paciente jovem relata ?ferida? na genitália\nexterna que surgiu há cerca de 30 dias. Ao exame, nota-se úlcera vulvar, única, de contornos\nimprecisos, fundo purulento e dolorosa ao toque, associada a linfadenopatia homolateral. O\nesfregaço do material da borda da úlcera, corado pelo método de GRAM, revelou bacilos Gram\nnegativos intracelulares. A hipótese diagnóstica principal é",
+      "options": {
+        "A": "sífilis primária.",
+        "B": "úlcera luética secundária.",
+        "C": "cancro mole",
+        "D": "donovanose.",
+        "E": "linfogranuloma venéreo."
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Ao descrever um quadro de úlcera vulvar dolorosa devemos pensar em duas doenças sexualmente transmissíveis cancro mole e herpes. O fundo purulento sugere mais cancro mole do que herpes (que também nem estava entre as alternativas…). Pela autoinoculação é mais comum encontrarmos múltiplas úlceras no cancro mole, mas a doença pode ter iniciado por uma única úlcera. Resposta letra C.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-138669",
+      "number": "138669",
+      "sourceNumber": "138669",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Paciente do sexo feminino, com 20 anos de idade, vai à Unidade Básica de Saúde\nqueixando-se de corrimento genital presente há um mês, de coloração esbranquiçada, em\nquantidade abundante, com odor fétido, que piora após o coito. Não relata outros sintomas\nassociados. A paciente iniciou a atividade sexual há um ano e, nesse período, teve três parceiros\nsexuais. Atualmente tem apenas um parceiro e, nas relações sexuais, faz uso ocasional de\npreservativo. Ao exame especular vaginal foi observado corrimento vaginal esbranquiçado e\nabundante, fétido, e ausência de anormalidades nas paredes vaginais e colo uterino. O teste de\naminas foi positivo e o pH=5,5. Qual o diagnóstico principal e o tratamento adequado para esta\npaciente?",
+      "options": {
+        "A": "Tricomoníase. Tratar com metronidazol, por via oral, durante sete dias, e o parceiro com\nmetronidazol em dose única.",
+        "B": "Candidíase vulvovaginal. Tratar a paciente com\nfl uconazol, por via oral, em dose única.",
+        "C": "Vaginose bacteriana. Tratar a paciente com metronidazol, por via oral , durante sete dias.",
+        "D": "Gonorréia. Tratar a paciente e o parceiro com azitromicina em dose única.",
+        "E": "Infecção por clamídia. Tratar a paciente com\n\ndoxiciclina por 14 dias e o parceiro, com azitromicina em dose única."
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O diagnóstico de vaginose classicamente é feito pelo encontro de 3 dos 4 critérios de Amsel Corrimento homogêneo, fino, branco-acinzentado pH vaginal 4,5 Teste das Aminas (Whiff Test) positivo Visualização de Clue Cells ou células alvo no exame microscópico a fresco da secreção vaginal. O provável diagnóstico é de vaginose bacteriana e o tratamento é feito classicamente com metronidazol oral ou tópico. Resposta letra C.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-138738",
+      "number": "138738",
+      "sourceNumber": "138738",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Homem, com 25 anos de idade, solteiro, procura atendimento na unidade básica de\nsaúde, queixando-se de ferida genital. Ao exame\nclínico, foi observada lesão peniana ulcerada,\neritematosa, com diâmetro de 1 cm, sem secreção, base endurada, limites nítidos, bordas a pique,\nnão dolorosa, nem pruriginosa. Qual o diagnóstico clínico principal?",
+      "options": {
+        "A": "Sífilis primária.",
+        "B": "Sífilis secundária.",
+        "C": "Cancro mole.",
+        "D": "Cancro misto.",
+        "E": "Linfogranuloma venéreo."
+      },
+      "answer": "A",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A descrição de uma úlcera única, indolor, sem secreção purulenta e com bordos endurecidos sugere a possibilidade de sífilis primária, chamada também de cancro duro. O tratamento deve ser realizado com penicilina benzatina na dose de 2,4 milhões de UI. Resposta letra A.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-138736",
+      "number": "138736",
+      "sourceNumber": "138736",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Mulher, com 21 anos de idade, estava próxima ao ponto de ônibus, quando foi\nabordada por um indivíduo estranho, que\nmediante ameaça com uma faca a obrigou entrar em uma\ncasa abandonada, próxima àquele local, onde a agrediu fisicamente e obrigou-a a manter relação\nsexual vaginal e anal. Em seguida o agressor evadiu-se. A mulher procurou, imediatamente um\nposto policial onde foi orientada a buscar auxílio médico e foi encaminhada à Unidade de\nAtendimento de Emergência. Analise os itens abaixo: I. Comunicar à unidade policial para a\nrealização de boletim de ocorrência, após autorização da paciente. II. Não realizar toque vaginal ao\natender a paciente por ser vítima de violência sexual e estupro.\n\nIII. Promover o acolhimento da paciente e examinar para verificar se existem lesões. IV. Explicar\nque trata-se de atendimento exclusivo da alçada\ndo Instituto Médico Legal. V. Promover assistência\nmédica visando a prevenção de doenças de transmissão sexual. VI. Ofertar anticoncepção de\nemergência caso não possua um método anticonceptivo efetivo. VII. Solicitar, antes de iniciar a\navaliação da paciente, a presença do pai ou marido, se for o caso. Assinale a alternativa que\ncontém apenas itens corretos de medidas médico-legais a serem tomadas pelo médico de plantão.",
+      "options": {
+        "A": "I, IV, VI e VII.",
+        "B": "I, II, IV e VII.",
+        "C": "I, III, V e VI.",
+        "D": "II, III, IV e VI.",
+        "E": "III, V, VI e VII."
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A questão aborda um caso de violência sexual. Vamos avaliar as afirmativas. Afirmativa I correta A comunicação à autoridade policial só pode ocorrer com autorização da paciente. Afirmativa II incorreta não há restrição no exame físico, devendo ser realizado o exame necessário, obviamente sempre com o consentimento da paciente. Geralmente realizamos um exame especular para avaliar lacerações e colher material para possível identificação do agressor e rastreio de DSTs. Afirmativa III correta O acolhimento é fundamental e a paciente deve ser encaminhada para um serviço de psicologia que lhe de suporte. Afirmativa IV incorreta O atendimento à vítima de violência sexual não é exclusividade dos médicos peritos e nem do ginecologista. Qualquer médico pode realizar o atendimento. Afirmativas V e VI corretas O atendimento visa tratar possíveis lesões, prevenir gravidez indesejada e doenças que possam ter sido transmitidas com a agressão. Afirmativa VII incorreta não há obrigatoriedade de um acompanhante da paciente durante o atendimento. O médico é que não deve realizar o exame sem a presença de uma enfermeira na sala de atendimento. Resposta letra C",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    }
+  ]
+}

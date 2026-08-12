@@ -1,0 +1,299 @@
+{
+  "block": "med:med-gineco-e-obstetricia-med-obs-01",
+  "label": "MED · MED OBS 01",
+  "count": 9,
+  "questions": [
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-26480",
+      "number": "26480",
+      "sourceNumber": "26480",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Paciente do sexo feminino, 19 anos, apresenta quadro de dor em baixo ventre há 12hs,\ntipo cólica, progressiva, acompanhada de febre baixa, náuseas e mal estar geral. A paciente refere\nleucorreia amarelada fétida e disúria, com duração de cerca de 10 dias. Refere ainda que sua\nmenstruação está desregulada há vários meses, não sabendo precisar a data da última\nmenstruação. A paciente se encontra discretamente taquicárdica e pálida (informa que está em\ntratamento para anemia ferropetiva). O abdome é doloroso à palpação profunda em todo o andar\ninferior com Blumberg duvidoso. Qual das alternativas abaixo NÃO confere, respectivamente,\ndiagnóstico diferencial para o caso acima, alternativa diagnóstica adequada e tratamento:",
+      "options": {
+        "A": "Infecção do trato urinário; EAS; antibioticoterapia",
+        "B": "Doença infecciosa pélvica, USG e hemograma; tratamento clínico inicialmente",
+        "C": "Prenhez ectópica rota; hematócrito e homoglobina; laparotomia com ressecção da tuba uterina",
+        "D": "Apendicite, tomografia computadorizada; apendicectomia videolaparoscópica",
+        "E": "Abscesso de tuba uterina; videolaparoscopia diagnóstica, ressecção da tuba uterina"
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O quadro clínico da paciente sugere o diagnóstico de doença inflamatória pélvica. Entretanto, na existência de um quadro de dor abdominal pélvica, associada a anemia, irreguaridade menstrual sem precisão da data da última menstruação, e irritação peritoneal, devemos sempre descartar prenhez tubária rota. O diagnóstico é feito pela suspeição clínica, dosagem de hematócrito e hemoglobina e, de forma indispensável, uma USG abdominal pélvica. Como tratamento, devemos tentar preservar a tuba uterina, pois a paciente possui apenas 19 anos. A ressecção da tuba uterina poderá acarretar dificuldade para uma possível gravidez futura e o ideal seria uma salpingostomia. Letra C incorreta.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-13453",
+      "number": "13453",
+      "sourceNumber": "13453",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Mulher de 25 anos, com abortamento de repetição, é portadora de malformação\nMulleriana do tipo útero bicorno. Quanto à origem etiopatogênica, o defeito é:",
+      "options": {
+        "A": "Endócrino.",
+        "B": "Imunológico.",
+        "C": "Anatômico.",
+        "D": "Infeccioso.",
+        "E": "Genético."
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão bastante simples e direta bastava saber o que é um útero bicorno, então vamos lembrar. O útero bicorno corresponde à fusão incompleta dos ductos de Muller. Como assim O ducto de Muller da direita se funde ao ducto de Muller da esquerda para formar o útero. Quando esta fusão é incompleta, há malformação uterina e surgem os úteros septados e bicornos, por exemplo. Logo, é um defeito anatômico que se apresenta como um útero que possui um único colo, mas que pode se apresentar com diversos graus de separação entre os dois cornos. Cabe aqui lembrar que os dois cornos podem ser simétricos ou não. Pacientes com esta malformação podem se queixar de dismenorréia e dispareunia. Há associação com infertilidade e abortamento habitual, como a paciente em questão. Assim, a resposta da questão é a alternativa C, pois é um defeito anatômico.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-19274",
+      "number": "19274",
+      "sourceNumber": "19274",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Gestante de 22 anos de idade, primigesta chega ao pronto-socorro com crise\nconvulsiva tônico-clônica generalizada, edema\ngeneralizado ++/4+. Faz-se o diagnóstico de\neclâmpsia e se inicia tratamento com sulfato de magnésio. Após a administração rápida da dose do\nataque, a paciente apresenta diminuição progressiva da frequência respiratória e ausência de\nreflexos patelares. O tratamento medicamentoso a ser instituido imediatamente é:",
+      "options": {
+        "A": "Adrenalina",
+        "B": "Gluconato de cálcio",
+        "C": "Bicarbonato de sódio",
+        "D": "Prostigmine",
+        "E": "Succinilcolina"
+      },
+      "answer": "B",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O sulfato de magnésio é a medicação mais efetiva para prevenir ou controlar as convulsões no contexto de pré-eclampsia grave. Acontece que existe risco de intoxicação pelo magnésio, o que pode causar depressão muscular, respiratória e até parada cardíaca. Por isso, é tão necessário manter o paciente em vigilância durante a infusão dessa medicação através da avaliação dos reflexos tendinosos profundos, da frequência respiratória (deve ser 12 irpm) e da diurese (quando menor ou igual a 25 ml h, existe risco de intoxicação, o que demanda ajuste da dose). Qualquer sinal de intoxicação indica imediata suspensão e administração de gluconato de cálcio 1g pro via intravenosa, infundido lentamente em cerca de 3-5 minutos. Gabarito B.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-32480",
+      "number": "32480",
+      "sourceNumber": "32480",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Não é fator de risco para gravidez ectópica:",
+      "options": {
+        "A": "Uso de progestágeno injetável ou minipílula de progesterona.",
+        "B": "Uso de Dispositivo intrauterino (DIU).",
+        "C": "Infecção pélvica.",
+        "D": "Gravidez ectópica prévia.",
+        "E": "Ligadura tubária."
+      },
+      "answer": "E",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Uma questão mal elaborada. Vamos analisar cada uma das alternativas separadamente. Letra A De acordo com o Manual para Concursos TEGO da SOGIMIG, 2007, os progestágenos são fatores de risco de gravidez ectópica. Eles não são tão eficazes em inibir a ovulação, agindo mais localmente. Transcrevemos trecho do livro supracitado que comprova essa afirmativa O uso de contraceptivos hormonais diminui a chance de gravidezes eutópicas e ectópicas, porém quando há falha nos métodos contraceptivos, o risco de ocorrer gravidez ectópica é maior. Vinte e dois por cento das gravidezes que ocorrem durante o uso desses medicamentos são ectópicas. Esse risco parece ser mais elevado entre usuárias de contraceptivos à base de progestogênios puros (levonorgestrel, acetato de medroxiprogesterona e minipílula), o que parece se dever à diminuição da mobilidade tubária causada por essas drogas. Letra B O DIU, seja de cobre ou hormonal, diminui o risco de uma gestação. Entretanto, em caso de falha do método, a chance da gravidez instalar-se fora da cavidade uterina é maior do que nas pacientes usuárias de outros métodos ou não usuárias de qualquer método. Quando a gravidez ocorre, uma em cada 30 será ectópica. Isso ocorre porque o mecanismo de ação do DIU se restringe à alteração da função tubária, do muco cervical e do endométrio. Não interfere na função ovulatória e, portanto, em caso de concepção, existe uma grande probabilidade desta gravidez implantar-se fora da cavidade uterina. Portanto, o risco relativo de gravidez ectópica é maior com o uso do método, porém o risco absoluto não. Importante destacar que tanto o DIU de cobre como o DIU medicado com progesterona podem ser utilizados em pacientes que já tiveram um episódio de gravidez ectópica. Letra C O dano tubário ocasionado por infecção pélvica (doença inflamatória pélvica) aumenta o risco de gestação ectópica. Letra D Paciente que teve uma gravidez ectópica passa a ter um risco 27% maior de ter outra. Esse risco é maior nas pacientes que foram submetidas a tratamento conservador (salpingostomia) do que nas submetidas a tratamento radical (salpingectomia). Letra E A laqueadura tubária (LT) diminui o risco de uma gestação. Entretanto, em caso de falha do método, a chance da gravidez instalar-se fora da cavidade uterina é maior do que nas não usuárias de qualquer método. Como todas alternativas representam fatores de risco para gravidez ectópica, a questão não apresenta uma alternativa correta e foi anulada.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-247433",
+      "number": "247433",
+      "sourceNumber": "247433",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Paciente GII PCI, Idade Gestacional (IG) de 32 semanas, procurou o pronto-socorro\ncom queixa de sangramento há 30 minutos em\npequena quantidade. Nega queixas álgicas,\ncontrações e trauma abdominal. Ao exame: AFU 30 cm, BCF 140 bpm, tônus uterino normal,\nexame especular com sangramento em pequena quantidade. A hipótese diagnóstica mais provável\ne conduta são:",
+      "options": {
+        "A": "placenta prévia. Solicitar ecografia.",
+        "B": "descolamento prematuro de placenta. Solicitar ecografia.",
+        "C": "placenta prévia. Interrupção da gestação.",
+        "D": "descolamento de placenta. Interrupção da gestação."
+      },
+      "answer": "A",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Gestante de 32 semanas com sangramento vaginal em pequena quantidade, sem dor, com tônus uterino normal e feto aparentemente bem, qual a principal hipótese diagnóstica Placenta prévia. Descolamento prematuro de placenta daria hipertonia uterina e o feto poderia não estar bem. O sangramento da placenta prévia é intermitente, não causa alteração fetal nem alteração do tônus uterino, deve ser confirmado pelo ultrassom. De forma geral, resolução com 36-37 semanas. Assim, resposta letra A) Placenta prévia. Solicitar ecografia.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-248944",
+      "number": "248944",
+      "sourceNumber": "248944",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Assinale a alternativa incorreta:",
+      "options": {
+        "A": "a Placenta Prévia (PP) tem taxas de mortalidade e complicações maternas bem inferiores ao\ndescola-mento prematuro de placenta",
+        "B": "a PP deve ser suspeitada em toda gestante com mais de 20 semanas de gestação e\nsangramento vaginal",
+        "C": "a PP é muito menos comum em gestações gemelares do que em gestações simples",
+        "D": "as metas do manejo da PP são determinar se haverá resolução espontânea com a evolução da\nidade gestacional, reduzir o risco de sangramento e reduzir o risco de parto prematuro"
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos avaliar as alternativas separadamente. A letra A está correta, pois a placenta prévia, apesar de também ser um quadro hemorrágico e com possibilidade de complicações graves, tem menor morbidade e mortalidade do que o descolamento prematuro de placenta. A letra B está correta, pois a placenta prévia é um diagnóstico diferencial das hemorragias da segunda metade da gestação. A letra C está incorreta, pois gestação gemelar aumenta o risco de placenta prévia, uma vez que há aumento da massa placentária. A letra D está correta, pois alguns casos ocorre a resolução espontânea pela migração placentária e devemos controlar o risco de sangramento e complicações da prematuridade. Resposta letra C.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-249884",
+      "number": "249884",
+      "sourceNumber": "249884",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Mulher de 30 anos, com sangramento uterino, dor hipogástrica e dosagem de B-hCG =\n1600 mlU/ml, apresenta ultrassonografia com\nendométrio ecogênico com 14 mm de espessura.\n\nDiante deste quadro, a hipótese diagnóstica é de:",
+      "options": {
+        "A": "aborto retido.",
+        "B": "restos ovulares.",
+        "C": "gravidez ectópica.",
+        "D": "neoplasia trofoblástica gestacional."
+      },
+      "answer": "C",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão descreve uma paciente com quadro de sangramento de primeira metade da gestação. Como o beta-hCG é maior que 1500 mlU ml e a ultrassonografia não evidenciou imagem de gestação intrauterina (ao menos o saco gestacional), a principal hipótese diagnóstica é de gestação ectópica. Resposta letra C.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-247437",
+      "number": "247437",
+      "sourceNumber": "247437",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Paciente gestante Rh negativa, GIV PNII AI, IG de 24 semanas, apresentou teste de\nCoombs indireto positivo 1:32. Esposo\napresenta Rh positivo. A paciente não se lembra de ter feito\nprofilaxia nas outras gestações e refere gestações anteriores sem intercorrências. A conduta mais\napropriada nessa gestação é:",
+      "options": {
+        "A": "Repetir o Coombs no último trimestre.",
+        "B": "Tranquilizar a paciente e orientar que pode ser um falso-positivo devido a gestações anteriores.",
+        "C": "Realizar a imunoglobulina anti-Rh e indicar cordocentese para transfusão fetal.",
+        "D": "Iniciar o rastreio com o Doppler da artéria cerebral média e considerar valor alterado se VS max\n\n> 1,5 MoM."
+      },
+      "answer": "D",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Uma paciente multípara, Rh negativo com marido Rh positivo, não se recorda de ter feito profilaxia para DHPN nas outras gestações. Ela apresenta um Coombs indireto positivo de 1 32 e, portanto, já foi sensibilizada. Com este valor do Coombs indireto (1 16) há risco de hemólise fetal, estando indicado o rastreamento através da Dopplervelocimetria da artéria cerebral média. O exame está alterado quando o pico sistólico está acima de 1,5 MoM e a cordocentese deverá ser realizada para confirmação diagnóstica e transfusão intrauterina. Não há mais indicação de imunoglobulina, pois a paciente já foi sensibilizada e apenas a repetição do exame não é aceitável com este valor de Coombs indireto. Resposta letra D.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-obs-01-249519",
+      "number": "249519",
+      "sourceNumber": "249519",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-obs-01",
+      "collectionLabel": "MED · MED OBS 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED OBS 01",
+      "subtopic": "",
+      "stem": "Situação que representa mínimo risco de Isoimunização materno fetal:",
+      "options": {
+        "A": "rotura prematura de membranas.",
+        "B": "gravidez ectópica rota.",
+        "C": "remoção manual de placenta no parto.",
+        "D": "placenta prévia centro-total."
+      },
+      "answer": "A",
+      "source": "Gineco e obstetricia/MED OBS 01/MED OBS 01.txt",
+      "sourceLabel": "MED · MED OBS 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A aloimunização ocorre quando há contato do sangue fetal com materno, necessitando ser ao menos 0,25ml de sangue fetal. Assim, nos casos de placenta prévia, gravidez ectópica rota, remoção manual de placenta no parto, temos uma maior chance de ocorrer essa transferência de sangue fetal para mãe, já na rotura prematura de membranas ovulares o risco é bem menor. Assim, resposta letra A.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED OBS 01",
+        "MED"
+      ],
+      "answerSource": "explicit"
+    }
+  ]
+}
