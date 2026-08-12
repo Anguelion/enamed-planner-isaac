@@ -3143,6 +3143,7 @@ body.dark .material-folder[open] summary{background:var(--materials-wash);color:
    lateral vazia e comprimem a area do player ate zero. */
 .video-command-center .video-layout.video-focus-mode{grid-template-columns:minmax(0,1fr)}
 .video-command-center .video-layout.video-focus-mode>.video-player-card{grid-column:1/-1;width:100%}
+.video-command-center .video-layout.video-focus-mode>.video-player-card{grid-template-rows:auto auto auto auto}
 .video-command-center .video-sidebar,.video-command-center .video-player-card{border-color:rgba(88,120,150,.16);box-shadow:0 14px 34px rgba(23,48,68,.07)}
 .video-command-center .video-sidebar{top:calc(var(--app-header-height) + 12px);max-height:calc(100dvh - var(--app-header-height) - 28px);padding:17px;border-radius:18px;scrollbar-width:thin;scrollbar-color:rgba(101,126,147,.35) transparent}
 .video-sidebar-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:3px 2px 14px;border-bottom:1px solid var(--line)}
@@ -3209,6 +3210,7 @@ body.dark .material-folder[open] summary{background:var(--materials-wash);color:
 .video-bookmark-empty strong{color:var(--ink);font-size:12px}
 .video-bookmark-empty p{max-width:220px;margin:0;font-size:10px;line-height:1.45}
 .video-command-center .video-player-card>.video-flashcards{margin-top:4px;border-top:1px solid var(--line);padding-top:18px}
+.video-command-center .video-flashcards-title{cursor:help}
 .video-command-center .video-empty{min-height:520px}
 .video-empty-icon{display:grid;place-items:center;width:66px;height:66px;margin:0 auto 15px;border-radius:20px;background:var(--soft-blue);color:var(--blue);font-size:22px}
 .video-command-center .video-empty h2{margin:0 0 6px;color:var(--ink)}

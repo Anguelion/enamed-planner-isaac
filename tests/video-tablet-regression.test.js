@@ -26,3 +26,12 @@ test('modo foco ocupa toda a largura em tablet paisagem', () => {
   assert.match(css, /\.video-command-center \.video-layout\.video-focus-mode\{grid-template-columns:minmax\(0,1fr\)\}/);
   assert.match(css, /\.video-command-center \.video-layout\.video-focus-mode>\.video-player-card\{grid-column:1\/-1;width:100%\}/);
 });
+
+test('modo foco aproxima os flashcards dos controles do vídeo', () => {
+  assert.match(css, /\.video-command-center \.video-layout\.video-focus-mode>\.video-player-card\{grid-template-rows:auto auto auto auto\}/);
+});
+
+test('flashcards da aula usam título curto e ajuda sob demanda', () => {
+  assert.match(planner, /class="video-flashcards-title" title="\$\{escapeAttr\(editorHelp\)\}">Flashcards<\/h3>/);
+  assert.doesNotMatch(planner, /<h3>Flashcards deste vídeo<\/h3>/);
+});
