@@ -917,6 +917,7 @@ body.dark .question-difficulty-btn.difficulty-dificil.active{background:#4a211f;
 .comment-tabs .error{background:#f59e0b}
 .comment-tabs .kids{background:#0891b2}
 .question-comment-card{border-radius:8px;padding:18px;line-height:1.7;white-space:pre-wrap;background:#f3f0ff;border:1px solid #ddd6fe}
+.question-comment-card>div{text-align:justify;text-justify:inter-word;hyphens:auto;overflow-wrap:anywhere}
 .question-comment-card strong{display:block;margin-bottom:8px;font-size:18px;color:#6d28d9}
 .question-comment-card.analysis{background:#ecfdf5;border-color:#bbf7d0}
 .question-comment-card.analysis strong{color:#047857}
@@ -943,7 +944,7 @@ body.dark .question-difficulty-btn.difficulty-dificil.active{background:#4a211f;
 .analysis-grid{display:grid;gap:10px;white-space:normal}
 .analysis-chip{border:1px solid var(--line);border-left-width:5px;border-radius:8px;background:#fff;padding:10px 12px}
 .analysis-chip span{display:inline-flex;border-radius:999px;padding:3px 8px;font-size:11px;font-weight:900;margin-bottom:6px}
-.analysis-chip p{margin:0;white-space:pre-wrap}
+.analysis-chip p{margin:0;white-space:pre-wrap;text-align:justify;text-justify:inter-word;hyphens:auto;overflow-wrap:anywhere}
 .analysis-chip.correct{border-left-color:var(--green);background:#f1fbf4}
 .analysis-chip.correct span{background:var(--soft-green);color:var(--green)}
 .analysis-chip.why{border-left-color:var(--blue);background:#f2f8ff}

@@ -69,7 +69,47 @@ def clean_comment(value: str) -> str:
     """Remove a quebra visual de linhas do PDF e mantém um parágrafo por questão."""
     value = clean_text(value)
     value = re.sub(r"^\s*Comentário:\s*", "", value, flags=re.I)
-    return re.sub(r"\s+", " ", value).strip()
+    value = re.sub(r"\s+", " ", value).strip()
+    return polish_comment(value)
+
+
+def match_case(replacement: str, source: str) -> str:
+    if source.isupper():
+        return replacement.upper()
+    if source[:1].isupper():
+        return replacement[:1].upper() + replacement[1:]
+    return replacement
+
+
+def polish_comment(value: str) -> str:
+    """Corrige ruído gráfico e erros inequívocos sem reescrever conteúdo médico."""
+    replacements = {
+        "respsota": "resposta",
+        "gabario": "gabarito",
+        "gabarto": "gabarito",
+        "desfribrilação": "desfibrilação",
+        "desfribrilatório": "desfibrilatório",
+        "posssamos": "possamos",
+        "tratarar": "tratar",
+        "reaminação": "reanimação",
+        "atriventricular": "atrioventricular",
+        "condita": "conduta",
+        "posssível": "possível",
+    }
+    for wrong, correct in replacements.items():
+        value = re.sub(
+            rf"\b{re.escape(wrong)}\b",
+            lambda match: match_case(correct, match.group(0)),
+            value,
+            flags=re.I,
+        )
+    value = re.sub(r"(?:\.\s*){3,}", "… ", value)
+    value = re.sub(r"\s+([,;:!?\.])", r"\1", value)
+    value = re.sub(r"([,;:!?])(?=[A-Za-zÀ-ÿ])", r"\1 ", value)
+    value = re.sub(r"\(\s+", "(", value)
+    value = re.sub(r"\s+\)", ")", value)
+    value = re.sub(r"\s+", " ", value)
+    return value.strip()
 
 
 def parse_question(body: str) -> tuple[str, dict[str, str]]:
