@@ -1390,7 +1390,8 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   merged.casoDoDia = {};
   new Set([...Object.keys(remote.casoDoDia || {}), ...Object.keys(local.casoDoDia || {})]).forEach(key => {
     const r = remote.casoDoDia?.[key] || {}, l = local.casoDoDia?.[key] || {};
-    merged.casoDoDia[key] = { revealed: Math.max(n(r.revealed), n(l.revealed)), wrongCount: Math.max(n(r.wrongCount), n(l.wrongCount)), solved: Boolean(r.solved || l.solved), gaveUp: Boolean(r.gaveUp || l.gaveUp), explanationOpen: Boolean(l.explanationOpen || r.explanationOpen) };
+    const solvedAtHints = [n(r.solvedAtHint), n(l.solvedAtHint)].filter(value => value > 0);
+    merged.casoDoDia[key] = { revealed: Math.max(n(r.revealed), n(l.revealed)), wrongCount: Math.max(n(r.wrongCount), n(l.wrongCount)), solved: Boolean(r.solved || l.solved), solvedAtHint: solvedAtHints.length ? Math.min(...solvedAtHints) : 0, gaveUp: Boolean(r.gaveUp || l.gaveUp), explanationOpen: Boolean(l.explanationOpen || r.explanationOpen) };
   });
   merged.videoFlashcards = {};
   new Set([...Object.keys(remote.videoFlashcards || {}), ...Object.keys(local.videoFlashcards || {})]).forEach(id => {
@@ -4765,6 +4766,7 @@ function renderCasoDoDia() {
   const progress = casoDoDiaProgress(caseKey);
   const finished = progress.solved || progress.gaveUp;
   const revealed = Math.min(TOTAL_CASO_HINTS, Math.max(1, n(progress.revealed) || 1));
+  const solvedAtHint = Math.min(TOTAL_CASO_HINTS, Math.max(1, n(progress.solvedAtHint) || revealed));
   const shown = finished ? TOTAL_CASO_HINTS : revealed;
   const dots = Array.from({length:TOTAL_CASO_HINTS}, (_,i) => `<span class="caso-dot ${i<shown?'is-lit':''} ${progress.solved && i===revealed-1?'is-win':''}"></span>`).join('');
   const hintsHtml = item.hints.slice(0, shown).map((text,i) => `<div class="caso-hint ${i===revealed-1 && !finished ? 'is-current':''}"><span class="caso-hint-num">${i+1}</span><span class="caso-hint-text">${escapeHtml(text)}</span></div>`).join('');
@@ -4772,7 +4774,7 @@ function renderCasoDoDia() {
   if(progress.solved) {
     diagnosisTitle = `<div class="caso-diagnosis-title caso-diagnosis-title-win" role="status">
       <span class="caso-diagnosis-icon" aria-hidden="true">✓</span>
-      <span class="caso-diagnosis-kicker">Você acertou! <strong class="caso-hint-score" aria-label="Acertou com ${revealed} de ${TOTAL_CASO_HINTS} pistas">(${revealed} de ${TOTAL_CASO_HINTS})</strong></span>
+      <span class="caso-diagnosis-kicker">Você acertou! <strong class="caso-hint-score" aria-label="Acertou com ${solvedAtHint} de ${TOTAL_CASO_HINTS} pistas">(${solvedAtHint} de ${TOTAL_CASO_HINTS})</strong></span>
       <h2>${escapeHtml(item.diagnosis)}</h2>
     </div>`;
   } else if(progress.gaveUp) {
@@ -4813,7 +4815,10 @@ function bindCasoDoDia() {
   const caseKey = `caso-${item.number}`;
   const progress = casoDoDiaProgress(caseKey);
   const finish = (won) => {
-    if(won) progress.solved = true; else progress.gaveUp = true;
+    if(won) {
+      progress.solved = true;
+      progress.solvedAtHint = Math.min(TOTAL_CASO_HINTS, Math.max(1, n(progress.revealed) || 1));
+    } else progress.gaveUp = true;
     persist();
   };
   const advance = () => {
