@@ -244,6 +244,14 @@ test('Missão mostra claramente qual aula foi selecionada',()=>{
   assert.match(css,/\.block-strip\{[^}]*scroll-snap-type:none/);
 });
 
+test('Missão mantém um contorno visível ao redor do bloco selecionado',()=>{
+  const root=path.resolve(__dirname,'..');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(css,/\.block-chip\.active\{[^}]*outline:3px solid var\(--blue\)/);
+  assert.match(css,/\.block-chip\.active\{[^}]*outline-offset:2px/);
+  assert.match(css,/body\.dark \.block-chip\.active\{[^}]*outline-color:#79b7ff/);
+});
+
 test('Missão permite favoritar aulas futuras e filtrá-las em todos os blocos',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
