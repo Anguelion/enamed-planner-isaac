@@ -1,0 +1,193 @@
+{
+  "file": "Reumatologia\\REU 1\\REU 1.txt",
+  "specialty": "Reumatologia",
+  "topic": "REU 1",
+  "found": 500,
+  "imported": 454,
+  "skipped": [
+    {
+      "id": "103825",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "61512",
+      "reason": "anulada"
+    },
+    {
+      "id": "26594",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "7465",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "324813",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "324814",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "324815",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "206043",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "206045",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "206046",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "321302",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "321332",
+      "reason": "anulada"
+    },
+    {
+      "id": "51263",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27696",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "298888",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "261214",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "135070",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "108181",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "108183",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "82077",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "88648",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "212088",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "137694",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "137599",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "335070",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "43312",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "23163",
+      "reason": "anulada"
+    },
+    {
+      "id": "354764",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "317161",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "295424",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "274765",
+      "reason": "anulada"
+    },
+    {
+      "id": "232239",
+      "reason": "anulada"
+    },
+    {
+      "id": "216490",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "202697",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "178831",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "160473",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "160545",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9354",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "105686",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "278931",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "244708",
+      "reason": "anulada"
+    },
+    {
+      "id": "154403",
+      "reason": "anulada"
+    },
+    {
+      "id": "141269",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "239888",
+      "reason": "anulada"
+    },
+    {
+      "id": "159507",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "319544",
+      "reason": "não objetiva"
+    }
+  ]
+}

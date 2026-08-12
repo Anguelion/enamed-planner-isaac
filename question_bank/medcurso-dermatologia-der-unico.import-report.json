@@ -1,0 +1,189 @@
+{
+  "file": "Dermatologia\\DER UNICO.txt",
+  "specialty": "Dermatologia",
+  "topic": "DER UNICO",
+  "found": 500,
+  "imported": 455,
+  "skipped": [
+    {
+      "id": "215225",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "131417",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "129781",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "10014",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "7505",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "354424",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "294418",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "294419",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "294420",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230160",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230161",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230162",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230184",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230186",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "129955",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "62873",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "65751",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37594",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37620",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "29442",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "25305",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "25308",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "8856",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "6959",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "265566",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "265567",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "265568",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "265569",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "265570",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "214510",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "152169",
+      "reason": "anulada"
+    },
+    {
+      "id": "152170",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "135046",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "108131",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "82082",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "49164",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "49165",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "352395",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "352394",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "183928",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "159562",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "215097",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "127154",
+      "reason": "anulada"
+    },
+    {
+      "id": "295339",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "295413",
+      "reason": "gabarito não identificado com segurança"
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "file": "Gastrologia\\GAS 3\\GAS 3.txt",
+  "specialty": "Gastroenterologia",
+  "topic": "GAS 3",
+  "found": 500,
+  "imported": 423,
+  "skipped": [
+    {
+      "id": "281167",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "66938",
+      "reason": "anulada"
+    },
+    {
+      "id": "158814",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "110043",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "109777",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "81992",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "81963",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "81966",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "354440",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "354439",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230121",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230122",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230123",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230130",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230131",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230132",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "176345",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152251",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152200",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152203",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152210",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "129950",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "85049",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "85057",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "85063",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "49321",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "49329",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "49343",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "49356",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "157718",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "51138",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37392",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37398",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "260874",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "260875",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "260876",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "260877",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "260878",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "260879",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "274358",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "265561",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "265563",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "196632",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "134966",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "108145",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "82023",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "79674",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "88688",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "64300",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "64686",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "49160",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "49140",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "366252",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "366251",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "301269",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "301281",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "291564",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "291565",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "291566",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "291567",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "266423",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "266424",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "266427",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "273337",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "212099",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "212135",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "177233",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "175129",
+      "reason": "anulada"
+    },
+    {
+      "id": "159599",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "158008",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "321160",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "321183",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "257369",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "260694",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "260712",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "246370",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "212988",
+      "reason": "gabarito não identificado com segurança"
+    }
+  ]
+}

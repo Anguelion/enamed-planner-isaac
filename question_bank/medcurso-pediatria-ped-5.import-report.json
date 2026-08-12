@@ -1,0 +1,261 @@
+{
+  "file": "Pediatria\\PED 5\\PED 5.txt",
+  "specialty": "Pediatria",
+  "topic": "PED 5",
+  "found": 500,
+  "imported": 437,
+  "skipped": [
+    {
+      "id": "251925",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "108717",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "275988",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "201772",
+      "reason": "anulada"
+    },
+    {
+      "id": "134050",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "134305",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "108606",
+      "reason": "anulada"
+    },
+    {
+      "id": "362464",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "298252",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "176066",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "151987",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "103790",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "230166",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230167",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230168",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "176331",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "176299",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "176304",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152194",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152196",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "152198",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "106557",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "106562",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "106566",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "181168",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "292836",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "292838",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "127021",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "141577",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "298887",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "261264",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "261265",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "261266",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "261267",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "261268",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "261269",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "255720",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "255721",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "255724",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "255726",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "255727",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "255778",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "179171",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "135040",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "135045",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "135050",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "135060",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "135064",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "366244",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "366243",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "366242",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "352327",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "352325",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "291484",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "274620",
+      "reason": "anulada"
+    },
+    {
+      "id": "263372",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "263427",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "351605",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "320437",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "336277",
+      "reason": "duplicada na mesma especialidade"
+    },
+    {
+      "id": "255658",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "234451",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "199617",
+      "reason": "duplicada na mesma especialidade"
+    }
+  ]
+}

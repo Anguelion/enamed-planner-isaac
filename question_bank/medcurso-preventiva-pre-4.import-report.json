@@ -1,0 +1,137 @@
+{
+  "file": "Preventiva\\PRE 4\\PRE 4.txt",
+  "specialty": "Medicina Preventiva",
+  "topic": "PRE 4",
+  "found": 496,
+  "imported": 464,
+  "skipped": [
+    {
+      "id": "345525",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "281176",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "281178",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "217678",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "217692",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "256617",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "208313",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "354426",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "354425",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "354423",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "354451",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "324834",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "324835",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "324836",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "284622",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "281906",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "298938",
+      "reason": "anulada"
+    },
+    {
+      "id": "255768",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "255769",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "255781",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "239369",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "352349",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "366203",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "366201",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "291568",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "291569",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "291570",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "287358",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "287875",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "287878",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "287879",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "287880",
+      "reason": "gabarito não identificado com segurança"
+    }
+  ]
+}

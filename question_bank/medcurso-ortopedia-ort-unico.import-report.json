@@ -1,0 +1,437 @@
+{
+  "file": "Ortopedia\\ORT UNICO.txt",
+  "specialty": "Ortopedia",
+  "topic": "ORT UNICO",
+  "found": 500,
+  "imported": 393,
+  "skipped": [
+    {
+      "id": "37102",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "279044",
+      "reason": "anulada"
+    },
+    {
+      "id": "212189",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "26591",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "13270",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "13286",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9976",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "7494",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "13328",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "181163",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "51206",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37594",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37604",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "36989",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37636",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37407",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "30880",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "29451",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "25476",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "25475",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "25383",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "25339",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "13393",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9087",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "13420",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9069",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "14002",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "255718",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "255719",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "239308",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "239309",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "239310",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "152157",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "108240",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "82110",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "291469",
+      "reason": "anulada"
+    },
+    {
+      "id": "80727",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "295342",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "101208",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "79545",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "51025",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "47635",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "53540",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "48207",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "53572",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "48226",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "48859",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "48984",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "48989",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "53563",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "51007",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "34010",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "34013",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "35859",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "35654",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "35796",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "35798",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "34038",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27141",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27002",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27181",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27182",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27183",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27184",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27192",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "11053",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9367",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9368",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "10674",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "10680",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "11049",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "11051",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "11054",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "11060",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "16077",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "35711",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "28244",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "28246",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "140016",
+      "reason": "anulada"
+    },
+    {
+      "id": "216836",
+      "reason": "anulada"
+    },
+    {
+      "id": "34502",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "31907",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "25776",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "45235",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "278845",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "311475",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "181953",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "68490",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27604",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "295685",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "202848",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "35093",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "27927",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "8453",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "17392",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "17395",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "17508",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "304679",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "178442",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "128957",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "101112",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "103546",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "77977",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "81767",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "46037",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "43608",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "46371",
+      "reason": "gabarito não identificado com segurança"
+    }
+  ]
+}

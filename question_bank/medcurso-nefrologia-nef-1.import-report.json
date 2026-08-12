@@ -1,0 +1,213 @@
+{
+  "file": "Nefrologia\\NEF 1\\NEF 1.txt",
+  "specialty": "Nefrologia",
+  "topic": "NEF 1",
+  "found": 500,
+  "imported": 449,
+  "skipped": [
+    {
+      "id": "182613",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "110554",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "13142",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "230124",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230125",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "230126",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "129945",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "129949",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "129953",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "7299",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "6946",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "263969",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "337535",
+      "reason": "anulada"
+    },
+    {
+      "id": "250092",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "64249",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "37939",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "7553",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "263970",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "263971",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "263972",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "227406",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "212104",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "212112",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "137845",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "311910",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "295422",
+      "reason": "anulada"
+    },
+    {
+      "id": "274776",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "274777",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "127935",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "34016",
+      "reason": "anulada"
+    },
+    {
+      "id": "23054",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "10691",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9329",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "52182",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "75384",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "274872",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "25702",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "8775",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "109881",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "9802",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "14546",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "318627",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "318628",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "318629",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "318630",
+      "reason": "não objetiva"
+    },
+    {
+      "id": "134547",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "104654",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "70290",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "10581",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "10583",
+      "reason": "gabarito não identificado com segurança"
+    },
+    {
+      "id": "257456",
+      "reason": "gabarito não identificado com segurança"
+    }
+  ]
+}
