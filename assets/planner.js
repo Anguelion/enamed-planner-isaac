@@ -9504,6 +9504,7 @@ function questionDataIssue(question) {
   if(validation && !validation.valid) return validation.reasons.join(' ');
   const letters = Object.keys(question.options || {});
   if(letters.length < 2) return 'Questão discursiva ou alternativas ausentes na extração original.';
+  if(!question.answer && question.answerPending) return 'Gabarito pendente. Leia o comentário e use “Editar” para escolher a alternativa correta.';
   if(!letters.includes(question.answer)) return `O gabarito ${question.answer || 'não informado'} não está entre as alternativas disponíveis.`;
   const blank = letters.filter(letter => !String(question.options?.[letter] || '').trim());
   if(blank.length) return `A extração original deixou ${blank.length === 1 ? 'a alternativa' : 'as alternativas'} ${blank.join(', ')} sem texto.`;
@@ -9697,6 +9698,7 @@ function filteredQuestions() {
       || (ui.qStatus === 'Não respondidas' && !result)
       || (ui.qStatus === 'Erradas' && result && !result.correct)
       || (ui.qStatus === 'Certas' && result?.correct)
+      || (ui.qStatus === 'Gabarito pendente' && Boolean(question.answerPending && !question.answer))
       || (ui.qStatus === 'Gabarito suspeito' && Boolean(state.questionProgress[question.id]?.answerKeyIssue));
     return searchOk && focusOk && specialtyOk && blockOk && sourceOk && topicOk && statusOk;
   });
@@ -9955,7 +9957,7 @@ function renderQuestionBank() {
           : `<label class="question-filter-field"><span>Bloco</span><select class="select" id="questionBlock">${blocks.map(block => `<option value="${escapeAttr(block)}" ${block===String(ui.qBlock)?'selected':''}>${block === 'Todos' ? 'Todos os blocos' : escapeHtml(questionCollectionLabel(block))}</option>`).join('')}</select></label>`}
         <label class="question-filter-field"><span>Fonte</span><select class="select" id="questionSource">${sources.map(source => `<option value="${escapeAttr(source)}" ${source===ui.qSource?'selected':''}>${escapeHtml(source)}</option>`).join('')}</select></label>
         <label class="question-filter-field"><span>Tema</span><select class="select" id="questionTopic">${topics.map(topic => `<option value="${escapeAttr(topic)}" ${topic===ui.qTopic?'selected':''}>${escapeHtml(topic)}</option>`).join('')}</select></label>
-        <label class="question-filter-field"><span>Status</span><select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select></label>
+        <label class="question-filter-field"><span>Status</span><select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Gabarito pendente','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select></label>
         <button type="button" class="tiny-btn question-clear-filters" id="questionClearFilters">Limpar filtros</button>
       </div></details>
     </aside>
@@ -10362,7 +10364,7 @@ function importQuestionDefaults() { return importDefaultFields(); }
 function renderQuestion(question, total) {
   const savedProgress = state.questionProgress[question.id] || {};
   const result = questionResult(question);
-  if(result && question.commentDeferred && !question.comment) ensureQuestionCommentLoaded(question);
+  if((result || question.answerPending || ui.editQuestionId === question.id) && question.commentDeferred && !question.comment) ensureQuestionCommentLoaded(question);
   const linkedLesson = scheduleForQuestion(question);
   const isSpecialCollection = String(question.collectionBlock) === 'ineditas';
   const collectionLabel = question.collectionLabel || questionCollectionLabel(question.collectionBlock || '-');
@@ -10385,6 +10387,9 @@ function renderQuestion(question, total) {
   const timeoutText = result?.timedOut ? ' Tempo esgotado no modo contratempo.' : '';
   const feedback = result ? `<div class="question-feedback ${result.correct?'':'wrong'}"><div><strong>${result.correct?'Resposta correta.':'Resposta incorreta.'}</strong>${timeoutText} Gabarito: ${question.answer}.${!result.correct ? ' Marque este assunto para revisão.' : ''}</div>${!result.correct && linkedLesson ? `<button class="tiny-btn question-material-link" data-question-materials="${escapeAttr(linkedLesson.id)}">Revisar material da aula</button>` : ''}</div>` : '';
   const comment = result && question.comment ? renderQuestionCommentPanel(question, result, highlights) : '';
+  const pendingComment = !result && question.answerPending && question.comment
+    ? `<div class="question-comment-panel"><div class="question-comment-card analysis"><strong>Comentário para conferir o gabarito</strong><div>${renderCommentSectionContent('analysis', question.comment, highlights)}</div></div></div>`
+    : '';
   const reviewButton = result && !result.correct ? `<button class="icon-btn" id="questionFeynman">Enviar tema para Feynman</button>` : '';
   const difficulty = ['facil','media','dificil'];
   const difficultyLabels = { facil:'Fácil', media:'Média', dificil:'Difícil' };
@@ -10406,6 +10411,7 @@ function renderQuestion(question, total) {
       ${!result && !dataIssue ? renderQuestionPreReasoning(question, savedProgress) : ''}
       ${!result && !dataIssue ? `<div class="answer-confirm"><span class="muted">${draftAnswer ? `Alternativa ${draftAnswer} selecionada` : 'Selecione uma alternativa e confirme.'}</span><button class="icon-btn primary" id="confirmQuestionAnswer" data-selected-answer="${escapeAttr(draftAnswer)}" ${draftAnswer?'':'disabled'}>Confirmar resposta</button></div>` : ''}
       ${feedback}
+      ${pendingComment}
       ${comment}
       ${result ? renderQuestionReflection(question, result) : ''}
       ${result ? renderQuestionFlashcardEditor(question, result) : ''}
@@ -10428,7 +10434,7 @@ function renderQuestionEditPanel(question) {
     <div class="section-title"><div><h3>Correção local da questão</h3><div class="muted">Corrige ortografia/texto só no seu planner.</div></div><button class="tiny-btn" id="questionEditClose">Fechar</button></div>
     <label>Enunciado<textarea class="textarea" data-question-edit="stem">${escapeHtml(question.stem || '')}</textarea></label>
     <div class="question-edit-options">${optionLetters.map(letter => `<label>${letter}<textarea class="textarea" data-question-edit-option="${letter}">${escapeHtml(question.options?.[letter] || '')}</textarea></label>`).join('')}</div>
-    <div class="field-row"><label>Gabarito<select class="select" data-question-edit="answer">${optionLetters.map(letter => `<option value="${letter}" ${question.answer===letter?'selected':''}>${letter}</option>`).join('')}</select></label><label>Área<input class="input" data-question-edit="area" value="${escapeAttr(question.area || '')}"></label><label>Tema<input class="input" data-question-edit="topic" value="${escapeAttr(question.topic || '')}"></label></div>
+    <div class="field-row"><label>Gabarito<select class="select" data-question-edit="answer">${question.answer ? '' : '<option value="" selected>Escolha a letra</option>'}${optionLetters.map(letter => `<option value="${letter}" ${question.answer===letter?'selected':''}>${letter}</option>`).join('')}</select></label><label>Área<input class="input" data-question-edit="area" value="${escapeAttr(question.area || '')}"></label><label>Tema<input class="input" data-question-edit="topic" value="${escapeAttr(question.topic || '')}"></label></div>
     <label>Comentário<textarea class="textarea" data-question-edit="comment">${escapeHtml(question.comment || '')}</textarea></label>
     <div class="question-edit-actions"><button class="icon-btn primary" id="questionEditSave">Salvar correção</button><button class="icon-btn" id="copyFullQuestion" title="Copiar enunciado, alternativas, gabarito e comentário">Copiar questão</button><button class="icon-btn" id="questionEditReset">Restaurar original</button></div>
   </div>`;

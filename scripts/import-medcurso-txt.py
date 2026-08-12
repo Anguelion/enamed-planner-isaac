@@ -232,16 +232,17 @@ def main() -> None:
         if image_path.is_file() and image_path.suffix.lower() in image_extensions:
             image_index.setdefault(image_path.stem, []).append(image_path)
     seen_by_specialty: dict[str, set[str]] = {}
-    current_index = json.loads((BANK_ROOT / "index.json").read_text(encoding="utf-8"))
-    for existing_entry in current_index.get("blocks", []):
-        if existing_entry.get("sourceType") == source_type or existing_entry.get("sourceType") not in {"medcurso", "med"}:
-            continue
-        existing_path = BANK_ROOT / str(existing_entry.get("file", ""))
-        if not existing_path.is_file():
-            continue
-        existing_payload = json.loads(existing_path.read_text(encoding="utf-8"))
-        for existing_question in existing_payload.get("questions", []):
-            seen_by_specialty.setdefault(existing_question.get("specialty", ""), set()).add(str(existing_question.get("number", "")))
+    if is_med_collection:
+        current_index = json.loads((BANK_ROOT / "index.json").read_text(encoding="utf-8"))
+        for existing_entry in current_index.get("blocks", []):
+            if existing_entry.get("sourceType") != "medcurso":
+                continue
+            existing_path = BANK_ROOT / str(existing_entry.get("file", ""))
+            if not existing_path.is_file():
+                continue
+            existing_payload = json.loads(existing_path.read_text(encoding="utf-8"))
+            for existing_question in existing_payload.get("questions", []):
+                seen_by_specialty.setdefault(existing_question.get("specialty", ""), set()).add(str(existing_question.get("number", "")))
     entries = []
     reports = []
     totals = {"found": 0, "imported": 0, "duplicates": 0, "nonObjective": 0, "annulled": 0, "missingAnswer": 0, "images": 0}
@@ -279,10 +280,13 @@ def main() -> None:
                 skipped.append({"id": question_id, "reason": "não objetiva"})
                 continue
             answer, answer_source = extract_answer(stem, comments.get(question_id, ""), options)
-            if not answer:
-                totals["annulled" if answer_source == "annulled" else "missingAnswer"] += 1
-                skipped.append({"id": question_id, "reason": "anulada" if answer_source == "annulled" else "gabarito não identificado com segurança"})
+            if not answer and answer_source == "annulled":
+                totals["annulled"] += 1
+                skipped.append({"id": question_id, "reason": "anulada"})
                 continue
+            answer_pending = not answer
+            if answer_pending:
+                totals["missingAnswer"] += 1
             images = []
             for source_image in linked_images(txt_path, question_id, image_index):
                 media_dir.mkdir(parents=True, exist_ok=True)
@@ -304,6 +308,7 @@ def main() -> None:
                 "stem": stem,
                 "options": options,
                 "answer": answer,
+                "answerPending": answer_pending,
                 "source": str(relative).replace("\\", "/"),
                 "sourceLabel": f"{collection_name} · {topic}",
                 "images": images,

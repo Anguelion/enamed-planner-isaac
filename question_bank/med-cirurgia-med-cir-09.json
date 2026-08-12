@@ -1,8 +1,41 @@
 {
   "block": "med:med-cirurgia-med-cir-09",
   "label": "MED · MED CIR 09",
-  "count": 40,
+  "count": 90,
   "questions": [
+    {
+      "id": "med-cirurgia-med-cir-09-345516",
+      "number": "345516",
+      "sourceNumber": "345516",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Qual é o parâmetro mais importante na avaliação pré-operatória da reserva funcional\nhepática?",
+      "options": {
+        "A": "Tempo de protrombina.",
+        "B": "Tempo parcial de tromboplastina.",
+        "C": "Albuminemia.",
+        "D": "Bilirrubinemia."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A questão deseja saber q ual é o parâmetro mais importante na avaliação pré-operatória da reserva funcional hepática. Durante a avaliação hepatobiliar de p acientes com hepatite aguda, devemos aguardar recuperação do quadro para realizar cirurgias eletivas, mas pacientes com hepatite crônica podem ser submetidos aos procedimentos sem problemas maiores. A classificação de Child-Pugh deve ser analisada nos indivíduos com cirrose e possui relação com a mortalidade operatória. Vale lembrar que nessa classificação avaliamos os seguintes critérios bilirrubina, encefalopatia, ascite, TAP e albumina. Para as ressecções hepáticas, ainda existem outros métodos capazes de estimar a função hepátic a, como o teste de depuração do verde de indocianina, realizado por espectrofotometria, e de calcular o volume hepático residual, como VOLUMETRIA HEPÁTICA, efetuada a partir de imagens obtidas pela tomografia de abdome. Inicialmentente a banca divulgou o gabarito como alternativa A. Porém, como vimos, a questão merecida ter sido anulada. Resposta da banca letra A. Resposta MEDGRUPO anulada.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
     {
       "id": "med-cirurgia-med-cir-09-183213",
       "number": "183213",
@@ -23,6 +56,7 @@
         "E": "Longos períodos de aumento da pressão abdominal, estiramento do peritônio e difusão do CO2\npara o intestino podem causar náuseas e vômitos no pós-operatório."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -55,6 +89,7 @@
         "D": "Obesidade."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -87,6 +122,7 @@
         "D": "realizar manobra de Pringle."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -99,6 +135,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-215529",
+      "number": "215529",
+      "sourceNumber": "215529",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "São esforços para diminuir o sangramento no pós-operatório de cirurgia cardíaca em\npediatria todos os abaixo, EXCETO:",
+      "options": {
+        "A": "Uso de antifibrinolíticos.",
+        "B": "Transfusão de hemocomponentes.",
+        "C": "Reversão adequada da anticoagulação da circulação extracorpórea.",
+        "D": "Hiper-hidratação e manter drenos mais elevados."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O sangramento pós-operatório continua sendo uma das principais complicações em cirurgia cardíaca. A etiologia desse sangramento é multifatorial, com hiperfibrinólise e disfunção plaquetária desempenhando papel fundamental. Tendo em vista essas causas, as drogas antifibrinolíticas têm sido preconizadas. Desde a retirada da aprotinina do mercado, o ácido epsilon-aminocaproico e o ácido tranexâmico, análogos da lisina, passaram a ser os únicos representantes disponíveis dessa classe de drogas. Os análogos da lisina inibem a fibrinólise por bloquearem competitivamente e com alta afinidade os locais de ligação da lisina no plasminogênio, impedindo, com isso, a formação do complexo entre plasminogênio, fibrina e ativador tecidual do plasminogênio. Contudo, estudos realizados com essas drogas até o momento no contexto de cirurgia cardíaca falharam em evidenciar benefício, além de aumentar o risco de complicações trombóticas. Por essa razão, a opção A é a nossa resposta.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-201762",
@@ -120,6 +189,7 @@
         "E": "Todas estão corretas."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -132,6 +202,72 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-215484",
+      "number": "215484",
+      "sourceNumber": "215484",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "São contraindicações absolutas para raquianestesia, EXCETO:",
+      "options": {
+        "A": "Sepse.",
+        "B": "Hipotensão severa.",
+        "C": "Cirurgias de longa duração.",
+        "D": "Coagulopatias."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A anestesia espinal ou raquianestesia consiste em alternativa à manipulação da via aérea e evita as complicações da entubação traqueal, bem como os efeitos colaterais dos anestésicos gerais náusea, vômitos, despertar prolongado ou sonolência pós-operatória. Também propicia vantagens para diversos tipos de operação, incluindo procedimentos urológicos endoscópicos, particularmente a ressecção transuretral da próstata, na qual manter o paciente acordado e consciente é indicador valioso para avaliação da hiponatremia ou perfuração da bexiga. Após essa breve revisão, vamos lembrar que as contraindicações absolutas para este tipo de anestesia são recusa do paciente, coagulopatias, infecção do sítio de punção, hipotensão hipovolemia e hipertensão intracraniana. E a sepse Sepse é uma contraindicação relativa e cirurgia de longa duração não é uma contraindicação. Assim, a questão tinha duas respostas letras A e C. Infelizmente, a banca considerou como gabarito único a letra C.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-161332",
+      "number": "161332",
+      "sourceNumber": "161332",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "A infecção de pele e de partes moles complicadas envolve tecidos mais profundos, ou\nrequerem intervenção cirúrgica. A infecção na presença de comorbidades médicas, como diabetes\nmellitus, doença renal crônica ou doença arterial periférica também definem infecção complicada.\nSobre isso, assinale a alternativa INCORRETA.",
+      "options": {
+        "A": "Na celulite não necrotizante o agente mais frequente é o Streptococcus pyogenes, outros\nagentes incluem Haemophilus influenzae e o pneumococo.",
+        "B": "A infecção polimicrobiana suspeita deve ser tratada com cobertura de patógenos Gram positivos,\nGram-negativos entéricos e patógenos anaeróbios.",
+        "C": "Características da infecção necrotizantes de partes moles incluem dor desproporcional aos\nachados do exame físico, edema intenso,\nbolhas, equimose, necrose, anestesia cutânea,\nleucocitose, hiponatremia.",
+        "D": "Uma opção contra Staphylococcus aureus resistentes à meticilina são as fluorquinolonas."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Todas as alternativas estão corretas e a questão deveria ser anulada. As alternativas A, B e C são corretas e autoexplicativas. Comentário sobre a alternativa D. O Staphylococcus aureus resistente à meticilina (MRSA) está cada vez mais presente no dia a dia dos hospitais e também pode ser adquirido na comunidade. Os MRSAs representam risco importante, pois podem se tornar multirresistentes. Em pacientes com infecção leves e moderadas podem ser utilizados clindamicina, sulfametoxazol-trimetopim, tetraciclinas e fluorquinolonas. Em pacientes com infecção sistêmica grave devem ser utilizados glicopeptídeos ou linezulida.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-158802",
@@ -153,6 +289,7 @@
         "E": "Diverticulite perfurada com instabilidade hemodinâmica."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -165,6 +302,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-134296",
+      "number": "134296",
+      "sourceNumber": "134296",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "O pós-operatório imediato de histerectomia abdominal pode transcorrer sem elevações\nsanguíneas de cortisol e catecolaminas, quando a operação for realizada:",
+      "options": {
+        "A": "Por via videolaparoscópica.",
+        "B": "Em anestesia geral profunda.",
+        "C": "Sob bloqueio anestésico peridural.",
+        "D": "Na vigência de anti-inflamatórios não esteroides."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Sabemos que a anestesia peridural e outros bloqueios regionais diminuem de forma significativa os impulsos aferentes provenientes da ferida operatória. Sendo assim, notamos uma importante atenuação da resposta endócrina, sem elevações sanguíneas de catecolaminas e cortisol. Lembrando que as cirurgias videoassistidas (ou minimamente invasivas) apresentam uma atenuação importante da resposta imunológica, com diminuição da produção de citocinas, como interleucina-1 e Fator de Necrose Tumoral alfa (TNF-a).",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-131365",
@@ -186,6 +356,7 @@
         "E": "Não mostra vantagens quando comparada à não drenagem."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -198,6 +369,72 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-110033",
+      "number": "110033",
+      "sourceNumber": "110033",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Analise as afirmativas abaixo relacionadas ao processo de cicatrização da ferida\noperatória e assinale a alternativa\nCORRETA. I. Na primeira semana pós-lesão é inibida a\nneoformação vascular; II. O colágeno só começa a ser produzido de 4 a 14 dias após a lesão (fase\nproliferativa); III. O aumento da resistência da ferida cirúrgica à ruptura está associado ao\nacúmulo\nde colágeno tipo I, na fase proliferativa da cicatrização. É CORRETO o que se afirma, APENAS, em",
+      "options": {
+        "A": "I.",
+        "B": "I e II.",
+        "C": "III.",
+        "D": "I e III."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Analisando as assertivas I) Incorreta. A neoformação vascular inicia-se na fase proliferativa a partir do terceiro dia pós-lesão, durando até o final da segunda semana. II) Incorreta. O colágeno começa a ser produzido dentre de 3 a 5 dias após a lesão, sendo esse período chamado de fase de retardo da cicatrização da ferida. III) Correta. A maior resistência tem relação com a substituição do colágeno tipo III pelo I. Gabarito correto opção C.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-109734",
+      "number": "109734",
+      "sourceNumber": "109734",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "São complicações da Cirurgia Abdominal e que indicam nutrição parenteral:",
+      "options": {
+        "A": "disfunção da boca anastomótica ou fístula gastrintestinal.",
+        "B": "peritonite difusa grave e abscesso intraperitoneal grave ou íleo paralítico prolongado.",
+        "C": "diarreias graves.",
+        "D": "todas as alternativas acima."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A Nutrição Parenteral (NP) é recomendada em pacientes com trato gastrointestinal não funcionante ou em situações onde o trato gastrointestinal necessite de repouso, com jejum previsto para um período de 5 dias ou mais. A NP também está indicada como adjuvante à enteral em pacientes que possuam a via entérica parcialmente funcionante, sendo, portanto, incapazes de receber um volume de dieta corres pondente as necessidades calóricas diárias após um período de 1-2 semanas. De forma geral estas indicações podem ser resumidas da seguinte forma a NP está indicado caso haja contraindicações à nutrição enteral por um período prolongado. E essas incluem - Fístula de alto débito (500ml) ou outras complicações cirúrgicas como deiscência de boca anastomótica - A CORRETA - Peritonite difusa e Íleo prolongado - B CORRETA - Diarreia ou vômitos intratáveis - C CORRETA - Sangramento maior no TGI - Intestino curto - Isquemia intestinal - Instabilidade hemodinâmica severa - Obstrução intestinal Portanto todas as alternativas da questão estão corretas.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-86789",
@@ -219,6 +456,7 @@
         "E": "Um bloqueio digital."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -231,6 +469,74 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-158428",
+      "number": "158428",
+      "sourceNumber": "158428",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Com relação a antibióticoterapia marque a INCORRETA:",
+      "options": {
+        "A": "O antibiótico profilático está indicado para prevenção de infecção de sítio cirúrgico, em\ncirurgias\nlimpas, quando a infecção do sítio cirúrgico no pós-operatório aumenta a mortalidade, como nas\nneurocirurgias, cirurgias cardíacas, ortopédicas e vasculares (em que se utilizam próteses), e em\ncirurgias potencialmente contaminadas e infectadas.",
+        "B": "Basicamente, recomenda-se uma cefalosporina de primeira geração, como a cefazolina para\npraticamente todos os procedimentos, com exceção das intervenções sobre o íleo terminal, o cólon\ne o reto, em que se recomenda uma colonoscopia de segunda geração com cobertura para\n\nGram-negativo e anaeróbios, como a cefoxitina.",
+        "C": "A antibioticoprofilaxia deve ser iniciada na indução anestésica e os níveis séricos devem ser\nmantidos elevados durante o ato cirúrgico, repetindo-se a cada duas horas (cefoxitina) ou quatro\nhoras (cefazolina) conforme a vida média do antibiótico.",
+        "D": "Quanto mais prolongada a antibióticoprofilaxia, maior seleção de flora bacteriana resistente,\nmais efeitos colaterais (gastrintestinais e\ncutâneas) e maiores custos.",
+        "E": "A antibióticoprofilaxia, a partir de segunda metade do século XX, trouxe uma diminuição\nadicional nos índices de infecção do sitio\ncirúrgico de 10% (ao final do século XIX), para em torno\nde 3%."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Todas as alternativas explicam de forma bastante detalhada o princípio da antibioticoprofilaxia. Até o gabarito da questão (letra A) estaria correto, exceto por um pequeno detalhe nas cirurgias infectadas não é indicada antibioticoprofilaxia (prevenção de infecção de sítio cirúrgico), mas sim antibioticoterapia. Houve também um erro de digitação na alternativa B. Onde se lê colonoscopia de segunda geração, entendemos que o autor queria dizer cefaloesporina de segunda geração. Por tal motivo, a banca examinadora decidiu anular esta questão.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-81004",
+      "number": "81004",
+      "sourceNumber": "81004",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Quais são as células mais importantes durante as fases principais da cicatrização de\nferidas?",
+      "options": {
+        "A": "Neutrófilos, plaquetas, fibroblastos e hepatócitos.",
+        "B": "Plaquetas, neutrófilos, queratinócitos e neurônios.",
+        "C": "Plaquetas, macrófagos, fibroblastos e queratinócitos.",
+        "D": "Macrófagos, miofibroblastos, plaquetas e hepatócitos.",
+        "E": "Hemácia, macrófagos, plaquetas e histiócito."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão podemos fazer por eliminação. Quando inicia-se o processo de cicatrização das feridas, hepatócitos, neurônios e histiócitos não são necessários para o processo. Vamos rever as principais fases e as principais células de cada uma. As três fases da cicatrização de feridas são inflamatória, proliferativa e de maturação. Todas essas fases apresentam grande sobreposição, ou seja, uma mesma ferida pode apresentar regiões em diferentes estágios. Os principais processos de cada fase são 1) inflamatória hemostasia e resposta inflamatória aguda. Na hemostasia, temos a primária (plaquetas) e a secundária (fatores de coagulação). Ocorre a migração de neutrófilos para o sítio da ferida devido a quimiomediadores IL-1 e TNF-alfa. A partir de 24-48h, monócitos são recrutados, e diferenciam-se na ferida em macrófagos. Os macrófagos fazem a limpeza da ferida, com a fagocitose de bactérias e liberação de citocinas que regulam o processo de síntese dos componentes do tecido cicatricial 2) proliferativa síntese de matriz extracelular, por fibroplasia. Rica em colágenos tipo I e III, principalmente o último. A célula mais importante é o fibroblasto 3) maturação remodelamento da ferida, por contração. Miofibroblastos são responsáveis por esses eventos. Primeiramente, os fibroblastos proliferam no local da ferida e secretam colágenos na matriz extracelular, preenchendo o vazio e recriando um novo suporte estrutural para que a epiderme possa proliferar. A reepitelização se dá pela migração dos queratinócitos não danificados das bordas da ferida e dos anexos epiteliais. Fatores de crescimento são os prováveis responsáveis pelo aumento das mitoses e hiperplasia do epitélio.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-60874",
@@ -252,6 +558,7 @@
         "E": "Estenose na anastomose gastroentérica."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -264,6 +571,108 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-61499",
+      "number": "61499",
+      "sourceNumber": "61499",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Na avaliação pré-operatória de uma colecistectomia videolaparoscópica eletiva de um\nhomem com 45 anos de idade, em que a\nanamnese e o exame físico não sugerem doença\ncardíaca isquêmica, insuficiência cardíaca, diabetes mellitus, aterosclerose generalizada ou doença\nrenal crônica, sendo este homem capaz de subir dois andares sem sintomas, a conduta\nrecomendada é:",
+      "options": {
+        "A": "Liberar o procedimento.",
+        "B": "Solicitar teste ergométrico.",
+        "C": "Indicar cintilografia miocárdica.",
+        "D": "Realizar ecocardiograma transtorácico.",
+        "E": "Pedir ecocardiograma sob stress farmacológico."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão simples, direta e muito bem feita, além de bem atualizada sobre a avaliação do risco cirúrgico. Paciente com menos de 45 anos de idade, cuja história e exame físico não revelam nenhuma doença presente ou suspeita, não necessita de nenhum exame complementar. O fato de subir dois andares sem sintomas demonstra que sua função cardíaca e pulmonar estão preservadas, nos deixando ainda mais tranquilos sobre essa conduta.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-61509",
+      "number": "61509",
+      "sourceNumber": "61509",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "No 2º dia do pós-operatório de cirurgia cardiotorácica, que trascorreu sem\ncomplicações, paciente desenvolve síndrome\nfebril. Considerando o tempo decorrido entre a\ncirurgia e o aparecimento da febre, a hipótese diagnóstica mais provável, dentre as citadas abaixo,\né:",
+      "options": {
+        "A": "Trauma cirúrgico.",
+        "B": "Infecção esternal.",
+        "C": "Atelectasia pós-cirúrgica.",
+        "D": "Medicação peroperatória.",
+        "E": "Hipertermia maligna pós-anestesia."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão bem fácil A causa mais comum de febre no pós-operatório imediato, ou seja, nas primeiras 48-72h, é a atelectasia. Isso é ainda verdade nos procedimentos torácicos ou abdominais (principalmente nas cirurgias de andar superior do abdome). Infecção é uma causa de febre mais tardia, em torno do sétimo ao décimo dia de pós-operatório, podendo ser originária tanto da ferida cirúrgica quanto sistêmica (pneumonia ou trato urinário). Infecções precoces são raríssimas, e nesses casos, os estreptococos e o Clostridium são os principais suspeitos etiológicos. Além de infecção, a trombose venosa profunda e os medicamentos entram na lista das febres mais tardias.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-49812",
+      "number": "49812",
+      "sourceNumber": "49812",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Um paciente se encontra no sexto dia de pós-operatório de cirurgia abdominal, com\npicos febris. Ao exame da ferida cirúrgica, nota-se discreta tumefação dolorosa em 1/3 inferior.\nEsse quadro é sugestivo de:",
+      "options": {
+        "A": "Seroma.",
+        "B": "Infecção.",
+        "C": "Hematoma.",
+        "D": "Eventração.",
+        "E": "Evisceração."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A partir do quinto dia de pós-operatório, a presença de ferida edemaciada e febre nos sugere a presença de infecção de sítio cirúrgico. No hematoma, temos coloração em tom de vinho da região da ferida e, eventualmente, saída de secreção serossanguínea, sem picos febris quando estes acontecem, devemos considerar a presença de infecção secundária. No seroma, há abaulamento, porém observamos saída de secreção líquida clara e não há presença de febre. Na evisceração, forma extrema de deiscência de ferida operatória, há exteriorização de vísceras, o que não é o caso. A eventração ocorre quando existe separação de planos músculo-aponeuróticos da ferida, sem a exteriorização de conteúdo visceral.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-46693",
@@ -285,6 +694,7 @@
         "E": "Infusão imediata de solução cristaloide."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -297,6 +707,40 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-249722",
+      "number": "249722",
+      "sourceNumber": "249722",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente, sexo feminino, 45 anos, com historia de colelitíase, foi submetida à\ncolecistectomia sob anestesia geral,\nconvertida para aberta por dificuldades técnicas. Cursa com\ndor moderada e apresenta, no primeiro dia pós-operatório da colecistectomia, episódio de febre. A\nalternativa que contém a etiologia mais provável desta febre é:",
+      "options": {
+        "A": "seroma.",
+        "B": "atelectasia.",
+        "C": "pneumonia.",
+        "D": "infecção urinária.",
+        "E": "infecção de ferida."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Muita calma aqui, porque o assunto febre no paciente cirúrgico é um espaço para muitas polêmicas, a começar pelo gabarito. Atelectasia costuma ser responsabilizada com frequência pelo surgimento de febre no pós-operatório mais imediato, sobretudo nas primeiras 72h. Essa é a complicação pulmonar mais frequente, ocasionada por colapso alveolar segmentar, gerando aumento de secreções do parênquima pulmonar, com crescimento bacteriano e risco de pneumonia nosocomial (para prevenir atelectasia, devemos estimular o paciente a respirar fundo e tossir, caprichando também na analgesia para evitar hipoventilação provocada por dor). Febre e atelectasia de fato aparecem com frequência nesse período mais imediato, mas será que ambas tem relação causal ou é apenas uma mera coincidência Frente a um paciente com febre e atelectasia nos primeiros dias de pós-operatório, podemos nos dar por satisfeitos, atribuindo a febre apenas ao surgimento de atelectasia Os estudos mais recentes mostram que, aparentemente, a resposta é não tanto a sensibilidade quanto o valor preditivo negativo de febre como preditor de atelectasia ficam abaixo de 50%, enquanto a especificidade e o valor preditivo positivo são de, respectivamente, 68 e 66%. Outro estudo apontou que não existe nenhum tipo de relação entre febre ou presença nem mesmo grau de atelectasia. Complicado, não é Pneumonia como complicação cirúrgica costuma aparecer na primeira semana, com pico no segundo dia de pós-operatório, mas nada no enunciado sugere essa possibilidade. Infecção urinária tem mais relação com procedimentos genitourinários ou cateterização urinária, principalmente se posicionada no contexto de emergência. Infecções de sítio cirúrgico costumam surgir em 5 dias ou mais do procedimento, mas alguns organismos (Clostridium perfringens e streptococcus do grupo A) podem causar infecção fulminante dentro de poucas horas de pós-operatório, mas não temos dados aqui para pensar em um quadro como esse. Seroma não causa febre. Então de onde saiu essa febre O que a gente sabe é que febre autolimitada é comum após grandes cirurgias (resolve de forma espontânea em 2-3 dias), tendo relação com liberação de citocinas pela própria resposta metabólica ao trauma. Geralmente essa resposta costuma ser mais tênue em uma colecistectomia laparoscópica, mas pode ser maior na cirurgia aberta, aumentando o risco de febre por esse mecanismo. Ainda é uma tendência das bancas considerar a atelectasia como principal causa de febre no pós-operatório imediato e por isso, o gabrito foi a letra B. No entanto, tenha o senso crítico - na prova e na vida - do que foi discutido aqui.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-162475",
@@ -318,6 +762,7 @@
         "E": "O uso de campo estéril, assim como de luvas estéreis, máscara e óculos de proteção não se\nfazem necessários, porque se trata de uma lesão infectada, assim não é necessário que o\nprocedimento seja asséptico."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -350,6 +795,7 @@
         "D": "Todas as alternativas estão corretas."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -362,6 +808,105 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-134783",
+      "number": "134783",
+      "sourceNumber": "134783",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Quanto aos fatores que interferem na cicatrização da ferida operatória:",
+      "options": {
+        "A": "Desvitalização tecidual e necrose, presença de corpo estranho, infecção e radioterapia são\nfatores sistêmicos.",
+        "B": "Nutrição, proteínas, corticoides e anti-inflamatórios não esteroidais, idade avançada e diabetes\nsão fatores locais.",
+        "C": "Desvitalização tecidual e necrose, presença de corpo estranho, infecção e radioterapia são\nfatores locais.",
+        "D": "Nutrição, proteínas, corticoides e anti-inflamatórios não esteroidais, idade avançada e diabetes\nsão fatores sistêmicos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Desvitalização tecidual e necrose, presença de corpo estranho, infecção e radioterapia são considerados fatores locais. Já a nutrição, proteínas, corticoides e anti-inflamatórios não esteroidais, idade avançada e diabetes são fatores sistêmicos. Portanto teríamos duas respostas erradas (A e B) e duas corretas (C e D). Por tal motivo, a equipe MEDGRUPO entende que esta questão deveria ser anulada. Gabarito liberado pela banca B.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-259689",
+      "number": "259689",
+      "sourceNumber": "259689",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente, 60 anos, com diagnóstico de lesão duodenal subestenosante, refere hiporexia\ne episódios de vômitos após alimentação, além\nde perda ponderal de 15 kg em 3 meses (peso\nhabitual 65 kg). Foi internado na enfermaria de cirurgia geral para avaliar a possibilidade de\ncirurgia. Realizou tomografia que evidencia nódulos hepáticos bilaterais de aproximadamente 1,5 a\n2 cm e adenomegalias em hilo hepático de pequena curvatura. Exames admissionais: albumina\n2,8g/dl; Hb 10g/dl e leuc 6600/mm³. Em relação ao suporte nutricional, qual deverá ser a melhor\nconduta para esse paciente?",
+      "options": {
+        "A": "Iniciar o suporte nutricional por NPT no pré-operatório.",
+        "B": "Realizar derivação gastro-jejunal para dieta via oral.",
+        "C": "Realizar jejunostomia para suporte nutricional, via enteral.",
+        "D": "Passar sonda nasoenteral por endoscopia e manter a dieta enteral."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão que gerou muita polêmica e que foi devidamente anulada. Vamos entender A) Correta. Estamos diante de um paciente idoso com lesão provavelmente neoplásica no duodeno, além disso, já apresenta prováveis metástases no fígado e no hilo hepático, ou seja, é uma provável doença irressecável. A melhor conduta para este paciente, já que ele aceita a dieta por via oral, é apenas bypassar (desviar) a lesão duodenal. Portanto, a conduta ideal seria a realização de uma derivação gastro-jejunal. Porém, ele é um paciente idoso, com perda de 15 kg em 3 meses, vômitos, hiporexia e albumina de 2,8g dL, portanto, um paciente com indicação imediata de suporte nutricional antes de realizar a derivação gastro-jejunal, logo, realizar o suporte por NPT no pré-operatório, de fato, é uma conduta adequada. B) Correta. Como vimos, a derivação gastro-jejunal é a melhor saída, afinal de contas, o paciente aceita a dieta por via oral. Esta inclusive foi o gabarito inicial liberado pela Banca. Mas fica ressalva de que, como um paciente apresenta um alto risco de complicações pós-operatórias pela desnutrição, a NPT deveria anteceder a realização da cirurgia. C) Incorreta. A jejunostomia por via enteral seria também uma conduta viável, mas, por não ter restrições à dieta por via oral, a derivação gastro-jejunal seria uma opção mais adequada. D) Correta. Esta foi uma alternativa que também gerou polêmica. Por ser uma lesão subestenosante, a passagem de sonda por endoscopia poderia ser tentada para fazer o suporte inicial antes da cirurgia. Neste caso, realizar o suporte pré-operatório por via enteral seria até melhor do que por NPT, procedimento menos invasivo e com menos complicações associadas. A questão não informou o grau de estenose duodenal, logo, se não sabemos o quanto estenosado está esse duodeno, a passagem por EDA ainda pode ser tentada e esta também poderia ser uma conduta correta. Como percebemos, a questão deu muitas brechas para as polêmicas e mais de uma alternativa poderia ser considerada como correta. Portanto, a Banca de forma prudente decidiu anular a questão. Gabarito anulada.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-126957",
+      "number": "126957",
+      "sourceNumber": "126957",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente masculino, 35 anos, será submetido à colecistectomia videolaparoscópica sob\nanestesia geral. Nega comorbidades e alergias. Monitorização com oximetria de pulso,\ncardioscopia, capnografia, monitores de dados Biespectrais (BIS) e pressão arterial não invasiva.\n\nMinutos após indução da anestesia, paciente passa a apresentar queda da saturação pelo oxímetro\nde pulso, pressão arterial normal, BIS = 50 e\ncapnografia não mostra curva de CO2. Realizada\nausculta pulmonar bilateral na qual não se verificou murmúrio vesicular. Qual o diagnóstico provável\nda condição anestésica desse paciente?",
+      "options": {
+        "A": "Pneumotórax.",
+        "B": "Anestesia superficial.",
+        "C": "Broncoespasmo grave.",
+        "D": "Intubação esofágica não diagnosticada."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A intubação no ambiente cirúrgico ou externo, mesmo sendo realizada com a visualização direta do tubo passando por entre as pregas vocais, deve ser seguida de verificação do posicionamento do tubo. A maneira mais simples de verificar o posicionamento do tubo é pelo exame físico. Pode-se auscultar o epigástrio, depois as bases pulmonares comparativamente e depois os ápices pulmonares comparativamente. Por outro lado, a capnografia é o método padrão-ouro para verificação do correto posicionamento do tubo traqueal (segue abaixo imagem de uma curva normal de capnografia). Portanto, como o paciente não apresenta murmúrio vesicular ao exame clínico, nem curva de CO2 no capnógrafo e está com queda da saturação, a hipótese diagnóstica mais provável é que o paciente não está intubado. A alternativa D apresenta a hipótese mais provável, intubação esofágica não diagnosticada.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-102106",
@@ -382,6 +927,7 @@
         "D": "Dieta parenteral."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -394,6 +940,107 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-81265",
+      "number": "81265",
+      "sourceNumber": "81265",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente masculino, 60 anos, foi vítima de perfuração por arma de fogo em região\nepigástrica, sendo prontamente levado ao\nhospital de trauma mais próximo e submetido à\nlaparotomia exploradora (LE). Evidenciou-se lesão transfixante de duodeno atingindo mais de 50%\nda circunferência intestinal e parede anterior da veia cava. Nesse momento, foi posicionado dreno\nde Blake® na retrocavidade dos epiplons. O paciente foi mantido no pós-operatório na Unidade de\nTerapia Intensiva evoluindo ainda no 7° pós-operatório com um débito diário do dreno de 550 ml\ncompatível com fístula duodenal. Qual a melhor conduta terapêutica para esse caso?",
+      "options": {
+        "A": "Iniciar suporte nutricional, imediatamente, por via enteral ou parenteral.",
+        "B": "Iniciar tratamento conservador, oferecendo dieta oral pobre em fibras.",
+        "C": "Reoperar, imediatamente, e diverticulização duodenal.",
+        "D": "Reoperar, imediatamente, para fechamento da fístula."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A alimentação por via oral em pacientes com fístulas, quando não aumenta o risco de contaminação da cavidade abdominal, eleva o débito da fístula. Desta forma, além do catabolismo inerente ao estado de jejum, o paciente sofre uma perda adicional de proteínas, imposta pelo catabolismo determinado pela doença de base, trauma cirúrgico, infecção ou outras complicações associadas. As fístulas duodenais são fístulas de grande morbimortalidade, em geral, de alto débito, com importante perda hidroeletrolítica e de bicarbonato, levando à importante acidose metabólica. Resultam, quase sempre, de intervenções cirúrgicas, sendo que cerca de 85% ocorrem após ressecções gástricas, operações biliares, duodenais, pancreáticas ou em cólon direito. Os outros 15 % ocorrem por neoplasia, trauma ou complicações de doença ulcerosa benigna. A mortalidade global varia de 5 a 67%. Mesmo com NPT, a mortalidade permanece elevada, devido a grande perda de líquido, com grave distúrbio hidroeletrolítico. O controle clínico do paciente deve ser obtido antes de se iniciar qualquer forma de terapia nutricional. O uso da NPT determina uma redução em todas as secreções digestivas de forma muito mais eficaz que o jejum simples. A NPT, além de permitir a redução do débito da fístula, minimizando as perdas hídricas e de eletrólitos, permite que a espoliação proteica seja controlada, condição essencial para a manutenção ou recuperação do estado nutricional. Em fístulas gástricas, duodenais e entéricas deve ser evitada a nutrição enteral, pois re spondem a qualquer administração de dieta pelo trato digestivo, ainda que por acessos posicionados distalmente aos orifícios fistulosos ou em alças cirurgicamente exclusas. O estímulo estará presente devido à autorregulação estabelecida pela produção êntero-hormonal. Além disso, deve-se repor o volume perdido nas fístulas perdas insensíveis, repor magnésio, zinco e manganês.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-65753",
+      "number": "65753",
+      "sourceNumber": "65753",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Um paciente com síndrome de Poland foi diagnosticado com neoplasia gástrica\navançada. Após a indução anestésica, foi\nrealizada a punção de acesso venoso central na veia\nsubclávia esquerda, utilizando a técnica de Seldinger. Durante a realização do inventário da\ncavidade, o paciente passou a apresentar abaulamento da hemicúpula diafragmática esquerda e\ndiminuição da saturação à oximetria de pulso. Diante do exposto, qual o diagnóstico mais provável\ne a conduta mais adequada?",
+      "options": {
+        "A": "Provavelmente o paciente se encontra com hemotórax esquerdo, sendo a drenagem de tórax a\nmelhor opção terapêutica.",
+        "B": "Provavelmente o paciente se encontra com pneumotórax esquerdo, sendo a drenagem de tórax\na melhor opção terapêutica.",
+        "C": "Provavelmente o paciente se encontra com quilotórax esquerdo, sendo a drenagem de tórax ou\na descompressão emergencial com uma agulha calibre\n18 as melhores opções terapêuticas.",
+        "D": "Provavelmente o paciente se encontra com hemotórax esquerdo, sendo a descompressão\nemergencial com uma agulha calibre 18 na linha\nmesoclavicular, no segundo espaço intercostal\nanterior, a melhor opção terapêutica.",
+        "E": "Provavelmente o paciente se encontra com pneumotórax esquerdo, sendo a descompressão\nemergencial com uma agulha calibre 18 na linha mesoclavicular, no segundo espaço intercostal\nanterior, a melhor opção terapêutica."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O paciente da questão claramente possui um quadro de pneumotórax. A dúvida fica sobre qual o tratamento devemos instituir. A toracocentese emergencial é utilizada em casos de pneumotórax hipertensivo Em nenhum momento foi citado hipotensão, turgência de jugular ou qualquer sinal que indicasse a presença de um quadro hipertensivo, apenas foi mencionada uma queda de saturação que é plenamente aceitável no quadro de pneumotórax simples. Dessa forma, temos tempo o suficiente para uma drenagem intercostal, a qual é realizada de uma forma muito simples e rápida em um ambiente de centro cirúrgico, já com o paciente anestesiado e posicionado.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-65785",
+      "number": "65785",
+      "sourceNumber": "65785",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente masculino, 70 anos, com angina instável e obstrução parcial grave das três\nprincipais coronárias, deverá ser submetido à revascularização do miocárdio. É diabético, utilizando\nhipoglicemiantes orais, com glicemia capilar de jejum de 350 mg/dl e Cr de 2,8 mg/dl, em\nacompanhamento irregular na unidade de saúde. Apresenta ainda hipertensão arterial sistêmica e,\nno exame físico atual, PA = 180 x 110. Qual a classificação de estado físico deste paciente (P) de\nacordo com o que preconiza a Sociedade Americana de Anestesiologia?",
+      "options": {
+        "A": "P1.",
+        "B": "P2.",
+        "C": "P3.",
+        "D": "P4.",
+        "E": "P5."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Relembrando a classificação da American Society of Anesthesiologists ASA I não há distúrbio orgânico, fisiológico, bioquímico ou psiquiátrico. ASA II paciente com doença sistêmica leve que não resulta em limitação funcional. Exemplos hipertensão bem-controlada, diabetes sem complicações. ASA III paciente com doença sistêmica grave que resulta em dano funcional. Exemplos diabetes com complicações vasculares, infarto do miocárdio anterior, hipertensão não controlada. ASA IV doença sistêmica grave que é uma ameaça constante à vida. Exemplos insuficiência cardíaca congestiva, angina de peito instável. ASA V paciente moribundo que não se espera que sobreviva com ou sem operação. Exemplo ruptura de aneurismas aórticos, hemorragia intracraniana com pressão intracraniana elevada. ASA VI paciente com morte cerebral declarada, cujos órgãos estão sendo retirados para transplante. Como o paciente tem doença grave não compensada (angina instável) a classificação é como classe 4.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-65766",
@@ -415,6 +1062,7 @@
         "E": "Insuficiência de produção de TSH."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -427,6 +1075,349 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-365621",
+      "number": "365621",
+      "sourceNumber": "365621",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Uma paciente de 55 anos de idade, com histórico de hipertensão arterial controlada\ncom medicamentos, internou-se para uma\ncolecistectomia eletiva em razão de episódios\nrecorrentes de cólica biliar. Durante a avaliação pré-operatória, a paciente relatou ter tomado sua\nmedicação anti-hipertensiva na manhã do dia da cirurgia, porém não conseguiu realizar a consulta\ncom cardiologista para avaliação de risco cirúrgico. Ao exame físico, apresentou PA = 176 mmHg x\n90 mmHg, FC = 80 bpm, FR = 18 irpm e SatO2 = 98% a.a. Com relação a esse caso clínico,\nassinale a alternativa que indica a conduta mais apropriada acerca do preparo pré-operatório e da\nmedicação anti-hipertensiva.",
+      "options": {
+        "A": "Prosseguir com a cirurgia conforme agendado, uma vez que a pressão arterial está dentro da\nfaixa aceitável.",
+        "B": "Adiar a cirurgia para otimizar o controle da pressão arterial, solicitando monitorização\nambulatorial da pressão arterial (MAPA) e risco cirúrgico.",
+        "C": "A paciente não precisará realizar uma avaliação cardiovascular mais detalhada para determinar\nse ela está apta para a cirurgia. Poderá\nprosseguir com a cirurgia sem necessidade de remarcação.",
+        "D": "Será necessário administrar medicação anti-hipertensiva adicional para normalizar a pressão\narterial antes da cirurgia."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão bem polêmica e com margem para recurso Vamos entender Aqui temos uma paciente de 55 anos previamente hipertensa controlada em pré-operatório de colecistectomia eletiva que, ao se apresentar para a cirurgia estava hipertensa com 176 x 90 mmHg. A banca ainda informou que a paciente não conseguiu realizar a consulta com cardiologista para avaliação do risco cirúrgico. Aqui surgem então dois questionamentos O que fazer com relação à pressão Essa paciente de fato PRECISA de avaliação cardiovascular pré-operatória Primeiro vamos discutir sobre a pressão. O livro-texto Bases do Ensino de Anestesiologia da Sociedade Brasileira de Anestesiologia, página 417 diz que A HAS preexistente não diagnosticada ou mal controlada pode se apresentar no perioperatório, e a retirada abrupta de medicamentos anti-hipertensivos poderá causar a sua elevação. A hipertensão pré-operatória deve ser tratada e, sempre que possível, a cirurgia eletiva adiada até que a pressão sanguínea esteja com valores inferiores a 180 110 mmHg. A medicação anti-hipertensiva deve ser mantida e um ansiolítico poderá auxiliar a reduzir os níveis de catecolaminas endógenas. Outro livro-texto de título Anestesiologia, também da Sociedade Brasileira de Anestesiologia, 4ª edição, de James Manica, página 1197, também segue na mesma linha, dizendo que Nos pacientes com hipertensão leve ou moderada, sem alterações metabólicas ou cardiovasculares associadas, não há evidências para a suspensão da cirurgia. Uma quantidade significativa de pacientes irá apresentar hipertensão arterial devido à ansiedade no pré-operatório, para os quais se recomendam ansiolíticos e verificação posterior da PA antes de qualquer outra terapia anti-hipertensiva. Agora retornando ao caso, perceba que a paciente é sabidamente hipertensa controlada (quem disse que é controlada foi a banca), tomou seu anti-hipertensivo do dia mas segue com PA 180 110 mmHg. Ou seja, seu valor de pressão não contraindica o procedimento Então de cara já tínhamos margem para recurso. Mas muitos podem levantar a segunda discussão que trouxemos acima sobre a avaliação cardiológica pré-operatória Afinal a paciente não fez o risco cirúrgico. Isso não deveria ser obrigatório Aí que tá Se formos olhar pelo que consta no Sabiston 21ª edição, esta paciente não tem indicação de risco cirúrgico e exames complementares para operar. Diferente do que trazia nas versões anteriores, esta última versão do Sabiston, no que diz respeito à avaliação cardiovascular pré-operatória, reforça que o objetivo principal é ser cada vez mais racional, evitando a solicitação de exames em pacientes cujo teste não vai mudar em absolutamente nada sua conduta. Em geral, procedimentos de baixo risco não requerem avaliação cardíaca pré-operatória. Por outro lado, para todos os outros procedimentos, de médio, alto risco ou procedimentos vasculares, o Sabiston sugere avaliar ECG para pacientes sem comorbidades. Caso o paciente apresente queixas cardiovasculares como dispneia de origem desconhecida ou história pregressa de doença coronariana, deve ser solicitado ecocardiograma com pelo menos um ano antes do procedimento ou um novo caso tenha havido mudança clínica desde o último. Para pacientes que serão submetidos a procedimentos de alto risco e com baixa capacidade funcional (4 METs) ou capacidade funcional desconhecida com pelo menos três fatores de risco, deve ser indicado teste ergométrico com imagem cardíaca (cintilografia miocárdica, por exemplo). E caso o paciente não consiga completar o teste, prosseguir investigação com ecocardiograma de estresse com teste farmacológico induzido. Então repare que temos uma paciente de 55 anos com hipertensão previamente controlada e que fará uma cirurgia de baixo risco. Logo, não há indicação de estratificação cardiovascular. Logo, perceba que tanto a letra A quanto a B são respostas possíveis. A banca liberou como gabarito inicialmente a letra B, mas após os pedidos de recurso optou por corretamente anular a questão.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-298848",
+      "number": "298848",
+      "sourceNumber": "298848",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Um paciente de 23 anos de idade foi encaminhado à emergência com história de dor\nabdominal que migrou para a fossa ilíaca direita há dois dias. Ele queixa-se de náuseas, vômitos e\ndificuldade para se alimentar, nega febre e 1 episódio de fezes amolecidas no período. Ao exame\nfísico, apresenta-se afebril, FC = 82 bpm, FR = 18 irpm e SatO2 = 98%. Ao exame abdominal,\napresenta dor à palpação de todo abdome e dor à descompressão brusca de fossa ilíaca direita. Os\nexames laboratoriais apresenta leucocitose, sem desvio. Acerca desse caso clínico e com base nos\nconhecimentos médicos correlatos, julgue o item a seguir. A profilaxia de TVP está indicada em\ntodo pós-operatório, e as medidas variam de acordo com o risco do paciente.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Dor abdominal que migrou para FID há 2 dias, associada a náuseas, vômitos e anorexia, em um paciente de 23 anos e do sexo masculino nos faz pensar OBRIGATORIAMENTE em apendicite aguda. Além disso, apresenta descompressão brusca dolorosa em FID. Avalainado a assertiva DISCUTÍVEL Mesmo que seja com medidas mecânicas, como deambulação precoce a TVP deve er evitada. Mas veja que a banca liberou iniicialmente o gabarito como letra A e depois alterou para letra B. Porque Pelo motivo da generalização. TODA PÓS-OPERATÓRIO Aí não ne Imagine uma cirurgia de catarata ou uma cirurgia de exérese de um lipoma. Não vamos fazer nenhuma profilaxia. Por isso a banca altereou o gabarito para a letra B.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-298849",
+      "number": "298849",
+      "sourceNumber": "298849",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Um paciente de 23 anos de idade foi encaminhado à emergência com história de dor\nabdominal que migrou para a fossa ilíaca direita há dois dias. Ele queixa-se de náuseas, vômitos e\ndificuldade para se alimentar, nega febre e 1 episódio de fezes amolecidas no período. Ao exame\nfísico, apresenta-se afebril, FC = 82 bpm, FR = 18 irpm e SatO2 = 98%. Ao exame abdominal,\napresenta dor à palpação de todo abdome e dor à descompressão brusca de fossa ilíaca direita. Os\nexames laboratoriais apresenta leucocitose, sem desvio. Acerca desse caso clínico e com base nos\nconhecimentos médicos correlatos, julgue o item a seguir. No estado de pós-operatório, o paciente\napresenta alterações hormonais referentes à resposta endócrino metabólica e imunológica ao\ntrauma (REMIT). Entre elas, estão a elevação do glucagon, ACTH e cortisol e a redução da\ninsulina, o que torna os pacientes em pós-operatório com controles glicêmicos mais elevados.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Dor abdominal que migrou para FID há 2 dias, associada a náuseas, vômitos e anorexia, em um paciente de 23 anos e do sexo masculino nos faz pensar OBRIGATORIAMENTE em apendicite aguda. Além disso, apresenta descompressão brusca dolorosa em FID. Avalainado a assertiva Na REMIT, temos uma resposta CATABÓLICA através da liberação de hormônicos catabólicos. Lembre-se que na REMIT temos uma resposta contrai-insulínica. Aumenta a glicose disponível e diminui a insulina. Os que classicamente se aumentam são glucagon, ACTH, GH, COrtisol… eles se elevam na REMIT. Resposta Letra A.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-214387",
+      "number": "214387",
+      "sourceNumber": "214387",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Uma paciente de 32 anos de idade, obesa (IMC 38 Kg/m²), diabética tipo II e em uso de\nhipoglicemiante oral, em tratamento de transtorno depressivo maior (bem controlado), comparece\nao consultório médico demonstrando interesse em realizar cirurgia bariátrica para emagrecer, pois\ngostaria de reduzir o peso por questões estéticas. A respeito desse caso clínico e da cirurgia\nbariátrica, e considerando os conhecimentos médicos correlatos, julgue o item a seguir. A paciente\nmencionada não apresenta risco maior de infecção da ferida, formação de hematoma, hérnia\nincisional e complicações clínicas, em relação a outros pacientes.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Temos uma paciente diabética que será submetida a um procedimento cirúrgico. Vale lembrar que a doença de base, de forma isolada, aumenta o risco de diversas complicações intra e pós operatórias, promovendo impacto negativo na cicatrização de feridas e aumentando o risco de infecção. Afirmativa ERRADA.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-177553",
+      "number": "177553",
+      "sourceNumber": "177553",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente do sexo feminino, 35 anos de idade, IMC 42, submetida a cirurgia bariátrica\ncom técnica aberta há 8 dias, vem à emergência\ncom queixa de dor e saída de secreção purulenta\nfétida na ferida operatória. O exame físico não apresenta outras alterações. Considerando o caso\nclínico apresentado e os conhecimentos médicos relacionados à infecção do sítio cirúrgico, julgue o\nitem a seguir. São alguns fatores de risco relacionados ao paciente: imunossupressão, transfusões\nsanguíneas transoperatórias, idade, neoplasia e esteroides.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Certo. Além dos fatores citados, também encontramos nesse caso a obesidade e a cirurgia convencional como fatores que aumentam o risco de infecção de ferida operatória.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-177555",
+      "number": "177555",
+      "sourceNumber": "177555",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente do sexo feminino, 35 anos de idade, IMC 42, submetida a cirurgia bariátrica\ncom técnica aberta há 8 dias, vem à emergência\ncom queixa de dor e saída de secreção purulenta\nfétida na ferida operatória. O exame físico não apresenta outras alterações. Considerando o caso\nclínico apresentado e os conhecimentos médicos relacionados à infecção do sítio cirúrgico, julgue o\nitem a seguir. Desnutrição e altos níveis de albumina estão associados ao aumento da infecção no\nsítio cirúrgico.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Errada. O correto seriam os baixos níveis (usualmente abaixo de 3,0) de albumina estarem relacionados ao aumento da taxa de infecção do sítio cirúrgico, e não os altos níveis. Contudo, a banca acabou anulando a questão sem maiores explicações.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-177556",
+      "number": "177556",
+      "sourceNumber": "177556",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente do sexo feminino, 35 anos de idade, IMC 42, submetida a cirurgia bariátrica\ncom técnica aberta há 8 dias, vem à emergência\ncom queixa de dor e saída de secreção purulenta\nfétida na ferida operatória. O exame físico não apresenta outras alterações. Considerando o caso\nclínico apresentado e os conhecimentos médicos relacionados à infecção do sítio cirúrgico, julgue o\nitem a seguir. Feridas cirúrgicas em que o trato digestivo é violado de forma controlada são\nclassificadas como limpas.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Errado. Feridas em que o trato digestivo, respiratório ou genitourinário são violados de forma CONTROLADA são classificadas como POTENCIALMENTE CONTAMINADAS.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-177558",
+      "number": "177558",
+      "sourceNumber": "177558",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente do sexo feminino, 35 anos de idade, IMC 42, submetida a cirurgia bariátrica\ncom técnica aberta há 8 dias, vem à emergência\ncom queixa de dor e saída de secreção purulenta\nfétida na ferida operatória. O exame físico não apresenta outras alterações. Considerando o caso\nclínico apresentado e os conhecimentos médicos relacionados à infecção do sítio cirúrgico, julgue o\nitem a seguir. A preparação do sítio cirúrgico não modifica a incidência de infecção local.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Errada. A preparação do sítio com degermação e antissepsia alcoólica diminui consideravelmente as taxas de infecção de ferida operatória porque diminui o índice de contaminação do procedimento.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-152070",
+      "number": "152070",
+      "sourceNumber": "152070",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "O paciente J. O. C., de 75 anos de idade, chega ao serviço de pronto atendimento com\ndor aguda, cansaço, fraqueza muscular e\nsensação de câimbra nos pés após caminhada de duas\nquadras, obrigando-o a parar, sem melhora após alguns minutos em repouso. Relata histórico\ncirúrgico por dissecção aguda da aorta torácica. Ao exame: REG, corado, hidratado, TAX = 37 °C,\nFC = 100 bpm, FR = 21 irpm, índice tornozelo-braquial (ITB) 0,26. Lesão ulcerosa em MID sem\nsinais de infecção. Exames indicam leucócitos 8.000 células/mm³ sem desvio. O paciente foi\nsubmetido a operação vascular, evoluindo com febre no POI e infecção do sítio cirúrgico (ISC),\nposteriormente. Com relação a esse caso clínico, julgue o item a seguir. A febre pós-operatória é\ncomum na ausência de infecção.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A principal causa de febre no período pós-operatório é a atelectasia pulmonar, uma causa não infecciosa. Elevações na temperatura também são esperadas pela resposta endócrina e imune ao trauma. Resposta CERTO.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-152142",
+      "number": "152142",
+      "sourceNumber": "152142",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Considere as três situações seguintes: Paciente 1 - O. S., 34 anos de idade, queixa-se\nde dispneia e desconforto respiratório leve, FR\n= 19 irpm, Sat O2 = 98% e PA de 130 x 80 mmHg;\nPaciente 2 - B. M. S., 65 anos de idade, trabalhador rural, vai à consulta para esclarecer dúvidas a\nrespeito de uma mancha escura na face, perda ponderal e massa palpável no abdome; Paciente 3 -\nAdolescente deu entrada na emergência, após acidente motociclístico, com sangramento ativo de\ndifícil controle em MSE, FC = 99 bpm, PA de 110 x 70 mmHg, consciente e manifestando sede.\n\nCom relação aos casos clínicos apresentados, julgue o item a seguir. O processo de resposta\nendocrinometabólica ao trauma no qual o Paciente 3 se encontra, reage ao jejum prolongado com\ncatabolismo, estabelecido por redução na lipólise e aumento da proteólise.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A resposta esperada no paciente 3 é de aumento da lipólise, aumento da proteólise, gliconeogênese, glicogenólise e diminuição dos níveis de insulina. Afirmativa ERRADA.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-82049",
+      "number": "82049",
+      "sourceNumber": "82049",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Acerca dos sistemas cardiovascular, gastrointestinal e endócrino, julgue o item que se\nsegue. Hipertensão arterial e insuficiência renal crônica associadas aumentam consideravelmente o\nrisco de complicações cardiovasculares.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "CERTA - A assertiva é tão verdadeira que, inclusive, os dois fatores são considerados um dos principais pontos a serem avaliados durante o risco cirúrgico. Tanto é que o valor da PA e os níveis elevados de ureia creatinina fazem parte de diversos scores de pontuação para estadiamento do risco cardiovascular, como o de Framingham e ADHERE.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-79648",
@@ -448,6 +1439,7 @@
         "E": "Contagem de plaquetas."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -460,6 +1452,105 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-64612",
+      "number": "64612",
+      "sourceNumber": "64612",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Em relação a complicações cirúrgicas, assinale a alternativa que apresenta a\ncomplicação respiratória mais frequente no\npós-operatório e que, comumente, é a causa de febre\nnas primeiras 48 horas após o procedimento cirúrgico.",
+      "options": {
+        "A": "Pneumotórax.",
+        "B": "Embolia Pulmonar.",
+        "C": "Derrame Pleural.",
+        "D": "Atelectasia.",
+        "E": "Pneumonia."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão clássica. A principal causa de febre nas primeiras 48 horas de pós-operatório é a atelectasia pulmonar, a qual ocorre principalmente em cirurgias torácicas e andar superior de abdome. A conduta é a fisioterapia respiratória.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-64664",
+      "number": "64664",
+      "sourceNumber": "64664",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Em relação às alterações metabólicas observadas durante uma intervenção cirúrgica,\nassinale a alternativa correta.",
+      "options": {
+        "A": "Há aumento dos níveis séricos de interleucinas e queda dos níveis de glucagon.",
+        "B": "Há diminuição dos níveis séricos de aldosterona e do Hormônio Antidiurético (ADH).",
+        "C": "Há diminuição dos níveis séricos de cortisol, com recrutamento de ácidos graxos pelo fígado.",
+        "D": "Há aumento dos níveis séricos de cortisol em resposta ao aumento das concentrações do\nHormômio Adrenocorticotrófico (ACTH).",
+        "E": "Há aumento da síntese proteica muscular."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "As alterações metabólicas e inflamatórias observadas durante uma intervenção cirúrgica incluem aumento dos níveis séricos de interleucinas, elevação dos níveis de glucagon, diminuição da insulina, elevação de ADH, ACTH e cortisol, proteinólise, entre outros.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-301283",
+      "number": "301283",
+      "sourceNumber": "301283",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Uma paciente de 44 anos de idade, com diabetes tipo 2, relata dores abdominais há\ncerca de seis meses, principalmente em\nhipocôndrio direito e flanco direito. Realizou ultrassom de\nabdome, o qual mostrou múltiplos cálculos na vesícula biliar, que se encontrava com paredes finas\ne sem dilatação de vias biliares. Apresentava bilirrubina total de 0,7 mg/dL, AST = 35 UI (normal\naté\n40), ALT = 64 (normal até 40 UI), fosfatase alcalina = 342 UI (normal até 250) e Gama GT = 743 UI\n(normal até 110). Com base nesse caso clínico hipotético, julgue o item. No caso de ser indicada a\ncolecistectomia eletiva, o emprego de antibióticos após a cirurgia deve ser mantido por uma\nsemana, para se evitarem as complicações infecciosas pós-operatórias.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A antibioticoprofilaxia é indicada com o objetivo de evitar infecção de ferida operatória. À princípio em cirurgias limpas ela não deve ser indicada (apenas em alguns casos específicos como uso de material sintético, cirurgia com incisão óssea, ou procedimentos em que mesmo uma infecção leve levaria a quadros catastróficos, como cardíacas ou neurocirurgias). O uso profilático de antibióticos é indicado em casos de cirurgias limpa-contaminadas ou contaminadas. Nas cirurgias sujas e infectadas, é indicado antibiótico, mas terapêutico, não profilático. O antibiótico ideal deve ser direcionado aos patógenos mais encontrados em cada sítio cirúrgico. A administração deve ser feita dentro de 60 minutos antes da incisão cirúrgica para garantir seu nível sérico adequado no momento da agressão tissular. Muitos cirurgiões insistem em manter o antibiótico no pós-operatório, porém na maioria dos casos não há vantagens em prolongar a profilaxia além do tempo cirúrgico. As exceções são as artoplastias (alguns autores recomendam manter por 48h) e cirurgias de cabeça e pescoço potencialmente contaminadas, procedimentos ortopédicos, cirurgias vasculares, torácicas, neurológicas e cardíacas (por até 24h). Apesar de ser considerada um procedimento limpo-contaminado, de acordo com a última edição do Sabiston, a colecistectomia eletiva não tem indicação de antibioticoprofilaxia a todos os pacientes. Apenas os pacientes de alto risco devem ter sua indicação 70 anos, colecistite aguda, vesícula não funcionante, icterícia obstrutiva ou cálculo nos ductos. Logo, como o paciente do caso será submetido a uma colecistectomia eletiva e não tem alto risco, não há indicação de antibioticoprofilaxia nem de manutenção do antibiótico por uma semana, como sugere o enunciado. Resposta errado.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-273339",
@@ -480,6 +1571,7 @@
         "D": "Aumento da Resistência Vascular Sistêmica, Aumento da Pressão Arterial Média, Aumento do\nDébito Cardíaco e Aumento da Pressão Venosa Central."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -512,6 +1604,7 @@
         "D": "O efeito estético e a resposta metabólica ao trauma."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -524,6 +1617,206 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-291534",
+      "number": "291534",
+      "sourceNumber": "291534",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente de 40 anos de idade, sexo feminino, procura unidade pública de pronto\natendimento com queixa de dor em ferida operatória de ressecção de \"nódulo\" de 5 cm de\ndiâmetro, na região escapular direita, há 2 dias. Ao exame, ferida cirúrgica com edema, eritema,\ncalor e dor à palpação, associada a flutuação e exsudação em bordos da sutura. Com base nas\ninformações, qual a conduta propedêutico terapêutica para essa paciente?",
+      "options": {
+        "A": "Drenagem por retirada parcial de pontos.",
+        "B": "Ultrassonografia de partes moles.",
+        "C": "Punção com agulha fina.",
+        "D": "Antibioticoterapia oral."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A questão mostra uma paciente que procura o pronto socorro por dor em ferida operatória de ressecção de nódulo na região escapular direita há dois dias. Ao exame, a ferida operatória apresenta edema, eritema, calor e dor à palpação, associada a flutuação e exsudação em bordos da sutura. De acordo com o Centers for Disease Control americano, o diagnóstico de Infecção do Sítio Cirúrgico superficial (ISC) ocorre em menos do que 30 dias após a cirurgia e envolve apenas pele e tecido subcutâneo com drenagem de secreção purulenta da incisão ou apresenta sinais inflamatórios locais. Nas ISC incisionais superficiais, devemos abrir os pontos da ferida e permitir a drenagem de material purulento irrigação diária com soro fisiológico e desbridamento também são medidas fundamentais. É importante que o cirurgião explore manualmente a ferida para confirmar ou não o acometimento de tecidos profundos, como fáscia e músculo. De forma geral, a solicitação de cultura de material proveniente da ferida não é necessária. Na ISC incisional superficial, na ausência de celulite e manifestações sistêmicas, não existe a necessidade de prescrição antibiótica. Além disso, nenhum exame de imagem é necessário neste momento. Resposta letra A.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-230588",
+      "number": "230588",
+      "sourceNumber": "230588",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Sobre os agentes hipnóticos endovenosos utilizados para anestesia, assinale a\nCORRETA:",
+      "options": {
+        "A": "o etomidato apresenta estabilidade cardiovascular importante, e reduz a liberação de histamina,\npor isso é indicado em pacientes que apresentam\nbroncoespasmo.",
+        "B": "o etomidato é muito utilizado no protocolo de intubação assistida por drogas (sequência rápida),\npois apresenta estabilidade cardiovascular,\nporém aumenta liberação de histamina, o que pode\npiorar quadros de broncoespasmo.",
+        "C": "o etomidato é a droga de escolha na manutenção do protocolo de anestesia venosa total, pois\nestimula o eixo adreno-cortical, melhorando a resposta endócrino metabólica ao trauma.",
+        "D": "o etomidato é a única droga hipnótica que é contraindicada no protocolo de sequência rápida de\nintubação, pois apresenta bloqueio neuromuscular não despolarizante."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar as alternativas A) Incorreta. O etomidato de fato apresenta uma boa estabilidade cardiovascular, porém não promove liberação de histamina e nem induz redução da mesma. B) Incorreta. O etomidato é de fato um agente de escolha na intubação por sequência rápida, especialemente por apresentar rápida indução, tem boa estabilidade, pois não promove alterações no sistema cardiovascular e, como vimos, ele não interfere na liberação de histamina. C) Incorreta. O uso prolongado induz supressão adreno-cortical, podendo levar à insuficiência adrenal. D) Incorreta. É um agente hipnótico preferencialmente utilizado no protocolo de sequencia rápida, pois apresenta rápida indução. Portanto, todas as alternativas estão incorretas e a questão foi devidamente anulada.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-175088",
+      "number": "175088",
+      "sourceNumber": "175088",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Somente não podemos afirmar que o Tubo Esofágico Traqueal (Combitube) apresenta\na seguinte característica descrita:",
+      "options": {
+        "A": "Quando usamos o Tubo Esofágico Traqueal (Combitube), ao se intubar o esôfago, ocorre um\nisolamento deste e o ar passa pelas fenestrações do tubo, ventilando os pulmões.",
+        "B": "Tubo Esofágico Traqueal (Combitube) oferece vantagens similares as da intubação orotraqueal.",
+        "C": "Tubo Esofágico Traqueal (Combitube) produz isolamento da via aérea, redução no risco de\naspiração e ventilação segura.",
+        "D": "Tubo Esofágico Traqueal (Combitube) trata-se de uma via aérea avançada definitiva."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Quando pensamos no Combitube, devemos lembrar que ele não é uma via aérea definitiva pois não temos um balonete insuflável dentro da traqueia. Aqui, realizamos uma intubação esofágica proposital. Um balonete é inflado no esôfago e outro na orofaringe. Das alternativas aquela incorreta é a letra D e por isso, gabarito.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-80705",
+      "number": "80705",
+      "sourceNumber": "80705",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Assinale a alternativa que apresenta o sinal mais frequente de transfusão acidental de\nsangue incompatível em um paciente anestesiado.",
+      "options": {
+        "A": "Aumento da pressão diastólica arterial.",
+        "B": "Sangramento generalizado anormal.",
+        "C": "Diminuição abrupta da temperatura corporal.",
+        "D": "Calafrios.",
+        "E": "Urticária."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Uma das mais sérias complicações transfusionais é a ocorrência de hemólise intravascular que resulta da administração de sangue incompatível. Embora qualquer antígeno-anticorpo possa estar envolvido nessas reações, aquelas que envolvem os sistemas ABO, Rh e Keli são as de significância clínica maior. Nas reações mais severas, o antígeno está na hemácia do doador e o anticorpo no plasma do receptor geralmente reações menos severas ocorrem quando o anticorpo do plasma do doador reage com o antígeno das hemácias do receptor ou em outras hemácias do doador transfundidas para o paciente. As reações transfusionais hemolíticas são usualmente manifestadas por queimação ao longo do curso da veia usada para infusão, sem fração de calor na face, dor na região lombar, uma sensação de constrição do tórax, tosse, hemoglobinemia e hemoglobinúria, mas reações hemolíticas sérias podem ser manifestadas não mais que por urticária ou uma febre baixa, especialmente se o paciente está sobre efeito anestésico. Reações hemolíticas agudas causam hemólise intravascular, que podem levar a sangramento generalizado. Qualquer reação incomum de um paciente recebendo uma transfusão deve ser considerada uma reação hemolítica e tratada de acordo, até prova em contrário. Quando uma reação transfusional hemolítica é suspeitada, a transfusão deve ser parada imediatamente. A gravidade da reação é frequentemente relacionada à quantidade de sangue incompatível administrado. O dano renal grave não é frequente em adultos se menos de 200 ml de sangue incompatível é dado.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-97739",
+      "number": "97739",
+      "sourceNumber": "97739",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Um homem com 23 anos de idade, obeso, encontra-se no terceiro dia pós-operatório\nde laparotomia exploradora e colorrafia direita\napós trauma abdominal perfurante. Apresentou dois\npicos febris com temperatura axilar = 38,5°C. A ausculta pulmonar apresenta diminuição do\nmurmúrio vesicular em bases. O abdome é flácido, com dor à palpação ao redor da incisão e os\nruídos hidroaéreos estão diminuídos em número e intensidade. A radiografia simples de abdome\nmostrou pneumoperitôneo com leve distensão de alças. A ultrassonografia abdominal mostrou\nacúmulo de gases e líquidos nas alças, com pequena coleção de líquido na pelve, cuja análise foi\nprejudicada pelas condições do paciente. Hemograma com leucocitose moderada, sem desvio. O\npaciente fez uso de antibioticoterapia profilática, pois não havia contaminação grosseira da\ncavidade abdominal. Considerando as possíveis causas da febre no pós-operatório, qual deve ser a\nconduta correta para esse paciente?",
+      "options": {
+        "A": "Iniciação de antibioticoterapia de amplo espectro.",
+        "B": "Conduta expectante; aguardar evolução clínica.",
+        "C": "Exploração da ferida abdominal.",
+        "D": "Reintervenção cirúrgica."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar alguns dados do enunciado paciente jovem submetido à colorrafia após trauma penetrante sem contaminação grosseira da cavidade abdominal. Achados de pneumoperitôneo com leve distensão das alças é o esperado no terceiro dia de pós-operatório, assim como pequena coleção de líquido livre na pelve, residual da cirurgia. Ausculta pulmonar diminuída em bases, é compatível com atelectasias, devido à cirurgia abdominal, e o paciente ser obeso também facilita. Hemograma com pequena leucocitose sem desvio é esperado, devido à resposta ao trauma cirúrgico, não indicando, em princípio, infecção, e sim, somente inflamação. Agora vamos relembrar as principais causas de febre no pós-operatório nas primeiras 48 horas de pós-operatório pode-se observar elevação da temperatura até 38ºC consequente à elevação do metabolismo e ao trauma cirúrgico. A atelectasia e a pneumonite são as causas mais frequentes de febre nos três primeiros dias pós-operatórios crise tireotóxica também pode associar-se precocemente com febre pós-operatória. Do terceiro ao sexto dia da cirurgia deve-se pensar em infecção de cateteres vasculares, infecção urinária ou incisional, peritonite localizada ou generalizada, além de tromboflebite de membros inferiores. Do sexto ao décimo dia surgem como complicações sépticas, causadoras de febre, os abscessos incisionais e as coleções purulentas. Portanto, podemos concluir que como o paciente está clinicamente bem e os exames laboratoriais estão normais, somente 2 picos febris não justificam uma reabordagem cirúrgica e nem início de antibioticoterapia. Deve-se avaliar acesso venoso, seja ele profundo ou periférico, ver se há sinais flogísticos sonda vesical de demora, avaliar retirada precoce. Logo, pode-se aguardar a evolução do paciente, já que a sua condição clínica nos permite.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-75478",
+      "number": "75478",
+      "sourceNumber": "75478",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Homem com 35 anos de idade, no 3º dia pós-operatório de apendicectomia,\n\nencontra-se internado em enfermaria coletiva de pequeno hospital secundário. O achado cirúrgico\nfoi de uma apendicite aguda em fase\ngangrenosa. Foi iniciada a antibioticoterapia com\nadministração de gentamicina e metronidazol e a alimentação via oral com boa aceitação, após a\neliminação de flatos e fezes. Não apresentou febre. Ao exame, a ferida cirúrgica encontra-se\nhiperemiada, discretamente\n\nabaulada e com saída de material purulento. A conduta para esse caso, além do esclarecimento ao\npaciente, é:",
+      "options": {
+        "A": "manter a antibioticoterapia e curativos diários.",
+        "B": "trocar antibioticoterapia, aplicar calor local e curativos diários.",
+        "C": "manter a antibioticoterapia, retirar os pontos cirúrgicos para drenagem da secreção e curativos\ndiários.",
+        "D": "trocar antibiotioterapia, indicar a realização de exame de imagem pelo risco de infecção\nintracavitária.",
+        "E": "manter antibiotioterapia, indicar a exploração cirúrgica da ferida operatória pelo risco de\ninfecção\n\nintracavitária."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O paciente apresenta quadro de ISC superficial. Nesses casos, o tratamento é a retirada dos pontos com drenagem da coleção. Só haveria indicação de troca do esquema antimicrobiano caso hovesse repercussão clínica, como febre ou sinais sistêmicos. Logo a resposta é mesmo a opção C.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-352196",
@@ -544,6 +1837,7 @@
         "D": "Uma das vantagens da utilização do gás carbônico é o seu alto poder de difusão, o que contribui\npara reduzir a chance de embolia gasosa."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -556,6 +1850,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-321156",
+      "number": "321156",
+      "sourceNumber": "321156",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Em uma paciente de alto risco de tromboembolismo venoso, com contraindicação ao\nuso de anticoagulante, é CORRETO afirmar que\na alternativa preferencial deve ser de:",
+      "options": {
+        "A": "Meias elásticas.",
+        "B": "Filtro de veia cava.",
+        "C": "Monitoramento com doppler.",
+        "D": "Compressão pneumática intermitente."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vários escores foram desenvolvidos nos últimos anos para estimar o risco de pacientes cirúrgicos virem a desenvolver doença tromboembólica. O escore de Caprini modificado, por exemplo, é utilizado para estimar o risco de tromboembolismo venoso em determinadas cirurgias, como as abdominais e pélvicas, bariátrica, vascular e plástica. Para pacientes de risco moderado alto, recomenda-se a anticoagulação profilática utilizando-se ou heparina de baixo peso molecular, ou heparina não fracionada em baixas doses, ou fondaparinux (nos pacientes de risco alto, associamos ainda dispositivos mecânicos). O grande ponto é que alguns pacientes que têm indicação de anticoagulação apresentam contraindicação a essa estratégia, seja por um sangramento ativo grave, seja por alguma outra contraindicação qualquer. Para esses pacientes, sobra apenas os dispositivos mecânicos, como a compressão pneumática intermitente. A meia elástica tem menor grau de evidência e parece ser ineficaz isoladamente, aumentando o risco de úlcera cutânea e necrose. O filtro de veia cava, por sua vez, é um método indicado para o paciente com contraindicação para anticoagulação e trombose venosa profunda proximal já estabelecida. Monitorar com exames complementares também não é o mais adequado. Resposta compressão pneumática intermitente.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-334729",
@@ -576,6 +1903,7 @@
         "D": "O ceticismo dos profissionais de saúde a respeito da importância da higienização de mãos é um\ndos fatores apontados por eles próprios para\na baixa adesão a esta prática."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -588,6 +1916,207 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-334731",
+      "number": "334731",
+      "sourceNumber": "334731",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Paciente de 63 anos, operada há 4 dias para tratamento de hérnia inguinal esquerda,\nretornou ao pronto socorro referindo dor\nde média para grande intensidade no membro inferior\nesquerdo, que iniciou naquela madrugada na virilha e progrediu distalmente se tornando mais\nacentuada na panturrilha. Notou aumento do volume da extremidade difusamente, incluindo o pé,\ncom discreto aumento da temperatura e a perna e o pé ficaram mais arroxeados. Ao exame físico\nnão há sinal de Godet positivo. A panturrilha está mais firme que a do lado direito. Tem pulso\npedioso 3+/4. Pressão arterial: 145/95 mmHg, frequência cardíaca: 92 bpm, sem dispneia ou tosse.\nTemperatura axilar: 35.9 graus celsius. De posse desses dados, indique qual medicamento não é\napropriado para o tratamento do caso.",
+      "options": {
+        "A": "Varfarina sódica.",
+        "B": "Apixabana.",
+        "C": "Clopidogrel.",
+        "D": "Rivaroxabana."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Paciente em pós operatório de hérnia inguinal evolui com quadro compatível com trombose venosa profunda. Frente a uma TVP o tratamento preconizado é com anticoagulante seja inibidor da vitamina K (Varfarina sódica - Marevan), sejam os novos anticoagulantes orais diretos (NOACs), como os inibidores do fator Xa (apixabana, rivaroxabana - Xarelto). Dentre as opções mencionadas na questão, o único que não faz parte do tratamento da TVP é o antiagregante plaquetário - clopidogrel. Resposta Clopidogrel.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-321189",
+      "number": "321189",
+      "sourceNumber": "321189",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Sobre antibióticoprofilaxia nas cirurgias de urgência, correlacione COLUNA I com a\nCOLUNA II. COLUNA I A ? Hérnia\nestrangulada. B ? Hérnia encarcerada. C ? Perfuração intestinal\nrecente. D ? Apendicite aguda necrosada. COLUNA II ( ) 1. Cirurgia limpa. ( ) 2. Cirurgia\npotencialmente contaminada. ( ) 3. Cirurgia contaminada. ( ) 4. Cirurgia infectada. Assinale a\nalternativa que apresenta a sequência CORRETA:",
+      "options": {
+        "A": "A2, B3, C2, D4.",
+        "B": "A3, B1, C3, D3.",
+        "C": "A3, B2, C4, D4.",
+        "D": "A2, B1, C4, D3."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Segundo a classificação de contaminação das cirurgias, caracterizamos os procedimentos citados acima da seguinte forma CIRURGIA LIMPA hérnia encarcerada (B) CIRURGIA CONTAMINADA perfuração intestinal recente (C) e apendicite aguda necrosada (D) POTENCIALMENTE CONTAMINADA hérnia estrangulada (A) INFECTADA seria uma perfuração intestinal com diagnóstico tardio, em que o paciente já possua sinais de septicemia. Resposta A2, B1, C3, D3 ou seja, questão sem resposta.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-320458",
+      "number": "320458",
+      "sourceNumber": "320458",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Um homem de 50 anos está no 5º pós-operatório de ulcerorrafia gástrica, com patch de\nomento. Refere dor abdominal de forte intensidade e mal-estar geral. Pulso: 120 bpm, PA: 90 × 50\nmmHg, temperatura: 37,2 °C. Ao exame, o abdome apresenta distensão, doloroso a palpação\nprofunda difusamente. Dreno abdominal com saída de 900 mL de líquido bilioso nas últimas 24\nhoras. Conduta mais adequada no momento:",
+      "options": {
+        "A": "Nutrição parenteral total e observação clínica rigorosa, sonda nasogástrica e\nantibioticoterapia.",
+        "B": "Jejum, sonda nasogástrica aberta e antibioticoterapia. Realizar tomografia para diagnóstico e\ndrenagem de eventuais coleções não contempladas pelo dreno.",
+        "C": "Endoscopia para confirmação da provável deiscência da sutura e planejamento cirúrgico.",
+        "D": "Exames laboratoriais e tomografia de abdome com contraste oral, para confirmar a suspeita\ndiagnóstica.",
+        "E": "Nova abordagem cirúrgica."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Estamos diante de um paciente com deiscência de anastomose após úlcerorrafia gástrica com patch de omento. O paciente apresenta-se com instabilidade hemodinâmica, taquicárdico, hipotenso, com abdome doloroso difusamente e com saída de 900 mL de líquido bilioso pelo dreno nas últimas 24 horas. Se estivéssemos diante de uma deiscência de anastomose que evoluiu com a formação de fístula entérica, mas com paciente se mantendo bem clinicamente, poderíamos pensar em tratamento conservador. Mas veja que não é um caso tão simples assim. Além de um débito alto pelo dreno, o paciente já apresenta sinais de comprometimento sistêmico. Nestes casos de comprometimento sistêmico e com uma fístula de alto débito, o tratamento conservador não é capaz de controlar a sepse, e a reoperação é a melhor conduta. Resposta Nova abordagem cirúrgica",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-291944",
+      "number": "291944",
+      "sourceNumber": "291944",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "É considerada CONTRAINDICAÇÃO para abordagem de tratamento por laparoscopia:",
+      "options": {
+        "A": "Paciente de 70 anos, com diagnóstico na tomografia de diverticulite com peritonite admitido com\nsinal de Blumberg positivo no andar inferior do abdômen, Glasgow 15, desidratado, PA:\n130X80mmHg e FC: 90bpm.",
+        "B": "Paciente vítima de trauma por acidente de motocicleta e lesão do baço admitido após\nressuscitação volêmica pelo SAMU com Glasgow 15,\ndesidratado, PA: 70X40mmHg e FC: 120bpm.",
+        "C": "Paciente portador de asma com colecistite aguda, admitido com dados clínicos estáveis e\nsaturação de 94%.",
+        "D": "Paciente com apendicite aguda fase 4 admitido com Blumberg positivo em todo abdômen,\nGlasgow 15, desidratado, PA: 110X70 mmHg e FC: 88bpm."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "As principais contraindicações absolutas são impossibilidade técnica, doença cardiopulmonar grave e instabilidade hemodinâmica. Enquanto as relatativas são cirurgia abdominal prévia, obstrução intestinal, massa abdominal volumosa, hérnias diafragmáticas volumosa. Porém, a mais importante delas é a instabilidade hemodinâmica. Paciente de 70 anos, com diagnóstico na tomografia de diverticulite com peritonite admitido com sinal de Blumberg positivo no andar inferior do abdômen, Glasgow 15, desidratado, PA 130X80mmHg e FC 90bpm incorreta. A idade e a peritonite, em decorrência da diverticulite aguda, não contraindicam o procedimento. Em muitas referências essa é inclusive a abordagem preconizada. Paciente vítima de trauma por acidente de motocicleta e lesão do baço admitido após ressuscitação volêmica pelo SAMU com Glasgow 15, desidratado, PA 70X40mmHg e FC 120bpm correta. Independente da cinética do trauma, estado neurológico, o doente apresenta instabilidade hemodinâmica, o que configura uma contraindicação absoluta a laparoscopia. Uma das perguntas a serem respondidas no algoritmo do paciente vítima de politrauma com suspeita de lesão de órgão intra-abdominal é se o paciente está hemodinamicamente estável. Do contrário, ele não pode ser submetido a laparoscopia diagnóstica ou terapêutica. Paciente portador de asma com colecistite aguda, admitido com dados clínicos estáveis e saturação de 94% incorreta. O estado asmático não é uma contraindicação para esse procedimento. Os efeitos fisiológicos adversos provocados pelo pneumoperitônio não contraindicam o procedimento. Paciente com apendicite aguda fase 4 admitido com Blumberg positivo em todo abdômen, Glasgow 15, desidratado, PA 110X70 mmHg e FC 88bpm. incorreta. A peritonite generalizada pode ser um desafio para o cirurgião sem grande experiência com laparoscopia. Porém, não se constitui uma contraindicação absoluta formal. Gabarito Paciente vítima de trauma por acidente de motocicleta e lesão do baço admitido após ressuscitação volêmica pelo SAMU com Glasgow 15, desidratado, PA 70X40mmHg e FC 120bpm.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-291642",
+      "number": "291642",
+      "sourceNumber": "291642",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Assinale a sequência correta em ordem de administração das drogas sedativas durante\no procedimento de intubação orotraqueal:",
+      "options": {
+        "A": "Midazolan ? fentanil ? suxametônio.",
+        "B": "Propofol ? fentanil ? rocurônio.",
+        "C": "Fentanil ? etomidato ? rocurônio.",
+        "D": "Etomidato ? fentanil ? rocuronio.",
+        "E": "Quetamina ? rocuronio ? fentanil."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O enunciado não especificou mas, olhando para as alternativas, fica evidente que a banca quer saber sobre a sequência rápida de intubação. Então, primeiramente, vamos entender o raciocínio por trás deste método… Em todos os cenários de intubação do médico clínico emergencista e ou intestivista, o procedimento é feito em uma situação de urgência ou emergência. Isso é extremamente relevante, porque, grande parte das vezes, sequer temos informação adequada sobre a última refeição do paciente. Como consequência, devemos evitar, sempre que possível, a ventilação externa sob pressão com bolsa-válvula-mascara (o famoso ambu) - isso reduz o risco de hieprinsuflação gástrica, regurgitação e broncoaspiração. Por outro lado, ao sedar o paciente no procedimento, ele perde o controle respiratório A solução proposta foi criar um esquema para induzir rapidamente a sedação e realizar a intubação com sucesso logo na primeira tentativa - técnica que ficou conhecida como sequência rápida de intubação. Classicamente, o esquema é feito com três drogas em sequência (1) Agentes pré-tratamento usados com a intenção de reduzir o reflexo simpático que pode ocorrer durante a laringoscopia. A medicação mais utilizada aqui é o Fentanil. (2) Hipnótico sedativo devem ser escolhidos de acordo com as particularidades de cada caso. Os mais usados são propofol, midazolam, etomidato e quetamina. (3) Bloqueadores neuromusculares reduzem o tônus muscular do paciente e facilitam a laringoscopia. O rocurônio e a succinilcolina são os mais frequentemente usados. Resposta fentanil - etomidato - rocurônio.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-291646",
+      "number": "291646",
+      "sourceNumber": "291646",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Em relação ao preparo pré-operatório de um paciente portador de fibrilação atrial\ncrônica compensada, com ritmo cardíaco irregular,\nem uso de varfarina, diagnosticado com\nadenocarcinoma de cólon esquerdo. Será submetido a colectomia parcial. De acordo com caso\nclínico, qual alternativa constitui a conduta mais adequada:",
+      "options": {
+        "A": "Suspender a dose da mediacação cinco dias antes do procedimento, iniciando então heparina\nde baixo peso molecular em dose terapêutica.",
+        "B": "Suspender a dose do medicamento 24 horas antes da cirurgia, iniciando heparina de baixo peso\nmolecular em dose profilática.",
+        "C": "Substituir a dose da medicação por anticoagulante oral inibidor de fator Xa, sete dias antes da\ncirurgia, sem necessidade de suspensão do inibidor de fator Xa para a cirurgia.",
+        "D": "Ajustar a dose do medicamento, para manter a INR abaixo de 1,5 no dia da cirurgia, iniciando\nheparina de baixo peso molecular em dose profilática.",
+        "E": "Manter uso de varfarina até 24h antes da cirurgia e prescrever vitamina k antes da cirurgia."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O uso de medicações anticoagulantes é um problema rotineiramente encontrado em pacientes que serão submetidos a procedimentos cirúrgicos. A interrupção destas medicações temporariamente eleva o risco trombótico do paciente, enquato a não-interrupção eleva o risco de sangramento intraoperatório. Para o paciente acima, como podemos balancear estes riscos Não há como estimar o risco tromboembólico da fibrilação atrial, pois não temos informações sobre idade e comorbidades deste paciente, mas sabemos que ele será submetido a um procedimento extenso e de grande risco de sangramento. Em geral, isso significa que o anticoagulante deve ser interrompido, mesmo que o risco tromboembólico seja considerável. Para interrupção efetiva da varfarina, um antagonista da vitamina K, é necessário interromper o uso pelo menos 5 dias antes do procedimento e quando possível dosar o INR no dia anterior à cirurgia (deve preferencialmente ser realizada com INR 1,5). E quanto ao uso de alguma terapia ponte durante o período de suspensão até a cirurgia Ora, reservamos essa estratégia para pacientes com muito alto risco tromboembólico, como portadores de válvula cardíaca mecânica, fibriladores com CHA2DS2-VASc muito elevado, e pacientes com história de tromboembolismo recente (últimos 3 meses). Os estudos BRIDGE, RE-LY, ROCKET-AF e ARISTOTLE são apenas alguns que corroboram essa conduta, pois não demonstraram melhora no desfecho com o uso de terapia ponte na maioria dos usuários de varfarina durante o pré-operatório. Quando indicada, deve ser utilizada heparina de baixo peso molecular em dose terapêutica. Sabendo disso, podemos avaliar as alternativas, e imediatamente podemos perceber que a única que se encaixa nas informações acima é a interrupção da medicação 5 dias antes da cirurgia, e iniciar terapia ponte com heparina até o procedimento, entendendo que este paciente possui alto risco tromboembólico.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-212973",
@@ -609,6 +2138,7 @@
         "E": "Risco da anestesia geral."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -642,6 +2172,7 @@
         "E": "Não existem diferenças entre os métodos aberto e laparoscópicos em relação às afirmações\nanteriores."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -674,6 +2205,7 @@
         "D": "As culturas são obrigatórias para o controle de infecção em sítio cirúrgico (ICS) incisionais\nsuperficiais."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -707,6 +2239,7 @@
         "E": "Atelectasias pulmonares. Iniciar ventilação não invasiva e realizar Rx de tórax."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -740,6 +2273,7 @@
         "E": "Em pacientes diagnosticados com doença péptica ulcerosa perfurada, deve-se evitar o\ntratamento por laparoscopia devido ao difícil\nacesso à lesão e das potenciais aderências causadas\npela doença de base, dificultando uma abordagem laparoscópica eficaz."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -773,6 +2307,7 @@
         "E": "Deve ser iniciado 10 minutos antes da incisão cirúrgica."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -806,6 +2341,7 @@
         "E": "Trato Biliar."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -839,6 +2375,7 @@
         "E": "Qualquer agente que cause sedação e analgesia pode ser usado."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -872,6 +2409,7 @@
         "E": "Nas colecistectomias, quando ocorrer curtos períodos de contaminação da área cirúrgica, o uso\nde antibiótico profilático não reduz a\nincidência das infecções."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -905,6 +2443,7 @@
         "E": "4, 2, 3, 1."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -938,6 +2477,7 @@
         "E": "A colecistectomia por via laparoscópica é contraindicada em pacientes previamente operados no\nandar supramesocólico."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -971,6 +2511,7 @@
         "E": "Não se encontra indicada na maioria das cirurgias limpas."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1004,6 +2545,7 @@
         "E": "Obesidade moderada."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1037,6 +2579,7 @@
         "E": "Operações de longa duração, com paciente imobilizado à mesa cirúrgica, tem maior chance de\nTVP e TEP necessitando maior atenção em\nações de prevenção."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1070,6 +2613,7 @@
         "E": "Muscular da mucosa ."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1082,6 +2626,40 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-127159",
+      "number": "127159",
+      "sourceNumber": "127159",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "São causas de íleo paralítico, EXCETO:",
+      "options": {
+        "A": "Infarto agudo do miocárdio.",
+        "B": "Infecções intra-abdominais.",
+        "C": "Procedimento cirúrgico longo.",
+        "D": "Pneumonia.",
+        "E": "Uso de narcóticos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão com gabarito polêmica. Afinal de contas, o que não pode causar íleo Trata-se de um transtorno comum. Pode ser causado por diversos fatores neurogênicos, humorais e metabólicos. Ocorre em graus variáveis após toda cirurgia abdominal. As principais causas de íleo paralítico são a) Litíases biliar e urinária. Na distensão da via biliar ou do ureter surgem reflexos que inibem a motilidade intestinal b) Pneumonia de base c) Fratura de costelas, coluna e hematoma retroperitoneal d) Infarto do miocárdio (região diafragmática). Dessa forma, percebemos que todas as alternativas representam possíveis causas de íleo paralítico, por isso a questão deveria ter sido anulada. Infelizmente a banca ignorou os pedidos de recurso e manteve o gabarito na opção A.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-127172",
@@ -1103,6 +2681,7 @@
         "E": "Pacientes com insuficiências vasculares apresentam maior risco de deiscência de ferida\ncirúrgica."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1115,6 +2694,72 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-102743",
+      "number": "102743",
+      "sourceNumber": "102743",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Aumentam os riscos da infecção do sítio cirúrgico, EXCETO:",
+      "options": {
+        "A": "Uso crônico de corticoides.",
+        "B": "Idade avançada.",
+        "C": "Drenos posicionados por contra abertura e em sistema fechado.",
+        "D": "Obesidade."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Drenos posicionados em contra-abertura (portanto, não saem pela ferida operatória) e em sistema fechado (com um fluxo unidirecional do fluido, ou seja, de dentro para fora da cavidade somente) não estão relacionados à infecção de ferida. Já o uso crônico de corticoides, idade avançada e obesidade são fatores que facilitam, devido a vários prejuízos nas fases de cicatrização da ferida, com comprometimento da perfusão tecidual. O corticoide interfere na fase inflamatória e na síntese do colágeno.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-102746",
+      "number": "102746",
+      "sourceNumber": "102746",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "Em relação às fístulas anastomóticas, assinale a alternativa INCORRETA.",
+      "options": {
+        "A": "A maioria não se fecha espontaneamente e necessita de reoperação.",
+        "B": "Fístula associada à peritonite requer cirurgia de urgência.",
+        "C": "Desnutrição, obstrução distal e infecção dificultam o fechamento espontâneo das fístulas.",
+        "D": "Cuidados com a pele, correção de distúrbios hidroeletrolíticos, hidratação venosa e jejum oral\nsão importantes no tratamento das fístulas."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "As fístulas de anastomoses gastrointestinais são complicações relativamente comuns em Cirurgia Geral. Em geral ocorrem após o 7º dia de pós-operatório e fecham espontaneamente em até 6 semanas. Quando orientadas, podem ser tratadas de forma conservadora com reanimação volêmica adequada, DIETA ZERO, início da Nutrição Parenteral Total (NPT), correção dos distúrbios eletrolíticos e cuidados com a pele. Porém, quando há extravasamento de conteúdo para a cavidade abdominal, leva a uma peritonite e o tratamento é cirúrgico de urgência. Os fatores favoráveis ao fechamento da uma fístula são baixo débito (baixo débito 200 ml 24h e alto débito 500 ml 24h) trajeto fistuloso 2,5 cm (favorável ao fechamento), não possuir doença inflamatória ou neoplásica ativa do segmento intestinal não possuir obstrução distal à fístula não possuir abscesso não drenada próximo à fístula não possuir corpo estranho no trajeto fistuloso e bom estado nutricional.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-106375",
@@ -1136,6 +2781,7 @@
         "E": "volume expiratório forçado em 1 segundo de 1,5 L."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1169,6 +2815,7 @@
         "E": "Os riscos potenciais à vida do doente em questão são de aproximadamente 11%."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1181,6 +2828,40 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-cirurgia-med-cir-09-101019",
+      "number": "101019",
+      "sourceNumber": "101019",
+      "collectionBlock": "med:med-cirurgia-med-cir-09",
+      "collectionLabel": "MED · MED CIR 09",
+      "documentBlock": "",
+      "area": "Cirurgia",
+      "specialty": "Cirurgia",
+      "topic": "MED CIR 09",
+      "subtopic": "",
+      "stem": "J.S.C., 28 anos, apresenta quadro clínico de colelitíase e é submetida à colecistectomia\nvideolaparoscópica. Durante o ato anestésico, apresenta taquicardia, labilidade pressórica,\nsudorese, rigidez de membros inferiores e hipertermia progressiva. O diagnóstico desta paciente foi\nde hipertermia maligna. Qual medicação deve ser administrada?",
+      "options": {
+        "A": "Atropina.",
+        "B": "Dantrolene.",
+        "C": "Flumazenil.",
+        "D": "Naloxona.",
+        "E": "Biperideno."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
+      "sourceLabel": "MED · MED CIR 09",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A hipertermia maligna é considerada uma síndrome farmacogenética, autossômica dominante, que ocorre durante ou logo após a anestesia. Quando determinados indivíduos são expostos a bloqueadores neuromusculares despolarizantes (succinilcolina, suxametionina) ou a agentes anestésicos inalatórios (halotano, enflurano, isoflurano, por exemplo) ocorrem alterações metabólicas de extrema gravidade o cálcio, armazenado no retículo sarcoplasmático da célula muscular esquelética, deixa esta estrutura e alcança o citoplasma em grande quantidade, ligando-se a proteínas contráteis. Este fenômeno gera contração muscular incessante, rigidez muscular e consequente elevação significativa da temperatura corpórea. O aumento do metabolismo muscular acaba levando a uma elevação expressiva da demanda por oxigênio, a qual não é compensada pela oferta o resultado é o aparecim ento de acidose metabólica (láctica). A morte do miócito é representada por rabdomiólise, mioglobinúria, hipercalcemia e elevação da creatinoquinase. O tratamento envolve a administração venosa de dantrolene, um relaxante muscular que bloqueia aproximadamente 75% das contrações musculares.",
+      "tags": [
+        "Cirurgia",
+        "MED CIR 09",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-cirurgia-med-cir-09-77350",
@@ -1202,6 +2883,7 @@
         "E": "18 ml/h."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1235,6 +2917,7 @@
         "E": "50 ampolas."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1268,6 +2951,7 @@
         "E": "Devido à alteração eletrocardiográfica identificada, deve-se administrar imediatamente gluconato\nde cálcio para estabilização da membrana\ncelular e prevenção de arritmias graves."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
@@ -1301,6 +2985,7 @@
         "E": "O suporte nutricional enteral em pacientes com pancreatite grave não deve ser iniciado antes de\n5 dias, devido ao risco de agravamento do\nquadro."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Cirurgia/MED CIR 09/MED CIR 09.txt",
       "sourceLabel": "MED · MED CIR 09",
       "images": [],
