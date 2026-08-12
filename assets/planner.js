@@ -9609,6 +9609,18 @@ const QUESTION_SPECIALTY_GROUPS = [
       'go',
       'g o'
     ])
+  },
+  {
+    label:'Cirurgia Geral',
+    aliases:new Set(['cirurgia','cirurgia geral'])
+  },
+  {
+    label:'Medicina de Família e Comunidade',
+    aliases:new Set(['mfc','medicina de familia e comunidade'])
+  },
+  {
+    label:'Ciências Básicas',
+    aliases:new Set(['ciencias basicas','cofbasics'])
   }
 ];
 function questionSpecialtyGroup(value) {
@@ -9620,6 +9632,7 @@ function questionSpecialtyGroup(value) {
     .replace(/\s+/g,' ')
     .trim();
   const group = QUESTION_SPECIALTY_GROUPS.find(item => item.aliases.has(normalized));
+  if(normalized.startsWith('ginecologia ') || normalized.startsWith('obstetricia ')) return 'Ginecologia e Obstetrícia';
   return group?.label || String(raw).trim() || 'Sem especialidade';
 }
 function filteredQuestions() {

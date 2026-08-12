@@ -27,9 +27,12 @@ test('Anterior encontra a vizinha correta mesmo se a respondida saiu do filtro',
 
 test('especialidades de GO aparecem em um único grupo sem alterar outros nomes', () => {
   const ctx = loadPlannerSandbox();
-  for(const alias of ['Ginecologia','Obstetrícia','Ginecologia e Obstetrícia','G.O.','GO','Gineco-Obstetrícia']) {
+  for(const alias of ['Ginecologia','Obstetrícia','Ginecologia e Obstetrícia','G.O.','GO','Gineco-Obstetrícia','Ginecologia Oncológica']) {
     assert.equal(ctx.questionSpecialtyGroup(alias),'Ginecologia e Obstetrícia',alias);
   }
   assert.equal(ctx.questionSpecialtyGroup('Cardiologia'),'Cardiologia');
   assert.equal(ctx.questionSpecialtyGroup({specialty:'Obstetrícia',area:'Cirurgia'}),'Ginecologia e Obstetrícia');
+  assert.equal(ctx.questionSpecialtyGroup('Cirurgia'),'Cirurgia Geral');
+  assert.equal(ctx.questionSpecialtyGroup('MFC'),'Medicina de Família e Comunidade');
+  assert.equal(ctx.questionSpecialtyGroup('CofBasics'),'Ciências Básicas');
 });
