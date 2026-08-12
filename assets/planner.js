@@ -9597,6 +9597,31 @@ function openFlashcardsForSchedule(scheduleId) {
   ui.flashcardIndex = 0;
   navigateToTab('flashcards');
 }
+const QUESTION_SPECIALTY_GROUPS = [
+  {
+    label:'Ginecologia e Obstetrícia',
+    aliases:new Set([
+      'ginecologia',
+      'obstetricia',
+      'ginecologia e obstetricia',
+      'ginecologia obstetricia',
+      'gineco obstetricia',
+      'go',
+      'g o'
+    ])
+  }
+];
+function questionSpecialtyGroup(value) {
+  const raw = typeof value === 'object'
+    ? value?.specialty || value?.area || 'Sem especialidade'
+    : value || 'Sem especialidade';
+  const normalized = normalizedTopic(raw)
+    .replace(/[&/+_-]+/g,' ')
+    .replace(/\s+/g,' ')
+    .trim();
+  const group = QUESTION_SPECIALTY_GROUPS.find(item => item.aliases.has(normalized));
+  return group?.label || String(raw).trim() || 'Sem especialidade';
+}
 function filteredQuestions() {
   const focusQuestionIds = new Set(Array.isArray(ui.qFocusQuestionIds) ? ui.qFocusQuestionIds : []);
   const cacheKey = JSON.stringify([ui.qFocusScheduleId || '', [...focusQuestionIds], ui.qBrowseMode, ui.qSpecialty, ui.qBlock, ui.qSource, ui.qTopic, ui.qStatus, normalizedTopic(ui.qSearch || ''), ui.justAnsweredId || '', n(ui.qFocusTarget), questionBank.length]);
@@ -9608,13 +9633,15 @@ function filteredQuestions() {
     const searchable = normalizedTopic([
       question.stem,
       question.area,
+      question.specialty,
+      questionSpecialtyGroup(question),
       question.topic,
       question.sourceLabel || question.source,
       ...(Array.isArray(question.tags) ? question.tags : [])
     ].filter(Boolean).join(' '));
     const searchOk = !query || searchable.includes(query);
     const focusOk = !ui.qFocusScheduleId || (focusQuestionIds.size ? focusQuestionIds.has(question.id) : questionMatchesSchedule(question, focusItem));
-    const specialty = question.specialty || question.area || 'Sem especialidade';
+    const specialty = questionSpecialtyGroup(question);
     const specialtyOk = ui.qBrowseMode !== 'specialty' || ui.qSpecialty === 'Todas' || specialty === ui.qSpecialty;
     const blockOk = ui.qBrowseMode !== 'block' || ui.qBlock === 'Todos' || String(question.collectionBlock) === String(ui.qBlock);
     const sourceOk = ui.qSource === 'Todas' || (question.sourceLabel || question.source) === ui.qSource;
@@ -9746,34 +9773,54 @@ function persistQuestionView() {
     qFocusTarget: n(ui.qFocusTarget) || 0
   }));
 }
+function questionNavigationTarget(before, after, currentIndex, delta) {
+  if(!before.length || !after.length) return -1;
+  const safeIndex = Math.max(0,Math.min(currentIndex,before.length-1));
+  const currentId = before[safeIndex]?.id;
+  const currentAfterIndex = after.findIndex(question => question.id === currentId);
+  if(currentAfterIndex >= 0) return currentAfterIndex + (delta > 0 ? 1 : -1);
+  const neighbor = before[safeIndex + (delta > 0 ? 1 : -1)];
+  if(!neighbor) return delta > 0 ? after.length : -1;
+  const neighborIndex = after.findIndex(question => question.id === neighbor.id);
+  if(neighborIndex >= 0) return neighborIndex;
+  return delta > 0 ? Math.min(safeIndex,after.length) : Math.min(safeIndex-1,after.length-1);
+}
 function navigateQuestionBy(delta) {
   if(ui.tab !== 'questoes') return;
-  const questions = filteredQuestions();
-  if(!questions.length) return;
+  const questionsBefore = filteredQuestions();
+  if(!questionsBefore.length) return;
   const showingJustAnswered = Boolean(ui.justAnsweredId);
-  if(delta > 0 && ui.qIndex >= questions.length - 1 && !showingJustAnswered) {
-    showStudyToast('Parabéns! Você chegou ao fim das questões deste filtro.');
-    return;
-  }
-  if(delta > 0 && ui.qIndex >= questions.length - 1 && showingJustAnswered) {
-    ui.justAnsweredId = '';
-    ui.qIndex = 0;
-    ui.qQuestionId = '';
-    syncRouteFromUI('push');
-    render();
-    showStudyToast('Parabéns! Você concluiu as questões deste filtro.');
-    return;
-  }
   if(!settleQuestionTimerBeforeLeave()) return;
   stopQuestionTimer(true);
   resetKeyboardConfirmation();
   ui.justAnsweredId = '';
-  // No filtro "Não respondidas", a questão recém-corrigida fica temporariamente
-  // na lista para exibir o comentário. Ao avançar, ela já sai da lista; manter
-  // +1 nesse momento faria o celular pular a próxima questão.
-  const effectiveDelta = showingJustAnswered && delta > 0 ? 0 : delta;
-  ui.qIndex = Math.max(0, Math.min(questions.length - 1, ui.qIndex + effectiveDelta));
-  ui.qQuestionId = questions[ui.qIndex]?.id || '';
+  const questionsAfter = filteredQuestions();
+  const target = questionNavigationTarget(questionsBefore,questionsAfter,ui.qIndex,delta);
+  if(target < 0) {
+    if(!questionsAfter.length && showingJustAnswered) {
+      ui.qIndex=0;
+      ui.qQuestionId='';
+      syncRouteFromUI('push');
+      render();
+      showStudyToast('Parabéns! Você concluiu as questões deste filtro.');
+    }
+    return;
+  }
+  if(target >= questionsAfter.length) {
+    if(showingJustAnswered && !questionsAfter.some(question => question.id === questionsBefore[ui.qIndex]?.id)) {
+      ui.qIndex=0;
+      ui.qQuestionId='';
+      syncRouteFromUI('push');
+      render();
+      showStudyToast('Parabéns! Você concluiu as questões deste filtro.');
+    } else {
+      render();
+      showStudyToast('Parabéns! Você chegou ao fim das questões deste filtro.');
+    }
+    return;
+  }
+  ui.qIndex = target;
+  ui.qQuestionId = questionsAfter[target]?.id || '';
   syncRouteFromUI('push');
   render();
 }
@@ -9797,14 +9844,15 @@ function renderQuestionBank() {
   const showingFlagged = ui.qStatus === 'Gabarito suspeito';
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   if(!['specialty','block'].includes(ui.qBrowseMode)) ui.qBrowseMode = 'specialty';
-  const specialties = ['Todas', ...new Set(questionBank.map(q => q.specialty || q.area || 'Sem especialidade').filter(Boolean))]
+  if(ui.qSpecialty !== 'Todas') ui.qSpecialty = questionSpecialtyGroup(ui.qSpecialty);
+  const specialties = ['Todas', ...new Set(questionBank.map(questionSpecialtyGroup).filter(Boolean))]
     .sort((a,b)=>a === 'Todas' ? -1 : b === 'Todas' ? 1 : a.localeCompare(b, 'pt-BR'));
   if(!specialties.includes(ui.qSpecialty)) ui.qSpecialty = 'Todas';
   const blocks = ['Todos', ...new Set(questionBank.map(q => q.collectionBlock).filter(Boolean).map(String))]
     .sort((a,b)=>a === 'Todos' ? -1 : b === 'Todos' ? 1 : questionCollectionSort(a)-questionCollectionSort(b));
   const scopedByPrimary = questionBank.filter(q => ui.qBrowseMode === 'block'
     ? ui.qBlock === 'Todos' || String(q.collectionBlock) === String(ui.qBlock)
-    : ui.qSpecialty === 'Todas' || (q.specialty || q.area || 'Sem especialidade') === ui.qSpecialty);
+    : ui.qSpecialty === 'Todas' || questionSpecialtyGroup(q) === ui.qSpecialty);
   const sources = ['Todas', ...new Set(scopedByPrimary.map(q => q.sourceLabel || q.source).filter(Boolean))];
   if(ui.qSource !== 'Todas' && !sources.includes(ui.qSource)) ui.qSource = 'Todas';
   const scopedBySource = scopedByPrimary.filter(q => ui.qSource === 'Todas' || (q.sourceLabel || q.source) === ui.qSource);
@@ -10702,29 +10750,9 @@ function bindQuestionActions(questions, question) {
     render();
   });
   const commentPrev = document.getElementById('commentPrevQuestion');
-  if(commentPrev) commentPrev.onclick = () => { stopQuestionTimer(true); resetKeyboardConfirmation(); ui.justAnsweredId=''; ui.qIndex=Math.max(0,ui.qIndex-1); render(); };
+  if(commentPrev) commentPrev.onclick = () => navigateQuestionBy(-1);
   const commentNext = document.getElementById('commentNextQuestion');
-  if(commentNext) commentNext.onclick = () => {
-    const showingJustAnswered = Boolean(ui.justAnsweredId);
-    if(!showingJustAnswered && ui.qIndex >= questions.length - 1) {
-      showStudyToast('Parabéns! Você chegou ao fim das questões deste filtro.');
-      return;
-    }
-    if(showingJustAnswered && ui.qIndex >= questions.length - 1) {
-      ui.justAnsweredId = '';
-      ui.qIndex = 0;
-      ui.qQuestionId = '';
-      syncRouteFromUI('push');
-      render();
-      showStudyToast('Parabéns! Você concluiu as questões deste filtro.');
-      return;
-    }
-    stopQuestionTimer(true);
-    resetKeyboardConfirmation();
-    ui.justAnsweredId = '';
-    ui.qIndex = Math.min(questions.length - 1, ui.qIndex + (showingJustAnswered ? 0 : 1));
-    render();
-  };
+  if(commentNext) commentNext.onclick = () => navigateQuestionBy(1);
   document.querySelectorAll('[data-question-card][data-card-id][data-card-field]').forEach(input => {
     input.oninput = e => updateQuestionFlashcard(e.currentTarget);
     input.onchange = e => updateQuestionFlashcard(e.currentTarget);
