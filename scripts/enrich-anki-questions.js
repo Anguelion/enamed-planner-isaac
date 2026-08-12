@@ -7,6 +7,8 @@ const vm = require('node:vm');
 const ROOT = path.resolve(__dirname, '..');
 const QUESTION_BANK = path.join(ROOT, 'question_bank');
 const DEFAULT_REPORT = path.join(ROOT, 'tmp', 'question-enrichment-report.json');
+const DEFAULT_STATE = path.join(ROOT, 'reports', 'question-enrichment', 'hematology-state.json');
+const DEFAULT_REVIEW = path.join(ROOT, 'reports', 'question-enrichment', 'hematology-review.json');
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36';
 const SOURCE_LABEL = 'Estratégia MED';
 
@@ -16,6 +18,8 @@ function parseArgs(argv) {
     limit: 5,
     write: false,
     report: DEFAULT_REPORT,
+    state: '',
+    review: '',
     delay: 2500,
     questionId: '',
     sourceUrl: '',
@@ -29,6 +33,8 @@ function parseArgs(argv) {
     else if (item === '--limit') args.limit = Number(argv[++index]);
     else if (item === '--delay') args.delay = Number(argv[++index]);
     else if (item === '--report') args.report = path.resolve(ROOT, argv[++index] || '');
+    else if (item === '--state') args.state = path.resolve(ROOT, argv[++index] || '');
+    else if (item === '--review') args.review = path.resolve(ROOT, argv[++index] || '');
     else if (item === '--question-id') args.questionId = argv[++index] || '';
     else if (item === '--source-url') args.sourceUrl = argv[++index] || '';
     else if (item === '--help' || item === '-h') args.help = true;
@@ -44,11 +50,73 @@ function printHelp() {
   console.log(`Uso:
   node scripts/enrich-anki-questions.js --area Hematologia --limit 5
   node scripts/enrich-anki-questions.js --area Hematologia --limit 5 --write
+  node scripts/enrich-anki-questions.js --area Hematologia --limit 12 --write --state reports/question-enrichment/hematology-state.json
   node scripts/enrich-anki-questions.js --question-id ID --source-url URL
 
 Por padrão, apenas gera um relatório em tmp/question-enrichment-report.json.
 --write acrescenta comentários e tags somente quando o gabarito local coincide.
+--state faz os lotes retomarem do ponto anterior sem repetir buscas recentes.
 --allow-answer-changes permite corrigir divergências verificadas (use com --write).`);
+}
+
+function readJson(file, fallback) {
+  if (!file || !fs.existsSync(file)) return fallback;
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; }
+}
+
+function writeJson(file, value) {
+  if (!file) return;
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
+}
+
+function retryDelayDays(status, attempts) {
+  if (status === 'answer_mismatch') return 365;
+  if (status === 'low_confidence' || status === 'answer_missing') return 60;
+  if (status === 'error') return Math.min(7, Math.max(1, attempts));
+  return Math.min(30, 7 * Math.max(1, attempts));
+}
+
+function shouldAttempt(questionId, state, now = Date.now()) {
+  const record = state.questions?.[questionId];
+  if (!record?.nextAttemptAt) return true;
+  return Date.parse(record.nextAttemptAt) <= now;
+}
+
+function updateAttemptState(state, question, result, now = new Date()) {
+  state.questions = state.questions || {};
+  const previous = state.questions[question.id] || {};
+  const attempts = Number(previous.attempts || 0) + 1;
+  const delayDays = retryDelayDays(result.status, attempts);
+  state.questions[question.id] = {
+    number: question.number,
+    status: result.status,
+    attempts,
+    lastAttemptAt: now.toISOString(),
+    nextAttemptAt: new Date(now.getTime() + delayDays * 86400000).toISOString(),
+    sourceUrl: result.sourceUrl || null,
+    localAnswer: result.localAnswer || null,
+    remoteAnswer: result.remoteAnswer || null
+  };
+  state.updatedAt = now.toISOString();
+}
+
+function updateReview(review, question, result) {
+  review.items = review.items || {};
+  if (!['answer_mismatch', 'low_confidence', 'answer_missing'].includes(result.status)) return;
+  review.items[question.id] = {
+    id: question.id,
+    number: question.number,
+    status: result.status,
+    localAnswer: result.localAnswer || null,
+    remoteAnswer: result.remoteAnswer || null,
+    sourceUrl: result.sourceUrl || null,
+    similarity: result.similarity || result.bestSimilarity || null,
+    tags: result.tags || [],
+    suggestedComment: result.comment || '',
+    reviewedAt: result.matchedAt || new Date().toISOString()
+  };
+  review.updatedAt = new Date().toISOString();
 }
 
 function decodeHtml(value) {
@@ -122,13 +190,14 @@ function extractStrategyUrls(html) {
 }
 
 async function fetchText(url, options = {}, attempts = 3) {
+  const { timeoutMs = 20000, ...fetchOptions } = options;
   let lastError;
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
       const response = await fetch(url, {
-        ...options,
-        headers: { 'user-agent': USER_AGENT, 'accept-language': 'pt-BR,pt;q=0.9', ...(options.headers || {}) },
-        signal: AbortSignal.timeout(20000)
+        ...fetchOptions,
+        headers: { 'user-agent': USER_AGENT, 'accept-language': 'pt-BR,pt;q=0.9', ...(fetchOptions.headers || {}) },
+        signal: AbortSignal.timeout(timeoutMs)
       });
       if (!response.ok) {
         const error = new Error(`HTTP ${response.status}`);
@@ -151,7 +220,7 @@ async function discoverCandidates(stem) {
   for (const query of [`"${exactExcerpt}"`, `"${shortExcerpt}"`, exactExcerpt]) {
     try {
       const searchUrl = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;
-      const html = await fetchText(searchUrl, {}, 1);
+      const html = await fetchText(searchUrl, { timeoutMs: 7000 }, 1);
       urls.push(...extractStrategyUrls(html));
     } catch {
       // Se o buscador limitar as consultas, tenta a fonte alternativa abaixo.
@@ -161,7 +230,7 @@ async function discoverCandidates(stem) {
   if (!urls.length) {
     try {
       const searchUrl = `https://search.brave.com/search?q=${encodeURIComponent(exactExcerpt)}&source=web`;
-      urls.push(...extractStrategyUrls(await fetchText(searchUrl, {}, 1)));
+      urls.push(...extractStrategyUrls(await fetchText(searchUrl, { timeoutMs: 7000 }, 1)));
     } catch {
       return [];
     }
@@ -254,7 +323,7 @@ function writeScriptData(scriptFile, data) {
   );
 }
 
-function loadTargets(args) {
+function loadTargets(args, state = { questions: {} }) {
   const targets = [];
   for (const file of questionFiles(args.area)) {
     const data = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -262,6 +331,7 @@ function loadTargets(args) {
     const mirrorById = new Map((mirror.data?.questions || []).map(question => [question.id, question]));
     for (const question of data.questions || []) {
       if (args.questionId && question.id !== args.questionId) continue;
+      if (!args.questionId && !shouldAttempt(question.id, state)) continue;
       const mirrorQuestion = mirrorById.get(question.id) || null;
       if (String(mirrorQuestion?.comment || '').trim().length > String(question.comment || '').trim().length) {
         question.comment = mirrorQuestion.comment;
@@ -322,7 +392,10 @@ async function main() {
   if (!args.area && !args.questionId) throw new Error('Informe --area ou --question-id.');
   if (args.allowAnswerChanges && !args.write) throw new Error('--allow-answer-changes exige --write.');
 
-  const targets = loadTargets(args);
+  const state = readJson(args.state, { area: args.area || null, questions: {} });
+  const reviewPath = args.review || (args.state ? DEFAULT_REVIEW : '');
+  const review = readJson(reviewPath, { area: args.area || null, items: {} });
+  const targets = loadTargets(args, state);
   const report = {
     generatedAt: new Date().toISOString(),
     area: args.area || null,
@@ -355,6 +428,8 @@ async function main() {
         changed,
         ...result
       });
+      if (args.state) updateAttemptState(state, target.question, result);
+      if (reviewPath) updateReview(review, target.question, result);
       console.log(result.status);
     } catch (error) {
       report.results.push({
@@ -365,6 +440,7 @@ async function main() {
         status: 'error',
         error: error.message
       });
+      if (args.state) updateAttemptState(state, target.question, { status: 'error' });
       console.log(`erro: ${error.message}`);
     }
     if (index + 1 < targets.length && args.delay) await sleep(args.delay);
@@ -378,8 +454,9 @@ async function main() {
       if (target.scriptData) writeScriptData(target.scriptFile, target.scriptData);
     }
   }
-  fs.mkdirSync(path.dirname(args.report), { recursive: true });
-  fs.writeFileSync(args.report, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
+  writeJson(args.report, report);
+  if (args.state) writeJson(args.state, state);
+  if (reviewPath) writeJson(reviewPath, review);
   console.log(`Relatório: ${path.relative(ROOT, args.report)}`);
   console.log(`Correspondências: ${report.results.filter(item => item.status === 'matched').length}; divergências: ${report.results.filter(item => item.status === 'answer_mismatch').length}; alteradas: ${report.changed}.`);
 }
@@ -399,6 +476,10 @@ module.exports = {
   mergeTags,
   normalize,
   parseNuxtQuestion,
+  retryDelayDays,
+  shouldAttempt,
   sourceTags,
-  tokenSimilarity
+  tokenSimilarity,
+  updateAttemptState,
+  updateReview
 };

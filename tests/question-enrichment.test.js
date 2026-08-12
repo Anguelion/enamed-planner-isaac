@@ -7,6 +7,8 @@ const {
   compareQuestion,
   extractStrategyUrls,
   mergeTags,
+  retryDelayDays,
+  shouldAttempt,
   tokenSimilarity
 } = require('../scripts/enrich-anki-questions.js');
 
@@ -81,4 +83,21 @@ test('preserva comentário existente ao acrescentar tags e fonte', () => {
 
 test('mergeTags trata versões com e sem acento como a mesma tag', () => {
   assert.deepEqual(mergeTags(['Clinica Medica'], ['Clínica Médica']), ['Clinica Medica', 'Estratégia MED']);
+});
+
+test('estado do lote pula buscas recentes e libera tentativas vencidas', () => {
+  const state = { questions: {
+    recente: { nextAttemptAt: '2026-08-20T00:00:00.000Z' },
+    vencida: { nextAttemptAt: '2026-08-01T00:00:00.000Z' }
+  } };
+  const now = Date.parse('2026-08-12T00:00:00.000Z');
+  assert.equal(shouldAttempt('recente', state, now), false);
+  assert.equal(shouldAttempt('vencida', state, now), true);
+  assert.equal(shouldAttempt('nova', state, now), true);
+});
+
+test('divergência de gabarito permanece na revisão por longo prazo', () => {
+  assert.equal(retryDelayDays('answer_mismatch', 1), 365);
+  assert.equal(retryDelayDays('not_found', 1), 7);
+  assert.equal(retryDelayDays('not_found', 3), 21);
 });

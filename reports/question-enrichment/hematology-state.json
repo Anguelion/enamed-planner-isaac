@@ -1,0 +1,36 @@
+{
+  "area": "Hematologia",
+  "questions": {
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab6a7b17ace1e807": {
+      "number": "1003g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T15:29:16.792Z",
+      "nextAttemptAt": "2026-08-19T15:29:16.792Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fdba14ac197dc8bb": {
+      "number": "1005g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T15:29:41.187Z",
+      "nextAttemptAt": "2026-08-19T15:29:41.187Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5f8dd1bb5890ea5b": {
+      "number": "1006g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T15:30:05.501Z",
+      "nextAttemptAt": "2026-08-19T15:30:05.501Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    }
+  },
+  "updatedAt": "2026-08-12T15:30:05.501Z"
+}
