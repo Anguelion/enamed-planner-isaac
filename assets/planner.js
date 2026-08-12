@@ -9675,7 +9675,8 @@ function filteredQuestions() {
   if(renderCache.questionFilterKey === cacheKey && Array.isArray(renderCache.questionFilterResults)) return renderCache.questionFilterResults;
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   const filtered = questionBank.filter(question => {
-    const result = questionResult(question);
+    const effectiveQuestion = applyQuestionEdits(question);
+    const result = questionResult(effectiveQuestion);
     const query = normalizedTopic(ui.qSearch || '');
     const searchable = normalizedTopic([
       question.stem,
@@ -9698,7 +9699,7 @@ function filteredQuestions() {
       || (ui.qStatus === 'Não respondidas' && !result)
       || (ui.qStatus === 'Erradas' && result && !result.correct)
       || (ui.qStatus === 'Certas' && result?.correct)
-      || (ui.qStatus === 'Gabarito pendente' && Boolean(question.answerPending && !question.answer))
+      || (ui.qStatus === 'Gabarito pendente' && Boolean(question.answerPending && !effectiveQuestion.answer))
       || (ui.qStatus === 'Gabarito suspeito' && Boolean(state.questionProgress[question.id]?.answerKeyIssue));
     return searchOk && focusOk && specialtyOk && blockOk && sourceOk && topicOk && statusOk;
   });
@@ -10430,11 +10431,12 @@ function renderQuestionImageList(images, altPrefix='Imagem da questão') {
 }
 function renderQuestionEditPanel(question) {
   const optionLetters = ['A','B','C','D','E'].filter(letter => question.options?.[letter] !== undefined);
+  const answerLetters = ['A','B','C','D','E'];
   return `<div class="question-edit-panel">
     <div class="section-title"><div><h3>Correção local da questão</h3><div class="muted">Corrige ortografia/texto só no seu planner.</div></div><button class="tiny-btn" id="questionEditClose">Fechar</button></div>
     <label>Enunciado<textarea class="textarea" data-question-edit="stem">${escapeHtml(question.stem || '')}</textarea></label>
     <div class="question-edit-options">${optionLetters.map(letter => `<label>${letter}<textarea class="textarea" data-question-edit-option="${letter}">${escapeHtml(question.options?.[letter] || '')}</textarea></label>`).join('')}</div>
-    <div class="field-row"><label>Gabarito<select class="select" data-question-edit="answer">${question.answer ? '' : '<option value="" selected>Escolha a letra</option>'}${optionLetters.map(letter => `<option value="${letter}" ${question.answer===letter?'selected':''}>${letter}</option>`).join('')}</select></label><label>Área<input class="input" data-question-edit="area" value="${escapeAttr(question.area || '')}"></label><label>Tema<input class="input" data-question-edit="topic" value="${escapeAttr(question.topic || '')}"></label></div>
+    <div class="field-row"><label>Gabarito<select class="select" data-question-edit="answer">${question.answer ? '' : '<option value="" selected>Escolha a letra</option>'}${answerLetters.map(letter => `<option value="${letter}" ${question.answer===letter?'selected':''}>${letter}</option>`).join('')}</select></label><label>Área<input class="input" data-question-edit="area" value="${escapeAttr(question.area || '')}"></label><label>Tema<input class="input" data-question-edit="topic" value="${escapeAttr(question.topic || '')}"></label></div>
     <label>Comentário<textarea class="textarea" data-question-edit="comment">${escapeHtml(question.comment || '')}</textarea></label>
     <div class="question-edit-actions"><button class="icon-btn primary" id="questionEditSave">Salvar correção</button><button class="icon-btn" id="copyFullQuestion" title="Copiar enunciado, alternativas, gabarito e comentário">Copiar questão</button><button class="icon-btn" id="questionEditReset">Restaurar original</button></div>
   </div>`;

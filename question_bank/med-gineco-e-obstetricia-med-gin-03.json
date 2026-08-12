@@ -1,8 +1,110 @@
 {
   "block": "med:med-gineco-e-obstetricia-med-gin-03",
   "label": "MED · MED GIN 03",
-  "count": 172,
+  "count": 191,
   "questions": [
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-86813",
+      "number": "86813",
+      "sourceNumber": "86813",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Na espermatogênese, a segunda divisão meiótica produz duas células- filhas. Na\noogênese, quantas células-filhas funcionais são produzidas depois de completar os estágios\nmeióticos?",
+      "options": {
+        "A": "1;",
+        "B": "2;",
+        "C": "3;",
+        "D": "4;",
+        "E": "5."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão de embriologia. O oócito primário permanece com sua meiose interrompida no diplóteno da prófase devido ao inibidor da maturação do oócito (OMI), secretado pelas células foliculares vizinhas. A cada ciclo menstrual, geralmente um oócito primário completa a primeira meiose, originando o oócito secundário, logo antes da ovulação estimulado pelo pico de LH. Quando vira oócito secundário, é liberado o primeiro corpúsculo polar. O oócito secundário é ovulado interrompido na metáfase da segunda meiose e apenas após a entrada do espermatozoide ocorre o fim da segunda meiose com liberação do 2º corpúsculo polar. Com isso, a segunda divisão meiótica produz apenas uma célula-filha na oogênese",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-86599",
+      "number": "86599",
+      "sourceNumber": "86599",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "A causa mais comum de Incontinência Urinária nas mulheres idosas é:",
+      "options": {
+        "A": "Fístula vesicovaginal.",
+        "B": "Hipermobilidade do colo vesical.",
+        "C": "Divertículo de uretra.",
+        "D": "Instabilidade do detrusor.",
+        "E": "Atrofia genital."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Esta questão é muito ruim, pois entra em um tema em que não há qualquer tipo de consenso na ginecologia, que é a causa mais comum de incontinência urinária nas mulheres idosas. Muitos autores afirmam que é a bexiga hiperativa ou instabilidade do detrusor, enquanto outros colocam a incontinência urinária de esforço, que pode ser causada por hipermobilidade do colo vesical, como a principal causa de incontinência urinária em idosas. A resposta irá variar de acordo com a referência. A atrofia genital predispõe a incontinência urinária por defeito esfincteriano, mas não é a causa mais comum. A fístula vesicovaginal leva a perda de urina não uretral, podendo ser uma sequela de cirurgia ou câncer. Os sintomas do divertículo de uretra podem ser irritativos, como a frequência urinária, a disúria, a urgência miccional, o gotejamento pós-miccional e a secreção uretral, ou serem causados pelo efeito de massa do divertículo na vagina. Apesar da controvérsia, a banca manteve o gabarito como letra D.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-13136",
+      "number": "13136",
+      "sourceNumber": "13136",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Assinale a afirmativa correta:",
+      "options": {
+        "A": "Incontinência urinária de esforço é a queixa de perda involuntária de urina durante a realização\nde esforço ou exercício, ou espirro, ou tosse.",
+        "B": "Incontinência urinária de urgência é a queixa de perda involuntária de urina acompanhada ou\nimediatamente precedida por urgência.",
+        "C": "Incontinência urinária mista é a queixa de perda involuntária de urina associada a urgência e\ntambém ao exercício, ou espirro, ou tosse, ou esforço.",
+        "D": "Enurese noturna é a queixa de perda de urina durante o sono.",
+        "E": "Todas estão corretas."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão conceitual que apresenta adequadamente as definições de incontinência urinária de esforço, incontinência urinária de urgência, incontinência urinária mista e enurese noturna. Logo, todas as alternativas são corretas.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-26655",
       "number": "26655",
@@ -23,6 +125,7 @@
         "E": "Músculo obturador interno"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -35,6 +138,73 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-34921",
+      "number": "34921",
+      "sourceNumber": "34921",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Mulher, 57 anos de idade, branca, IMC: 19, menopausada há 5 anos, sem TH e sem\nsintomas climatéricos, apresenta queixa de dor lombar. A Densitometria Mineral Óssea (DMO)\nevidenciou T-score de coluna lombar: -3 DP. Nesse caso, a melhor condução é:",
+      "options": {
+        "A": "orientar dieta rica em cálcio.",
+        "B": "prescrever terapia hormonal da menopausa.",
+        "C": "expectar e solicitar nova DMO após 6 meses.",
+        "D": "prescrever carbonato de cálcio.",
+        "E": "prescrever alendronato de sódio."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A paciente descrita apresenta alguns fatores de risco para osteoporose, como idade, etnia caucasiana, baixo peso corporal e a pós-menopausa. Outros fatores seriam menopausa precoce, fratura prévia, história familiar de osteoporose, consumo inadequado de cálcio e vitamina D, tabagismo, consumo excessivo de álcool, sedentarismo, hipertireoidismo, hiperparatireoidismo, doença renal crônica e uso crônico de corticosteroides. A absormetria por dupla emissão de raios X (DXA) do quadril e da coluna é a técnica primária para avaliação da densitometria óssea (DMO). A DMO é expressa como um índice T (T-escore), que é o número de desvios-padrões em relação à média da mulher jovem e saudável. O índice T acima de -1 é considerado normal, entre -1 e -2,5 indica osteopenia e abaixo de -2,5 indica osteoporose. Assim, a paciente em questão apresenta OSTEOPOROSE. Como parte da prevenção e do tratamento da osteoporose, é importante aconselhar a alteração dos fatores modificáveis do risco, como sedentarismo ou tabagismo. A suplementação diária de cálcio e vitamina D pode beneficiar pacientes com alimentação deficitária. A hormonioterapia é eficaz na prevenção e no tratamento da osteoporose, mas segundo a North-American Menopause Society, em Guideline, publicado em 2007, seu uso para este fim não é aprovado. Além disso, sabemos que a principal função da terapia de reposição hormonal é tratar sintomas climatéricos. A paciente da questão, além de já estar saindo do período de maior beneficio da TH (os primeiros 5 anos após a menopausa), é assintomática, o que permite excluir a letra B. Os bifosfonatos, como o alendronato, inibem especificamente a reabsorção óssea e são bastante eficazes no tratamento da osteoporose. Isto torna a letra E a melhor resposta para a questão, visto que as letras A e D são medidas preventivas da osteoporose, que estão indicadas a todas as mulheres na pós-menopausa, e não quando do diagnóstico da osteoporose. Não há necessidade de se repetir o exame para confirmar a osteoporose, o diagnóstico é dado a partir de um único exame, autorizando a instituição imediata de tratamento específico da doença, o que exclui a letra C. A resposta para a questão está na letra E.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-9135",
+      "number": "9135",
+      "sourceNumber": "9135",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Os estrogênios existentes no organismo feminino são de três tipos:",
+      "options": {
+        "A": "Estradiol, estronal e estrogênios conjugados",
+        "B": "Estradiol, estrona e estriol",
+        "C": "Estrona, promestriene e estradiol",
+        "D": "Etinil-estradiol, estradiol 17-beta e estrona"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão direta. Os estrógenos existentes no organismo feminino são estradiol (principal produto da secreção ovariana), estrona (produzida em sua maioria pela aromatização periférica de androgênios) e estriol. O estriol não é produzido no ovário sendo, na verdade, um metabólito da conversão periférica do estradiol e estrona. Letra B.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-13879",
@@ -56,6 +226,7 @@
         "E": "Os músculos levantadores do ânus são formados pelos músculos pubovaginal, pubouretral,\npuborretal e obturador interno."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -68,6 +239,130 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-30986",
+      "number": "30986",
+      "sourceNumber": "30986",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Com relação à anatomia e fisiologia do sistema reprodutor feminino, julgue o seguinte\nitem. A prolactina inibe a secreção de\ndopamina na eminência mediana. Dessa forma, atua no\nhipotálamo por um mecanismo de feedback positivo, estimulando sua própria secreção.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A prolactina é um polipeptídeo secretado pelos lactotrofos na hipófise anterior. Sua produção é pulsátil e regulada pelo controle inibitório tônico da dopamina secretada no hipotálamo. Portanto, estados caracterizados pela diminuição da secreção de dopamina ou qualquer distúrbio que interrompa a circulação porta-hipofisária resultarão em aumento nos níveis de prolactina. Em outras palavras, como a prolactina sofre predominantemente inibição tônica, a liberação do controle produz um aumento de sua secreção. Assim, a assertiva está incorreta, já que é a dopamina que inibe a secreção de prolactina e não o contrário.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-8660",
+      "number": "8660",
+      "sourceNumber": "8660",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Julgue o item a seguir, relativo à anatomia pélvica e à fisiologia da menstruação.\nDiafragma pélvico é a estrutura muscular que\nfecha a cavidade pélvica, exercendo importante papel\nna contenção dos órgãos. Cerca de 90% dessa massa muscular é composta posteriormente pelo\nmúsculo isquiococcígeo e 10%, pelo músculo elevador do ânus, localizado anteriormente.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O diafragma pélvico compõe o aparelho de sustentação genital, junto ao diafragma urogenital e fáscia endopélvica. São assim formados - Diafragma pélvico representado pelo músculo isquiococcígeo e músculo elevador do ânus (mais importante - composto de porções ileococcígea, pubococcígea e puborretal). - Diafragma urogenital composto pelo músculo transverso profundo do períneo e, em um plano mais superficial, pelos músculos esfíncter anal, músculos isquiocavernosos, bulbocavernosos e transversos superficiais do períneo. Fáscia endopélvica composta por dois folhetos. O primeiro liga os órgãos pélvicos (especialmente vagina e útero) às paredes pélvicas e o segundo, considerado visceral, recobre o útero, vagina, bexiga e reto, originando as fáscias vesicovaginal e retovaginal, auxiliando na sustentação dos órgãos e prevenção do prolapso. Portanto, a assertiva está incorreta.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-8662",
+      "number": "8662",
+      "sourceNumber": "8662",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "A alteração do ciclo menstrual é uma das principais causas de consulta ginecológica.\nAcerca desse tema, julgue o item subsequente. A\nhiperplasia e a hipertrofia das células da\ngranulosa são importantes alterações histológicas identificadas na síndrome dos ovários\npolicísticos.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Na síndrome dos ovários policísticos ocorre hipertrofia das células da teca, e não da granulosa, com aumento da produção de androgênios, que em última instância levarão ao quadro de hiperandrogenismo clínico típico da doença. Logo, a assertiva é errada.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-8663",
+      "number": "8663",
+      "sourceNumber": "8663",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "A alteração do ciclo menstrual é uma das principais causas de consulta ginecológica.\nAcerca desse tema, julgue o item subsequente. A\nsíndrome de Savage é caracterizada por\namenorreia primária de causa ovariana em decorrência da deficiência de receptores para o\nhormônio folículo estimulante (FSH).",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A síndrome de Savage é rara e determinada pela resistência ou ausência dos receptores ovarianos à ação das gonadotrofinas. Uma vez que não ocorre produção ovariana adequada, não há o feedback negativo exercido pelos produtos de síntese ovariana. Por esse motivo, as gonadotrofinas estão aumentadas. É importante lembrar que nesta síndrome os folículos estão presentes, mas não amadurecem em resposta ao FSH, porque os receptores do FSH estão ausentes ou porque existe um defeito pós-receptor. Portanto, a assertiva é verdadeira.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-19276",
@@ -86,6 +381,7 @@
         "B": "ERRADO"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -98,6 +394,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-257351",
+      "number": "257351",
+      "sourceNumber": "257351",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Em relação ao ciclo menstrual, é CORRETO afirmar que:",
+      "options": {
+        "A": "O ciclo menstrual normal pode ser dividido em dois segmentos, a fase folicular e a fase lútea.",
+        "B": "O ciclo menstrual normal, dura de 28 a 32 dias, com 2 a 6 dias de fluxo sanguíneo.",
+        "C": "Os níveis de esteroides gonadais no início de cada ciclo menstrual, estão baixos e estiveram\ndiminuindo desde o fim da fase lútea do ciclo prévio.",
+        "D": "Os níveis de FSH aumentam com o desaparecimento do corpo lúteo, iniciando a fase folicular,\nsendo que esses folículos iniciam a secreção\ncrescente de estrogênio e progesterona."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Sobre o ciclo menstrual, vamos analisar as alternativas. Incorreta. O ciclo menstrual humano normal pode ser dividido em dois segmentos o ciclo ovariano e o ciclo uterino. O ciclo ovariano pode ser ainda dividido em fases folicular e lútea (e não o ciclo menstrual como um todo), enquanto o uterino é dividido em fases proliferativa e secretora. Alternativa maldosa. Lembrem-se que algumas referências acrescentam mais uma fase a cada um desses ciclos ovariano folicular, ovulatória e lútea e uterino menstrual, proliferativa e secretora. Incorreta. Um ciclo menstrual normal dura de 21 a 35 dias (não de 28 a 32), com média de 2 a 6 dias de fluxo e de 20 a 60 mL de perda sanguínea. Correta. Ao começo de cada ciclo menstrual mensal, os níveis de esteroides gonadais são baixos e vêm diminuindo desde o final da fase lútea do ciclo anterior. A regressão do corpo lúteo leva a uma queda dos níveis circulantes de estradiol, progesterona e inibina A. A redução desta última permite que o FSH volte a ser secretado e um novo grupo de folículos em crescimento é recrutado. É o início de uma nova fase folicular do ciclo menstrual. Incorreta. Como dito acima, o desaparecimento do corpo lúteo gera aumento dos níveis de FSH, o que inicia o recrutamento folicular. Cada um dos folículos recrutados secreta níveis crescentes de estrogênio, não de estrogênio e progesterona.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-220285",
@@ -118,6 +447,7 @@
         "D": "O Hormônio Antimülleriano (HAM) sérico tem sido usado como um potencial marcador de saúde\ne envelhecimento ovariano, secretado por pequenos\nfolículos antrais, se correlaciona com o\nnúmero total desses folículos ovarianos e apresenta grande variabilidade ao longo do ciclo\nmenstrual."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -151,6 +481,7 @@
         "E": "Todos os folículos ovarianos encontram-se em fase de crescimento, cada um em um estágio,\nnão havendo nenhum em fase de repouso."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -183,6 +514,7 @@
         "D": "Nos ovários, os androgênios produzidos pelas células da granulosa são convertidos em\nestrogênios na célula da teca por ação da enzima 5-alfa-redutase."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -216,6 +548,7 @@
         "E": "no período menstrual o estradiol, o LH e a progesterona se encontram em níveis baixos e o FSH\ncrescente."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -249,6 +582,7 @@
         "E": "I, II e III."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -282,6 +616,7 @@
         "E": "III apenas."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -294,6 +629,40 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-9394",
+      "number": "9394",
+      "sourceNumber": "9394",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Quanto às variações hormonais no ciclo menstrual normal é CORRETO:",
+      "options": {
+        "A": "O pico da progesterona ocorre na fase folicular.",
+        "B": "O primeiro pico do estradiol ocorre após o pico do LH.",
+        "C": "Durante o ciclo menstrual não há pico do FSH.",
+        "D": "O pico LH antecede a ovulação.",
+        "E": "O estradiol tem apenas 1 (hum) pico no ciclo menstrual."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O pico de progesterona depende do funcionamento do corpo lúteo, o qual só se forma na segunda fase do ciclo menstrual (fase lútea). O estradiol apresenta dois picos um na fase folicular antes do pico de LH e outro no meio da fase lútea. O pico de LH é essencial para que ocorra a ovulação e sua ocorrência inicia o processo de luteinização. O pico de LH faz o oócito reassumir a meiose, estimula a síntese de prostaglandinas e luteiniza as células da granulosa que, por sua vez, sintetizam a progesterona. Letra D.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-355618",
@@ -315,6 +684,7 @@
         "E": "Folículos pré-antrais têm desenvolvimento independente de FSH"
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -347,6 +717,7 @@
         "D": "GnRH."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -379,6 +750,7 @@
         "D": "Progesterona."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -411,6 +783,7 @@
         "D": "Os estrogênios atuam diminuindo a produção de óxido nítrico no endotélio."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -443,6 +816,7 @@
         "D": "granulosa."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -475,6 +849,7 @@
         "D": "Fixação do embrião."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -507,6 +882,7 @@
         "D": "A gonadotrofina aumenta a atividade de enzimas proteolíticas, que são responsáveis,\njuntamente com as prostaglandinas, pela digestão e rotura da parede folicular."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -539,6 +915,7 @@
         "D": "FSH e ADH."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -571,6 +948,7 @@
         "D": "a via endovaginal e a fase estrogênica."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -603,6 +981,7 @@
         "D": "No ciclo endometrial, a fase secretora, que corresponde ao período entre a menstruação e a\novulação, é caracterizada por aumento da secreção glandular."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -635,6 +1014,7 @@
         "D": "a elevação dos níveis de estrogênio produz feedback positivo sobre a secreção hipofisária de\nFSH"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -647,6 +1027,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-294309",
+      "number": "294309",
+      "sourceNumber": "294309",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Mulher de 60 anos, com queixa de urgência miccional, polaciúria e noctúria, que pioram\ncom o esforço físico, há cerca de cinco anos e piora nos últimos meses. Tem antecedentes de três\ngestações, todas cesarianas e de terapia hormonal, desde a menopausa, aos 50 anos. O exame\nfísico não visualizou nenhuma alteração e os exames não mostraram nenhum processo infeccioso\ne/ou metabólico. Diante desde quadro, a hipótese diagnóstica mais provável é a",
+      "options": {
+        "A": "incontinência urinária aos esforços.",
+        "B": "incontinência urinária mista.",
+        "C": "fístula urogenital.",
+        "D": "bexiga hiperativa."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A questão descreve uma paciente de 60 anos com relato de urgência miccional, polaciúria e noctúria, que pioram ao esforço físico. A presença de perda urinária não está descrita na anamnese. O exame físico é normal e foram descartados processos infecciosos e ou metabólicos. Vamos analisar as principais hipóteses diagnósticas. A incontinência urinária de esforço é definida como toda perda de urina decorrente de algum esforço físico, como tossir, espirrar ou correr. Já a incontinência urinária mista é caracterizada pela presença de ambos os componentes (esforço e urgência). Nesse caso, predominam os sintomas de urgência. Além disso, a paciente não refere perda urinária e, portanto, não apresenta incontinência. As pacientes com fístulas urogenitais classicamente se apresentam com queixa de perda urinária involuntária e contínua pela vagina. E, por último, a bexiga hiperativa é uma síndrome caracterizada pela urgência miccional, com ou sem incontinência urinária, acompanhada de aumento da frequência urinária e noctúria, na ausência de fatores infecciosos, metabólicos ou locais. Portanto, nesse caso, estamos diante de um quadro de bexiga hiperativa sem urgeincontinência associada.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-274443",
@@ -667,6 +1080,7 @@
         "D": "Androgênio."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -699,6 +1113,7 @@
         "D": "Filoestrogênios."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -711,6 +1126,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-281844",
+      "number": "281844",
+      "sourceNumber": "281844",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Na fase ovulatória, o endométrio se apresenta à ultrassonografia como uma imagem",
+      "options": {
+        "A": "trilaminar.",
+        "B": "ecogênica.",
+        "C": "anecoica.",
+        "D": "hipoecoica."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O endométrio no início da fase folicular possui, aproximadamente, 2mm de espessura, e atinge cerca de 10mm no período préovulatório. A modificação predominante dessa fase consiste na transformação das glândulas endometriais inicialmente retas, estreitas e curtas, em estruturas mais longas e tortuosas. É o endométrio proliferativo. Na fase ovulatória, o endométrio é visto à ultrassonografia com um aspecto trilaminar (três lâminas), que é o aspecto ideal para uma boa implantação da gestação. Já na fase lútea, com a atuação da progesterona produzida pelo corpo lúteo em contraposição à ação estrogênica, as glândulas endometriais se encontram em processo progressivo de dilatação, tornando-se cada vez mais tortuosas. O estroma é edemaciado. É o endométrio secretor, visualizado à ultrassonografia com um aspecto hiperecogênico. Portanto, na fase ovulatória, o endométrio é trilaminar à ultrassonografia. Resposta trilaminar.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-281846",
@@ -731,6 +1179,7 @@
         "D": "a aromatização dos androgênios, induzida pelo FSH no ovário, é responsável pela produção de\nestrógenos."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -763,6 +1212,7 @@
         "D": "a partir de comandos do córtex cerebral, o hipotálamo libera o hormônio secretor de\ngonadotrofinas (GnRH) de forma pulsátil coordenada."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -795,6 +1245,7 @@
         "D": "Do interstício."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -827,6 +1278,7 @@
         "D": "Menstrual."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -859,6 +1311,7 @@
         "D": "estímulo a produção de progesterona."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -891,6 +1344,7 @@
         "D": "Estrogênios e androgênios."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -923,6 +1377,7 @@
         "D": "Hiperplásico."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -956,6 +1411,7 @@
         "E": "opsomenorreia e hipermenorragia"
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -988,6 +1444,7 @@
         "D": "Folicular e proliferativa."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1020,6 +1477,7 @@
         "D": "Progesterona."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1052,6 +1510,7 @@
         "D": "Progesterona e estradiol."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1085,6 +1544,7 @@
         "E": "O LH estimula as células da teca a produzirem androgênios."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1117,6 +1577,7 @@
         "D": "noretisterona."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1149,6 +1610,7 @@
         "D": "24 a 35 dias."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1181,6 +1643,7 @@
         "D": "FSH"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1213,6 +1676,7 @@
         "D": "Telófase da primeira divisão meiótica."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1245,6 +1709,7 @@
         "D": "400"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1278,6 +1743,7 @@
         "E": "FSH e estradiol"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1310,6 +1776,7 @@
         "D": "Ovário."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1342,6 +1809,7 @@
         "D": "Efeito samambaia do muco cervical."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1374,6 +1842,7 @@
         "D": "a elevação dos níveis de estrogênio produz feedback positivo sobre a secreção hipofisária de\nFSH"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1407,6 +1876,7 @@
         "E": "Os inibidores seletivos de receptação de serotonina não devem ser usados em pacientes com a\nsíndrome de tensão pré-menstrual por agravarem os sintomas."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1439,6 +1909,7 @@
         "D": "sintomas físicos, psíquicos e comportamentais que se iniciam na fase lútea, podem desaparecer\ncom o fluxo menstrual ou continuar até a fase\nfolicular."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1471,6 +1942,7 @@
         "D": "A ação sinérgica do FSH e do LH possibilita que, desde a menarca, os ciclos sejam ovulatórios."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1503,6 +1975,7 @@
         "D": "O FSH induz a aromatização dos androgênios em estrogênios nas células da granulosa."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1536,6 +2009,7 @@
         "E": "Na primeira fase do ciclo, o folículo dominante é selecionado como consequência da redução do\nFSH."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1569,6 +2043,7 @@
         "E": "O estresse diminui sua secreção."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1602,6 +2077,7 @@
         "E": "O tabagismo é fator de proteção para uso de contraceptivos."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1635,6 +2111,7 @@
         "E": "Os ovários são órgãos que iniciam suas atividades apenas na menarca, já que durante a vida\nintra-uterina e infância encontram-se com ausência de qualquer atividade."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1668,6 +2145,7 @@
         "E": "Todas."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1700,6 +2178,7 @@
         "D": "o FSH aumenta progressivamente após a ovulação como resposta ao feedback positivo do\nestradiol e progesterona."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1732,6 +2211,7 @@
         "D": "DIU de cobre."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1765,6 +2245,7 @@
         "E": "as endorfinas variam durante todo o ciclo menstrual, com níveis mínimos na fase lútea e um\nnível máximo durante a menstruação."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1798,6 +2279,7 @@
         "E": "A enzima aromatase está presente nas células da teca e participam da produção do estradiol."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1830,6 +2312,7 @@
         "D": "17-beta-hidroxiesteroide-desidrogenase."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1863,6 +2346,7 @@
         "E": "Anticoncepcional hormonal de progestágeno."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1896,6 +2380,7 @@
         "E": "Aumento dos receptores de Gnrh."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1929,6 +2414,7 @@
         "E": "Todas."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1962,6 +2448,7 @@
         "E": "todas as alternativas acima estão corretas."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -1995,6 +2482,7 @@
         "E": "Todas as alternativas acima estão corretas."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2027,6 +2515,7 @@
         "D": "Metrose de receptividade."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2059,6 +2548,7 @@
         "D": "Apresenta ovário com superfície homogênea branco-pardo-acinzentada e raros cistos de\ntamanhos variados na cortical, alguns de conteúdo hemorrágico."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2091,6 +2581,7 @@
         "D": "piora dos sintomas no início do período menstrual subsequente."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2103,6 +2594,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-9315",
+      "number": "9315",
+      "sourceNumber": "9315",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "O prolapso é o deslocamento para a região caudal, anterior ou posterior, de um dos\nórgãos pélvicos em relação à sua localização normal. No prolapso genital feminino:",
+      "options": {
+        "A": "a bexiga, o útero e o reto deslocam-se formando a enterocele.",
+        "B": "a clínica consiste em queixas quanto à dispareunia, sinusorragia e hipermenorragia.",
+        "C": "a operação de reparo de defeito paravesical é feita com a plicatura da fáscia endopélvica na\nlinha média paralela ao colo vesical.",
+        "D": "os exercícios da musculatura pélvica, benéficos no tratamento das mulheres com incontinência\nurinária de esforço, são utilizados como primeira\nescolha para sua correção."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A cistocele de deslocamento ou lateral é causada pela desinserção lateral da fáscia pubovesicocervical que recobre o músculo obturador interno, no arco tendíneo da fáscia pélvica, resultando no chamado defeito paravaginal. É responsável por 80% dos casos de cistocele, estando presente em 95% dos casos de cistocele associada à incontinência urinária de esforço (FEBRASGO 2001). A cistocele central ou de distensão resulta do estiramento e atenuação da parede vaginal anterior, levando à formação de defeito central na fáscia pubocervical. Tradicionalmente, o tratamento é cirúrgico para ambos os tipos de cistocele e corresponde à colporrafia anterior. Tal cirurgia consiste na abertura da parede vaginal anterior e na plicatura da fáscia pubovesicocervical na linha média. É realizada também a exérese da mucosa vaginal redundante seguida de sua síntese. Todavia, quando a cistocele é causada por defeito paravaginal, a colporrafia anterior pode não corrigir totalmente a protrusão vesical. O reparo ideal deste defeito consiste na reinserção da fáscia pubovesicocervical ao arco tendíneo da fáscia pélvica. Letra C.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-273989",
@@ -2123,6 +2647,7 @@
         "D": "Incontinência urinária de esforço, por hipermobilidade do colo/cirurgia de Burch."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2155,6 +2680,7 @@
         "D": "Os androgênios são produzidos, predominantemente, nas células da granulosa e chegam às\ncélulas tecais por difusão simples."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2188,6 +2714,7 @@
         "E": "Essa paciente apresenta quadro clínico clássico de urgência miccional, dispensando o estudo\nurodinâmico e deve ser iniciada a terapêutica com anticolinérgicos."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2221,6 +2748,7 @@
         "E": "A artéria ilíaca comum direita prossegue ao longo da borda medial do músculo psoas até a orla\npélvica, onde se divide nas artérias ilíacas externa e hipogástrica."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2254,6 +2782,7 @@
         "E": "Toda atividade hipofisária está na dependência de sua conexão vascular com o hipotálamo."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2287,6 +2816,7 @@
         "E": "Respostas A e B estão corretas"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2320,6 +2850,7 @@
         "E": "Método de Ogino-Knaus."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2353,6 +2884,7 @@
         "E": "Os quadros de irregularidade menstrual se estabelecem independentemente dos níveis\nhormonais."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2386,6 +2918,7 @@
         "E": "As afirmativas I, II e III estão corretas."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2419,6 +2952,7 @@
         "E": "O estudo urodinâmico está indicado na avaliação inicial da incontinência urinária."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2452,6 +2986,7 @@
         "E": "Prolapso genital total"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2485,6 +3020,7 @@
         "E": "A cirurgia de Burch é tratamento de escolha nos casos refratório de urgência miccional."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2518,6 +3054,7 @@
         "E": "Presença de mais de um dos sintomas: comportamentais (isolamento social, hiperfagia,\nagressividade, etc ...) congnitivos (confusão\nmental, diminuição da concentração, falta de iniciativa\ne etc...)"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2551,6 +3088,7 @@
         "E": "Incontinência urinária de esforço, devido a hipermobilidade do colo / burch."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2584,6 +3122,7 @@
         "E": "Aumento dos níveis de estrogênio e queda da progesterona, provocando um processo\ninflamatório, que faz descamar o endométrio."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2617,6 +3156,7 @@
         "E": "Tension free Vaginal Tape (TVT)."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2650,6 +3190,7 @@
         "E": "Todos os contraceptivos hormonais combinados têm na sua formulação o etinilestradiol."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2683,6 +3224,7 @@
         "E": "Na mulher, as alterações esfincterianas mais comuns que causam incontinência urinária estão\nrelacionadas à hipermobilidade da uretra e à deficiência uretral intrínseca."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2716,6 +3258,7 @@
         "E": "Fáscia endopélvica."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2749,6 +3292,7 @@
         "E": "A retocele é causada pela diástase dos músculos piramidais."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2782,6 +3326,7 @@
         "E": "Prolapso retovesical."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2815,6 +3360,7 @@
         "E": "Músculo transverso profundo do períneo, piramidais e pelo esfíncter uretral externo."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2848,6 +3394,7 @@
         "E": "Nenhuma das estruturas acimas"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2881,6 +3428,7 @@
         "E": "Sangramento vaginal de origem não diagnosticada."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2914,6 +3462,7 @@
         "E": "Cirurgia de Burch"
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2946,6 +3495,7 @@
         "D": "Queda em relação ao meio do ciclo"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -2978,6 +3528,7 @@
         "D": "Os pessários com suporte podem ser indicados como tratamento conservador"
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3011,6 +3562,7 @@
         "E": "Ligamentos e fáscias"
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3043,6 +3595,7 @@
         "D": "O corpo lúteo é formado durante a menstruação."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3076,6 +3629,7 @@
         "E": "colpossuspensão; arco tendíneo da fáscia pélvica"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3108,6 +3662,7 @@
         "D": "obstipação crônica."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3141,6 +3696,7 @@
         "E": "Colpossuspensão retropúbica"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3173,6 +3729,7 @@
         "D": "F, V, F ,V"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3206,6 +3763,7 @@
         "E": "duloxetina"
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3238,6 +3796,7 @@
         "D": "48 a 50 horas."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3271,6 +3830,7 @@
         "E": "distúrbio anorretral funcional"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3304,6 +3864,7 @@
         "E": "nenhumas das alternativas anteriores"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3337,6 +3898,7 @@
         "E": "as asserções I e II são proposições falsas"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3369,6 +3931,7 @@
         "D": "5, 4, 3, 2, 1."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3401,6 +3964,7 @@
         "D": "Bloqueador alfa-adrenégico é opção de tratamento."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3433,6 +3997,7 @@
         "D": "3, 1, 4, 2."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3465,6 +4030,7 @@
         "D": "Progesterona e LH."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3497,6 +4063,7 @@
         "D": "V, F, F, V."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3529,6 +4096,7 @@
         "D": "Progesterona e estrogênio estimulam a secreção de gonadotrofinas no final da fase lútea e um\nnovo folículo inicia crescimento."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3561,6 +4129,7 @@
         "D": "Transtorno disfórico pré-menstrual."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3593,6 +4162,7 @@
         "D": "Eletroestimulação."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3625,6 +4195,7 @@
         "D": "III e IV, apenas."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3657,6 +4228,7 @@
         "D": "I, II, III e IV."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3689,6 +4261,7 @@
         "D": "cálcio."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3721,6 +4294,7 @@
         "D": "extrusão do óvulo pelo ovário."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3754,6 +4328,7 @@
         "E": "Infundibulares."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3786,6 +4361,7 @@
         "D": "16º dia."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3819,6 +4395,7 @@
         "E": "incontinência urinária de esforço."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3851,6 +4428,7 @@
         "D": "a deficiência de estrogênio causa atrofia da mucosa vaginal, à qual se associa a incontinência\nurinária na mulher após a menopausa"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3883,6 +4461,7 @@
         "D": "artéria retal média"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3915,6 +4494,7 @@
         "D": "A fixação da cúpula vaginal, após a retirada do útero, pode ser realizada utilizando-se o\nancoramento nos ligamentos largos."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3947,6 +4527,7 @@
         "D": "A correção de incontinência urinária por hiperatividade detrusora com tela com fixação\nsuprapúbica, tem taxas de cura melhores do que, quando se utiliza tela com fixação\ntransobturatória."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -3980,6 +4561,7 @@
         "E": "Anticoncepcional hormonal combinado injetável"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4013,6 +4595,7 @@
         "E": "Infecção urinária."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4046,6 +4629,7 @@
         "E": "Incontinência urinária de esforço genuína e estudo urodinâmico."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4079,6 +4663,7 @@
         "E": "CVT (Comprimento Vaginal Total)."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4111,6 +4696,7 @@
         "D": "V, V, V, F."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4143,6 +4729,7 @@
         "D": "Os hormônios esteroides são hidrossolúveis e sintetizados no organismo a partir do colesterol."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4175,6 +4762,7 @@
         "D": "Do 21º ao 24º dia do ciclo."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4207,6 +4795,7 @@
         "D": "Prostaglandinas."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4240,6 +4829,7 @@
         "E": "Incontinência Urinária mista."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4272,6 +4862,7 @@
         "D": "Pulsos de GnRH frequentes, progesterona baixa e estrogênio crescente."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4305,6 +4896,7 @@
         "E": "Síndrome da bexiga dolorosa."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4337,6 +4929,7 @@
         "D": "Endométrio-hipófise."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4370,6 +4963,7 @@
         "E": "Todos acima."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4402,6 +4996,7 @@
         "D": "Cistocele"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4435,6 +5030,7 @@
         "E": "Sling suburetral."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4468,6 +5064,7 @@
         "E": "Efeito samambaia no muco cervical ressecado."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4501,6 +5098,7 @@
         "E": "Útero bicorno e/ou septado."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4534,6 +5132,7 @@
         "E": "No período pré-ovulatório, a concentração plasmática de 17-alfa-hidroxiprogesterona está\nelevada, pois este esteroide apresenta significativa importância na regulação cíclica do ciclo\nmenstrual."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4566,6 +5165,7 @@
         "D": "Infecção urinária."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4578,6 +5178,40 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-81117",
+      "number": "81117",
+      "sourceNumber": "81117",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "O Dispositivo Intrauterino (DIU) leva um tipo de hormônio em sua composição, que\ndiminui o sangramento menstrual e as cólicas. Esse hormônio é:",
+      "options": {
+        "A": "Levonorgestrel",
+        "B": "Noretisterona",
+        "C": "Drosperinona",
+        "D": "Acetato de Ciproterona",
+        "E": "Medroxiprogesterona"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O endoceptivo (DIU) com liberação hormonal é feito com levonorgestrel, cuja taxa inicial de liberação é de 20 mcg 24 horas. O DIU possui efeito seguro, com recomendação de troca após 5 anos de uso. Método que pode ser introduzido ambulatorialmente por profissional treinado. Como os progestágenos, induzem a decidualização do endométrio e podem deixar a mulher em amenorreia, melhorando os sintomas de sangramento aumentado, dismenorreia e endometriose. Vamos relembrar algumas de suas indicações - Dismenorreia - Endometriose - Hiperplasia endometrial - Sangramento Disfuncional - Desejo de anticoncepção - Prevenção da hiperplasia endometrial em mulheres em uso de TRH - Adenomiose.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-81138",
@@ -4599,6 +5233,7 @@
         "E": "Deficiência esfincteriana."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4632,6 +5267,7 @@
         "E": "Estradiol e progesterona."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4665,6 +5301,7 @@
         "E": "Levantador do ânus."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4698,6 +5335,7 @@
         "E": "Amputação do colo e colpoplastia anterior e posterior."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4731,6 +5369,7 @@
         "E": "Nível mais elevado de FSH nos 3 primeiros dias do ciclo."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4764,6 +5403,7 @@
         "E": "Cistite Intersticial"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4797,6 +5437,7 @@
         "E": "a progesterona é convertida em estriol pelas células hepáticas."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4830,6 +5471,7 @@
         "E": "O ângulo entre o colo vesical e os músculos elevadores do ânus."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4862,6 +5504,7 @@
         "D": "Pico de LH coincidente com a oocitação."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4894,6 +5537,7 @@
         "D": "Pessário tipo Ring."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4926,6 +5570,7 @@
         "D": "O ligamento uterossacral é responsável pela suspensão lateral do colo uterino, surgindo na\nparede lateral pélvica e se inserindo lateralmente ao colo do útero"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4938,6 +5583,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-330467",
+      "number": "330467",
+      "sourceNumber": "330467",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "O ciclo menstrual é um conjunto de eventos endócrinos interdependentes do sistema\nhipotálamo-hipófise-ovariano que levam a modificações fisiológicas no organismo da mulher\nvisando à ovulação. Ao final da fase folicular, as células da granulosa passam a expressar também\nreceptores na superfície das células da granulosa, associado à redução dos receptores de\nhormônio folículo estimulante (FSH) pelo mecanismo de autorregulação, leva à mudança no padrão\nde dependência do folículo do FSH para uma fase LH-dependente. Esta modificação do padrão de\nresposta do folículo ao LH é responsável:",
+      "options": {
+        "A": "pela produção de prostaglandinas que aumentam a contração das células da musculatura lisa\nque envolvem o folículo, ajudando na extrusão do óvulo",
+        "B": "pela produção de substâncias proteolíticas que promovem a digestão da parede celular folicular,\nfacilitando a extrusão do oócito secundário",
+        "C": "pela reativação da meiose do óvulo que havia sido interrompida no período diplóteno da primeira\nmeiose na vida intrauterina",
+        "D": "pelo estímulo à neovascularização local, reduzindo a produção folicular de estradiol pelas\ncélulas da teca luteinizadas"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão sobre a fisiologia do ciclo menstrual. Ao final da fase folicular, as células da granulosa passam a expressar também receptores para o LH, até então presentes apenas na teca. A partir desse momento, a secreção de LH pela hipófise determinará a transformação luteínica dessas células, além de dar início ao preparo do folículo para o processo ovulatório. O LH induz a produção e a liberação de prostaglandinas, que atuam sobre as células da musculatura lisa que circundam o folículo, promovendo sua contração e, consequentemente, a extrusão do óvulo. O pico de LH na metade do ciclo é responsável pela elevação nas concentrações de enzimas proteolíticas. Essas substâncias são responsáveis pela digestão da parede folicular, tornando-a mais fina e distensível, o que facilita a extrusão do oócito secundário. O LH reativa a meiose do óvulo interrompida no diplóteno da segunda meiose, e não primeira. Além disso, o LH estimula a neovascularização local, porém a produção de estrogênio é determinada principalmente pelas células da granulosa, e não da teca. Após a ovulação, a síntese de esteroides é direcionada para a produção de progesterona. Portanto, podemos concluir que existem duas alternativas corretas entre as opções de resposta e, por isso, a questão deveria ter sido anulada.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-301195",
@@ -4958,6 +5636,7 @@
         "D": "O hormônio liberador de Gonadotrofina (GnRH) é produzido, principalmente, por neurônios\nlocalizados no hipotálamo mediobasal e secretado no sistema porta-hipofisário de maneira\ncontínua, modulando a liberação de gonadotrofinas."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -4990,6 +5669,7 @@
         "D": "Variação na duração do ciclo e na intensidade do fluxo menstrual são comuns nos extremos da\nvida reprodutiva"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5022,6 +5702,7 @@
         "D": "O início do desenvolvimento folicular envolve diversos mecanismos que são independentes das\ngonadotrofinas"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5034,6 +5715,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-301198",
+      "number": "301198",
+      "sourceNumber": "301198",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "NÃO faz parte da abordagem inicial da incontinência urinária na mulher:",
+      "options": {
+        "A": "Anamnese",
+        "B": "Exame físico com teste de esforço",
+        "C": "Urinálise",
+        "D": "Urodinâmica"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão direta que deseja saber qual etapa não faz parte da abordagem inicial da incontinência urinária na mulher. A anamnese é passo fundamental na avaliação da incontinência urinária. O primeiro dado revelante é a idade. Além disso, devemos questionar sobre a presença de comorbidades, uso de medicamentos, história prévia de doenças do trato urinário, cirurgias anteriores, passado obstétrico e status hormonal. Em relação à queixa urinária, é importante abordar em que situação ocorre a perda involuntária de urina, se estão presentes sintomas de urgência ou perda aos esforços. O exame físico com teste de esforço é utilizado para verificar se ocorre perda urinária aos esforços. Antes da da realização de qualquer procedimento diagnóstico invasivo, devemos solicitar EAS (ou urinálise) e urinocultura, com o objetivo de afastar doenças que podem simular um quadro de incontinência, como a infecção urinária. Portanto, o único exame que não faz parte da propedêutica inicial é a urodinâmica. Vale lembrar que a urodinâmica está indicada nas seguintes situações incontinência urinária recidivada após tratamento cirúrgico incontinência urinária mista com falha no tratamento clínico suspeita de obstrução infravesical (pós-sling, por exemplo) prolapso anterior ou de cúpula com suspeita de incontinência urinária de esforço oculta uso de anticolinérgico sem resposta clínica disfunções de esvaziamento com repercussão clínica (ITU de repetição) incontinência urinária de esforços sem perda urinária durante exame ginecológico suspeita de hipocontratilidade do detrusor e resíduo elevado à ultrassonografia doenças neurológicas e trauma raquimedular com sintomas miccionais história prévia de cirurgia pélvica radical ou radioterapia antes do tratamento cirúrgico para incontinência ou correção do prolapso.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-233766",
@@ -5054,6 +5768,7 @@
         "D": "Fisioterapia do assoalho pélvico."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5086,6 +5801,7 @@
         "D": "Cirurgia de Wertheim-Meigs ? câncer do colo uterino"
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5118,6 +5834,7 @@
         "D": "Ambas as fases lútea e folicular são variáveis em igual proporção no ciclo menstrual."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5150,6 +5867,7 @@
         "D": "Relaxina."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5182,6 +5900,7 @@
         "D": "Os pessários com suporte podem ser indicados como tratamento conservador."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5214,6 +5933,7 @@
         "D": "Os extremos da vida reprodutiva são caracterizados por ciclos anovulatórios e/ou irregulares."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5246,6 +5966,7 @@
         "D": "Se não houver resposta ao tratamento conservador, deve-se oferecer tratamento cirúrgico."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5278,6 +5999,7 @@
         "D": "Secretora costuma ter duração constante, variando a duração do ciclo em função da proliferativa"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5310,6 +6032,7 @@
         "D": "A alteração dos níveis de progesterona pode ser usada como um sinal presuntivo se a ovulação\nocorreu ou não."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5322,6 +6045,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-101841",
+      "number": "101841",
+      "sourceNumber": "101841",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Assinale a alternativa CORRETA em relação à fisiologia reprodutiva na mulher:",
+      "options": {
+        "A": "A atividade da aromatase do ovário é intensificada pela estimulação de receptores específicos\npelo FSH na superfície das células da granulosa.",
+        "B": "Enquanto o nível de estrogênio periférico se eleva, ele tem efeito de retroalimentação positiva\nno\nhipotálamo para diminuir os níveis de FSH.",
+        "C": "Os esteroides sexuais não são os únicos reguladores das gonadotrofinas no desenvolvimento\nfolicular.",
+        "D": "O GNRH é produzido no núcleo arqueado do hipotálamo e secretado de modo contínuo."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão sobre fisiologia do ciclo menstrual. Vamos analisar as alternativas A) Afirmativa correta. A atividade da aromatase nas células da granulosa responde ao estímulo de FSH e converte androgênios em estrona e estradiol. B) Afirmativa incorreta. O estrogênio exerce sinergismo na ação do FSH dentro do folículo selecionado e promove retroalimentação negativa na hipófise, de modo a remover o suporte de gonadotrofinas dos outros folículos. C) Afirmativa correta. Também atuam na regulação das gonadotrofinas outros fatores, como a inibina A, a inibina B a folistatina, a ativina e fatores de crescimento. D) Afirmativa incorreta. O GnRH é produzido de forma pulsátil. A questão apresenta duas respostas corretas (A e C) e foi devidamente anulada pela banca do concurso.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-78436",
@@ -5342,6 +6098,7 @@
         "D": "Partos vaginais, tosse crônica e sedentarismo são fatores envolvidos no desenvolvimento desse\nquadro clínico."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5374,6 +6131,7 @@
         "D": "O exame urodinâmico deverá registrar contrações não inibidas do músculo detrusor."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5406,6 +6164,7 @@
         "D": "Músculo esfíncter anal externo."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5418,6 +6177,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-03-71444",
+      "number": "71444",
+      "sourceNumber": "71444",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-03",
+      "collectionLabel": "MED · MED GIN 03",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 03",
+      "subtopic": "",
+      "stem": "Paciente, 72 anos, G6P6A0 (6 partos vaginais) com queixa de urgência miccional,\nfrequência urinária aumentada (10 micções/dia) e\nnoctúria. Nega perda urinária aos esforços.\nExame clínico sem evidências de prolapso genital. Urodinâmica mostrou presença de contrações\nnão inibidas do detrusor e ausência de incontinência urinária aos esforços. São condutas\napropriadas para a paciente, EXCETO:",
+      "options": {
+        "A": "Anticolinérgicos",
+        "B": "Antidepressivo tricíclico",
+        "C": "Fisioterapia",
+        "D": "Tratamento cirúrgico"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
+      "sourceLabel": "MED · MED GIN 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão bem tranquila. O diagnóstico sindrômico é de bexiga hiperativa e o urodinâmico é de hiperatividade detrusora. A abordagem terapêutica é composta por medidas gerais, tratamento clínico (uso de medicamentos) e técnicas comportamentais. Entre as medidas gerais temos redução de peso, redução no consumo de cafeína e suspensão do tabagismo. O tratamento farmacológico está ancorado nas drogas com propriedades anticolinérgicas, como tolterodina, oxibutinina e imipramina. As técnicas comportamentais e fisioterápicas baseiam-se no condicionamento para o restabelecimento da função vesical, sendo a mais utilizada o retreinamento vesical. Não está indicado tratamento cirúrgico para hiperatividade detrusora e a resposta está na letra D.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-03-60312",
@@ -5438,6 +6230,7 @@
         "D": "Nos primeiros sete dias da fase folicular ocorre o recrutamento e a seleção do folículo\ndominante."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5470,6 +6263,7 @@
         "D": "Incontinência urinária mista."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5502,6 +6296,7 @@
         "D": "Tratamento cirúrgico"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5534,6 +6329,7 @@
         "D": "Tratamento cirúrgico."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],
@@ -5566,6 +6362,7 @@
         "D": "Diminuição do volume uterino."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 03/MED GIN 03.txt",
       "sourceLabel": "MED · MED GIN 03",
       "images": [],

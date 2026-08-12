@@ -1,8 +1,477 @@
 {
   "block": "med:med-gineco-e-obstetricia-med-gin-01",
   "label": "MED · MED GIN 01",
-  "count": 11,
+  "count": 41,
   "questions": [
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-283329",
+      "number": "283329",
+      "sourceNumber": "283329",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Gestante com sífilis e alérgica à penicilina. A melhor indicação é:",
+      "options": {
+        "A": "Eritromicina.",
+        "B": "Cefalosporina de terceira geração.",
+        "C": "Cloranfenicol.",
+        "D": "Gentamicina."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O único tratamento seguro e eficaz para o tratamento adequado de sífilis na gestação é a penicilina benzatina. Qualquer outro tratamento realizado durante a gestação é considerado como tratamento não adequado da mãe e, com isso, o RN será notificado como sífilis congênita e submetido a avaliação clínica e laboratorial. Sendo assim, a melhor indicação para o tratamento de gestante com sífilis alérgica à penicilina é a dessemsibilização. Por não apresentar essa opção de resposta entre as alternativas, a questão acabou anulada após recurso.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-215271",
+      "number": "215271",
+      "sourceNumber": "215271",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "O atendimento à vítima de estupro é complexo, necessitando idealmente de cuidados\nde uma equipe multidisciplinar familiarizada\ncom casos similares. Sendo CORRETO o seguinte\nitem:",
+      "options": {
+        "A": "Quando praticado durante a gravidez, não representa fator de risco para saúde do feto, por não\naumentar a possibilidade de complicações obstétricas, abortamento e RN de baixo peso.",
+        "B": "Quando praticado durante a gravidez, representa fator de risco para saúde da mulher somente,\no feto está protegido.",
+        "C": "Quando praticado durante a gravidez, representa fator de risco para saúde da mulher e do feto,\npor aumentar a possibilidade de complicações\nobstétricas, abortamento e RN de baixo peso.",
+        "D": "Quando praticado durante a gravidez, representa fator de risco para saúde da mulher e do feto,\nmas não altera a possibilidade de complicações obstétricas, abortamento ou RN de baixo peso."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar A violência sexual praticada durante a gravidez representa fator de risco para saúde da mulher e do feto, por aumentar a possibilidade de complicações obstétricas, abortamento e de recém-nascidos de baixo peso. As infecções sexualmente transmissíveis adquiridas durante o estupro, quando não tratadas, podem levar a quadros de doença inflamatória pélvica e esterilidade além de infecção pelo HIV, por exemplo. Ou seja, a única assertiva que afirma que é um risco para a saúde da mulher e do feto e que pode causar complicações obstétricas, abortamento e RN de baixo de peso, é a letra C, nosso gabarito.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-215286",
+      "number": "215286",
+      "sourceNumber": "215286",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Não há um consenso sobre os critérios de punção liquórica em pacientes coinfectados\ncom sífilis e HIV. Alguns especialistas\nrecomendam puncionar todos os pacientes infectados pelo\nHIV que apresentem diagnóstico confirmado de sífilis, resultando em punções desnecessárias. O\nconceito de ?neurorrecaída? é particularmente importante em PVHA, sendo compatível com:",
+      "options": {
+        "A": "Presença de neurossífilis após tratamento adequado para sífilis primária, secundária e latente\nrecente, e queda adequada dos títulos séricos de teste não treponêmico. Portanto, o antecedente\nde tratamento adequado não exclui a possibilidade de complicações neurológicas sifilíticas.",
+        "B": "Presença de neurossífilis antes do tratamento adequado para sífilis primária, secundária e\nlatente recente, e queda adequada dos títulos séricos de teste não treponêmico. Portanto, o\nantecedente de tratamento adequado não exclui a possibilidade de complicações neurológicas\nsifilíticas.",
+        "C": "Presença de neurossífilis após tratamento adequado para sífilis primária, secundária e latente\nrecente, e queda inadequada dos títulos\nséricos de teste não treponêmico. Portanto, o antecedente\nde tratamento adequado não exclui a possibilidade de complicações neurológicas sifilíticas.",
+        "D": "Presença de neurossífilis após tratamento adequado para sífilis primária, secundária e latente\nrecente, e queda adequada dos títulos séricos de teste não treponêmico. Portanto, o antecedente\nde tratamento adequado exclui a possibilidade de complicações neurológicas sifilíticas."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar um trecho do documento Protocolo Clínico e Diretrizes Terapêuticas Infecções Sexualmente Transmissíveis do Ministério da Saúde O conceito neurorrecaída é particularmente importante em pacientes infectados pelo HIV. Esse termo denota a presença de neurossífilis depois de tratamento adequado para sífilis primária, secundária e latente recente, e queda adequada dos títulos séricos de VDRL. Portanto, o antecedente de tratamento apropriado não exclui a possibilidade de complicações neurológicas sifilíticas. Indivíduos tratados para neurossífilis devem ser submetidos a punção liquórica de controle após três meses do término do tratamento. Ou seja, exatamente como descrito na letra A, nosso gabarito.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-182737",
+      "number": "182737",
+      "sourceNumber": "182737",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Considera-se tratamento da gestante com Sífilis, EXCETO:",
+      "options": {
+        "A": "Tratamento realizado com qualquer medicamento que não seja a penicilina benzatina.",
+        "B": "Tratamento completo, mesmo tendo sido feito com penicilina benzatina.",
+        "C": "Tratamento inadequado para a fase clínica da doença.",
+        "D": "Instituição de tratamento dentro do prazo em até 30 dias antes do parto."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão possui duas respostas corretas, visto que o tratamento adequado da sífilis ocorre quando temos - Terapia penicilínica completa, adequado ao estágio da doença. - Parceiro sexual tratado concomitantemente. - Término do tratamento pelo menos 30 dias antes do parto. As respostas podem ser as letras B e D.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-86871",
+      "number": "86871",
+      "sourceNumber": "86871",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "A síndrome de Fitz-Hugh-Curtis, é caracterizada por periepatite, que leva à dor aguda\nou recorrente em hipocôndrio direito com\naderência de aspecto em ?corda de violino? entre a\ncápsula hepática e a parede abdominal anterior e/ou diafragma está relacionada com qual das\ndoenças abaixo?",
+      "options": {
+        "A": "Donovanose;",
+        "B": "Linfogranuloma venéreo;",
+        "C": "Infecções gonocócicas;",
+        "D": "Herpes genital;",
+        "E": "Cancro mole."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A síndrome de Fitz-Hugh-Curtis é característica da Doença Inflamatória Pélvica, principalmente as causadas pelo gonococo. A clamídia, outro agente importante da DIP está menos associada com manifestação abdominal e peritoneal da DIP. O tratamento consiste em videolaparoscopia com lise dessas aderências. Todas as outras doenças citadas as manifestações são externas, acometendo epiderme e vasos linfáticos superficiais. O linfogranuloma venéreo pode levar a sequelas pelo acometimento de linfáticos e fibrose, como elefantíase do pênis, bolsa escrotal e vulva, proctite crônica e estreitamento do reto.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-86875",
+      "number": "86875",
+      "sourceNumber": "86875",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Dentre as doenças que afetam o aparelho reprodutor feminino, aquela que é\nconsiderada uma Doença Sexualmente Transmissível (DST) é a:",
+      "options": {
+        "A": "Vaginose por micoplasma;",
+        "B": "Candidíase (Candida albicans);",
+        "C": "Vaginose por Gardnerella vaginalis;",
+        "D": "Vaginose por Bacteroides sp;",
+        "E": "Trichomoníase (Trichomonas vaginalis)."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O autor da questão listou os três principais diagnósticos diferencias de corrimento vaginal, como a vaginose bacteriana, candidíase e tricomoníase. Antigamente, acreditava-se que a vaginose era uma doença sexualmente transmissível, mas hoje sabemos que ocorre por um desequilíbrio na microbiota vaginal. A vaginose é uma condição polimicrobiana em que a flora de Lactobacillus spp. normal é substituída por um grande número de outros micro-organismos, principalmente pela flora microbiana anaeróbica da vagina e gram-negativos, principalmente a Gardnerella vaginalis e Mobiluncus sp., podemos encotrar outros agentes como o Mycoplasma hominis e bacteroides. A candidíase também não pode ser considerada uma DST, pois também pode ser encontrada como parte da microbiota normal em mulheres assintomáticas. Dentre as doenças listadas pela questão, apenas tricomoníase é considerada uma DST. Embora quase 1 3 das infecções por T. vaginalis seja assintomático, a maioria desenvolve queixas como descarga vaginal (clara ou de aspecto purulento), irritação vulvar e inflamação. Algumas mulheres descrevem dor pélvica e disúria. No homem, é assintomática na maioria das vezes, entretanto poderá ser reconhecida pela presença de uretrite, tendo a prostatite, epididimite e a infertilidade como complicações.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-86816",
+      "number": "86816",
+      "sourceNumber": "86816",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Está indicada a proposta de pesquisa de anticorpos anti-HIV nos casos de: I.\ncandidíase vulvovaginal recorrente; II. neoplasia\nintraepitelial do colo uterino; III. endocervicites\npurulentas; IV. dispareunia. Está correto o contido apenas em:",
+      "options": {
+        "A": "I, II e III;",
+        "B": "I e III;",
+        "C": "II e IV;",
+        "D": "IV;",
+        "E": "III."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A pesquisa do HIV é recomendada quando estamos diante de doenças oportunísticas, doenças sexualmente transmissíveis e doenças que tem associação com HIV. Na primeira, podemos citar a neurotoxoplasmose, a pneumocistose e a candidíse recorrente oral ou cutâneo-mucosa. Na segunda indicação podemos incluir a cervicite purulenta, pensando em gonococo, enquanto na terceira estão a tuberculose e a neoplasia intraepitelial. A dispareunia não tem relação com HIV, pode ser causada por vaginismo, endometriose, ressecamento vaginal e etc.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-252262",
+      "number": "252262",
+      "sourceNumber": "252262",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Paciente diagnosticada com sífilis latente. Qual o tratamento adequado?",
+      "options": {
+        "A": "Penicilina G benzatina 2.400.000U intramuscular (IM)/semana por 3 semanas (total=7200000U).",
+        "B": "Penicilina G benzatina 2.400.00U IM dose única.",
+        "C": "Penicilina G cristalina 2 a 4 milhoes de unidades IV 4/4 h (12-24 milhoes/dia), por 10 a 14\ndias.",
+        "D": "Penicilina G Procaina 1.200.000 U IM, por 10 dias."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão foi mal formulada e deveria ter sido anulada. A sífilis latente recente (menos de um ano de evolução) deve ser tratada com penicilina G benzatina 2,4 milhões UI, IM, em dose única enquanto a sífilis latente tardia ou de duração indeterminada deve ser tratada com penicilina G benzatina 2,4 milhões UI, IM, em três doses com intervalo de uma semana entre cada dose. Como a questão pediu apenas o tratamento da sífilis latente, sem especificar a duração da infecção, deveria ter sido anulada entretanto, a banca manteve o gabarito como letra A. Resposta da banca letra A.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-208363",
+      "number": "208363",
+      "sourceNumber": "208363",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Criança, sexo feminino, três anos de idade, é levada pela mãe para consulta na UBS.\nApresentava lesões verrucosas em região perineal e corrimento purulento. A criança vive com os\npais. Durante as manhãs fica sob os cuidados da avó materna. A conduta neste caso é:",
+      "options": {
+        "A": "Aguardar resultado de exame pericial confirmatório para realizar a notificação.",
+        "B": "Realizar coleta de biópsia para confirmação diagnóstica e, posteriormente realizar a\nnotificação.",
+        "C": "Encaminhar a criança para atenção secundária para nesse nível ser realizada a notificação.",
+        "D": "Realizar a notificação de caso suspeito de violência."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão simples e conceitual A presença de lesões verrucosas em região perineal e corrimento purulento em uma criança é um forte indício de abuso sexual. Se não considerarmos já como abuso sexual, no mínimo é um caso suspeito. E para fins de notificação de maus tratos à criança somente a suspeita é necessária, sem necessidade de confirmação. Ou seja, no caso em questão deve-se realizar a notificação de caso suspeito de violência, como nos diz a letra D, nosso gabarito.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-80957",
+      "number": "80957",
+      "sourceNumber": "80957",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Qual das infecções genitais abaixo é diagnosticada pelo teste de Tzanck:",
+      "options": {
+        "A": "Sífilis;",
+        "B": "Vaginose Bacteriana;",
+        "C": "Clamídia;",
+        "D": "Gonorreia;",
+        "E": "Herpes genital."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O Teste de Tzanck é uma citologia direta feita com o material colhido das lesões vesiculares herpéticas, buscando as inclusões as células gigantes com inclusões intranucleares. Esse achado é compatível com infecção viral, podendo estar presentes em outras lesões cutâneas por vírus. Mas na presença de lesões cutâneas compatíveis com herpes ou duvidosas, esse teste pode auxiliar na confirmação diagnóstica. Sua sensibilidade foi 51- 81% para lesões em mucosa e especificidade de 93% comparada com o padrão-ouro, a cultura do vírus. Com isso esse teste é confiável, barato, rápido, pode ser feito ambulatorialmente não necessitando de grandes laboratórios. A sífilis também pode ser diagnosticada por pesquisa direta do treponema nas lesões cutâneas da sífilis primária (cancro duro) e na sífilis secundária. Essa pesquisa é feita com a microscopia de campo escuro. A vaginose precisa de pelo menos 3 dos 4 critérios de Amsel para o diagnóstico, já que não basta apenas identificar a Gardnerella ou as clue cells no exame microscópico. A clamídia ou a Gonococo são diagnosticadas, principalmente, pela cultura em meio especial ou PCR.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-80982",
+      "number": "80982",
+      "sourceNumber": "80982",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Paciente 25 anos, G3P3Ab0, procura ambulatório de ginecologia com diagnóstico de\nlesão baixo grau (NIC1) à biopsia de colo. Usa anticoncepcional hormonal injetável e iniciou sua\natividade sexual há 7 anos. Insiste com o médico que tem que tomar vacina contra papilomavírus\nhumano (HPV), para tratar a doença. Em relação à indicação da vacina, é correto afirmar que:",
+      "options": {
+        "A": "É indicada pois a vacina aumentará os níveis de anticorpos aumentado a probabilidade de\nregressão espontânea da lesão;",
+        "B": "Não há contraindicação formal para a sua administração, no entanto, a vacina não interferirá na\nevolução da lesão atual;",
+        "C": "É contraindicada, pois a vacina potencializará a ação do vírus, possibilitando a progressão da\ndoença atual.",
+        "D": "É indicada, pois o fator de necrose do HPV induzido pela vacina atuará na imunidade da\npaciente fazendo a regressão induzida da lesão.",
+        "E": "É contraindicada, pois a paciente é sexualmente ativa há mais de 5 anos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A vacina do HPV é método de prevenção primário, ou seja, idealmente é para ser administrada antes do contato com o patógeno. Alguns estudos patrocinados pelos laboratórios que fabricam as vacinas mostraram um pequeno benefício em relação à regressão das lesões pré-existentes, mas não existe a recomendação formal de vacinar como forma de tratamento. A vacina foi aprovada para administração em mulheres entre 9-26 anos, pois foi a população selecionada nos ensaios clínicos da vacina. O FDA aprovou a vacinação nessa faixa etária, recomendando que a vacinação ocorra entre os 11 e 12 anos, idealmente antes da primeira relação sexual. Essa recomendação baseia-se nos seguintes dados a vacina administrada em meninas jovens mostrou 100% de eficácia sem nenhum evento adverso sério reportado nessa faixa etária, os mais altos níveis de anticorpos foram encontrados após a vacinação meninas que não tenham sido infectadas por nenhum dos quatro sorotipos presentes na vacina terão maiores benefícios há alta probabilidade da aquisição da infecção pelo HPV logo após o primeiro contato sexual. A vacina quadrivalente abrange os principais tipos virais, os sorotipos de alto risco, os 16 e 18 são responsáveis por 70% de todos os cânceres cervicais e, os de baixo risco, os 6 e 11 são os que mais se relacionam com os condilomas genitais. A vacinação pode ser realizada entre os 9 e 26 anos, mesmo com exame de Papanicolaou anormal, com verrugas genitais e teste de presença viral positivo, pois protegerá contra os outros tipos de HPV presentes na vacina e que a paciente não tenha adquirido.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-46668",
+      "number": "46668",
+      "sourceNumber": "46668",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Alguns cuidados devem ser considerados durante a abordagem de pacientes vítimas\nde violência sexual, dentre eles a profilaxia de\nalgumas doenças. Marque a alternativa que não\ncontém a doença e tratamento adequados.",
+      "options": {
+        "A": "Hepatite b - dose única de 1 ml da vacina contra o vírus.",
+        "B": "Tricomoníase/vaginose - prescrever metronidazol.",
+        "C": "HIV - zidovudina, lamivudina e demais cuidados.",
+        "D": "Gravidez - levonorgestrel 0,75 mg ou 2 comprimidos em intervalos de 12 horas.",
+        "E": "Gonorreia - ceftriaxona."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Na paciente que é vítima de violência sexual, devemos realizar as seguintes profilaxias - Gravidez Método de levonorgestrel (dose única de 1,5 mg ou dois 0,75 mg com intervalo de 12 horas), método de Yuzpe (uso de anticoncepcional combinado de etinil-etradiol e progesterona) ou colocação de DIU. - DSTs não virais Sífilis - penicilina Benzatina gonorreia - ceftriaxona cancro mole - azitromicina tricomoníase - metronidazol. - Hepatite B indivíduos já imunizados contra hepatite B com esquema vacinal completo (três doses) não necessitam de dose de reforço ou imunoglobulina. Pacientes não imunizados ou com esquema incompleto devem receber uma dose e completar o esquema posteriormente. A gamaglobulina hiperimune é indicada apenas em pacientes que não são vacinadas e o agressor é sabidamente portador de hepatite B. - HIV Zidovudina, lamivudina, lopinavir com ritonavir ou tenofovir. A administração da vacina de hepatite B depende do status vacinal da paciente, a vaginose bacteriana não é considerada uma DST e não precisa ser tratada, o esquema de profilaxia para o HIV está incompleto e a dosagem do levonorgestrel está errada, portanto a questão apresenta 4 respostas erradas e foi anulada após recurso.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-46644",
+      "number": "46644",
+      "sourceNumber": "46644",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Com relação a flora vaginal podemos afirmar:",
+      "options": {
+        "A": "O pH vaginal normal dependente de ácido lático para se manter em níveis ácidos (4,5).",
+        "B": "A Gardnerella Vaginalis faz parte da flora vaginal normal.",
+        "C": "É predominantemente aeróbica.",
+        "D": "O conteúdo vaginal descamativo é formado principalmente por células epiteliais.",
+        "E": "Nenhuma das alternativas anteriores."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão sobre a flora vaginal. o pH vaginal normal é entre 4,0 e 4,5, dependente principalmente da conversão de glicogênio em ácido lático pelos lactobacilos. A gardnerella vaginalis faz parte da flora vaginal normal mas, em algumas situações que não foram adequadamente explicadas, há uma redução dos lactobacilos e um crescimento polimicrobiano, que resultam no desequilíbrio da flora vaginal e consequentemente na vaginose bacteriana, que tem a Gardnerella como principal agente. A flora vaginal normal possui bactérias aeróbias, anaeróbias facultativas, anaeróbias estritas e fungos. O lactobacillus é uma espécie bacteriana aeróbia que predomina na microbiota vaginal normal. Eles representam 90% das bactérias presentes na flora normal de uma mulher no menacme. As bactérias anaeróbias correspondem a menos de 1% dos saprófitas vaginais, portanto a flora vaginal é predominantemente aeróbica. O conteúdo ou resíduo vaginal é constituído por muco cervical, células vaginais e cervicais esfoliadas, secreção das glândulas de Bartholin e Skene, transudato vaginal, proteínas, glicoproteínas, ácidos graxos orgânicos, carboidratos, pequena quantidade de leucócitos e micro-organismos da flora vaginal. A questão possuia três respostas corretas (letras A, B e C) e foi anulada.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-284597",
+      "number": "284597",
+      "sourceNumber": "284597",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Mulher, 34 anos de idade, gestante de 36 semanas e 2 dias, secundigesta e primípara\n(parto vaginal há 10 anos, fruto de outro\nrelacionamento), está realizando pré-natal em maternidade\nde alto risco por ser paciente HIV positiva. Vem em consulta de pré-natal para trazer resultado de\ncarga viral que realizou com 34 semanas e 2 dias: 1.050 cópias/mL. Carga viral com 30 semanas\nera de 2.000 cópias/mL. Está assintomática, referindo boa movimentação fetal. Ao exame físico:\ncorada e hidratada, altura uterina: 35cm, BCF: 144bpm em QIE, tônus uterino preservado, dinâmica\nuterina ausente. Sobre a amamentação, nesse caso, é correto afirmar.",
+      "options": {
+        "A": "Caso, após o parto, a carga viral esteja indetectável a amamentação poderá ser liberada.",
+        "B": "A amamentação está contraindicada e uma medicação utilizada para inibição da lactação é o\nagonista de GnRH.",
+        "C": "A amamentação está contraindicada e uma medicação utilizada para inibição da lactação é a\ncabergolina.",
+        "D": "Caso, após o parto, a carga viral esteja indetectável e a paciente esteja em uso adequado da\nterapia antirretroviral (TARV), a amamentação poderá ser liberada."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A infecção materna pelo HIV, independentemente da carga viral materna e do uso correto da TARV, é umas das contraindicações absolutas à amamentação. Essas puérperas, infectadas pelo HIV, têm direito de receber fórmula láctea infantil por pelo menos até os seis meses de idade. Para essas pacientes está indicada inibição farmacológica da amamentação, que é feita com cabergolina 1 mg por via oral em dose única (02 comprimidos de 0,5 mg por via oral). O enfaixamento das mamas com atadura, imediatamente após o parto e mantido por 10 dias, deve ser considerado como medida inibir a lactação apenas em casos nos quais a cabergolina não esteja disponível. Agonista de GnRH não é uma medicação usada para inibir lactação. Portanto, para a paciente do caso, HIV positiva, tem a amamentação contraindicada e uma medicação utilizada para inibição da lactação é a cabergolina.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
     {
       "id": "med-gineco-e-obstetricia-med-gin-01-34956",
       "number": "34956",
@@ -23,6 +492,7 @@
         "E": "indicar decnidazol 2 g, via oral, dose única."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -56,6 +526,7 @@
         "E": "penicilina benzatina 2400000UI, semanal, por 3 semanas."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -68,6 +539,106 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-34936",
+      "number": "34936",
+      "sourceNumber": "34936",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Gestante, 39 semanas de gestação, soropositiva, não fez uso de terapia antirretroviral\ndurante o pré-natal. Para diminuir o risco de\ntransmissão vertical do HIV, deve-se:",
+      "options": {
+        "A": "aguardar o trabalho de parto para iniciar AZT venoso até o parto.",
+        "B": "iniciar AZT oral até o início do trabalho de parto, passando para AZT venoso até o parto.",
+        "C": "iniciar AZT venoso e realizar cesária eletiva.",
+        "D": "espectar e esperar entrar em trabalho de parto.",
+        "E": "iniciar AZT venoso até o parto, aguardar o trabalho de parto e realizar amniotomia precoce."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A taxa de transmissão vertical do HIV, sem qualquer intervenção, situa-se em torno de 25%. A cesariana eletiva, a profilaxia com AZT e a contraindicação ao aleitamento reduzem o risco de transmissão a níveis entre 0 e 2%. A principal via de transmissão vertical é o parto, que corresponde aproximadamente a 75% dos casos. Os outros 25% se referem à transmissão intraútero, que é maior no 3º trimestre, e pelo aleitamento. A transmissão pelo aleitamento encerra risco de 7 a 22% de transmissão, e dessa forma, o aleitamento é contraindicado. As gestantes infectadas pelo HIV deverão sempre receber profilaxia com drogas antirretrovirais com o objetivo de reduzir a transmissão vertical, independentemente do momento do diagnóstico. Indica-se cesariana eletiva (realizada com membranas amnióticas íntegras e antes do início do trabalho de parto - até 3 a 4 cm de dilatação) quando a carga viral for 1000 cópias ml (aferida após 34 semanas), ou carga viral desconhecida ou para as pacientes que não fizeram uso de TARV na gestação. A cesariana eletiva deve ser realizada na 38ª semana de gestação, como no caso da paciente da questão.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-134720",
+      "number": "134720",
+      "sourceNumber": "134720",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Paciente de 19 anos de idade é vítima de violência sexual por desconhecido com\npenetração vaginal sem uso de preservativo.\nCerca de três horas após o ocorrido, procura\natendimento médico com sangramento genital em moderada quantidade. Relata não se lembrar do\nseu antecedente vacinal. O médico assistente NÃO deve realizar:",
+      "options": {
+        "A": "Anticoncepção de emergência.",
+        "B": "Prevenção de doenças sexualmente transmissíveis.",
+        "C": "Imunoprofilaxia da hepatite B.",
+        "D": "Denúncia compulsória às autoridades policiais."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão tranquila e direta, não se pode esquecer esse conceito. O médico assistente da paciente vítima de violência sexual não deve denunciar às autoridades policiais o fato, deve apenas atender a paciente e oferecer os tratamento disponíveis para evitar a transmissão de doenças sexualmente transmissíveis e gestação indesejada. Logo, nesse caso ele deve oferecer anticoncepção de emergência e prevenção das doenças sexualmente transmissíveis. Reposta letra D.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-111866",
+      "number": "111866",
+      "sourceNumber": "111866",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "A prevenção das Doenças Sexualmente Transmissíveis em mulheres vítimas de\nestupro deve ser feita com as seguintes medicações abaixo, EXCETO:",
+      "options": {
+        "A": "Penicilina Benzatina ou Procaína.",
+        "B": "Tetraciclina.",
+        "C": "Cefalexina.",
+        "D": "Doxiciclina."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão sobre violência sexual que deseja saber qual das medicações não faz parte da profilaxia das doenças não virais. O esquema recomendado para profilaxia das doenças não virais em mulheres adultas e adolescentes inclui penicilina benzatina, ceftriaxone e azitromicina e metronidazol. O prazo para prescrição dessas medicações é de, no máximo, duas semanas após o evento. O esquema é feito para profilaxia da sífilis, gonorreia, clamídia, cancro mole e tricomoníase. A questão não possui resposta correta, pois a penicilina procaína, a tetraciclina, a cefalexina, e a doxiciclina não estão contidas nas Normas Técnicas do Ministério da Saúde, ou seja, a questão não possui resposta correta e deveria ter sido anulada infelizmente, a banca manteve a letra C como gabarito oficial.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-01-37607",
@@ -88,6 +659,7 @@
         "D": "Neisseria gonorrhoeae e Chlamydia\ntrachomatis ? Ciprofloxacina 500 mg, via oral,\ndose única e azitromicina 1 grama, via oral,\ndose única."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -120,6 +692,7 @@
         "D": "Creme vaginal de imidazol diariamente, de 3\na 7 dias e solicitar exames rotineiros das\nprincipais DSTs para o casal."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -152,6 +725,7 @@
         "D": "Penicilina G benzatina 2,4 milhões UI/semana\ndurante 3 semanas."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -164,6 +738,223 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-152160",
+      "number": "152160",
+      "sourceNumber": "152160",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "A paciente T. C. R., de 14 anos de idade, chega ao respectivo domicílio e relata à mãe\ndela que o vizinho a forçou a manter relações sexuais com ele há aproximadamente duas horas.\n\nEla está chorosa, com receio de contar o ocorrido ao pai e temendo engravidar, pois não usa\nmétodo contraceptivo no momento. A mãe a acolhe e\nconduz a adolescente até uma Unidade de\nPronto Atendimento (UPA), tanto pela qualidade da atenção à saúde prestada pela equipe quanto\npela confiança naqueles profissionais. Considerando a situação hipotética apresentada, a Política\nde Amparo à Criança e ao Adolescente, a Política de Atenção à Violência contra a Mulher do\nMinistério da Saúde, as portarias que definem o Serviço de Atenção às Pessoas em Situação de\nViolência Sexual e a conduta do médico assistente, julgue o item a seguir. A prescrição da\ncontracepção de emergência obedece a critérios rígidos e sempre deve ser notificada\ncompulsoriamente a violência. Se, contudo, ocorrer a gravidez, a adolescente deverá seguir para\num Serviço de Referência para Atenção à Interrupção de Gravidez nos Casos Previstos em Lei.\n\nEsse serviço deve ser prestado exclusivamente em hospitais gerais ou universitários e em\nmaternidades da região, porquanto o atendimento é feito respeitando o consentimento da vítima.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão está incorreta pois esse tipo de atendimento não precisa se restringir a hospitais universitários ou maternidades, é possível receber esse atendimento em UPAs e pronto-atendimentos também. Sem dúvida para qualquer procedimento de apoio a vítimas de violência sexual deve haver consentimento da mesma, a não ser que exista risco iminente de vida. Dessa forma, a afirmativa está incorreta.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-152162",
+      "number": "152162",
+      "sourceNumber": "152162",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "A paciente T. C. R., de 14 anos de idade, chega ao respectivo domicílio e relata à mãe\ndela que o vizinho a forçou a manter relações sexuais com ele há aproximadamente duas horas.\n\nEla está chorosa, com receio de contar o ocorrido ao pai e temendo engravidar, pois não usa\nmétodo contraceptivo no momento. A mãe a acolhe e\nconduz a adolescente até uma unidade de\npronto atendimento (UPA), tanto pela qualidade da atenção à saúde prestada pela equipe quanto\npela confiança naqueles profissionais. Considerando a situação hipotética apresentada, a Política\nde Amparo à Criança e ao Adolescente, a Política de Atenção à Violência contra a Mulher do\nMinistério da Saúde, as portarias que definem o Serviço de Atenção às Pessoas em Situação de\nViolência Sexual e a conduta do médico assistente, julgue o item a seguir. Por se tratar de crime\ncontra a pessoa, a coleta de vestígios de violência sexual e a custódia do material são sempre de\nresponsabilidade do Instituto Médico Legal da região de ocorrência, logo após o registro de boletim\nde ocorrência policial.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Até Abril de 2015 a coleta de material biológico para pacientes vítimas de violência sexual era apenas realizada no IML após boletim de ocorrência, mas após essa data foi permitido que essa coleta fosse realizada em unidades de saúde ligadas ao SUS, tornando a afirma errada.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-134982",
+      "number": "134982",
+      "sourceNumber": "134982",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "As doenças infecciosas intercorrentes na gestação devem ser manejadas levando-se\nem consideração o binômio materno-fetal. Com\nreferência a esse tema, julgue o item subsequente.\nEm gestantes, anticorpos Anti-HBS reagentes para hepatite B indicam existência de infectividade.\nEles surgem ainda no período de incubação da doença e declinam no período do surgimento de\nicterícia.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A presença de anticorpos anti-HBs indica que a paciente está imune contra hepatite B, seja através de vacinação ou mesmo uma infecção anterior que foi curada. O marcador de infectividade e de doença ativa é o antígeno HBsAg. A afirmativa está errada.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-88669",
+      "number": "88669",
+      "sourceNumber": "88669",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Suponha que uma adolescente de quinze anos de idade tenha sido violentada\nsexualmente e tenha procurado auxílio em\npronto-socorro, onde foi realizada ocorrência policial e\navaliação pelo médico de plantão. Com relação às condutas adotadas por esse médico, julgue o\nitem a seguir. O médico deverá implementar a rotina de exame físico completo, que inclui exame\nginecológico, coleta de amostras para diagnóstico de infecções genitais, coleta de material para\nidentificação do agressor, ecografia transvaginal e solicitação de teste de gravidez.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A questão pergunta sobre as condutas adotadas por um médico em uma paciente vítima de violência sexual. Segundo o Manual de Prevenção e tratamento dos agravos resultantes da violência sexual contra mulheres e adolescentes, de 2012, é necessário que o serviço de saúde realize exame físico completo, exame ginecológico, coleta de amostras para diagnóstico de infecções genitais e coleta de material para identificação do provável autor(a) da agressão, e que seja preenchida a Ficha de Notificação e Investigação de Violência Doméstica, Sexual e ou outras Violências. Portanto, de acordo com as recomendações do Ministério da Saúde, não há indicação de solicitação de ecografia transvaginal e de teste de gravidez pelo médico de plantão que presta o primeiro atendimento à vítima de violência sexual e esta afirmativa está errada. Apesar do recurso, a banca manteve a afirmativa como verdadeira.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-88709",
+      "number": "88709",
+      "sourceNumber": "88709",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Julgue o item que se segue, relativo às infecções geniturinárias. Candida albicans é\nresponsável por grande parte das vulvovaginites que acometem as mulheres na menacme e\nprovoca ardor vaginal, dispareunia, corrimento vaginal branco, espesso e sem cheiro desagradável,\nbem como vermelhidão da vagina e da vulva.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A candidíase vulvovaginal é uma infecção da vulva e vagina causada por um fungo comensal (candida sp.) que habita a mucosa vaginal e digestiva, que cresce quando o meio se torna favorável para o seu desenvolvimento. Aproximadamente 80 a 90% dos casos são atribuídos à Candida albicans e 10 a 20% dos casos a outras espécies não albicans (C. glabrata, C. Krusei, C. parapsilosis). O quadro clínico da candidíase vulvovaginal é de corrimento branco, grumoso, sem odor e com aspecto caseoso (leite coalhado), associado a sintomas inflamatórios como prurido, disúria, dispareunia, hiperemia e edema vulvar, escoriações e coçadura. A afirmativa é verdadeira. Resposta certo.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-88717",
+      "number": "88717",
+      "sourceNumber": "88717",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Julgue o item que se segue, relativo às infecções geniturinárias. A gonorreia, que pode\ncontaminar ânus e faringe, é uma doença sexualmente transmissível, cujo contágio ocorre pela\nprática sexual desprevenida. Após o relacionamento sexual com um parceiro infectado, a\nprobabilidade de contaminação é de 90%.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A gonorreia é uma infecção sexualmente transmissível causada por um diplococo gram-negativo intracelular, a Neisseria gonorrhoeae. As infecções gonocócicas mais comuns são uretrite, cervicite e doença inflamatória pélvica, no entanto também é possível a infecção do ânus e da orofaringe. Segundo o Ministério da Saúde, o risco de infecção após o contato sexual desprevenido com um parceiro sexual com uretrite gonocócica é de 50% por ato, o que difere dos 90% descritos no enunciado. Desta forma, a afirmativa está errada. O gabarito da banca, no entanto, foi certo, considerando que a frase é verdadeira.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-37956",
+      "number": "37956",
+      "sourceNumber": "37956",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Com referência a infecções geniturinárias e doença sexualmente transmissível, julgue o\nitem. A cervicite por Chlamydia trachomatis frequentemente está associada a vaginose bacteriana;\nambas, por serem doenças sexualmente transmissíveis exclusivas, devem ser tratadas\nconcomitantemente com os parceiros.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A vaginose bacteriana (VB), causa mais frequente dos corrimentos genitais, é entendida como um desequilíbrio da flora vaginal com aumento da concentração de bactérias anaeróbias em substituição aos lactobacilos. O coito frequente pode ser um fator desencadeador deste desequilíbrio, na medida em que torna o meio mais alcalino. No entanto, a VB não tem como causa clássica a transmissão sexual. Esse aspecto tem que ser esclarecido nas mulheres com esse diagnóstico. Como não é uma DST e o tratamento do parceiro não aumenta as taxas de cura ou diminui as taxas de recorrência, ele não é recomendado de rotina. A cervicite por Clamídia é uma DST, sendo fundamental que todos os parceiros sexuais sejam tratados com esquema antibiótico semelhante ao da paciente. Com frequência, a cervicite está associada à VB, que se não tratada ao mesmo tempo, causa persistência significativa dos sinais e sintomas da cervicite. Por conseguinte, a assertiva é incorreta.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-01-37962",
@@ -182,6 +973,7 @@
         "B": "Errado."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -212,6 +1004,7 @@
         "B": "Errado."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -224,6 +1017,167 @@
         "MED"
       ],
       "answerSource": "inferred"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-230612",
+      "number": "230612",
+      "sourceNumber": "230612",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Mulher com quadro de leucorreia com prurido discreto e pH vaginal abaixo de 4,5. O\nMAIS provável agente etiológico é:",
+      "options": {
+        "A": "Candidíase.",
+        "B": "Gardnerella.",
+        "C": "Tricomoníase.",
+        "D": "Mobiluncus."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão descreve apenas que a paciente apresenta leucorreia (sem descrever suas características), prurido discreto e pH vaginal menor que 4,5. Com essas informações, o diagnóstico mais provável seria de candidíase vulvovaginal. Entretanto, a pergunta da questão não foi sobre o diagnóstico, mas sobre o agente etiológico mais provável e, como não há nenhuma alternativa indicando Candida albicans (à qual são atribuídos 85% dos casos de candidíase), a questão acabou anulada após recurso.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-159610",
+      "number": "159610",
+      "sourceNumber": "159610",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "O próximo item apresenta uma situação hipotética seguida de uma assertiva a ser\njulgada a respeito da violência contra\ncrianças e adolescentes. Um lactente de um ano de idade foi\nlevado a uma emegência com o nível de consciência deprimido e respiração irregular. No exame\nfisíco, além desses sinais, o médico observou hemorragia retiniana, e a tomografia\ncomputadorizada do crânio mostrou edema cerebral. Os pais disseram que a criança havia caído\nda cama. Nessa situação, como traumatismo craniano foi provocado pela queda, não é necessário\nnotificar o caso ao conselho tutelar.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "É óbvio que uma queda da cama em uma criança de 1 ano, pode ocasionar um quadro de traumatismo craniano e evoluir com rebaixamento do nível de consciência. No entanto, não explica a presença de hemorragia retiniana, sinal clínico bastante sugestivo da síndrome do bebê sacudido. Trata-se de um quadro provocado por violentas sacudidas na criança, ainda que não prolongadas, acometendo principalmente os menores de 2 anos. Ao sacudir a criança, as forças de aceleração e desaceleração são capazes de promover a rotação da massa encefálica, levando à diversas lesões vasculares e teciduais sugestivas que normalmente são visíveis na tomografia craniana, como hemorragia sudural, subaracnoidea e edema cerebral difuso. As hemorragias retinianas são tipicamente encontradas nas maiorias dessas crianças. Somado a tais alterações, o paciente pode apresentar alteração do nível de consciencia. Logo, a principal suspeita é de abuso físico infantil e o conselho tutelar deverá ser notificado. Resposta errado",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-159534",
+      "number": "159534",
+      "sourceNumber": "159534",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Uma jovem de vinte e um anos de idade, foi vítima de violência sexual e buscou\nimediatamente atendimento em pronto-socorro;\ncontudo, um ano e dois meses após o ocorrido,\ndesenvolveu lesões verrucosas características de condiloma acuminado. Considerando esse caso\nclínico, julgue o item a seguir. No atendimento realizado após a violência sexual, deveria ter sido\nfeita a profilaxia para doenças sexualmente transmissíveis, que tem sua eficácia aumentada se\niniciada em até setenta e duas horas após o ato sexual.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A questão foi polêmica, pois não especifica para qual doença a profilaxia realizada em até 72 horas aumentaria a eficácia sabemos que para prevenção do HIV é esse o prazo para profilaxia, porém, para as demais doenças sexualmente transmissíveis pode haver o prazo de até 14 dias para sua realização. As doenças não virais se enquadram nesse tempo. A imunogobulina para hepatite B também, embora seja recomendada sua aplicação nas primeiras 48 horas após a violência nos casos em que há indicação. A resposta da banca foi letra A, julgando o item como certo. Porém vale lembrar dessas observações.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-97757",
+      "number": "97757",
+      "sourceNumber": "97757",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Uma mulher com 22 anos de idade, sexualmente ativa, apresenta, há um mês,\nleucorreia amarelo-esverdeada, de odor fétido. Refere\nnovo parceiro sexual há três meses. Faz uso\nregular de anticoncepcional combinado oral. Ao exame ginecológico observam-se as imagens\nmostradas acima. (VER IMAGEM) O agente etiológico responsável pelo quadro clínico dessa\npaciente é",
+      "options": {
+        "A": "Trichomonas vaginalis.",
+        "B": "Chlamydia trachomatis.",
+        "C": "Neisseria gonorrhoeae.",
+        "D": "Candida albicans."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Paciente jovem, com parceiro novo, corrimento bolhoso e com odor fétido pode ser vaginose bacteriana ou tricomoníase. Como diferenciar O padrão ouro é o exame à fresco. Mas a tricomoníase apresenta sintomas inflamatórios que a vaginose nao tem, como prurido, disúria, ardência e dispareunia. Além disso, podemos ver nas imagens sinais de vaginite e colo em framboesa, característico da tricomoníase.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-97834",
+      "number": "97834",
+      "sourceNumber": "97834",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Uma mulher, com 23 anos de idade, primigesta, com idade gestacional de 23 semanas,\nem consulta de retorno Pré-Natal na Unidade\nBásica de Saúde, queixa-se de corrimento vaginal\nbranco, pastoso, associado a prurido vulvar e disúria terminal. Inspeção vulvar: edema e eritema de\ngrandes lábios. Ao exame especular: secreção vaginal branco-esverdeada, em placas, aderida à\nparede vaginal. Após a aplicação de KOH 10% identifica-se a presença de hifas no exame a fresco\ndo conteúdo vaginal. A conduta indicada é tratamento com:",
+      "options": {
+        "A": "miconazol - creme vaginal por 7 dias.",
+        "B": "metronidazol - creme vaginal por 7 dias.",
+        "C": "cetoconazol 200 mg por via oral de 12/12 horas por 7 dias.",
+        "D": "metronidazol 500 mg por via oral de 12/12 horas por 7 dias."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Paciente jovem com vaginite, hifas no exame a fresco e mucorréia branca, floculada e aderida em parede vaginal tem diagnóstico de candidíase. A candidíase é uma das causas de corrimento vaginal mais comuns. A conduta é tratamento com antifúngico tópico, preferencialmente um derivado imidazólico, ou um antifúngico oral dose única, ex do fluconazol. Metronidazol não trata candidíase, somente as outras causas de corrimento vaginal, como vaginose e tricomoníase.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-gineco-e-obstetricia-med-gin-01-138601",
@@ -245,6 +1199,7 @@
         "E": "linfogranuloma venéreo."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -278,6 +1233,7 @@
         "E": "Infecção por clamídia. Tratar a paciente com\n\ndoxiciclina por 14 dias e o parceiro, com azitromicina em dose única."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -311,6 +1267,7 @@
         "E": "Linfogranuloma venéreo."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -344,6 +1301,7 @@
         "E": "III, V, VI e VII."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
       "sourceLabel": "MED · MED GIN 01",
       "images": [],
@@ -356,6 +1314,40 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-gineco-e-obstetricia-med-gin-01-138732",
+      "number": "138732",
+      "sourceNumber": "138732",
+      "collectionBlock": "med:med-gineco-e-obstetricia-med-gin-01",
+      "collectionLabel": "MED · MED GIN 01",
+      "documentBlock": "",
+      "area": "Ginecologia e Obstetrícia",
+      "specialty": "Ginecologia e Obstetrícia",
+      "topic": "MED GIN 01",
+      "subtopic": "",
+      "stem": "Primigesta, com 30 anos de idade e idade gestacional de 18 semanas, retorna para sua\nsegunda consulta de pré-natal. A gestação\ntranscorre bem e a paciente não tem nenhuma queixa.\nTraz, dentre os exames solicitados na primeira consulta, a pesquisa para HIV com resultado\nindeterminado. A paciente nunca havia feito a sorologia anteriormente. Conta que o parceiro é\nsaudável e não tem histórico de DST. Que conduta deve ser tomada neste caso?",
+      "options": {
+        "A": "Solicitar inicialmente a sorologia do parceiro e, caso negativa, encerrar a pesquisa.",
+        "B": "Solicitar a repetição do teste, uso de preservativo em todas as relações sexuais e prescrever\nantirretroviral, de maneira a evitar o risco de transmissão fetal.",
+        "C": "Solicitar imediatamente nova sorologia, orientando o uso de preservativo em todas as relações\nsexuais enquanto aguarda o resultado.",
+        "D": "Solicitar nova sorologia em 30 dias, orientando o uso de preservativo em todas as relações\nsexuais.",
+        "E": "Encaminhar a paciente para avaliação do\ninfectologista."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Gineco e obstetricia/MED GIN 01/MED GIN 01.txt",
+      "sourceLabel": "MED · MED GIN 01",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Em resumo temos uma sorologia anti-HIV indeterminada, e precisamos definir o status sorológico da paciente o quanto antes (até porque se trata de gestante, situação onde existe benefício com início precoce de TARV para redução da transmissão vertical). Ora, a recomendação oficial perante esta situação é solicitar nova amostra para estudo sorológico em até 30 dias após a coleta da primeira amostra. O período de 30 dias corresponde à janela imunológica, isto é, o exame poderia ser inicialmente indeterminado devido ao fato de a paciente estar em fase de soroconversão, o que se resolve em, no máximo, 30 dias (se ela foi efetivamente infectada, após esse período o exame deverá estar positivo). Acontece que, tendo tal conceito em mente, podemos escolher tanto a letra C quanto a letra D, haja vista que não fica claro em que momento a primeira coleta foi realizada (se foi há uma semana, esperaríamos mais 3 semanas, mas se foi há mais de 30 dias, poderíamos solicitar nova amostra imediatamente). Por causa desta confusão, a banca aceitou ANULAR a questão.",
+      "tags": [
+        "Ginecologia e Obstetrícia",
+        "MED GIN 01",
+        "MED"
+      ],
+      "answerSource": "missing"
     }
   ]
 }

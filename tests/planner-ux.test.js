@@ -94,6 +94,7 @@ test('cancelar simulado remove a tentativa e o resumo automático sem afetar os 
 test('validação rejeita questões incompletas e gabaritos incompatíveis',()=>{
   assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um'},answer:'A'}).valid,false);
   assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Certo',B:'Errado'},answer:'B'}).valid,true);
+  assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Certo',B:'Errado'},answer:'',answerPending:true}).valid,true);
   assert.equal(UX.validateQuestionRecord({stem:'Caso',options:{A:'Um',B:'Dois',C:'Três',D:'Quatro'},answer:'E'}).valid,false);
 });
 
@@ -147,6 +148,8 @@ test('banco de questões oferece navegação por especialidade, bloco e arquivo 
   assert.match(planner,/id="questionSpecialty"/);
   assert.match(planner,/id="openQuestionTxt"/);
   assert.match(planner,/specialty: meta\.specialty \|\| defaults\.specialty/);
+  assert.match(planner,/const answerLetters = \['A','B','C','D','E'\]/);
+  assert.match(planner,/answerLetters\.map\(letter =>/);
   assert.match(css,/\.question-browse-tabs/);
 });
 

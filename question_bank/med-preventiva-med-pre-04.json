@@ -1,7 +1,7 @@
 {
   "block": "med:med-preventiva-med-pre-04",
   "label": "MED · MED PRE 04",
-  "count": 32,
+  "count": 67,
   "questions": [
     {
       "id": "med-preventiva-med-pre-04-108787",
@@ -22,6 +22,7 @@
         "D": "Fisioterapia em casos de Acidentes Vascular Cerebral."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -34,6 +35,237 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-278673",
+      "number": "278673",
+      "sourceNumber": "278673",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Está cientificamente comprovado, sendo algo incorporado ao senso comum, que ser\nfisicamente ativo contribui para preservar e recuperar a boa saúde do corpo e da mente. Podemos\nassim afirmar que:",
+      "options": {
+        "A": "Ou seja, quanto maior o nível de aptidão física, maior tende de ser a taxa de mortalidade.",
+        "B": "Ou seja, quanto menor o nível de aptidão física, menor tende de ser a taxa de mortalidade.",
+        "C": "Ou seja, quanto menor o nível de aptidão física, maior tende de ser a taxa de mortalidade.",
+        "D": "Ou seja, quanto menor o nível de inaptidão física, maior tende de ser a taxa de mortalidade."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão poderia até ser enquadrada em uma prova de lógica mas a banca avaliadora retirou um trecho na íntegra do documento intitulado Diretriz Brasileira de Reabilitação Cardiovascular 2020, onde temos o seguinte conceito Está cientificamente comprovado, sendo algo incorporado ao senso comum, que ser fisicamente ativo contribui para preservar e recuperar a boa saúde do corpo e da mente. maiores volumes de atividade física são positivamente associados à melhor qualidade e à maior expectativa de vida, existindo uma forte e inversa associação dos diferentes componentes da aptidão física com a mortalidade por todas as causas e com a ocorrência de eventos cardiovasculares desfavoráveis. Ou seja, quanto menor o nível de aptidão física, maior tende ser a taxa de mortalidade. Exatamente como descrito na letra C, nosso gabarito. Vamos aproveitar e rever os erros das outras assertivas A) Incorreta. Quanto maior a aptidão física, menor a taxa de mortalidade. B e D) Incorretas. Quanto menor a aptidão física (e não inaptidão), maior a taxa de mortalidade.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-249443",
+      "number": "249443",
+      "sourceNumber": "249443",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Durante a avaliação inicial do paciente com intoxicações por agrotóxicos, colete o maior\nnúmero de informações no menor tempo possível, estas informações favorecem um diagnóstico\nmais preciso, o qual, por sua vez, direciona as decisões terapêuticas e resulta em um melhor\nprognóstico. Podemos apenas aceitar que:",
+      "options": {
+        "A": "Obter dados sobre o local de exposição. Sendo que na exposição no local de trabalho, é vetado\nsolicitar informações sobre o controle médico ocupacional do exposto e de como a empresa\nprocede nos casos de intoxicação ocupacional.",
+        "B": "Obter dados sobre o local de exposição. Sendo a exposição no local de trabalho, solicitar\ninformações sobre o controle médico\nocupacional do exposto e de como a empresa procede nos\ncasos de intoxicação ocupacional.",
+        "C": "Obter dados sobre o local de exposição. Sendo a exposição no local de trabalho, solicitar\ninformações sobre o controle médico ocupacional do exposto e não se a empresa procede nos\ncasos de intoxicação ocupacional.",
+        "D": "Obter dados sobre o local de exposição. Sendo a exposição no local de trabalho, solicitar\ninformações sobre o controle médico\nocupacional do exposto e de como a empresa procede nos\ncasos de intoxicação não ocupacional."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Segundo o documento do Ministério da Saúde intitulado Diretrizes Brasileiras para Diagnostico e Tratamento de Intoxicações por Agrotóxicos, temos o seguinte trecho Durante a avaliação inicial do paciente, colete o maior número de informações no menor tempo possível. São Informações essenciais - Quem Nome, idade, ocupação, sexo, gravidez, histórico (uso de medicamentos, doenças agudas e crônicas, uso de álcool, drogas ilícitas). - O que foi utilizado e quanto Agente e quantidade utilizada. Verificar a disponibilidade da embalagem e bula do produto. -Qual a via de exposição Via oral, dérmica, inalatória, e outras menos frequentes como retal, vaginal, oftálmica e endovenosa - Onde Obter dados sobre o local de exposição. Sendo a exposição no local de trabalho, solicitar informações sobre o controle médico ocupacional do exposto e de como a empresa procede nos casos de intoxicação ocupacional. -Como Determinar a circunstância na qual ocorreu a exposição, se essa foi acidental, ocupacional, tentativa de suicídio, agressão, ambiental (vazamentos ou deriva de pulverização durante a aplicação). E a intenção de uso do produto. - Há quanto tempo Estabelecer o lapso temporal entre a exposição e o atendimento. Perceba que está exatamente como descrito na letra B, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-216281",
+      "number": "216281",
+      "sourceNumber": "216281",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "O vetor (triatomíneo), ao se alimentar em mamíferos infectados com elevadas taxas de\n\nT. cruzi, pode se infectar e, ao se alimentar novamente, infecta outro mamífero, inclusive o homem.\n\nAssim, podemos, apenas, CONCORDAR que",
+      "options": {
+        "A": "modo de transmissão Vetorial ? não acontece pelo contato do homem suscetível com as\nexcretas contaminadas dos triatomíneos, que, ao\npicarem os vertebrados, costumam defecar após\no repasto, eliminando formas infectantes do parasito, que penetram pelo orifício da picada,\nmucosas ou por solução de continuidade deixada pelo ato de coçar.",
+        "B": "modo de transmissão Vetorial ? acontece pelo contato do homem suscetível com as excretas\nnão contaminadas dos triatomíneos, que, ao picarem\nos vertebrados, costumam defecar após o\nrepasto, eliminando formas infectantes do parasito, que penetram pelo orifício da picada, mucosas\nou por solução de continuidade deixada pelo ato de coçar.",
+        "C": "modo de transmissão Vetorial ? acontece pelo contato do homem suscetível com as excretas\ncontaminadas dos triatomíneos, que, ao picarem os vertebrados, costumam defecar após o\nrepasto, eliminando formas infectantes do parasito, que não penetram pelo orifício da picada,\nmucosas ou por solução de continuidade deixada pelo ato de coçar.",
+        "D": "modo de transmissão Vetorial ? acontece pelo contato do homem suscetível com as excretas\ncontaminadas dos triatomíneos, que, ao picarem os vertebrados, costumam defecar após o\nrepasto, eliminando formas infectantes do parasito, que penetram pelo orifício da picada, mucosas\nou por solução de continuidade deixada pelo ato de coçar."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos retirar um trecho do Guia de Vigilância em Saúde do Ministério da Saúde que fala a respeito da Doença de Chagas, mais especificamente de sua transmissão O vetor (triatomíneo), ao se alimentar em mamíferos infectados com elevadas taxas de T. cruzi, pode se infectar e, ao se alimentar novamente, infecta outro mamífero, inclusive o homem. As formas habituais de transmissão de T. cruzi para o homem são as listadas a seguir. - Vetorial acontece pelo contato do homem suscetível com as excretas contaminadas dos triatomíneos, que, ao picarem os vertebrados, costumam defecar após o repasto, eliminando formas infectantes do parasito, que penetram pelo orifício da picada, mucosas ou por solução de continuidade deixada pelo ato de coçar Ou seja, acontece pelo contato do homem com excretas contaminas e que penetram pelo orifício de picada, exatamente como descrito na letra D, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-187788",
+      "number": "187788",
+      "sourceNumber": "187788",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "O estudo da organização do trabalho deve levar em consideração, no mínimo:",
+      "options": {
+        "A": "As concentrações ambientais de agentes químicos, físicos e biológicos, os riscos mecânicos e\nas normas de produção",
+        "B": "As formas de contratação, o conforto no ambiente de trabalho, as demandas judiciais e por\norganização por local de trabalho",
+        "C": "As normas de produção; o modo operatório; as exigências de tempo; o ritmo de trabalho; o\nconteúdo das tarefas",
+        "D": "O cumprimento da legislação trabalhista pelo empregador e de cláusulas de saúde da\nconvenção coletiva de trabalho"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A equipe Medgrupo acredita que essa questão deveria ter sido anulada. Vamos entender o motivo Segundo a Norma Regulamentadora 17 (NR17), temos o seguinte trecho 17.6.2. A organização do trabalho, para efeito desta NR, deve levar em consideração, no mínimo a) as normas de produção b) o modo operatório c) a exigência de tempo d) a determinação do conteúdo de tempo e) o ritmo de trabalho f) o conteúdo das tarefas. Ou seja, falta na alternativa C complementar com a DETERMINAÇÃO DO CONTEÚDO DE TEMPO para que o mínimo seja alcançado. Infelizmente a banca avaliadora não acatou o nosso pedido e o gabarito continuou como letra C.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-187792",
+      "number": "187792",
+      "sourceNumber": "187792",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Com relação ao quadro de estresse pós-traumático relacionado ao trabalho, é\nCORRETO afirmar:",
+      "options": {
+        "A": "Caracteriza-se por queixas persistentes de fadiga aumentada após esforço mental e queixas de\nfraqueza após esforço físico mínimo",
+        "B": "O diagnóstico de transtorno de estresse pós-traumático relacionado ao trabalho, pode ser\nclassificado no Grupo III da Classificação de Schilling",
+        "C": "O risco de desenvolvimento de estresse pós traumático parece associar-se a trabalhos\nperigosos que envolvem responsabilidades com\nvidas humanas com risco de grandes acidentes",
+        "D": "Trata-se de resposta imediata a um evento ou situação estressante de curta duração, de\nnatureza catastrógica ou ameaçadora"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão foi corretamente anulada pela banca avaliadora após recurso feito pela equipe Medgrupo. Vamos entender o motivo Segundo o artigo Transtorno de estresse pós-traumático decorrente de acidente de trabalho implicações psicológicas, socioeconômicas e jurídicas temos o seguinte trecho Transtorno de estresse pós traumático (TEPT) é um transtorno comumente relacionado ao trabalho (Berninger et al. 2010 Hensel, Bender, Bacchiochi, Pelletier, Dewa, 2010 McFarlane Bryant, 2007 Shercliffe Colotla, 2009), juntamente com outros transtornos de ansiedade, estresse ocupacional, depressão e síndrome de burnout (World Health Organization, 1998). No Brasil, é adotada a classificação de Schilling para sistematizar as doenças relacionadas ao trabalho, as quais podem ser distribuídas em três grupos principais grupo I (o trabalho é considerado como causa necessária para o aparecimento da doença), o grupo II (o trabalho pode contribuir para o desenvolvimento da doença, porém não é fator necessário) e o grupo III (o trabalho configura-se como um provocador de um distúrbio latente ou agravador de doença já estabelecida ou preexistente). Assim, as doenças classificados nos grupos II ou III são consideradas de etiologia múltipla e o trabalho seria entendido como um fator de risco, sendo o nexo causal, portanto, de natureza essencialmente epidemiológica (Ministério da Saúde do Brasil, 2001 Teixeira, 2007). Segundo esta classificação, a maioria dos transtornos mentais e de comportamento estaria classificada no grupo III. Entretanto, entre algumas exceções encontra-se o TEPT, classificado no grupo I, e, nesse caso, excluídas outras causas não ocupacionais, o trabalho ou as condições em que ele é realizado constituem causa direta, necessária e imediata para o surgimento da doença (Ministério da Saúde do Brasil, 2001). Ou seja, o estresse pós traumático pode ser classificado no grupo I de Schilling. Dessa forma, a questão não possui um gabarito correto e foi devidamente anulada.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-134829",
+      "number": "134829",
+      "sourceNumber": "134829",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Homem com 75 anos, casado, empresário, exercendo sua atividade profissional\nregular, sem comorbidades, vai à consulta\nambulatorial apresentando déficit de memória e lapsos\nquando conversa, por dificuldade de lembrar as palavras. A esposa refere que, frequentemente, o\npaciente não lembra onde guardou suas coisas pessoais. Em uma ocasião saiu sozinho e foi\nencontrado parado em via pública por não recordar o caminho de casa. O exame mini mental\nmostrou pontuação 19. Os demais aspectos do exame neurológico são normais. A tomografia\ncomputadorizada do crânio mostra discreta atrofia cortical. A esposa solicita que não seja\ninformada a provável hipótese diagnóstica ao marido. De acordo com o Código de Ética Médica,\nqual deve ser a conduta adotada pelo médico em relação ao pedido da esposa?",
+      "options": {
+        "A": "Informar ao paciente o diagnóstico e orientá-lo sobre a forma de progressão da doença.",
+        "B": "Respeitar o desejo da esposa, pois a informação do diagnóstico ao paciente lhe trará danos.",
+        "C": "Encaminhar o paciente para outro médico, orientando que este informe o diagnóstico ao\npaciente.",
+        "D": "Traçar um plano de ação com a esposa para que ela informe, progressivamente, o diagnóstico\nao marido."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão versa sobre o informe do diagnóstico ao paciente pelo médico, segundo o Código de Ética Médica. Antes de analisarmos o que o Código nos orienta, vamos fornecer o possível diagnóstico do paciente Masculino, 75 anos, com déficit de memória e lapsos de conversa. Já foi encontrado na rua sem saber o caminho de casa, apresenta mini mental de 19 pontos e apresenta exame neurológico normal, inclusive com exame de imagem - TC - normal. Qual é o provável diagnóstico Doença de Alzheimer. Agora vamos analisar o que o artigo 34 do Capítulo V, intitulado Relação Com Pacientes e Familiares nos diz É Vedado ao Médico Art. 34. Deixar de informar ao paciente o diagnóstico, o prognóstico, os riscos e os objetivos do tratamento, salvo quando a comunicação direta possa lhe provocar dano, devendo, nesse caso, fazer a comunicação a seu representante legal. Dessa forma, o médico deve, nesse caso, informar ao paciente o seu diagnóstico. e orientá-lo sobre a progressão da doença.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-134074",
+      "number": "134074",
+      "sourceNumber": "134074",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Mulher, 25 anos, queixa-se de febre há 3 dias acompanhada de cefaleia retro-orbitária\ne artralgia. Exame físico: exantema\nmáculo-papular e petéquias em tronco e membros superiores.\nDiante de tal caso, assinale a alternativa CORRETA.",
+      "options": {
+        "A": "A realização da prova do laço apresenta alta especificidade para febre hemorrágica da\nDengue e deve ser parte da triagem\n\ndiagnóstica.",
+        "B": "São critérios para confirmar o caso como febre hemorrágica da Dengue: febre, presença de\nsinais hemorrágicos induzidos ou espontâneos e IgM positivo pelo método ELISA.",
+        "C": "Nesta fase evolutiva, a realização do ELISA NSI permite o diagnóstico de Dengue.",
+        "D": "A realização do teste ELISA de captura para anticorpos IgM apresenta alta sensibilidade nesta\nfase da doença."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A Prova do laço positiva é uma manifestação frequente nos casos de dengue, principalmente nas formas graves, e apesar de não ser específica, serve como alerta, devendo ser utilizado rotineiramente na prática clínica como um dos elementos de triagem na dengue, e na presença da mesma, alertar ao médico que o paciente necessita de um monitoramento clínico e laboratorial mais estreito. A prova do laço positiva também reforça o diagnóstico de dengue. Sobre a sorologia temos Método Elisa IgM baseado em detecção de anticorpo, este método costuma positivar após o sexto dia da doença. Método Elisa IgG baseado em detecção de anticorpo, este método costuma positivar a partir do nono dia de doença, na infecção primária, e já estar detectável desde o primeiro dia de doença na infecção secundária. Método Elisa IgM e IgG teste rápido, baseado na detecção qualitativa e diferencial de anticorpos IgM e IgG, permite diagnóstico ou descarte, em curto espaço de tempo. Porém, devido às diferenças nos valores de sensibilidade e de especificidade encontrados, recomenda-se a realização de exame laboratorial, utilizando os laboratórios de referência. O período adequado para realização da sorologia dá-se a partir do sexto dia de doença. Sobre a detecção de vírus ou antígenos virais isolamento viral, RT-PCR, imuno-histoquímica, NS1 métodos disponíveis geralmente nos laboratórios de referência estaduais e nacionais, seu uso deve, sempre, ser discutido com os integrantes das equipes de Vigilância Epidemiológica. Recomenda-se a realização nos primeiros três dias da doença, podendo ser realizado até o quinto dia. NS1 é nova ferramenta diagnóstica e se trata de um teste qualitativo, usado na detecção da antigenemia NS1 da dengue pela técnica Elisa de captura, auxilia no diagnóstico sorológico da doença em amostras colhidas principalmente até o terceiro dia do início dos sintomas. O ideal é que a amostra seja colhida no primeiro dia dos sintomas, o que, muitas vezes, permitirá a liberação do resultado antes do momento da defervescência da febre seu desempenho é equivalente ao do RT-PCR, porém, não permite a identificação do sorotipo. Atualmente, o Ministério da Saúde disponibiliza kits para o uso em amostras de unidades-sentinela de monitoramento do vírus da dengue. O uso da proteína NS1 tem uma alta especificidade (82 a 100%), mas tem moderada sensibilidade (mediana 64%, intervalo de 34-72%), de acordo com Guzman. De acordo com o estudo de Chatterji, a sensibilidade é mais baixa nas infecções secundárias, quando comparada. Ao analisarmos as assertivas, frente ao exposto, percebemos que a alternativa C encontra-se correta, já que até o 3 dia o ELISA NSI permite o diagnóstico de Dengue, sendo assim, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-04-109809",
@@ -54,6 +286,7 @@
         "D": "Epidemia explosiva é a que apresenta uma rápida progressão até atingir a incidência máxima."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -86,6 +319,7 @@
         "D": "notificação precoce do surto à Vigilância Epidemiológica."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -98,6 +332,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-256613",
+      "number": "256613",
+      "sourceNumber": "256613",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Assinale a alternativa abaixo que apresenta somente medidas de prevenção terciária:",
+      "options": {
+        "A": "Aplicação da vacina da Hepatite B em gestantes não-imunizadas e coleta de colpocitológicos\npara rastreamento de câncer de colo uterino.",
+        "B": "Realização do ?Teste do pezinho? para todos os recém-nascidos e fluoretação da água para\nconsumo da população.",
+        "C": "Controle de infecções oportunistas em pacientes com AIDS e reabilitação fisioterápica em\npacientes pós-acidente vascular encefálico",
+        "D": "Incentivo à prática de atividade física e prevenção de iatrogenias em idosos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "As medidas preventivas em Saúde podem ser atualmente divididas em cinco níveis 1) Prevenção primordial Promoção em saúde. É o conjunto de ações que visam a evitar o aparecimento e o estabelecimento de padrões de vida social, econômica ou cultural que estão ligados a um elevado risco de doenças. 2) Prevenção primária É o conjunto de ações que visam a evitar a doença na população, através da remoção de seus fatores causais. Pode incluir a promoção à saúde (para alguns autores) ou apenas medidas de proteção específica, como a imunização e a quimioprofilaxia de contatos. 3) Prevenção secundária Conjunto de ações que visam a identificar e corrigir o mais precocemente possível qualquer desvio da normalidade, de forma a colocar o indivíduo de imediato na situação saudável. 4) Prevenção terciária Conjunto de ações que visa a reduzir a incapacidade para permitir uma rápida e melhor reintegração do indivíduo na sociedade. Também inclui o tratamento de doenças crônicas. 5) Prevenção quaternária Prevenção da iatrogenia, isto é, evitar ou atenuar o intervencionismo médico excessivo. Relembrado esses conceitos, vamos analisar cada alternativa A) Aplicação da vacina da Hepatite B em gestantes não-imunizadas (prevenção primária) e coleta de colpocitológicos para rastreamento de câncer de colo uterino (prevenção secundária). B) Realização do Teste do pezinho para todos os recém-nascidos (prevenção secundária) e fluoretação da água para consumo da população (prevenção primária). C) Controle de infecções oportunistas em pacientes com AIDS (prevenção terciária) e reabilitação fisioterápica em pacientes pós-acidente vascular encefálico (prevenção terciária) D) Incentivo à prática de atividade física (prevenção primordial) e prevenção de iatrogenias em idosos (prevenção quaternária).",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-04-103815",
@@ -118,6 +385,7 @@
         "D": "A prevenção pode ser feita nos períodos de pré-patogênese e patogênese."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -150,6 +418,7 @@
         "D": "A PS busca modificar condições de vida para que sejam dignas e adequadas."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -182,6 +451,7 @@
         "D": "Ocorre após a detecção de casos de doenças de interesse da vigilância em saúde pública."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -194,6 +464,39 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-284634",
+      "number": "284634",
+      "sourceNumber": "284634",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "A pandemia COVID-19 trouxe à tona uma série de conceitos epidemiológicos utilizados\ncom o sentido de verificar a evolução\nhistórica de doenças, a eficácia das diversas medidas\npreventivas e os riscos populacionais. Conceitos epidemiológicos foram amplamente debatidos nas\nvárias mídias, incluindo as redes sociais. Indicadores menos conhecidos e modelos preditores\nmatemáticos vêm sendo usados, obrigando todos os profissionais de saúde a se familiarizarem\ncom eles. Conceitos como período de latência e indicadores, como probabilidade de transmissão e\nnumero de reprodução (Rt), passaram a ser empregados amplamente. A taxa de ocupação de\nleitos de UTI tem sido utilizada como indicador da capacidade do sistema de saúde nesta pandemia\nCOVID-19. Entende-se como período de latência da doença o período entre",
+      "options": {
+        "A": "contrair o agente e se tornar infectado.",
+        "B": "contrair a doença e se tornar positivo em exame sorológico.",
+        "C": "contrair o agente e manifestar a doença.",
+        "D": "vacinar o paciente e obter imunidade."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A definição de período de latência é o intervalo entre a exposição a agentes patogênicos e início dos sinais e sintomas da doença. Das opções citadas, a que mais se aproxima desta definição seria contrair o agente e manifestar a doença, mas a banca liberou como gabarito contrair o agente e se tornar infectado. Apesar dos recursos, a banca manteve o gabarito. Gabarito da banca contrair o agente e se tornar infectado. Gabarito MEDGRUPO Contrair o agente e manifestar doença.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-04-111836",
@@ -214,6 +517,7 @@
         "D": "Parte I: a- Parada Cardiorrespiratória; b- Doença Arterial Coronariana; c- Infarto Agudo do\nMiocárdio / Parte II: Diabetes Mellitus tipo 2."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -246,6 +550,7 @@
         "D": "Perito do Instituto Médico Legal."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -278,6 +583,7 @@
         "D": "Pandemia."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -310,6 +616,7 @@
         "D": "as decisões, quanto aos procedimentos relativos à terminalidade, cabem à equipe de assistência\nprofissional."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -342,6 +649,7 @@
         "D": "o consentimento de seu representante legal e uma autorização judicial."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -374,6 +682,7 @@
         "D": "Não abrir a CAT e orientar o paciente a observar a evolução do quadro e, caso se complique,\ndeve procurar a empresa, visando confirmar a\nexistência de relação causal da dermatite com a\nocupação desempenhada."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -406,6 +715,7 @@
         "D": "Quaternária."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -438,6 +748,7 @@
         "D": "Reconhecer os principais riscos existentes na categoria profissional, identificar riscos\nambientais e ocupacionais no ambiente de\ntrabalho, além de propor medidas de proteção coletivas\ne individuais aos trabalhadores."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -450,6 +761,535 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-337601",
+      "number": "337601",
+      "sourceNumber": "337601",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Marisa é uma mulher de 58 anos que veio a uma consulta de rotina, pois deseja realizar\nexames de \"\"check-up\"\". Ela não tem problemas de saúde nem faz uso de nenhum medicamento.\n\nSeu histórico familiar a preocupa , pois sua mãe morreu devido a um câncer de laringe e, por isso,\nela deseja realizar uma endoscopia para saber\nse está tudo bem com sua laringe , pois foi assim\nque a mãe descobriu o tumor. Ela deseja também realizar o exames para verificar suas vitaminas.\nQuando questionada, refere ser viúva, sexualmente ativa e nega quaisquer sintomas no momento\ndo atendimento. considerando seus conhecimentos e o caso exposto, julgue o item a seguir. Marisa\né considerada uma mulher de alto risco para câncer de mama.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Temos uma paciente de 58 anos e que foi a uma consulta de rotina solicitando o famigerado check-up geral. Perceba que ela não tem qualquer problema de saúde e nem faz uso de medicações. Note que ela deseja fazer uma EDA, pois a mãe faleceu de CA de laringe (olhem a experiência da pessoa com a doença aí), e também exames para verificar suas vitaminas. Ao final, a banca nos pergunta se a paciente é considerada de alto risco para câncer de mama. Vamos, então, relembrar que aproximadamente 5% dos casos de câncer de mama ocorrem em mulheres com alto risco para desenvolvimento dessa neoplasia. Ainda não existem ensaios clínicos que tenham identificado estratégias de rastreamento diferenciadas e eficazes para redução de mortalidade nesse subgrupo. Portanto, recomenda-se acompanhamento clínico individualizado para essas mulheres. Alto risco de câncer de mama relaciona-se à forte predisposição hereditária decorrente de mutações genéticas. As mais comumente associadas são as dos genes BRCA 1 e 2 (síndrome de câncer de mama e ovário hereditários), que representam de 30 a 50% dos casos. Mas mutações genéticas também foram encontradas em outros genes como PALB2, CHEK2, BARD1, ATM, RAD51C e RAD51D, TP53 (síndrome de Li-Fraumeni) e PTEN (síndrome de Cowden). Também constitui alto risco o histórico de radioterapia supra diafragmática antes dos 36 anos de idade para tratamento de linfoma de Hodgkin. Como a nossa paciente não se enquadra em nenhum dos cenários mostrados, alternativa ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-337602",
+      "number": "337602",
+      "sourceNumber": "337602",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Marisa é uma mulher de 58 anos que veio a uma consulta de rotina, pois deseja realizar\nexames de \"\"check-up\"\". Ela não tem problemas de saúde nem faz uso de nenhum medicamento.\n\nSeu histórico familiar a preocupa , pois sua mãe morreu devido a um câncer de laringe e, por isso,\nela deseja realizar uma endoscopia para saber\nse está tudo bem com sua laringe , pois foi assim\nque a mãe descobriu o tumor. Ela deseja também realizar o exames para verificar suas vitaminas.\nQuando questionada, refere ser viúva, sexualmente ativa e nega quaisquer sintomas no momento\ndo atendimento. considerando seus conhecimentos e o caso exposto, julgue o item a seguir. O\nrastreio para câncer de mama deve ser realizado com mamografia bianual entre 50 e 69 anos para\ntodas as mulheres de risco habitual.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Temos uma paciente de 58 anos e que foi a uma consulta de rotina solicitando o famigerado check-up geral. Perceba que ela não tem qualquer problema de saúde e nem faz uso de medicações. Note que ela deseja fazer uma EDA, pois a mãe faleceu de CA de laringe (olhem a experiência da pessoa com a doença aí), e também exames para verificar suas vitaminas. Ao final, a banca nos pergunta se o rastreio para câncer de mama deve ser realizado com mamografia bianual entre 50 e 69 anos para todas as mulheres de risco habitual. Numa leitura rápida, e mesmo lembrando dos manuais do Ministério da Saúde, poderíamos dizer que a opção está correta. Inclusive, foi copiada de uma publicação antiga do Ministério da Saúde. No entanto, bianual é um termo que se refere a 2 vezes ao ano e isso está errado. Na verdade, o rastreamento do CA de mama para mulheres entre 50 e 69 anos é com mamografia BIENAL, ou seja, a cada biênio (2 anos). Por isso a questão acabou sendo ANULADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-337603",
+      "number": "337603",
+      "sourceNumber": "337603",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Marisa é uma mulher de 58 anos que veio a uma consulta de rotina, pois deseja realizar\nexames de \"\"check-up\"\". Ela não tem problemas de saúde nem faz uso de nenhum medicamento.\n\nSeu histórico familiar a preocupa , pois sua mãe morreu devido a um câncer de laringe e, por isso,\nela deseja realizar uma endoscopia para saber se está tudo bem com sua laringe , pois foi assim\nque a mãe descobriu o tumor. Ela deseja também realizar o exames para verificar suas vitaminas.\nQuando questionada, refere ser viúva, sexualmente ativa e nega quaisquer sintomas no momento\ndo atendimento. considerando seus conhecimentos e o caso exposto, julgue o item a seguir. Faz\nparte do rastreio de rotina da saúde do adulto a mensuração dos níveis glicêmicos, colesteróis\ntotais e frações e níveis de hormônios tireoidianos.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Temos uma paciente de 58 anos e que foi a uma consulta de rotina solicitando o famigerado check-up geral. Perceba que ela não tem qualquer problema de saúde e nem faz uso de medicações. Note que ela deseja fazer uma EDA, pois a mãe faleceu de CA de laringe (olhem a experiência da pessoa com a doença aí), e também exames para verificar suas vitaminas. Ao final, a banca nos pergunta se faz parte da rotina do adulto a mensuração dos níveis glicêmicos, colesteróis totais e frações e níveis de hormônios tireoidianos. Vamos, então, por partes Solicitação de níveis glicêmicos segundo a maioria das referências, é recomendado o rastreamento de diabetes para todos os indivíduos com 45 anos ou mais, mesmo sem fatores de risco, e para indivíduos com sobrepeso obesidade que tenham pelo menos um fator de risco adicional (história familiar em parente de primeiro grau, história de DCV, HAS, HDL menor que 35, triglicerídeos maior que 250). Logo, não podemos considerar que faz parte do rastreio de rotina da saúde do adulto a mensuração dos níveis glicêmicos. O rastreio de desordens lipídicas deve ser feito em pessoas assintomáticas com 35 anos ou mais (homens) e 45 anos ou mais (mulheres). Logo, não faz parte do rastreio em adultos como a questão colocou. Já a solicitação de hormônios tireoidianos não é indicado como rastreio em nenhuma população. Item ERRADO.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-337604",
+      "number": "337604",
+      "sourceNumber": "337604",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Marisa é uma mulher de 58 anos que veio a uma consulta de rotina, pois deseja realizar\nexames de \"\"check-up\"\". Ela não tem problemas de saúde nem faz uso de nenhum medicamento.\n\nSeu histórico familiar a preocupa , pois sua mãe morreu devido a um câncer de laringe e, por isso,\nela deseja realizar uma endoscopia para saber\nse está tudo bem com sua laringe , pois foi assim\nque a mãe descobriu o tumor. Ela deseja também realizar o exames para verificar suas vitaminas.\nQuando questionada, refere ser viúva, sexualmente ativa e nega quaisquer sintomas no momento\ndo atendimento. considerando seus conhecimentos e o caso exposto, julgue o item a seguir. Marisa\nestá na faixa etária adequada para a realização do rastreio do câncer de cólon, que deve ser\nrealizado anualmente com pesquisa de sangue oculto nas fezes ou com colonoscopia a cada\ndécada.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Temos uma paciente de 58 anos e que foi a uma consulta de rotina solicitando o famigerado check-up geral. Perceba que ela não tem qualquer problema de saúde e nem faz uso de medicações. Note que ela deseja fazer uma EDA, pois a mãe faleceu de CA de laringe (olhem a experiência da pessoa com a doença aí), e também exames para verificar suas vitaminas. Ao final, a banca nos pergunta se ela deve ou não ser rastreada para câncer de câncer de cólon, devendo o rastreio ser realizado anualmente com pesquisa de sangue oculto nas fezes ou com colonoscopia a cada década. Bem, segundo a USPSTF o rastreamento para o CA colorretal deve ser iniciado aos 45 anos, devendo ser realizado até os 75 anos. Este pode ser realizado de várias formas, como colonoscopia de 10 em 10 anos ou pesquisa de sangue oculto nas fezes anualmente.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-337605",
+      "number": "337605",
+      "sourceNumber": "337605",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Marisa é uma mulher de 58 anos que veio a uma consulta de rotina, pois deseja realizar\nexames de \"\"check-up\"\". Ela não tem problemas de saúde nem faz uso de nenhum medicamento.\n\nSeu histórico familiar a preocupa , pois sua mãe morreu devido a um câncer de laringe e, por isso,\nela deseja realizar uma endoscopia para saber\nse está tudo bem com sua laringe , pois foi assim\nque a mãe descobriu o tumor. Ela deseja também realizar o exames para verificar suas vitaminas.\nQuando questionada, refere ser viúva, sexualmente ativa e nega quaisquer sintomas no momento\ndo atendimento. considerando seus conhecimentos e o caso exposto, julgue o item a seguir. Marisa\nnão deve ser rastreada para câncer de colo uterino, uma vez que não está mais na faixa etária\nindicada para o rastreio.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Temos uma paciente de 58 anos e que foi a uma consulta de rotina solicitando o famigerado check-up geral. Perceba que ela não tem qualquer problema de saúde e nem faz uso de medicações. Note que ela deseja fazer uma EDA, pois a mãe faleceu de CA de laringe (olhem a experiência da pessoa com a doença aí), e também exames para verificar suas vitaminas. Ao final, a banca nos pergunta se ela deve ou não ser rastreada para câncer de colo uterino, uma vez que não está mais na faixa etária indicada para o rastreio. Vamos, então, relembrar de como deve ser realizado o rastreamento do câncer de colo uterino O método de rastreamento do câncer do colo do útero e de suas lesões precursoras é o exame citopatológico. Os dois primeiros exames devem ser realizados com intervalo anual e, se ambos os resultados forem negativos, os próximos devem ser realizados a cada 3 anos. O início da coleta deve ser aos 25 anos para as mulheres que já tiveram ou têm atividade sexual. O rastreamento antes dos 25 anos deve ser evitado. Os exames periódicos devem seguir até os 64 anos e, naquelas mulheres sem história prévia de doença neoplásica pré-invasiva, interrompidos quando tiverem pelo menos dois exames negativos consecutivos nos últimos cinco anos. Para mulheres com mais de 64 anos e que nunca se submeteram ao exame citopatológico, devem-se realizar dois exames com intervalo de um a três anos. Se ambos os exames forem negativos, essas mulheres podem ser dispensadas de exames adicionais. Voltando a questão, está encontra-se ERRADA, pois a paciente ainda está na faixa etária em que o rastreio é indicado.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-337606",
+      "number": "337606",
+      "sourceNumber": "337606",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Marisa é uma mulher de 58 anos que veio a uma consulta de rotina, pois deseja realizar\nexames de \"\"check-up\"\". Ela não tem problemas de saúde nem faz uso de nenhum medicamento.\n\nSeu histórico familiar a preocupa , pois sua mãe morreu devido a um câncer de laringe e, por isso,\nela deseja realizar uma endoscopia para saber se está tudo bem com sua laringe , pois foi assim\nque a mãe descobriu o tumor. Ela deseja também realizar o exames para verificar suas vitaminas.\nQuando questionada, refere ser viúva, sexualmente ativa e nega quaisquer sintomas no momento\ndo atendimento. considerando seus conhecimentos e o caso exposto, julgue o item a seguir.\n\nConsiderando a alta prevalência de sífilis no Brasil, Marisa deve ser rastreada com teste não\ntreponêmico e teste treponêmico simultâneos.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Temos uma paciente de 58 anos e que foi a uma consulta de rotina solicitando o famigerado check-up geral. Perceba que ela não tem qualquer problema de saúde e nem faz uso de medicações. Note que ela deseja fazer uma EDA, pois a mãe faleceu de CA de laringe (olhem a experiência da pessoa com a doença aí), e também exames para verificar suas vitaminas. Ao final, a banca nos pergunta se ela deve ou não ser rastreada com teste treponêmico (FTA-abs, MHA-TP TPHA TPPA e ELISA) e não treponêmico (VDRL) para sífilis. Bem, o rastreio de IST s é um tema sempre difícil, pois existem grupos populacionais específicos que merecem o rastreio e outros em que o rastreio não é necessário. Mas, para que não tenhamos que decorar uma penca de coisas, guarde o seguinte o rastreio é indicado quando a probabilidade pré-teste puder ser estimada, devendo ter um valor elevado. No caso desta paciente, haveria essa indicação Não. Resposta ERRADO. Mas quais pacientes tem indicação de rastrear a sífilis Pessoas com menos de 30 anos anual Gestantes Gays e HSH, trabalhadores do sexo, travestis e transexuais e pessoas que usam álcool ou outras drogas semestral Pessoas com diagnóstico de IST no momento do diagnóstico e 4-6 semanas após o diagnóstico Pessoas vivendo com HIV semestral Pessoas com prática anal receptiva sem uso de preservativo semestral População privada de liberdade semestral Violência sexual no atendimento inicial e 4-6 semanas após a exposição Pessoas com indicação de PEP no atendimento inicial e 4-6 semanas após a exposição.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-298889",
+      "number": "298889",
+      "sourceNumber": "298889",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Uma paciente de 1 ano e 6 meses de idade foi encaminhada ao pronto atendimento\npediátrico por apresentar febre, há três\ndias, entre 38ºC e 39,5ºC, sem outras queixas. A criança foi\nlevada pela avó materna, que se mostrou bastante preocupada, pois, além da febre, notou que a\ncriança apresenta manchas arrocheadas nos membros superiores e inferiores. A criança reside\ncom a mãe, um irmão de 5 anos de idade e o padrasto. Ao exame físico, ela mostra-se abatida e\nprostrada, mas está corada e hidratada. Constataram-se FC = 120 bpm, FR = 40 irpm, SatO2 =\n98% em AA, oroscopia sem petéquias, sem placas, sem lesões, otoscopia com membrana\ntimpânica translúcida, sem abaulamento, sem secreção, ausculta cardíaca BNF, RR, 2t, sem sopro\ne ausculta pulmonar MVUD, sem ruídos adventícios. Também foram observados abdome RHA+,\ndepressível, dor à palpação em baixo ventre, Blumberg e Murph negativos, sem sinais de\nmeningismo, membros inferiores com equimoses < 5 cm e membros superiores com equimoses > 5\ncm em braço esquerdo. Inicialmente foram solicitados exame qualitativo de urina com urocultura\n(via sondagem vesical; ainda sem resultado da urocultura) e radiografia de membro superior\nesquerdo. O exame qualitativo de urina pode ser verificado a seguir. Realizou-se, ainda, radiografia\nque evidenciou calo ósseo em rádio e ulna esquerda, conforme a imagem a seguir. Acerca desse\ncaso clínico e tendo em vista os conhecimentos médicos correlatos, julgue o item a seguir. Para\nenfrentar as várias formas de uma manifestação da violência, o setor de saúde tem políticas\npróprias de âmbito nacional, como a notificação de violência contra crianças e adolescentes na\nrede do Sistema Único de Saúde (SUS) (Portaria nº 1.968/2001).",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [
+        "question_bank/media/medcurso/med-preventiva-med-pre-04/298889.png"
+      ],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Faz parte do atendimento inicial a notificação da suspeita de maus-tratos aos órgãos de proteção legal. A Portaria n. 1.968 2001 dispõe sobre a notificação, às autoridades-competentes, de casos de suspeita ou de confirmação de maus-tratos contra crianças e adolescentes atendidos nas entidades do Sistema Único de Saúde, apresentando o formulário próprio de notificação, que deverá ser feito em duas vias, em consonância com o artigo 13 do Estatuto da Criança e do Adolescente (Lei n. 8.069 1990). Vale ressaltar que a simples suspeita ou a confirmação de maus-tratos à criança ou adolescente deverão ser obrigatoriamente comunicados ao Conselho Tutelar da respectiva localidade e sem prejuízo das demais providências legais. Na ausência do Conselho Tutelar, recorre-se à Vara da Infância e Juventude, à Defensoria ou ao Ministério Público. Lembrando que a comprovação de maus-tratos é dever dos órgãos de proteção legal. Resposta item certo.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-298940",
+      "number": "298940",
+      "sourceNumber": "298940",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Um paciente de 73 anos de idade, diagnosticado com câncer retal, retornou ao\natendimento médico na unidade básica de saúde\npara conversar com seu médico de família, pois\nestá muito nervoso e não sabe se deve realizar os procedimentos propostos pelo especialista, visto\nque, para ele, \"é melhor morrer do que usar uma bolsinha para o resto da vida\" (colostomia). Com\nrelação a esse caso clínico e com base nos conhecimentos médicos correlatos, julgue o item a\nseguir. Deve-se insistir para que o paciente realize o tratamento proposto pelo especialista, pois o\nmédico é o detentor do conhecimento, e o paciente, por ser leigo no assunto, não pode ter opinião\nacerca dos procedimentos que serão realizados.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Uma afirmativa absurda, que nem merece muita atenção. Claramente não praticamos medicina para ignorar as opiniões e vontades dos nossos pacientes. Segundo o código de ética médica Parágrafo único. Nos casos de doença incurável e terminal, deve o médico oferecer todos os cuidados paliativos disponíveis sem empreen- der ações diagnósticas ou terapêuticas inúteis ou obstinadas, levando sempre em consideração a vontade expressa do paciente ou, na sua impossibilidade, a de seu representante legal. Afirmativa ERRADA",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-298942",
+      "number": "298942",
+      "sourceNumber": "298942",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Um paciente de 73 anos de idade, diagnosticado com câncer retal, retornou ao\natendimento médico na unidade básica de saúde\npara conversar com seu médico de família, pois\nestá muito nervoso e não sabe se deve realizar os procedimentos propostos pelo especialista, visto\nque, para ele, \"é melhor morrer do que usar uma bolsinha para o resto da vida\" (colostomia). Com\nrelação a esse caso clínico e com base nos conhecimentos médicos correlatos, julgue o item a\nseguir. De acordo com o Código de Ética Médico, mesmo que esse paciente viesse a óbito, é\nvedado ao médico revelar fato de que tenha conhecimento em virtude de sua profissão, exceto se\nhouver motivo justo, dever legal ou consentimento, por escrito, do paciente.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Segundo o Código de Ética Médica Art. 73. Revelar fato de que tenha conhecimento em virtude do exercício de sua profissão, salvo por motivo justo, dever legal ou consentimento, por escrito, do paciente. Parágrafo único. Permanece essa proibição a) mesmo que o fato seja de conhecimento público ou o paciente tenha falecido. Afirmativa CERTA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-250175",
+      "number": "250175",
+      "sourceNumber": "250175",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Quanto às doenças de notificação compulsória, julgue o item a seguir. A lista de\ndoenças de notificação compulsória é\ncomposta somente por doenças agudas com alto risco de\ntranscendência.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "No processo de priorização dos eventos sujeitos à vigilância devem ser considerados a) Magnitude do evento - expresso pelo número de mortes causadas b) Potencial de disseminação ou transmissibilidade c) Transcendência - severidade, relevância social e ou econômica d) Vulnerabilidade - impacto que as técnicas disponíveis poderiam exercer sobre a doença e) Compromissos internacionais com o controle de determinados agravos Fica evidente que não é apenas a transcendência que deve ser considerada no ato de eleger uma doença para notificação compulsória. Enunciado ERRADO",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-250176",
+      "number": "250176",
+      "sourceNumber": "250176",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Quanto às doenças de notificação compulsória, julgue o item a seguir. Todas as\nmeningites, adquiridas ou não na comunidade, são doenças de notificação compulsória.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Segundo a Portaria No 204, de 17 de Fevereiro de 2016, são incluídas na lista de agravos de notificação compulsória Doença Meningocócica e outras meningites, portanto, devemos notificar todos os casos suspeitos. Além disso, os surtos e os aglomerados de casos ou óbitos são não apenas de notificação compulsória, como imediata em até 24 horas. Enunciado CERTO",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-250177",
+      "number": "250177",
+      "sourceNumber": "250177",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Quanto às doenças de notificação compulsória, julgue o item a seguir. A estratégia de\nvigilância sindrômica aumenta a especificidade na detecção de casos de doenças de notificação\ncompulsória.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar a definição de especificidade e sensibilidade para então responder à questão utilizando o bom senso. A especificidade de um teste diagnóstico é definida pela sua capacidade de identificar corretamente os indivíduos saudáveis como negativos A sensibilidade de um teste diagnóstico é definida pela capacidade de identificar corretamente os indivíduos doentes como positivos A estratégia de vigilância sindrômica determina que os casos suspeitos que apresentarem sintomatologia compatível com determinada doença, mesmo sem confirmação diagnóstica, devem ser notificados. Ora, isso certamente significa que uma maior porcentagem das notificações será de falsos positivos, pois foi aumentada a abrangência da notificação. Portanto, esta estratégia aumenta a capacidade de detecção de pessoas doentes, às custas de elevar o número de falsos positivos, característica inerente à SENSIBILIDADE, e não à especificidade. Enunciado ERRADO",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-255773",
+      "number": "255773",
+      "sourceNumber": "255773",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Paciente de 28 anos de idade comparece à unidade de saúde da família com história\nde trauma do joelho esquerdo após queda de\nmoto, quando estava se dirigindo ao respectivo local\nde trabalho. Ao exame físico, o joelho referido apresentava aumento de volume e calor local. PA =\n120 mmHg x 80 mmHg; FC = 96 bpm; FR = 16 irpm; SpO2 = 98%. Considerando esse caso clínico\ne os conhecimentos médicos correlatos, julgue o item a seguir. O paciente do mencionado caso\nsofreu acidente de trajeto, o que, conforme a legislação trabalhista vigente definida pela Medida\nProvisória no 905, se equipara ao acidente de trabalho.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Sobre acidente de trabalho, pela lei 8.213 91, que dispõe sobre os planos de benefícios da previdência social, o acidente sofrido no percurso da residência para o local de trabalho (ou o contrário), independente do meio de locomoção, era equiparado ao acidente de trabalho. Na MP 905, considerou que o acidente de trajeto não era mais equiparado ao acidente de trabalho, e o empregado não teria mais de 12 meses de emprego a partir da alta previdenciária. Vale lembrar que, a MP 905 de 11 de novembro de 2019 foi revogada pela MP 955 de 20 de abril de 2020. Resposta Errado.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-196676",
+      "number": "196676",
+      "sourceNumber": "196676",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Determinado paciente de 32 anos de idade, advogado, refere que iniciou a prática de\ntreinamento resistido com enfoque em hipertrofia muscular há cerca de 10 anos, assim como\ncorrida de 30 minutos cinco vezes por semana, associados ao uso de suplementação nutricional de\nwhey protein (30 g/dia) e creatina (5 g/dia). O paciente possui 1,70 m de altura e 95 kg de peso\ncorporal. A medida da circunferência abdominal é de 85 cm. A frequência cardíaca é de 62 bpm, a\nfrequência respiratória é de 16 irpm e a saturação de oxigênio equivale a 98%. Apresenta exames\nlaboratoriais solicitados por outro médico, por \"rotina\", com os seguintes valores de referência\n(VR)\ndo laboratório de realização: creatinina de 1,4 mg/dL (VR: 0,7-1,3); ureia de 45 mg/dL (VR: 10-40);\ncreatinofosfoquinase de 500 U/L (VR: 22-344); e exame sumário de urina (ESU, EQU, urina tipo I,\nurinanálise) sem alterações. Relata um consumo proteíco de cerca de 200 g por dia, na forma de\ncerca de 1 kg de peito de frango. Com base nos dados apresentados nesse caso clínico e nos\nconhecimentos médicos correlatos, julgue o item a seguir. A suplementação de creatina tem como\nobjetivo o aumento dos estoques de creatina-fosfato intramusculares, ou seja, o estoque energético\ndisponível para atividade física. Ela é recomendada, com boas evidências, para corredores de\nlonga distância, como maratonistas e meio-maratonistas.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A creatina é um dos suplementos nutricionais mais utilizados por atletas, e não é proibida pela WADA (World Anti-Doping Agency). As evidências mostram que ela é útil em melhorar a performance muscular em atividades de alta intensidade e curta duração. Logo, assertiva ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-196692",
+      "number": "196692",
+      "sourceNumber": "196692",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Determinado paciente de 32 anos de idade, advogado, refere que iniciou a prática de\ntreinamento resistido com enfoque em hipertrofia muscular há cerca de 10 anos, assim como\ncorrida de 30 minutos cinco vezes por semana, associados ao uso de suplementação nutricional de\nwhey protein (30 g/dia) e creatina (5 g/dia). O paciente possui 1,70 m de altura e 95 kg de peso\ncorporal. A medida da circunferência abdominal é de 85 cm. A frequência cardíaca é de 62 bpm, a\nfrequência respiratória é de 16 irpm e a saturação de oxigênio equivale a 98%. Apresenta exames\nlaboratoriais solicitados por outro médico, por \"rotina\", com os seguintes valores de referência\n(VR)\ndo laboratório de realização: creatinina de 1,4 mg/dL (VR: 0,7-1,3); ureia de 45 mg/dL (VR: 10-40);\ncreatinofosfoquinase de 500 U/L (VR: 22-344); e exame sumário de urina (ESU, EQU, urina tipo I,\nurinanálise) sem alterações. Relata um consumo proteíco de cerca de 200 g por dia, na forma de\ncerca de 1 kg de peito de frango. Com base nos dados apresentados nesse caso clínico e nos\nconhecimentos médicos correlatos, julgue o item a seguir. A prática de exercício físcio aeróbico,\nmas não de exercício físico resistido, é indicada durante o tratamento de neoplasias, com o objetivo\nde melhora da qualidade de vida e da sensação de fadiga.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Os exercícios resistidos (musculação) são os mais importantes durante o tratamento de neoplasias (desde que, é claro, o paciente tenha condições de realizá-los). O exercício resistido ajuda a preservar o trofismo muscular, evitando o surgimento de sarcopenia e caquexia, que são fatores de independentes de mau prognóstico. Assertiva ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-152083",
+      "number": "152083",
+      "sourceNumber": "152083",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Paciente, sexo masculino, 70 anos de idade, apresenta tosse seca e dispneia há dois\nanos. Realizou espirometria, que estava normal. Nos Raios X de tórax, evidenciaram-se\nopacidades irregulares em bases e pleura justadiafragmática direita. No passado possui histórico\nde trabalhar em mineradoras sem equipamentos de proteção. Com base nesse caso hipotético,\njulgue o item a seguir. Os familiares que entraram em contato com a roupa do paciente também\ndevem ser investigados para asbestose.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão gerou polêmica na época do concurso. Sabemos que trabalhadores de mineração ou outras profissões em contato com fibras de asbesto podem, de fato, trazer poeiras em suas roupas para dentro de casa. Existem casos relatados na literatura de doença por asbesto relacionada à exposição não-ocupacional indireta de familiares muitos anos após a interrupção do trabalho de risco, tendo sido encontrados vestígios de asbesto dentro das casas dos pacientes afetados. Dessa forma, em pessoas com alto risco de exposição à asbesto, incluindo os familiares com exposição regular a roupas de trabalho sujas trazidas para casa por um trabalhador de mineradoras com tais fibras, a literatura recomenda rastreio da doença para as complicações pleuropulmonares com radiografia de tórax periódica. Embora a afirmativa realizada tenha sido um tanto quanto vaga (familiares que entraram em contato com a roupa do paciente), sem caracterizar a regularidade do contato com a roupa do paciente, a banca considerou o gabarito final como CERTO.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-152091",
+      "number": "152091",
+      "sourceNumber": "152091",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Paciente, sexo masculino, 70 anos de idade, apresenta tosse seca e dispneia há dois\nanos. Realizou espirometria, que estava\nnormal. Nos raios X de tórax, evidenciaram-se opacidades\nirregulares em bases e pleura justadiafragmática direita. No passado, possui histórico de trabalhar\nem mineradoras sem equipamentos de proteção. Com base nesse caso hipotético, julgue o item a\nseguir: o mesotelioma pode ser investigado nesse paciente.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "As doenças pelo asbesto incluem doenças pleuropulmonares relacionadas à exposição inalatória a poeiras com fibras desse material. Os indivíduos em risco são os que trabalham em mineração e transformação do asbesto (fabricação de produtos de cimento-amianto, materiais de fricção, tecidos incombustíveis com amianto, juntas, papéis e papelões especiais). A exposição direta também ocorre na construção ou demolição de prédios, fabricação de telhas, freios ou tubulações. Bombeiros, encanadores e trabalhadores da construção naval também estão expostos. As doenças relacionadas ao asbesto são (1) asbestose uma doença pulmonar intersticial relacionada à fibrose pulmonar difusa e progressiva lentamente, predominando nos campos inferiores (2) doença pleural pelo asbesto é a manifestação mais frequente dessa pneumoconiose, caracterizada por placas de calcificação ou espessamento pleural, geralmente unilateral (3) neoplasias de pulmão especialmente o mesotelioma pleural. O paciente da questão representa um típico caso de doença por asbesto, tendo em vista a história de exposição, os sintomas pulmonares crônicos (tosse e dispneia) e o envolvimento de bases e de pleura unilateral. O mesotelioma pleural é uma neoplasia maligna cujo único fator de risco conhecido é a exposição a asbesto. Portanto, sua investigação nesse paciente está certa.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-04-105574",
@@ -471,6 +1311,7 @@
         "E": "Risco físico - radiações eletromagnéticas ionizantes: catarata e convulsões."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -504,6 +1345,7 @@
         "E": "Agricultor, cavador de poço ou pedreiro."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -534,6 +1376,7 @@
         "B": "ERRADO."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -564,6 +1407,7 @@
         "B": "ERRADO."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -594,6 +1438,7 @@
         "B": "ERRADO."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -606,6 +1451,135 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-301334",
+      "number": "301334",
+      "sourceNumber": "301334",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Uma trabalhadora rural de 30 anos de idade, em plantio de tomate há dois meses,\nrefere tonturas, dores de cabeça, cansaço,\nnáuseas, geralmente no final do dia de trabalho, há\nduas semanas, após a plantação ter sido pulverizada com agrotóxicos, e informa que uma colega\nde trabalho apresenta quadro semelhante. O médico suspeitou tratar-se de um caso de intoxicação\npor agrotóxicos e afastou-a do trabalho por uma semana, com nova avaliação, e notificou esse fato\nao Sistema de Informação de Agravos e Notificações (SINAN), do Sistema Único de Saúde (SUS).\nNo retorno, a paciente relatou melhora do quadro clinico. A respeito desse caso clinico, julgue os\nitens de 86 a 92. As principais vias de absorção dos agrotóxicos pelo organismo humano são a\ndérmica (pele) e a respiratória (inalatória), pois a absorção pela via oral e pela digestiva é pouco\nexpressiva na situação de trabalho, exceto quando esses produtos são ingeridos acidental ou\nintencionalmente.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O trabalhador rural tem menos contato com os agrotóxicos sob a forma de ingestão oral, e mais pelo contato contínuo manual com as folhas e caules de plantas pulverizadas. A manipulação destes elementos gera partícula orgânicas que podem ser inaladas, sendo esta também uma das principais formas de contaminação. Afirmativa CERTA",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-301335",
+      "number": "301335",
+      "sourceNumber": "301335",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Uma trabalhadora rural de 30 anos de idade, em plantio de tomate há dois meses,\nrefere tonturas, dores de cabeça, cansaço,\nnáuseas, geralmente no final do dia de trabalho, há\nduas semanas, após a plantação ter sido pulverizada com agrotóxicos, e informa que uma colega\nde trabalho apresenta quadro semelhante. O médico suspeitou tratar-se de um caso de intoxicação\npor agrotóxicos e afastou-a do trabalho por uma semana, com nova avaliação, e notificou esse fato\nao Sistema de Informação de Agravos e Notificações (SINAN), do Sistema Único de Saúde (SUS).\nNo retorno, a paciente relatou melhora do quadro clinico. A respeito desse caso clinico, julgue os\nitens de 86 a 92. No caso apresentado, trata-se de efeitos tóxicos decorrentes da exposição crônica\naos agrotóxicos, que são bem conhecidos, como manifestações gastrointestinais e neurológicas.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A intoxicação decorrente de um ou múltiplos contatos com o agrotóxico, em que os sintomas surgem de imediato ou num período de até duas semanas é denominada intoxicação AGUDA. As intoxicações crônicas ocorrem em um período de meses a anos, sendo até dofícil estabelecer o nexo causal com a exposição. Não é nosso caso acima. Afirmativa ERRADA",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-203140",
+      "number": "203140",
+      "sourceNumber": "203140",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "A conceituação de prevenção quaternária foi proposta no contexto clássico dos três\nníveis de prevenção de Leavell & Clark, que classificava a prevenção em primária, secundária e\nterciária. Acerca do tema do texto, Jamoule propôs a prevenção quaternária, que consiste em:",
+      "options": {
+        "A": "Ação tomada para evitar ou remover a causa de um problema de saúde em um indivíduo ou em\numa população antes que tal problema surja.\nInclui promoção da saúde e proteção específica.",
+        "B": "Ação tomada para identificar o paciente em risco de sobretratamento, para protegê-lo de nova\ninvasão médica, e sugerir a ele intervenções que são eticamente aceitáveis.",
+        "C": "Medidas tomadas para reduzir os efeitos crônicos de um problema de saúde em um indivíduo ou\nem uma população, minimizando o\ncomprometimento funcional consequente ao problema de saúde\nagudo ou crônico.",
+        "D": "Ação tomada para detectar um problema de saúde em fase inicial em um indivíduo ou em uma\npopulação, facilitando assim a cura, ou reduzindo ou impedindo os respectivos efeitos em longo\nprazo.",
+        "E": "Ação tomada quando o paciente não está doente e o médico está em um processo de promoção\nda saúde ou na campanha de imunização."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [
+        "question_bank/media/medcurso/med-preventiva-med-pre-04/203140.png"
+      ],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos fazer um breve resumo sobre o tema Na década de 70, foram estabelecidos, por Leavell Clark (1976), três níveis de prevenção (primária, secundária e terciária) que inter-relacionam atividade médica e saúde pública. O termo prevenção quaternária (P4) foi utilizado pela primeira vez em uma conferência da organização mundial de médicos de família (WONCA), em 1995, por Marc Jamoulle. Após quatro anos foi adotada a definição da P4 e esta foi publicada no dicionário WONCA da seguinte forma ação feita para identificar uma pessoa ou população em risco de supermedicalização, para protegê-los de uma intervenção médica invasiva e sugerir procedimentos científica e eticamente aceitáveis. Ou seja, é exatamente o descrito na letra B (identificar o paciente em risco de sobretratamento para protegê-lo de nova invasão médica) nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-183920",
+      "number": "183920",
+      "sourceNumber": "183920",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Com relação às doenças ocupacionais respiratórias, julgue o item seguinte. As placas\npleurais parietais são um importante marcador biológico geralmente detectado em trabalhadores\nfrequentemente expostos à sílica cristalina (silicose).",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "As placas pleurais são caracterizadas por um espessamento ou calcificação da pleura parietal, particularmente ao longo dos campos pulmonares inferiores, do diafragma e da borda cardíaca. Essa alteração é muito sugestiva da exposição ao asbesto (e não à sílica cristalina) É importante destacar que, caso não haja manifestações clínicas, esse achado indica apenas a exposição ao agente causador, e não dano pulmonar. Sendo assim, a afirmativa é ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-04-104759",
@@ -627,6 +1601,7 @@
         "E": "Acréscimo de trinta dias à lincença-maternidade no caso das mães de gêmeos."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -660,6 +1635,7 @@
         "E": "Apoiar a realização das ações de vigilância em Saúde do Trabalhador como levantamento da\nincidência de acidentes de trabalho."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -693,6 +1669,7 @@
         "E": "A síndrome do túnel do carpo é uma compressão do nervo ulnar do punho, podendo ocorrer em\ntrabalhadores que executam movimentos repetitivos, como os empacotadores."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -726,6 +1703,7 @@
         "E": "Legislação anti-tabaco."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -759,6 +1737,7 @@
         "E": "II e III."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -792,6 +1771,7 @@
         "E": "leptospirose."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -825,6 +1805,7 @@
         "E": "Deixar de revelar segredo profissional referente a paciente menor de idade, mesmo que o menor\ntenha capacidade de avaliar seu problema e de conduzir-se por seus prórpios meios para\nsolucioná-lo."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -837,6 +1818,174 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-287868",
+      "number": "287868",
+      "sourceNumber": "287868",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Em conformidade com a NR 32 - Segurança e Saúde no Trabalho em Serviços de\nSaúde, assinalar a alternativa CORRETA:",
+      "options": {
+        "A": "Os trabalhadores que utilizarem objetos perfurocortantes devem ser os responsáveis pelo seu\nreencape manual e descarte.",
+        "B": "Colchões, colchonetes e demais almofadados utilizados no ambiente hospitalar não podem\napresentar furos, rasgos, sulcos ou reentrâncias no revestimento.",
+        "C": "As capacitações sobre segurança do trabalho são facultativas e devem ser realizadas apenas\numa vez.",
+        "D": "É indicado realizar o reencape seguro e a desconexão manual de agulhas.",
+        "E": "Nos locais onde exista a possibilidade de exposição a agentes biológicos, devem ser fornecidas\ninstruções verbais, em linguagem técnica, das rotinas realizadas no local de trabalho."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "De acordo com a NR 32 - Segurança e Saúde no Trabalho em Serviços de Saúde, temos o seguinte trecho 32.2.4.13 Os colchões, colchonetes e demais almofadados devem ser revestidos de material lavável e impermeável, permitindo desinfecção e fácil higienização. Ou seja, exatamente como descrito na letra B, nosso gabarito. Vamos aproveitar e analisar as demais assertivas A) Incorreta. Os trabalhadores que utilizarem objetos perfurocortantes devem ser os responsáveis pelo seu descarte. C) Incorreta. As capacitações são obrigatórias e devem ser realizadas frequentemente. D) Incorreta. São vedados o reencape e a desconexão manual de agulhas. E) Incorreta. Em todo local onde exista a possibilidade de exposição a agentes biológicos, devem ser fornecidas aos trabalhadores instruções escritas, em linguagem acessível, das rotinas realizadas no local de trabalho e medidas de prevenção de acidentes e de doenças relacionadas ao trabalho.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-232112",
+      "number": "232112",
+      "sourceNumber": "232112",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Em relação às doenças infecciosas, o período de incubação é:",
+      "options": {
+        "A": "O isolamento do paciente durante o período de transmissibilidade de uma doença infecciosa.",
+        "B": "O intervalo compreendido entre a exposição ao agente infeccioso e o aparecimento de sinais e\nsintomas.",
+        "C": "A evolução natural de infecções clinicamente aparentes, agudas ou crônicas, durante o período\nde pré-patogênese das doenças.",
+        "D": "O estado de resistência do suscetível relacionado à presença de anticorpos durante um\nprocesso infeccioso.",
+        "E": "A reação do organismo, detectável por testes especiais, com a presença de sintomas, sendo um\nperíodo subclínico."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão simples e conceitual Período de Incubação é o intervalo de tempo que decorre desde a penetração do agente etiológico no hospedeiro (indivíduo já está infectado), até o aparecimento dos sinais e sintomas da doença, variando de acordo com a doença considerada. Ou seja, exatamente como descrito na letra B, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-227280",
+      "number": "227280",
+      "sourceNumber": "227280",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Em um mundo globalizado, a vigilância em saúde deve ganhar uma dimensão\ninternacional. A discussão dos parâmetros de\nnotificação de agravos em âmbito internacional\nganhou destaque no contexto do Regulamento Sanitário Internacional, em vigor desde 2007. Em\nrelação a tais parâmetros, assinale a alternativa correta:",
+      "options": {
+        "A": "A notificação passou a ser limitada a uma lista restrita de doenças, abandonando-se as\nvariações.",
+        "B": "A Organização Mundial de Saúde passou a aceitar notificação de outros atores além dos\ngovernos nacionais.",
+        "C": "A lista de agravos de notificação sujeitos a algoritmo de decisão das autoridades sanitárias foi\nsuprimida.",
+        "D": "O Regulamento Sanitário Internacional reconheceu a impossibilidade de se estabelecer\ncapacidades mínimas de detecção."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar cada item A) A notificação passou a ser limitada a uma lista restrita de doenças, abandonando-se as variações. Errado A notificação não mais se limita a uma lista restrita de doenças. Com o Regulamento Sanitário Internacional, utiliza-se um algoritmo para nortear a decisão de realizar ou não a notificação internacional. B) A Organização Mundial de Saúde passou a aceitar notificação de outros atores além dos governos nacionais. Correto C) A lista de agravos de notificação sujeitos a algoritmo de decisão das autoridades sanitárias foi suprimida. Errado Existe um algoritmo que deve nortear a decisão sobre a notificação. D) O Regulamento Sanitário Internacional reconheceu a impossibilidade de se estabelecer capacidades mínimas de detecção. Errado O algoritmo de decisão possibilita a capacidade mínima de detecção.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-227282",
+      "number": "227282",
+      "sourceNumber": "227282",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Sobre as propriedades dos bioagentes patogênicos, assinale a alternativa correta:",
+      "options": {
+        "A": "Infectividade é a capacidade de se difundir pelos tecidos, órgãos e sistemas.",
+        "B": "Patogenicidade é a qualidade de produzir sintomas no hospedeiro.",
+        "C": "Virulência é a quantidade do agente etiológico necessária para a infecção.",
+        "D": "Imunogenicidade é a capacidade de produzir casos graves e fatais."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar cada item A) Infectividade é a capacidade de se difundir pelos tecidos, órgãos e sistemas. Errada Infectividade é a capacidade de certos organismos ou agentes de penetrar e se desenvolver em um hospedeiro. B) Patogenicidade é a qualidade de produzir sintomas no hospedeiro. Correto C) Virulência é a quantidade do agente etiológico necessária para a infecção. Errada Virulência é a capacidade de produzir casos graves e fatais. D) Imunogenicidade é a capacidade de produzir casos graves e fatais. Errado Imunogenicidade é a capacidade do agente, após a infecção, de induzir imunidade ao hospedeiro.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-04-212907",
+      "number": "212907",
+      "sourceNumber": "212907",
+      "collectionBlock": "med:med-preventiva-med-pre-04",
+      "collectionLabel": "MED · MED PRE 04",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 04",
+      "subtopic": "",
+      "stem": "Mulher, 58 anos, hipertensa e diabética desde os 40 anos, evoluiu há 10 anos com\ninsuficiência renal crônica, acompanhada de dispneia aos esforços e edema de membros inferiores.\nIniciada terapia específica na ocasião com medicações orais para o diabetes, diuréticos e inibidores\nda ECA, com melhora dos sintomas. Com o passar dos anos, a doença progrediu e a paciente\nevoluiu com necessidade de terapia renal substitutiva. Há 6 meses descobriu câncer de mama\nECOG 2, sendo tratada com mastectomia radical e posterior quimioterapia. Hoje, foi levada ao\nhospital às pressas por quadro de edema agudo pulmonar e insuficiência respiratória seguida de\nóbito. Você, como médico da família, foi chamado para preencher a declaração de óbito. Qual\ndessas alternativas corresponderia a um preenchimento adequado da declaração de óbito?",
+      "options": {
+        "A": "Insuficiência respiratória - causa básica.",
+        "B": "Insuficiência renal - causa imediata.",
+        "C": "Diabetes mellitus - causa básica.",
+        "D": "Câncer de mama - causa intermediária.",
+        "E": "Edema agudo pulmonar - causa básica."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
+      "sourceLabel": "MED · MED PRE 04",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Bom, temos uma paciente hipertensa e diabética de longa data que evolui com doença renal crônica. Além disso, foi diagnosticada com câncer de mama há seis meses sendo que o enunciado não define claramente se a paciente segue em quimioterapia. Deu entrada na Emergência por quadro de edema agudo de pulmão e insuficiência respiratória. Esta foi a causa imediata do óbito (letra A - INCORRETA) O câncer de mama parece não ter ligação direta com a intercorrência clínica atual (alguns candidatos podem até questionar que alguns quimioterápicos levam à insuficiência cardíaca aguda, mas não podemos fazer tantas suposições assim não sabemos nem a droga que foi usada). Logo, o CA de mama seria melhor colocado na Parte II da Declaração de Óbito que inclui outras causas ou condições mórbidas que não levaram diretamente ao óbito. (letra D - INCORRETA) Agora, focando na causa BÁSICA do óbito. Claramente, o edema agudo de pulmão não é a causa básica, mas sim uma causa intermediária. (letra E - INCORRETA) Provavelmente, ele foi ocasionado por uma agudização da DRC (uma terapia dialítica mal feita poderia provocar isso), com retenção hídrica importante. E o que causou a DRC, que também é uma das causas intermediárias (letra B - INCORRETA) A diabetes e ou a hipertensão Elas são as causas básicas Entretanto, como só a primeira opção está entre as alternativas, é a nossa resposta - assertiva (C).",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 04",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-04-102749",
@@ -857,6 +2006,7 @@
         "D": "Prevenção quaternária."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -889,6 +2039,7 @@
         "D": "Realizar pesquisa em uma comunidade sem antes informá-la e esclarecê-la sobre a natureza da\ninvestigação, e deixar de atender ao objetivo de proteção à saúde pública, respeitadas as\ncaracterísticas locais e a legislação pertinente."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -922,6 +2073,7 @@
         "E": "não são de notificação obrigatória."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -955,6 +2107,7 @@
         "E": "pelo funcionário responsável pela vigilância no município."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -988,6 +2141,7 @@
         "E": "Sarin ? agente neural."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],
@@ -1021,6 +2175,7 @@
         "E": "desaparecimento das fasciculações musculares"
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 04/MED PRE 04.txt",
       "sourceLabel": "MED · MED PRE 04",
       "images": [],

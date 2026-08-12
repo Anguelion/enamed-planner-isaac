@@ -3,7 +3,7 @@
   "specialty": "Ginecologia e Obstetrícia",
   "topic": "MED OBS 01",
   "found": 500,
-  "imported": 9,
+  "imported": 43,
   "skipped": [
     {
       "id": "343760",
@@ -62,20 +62,12 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "135920",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "108746",
       "reason": "duplicada na mesma especialidade"
     },
     {
       "id": "108813",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "84468",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "50105",
@@ -382,14 +374,6 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "86833",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
-      "id": "86843",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "86591",
       "reason": "duplicada na mesma especialidade"
     },
@@ -428,10 +412,6 @@
     {
       "id": "362434",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "327263",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "327271",
@@ -514,16 +494,8 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "81952",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "81984",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "81047",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "61527",
@@ -552,10 +524,6 @@
     {
       "id": "26675",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "13250",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "7415",
@@ -650,24 +618,12 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "49332",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "34930",
       "reason": "duplicada na mesma especialidade"
     },
     {
       "id": "11142",
       "reason": "anulada"
-    },
-    {
-      "id": "11148",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
-      "id": "13323",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "13325",
@@ -784,14 +740,6 @@
     {
       "id": "141596",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "45345",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
-      "id": "45342",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "30859",
@@ -922,10 +870,6 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "298919",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "298920",
       "reason": "duplicada na mesma especialidade"
     },
@@ -994,20 +938,12 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "214397",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "154322",
       "reason": "anulada"
     },
     {
       "id": "154335",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "135044",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "105549",
@@ -1030,18 +966,6 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "82074",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
-      "id": "49188",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
-      "id": "37958",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "37959",
       "reason": "duplicada na mesma especialidade"
     },
@@ -1050,20 +974,8 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "29757",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
-      "id": "27535",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "27551",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "13855",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "7554",
@@ -1218,10 +1130,6 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "97748",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "80731",
       "reason": "duplicada na mesma especialidade"
     },
@@ -1286,20 +1194,12 @@
       "reason": "anulada"
     },
     {
-      "id": "30998",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "22175",
       "reason": "duplicada na mesma especialidade"
     },
     {
       "id": "22176",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "8679",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "354117",
@@ -1320,10 +1220,6 @@
     {
       "id": "359186",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "321167",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "320430",
@@ -1542,14 +1438,6 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "126892",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
-      "id": "126903",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "127227",
       "reason": "duplicada na mesma especialidade"
     },
@@ -1626,20 +1514,8 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "43331",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "43954",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "43984",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
-      "id": "43990",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "43992",
@@ -1650,20 +1526,12 @@
       "reason": "duplicada na mesma especialidade"
     },
     {
-      "id": "27335",
-      "reason": "gabarito não identificado com segurança"
-    },
-    {
       "id": "27345",
       "reason": "duplicada na mesma especialidade"
     },
     {
       "id": "27350",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "9414",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "9416",
@@ -1936,10 +1804,6 @@
     {
       "id": "274797",
       "reason": "duplicada na mesma especialidade"
-    },
-    {
-      "id": "257764",
-      "reason": "gabarito não identificado com segurança"
     },
     {
       "id": "257766",

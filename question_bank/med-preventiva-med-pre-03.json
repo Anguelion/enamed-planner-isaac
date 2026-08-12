@@ -1,8 +1,532 @@
 {
   "block": "med:med-preventiva-med-pre-03",
   "label": "MED · MED PRE 03",
-  "count": 3,
+  "count": 27,
   "questions": [
+    {
+      "id": "med-preventiva-med-pre-03-247214",
+      "number": "247214",
+      "sourceNumber": "247214",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Muitas escolas requerem que seus alunos façam um exame padronizado. Suponha que\n1000 estudantes fizeram esse teste, e um aluno\nfoi informado que sua nota foi 62 (de 100 pontos),\nque correspondia ao percentil 72. Isso significa que pelo menos.",
+      "options": {
+        "A": "280 estudantes tiraram 72 ou mais.",
+        "B": "72% dos estudantes tiraram 62 ou mais.",
+        "C": "280 estudantes tiraram 62 ou mais.",
+        "D": "28% dos estudantes tiraram 72% ou menos.",
+        "E": "720 estudantes tiraram 72 ou mais."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar Quando dizemos que a nota de um aluno corresponde ao percentil 72, significa dizer que 72% dos alunos tiraram menos que a nota dele. Quando utilizamos os dados da questão percebemos que 72% de 1.000, ou seja, 720 alunos tiraram menos do que 62. E consequentemente, que 280 alunos tiraram 62 ou mais, exatamente como descrito na letra C, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-276016",
+      "number": "276016",
+      "sourceNumber": "276016",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Um grupo de pesquisadores decidiu realizar um estudo observacional sobre a relação\nentre o uso excessivo de aparelhos\neletrônicos (técnica para diagnóstico hipotético) e a presença\nde miopia em indivíduos de uma cidade hipotética. Dos 135 indivíduos analisados, 70 faziam uso\nexcessivo de aparelhos eletrônicos (teste positivo) e eram míopes. Sabendo que 60 indivíduos não\neram míopes e que os verdadeiro-negativos são 20 indivíduos, responda as questões 48 a 50. Qual\nseria o ponto na curva ROC que representaria a relação entre a sensibilidade e a especificidade?",
+      "options": {
+        "A": "Ponto A.",
+        "B": "Ponto B.",
+        "C": "Ponto C.",
+        "D": "Ponto D.",
+        "E": "Ponto E."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [
+        "question_bank/media/medcurso/med-preventiva-med-pre-03/276016.png"
+      ],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Para responder à essa questão precisamos montar a clássica tabela 2x2 onde teremos a miopia e uso excessivo de aparelhos eletrônicas como principais elementos Não míopes (b d) 60. Verdadeiro negativo (d) 20. Logo, b 40. Míopes e usuários excessivos de aparelhos eletrônicos (a) 70 Míopes (a c) 135 - 60 75. Onde a 70 e c 5. Dessa forma, temos que a 70 b 40 c 5 d 20 Utilizando esses dados, temos que a sensibilidade (a a c) é de 70 75 93%. E a especificidade (d b d) é de 20 60 33,3%. Ao retornarmos para o gráfico, percebemos que apenas o ponto A possui sensibilidade de 93% e especificidade de 33,3% e portanto, é o nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-212176",
+      "number": "212176",
+      "sourceNumber": "212176",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Uma amostra aleatória de homens sedentários de meia-idade foi selecionada de uma\ndeterminada população-alvo. Cada homem foi examinado para doença coronariana e todos\naqueles portadores da doença foram excluídos do estudo. Os indivíduos restantes foram alocados,\naleatoriamente, ou para um grupo de exercício que foi seguido por 2 anos em um programa de\nexercícios sistemáticos, ou para um grupo-controle sem nenhum exercício. Os dois grupos foram\nobservados anualmente para detecção de qualquer diferença na incidência de doença coronariana.\nSegundo a classificação dos tipos de desenhos de estudos epidemiológicos, esse estudo é um\nexemplo de um:",
+      "options": {
+        "A": "Ensaio clínico.",
+        "B": "Estudo de coorte.",
+        "C": "Estudo ecológico.",
+        "D": "Estudo de caso-controle.",
+        "E": "Estudo transversal (seccional)."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar o desenho do estudo individuado (analisou indivíduo por indivíduo), INTERVENCIONISTA (exercícios sistemáticos) e longitudinal prospectivo. Separa dois grupos aleatoriamente e faz uma intervenção em apenas 1 (um) dos grupos e acompanha para avaliar o desfecho no futuro. É o clássico estudo do tipo ensaio clínico randomizado, exatamente como descrito na letra A, nosso gabarito. Uma outra maneira mais fácil de raciocinar nessa questão é dentre os citados, o estudo do tipo ensaio clínico é o único com caráter INTERVENCIONISTA. Todos os demais (coorte, ecológico, caso-controle e transversal) são estudos OBSERVACIONAIS Não há intervenção por parte dos pesquisadores.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-212141",
+      "number": "212141",
+      "sourceNumber": "212141",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "O que é uma metanálise?",
+      "options": {
+        "A": "É um tipo de revisão narrativa.",
+        "B": "É uma maneira de fazer pesquisas bibliográficas.",
+        "C": "É uma maneira de agrupar estudos heterogêneos.",
+        "D": "É uma maneira de analisar os dados de um estudo.",
+        "E": "É uma maneira sistemática de agrupar os resultados de diversos estudos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar A metanálise é um tipo de estudo que avalia os resultados de estudos originais sobre determinado tema. É uma revisão de estudos sobre um tema de interesse, por isso também é conhecida como revisão sistemática. É o tipo de estudo epidemiológico com maior grau na hierarquia de evidência. Um re visão é dita sistemática quando a revisão dos estudos é conduzida seguindo uma metodologia claramente definida, de abordagem sistemática, ou seja, a partir o uso de critérios de busca e de seleção deos estudos, previamente definidos. O pressuposto da revisão sistemática é que, a partir da descrição de sua metodologia, qualquer investigador seja capaz de chegar às mesmas conclusões. A revisão é denominada revisão sistemática qualitativa quando a informação obtida a prtir dos estudo incluídos na revisão não é susceptível à análise estatística. Quando os trabalhos incluídos permitem realizar uma síntese estatística da evidência gerar, trata-se de um METANÁLISE Ou seja, em outras palavras, é uma maneira sistemática de agrupar os resultados de diversos estudos, como dito na letra E, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-134115",
+      "number": "134115",
+      "sourceNumber": "134115",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Um estudo caso-controle encontrou uma OddsRatio = 1, para a relação entre consumo\nde café e câncer de pulmão. Desse modo,\npode-se concluir que",
+      "options": {
+        "A": "indivíduos que consomem café têm maior risco de desenvolver câncer de pulmão.",
+        "B": "uma OR igual a 1 significa que não existe diferença na chance de exposição quando\ncomparamos casos e controles.",
+        "C": "o consumo de café é igual entre casos e controles.",
+        "D": "a chance de exposição é maior entre os casos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar o que significa o Odds Ratio quantas vezes mais chances os indivíduos expostos têm de vir a desenvolver a doença em relação aos indivíduos não expostos. É calculado pela razão dos produtos cruzados (a x d) (b x c). É a medida de associação clássica dos estudos de caso-controle. E como avaliá-lo Quando temos um OD 1, significa que o fator de exposição em análise está associado ao desenvolvimento da doença. Quando temos um OD 1, significa que o fator de exposição em análise é de proteção, contra o desenvolvimento da doença. Quando temos um OD 1, significa que o fator de exposição em análise não tem associação com o desenvolvimento da doença. Após essa breve revisão, podemos dizer que um Odds Ratio 1 significa que não existe diferença na chance de exposição quando comparamos casos e controles, como nos diz a letra B, nosso gabarito. Para finalizar, vamos relembrar o desenho clássico dos estudos do tipo caso-controle individuado (analisa indivíduo por indivíduo), observacional (não há intervenção) e longitudinal retrospectivo. Parte do desfecho para análise dos fatores de risco.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-109983",
+      "number": "109983",
+      "sourceNumber": "109983",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Em relação à Medicina Baseada em Evidências (MBE), analise as seguintes\nafirmações. I. O nível de evidência V\nrefere-se apenas à opinião de especialista ou de fórum\nrepresentativo. II. Evidências de nível I automaticamente indicam condutas a serem assumidas no\nmanejo clínico dos pacientes. III. O principal objetivo da MBE é estabelecer normas rígidas\npara condutas com os pacientes, independentemente do contexto clínico específico. É\nCORRETO o que se afirma, APENAS, em:",
+      "options": {
+        "A": "I.",
+        "B": "II.",
+        "C": "III.",
+        "D": "I e III."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar as alternativas O nível V é o de mais fraca evidência e corresponde a opiniões de especialista alternativa I correta. Realmente, o nível I é o mais forte indicador de condutas terapêuticas ou diagnósticas, porém apenas sugere o manejo clínico a se adotar frente a uma melhor evidência do desfecho que se tem a partir da informação dos estudos alternativa II incorreta. A MBE indica fluxos de condutas, porém não substitui a particularidade do cotidiano profissional, estando o médico livre para tomar e direcionar a conduta que achar mais compatível com o caso e peculiaridade do paciente. Portanto, apenas a alternativa I encontra-se correta e é o nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-286779",
+      "number": "286779",
+      "sourceNumber": "286779",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Um estudo de caso-controle que analisou o uso de estatina na prevenção do desfecho\nmorte por AVC tem como resultado um Número\nNecessário a Tratar (NNT) de 200. Este dado\nsignifica que:",
+      "options": {
+        "A": "É preciso tratar 200 pessoas com estatina para que todas sobrevivam.",
+        "B": "É preciso que 200 pessoas tenham AVC para que a estatina possa salvar uma vida.",
+        "C": "É preciso que 200 pessoas usem estatina para que uma tenha o desfecho morte por AVC.",
+        "D": "É preciso tratar 200 pessoas com estatina para prevenir uma morte por AVC."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão simples e conceitual sobre a definição do Número Necessário a Tratar (NNT). Vamos relembrar O NNT siginifca o número de pacientes que precisamos tratar para evitar um desfecho favorável. Portanto, um NNT de 200 significa que precisamos tratar 200 pacientes para se evitar um desfecho desfavorável. Ou seja, exatamente como descrito na letra D, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-80921",
+      "number": "80921",
+      "sourceNumber": "80921",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "O tipo de estudo Epidemiológico que tem a vantagem de produzir medidas diretas de\nriscos, permitir avaliar a relação entre a exposição a um ou mais fatores de riscos e o surgimento\nde doença é:",
+      "options": {
+        "A": "Estudo caso-controle.",
+        "B": "Estudo seccional.",
+        "C": "Estudo de coorte.",
+        "D": "Inquérito epidemiológico.",
+        "E": "Ensaio clínico controlado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos rever alguns conceitos Estudo de Coorte Trata-se de um estudo tipo observacional, em que os indivíduos são acompanhados ao longo de um período portanto longitudinal. Nesse caso, partimos dos fatores de risco em direção à doença. Os fatores de risco podem, inclusive, ser raros (uma vez que selecionaremos pacientes com esses fatores desde o início), entretanto, a doença não Em resumo OBSERVACIONAL LONGITUDINAL INDIVIDUADO. Pode ser prospectivo ou retrospectivo (a chamada coorte histórica ou não concorrente). Esse tipo de coorte (não concorrente) é caracterizado por tantos os fatores de risco quanto o desfecho (a doença) estarem no passado Sempre partimos dos fatores de risco em direção ao desfecho entretanto, ambos ocorreram no passado Ensaio Clínico Randomizado Trata-se de um estudo tipo intervencionista, em que o pesquisador seleciona de forma aleatória dois grupos de pacientes (grupo-controle e grupo-tratamento) e testa, mais comumente, alguma nova droga. Caracterizado como INDIVIDUADO INTERVENCIONISTA PROSPECTIVO. Quando queremos estimar o risco, determinar medidas direta do risco, a coorte é a melhor opção. O próprio autor coloca no enunciado comparar populações expostas e não expostas ao fator de risco. Portanto, a melhor resposta é o item C.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-81273",
+      "number": "81273",
+      "sourceNumber": "81273",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Um médico recebe em sua casa um informe de um laboratório de análises clínicas com\no lançamento de um novo teste diagnóstico para\numa doença grave, que tem uma frequência de 1\npara 10.000 em sua população assistida. Além de todas as vantagens propagandeadas, vê que o\npreço é bastante acessível e por isso decide que, tendo em vista a gravidade da doença, irá\nsolicitar o exame para todos os seus pacientes. Nas letras pequenas do anúncio consta que a\nsensibilidade do teste é de 98% e a especificidade é de 96%. Após testar 1.000 pacientes, quantas\npessoas o médico diagnosticará, de forma errônea, como uma doença grave, prejudicando-os e\nexpondo-os a tratamentos ou procedimentos desnecessários?",
+      "options": {
+        "A": "4 pacientes.",
+        "B": "20 pacientes.",
+        "C": "40 pacientes.",
+        "D": "96 pacientes."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Pura lógica. O que o autor quer saber quantas pessoas o médico diagnosticará, de forma errônea com uma doença grave, Ou seja, os Falsos Positivos (FP). Qual é a fórmula dos FP Lembram-se da Curva ROC O que significa o eixo 1 - Especificidade Exatamente os falsos positivos Então, 1 - Especificidade 1-0,96. 0,04. Se multiplicarmos por 1000, encontraremos o valor de 40. Resposta, item C.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-298941",
+      "number": "298941",
+      "sourceNumber": "298941",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Um paciente de 73 anos de idade, diagnosticado com câncer retal, retornou ao\natendimento médico na unidade básica de saúde\npara conversar com seu médico de família, pois\nestá muito nervoso e não sabe se deve realizar os procedimentos propostos pelo especialista, visto\nque, para ele, \"é melhor morrer do que usar uma bolsinha para o resto da vida\" (colostomia). Com\nrelação a esse caso clínico e com base nos conhecimentos médicos correlatos, julgue o item a\nseguir. Entre os testes diagnósticos recomendados para avaliar a possibilidade de neoplasia, estão\nos de alta especificidade, visto que apresentam menor probabilidade de falso-negativos.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Os testes utilizados para possibilidade de neoplasia são nada mais do que os testes de RASTREIO. A principal característica deste tipo de teste é a capacidade de identificar como positivos os indivíduos doentes, gerando menor possibilidade de falsos negativos. Essa é a definição de elevada SENSIBILIDADE. Afirmativa ERRADA",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-250158",
+      "number": "250158",
+      "sourceNumber": "250158",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Foi realizado um estudo de coorte para avaliar a ocorrência de acidente vascular\ncereblar (AVC) em pacientes com diagnóstico\nde hipertensão arterial sistêmica (HAS) e diabetes\nmelito (DM). Ao todo, duzentos pacientes foram incluídos no estudo, sendo 105 pacientes no grupo\nHAS e DM controlados e 95 pacientes no grupo HAS e DM não controlados. No grupo de pacientes\ncom HAS e DM não controlados, noventa pacientes tiveram AVC e, no grupo de pacientes com\nHAS e DM controlados, apenas dez pacientes tiveram AVC. Com base nesse caso hipotético,\njulgue o item a seguir. O risco relativo de ocorrência de AVC no grupo de pacientes com HAS e DM\nnão controlados é igual a 18, o que significa que existe a possibilidade de que HAS e DM não\ncontrolados sejam fatores de risco para a ocorrência de AVC",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar essa questão por partes Total de participantes 200 Total de não-expostos (HAS e DM controlados) 105 Total de expostos (HAS e DM não-controlados) 95 Total de casos de AVC nos expostos 90 Total de casos de AVC nos não-expostos 10 Risco relativo Taxa de Incidência expostos Taxa de Incidência nos não-expostos Risco relativo 90 95 10 105 RR 0,947 0,09 10 Desse modo a questão, que teve como gabarito inicial liberado a letra A, mudou após o nosso pedido de recurso para a letra B.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-255766",
+      "number": "255766",
+      "sourceNumber": "255766",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Uma paciente de 44 anos de idade procura a equipe da Estratégia Saúde da Família\npara solicitar exames de rastreamento, pois\nestá preocupada com o fato de que vai iniciar atividade\nfísica (corrida). Ela afirmou que não tem doenças prévias e não usa medicamentos contínuos. Nega\nhistória de neoplasias na família e também tabagismo. Gesta 2 para 2, cesáreas 0 e aborto 0. PA =\n120 mmHg x 80 mmHg; FC = 70 bpm; FR = 14 irpm; SpO2 = 98%; peso = 64 kg; estatura = 1,68; e\nIMC = 22,7. Com base nesse caso clínico e nos conhecimentos médicos correlatos, julgue o item a\nseguir. A realização de teste ergométrico em paciente com probabilidade pré-teste baixa poderá ter\num alto valor preditivo positivo.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Se a probabilidade pré-teste de um paciente é baixa, significa que provavelmente o resultado do exame será negativo. No caso do teste ergométrico, imagine um paciente jovem e saudável, acostumado a realizar atividade física intensa. Ora, por que o teste ergométrico apontaria doença coronariana nesse paciente Não há muito motivo, se realizarmos o exame, provavelmente o resultado será normal, ou seja, elevado valor preditivo NEGATIVO Por outro lado, caso o exame desse mesmo paciente venha positivo para coronariopatia, será que podemos confiar nesse resultado com 100% de certeza Será que o valor preditivo POSITIVO é alto para esse paciente em particular A resposta é NÃO O valor preditivo positivo nos dá a proporção de indivíduos verdadeiramente positivos entre aqueles com diagnóstico positivo realizado pelo teste, o que varia de acordo com a prevalência da doença na população estudada quanto menor for a prevalência ou a probabilidade pré-teste, menor será o valor preditivo positivo e maior será o valor preditivo negativo (em outras palavras, podemos confiar em um resultado negativo, mas não podemos confiar tanto assim em um resultado positivo). Pense agora em um senhor diabético com angina estável o raciocínio será todo invertido, ou seja, probabilidade pré-teste alta, alto valor preditivo positivo e baixo valor preditivo negativo. Respostas B.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-255776",
+      "number": "255776",
+      "sourceNumber": "255776",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Em um estudo do tipo caso-controle, 100 pacientes portadores de câncer de pulmão\nforam comparados com 200 pacientes sem a doença.\nDos pacientes portadores de câncer de\npulmão, 60 apresentavam história de tabagismo, e dos pacientes sem a doença, 40 apresentavam\nhistória de tabagismo. A respeito do exposto, julgue o item a seguir. Nos estudos do tipo\n\ncaso-controle, sendo retrospectivo, dispensa-se que seja aplicado aos participantes da amostra o\ntermo de consentimento livre e esclarecido, aprovado por comitê de ética.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O Termo de Consentimento Livre e Esclarecido tem por finalidade possibilitar, aos sujeitos da pesquisa, o mais amplo esclarecimento sobre a investigação a ser realizada, seus riscos e benefícios, para que a sua manifestação de vontade no sentido de participar (ou não), seja efetivamente livre e consciente. Assim, mesmo que não haja intervenção sobre o paciente, o termo deve ser aplicado de forma que as informações possam ser colhidas, analisadas e divulgadas. Afirmativa ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-152164",
+      "number": "152164",
+      "sourceNumber": "152164",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "O processo de trabalho na atenção básica em saúde pressupõe o envolvimento de\nequipe multidisciplinar nos cuidados ao paciente.\nAs interfaces desfazem as barreiras de uma\n\"assistência médica para a doença\" seguindo no sentido da \"medicina dos doentes\". Contudo, a\nmesmo tempo que ocorre uma mudança significativa de algumas práticas, outras permanecem de\nforma latente ao longo do tempo. Nesse contexto, a ética profissional e a bioética têm papel\nfundamental como norteadores na análise das condutas dos sujeitos envolvidos e na orientação\ndas boas práticas. Quanto aos conflitos éticos e bioéticos surgidos no exercício da medicina, julgue\no item a seguir. O ato ético implica consciência, determinação e liberdade por parte profissional.\n\nQuando exercido em plenitude, segue orientação dos princípios da beneficência (evitar causar\ndanos), da não maleficência ( fazer o bem),\ndo autogoverno (autonomia) e da equidade (justiça).",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Na bioética existe a proposta de Beauchamp e Childress de 1899, que inclui a autonomia, a beneficência, a não maleficência e a justiça. O autogoverno não é sinônimo de autonomia e por isso a afirmativa está errada.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-152177",
+      "number": "152177",
+      "sourceNumber": "152177",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "O processo de trabalho na atenção básica em saúde pressupõe o envolvimento de\nequipe multidisciplinar nos cuidados ao paciente.\nAs interfaces desfazem as barreiras de uma\n\"assistência médica para a doença\" seguindo no sentido da \"medicina dos doentes\". Contudo, a\nmesmo tempo que ocorre uma mudança significativa de algumas práticas, outras permanecem de\nforma latente ao longo do tempo. Nesse contexto, a ética profissional e a bioética têm papel\nfundamental como norteadores na análise das condutas dos sujeitos envolvidos e na orientação\ndas boas práticas. Quanto aos conflitos éticos e bioéticos surgidos no exercício da medicina, julgue\no item a seguir. A atuação na atenção primária requer vínculos de responsabilização das equipes,\ninclusive havendo ampliação da relação clínica, que ultrapassa as dimensões biológicas,\nadentrando em aspectos íntimos da família assistida. Esse evento não deve ser motivo de\nquestionamentos quanto aos limites de interferência no estilo de vida daquela família, pois a equipe\nde saúde da família sempre realiza ações com fulcro na beneficência e na autonomia.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão está errada pois está com uma lógica claramente contraditória. Inicialmente fala-se sobre a autonomia, direito que o paciente tem de decidir sobre seu corpo e sua vida, mas depois o enunciado diz que não se deve questionar os limites de interferência, ou seja, atropelando o princípio da autonomia. Portanto, a afirmativa está errada.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-79662",
+      "number": "79662",
+      "sourceNumber": "79662",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "É correto afirmar que são métodos de informações metodológicas que se aplicam nas\nredações de artigos, trabalhos e teses os seguintes:",
+      "options": {
+        "A": "ABNT, APA e Vancouver.",
+        "B": "ABNT, ONU e OPAS.",
+        "C": "Vancouver, APA e OMS.",
+        "D": "OMS, OPAS e ABNT.",
+        "E": "ABNT e Vancouver, apenas."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Parece sopa de letrinha OMS APA Vancouver O que significa isso É bem simples. Quando escrevemos um artigo, ou uma dissertação, devemos respeitar critérios metodológicos de escrita. Por exemplo, na ordenação das referências bibliográficas. Existem alguns tipos de regras clássicas. Dentre elas, citamos Vancouver, ABNT e APA. Obviamente, OMS está fora (significa Organização Mundial da Saúde) assim como, ONU (Organização das Nações Unidas). Melhor resposta, item A.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
     {
       "id": "med-preventiva-med-pre-03-82124",
       "number": "82124",
@@ -20,6 +544,7 @@
         "B": "ERRADO."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
       "sourceLabel": "MED · MED PRE 03",
       "images": [],
@@ -32,6 +557,68 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-82130",
+      "number": "82130",
+      "sourceNumber": "82130",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Com relação às ações de vigilância de doenças transmissíveis e não transmissíveis,\njulgue o item a seguir. Na análise\nepidemiológica, utilizam-se medidas de associação, a exemplo do\nRisco\n\nRelativo (RR), ou da razão de incidências, que expressa uma comparação matemática entre o risco\nde adoecer em um grupo exposto a um fator qualquer e o risco correspondente em um grupo não\nexposto ao mesmo fator. Um RR com valor de 1,0, por exemplo, indica presença de associação.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O Risco Relativo (RR), ou razão de incidências, é uma medida de associação que expressa quantas vezes é o risco de adoecer em um grupo de expostos, quando comparado ao risco de adoecer em um grupo de não expostos ao mesmo fator de risco. Uma razão igual a unidade (RR 1,0) significa que o risco de adoecer é o mesmo no grupo dos expostos e no grupo dos não expostos ao fator, ou seja, que não existe relação de associação entre o fator e o efeito. AFIRMATIVA ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-82115",
+      "number": "82115",
+      "sourceNumber": "82115",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Com relação às ações de vigilância de doenças transmissíveis e não transmissíveis,\njulgue o item a seguir. Um dos métodos\nutilizados para se verificar a ocorrência de uma epidemia é\no diagrama de controle, que consiste na representação gráfica da distribuição da média mensal e\ndo desvio padrão dos valores da frequência (prevalência) observada em um período de tempo,\nhabitualmente inferior a um ano.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O diagrama de controle é um gráfico em que a incidência da doença está representada no eixo das coordenadas e o intervalo de tempo utilizado, geralmente semana epidemiológica ou os meses do ano, no eixo das abscissas. O diagrama pode ser construído por distribuição normal (incidência média mensal e desvio padrão calculados) ou por distribuição por quartis (com as incidências de períodos anteriores, valor mediano e cálculo do primeiro e terceiro quartis). AFIRMATIVA ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-03-82120",
@@ -50,6 +637,7 @@
         "B": "ERRADO"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
       "sourceLabel": "MED · MED PRE 03",
       "images": [],
@@ -62,6 +650,99 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-352348",
+      "number": "352348",
+      "sourceNumber": "352348",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Clara, uma adolescente de 16 anos, comparece à unidade básica de saúde (UBS) em\nbusca de atendimento médico. Na recepção,\no atendente responsável pelo acolhimento verifica o\nendereço de Clara, confirma que ela reside na área de abrangência da UBS e a encaminha para a\nsala da equipe de saúde da família de sua área. Lá, ela é atendida por uma enfermeira da equipe,\nque, após coletar informações sobre a queixa e sua duração, bem como aferir os sinais vitais,\nreconhece sinais de gravidade. Diante disso, a enfermeira aloca a paciente em uma maca na sala\nde medicação e chama imediatamente o médico da equipe, que a atende prontamente. Clara relata\nque está sentindo dor na região hipogástrica e disúria há cerca de três dias, com uma piora\ngradual. Ela teve calafrios durante a última noite, mas não percebeu que poderia estar com febre. A\npaciente está mais preocupada com as dores e com um atraso menstrual. Ela não consegue\nfornecer a data da última menstruação, mas acredita que tenha ocorrido antes do nascimento de\nseu irmão, que hoje tem três meses. Ao realizar o exame físico, a equipe de saúde observa que\nClara está sonolenta, febril, eupneica, sudoreica, com livedo e mal perfundida. Os pulsos estão\nsimétricos, as bulhas cardíacas são normofonéticas, mas a paciente apresenta taquicardia e um\nsopro sistólico. O exame abdominal revela dor à palpação na região hipogástrica. Além disso, foram\nidentificadas equimoses em diferentes estágios de evolução em seu tórax e abdome. Quando\nquestionada sobre as lesões equimóticas, Clara começa a chorar e pede para não abordar mais o\nassunto. Tendo como base o caso acima, a política nacional de humanização, os atributos e\nfunções da atenção primária e conhecimentos correlatos, julgue o item a seguir. O qSOFA se\napresenta como uma opção eficaz de escore de triagem para o quadro da paciente, especialmente\nna atenção primária, uma vez que demonstra uma alta sensibilidade para a detecção de disfunção\norgânica. Além disso, sua vantagem reside no fato de se basear exclusivamente em parâmetros\nclínicos.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O tema central é a identificação e manejo de um quadro potencialmente grave em uma paciente adolescente na atenção primária, considerando a política nacional de humanização e os atributos e funções da atenção primária. Note que a paciente é gestante, menor de idade e com um quadro possível de infecção do trato urinário. Diante disso, é feita uma afirmativa O qSOFA se apresenta como uma opção eficaz de escore de triagem para o quadro da paciente, especialmente na atenção primária, uma vez que demonstra uma alta sensibilidade para a detecção de disfunção orgânica. Além disso, sua vantagem reside no fato de se basear exclusivamente em parâmetros clínicos. Vamos, então, começar relembrando que o qSOFA (Quick Sequential Organ Failure Assessment) é um score, proposto pela primeira vez em 2016, que serve para identificar, através de parâmetros clínicos, pacientes com suspeita de infecção que correm maior risco de um desfecho ruim, ou seja, alta mortalidade. Para isso, utiliza 3 variáveis avaliadas em pacientes adultos com sepse conhecida ou suspeita escore de coma de Glasgow 15, frequência respiratória 22 incursões respiratórias min e pressão arterial sistólica 100 mmHg. Quando quaisquer duas dessas variáveis estão presentes simultaneamente, o paciente é considerado positivo para qSOFA. Mas o qSOFA pode servir como screening (rastreamento) para a sepse Não E isso é mencionado em várias bibliografias A justificativa é simples qual deve ser a grande característica de um teste de rastreamento Alta sensibilidade Mas o qSOFA tem baixa sensibilidade (15-30%) e alta especificidade (80-96%). Ou seja, é um bom score confirmatório (confia-se muito no resultado positivo), mas um péssimo score de rastreio CERTO incorreto. O qSOFA não é usado como triagem. ERRADO correto. A alternativa está errada em 2 momentos primeiro ao dizer que deve ser usado como triagem e, segundo, ao dizer que tem alta sensibilidade. Resposta ERRADO.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-183895",
+      "number": "183895",
+      "sourceNumber": "183895",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "No que se refere à comunicação de más notícias com base nos preceitos da bioética,\njulgue o item que se segue. A reserva de um\nambiente para a comunicação de más notícias ao\npaciente é essencial, sendo importantes, ainda, aspectos específicos do próprio comunicado,\ncomo, por exemplo, fazê-lo de forma clara e direta.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão polemica onde permite dois gabaritos. A sentença gera uma dupla interpretação, onde o profissional deve se comunicar sem rodeios, o que configura a sentença como verdadeira (gabarito) e uma outra interpretação, onde o profissional deve falar diretamente, sem introduções ou preparos, o que vai de encontro ao preconizado no protocolo SPIKES, quarto componente, que orienta a não falar de forma brusca ou buscar uma linguagem muito técnica.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-183906",
+      "number": "183906",
+      "sourceNumber": "183906",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "No que se refere à comunicação de más notícias com base nos preceitos da bioética,\njulgue o item que se segue. Apesar de ser\ntarefa difícil e delicada, a comunicação de más notícias\naos pacientes e a seus familiares deve ser vista pela equipe de saúde como ação necessária e\nfundamental, cabendo ao médico responsável pelo caso, preferencialmente, ser o mensageiro das\nnotícias mais graves.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "CERTO. Correta e que gera poucas dúvidas, uma vez que a comunicação de notícias difíceis é um ato do profissional de saúde e um direito à informação do paciente.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-03-80707",
@@ -83,6 +764,7 @@
         "E": "21."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
       "sourceLabel": "MED · MED PRE 03",
       "images": [],
@@ -95,6 +777,107 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-77332",
+      "number": "77332",
+      "sourceNumber": "77332",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Um jovem residente nos primeiros dias de trabalho participa do tratamento de um\npaciente com Doença de Gaucher. Resolve se\ninteirar do assunto. Qual das abaixo é a fonte mais\nrecomendada para esse estudo:",
+      "options": {
+        "A": "Ensaios clínicos randomizados e duplo cegos.",
+        "B": "Estudos de coorte.",
+        "C": "Livros-textos e relatos de casos.",
+        "D": "Wikipédia.",
+        "E": "Revistas científicas internacionais de referência."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Muito cuidado com essa questão Ela não diz respeito aos estudos com maior evidência científica (graus de recomendação), e sim onde devemos estudar sobre um assunto, no caso, uma doença. Nesse caso, a melhor fonte seria os livros-textos e os relatos de casos (até porque a doença de Gaucher é rara, qualquer caso relatado já está valendo como experiência). Agora, cabe ressaltar que o maior problema para os livros-textos são sua rápida desatualização, especialmente em áreas com muita investigação.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-294297",
+      "number": "294297",
+      "sourceNumber": "294297",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "De acordo com o Tratado de Medicina de Família e Comunidade: princípios, formação e\nprática, elaborado por Gusso e colaboradores (2019), com relação ao diagnóstico de saúde da\ncomunidade:",
+      "options": {
+        "A": "conceitualmente, é um estudo longitudinal, iniciando-se pelas variáveis de exposição para se\natingir as variáveis de desfecho.",
+        "B": "por ser um estudo descritivo, não há necessidade de redação de protocolo de pesquisa, com\nenvio a um Comitê de Ética e Pesquisa.",
+        "C": "nem sempre é necessário estudar a população inteira para que sejam obtidas informações\nimportantes úteis e válidas sobre ela. Porém, o\nuso da amostragem probabilística é importante, pois\npossui alta capacidade de generalização.",
+        "D": "em geral, é preferível fazer uso de entrevistadores que tenham ensino superior na área da\nsaúde, para valorizar a maior autonomia inerente a esses indivíduos, o que favorece a\npadronização no momento da coleta dos dados."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Segundo o Tratado de Medicina de Família e Comunidade de Gusso (2019), temos o seguinte trecho em relação ao diagnóstico de saúde da comunidade Em geral, não é necessário estudar a população inteira para que sejam obtidas informações úteis e válidas sobre ela. O estudo de uma amostra tem várias vantagens práticas, em particular porque o número de indivíduos que precisam ser entrevistados ou examinados é menor. Porém, quando se usa uma amostra, é necessário assegurar que os indivíduos nela incluídos sejam representativos da população que está sendo investigada. Há vários métodos para selecionar uma amostra (métodos de amostragem). A amostragem probabilística possui alta capacidade de generalização, pois a escolha dos indivíduos da amostra é dada de forma aleatória, permitindo que cada sujeito tenha uma probabilidade específica de seleção. Perceba que esse conceito solicito pela banca avaliadora nessa questão está descrito na letra C, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-03-231974",
+      "number": "231974",
+      "sourceNumber": "231974",
+      "collectionBlock": "med:med-preventiva-med-pre-03",
+      "collectionLabel": "MED · MED PRE 03",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 03",
+      "subtopic": "",
+      "stem": "Sobre estudos de meta-análise, pode-se dizer que:",
+      "options": {
+        "A": "a revisão sistemática visa à seleção de estudos com boa qualidade e com associações\nestatisticamente significativas",
+        "B": "deve-se iniciar com uma clara questão de estudo, fazer uma revisão sistemática em várias bases\nde dados e busca manual, com claros\ncritérios de inclusão/exclusão dos estudos",
+        "C": "se, entre os estudos selecionados na revisão sistemática, houver resultados selecionados a\nfavor e contra a intervenção, há heterogeneidade, e a medida-sumário não deve ser calculada",
+        "D": "quando ocorrer heterogeneidade entre os estudos, haverá maior chance de viés de publicação",
+        "E": "somente os estudos experimentais podem ser objeto de meta-análise, na medida em que a\ncombinação de resultados de diferentes estudos observacionais pode superestimar a associação\nreal"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 03/MED PRE 03.txt",
+      "sourceLabel": "MED · MED PRE 03",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A equipe MEDGRUPO discorda do gabarito liberado pela banca avaliadora. Vamos entender analisando as assertivas em relação aos estudos de meta-análise A) Incorreta. Uma boa metanálise reúne estudos com boa qualidade metodológica acerca de um determinado tema. Contudo, não é necessário que os estudos tenham resultados homogêneos, mas sim que tratarem do mesmo assunto. Caso seja feita uma seleção de estudos apenas com resultados estatisticamente significativos por exemplo, isso pode incorrer viés de seleção. B) Correta. De fato, a metodologia da revisão sistemática metanálise é essencial para garantir a qualidade do estudo, e para que possamos confiar no resultado final da medida sumário. C) Correta. A medida sumário serve para avaliar a tendência geral de um grupo de estudos. Não é necessário que os estudos sejam totalmente homogêneos para cálculo da medida sumário, porém se os estudos apresentarem grande heterogeneidade, a análise deve priorizar as razões da dispersão observada, e a medida sumário não deve ser calculada. Segundo o livro texto MEDRONHO, R.A. et al. Epidemiologia. 2a edição, Rio de Janeiro, Ed Atheneu 2009, pg 296, a respeito da heterogeneidade em estudos de metanálise Quando os resultados dos estudos diferem de modo importante, não é apropriado ou suficiente combinar seus resultados numa medida única. D) Incorreta. O viés de publicação ocorre quando apenas estudos com desfecho semelhante (homogêneos) são selecionados para participação na metanáliise, alterando o resultado final da medida sumário. E) Incorreta. As metanálises podem ser realizadas no contexto de estudos experimentais, estudos de teste diagnóstico e estudos observacionais, cuja finalidade é responder questões distintas. Nesse caso, é importante selecionar adequadamente os desenhos de estudos que serão incluídos. Ou seja, para nossa Equipe, as letras B e C encontram-se corretas e portanto, a questão deveria ser anulada ou ter seu gabarito ampliado.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 03",
+        "MED"
+      ],
+      "answerSource": "missing"
     }
   ]
 }

@@ -1,8 +1,279 @@
 {
   "block": "med:med-preventiva-med-pre-02",
   "label": "MED · MED PRE 02",
-  "count": 37,
+  "count": 107,
   "questions": [
+    {
+      "id": "med-preventiva-med-pre-02-29403",
+      "number": "29403",
+      "sourceNumber": "29403",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Nos últimos 30 anos a característica demográfica da população brasileira tem se\nalterado consideravelmente com diminuição da\nmortalidade e da natalidade, fenômeno chamado de\ntransição demográfica. O mesmo acontece com a morbimortalidade, com diminuição das doenças\ninfecciosas e aumento das doenças cardiovasculares e causas externas, fenômeno conhecido\ncomo transição epidemiológica. No bojo dessas alterações observa-se o envelhecimento da\npopulação e o aumento da população idosa. Considerando isso, que fatos devem ser observados\nno processo de cuidado com os idosos no contexto da clínica?",
+      "options": {
+        "A": "a ocorrência de quedas, que podem representar doenças ocultas e podem levar a\nconsequências importantes para os idosos.",
+        "B": "a presença de cuidador, capaz de prover apoio social, principalmente em situações de risco.",
+        "C": "a convivência social, importante para a prevenção do isolamento e de problemas psicossociais.",
+        "D": "a ocorrência de polifarmácia, que pode levar a associação de efeitos colaterais capazes de\nelevar a morbimortalidade, constituindo-se numa iatrogenia.",
+        "E": "todos os fatos acima são importantes para o cuidado amplo com os idosos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão fácil Todas as alternativas estão certas. Quedas são um importante problema na saúde do idoso, que pode levar a consequências catastróficas aqueles idosos com algum fator de risco importante para mortalidade, como doença crônica (exemplo, Alzheimer) devem ter um cuidador especializado ou pelo menos treinado deve-se expor o idoso ao convívio social, visto que na maioria dos casos ele é segregado, seja por problema crônico ou perda de amigos uma situação a qual devemos ficar atentos é a polifarmácia, visto que os mesmos são portadores de diversas patologias e a associação de medicamentos pode levar a efeitos colaterais sérios.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-278674",
+      "number": "278674",
+      "sourceNumber": "278674",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Para as decisões terapêuticas durante o período gestacional, bem como para\naconselhamento no planejamento familiar da\nmulher cardiopata, podemos considerar como correto\nque:",
+      "options": {
+        "A": "A taxa de mortalidade materna de um país é um dos mais sensíveis indicadores das condições\nde vida de uma população e reflete,\nparticularmente, a qualidade da assistência de saúde prestada\nà mulher no pré-natal.",
+        "B": "A taxa de mortalidade materna de um país é um dos mais sensíveis indicadores das condições\nde vida de uma população e não reflete,\nparticularmente, a qualidade da assistência de saúde\nprestada à mulher no pré-natal.",
+        "C": "A taxa de mortalidade materna de um país é um dos menos sensíveis indicadores das condições\nde vida de uma população e reflete,\nparticularmente, a qualidade da assistência de saúde prestada\nà mulher no pré-natal.",
+        "D": "A taxa de mortalidade materna de um país é um dos mais falsos indicadores das condições de\nvida de uma população e reflete, particularmente, a qualidade da assistência de saúde prestada à\nmulher no pré-natal."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão foi retirada na íntegra do documento Posicionamento da Sociedade Brasileira de Cardiologia para Gravidez e Planejamento Familiar na Mulher Portadora de Cardiopatia 2020. Vamos analisar um trecho desse documento A taxa de mortalidade materna de um país é um dos mais sensíveis indicadores das condições de vida de uma população e reflete, particularmente, a qualidade da assistência de saúde prestada à mulher no pré-natal. Embora ainda aquém das metas estimadas para este milênio, nas três últimas décadas o Brasil registrou importante redução no coeficiente de mortalidade materna em decorrência de complicações durante o ciclo gravídico-puerperal. Ou seja, exatamente como descrito na letra A. Vamos aproveitar e reconhecer os erros das demais assertivas B) Incorreta. E REFLETE a qualidade da assistência de saúde prestada à mulher no pré-natal. C e D) Incorretas. É um dos mais sensíveis indicadores.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-231387",
+      "number": "231387",
+      "sourceNumber": "231387",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Nas últimas décadas, a população brasileira vem experimentando uma complexidade\nde transformações sociais que conformam a múltipla e\nheterogênea rede de determinação do\nsobrepeso e da obesidade. Assinale a alternativa que aponta dois determinantes sociais\nassociados ao aumento progressivo da obesidade em nosso país.",
+      "options": {
+        "A": "Redução do nível de atividade física e redução da renda média da população brasileira nas\núltimas décadas;",
+        "B": "Estilo de vida mais sedentário e manutenção da cultura alimentar tradicional;",
+        "C": "Inserção da mulher no mercado de trabalho e aumento da população urbana em relação à\npopulação rural;",
+        "D": "Substituição do consumo de alimentos processados por alimentos tradicionais e intensificação\ndo processo de urbanização;",
+        "E": "Estilo de vida mais sedentário e predomínio do consumo de ácidos graxos saturados sobre os\npoli-insaturados."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar Determinantes Sociais da Saúde são as condições de vida e trabalho dos indivíduos e de grupos da população que estão relacionadas com sua situação de saúde. Para a Comissão Nacional sobre os Determinantes Sociais da Saúde (CNDSS), os DSS são os fatores sociais, econômicos, culturais, étnicos raciais, psicológicos e comportamentais que influenciam a ocorrência de problemas de saúde e seus fatores de risco na população. De acordo com definição da Organização Mundial de Saúde (OMS), os determinantes sociais da saúde estão relacionados às condições em que uma pessoa vive e trabalha. Letra A - Incorreta. Pode-se afirmar que com a transição demográfica das últimas décadas ocorreu aumento do sedentarismo, mas a renda média da população brasileira aumentou, por diminuição do tamanho da família economicamente dependente e pela inserção da mulher no mercado de trabalho. Letra B - Incorreta. Houve substituição da cultura alimentar tradicional (alimentos caseiros e naturais) por alimentos industrializados. Letra C - Correta. Letra D - Incorreta. Como visto anteriormente, ocorreu exatamente o movimento contrário. Letra E - Correta. Há predomínio de consumo de ácidos graxos saturados, o que contribui para o aumento da obesidade, ou seja, esse é um fator comportamental que influencia a saúde. Assim, a resposta possui duas respostas corretas possíveis, mas o recurso não foi dado pela banca e gabarito mantido como Letra C.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-134330",
+      "number": "134330",
+      "sourceNumber": "134330",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Com relação à transição epidemiológica, pode-se afirmar que, ao longo do tempo, os\npaíses desenvolvidos apresentaram redução:",
+      "options": {
+        "A": "Do coeficiente de mortalidade das doenças infectoparasitárias e causas externas, e aumento da\nmortalidade proporcional das\n\ndoenças cardiovascular.",
+        "B": "Da mortalidade proporcional das doenças infectoparasitárias, e aumento da mortalidade\nproporcional das causas externas e\n\ndoenças crônico-degenerativas.",
+        "C": "Da mortalidade proporcional das doenças infectoparasitárias e causas externas, e aumento do\ncoeficiente de mortalidade das\n\ndoenças crônico-degenerativas.",
+        "D": "Do coeficiente de mortalidade das doenças infectoparasitárias e causas externas, e aumento do\ncoeficiente de mortalidade das\n\ndoenças crônico-degenerativas."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A TRANSIÇÃO EPIDEMIOLÓGICA significa as mudanças nos padrões de mortalidade, morbidade e invalidez. Esse tipo de transição engloba três mudanças básicas substituição das doenças transmissíveis por doenças não transmissíveis e causas externas deslocamento da carga de morbimortalidade dos grupos mais jovens aos grupos mais idosos e transformação de uma situação em que predomina a mortalidade para outra na qual a morbidade é dominante. Portanto, resposta letar A.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-110064",
+      "number": "110064",
+      "sourceNumber": "110064",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Analise as pirâmides populacionais dos municípios de Candeias e Alvarenga em 2000 e\nassinale a alternativa CORRETA. (VER IMAGEM)",
+      "options": {
+        "A": "A pirâmide de Candeias apresenta uma alta natalidade, baixa taxa de mortalidade infantil, alta\nesperança de vida e pequena razão de dependência.",
+        "B": "A pirâmide de Alvarenga apresenta uma alta natalidade, baixa mortalidade infantil, alta\nesperança de vida e pequena razão de dependência.",
+        "C": "A pirâmide de Candeias apresenta baixa taxa de natalidade e mortalidade infantil, expectativa\nde vida elevada, razão de dependência alta às\ncustas da população com mais de 65 anos.",
+        "D": "A pirâmide de Alvarenga apresenta baixa taxa de natalidade e mortalidade infantil, expectativa\nde vida elevada, razão de dependência alta às\ncustas da população com mais de 65 anos de vida."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [
+        "question_bank/media/medcurso/med-preventiva-med-pre-02/110064.png"
+      ],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O município de Alvarenga possui a pirâmide populacional característica de países subdesenvolvidos a pirâmide que o Brasil apresentava como um todo no inicio do século passado. Esse tipo de pirâmide é caracterizado por altas taxas de natalidade, altas taxas de mortalidade infantil, baixa expectativa de vida, baixa esperança de vida ao nascer, altas taxas de mortalidades. O município de Candeias apresenta uma pirâmide populacional mais compatível com o processo de transição que vemos no Brasil como um todo, representado pela queda da taxa de fecundidade, queda da mortalidade geral, aumento da expectativa de vida, envelhecimento populacional, baixa taxa de mortalidade infantil e razão de dependência alta as custas da população com mais de 65 anos. Ao analisarmos as alternativas, percebemos que a opção C encontra-se correta e é o nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13161",
+      "number": "13161",
+      "sourceNumber": "13161",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em uma população com 1.000 habitantes há 10 casos de tuberculose. Qual a taxa de\nprevalência?",
+      "options": {
+        "A": "1 caso por 100.",
+        "B": "1 caso por 1.000.",
+        "C": "1 caso por 10.000.",
+        "D": "1 caso por 1.000.000.",
+        "E": "10 casos por 1.000."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão que admite duas respostas. Veja só o coeficiente de prevalência e definido como a relação entre o número de casos conhecidos de uma dada doença e a população, multiplicando o resultado pela base referenciada da população que é potência de 10, usualmente 1.000, 10.000 ou 100.000. Na questão acima, 10 casos em 1.000 habitantes poderia ser representado também através de 1 caso em 100 habitantes. Desta forma, a questão apresenta 2 respostas A e E.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13162",
+      "number": "13162",
+      "sourceNumber": "13162",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Casos prevalentes e casos incidentes são termos equivalentes ou iguais?",
+      "options": {
+        "A": "Sim, exceto se a doença for de apresentação aguda.",
+        "B": "Sim.",
+        "C": "Depende da mediana da idade da população estudada.",
+        "D": "Não.",
+        "E": "Quase sempre, não."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão pegadinha… Os conceitos de incidência e de prevalência não são iguais, pois prevalência se refere ao número total de casos existentes, enquanto incidência diz respeito somente aos casos novos. Portanto os TERMOS não são iguais. Fica a observação que em alguns momentos (como em um surto com doenças de curta duração, por exemplo) os valores da incidência e prevalência podem ser iguais.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13164",
+      "number": "13164",
+      "sourceNumber": "13164",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em uma população com 1.584 nascidos vivos em 2007, houve a notificação de 20\nóbitos em crianças menores de 12 meses e de 11\ncasos entre aquelas com idade maior de um (1)\nano. Qual o coeficiente de Mortalidade Infantil nessa população?",
+      "options": {
+        "A": "19,57/1.000.",
+        "B": "12,62/1.000.",
+        "C": "5,68/1.000.",
+        "D": "4,61/1.000.",
+        "E": "3,62/1.000."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O coeficiente de mortalidade infantil óbitos em crianças com menos de 1 ano nascidos vivos, neste caso 20 1584 12,62 por 1.000 nascidos vivos.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
     {
       "id": "med-preventiva-med-pre-02-13167",
       "number": "13167",
@@ -23,6 +294,7 @@
         "E": "Óbito constatado 60 dias após o parto e antes de completar 6 meses."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -35,6 +307,210 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13168",
+      "number": "13168",
+      "sourceNumber": "13168",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Qual a taxa geral de natalidade em uma população que, no final de junho de 2006,\ntinha 20.000 habitantes, sendo entre esses 100\nnascidos vivos e 1.000 crianças menores de 5 anos\nde idade?",
+      "options": {
+        "A": "10/1.000.",
+        "B": "7,4/1.000.",
+        "C": "5/1.000.",
+        "D": "55/1.000.",
+        "E": "55,5/1.000."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A taxa geral de natalidade número de nascidos vivos população residente 100 20.000 5 por 1.000 habitantes.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13169",
+      "number": "13169",
+      "sourceNumber": "13169",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Qual a taxa de fecundidade geral de dada população que em 30 de Junho de 2008\ntinha 80.500 habitantes, sendo entre esses: 8.016 mulheres com 15 a 30 anos de idade; 7.704\nmulheres com 31 a 49 anos de idade; 19.904 homens com 15 ou mais anos; e 1.016\n\nnascidos-vivos?",
+      "options": {
+        "A": "32,26/1.000.",
+        "B": "64,53/1.000.",
+        "C": "94,12/1.000.",
+        "D": "190,14/1.000.",
+        "E": "200,02/1.000."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A taxa de fecundidade total é obtida pelo somatório das taxas específicas de fecundidade para as mulheres residentes de 15 a 49 anos de idade. Para calculá-la é muito fácil, é só pegar o número de nascidos vivos e dividir pelo total de mulheres em idade fértil (15 a 49 anos). Neste caso 1016 15720 64,63 por 1.000 mulheres.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-80918",
+      "number": "80918",
+      "sourceNumber": "80918",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "O coeficiente que permite aferir a gravidade de determinada doença é o de:",
+      "options": {
+        "A": "Prevalência.",
+        "B": "Mortalidade.",
+        "C": "Incidência.",
+        "D": "Letalidade.",
+        "E": "Endêmico."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar algumas fórmulas Taxa de letalidade n óbitos por determinado agravo n total de casos. Taxa de prevalência n total de casos (novos e antigos) população exposta. Taxa de incidência n de casos novos população exposta. Taxa de mortalidade nº de óbitos população suscetível. Percebam que a letalidade determina o risco de morrer entre os indivíduos acometidos pela doença, portanto, indica gravidade de doença. Melhor resposta item D.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-26520",
+      "number": "26520",
+      "sourceNumber": "26520",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Durante a realização do pré-natal, vários exames complementares são solicitados às\ngestantes, alguns deles mais de uma vez durante a gestação. As infecções de trato urinário na\ngestação são apontadas como fator de risco para trabalho de parto prematuro. Considerando essa\ninformação, pode-se dizer que a solicitação de urocultura na rotina do pré-natal pode ser\nenquadrado como:",
+      "options": {
+        "A": "prevenção primordial",
+        "B": "prevenção primária",
+        "C": "prevenção secundária",
+        "D": "prevenção terciária",
+        "E": "reabilitação"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A solicitação de urinocultura visa a detecção de infecções do trato urinário antes que desfechos adversos como o trabalho de parto prematuro ocorram. Sendo assim, constitui uma medida de detecção precoce alinhada ao nível de prevenção secundário.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13256",
+      "number": "13256",
+      "sourceNumber": "13256",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Segundo os dados estatísticos disponíveis no Ministério da Saúde, a 1ª causa de\nmortalidade entre crianças e adolescentes de 5 a 19 anos é:",
+      "options": {
+        "A": "Doenças infecciosas.",
+        "B": "Afecções do período neonatal.",
+        "C": "Doenças do Aparelho circulatório.",
+        "D": "Causas externas (acidentes e violência).",
+        "E": "Tumores próprios desta faixa etária."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Segundo dados estatísticos mais recentes do Ministério da Saúde, a principal causa de mortalidade entre 5 e 19 anos são, em ordem decrescente causas externas de morbidade e mortalidade neoplasias (tumores) e doenças do sistema nervoso.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13257",
+      "number": "13257",
+      "sourceNumber": "13257",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A mortalidade infantil é subdividida em períodos neonatal e pós-neonatal em função\nprincipalmente de:",
+      "options": {
+        "A": "Os riscos de morrer estão igualmente distribuídos nos períodos.",
+        "B": "Para investigação da incidência de óbitos.",
+        "C": "As causas de morbimortalidade são iguais nos períodos analisados.",
+        "D": "As causas de óbitos no período perinatal são iguais às do período neonatal tardio.",
+        "E": "Após análise dos dados deve-se propor medidas de melhoria dos serviços de saúde."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O principal motivo desta divisão é para investigação da incidência dos óbitos, pois as causas mais comuns no período neonatal devem ser diferentes do período pós-neonatal.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-7411",
@@ -56,6 +532,7 @@
         "E": "Washington D.C."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -68,6 +545,413 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-7439",
+      "number": "7439",
+      "sourceNumber": "7439",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Para a construção do coeficiente de mortalidade materna, o denominador usado é:",
+      "options": {
+        "A": "Total de óbitos feminino.",
+        "B": "População de mulheres em idade fértil.",
+        "C": "Mulheres que tiveram complicações na gravidez, parto ou puerpério.",
+        "D": "População de mulheres que morreram.",
+        "E": "Número de nascidos vivos no mesmo local e período."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O denominador do coeficiente de mortalidade materna são os nascidos vivos (obviamente, do mesmo local e período). A fórmula é a seguinte Número de óbitos de mulheres residentes, por causas e condições consideradas de morte materna Número de nascidos vivos de mães residentes.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-324700",
+      "number": "324700",
+      "sourceNumber": "324700",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A proposição da Política Nacional de Atenção Integral à Saúde do Homem visa\nqualificar a saúde da população masculina na\nperspectiva de linhas de cuidado que resguardem a\nintegralidade da atenção. Com relação às causas de mortalidade no gênero masculino, pode-se\nafirmar que",
+      "options": {
+        "A": "a mortalidade por causas cardiovasculares é maior que as demais em todas as faixas etárias.",
+        "B": "as causas externas de mortalidade, entre elas a violência, predominam em todas as faixas\netárias.",
+        "C": "entre as neoplasias, o câncer de próstata é a principal causa de mortalidade no sexo masculino.",
+        "D": "neoplasias são a principal causa de mortalidade a partir dos 50 anos de idade."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A equipe Medgrupo discordou do gabarito liberado pela banca avaliadora à época do concurso (letra D). Para realizar e ssa questão a banca copiou um trecho da Política Nacional de Atenção Integral à Saúde do Homem de 2008. Contudo, os dados mais recentes são de 2021. Segundo o DATASUS Em 2021, na população masculina com mais de 50 anos temos 1º Doenças infecciosas e parasitárias 214.521 óbitos 2º Doenças do aparelho circulatório 179.783 óbitos 3º Neoplasias 109.527 óbitos 4º Doenças do aparelho respiratório 66.726 óbitos. Ainda usando os dados do DATASUS, acreditamos que a letra C traz a resposta mais correta. Os cânceres mais letais em homens no ano de 2021, segundo o DATASUS, foram 1º Neoplasia de próstata 16.053 óbitos 2º Neoplasia de traquéia, brônquios e pulmões 15.836 óbitos 3º Neoplasia de cólon, reto e ânus 10.530 óbitos 4º Neoplasia de estômago 8.931 óbitos e 5º Neoplasia de esôfago 6.544 óbitos. A banca acatou nosso pedido de recurso e acabou anulando a questão.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-62816",
+      "number": "62816",
+      "sourceNumber": "62816",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Os indicadores de saúde são ferramentas basilares para avaliar, sob o ponto de vista\nsanitário, a higidez dos agregados humanos. No Brasil, são indicadores comumente utilizados,\nexceto:",
+      "options": {
+        "A": "razão de mortalidade proporcional.",
+        "B": "quantificação das curvas de mortalidade proporcional.",
+        "C": "esperança de vida",
+        "D": "coeficiente de mortalidade infantil.",
+        "E": "risco relativo."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão bem direta e sem maiores dificuldades. Os itens A D apresentam os principais indicadores de saúde utilizados em nosso país. Já o item E apresenta uma medida de associação utilizado nos estudos de Coorte Risco Relativo. Única resposta possível, item E.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-62836",
+      "number": "62836",
+      "sourceNumber": "62836",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "O índice de Swaroop-Uemura avalia o nível de vida de saúde de uma população. Sobre\nesse indicador, é INCORRETO afirmar:",
+      "options": {
+        "A": "É obtido do cálculo da mortalidade proporcional para a faixa etária de 50 anos de idade ou mais.",
+        "B": "Como a maioria dos indicadores em saúde, considera a população de referência no espaço\ngeográfico definido como homogênea em relação aos valores calculados.",
+        "C": "Quanto menos elevado o seu valor, tanto melhores serão as condições de saúde e outras\ncondições socioeconômicas da população.",
+        "D": "Não é afetado por diferenças na estrutura populacional por idade.",
+        "E": "É utilizado para fazer comparações entre as áreas ou períodos de tempo, tendo a vantagem da\nsimplicidade de cálculo."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O Índice de Swaroop-Uemura avalia a proporção de morte dentre os indivíduos com mais de 50 anos, em relação à mortalidade geral. Lembre-se de que, em medicina preventiva, quanto maior esse índice melhor, pois a população idosa tem que ser a que tem mais óbitos, pois isso indica baixa mortalidade infantil e de adultos jovens. Para calcular este índice, utilizamos a seguinte fórmula Número de óbitos em pessoas com 50 anos ou mais Número total de óbitos. Vamos às opções A) Correta. Basta olhar a fórmula acima. B) Correta. Isso é uma estratégia de cálculo. Todos os indicadores são calculados dessa forma. C) Incorreta. Nós acabamos de ver isso acima. Quanto maior seu valor, melhores são as condições de saúde, e não o contrário. D) Correta. Mesmo que estejamos em uma população totalmente jovem, aqui a mortalidade foi padronizada, pois estamos avaliando somente a proporção de óbitos em indivíduos mais velhos em relação ao total (é medida RELATIVA, não absoluta). O indicador que tem esse problema é o Coeficiente de Mortalidade (Bruto). Ou seja, aqui não há interferência da composição etária da população. E) Correta. Podemos comparar, pois não há interferência da composição etária da população. Única resposta possível, item C.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-62843",
+      "number": "62843",
+      "sourceNumber": "62843",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Devido à dificuldade e à complexidade de obtenção de dados de saúde, historicamente\na epidemiologia, para recomendar ações de\nprevenção, controle e erradicação de uma doença, se\nbaseia em dados de \"não saúde\", como os coeficientes de morbidade. Para se determinar esses\ncoeficientes, os dados utilizados são:",
+      "options": {
+        "A": "prevalência e virulência.",
+        "B": "prevalência e vulnerabilidade.",
+        "C": "prevalência e patogenicidade.",
+        "D": "incidência e prevalência.",
+        "E": "incidência e virulência."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão clássica Quais são os coeficientes de morbidade mais conhecidos e famosos que estudamos ao longo do ano Coeficiente de incidência e Prevalência. Na fórmula desses dois coeficientes, está embutido o conceito de vulnerabilidade. Lembram-se das fórmulas Incidência Casos novos população exposta (vulnerável) Prevalência (Casos novos casos antigos) população exposta (vulnerável) Ou seja, melhor resposta, item D.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-62851",
+      "number": "62851",
+      "sourceNumber": "62851",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "O coeficiente de mortalidade materna é uma medida de risco relativa à mulher quando\nessa se torna grávida. Para calcular esse\ncoeficiente, divide-se o numerador, referente aos óbitos\nligados à gestação, parto e puerpério, numa certa área, num certo período, pelo denominador que\ncorresponde:",
+      "options": {
+        "A": "Ao número de nascidos-vivos no mesmo local e período.",
+        "B": "À população de mulheres entre 15 e 49 anos de idade, no mesmo local e período.",
+        "C": "Ao número de mulheres grávidas no mesmo local e período.",
+        "D": "À população da área no mesmo período.",
+        "E": "Ao número de óbitos totais."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A melhor maneira de calcularmos o coeficiente de mortalidade materna seria n de óbitos por causa materna n de gestantes. Entretanto, a gestação não é evento de notificação. Dessa forma, como poderíamos resolver o problema Justamente utilizando o número de NASCIDOS-VIVOS. Veja, ao excluirmos o número de nascidos mortos (abortos), estamos contra balanceando o fato de uma mulher poder ter mais de 1 filho ao longo do ano. Com isso, chegamos muito perto do valor ideal. Melhor resposta, item A.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-49369",
+      "number": "49369",
+      "sourceNumber": "49369",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "No campo da epidemiologia, alguns conceitos fundamentam os pressupostos\nmetodológicos, dentre esses, o conceito de risco originalmente expressa:",
+      "options": {
+        "A": "a força com que subsistem as doenças nas coletividades.",
+        "B": "a forma como ocorre uma morbidade em uma população.",
+        "C": "a probabilidade de ocorrência de um resultado desfavorável (doenças/agravo).",
+        "D": "o elevado poder de transmissão de uma doença.",
+        "E": "a possibilidade de risco de transmissão de uma doença."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão bastante simples e direta sobre o CONCEITO DE RISCO, como objeto e tema central da Epidemiologia. De acordo com Naomar de Almeida Filho (Livro Texto Epidemiologia e Saúde Fundamentos, Métodos, Aplicações, 2011) O conceito de RISCO implica PROBABILIDADE diferencial e condicionada de OCORRÊNCIA DE DOENÇA OU EVENTO RELACIONADO COM A SAÚDE. Ainda segundo a definição dada por Kleinbaum e cols. (1982), RISCO é a PROBABILIDADE CONDICIONAL, ou seja, a PROBABILIDADE de que indivíduos sem o evento de interesse (por exemplo, pessoas sadias) desenvolvam tal evento em um período de tempo, com a condição de que não venham a morrer devido a uma outra causa durante o mesmo período. A alternativa A refere-se à PREVALÊNCIA, que descreve a força com que subsistem as doenças nas coletividades, sendo um indicador de morbidade. A alternativa B é muito ampla. As MORBIDADES podem ocorrer nas populações de várias formas. Os indicadores de morbidade são a PREVALÊNCIA e a INCIDÊNCIA. A INCIDÊNCIA traduz a ideia de intensidade com que acontece a morbidade em uma população, sendo medida pela frequência absoluta de CASOS NOVOS relacionados a uma unidade de intervalo de tempo. Já a PREVALÊNCIA, é um termo que descreve a força com que subsistem as doenças nas coletividades, sendo medida pela frequência de casos de doenças, também relacionados a uma unidade de tempo e uma localidade. Em relação à alternativa D, o PODER DE TRANSMISSÃO se traduz pelo POTENCIAL DE DISSEMINAÇÃO de uma doença, por meio de vetores ou outras fontes de infecção, colocando sob risco a saúde coletiva. Esse é um dos critérios para a inclusão de doenças e agravos na lista de notificação compulsória. Por último, sobre a alternativa E, o RISCO DE TRANSMISSÃO de uma doença varia conforme o agente, o ambiente e o hospedeiro. A TRANSMISSÃO é a transferência de um agente etiológico animado de uma fonte primária de infecção para um novo hospedeiro. A transmissão pode ocorrer de forma direta (sem a interferência de veículos) ou indireta (exige veículos animados ou inanimados para a transferência de um agente). O RISCO DE TRANSMISSÃO não guarda relação com o conceito específico de RISCO enquanto objeto no campo da EPIDEMIOLOGIA. Assim, a alternativa que melhor traduz o conceito de RISCO é a C.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-11172",
+      "number": "11172",
+      "sourceNumber": "11172",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "O coeficiente de mortalidade infantil é um indicador muito utilizado no campo da saúde\npública, por refletir as condições de vida de uma população. Dos coeficientes relacionados a seguir,\né mais sensível às condições socioeconômico ambientais de um país, o coeficiente de mortalidade:",
+      "options": {
+        "A": "neonatal.",
+        "B": "pós-neonatal.",
+        "C": "neonatal precoce.",
+        "D": "neonatal tardia.",
+        "E": "perinatal."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O desdobramento da mortalidade infantil mais relacionado com as condições sócio-econômicas é o coeficiente pós-neonatal, pois tem as condições ambientais e socioeconômicas altamente ligadas as suas principais causas de óbitos (doenças infecto parasitárias).",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13371",
+      "number": "13371",
+      "sourceNumber": "13371",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Para calcular o Coeficiente de Mortalidade Geral - CMG - utiliza-se o total de óbitos\nregistrados em certa área durante o ano, dividido pela população da área ajustada para o meio do\nano. Para calcular o Coeficiente de Mortalidade Infantil - CMI - os dados requeridos são:",
+      "options": {
+        "A": "número de óbitos de menores de 1 ano residentes em certa área durante o ano, dividido pela\npopulação da área ajustada para o meio do ano.",
+        "B": "números de óbitos de menores de 1 ano residentes em certa área, no ano considerado, dividido\npelo total de nascidos vivos de mães\nresidentes nessa área no referido ano.",
+        "C": "número de óbitos de menores de 1 ano em certa área durante o ano, dividido pelo número total\nde óbitos nessa área durante o ano.",
+        "D": "número de óbitos de crianças até 12 anos, 11 meses e 29 dias, dividido pela população da área\najustada para o meio do ano.",
+        "E": "número de óbitos de menores de 28 dias em certa área durante o ano, dividido pelo total de\nnascidos vivos nessa área."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O coeficiente de mortalidade infantil é calculado da seguinte forma número de óbitos em menores de um ano de determinada área e ano considerado nascidos vivos de mães residentes nessa mesma área e período.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-11174",
+      "number": "11174",
+      "sourceNumber": "11174",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em um dado município, o número de nascidos vivos, em 2007, foi de 7.024. Nesse\nmesmo ano, foram registrados 117 óbitos em\ncrianças menores de cinco anos de idade, sendo que\n82 tinham menos de um ano de idade. Sabendo-se que a população desse município é de 596.724\nhabitantes e que 6.724 são crianças menores de cinco anos, o coeficiente de mortalidade infantil\ndesse município é de:",
+      "options": {
+        "A": "11,7 por 10.000.",
+        "B": "1,37 por 10.000.",
+        "C": "1,96 por 10.000.",
+        "D": "11,7 por 1.000.",
+        "E": "1,96 por 1.000."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Coeficiente de mortalidade infantil número de óbitos em menores de 1 ano nascidos vivos 82 7024 0,01167 11,67 por mil nascidos vivos.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13373",
+      "number": "13373",
+      "sourceNumber": "13373",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "No início do ano de 2007, eram conhecidos 35 casos de uma doença em certo\nmunicípio. No decorrer do ano, foram\nregistrados mais 7 casos da mesma doença, 2 óbitos e 10\naltas por cura. Com base nessas informações, pode-se afirmar que a prevalência da doença no\nfinal do ano de 2007, foi de:",
+      "options": {
+        "A": "23 casos.",
+        "B": "25 casos.",
+        "C": "30 casos",
+        "D": "35 casos.",
+        "E": "42 casos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A questão pede a prevalência pontual, ou seja, o número total de casos no final de 2007. Vamos às contas 35 (casos no início do ano) 7 (casos novos no decorrer do ano) 2 (óbitos) 10 (curas) 30 casos ao final do ano.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-13375",
+      "number": "13375",
+      "sourceNumber": "13375",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Os coeficientes de mortalidade neonatal tardia e neonatal precoce correspondem,\nrespectivamente, aos óbitos em crianças com:",
+      "options": {
+        "A": "zero a 27 dias de nascidas e com zero a 6 dias de nascidas",
+        "B": "28 a 364 dias de nascidas e com 7 a 27 dias de nascidas",
+        "C": "28 a 364 dias de nascidas e com zero a 6 dias de nascidas",
+        "D": "7 a 27 dias de nascidas e com zero a 6 dias de nascidas",
+        "E": "zero a 6 dias de nascidas e com 7 a 27 dias de nascidas"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão sem maiores dificuldades. O coeficiente de mortalidade neonatal tardia corresponde aos óbitos no período de 7 a 27 dias de vida completos, já o coeficiente de mortalidade neonatal precoce corresponde aos óbitos no período de 0 a 6 dias de vida completos.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-11179",
@@ -89,6 +973,7 @@
         "E": "odds ratio"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -122,6 +1007,7 @@
         "E": "Entre 28 dias e 11 meses."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -134,6 +1020,174 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-37444",
+      "number": "37444",
+      "sourceNumber": "37444",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "São indicadores de saúde utilizados no Brasil, EXCETO:",
+      "options": {
+        "A": "Coeficiente de qualidade de vida.",
+        "B": "Curvas de mortalidade proporcional.",
+        "C": "Esperança de vida.",
+        "D": "Razão de mortalidade proporcional.",
+        "E": "Coeficiente de mortalidade infantil."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão simples. Todos os indicadores citados nos itens B, C, D e E são utilizados e validados pelo Ministério da Saúde. Entretanto, coeficiente de qualidade de vida não é considerado um indicador válido. A organização Mundial de Saúde disponibiliza um questionário em diversas línguas para aferir e quantificar de forma objetiva e prática a qualidade de vida da população de um determinado país. Trata-se do WHOQOL (World Health Organization quality of life assessment instrument). Portanto, melhor resposta, item A.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-37468",
+      "number": "37468",
+      "sourceNumber": "37468",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "São exemplos de intervenção em Saúde contra a mortalidade de menores de 5 anos no\nBrasil:",
+      "options": {
+        "A": "Melhorar a pré-escola e as creches comunitárias.",
+        "B": "Melhorar a nutrição materna, o atendimento ao parto e a atenção pré-natal.",
+        "C": "Promover o planejamento familiar e o emprego para os pais.",
+        "D": "Facilitar o acesso das crianças as creches de tempo integral e alimentação balanceada.",
+        "E": "Nenhuma das Respostas Anteriores."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Sabendo que a principal causa de mortalidade infantil está relacionada às afecções perinatais (assistência ao parto e pré-natal) e que a principal causa de morte em menores de 5 anos é a mesma dos menores de 1 ano, as principais intervenções em saúde devem ser oferecer melhores condições de parto e assistência perinatal e estimular a nutrição materna. Portanto, única resposta, item b.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-37014",
+      "number": "37014",
+      "sourceNumber": "37014",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Gestante, portadora de cardiopatia desencadeia insuficiência cardíaca congestiva na 1ª\nhora de pós-parto e vai a óbito. Como deve ser classificada essa morte materna?",
+      "options": {
+        "A": "Morte materna indireta.",
+        "B": "Morte materna direta.",
+        "C": "Morte materna não obstétrica.",
+        "D": "Morte materna tardia."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos fazer uma breve revisão. Morte materna - é a morte de uma mulher durante a gestação ou até 42 dias após o término da gestação, independentemente da duração ou da localização da gravidez. É causada por qualquer fator relacionado ou agravado pela gravidez ou por medidas tomadas em relação a ela. Não é considerada morte materna a que é provocada por fatores acidentais ou incidentais. Morte Materna Obstétrica - as mortes maternas por causas obstétricas podem ser de dois tipos as obstétricas diretas e as obstétricas indiretas. Morte materna obstétrica direta é aquela que ocorre por complicações obstétricas durante gravidez, parto ou puerpério devido a intervenções, omissões, tratamento incorreto ou a uma cadeia de eventos resultantes de qualquer dessas causas. Morte materna obstétrica indireta é aquela resultante de doenças que existiam antes da gestação ou que se desenvolveram durante esse período, não provocadas por causas obstétricas diretas, mas agravadas pelos efeitos fisiológicos da gravidez. Morte Materna não Obstétrica - é a resultante de causas incidentais ou acidentais não relacionadas à gravidez e seu manejo. Também chamada por alguns autores, como morte não relacionada. Estes óbitos não são incluídos no cálculo da razão de mortalidade materna. Morte Materna Tardia - é a morte de uma mulher, devido a causas obstétricas diretas ou indiretas, que ocorre num período superior a 42 dias e inferior a um ano após o fim da gravidez. Uma paciente portadora de cardiopatia, que morreu devido ao agravamento do quadro devido ao parto, deve ser classificada como Morte Materna Indireta. Melhor resposta, item A.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-22820",
+      "number": "22820",
+      "sourceNumber": "22820",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "É considerado pela Organização Mundial da Saúde o mais importante determinante\nisolado das chances de sobrevivência da\ncriança:",
+      "options": {
+        "A": "a idade materna",
+        "B": "o status socioeconômico",
+        "C": "a escolaridade materna",
+        "D": "o peso ao nascer",
+        "E": "o tabagismo materno"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Todos os fatores relacionados na questão estão ligados à chance de sobrevivência das crianças. Porém, o mais importante é o peso ao nascer. Os riscos de morte para crianças com baixo peso ao nascer, particularmente com pesos menores que 1.000 g, de 1.000 g a 1.500 g e 1.500 g a 2.500 g são respectivamente 245,7, 58,0 e 7,1 vezes o risco de óbito de bebês com peso normal, de 2.500 g a 5.000 g. Para os bebês com mais que 5.000 g, o risco de óbito é três vezes o mesmo risco para crianças nascidas com peso normal.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-29481",
+      "number": "29481",
+      "sourceNumber": "29481",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Sobre o coeficiente de mortalidade materna, assinale a alternativa INCORRETA:",
+      "options": {
+        "A": "É uma medida de risco relativa à mulher quando esta se torna grávida;",
+        "B": "As mortes maternas têm comportamento endêmico nos países em desenvolvimento;",
+        "C": "É obtido dividindo-se os óbitos ligados à gestação, parto e puerpério numa certa área, num certo\nperíodo, pelo número de nascidos vivos nos mesmos local e período;",
+        "D": "As mortes maternas refletem a inadequação dos serviços de saúde para gestantes, a falta de\nplanejamento familiar e o resultado da pobreza a que estão submetidos importantes contingentes\nde mulheres."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Primeiramente, uma pequena revisão sobre coeficiente de mortalidade materna, que também é conhecido por razão de mortalidade materna (cuidado que razão é sinônimo de índices, mas aqui serve para indicar coeficiente) número de óbitos maternos, por 100 mil nascidos vivos de mães residentes em determinado espaço geográfico, no ano considerado. O que é óbito materno É morte de uma mulher durante a gestação ou ate 42 dias apos o término da gestação, independentemente da duração ou da localização da gravidez, devido a qualquer causa relacionada com ou agravada pela gravidez ou por medidas em relação a ela, porem não devida a causas acidentais ou incidentais. Reflete a qualidade da atenção a saúde da mulher. Taxas elevadas de mortalidade materna estão associadas a insatisfatória prestação de serviços de saúde a esse grupo, desde o planejamento familiar e a assistência pré-natal, até a assistência ao parto e ao puerpério. Agora, a questão todas as alternativas estão de acordo com o óbito materno, exceto a letra B, pois existem países em desenvolvimento que possuem a taxa em valores baixos.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-17796",
@@ -155,6 +1209,7 @@
         "E": "Melhora do estado nutricional"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -188,6 +1243,7 @@
         "E": "mortalidade por doenças infecciosas"
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -221,6 +1277,7 @@
         "E": "Mortalidade proporcional por causas mal definidas"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -233,6 +1290,161 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-250174",
+      "number": "250174",
+      "sourceNumber": "250174",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Com relação aos indicadores para diagnóstico de saúde da população, julgue o item a\nseguir. Nas doenças agudas, o coeficiente de prevalência é maior que o coeficiente de incidência.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar as definições de prevalência e incidência e depois utilizar o bom senso para responder à questão A prevalência diz respeito a TODOS os casos da doença em determinado momento no tempo A incidência se refere a todos os NOVOS casos de doença em período pré-definido Ao imaginarmos uma doença crônica, com elevada sobrevida após o diagnóstico, podemos concluir que a prevalência irá incluir todos aqueles que convivem com a doença, além dos novos casos que estão sendo diagnosticados, e assim a prevalência tende a ser maior do que a incidência. Contudo, se nos referimos a uma doença aguda, rapidamente curável ou que leve a morte, o total de indivíduos doentes (prevalência) tende a se igualar com o número de novos casos (incidência) Enunciado ERRADO",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-255772",
+      "number": "255772",
+      "sourceNumber": "255772",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Paciente de 28 anos de idade comparece à unidade de saúde da família com história\nde trauma do joelho esquerdo após queda de\nmoto, quando estava se dirigindo ao respectivo local\nde trabalho. Ao exame físico, o joelho referido apresentava aumento de volume e calor local. PA =\n120 mmHg x 80 mmHg; FC = 96 bpm; FR = 16 irpm; SpO2 = 98%. Considerando esse caso clínico\ne os conhecimentos médicos correlatos, julgue o item a seguir. A mortalidade por razões externas,\nincluindo acidentes automobilísticos, é a primeira causa de mortalidade na população com idade\nentre 20 e 29 anos de idade.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Em pessoas de um a 39 anos, as causas externas ocupam a primeira posição como causa de morte. A causa mais comum é agressão, seguido de acidentes de transporte. Quando avaliado por sexo, agressões são mais comuns em homens, e quedas em mulheres. Resposta Certo.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-255774",
+      "number": "255774",
+      "sourceNumber": "255774",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em um estudo do tipo caso-controle, 100 pacientes portadores de câncer de pulmão\nforam comparados com 200 pacientes sem a doença.\nDos pacientes portadores de câncer de\npulmão, 60 apresentavam história de tabagismo, e dos pacientes sem a doença, 40 apresentavam\nhistória de tabagismo. A respeito do exposto, julgue o item a seguir. A Odds Ratio do estudo\napresentado é 9.",
+      "options": {
+        "A": "CERTO.",
+        "B": "ERRADO."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Para calcularmos a razão das chances (odds ratio), utilizamos a seguinte fórmula P (doença exposto) (1 - P (doença exposto)) P (doença não exposto) (1 - P (doença não exposto)) Assim, temos (60 100) 1-(60 100) (40 200) 1 - (40 200) (0,6 0,4) (0,2 0,8) 1,5 0,25 6 Outra forma de representar a conta é pela montagem da tabela 2x2. No caso, temos 60 expostos doentes (A), 40 expostos não doentes (B), 40 não-expostos doentes (C) e 160 não-expostos não-doentes (D). A fórmula AxD BxC da o resultado 60x160 40x40 6 Afirmativa ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-64290",
+      "number": "64290",
+      "sourceNumber": "64290",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Acerca da transição epidemiológica e demográfica e da constituição da população\nbrasileira, julgue o item a seguir. Em regiões mais carentes predominam unidades domicilares\nestendidas ou famílias extensivas, em que há presença de não parentes.",
+      "options": {
+        "A": "Certo",
+        "B": "Errado"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão puramente teórica e extraída do Censo de 2010 do IBGE. Vamos analisar. O Censo diz o seguinte O tipo de unidade doméstica, classificado como ESTENDIDA é aquele composto por um ou mais núcleos familiares que convivem COM OUTROS PARENTES (ex responsável e cônjuge, com ou sem filhos e outros parentes). O enunciado está, portanto, ERRADO, já que não existem não parentes nas unidades estendidas, mas somente PARENTES. As unidades domésticas ditas compostas é que admitem a inclusão de indivíduos sem parentesco. Sendo assim, a afirmativa está ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-64293",
+      "number": "64293",
+      "sourceNumber": "64293",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Acerca da transição epidemiológica e demográfica e da constituição da população\nbrasileira, julgue o item a seguir. O modelo de organização do sistema de atenção à saúde\nacompanhou a transição epidemiológica e demográfica do país.",
+      "options": {
+        "A": "Certo",
+        "B": "Errado"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar o enunciado. Não é bem assim. Na verdade, o atual modelo de organização do sistema de atenção à saúde, que promoveu o fortalecimento da Atenção Básica através da criação da Estratégia de Saúde da Família no Brasil, foi baseado em uma tendência internacional de valorização do nível primário de atenção, iniciado em 1978, com a Conferência de Alma-Ata. É claro que esse sistema pode ser adequado e enfatizar a promoção de saúde e a educação em saúde, com a finalidade de combater os fatores de risco das doenças crônico-degenerativas, que são a primeira causa de mortalidade, mas não é isso que responde à questão. Portanto, a questão está ERRADA.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-32176",
@@ -254,6 +1466,7 @@
         "E": "Estudo de prevalência."
       },
       "answer": "E",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -266,6 +1479,201 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-37977",
+      "number": "37977",
+      "sourceNumber": "37977",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Os Objetivos de Desenvolvimento do Milênio (ODMs) são um compromisso dos\npaíses-membros da Organização das Nações Unidas (ONU), firmado no ano 2000, visando ao\nalcance de metas até o ano de 2015. São oito os ODMs, sendo quatro os mais diretamente\n\nrelacionados à saúde: ODM 1: erradicar a fome e a pobreza extrema; ODM 4: reduzir a mortalidade\nna infância; ODM 5: melhorar a saúde materna; e\nODM 6: combater o vírus HIV e outras doenças.\nA respeito dos indicadores de saúde que fazem parte dos ODMs, julgue o item. A razão de\nmortalidade materna estima a frequência de óbitos femininos, ocorridos até 42 dias após o término\nda gravidez, atribuídos a causas ligadas à gravidez, ao parto e ao puerpério, em relação ao total de\nmulheres em idade fértil.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A questão pode até assustar um pouco no início, falando dos ODMs da ONU, porém fica muito fácil no final. Trata-se de mais uma questão de coeficientes de morbidade e mortalidade. Nesse caso é questionado sobre o coeficiente de mortalidade materna. Sabemos que esse índice é um excelente indicador de saúde, pois avalia a saúde da mulher durante o parto, puerpério e pré-natal. É calculada como o número de óbitos femininos ocorridos até 42 dias após o término da gravidez, atribuídos a causas ligadas à gravidez, ao parto e ao puerpério em relação ao número de NASCIDOS VIVOS e não ao total de mulheres em idade fértil. Portanto, afirmativa errada.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-37979",
+      "number": "37979",
+      "sourceNumber": "37979",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Os Objetivos de Desenvolvimento do Milênio (ODMs) são um compromisso dos\npaíses-membros da Organização das Nações Unidas (ONU), firmado no ano 2000, visando ao\nalcance de metas até o ano de 2015. São oito os ODMs, sendo quatro os mais diretamente\n\nrelacionados à saúde: ODM 1: erradicar a fome e a pobreza extrema; ODM 4: reduzir a mortalidade\nna infância; ODM 5: melhorar a saúde materna; e\nODM 6: combater o vírus HIV e outras doenças.\nA respeito dos indicadores de saúde que fazem parte dos ODMs, julgue o item. O coeficiente de\nmortalidade na infância corresponde ao número de óbitos de menores de cinco anos a cada mil\ncrianças nessa faixa etária, na população residente em determinado espaço geográfico, no ano\nconsiderado.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Muito cuidado e atenção para não perder pontos em uma questão simples. Coeficiente de mortalidade na infância é DIFERENTE de coeficiente de mortalidade infantil. Nesse caso é calculado como o N de óbitos em menores de 5 anos sobre o N de nascidos vivos. Afirmativa errada",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-29724",
+      "number": "29724",
+      "sourceNumber": "29724",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A mortalidade infantil é indicador importante da qualidade da saúde de uma população.\nNo Brasil, ela vem declinando progressivamente,\nembora se mantenha ainda em níveis\ninsatisfatórios. Julgue o item que se segue em função da situação do referido indicador no país. A\ntaxa atual de mortalidade infantil no Brasil é de 29 por mil.",
+      "options": {
+        "A": "Certo",
+        "B": "Errado"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Assertiva incorreta. Segundo o Ministério da Saúde, a taxa de mortalidade infantil (menores de um ano de idade) no Brasil mantém tendência contínua de queda desde 1990. Passou de 47,1 óbitos para cada mil bebês nascidos vivos para 19,3 mortes, em 2007, uma redução de 59,7% nesse período. O declínio da mortalidade infantil no Brasil é resultado do aumento da cobertura vacinal da população, uso da terapia de reidratação oral, aumento da cobertura do pré-natal, ampliação dos serviços de saúde, redução contínua da fecundidade, melhoria das condições ambientas, aumento do grau de escolaridade das mães e das taxas de aleitamento materno. Atualmente, o Brasil está entre os 16 (em um grupo de 68 países) em condições de atingir a quarta meta dos Objetivos de Desenvolvimento do Milênio e chegar à taxa de 14,4 mortes por mil nascidos vivos, em 2012, três anos antes da data limite fixada pela Organização das Nações Unidas (ONU).",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-8570",
+      "number": "8570",
+      "sourceNumber": "8570",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Se compararmos o Coeficiente de Mortalidade Geral (CMG) de 2 municípios, o 1º com\n45 óbitos/10.000 habitantes e, o 2º com 90\nóbitos/10.000 habitantes, pode-se afirmar que:",
+      "options": {
+        "A": "São dados incomparáveis se não se considerar a estrutura etária da população.",
+        "B": "O 2º município apresenta melhor saúde e maior longevidade que o 1º.",
+        "C": "Ambos os municípios têm uma mortalidade geral muito alta.",
+        "D": "É impossível uma discrepância tão grande entre 2 municípios.",
+        "E": "O 1º município apresenta melhores condições de saúde."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão é clássica. Não pode errar, coeficiente de mortalidade tem que ser padronizado por idade, do contrário não podemos afirmar nada. Para entender melhor vamos pegar o seguinte exemplo (que inclusive está na sua apostila) uma população A com número maior de idosos, tem uma probabilidade maior de morrer do que outra (população B) com proporção menor de idosos. Com isso, o coeficiente de mortalidade geral será maior na população A do que na B. Poderíamos afirmar que a população A tem um sistema de saúde ou social pior do que a B Claro que não Com esse coeficiente não dá.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-8572",
+      "number": "8572",
+      "sourceNumber": "8572",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Foram estudadas as principais causas de morte em 3 capitais brasileiras, São Paulo,\nRio de Janeiro e Salvador, nos últimos anos.\nIndique qual das principais causas vem se mantendo\nestável nos 3 lugares estudados.",
+      "options": {
+        "A": "Causas Externas.",
+        "B": "Doenças do Aparelho Circulatório.",
+        "C": "Neoplasias.",
+        "D": "Doença Respiratória Crônica.",
+        "E": "Doenças do Aparelho Digestório."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Qual é a causa que, de uma forma geral (analisando toda a população), vem se mantendo no mesmo lugar ao longo dos anos nestas capitais… As principais causas são A, B e C. A resposta deve estar aí. E vamos pensar qual é a principal causa de óbito em todas as regiões há muitos anos. Segundo dados do Ministério da Saúde, desde o início da década de 1960 as doença do aparelho circulatório são a principal causa de óbito no Brasil. Em segundo lugar são as neoplasias e em terceiro lugar as causas externas.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-7555",
+      "number": "7555",
+      "sourceNumber": "7555",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Um conselheiro de saúde, representante dos usuários no Conselho de Saúde do\nDistrito Federal, recebe para conhecimento uma\nanálise da situação de saúde do Distrito Federal\n(DF). Na publicação, estão disponíveis inúmeros indicadores de natalidade e mortalidade. O\nconselheiro solicita identificar quais são os indicadores que lhe permitem saber se a situação de\nsaúde dos brasilienses está melhorando, e quais são os indicadores que refletem as condições de\nvida da população residente no DF. Assinale a alternativa que não contém indicadores de\nqualidade e condições de vida.",
+      "options": {
+        "A": "Coeficiente de mortalidade infantil.",
+        "B": "Coeficiente de mortalidade materna.",
+        "C": "Indicador de Swaroop Uemura.",
+        "D": "Curva de Nelson e Moraes.",
+        "E": "Coeficiente de mortalidade geral."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O coeficiente de mortalidade geral, por estar sujeito a inúmeras variáveis (principalmente a composição da população segundo sexo e idade), apresenta um uso comparativo muito limitado. É uma população só de idosos Então, o coeficiente será alto. É de jovens Deveria ser mais baixo. Portanto, este coeficiente por si só não oferece muitos dados de qualidade e condições de vida. Agora, todos os outros coeficientes da questão estão relacionados com idade ou causa específica (mortalidade materna), portanto, são mais fidedignos para comparações. Lembrando que os melhores para comparações são os que relacionam idade.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-19228",
@@ -287,6 +1695,7 @@
         "E": "A principal causa de mortalidade infantil nesta região são as \"causas perinatais\"."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [
@@ -301,6 +1710,381 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-352346",
+      "number": "352346",
+      "sourceNumber": "352346",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Clara, uma adolescente de 16 anos, comparece à unidade básica de saúde (UBS) em\nbusca de atendimento médico. Na recepção,\no atendente responsável pelo acolhimento verifica o\nendereço de Clara, confirma que ela reside na área de abrangência da UBS e a encaminha para a\nsala da equipe de saúde da família de sua área. Lá, ela é atendida por uma enfermeira da equipe,\nque, após coletar informações sobre a queixa e sua duração, bem como aferir os sinais vitais,\nreconhece sinais de gravidade. Diante disso, a enfermeira aloca a paciente em uma maca na sala\nde medicação e chama imediatamente o médico da equipe, que a atende prontamente. Clara relata\nque está sentindo dor na região hipogástrica e disúria há cerca de três dias, com uma piora\ngradual. Ela teve calafrios durante a última noite, mas não percebeu que poderia estar com febre. A\npaciente está mais preocupada com as dores e com um atraso menstrual. Ela não consegue\nfornecer a data da última menstruação, mas acredita que tenha ocorrido antes do nascimento de\nseu irmão, que hoje tem três meses. Ao realizar o exame físico, a equipe de saúde observa que\nClara está sonolenta, febril, eupneica, sudoreica, com livedo e mal perfundida. Os pulsos estão\nsimétricos, as bulhas cardíacas são normofonéticas, mas a paciente apresenta taquicardia e um\nsopro sistólico. O exame abdominal revela dor à palpação na região hipogástrica. Além disso, foram\nidentificadas equimoses em diferentes estágios de evolução em seu tórax e abdome. Quando\nquestionada sobre as lesões equimóticas, Clara começa a chorar e pede para não abordar mais o\nassunto. Tendo como base o caso acima, a política nacional de humanização, os atributos e\nfunções da atenção primária e conhecimentos correlatos, julgue o item a seguir. O foco infeccioso\nde Clara é uma causa significativa de sepse na população em geral. A gestação é um fator de risco\nimportante para esse quadro, o que justifica a necessidade de rastreamento dessa afecção nessa\npopulação.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O tema central é a identificação e manejo de um quadro potencialmente grave em uma paciente adolescente na atenção primária, considerando a política nacional de humanização e os atributos e funções da atenção primária. Note que a paciente é gestante, menor de idade e com um quadro possível de infecção do trato urinário. Diante disso, é feita uma afirmativa O foco infeccioso de Clara é uma causa significativa de sepse na população em geral. A gestação é um fator de risco importante para esse quadro, o que justifica a necessidade de rastreamento dessa afecção nessa população. Agora, vamos avaliar as 2 opções CERTO correto. A descrição do caso de Clara sugere um quadro de infecção que pode estar evoluindo para sepse, dada a presença de sintomas como dor hipogástrica, disúria, calafrios, febre, sonolência, sudorese, livedo, má perfusão e taquicardia. Infecções do trato urinário, que podem ser o foco infeccioso no caso de Clara, são, de fato, uma causa significativa de sepse na população em geral, isso inclui tanto homens como mulheres Mas, naturalmente, por causas algumas causas distintas e outras similares. Em homens, por exemplo, existem algumas causas mais particulares, como IST s, estenose de uretra, hiperplasia prostática benigna, cálculos vesicais e prostatites. Ademais, a gestação é um fator de risco importante para infecções do trato urinário e suas complicações, incluindo a sepse. Portanto, o rastreamento dessa afecção em gestantes (no 1º e 3º trimestres) é justificado e importante. A afirmativa está correta ao destacar a relevância do foco infeccioso e o risco aumentado durante a gestação. ERRADO incorreto. Considerando a análise acima, a afirmativa é correta, e portanto, a opção que afirma que ela está errada não é a resposta adequada. Resposta CERTO.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-183861",
+      "number": "183861",
+      "sourceNumber": "183861",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Com relação às políticas de saúde, julgue o item que se segue. A avaliação\n\npré-concepcional, etapa do planejamento familiar e da assistência pré-natal, impacta pouco na\nmortalidade materna infantil, já que é uma consulta que o casal realiza antes da gravidez.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "ERRADO. Entende-se por avaliação pré-concepcional a consulta que o casal faz antes de uma gravidez, objetivando identificar fatores de risco ou doenças que possam alterar a evolução normal de uma futura gestação. Constitui, assim, instrumento importante na melhoria dos índices de morbidade e mortalidade materna e infantil.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-75558",
+      "number": "75558",
+      "sourceNumber": "75558",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "No final do ano passado, um médico foi contratado pela Secretaria Estadual de Saúde\npara trabalhar numa Unidade de Saúde dentro do\npresídio da capital. Para estabelecer uma\nestratégia de controle da tuberculose, solicitou os dados registrados no Ambulatório da unidade. Os\ndados encontrados revelam que, em julho de 2012, existiam 240 casos de tuberculose em\ntratamento e ao longo do período foram notificados 60 novos casos, 12 óbitos e 40 pacientes\nobtiveram alta por cura. A população prisional no ano de 2012 era de cerca de 2.400 presos. Nesse\ncenário, qual a taxa de letalidade de tuberculose, em 2012, nesse presídio?",
+      "options": {
+        "A": "1,0%.",
+        "B": "4,2%.",
+        "C": "5,0%.",
+        "D": "6,0%.",
+        "E": "10,0%."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Comecemos relembrando como é calculado o coeficiente de letalidade nº óbitos por determinado agravo nº casos desse agravo. Qual é o número de óbito 12. Qual é o número de casos Aí que a questão se enrolou e gerou polêmica. O cálculo que a banca fez e o gabarito mostra isso com 240, mas, lendo o enunciado com calma vemos que não fica claro quantos casos tem, no total. A questão fala de 60 casos novos, 12 óbitos, 40 por cura. Enfim, não há como saber se depois disso tudo passaram a ter 240 casos ou tinham 240 no início e, após esses eventos, passaram a ter 240 60-12-40 248 casos. Vamos então, calcular com o mais obvio, usando o 248 12 248 4,8%. Logo, não há resposta na questão e a mesma deveria ter sido anulada. No entanto, a resposta liberada pela banca foi a letra C.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-30984",
+      "number": "30984",
+      "sourceNumber": "30984",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Transição demográfica é o processo de mudança da estrutura etária de uma população\nno sentido do seu envelhecimento, e a transição\nepidemiológica é a mudança observada no perfil\nde adoecimento e morte de uma população, no sentido ou como consequência do seu\nenvelhecimento. Acerca desses dois fenômenos, julgue o seguinte item. Países que vivenciam a\ntransição demográfica e a transição epidemiológica observam, ao longo do tempo, mudanças no\ncomportamento de diversos indicadores, como redução do coeficiente de natalidade, redução do\nindicador de Swaroop-Uemura e redução da mortalidade proporcional por doenças infecciosas e\npor neoplasias.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa afirmativa, em parte, está correta. Realmente, em países que vivenciam uma transição demográfica e epidemiológica são observados a redução do coeficiente de natalidade (inclusive, sendo esse um dos principais indicadores implicados nessa transição) e da mortalidade proporcional por doenças infecciosas porém ocorre aumento da mortalidade por neoplasias e outras doenças crônico-degenerativas e do indicador de Swaroop-Uemura. Esse indicador mede a proporção de óbitos em pessoas com 50 anos ou mais, em relação ao número total de óbitos (Nº total de óbitos em pessoas com 50 anos ou mais Nº total de óbitos). Quanto maior esse índice, melhor, pois indica que estamos com a maioria dos óbitos registrados acima dos 50 anos em relação aos demais, indicando boa qualidade dos serviços de saúde e qualidade de vida. Devemos recordar que pela lógica da Medicina Preventiva, quem tem que morrer é a população idosa e não a população infantil Portanto, os países que estão vivendo uma mudança no perfil epidemiológico e demográfico possuem um aumento nesse índice e não uma redução como afirmou a questão.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-30995",
+      "number": "30995",
+      "sourceNumber": "30995",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Transição demográfica é o processo de mudança da estrutura etária de uma\npopulação no sentido do seu envelhecimento,\ne a transição epidemiológica é a mudança observada\nno perfil de adoecimento e morte de uma população, no sentido ou como consequência do seu\nenvelhecimento. Acerca desses dois fenômenos, julgue o seguinte item. A queda de fecundidade e\no aumento da mortalidade geral são fatores determinantes para a transição demográfica.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Temos que atentar nessa questão para a essência da transição demográfica que, como já traz o enunciado, seria em direção a um envelhecimento populacional. Classicamente, são considerados como responsáveis diretos para a transição demográfica queda da taxa de fecundidade (PRINCIPAL DETERMINANTE) queda da mortalidade geral (e não aumento, como disse a questão) aumento da esperança de vida ao nascer e envelhecimento da população. Lembrem-se da teoria da transição demográfica e seus quatro estágios 1º Estágio equilíbrio populacional entre altas taxas de natalidade e mortalidade, sobretudo a infantil 2º Estágio explosão demográfica devido à redução da taxa de mortalidade infantil e a preservação da alta taxa de fecundidade 3º Estágio redução acelerada das taxas de fecundidade e baixas taxas de mortalidade, levando ao envelhecimento da população (Brasil encontra-se nesse estágio, em transição para o estágio seguinte) 4º Estágio baixas taxas de fecundidade e mortalidade, proporcionando um equilíbrio populacional. Sendo assim, o item realmente está incorreto.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-30957",
+      "number": "30957",
+      "sourceNumber": "30957",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em uma creche de uma das áreas administrativas do Distrito Federal estão\nmatriculadas 55 crianças. Cinco crianças que\nfrequentam essa creche tiveram gastroenterite\ncausada por rotavírus, de leve à mediana gravidade. Não houve óbitos causados pela doença. As\ncinco crianças pertencem a cinco famílias diferentes, que totalizavam 35 pessoas, incluindo as\ncrianças doentes. Três membros das cinco famílias apresentaram, posteriormente, quadro clínico\nde gastroenterite por rotavírus. Com base na situação hipotética acima e nos marcos teóricos da\nvigilância de doenças infecciosas, julgue o item subsequente. O coeficiente de incidência ou taxa\nde ataque de gastroenterite por rotavírus entre as crianças que frequentam a creche foi de 6,5%\n(limitado a uma casa decimal).",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Primeiramente, cuidado, pois o autor quer a taxa de incidência entre as crianças da creche. Então vamos lá o coeficiente de incidência é igual ao número de casos novos divididos pela população exposta. Neste caso 5 (crianças da creche contaminadas) 55 (crianças matriculadas na creche) 0,09 9%. Portanto, questão errada.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-30963",
+      "number": "30963",
+      "sourceNumber": "30963",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em uma creche de uma das áreas administrativas do Distrito Federal estão\nmatriculadas 55 crianças. Cinco crianças\nque frequentam essa creche tiveram gastroenterite\ncausada por rotavírus, de leve à mediana gravidade. Não houve óbitos causados pela doença. As\ncinco crianças pertencem a cinco famílias diferentes, que totalizavam 35 pessoas, incluindo as\ncrianças doentes. Três membros das cinco famílias apresentaram, posteriormente, quadro clínico\nde gastroenterite por rotavírus. Com base na situação hipotética acima e nos marcos teóricos da\nvigilância de doenças infecciosas, julgue o item subsequente. A taxa de ataque secundário entre os\ncontatos domiciliares das crianças que apresentaram gastroenterite por rotavírus foi de 10%.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Taxa de ataque secundário é igual razão entre o número de casos novos surgidos a partir do caso-índice e o número total de contatos com o caso-índice. Nesse caso 3 (contatos das crianças que ficaram doentes) 30 (contatos totais, lembrando que eram 35 pessoas das famílias 5 crianças já contaminadas) 10%. Portanto, questão certa.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-31020",
+      "number": "31020",
+      "sourceNumber": "31020",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "As doenças crônicas não transmissíveis (DCNT) constituem sério problema de saúde\npública, tanto nos países ricos quanto nos\nde média e baixa renda. Estimativas da Organização\nMundial de Saúde apontam que as DCNT são responsáveis por 58,5% de todas as mortes\nocorridas no mundo e por 45,9% da carga global de doença. A respeito das DCNT e dos seus\nfatores de risco e proteção, julgue o item subsequente. As DCNT são de múltipla etiologia, sendo\npossível a identificação de vários fatores de risco que se classificam em não modificáveis e em\ncomportamentais. Fatores condicionantes socioeconômicos, culturais e ambientais não têm grande\ninfluência sobre os fatores comportamentais, sendo esses últimos uma opção individual de estilo de\nvida.",
+      "options": {
+        "A": "Certo.",
+        "B": "Errado."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Afirmativa incorreta, pois fatores socioeconômicos, culturais e ambientais TEM grande influência sobre os fatores comportamentais. O indivíduo com mais recursos financeiros tem hábitos diferentes dos mais pobres, indivíduos de religiões diferentes tem hábitos diferentes, uma deixa beber e fumar outra não, e por aí vai…",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-22218",
+      "number": "22218",
+      "sourceNumber": "22218",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A vigilância em saúde tem sido definida como coleta contínua e sistemática, análise,\ninterpretação e disseminação de dados relativos a eventos de saúde para uso na ação da saúde\npública, com os objetivos de reduzir a morbidade e a mortalidade e de melhorar a saúde. Dessa\nforma, as atividades pertinentes à vigilância em saúde são atividades essenciais das instituições de\nsaúde pública do Brasil. No que se refere à vigilância de saúde no Brasil, julgue o próximo item. As\ninformações contidas no atestado de óbito - porção da DO onde são declaradas as causas da\nmorte - são de responsabilidade do médico que a assina. Por outro lado, a correção dos dados de\nidentificação, de residência e socioeconômicos do paciente, contidos na DO, são de\nresponsabilidade do responsável legal da instituição hospitalar onde o óbito ocorreu.",
+      "options": {
+        "A": "certo",
+        "B": "errado"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Boa questão para aplicação no dia a dia médico. Fiquem atentos, pois não existe campo da declaração de óbito em que a responsabilidade seja do médico e outra que não seja. O médico tem responsabilidade ética e jurídica pelo preenchimento e pela assinatura da DO, assim como pelas informações registradas em TODOS os campos do documento, devendo revisá-lo por completo antes de assinar. Portanto, alternativa incorreta.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-8701",
+      "number": "8701",
+      "sourceNumber": "8701",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Oito horas após ter sido realizado um jantar, noventa das trezentas pessoas que dele\nparticiparam começaram a apresentar os primeiros sintomas de diarreia, que foi posteriormente\nconfirmada. Houve suspeita de que a farofa com ovos que havia sido servida estivesse\ncontaminada. Na investigação epidemiológica desse surto, os pesquisadores iniciaram o trabalho\nperguntando aos participantes quem havia ou não ingerido a farofa e quem tinha apresentado ou\nnão diarreia. Duzentos participantes disseram ter comido a farofa, dos quais oitenta relataram ter\napresentado diarreia. Entre os que disseram não ter comido farofa, dez afirmaram ter apresentado\ndiarreia. Com relação a essa situação hipotética, julgue o item que se segue. O valor do coeficiente\nde incidência de diarreia entre os que comeram farofa foi de 20%.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O coeficiente de incidência foi de 80 (casos novos de diarréia) 200 (população exposta a farofa) 0,4 ou 40%. Afirmativa incorreta.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-8710",
+      "number": "8710",
+      "sourceNumber": "8710",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Os indicadores de saúde, paradoxalmente, medem, em geral, a quantidade de agravos\ne óbitos que ocorrem em uma população. Acerca\ndesses indicadores, julgue o item que se segue.\nO coeficiente de mortalidade infantil mede o risco de uma criança morrer com menos de cinco anos\nde idade.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O coeficiente de mortalidade infantil mostra o risco de morte em crianças com menos de 1 ano de idade. O coeficiente que mede o risco de morte em crianças com menos de 5 anos é o coeficiente de mortalidade na infância. Afirmativa incorreta.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-8711",
+      "number": "8711",
+      "sourceNumber": "8711",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Os indicadores de saúde, paradoxalmente, medem, em geral, a quantidade de agravos\ne óbitos que ocorrem em uma população. Acerca\ndesses indicadores, julgue o item que se segue.\nA relação entre o número de óbitos por determinado agravo e o número de pessoas expostas ao\nrisco de adquiri-lo é denominada coeficiente de letalidade de tal agravo.",
+      "options": {
+        "A": "CERTO",
+        "B": "ERRADO"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A relação expressa na alternativa diz respeito ao coeficiente de mortalidade por um determinado agravo. O coeficiente de letalidade é calculado a partir da relação entre o número de óbitos de um determinado agravo e o número de indivíduos acometido por esse agravo. Afirmativa incorreta.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-19316",
@@ -319,6 +2103,7 @@
         "B": "ERRADO"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -331,6 +2116,175 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-291606",
+      "number": "291606",
+      "sourceNumber": "291606",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em um município, no último dia do ano de 2019 existiam 235 casos de diabetes, no ano\nseguinte, 30 novos casos foram diagnosticados. Neste mesmo ano, 4 pessoas que já possuíam\ndiabetes mudaram-se para esse município, sendo que do total de casos desse município, 3 foram a\nóbito. População do município 31/12/2019 ? 150.000 habitantes; 01/07/2020 ? 153.000 habitantes;\n31/12/2020 ? 156.000 habitantes. Qual a letalidade do diabetes por 100 habitantes no ano de\n2020?",
+      "options": {
+        "A": "1,70%",
+        "B": "1,54%",
+        "C": "1,48%",
+        "D": "75%",
+        "E": "1,505"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "COMENTÁRIO EM PRODUÇÃO.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-260673",
+      "number": "260673",
+      "sourceNumber": "260673",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Para o cálculo do coeficiente de mortalidade infantil pós-neonatal, em um determinado\nano e localidade, necessitamos saber o número\nde óbitos em:",
+      "options": {
+        "A": "Maiores de 7 dias até os menores de 28 dias e o total de crianças menores de um ano.",
+        "B": "Menores de 8 dias e o total de nascidos vivos.",
+        "C": "Maiores de 28 dias até os menores de um ano e o total de crianças menores de um ano.",
+        "D": "Maiores de 28 dias até os menores de um ano e o total de nascidos vivos.",
+        "E": "Maiores de 7 dias até os menores de 28 dias e o total de nascidos vivos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar. O coeficiente de mortalidade infantil pós-neonatal estima o risco de um nascido vivo morrer no período pós-neonatal. É calculado pelo número de óbitos entre 28 a 364 dias de vida completos, por mil nascidos vivos, em determinado espaço geográfico, ano considerado. Exatamente como descrito na letra D, nosso gabarito. Vamos aproveitar para analisar as demais assertivas. A) Incorreta. Não traz o número de nascidos vivos e ainda erra no numerador dado que o correto são os óbitos entre 28 364 dias completos. B) Incorreta. Seria o coeficiente de mortalidade infantil neonatal precoce. C) Incorreta. Não traz o número de nascidos vivos. E) Incorreta. Seria o coeficiente de mortalidade infantil neonatal tardio.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-220312",
+      "number": "220312",
+      "sourceNumber": "220312",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Os coeficientes de mortalidade medem a probabilidade de qualquer pessoa da\npopulação vir a morrer em um determinado local\ne ano. São excelentes indicadores da qualidade\nda saúde em uma determinada população, possibilitando a criação de programas específicos que\nvisem a prevenção dessas mortes. Em relação a esses coeficientes, é INCORRETO afirmar que:",
+      "options": {
+        "A": "O coeficiente de mortalidade por causas externas inclui os óbitos por acidentes de transporte e\nhomicídios, mas não estão incluídos os óbitos por suicídio.",
+        "B": "No coeficiente de mortalidade materna, estão incluídos os óbitos de todas as mulheres durante a\ngestação ou durante 42 dias após o término da gestação por causas relacionadas ou agravadas\npela gravidez.",
+        "C": "No coeficiente de mortalidade neonatal precoce, estão incluídos os óbitos de crianças até o\nsexto dia de vida, refletindo a qualidade da assistência pré-natal.",
+        "D": "O coeficiente de mortalidade por neoplasias malignas pode ser prejudicado por imprecisões nas\ndeclarações de óbitos."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar as assertivas em relação aos coeficientes de mortalidade A) Incorreta. O coeficiente de mortalidade por causas externas inclui os óbitos por acidentes de transporte, homicídios e também os óbitos por suicídio. B) Correta. Morte materna, segundo a 10ª Revisão da Classificação Internacional de Doenças (CID-10), é a morte de uma mulher durante a gestação ou até 42 dias após o término da gestação, independente da duração ou da localização da gravidez, devida a qualquer causa relacionada com ou agravada pela gravidez ou por medidas em relação a ela, porém não devida a causas acidentais ou incidentais. C) Correta. No numerador de mortalidade neonatal precoce estão os óbitos de crianças até o sexto dia de vida. D) Correta. O coeficiente de mortalidade por neoplasias malignas pode ser prejudicados por imprecisões no preenchimento das declarações de óbito. Ou seja, a única assertiva INCORRETA é a letra A, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-174364",
+      "number": "174364",
+      "sourceNumber": "174364",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Sobre a Taxa de Mortalidade Infantil, assinale V para as proposições verdadeiras e F\npara as falsas. A referida taxa é um indicador que expressa: Considerando as alternativas abaixo,\nmarque V - Verdadeiro ou F - Falso: ( ) pela estimativa do risco de morte a que está exposta de\nmorte a que está exposta uma população de nascidos vivos em uma determinada área e período,\nantes de completar o primeiro ano de vida. ( ) por uma medida do tipo proporção, que relaciona\nóbitos de indivíduos pertencentes uma coorte de nascidos vivos antes de completar um ano de\nvida. ( ) através da proporção de óbitos de menores de um ano, com relação ao total de óbitos\nregistrados em uma determinada área e período.",
+      "options": {
+        "A": "V ? V ? F.",
+        "B": "V ? F ? F.",
+        "C": "V ? V ? V.",
+        "D": "F ? F ? F.",
+        "E": "F ? V ? F."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão foi devidamente anulada após recurso feito pela Equipe Medugrupo. Vamos analisar as assertivas sobre a Taxa de Mortalidade Infantil e entender o motivo (V). Essa é a definição de taxa de mortalidade infantil número de óbitos em menores de 1ano número de nascidos vivos. (F). Os coeficientes ou taxas possuem a unidade do numerador e denominador diferentes. Não são expressas em proporção. Os Índices é que são proporções com numerador e denominador possuindo a mesma unidade. (F). A proporção de óbitos de menores de um ano com relação ao total de óbitos é o índice E não a taxa de mortalidade. Para quem ainda ficou com dúvida, vamos relembrar Quando falamos em indicadores de saúde, mais especificamente em valores relativos, estamos falando coeficientes (taxas) ou Índices. Os coeficientes ou taxas medem o risco de uma pessoa adoecer ou morrer em um determinado local e ano. O numerador e o denominador são sempre unidades numéricas diferentes, o que nos impede de considerá-lo como uma proporção. Já os índices, tem no seu numerador e denominador unidades numéricas iguais. Na verdade, são proporções entre um subconjunto (numerador) e um conjunto (denominador). O coeficiente de mortalidade infantil mede o número de óbitos ocorridos em menores de 1 ano de idade em um determinado local e ano número de nascidos vivos nesse mesmo local e ano. Já o índice de mortalidade infantil mede a proporção de óbitos em crianças menores de 1 ano no conjunto de todos os óbitos. Portanto, percebemos que são dois conceitos completamente diferentes. Ao analisarmos as assertivas, fica claro que tanto a segunda quanto a terceira assertiva encontram-se INCORRETAS FALSAS, pois tratam do conceito de índice é o enunciado nos pede o conceito de taxa de mortalidade infantil. A banca avaliadora liberou como gabarito correto letra C e após o recurso ela preferiu ANULAR ao invés de trocar para letra B.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-77345",
+      "number": "77345",
+      "sourceNumber": "77345",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A principal causa de mortalidade infantil é:",
+      "options": {
+        "A": "Diarreia.",
+        "B": "Pneumonia.",
+        "C": "Câncer.",
+        "D": "Acidentes.",
+        "E": "Cardiopatias."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Em primeiro lugar, relembramos como deve ser feito o cálculo do coeficiente de mortalidade infantil nº óbitos até 1 ano de idade dividido pelo total de nascidos vivos. Nesse contexto, as maiores causas de óbitos são em primeiro lugar, as afecções perinatais e, em segundo lugar, as malformações congênitas. Como a questão não contemplou nenhuma dessas opções e o gabarito foi completamente equivocado, a banca optou pela anulação da mesma.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-43962",
@@ -352,6 +2306,7 @@
         "E": "Na fase (ou estágio) 4, o crescimento demográfico continua sendo relativamente alto, tendo\ncomo efeito mais importante o envelhecimento\nda população, apesar do coeficiente de mortalidade\ncontinuar com tendência crescente."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -364,6 +2319,108 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-43932",
+      "number": "43932",
+      "sourceNumber": "43932",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A Organização Mundial da Saúde define como \"nascido vivo\" toda criança que, ao ser\nseparada do organismo materno, estando ou não aderida à placenta, apresente:",
+      "options": {
+        "A": "Batimento cardíaco e movimento respiratório.",
+        "B": "Contração de músculo sujeito à ação da vontate.",
+        "C": "Respiração e choro, mesmo que débil.",
+        "D": "Pelo menos um dos seguintes sinais vitais: batimento cardíaco, batimento do cordão umbilical,\ncontração de músculo sujeito à ação da vontade, movimento respiratório.",
+        "E": "Batimento cardíaco e choro."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "A definição correta de Nascido Vivo, de acordo com a Organização Mundial de Saúde (OMS), e que está até hoje em vigor é expulsão ou extração completa do corpo da mãe, independentemente da duração da gestação, de um produto de concepção que, depois dessa separação, respire ou manifeste qualquer outro sinal de vida, tal como batimento cardíaco, pulsação do cordão umbilical ou contração efetiva de algum músculo de contração voluntária, tenha ou não sido cortado o cordão umbilical e esteja ou não desprendida a placenta. Cada produto de um nascimento que reúna essas condições é considerado como uma criança viva. A alternativa que expressa, de modo mais completo, essa definição é a D.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-32405",
+      "number": "32405",
+      "sourceNumber": "32405",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A próxima questão é baseada na tabela abaixo. Segundo os dados disponíveis no\nDATASUS, Vitória (ES) tem uma população estimada de 320.822 habitantes e teve em um ano\n\n4.433 nascidos vivos. Ocorreram 1.888 óbitos assim distribuídos por faixa etária: Qual é o\ncoeficiente de mortalidade infantil no Município? (VER IMAGEM).",
+      "options": {
+        "A": "11,5 por 1.000 habitantes.",
+        "B": "1,15 por 1.000 habitantes.",
+        "C": "27,01 por 1.000 habitantes.",
+        "D": "11,60 por 1.000 habitantes.",
+        "E": "0,16 por 1.000 habitantes."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Recordando a fórmula do coeficiente de mortalidade infantil Nº de óbitos 1 ano Nº nascidos vivos. Bom, a questão fornece o número de nascidos vivos no enunciado (4.433). O número de óbitos 1 ano pode ser obtido na tabela. Agora é só fazer conta Coeficiente de mortalidade infantil 50,97 4.433 11,5 por 1000 habitantes.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-23131",
+      "number": "23131",
+      "sourceNumber": "23131",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A Razão de Mortalidade Proporcional de 50 anos ou mais (ou indicador de\nSwaroop-Uemura) mede a proporção de mortes a\npartir da idade mencionada em relação à\ntotalidade de mortes. Em um determinado local onde o indicador de Swaroop-Uemura é alto,\npode-se afirmar que: I - o coeficiente de mortalidade infantil desse local deve ser alto. II - a\ndesnutrição proteico-calórica nesse local deve ser pouco prevalente. III - a expectativa de vida\n\nnesse local deve ser baixa. IV - as afecções perinatais e as anomalias congênitas devem constituir\nas principais causas de morte entre menores de 1\nano de idade. Está (ão) correta (s) somente a (s)\nafirmativa (s):",
+      "options": {
+        "A": "II.",
+        "B": "I e III.",
+        "C": "I e IV.",
+        "D": "II e III.",
+        "E": "II e IV."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos analisar as afirmativas, mas antes vamos recordar que o ISU (Índice de Swaroop-Uemura) mede a proporção de óbitos em pessoas com 50 anos ou mais, em relação ao número total de óbitos. O ideal é que as comunidades apresentem o ISU entre 75 e 100%, pois isso indica boa qualidade dos serviços de saúde e qualidade de vida. Isso demonstra que o país permite que pessoas vivam mais, com baixos valores de mortalidade infantil e da mortalidade entre jovens. Agora, as alternativas Afirmativa 1 incorreta, pois se concentra a maior parte dos óbitos acima de 50 anos, é porque morre pouco abaixo de 1 ano Afirmativa 2 correta, pois tem pouca mortalidade infantil, morrem mesmo os idosos Afirmativa 3 incorreta, se a maioria morre acima de 50 anos é porque a expectativa de vida é alta Afirmativa 4 correta, pois quando a taxa de mortalidade infantil é baixa, predominam as causas perinatais.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-23083",
@@ -385,6 +2442,7 @@
         "E": "Os idosos são os que menos usam os serviços de saúde, o que compensa seu baixo percentual\nde contribuição para a Previdência."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -397,6 +2455,276 @@
         "MED"
       ],
       "answerSource": "explicit"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-9453",
+      "number": "9453",
+      "sourceNumber": "9453",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Um novo tratamento para uma doença não-infecciosa, capaz de evitar a morte, mas\nnão de levar à cura, ocasionará, no\ncomportamento desta doença:",
+      "options": {
+        "A": "Aumento da prevalência.",
+        "B": "Redução da prevalência.",
+        "C": "Aumento da incidência.",
+        "D": "Redução da incidência.",
+        "E": "Não haverá alteração."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão clássica e direta. Se ninguém morre e ninguém cura, aumenta o número de casos na população, ou seja, a prevalência.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-9454",
+      "number": "9454",
+      "sourceNumber": "9454",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Para calcular a letalidade da dengue hemorrágica, deve-se dividir os óbitos pela doença\npelo(a):",
+      "options": {
+        "A": "População geral.",
+        "B": "População menor que um ano.",
+        "C": "Total de casos de dengue hemorrágica.",
+        "D": "Total de óbitos na população.",
+        "E": "Total de casos de doenças infecciosas e parasitárias."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Essa questão respeita o cálculo da taxa de letalidade, para avaliar a gravidade da doença, cujo o denominador deve ser o total de casos do agravo que levou ao óbito, que nesse caso é foi a dengue hemorrágica.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-9456",
+      "number": "9456",
+      "sourceNumber": "9456",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Entre os indicadores de saúde relacionados, identifique o mais indicado para estudar,\nna população, a distribuição dos óbitos segundo\nfaixa etária:",
+      "options": {
+        "A": "Prevalência.",
+        "B": "Letalidade.",
+        "C": "Mortalidade geral.",
+        "D": "Curva de Nelson de Moraes.",
+        "E": "Incidência."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Prevalência, letalidade, mortalidade geral e incidência são todos coeficientes que não estão utilizando a faixa etária, portanto não respondem a questão. Os dados para avaliar a distribuição dos óbitos segundo a faixa etária podem ser obtidos classicamente com as curvas de Nelson de Moraes. O autor escolheu 5 grupos etários para mortalidade proporcional por idade, e a partir daí criou uma curva para indicar o nível de saúde, permitindo a comparação em diversas localidades, além de ser um bom indicador da qualidade de saúde da população. Os grupos escolhidos foram - menores de 1 ano - entre 1 e 4 anos - entre 5 e 19 anos - entre 20 e 49 anos - e mais de 50 anos. Para calcular Nº total de óbitos em menores de 1 ano Nº total de óbitos Nº total de óbitos entre 1 e 4 anos Nº total de óbitos Nº total de óbitos entre 5 e 19 anos Nº total de óbitos Nº total de óbitos entre 20 e 49 anos Nº total de óbitos Nº total de óbitos em maior de 50 anos Nº total de óbitos. Com estes 5 dados construímos uma curva que pode ser de 4 tipos - Tipo 1 nível de saúde muito baixo. São de regiões subdesenvolvidas, com predomínio de morte em adultos jovens. Devido as doenças transmissíveis endêmicas e as causas externas. - Tipo 2 nível de saúde baixo. Aqui predominam os óbitos na faixa infantil e pré-escolar. - Tipo 3 nível de saúde regular. Óbitos infantis em menor porcentagem do que a tipo II, com nítido aumento na mortalidade em pessoas de 50 anos ou mais. - Tipo 4 nível de saúde elevado. Indicam o melhor nível de saúde, com baixas proporções de óbitos infantis, pré-escolar e de jovens, com predomínio dos óbitos em pessoas de 50 anos ou mais.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-342681",
+      "number": "342681",
+      "sourceNumber": "342681",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em uma cidade de 50.000 habitantes, após anos sem ocorrência de determinada\ndoença, ocorreram 50 casos novos e houve 5 mortes\npor essa doença no mesmo período. No\nperíodo referido, os valores 10/100.000, 100/10.000 e 10% representam, respectivamente,\ncoeficientes de:",
+      "options": {
+        "A": "incidência, letalidade e mortalidade",
+        "B": "incidência, prevalência e mortalidade",
+        "C": "letalidade, prevalência e mortalidade",
+        "D": "mortalidade, incidência e letalidade"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão interessante para treinar alguns conceitos relacionados aos indicadores de saúde. Vamos aos valores apresentados (1) 10 100.000 - corresponde ao coeficiente de mortalidade específica pela doença. Esse indicador é calculado a partir da seguinte fórmula número de óbitos por tal doença no tempo X e no local Y população na mesma área e período. Aplicando os valores do enunciado, encontramos 5 50.000, que é o mesmo que dizer 10 100.000. (2) 100 10.000 - a Banca apontou essa fração como correspondente à incidência, mas isso não está correto. A incidência corresponde ao número de casos novos de tal doença no tempo X e no local Y população exposta da área no mesmo período. Levando em consideração os dados apresentados, temos uma incidência de 50 50.000. Simplificando esta relação, temos 10 10.000, e não 100 10.000. (3) 10% - corresponde à letalidade da doença, parâmetro definido pelo seguinte cálculo número de óbitos pela doença no tempo X e no local Y número de acometidos pela mesma doença na mesma área e período. Aplicando os valores do enunciado, encontramos 5 50, ou seja, 10%. Resposta da Banca letra D. Resposta do MEDGRUPO a questão deveria ser anulada.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-281824",
+      "number": "281824",
+      "sourceNumber": "281824",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Os óbitos ocorridos desde a idade gestacional em que o feto atinge 500 gramas de\npeso, equivalente a 22 semanas de gestação, até\n168 horas de vida extrauterina, relaciona-se ao\nseguinte indicador de saúde:",
+      "options": {
+        "A": "indicador de Swaroop e Uemura.",
+        "B": "índice de morbimortalidade na infância.",
+        "C": "curva de Nelson Moraes.",
+        "D": "taxa de mortalidade perinatal."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão conceitual A taxa de mortalidade perinatal compreende os óbitos ocorridos desde a idade gestacional em que o feto atinge 500g de peso, equivalente a 22 semanas de gestação, até 168 horas de vida extra-uterina, o que corresponde a sete dias completos de vida. Ou seja, exatamente como descrito na letra D. Vamos relembrar outros dois conceitos importantes A) Incorreta. O indicador de Swaroop e Uemura é calculado dividindo-se o número de óbitos em indivíduos com 50 anos ou mais pelo total de óbitos da população. C) Incorreta. A curva de Nelson Moraes é uma representação gráfica da mortalidade proporcional. O eixo x representa faixas etárias predeterminadas (menor que 1 ano 1 a 4 anos 5 a 19 anos 20 a 49 anos 50 anos ou mais) e o eixo y é a mortalidade proporcional para cada faixa etária representada no eixo x. A curva possui 4 tipos com formas características que correspondem a distintas condições de vida da população estudada N invertido, L (ou J invertido), V (ou U) e J. A letra B traz um conceito que não existe um cálculo específico.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-231980",
+      "number": "231980",
+      "sourceNumber": "231980",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Assinale a alternativa que contém o conceito correto de letalidade:",
+      "options": {
+        "A": "representa a probabilidade de morrer por uma dada doença, em um dado tempo e espaço",
+        "B": "é a relação entre o número de óbitos devido a uma determinada causa e o número de pessoas\nque foram acometidas pela doença em um dado\ntempo e espaço",
+        "C": "é a relação entre óbitos de maiores de 30 anos e os óbitos totais em um dado tempo e espaço",
+        "D": "é também conhecido como índice de Swaroop-Uemura",
+        "E": "é o quociente entre a frequência absoluta de óbitos e o número dos expostos ao risco de morrer\nem um dado tempo e espaço"
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Vamos relembrar qual é o conceito de LETALIDADE LETALIDADE ou fatalidade ou ainda, taxa de letalidade relaciona o número de óbitos por determinada causa e o número de pessoas que foram acometidas por tal doença. Esta relação nos dá idéia da gravidade do agravo, pois indica o percentual de pessoas que morreram por tal doença e pode informar sobre a qualidade da assistência médica oferecida à população. Ou seja, exatamente como descrito na letra B, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-218220",
+      "number": "218220",
+      "sourceNumber": "218220",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "Em obstetrícia, qual é o conceito de natimorto?",
+      "options": {
+        "A": "É a ausência de sinais de vida do feto ao nascer, a partir de 22 semanas de gestação.",
+        "B": "É quando após o parto, o recém-nascido vem a óbito nas primeiras 48 horas.",
+        "C": "É quando o recém-nascido, prematuro, antes de 37 semanas de gestação, vem a óbito nos\nprimeiros 30 dias após o parto.",
+        "D": "É quando o recém-nascido, a termo (entre 38 e 42 semanas), vem a óbito nos primeiros 30 dias\napós o parto."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "Questão simples e conceitual Natimortalidade é caracteriza pelo nascimento (expulsão) de recém-nascido sem sinais de vida após 20-22 semanas de gestação (varia de acordo com a bibliografia). A morte neonatal é caracteriza por morte de nascido vivo durante os primeiros 30 dias após o parto. Ou seja, o conceito de natimorto está corretamente descrito na letra A, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
+    },
+    {
+      "id": "med-preventiva-med-pre-02-218255",
+      "number": "218255",
+      "sourceNumber": "218255",
+      "collectionBlock": "med:med-preventiva-med-pre-02",
+      "collectionLabel": "MED · MED PRE 02",
+      "documentBlock": "",
+      "area": "Medicina Preventiva",
+      "specialty": "Medicina Preventiva",
+      "topic": "MED PRE 02",
+      "subtopic": "",
+      "stem": "A taxa de mortalidade infantil no Brasil ficou em 18 no ano de 2016. Isso é interpretado\ncomo:",
+      "options": {
+        "A": "18 óbitos até 28 dias de vida a cada 100 crianças nascidas vivas menor do que 1 ano de idade,\nconsiderando o ano de 2016.",
+        "B": "18 óbitos até 1 ano de idade a cada 100 crianças nascidas vivas menor do que 1 ano de idade,\nconsiderando o ano de 2016.",
+        "C": "18 óbitos até 1 ano de idade a cada 100 crianças nascidas vivas entre 1 e 5 anos de idade,\nconsiderando o ano de 2016.",
+        "D": "18 óbitos até 1 ano de idade a cada 1.000 crianças nascidas vivas menor do que 1 ano de\nidade, considerando o ano de 2016."
+      },
+      "answer": "",
+      "answerPending": true,
+      "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
+      "sourceLabel": "MED · MED PRE 02",
+      "images": [
+        "question_bank/media/medcurso/med-preventiva-med-pre-02/218255.png"
+      ],
+      "optionImages": {},
+      "commentImages": [],
+      "comment": "O coeficiente de mortalidade infantil mede a proporção de crianças que morrem antes do primeiro ano de vida em relação aos nascidos vivos, em determinada área e período, isto é, o risco dessa criança morrer. É calculado pela seguinte fórmula (Nº de óbitos em 1 ano em determinada área e período Nº de nascidos vivos na mesma área e período) x 1.000 Quando temos uma taxa de mortalidade infantil de 18 no ano de 2016, podemos interpretar como 18 óbitos até 1 ano de idade a cada 1.000 crianças nascidas vivas menor do que 1 ano de idade, considerando o ano de 2016 Exatamente como descrito na letra D, nosso gabarito.",
+      "tags": [
+        "Medicina Preventiva",
+        "MED PRE 02",
+        "MED"
+      ],
+      "answerSource": "missing"
     },
     {
       "id": "med-preventiva-med-pre-02-202692",
@@ -417,6 +2745,7 @@
         "D": "M=I/L."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -449,6 +2778,7 @@
         "D": "A Avaliação Multidimensional do Idoso (AMI), é um instrumento para identificar exclusivamente\nlimitações funcionais dos idosos."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -481,6 +2811,7 @@
         "D": "Mortalidade perinatal."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -513,6 +2844,7 @@
         "D": "mortalidade, incidência e letalidade"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -545,6 +2877,7 @@
         "D": "a proporção de um determinado evento em relação ao todo populacional estudado (pontual) e a\ncasos novos de um determinado evento em\nrelação ao todo populacional num determinado período\nde tempo"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -577,6 +2910,7 @@
         "D": "Febre maculosa, hepatites A, B e C, poliomielite e gonorreia."
       },
       "answer": "C",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -609,6 +2943,7 @@
         "D": "taxa de endemicidade."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -641,6 +2976,7 @@
         "D": "coeficientes de prevalência descrevem a ocorrência de casos novos da doença."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -673,6 +3009,7 @@
         "D": "Número de óbitos por diarreia em um ano/total de óbitos neste mesmo ano."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -705,6 +3042,7 @@
         "D": "3 casos para cada 10.000 habitantes, 0,04%."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -737,6 +3075,7 @@
         "D": "manutenção da incidência e manutenção da prevalência."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -769,6 +3108,7 @@
         "D": "mortalidade geral, mortalidade proporcional, letalidade."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -801,6 +3141,7 @@
         "D": "II e IV."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -833,6 +3174,7 @@
         "D": "o aumento das notificações compulsórias."
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -866,6 +3208,7 @@
         "E": "a mortalidade infantil compreende o total de soma dos óbitos ocorridos do período neonatal\nprecoce até os 2 anos de idade"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -898,6 +3241,7 @@
         "D": "Sinteticidade,de modo a poder abranger o efeito do menor número possível de fatores que\ninfluem no estado de saúde das coletividades."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -930,6 +3274,7 @@
         "D": "Coeficiente de natalidade inicia uma importante redução, ao mesmo tempo em que o coeficiente\nde mortalidade apresenta tendência decrescente. O\ncrescimento demográfico continua sendo\nrelativamente alto. O efeito mais importante é o envelhecimento populacional."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -962,6 +3307,7 @@
         "D": "da incidência."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -994,6 +3340,7 @@
         "D": "infantil."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -1027,6 +3374,7 @@
         "E": "rubéola, artrite reumatóide, malária, poliomielite e esquistossomose"
       },
       "answer": "A",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -1060,6 +3408,7 @@
         "E": "prevalência, mortalidade e letalidade"
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -1092,6 +3441,7 @@
         "D": "Um período relativamente longo, prevalecendo inicialmente a queda da mortalidade"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -1124,6 +3474,7 @@
         "D": "uso de drogas ilícitas"
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -1156,6 +3507,7 @@
         "D": "síndrome HELLP."
       },
       "answer": "B",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [],
@@ -1188,6 +3540,7 @@
         "D": "A taxa de câncer aumentou e a de mortalidade não diminuiu."
       },
       "answer": "D",
+      "answerPending": false,
       "source": "Preventiva/MED PRE 02/MED PRE 02.txt",
       "sourceLabel": "MED · MED PRE 02",
       "images": [
