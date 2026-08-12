@@ -27,14 +27,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Imagina que dentro do corpo existe uma 'fábrica' que produz o heme (a parte do sangue que carrega oxigênio). Na crise de porfiria, essa fábrica trava e forma substâncias tóxicas que atacam os nervos. Por isso a pessoa sente muita dor de barriga, dor nas costas e nas pernas, vomita, fica com o coração acelerado e a pressão alta — só que quando o médico aperta a barriga, está tudo normal (porque a dor vem dos nervos, não de um problema real no intestino). É como uma 'dor fantasma'. Isso é bem típico de mulher jovem, como na alternativa B. As outras opções são coisas bem diferentes: A é um quadro psiquiátrico, C parece uma doença inflamatória do intestino (com sinais de inflamação no exame), e D parece um problema do coração (angina) sem entupimento nas artérias.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Porfirias",
+        "Classificação das porfirias",
+        "Porfirias Hepáticas",
+        "Porfirias hepáticas agudas",
+        "Porfiria intermitente aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977805",
-      "ankiGuid": "NY3wKcIu$g"
+      "ankiGuid": "NY3wKcIu$g",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-apresenta-quadro13fd68bbcf/",
+        "sourceQuestionId": "4000183304",
+        "matchedAt": "2026-08-12T15:13:06.913Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f491906d84eeeee2",
@@ -60,14 +74,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Essa mulher tem a mesma 'fábrica quebrada' da questão anterior: fraqueza que sobe pelas pernas, dor de barriga, convulsão e um surto psicótico antigo — tudo bate com a porfiria aguda intermitente. Para confirmar o diagnóstico, o exame mais simples e rápido é pedir o porfobilinogênio (PBG) na urina, como pegar uma 'pista digital' que essa fábrica quebrada deixa na urina. As outras opções (remédio anti-inflamatório, exame de vírus no liquor, ou imunoglobulina) servem para outras doenças parecidas, como Guillain-Barré, mas não combinam com a história completa dela.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Porfirias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977806",
-      "ankiGuid": "E2Sg(<z(a^"
+      "ankiGuid": "E2Sg(<z(a^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-20-anos-idade838a60dc13/",
+        "sourceQuestionId": "4000140569",
+        "matchedAt": "2026-08-12T15:13:17.696Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab6a7b17ace1e807",
@@ -126,14 +150,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Olhando os exames desse paciente, dá pra ver que o ferro dele está baixo: ferro sérico baixo e saturação de transferrina de só 15%, quando o normal é 30–50%. É a mesma ideia da questão anterior — sem ferro, a eritropoietina não funciona direito, é como tentar construir uma casa sem tijolos. O residente errou porque começou o remédio (EPO) antes de repor o ferro que estava faltando.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Tratamento da anemia da doença renal crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977808",
-      "ankiGuid": "u#?b1[pe.("
+      "ankiGuid": "u#?b1[pe.(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/ambulatorio-residente123bac3febb/",
+        "sourceQuestionId": "4000101421",
+        "matchedAt": "2026-08-12T15:06:51.756Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fdba14ac197dc8bb",

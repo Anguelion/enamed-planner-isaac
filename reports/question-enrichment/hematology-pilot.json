@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-08-12T15:10:22.466Z",
+  "area": null,
+  "mode": "dry-run",
+  "allowAnswerChanges": false,
+  "inspected": 1,
+  "changed": 0,
+  "results": [
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-1f3d803499e7a59a",
+      "number": "1010b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/homem-78-anos-obeso3862dcbaf3/",
+      "sourceQuestionId": "4000169031",
+      "matchedAt": "2026-08-12T15:10:23.068Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "B",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da trombocitopenia induzida pela heparina (HIT). Conduta/resposta: suspender heparina e iniciar fondaparinux.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/homem-78-anos-obeso3862dcbaf3/"
+      ]
+    }
+  ]
+}
