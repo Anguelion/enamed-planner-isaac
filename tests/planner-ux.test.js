@@ -216,16 +216,32 @@ test('busca de materiais usa índice preparado, cache incremental e atraso de di
   assert.match(planner,/prepareMaterialSearchIndex\(\);\s*materialLibraryStatus\s*=/);
 });
 
-test('Missão centraliza somente a seleção nova e pesquisa em todos os blocos',()=>{
+test('Missão preserva a barra arrastada e pesquisa em todos os blocos',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
-  assert.match(planner,/ui\.scheduleBlockFocusPending=ui\.scheduleBlock/);
   assert.match(planner,/active\.offsetLeft-\(blockStrip\.clientWidth-active\.offsetWidth\)\/2/);
   assert.match(planner,/blockStrip\.addEventListener\('scroll',\(\)=>\{ ui\.scheduleBlockScrollLeft=blockStrip\.scrollLeft; \}/);
+  assert.match(planner,/ui\.scheduleBlockScrollLeft=blockStrip \? blockStrip\.scrollLeft : ui\.scheduleBlockScrollLeft/);
+  assert.doesNotMatch(planner,/ui\.scheduleBlockScrollLeft=blockStrip\?\.scrollLeft \|\| ui\.scheduleBlockScrollLeft/);
+  assert.doesNotMatch(planner,/ui\.scheduleBlockFocusPending=ui\.scheduleBlock;/);
   assert.doesNotMatch(planner,/if\(ui\.scheduleBlockPinned\) return;/);
   assert.match(planner,/if\(value\.trim\(\)&&ui\.scheduleBlock!=='Todos'\) \{[\s\S]*?ui\.scheduleBlock='Todos';[\s\S]*?ui\.scheduleBlockPinned=false;/);
   assert.match(planner,/ui\.scheduleWeekFocusPending=ui\.scheduleDay\|\|'Todos'/);
   assert.match(planner,/weekStrip\.addEventListener\('scroll'/);
+});
+
+test('Missão mostra claramente qual aula foi selecionada',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(planner,/scheduleSelectedId:''/);
+  assert.match(planner,/data-select-schedule-lesson=/);
+  assert.match(planner,/Aula selecionada/);
+  assert.match(planner,/schedule-selected-row/);
+  assert.match(planner,/ui\.scheduleSelectedId=selectedLesson\.dataset\.selectScheduleLesson/);
+  assert.match(css,/\.mission-selected-lesson\{/);
+  assert.match(css,/\.schedule-table tr\.schedule-selected-row>td\{/);
+  assert.match(css,/\.block-strip\{[^}]*scroll-snap-type:none/);
 });
 
 test('Missão permite favoritar aulas futuras e filtrá-las em todos os blocos',()=>{
