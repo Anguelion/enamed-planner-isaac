@@ -65,6 +65,13 @@ def clean_text(value: str) -> str:
     return value.strip()
 
 
+def clean_comment(value: str) -> str:
+    """Remove a quebra visual de linhas do PDF e mantém um parágrafo por questão."""
+    value = clean_text(value)
+    value = re.sub(r"^\s*Comentário:\s*", "", value, flags=re.I)
+    return re.sub(r"\s+", " ", value).strip()
+
+
 def parse_question(body: str) -> tuple[str, dict[str, str]]:
     matches = list(OPTION_HEADER.finditer(body))
     if len(matches) < 2:
@@ -127,12 +134,15 @@ def extract_answer(question: str, comment: str, options: dict[str, str]) -> tupl
     return "", "missing"
 
 
-def linked_images(txt_path: Path, question_id: str) -> list[Path]:
+def linked_images(txt_path: Path, question_id: str, image_index: dict[str, list[Path]]) -> list[Path]:
     image_dir = txt_path.parent / "Imagens"
-    if not image_dir.is_dir():
-        return []
     matcher = re.compile(rf"^{re.escape(question_id)}(?:$|[-_ (])", re.I)
-    return sorted(path for path in image_dir.iterdir() if path.is_file() and matcher.match(path.stem))
+    local = sorted(path for path in image_dir.iterdir() if path.is_file() and matcher.match(path.stem)) if image_dir.is_dir() else []
+    if local:
+        return local
+    # Algumas imagens foram guardadas no módulo errado. O ID continua sendo
+    # confiável, então procure em toda a coleção antes de considerar ausente.
+    return image_index.get(question_id, [])
 
 
 def update_index(entries: list[dict]) -> None:
@@ -170,6 +180,11 @@ def main() -> None:
         parser.error(f"Pasta não encontrada: {source_root}")
 
     txt_files = sorted(source_root.rglob("*.txt"), key=lambda path: (-len(path.relative_to(source_root).parts), str(path)))
+    image_extensions = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"}
+    image_index: dict[str, list[Path]] = {}
+    for image_path in source_root.rglob("*"):
+        if image_path.is_file() and image_path.suffix.lower() in image_extensions:
+            image_index.setdefault(image_path.stem, []).append(image_path)
     seen_by_specialty: dict[str, set[str]] = {}
     entries = []
     reports = []
@@ -213,7 +228,7 @@ def main() -> None:
                 skipped.append({"id": question_id, "reason": "anulada" if answer_source == "annulled" else "gabarito não identificado com segurança"})
                 continue
             images = []
-            for source_image in linked_images(txt_path, question_id):
+            for source_image in linked_images(txt_path, question_id, image_index):
                 media_dir.mkdir(parents=True, exist_ok=True)
                 target = media_dir / source_image.name
                 shutil.copy2(source_image, target)
@@ -238,7 +253,7 @@ def main() -> None:
                 "images": images,
                 "optionImages": {},
                 "commentImages": [],
-                "comment": clean_text(comments.get(question_id, "")),
+                "comment": clean_comment(comments.get(question_id, "")),
                 "tags": [specialty, topic, "Medcurso"],
                 "answerSource": answer_source,
             })
@@ -271,7 +286,20 @@ def main() -> None:
         })
 
     update_index(entries)
-    summary = {"source": str(source_root), "files": len(txt_files), "blocks": len(entries), **totals, "reports": reports}
+    question_ids_in_text = set()
+    for txt_path in txt_files:
+        raw = txt_path.read_text(encoding="utf-8-sig", errors="replace")
+        question_part = re.split(r"(?im)^\s*Gabarito\s*$", raw, maxsplit=1)[0]
+        question_ids_in_text.update(QUESTION_HEADER.findall(question_part))
+    summary = {
+        "source": str(source_root),
+        "files": len(txt_files),
+        "blocks": len(entries),
+        "sourceImages": sum(len(paths) for paths in image_index.values()),
+        "sourceImagesWithoutQuestion": sum(len(paths) for image_id, paths in image_index.items() if image_id not in question_ids_in_text),
+        **totals,
+        "reports": reports,
+    }
     (BANK_ROOT / "medcurso.import-report.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: value for key, value in summary.items() if key != "reports"}, ensure_ascii=False, indent=2))
 

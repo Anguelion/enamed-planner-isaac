@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v285';
+const CACHE_NAME = 'soqueromed-shell-v287';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -20,7 +20,7 @@ const APP_SHELL = [
   './assets/semiologia-aulas.js?v=20260802-3',
   './assets/semiologia.js?v=20260802-9',
   './assets/caso-do-dia.js?v=20260729-4',
-  './assets/planner.js?v=20260812-3',
+  './assets/planner.js?v=20260812-4',
   './assets/mascote-ia.js?v=20260802-10',
   './assets/dr-sotero.png',
   './assets/icons/icon-192.png',
@@ -28,7 +28,7 @@ const APP_SHELL = [
   './assets/icons/icon-512-maskable.png',
   './assets/icons/apple-touch-icon.png',
   './assets/icons/icon-32.png',
-  './question_bank/index.js?v=20260812161523',
+  './question_bank/index.js?v=20260812162912',
   './assets/rpg/element-fire.svg',
   './assets/rpg/element-water.svg',
   './assets/rpg/element-earth.svg',

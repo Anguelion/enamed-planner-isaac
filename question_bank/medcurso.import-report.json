@@ -2,13 +2,15 @@
   "source": "E:\\RESIDÊNCIA\\Questões\\todas questoes medgrupo\\Medcurso",
   "files": 53,
   "blocks": 53,
+  "sourceImages": 3285,
+  "sourceImagesWithoutQuestion": 2756,
   "found": 29149,
   "imported": 22891,
   "duplicates": 2567,
   "nonObjective": 706,
   "annulled": 240,
   "missingAnswer": 2745,
-  "images": 411,
+  "images": 439,
   "reports": [
     {
       "file": "Cardiologia\\CAR 1\\CAR 1.txt",

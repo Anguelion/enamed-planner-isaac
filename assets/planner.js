@@ -10496,6 +10496,13 @@ function renderCommentSectionContent(tab, text, highlights=[]) {
     }
   });
   if(!chunks.length) return renderHighlightedText(raw, highlights);
+  // Comentários comuns extraídos de PDF podem conter quebras puramente
+  // visuais. Sem rótulos estruturados, mostre o texto como um único
+  // parágrafo em vez de criar um cartão para cada linha.
+  if(chunks.every(chunk => chunk.kind === 'note')) {
+    const paragraph = chunks.map(chunk => chunk.text).join(' ').replace(/\s+/g, ' ').trim();
+    return `<div class="analysis-grid"><div class="analysis-chip note"><span>Comentário</span><p>${renderHighlightedText(paragraph, highlights)}</p></div></div>`;
+  }
   return `<div class="analysis-grid">${chunks.map(chunk => `<div class="analysis-chip ${escapeAttr(chunk.kind)}"><span>${escapeHtml(chunk.label)}</span><p>${renderHighlightedText(chunk.text, highlights)}</p></div>`).join('')}</div>`;
 }
 function renderHighlightedText(text, highlights=[], paragraphs=false, scope='') {
