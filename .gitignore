@@ -4,6 +4,7 @@ tmp/
 deferred_sync/
 tools/
 node_modules/
+.cloudflare-dist/
 video_library/media/
 *.mp4
 *.mkv
