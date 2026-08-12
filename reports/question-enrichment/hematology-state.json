@@ -30,7 +30,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ee73dc79a3dc3536": {
+      "number": "1007g",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T19:30:45.558Z",
+      "nextAttemptAt": "2026-08-19T19:30:45.558Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos-pos100daedafdf/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fbe8cf7cba33d0d0": {
+      "number": "1008g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T19:30:50.937Z",
+      "nextAttemptAt": "2026-08-19T19:30:50.937Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e74261a560c3fc31": {
+      "number": "1009g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T19:30:56.297Z",
+      "nextAttemptAt": "2026-08-19T19:30:56.297Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-b627d7697f0486f8": {
+      "number": "1010g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T19:31:02.188Z",
+      "nextAttemptAt": "2026-08-19T19:31:02.188Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7": {
+      "number": "1011g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T19:31:08.028Z",
+      "nextAttemptAt": "2026-08-19T19:31:08.028Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a": {
+      "number": "1012g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-12T19:31:13.985Z",
+      "nextAttemptAt": "2026-08-19T19:31:13.985Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-12T15:30:05.501Z"
+  "updatedAt": "2026-08-12T19:31:13.985Z"
 }

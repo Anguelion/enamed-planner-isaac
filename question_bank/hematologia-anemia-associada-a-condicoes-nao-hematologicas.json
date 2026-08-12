@@ -261,14 +261,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de uma cirurgia bariátrica, o corpo fica sensível a faltar vitamina — só que aqui o exame já mostrou que B1, B12 e ácido fólico estão normais, ou seja, não é isso. O que sobra é a porfiria aguda intermitente: dor de barriga forte, confusão, fraqueza nas pernas (tetraparesia) e urina escura, que é uma marca registrada da doença (o pigmento da porfiria escurece a urina). Como faltam outros achados (não é hematúria nem mioglobina na urina), dá pra descartar as demais opções.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Porfirias",
+        "Classificação das porfirias",
+        "Porfirias Hepáticas",
+        "Porfirias hepáticas agudas",
+        "Porfiria intermitente aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977811",
-      "ankiGuid": "OrH+ut))iq"
+      "ankiGuid": "OrH+ut))iq",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos-pos100daedafdf/",
+        "sourceQuestionId": "4000041340",
+        "matchedAt": "2026-08-12T19:30:45.557Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fbe8cf7cba33d0d0",
@@ -294,7 +308,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Essa senhora tem a creatinina um pouco alta (1,5), o que já mostra que o rim dela não está funcionando 100%. Quando o rim funciona mal, ele produz menos eritropoietina (o 'mensageiro' que avisa a medula óssea pra fazer sangue), e isso causa uma anemia bem 'comportadinha': normocítica e normocrômica, igual à dela. As outras causas (diabetes sozinho, falta de folato, sangue escondido nas fezes) são possíveis em teoria, mas o quadro combina mais com o rim, que é a causa mais comum aqui.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
@@ -328,7 +342,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na metemoglobinemia, o ferro do sangue 'enferruja' (muda de forma) e para de carregar oxigênio direito. O azul de metileno funciona como uma 'ferramenta de conserto' que ajuda a transformar esse ferro enferrujado de volta ao normal, fazendo o sangue voltar a carregar oxigênio. É por isso que ele é o antídoto certo aqui — as outras opções da lista são antídotos de outros venenos (paracetamol, chumbo, monóxido de carbono, mercúrio).",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
@@ -361,7 +375,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O motivo principal da anemia em quem tem doença renal crônica é bem simples: o rim doente produz menos eritropoietina, que é o 'recado' que manda a medula óssea fabricar hemácias. Sem esse recado, a produção de sangue cai. Não tem a ver com sangramento, nem com anticorpos, nem com a medula parada (aplasia) — é só a falta do hormônio mensageiro mesmo.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
@@ -395,7 +409,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Essa questão pede a alternativa ERRADA. Na porfiria aguda, o jejum é um forte inimigo, porque piora a crise (o corpo produz ainda mais substâncias tóxicas quando fica sem comer, principalmente sem carboidrato). Por isso, o certo é o oposto do que diz a alternativa C: alimentar bem o paciente, não deixá-lo em jejum. As outras frases (opioide pra dor, risco de hipertensão/doença renal a longo prazo, esteroides e álcool como gatilho, sintomas psiquiátricos) estão corretas, por isso não são a resposta.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
@@ -428,7 +442,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Metemoglobinemia dá uma cianose (pele arroxeada) que não melhora quando você dá oxigênio pro paciente — essa é a grande pista pra suspeitar dela, porque o problema não é falta de oxigênio no ar, é que a hemoglobina está com defeito e não consegue carregar o oxigênio direito. Pode acontecer por doença genética (de nascença) ou por contato com substâncias químicas. As outras alternativas trocam a explicação do ferro (invertem o que realmente acontece com o ferro férrico e ferroso) ou indicam um tratamento errado (oxigênio hiperbárico é pra intoxicação por monóxido de carbono, não pra metemoglobinemia).",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",

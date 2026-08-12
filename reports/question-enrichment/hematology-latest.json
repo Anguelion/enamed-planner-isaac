@@ -1,30 +1,79 @@
 {
-  "generatedAt": "2026-08-12T15:28:55.430Z",
+  "generatedAt": "2026-08-12T19:30:42.783Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
-  "inspected": 3,
-  "changed": 0,
+  "inspected": 6,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab6a7b17ace1e807",
-      "number": "1003g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ee73dc79a3dc3536",
+      "number": "1007g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos-pos100daedafdf/",
+      "sourceQuestionId": "4000041340",
+      "matchedAt": "2026-08-12T19:30:45.557Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Porfirias",
+        "Classificação das porfirias",
+        "Porfirias Hepáticas",
+        "Porfirias hepáticas agudas",
+        "Porfiria intermitente aguda"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Porfiria intermitente aguda. Conduta/resposta: Porfiria aguda intermitente.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-35-anos-pos100daedafdf/",
+        "https://med.estrategia.com/public/questoes/Mulher-submetida-ha-2925b0cbd42/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo104784871a8/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fbe8cf7cba33d0d0",
+      "number": "1008g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fdba14ac197dc8bb",
-      "number": "1005g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e74261a560c3fc31",
+      "number": "1009g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5f8dd1bb5890ea5b",
-      "number": "1006g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-b627d7697f0486f8",
+      "number": "1010g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7",
+      "number": "1011g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a",
+      "number": "1012g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": false,
       "status": "not_found",
