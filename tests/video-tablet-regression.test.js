@@ -21,3 +21,8 @@ test('camadas auxiliares nao cobrem os controles nativos em dispositivos de toqu
   assert.match(css, /@media\(pointer:coarse\)[\s\S]*?\.video-stage \.video-center-play,\.video-stage \.video-clean-frame-toggle\{display:none!important\}/);
   assert.match(css, /\.video-player:-webkit-full-screen/);
 });
+
+test('modo foco ocupa toda a largura em tablet paisagem', () => {
+  assert.match(css, /\.video-command-center \.video-layout\.video-focus-mode\{grid-template-columns:minmax\(0,1fr\)\}/);
+  assert.match(css, /\.video-command-center \.video-layout\.video-focus-mode>\.video-player-card\{grid-column:1\/-1;width:100%\}/);
+});
