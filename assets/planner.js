@@ -62,7 +62,7 @@ const MATERIAL_IMAGE_BUCKET = 'materials-images';
 // reais por acidente, a sincronizacao com a nuvem so roda em origens
 // conhecidas (o deploy real e o servidor offline oficial). Passe
 // ?allowSync=1 na URL para autorizar explicitamente um teste pontual.
-const KNOWN_SYNC_ORIGINS = ['https://enamed-planner-isaac.pages.dev', 'http://127.0.0.1:8765', 'http://localhost:8765'];
+const KNOWN_SYNC_ORIGINS = ['https://anguelion.github.io', 'https://enamed-planner-isaac.pages.dev', 'http://127.0.0.1:8765', 'http://localhost:8765'];
 const CLOUD_SYNC_ALLOWED = KNOWN_SYNC_ORIGINS.includes(location.origin) || new URLSearchParams(location.search).get('allowSync') === '1';
 const Gamification = window.ENAMED_GAMIFICATION || null;
 const PlannerUX = window.ENAMED_PLANNER_UX || null;

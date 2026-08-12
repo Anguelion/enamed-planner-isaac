@@ -175,4 +175,7 @@ test('CLOUD_SYNC_ALLOWED: bloqueia origens desconhecidas e libera as origens rea
 
   const online = loadPlannerSandbox({ origin: 'https://enamed-planner-isaac.pages.dev' });
   assert.equal(online.__getCloudSyncAllowed(), true, 'o deploy real deve continuar sincronizando');
+
+  const githubPages = loadPlannerSandbox({ origin: 'https://anguelion.github.io' });
+  assert.equal(githubPages.__getCloudSyncAllowed(), true, 'o deploy do GitHub Pages deve sincronizar');
 });
