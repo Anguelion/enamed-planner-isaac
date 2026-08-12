@@ -2336,6 +2336,39 @@ function loadQuestionBlockScript(src) {
     document.head.appendChild(script);
   });
 }
+const questionCommentLoadPromises = new Map();
+function hydrateQuestionBlockComments(block) {
+  const comments = window.ENAMED_LOCAL_QUESTION_COMMENTS?.[block];
+  if(!comments) return false;
+  let changed = false;
+  questionBank.forEach(question => {
+    if(String(question.collectionBlock) !== String(block) || !question.commentDeferred) return;
+    question.comment = normalizeMedicalTypography(comments[question.id] || '');
+    question.commentDeferred = false;
+    changed = true;
+  });
+  return changed;
+}
+function ensureQuestionCommentLoaded(question) {
+  if(!question?.commentDeferred || question.comment) return;
+  const block = question.collectionBlock;
+  if(hydrateQuestionBlockComments(block)) return;
+  const entry = window.ENAMED_LOCAL_QUESTION_INDEX?.blocks?.find(item => String(item.block) === String(block));
+  if(!entry?.commentsScript || questionCommentLoadPromises.has(block)) return;
+  const promise = new Promise(resolve => {
+    const script = document.createElement('script');
+    script.src = `question_bank/${entry.commentsScript}?v=${encodeURIComponent(window.ENAMED_LOCAL_QUESTION_INDEX?.generatedAt || QUESTION_BANK_ASSET_VERSION)}`;
+    script.dataset.questionComments = String(block);
+    script.onload = script.onerror = () => {
+      const changed = hydrateQuestionBlockComments(block);
+      questionCommentLoadPromises.delete(block);
+      resolve(changed);
+      if(changed && ui.tab === 'questoes') renderQuestionBank();
+    };
+    document.head.appendChild(script);
+  });
+  questionCommentLoadPromises.set(block, promise);
+}
 async function loadLocalQuestionBank() {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
@@ -10329,6 +10362,7 @@ function importQuestionDefaults() { return importDefaultFields(); }
 function renderQuestion(question, total) {
   const savedProgress = state.questionProgress[question.id] || {};
   const result = questionResult(question);
+  if(result && question.commentDeferred && !question.comment) ensureQuestionCommentLoaded(question);
   const linkedLesson = scheduleForQuestion(question);
   const isSpecialCollection = String(question.collectionBlock) === 'ineditas';
   const collectionLabel = question.collectionLabel || questionCollectionLabel(question.collectionBlock || '-');

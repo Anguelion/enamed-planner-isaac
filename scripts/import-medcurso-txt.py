@@ -262,11 +262,25 @@ def main() -> None:
             continue
         payload = {"block": block, "label": f"Medcurso · {topic}", "count": len(imported), "questions": imported}
         pretty = json.dumps(payload, ensure_ascii=False, indent=2)
-        compact = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+        browser_payload = {
+            **payload,
+            "questions": [
+                {**{key: value for key, value in question.items() if key != "comment"}, "commentDeferred": bool(question.get("comment"))}
+                for question in imported
+            ],
+        }
+        compact = json.dumps(browser_payload, ensure_ascii=False, separators=(",", ":"))
+        comments = {question["id"]: question.get("comment", "") for question in imported if question.get("comment")}
+        comments_name = f"{slug}.comments.js"
         (BANK_ROOT / f"{slug}.json").write_text(pretty + "\n", encoding="utf-8")
         (BANK_ROOT / f"{slug}.js").write_text(
             "window.ENAMED_LOCAL_QUESTION_BANK=window.ENAMED_LOCAL_QUESTION_BANK||{};"
             f"window.ENAMED_LOCAL_QUESTION_BANK[{json.dumps(block)}]={compact};\n",
+            encoding="utf-8",
+        )
+        (BANK_ROOT / comments_name).write_text(
+            "window.ENAMED_LOCAL_QUESTION_COMMENTS=window.ENAMED_LOCAL_QUESTION_COMMENTS||{};"
+            f"window.ENAMED_LOCAL_QUESTION_COMMENTS[{json.dumps(block)}]={json.dumps(comments, ensure_ascii=False, separators=(',', ':'))};\n",
             encoding="utf-8",
         )
         report_name = f"{slug}.import-report.json"
@@ -283,6 +297,7 @@ def main() -> None:
             "special": True,
             "sourceType": "medcurso",
             "report": report_name,
+            "commentsScript": comments_name,
         })
 
     update_index(entries)
