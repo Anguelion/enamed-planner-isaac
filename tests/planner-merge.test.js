@@ -129,6 +129,34 @@ test('merge do cronograma preserva as datas oficiais locais e incorpora apenas o
   assert.equal(merged.schedule[0].starred, true, 'a estrela mais recente deve sincronizar sem alterar a data oficial local');
 });
 
+test('sincronização entre abas nunca reduz os contadores de uma aula concluída', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  state.schedule = [{ id:'bloco-10-aula', block:10, lessonOrder:1, topic:'Indicadores de Saúde', area:'Saúde Coletiva', manualQ:10, manualFC:10, hours:2 }];
+  const staleTab = {
+    ...JSON.parse(JSON.stringify(state)),
+    schedule:[{ id:'id-antigo', block:10, lessonOrder:1, topic:'Indicadores de Saúde', area:'Saúde Coletiva', manualQ:10, manualFC:0, hours:2 }]
+  };
+
+  const recovered = ctx.applyCrossTabPlannerState(staleTab);
+  const lesson = ctx.__getState().schedule[0];
+  assert.equal(recovered, true, 'a aba com progresso maior precisa sinalizar que recuperou dados');
+  assert.equal(lesson.manualQ, 10);
+  assert.equal(lesson.manualFC, 10, 'uma aba antiga não pode zerar os flashcards que concluíram o bloco');
+  assert.equal(lesson.hours, 2);
+});
+
+test('cronograma versiona cada campo como o Anki: edição mais nova vence, legado sem carimbo usa o maior valor', () => {
+  const ctx = loadPlannerSandbox();
+  const remote = { schedule:[{ id:'s1', block:10, topic:'Aula', area:'Clínica Médica', manualQ:10, manualFC:0, hours:1, manualFCUpdatedAt:'2026-08-12T11:00:00.000Z' }] };
+  const local = { schedule:[{ id:'s1', block:10, topic:'Aula', area:'Clínica Médica', manualQ:4, manualFC:10, hours:2, manualFCUpdatedAt:'2026-08-12T10:00:00.000Z' }] };
+  const merged = ctx.mergePlannerActivityState(remote, local, true).schedule[0];
+  assert.equal(merged.manualQ, 10, 'sem carimbo, a migração preserva o maior contador legado');
+  assert.equal(merged.manualFC, 0, 'com carimbo, uma redução intencional mais recente deve vencer');
+  assert.equal(merged.hours, 2, 'horas legadas também não diminuem durante a migração');
+  assert.equal(merged.manualFCUpdatedAt, '2026-08-12T11:00:00.000Z');
+});
+
 test('isEditingTextField: detecta textarea e input de texto, ignora checkbox e nada focado', () => {
   const ctx = loadPlannerSandbox();
   ctx.document.activeElement = { tagName: 'TEXTAREA' };

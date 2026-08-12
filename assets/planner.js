@@ -1369,15 +1369,30 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   // todos os aparelhos; da nuvem entram apenas os campos de progresso.
   const remoteSchedule = new Map((remote.schedule || []).map(item => [scheduleIdRemap.get(item.id) || item.id, item]));
   const scheduleBase = Array.isArray(local.schedule) && local.schedule.length ? local.schedule : (remote.schedule || []);
+  const mergeProgressField = (localItem, remoteItem, field, updatedAtField) => {
+    const localTime = timestampOf(localItem?.[updatedAtField]);
+    const remoteTime = timestampOf(remoteItem?.[updatedAtField]);
+    if(localTime || remoteTime) return localTime >= remoteTime ? n(localItem?.[field]) : n(remoteItem?.[field]);
+    // Estados anteriores a esta versão não têm carimbo por campo. Nessa
+    // migração, conservar o maior valor evita transformar aula concluída em
+    // pendente; a partir da primeira edição, o carimbo permite reduzir de modo
+    // intencional sem uma cópia velha desfazer a alteração.
+    return Math.max(n(localItem?.[field]), n(remoteItem?.[field]));
+  };
   merged.schedule = scheduleBase.map(item => {
     const remoteItem = remoteSchedule.get(item.id);
     if(!remoteItem) return structuredClone(item);
+    const notesFromLocal = timestampOf(item.notesUpdatedAt) >= timestampOf(remoteItem.notesUpdatedAt);
     return {
       ...item,
-      manualQ: Math.max(n(item.manualQ ?? item.q), n(remoteItem.manualQ ?? remoteItem.q)),
-      manualFC: Math.max(n(item.manualFC ?? item.fc), n(remoteItem.manualFC ?? remoteItem.fc)),
-      hours: Math.max(n(item.hours), n(remoteItem.hours)),
-      notes: preferLocal ? (item.notes || remoteItem.notes || '') : (remoteItem.notes || item.notes || ''),
+      manualQ: mergeProgressField({...item,manualQ:item.manualQ??item.q}, {...remoteItem,manualQ:remoteItem.manualQ??remoteItem.q}, 'manualQ', 'manualQUpdatedAt'),
+      manualQUpdatedAt: timestampOf(item.manualQUpdatedAt) >= timestampOf(remoteItem.manualQUpdatedAt) ? (item.manualQUpdatedAt||'') : (remoteItem.manualQUpdatedAt||''),
+      manualFC: mergeProgressField({...item,manualFC:item.manualFC??item.fc}, {...remoteItem,manualFC:remoteItem.manualFC??remoteItem.fc}, 'manualFC', 'manualFCUpdatedAt'),
+      manualFCUpdatedAt: timestampOf(item.manualFCUpdatedAt) >= timestampOf(remoteItem.manualFCUpdatedAt) ? (item.manualFCUpdatedAt||'') : (remoteItem.manualFCUpdatedAt||''),
+      hours: mergeProgressField(item, remoteItem, 'hours', 'hoursUpdatedAt'),
+      hoursUpdatedAt: timestampOf(item.hoursUpdatedAt) >= timestampOf(remoteItem.hoursUpdatedAt) ? (item.hoursUpdatedAt||'') : (remoteItem.hoursUpdatedAt||''),
+      notes: item.notesUpdatedAt || remoteItem.notesUpdatedAt ? (notesFromLocal ? (item.notes||'') : (remoteItem.notes||'')) : (preferLocal ? (item.notes || remoteItem.notes || '') : (remoteItem.notes || item.notes || '')),
+      notesUpdatedAt: notesFromLocal ? (item.notesUpdatedAt||'') : (remoteItem.notesUpdatedAt||''),
       ...((timestampOf(item.starredUpdatedAt) >= timestampOf(remoteItem.starredUpdatedAt))
         ? {starred:Boolean(item.starred),starredUpdatedAt:item.starredUpdatedAt||''}
         : {starred:Boolean(remoteItem.starred),starredUpdatedAt:remoteItem.starredUpdatedAt||''})
@@ -1727,17 +1742,21 @@ async function pushCloudStateImpl({skipRemoteMerge=false}={}) {
   const pushRevision = cloudRevision;
   setSyncStatus('Enviando', 'busy');
   try {
-    if(!skipRemoteMerge) {
+    let savedRow = null;
+    let saveError = null;
+    for(let attempt = 0; attempt < (skipRemoteMerge ? 1 : 3); attempt += 1) {
       // A linha completa tem vários MB. Primeiro consulta só o carimbo (poucos
       // bytes) e baixa `data` apenas quando outro aparelho realmente gravou uma
-      // versão mais nova. Antes, cada push baixava o estado inteiro mesmo quando
-      // nada remoto havia mudado, consumindo a franquia mensal de egress.
+      // versão mais nova. O mesmo carimbo funciona como revisão: a atualização
+      // só é aceita se ninguém gravou entre nossa leitura e nossa escrita.
       const { data:remoteMeta, error:remoteMetaError } = await sbClient.from('planner_states').select('updated_at').eq('user_id', currentUser.id).maybeSingle();
+      if(remoteMetaError) { saveError = remoteMetaError; break; }
       const remoteAt = Date.parse(remoteMeta?.updated_at || '') || 0;
       if(remoteMeta?.updated_at) updateServerClockOffset(remoteMeta.updated_at);
-      if(!remoteMetaError && remoteAt > lastCloudSyncAt) {
+      if(!skipRemoteMerge && !remoteMetaError && remoteAt > lastCloudSyncAt) {
         const { data:remoteRow, error:remoteError } = await sbClient.from('planner_states').select('data, updated_at').eq('user_id', currentUser.id).maybeSingle();
-        if(!remoteError && remoteRow?.data) {
+        if(remoteError) { saveError = remoteError; break; }
+        if(remoteRow?.data) {
           if(remoteRow.updated_at) updateServerClockOffset(remoteRow.updated_at);
           state = mergePlannerActivityState(remoteRow.data, state, true);
           ensureDayLogs();
@@ -1746,16 +1765,23 @@ async function pushCloudStateImpl({skipRemoteMerge=false}={}) {
           writeLocalState();
         }
       }
+      const payload = { user_id: currentUser.id, data: state, updated_at: new Date().toISOString() };
+      const saveResult = !skipRemoteMerge && remoteMeta?.updated_at
+        ? await sbClient.from('planner_states').update(payload).eq('user_id', currentUser.id).eq('updated_at', remoteMeta.updated_at).select('updated_at').maybeSingle()
+        : await sbClient.from('planner_states').upsert(payload, { onConflict: 'user_id' }).select('updated_at').maybeSingle();
+      savedRow = saveResult.data;
+      saveError = saveResult.error;
+      if(saveError || savedRow) break;
+      // Outra instância venceu a corrida. Na próxima volta, força a leitura da
+      // revisão vencedora, mescla e tenta novamente — sem sobrescrever às cegas.
+      lastCloudSyncAt = 0;
+      recordSyncConflict('Concurrent cloud revision detected');
     }
-    const { data:savedRow, error } = await sbClient.from('planner_states').upsert({
-      user_id: currentUser.id,
-      data: state,
-      updated_at: new Date().toISOString()
-    }, { onConflict: 'user_id' }).select('updated_at').maybeSingle();
-    if(error) {
-      console.error('Falha ao sincronizar:', error);
+    if(!savedRow && !saveError) saveError = new Error('A revisão da nuvem mudou durante a sincronização.');
+    if(saveError) {
+      console.error('Falha ao sincronizar:', saveError);
       recordSyncTelemetry('push', true);
-      scheduleCloudRetry(error);
+      scheduleCloudRetry(saveError);
     } else {
       recordSyncTelemetry('push', false);
       cloudSyncRetryDelayMs = 0;
@@ -1792,6 +1818,45 @@ function isEditingTextField() {
   if(tag === 'INPUT') return !['checkbox','radio','button','submit','range','color','file'].includes((active.type || 'text').toLowerCase());
   return active.isContentEditable === true;
 }
+// Cada aba mantém uma cópia do estado em memória. Sem ouvir o localStorage,
+// uma aba antiga podia continuar aberta por horas e, ao salvar depois, trazer
+// de volta contadores menores (foi o que fez o Bloco 10 parecer incompleto).
+// A fusão existente já é monotônica para questões, flashcards manuais e horas;
+// aqui fazemos as abas convergirem antes que qualquer uma envie para a nuvem.
+let pendingCrossTabState = null;
+function applyCrossTabPlannerState(externalState) {
+  if(!externalState || typeof externalState !== 'object' || !Array.isArray(externalState.schedule)) return false;
+  const incomingPayload = JSON.stringify(externalState);
+  state = mergePlannerActivityState(externalState, state, true);
+  normalizeOfficialScheduleNames();
+  ensureRestartFromBlockTen();
+  ensureRestartFromCoagulopatia();
+  ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+  if(officialSchedule.length) applyOfficialSchedule();
+  invalidateActivityRenderCache();
+  const recoveredLocalProgress = JSON.stringify(state) !== incomingPayload;
+  if(recoveredLocalProgress) {
+    writeLocalState();
+    if(currentUser && sbClient && CLOUD_SYNC_ALLOWED) scheduleCloudSave({immediate:true});
+  }
+  render();
+  setSyncStatus(recoveredLocalProgress ? 'Pendente' : 'Atualizado', recoveredLocalProgress ? 'busy' : 'online', recoveredLocalProgress ? 'Progresso de outra aba preservado e aguardando envio' : 'Abas sincronizadas');
+  return recoveredLocalProgress;
+}
+window.addEventListener('storage', event => {
+  if(event.key !== STORAGE_KEY || !event.newValue) return;
+  try {
+    const externalState = JSON.parse(event.newValue);
+    if(isEditingTextField()) { pendingCrossTabState = externalState; return; }
+    applyCrossTabPlannerState(externalState);
+  } catch(error) { console.warn('Falha ao sincronizar outra aba do planner:', error); }
+});
+document.addEventListener('focusout', () => {
+  if(!pendingCrossTabState) return;
+  const externalState = pendingCrossTabState;
+  pendingCrossTabState = null;
+  setTimeout(() => applyCrossTabPlannerState(externalState), 0);
+});
 async function pullCloudState({ firstLogin=false }={}) {
   if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
   maintainDailyLocalBackup();
@@ -5169,9 +5234,10 @@ function bindScheduleInputs() {
     const item=state.schedule.find(entry=>entry.id===input.dataset.id);
     if(!item) return;
     const field=input.dataset.field;
-    if(field==='q') item.manualQ=Math.max(0,n(input.value)-questionStatsForSchedule(item.id).done);
-    else if(field==='fc') item.manualFC=Math.max(0,n(input.value)-flashcardStatsForSchedule(item.id).reviews);
-    else item[field]=field==='notes'?input.value:n(input.value);
+    const changedAt=nowIso();
+    if(field==='q') { item.manualQ=Math.max(0,n(input.value)-questionStatsForSchedule(item.id).done); item.manualQUpdatedAt=changedAt; }
+    else if(field==='fc') { item.manualFC=Math.max(0,n(input.value)-flashcardStatsForSchedule(item.id).reviews); item.manualFCUpdatedAt=changedAt; }
+    else { item[field]=field==='notes'?input.value:n(input.value); item[`${field}UpdatedAt`]=changedAt; }
     persist({render:false,invalidate:false});
     updateScheduleRow(item);
   });
