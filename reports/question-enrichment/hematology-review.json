@@ -37,7 +37,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: C. Assunto: Metemoglobinemia. Conduta/resposta: Meta-hemoglobulinemia.",
       "reviewedAt": "2026-08-13T07:57:46.094Z"
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8": {
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8",
+      "number": "1019g",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.8421052631578947,
+        "options": 1,
+        "combined": 0.8894736842105262
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-08-13T19:29:14.938Z"
     }
   },
-  "updatedAt": "2026-08-13T07:57:46.094Z"
+  "updatedAt": "2026-08-13T19:29:14.938Z"
 }

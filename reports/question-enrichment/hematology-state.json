@@ -150,7 +150,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/mecanismos-principais12b095c097/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8": {
+      "number": "1019g",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T19:29:14.938Z",
+      "nextAttemptAt": "2026-10-12T19:29:14.938Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6bc9ec3f88c214ae": {
+      "number": "1020g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T19:29:20.284Z",
+      "nextAttemptAt": "2026-08-20T19:29:20.284Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6a09b715e154aad5": {
+      "number": "1021g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T19:29:25.615Z",
+      "nextAttemptAt": "2026-08-20T19:29:25.615Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab66f4b58568129f": {
+      "number": "1022g",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T19:29:30.879Z",
+      "nextAttemptAt": "2026-08-20T19:29:30.879Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-48559cb40089942b": {
+      "number": "1001f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T19:29:36.112Z",
+      "nextAttemptAt": "2026-08-20T19:29:36.112Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-ae22a917abc41450": {
+      "number": "1002f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T19:29:41.827Z",
+      "nextAttemptAt": "2026-08-20T19:29:41.827Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-13T07:58:09.527Z"
+  "updatedAt": "2026-08-13T19:29:41.827Z"
 }

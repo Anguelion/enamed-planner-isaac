@@ -1,177 +1,65 @@
 {
-  "generatedAt": "2026-08-13T07:57:39.294Z",
+  "generatedAt": "2026-08-13T19:29:13.063Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 4,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e",
-      "number": "1013g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8",
+      "number": "1019g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": false,
       "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-20-anos-com73220f10de/"
+        "https://med.estrategia.com/public/questoes/anemia-insuficiencia9ea549e85/"
       ],
       "bestSimilarity": {
-        "stem": 1,
-        "options": 0.7090909090909091,
-        "combined": 0.9127272727272727
+        "stem": 0.8421052631578947,
+        "options": 1,
+        "combined": 0.8894736842105262
       }
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-0256b530b0870629",
-      "number": "1014g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6bc9ec3f88c214ae",
+      "number": "1020g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-e-admitido-P197bbbc08c/",
-      "sourceQuestionId": "4000075094",
-      "matchedAt": "2026-08-13T07:57:46.094Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.875,
-        "combined": 0.9624999999999999
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "C",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Metemoglobinemia"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Metemoglobinemia. Conduta/resposta: Meta-hemoglobulinemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-e-admitido-P197bbbc08c/"
-      ]
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-49dad23f79cec708",
-      "number": "1015g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6a09b715e154aad5",
+      "number": "1021g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/",
-      "sourceQuestionId": "4000123693",
-      "matchedAt": "2026-08-13T07:57:51.865Z",
-      "similarity": {
-        "stem": 0.975609756097561,
-        "options": 1,
-        "combined": 0.9829268292682927
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias",
-        "Anemias e condições não hematológicas",
-        "Anemias das endocrinopatias",
-        "Anemia do hipotireoidismo",
-        "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Hemoglobinopatias",
-        "Talassemias",
-        "Beta-talassemias",
-        "Fisiopatologia e apresentação da beta-talassemia"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia e apresentação da beta-talassemia. Conduta/resposta: III, II e I.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-8e725fe19cf465c6",
-      "number": "1016g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab66f4b58568129f",
+      "number": "1022g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Varias-doenc164b35a9ea/",
-      "sourceQuestionId": "4000094988",
-      "matchedAt": "2026-08-13T07:57:57.947Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias e condições não hematológicas",
-        "Anemias das endocrinopatias"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemias das endocrinopatias. Conduta/resposta: hipotireoidismo e hipopituitarismo.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Varias-doenc164b35a9ea/",
-        "https://med.estrategia.com/public/questoes/As-anemias45364e0403/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-05fbf683a2ee8be8",
-      "number": "1017g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Analisando-lamina32b7eebb71/",
-      "sourceQuestionId": "4000071663",
-      "matchedAt": "2026-08-13T07:58:03.625Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias e condições não hematológicas",
-        "Mielofitise"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Mielofitise. Conduta/resposta: Mieloftise.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Analisando-lamina32b7eebb71/"
-      ]
+      "id": "anki-hematologia-anemias-hemoliticas-48559cb40089942b",
+      "number": "1001f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-1df838838e56919d",
-      "number": "1018g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/mecanismos-principais12b095c097/",
-      "sourceQuestionId": "4000004861",
-      "matchedAt": "2026-08-13T07:58:09.527Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias e condições não hematológicas",
-        "Anemia da doença renal crônica"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Anemia da doença renal crônica. Conduta/resposta: eritropoietina e diminuição da sobrevida dos eritrócitos.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/mecanismos-principais12b095c097/"
-      ]
+      "id": "anki-hematologia-anemias-hemoliticas-ae22a917abc41450",
+      "number": "1002f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
