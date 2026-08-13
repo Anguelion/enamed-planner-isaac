@@ -476,7 +476,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Ela está tomando dapsona (remédio pra hanseníase), que é um clássico 'vilão' que pode causar metemoglobinemia. A pista mais importante aqui é que ela está roxa (cianose), mas a gasometria (que mede o oxigênio no sangue) está normal — ou seja, tem oxigênio suficiente, só que a hemoglobina dela não está conseguindo 'segurar' esse oxigênio direito por causa do remédio. Isso descarta embolia pulmonar e problemas de coração/pulmão, que dariam gasometria alterada.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
@@ -509,7 +509,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Essa pergunta quer saber qual opção NÃO costuma causar cianose periférica (pele arroxeada nas pontas dos dedos, por exemplo). Frio, doença vascular periférica (artérias entupidas) e a meta-hemoglobinemia realmente causam esse tipo de cianose. Já a trombose venosa profunda (TVP) costuma dar perna inchada, dolorida e quente — não é a causa clássica de cianose. Por isso a resposta certa é B.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
@@ -543,14 +543,36 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Aqui é tipo um joguinho de combinar: o paciente III tem HbA2 alta, que é a marca do traço talassêmico, e talassemia dá anemia MICROCÍTICA (hemácias pequenas). O paciente II tem artrite reumatoide, uma doença inflamatória crônica, e esse tipo de doença dá anemia NORMOCÍTICA (hemácias de tamanho normal), chamada de anemia de doença crônica. O paciente I tem TSH muito alto, ou seja, hipotireoidismo, que classicamente dá anemia MACROCÍTICA (hemácias grandes). Juntando na ordem pedida (micro, normo, macro), fica: III, II, I — a alternativa D.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Anemias e condições não hematológicas",
+        "Anemias das endocrinopatias",
+        "Anemia do hipotireoidismo",
+        "Anemias microcíticas",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977819",
-      "ankiGuid": "H~,!4Di>9="
+      "ankiGuid": "H~,!4Di>9=",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/",
+        "sourceQuestionId": "4000123693",
+        "matchedAt": "2026-08-13T07:57:51.865Z",
+        "confidence": 0.9829268292682927
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-8e725fe19cf465c6",
@@ -577,14 +599,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Hipotireoidismo e hipopituitarismo são os dois problemas hormonais mais classicamente ligados à anemia: menos hormônio da tireoide ou da hipófise significa menos estímulo pra medula óssea trabalhar direito. Diabetes e síndrome de Cushing não têm essa ligação tão forte e direta com anemia como essas duas.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemias das endocrinopatias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977820",
-      "ankiGuid": "L&Re.[x;oa"
+      "ankiGuid": "L&Re.[x;oa",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Varias-doenc164b35a9ea/",
+        "sourceQuestionId": "4000094988",
+        "matchedAt": "2026-08-13T07:57:57.947Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-05fbf683a2ee8be8",
@@ -611,14 +644,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando aparecem no sangue células que deveriam ficar só 'dentro' da medula óssea — formas jovens de glóbulos vermelhos e brancos que ainda não amadureceram —, é sinal de que algo está invadindo ou empurrando a medula, fazendo essas células saírem antes da hora, como se a 'fábrica' estivesse sendo invadida e expulsando trabalhadores incompletos pela porta errada. Isso se chama mieloftise, geralmente causada por câncer ou fibrose ocupando a medula óssea.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Mielofitise",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977821",
-      "ankiGuid": "hb0$5&r2@B"
+      "ankiGuid": "hb0$5&r2@B",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Analisando-lamina32b7eebb71/",
+        "sourceQuestionId": "4000071663",
+        "matchedAt": "2026-08-13T07:58:03.625Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-1df838838e56919d",
@@ -645,14 +689,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na insuficiência renal crônica, dois mecanismos se somam pra causar anemia: falta o 'recado' pra medula trabalhar (deficiência de eritropoietina) e as hemácias que já existem vivem menos tempo do que deveriam, porque o ambiente tóxico da uremia as desgasta mais rápido. Não é por falta de ferro nem de vitamina B12 isoladamente — esse é o erro das outras alternativas.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977822",
-      "ankiGuid": "Q>&[IbAak6"
+      "ankiGuid": "Q>&[IbAak6",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/mecanismos-principais12b095c097/",
+        "sourceQuestionId": "4000004861",
+        "matchedAt": "2026-08-13T07:58:09.527Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8",

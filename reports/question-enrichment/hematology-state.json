@@ -90,7 +90,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e": {
+      "number": "1013g",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T07:57:40.127Z",
+      "nextAttemptAt": "2026-10-12T07:57:40.127Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-0256b530b0870629": {
+      "number": "1014g",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T07:57:46.094Z",
+      "nextAttemptAt": "2027-08-13T07:57:46.094Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-e-admitido-P197bbbc08c/",
+      "localAnswer": "B",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-49dad23f79cec708": {
+      "number": "1015g",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T07:57:51.868Z",
+      "nextAttemptAt": "2026-08-20T07:57:51.868Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-8e725fe19cf465c6": {
+      "number": "1016g",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T07:57:57.947Z",
+      "nextAttemptAt": "2026-08-20T07:57:57.947Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Varias-doenc164b35a9ea/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-05fbf683a2ee8be8": {
+      "number": "1017g",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T07:58:03.625Z",
+      "nextAttemptAt": "2026-08-20T07:58:03.625Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Analisando-lamina32b7eebb71/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-1df838838e56919d": {
+      "number": "1018g",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-13T07:58:09.527Z",
+      "nextAttemptAt": "2026-08-20T07:58:09.527Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mecanismos-principais12b095c097/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-08-12T19:31:13.985Z"
+  "updatedAt": "2026-08-13T07:58:09.527Z"
 }

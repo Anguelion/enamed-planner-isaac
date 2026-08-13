@@ -1,4 +1,43 @@
 {
   "area": "Hematologia",
-  "items": {}
+  "items": {
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e": {
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e",
+      "number": "1013g",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 1,
+        "options": 0.7090909090909091,
+        "combined": 0.9127272727272727
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-08-13T07:57:40.127Z"
+    },
+    "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-0256b530b0870629": {
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-0256b530b0870629",
+      "number": "1014g",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "C",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-e-admitido-P197bbbc08c/",
+      "similarity": {
+        "stem": 1,
+        "options": 0.875,
+        "combined": 0.9624999999999999
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Metemoglobinemia"
+      ],
+      "suggestedComment": "Gabarito confirmado: C. Assunto: Metemoglobinemia. Conduta/resposta: Meta-hemoglobulinemia.",
+      "reviewedAt": "2026-08-13T07:57:46.094Z"
+    }
+  },
+  "updatedAt": "2026-08-13T07:57:46.094Z"
 }
