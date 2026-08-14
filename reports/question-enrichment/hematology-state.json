@@ -210,7 +210,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-c8dc4b5973f7fe9e": {
+      "number": "1003f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T07:54:19.931Z",
+      "nextAttemptAt": "2026-08-21T07:54:19.931Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-70-anos-com-HAS154799a199d/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-c0d6ba2eb16fd8a9": {
+      "number": "1004f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T07:54:25.851Z",
+      "nextAttemptAt": "2026-08-21T07:54:25.851Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/doenc-falciforme-e44b67e595b/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-cec4f9b7818f2c18": {
+      "number": "1005f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T07:54:31.634Z",
+      "nextAttemptAt": "2026-08-21T07:54:31.634Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-9-anos-sexo124ee8263fe/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-dfa5a375b2c85c58": {
+      "number": "1006f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T07:54:37.627Z",
+      "nextAttemptAt": "2026-08-21T07:54:37.627Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-falciforme813b5861c/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-5613f57b45c15ddf": {
+      "number": "1007f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T07:54:43.340Z",
+      "nextAttemptAt": "2026-08-21T07:54:43.340Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Hidroxiureia-sera123c505a77/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-acae31e954be7791": {
+      "number": "1008f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T07:54:49.467Z",
+      "nextAttemptAt": "2026-08-21T07:54:49.467Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-feminino-18167ee305bf6/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-08-13T19:29:41.827Z"
+  "updatedAt": "2026-08-14T07:54:49.467Z"
 }

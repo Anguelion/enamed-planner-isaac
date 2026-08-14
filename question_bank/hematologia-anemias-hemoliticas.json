@@ -95,14 +95,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Confusão mental, febre, plaquetas bem baixas, muitos esquizócitos (hemácias fragmentadas) no sangue, rim piorando — tudo isso, junto com o uso recente de clopidogrel (um remédio conhecido por, raramente, desencadear essa reação), forma o quadro clássico da púrpura trombocitopênica trombótica (PTT). A conduta é suspender o remédio suspeito e começar a plasmaférese com urgência, que retira do sangue o fator que está causando a formação de coágulos espalhados pelo corpo.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Fisiopatologia da púrpura trombocitopênica trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)",
+        "Tratamento da púrpura trombocitopênica trombótica (PTT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350344",
-      "ankiGuid": "gTa0di2_Ta"
+      "ankiGuid": "gTa0di2_Ta",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-70-anos-com-HAS154799a199d/",
+        "sourceQuestionId": "4000184840",
+        "matchedAt": "2026-08-14T07:54:19.930Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-c0d6ba2eb16fd8a9",
@@ -129,14 +143,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As crises de dor (crises álgicas) são o motivo mais comum de esses pacientes procurarem atendimento de emergência — são elas que mais trazem esses pacientes ao pronto-socorro no dia a dia, mesmo com todas as outras complicações graves que a doença pode causar.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Acidente vascular encefálico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350345",
-      "ankiGuid": "O{@yB&2Glg"
+      "ankiGuid": "O{@yB&2Glg",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/doenc-falciforme-e44b67e595b/",
+        "sourceQuestionId": "4000184489",
+        "matchedAt": "2026-08-14T07:54:25.851Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-cec4f9b7818f2c18",
@@ -162,14 +191,30 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Uma piora súbita de falta de ar e dor forte no peito e nas pernas, num paciente com anemia falciforme internado, levanta forte suspeita de síndrome torácica aguda ou crise vaso-oclusiva grave — a conduta certa é tratar a dor com força total (opioide), reavaliando rapidinho (30 minutos) se precisa de mais remédio, e repetir o raio-x do pulmão pra não perder o início de uma complicação pulmonar mais séria.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Crises álgicas",
+        "Manejo das crises álgicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350346",
-      "ankiGuid": "C)zqHl}`<r"
+      "ankiGuid": "C)zqHl}`<r",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-9-anos-sexo124ee8263fe/",
+        "sourceQuestionId": "4000184066",
+        "matchedAt": "2026-08-14T07:54:31.633Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-dfa5a375b2c85c58",
@@ -196,14 +241,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As crises de dor na anemia falciforme acontecem porque as hemácias em formato de foice entopem os vasinhos pequenos (vaso-oclusão), cortando o fluxo de sangue pra um pedaço do corpo — é a causa mais comum e mais característica de sofrimento desses pacientes.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350347",
-      "ankiGuid": "QF!aIjo>Qo"
+      "ankiGuid": "QF!aIjo>Qo",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-falciforme813b5861c/",
+        "sourceQuestionId": "4000183712",
+        "matchedAt": "2026-08-14T07:54:37.627Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-5613f57b45c15ddf",
@@ -230,14 +289,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A hidroxiureia é indicada pra pacientes com anemia falciforme que têm complicações graves e recorrentes, como necrose da cabeça do fêmur (por falta de sangue no osso) e síndrome torácica aguda — ela ajuda reduzindo a frequência e a gravidade dessas crises.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Hidroxiureia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350348",
-      "ankiGuid": "M>;hj.MHJu"
+      "ankiGuid": "M>;hj.MHJu",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Hidroxiureia-sera123c505a77/",
+        "sourceQuestionId": "4000183683",
+        "matchedAt": "2026-08-14T07:54:43.340Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-acae31e954be7791",
@@ -264,14 +336,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Diarreia com sangue seguida de anemia súbita, esquizócitos no sangue, plaquetas baixas, Coombs negativo e rim piorando (ureia e creatinina altas) numa criança pequena — é o retrato clássico da síndrome hemolítico-urêmica (SHU), causada por uma bactéria (geralmente E. coli) que produz uma toxina que ataca os vasos pequenos, os rins e destrói as hemácias ao mesmo tempo. Todos esses achados (microangiopatia trombótica, toxina Shiga, e as alterações extras de potássio/fósforo/acidose pela lesão renal) fazem parte do mesmo quadro.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Síndrome Hemolítico Urêmica (SHU)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350349",
-      "ankiGuid": "AG8Bzi*qx%"
+      "ankiGuid": "AG8Bzi*qx%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-feminino-18167ee305bf6/",
+        "sourceQuestionId": "4000183478",
+        "matchedAt": "2026-08-14T07:54:49.466Z",
+        "confidence": 0.9922509225092251
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-08ab6ee691f0f670",

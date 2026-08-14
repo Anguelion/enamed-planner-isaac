@@ -1,65 +1,199 @@
 {
-  "generatedAt": "2026-08-13T19:29:13.063Z",
+  "generatedAt": "2026-08-14T07:54:19.095Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8",
-      "number": "1019g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-insuficiencia9ea549e85/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.8421052631578947,
+      "id": "anki-hematologia-anemias-hemoliticas-c8dc4b5973f7fe9e",
+      "number": "1003f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-70-anos-com-HAS154799a199d/",
+      "sourceQuestionId": "4000184840",
+      "matchedAt": "2026-08-14T07:54:19.930Z",
+      "similarity": {
+        "stem": 1,
         "options": 1,
-        "combined": 0.8894736842105262
-      }
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Fisiopatologia da púrpura trombocitopênica trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)",
+        "Tratamento da púrpura trombocitopênica trombótica (PTT)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: púrpura trombocitopênica trombótica associada ao clopidogrel / suspender o clopidogrel e iniciar plasmaférese.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-70-anos-com-HAS154799a199d/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6bc9ec3f88c214ae",
-      "number": "1020g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6a09b715e154aad5",
-      "number": "1021g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab66f4b58568129f",
-      "number": "1022g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-48559cb40089942b",
-      "number": "1001f",
+      "id": "anki-hematologia-anemias-hemoliticas-c0d6ba2eb16fd8a9",
+      "number": "1004f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/doenc-falciforme-e44b67e595b/",
+      "sourceQuestionId": "4000184489",
+      "matchedAt": "2026-08-14T07:54:25.851Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Acidente vascular encefálico"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Acidente vascular encefálico. Conduta/resposta: As crises álgicas são a principal causa de atendimento médico nos serviços de emergência para esses pacientes.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/doenc-falciforme-e44b67e595b/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-ae22a917abc41450",
-      "number": "1002f",
+      "id": "anki-hematologia-anemias-hemoliticas-cec4f9b7818f2c18",
+      "number": "1005f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-9-anos-sexo124ee8263fe/",
+      "sourceQuestionId": "4000184066",
+      "matchedAt": "2026-08-14T07:54:31.633Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Crises álgicas",
+        "Manejo das crises álgicas"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Manejo das crises álgicas. Conduta/resposta: Iniciar opioide; reavaliar necessidade de nova dose em 30 minutos; repetir exame de imagem pulmonar.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-9-anos-sexo124ee8263fe/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-dfa5a375b2c85c58",
+      "number": "1006f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-falciforme813b5861c/",
+      "sourceQuestionId": "4000183712",
+      "matchedAt": "2026-08-14T07:54:37.627Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Crises álgicas. Conduta/resposta: As crises dolorosas são complicações frequentes e são consequência da vaso-oclusão por hemácias falcizadas.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/anemia-falciforme813b5861c/",
+        "https://med.estrategia.com/public/questoes/a-anemia-falciforme9973b5f0c/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-5613f57b45c15ddf",
+      "number": "1007f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Hidroxiureia-sera123c505a77/",
+      "sourceQuestionId": "4000183683",
+      "matchedAt": "2026-08-14T07:54:43.340Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Hidroxiureia"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Hidroxiureia. Conduta/resposta: Mulher, 24 anos, necrose asséptica de cabeça femural e síndrome torácica aguda.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Hidroxiureia-sera123c505a77/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-acae31e954be7791",
+      "number": "1008f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-feminino-18167ee305bf6/",
+      "sourceQuestionId": "4000183478",
+      "matchedAt": "2026-08-14T07:54:49.466Z",
+      "similarity": {
+        "stem": 0.988929889298893,
+        "options": 1,
+        "combined": 0.9922509225092251
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Síndrome Hemolítico Urêmica (SHU)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Síndrome Hemolítico Urêmica (SHU). Conduta/resposta: Todas as assertivas estão corretas.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Lactente-feminino-18167ee305bf6/",
+        "https://med.estrategia.com/public/questoes/Lactente-com-18-meses38e7a49c7c/"
+      ]
     }
   ]
 }
