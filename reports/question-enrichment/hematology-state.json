@@ -270,7 +270,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-feminino-18167ee305bf6/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-08ab6ee691f0f670": {
+      "number": "1009f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T19:17:41.975Z",
+      "nextAttemptAt": "2026-08-21T19:17:41.975Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-tres-anos-idade9375cd3554/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-684dd64745f115cf": {
+      "number": "1010f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T19:17:48.443Z",
+      "nextAttemptAt": "2026-08-21T19:17:48.443Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-portadora4899db2d9e/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-d00b3edca5a26ca7": {
+      "number": "1011f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T19:17:54.268Z",
+      "nextAttemptAt": "2026-08-21T19:17:54.268Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-24-anos71f5aa7c13/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-f790bb8069535e80": {
+      "number": "1012f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T19:18:01.027Z",
+      "nextAttemptAt": "2026-08-21T19:18:01.027Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-7-anos-e-levado679b478eee/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-10ac370e9718e8f0": {
+      "number": "1013f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T19:18:07.027Z",
+      "nextAttemptAt": "2026-08-21T19:18:07.027Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-2-anos-com140b98e740d/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-48f0e586529b6308": {
+      "number": "1014f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-14T19:18:13.990Z",
+      "nextAttemptAt": "2026-08-21T19:18:13.990Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-3-anos-idade-e62d63bc359/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-08-14T07:54:49.467Z"
+  "updatedAt": "2026-08-14T19:18:13.990Z"
 }

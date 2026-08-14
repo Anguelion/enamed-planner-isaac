@@ -381,14 +381,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia falciforme, com queda importante da hemoglobina (da basal de 8,5 pra 5,5) mas SEM febre e com reticulócitos BAIXOS (a medula parou de produzir temporariamente) — é o quadro clássico da crise aplástica, geralmente causada pelo parvovírus B19, que ataca diretamente as células jovens da medula. Como é autolimitada (a medula volta a funcionar sozinha depois de um tempo), o tratamento é de suporte: manter o paciente estável até os reticulócitos subirem de novo.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise aplásica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350350",
-      "ankiGuid": "nz/!OY=:/a"
+      "ankiGuid": "nz/!OY=:/a",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-tres-anos-idade9375cd3554/",
+        "sourceQuestionId": "4000183252",
+        "matchedAt": "2026-08-14T19:17:41.975Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-684dd64745f115cf",
@@ -414,14 +429,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea intensa que não melhora com opioide, febre persistente e inchaço no periósteo da tíbia (visto na ultrassonografia) numa adolescente com doença falciforme — quadro sugestivo de osteomielite. Além do Staphylococcus aureus (a causa mais comum de osteomielite em geral), a Salmonella é um agente clássico a ser lembrado especificamente em quem tem doença falciforme, por causa da vulnerabilidade especial que essa doença causa a esse tipo de bactéria.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Complicações ósseas da anemia falciforme",
+        "Osteomielite",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350351",
-      "ankiGuid": "KQkTMzdq1x"
+      "ankiGuid": "KQkTMzdq1x",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-portadora4899db2d9e/",
+        "sourceQuestionId": "4000183122",
+        "matchedAt": "2026-08-14T19:17:48.442Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-d00b3edca5a26ca7",
@@ -447,14 +477,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, taquicardia, baço aumentado, aftas na boca, anemia importante com reticulócitos altos e bilirrubina bem elevada (principalmente a indireta) — quadro clássico de anemia hemolítica. O exame que ajuda a confirmar se é uma causa autoimune é o teste da antiglobulina direta (Coombs direto), que detecta anticorpos grudados nas hemácias.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350352",
-      "ankiGuid": "chl-SLjPM("
+      "ankiGuid": "chl-SLjPM(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-24-anos71f5aa7c13/",
+        "sourceQuestionId": "4000182923",
+        "matchedAt": "2026-08-14T19:17:54.267Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-f790bb8069535e80",
@@ -480,14 +520,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na síndrome hemolítico-urêmica causada pela E. coli produtora de toxina Shiga, os antibióticos são contraindicados — na verdade, eles podem piorar o quadro, porque destroem a bactéria de forma tão rápida que liberam ainda mais toxina de uma vez, aumentando o risco de lesão renal e complicações.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Síndrome Hemolítico Urêmica (SHU)",
+        "Tratamento da síndrome hemolítico urêmica (SHU)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350353",
-      "ankiGuid": "bHJmw?j&&x"
+      "ankiGuid": "bHJmw?j&&x",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-7-anos-e-levado679b478eee/",
+        "sourceQuestionId": "4000182309",
+        "matchedAt": "2026-08-14T19:18:01.027Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-10ac370e9718e8f0",
@@ -513,14 +566,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia falciforme, febre, dor abdominal e nas pernas, palidez importante, hemoglobina bem abaixo do normal dela (2,9, vindo de uma basal de 8), baço bem aumentado (8cm!) e RETICULÓCITOS BEM ALTOS (17%, mostrando que a medula está tentando compensar bastante) — esse combo de baço enorme + reticulócitos altos é a marca do sequestro esplênico: o baço 'prende' um monte de sangue de repente, deixando pouco sangue circulando pro resto do corpo.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350354",
-      "ankiGuid": "p;SMmnhjV5"
+      "ankiGuid": "p;SMmnhjV5",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-2-anos-com140b98e740d/",
+        "sourceQuestionId": "4000182103",
+        "matchedAt": "2026-08-14T19:18:07.027Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-48f0e586529b6308",
@@ -546,14 +613,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Diarreia com sangue seguida de anemia hemolítica com destruição mecânica das hemácias e problema no rim — quadro de síndrome hemolítico-urêmica (SHU). Como o mecanismo não é autoimune (é uma destruição mecânica pelas toxinas/coágulos nos vasinhos), o Coombs direto costuma dar negativo, e as plaquetas ficam baixas (consumidas na formação desses microcoágulos espalhados).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Síndrome Hemolítico Urêmica (SHU)",
+        "Quadro clínico da síndrome hemolítico urêmica (SHU)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350355",
-      "ankiGuid": "P)/^Tn]xNr"
+      "ankiGuid": "P)/^Tn]xNr",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-3-anos-idade-e62d63bc359/",
+        "sourceQuestionId": "4000181711",
+        "matchedAt": "2026-08-14T19:18:13.990Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-3f94eabd3b06eaef",
