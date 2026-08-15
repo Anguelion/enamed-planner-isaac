@@ -330,7 +330,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-3-anos-idade-e62d63bc359/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-3f94eabd3b06eaef": {
+      "number": "1015f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T07:01:25.426Z",
+      "nextAttemptAt": "2026-08-22T07:01:25.426Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Joa-tem-1-ano-acordou5369b2048e/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-e960570a522d1d09": {
+      "number": "1016f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T07:01:32.053Z",
+      "nextAttemptAt": "2026-08-22T07:01:32.053Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/lactente-com-seis58ff26f45c/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-87bd1f9e6e883000": {
+      "number": "1017f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T07:01:37.872Z",
+      "nextAttemptAt": "2026-08-22T07:01:37.872Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-2139203f1150/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-18861527eed68e9f": {
+      "number": "1019f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T07:01:44.283Z",
+      "nextAttemptAt": "2026-08-22T07:01:44.283Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/menino-sete-anos-idade8955ae2a53/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-2d31c4f4a3ae200b": {
+      "number": "1020f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T07:01:50.221Z",
+      "nextAttemptAt": "2026-08-22T07:01:50.221Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-2-anos78492b8fba/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-4e3a46280c0f07b5": {
+      "number": "1021f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T07:01:56.524Z",
+      "nextAttemptAt": "2026-08-22T07:01:56.524Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-eutrofica-rac136671b53aa/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-08-14T19:18:13.990Z"
+  "updatedAt": "2026-08-15T07:01:56.524Z"
 }

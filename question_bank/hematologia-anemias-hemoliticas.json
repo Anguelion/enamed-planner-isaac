@@ -658,14 +658,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mãos inchadas e doloridas num bebê de 1 ano, sem exposição a nada estranho — é a dactilite, geralmente o PRIMEIRO sinal da anemia falciforme a aparecer na vida de uma criança, causada pela obstrução dos vasinhos pequenos das mãos pelas hemácias em formato de foice. O hematócrito baixo e os reticulócitos altos completam o quadro de anemia hemolítica.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350356",
-      "ankiGuid": "g~|CcDk,r{"
+      "ankiGuid": "g~|CcDk,r{",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Joa-tem-1-ano-acordou5369b2048e/",
+        "sourceQuestionId": "4000177551",
+        "matchedAt": "2026-08-15T07:01:25.425Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-e960570a522d1d09",
@@ -692,14 +705,31 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Inchaço e dor nas mãos e pés numa bebê pequena, com um irmão que já tem diagnóstico conhecido de doença falciforme (usa hidroxiureia) — a suspeita é de que ela também tenha a doença, se manifestando pela primeira vez como dactilite. O exame que confirma o diagnóstico é a eletroforese de hemoglobinas, que identifica o tipo de hemoglobina (S, presente na doença falciforme) que a criança tem.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Fisiopatologia da anemia falciforme",
+        "Herança genética das hemoglobinopatias S",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Dactilite falcêmica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350357",
-      "ankiGuid": "p$4axGP6o1"
+      "ankiGuid": "p$4axGP6o1",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/lactente-com-seis58ff26f45c/",
+        "sourceQuestionId": "4000170607",
+        "matchedAt": "2026-08-15T07:01:32.052Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-87bd1f9e6e883000",
@@ -725,14 +755,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia com RDW alto (hemácias de tamanhos variados, comum quando há muitos reticulócitos jovens circulando) e Coombs direto positivo — é o quadro de anemia hemolítica autoimune. Um dos achados esperados nesse caso é a reticulocitose: a medula tentando compensar a destruição das hemácias produzindo mais células novas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350358",
-      "ankiGuid": "v{oC$Og:=g"
+      "ankiGuid": "v{oC$Og:=g",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-2139203f1150/",
+        "sourceQuestionId": "4000168346",
+        "matchedAt": "2026-08-15T07:01:37.871Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-18861527eed68e9f",
@@ -759,14 +801,31 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia falciforme, febre, dor no peito, falta de ar e infiltrado pulmonar bilateral no raio-x — síndrome torácica aguda confirmada. Entre as opções de tratamento, a espirometria de incentivo (exercícios respiratórios que ajudam a expandir bem os pulmões) tem evidência clara de benefício, ajudando a prevenir a piora do quadro pulmonar.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Clínica Médica",
+        "Infectologia",
+        "COVID 19",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350360",
-      "ankiGuid": "rZk)T!Vnr."
+      "ankiGuid": "rZk)T!Vnr.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/menino-sete-anos-idade8955ae2a53/",
+        "sourceQuestionId": "4000166152",
+        "matchedAt": "2026-08-15T07:01:44.282Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-2d31c4f4a3ae200b",
@@ -792,14 +851,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre súbita, dor abdominal intensa, principalmente no quadrante superior esquerdo (onde fica o baço), com o baço palpável até a altura do umbigo — bem maior do que o esperado — é o quadro clássico do sequestro esplênico, uma emergência em que o baço 'prende' de repente uma grande quantidade de sangue, deixando o paciente anêmico rapidamente. A conduta é internar, monitorar de perto e já preparar sangue pra transfusão, já que a queda da hemoglobina pode ser muito rápida e grave.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350361",
-      "ankiGuid": "j3ojDQ(uma"
+      "ankiGuid": "j3ojDQ(uma",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-2-anos78492b8fba/",
+        "sourceQuestionId": "4000164980",
+        "matchedAt": "2026-08-15T07:01:50.220Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-4e3a46280c0f07b5",
@@ -825,14 +898,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Diarreia com sangue, urinando menos, edema, anemia grave (Hb 6) com reticulocitose e função renal piorando (ureia/creatinina altos) — quadro clássico de síndrome hemolítico-urêmica. Diante da anemia grave e sintomática, o tratamento indicado nesse momento é a transfusão de concentrado de hemácias, pra corrigir a anemia enquanto o resto do quadro é tratado.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Síndrome Hemolítico Urêmica (SHU)",
+        "Quadro clínico da síndrome hemolítico urêmica (SHU)",
+        "Tratamento da síndrome hemolítico urêmica (SHU)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350362",
-      "ankiGuid": "fpQ8|dPhe:"
+      "ankiGuid": "fpQ8|dPhe:",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-eutrofica-rac136671b53aa/",
+        "sourceQuestionId": "4000164306",
+        "matchedAt": "2026-08-15T07:01:56.524Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-afc7e8c96174c930",
