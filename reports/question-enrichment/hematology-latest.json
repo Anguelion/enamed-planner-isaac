@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T07:01:24.027Z",
+  "generatedAt": "2026-08-15T18:50:47.616Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,45 +7,45 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-3f94eabd3b06eaef",
-      "number": "1015f",
+      "id": "anki-hematologia-anemias-hemoliticas-afc7e8c96174c930",
+      "number": "1022f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Joa-tem-1-ano-acordou5369b2048e/",
-      "sourceQuestionId": "4000177551",
-      "matchedAt": "2026-08-15T07:01:25.425Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-2-anos-idade12140c1529f/",
+      "sourceQuestionId": "4000146052",
+      "matchedAt": "2026-08-15T18:50:49.024Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
-        "Pediatria",
         "Clínica Médica",
         "Hematologia",
         "Hemoglobinopatias",
         "Anemia falciforme",
-        "Quadro clínico da anemia falciforme"
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: anemia falciforme.",
+      "comment": "Gabarito confirmado: D. Assunto: Crise de sequestro esplênico. Conduta/resposta: Sequestro esplênico",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Joa-tem-1-ano-acordou5369b2048e/",
-        "https://med.estrategia.com/public/questoes/Joa-tem-1-ano-acordou565c42fccc/"
+        "https://med.estrategia.com/public/questoes/Menino-2-anos-idade12140c1529f/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-e960570a522d1d09",
-      "number": "1016f",
+      "id": "anki-hematologia-anemias-hemoliticas-b4272883460dba07",
+      "number": "1023f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/lactente-com-seis58ff26f45c/",
-      "sourceQuestionId": "4000170607",
-      "matchedAt": "2026-08-15T07:01:32.052Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Renata-esta-primeira594739d515/",
+      "sourceQuestionId": "4000146051",
+      "matchedAt": "2026-08-15T18:50:55.706Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -59,71 +59,69 @@
         "Hematologia",
         "Hemoglobinopatias",
         "Anemia falciforme",
-        "Fisiopatologia da anemia falciforme",
-        "Herança genética das hemoglobinopatias S",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Crises álgicas",
-        "Dactilite falcêmica"
+        "Introdução à anemia falciforme",
+        "Quadro clínico da anemia falciforme"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Dactilite falcêmica. Conduta/resposta: eletroforese de hemoglobinas",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: Doença falciforme",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/lactente-com-seis58ff26f45c/",
-        "https://med.estrategia.com/public/questoes/lactente-6-meses-idade14328833b0f/"
+        "https://med.estrategia.com/public/questoes/Renata-esta-primeira594739d515/",
+        "https://med.estrategia.com/public/questoes/primeira-consulta-com468dd35958/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-87bd1f9e6e883000",
-      "number": "1017f",
+      "id": "anki-hematologia-anemias-hemoliticas-efd7bd758df916dc",
+      "number": "1024f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-2139203f1150/",
-      "sourceQuestionId": "4000168346",
-      "matchedAt": "2026-08-15T07:01:37.871Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-sete-anos17184a05e02/",
+      "sourceQuestionId": "4000145905",
+      "matchedAt": "2026-08-15T18:51:01.591Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Introdução à hemólise",
-        "Anemias hemolíticas autoimunes (AHAI)",
-        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico das anemias hemolíticas autoimunes (AHAI). Conduta/resposta: Reticulocitose.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-2139203f1150/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-18861527eed68e9f",
-      "number": "1019f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/menino-sete-anos-idade8955ae2a53/",
-      "sourceQuestionId": "4000166152",
-      "matchedAt": "2026-08-15T07:01:44.282Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Pediatria",
         "Clínica Médica",
-        "Infectologia",
-        "COVID 19",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Suporte transfusional na anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: síndrome torácica aguda; analgesia, ceftriaxone, claritromicina e transfusão de concentrado de hemácias",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-sete-anos17184a05e02/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-24617c4eceba0689",
+      "number": "1025f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-9-anos-pardo98caca1cf6/",
+      "sourceQuestionId": "4000145695",
+      "matchedAt": "2026-08-15T18:51:07.962Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Pediatria",
+        "Clínica Médica",
         "Hematologia",
         "Hemoglobinopatias",
         "Anemia falciforme",
@@ -131,21 +129,21 @@
         "Complicações agudas da anemia falciforme",
         "Síndrome torácica aguda"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Síndrome torácica aguda. Conduta/resposta: Existe evidência clara de benefício com a espirometria de incentivo.",
+      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: A síndrome torácica aguda é uma hipótese diagnóstica e o paciente deve ser internado.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/menino-sete-anos-idade8955ae2a53/",
-        "https://med.estrategia.com/public/questoes/paciente-sete-anos17184a05e02/"
+        "https://med.estrategia.com/public/questoes/Paciente-9-anos-pardo98caca1cf6/",
+        "https://med.estrategia.com/public/questoes/Paciente-9-anos-da43793bdfdd/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-2d31c4f4a3ae200b",
-      "number": "1020f",
+      "id": "anki-hematologia-anemias-hemoliticas-6fbe62163b5e8936",
+      "number": "1026f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-2-anos78492b8fba/",
-      "sourceQuestionId": "4000164980",
-      "matchedAt": "2026-08-15T07:01:50.220Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-crise-aplastica18400633d1/",
+      "sourceQuestionId": "4000145565",
+      "matchedAt": "2026-08-15T18:51:13.883Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -161,43 +159,42 @@
         "Anemia falciforme",
         "Quadro clínico da anemia falciforme",
         "Complicações agudas da anemia falciforme",
-        "Crise de sequestro esplênico"
+        "Crise aplásica"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Crise de sequestro esplênico. Conduta/resposta: sequestro esplênico / internação; monitorização hemodinâmica; solicitação de hemograma, reticulócitos e amostra de sangue para possível hemotransfusão",
+      "comment": "Gabarito confirmado: A. Assunto: Crise aplásica. Conduta/resposta: Apesar de a recuperação ser espontânea, a criança deve ser internada, pois não há como prever até que valor a queda da hemoglobina vai atingir",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-2-anos78492b8fba/"
+        "https://med.estrategia.com/public/questoes/Qual-crise-aplastica18400633d1/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-4e3a46280c0f07b5",
-      "number": "1021f",
+      "id": "anki-hematologia-anemias-hemoliticas-8fb8d63abbf06fb3",
+      "number": "1027f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-eutrofica-rac136671b53aa/",
-      "sourceQuestionId": "4000164306",
-      "matchedAt": "2026-08-15T07:01:56.524Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-12-anos285cb520b4/",
+      "sourceQuestionId": "4000144896",
+      "matchedAt": "2026-08-15T18:51:20.402Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias hemolíticas",
-        "Anemias Microangiopáticas",
-        "Síndrome Hemolítico Urêmica (SHU)",
-        "Quadro clínico da síndrome hemolítico urêmica (SHU)",
-        "Tratamento da síndrome hemolítico urêmica (SHU)"
+        "Anemias hemolíticas por defeitos de membrana",
+        "Esferocitose hereditária",
+        "Tratamento da esferocitose hereditária"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Tratamento da síndrome hemolítico urêmica (SHU). Conduta/resposta: Concentrado de hemácias.",
+      "comment": "Gabarito confirmado: B. Assunto: Tratamento da esferocitose hereditária. Conduta/resposta: Esplenectomia;",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Crianc-eutrofica-rac136671b53aa/",
-        "https://med.estrategia.com/public/questoes/Crianc-eutrofica-negra116153098ee/"
+        "https://med.estrategia.com/public/questoes/Paciente-12-anos285cb520b4/",
+        "https://med.estrategia.com/public/questoes/Paciente-encaminhado24b279ed99/"
       ]
     }
   ]

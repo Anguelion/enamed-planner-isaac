@@ -946,14 +946,28 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia falciforme, palidez, barriga inchada e menos urina, baço bem maior que o normal dela (6cm, contra os 2cm habituais) e sinais de choque começando (enchimento capilar lento, sonolência) — é o quadro clássico do sequestro esplênico: o baço 'prende' um volume grande de sangue de repente, causando queda rápida e perigosa da hemoglobina circulante.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350363",
-      "ankiGuid": "OU>nvnx5Y0"
+      "ankiGuid": "OU>nvnx5Y0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-2-anos-idade12140c1529f/",
+        "sourceQuestionId": "4000146052",
+        "matchedAt": "2026-08-15T18:50:49.024Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-b4272883460dba07",
@@ -979,14 +993,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No teste do pezinho, quando aparecem só hemoglobina F (fetal, normal no bebê) e S (falciforme), SEM a hemoglobina A normal, isso indica que a criança tem doença falciforme de verdade (forma homozigota SS ou parecida) — diferente do traço falciforme, em que a hemoglobina A normal também estaria presente (padrão FAS).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Introdução à anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350364",
-      "ankiGuid": "i5]agO&nEZ"
+      "ankiGuid": "i5]agO&nEZ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Renata-esta-primeira594739d515/",
+        "sourceQuestionId": "4000146051",
+        "matchedAt": "2026-08-15T18:50:55.706Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-efd7bd758df916dc",
@@ -1015,14 +1042,31 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor no peito, febre, e no exame achados de condensação pulmonar (crepitação, sopro tubário) numa criança com anemia falciforme já em tratamento com hidroxiureia — é a síndrome torácica aguda. Como ela está com hipoxemia (saturação de 91%) e anemia importante (Hb 6), a conduta certa combina analgesia, antibióticos que cobrem tanto bactérias comuns quanto atípicas (ceftriaxone + claritromicina), e transfusão de concentrado de hemácias.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Suporte transfusional na anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350365",
-      "ankiGuid": "sNA87Dr^2x"
+      "ankiGuid": "sNA87Dr^2x",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-sete-anos17184a05e02/",
+        "sourceQuestionId": "4000145905",
+        "matchedAt": "2026-08-15T18:51:01.591Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-24617c4eceba0689",
@@ -1049,14 +1093,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre, tosse e agora dor torácica numa criança com anemia falciforme e histórico de crises dolorosas — é preciso pensar na síndrome torácica aguda como hipótese, e diante dessa suspeita, a criança precisa ser internada pra investigação e tratamento adequados, não tratada em casa.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350366",
-      "ankiGuid": "ma^nP_%,i&"
+      "ankiGuid": "ma^nP_%,i&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-9-anos-pardo98caca1cf6/",
+        "sourceQuestionId": "4000145695",
+        "matchedAt": "2026-08-15T18:51:07.962Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-6fbe62163b5e8936",
@@ -1082,14 +1141,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A crise aplástica na anemia falciforme (geralmente causada pelo parvovírus B19) tem recuperação espontânea na maioria dos casos, mas como não dá pra prever até que ponto a hemoglobina vai cair antes de melhorar, a criança precisa ficar internada em observação por segurança.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise aplásica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350367",
-      "ankiGuid": "DG72rjFOv*"
+      "ankiGuid": "DG72rjFOv*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-crise-aplastica18400633d1/",
+        "sourceQuestionId": "4000145565",
+        "matchedAt": "2026-08-15T18:51:13.883Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-8fb8d63abbf06fb3",
@@ -1116,14 +1189,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na esferocitose hereditária, o problema está na membrana da hemácia (que fica em formato de bola, não de disco), fazendo com que o baço destrua essas células defeituosas mais rápido do que deveria. Retirar o baço (esplenectomia) resolve o problema, já que sem ele as hemácias defeituosas param de ser destruídas precocemente, mesmo continuando com a forma alterada.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas por defeitos de membrana",
+        "Esferocitose hereditária",
+        "Tratamento da esferocitose hereditária",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350368",
-      "ankiGuid": "p_VxG!)l2y"
+      "ankiGuid": "p_VxG!)l2y",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-12-anos285cb520b4/",
+        "sourceQuestionId": "4000144896",
+        "matchedAt": "2026-08-15T18:51:20.402Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-3c51b7803fa1e528",

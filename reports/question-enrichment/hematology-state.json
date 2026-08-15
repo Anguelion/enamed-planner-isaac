@@ -390,7 +390,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-eutrofica-rac136671b53aa/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-afc7e8c96174c930": {
+      "number": "1022f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T18:50:49.025Z",
+      "nextAttemptAt": "2026-08-22T18:50:49.025Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-2-anos-idade12140c1529f/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-b4272883460dba07": {
+      "number": "1023f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T18:50:55.706Z",
+      "nextAttemptAt": "2026-08-22T18:50:55.706Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Renata-esta-primeira594739d515/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-efd7bd758df916dc": {
+      "number": "1024f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T18:51:01.592Z",
+      "nextAttemptAt": "2026-08-22T18:51:01.592Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-sete-anos17184a05e02/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-24617c4eceba0689": {
+      "number": "1025f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T18:51:07.963Z",
+      "nextAttemptAt": "2026-08-22T18:51:07.963Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-9-anos-pardo98caca1cf6/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-6fbe62163b5e8936": {
+      "number": "1026f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T18:51:13.883Z",
+      "nextAttemptAt": "2026-08-22T18:51:13.883Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-crise-aplastica18400633d1/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-8fb8d63abbf06fb3": {
+      "number": "1027f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-15T18:51:20.403Z",
+      "nextAttemptAt": "2026-08-22T18:51:20.403Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-12-anos285cb520b4/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-08-15T07:01:56.524Z"
+  "updatedAt": "2026-08-15T18:51:20.403Z"
 }
