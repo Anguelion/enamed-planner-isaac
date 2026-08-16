@@ -1234,14 +1234,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Um joguinho de combinar cada doença com seu tipo de defeito: a doença falciforme tem um problema na QUALIDADE da cadeia de hemoglobina (a hemoglobina S é diferente da normal); a deficiência de G6PD é um problema de ENZIMA; a talassemia é um problema na QUANTIDADE de uma das cadeias de hemoglobina produzida; e a esferocitose é um problema na MEMBRANA da hemácia. Sequência: 4-1-3-2.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Classificação das anemias hemolíticas quanto à sua relação com as hemácias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350369",
-      "ankiGuid": "IY:IBchr,|"
+      "ankiGuid": "IY:IBchr,|",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/patologias-com-defeito655693240e/",
+        "sourceQuestionId": "4000144547",
+        "matchedAt": "2026-08-16T07:03:01.534Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-4acc431bfa7ecf9f",
@@ -1267,14 +1278,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quem tem só o traço falciforme (herda a hemoglobina S de um dos pais, mas tem a hemoglobina A normal do outro) costuma ser completamente assintomático, com hemograma normal na maioria das vezes — bem diferente de quem tem a doença falciforme de verdade (herda a hemoglobina S dos dois pais).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Fisiopatologia da anemia falciforme",
+        "Traço falcêmico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350370",
-      "ankiGuid": "p;dc3X,JlU"
+      "ankiGuid": "p;dc3X,JlU",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/trac-falcemico4a17c28e6/",
+        "sourceQuestionId": "4000144546",
+        "matchedAt": "2026-08-16T07:03:07.507Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-4035f53406640284",
@@ -1302,14 +1326,26 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre, confusão mental, petéquias, anemia com plaquetas bem baixas, muitos reticulócitos e esquizócitos na lâmina, com função renal ainda preservada — quadro clássico da púrpura trombocitopênica trombótica (PTT), que pode aparecer depois de uma infecção (diarreia/faringite) que já resolveu. O tratamento de escolha é a plasmaférese, que remove do sangue o fator responsável pela formação excessiva de coágulos.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Tratamento da púrpura trombocitopênica trombótica (PTT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350371",
-      "ankiGuid": "r.sdTN@aP1"
+      "ankiGuid": "r.sdTN@aP1",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-40-anos6491b30f9a/",
+        "sourceQuestionId": "4000144254",
+        "matchedAt": "2026-08-16T07:03:13.582Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-dd8e9d70b5d20db7",
@@ -1335,7 +1371,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea, cansaço desde a infância, falta de ar, dor no hipocôndrio direito, internações por pneumonia, sopro cardíaco, fígado aumentado e uma úlcera na perna (achado clássico!) — tudo aponta pra anemia falciforme não diagnosticada até então. O tratamento farmacológico mais adequado é a hidroxiureia, que reduz a frequência das complicações da doença.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
@@ -1368,7 +1404,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesmo caso clínico clássico de anemia falciforme (dor óssea desde a infância, sopro, fígado aumentado, úlcera na perna). O exame padrão-ouro pra confirmar esse diagnóstico é a eletroforese de hemoglobina, que identifica exatamente qual tipo de hemoglobina anormal (S) o paciente tem.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
@@ -1401,7 +1437,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia crônica com crises de piora (dor de cabeça, dor abdominal, dor lombar, febre) e urina escura pela manhã, junto com plaquetas baixas — é o quadro clássico da hemoglobinúria paroxística noturna (HPN), uma doença rara em que as hemácias ficam mais vulneráveis a serem destruídas pelo próprio sistema imune do corpo, principalmente durante o sono (por isso a urina escura de manhã).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",

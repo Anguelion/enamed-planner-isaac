@@ -1,20 +1,49 @@
 {
-  "generatedAt": "2026-08-15T18:50:47.616Z",
+  "generatedAt": "2026-08-16T07:03:00.154Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 3,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-afc7e8c96174c930",
-      "number": "1022f",
+      "id": "anki-hematologia-anemias-hemoliticas-3c51b7803fa1e528",
+      "number": "1028f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-2-anos-idade12140c1529f/",
-      "sourceQuestionId": "4000146052",
-      "matchedAt": "2026-08-15T18:50:49.024Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/patologias-com-defeito655693240e/",
+      "sourceQuestionId": "4000144547",
+      "matchedAt": "2026-08-16T07:03:01.534Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Introdução à hemólise",
+        "Classificação das anemias hemolíticas quanto à sua relação com as hemácias"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Classificação das anemias hemolíticas quanto à sua relação com as hemácias. Conduta/resposta: 4 - 1 - 3 - 2",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/patologias-com-defeito655693240e/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-4acc431bfa7ecf9f",
+      "number": "1029f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/trac-falcemico4a17c28e6/",
+      "sourceQuestionId": "4000144546",
+      "matchedAt": "2026-08-16T07:03:07.507Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -28,122 +57,23 @@
         "Hematologia",
         "Hemoglobinopatias",
         "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Crise de sequestro esplênico"
+        "Fisiopatologia da anemia falciforme",
+        "Traço falcêmico"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Crise de sequestro esplênico. Conduta/resposta: Sequestro esplênico",
+      "comment": "Gabarito confirmado: D. Assunto: Traço falcêmico. Conduta/resposta: Hemograma normal.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Menino-2-anos-idade12140c1529f/"
+        "https://med.estrategia.com/public/questoes/trac-falcemico4a17c28e6/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-b4272883460dba07",
-      "number": "1023f",
+      "id": "anki-hematologia-anemias-hemoliticas-4035f53406640284",
+      "number": "1030f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Renata-esta-primeira594739d515/",
-      "sourceQuestionId": "4000146051",
-      "matchedAt": "2026-08-15T18:50:55.706Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Introdução à anemia falciforme",
-        "Quadro clínico da anemia falciforme"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: Doença falciforme",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Renata-esta-primeira594739d515/",
-        "https://med.estrategia.com/public/questoes/primeira-consulta-com468dd35958/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-efd7bd758df916dc",
-      "number": "1024f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-sete-anos17184a05e02/",
-      "sourceQuestionId": "4000145905",
-      "matchedAt": "2026-08-15T18:51:01.591Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Tratamento da anemia falciforme",
-        "Suporte transfusional na anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Síndrome torácica aguda"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: síndrome torácica aguda; analgesia, ceftriaxone, claritromicina e transfusão de concentrado de hemácias",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-sete-anos17184a05e02/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-24617c4eceba0689",
-      "number": "1025f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-9-anos-pardo98caca1cf6/",
-      "sourceQuestionId": "4000145695",
-      "matchedAt": "2026-08-15T18:51:07.962Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Síndrome torácica aguda"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: A síndrome torácica aguda é uma hipótese diagnóstica e o paciente deve ser internado.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-9-anos-pardo98caca1cf6/",
-        "https://med.estrategia.com/public/questoes/Paciente-9-anos-da43793bdfdd/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-6fbe62163b5e8936",
-      "number": "1026f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-crise-aplastica18400633d1/",
-      "sourceQuestionId": "4000145565",
-      "matchedAt": "2026-08-15T18:51:13.883Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-40-anos6491b30f9a/",
+      "sourceQuestionId": "4000144254",
+      "matchedAt": "2026-08-16T07:03:13.582Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -155,47 +85,48 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Crise aplásica"
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Tratamento da púrpura trombocitopênica trombótica (PTT)"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Crise aplásica. Conduta/resposta: Apesar de a recuperação ser espontânea, a criança deve ser internada, pois não há como prever até que valor a queda da hemoglobina vai atingir",
+      "comment": "Gabarito confirmado: A. Assunto: Tratamento da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: Plasmaférese.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-crise-aplastica18400633d1/"
+        "https://med.estrategia.com/public/questoes/Mulher-40-anos6491b30f9a/",
+        "https://med.estrategia.com/public/questoes/422baf4c3cdf8e56acee47e1/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-8fb8d63abbf06fb3",
-      "number": "1027f",
+      "id": "anki-hematologia-anemias-hemoliticas-dd8e9d70b5d20db7",
+      "number": "1031f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-12-anos285cb520b4/",
-      "sourceQuestionId": "4000144896",
-      "matchedAt": "2026-08-15T18:51:20.402Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas por defeitos de membrana",
-        "Esferocitose hereditária",
-        "Tratamento da esferocitose hereditária"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Tratamento da esferocitose hereditária. Conduta/resposta: Esplenectomia;",
+      "changed": false,
+      "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-12-anos285cb520b4/",
-        "https://med.estrategia.com/public/questoes/Paciente-encaminhado24b279ed99/"
-      ]
+        "https://med.estrategia.com/public/questoes/Paciente-sexo70cf36594b/",
+        "https://med.estrategia.com/public/questoes/Estudante-sexo79d2424743/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.2517482517482518,
+        "options": 0,
+        "combined": 0.17622377622377622
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44",
+      "number": "1032f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-543f044a291ac38f",
+      "number": "1033f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
