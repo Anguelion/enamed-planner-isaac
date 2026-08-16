@@ -510,7 +510,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-ebb5c882d6dbfa8f": {
+      "number": "1034f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-16T18:50:22.650Z",
+      "nextAttemptAt": "2026-08-23T18:50:22.650Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-10-anos66120d5a94/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-989a0c7b10bc6f11": {
+      "number": "1035f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-16T18:50:29.101Z",
+      "nextAttemptAt": "2026-08-23T18:50:29.101Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-32-anos404ff10b77/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-ede8c311bc4b546f": {
+      "number": "1036f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-16T18:50:34.974Z",
+      "nextAttemptAt": "2026-08-23T18:50:34.974Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Leia-caso-clinico8609d0965b/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-6f7afbfcdee60964": {
+      "number": "1037f",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-16T18:50:41.474Z",
+      "nextAttemptAt": "2026-10-15T18:50:41.474Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-200bedb389607867": {
+      "number": "1038f",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-16T18:50:47.238Z",
+      "nextAttemptAt": "2026-10-15T18:50:47.238Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-7236e1aecb2437b7": {
+      "number": "1039f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-16T18:50:53.455Z",
+      "nextAttemptAt": "2026-08-23T18:50:53.455Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-desenvolveu64fb25727a/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-08-16T07:03:31.571Z"
+  "updatedAt": "2026-08-16T18:50:53.455Z"
 }

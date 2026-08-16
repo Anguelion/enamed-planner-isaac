@@ -1,49 +1,20 @@
 {
-  "generatedAt": "2026-08-16T07:03:00.154Z",
+  "generatedAt": "2026-08-16T18:50:21.415Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 4,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-3c51b7803fa1e528",
-      "number": "1028f",
+      "id": "anki-hematologia-anemias-hemoliticas-ebb5c882d6dbfa8f",
+      "number": "1034f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/patologias-com-defeito655693240e/",
-      "sourceQuestionId": "4000144547",
-      "matchedAt": "2026-08-16T07:03:01.534Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Introdução à hemólise",
-        "Classificação das anemias hemolíticas quanto à sua relação com as hemácias"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Classificação das anemias hemolíticas quanto à sua relação com as hemácias. Conduta/resposta: 4 - 1 - 3 - 2",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/patologias-com-defeito655693240e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-4acc431bfa7ecf9f",
-      "number": "1029f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/trac-falcemico4a17c28e6/",
-      "sourceQuestionId": "4000144546",
-      "matchedAt": "2026-08-16T07:03:07.507Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-10-anos66120d5a94/",
+      "sourceQuestionId": "4000143710",
+      "matchedAt": "2026-08-16T18:50:22.649Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -57,30 +28,31 @@
         "Hematologia",
         "Hemoglobinopatias",
         "Anemia falciforme",
-        "Fisiopatologia da anemia falciforme",
-        "Traço falcêmico"
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Traço falcêmico. Conduta/resposta: Hemograma normal.",
+      "comment": "Gabarito confirmado: D. Assunto: Síndrome torácica aguda. Conduta/resposta: Síndrome torácica aguda / Internação, analgesia, antibioticoterapia, e transfusão de hemácias.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/trac-falcemico4a17c28e6/"
+        "https://med.estrategia.com/public/questoes/Adolescente-10-anos66120d5a94/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-4035f53406640284",
-      "number": "1030f",
+      "id": "anki-hematologia-anemias-hemoliticas-989a0c7b10bc6f11",
+      "number": "1035f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-40-anos6491b30f9a/",
-      "sourceQuestionId": "4000144254",
-      "matchedAt": "2026-08-16T07:03:13.582Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-32-anos404ff10b77/",
+      "sourceQuestionId": "4000137406",
+      "matchedAt": "2026-08-16T18:50:29.101Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -88,45 +60,102 @@
         "Anemias hemolíticas",
         "Anemias Microangiopáticas",
         "Púrpura Trombocitopênica Trombótica (PTT)",
-        "Tratamento da púrpura trombocitopênica trombótica (PTT)"
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Tratamento da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: Plasmaférese.",
+      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: púrpura trombocitopênica trombótica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-40-anos6491b30f9a/",
-        "https://med.estrategia.com/public/questoes/422baf4c3cdf8e56acee47e1/"
+        "https://med.estrategia.com/public/questoes/Mulher-32-anos404ff10b77/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-dd8e9d70b5d20db7",
-      "number": "1031f",
+      "id": "anki-hematologia-anemias-hemoliticas-ede8c311bc4b546f",
+      "number": "1036f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Leia-caso-clinico8609d0965b/",
+      "sourceQuestionId": "4000142575",
+      "matchedAt": "2026-08-16T18:50:34.974Z",
+      "similarity": {
+        "stem": 0.96875,
+        "options": 1,
+        "combined": 0.9781249999999999
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas autoimunes (AHAI)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Anemias hemolíticas autoimunes (AHAI). Conduta/resposta: transfundir, lentamente, concentrado de hemácias O Rh negativo, mesmo incompatível.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Leia-caso-clinico8609d0965b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-6f7afbfcdee60964",
+      "number": "1037f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
       "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo70cf36594b/",
-        "https://med.estrategia.com/public/questoes/Estudante-sexo79d2424743/"
+        "https://med.estrategia.com/public/questoes/Menina-8-anos-idade113dd021903/",
+        "https://med.estrategia.com/public/questoes/Menina-7-anos-idade134d9c03d9a/"
       ],
       "bestSimilarity": {
-        "stem": 0.2517482517482518,
-        "options": 0,
-        "combined": 0.17622377622377622
+        "stem": 0.9081632653061225,
+        "options": 0.05555555555555555,
+        "combined": 0.6523809523809524
       }
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44",
-      "number": "1032f",
+      "id": "anki-hematologia-anemias-hemoliticas-200bedb389607867",
+      "number": "1038f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Menina-8-anos-idade113dd021903/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.9081632653061225,
+        "options": 0,
+        "combined": 0.6357142857142857
+      }
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-543f044a291ac38f",
-      "number": "1033f",
+      "id": "anki-hematologia-anemias-hemoliticas-7236e1aecb2437b7",
+      "number": "1039f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-desenvolveu64fb25727a/",
+      "sourceQuestionId": "4000141779",
+      "matchedAt": "2026-08-16T18:50:53.455Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Diagnóstico da deficiência de G6PD"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da deficiência de G6PD. Conduta/resposta: Dosagem de G6PD (glicose 6-fosfato desidrogenase)",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-desenvolveu64fb25727a/"
+      ]
     }
   ]
 }
