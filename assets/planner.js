@@ -159,6 +159,7 @@ ui.flashcardCustomFilters = ui.flashcardCustomFilters && typeof ui.flashcardCust
 ui.flashcardCustomSessionIds = Array.isArray(ui.flashcardCustomSessionIds) ? ui.flashcardCustomSessionIds : [];
 ui.flashcardCustomCompleted = Array.isArray(ui.flashcardCustomCompleted) ? ui.flashcardCustomCompleted : [];
 ui.flashcardCustomActive = Boolean(ui.flashcardCustomActive && ui.flashcardCustomSessionIds.length);
+ui.flashcardCustomEditingDeckId ||= '';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
 let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', sessionActive: false, pausedByUser: false, running: false, interval: null, questionId: '', secondsLeft: 0, elapsedSeconds: 0, beeped: false, status: '', audioContext: null };
@@ -763,6 +764,7 @@ function ensureQuestionProgress() {
   state.flashcardSettings.newLimit = state.flashcardSettings.newLimit === 0 ? 0 : Math.max(0, n(state.flashcardSettings.newLimit) || 20);
   state.flashcardSettings.reviewLimit = state.flashcardSettings.reviewLimit === 0 ? 0 : Math.max(0, n(state.flashcardSettings.reviewLimit) || 120);
   state.flashcardSettings.newOrder = ['beforeReviews','afterReviews','mixed'].includes(state.flashcardSettings.newOrder) ? state.flashcardSettings.newOrder : 'afterReviews';
+  state.flashcardSettings.smartDecks = (Array.isArray(state.flashcardSettings.smartDecks) ? state.flashcardSettings.smartDecks : []).map(normalizeFlashcardSmartDeck).filter(deck=>deck.name && !deck.deletedAt).filter((deck,index,array)=>array.findIndex(item=>item.id===deck.id)===index);
   Object.entries(state.flashcardProgress || {}).forEach(([id, progress]) => {
     if(!progress || typeof progress !== 'object') state.flashcardProgress[id] = {};
     const current = state.flashcardProgress[id];
@@ -9407,6 +9409,41 @@ function normalizeFlashcardCustomFilters(filters={}) {
     limit:Math.max(1,Math.min(500,Math.round(n(filters.limit)||50)))
   };
 }
+function normalizeFlashcardSmartDeck(deck={}) {
+  const createdAt=deck.createdAt || deck.updatedAt || new Date().toISOString();
+  return {
+    id:String(deck.id || newFlashcardId('smart-deck')),
+    name:String(deck.name || '').trim().slice(0,80),
+    filters:normalizeFlashcardCustomFilters(deck.filters || deck),
+    createdAt,
+    updatedAt:deck.updatedAt || createdAt
+  };
+}
+function flashcardSmartDecks() {
+  return (state.flashcardSettings.smartDecks || []).map(normalizeFlashcardSmartDeck).filter(deck=>deck.name).sort((a,b)=>(Date.parse(b.updatedAt)||0)-(Date.parse(a.updatedAt)||0) || a.name.localeCompare(b.name));
+}
+function saveFlashcardSmartDeck(name, filters=ui.flashcardCustomFilters, id='') {
+  const cleanName=String(name||'').trim().slice(0,80);
+  if(!cleanName) return null;
+  if(!Array.isArray(state.flashcardSettings.smartDecks)) state.flashcardSettings.smartDecks=[];
+  const now=new Date().toISOString();
+  const index=id ? state.flashcardSettings.smartDecks.findIndex(deck=>deck.id===id) : -1;
+  const previous=index>=0?state.flashcardSettings.smartDecks[index]:null;
+  const deck=normalizeFlashcardSmartDeck({id:previous?.id || newFlashcardId('smart-deck'),name:cleanName,filters,createdAt:previous?.createdAt || now,updatedAt:now});
+  if(index>=0) state.flashcardSettings.smartDecks[index]=deck;
+  else state.flashcardSettings.smartDecks.push(deck);
+  return deck;
+}
+function deleteFlashcardSmartDeck(id) {
+  const before=(state.flashcardSettings.smartDecks || []).length;
+  state.flashcardSettings.smartDecks=(state.flashcardSettings.smartDecks || []).filter(deck=>deck.id!==id);
+  return before-state.flashcardSettings.smartDecks.length;
+}
+function flashcardSmartDeckSummary(filters={}) {
+  const clean=normalizeFlashcardCustomFilters(filters);
+  const modeLabels={overdue:'Atrasados',due:'Vencidos agora',difficult:'Mais difíceis',recentErrors:`Erros em ${clean.recentDays} dias`,tags:'Por tags',all:'Toda a coleção'};
+  return [modeLabels[clean.mode],clean.area!=='Todas'?clean.area:'',clean.subject!=='Todos'?clean.subject:'',clean.tag?`#${clean.tag.split(/\s+/).join(' #')}`:'',`até ${clean.limit}`].filter(Boolean).join(' · ');
+}
 function flashcardRecentAgainByCard(days=30) {
   const cutoff=Date.now()-Math.max(1,n(days))*86400000;
   const map=new Map();
@@ -9444,6 +9481,18 @@ function flashcardCustomStudyCandidates(all=flashcardAllRecords(), rawFilters=ui
     return String(pa.nextReview).localeCompare(String(pb.nextReview)) || String(a.front).localeCompare(String(b.front));
   }).slice(0,filters.limit);
 }
+function startFlashcardCustomSession(candidates=[]) {
+  if(!candidates.length) return 0;
+  ui.flashcardCustomSessionIds=candidates.map(card=>card.id);
+  ui.flashcardCustomCompleted=[];
+  ui.flashcardCustomActive=true;
+  ui.flashcardView='study';
+  ui.flashcardIndex=0;
+  ui.flashcardSessionDone=false;
+  ui.flashcardCurrentCardId='';
+  ui.revealedCards={};
+  return candidates.length;
+}
 function renderFlashcardCustomStudy(all) {
   const filters=normalizeFlashcardCustomFilters(ui.flashcardCustomFilters);
   ui.flashcardCustomFilters=filters;
@@ -9453,12 +9502,16 @@ function renderFlashcardCustomStudy(all) {
   const subjects=['Todos',...new Set(areaCards.map(card=>card.subject||card.subarea||card.topic).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   if(!subjects.includes(filters.subject)) filters.subject='Todos';
   const candidates=flashcardCustomStudyCandidates(all,filters);
+  const smartDecks=flashcardSmartDecks();
+  const editingDeck=smartDecks.find(deck=>deck.id===ui.flashcardCustomEditingDeckId) || null;
+  if(ui.flashcardCustomEditingDeckId && !editingDeck) ui.flashcardCustomEditingDeckId='';
   const modes=[['overdue','Atrasados','Cards cuja revisão deveria ter acontecido antes de hoje.'],['due','Vencidos agora','Inclui atrasados e os programados para hoje.'],['difficult','Mais difíceis','Prioriza dificuldade alta, lapsos e respostas difíceis.'],['recentErrors','Erros recentes',`Cards respondidos como “Novamente” nos últimos ${filters.recentDays} dias.`],['tags','Por tags','Monta a fila usando as tags informadas abaixo.'],['all','Toda a coleção','Usa área, assunto, tag e limite para recortar a coleção.']];
   const byArea=new Map(); candidates.forEach(card=>byArea.set(card.area||'Sem área',n(byArea.get(card.area||'Sem área'))+1));
   const preview=[...byArea.entries()].sort((a,b)=>b[1]-a[1]).slice(0,5);
   return `<div class="fc-custom-page"><section class="card fc-custom-hero"><div><span class="eyebrow">Fila temporária</span><h2>Estudo personalizado</h2><p class="muted">Escolha exatamente o que revisar. Criar a fila não muda datas; somente suas respostas atualizam o agendamento.</p></div><div><strong>${candidates.length}</strong><span>cards selecionados</span></div></section>
+    <section class="card fc-smart-decks"><div class="section-title"><div><span class="eyebrow">Filtros reutilizáveis</span><h3>Baralhos inteligentes</h3><div class="muted">A quantidade é recalculada automaticamente conforme você estuda.</div></div><span class="badge today">${smartDecks.length}</span></div>${smartDecks.length?`<div class="fc-smart-deck-grid">${smartDecks.map(deck=>{const count=flashcardCustomStudyCandidates(all,deck.filters).length; return `<article class="fc-smart-deck"><div><strong>${escapeHtml(deck.name)}</strong><span>${escapeHtml(flashcardSmartDeckSummary(deck.filters))}</span></div><b>${count}<small> agora</small></b><div><button class="tiny-btn primary" data-fc-smart-start="${escapeAttr(deck.id)}" ${count?'':'disabled'}>Estudar</button><button class="tiny-btn" data-fc-smart-edit="${escapeAttr(deck.id)}">Editar</button><button class="tiny-btn danger" data-fc-smart-delete="${escapeAttr(deck.id)}" aria-label="Excluir ${escapeAttr(deck.name)}">Excluir</button></div></article>`;}).join('')}</div>`:'<div class="fc-smart-empty">Salve o recorte atual para acessá-lo novamente com um clique.</div>'}</section>
     <section class="fc-custom-modes">${modes.map(([id,label,description])=>`<button type="button" class="card fc-custom-mode ${filters.mode===id?'active':''}" data-fc-custom-mode="${id}"><strong>${label}</strong><small>${description}</small></button>`).join('')}</section>
-    <div class="fc-custom-grid"><section class="card fc-custom-controls"><div class="section-title"><div><span class="eyebrow">Recorte</span><h3>Filtros da sessão</h3></div></div><div class="fc-custom-fields"><label><span>Área</span><select class="select" data-fc-custom-filter="area">${areas.map(value=>`<option value="${escapeAttr(value)}" ${filters.area===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Assunto</span><select class="select" data-fc-custom-filter="subject">${subjects.map(value=>`<option value="${escapeAttr(value)}" ${filters.subject===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Tags</span><input class="input" data-fc-custom-filter="tag" value="${escapeAttr(filters.tag)}" placeholder="Ex.: cardio urgente"></label><label><span>Janela dos erros</span><div><input class="input" type="number" min="1" max="365" data-fc-custom-filter="recentDays" value="${filters.recentDays}"><small>dias</small></div></label><label><span>Máximo da sessão</span><div><input class="input" type="number" min="1" max="500" data-fc-custom-filter="limit" value="${filters.limit}"><small>cards</small></div></label></div></section>
+    <div class="fc-custom-grid"><section class="card fc-custom-controls"><div class="section-title"><div><span class="eyebrow">Recorte</span><h3>Filtros da sessão</h3></div></div><div class="fc-custom-fields"><label><span>Área</span><select class="select" data-fc-custom-filter="area">${areas.map(value=>`<option value="${escapeAttr(value)}" ${filters.area===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Assunto</span><select class="select" data-fc-custom-filter="subject">${subjects.map(value=>`<option value="${escapeAttr(value)}" ${filters.subject===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Tags</span><input class="input" data-fc-custom-filter="tag" value="${escapeAttr(filters.tag)}" placeholder="Ex.: cardio urgente"></label><label><span>Janela dos erros</span><div><input class="input" type="number" min="1" max="365" data-fc-custom-filter="recentDays" value="${filters.recentDays}"><small>dias</small></div></label><label><span>Máximo da sessão</span><div><input class="input" type="number" min="1" max="500" data-fc-custom-filter="limit" value="${filters.limit}"><small>cards</small></div></label></div><div class="fc-smart-save"><label><span>${editingDeck?'Atualizar baralho':'Salvar este recorte'}</span><input class="input" id="fcSmartDeckName" maxlength="80" value="${escapeAttr(editingDeck?.name||'')}" placeholder="Ex.: Erros recentes de Cardiologia"></label><button class="icon-btn" id="fcSmartDeckSave">${editingDeck?'Atualizar':'Salvar baralho'}</button>${editingDeck?'<button class="tiny-btn" id="fcSmartDeckCancel">Cancelar edição</button>':''}</div></section>
     <aside class="card fc-custom-summary"><div class="section-title"><div><span class="eyebrow">Prévia</span><h3>Sua próxima sessão</h3></div></div>${candidates.length?`<div class="fc-custom-breakdown">${preview.map(([area,count])=>`<span><b>${escapeHtml(area)}</b><strong>${count}</strong></span>`).join('')}</div><div class="fc-custom-examples">${candidates.slice(0,3).map(card=>`<span>${escapeHtml(String(card.front||'').replace(/\s+/g,' ').slice(0,90))}</span>`).join('')}</div>`:'<div class="empty">Nenhum card corresponde a esse recorte. Ajuste os filtros.</div>'}<button type="button" class="icon-btn primary" id="fcCustomStart" ${candidates.length?'':'disabled'}>Iniciar sessão com ${candidates.length}</button></aside></div></div>`;
 }
 function updateFlashcardSchedulerSetting(scope, key, value) {
@@ -9571,15 +9624,38 @@ function renderFlashcards() {
   });
   document.getElementById('fcCustomStart')?.addEventListener('click',()=>{
     const candidates=flashcardCustomStudyCandidates(all,ui.flashcardCustomFilters);
-    if(!candidates.length) return;
-    ui.flashcardCustomSessionIds=candidates.map(card=>card.id);
-    ui.flashcardCustomCompleted=[];
-    ui.flashcardCustomActive=true;
-    ui.flashcardView='study';
-    ui.flashcardIndex=0;
-    ui.flashcardSessionDone=false;
-    ui.flashcardCurrentCardId='';
-    ui.revealedCards={};
+    if(startFlashcardCustomSession(candidates)) renderFlashcards();
+  });
+  document.getElementById('fcSmartDeckSave')?.addEventListener('click',()=>{
+    const name=document.getElementById('fcSmartDeckName')?.value || '';
+    const deck=saveFlashcardSmartDeck(name,ui.flashcardCustomFilters,ui.flashcardCustomEditingDeckId);
+    if(!deck) { alert('Dê um nome ao baralho inteligente.'); return; }
+    ui.flashcardCustomEditingDeckId='';
+    persist();
+    showStudyToast?.(`Baralho “${deck.name}” salvo.`);
+    renderFlashcards();
+  });
+  document.getElementById('fcSmartDeckCancel')?.addEventListener('click',()=>{ ui.flashcardCustomEditingDeckId=''; renderFlashcards(); });
+  document.querySelectorAll('[data-fc-smart-edit]').forEach(button=>button.onclick=event=>{
+    const deck=flashcardSmartDecks().find(item=>item.id===event.currentTarget.dataset.fcSmartEdit);
+    if(!deck) return;
+    ui.flashcardCustomFilters={...deck.filters};
+    ui.flashcardCustomEditingDeckId=deck.id;
+    renderFlashcards();
+  });
+  document.querySelectorAll('[data-fc-smart-start]').forEach(button=>button.onclick=event=>{
+    const deck=flashcardSmartDecks().find(item=>item.id===event.currentTarget.dataset.fcSmartStart);
+    if(!deck) return;
+    ui.flashcardCustomFilters={...deck.filters};
+    if(startFlashcardCustomSession(flashcardCustomStudyCandidates(all,deck.filters))) renderFlashcards();
+  });
+  document.querySelectorAll('[data-fc-smart-delete]').forEach(button=>button.onclick=event=>{
+    const id=event.currentTarget.dataset.fcSmartDelete;
+    const deck=flashcardSmartDecks().find(item=>item.id===id);
+    if(!deck || !confirm(`Excluir o baralho inteligente “${deck.name}”? Os cards e o histórico não serão apagados.`)) return;
+    deleteFlashcardSmartDeck(id);
+    if(ui.flashcardCustomEditingDeckId===id) ui.flashcardCustomEditingDeckId='';
+    persist();
     renderFlashcards();
   });
   document.getElementById('fcCustomExit')?.addEventListener('click',()=>{

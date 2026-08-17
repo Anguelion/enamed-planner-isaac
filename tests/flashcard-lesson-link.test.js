@@ -475,3 +475,52 @@ test('fila personalizada é temporária e remove apenas os cards concluídos na 
   assert.deepEqual(plain(ctx.flashcardStudyQueue(ctx.flashcardAllRecords()).map(card=>card.id)),['session-a']);
   assert.equal(state.flashcardProgress['session-c'],undefined,'concluir a fila não altera o agendamento por si só');
 });
+
+test('baralho inteligente normaliza filtros antigos e preserva identidade', () => {
+  const ctx = loadPlannerSandbox();
+  const deck=plain(ctx.normalizeFlashcardSmartDeck({id:'smart-1',name:'  Cardio difícil  ',mode:'difficult',area:'Clínica',limit:25,createdAt:'2026-08-01T10:00:00.000Z'}));
+  assert.equal(deck.id,'smart-1');
+  assert.equal(deck.name,'Cardio difícil');
+  assert.equal(deck.filters.mode,'difficult');
+  assert.equal(deck.filters.area,'Clínica');
+  assert.equal(deck.filters.limit,25);
+  assert.equal(deck.createdAt,'2026-08-01T10:00:00.000Z');
+});
+
+test('salvar e atualizar baralho inteligente não cria duplicata', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const created=ctx.saveFlashcardSmartDeck('Erros de GO',{mode:'recentErrors',recentDays:14,limit:30});
+  assert.ok(created?.id);
+  const updated=ctx.saveFlashcardSmartDeck('Erros recentes de GO',{mode:'recentErrors',recentDays:30,limit:40},created.id);
+  assert.equal(state.flashcardSettings.smartDecks.length,1);
+  assert.equal(updated.id,created.id);
+  assert.equal(updated.createdAt,created.createdAt);
+  assert.equal(updated.filters.recentDays,30);
+  assert.equal(updated.filters.limit,40);
+});
+
+test('baralho inteligente recalcula seus cards em vez de congelar uma lista', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'smart-dynamic',front:'F',back:'V',area:'Clínica'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:2,difficulty:8,lapses:0,nextReview:'2099-01-01'};
+  const deck=ctx.saveFlashcardSmartDeck('Difíceis',{mode:'difficult',area:'Todas',subject:'Todos',tag:'',limit:50});
+  assert.deepEqual(plain(ctx.flashcardCustomStudyCandidates(ctx.flashcardAllRecords(),deck.filters).map(item=>item.id)),['smart-dynamic']);
+  state.flashcardProgress[card.id]={reviews:3,difficulty:4,lapses:0,status:'Bom',nextReview:'2099-01-01'};
+  assert.deepEqual(plain(ctx.flashcardCustomStudyCandidates(ctx.flashcardAllRecords(),deck.filters).map(item=>item.id)),[]);
+});
+
+test('excluir baralho inteligente não remove cards nem progresso', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'smart-safe-card',front:'F',back:'V'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:2,nextReview:'2026-08-20'};
+  const deck=ctx.saveFlashcardSmartDeck('Temporário',{mode:'all',limit:10});
+  assert.equal(ctx.deleteFlashcardSmartDeck(deck.id),1);
+  assert.equal(state.flashcardSettings.smartDecks.length,0);
+  assert.ok(state.flashcardLibrary.some(item=>item.id===card.id));
+  assert.equal(state.flashcardProgress[card.id].reviews,2);
+});

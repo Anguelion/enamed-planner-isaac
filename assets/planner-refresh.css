@@ -927,6 +927,19 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 #flashcards .fc-custom-session-progress strong { color: var(--fc-accent); font-size: 17px; }
 #flashcards .fc-custom-session-progress span { color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; }
 #flashcards .fc-custom-session-sidebar > .icon-btn { width: 100%; justify-content: center; }
+#flashcards .fc-smart-decks { display: grid; gap: 13px; }
+#flashcards .fc-smart-deck-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+#flashcards .fc-smart-deck { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; padding: 14px; border: 1px solid var(--line); border-radius: 13px; background: color-mix(in srgb,var(--fc-soft) 42%,var(--panel)); }
+#flashcards .fc-smart-deck > div:first-child { display: grid; gap: 4px; min-width: 0; }
+#flashcards .fc-smart-deck > div:first-child strong { overflow: hidden; color: var(--ink); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+#flashcards .fc-smart-deck > div:first-child span { overflow: hidden; color: var(--muted); font-size: 9px; line-height: 1.4; text-overflow: ellipsis; white-space: nowrap; }
+#flashcards .fc-smart-deck > b { color: var(--fc-accent); font-size: 20px; text-align: right; }
+#flashcards .fc-smart-deck > b small { display: block; color: var(--muted); font-size: 8px; font-weight: 800; text-transform: uppercase; }
+#flashcards .fc-smart-deck > div:last-child { display: flex; grid-column: 1 / -1; gap: 6px; flex-wrap: wrap; }
+#flashcards .fc-smart-empty { padding: 16px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: 10px; text-align: center; }
+#flashcards .fc-smart-save { display: flex; align-items: end; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); }
+#flashcards .fc-smart-save label { display: grid; flex: 1; gap: 6px; color: var(--muted); font-size: 10px; font-weight: 800; }
+#flashcards .fc-smart-save .icon-btn { flex: none; }
 
 #flashcards .fc-settings-page { display: grid; gap: 14px; }
 #flashcards .fc-settings-intro { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px; background: linear-gradient(135deg,color-mix(in srgb,var(--fc-soft) 78%,var(--panel)),var(--panel)); }
@@ -1057,6 +1070,9 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
   #flashcards .fc-custom-hero > div:last-child { min-width: 0; }
   #flashcards .fc-custom-modes { grid-template-columns: 1fr 1fr; }
   #flashcards .fc-custom-fields { grid-template-columns: 1fr; }
+  #flashcards .fc-smart-deck-grid { grid-template-columns: 1fr; }
+  #flashcards .fc-smart-save { align-items: stretch; flex-direction: column; }
+  #flashcards .fc-smart-save .icon-btn { width: 100%; justify-content: center; }
   #flashcards .fc-custom-active-note { align-items: flex-start; flex-direction: column; }
   #flashcards .fc-heat-legend { justify-content: flex-start; flex-wrap: wrap; }
 }
