@@ -270,3 +270,76 @@ test('suspensão em lote preserva e restaura o agendamento anterior', () => {
   assert.equal(state.flashcardProgress[card.id].dueAt,'2026-08-20T10:00:00.000Z');
   assert.equal(card.isSuspended,false);
 });
+
+test('perfil de agendamento migra valores antigos e protege faixas seguras', () => {
+  const ctx = loadPlannerSandbox();
+  const profile = ctx.normalizeFlashcardSchedulerProfile({targetRetention:1.2,maximumInterval:2,relearningMinutes:0,leechThreshold:200,fuzz:false});
+  assert.equal(profile.targetRetention,0.97);
+  assert.equal(profile.maximumInterval,30);
+  assert.equal(profile.relearningMinutes,10);
+  assert.equal(profile.leechThreshold,99);
+  assert.equal(profile.fuzz,false);
+  assert.equal(profile.autoSuspendLeeches,true);
+});
+
+test('retenção desejada maior produz intervalos menores para a mesma memória', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  state.flashcardSystem.profile={...state.flashcardSystem.profile,fuzz:false,targetRetention:0.85};
+  const relaxed=ctx.fsrsIntervalDays({reps:5},3,30);
+  state.flashcardSystem.profile={...state.flashcardSystem.profile,targetRetention:0.95};
+  const intensive=ctx.fsrsIntervalDays({reps:5},3,30);
+  assert.ok(intensive < relaxed, `${intensive} deveria ser menor que ${relaxed}`);
+});
+
+test('reaprendizagem usa o tempo configurado ao responder Novamente', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  state.flashcardSystem.profile={...state.flashcardSystem.profile,relearningMinutes:37,fuzz:false};
+  const before=Date.now();
+  const next=ctx.nextFsrsProgress({id:'relearn',reps:4,stability:12,difficulty:5},1);
+  const minutes=(Date.parse(next.dueAt)-before)/60000;
+  assert.equal(next.scheduledDays,0);
+  assert.ok(minutes>=36.9 && minutes<=37.1, `tempo calculado: ${minutes}`);
+});
+
+test('limites de novos e revisões são separados e a ordem da fila é configurável', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const ui = uiOf(ctx);
+  const due=ctx.normalizeFlashcardRecord({id:'queue-due',front:'Vencido',back:'V'});
+  const fresh=ctx.normalizeFlashcardRecord({id:'queue-new',front:'Novo',back:'V'});
+  state.flashcardLibrary.push(due,fresh);
+  state.flashcardProgress[due.id]={reviews:3,nextReview:'2020-01-01',dueAt:'2020-01-01T10:00:00.000Z'};
+  state.flashcardSystem.reviewLogs=[{id:'new-today',cardId:'other',reviewedAt:new Date().toISOString(),wasNew:true,rating:3}];
+  state.flashcardSettings.newLimit=1;
+  state.flashcardSettings.reviewLimit=1;
+  state.flashcardSettings.newOrder='beforeReviews';
+  ui.flashcardFilter='Aprendendo'; ui.flashcardArea='Todas'; ui.flashcardSubarea='Todas'; ui.flashcardBlock=''; ui.flashcardSubject=''; ui.flashcardDeck=''; ui.flashcardLesson='';
+  assert.deepEqual(plain(ctx.flashcardStudyQueue(ctx.flashcardAllRecords()).map(card=>card.id)),['queue-new','queue-due']);
+  state.flashcardSettings.newOrder='afterReviews';
+  assert.deepEqual(plain(ctx.flashcardStudyQueue(ctx.flashcardAllRecords()).map(card=>card.id)),['queue-due','queue-new']);
+});
+
+test('preset intensivo configura retenção, limites e proteção contra cards problemáticos', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  assert.equal(ctx.applyFlashcardSchedulerPreset('intensivo'),true);
+  assert.equal(state.flashcardSystem.profile.targetRetention,0.95);
+  assert.equal(state.flashcardSystem.profile.relearningMinutes,5);
+  assert.equal(state.flashcardSystem.profile.autoSuspendLeeches,true);
+  assert.equal(state.flashcardSettings.newLimit,15);
+  assert.equal(state.flashcardSettings.reviewLimit,200);
+  assert.equal(state.flashcardSettings.newOrder,'mixed');
+  assert.equal(ctx.flashcardSchedulerPresetId(),'intensivo');
+});
+
+test('suspensão automática de card problemático respeita a preferência do usuário', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  state.flashcardSystem.profile={...state.flashcardSystem.profile,leechThreshold:3,autoSuspendLeeches:true};
+  assert.equal(ctx.flashcardShouldAutoSuspend(2),false);
+  assert.equal(ctx.flashcardShouldAutoSuspend(3),true);
+  state.flashcardSystem.profile.autoSuspendLeeches=false;
+  assert.equal(ctx.flashcardShouldAutoSuspend(20),false);
+});

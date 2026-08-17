@@ -699,7 +699,7 @@ function ensureQuestionProgress() {
   if(!Array.isArray(state.flashcardSystem.undoStack)) state.flashcardSystem.undoStack = [];
   if(!state.flashcardSystem.activeReviewSessionId) state.flashcardSystem.activeReviewSessionId = newFlashcardId('fc-session');
   if(!state.flashcardSystem.profile || typeof state.flashcardSystem.profile !== 'object') state.flashcardSystem.profile = {};
-  state.flashcardSystem.profile = { targetRetention:0.9, maximumInterval:3650, fuzz:true, leechThreshold:8, ...state.flashcardSystem.profile };
+  state.flashcardSystem.profile = normalizeFlashcardSchedulerProfile(state.flashcardSystem.profile);
   compactFlashcardReviewLogs();
   if(!state.importedQuestionTags || typeof state.importedQuestionTags !== 'object') state.importedQuestionTags = {};
   if(!state.dashboardSettings || typeof state.dashboardSettings !== 'object') state.dashboardSettings = {};
@@ -758,6 +758,7 @@ function ensureQuestionProgress() {
   }
   state.flashcardSettings.newLimit = state.flashcardSettings.newLimit === 0 ? 0 : Math.max(0, n(state.flashcardSettings.newLimit) || 20);
   state.flashcardSettings.reviewLimit = state.flashcardSettings.reviewLimit === 0 ? 0 : Math.max(0, n(state.flashcardSettings.reviewLimit) || 120);
+  state.flashcardSettings.newOrder = ['beforeReviews','afterReviews','mixed'].includes(state.flashcardSettings.newOrder) ? state.flashcardSettings.newOrder : 'afterReviews';
   Object.entries(state.flashcardProgress || {}).forEach(([id, progress]) => {
     if(!progress || typeof progress !== 'object') state.flashcardProgress[id] = {};
     const current = state.flashcardProgress[id];
@@ -8652,6 +8653,50 @@ function flashcardCreationReason(result) {
   return 'Liberado para transformar o acerto em revisão ativa.';
 }
 const FSRS_WEIGHTS = [0.4072,1.1829,3.1262,15.4722,7.2102,0.5316,1.0651,0.0234,1.616,0.1544,1.0824,1.9813,0.0953,0.2975,2.2042,0.2407,2.9466,0.5034,0.6567,0.1852,0.2007];
+const FLASHCARD_SCHEDULER_PRESETS = {
+  leve:{label:'Leve',description:'Mais cards novos e intervalos maiores.',targetRetention:0.85,newLimit:30,reviewLimit:160,maximumInterval:3650,relearningMinutes:20,leechThreshold:12,autoSuspendLeeches:false,fuzz:true,newOrder:'afterReviews'},
+  equilibrado:{label:'Equilibrado',description:'Boa retenção sem sobrecarregar a rotina.',targetRetention:0.9,newLimit:20,reviewLimit:120,maximumInterval:3650,relearningMinutes:10,leechThreshold:8,autoSuspendLeeches:true,fuzz:true,newOrder:'afterReviews'},
+  intensivo:{label:'Intensivo',description:'Retenção alta para conteúdos prioritários.',targetRetention:0.95,newLimit:15,reviewLimit:200,maximumInterval:1825,relearningMinutes:5,leechThreshold:6,autoSuspendLeeches:true,fuzz:true,newOrder:'mixed'}
+};
+function normalizeFlashcardSchedulerProfile(profile={}) {
+  const merged={targetRetention:0.9,maximumInterval:3650,fuzz:true,leechThreshold:8,relearningMinutes:10,autoSuspendLeeches:true,...profile};
+  merged.targetRetention=Math.max(0.8,Math.min(0.97,n(merged.targetRetention)||0.9));
+  merged.maximumInterval=Math.max(30,Math.min(36500,Math.round(n(merged.maximumInterval)||3650)));
+  merged.leechThreshold=Math.max(1,Math.min(99,Math.round(n(merged.leechThreshold)||8)));
+  merged.relearningMinutes=Math.max(1,Math.min(1440,Math.round(n(merged.relearningMinutes)||10)));
+  merged.fuzz=merged.fuzz!==false;
+  merged.autoSuspendLeeches=merged.autoSuspendLeeches!==false;
+  return merged;
+}
+function applyFlashcardSchedulerPreset(id) {
+  const preset=FLASHCARD_SCHEDULER_PRESETS[id];
+  if(!preset) return false;
+  state.flashcardSystem.profile=normalizeFlashcardSchedulerProfile({...state.flashcardSystem.profile,targetRetention:preset.targetRetention,maximumInterval:preset.maximumInterval,relearningMinutes:preset.relearningMinutes,leechThreshold:preset.leechThreshold,autoSuspendLeeches:preset.autoSuspendLeeches,fuzz:preset.fuzz});
+  state.flashcardSettings.newLimit=preset.newLimit;
+  state.flashcardSettings.reviewLimit=preset.reviewLimit;
+  state.flashcardSettings.newOrder=preset.newOrder;
+  state.flashcardSettings.schedulerPreset=id;
+  return true;
+}
+function flashcardSchedulerPresetId() {
+  const profile=state.flashcardSystem.profile;
+  const settings=state.flashcardSettings;
+  return Object.entries(FLASHCARD_SCHEDULER_PRESETS).find(([,preset]) =>
+    Math.abs(n(profile.targetRetention)-preset.targetRetention)<0.001
+    && n(profile.maximumInterval)===preset.maximumInterval
+    && n(profile.relearningMinutes)===preset.relearningMinutes
+    && n(profile.leechThreshold)===preset.leechThreshold
+    && Boolean(profile.autoSuspendLeeches)===preset.autoSuspendLeeches
+    && Boolean(profile.fuzz)===preset.fuzz
+    && n(settings.newLimit)===preset.newLimit
+    && n(settings.reviewLimit)===preset.reviewLimit
+    && settings.newOrder===preset.newOrder
+  )?.[0] || 'personalizado';
+}
+function flashcardShouldAutoSuspend(lapses) {
+  const profile=normalizeFlashcardSchedulerProfile(state.flashcardSystem.profile);
+  return profile.autoSuspendLeeches && n(lapses)>=profile.leechThreshold;
+}
 const FSRS_RATINGS = {again:1, hard:2, good:3, easy:4};
 function newFlashcardId(prefix='fc') { return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2)}`; }
 function flashcardCreatedTime(card) {
@@ -8848,14 +8893,14 @@ function mutableFlashcardRecord(id) {
   ];
   return sources.find(card => card?.id === id) || null;
 }
-function fsrsIntervalDays(card, rating, nextStability) {
-  const profile = state.flashcardSystem.profile;
-  const retention = Math.max(0.7, Math.min(0.99, n(profile.targetRetention) || 0.9));
+function fsrsIntervalDays(card, rating, nextStability, {allowFuzz=true}={}) {
+  const profile = normalizeFlashcardSchedulerProfile(state.flashcardSystem.profile);
+  const retention = profile.targetRetention;
   if(rating === 1) return 0;
   const base = Math.max(0.25, nextStability * Math.log(retention) / Math.log(0.9));
   const multiplier = rating === 2 ? 0.7 : rating === 3 ? 1 : 1.35;
   const interval = Math.max(1, Math.round(base * multiplier));
-  if(!profile.fuzz || interval < 7) return Math.min(n(profile.maximumInterval) || 3650, interval);
+  if(!profile.fuzz || !allowFuzz || interval < 7) return Math.min(n(profile.maximumInterval) || 3650, interval);
   const fuzz = Math.max(1, Math.round(interval * 0.08));
   return Math.min(n(profile.maximumInterval) || 3650, Math.max(1, interval + Math.round((Math.random() * 2 - 1) * fuzz)));
 }
@@ -8871,7 +8916,7 @@ function nextFsrsProgress(card, rating) {
   const difficulty = Math.max(1, Math.min(10, oldDifficulty + (5 - r) * 0.35 - (r === 4 ? 0.3 : 0)));
   const scheduledDays = fsrsIntervalDays(current, r, stability);
   const dueDate = new Date();
-  if(scheduledDays < 1) dueDate.setMinutes(dueDate.getMinutes() + (r === 1 ? 10 : 20));
+  if(scheduledDays < 1) dueDate.setMinutes(dueDate.getMinutes() + normalizeFlashcardSchedulerProfile(state.flashcardSystem.profile).relearningMinutes);
   else dueDate.setDate(dueDate.getDate() + scheduledDays);
   return { state:r === 1 ? 'relearning' : first ? 'learning' : 'review', stability, difficulty, scheduledDays, learningSteps:r === 1 ? 1 : 0, reps:n(current.reps) + 1, lapses:n(current.lapses) + (r === 1 ? 1 : 0), due:localISODate(dueDate), dueAt:dueDate.toISOString(), interval:scheduledDays, ease:Math.max(1.3, 2.5 - (difficulty - 5) * 0.08), status:r === 1 ? 'Difícil' : r === 2 ? 'Dúvida' : r === 4 ? 'Fácil' : 'Bom', lastRating:r };
 }
@@ -8957,6 +9002,10 @@ function flashcardReviewsToday() {
   const today = studyDateKey();
   return (state.flashcardSystem?.reviewLogs || []).filter(review => studyDateKey(review.reviewedAt) === today).length;
 }
+function flashcardDueReviewsToday() {
+  const today = studyDateKey();
+  return (state.flashcardSystem?.reviewLogs || []).filter(review => studyDateKey(review.reviewedAt) === today && !review.wasNew).length;
+}
 function flashcardNewToday() {
   const today = studyDateKey();
   return Object.values(state.flashcardProgress || {}).filter(progress => progress.firstReviewedAt && studyDateKey(progress.firstReviewedAt) === today).length;
@@ -9016,7 +9065,7 @@ function releaseFlashcards(ids) {
 function flashcardStudyQueue(all=manualFlashcards()) {
   const today = localISODate(new Date());
   const newRemaining = Math.max(0, n(state.flashcardSettings.newLimit) - flashcardNewToday());
-  const reviewRemaining = Math.max(0, n(state.flashcardSettings.reviewLimit) - flashcardReviewsToday());
+  const reviewRemaining = Math.max(0, n(state.flashcardSettings.reviewLimit) - flashcardDueReviewsToday());
   const filtered = filteredFlashcards(all);
   if(ui.flashcardFilter === 'Suspensos') return filtered.filter(flashcardIsSuspended);
   const base = filtered.filter(card => !flashcardIsSuspended(card) && !flashcardIsWaiting(card));
@@ -9035,7 +9084,19 @@ function flashcardStudyQueue(all=manualFlashcards()) {
     buried.add(key);
     return true;
   });
-  return [...burySiblings(reviews).slice(0, reviewRemaining), ...burySiblings(news).slice(0, newRemaining)];
+  const dueCards=burySiblings(reviews).slice(0, reviewRemaining);
+  const newCards=burySiblings(news).slice(0, newRemaining);
+  if(state.flashcardSettings.newOrder === 'beforeReviews') return [...newCards,...dueCards];
+  if(state.flashcardSettings.newOrder === 'mixed') {
+    const mixed=[];
+    const length=Math.max(dueCards.length,newCards.length);
+    for(let index=0;index<length;index++) {
+      if(dueCards[index]) mixed.push(dueCards[index]);
+      if(newCards[index]) mixed.push(newCards[index]);
+    }
+    return mixed;
+  }
+  return [...dueCards,...newCards];
 }
 function filteredFlashcards(all=manualFlashcards()) {
   const today = localISODate(new Date());
@@ -9243,6 +9304,36 @@ function renderFlashcardBrowser(all) {
     <div class="fc-browser-controls"><label class="fc-browser-search"><span>Buscar</span><input class="input" id="fcBrowserSearch" value="${escapeAttr(ui.flashcardBrowserSearch)}" placeholder="Frente, verso, assunto, deck ou tag"></label><label><span>Estado</span><select class="select" id="fcBrowserStatus">${['Todos','Vencidos','Novo','Aprendendo','Maduro','Difíceis','Suspenso','Em espera'].map(value=>`<option ${ui.flashcardBrowserStatus===value?'selected':''}>${value}</option>`).join('')}</select></label><label><span>Área</span><select class="select" id="fcBrowserArea">${areas.map(value=>`<option value="${escapeAttr(value)}" ${ui.flashcardBrowserArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Ordenar</span><select class="select" id="fcBrowserSort"><option value="due" ${ui.flashcardBrowserSort==='due'?'selected':''}>Próxima revisão</option><option value="created" ${ui.flashcardBrowserSort==='created'?'selected':''}>Mais recentes</option><option value="lapses" ${ui.flashcardBrowserSort==='lapses'?'selected':''}>Mais lapsos</option><option value="interval" ${ui.flashcardBrowserSort==='interval'?'selected':''}>Maior intervalo</option><option value="front" ${ui.flashcardBrowserSort==='front'?'selected':''}>Frente A–Z</option></select></label></div>${actionBar}
     <div class="fc-browser-table-wrap"><table class="fc-browser-table"><thead><tr><th><input type="checkbox" id="fcBrowserSelectAll" ${allVisibleSelected?'checked':''} aria-label="Selecionar todos os cards visíveis"></th><th>Frente</th><th>Aula / assunto</th><th>Estado</th><th>Próxima</th><th>Intervalo</th><th>Lapsos</th><th></th></tr></thead><tbody>${records.map(card=>{const progress=flashcardProgress(card); const stateName=flashcardBrowserState(card); return `<tr class="${ui.flashcardBrowserCardId===card.id?'active':''}"><td><input type="checkbox" data-fc-browser-select="${escapeAttr(card.id)}" ${selected.has(card.id)?'checked':''} aria-label="Selecionar card"></td><td><strong>${escapeHtml(String(card.front||'').replace(/\s+/g,' ').slice(0,120))}</strong><small>${escapeHtml(flashcardBrowserSourceLabel(card))}${card.tags?.length?` · ${(card.tags||[]).slice(0,3).map(escapeHtml).join(', ')}`:''}</small></td><td>${escapeHtml(card.topic||card.subarea||'Sem assunto')}<small>${escapeHtml(card.area||'Sem área')}</small></td><td><span class="fc-browser-state state-${normalizedTopic(stateName).replace(/\s+/g,'-')}">${escapeHtml(stateName)}</span></td><td>${escapeHtml(progress.nextReview)}</td><td>${progress.interval} d</td><td>${progress.lapses}</td><td><button class="tiny-btn" data-fc-browser-open="${escapeAttr(card.id)}">Abrir</button></td></tr>`;}).join('') || '<tr><td colspan="8"><div class="empty">Nenhum card corresponde a esses filtros.</div></td></tr>'}</tbody></table></div></section>${renderFlashcardBrowserDetail(activeCard)}</div>`;
 }
+function updateFlashcardSchedulerSetting(scope, key, value) {
+  if(scope === 'profile') {
+    const current={...state.flashcardSystem.profile};
+    current[key]=value;
+    state.flashcardSystem.profile=normalizeFlashcardSchedulerProfile(current);
+  } else if(scope === 'settings') {
+    if(key === 'newOrder') state.flashcardSettings.newOrder=['beforeReviews','afterReviews','mixed'].includes(value) ? value : 'afterReviews';
+    else state.flashcardSettings[key]=Math.max(0,Math.round(n(value)));
+  } else return false;
+  state.flashcardSettings.schedulerPreset='personalizado';
+  return true;
+}
+function renderFlashcardSchedulerSettings(all) {
+  const profile=normalizeFlashcardSchedulerProfile(state.flashcardSystem.profile);
+  const selectedPreset=flashcardSchedulerPresetId();
+  const sample={reps:5,stability:30,difficulty:5};
+  const preview=[1,2,3,4].map(rating => rating===1 ? `${profile.relearningMinutes} min` : `${fsrsIntervalDays(sample,rating,30,{allowFuzz:false})} dias`);
+  const reviewed=all.filter(card=>flashcardProgress(card).reviews>0).length;
+  return `<div class="fc-settings-page">
+    <section class="card fc-settings-intro"><div><span class="eyebrow">Agendamento adaptativo</span><h2>Como você quer revisar?</h2><p class="muted">O motor usa estabilidade, dificuldade e seu histórico de respostas. Alterações valem nas próximas revisões e não apagam o progresso.</p></div><div class="fc-settings-retention"><strong>${Math.round(profile.targetRetention*100)}%</strong><span>meta de retenção</span></div></section>
+    <section class="fc-settings-presets">${Object.entries(FLASHCARD_SCHEDULER_PRESETS).map(([id,preset])=>`<button type="button" class="card fc-settings-preset ${selectedPreset===id?'active':''}" data-fc-scheduler-preset="${id}"><span>${preset.label}</span><strong>${Math.round(preset.targetRetention*100)}% de retenção</strong><small>${preset.description}</small><em>${preset.newLimit} novos · ${preset.reviewLimit} revisões/dia</em></button>`).join('')}</section>
+    <div class="fc-settings-grid"><section class="card fc-settings-panel"><div class="section-title"><div><span class="eyebrow">Memória</span><h3>Agendamento</h3></div><span class="badge">${selectedPreset==='personalizado'?'Personalizado':FLASHCARD_SCHEDULER_PRESETS[selectedPreset].label}</span></div>
+      <label class="fc-settings-range"><span><b>Retenção desejada</b><output id="fcRetentionOutput">${Math.round(profile.targetRetention*100)}%</output></span><input type="range" min="80" max="97" step="1" value="${Math.round(profile.targetRetention*100)}" data-fc-profile-setting="targetRetention" data-value-kind="percent"><small>Quanto maior, menores os intervalos e maior a carga diária.</small></label>
+      <div class="fc-settings-fields"><label><span>Intervalo máximo</span><div><input class="input" type="number" min="30" max="36500" value="${profile.maximumInterval}" data-fc-profile-setting="maximumInterval"><small>dias</small></div></label><label><span>Reaprender após “Novamente”</span><div><input class="input" type="number" min="1" max="1440" value="${profile.relearningMinutes}" data-fc-profile-setting="relearningMinutes"><small>min</small></div></label><label><span>Limite de lapsos</span><div><input class="input" type="number" min="1" max="99" value="${profile.leechThreshold}" data-fc-profile-setting="leechThreshold"><small>erros</small></div></label></div>
+      <label class="fc-settings-check"><input type="checkbox" data-fc-profile-setting="fuzz" data-value-kind="boolean" ${profile.fuzz?'checked':''}><span><b>Variar levemente os intervalos</b><small>Evita concentrar muitos cards no mesmo dia.</small></span></label><label class="fc-settings-check"><input type="checkbox" data-fc-profile-setting="autoSuspendLeeches" data-value-kind="boolean" ${profile.autoSuspendLeeches?'checked':''}><span><b>Suspender cards problemáticos automaticamente</b><small>Ao atingir o limite de lapsos, o card sai da fila até ser corrigido.</small></span></label>
+    </section>
+    <section class="card fc-settings-panel"><div class="section-title"><div><span class="eyebrow">Carga diária</span><h3>Limites e ordem</h3></div><span class="badge">${reviewed} cards treinados</span></div><div class="fc-settings-fields two"><label><span>Novos por dia</span><input class="input" type="number" min="0" max="9999" value="${n(state.flashcardSettings.newLimit)}" data-fc-settings-setting="newLimit"></label><label><span>Revisões por dia</span><input class="input" type="number" min="0" max="9999" value="${n(state.flashcardSettings.reviewLimit)}" data-fc-settings-setting="reviewLimit"></label></div><label class="fc-settings-select"><span>Posição dos cards novos</span><select class="select" data-fc-settings-setting="newOrder"><option value="afterReviews" ${state.flashcardSettings.newOrder==='afterReviews'?'selected':''}>Depois das revisões</option><option value="beforeReviews" ${state.flashcardSettings.newOrder==='beforeReviews'?'selected':''}>Antes das revisões</option><option value="mixed" ${state.flashcardSettings.newOrder==='mixed'?'selected':''}>Misturados às revisões</option></select><small>Revisões vencidas continuam limitadas separadamente dos cards novos.</small></label>
+      <div class="fc-settings-preview"><span>Exemplo de próximos intervalos</span><div>${['Novamente','Difícil','Bom','Fácil'].map((label,index)=>`<span><b>${label}</b><strong>${preview[index]}</strong></span>`).join('')}</div><small>Simulação para um card estável; cada cartão recebe um cálculo próprio.</small></div></section></div>
+  </div>`;
+}
 function renderFlashcards() {
   // O overlay vive no body (fora de #flashcards), então não é substituído pelo
   // innerHTML abaixo: precisa ser removido explicitamente a cada render.
@@ -9294,14 +9385,39 @@ function renderFlashcards() {
     ? renderFlashcardOverview(all, lessonDecks, due, reviewsToday, waiting)
     : ui.flashcardView === 'browser'
       ? renderFlashcardBrowser(all)
-      : studyContent;
+      : ui.flashcardView === 'settings'
+        ? renderFlashcardSchedulerSettings(all)
+        : studyContent;
   document.getElementById('flashcards').innerHTML = `<div class="card flashcard-command"><div class="flashcard-command-copy"><span class="flashcard-command-icon" aria-hidden="true">${iconSvg('flashcard',{weight:'duotone'})}</span><div><div class="eyebrow">Revisão inteligente</div><h1>Flashcards</h1><div class="muted">Entenda sua carga, organize os baralhos e revise no momento certo.</div></div></div><div class="flashcard-command-actions"><button class="icon-btn primary" id="newFlashcardBtn">${iconSvg('add',{weight:'bold'})}<span>Novo card</span></button><button class="icon-btn" id="flashcardUndoBtn">Desfazer</button><button class="icon-btn" id="flashcardBackupBtn">Backup</button><button class="icon-btn" id="ankiExportBtn">Exportar</button><button class="icon-btn" id="ankiImportBtn" title="Importar cards de um arquivo exportado do Anki (.tsv)">Importar</button><button class="icon-btn ${unlinkedCount?'warn':''}" id="flashcardOrganizerBtn" title="Vincular em lote os cards que ainda não pertencem a nenhuma aula">Cards sem aula${unlinkedCount?` (${unlinkedCount})`:''}</button></div></div>
-  <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button><button class="${ui.flashcardView==='browser'?'active':''}" data-fc-view="browser">Navegar <span>${all.length}</span></button></nav>
+  <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button><button class="${ui.flashcardView==='browser'?'active':''}" data-fc-view="browser">Navegar <span>${all.length}</span></button><button class="${ui.flashcardView==='settings'?'active':''}" data-fc-view="settings">Configurar</button></nav>
   <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">${mainContent}${ui.flashcardOrganizerOpen ? renderFlashcardOrganizer() : ''}`;
   document.querySelectorAll('[data-fc-view]').forEach(button => button.onclick = event => {
     ui.flashcardView = event.currentTarget.dataset.fcView;
     ui.flashcardFocusMode = false;
     ui.flashcardSessionDone = false;
+    renderFlashcards();
+  });
+  document.querySelectorAll('[data-fc-scheduler-preset]').forEach(button => button.onclick = event => {
+    if(!applyFlashcardSchedulerPreset(event.currentTarget.dataset.fcSchedulerPreset)) return;
+    persist();
+    renderFlashcards();
+    showStudyToast?.('Configuração de revisão aplicada.');
+  });
+  document.querySelectorAll('[data-fc-profile-setting]').forEach(input => {
+    if(input.dataset.valueKind === 'percent') input.oninput = event => {
+      const output=document.getElementById('fcRetentionOutput');
+      if(output) output.textContent=`${event.currentTarget.value}%`;
+    };
+    input.onchange = event => {
+      const value=event.currentTarget.dataset.valueKind === 'boolean' ? event.currentTarget.checked : event.currentTarget.dataset.valueKind === 'percent' ? n(event.currentTarget.value)/100 : n(event.currentTarget.value);
+      updateFlashcardSchedulerSetting('profile',event.currentTarget.dataset.fcProfileSetting,value);
+      persist();
+      renderFlashcards();
+    };
+  });
+  document.querySelectorAll('[data-fc-settings-setting]').forEach(input => input.onchange = event => {
+    updateFlashcardSchedulerSetting('settings',event.currentTarget.dataset.fcSettingsSetting,event.currentTarget.value);
+    persist();
     renderFlashcards();
   });
   document.querySelectorAll('[data-fc-study-deck]').forEach(button => button.onclick = event => {
@@ -9512,9 +9628,9 @@ function renderFlashcards() {
   const undoBtn = document.getElementById('flashcardUndoBtn');
   if(undoBtn) undoBtn.onclick = undoFlashcardReview;
   const newLimit = document.getElementById('flashcardNewLimit');
-  if(newLimit) newLimit.onchange = e => { state.flashcardSettings.newLimit = Math.max(0,n(e.target.value)); persist(); };
+  if(newLimit) newLimit.onchange = e => { updateFlashcardSchedulerSetting('settings','newLimit',e.target.value); persist(); renderFlashcards(); };
   const reviewLimit = document.getElementById('flashcardReviewLimit');
-  if(reviewLimit) reviewLimit.onchange = e => { state.flashcardSettings.reviewLimit = Math.max(0,n(e.target.value)); persist(); };
+  if(reviewLimit) reviewLimit.onchange = e => { updateFlashcardSchedulerSetting('settings','reviewLimit',e.target.value); persist(); renderFlashcards(); };
   document.querySelectorAll('[data-fc-block]').forEach(button => button.onclick = e => { ui.flashcardBlock=e.currentTarget.dataset.fcBlock; ui.flashcardSubject=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); });
   document.querySelectorAll('[data-fc-subject]').forEach(button => button.onclick = e => { ui.flashcardSubject=e.currentTarget.dataset.fcSubject; ui.flashcardFilter='Todos'; ui.flashcardIndex=0; ui.flashcardSessionDone=false; renderFlashcards(); });
   const newCard = document.getElementById('newFlashcardBtn');
@@ -9725,7 +9841,7 @@ function renderFlashcardInlineEditor(card) {
 function renderFlashcardRating(id) {
   const card = flashcardAllRecords().find(item => item.id === id) || {stability:1};
   if(flashcardIsSuspended(card)) return `<div class="flashcard-actions"><button class="icon-btn primary" data-card-suspend="${id}">Reativar card</button></div>`;
-  const preview = [1,2,3,4].map(r => { const p=nextFsrsProgress(card,r); return `${r}:${p.scheduledDays < 1 ? '10 min' : p.scheduledDays+' d'}`; });
+  const preview = [1,2,3,4].map(r => { const p=nextFsrsProgress(card,r); return `${r}:${p.scheduledDays < 1 ? normalizeFlashcardSchedulerProfile(state.flashcardSystem.profile).relearningMinutes+' min' : p.scheduledDays+' d'}`; });
   return `<div class="flashcard-actions"><div class="flashcard-rating"><button class="icon-btn" data-card-quality="1" data-card-id="${id}"><strong>1</strong> Novamente <small>${preview[0].split(':')[1]}</small></button><button class="icon-btn" data-card-quality="2" data-card-id="${id}"><strong>2</strong> Difícil <small>${preview[1].split(':')[1]}</small></button><button class="icon-btn" data-card-quality="3" data-card-id="${id}"><strong>3</strong> Bom <small>${preview[2].split(':')[1]}</small></button><button class="icon-btn primary" data-card-quality="4" data-card-id="${id}"><strong>4</strong> Fácil <small>${preview[3].split(':')[1]}</small></button></div><button class="icon-btn" data-card-suspend="${id}">Suspender</button></div>`;
 }
 function flashcardReviewSnapshot(card={}) {
@@ -9763,7 +9879,7 @@ function reviewFlashcard(id, quality) {
   state.flashcardReviewHistory.push({ cardId:id, previous: {...current}, reviewedAt });
   state.flashcardReviewHistory = state.flashcardReviewHistory.slice(-50);
   const fsrs = nextFsrsProgress({...card,...current,reps:n(current.reviews)||card.reps,stability:n(current.stability)||card.stability,difficulty:n(current.difficulty)||card.difficulty,lapses:n(current.lapses)||card.lapses}, quality);
-  const isLeech = fsrs.lapses >= n(state.flashcardSystem.profile.leechThreshold || 8);
+  const isLeech = flashcardShouldAutoSuspend(fsrs.lapses);
   state.flashcardProgress[id] = {
     ...current,
     ...fsrs,
