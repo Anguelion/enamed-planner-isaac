@@ -158,3 +158,65 @@ test('filtro por aula usa o vínculo, não o texto do assunto', () => {
   uiOf(ctx).flashcardLesson = '__sem_aula__';
   assert.deepEqual(plain(ctx.filteredFlashcards(ctx.flashcardAllRecords()).map(card => card.id)), ['loose']);
 });
+
+test('histórico de revisões não é mais cortado em 500 eventos e compacta conteúdo antigo', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  state.flashcardSystem.reviewLogs = Array.from({length:620}, (_,index) => ({
+    id:`review-${index}`,
+    cardId:`card-${index}`,
+    rating:index%4+1,
+    reviewedAt:'2026-08-10T10:00:00.000Z',
+    before:{front:`Frente ${index}`,area:'Clínica'},
+    after:{front:`Frente ${index}`,area:'Clínica',subarea:'Cardiologia'}
+  }));
+  state.flashcardSystem.undoStack = Array.from({length:20}, (_,index) => ({reviewId:`review-${600+index}`}));
+  ctx.compactFlashcardReviewLogs();
+  assert.equal(state.flashcardSystem.reviewLogs.length, 620, 'nenhum evento histórico pode ser descartado');
+  assert.equal(state.flashcardSystem.reviewLogs[0].after, undefined, 'eventos antigos perdem a cópia pesada do card');
+  assert.equal(state.flashcardSystem.reviewLogs[0].cardSnapshot.front, 'Frente 0', 'uma fotografia leve continua disponível para auditoria');
+  assert.ok(state.flashcardSystem.reviewLogs[619].after, 'a janela de desfazer preserva o estado completo recente');
+});
+
+test('retenção observada usa todas as respostas do período e considera Difícil como lembrado', () => {
+  const ctx = loadPlannerSandbox();
+  const now = new Date().toISOString();
+  stateOf(ctx).flashcardSystem.reviewLogs = [1,2,3,4].map(rating => ({id:`r${rating}`,cardId:`c${rating}`,rating,reviewedAt:now}));
+  assert.deepEqual(plain(ctx.flashcardObservedRetention(30)), {total:4,value:75});
+});
+
+test('mapa de calor combina eventos detalhados com o total diário legado', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  state.flashcardSystem.reviewLogs = [
+    {id:'r1',cardId:'c1',rating:1,reviewedAt:'2026-08-10T10:00:00.000Z'},
+    {id:'r2',cardId:'c2',rating:3,reviewedAt:'2026-08-10T11:00:00.000Z'}
+  ];
+  state.dayLogs = [{date:'2026-08-10',flashcards:7,flashcardMinutes:18}];
+  const row = ctx.flashcardReviewDailySeries().get('2026-08-10');
+  assert.equal(row.count, 7, 'o agregado legado cobre períodos anteriores ao histórico detalhado');
+  assert.equal(row.again, 1);
+  assert.equal(row.remembered, 1);
+  assert.equal(row.minutes, 18);
+});
+
+test('cards suspensos ficam fora dos vencidos e da fila normal', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const ui = uiOf(ctx);
+  const card = ctx.normalizeFlashcardRecord({id:'suspenso-1',front:'F',back:'V',createdAt:'2026-08-01T10:00:00.000Z'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id] = {reviews:2,status:'Bom',nextReview:'2026-08-01',dueAt:'2026-08-01T10:00:00.000Z'};
+  ui.flashcardFilter = 'Aprendendo';
+  ui.flashcardArea = 'Todas';
+  ui.flashcardSubarea = 'Todas';
+  ui.flashcardBlock = '';
+  ui.flashcardSubject = '';
+  ui.flashcardDeck = '';
+  ui.flashcardLesson = '';
+  assert.equal(ctx.isFlashcardDue(card), true);
+  state.flashcardProgress[card.id] = {...state.flashcardProgress[card.id],status:'Suspenso',nextReview:'2099-12-31',dueAt:'2099-12-31T23:59:59.000Z'};
+  card.isSuspended = true;
+  assert.equal(ctx.isFlashcardDue(card), false);
+  assert.equal(ctx.flashcardStudyQueue(ctx.flashcardAllRecords()).length, 0);
+});

@@ -756,6 +756,55 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 #flashcards .flashcard-rating .icon-btn:nth-child(3) { border-color: color-mix(in srgb, var(--teal) 35%, var(--line)); color: var(--teal); }
 #flashcards .flashcard-rating .icon-btn:nth-child(4) { border-color: var(--fc-accent); background: var(--fc-accent); color: #fff; }
 
+/* Flashcards: visão geral orientada a processo */
+#flashcards .flashcard-view-tabs { display: flex; gap: 6px; width: fit-content; margin: 14px 0; padding: 4px; border: 1px solid var(--line); border-radius: 13px; background: var(--panel); box-shadow: var(--shadow-soft); }
+#flashcards .flashcard-view-tabs button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; padding: 8px 15px; border: 0; border-radius: 9px; background: transparent; color: var(--muted); font: inherit; font-weight: 800; cursor: pointer; }
+#flashcards .flashcard-view-tabs button.active { background: var(--fc-accent); color: #fff; box-shadow: 0 8px 18px color-mix(in srgb, var(--fc-accent) 24%, transparent); }
+#flashcards .flashcard-view-tabs button span { min-width: 22px; padding: 2px 6px; border-radius: 99px; background: color-mix(in srgb, currentColor 12%, transparent); font-size: 11px; text-align: center; }
+#flashcards .flashcard-overview { display: grid; gap: 14px; }
+#flashcards .fc-overview-kpis { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; }
+#flashcards .fc-overview-kpis > div { display: grid; gap: 4px; min-height: 124px; padding: 18px; border: 1px solid var(--fc-border); border-radius: 16px; background: var(--panel); box-shadow: var(--shadow-soft); }
+#flashcards .fc-overview-kpis span { color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+#flashcards .fc-overview-kpis strong { align-self: end; color: var(--ink); font-size: clamp(28px,3vw,40px); line-height: 1; letter-spacing: -.04em; }
+#flashcards .fc-overview-kpis small { color: var(--muted); font-size: 12px; }
+#flashcards .fc-heatmap-card,
+#flashcards .fc-forecast-card,
+#flashcards .fc-weak-card,
+#flashcards .fc-decks-card { margin: 0; border-color: var(--fc-border); box-shadow: var(--shadow-soft); }
+#flashcards .fc-heatmap-card { overflow: hidden; }
+#flashcards .fc-heatmap-shell { display: flex; gap: 9px; width: 100%; padding: 8px 0 4px; overflow-x: auto; scrollbar-width: thin; }
+#flashcards .fc-heat-weekdays { display: grid; grid-template-rows: repeat(7,12px); gap: 3px; flex: none; padding-top: 1px; color: var(--muted); font-size: 9px; line-height: 12px; }
+#flashcards .fc-heatmap-grid { display: grid; grid-template-rows: repeat(7,12px); grid-auto-flow: column; grid-auto-columns: 12px; gap: 3px; width: max-content; }
+#flashcards .fc-heat-cell { width: 12px; height: 12px; min-width: 12px; padding: 0; border: 0; border-radius: 3px; background: color-mix(in srgb,var(--line) 65%,var(--panel)); }
+#flashcards button.fc-heat-cell:not(.future) { cursor: pointer; }
+#flashcards button.fc-heat-cell:not(.future):hover { outline: 2px solid var(--ink); outline-offset: 1px; transform: scale(1.12); }
+#flashcards .fc-heat-cell.level-1 { background: color-mix(in srgb,var(--fc-accent) 24%,var(--panel)); }
+#flashcards .fc-heat-cell.level-2 { background: color-mix(in srgb,var(--fc-accent) 46%,var(--panel)); }
+#flashcards .fc-heat-cell.level-3 { background: color-mix(in srgb,var(--fc-accent) 70%,var(--panel)); }
+#flashcards .fc-heat-cell.level-4 { background: var(--fc-accent); }
+#flashcards .fc-heat-cell.future { opacity: .25; }
+#flashcards .fc-heat-legend { display: flex; align-items: center; justify-content: flex-end; gap: 5px; margin-top: 8px; color: var(--muted); font-size: 10px; }
+#flashcards .fc-overview-split { display: grid; grid-template-columns: minmax(0,1.45fr) minmax(280px,.75fr); gap: 14px; }
+#flashcards .fc-forecast-bars { display: grid; grid-template-columns: repeat(14,minmax(18px,1fr)); align-items: end; gap: 6px; height: 190px; padding-top: 20px; }
+#flashcards .fc-forecast-day { display: grid; grid-template-rows: 1fr auto auto; align-items: end; gap: 5px; height: 100%; text-align: center; }
+#flashcards .fc-forecast-day > span { align-self: end; width: 100%; min-height: 2px; border-radius: 6px 6px 2px 2px; background: linear-gradient(180deg,var(--fc-accent),color-mix(in srgb,var(--fc-accent) 54%,var(--teal))); }
+#flashcards .fc-forecast-day strong { color: var(--ink); font-size: 11px; }
+#flashcards .fc-forecast-day small { color: var(--muted); font-size: 9px; text-transform: capitalize; }
+#flashcards .fc-weak-card .fc-radar-row { padding: 11px 0; }
+#flashcards .fc-deck-table-wrap { overflow-x: auto; }
+#flashcards .fc-deck-table { width: 100%; border-collapse: collapse; }
+#flashcards .fc-deck-table th { padding: 10px 12px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 10px; text-align: center; text-transform: uppercase; letter-spacing: .05em; }
+#flashcards .fc-deck-table th:first-child,
+#flashcards .fc-deck-table td:first-child { text-align: left; }
+#flashcards .fc-deck-table td { padding: 12px; border-bottom: 1px solid color-mix(in srgb,var(--line) 70%,transparent); text-align: center; font-size: 13px; }
+#flashcards .fc-deck-table td:first-child { min-width: 260px; }
+#flashcards .fc-deck-table td strong { display: block; color: var(--ink); }
+#flashcards .fc-deck-table td small { display: block; margin-top: 3px; color: var(--muted); }
+#flashcards .fc-number-new { color: #2e6cc5; font-weight: 900; }
+#flashcards .fc-number-learning { color: var(--amber); font-weight: 900; }
+#flashcards .fc-number-due { color: var(--teal); font-weight: 900; }
+#flashcards .fc-deck-table tbody tr:hover { background: color-mix(in srgb,var(--fc-accent) 5%,transparent); }
+
 body.dark #flashcards .flashcard-command { background: radial-gradient(circle at 88% 4%, rgba(118, 145, 255, .18), transparent 15rem), linear-gradient(128deg, #1c2a61, #3449a0 62%, #176e78 130%); }
 body.dark #flashcards .flashcards-panel { background: color-mix(in srgb, var(--panel) 96%, #26376f); }
 body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 50% 10%, rgba(83, 104, 232, .11), transparent 62%); }
@@ -763,6 +812,8 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 @media (max-width: 1220px) {
   #flashcards .flashcards-workspace { grid-template-columns: 185px minmax(0, 1fr); }
   #flashcards .flashcard-indicator-panel { grid-column: 1 / -1; }
+  #flashcards .fc-overview-kpis { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #flashcards .fc-overview-split { grid-template-columns: 1fr; }
   #flashcards .flashcard-indicator-toggle[open] > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 16px; }
   #flashcards .flashcard-indicator-toggle[open] > div > .section-title,
   #flashcards .flashcard-indicator-toggle[open] > div > .flashcard-forecast { grid-column: 1 / -1; }
@@ -809,6 +860,15 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
   #flashcards .flashcard-indicator-toggle[open] > div > .flashcard-forecast { grid-column: 1; }
   #flashcards .flashcard-library-card .section-title { align-items: flex-start; }
   #flashcards .flashcard-library-card .section-title .icon-btn { white-space: normal; text-align: center; }
+  #flashcards .flashcard-view-tabs { width: 100%; }
+  #flashcards .flashcard-view-tabs button { flex: 1; }
+  #flashcards .fc-overview-kpis { grid-template-columns: 1fr 1fr; gap: 8px; }
+  #flashcards .fc-overview-kpis > div { min-height: 105px; padding: 14px; }
+  #flashcards .fc-overview-kpis strong { font-size: 30px; }
+  #flashcards .fc-heatmap-card .section-title { align-items: flex-start; }
+  #flashcards .fc-forecast-bars { gap: 3px; height: 160px; }
+  #flashcards .fc-forecast-day strong { font-size: 9px; }
+  #flashcards .fc-forecast-day small { writing-mode: vertical-rl; height: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
