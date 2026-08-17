@@ -570,7 +570,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-desenvolveu64fb25727a/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-b6b9f1b12d7f237f": {
+      "number": "1040f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-17T07:19:29.427Z",
+      "nextAttemptAt": "2026-08-24T07:19:29.427Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-23-anos-idade92a02bd08e/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-d6594e4abea3e3ac": {
+      "number": "1041f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-17T07:19:35.431Z",
+      "nextAttemptAt": "2026-08-24T07:19:35.431Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-24a-procura115f6b3ea66/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-b1b8e2a82e53a9d9": {
+      "number": "1042f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-17T07:19:41.257Z",
+      "nextAttemptAt": "2026-08-24T07:19:41.257Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-8-anos-idade117a2a24b48/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-5f8f75b88cadf212": {
+      "number": "1043f",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-17T07:19:47.429Z",
+      "nextAttemptAt": "2026-10-16T07:19:47.429Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-04d6c66307d1ee1d": {
+      "number": "1044f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-17T07:19:54.178Z",
+      "nextAttemptAt": "2026-08-24T07:19:54.178Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-Anemia-Falciforme13571cc405c/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-0f715520ae052e72": {
+      "number": "1045f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-17T07:19:59.463Z",
+      "nextAttemptAt": "2026-08-24T07:19:59.463Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-16T18:50:53.455Z"
+  "updatedAt": "2026-08-17T07:19:59.463Z"
 }
