@@ -1720,14 +1720,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, palidez, e bilirrubina indireta alta numa paciente sem outra causa aparente — pra confirmar que é mesmo uma anemia hemolítica, os exames esperados são: LDH alta (mostrando destruição celular), reticulócitos altos (a medula tentando compensar) e haptoglobina baixa (essa proteína 'gruda' na hemoglobina livre que vaza das hemácias destruídas e vai sendo consumida, ficando baixa no sangue).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350381",
-      "ankiGuid": "v:K=&^!cnA"
+      "ankiGuid": "v:K=&^!cnA",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-23-anos-idade92a02bd08e/",
+        "sourceQuestionId": "4000141260",
+        "matchedAt": "2026-08-17T07:19:29.427Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-d6594e4abea3e3ac",
@@ -1753,14 +1763,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Paciente com anemia falciforme, dor forte no hipocôndrio direito, icterícia intensa, fígado bem aumentado e doloroso, bilirrubina predominantemente DIRETA (bem alta) — esse padrão sugere um sequestro hepático: o fígado, assim como o baço pode fazer, 'prende' uma quantidade grande de sangue de repente, causando dor, aumento do órgão e um padrão colestático nos exames.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350382",
-      "ankiGuid": "Aq*-q2k{sg"
+      "ankiGuid": "Aq*-q2k{sg",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-24a-procura115f6b3ea66/",
+        "sourceQuestionId": "4000141116",
+        "matchedAt": "2026-08-17T07:19:35.431Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-b1b8e2a82e53a9d9",
@@ -1786,14 +1810,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia falciforme, síndrome torácica aguda precisando de transfusão, mas com histórico de anafilaxia numa transfusão anterior — nesse caso, o hemocomponente indicado é o concentrado de hemácias lavado e desleucocitado, já que a lavagem remove as proteínas do plasma do doador que podem estar causando a reação alérgica grave.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Suporte transfusional na anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350383",
-      "ankiGuid": "EI!#ix#%yv"
+      "ankiGuid": "EI!#ix#%yv",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-8-anos-idade117a2a24b48/",
+        "sourceQuestionId": "4000140683",
+        "matchedAt": "2026-08-17T07:19:41.256Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-5f8f75b88cadf212",
@@ -1820,7 +1857,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pacientes com anemia falciforme que já tiveram complicações graves (necrose óssea, AVC, crises frequentes) mesmo usando hidroxiureia, e já são mais velhos (acima de 16 anos), podem ser candidatos ao transplante alogênico de medula óssea — a opção mais definitiva de tratamento, reservada pros casos mais graves e refratários.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
@@ -1853,14 +1890,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vamos por item: a esplenomegalia costuma estar PRESENTE nos lactentes (baço ainda funcionando) e depois vai desaparecendo com o tempo (auto-infarto do baço) — o oposto do que a primeira frase diz (F). As crises álgicas realmente são o motivo mais comum de procura por atendimento (V). A crise aplástica se caracteriza por queda da hemoglobina com reticulócitos BAIXOS (a medula parada), não aumentados como diz a frase — errada (F). Lactentes com febre alta realmente precisam de internação e antibiótico rápido, pelo risco de infecção grave (V). E os pacientes realmente são mais suscetíveis a bactérias encapsuladas e à salmonela (V). Sequência: F, V, F, V, V.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350385",
-      "ankiGuid": "G$n/Fq4I0l"
+      "ankiGuid": "G$n/Fq4I0l",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/a-Anemia-Falciforme13571cc405c/",
+        "sourceQuestionId": "4000133197",
+        "matchedAt": "2026-08-17T07:19:54.178Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-0f715520ae052e72",
@@ -1886,7 +1934,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Como o paciente tem traço falciforme (não a doença — a eletroforese mostra hemoglobina A presente, além da S), se a mãe também tiver traço falciforme, cada filho tem 25% de chance de herdar a versão S dos dois pais e nascer com a doença falciforme de verdade — é a genética clássica de heranças recessivas, com dois pais 'portadores' (traço) tendo 1 em 4 chance de um filho afetado.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
