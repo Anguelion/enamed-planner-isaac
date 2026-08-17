@@ -4396,13 +4396,20 @@ function renderContinueStudying() {
   if(!activity) return `<section class="card continue-study-card is-empty"><span class="continue-study-icon">${iconSvg('play')}</span><div><span class="eyebrow">Prioridade</span><h2>Continuar estudando</h2><p>A primeira atividade que você abrir ficará disponível aqui para retomada.</p></div><button class="icon-btn primary" data-dashboard-continue="empty">Abrir trilha</button></section>`;
   return `<section class="card continue-study-card"><span class="continue-study-icon">${iconSvg(activity.icon)}</span><div class="continue-study-copy"><span class="eyebrow">Continuar estudando</span><h2>${escapeHtml(activity.title)}</h2><p>${escapeHtml(activity.module)} · ${escapeHtml(activity.position)}</p><small>Última atividade: ${escapeHtml(dashboardActivityTimestamp(activity.updatedAt))}</small></div><button class="icon-btn primary" data-dashboard-continue="${escapeAttr(activity.type)}" data-continue-lesson="${escapeAttr(activity.lessonId||'')}" data-continue-source="${escapeAttr(activity.sourceId||'')}" data-continue-question="${escapeAttr(activity.questionId||'')}" data-continue-run="${escapeAttr(activity.runId||'')}" data-continue-material="${escapeAttr(activity.docId||'')}">${iconSvg('next')}<span>Retomar</span></button></section>`;
 }
+function renderDashboardSmartRecommendation(recommendation, hasPinned=false) {
+  if(!recommendation) return `<div class="dashboard-smart-recommendation is-clear"><span class="dashboard-smart-recommendation-icon">${iconSvg('success')}</span><div><span class="eyebrow">Recomendação automática</span><h3>Tudo em dia por enquanto</h3><p>Seus Baralhos Inteligentes não têm cartões disponíveis neste momento.</p></div><button class="icon-btn" data-dashboard-smart-manage>Ver baralhos</button></div>`;
+  const {deck,analytics,urgency,overdue,reasons}=recommendation;
+  const urgencyLabel={high:'Prioridade alta',medium:'Vale revisar',normal:'Próximo passo'}[urgency];
+  return `<div class="dashboard-smart-recommendation urgency-${urgency}"><span class="dashboard-smart-recommendation-icon">${iconSvg('target')}</span><div class="dashboard-smart-recommendation-copy"><div><span class="eyebrow">Recomendado agora${hasPinned?' · entre os fixados':''}</span><span class="dashboard-smart-urgency">${urgencyLabel}</span></div><h3>${escapeHtml(deck.name)}</h3><p>Prioridade por ${escapeHtml(reasons.slice(0,3).join(', '))}.</p><div class="dashboard-smart-recommendation-stats"><span><b>${analytics.candidates}</b> na fila</span><span><b>${overdue}</b> atrasados</span><span><b>${analytics.retention===null?'—':analytics.retention+'%'}</b> retenção</span></div></div><button class="icon-btn primary" data-dashboard-smart-start="${escapeAttr(deck.id)}">Estudar recomendação</button></div>`;
+}
 function renderDashboardSmartDecks() {
   const decks=flashcardSmartDecks();
   if(!decks.length) return '';
   const pinned=decks.filter(deck=>deck.pinned).sort((a,b)=>(Date.parse(b.pinnedAt)||0)-(Date.parse(a.pinnedAt)||0));
   const all=flashcardAllRecords();
-  const content=pinned.length?`<div class="dashboard-smart-grid">${pinned.map(deck=>{const analytics=flashcardSmartDeckAnalytics(deck,all); const trend=analytics.trend===null?'Sem comparação':analytics.trend>0?`+${analytics.trend} p.p.`:analytics.trend<0?`${analytics.trend} p.p.`:'Estável'; return `<article class="dashboard-smart-deck"><div class="dashboard-smart-copy"><span>${iconSvg('cards')}</span><div><strong>${escapeHtml(deck.name)}</strong><small>${escapeHtml(flashcardSmartDeckSummary(deck.filters))}</small></div></div><div class="dashboard-smart-kpis"><span><b>${analytics.candidates}</b><small>agora</small></span><span><b>${analytics.retention===null?'—':analytics.retention+'%'}</b><small>retenção</small></span><span><b>${analytics.errors}</b><small>erros</small></span><span><b>${escapeHtml(trend)}</b><small>7 dias</small></span></div>${renderFlashcardSmartTrend(analytics)}<button class="icon-btn primary" data-dashboard-smart-start="${escapeAttr(deck.id)}" ${analytics.candidates?'':'disabled'}>Estudar agora</button></article>`;}).join('')}</div>`:'<div class="dashboard-smart-empty"><div><strong>Nenhum baralho fixado</strong><span>Escolha em Flashcards quais recortes devem aparecer aqui.</span></div><button class="icon-btn" data-dashboard-smart-manage>Escolher baralhos</button></div>';
-  return `<section class="card dashboard-smart-decks"><div class="section-title"><div><span class="eyebrow">Revisão focada</span><h2>Baralhos inteligentes</h2><div class="muted">Sua fila e seu desempenho atualizados automaticamente.</div></div>${pinned.length?'<button class="tiny-btn" data-dashboard-smart-manage>Gerenciar</button>':''}</div>${content}</section>`;
+  const recommendation=flashcardRecommendedSmartDeck(all,{preferPinned:true});
+  const pinnedContent=pinned.length?`<div class="dashboard-smart-grid">${pinned.map(deck=>{const analytics=flashcardSmartDeckAnalytics(deck,all); const trend=analytics.trend===null?'Sem comparação':analytics.trend>0?`+${analytics.trend} p.p.`:analytics.trend<0?`${analytics.trend} p.p.`:'Estável'; return `<article class="dashboard-smart-deck"><div class="dashboard-smart-copy"><span>${iconSvg('cards')}</span><div><strong>${escapeHtml(deck.name)}</strong><small>${escapeHtml(flashcardSmartDeckSummary(deck.filters))}</small></div></div><div class="dashboard-smart-kpis"><span><b>${analytics.candidates}</b><small>agora</small></span><span><b>${analytics.retention===null?'—':analytics.retention+'%'}</b><small>retenção</small></span><span><b>${analytics.errors}</b><small>erros</small></span><span><b>${escapeHtml(trend)}</b><small>7 dias</small></span></div>${renderFlashcardSmartTrend(analytics)}<button class="icon-btn primary" data-dashboard-smart-start="${escapeAttr(deck.id)}" ${analytics.candidates?'':'disabled'}>Estudar agora</button></article>`;}).join('')}</div>`:'<div class="dashboard-smart-empty"><div><strong>Nenhum baralho fixado</strong><span>A recomendação considera todos os baralhos salvos. Fixe seus favoritos para priorizá-los.</span></div><button class="icon-btn" data-dashboard-smart-manage>Escolher baralhos</button></div>';
+  return `<section class="card dashboard-smart-decks"><div class="section-title"><div><span class="eyebrow">Revisão focada</span><h2>Baralhos inteligentes</h2><div class="muted">Sua fila e seu desempenho atualizados automaticamente.</div></div>${pinned.length?'<button class="tiny-btn" data-dashboard-smart-manage>Gerenciar</button>':''}</div>${renderDashboardSmartRecommendation(recommendation,pinned.some(deck=>flashcardCustomStudyCandidates(all,deck.filters).length>0))}${pinnedContent}</section>`;
 }
 async function openDashboardActivity(button) {
   const type=button.dataset.dashboardContinue;
@@ -9540,6 +9547,36 @@ function flashcardSmartDeckAnalytics(deck, all=flashcardAllRecords(), days=30) {
   });
   return {deckId:clean.id,candidates:candidates.length,reviews:logs.length,remembered,errors,retention,currentRetention,previousRetention,trend,daily};
 }
+function flashcardSmartDeckPriority(deck, all=flashcardAllRecords()) {
+  const analytics=flashcardSmartDeckAnalytics(deck,all);
+  const candidates=flashcardCustomStudyCandidates(all,deck.filters);
+  const today=studyDateKey();
+  const overdue=candidates.filter(card=>{const progress=flashcardProgress(card); return progress.reviews>0 && progress.nextReview<today;}).length;
+  const difficult=candidates.filter(card=>{const progress=flashcardProgress(card); return progress.difficulty>=7 || progress.lapses>=2 || progress.status==='Difícil';}).length;
+  const queuePoints=Math.min(20,analytics.candidates);
+  const overduePoints=Math.min(35,overdue*2.5);
+  const retentionPoints=analytics.retention===null?0:clamp((90-analytics.retention)/90,0,1)*25;
+  const errorPoints=analytics.reviews?Math.min(15,analytics.errors/analytics.reviews*30):0;
+  const difficultyPoints=Math.min(10,difficult*.75);
+  const trendPoints=analytics.trend!==null && analytics.trend<0?Math.min(5,Math.abs(analytics.trend)/4):0;
+  const score=Math.round(queuePoints+overduePoints+retentionPoints+errorPoints+difficultyPoints+trendPoints);
+  const reasons=[];
+  if(overdue) reasons.push(`${overdue} ${overdue===1?'card atrasado':'cards atrasados'}`);
+  if(analytics.retention!==null && analytics.retention<90) reasons.push(`retenção em ${analytics.retention}%`);
+  if(analytics.errors) reasons.push(`${analytics.errors} ${analytics.errors===1?'erro recente':'erros recentes'}`);
+  if(analytics.trend!==null && analytics.trend<0) reasons.push(`queda de ${Math.abs(analytics.trend)} p.p. na semana`);
+  if(!reasons.length && difficult) reasons.push(`${difficult} ${difficult===1?'card difícil':'cards difíceis'}`);
+  if(!reasons.length) reasons.push(`${analytics.candidates} ${analytics.candidates===1?'card disponível':'cards disponíveis'}`);
+  const urgency=score>=55?'high':score>=30?'medium':'normal';
+  return {deck:normalizeFlashcardSmartDeck(deck),analytics,score,urgency,overdue,difficult,reasons};
+}
+function flashcardRecommendedSmartDeck(all=flashcardAllRecords(), options={}) {
+  const available=flashcardSmartDecks().map(deck=>flashcardSmartDeckPriority(deck,all)).filter(item=>item.analytics.candidates>0);
+  if(!available.length) return null;
+  const pinned=available.filter(item=>item.deck.pinned);
+  const pool=options.preferPinned!==false && pinned.length?pinned:available;
+  return pool.sort((a,b)=>b.score-a.score || b.overdue-a.overdue || b.analytics.errors-a.analytics.errors || a.deck.name.localeCompare(b.deck.name))[0];
+}
 function renderFlashcardSmartTrend(analytics) {
   const max=Math.max(1,...analytics.daily.map(row=>row.count));
   return `<div class="fc-smart-trend" aria-label="Revisões nos últimos 7 dias">${analytics.daily.map(row=>`<i title="${escapeAttr(fmtDate(row.date))}: ${row.count}" style="height:${Math.max(row.count?18:5,Math.round(row.count/max*100))}%"></i>`).join('')}</div>`;
@@ -9564,7 +9601,9 @@ function renderFlashcardSmartDeckCard(deck, all=flashcardAllRecords()) {
 }
 function renderFlashcardSmartDeckOverview(all=flashcardAllRecords()) {
   const decks=flashcardSmartDecks();
-  return `<section class="card fc-smart-performance"><div class="section-title"><div><span class="eyebrow">Desempenho por regra</span><h2>Baralhos inteligentes</h2><div class="muted">Retenção, erros e ritmo dos últimos 30 dias. Fixe os mais importantes no Painel.</div></div><button class="icon-btn" data-fc-view="custom">Gerenciar</button></div>${decks.length?`<div class="fc-smart-deck-grid">${decks.map(deck=>renderFlashcardSmartDeckCard(deck,all)).join('')}</div>`:'<div class="fc-smart-empty">Crie seu primeiro baralho inteligente em Personalizar.</div>'}</section>`;
+  const recommendation=flashcardRecommendedSmartDeck(all,{preferPinned:true});
+  const recommended=recommendation?`<div class="fc-smart-recommended urgency-${recommendation.urgency}"><div><span class="eyebrow">Recomendado agora</span><strong>${escapeHtml(recommendation.deck.name)}</strong><small>${escapeHtml(recommendation.reasons.slice(0,3).join(' · '))}</small></div><div><span><b>${recommendation.analytics.candidates}</b> na fila</span><span><b>${recommendation.overdue}</b> atrasados</span><button class="icon-btn primary" data-fc-smart-start="${escapeAttr(recommendation.deck.id)}">Estudar recomendação</button></div></div>`:decks.length?'<div class="fc-smart-recommended is-clear"><div><span class="eyebrow">Recomendação automática</span><strong>Tudo em dia</strong><small>Nenhum baralho tem cartões disponíveis agora.</small></div></div>':'';
+  return `<section class="card fc-smart-performance"><div class="section-title"><div><span class="eyebrow">Desempenho por regra</span><h2>Baralhos inteligentes</h2><div class="muted">Retenção, erros e ritmo dos últimos 30 dias. Fixe os mais importantes no Painel.</div></div><button class="icon-btn" data-fc-view="custom">Gerenciar</button></div>${recommended}${decks.length?`<div class="fc-smart-deck-grid">${decks.map(deck=>renderFlashcardSmartDeckCard(deck,all)).join('')}</div>`:'<div class="fc-smart-empty">Crie seu primeiro baralho inteligente em Personalizar.</div>'}</section>`;
 }
 function renderFlashcardCustomStudy(all) {
   const filters=normalizeFlashcardCustomFilters(ui.flashcardCustomFilters);

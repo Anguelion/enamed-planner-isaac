@@ -570,3 +570,51 @@ test('sessão iniciada por baralho preserva sua origem para o histórico', () =>
   ctx.startFlashcardCustomSession([card],{deckId:''});
   assert.equal(ui.flashcardCustomDeckId,'');
 });
+
+test('prioridade automática favorece atraso, baixa retenção e erros', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const today=ctx.studyDateKey();
+  const yesterdayDate=new Date(`${today}T12:00:00`); yesterdayDate.setDate(yesterdayDate.getDate()-1);
+  const yesterday=ctx.localISODate(yesterdayDate);
+  const weakCards=[1,2,3].map(index=>ctx.normalizeFlashcardRecord({id:`priority-weak-${index}`,front:`W${index}`,back:'V',area:'Fraca'}));
+  const healthyCards=Array.from({length:10},(_,index)=>ctx.normalizeFlashcardRecord({id:`priority-ok-${index}`,front:`O${index}`,back:'V',area:'Estável'}));
+  state.flashcardLibrary.push(...weakCards,...healthyCards);
+  weakCards.forEach(card=>{state.flashcardProgress[card.id]={reviews:3,nextReview:yesterday,difficulty:6};});
+  healthyCards.forEach(card=>{state.flashcardProgress[card.id]={reviews:3,nextReview:'2099-01-01',difficulty:4};});
+  const weak=ctx.saveFlashcardSmartDeck('Precisa revisar',{mode:'all',area:'Fraca',limit:50});
+  const healthy=ctx.saveFlashcardSmartDeck('Estável',{mode:'all',area:'Estável',limit:50});
+  state.flashcardSystem.reviewLogs=[
+    {id:'priority-log-1',cardId:weakCards[0].id,rating:1,reviewedAt:new Date().toISOString()},
+    {id:'priority-log-2',cardId:weakCards[1].id,rating:1,reviewedAt:new Date().toISOString()},
+    {id:'priority-log-3',cardId:weakCards[2].id,rating:3,reviewedAt:new Date().toISOString()}
+  ];
+  const weakPriority=plain(ctx.flashcardSmartDeckPriority(weak,ctx.flashcardAllRecords()));
+  const healthyPriority=plain(ctx.flashcardSmartDeckPriority(healthy,ctx.flashcardAllRecords()));
+  assert.ok(weakPriority.score>healthyPriority.score);
+  assert.equal(weakPriority.overdue,3);
+  assert.equal(weakPriority.analytics.retention,33);
+  assert.ok(weakPriority.reasons.some(reason=>reason.includes('atrasados')));
+  assert.equal(ctx.flashcardRecommendedSmartDeck(ctx.flashcardAllRecords()).deck.id,weak.id);
+});
+
+test('recomendação respeita baralhos fixados quando eles têm cards disponíveis', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  state.flashcardLibrary.push(
+    ctx.normalizeFlashcardRecord({id:'recommend-pinned',front:'P',back:'V',area:'Fixado'}),
+    ctx.normalizeFlashcardRecord({id:'recommend-free',front:'L',back:'V',area:'Livre'})
+  );
+  const pinned=ctx.saveFlashcardSmartDeck('Fixado',{mode:'all',area:'Fixado',limit:10});
+  const free=ctx.saveFlashcardSmartDeck('Livre',{mode:'all',area:'Livre',limit:10});
+  ctx.toggleFlashcardSmartDeckPin(pinned.id,true);
+  state.flashcardSystem.reviewLogs=[{id:'recommend-error',cardId:'recommend-free',rating:1,reviewedAt:new Date().toISOString()}];
+  assert.equal(ctx.flashcardRecommendedSmartDeck(ctx.flashcardAllRecords(),{preferPinned:true}).deck.id,pinned.id);
+  assert.equal(ctx.flashcardRecommendedSmartDeck(ctx.flashcardAllRecords(),{preferPinned:false}).deck.id,free.id);
+});
+
+test('recomendação retorna vazio quando nenhum baralho tem cards disponíveis', () => {
+  const ctx = loadPlannerSandbox();
+  ctx.saveFlashcardSmartDeck('Sem fila',{mode:'all',area:'Inexistente',limit:10});
+  assert.equal(ctx.flashcardRecommendedSmartDeck(ctx.flashcardAllRecords()),null);
+});
