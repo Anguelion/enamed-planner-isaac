@@ -31,6 +31,10 @@ const catalog = JSON.parse(fs.readFileSync(CATALOG_PATH, 'utf8'));
 const localVideos = [];
 for (const lesson of catalog.lessons || []) {
   for (const video of lesson.videos || []) {
+    // O R2 é a fonte de verdade da disponibilidade online. Remova associações
+    // antigas antes de reconstruí-las para que objetos excluídos não continuem
+    // aparecendo como disponíveis no aplicativo.
+    delete video.onlinePath;
     const absolutePath = path.join(catalog.source, ...String(video.relativePath).split('/'));
     let size = 0;
     try { size = fs.statSync(absolutePath).size; } catch (error) {}

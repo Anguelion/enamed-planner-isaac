@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-02T13:55:47.715Z",
+  "generatedAt": "2026-08-17T02:20:56.650Z",
   "remote": "cloudflare:enamed-videos",
-  "remoteObjects": 81,
+  "remoteObjects": 83,
   "localVideos": 370,
   "matchedExact": [
     {
@@ -35,61 +35,91 @@
       "size": 49094408
     },
     {
-      "remotePath": "video_library/media/Bloco 11/05 - CofBasics/07 - CofBasics - Associação e Causalidade/CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO.mp4",
-      "localPath": "Bloco 11/05 - CofBasics/07 - CofBasics - Associação e Causalidade/CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO.mp4",
-      "videoId": "b11|CofBasics|CofBasics - Associação e Causalidade|CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO",
-      "size": 106209294
+      "remotePath": "video_library/media/Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01 - Medidas de Associação.mp4",
+      "localPath": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01 - Medidas de Associação.mp4",
+      "videoId": "b12|Saúde Coletiva|Medidas de Associação|Medidas de Associação",
+      "size": 294114165
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02 - Diarreia Aguda.mp4",
+      "localPath": "Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02 - Diarreia Aguda.mp4",
+      "videoId": "b12|Medicina de Família e Comunidade|Diarreia Aguda|Diarreia Aguda",
+      "size": 196899673
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4",
+      "localPath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4",
+      "videoId": "b12|G.O|Endometriose|Endometriose",
+      "size": 181769932
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/03 - GO/03 - Sangramento Uterino Anormal/03 - Sangramento Uterino Anormal.mp4",
+      "localPath": "Bloco 12/03 - GO/03 - Sangramento Uterino Anormal/03 - Sangramento Uterino Anormal.mp4",
+      "videoId": "b12|GO|Sangramento Uterino Anormal|Sangramento Uterino Anormal",
+      "size": 184953139
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05 - Perioperatório do cirurgião.mp4",
+      "localPath": "Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05 - Perioperatório do cirurgião.mp4",
+      "videoId": "b12|Cirurgia|Perioperatório do cirurgiao|Perioperatório do cirurgião",
+      "size": 471539170
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06 - Taquiarritmias e ACLBLS.mp4",
+      "localPath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06 - Taquiarritmias e ACLBLS.mp4",
+      "videoId": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS",
+      "size": 498116119
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07 - Bradiarritmias e síncope.mp4",
+      "localPath": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07 - Bradiarritmias e síncope.mp4",
+      "videoId": "b12|Clínica Médica|Bradiarritmias e Síncope|Bradiarritmias e síncope",
+      "size": 447538915
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01 - Redes de Atenção à Saúde e Níveis de Atenção.mp4",
+      "localPath": "Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01 - Redes de Atenção à Saúde e Níveis de Atenção.mp4",
+      "videoId": "b13|Saúde Coletiva|Redes de Atenção à Saúde e Níveis de Atenção|Redes de Atenção à Saúde e Níveis de Atenção",
+      "size": 322556979
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/02 - GO/02 - Violência Sexual/02 - 1 aula - Violência Sexual.mp4",
+      "localPath": "Bloco 13/02 - GO/02 - Violência Sexual/02 - 1 aula - Violência Sexual.mp4",
+      "videoId": "b13|GO|Violência Sexual|Violência Sexual",
+      "size": 219800324
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/02 - GO/02 - Violência Sexual/02 - 2 aula - Interrupção Legal da Gravidez.mp4",
+      "localPath": "Bloco 13/02 - GO/02 - Violência Sexual/02 - 2 aula - Interrupção Legal da Gravidez.mp4",
+      "videoId": "b13|GO|Violência Sexual|Interrupção Legal da Gravidez",
+      "size": 190975939
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03 - Febre Sem Sinais Localizatórios.mp4",
+      "localPath": "Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03 - Febre Sem Sinais Localizatórios.mp4",
+      "videoId": "b13|Pediatria|Febre Sem Sinais Localizatórios|Febre Sem Sinais Localizatórios",
+      "size": 192820616
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/04 - Cirurgia/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais.mp4",
+      "localPath": "Bloco 13/04 - Cirurgia/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais.mp4",
+      "videoId": "b13|Cirurgia|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais",
+      "size": 322870680
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05 - Pneumonia PAC e hospitalar.mp4",
+      "localPath": "Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05 - Pneumonia PAC e hospitalar.mp4",
+      "videoId": "b13|Clínica Médica|Pneumonia PAC e hospitalar|Pneumonia PAC e hospitalar",
+      "size": 294537251
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06 - Derrame Pleural.mp4",
+      "localPath": "Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06 - Derrame Pleural.mp4",
+      "videoId": "b13|Clínica Médica|Derrame pleural|Derrame Pleural",
+      "size": 286899520
     }
   ],
   "matchedBySize": [
-    {
-      "remotePath": "video_library/media/Bloco 02/01 - Medicina de Família e Comunidade/01 - HAS Ambulatorial/HAS Ambulatorial COFEXPRESS.mp4",
-      "localPath": "Bloco 02/01 - Medicina de Família e Comunidade/01 - HAS Ambulatorial/01.1 - HAS Ambulatorial COFEXPRESS.mp4",
-      "videoId": "b02|Medicina de Família e Comunidade|HAS Ambulatorial|HAS Ambulatorial COFEXPRESS",
-      "size": 59670598
-    },
-    {
-      "remotePath": "video_library/media/Bloco 02/02 - G.O/02 - Ciclo Menstrual/Ciclo Menstrual COFEXPRESS.mp4",
-      "localPath": "Bloco 02/02 - GO/02 - Ciclo Menstrual/02.1 - Ciclo Menstrual COFEXPRESS.mp4",
-      "videoId": "b02|GO|Ciclo Menstrual|Ciclo Menstrual COFEXPRESS",
-      "size": 246088869
-    },
-    {
-      "remotePath": "video_library/media/Bloco 02/02 - G.O/03 - Gestação inicial/Modificações do Organismo Materno COFEXPRESS.mp4",
-      "localPath": "Bloco 02/02 - GO/03 - Gestação inicial/03.1 - Modificações do Organismo Materno COFEXPRESS.mp4",
-      "videoId": "b02|GO|Gestação inicial|Modificações do Organismo Materno COFEXPRESS",
-      "size": 114005944
-    },
-    {
-      "remotePath": "video_library/media/Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/Crescimento e Baixa Estatura COFEXPRESS.mp4",
-      "localPath": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/04.1 - Crescimento e Baixa Estatura COFEXPRESS.mp4",
-      "videoId": "b02|Pediatria|Crescimento e Baixa Estatura|Crescimento e Baixa Estatura COFEXPRESS",
-      "size": 111153186
-    },
-    {
-      "remotePath": "video_library/media/Bloco 02/03 - Pediatria/05 - Puberdade/Puberdade COFEXPRESS.mp4",
-      "localPath": "Bloco 02/03 - Pediatria/05 - Puberdade/05.1 - Puberdade COFEXPRESS.mp4",
-      "videoId": "b02|Pediatria|Puberdade|Puberdade COFEXPRESS",
-      "size": 120718836
-    },
-    {
-      "remotePath": "video_library/media/Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/ATLS - Letra A COFEXPRESS.mp4",
-      "localPath": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/06.1 - ATLS - Letra A COFEXPRESS.mp4",
-      "videoId": "b02|Cirurgia|ATLS - Letra A|ATLS - Letra A COFEXPRESS",
-      "size": 37735656
-    },
-    {
-      "remotePath": "video_library/media/Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/ATLS - Letra B COFEXPRESS.mp4",
-      "localPath": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/07.1 - ATLS - Letra B COFEXPRESS.mp4",
-      "videoId": "b02|Cirurgia|ATLS - Letra B|ATLS - Letra B COFEXPRESS",
-      "size": 64515893
-    },
-    {
-      "remotePath": "video_library/media/Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/Insuficiência Cardíaca COFEXPRESS.mp4",
-      "localPath": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/08.1 - Insuficiência Cardíaca COFEXPRESS.mp4",
-      "videoId": "b02|Clínica Médica|Insuficiência Cardíaca|Insuficiência Cardíaca COFEXPRESS",
-      "size": 79562681
-    },
     {
       "remotePath": "video_library/media/Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/Legislação do SUS 1 Leis Orgânicas da Saúde COFEXPRESS.mp4",
       "localPath": "Bloco 03/01 - Saúde Coletiva/01 - Legislação do SUS/01.1 - Legislação do SUS 1 Leis Orgânicas da Saúde COFEXPRESS.mp4",
@@ -457,22 +487,10 @@
       "size": 55940252
     },
     {
-      "remotePath": "video_library/media/Bloco 11/03 - Clínica Médica/04 - Coagulopatias/01 - Coagulopatias.mp4",
-      "localPath": "Bloco 11/03 - Clínica Médica/04 - Coagulopatias/04 - Coagulopatias.mp4",
-      "videoId": "b11|Clínica Médica|Coagulopatias|Coagulopatias",
-      "size": 601994779
-    },
-    {
       "remotePath": "video_library/media/Bloco 11/03 - Clínica Médica/04 - Coagulopatias/Coagulopatias COFEXPRESS.mp4",
       "localPath": "Bloco 11/03 - Clínica Médica/04 - Coagulopatias/04.1 - Coagulopatias COFEXPRESS.mp4",
       "videoId": "b11|Clínica Médica|Coagulopatias|Coagulopatias COFEXPRESS",
       "size": 48599027
-    },
-    {
-      "remotePath": "video_library/media/Bloco 11/03 - Clínica Médica/05 - Onco-hematologia/02 - Onco-hematologia.mp4",
-      "localPath": "Bloco 11/03 - Clínica Médica/05 - Onco-hematologia/05 - Onco-hematologia.mp4",
-      "videoId": "b11|Clínica Médica|Onco-hematologia|Onco-hematologia",
-      "size": 582835581
     },
     {
       "remotePath": "video_library/media/Bloco 11/03 - Clínica Médica/05 - Onco-hematologia/Onco-hematologia COFEXPRESS.mp4",
@@ -485,12 +503,6 @@
       "localPath": "Bloco 11/04 - Saúde Coletiva/06 - Estudos Epidemiológicos/06.1 - Estudos Epidemiológicos COFEXPRESS.mp4",
       "videoId": "b11|Saúde Coletiva|Estudos Epidemiológicos|Estudos Epidemiológicos COFEXPRESS",
       "size": 43631858
-    },
-    {
-      "remotePath": "video_library/media/Bloco 11/04 - Saúde Coletiva/06 - Estudos Epidemiológicos/R1 - Estudos Epidemiológicos.mp4",
-      "localPath": "Bloco 11/04 - Saúde Coletiva/06 - Estudos Epidemiológicos/06 - R1 - Estudos Epidemiológicos.mp4",
-      "videoId": "b11|Saúde Coletiva|Estudos Epidemiológicos|R1 - Estudos Epidemiológicos",
-      "size": 416609633
     }
   ],
   "ambiguousBySize": [],
@@ -567,9 +579,19 @@
       "size": 534671920
     },
     {
+      "path": "Bloco 02/01 - Medicina de Família e Comunidade/01 - HAS Ambulatorial/01.1 - HAS Ambulatorial COFEXPRESS.mp4",
+      "videoId": "b02|Medicina de Família e Comunidade|HAS Ambulatorial|HAS Ambulatorial COFEXPRESS",
+      "size": 59670598
+    },
+    {
       "path": "Bloco 02/02 - GO/02 - Ciclo Menstrual/02 - Ciclo Menstrual.mp4",
       "videoId": "b02|GO|Ciclo Menstrual|Ciclo Menstrual",
       "size": 888897059
+    },
+    {
+      "path": "Bloco 02/02 - GO/02 - Ciclo Menstrual/02.1 - Ciclo Menstrual COFEXPRESS.mp4",
+      "videoId": "b02|GO|Ciclo Menstrual|Ciclo Menstrual COFEXPRESS",
+      "size": 246088869
     },
     {
       "path": "Bloco 02/02 - GO/03 - Gestação inicial/03 - Modificações do Organismo Materno.mp4",
@@ -577,9 +599,19 @@
       "size": 871693034
     },
     {
+      "path": "Bloco 02/02 - GO/03 - Gestação inicial/03.1 - Modificações do Organismo Materno COFEXPRESS.mp4",
+      "videoId": "b02|GO|Gestação inicial|Modificações do Organismo Materno COFEXPRESS",
+      "size": 114005944
+    },
+    {
       "path": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/04 - Crescimento e Baixa Estatura.mp4",
       "videoId": "b02|Pediatria|Crescimento e Baixa Estatura|Crescimento e Baixa Estatura",
       "size": 312020923
+    },
+    {
+      "path": "Bloco 02/03 - Pediatria/04 - Crescimento e Baixa Estatura/04.1 - Crescimento e Baixa Estatura COFEXPRESS.mp4",
+      "videoId": "b02|Pediatria|Crescimento e Baixa Estatura|Crescimento e Baixa Estatura COFEXPRESS",
+      "size": 111153186
     },
     {
       "path": "Bloco 02/03 - Pediatria/05 - Puberdade/05 - Puberdade.mp4",
@@ -587,9 +619,19 @@
       "size": 823848142
     },
     {
+      "path": "Bloco 02/03 - Pediatria/05 - Puberdade/05.1 - Puberdade COFEXPRESS.mp4",
+      "videoId": "b02|Pediatria|Puberdade|Puberdade COFEXPRESS",
+      "size": 120718836
+    },
+    {
       "path": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/06 - ATLS - Letra A.mp4",
       "videoId": "b02|Cirurgia|ATLS - Letra A|ATLS - Letra A",
       "size": 152077882
+    },
+    {
+      "path": "Bloco 02/04 - Cirurgia/06 - ATLS - Letra A/06.1 - ATLS - Letra A COFEXPRESS.mp4",
+      "videoId": "b02|Cirurgia|ATLS - Letra A|ATLS - Letra A COFEXPRESS",
+      "size": 37735656
     },
     {
       "path": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/07 - ATLS - Letra B.mp4",
@@ -597,9 +639,19 @@
       "size": 202176228
     },
     {
+      "path": "Bloco 02/04 - Cirurgia/07 - ATLS - Letra B/07.1 - ATLS - Letra B COFEXPRESS.mp4",
+      "videoId": "b02|Cirurgia|ATLS - Letra B|ATLS - Letra B COFEXPRESS",
+      "size": 64515893
+    },
+    {
       "path": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/08 - Insuficiência Cardíaca.mp4",
       "videoId": "b02|Clínica Médica|Insuficiência Cardíaca|Insuficiência Cardíaca",
       "size": 468469838
+    },
+    {
+      "path": "Bloco 02/05 - Clínica Médica/08 - Insuficiência Cardíaca/08.1 - Insuficiência Cardíaca COFEXPRESS.mp4",
+      "videoId": "b02|Clínica Médica|Insuficiência Cardíaca|Insuficiência Cardíaca COFEXPRESS",
+      "size": 79562681
     },
     {
       "path": "Bloco 02/06 - CofBasics/01 - CofBasics - Avaliação de Vitalidade Fetal (G.O)/CofBasics - Avaliação de Vitalidade Fetal (G.O).mp4",
@@ -967,19 +1019,29 @@
       "size": 289945859
     },
     {
-      "path": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01 - Medidas de Associação.mp4",
-      "videoId": "b12|Saúde Coletiva|Medidas de Associação|Medidas de Associação",
-      "size": 294114165
+      "path": "Bloco 11/03 - Clínica Médica/04 - Coagulopatias/04 - Coagulopatias.mp4",
+      "videoId": "b11|Clínica Médica|Coagulopatias|Coagulopatias",
+      "size": 601994779
+    },
+    {
+      "path": "Bloco 11/03 - Clínica Médica/05 - Onco-hematologia/05 - Onco-hematologia.mp4",
+      "videoId": "b11|Clínica Médica|Onco-hematologia|Onco-hematologia",
+      "size": 582835581
+    },
+    {
+      "path": "Bloco 11/04 - Saúde Coletiva/06 - Estudos Epidemiológicos/06 - R1 - Estudos Epidemiológicos.mp4",
+      "videoId": "b11|Saúde Coletiva|Estudos Epidemiológicos|R1 - Estudos Epidemiológicos",
+      "size": 416609633
+    },
+    {
+      "path": "Bloco 11/05 - CofBasics/07 - CofBasics - Associação e Causalidade/CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO.mp4",
+      "videoId": "b11|CofBasics|CofBasics - Associação e Causalidade|CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO",
+      "size": 106209294
     },
     {
       "path": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01.1 - Medidas de Associação COFEXPRESS.mp4",
       "videoId": "b12|Saúde Coletiva|Medidas de Associação|Medidas de Associação COFEXPRESS",
       "size": 41160691
-    },
-    {
-      "path": "Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02 - Diarreia Aguda.mp4",
-      "videoId": "b12|Medicina de Família e Comunidade|Diarreia Aguda|Diarreia Aguda",
-      "size": 196899673
     },
     {
       "path": "Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02.1 - Diarreia Aguda COFEXPRESS.mp4",
@@ -992,24 +1054,9 @@
       "size": 40233839
     },
     {
-      "path": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4",
-      "videoId": "b12|G.O|Endometriose|Endometriose",
-      "size": 181769932
-    },
-    {
-      "path": "Bloco 12/03 - GO/03 - Sangramento Uterino Anormal/03 - Sangramento Uterino Anormal.mp4",
-      "videoId": "b12|GO|Sangramento Uterino Anormal|Sangramento Uterino Anormal",
-      "size": 184953139
-    },
-    {
       "path": "Bloco 12/03 - GO/03 - Sangramento Uterino Anormal/03.1 - Sangramento Uterino Anormal COFEXPRESS.mp4",
       "videoId": "b12|GO|Sangramento Uterino Anormal|Sangramento Uterino Anormal COFEXPRESS",
       "size": 37995804
-    },
-    {
-      "path": "Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05 - Perioperatório do cirurgião.mp4",
-      "videoId": "b12|Cirurgia|Perioperatório do cirurgiao|Perioperatório do cirurgião",
-      "size": 471539170
     },
     {
       "path": "Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05.1 - Perioperatório do cirurgião COFEXPRESS.mp4",
@@ -1017,19 +1064,9 @@
       "size": 194873485
     },
     {
-      "path": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06 - Taquiarritmias e ACLBLS.mp4",
-      "videoId": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS",
-      "size": 498116119
-    },
-    {
       "path": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06.1 - Taquiarritmias e ACLBLS COFEXPRESS.mp4",
       "videoId": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS COFEXPRESS",
       "size": 79384142
-    },
-    {
-      "path": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07 - Bradiarritmias e síncope.mp4",
-      "videoId": "b12|Clínica Médica|Bradiarritmias e Síncope|Bradiarritmias e síncope",
-      "size": 447538915
     },
     {
       "path": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07.1 - Bradiarritmias e síncope COFEXPRESS.mp4",
@@ -1037,24 +1074,9 @@
       "size": 69690789
     },
     {
-      "path": "Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01 - Redes de Atenção à Saúde e Níveis de Atenção.mp4",
-      "videoId": "b13|Saúde Coletiva|Redes de Atenção à Saúde e Níveis de Atenção|Redes de Atenção à Saúde e Níveis de Atenção",
-      "size": 322556979
-    },
-    {
       "path": "Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01.1 - Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS.mp4",
       "videoId": "b13|Saúde Coletiva|Redes de Atenção à Saúde e Níveis de Atenção|Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS",
       "size": 90910806
-    },
-    {
-      "path": "Bloco 13/02 - GO/02 - Violência Sexual/02 - 1 aula - Violência Sexual.mp4",
-      "videoId": "b13|GO|Violência Sexual|Violência Sexual",
-      "size": 219800324
-    },
-    {
-      "path": "Bloco 13/02 - GO/02 - Violência Sexual/02 - 2 aula - Interrupção Legal da Gravidez.mp4",
-      "videoId": "b13|GO|Violência Sexual|Interrupção Legal da Gravidez",
-      "size": 190975939
     },
     {
       "path": "Bloco 13/02 - GO/02 - Violência Sexual/02.1 - Interrupção Legal da Gestação COFEXPRESS.mp4",
@@ -1067,19 +1089,9 @@
       "size": 24810180
     },
     {
-      "path": "Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03 - Febre Sem Sinais Localizatórios.mp4",
-      "videoId": "b13|Pediatria|Febre Sem Sinais Localizatórios|Febre Sem Sinais Localizatórios",
-      "size": 192820616
-    },
-    {
       "path": "Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03.1 - Febre Sem Sinais Localizatórios COFEXPRESS.mp4",
       "videoId": "b13|Pediatria|Febre Sem Sinais Localizatórios|Febre Sem Sinais Localizatórios COFEXPRESS",
       "size": 50996767
-    },
-    {
-      "path": "Bloco 13/04 - Cirurgia/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais.mp4",
-      "videoId": "b13|Cirurgia|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais",
-      "size": 322870680
     },
     {
       "path": "Bloco 13/04 - Cirurgia/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais/04.1 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS.mp4",
@@ -1087,19 +1099,9 @@
       "size": 65691388
     },
     {
-      "path": "Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05 - Pneumonia PAC e hospitalar.mp4",
-      "videoId": "b13|Clínica Médica|Pneumonia PAC e hospitalar|Pneumonia PAC e hospitalar",
-      "size": 294537251
-    },
-    {
       "path": "Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05.1 - Pneumonia PAC e hospitalar COFEXPRESS.mp4",
       "videoId": "b13|Clínica Médica|Pneumonia PAC e hospitalar|Pneumonia PAC e hospitalar COFEXPRESS",
       "size": 53803196
-    },
-    {
-      "path": "Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06 - Derrame Pleural.mp4",
-      "videoId": "b13|Clínica Médica|Derrame pleural|Derrame Pleural",
-      "size": 286899520
     },
     {
       "path": "Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06.1 - Derrame Pleural COFEXPRESS.mp4",
