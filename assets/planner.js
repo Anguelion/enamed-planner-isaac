@@ -8660,9 +8660,17 @@ function guessScheduleForImportGroup(label) {
     if(topic === query) score = 100;
     else if(query.includes(topic) || topic.includes(query)) score = 70 + Math.min(20, topic.length / 4);
     else {
-      const terms = topic.split(' ').filter(word => word.length > 3);
-      const hits = terms.filter(word => query.includes(word)).length;
-      if(hits) score = (hits / terms.length) * 60;
+      // Sobreposição nos DOIS sentidos: o tema da aula costuma trazer prefixos
+      // ("CofBasics - ...") e sufixos de área que o nome do deck não tem, então
+      // olhar só a proporção de palavras do tema encontradas no deck derrubava
+      // casamentos óbvios como "Associação x Causalidade".
+      const topicTerms = topic.split(' ').filter(word => word.length > 3);
+      const queryTerms = query.split(' ').filter(word => word.length > 3);
+      if(topicTerms.length && queryTerms.length) {
+        const topicHits = topicTerms.filter(word => queryTerms.includes(word)).length;
+        const ratio = Math.max(topicHits / topicTerms.length, topicHits / queryTerms.length);
+        if(topicHits) score = ratio * 70;
+      }
     }
     if(score > best.score) best = { id: lesson.id, score };
   });
