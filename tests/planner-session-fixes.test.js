@@ -341,6 +341,20 @@ test('Missão abre as questões restantes depois que a meta de 10 da aula foi co
   assert.deepEqual(plain(plan.unanswered.map(question => question.id)), ['extra-11','extra-12','extra-13','extra-14','extra-15']);
 });
 
+test('Missão calcula o progresso salvo sem carregar o banco completo de questões', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  state.schedule = [{id:'aula-rapida',block:1,topic:'Aula rápida'}];
+  state.questionProgress = {
+    q1:{answeredAt:'2026-08-16T12:00:00.000Z',scheduleId:'aula-rapida',correct:true},
+    q2:{answeredAt:'2026-08-16T12:01:00.000Z',scheduleId:'aula-rapida',correct:false}
+  };
+  ctx.__setQuestionBank([]);
+  ctx.invalidateQuestionBankRenderCache();
+
+  assert.deepEqual(plain(ctx.questionStatsForSchedule('aula-rapida')), {done:2,correct:1,rate:0.5});
+});
+
 test('renderFlashcardStudy: tela de fim de sessao no modo foco oferece saida; fora do foco nao exibe o botao', () => {
   const ctx = loadPlannerSandbox();
   const ui = ctx.__getUi();
