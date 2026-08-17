@@ -230,6 +230,7 @@ let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1
 let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) === '1';
 const views = [
   ['painel','Dashboard','dashboard'],
+  ['radar-saude','Radar Saúde','reading'],
   ['cronograma','Missão','mission'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'],
   ['aulas','Aulas','video'], ['questoes','Questões','question'], ['simulados','Simulados','simulation'], ['caderno-erros','Caderno de erros','caderno'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'],
   ['prescricao','Prescrição','prescription'], ['anatomia','Anatomia','xray'], ['semiologia','Semiologia','medical'], ['ecg','ECG','heart'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
@@ -9940,6 +9941,108 @@ function undoFlashcardCollectionReorganization(operation) {
   }
   return restored;
 }
+function flashcardQualityText(value='') {
+  return normalizedTopic(String(value).replace(/<[^>]+>/g,' ').replace(/\{\{c\d+::|\}\}/gi,' ').replace(/\s+/g,' ').trim());
+}
+function flashcardQualitySimilarity(left='', right='') {
+  const a=new Set(flashcardQualityText(left).split(' ').filter(word=>word.length>2));
+  const b=new Set(flashcardQualityText(right).split(' ').filter(word=>word.length>2));
+  if(!a.size || !b.size) return 0;
+  const intersection=[...a].filter(word=>b.has(word)).length;
+  return intersection/(a.size+b.size-intersection);
+}
+function flashcardQualityIssues(card) {
+  const progress=flashcardProgress(card);
+  const front=String(card.front||'').replace(/<[^>]+>/g,' ').trim();
+  const back=String(card.back||'').replace(/<[^>]+>/g,' ').trim();
+  const issues=[];
+  if(!front || (card.cardType!=='cloze' && !back)) issues.push({id:'incomplete',label:'Incompleto',tone:'danger'});
+  if(back.length>700 || back.split(/\s+/).filter(Boolean).length>120) issues.push({id:'long',label:'Resposta muito longa',tone:'attention'});
+  if(progress.lapses>=3 || progress.difficulty>=8.5) issues.push({id:'leech',label:'Muitos erros',tone:'attention'});
+  const created=Date.parse(card.createdAt||'');
+  if(!progress.reviews && Number.isFinite(created) && created<Date.now()-45*86400000) issues.push({id:'stale',label:'Nunca revisado',tone:'muted'});
+  return issues;
+}
+function flashcardQualityReport(all=flashcardAllRecords()) {
+  const cards=flashcardActiveRecords(all);
+  const byFront=new Map();
+  const issueCards=[];
+  cards.forEach(card=>{
+    const frontKey=flashcardQualityText(card.front);
+    if(frontKey) {
+      if(!byFront.has(frontKey)) byFront.set(frontKey,[]);
+      byFront.get(frontKey).push(card);
+    }
+    const issues=flashcardQualityIssues(card);
+    if(issues.length) issueCards.push({card,issues});
+  });
+  const identical=[]; const conflicts=[];
+  byFront.forEach((rows,frontKey)=>{
+    if(rows.length<2) return;
+    const byBack=new Map();
+    rows.forEach(card=>{const key=flashcardQualityText(card.back); if(!byBack.has(key)) byBack.set(key,[]); byBack.get(key).push(card);});
+    byBack.forEach(matches=>{if(matches.length>1) identical.push({kind:'identical',frontKey,cards:matches});});
+    if(byBack.size>1) conflicts.push({kind:'conflict',frontKey,cards:rows});
+  });
+  const similar=[]; const buckets=new Map();
+  byFront.forEach((rows,key)=>{
+    const bucket=key.split(' ').filter(Boolean).slice(0,2).join(' ');
+    if(!bucket) return;
+    if(!buckets.has(bucket)) buckets.set(bucket,[]);
+    buckets.get(bucket).push({key,card:rows[0]});
+  });
+  for(const entries of buckets.values()) {
+    const sample=entries.slice(0,25);
+    for(let i=0;i<sample.length && similar.length<20;i++) for(let j=i+1;j<sample.length && similar.length<20;j++) {
+      const score=flashcardQualitySimilarity(sample[i].key,sample[j].key);
+      if(score>=.86) similar.push({kind:'similar',score:Math.round(score*100),cards:[sample[i].card,sample[j].card]});
+    }
+    if(similar.length>=20) break;
+  }
+  const counts={incomplete:0,long:0,leech:0,stale:0};
+  issueCards.forEach(row=>row.issues.forEach(issue=>counts[issue.id]++));
+  return {total:cards.length,identical,conflicts,similar,issueCards,counts};
+}
+function mergeFlashcardDuplicates(ids, preferredId='') {
+  const cards=[...new Set(ids||[])].map(mutableFlashcardRecord).filter(card=>card&&!card.deletedAt);
+  if(cards.length<2) return {merged:0,keptId:'',error:'Não há cópias suficientes para mesclar.'};
+  const survivor=cards.find(card=>card.id===preferredId) || cards.slice().sort((a,b)=>flashcardProgress(b).reviews-flashcardProgress(a).reviews || flashcardProgress(b).stability-flashcardProgress(a).stability)[0];
+  const duplicates=cards.filter(card=>card.id!==survivor.id);
+  const progresses=cards.map(flashcardProgress);
+  const dateValues=progresses.map(progress=>progress.nextReview).filter(Boolean).sort();
+  const combined={...state.flashcardProgress[survivor.id],reviews:progresses.reduce((sum,progress)=>sum+n(progress.reviews),0),lapses:progresses.reduce((sum,progress)=>sum+n(progress.lapses),0),interval:Math.max(...progresses.map(progress=>n(progress.interval))),stability:Math.max(...progresses.map(progress=>n(progress.stability))),difficulty:Math.round(progresses.reduce((sum,progress)=>sum+n(progress.difficulty),0)/progresses.length*10)/10,nextReview:dateValues[0]||studyDateKey()};
+  survivor.tags=[...new Set(cards.flatMap(card=>card.tags||[]))];
+  if(!String(survivor.back||'').trim()) survivor.back=duplicates.find(card=>String(card.back||'').trim())?.back || '';
+  survivor.rowVersion=n(survivor.rowVersion)+1;
+  survivor.updatedAt=new Date().toISOString();
+  (state.flashcardSystem?.reviewLogs||[]).forEach(log=>{if(duplicates.some(card=>card.id===log.cardId)) log.cardId=survivor.id;});
+  state.flashcardProgress[survivor.id]=combined;
+  const removed=deleteFlashcardsByIds(duplicates.map(card=>card.id));
+  return {merged:removed,keptId:survivor.id,reviews:combined.reviews,lapses:combined.lapses};
+}
+function analyzeFlashcardImportRows(rows, all=flashcardAllRecords()) {
+  const cards=flashcardActiveRecords(all);
+  const exact=new Map(); const buckets=new Map();
+  cards.forEach(card=>{
+    const key=flashcardQualityText(card.front);
+    if(!key) return;
+    if(!exact.has(key)) exact.set(key,[]);
+    exact.get(key).push(card);
+    const bucket=key.split(' ').filter(Boolean).slice(0,2).join(' ');
+    if(bucket) { if(!buckets.has(bucket)) buckets.set(bucket,[]); if(buckets.get(bucket).length<25) buckets.get(bucket).push(card); }
+  });
+  return rows.map(row=>{
+    const key=flashcardQualityText(row.front);
+    const matches=exact.get(key)||[];
+    const identical=matches.find(card=>flashcardQualityText(card.back)===flashcardQualityText(row.back));
+    if(identical) return {...row,importStatus:'duplicate',existingId:identical.id};
+    if(matches[0]) return {...row,importStatus:'conflict',existingId:matches[0].id};
+    const bucket=key.split(' ').filter(Boolean).slice(0,2).join(' ');
+    const similar=(buckets.get(bucket)||[]).map(card=>({card,score:flashcardQualitySimilarity(row.front,card.front)})).sort((a,b)=>b.score-a.score)[0];
+    if(similar?.score>=.86) return {...row,importStatus:'similar',existingId:similar.card.id,similarity:Math.round(similar.score*100)};
+    return {...row,importStatus:'new',existingId:''};
+  });
+}
 function renderFlashcardManage(all) {
   const groups=flashcardCollectionGroups(all);
   const knownKeys=new Set(groups.map(group=>group.key));
@@ -9962,8 +10065,13 @@ function renderFlashcardManage(all) {
   const organizeSameDestination=Boolean(organizing?.scheduleId && organizeDestination===organizing.scheduleId);
   const organizeEditor=organizing?`<div class="fc-organize-editor"><div><span class="eyebrow">Reorganizar sem perder progresso</span><h3>${escapeHtml(organizing.label)}</h3><p>${organizing.count} ${organizing.count===1?'card será movido':'cards serão movidos'}. As revisões, dificuldade e próximas datas permanecem iguais.</p></div><div class="fc-organize-fields"><label>Aula de destino${flashcardLessonSelectHtml('id="fcOrganizeDestination"',organizeDestination,'Sem aula (baralho independente)')}</label>${organizeDestination?'':`<label>Novo nome do baralho<input class="input" id="fcOrganizeName" maxlength="100" value="${escapeAttr(organizeName)}" placeholder="Ex.: Cardiologia — revisão final"></label>`}<div class="fc-organize-preview"><strong>${organizeSameDestination?'Escolha outra aula ou deixe o baralho independente':destinationLesson?`Mesclar em ${escapeHtml(flashcardLessonLabel(destinationLesson))}`:`Manter como baralho independente`}</strong><span>${organizeSameDestination?'Este já é o destino atual do conjunto.':destinationLesson?`${destinationCount} ${destinationCount===1?'card já está':'cards já estão'} no destino. Os conjuntos serão unidos.`:'O conjunto ficará na área “Sem aula” com o novo nome.'}</span></div></div><div class="fc-organize-actions"><button class="icon-btn" id="fcOrganizeCancel">Cancelar</button><button class="icon-btn primary" id="fcOrganizeApply" ${organizeSameDestination?'disabled':''}>${destinationLesson?'Mover e mesclar':'Salvar organização'}</button></div></div>`:'';
   const organizeSection=`<section class="card fc-manage-organize"><div class="section-title"><div><span class="eyebrow">Organização da coleção</span><h3>Renomear, mover ou mesclar</h3><div class="muted">Escolha um conjunto e seu novo destino. Nenhum histórico de revisão será apagado.</div></div>${ui.flashcardLastCollectionMove?.before?.length?'<button class="tiny-btn" id="fcOrganizeUndo">Desfazer última organização</button>':''}</div>${organizeEditor}<div class="fc-manage-organize-list">${organizeRows}</div></section>`;
+  const quality=flashcardQualityReport(all);
+  const duplicateRows=quality.identical.slice(0,8).map((group,index)=>`<div class="fc-quality-row"><span><strong>${escapeHtml(String(group.cards[0]?.front||'').replace(/\s+/g,' ').slice(0,120))}</strong><small>${group.cards.length} cópias idênticas · ${group.cards.reduce((sum,card)=>sum+flashcardProgress(card).reviews,0)} revisões serão preservadas</small></span><button class="tiny-btn primary" data-fc-quality-merge="${index}">Mesclar cópias</button></div>`).join('');
+  const conflictRows=[...quality.conflicts.map(group=>({...group,label:'Mesma pergunta, respostas diferentes'})),...quality.similar.map(group=>({...group,label:`Perguntas ${group.score}% semelhantes`}))].slice(0,8).map(group=>`<div class="fc-quality-row"><span><strong>${escapeHtml(String(group.cards[0]?.front||'').replace(/\s+/g,' ').slice(0,120))}</strong><small>${escapeHtml(group.label)} · exige comparação manual</small></span><button class="tiny-btn" data-fc-quality-open="${escapeAttr(group.cards[0]?.id||'')}">Comparar</button></div>`).join('');
+  const issueRows=quality.issueCards.slice(0,10).map(row=>`<div class="fc-quality-row"><span><strong>${escapeHtml(String(row.card.front||'Card sem frente').replace(/\s+/g,' ').slice(0,120))}</strong><small>${row.issues.map(issue=>escapeHtml(issue.label)).join(' · ')}</small></span><button class="tiny-btn" data-fc-quality-open="${escapeAttr(row.card.id)}">Corrigir</button></div>`).join('');
+  const qualitySection=`<section class="card fc-quality-center"><div class="section-title"><div><span class="eyebrow">Saúde da coleção</span><h3>Central de qualidade</h3><div class="muted">Encontre cópias, conflitos e cards que precisam ser reescritos.</div></div><span class="badge ${quality.identical.length||quality.conflicts.length||quality.issueCards.length?'wait':'done'}">${quality.identical.length+quality.conflicts.length+quality.issueCards.length} alertas</span></div><div class="fc-quality-kpis"><span><b>${quality.identical.length}</b><small>grupos idênticos</small></span><span><b>${quality.conflicts.length+quality.similar.length}</b><small>para comparar</small></span><span><b>${quality.counts.long}</b><small>respostas longas</small></span><span><b>${quality.counts.leech}</b><small>muitos erros</small></span><span><b>${quality.counts.incomplete}</b><small>incompletos</small></span></div>${quality.identical.length?`<details open><summary>Cópias que podem ser mescladas com segurança</summary><div class="fc-quality-list">${duplicateRows}</div></details>`:''}${quality.conflicts.length||quality.similar.length?`<details><summary>Perguntas parecidas ou respostas conflitantes</summary><div class="fc-quality-list">${conflictRows}</div></details>`:''}${quality.issueCards.length?`<details><summary>Cards que merecem correção</summary><div class="fc-quality-list">${issueRows}</div></details>`:''}${!quality.identical.length&&!quality.conflicts.length&&!quality.similar.length&&!quality.issueCards.length?'<div class="fc-quality-clear"><strong>Coleção saudável</strong><span>Nenhum problema relevante foi encontrado agora.</span></div>':''}</section>`;
   const confirmation=deleting?`<div class="fc-delete-confirm" role="alert"><div><span class="eyebrow">Confirmação obrigatória</span><h3>Excluir “${escapeHtml(deleting.label)}”?</h3><p>Serão apagados permanentemente <strong>${deleting.count} ${deleting.count===1?'card':'cards'}</strong> e o progresso individual deles. Outros baralhos não serão alterados.</p><label>Digite <b>EXCLUIR</b> para liberar a ação<input class="input" id="fcDeleteCollectionPhrase" autocomplete="off" placeholder="EXCLUIR"></label></div><div><button class="icon-btn" id="fcDeleteCollectionCancel">Cancelar</button><button class="icon-btn danger" id="fcDeleteCollectionConfirm" data-key="${escapeAttr(deleting.key)}" disabled>Excluir ${deleting.count} ${deleting.count===1?'card':'cards'}</button></div></div>`:'';
-  return `<div class="fc-manage-page"><section class="card fc-manage-hero"><div><span class="eyebrow">Controle da coleção</span><h2>Gerenciar baralhos</h2><p>Escolha o que exportar, reorganize conjuntos sem perder histórico e mantenha a exclusão sob confirmação reforçada.</p></div><div><strong>${groups.length}</strong><span>baralhos</span><b>${all.length} cards</b></div></section><section class="card fc-manage-export"><div class="section-title"><div><span class="eyebrow">Exportação seletiva</span><h3>Quais baralhos deseja exportar?</h3><div class="muted">O arquivo preserva o nome de cada conjunto para a próxima importação.</div></div><button class="icon-btn primary" id="fcExportSelected" ${selectedCards?'':'disabled'}>Exportar ${selectedCards} ${selectedCards===1?'card':'cards'}</button></div><div class="fc-manage-toolbar"><input class="input" id="fcManageSearch" value="${escapeAttr(search)}" placeholder="Buscar baralho ou aula"><button class="tiny-btn" id="fcExportSelectAll">Selecionar todos</button><button class="tiny-btn" id="fcExportSelectNone">Limpar seleção</button><span><b>${selected.size}</b> de ${groups.length} baralhos</span></div><div class="fc-manage-deck-list">${rows}</div></section>${organizeSection}<details class="card fc-manage-danger" ${deleting?'open':''}><summary><span><strong>Excluir conjuntos de flashcards</strong><small>Zona protegida · exclusão permanente</small></span><span class="badge no">Cuidado</span></summary><div class="fc-manage-danger-body"><div class="fc-manage-warning"><strong>Faça um backup antes de excluir.</strong><span>A exclusão também remove o progresso dos cards escolhidos e será sincronizada entre dispositivos.</span><button class="tiny-btn" id="fcManageBackup">Baixar backup agora</button></div>${confirmation}<div class="fc-manage-delete-list">${deleteRows}</div></div></details></div>`;
+  return `<div class="fc-manage-page"><section class="card fc-manage-hero"><div><span class="eyebrow">Controle da coleção</span><h2>Gerenciar baralhos</h2><p>Escolha o que exportar, reorganize conjuntos, cuide da qualidade e mantenha a exclusão sob confirmação reforçada.</p></div><div><strong>${groups.length}</strong><span>baralhos</span><b>${all.length} cards</b></div></section>${qualitySection}<section class="card fc-manage-export"><div class="section-title"><div><span class="eyebrow">Exportação seletiva</span><h3>Quais baralhos deseja exportar?</h3><div class="muted">O arquivo preserva o nome de cada conjunto para a próxima importação.</div></div><button class="icon-btn primary" id="fcExportSelected" ${selectedCards?'':'disabled'}>Exportar ${selectedCards} ${selectedCards===1?'card':'cards'}</button></div><div class="fc-manage-toolbar"><input class="input" id="fcManageSearch" value="${escapeAttr(search)}" placeholder="Buscar baralho ou aula"><button class="tiny-btn" id="fcExportSelectAll">Selecionar todos</button><button class="tiny-btn" id="fcExportSelectNone">Limpar seleção</button><span><b>${selected.size}</b> de ${groups.length} baralhos</span></div><div class="fc-manage-deck-list">${rows}</div></section>${organizeSection}<details class="card fc-manage-danger" ${deleting?'open':''}><summary><span><strong>Excluir conjuntos de flashcards</strong><small>Zona protegida · exclusão permanente</small></span><span class="badge no">Cuidado</span></summary><div class="fc-manage-danger-body"><div class="fc-manage-warning"><strong>Faça um backup antes de excluir.</strong><span>A exclusão também remove o progresso dos cards escolhidos e será sincronizada entre dispositivos.</span><button class="tiny-btn" id="fcManageBackup">Baixar backup agora</button></div>${confirmation}<div class="fc-manage-delete-list">${deleteRows}</div></div></details></div>`;
 }
 function renderFlashcards() {
   // O overlay vive no body (fora de #flashcards), então não é substituído pelo
@@ -10058,6 +10166,27 @@ function renderFlashcards() {
   });
   document.getElementById('fcManageSearch')?.addEventListener('change',event=>{ui.flashcardManageSearch=event.currentTarget.value; renderFlashcards();});
   document.getElementById('fcManageBackup')?.addEventListener('click',exportFlashcardBackup);
+  document.querySelectorAll('[data-fc-quality-open]').forEach(button=>button.addEventListener('click',event=>{
+    const id=event.currentTarget.dataset.fcQualityOpen;
+    const card=flashcardAllRecords().find(item=>item.id===id);
+    if(!card) return;
+    ui.flashcardBrowserCardId=id;
+    ui.flashcardBrowserSearch=String(card.front||'').replace(/\s+/g,' ').slice(0,80);
+    ui.editFlashcardId=id;
+    ui.flashcardView='browser';
+    renderFlashcards();
+  }));
+  document.querySelectorAll('[data-fc-quality-merge]').forEach(button=>button.addEventListener('click',event=>{
+    const report=flashcardQualityReport(flashcardAllRecords());
+    const group=report.identical[n(event.currentTarget.dataset.fcQualityMerge)];
+    if(!group) return;
+    const reviews=group.cards.reduce((sum,card)=>sum+flashcardProgress(card).reviews,0);
+    if(!confirm(`Mesclar ${group.cards.length} cópias deste card?\n\nAs ${reviews} revisões serão reunidas no card principal. Esta ação remove apenas as cópias redundantes.`)) return;
+    const result=mergeFlashcardDuplicates(group.cards.map(card=>card.id));
+    if(result.error) { alert(result.error); return; }
+    persist();
+    showStudyToast?.(`${result.merged} ${result.merged===1?'cópia removida':'cópias removidas'} · ${result.reviews} revisões preservadas.`);
+  }));
   document.querySelectorAll('[data-fc-organize-collection]').forEach(button=>button.addEventListener('click',event=>{
     const group=flashcardCollectionGroups(flashcardAllRecords()).find(item=>item.key===event.currentTarget.dataset.fcOrganizeCollection);
     if(!group) return;
@@ -10401,6 +10530,18 @@ function renderFlashcards() {
     const group = ui.flashcardImport?.groups[n(e.currentTarget.dataset.importMode)];
     if(!group) return;
     group.mode = e.currentTarget.value;
+    renderFlashcards();
+  });
+  document.querySelectorAll('[data-import-duplicate-policy]').forEach(select=>select.onchange=e=>{
+    const group=ui.flashcardImport?.groups[n(e.currentTarget.dataset.importDuplicatePolicy)];
+    if(!group) return;
+    group.duplicatePolicy=e.currentTarget.value==='add'?'add':'skip';
+    renderFlashcards();
+  });
+  document.querySelectorAll('[data-import-conflict-policy]').forEach(select=>select.onchange=e=>{
+    const group=ui.flashcardImport?.groups[n(e.currentTarget.dataset.importConflictPolicy)];
+    if(!group) return;
+    group.conflictPolicy=['skip','replace','add'].includes(e.currentTarget.value)?e.currentTarget.value:'skip';
     renderFlashcards();
   });
   document.getElementById('flashcardImportCancel')?.addEventListener('click', () => { ui.flashcardImport=null; renderFlashcards(); });
@@ -10958,7 +11099,7 @@ function buildFlashcardImportGroups(rows, forcedScheduleId='') {
   const map = new Map();
   rows.forEach(row => {
     const key = row.deck || 'Importação';
-    if(!map.has(key)) map.set(key, { key, label:key, rows:[], scheduleId: forcedScheduleId || guessScheduleForImportGroup(key), mode:'add', guessed: !forcedScheduleId });
+    if(!map.has(key)) map.set(key, { key, label:key, rows:[], scheduleId: forcedScheduleId || guessScheduleForImportGroup(key), mode:'add', duplicatePolicy:'skip', conflictPolicy:'skip', guessed: !forcedScheduleId });
     map.get(key).rows.push(row);
   });
   return [...map.values()].sort((a,b)=>b.rows.length-a.rows.length);
@@ -10969,7 +11110,7 @@ function startFlashcardImport(event, options={}) {
   const forcedScheduleId = options.scheduleId || '';
   const reader = new FileReader();
   reader.onload = () => {
-    const rows = parseFlashcardImportFile(String(reader.result || ''), file.name);
+    const rows = analyzeFlashcardImportRows(parseFlashcardImportFile(String(reader.result || ''), file.name),flashcardAllRecords());
     event.target.value = '';
     if(!rows.length) { alert('Não encontrei cards válidos neste arquivo. Exporte do Anki como "Notas em texto simples (.txt/.tsv)" com frente e verso.'); return; }
     ui.flashcardImport = {
@@ -11019,11 +11160,37 @@ function linkFlashcardsToSchedule(ids, scheduleId) {
   renderCache.flashcardStats.clear();
   return linked;
 }
+function flashcardImportEffectiveRows(group) {
+  if(!group || group.mode==='skip') return [];
+  if(group.mode==='replace') return group.rows || [];
+  return (group.rows||[]).filter(row=>{
+    if(row.importStatus==='duplicate') return group.duplicatePolicy==='add';
+    if(row.importStatus==='conflict' || row.importStatus==='similar') return group.conflictPolicy!=='skip';
+    return true;
+  });
+}
+function replaceFlashcardFromImport(row, group, job) {
+  const card=mutableFlashcardRecord(row.existingId);
+  if(!card || card.deletedAt) return false;
+  card.cardType=row.cardType;
+  card.front=row.front;
+  card.back=row.back;
+  card.tags=[...new Set([...(card.tags||[]),...(row.tags||[])])];
+  card.importDeck=group.label;
+  card.sourceType='import';
+  card.sourceLocator=`${job.fileName} · ${group.label} · atualização`;
+  if(group.scheduleId) applyScheduleToFlashcard(card,group.scheduleId);
+  card.rowVersion=n(card.rowVersion)+1;
+  card.updatedAt=new Date().toISOString();
+  return true;
+}
 function commitFlashcardImport() {
   const job = ui.flashcardImport;
   if(!job) return;
   const groups = job.groups.filter(group => group.mode !== 'skip');
   if(!groups.length) { alert('Todos os grupos estão marcados para ignorar.'); return; }
+  const effectiveCount=groups.reduce((sum,group)=>sum+flashcardImportEffectiveRows(group).length,0);
+  if(!effectiveCount) { alert('Nenhum card novo foi selecionado. Ajuste as decisões sobre duplicados e conflitos.'); return; }
   const replacing = groups.filter(group => group.mode === 'replace' && group.scheduleId);
   const doomed = new Set();
   replacing.forEach(group => flashcardsForSchedule(group.scheduleId).forEach(card => doomed.add(card.id)));
@@ -11031,9 +11198,11 @@ function commitFlashcardImport() {
   const removed = deleteFlashcardsByIds([...doomed]);
   const stamp = new Date().toISOString();
   let imported = 0;
+  let replaced = 0;
   let unlinked = 0;
   groups.forEach(group => {
-    group.rows.forEach(row => {
+    flashcardImportEffectiveRows(group).forEach(row => {
+      if(group.mode!=='replace' && ['conflict','similar'].includes(row.importStatus) && group.conflictPolicy==='replace' && replaceFlashcardFromImport(row,group,job)) { replaced++; return; }
       const card = normalizeFlashcardRecord({
         id: newFlashcardId('card-import'),
         cardType: row.cardType,
@@ -11061,7 +11230,8 @@ function commitFlashcardImport() {
   renderCache.manualCards = null;
   renderCache.flashcardStats.clear();
   persist();
-  showStudyToast?.(`${imported} ${imported===1?'card importado':'cards importados'}${removed?` · ${removed} substituídos`:''}${unlinked?` · ${unlinked} sem aula`:''}.`);
+  const skipped=Math.max(0,job.total-imported-replaced);
+  showStudyToast?.(`${imported} ${imported===1?'card importado':'cards importados'}${replaced?` · ${replaced} atualizados sem perder histórico`:''}${removed?` · ${removed} substituídos`:''}${skipped?` · ${skipped} duplicados/conflitos ignorados`:''}${unlinked?` · ${unlinked} sem aula`:''}.`);
   renderFlashcards();
 }
 function renderFlashcardImportPanel() {
@@ -11074,15 +11244,21 @@ function renderFlashcardImportPanel() {
     <div class="flashcard-import-groups">${job.groups.map((group,index) => {
       const lesson = scheduleLessonById(group.scheduleId);
       const existing = group.scheduleId ? flashcardsForSchedule(group.scheduleId).length : 0;
+      const duplicates=group.rows.filter(row=>row.importStatus==='duplicate').length;
+      const conflicts=group.rows.filter(row=>['conflict','similar'].includes(row.importStatus)).length;
+      const newRows=group.rows.length-duplicates-conflicts;
       return `<div class="flashcard-import-group ${group.mode==='skip'?'is-skipped':''}">
         <div class="flashcard-import-group-head"><label class="flashcard-import-choice"><input type="checkbox" data-import-enabled="${index}" ${group.mode!=='skip'?'checked':''}><span><strong>${escapeHtml(group.label)}</strong><small>${group.mode==='skip'?'Não será importado':'Importar este baralho'}</small></span></label><span class="badge today">${group.rows.length} ${group.rows.length===1?'card':'cards'}</span></div>
+        <div class="flashcard-import-quality"><span class="new"><b>${newRows}</b> novos</span><span class="duplicate"><b>${duplicates}</b> duplicados</span><span class="conflict"><b>${conflicts}</b> conflitos</span><strong>${flashcardImportEffectiveRows(group).length} entrarão</strong></div>
         <label>Aula de destino${flashcardLessonSelectHtml(`data-import-lesson="${index}" ${job.lockedScheduleId?'disabled':''}`, group.scheduleId, 'Sem aula (deixar solto)')}</label>
         <label>Ao importar<select class="select" data-import-mode="${index}" ${group.mode==='skip'?'disabled':''}><option value="add" ${group.mode!=='replace'?'selected':''}>Adicionar aos existentes</option><option value="replace" ${group.mode==='replace'?'selected':''} ${group.scheduleId?'':'disabled'}>Substituir os cards da aula</option></select></label>
+        ${duplicates?`<label>Cards idênticos<select class="select" data-import-duplicate-policy="${index}" ${group.mode==='skip'||group.mode==='replace'?'disabled':''}><option value="skip" ${group.duplicatePolicy!=='add'?'selected':''}>Ignorar cópias</option><option value="add" ${group.duplicatePolicy==='add'?'selected':''}>Importar mesmo assim</option></select></label>`:''}
+        ${conflicts?`<label>Perguntas parecidas ou conflitantes<select class="select" data-import-conflict-policy="${index}" ${group.mode==='skip'||group.mode==='replace'?'disabled':''}><option value="skip" ${group.conflictPolicy==='skip'?'selected':''}>Ignorar por segurança</option><option value="replace" ${group.conflictPolicy==='replace'?'selected':''}>Atualizar existente e manter histórico</option><option value="add" ${group.conflictPolicy==='add'?'selected':''}>Importar como novo</option></select></label>`:''}
         <div class="muted">${lesson ? `${existing} ${existing===1?'card já vinculado':'cards já vinculados'} a esta aula${group.guessed && group.scheduleId?' · sugestão automática, confira':''}` : 'Sem aula: os cards ficam na lista "Cards sem aula" para você vincular depois.'}</div>
-        <details><summary>Ver amostra</summary><div class="flashcard-import-sample">${group.rows.slice(0,3).map(row => `<div><strong>${escapeHtml(row.front.slice(0,140))}</strong><span>${escapeHtml(row.back.slice(0,140))}</span></div>`).join('')}</div></details>
+        <details><summary>Ver amostra e diagnóstico</summary><div class="flashcard-import-sample">${group.rows.slice(0,5).map(row => `<div><strong>${escapeHtml(row.front.slice(0,140))}</strong><span>${escapeHtml(row.back.slice(0,140))}</span><em class="status-${escapeAttr(row.importStatus||'new')}">${row.importStatus==='duplicate'?'Duplicado':row.importStatus==='conflict'?'Resposta conflitante':row.importStatus==='similar'?`${row.similarity}% semelhante`:'Novo'}</em></div>`).join('')}</div></details>
       </div>`;
     }).join('')}</div>
-    <button class="icon-btn primary" id="flashcardImportConfirm">Importar ${job.groups.filter(g=>g.mode!=='skip').reduce((sum,g)=>sum+g.rows.length,0)} cards</button>
+    <button class="icon-btn primary" id="flashcardImportConfirm">Importar ou atualizar ${job.groups.reduce((sum,group)=>sum+flashcardImportEffectiveRows(group).length,0)} cards</button>
   </div>`;
 }
 // O agrupamento é compartilhado entre o render e os handlers de clique: os dois
@@ -13809,6 +13985,91 @@ function renderMaterialMarkdown(text, doc) {
 function escapeHtml(s) { return String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
 function escapeAttr(s) { return escapeHtml(s).replace(/\n/g,' '); }
 function escapeRegExp(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+let radarSaudeIssueCache = null;
+function radarSaudeDate(value) {
+  const date=new Date(`${value}T12:00:00-03:00`);
+  if(Number.isNaN(date.getTime())) return String(value||'');
+  return new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'long',year:'numeric'}).format(date);
+}
+function radarSaudeMarkup(issue) {
+  const stories=Array.isArray(issue.stories)?issue.stories:[];
+  const innovations=Array.isArray(issue.innovations)?issue.innovations:[];
+  const protocols=Array.isArray(issue.protocolUpdates)?issue.protocolUpdates:[];
+  const quiz=Array.isArray(issue.dailyQuiz)?issue.dailyQuiz:[];
+  const lead=issue.lead||{};
+  return `<div class="planner-radar-shell">
+    <header class="planner-radar-hero">
+      <div><span class="eyebrow">Clipping médico pessoal</span><h1>Radar <em>Saúde</em></h1><p>Newsletter, inovações e atualizações de PCDT reunidas dentro do seu planner.</p></div>
+      <div class="planner-radar-edition"><span>Edição monitorada</span><strong>${escapeHtml(radarSaudeDate(issue.publishedAt))}</strong><small>${Math.max(1,n(issue.readingMinutes))} min de leitura</small></div>
+    </header>
+    <nav class="planner-radar-nav" aria-label="Canais do Radar Saúde"><a href="#planner-radar-news">Newsletter</a><a href="#planner-radar-innovation">Inovações</a><a href="#planner-radar-pcdt">PCDT</a><a href="#planner-radar-quiz">5 questões</a><button type="button" id="radarSaudeRefresh">Atualizar</button></nav>
+    <section class="planner-radar-lead" id="planner-radar-news">
+      <div><span>Destaque da edição</span><h2>${escapeHtml(lead.title||issue.title)}</h2><p>${escapeHtml(lead.summary||'')}</p></div>
+      <aside><strong>Olhar clínico</strong><p>${escapeHtml(lead.clinicalNote||'')}</p><a href="${escapeAttr(lead.sourceUrl||issue.sourceUrl)}" target="_blank" rel="noopener noreferrer">Consultar fonte ↗</a></aside>
+    </section>
+    <section class="planner-radar-section">
+      <div class="planner-radar-heading"><div><span class="eyebrow">Leitura completa</span><h2>Entenda a edição</h2></div><span class="planner-radar-self-contained">Tudo o que você precisa saber está aqui</span></div>
+      <div class="planner-radar-study-list">${stories.map((story,index)=>{const deep=story.deepDive||{};return `<article class="planner-radar-study"><header><span>${String(index+1).padStart(2,'0')}</span><div><small>${escapeHtml(story.category)} · ${escapeHtml(story.evidence)}</small><h3>${escapeHtml(story.title)}</h3><p>${escapeHtml(story.summary)}</p></div></header><div class="planner-radar-study-body"><section><h4>O que aconteceu</h4><p>${escapeHtml(deep.whatHappened||'')}</p></section><section><h4>Como funciona</h4><p>${escapeHtml(deep.howItWorks||'')}</p></section><section><h4>Significado clínico</h4><p>${escapeHtml(deep.clinicalMeaning||story.clinicalNote)}</p></section><section><h4>Limites e cuidados</h4><p>${escapeHtml(deep.limitations||'')}</p></section></div><div class="planner-radar-exam"><div><span>Como pode cair na prova</span><ul>${(Array.isArray(deep.examFocus)?deep.examFocus:[]).map(point=>`<li>${escapeHtml(point)}</li>`).join('')}</ul></div><a href="${escapeAttr(story.sourceUrl)}" target="_blank" rel="noopener noreferrer">Fonte consultada ↗</a></div></article>`;}).join('')}</div>
+    </section>
+    <section class="planner-radar-section" id="planner-radar-innovation">
+      <div class="planner-radar-heading"><div><span class="eyebrow">Tecnologia e acesso</span><h2>Inovações em saúde</h2></div><small>Da pesquisa à oferta no SUS</small></div>
+      <div class="planner-radar-grid">${innovations.map(item=>`<article class="planner-radar-card planner-radar-innovation"><div class="planner-radar-card-meta"><span class="planner-radar-emoji">${escapeHtml(item.icon)}</span><b>${escapeHtml(item.stage)}</b></div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.summary)}</p><div class="planner-radar-note"><strong>Impacto potencial</strong><span>${escapeHtml(item.impact)}</span></div><footer><a href="${escapeAttr(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">Fonte oficial ↗</a></footer></article>`).join('')}</div>
+    </section>
+    <section class="planner-radar-section planner-radar-protocols" id="planner-radar-pcdt">
+      <div class="planner-radar-heading"><div><span class="eyebrow">Conduta no SUS</span><h2>Atualizações de PCDT</h2></div><a href="https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt" target="_blank" rel="noopener noreferrer">Catálogo oficial ↗</a></div>
+      <p class="planner-radar-warning">Consultas e documentos em elaboração não substituem o protocolo vigente. Confirme sempre a portaria e a versão oficial.</p>
+      <div class="planner-radar-protocol-list">${protocols.map(item=>`<article><time datetime="${escapeAttr(item.date)}">${escapeHtml(radarSaudeDate(item.date))}</time><div><span class="planner-radar-status planner-radar-status-${item.tone==='published'?'published':'attention'}">${escapeHtml(item.status)}</span><small>${escapeHtml(item.type)}</small><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.summary)}</p></div><a href="${escapeAttr(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir documento oficial">↗</a></article>`).join('')}</div>
+    </section>
+    <section class="planner-radar-section planner-radar-quiz" id="planner-radar-quiz">
+      <div class="planner-radar-heading"><div><span class="eyebrow">Fixação do dia</span><h2>5 questões comentadas</h2></div><strong id="radarQuizScore">0 de ${quiz.length} acertos</strong></div>
+      <p class="planner-radar-warning">Responda com base na leitura desta edição. O comentário aparece logo após cada resposta.</p>
+      <div class="planner-radar-quiz-list">${quiz.map((item,index)=>`<article class="planner-radar-question" data-radar-question="${index}"><header><span>Questão ${index+1}</span><h3>${escapeHtml(item.question)}</h3></header><div class="planner-radar-options">${item.options.map((option,optionIndex)=>`<button type="button" data-radar-option="${optionIndex}"><b>${String.fromCharCode(65+optionIndex)}</b><span>${escapeHtml(option)}</span></button>`).join('')}</div><div class="planner-radar-answer" hidden><strong></strong><p>${escapeHtml(item.explanation)}</p></div></article>`).join('')}</div>
+      <button class="planner-radar-quiz-reset" type="button" id="radarQuizReset">Refazer as 5 questões</button>
+    </section>
+    <p class="planner-radar-disclaimer">Conteúdo para atualização e estudo. Não substitui avaliação clínica, protocolo vigente ou orientação médica individual.</p>
+  </div>`;
+}
+function bindRadarSaudeQuiz(issue) {
+  const questions=Array.isArray(issue.dailyQuiz)?issue.dailyQuiz:[];
+  const answered=new Set();
+  let score=0;
+  const scoreNode=document.getElementById('radarQuizScore');
+  const updateScore=()=>{ if(scoreNode) scoreNode.textContent=`${score} de ${questions.length} acertos`; };
+  document.querySelectorAll('.planner-radar-question').forEach(card=>{
+    const questionIndex=n(card.dataset.radarQuestion);
+    const question=questions[questionIndex];
+    card.querySelectorAll('[data-radar-option]').forEach(button=>button.addEventListener('click',()=>{
+      if(answered.has(questionIndex)||!question) return;
+      answered.add(questionIndex);
+      const selected=n(button.dataset.radarOption);
+      const correct=n(question.answerIndex);
+      card.querySelectorAll('[data-radar-option]').forEach((option,index)=>{ option.disabled=true; if(index===correct) option.classList.add('correct'); });
+      if(selected===correct) { score+=1; card.classList.add('answered-correct'); }
+      else { button.classList.add('wrong'); card.classList.add('answered-wrong'); }
+      const answer=card.querySelector('.planner-radar-answer');
+      if(answer) { answer.hidden=false; answer.querySelector('strong').textContent=selected===correct?'Resposta correta':'Resposta incorreta'; }
+      updateScore();
+    }));
+  });
+  document.getElementById('radarQuizReset')?.addEventListener('click',()=>{ if(radarSaudeIssueCache) { const root=document.getElementById('radar-saude'); root.innerHTML=radarSaudeMarkup(radarSaudeIssueCache); document.getElementById('radarSaudeRefresh')?.addEventListener('click',()=>renderRadarSaude(true)); bindRadarSaudeQuiz(radarSaudeIssueCache); document.getElementById('planner-radar-quiz')?.scrollIntoView({behavior:'smooth',block:'start'}); } });
+  updateScore();
+}
+function renderRadarSaude(force=false) {
+  const root=document.getElementById('radar-saude');
+  if(!root) return;
+  const show=issue=>{
+    if(ui.tab!=='radar-saude') return;
+    root.innerHTML=radarSaudeMarkup(issue);
+    document.getElementById('radarSaudeRefresh')?.addEventListener('click',()=>renderRadarSaude(true));
+    bindRadarSaudeQuiz(issue);
+  };
+  if(radarSaudeIssueCache&&!force) { show(radarSaudeIssueCache); return; }
+  root.innerHTML='<section class="card empty"><strong>Atualizando o Radar Saúde…</strong><span>Buscando a edição mais recente e os documentos oficiais.</span></section>';
+  fetch('health-news/data/latest.json',{cache:'no-store'})
+    .then(response=>{ if(!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); })
+    .then(issue=>{ radarSaudeIssueCache=issue; show(issue); })
+    .catch(()=>{ if(ui.tab==='radar-saude') root.innerHTML='<section class="card empty"><strong>Não foi possível abrir o Radar Saúde.</strong><span>Confira sua conexão e tente novamente.</span><button class="tiny-btn" type="button" id="radarSaudeRetry">Tentar novamente</button></section>'; document.getElementById('radarSaudeRetry')?.addEventListener('click',()=>renderRadarSaude(true)); });
+}
 async function ensureViewData(tab) {
   if(['questoes','simulados','analise'].includes(tab)) await loadQuestionBank();
   if(['simulados','analise'].includes(tab)) await loadImportedSimulados();
@@ -13831,6 +14092,7 @@ async function render() {
   renderTabs();
   const renderers = {
     painel: renderPainel,
+    'radar-saude': renderRadarSaude,
     pendencias: renderPendencias,
     cronograma: renderCronograma,
     aulas: renderAulas,

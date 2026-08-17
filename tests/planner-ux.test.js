@@ -18,6 +18,7 @@ test('rotas reproduzem questão, vídeo e tentativa de simulado',()=>{
 test('hash vazio preserva a precedência da query e Semiologia possui rota estável',()=>{
   assert.deepEqual(UX.parseRoute(''),{tab:''});
   assert.deepEqual(UX.parseRoute(UX.buildRoute({tab:'semiologia'})),{tab:'semiologia'});
+  assert.deepEqual(UX.parseRoute(UX.buildRoute({tab:'radar-saude'})),{tab:'radar-saude'});
 });
 
 test('data local respeita America/Fortaleza',()=>{

@@ -889,3 +889,65 @@ test('renomear baralho solto pode ser desfeito sem alterar o agendamento', () =>
   assert.equal(card.scheduleId,'');
   assert.equal(state.flashcardProgress[card.id].nextReview,'2026-08-30');
 });
+
+test('central de qualidade separa cópias idênticas, conflitos e cards problemáticos', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const cards=[
+    ctx.normalizeFlashcardRecord({id:'quality-a',front:'Qual é o tratamento?',back:'Resposta A'}),
+    ctx.normalizeFlashcardRecord({id:'quality-b',front:'Qual é o tratamento?',back:'Resposta A'}),
+    ctx.normalizeFlashcardRecord({id:'quality-c',front:'Qual é o tratamento?',back:'Resposta diferente'}),
+    ctx.normalizeFlashcardRecord({id:'quality-long',front:'Explique o tema',back:'palavra '.repeat(130)})
+  ];
+  state.flashcardLibrary.push(...cards);
+  state.flashcardProgress['quality-c']={reviews:6,lapses:4,difficulty:9};
+  const report=ctx.flashcardQualityReport(ctx.flashcardAllRecords());
+  assert.equal(report.identical.length,1);
+  assert.equal(report.identical[0].cards.length,2);
+  assert.equal(report.conflicts.length,1);
+  assert.equal(report.counts.long,1);
+  assert.equal(report.counts.leech,1);
+});
+
+test('mesclar duplicados reúne progresso e reatribui todo o histórico ao card mantido', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const a=ctx.normalizeFlashcardRecord({id:'merge-a',front:'Pergunta igual',back:'Resposta',tags:['a']});
+  const b=ctx.normalizeFlashcardRecord({id:'merge-b',front:'Pergunta igual',back:'Resposta',tags:['b']});
+  state.flashcardLibrary.push(a,b);
+  state.flashcardProgress[a.id]={reviews:2,lapses:1,interval:8,stability:10,difficulty:5,nextReview:'2026-09-10'};
+  state.flashcardProgress[b.id]={reviews:3,lapses:2,interval:12,stability:14,difficulty:7,nextReview:'2026-09-05'};
+  state.flashcardSystem.reviewLogs.push({id:'merge-log-a',cardId:a.id,rating:3,reviewedAt:'2026-08-10T10:00:00Z'},{id:'merge-log-b',cardId:b.id,rating:1,reviewedAt:'2026-08-11T10:00:00Z'});
+  const result=ctx.mergeFlashcardDuplicates([a.id,b.id],a.id);
+  assert.equal(result.merged,1);
+  assert.equal(state.flashcardProgress[a.id].reviews,5);
+  assert.equal(state.flashcardProgress[a.id].lapses,3);
+  assert.equal(state.flashcardProgress[a.id].nextReview,'2026-09-05');
+  assert.deepEqual(plain(a.tags).sort(),['a','b']);
+  assert.ok(state.flashcardSystem.reviewLogs.every(log=>log.cardId===a.id));
+  assert.equal(ctx.flashcardAllRecords().some(card=>card.id===b.id),false);
+});
+
+test('prévia da importação ignora duplicado e pode atualizar conflito mantendo progresso', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const existing=ctx.normalizeFlashcardRecord({id:'import-quality-existing',front:'Qual a conduta?',back:'Conduta antiga',importDeck:'Clínica'});
+  state.flashcardLibrary.push(existing);
+  state.flashcardProgress[existing.id]={reviews:9,lapses:1,nextReview:'2026-10-01'};
+  const raw=[
+    {front:'Qual a conduta?',back:'Conduta antiga',cardType:'basic',tags:[],deck:'Clínica'},
+    {front:'Qual a conduta?',back:'Conduta atualizada',cardType:'basic',tags:['nova'],deck:'Clínica'},
+    {front:'Pergunta inédita',back:'Resposta inédita',cardType:'basic',tags:[],deck:'Clínica'}
+  ];
+  const analyzed=plain(ctx.analyzeFlashcardImportRows(raw,ctx.flashcardAllRecords()));
+  assert.deepEqual(analyzed.map(row=>row.importStatus),['duplicate','conflict','new']);
+  const groups=ctx.buildFlashcardImportGroups(analyzed);
+  assert.equal(ctx.flashcardImportEffectiveRows(groups[0]).length,1,'por padrão só o card novo entra');
+  groups[0].conflictPolicy='replace';
+  assert.equal(ctx.flashcardImportEffectiveRows(groups[0]).length,2);
+  uiOf(ctx).flashcardImport={fileName:'qualidade.tsv',total:3,groups,lockedScheduleId:''};
+  ctx.commitFlashcardImport();
+  assert.equal(existing.back,'Conduta atualizada');
+  assert.equal(state.flashcardProgress[existing.id].reviews,9);
+  assert.equal(ctx.flashcardAllRecords().filter(card=>card.sourceType==='import').length,2);
+});
