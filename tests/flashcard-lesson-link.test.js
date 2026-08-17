@@ -718,3 +718,34 @@ test('sessão encerrada sem respostas não cria relatório vazio', () => {
   assert.equal(state.flashcardSystem.sessionReports.length,0);
   assert.equal(ui.flashcardStudySession,null);
 });
+
+test('histórico semanal pondera retenção e compara tempo real com o planejado', () => {
+  const ctx = loadPlannerSandbox();
+  const reports=[
+    {id:'week-previous',endedAt:'2026-08-10T12:00:00-03:00',responses:4,remembered:4,errors:0,durationSeconds:300,plannedMinutes:10,futureDelta:-1,completed:true},
+    {id:'week-current-a',endedAt:'2026-08-17T12:00:00-03:00',responses:10,remembered:8,errors:2,durationSeconds:1200,plannedMinutes:30,futureDelta:-5,completed:true},
+    {id:'week-current-b',endedAt:'2026-08-18T12:00:00-03:00',responses:5,remembered:3,errors:2,durationSeconds:600,plannedMinutes:0,futureDelta:2,completed:false}
+  ];
+  const weeks=plain(ctx.flashcardSessionWeeklyHistory(reports,4,new Date('2026-08-17T12:00:00-03:00')));
+  const previous=weeks.at(-2); const current=weeks.at(-1);
+  assert.equal(weeks.length,4);
+  assert.equal(previous.sessions,1);
+  assert.equal(previous.retention,100);
+  assert.equal(previous.actualMinutes,5);
+  assert.equal(previous.adherence,50);
+  assert.equal(current.sessions,2);
+  assert.equal(current.completed,1);
+  assert.equal(current.retention,73);
+  assert.equal(current.actualMinutes,30);
+  assert.equal(current.plannedMinutes,30);
+  assert.equal(current.adherence,100);
+  assert.equal(current.futureDelta,-3);
+});
+
+test('histórico de sessões aceita apenas períodos suportados', () => {
+  const ctx = loadPlannerSandbox();
+  const reference=new Date('2026-08-17T12:00:00-03:00');
+  assert.equal(ctx.flashcardSessionWeeklyHistory([],8,reference).length,8);
+  assert.equal(ctx.flashcardSessionWeeklyHistory([],12,reference).length,12);
+  assert.equal(ctx.flashcardSessionWeeklyHistory([],99,reference).length,4);
+});

@@ -164,6 +164,7 @@ ui.flashcardCustomDeckId ||= '';
 ui.flashcardPrescriptionDeckByCard = ui.flashcardPrescriptionDeckByCard && typeof ui.flashcardPrescriptionDeckByCard === 'object' ? ui.flashcardPrescriptionDeckByCard : {};
 ui.flashcardStudySession = ui.flashcardStudySession && typeof ui.flashcardStudySession === 'object' ? ui.flashcardStudySession : null;
 ui.flashcardSessionReportId ||= '';
+ui.flashcardHistoryWeeks = [4,8,12].includes(Number(ui.flashcardHistoryWeeks)) ? Number(ui.flashcardHistoryWeeks) : 4;
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
 let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', sessionActive: false, pausedByUser: false, running: false, interval: null, questionId: '', secondsLeft: 0, elapsedSeconds: 0, beeped: false, status: '', audioContext: null };
@@ -705,7 +706,7 @@ function ensureQuestionProgress() {
   if(!Array.isArray(state.flashcardSystem.reviewLogs)) state.flashcardSystem.reviewLogs = [];
   if(!Array.isArray(state.flashcardSystem.captureSessions)) state.flashcardSystem.captureSessions = [];
   if(!Array.isArray(state.flashcardSystem.sessionReports)) state.flashcardSystem.sessionReports = [];
-  state.flashcardSystem.sessionReports = state.flashcardSystem.sessionReports.filter(report=>report?.id && report?.endedAt).slice(-20);
+  state.flashcardSystem.sessionReports = state.flashcardSystem.sessionReports.filter(report=>report?.id && report?.endedAt).slice(-100);
   if(!Array.isArray(state.flashcardSystem.versions)) state.flashcardSystem.versions = [];
   if(!Array.isArray(state.flashcardSystem.undoStack)) state.flashcardSystem.undoStack = [];
   if(!state.flashcardSystem.activeReviewSessionId) state.flashcardSystem.activeReviewSessionId = newFlashcardId('fc-session');
@@ -9304,6 +9305,7 @@ function renderFlashcardOverview(all, decks, due, reviewsToday, waiting) {
     </section>
     ${renderFlashcardAdaptivePrescription(all,'overview')}
     ${latestFlashcardSessionReport()?renderFlashcardSessionReport(latestFlashcardSessionReport(),{compact:true}):''}
+    ${renderFlashcardSessionHistory()}
     <section class="card fc-heatmap-card"><div class="section-title"><div><span class="eyebrow">Passado e futuro</span><h2>Mapa de revisões</h2><div class="muted">À esquerda, quantos cards você concluiu por dia. À direita, quantos estão previstos para revisar.</div></div><span class="badge today">12 meses + próximas 12 semanas</span></div>${renderFlashcardHeatmap(series,all)}</section>
     <div class="fc-overview-split"><section class="card fc-forecast-card"><div class="section-title"><div><span class="eyebrow">Carga futura</span><h2>Próximos 14 dias</h2></div></div>${renderFlashcardForecastOverview()}</section><section class="card fc-weak-card"><div class="section-title"><div><span class="eyebrow">Prioridade</span><h2>Assuntos frágeis</h2></div></div>${weak}</section></div>
     ${renderFlashcardSmartDeckOverview(all)}
@@ -9671,7 +9673,7 @@ function finalizeFlashcardStudySession(options={}) {
   const started=Date.parse(session.startedAt||''); const ended=Date.parse(endedAt);
   const report={id:session.id,kind:session.kind||'custom',label:session.label||'Sessão de flashcards',startedAt:session.startedAt,endedAt,completed:Boolean(options.completed),plannedMinutes:Math.max(0,n(session.plannedMinutes)),durationSeconds:Number.isFinite(started)&&Number.isFinite(ended)?Math.max(1,Math.round((ended-started)/1000)):0,initialCards:Math.max(logs.length,n(session.initialCards)),responses:logs.length,completedCards:new Set(logs.map(log=>log.cardId)).size,remembered,errors,retention:logs.length?Math.round(remembered/logs.length*100):null,beforeForecast:n(session.initialForecast?.total),afterForecast:n(afterForecast.total),futureDelta:n(afterForecast.total)-n(session.initialForecast?.total),forecastDays:afterForecast.days,breakdown};
   if(!Array.isArray(state.flashcardSystem.sessionReports)) state.flashcardSystem.sessionReports=[];
-  state.flashcardSystem.sessionReports=[...state.flashcardSystem.sessionReports.filter(item=>item.id!==report.id),report].slice(-20);
+  state.flashcardSystem.sessionReports=[...state.flashcardSystem.sessionReports.filter(item=>item.id!==report.id),report].slice(-100);
   ui.flashcardSessionReportId=report.id;
   ui.flashcardStudySession=null;
   return report;
@@ -9686,6 +9688,44 @@ function renderFlashcardSessionReport(report, options={}) {
   const delta=n(report.futureDelta); const deltaLabel=delta===0?'carga estável':delta>0?`+${delta} revisões`:`${delta} revisões`;
   const breakdown=(report.breakdown||[]).map(item=>`<span><b>${escapeHtml(item.name)}</b><strong>${n(item.count)}</strong></span>`).join('');
   return `<section class="fc-session-report ${options.compact?'is-compact':''}"><div class="fc-session-report-head"><div><span class="eyebrow">${report.completed?'Sessão concluída':'Sessão encerrada'}</span><h2>${escapeHtml(report.label||'Relatório da sessão')}</h2><p>${escapeHtml(new Intl.DateTimeFormat('pt-BR',{dateStyle:'short',timeStyle:'short'}).format(new Date(report.endedAt)))}</p></div><span class="fc-session-report-retention">${report.retention===null?'—':report.retention+'%'}<small>retenção</small></span></div><div class="fc-session-report-kpis"><div><strong>${minutes} min</strong><span>tempo real</span></div><div><strong>${n(report.responses)}</strong><span>respostas</span></div><div><strong>${n(report.errors)}</strong><span>erros</span></div><div><strong>${deltaLabel}</strong><span>próximos ${n(report.forecastDays)||14} dias</span></div></div>${breakdown?`<div class="fc-session-report-breakdown"><span>Baralhos treinados</span>${breakdown}</div>`:''}<div class="fc-session-report-actions"><button class="icon-btn primary" data-fc-view="overview">Ver visão geral</button><button class="tiny-btn" data-fc-report-repeat>Montar nova prescrição</button></div></section>`;
+}
+function flashcardSessionWeeklyHistory(reports=state.flashcardSystem?.sessionReports || [], rawWeeks=ui.flashcardHistoryWeeks, referenceDate=new Date()) {
+  const weeks=[4,8,12].includes(Number(rawWeeks))?Number(rawWeeks):4;
+  const reference=new Date(referenceDate);
+  if(!Number.isFinite(reference.getTime())) return [];
+  reference.setHours(12,0,0,0);
+  const currentStart=new Date(reference);
+  currentStart.setDate(currentStart.getDate()-currentStart.getDay());
+  return Array.from({length:weeks},(_,index)=>{
+    const start=new Date(currentStart);
+    start.setDate(start.getDate()-(weeks-1-index)*7);
+    const end=new Date(start);
+    end.setDate(end.getDate()+6);
+    const startKey=localISODate(start); const endKey=localISODate(end);
+    const items=reports.filter(report=>{const key=studyDateKey(report?.endedAt); return key>=startKey && key<=endKey;});
+    const responses=items.reduce((total,report)=>total+n(report.responses),0);
+    const remembered=items.reduce((total,report)=>total+n(report.remembered),0);
+    const durationSeconds=items.reduce((total,report)=>total+n(report.durationSeconds),0);
+    const plannedMinutes=items.reduce((total,report)=>total+n(report.plannedMinutes),0);
+    const actualMinutes=Math.round(durationSeconds/60);
+    return {start:startKey,end:endKey,sessions:items.length,completed:items.filter(report=>report.completed).length,responses,remembered,errors:items.reduce((total,report)=>total+n(report.errors),0),retention:responses?Math.round(remembered/responses*100):null,actualMinutes,plannedMinutes,adherence:plannedMinutes?Math.round(actualMinutes/plannedMinutes*100):null,futureDelta:items.reduce((total,report)=>total+n(report.futureDelta),0)};
+  });
+}
+function renderFlashcardSessionHistory() {
+  const reports=(state.flashcardSystem?.sessionReports || []).slice().sort((a,b)=>Date.parse(b.endedAt)-Date.parse(a.endedAt));
+  if(!reports.length) return '';
+  const weeks=flashcardSessionWeeklyHistory(reports,ui.flashcardHistoryWeeks);
+  const current=weeks.at(-1); const previous=weeks.at(-2);
+  const retentionTrend=current?.retention===null || previous?.retention===null ? null : current.retention-previous.retention;
+  const trendLabel=retentionTrend===null?'sem comparação':retentionTrend===0?'estável':`${retentionTrend>0?'+':''}${retentionTrend} p.p.`;
+  const maxMinutes=Math.max(1,...weeks.flatMap(week=>[week.actualMinutes,week.plannedMinutes]));
+  const weekLabel=week=>new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'2-digit'}).format(new Date(`${week.start}T12:00:00`));
+  const chart=weeks.map(week=>`<div class="fc-history-week ${week===current?'is-current':''}" title="${escapeAttr(`${weekLabel(week)} · ${week.sessions} sessões · ${week.retention===null?'sem retenção':week.retention+'% de retenção'}`)}"><div class="fc-history-retention"><i style="height:${week.retention===null?3:Math.max(8,week.retention)}%"></i><strong>${week.retention===null?'—':week.retention+'%'}</strong></div><div class="fc-history-time"><i class="actual" style="height:${Math.max(week.actualMinutes?6:2,Math.round(week.actualMinutes/maxMinutes*100))}%"></i><i class="planned" style="height:${Math.max(week.plannedMinutes?6:2,Math.round(week.plannedMinutes/maxMinutes*100))}%"></i></div><small>${weekLabel(week)}</small></div>`).join('');
+  const recent=reports.slice(0,5).map(report=>{const delta=n(report.futureDelta); const retention=Number(report.retention); return `<li><div><strong>${escapeHtml(report.label||'Sessão de flashcards')}</strong><span>${escapeHtml(new Intl.DateTimeFormat('pt-BR',{dateStyle:'short'}).format(new Date(report.endedAt)))} · ${Math.max(1,Math.round(n(report.durationSeconds)/60))} min</span></div><div><b>${report.retention!==null && Number.isFinite(retention)?retention+'%':'—'}</b><small>${delta===0?'carga estável':`${delta>0?'+':''}${delta} revisões`}</small></div></li>`;}).join('');
+  const totalSessions=weeks.reduce((total,week)=>total+week.sessions,0);
+  const totalMinutes=weeks.reduce((total,week)=>total+week.actualMinutes,0);
+  const impact=weeks.reduce((total,week)=>total+week.futureDelta,0);
+  return `<section class="card fc-session-history"><div class="section-title"><div><span class="eyebrow">Seu processo</span><h2>Evolução das sessões</h2><div class="muted">Compare constância, retenção e tempo planejado com o realizado.</div></div><div class="fc-history-range">${[4,8,12].map(value=>`<button class="tiny-btn ${ui.flashcardHistoryWeeks===value?'active':''}" data-fc-history-weeks="${value}" aria-pressed="${ui.flashcardHistoryWeeks===value}">${value} sem.</button>`).join('')}</div></div><div class="fc-history-kpis"><div><span>Retenção nesta semana</span><strong>${current.retention===null?'—':current.retention+'%'}</strong><small>${trendLabel} contra a anterior</small></div><div><span>Tempo real / planejado</span><strong>${current.actualMinutes} / ${current.plannedMinutes||'—'} min</strong><small>${current.adherence===null?'sessões sem meta de tempo':current.adherence+'% do plano'}</small></div><div><span>Sessões no período</span><strong>${totalSessions}</strong><small>${totalMinutes} min estudados</small></div><div><span>Impacto acumulado</span><strong>${impact>0?'+':''}${impact}</strong><small>revisões futuras</small></div></div><div class="fc-history-visual"><div class="fc-history-chart" style="--fc-history-columns:${weeks.length};min-width:${weeks.length*70}px" aria-label="Retenção e tempo das sessões por semana">${chart}</div><div class="fc-history-legend"><span><i class="retention"></i>Retenção</span><span><i class="actual"></i>Tempo real</span><span><i class="planned"></i>Planejado</span></div></div><details class="fc-history-recent"><summary>Ver as últimas ${Math.min(5,reports.length)} sessões</summary><ul>${recent}</ul></details></section>`;
 }
 function renderFlashcardSmartTrend(analytics) {
   const max=Math.max(1,...analytics.daily.map(row=>row.count));
@@ -9915,6 +9955,12 @@ function renderFlashcards() {
     ui.flashcardPrescriptionDeckByCard={};
     ui.flashcardSessionDone=false;
     ui.flashcardView='overview';
+    renderFlashcards();
+  }));
+  document.querySelectorAll('[data-fc-history-weeks]').forEach(button=>button.addEventListener('click',event=>{
+    const weeks=Number(event.currentTarget.dataset.fcHistoryWeeks);
+    if(![4,8,12].includes(weeks)) return;
+    ui.flashcardHistoryWeeks=weeks;
     renderFlashcards();
   }));
   document.querySelectorAll('[data-fc-scheduler-preset]').forEach(button => button.onclick = event => {
