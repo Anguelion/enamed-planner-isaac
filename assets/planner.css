@@ -793,7 +793,7 @@ body.dark .question-difficulty-btn.difficulty-dificil.active{background:#4a211f;
 .flashcard-md-heading.level-1{font-size:1.5em}.flashcard-md-heading.level-2{font-size:1.3em}.flashcard-md-heading.level-3{font-size:1.15em}
 .auto-progress{font-size:11px;color:var(--teal);font-weight:800;margin-top:4px}
 .flashcard-command{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:end}
-.flashcard-filters{display:grid;grid-template-columns:repeat(4,minmax(140px,1fr));gap:10px;margin-top:12px}
+.flashcard-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:12px}
 .flashcard-decks{display:grid;gap:8px}
 .flashcard-deck{border:1px solid var(--line);border-radius:8px;background:#fbfdfc;padding:10px}
 .flashcard-deck.active{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,78,108,.12)}
@@ -813,7 +813,23 @@ body.dark .question-difficulty-btn.difficulty-dificil.active{background:#4a211f;
 #flashcards.flashcard-focus-mode .flashcard-block-panel,
 #flashcards.flashcard-focus-mode .flashcard-indicator-panel,
 #flashcards.flashcard-focus-mode .flashcard-subject-strip,
-#flashcards.flashcard-focus-mode .flashcard-library-card{display:none}
+#flashcards.flashcard-focus-mode .flashcard-library-card,
+#flashcards.flashcard-focus-mode .flashcard-organizer{display:none}
+/* Importação de flashcards, organizador de cards sem aula e painel da aula */
+.flashcard-import-panel{display:grid;gap:12px}
+.flashcard-import-groups{display:grid;gap:10px}
+.flashcard-import-group{display:grid;gap:8px;border:1px solid var(--line);border-radius:8px;padding:12px;background:#fbfdfc}
+.flashcard-import-group-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.flashcard-import-group label{display:grid;gap:4px;font-size:12px;font-weight:800}
+.flashcard-import-sample{display:grid;gap:8px;margin-top:8px}
+.flashcard-import-sample div{display:grid;gap:2px;border-left:3px solid var(--line);padding-left:8px;font-size:12px}
+.flashcard-import-sample span{color:var(--muted)}
+.flashcard-organizer-list{display:grid;gap:8px;margin-top:10px}
+.flashcard-organizer-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,1.2fr) auto auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px}
+.fc-inline-lesson{display:grid;gap:4px;font-size:12px;font-weight:800;margin:6px 0}
+.lesson-flashcard-panel{display:grid;gap:8px}
+.lesson-flashcard-actions{display:flex;gap:6px;flex-wrap:wrap}
+@media(max-width:760px){.flashcard-organizer-row{grid-template-columns:1fr}}
 #flashcards.flashcard-focus-mode .flashcards-workspace{grid-template-columns:1fr}
 #flashcards.flashcard-focus-mode .flashcard-review-column{max-width:900px;margin:0 auto;width:100%}
 #flashcards.flashcard-focus-mode .flashcard-stage{min-height:70vh}

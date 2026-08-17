@@ -607,7 +607,8 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 
 #flashcards .flashcard-filters {
   display: grid;
-  grid-template-columns: minmax(150px, .9fr) minmax(180px, 1.25fr) auto auto auto;
+  /* Fila, Área, Aula, Novos/dia, Revisões/dia e previsão. */
+  grid-template-columns: minmax(140px, .8fr) minmax(150px, 1fr) minmax(190px, 1.4fr) auto auto auto;
   align-items: end;
   gap: 10px;
   margin: 0;
