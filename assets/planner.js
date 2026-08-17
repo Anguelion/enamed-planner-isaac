@@ -8883,6 +8883,9 @@ function unlinkedFlashcards() {
   return flashcardAllRecords().filter(card => !card.scheduleId);
 }
 function renderFlashcards() {
+  // O overlay vive no body (fora de #flashcards), então não é substituído pelo
+  // innerHTML abaixo: precisa ser removido explicitamente a cada render.
+  document.getElementById('flashcardOrganizerOverlay')?.remove();
   const all = flashcardAllRecords();
   const areas = ['Todas', ...new Set(all.map(card => card.area).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   const blocks = ['Todos', ...new Set(all.map(card => card.weeklyBlockId || card.block).filter(Boolean))].sort((a,b)=>n(a)-n(b));
@@ -8935,7 +8938,25 @@ function renderFlashcards() {
   if(lessonFilter) lessonFilter.onchange = e => { ui.flashcardLesson=e.target.value; ui.flashcardSubject=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
   const organizerBtn = document.getElementById('flashcardOrganizerBtn');
   if(organizerBtn) organizerBtn.onclick = () => { ui.flashcardOrganizerOpen = !ui.flashcardOrganizerOpen; renderFlashcards(); };
-  document.getElementById('flashcardOrganizerClose')?.addEventListener('click', () => { ui.flashcardOrganizerOpen=false; renderFlashcards(); });
+  // Algum ancestral de #flashcards cria contexto de layout (transform/filter),
+  // e um position:fixed lá dentro se ancora nele, não no viewport — o overlay
+  // ia parar no meio da página. Pendurar no body resolve de vez.
+  const overlayNode = document.getElementById('flashcardOrganizerOverlay');
+  if(overlayNode && overlayNode.parentElement !== document.body) document.body.append(overlayNode);
+  const closeOrganizer = () => { ui.flashcardOrganizerOpen=false; renderFlashcards(); };
+  document.getElementById('flashcardOrganizerClose')?.addEventListener('click', closeOrganizer);
+  const organizerOverlay = document.getElementById('flashcardOrganizerOverlay');
+  if(organizerOverlay) {
+    organizerOverlay.addEventListener('mousedown', event => { if(event.target === organizerOverlay) closeOrganizer(); });
+    document.addEventListener('keydown', function escOrganizer(event) {
+      if(event.key !== 'Escape') return;
+      document.removeEventListener('keydown', escOrganizer);
+      if(ui.flashcardOrganizerOpen) closeOrganizer();
+    });
+  }
+  // A coluna de revisão fica no meio da página: sem isso, quem importa a partir
+  // da aba Aulas cai numa tela aparentemente inalterada.
+  if(ui.flashcardImport) document.querySelector('.flashcard-import-panel')?.scrollIntoView({block:'center', behavior:'smooth'});
   document.querySelectorAll('[data-organizer-link]').forEach(button => button.onclick = e => {
     const index = n(e.currentTarget.dataset.organizerLink);
     const group = unlinkedFlashcardGroups()[index];
@@ -9586,11 +9607,17 @@ function unlinkedFlashcardGroups() {
   });
   return [...groups.values()].sort((a,b)=>b.cards.length-a.cards.length || a.key.localeCompare(b.key));
 }
+// O organizador nasceu como um card no fim da aba, o que o deixava ~3 telas
+// abaixo do botão que o abre: clicar parecia não fazer nada. Agora é uma janela
+// sobreposta, que aparece onde o olho já está.
+function wrapFlashcardOverlay(inner) {
+  return `<div class="fc-overlay" id="flashcardOrganizerOverlay" role="dialog" aria-modal="true" aria-label="Cards sem aula"><div class="fc-overlay-panel">${inner}</div></div>`;
+}
 function renderFlashcardOrganizer() {
   const cards = unlinkedFlashcards();
-  if(!cards.length) return `<div class="card"><div class="section-title"><h3>Cards sem aula</h3><button class="icon-btn" id="flashcardOrganizerClose">Fechar</button></div><div class="empty">Todos os seus cards já estão vinculados a uma aula.</div></div>`;
+  if(!cards.length) return wrapFlashcardOverlay(`<div class="card"><div class="section-title"><h3>Cards sem aula</h3><button class="icon-btn" id="flashcardOrganizerClose">Fechar</button></div><div class="empty">Todos os seus cards já estão vinculados a uma aula.</div></div>`);
   const rows = unlinkedFlashcardGroups();
-  return `<div class="card flashcard-organizer"><div class="section-title"><div><h3>Cards sem aula</h3><div class="muted">${cards.length} cards soltos em ${rows.length} ${rows.length===1?'grupo':'grupos'}. Vincule em lote — nada é adivinhado sem você confirmar.</div></div><button class="icon-btn" id="flashcardOrganizerClose">Fechar</button></div>
+  return wrapFlashcardOverlay(`<div class="card flashcard-organizer"><div class="section-title"><div><h3>Cards sem aula</h3><div class="muted">${cards.length} cards soltos em ${rows.length} ${rows.length===1?'grupo':'grupos'}. Vincule em lote — nada é adivinhado sem você confirmar.</div></div><button class="icon-btn" id="flashcardOrganizerClose">Fechar</button></div>
   <div class="flashcard-organizer-list">${rows.map((row,index) => {
     const suggestion = guessScheduleForImportGroup(row.key);
     return `<div class="flashcard-organizer-row" data-organizer-index="${index}">
@@ -9599,7 +9626,7 @@ function renderFlashcardOrganizer() {
       <button class="tiny-btn primary" data-organizer-link="${index}">Vincular</button>
       <button class="tiny-btn danger" data-organizer-delete="${index}" title="Excluir estes cards">Excluir</button>
     </div>`;
-  }).join('')}</div></div>`;
+  }).join('')}</div></div>`);
 }
 function questionResult(question) {
   const progress = state.questionProgress[question.id];
