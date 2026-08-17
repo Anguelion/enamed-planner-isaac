@@ -145,6 +145,7 @@ if(ui.flashcardFilter === 'Devidos') ui.flashcardFilter = 'Aprendendo';
 ui.flashcardLesson ||= '';
 ui.flashcardImport = null;
 ui.flashcardOrganizerOpen = false;
+ui.flashcardOrganizerSearch = '';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
 let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', sessionActive: false, pausedByUser: false, running: false, interval: null, questionId: '', secondsLeft: 0, elapsedSeconds: 0, beeped: false, status: '', audioContext: null };
@@ -8957,9 +8958,46 @@ function renderFlashcards() {
   // A coluna de revisão fica no meio da página: sem isso, quem importa a partir
   // da aba Aulas cai numa tela aparentemente inalterada.
   if(ui.flashcardImport) document.querySelector('.flashcard-import-panel')?.scrollIntoView({block:'center', behavior:'smooth'});
+  const organizerSearchInput = document.getElementById('flashcardOrganizerSearch');
+  if(organizerSearchInput) {
+    // Re-render a cada tecla apaga o campo focado; restaurar foco e cursor
+    // mantém a digitação fluida.
+    organizerSearchInput.oninput = e => {
+      const caret = e.currentTarget.selectionStart;
+      ui.flashcardOrganizerSearch = e.currentTarget.value;
+      renderFlashcards();
+      const next = document.getElementById('flashcardOrganizerSearch');
+      if(next) { next.focus(); next.setSelectionRange(caret, caret); }
+    };
+  }
+  document.getElementById('flashcardOrganizerLinkSearch')?.addEventListener('click', () => {
+    const scheduleId = document.querySelector('[data-organizer-search-lesson]')?.value || '';
+    if(!scheduleId) { alert('Escolha a aula antes de vincular.'); return; }
+    const ids = unlinkedFlashcardGroups(ui.flashcardOrganizerSearch || '').flatMap(row => row.cards.map(card => card.id));
+    if(!ids.length) return;
+    const lessonName = scheduleLessonById(scheduleId)?.topic || 'aula';
+    if(!confirm(`Vincular ${ids.length} ${ids.length===1?'card':'cards'} do filtro a "${lessonName}"?`)) return;
+    const linked = linkFlashcardsToSchedule(ids, scheduleId);
+    ui.flashcardOrganizerSearch = '';
+    persist();
+    showStudyToast?.(`${linked} ${linked===1?'card vinculado':'cards vinculados'} a ${lessonName}.`);
+    renderFlashcards();
+  });
+  document.getElementById('flashcardOrganizerLinkAll')?.addEventListener('click', () => {
+    const plan = [...document.querySelectorAll('[data-organizer-lesson]')]
+      .map(select => ({ group: unlinkedFlashcardGroups(ui.flashcardOrganizerSearch || '')[n(select.dataset.organizerLesson)], scheduleId: select.value }))
+      .filter(item => item.group && item.scheduleId);
+    if(!plan.length) { alert('Nenhum grupo tem aula escolhida. Selecione as aulas nas linhas abaixo.'); return; }
+    const resumo = plan.map(item => `• ${item.group.cards.length} de "${item.group.key}" → ${scheduleLessonById(item.scheduleId)?.topic || 'aula'}`).join('\n');
+    if(!confirm(`Vincular assim?\n\n${resumo}`)) return;
+    const linked = plan.reduce((sum, item) => sum + linkFlashcardsToSchedule(item.group.cards.map(card => card.id), item.scheduleId), 0);
+    persist();
+    showStudyToast?.(`${linked} ${linked===1?'card vinculado':'cards vinculados'} às aulas.`);
+    renderFlashcards();
+  });
   document.querySelectorAll('[data-organizer-link]').forEach(button => button.onclick = e => {
     const index = n(e.currentTarget.dataset.organizerLink);
-    const group = unlinkedFlashcardGroups()[index];
+    const group = unlinkedFlashcardGroups(ui.flashcardOrganizerSearch || '')[index];
     const scheduleId = document.querySelector(`[data-organizer-lesson="${index}"]`)?.value || '';
     if(!group) return;
     if(!scheduleId) { alert('Escolha a aula antes de vincular.'); return; }
@@ -8969,7 +9007,7 @@ function renderFlashcards() {
     renderFlashcards();
   });
   document.querySelectorAll('[data-organizer-delete]').forEach(button => button.onclick = e => {
-    const group = unlinkedFlashcardGroups()[n(e.currentTarget.dataset.organizerDelete)];
+    const group = unlinkedFlashcardGroups(ui.flashcardOrganizerSearch || '')[n(e.currentTarget.dataset.organizerDelete)];
     if(!group) return;
     if(!confirm(`Excluir ${group.cards.length} ${group.cards.length===1?'card':'cards'} de "${group.key}"? Não dá para desfazer.`)) return;
     const removed = deleteFlashcardsByIds(group.cards.map(card => card.id));
@@ -9598,14 +9636,29 @@ function renderFlashcardImportPanel() {
 }
 // O agrupamento é compartilhado entre o render e os handlers de clique: os dois
 // precisam enxergar exatamente os mesmos índices de grupo.
-function unlinkedFlashcardGroups() {
+function flashcardMatchesSearch(card, terms) {
+  if(!terms.length) return true;
+  const haystack = normalizedTopic(`${card.front || ''} ${card.back || ''} ${card.subarea || ''} ${card.importDeck || ''} ${(card.tags || []).join(' ')}`);
+  return terms.every(term => haystack.includes(term));
+}
+function unlinkedFlashcardGroups(search='') {
+  const terms = normalizedTopic(search).split(' ').filter(Boolean);
   const groups = new Map();
-  unlinkedFlashcards().forEach(card => {
+  unlinkedFlashcards().filter(card => flashcardMatchesSearch(card, terms)).forEach(card => {
     const key = card.importDeck || card.subarea || card.subject || card.topic || 'Sem assunto';
     if(!groups.has(key)) groups.set(key, { key, cards:[] });
     groups.get(key).cards.push(card);
   });
   return [...groups.values()].sort((a,b)=>b.cards.length-a.cards.length || a.key.localeCompare(b.key));
+}
+// Importações antigas jogavam tudo num "Sem subárea" só, então o nome do grupo
+// sozinho não distingue coagulopatias de onco-hematologia. Olhar o texto dos
+// próprios cards permite sugerir a aula certa mesmo nesse caso.
+function guessScheduleForCards(key, cards=[]) {
+  const direct = guessScheduleForImportGroup(key);
+  if(direct) return direct;
+  const sample = cards.slice(0, 6).map(card => `${card.front || ''} ${(card.tags || []).join(' ')}`).join(' ');
+  return guessScheduleForImportGroup(sample);
 }
 // O organizador nasceu como um card no fim da aba, o que o deixava ~3 telas
 // abaixo do botão que o abre: clicar parecia não fazer nada. Agora é uma janela
@@ -9616,12 +9669,22 @@ function wrapFlashcardOverlay(inner) {
 function renderFlashcardOrganizer() {
   const cards = unlinkedFlashcards();
   if(!cards.length) return wrapFlashcardOverlay(`<div class="card"><div class="section-title"><h3>Cards sem aula</h3><button class="icon-btn" id="flashcardOrganizerClose">Fechar</button></div><div class="empty">Todos os seus cards já estão vinculados a uma aula.</div></div>`);
-  const rows = unlinkedFlashcardGroups();
-  return wrapFlashcardOverlay(`<div class="card flashcard-organizer"><div class="section-title"><div><h3>Cards sem aula</h3><div class="muted">${cards.length} cards soltos em ${rows.length} ${rows.length===1?'grupo':'grupos'}. Vincule em lote — nada é adivinhado sem você confirmar.</div></div><button class="icon-btn" id="flashcardOrganizerClose">Fechar</button></div>
+  const search = ui.flashcardOrganizerSearch || '';
+  const rows = unlinkedFlashcardGroups(search);
+  const found = rows.reduce((sum,row)=>sum+row.cards.length, 0);
+  // Busca livre: quando a importação antiga jogou tudo num grupo só, é assim
+  // que se separa "coagulopatias" de "onco-hematologia" — filtra pelo texto dos
+  // cards e vincula exatamente o que apareceu.
+  const searchBox = `<div class="flashcard-organizer-search"><input class="input" id="flashcardOrganizerSearch" value="${escapeAttr(search)}" placeholder="Filtrar pelo texto do card (ex.: coagul, leucemia, causalidade)"><button class="tiny-btn" id="flashcardOrganizerLinkAll" title="Aplica de uma vez todas as aulas sugeridas abaixo, listando antes o que vai acontecer">Vincular todos os sugeridos</button></div>`;
+  const searchAction = search.trim()
+    ? `<div class="flashcard-organizer-row flashcard-organizer-search-action"><div><strong>Resultado da busca</strong><div class="muted">${found} ${found===1?'card contém':'cards contêm'} “${escapeHtml(search.trim())}”</div></div>${flashcardLessonSelectHtml('data-organizer-search-lesson', guessScheduleForCards(search, rows.flatMap(row=>row.cards)), 'Escolher aula...')}<button class="tiny-btn primary" id="flashcardOrganizerLinkSearch" ${found?'':'disabled'}>Vincular os ${found}</button><span></span></div>`
+    : '';
+  return wrapFlashcardOverlay(`<div class="card flashcard-organizer"><div class="section-title"><div><h3>Cards sem aula</h3><div class="muted">${cards.length} cards soltos${search.trim()?` · ${found} no filtro`:''} em ${rows.length} ${rows.length===1?'grupo':'grupos'}. Vincule em lote — nada é adivinhado sem você confirmar.</div></div><button class="icon-btn" id="flashcardOrganizerClose">Fechar</button></div>
+  ${searchBox}${searchAction}
   <div class="flashcard-organizer-list">${rows.map((row,index) => {
-    const suggestion = guessScheduleForImportGroup(row.key);
+    const suggestion = guessScheduleForCards(row.key, row.cards);
     return `<div class="flashcard-organizer-row" data-organizer-index="${index}">
-      <div><strong>${escapeHtml(row.key)}</strong><div class="muted">${row.cards.length} ${row.cards.length===1?'card':'cards'}</div></div>
+      <div><strong>${escapeHtml(row.key)}</strong><div class="muted">${row.cards.length} ${row.cards.length===1?'card':'cards'} · ${escapeHtml(String(row.cards[0]?.front || '').slice(0,60))}</div></div>
       ${flashcardLessonSelectHtml(`data-organizer-lesson="${index}"`, suggestion, 'Escolher aula...')}
       <button class="tiny-btn primary" data-organizer-link="${index}">Vincular</button>
       <button class="tiny-btn danger" data-organizer-delete="${index}" title="Excluir estes cards">Excluir</button>
