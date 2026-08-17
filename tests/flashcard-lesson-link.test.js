@@ -524,3 +524,49 @@ test('excluir baralho inteligente não remove cards nem progresso', () => {
   assert.ok(state.flashcardLibrary.some(item=>item.id===card.id));
   assert.equal(state.flashcardProgress[card.id].reviews,2);
 });
+
+test('baralho inteligente pode ser fixado no Painel sem perder a configuração', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const deck=ctx.saveFlashcardSmartDeck('Cardio prioritário',{mode:'difficult',area:'Clínica',limit:35});
+  const pinned=ctx.toggleFlashcardSmartDeckPin(deck.id,true);
+  assert.equal(pinned.pinned,true);
+  assert.ok(pinned.pinnedAt);
+  assert.equal(pinned.filters.mode,'difficult');
+  assert.equal(pinned.filters.area,'Clínica');
+  assert.equal(state.flashcardSettings.smartDecks.length,1);
+  const unpinned=ctx.toggleFlashcardSmartDeckPin(deck.id,false);
+  assert.equal(unpinned.pinned,false);
+  assert.equal(unpinned.pinnedAt,'');
+});
+
+test('desempenho do baralho calcula retenção, erros e série recente', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'smart-metric-card',front:'F',back:'V',area:'Clínica'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:3,difficulty:8,nextReview:'2099-01-01'};
+  const deck=ctx.saveFlashcardSmartDeck('Métricas',{mode:'difficult',area:'Clínica',limit:50});
+  state.flashcardSystem.reviewLogs=[
+    {id:'metric-1',cardId:card.id,rating:1,reviewedAt:new Date().toISOString()},
+    {id:'metric-2',cardId:card.id,rating:3,reviewedAt:new Date(Date.now()-86400000).toISOString()},
+    {id:'metric-3',cardId:card.id,rating:4,reviewedAt:new Date(Date.now()-2*86400000).toISOString()}
+  ];
+  const analytics=plain(ctx.flashcardSmartDeckAnalytics(deck,ctx.flashcardAllRecords(),30));
+  assert.equal(analytics.candidates,1);
+  assert.equal(analytics.reviews,3);
+  assert.equal(analytics.errors,1);
+  assert.equal(analytics.retention,67);
+  assert.equal(analytics.daily.reduce((total,row)=>total+row.count,0),3);
+});
+
+test('sessão iniciada por baralho preserva sua origem para o histórico', () => {
+  const ctx = loadPlannerSandbox();
+  const ui=uiOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'smart-session-origin',front:'F',back:'V'});
+  assert.equal(ctx.startFlashcardCustomSession([card],{deckId:'smart-origin'}),1);
+  assert.equal(ui.flashcardCustomActive,true);
+  assert.equal(ui.flashcardCustomDeckId,'smart-origin');
+  ctx.startFlashcardCustomSession([card],{deckId:''});
+  assert.equal(ui.flashcardCustomDeckId,'');
+});

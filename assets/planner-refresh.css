@@ -306,6 +306,28 @@ tr:hover td { background: color-mix(in srgb, var(--soft-blue) 58%, transparent);
 .continue-study-card > .icon-btn, .continue-study-card .primary { background: #fff; border-color: #fff; color: #1b3778; box-shadow: 0 10px 22px rgba(0, 0, 0, .16); }
 .continue-study-card > .icon-btn:hover { background: #eef3ff; color: #1b3778; }
 
+#painel .dashboard-smart-decks { grid-column: 1 / -1; display: grid; gap: 13px; }
+.dashboard-smart-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.dashboard-smart-deck { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: color-mix(in srgb,var(--soft-blue) 48%,var(--panel)); }
+.dashboard-smart-copy { display: flex; align-items: flex-start; gap: 9px; min-width: 0; }
+.dashboard-smart-copy > span { width: 34px; height: 34px; display: grid; flex: none; place-items: center; border-radius: 10px; background: var(--soft-blue); color: var(--blue); }
+.dashboard-smart-copy > div { display: grid; gap: 3px; min-width: 0; }
+.dashboard-smart-copy strong, .dashboard-smart-copy small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dashboard-smart-copy strong { color: var(--ink); font-size: 13px; }
+.dashboard-smart-copy small { color: var(--muted); font-size: 9px; }
+.dashboard-smart-kpis { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 5px; }
+.dashboard-smart-kpis > span { display: grid; gap: 2px; padding: 7px 5px; border-radius: 9px; background: var(--panel); text-align: center; }
+.dashboard-smart-kpis b { overflow: hidden; color: var(--ink); font-size: 15px; text-overflow: ellipsis; white-space: nowrap; }
+.dashboard-smart-kpis small { color: var(--muted); font-size: 8px; font-weight: 800; text-transform: uppercase; }
+.dashboard-smart-deck > .icon-btn { grid-column: 1 / -1; width: 100%; justify-content: center; }
+.dashboard-smart-empty { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 15px; border: 1px dashed var(--line); border-radius: 12px; }
+.dashboard-smart-empty > div { display: grid; gap: 3px; }
+.dashboard-smart-empty strong { color: var(--ink); }
+.dashboard-smart-empty span { color: var(--muted); font-size: 11px; }
+.fc-smart-trend { display: flex; align-items: end; gap: 3px; height: 30px; }
+.fc-smart-trend i { display: block; flex: 1; min-height: 2px; border-radius: 3px 3px 1px 1px; background: linear-gradient(180deg,var(--blue),var(--teal)); }
+.dashboard-smart-deck > .fc-smart-trend { grid-column: 1 / -1; }
+
 .dashboard-today-focus, .dashboard-tasks-card, .dashboard-weekly-card, .dashboard-weekly-summary,
 .dashboard-target-card, .dashboard-queue-card, .dashboard-radar-card, .dashboard-sim-summary-card { box-shadow: var(--shadow); }
 
@@ -933,9 +955,18 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 #flashcards .fc-smart-deck > div:first-child { display: grid; gap: 4px; min-width: 0; }
 #flashcards .fc-smart-deck > div:first-child strong { overflow: hidden; color: var(--ink); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 #flashcards .fc-smart-deck > div:first-child span { overflow: hidden; color: var(--muted); font-size: 9px; line-height: 1.4; text-overflow: ellipsis; white-space: nowrap; }
+#flashcards .fc-smart-deck-title { display: flex; align-items: center; gap: 6px; }
+#flashcards .fc-smart-deck-title em { padding: 3px 6px; border-radius: 99px; background: color-mix(in srgb,var(--fc-accent) 12%,var(--panel)); color: var(--fc-accent); font-size: 7px; font-style: normal; font-weight: 900; text-transform: uppercase; }
 #flashcards .fc-smart-deck > b { color: var(--fc-accent); font-size: 20px; text-align: right; }
 #flashcards .fc-smart-deck > b small { display: block; color: var(--muted); font-size: 8px; font-weight: 800; text-transform: uppercase; }
 #flashcards .fc-smart-deck > div:last-child { display: flex; grid-column: 1 / -1; gap: 6px; flex-wrap: wrap; }
+#flashcards .fc-smart-deck.is-pinned { border-color: color-mix(in srgb,var(--fc-accent) 40%,var(--line)); }
+#flashcards .fc-smart-deck-performance { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 6px; }
+#flashcards .fc-smart-deck-performance > span { display: grid; gap: 2px; padding: 7px; border-radius: 9px; background: var(--panel); text-align: center; }
+#flashcards .fc-smart-deck-performance > span b { color: var(--ink); font-size: 14px; }
+#flashcards .fc-smart-deck-performance > span small { color: var(--muted); font-size: 7px; font-weight: 800; text-transform: uppercase; }
+#flashcards .fc-smart-deck-performance > .fc-smart-trend { grid-column: 1 / -1; height: 34px; padding: 4px 5px 0; border-bottom: 1px solid var(--line); }
+#flashcards .fc-smart-trend-label { grid-column: 1 / -1; color: var(--muted); font-size: 8px; text-align: right; }
 #flashcards .fc-smart-empty { padding: 16px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: 10px; text-align: center; }
 #flashcards .fc-smart-save { display: flex; align-items: end; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); }
 #flashcards .fc-smart-save label { display: grid; flex: 1; gap: 6px; color: var(--muted); font-size: 10px; font-weight: 800; }
@@ -1000,6 +1031,7 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 }
 
 @media (max-width: 900px) {
+  .dashboard-smart-grid { grid-template-columns: 1fr; }
   #flashcards .flashcard-command { align-items: flex-start; flex-direction: column; }
   #flashcards .flashcard-command-actions { max-width: none; justify-content: flex-start; }
   #flashcards .flashcard-filters { grid-template-columns: 1fr 1fr auto auto; }
@@ -1010,6 +1042,10 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 }
 
 @media (max-width: 700px) {
+  .dashboard-smart-deck { padding: 13px; }
+  .dashboard-smart-kpis { grid-template-columns: 1fr 1fr; }
+  .dashboard-smart-empty { align-items: stretch; flex-direction: column; }
+  .dashboard-smart-empty .icon-btn { width: 100%; justify-content: center; }
   #flashcards.view.active { gap: 12px; }
   #flashcards .flashcard-command { min-height: 0; padding: 22px 18px; border-radius: 18px; }
   #flashcards .flashcard-command-copy { align-items: flex-start; gap: 13px; }
