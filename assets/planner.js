@@ -162,6 +162,8 @@ ui.flashcardCustomActive = Boolean(ui.flashcardCustomActive && ui.flashcardCusto
 ui.flashcardCustomEditingDeckId ||= '';
 ui.flashcardCustomDeckId ||= '';
 ui.flashcardPrescriptionDeckByCard = ui.flashcardPrescriptionDeckByCard && typeof ui.flashcardPrescriptionDeckByCard === 'object' ? ui.flashcardPrescriptionDeckByCard : {};
+ui.flashcardStudySession = ui.flashcardStudySession && typeof ui.flashcardStudySession === 'object' ? ui.flashcardStudySession : null;
+ui.flashcardSessionReportId ||= '';
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
 let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', sessionActive: false, pausedByUser: false, running: false, interval: null, questionId: '', secondsLeft: 0, elapsedSeconds: 0, beeped: false, status: '', audioContext: null };
@@ -702,6 +704,8 @@ function ensureQuestionProgress() {
   if(!state.flashcardSystem || typeof state.flashcardSystem !== 'object') state.flashcardSystem = {};
   if(!Array.isArray(state.flashcardSystem.reviewLogs)) state.flashcardSystem.reviewLogs = [];
   if(!Array.isArray(state.flashcardSystem.captureSessions)) state.flashcardSystem.captureSessions = [];
+  if(!Array.isArray(state.flashcardSystem.sessionReports)) state.flashcardSystem.sessionReports = [];
+  state.flashcardSystem.sessionReports = state.flashcardSystem.sessionReports.filter(report=>report?.id && report?.endedAt).slice(-20);
   if(!Array.isArray(state.flashcardSystem.versions)) state.flashcardSystem.versions = [];
   if(!Array.isArray(state.flashcardSystem.undoStack)) state.flashcardSystem.undoStack = [];
   if(!state.flashcardSystem.activeReviewSessionId) state.flashcardSystem.activeReviewSessionId = newFlashcardId('fc-session');
@@ -9299,6 +9303,7 @@ function renderFlashcardOverview(all, decks, due, reviewsToday, waiting) {
       <div><span>Sequência atual</span><strong>${streak}</strong><small>${activeDays} dias ativos no histórico</small></div>
     </section>
     ${renderFlashcardAdaptivePrescription(all,'overview')}
+    ${latestFlashcardSessionReport()?renderFlashcardSessionReport(latestFlashcardSessionReport(),{compact:true}):''}
     <section class="card fc-heatmap-card"><div class="section-title"><div><span class="eyebrow">Passado e futuro</span><h2>Mapa de revisões</h2><div class="muted">À esquerda, quantos cards você concluiu por dia. À direita, quantos estão previstos para revisar.</div></div><span class="badge today">12 meses + próximas 12 semanas</span></div>${renderFlashcardHeatmap(series,all)}</section>
     <div class="fc-overview-split"><section class="card fc-forecast-card"><div class="section-title"><div><span class="eyebrow">Carga futura</span><h2>Próximos 14 dias</h2></div></div>${renderFlashcardForecastOverview()}</section><section class="card fc-weak-card"><div class="section-title"><div><span class="eyebrow">Prioridade</span><h2>Assuntos frágeis</h2></div></div>${weak}</section></div>
     ${renderFlashcardSmartDeckOverview(all)}
@@ -9624,7 +9629,7 @@ function flashcardAdaptivePrescription(all=flashcardAllRecords(), rawMinutes=sta
 }
 function startFlashcardAdaptivePrescription(prescription) {
   if(!prescription?.cards?.length) return 0;
-  return startFlashcardCustomSession(prescription.cards,{deckId:'',deckByCard:prescription.deckByCard});
+  return startFlashcardCustomSession(prescription.cards,{deckId:'',deckByCard:prescription.deckByCard,kind:'adaptive',label:'Prescrição adaptativa',plannedMinutes:prescription.minutes});
 }
 function renderFlashcardAdaptivePrescription(all=flashcardAllRecords(), variant='dashboard') {
   const prescription=flashcardAdaptivePrescription(all,state.flashcardSettings.prescriptionMinutes);
@@ -9646,17 +9651,58 @@ function bindFlashcardPrescriptionControls(root, refresh, start) {
     if(startFlashcardAdaptivePrescription(prescription)) start?.(prescription);
   }));
 }
+function flashcardForecastSnapshot(days=14) {
+  const rows=flashcardDueForecast(days);
+  return {days,rows:rows.map(row=>({date:row.date,count:n(row.count)})),total:rows.reduce((total,row)=>total+n(row.count),0)};
+}
+function finalizeFlashcardStudySession(options={}) {
+  const session=ui.flashcardStudySession;
+  if(!session?.id) return null;
+  const endedAt=options.endedAt || new Date().toISOString();
+  const logs=(state.flashcardSystem?.reviewLogs || []).filter(log=>log?.sessionId===session.id && Date.parse(log.reviewedAt||'')>=Date.parse(session.startedAt||''));
+  if(!logs.length) { ui.flashcardStudySession=null; ui.flashcardSessionReportId=''; return null; }
+  const remembered=logs.filter(log=>n(log.rating||log.quality)>=2).length;
+  const errors=logs.filter(log=>n(log.rating||log.quality)===1).length;
+  const afterForecast=flashcardForecastSnapshot(session.initialForecast?.days || 14);
+  const deckCounts=new Map();
+  logs.forEach(log=>{const key=log.smartDeckId || ''; deckCounts.set(key,n(deckCounts.get(key))+1);});
+  const decks=flashcardSmartDecks();
+  const breakdown=[...deckCounts.entries()].map(([deckId,count])=>({deckId,name:decks.find(deck=>deck.id===deckId)?.name || session.label || 'Sessão personalizada',count})).sort((a,b)=>b.count-a.count || a.name.localeCompare(b.name));
+  const started=Date.parse(session.startedAt||''); const ended=Date.parse(endedAt);
+  const report={id:session.id,kind:session.kind||'custom',label:session.label||'Sessão de flashcards',startedAt:session.startedAt,endedAt,completed:Boolean(options.completed),plannedMinutes:Math.max(0,n(session.plannedMinutes)),durationSeconds:Number.isFinite(started)&&Number.isFinite(ended)?Math.max(1,Math.round((ended-started)/1000)):0,initialCards:Math.max(logs.length,n(session.initialCards)),responses:logs.length,completedCards:new Set(logs.map(log=>log.cardId)).size,remembered,errors,retention:logs.length?Math.round(remembered/logs.length*100):null,beforeForecast:n(session.initialForecast?.total),afterForecast:n(afterForecast.total),futureDelta:n(afterForecast.total)-n(session.initialForecast?.total),forecastDays:afterForecast.days,breakdown};
+  if(!Array.isArray(state.flashcardSystem.sessionReports)) state.flashcardSystem.sessionReports=[];
+  state.flashcardSystem.sessionReports=[...state.flashcardSystem.sessionReports.filter(item=>item.id!==report.id),report].slice(-20);
+  ui.flashcardSessionReportId=report.id;
+  ui.flashcardStudySession=null;
+  return report;
+}
+function latestFlashcardSessionReport() {
+  const reports=state.flashcardSystem?.sessionReports || [];
+  return ui.flashcardSessionReportId ? reports.find(report=>report.id===ui.flashcardSessionReportId) || reports.at(-1) || null : reports.at(-1) || null;
+}
+function renderFlashcardSessionReport(report, options={}) {
+  if(!report) return '';
+  const minutes=Math.max(1,Math.round(n(report.durationSeconds)/60));
+  const delta=n(report.futureDelta); const deltaLabel=delta===0?'carga estável':delta>0?`+${delta} revisões`:`${delta} revisões`;
+  const breakdown=(report.breakdown||[]).map(item=>`<span><b>${escapeHtml(item.name)}</b><strong>${n(item.count)}</strong></span>`).join('');
+  return `<section class="fc-session-report ${options.compact?'is-compact':''}"><div class="fc-session-report-head"><div><span class="eyebrow">${report.completed?'Sessão concluída':'Sessão encerrada'}</span><h2>${escapeHtml(report.label||'Relatório da sessão')}</h2><p>${escapeHtml(new Intl.DateTimeFormat('pt-BR',{dateStyle:'short',timeStyle:'short'}).format(new Date(report.endedAt)))}</p></div><span class="fc-session-report-retention">${report.retention===null?'—':report.retention+'%'}<small>retenção</small></span></div><div class="fc-session-report-kpis"><div><strong>${minutes} min</strong><span>tempo real</span></div><div><strong>${n(report.responses)}</strong><span>respostas</span></div><div><strong>${n(report.errors)}</strong><span>erros</span></div><div><strong>${deltaLabel}</strong><span>próximos ${n(report.forecastDays)||14} dias</span></div></div>${breakdown?`<div class="fc-session-report-breakdown"><span>Baralhos treinados</span>${breakdown}</div>`:''}<div class="fc-session-report-actions"><button class="icon-btn primary" data-fc-view="overview">Ver visão geral</button><button class="tiny-btn" data-fc-report-repeat>Montar nova prescrição</button></div></section>`;
+}
 function renderFlashcardSmartTrend(analytics) {
   const max=Math.max(1,...analytics.daily.map(row=>row.count));
   return `<div class="fc-smart-trend" aria-label="Revisões nos últimos 7 dias">${analytics.daily.map(row=>`<i title="${escapeAttr(fmtDate(row.date))}: ${row.count}" style="height:${Math.max(row.count?18:5,Math.round(row.count/max*100))}%"></i>`).join('')}</div>`;
 }
 function startFlashcardCustomSession(candidates=[], options={}) {
   if(!candidates.length) return 0;
+  const sessionId=newFlashcardId('fc-session');
+  state.flashcardSystem.activeReviewSessionId=sessionId;
   ui.flashcardCustomSessionIds=candidates.map(card=>card.id);
   ui.flashcardCustomCompleted=[];
   ui.flashcardCustomActive=true;
   ui.flashcardCustomDeckId=options.deckId || '';
   ui.flashcardPrescriptionDeckByCard=options.deckByCard && typeof options.deckByCard==='object' ? {...options.deckByCard} : {};
+  const deck=options.deckId?flashcardSmartDecks().find(item=>item.id===options.deckId):null;
+  ui.flashcardStudySession={id:sessionId,kind:options.kind || (options.deckId?'smart':'custom'),label:options.label || deck?.name || 'Sessão personalizada',plannedMinutes:Math.max(0,n(options.plannedMinutes)),startedAt:new Date().toISOString(),initialCards:candidates.length,initialForecast:flashcardForecastSnapshot(14)};
+  ui.flashcardSessionReportId='';
   ui.flashcardView='study';
   ui.flashcardIndex=0;
   ui.flashcardSessionDone=false;
@@ -9850,16 +9896,27 @@ function renderFlashcards() {
     renderFlashcards();
   });
   document.getElementById('fcCustomExit')?.addEventListener('click',()=>{
+    const report=finalizeFlashcardStudySession({completed:false});
+    ui.flashcardCustomActive=false;
+    ui.flashcardCustomSessionIds=[];
+    ui.flashcardCustomCompleted=[];
+    ui.flashcardCustomDeckId='';
+    ui.flashcardPrescriptionDeckByCard={};
+    ui.flashcardSessionDone=Boolean(report);
+    ui.flashcardCurrentCardId='';
+    ui.flashcardIndex=0;
+    persist();
+  });
+  document.querySelectorAll('[data-fc-report-repeat]').forEach(button=>button.addEventListener('click',()=>{
     ui.flashcardCustomActive=false;
     ui.flashcardCustomSessionIds=[];
     ui.flashcardCustomCompleted=[];
     ui.flashcardCustomDeckId='';
     ui.flashcardPrescriptionDeckByCard={};
     ui.flashcardSessionDone=false;
-    ui.flashcardCurrentCardId='';
-    ui.flashcardIndex=0;
+    ui.flashcardView='overview';
     renderFlashcards();
-  });
+  }));
   document.querySelectorAll('[data-fc-scheduler-preset]').forEach(button => button.onclick = event => {
     if(!applyFlashcardSchedulerPreset(event.currentTarget.dataset.fcSchedulerPreset)) return;
     persist();
@@ -10291,7 +10348,11 @@ function renderFlashcard(card) {
 function renderFlashcardStudy(card, queue=[]) {
   // No modo foco todo o resto da tela fica oculto. Sem um botão aqui, terminar a
   // sessão deixava o usuário preso na tela de fim, sem caminho de volta.
-  if(!card) return `<div class="flashcard-empty-session"><div><h2>Fim da sessão</h2><div class="muted">Nenhum flashcard neste filtro agora. Troque o filtro ou crie novos cards nas questões.</div>${ui.flashcardFocusMode ? '<button class="icon-btn primary" id="flashcardFocusToggle" type="button">Sair do modo foco</button>' : ''}</div></div>`;
+  if(!card) {
+    const report=ui.flashcardSessionReportId?latestFlashcardSessionReport():null;
+    if(report) return `<div class="flashcard-session-result">${renderFlashcardSessionReport(report)}</div>`;
+    return `<div class="flashcard-empty-session"><div><h2>Fim da sessão</h2><div class="muted">Nenhum flashcard neste filtro agora. Troque o filtro ou crie novos cards nas questões.</div>${ui.flashcardFocusMode ? '<button class="icon-btn primary" id="flashcardFocusToggle" type="button">Sair do modo foco</button>' : ''}</div></div>`;
+  }
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
   return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today flashcard-focus-clock" id="flashcardFocusClock" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="${ui.flashcardFocusPaused ? 'Pausado ·' : 'Estudando ·'}" title="Clique para pausar/retomar o tempo">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
@@ -10399,6 +10460,7 @@ function reviewFlashcard(id, quality) {
     ui.flashcardSessionDone = false;
   }
   ui.flashcardCurrentCardId = ui.flashcardSessionDone ? '' : (queueAfter[ui.flashcardIndex]?.id || '');
+  if(ui.flashcardSessionDone && ui.flashcardStudySession) finalizeFlashcardStudySession({completed:true});
   if(!queueAfter.length || ui.flashcardSessionDone) showStudyToast('Parabéns! Você concluiu os flashcards. Não há mais o que fazer agora.');
   persist();
 }
@@ -10411,6 +10473,10 @@ function undoFlashcardReview() {
     else delete state.flashcardProgress[systemUndo.cardId];
     const review = state.flashcardSystem.reviewLogs.find(log => log.id === systemUndo.reviewId);
     state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.filter(log => log.id !== systemUndo.reviewId);
+    if(review?.sessionId && (state.flashcardSystem.sessionReports||[]).some(report=>report.id===review.sessionId)) {
+      state.flashcardSystem.sessionReports=state.flashcardSystem.sessionReports.filter(report=>report.id!==review.sessionId);
+      if(ui.flashcardSessionReportId===review.sessionId) ui.flashcardSessionReportId='';
+    }
     if(review?.xpAwarded) awardGamificationXP({activity_type:'flashcard_review_reversal',source_type:'flashcard_review',source_id:review.cardId,source_event_id:`flashcard-review-reversal:${review.id}`,base_xp:-1,reason:'flashcard_review_undone',occurred_at:new Date().toISOString(),metadata:{reviewLogId:review.id,reversesEventKey:review.xpEventKey||`flashcard-review:${review.id}`}});
     if(review?.reviewedAt) adjustFlashcardDayCount(review.reviewedAt, -1);
     if(ui.flashcardCustomActive) ui.flashcardCustomCompleted=ui.flashcardCustomCompleted.filter(id=>id!==systemUndo.cardId);

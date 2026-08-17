@@ -666,3 +666,55 @@ test('sessão adaptativa preserva o baralho de origem de cada cartão', () => {
   assert.equal(ui.flashcardPrescriptionDeckByCard['rx-origin-b'],'deck-b');
   assert.equal(ui.flashcardCustomDeckId,'');
 });
+
+test('iniciar sessão cria ciclo próprio e captura a carga futura inicial', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx); const ui=uiOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'report-cycle',front:'F',back:'V'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:2,nextReview:ctx.studyDateKey()};
+  const previousId=state.flashcardSystem.activeReviewSessionId;
+  ctx.startFlashcardCustomSession([card],{kind:'adaptive',label:'Prescrição adaptativa',plannedMinutes:10});
+  assert.notEqual(state.flashcardSystem.activeReviewSessionId,previousId);
+  assert.equal(ui.flashcardStudySession.id,state.flashcardSystem.activeReviewSessionId);
+  assert.equal(ui.flashcardStudySession.initialCards,1);
+  assert.equal(ui.flashcardStudySession.initialForecast.total,1);
+});
+
+test('relatório pós-sessão calcula duração, retenção, erros e impacto futuro', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx); const ui=uiOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'report-card',front:'F',back:'V',area:'Clínica'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:2,nextReview:ctx.studyDateKey()};
+  const deck=ctx.saveFlashcardSmartDeck('Cardio',{mode:'all',area:'Clínica',limit:10});
+  ctx.startFlashcardCustomSession([card],{deckId:deck.id,label:deck.name});
+  const session=ui.flashcardStudySession;
+  const endedAt=new Date(Date.parse(session.startedAt)+120000).toISOString();
+  state.flashcardSystem.reviewLogs.push(
+    {id:'report-log-1',sessionId:session.id,smartDeckId:deck.id,cardId:card.id,rating:1,reviewedAt:new Date(Date.parse(session.startedAt)+30000).toISOString()},
+    {id:'report-log-2',sessionId:session.id,smartDeckId:deck.id,cardId:card.id,rating:3,reviewedAt:new Date(Date.parse(session.startedAt)+90000).toISOString()}
+  );
+  state.flashcardProgress[card.id]={reviews:4,nextReview:'2099-01-01'};
+  const report=plain(ctx.finalizeFlashcardStudySession({completed:true,endedAt}));
+  assert.equal(report.durationSeconds,120);
+  assert.equal(report.responses,2);
+  assert.equal(report.completedCards,1);
+  assert.equal(report.retention,50);
+  assert.equal(report.errors,1);
+  assert.equal(report.beforeForecast,1);
+  assert.equal(report.afterForecast,0);
+  assert.equal(report.futureDelta,-1);
+  assert.equal(report.breakdown[0].name,'Cardio');
+  assert.equal(state.flashcardSystem.sessionReports.at(-1).id,report.id);
+});
+
+test('sessão encerrada sem respostas não cria relatório vazio', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx); const ui=uiOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'report-empty',front:'F',back:'V'});
+  ctx.startFlashcardCustomSession([card],{label:'Sem respostas'});
+  assert.equal(ctx.finalizeFlashcardStudySession({completed:false}),null);
+  assert.equal(state.flashcardSystem.sessionReports.length,0);
+  assert.equal(ui.flashcardStudySession,null);
+});

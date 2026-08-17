@@ -328,6 +328,24 @@ tr:hover td { background: color-mix(in srgb, var(--soft-blue) 58%, transparent);
 .fc-prescription-empty { padding: 10px; border: 1px dashed var(--line); border-radius: 9px; color: var(--muted); font-size: 10px; text-align: center; }
 .fc-prescription > .icon-btn { width: 100%; justify-content: center; }
 #flashcards .fc-prescription-overview { box-shadow: var(--shadow-soft); }
+.fc-session-report { display: grid; gap: 14px; padding: 20px; border: 1px solid color-mix(in srgb,var(--green) 34%,var(--line)); border-radius: 17px; background: linear-gradient(135deg,color-mix(in srgb,var(--soft-green) 68%,var(--panel)),var(--panel)); box-shadow: var(--shadow-soft); }
+.fc-session-report-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.fc-session-report-head h2 { margin: 3px 0 2px; color: var(--ink); font-size: 22px; }
+.fc-session-report-head p { margin: 0; color: var(--muted); font-size: 9px; }
+.fc-session-report-retention { display: grid; min-width: 92px; padding: 13px; border-radius: 13px; background: var(--panel); color: var(--green); font-size: 26px; font-weight: 900; text-align: center; }
+.fc-session-report-retention small { color: var(--muted); font-size: 8px; text-transform: uppercase; }
+.fc-session-report-kpis { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 7px; }
+.fc-session-report-kpis > div { display: grid; gap: 3px; padding: 11px; border-radius: 10px; background: var(--panel); text-align: center; }
+.fc-session-report-kpis strong { overflow: hidden; color: var(--ink); font-size: 16px; text-overflow: ellipsis; white-space: nowrap; }
+.fc-session-report-kpis span { color: var(--muted); font-size: 8px; font-weight: 800; text-transform: uppercase; }
+.fc-session-report-breakdown { display: grid; gap: 5px; }
+.fc-session-report-breakdown > span:first-child { color: var(--muted); font-size: 9px; font-weight: 900; text-transform: uppercase; }
+.fc-session-report-breakdown > span:not(:first-child) { display: flex; justify-content: space-between; gap: 10px; padding: 7px 9px; border-radius: 8px; background: color-mix(in srgb,var(--panel) 78%,transparent); }
+.fc-session-report-breakdown b { overflow: hidden; color: var(--ink); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.fc-session-report-breakdown strong { color: var(--green); font-size: 11px; }
+.fc-session-report-actions { display: flex; gap: 7px; flex-wrap: wrap; }
+.flashcard-session-result { width: min(780px,100%); margin: auto; }
+.fc-session-report.is-compact .fc-session-report-actions { display: none; }
 .dashboard-smart-recommendation { position: relative; display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 15px; overflow: hidden; padding: 18px; border: 1px solid color-mix(in srgb,var(--blue) 30%,var(--line)); border-radius: 15px; background: linear-gradient(125deg,color-mix(in srgb,var(--soft-blue) 75%,var(--panel)),var(--panel)); }
 .dashboard-smart-recommendation::after { content: ""; position: absolute; right: -35px; top: -45px; width: 130px; height: 130px; border-radius: 50%; background: color-mix(in srgb,var(--blue) 9%,transparent); pointer-events: none; }
 .dashboard-smart-recommendation.urgency-high { border-color: color-mix(in srgb,var(--red) 38%,var(--line)); background: linear-gradient(125deg,color-mix(in srgb,var(--soft-red) 65%,var(--panel)),var(--panel)); }
@@ -1100,6 +1118,12 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
   .fc-prescription-time .tiny-btn { width: 100%; }
   .fc-prescription-summary { grid-template-columns: 1fr 1fr; }
   .fc-prescription-allocation > span { grid-template-columns: minmax(0,1fr) 60px 24px; }
+  .fc-session-report { padding: 15px; }
+  .fc-session-report-head { align-items: stretch; flex-direction: column; }
+  .fc-session-report-retention { min-width: 0; }
+  .fc-session-report-kpis { grid-template-columns: 1fr 1fr; }
+  .fc-session-report-actions { align-items: stretch; flex-direction: column; }
+  .fc-session-report-actions .icon-btn, .fc-session-report-actions .tiny-btn { width: 100%; justify-content: center; }
   .dashboard-smart-recommendation { grid-template-columns: 1fr; align-items: stretch; }
   .dashboard-smart-recommendation-icon { display: none; }
   .dashboard-smart-recommendation-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 5px; }
