@@ -1,4 +1,4 @@
-{
+window.RADAR_SAUDE_ISSUE = {
   "id": "2026-08-14",
   "title": "Treino de força, IA genômica e saúde pública",
   "publishedAt": "2026-08-14",
@@ -121,4 +121,4 @@
       "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt"
     }
   ]
-}
+};

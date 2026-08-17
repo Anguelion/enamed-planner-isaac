@@ -9895,6 +9895,51 @@ function flashcardExportText(cards=[]) {
   ].join('\t'));
   return header+rows.join('\n');
 }
+const FLASHCARD_COLLECTION_LOCATION_FIELDS=['scheduleId','subjectId','block','weeklyBlockId','area','subarea','subject','topic','importDeck'];
+function reorganizeFlashcardCollection(ids, options={}) {
+  const targetIds=[...new Set(ids || [])];
+  const scheduleId=String(options.scheduleId||'');
+  const looseName=String(options.name||'').trim();
+  const lesson=scheduleId?scheduleLessonById(scheduleId):null;
+  if(scheduleId && !lesson) return {changed:0,before:[],error:'A aula de destino não existe.'};
+  if(!scheduleId && !looseName) return {changed:0,before:[],error:'Dê um nome ao baralho sem aula.'};
+  const before=[];
+  targetIds.forEach(id=>{
+    const card=mutableFlashcardRecord(id);
+    if(!card || card.deletedAt) return;
+    const snapshot={id};
+    FLASHCARD_COLLECTION_LOCATION_FIELDS.forEach(field=>snapshot[field]=card[field] ?? '');
+    applyScheduleToFlashcard(card,scheduleId);
+    card.importDeck=lesson?flashcardLessonLabel(lesson):looseName;
+    const changed=FLASHCARD_COLLECTION_LOCATION_FIELDS.some(field=>String(card[field]??'')!==String(snapshot[field]??''));
+    if(!changed) return;
+    before.push(snapshot);
+    card.rowVersion=n(card.rowVersion)+1;
+    card.updatedAt=new Date().toISOString();
+  });
+  if(before.length) {
+    renderCache.manualCards=null;
+    renderCache.flashcardStats.clear();
+  }
+  return {changed:before.length,before,scheduleId,name:lesson?flashcardLessonLabel(lesson):looseName};
+}
+function undoFlashcardCollectionReorganization(operation) {
+  const rows=Array.isArray(operation?.before)?operation.before:[];
+  let restored=0;
+  rows.forEach(snapshot=>{
+    const card=mutableFlashcardRecord(snapshot.id);
+    if(!card || card.deletedAt) return;
+    FLASHCARD_COLLECTION_LOCATION_FIELDS.forEach(field=>card[field]=snapshot[field] ?? '');
+    card.rowVersion=n(card.rowVersion)+1;
+    card.updatedAt=new Date().toISOString();
+    restored++;
+  });
+  if(restored) {
+    renderCache.manualCards=null;
+    renderCache.flashcardStats.clear();
+  }
+  return restored;
+}
 function renderFlashcardManage(all) {
   const groups=flashcardCollectionGroups(all);
   const knownKeys=new Set(groups.map(group=>group.key));
@@ -9906,10 +9951,19 @@ function renderFlashcardManage(all) {
   const visible=terms.length?groups.filter(group=>{const haystack=normalizedTopic(`${group.label} ${group.kind} ${group.cards[0]?.area||''}`); return terms.every(term=>haystack.includes(term));}):groups;
   const selectedCards=groups.filter(group=>selected.has(group.key)).reduce((total,group)=>total+group.count,0);
   const deleting=groups.find(group=>group.key===ui.flashcardDeleteCollectionKey);
+  const organizing=groups.find(group=>group.key===ui.flashcardOrganizeCollectionKey);
   const rows=visible.length?visible.map(group=>`<label class="fc-manage-deck ${selected.has(group.key)?'is-selected':''}"><input type="checkbox" data-fc-export-key="${escapeAttr(group.key)}" ${selected.has(group.key)?'checked':''}><span><strong>${escapeHtml(group.label)}</strong><small>${escapeHtml(group.kind)} · ${group.reviewed} revisados · ${group.newCount} novos</small></span><b>${group.count}<small>cards</small></b></label>`).join(''):'<div class="empty">Nenhum baralho encontrado nessa busca.</div>';
+  const organizeRows=visible.length?visible.map(group=>`<div class="fc-manage-organize-row"><span><strong>${escapeHtml(group.label)}</strong><small>${escapeHtml(group.kind)} · ${group.count} ${group.count===1?'card':'cards'} · histórico preservado</small></span><button class="tiny-btn" data-fc-organize-collection="${escapeAttr(group.key)}">Organizar</button></div>`).join(''):'<div class="empty">Nenhum baralho encontrado.</div>';
   const deleteRows=visible.length?visible.map(group=>`<div class="fc-manage-delete-row"><span><strong>${escapeHtml(group.label)}</strong><small>${escapeHtml(group.kind)} · ${group.count} cards · ${group.reviewed} com histórico</small></span><button class="tiny-btn danger" data-fc-delete-collection="${escapeAttr(group.key)}">Excluir conjunto</button></div>`).join(''):'<div class="empty">Nenhum conjunto encontrado.</div>';
-  const confirmation=deleting?`<div class="fc-delete-confirm" role="alert"><div><span class="eyebrow">Confirmação obrigatória</span><h3>Excluir “${escapeHtml(deleting.label)}”?</h3><p>Serão apagados permanentemente <strong>${deleting.count} cards</strong> e o progresso individual deles. Outros baralhos não serão alterados.</p><label>Digite <b>EXCLUIR</b> para liberar a ação<input class="input" id="fcDeleteCollectionPhrase" autocomplete="off" placeholder="EXCLUIR"></label></div><div><button class="icon-btn" id="fcDeleteCollectionCancel">Cancelar</button><button class="icon-btn danger" id="fcDeleteCollectionConfirm" data-key="${escapeAttr(deleting.key)}" disabled>Excluir ${deleting.count} cards</button></div></div>`:'';
-  return `<div class="fc-manage-page"><section class="card fc-manage-hero"><div><span class="eyebrow">Controle da coleção</span><h2>Gerenciar baralhos</h2><p>Escolha exatamente o que sai na exportação e remova conjuntos inteiros somente com confirmação reforçada.</p></div><div><strong>${groups.length}</strong><span>baralhos</span><b>${all.length} cards</b></div></section><section class="card fc-manage-export"><div class="section-title"><div><span class="eyebrow">Exportação seletiva</span><h3>Quais baralhos deseja exportar?</h3><div class="muted">O arquivo preserva o nome de cada conjunto para a próxima importação.</div></div><button class="icon-btn primary" id="fcExportSelected" ${selectedCards?'':'disabled'}>Exportar ${selectedCards} cards</button></div><div class="fc-manage-toolbar"><input class="input" id="fcManageSearch" value="${escapeAttr(search)}" placeholder="Buscar baralho ou aula"><button class="tiny-btn" id="fcExportSelectAll">Selecionar todos</button><button class="tiny-btn" id="fcExportSelectNone">Limpar seleção</button><span><b>${selected.size}</b> de ${groups.length} baralhos</span></div><div class="fc-manage-deck-list">${rows}</div></section><details class="card fc-manage-danger" ${deleting?'open':''}><summary><span><strong>Excluir conjuntos de flashcards</strong><small>Zona protegida · exclusão permanente</small></span><span class="badge no">Cuidado</span></summary><div class="fc-manage-danger-body"><div class="fc-manage-warning"><strong>Faça um backup antes de excluir.</strong><span>A exclusão também remove o progresso dos cards escolhidos e será sincronizada entre dispositivos.</span><button class="tiny-btn" id="fcManageBackup">Baixar backup agora</button></div>${confirmation}<div class="fc-manage-delete-list">${deleteRows}</div></div></details></div>`;
+  const organizeDestination=organizing?String(ui.flashcardOrganizeDestination??organizing.scheduleId):'';
+  const destinationLesson=scheduleLessonById(organizeDestination);
+  const destinationCount=organizeDestination?all.filter(card=>card.scheduleId===organizeDestination && !organizing?.cards.some(source=>source.id===card.id)).length:0;
+  const organizeName=String(ui.flashcardOrganizeName??(organizing?.scheduleId?'':organizing?.label||''));
+  const organizeSameDestination=Boolean(organizing?.scheduleId && organizeDestination===organizing.scheduleId);
+  const organizeEditor=organizing?`<div class="fc-organize-editor"><div><span class="eyebrow">Reorganizar sem perder progresso</span><h3>${escapeHtml(organizing.label)}</h3><p>${organizing.count} ${organizing.count===1?'card será movido':'cards serão movidos'}. As revisões, dificuldade e próximas datas permanecem iguais.</p></div><div class="fc-organize-fields"><label>Aula de destino${flashcardLessonSelectHtml('id="fcOrganizeDestination"',organizeDestination,'Sem aula (baralho independente)')}</label>${organizeDestination?'':`<label>Novo nome do baralho<input class="input" id="fcOrganizeName" maxlength="100" value="${escapeAttr(organizeName)}" placeholder="Ex.: Cardiologia — revisão final"></label>`}<div class="fc-organize-preview"><strong>${organizeSameDestination?'Escolha outra aula ou deixe o baralho independente':destinationLesson?`Mesclar em ${escapeHtml(flashcardLessonLabel(destinationLesson))}`:`Manter como baralho independente`}</strong><span>${organizeSameDestination?'Este já é o destino atual do conjunto.':destinationLesson?`${destinationCount} ${destinationCount===1?'card já está':'cards já estão'} no destino. Os conjuntos serão unidos.`:'O conjunto ficará na área “Sem aula” com o novo nome.'}</span></div></div><div class="fc-organize-actions"><button class="icon-btn" id="fcOrganizeCancel">Cancelar</button><button class="icon-btn primary" id="fcOrganizeApply" ${organizeSameDestination?'disabled':''}>${destinationLesson?'Mover e mesclar':'Salvar organização'}</button></div></div>`:'';
+  const organizeSection=`<section class="card fc-manage-organize"><div class="section-title"><div><span class="eyebrow">Organização da coleção</span><h3>Renomear, mover ou mesclar</h3><div class="muted">Escolha um conjunto e seu novo destino. Nenhum histórico de revisão será apagado.</div></div>${ui.flashcardLastCollectionMove?.before?.length?'<button class="tiny-btn" id="fcOrganizeUndo">Desfazer última organização</button>':''}</div>${organizeEditor}<div class="fc-manage-organize-list">${organizeRows}</div></section>`;
+  const confirmation=deleting?`<div class="fc-delete-confirm" role="alert"><div><span class="eyebrow">Confirmação obrigatória</span><h3>Excluir “${escapeHtml(deleting.label)}”?</h3><p>Serão apagados permanentemente <strong>${deleting.count} ${deleting.count===1?'card':'cards'}</strong> e o progresso individual deles. Outros baralhos não serão alterados.</p><label>Digite <b>EXCLUIR</b> para liberar a ação<input class="input" id="fcDeleteCollectionPhrase" autocomplete="off" placeholder="EXCLUIR"></label></div><div><button class="icon-btn" id="fcDeleteCollectionCancel">Cancelar</button><button class="icon-btn danger" id="fcDeleteCollectionConfirm" data-key="${escapeAttr(deleting.key)}" disabled>Excluir ${deleting.count} ${deleting.count===1?'card':'cards'}</button></div></div>`:'';
+  return `<div class="fc-manage-page"><section class="card fc-manage-hero"><div><span class="eyebrow">Controle da coleção</span><h2>Gerenciar baralhos</h2><p>Escolha o que exportar, reorganize conjuntos sem perder histórico e mantenha a exclusão sob confirmação reforçada.</p></div><div><strong>${groups.length}</strong><span>baralhos</span><b>${all.length} cards</b></div></section><section class="card fc-manage-export"><div class="section-title"><div><span class="eyebrow">Exportação seletiva</span><h3>Quais baralhos deseja exportar?</h3><div class="muted">O arquivo preserva o nome de cada conjunto para a próxima importação.</div></div><button class="icon-btn primary" id="fcExportSelected" ${selectedCards?'':'disabled'}>Exportar ${selectedCards} ${selectedCards===1?'card':'cards'}</button></div><div class="fc-manage-toolbar"><input class="input" id="fcManageSearch" value="${escapeAttr(search)}" placeholder="Buscar baralho ou aula"><button class="tiny-btn" id="fcExportSelectAll">Selecionar todos</button><button class="tiny-btn" id="fcExportSelectNone">Limpar seleção</button><span><b>${selected.size}</b> de ${groups.length} baralhos</span></div><div class="fc-manage-deck-list">${rows}</div></section>${organizeSection}<details class="card fc-manage-danger" ${deleting?'open':''}><summary><span><strong>Excluir conjuntos de flashcards</strong><small>Zona protegida · exclusão permanente</small></span><span class="badge no">Cuidado</span></summary><div class="fc-manage-danger-body"><div class="fc-manage-warning"><strong>Faça um backup antes de excluir.</strong><span>A exclusão também remove o progresso dos cards escolhidos e será sincronizada entre dispositivos.</span><button class="tiny-btn" id="fcManageBackup">Baixar backup agora</button></div>${confirmation}<div class="fc-manage-delete-list">${deleteRows}</div></div></details></div>`;
 }
 function renderFlashcards() {
   // O overlay vive no body (fora de #flashcards), então não é substituído pelo
@@ -10004,6 +10058,42 @@ function renderFlashcards() {
   });
   document.getElementById('fcManageSearch')?.addEventListener('change',event=>{ui.flashcardManageSearch=event.currentTarget.value; renderFlashcards();});
   document.getElementById('fcManageBackup')?.addEventListener('click',exportFlashcardBackup);
+  document.querySelectorAll('[data-fc-organize-collection]').forEach(button=>button.addEventListener('click',event=>{
+    const group=flashcardCollectionGroups(flashcardAllRecords()).find(item=>item.key===event.currentTarget.dataset.fcOrganizeCollection);
+    if(!group) return;
+    ui.flashcardOrganizeCollectionKey=group.key;
+    ui.flashcardOrganizeDestination=group.scheduleId;
+    ui.flashcardOrganizeName=group.scheduleId?'':group.label;
+    renderFlashcards();
+  }));
+  document.getElementById('fcOrganizeDestination')?.addEventListener('change',event=>{ui.flashcardOrganizeDestination=event.currentTarget.value; renderFlashcards();});
+  document.getElementById('fcOrganizeName')?.addEventListener('input',event=>{ui.flashcardOrganizeName=event.currentTarget.value;});
+  document.getElementById('fcOrganizeCancel')?.addEventListener('click',()=>{ui.flashcardOrganizeCollectionKey=''; ui.flashcardOrganizeDestination=''; ui.flashcardOrganizeName=''; renderFlashcards();});
+  document.getElementById('fcOrganizeApply')?.addEventListener('click',()=>{
+    const group=flashcardCollectionGroups(flashcardAllRecords()).find(item=>item.key===ui.flashcardOrganizeCollectionKey);
+    if(!group) return;
+    const scheduleId=document.getElementById('fcOrganizeDestination')?.value || '';
+    const name=document.getElementById('fcOrganizeName')?.value || ui.flashcardOrganizeName || '';
+    const operation=reorganizeFlashcardCollection(group.cards.map(card=>card.id),{scheduleId,name});
+    if(operation.error) { alert(operation.error); return; }
+    if(!operation.changed) { showStudyToast?.('Esse baralho já está nessa organização.'); return; }
+    ui.flashcardLastCollectionMove={...operation,sourceLabel:group.label};
+    ui.flashcardOrganizeCollectionKey='';
+    ui.flashcardOrganizeDestination='';
+    ui.flashcardOrganizeName='';
+    ui.flashcardExportKeys=null;
+    persist();
+    showStudyToast?.(`${operation.changed} ${operation.changed===1?'card reorganizado':'cards reorganizados'} em “${operation.name}”.`);
+  });
+  document.getElementById('fcOrganizeUndo')?.addEventListener('click',()=>{
+    const operation=ui.flashcardLastCollectionMove;
+    const restored=undoFlashcardCollectionReorganization(operation);
+    if(!restored) return;
+    ui.flashcardLastCollectionMove=null;
+    ui.flashcardExportKeys=null;
+    persist();
+    showStudyToast?.(`${restored} ${restored===1?'card restaurado':'cards restaurados'} para “${operation.sourceLabel}”.`);
+  });
   document.querySelectorAll('[data-fc-delete-collection]').forEach(button=>button.addEventListener('click',event=>{ui.flashcardDeleteCollectionKey=event.currentTarget.dataset.fcDeleteCollection; renderFlashcards();}));
   document.getElementById('fcDeleteCollectionCancel')?.addEventListener('click',()=>{ui.flashcardDeleteCollectionKey=''; renderFlashcards();});
   document.getElementById('fcDeleteCollectionPhrase')?.addEventListener('input',event=>{const button=document.getElementById('fcDeleteCollectionConfirm'); if(button) button.disabled=event.currentTarget.value.trim().toUpperCase()!=='EXCLUIR';});

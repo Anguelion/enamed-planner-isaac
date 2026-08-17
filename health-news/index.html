@@ -45,9 +45,15 @@
       </div>
     </section>
 
+    <nav class="channel-nav" aria-label="Canais do Radar Saúde">
+      <a href="#newsletter">Newsletter</a>
+      <a href="#inovacoes">Inovações</a>
+      <a href="#pcdt">Atualizações PCDT</a>
+    </nav>
+
     <section class="lead-story" id="leadStory" aria-live="polite"></section>
 
-    <section class="digest-section" aria-labelledby="digest-title">
+    <section class="digest-section" id="newsletter" aria-labelledby="digest-title">
       <div class="section-heading">
         <div>
           <p class="eyebrow">O QUE IMPORTA</p>
@@ -66,6 +72,29 @@
         </div>
       </div>
       <div class="quick-list" id="quickList"></div>
+    </section>
+
+    <section class="channel-section" id="inovacoes" aria-labelledby="innovation-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TECNOLOGIA E ACESSO</p>
+          <h2 id="innovation-title">Inovações em saúde</h2>
+        </div>
+        <p>Da pesquisa à incorporação no SUS</p>
+      </div>
+      <div class="innovation-grid" id="innovationGrid"></div>
+    </section>
+
+    <section class="channel-section protocol-section" id="pcdt" aria-labelledby="protocol-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CONDUTA NO SUS</p>
+          <h2 id="protocol-title">Atualizações de PCDT</h2>
+        </div>
+        <a class="official-link" href="https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt" target="_blank" rel="noopener noreferrer">Consultar catálogo oficial ↗</a>
+      </div>
+      <p class="section-intro">Mudanças em protocolos, consultas públicas e documentos em elaboração. Sempre confirme a versão vigente antes de aplicar uma conduta.</p>
+      <div class="protocol-list" id="protocolList"></div>
     </section>
 
     <footer>
@@ -87,6 +116,29 @@
     </article>
   </template>
 
+  <template id="innovationTemplate">
+    <article class="innovation-card">
+      <div class="innovation-top"><span class="innovation-icon"></span><span class="innovation-stage"></span></div>
+      <h3></h3>
+      <p class="innovation-summary"></p>
+      <div class="innovation-impact"><span>IMPACTO POTENCIAL</span><p></p></div>
+      <a target="_blank" rel="noopener noreferrer">Ver fonte oficial ↗</a>
+    </article>
+  </template>
+
+  <template id="protocolTemplate">
+    <article class="protocol-card">
+      <div class="protocol-date"><strong></strong><span></span></div>
+      <div class="protocol-body">
+        <div class="protocol-heading"><span class="protocol-status"></span><span class="protocol-type"></span></div>
+        <h3></h3>
+        <p></p>
+      </div>
+      <a target="_blank" rel="noopener noreferrer" aria-label="Abrir documento oficial">↗</a>
+    </article>
+  </template>
+
+  <script src="data/latest.js"></script>
   <script src="app.js" defer></script>
 </body>
 </html>

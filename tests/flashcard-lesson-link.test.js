@@ -830,6 +830,18 @@ test('exportação seletiva preserva o nome dos baralhos para a importação', (
   assert.equal(rows[0].front,'Pergunta B');
 });
 
+test('importação inclui somente os baralhos marcados', () => {
+  const ctx=loadPlannerSandbox();
+  const rows=ctx.parseFlashcardImportFile('#separator:tab\n#deck column:1\nAlfa\tPergunta A\tResposta A\nBeta\tPergunta B\tResposta B','escolha.tsv');
+  const groups=ctx.buildFlashcardImportGroups(rows);
+  groups.find(group=>group.label==='Beta').mode='skip';
+  uiOf(ctx).flashcardImport={fileName:'escolha.tsv',total:2,groups,lockedScheduleId:''};
+  ctx.commitFlashcardImport();
+  const imported=ctx.flashcardAllRecords().filter(card=>card.sourceType==='import');
+  assert.equal(imported.length,1);
+  assert.equal(imported[0].importDeck,'Alfa');
+});
+
 test('excluir um conjunto remove somente os cards daquele baralho', () => {
   const ctx=loadPlannerSandbox();
   const state=stateOf(ctx);
@@ -844,4 +856,36 @@ test('excluir um conjunto remove somente os cards daquele baralho', () => {
   assert.equal(ctx.flashcardAllRecords().some(card=>card.id===keep.id),true);
   assert.equal(state.flashcardProgress[target.id],undefined);
   assert.ok(state.flashcardProgress[keep.id]);
+});
+
+test('mover um baralho para uma aula preserva todo o progresso dos cards', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const lesson=withLesson(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'move-deck-card',front:'A',back:'1',importDeck:'Baralho solto',area:'Importado'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:7,lapses:2,stability:18,nextReview:'2026-09-12'};
+  const progressBefore=plain(state.flashcardProgress[card.id]);
+  const operation=plain(ctx.reorganizeFlashcardCollection([card.id],{scheduleId:lesson.id}));
+  assert.equal(operation.changed,1);
+  assert.equal(card.scheduleId,lesson.id);
+  assert.equal(card.subarea,lesson.topic);
+  assert.deepEqual(plain(state.flashcardProgress[card.id]),progressBefore);
+  const group=ctx.flashcardCollectionGroups(ctx.flashcardAllRecords()).find(item=>item.key===`lesson:${lesson.id}`);
+  assert.equal(group.count,1);
+});
+
+test('renomear baralho solto pode ser desfeito sem alterar o agendamento', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'rename-deck-card',front:'A',back:'1',importDeck:'Nome antigo',subarea:'Cardio'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:3,nextReview:'2026-08-30'};
+  const operation=ctx.reorganizeFlashcardCollection([card.id],{name:'Nome novo'});
+  assert.equal(operation.changed,1);
+  assert.equal(ctx.flashcardCollectionGroups(ctx.flashcardAllRecords())[0].label,'Nome novo');
+  assert.equal(ctx.undoFlashcardCollectionReorganization(operation),1);
+  assert.equal(card.importDeck,'Nome antigo');
+  assert.equal(card.scheduleId,'');
+  assert.equal(state.flashcardProgress[card.id].nextReview,'2026-08-30');
 });

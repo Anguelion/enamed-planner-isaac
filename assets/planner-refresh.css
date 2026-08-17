@@ -1102,11 +1102,23 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 #flashcards .fc-manage-deck-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; max-height: 480px; overflow: auto; padding-right: 3px; }
 #flashcards .fc-manage-deck { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 10px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); cursor: pointer; }
 #flashcards .fc-manage-deck.is-selected { border-color: color-mix(in srgb,var(--fc-accent) 38%,var(--line)); background: color-mix(in srgb,var(--fc-soft) 58%,var(--panel)); }
-#flashcards .fc-manage-deck > span, #flashcards .fc-manage-delete-row > span { display: grid; gap: 3px; min-width: 0; }
-#flashcards .fc-manage-deck strong, #flashcards .fc-manage-delete-row strong { overflow: hidden; color: var(--ink); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
-#flashcards .fc-manage-deck small, #flashcards .fc-manage-delete-row small { color: var(--muted); font-size: 8px; }
+#flashcards .fc-manage-deck > span, #flashcards .fc-manage-delete-row > span, #flashcards .fc-manage-organize-row > span { display: grid; gap: 3px; min-width: 0; }
+#flashcards .fc-manage-deck strong, #flashcards .fc-manage-delete-row strong, #flashcards .fc-manage-organize-row strong { overflow: hidden; color: var(--ink); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+#flashcards .fc-manage-deck small, #flashcards .fc-manage-delete-row small, #flashcards .fc-manage-organize-row small { color: var(--muted); font-size: 8px; }
 #flashcards .fc-manage-deck > b { color: var(--fc-accent); font-size: 18px; text-align: right; }
 #flashcards .fc-manage-deck > b small { display: block; font-size: 7px; text-transform: uppercase; }
+#flashcards .fc-manage-organize { display: grid; gap: 13px; }
+#flashcards .fc-manage-organize-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; max-height: 390px; overflow: auto; }
+#flashcards .fc-manage-organize-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px; border: 1px solid var(--line); border-radius: 11px; background: var(--panel); }
+#flashcards .fc-organize-editor { display: grid; grid-template-columns: minmax(220px,.75fr) minmax(320px,1.25fr); gap: 16px; padding: 17px; border: 1px solid color-mix(in srgb,var(--fc-accent) 35%,var(--line)); border-radius: 14px; background: linear-gradient(125deg,color-mix(in srgb,var(--fc-soft) 72%,var(--panel)),var(--panel)); }
+#flashcards .fc-organize-editor h3 { margin: 4px 0 6px; }
+#flashcards .fc-organize-editor p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+#flashcards .fc-organize-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+#flashcards .fc-organize-fields > label { display: grid; gap: 6px; color: var(--muted); font-size: 9px; font-weight: 800; }
+#flashcards .fc-organize-preview { display: grid; grid-column: 1 / -1; gap: 3px; padding: 10px; border-radius: 10px; background: var(--panel); }
+#flashcards .fc-organize-preview strong { color: var(--fc-accent); font-size: 10px; }
+#flashcards .fc-organize-preview span { color: var(--muted); font-size: 9px; }
+#flashcards .fc-organize-actions { display: flex; grid-column: 1 / -1; justify-content: flex-end; gap: 7px; padding-top: 4px; border-top: 1px solid color-mix(in srgb,var(--line) 65%,transparent); }
 #flashcards .fc-manage-danger { padding: 0; overflow: hidden; border-color: color-mix(in srgb,var(--danger) 28%,var(--line)); }
 #flashcards .fc-manage-danger > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px; cursor: pointer; list-style: none; }
 #flashcards .fc-manage-danger > summary > span:first-child { display: grid; gap: 3px; }
@@ -1294,6 +1306,11 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
   #flashcards .fc-manage-toolbar { grid-template-columns: 1fr 1fr; }
   #flashcards .fc-manage-toolbar .input, #flashcards .fc-manage-toolbar > span { grid-column: 1 / -1; }
   #flashcards .fc-manage-deck-list { grid-template-columns: 1fr; }
+  #flashcards .fc-manage-organize-list { grid-template-columns: 1fr; }
+  #flashcards .fc-organize-editor { grid-template-columns: 1fr; }
+  #flashcards .fc-organize-fields { grid-template-columns: 1fr; }
+  #flashcards .fc-organize-preview, #flashcards .fc-organize-actions { grid-column: 1; }
+  #flashcards .fc-organize-actions { display: grid; grid-template-columns: 1fr; }
   #flashcards .fc-manage-warning { align-items: stretch; flex-direction: column; }
   #flashcards .fc-delete-confirm { grid-template-columns: 1fr; }
   #flashcards .fc-delete-confirm > div:last-child { display: grid; grid-template-columns: 1fr; }

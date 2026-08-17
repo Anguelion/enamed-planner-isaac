@@ -91,20 +91,65 @@ function renderQuick(items) {
   });
 }
 
+function renderInnovations(items = []) {
+  const root = document.querySelector('#innovationGrid');
+  const template = document.querySelector('#innovationTemplate');
+  root.replaceChildren();
+  items.forEach((item) => {
+    const fragment = template.content.cloneNode(true);
+    fragment.querySelector('.innovation-icon').textContent = item.icon;
+    fragment.querySelector('.innovation-stage').textContent = item.stage;
+    fragment.querySelector('h3').textContent = item.title;
+    fragment.querySelector('.innovation-summary').textContent = item.summary;
+    fragment.querySelector('.innovation-impact p').textContent = item.impact;
+    fragment.querySelector('a').href = item.sourceUrl;
+    root.append(fragment);
+  });
+}
+
+function renderProtocols(items = []) {
+  const root = document.querySelector('#protocolList');
+  const template = document.querySelector('#protocolTemplate');
+  root.replaceChildren();
+  items.forEach((item) => {
+    const fragment = template.content.cloneNode(true);
+    const date = new Date(`${item.date}T12:00:00-03:00`);
+    fragment.querySelector('.protocol-date strong').textContent = String(date.getDate()).padStart(2, '0');
+    fragment.querySelector('.protocol-date span').textContent = new Intl.DateTimeFormat('pt-BR', { month: 'short' }).format(date).replace('.', '').toUpperCase();
+    fragment.querySelector('.protocol-status').textContent = item.status;
+    fragment.querySelector('.protocol-status').dataset.tone = item.tone;
+    fragment.querySelector('.protocol-type').textContent = item.type;
+    fragment.querySelector('h3').textContent = item.title;
+    fragment.querySelector('.protocol-body > p').textContent = item.summary;
+    fragment.querySelector('a').href = item.sourceUrl;
+    root.append(fragment);
+  });
+}
+
+function renderEdition(issue) {
+  state.issue = issue;
+  document.querySelector('#readingTime').textContent = `${issue.readingMinutes} min`;
+  document.querySelector('#editionDate').textContent = formatDate(issue.publishedAt);
+  document.querySelector('#editionTitle').textContent = issue.title;
+  document.querySelector('#storyCount').textContent = `${issue.stories.length} análises selecionadas`;
+  document.querySelector('#originalEdition').href = issue.sourceUrl;
+  renderLead(issue.lead);
+  renderStories(issue.stories, issue.id);
+  renderQuick(issue.quickTakes);
+  renderInnovations(issue.innovations);
+  renderProtocols(issue.protocolUpdates);
+}
+
 async function loadEdition() {
   try {
+    if (window.RADAR_SAUDE_ISSUE) {
+      renderEdition(window.RADAR_SAUDE_ISSUE);
+      return;
+    }
     const response = await fetch('data/latest.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const issue = await response.json();
-    state.issue = issue;
-    document.querySelector('#readingTime').textContent = `${issue.readingMinutes} min`;
-    document.querySelector('#editionDate').textContent = formatDate(issue.publishedAt);
-    document.querySelector('#editionTitle').textContent = issue.title;
-    document.querySelector('#storyCount').textContent = `${issue.stories.length} análises selecionadas`;
-    document.querySelector('#originalEdition').href = issue.sourceUrl;
-    renderLead(issue.lead);
-    renderStories(issue.stories, issue.id);
-    renderQuick(issue.quickTakes);
+    renderEdition(issue);
   } catch (error) {
     const root = document.querySelector('#leadStory');
     root.className = 'error-card';
