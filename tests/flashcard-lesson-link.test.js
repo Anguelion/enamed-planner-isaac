@@ -220,3 +220,53 @@ test('cards suspensos ficam fora dos vencidos e da fila normal', () => {
   assert.equal(ctx.isFlashcardDue(card), false);
   assert.equal(ctx.flashcardStudyQueue(ctx.flashcardAllRecords()).length, 0);
 });
+
+test('navegador pesquisa conteúdo, assunto e tags na coleção completa', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const ui = uiOf(ctx);
+  state.flashcardLibrary.push(
+    ctx.normalizeFlashcardRecord({id:'nav-1',front:'Critérios de pré-eclâmpsia',back:'PA e proteinúria',area:'G.O.',subarea:'Hipertensão',tags:['obstetrícia']}),
+    ctx.normalizeFlashcardRecord({id:'nav-2',front:'Tratamento da asma',back:'Corticoide inalatório',area:'Clínica Médica',subarea:'Pneumologia',tags:['respiratório']})
+  );
+  ui.flashcardBrowserSearch = 'pre eclampsia obstetricia';
+  ui.flashcardBrowserStatus = 'Todos';
+  ui.flashcardBrowserArea = 'Todas';
+  ui.flashcardBrowserSort = 'front';
+  assert.deepEqual(plain(ctx.flashcardBrowserRecords(ctx.flashcardAllRecords()).map(card=>card.id)), ['nav-1']);
+});
+
+test('navegador combina filtro de estado e área e ordena pelos lapsos', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const ui = uiOf(ctx);
+  state.flashcardLibrary.push(
+    ctx.normalizeFlashcardRecord({id:'nav-a',front:'A',back:'1',area:'Clínica Médica'}),
+    ctx.normalizeFlashcardRecord({id:'nav-b',front:'B',back:'2',area:'Clínica Médica'}),
+    ctx.normalizeFlashcardRecord({id:'nav-c',front:'C',back:'3',area:'Pediatria'})
+  );
+  state.flashcardProgress['nav-a']={reviews:3,interval:4,lapses:1,status:'Bom',nextReview:'2026-08-20'};
+  state.flashcardProgress['nav-b']={reviews:5,interval:6,lapses:4,status:'Difícil',nextReview:'2026-08-21'};
+  state.flashcardProgress['nav-c']={reviews:4,interval:5,lapses:5,status:'Difícil',nextReview:'2026-08-22'};
+  ui.flashcardBrowserSearch='';
+  ui.flashcardBrowserStatus='Difíceis';
+  ui.flashcardBrowserArea='Clínica Médica';
+  ui.flashcardBrowserSort='lapses';
+  assert.deepEqual(plain(ctx.flashcardBrowserRecords(ctx.flashcardAllRecords()).map(card=>card.id)), ['nav-b']);
+});
+
+test('suspensão em lote preserva e restaura o agendamento anterior', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const card = ctx.normalizeFlashcardRecord({id:'bulk-suspend',front:'F',back:'V'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:4,status:'Bom',nextReview:'2026-08-20',dueAt:'2026-08-20T10:00:00.000Z'};
+  assert.equal(ctx.setFlashcardSuspended(card.id,true), true);
+  assert.equal(state.flashcardProgress[card.id].status,'Suspenso');
+  assert.equal(card.isSuspended,true);
+  assert.equal(ctx.setFlashcardSuspended(card.id,false), true);
+  assert.equal(state.flashcardProgress[card.id].status,'Bom');
+  assert.equal(state.flashcardProgress[card.id].nextReview,'2026-08-20');
+  assert.equal(state.flashcardProgress[card.id].dueAt,'2026-08-20T10:00:00.000Z');
+  assert.equal(card.isSuspended,false);
+});

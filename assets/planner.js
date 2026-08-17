@@ -149,6 +149,12 @@ ui.flashcardLesson ||= '';
 ui.flashcardImport = null;
 ui.flashcardOrganizerOpen = false;
 ui.flashcardOrganizerSearch = '';
+ui.flashcardBrowserSearch ||= '';
+ui.flashcardBrowserStatus ||= 'Todos';
+ui.flashcardBrowserArea ||= 'Todas';
+ui.flashcardBrowserSort ||= 'due';
+ui.flashcardBrowserCardId ||= '';
+ui.flashcardBrowserSelected = Array.isArray(ui.flashcardBrowserSelected) ? ui.flashcardBrowserSelected : [];
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
 let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', sessionActive: false, pausedByUser: false, running: false, interval: null, questionId: '', secondsLeft: 0, elapsedSeconds: 0, beeped: false, status: '', audioContext: null };
@@ -9173,6 +9179,70 @@ function renderFlashcardOverview(all, decks, due, reviewsToday, waiting) {
     <section class="card fc-decks-card"><div class="section-title"><div><span class="eyebrow">Coleção</span><h2>Aulas e baralhos</h2></div><button class="icon-btn primary" data-fc-view="study">Iniciar revisão</button></div>${renderFlashcardDeckTable(decks)}</section>
   </div>`;
 }
+function flashcardBrowserState(card) {
+  const progress = flashcardProgress(card);
+  if(flashcardIsSuspended(card)) return 'Suspenso';
+  if(flashcardIsWaiting(card)) return 'Em espera';
+  if(!progress.reviews) return 'Novo';
+  if(progress.interval >= 21) return 'Maduro';
+  return 'Aprendendo';
+}
+function flashcardBrowserRecords(all=flashcardAllRecords()) {
+  const terms = normalizedTopic(ui.flashcardBrowserSearch || '').split(' ').filter(Boolean);
+  const status = ui.flashcardBrowserStatus || 'Todos';
+  const area = ui.flashcardBrowserArea || 'Todas';
+  const today = studyDateKey();
+  const filtered = all.filter(card => {
+    const progress = flashcardProgress(card);
+    const stateName = flashcardBrowserState(card);
+    const searchOk = flashcardMatchesSearch(card, terms);
+    const areaOk = area === 'Todas' || card.area === area;
+    const statusOk = status === 'Todos'
+      || status === stateName
+      || (status === 'Vencidos' && isFlashcardDue(card, today))
+      || (status === 'Difíceis' && (progress.lapses >= 2 || progress.difficulty >= 7 || progress.status === 'Difícil'));
+    return searchOk && areaOk && statusOk;
+  });
+  const sort = ui.flashcardBrowserSort || 'due';
+  return filtered.sort((a,b) => {
+    const pa = flashcardProgress(a); const pb = flashcardProgress(b);
+    if(sort === 'created') return flashcardCreatedTime(b)-flashcardCreatedTime(a);
+    if(sort === 'lapses') return pb.lapses-pa.lapses || String(a.front).localeCompare(String(b.front));
+    if(sort === 'interval') return pb.interval-pa.interval || String(a.front).localeCompare(String(b.front));
+    if(sort === 'front') return String(a.front).localeCompare(String(b.front));
+    return String(pa.dueAt || pa.nextReview).localeCompare(String(pb.dueAt || pb.nextReview)) || String(a.front).localeCompare(String(b.front));
+  });
+}
+function flashcardBrowserSourceLabel(card) {
+  if(card.questionId) return 'Questão';
+  if(card.videoId) return 'Videoaula';
+  if(card.sourceType === 'import' || card.source === 'Anki') return 'Importado';
+  return 'Manual';
+}
+function renderFlashcardBrowserDetail(card) {
+  if(!card) return `<aside class="card fc-browser-detail"><div class="empty"><strong>Selecione um card</strong><span>Abra uma linha para visualizar e editar o conteúdo.</span></div></aside>`;
+  const progress = flashcardProgress(card);
+  const editing = ui.editFlashcardId === card.id;
+  return `<aside class="card fc-browser-detail"><div class="fc-browser-detail-head"><div><span class="eyebrow">${escapeHtml(flashcardBrowserSourceLabel(card))}</span><h2>Detalhes do card</h2></div>${editing?'':`<button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar</button>`}</div>
+    <div class="fc-browser-detail-content"><span>Frente</span><div class="flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div><span>Verso</span><div class="flashcard-rich-text fc-browser-answer">${renderFlashcardBackHtml(card)}</div></div>
+    <div class="fc-browser-detail-meta"><span>${escapeHtml(flashcardBrowserState(card))}</span><span>${progress.reviews} revisões</span><span>${progress.interval} dias</span><span>${progress.lapses} lapsos</span><span>Próxima: ${escapeHtml(progress.nextReview)}</span></div>
+    ${editing ? renderFlashcardInlineEditor(card) : ''}
+  </aside>`;
+}
+function renderFlashcardBrowser(all) {
+  const records = flashcardBrowserRecords(all);
+  const areas = ['Todas', ...new Set(all.map(card=>card.area).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  const currentIds = new Set(all.map(card=>card.id));
+  ui.flashcardBrowserSelected = ui.flashcardBrowserSelected.filter(id=>currentIds.has(id));
+  const selected = new Set(ui.flashcardBrowserSelected);
+  const activeCard = all.find(card=>card.id===ui.flashcardBrowserCardId) || records[0] || null;
+  if(activeCard && !ui.flashcardBrowserCardId) ui.flashcardBrowserCardId = activeCard.id;
+  const allVisibleSelected = records.length > 0 && records.every(card=>selected.has(card.id));
+  const actionBar = selected.size ? `<div class="fc-browser-bulk"><strong>${selected.size} selecionado${selected.size===1?'':'s'}</strong><label>Mover para${flashcardLessonSelectHtml('id="fcBrowserBulkLesson"','', 'Escolher aula...')}</label><button class="tiny-btn" id="fcBrowserBulkMove">Mover</button><button class="tiny-btn" id="fcBrowserBulkSuspend">Suspender</button><button class="tiny-btn" id="fcBrowserBulkUnsuspend">Reativar</button><button class="tiny-btn danger" id="fcBrowserBulkDelete">Excluir</button><button class="tiny-btn" id="fcBrowserClearSelection">Limpar seleção</button></div>` : '';
+  return `<div class="flashcard-browser"><section class="card fc-browser-main"><div class="section-title"><div><span class="eyebrow">Coleção completa</span><h2>Navegador de cards</h2><div class="muted">Pesquise, ordene e altere vários cards de uma vez.</div></div><span class="badge today">${records.length} de ${all.length}</span></div>
+    <div class="fc-browser-controls"><label class="fc-browser-search"><span>Buscar</span><input class="input" id="fcBrowserSearch" value="${escapeAttr(ui.flashcardBrowserSearch)}" placeholder="Frente, verso, assunto, deck ou tag"></label><label><span>Estado</span><select class="select" id="fcBrowserStatus">${['Todos','Vencidos','Novo','Aprendendo','Maduro','Difíceis','Suspenso','Em espera'].map(value=>`<option ${ui.flashcardBrowserStatus===value?'selected':''}>${value}</option>`).join('')}</select></label><label><span>Área</span><select class="select" id="fcBrowserArea">${areas.map(value=>`<option value="${escapeAttr(value)}" ${ui.flashcardBrowserArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Ordenar</span><select class="select" id="fcBrowserSort"><option value="due" ${ui.flashcardBrowserSort==='due'?'selected':''}>Próxima revisão</option><option value="created" ${ui.flashcardBrowserSort==='created'?'selected':''}>Mais recentes</option><option value="lapses" ${ui.flashcardBrowserSort==='lapses'?'selected':''}>Mais lapsos</option><option value="interval" ${ui.flashcardBrowserSort==='interval'?'selected':''}>Maior intervalo</option><option value="front" ${ui.flashcardBrowserSort==='front'?'selected':''}>Frente A–Z</option></select></label></div>${actionBar}
+    <div class="fc-browser-table-wrap"><table class="fc-browser-table"><thead><tr><th><input type="checkbox" id="fcBrowserSelectAll" ${allVisibleSelected?'checked':''} aria-label="Selecionar todos os cards visíveis"></th><th>Frente</th><th>Aula / assunto</th><th>Estado</th><th>Próxima</th><th>Intervalo</th><th>Lapsos</th><th></th></tr></thead><tbody>${records.map(card=>{const progress=flashcardProgress(card); const stateName=flashcardBrowserState(card); return `<tr class="${ui.flashcardBrowserCardId===card.id?'active':''}"><td><input type="checkbox" data-fc-browser-select="${escapeAttr(card.id)}" ${selected.has(card.id)?'checked':''} aria-label="Selecionar card"></td><td><strong>${escapeHtml(String(card.front||'').replace(/\s+/g,' ').slice(0,120))}</strong><small>${escapeHtml(flashcardBrowserSourceLabel(card))}${card.tags?.length?` · ${(card.tags||[]).slice(0,3).map(escapeHtml).join(', ')}`:''}</small></td><td>${escapeHtml(card.topic||card.subarea||'Sem assunto')}<small>${escapeHtml(card.area||'Sem área')}</small></td><td><span class="fc-browser-state state-${normalizedTopic(stateName).replace(/\s+/g,'-')}">${escapeHtml(stateName)}</span></td><td>${escapeHtml(progress.nextReview)}</td><td>${progress.interval} d</td><td>${progress.lapses}</td><td><button class="tiny-btn" data-fc-browser-open="${escapeAttr(card.id)}">Abrir</button></td></tr>`;}).join('') || '<tr><td colspan="8"><div class="empty">Nenhum card corresponde a esses filtros.</div></td></tr>'}</tbody></table></div></section>${renderFlashcardBrowserDetail(activeCard)}</div>`;
+}
 function renderFlashcards() {
   // O overlay vive no body (fora de #flashcards), então não é substituído pelo
   // innerHTML abaixo: precisa ser removido explicitamente a cada render.
@@ -9220,9 +9290,13 @@ function renderFlashcards() {
   <div class="card flashcard-library-card"><div class="section-title"><h3>Biblioteca</h3><button class="icon-btn" id="flashcardToggleLibrary">${ui.flashcardShowLibrary?'Ocultar':'Mostrar'} cards (${cards.length})</button></div>${ui.flashcardShowLibrary ? (groups.length ? groups.map(renderFlashcardGroup).join('') : '<div class="empty">Nenhum card neste filtro.</div>') : '<div class="muted">A biblioteca fica recolhida durante a revisão para reduzir distrações.</div>'}</div>`;
   const forceStudy = Boolean(ui.flashcardImport || ui.flashcardEditorOpen || ui.flashcardFocusMode);
   if(forceStudy) ui.flashcardView = 'study';
-  const mainContent = ui.flashcardView === 'overview' ? renderFlashcardOverview(all, lessonDecks, due, reviewsToday, waiting) : studyContent;
+  const mainContent = ui.flashcardView === 'overview'
+    ? renderFlashcardOverview(all, lessonDecks, due, reviewsToday, waiting)
+    : ui.flashcardView === 'browser'
+      ? renderFlashcardBrowser(all)
+      : studyContent;
   document.getElementById('flashcards').innerHTML = `<div class="card flashcard-command"><div class="flashcard-command-copy"><span class="flashcard-command-icon" aria-hidden="true">${iconSvg('flashcard',{weight:'duotone'})}</span><div><div class="eyebrow">Revisão inteligente</div><h1>Flashcards</h1><div class="muted">Entenda sua carga, organize os baralhos e revise no momento certo.</div></div></div><div class="flashcard-command-actions"><button class="icon-btn primary" id="newFlashcardBtn">${iconSvg('add',{weight:'bold'})}<span>Novo card</span></button><button class="icon-btn" id="flashcardUndoBtn">Desfazer</button><button class="icon-btn" id="flashcardBackupBtn">Backup</button><button class="icon-btn" id="ankiExportBtn">Exportar</button><button class="icon-btn" id="ankiImportBtn" title="Importar cards de um arquivo exportado do Anki (.tsv)">Importar</button><button class="icon-btn ${unlinkedCount?'warn':''}" id="flashcardOrganizerBtn" title="Vincular em lote os cards que ainda não pertencem a nenhuma aula">Cards sem aula${unlinkedCount?` (${unlinkedCount})`:''}</button></div></div>
-  <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button></nav>
+  <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button><button class="${ui.flashcardView==='browser'?'active':''}" data-fc-view="browser">Navegar <span>${all.length}</span></button></nav>
   <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">${mainContent}${ui.flashcardOrganizerOpen ? renderFlashcardOrganizer() : ''}`;
   document.querySelectorAll('[data-fc-view]').forEach(button => button.onclick = event => {
     ui.flashcardView = event.currentTarget.dataset.fcView;
@@ -9245,6 +9319,63 @@ function renderFlashcards() {
     const rated = row.again + row.remembered;
     const detail = [`${row.count} revisões`, rated ? `${Math.round(row.remembered/rated*100)}% lembradas` : '', row.minutes ? `${Math.round(row.minutes)} min` : ''].filter(Boolean).join(' · ');
     showStudyToast?.(`${fmtDate(date)} · ${detail}`);
+  });
+  const browserSearch = document.getElementById('fcBrowserSearch');
+  if(browserSearch) browserSearch.oninput = event => {
+    const caret = event.currentTarget.selectionStart;
+    ui.flashcardBrowserSearch = event.currentTarget.value;
+    ui.flashcardBrowserCardId = '';
+    renderFlashcards();
+    const next = document.getElementById('fcBrowserSearch');
+    if(next) { next.focus(); next.setSelectionRange(caret,caret); }
+  };
+  document.getElementById('fcBrowserStatus')?.addEventListener('change', event => { ui.flashcardBrowserStatus=event.currentTarget.value; ui.flashcardBrowserCardId=''; renderFlashcards(); });
+  document.getElementById('fcBrowserArea')?.addEventListener('change', event => { ui.flashcardBrowserArea=event.currentTarget.value; ui.flashcardBrowserCardId=''; renderFlashcards(); });
+  document.getElementById('fcBrowserSort')?.addEventListener('change', event => { ui.flashcardBrowserSort=event.currentTarget.value; renderFlashcards(); });
+  document.querySelectorAll('[data-fc-browser-open]').forEach(button => button.onclick = event => { ui.flashcardBrowserCardId=event.currentTarget.dataset.fcBrowserOpen; ui.editFlashcardId=''; renderFlashcards(); });
+  document.querySelectorAll('[data-fc-browser-select]').forEach(input => input.onchange = event => {
+    const selected = new Set(ui.flashcardBrowserSelected);
+    if(event.currentTarget.checked) selected.add(event.currentTarget.dataset.fcBrowserSelect);
+    else selected.delete(event.currentTarget.dataset.fcBrowserSelect);
+    ui.flashcardBrowserSelected = [...selected];
+    renderFlashcards();
+  });
+  document.getElementById('fcBrowserSelectAll')?.addEventListener('change', event => {
+    const selected = new Set(ui.flashcardBrowserSelected);
+    flashcardBrowserRecords(all).forEach(card => event.currentTarget.checked ? selected.add(card.id) : selected.delete(card.id));
+    ui.flashcardBrowserSelected = [...selected];
+    renderFlashcards();
+  });
+  document.getElementById('fcBrowserClearSelection')?.addEventListener('click', () => { ui.flashcardBrowserSelected=[]; renderFlashcards(); });
+  document.getElementById('fcBrowserBulkMove')?.addEventListener('click', () => {
+    const scheduleId = document.getElementById('fcBrowserBulkLesson')?.value || '';
+    if(!scheduleId) { alert('Escolha a aula de destino.'); return; }
+    const moved = linkFlashcardsToSchedule(ui.flashcardBrowserSelected, scheduleId);
+    persist();
+    showStudyToast?.(`${moved} ${moved===1?'card movido':'cards movidos'} para ${scheduleLessonById(scheduleId)?.topic || 'a aula selecionada'}.`);
+    renderFlashcards();
+  });
+  document.getElementById('fcBrowserBulkSuspend')?.addEventListener('click', () => {
+    const changed = ui.flashcardBrowserSelected.reduce((sum,id)=>sum+(setFlashcardSuspended(id,true)?1:0),0);
+    persist();
+    showStudyToast?.(`${changed} ${changed===1?'card suspenso':'cards suspensos'}.`);
+    renderFlashcards();
+  });
+  document.getElementById('fcBrowserBulkUnsuspend')?.addEventListener('click', () => {
+    const changed = ui.flashcardBrowserSelected.reduce((sum,id)=>sum+(setFlashcardSuspended(id,false)?1:0),0);
+    persist();
+    showStudyToast?.(`${changed} ${changed===1?'card reativado':'cards reativados'}.`);
+    renderFlashcards();
+  });
+  document.getElementById('fcBrowserBulkDelete')?.addEventListener('click', () => {
+    const ids = [...ui.flashcardBrowserSelected];
+    if(!ids.length || !confirm(`Excluir ${ids.length} ${ids.length===1?'card selecionado':'cards selecionados'}? Esta ação não pode ser desfeita.`)) return;
+    const removed = deleteFlashcardsByIds(ids);
+    if(ids.includes(ui.flashcardBrowserCardId)) ui.flashcardBrowserCardId='';
+    ui.flashcardBrowserSelected=[];
+    persist();
+    showStudyToast?.(`${removed} ${removed===1?'card excluído':'cards excluídos'}.`);
+    renderFlashcards();
   });
   const filter = document.getElementById('flashcardFilter');
   if(filter) filter.onchange = e => { ui.flashcardFilter=e.target.value; ui.flashcardSubject=''; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); };
@@ -9720,12 +9851,13 @@ function moveFlashcardSession(delta, total) {
   ui.revealedCards = {};
   renderFlashcards();
 }
-function suspendFlashcard(id) {
+function setFlashcardSuspended(id, shouldSuspend) {
   const card = mutableFlashcardRecord(id);
-  if(!card) return;
+  if(!card) return false;
   const current = state.flashcardProgress[id] || {};
   const suspended = flashcardIsSuspended(card);
-  if(suspended) {
+  if(suspended === shouldSuspend) return false;
+  if(!shouldSuspend) {
     const restored = current.suspendedSchedule || {};
     state.flashcardProgress[id] = {
       ...current,
@@ -9752,6 +9884,14 @@ function suspendFlashcard(id) {
   }
   card.rowVersion = Math.max(1, n(card.rowVersion) || 1) + 1;
   delete ui.revealedCards[id];
+  renderCache.manualCards = null;
+  renderCache.flashcardStats.clear();
+  return true;
+}
+function suspendFlashcard(id) {
+  const card = mutableFlashcardRecord(id);
+  if(!card) return;
+  setFlashcardSuspended(id, !flashcardIsSuspended(card));
   persist();
   renderFlashcards();
 }
