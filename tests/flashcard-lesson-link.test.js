@@ -644,6 +644,22 @@ test('prescrição respeita o tempo, mistura baralhos e não repete cartões', (
   assert.equal(prescription.allocations.reduce((total,item)=>total+item.count,0),prescription.cards.length);
 });
 
+test('prescrição adaptativa usa a fila geral mesmo sem Baralho Inteligente', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const cards=[
+    ctx.normalizeFlashcardRecord({id:'rx-general-due',front:'Revisão',back:'V'}),
+    ctx.normalizeFlashcardRecord({id:'rx-general-new',front:'Novo',back:'V'})
+  ];
+  state.flashcardLibrary.push(...cards);
+  state.flashcardProgress[cards[0].id]={reviews:2,nextReview:ctx.studyDateKey()};
+  const prescription=plain(ctx.flashcardAdaptivePrescription(ctx.flashcardAllRecords(),5));
+  assert.equal(prescription.cards.length,2);
+  assert.deepEqual(new Set(prescription.cards.map(card=>card.id)),new Set(cards.map(card=>card.id)));
+  assert.equal(prescription.allocations[0].name,'Fila geral');
+  assert.equal(ctx.startFlashcardAdaptivePrescription(prescription),2);
+});
+
 test('mais tempo amplia a prescrição sem ultrapassar os cards disponíveis', () => {
   const ctx = loadPlannerSandbox();
   const state=stateOf(ctx);

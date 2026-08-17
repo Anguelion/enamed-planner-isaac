@@ -9611,6 +9611,18 @@ function flashcardAdaptivePrescription(all=flashcardAllRecords(), rawMinutes=sta
   const capacity=Math.max(1,Math.floor(minutes*60/secondsPerCard));
   const priorities=flashcardSmartDecks().map(deck=>flashcardSmartDeckPriority(deck,all)).filter(item=>item.analytics.candidates>0).sort((a,b)=>(b.score+(b.deck.pinned?12:0))-(a.score+(a.deck.pinned?12:0)) || b.overdue-a.overdue).slice(0,5);
   const entries=priorities.map(priority=>({priority,cards:flashcardCustomStudyCandidates(all,priority.deck.filters),cursor:0,count:0,weight:Math.max(8,priority.score+(priority.deck.pinned?12:0))}));
+  const coveredIds=new Set(entries.flatMap(entry=>entry.cards.map(card=>card.id)));
+  const today=studyDateKey();
+  const fallbackCards=flashcardActiveRecords(all).filter(card=>{
+    const progress=flashcardProgress(card);
+    return !coveredIds.has(card.id) && (!progress.reviews || isFlashcardDue(card,today));
+  }).sort((a,b)=>{
+    const pa=flashcardProgress(a); const pb=flashcardProgress(b);
+    const aNew=!pa.reviews; const bNew=!pb.reviews;
+    if(aNew!==bNew) return aNew?1:-1;
+    return String(pa.nextReview).localeCompare(String(pb.nextReview)) || pb.difficulty-pa.difficulty || String(a.front).localeCompare(String(b.front));
+  });
+  if(fallbackCards.length) entries.push({priority:{deck:{id:'',name:'Fila geral',pinned:false},score:20,urgency:'normal',reasons:['cards disponíveis na fila geral']},cards:fallbackCards,cursor:0,count:0,weight:20});
   const availableCount=new Set(entries.flatMap(entry=>entry.cards.map(card=>card.id))).size;
   const target=Math.min(capacity,availableCount);
   const selected=[]; const selectedIds=new Set(); const deckByCard={};
@@ -9636,7 +9648,7 @@ function startFlashcardAdaptivePrescription(prescription) {
 function renderFlashcardAdaptivePrescription(all=flashcardAllRecords(), variant='dashboard') {
   const prescription=flashcardAdaptivePrescription(all,state.flashcardSettings.prescriptionMinutes);
   const presets=[10,20,30,45];
-  const allocationHtml=prescription.allocations.length?prescription.allocations.map(item=>`<span><b>${escapeHtml(item.name)}</b><i style="width:${Math.round(item.count/Math.max(1,prescription.cards.length)*100)}%"></i><strong>${item.count}</strong></span>`).join(''):'<div class="fc-prescription-empty">Crie Baralhos Inteligentes com cartões disponíveis para receber uma prescrição.</div>';
+  const allocationHtml=prescription.allocations.length?prescription.allocations.map(item=>`<span><b>${escapeHtml(item.name)}</b><i style="width:${Math.round(item.count/Math.max(1,prescription.cards.length)*100)}%"></i><strong>${item.count}</strong></span>`).join(''):'<div class="fc-prescription-empty">Nenhum cartão novo ou vencido está disponível agora.</div>';
   return `<section class="fc-prescription fc-prescription-${variant}"><div class="fc-prescription-head"><div><span class="eyebrow">Prescrição diária adaptativa</span><h3>Quanto tempo você tem?</h3><p>O sistema combina os baralhos mais importantes sem repetir cartões.</p></div><div class="fc-prescription-time"><div>${presets.map(value=>`<button class="tiny-btn ${prescription.minutes===value?'active':''}" data-fc-prescription-minutes="${value}" aria-pressed="${prescription.minutes===value}">${value} min</button>`).join('')}</div><label><span>Outro</span><input class="input" type="number" min="5" max="120" value="${prescription.minutes}" data-fc-prescription-input><small>min</small></label></div></div><div class="fc-prescription-summary"><div><strong>${prescription.cards.length}</strong><span>cartões selecionados</span></div><div><strong>${prescription.estimatedMinutes}</strong><span>minutos estimados</span></div><div><strong>${prescription.secondsPerCard}s</strong><span>seu ritmo por card</span></div><div><strong>${prescription.allocations.length}</strong><span>baralhos combinados</span></div></div><div class="fc-prescription-allocation">${allocationHtml}</div><button class="icon-btn primary" data-fc-prescription-start ${prescription.cards.length?'':'disabled'}>Iniciar sessão adaptativa</button></section>`;
 }
 function bindFlashcardPrescriptionControls(root, refresh, start) {
@@ -9669,7 +9681,7 @@ function finalizeFlashcardStudySession(options={}) {
   const deckCounts=new Map();
   logs.forEach(log=>{const key=log.smartDeckId || ''; deckCounts.set(key,n(deckCounts.get(key))+1);});
   const decks=flashcardSmartDecks();
-  const breakdown=[...deckCounts.entries()].map(([deckId,count])=>({deckId,name:decks.find(deck=>deck.id===deckId)?.name || session.label || 'Sessão personalizada',count})).sort((a,b)=>b.count-a.count || a.name.localeCompare(b.name));
+  const breakdown=[...deckCounts.entries()].map(([deckId,count])=>({deckId,name:decks.find(deck=>deck.id===deckId)?.name || (deckId?'Sessão personalizada':'Fila geral'),count})).sort((a,b)=>b.count-a.count || a.name.localeCompare(b.name));
   const started=Date.parse(session.startedAt||''); const ended=Date.parse(endedAt);
   const report={id:session.id,kind:session.kind||'custom',label:session.label||'Sessão de flashcards',startedAt:session.startedAt,endedAt,completed:Boolean(options.completed),plannedMinutes:Math.max(0,n(session.plannedMinutes)),durationSeconds:Number.isFinite(started)&&Number.isFinite(ended)?Math.max(1,Math.round((ended-started)/1000)):0,initialCards:Math.max(logs.length,n(session.initialCards)),responses:logs.length,completedCards:new Set(logs.map(log=>log.cardId)).size,remembered,errors,retention:logs.length?Math.round(remembered/logs.length*100):null,beforeForecast:n(session.initialForecast?.total),afterForecast:n(afterForecast.total),futureDelta:n(afterForecast.total)-n(session.initialForecast?.total),forecastDays:afterForecast.days,breakdown};
   if(!Array.isArray(state.flashcardSystem.sessionReports)) state.flashcardSystem.sessionReports=[];
