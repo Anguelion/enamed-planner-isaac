@@ -92,6 +92,8 @@ let importedSimulados = [];
 let importedSimuladosStatus = 'Carregando simulados importados...';
 let questionBankLoadPromise = null;
 let questionBankExpansionPromise = null;
+let questionBankExpansionTimer = null;
+let questionBankFullLoadPromise = null;
 let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
 let materialGlobalSearchTimer = null;
@@ -2313,9 +2315,7 @@ async function loadQuestionBankNow(preferredBlock='') {
   // normalizar novamente milhares de registros iguais vindos do Supabase.
   if(localQuestions.length) {
     if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
-    if(!questionBankExpansionPromise) {
-      questionBankExpansionPromise = loadRemainingQuestionBank().finally(() => { questionBankExpansionPromise = null; });
-    }
+    scheduleQuestionBankExpansion();
     return;
   }
   if(!currentUser || !sbClient) {
@@ -2368,10 +2368,43 @@ async function loadQuestionBankNow(preferredBlock='') {
   reconcileQuestionProgressWithAnswers();
   if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
 }
+function scheduleQuestionBankExpansion() {
+  if(questionBankExpansionPromise || questionBankExpansionTimer || questionBankFullLoadPromise) return;
+  // Dá tempo para a primeira coleção ser pintada e ficar clicável antes de
+  // começar a incorporar os arquivos grandes restantes.
+  questionBankExpansionTimer = setTimeout(() => {
+    questionBankExpansionTimer = null;
+    questionBankExpansionPromise = loadRemainingQuestionBank().finally(() => { questionBankExpansionPromise = null; });
+  },2000);
+}
 async function loadRemainingQuestionBank() {
-  await loadLocalQuestionBank();
+  // Só os 30 blocos do cronograma entram automaticamente (~20 MB). Acervos
+  // especiais muito maiores ficam disponíveis sob demanda.
+  await loadLocalQuestionBank({coreOnly:true});
   reconcileQuestionProgressWithAnswers();
   if(['questoes','simulados','analise'].includes(ui.tab)) render();
+}
+function questionBankCatalogStatus() {
+  const entries=window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || [];
+  const loaded=entries.filter(entry => window.ENAMED_LOCAL_QUESTION_BANK?.[entry.block]);
+  return {
+    total:n(window.ENAMED_LOCAL_QUESTION_INDEX?.total),
+    loadedCollections:loaded.length,
+    totalCollections:entries.length,
+    complete:Boolean(entries.length && loaded.length===entries.length),
+    loading:Boolean(questionBankFullLoadPromise)
+  };
+}
+async function loadFullQuestionBank() {
+  if(questionBankFullLoadPromise) return questionBankFullLoadPromise;
+  if(questionBankExpansionTimer) { clearTimeout(questionBankExpansionTimer); questionBankExpansionTimer=null; }
+  questionBankFullLoadPromise=(async()=>{
+    if(questionBankExpansionPromise) await questionBankExpansionPromise;
+    await loadLocalQuestionBank();
+    reconcileQuestionProgressWithAnswers();
+  })().finally(()=>{ questionBankFullLoadPromise=null; if(ui.tab==='questoes') renderQuestionBank(); });
+  if(ui.tab==='questoes') renderQuestionBank();
+  return questionBankFullLoadPromise;
 }
 const questionBlockLoadPromises = new Map();
 function loadQuestionBlockScript(src) {
@@ -2423,13 +2456,14 @@ function ensureQuestionCommentLoaded(question) {
   });
   questionCommentLoadPromises.set(block, promise);
 }
-async function loadLocalQuestionBank({initialOnly=false,preferredBlock=''}={}) {
+async function loadLocalQuestionBank({initialOnly=false,preferredBlock='',coreOnly=false}={}) {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
   window.ENAMED_LOCAL_QUESTION_BANK = window.ENAMED_LOCAL_QUESTION_BANK || {};
   // Executar os 30 scripts no mesmo instante trava aparelhos mais modestos.
   // Pequenos lotes preservam a rolagem e os toques durante a carga inicial.
   let pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
+  if(coreOnly) pending=pending.filter(block => Number.isFinite(Number(block.block)));
   if(initialOnly) {
     const preferred = String(preferredBlock || (ui.qBlock !== 'Todos' ? ui.qBlock : currentScheduleBlock()));
     const first = pending.find(block => String(block.block) === preferred)
@@ -2437,8 +2471,11 @@ async function loadLocalQuestionBank({initialOnly=false,preferredBlock=''}={}) {
       || pending[0];
     pending = first ? [first] : [];
   }
-  for(let start=0; start<pending.length; start+=4) {
-    await Promise.all(pending.slice(start,start+4).map(block => loadQuestionBlockScript(`${block.script}?v=${encodeURIComponent(index.generatedAt || '')}`)));
+  // Um arquivo por vez limita cada bloqueio da thread principal e deixa cliques
+  // e rolagem entrarem entre coleções grandes.
+  const batchSize = 1;
+  for(let start=0; start<pending.length; start+=batchSize) {
+    await Promise.all(pending.slice(start,start+batchSize).map(block => loadQuestionBlockScript(`${block.script}?v=${encodeURIComponent(index.generatedAt || '')}`)));
     // requestAnimationFrame nunca dispara com a aba oculta/em segundo plano, o que travava o carregamento pela metade.
     await new Promise(resolve => (document.hidden ? setTimeout(resolve, 0) : requestAnimationFrame(() => resolve())));
   }
@@ -10547,6 +10584,10 @@ function renderQuestionBank() {
   const resumeDetail = resumePlan.item
     ? `${resumePlan.item.topic} · ${resumePlan.pending ? `${resumePlan.remaining} questões` : `${resumePlan.completed}/${resumePlan.target} feitas`}`
     : `${pendingCount.toLocaleString('pt-BR')} pendentes`;
+  const catalogStatus=questionBankCatalogStatus();
+  const catalogAction=catalogStatus.complete
+    ? '<button type="button" class="qbank-quick-filter" disabled><span class="quick-filter-dot all"></span><strong>Banco completo</strong><small>Todas as coleções disponíveis</small></button>'
+    : `<button type="button" class="qbank-quick-filter" id="loadFullQuestionBank" ${catalogStatus.loading?'disabled':''}><span class="quick-filter-dot all"></span><strong>${catalogStatus.loading?'Carregando extras…':'Ampliar banco'}</strong><small>${catalogStatus.loading?'A interface continua disponível':`${questionBank.length.toLocaleString('pt-BR')} de ${catalogStatus.total.toLocaleString('pt-BR')} questões carregadas`}</small></button>`;
   document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
     <header class="qbank-overview">
       <div class="qbank-overview-copy"><span class="qbank-eyebrow">Treino inteligente</span><h1>Central de questões</h1><p>Pratique com foco, acompanhe sua evolução e transforme erros em revisão.</p></div>
@@ -10559,6 +10600,7 @@ function renderQuestionBank() {
         <button type="button" class="qbank-quick-filter ${ui.qFocusScheduleId?'active':''}" id="continueQuestionTraining"><span class="quick-filter-dot pending"></span><strong>${escapeHtml(resumeTitle)}</strong><small title="${escapeAttr(resumeDetail)}">${escapeHtml(resumeDetail)}</small></button>
         <button type="button" class="qbank-quick-filter ${ui.qStatus==='Erradas'?'active':''}" data-question-quick-filter="Erradas"><span class="quick-filter-dot errors"></span><strong>Revisar erros</strong><small>${(summary.answered-summary.correct).toLocaleString('pt-BR')} para rever</small></button>
         <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas' && ui.qBlock==='Todos' && !ui.qFocusScheduleId && !ui.qSearch?'active':''}" id="exploreQuestionBank"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>Todos os blocos</small></button>
+        ${catalogAction}
       </div>
     </header>
     <aside class="card question-sidebar">
@@ -10589,6 +10631,7 @@ function renderQuestionBank() {
     <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : renderQuestionEmptyState(ui.qFocusScheduleId ? 'Você concluiu as questões desta aula.' : 'Nenhuma questão corresponde a este filtro.')}</div>
   </div>`;
   document.querySelectorAll('[data-question-browse]').forEach(button => button.onclick = e => { ui.qBrowseMode=e.currentTarget.dataset.questionBrowse; ui.qSpecialty='Todas'; ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
+  document.getElementById('loadFullQuestionBank')?.addEventListener('click',()=>loadFullQuestionBank());
   const questionBlock = document.getElementById('questionBlock');
   if(questionBlock) questionBlock.onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   const questionSpecialty = document.getElementById('questionSpecialty');
@@ -12532,6 +12575,14 @@ async function ensureViewData(tab) {
 }
 async function render() {
   sessionStorage.setItem(UI_TAB_KEY, ui.tab);
+  // Troca a aba no mesmo clique, antes de qualquer leitura assíncrona. Na
+  // primeira visita a Questões mostramos um estado curto de carregamento em vez
+  // de deixar a tela anterior parada, parecendo que o botão não funcionou.
+  renderTabs();
+  if(ui.tab === 'questoes' && !questionBank.length) {
+    const questionView=document.getElementById('questoes');
+    if(questionView) questionView.innerHTML='<section class="card empty"><strong>Carregando as primeiras questões…</strong><span>Você já pode permanecer nesta tela; o restante do banco será completado progressivamente.</span></section>';
+  }
   await ensureViewData(ui.tab);
   if(ui.tab!=='materiais'&&materialReadingCleanup) { materialReadingCleanup(); materialReadingCleanup=null; }
   renderMotivation();

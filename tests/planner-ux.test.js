@@ -282,6 +282,16 @@ test('Missão sinaliza e abre questões extras após a meta da aula',()=>{
   assert.match(css,/\.schedule-study-icon\.done\.has-extra\{border-color:#20a477;background:#e8f8f1;color:#14825d\}/);
 });
 
+test('Questões abre com uma coleção inicial e completa o banco progressivamente',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  assert.match(planner,/loadLocalQuestionBank\(\{initialOnly:true,preferredBlock\}\)/);
+  assert.match(planner,/function scheduleQuestionBankExpansion\(\)/);
+  assert.match(planner,/Carregando as primeiras questões/);
+  assert.match(planner,/await loadLocalQuestionBank\(\{initialOnly:true,preferredBlock:String\(item\.block\)\}\)/);
+  assert.doesNotMatch(planner,/requestIdleCallback\(\(\) => loadQuestionBank\(\)/);
+});
+
 test('cabeçalho desktop oferece histórico interno com voltar, avançar e atalhos',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
