@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-17T02:20:56.650Z",
+  "generatedAt": "2026-08-17T02:37:34.976Z",
   "remote": "cloudflare:enamed-videos",
-  "remoteObjects": 83,
+  "remoteObjects": 96,
   "localVideos": 370,
   "matchedExact": [
     {
@@ -41,10 +41,28 @@
       "size": 294114165
     },
     {
+      "remotePath": "video_library/media/Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01.1 - Medidas de Associação COFEXPRESS.mp4",
+      "localPath": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01.1 - Medidas de Associação COFEXPRESS.mp4",
+      "videoId": "b12|Saúde Coletiva|Medidas de Associação|Medidas de Associação COFEXPRESS",
+      "size": 41160691
+    },
+    {
       "remotePath": "video_library/media/Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02 - Diarreia Aguda.mp4",
       "localPath": "Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02 - Diarreia Aguda.mp4",
       "videoId": "b12|Medicina de Família e Comunidade|Diarreia Aguda|Diarreia Aguda",
       "size": 196899673
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02.1 - Diarreia Aguda COFEXPRESS.mp4",
+      "localPath": "Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02.1 - Diarreia Aguda COFEXPRESS.mp4",
+      "videoId": "b12|Medicina de Família e Comunidade|Diarreia Aguda|Diarreia Aguda COFEXPRESS",
+      "size": 41628012
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4",
+      "localPath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4",
+      "videoId": "b12|G.O|Endometriose|Endometriose COFEXPRESS",
+      "size": 40233839
     },
     {
       "remotePath": "video_library/media/Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4",
@@ -59,10 +77,22 @@
       "size": 184953139
     },
     {
+      "remotePath": "video_library/media/Bloco 12/03 - GO/03 - Sangramento Uterino Anormal/03.1 - Sangramento Uterino Anormal COFEXPRESS.mp4",
+      "localPath": "Bloco 12/03 - GO/03 - Sangramento Uterino Anormal/03.1 - Sangramento Uterino Anormal COFEXPRESS.mp4",
+      "videoId": "b12|GO|Sangramento Uterino Anormal|Sangramento Uterino Anormal COFEXPRESS",
+      "size": 37995804
+    },
+    {
       "remotePath": "video_library/media/Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05 - Perioperatório do cirurgião.mp4",
       "localPath": "Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05 - Perioperatório do cirurgião.mp4",
       "videoId": "b12|Cirurgia|Perioperatório do cirurgiao|Perioperatório do cirurgião",
       "size": 471539170
+    },
+    {
+      "remotePath": "video_library/media/Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05.1 - Perioperatório do cirurgião COFEXPRESS.mp4",
+      "localPath": "Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05.1 - Perioperatório do cirurgião COFEXPRESS.mp4",
+      "videoId": "b12|Cirurgia|Perioperatório do cirurgiao|Perioperatório do cirurgião COFEXPRESS",
+      "size": 194873485
     },
     {
       "remotePath": "video_library/media/Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06 - Taquiarritmias e ACLBLS.mp4",
@@ -71,16 +101,34 @@
       "size": 498116119
     },
     {
+      "remotePath": "video_library/media/Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06.1 - Taquiarritmias e ACLBLS COFEXPRESS.mp4",
+      "localPath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06.1 - Taquiarritmias e ACLBLS COFEXPRESS.mp4",
+      "videoId": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS COFEXPRESS",
+      "size": 79384142
+    },
+    {
       "remotePath": "video_library/media/Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07 - Bradiarritmias e síncope.mp4",
       "localPath": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07 - Bradiarritmias e síncope.mp4",
       "videoId": "b12|Clínica Médica|Bradiarritmias e Síncope|Bradiarritmias e síncope",
       "size": 447538915
     },
     {
+      "remotePath": "video_library/media/Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07.1 - Bradiarritmias e síncope COFEXPRESS.mp4",
+      "localPath": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07.1 - Bradiarritmias e síncope COFEXPRESS.mp4",
+      "videoId": "b12|Clínica Médica|Bradiarritmias e Síncope|Bradiarritmias e síncope COFEXPRESS",
+      "size": 69690789
+    },
+    {
       "remotePath": "video_library/media/Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01 - Redes de Atenção à Saúde e Níveis de Atenção.mp4",
       "localPath": "Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01 - Redes de Atenção à Saúde e Níveis de Atenção.mp4",
       "videoId": "b13|Saúde Coletiva|Redes de Atenção à Saúde e Níveis de Atenção|Redes de Atenção à Saúde e Níveis de Atenção",
       "size": 322556979
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01.1 - Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS.mp4",
+      "localPath": "Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01.1 - Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS.mp4",
+      "videoId": "b13|Saúde Coletiva|Redes de Atenção à Saúde e Níveis de Atenção|Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS",
+      "size": 90910806
     },
     {
       "remotePath": "video_library/media/Bloco 13/02 - GO/02 - Violência Sexual/02 - 1 aula - Violência Sexual.mp4",
@@ -95,10 +143,28 @@
       "size": 190975939
     },
     {
+      "remotePath": "video_library/media/Bloco 13/02 - GO/02 - Violência Sexual/02.1 - Interrupção Legal da Gestação COFEXPRESS.mp4",
+      "localPath": "Bloco 13/02 - GO/02 - Violência Sexual/02.1 - Interrupção Legal da Gestação COFEXPRESS.mp4",
+      "videoId": "b13|GO|Violência Sexual|Interrupção Legal da Gestação COFEXPRESS",
+      "size": 26987946
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/02 - GO/02 - Violência Sexual/02.1 - Violência Sexual COFEXPRESS.mp4",
+      "localPath": "Bloco 13/02 - GO/02 - Violência Sexual/02.1 - Violência Sexual COFEXPRESS.mp4",
+      "videoId": "b13|GO|Violência Sexual|Violência Sexual COFEXPRESS",
+      "size": 24810180
+    },
+    {
       "remotePath": "video_library/media/Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03 - Febre Sem Sinais Localizatórios.mp4",
       "localPath": "Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03 - Febre Sem Sinais Localizatórios.mp4",
       "videoId": "b13|Pediatria|Febre Sem Sinais Localizatórios|Febre Sem Sinais Localizatórios",
       "size": 192820616
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03.1 - Febre Sem Sinais Localizatórios COFEXPRESS.mp4",
+      "localPath": "Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03.1 - Febre Sem Sinais Localizatórios COFEXPRESS.mp4",
+      "videoId": "b13|Pediatria|Febre Sem Sinais Localizatórios|Febre Sem Sinais Localizatórios COFEXPRESS",
+      "size": 50996767
     },
     {
       "remotePath": "video_library/media/Bloco 13/04 - Cirurgia/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais.mp4",
@@ -107,16 +173,34 @@
       "size": 322870680
     },
     {
+      "remotePath": "video_library/media/Bloco 13/04 - Cirurgia/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais/04.1 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS.mp4",
+      "localPath": "Bloco 13/04 - Cirurgia/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais/04.1 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS.mp4",
+      "videoId": "b13|Cirurgia|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS",
+      "size": 65691388
+    },
+    {
       "remotePath": "video_library/media/Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05 - Pneumonia PAC e hospitalar.mp4",
       "localPath": "Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05 - Pneumonia PAC e hospitalar.mp4",
       "videoId": "b13|Clínica Médica|Pneumonia PAC e hospitalar|Pneumonia PAC e hospitalar",
       "size": 294537251
     },
     {
+      "remotePath": "video_library/media/Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05.1 - Pneumonia PAC e hospitalar COFEXPRESS.mp4",
+      "localPath": "Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05.1 - Pneumonia PAC e hospitalar COFEXPRESS.mp4",
+      "videoId": "b13|Clínica Médica|Pneumonia PAC e hospitalar|Pneumonia PAC e hospitalar COFEXPRESS",
+      "size": 53803196
+    },
+    {
       "remotePath": "video_library/media/Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06 - Derrame Pleural.mp4",
       "localPath": "Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06 - Derrame Pleural.mp4",
       "videoId": "b13|Clínica Médica|Derrame pleural|Derrame Pleural",
       "size": 286899520
+    },
+    {
+      "remotePath": "video_library/media/Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06.1 - Derrame Pleural COFEXPRESS.mp4",
+      "localPath": "Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06.1 - Derrame Pleural COFEXPRESS.mp4",
+      "videoId": "b13|Clínica Médica|Derrame pleural|Derrame Pleural COFEXPRESS",
+      "size": 53695715
     }
   ],
   "matchedBySize": [
@@ -323,12 +407,6 @@
       "localPath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07.1 - Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4",
       "videoId": "b07|Clínica Médica|Gasometria Arterial e distúrbios ácido-base|Gasometria Arterial e distúrbios ácido-base COFEXPRESS",
       "size": 61555601
-    },
-    {
-      "remotePath": "video_library/media/Bloco 07/06 - Clínica Médica/01 - Gasometria Arterial e distúrbios ácido-base/Gasometria Arterial e distúrbios ácido-base.mp4",
-      "localPath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07 - Gasometria Arterial e distúrbios ácido-base.mp4",
-      "videoId": "b07|Clínica Médica|Gasometria Arterial e distúrbios ácido-base|Gasometria Arterial e distúrbios ácido-base",
-      "size": 556694823
     },
     {
       "remotePath": "video_library/media/Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Disturbios do Sódio e Potássio COFEXPRESS.mp4",
@@ -854,6 +932,11 @@
       "size": 161134648
     },
     {
+      "path": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07 - Gasometria Arterial e distúrbios ácido-base.mp4",
+      "videoId": "b07|Clínica Médica|Gasometria Arterial e distúrbios ácido-base|Gasometria Arterial e distúrbios ácido-base",
+      "size": 556694823
+    },
+    {
       "path": "Bloco 08/01 - Medicina de Família e Comunidade/01 - Síndrome dispeptica dispepsia, fisiologia gastrica, DRGE/01 - 1 aula - Dispepsia.mp4",
       "videoId": "b08|Medicina de Família e Comunidade|Síndrome dispeptica dispepsia, fisiologia gastrica, DRGE|Dispepsia",
       "size": 205662773
@@ -1037,76 +1120,6 @@
       "path": "Bloco 11/05 - CofBasics/07 - CofBasics - Associação e Causalidade/CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO.mp4",
       "videoId": "b11|CofBasics|CofBasics - Associação e Causalidade|CofBasics - Associação e Causalidade (Saúde Coletiva) - EDITADO",
       "size": 106209294
-    },
-    {
-      "path": "Bloco 12/01 - Saúde Coletiva/01 - Medidas de Associação/01.1 - Medidas de Associação COFEXPRESS.mp4",
-      "videoId": "b12|Saúde Coletiva|Medidas de Associação|Medidas de Associação COFEXPRESS",
-      "size": 41160691
-    },
-    {
-      "path": "Bloco 12/02 - Medicina de Família e Comunidade/02 - Diarreia Aguda/02.1 - Diarreia Aguda COFEXPRESS.mp4",
-      "videoId": "b12|Medicina de Família e Comunidade|Diarreia Aguda|Diarreia Aguda COFEXPRESS",
-      "size": 41628012
-    },
-    {
-      "path": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4",
-      "videoId": "b12|G.O|Endometriose|Endometriose COFEXPRESS",
-      "size": 40233839
-    },
-    {
-      "path": "Bloco 12/03 - GO/03 - Sangramento Uterino Anormal/03.1 - Sangramento Uterino Anormal COFEXPRESS.mp4",
-      "videoId": "b12|GO|Sangramento Uterino Anormal|Sangramento Uterino Anormal COFEXPRESS",
-      "size": 37995804
-    },
-    {
-      "path": "Bloco 12/04 - Cirurgia/05 - Perioperatório do cirurgiao/05.1 - Perioperatório do cirurgião COFEXPRESS.mp4",
-      "videoId": "b12|Cirurgia|Perioperatório do cirurgiao|Perioperatório do cirurgião COFEXPRESS",
-      "size": 194873485
-    },
-    {
-      "path": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06.1 - Taquiarritmias e ACLBLS COFEXPRESS.mp4",
-      "videoId": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS COFEXPRESS",
-      "size": 79384142
-    },
-    {
-      "path": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07.1 - Bradiarritmias e síncope COFEXPRESS.mp4",
-      "videoId": "b12|Clínica Médica|Bradiarritmias e Síncope|Bradiarritmias e síncope COFEXPRESS",
-      "size": 69690789
-    },
-    {
-      "path": "Bloco 13/01 - Saúde Coletiva/01 - Redes de Atenção à Saúde e Níveis de Atenção/01.1 - Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS.mp4",
-      "videoId": "b13|Saúde Coletiva|Redes de Atenção à Saúde e Níveis de Atenção|Redes de Atenção à Saúde e Níveis de Atenção COFEXPRESS",
-      "size": 90910806
-    },
-    {
-      "path": "Bloco 13/02 - GO/02 - Violência Sexual/02.1 - Interrupção Legal da Gestação COFEXPRESS.mp4",
-      "videoId": "b13|GO|Violência Sexual|Interrupção Legal da Gestação COFEXPRESS",
-      "size": 26987946
-    },
-    {
-      "path": "Bloco 13/02 - GO/02 - Violência Sexual/02.1 - Violência Sexual COFEXPRESS.mp4",
-      "videoId": "b13|GO|Violência Sexual|Violência Sexual COFEXPRESS",
-      "size": 24810180
-    },
-    {
-      "path": "Bloco 13/03 - Pediatria/03 - Febre Sem Sinais Localizatórios/03.1 - Febre Sem Sinais Localizatórios COFEXPRESS.mp4",
-      "videoId": "b13|Pediatria|Febre Sem Sinais Localizatórios|Febre Sem Sinais Localizatórios COFEXPRESS",
-      "size": 50996767
-    },
-    {
-      "path": "Bloco 13/04 - Cirurgia/04 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais/04.1 - Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS.mp4",
-      "videoId": "b13|Cirurgia|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais|Técnica operatória - Aspectos gerais, fios de sutura e anestésicos locais COFEXPRESS",
-      "size": 65691388
-    },
-    {
-      "path": "Bloco 13/05 - Clínica Médica/05 - Pneumonia PAC e hospitalar/05.1 - Pneumonia PAC e hospitalar COFEXPRESS.mp4",
-      "videoId": "b13|Clínica Médica|Pneumonia PAC e hospitalar|Pneumonia PAC e hospitalar COFEXPRESS",
-      "size": 53803196
-    },
-    {
-      "path": "Bloco 13/05 - Clínica Médica/06 - Derrame pleural/06.1 - Derrame Pleural COFEXPRESS.mp4",
-      "videoId": "b13|Clínica Médica|Derrame pleural|Derrame Pleural COFEXPRESS",
-      "size": 53695715
     },
     {
       "path": "Bloco 14/01 - Saúde Coletiva/01 - Atenção Primária à Saúde/01 - Atenção Primária à Saúde.mp4",
