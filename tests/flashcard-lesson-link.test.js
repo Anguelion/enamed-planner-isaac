@@ -618,3 +618,51 @@ test('recomendação retorna vazio quando nenhum baralho tem cards disponíveis'
   ctx.saveFlashcardSmartDeck('Sem fila',{mode:'all',area:'Inexistente',limit:10});
   assert.equal(ctx.flashcardRecommendedSmartDeck(ctx.flashcardAllRecords()),null);
 });
+
+test('ritmo pessoal usa tempo e revisões registradas no mesmo período', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const today=ctx.studyDateKey();
+  state.flashcardSystem.reviewLogs=Array.from({length:10},(_,index)=>({id:`pace-${index}`,cardId:`pace-card-${index}`,rating:3,reviewedAt:new Date().toISOString()}));
+  state.dayLogs=[{date:today,flashcardMinutes:5,flashcards:10}];
+  assert.equal(ctx.flashcardEstimatedSecondsPerReview(30),30);
+});
+
+test('prescrição respeita o tempo, mistura baralhos e não repete cartões', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const cards=[...Array.from({length:12},(_,index)=>ctx.normalizeFlashcardRecord({id:`rx-a-${index}`,front:`A${index}`,back:'V',area:'A'})),...Array.from({length:12},(_,index)=>ctx.normalizeFlashcardRecord({id:`rx-b-${index}`,front:`B${index}`,back:'V',area:'B'}))];
+  state.flashcardLibrary.push(...cards);
+  ctx.saveFlashcardSmartDeck('Baralho A',{mode:'all',area:'A',limit:50});
+  ctx.saveFlashcardSmartDeck('Baralho B',{mode:'all',area:'B',limit:50});
+  const prescription=plain(ctx.flashcardAdaptivePrescription(ctx.flashcardAllRecords(),5));
+  assert.equal(prescription.minutes,5);
+  assert.equal(prescription.secondsPerCard,40);
+  assert.equal(prescription.cards.length,7);
+  assert.equal(new Set(prescription.cards.map(card=>card.id)).size,prescription.cards.length);
+  assert.equal(prescription.allocations.length,2);
+  assert.equal(prescription.allocations.reduce((total,item)=>total+item.count,0),prescription.cards.length);
+});
+
+test('mais tempo amplia a prescrição sem ultrapassar os cards disponíveis', () => {
+  const ctx = loadPlannerSandbox();
+  const state=stateOf(ctx);
+  state.flashcardLibrary.push(...Array.from({length:20},(_,index)=>ctx.normalizeFlashcardRecord({id:`rx-time-${index}`,front:`T${index}`,back:'V',area:'Tempo'})));
+  ctx.saveFlashcardSmartDeck('Tempo',{mode:'all',area:'Tempo',limit:50});
+  const short=ctx.flashcardAdaptivePrescription(ctx.flashcardAllRecords(),5);
+  const long=ctx.flashcardAdaptivePrescription(ctx.flashcardAllRecords(),20);
+  assert.ok(long.cards.length>short.cards.length);
+  assert.equal(long.cards.length,20);
+  assert.equal(long.availableCount,20);
+});
+
+test('sessão adaptativa preserva o baralho de origem de cada cartão', () => {
+  const ctx = loadPlannerSandbox();
+  const ui=uiOf(ctx);
+  const cards=[ctx.normalizeFlashcardRecord({id:'rx-origin-a',front:'A',back:'V'}),ctx.normalizeFlashcardRecord({id:'rx-origin-b',front:'B',back:'V'})];
+  const prescription={cards,deckByCard:{'rx-origin-a':'deck-a','rx-origin-b':'deck-b'}};
+  assert.equal(ctx.startFlashcardAdaptivePrescription(prescription),2);
+  assert.equal(ui.flashcardPrescriptionDeckByCard['rx-origin-a'],'deck-a');
+  assert.equal(ui.flashcardPrescriptionDeckByCard['rx-origin-b'],'deck-b');
+  assert.equal(ui.flashcardCustomDeckId,'');
+});

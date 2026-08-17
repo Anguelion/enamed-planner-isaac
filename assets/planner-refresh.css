@@ -307,6 +307,27 @@ tr:hover td { background: color-mix(in srgb, var(--soft-blue) 58%, transparent);
 .continue-study-card > .icon-btn:hover { background: #eef3ff; color: #1b3778; }
 
 #painel .dashboard-smart-decks { grid-column: 1 / -1; display: grid; gap: 13px; }
+.fc-prescription { display: grid; gap: 14px; padding: 18px; border: 1px solid color-mix(in srgb,var(--blue) 28%,var(--line)); border-radius: 16px; background: linear-gradient(135deg,color-mix(in srgb,var(--soft-blue) 72%,var(--panel)),var(--panel)); }
+.fc-prescription-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+.fc-prescription-head h3 { margin: 3px 0 4px; color: var(--ink); font-size: 20px; }
+.fc-prescription-head p { margin: 0; color: var(--muted); font-size: 11px; }
+.fc-prescription-time { display: flex; align-items: end; gap: 8px; flex-wrap: wrap; }
+.fc-prescription-time > div { display: flex; gap: 5px; flex-wrap: wrap; }
+.fc-prescription-time .tiny-btn.active { border-color: var(--blue); background: var(--blue); color: #fff; }
+.fc-prescription-time label { display: grid; grid-template-columns: auto 62px auto; align-items: center; gap: 5px; color: var(--muted); font-size: 9px; font-weight: 800; }
+.fc-prescription-time .input { min-height: 31px; padding: 5px 7px; text-align: center; }
+.fc-prescription-summary { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 7px; }
+.fc-prescription-summary > div { display: grid; gap: 3px; padding: 10px; border-radius: 10px; background: var(--panel); text-align: center; }
+.fc-prescription-summary strong { color: var(--ink); font-size: 18px; }
+.fc-prescription-summary span { color: var(--muted); font-size: 8px; font-weight: 800; text-transform: uppercase; }
+.fc-prescription-allocation { display: grid; gap: 6px; }
+.fc-prescription-allocation > span { position: relative; display: grid; grid-template-columns: minmax(0,1fr) minmax(90px,1fr) 30px; align-items: center; gap: 9px; min-height: 26px; color: var(--muted); font-size: 9px; }
+.fc-prescription-allocation b { overflow: hidden; color: var(--ink); text-overflow: ellipsis; white-space: nowrap; }
+.fc-prescription-allocation i { height: 6px; max-width: 100%; border-radius: 99px; background: linear-gradient(90deg,var(--blue),var(--teal)); }
+.fc-prescription-allocation strong { color: var(--ink); text-align: right; }
+.fc-prescription-empty { padding: 10px; border: 1px dashed var(--line); border-radius: 9px; color: var(--muted); font-size: 10px; text-align: center; }
+.fc-prescription > .icon-btn { width: 100%; justify-content: center; }
+#flashcards .fc-prescription-overview { box-shadow: var(--shadow-soft); }
 .dashboard-smart-recommendation { position: relative; display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 15px; overflow: hidden; padding: 18px; border: 1px solid color-mix(in srgb,var(--blue) 30%,var(--line)); border-radius: 15px; background: linear-gradient(125deg,color-mix(in srgb,var(--soft-blue) 75%,var(--panel)),var(--panel)); }
 .dashboard-smart-recommendation::after { content: ""; position: absolute; right: -35px; top: -45px; width: 130px; height: 130px; border-radius: 50%; background: color-mix(in srgb,var(--blue) 9%,transparent); pointer-events: none; }
 .dashboard-smart-recommendation.urgency-high { border-color: color-mix(in srgb,var(--red) 38%,var(--line)); background: linear-gradient(125deg,color-mix(in srgb,var(--soft-red) 65%,var(--panel)),var(--panel)); }
@@ -1058,6 +1079,8 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 }
 
 @media (max-width: 900px) {
+  .fc-prescription-head { align-items: stretch; flex-direction: column; }
+  .fc-prescription-time { justify-content: space-between; }
   .dashboard-smart-grid { grid-template-columns: 1fr; }
   .dashboard-smart-recommendation { grid-template-columns: auto minmax(0,1fr); }
   .dashboard-smart-recommendation > .icon-btn { grid-column: 1 / -1; width: 100%; justify-content: center; }
@@ -1071,6 +1094,12 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 }
 
 @media (max-width: 700px) {
+  .fc-prescription { padding: 14px; }
+  .fc-prescription-time { align-items: stretch; flex-direction: column; }
+  .fc-prescription-time > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .fc-prescription-time .tiny-btn { width: 100%; }
+  .fc-prescription-summary { grid-template-columns: 1fr 1fr; }
+  .fc-prescription-allocation > span { grid-template-columns: minmax(0,1fr) 60px 24px; }
   .dashboard-smart-recommendation { grid-template-columns: 1fr; align-items: stretch; }
   .dashboard-smart-recommendation-icon { display: none; }
   .dashboard-smart-recommendation-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 5px; }
