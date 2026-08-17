@@ -343,3 +343,135 @@ test('suspensão automática de card problemático respeita a preferência do us
   state.flashcardSystem.profile.autoSuspendLeeches=false;
   assert.equal(ctx.flashcardShouldAutoSuspend(20),false);
 });
+
+test('histórico individual reúne somente as respostas do card e ordena da mais recente', () => {
+  const ctx = loadPlannerSandbox();
+  stateOf(ctx).flashcardSystem.reviewLogs=[
+    {id:'h1',cardId:'card-a',rating:3,reviewedAt:'2026-08-10T10:00:00.000Z',scheduledDays:2},
+    {id:'h2',cardId:'card-b',rating:1,reviewedAt:'2026-08-11T10:00:00.000Z'},
+    {id:'h3',cardId:'card-a',quality:4,reviewedAt:'2026-08-12T10:00:00.000Z',after:{interval:8,difficulty:4,stability:9}}
+  ];
+  const history=plain(ctx.flashcardCardHistory('card-a'));
+  assert.deepEqual(history.map(log=>log.id),['h3','h1']);
+  assert.equal(history[0].rating,4,'logs antigos com quality continuam legíveis');
+  assert.equal(history[0].scheduledDays,8);
+  assert.equal(history[0].difficultyAfter,4);
+});
+
+test('análise individual calcula retenção, lapsos e sinaliza card difícil', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'analysis-hard',front:'F',back:'V'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:5,lapses:3,difficulty:8,nextReview:'2026-08-20'};
+  state.flashcardSystem.reviewLogs=[1,1,1,2,3].map((rating,index)=>({id:`hard-${index}`,cardId:card.id,rating,reviewedAt:`2026-08-${String(10+index).padStart(2,'0')}T10:00:00.000Z`}));
+  const analysis=plain(ctx.flashcardCardHistoryAnalysis(card));
+  assert.equal(analysis.total,5);
+  assert.equal(analysis.retention,40);
+  assert.equal(analysis.again,3);
+  assert.equal(analysis.label,'Requer atenção');
+  assert.equal(analysis.tone,'high');
+});
+
+test('análise reconhece melhora da retenção recente', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'analysis-better',front:'F',back:'V'});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:8,lapses:2,difficulty:5,nextReview:'2026-08-20'};
+  const ratings=[1,1,2,1,3,3,4,3];
+  state.flashcardSystem.reviewLogs=ratings.map((rating,index)=>({id:`better-${index}`,cardId:card.id,rating,reviewedAt:`2026-08-${String(1+index).padStart(2,'0')}T10:00:00.000Z`}));
+  const analysis=plain(ctx.flashcardCardHistoryAnalysis(card));
+  assert.equal(analysis.recentRetention,100);
+  assert.equal(analysis.earlierRetention,25);
+  assert.equal(analysis.label,'Em recuperação');
+});
+
+test('linha do tempo diferencia dias, minutos e reaprendizagem legada', () => {
+  const ctx = loadPlannerSandbox();
+  assert.equal(ctx.flashcardHistoryIntervalLabel({scheduledDays:12}),'12 d');
+  assert.equal(ctx.flashcardHistoryIntervalLabel({scheduledDays:0,scheduledMinutes:7}),'7 min');
+  assert.equal(ctx.flashcardHistoryIntervalLabel({scheduledDays:0}),'reaprender');
+});
+
+test('previsão diária acumula atrasados em hoje e distribui revisões futuras pela data', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const today=ctx.studyDateKey();
+  const tomorrowDate=new Date(`${today}T12:00:00`); tomorrowDate.setDate(tomorrowDate.getDate()+1);
+  const tomorrow=ctx.localISODate(tomorrowDate);
+  const cards=[
+    ctx.normalizeFlashcardRecord({id:'due-late',front:'A',back:'1'}),
+    ctx.normalizeFlashcardRecord({id:'due-tomorrow',front:'B',back:'2'}),
+    ctx.normalizeFlashcardRecord({id:'due-new',front:'C',back:'3'}),
+    ctx.normalizeFlashcardRecord({id:'due-suspended',front:'D',back:'4',isSuspended:true})
+  ];
+  state.flashcardLibrary.push(...cards);
+  state.flashcardProgress['due-late']={reviews:3,nextReview:'2020-01-01'};
+  state.flashcardProgress['due-tomorrow']={reviews:2,nextReview:tomorrow};
+  state.flashcardProgress['due-suspended']={reviews:4,nextReview:tomorrow,status:'Suspenso'};
+  const series=ctx.flashcardDueDailySeries(ctx.flashcardAllRecords(),7);
+  assert.equal(series.get(today),1,'o atraso entra na carga de hoje');
+  assert.equal(series.get(tomorrow),1,'somente a revisão ativa aparece amanhã');
+});
+
+test('mapa combina cartões feitos no passado com revisões previstas no futuro', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  const today=ctx.studyDateKey();
+  const yesterdayDate=new Date(`${today}T12:00:00`); yesterdayDate.setDate(yesterdayDate.getDate()-1);
+  const tomorrowDate=new Date(`${today}T12:00:00`); tomorrowDate.setDate(tomorrowDate.getDate()+1);
+  const yesterday=ctx.localISODate(yesterdayDate); const tomorrow=ctx.localISODate(tomorrowDate);
+  state.flashcardSystem.reviewLogs=[
+    {id:'heat-1',cardId:'old',rating:3,reviewedAt:`${yesterday}T10:00:00.000Z`},
+    {id:'heat-2',cardId:'old',rating:1,reviewedAt:`${yesterday}T11:00:00.000Z`}
+  ];
+  const future=ctx.normalizeFlashcardRecord({id:'heat-future',front:'F',back:'V'});
+  state.flashcardLibrary.push(future);
+  state.flashcardProgress[future.id]={reviews:2,nextReview:tomorrow};
+  const calendar=ctx.flashcardReviewCalendar(ctx.flashcardReviewDailySeries(),ctx.flashcardAllRecords(),7);
+  const pastRow=calendar.find(row=>row.date===yesterday);
+  const futureRow=calendar.find(row=>row.date===tomorrow);
+  assert.equal(pastRow.kind,'past'); assert.equal(pastRow.completed,2);
+  assert.equal(futureRow.kind,'future'); assert.equal(futureRow.due,1);
+});
+
+test('estudo personalizado filtra dificuldade, área, assunto e tags em conjunto', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  state.flashcardLibrary.push(
+    ctx.normalizeFlashcardRecord({id:'custom-a',front:'A',back:'1',area:'Clínica',subarea:'Cardio',tags:['urgente','prova']}),
+    ctx.normalizeFlashcardRecord({id:'custom-b',front:'B',back:'2',area:'Clínica',subarea:'Pneumo',tags:['urgente']}),
+    ctx.normalizeFlashcardRecord({id:'custom-c',front:'C',back:'3',area:'Pediatria',subarea:'Cardio',tags:['urgente','prova']})
+  );
+  state.flashcardProgress['custom-a']={reviews:4,difficulty:8,lapses:3,nextReview:'2099-01-01'};
+  state.flashcardProgress['custom-b']={reviews:4,difficulty:8,lapses:3,nextReview:'2099-01-01'};
+  state.flashcardProgress['custom-c']={reviews:4,difficulty:8,lapses:3,nextReview:'2099-01-01'};
+  const filters={mode:'difficult',area:'Clínica',subject:'Cardio',tag:'urgente prova',recentDays:30,limit:50};
+  assert.deepEqual(plain(ctx.flashcardCustomStudyCandidates(ctx.flashcardAllRecords(),filters).map(card=>card.id)),['custom-a']);
+});
+
+test('estudo personalizado encontra erros recentes e respeita o limite', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx);
+  state.flashcardLibrary.push(...['one','two','old'].map(id=>ctx.normalizeFlashcardRecord({id:`recent-${id}`,front:id,back:'V'})));
+  ['one','two','old'].forEach(id=>{state.flashcardProgress[`recent-${id}`]={reviews:2,nextReview:'2099-01-01'};});
+  state.flashcardSystem.reviewLogs=[
+    {id:'again-1',cardId:'recent-one',rating:1,reviewedAt:new Date().toISOString()},
+    {id:'again-2',cardId:'recent-two',rating:1,reviewedAt:new Date(Date.now()-86400000).toISOString()},
+    {id:'again-old',cardId:'recent-old',rating:1,reviewedAt:new Date(Date.now()-60*86400000).toISOString()}
+  ];
+  const result=ctx.flashcardCustomStudyCandidates(ctx.flashcardAllRecords(),{mode:'recentErrors',recentDays:30,limit:1,area:'Todas',subject:'Todos',tag:''});
+  assert.deepEqual(plain(result.map(card=>card.id)),['recent-one']);
+});
+
+test('fila personalizada é temporária e remove apenas os cards concluídos na sessão', () => {
+  const ctx = loadPlannerSandbox();
+  const state = stateOf(ctx); const ui = uiOf(ctx);
+  state.flashcardLibrary.push(...['a','b','c'].map(id=>ctx.normalizeFlashcardRecord({id:`session-${id}`,front:id,back:'V'})));
+  ui.flashcardCustomActive=true;
+  ui.flashcardCustomSessionIds=['session-c','session-a'];
+  ui.flashcardCustomCompleted=['session-c'];
+  assert.deepEqual(plain(ctx.flashcardStudyQueue(ctx.flashcardAllRecords()).map(card=>card.id)),['session-a']);
+  assert.equal(state.flashcardProgress['session-c'],undefined,'concluir a fila não altera o agendamento por si só');
+});

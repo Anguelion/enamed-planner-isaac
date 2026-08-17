@@ -155,6 +155,10 @@ ui.flashcardBrowserArea ||= 'Todas';
 ui.flashcardBrowserSort ||= 'due';
 ui.flashcardBrowserCardId ||= '';
 ui.flashcardBrowserSelected = Array.isArray(ui.flashcardBrowserSelected) ? ui.flashcardBrowserSelected : [];
+ui.flashcardCustomFilters = ui.flashcardCustomFilters && typeof ui.flashcardCustomFilters === 'object' ? ui.flashcardCustomFilters : {mode:'overdue',area:'Todas',subject:'Todos',tag:'',recentDays:30,limit:50};
+ui.flashcardCustomSessionIds = Array.isArray(ui.flashcardCustomSessionIds) ? ui.flashcardCustomSessionIds : [];
+ui.flashcardCustomCompleted = Array.isArray(ui.flashcardCustomCompleted) ? ui.flashcardCustomCompleted : [];
+ui.flashcardCustomActive = Boolean(ui.flashcardCustomActive && ui.flashcardCustomSessionIds.length);
 const restoredQuestionTimer = loadQuestionTimerSession();
 if(restoredQuestionTimer?.ui) Object.assign(ui, restoredQuestionTimer.ui, {questionTimerOpen:true});
 let questionTimer = restoredQuestionTimer?.timer || { mode: 'countdown', sessionActive: false, pausedByUser: false, running: false, interval: null, questionId: '', secondsLeft: 0, elapsedSeconds: 0, beeped: false, status: '', audioContext: null };
@@ -9011,19 +9015,13 @@ function flashcardNewToday() {
   return Object.values(state.flashcardProgress || {}).filter(progress => progress.firstReviewedAt && studyDateKey(progress.firstReviewedAt) === today).length;
 }
 function flashcardDueForecast(days=7) {
-  const cards = flashcardActiveRecords();
+  const dueSeries=flashcardDueDailySeries(flashcardAllRecords(),Math.max(0,n(days)-1));
   const start = new Date(`${localISODate(new Date())}T12:00:00`);
   return Array.from({length:days}, (_, index) => {
     const date = new Date(start);
     date.setDate(date.getDate() + index);
     const iso = localISODate(date);
-    // Hoje absorve o que já está atrasado (como no Anki); os demais dias
-    // contam só quem vence exatamente naquela data, senão o total nunca
-    // caía e todo dia futuro mostrava o mesmo número acumulado.
-    const count = index === 0
-      ? cards.filter(card => flashcardProgress(card).nextReview <= iso).length
-      : cards.filter(card => flashcardProgress(card).nextReview === iso).length;
-    return { date: iso, count };
+    return {date:iso,count:n(dueSeries.get(iso))};
   });
 }
 // Um lote importado grande virava 200 cards "pendentes" de uma vez. Agora todo
@@ -9063,6 +9061,11 @@ function releaseFlashcards(ids) {
   return released;
 }
 function flashcardStudyQueue(all=manualFlashcards()) {
+  if(ui.flashcardCustomActive && ui.flashcardCustomSessionIds.length) {
+    const completed=new Set(ui.flashcardCustomCompleted);
+    const byId=new Map(all.map(card=>[card.id,card]));
+    return ui.flashcardCustomSessionIds.map(id=>byId.get(id)).filter(card=>card && !completed.has(card.id) && !flashcardIsSuspended(card) && !flashcardIsWaiting(card));
+  }
   const today = localISODate(new Date());
   const newRemaining = Math.max(0, n(state.flashcardSettings.newLimit) - flashcardNewToday());
   const reviewRemaining = Math.max(0, n(state.flashcardSettings.reviewLimit) - flashcardDueReviewsToday());
@@ -9172,6 +9175,22 @@ function flashcardReviewDailySeries() {
   });
   return byDate;
 }
+function flashcardDueDailySeries(cards=flashcardAllRecords(), days=84) {
+  const today=studyDateKey();
+  const endDate=new Date(`${today}T12:00:00`);
+  endDate.setDate(endDate.getDate()+Math.max(0,n(days)));
+  const end=localISODate(endDate);
+  const byDate=new Map();
+  flashcardActiveRecords(cards).forEach(card=>{
+    const progress=flashcardProgress(card);
+    if(!progress.reviews) return;
+    let date=progress.nextReview || studyDateKey(progress.dueAt);
+    if(!date || date>end) return;
+    if(date<today) date=today;
+    byDate.set(date,n(byDate.get(date))+1);
+  });
+  return byDate;
+}
 function flashcardHeatLevel(count) {
   if(count <= 0) return 0;
   if(count <= 20) return 1;
@@ -9189,25 +9208,40 @@ function flashcardCurrentStreak(series) {
   }
   return streak;
 }
-function renderFlashcardHeatmap(series) {
+function flashcardReviewCalendar(series=flashcardReviewDailySeries(), cards=flashcardAllRecords(), futureDays=84) {
   const today = new Date(`${studyDateKey()}T12:00:00`);
+  const start = new Date(today);
+  start.setDate(start.getDate()-364);
+  start.setDate(start.getDate()-start.getDay());
   const end = new Date(today);
+  end.setDate(end.getDate()+Math.max(0,n(futureDays)));
   end.setDate(end.getDate() + (6-end.getDay()));
-  const start = new Date(end);
-  start.setDate(start.getDate()-370);
-  const cells = [];
-  for(let index=0; index<371; index++) {
+  const dueSeries=flashcardDueDailySeries(cards,futureDays+7);
+  const cells=[];
+  const totalDays=Math.round((end-start)/86400000)+1;
+  for(let index=0;index<totalDays;index++) {
     const date = new Date(start);
     date.setDate(date.getDate()+index);
     const iso = localISODate(date);
     const row = series.get(iso) || {count:0,again:0,remembered:0,minutes:0};
+    const due=n(dueSeries.get(iso));
     const totalRated = row.again + row.remembered;
     const retention = totalRated ? Math.round(row.remembered/totalRated*100) : null;
-    const future = date > today;
-    const title = future ? fmtDate(iso) : `${fmtDate(iso)} · ${row.count} revisões${retention===null?'':` · ${retention}% lembradas`}${row.minutes?` · ${Math.round(row.minutes)} min`:''}`;
-    cells.push(`<button type="button" class="fc-heat-cell level-${future?0:flashcardHeatLevel(row.count)} ${future?'future':''}" title="${escapeAttr(title)}" aria-label="${escapeAttr(title)}" data-fc-heat-date="${iso}" ${future?'disabled':''}></button>`);
+    const kind=date>today?'future':date<today?'past':'today';
+    cells.push({date:iso,kind,completed:n(row.count),due,again:n(row.again),remembered:n(row.remembered),minutes:n(row.minutes),retention});
   }
-  return `<div class="fc-heatmap-shell"><div class="fc-heat-weekdays" aria-hidden="true"><span>Dom</span><span></span><span>Ter</span><span></span><span>Qui</span><span></span><span>Sáb</span></div><div class="fc-heatmap-grid">${cells.join('')}</div></div><div class="fc-heat-legend"><span>Menos</span>${[0,1,2,3,4].map(level=>`<i class="fc-heat-cell level-${level}"></i>`).join('')}<span>Mais</span></div>`;
+  return cells;
+}
+function renderFlashcardHeatmap(series, cards=flashcardAllRecords()) {
+  const cells=flashcardReviewCalendar(series,cards);
+  const html=cells.map(cell=>{
+    const amount=cell.kind==='future'?cell.due:cell.completed;
+    const title=cell.kind==='future'
+      ? `${fmtDate(cell.date)} · ${cell.due} ${cell.due===1?'card previsto':'cards previstos'} para revisar`
+      : `${fmtDate(cell.date)} · ${cell.completed} ${cell.completed===1?'card revisado':'cards revisados'}${cell.retention===null?'':` · ${cell.retention}% lembrados`}${cell.minutes?` · ${Math.round(cell.minutes)} min`:''}${cell.kind==='today'?` · ${cell.due} ainda para revisar`:''}`;
+    return `<button type="button" class="fc-heat-cell ${cell.kind} level-${flashcardHeatLevel(amount)}" title="${escapeAttr(title)}" aria-label="${escapeAttr(title)}" data-fc-heat-date="${cell.date}"></button>`;
+  }).join('');
+  return `<div class="fc-heatmap-shell"><div class="fc-heat-weekdays" aria-hidden="true"><span>Dom</span><span></span><span>Ter</span><span></span><span>Qui</span><span></span><span>Sáb</span></div><div class="fc-heatmap-grid">${html}</div></div><div class="fc-heat-legend"><span>Feitos</span>${[1,2,3,4].map(level=>`<i class="fc-heat-cell past level-${level}"></i>`).join('')}<span class="fc-heat-future-key"><i class="fc-heat-cell future level-3"></i>Próximas revisões</span></div>`;
 }
 function flashcardObservedRetention(days=30) {
   const cutoff = Date.now()-days*86400000;
@@ -9235,7 +9269,7 @@ function renderFlashcardOverview(all, decks, due, reviewsToday, waiting) {
       <div><span>Retenção · 30 dias</span><strong>${retention.value===null?'—':retention.value+'%'}</strong><small>${retention.total?`${retention.total} respostas registradas`:'começa após as primeiras revisões'}</small></div>
       <div><span>Sequência atual</span><strong>${streak}</strong><small>${activeDays} dias ativos no histórico</small></div>
     </section>
-    <section class="card fc-heatmap-card"><div class="section-title"><div><span class="eyebrow">Consistência</span><h2>Mapa de revisões</h2><div class="muted">Cada quadrado representa um dia. Passe o cursor para ver volume, retenção e tempo.</div></div><span class="badge today">Últimas 53 semanas</span></div>${renderFlashcardHeatmap(series)}</section>
+    <section class="card fc-heatmap-card"><div class="section-title"><div><span class="eyebrow">Passado e futuro</span><h2>Mapa de revisões</h2><div class="muted">À esquerda, quantos cards você concluiu por dia. À direita, quantos estão previstos para revisar.</div></div><span class="badge today">12 meses + próximas 12 semanas</span></div>${renderFlashcardHeatmap(series,all)}</section>
     <div class="fc-overview-split"><section class="card fc-forecast-card"><div class="section-title"><div><span class="eyebrow">Carga futura</span><h2>Próximos 14 dias</h2></div></div>${renderFlashcardForecastOverview()}</section><section class="card fc-weak-card"><div class="section-title"><div><span class="eyebrow">Prioridade</span><h2>Assuntos frágeis</h2></div></div>${weak}</section></div>
     <section class="card fc-decks-card"><div class="section-title"><div><span class="eyebrow">Coleção</span><h2>Aulas e baralhos</h2></div><button class="icon-btn primary" data-fc-view="study">Iniciar revisão</button></div>${renderFlashcardDeckTable(decks)}</section>
   </div>`;
@@ -9280,6 +9314,64 @@ function flashcardBrowserSourceLabel(card) {
   if(card.sourceType === 'import' || card.source === 'Anki') return 'Importado';
   return 'Manual';
 }
+function flashcardCardHistory(cardId) {
+  return (state.flashcardSystem?.reviewLogs || [])
+    .filter(log=>log?.cardId===cardId && n(log.rating || log.quality)>=1)
+    .map(log=>({
+      ...log,
+      rating:Math.max(1,Math.min(4,n(log.rating || log.quality))),
+      scheduledDays:Math.max(0,n(log.scheduledDays ?? log.after?.scheduledDays ?? log.after?.interval)),
+      scheduledMinutes:Math.max(0,n(log.scheduledMinutes)),
+      difficultyAfter:Math.max(0,n(log.difficultyAfter || log.after?.difficulty)),
+      stabilityAfter:Math.max(0,n(log.stabilityAfter || log.after?.stability))
+    }))
+    .sort((a,b)=>(Date.parse(b.reviewedAt||'')||0)-(Date.parse(a.reviewedAt||'')||0));
+}
+function flashcardCardHistoryAnalysis(card) {
+  const history=flashcardCardHistory(card.id);
+  const progress=flashcardProgress(card);
+  const remembered=history.filter(log=>log.rating>=2).length;
+  const again=history.filter(log=>log.rating===1).length;
+  const retention=history.length ? Math.round(remembered/history.length*100) : null;
+  const recentSize=history.length>=4 ? Math.min(10,Math.ceil(history.length/2)) : history.length;
+  const recent=history.slice(0,recentSize);
+  const earlier=history.slice(recent.length,Math.min(recent.length*2,history.length));
+  const recentRetention=recent.length ? Math.round(recent.filter(log=>log.rating>=2).length/recent.length*100) : null;
+  const earlierRetention=earlier.length ? Math.round(earlier.filter(log=>log.rating>=2).length/earlier.length*100) : null;
+  const lapseRate=history.length ? again/history.length : 0;
+  const difficultyScore=Math.round(clamp(((progress.difficulty-1)/9)*.62+lapseRate*.38,0,1)*100);
+  let label='Em desenvolvimento'; let tone='medium'; let guidance='Continue revisando para o diagnóstico ganhar precisão.';
+  if(!history.length) { label='Sem histórico'; tone='neutral'; guidance='A análise começa depois da primeira resposta.'; }
+  else if(history.length>=4 && recentRetention>=90 && lapseRate<.2) { label='Bem consolidado'; tone='low'; guidance='O card está saudável; mantenha o agendamento normal.'; }
+  else if(earlierRetention!==null && recentRetention>=80 && recentRetention>=earlierRetention+15) { label='Em recuperação'; tone='improving'; guidance='A retenção recente melhorou; mantenha a formulação atual.'; }
+  else if(difficultyScore>=65 || lapseRate>=.3) { label='Requer atenção'; tone='high'; guidance='Considere simplificar a pergunta ou dividir o conteúdo em dois cards.'; }
+  return {history,total:history.length,remembered,again,retention,recentRetention,earlierRetention,lapseRate,difficultyScore,label,tone,guidance};
+}
+function flashcardRatingLabel(rating) {
+  return ['','Novamente','Difícil','Bom','Fácil'][Math.max(1,Math.min(4,n(rating)))] || 'Resposta';
+}
+function flashcardHistoryIntervalLabel(log) {
+  if(n(log.scheduledDays)>=1) return `${n(log.scheduledDays)} d`;
+  if(n(log.scheduledMinutes)>=1) return `${n(log.scheduledMinutes)} min`;
+  return 'reaprender';
+}
+function renderFlashcardHistoryChart(history) {
+  const rows=history.slice(0,12).reverse();
+  if(!rows.length) return '<div class="fc-history-chart-empty">A evolução dos intervalos aparecerá aqui.</div>';
+  const max=Math.max(1,...rows.map(log=>n(log.scheduledDays)));
+  return `<div class="fc-history-chart" role="img" aria-label="Evolução dos intervalos das últimas ${rows.length} respostas">${rows.map(log=>{const days=n(log.scheduledDays); const height=days ? Math.max(10,Math.round(days/max*100)) : 5; return `<span title="${escapeAttr(`${flashcardRatingLabel(log.rating)} · ${flashcardHistoryIntervalLabel(log)}`)}"><i class="rating-${log.rating}" style="height:${height}%"></i></span>`;}).join('')}</div>`;
+}
+function renderFlashcardCardHistory(card) {
+  const analysis=flashcardCardHistoryAnalysis(card);
+  const visible=analysis.history.slice(0,30);
+  const retention=analysis.retention===null?'—':`${analysis.retention}%`;
+  return `<section class="fc-card-history"><div class="fc-card-history-head"><div><span class="eyebrow">Memória do card</span><h3>Histórico e dificuldade</h3></div><span class="fc-history-diagnosis tone-${analysis.tone}">${escapeHtml(analysis.label)}</span></div>
+    <div class="fc-history-kpis"><div><strong>${analysis.total}</strong><span>respostas</span></div><div><strong>${retention}</strong><span>retenção</span></div><div><strong>${analysis.again}</strong><span>lapsos</span></div><div><strong>${analysis.difficultyScore}</strong><span>dificuldade</span></div></div>
+    <div class="fc-history-difficulty"><span><b>Nível de dificuldade</b><strong>${analysis.difficultyScore}/100</strong></span><div><i style="width:${analysis.difficultyScore}%"></i></div><small>${escapeHtml(analysis.guidance)}</small></div>
+    <div class="fc-history-chart-shell"><span>Evolução dos intervalos</span>${renderFlashcardHistoryChart(analysis.history)}</div>
+    <details class="fc-history-timeline" ${analysis.total&&analysis.total<=5?'open':''}><summary>Linha do tempo <span>${analysis.total}</span></summary>${visible.length?`<ol>${visible.map(log=>{const parsed=Date.parse(log.reviewedAt||''); const when=Number.isFinite(parsed)?new Date(parsed).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'}):'Data não registrada'; return `<li class="rating-${log.rating}"><i></i><div><strong>${escapeHtml(flashcardRatingLabel(log.rating))}</strong><span>${escapeHtml(when)}${log.wasNew?' · primeira revisão':''}</span></div><em>${escapeHtml(flashcardHistoryIntervalLabel(log))}</em></li>`;}).join('')}</ol>${analysis.total>visible.length?`<small>Mais ${analysis.total-visible.length} registros anteriores continuam preservados no histórico.</small>`:''}`:'<div class="fc-history-empty">Este card ainda não foi respondido.</div>'}</details>
+  </section>`;
+}
 function renderFlashcardBrowserDetail(card) {
   if(!card) return `<aside class="card fc-browser-detail"><div class="empty"><strong>Selecione um card</strong><span>Abra uma linha para visualizar e editar o conteúdo.</span></div></aside>`;
   const progress = flashcardProgress(card);
@@ -9288,6 +9380,7 @@ function renderFlashcardBrowserDetail(card) {
     <div class="fc-browser-detail-content"><span>Frente</span><div class="flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div><span>Verso</span><div class="flashcard-rich-text fc-browser-answer">${renderFlashcardBackHtml(card)}</div></div>
     <div class="fc-browser-detail-meta"><span>${escapeHtml(flashcardBrowserState(card))}</span><span>${progress.reviews} revisões</span><span>${progress.interval} dias</span><span>${progress.lapses} lapsos</span><span>Próxima: ${escapeHtml(progress.nextReview)}</span></div>
     ${editing ? renderFlashcardInlineEditor(card) : ''}
+    ${renderFlashcardCardHistory(card)}
   </aside>`;
 }
 function renderFlashcardBrowser(all) {
@@ -9303,6 +9396,70 @@ function renderFlashcardBrowser(all) {
   return `<div class="flashcard-browser"><section class="card fc-browser-main"><div class="section-title"><div><span class="eyebrow">Coleção completa</span><h2>Navegador de cards</h2><div class="muted">Pesquise, ordene e altere vários cards de uma vez.</div></div><span class="badge today">${records.length} de ${all.length}</span></div>
     <div class="fc-browser-controls"><label class="fc-browser-search"><span>Buscar</span><input class="input" id="fcBrowserSearch" value="${escapeAttr(ui.flashcardBrowserSearch)}" placeholder="Frente, verso, assunto, deck ou tag"></label><label><span>Estado</span><select class="select" id="fcBrowserStatus">${['Todos','Vencidos','Novo','Aprendendo','Maduro','Difíceis','Suspenso','Em espera'].map(value=>`<option ${ui.flashcardBrowserStatus===value?'selected':''}>${value}</option>`).join('')}</select></label><label><span>Área</span><select class="select" id="fcBrowserArea">${areas.map(value=>`<option value="${escapeAttr(value)}" ${ui.flashcardBrowserArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Ordenar</span><select class="select" id="fcBrowserSort"><option value="due" ${ui.flashcardBrowserSort==='due'?'selected':''}>Próxima revisão</option><option value="created" ${ui.flashcardBrowserSort==='created'?'selected':''}>Mais recentes</option><option value="lapses" ${ui.flashcardBrowserSort==='lapses'?'selected':''}>Mais lapsos</option><option value="interval" ${ui.flashcardBrowserSort==='interval'?'selected':''}>Maior intervalo</option><option value="front" ${ui.flashcardBrowserSort==='front'?'selected':''}>Frente A–Z</option></select></label></div>${actionBar}
     <div class="fc-browser-table-wrap"><table class="fc-browser-table"><thead><tr><th><input type="checkbox" id="fcBrowserSelectAll" ${allVisibleSelected?'checked':''} aria-label="Selecionar todos os cards visíveis"></th><th>Frente</th><th>Aula / assunto</th><th>Estado</th><th>Próxima</th><th>Intervalo</th><th>Lapsos</th><th></th></tr></thead><tbody>${records.map(card=>{const progress=flashcardProgress(card); const stateName=flashcardBrowserState(card); return `<tr class="${ui.flashcardBrowserCardId===card.id?'active':''}"><td><input type="checkbox" data-fc-browser-select="${escapeAttr(card.id)}" ${selected.has(card.id)?'checked':''} aria-label="Selecionar card"></td><td><strong>${escapeHtml(String(card.front||'').replace(/\s+/g,' ').slice(0,120))}</strong><small>${escapeHtml(flashcardBrowserSourceLabel(card))}${card.tags?.length?` · ${(card.tags||[]).slice(0,3).map(escapeHtml).join(', ')}`:''}</small></td><td>${escapeHtml(card.topic||card.subarea||'Sem assunto')}<small>${escapeHtml(card.area||'Sem área')}</small></td><td><span class="fc-browser-state state-${normalizedTopic(stateName).replace(/\s+/g,'-')}">${escapeHtml(stateName)}</span></td><td>${escapeHtml(progress.nextReview)}</td><td>${progress.interval} d</td><td>${progress.lapses}</td><td><button class="tiny-btn" data-fc-browser-open="${escapeAttr(card.id)}">Abrir</button></td></tr>`;}).join('') || '<tr><td colspan="8"><div class="empty">Nenhum card corresponde a esses filtros.</div></td></tr>'}</tbody></table></div></section>${renderFlashcardBrowserDetail(activeCard)}</div>`;
+}
+function normalizeFlashcardCustomFilters(filters={}) {
+  return {
+    mode:['overdue','due','difficult','recentErrors','tags','all'].includes(filters.mode)?filters.mode:'overdue',
+    area:filters.area || 'Todas',
+    subject:filters.subject || 'Todos',
+    tag:String(filters.tag || '').trim(),
+    recentDays:Math.max(1,Math.min(365,Math.round(n(filters.recentDays)||30))),
+    limit:Math.max(1,Math.min(500,Math.round(n(filters.limit)||50)))
+  };
+}
+function flashcardRecentAgainByCard(days=30) {
+  const cutoff=Date.now()-Math.max(1,n(days))*86400000;
+  const map=new Map();
+  (state.flashcardSystem?.reviewLogs || []).forEach(log=>{
+    const timestamp=Date.parse(log?.reviewedAt||'');
+    if(n(log?.rating)!==1 || !Number.isFinite(timestamp) || timestamp<cutoff) return;
+    map.set(log.cardId,Math.max(n(map.get(log.cardId)),timestamp));
+  });
+  return map;
+}
+function flashcardCustomStudyCandidates(all=flashcardAllRecords(), rawFilters=ui.flashcardCustomFilters) {
+  const filters=normalizeFlashcardCustomFilters(rawFilters);
+  const today=studyDateKey();
+  const recentAgain=flashcardRecentAgainByCard(filters.recentDays);
+  const tagTerms=normalizedTopic(filters.tag).split(' ').filter(Boolean);
+  const candidates=flashcardActiveRecords(all).filter(card=>{
+    const progress=flashcardProgress(card);
+    const subject=card.subject || card.subarea || card.topic || 'Sem assunto';
+    const areaOk=filters.area==='Todas' || card.area===filters.area;
+    const subjectOk=filters.subject==='Todos' || subject===filters.subject;
+    const tagText=normalizedTopic((card.tags||[]).join(' '));
+    const tagOk=!tagTerms.length || tagTerms.every(term=>tagText.includes(term));
+    const modeOk=filters.mode==='all'
+      || (filters.mode==='overdue' && progress.reviews>0 && progress.nextReview<today)
+      || (filters.mode==='due' && progress.reviews>0 && progress.nextReview<=today)
+      || (filters.mode==='difficult' && (progress.difficulty>=7 || progress.lapses>=2 || progress.status==='Difícil'))
+      || (filters.mode==='recentErrors' && recentAgain.has(card.id))
+      || (filters.mode==='tags' && tagTerms.length>0 && tagOk);
+    return areaOk && subjectOk && tagOk && modeOk;
+  });
+  return candidates.sort((a,b)=>{
+    const pa=flashcardProgress(a); const pb=flashcardProgress(b);
+    if(filters.mode==='difficult') return pb.difficulty-pa.difficulty || pb.lapses-pa.lapses;
+    if(filters.mode==='recentErrors') return n(recentAgain.get(b.id))-n(recentAgain.get(a.id));
+    return String(pa.nextReview).localeCompare(String(pb.nextReview)) || String(a.front).localeCompare(String(b.front));
+  }).slice(0,filters.limit);
+}
+function renderFlashcardCustomStudy(all) {
+  const filters=normalizeFlashcardCustomFilters(ui.flashcardCustomFilters);
+  ui.flashcardCustomFilters=filters;
+  const areas=['Todas',...new Set(all.map(card=>card.area).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  if(!areas.includes(filters.area)) filters.area='Todas';
+  const areaCards=filters.area==='Todas'?all:all.filter(card=>card.area===filters.area);
+  const subjects=['Todos',...new Set(areaCards.map(card=>card.subject||card.subarea||card.topic).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  if(!subjects.includes(filters.subject)) filters.subject='Todos';
+  const candidates=flashcardCustomStudyCandidates(all,filters);
+  const modes=[['overdue','Atrasados','Cards cuja revisão deveria ter acontecido antes de hoje.'],['due','Vencidos agora','Inclui atrasados e os programados para hoje.'],['difficult','Mais difíceis','Prioriza dificuldade alta, lapsos e respostas difíceis.'],['recentErrors','Erros recentes',`Cards respondidos como “Novamente” nos últimos ${filters.recentDays} dias.`],['tags','Por tags','Monta a fila usando as tags informadas abaixo.'],['all','Toda a coleção','Usa área, assunto, tag e limite para recortar a coleção.']];
+  const byArea=new Map(); candidates.forEach(card=>byArea.set(card.area||'Sem área',n(byArea.get(card.area||'Sem área'))+1));
+  const preview=[...byArea.entries()].sort((a,b)=>b[1]-a[1]).slice(0,5);
+  return `<div class="fc-custom-page"><section class="card fc-custom-hero"><div><span class="eyebrow">Fila temporária</span><h2>Estudo personalizado</h2><p class="muted">Escolha exatamente o que revisar. Criar a fila não muda datas; somente suas respostas atualizam o agendamento.</p></div><div><strong>${candidates.length}</strong><span>cards selecionados</span></div></section>
+    <section class="fc-custom-modes">${modes.map(([id,label,description])=>`<button type="button" class="card fc-custom-mode ${filters.mode===id?'active':''}" data-fc-custom-mode="${id}"><strong>${label}</strong><small>${description}</small></button>`).join('')}</section>
+    <div class="fc-custom-grid"><section class="card fc-custom-controls"><div class="section-title"><div><span class="eyebrow">Recorte</span><h3>Filtros da sessão</h3></div></div><div class="fc-custom-fields"><label><span>Área</span><select class="select" data-fc-custom-filter="area">${areas.map(value=>`<option value="${escapeAttr(value)}" ${filters.area===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Assunto</span><select class="select" data-fc-custom-filter="subject">${subjects.map(value=>`<option value="${escapeAttr(value)}" ${filters.subject===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label><span>Tags</span><input class="input" data-fc-custom-filter="tag" value="${escapeAttr(filters.tag)}" placeholder="Ex.: cardio urgente"></label><label><span>Janela dos erros</span><div><input class="input" type="number" min="1" max="365" data-fc-custom-filter="recentDays" value="${filters.recentDays}"><small>dias</small></div></label><label><span>Máximo da sessão</span><div><input class="input" type="number" min="1" max="500" data-fc-custom-filter="limit" value="${filters.limit}"><small>cards</small></div></label></div></section>
+    <aside class="card fc-custom-summary"><div class="section-title"><div><span class="eyebrow">Prévia</span><h3>Sua próxima sessão</h3></div></div>${candidates.length?`<div class="fc-custom-breakdown">${preview.map(([area,count])=>`<span><b>${escapeHtml(area)}</b><strong>${count}</strong></span>`).join('')}</div><div class="fc-custom-examples">${candidates.slice(0,3).map(card=>`<span>${escapeHtml(String(card.front||'').replace(/\s+/g,' ').slice(0,90))}</span>`).join('')}</div>`:'<div class="empty">Nenhum card corresponde a esse recorte. Ajuste os filtros.</div>'}<button type="button" class="icon-btn primary" id="fcCustomStart" ${candidates.length?'':'disabled'}>Iniciar sessão com ${candidates.length}</button></aside></div></div>`;
 }
 function updateFlashcardSchedulerSetting(scope, key, value) {
   if(scope === 'profile') {
@@ -9371,10 +9528,13 @@ function renderFlashcards() {
   const subjects = [...new Set(blockCards.map(card => card.subject || card.subarea || card.topic).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   const unlinkedCount = all.filter(card => !card.scheduleId).length;
   document.getElementById('flashcards').classList.toggle('flashcard-focus-mode', ui.flashcardFocusMode);
-  const studyContent = `<div class="flashcard-today-bar"><span><b>${cards.length}</b> na fila de hoje</span><span><b>${reviewsToday}</b> revisados hoje</span>${waiting?`<span class="fc-waiting"><b>${waiting}</b> em espera · liberam ${Math.max(1,n(state.flashcardSettings.newLimit))}/dia</span>`:''}${waiting?'<button class="tiny-btn" id="flashcardReleaseAll" title="Tirar todos da espera e deixá-los disponíveis já">Liberar tudo</button>':''}</div>
-  <div class="card flashcard-filters"><label class="flashcard-filter-field"><span>Fila</span><select class="select" id="flashcardFilter">${['Aprendendo','Revisando','Todos','Novos','Difíceis','Maduros','Suspensos'].map(value => `<option ${ui.flashcardFilter===value?'selected':''}>${value}</option>`).join('')}</select></label><label class="flashcard-filter-field"><span>Área</span><select class="select" id="flashcardArea">${areas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label class="flashcard-filter-field"><span>Aula</span><select class="select" id="flashcardLesson"><option value="" ${ui.flashcardLesson?'':'selected'}>Todas as aulas</option><option value="__sem_aula__" ${ui.flashcardLesson==='__sem_aula__'?'selected':''}>Sem aula vinculada (${unlinkedCount})</option>${flashcardLessonOptions().map(lesson => `<option value="${escapeAttr(lesson.id)}" ${ui.flashcardLesson===lesson.id?'selected':''}>${escapeHtml(flashcardLessonLabel(lesson))}</option>`).join('')}</select></label><label class="flashcard-target"><span>Novos/dia</span><input class="mini-input" id="flashcardNewLimit" type="number" min="0" value="${n(state.flashcardSettings.newLimit)}"></label><label class="flashcard-target"><span>Revisões/dia</span><input class="mini-input" id="flashcardReviewLimit" type="number" min="0" value="${n(state.flashcardSettings.reviewLimit)}"></label></div>
+  const studySidebar=ui.flashcardCustomActive
+    ? `<aside class="flashcards-panel flashcard-block-panel fc-custom-session-sidebar"><div class="section-title"><div><span class="eyebrow">Sessão temporária</span><h3>Seu recorte</h3></div></div><div class="fc-custom-session-progress"><div><strong>${cards.length}</strong><span>restantes</span></div><div><strong>${ui.flashcardCustomCompleted.length}</strong><span>concluídos</span></div><div><strong>${ui.flashcardCustomSessionIds.length}</strong><span>total</span></div></div><button class="icon-btn" data-fc-view="custom">Editar filtros</button><div class="muted flashcard-shortcuts">Espaço revela · 1–4 avalia<br>E edita · S suspende · Z desfaz</div></aside>`
+    : `<aside class="flashcards-panel flashcard-block-panel"><div class="section-title"><h3>Blocos</h3><span class="badge today">${blocks.length-1}</span></div><button class="flashcard-block-choice ${selectedBlock==='Todos'?'active':''}" data-fc-block="Todos">Todos os blocos <span>${all.length}</span></button>${blocks.slice(1).map(block => `<button class="flashcard-block-choice ${String(selectedBlock)===String(block)?'active':''}" data-fc-block="${escapeAttr(block)}">Bloco ${escapeHtml(block)} <span>${all.filter(card=>String(card.weeklyBlockId||card.block)===String(block)).length}</span></button>`).join('')}<div class="section-title flashcard-deck-title"><h3>Aulas</h3>${ui.flashcardLesson?'<button class="tiny-btn" id="flashcardClearLesson">Todas</button>':''}</div><div class="flashcard-lesson-deck-list">${lessonDecks.map(renderFlashcardLessonDeck).join('') || '<div class="muted">Vincule cards a uma aula para vê-los aqui.</div>'}</div><div class="muted flashcard-shortcuts">Espaço revela · 1–4 avalia<br>E edita · S suspende · Z desfaz</div></aside>`;
+  const studyContent = `<div class="flashcard-today-bar ${ui.flashcardCustomActive?'custom-active':''}"><span><b>${cards.length}</b> ${ui.flashcardCustomActive?'restantes na sessão':'na fila de hoje'}</span><span><b>${reviewsToday}</b> revisados hoje</span>${ui.flashcardCustomActive?`<span><b>${ui.flashcardCustomCompleted.length}</b> concluídos nesta sessão</span><button class="tiny-btn" id="fcCustomExit">Encerrar sessão personalizada</button>`:`${waiting?`<span class="fc-waiting"><b>${waiting}</b> em espera · liberam ${Math.max(1,n(state.flashcardSettings.newLimit))}/dia</span>`:''}${waiting?'<button class="tiny-btn" id="flashcardReleaseAll" title="Tirar todos da espera e deixá-los disponíveis já">Liberar tudo</button>':''}`}</div>
+  ${ui.flashcardCustomActive?'<div class="card fc-custom-active-note"><strong>Estudo personalizado ativo</strong><span>Os filtros normais e os limites diários ficam pausados até você encerrar esta sessão.</span></div>':`<div class="card flashcard-filters"><label class="flashcard-filter-field"><span>Fila</span><select class="select" id="flashcardFilter">${['Aprendendo','Revisando','Todos','Novos','Difíceis','Maduros','Suspensos'].map(value => `<option ${ui.flashcardFilter===value?'selected':''}>${value}</option>`).join('')}</select></label><label class="flashcard-filter-field"><span>Área</span><select class="select" id="flashcardArea">${areas.map(value => `<option value="${escapeAttr(value)}" ${ui.flashcardArea===value?'selected':''}>${escapeHtml(value)}</option>`).join('')}</select></label><label class="flashcard-filter-field"><span>Aula</span><select class="select" id="flashcardLesson"><option value="" ${ui.flashcardLesson?'':'selected'}>Todas as aulas</option><option value="__sem_aula__" ${ui.flashcardLesson==='__sem_aula__'?'selected':''}>Sem aula vinculada (${unlinkedCount})</option>${flashcardLessonOptions().map(lesson => `<option value="${escapeAttr(lesson.id)}" ${ui.flashcardLesson===lesson.id?'selected':''}>${escapeHtml(flashcardLessonLabel(lesson))}</option>`).join('')}</select></label><label class="flashcard-target"><span>Novos/dia</span><input class="mini-input" id="flashcardNewLimit" type="number" min="0" value="${n(state.flashcardSettings.newLimit)}"></label><label class="flashcard-target"><span>Revisões/dia</span><input class="mini-input" id="flashcardReviewLimit" type="number" min="0" value="${n(state.flashcardSettings.reviewLimit)}"></label></div>`}
   <div class="flashcards-workspace">
-    <aside class="flashcards-panel flashcard-block-panel"><div class="section-title"><h3>Blocos</h3><span class="badge today">${blocks.length-1}</span></div><button class="flashcard-block-choice ${selectedBlock==='Todos'?'active':''}" data-fc-block="Todos">Todos os blocos <span>${all.length}</span></button>${blocks.slice(1).map(block => `<button class="flashcard-block-choice ${String(selectedBlock)===String(block)?'active':''}" data-fc-block="${escapeAttr(block)}">Bloco ${escapeHtml(block)} <span>${all.filter(card=>String(card.weeklyBlockId||card.block)===String(block)).length}</span></button>`).join('')}<div class="section-title flashcard-deck-title"><h3>Aulas</h3>${ui.flashcardLesson?'<button class="tiny-btn" id="flashcardClearLesson">Todas</button>':''}</div><div class="flashcard-lesson-deck-list">${lessonDecks.map(renderFlashcardLessonDeck).join('') || '<div class="muted">Vincule cards a uma aula para vê-los aqui.</div>'}</div><div class="muted flashcard-shortcuts">Espaço revela · 1–4 avalia<br>E edita · S suspende · Z desfaz</div></aside>
+    ${studySidebar}
     <div class="flashcards-panel flashcard-review-column">${ui.flashcardImport ? renderFlashcardImportPanel() : ui.flashcardEditorOpen ? renderFlashcardWorkspaceEditor() : renderFlashcardStudy(study, cards)}<div class="flashcard-subject-strip"><div class="section-title"><h3>Assuntos${selectedBlock==='Todos'?'':' · Bloco '+escapeHtml(selectedBlock)}</h3><span>${subjects.length}</span></div><div class="flashcard-subject-list">${subjects.map(subject => `<button class="flashcard-subject-chip" data-fc-subject="${escapeAttr(subject)}">${escapeHtml(subject)} <span>${blockCards.filter(card=>(card.subject||card.subarea||card.topic)===subject).length}</span></button>`).join('') || '<span class="muted">Os assuntos aparecerão aqui conforme os cards forem criados.</span>'}</div></div></div>
     <aside class="flashcards-panel flashcard-indicator-panel"><details class="flashcard-indicator-toggle" ${due>0?'open':''}><summary>Estatísticas e fila<span class="muted">${due>0?`${due} atrasados`:'tudo em dia'}</span></summary><div>${renderFlashcardIndicators(all, cards, reviewed, due)}</div></details></aside>
   </div>
@@ -9385,16 +9545,50 @@ function renderFlashcards() {
     ? renderFlashcardOverview(all, lessonDecks, due, reviewsToday, waiting)
     : ui.flashcardView === 'browser'
       ? renderFlashcardBrowser(all)
+      : ui.flashcardView === 'custom'
+        ? renderFlashcardCustomStudy(all)
       : ui.flashcardView === 'settings'
         ? renderFlashcardSchedulerSettings(all)
         : studyContent;
   document.getElementById('flashcards').innerHTML = `<div class="card flashcard-command"><div class="flashcard-command-copy"><span class="flashcard-command-icon" aria-hidden="true">${iconSvg('flashcard',{weight:'duotone'})}</span><div><div class="eyebrow">Revisão inteligente</div><h1>Flashcards</h1><div class="muted">Entenda sua carga, organize os baralhos e revise no momento certo.</div></div></div><div class="flashcard-command-actions"><button class="icon-btn primary" id="newFlashcardBtn">${iconSvg('add',{weight:'bold'})}<span>Novo card</span></button><button class="icon-btn" id="flashcardUndoBtn">Desfazer</button><button class="icon-btn" id="flashcardBackupBtn">Backup</button><button class="icon-btn" id="ankiExportBtn">Exportar</button><button class="icon-btn" id="ankiImportBtn" title="Importar cards de um arquivo exportado do Anki (.tsv)">Importar</button><button class="icon-btn ${unlinkedCount?'warn':''}" id="flashcardOrganizerBtn" title="Vincular em lote os cards que ainda não pertencem a nenhuma aula">Cards sem aula${unlinkedCount?` (${unlinkedCount})`:''}</button></div></div>
-  <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button><button class="${ui.flashcardView==='browser'?'active':''}" data-fc-view="browser">Navegar <span>${all.length}</span></button><button class="${ui.flashcardView==='settings'?'active':''}" data-fc-view="settings">Configurar</button></nav>
+  <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button><button class="${ui.flashcardView==='custom'?'active':''}" data-fc-view="custom">Personalizar</button><button class="${ui.flashcardView==='browser'?'active':''}" data-fc-view="browser">Navegar <span>${all.length}</span></button><button class="${ui.flashcardView==='settings'?'active':''}" data-fc-view="settings">Configurar</button></nav>
   <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">${mainContent}${ui.flashcardOrganizerOpen ? renderFlashcardOrganizer() : ''}`;
   document.querySelectorAll('[data-fc-view]').forEach(button => button.onclick = event => {
     ui.flashcardView = event.currentTarget.dataset.fcView;
     ui.flashcardFocusMode = false;
     ui.flashcardSessionDone = false;
+    renderFlashcards();
+  });
+  document.querySelectorAll('[data-fc-custom-mode]').forEach(button => button.onclick = event => {
+    ui.flashcardCustomFilters={...normalizeFlashcardCustomFilters(ui.flashcardCustomFilters),mode:event.currentTarget.dataset.fcCustomMode};
+    renderFlashcards();
+  });
+  document.querySelectorAll('[data-fc-custom-filter]').forEach(input => input.onchange = event => {
+    const key=event.currentTarget.dataset.fcCustomFilter;
+    const value=['recentDays','limit'].includes(key)?n(event.currentTarget.value):event.currentTarget.value;
+    ui.flashcardCustomFilters=normalizeFlashcardCustomFilters({...ui.flashcardCustomFilters,[key]:value,...(key==='area'?{subject:'Todos'}:{})});
+    renderFlashcards();
+  });
+  document.getElementById('fcCustomStart')?.addEventListener('click',()=>{
+    const candidates=flashcardCustomStudyCandidates(all,ui.flashcardCustomFilters);
+    if(!candidates.length) return;
+    ui.flashcardCustomSessionIds=candidates.map(card=>card.id);
+    ui.flashcardCustomCompleted=[];
+    ui.flashcardCustomActive=true;
+    ui.flashcardView='study';
+    ui.flashcardIndex=0;
+    ui.flashcardSessionDone=false;
+    ui.flashcardCurrentCardId='';
+    ui.revealedCards={};
+    renderFlashcards();
+  });
+  document.getElementById('fcCustomExit')?.addEventListener('click',()=>{
+    ui.flashcardCustomActive=false;
+    ui.flashcardCustomSessionIds=[];
+    ui.flashcardCustomCompleted=[];
+    ui.flashcardSessionDone=false;
+    ui.flashcardCurrentCardId='';
+    ui.flashcardIndex=0;
     renderFlashcards();
   });
   document.querySelectorAll('[data-fc-scheduler-preset]').forEach(button => button.onclick = event => {
@@ -9421,6 +9615,9 @@ function renderFlashcards() {
     renderFlashcards();
   });
   document.querySelectorAll('[data-fc-study-deck]').forEach(button => button.onclick = event => {
+    ui.flashcardCustomActive=false;
+    ui.flashcardCustomSessionIds=[];
+    ui.flashcardCustomCompleted=[];
     ui.flashcardLesson = event.currentTarget.dataset.fcStudyDeck;
     ui.flashcardFilter = event.currentTarget.dataset.fcStudyFilter || 'Aprendendo';
     ui.flashcardView = 'study';
@@ -9431,11 +9628,16 @@ function renderFlashcards() {
   });
   document.querySelectorAll('[data-fc-heat-date]').forEach(button => button.onclick = event => {
     const date = event.currentTarget.dataset.fcHeatDate;
-    const row = flashcardReviewDailySeries().get(date) || {count:0,again:0,remembered:0,minutes:0};
-    const rated = row.again + row.remembered;
-    const detail = [`${row.count} revisões`, rated ? `${Math.round(row.remembered/rated*100)}% lembradas` : '', row.minutes ? `${Math.round(row.minutes)} min` : ''].filter(Boolean).join(' · ');
+    const row=flashcardReviewCalendar(flashcardReviewDailySeries(),all).find(item=>item.date===date) || {kind:'past',completed:0,due:0,again:0,remembered:0,minutes:0};
+    const rated=row.again+row.remembered;
+    const detail=row.kind==='future'
+      ? `${row.due} ${row.due===1?'card previsto':'cards previstos'} para revisar`
+      : [`${row.completed} ${row.completed===1?'card revisado':'cards revisados'}`,rated?`${Math.round(row.remembered/rated*100)}% lembrados`:'',row.minutes?`${Math.round(row.minutes)} min`:'',row.kind==='today'?`${row.due} ainda pendentes`:'' ].filter(Boolean).join(' · ');
     showStudyToast?.(`${fmtDate(date)} · ${detail}`);
   });
+  const heatShell=document.querySelector('.fc-heatmap-shell');
+  const heatToday=document.querySelector('.fc-heat-cell.today');
+  if(heatShell && heatToday) requestAnimationFrame(()=>{ heatShell.scrollLeft=Math.max(0,n(heatToday.offsetLeft)-n(heatShell.clientWidth)*.62); });
   const browserSearch = document.getElementById('fcBrowserSearch');
   if(browserSearch) browserSearch.oninput = event => {
     const caret = event.currentTarget.selectionStart;
@@ -9896,8 +10098,9 @@ function reviewFlashcard(id, quality) {
   const cardUpdate = { ...fsrs, due:isLeech ? '2099-12-31' : fsrs.due, dueAt:isLeech ? '2099-12-31T23:59:59.000Z' : fsrs.dueAt, isSuspended:isLeech, contentVersion:Math.max(1,n(card.contentVersion)||1), rowVersion:Math.max(1,n(card.rowVersion)||1)+1 };
   Object.assign(card, cardUpdate);
   if(mutableCard) Object.assign(mutableCard, cardUpdate);
-  const reviewLog={id:newFlashcardId('review'),cardId:id,rating:quality,reviewedAt,sessionId:state.flashcardSystem.activeReviewSessionId,wasDue,wasNew,legacy:false,before:beforeCard,after:{...card},cardSnapshot:flashcardReviewSnapshot(card),scheduledDays:fsrs.scheduledDays};
+  const reviewLog={id:newFlashcardId('review'),cardId:id,rating:quality,reviewedAt,sessionId:state.flashcardSystem.activeReviewSessionId,wasDue,wasNew,legacy:false,before:beforeCard,after:{...card},cardSnapshot:flashcardReviewSnapshot(card),scheduledDays:fsrs.scheduledDays,scheduledMinutes:fsrs.scheduledDays<1?normalizeFlashcardSchedulerProfile(state.flashcardSystem.profile).relearningMinutes:0,difficultyAfter:fsrs.difficulty,stabilityAfter:fsrs.stability};
   state.flashcardSystem.reviewLogs.push(reviewLog);
+  if(ui.flashcardCustomActive && ui.flashcardCustomSessionIds.includes(id)) ui.flashcardCustomCompleted=[...new Set([...ui.flashcardCustomCompleted,id])];
   state.flashcardSystem.undoStack.push({cardId:id,previousProgress:{...current},beforeCard,reviewId:reviewLog.id});
   state.flashcardSystem.undoStack = state.flashcardSystem.undoStack.slice(-20);
   compactFlashcardReviewLogs();
@@ -9939,6 +10142,7 @@ function undoFlashcardReview() {
     state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.filter(log => log.id !== systemUndo.reviewId);
     if(review?.xpAwarded) awardGamificationXP({activity_type:'flashcard_review_reversal',source_type:'flashcard_review',source_id:review.cardId,source_event_id:`flashcard-review-reversal:${review.id}`,base_xp:-1,reason:'flashcard_review_undone',occurred_at:new Date().toISOString(),metadata:{reviewLogId:review.id,reversesEventKey:review.xpEventKey||`flashcard-review:${review.id}`}});
     if(review?.reviewedAt) adjustFlashcardDayCount(review.reviewedAt, -1);
+    if(ui.flashcardCustomActive) ui.flashcardCustomCompleted=ui.flashcardCustomCompleted.filter(id=>id!==systemUndo.cardId);
     ui.revealedCards[systemUndo.cardId] = true;
     ui.flashcardCurrentCardId = systemUndo.cardId;
     saveStateOnly();
