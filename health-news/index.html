@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e7">
+  <meta name="description" content="Leitura breve e organizada das principais notícias de saúde.">
+  <title>Radar Saúde · SÓqueroMed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html" aria-label="Voltar ao SÓqueroMed">
+      <span class="brand-mark">SQ</span>
+      <span>SÓqueroMed</span>
+    </a>
+    <div class="edition-state"><span class="live-dot"></span> Edição monitorada</div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">SEU CLIPPING MÉDICO</p>
+        <h1 id="page-title">Radar <em>Saúde</em></h1>
+        <p class="hero-copy">Notícias de saúde filtradas para uma leitura rápida, com contexto clínico e acesso às fontes originais.</p>
+      </div>
+      <aside class="reading-card" aria-label="Resumo da edição">
+        <span>LEITURA DE HOJE</span>
+        <strong id="readingTime">— min</strong>
+        <small id="editionDate">Carregando edição…</small>
+      </aside>
+    </section>
+
+    <section class="edition-toolbar" aria-label="Ações da edição">
+      <div>
+        <span class="label">EDIÇÃO</span>
+        <strong id="editionTitle">Atualização mais recente</strong>
+      </div>
+      <div class="toolbar-actions">
+        <button id="markAllRead" class="quiet-button" type="button">Marcar como lida</button>
+        <a id="originalEdition" class="primary-button" href="https://health.thenews.com.br/" target="_blank" rel="noopener noreferrer">Abrir original ↗</a>
+      </div>
+    </section>
+
+    <section class="lead-story" id="leadStory" aria-live="polite"></section>
+
+    <section class="digest-section" aria-labelledby="digest-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">O QUE IMPORTA</p>
+          <h2 id="digest-title">Resumo da edição</h2>
+        </div>
+        <p id="storyCount"></p>
+      </div>
+      <div class="story-grid" id="storyGrid"></div>
+    </section>
+
+    <section class="quick-section" aria-labelledby="quick-title">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">EM 30 SEGUNDOS</p>
+          <h2 id="quick-title">Radar rápido</h2>
+        </div>
+      </div>
+      <div class="quick-list" id="quickList"></div>
+    </section>
+
+    <footer>
+      <p>Conteúdo resumido para estudo. Não substitui avaliação clínica nem orientação médica.</p>
+      <p>Fonte editorial: <a href="https://health.thenews.com.br/" target="_blank" rel="noopener noreferrer">the news health</a>. Textos integrais permanecem com seus autores.</p>
+    </footer>
+  </main>
+
+  <template id="storyTemplate">
+    <article class="story-card">
+      <div class="story-meta"><span class="story-number"></span><span class="story-category"></span></div>
+      <h3></h3>
+      <p class="story-summary"></p>
+      <div class="clinical-note"><span>POR QUE IMPORTA</span><p></p></div>
+      <div class="story-footer">
+        <span class="evidence-tag"></span>
+        <a target="_blank" rel="noopener noreferrer">Ler fonte ↗</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

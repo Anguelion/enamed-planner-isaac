@@ -15,6 +15,7 @@ const rootFiles = [
 const runtimeDirectories = [
   'assets',
   'data',
+  'health-news',
   'imported_simulados',
   'materials_library',
 ];

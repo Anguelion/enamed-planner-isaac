@@ -1,0 +1,63 @@
+{
+  "id": "2026-08-14",
+  "title": "Treino de força, IA genômica e saúde pública",
+  "publishedAt": "2026-08-14",
+  "generatedAt": "2026-08-17T07:00:00-03:00",
+  "readingMinutes": 6,
+  "sourceUrl": "https://health.thenews.com.br/p/14-08-2026",
+  "lead": {
+    "title": "IA desenha bacteriófagos funcionais do zero",
+    "summary": "Um modelo de linguagem genômica produziu milhares de sequências candidatas. Parte delas foi sintetizada e 16 bacteriófagos conseguiram infectar bactérias E. coli em laboratório.",
+    "clinicalNote": "O potencial para terapia fágica é relevante diante da resistência antimicrobiana, mas o estudo ainda é pré-clínico e levanta questões reais de biossegurança e acesso aos modelos.",
+    "sourceUrl": "https://www.science.org/doi/10.1126/science.aec2657"
+  },
+  "stories": [
+    {
+      "id": "ia-bacteriofagos",
+      "category": "Pesquisa",
+      "title": "Genomas virais escritos por inteligência artificial",
+      "summary": "O experimento mostrou que modelos treinados em DNA podem propor genomas biologicamente ativos. Os vírus testados eram fagos, direcionados a bactérias, e não patógenos humanos.",
+      "clinicalNote": "É uma prova de conceito, não um tratamento disponível. A aplicação clínica dependerá de estudos de segurança, eficácia e controle regulatório.",
+      "evidence": "Estudo pré-clínico",
+      "sourceUrl": "https://www.science.org/doi/10.1126/science.aec2657"
+    },
+    {
+      "id": "anabolizantes-risco",
+      "category": "Prevenção",
+      "title": "Anabolizantes e o risco cardiovascular",
+      "summary": "A edição destaca os efeitos sistêmicos do uso de esteroides anabolizantes, incluindo remodelamento cardíaco, arritmias, alterações lipídicas, disfunção gonadal e impacto na saúde mental.",
+      "clinicalNote": "A abordagem deve ser acolhedora e multidisciplinar. Interrupção sem acompanhamento pode vir acompanhada de hipogonadismo, fadiga, depressão e recaídas.",
+      "evidence": "Alerta clínico",
+      "sourceUrl": "https://g1.globo.com/fantastico/noticia/2026/08/11/anabolizantes-triplicam-risco-de-morte-e-aumentam-em-9-vezes-chance-de-doenca-no-coracao-alerta-medico-entenda.ghtml"
+    },
+    {
+      "id": "massachusetts-aborto",
+      "category": "Política de saúde",
+      "title": "Massachusetts altera limite gestacional para aborto",
+      "summary": "A nova legislação retira o limite fixo de 24 semanas e amplia o papel da avaliação clínica em situações de gestação avançada, com entrada em vigor prevista após 90 dias.",
+      "clinicalNote": "É um tema legal e assistencial sensível. A interpretação deve separar o texto normativo, os critérios médicos e as leituras políticas apresentadas por diferentes fontes.",
+      "evidence": "Legislação",
+      "sourceUrl": "https://revistaoeste.com/mundo/eua-governadora-de-massachusetts-revoga-limite-gestacional-para-aborto/"
+    }
+  ],
+  "quickTakes": [
+    {
+      "icon": "🩸",
+      "title": "Prazo para doação após tatuagem ou piercing foi reduzido",
+      "source": "O Globo",
+      "url": "https://oglobo.globo.com/saude/noticia/2026/08/13/prazo-de-espera-para-quem-fez-tatuagem-ou-piercing-e-reduzido.ghtml"
+    },
+    {
+      "icon": "😴",
+      "title": "Hipotireoidismo aparece associado a apneia mais frequente e grave",
+      "source": "Agência FAPESP",
+      "url": "https://agencia.fapesp.br/"
+    },
+    {
+      "icon": "🚨",
+      "title": "Anvisa proíbe produtos de limpeza sem autorização",
+      "source": "G1",
+      "url": "https://g1.globo.com/saude/"
+    }
+  ]
+}

@@ -9303,6 +9303,7 @@ function renderFlashcardOverview(all, decks, due, reviewsToday, waiting) {
       <div><span>Retenção · 30 dias</span><strong>${retention.value===null?'—':retention.value+'%'}</strong><small>${retention.total?`${retention.total} respostas registradas`:'começa após as primeiras revisões'}</small></div>
       <div><span>Sequência atual</span><strong>${streak}</strong><small>${activeDays} dias ativos no histórico</small></div>
     </section>
+    ${renderFlashcardAdaptiveCoach(all)}
     ${renderFlashcardAdaptivePrescription(all,'overview')}
     ${latestFlashcardSessionReport()?renderFlashcardSessionReport(latestFlashcardSessionReport(),{compact:true}):''}
     ${renderFlashcardSessionHistory()}
@@ -9645,6 +9646,48 @@ function startFlashcardAdaptivePrescription(prescription) {
   if(!prescription?.cards?.length) return 0;
   return startFlashcardCustomSession(prescription.cards,{deckId:'',deckByCard:prescription.deckByCard,kind:'adaptive',label:'Prescrição adaptativa',plannedMinutes:prescription.minutes});
 }
+function flashcardAdaptiveCoach(all=flashcardAllRecords(), options={}) {
+  const minutes=Math.max(5,Math.min(120,Math.round(n(options.minutes)||n(state.flashcardSettings.prescriptionMinutes)||20)));
+  const reports=(options.reports || state.flashcardSystem?.sessionReports || []).slice().sort((a,b)=>Date.parse(b.endedAt)-Date.parse(a.endedAt));
+  const recent=reports.filter(report=>(Date.parse(report.endedAt)||0)>=Date.now()-30*86400000).slice(0,5);
+  const responses=recent.reduce((total,report)=>total+n(report.responses),0);
+  const remembered=recent.reduce((total,report)=>total+n(report.remembered),0);
+  const retention=responses?Math.round(remembered/responses*100):null;
+  const planned=recent.filter(report=>n(report.plannedMinutes)>0);
+  const plannedMinutes=planned.reduce((total,report)=>total+n(report.plannedMinutes),0);
+  const actualMinutes=Math.round(planned.reduce((total,report)=>total+n(report.durationSeconds),0)/60);
+  const adherence=plannedMinutes?Math.round(actualMinutes/plannedMinutes*100):null;
+  const history=flashcardSessionWeeklyHistory(reports,4,options.referenceDate || new Date());
+  const currentWeek=history.at(-1); const previousWeek=history.at(-2);
+  const retentionTrend=currentWeek?.retention===null || previousWeek?.retention===null ? null : currentWeek.retention-previousWeek.retention;
+  const forecast=options.forecast || flashcardDueForecast(7);
+  const forecastTotal=forecast.reduce((total,row)=>total+n(row.count),0);
+  const peak=Math.max(0,...forecast.map(row=>n(row.count)));
+  const dailyCapacity=Math.max(1,Math.floor(minutes*60/flashcardEstimatedSecondsPerReview(30)));
+  const availableCards=flashcardAdaptivePrescription(all,minutes).cards.length;
+  let recommendedMinutes=minutes; let tone='steady'; let title='Mantenha o ritmo atual'; let reason='Seu plano está equilibrado para a carga e o desempenho recentes.';
+  if(!availableCards) {
+    tone='clear'; title='Fila em dia'; reason='Não há cartões novos ou vencidos para uma sessão adaptativa agora.';
+  } else if((retention!==null && retention<75) || (retentionTrend!==null && retentionTrend<=-10)) {
+    recommendedMinutes=Math.max(5,minutes-5); tone='attention'; title='Proteja sua retenção'; reason=retentionTrend!==null && retentionTrend<=-10?`A retenção caiu ${Math.abs(retentionTrend)} pontos na comparação semanal. Uma sessão menor ajuda a revisar com mais atenção.`:`A retenção recente está em ${retention}%. Reduza o volume por sessão até a memória estabilizar.`;
+  } else if(adherence!==null && adherence<70) {
+    const realistic=Math.max(5,Math.round(Math.max(5,actualMinutes/Math.max(1,planned.length))/5)*5);
+    recommendedMinutes=Math.min(Math.max(5,minutes-5),realistic); tone='attention'; title='Ajuste a meta ao seu ritmo'; reason=`Você realizou ${adherence}% do tempo planejado nas sessões recentes. Um plano menor tende a ser mais consistente.`;
+  } else if(peak>dailyCapacity*1.2) {
+    recommendedMinutes=Math.min(120,minutes+10); tone='load'; title='Antecipe a carga da semana'; reason=`O dia mais carregado tem ${peak} revisões, acima da capacidade estimada de ${dailyCapacity}. Adiantar parte da fila reduz o pico.`;
+  } else if(retention!==null && retention>=90 && (adherence===null || adherence>=85)) {
+    recommendedMinutes=Math.min(120,minutes+5); tone='growth'; title='Você pode avançar um pouco'; reason=`Com ${retention}% de retenção e bom cumprimento do plano, há espaço para ampliar a próxima sessão com segurança.`;
+  } else if(!recent.length) {
+    title='Comece com uma sessão calibrada'; reason=`O primeiro plano usará seu ritmo atual e ${availableCards} cartões disponíveis para aprender com seu desempenho.`;
+  }
+  return {minutes,recommendedMinutes,tone,title,reason,retention,retentionTrend,adherence,forecastTotal,peak,dailyCapacity,availableCards};
+}
+function renderFlashcardAdaptiveCoach(all=flashcardAllRecords()) {
+  const coach=flashcardAdaptiveCoach(all);
+  const action=coach.availableCards?`<button class="icon-btn primary" data-fc-coach-start="${coach.recommendedMinutes}">Iniciar plano de ${coach.recommendedMinutes} min</button>`:'<button class="icon-btn" disabled>Fila em dia</button>';
+  const adjustment=coach.recommendedMinutes===coach.minutes?`Manter ${coach.minutes} min`:`Ajustar de ${coach.minutes} para ${coach.recommendedMinutes} min`;
+  return `<section class="card fc-adaptive-coach tone-${coach.tone}"><div class="fc-coach-main"><span class="eyebrow">Recomendação de hoje</span><h2>${escapeHtml(coach.title)}</h2><p>${escapeHtml(coach.reason)}</p><strong>${escapeHtml(adjustment)}</strong></div><div class="fc-coach-signals"><span><b>${coach.retention===null?'—':coach.retention+'%'}</b><small>retenção recente</small></span><span><b>${coach.adherence===null?'—':coach.adherence+'%'}</b><small>plano realizado</small></span><span><b>${coach.peak}</b><small>pico em 7 dias</small></span><span><b>${coach.availableCards}</b><small>cards disponíveis</small></span></div>${action}</section>`;
+}
 function renderFlashcardAdaptivePrescription(all=flashcardAllRecords(), variant='dashboard') {
   const prescription=flashcardAdaptivePrescription(all,state.flashcardSettings.prescriptionMinutes);
   const presets=[10,20,30,45];
@@ -9824,6 +9867,50 @@ function renderFlashcardSchedulerSettings(all) {
       <div class="fc-settings-preview"><span>Exemplo de próximos intervalos</span><div>${['Novamente','Difícil','Bom','Fácil'].map((label,index)=>`<span><b>${label}</b><strong>${preview[index]}</strong></span>`).join('')}</div><small>Simulação para um card estável; cada cartão recebe um cálculo próprio.</small></div></section></div>
   </div>`;
 }
+function flashcardCollectionGroups(all=flashcardAllRecords()) {
+  const groups=new Map();
+  flashcardActiveRecords(all).forEach(card=>{
+    const lesson=card.scheduleId?scheduleLessonById(card.scheduleId):null;
+    const fallback=card.importDeck || card.subarea || card.subject || card.topic || 'Sem assunto';
+    const key=lesson?`lesson:${lesson.id}`:`loose:${fallback}`;
+    if(!groups.has(key)) groups.set(key,{key,label:lesson?flashcardLessonLabel(lesson):fallback,kind:lesson?'Aula':'Sem aula',scheduleId:lesson?.id||'',cards:[]});
+    groups.get(key).cards.push(card);
+  });
+  return [...groups.values()].map(group=>{
+    const reviewed=group.cards.filter(card=>flashcardProgress(card).reviews>0).length;
+    return {...group,count:group.cards.length,reviewed,newCount:group.cards.length-reviewed};
+  }).sort((a,b)=>a.label.localeCompare(b.label) || a.key.localeCompare(b.key));
+}
+function flashcardExportText(cards=[]) {
+  const groupByCard=new Map();
+  flashcardCollectionGroups(cards).forEach(group=>group.cards.forEach(card=>groupByCard.set(card.id,group.label)));
+  const header='#separator:tab\n#html:true\n#tags column:5\n#deck column:6\n#soqueromed:1\n';
+  const rows=cards.map(card=>[
+    ankiEscape(card.front),
+    ankiEscape(card.back),
+    ankiEscape(card.area),
+    ankiEscape(card.subarea),
+    ankiTags(card),
+    ankiEscape(groupByCard.get(card.id) || card.importDeck || card.subarea || 'Flashcards')
+  ].join('\t'));
+  return header+rows.join('\n');
+}
+function renderFlashcardManage(all) {
+  const groups=flashcardCollectionGroups(all);
+  const knownKeys=new Set(groups.map(group=>group.key));
+  if(!Array.isArray(ui.flashcardExportKeys)) ui.flashcardExportKeys=groups.map(group=>group.key);
+  ui.flashcardExportKeys=ui.flashcardExportKeys.filter(key=>knownKeys.has(key));
+  const selected=new Set(ui.flashcardExportKeys);
+  const search=String(ui.flashcardManageSearch||'').trim();
+  const terms=normalizedTopic(search).split(' ').filter(Boolean);
+  const visible=terms.length?groups.filter(group=>{const haystack=normalizedTopic(`${group.label} ${group.kind} ${group.cards[0]?.area||''}`); return terms.every(term=>haystack.includes(term));}):groups;
+  const selectedCards=groups.filter(group=>selected.has(group.key)).reduce((total,group)=>total+group.count,0);
+  const deleting=groups.find(group=>group.key===ui.flashcardDeleteCollectionKey);
+  const rows=visible.length?visible.map(group=>`<label class="fc-manage-deck ${selected.has(group.key)?'is-selected':''}"><input type="checkbox" data-fc-export-key="${escapeAttr(group.key)}" ${selected.has(group.key)?'checked':''}><span><strong>${escapeHtml(group.label)}</strong><small>${escapeHtml(group.kind)} · ${group.reviewed} revisados · ${group.newCount} novos</small></span><b>${group.count}<small>cards</small></b></label>`).join(''):'<div class="empty">Nenhum baralho encontrado nessa busca.</div>';
+  const deleteRows=visible.length?visible.map(group=>`<div class="fc-manage-delete-row"><span><strong>${escapeHtml(group.label)}</strong><small>${escapeHtml(group.kind)} · ${group.count} cards · ${group.reviewed} com histórico</small></span><button class="tiny-btn danger" data-fc-delete-collection="${escapeAttr(group.key)}">Excluir conjunto</button></div>`).join(''):'<div class="empty">Nenhum conjunto encontrado.</div>';
+  const confirmation=deleting?`<div class="fc-delete-confirm" role="alert"><div><span class="eyebrow">Confirmação obrigatória</span><h3>Excluir “${escapeHtml(deleting.label)}”?</h3><p>Serão apagados permanentemente <strong>${deleting.count} cards</strong> e o progresso individual deles. Outros baralhos não serão alterados.</p><label>Digite <b>EXCLUIR</b> para liberar a ação<input class="input" id="fcDeleteCollectionPhrase" autocomplete="off" placeholder="EXCLUIR"></label></div><div><button class="icon-btn" id="fcDeleteCollectionCancel">Cancelar</button><button class="icon-btn danger" id="fcDeleteCollectionConfirm" data-key="${escapeAttr(deleting.key)}" disabled>Excluir ${deleting.count} cards</button></div></div>`:'';
+  return `<div class="fc-manage-page"><section class="card fc-manage-hero"><div><span class="eyebrow">Controle da coleção</span><h2>Gerenciar baralhos</h2><p>Escolha exatamente o que sai na exportação e remova conjuntos inteiros somente com confirmação reforçada.</p></div><div><strong>${groups.length}</strong><span>baralhos</span><b>${all.length} cards</b></div></section><section class="card fc-manage-export"><div class="section-title"><div><span class="eyebrow">Exportação seletiva</span><h3>Quais baralhos deseja exportar?</h3><div class="muted">O arquivo preserva o nome de cada conjunto para a próxima importação.</div></div><button class="icon-btn primary" id="fcExportSelected" ${selectedCards?'':'disabled'}>Exportar ${selectedCards} cards</button></div><div class="fc-manage-toolbar"><input class="input" id="fcManageSearch" value="${escapeAttr(search)}" placeholder="Buscar baralho ou aula"><button class="tiny-btn" id="fcExportSelectAll">Selecionar todos</button><button class="tiny-btn" id="fcExportSelectNone">Limpar seleção</button><span><b>${selected.size}</b> de ${groups.length} baralhos</span></div><div class="fc-manage-deck-list">${rows}</div></section><details class="card fc-manage-danger" ${deleting?'open':''}><summary><span><strong>Excluir conjuntos de flashcards</strong><small>Zona protegida · exclusão permanente</small></span><span class="badge no">Cuidado</span></summary><div class="fc-manage-danger-body"><div class="fc-manage-warning"><strong>Faça um backup antes de excluir.</strong><span>A exclusão também remove o progresso dos cards escolhidos e será sincronizada entre dispositivos.</span><button class="tiny-btn" id="fcManageBackup">Baixar backup agora</button></div>${confirmation}<div class="fc-manage-delete-list">${deleteRows}</div></div></details></div>`;
+}
 function renderFlashcards() {
   // O overlay vive no body (fora de #flashcards), então não é substituído pelo
   // innerHTML abaixo: precisa ser removido explicitamente a cada render.
@@ -9883,15 +9970,51 @@ function renderFlashcards() {
         ? renderFlashcardCustomStudy(all)
       : ui.flashcardView === 'settings'
         ? renderFlashcardSchedulerSettings(all)
+      : ui.flashcardView === 'manage'
+        ? renderFlashcardManage(all)
         : studyContent;
   document.getElementById('flashcards').innerHTML = `<div class="card flashcard-command"><div class="flashcard-command-copy"><span class="flashcard-command-icon" aria-hidden="true">${iconSvg('flashcard',{weight:'duotone'})}</span><div><div class="eyebrow">Revisão inteligente</div><h1>Flashcards</h1><div class="muted">Entenda sua carga, organize os baralhos e revise no momento certo.</div></div></div><div class="flashcard-command-actions"><button class="icon-btn primary" id="newFlashcardBtn">${iconSvg('add',{weight:'bold'})}<span>Novo card</span></button><button class="icon-btn" id="flashcardUndoBtn">Desfazer</button><button class="icon-btn" id="flashcardBackupBtn">Backup</button><button class="icon-btn" id="ankiExportBtn">Exportar</button><button class="icon-btn" id="ankiImportBtn" title="Importar cards de um arquivo exportado do Anki (.tsv)">Importar</button><button class="icon-btn ${unlinkedCount?'warn':''}" id="flashcardOrganizerBtn" title="Vincular em lote os cards que ainda não pertencem a nenhuma aula">Cards sem aula${unlinkedCount?` (${unlinkedCount})`:''}</button></div></div>
-  <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button><button class="${ui.flashcardView==='custom'?'active':''}" data-fc-view="custom">Personalizar</button><button class="${ui.flashcardView==='browser'?'active':''}" data-fc-view="browser">Navegar <span>${all.length}</span></button><button class="${ui.flashcardView==='settings'?'active':''}" data-fc-view="settings">Configurar</button></nav>
+  <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button><button class="${ui.flashcardView==='custom'?'active':''}" data-fc-view="custom">Personalizar</button><button class="${ui.flashcardView==='browser'?'active':''}" data-fc-view="browser">Navegar <span>${all.length}</span></button><button class="${ui.flashcardView==='settings'?'active':''}" data-fc-view="settings">Configurar</button><button class="${ui.flashcardView==='manage'?'active':''}" data-fc-view="manage">Gerenciar</button></nav>
   <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">${mainContent}${ui.flashcardOrganizerOpen ? renderFlashcardOrganizer() : ''}`;
   bindFlashcardPrescriptionControls(document.getElementById('flashcards'),renderFlashcards,()=>renderFlashcards());
+  document.querySelectorAll('[data-fc-coach-start]').forEach(button=>button.addEventListener('click',event=>{
+    const minutes=Math.max(5,Math.min(120,n(event.currentTarget.dataset.fcCoachStart)));
+    state.flashcardSettings.prescriptionMinutes=minutes;
+    const prescription=flashcardAdaptivePrescription(flashcardAllRecords(),minutes);
+    if(startFlashcardAdaptivePrescription(prescription)) persist();
+  }));
   document.querySelectorAll('[data-fc-view]').forEach(button => button.onclick = event => {
     ui.flashcardView = event.currentTarget.dataset.fcView;
     ui.flashcardFocusMode = false;
     ui.flashcardSessionDone = false;
+    renderFlashcards();
+  });
+  document.querySelectorAll('[data-fc-export-key]').forEach(input=>input.onchange=event=>{
+    const key=event.currentTarget.dataset.fcExportKey;
+    const selected=new Set(ui.flashcardExportKeys || []);
+    event.currentTarget.checked?selected.add(key):selected.delete(key);
+    ui.flashcardExportKeys=[...selected];
+    renderFlashcards();
+  });
+  document.getElementById('fcExportSelectAll')?.addEventListener('click',()=>{ui.flashcardExportKeys=flashcardCollectionGroups(all).map(group=>group.key); renderFlashcards();});
+  document.getElementById('fcExportSelectNone')?.addEventListener('click',()=>{ui.flashcardExportKeys=[]; renderFlashcards();});
+  document.getElementById('fcExportSelected')?.addEventListener('click',()=>{
+    const selected=new Set(ui.flashcardExportKeys || []);
+    exportAnkiTsv(flashcardCollectionGroups(all).filter(group=>selected.has(group.key)).flatMap(group=>group.cards));
+  });
+  document.getElementById('fcManageSearch')?.addEventListener('change',event=>{ui.flashcardManageSearch=event.currentTarget.value; renderFlashcards();});
+  document.getElementById('fcManageBackup')?.addEventListener('click',exportFlashcardBackup);
+  document.querySelectorAll('[data-fc-delete-collection]').forEach(button=>button.addEventListener('click',event=>{ui.flashcardDeleteCollectionKey=event.currentTarget.dataset.fcDeleteCollection; renderFlashcards();}));
+  document.getElementById('fcDeleteCollectionCancel')?.addEventListener('click',()=>{ui.flashcardDeleteCollectionKey=''; renderFlashcards();});
+  document.getElementById('fcDeleteCollectionPhrase')?.addEventListener('input',event=>{const button=document.getElementById('fcDeleteCollectionConfirm'); if(button) button.disabled=event.currentTarget.value.trim().toUpperCase()!=='EXCLUIR';});
+  document.getElementById('fcDeleteCollectionConfirm')?.addEventListener('click',event=>{
+    const group=flashcardCollectionGroups(flashcardAllRecords()).find(item=>item.key===event.currentTarget.dataset.key);
+    if(!group || document.getElementById('fcDeleteCollectionPhrase')?.value.trim().toUpperCase()!=='EXCLUIR') return;
+    const removed=deleteFlashcardsByIds(group.cards.map(card=>card.id));
+    ui.flashcardDeleteCollectionKey='';
+    ui.flashcardExportKeys=(ui.flashcardExportKeys || []).filter(key=>key!==group.key);
+    persist();
+    showStudyToast?.(`${removed} ${removed===1?'card excluído':'cards excluídos'} do conjunto “${group.label}”.`);
     renderFlashcards();
   });
   document.querySelectorAll('[data-fc-custom-mode]').forEach(button => button.onclick = event => {
@@ -10175,6 +10298,15 @@ function renderFlashcards() {
     if(!group.scheduleId && group.mode === 'replace') group.mode = 'add';
     renderFlashcards();
   });
+  document.querySelectorAll('[data-import-enabled]').forEach(input=>input.onchange=e=>{
+    const group=ui.flashcardImport?.groups[n(e.currentTarget.dataset.importEnabled)];
+    if(!group) return;
+    if(e.currentTarget.checked) group.mode=group.previousMode==='replace' && group.scheduleId?'replace':'add';
+    else { group.previousMode=group.mode==='replace'?'replace':'add'; group.mode='skip'; }
+    renderFlashcards();
+  });
+  document.getElementById('flashcardImportSelectAll')?.addEventListener('click',()=>{(ui.flashcardImport?.groups||[]).forEach(group=>{group.mode=group.previousMode==='replace' && group.scheduleId?'replace':'add';}); renderFlashcards();});
+  document.getElementById('flashcardImportSelectNone')?.addEventListener('click',()=>{(ui.flashcardImport?.groups||[]).forEach(group=>{group.previousMode=group.mode==='replace'?'replace':'add'; group.mode='skip';}); renderFlashcards();});
   document.querySelectorAll('[data-import-mode]').forEach(select => select.onchange = e => {
     const group = ui.flashcardImport?.groups[n(e.currentTarget.dataset.importMode)];
     if(!group) return;
@@ -10208,7 +10340,7 @@ function renderFlashcards() {
   const speedToggle = document.getElementById('flashcardSpeedToggle');
   if(speedToggle) speedToggle.onclick = () => { ui.flashcardSpeedMode = !ui.flashcardSpeedMode; ui.flashcardSpeedCardId = ''; ui.flashcardCardStartedAt = 0; ui.flashcardSpeedBeeped = false; renderFlashcards(); };
   const exportBtn = document.getElementById('ankiExportBtn');
-  if(exportBtn) exportBtn.onclick = exportAnkiTsv;
+  if(exportBtn) exportBtn.onclick = () => { ui.flashcardView='manage'; renderFlashcards(); };
   document.getElementById('ankiImportBtn')?.addEventListener('click', () => document.getElementById('ankiImportFile')?.click());
   document.getElementById('ankiImportFile')?.addEventListener('change', importAnkiTsv);
   const backupBtn = document.getElementById('flashcardBackupBtn');
@@ -10645,19 +10777,9 @@ function ankiTags(card) {
   ].map(tag => tag.replace(/\s+/g, '_').replace(/[;,\t]/g, '')).join(' ');
 }
 function exportAnkiTsv() {
-  const cards = filteredFlashcards(flashcardAllRecords());
+  const cards = arguments.length ? [...(arguments[0] || [])] : filteredFlashcards(flashcardAllRecords());
   if(!cards.length) { alert('Nenhum flashcard para exportar neste filtro.'); return; }
-  // O marcador permite ao importador confiar nas colunas 3 e 4 (área/assunto),
-  // que só existem no export do próprio app.
-  const header = '#separator:tab\n#html:true\n#tags column:5\n#soqueromed:1\n';
-  const rows = cards.map(card => [
-    ankiEscape(card.front),
-    ankiEscape(card.back),
-    ankiEscape(card.area),
-    ankiEscape(card.subarea),
-    ankiTags(card)
-  ].join('\t'));
-  const blob = new Blob([header + rows.join('\n')], {type:'text/tab-separated-values;charset=utf-8'});
+  const blob = new Blob([flashcardExportText(cards)], {type:'text/tab-separated-values;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = `soqueromed-anki-${localISODate(new Date())}.tsv`;
@@ -10857,14 +10979,15 @@ function renderFlashcardImportPanel() {
   const lockedLesson = job.lockedScheduleId ? scheduleLessonById(job.lockedScheduleId) : null;
   return `<div class="flashcard-editor workspace-editor flashcard-import-panel">
     <div class="section-title"><div><h2>Importar flashcards</h2><div class="muted">${escapeHtml(job.fileName)} · ${job.total} ${job.total===1?'card lido':'cards lidos'}${lockedLesson?` · destino fixo: ${escapeHtml(flashcardLessonLabel(lockedLesson))}`:''}</div></div><button class="icon-btn" id="flashcardImportCancel">Cancelar</button></div>
-    <div class="muted">Escolha a aula de destino de cada grupo. <strong>Adicionar</strong> soma aos cards que já existem na aula; <strong>substituir</strong> apaga os cards atuais daquela aula antes de importar; <strong>ignorar</strong> descarta o grupo.</div>
+    <div class="muted">Marque somente os baralhos que deseja trazer e escolha a aula de destino. <strong>Adicionar</strong> soma aos cards existentes; <strong>substituir</strong> apaga os cards atuais da aula antes de importar.</div>
+    <div class="flashcard-import-bulk"><button class="tiny-btn" id="flashcardImportSelectAll">Selecionar todos</button><button class="tiny-btn" id="flashcardImportSelectNone">Não importar nenhum</button><span>${job.groups.filter(group=>group.mode!=='skip').length} de ${job.groups.length} baralhos selecionados</span></div>
     <div class="flashcard-import-groups">${job.groups.map((group,index) => {
       const lesson = scheduleLessonById(group.scheduleId);
       const existing = group.scheduleId ? flashcardsForSchedule(group.scheduleId).length : 0;
-      return `<div class="flashcard-import-group">
-        <div class="flashcard-import-group-head"><strong>${escapeHtml(group.label)}</strong><span class="badge today">${group.rows.length} ${group.rows.length===1?'card':'cards'}</span></div>
+      return `<div class="flashcard-import-group ${group.mode==='skip'?'is-skipped':''}">
+        <div class="flashcard-import-group-head"><label class="flashcard-import-choice"><input type="checkbox" data-import-enabled="${index}" ${group.mode!=='skip'?'checked':''}><span><strong>${escapeHtml(group.label)}</strong><small>${group.mode==='skip'?'Não será importado':'Importar este baralho'}</small></span></label><span class="badge today">${group.rows.length} ${group.rows.length===1?'card':'cards'}</span></div>
         <label>Aula de destino${flashcardLessonSelectHtml(`data-import-lesson="${index}" ${job.lockedScheduleId?'disabled':''}`, group.scheduleId, 'Sem aula (deixar solto)')}</label>
-        <label>Ao importar<select class="select" data-import-mode="${index}"><option value="add" ${group.mode==='add'?'selected':''}>Adicionar aos existentes</option><option value="replace" ${group.mode==='replace'?'selected':''} ${group.scheduleId?'':'disabled'}>Substituir os cards da aula</option><option value="skip" ${group.mode==='skip'?'selected':''}>Ignorar este grupo</option></select></label>
+        <label>Ao importar<select class="select" data-import-mode="${index}" ${group.mode==='skip'?'disabled':''}><option value="add" ${group.mode!=='replace'?'selected':''}>Adicionar aos existentes</option><option value="replace" ${group.mode==='replace'?'selected':''} ${group.scheduleId?'':'disabled'}>Substituir os cards da aula</option></select></label>
         <div class="muted">${lesson ? `${existing} ${existing===1?'card já vinculado':'cards já vinculados'} a esta aula${group.guessed && group.scheduleId?' · sugestão automática, confira':''}` : 'Sem aula: os cards ficam na lista "Cards sem aula" para você vincular depois.'}</div>
         <details><summary>Ver amostra</summary><div class="flashcard-import-sample">${group.rows.slice(0,3).map(row => `<div><strong>${escapeHtml(row.front.slice(0,140))}</strong><span>${escapeHtml(row.back.slice(0,140))}</span></div>`).join('')}</div></details>
       </div>`;

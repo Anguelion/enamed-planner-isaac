@@ -660,6 +660,38 @@ test('prescrição adaptativa usa a fila geral mesmo sem Baralho Inteligente', (
   assert.equal(ctx.startFlashcardAdaptivePrescription(prescription),2);
 });
 
+test('coach reduz a sessão quando a retenção recente está baixa', () => {
+  const ctx = loadPlannerSandbox();
+  const card=ctx.normalizeFlashcardRecord({id:'coach-retention',front:'F',back:'V'});
+  const reports=[{id:'coach-low',endedAt:new Date().toISOString(),responses:10,remembered:6,plannedMinutes:20,durationSeconds:1200}];
+  const coach=plain(ctx.flashcardAdaptiveCoach([card],{minutes:20,reports,forecast:Array.from({length:7},()=>({count:0}))}));
+  assert.equal(coach.retention,60);
+  assert.equal(coach.recommendedMinutes,15);
+  assert.equal(coach.tone,'attention');
+});
+
+test('coach ajusta a meta ao tempo que realmente foi cumprido', () => {
+  const ctx = loadPlannerSandbox();
+  const card=ctx.normalizeFlashcardRecord({id:'coach-time',front:'F',back:'V'});
+  const reports=[{id:'coach-short',endedAt:new Date().toISOString(),responses:10,remembered:8,plannedMinutes:20,durationSeconds:600}];
+  const coach=plain(ctx.flashcardAdaptiveCoach([card],{minutes:20,reports,forecast:Array.from({length:7},()=>({count:0}))}));
+  assert.equal(coach.adherence,50);
+  assert.equal(coach.recommendedMinutes,10);
+  assert.match(coach.title,/ritmo/i);
+});
+
+test('coach amplia a sessão diante de carga alta ou desempenho forte', () => {
+  const ctx = loadPlannerSandbox();
+  const card=ctx.normalizeFlashcardRecord({id:'coach-growth',front:'F',back:'V'});
+  const overloaded=plain(ctx.flashcardAdaptiveCoach([card],{minutes:5,reports:[],forecast:[{count:20}]}));
+  assert.equal(overloaded.recommendedMinutes,15);
+  assert.equal(overloaded.tone,'load');
+  const reports=[{id:'coach-strong',endedAt:new Date().toISOString(),responses:20,remembered:19,plannedMinutes:20,durationSeconds:1200}];
+  const strong=plain(ctx.flashcardAdaptiveCoach([card],{minutes:20,reports,forecast:Array.from({length:7},()=>({count:0}))}));
+  assert.equal(strong.recommendedMinutes,25);
+  assert.equal(strong.tone,'growth');
+});
+
 test('mais tempo amplia a prescrição sem ultrapassar os cards disponíveis', () => {
   const ctx = loadPlannerSandbox();
   const state=stateOf(ctx);
@@ -764,4 +796,52 @@ test('histórico de sessões aceita apenas períodos suportados', () => {
   assert.equal(ctx.flashcardSessionWeeklyHistory([],8,reference).length,8);
   assert.equal(ctx.flashcardSessionWeeklyHistory([],12,reference).length,12);
   assert.equal(ctx.flashcardSessionWeeklyHistory([],99,reference).length,4);
+});
+
+test('gerenciamento agrupa baralhos por aula e mantém importações soltas separadas', () => {
+  const ctx=loadPlannerSandbox();
+  const lesson=withLesson(ctx);
+  const state=stateOf(ctx);
+  const linked=ctx.normalizeFlashcardRecord({id:'manage-linked',front:'A',back:'1'});
+  ctx.applyScheduleToFlashcard(linked,lesson.id);
+  const looseA=ctx.normalizeFlashcardRecord({id:'manage-loose-a',front:'B',back:'2',importDeck:'Baralho Azul',subarea:'Azul'});
+  const looseB=ctx.normalizeFlashcardRecord({id:'manage-loose-b',front:'C',back:'3',importDeck:'Baralho Verde',subarea:'Verde'});
+  state.flashcardLibrary.push(linked,looseA,looseB);
+  state.flashcardProgress[linked.id]={reviews:3,nextReview:'2026-08-20'};
+  const groups=plain(ctx.flashcardCollectionGroups(ctx.flashcardAllRecords()));
+  assert.equal(groups.length,3);
+  assert.equal(groups.find(group=>group.key===`lesson:${lesson.id}`).reviewed,1);
+  assert.equal(groups.find(group=>group.label==='Baralho Azul').count,1);
+  assert.equal(groups.find(group=>group.label==='Baralho Verde').kind,'Sem aula');
+});
+
+test('exportação seletiva preserva o nome dos baralhos para a importação', () => {
+  const ctx=loadPlannerSandbox();
+  const cards=[
+    ctx.normalizeFlashcardRecord({id:'export-a',front:'Pergunta A',back:'Resposta A',area:'Clínica',subarea:'Cardio',importDeck:'Cardio essencial'}),
+    ctx.normalizeFlashcardRecord({id:'export-b',front:'Pergunta B',back:'Resposta B',area:'Cirurgia',subarea:'Trauma',importDeck:'Trauma rápido'})
+  ];
+  const text=ctx.flashcardExportText([cards[1]]);
+  assert.match(text,/#deck column:6/);
+  assert.doesNotMatch(text,/Pergunta A/);
+  const rows=plain(ctx.parseFlashcardImportFile(text,'selecionados.tsv'));
+  assert.equal(rows.length,1);
+  assert.equal(rows[0].deck,'Trauma rápido');
+  assert.equal(rows[0].front,'Pergunta B');
+});
+
+test('excluir um conjunto remove somente os cards daquele baralho', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const target=ctx.normalizeFlashcardRecord({id:'delete-set-a',front:'A',back:'1',importDeck:'Excluir este'});
+  const keep=ctx.normalizeFlashcardRecord({id:'delete-set-b',front:'B',back:'2',importDeck:'Manter este'});
+  state.flashcardLibrary.push(target,keep);
+  state.flashcardProgress[target.id]={reviews:2};
+  state.flashcardProgress[keep.id]={reviews:1};
+  const group=ctx.flashcardCollectionGroups(ctx.flashcardAllRecords()).find(item=>item.label==='Excluir este');
+  assert.equal(ctx.deleteFlashcardsByIds(group.cards.map(card=>card.id)),1);
+  assert.equal(ctx.flashcardAllRecords().some(card=>card.id===target.id),false);
+  assert.equal(ctx.flashcardAllRecords().some(card=>card.id===keep.id),true);
+  assert.equal(state.flashcardProgress[target.id],undefined);
+  assert.ok(state.flashcardProgress[keep.id]);
 });
