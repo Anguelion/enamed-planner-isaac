@@ -91,6 +91,7 @@ let materialLibraryStatus = 'Carregando resumos...';
 let importedSimulados = [];
 let importedSimuladosStatus = 'Carregando simulados importados...';
 let questionBankLoadPromise = null;
+let questionBankExpansionPromise = null;
 let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
 let materialGlobalSearchTimer = null;
@@ -2297,12 +2298,14 @@ document.addEventListener('click', event => {
   document.querySelectorAll('.dashboard-bars.weekly-bars>div>span.show-value').forEach(el => { if(el !== bar) el.classList.remove('show-value'); });
   if(bar) bar.classList.toggle('show-value');
 });
-function loadQuestionBank() {
-  if(!questionBankLoadPromise) questionBankLoadPromise = loadQuestionBankNow();
+function loadQuestionBank(preferredBlock='') {
+  if(!questionBankLoadPromise) questionBankLoadPromise = loadQuestionBankNow(preferredBlock);
   return questionBankLoadPromise;
 }
-async function loadQuestionBankNow() {
-  await loadLocalQuestionBank();
+async function loadQuestionBankNow(preferredBlock='') {
+  // Libera a tela após a primeira coleção relevante; o restante do banco é
+  // incorporado progressivamente sem prender a navegação por dezenas de segundos.
+  await loadLocalQuestionBank({initialOnly:true,preferredBlock});
   backfillQuestionScheduleLinks();
   reconcileQuestionProgressWithAnswers();
   const localQuestions = [...questionBank];
@@ -2310,6 +2313,9 @@ async function loadQuestionBankNow() {
   // normalizar novamente milhares de registros iguais vindos do Supabase.
   if(localQuestions.length) {
     if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
+    if(!questionBankExpansionPromise) {
+      questionBankExpansionPromise = loadRemainingQuestionBank().finally(() => { questionBankExpansionPromise = null; });
+    }
     return;
   }
   if(!currentUser || !sbClient) {
@@ -2362,16 +2368,27 @@ async function loadQuestionBankNow() {
   reconcileQuestionProgressWithAnswers();
   if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
 }
+async function loadRemainingQuestionBank() {
+  await loadLocalQuestionBank();
+  reconcileQuestionProgressWithAnswers();
+  if(['questoes','simulados','analise'].includes(ui.tab)) render();
+}
+const questionBlockLoadPromises = new Map();
 function loadQuestionBlockScript(src) {
-  return new Promise(resolve => {
+  if(questionBlockLoadPromises.has(src)) return questionBlockLoadPromises.get(src);
+  const promise = new Promise(resolve => {
     if(document.querySelector(`script[data-question-block="${src}"]`)) return resolve();
     const script = document.createElement('script');
     script.src = `question_bank/${src}?v=${QUESTION_BANK_ASSET_VERSION}`;
     script.dataset.questionBlock = src;
-    script.onload = () => resolve();
-    script.onerror = () => resolve();
+    script.onload = script.onerror = () => {
+      questionBlockLoadPromises.delete(src);
+      resolve();
+    };
     document.head.appendChild(script);
   });
+  questionBlockLoadPromises.set(src,promise);
+  return promise;
 }
 const questionCommentLoadPromises = new Map();
 function hydrateQuestionBlockComments(block) {
@@ -2406,13 +2423,20 @@ function ensureQuestionCommentLoaded(question) {
   });
   questionCommentLoadPromises.set(block, promise);
 }
-async function loadLocalQuestionBank() {
+async function loadLocalQuestionBank({initialOnly=false,preferredBlock=''}={}) {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
   window.ENAMED_LOCAL_QUESTION_BANK = window.ENAMED_LOCAL_QUESTION_BANK || {};
   // Executar os 30 scripts no mesmo instante trava aparelhos mais modestos.
   // Pequenos lotes preservam a rolagem e os toques durante a carga inicial.
-  const pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
+  let pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
+  if(initialOnly) {
+    const preferred = String(preferredBlock || (ui.qBlock !== 'Todos' ? ui.qBlock : currentScheduleBlock()));
+    const first = pending.find(block => String(block.block) === preferred)
+      || pending.find(block => Number.isFinite(Number(block.block)))
+      || pending[0];
+    pending = first ? [first] : [];
+  }
   for(let start=0; start<pending.length; start+=4) {
     await Promise.all(pending.slice(start,start+4).map(block => loadQuestionBlockScript(`${block.script}?v=${encodeURIComponent(index.generatedAt || '')}`)));
     // requestAnimationFrame nunca dispara com a aba oculta/em segundo plano, o que travava o carregamento pela metade.
@@ -10170,9 +10194,16 @@ function questionSessionPlan(item, linked) {
   const sessionSize=openingExtras ? unanswered.length : Math.min(targetRemaining,unanswered.length);
   return {target,completed,unanswered,bankCompleted,openingExtras,sessionSize,focusTarget:bankCompleted+sessionSize};
 }
-function openQuestionsForSchedule(scheduleId) {
+async function openQuestionsForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
+  // A Missão pode abrir antes de qualquer coleção ter sido carregada. Busca
+  // primeiro apenas o bloco desta aula, em vez de concluir prematuramente que
+  // ela não possui questões ou esperar o banco completo.
+  if(!questionBank.some(question => String(question.collectionBlock) === String(item.block))) {
+    ui.qBlock = String(item.block);
+    await loadLocalQuestionBank({initialOnly:true,preferredBlock:String(item.block)});
+  }
   const linkedByTopic = questionBank.filter(question => questionMatchesSchedule(question, item));
   const direct = questionBank.filter(question => question.scheduleId === item.id && String(question.collectionBlock) === String(item.block));
   // A ligação por bloco + tema é mais confiável do que um scheduleId legado
