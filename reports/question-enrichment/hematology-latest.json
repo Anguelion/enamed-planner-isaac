@@ -1,148 +1,54 @@
 {
-  "generatedAt": "2026-08-17T07:19:28.457Z",
+  "generatedAt": "2026-08-17T19:01:00.635Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 4,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-b6b9f1b12d7f237f",
-      "number": "1040f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-23-anos-idade92a02bd08e/",
-      "sourceQuestionId": "4000141260",
-      "matchedAt": "2026-08-17T07:19:29.427Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Introdução à hemólise"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Introdução à hemólise. Conduta/resposta: elevação da desidrogenase láctica, aumento de reticulócitos e queda da haptoglobina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-23-anos-idade92a02bd08e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-d6594e4abea3e3ac",
-      "number": "1041f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-24a-procura115f6b3ea66/",
-      "sourceQuestionId": "4000141116",
-      "matchedAt": "2026-08-17T07:19:35.431Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Crise de sequestro esplênico"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Crise de sequestro esplênico. Conduta/resposta: Sequestro hepático.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-24a-procura115f6b3ea66/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-b1b8e2a82e53a9d9",
-      "number": "1042f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-8-anos-idade117a2a24b48/",
-      "sourceQuestionId": "4000140683",
-      "matchedAt": "2026-08-17T07:19:41.256Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Tratamento da anemia falciforme",
-        "Suporte transfusional na anemia falciforme"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Suporte transfusional na anemia falciforme. Conduta/resposta: Está indicado concentrado de hemácias lavado e desleucocitado.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-8-anos-idade117a2a24b48/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-5f8f75b88cadf212",
-      "number": "1043f",
+      "id": "anki-hematologia-anemias-hemoliticas-55f0a8853209faa5",
+      "number": "1046f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/doenc-falciformes1195e2d9cb/",
-        "https://med.estrategia.com/public/questoes/doenc-anemia1643ef0be82/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.10526315789473684,
-        "options": 0.13130975998755204,
-        "combined": 0.11307713852258139
-      }
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-04d6c66307d1ee1d",
-      "number": "1044f",
+      "id": "anki-hematologia-anemias-hemoliticas-516e98f91f12a9a8",
+      "number": "1047f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/a-Anemia-Falciforme13571cc405c/",
-      "sourceQuestionId": "4000133197",
-      "matchedAt": "2026-08-17T07:19:54.178Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemia falciforme. Conduta/resposta: F, V, F, V, V.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/a-Anemia-Falciforme13571cc405c/",
-        "https://med.estrategia.com/public/questoes/assertiva-a-anemia960712f92/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-0f715520ae052e72",
-      "number": "1045f",
+      "id": "anki-hematologia-anemias-hemoliticas-fb58df78533cbb60",
+      "number": "1048f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-03136497244bd65a",
+      "number": "1049f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-7ce25bb12961bb09",
+      "number": "1050f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-e368e2e200f0425a",
+      "number": "1051f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
       "status": "not_found",
