@@ -10807,8 +10807,27 @@ function renderFlashcards() {
   updateFlashcardContentWarnings();
   document.querySelectorAll('[data-flashcard-deck]').forEach(button => button.onclick = e => { ui.flashcardDeck = e.currentTarget.dataset.flashcardDeck; const [areaValue, subareaValue] = ui.flashcardDeck.split('|'); ui.flashcardArea=areaValue || 'Todas'; ui.flashcardSubarea=subareaValue || 'Todas'; ui.flashcardIndex=0; ui.flashcardSessionDone=false; ui.revealedCards={}; renderFlashcards(); });
   document.querySelectorAll('[data-reveal-card]').forEach(button => button.onclick = e => {
+    e.stopPropagation();
     ui.revealedCards[e.currentTarget.dataset.revealCard] = true;
     renderFlashcards();
+  });
+  document.querySelectorAll('[data-toggle-flashcard]').forEach(card => {
+    const toggle = () => {
+      const cardId = card.dataset.toggleFlashcard;
+      if(ui.revealedCards[cardId]) delete ui.revealedCards[cardId];
+      else ui.revealedCards[cardId] = true;
+      renderFlashcards();
+    };
+    card.onclick = event => {
+      if(event.target.closest('button,a,input,textarea,select,summary,[contenteditable="true"]')) return;
+      toggle();
+    };
+    card.onkeydown = event => {
+      if(event.target !== card || !['Enter',' '].includes(event.key)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      toggle();
+    };
   });
   document.querySelectorAll('[data-card-quality]').forEach(button => button.onclick = e => reviewFlashcard(e.currentTarget.dataset.cardId, n(e.currentTarget.dataset.cardQuality)));
   document.querySelectorAll('[data-card-suspend]').forEach(button => button.onclick = e => suspendFlashcard(e.currentTarget.dataset.cardSuspend));
@@ -10980,7 +10999,7 @@ function renderFlashcardStudy(card, queue=[]) {
   const memoryFace = revealed
     ? `<section class="flashcard-memory-face flashcard-memory-back"><span class="flashcard-face-label">Verso</span><div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div></section>`
     : `<section class="flashcard-memory-face flashcard-memory-front"><span class="flashcard-face-label">Frente</span><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div><button class="icon-btn primary" data-reveal-card="${card.id}">Virar cartão</button></section>`;
-  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today flashcard-focus-clock" id="flashcardFocusClock" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="${ui.flashcardFocusPaused ? 'Pausado ·' : 'Estudando ·'}">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-memory-card ${revealed?'is-revealed':''}"><div class="flashcard-memory-card-inner">${memoryFace}</div></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-rating-reveal">${renderFlashcardRating(card.id)}</div>` : ''}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
+  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today flashcard-focus-clock" id="flashcardFocusClock" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="${ui.flashcardFocusPaused ? 'Pausado ·' : 'Estudando ·'}">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-memory-card ${revealed?'is-revealed':''}" data-toggle-flashcard="${escapeAttr(card.id)}" role="button" tabindex="0" aria-label="${revealed?'Mostrar frente':'Mostrar verso'}" aria-pressed="${Boolean(revealed)}"><div class="flashcard-memory-card-inner">${memoryFace}</div></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-rating-reveal">${renderFlashcardRating(card.id)}</div>` : ''}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;

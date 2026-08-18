@@ -1135,11 +1135,14 @@ test('sessão apresenta frente e verso como um cartão animado', () => {
   state.flashcardLibrary.push(card);
   let html=ctx.renderFlashcardStudy(card,[card]);
   assert.match(html,/flashcard-memory-card/);
+  assert.match(html,/data-toggle-flashcard="animated-card"/);
+  assert.match(html,/aria-label="Mostrar verso"/);
   assert.match(html,/flashcard-memory-front/);
   assert.match(html,/Virar cartão/);
   uiOf(ctx).revealedCards[card.id]=true;
   html=ctx.renderFlashcardStudy(card,[card]);
   assert.match(html,/flashcard-memory-card is-revealed/);
+  assert.match(html,/aria-label="Mostrar frente"/);
   assert.match(html,/flashcard-memory-back/);
   assert.doesNotMatch(html,/flashcard-memory-front/);
   assert.match(html,/Esta é a resposta/);

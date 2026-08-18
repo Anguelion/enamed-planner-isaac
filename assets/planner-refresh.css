@@ -863,7 +863,8 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 }
 
 #flashcards .flashcard-study-top { margin-bottom: 2px; }
-#flashcards .flashcard-memory-card { width: min(100%,760px); min-height: 330px; margin: 16px auto 4px; }
+#flashcards .flashcard-memory-card { width: min(100%,760px); min-height: 330px; margin: 16px auto 4px; cursor: pointer; }
+#flashcards .flashcard-memory-card:focus-visible { outline: 3px solid color-mix(in srgb,var(--fc-accent) 58%,transparent); outline-offset: 5px; }
 #flashcards .flashcard-memory-card-inner { position: relative; display: grid; min-height: 330px; animation: fc-card-deal .28s ease-out both; }
 #flashcards .flashcard-memory-card.is-revealed .flashcard-memory-card-inner { animation: fc-card-flip .34s cubic-bezier(.2,.78,.2,1) both; }
 #flashcards .flashcard-memory-face { position: relative; grid-area: 1 / 1; display: grid; align-content: center; justify-items: center; gap: 24px; min-height: 330px; padding: clamp(28px,5vw,54px); overflow: hidden; border: 1px solid color-mix(in srgb,var(--fc-accent) 16%,var(--fc-border)); border-radius: 22px; background: linear-gradient(145deg,color-mix(in srgb,var(--panel) 98%,var(--fc-soft)),var(--panel)); box-shadow: 0 24px 55px color-mix(in srgb,var(--ink) 12%,transparent),0 3px 0 color-mix(in srgb,var(--fc-accent) 18%,transparent); }
