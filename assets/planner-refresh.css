@@ -1182,10 +1182,21 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 #flashcards .flashcard-import-quality > span { color: var(--muted); font-size: 8px; }
 #flashcards .flashcard-import-quality > span b { color: var(--ink); }
 #flashcards .flashcard-import-quality > strong { color: var(--fc-accent); font-size: 9px; text-align: right; }
+#flashcards .flashcard-import-quality.repair { background: color-mix(in srgb,var(--teal) 9%,var(--panel)); }
+#flashcards .flashcard-import-quality .repair b { color: var(--teal); }
+#flashcards .flashcard-repair-safety { display: grid; gap: 4px; padding: 11px 12px; border: 1px solid color-mix(in srgb,var(--teal) 28%,var(--line)); border-radius: 10px; background: color-mix(in srgb,var(--teal) 7%,var(--panel)); }
+#flashcards .flashcard-repair-safety strong { color: var(--teal); font-size: 10px; }
+#flashcards .flashcard-repair-safety span { color: var(--muted); font-size: 9px; line-height: 1.45; }
 #flashcards .flashcard-import-sample > div { position: relative; padding-right: 90px; }
 #flashcards .flashcard-import-sample em { position: absolute; top: 7px; right: 7px; padding: 3px 6px; border-radius: 99px; background: var(--fc-soft); color: var(--fc-accent); font-size: 7px; font-style: normal; font-weight: 900; text-transform: uppercase; }
 #flashcards .flashcard-import-sample em.status-duplicate { background: color-mix(in srgb,var(--amber) 12%,var(--panel)); color: var(--amber); }
 #flashcards .flashcard-import-sample em.status-conflict, #flashcards .flashcard-import-sample em.status-similar { background: color-mix(in srgb,var(--danger) 10%,var(--panel)); color: var(--danger); }
+#flashcards .flashcard-import-sample em.status-repair { background: color-mix(in srgb,var(--teal) 12%,var(--panel)); color: var(--teal); }
+#flashcards .flashcard-import-sample em.status-repair-missing { background: color-mix(in srgb,var(--danger) 10%,var(--panel)); color: var(--danger); }
+#flashcards .flashcard-repair-diff { display: grid !important; grid-template-columns: 48px minmax(0,1fr); gap: 6px 10px; padding: 12px 110px 12px 10px !important; }
+#flashcards .flashcard-repair-diff > small { padding-top: 2px; color: var(--muted); font-size: 7px; font-weight: 900; text-transform: uppercase; }
+#flashcards .flashcard-repair-diff > span { display: grid; gap: 3px; min-width: 0; color: var(--muted); font-size: 8px; line-height: 1.4; }
+#flashcards .flashcard-repair-diff > span b { overflow: hidden; color: var(--ink); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
 
 #flashcards .fc-settings-page { display: grid; gap: 14px; }
 #flashcards .fc-settings-intro { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px; background: linear-gradient(135deg,color-mix(in srgb,var(--fc-soft) 78%,var(--panel)),var(--panel)); }
@@ -1372,6 +1383,9 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
   #flashcards .fc-delete-confirm > div:last-child { display: grid; grid-template-columns: 1fr; }
   #flashcards .flashcard-import-bulk { align-items: stretch; flex-direction: column; }
   #flashcards .flashcard-import-bulk span { margin-left: 0; }
+  #flashcards .flashcard-import-quality { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  #flashcards .flashcard-import-quality > strong { grid-column: 1 / -1; text-align: left; }
+  #flashcards .flashcard-repair-diff { grid-template-columns: 42px minmax(0,1fr); padding: 42px 9px 10px !important; }
   #flashcards .fc-custom-hero { align-items: stretch; flex-direction: column; }
   #flashcards .fc-custom-hero > div:last-child { min-width: 0; }
   #flashcards .fc-custom-modes { grid-template-columns: 1fr 1fr; }

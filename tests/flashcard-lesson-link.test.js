@@ -1007,3 +1007,80 @@ test('central renderiza seleção, exportação, substituição e exclusão para
   assert.match(html,/data-fc-quality-replace="quality-ui-a"/);
   assert.match(html,/data-fc-quality-delete-one="quality-ui-a"/);
 });
+
+test('arquivo de correção preserva o identificador estável de cada card', () => {
+  const ctx=loadPlannerSandbox();
+  const card=ctx.normalizeFlashcardRecord({id:'repair-guid-card',front:'Pergunta antiga',back:'Resposta antiga',tags:['prioridade']});
+  const text=ctx.flashcardQualityExportText([{card,issues:[{id:'long',label:'Resposta muito longa'}]}]);
+  assert.match(text,/#guid column:7/);
+  assert.match(text,/#soqueromed quality repair:1/);
+  const rows=plain(ctx.parseFlashcardImportFile(text,'correcao.tsv'));
+  assert.equal(rows.length,1);
+  assert.equal(rows[0].repairId,card.id);
+  assert.equal(rows[0].front,'Pergunta antiga');
+});
+
+test('reimportação reconhece card reescrito pelo id e preserva memória e destino', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const lesson=withLesson(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'repair-roundtrip',front:'Pergunta antiga',back:'Resposta antiga',tags:['original'],sourceType:'manual',sourceLocator:'Aula original'});
+  ctx.applyScheduleToFlashcard(card,lesson.id);
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:14,lapses:5,stability:31,nextReview:'2026-10-12'};
+  const progressBefore=plain(state.flashcardProgress[card.id]);
+  const exported=ctx.flashcardQualityExportText([{card,issues:[{id:'leech',label:'Muitos erros'}]}]);
+  const edited=exported.replace('Pergunta antiga','Pergunta totalmente reescrita').replace('Resposta antiga','Resposta corrigida');
+  const analyzed=plain(ctx.analyzeFlashcardImportRows(ctx.parseFlashcardImportFile(edited,'correcao.tsv'),ctx.flashcardAllRecords()));
+  assert.equal(analyzed[0].importStatus,'repair');
+  assert.equal(analyzed[0].existingId,card.id);
+  const groups=ctx.buildFlashcardImportGroups(analyzed);
+  assert.equal(groups[0].isRepair,true);
+  assert.equal(groups[0].scheduleId,'');
+  assert.equal(ctx.flashcardImportEffectiveRows(groups[0]).length,1);
+  uiOf(ctx).flashcardImport={fileName:'correcao.tsv',total:1,groups,lockedScheduleId:'',repairMode:true};
+  ctx.commitFlashcardImport();
+  assert.equal(card.id,'repair-roundtrip');
+  assert.equal(card.front,'Pergunta totalmente reescrita');
+  assert.equal(card.back,'Resposta corrigida');
+  assert.equal(card.scheduleId,lesson.id);
+  assert.equal(card.sourceType,'manual');
+  assert.equal(card.sourceLocator,'Aula original');
+  assert.match(card.lastCorrectionSource,/correção externa/);
+  assert.deepEqual(plain(card.tags),['original']);
+  assert.deepEqual(plain(state.flashcardProgress[card.id]),progressBefore);
+});
+
+test('reimportação ignora cards sem mudanças e ids que não existem mais', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'repair-unchanged',front:'Pergunta',back:'Resposta'});
+  state.flashcardLibrary.push(card);
+  const exported=ctx.flashcardQualityExportText([{card,issues:[{id:'stale',label:'Nunca revisado'}]}]);
+  const unchanged=plain(ctx.analyzeFlashcardImportRows(ctx.parseFlashcardImportFile(exported,'igual.tsv'),ctx.flashcardAllRecords()));
+  assert.equal(unchanged[0].importStatus,'duplicate');
+  assert.equal(ctx.flashcardImportEffectiveRows(ctx.buildFlashcardImportGroups(unchanged)[0]).length,0);
+  const missingText=exported.replace('repair-unchanged','repair-removido');
+  const missing=plain(ctx.analyzeFlashcardImportRows(ctx.parseFlashcardImportFile(missingText,'ausente.tsv'),ctx.flashcardAllRecords()));
+  assert.equal(missing[0].importStatus,'repair-missing');
+  const missingGroup=ctx.buildFlashcardImportGroups(missing)[0];
+  assert.equal(ctx.flashcardImportEffectiveRows(missingGroup).length,0);
+  missingGroup.missingPolicy='add';
+  assert.equal(ctx.flashcardImportEffectiveRows(missingGroup).length,1);
+});
+
+test('prévia de correção mostra comparação antes e depois', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'repair-preview',front:'Antes',back:'Resposta anterior'});
+  state.flashcardLibrary.push(card);
+  const rows=ctx.analyzeFlashcardImportRows([{front:'Depois',back:'Resposta nova',cardType:'basic',tags:[],deck:'Clínica',repairId:card.id}],ctx.flashcardAllRecords());
+  const groups=ctx.buildFlashcardImportGroups(rows);
+  uiOf(ctx).flashcardImport={fileName:'correcao.tsv',total:1,groups,lockedScheduleId:'',repairMode:true};
+  const html=ctx.renderFlashcardImportPanel();
+  assert.match(html,/Reimportar correções/);
+  assert.match(html,/Destino e memória preservados/);
+  assert.match(html,/Antes/);
+  assert.match(html,/Depois/);
+  assert.match(html,/Aplicar 1 correção/);
+});

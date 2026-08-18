@@ -10024,6 +10024,25 @@ function flashcardQualityExportRecords(rows=[]) {
     return {...row.card,tags:[...new Set([...(row.card.tags||[]),...diagnosticTags])]};
   });
 }
+function flashcardQualityExportText(rows=[]) {
+  const records=flashcardQualityExportRecords(rows);
+  const groupByCard=new Map();
+  flashcardCollectionGroups(records).forEach(group=>group.cards.forEach(card=>groupByCard.set(card.id,group.label)));
+  const header='#separator:tab\n#html:true\n#tags column:5\n#deck column:6\n#guid column:7\n#soqueromed:1\n#soqueromed quality repair:1\n';
+  const body=records.map(card=>[
+    ankiEscape(card.front),
+    ankiEscape(card.back),
+    ankiEscape(card.area),
+    ankiEscape(card.subarea),
+    ankiTags(card),
+    ankiEscape(groupByCard.get(card.id)||card.importDeck||card.subarea||'Flashcards'),
+    ankiEscape(card.id)
+  ].join('\t')).join('\n');
+  return header+body;
+}
+function flashcardRepairUserTags(tags=[]) {
+  return [...new Set((tags||[]).filter(tag=>! /^(?:SOqueroMed|Area::|Subarea::|Bloco::|Qualidade::)/i.test(String(tag))))];
+}
 function replaceFlashcardQualityCard(id, changes={}) {
   const card=mutableFlashcardRecord(id);
   if(!card || card.deletedAt) return {updated:false,error:'Este card não está mais disponível.'};
@@ -10071,7 +10090,7 @@ function mergeFlashcardDuplicates(ids, preferredId='') {
 }
 function analyzeFlashcardImportRows(rows, all=flashcardAllRecords()) {
   const cards=flashcardActiveRecords(all);
-  const exact=new Map(); const buckets=new Map();
+  const exact=new Map(); const buckets=new Map(); const byId=new Map(cards.map(card=>[card.id,card]));
   cards.forEach(card=>{
     const key=flashcardQualityText(card.front);
     if(!key) return;
@@ -10081,6 +10100,12 @@ function analyzeFlashcardImportRows(rows, all=flashcardAllRecords()) {
     if(bucket) { if(!buckets.has(bucket)) buckets.set(bucket,[]); if(buckets.get(bucket).length<25) buckets.get(bucket).push(card); }
   });
   return rows.map(row=>{
+    if(row.repairId) {
+      const target=byId.get(row.repairId);
+      if(!target) return {...row,importStatus:'repair-missing',existingId:'',existingFront:'',existingBack:''};
+      const unchanged=flashcardQualityText(target.front)===flashcardQualityText(row.front) && flashcardQualityText(target.back)===flashcardQualityText(row.back) && (target.cardType||'basic')===(row.cardType||'basic');
+      return {...row,importStatus:unchanged?'duplicate':'repair',existingId:target.id,existingFront:target.front||'',existingBack:target.back||'',repairMatch:true};
+    }
     const key=flashcardQualityText(row.front);
     const matches=exact.get(key)||[];
     const identical=matches.find(card=>flashcardQualityText(card.back)===flashcardQualityText(row.back));
@@ -10235,7 +10260,7 @@ function renderFlashcards() {
   document.getElementById('fcQualityExport')?.addEventListener('click',()=>{
     const selected=new Set(ui.flashcardQualitySelected||[]);
     const rows=flashcardQualityCards(flashcardQualityReport(flashcardAllRecords())).filter(row=>selected.has(row.card.id));
-    exportAnkiTsv(flashcardQualityExportRecords(rows),'soqueromed-cards-com-defeito');
+    downloadFlashcardTsv(flashcardQualityExportText(rows),'soqueromed-cards-com-defeito');
   });
   document.querySelectorAll('[data-fc-quality-replace]').forEach(button=>button.addEventListener('click',event=>{ui.flashcardQualityReplaceId=event.currentTarget.dataset.fcQualityReplace; ui.flashcardQualityDeleteOpen=false; renderFlashcards();}));
   document.getElementById('fcQualityReplaceCancel')?.addEventListener('click',()=>{ui.flashcardQualityReplaceId=''; renderFlashcards();});
@@ -10640,6 +10665,12 @@ function renderFlashcards() {
     const group=ui.flashcardImport?.groups[n(e.currentTarget.dataset.importConflictPolicy)];
     if(!group) return;
     group.conflictPolicy=['skip','replace','add'].includes(e.currentTarget.value)?e.currentTarget.value:'skip';
+    renderFlashcards();
+  });
+  document.querySelectorAll('[data-import-missing-policy]').forEach(select=>select.onchange=e=>{
+    const group=ui.flashcardImport?.groups[n(e.currentTarget.dataset.importMissingPolicy)];
+    if(!group) return;
+    group.missingPolicy=e.currentTarget.value==='add'?'add':'skip';
     renderFlashcards();
   });
   document.getElementById('flashcardImportCancel')?.addEventListener('click', () => { ui.flashcardImport=null; renderFlashcards(); });
@@ -11106,15 +11137,18 @@ function ankiTags(card) {
     ...(card.tags || [])
   ].map(tag => tag.replace(/\s+/g, '_').replace(/[;,\t]/g, '')).join(' ');
 }
+function downloadFlashcardTsv(text, filePrefix='soqueromed-anki') {
+  const blob=new Blob([text],{type:'text/tab-separated-values;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`${filePrefix}-${localISODate(new Date())}.tsv`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
 function exportAnkiTsv(selectedCards=null, filePrefix='soqueromed-anki') {
   const cards = selectedCards===null ? filteredFlashcards(flashcardAllRecords()) : [...(selectedCards || [])];
   if(!cards.length) { alert('Nenhum flashcard para exportar neste filtro.'); return; }
-  const blob = new Blob([flashcardExportText(cards)], {type:'text/tab-separated-values;charset=utf-8'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `${filePrefix}-${localISODate(new Date())}.tsv`;
-  a.click();
-  URL.revokeObjectURL(a.href);
+  downloadFlashcardTsv(flashcardExportText(cards),filePrefix);
 }
 function exportFlashcardBackup() {
   const payload = {
@@ -11169,13 +11203,16 @@ function parseFlashcardImportFile(text, fileName='') {
   }
   const deckColumn = n(directives['deck column']);
   const tagsColumn = n(directives['tags column']);
-  const reserved = new Set([deckColumn, tagsColumn, n(directives['guid column']), n(directives['notetype column'])].filter(Boolean));
+  const guidColumn = n(directives['guid column']);
+  const reserved = new Set([deckColumn, tagsColumn, guidColumn, n(directives['notetype column'])].filter(Boolean));
   const ownExport = Object.prototype.hasOwnProperty.call(directives, 'soqueromed');
+  const qualityRepair = String(directives['soqueromed quality repair']||'')==='1';
   const rows = [];
   body.forEach(line => {
     const cols = line.split(separator);
     const deck = deckColumn ? String(cols[deckColumn-1] || '').trim() : '';
     const tags = tagsColumn ? String(cols[tagsColumn-1] || '').split(/\s+/).filter(Boolean) : [];
+    const repairId = qualityRepair && guidColumn ? String(cols[guidColumn-1] || '').trim() : '';
     const content = cols.filter((_, index) => !reserved.has(index+1));
     const front = ankiHtmlToText(content[0] || '');
     const cardType = flashcardClozeNumbers(front).length ? 'cloze' : 'basic';
@@ -11189,7 +11226,8 @@ function parseFlashcardImportFile(text, fileName='') {
       // Só o export do próprio app garante área/assunto nas colunas 3 e 4.
       area: ownExport ? String(content[2] || '').trim() : '',
       subarea: ownExport ? String(content[3] || '').trim() : '',
-      deck: deck || (ownExport ? String(content[3] || '').trim() : '') || fileName.replace(/\.[^.]+$/, '') || 'Importação'
+      deck: deck || (ownExport ? String(content[3] || '').trim() : '') || fileName.replace(/\.[^.]+$/, '') || 'Importação',
+      repairId
     });
   });
   return rows;
@@ -11198,8 +11236,10 @@ function buildFlashcardImportGroups(rows, forcedScheduleId='') {
   const map = new Map();
   rows.forEach(row => {
     const key = row.deck || 'Importação';
-    if(!map.has(key)) map.set(key, { key, label:key, rows:[], scheduleId: forcedScheduleId || guessScheduleForImportGroup(key), mode:'add', duplicatePolicy:'skip', conflictPolicy:'skip', guessed: !forcedScheduleId });
+    const isRepair=Boolean(row.repairId);
+    if(!map.has(key)) map.set(key, { key, label:key, rows:[], scheduleId: isRepair?'':forcedScheduleId || guessScheduleForImportGroup(key), mode:'add', duplicatePolicy:'skip', conflictPolicy:isRepair?'replace':'skip', missingPolicy:'skip', isRepair, guessed: !isRepair&&!forcedScheduleId });
     map.get(key).rows.push(row);
+    if(isRepair) { map.get(key).isRepair=true; map.get(key).scheduleId=''; map.get(key).conflictPolicy='replace'; map.get(key).guessed=false; }
   });
   return [...map.values()].sort((a,b)=>b.rows.length-a.rows.length);
 }
@@ -11216,7 +11256,8 @@ function startFlashcardImport(event, options={}) {
       fileName: file.name,
       total: rows.length,
       groups: buildFlashcardImportGroups(rows, forcedScheduleId),
-      lockedScheduleId: forcedScheduleId
+      lockedScheduleId: forcedScheduleId,
+      repairMode: rows.some(row=>row.repairId)
     };
     ui.flashcardEditorOpen = false;
     ui.flashcardOrganizerOpen = false;
@@ -11263,7 +11304,9 @@ function flashcardImportEffectiveRows(group) {
   if(!group || group.mode==='skip') return [];
   if(group.mode==='replace') return group.rows || [];
   return (group.rows||[]).filter(row=>{
-    if(row.importStatus==='duplicate') return group.duplicatePolicy==='add';
+    if(row.importStatus==='duplicate') return row.repairId?false:group.duplicatePolicy==='add';
+    if(row.importStatus==='repair') return true;
+    if(row.importStatus==='repair-missing') return group.missingPolicy==='add';
     if(row.importStatus==='conflict' || row.importStatus==='similar') return group.conflictPolicy!=='skip';
     return true;
   });
@@ -11271,14 +11314,17 @@ function flashcardImportEffectiveRows(group) {
 function replaceFlashcardFromImport(row, group, job) {
   const card=mutableFlashcardRecord(row.existingId);
   if(!card || card.deletedAt) return false;
-  card.cardType=row.cardType;
-  card.front=row.front;
-  card.back=row.back;
-  card.tags=[...new Set([...(card.tags||[]),...(row.tags||[])])];
-  card.importDeck=group.label;
-  card.sourceType='import';
-  card.sourceLocator=`${job.fileName} · ${group.label} · atualização`;
-  if(group.scheduleId) applyScheduleToFlashcard(card,group.scheduleId);
+  const tags=row.repairId?flashcardRepairUserTags(row.tags):[...new Set([...(card.tags||[]),...(row.tags||[])])];
+  const result=replaceFlashcardQualityCard(card.id,{cardType:row.cardType,front:row.front,back:row.back,tags});
+  if(!result.updated) return false;
+  if(!row.repairId) {
+    card.importDeck=group.label;
+    card.sourceType='import';
+    if(group.scheduleId) applyScheduleToFlashcard(card,group.scheduleId);
+    card.sourceLocator=`${job.fileName} · ${group.label} · atualização`;
+  } else {
+    card.lastCorrectionSource=`${job.fileName} · correção externa`;
+  }
   card.rowVersion=n(card.rowVersion)+1;
   card.updatedAt=new Date().toISOString();
   return true;
@@ -11289,7 +11335,7 @@ function commitFlashcardImport() {
   const groups = job.groups.filter(group => group.mode !== 'skip');
   if(!groups.length) { alert('Todos os grupos estão marcados para ignorar.'); return; }
   const effectiveCount=groups.reduce((sum,group)=>sum+flashcardImportEffectiveRows(group).length,0);
-  if(!effectiveCount) { alert('Nenhum card novo foi selecionado. Ajuste as decisões sobre duplicados e conflitos.'); return; }
+  if(!effectiveCount) { alert(job.repairMode?'Nenhuma alteração foi encontrada neste arquivo. Os cards estão iguais ou seus identificadores não existem mais.':'Nenhum card novo foi selecionado. Ajuste as decisões sobre duplicados e conflitos.'); return; }
   const replacing = groups.filter(group => group.mode === 'replace' && group.scheduleId);
   const doomed = new Set();
   replacing.forEach(group => flashcardsForSchedule(group.scheduleId).forEach(card => doomed.add(card.id)));
@@ -11301,7 +11347,7 @@ function commitFlashcardImport() {
   let unlinked = 0;
   groups.forEach(group => {
     flashcardImportEffectiveRows(group).forEach(row => {
-      if(group.mode!=='replace' && ['conflict','similar'].includes(row.importStatus) && group.conflictPolicy==='replace' && replaceFlashcardFromImport(row,group,job)) { replaced++; return; }
+      if(group.mode!=='replace' && (row.importStatus==='repair' || (['conflict','similar'].includes(row.importStatus) && group.conflictPolicy==='replace')) && replaceFlashcardFromImport(row,group,job)) { replaced++; return; }
       const card = normalizeFlashcardRecord({
         id: newFlashcardId('card-import'),
         cardType: row.cardType,
@@ -11311,7 +11357,7 @@ function commitFlashcardImport() {
         subarea: row.subarea || group.label,
         subject: row.subarea || group.label,
         topic: row.subarea || group.label,
-        tags: row.tags,
+        tags: row.repairId ? flashcardRepairUserTags(row.tags) : row.tags,
         sourceType: 'import',
         sourceLocator: `${job.fileName} · ${group.label}`,
         source: 'Anki',
@@ -11330,34 +11376,47 @@ function commitFlashcardImport() {
   renderCache.flashcardStats.clear();
   persist();
   const skipped=Math.max(0,job.total-imported-replaced);
-  showStudyToast?.(`${imported} ${imported===1?'card importado':'cards importados'}${replaced?` · ${replaced} atualizados sem perder histórico`:''}${removed?` · ${removed} substituídos`:''}${skipped?` · ${skipped} duplicados/conflitos ignorados`:''}${unlinked?` · ${unlinked} sem aula`:''}.`);
+  showStudyToast?.(`${imported} ${imported===1?'card importado':'cards importados'}${replaced?` · ${replaced} ${job.repairMode?'correções aplicadas':'atualizados'} sem perder histórico`:''}${removed?` · ${removed} substituídos`:''}${skipped?` · ${skipped} ${job.repairMode?'sem mudança ou não encontrados':'duplicados/conflitos ignorados'}`:''}${unlinked?` · ${unlinked} sem aula`:''}.`);
   renderFlashcards();
 }
 function renderFlashcardImportPanel() {
   const job = ui.flashcardImport;
   const lockedLesson = job.lockedScheduleId ? scheduleLessonById(job.lockedScheduleId) : null;
+  const effectiveTotal=job.groups.reduce((sum,group)=>sum+flashcardImportEffectiveRows(group).length,0);
   return `<div class="flashcard-editor workspace-editor flashcard-import-panel">
-    <div class="section-title"><div><h2>Importar flashcards</h2><div class="muted">${escapeHtml(job.fileName)} · ${job.total} ${job.total===1?'card lido':'cards lidos'}${lockedLesson?` · destino fixo: ${escapeHtml(flashcardLessonLabel(lockedLesson))}`:''}</div></div><button class="icon-btn" id="flashcardImportCancel">Cancelar</button></div>
-    <div class="muted">Marque somente os baralhos que deseja trazer e escolha a aula de destino. <strong>Adicionar</strong> soma aos cards existentes; <strong>substituir</strong> apaga os cards atuais da aula antes de importar.</div>
+    <div class="section-title"><div><h2>${job.repairMode?'Reimportar correções':'Importar flashcards'}</h2><div class="muted">${escapeHtml(job.fileName)} · ${job.total} ${job.total===1?'card lido':'cards lidos'}${lockedLesson?` · destino fixo: ${escapeHtml(flashcardLessonLabel(lockedLesson))}`:''}</div></div><button class="icon-btn" id="flashcardImportCancel">Cancelar</button></div>
+    <div class="muted">${job.repairMode?'Os identificadores do arquivo foram conferidos. Revise o antes e depois; as correções mantêm histórico, dificuldade e próxima revisão.':'Marque somente os baralhos que deseja trazer e escolha a aula de destino. <strong>Adicionar</strong> soma aos cards existentes; <strong>substituir</strong> apaga os cards atuais da aula antes de importar.'}</div>
     <div class="flashcard-import-bulk"><button class="tiny-btn" id="flashcardImportSelectAll">Selecionar todos</button><button class="tiny-btn" id="flashcardImportSelectNone">Não importar nenhum</button><span>${job.groups.filter(group=>group.mode!=='skip').length} de ${job.groups.length} baralhos selecionados</span></div>
     <div class="flashcard-import-groups">${job.groups.map((group,index) => {
       const lesson = scheduleLessonById(group.scheduleId);
       const existing = group.scheduleId ? flashcardsForSchedule(group.scheduleId).length : 0;
       const duplicates=group.rows.filter(row=>row.importStatus==='duplicate').length;
       const conflicts=group.rows.filter(row=>['conflict','similar'].includes(row.importStatus)).length;
-      const newRows=group.rows.length-duplicates-conflicts;
+      const repairs=group.rows.filter(row=>row.importStatus==='repair').length;
+      const missing=group.rows.filter(row=>row.importStatus==='repair-missing').length;
+      const newRows=group.rows.length-duplicates-conflicts-repairs-missing;
+      const summary=group.isRepair
+        ? `<div class="flashcard-import-quality repair"><span class="repair"><b>${repairs}</b> correções</span><span class="duplicate"><b>${duplicates}</b> sem mudanças</span><span class="conflict"><b>${missing}</b> IDs ausentes</span><strong>${flashcardImportEffectiveRows(group).length} serão aplicados</strong></div>`
+        : `<div class="flashcard-import-quality"><span class="new"><b>${newRows}</b> novos</span><span class="duplicate"><b>${duplicates}</b> duplicados</span><span class="conflict"><b>${conflicts}</b> conflitos</span><strong>${flashcardImportEffectiveRows(group).length} entrarão</strong></div>`;
+      const destination=group.isRepair
+        ? `<div class="flashcard-repair-safety"><strong>Destino e memória preservados</strong><span>Cada alteração será aplicada ao ID original. Nenhum card será movido de baralho ou aula.</span></div>`
+        : `<label>Aula de destino${flashcardLessonSelectHtml(`data-import-lesson="${index}" ${job.lockedScheduleId?'disabled':''}`, group.scheduleId, 'Sem aula (deixar solto)')}</label><label>Ao importar<select class="select" data-import-mode="${index}" ${group.mode==='skip'?'disabled':''}><option value="add" ${group.mode!=='replace'?'selected':''}>Adicionar aos existentes</option><option value="replace" ${group.mode==='replace'?'selected':''} ${group.scheduleId?'':'disabled'}>Substituir os cards da aula</option></select></label>`;
+      const sample=group.rows.slice(0,5).map(row=>{
+        const status=row.importStatus==='repair'?'Correção reconhecida':row.importStatus==='repair-missing'?'ID original não encontrado':row.importStatus==='duplicate'?(row.repairId?'Sem alterações':'Duplicado'):row.importStatus==='conflict'?'Resposta conflitante':row.importStatus==='similar'?`${row.similarity}% semelhante`:'Novo';
+        if(row.importStatus==='repair') return `<div class="flashcard-repair-diff"><em class="status-repair">${status}</em><small>Antes</small><span><b>${escapeHtml(String(row.existingFront||'').slice(0,140))}</b>${escapeHtml(String(row.existingBack||'').slice(0,140))}</span><small>Depois</small><span><b>${escapeHtml(row.front.slice(0,140))}</b>${escapeHtml(row.back.slice(0,140))}</span></div>`;
+        return `<div><strong>${escapeHtml(row.front.slice(0,140))}</strong><span>${escapeHtml(row.back.slice(0,140))}</span><em class="status-${escapeAttr(row.importStatus||'new')}">${status}</em></div>`;
+      }).join('');
       return `<div class="flashcard-import-group ${group.mode==='skip'?'is-skipped':''}">
-        <div class="flashcard-import-group-head"><label class="flashcard-import-choice"><input type="checkbox" data-import-enabled="${index}" ${group.mode!=='skip'?'checked':''}><span><strong>${escapeHtml(group.label)}</strong><small>${group.mode==='skip'?'Não será importado':'Importar este baralho'}</small></span></label><span class="badge today">${group.rows.length} ${group.rows.length===1?'card':'cards'}</span></div>
-        <div class="flashcard-import-quality"><span class="new"><b>${newRows}</b> novos</span><span class="duplicate"><b>${duplicates}</b> duplicados</span><span class="conflict"><b>${conflicts}</b> conflitos</span><strong>${flashcardImportEffectiveRows(group).length} entrarão</strong></div>
-        <label>Aula de destino${flashcardLessonSelectHtml(`data-import-lesson="${index}" ${job.lockedScheduleId?'disabled':''}`, group.scheduleId, 'Sem aula (deixar solto)')}</label>
-        <label>Ao importar<select class="select" data-import-mode="${index}" ${group.mode==='skip'?'disabled':''}><option value="add" ${group.mode!=='replace'?'selected':''}>Adicionar aos existentes</option><option value="replace" ${group.mode==='replace'?'selected':''} ${group.scheduleId?'':'disabled'}>Substituir os cards da aula</option></select></label>
-        ${duplicates?`<label>Cards idênticos<select class="select" data-import-duplicate-policy="${index}" ${group.mode==='skip'||group.mode==='replace'?'disabled':''}><option value="skip" ${group.duplicatePolicy!=='add'?'selected':''}>Ignorar cópias</option><option value="add" ${group.duplicatePolicy==='add'?'selected':''}>Importar mesmo assim</option></select></label>`:''}
+        <div class="flashcard-import-group-head"><label class="flashcard-import-choice"><input type="checkbox" data-import-enabled="${index}" ${group.mode!=='skip'?'checked':''}><span><strong>${escapeHtml(group.label)}</strong><small>${group.mode==='skip'?'Não será processado':group.isRepair?'Aplicar correções deste baralho':'Importar este baralho'}</small></span></label><span class="badge today">${group.rows.length} ${group.rows.length===1?'card':'cards'}</span></div>
+        ${summary}${destination}
+        ${duplicates&&!group.isRepair?`<label>Cards idênticos<select class="select" data-import-duplicate-policy="${index}" ${group.mode==='skip'||group.mode==='replace'?'disabled':''}><option value="skip" ${group.duplicatePolicy!=='add'?'selected':''}>Ignorar cópias</option><option value="add" ${group.duplicatePolicy==='add'?'selected':''}>Importar mesmo assim</option></select></label>`:''}
         ${conflicts?`<label>Perguntas parecidas ou conflitantes<select class="select" data-import-conflict-policy="${index}" ${group.mode==='skip'||group.mode==='replace'?'disabled':''}><option value="skip" ${group.conflictPolicy==='skip'?'selected':''}>Ignorar por segurança</option><option value="replace" ${group.conflictPolicy==='replace'?'selected':''}>Atualizar existente e manter histórico</option><option value="add" ${group.conflictPolicy==='add'?'selected':''}>Importar como novo</option></select></label>`:''}
-        <div class="muted">${lesson ? `${existing} ${existing===1?'card já vinculado':'cards já vinculados'} a esta aula${group.guessed && group.scheduleId?' · sugestão automática, confira':''}` : 'Sem aula: os cards ficam na lista "Cards sem aula" para você vincular depois.'}</div>
-        <details><summary>Ver amostra e diagnóstico</summary><div class="flashcard-import-sample">${group.rows.slice(0,5).map(row => `<div><strong>${escapeHtml(row.front.slice(0,140))}</strong><span>${escapeHtml(row.back.slice(0,140))}</span><em class="status-${escapeAttr(row.importStatus||'new')}">${row.importStatus==='duplicate'?'Duplicado':row.importStatus==='conflict'?'Resposta conflitante':row.importStatus==='similar'?`${row.similarity}% semelhante`:'Novo'}</em></div>`).join('')}</div></details>
+        ${missing?`<label>IDs não encontrados<select class="select" data-import-missing-policy="${index}" ${group.mode==='skip'?'disabled':''}><option value="skip" ${group.missingPolicy!=='add'?'selected':''}>Ignorar por segurança</option><option value="add" ${group.missingPolicy==='add'?'selected':''}>Adicionar como cards novos</option></select></label>`:''}
+        ${group.isRepair?'':`<div class="muted">${lesson ? `${existing} ${existing===1?'card já vinculado':'cards já vinculados'} a esta aula${group.guessed && group.scheduleId?' · sugestão automática, confira':''}` : 'Sem aula: os cards ficam na lista "Cards sem aula" para você vincular depois.'}</div>`}
+        <details ${group.isRepair&&repairs?'open':''}><summary>${group.isRepair?'Conferir antes e depois':'Ver amostra e diagnóstico'}</summary><div class="flashcard-import-sample">${sample}</div></details>
       </div>`;
     }).join('')}</div>
-    <button class="icon-btn primary" id="flashcardImportConfirm">Importar ou atualizar ${job.groups.reduce((sum,group)=>sum+flashcardImportEffectiveRows(group).length,0)} cards</button>
+    <button class="icon-btn primary" id="flashcardImportConfirm">${job.repairMode?'Aplicar':'Importar ou atualizar'} ${effectiveTotal} ${job.repairMode?(effectiveTotal===1?'correção':'correções'):(effectiveTotal===1?'card':'cards')}</button>
   </div>`;
 }
 // O agrupamento é compartilhado entre o render e os handlers de clique: os dois
