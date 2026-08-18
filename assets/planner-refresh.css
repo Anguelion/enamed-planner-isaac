@@ -863,6 +863,8 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 }
 
 #flashcards .flashcard-study-top { margin-bottom: 2px; }
+#flashcards .flashcard-error-toggle { color: var(--muted); }
+#flashcards .flashcard-error-toggle.is-marked { border-color: color-mix(in srgb,#e44b5f 52%,var(--fc-border)); background: color-mix(in srgb,#e44b5f 12%,var(--panel)); color: #c83248; }
 #flashcards .flashcard-memory-card { width: min(100%,760px); min-height: 330px; margin: 16px auto 4px; cursor: pointer; }
 #flashcards .flashcard-memory-card:focus-visible { outline: 3px solid color-mix(in srgb,var(--fc-accent) 58%,transparent); outline-offset: 5px; }
 #flashcards .flashcard-memory-card-inner { position: relative; display: grid; min-height: 330px; animation: fc-card-deal .28s ease-out both; }

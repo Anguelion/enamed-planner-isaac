@@ -10019,11 +10019,24 @@ function flashcardQualitySimilarity(left='', right='') {
   const intersection=[...a].filter(word=>b.has(word)).length;
   return intersection/(a.size+b.size-intersection);
 }
+function toggleFlashcardQualityFlag(cardId) {
+  const card=mutableFlashcardRecord(cardId);
+  if(!card || card.deletedAt) return false;
+  const wasFlagged=Boolean(card.qualityFlaggedAt);
+  card.qualityFlaggedAt=wasFlagged?'':new Date().toISOString();
+  card.updatedAt=new Date().toISOString();
+  card.rowVersion=Math.max(1,n(card.rowVersion)||1)+1;
+  persist();
+  showStudyToast?.(wasFlagged?'Marcação de alteração removida.':'Card marcado para alteração · disponível em Gerenciar → Central de qualidade.');
+  renderFlashcards();
+  return !wasFlagged;
+}
 function flashcardQualityIssues(card) {
   const progress=flashcardProgress(card);
   const front=String(card.front||'').replace(/<[^>]+>/g,' ').trim();
   const back=String(card.back||'').replace(/<[^>]+>/g,' ').trim();
   const issues=[];
+  if(card.qualityFlaggedAt) issues.push({id:'manual',label:'Marcado durante o estudo',tone:'danger'});
   if(!front || (card.cardType!=='cloze' && !back)) issues.push({id:'incomplete',label:'Incompleto',tone:'danger'});
   if(back.length>700 || back.split(/\s+/).filter(Boolean).length>120) issues.push({id:'long',label:'Resposta muito longa',tone:'attention'});
   const lapsesSinceCorrection=Math.max(0,n(progress.lapses)-n(card.qualityResolvedLapses));
@@ -10068,7 +10081,7 @@ function flashcardQualityReport(all=flashcardAllRecords()) {
     }
     if(similar.length>=20) break;
   }
-  const counts={incomplete:0,long:0,leech:0,stale:0};
+  const counts={manual:0,incomplete:0,long:0,leech:0,stale:0};
   issueCards.forEach(row=>row.issues.forEach(issue=>counts[issue.id]++));
   return {total:cards.length,identical,conflicts,similar,issueCards,counts};
 }
@@ -10130,6 +10143,7 @@ function replaceFlashcardQualityCard(id, changes={}) {
   card.updatedAt=new Date().toISOString();
   card.qualityResolvedAt=card.updatedAt;
   card.qualityResolvedLapses=n(flashcardProgress(card).lapses);
+  card.qualityFlaggedAt='';
   normalizeFlashcardRecord(card);
   if(Array.isArray(state.flashcardSystem?.versions)) {
     state.flashcardSystem.versions.push({cardId:card.id,version:card.contentVersion,kind:'replacement',at:card.updatedAt,before,front:card.front,back:card.back,tags:[...card.tags]});
@@ -10219,7 +10233,7 @@ function renderFlashcardManage(all) {
   const qualityWorkRows=qualityCards.slice(0,100).map(row=>{const progress=flashcardProgress(row.card); return `<div class="fc-quality-work-row ${qualitySelected.has(row.card.id)?'is-selected':''}"><input type="checkbox" data-fc-quality-select="${escapeAttr(row.card.id)}" ${qualitySelected.has(row.card.id)?'checked':''} aria-label="Selecionar card com defeito"><span><strong>${escapeHtml(String(row.card.front||'Card sem frente').replace(/\s+/g,' ').slice(0,140))}</strong><small>${row.issues.map(issue=>escapeHtml(issue.label)).join(' · ')} · ${progress.reviews} revisões</small></span><div><button class="tiny-btn primary" data-fc-quality-replace="${escapeAttr(row.card.id)}">Substituir</button><button class="tiny-btn" data-fc-quality-open="${escapeAttr(row.card.id)}">Ver detalhes</button><button class="tiny-btn danger" data-fc-quality-delete-one="${escapeAttr(row.card.id)}">Excluir</button></div></div>`;}).join('');
   const replacementEditor=replacingQualityCard?`<div class="fc-quality-replace" role="region" aria-label="Substituir card com defeito"><div><span class="eyebrow">Substituição individual</span><h3>Corrigir sem perder o histórico</h3><p>O conteúdo muda, mas as ${flashcardProgress(replacingQualityCard).reviews} revisões, a dificuldade e a próxima data continuam neste mesmo card.</p></div><label>Tipo<select class="select" id="fcQualityReplaceType"><option value="basic" ${replacingQualityCard.cardType!=='cloze'?'selected':''}>Básico</option><option value="cloze" ${replacingQualityCard.cardType==='cloze'?'selected':''}>Cloze</option></select></label><label>Nova frente<textarea class="input" id="fcQualityReplaceFront" rows="4">${escapeHtml(replacingQualityCard.front||'')}</textarea></label><label>Novo verso ou complemento<textarea class="input" id="fcQualityReplaceBack" rows="4">${escapeHtml(replacingQualityCard.back||'')}</textarea></label><label>Tags<input class="input" id="fcQualityReplaceTags" value="${escapeAttr((replacingQualityCard.tags||[]).join(' '))}"></label><div class="fc-quality-replace-actions"><button class="tiny-btn" id="fcQualityReplaceCancel">Cancelar</button><button class="icon-btn primary" id="fcQualityReplaceSave" data-id="${escapeAttr(replacingQualityCard.id)}">Salvar substituição</button></div></div>`:'';
   const qualityDeleteConfirm=ui.flashcardQualityDeleteOpen&&qualitySelected.size?`<div class="fc-delete-confirm fc-quality-delete-confirm" role="alert"><div><span class="eyebrow">Exclusão de cards sinalizados</span><h3>Excluir ${qualitySelected.size} ${qualitySelected.size===1?'card':'cards'}?</h3><p>O conteúdo e o progresso individual serão removidos. Há <strong>${qualitySelectedReviews} revisões</strong> associadas à seleção. Exporte antes se quiser guardar uma cópia.</p><label>Digite <b>EXCLUIR</b> para liberar a ação<input class="input" id="fcQualityDeletePhrase" autocomplete="off" placeholder="EXCLUIR"></label></div><div><button class="icon-btn" id="fcQualityDeleteCancel">Cancelar</button><button class="icon-btn danger" id="fcQualityDeleteConfirm" disabled>Excluir definitivamente</button></div></div>`:'';
-  const qualitySection=`<section class="card fc-quality-center"><div class="section-title"><div><span class="eyebrow">Saúde da coleção</span><h3>Central de qualidade</h3><div class="muted">Exporte, substitua ou exclua cards sinalizados sem perder o controle do processo.</div></div><span class="badge ${qualityCards.length?'wait':'done'}">${qualityCards.length} ${qualityCards.length===1?'card sinalizado':'cards sinalizados'}</span></div><div class="fc-quality-kpis"><span><b>${quality.identical.length}</b><small>grupos idênticos</small></span><span><b>${quality.conflicts.length+quality.similar.length}</b><small>para comparar</small></span><span><b>${quality.counts.long}</b><small>respostas longas</small></span><span><b>${quality.counts.leech}</b><small>muitos erros</small></span><span><b>${quality.counts.incomplete}</b><small>incompletos</small></span></div>${quality.identical.length?`<details><summary>Cópias que podem ser mescladas com segurança</summary><div class="fc-quality-list">${duplicateRows}</div></details>`:''}${qualityCards.length?`<div class="fc-quality-workbench"><div class="fc-quality-workbench-head"><div><strong>Oficina de correção</strong><span>Escolha os cards e decida o destino de cada um.</span></div><div><button class="tiny-btn" id="fcQualitySelectAll">Selecionar todos (${qualityCards.length})</button><button class="tiny-btn" id="fcQualitySelectNone">Limpar</button><button class="tiny-btn" id="fcQualityExport" ${qualitySelected.size?'':'disabled'}>Exportar ${qualitySelected.size}</button><button class="tiny-btn danger" id="fcQualityDeleteSelected" ${qualitySelected.size?'':'disabled'}>Excluir ${qualitySelected.size}</button></div></div>${replacementEditor}${qualityDeleteConfirm}<div class="fc-quality-work-list">${qualityWorkRows}</div>${qualityCards.length>100?`<small class="muted">Mostrando os 100 primeiros de ${qualityCards.length}. “Selecionar todos” inclui também os demais.</small>`:''}</div>`:'<div class="fc-quality-clear"><strong>Coleção saudável</strong><span>Nenhum problema relevante foi encontrado agora.</span></div>'}</section>`;
+  const qualitySection=`<section class="card fc-quality-center"><div class="section-title"><div><span class="eyebrow">Saúde da coleção</span><h3>Central de qualidade</h3><div class="muted">Exporte, substitua ou exclua cards sinalizados sem perder o controle do processo.</div></div><span class="badge ${qualityCards.length?'wait':'done'}">${qualityCards.length} ${qualityCards.length===1?'card sinalizado':'cards sinalizados'}</span></div><div class="fc-quality-kpis"><span><b>${quality.counts.manual}</b><small>marcados com A</small></span><span><b>${quality.identical.length}</b><small>grupos idênticos</small></span><span><b>${quality.conflicts.length+quality.similar.length}</b><small>para comparar</small></span><span><b>${quality.counts.long}</b><small>respostas longas</small></span><span><b>${quality.counts.leech}</b><small>muitos erros</small></span><span><b>${quality.counts.incomplete}</b><small>incompletos</small></span></div>${quality.identical.length?`<details><summary>Cópias que podem ser mescladas com segurança</summary><div class="fc-quality-list">${duplicateRows}</div></details>`:''}${qualityCards.length?`<div class="fc-quality-workbench"><div class="fc-quality-workbench-head"><div><strong>Oficina de correção</strong><span>Escolha os cards e decida o destino de cada um.</span></div><div><button class="tiny-btn" id="fcQualitySelectAll">Selecionar todos (${qualityCards.length})</button><button class="tiny-btn" id="fcQualitySelectNone">Limpar</button><button class="tiny-btn" id="fcQualityExport" ${qualitySelected.size?'':'disabled'}>Exportar ${qualitySelected.size}</button><button class="tiny-btn danger" id="fcQualityDeleteSelected" ${qualitySelected.size?'':'disabled'}>Excluir ${qualitySelected.size}</button></div></div>${replacementEditor}${qualityDeleteConfirm}<div class="fc-quality-work-list">${qualityWorkRows}</div>${qualityCards.length>100?`<small class="muted">Mostrando os 100 primeiros de ${qualityCards.length}. “Selecionar todos” inclui também os demais.</small>`:''}</div>`:'<div class="fc-quality-clear"><strong>Coleção saudável</strong><span>Nenhum problema relevante foi encontrado agora.</span></div>'}</section>`;
   const confirmation=deleting?`<div class="fc-delete-confirm" role="alert"><div><span class="eyebrow">Confirmação obrigatória</span><h3>Excluir “${escapeHtml(deleting.label)}”?</h3><p>Serão apagados permanentemente <strong>${deleting.count} ${deleting.count===1?'card':'cards'}</strong> e o progresso individual deles. Outros baralhos não serão alterados.</p><label>Digite <b>EXCLUIR</b> para liberar a ação<input class="input" id="fcDeleteCollectionPhrase" autocomplete="off" placeholder="EXCLUIR"></label></div><div><button class="icon-btn" id="fcDeleteCollectionCancel">Cancelar</button><button class="icon-btn danger" id="fcDeleteCollectionConfirm" data-key="${escapeAttr(deleting.key)}" disabled>Excluir ${deleting.count} ${deleting.count===1?'card':'cards'}</button></div></div>`:'';
   return `<div class="fc-manage-page"><section class="card fc-manage-hero"><div><span class="eyebrow">Controle da coleção</span><h2>Gerenciar baralhos</h2><p>Escolha o que exportar, reorganize conjuntos, cuide da qualidade e mantenha a exclusão sob confirmação reforçada.</p></div><div><strong>${groups.length}</strong><span>baralhos</span><b>${all.length} cards</b></div></section>${qualitySection}<section class="card fc-manage-export"><div class="section-title"><div><span class="eyebrow">Exportação seletiva</span><h3>Quais baralhos deseja exportar?</h3><div class="muted">O arquivo preserva o nome de cada conjunto para a próxima importação.</div></div><button class="icon-btn primary" id="fcExportSelected" ${selectedCards?'':'disabled'}>Exportar ${selectedCards} ${selectedCards===1?'card':'cards'}</button></div><div class="fc-manage-toolbar"><input class="input" id="fcManageSearch" value="${escapeAttr(search)}" placeholder="Buscar baralho ou aula"><button class="tiny-btn" id="fcExportSelectAll">Selecionar todos</button><button class="tiny-btn" id="fcExportSelectNone">Limpar seleção</button><span><b>${selected.size}</b> de ${groups.length} baralhos</span></div><div class="fc-manage-deck-list">${rows}</div></section>${organizeSection}<details class="card fc-manage-danger" ${deleting?'open':''}><summary><span><strong>Excluir conjuntos de flashcards</strong><small>Zona protegida · exclusão permanente</small></span><span class="badge no">Cuidado</span></summary><div class="fc-manage-danger-body"><div class="fc-manage-warning"><strong>Faça um backup antes de excluir.</strong><span>A exclusão também remove o progresso dos cards escolhidos e será sincronizada entre dispositivos.</span><button class="tiny-btn" id="fcManageBackup">Baixar backup agora</button></div>${confirmation}<div class="fc-manage-delete-list">${deleteRows}</div></div></details></div>`;
 }
@@ -10829,6 +10843,10 @@ function renderFlashcards() {
       toggle();
     };
   });
+  document.querySelectorAll('[data-flashcard-error]').forEach(button => button.onclick = event => {
+    event.stopPropagation();
+    toggleFlashcardQualityFlag(event.currentTarget.dataset.flashcardError);
+  });
   document.querySelectorAll('[data-card-quality]').forEach(button => button.onclick = e => reviewFlashcard(e.currentTarget.dataset.cardId, n(e.currentTarget.dataset.cardQuality)));
   document.querySelectorAll('[data-card-suspend]').forEach(button => button.onclick = e => suspendFlashcard(e.currentTarget.dataset.cardSuspend));
   document.querySelectorAll('[data-flashcard-move]').forEach(button => button.onclick = e => moveFlashcardSession(n(e.currentTarget.dataset.flashcardMove), cards.length));
@@ -10996,10 +11014,11 @@ function renderFlashcardStudy(card, queue=[]) {
   }
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
+  const qualityFlagged = Boolean(card.qualityFlaggedAt);
   const memoryFace = revealed
     ? `<section class="flashcard-memory-face flashcard-memory-back"><span class="flashcard-face-label">Verso</span><div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div></section>`
     : `<section class="flashcard-memory-face flashcard-memory-front"><span class="flashcard-face-label">Frente</span><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div><button class="icon-btn primary" data-reveal-card="${card.id}">Virar cartão</button></section>`;
-  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today flashcard-focus-clock" id="flashcardFocusClock" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="${ui.flashcardFocusPaused ? 'Pausado ·' : 'Estudando ·'}">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-memory-card ${revealed?'is-revealed':''}" data-toggle-flashcard="${escapeAttr(card.id)}" role="button" tabindex="0" aria-label="${revealed?'Mostrar frente':'Mostrar verso'}" aria-pressed="${Boolean(revealed)}"><div class="flashcard-memory-card-inner">${memoryFace}</div></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-rating-reveal">${renderFlashcardRating(card.id)}</div>` : ''}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
+  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today flashcard-focus-clock" id="flashcardFocusClock" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="${ui.flashcardFocusPaused ? 'Pausado ·' : 'Estudando ·'}">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span><button class="tiny-btn flashcard-error-toggle ${qualityFlagged?'is-marked':''}" data-flashcard-error="${escapeAttr(card.id)}" type="button" aria-pressed="${qualityFlagged}" title="${qualityFlagged?'Remover marcação de alteração':'Marcar este card para alteração'}">A · ${qualityFlagged?'Alteração marcada':'Marcar alteração'}</button>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-memory-card ${revealed?'is-revealed':''}" data-toggle-flashcard="${escapeAttr(card.id)}" role="button" tabindex="0" aria-label="${revealed?'Mostrar frente':'Mostrar verso'}" aria-pressed="${Boolean(revealed)}"><div class="flashcard-memory-card-inner">${memoryFace}</div></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-rating-reveal">${renderFlashcardRating(card.id)}</div>` : ''}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;
@@ -13412,7 +13431,8 @@ function handleQuestionKeyboard(event) {
 function handleFlashcardKeyboard(event) {
   if(event.ctrlKey || event.metaKey || event.altKey) return;
   const target = event.target;
-  if(isInteractiveTarget(target)) return;
+  const focusedStudyCard=Boolean(target?.matches?.('[data-toggle-flashcard]'));
+  if(isInteractiveTarget(target) && !focusedStudyCard) return;
   // Saída garantida do modo foco, inclusive quando a fila acaba e a tela de fim
   // de sessão não mostra mais os controles.
   if(event.key === 'Escape' && ui.flashcardFocusMode) {
@@ -13431,9 +13451,16 @@ function handleFlashcardKeyboard(event) {
     return;
   }
   if(event.key.toLowerCase() === 'e') {
+    if(event.repeat) return;
     event.preventDefault();
     ui.editFlashcardId = ui.editFlashcardId === card.id ? '' : card.id;
     renderFlashcards();
+    return;
+  }
+  if(event.key.toLowerCase() === 'a') {
+    if(event.repeat) return;
+    event.preventDefault();
+    toggleFlashcardQualityFlag(card.id);
     return;
   }
   if(event.key.toLowerCase() === 's') {

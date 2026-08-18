@@ -1161,11 +1161,44 @@ test('espaço alterna o cartão entre frente e verso', () => {
     repeat:false,
     key:' ',
     code:'Space',
-    target:{matches:()=>false,closest:()=>null},
+    target:{matches:selector=>selector==='[data-toggle-flashcard]' || selector.includes('[role="button"]'),closest:()=>null},
     preventDefault(){}
   };
   ctx.handleFlashcardKeyboard(event);
   assert.equal(uiOf(ctx).revealedCards[card.id],true);
   ctx.handleFlashcardKeyboard(event);
   assert.equal(uiOf(ctx).revealedCards[card.id],undefined);
+});
+
+test('A sinaliza card para exportação e E preserva a edição', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'manual-error-card',front:'Frente com erro',back:'Verso com erro'});
+  state.flashcardLibrary.push(card);
+  const event={
+    ctrlKey:false,
+    metaKey:false,
+    altKey:false,
+    repeat:false,
+    key:'a',
+    code:'KeyA',
+    target:{matches:selector=>selector==='[data-toggle-flashcard]' || selector.includes('[role="button"]'),closest:()=>null},
+    preventDefault(){}
+  };
+  ctx.handleFlashcardKeyboard(event);
+  assert.ok(card.qualityFlaggedAt);
+  assert.equal(ctx.flashcardQualityIssues(card).some(issue=>issue.id==='manual'),true);
+  const rows=ctx.flashcardQualityCards(ctx.flashcardQualityReport([card]));
+  assert.equal(rows.length,1);
+  assert.match(ctx.flashcardQualityExportText(rows),/#soqueromed quality repair:1/);
+  assert.match(ctx.flashcardQualityExportText(rows),/manual-error-card/);
+  const result=ctx.replaceFlashcardQualityCard(card.id,{cardType:'basic',front:'Frente corrigida',back:'Verso corrigido',tags:[]});
+  assert.equal(result.updated,true);
+  assert.equal(card.qualityFlaggedAt,'');
+  event.key='e';
+  event.code='KeyE';
+  ctx.handleFlashcardKeyboard(event);
+  assert.equal(uiOf(ctx).editFlashcardId,card.id);
+  ctx.handleFlashcardKeyboard(event);
+  assert.equal(uiOf(ctx).editFlashcardId,'');
 });
