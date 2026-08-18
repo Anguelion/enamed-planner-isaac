@@ -323,6 +323,31 @@ tr:hover td { background: color-mix(in srgb, var(--soft-blue) 58%, transparent);
 .fc-coach-signals b { color: var(--ink); font-size: 14px; }
 .fc-coach-signals small { color: var(--muted); font-size: 7px; font-weight: 800; text-transform: uppercase; }
 .fc-adaptive-coach > .icon-btn { justify-content: center; white-space: nowrap; }
+.fc-recovery-trail { display: grid; gap: 16px; overflow: hidden; border-color: color-mix(in srgb,var(--amber) 42%,var(--line)); background: linear-gradient(135deg,color-mix(in srgb,var(--soft-amber) 64%,var(--panel)),var(--panel)); box-shadow: var(--shadow-soft); }
+.fc-recovery-trail.is-clear { border-color: color-mix(in srgb,var(--green) 34%,var(--line)); background: linear-gradient(135deg,color-mix(in srgb,var(--soft-green) 60%,var(--panel)),var(--panel)); }
+.fc-recovery-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.fc-recovery-head h2 { margin: 3px 0 4px; color: var(--ink); font-size: 22px; }
+.fc-recovery-head p { max-width: 720px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.fc-recovery-finish { display: grid; min-width: 104px; padding: 12px; border-radius: 13px; background: var(--panel); text-align: center; }
+.fc-recovery-finish strong { color: var(--amber); font-size: 28px; line-height: 1; }
+.is-clear .fc-recovery-finish strong { color: var(--green); }
+.fc-recovery-finish span { margin-top: 4px; color: var(--muted); font-size: 8px; font-weight: 800; text-transform: uppercase; }
+.fc-recovery-days { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 7px; margin: 0; padding: 0; list-style: none; }
+.fc-recovery-days li { position: relative; display: grid; gap: 4px; min-width: 0; padding: 11px 9px; border: 1px solid color-mix(in srgb,var(--line) 78%,transparent); border-radius: 11px; background: color-mix(in srgb,var(--panel) 88%,transparent); }
+.fc-recovery-days li.is-today { border-color: color-mix(in srgb,var(--amber) 55%,var(--line)); box-shadow: inset 0 0 0 1px color-mix(in srgb,var(--amber) 15%,transparent); }
+.fc-recovery-days li.is-heavy::after { content: "reforço"; position: absolute; top: 7px; right: 7px; color: var(--amber); font-size: 6px; font-weight: 900; text-transform: uppercase; }
+.fc-recovery-days li > span { display: flex; align-items: center; gap: 5px; color: var(--muted); font-size: 8px; text-transform: uppercase; }
+.fc-recovery-days li > span i { width: 6px; height: 6px; border-radius: 50%; background: var(--line); }
+.fc-recovery-days li.is-today > span i { background: var(--amber); box-shadow: 0 0 0 3px color-mix(in srgb,var(--amber) 16%,transparent); }
+.fc-recovery-days strong { color: var(--ink); font-size: 23px; line-height: 1; }
+.fc-recovery-days small { overflow: hidden; color: var(--muted); font-size: 8px; line-height: 1.3; text-overflow: ellipsis; }
+.fc-recovery-footer { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+.fc-recovery-footer > div { display: grid; gap: 3px; }
+.fc-recovery-footer > div > strong { color: var(--ink); font-size: 10px; }
+.fc-recovery-footer > div > span { color: var(--muted); font-size: 9px; }
+.fc-recovery-alert { color: var(--amber)!important; font-weight: 750; }
+.fc-recovery-safe { color: var(--green)!important; font-weight: 750; }
+.fc-recovery-footer > .icon-btn { justify-content: center; white-space: nowrap; }
 .fc-prescription { display: grid; gap: 14px; padding: 18px; border: 1px solid color-mix(in srgb,var(--blue) 28%,var(--line)); border-radius: 16px; background: linear-gradient(135deg,color-mix(in srgb,var(--soft-blue) 72%,var(--panel)),var(--panel)); }
 .fc-prescription-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
 .fc-prescription-head h3 { margin: 3px 0 4px; color: var(--ink); font-size: 20px; }
@@ -838,9 +863,20 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 }
 
 #flashcards .flashcard-study-top { margin-bottom: 2px; }
-#flashcards .flashcard-study-card .flashcard-front { max-width: 720px; margin-inline: auto; font-size: clamp(25px, 3vw, 35px); line-height: 1.35; letter-spacing: -.025em; }
-#flashcards .flashcard-study-card > [data-reveal-card] { justify-self: center; min-width: 190px; min-height: 48px; border-radius: 13px; box-shadow: 0 12px 26px color-mix(in srgb, var(--fc-accent) 25%, transparent); }
-#flashcards .flashcard-study-card .flashcard-back { border-radius: 16px; font-size: clamp(21px, 2.3vw, 27px); }
+#flashcards .flashcard-memory-card { width: min(100%,760px); min-height: 330px; margin: 16px auto 4px; perspective: 1400px; }
+#flashcards .flashcard-memory-card-inner { position: relative; display: grid; min-height: 330px; transform-style: preserve-3d; animation: fc-card-deal .28s ease-out both; }
+#flashcards .flashcard-memory-card.is-flipped .flashcard-memory-card-inner { animation: fc-card-flip .52s cubic-bezier(.2,.78,.2,1) both; }
+#flashcards .flashcard-memory-face { position: relative; grid-area: 1 / 1; display: grid; align-content: center; justify-items: center; gap: 24px; min-height: 330px; padding: clamp(28px,5vw,54px); overflow: hidden; border: 1px solid color-mix(in srgb,var(--fc-accent) 16%,var(--fc-border)); border-radius: 22px; background: linear-gradient(145deg,color-mix(in srgb,var(--panel) 98%,var(--fc-soft)),var(--panel)); box-shadow: 0 24px 55px color-mix(in srgb,var(--ink) 12%,transparent),0 3px 0 color-mix(in srgb,var(--fc-accent) 18%,transparent); backface-visibility: hidden; }
+#flashcards .flashcard-memory-face::before { content: ""; position: absolute; inset: 11px; pointer-events: none; border: 1px solid color-mix(in srgb,var(--fc-border) 64%,transparent); border-radius: 15px; }
+#flashcards .flashcard-memory-back { transform: rotateY(180deg); background: linear-gradient(145deg,color-mix(in srgb,var(--fc-soft) 50%,var(--panel)),var(--panel)); }
+#flashcards .flashcard-face-label { position: absolute; top: 22px; left: 25px; color: var(--muted); font-size: 8px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+#flashcards .flashcard-study-card .flashcard-front { max-width: 650px; margin-inline: auto; font-size: clamp(25px,3vw,35px); line-height: 1.35; letter-spacing: -.025em; text-align: center; }
+#flashcards .flashcard-memory-front [data-reveal-card] { justify-self: center; min-width: 190px; min-height: 48px; border-radius: 13px; box-shadow: 0 12px 26px color-mix(in srgb,var(--fc-accent) 25%,transparent); }
+#flashcards .flashcard-study-card .flashcard-back { max-width: 650px; border: 0; background: transparent; font-size: clamp(21px,2.3vw,27px); text-align: center; }
+#flashcards .flashcard-rating-reveal { animation: fc-rating-rise .28s .28s ease-out both; }
+@keyframes fc-card-deal { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes fc-card-flip { from { opacity: .94; transform: rotateY(0deg) scale(.985); } to { opacity: 1; transform: rotateY(180deg) scale(1); } }
+@keyframes fc-rating-rise { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: none; } }
 #flashcards .flashcard-session-nav .icon-btn { min-height: 34px; padding: 6px 13px; color: var(--muted); font-size: 12px; }
 #flashcards .flashcard-stats-disclosure { color: var(--muted); font-size: 12px; }
 
@@ -1274,6 +1310,10 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 }
 
 @media (max-width: 700px) {
+  .fc-recovery-head, .fc-recovery-footer { align-items: stretch; flex-direction: column; }
+  .fc-recovery-finish { min-width: 0; }
+  .fc-recovery-days { grid-template-columns: repeat(7,minmax(92px,1fr)); overflow-x: auto; padding-bottom: 5px; }
+  .fc-recovery-footer > .icon-btn { width: 100%; }
   .fc-adaptive-coach { grid-template-columns: 1fr; align-items: stretch; }
   .fc-coach-signals { grid-template-columns: 1fr 1fr; }
   .fc-adaptive-coach > .icon-btn { width: 100%; }
@@ -1325,8 +1365,10 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
   #flashcards .flashcard-review-column > .flashcard-stage { min-height: 350px; }
   #flashcards .flashcard-stage { padding: 8px; }
   #flashcards .flashcard-study-card { min-height: 340px; padding: 22px 13px; }
+  #flashcards .flashcard-memory-card, #flashcards .flashcard-memory-card-inner, #flashcards .flashcard-memory-face { min-height: 300px; }
+  #flashcards .flashcard-memory-face { padding: 42px 18px 28px; border-radius: 17px; }
   #flashcards .flashcard-study-card .flashcard-front { font-size: clamp(22px, 7vw, 28px); }
-  #flashcards .flashcard-study-card .flashcard-back { padding: 20px 15px; font-size: 21px; }
+  #flashcards .flashcard-study-card .flashcard-back { padding: 0; font-size: 21px; }
   #flashcards .flashcard-empty-session { min-height: 300px; padding: 16px; }
   #flashcards .flashcard-empty-session > div { padding: 26px 18px; }
   #flashcards .flashcard-indicator-toggle[open] > div { grid-template-columns: 1fr; }
@@ -1401,6 +1443,9 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 }
 
 @media (prefers-reduced-motion: reduce) {
+  #flashcards .flashcard-memory-card-inner,
+  #flashcards .flashcard-memory-card.is-flipped .flashcard-memory-card-inner,
+  #flashcards .flashcard-rating-reveal { animation-duration: .01ms; animation-delay: 0s; }
   #flashcards .flashcard-block-choice,
   #flashcards .flashcard-deck,
   #flashcards .flashcard-command-actions .icon-btn { transition: none; }

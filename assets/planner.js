@@ -9059,6 +9059,57 @@ function flashcardDueForecast(days=7) {
     return {date:iso,count:n(dueSeries.get(iso))};
   });
 }
+function flashcardRecoveryPriority(card, today=studyDateKey()) {
+  const progress=flashcardProgress(card);
+  const dueDate=Date.parse(`${progress.nextReview || today}T12:00:00`);
+  const todayDate=Date.parse(`${today}T12:00:00`);
+  const overdueDays=Math.max(0,Math.round((todayDate-dueDate)/86400000));
+  const lastReview=Date.parse(progress.lastReviewedAt || '');
+  const elapsedDays=Number.isFinite(lastReview)?Math.max(0,(Date.now()-lastReview)/86400000):Math.max(1,overdueDays+Math.max(1,progress.interval));
+  const stability=Math.max(.5,progress.stability || progress.interval || 1);
+  const decay=Math.max(.05,n(FSRS_WEIGHTS[20]) || .2);
+  const factor=Math.pow(.9,-1/decay)-1;
+  const retrievability=clamp(Math.pow(1+factor*elapsedDays/stability,-decay),0,1);
+  return {card,overdueDays,retrievability,urgency:Math.round((1-retrievability)*100)+overdueDays+progress.difficulty};
+}
+function flashcardRecoveryTrail(all=flashcardAllRecords(), options={}) {
+  const today=studyDateKey();
+  const reviewLimit=Math.max(1,Math.round(n(options.reviewLimit)||n(state.flashcardSettings.reviewLimit)||100));
+  const active=flashcardActiveRecords(all).filter(card=>flashcardProgress(card).reviews>0);
+  const overdue=active
+    .filter(card=>flashcardProgress(card).nextReview<today)
+    .map(card=>flashcardRecoveryPriority(card,today))
+    .sort((a,b)=>a.retrievability-b.retrievability || b.overdueDays-a.overdueDays || flashcardProgress(b.card).difficulty-flashcardProgress(a.card).difficulty || String(a.card.front).localeCompare(String(b.card.front)));
+  const dueToday=active.filter(card=>flashcardProgress(card).nextReview===today && isFlashcardDue(card,today));
+  const recoveryShare=Math.max(5,Math.round(reviewLimit*.25));
+  const recoveryDays=overdue.length?Math.min(21,Math.max(1,Math.ceil(overdue.length/recoveryShare))):0;
+  const recoveryPerDay=recoveryDays?Math.ceil(overdue.length/recoveryDays):0;
+  const rowCount=Math.max(7,recoveryDays);
+  let assigned=0;
+  const rows=Array.from({length:rowCount},(_,index)=>{
+    const date=new Date(`${today}T12:00:00`);
+    date.setDate(date.getDate()+index);
+    const key=localISODate(date);
+    const scheduled=index===0?dueToday.length:active.filter(card=>flashcardProgress(card).nextReview===key).length;
+    const recovery=index<recoveryDays?Math.min(recoveryPerDay,overdue.length-assigned):0;
+    assigned+=recovery;
+    return {date:key,scheduled,recovery,total:scheduled+recovery,overLimit:scheduled+recovery>reviewLimit};
+  });
+  const todayPlan=rows[0] || {scheduled:0,recovery:0,total:0};
+  const todayCards=[...overdue.slice(0,todayPlan.recovery).map(item=>item.card),...dueToday];
+  const finishDate=recoveryDays?rows[Math.max(0,recoveryDays-1)]?.date:today;
+  const visibleRows=rows.slice(0,Math.min(7,rows.length));
+  const peak=Math.max(0,...rows.map(row=>row.total));
+  return {
+    today,reviewLimit,overdue:overdue.length,dueToday:dueToday.length,recoveryDays,recoveryPerDay,
+    finishDate,rows,visibleRows,todayCards,peak,overLimitDays:rows.filter(row=>row.overLimit).length,
+    pausedNewCards:overdue.length>0,weakestRecall:overdue.length?Math.round(overdue[0].retrievability*100):null
+  };
+}
+function startFlashcardRecoveryTrail(trail=flashcardRecoveryTrail()) {
+  if(!trail?.todayCards?.length) return 0;
+  return startFlashcardCustomSession(trail.todayCards,{kind:'recovery',label:'Trilha de recuperação',plannedMinutes:Math.max(1,Math.ceil(trail.todayCards.length*flashcardEstimatedSecondsPerReview(30)/60))});
+}
 // Um lote importado grande virava 200 cards "pendentes" de uma vez. Agora todo
 // card novo nasce em espera e só é liberado no ritmo do limite diário: a tela
 // mostra o lote de hoje, não a dívida inteira.
@@ -9304,6 +9355,7 @@ function renderFlashcardOverview(all, decks, due, reviewsToday, waiting) {
       <div><span>Retenção · 30 dias</span><strong>${retention.value===null?'—':retention.value+'%'}</strong><small>${retention.total?`${retention.total} respostas registradas`:'começa após as primeiras revisões'}</small></div>
       <div><span>Sequência atual</span><strong>${streak}</strong><small>${activeDays} dias ativos no histórico</small></div>
     </section>
+    ${renderFlashcardRecoveryTrail(all)}
     ${renderFlashcardAdaptiveCoach(all)}
     ${renderFlashcardAdaptivePrescription(all,'overview')}
     ${latestFlashcardSessionReport()?renderFlashcardSessionReport(latestFlashcardSessionReport(),{compact:true}):''}
@@ -9313,6 +9365,22 @@ function renderFlashcardOverview(all, decks, due, reviewsToday, waiting) {
     ${renderFlashcardSmartDeckOverview(all)}
     <section class="card fc-decks-card"><div class="section-title"><div><span class="eyebrow">Coleção</span><h2>Aulas e baralhos</h2></div><button class="icon-btn primary" data-fc-view="study">Iniciar revisão</button></div>${renderFlashcardDeckTable(decks)}</section>
   </div>`;
+}
+function renderFlashcardRecoveryTrail(all=flashcardAllRecords()) {
+  const trail=flashcardRecoveryTrail(all);
+  const isClear=!trail.overdue;
+  const title=isClear?'Sua trilha está em dia':`${trail.overdue} ${trail.overdue===1?'card atrasado':'cards atrasados'} em recuperação`;
+  const message=isClear
+    ? 'Continue seguindo a carga de cada dia para não formar uma nova fila.'
+    : `Cumpra a etapa diária e a fila antiga chega a zero em ${fmtDate(trail.finishDate)}. O plano se recalcula após cada sessão.`;
+  const rows=trail.visibleRows.map((row,index)=>{
+    const date=index===0?'Hoje':new Date(`${row.date}T12:00:00`).toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit'}).replace('.','');
+    return `<li class="${index===0?'is-today':''} ${row.overLimit?'is-heavy':''}"><span><i></i><b>${escapeHtml(date)}</b></span><strong>${row.total}</strong><small>${row.recovery?`${row.recovery} da fila antiga + `:''}${row.scheduled} do dia</small></li>`;
+  }).join('');
+  const limitNote=trail.overLimitDays
+    ? `<span class="fc-recovery-alert">Pico de ${trail.peak}: acima do limite atual de ${trail.reviewLimit}. A trilha assume esse reforço temporário.</span>`
+    : `<span class="fc-recovery-safe">Todas as etapas cabem no limite de ${trail.reviewLimit} revisões/dia.</span>`;
+  return `<section class="card fc-recovery-trail ${isClear?'is-clear':''}"><div class="fc-recovery-head"><div><span class="eyebrow">Trilha para zerar atrasos</span><h2>${escapeHtml(title)}</h2><p>${escapeHtml(message)}</p></div><div class="fc-recovery-finish"><strong>${trail.recoveryDays || 0}</strong><span>${trail.recoveryDays===1?'dia para zerar':'dias para zerar'}</span></div></div><ol class="fc-recovery-days">${rows}</ol><div class="fc-recovery-footer"><div>${trail.pausedNewCards?'<strong>Novos cards pausados no plano</strong><span>Primeiro protegemos as revisões já vencidas.</span>':'<strong>Ritmo protegido</strong><span>Nenhum atraso antigo para reorganizar.</span>'}${limitNote}</div><button class="icon-btn primary" data-fc-recovery-start ${trail.todayCards.length?'':'disabled'}>${trail.todayCards.length?`Fazer etapa de hoje · ${trail.todayCards.length}`:'Tudo feito por hoje'}</button></div></section>`;
 }
 function flashcardBrowserState(card) {
   const progress = flashcardProgress(card);
@@ -10221,6 +10289,10 @@ function renderFlashcards() {
   <nav class="flashcard-view-tabs" aria-label="Seções dos flashcards"><button class="${ui.flashcardView==='overview'?'active':''}" data-fc-view="overview">Visão geral</button><button class="${ui.flashcardView==='study'?'active':''}" data-fc-view="study">Estudar <span>${cards.length}</span></button><button class="${ui.flashcardView==='custom'?'active':''}" data-fc-view="custom">Personalizar</button><button class="${ui.flashcardView==='browser'?'active':''}" data-fc-view="browser">Navegar <span>${all.length}</span></button><button class="${ui.flashcardView==='settings'?'active':''}" data-fc-view="settings">Configurar</button><button class="${ui.flashcardView==='manage'?'active':''}" data-fc-view="manage">Gerenciar</button></nav>
   <input class="hidden" id="ankiImportFile" type="file" accept=".tsv,.txt,.csv">${mainContent}${ui.flashcardOrganizerOpen ? renderFlashcardOrganizer() : ''}`;
   bindFlashcardPrescriptionControls(document.getElementById('flashcards'),renderFlashcards,()=>renderFlashcards());
+  document.querySelectorAll('[data-fc-recovery-start]').forEach(button=>button.addEventListener('click',()=>{
+    const trail=flashcardRecoveryTrail(flashcardAllRecords());
+    if(startFlashcardRecoveryTrail(trail)) persist();
+  }));
   document.querySelectorAll('[data-fc-coach-start]').forEach(button=>button.addEventListener('click',event=>{
     const minutes=Math.max(5,Math.min(120,n(event.currentTarget.dataset.fcCoachStart)));
     state.flashcardSettings.prescriptionMinutes=minutes;
@@ -10905,7 +10977,7 @@ function renderFlashcardStudy(card, queue=[]) {
   }
   const progress = flashcardProgress(card);
   const revealed = ui.revealedCards[card.id];
-  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today flashcard-focus-clock" id="flashcardFocusClock" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="${ui.flashcardFocusPaused ? 'Pausado ·' : 'Estudando ·'}" title="Clique para pausar/retomar o tempo">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div>${renderFlashcardRating(card.id)}` : `<button class="icon-btn primary" data-reveal-card="${card.id}">Mostrar resposta</button>`}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
+  return `<div class="flashcard-stage"><div class="flashcard-study-card"><div class="flashcard-study-top"><span class="badge today">${escapeHtml(card.area)}</span><span class="badge wait">${escapeHtml(card.subarea)}</span><span class="badge today flashcard-focus-clock" id="flashcardFocusClock" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="${ui.flashcardFocusPaused ? 'Pausado ·' : 'Estudando ·'}">Tempo pausado</span>${ui.flashcardFocusMode && ui.flashcardSpeedMode ? `<span class="badge wait" id="flashcardSpeedClock" data-speed-target="${FLASHCARD_SPEED_TARGET_SECONDS}">⚡ 0s</span>` : ''}<span class="sm2-pill">${ui.flashcardIndex + 1} de ${queue.length}</span>${ui.flashcardFocusMode ? `<button class="tiny-btn flashcard-speed-toggle" id="flashcardSpeedToggle" type="button" aria-pressed="${ui.flashcardSpeedMode}">${ui.flashcardSpeedMode ? 'Sair do speed' : '⚡ Speed'}</button>` : ''}<button class="tiny-btn flashcard-focus-toggle" id="flashcardFocusToggle" type="button" aria-pressed="${ui.flashcardFocusMode}">${ui.flashcardFocusMode ? 'Sair do foco' : '⛶ Modo foco'}</button></div><div class="flashcard-memory-card ${revealed?'is-flipped':''}"><div class="flashcard-memory-card-inner"><section class="flashcard-memory-face flashcard-memory-front" aria-hidden="${revealed?'true':'false'}"><span class="flashcard-face-label">Frente</span><div class="flashcard-front flashcard-rich-text">${renderFlashcardFrontHtml(card)}</div><button class="icon-btn primary" data-reveal-card="${card.id}" ${revealed?'tabindex="-1"':''}>Virar cartão</button></section><section class="flashcard-memory-face flashcard-memory-back" aria-hidden="${revealed?'false':'true'}"><span class="flashcard-face-label">Verso</span><div class="flashcard-back flashcard-rich-text">${renderFlashcardBackHtml(card)}</div></section></div></div>${renderFlashcardInlineEditor(card)}${revealed ? `<div class="flashcard-rating-reveal">${renderFlashcardRating(card.id)}</div>` : ''}<div class="flashcard-session-nav"><button class="icon-btn" data-flashcard-move="-1" ${ui.flashcardIndex<=0?'disabled':''}>Anterior</button><button class="icon-btn" data-flashcard-move="1" ${ui.flashcardIndex>=queue.length-1?'disabled':''}>Próximo</button></div><details class="flashcard-stats-disclosure"><summary>Estatísticas do card</summary><div class="flashcard-meta"><span class="sm2-pill">Próxima: ${escapeHtml(progress.nextReview)}</span><span class="sm2-pill">${progress.reviews} revisões</span><span class="sm2-pill">${progress.lapses} lapsos</span><span class="sm2-pill">EF ${progress.ease.toFixed(2)}</span></div></details></div></div>`;
 }
 function renderFlashcardInlineEditor(card) {
   if(ui.editFlashcardId !== card.id) return `<div class="flashcard-edit-toggle"><button class="tiny-btn" data-edit-flashcard="${escapeAttr(card.id)}">Editar card</button></div>`;

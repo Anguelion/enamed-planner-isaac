@@ -1084,3 +1084,63 @@ test('prévia de correção mostra comparação antes e depois', () => {
   assert.match(html,/Depois/);
   assert.match(html,/Aplicar 1 correção/);
 });
+
+test('trilha de recuperação divide atrasados sem alterar suas datas de memória', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  state.flashcardSettings.reviewLimit=20;
+  const today=ctx.studyDateKey();
+  const dayKey=offset=>{const date=new Date(`${today}T12:00:00`); date.setDate(date.getDate()+offset); return ctx.localISODate(date);};
+  const cards=[];
+  for(let index=0;index<12;index++) cards.push(ctx.normalizeFlashcardRecord({id:`recovery-late-${index}`,front:`Atrasado ${index}`,back:'Resposta'}));
+  for(let index=0;index<3;index++) cards.push(ctx.normalizeFlashcardRecord({id:`recovery-today-${index}`,front:`Hoje ${index}`,back:'Resposta'}));
+  for(let index=0;index<2;index++) cards.push(ctx.normalizeFlashcardRecord({id:`recovery-future-${index}`,front:`Futuro ${index}`,back:'Resposta'}));
+  state.flashcardLibrary.push(...cards);
+  cards.slice(0,12).forEach(card=>{state.flashcardProgress[card.id]={reviews:3,stability:5,difficulty:6,nextReview:dayKey(-4)};});
+  cards.slice(12,15).forEach(card=>{state.flashcardProgress[card.id]={reviews:2,stability:8,nextReview:today};});
+  cards.slice(15).forEach(card=>{state.flashcardProgress[card.id]={reviews:2,stability:8,nextReview:dayKey(1)};});
+  const before=plain(Object.fromEntries(cards.slice(0,12).map(card=>[card.id,state.flashcardProgress[card.id].nextReview])));
+  const trail=ctx.flashcardRecoveryTrail(ctx.flashcardAllRecords());
+  assert.equal(trail.overdue,12);
+  assert.equal(trail.recoveryDays,3);
+  assert.equal(trail.rows[0].recovery,4);
+  assert.equal(trail.rows[0].scheduled,3);
+  assert.equal(trail.todayCards.length,7);
+  assert.equal(trail.rows[1].scheduled,2);
+  assert.deepEqual(plain(Object.fromEntries(cards.slice(0,12).map(card=>[card.id,state.flashcardProgress[card.id].nextReview]))),before,'o plano não adia artificialmente os cards');
+});
+
+test('trilha inicia somente a etapa de hoje e preserva a prioridade dos atrasados frágeis', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  state.flashcardSettings.reviewLimit=20;
+  const today=ctx.studyDateKey();
+  const yesterday=new Date(`${today}T12:00:00`); yesterday.setDate(yesterday.getDate()-1);
+  const fragile=ctx.normalizeFlashcardRecord({id:'recovery-fragile',front:'Frágil',back:'R'});
+  const stable=ctx.normalizeFlashcardRecord({id:'recovery-stable',front:'Estável',back:'R'});
+  state.flashcardLibrary.push(fragile,stable);
+  state.flashcardProgress[fragile.id]={reviews:4,stability:1,difficulty:8,nextReview:ctx.localISODate(yesterday),lastReviewedAt:new Date(Date.now()-12*86400000).toISOString()};
+  state.flashcardProgress[stable.id]={reviews:4,stability:90,difficulty:3,nextReview:ctx.localISODate(yesterday),lastReviewedAt:new Date(Date.now()-12*86400000).toISOString()};
+  const trail=ctx.flashcardRecoveryTrail(ctx.flashcardAllRecords());
+  assert.equal(trail.todayCards[0].id,fragile.id);
+  assert.equal(ctx.startFlashcardRecoveryTrail(trail),2);
+  assert.deepEqual(plain(uiOf(ctx).flashcardCustomSessionIds),[fragile.id,stable.id]);
+  assert.equal(uiOf(ctx).flashcardStudySession.label,'Trilha de recuperação');
+});
+
+test('sessão apresenta frente e verso como um cartão animado', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'animated-card',front:'Qual é a pergunta?',back:'Esta é a resposta.'});
+  state.flashcardLibrary.push(card);
+  let html=ctx.renderFlashcardStudy(card,[card]);
+  assert.match(html,/flashcard-memory-card/);
+  assert.match(html,/flashcard-memory-front/);
+  assert.match(html,/Virar cartão/);
+  uiOf(ctx).revealedCards[card.id]=true;
+  html=ctx.renderFlashcardStudy(card,[card]);
+  assert.match(html,/flashcard-memory-card is-flipped/);
+  assert.match(html,/flashcard-memory-back/);
+  assert.match(html,/Esta é a resposta/);
+  assert.match(html,/flashcard-rating-reveal/);
+});
