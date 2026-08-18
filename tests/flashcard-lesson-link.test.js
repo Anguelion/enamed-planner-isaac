@@ -1139,8 +1139,9 @@ test('sessão apresenta frente e verso como um cartão animado', () => {
   assert.match(html,/Virar cartão/);
   uiOf(ctx).revealedCards[card.id]=true;
   html=ctx.renderFlashcardStudy(card,[card]);
-  assert.match(html,/flashcard-memory-card is-flipped/);
+  assert.match(html,/flashcard-memory-card is-revealed/);
   assert.match(html,/flashcard-memory-back/);
+  assert.doesNotMatch(html,/flashcard-memory-front/);
   assert.match(html,/Esta é a resposta/);
   assert.match(html,/flashcard-rating-reveal/);
 });
