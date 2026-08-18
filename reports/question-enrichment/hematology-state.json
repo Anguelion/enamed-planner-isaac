@@ -750,7 +750,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-65c3d64b88e1111d": {
+      "number": "1058f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T19:01:48.219Z",
+      "nextAttemptAt": "2026-08-25T19:01:48.219Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-negro-20-anos3275dd8aef/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-e130d64d9f0461e6": {
+      "number": "1059f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T19:01:54.727Z",
+      "nextAttemptAt": "2026-08-25T19:01:54.727Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-14-anos65d8a03ea1/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-9009b4c464189230": {
+      "number": "1060f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T19:02:01.067Z",
+      "nextAttemptAt": "2026-08-25T19:02:01.067Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-hemolitico388a9e3727/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-b64b220e7f848f83": {
+      "number": "1061f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T19:02:07.349Z",
+      "nextAttemptAt": "2026-08-25T19:02:07.349Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-Purpura105fadf1f1/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-c952f3f254d22cf5": {
+      "number": "1062f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T19:02:13.317Z",
+      "nextAttemptAt": "2026-08-25T19:02:13.317Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/pacientes-portadores217cccb9a3/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-hemoliticas-7de9ab0ab33bc4de": {
+      "number": "1063f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T19:02:19.624Z",
+      "nextAttemptAt": "2026-08-25T19:02:19.624Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/hidroxiureia-e-usada24aa53bc10/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-08-18T07:09:04.091Z"
+  "updatedAt": "2026-08-18T19:02:19.624Z"
 }

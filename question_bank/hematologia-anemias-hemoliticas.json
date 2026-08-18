@@ -2373,14 +2373,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Paciente com doença falciforme em crise de dor — o padrão laboratorial esperado, mesmo fora de uma crise aguda mais grave, é o clássico da hemólise crônica: reticulócitos altos (a medula sempre trabalhando para repor as hemácias destruídas), haptoglobina baixa (consumida tentando 'limpar' a hemoglobina livre no sangue), e LDH e bilirrubina indireta elevados (sinais de destruição contínua das hemácias).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350399",
-      "ankiGuid": "zp6RM9z::#"
+      "ankiGuid": "zp6RM9z::#",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-negro-20-anos3275dd8aef/",
+        "sourceQuestionId": "4000083912",
+        "matchedAt": "2026-08-18T19:01:48.218Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-e130d64d9f0461e6",
@@ -2406,14 +2419,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Adolescente com anemia falciforme, febre, falta de ar e dor no peito com infiltrado no raio-x — síndrome torácica aguda. O esquema de antibiótico indicado combina uma cefalosporina (ceftriaxona, cobrindo bactérias comuns) com um macrolídeo (azitromicina, cobrindo bactérias atípicas, como o Mycoplasma), já que ambos os tipos de germe podem estar por trás desse quadro.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350400",
-      "ankiGuid": "w80BJ10[qX"
+      "ankiGuid": "w80BJ10[qX",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-14-anos65d8a03ea1/",
+        "sourceQuestionId": "4000077300",
+        "matchedAt": "2026-08-18T19:01:54.726Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-9009b4c464189230",
@@ -2439,14 +2466,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O exame que ajuda a diferenciar a PTT da SHU é a dosagem da atividade da enzima ADAMTS 13 — na PTT, essa enzima (que 'corta' um fator de coagulação grande demais) está bem reduzida, permitindo a formação de coágulos espalhados; na SHU, essa enzima costuma estar normal.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Introdução às anemias microangiopáticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350401",
-      "ankiGuid": "CW@>P<+b[*"
+      "ankiGuid": "CW@>P<+b[*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-hemolitico388a9e3727/",
+        "sourceQuestionId": "4000075412",
+        "matchedAt": "2026-08-18T19:02:01.067Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-b64b220e7f848f83",
@@ -2472,14 +2510,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A PTT tem uma combinação clássica de cinco achados: anemia hemolítica causada por destruição mecânica das hemácias (microangiopática), plaquetas baixas, alterações neurológicas, problema no rim e febre — nem sempre todos presentes ao mesmo tempo, mas essa é a assinatura clássica da doença.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350402",
-      "ankiGuid": "duFh_BbCi#"
+      "ankiGuid": "duFh_BbCi#",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/a-Purpura105fadf1f1/",
+        "sourceQuestionId": "4000074090",
+        "matchedAt": "2026-08-18T19:02:07.349Z",
+        "confidence": 0.9909999999999999
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-c952f3f254d22cf5",
@@ -2506,14 +2555,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Além do estafilococo (a causa mais comum de osteomielite em geral), a Salmonella é o agente clássico e mais lembrado especificamente em pacientes com anemia falciforme, por causa da vulnerabilidade especial que a doença causa a esse tipo de bactéria.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Complicações ósseas da anemia falciforme",
+        "Osteomielite",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350403",
-      "ankiGuid": "z]U/*az:<~"
+      "ankiGuid": "z]U/*az:<~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/pacientes-portadores217cccb9a3/",
+        "sourceQuestionId": "4000073173",
+        "matchedAt": "2026-08-18T19:02:13.316Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-7de9ab0ab33bc4de",
@@ -2540,14 +2604,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A hidroxiureia funciona aumentando a produção de hemoglobina fetal (HbF) — essa forma de hemoglobina não se junta em bastões dentro da hemácia como a hemoglobina S faz, então quanto mais HbF, menos a célula tende a assumir o formato de foice, reduzindo as crises vaso-oclusivas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Hidroxiureia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350404",
-      "ankiGuid": "D{,3[qt$qF"
+      "ankiGuid": "D{,3[qt$qF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/hidroxiureia-e-usada24aa53bc10/",
+        "sourceQuestionId": "4000067902",
+        "matchedAt": "2026-08-18T19:02:19.624Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-54afbfbbab9009ca",

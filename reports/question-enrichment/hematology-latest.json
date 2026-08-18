@@ -1,74 +1,195 @@
 {
-  "generatedAt": "2026-08-18T07:08:33.568Z",
+  "generatedAt": "2026-08-18T19:01:46.879Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-25ac78f62c219563",
-      "number": "1052f",
+      "id": "anki-hematologia-anemias-hemoliticas-65c3d64b88e1111d",
+      "number": "1058f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-79427e11072ffbc1",
-      "number": "1053f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-bef6ed647ce5d8db",
-      "number": "1054f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Crianc-4-anos-idade84d040e2fe/",
-        "https://med.estrategia.com/public/questoes/crianc-com-4-anos9692b8e04f/",
-        "https://med.estrategia.com/public/questoes/adolescente-15-anos-e103963c215e/"
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-negro-20-anos3275dd8aef/",
+      "sourceQuestionId": "4000083912",
+      "matchedAt": "2026-08-18T19:01:48.218Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Introdução à hemólise",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme"
       ],
-      "bestSimilarity": {
-        "stem": 0.24836601307189543,
-        "options": 0.02490421455938697,
-        "combined": 0.18132747351814288
-      }
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-38145892418d8ba5",
-      "number": "1055f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: reticulócitos aumentados, haptoglobina diminuída e LDH e bilirrubina indireta elevados",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo93057daa90/"
+        "https://med.estrategia.com/public/questoes/Homem-negro-20-anos3275dd8aef/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-e130d64d9f0461e6",
+      "number": "1059f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-14-anos65d8a03ea1/",
+      "sourceQuestionId": "4000077300",
+      "matchedAt": "2026-08-18T19:01:54.726Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda"
       ],
-      "bestSimilarity": {
-        "stem": 0.1897810218978102,
-        "options": 0,
-        "combined": 0.13284671532846715
-      }
+      "comment": "Gabarito confirmado: C. Assunto: Síndrome torácica aguda. Conduta/resposta: ceftriaxona + azitromicina",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Adolescente-14-anos65d8a03ea1/",
+        "https://med.estrategia.com/public/questoes/Adolescente-14-anos70cb30671d/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-f1062024594042fb",
-      "number": "1056f",
+      "id": "anki-hematologia-anemias-hemoliticas-9009b4c464189230",
+      "number": "1060f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-hemolitico388a9e3727/",
+      "sourceQuestionId": "4000075412",
+      "matchedAt": "2026-08-18T19:02:01.067Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Introdução às anemias microangiopáticas"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Introdução às anemias microangiopáticas. Conduta/resposta: dosagem de ADAMTS 13",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/sindrome-hemolitico388a9e3727/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-80323f63f5e93ed5",
-      "number": "1057f",
+      "id": "anki-hematologia-anemias-hemoliticas-b64b220e7f848f83",
+      "number": "1061f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-Purpura105fadf1f1/",
+      "sourceQuestionId": "4000074090",
+      "matchedAt": "2026-08-18T19:02:07.349Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.97,
+        "combined": 0.9909999999999999
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Púrpura Trombocitopênica Trombótica (PTT). Conduta/resposta: As principais características são anemia hemolítica microangiopática, trombocitopenia,alterações neurológicas, insuficiência renal e febre.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/a-Purpura105fadf1f1/",
+        "https://med.estrategia.com/public/questoes/a-purpura113c00100a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-c952f3f254d22cf5",
+      "number": "1062f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/pacientes-portadores217cccb9a3/",
+      "sourceQuestionId": "4000073173",
+      "matchedAt": "2026-08-18T19:02:13.316Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Complicações ósseas da anemia falciforme",
+        "Osteomielite"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Osteomielite. Conduta/resposta: Salmonela.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/pacientes-portadores217cccb9a3/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-7de9ab0ab33bc4de",
+      "number": "1063f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/hidroxiureia-e-usada24aa53bc10/",
+      "sourceQuestionId": "4000067902",
+      "matchedAt": "2026-08-18T19:02:19.624Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Hidroxiureia"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Hidroxiureia. Conduta/resposta: Aumentar o nível da hemoglobina fetal.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/hidroxiureia-e-usada24aa53bc10/",
+        "https://med.estrategia.com/public/questoes/hidroxiureia-e-usada2421bda24d/"
+      ]
     }
   ]
 }
