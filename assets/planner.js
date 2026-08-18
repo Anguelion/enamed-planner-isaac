@@ -9958,8 +9958,9 @@ function flashcardQualityIssues(card) {
   const issues=[];
   if(!front || (card.cardType!=='cloze' && !back)) issues.push({id:'incomplete',label:'Incompleto',tone:'danger'});
   if(back.length>700 || back.split(/\s+/).filter(Boolean).length>120) issues.push({id:'long',label:'Resposta muito longa',tone:'attention'});
-  if(progress.lapses>=3 || progress.difficulty>=8.5) issues.push({id:'leech',label:'Muitos erros',tone:'attention'});
-  const created=Date.parse(card.createdAt||'');
+  const lapsesSinceCorrection=Math.max(0,n(progress.lapses)-n(card.qualityResolvedLapses));
+  if(lapsesSinceCorrection>=3 || (progress.difficulty>=8.5 && !card.qualityResolvedAt)) issues.push({id:'leech',label:'Muitos erros',tone:'attention'});
+  const created=Date.parse(card.qualityResolvedAt||card.createdAt||'');
   if(!progress.reviews && Number.isFinite(created) && created<Date.now()-45*86400000) issues.push({id:'stale',label:'Nunca revisado',tone:'muted'});
   return issues;
 }
@@ -10002,6 +10003,54 @@ function flashcardQualityReport(all=flashcardAllRecords()) {
   const counts={incomplete:0,long:0,leech:0,stale:0};
   issueCards.forEach(row=>row.issues.forEach(issue=>counts[issue.id]++));
   return {total:cards.length,identical,conflicts,similar,issueCards,counts};
+}
+function flashcardQualityCards(report=flashcardQualityReport()) {
+  const rows=new Map();
+  const add=(card,issue)=>{
+    if(!card?.id) return;
+    if(!rows.has(card.id)) rows.set(card.id,{card,issues:[]});
+    const current=rows.get(card.id);
+    if(issue && !current.issues.some(item=>item.id===issue.id)) current.issues.push(issue);
+  };
+  (report.identical||[]).forEach(group=>group.cards.forEach(card=>add(card,{id:'duplicate',label:'Cópia idêntica',tone:'attention'})));
+  (report.conflicts||[]).forEach(group=>group.cards.forEach(card=>add(card,{id:'conflict',label:'Resposta conflitante',tone:'danger'})));
+  (report.similar||[]).forEach(group=>group.cards.forEach(card=>add(card,{id:'similar',label:`Pergunta semelhante (${group.score}%)`,tone:'attention'})));
+  (report.issueCards||[]).forEach(row=>row.issues.forEach(issue=>add(row.card,issue)));
+  return [...rows.values()].sort((a,b)=>b.issues.length-a.issues.length || n(flashcardProgress(b.card).lapses)-n(flashcardProgress(a.card).lapses) || String(a.card.front||'').localeCompare(String(b.card.front||'')));
+}
+function flashcardQualityExportRecords(rows=[]) {
+  return rows.map(row=>{
+    const diagnosticTags=(row.issues||[]).map(issue=>`Qualidade::${String(issue.label||issue.id).replace(/\s+/g,'_').replace(/[;,\t]/g,'')}`);
+    return {...row.card,tags:[...new Set([...(row.card.tags||[]),...diagnosticTags])]};
+  });
+}
+function replaceFlashcardQualityCard(id, changes={}) {
+  const card=mutableFlashcardRecord(id);
+  if(!card || card.deletedAt) return {updated:false,error:'Este card não está mais disponível.'};
+  const cardType=changes.cardType==='cloze'?'cloze':'basic';
+  const front=String(changes.front||'').trim();
+  const back=String(changes.back||'').trim();
+  if(!front) return {updated:false,error:'Preencha a frente do card.'};
+  if(cardType==='basic' && !back) return {updated:false,error:'Preencha o verso do card.'};
+  if(cardType==='cloze' && !flashcardClozeNumbers(front).length) return {updated:false,error:'O card cloze precisa ter ao menos uma lacuna {{c1::texto}}.'};
+  const before={cardType:card.cardType,front:card.front,back:card.back,tags:[...(card.tags||[])]};
+  card.cardType=cardType;
+  card.front=front;
+  card.back=back;
+  card.tags=[...new Set(Array.isArray(changes.tags)?changes.tags:String(changes.tags||'').split(/[,;\s]+/).filter(Boolean))];
+  card.contentVersion=Math.max(1,n(card.contentVersion)||1)+1;
+  card.rowVersion=Math.max(1,n(card.rowVersion)||1)+1;
+  card.updatedAt=new Date().toISOString();
+  card.qualityResolvedAt=card.updatedAt;
+  card.qualityResolvedLapses=n(flashcardProgress(card).lapses);
+  normalizeFlashcardRecord(card);
+  if(Array.isArray(state.flashcardSystem?.versions)) {
+    state.flashcardSystem.versions.push({cardId:card.id,version:card.contentVersion,kind:'replacement',at:card.updatedAt,before,front:card.front,back:card.back,tags:[...card.tags]});
+    if(state.flashcardSystem.versions.length>2000) state.flashcardSystem.versions=state.flashcardSystem.versions.slice(-2000);
+  }
+  renderCache.manualCards=null;
+  renderCache.flashcardStats.clear();
+  return {updated:true,id:card.id,reviews:flashcardProgress(card).reviews,lapses:flashcardProgress(card).lapses};
 }
 function mergeFlashcardDuplicates(ids, preferredId='') {
   const cards=[...new Set(ids||[])].map(mutableFlashcardRecord).filter(card=>card&&!card.deletedAt);
@@ -10066,11 +10115,18 @@ function renderFlashcardManage(all) {
   const organizeEditor=organizing?`<div class="fc-organize-editor"><div><span class="eyebrow">Reorganizar sem perder progresso</span><h3>${escapeHtml(organizing.label)}</h3><p>${organizing.count} ${organizing.count===1?'card será movido':'cards serão movidos'}. As revisões, dificuldade e próximas datas permanecem iguais.</p></div><div class="fc-organize-fields"><label>Aula de destino${flashcardLessonSelectHtml('id="fcOrganizeDestination"',organizeDestination,'Sem aula (baralho independente)')}</label>${organizeDestination?'':`<label>Novo nome do baralho<input class="input" id="fcOrganizeName" maxlength="100" value="${escapeAttr(organizeName)}" placeholder="Ex.: Cardiologia — revisão final"></label>`}<div class="fc-organize-preview"><strong>${organizeSameDestination?'Escolha outra aula ou deixe o baralho independente':destinationLesson?`Mesclar em ${escapeHtml(flashcardLessonLabel(destinationLesson))}`:`Manter como baralho independente`}</strong><span>${organizeSameDestination?'Este já é o destino atual do conjunto.':destinationLesson?`${destinationCount} ${destinationCount===1?'card já está':'cards já estão'} no destino. Os conjuntos serão unidos.`:'O conjunto ficará na área “Sem aula” com o novo nome.'}</span></div></div><div class="fc-organize-actions"><button class="icon-btn" id="fcOrganizeCancel">Cancelar</button><button class="icon-btn primary" id="fcOrganizeApply" ${organizeSameDestination?'disabled':''}>${destinationLesson?'Mover e mesclar':'Salvar organização'}</button></div></div>`:'';
   const organizeSection=`<section class="card fc-manage-organize"><div class="section-title"><div><span class="eyebrow">Organização da coleção</span><h3>Renomear, mover ou mesclar</h3><div class="muted">Escolha um conjunto e seu novo destino. Nenhum histórico de revisão será apagado.</div></div>${ui.flashcardLastCollectionMove?.before?.length?'<button class="tiny-btn" id="fcOrganizeUndo">Desfazer última organização</button>':''}</div>${organizeEditor}<div class="fc-manage-organize-list">${organizeRows}</div></section>`;
   const quality=flashcardQualityReport(all);
+  const qualityCards=flashcardQualityCards(quality);
+  const qualityIds=new Set(qualityCards.map(row=>row.card.id));
+  if(!Array.isArray(ui.flashcardQualitySelected)) ui.flashcardQualitySelected=[];
+  ui.flashcardQualitySelected=ui.flashcardQualitySelected.filter(id=>qualityIds.has(id));
+  const qualitySelected=new Set(ui.flashcardQualitySelected);
+  const qualitySelectedReviews=qualityCards.filter(row=>qualitySelected.has(row.card.id)).reduce((sum,row)=>sum+n(flashcardProgress(row.card).reviews),0);
+  const replacingQualityCard=qualityCards.find(row=>row.card.id===ui.flashcardQualityReplaceId)?.card || null;
   const duplicateRows=quality.identical.slice(0,8).map((group,index)=>`<div class="fc-quality-row"><span><strong>${escapeHtml(String(group.cards[0]?.front||'').replace(/\s+/g,' ').slice(0,120))}</strong><small>${group.cards.length} cópias idênticas · ${group.cards.reduce((sum,card)=>sum+flashcardProgress(card).reviews,0)} revisões serão preservadas</small></span><button class="tiny-btn primary" data-fc-quality-merge="${index}">Mesclar cópias</button></div>`).join('');
-  const conflictRows=[...quality.conflicts.map(group=>({...group,label:'Mesma pergunta, respostas diferentes'})),...quality.similar.map(group=>({...group,label:`Perguntas ${group.score}% semelhantes`}))].slice(0,8).map(group=>`<div class="fc-quality-row"><span><strong>${escapeHtml(String(group.cards[0]?.front||'').replace(/\s+/g,' ').slice(0,120))}</strong><small>${escapeHtml(group.label)} · exige comparação manual</small></span><button class="tiny-btn" data-fc-quality-open="${escapeAttr(group.cards[0]?.id||'')}">Comparar</button></div>`).join('');
-  const issueRows=quality.issueCards.slice(0,10).map(row=>`<div class="fc-quality-row"><span><strong>${escapeHtml(String(row.card.front||'Card sem frente').replace(/\s+/g,' ').slice(0,120))}</strong><small>${row.issues.map(issue=>escapeHtml(issue.label)).join(' · ')}</small></span><button class="tiny-btn" data-fc-quality-open="${escapeAttr(row.card.id)}">Corrigir</button></div>`).join('');
-  const qualityAlertCount=quality.identical.length+quality.conflicts.length+quality.similar.length+quality.issueCards.length;
-  const qualitySection=`<section class="card fc-quality-center"><div class="section-title"><div><span class="eyebrow">Saúde da coleção</span><h3>Central de qualidade</h3><div class="muted">Encontre cópias, conflitos e cards que precisam ser reescritos.</div></div><span class="badge ${qualityAlertCount?'wait':'done'}">${qualityAlertCount} alertas</span></div><div class="fc-quality-kpis"><span><b>${quality.identical.length}</b><small>grupos idênticos</small></span><span><b>${quality.conflicts.length+quality.similar.length}</b><small>para comparar</small></span><span><b>${quality.counts.long}</b><small>respostas longas</small></span><span><b>${quality.counts.leech}</b><small>muitos erros</small></span><span><b>${quality.counts.incomplete}</b><small>incompletos</small></span></div>${quality.identical.length?`<details open><summary>Cópias que podem ser mescladas com segurança</summary><div class="fc-quality-list">${duplicateRows}</div></details>`:''}${quality.conflicts.length||quality.similar.length?`<details><summary>Perguntas parecidas ou respostas conflitantes</summary><div class="fc-quality-list">${conflictRows}</div></details>`:''}${quality.issueCards.length?`<details><summary>Cards que merecem correção</summary><div class="fc-quality-list">${issueRows}</div></details>`:''}${!qualityAlertCount?'<div class="fc-quality-clear"><strong>Coleção saudável</strong><span>Nenhum problema relevante foi encontrado agora.</span></div>':''}</section>`;
+  const qualityWorkRows=qualityCards.slice(0,100).map(row=>{const progress=flashcardProgress(row.card); return `<div class="fc-quality-work-row ${qualitySelected.has(row.card.id)?'is-selected':''}"><input type="checkbox" data-fc-quality-select="${escapeAttr(row.card.id)}" ${qualitySelected.has(row.card.id)?'checked':''} aria-label="Selecionar card com defeito"><span><strong>${escapeHtml(String(row.card.front||'Card sem frente').replace(/\s+/g,' ').slice(0,140))}</strong><small>${row.issues.map(issue=>escapeHtml(issue.label)).join(' · ')} · ${progress.reviews} revisões</small></span><div><button class="tiny-btn primary" data-fc-quality-replace="${escapeAttr(row.card.id)}">Substituir</button><button class="tiny-btn" data-fc-quality-open="${escapeAttr(row.card.id)}">Ver detalhes</button><button class="tiny-btn danger" data-fc-quality-delete-one="${escapeAttr(row.card.id)}">Excluir</button></div></div>`;}).join('');
+  const replacementEditor=replacingQualityCard?`<div class="fc-quality-replace" role="region" aria-label="Substituir card com defeito"><div><span class="eyebrow">Substituição individual</span><h3>Corrigir sem perder o histórico</h3><p>O conteúdo muda, mas as ${flashcardProgress(replacingQualityCard).reviews} revisões, a dificuldade e a próxima data continuam neste mesmo card.</p></div><label>Tipo<select class="select" id="fcQualityReplaceType"><option value="basic" ${replacingQualityCard.cardType!=='cloze'?'selected':''}>Básico</option><option value="cloze" ${replacingQualityCard.cardType==='cloze'?'selected':''}>Cloze</option></select></label><label>Nova frente<textarea class="input" id="fcQualityReplaceFront" rows="4">${escapeHtml(replacingQualityCard.front||'')}</textarea></label><label>Novo verso ou complemento<textarea class="input" id="fcQualityReplaceBack" rows="4">${escapeHtml(replacingQualityCard.back||'')}</textarea></label><label>Tags<input class="input" id="fcQualityReplaceTags" value="${escapeAttr((replacingQualityCard.tags||[]).join(' '))}"></label><div class="fc-quality-replace-actions"><button class="tiny-btn" id="fcQualityReplaceCancel">Cancelar</button><button class="icon-btn primary" id="fcQualityReplaceSave" data-id="${escapeAttr(replacingQualityCard.id)}">Salvar substituição</button></div></div>`:'';
+  const qualityDeleteConfirm=ui.flashcardQualityDeleteOpen&&qualitySelected.size?`<div class="fc-delete-confirm fc-quality-delete-confirm" role="alert"><div><span class="eyebrow">Exclusão de cards sinalizados</span><h3>Excluir ${qualitySelected.size} ${qualitySelected.size===1?'card':'cards'}?</h3><p>O conteúdo e o progresso individual serão removidos. Há <strong>${qualitySelectedReviews} revisões</strong> associadas à seleção. Exporte antes se quiser guardar uma cópia.</p><label>Digite <b>EXCLUIR</b> para liberar a ação<input class="input" id="fcQualityDeletePhrase" autocomplete="off" placeholder="EXCLUIR"></label></div><div><button class="icon-btn" id="fcQualityDeleteCancel">Cancelar</button><button class="icon-btn danger" id="fcQualityDeleteConfirm" disabled>Excluir definitivamente</button></div></div>`:'';
+  const qualitySection=`<section class="card fc-quality-center"><div class="section-title"><div><span class="eyebrow">Saúde da coleção</span><h3>Central de qualidade</h3><div class="muted">Exporte, substitua ou exclua cards sinalizados sem perder o controle do processo.</div></div><span class="badge ${qualityCards.length?'wait':'done'}">${qualityCards.length} ${qualityCards.length===1?'card sinalizado':'cards sinalizados'}</span></div><div class="fc-quality-kpis"><span><b>${quality.identical.length}</b><small>grupos idênticos</small></span><span><b>${quality.conflicts.length+quality.similar.length}</b><small>para comparar</small></span><span><b>${quality.counts.long}</b><small>respostas longas</small></span><span><b>${quality.counts.leech}</b><small>muitos erros</small></span><span><b>${quality.counts.incomplete}</b><small>incompletos</small></span></div>${quality.identical.length?`<details><summary>Cópias que podem ser mescladas com segurança</summary><div class="fc-quality-list">${duplicateRows}</div></details>`:''}${qualityCards.length?`<div class="fc-quality-workbench"><div class="fc-quality-workbench-head"><div><strong>Oficina de correção</strong><span>Escolha os cards e decida o destino de cada um.</span></div><div><button class="tiny-btn" id="fcQualitySelectAll">Selecionar todos (${qualityCards.length})</button><button class="tiny-btn" id="fcQualitySelectNone">Limpar</button><button class="tiny-btn" id="fcQualityExport" ${qualitySelected.size?'':'disabled'}>Exportar ${qualitySelected.size}</button><button class="tiny-btn danger" id="fcQualityDeleteSelected" ${qualitySelected.size?'':'disabled'}>Excluir ${qualitySelected.size}</button></div></div>${replacementEditor}${qualityDeleteConfirm}<div class="fc-quality-work-list">${qualityWorkRows}</div>${qualityCards.length>100?`<small class="muted">Mostrando os 100 primeiros de ${qualityCards.length}. “Selecionar todos” inclui também os demais.</small>`:''}</div>`:'<div class="fc-quality-clear"><strong>Coleção saudável</strong><span>Nenhum problema relevante foi encontrado agora.</span></div>'}</section>`;
   const confirmation=deleting?`<div class="fc-delete-confirm" role="alert"><div><span class="eyebrow">Confirmação obrigatória</span><h3>Excluir “${escapeHtml(deleting.label)}”?</h3><p>Serão apagados permanentemente <strong>${deleting.count} ${deleting.count===1?'card':'cards'}</strong> e o progresso individual deles. Outros baralhos não serão alterados.</p><label>Digite <b>EXCLUIR</b> para liberar a ação<input class="input" id="fcDeleteCollectionPhrase" autocomplete="off" placeholder="EXCLUIR"></label></div><div><button class="icon-btn" id="fcDeleteCollectionCancel">Cancelar</button><button class="icon-btn danger" id="fcDeleteCollectionConfirm" data-key="${escapeAttr(deleting.key)}" disabled>Excluir ${deleting.count} ${deleting.count===1?'card':'cards'}</button></div></div>`:'';
   return `<div class="fc-manage-page"><section class="card fc-manage-hero"><div><span class="eyebrow">Controle da coleção</span><h2>Gerenciar baralhos</h2><p>Escolha o que exportar, reorganize conjuntos, cuide da qualidade e mantenha a exclusão sob confirmação reforçada.</p></div><div><strong>${groups.length}</strong><span>baralhos</span><b>${all.length} cards</b></div></section>${qualitySection}<section class="card fc-manage-export"><div class="section-title"><div><span class="eyebrow">Exportação seletiva</span><h3>Quais baralhos deseja exportar?</h3><div class="muted">O arquivo preserva o nome de cada conjunto para a próxima importação.</div></div><button class="icon-btn primary" id="fcExportSelected" ${selectedCards?'':'disabled'}>Exportar ${selectedCards} ${selectedCards===1?'card':'cards'}</button></div><div class="fc-manage-toolbar"><input class="input" id="fcManageSearch" value="${escapeAttr(search)}" placeholder="Buscar baralho ou aula"><button class="tiny-btn" id="fcExportSelectAll">Selecionar todos</button><button class="tiny-btn" id="fcExportSelectNone">Limpar seleção</button><span><b>${selected.size}</b> de ${groups.length} baralhos</span></div><div class="fc-manage-deck-list">${rows}</div></section>${organizeSection}<details class="card fc-manage-danger" ${deleting?'open':''}><summary><span><strong>Excluir conjuntos de flashcards</strong><small>Zona protegida · exclusão permanente</small></span><span class="badge no">Cuidado</span></summary><div class="fc-manage-danger-body"><div class="fc-manage-warning"><strong>Faça um backup antes de excluir.</strong><span>A exclusão também remove o progresso dos cards escolhidos e será sincronizada entre dispositivos.</span><button class="tiny-btn" id="fcManageBackup">Baixar backup agora</button></div>${confirmation}<div class="fc-manage-delete-list">${deleteRows}</div></div></details></div>`;
 }
@@ -10167,6 +10223,47 @@ function renderFlashcards() {
   });
   document.getElementById('fcManageSearch')?.addEventListener('change',event=>{ui.flashcardManageSearch=event.currentTarget.value; renderFlashcards();});
   document.getElementById('fcManageBackup')?.addEventListener('click',exportFlashcardBackup);
+  document.querySelectorAll('[data-fc-quality-select]').forEach(input=>input.addEventListener('change',event=>{
+    const selected=new Set(ui.flashcardQualitySelected||[]);
+    event.currentTarget.checked?selected.add(event.currentTarget.dataset.fcQualitySelect):selected.delete(event.currentTarget.dataset.fcQualitySelect);
+    ui.flashcardQualitySelected=[...selected];
+    ui.flashcardQualityDeleteOpen=false;
+    renderFlashcards();
+  }));
+  document.getElementById('fcQualitySelectAll')?.addEventListener('click',()=>{ui.flashcardQualitySelected=flashcardQualityCards(flashcardQualityReport(flashcardAllRecords())).map(row=>row.card.id); ui.flashcardQualityDeleteOpen=false; renderFlashcards();});
+  document.getElementById('fcQualitySelectNone')?.addEventListener('click',()=>{ui.flashcardQualitySelected=[]; ui.flashcardQualityDeleteOpen=false; renderFlashcards();});
+  document.getElementById('fcQualityExport')?.addEventListener('click',()=>{
+    const selected=new Set(ui.flashcardQualitySelected||[]);
+    const rows=flashcardQualityCards(flashcardQualityReport(flashcardAllRecords())).filter(row=>selected.has(row.card.id));
+    exportAnkiTsv(flashcardQualityExportRecords(rows),'soqueromed-cards-com-defeito');
+  });
+  document.querySelectorAll('[data-fc-quality-replace]').forEach(button=>button.addEventListener('click',event=>{ui.flashcardQualityReplaceId=event.currentTarget.dataset.fcQualityReplace; ui.flashcardQualityDeleteOpen=false; renderFlashcards();}));
+  document.getElementById('fcQualityReplaceCancel')?.addEventListener('click',()=>{ui.flashcardQualityReplaceId=''; renderFlashcards();});
+  document.getElementById('fcQualityReplaceSave')?.addEventListener('click',event=>{
+    const result=replaceFlashcardQualityCard(event.currentTarget.dataset.id,{cardType:document.getElementById('fcQualityReplaceType')?.value,front:document.getElementById('fcQualityReplaceFront')?.value,back:document.getElementById('fcQualityReplaceBack')?.value,tags:document.getElementById('fcQualityReplaceTags')?.value});
+    if(result.error) { alert(result.error); return; }
+    ui.flashcardQualityReplaceId='';
+    ui.flashcardQualitySelected=(ui.flashcardQualitySelected||[]).filter(id=>id!==result.id);
+    persist();
+    showStudyToast?.(`Card substituído · ${result.reviews} revisões e o agendamento foram preservados.`);
+    renderFlashcards();
+  });
+  const openQualityDelete=ids=>{ui.flashcardQualitySelected=[...new Set(ids||[])]; ui.flashcardQualityDeleteOpen=Boolean(ui.flashcardQualitySelected.length); ui.flashcardQualityReplaceId=''; renderFlashcards();};
+  document.querySelectorAll('[data-fc-quality-delete-one]').forEach(button=>button.addEventListener('click',event=>openQualityDelete([event.currentTarget.dataset.fcQualityDeleteOne])));
+  document.getElementById('fcQualityDeleteSelected')?.addEventListener('click',()=>openQualityDelete(ui.flashcardQualitySelected));
+  document.getElementById('fcQualityDeleteCancel')?.addEventListener('click',()=>{ui.flashcardQualityDeleteOpen=false; renderFlashcards();});
+  document.getElementById('fcQualityDeletePhrase')?.addEventListener('input',event=>{const button=document.getElementById('fcQualityDeleteConfirm'); if(button) button.disabled=event.currentTarget.value.trim().toUpperCase()!=='EXCLUIR';});
+  document.getElementById('fcQualityDeleteConfirm')?.addEventListener('click',()=>{
+    if(document.getElementById('fcQualityDeletePhrase')?.value.trim().toUpperCase()!=='EXCLUIR') return;
+    const validIds=new Set(flashcardQualityCards(flashcardQualityReport(flashcardAllRecords())).map(row=>row.card.id));
+    const ids=(ui.flashcardQualitySelected||[]).filter(id=>validIds.has(id));
+    const removed=deleteFlashcardsByIds(ids);
+    ui.flashcardQualitySelected=[];
+    ui.flashcardQualityDeleteOpen=false;
+    persist();
+    showStudyToast?.(`${removed} ${removed===1?'card com defeito excluído':'cards com defeito excluídos'}.`);
+    renderFlashcards();
+  });
   document.querySelectorAll('[data-fc-quality-open]').forEach(button=>button.addEventListener('click',event=>{
     const id=event.currentTarget.dataset.fcQualityOpen;
     const card=flashcardAllRecords().find(item=>item.id===id);
@@ -11005,16 +11102,17 @@ function ankiTags(card) {
     'SOqueroMed',
     `Area::${card.area}`,
     `Subarea::${card.subarea}`,
-    `Bloco::${card.block || 'Sem_bloco'}`
+    `Bloco::${card.block || 'Sem_bloco'}`,
+    ...(card.tags || [])
   ].map(tag => tag.replace(/\s+/g, '_').replace(/[;,\t]/g, '')).join(' ');
 }
-function exportAnkiTsv() {
-  const cards = arguments.length ? [...(arguments[0] || [])] : filteredFlashcards(flashcardAllRecords());
+function exportAnkiTsv(selectedCards=null, filePrefix='soqueromed-anki') {
+  const cards = selectedCards===null ? filteredFlashcards(flashcardAllRecords()) : [...(selectedCards || [])];
   if(!cards.length) { alert('Nenhum flashcard para exportar neste filtro.'); return; }
   const blob = new Blob([flashcardExportText(cards)], {type:'text/tab-separated-values;charset=utf-8'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `soqueromed-anki-${localISODate(new Date())}.tsv`;
+  a.download = `${filePrefix}-${localISODate(new Date())}.tsv`;
   a.click();
   URL.revokeObjectURL(a.href);
 }

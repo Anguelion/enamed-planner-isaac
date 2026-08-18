@@ -951,3 +951,59 @@ test('prévia da importação ignora duplicado e pode atualizar conflito mantend
   assert.equal(state.flashcardProgress[existing.id].reviews,9);
   assert.equal(ctx.flashcardAllRecords().filter(card=>card.sourceType==='import').length,2);
 });
+
+test('oficina de qualidade reúne cada card defeituoso uma única vez com todos os diagnósticos', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const a=ctx.normalizeFlashcardRecord({id:'workshop-a',front:'Pergunta repetida',back:'Resposta igual'});
+  const b=ctx.normalizeFlashcardRecord({id:'workshop-b',front:'Pergunta repetida',back:'Resposta igual'});
+  state.flashcardLibrary.push(a,b);
+  state.flashcardProgress[a.id]={reviews:8,lapses:4,difficulty:9};
+  const rows=plain(ctx.flashcardQualityCards(ctx.flashcardQualityReport(ctx.flashcardAllRecords())));
+  assert.equal(rows.length,2);
+  const problem=rows.find(row=>row.card.id===a.id);
+  assert.ok(problem.issues.some(issue=>issue.id==='duplicate'));
+  assert.ok(problem.issues.some(issue=>issue.id==='leech'));
+});
+
+test('exportação de cards defeituosos inclui diagnóstico e tags originais', () => {
+  const ctx=loadPlannerSandbox();
+  const card=ctx.normalizeFlashcardRecord({id:'quality-export',front:'Pergunta',back:'Resposta',tags:['prioridade']});
+  const records=ctx.flashcardQualityExportRecords([{card,issues:[{id:'leech',label:'Muitos erros'}]}]);
+  const text=ctx.flashcardExportText(records);
+  assert.match(text,/prioridade/);
+  assert.match(text,/Qualidade::Muitos_erros/);
+});
+
+test('substituição individual corrige conteúdo sem trocar id, progresso ou histórico', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'quality-replace',front:'Frente antiga',back:'Verso antigo',tags:['antiga']});
+  state.flashcardLibrary.push(card);
+  state.flashcardProgress[card.id]={reviews:12,lapses:3,stability:24,nextReview:'2026-09-20'};
+  state.flashcardSystem.reviewLogs.push({id:'quality-replace-log',cardId:card.id,rating:3,reviewedAt:'2026-08-12T10:00:00Z'});
+  const before=plain(state.flashcardProgress[card.id]);
+  const result=plain(ctx.replaceFlashcardQualityCard(card.id,{cardType:'basic',front:'Frente corrigida',back:'Verso corrigido',tags:'nova revisado'}));
+  assert.equal(result.updated,true);
+  assert.equal(card.id,'quality-replace');
+  assert.equal(card.front,'Frente corrigida');
+  assert.deepEqual(plain(card.tags),['nova','revisado']);
+  assert.deepEqual(plain(state.flashcardProgress[card.id]),before);
+  assert.equal(state.flashcardSystem.reviewLogs[0].cardId,card.id);
+  assert.ok(state.flashcardSystem.versions.some(version=>version.cardId===card.id && version.kind==='replacement'));
+  assert.equal(ctx.flashcardQualityIssues(card).some(issue=>issue.id==='leech'),false,'a correção inicia uma nova observação de erros');
+});
+
+test('central renderiza seleção, exportação, substituição e exclusão para cards defeituosos', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  state.flashcardLibrary.push(
+    ctx.normalizeFlashcardRecord({id:'quality-ui-a',front:'Pergunta repetida',back:'Resposta'}),
+    ctx.normalizeFlashcardRecord({id:'quality-ui-b',front:'Pergunta repetida',back:'Resposta'})
+  );
+  const html=ctx.renderFlashcardManage(ctx.flashcardAllRecords());
+  assert.match(html,/Oficina de correção/);
+  assert.match(html,/id="fcQualityExport"/);
+  assert.match(html,/data-fc-quality-replace="quality-ui-a"/);
+  assert.match(html,/data-fc-quality-delete-one="quality-ui-a"/);
+});

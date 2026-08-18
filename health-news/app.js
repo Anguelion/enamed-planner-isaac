@@ -50,6 +50,16 @@ function renderStories(stories, issueId) {
     fragment.querySelector('h3').textContent = story.title;
     fragment.querySelector('.story-summary').textContent = story.summary;
     fragment.querySelector('.clinical-note p').textContent = story.clinicalNote;
+    const memoryList = fragment.querySelector('.memory-highlight ul');
+    const memoryPoints = Array.isArray(story.deepDive?.examFocus) ? story.deepDive.examFocus : [];
+    memoryPoints.forEach((point) => {
+      const item = document.createElement('li');
+      const highlight = document.createElement('mark');
+      highlight.textContent = point;
+      item.append(highlight);
+      memoryList.append(item);
+    });
+    if (!memoryPoints.length) fragment.querySelector('.memory-highlight').remove();
     fragment.querySelector('.evidence-tag').textContent = story.evidence;
     const link = fragment.querySelector('.story-footer a');
     link.href = story.sourceUrl;

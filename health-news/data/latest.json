@@ -1,99 +1,99 @@
 {
-  "id": "2026-08-14",
-  "title": "Treino de força, IA genômica e saúde pública",
-  "publishedAt": "2026-08-14",
-  "generatedAt": "2026-08-17T07:00:00-03:00",
-  "readingMinutes": 15,
-  "sourceUrl": "https://health.thenews.com.br/p/14-08-2026",
+  "id": "2026-08-17",
+  "title": "Silicose ocupacional, idade dos órgãos e trauma craniano",
+  "publishedAt": "2026-08-17",
+  "generatedAt": "2026-08-18T12:43:24-03:00",
+  "readingMinutes": 16,
+  "sourceUrl": "https://health.thenews.com.br/p/17-08-2026",
   "lead": {
-    "title": "IA desenha bacteriófagos funcionais do zero",
-    "summary": "Um modelo de linguagem genômica produziu milhares de sequências candidatas. Parte delas foi sintetizada e 16 bacteriófagos conseguiram infectar bactérias E. coli em laboratório.",
-    "clinicalNote": "O potencial para terapia fágica é relevante diante da resistência antimicrobiana, mas o estudo ainda é pré-clínico e levanta questões reais de biossegurança e acesso aos modelos.",
-    "sourceUrl": "https://www.science.org/doi/10.1126/science.aec2657"
+    "title": "Bancadas de quartzo expõem trabalhadores à silicose grave",
+    "summary": "O corte e o polimento de pedra artificial liberam sílica cristalina respirável. A vigilância da Califórnia registra uma epidemia ocupacional com doença pulmonar progressiva entre trabalhadores de bancadas.",
+    "clinicalNote": "A silicose não tem cura e pode evoluir mesmo após o fim da exposição. O ponto decisivo é prevenir a inalação com controle de poeira, corte úmido, ventilação adequada e proteção respiratória.",
+    "sourceUrl": "https://www.cdph.ca.gov/Programs/CCDPHP/DEODC/OHB/Pages/silidb-about-instructions.aspx"
   },
   "stories": [
     {
-      "id": "ia-bacteriofagos",
+      "id": "silicose-pedra-artificial",
+      "category": "Saúde do trabalhador",
+      "title": "A epidemia de silicose entre fabricantes de bancadas",
+      "summary": "Pedra artificial, frequentemente vendida como quartzo, pode conter alta proporção de sílica cristalina. Cortar, lixar ou polir o material produz partículas finas capazes de alcançar os alvéolos.",
+      "clinicalNote": "História ocupacional é parte essencial da investigação de dispneia, tosse ou alterações radiológicas em trabalhadores de marmorarias e oficinas de bancadas.",
+      "evidence": "Vigilância epidemiológica oficial",
+      "sourceUrl": "https://www.cdph.ca.gov/Programs/CCDPHP/DEODC/OHB/Pages/silidb-about-instructions.aspx",
+      "deepDive": {
+        "whatHappened": "A edição destaca o crescimento de casos de silicose associados à fabricação de bancadas de pedra artificial na Califórnia. O painel do Departamento de Saúde Pública acompanha casos confirmados, óbitos e transplantes, mas reconhece que os números podem subestimar a carga real.",
+        "howItWorks": "A sílica cristalina respirável chega aos alvéolos e é fagocitada por macrófagos. A lesão celular mantém inflamação e ativa fibroblastos, formando nódulos e fibrose pulmonar. Exposições intensas podem produzir doença acelerada em trabalhadores jovens.",
+        "clinicalMeaning": "A doença pode se apresentar com tosse seca, dispneia progressiva e alterações nodulares ou fibróticas na imagem. Silicose também aumenta o risco de tuberculose. Não existe tratamento que reverta a fibrose; casos avançados podem exigir transplante pulmonar.",
+        "limitations": "Dados de vigilância dependem de notificação e confirmação dos casos. Eles descrevem a população acompanhada e não permitem estimar o risco individual sem conhecer intensidade, duração da exposição e medidas de proteção.",
+        "examFocus": [
+          "Sílica respirável ativa inflamação macrofágica e fibrose pulmonar.",
+          "A silicose é progressiva, irreversível e associada a maior risco de tuberculose.",
+          "Controle na fonte, corte úmido, ventilação e proteção respiratória são medidas preventivas.",
+          "A anamnese ocupacional pode revelar a exposição que explica uma pneumoconiose."
+        ]
+      }
+    },
+    {
+      "id": "relogios-teciduais-ia",
       "category": "Pesquisa",
-      "title": "Genomas virais escritos por inteligência artificial",
-      "summary": "O experimento mostrou que modelos treinados em DNA podem propor genomas biologicamente ativos. Os vírus testados eram fagos, direcionados a bactérias, e não patógenos humanos.",
-      "clinicalNote": "É uma prova de conceito, não um tratamento disponível. A aplicação clínica dependerá de estudos de segurança, eficácia e controle regulatório.",
-      "evidence": "Estudo pré-clínico",
-      "sourceUrl": "https://www.science.org/doi/10.1126/science.aec2657",
+      "title": "IA estima o envelhecimento específico de cada tecido",
+      "summary": "Pesquisadores analisaram 25.712 imagens histológicas de 40 tipos de tecido e criaram relógios capazes de estimar idade biológica pela arquitetura microscópica.",
+      "clinicalNote": "O estudo mostra associações e uma plataforma de pesquisa. Ainda não existe exame validado para orientar rastreamento, prognóstico ou tratamento individual na prática clínica.",
+      "evidence": "Estudo observacional e desenvolvimento de modelo",
+      "sourceUrl": "https://doi.org/10.1038/s41591-026-04566-5",
       "deepDive": {
-        "whatHappened": "Os pesquisadores usaram modelos de linguagem genômica para propor centenas de milhares de sequências inspiradas no fago ΦX174. Depois de filtros computacionais, 285 genomas foram sintetizados; 16 originaram fagos viáveis capazes de infectar cepas de E. coli. O resultado demonstra geração de um genoma viral completo e funcional, e não apenas de uma proteína isolada.",
-        "howItWorks": "Bacteriófagos reconhecem receptores específicos na superfície bacteriana, injetam seu material genético e usam a maquinaria da bactéria para produzir novas partículas virais. Ao romper a célula, liberam novos fagos. A especificidade pelo hospedeiro explica por que os fagos deste experimento atacaram bactérias e não células humanas.",
-        "clinicalMeaning": "A aplicação mais promissora é a terapia fágica contra bactérias resistentes a antibióticos. Em tese, a IA poderia acelerar o desenho de fagos direcionados a uma cepa específica ou criar coquetéis que reduzam a chance de resistência. Isso ainda não equivale a eficácia ou segurança em seres humanos.",
-        "limitations": "Trata-se de pesquisa laboratorial com fagos simples e hospedeiros bacterianos bem estudados. Foram necessários muitos candidatos para obter poucos genomas viáveis. O trabalho também é de uso dual: a mesma capacidade de projetar genomas exige barreiras de biossegurança, triagem de síntese de DNA e controle sobre aplicações envolvendo patógenos.",
+        "whatHappened": "Modelos de visão computacional foram treinados com imagens do projeto GTEx, provenientes de 983 indivíduos. A idade cronológica emergiu como um dos sinais mais fortes da aparência tecidual, permitindo estimativas separadas para diferentes órgãos.",
+        "howItWorks": "O algoritmo aprende padrões espaciais de envelhecimento que incluem mudanças na composição celular, matriz extracelular e organização do tecido. Em uma etapa posterior, os pesquisadores relacionaram essas estimativas à expressão gênica no sangue para construir preditores menos invasivos.",
+        "clinicalMeaning": "Se confirmados em coortes prospectivas, relógios específicos por órgão poderiam ajudar a estudar risco e progressão de doenças. Por enquanto, uma idade biológica estimada não equivale a diagnóstico, causa da doença ou indicação terapêutica.",
+        "limitations": "O banco histológico é transversal e composto por amostras obtidas após a morte, o que limita inferências causais e a generalização. Modelos derivados de sangue ainda precisam de validação externa, calibração e demonstração de utilidade clínica.",
         "examFocus": [
-          "Bacteriófagos infectam bactérias e apresentam tropismo por receptores do hospedeiro.",
-          "Terapia fágica é uma estratégia potencial contra resistência antimicrobiana.",
-          "Resultado pré-clínico não permite inferir benefício terapêutico em humanos.",
-          "Tecnologias de uso dual podem gerar benefício biomédico e risco de biossegurança."
+          "Associação entre biomarcador e doença não comprova causalidade.",
+          "Validação interna não substitui validação externa em outra população.",
+          "Um modelo preditivo precisa demonstrar calibração, discriminação e utilidade clínica.",
+          "Resultados de pesquisa não significam que já exista um teste disponível."
         ]
       }
     },
     {
-      "id": "anabolizantes-risco",
-      "category": "Prevenção",
-      "title": "Anabolizantes e o risco cardiovascular",
-      "summary": "A edição destaca os efeitos sistêmicos do uso de esteroides anabolizantes, incluindo remodelamento cardíaco, arritmias, alterações lipídicas, disfunção gonadal e impacto na saúde mental.",
-      "clinicalNote": "A abordagem deve ser acolhedora e multidisciplinar. Interrupção sem acompanhamento pode vir acompanhada de hipogonadismo, fadiga, depressão e recaídas.",
-      "evidence": "Alerta clínico",
-      "sourceUrl": "https://g1.globo.com/fantastico/noticia/2026/08/11/anabolizantes-triplicam-risco-de-morte-e-aumentam-em-9-vezes-chance-de-doenca-no-coracao-alerta-medico-entenda.ghtml",
+      "id": "hematoma-subdural-boxe",
+      "category": "Emergência",
+      "title": "Trauma rotacional e hematoma subdural",
+      "summary": "A morte de um ex-boxeador após anos de incapacidade reacendeu a discussão sobre golpes na nuca e lesões intracranianas que podem piorar depois de um intervalo aparentemente estável.",
+      "clinicalNote": "Após trauma craniano, piora progressiva da cefaleia, vômitos, alteração de consciência, déficit focal ou anisocoria são sinais de alarme e exigem avaliação urgente.",
+      "evidence": "Relato de caso noticioso e fisiopatologia estabelecida",
+      "sourceUrl": "https://health.thenews.com.br/p/17-08-2026",
       "deepDive": {
-        "whatHappened": "A edição chama atenção para estudos observacionais que encontraram maior mortalidade e mais doença cardiovascular entre usuários de esteroides anabolizantes androgênicos. Esses dados apontam associação e risco, mas não significam que todo usuário terá a mesma evolução nem permitem calcular o risco individual sem contexto clínico.",
-        "howItWorks": "Os anabolizantes ativam receptores androgênicos em vários tecidos. No músculo, aumentam síntese proteica; no eixo hipotálamo-hipófise-gonadal, o excesso hormonal reduz GnRH, LH e FSH, suprimindo a produção endógena de testosterona e a espermatogênese. Também podem elevar hematócrito, piorar o perfil lipídico, aumentar pressão arterial e favorecer hipertrofia e fibrose miocárdica.",
-        "clinicalMeaning": "A avaliação não deve se limitar a mandar interromper o uso. É necessário investigar dose, combinações, tempo de exposição, sintomas cardiovasculares, saúde mental, fertilidade e sinais de hipogonadismo. A retirada pode cursar com fadiga, redução de libido, humor deprimido e recaída, justificando acompanhamento multiprofissional.",
-        "limitations": "Grande parte das evidências vem de coortes observacionais e de usuários identificados em contextos específicos, sujeitos a confundimento por outras drogas, estilo de vida e seleção dos participantes. Mesmo assim, a convergência de alterações cardíacas, metabólicas e endócrinas sustenta uma abordagem preventiva.",
+        "whatHappened": "Prichard Colón sofreu golpes repetidos na região posterior da cabeça durante uma luta em 2015, apresentou vômitos e perda de consciência depois do combate e permaneceu com sequelas neurológicas graves até morrer em 2026.",
+        "howItWorks": "A aceleração e a rotação do encéfalo dentro do crânio podem estirar e romper veias-ponte. O sangue se acumula entre dura-máter e aracnoide, formando hematoma subdural e elevando progressivamente a pressão intracraniana.",
+        "clinicalMeaning": "O paciente pode ter intervalo lúcido ou sintomas discretos antes da deterioração. A prioridade é reconhecer sinais de hipertensão intracraniana, estabilizar via aérea e circulação quando necessário e obter neuroimagem e avaliação neurocirúrgica sem atraso.",
+        "limitations": "Uma notícia não permite reconstruir todas as decisões médicas nem atribuir causalidade isolada a cada golpe. O caso serve como contexto educativo, não como substituto de prontuário, laudo ou investigação oficial.",
         "examFocus": [
-          "Testosterona exógena reduz LH e FSH por retroalimentação negativa.",
-          "Pode ocorrer redução da espermatogênese, atrofia testicular e infertilidade.",
-          "Riscos cardiovasculares incluem hipertensão, dislipidemia, arritmia e remodelamento cardíaco.",
-          "Acolhimento e redução de danos são preferíveis a uma abordagem moralizante."
-        ]
-      }
-    },
-    {
-      "id": "massachusetts-aborto",
-      "category": "Política de saúde",
-      "title": "Massachusetts altera limite gestacional para aborto",
-      "summary": "A nova legislação retira o limite fixo de 24 semanas e amplia o papel da avaliação clínica em situações de gestação avançada, com entrada em vigor prevista após 90 dias.",
-      "clinicalNote": "É um tema legal e assistencial sensível. A interpretação deve separar o texto normativo, os critérios médicos e as leituras políticas apresentadas por diferentes fontes.",
-      "evidence": "Legislação",
-      "sourceUrl": "https://revistaoeste.com/mundo/eua-governadora-de-massachusetts-revoga-limite-gestacional-para-aborto/",
-      "deepDive": {
-        "whatHappened": "A notícia descreve uma mudança na legislação de Massachusetts relacionada aos critérios para interrupção da gestação após 24 semanas. O ponto central é o peso atribuído ao julgamento profissional diante de risco materno e diagnósticos fetais graves, tema que deve ser confirmado no texto legal vigente.",
-        "howItWorks": "Limites gestacionais costumam conviver com exceções clínicas, como risco à vida ou à saúde da gestante e anomalias fetais graves. Viabilidade fetal não é um número absoluto: depende da idade gestacional, condições fetais, recursos neonatais e avaliação individual. Por isso, legislação, ética e decisão clínica se sobrepõem, mas não são a mesma coisa.",
-        "clinicalMeaning": "Para prova e prática, o essencial é separar a lei norte-americana da legislação brasileira. No Brasil, as hipóteses legais e os fluxos assistenciais seguem normas próprias. Uma notícia estrangeira não modifica conduta no SUS nem deve ser usada como referência jurídica local.",
-        "limitations": "A matéria jornalística apresenta interpretações políticas divergentes. Para saber exatamente o que mudou, é indispensável conferir a redação oficial, a data de vigência e eventuais regulamentos. O Radar resume o debate, mas não substitui orientação jurídica.",
-        "examFocus": [
-          "Viabilidade fetal é um conceito clínico, não apenas uma semana fixa.",
-          "Diferencie norma estrangeira de legislação brasileira.",
-          "Notícia, texto legal e diretriz clínica possuem níveis diferentes de autoridade.",
-          "Em temas sensíveis, procure a fonte normativa antes de concluir a conduta."
+          "Hematoma subdural costuma resultar da ruptura de veias-ponte.",
+          "A deterioração pode ser tardia após um período inicialmente estável.",
+          "Anisocoria, rebaixamento de consciência e déficit focal sugerem emergência neurológica.",
+          "Trauma rotacional produz forças de cisalhamento mesmo sem fratura craniana."
         ]
       }
     }
   ],
   "quickTakes": [
     {
-      "icon": "🩸",
-      "title": "Prazo para doação após tatuagem ou piercing foi reduzido",
-      "source": "O Globo",
-      "url": "https://oglobo.globo.com/saude/noticia/2026/08/12/doacao-de-sangue-prazo-de-espera-para-quem-fez-tatuagem-ou-piercing-e-reduzido-veja-as-mudancas.ghtml"
+      "icon": "⚖️",
+      "title": "Associações médicas e a disputa bioética sobre aborto legal",
+      "source": "Diário de Cuiabá",
+      "url": "https://www.diariodecuiaba.com.br/brasil/associacoes-de-medicos-catolicos-crescem-dez-vezes-em-25-anos-e-disputam-bioetica-do-aborto-legal/749659"
     },
     {
-      "icon": "😴",
-      "title": "Hipotireoidismo aparece associado a apneia mais frequente e grave",
-      "source": "Agência FAPESP",
-      "url": "https://agencia.fapesp.br/pacientes-com-hipotireoidismo-apresentam-apneia-do-sono-com-maior-frequencia-e-gravidade/58916"
+      "icon": "💉",
+      "title": "Câmara discutirá restrições sanitárias às canetas paraguaias",
+      "source": "Jornal de Brasília",
+      "url": "https://jornaldebrasilia.com.br/noticias/saude/camara-fara-audiencia-publica-para-discutir-restricoes-da-anvisa-as-canetas-paraguaias/"
     },
     {
-      "icon": "🧬",
-      "title": "O que muda nas recomendações sobre reposição de testosterona",
-      "source": "Harvard Health",
-      "url": "https://www.health.harvard.edu/mens-health/what-men-should-know-about-proposed-changes-for-testosterone-therapy"
+      "icon": "🏃",
+      "title": "Estudo aponta desigualdade no acesso à atividade física de lazer em São Paulo",
+      "source": "CNN Brasil",
+      "url": "https://www.cnnbrasil.com.br/saude/estudo-revela-desigualdade-no-acesso-a-atividade-fisica-de-lazer-em-sp/"
     }
   ],
   "innovations": [
@@ -127,96 +127,106 @@
   ],
   "protocolUpdates": [
     {
-      "id": "pcdt-drc-cp56",
-      "date": "2026-07-20",
+      "id": "cp63-monitor-glicose",
+      "date": "2026-08-17",
       "status": "Consulta encerrada",
       "tone": "attention",
-      "type": "PCDT em elaboração",
-      "title": "Cuidado ao paciente com Doença Renal Crônica",
-      "summary": "A Consulta Pública nº 56/2026 foi encerrada. O texto ainda percorre o processo de análise antes da publicação de uma versão final vigente.",
+      "type": "Avaliação de tecnologia",
+      "title": "Monitoramento contínuo de glicose no diabetes tipo 1",
+      "summary": "A CP nº 63/2026, sobre sistema de monitoramento contínuo em tempo real, encerrou contribuições em 17 de agosto. É uma etapa de avaliação e não significa incorporação ou oferta no SUS.",
       "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/encerradas/copy_of_2026"
     },
     {
-      "id": "pcdt-lmc-cp55",
-      "date": "2026-07-20",
+      "id": "cp64-sotatercepte",
+      "date": "2026-08-17",
+      "status": "Consulta encerrada",
+      "tone": "attention",
+      "type": "Avaliação de medicamento",
+      "title": "Sotatercepte na hipertensão arterial pulmonar",
+      "summary": "A CP nº 64/2026 avaliou sotatercepte adicionado à terapia de base em adultos selecionados com hipertensão arterial pulmonar de maior risco. O relatório é preliminar e não autoriza tratar a tecnologia como disponível no SUS.",
+      "sourceUrl": "https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2025/relatorio-preliminar-sotatercepte-cp-64/%40%40display-file/file"
+    },
+    {
+      "id": "pcdt-colo-utero-cp57",
+      "date": "2026-07-28",
       "status": "Consulta encerrada",
       "tone": "attention",
       "type": "PCDT em elaboração",
-      "title": "Leucemia Mieloide Crônica do adulto",
-      "summary": "A Consulta Pública nº 55/2026 recebeu contribuições até 20 de julho. O documento em consulta não deve ser tratado como protocolo final.",
+      "title": "Rastreamento do câncer do colo do útero — Parte II",
+      "summary": "A CP nº 57/2026 tratou da avaliação, tratamento e seguimento de mulheres identificadas no rastreamento. O texto consultado ainda não substitui a diretriz vigente nem deve ser aplicado como versão final.",
       "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/encerradas/copy_of_2026"
     },
     {
       "id": "catalogo-pcdt-julho",
       "date": "2026-07-22",
-      "status": "Catálogo atualizado",
+      "status": "Catálogo oficial",
       "tone": "published",
-      "type": "Fonte oficial",
+      "type": "Protocolos vigentes",
       "title": "Lista geral de protocolos e diretrizes",
-      "summary": "A página central da Conitec reúne os PCDT vigentes, portarias, versões resumidas e documentos complementares. É a referência para confirmar a versão aplicável.",
+      "summary": "A página central da Conitec reúne PCDT vigentes, portarias e documentos complementares. É a referência para confirmar qual versão possui validade no SUS.",
       "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt"
     }
   ],
   "dailyQuiz": [
     {
-      "id": "quiz-fagos-hospedeiro",
-      "question": "Sobre os vírus desenhados pelos modelos Evo, qual afirmação está correta?",
+      "id": "quiz-silica-fisiopatologia",
+      "question": "Qual mecanismo explica melhor a fibrose pulmonar causada pela sílica respirável?",
       "options": [
-        "Foram projetados para infectar células humanas tumorais.",
-        "Eram bacteriófagos com tropismo por cepas de E. coli.",
-        "Já demonstraram eficácia clínica contra sepse em humanos.",
-        "Eram vírus respiratórios atenuados para uso vacinal."
+        "Deposição de imunocomplexos exclusivamente nos brônquios",
+        "Fagocitose por macrófagos com inflamação persistente e ativação de fibroblastos",
+        "Bloqueio reversível dos receptores beta-2 alveolares",
+        "Infecção bacteriana direta provocada pelo mineral"
       ],
       "answerIndex": 1,
-      "explanation": "Os genomas viáveis originaram bacteriófagos capazes de infectar bactérias E. coli. O estudo foi laboratorial e não avaliou tratamento em seres humanos."
+      "explanation": "As partículas alcançam os alvéolos, lesionam macrófagos e perpetuam inflamação e fibrose. A retirada da exposição previne dano adicional, mas não reverte a fibrose já formada."
     },
     {
-      "id": "quiz-terapia-fagica",
-      "question": "Qual é a principal aplicação clínica futura discutida para fagos gerados por IA?",
+      "id": "quiz-silicose-associacao",
+      "question": "Qual infecção tem risco aumentado em pessoas com silicose?",
       "options": [
-        "Substituição imediata de todas as vacinas bacterianas.",
-        "Tratamento hormonal de infecções resistentes.",
-        "Desenho de fagos contra bactérias resistentes a antibióticos.",
-        "Edição do genoma humano em doenças hereditárias."
-      ],
-      "answerIndex": 2,
-      "explanation": "A terapia fágica usa vírus que infectam bactérias. O desenho assistido por IA pode ajudar a encontrar fagos direcionados a cepas resistentes, mas a aplicação clínica ainda exige estudos de segurança e eficácia."
-    },
-    {
-      "id": "quiz-anabolizante-eixo",
-      "question": "Um usuário crônico de testosterona exógena apresenta redução de fertilidade. Qual mecanismo explica melhor o achado?",
-      "options": [
-        "Aumento persistente de LH e FSH.",
-        "Bloqueio da síntese hepática de albumina.",
-        "Retroalimentação negativa com supressão de GnRH, LH e FSH.",
-        "Estimulação direta da espermatogênese pela testosterona circulante."
-      ],
-      "answerIndex": 2,
-      "explanation": "O androgênio exógeno suprime o eixo hipotálamo-hipófise-gonadal. A queda de LH e FSH reduz a testosterona intratesticular e prejudica a espermatogênese, apesar de a testosterona sérica poder estar elevada."
-    },
-    {
-      "id": "quiz-pcdt-status",
-      "question": "Um PCDT teve sua consulta pública encerrada ontem. Qual é a interpretação correta?",
-      "options": [
-        "O texto consultado já substituiu automaticamente o protocolo vigente.",
-        "A consulta é uma etapa do processo e ainda não equivale à versão final publicada.",
-        "Toda recomendação da Conitec entra em vigor antes de portaria.",
-        "O documento já deve ser aplicado mesmo sem verificar sua vigência."
-      ],
-      "answerIndex": 1,
-      "explanation": "Consulta pública e documento em elaboração não são sinônimos de protocolo vigente. A conduta deve ser confirmada na versão final e na portaria oficial aplicável."
-    },
-    {
-      "id": "quiz-prep-status",
-      "question": "Na edição atual, como deve ser descrita a PrEP injetável de longa duração no SUS?",
-      "options": [
-        "Tecnologia em avaliação para incorporação.",
-        "Tratamento obrigatório já disponível em toda unidade básica.",
-        "Vacina terapêutica aprovada para pessoas com HIV.",
-        "Substituta definitiva da prevenção combinada."
+        "Tuberculose",
+        "Hepatite A",
+        "Tétano",
+        "Malária"
       ],
       "answerIndex": 0,
-      "explanation": "A tecnologia foi encaminhada para avaliação da Conitec. Avaliação, decisão de incorporação e oferta efetiva são etapas diferentes e não devem ser confundidas."
+      "explanation": "A exposição à sílica e a silicose comprometem a função dos macrófagos e aumentam a suscetibilidade à tuberculose, associação clássica em saúde ocupacional."
+    },
+    {
+      "id": "quiz-relogio-tecidual",
+      "question": "Qual é a interpretação correta dos relógios teciduais descritos na edição?",
+      "options": [
+        "Já são exames aprovados para rastreamento populacional",
+        "Provam que envelhecimento acelerado causa todas as doenças associadas",
+        "São modelos de pesquisa que ainda precisam de validação clínica externa",
+        "Substituem a avaliação clínica e os exames específicos de cada órgão"
+      ],
+      "answerIndex": 2,
+      "explanation": "O estudo desenvolve biomarcadores preditivos, mas associação não prova causalidade e ainda não há utilidade clínica estabelecida para decisões individuais."
+    },
+    {
+      "id": "quiz-hematoma-subdural",
+      "question": "No hematoma subdural traumático, qual estrutura vascular é classicamente rompida?",
+      "options": [
+        "Artéria meníngea média",
+        "Veias-ponte",
+        "Artéria cerebral média",
+        "Seio cavernoso"
+      ],
+      "answerIndex": 1,
+      "explanation": "Movimentos de aceleração e rotação podem estirar as veias-ponte e provocar sangramento no espaço subdural."
+    },
+    {
+      "id": "quiz-conitec-consulta",
+      "question": "A consulta pública sobre monitoramento contínuo de glicose terminou. O que isso significa?",
+      "options": [
+        "O dispositivo passou a ser ofertado imediatamente em todo o SUS",
+        "O relatório preliminar tornou-se automaticamente um PCDT vigente",
+        "As contribuições serão analisadas antes da recomendação e da decisão final",
+        "A Anvisa dispensou o registro sanitário do produto"
+      ],
+      "answerIndex": 2,
+      "explanation": "Consulta pública é uma etapa da avaliação. Recomendação final, decisão de incorporação e oferta efetiva no SUS são momentos distintos."
     }
   ]
 }

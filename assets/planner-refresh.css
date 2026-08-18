@@ -1134,6 +1134,29 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 #flashcards .fc-quality-clear { display: grid; gap: 4px; padding: 18px; border-radius: 12px; background: color-mix(in srgb,var(--teal) 10%,var(--panel)); text-align: center; }
 #flashcards .fc-quality-clear strong { color: var(--teal); }
 #flashcards .fc-quality-clear span { color: var(--muted); font-size: 9px; }
+#flashcards .fc-quality-workbench { display: grid; gap: 12px; padding: 14px; border: 1px solid var(--line); border-radius: 13px; background: color-mix(in srgb,var(--fc-soft) 32%,var(--panel)); }
+#flashcards .fc-quality-workbench-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+#flashcards .fc-quality-workbench-head > div:first-child { display: grid; gap: 3px; }
+#flashcards .fc-quality-workbench-head > div:first-child span { color: var(--muted); font-size: 9px; }
+#flashcards .fc-quality-workbench-head > div:last-child { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+#flashcards .fc-quality-work-list { display: grid; max-height: 520px; overflow: auto; border: 1px solid var(--line); border-radius: 11px; background: var(--panel); }
+#flashcards .fc-quality-work-row { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 10px; padding: 11px 12px; border-bottom: 1px solid color-mix(in srgb,var(--line) 72%,transparent); }
+#flashcards .fc-quality-work-row:last-child { border-bottom: 0; }
+#flashcards .fc-quality-work-row.is-selected { background: color-mix(in srgb,var(--fc-accent) 7%,var(--panel)); }
+#flashcards .fc-quality-work-row > input { width: 16px; height: 16px; accent-color: var(--fc-accent); }
+#flashcards .fc-quality-work-row > span { display: grid; gap: 4px; min-width: 0; }
+#flashcards .fc-quality-work-row > span strong { overflow: hidden; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+#flashcards .fc-quality-work-row > span small { color: var(--muted); font-size: 8px; }
+#flashcards .fc-quality-work-row > div { display: flex; gap: 5px; }
+#flashcards .fc-quality-replace { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; padding: 15px; border: 1px solid color-mix(in srgb,var(--fc-accent) 38%,var(--line)); border-radius: 12px; background: var(--panel); }
+#flashcards .fc-quality-replace > div:first-child { grid-column: 1 / -1; }
+#flashcards .fc-quality-replace h3 { margin: 3px 0 5px; }
+#flashcards .fc-quality-replace p { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.5; }
+#flashcards .fc-quality-replace label { display: grid; gap: 6px; color: var(--muted); font-size: 9px; font-weight: 800; }
+#flashcards .fc-quality-replace textarea { min-height: 96px; resize: vertical; font: inherit; line-height: 1.5; }
+#flashcards .fc-quality-replace > label:nth-of-type(1), #flashcards .fc-quality-replace > label:last-of-type { grid-column: 1 / -1; }
+#flashcards .fc-quality-replace-actions { display: flex; grid-column: 1 / -1; justify-content: flex-end; gap: 7px; }
+#flashcards .fc-quality-delete-confirm { margin: 0; }
 #flashcards .fc-manage-danger { padding: 0; overflow: hidden; border-color: color-mix(in srgb,var(--danger) 28%,var(--line)); }
 #flashcards .fc-manage-danger > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px; cursor: pointer; list-style: none; }
 #flashcards .fc-manage-danger > summary > span:first-child { display: grid; gap: 3px; }
@@ -1338,6 +1361,12 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
   #flashcards .fc-quality-kpis > span:last-child { grid-column: 1 / -1; }
   #flashcards .fc-quality-row { align-items: stretch; flex-direction: column; }
   #flashcards .fc-quality-row .tiny-btn { width: 100%; justify-content: center; }
+  #flashcards .fc-quality-workbench-head { display: grid; align-items: stretch; }
+  #flashcards .fc-quality-workbench-head > div:last-child { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #flashcards .fc-quality-work-row { align-items: stretch; grid-template-columns: auto minmax(0,1fr); }
+  #flashcards .fc-quality-work-row > div { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  #flashcards .fc-quality-replace { grid-template-columns: 1fr; }
+  #flashcards .fc-quality-replace > label { grid-column: 1 / -1; }
   #flashcards .fc-manage-warning { align-items: stretch; flex-direction: column; }
   #flashcards .fc-delete-confirm { grid-template-columns: 1fr; }
   #flashcards .fc-delete-confirm > div:last-child { display: grid; grid-template-columns: 1fr; }
@@ -1440,10 +1469,12 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 .planner-radar-study-body section:nth-child(-n+2) { border-bottom: 1px solid var(--border,rgba(20,40,34,.14)); }
 .planner-radar-study-body h4 { color: #166047; font-size: 11px; letter-spacing: .09em; margin: 0 0 10px; text-transform: uppercase; }
 .planner-radar-study-body p { font-size: 13px; line-height: 1.7; margin: 0; }
-.planner-radar-exam { align-items: end; background: #eef4e8; border-top: 1px solid rgba(22,96,71,.12); display: grid; gap: 24px; grid-template-columns: 1fr auto; padding: 26px 30px; }
+.planner-radar-exam { align-items: end; background: linear-gradient(105deg,#fff3b8 0%,#fff9dc 72%,#eef4e8 100%); border-left: 5px solid #dfb82f; border-top: 1px solid rgba(137,101,0,.16); display: grid; gap: 24px; grid-template-columns: 1fr auto; padding: 26px 30px; }
 .planner-radar-exam > div > span { color: #166047; font-size: 11px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
 .planner-radar-exam ul { display: grid; gap: 7px; margin: 12px 0 0; padding-left: 18px; }
-.planner-radar-exam li { font-size: 12px; }
+.planner-radar-exam li { color: #403300; font-size: 12px; }
+.planner-radar-exam li::marker { color: #9a7300; }
+.planner-radar-exam li { text-decoration-color: rgba(255,221,76,.72); text-decoration-line: underline; text-decoration-skip-ink: none; text-decoration-thickness: .55em; text-underline-offset: -.28em; }
 .planner-radar-exam > a { color: #166047; font-size: 11px; font-weight: 750; text-underline-offset: 3px; }
 .planner-radar-quiz { background: #172f27; border-radius: 28px; color: #fff; padding: clamp(24px,4vw,42px); scroll-margin-top: 28px; }
 .planner-radar-quiz .planner-radar-heading h2 { color: #fff; }
