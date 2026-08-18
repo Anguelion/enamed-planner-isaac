@@ -1148,3 +1148,24 @@ test('sessão apresenta frente e verso como um cartão animado', () => {
   assert.match(html,/Esta é a resposta/);
   assert.match(html,/flashcard-rating-reveal/);
 });
+
+test('espaço alterna o cartão entre frente e verso', () => {
+  const ctx=loadPlannerSandbox();
+  const state=stateOf(ctx);
+  const card=ctx.normalizeFlashcardRecord({id:'space-toggle-card',front:'Frente',back:'Verso'});
+  state.flashcardLibrary.push(card);
+  const event={
+    ctrlKey:false,
+    metaKey:false,
+    altKey:false,
+    repeat:false,
+    key:' ',
+    code:'Space',
+    target:{matches:()=>false,closest:()=>null},
+    preventDefault(){}
+  };
+  ctx.handleFlashcardKeyboard(event);
+  assert.equal(uiOf(ctx).revealedCards[card.id],true);
+  ctx.handleFlashcardKeyboard(event);
+  assert.equal(uiOf(ctx).revealedCards[card.id],undefined);
+});

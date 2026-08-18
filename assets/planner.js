@@ -13444,14 +13444,11 @@ function handleFlashcardKeyboard(event) {
   if(event.code === 'Space') {
     if(event.repeat) return;
     event.preventDefault();
-    // Espaço só revela. Antes, apertar Espaço de novo com a resposta já
-    // revelada avaliava o card como "Bom" (3) sem aviso nenhum — bastava
-    // apertar a tecla duas vezes por hábito para distorcer o agendamento
-    // do card sem querer. Avaliação agora só acontece pelas teclas 1–4.
-    if(!ui.revealedCards[card.id]) {
-      ui.revealedCards[card.id] = true;
-      renderFlashcards();
-    }
+    // Espaço alterna entre frente e verso. A avaliação continua restrita às
+    // teclas 1–4 para não alterar o agendamento do card por acidente.
+    if(ui.revealedCards[card.id]) delete ui.revealedCards[card.id];
+    else ui.revealedCards[card.id] = true;
+    renderFlashcards();
     return;
   }
   if(/^[1-4]$/.test(event.key)) {
