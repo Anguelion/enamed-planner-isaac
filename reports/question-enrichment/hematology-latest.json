@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T19:01:00.635Z",
+  "generatedAt": "2026-08-18T07:08:33.568Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,48 +7,64 @@
   "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-55f0a8853209faa5",
-      "number": "1046f",
+      "id": "anki-hematologia-anemias-hemoliticas-25ac78f62c219563",
+      "number": "1052f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-516e98f91f12a9a8",
-      "number": "1047f",
+      "id": "anki-hematologia-anemias-hemoliticas-79427e11072ffbc1",
+      "number": "1053f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-fb58df78533cbb60",
-      "number": "1048f",
+      "id": "anki-hematologia-anemias-hemoliticas-bef6ed647ce5d8db",
+      "number": "1054f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Crianc-4-anos-idade84d040e2fe/",
+        "https://med.estrategia.com/public/questoes/crianc-com-4-anos9692b8e04f/",
+        "https://med.estrategia.com/public/questoes/adolescente-15-anos-e103963c215e/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.24836601307189543,
+        "options": 0.02490421455938697,
+        "combined": 0.18132747351814288
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-38145892418d8ba5",
+      "number": "1055f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo93057daa90/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.1897810218978102,
+        "options": 0,
+        "combined": 0.13284671532846715
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-f1062024594042fb",
+      "number": "1056f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-03136497244bd65a",
-      "number": "1049f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-7ce25bb12961bb09",
-      "number": "1050f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-e368e2e200f0425a",
-      "number": "1051f",
+      "id": "anki-hematologia-anemias-hemoliticas-80323f63f5e93ed5",
+      "number": "1057f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
       "status": "not_found",
