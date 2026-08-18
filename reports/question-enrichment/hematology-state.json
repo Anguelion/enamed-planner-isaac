@@ -690,7 +690,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-25ac78f62c219563": {
+      "number": "1052f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T07:08:34.005Z",
+      "nextAttemptAt": "2026-08-25T07:08:34.005Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-79427e11072ffbc1": {
+      "number": "1053f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T07:08:39.391Z",
+      "nextAttemptAt": "2026-08-25T07:08:39.391Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-bef6ed647ce5d8db": {
+      "number": "1054f",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T07:08:46.338Z",
+      "nextAttemptAt": "2026-10-17T07:08:46.338Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-38145892418d8ba5": {
+      "number": "1055f",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T07:08:52.595Z",
+      "nextAttemptAt": "2026-10-17T07:08:52.595Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-f1062024594042fb": {
+      "number": "1056f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T07:08:58.570Z",
+      "nextAttemptAt": "2026-08-25T07:08:58.570Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-80323f63f5e93ed5": {
+      "number": "1057f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-18T07:09:04.091Z",
+      "nextAttemptAt": "2026-08-25T07:09:04.091Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-17T19:01:28.055Z"
+  "updatedAt": "2026-08-18T07:09:04.091Z"
 }
