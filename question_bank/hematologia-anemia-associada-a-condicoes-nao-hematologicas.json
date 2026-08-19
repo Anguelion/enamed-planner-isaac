@@ -117,14 +117,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pensa na eritropoietina como um 'chefe de fábrica' que manda ordem pra medula óssea produzir mais sangue. Só que, pra fabricar sangue novo, o corpo precisa de matéria-prima — e a mais importante é o FERRO. Se não tiver ferro guardado o suficiente, não adianta mandar a ordem (EPO), porque a fábrica não tem com o que trabalhar, e a hemoglobina não sobe. Por isso, antes de começar EPO, sempre se confere primeiro o estoque de ferro.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Tratamento da anemia da doença renal crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977807",
-      "ankiGuid": "wBsO+N}Ie^"
+      "ankiGuid": "wBsO+N}Ie^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com753f94dcfa/",
+        "sourceQuestionId": "4000083634",
+        "matchedAt": "2026-08-19T18:56:37.739Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-33478b4e37fc1203",
@@ -195,7 +207,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O nível de anemia desse senhor (hemoglobina de 5, muito baixa!) é grande demais pra ser explicado só pela insuficiência renal que ele tem. Quando a anemia é 'desproporcional' ao problema do rim, o médico precisa pensar em outra doença por trás — e uma bem clássica em idosos é o mieloma múltiplo, que também pode deixar o cálcio do sangue alto (hipercalcemia), e cálcio alto deixa a pessoa confusa. Por isso a resposta C junta tudo: anemia estranha + confusão mental = pensar em mieloma.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
@@ -228,7 +240,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "De novo a 'fábrica quebrada' do heme! Esse rapaz tem dor de barriga, confusão, alucinação e convulsão — e o exame de urina mostrou ALA e PBG aumentados, que são exatamente as 'pistas' da porfiria aguda intermitente. Repare que ele já teve um episódio parecido antes: crises que vêm e vão são típicas dessa doença. As outras doenças da lista (esclerose múltipla, intoxicação por chumbo, botulismo) não combinam com esse exame de urina tão característico.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",

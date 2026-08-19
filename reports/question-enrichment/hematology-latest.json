@@ -1,190 +1,94 @@
 {
-  "generatedAt": "2026-08-19T07:08:46.314Z",
+  "generatedAt": "2026-08-19T18:56:35.831Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-54afbfbbab9009ca",
-      "number": "1064f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab6a7b17ace1e807",
+      "number": "1003g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/investigaca-anemia185b7a54f7/",
-      "sourceQuestionId": "4000063188",
-      "matchedAt": "2026-08-19T07:08:47.494Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com753f94dcfa/",
+      "sourceQuestionId": "4000083634",
+      "matchedAt": "2026-08-19T18:56:37.739Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias hemolíticas",
-        "Introdução à hemólise",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Lúpus Eritematoso Sistêmico (LES)",
-        "Quadro clínico",
-        "Manifestações hematológicas"
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Tratamento da anemia da doença renal crônica"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Manifestações hematológicas. Conduta/resposta: Bilirrubina indireta, LDH",
+      "comment": "Gabarito confirmado: D. Assunto: Tratamento da anemia da doença renal crônica. Conduta/resposta: ferro",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/investigaca-anemia185b7a54f7/"
+        "https://med.estrategia.com/public/questoes/Paciente-com753f94dcfa/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-bb69c89dbd6aab92",
-      "number": "1065f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-G2P1999aeab0d9/",
-      "sourceQuestionId": "4000052099",
-      "matchedAt": "2026-08-19T07:08:53.741Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas autoimunes (AHAI)",
-        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico das anemias hemolíticas autoimunes (AHAI). Conduta/resposta: Anemia hemolítica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-28-anos-G2P1999aeab0d9/",
-        "https://med.estrategia.com/public/questoes/Mulher-28-anos-G2P1A05250bdf240/"
-      ]
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fdba14ac197dc8bb",
+      "number": "1005g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-bd524e508e824e4c",
-      "number": "1066f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-exemplos-anemia14ecbb841b/",
-      "sourceQuestionId": "4000051726",
-      "matchedAt": "2026-08-19T07:08:59.769Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Introdução à hemólise",
-        "Classificação das anemias hemolíticas quanto à sua relação com as hemácias"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Classificação das anemias hemolíticas quanto à sua relação com as hemácias. Conduta/resposta: Hemoglobinúria Paroxística Noturna.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-exemplos-anemia14ecbb841b/"
-      ]
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5f8dd1bb5890ea5b",
+      "number": "1006g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-da6d569f9ded6318",
-      "number": "1067f",
+      "id": "anki-hematologia-anemias-hemoliticas-f1e4601f4019310d",
+      "number": "1070f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/mutaca-ponto145b3a331c8/",
-      "sourceQuestionId": "4000046885",
-      "matchedAt": "2026-08-19T07:09:05.897Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: Pacientes com anemia falciforme possuem risco aumentado de infecção por germes encapsulados, em virtude da asplenia funcional decorrente da doença.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/mutaca-ponto145b3a331c8/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-3d9dfd3aee07f4c8",
-      "number": "1068f",
+      "id": "anki-hematologia-anemias-hemoliticas-cff3f00a1c5084b2",
+      "number": "1071f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-portador731ee5b031/",
-      "sourceQuestionId": "4000046071",
-      "matchedAt": "2026-08-19T07:09:11.684Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Síndrome torácica aguda"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome torácica aguda. Conduta/resposta: Oferta de oxigênio por dispositivo de alto fluxo, acesso venoso calibroso, coleta de culturas, infusão de cristaloide e antibioticoterapia de largo espectro e glicemia capilar.",
+      "changed": false,
+      "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-portador731ee5b031/"
-      ]
+        "https://med.estrategia.com/public/questoes/menino-sete-anos-idade8955ae2a53/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.23255813953488372,
+        "options": 0,
+        "combined": 0.1627906976744186
+      }
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-6bd093389ba56ce4",
-      "number": "1069f",
+      "id": "anki-hematologia-anemias-hemoliticas-42d696e0a302034b",
+      "number": "1072f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-22-anos85982c2e6e/",
-      "sourceQuestionId": "4000042231",
-      "matchedAt": "2026-08-19T07:09:17.976Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9907407407407407,
-        "combined": 0.9972222222222222
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemias hemolíticas. Conduta/resposta: Devido à anemia sintomática, a medida terapêutica inicial deve ser a transfusão de concentrado de hemácias e prednisona 1mg/kg, com boa resposta em 50% dos casos, porém com chances de recidiva.",
+      "changed": false,
+      "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-22-anos85982c2e6e/",
-        "https://med.estrategia.com/public/questoes/Homem-22-anos-idade1004c4c4df6/"
-      ]
+        "https://med.estrategia.com/public/questoes/Gestante-primigesta-2110933bb70ad/",
+        "https://med.estrategia.com/public/questoes/Gestante-21-anos12153d9cf12/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.32432432432432434,
+        "options": 0,
+        "combined": 0.227027027027027
+      }
     }
   ]
 }
