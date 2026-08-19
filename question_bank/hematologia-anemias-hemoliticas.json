@@ -2651,14 +2651,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os marcadores clássicos de hemólise, usados também na investigação de anemia em quem tem lúpus, são a bilirrubina indireta (aumenta quando as hemácias são destruídas em excesso) e a LDH (uma enzima liberada quando as células se rompem).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Lúpus Eritematoso Sistêmico (LES)",
+        "Quadro clínico",
+        "Manifestações hematológicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350405",
-      "ankiGuid": "LKRn-#_7D@"
+      "ankiGuid": "LKRn-#_7D@",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/investigaca-anemia185b7a54f7/",
+        "sourceQuestionId": "4000063188",
+        "matchedAt": "2026-08-19T07:08:47.494Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-bb69c89dbd6aab92",
@@ -2685,14 +2700,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Grávida usando nitrofurantoína (remédio pra infecção urinária, conhecido por poder causar hemólise, principalmente em quem tem deficiência de G6PD), com urina escurecendo e icterícia leve — quadro sugestivo de anemia hemolítica desencadeada pelo remédio.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350406",
-      "ankiGuid": "DeTB>v:iyE"
+      "ankiGuid": "DeTB>v:iyE",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-G2P1999aeab0d9/",
+        "sourceQuestionId": "4000052099",
+        "matchedAt": "2026-08-19T07:08:53.741Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-bd524e508e824e4c",
@@ -2719,14 +2745,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Próteses cardíacas, malária, doença hemolítica do recém-nascido e a PTT são todas causas de hemólise por um fator EXTERNO à hemácia (que era normal antes). Já a hemoglobinúria paroxística noturna é uma doença adquirida, mas o defeito é INTERNO à própria hemácia (uma mutação que deixa a célula vulnerável ao ataque do sistema complemento) — por isso é a exceção certa.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Classificação das anemias hemolíticas quanto à sua relação com as hemácias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350407",
-      "ankiGuid": "iesGT!?8sC"
+      "ankiGuid": "iesGT!?8sC",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-exemplos-anemia14ecbb841b/",
+        "sourceQuestionId": "4000051726",
+        "matchedAt": "2026-08-19T07:08:59.769Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-da6d569f9ded6318",
@@ -2753,14 +2790,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A anemia falciforme deixa o corpo mais vulnerável a infecções por bactérias encapsuladas (como o pneumococo) — não por causa direta da hemoglobina anormal, mas porque, ao longo do tempo, os pequenos infartos repetidos no baço destroem esse órgão (asplenia funcional), que é justamente o responsável por 'filtrar' esse tipo de bactéria do sangue.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350408",
-      "ankiGuid": "my=}]?!t~P"
+      "ankiGuid": "my=}]?!t~P",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/mutaca-ponto145b3a331c8/",
+        "sourceQuestionId": "4000046885",
+        "matchedAt": "2026-08-19T07:09:05.897Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-3d9dfd3aee07f4c8",
@@ -2786,14 +2835,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia falciforme, gravemente instável (choque, hipóxia, febre alta, pulsos finos) e com sinais de pneumonia — a prioridade é a estabilização completa: oxigênio de alto fluxo, acesso venoso calibroso, coleta de exames/culturas, hidratação e antibiótico de amplo espectro logo de cara, cobrindo tanto o choque quanto a possível infecção grave.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350409",
-      "ankiGuid": "Gb.iwoeh0e"
+      "ankiGuid": "Gb.iwoeh0e",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-portador731ee5b031/",
+        "sourceQuestionId": "4000046071",
+        "matchedAt": "2026-08-19T07:09:11.684Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-6bd093389ba56ce4",
@@ -2819,14 +2882,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Icterícia, urina escura, cansaço, e uso frequente de anti-inflamatórios (AINEs), com anemia grave e bilirrubina bem elevada — quadro compatível com anemia hemolítica sintomática. Como é uma anemia grave, a conduta inicial é transfundir concentrado de hemácias e já iniciar corticoide (prednisona), que costuma dar boa resposta em boa parte dos casos, embora com risco de recidiva no futuro.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350410",
-      "ankiGuid": "qB0^C.bM&h"
+      "ankiGuid": "qB0^C.bM&h",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-22-anos85982c2e6e/",
+        "sourceQuestionId": "4000042231",
+        "matchedAt": "2026-08-19T07:09:17.976Z",
+        "confidence": 0.9972222222222222
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-f1e4601f4019310d",

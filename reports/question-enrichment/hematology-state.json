@@ -810,7 +810,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/hidroxiureia-e-usada24aa53bc10/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-54afbfbbab9009ca": {
+      "number": "1064f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-19T07:08:47.496Z",
+      "nextAttemptAt": "2026-08-26T07:08:47.496Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/investigaca-anemia185b7a54f7/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-bb69c89dbd6aab92": {
+      "number": "1065f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-19T07:08:53.741Z",
+      "nextAttemptAt": "2026-08-26T07:08:53.741Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-G2P1999aeab0d9/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-bd524e508e824e4c": {
+      "number": "1066f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-19T07:08:59.770Z",
+      "nextAttemptAt": "2026-08-26T07:08:59.770Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-exemplos-anemia14ecbb841b/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-da6d569f9ded6318": {
+      "number": "1067f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-19T07:09:05.897Z",
+      "nextAttemptAt": "2026-08-26T07:09:05.897Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mutaca-ponto145b3a331c8/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-3d9dfd3aee07f4c8": {
+      "number": "1068f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-19T07:09:11.684Z",
+      "nextAttemptAt": "2026-08-26T07:09:11.684Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-portador731ee5b031/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-6bd093389ba56ce4": {
+      "number": "1069f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-19T07:09:17.976Z",
+      "nextAttemptAt": "2026-08-26T07:09:17.976Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-22-anos85982c2e6e/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-08-18T19:02:19.624Z"
+  "updatedAt": "2026-08-19T07:09:17.976Z"
 }
