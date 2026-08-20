@@ -43,40 +43,40 @@
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fbe8cf7cba33d0d0": {
       "number": "1008g",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-12T19:30:50.937Z",
-      "nextAttemptAt": "2026-08-19T19:30:50.937Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-20T07:09:53.138Z",
+      "nextAttemptAt": "2026-09-03T07:09:53.138Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-83-anos10096699d2c/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e74261a560c3fc31": {
       "number": "1009g",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-12T19:30:56.297Z",
-      "nextAttemptAt": "2026-08-19T19:30:56.297Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-20T07:09:59.026Z",
+      "nextAttemptAt": "2026-09-03T07:09:59.026Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/antidoto-antagonista8c4245269/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-b627d7697f0486f8": {
       "number": "1010g",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-12T19:31:02.188Z",
-      "nextAttemptAt": "2026-08-19T19:31:02.188Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-20T07:10:05.667Z",
+      "nextAttemptAt": "2026-09-03T07:10:05.667Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-insuficiencia9b7da5bbc/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7": {
       "number": "1011g",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-12T19:31:08.028Z",
-      "nextAttemptAt": "2026-08-19T19:31:08.028Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-20T07:10:10.960Z",
+      "nextAttemptAt": "2026-09-03T07:10:10.960Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -84,9 +84,9 @@
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a": {
       "number": "1012g",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-12T19:31:13.985Z",
-      "nextAttemptAt": "2026-08-19T19:31:13.985Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-20T07:10:16.837Z",
+      "nextAttemptAt": "2026-09-03T07:10:16.837Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -900,7 +900,17 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-c800665818a2ce22": {
+      "number": "1073f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-20T07:10:22.062Z",
+      "nextAttemptAt": "2026-08-27T07:10:22.062Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-19T18:57:05.980Z"
+  "updatedAt": "2026-08-20T07:10:22.062Z"
 }

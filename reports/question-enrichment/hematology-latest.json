@@ -1,20 +1,76 @@
 {
-  "generatedAt": "2026-08-19T18:56:35.831Z",
+  "generatedAt": "2026-08-20T07:09:52.219Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 3,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab6a7b17ace1e807",
-      "number": "1003g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fbe8cf7cba33d0d0",
+      "number": "1008g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com753f94dcfa/",
-      "sourceQuestionId": "4000083634",
-      "matchedAt": "2026-08-19T18:56:37.739Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-83-anos10096699d2c/",
+      "sourceQuestionId": "4000032976",
+      "matchedAt": "2026-08-20T07:09:53.137Z",
+      "similarity": {
+        "stem": 0.967032967032967,
+        "options": 1,
+        "combined": 0.9769230769230768
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Anemia da doença renal crônica. Conduta/resposta: Anemia secundária à doença renal crônica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-83-anos10096699d2c/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e74261a560c3fc31",
+      "number": "1009g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/antidoto-antagonista8c4245269/",
+      "sourceQuestionId": "4000029400",
+      "matchedAt": "2026-08-20T07:09:59.026Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.86,
+        "combined": 0.958
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Metemoglobinemia"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Metemoglobinemia. Conduta/resposta: Azul de metileno",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/antidoto-antagonista8c4245269/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-b627d7697f0486f8",
+      "number": "1010g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-insuficiencia9b7da5bbc/",
+      "sourceQuestionId": "4000021852",
+      "matchedAt": "2026-08-20T07:10:05.666Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -28,67 +84,36 @@
         "Hematologia",
         "Anemias e condições não hematológicas",
         "Anemia da doença renal crônica",
-        "Tratamento da anemia da doença renal crônica"
+        "Fisiopatologia da anemia da doença renal crônica"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Tratamento da anemia da doença renal crônica. Conduta/resposta: ferro",
+      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia da anemia da doença renal crônica. Conduta/resposta: sua principal causa é a diminuição da produção de eritropoetina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-com753f94dcfa/"
+        "https://med.estrategia.com/public/questoes/anemia-insuficiencia9b7da5bbc/"
       ]
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fdba14ac197dc8bb",
-      "number": "1005g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7",
+      "number": "1011g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5f8dd1bb5890ea5b",
-      "number": "1006g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a",
+      "number": "1012g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-f1e4601f4019310d",
-      "number": "1070f",
+      "id": "anki-hematologia-anemias-hemoliticas-c800665818a2ce22",
+      "number": "1073f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-cff3f00a1c5084b2",
-      "number": "1071f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/menino-sete-anos-idade8955ae2a53/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.23255813953488372,
-        "options": 0,
-        "combined": 0.1627906976744186
-      }
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-42d696e0a302034b",
-      "number": "1072f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Gestante-primigesta-2110933bb70ad/",
-        "https://med.estrategia.com/public/questoes/Gestante-21-anos12153d9cf12/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.32432432432432434,
-        "options": 0,
-        "combined": 0.227027027027027
-      }
     }
   ]
 }

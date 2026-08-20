@@ -324,10 +324,21 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977812",
-      "ankiGuid": "Eq4G1jn(}n"
+      "ankiGuid": "Eq4G1jn(}n",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-83-anos10096699d2c/",
+        "sourceQuestionId": "4000032976",
+        "matchedAt": "2026-08-20T07:09:53.137Z",
+        "confidence": 0.9769230769230768
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e74261a560c3fc31",
@@ -358,10 +369,21 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Metemoglobinemia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977813",
-      "ankiGuid": "t~bYXjVdBJ"
+      "ankiGuid": "t~bYXjVdBJ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/antidoto-antagonista8c4245269/",
+        "sourceQuestionId": "4000029400",
+        "matchedAt": "2026-08-20T07:09:59.026Z",
+        "confidence": 0.958
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-b627d7697f0486f8",
@@ -391,10 +413,22 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Fisiopatologia da anemia da doença renal crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977814",
-      "ankiGuid": "rkE~N,;1Za"
+      "ankiGuid": "rkE~N,;1Za",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-insuficiencia9b7da5bbc/",
+        "sourceQuestionId": "4000021852",
+        "matchedAt": "2026-08-20T07:10:05.666Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7",
