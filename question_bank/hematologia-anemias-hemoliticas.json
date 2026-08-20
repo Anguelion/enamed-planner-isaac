@@ -3057,14 +3057,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a B: a crise aplástica NÃO causa uma aplasia PERMANENTE — ela é causada geralmente pelo parvovírus B19, que ataca temporariamente as células jovens da medula óssea, mas a produção de sangue volta ao normal sozinha depois de um tempo (é autolimitada). As outras frases (sobre crise vaso-oclusiva desde cedo na vida, associação entre síndrome torácica e crise álgica, e o sequestro esplênico como emergência grave) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350415",
-      "ankiGuid": "NUvpuKLfF8"
+      "ankiGuid": "NUvpuKLfF8",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/doenc-falciforme-e44401b9c90/",
+        "sourceQuestionId": "4000031537",
+        "matchedAt": "2026-08-20T19:03:40.064Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-ed2f9bebb08bb449",
@@ -3090,14 +3103,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a C: o sequestro esplênico não acontece por uma obstrução ARTERIAL que causa atrofia do baço — pelo contrário, é um mecanismo de 'represamento' do sangue DENTRO do baço, fazendo ele CRESCER de repente (não atrofiar), causando dor e queda rápida da hemoglobina circulante. As outras frases (sobre neutrofilia crônica e sequestro reduzindo sobrevida, perda da função do baço aumentando risco de infecção, e o tratamento das crises álgicas) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350416",
-      "ankiGuid": "mRZy/*!!^N"
+      "ankiGuid": "mRZy/*!!^N",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/a-anemia-falciforme9bd67e7b9/",
+        "sourceQuestionId": "4000028669",
+        "matchedAt": "2026-08-20T19:03:46.430Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-08984ebe2ff902a4",
@@ -3123,14 +3148,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre alta e persistente (36 horas) numa criança pequena com anemia falciforme, mesmo sem outro sintoma, é sempre motivo de preocupação — pelo risco de infecção grave por bactérias encapsuladas (asplenia funcional). A conduta é internar e começar antibiótico na veia mesmo antes dos resultados dos exames, pela rapidez com que essas infecções podem evoluir mal.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações crônicas da anemia falciforme",
+        "Auto-esplenectomia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350417",
-      "ankiGuid": "i9!vR:3saI"
+      "ankiGuid": "i9!vR:3saI",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-dois-anos43b8895cd0/",
+        "sourceQuestionId": "4000026648",
+        "matchedAt": "2026-08-20T19:03:52.505Z",
+        "confidence": 0.9942307692307693
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-ce23ad19e92c4dc6",
@@ -3156,14 +3195,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor abdominal, palidez muito importante (Hb 3!), sinais de choque (hipovolemia, taquicardia), reticulocitose (a medula compensando) e baço bem aumentado (5cm) numa criança pequena com anemia falciforme — é o quadro clássico do sequestro esplênico, uma emergência que pode levar a choque grave se não tratada rapidamente.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350418",
-      "ankiGuid": "O=|}O^TkwG"
+      "ankiGuid": "O=|}O^TkwG",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-02-anos38a3085750/",
+        "sourceQuestionId": "4000007091",
+        "matchedAt": "2026-08-20T19:03:58.596Z",
+        "confidence": 0.981081081081081
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-357241b74f9f1363",
@@ -3189,14 +3242,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase correta é a C: um Coombs direto negativo, na maioria das vezes, afasta a hipótese de que a hemólise seja causada por anticorpos (autoimune) — embora não descarte completamente todas as causas possíveis de hemólise (que podem ser não-imunes). As outras frases trocam os conceitos do Coombs (o direto detecta anticorpos NA hemácia, o indireto detecta anticorpos NO soro — o oposto do que a A afirma) ou erram o tratamento e o tipo de anticorpo envolvido nas AHAI por anticorpos quentes (que geralmente é IgG, causando hemólise extravascular, não IgM como diz a D).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350419",
-      "ankiGuid": "qPqLe}tO7H"
+      "ankiGuid": "qPqLe}tO7H",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Considerando-anemias10b52f25df/",
+        "sourceQuestionId": "4000006376",
+        "matchedAt": "2026-08-20T19:04:04.415Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-f1d29a123d1f260f",
@@ -3223,7 +3286,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a E: a esplenomegalia NÃO costuma ser comum em pacientes homozigotos ADULTOS — pelo contrário, ao longo dos anos, os infartos repetidos no baço causam auto-infarto (o baço vai atrofiando), sendo mais comum ver o baço aumentado em crianças pequenas, antes desse processo se completar. As outras frases (causa genética, dor óssea comum, síndrome torácica como causa frequente de óbito, e Salmonella na osteomielite) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",

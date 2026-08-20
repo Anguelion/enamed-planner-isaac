@@ -910,7 +910,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-58eec52b7f1505ed": {
+      "number": "1074f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-20T19:03:40.065Z",
+      "nextAttemptAt": "2026-08-27T19:03:40.065Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/doenc-falciforme-e44401b9c90/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-ed2f9bebb08bb449": {
+      "number": "1075f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-20T19:03:46.431Z",
+      "nextAttemptAt": "2026-08-27T19:03:46.431Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-anemia-falciforme9bd67e7b9/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-08984ebe2ff902a4": {
+      "number": "1076f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-20T19:03:52.506Z",
+      "nextAttemptAt": "2026-08-27T19:03:52.506Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-dois-anos43b8895cd0/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-ce23ad19e92c4dc6": {
+      "number": "1077f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-20T19:03:58.597Z",
+      "nextAttemptAt": "2026-08-27T19:03:58.597Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-02-anos38a3085750/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-357241b74f9f1363": {
+      "number": "1078f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-20T19:04:04.415Z",
+      "nextAttemptAt": "2026-08-27T19:04:04.415Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considerando-anemias10b52f25df/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-f1d29a123d1f260f": {
+      "number": "1079f",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-20T19:04:11.188Z",
+      "nextAttemptAt": "2026-10-19T19:04:11.188Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-20T07:10:22.062Z"
+  "updatedAt": "2026-08-20T19:04:11.188Z"
 }

@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-08-20T07:09:52.219Z",
+  "generatedAt": "2026-08-20T19:03:38.910Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fbe8cf7cba33d0d0",
-      "number": "1008g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "id": "anki-hematologia-anemias-hemoliticas-58eec52b7f1505ed",
+      "number": "1074f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-83-anos10096699d2c/",
-      "sourceQuestionId": "4000032976",
-      "matchedAt": "2026-08-20T07:09:53.137Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/doenc-falciforme-e44401b9c90/",
+      "sourceQuestionId": "4000031537",
+      "matchedAt": "2026-08-20T19:03:40.064Z",
       "similarity": {
-        "stem": 0.967032967032967,
+        "stem": 1,
         "options": 1,
-        "combined": 0.9769230769230768
+        "combined": 1
       },
       "localAnswer": "B",
       "remoteAnswer": "B",
@@ -26,27 +26,29 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias e condições não hematológicas",
-        "Anemia da doença renal crônica"
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Anemia da doença renal crônica. Conduta/resposta: Anemia secundária à doença renal crônica.",
+      "comment": "Gabarito confirmado: B. Assunto: Complicações agudas da anemia falciforme. Conduta/resposta: A crise aplástica leva a aplasia permanente da série vermelha por conta da citotoxicidade do Parvovírus aos precursores hematopoiéticos, nem sempre acompanhada do exantema característico.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-83-anos10096699d2c/"
+        "https://med.estrategia.com/public/questoes/doenc-falciforme-e44401b9c90/"
       ]
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e74261a560c3fc31",
-      "number": "1009g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "id": "anki-hematologia-anemias-hemoliticas-ed2f9bebb08bb449",
+      "number": "1075f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/antidoto-antagonista8c4245269/",
-      "sourceQuestionId": "4000029400",
-      "matchedAt": "2026-08-20T07:09:59.026Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-anemia-falciforme9bd67e7b9/",
+      "sourceQuestionId": "4000028669",
+      "matchedAt": "2026-08-20T19:03:46.430Z",
       "similarity": {
         "stem": 1,
-        "options": 0.86,
-        "combined": 0.958
+        "options": 1,
+        "combined": 1
       },
       "localAnswer": "C",
       "remoteAnswer": "C",
@@ -55,65 +57,120 @@
         "Clínica Médica",
         "Hematologia",
         "Hemoglobinopatias",
-        "Metemoglobinemia"
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Metemoglobinemia. Conduta/resposta: Azul de metileno",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: A crise do sequestro esplênico ocorre por obstrução arterial aguda do baço, causando isquemia e atrofia do baço, assim como dor súbita no hipocôndrio direito.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/antidoto-antagonista8c4245269/"
+        "https://med.estrategia.com/public/questoes/a-anemia-falciforme9bd67e7b9/",
+        "https://med.estrategia.com/public/questoes/a-Doenc-Falciforme9f228960b/"
       ]
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-b627d7697f0486f8",
-      "number": "1010g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "id": "anki-hematologia-anemias-hemoliticas-08984ebe2ff902a4",
+      "number": "1076f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-insuficiencia9b7da5bbc/",
-      "sourceQuestionId": "4000021852",
-      "matchedAt": "2026-08-20T07:10:05.666Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-dois-anos43b8895cd0/",
+      "sourceQuestionId": "4000026648",
+      "matchedAt": "2026-08-20T19:03:52.505Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9807692307692308,
+        "combined": 0.9942307692307693
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações crônicas da anemia falciforme",
+        "Auto-esplenectomia"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Auto-esplenectomia. Conduta/resposta: admissão hospitalar e início de antiobioticoterapia parenteral, mesmo antes dos resultados dos exames laboratoriais.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/crianc-dois-anos43b8895cd0/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-ce23ad19e92c4dc6",
+      "number": "1077f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-02-anos38a3085750/",
+      "sourceQuestionId": "4000007091",
+      "matchedAt": "2026-08-20T19:03:58.596Z",
+      "similarity": {
+        "stem": 0.972972972972973,
+        "options": 1,
+        "combined": 0.981081081081081
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Crise de sequestro esplênico. Conduta/resposta: Sequestro esplênico",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Pre-escolar-02-anos38a3085750/",
+        "https://med.estrategia.com/public/questoes/Pre-escolar-2-anos-1074c07bce01/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-357241b74f9f1363",
+      "number": "1078f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considerando-anemias10b52f25df/",
+      "sourceQuestionId": "4000006376",
+      "matchedAt": "2026-08-20T19:04:04.415Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias e condições não hematológicas",
-        "Anemia da doença renal crônica",
-        "Fisiopatologia da anemia da doença renal crônica"
+        "Anemias hemolíticas",
+        "Anemias hemolíticas autoimunes (AHAI)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia da anemia da doença renal crônica. Conduta/resposta: sua principal causa é a diminuição da produção de eritropoetina.",
+      "comment": "Gabarito confirmado: C. Assunto: Anemias hemolíticas autoimunes (AHAI). Conduta/resposta: O teste de Coombs direto negativo na maioria das vezes, afasta a hipótese de anemia hemolítica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-insuficiencia9b7da5bbc/"
+        "https://med.estrategia.com/public/questoes/Considerando-anemias10b52f25df/"
       ]
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7",
-      "number": "1011g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a",
-      "number": "1012g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-c800665818a2ce22",
-      "number": "1073f",
+      "id": "anki-hematologia-anemias-hemoliticas-f1d29a123d1f260f",
+      "number": "1079f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/anemia-falciforme-e50944bc8fa/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.2903225806451613,
+        "options": 0.0838095238095238,
+        "combined": 0.22836866359447003
+      }
     }
   ]
 }
