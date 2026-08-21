@@ -814,14 +814,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Essa pergunta quer a frase ERRADA. Na realidade, a cianose já aparece bem antes de a meta-hemoglobina chegar a 40% — geralmente já é visível com uns 10–15% do total. Então a alternativa D exagera o número e está errada. As outras frases (ferro na forma Fe3+, não transporta oxigênio, hemácias normais têm menos de 1%, azul de metileno como tratamento) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Metemoglobinemia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977824",
-      "ankiGuid": "m$)/f%K+uP"
+      "ankiGuid": "m$)/f%K+uP",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/meta-hemoglobina-ou9d2760c7b/",
+        "sourceQuestionId": "4000047123",
+        "matchedAt": "2026-08-21T07:11:11.693Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6a09b715e154aad5",
@@ -848,7 +859,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As causas clássicas de anemia na insuficiência renal crônica são: menos eritropoetina sendo produzida, hemácias que vivem menos tempo, hiperparatireoidismo grave, toxicidade por alumínio e inflamação crônica. 'Antagonismo periférico à ação da eritropoetina' não entra nessa lista clássica de mecanismos — por isso é o fator que NÃO contribui, segundo a questão.",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
@@ -881,7 +892,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia macrocítica não-megaloblástica pode ser causada por hipotireoidismo, hepatopatia crônica e mielodisplasia — essas sim deixam as hemácias grandes. Já a insuficiência renal crônica classicamente causa anemia NORMOCÍTICA (tamanho normal), não macrocítica — por isso ela é a exceção e a resposta certa (B).",
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",

@@ -163,20 +163,20 @@
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6bc9ec3f88c214ae": {
       "number": "1020g",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-13T19:29:20.284Z",
-      "nextAttemptAt": "2026-08-20T19:29:20.284Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-21T07:11:11.694Z",
+      "nextAttemptAt": "2026-09-04T07:11:11.694Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/meta-hemoglobina-ou9d2760c7b/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6a09b715e154aad5": {
       "number": "1021g",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-13T19:29:25.615Z",
-      "nextAttemptAt": "2026-08-20T19:29:25.615Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-21T07:11:17.613Z",
+      "nextAttemptAt": "2026-09-04T07:11:17.613Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -184,9 +184,9 @@
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab66f4b58568129f": {
       "number": "1022g",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-13T19:29:30.879Z",
-      "nextAttemptAt": "2026-08-20T19:29:30.879Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-21T07:11:23.928Z",
+      "nextAttemptAt": "2026-09-04T07:11:23.928Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -194,9 +194,9 @@
     "anki-hematologia-anemias-hemoliticas-48559cb40089942b": {
       "number": "1001f",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-13T19:29:36.112Z",
-      "nextAttemptAt": "2026-08-20T19:29:36.112Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-21T07:11:29.262Z",
+      "nextAttemptAt": "2026-09-04T07:11:29.262Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -204,9 +204,9 @@
     "anki-hematologia-anemias-hemoliticas-ae22a917abc41450": {
       "number": "1002f",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-13T19:29:41.827Z",
-      "nextAttemptAt": "2026-08-20T19:29:41.827Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-21T07:11:35.573Z",
+      "nextAttemptAt": "2026-09-04T07:11:35.573Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -970,7 +970,17 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-d84abda5ea3284dc": {
+      "number": "1080f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-21T07:11:40.898Z",
+      "nextAttemptAt": "2026-08-28T07:11:40.898Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-20T19:04:11.188Z"
+  "updatedAt": "2026-08-21T07:11:40.898Z"
 }
