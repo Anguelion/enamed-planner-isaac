@@ -980,7 +980,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-634b065eba064f7d": {
+      "number": "1081f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-21T18:59:48.396Z",
+      "nextAttemptAt": "2026-08-28T18:59:48.396Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/menino-seis-anos-idade66f7c4608a/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-hemoliticas-744ac57d140846ef": {
+      "number": "1082f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-21T18:59:54.861Z",
+      "nextAttemptAt": "2026-08-28T18:59:54.861Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/menino-seis-anos-idade66f7c4608a/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-hemoliticas-d7fa499ca98f61c5": {
+      "number": "1083f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-21T19:00:00.845Z",
+      "nextAttemptAt": "2026-08-28T19:00:00.845Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-2144c274b83e/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-9b830b8b5171074f": {
+      "number": "1084f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-21T19:00:07.064Z",
+      "nextAttemptAt": "2026-08-28T19:00:07.064Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-41-anos-com715ea4226e/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-hemoliticas-acf473adc40a51ce": {
+      "number": "1085f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-21T19:00:13.027Z",
+      "nextAttemptAt": "2026-08-28T19:00:13.027Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/consulta-rotina80dd46fe8f/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-hemoliticas-1c68025b92e8b8a2": {
+      "number": "1086f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-21T19:00:19.243Z",
+      "nextAttemptAt": "2026-08-28T19:00:19.243Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Favorecem-diagnostico116a8badda/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-08-21T07:11:40.898Z"
+  "updatedAt": "2026-08-21T19:00:19.243Z"
 }

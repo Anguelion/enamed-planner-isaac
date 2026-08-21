@@ -3353,14 +3353,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor forte nas pernas numa criança com anemia falciforme, sem melhora com analgésicos comuns (dipirona/paracetamol) — quando a dor é classificada como intensa (nota 7 ou mais), a conduta recomendada é já partir para um opioide forte, como a morfina, em vez de insistir em analgésicos mais fracos.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Manejo das crises álgicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350422",
-      "ankiGuid": "L~jSWjW?<s"
+      "ankiGuid": "L~jSWjW?<s",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/menino-seis-anos-idade66f7c4608a/",
+        "sourceQuestionId": "4000121041",
+        "matchedAt": "2026-08-21T18:59:48.395Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-744ac57d140846ef",
@@ -3387,14 +3402,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesmo caso: dor intensa nas pernas sem melhora com analgésicos simples numa criança com anemia falciforme — a conduta certa é usar morfina, o padrão-ouro pra dor intensa nas crises vaso-oclusivas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Manejo das crises álgicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350423",
-      "ankiGuid": "M{(|4~~/:x"
+      "ankiGuid": "M{(|4~~/:x",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/menino-seis-anos-idade66f7c4608a/",
+        "sourceQuestionId": "4000121041",
+        "matchedAt": "2026-08-21T18:59:54.861Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-d7fa499ca98f61c5",
@@ -3421,14 +3451,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Paciente com anemia falciforme, dor no peito dos dois lados, tosse seca e hipoxemia — quadro sugestivo de síndrome torácica aguda. Mesmo sem um foco de infecção claramente identificado, o uso de antibiótico e a transfusão de hemácias costumam ser necessários nesses casos, já que é difícil diferenciar rapidamente entre causa infecciosa e vaso-oclusiva pulmonar.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350424",
-      "ankiGuid": "y)lIy15r6H"
+      "ankiGuid": "y)lIy15r6H",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-2144c274b83e/",
+        "sourceQuestionId": "4000115025",
+        "matchedAt": "2026-08-21T19:00:00.844Z",
+        "confidence": 0.9834001603849237
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-9b830b8b5171074f",
@@ -3455,14 +3499,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre, mal-estar, palidez, confusão mental, anemia grave, plaquetas bem baixas, LDH alto, reticulócitos altos, rim piorando e MUITOS esquizócitos no sangue, com coagulação normal (TP/TTPa normais, descartando CIVD) — é o quadro clássico da púrpura trombocitopênica trombótica (PTT). O tratamento é encaminhar pra plasmaférese com urgência.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)",
+        "Tratamento da púrpura trombocitopênica trombótica (PTT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350425",
-      "ankiGuid": "EGyqXGf<uj"
+      "ankiGuid": "EGyqXGf<uj",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-41-anos-com715ea4226e/",
+        "sourceQuestionId": "4000113622",
+        "matchedAt": "2026-08-21T19:00:07.063Z",
+        "confidence": 0.9892307692307691
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-acf473adc40a51ce",
@@ -3489,14 +3546,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Bebê com icterícia, palidez, baço aumentado desde cedo, sem incompatibilidade sanguínea com a mãe, e o teste do pezinho mostrando padrão FA (sem hemoglobina S) — descarta doença falciforme, então a causa da anemia hemolítica com reticulocitose deve ser outra, como a esferocitose hereditária. O exame que confirma esse diagnóstico é a curva de fragilidade osmótica, que mostra como as hemácias reagem quando colocadas em soluções com pouco sal.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas por defeitos de membrana",
+        "Esferocitose hereditária",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350426",
-      "ankiGuid": "Lanqjyj</b"
+      "ankiGuid": "Lanqjyj</b",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/consulta-rotina80dd46fe8f/",
+        "sourceQuestionId": "4000113579",
+        "matchedAt": "2026-08-21T19:00:13.026Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-1c68025b92e8b8a2",
@@ -3523,14 +3591,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A PTT é uma doença NÃO imune (mecanismo mecânico, não anticorpos atacando as hemácias) — por isso, um Coombs indireto POSITIVO (que detecta anticorpos) não combina com esse diagnóstico, sendo a exceção certa. Os outros achados (coagulação normal, esquizócitos, ADAMTS13 baixo, e reticulocitose com policromatofilia) fazem parte do quadro clássico da PTT.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350427",
-      "ankiGuid": "xhdRPTi&TH"
+      "ankiGuid": "xhdRPTi&TH",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Favorecem-diagnostico116a8badda/",
+        "sourceQuestionId": "4000105076",
+        "matchedAt": "2026-08-21T19:00:19.242Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-6e13817fd0239f3f",

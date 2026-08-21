@@ -1,20 +1,149 @@
 {
-  "generatedAt": "2026-08-21T07:11:09.736Z",
+  "generatedAt": "2026-08-21T18:59:47.356Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6bc9ec3f88c214ae",
-      "number": "1020g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "id": "anki-hematologia-anemias-hemoliticas-634b065eba064f7d",
+      "number": "1081f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/meta-hemoglobina-ou9d2760c7b/",
-      "sourceQuestionId": "4000047123",
-      "matchedAt": "2026-08-21T07:11:11.693Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/menino-seis-anos-idade66f7c4608a/",
+      "sourceQuestionId": "4000121041",
+      "matchedAt": "2026-08-21T18:59:48.395Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Manejo das crises álgicas"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Manejo das crises álgicas. Conduta/resposta: Morfina",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/menino-seis-anos-idade66f7c4608a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-744ac57d140846ef",
+      "number": "1082f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/menino-seis-anos-idade66f7c4608a/",
+      "sourceQuestionId": "4000121041",
+      "matchedAt": "2026-08-21T18:59:54.861Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Manejo das crises álgicas"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Manejo das crises álgicas. Conduta/resposta: Morfina",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/menino-seis-anos-idade66f7c4608a/",
+        "https://med.estrategia.com/public/questoes/menino-sete-anos-idade8955ae2a53/",
+        "https://med.estrategia.com/public/questoes/Menino-6-anos-com9709fec7a8/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-d7fa499ca98f61c5",
+      "number": "1083f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-2144c274b83e/",
+      "sourceQuestionId": "4000115025",
+      "matchedAt": "2026-08-21T19:00:00.844Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9446672012830793,
+        "combined": 0.9834001603849237
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: O uso de antibiótico e a transfusão de hemácias são, geralmente, necessários nessesquadros, mesmo quando não há foco identificável ou sinal de sangramento.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-masculino-2144c274b83e/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-9b830b8b5171074f",
+      "number": "1084f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-41-anos-com715ea4226e/",
+      "sourceQuestionId": "4000113622",
+      "matchedAt": "2026-08-21T19:00:07.063Z",
+      "similarity": {
+        "stem": 0.9846153846153847,
+        "options": 1,
+        "combined": 0.9892307692307691
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)",
+        "Tratamento da púrpura trombocitopênica trombótica (PTT)"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Tratamento da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: A paciente deverá ser encaminhada para realização de plasmaférese.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-41-anos-com715ea4226e/",
+        "https://med.estrategia.com/public/questoes/c329a85f704df86bf9ff435b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-acf473adc40a51ce",
+      "number": "1085f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/consulta-rotina80dd46fe8f/",
+      "sourceQuestionId": "4000113579",
+      "matchedAt": "2026-08-21T19:00:13.026Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -26,53 +155,45 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemoglobinopatias",
-        "Metemoglobinemia"
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por defeitos de membrana",
+        "Esferocitose hereditária"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Metemoglobinemia. Conduta/resposta: Se a meta-hemoglobina exceder 40% da hemoglobina total, ocorre cianose.",
+      "comment": "Gabarito confirmado: D. Assunto: Esferocitose hereditária. Conduta/resposta: curva de fragilidade osmótica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/meta-hemoglobina-ou9d2760c7b/"
+        "https://med.estrategia.com/public/questoes/consulta-rotina80dd46fe8f/"
       ]
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6a09b715e154aad5",
-      "number": "1021g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab66f4b58568129f",
-      "number": "1022g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-48559cb40089942b",
-      "number": "1001f",
+      "id": "anki-hematologia-anemias-hemoliticas-1c68025b92e8b8a2",
+      "number": "1086f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-ae22a917abc41450",
-      "number": "1002f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-d84abda5ea3284dc",
-      "number": "1080f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Favorecem-diagnostico116a8badda/",
+      "sourceQuestionId": "4000105076",
+      "matchedAt": "2026-08-21T19:00:19.242Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: Teste de Coombs indireto positivo.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Favorecem-diagnostico116a8badda/",
+        "https://med.estrategia.com/public/questoes/a-purpura113c00100a/"
+      ]
     }
   ]
 }
