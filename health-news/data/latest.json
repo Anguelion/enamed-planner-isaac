@@ -1,102 +1,120 @@
 {
-  "id": "2026-08-17",
-  "title": "Silicose ocupacional, idade dos órgãos e trauma craniano",
-  "publishedAt": "2026-08-17",
-  "generatedAt": "2026-08-18T12:43:24-03:00",
+  "id": "2026-08-21",
+  "title": "GLP-1 e nutrição, prevenção experimental do trauma e sarcoma de Ewing",
+  "publishedAt": "2026-08-21",
+  "generatedAt": "2026-08-21T09:37:22-03:00",
   "readingMinutes": 16,
-  "sourceUrl": "https://health.thenews.com.br/p/17-08-2026",
+  "sourceUrl": "https://health.thenews.com.br/p/21-08-2026",
   "lead": {
-    "title": "Bancadas de quartzo expõem trabalhadores à silicose grave",
-    "summary": "O corte e o polimento de pedra artificial liberam sílica cristalina respirável. A vigilância da Califórnia registra uma epidemia ocupacional com doença pulmonar progressiva entre trabalhadores de bancadas.",
-    "clinicalNote": "A silicose não tem cura e pode evoluir mesmo após o fim da exposição. O ponto decisivo é prevenir a inalação com controle de poeira, corte úmido, ventilação adequada e proteção respiratória.",
-    "sourceUrl": "https://www.cdph.ca.gov/Programs/CCDPHP/DEODC/OHB/Pages/silidb-about-instructions.aspx"
+    "title": "Indústria adapta alimentos para usuários de medicamentos GLP-1",
+    "summary": "A Nestlé usa inteligência artificial e desenvolvimento de produtos para criar opções com mais proteína e porções menores voltadas a pessoas que usam medicamentos da classe GLP-1.",
+    "clinicalNote": "Esses medicamentos podem reduzir apetite e ingestão calórica. Produtos direcionados a esse público são uma estratégia comercial e nutricional; não substituem acompanhamento clínico nem têm benefício terapêutico comprovado por pertencerem a uma linha específica.",
+    "sourceUrl": "https://www.nestle.com/stories/science-nutrition-product-research-development"
   },
   "stories": [
     {
-      "id": "silicose-pedra-artificial",
-      "category": "Saúde do trabalhador",
-      "title": "A epidemia de silicose entre fabricantes de bancadas",
-      "summary": "Pedra artificial, frequentemente vendida como quartzo, pode conter alta proporção de sílica cristalina. Cortar, lixar ou polir o material produz partículas finas capazes de alcançar os alvéolos.",
-      "clinicalNote": "História ocupacional é parte essencial da investigação de dispneia, tosse ou alterações radiológicas em trabalhadores de marmorarias e oficinas de bancadas.",
-      "evidence": "Vigilância epidemiológica oficial",
-      "sourceUrl": "https://www.cdph.ca.gov/Programs/CCDPHP/DEODC/OHB/Pages/silidb-about-instructions.aspx",
+      "id": "glp1-alimentos-ia",
+      "category": "Nutrição e inovação",
+      "title": "IA entra no desenvolvimento de alimentos para quem usa GLP-1",
+      "summary": "Empresas estão reformulando porções e composição nutricional para um mercado em expansão. A Nestlé relata usar uma base com cerca de 120 mil receitas e ferramentas de IA para acelerar esse desenvolvimento.",
+      "clinicalNote": "Perda de peso com agonistas do receptor de GLP-1 pode incluir redução de massa magra. O achado não prova que um alimento industrializado específico previna esse efeito, e a composição corporal varia entre estudos e pessoas.",
+      "evidence": "Estratégia industrial com evidência clínica indireta",
+      "sourceUrl": "https://www.nestle.com/stories/science-nutrition-product-research-development",
       "deepDive": {
-        "whatHappened": "A edição destaca o crescimento de casos de silicose associados à fabricação de bancadas de pedra artificial na Califórnia. O painel do Departamento de Saúde Pública acompanha casos confirmados, óbitos e transplantes, mas reconhece que os números podem subestimar a carga real.",
-        "howItWorks": "A sílica cristalina respirável chega aos alvéolos e é fagocitada por macrófagos. A lesão celular mantém inflamação e ativa fibroblastos, formando nódulos e fibrose pulmonar. Exposições intensas podem produzir doença acelerada em trabalhadores jovens.",
-        "clinicalMeaning": "A doença pode se apresentar com tosse seca, dispneia progressiva e alterações nodulares ou fibróticas na imagem. Silicose também aumenta o risco de tuberculose. Não existe tratamento que reverta a fibrose; casos avançados podem exigir transplante pulmonar.",
-        "limitations": "Dados de vigilância dependem de notificação e confirmação dos casos. Eles descrevem a população acompanhada e não permitem estimar o risco individual sem conhecer intensidade, duração da exposição e medidas de proteção.",
+        "whatHappened": "A edição descreve como a Nestlé está usando inteligência artificial e pesquisa de alimentos para desenvolver produtos voltados a usuários de medicamentos GLP-1. A proposta combina porções menores, maior teor de proteína e rapidez na criação de novas receitas.",
+        "howItWorks": "Agonistas do receptor de GLP-1 reproduzem parte da ação de uma incretina: aumentam a secreção de insulina de modo dependente da glicose, reduzem glucagon, retardam o esvaziamento gástrico e ampliam a saciedade. Com menor apetite, a ingestão total de energia e nutrientes pode cair.",
+        "clinicalMeaning": "A perda de peso costuma ser predominantemente de gordura, mas também pode haver queda absoluta de massa magra. Por isso, adequação proteica, atividade física e avaliação individual importam; a existência de um produto rotulado para usuários de GLP-1 não demonstra melhora de desfechos clínicos.",
+        "limitations": "As informações sobre desenvolvimento e IA vêm da própria empresa. Estudos de composição corporal são heterogêneos, e não há evidência apresentada de que esses produtos específicos preservem músculo, previnam deficiências ou melhorem resultados de saúde.",
         "examFocus": [
-          "Sílica respirável ativa inflamação macrofágica e fibrose pulmonar.",
-          "A silicose é progressiva, irreversível e associada a maior risco de tuberculose.",
-          "Controle na fonte, corte úmido, ventilação e proteção respiratória são medidas preventivas.",
-          "A anamnese ocupacional pode revelar a exposição que explica uma pneumoconiose."
+          "GLP-1 aumenta insulina de forma dependente da glicose e reduz glucagon.",
+          "Retardo do esvaziamento gástrico e maior saciedade ajudam a reduzir a ingestão.",
+          "Perda de peso pode incluir massa magra, embora a maior parcela costume ser gordura.",
+          "Produto direcionado a usuários não equivale a tratamento nem comprova benefício clínico."
         ]
       }
     },
     {
-      "id": "relogios-teciduais-ia",
-      "category": "Pesquisa",
-      "title": "IA estima o envelhecimento específico de cada tecido",
-      "summary": "Pesquisadores analisaram 25.712 imagens histológicas de 40 tipos de tecido e criaram relógios capazes de estimar idade biológica pela arquitetura microscópica.",
-      "clinicalNote": "O estudo mostra associações e uma plataforma de pesquisa. Ainda não existe exame validado para orientar rastreamento, prognóstico ou tratamento individual na prática clínica.",
-      "evidence": "Estudo observacional e desenvolvimento de modelo",
-      "sourceUrl": "https://doi.org/10.1038/s41591-026-04566-5",
+      "id": "safit2-estresse-precoce",
+      "category": "Pesquisa pré-clínica",
+      "title": "Bloqueio de FKBP51 reduz efeitos do estresse precoce em camundongos",
+      "summary": "Um estudo administrou o inibidor experimental SAFit2 durante a adversidade no início da vida e encontrou redução posterior de déficits sociais em camundongos machos.",
+      "clinicalNote": "O resultado é preventivo e pré-clínico: não demonstra reversão de trauma já estabelecido, eficácia em seres humanos nem disponibilidade de um medicamento para uso clínico.",
+      "evidence": "Estudo experimental em camundongos machos",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42263247/",
       "deepDive": {
-        "whatHappened": "Modelos de visão computacional foram treinados com imagens do projeto GTEx, provenientes de 983 indivíduos. A idade cronológica emergiu como um dos sinais mais fortes da aparência tecidual, permitindo estimativas separadas para diferentes órgãos.",
-        "howItWorks": "O algoritmo aprende padrões espaciais de envelhecimento que incluem mudanças na composição celular, matriz extracelular e organização do tecido. Em uma etapa posterior, os pesquisadores relacionaram essas estimativas à expressão gênica no sangue para construir preditores menos invasivos.",
-        "clinicalMeaning": "Se confirmados em coortes prospectivas, relógios específicos por órgão poderiam ajudar a estudar risco e progressão de doenças. Por enquanto, uma idade biológica estimada não equivale a diagnóstico, causa da doença ou indicação terapêutica.",
-        "limitations": "O banco histológico é transversal e composto por amostras obtidas após a morte, o que limita inferências causais e a generalização. Modelos derivados de sangue ainda precisam de validação externa, calibração e demonstração de utilidade clínica.",
+        "whatHappened": "Pesquisadores expuseram camundongos machos a um modelo de adversidade precoce e testaram SAFit2 no mesmo período. Na vida adulta, os animais tratados apresentaram menos alterações de comportamento social e mudanças moleculares em regiões cerebrais relacionadas ao estresse.",
+        "howItWorks": "FKBP51 é uma proteína reguladora ligada à sinalização do receptor de glicocorticoide e à resposta ao estresse. Sua inibição pode modificar a forma como circuitos cerebrais em desenvolvimento respondem a níveis persistentes de hormônios do estresse.",
+        "clinicalMeaning": "O trabalho ajuda a identificar mecanismos biológicos e possíveis alvos farmacológicos. Ele não transforma experiências adversas em uma doença única nem substitui intervenções sociais, psicológicas e de proteção já utilizadas.",
+        "limitations": "O experimento envolveu apenas camundongos machos, em condições controladas, e o composto foi usado durante a adversidade. Segurança, dose, efeitos de longo prazo e eficácia em humanos permanecem desconhecidos.",
         "examFocus": [
-          "Associação entre biomarcador e doença não comprova causalidade.",
-          "Validação interna não substitui validação externa em outra população.",
-          "Um modelo preditivo precisa demonstrar calibração, discriminação e utilidade clínica.",
-          "Resultados de pesquisa não significam que já exista um teste disponível."
+          "FKBP51 modula a sinalização do receptor de glicocorticoide e a resposta ao estresse.",
+          "O SAFit2 foi testado durante a adversidade, com finalidade preventiva experimental.",
+          "Resultado em camundongos não estabelece eficácia ou segurança em humanos.",
+          "Estudo pré-clínico identifica hipótese terapêutica, não conduta disponível."
         ]
       }
     },
     {
-      "id": "hematoma-subdural-boxe",
-      "category": "Emergência",
-      "title": "Trauma rotacional e hematoma subdural",
-      "summary": "A morte de um ex-boxeador após anos de incapacidade reacendeu a discussão sobre golpes na nuca e lesões intracranianas que podem piorar depois de um intervalo aparentemente estável.",
-      "clinicalNote": "Após trauma craniano, piora progressiva da cefaleia, vômitos, alteração de consciência, déficit focal ou anisocoria são sinais de alarme e exigem avaliação urgente.",
-      "evidence": "Relato de caso noticioso e fisiopatologia estabelecida",
-      "sourceUrl": "https://health.thenews.com.br/p/17-08-2026",
+      "id": "sarcoma-ewing-ladera",
+      "category": "Epidemiologia e oncologia",
+      "title": "Relatos de câncer pediátrico motivam investigação na Califórnia",
+      "summary": "Autoridades estaduais solicitaram investigação conjunta após relatos de adolescentes ligados a Ladera Ranch com sarcoma de Ewing e outros cânceres pediátricos raros.",
+      "clinicalNote": "Uma concentração percebida de casos é um sinal para vigilância epidemiológica, não prova de causa ambiental. Até agora, não foi estabelecida relação causal com pesticidas ou outro agente específico.",
+      "evidence": "Sinal epidemiológico em investigação",
+      "sourceUrl": "https://sd38.senate.ca.gov/news/request-joint-investigation-pediatric-cancer-cluster-ladera-ranch",
       "deepDive": {
-        "whatHappened": "Prichard Colón sofreu golpes repetidos na região posterior da cabeça durante uma luta em 2015, apresentou vômitos e perda de consciência depois do combate e permaneceu com sequelas neurológicas graves até morrer em 2026.",
-        "howItWorks": "A aceleração e a rotação do encéfalo dentro do crânio podem estirar e romper veias-ponte. O sangue se acumula entre dura-máter e aracnoide, formando hematoma subdural e elevando progressivamente a pressão intracraniana.",
-        "clinicalMeaning": "O paciente pode ter intervalo lúcido ou sintomas discretos antes da deterioração. A prioridade é reconhecer sinais de hipertensão intracraniana, estabilizar via aérea e circulação quando necessário e obter neuroimagem e avaliação neurocirúrgica sem atraso.",
-        "limitations": "Uma notícia não permite reconstruir todas as decisões médicas nem atribuir causalidade isolada a cada golpe. O caso serve como contexto educativo, não como substituto de prontuário, laudo ou investigação oficial.",
+        "whatHappened": "Uma carta oficial pediu que órgãos da Califórnia e autoridades federais investigassem ao menos seis diagnósticos de sarcoma de Ewing entre adolescentes com conexão à comunidade de Ladera Ranch. Relatos mais amplos incluem outros cânceres raros em localidades próximas.",
+        "howItWorks": "O sarcoma de Ewing é um tumor raro de osso ou tecido mole, mais frequente em crianças e adolescentes. A maioria dos tumores pediátricos apresenta a fusão EWSR1::FLI1, geralmente decorrente da translocação t(11;22).",
+        "clinicalMeaning": "A investigação deve confirmar diagnósticos, população exposta, período e número esperado de casos antes de avaliar exposições ambientais. Sem denominador e comparação adequados, não é possível calcular excesso de risco.",
+        "limitations": "Os números iniciais vêm de famílias e autoridades locais, não de um estudo epidemiológico concluído. Proximidade geográfica e temporal não estabelece causalidade, e ainda não existe confirmação oficial de um agente comum.",
         "examFocus": [
-          "Hematoma subdural costuma resultar da ruptura de veias-ponte.",
-          "A deterioração pode ser tardia após um período inicialmente estável.",
-          "Anisocoria, rebaixamento de consciência e déficit focal sugerem emergência neurológica.",
-          "Trauma rotacional produz forças de cisalhamento mesmo sem fratura craniana."
+          "Sarcoma de Ewing é um tumor raro de osso ou tecido mole em jovens.",
+          "A fusão EWSR1::FLI1, ligada à t(11;22), é característica frequente.",
+          "Suspeita de cluster exige confirmar casos, população, período e incidência esperada.",
+          "Agrupamento geográfico não prova exposição causal."
         ]
       }
     }
   ],
   "quickTakes": [
     {
+      "icon": "💊",
+      "title": "Uso recreativo de tadalafila entre jovens preocupa especialistas",
+      "source": "O Globo",
+      "url": "https://extra.globo.com/saude/noticia/2026/08/tadala-febre-entre-jovens-pode-levar-a-cegueira-indica-estudo.ghtml"
+    },
+    {
+      "icon": "💧",
+      "title": "Hábitos matinais simples e o funcionamento intestinal",
+      "source": "O Globo",
+      "url": "https://oglobo.globo.com/saude/noticia/2026/08/19/como-ajudar-o-intestino-a-funcionar-melhor-de-manha-um-copo-dagua-e-alguns-movimentos-especificos-diz-especialista.ghtml"
+    },
+    {
       "icon": "⚖️",
-      "title": "Associações médicas e a disputa bioética sobre aborto legal",
-      "source": "Diário de Cuiabá",
-      "url": "https://www.diariodecuiaba.com.br/brasil/associacoes-de-medicos-catolicos-crescem-dez-vezes-em-25-anos-e-disputam-bioetica-do-aborto-legal/749659"
-    },
-    {
-      "icon": "💉",
-      "title": "Câmara discutirá restrições sanitárias às canetas paraguaias",
-      "source": "Jornal de Brasília",
-      "url": "https://jornaldebrasilia.com.br/noticias/saude/camara-fara-audiencia-publica-para-discutir-restricoes-da-anvisa-as-canetas-paraguaias/"
-    },
-    {
-      "icon": "🏃",
-      "title": "Estudo aponta desigualdade no acesso à atividade física de lazer em São Paulo",
-      "source": "CNN Brasil",
-      "url": "https://www.cnnbrasil.com.br/saude/estudo-revela-desigualdade-no-acesso-a-atividade-fisica-de-lazer-em-sp/"
+      "title": "Justiça discute limites da harmonização realizada por dentistas",
+      "source": "g1",
+      "url": "https://g1.globo.com/saude/noticia/2026/08/20/justica-harmonizacao-dentistas.ghtml"
     }
   ],
   "innovations": [
+    {
+      "id": "anvisa-piloto-dispositivos-inovadores",
+      "icon": "🩺",
+      "stage": "Avaliação regulatória",
+      "title": "Anvisa abre piloto para dispositivos médicos inovadores",
+      "summary": "O Edital nº 5/2026 selecionará até dez projetos para acompanhamento e diálogo regulatório durante o desenvolvimento de dispositivos médicos inovadores.",
+      "impact": "A iniciativa pode antecipar dúvidas regulatórias e apoiar o desenvolvimento responsável. Seleção no piloto não significa registro, aprovação clínica, incorporação ou oferta no SUS.",
+      "sourceUrl": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-lanca-novo-edital-para-avaliacao-regulatoria-de-dispositivos-medicos-inovadores/"
+    },
+    {
+      "id": "sus-inovacao-atencao-especializada",
+      "icon": "🏥",
+      "stage": "Implementação em serviços",
+      "title": "Projetos levam digitalização e IA à atenção especializada",
+      "summary": "O Ministério da Saúde apresentou iniciativas que aproximam SUS e hospitais privados para digitalização de fluxos, apoio por inteligência artificial e ampliação do atendimento especializado.",
+      "impact": "São projetos de modernização e cooperação em implantação. A apresentação oficial não comprova, por si só, efetividade clínica, escala nacional ou disponibilidade uniforme na rede.",
+      "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/inovacoes-tecnologicas-ampliam-as-parcerias-entre-sus-e-hospitais-privados-para-atendimento-especializado"
+    },
     {
       "id": "prep-injetavel",
       "icon": "🛡️",
@@ -105,24 +123,6 @@
       "summary": "O Ministério da Saúde encaminhou à Conitec a avaliação de uma opção preventiva contra o HIV administrada a cada dois meses.",
       "impact": "Pode ampliar alternativas para pessoas com dificuldade de adesão à profilaxia oral diária. Incorporação e oferta ainda dependem da avaliação oficial.",
       "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/julho/brasil-vai-ampliar-prevencao-do-hiv-com-oferta-de-prep-injetavel-de-longa-duracao-no-sus"
-    },
-    {
-      "id": "diagnostico-tuberculose",
-      "icon": "🔬",
-      "stage": "Desenvolvimento",
-      "title": "Diagnóstico portátil de tuberculose",
-      "summary": "Uma encomenda tecnológica busca desenvolver um dispositivo nacional, portátil e de baixo custo que identifique tuberculose e resistência a medicamentos.",
-      "impact": "A proposta mira diagnóstico mais próximo do paciente e menor dependência de laboratórios complexos, mas ainda está em fase de desenvolvimento.",
-      "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/julho/ministerio-da-saude-recebe-contribuicoes-do-mercado-para-desenvolver-encomenda-tecnologica-que-identificara-tuberculose"
-    },
-    {
-      "id": "membrana-amniotica",
-      "icon": "🧫",
-      "stage": "Incorporada",
-      "title": "Membrana amniótica no SUS",
-      "summary": "A Conitec recomendou e o Ministério da Saúde decidiu incorporar o transplante de membrana amniótica para afecções oculares e feridas crônicas, incluindo pé diabético.",
-      "impact": "A decisão abre caminho para uma terapia regenerativa no SUS; a disponibilidade prática depende da implementação e da rede habilitada.",
-      "sourceUrl": "https://www.gov.br/conitec/pt-br/midias/relatorios/portaria/2026/portaria-sctie-ms-no-20-de-14-de-abril-de-2026"
     }
   ],
   "protocolUpdates": [
@@ -169,64 +169,64 @@
   ],
   "dailyQuiz": [
     {
-      "id": "quiz-silica-fisiopatologia",
-      "question": "Qual mecanismo explica melhor a fibrose pulmonar causada pela sílica respirável?",
+      "id": "quiz-glp1-mecanismo",
+      "question": "Qual efeito contribui para a menor ingestão alimentar com agonistas do receptor de GLP-1?",
       "options": [
-        "Deposição de imunocomplexos exclusivamente nos brônquios",
-        "Fagocitose por macrófagos com inflamação persistente e ativação de fibroblastos",
-        "Bloqueio reversível dos receptores beta-2 alveolares",
-        "Infecção bacteriana direta provocada pelo mineral"
+        "Aceleração permanente do esvaziamento gástrico",
+        "Aumento da saciedade e retardo do esvaziamento gástrico",
+        "Bloqueio completo da absorção intestinal de gordura",
+        "Supressão independente da glicose de toda secreção de insulina"
       ],
       "answerIndex": 1,
-      "explanation": "As partículas alcançam os alvéolos, lesionam macrófagos e perpetuam inflamação e fibrose. A retirada da exposição previne dano adicional, mas não reverte a fibrose já formada."
+      "explanation": "A classe aumenta a saciedade e pode retardar o esvaziamento gástrico, além de aumentar a secreção de insulina de modo dependente da glicose e reduzir glucagon."
     },
     {
-      "id": "quiz-silicose-associacao",
-      "question": "Qual infecção tem risco aumentado em pessoas com silicose?",
+      "id": "quiz-glp1-massa-magra",
+      "question": "Qual interpretação sobre composição corporal durante a perda de peso com GLP-1 é mais adequada?",
       "options": [
-        "Tuberculose",
-        "Hepatite A",
-        "Tétano",
-        "Malária"
-      ],
-      "answerIndex": 0,
-      "explanation": "A exposição à sílica e a silicose comprometem a função dos macrófagos e aumentam a suscetibilidade à tuberculose, associação clássica em saúde ocupacional."
-    },
-    {
-      "id": "quiz-relogio-tecidual",
-      "question": "Qual é a interpretação correta dos relógios teciduais descritos na edição?",
-      "options": [
-        "Já são exames aprovados para rastreamento populacional",
-        "Provam que envelhecimento acelerado causa todas as doenças associadas",
-        "São modelos de pesquisa que ainda precisam de validação clínica externa",
-        "Substituem a avaliação clínica e os exames específicos de cada órgão"
+        "Toda perda de peso corresponde à massa muscular",
+        "A massa magra nunca se altera",
+        "Pode haver redução absoluta de massa magra, embora a maior parte da perda costume ser gordura",
+        "Produtos com proteína eliminam comprovadamente qualquer perda de massa magra"
       ],
       "answerIndex": 2,
-      "explanation": "O estudo desenvolve biomarcadores preditivos, mas associação não prova causalidade e ainda não há utilidade clínica estabelecida para decisões individuais."
+      "explanation": "Ensaios mostram que massa magra pode cair em termos absolutos, mas os resultados variam e a maior parcela do peso perdido costuma ser gordura. Isso não comprova benefício de um produto específico."
     },
     {
-      "id": "quiz-hematoma-subdural",
-      "question": "No hematoma subdural traumático, qual estrutura vascular é classicamente rompida?",
+      "id": "quiz-safit2-evidencia",
+      "question": "O que o estudo com SAFit2 permite concluir neste momento?",
       "options": [
-        "Artéria meníngea média",
-        "Veias-ponte",
-        "Artéria cerebral média",
-        "Seio cavernoso"
+        "O medicamento já previne trauma psicológico em crianças",
+        "O composto reverteu traumas antigos em adultos",
+        "A inibição de FKBP51 reduziu déficits sociais em um modelo com camundongos machos",
+        "A segurança para uso humano foi estabelecida"
+      ],
+      "answerIndex": 2,
+      "explanation": "O achado é pré-clínico, ocorreu em camundongos machos e com intervenção durante a adversidade. Ainda não há demonstração de eficácia ou segurança em humanos."
+    },
+    {
+      "id": "quiz-ewing-fusao",
+      "question": "Qual alteração molecular é característica frequente do sarcoma de Ewing?",
+      "options": [
+        "BCR::ABL1",
+        "EWSR1::FLI1",
+        "PML::RARA",
+        "JAK2 V617F"
       ],
       "answerIndex": 1,
-      "explanation": "Movimentos de aceleração e rotação podem estirar as veias-ponte e provocar sangramento no espaço subdural."
+      "explanation": "A fusão EWSR1::FLI1, geralmente originada pela translocação t(11;22), ocorre na maioria dos sarcomas de Ewing pediátricos."
     },
     {
-      "id": "quiz-conitec-consulta",
-      "question": "A consulta pública sobre monitoramento contínuo de glicose terminou. O que isso significa?",
+      "id": "quiz-cluster-causalidade",
+      "question": "O relato de vários cânceres raros em uma mesma região demonstra o quê?",
       "options": [
-        "O dispositivo passou a ser ofertado imediatamente em todo o SUS",
-        "O relatório preliminar tornou-se automaticamente um PCDT vigente",
-        "As contribuições serão analisadas antes da recomendação e da decisão final",
-        "A Anvisa dispensou o registro sanitário do produto"
+        "Que um pesticida específico é necessariamente a causa",
+        "Que todos os diagnósticos têm a mesma origem",
+        "Que existe um sinal que deve ser confirmado e investigado epidemiologicamente",
+        "Que o risco individual de todos os moradores é idêntico"
       ],
       "answerIndex": 2,
-      "explanation": "Consulta pública é uma etapa da avaliação. Recomendação final, decisão de incorporação e oferta efetiva no SUS são momentos distintos."
+      "explanation": "Um agrupamento percebido justifica investigação, mas é preciso confirmar casos, denominador, período e incidência esperada. Proximidade geográfica não estabelece causalidade."
     }
   ]
 }
