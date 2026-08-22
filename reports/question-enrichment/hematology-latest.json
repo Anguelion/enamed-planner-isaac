@@ -1,122 +1,54 @@
 {
-  "generatedAt": "2026-08-22T07:03:13.102Z",
+  "generatedAt": "2026-08-22T18:51:55.950Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 2,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-6e13817fd0239f3f",
-      "number": "1087f",
+      "id": "anki-hematologia-anemias-hemoliticas-e002f3ef7223426f",
+      "number": "1093f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-1-ano-6-meses-e8098de6424/",
-      "sourceQuestionId": "4000101069",
-      "matchedAt": "2026-08-22T07:03:14.617Z",
-      "similarity": {
-        "stem": 0.9763779527559056,
-        "options": 0.9642857142857143,
-        "combined": 0.9727502812148481
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Poiquilocitose",
-        "Drepanócitos"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Drepanócitos. Conduta/resposta: Presença de poiquilocitose, hipótese diagnóstica de Anemia Falciforme.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Crianc-1-ano-6-meses-e8098de6424/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-63a5dff3ee7262c9",
-      "number": "1088f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-paciente-2448d02f6c37/",
-      "sourceQuestionId": "4000092238",
-      "matchedAt": "2026-08-22T07:03:21.010Z",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias-hemoliticas127e483ff9/",
+      "sourceQuestionId": "4000021804",
+      "matchedAt": "2026-08-22T18:51:56.982Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
       "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
+      "remoteAnswer": "A",
+      "answerMismatch": true,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações crônicas da anemia falciforme",
-        "Auto-esplenectomia"
+        "Anemias hemolíticas"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Auto-esplenectomia. Conduta/resposta: Imediata internação e uso de antibioticoterapia por via parenteral para cobertura, principalmente, dos microrganismos capsulados.",
+      "comment": "Gabarito confirmado: A. Assunto: Anemias hemolíticas. Conduta/resposta: Esferocitose hereditária: o diagnóstico baseia-se na anemia crônica, reticulocitose esferocitose e curva de fragilidade osmótica diminuída.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Considere-paciente-2448d02f6c37/"
+        "https://med.estrategia.com/public/questoes/as-anemias-hemoliticas127e483ff9/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-cef39390f04d9902",
-      "number": "1089f",
+      "id": "anki-hematologia-anemias-hemoliticas-383708c18a047356",
+      "number": "1094f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Escolar-5-anos-idade6602b22294/",
-      "sourceQuestionId": "4000078410",
-      "matchedAt": "2026-08-22T07:03:27.115Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21-anos32316de6ee/",
+      "sourceQuestionId": "4000000383",
+      "matchedAt": "2026-08-22T18:52:03.192Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Síndrome torácica aguda"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Síndrome torácica aguda. Conduta/resposta: síndrome torácica aguda.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Escolar-5-anos-idade6602b22294/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-eb365dd0d6999723",
-      "number": "1090f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/causa-comum-hemolise20ae1d5d5a/",
-      "sourceQuestionId": "4000065851",
-      "matchedAt": "2026-08-22T07:03:33.392Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -124,74 +56,70 @@
         "Anemias hemolíticas",
         "Anemias hemolíticas por defeitos de membrana",
         "Esferocitose hereditária",
-        "Fisiopatologia da esferocitose hereditária"
+        "Diagnóstico da esferocitose hereditária",
+        "Teste de fragilidade osmótica"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Fisiopatologia da esferocitose hereditária. Conduta/resposta: esferocitose.",
+      "comment": "Gabarito confirmado: A. Assunto: Teste de fragilidade osmótica. Conduta/resposta: Teste de fragilidade osmótica;",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/causa-comum-hemolise20ae1d5d5a/"
+        "https://med.estrategia.com/public/questoes/Mulher-21-anos32316de6ee/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-ec810b9ffd4e523f",
-      "number": "1091f",
+      "id": "anki-hematologia-anemias-hemoliticas-8863eb118f9cf702",
+      "number": "1095f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-falciforme-e28a5f0a72b/",
-      "sourceQuestionId": "4000050537",
-      "matchedAt": "2026-08-22T07:03:39.383Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-58a-com398a4f0f83/",
+      "sourceQuestionId": "4000130149",
+      "matchedAt": "2026-08-22T18:52:09.940Z",
       "similarity": {
-        "stem": 1,
-        "options": 0.9809090909090908,
-        "combined": 0.9942727272727272
+        "stem": 0.9620253164556962,
+        "options": 0.9142857142857143,
+        "combined": 0.9477034358047015
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: Pacientes com traço falciforme têm uma maior incidência de crises álgicas, síndromes torácicas agudas e complicações infecciosas como osteomielite, quando desenvolvem quadro febril ou de baixa oxigenação/ventilação pulmonar, o que aumenta o risco cirúrgico de uma maneira geral.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-falciforme-e28a5f0a72b/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-9c9f78a21bc6ecc7",
-      "number": "1092f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-apresenta-triade106d9162dd/",
-      "sourceQuestionId": "4000036984",
-      "matchedAt": "2026-08-22T07:03:45.693Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome Hemolítico-Urêmica (SHU)",
         "Hematologia",
         "Anemias hemolíticas",
-        "Anemias Microangiopáticas",
-        "Quadro clínico da síndrome hemolítico urêmica (SHU)"
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
+        "Anemias hemolíticas autoimunes (AHAI) por anticorpos quentes",
+        "Etiologias da anemia hemolítica autoimune (AHAI) por anticorpos quentes",
+        "Testes de Coombs"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da síndrome hemolítico urêmica (SHU). Conduta/resposta: Anemia hemolítica, insuficiência renal aguda e trombocitopenia.",
+      "comment": "Gabarito confirmado: A. Assunto: Testes de Coombs. Conduta/resposta: Lúpus eritematoso sistêmico, linfoma e uso de penicilina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-apresenta-triade106d9162dd/"
+        "https://med.estrategia.com/public/questoes/Mulher-58a-com398a4f0f83/",
+        "https://med.estrategia.com/public/questoes/Mulher-58-anos-idade81d6687741/"
       ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-c23ecc7d9fdb5419",
+      "number": "1096f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-b7ec17f369203f11",
+      "number": "1097f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-dd80606c4fcdd668",
+      "number": "1098f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }

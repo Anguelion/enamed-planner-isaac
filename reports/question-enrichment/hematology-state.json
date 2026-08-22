@@ -1100,7 +1100,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-apresenta-triade106d9162dd/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-e002f3ef7223426f": {
+      "number": "1093f",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T18:51:56.982Z",
+      "nextAttemptAt": "2027-08-22T18:51:56.982Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias-hemoliticas127e483ff9/",
+      "localAnswer": "C",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-383708c18a047356": {
+      "number": "1094f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T18:52:03.192Z",
+      "nextAttemptAt": "2026-08-29T18:52:03.192Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21-anos32316de6ee/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-8863eb118f9cf702": {
+      "number": "1095f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T18:52:09.941Z",
+      "nextAttemptAt": "2026-08-29T18:52:09.941Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-58a-com398a4f0f83/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-c23ecc7d9fdb5419": {
+      "number": "1096f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T18:52:15.311Z",
+      "nextAttemptAt": "2026-08-29T18:52:15.311Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-b7ec17f369203f11": {
+      "number": "1097f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T18:52:20.629Z",
+      "nextAttemptAt": "2026-08-29T18:52:20.629Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-hemoliticas-dd80606c4fcdd668": {
+      "number": "1098f",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T18:52:25.908Z",
+      "nextAttemptAt": "2026-08-29T18:52:25.908Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-22T07:03:45.693Z"
+  "updatedAt": "2026-08-22T18:52:25.908Z"
 }

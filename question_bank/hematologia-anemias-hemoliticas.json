@@ -3924,7 +3924,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava a opção sobre a G6PD (item C) como a errada, mas na verdade o erro real está no item A: na esferocitose hereditária, a curva de fragilidade osmótica fica AUMENTADA (não diminuída como o texto original afirma) — as hemácias em formato de bola são justamente MAIS frágeis (se rompem mais fácil em solução com pouco sal), não menos. Esse é um dos fatos mais clássicos e decorados da hematologia, então a alternativa A é que contém o erro. As outras frases (sobre infecção por bactérias encapsuladas na falciforme, padrão de hemólise episódica na deficiência de G6PD, deformidades na talassemia maior, e mecanismo autoimune na AHAI) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
@@ -3957,14 +3957,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Baço aumentado com anemia leve, mas com hemácias HIPERCRÔMICAS (mais 'concentradas' de hemoglobina do que o normal) — esse é um achado sutil que aponta pra esferocitose hereditária (as hemácias em formato de bola ficam mais 'densas'). O teste clássico pra confirmar é o de fragilidade osmótica.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas por defeitos de membrana",
+        "Esferocitose hereditária",
+        "Diagnóstico da esferocitose hereditária",
+        "Teste de fragilidade osmótica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350435",
-      "ankiGuid": "Ho0F.{ywB*"
+      "ankiGuid": "Ho0F.{ywB*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21-anos32316de6ee/",
+        "sourceQuestionId": "4000000383",
+        "matchedAt": "2026-08-22T18:52:03.192Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-8863eb118f9cf702",
@@ -3990,14 +4003,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia grave com reticulocitose, LDH alto, haptoglobina bem baixa e Coombs direto positivo — quadro clássico de anemia hemolítica autoimune. Essa condição pode aparecer sozinha ou associada a outras doenças, como lúpus, linfomas, ou até como reação a certos remédios (como a penicilina) — por isso essas são consideradas no diagnóstico diferencial.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
+        "Anemias hemolíticas autoimunes (AHAI) por anticorpos quentes",
+        "Etiologias da anemia hemolítica autoimune (AHAI) por anticorpos quentes",
+        "Testes de Coombs",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350436",
-      "ankiGuid": "N+TW/*y6%R"
+      "ankiGuid": "N+TW/*y6%R",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-58a-com398a4f0f83/",
+        "sourceQuestionId": "4000130149",
+        "matchedAt": "2026-08-22T18:52:09.940Z",
+        "confidence": 0.9477034358047015
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-c23ecc7d9fdb5419",
@@ -4024,7 +4051,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A combinação certa é: deficiência de G6PD tem um defeito ENZIMÁTICO dentro da hemácia — a enzima que deveria proteger a célula contra o estresse oxidativo não funciona direito. As outras opções trocam os tipos de defeito de cada doença (talassemia é problema de hemoglobina, não de membrana; esferocitose é problema de membrana, não de hemoglobina; e assim por diante).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
@@ -4058,7 +4085,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia hemolítica autoimune por anticorpos quentes (comum no lúpus), a destruição das hemácias acontece principalmente FORA dos vasos sanguíneos (no baço, pelos macrófagos) — é a chamada hemólise extravascular. Por isso, hemoglobinúria de grande quantidade (sinal de destruição DENTRO dos vasos, ou seja, hemólise intravascular) NÃO é esperada nesse tipo de anemia — é a exceção certa.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
@@ -4092,7 +4119,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: dado que a alternativa D (sobre asplenia funcional precoce em lactentes) é um fato bem estabelecido e mais consistentemente correto do que a afirmação sobre 'descompensação cardíaca' como principal causa de morbimortalidade (que é uma causa menos citada como 'principal' na literatura padrão, sendo infecções, AVC e síndrome torácica aguda mais classicamente apontadas), a resposta mais defensável é D: bebês com anemia falciforme realmente têm alteração da função imune e podem desenvolver asplenia funcional (perda da função do baço) já nos primeiros anos de vida, aumentando bastante o risco de infecções graves.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",

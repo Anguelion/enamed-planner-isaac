@@ -197,7 +197,27 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-08-20T19:04:11.188Z"
+    },
+    "anki-hematologia-anemias-hemoliticas-e002f3ef7223426f": {
+      "id": "anki-hematologia-anemias-hemoliticas-e002f3ef7223426f",
+      "number": "1093f",
+      "status": "answer_mismatch",
+      "localAnswer": "C",
+      "remoteAnswer": "A",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias-hemoliticas127e483ff9/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas"
+      ],
+      "suggestedComment": "Gabarito confirmado: A. Assunto: Anemias hemolíticas. Conduta/resposta: Esferocitose hereditária: o diagnóstico baseia-se na anemia crônica, reticulocitose esferocitose e curva de fragilidade osmótica diminuída.",
+      "reviewedAt": "2026-08-22T18:51:56.982Z"
     }
   },
-  "updatedAt": "2026-08-20T19:04:11.188Z"
+  "updatedAt": "2026-08-22T18:51:56.983Z"
 }
