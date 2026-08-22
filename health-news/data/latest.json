@@ -2,7 +2,7 @@
   "id": "2026-08-21",
   "title": "GLP-1 e nutrição, prevenção experimental do trauma e sarcoma de Ewing",
   "publishedAt": "2026-08-21",
-  "generatedAt": "2026-08-21T09:37:22-03:00",
+  "generatedAt": "2026-08-22T08:05:29-03:00",
   "readingMinutes": 16,
   "sourceUrl": "https://health.thenews.com.br/p/21-08-2026",
   "lead": {
@@ -116,13 +116,13 @@
       "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/inovacoes-tecnologicas-ampliam-as-parcerias-entre-sus-e-hospitais-privados-para-atendimento-especializado"
     },
     {
-      "id": "prep-injetavel",
-      "icon": "🛡️",
-      "stage": "Em avaliação",
-      "title": "PrEP injetável de longa duração",
-      "summary": "O Ministério da Saúde encaminhou à Conitec a avaliação de uma opção preventiva contra o HIV administrada a cada dois meses.",
-      "impact": "Pode ampliar alternativas para pessoas com dificuldade de adesão à profilaxia oral diária. Incorporação e oferta ainda dependem da avaliação oficial.",
-      "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/julho/brasil-vai-ampliar-prevencao-do-hiv-com-oferta-de-prep-injetavel-de-longa-duracao-no-sus"
+      "id": "pet-saude-digital-institutos-federais",
+      "icon": "💻",
+      "stage": "Seleção de projetos",
+      "title": "PET Saúde abre seleção para inovação digital no SUS",
+      "summary": "O Ministério da Saúde e o MEC abriram edital para Institutos Federais desenvolverem, com secretarias de Saúde, projetos de pesquisa, formação e inovação em informação e saúde digital.",
+      "impact": "As propostas podem abordar interoperabilidade, uso de dados e soluções digitais aplicadas aos serviços. O edital financia e seleciona projetos; não representa tecnologia clínica validada nem oferta nacional já implantada.",
+      "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/ministerio-da-saude-lanca-nova-selecao-do-pet-saude-para-ampliar-pesquisa-e-inovacao-em-saude-digital-no-sus"
     }
   ],
   "protocolUpdates": [
@@ -147,24 +147,24 @@
       "sourceUrl": "https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2025/relatorio-preliminar-sotatercepte-cp-64/%40%40display-file/file"
     },
     {
-      "id": "pcdt-colo-utero-cp57",
-      "date": "2026-07-28",
-      "status": "Consulta encerrada",
-      "tone": "attention",
-      "type": "PCDT em elaboração",
-      "title": "Rastreamento do câncer do colo do útero — Parte II",
-      "summary": "A CP nº 57/2026 tratou da avaliação, tratamento e seguimento de mulheres identificadas no rastreamento. O texto consultado ainda não substitui a diretriz vigente nem deve ser aplicado como versão final.",
-      "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/encerradas/copy_of_2026"
+      "id": "pcdt-crohn-anexo-agosto",
+      "date": "2026-08-20",
+      "status": "Protocolo vigente",
+      "tone": "published",
+      "type": "Anexo de PCDT alterado",
+      "title": "Doença de Crohn — anexo vigente atualizado",
+      "summary": "A Conitec registra alteração em 20 de agosto no anexo do PCDT aprovado pela Portaria Conjunta SAS/SCTIE/MS nº 51/2026. A versão vigente organiza tratamento por gravidade, anti-TNF após falha ou intolerância às opções convencionais e alternativas biológicas de segunda linha conforme critérios do protocolo.",
+      "sourceUrl": "https://www.gov.br/conitec/pt-br/midias/protocolos/portaria-no-51-pcdt-doenca-de-crohn_19.08/%40%40display-file/file"
     },
     {
-      "id": "catalogo-pcdt-julho",
-      "date": "2026-07-22",
-      "status": "Catálogo oficial",
+      "id": "pcdt-endometriose-anexo-agosto",
+      "date": "2026-08-20",
+      "status": "Protocolo vigente",
       "tone": "published",
-      "type": "Protocolos vigentes",
-      "title": "Lista geral de protocolos e diretrizes",
-      "summary": "A página central da Conitec reúne PCDT vigentes, portarias e documentos complementares. É a referência para confirmar qual versão possui validade no SUS.",
-      "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/avaliacao-de-tecnologias-em-saude/protocolos-clinicos-e-diretrizes-terapeuticas/pcdt"
+      "type": "Anexo de PCDT alterado",
+      "title": "Endometriose — duração do DIU esclarecida no anexo",
+      "summary": "O anexo vigente do PCDT de Endometriose foi reeditado para esclarecer que o DIU liberador de levonorgestrel pode permanecer por 3 ou 5 anos, conforme o dispositivo e o fabricante. A mudança não cria indicação universal: permanecem os critérios da Portaria Conjunta nº 54/2026.",
+      "sourceUrl": "https://www.gov.br/conitec/pt-br/midias/protocolos/portaria-conjunta-no-54-endometriose_19.08/%40%40display-file/file"
     }
   ],
   "dailyQuiz": [
