@@ -1040,7 +1040,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Favorecem-diagnostico116a8badda/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-hemoliticas-6e13817fd0239f3f": {
+      "number": "1087f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T07:03:14.618Z",
+      "nextAttemptAt": "2026-08-29T07:03:14.618Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-1-ano-6-meses-e8098de6424/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-63a5dff3ee7262c9": {
+      "number": "1088f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T07:03:21.010Z",
+      "nextAttemptAt": "2026-08-29T07:03:21.010Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-paciente-2448d02f6c37/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-cef39390f04d9902": {
+      "number": "1089f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T07:03:27.116Z",
+      "nextAttemptAt": "2026-08-29T07:03:27.116Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Escolar-5-anos-idade6602b22294/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-hemoliticas-eb365dd0d6999723": {
+      "number": "1090f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T07:03:33.392Z",
+      "nextAttemptAt": "2026-08-29T07:03:33.392Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/causa-comum-hemolise20ae1d5d5a/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-hemoliticas-ec810b9ffd4e523f": {
+      "number": "1091f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T07:03:39.383Z",
+      "nextAttemptAt": "2026-08-29T07:03:39.383Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-falciforme-e28a5f0a72b/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-hemoliticas-9c9f78a21bc6ecc7": {
+      "number": "1092f",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-22T07:03:45.693Z",
+      "nextAttemptAt": "2026-08-29T07:03:45.693Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-apresenta-triade106d9162dd/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-08-21T19:00:19.243Z"
+  "updatedAt": "2026-08-22T07:03:45.693Z"
 }

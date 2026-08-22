@@ -3638,14 +3638,30 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Choros de dor frequentes desde bebê, várias 'infecções' e episódios de icterícia com melhora espontânea — sugerem crises de dor e hemólise repetidas, típicas de anemia falciforme. A imagem no esfregaço provavelmente mostra poiquilocitose com hemácias em formato de foice (drepanócitos), fechando o diagnóstico.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Poiquilocitose",
+        "Drepanócitos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350428",
-      "ankiGuid": "G0icWpws9m"
+      "ankiGuid": "G0icWpws9m",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-1-ano-6-meses-e8098de6424/",
+        "sourceQuestionId": "4000101069",
+        "matchedAt": "2026-08-22T07:03:14.617Z",
+        "confidence": 0.9727502812148481
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-63a5dff3ee7262c9",
@@ -3672,14 +3688,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre recorrente numa criança pequena com anemia falciforme, mesmo sem foco de infecção encontrado no exame físico, é sempre tratada como emergência — a conduta é internar imediatamente e começar antibiótico na veia, priorizando cobrir bactérias encapsuladas (o maior risco nesses pacientes por causa da asplenia funcional).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações crônicas da anemia falciforme",
+        "Auto-esplenectomia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350429",
-      "ankiGuid": "lSqBQ1Siq["
+      "ankiGuid": "lSqBQ1Siq[",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-paciente-2448d02f6c37/",
+        "sourceQuestionId": "4000092238",
+        "matchedAt": "2026-08-22T07:03:21.010Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-cef39390f04d9902",
@@ -3706,14 +3736,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia falciforme, febre, tosse, dor torácica, hipoxemia (92%) e infiltrado bilateral no raio-x — é o quadro clássico de síndrome torácica aguda, uma das complicações mais sérias da doença.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350430",
-      "ankiGuid": "oqJnEEhWf~"
+      "ankiGuid": "oqJnEEhWf~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Escolar-5-anos-idade6602b22294/",
+        "sourceQuestionId": "4000078410",
+        "matchedAt": "2026-08-22T07:03:27.115Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-eb365dd0d6999723",
@@ -3740,14 +3784,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A esferocitose hereditária é a causa mais comum de anemia hemolítica causada por um defeito genético na MEMBRANA da hemácia — diferente das outras opções, que envolvem defeitos na hemoglobina (falciforme, talassemia) ou outros mecanismos.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas por defeitos de membrana",
+        "Esferocitose hereditária",
+        "Fisiopatologia da esferocitose hereditária",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350431",
-      "ankiGuid": "lo-7@+kw1="
+      "ankiGuid": "lo-7@+kw1=",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/causa-comum-hemolise20ae1d5d5a/",
+        "sourceQuestionId": "4000065851",
+        "matchedAt": "2026-08-22T07:03:33.392Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-ec810b9ffd4e523f",
@@ -3774,14 +3830,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a B: quem tem só o TRAÇO falciforme (não a doença) geralmente é assintomático e NÃO tem maior risco de crises álgicas, síndrome torácica e infecções como osteomielite do jeito que a doença completa (SS) causa — essa frase confunde traço com doença. As outras frases (sobre a desoxigenação como gatilho, ossos/articulações como locais mais afetados, infarto renal causando dor lombar, e síndrome torácica como principal causa de morte em adultos) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350432",
-      "ankiGuid": "y!jo7YI4`="
+      "ankiGuid": "y!jo7YI4`=",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-falciforme-e28a5f0a72b/",
+        "sourceQuestionId": "4000050537",
+        "matchedAt": "2026-08-22T07:03:39.383Z",
+        "confidence": 0.9942727272727272
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-9c9f78a21bc6ecc7",
@@ -3807,14 +3875,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A tríade clássica da síndrome hemolítico-urêmica (SHU) é: anemia hemolítica (hemácias sendo destruídas), insuficiência renal aguda (o rim sendo o principal órgão afetado pelos microcoágulos) e trombocitopenia (plaquetas consumidas nesse processo).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome Hemolítico-Urêmica (SHU)",
+        "Anemias Microangiopáticas",
+        "Quadro clínico da síndrome hemolítico urêmica (SHU)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350433",
-      "ankiGuid": "rH=7%B%vVF"
+      "ankiGuid": "rH=7%B%vVF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-apresenta-triade106d9162dd/",
+        "sourceQuestionId": "4000036984",
+        "matchedAt": "2026-08-22T07:03:45.693Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-e002f3ef7223426f",
