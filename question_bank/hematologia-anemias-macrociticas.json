@@ -27,14 +27,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia grave com hemácias enormes (VCM 115), pancitopenia (leucócitos e plaquetas baixos também) e sinais de 'hemólise' que não é bem hemólise (bilirrubina indireta e LDH altos, mas reticulócitos normais, não altos) — esse padrão é a marca registrada da anemia megaloblástica: a medula fabrica células defeituosas que morrem antes de sair pra circulação (uma espécie de 'hemólise dentro de casa'). No esfregaço, a assinatura visual dessa doença são os macroovalócitos — hemácias grandes e ovaladas.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Diagnóstico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967770",
-      "ankiGuid": "Cl_Lhoj5C0"
+      "ankiGuid": "Cl_Lhoj5C0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-60-anos39914c2b89/",
+        "sourceQuestionId": "4000184838",
+        "matchedAt": "2026-08-23T07:05:23.820Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-c5eaee4b2e2dfc53",
@@ -60,14 +71,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mudança de comportamento, esquecimento, confusão, marcha instável (atáxica) num homem com anemia macrocítica (VCM 110) e pancitopenia leve — esse combo de sintomas neurológicos e psiquiátricos com anemia macrocítica é bem clássico da falta de vitamina B12 (cianocobalamina), que também ataca os nervos, não só o sangue. Por isso, além de investigar a causa com imagem, já se inicia a reposição.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967771",
-      "ankiGuid": "kR^CT%!8_`"
+      "ankiGuid": "kR^CT%!8_`",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-53-anos1577cea8f6c/",
+        "sourceQuestionId": "4000184683",
+        "matchedAt": "2026-08-23T07:05:29.965Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-4e8a40cf1d46fcc1",
@@ -93,14 +116,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As três frases estão certas: depois do bypass gástrico, a falta de vitamina B12 é bem comum (I), porque a cirurgia atrapalha justamente o processo de absorção que depende do fator intrínseco e das proteínas R no intestino delgado (II), e se a falta durar muito tempo sem tratamento, pode causar dano permanente nos nervos e na medula espinhal, com desmielinização (III).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Gastrectomias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967772",
-      "ankiGuid": "H;y8MAFUrg"
+      "ankiGuid": "H;y8MAFUrg",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-historico10672c262ef/",
+        "sourceQuestionId": "4000183314",
+        "matchedAt": "2026-08-23T07:05:35.743Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-f1616595f5f3e971",

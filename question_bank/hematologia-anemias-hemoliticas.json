@@ -1441,10 +1441,22 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Anemias hemolíticas por defeitos de membrana",
+        "Hemoglobinúria paroxística noturna (HPN)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350374",
-      "ankiGuid": "CJ9jp<m7*o"
+      "ankiGuid": "CJ9jp<m7*o",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-22-anos72262c6b44/",
+        "sourceQuestionId": "4000143974",
+        "matchedAt": "2026-08-23T07:05:11.986Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-ebb5c882d6dbfa8f",
@@ -4153,14 +4165,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na esferocitose hereditária, esperamos encontrar CHCM elevada (hemácias mais 'concentradas'), esplenomegalia, cálculos na vesícula (pela quebra excessiva de hemoglobina) e bilirrubina indireta alta. Mas os reticulócitos ficam AUMENTADOS (não reduzidos), já que a medula está sempre tentando compensar a destruição contínua das hemácias defeituosas — por isso é a exceção que NÃO combina com essa doença.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas por defeitos de membrana",
+        "Esferocitose hereditária",
+        "Quadro clínico da esferocitose hereditária",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350440",
-      "ankiGuid": "F{h!q=5D:_"
+      "ankiGuid": "F{h!q=5D:_",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/esferocitose27ad7dc07e/",
+        "sourceQuestionId": "4000064261",
+        "matchedAt": "2026-08-23T07:05:18.016Z",
+        "confidence": 1
+      }
     }
   ]
 }

@@ -1,54 +1,65 @@
 {
-  "generatedAt": "2026-08-22T18:51:55.950Z",
+  "generatedAt": "2026-08-23T07:05:05.207Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 2,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-e002f3ef7223426f",
-      "number": "1093f",
+      "id": "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44",
+      "number": "1032f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias-hemoliticas127e483ff9/",
-      "sourceQuestionId": "4000021804",
-      "matchedAt": "2026-08-22T18:51:56.982Z",
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-543f044a291ac38f",
+      "number": "1033f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-22-anos72262c6b44/",
+      "sourceQuestionId": "4000143974",
+      "matchedAt": "2026-08-23T07:05:11.986Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Introdução à hemólise",
+        "Anemias hemolíticas por defeitos de membrana",
+        "Hemoglobinúria paroxística noturna (HPN)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Hemoglobinúria paroxística noturna (HPN). Conduta/resposta: Hemoglobinúria paroxística noturna.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-22-anos72262c6b44/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-5538cb38522cf5fc",
+      "number": "1099f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/esferocitose27ad7dc07e/",
+      "sourceQuestionId": "4000064261",
+      "matchedAt": "2026-08-23T07:05:18.016Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
       "localAnswer": "C",
-      "remoteAnswer": "A",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Anemias hemolíticas. Conduta/resposta: Esferocitose hereditária: o diagnóstico baseia-se na anemia crônica, reticulocitose esferocitose e curva de fragilidade osmótica diminuída.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/as-anemias-hemoliticas127e483ff9/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-383708c18a047356",
-      "number": "1094f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21-anos32316de6ee/",
-      "sourceQuestionId": "4000000383",
-      "matchedAt": "2026-08-22T18:52:03.192Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -56,70 +67,104 @@
         "Anemias hemolíticas",
         "Anemias hemolíticas por defeitos de membrana",
         "Esferocitose hereditária",
-        "Diagnóstico da esferocitose hereditária",
-        "Teste de fragilidade osmótica"
+        "Quadro clínico da esferocitose hereditária"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Teste de fragilidade osmótica. Conduta/resposta: Teste de fragilidade osmótica;",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da esferocitose hereditária. Conduta/resposta: Contagem de reticulócitos reduzida.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-21-anos32316de6ee/"
+        "https://med.estrategia.com/public/questoes/esferocitose27ad7dc07e/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-8863eb118f9cf702",
-      "number": "1095f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "id": "anki-hematologia-anemias-macrociticas-7704ac0eecc85262",
+      "number": "1001e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-58a-com398a4f0f83/",
-      "sourceQuestionId": "4000130149",
-      "matchedAt": "2026-08-22T18:52:09.940Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-60-anos39914c2b89/",
+      "sourceQuestionId": "4000184838",
+      "matchedAt": "2026-08-23T07:05:23.820Z",
       "similarity": {
-        "stem": 0.9620253164556962,
-        "options": 0.9142857142857143,
-        "combined": 0.9477034358047015
+        "stem": 1,
+        "options": 1,
+        "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas autoimunes (AHAI)",
-        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
-        "Anemias hemolíticas autoimunes (AHAI) por anticorpos quentes",
-        "Etiologias da anemia hemolítica autoimune (AHAI) por anticorpos quentes",
-        "Testes de Coombs"
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Diagnóstico da anemia megaloblástica"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Testes de Coombs. Conduta/resposta: Lúpus eritematoso sistêmico, linfoma e uso de penicilina.",
+      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da anemia megaloblástica. Conduta/resposta: macroovalócitos",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-58a-com398a4f0f83/",
-        "https://med.estrategia.com/public/questoes/Mulher-58-anos-idade81d6687741/"
+        "https://med.estrategia.com/public/questoes/Mulher-60-anos39914c2b89/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-c23ecc7d9fdb5419",
-      "number": "1096f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-anemias-macrociticas-c5eaee4b2e2dfc53",
+      "number": "1002e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-53-anos1577cea8f6c/",
+      "sourceQuestionId": "4000184683",
+      "matchedAt": "2026-08-23T07:05:29.965Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Iniciar Cianocobalamina",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-53-anos1577cea8f6c/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo101fde660e3/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-b7ec17f369203f11",
-      "number": "1097f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-dd80606c4fcdd668",
-      "number": "1098f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-anemias-macrociticas-4e8a40cf1d46fcc1",
+      "number": "1003e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-historico10672c262ef/",
+      "sourceQuestionId": "4000183314",
+      "matchedAt": "2026-08-23T07:05:35.743Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Gastrectomias"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Gastrectomias. Conduta/resposta: I, II e III.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-com-historico10672c262ef/"
+      ]
     }
   ]
 }
