@@ -1200,7 +1200,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-historico10672c262ef/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-f1616595f5f3e971": {
+      "number": "1004e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-23T18:51:01.992Z",
+      "nextAttemptAt": "2026-08-30T18:51:01.992Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-57-anos-procura727fe355e3/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-d552c3d14fa46c35": {
+      "number": "1005e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-23T18:51:08.356Z",
+      "nextAttemptAt": "2026-08-30T18:51:08.356Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Senhor-70-anos-sempre78b28ac21e/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-macrociticas-040a1d0d930aca47": {
+      "number": "1006e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-23T18:51:14.365Z",
+      "nextAttemptAt": "2026-08-30T18:51:14.365Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Que-exame-complementar262cc403f6/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-macrociticas-c7a83f56254d3c4a": {
+      "number": "1007e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-23T18:51:21.041Z",
+      "nextAttemptAt": "2026-08-30T18:51:21.041Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-50-anos76eeab7fba/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-d6ea83a2b25094e9": {
+      "number": "1008e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-23T18:51:26.905Z",
+      "nextAttemptAt": "2026-08-30T18:51:26.905Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-masculino-81145e234912f/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-17eac26cc687fd33": {
+      "number": "1009e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-23T18:51:33.054Z",
+      "nextAttemptAt": "2026-08-30T18:51:33.054Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-76-anos-refere126102be3fa/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-08-23T07:05:35.744Z"
+  "updatedAt": "2026-08-23T18:51:33.054Z"
 }

@@ -163,14 +163,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, palidez com um toque de icterícia, anemia macrocítica (VCM 114) com reticulócitos baixos (mostrando que a medula não está compensando), LDH e bilirrubina indireta altos — esse padrão de 'pseudo-hemólise' (sem hemólise real) é a marca da anemia perniciosa, causada pela falta de vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967773",
-      "ankiGuid": "J.IJ)F8ipb"
+      "ankiGuid": "J.IJ)F8ipb",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-57-anos-procura727fe355e3/",
+        "sourceQuestionId": "4000182252",
+        "matchedAt": "2026-08-23T18:51:01.990Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d552c3d14fa46c35",
@@ -196,14 +210,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Aqui está uma pegadinha clássica: o médico deu ácido fólico pra tratar a anemia, e ela melhorou — só que o ácido fólico corrige a anemia SEM corrigir os danos neurológicos da falta de B12 (na verdade, pode até mascarar o diagnóstico enquanto o problema nos nervos continua piorando). Por isso, três meses depois, o paciente volta com demência e marcha alterada: sinais de que a causa real (nunca investigada) era falta de vitamina B12, e o ácido fólico só tratou o sangue, não o sistema nervoso.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967774",
-      "ankiGuid": "peK|(gi~2i"
+      "ankiGuid": "peK|(gi~2i",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Senhor-70-anos-sempre78b28ac21e/",
+        "sourceQuestionId": "4000181683",
+        "matchedAt": "2026-08-23T18:51:08.356Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-040a1d0d930aca47",
@@ -230,14 +255,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pra descobrir a causa da falta de vitamina B12 numa idosa com queixas de má digestão, o exame indicado é a pesquisa do anticorpo antifator intrínseco — esse anticorpo ataca a proteína que o estômago usa pra ajudar a absorver a B12, sendo a causa mais comum de anemia perniciosa (a forma autoimune da deficiência de B12).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967775",
-      "ankiGuid": "q{(E}(WzjQ"
+      "ankiGuid": "q{(E}(WzjQ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Que-exame-complementar262cc403f6/",
+        "sourceQuestionId": "4000173522",
+        "matchedAt": "2026-08-23T18:51:14.364Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-c7a83f56254d3c4a",
@@ -263,14 +301,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse paciente usa omeprazol (que reduz o ácido do estômago, atrapalhando a absorção de B12 a longo prazo) e metformina (que também interfere na absorção de B12 pelo intestino) — dois remédios de uso crônico bem conhecidos por causarem, aos poucos, falta de vitamina B12, explicando a anemia macrocítica grave que ele apresenta.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967776",
-      "ankiGuid": "GRd;3gvOg5"
+      "ankiGuid": "GRd;3gvOg5",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-50-anos76eeab7fba/",
+        "sourceQuestionId": "4000169305",
+        "matchedAt": "2026-08-23T18:51:21.040Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d6ea83a2b25094e9",
@@ -299,14 +351,25 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idoso com perda de força e apetite, língua lisa (sinal clássico de falta de B12), sem alterações neurológicas focais ainda — o quadro clínico e os exames (não detalhados aqui, mas presumidos) apontam pra anemia por deficiência de vitamina B12, que explica tanto o cansaço quanto os sintomas descritos.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967777",
-      "ankiGuid": "kc]PVVW)]D"
+      "ankiGuid": "kc]PVVW)]D",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-masculino-81145e234912f/",
+        "sourceQuestionId": "4000164646",
+        "matchedAt": "2026-08-23T18:51:26.905Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-17eac26cc687fd33",
@@ -334,14 +397,25 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pele amarelada (por causa da bilirrubina alta), formigamento nas pernas, ardência na língua, usando metformina e omeprazol (remédios que atrapalham a absorção de B12 a longo prazo), com anemia macrocítica, LDH extremamente alto (5460!), bilirrubina alta e Coombs NEGATIVO (descartando hemólise autoimune de verdade), ferro normal, TSH normal — tudo aponta pra deficiência de vitamina B12, causando esse quadro de 'pseudo-hemólise' característico.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967778",
-      "ankiGuid": "i}pl}9F7Ip"
+      "ankiGuid": "i}pl}9F7Ip",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-76-anos-refere126102be3fa/",
+        "sourceQuestionId": "4000164288",
+        "matchedAt": "2026-08-23T18:51:33.054Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-c9c1a1df7fe61df8",
