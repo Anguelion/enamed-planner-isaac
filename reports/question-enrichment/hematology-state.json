@@ -633,63 +633,63 @@
     },
     "anki-hematologia-anemias-hemoliticas-55f0a8853209faa5": {
       "number": "1046f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-17T19:01:01.031Z",
-      "nextAttemptAt": "2026-08-24T19:01:01.031Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-24T19:04:03.562Z",
+      "nextAttemptAt": "2026-09-07T19:04:03.562Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-dois-anos-com53afc606df/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-anemias-hemoliticas-516e98f91f12a9a8": {
       "number": "1047f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-17T19:01:06.334Z",
-      "nextAttemptAt": "2026-08-24T19:01:06.334Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-24T19:04:10.074Z",
+      "nextAttemptAt": "2026-09-07T19:04:10.074Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-dois-anos13838281398/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-anemias-hemoliticas-fb58df78533cbb60": {
       "number": "1048f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-17T19:01:11.673Z",
-      "nextAttemptAt": "2026-08-24T19:01:11.673Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-24T19:04:15.936Z",
+      "nextAttemptAt": "2026-09-07T19:04:15.936Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-5-anos-idade1164970cd7a/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-anemias-hemoliticas-03136497244bd65a": {
       "number": "1049f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-17T19:01:16.937Z",
-      "nextAttemptAt": "2026-08-24T19:01:16.937Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-24T19:04:22.310Z",
+      "nextAttemptAt": "2026-09-07T19:04:22.310Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-plaquetopenia25704f9a2d/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemias-hemoliticas-7ce25bb12961bb09": {
       "number": "1050f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-17T19:01:22.170Z",
-      "nextAttemptAt": "2026-08-24T19:01:22.170Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-24T19:04:28.317Z",
+      "nextAttemptAt": "2026-09-07T19:04:28.317Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-18-anos-com100fe3aa523/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-anemias-hemoliticas-e368e2e200f0425a": {
       "number": "1051f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-17T19:01:28.055Z",
-      "nextAttemptAt": "2026-08-24T19:01:28.055Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-24T19:04:34.469Z",
+      "nextAttemptAt": "2026-09-07T19:04:34.469Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-52-anos-procura204cda478a6/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-anemias-hemoliticas-25ac78f62c219563": {
       "number": "1052f",
@@ -1312,5 +1312,5 @@
       "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-08-24T07:32:18.512Z"
+  "updatedAt": "2026-08-24T19:04:34.469Z"
 }

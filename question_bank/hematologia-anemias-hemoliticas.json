@@ -1980,14 +1980,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Bebê com anemia falciforme, dor nas pernas, febre e tosse — mesmo com raio-x de tórax normal (descartando síndrome torácica no momento), a febre em criança pequena com essa doença é sempre motivo de preocupação pelo risco de infecção grave (asplenia funcional). A conduta certa é internar e começar antibiótico na veia, além de tratar a dor.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350387",
-      "ankiGuid": "J*3p>NVFN/"
+      "ankiGuid": "J*3p>NVFN/",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-dois-anos-com53afc606df/",
+        "sourceQuestionId": "4000064873",
+        "matchedAt": "2026-08-24T19:04:03.562Z",
+        "confidence": 0.9406036069193964
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-516e98f91f12a9a8",
@@ -2014,14 +2023,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Tosse, febre, taquipneia numa criança com anemia falciforme e histórico de internações prévias, com condensação no raio-x — é o quadro clássico de síndrome torácica aguda. A conduta é começar antibiótico, hidratação e oxigênio imediatamente, deixando a transfusão pra depois, se os exames mostrarem que é realmente necessária.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350388",
-      "ankiGuid": "slz4auYX!t"
+      "ankiGuid": "slz4auYX!t",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-dois-anos13838281398/",
+        "sourceQuestionId": "4000120591",
+        "matchedAt": "2026-08-24T19:04:10.073Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-fb58df78533cbb60",
@@ -2048,14 +2071,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia falciforme, febre, tosse, dor no peito, hipoxemia (saturação 90%) e infiltrado no raio-x — síndrome torácica aguda. O tratamento inclui antibióticos que cobrem tanto bactérias típicas quanto atípicas (ceftriaxone + claritromicina), e como a hemoglobina está baixa com hipoxemia, a transfusão de concentrado de hemácias também é indicada.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350389",
-      "ankiGuid": "Hgao?>q^KE"
+      "ankiGuid": "Hgao?>q^KE",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-5-anos-idade1164970cd7a/",
+        "sourceQuestionId": "4000120163",
+        "matchedAt": "2026-08-24T19:04:15.936Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-03136497244bd65a",
@@ -2082,14 +2119,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia, plaquetas baixas, LDH e bilirrubina indireta altas, reticulócitos altos e esquizócitos no sangue são os achados clássicos de várias doenças que destroem hemácias mecanicamente (SHU, CIVD, PTT, síndrome HELLP). Já a síndrome de Evans (que combina anemia hemolítica autoimune com plaquetopenia imune) é diferente: ela é mediada por anticorpos (Coombs positivo), sem os esquizócitos característicos dessas outras condições — por isso é a exceção certa.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias Microangiopáticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350390",
-      "ankiGuid": "lku@d_IK;G"
+      "ankiGuid": "lku@d_IK;G",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-plaquetopenia25704f9a2d/",
+        "sourceQuestionId": "4000117323",
+        "matchedAt": "2026-08-24T19:04:22.310Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-7ce25bb12961bb09",
@@ -2115,14 +2162,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Paciente com anemia falciforme, dor nas pernas — uma crise vaso-oclusiva. Além de hidratar bem na veia, a conduta inicial mais importante é tratar a dor com morfina, que costuma ser necessária nesse nível de dor intensa e persistente.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Manejo das crises álgicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350391",
-      "ankiGuid": "x]Ud1?q:Y%"
+      "ankiGuid": "x]Ud1?q:Y%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-18-anos-com100fe3aa523/",
+        "sourceQuestionId": "4000114781",
+        "matchedAt": "2026-08-24T19:04:28.316Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-e368e2e200f0425a",
@@ -2148,14 +2210,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse senhor começou a usar metildopa (remédio pra pressão alta) há 3 meses — é um dos remédios mais classicamente ligados a causar anemia hemolítica autoimune como efeito colateral. O quadro de fadiga, icterícia, baço aumentado e anemia com reticulocitose bate certinho com essa suspeita.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
+        "Anemias hemolíticas autoimunes (AHAI) por anticorpos quentes",
+        "Etiologias da anemia hemolítica autoimune (AHAI) por anticorpos quentes",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350392",
-      "ankiGuid": "K}rt+9aS)v"
+      "ankiGuid": "K}rt+9aS)v",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-52-anos-procura204cda478a6/",
+        "sourceQuestionId": "4000113839",
+        "matchedAt": "2026-08-24T19:04:34.469Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-25ac78f62c219563",
