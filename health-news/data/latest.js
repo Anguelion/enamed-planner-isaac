@@ -2,7 +2,7 @@ window.RADAR_SAUDE_ISSUE = {
   "id": "2026-08-21",
   "title": "GLP-1 e nutrição, prevenção experimental do trauma e sarcoma de Ewing",
   "publishedAt": "2026-08-21",
-  "generatedAt": "2026-08-22T08:05:29-03:00",
+  "generatedAt": "2026-08-23T23:12:57-03:00",
   "readingMinutes": 16,
   "sourceUrl": "https://health.thenews.com.br/p/21-08-2026",
   "lead": {
@@ -107,13 +107,13 @@ window.RADAR_SAUDE_ISSUE = {
       "sourceUrl": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-lanca-novo-edital-para-avaliacao-regulatoria-de-dispositivos-medicos-inovadores/"
     },
     {
-      "id": "sus-inovacao-atencao-especializada",
-      "icon": "🏥",
-      "stage": "Implementação em serviços",
-      "title": "Projetos levam digitalização e IA à atenção especializada",
-      "summary": "O Ministério da Saúde apresentou iniciativas que aproximam SUS e hospitais privados para digitalização de fluxos, apoio por inteligência artificial e ampliação do atendimento especializado.",
-      "impact": "São projetos de modernização e cooperação em implantação. A apresentação oficial não comprova, por si só, efetividade clínica, escala nacional ou disponibilidade uniforme na rede.",
-      "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/inovacoes-tecnologicas-ampliam-as-parcerias-entre-sus-e-hospitais-privados-para-atendimento-especializado"
+      "id": "carretas-atencao-especializada-agosto",
+      "icon": "🚐",
+      "stage": "Oferta efetiva em expansão",
+      "title": "Carretas especializadas chegam a mais municípios",
+      "summary": "O Ministério da Saúde informou que novas unidades móveis de saúde da mulher, oftalmologia e exames de imagem começaram a atender pacientes encaminhados em mais municípios; são 114 carretas em circulação no país.",
+      "impact": "É oferta efetiva do programa Agora Tem Especialistas, com atendimento temporário de 30 a 45 dias e regulação pelas secretarias locais. A disponibilidade não é universal nem por procura direta: depende de pré-agendamento e encaminhamento no SUS.",
+      "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/carretas-de-exames-de-imagem-saude-da-mulher-e-cirurgias-de-catarata-chegam-a-mais-19-municipios-brasileiros-para-atender-o-sus-veja-como-funciona/"
     },
     {
       "id": "pet-saude-digital-institutos-federais",
