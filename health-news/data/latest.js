@@ -1,118 +1,118 @@
 window.RADAR_SAUDE_ISSUE = {
-  "id": "2026-08-21",
-  "title": "GLP-1 e nutrição, prevenção experimental do trauma e sarcoma de Ewing",
-  "publishedAt": "2026-08-21",
-  "generatedAt": "2026-08-23T23:12:57-03:00",
-  "readingMinutes": 16,
-  "sourceUrl": "https://health.thenews.com.br/p/21-08-2026",
+  "id": "2026-08-24",
+  "title": "Doença priônica, gratidão em 34 países e fobias específicas",
+  "publishedAt": "2026-08-24",
+  "generatedAt": "2026-08-24T09:13:28-03:00",
+  "readingMinutes": 17,
+  "sourceUrl": "https://health.thenews.com.br/p/24-08-2026",
   "lead": {
-    "title": "Indústria adapta alimentos para usuários de medicamentos GLP-1",
-    "summary": "A Nestlé usa inteligência artificial e desenvolvimento de produtos para criar opções com mais proteína e porções menores voltadas a pessoas que usam medicamentos da classe GLP-1.",
-    "clinicalNote": "Esses medicamentos podem reduzir apetite e ingestão calórica. Produtos direcionados a esse público são uma estratégia comercial e nutricional; não substituem acompanhamento clínico nem têm benefício terapêutico comprovado por pertencerem a uma linha específica.",
-    "sourceUrl": "https://www.nestle.com/stories/science-nutrition-product-research-development"
+    "title": "Pesquisa tenta reduzir a proteína priônica na doença de Creutzfeldt-Jakob",
+    "summary": "A doença de Creutzfeldt-Jakob é uma encefalopatia priônica rara, rapidamente progressiva e fatal. Estudos experimentais tentam reduzir a produção da proteína priônica antes que o dobramento anormal se propague pelo cérebro.",
+    "clinicalNote": "A pesquisa com oligonucleotídeos está em fase inicial. Ensaios em humanos avaliam principalmente segurança e dose; resultados em camundongos não demonstram eficácia clínica nem representam tratamento disponível.",
+    "sourceUrl": "https://www.cdc.gov/creutzfeldt-jakob/hcp/clinical-overview/index.html"
   },
   "stories": [
     {
-      "id": "glp1-alimentos-ia",
-      "category": "Nutrição e inovação",
-      "title": "IA entra no desenvolvimento de alimentos para quem usa GLP-1",
-      "summary": "Empresas estão reformulando porções e composição nutricional para um mercado em expansão. A Nestlé relata usar uma base com cerca de 120 mil receitas e ferramentas de IA para acelerar esse desenvolvimento.",
-      "clinicalNote": "Perda de peso com agonistas do receptor de GLP-1 pode incluir redução de massa magra. O achado não prova que um alimento industrializado específico previna esse efeito, e a composição corporal varia entre estudos e pessoas.",
-      "evidence": "Estratégia industrial com evidência clínica indireta",
-      "sourceUrl": "https://www.nestle.com/stories/science-nutrition-product-research-development",
+      "id": "cjd-reducao-proteina-prionica",
+      "category": "Neurologia e pesquisa",
+      "title": "Doença priônica: da progressão rápida ao silenciamento de RNA",
+      "summary": "A edição parte de um caso publicamente divulgado para explicar a doença de Creutzfeldt-Jakob e duas estratégias experimentais que buscam reduzir a produção da proteína priônica no sistema nervoso.",
+      "clinicalNote": "A forma clássica ocorre em cerca de 1 a 2 pessoas por milhão ao ano e é esporádica em aproximadamente 85% dos casos. Ela não deve ser confundida com a variante associada à encefalopatia espongiforme bovina.",
+      "evidence": "Epidemiologia estabelecida e pesquisa pré-clínica com ensaio inicial",
+      "sourceUrl": "https://www.broadinstitute.org/publications/broad1376621",
       "deepDive": {
-        "whatHappened": "A edição descreve como a Nestlé está usando inteligência artificial e pesquisa de alimentos para desenvolver produtos voltados a usuários de medicamentos GLP-1. A proposta combina porções menores, maior teor de proteína e rapidez na criação de novas receitas.",
-        "howItWorks": "Agonistas do receptor de GLP-1 reproduzem parte da ação de uma incretina: aumentam a secreção de insulina de modo dependente da glicose, reduzem glucagon, retardam o esvaziamento gástrico e ampliam a saciedade. Com menor apetite, a ingestão total de energia e nutrientes pode cair.",
-        "clinicalMeaning": "A perda de peso costuma ser predominantemente de gordura, mas também pode haver queda absoluta de massa magra. Por isso, adequação proteica, atividade física e avaliação individual importam; a existência de um produto rotulado para usuários de GLP-1 não demonstra melhora de desfechos clínicos.",
-        "limitations": "As informações sobre desenvolvimento e IA vêm da própria empresa. Estudos de composição corporal são heterogêneos, e não há evidência apresentada de que esses produtos específicos preservem músculo, previnam deficiências ou melhorem resultados de saúde.",
+        "whatHappened": "Um candidato de siRNA que reduz a expressão da proteína priônica prolongou a sobrevida em um modelo murino. Uma dose após o início dos sintomas aumentou o tempo de sobrevida em 64%, e um estudo inicial em pessoas com doença priônica começou a recrutar participantes.",
+        "howItWorks": "Príons são formas anormais da proteína PrP capazes de induzir proteínas normais a adotar o mesmo dobramento defeituoso. O acúmulo desencadeia perda neuronal e aspecto espongiforme. siRNA e oligonucleotídeos antisense tentam diminuir o RNA que dá origem à PrP.",
+        "clinicalMeaning": "A apresentação clássica inclui demência rapidamente progressiva, alterações de marcha, mioclonias e distúrbios visuais. A avaliação diagnóstica combina quadro clínico e exames especializados; atualmente não há terapia comprovada capaz de interromper a doença.",
+        "limitations": "O ganho de sobrevida foi observado em camundongos infectados com uma cepa experimental. O ensaio humano inicial busca segurança, tolerabilidade e dose, não permite prometer benefício e possui critérios próprios de elegibilidade.",
         "examFocus": [
-          "GLP-1 aumenta insulina de forma dependente da glicose e reduz glucagon.",
-          "Retardo do esvaziamento gástrico e maior saciedade ajudam a reduzir a ingestão.",
-          "Perda de peso pode incluir massa magra, embora a maior parcela costume ser gordura.",
-          "Produto direcionado a usuários não equivale a tratamento nem comprova benefício clínico."
+          "Príons anormais induzem o dobramento incorreto de proteínas PrP normais.",
+          "A DCJ clássica é majoritariamente esporádica; a forma variante ligada à BSE é distinta.",
+          "Demência rapidamente progressiva, mioclonia e ataxia são pistas clínicas importantes.",
+          "siRNA mostrou efeito em camundongos; eficácia em humanos ainda não foi demonstrada."
         ]
       }
     },
     {
-      "id": "safit2-estresse-precoce",
-      "category": "Pesquisa pré-clínica",
-      "title": "Bloqueio de FKBP51 reduz efeitos do estresse precoce em camundongos",
-      "summary": "Um estudo administrou o inibidor experimental SAFit2 durante a adversidade no início da vida e encontrou redução posterior de déficits sociais em camundongos machos.",
-      "clinicalNote": "O resultado é preventivo e pré-clínico: não demonstra reversão de trauma já estabelecido, eficácia em seres humanos nem disponibilidade de um medicamento para uso clínico.",
-      "evidence": "Estudo experimental em camundongos machos",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42263247/",
+      "id": "gratidao-megaestudo-34-paises",
+      "category": "Saúde mental e comportamento",
+      "title": "Práticas de gratidão têm efeito pequeno e dependente do contexto",
+      "summary": "Mais de 10 mil participantes de 34 países foram randomizados para seis práticas de gratidão ou três tarefas de controle. Os efeitos imediatos variaram entre resultados e culturas.",
+      "clinicalNote": "Houve aumento mais consistente do afeto positivo, mas mudanças em satisfação com a vida e outros desfechos não foram universais. Uma prática breve não equivale a tratamento de transtornos mentais.",
+      "evidence": "Megaestudo randomizado multinacional",
+      "sourceUrl": "https://www.pnas.org/doi/10.1073/pnas.2537789123",
       "deepDive": {
-        "whatHappened": "Pesquisadores expuseram camundongos machos a um modelo de adversidade precoce e testaram SAFit2 no mesmo período. Na vida adulta, os animais tratados apresentaram menos alterações de comportamento social e mudanças moleculares em regiões cerebrais relacionadas ao estresse.",
-        "howItWorks": "FKBP51 é uma proteína reguladora ligada à sinalização do receptor de glicocorticoide e à resposta ao estresse. Sua inibição pode modificar a forma como circuitos cerebrais em desenvolvimento respondem a níveis persistentes de hormônios do estresse.",
-        "clinicalMeaning": "O trabalho ajuda a identificar mecanismos biológicos e possíveis alvos farmacológicos. Ele não transforma experiências adversas em uma doença única nem substitui intervenções sociais, psicológicas e de proteção já utilizadas.",
-        "limitations": "O experimento envolveu apenas camundongos machos, em condições controladas, e o composto foi usado durante a adversidade. Segurança, dose, efeitos de longo prazo e eficácia em humanos permanecem desconhecidos.",
+        "whatHappened": "O estudo comparou seis exercícios de gratidão com três controles. Enviar uma mensagem de agradecimento produziu o maior efeito médio, enquanto listar cinco motivos de gratidão foi popular, mas teve um dos menores efeitos.",
+        "howItWorks": "As intervenções direcionam atenção para benefícios recebidos e podem estimular reciprocidade e conexão social. Os pesquisadores mediram estados psicológicos imediatamente após uma única atividade, captando sobretudo mudanças de curto prazo.",
+        "clinicalMeaning": "Os resultados apoiam a ideia de que ações simples podem melhorar discretamente o humor momentâneo. Eles não demonstram prevenção ou tratamento de depressão, ansiedade ou outra condição clínica.",
+        "limitations": "Os desfechos foram autorrelatados e avaliados logo após a intervenção. O tamanho do efeito variou mais entre países do que entre exercícios, o que limita generalizações culturais e conclusões sobre duração do benefício.",
         "examFocus": [
-          "FKBP51 modula a sinalização do receptor de glicocorticoide e a resposta ao estresse.",
-          "O SAFit2 foi testado durante a adversidade, com finalidade preventiva experimental.",
-          "Resultado em camundongos não estabelece eficácia ou segurança em humanos.",
-          "Estudo pré-clínico identifica hipótese terapêutica, não conduta disponível."
+          "Randomização melhora a comparação causal entre intervenção e controle.",
+          "O efeito mais consistente foi no afeto positivo imediato.",
+          "Heterogeneidade entre países mostra que contexto cultural modifica resultados.",
+          "Mudança breve de humor não equivale a efeito terapêutico duradouro."
         ]
       }
     },
     {
-      "id": "sarcoma-ewing-ladera",
-      "category": "Epidemiologia e oncologia",
-      "title": "Relatos de câncer pediátrico motivam investigação na Califórnia",
-      "summary": "Autoridades estaduais solicitaram investigação conjunta após relatos de adolescentes ligados a Ladera Ranch com sarcoma de Ewing e outros cânceres pediátricos raros.",
-      "clinicalNote": "Uma concentração percebida de casos é um sinal para vigilância epidemiológica, não prova de causa ambiental. Até agora, não foi estabelecida relação causal com pesticidas ou outro agente específico.",
-      "evidence": "Sinal epidemiológico em investigação",
-      "sourceUrl": "https://sd38.senate.ca.gov/news/request-joint-investigation-pediatric-cancer-cluster-ladera-ranch",
+      "id": "fobias-especificas-exposicao",
+      "category": "Psiquiatria",
+      "title": "Quando o medo se torna uma fobia específica",
+      "summary": "Fobia específica envolve medo ou ansiedade marcante diante de um objeto ou situação, com resposta desproporcional, persistência e evitação capaz de causar prejuízo relevante.",
+      "clinicalNote": "Cobras, aranhas e alturas podem ser temidas sem que exista transtorno. O diagnóstico depende de persistência e prejuízo funcional, não apenas da intensidade sentida em um episódio.",
+      "evidence": "Critérios clínicos e tratamento psicológico estabelecido",
+      "sourceUrl": "https://www.nimh.nih.gov/health/publications/phobias-and-phobia-related-disorders",
       "deepDive": {
-        "whatHappened": "Uma carta oficial pediu que órgãos da Califórnia e autoridades federais investigassem ao menos seis diagnósticos de sarcoma de Ewing entre adolescentes com conexão à comunidade de Ladera Ranch. Relatos mais amplos incluem outros cânceres raros em localidades próximas.",
-        "howItWorks": "O sarcoma de Ewing é um tumor raro de osso ou tecido mole, mais frequente em crianças e adolescentes. A maioria dos tumores pediátricos apresenta a fusão EWSR1::FLI1, geralmente decorrente da translocação t(11;22).",
-        "clinicalMeaning": "A investigação deve confirmar diagnósticos, população exposta, período e número esperado de casos antes de avaliar exposições ambientais. Sem denominador e comparação adequados, não é possível calcular excesso de risco.",
-        "limitations": "Os números iniciais vêm de famílias e autoridades locais, não de um estudo epidemiológico concluído. Proximidade geográfica e temporal não estabelece causalidade, e ainda não existe confirmação oficial de um agente comum.",
+        "whatHappened": "A edição discute por que certos estímulos despertam medo com facilidade. Predisposição biológica, experiências negativas, aprendizagem por observação e influência cultural podem contribuir, sem que um único mecanismo explique todos os casos.",
+        "howItWorks": "A resposta de ameaça ativa esquiva e alívio imediato. Esse alívio reforça a evitação, impede nova aprendizagem de segurança e mantém o ciclo. Na fobia, a reação é desproporcional ao risco real e interfere na vida cotidiana.",
+        "clinicalMeaning": "A terapia cognitivo-comportamental, especialmente a exposição planejada, é uma abordagem bem estabelecida. A exposição é gradual, controlada e ajustada à pessoa; não significa confronto brusco ou improvisado com o estímulo.",
+        "limitations": "A notícia oferece uma explicação geral e não permite diagnosticar alguém. Medos podem coexistir com outros transtornos, e a escolha terapêutica depende de avaliação profissional e das circunstâncias individuais.",
         "examFocus": [
-          "Sarcoma de Ewing é um tumor raro de osso ou tecido mole em jovens.",
-          "A fusão EWSR1::FLI1, ligada à t(11;22), é característica frequente.",
-          "Suspeita de cluster exige confirmar casos, população, período e incidência esperada.",
-          "Agrupamento geográfico não prova exposição causal."
+          "Fobia específica exige medo desproporcional, persistente e com prejuízo ou evitação.",
+          "A evitação reduz ansiedade no curto prazo e reforça o ciclo do medo.",
+          "Experiência direta, observação e cultura podem contribuir para a aprendizagem do medo.",
+          "Exposição terapêutica é planejada e gradual, não uma confrontação sem suporte."
         ]
       }
     }
   ],
   "quickTakes": [
     {
-      "icon": "💊",
-      "title": "Uso recreativo de tadalafila entre jovens preocupa especialistas",
-      "source": "O Globo",
-      "url": "https://extra.globo.com/saude/noticia/2026/08/tadala-febre-entre-jovens-pode-levar-a-cegueira-indica-estudo.ghtml"
+      "icon": "🦠",
+      "title": "Vacina experimental contra chikungunya protegeu camundongos",
+      "source": "CNN Brasil",
+      "url": "https://www.cnnbrasil.com.br/saude/pesquisadores-da-usp-desenvolvem-vacina-inteligente-contra-chikungunya/"
     },
     {
-      "icon": "💧",
-      "title": "Hábitos matinais simples e o funcionamento intestinal",
-      "source": "O Globo",
-      "url": "https://oglobo.globo.com/saude/noticia/2026/08/19/como-ajudar-o-intestino-a-funcionar-melhor-de-manha-um-copo-dagua-e-alguns-movimentos-especificos-diz-especialista.ghtml"
-    },
-    {
-      "icon": "⚖️",
-      "title": "Justiça discute limites da harmonização realizada por dentistas",
+      "icon": "🐟",
+      "title": "Ceará terá fábrica de curativos produzidos com pele de tilápia",
       "source": "g1",
-      "url": "https://g1.globo.com/saude/noticia/2026/08/20/justica-harmonizacao-dentistas.ghtml"
+      "url": "https://g1.globo.com/ce/ceara/noticia/2026/08/18/ceara-vai-receber-primeira-fabrica-do-brasil-de-curativos-a-base-de-pele-de-tilapia.ghtml"
+    },
+    {
+      "icon": "🐕",
+      "title": "Brasil completa dez anos sem raiva humana transmitida por cães",
+      "source": "Ministério da Saúde",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/brasil-completa-10-anos-sem-raiva-humana-transmitida-por-caes-e-reforca-vacinacao-antirrabica-na-fronteira"
     }
   ],
   "innovations": [
     {
-      "id": "anvisa-piloto-dispositivos-inovadores",
-      "icon": "🩺",
-      "stage": "Avaliação regulatória",
-      "title": "Anvisa abre piloto para dispositivos médicos inovadores",
-      "summary": "O Edital nº 5/2026 selecionará até dez projetos para acompanhamento e diálogo regulatório durante o desenvolvimento de dispositivos médicos inovadores.",
-      "impact": "A iniciativa pode antecipar dúvidas regulatórias e apoiar o desenvolvimento responsável. Seleção no piloto não significa registro, aprovação clínica, incorporação ou oferta no SUS.",
-      "sourceUrl": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-lanca-novo-edital-para-avaliacao-regulatoria-de-dispositivos-medicos-inovadores/"
+      "id": "elevidys-registro-cancelado",
+      "icon": "⛔",
+      "stage": "Registro cancelado",
+      "title": "Anvisa cancela registro condicional do Elevidys",
+      "summary": "A Anvisa publicou, a pedido da Roche, o cancelamento do registro condicional da terapia gênica delandistrogeno moxeparvoveque após concluir que os dados disponíveis não atendiam aos requisitos para manutenção do registro.",
+      "impact": "O medicamento não mantém autorização sanitária no Brasil. Pacientes previamente expostos em estudos e programas continuam sob acompanhamento de segurança; uma futura submissão exigirá novas evidências e avaliação regulatória.",
+      "sourceUrl": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-e-roche-informam-o-cancelamento-do-registro-do-medicamento-elevidys-r-a-pedido-da-empresa"
     },
     {
       "id": "carretas-atencao-especializada-agosto",
       "icon": "🚐",
       "stage": "Oferta efetiva em expansão",
       "title": "Carretas especializadas chegam a mais municípios",
-      "summary": "O Ministério da Saúde informou que novas unidades móveis de saúde da mulher, oftalmologia e exames de imagem começaram a atender pacientes encaminhados em mais municípios; são 114 carretas em circulação no país.",
-      "impact": "É oferta efetiva do programa Agora Tem Especialistas, com atendimento temporário de 30 a 45 dias e regulação pelas secretarias locais. A disponibilidade não é universal nem por procura direta: depende de pré-agendamento e encaminhamento no SUS.",
+      "summary": "Novas unidades móveis de saúde da mulher, oftalmologia e exames de imagem começaram a atender pacientes encaminhados; o Ministério da Saúde informa 114 carretas em circulação.",
+      "impact": "É oferta efetiva do Agora Tem Especialistas, com permanência temporária e regulação local. A disponibilidade depende de pré-agendamento e encaminhamento pelas secretarias do SUS.",
       "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/carretas-de-exames-de-imagem-saude-da-mulher-e-cirurgias-de-catarata-chegam-a-mais-19-municipios-brasileiros-para-atender-o-sus-veja-como-funciona/"
     },
     {
@@ -120,31 +120,40 @@ window.RADAR_SAUDE_ISSUE = {
       "icon": "💻",
       "stage": "Seleção de projetos",
       "title": "PET Saúde abre seleção para inovação digital no SUS",
-      "summary": "O Ministério da Saúde e o MEC abriram edital para Institutos Federais desenvolverem, com secretarias de Saúde, projetos de pesquisa, formação e inovação em informação e saúde digital.",
-      "impact": "As propostas podem abordar interoperabilidade, uso de dados e soluções digitais aplicadas aos serviços. O edital financia e seleciona projetos; não representa tecnologia clínica validada nem oferta nacional já implantada.",
+      "summary": "Ministério da Saúde e MEC abriram edital para Institutos Federais desenvolverem, com secretarias de Saúde, projetos de pesquisa, formação e inovação digital.",
+      "impact": "O edital seleciona projetos; não representa tecnologia clínica validada nem oferta nacional já implantada.",
       "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/ministerio-da-saude-lanca-nova-selecao-do-pet-saude-para-ampliar-pesquisa-e-inovacao-em-saude-digital-no-sus"
+    },
+    {
+      "id": "anvisa-piloto-dispositivos-inovadores",
+      "icon": "🩺",
+      "stage": "Avaliação regulatória",
+      "title": "Anvisa abre piloto para dispositivos médicos inovadores",
+      "summary": "O Edital nº 5/2026 selecionará até dez projetos para acompanhamento e diálogo regulatório durante o desenvolvimento de dispositivos inovadores.",
+      "impact": "Seleção no piloto não significa registro, aprovação clínica, incorporação ou oferta no SUS.",
+      "sourceUrl": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-lanca-novo-edital-para-avaliacao-regulatoria-de-dispositivos-medicos-inovadores/"
     }
   ],
   "protocolUpdates": [
     {
-      "id": "cp63-monitor-glicose",
-      "date": "2026-08-17",
-      "status": "Consulta encerrada",
+      "id": "cp87-88-mama-tireoide",
+      "date": "2026-08-19",
+      "status": "Consulta pública vigente",
       "tone": "attention",
-      "type": "Avaliação de tecnologia",
-      "title": "Monitoramento contínuo de glicose no diabetes tipo 1",
-      "summary": "A CP nº 63/2026, sobre sistema de monitoramento contínuo em tempo real, encerrou contribuições em 17 de agosto. É uma etapa de avaliação e não significa incorporação ou oferta no SUS.",
-      "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/encerradas/copy_of_2026"
+      "type": "PCDT em elaboração",
+      "title": "Câncer de mama e tireoide entram em consulta pública",
+      "summary": "As CP nº 87 e 88/2026 recebem contribuições até 8 de setembro sobre propostas de PCDT para câncer de mama e carcinoma diferenciado da tireoide. São documentos em elaboração e não substituem os protocolos vigentes.",
+      "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/vigentes"
     },
     {
-      "id": "cp64-sotatercepte",
-      "date": "2026-08-17",
-      "status": "Consulta encerrada",
+      "id": "cp77-86-pcdt-oncologicos",
+      "date": "2026-08-18",
+      "status": "Consulta pública vigente",
       "tone": "attention",
-      "type": "Avaliação de medicamento",
-      "title": "Sotatercepte na hipertensão arterial pulmonar",
-      "summary": "A CP nº 64/2026 avaliou sotatercepte adicionado à terapia de base em adultos selecionados com hipertensão arterial pulmonar de maior risco. O relatório é preliminar e não autoriza tratar a tecnologia como disponível no SUS.",
-      "sourceUrl": "https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2025/relatorio-preliminar-sotatercepte-cp-64/%40%40display-file/file"
+      "type": "PCDT em elaboração",
+      "title": "Dez propostas de PCDT oncológicos recebem contribuições",
+      "summary": "As CP nº 77 a 86 abrangem melanoma, linfomas folicular e de Hodgkin, câncer renal, esôfago, cabeça e pescoço, mieloma múltiplo, ovário, estômago e próstata. O prazo vai até 8 de setembro; nenhuma minuta deve ser tratada como conduta vigente.",
+      "sourceUrl": "https://www.gov.br/conitec/pt-br/assuntos/participacao-social/consultas-publicas/vigentes"
     },
     {
       "id": "pcdt-crohn-anexo-agosto",
@@ -153,7 +162,7 @@ window.RADAR_SAUDE_ISSUE = {
       "tone": "published",
       "type": "Anexo de PCDT alterado",
       "title": "Doença de Crohn — anexo vigente atualizado",
-      "summary": "A Conitec registra alteração em 20 de agosto no anexo do PCDT aprovado pela Portaria Conjunta SAS/SCTIE/MS nº 51/2026. A versão vigente organiza tratamento por gravidade, anti-TNF após falha ou intolerância às opções convencionais e alternativas biológicas de segunda linha conforme critérios do protocolo.",
+      "summary": "A Conitec registra alteração no anexo do PCDT aprovado pela Portaria Conjunta nº 51/2026. A versão vigente organiza tratamento por gravidade e alternativas biológicas conforme os critérios oficiais.",
       "sourceUrl": "https://www.gov.br/conitec/pt-br/midias/protocolos/portaria-no-51-pcdt-doenca-de-crohn_19.08/%40%40display-file/file"
     },
     {
@@ -163,70 +172,70 @@ window.RADAR_SAUDE_ISSUE = {
       "tone": "published",
       "type": "Anexo de PCDT alterado",
       "title": "Endometriose — duração do DIU esclarecida no anexo",
-      "summary": "O anexo vigente do PCDT de Endometriose foi reeditado para esclarecer que o DIU liberador de levonorgestrel pode permanecer por 3 ou 5 anos, conforme o dispositivo e o fabricante. A mudança não cria indicação universal: permanecem os critérios da Portaria Conjunta nº 54/2026.",
+      "summary": "O anexo vigente foi reeditado para esclarecer que o DIU liberador de levonorgestrel pode permanecer por 3 ou 5 anos, conforme dispositivo e fabricante. Permanecem os critérios da Portaria Conjunta nº 54/2026.",
       "sourceUrl": "https://www.gov.br/conitec/pt-br/midias/protocolos/portaria-conjunta-no-54-endometriose_19.08/%40%40display-file/file"
     }
   ],
   "dailyQuiz": [
     {
-      "id": "quiz-glp1-mecanismo",
-      "question": "Qual efeito contribui para a menor ingestão alimentar com agonistas do receptor de GLP-1?",
+      "id": "quiz-prion-mecanismo",
+      "question": "Qual mecanismo caracteriza as doenças priônicas?",
       "options": [
-        "Aceleração permanente do esvaziamento gástrico",
-        "Aumento da saciedade e retardo do esvaziamento gástrico",
-        "Bloqueio completo da absorção intestinal de gordura",
-        "Supressão independente da glicose de toda secreção de insulina"
+        "Integração de DNA viral ao genoma neuronal",
+        "Proteína anormal induz o dobramento incorreto de proteínas normais",
+        "Produção de autoanticorpos exclusivamente contra mielina",
+        "Obstrução arterial cerebral por cristais"
       ],
       "answerIndex": 1,
-      "explanation": "A classe aumenta a saciedade e pode retardar o esvaziamento gástrico, além de aumentar a secreção de insulina de modo dependente da glicose e reduzir glucagon."
+      "explanation": "A forma anormal da proteína priônica atua como molde para o dobramento defeituoso da PrP normal, favorecendo acúmulo proteico e neurodegeneração."
     },
     {
-      "id": "quiz-glp1-massa-magra",
-      "question": "Qual interpretação sobre composição corporal durante a perda de peso com GLP-1 é mais adequada?",
+      "id": "quiz-prion-pesquisa",
+      "question": "Como deve ser interpretado o aumento de sobrevida com siRNA descrito na edição?",
       "options": [
-        "Toda perda de peso corresponde à massa muscular",
-        "A massa magra nunca se altera",
-        "Pode haver redução absoluta de massa magra, embora a maior parte da perda costume ser gordura",
-        "Produtos com proteína eliminam comprovadamente qualquer perda de massa magra"
+        "Como cura comprovada em seres humanos",
+        "Como autorização para uso clínico imediato",
+        "Como resultado pré-clínico promissor que ainda exige avaliação de segurança e eficácia humana",
+        "Como prova de que todos os tipos de demência são priônicos"
       ],
       "answerIndex": 2,
-      "explanation": "Ensaios mostram que massa magra pode cair em termos absolutos, mas os resultados variam e a maior parcela do peso perdido costuma ser gordura. Isso não comprova benefício de um produto específico."
+      "explanation": "O efeito ocorreu em camundongos. O estudo humano inicial avalia sobretudo segurança e dose, portanto ainda não demonstra benefício clínico."
     },
     {
-      "id": "quiz-safit2-evidencia",
-      "question": "O que o estudo com SAFit2 permite concluir neste momento?",
+      "id": "quiz-gratidao-interpretacao",
+      "question": "Qual conclusão é compatível com o megaestudo de gratidão?",
       "options": [
-        "O medicamento já previne trauma psicológico em crianças",
-        "O composto reverteu traumas antigos em adultos",
-        "A inibição de FKBP51 reduziu déficits sociais em um modelo com camundongos machos",
-        "A segurança para uso humano foi estabelecida"
+        "Uma prática breve cura transtornos depressivos",
+        "Os efeitos foram idênticos em todos os países",
+        "Houve melhora pequena e imediata, especialmente do afeto positivo, com variação cultural",
+        "Listar cinco itens foi sempre a intervenção mais eficaz"
       ],
       "answerIndex": 2,
-      "explanation": "O achado é pré-clínico, ocorreu em camundongos machos e com intervenção durante a adversidade. Ainda não há demonstração de eficácia ou segurança em humanos."
+      "explanation": "O efeito mais consistente apareceu no humor positivo logo após a atividade, mas outros resultados e o tamanho do efeito variaram entre países."
     },
     {
-      "id": "quiz-ewing-fusao",
-      "question": "Qual alteração molecular é característica frequente do sarcoma de Ewing?",
+      "id": "quiz-fobia-tratamento",
+      "question": "Qual abordagem psicológica tem evidência estabelecida para fobias específicas?",
       "options": [
-        "BCR::ABL1",
-        "EWSR1::FLI1",
-        "PML::RARA",
-        "JAK2 V617F"
+        "Exposição planejada e gradual dentro da terapia cognitivo-comportamental",
+        "Confronto brusco e sem consentimento",
+        "Evitação permanente de qualquer estímulo",
+        "Uso obrigatório de medicação para todos os casos"
+      ],
+      "answerIndex": 0,
+      "explanation": "A exposição terapêutica ajuda a romper o ciclo de evitação, mas deve ser planejada, gradual e conduzida de acordo com a avaliação clínica."
+    },
+    {
+      "id": "quiz-regulacao-consulta",
+      "question": "Qual afirmação descreve corretamente as atualizações regulatórias do dia?",
+      "options": [
+        "Elevidys mantém registro ativo e as minutas oncológicas já são protocolos vigentes",
+        "O registro de Elevidys foi cancelado e os PCDT oncológicos permanecem em consulta pública",
+        "O cancelamento de registro significa incorporação automática no SUS",
+        "Toda consulta pública autoriza imediatamente a nova conduta"
       ],
       "answerIndex": 1,
-      "explanation": "A fusão EWSR1::FLI1, geralmente originada pela translocação t(11;22), ocorre na maioria dos sarcomas de Ewing pediátricos."
-    },
-    {
-      "id": "quiz-cluster-causalidade",
-      "question": "O relato de vários cânceres raros em uma mesma região demonstra o quê?",
-      "options": [
-        "Que um pesticida específico é necessariamente a causa",
-        "Que todos os diagnósticos têm a mesma origem",
-        "Que existe um sinal que deve ser confirmado e investigado epidemiologicamente",
-        "Que o risco individual de todos os moradores é idêntico"
-      ],
-      "answerIndex": 2,
-      "explanation": "Um agrupamento percebido justifica investigação, mas é preciso confirmar casos, denominador, período e incidência esperada. Proximidade geográfica não estabelece causalidade."
+      "explanation": "A Anvisa cancelou o registro condicional do Elevidys. As propostas oncológicas estão abertas a contribuições e não substituem os protocolos vigentes."
     }
   ]
 };
