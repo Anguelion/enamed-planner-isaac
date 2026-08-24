@@ -444,14 +444,27 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Essa senhora tem anemia megaloblástica causada pela metformina (que atrapalha a absorção de B12 a longo prazo), e o tratamento certo é repor cobalamina (vitamina B12). Um detalhe importante: quando a medula 'acorda' e começa a produzir sangue novo rapidamente após o início do tratamento, ela consome muito potássio pra formar as novas células — isso pode causar uma queda perigosa do potássio no sangue (hipocalemia), levando a arritmias se não for monitorado.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Tratamento da anemia megaloblástica",
+        "Complicações do tratamento da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967779",
-      "ankiGuid": "jB;IfRHuh("
+      "ankiGuid": "jB;IfRHuh(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino955f2d0d1f/",
+        "sourceQuestionId": "4000143323",
+        "matchedAt": "2026-08-24T07:31:54.335Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d07bcbfb99485791",
@@ -478,14 +491,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fadiga progressiva, formigamento nas mãos e pés, dificuldade de concentração, anemia macrocítica com neutrófilos hipersegmentados — é o quadro clássico da anemia perniciosa (falta de vitamina B12 por causa autoimune).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967780",
-      "ankiGuid": "t4`h}kCoX/"
+      "ankiGuid": "t4`h}kCoX/",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-50-vem-a382b75b288/",
+        "sourceQuestionId": "4000143308",
+        "matchedAt": "2026-08-24T07:32:00.197Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-b95d651d2744e4b9",
@@ -511,14 +537,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depressão, diarreia, queda de cabelo, formigamento e fraqueza num paciente que fez cirurgia bariátrica há 12 anos (tempo suficiente pra esgotar os estoques de B12, que duram anos) — anemia macrocítica com neutrófilos hipersegmentados confirma a suspeita. A conduta é prescrever vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967781",
-      "ankiGuid": "t44h=6Eo^X"
+      "ankiGuid": "t44h=6Eo^X",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-54a-com-historia68ed4624ce/",
+        "sourceQuestionId": "4000141139",
+        "matchedAt": "2026-08-24T07:32:06.513Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-7f16572907f811a3",
@@ -545,14 +582,35 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Formigamento nas mãos e pés numa diabética em uso de metformina (remédio que atrapalha a absorção de B12) — o hemograma com anemia macrocítica (VCM 115) e pancitopenia leve, junto com a presença de pleocariócitos (células grandes anormais, típicas da medula megaloblástica) no esfregaço, aponta pra deficiência de vitamina B12. O sangramento pela hemorroida é só um achado paralelo, não explica esse tipo de anemia.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967782",
-      "ankiGuid": "miKu~HHO~%"
+      "ankiGuid": "miKu~HHO~%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/",
+        "sourceQuestionId": "4000125755",
+        "matchedAt": "2026-08-24T07:32:12.355Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-b4aa32a8d8500034",
@@ -579,14 +637,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A gastrite crônica autoimune (quando o próprio sistema imune ataca as células do estômago que produzem o fator intrínseco necessário pra absorver B12) está classicamente associada à anemia perniciosa — a forma autoimune da deficiência de vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Gastroenterologia",
+        "Estômago",
+        "Gastrites",
+        "Classificação das Gastrites",
+        "Gastrite Autoimune",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967783",
-      "ankiGuid": "M/{=E=+odL"
+      "ankiGuid": "M/{=E=+odL",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-34-anos31209519a0/",
+        "sourceQuestionId": "4000124116",
+        "matchedAt": "2026-08-24T07:32:18.511Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-145312ccad8866e9",

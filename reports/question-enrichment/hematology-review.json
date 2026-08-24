@@ -217,7 +217,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: A. Assunto: Anemias hemolíticas. Conduta/resposta: Esferocitose hereditária: o diagnóstico baseia-se na anemia crônica, reticulocitose esferocitose e curva de fragilidade osmótica diminuída.",
       "reviewedAt": "2026-08-22T18:51:56.982Z"
+    },
+    "anki-hematologia-anemias-hemoliticas-0f715520ae052e72": {
+      "id": "anki-hematologia-anemias-hemoliticas-0f715520ae052e72",
+      "number": "1045f",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.8606060606060606,
+        "options": 0,
+        "combined": 0.6024242424242424
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-08-24T07:31:47.814Z"
     }
   },
-  "updatedAt": "2026-08-22T18:51:56.983Z"
+  "updatedAt": "2026-08-24T07:31:47.814Z"
 }

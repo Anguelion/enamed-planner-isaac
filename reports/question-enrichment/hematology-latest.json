@@ -1,27 +1,135 @@
 {
-  "generatedAt": "2026-08-23T18:51:00.709Z",
+  "generatedAt": "2026-08-24T07:31:46.528Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-f1616595f5f3e971",
-      "number": "1004e",
+      "id": "anki-hematologia-anemias-hemoliticas-0f715520ae052e72",
+      "number": "1045f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-22-anos-idade1004c4c4df6/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.8606060606060606,
+        "options": 0,
+        "combined": 0.6024242424242424
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-c9c1a1df7fe61df8",
+      "number": "1010e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-57-anos-procura727fe355e3/",
-      "sourceQuestionId": "4000182252",
-      "matchedAt": "2026-08-23T18:51:01.990Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino955f2d0d1f/",
+      "sourceQuestionId": "4000143323",
+      "matchedAt": "2026-08-24T07:31:54.335Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Tratamento da anemia megaloblástica",
+        "Complicações do tratamento da anemia megaloblástica"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Complicações do tratamento da anemia megaloblástica. Conduta/resposta: anemia megaloblástica, metformina, cobalamina e hipocalemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino955f2d0d1f/",
+        "https://med.estrategia.com/public/questoes/Paciente-50-anos-sexo9881ec1a7a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-d07bcbfb99485791",
+      "number": "1011e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-50-vem-a382b75b288/",
+      "sourceQuestionId": "4000143308",
+      "matchedAt": "2026-08-24T07:32:00.197Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Anemia perniciosa. Conduta/resposta: anemia perniciosa.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-50-vem-a382b75b288/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-b95d651d2744e4b9",
+      "number": "1012e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-54a-com-historia68ed4624ce/",
+      "sourceQuestionId": "4000141139",
+      "matchedAt": "2026-08-24T07:32:06.513Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Deficiência de vitamina B12. Conduta/resposta: Vitamina B12.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-54a-com-historia68ed4624ce/",
+        "https://med.estrategia.com/public/questoes/4b7bf8306ba769736b4b3d7f/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-7f16572907f811a3",
+      "number": "1013e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/",
+      "sourceQuestionId": "4000125755",
+      "matchedAt": "2026-08-24T07:32:12.355Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -29,118 +137,31 @@
         "Anemias macrocíticas",
         "Anemia megaloblástica",
         "Quadro clínico da anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Anemia perniciosa"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemia perniciosa. Conduta/resposta: perniciosa",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-57-anos-procura727fe355e3/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-d552c3d14fa46c35",
-      "number": "1005e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Senhor-70-anos-sempre78b28ac21e/",
-      "sourceQuestionId": "4000181683",
-      "matchedAt": "2026-08-23T18:51:08.356Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: deficiência de vitamina B12.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Senhor-70-anos-sempre78b28ac21e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-040a1d0d930aca47",
-      "number": "1006e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Que-exame-complementar262cc403f6/",
-      "sourceQuestionId": "4000173522",
-      "matchedAt": "2026-08-23T18:51:14.364Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Anemia perniciosa"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Anemia perniciosa. Conduta/resposta: Pesquisa do anticorpo antifator intrínseco",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Que-exame-complementar262cc403f6/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-c7a83f56254d3c4a",
-      "number": "1007e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-50-anos76eeab7fba/",
-      "sourceQuestionId": "4000169305",
-      "matchedAt": "2026-08-23T18:51:21.040Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Causas de anemia megaloblástica"
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Causas de anemia megaloblástica. Conduta/resposta: Devemos considerar os fármacos em uso como prováveis causadores do quadro.",
+      "comment": "Gabarito confirmado: D. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: deficiência de vitamina B12.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-50-anos76eeab7fba/",
-        "https://med.estrategia.com/public/questoes/Homem-50-anos-idade-e150f98bc074/",
-        "https://med.estrategia.com/public/questoes/homem-com-50-anos2422a603b93/"
+        "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-d6ea83a2b25094e9",
-      "number": "1008e",
+      "id": "anki-hematologia-anemias-macrociticas-b4aa32a8d8500034",
+      "number": "1014e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-masculino-81145e234912f/",
-      "sourceQuestionId": "4000164646",
-      "matchedAt": "2026-08-23T18:51:26.905Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-34-anos31209519a0/",
+      "sourceQuestionId": "4000124116",
+      "matchedAt": "2026-08-24T07:32:18.511Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -151,44 +172,21 @@
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
+        "Gastroenterologia",
+        "Estômago",
+        "Gastrites",
+        "Classificação das Gastrites",
+        "Gastrite Autoimune",
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica"
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: A hipótese diagnóstica mais provável é de anemia por deficiência de vitamina B12, que explica as manifestações clínicas e laboratoriais",
+      "comment": "Gabarito confirmado: A. Assunto: Anemia perniciosa. Conduta/resposta: anemia perniciosa.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-masculino-81145e234912f/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-17eac26cc687fd33",
-      "number": "1009e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-76-anos-refere126102be3fa/",
-      "sourceQuestionId": "4000164288",
-      "matchedAt": "2026-08-23T18:51:33.054Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Deficiência de vitamina B12.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-76-anos-refere126102be3fa/",
-        "https://med.estrategia.com/public/questoes/4bd3a63efd5c88c34cb79408/"
+        "https://med.estrategia.com/public/questoes/Paciente-34-anos31209519a0/"
       ]
     }
   ]
