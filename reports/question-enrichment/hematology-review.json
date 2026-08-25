@@ -233,7 +233,31 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-08-24T07:31:47.814Z"
+    },
+    "anki-hematologia-anemias-hemoliticas-25ac78f62c219563": {
+      "id": "anki-hematologia-anemias-hemoliticas-25ac78f62c219563",
+      "number": "1052f",
+      "status": "answer_mismatch",
+      "localAnswer": "A",
+      "remoteAnswer": "B",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-4-anos-ha-41758c2ed332/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda"
+      ],
+      "suggestedComment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: Transfusão de troca (sangria + transfusão).",
+      "reviewedAt": "2026-08-25T07:11:44.570Z"
     }
   },
-  "updatedAt": "2026-08-24T07:31:47.814Z"
+  "updatedAt": "2026-08-25T07:11:44.570Z"
 }

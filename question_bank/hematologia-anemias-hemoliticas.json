@@ -2258,7 +2258,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com hemoglobinopatia conhecida, piora respiratória, hipoxemia importante (saturação 85%!), estertores num pulmão — quadro grave, provavelmente síndrome torácica aguda. Diante da gravidade e da hipoxemia, além do tratamento da infecção respiratória, a transfusão de concentrado de hemácias é uma medida importante pra melhorar a oferta de oxigênio.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
@@ -2293,14 +2293,28 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Adolescente com anemia falciforme, febre, tosse, dor torácica e taquipneia — quadro sugestivo de síndrome torácica aguda. A conduta inicial é internar e começar antibióticos que cobrem tanto germes típicos quanto atípicos (ceftriaxone + claritromicina).",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350394",
-      "ankiGuid": "FN(P>|*Q?E"
+      "ankiGuid": "FN(P>|*Q?E",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-masculino7582ad3901/",
+        "sourceQuestionId": "4000111806",
+        "matchedAt": "2026-08-25T07:11:51.098Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-bef6ed647ce5d8db",
@@ -2394,14 +2408,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No teste do pezinho, o padrão FAS (com as três hemoglobinas: fetal, adulta normal E a S) indica que o bebê tem o traço falciforme — ou seja, herdou a hemoglobina S de um dos pais, mas também tem a hemoglobina A normal do outro, então não desenvolve a doença, só carrega o traço geneticamente.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Fisiopatologia da anemia falciforme",
+        "Herança genética das hemoglobinopatias S",
+        "Traço falcêmico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350397",
-      "ankiGuid": "hUj><G4ZiL"
+      "ankiGuid": "hUj><G4ZiL",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pais-procuram-servic386b4a2d5b/",
+        "sourceQuestionId": "4000093822",
+        "matchedAt": "2026-08-25T07:11:57.102Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-80323f63f5e93ed5",
@@ -2427,14 +2455,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Adolescente com anemia falciforme teve um AVC isquêmico confirmado por ressonância — depois de um evento desses, o jeito mais eficaz de prevenir um novo AVC é entrar num programa de exsanguineotransfusão periódica: trocar regularmente parte do sangue do paciente por sangue de doador, reduzindo a porcentagem de hemácias falciformes circulando e, assim, o risco de novos entupimentos nos vasos do cérebro.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Acidente vascular encefálico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350398",
-      "ankiGuid": "kPbT0k,oXN"
+      "ankiGuid": "kPbT0k,oXN",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-17-anos-com9171399b3c/",
+        "sourceQuestionId": "4000086119",
+        "matchedAt": "2026-08-25T07:12:03.525Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-65c3d64b88e1111d",

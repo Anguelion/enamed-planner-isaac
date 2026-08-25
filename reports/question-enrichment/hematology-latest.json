@@ -1,54 +1,28 @@
 {
-  "generatedAt": "2026-08-24T19:04:02.459Z",
+  "generatedAt": "2026-08-25T07:11:43.345Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-55f0a8853209faa5",
-      "number": "1046f",
+      "id": "anki-hematologia-anemias-hemoliticas-25ac78f62c219563",
+      "number": "1052f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-dois-anos-com53afc606df/",
-      "sourceQuestionId": "4000064873",
-      "matchedAt": "2026-08-24T19:04:03.562Z",
-      "similarity": {
-        "stem": 0.9894736842105263,
-        "options": 0.8265734265734265,
-        "combined": 0.9406036069193964
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Hematologia. Conduta/resposta: Analgesia - internar com antibioticoterapia via parenteral.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Lactente-dois-anos-com53afc606df/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-516e98f91f12a9a8",
-      "number": "1047f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-dois-anos13838281398/",
-      "sourceQuestionId": "4000120591",
-      "matchedAt": "2026-08-24T19:04:10.073Z",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-4-anos-ha-41758c2ed332/",
+      "sourceQuestionId": "4000112748",
+      "matchedAt": "2026-08-25T07:11:44.570Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
       "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
+      "remoteAnswer": "B",
+      "answerMismatch": true,
       "tags": [
         "Clínica Médica",
         "Hematologia",
@@ -58,112 +32,20 @@
         "Complicações agudas da anemia falciforme",
         "Síndrome torácica aguda"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome torácica aguda. Conduta/resposta: síndrome torácica aguda, iniciar antibioticoterapia, hidratação e oxigênio suplementar imediatamente e, após resultados de exames, realizar transfusão se for necessário.",
+      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: Transfusão de troca (sangria + transfusão).",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-dois-anos13838281398/",
-        "https://med.estrategia.com/public/questoes/Paciente-2-anos-idade1028976c515/"
+        "https://med.estrategia.com/public/questoes/Menino-4-anos-ha-41758c2ed332/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-fb58df78533cbb60",
-      "number": "1048f",
+      "id": "anki-hematologia-anemias-hemoliticas-79427e11072ffbc1",
+      "number": "1053f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-5-anos-idade1164970cd7a/",
-      "sourceQuestionId": "4000120163",
-      "matchedAt": "2026-08-24T19:04:15.936Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Síndrome torácica aguda"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Síndrome torácica aguda. Conduta/resposta: Ceftriaxone, claritromicina e transfusão de concentrado de hemácias.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-5-anos-idade1164970cd7a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-03136497244bd65a",
-      "number": "1049f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-plaquetopenia25704f9a2d/",
-      "sourceQuestionId": "4000117323",
-      "matchedAt": "2026-08-24T19:04:22.310Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Anemias Microangiopáticas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemias Microangiopáticas. Conduta/resposta: Síndrome de Evans.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Anemia-plaquetopenia25704f9a2d/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-7ce25bb12961bb09",
-      "number": "1050f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-18-anos-com100fe3aa523/",
-      "sourceQuestionId": "4000114781",
-      "matchedAt": "2026-08-24T19:04:28.316Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Crises álgicas",
-        "Manejo das crises álgicas"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Manejo das crises álgicas. Conduta/resposta: Morfina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-18-anos-com100fe3aa523/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-e368e2e200f0425a",
-      "number": "1051f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-52-anos-procura204cda478a6/",
-      "sourceQuestionId": "4000113839",
-      "matchedAt": "2026-08-24T19:04:34.469Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-masculino7582ad3901/",
+      "sourceQuestionId": "4000111806",
+      "matchedAt": "2026-08-25T07:11:51.098Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -175,16 +57,145 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas autoimunes (AHAI)",
-        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
-        "Anemias hemolíticas autoimunes (AHAI) por anticorpos quentes",
-        "Etiologias da anemia hemolítica autoimune (AHAI) por anticorpos quentes"
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Etiologias da anemia hemolítica autoimune (AHAI) por anticorpos quentes. Conduta/resposta: Anemia hemolítica autoimune.",
+      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: Internação com ceftriaxone e claritromicina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-52-anos-procura204cda478a6/",
-        "https://med.estrategia.com/public/questoes/Paciente-50-anos127ced17481/"
+        "https://med.estrategia.com/public/questoes/Adolescente-masculino7582ad3901/",
+        "https://med.estrategia.com/public/questoes/Adolescente-13-anos61684ca59a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-f1062024594042fb",
+      "number": "1056f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pais-procuram-servic386b4a2d5b/",
+      "sourceQuestionId": "4000093822",
+      "matchedAt": "2026-08-25T07:11:57.102Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Fisiopatologia da anemia falciforme",
+        "Herança genética das hemoglobinopatias S",
+        "Traço falcêmico"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Traço falcêmico. Conduta/resposta: Traço falciforme",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Pais-procuram-servic386b4a2d5b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-80323f63f5e93ed5",
+      "number": "1057f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-17-anos-com9171399b3c/",
+      "sourceQuestionId": "4000086119",
+      "matchedAt": "2026-08-25T07:12:03.525Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Acidente vascular encefálico"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Acidente vascular encefálico. Conduta/resposta: Exsanguineotransfusão periódica",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-17-anos-com9171399b3c/",
+        "https://med.estrategia.com/public/questoes/Mulher-17-anos-idade1235dd3446a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-145312ccad8866e9",
+      "number": "1015e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Investigando-etiologia17f4a78d50/",
+      "sourceQuestionId": "4000119067",
+      "matchedAt": "2026-08-25T07:12:09.535Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Deficiência de vitamina B12. Conduta/resposta: má-absorção induzida por metformina.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Investigando-etiologia17f4a78d50/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-fd1180c618b94ecf",
+      "number": "1016e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
+      "sourceQuestionId": "4000114661",
+      "matchedAt": "2026-08-25T07:12:16.201Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: Anemia megaloblástica por deficiência de Vitamina B12, necessita de avaliação nutricional.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
+        "https://med.estrategia.com/public/questoes/Paciente-com-60-anos540481961a/"
       ]
     }
   ]

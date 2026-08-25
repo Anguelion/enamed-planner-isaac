@@ -689,14 +689,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Entre as opções, a má-absorção causada pela metformina é a causa mais provável e mais comum de deficiência de cobalamina no dia a dia — é um efeito colateral bem conhecido do uso prolongado desse remédio pra diabetes.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967784",
-      "ankiGuid": "Lz7BK[D<bR"
+      "ankiGuid": "Lz7BK[D<bR",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Investigando-etiologia17f4a78d50/",
+        "sourceQuestionId": "4000119067",
+        "matchedAt": "2026-08-25T07:12:09.535Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-fd1180c618b94ecf",
@@ -722,14 +733,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Marcha instável, formigamento, palidez com icterícia leve, dificuldade de memória, anemia macrocítica com neutrófilos hipersegmentados e plaquetas baixas — é o retrato completo da anemia megaloblástica por falta de vitamina B12, que também precisa de avaliação nutricional pra entender a causa da carência.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967785",
-      "ankiGuid": "D3KUP*PLyv"
+      "ankiGuid": "D3KUP*PLyv",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
+        "sourceQuestionId": "4000114661",
+        "matchedAt": "2026-08-25T07:12:16.201Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-deb19635fb983274",
