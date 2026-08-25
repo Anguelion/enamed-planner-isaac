@@ -784,14 +784,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Urina escura (coluria), icterícia, cansaço, formigamento nas pernas e anemia macrocítica — é o quadro clássico da anemia megaloblástica, com a 'falsa hemólise' típica (bilirrubina alta por destruição das células dentro da própria medula, não no sangue).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967786",
-      "ankiGuid": "cxoX0fB~+."
+      "ankiGuid": "cxoX0fB~+.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos-com21112096c8/",
+        "sourceQuestionId": "4000114562",
+        "matchedAt": "2026-08-25T19:05:59.882Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-91160709a3a0ac3f",
@@ -818,7 +836,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de uma cirurgia bariátrica, formigamento, palidez, esquecimento e labilidade emocional formam o quadro clássico de deficiência de vitamina B12. No hemograma, o esperado é encontrar neutrófilos HIPERsegmentados (com mais 'gomos' no núcleo do que o normal) e macro-ovalócitos (hemácias grandes e ovaladas) — a assinatura visual dessa anemia.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -852,14 +870,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idoso com gastrectomia (retirada de parte do estômago) há 10 anos, tempo suficiente pra esgotar os estoques de B12, apresenta cansaço, perda de memória e formigamento, com anemia macrocítica grave e neutrófilos hipersegmentados — deficiência de cobalamina confirmada. Como sem o estômago funcionando direito o corpo não consegue absorver bem a B12 pela boca, o tratamento precisa ser por via parenteral (injeção), não pela boca.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Neurologia",
+        "Demências",
+        "Demências Reversíveis",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967788",
-      "ankiGuid": "j(E(tE3=k+"
+      "ankiGuid": "j(E(tE3=k+",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-78-anos63e26eef6b/",
+        "sourceQuestionId": "4000092767",
+        "matchedAt": "2026-08-25T19:06:12.876Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-e9b016ed0e1362e9",
@@ -886,14 +919,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, dormência nas pernas com perda da noção de posição (propriocepção) — sinal de dano nos nervos da medula espinhal, típico da falta de B12 avançada. A língua lisa (atrofia das papilas) e os neutrófilos plurissegmentados completam o quadro. A causa mais comum por trás disso é a gastrite atrófica, que impede a produção do fator intrínseco necessário pra absorver a vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Diagnóstico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967789",
-      "ankiGuid": "N6w)++2}{a"
+      "ankiGuid": "N6w)++2}{a",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-67-anos611a53fb81/",
+        "sourceQuestionId": "4000046655",
+        "matchedAt": "2026-08-25T19:06:19.095Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-e7db93300649c536",
@@ -920,14 +967,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Apesar de não ser perfeito (pode dar falso normal em alguns casos), o exame de vitamina B12 sérica é o teste inicial com melhor custo-benefício pra suspeitar da deficiência — mais simples e barato que exames mais específicos como homocisteína ou ácido metilmalônico, que ficam reservados pra confirmar casos duvidosos.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967790",
-      "ankiGuid": "FdZe$BBwMi"
+      "ankiGuid": "FdZe$BBwMi",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes-testes1774ce4251/",
+        "sourceQuestionId": "4000030769",
+        "matchedAt": "2026-08-25T19:06:25.241Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-83e957e0979da2b5",
@@ -953,14 +1011,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, anemia com hemácias enormes (VCM 134!) e reticulócitos baixos, com neutrófilos mostrando 5-6 segmentos no núcleo (bem mais que o normal, que é até 5) — esse achado tão marcante de hipersegmentação pede a dosagem de vitamina B12 e ácido fólico, os dois principais suspeitos causadores desse tipo de anemia.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967791",
-      "ankiGuid": "JSzUCk,~A7"
+      "ankiGuid": "JSzUCk,~A7",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
+        "sourceQuestionId": "4000025920",
+        "matchedAt": "2026-08-25T19:06:32.099Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-59832abb742e60a0",

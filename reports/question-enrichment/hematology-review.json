@@ -257,7 +257,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: Transfusão de troca (sangria + transfusão).",
       "reviewedAt": "2026-08-25T07:11:44.570Z"
+    },
+    "anki-hematologia-anemias-macrociticas-91160709a3a0ac3f": {
+      "id": "anki-hematologia-anemias-macrociticas-91160709a3a0ac3f",
+      "number": "1018e",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.29473684210526313,
+        "options": 0.14336643748408454,
+        "combined": 0.24932572071890954
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-08-25T19:06:06.938Z"
     }
   },
-  "updatedAt": "2026-08-25T07:11:44.570Z"
+  "updatedAt": "2026-08-25T19:06:06.938Z"
 }

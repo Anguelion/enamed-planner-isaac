@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T07:11:43.345Z",
+  "generatedAt": "2026-08-25T19:05:58.614Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,45 +7,14 @@
   "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-25ac78f62c219563",
-      "number": "1052f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-4-anos-ha-41758c2ed332/",
-      "sourceQuestionId": "4000112748",
-      "matchedAt": "2026-08-25T07:11:44.570Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "B",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Síndrome torácica aguda"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: Transfusão de troca (sangria + transfusão).",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Menino-4-anos-ha-41758c2ed332/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-79427e11072ffbc1",
-      "number": "1053f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "id": "anki-hematologia-anemias-macrociticas-deb19635fb983274",
+      "number": "1017e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-masculino7582ad3901/",
-      "sourceQuestionId": "4000111806",
-      "matchedAt": "2026-08-25T07:11:51.098Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos-com21112096c8/",
+      "sourceQuestionId": "4000114562",
+      "matchedAt": "2026-08-25T19:05:59.882Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -53,130 +22,6 @@
       },
       "localAnswer": "B",
       "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Síndrome torácica aguda"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Síndrome torácica aguda. Conduta/resposta: Internação com ceftriaxone e claritromicina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Adolescente-masculino7582ad3901/",
-        "https://med.estrategia.com/public/questoes/Adolescente-13-anos61684ca59a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-f1062024594042fb",
-      "number": "1056f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Pais-procuram-servic386b4a2d5b/",
-      "sourceQuestionId": "4000093822",
-      "matchedAt": "2026-08-25T07:11:57.102Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Fisiopatologia da anemia falciforme",
-        "Herança genética das hemoglobinopatias S",
-        "Traço falcêmico"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Traço falcêmico. Conduta/resposta: Traço falciforme",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Pais-procuram-servic386b4a2d5b/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-80323f63f5e93ed5",
-      "number": "1057f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-17-anos-com9171399b3c/",
-      "sourceQuestionId": "4000086119",
-      "matchedAt": "2026-08-25T07:12:03.525Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Acidente vascular encefálico"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Acidente vascular encefálico. Conduta/resposta: Exsanguineotransfusão periódica",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-17-anos-com9171399b3c/",
-        "https://med.estrategia.com/public/questoes/Mulher-17-anos-idade1235dd3446a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-145312ccad8866e9",
-      "number": "1015e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Investigando-etiologia17f4a78d50/",
-      "sourceQuestionId": "4000119067",
-      "matchedAt": "2026-08-25T07:12:09.535Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Deficiência de vitamina B12. Conduta/resposta: má-absorção induzida por metformina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Investigando-etiologia17f4a78d50/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-fd1180c618b94ecf",
-      "number": "1016e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
-      "sourceQuestionId": "4000114661",
-      "matchedAt": "2026-08-25T07:12:16.201Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -192,10 +37,153 @@
         "Polineuropatias Carenciais",
         "Deficiência de Vitamina B12 e Ácido Fólico"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: Anemia megaloblástica por deficiência de Vitamina B12, necessita de avaliação nutricional.",
+      "comment": "Gabarito confirmado: B. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: anemia megaloblástica;",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
-        "https://med.estrategia.com/public/questoes/Paciente-com-60-anos540481961a/"
+        "https://med.estrategia.com/public/questoes/Mulher-45-anos-com21112096c8/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-91160709a3a0ac3f",
+      "number": "1018e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino58ac27ccda/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino656c859224/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.29473684210526313,
+        "options": 0.14336643748408454,
+        "combined": 0.24932572071890954
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-e4837cc95399ac5c",
+      "number": "1019e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-78-anos63e26eef6b/",
+      "sourceQuestionId": "4000092767",
+      "matchedAt": "2026-08-25T19:06:12.876Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Neurologia",
+        "Demências",
+        "Demências Reversíveis",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Deficiência de vitamina B12. Conduta/resposta: deficiência de cobalamina; administração parenteral de vitamina B12",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-78-anos63e26eef6b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-e9b016ed0e1362e9",
+      "number": "1020e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-67-anos611a53fb81/",
+      "sourceQuestionId": "4000046655",
+      "matchedAt": "2026-08-25T19:06:19.095Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Diagnóstico da anemia megaloblástica"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico da anemia megaloblástica. Conduta/resposta: Gastrite atrófica",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-67-anos611a53fb81/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-e7db93300649c536",
+      "number": "1021e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes-testes1774ce4251/",
+      "sourceQuestionId": "4000030769",
+      "matchedAt": "2026-08-25T19:06:25.241Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Deficiência de vitamina B12. Conduta/resposta: Vitamina B12 sérica",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Qual-seguintes-testes1774ce4251/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-83e957e0979da2b5",
+      "number": "1022e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
+      "sourceQuestionId": "4000025920",
+      "matchedAt": "2026-08-25T19:06:32.099Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: dosagem de B12 e folato.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
+        "https://med.estrategia.com/public/questoes/edc0bf861195348866824e3d/"
       ]
     }
   ]

@@ -1330,7 +1330,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-deb19635fb983274": {
+      "number": "1017e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-25T19:05:59.885Z",
+      "nextAttemptAt": "2026-09-01T19:05:59.885Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos-com21112096c8/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-macrociticas-91160709a3a0ac3f": {
+      "number": "1018e",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-25T19:06:06.938Z",
+      "nextAttemptAt": "2026-10-24T19:06:06.938Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-e4837cc95399ac5c": {
+      "number": "1019e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-25T19:06:12.877Z",
+      "nextAttemptAt": "2026-09-01T19:06:12.877Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-78-anos63e26eef6b/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-macrociticas-e9b016ed0e1362e9": {
+      "number": "1020e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-25T19:06:19.096Z",
+      "nextAttemptAt": "2026-09-01T19:06:19.096Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-67-anos611a53fb81/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-e7db93300649c536": {
+      "number": "1021e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-25T19:06:25.241Z",
+      "nextAttemptAt": "2026-09-01T19:06:25.241Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes-testes1774ce4251/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-83e957e0979da2b5": {
+      "number": "1022e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-25T19:06:32.100Z",
+      "nextAttemptAt": "2026-09-01T19:06:32.100Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-08-25T07:12:16.202Z"
+  "updatedAt": "2026-08-25T19:06:32.100Z"
 }
