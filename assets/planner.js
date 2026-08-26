@@ -5099,7 +5099,7 @@ function bindCasoDoDia() {
   };
   guessInput?.addEventListener('input', renderSuggestions);
   guessInput?.addEventListener('focus', renderSuggestions);
-  suggestionsBox?.addEventListener('mousedown', event => {
+  suggestionsBox?.addEventListener('pointerdown', event => {
     const button = event.target.closest('[data-caso-suggestion]');
     if(!button) return;
     event.preventDefault();
@@ -5114,7 +5114,6 @@ function bindCasoDoDia() {
   guessInput?.closest('.caso-guess-wrap')?.addEventListener('pointerleave', () => {
     if(suggestionsBox) suggestionsBox.hidden = true;
   });
-  guessInput?.addEventListener('blur', () => { setTimeout(() => { if(suggestionsBox) suggestionsBox.hidden = true; }, 150); });
   document.getElementById('casoDoDiaSkip')?.addEventListener('click', () => {
     progress.lastFeedback = null;
     advance();
