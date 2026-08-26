@@ -2767,6 +2767,7 @@ function bindPersonalDailyTasks(date) {
   const focusTaskEditor=()=>requestAnimationFrame(()=>{
     const manager=document.getElementById('personalTaskManager');
     if(manager) manager.open=true;
+    document.querySelectorAll('[data-new-task-weekday]').forEach(box => { box.checked=false; });
     const recurrence=document.getElementById('personalTaskRecurrence');
     if(ui.personalTaskEditorMode==='create-recurring' && recurrence) recurrence.value='daily';
     document.getElementById('personalTaskInput')?.focus();
