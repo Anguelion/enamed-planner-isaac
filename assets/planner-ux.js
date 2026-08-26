@@ -81,6 +81,7 @@
         occurrenceKey:key,
         date,
         text:template.text,
+        time:template.time || '',
         done:false,
         status:'pending',
         priority:Number(template.priority)||0,

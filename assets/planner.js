@@ -2693,6 +2693,7 @@ function ensureDailyTasks() {
     occurrenceKey: task.occurrenceKey || PlannerUX?.occurrenceKey(task.templateId || `task-template-${task.id || index}`, task.date || studyDateKey()),
     date: task.date || studyDateKey(),
     text: String(task.text || '').trim(),
+    time: /^\d{2}:\d{2}$/.test(String(task.time || '')) ? task.time : '',
     done: Boolean(task.done),
     status: task.status || (task.done ? 'done' : 'pending'),
     priority: Math.min(3, Math.max(0, n(task.priority))),
@@ -2718,7 +2719,7 @@ function dailyTasksFor(date) {
   state.dailyTasks=PlannerUX?.ensureOccurrences(state.taskTemplates,state.dailyTasks,date,new Date().toISOString())||state.dailyTasks;
   return state.dailyTasks.filter(task => task.date === date && task.status !== 'deleted').sort((a,b) => {
     if(a.done !== b.done) return a.done ? 1 : -1;
-    return n(b.priority) - n(a.priority) || n(a.order) - n(b.order) || (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0);
+    return String(a.time || '99:99').localeCompare(String(b.time || '99:99')) || n(b.priority) - n(a.priority) || n(a.order) - n(b.order) || (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0);
   });
 }
 function renderPersonalDailyTasks(date) {
@@ -2731,14 +2732,14 @@ function renderPersonalDailyTasks(date) {
   const taskRows = visibleTasks.map((task,index) => {
     const editing = ui.personalTaskEditId === task.id;
     const stars = [1,2,3].map(value => `<button class="personal-task-star ${value <= n(task.priority) ? 'active' : ''}" data-task-priority="${escapeAttr(task.id)}" data-priority-value="${value}" title="Prioridade ${value} de 3" aria-label="Prioridade ${value} de 3">★</button>`).join('');
-    const editor = editing ? `<div class="personal-task-editor"><input class="input" data-task-edit-text="${escapeAttr(task.id)}" value="${escapeAttr(task.text)}" maxlength="180"><input class="input task-order-input" type="number" min="1" step="1" data-task-edit-order="${escapeAttr(task.id)}" value="${n(task.order) || index + 1}"><button class="tiny-btn" data-task-edit-save="${escapeAttr(task.id)}">Salvar</button><button class="tiny-btn" data-task-edit-cancel="${escapeAttr(task.id)}">Cancelar</button></div>` : '';
-    return `<div class="personal-task-row ${task.done ? 'done' : ''} ${task.status==='postponed'?'postponed':''}"><div class="personal-task-main"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''} ${task.status==='postponed'?'disabled':''}><span class="personal-task-text">${escapeHtml(task.text)}</span></label>${task.status==='postponed'?`<small class="muted">Adiada para ${fmtDate(task.postponedTo)}</small>`:''}${editor}</div><div class="personal-task-actions"><div class="personal-task-priority" title="Prioridade ${n(task.priority) || 0} de 3 estrelas">${stars}</div>${!task.done&&task.status!=='postponed'?`<button class="tiny-btn" type="button" data-task-postpone="${escapeAttr(task.id)}" title="Mover para o próximo dia" aria-label="Mover para o próximo dia">${iconSvg('next',{weight:'regular'})}</button>`:''}<button class="tiny-btn" type="button" data-task-edit="${escapeAttr(task.id)}" title="Editar tarefa" aria-label="Editar tarefa">✎</button><button class="tiny-btn danger personal-task-remove" type="button" title="Excluir tarefa" aria-label="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">×</button></div></div>`;
+    const editor = editing ? `<div class="personal-task-editor"><input class="input" data-task-edit-text="${escapeAttr(task.id)}" value="${escapeAttr(task.text)}" maxlength="180"><input class="input task-time-input" type="time" data-task-edit-time="${escapeAttr(task.id)}" value="${escapeAttr(task.time)}"><input class="input task-order-input" type="number" min="1" step="1" data-task-edit-order="${escapeAttr(task.id)}" value="${n(task.order) || index + 1}"><button class="tiny-btn" data-task-edit-save="${escapeAttr(task.id)}">Salvar</button><button class="tiny-btn" data-task-edit-cancel="${escapeAttr(task.id)}">Cancelar</button></div>` : '';
+    return `<div class="personal-task-row ${task.done ? 'done' : ''} ${task.status==='postponed'?'postponed':''}"><div class="personal-task-main"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''} ${task.status==='postponed'?'disabled':''}>${task.time?`<time class="personal-task-time">${escapeHtml(task.time)}</time>`:''}<span class="personal-task-text">${escapeHtml(task.text)}</span></label>${task.status==='postponed'?`<small class="muted">Adiada para ${fmtDate(task.postponedTo)}</small>`:''}${editor}</div><div class="personal-task-actions"><div class="personal-task-priority" title="Prioridade ${n(task.priority) || 0} de 3 estrelas">${stars}</div>${!task.done&&task.status!=='postponed'?`<button class="tiny-btn" type="button" data-task-postpone="${escapeAttr(task.id)}" title="Mover para o próximo dia" aria-label="Mover para o próximo dia">${iconSvg('next',{weight:'regular'})}</button>`:''}<button class="tiny-btn" type="button" data-task-edit="${escapeAttr(task.id)}" title="Editar tarefa" aria-label="Editar tarefa">✎</button><button class="tiny-btn danger personal-task-remove" type="button" title="Excluir tarefa" aria-label="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">×</button></div></div>`;
   }).join('');
   const weekdays=['D','S','T','Q','Q','S','S'].map((label,index)=>`<label class="task-weekday" title="${['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'][index]}"><input type="checkbox" data-new-task-weekday="${index}" ${index>0&&index<6?'checked':''}><span>${label}</span></label>`).join('');
   const pending=tasks.filter(task=>!task.done&&task.status!=='postponed').length;
   const editorMode=ui.personalTaskEditorMode||'';
   const emptyState = `<div class="personal-task-empty"><strong>Seu dia está livre nesta data.</strong><span>Crie uma tarefa pontual ou uma rotina recorrente.</span><div><button class="tiny-btn primary" type="button" data-open-task-manager="single">Adicionar tarefa</button><button class="tiny-btn" type="button" data-open-task-manager="recurring">Criar recorrente</button></div></div>`;
-  return `<div class="card personal-tasks-card dashboard-tasks-card ${editorMode?'is-expanded':''}" data-task-editor-mode="${escapeAttr(editorMode)}"><div class="section-title"><div><span class="eyebrow">Agenda pessoal</span><h2>Tarefas de hoje</h2></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="dashboard-task-summary"><div><strong>${pending}</strong><span>Pendentes</span></div><div><strong>${completed}</strong><span>Concluídas</span></div></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>${tasks.length>visibleTasks.length?`<div class="muted dashboard-task-more">+ ${tasks.length-visibleTasks.length} tarefa${tasks.length-visibleTasks.length===1?'':'s'}</div>`:''}` : emptyState}<details class="personal-task-manage" id="personalTaskManager" ${editorMode?'open':''}><summary>Adicionar ou escolher outra data</summary><div class="personal-task-manage-head">${editorMode?`<span class="eyebrow">Editor de tarefas</span><button class="tiny-btn" type="button" data-close-personal-task-editor aria-label="Fechar formulário de tarefas">Fechar</button>`:''}</div><div class="personal-task-date-tools"><button class="tiny-btn" id="personalTaskPrev" aria-label="Dia anterior">‹</button><label class="sr-only" for="personalTaskDate">Data das tarefas</label><input class="input" id="personalTaskDate" type="date" value="${escapeAttr(selectedDate)}"><button class="tiny-btn" id="personalTaskNext" aria-label="Dia seguinte">›</button><button class="tiny-btn" id="personalTaskToday">Hoje</button><label class="sr-only" for="personalTaskFilter">Filtrar tarefas</label><select class="select" id="personalTaskFilter"><option value="all" ${filter==='all'?'selected':''}>Todas</option><option value="pending" ${filter==='pending'?'selected':''}>Pendentes</option><option value="done" ${filter==='done'?'selected':''}>Concluídas</option><option value="overdue" ${filter==='overdue'?'selected':''}>Atrasadas</option></select></div><div class="personal-task-add"><label class="sr-only" for="personalTaskInput">Descrição da tarefa</label><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria"><label class="sr-only" for="personalTaskRecurrence">Recorrência da tarefa</label><select class="select" id="personalTaskRecurrence"><option value="none">Uma vez</option><option value="daily">Todo dia</option><option value="weekdays">Dias escolhidos</option></select><fieldset class="task-weekdays"><legend>Dias da semana</legend>${weekdays}</fieldset><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar tarefa" aria-label="Adicionar tarefa">${iconSvg('plus')}</button></div></details></div>`;
+  return `<div class="card personal-tasks-card dashboard-tasks-card ${editorMode?'is-expanded':''}" data-task-editor-mode="${escapeAttr(editorMode)}"><div class="section-title"><div><span class="eyebrow">Seu cronograma de estudo</span><h2>O que temos para hoje?</h2></div><span class="personal-tasks-count">${completed}/${tasks.length || 0}</span></div><div class="dashboard-task-summary"><div><strong>${pending}</strong><span>Pendentes</span></div><div><strong>${completed}</strong><span>Concluídas</span></div></div>${tasks.length ? `<div class="personal-task-list">${taskRows}</div>${tasks.length>visibleTasks.length?`<div class="muted dashboard-task-more">+ ${tasks.length-visibleTasks.length} tarefa${tasks.length-visibleTasks.length===1?'':'s'}</div>`:''}` : emptyState}<details class="personal-task-manage" id="personalTaskManager" ${editorMode?'open':''}><summary>Adicionar atividade ou escolher outra data</summary><div class="personal-task-manage-head">${editorMode?`<span class="eyebrow">Planejar atividade</span><button class="tiny-btn" type="button" data-close-personal-task-editor aria-label="Fechar formulário de tarefas">Fechar</button>`:''}</div><div class="personal-task-date-tools"><button class="tiny-btn" id="personalTaskPrev" aria-label="Dia anterior">‹</button><label class="sr-only" for="personalTaskDate">Data das tarefas</label><input class="input" id="personalTaskDate" type="date" value="${escapeAttr(selectedDate)}"><button class="tiny-btn" id="personalTaskNext" aria-label="Dia seguinte">›</button><button class="tiny-btn" id="personalTaskToday">Hoje</button><label class="sr-only" for="personalTaskFilter">Filtrar tarefas</label><select class="select" id="personalTaskFilter"><option value="all" ${filter==='all'?'selected':''}>Todas</option><option value="pending" ${filter==='pending'?'selected':''}>Pendentes</option><option value="done" ${filter==='done'?'selected':''}>Concluídas</option><option value="overdue" ${filter==='overdue'?'selected':''}>Atrasadas</option></select></div><div class="personal-task-add"><label class="sr-only" for="personalTaskInput">Descrição da tarefa</label><input class="input" id="personalTaskInput" type="text" maxlength="180" placeholder="Ex.: revisar gasometria · fazer 20 questões"><label class="sr-only" for="personalTaskTime">Horário da atividade</label><input class="input personal-task-time-input" id="personalTaskTime" type="time"><label class="sr-only" for="personalTaskRecurrence">Recorrência da tarefa</label><select class="select" id="personalTaskRecurrence"><option value="none">Uma vez</option><option value="daily">Todo dia</option><option value="weekdays">Dias escolhidos</option></select><fieldset class="task-weekdays"><legend>Dias da semana</legend>${weekdays}</fieldset><button class="icon-btn primary personal-task-add-button" id="addPersonalTask" type="button" title="Adicionar atividade" aria-label="Adicionar atividade">${iconSvg('plus')}</button></div></details></div>`;
 }
 function bindPersonalDailyTasks(date) {
   const selectedDate=ui.personalTaskDate||date;
@@ -2751,7 +2752,8 @@ function bindPersonalDailyTasks(date) {
     const templateId=`task-template-${Date.now()}-${Math.random().toString(36).slice(2,7)}`;
     const recurrence=document.getElementById('personalTaskRecurrence')?.value||'none';
     const weekdays=[...document.querySelectorAll('[data-new-task-weekday]:checked')].map(box=>n(box.dataset.newTaskWeekday));
-    state.taskTemplates.push({id:templateId,text,recurrence,weekdays,date:selectedDate,startDate:selectedDate,priority:0,order:state.dailyTasks.filter(task => task.date === selectedDate).length + 1,active:true,createdAt:now,updatedAt:now});
+    const time=document.getElementById('personalTaskTime')?.value || '';
+    state.taskTemplates.push({id:templateId,text,time,recurrence,weekdays,date:selectedDate,startDate:selectedDate,priority:0,order:state.dailyTasks.filter(task => task.date === selectedDate).length + 1,active:true,createdAt:now,updatedAt:now});
     state.dailyTasks=PlannerUX?.ensureOccurrences(state.taskTemplates,state.dailyTasks,selectedDate,now)||state.dailyTasks;
     persist();
   };
@@ -2847,10 +2849,11 @@ function bindPersonalDailyTasks(date) {
     const text = document.querySelector(`[data-task-edit-text="${CSS.escape(id)}"]`)?.value?.trim();
     if(!text) return;
     task.text = text;
+    task.time = document.querySelector(`[data-task-edit-time="${CSS.escape(id)}"]`)?.value || '';
     task.order = Math.max(1, n(document.querySelector(`[data-task-edit-order="${CSS.escape(id)}"]`)?.value) || 1);
     task.updatedAt = new Date().toISOString();
     const template=state.taskTemplates.find(item=>item.id===task.templateId);
-    if(template) { template.text=task.text;template.order=task.order;template.updatedAt=task.updatedAt; }
+    if(template) { template.text=task.text;template.time=task.time;template.order=task.order;template.updatedAt=task.updatedAt; }
     ui.personalTaskEditId = '';
     ui.personalTaskEditorMode = null;
     persist();
@@ -6492,6 +6495,7 @@ function buildHistoryRow(date) {
   fcEvents.forEach(e => topics.add(e.topic));
   videoEvents.forEach(t => topics.add(topicForVideoEvent(t)));
   blockEvents.forEach(t => topics.add(topicForBlockCompletion(t)));
+  (state.dailyTasks || []).filter(task => task.date === date && task.done && task.status !== 'deleted').forEach(task => topics.add(`${task.time ? `${task.time} · ` : ''}${task.text}`));
   if(!topics.size && log.videoNames) topics.add(log.videoNames);
   const videoIds = new Set(videoEvents.map(t => t.metadata?.scheduleId || t.source_id).filter(Boolean));
   const hasAutoQuestions = qRows.length > 0;
@@ -6512,7 +6516,26 @@ function historyRows() {
   (state.simuladoRuns || []).forEach(run => { const d = run.finishedAt ? answerDate(run.finishedAt) : ''; if(d) dates.add(d); });
   (state.flashcardSystem?.reviewLogs || []).forEach(log => { const d = answerDate(log.reviewedAt); if(d) dates.add(d); });
   (state.gamification?.xpTransactions || []).forEach(t => { if(['video_progress','video_completion','block_completion'].includes(t.activity_type)) { const d = t.occurred_at ? answerDate(t.occurred_at) : ''; if(d) dates.add(d); } });
+  (state.dailyTasks || []).forEach(task => { if(task.done && task.status !== 'deleted' && task.date) dates.add(task.date); });
   return [...dates].filter(date => date <= today && !hiddenDates.has(date)).map(buildHistoryRow).sort((a,b) => b.date.localeCompare(a.date));
+}
+function renderStudyAgendaCalendar() {
+  const month = ui.taskHistoryMonth || studyDateKey().slice(0,7);
+  const [year,monthNumber] = month.split('-').map(Number);
+  const first = new Date(year, monthNumber - 1, 1);
+  const lastDay = new Date(year, monthNumber, 0).getDate();
+  const offset = (first.getDay() + 6) % 7;
+  const completed = new Map();
+  (state.dailyTasks || []).filter(task => task.done && task.status !== 'deleted').forEach(task => completed.set(task.date, (completed.get(task.date) || 0) + 1));
+  const cells = Array.from({length:offset + lastDay}, (_,index) => {
+    if(index < offset) return '<span class="study-calendar-day is-blank"></span>';
+    const day=index-offset+1;
+    const date=`${month}-${String(day).padStart(2,'0')}`;
+    const count=completed.get(date)||0;
+    return `<button type="button" class="study-calendar-day ${count?'has-study':''}" data-study-calendar-date="${date}" title="${count?`${count} atividade${count===1?'':'s'} concluída${count===1?'':'s'}`:'Sem atividade concluída'}"><b>${day}</b>${count?`<small>${count} ✓</small>`:''}</button>`;
+  }).join('');
+  const label=new Intl.DateTimeFormat('pt-BR',{month:'long',year:'numeric'}).format(first);
+  return `<section class="card study-calendar"><div class="section-title"><div><span class="eyebrow">Cronograma concluído</span><h2>Calendário de estudo</h2></div><div class="study-calendar-nav"><button class="tiny-btn" data-study-calendar-move="-1" aria-label="Mês anterior">‹</button><strong>${escapeHtml(label)}</strong><button class="tiny-btn" data-study-calendar-move="1" aria-label="Próximo mês">›</button></div></div><div class="study-calendar-weekdays"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div><div class="study-calendar-grid">${cells}</div><small class="muted">Dias marcados mostram as atividades do seu cronograma que você concluiu.</small></section>`;
 }
 function renderRecentActivityCard() {
   const hiddenDates = new Set(state.hiddenHistoryDates || []);
@@ -6530,8 +6553,10 @@ function renderRecentActivityCard() {
 }
 function renderHistorico() {
   const rows = historyRows();
-  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Questões respondidas', rows.reduce((s,x)=>s+x.questions,0), `${rows.reduce((s,x)=>s+x.correct,0)} acertos no total`)}${metric('Flashcards revisados', rows.reduce((s,x)=>s+x.flashcards,0), 'cards estudados')}${metric('Vídeoaulas', rows.reduce((s,x)=>s+x.videos,0), 'aulas com progresso registrado')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+x.minutes,0))} min`, 'todas as atividades acumuladas')}</div>${renderRecentActivityCard()}<div class="card"><div class="section-title"><div><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div><button class="tiny-btn critical" id="clearAllHistoryBtn">🗑 Limpar tudo</button></div>${renderHistoryTable(rows)}</div>`;
+  document.getElementById('historico').innerHTML = `<div class="grid cards">${metric('Dias com registro', rows.length, 'dias com alguma atividade')}${metric('Questões respondidas', rows.reduce((s,x)=>s+x.questions,0), `${rows.reduce((s,x)=>s+x.correct,0)} acertos no total`)}${metric('Flashcards revisados', rows.reduce((s,x)=>s+x.flashcards,0), 'cards estudados')}${metric('Vídeoaulas', rows.reduce((s,x)=>s+x.videos,0), 'aulas com progresso registrado')}${metric('Tempo estudado', `${Math.round(rows.reduce((s,x)=>s+x.minutes,0))} min`, 'todas as atividades acumuladas')}</div>${renderStudyAgendaCalendar()}${renderRecentActivityCard()}<div class="card"><div class="section-title"><div><h2>Atividades realizadas</h2><span class="muted">${rows.length} dias</span></div><button class="tiny-btn critical" id="clearAllHistoryBtn">🗑 Limpar tudo</button></div>${renderHistoryTable(rows)}</div>`;
   document.querySelectorAll('[data-remove-history]').forEach(button => button.onclick = event => removeHistoryRecord(event.currentTarget.dataset.removeHistory));
+  document.querySelectorAll('[data-study-calendar-move]').forEach(button => button.onclick = event => { const current=ui.taskHistoryMonth || studyDateKey().slice(0,7); const [year,month]=current.split('-').map(Number); const next=new Date(year,month-1+n(event.currentTarget.dataset.studyCalendarMove),1); ui.taskHistoryMonth=`${next.getFullYear()}-${String(next.getMonth()+1).padStart(2,'0')}`; renderHistorico(); });
+  document.querySelectorAll('[data-study-calendar-date]').forEach(button => button.onclick = event => { ui.personalTaskDate=event.currentTarget.dataset.studyCalendarDate; ui.tab='painel'; render(); });
   document.getElementById('clearAllHistoryBtn')?.addEventListener('click', clearAllHistory);
 }
 function removeHistoryRecord(date) {
