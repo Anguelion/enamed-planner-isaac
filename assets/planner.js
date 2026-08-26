@@ -509,30 +509,41 @@ function nextWeekday(date) {
   return d;
 }
 function ensureRestartFromBlockTwelve() {
-  const version = 'block12-restart-2026-08-27-v1';
+  const version = 'block12-restart-2026-08-26-v4';
   const startBlock = 12;
-  const restartDate = '2026-08-27';
+  const restartDate = '2026-08-26';
+  const studyBreakDates = new Set(['2026-09-07','2026-10-12','2026-11-02','2026-11-20']);
   const schedule = state.schedule || [];
   const plannedLessons = schedule.filter(item => n(item.block) >= startBlock)
     .sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row) || byDate(a,b));
+  let expectedDate = restartDate;
+  let expectedSlot = 0;
+  const expectedDates = plannedLessons.map(() => {
+    expectedDate = nextWeekday(expectedDate);
+    while(studyBreakDates.has(expectedDate)) expectedDate = nextWeekday(addDays(expectedDate, 1));
+    const assignedDate = expectedDate;
+    const weekday = new Date(`${expectedDate}T12:00:00`).getDay();
+    expectedSlot += 1;
+    if(expectedSlot >= [0,2,1,2,1,2,0][weekday]) {
+      expectedSlot = 0;
+      expectedDate = addDays(expectedDate, 1);
+    }
+    return assignedDate;
+  });
   const planIsAligned = state.schedulePlanVersion === version
     && n(state.reschedule?.fromBlock) === startBlock
     && state.reschedule?.restartDate === restartDate
-    && plannedLessons[0]?.date === restartDate
-    && plannedLessons.at(-1)?.date === state.reschedule?.plannedFinishDate;
+    && plannedLessons.every((item, index) => item.date === expectedDates[index]);
   if(planIsAligned) return;
 
   const lessons = plannedLessons;
-  let date = restartDate;
-  let slot = 0;
   let weekIndex = 0;
   let lastWeekKey = '';
-  lessons.forEach(item => {
-    date = nextWeekday(date);
+  lessons.forEach((item, index) => {
+    const date = expectedDates[index];
     const weekday = new Date(`${date}T12:00:00`).getDay();
     // Oito aulas por semana: duas em segundas, quartas e sextas;
     // uma em terças e quintas. Fins de semana ficam livres para revisão.
-    const perDay = [0,2,1,2,1,2,0][weekday];
     if(!item.originalDate) item.originalDate = item.date;
     item.date = date;
     item.day = weekdayName(date);
@@ -543,11 +554,6 @@ function ensureRestartFromBlockTwelve() {
       weekIndex += 1;
     }
     item.week = `Missão.${weekIndex}`;
-    slot += 1;
-    if(slot >= perDay) {
-      slot = 0;
-      date = addDays(date, 1);
-    }
   });
   state.reschedule = {
     fromBlock: startBlock,
@@ -555,8 +561,9 @@ function ensureRestartFromBlockTwelve() {
     plannedFinishDate: lessons.at(-1)?.date || restartDate,
     weekdaysOnly: true,
     weeklyTarget: 8,
+    studyBreakDates: [...studyBreakDates],
     weekendCatchUp: [],
-    method: 'Blocos 12 a 30 em ordem oficial, de 27/08/2026 a 17/12/2026. Duas aulas às segundas, quartas e sextas; uma às terças e quintas. Fins de semana reservados para revisão e recuperação.'
+    method: 'Blocos 12 a 30 em ordem oficial, de 26/08/2026 a 23/12/2026. Duas aulas às segundas, quartas e sextas; uma às terças e quintas. Fins de semana e feriados nacionais reservados para revisão e recuperação.'
   };
   state.schedulePlanVersion = version;
   state.schedulePlanVersion2 = version;
