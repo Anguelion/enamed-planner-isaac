@@ -5042,6 +5042,32 @@ function renderCasoDoDia() {
     ${explanationToggle}
   </section>`;
 }
+function renderCasosParaEstudar() {
+  const saved = Object.entries(state.casoDoDia || {})
+    .filter(([,progress]) => progress?.starred)
+    .map(([key,progress]) => {
+      const number = Number(String(key).replace('caso-',''));
+      return { number, progress, item:window.CasoDoDia?.caseByNumber(number) };
+    })
+    .filter(entry => entry.item)
+    .sort((a,b) => a.number - b.number);
+  if(!saved.length) return `<section class="card casos-study-later-card"><div class="section-title"><div><span class="eyebrow">Casos salvos</span><h2>Estudar depois</h2></div><span class="casos-study-count">0</span></div><div class="casos-study-empty">Marque uma doença com a estrela no Caso do dia para ela aparecer aqui.</div></section>`;
+  return `<section class="card casos-study-later-card"><div class="section-title"><div><span class="eyebrow">Casos salvos</span><h2>Estudar depois</h2></div><span class="casos-study-count">${saved.length}</span></div><div class="casos-study-list">${saved.map(({number,item}) => `<article><span class="casos-study-icon">★</span><div><small>Caso #${number}</small><strong>${escapeHtml(item.diagnosis)}</strong></div><div class="casos-study-actions"><button class="tiny-btn" data-open-saved-case="${number}">Abrir caso</button><button class="tiny-btn danger" data-remove-saved-case="${number}" aria-label="Remover ${escapeAttr(item.diagnosis)} da lista">×</button></div></article>`).join('')}</div></section>`;
+}
+function bindCasosParaEstudar() {
+  document.querySelectorAll('[data-open-saved-case]').forEach(button => button.addEventListener('click',event => {
+    const date=window.CasoDoDia?.dateForCaseNumber(event.currentTarget.dataset.openSavedCase);
+    if(!date) return;
+    ui.refDate=date;
+    render();
+  }));
+  document.querySelectorAll('[data-remove-saved-case]').forEach(button => button.addEventListener('click',event => {
+    const key=`caso-${event.currentTarget.dataset.removeSavedCase}`;
+    if(state.casoDoDia?.[key]) state.casoDoDia[key].starred=false;
+    persist();
+    renderPainel();
+  }));
+}
 const TOTAL_CASO_HINTS = 6;
 document.addEventListener('click', event => {
   const box = document.getElementById('casoDoDiaSuggestions');
@@ -5151,6 +5177,7 @@ function renderPainel() {
     <div class="dashboard-desktop-grid">
       ${renderContinueStudying()}
       ${renderCasoDoDia()}
+      ${renderCasosParaEstudar()}
       ${renderPersonalDailyTasks(ui.refDate)}
       ${renderDashboardMood(dashboardLog)}
       ${renderDashboardSmartDecks()}
@@ -5166,6 +5193,7 @@ function renderPainel() {
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
   bindPersonalDailyTasks(ui.refDate);
   bindCasoDoDia();
+  bindCasosParaEstudar();
   bindGamificationDashboard();
   document.querySelector('[data-dashboard-continue]')?.addEventListener('click',event=>openDashboardActivity(event.currentTarget));
   document.querySelectorAll('[data-dashboard-smart-manage]').forEach(button=>button.addEventListener('click',()=>{ui.flashcardView='custom'; navigateToTab('flashcards');}));

@@ -71,5 +71,17 @@
     return list.sort((a, b) => a.localeCompare(b, 'pt-BR'));
   }
 
-  window.CasoDoDia = { load, todayCase, isCorrectGuess, allDiagnoses, normalize, TOTAL_HINTS };
+  function caseByNumber(number) {
+    return CASES.find(item => Number(item.number) === Number(number)) || null;
+  }
+
+  function dateForCaseNumber(number) {
+    const index = CASES.findIndex(item => Number(item.number) === Number(number));
+    if(index < 0) return '';
+    const date = new Date(START_DATE_ISO + 'T00:00:00');
+    date.setDate(date.getDate() + index);
+    return date.toISOString().slice(0,10);
+  }
+
+  window.CasoDoDia = { load, todayCase, isCorrectGuess, allDiagnoses, caseByNumber, dateForCaseNumber, normalize, TOTAL_HINTS };
 })();
