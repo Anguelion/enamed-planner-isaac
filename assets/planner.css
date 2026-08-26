@@ -3004,6 +3004,7 @@ body.dark .material-folder[open] summary{background:var(--materials-wash);color:
 /* Caso do dia: mini game diagnóstico com 6 pistas progressivas */
 .dashboard-desktop-grid>.caso-do-dia-card{grid-column:1/-1;border-left:5px solid var(--teal);background:linear-gradient(135deg,var(--panel),var(--soft-green) 140%)}
 .caso-do-dia-card{position:relative;z-index:1;display:grid;gap:14px}
+#painel .caso-do-dia-card{overflow:visible}
 .caso-do-dia-card:focus-within{z-index:100}
 .caso-do-dia-card.is-empty{opacity:.7}
 .caso-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
