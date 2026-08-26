@@ -5175,7 +5175,7 @@ function bindCasoDoDia() {
 function renderPainel() {
   const dashboardLog=getDayLog(ui.refDate);
   document.getElementById('painel').innerHTML = `
-    <div class="dashboard-global-head"><div class="dashboard-greeting"><h1>${escapeHtml(greetingMessage())}</h1></div><label class="dashboard-date-control"><span class="sr-only">Data do painel</span><div class="dashboard-date-input-row"><button class="tiny-btn" id="dashboardDatePrev" type="button" aria-label="Dia anterior">‹</button><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="tiny-btn" id="dashboardDateNext" type="button" aria-label="Dia seguinte">›</button></div></label><div class="dashboard-head-tools">${renderCountdown()}</div></div>
+    <div class="dashboard-global-head"><div class="dashboard-greeting"><h1>${escapeHtml(greetingMessage())}</h1></div><label class="dashboard-date-control"><span class="sr-only">Data do painel</span><div class="dashboard-date-input-row"><button class="tiny-btn" id="dashboardDatePrev" type="button" aria-label="Dia anterior">‹</button><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="tiny-btn" id="dashboardDateNext" type="button" aria-label="Dia seguinte">›</button><button class="tiny-btn primary" id="dashboardDateToday" type="button">Hoje</button></div></label><div class="dashboard-head-tools">${renderCountdown()}</div></div>
     <div class="dashboard-desktop-grid">
       ${renderContinueStudying()}
       ${renderCasoDoDia()}
@@ -5191,6 +5191,7 @@ function renderPainel() {
     ${renderRankPromotionModal()}`;
   bindPlannerDateInput('dashboardDate', ui.refDate, date => { ui.refDate=date; render(); });
   document.getElementById('dashboardDatePrev').onclick = () => { ui.refDate = PlannerUX.addDays(ui.refDate, -1); render(); };
+  document.getElementById('dashboardDateToday').onclick = () => { ui.refDate = PlannerUX.localDateKey(new Date()); render(); };
   document.getElementById('dashboardDateNext').onclick = () => { ui.refDate = PlannerUX.addDays(ui.refDate, 1); render(); };
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
   bindPersonalDailyTasks(ui.refDate);
