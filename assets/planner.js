@@ -122,8 +122,7 @@ let state = loadState();
 ensureGamificationState();
 ensureImportedQuestions();
 normalizeOfficialScheduleNames();
-ensureRestartFromBlockTen();
-ensureRestartFromCoagulopatia();
+ensureRestartFromBlockTwelve();
 ensureDayLogs();
 ensureDailyTasks();
 ensureSimTopics();
@@ -509,109 +508,57 @@ function nextWeekday(date) {
   while([0,6].includes(new Date(`${d}T12:00:00`).getDay())) d = addDays(d, 1);
   return d;
 }
-function ensureRestartFromBlockTen() {
-  const version = 'block10-restart-2026-07-13-v2';
-  if(state.schedulePlanVersion === version) return;
-  const startBlock = 10;
-  const restartDate = '2026-07-13';
-  const vacationUntil = '2026-08-09';
+function ensureRestartFromBlockTwelve() {
+  const version = 'block12-restart-2026-08-27-v1';
+  const startBlock = 12;
+  const restartDate = '2026-08-27';
   const schedule = state.schedule || [];
+  const plannedLessons = schedule.filter(item => n(item.block) >= startBlock)
+    .sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row) || byDate(a,b));
+  const planIsAligned = state.schedulePlanVersion === version
+    && n(state.reschedule?.fromBlock) === startBlock
+    && state.reschedule?.restartDate === restartDate
+    && plannedLessons[0]?.date === restartDate
+    && plannedLessons.at(-1)?.date === state.reschedule?.plannedFinishDate;
+  if(planIsAligned) return;
 
-  // O plano anterior levou o Bloco 9 para julho. Ele já foi estudado e volta
-  // às datas originais para não reaparecer na Trilha do dia.
-  schedule.filter(item => n(item.block) === 9).forEach(item => {
-    if(item.originalDate) item.date = item.originalDate;
-    item.day = weekdayName(item.date);
-    item.catchUp = false;
-  });
-
-  const lessons = schedule.filter(item => n(item.block) >= startBlock).sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row) || byDate(a,b));
+  const lessons = plannedLessons;
   let date = restartDate;
   let slot = 0;
-  lessons.forEach((item, index) => {
+  let weekIndex = 0;
+  let lastWeekKey = '';
+  lessons.forEach(item => {
     date = nextWeekday(date);
-    const perDay = date <= vacationUntil ? 2 : 1;
+    const weekday = new Date(`${date}T12:00:00`).getDay();
+    // Oito aulas por semana: duas em segundas, quartas e sextas;
+    // uma em terças e quintas. Fins de semana ficam livres para revisão.
+    const perDay = [0,2,1,2,1,2,0][weekday];
     if(!item.originalDate) item.originalDate = item.date;
     item.date = date;
     item.day = weekdayName(date);
     item.catchUp = false;
-    const weekIndex = Math.floor(index / 10) + 1;
-    item.week = date <= vacationUntil ? `Férias.${weekIndex}` : `Aulas.${weekIndex}`;
+    const weekKey = addDays(date, 1 - weekday);
+    if(weekKey !== lastWeekKey) {
+      lastWeekKey = weekKey;
+      weekIndex += 1;
+    }
+    item.week = `Missão.${weekIndex}`;
     slot += 1;
     if(slot >= perDay) {
       slot = 0;
       date = addDays(date, 1);
     }
   });
-
-  const catchUpPlan = [
-    { topic:'Amenorreias', terms:['amenorre'], date:'2026-07-18' },
-    { topic:'Síndrome dos Ovários Policísticos', terms:['sindrome','ovarios','policistic'], date:'2026-07-19' },
-    { topic:'Gasometria Arterial', terms:['gasometria','arterial'], date:'2026-07-25' },
-    { topic:'Distúrbios do Sódio e Potássio', terms:['disturbios','sodio','potassio'], date:'2026-07-26' }
-  ];
-  catchUpPlan.forEach(plan => {
-    const target = schedule.find(item => {
-      const topic = normalizedTopic(item.topic);
-      return n(item.block) === 7 && plan.terms.every(term => topic.includes(normalizedTopic(term)));
-    });
-    if(!target) return;
-    if(!target.originalDate) target.originalDate = target.date;
-    target.date = plan.date;
-    target.day = weekdayName(plan.date);
-    target.week = 'Recuperação';
-    target.catchUp = true;
-  });
   state.reschedule = {
-    ...(state.reschedule || {}),
     fromBlock: startBlock,
     restartDate,
-    vacationUntil,
-    classReturnDate: '2026-08-10',
+    plannedFinishDate: lessons.at(-1)?.date || restartDate,
     weekdaysOnly: true,
-    weekendCatchUp: catchUpPlan,
-    method: 'Blocos 10+ em ordem oficial, reiniciando em 13/07/2026. Até 2 aulas por dia útil nas férias; depois 1 aula por dia útil. Pendências do Bloco 7 distribuídas aos fins de semana.'
+    weeklyTarget: 8,
+    weekendCatchUp: [],
+    method: 'Blocos 12 a 30 em ordem oficial, de 27/08/2026 a 17/12/2026. Duas aulas às segundas, quartas e sextas; uma às terças e quintas. Fins de semana reservados para revisão e recuperação.'
   };
   state.schedulePlanVersion = version;
-  writeLocalState();
-}
-function ensureRestartFromCoagulopatia() {
-  const version = 'coagulopatia-restart-2026-08-05-v1';
-  if(state.schedulePlanVersion2 === version) return;
-  const restartDate = '2026-08-05';
-  const vacationUntil = '2026-08-09';
-  const schedule = state.schedule || [];
-  const anchor = schedule.find(item => n(item.block) === 11 && normalizedTopic(item.topic).includes('coagulopatia'));
-  if(!anchor) return;
-  const cutoffOrder = n(anchor.lessonOrder);
-  const lessons = schedule.filter(item => n(item.block) > 11 || (n(item.block) === 11 && n(item.lessonOrder) >= cutoffOrder))
-    .sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row) || byDate(a,b));
-  let date = restartDate;
-  let slot = 0;
-  lessons.forEach((item, index) => {
-    date = nextWeekday(date);
-    const perDay = date <= vacationUntil ? 2 : 1;
-    if(!item.originalDate) item.originalDate = item.date;
-    item.date = date;
-    item.day = weekdayName(date);
-    item.catchUp = false;
-    const weekIndex = Math.floor(index / 10) + 1;
-    item.week = date <= vacationUntil ? `Férias.${weekIndex}` : `Aulas.${weekIndex}`;
-    slot += 1;
-    if(slot >= perDay) {
-      slot = 0;
-      date = addDays(date, 1);
-    }
-  });
-  state.reschedule = {
-    ...(state.reschedule || {}),
-    fromBlock: 11,
-    fromTopic: 'Coagulopatias',
-    restartDate,
-    vacationUntil,
-    weekdaysOnly: true,
-    method: 'Bloco 11 (a partir de Coagulopatias) em diante, reiniciando em 05/08/2026. Até 2 aulas por dia útil até 09/08/2026; depois 1 aula por dia útil.'
-  };
   state.schedulePlanVersion2 = version;
   writeLocalState();
 }
@@ -891,7 +838,7 @@ function repairUniformScheduleDates() {
   if(matched < Math.floor(schedule.length * 0.8)) return false;
   state.schedule = repaired;
   state.schedulePlanVersion = '';
-  ensureRestartFromBlockTen();
+  ensureRestartFromBlockTwelve();
   state.scheduleRepairVersion = 'uniform-date-v1';
   writeLocalState();
   return true;
@@ -1668,7 +1615,7 @@ function restoreLocalBackup(id) {
   allowLargeProgressDrop = true;
   state = structuredClone(item.data);
   normalizeOfficialScheduleNames();
-  ensureRestartFromBlockTen();
+  ensureRestartFromBlockTwelve();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   invalidateActivityRenderCache();
   writeLocalState();
@@ -1892,8 +1839,7 @@ function applyCrossTabPlannerState(externalState) {
   const incomingPayload = JSON.stringify(externalState);
   state = mergePlannerActivityState(externalState, state, true);
   normalizeOfficialScheduleNames();
-  ensureRestartFromBlockTen();
-  ensureRestartFromCoagulopatia();
+  ensureRestartFromBlockTwelve();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   if(officialSchedule.length) applyOfficialSchedule();
   invalidateActivityRenderCache();
@@ -1964,7 +1910,7 @@ async function pullCloudState({ firstLogin=false }={}) {
       cloudDirty = localIsAhead;
       lastCloudSyncAt = remoteAt || Date.now();
       normalizeOfficialScheduleNames();
-      ensureRestartFromBlockTen();
+      ensureRestartFromBlockTwelve();
       ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
       invalidateActivityRenderCache();
       // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
@@ -2136,7 +2082,7 @@ function restorePlannerBackupFile(file) {
       // de atividade dos dois estados, evitando apagar questões, tempo ou XP.
       state = mergePlannerActivityState(imported, state, true);
       normalizeOfficialScheduleNames();
-      ensureRestartFromBlockTen();
+      ensureRestartFromBlockTwelve();
       ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
       invalidateActivityRenderCache();
       persist();
@@ -2164,7 +2110,7 @@ function restorePlannerBackupFileReplace(file) {
       allowLargeProgressDrop = true;
       state = imported;
       normalizeOfficialScheduleNames();
-      ensureRestartFromBlockTen();
+      ensureRestartFromBlockTwelve();
       ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
       invalidateActivityRenderCache();
       writeLocalState();
@@ -2256,7 +2202,7 @@ async function restoreCloudBackup(id) {
   allowLargeProgressDrop = true;
   state = data.data;
   normalizeOfficialScheduleNames();
-  ensureRestartFromBlockTen();
+  ensureRestartFromBlockTwelve();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   invalidateActivityRenderCache();
   writeLocalState();
@@ -3881,8 +3827,11 @@ function metric(label,value,foot='') { return `<div class="card metric-card"><di
 function progress(label,value,foot='') { return `<div class="kpi-row"><div><strong>${label}</strong><div class="muted">${foot}</div></div><div>${pct(value)}</div></div><div class="progress"><span style="width:${pct(value)}"></span></div>`; }
 function scheduleBlocks() { return [...new Set(state.schedule.map(x => x.block).filter(x => x !== undefined && x !== null).map(String))].sort((a,b)=>n(a)-n(b)); }
 function currentScheduleBlock() {
-  const asOf = ui.refDate || localISODate(new Date());
+  const asOf = studyDateKey();
   const mainSchedule = state.schedule.filter(item => !item.catchUp);
+  const plannedStartBlock = n(state.reschedule?.fromBlock);
+  const plannedStartDate = state.reschedule?.restartDate;
+  if(plannedStartBlock && plannedStartDate && asOf <= plannedStartDate) return plannedStartBlock;
   const reached = mainSchedule.filter(item => item.date && item.date <= asOf).sort((a,b)=>byDate(b,a))[0];
   if(reached?.block !== undefined) return reached.block;
   const next = mainSchedule.filter(item => item.date && item.date > asOf).sort(byDate)[0];
@@ -4621,7 +4570,7 @@ function renderFerramentas() {
     if(!confirm('Voltar aos dados originais importados do Excel? Esta alteração também será sincronizada.')) return;
     state=structuredClone(seed);
     normalizeOfficialScheduleNames();
-    ensureRestartFromBlockTen();
+    ensureRestartFromBlockTwelve();
     persist();
   });
 }
@@ -14495,7 +14444,7 @@ document.getElementById('exportBtn')?.addEventListener('click', () => {
   a.click();
   URL.revokeObjectURL(a.href);
 });
-document.getElementById('importFile')?.addEventListener('change', e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); createSafetyLocalBackup('antes de importar JSON'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTen(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); });
+document.getElementById('importFile')?.addEventListener('change', e => { const file=e.target.files[0]; if(!file) return; const reader=new FileReader(); reader.onload = () => { try { const data=JSON.parse(reader.result); if(!data.schedule?.length) throw new Error('Backup inválido'); createSafetyLocalBackup('antes de importar JSON'); state=data; normalizeOfficialScheduleNames(); ensureRestartFromBlockTwelve(); ensureDailyTasks(); persist(); } catch(err) { alert('Não consegui importar este arquivo JSON.'); } }; reader.readAsText(file); });
 document.getElementById('printBtn')?.addEventListener('click', () => {
   const previousTab=ui.tab;
   ui.tab='painel';
