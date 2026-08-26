@@ -1469,7 +1469,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   new Set([...Object.keys(remote.casoDoDia || {}), ...Object.keys(local.casoDoDia || {})]).forEach(key => {
     const r = remote.casoDoDia?.[key] || {}, l = local.casoDoDia?.[key] || {};
     const solvedAtHints = [n(r.solvedAtHint), n(l.solvedAtHint)].filter(value => value > 0);
-    merged.casoDoDia[key] = { revealed: Math.max(n(r.revealed), n(l.revealed)), wrongCount: Math.max(n(r.wrongCount), n(l.wrongCount)), solved: Boolean(r.solved || l.solved), solvedAtHint: solvedAtHints.length ? Math.min(...solvedAtHints) : 0, gaveUp: Boolean(r.gaveUp || l.gaveUp), explanationOpen: Boolean(l.explanationOpen || r.explanationOpen) };
+    merged.casoDoDia[key] = { revealed: Math.max(n(r.revealed), n(l.revealed)), wrongCount: Math.max(n(r.wrongCount), n(l.wrongCount)), solved: Boolean(r.solved || l.solved), solvedAtHint: solvedAtHints.length ? Math.min(...solvedAtHints) : 0, gaveUp: Boolean(r.gaveUp || l.gaveUp), explanationOpen: Boolean(l.explanationOpen || r.explanationOpen), starred: Boolean(l.starred || r.starred) };
   });
   merged.videoFlashcards = {};
   new Set([...Object.keys(remote.videoFlashcards || {}), ...Object.keys(local.videoFlashcards || {})]).forEach(id => {
@@ -4998,6 +4998,7 @@ function renderCasoDoDia() {
   if(!item) return `<section class="card caso-do-dia-card is-empty"><span class="eyebrow">Caso do dia</span><h2>Carregando caso clínico…</h2><p class="muted">O banco de casos está sendo preparado.</p></section>`;
   const caseKey = `caso-${item.number}`;
   const progress = casoDoDiaProgress(caseKey);
+  const textScale = Math.min(1.35, Math.max(.9, Number(state.dashboardSettings?.casoTextScale) || 1));
   const finished = progress.solved || progress.gaveUp;
   const revealed = Math.min(TOTAL_CASO_HINTS, Math.max(1, n(progress.revealed) || 1));
   const solvedAtHint = Math.min(TOTAL_CASO_HINTS, Math.max(1, n(progress.solvedAtHint) || revealed));
@@ -5018,15 +5019,17 @@ function renderCasoDoDia() {
       <h2>${escapeHtml(item.diagnosis)}</h2>
     </div>`;
   }
+  const studyReminder = finished ? `<button type="button" class="caso-study-star ${progress.starred?'is-starred':''}" id="casoDoDiaStar" aria-pressed="${Boolean(progress.starred)}" title="${progress.starred?'Remover de doenças para revisar':'Marcar para estudar depois'}">${iconSvg('star',{weight:progress.starred?'fill':'regular'}) || '★'}<span>${progress.starred?'Marcada para revisar':'Estudar depois'}</span></button>` : '';
   const answerForm = finished ? '' : `<div class="caso-answer-row"><div class="caso-guess-wrap"><input class="input" id="casoDoDiaGuess" placeholder="Qual é o diagnóstico?" autocomplete="off"><div class="caso-suggestions" id="casoDoDiaSuggestions" hidden></div></div><button class="icon-btn primary" id="casoDoDiaSubmit">Responder</button><button class="icon-btn" id="casoDoDiaSkip">${revealed>=TOTAL_CASO_HINTS?'Revelar':'Pular pista'}</button></div>`;
   const feedback = progress.lastFeedback ? `<div class="caso-feedback ${progress.lastFeedback.ok?'ok':'no'}">${escapeHtml(progress.lastFeedback.text)}</div>` : '';
   const wrongList = Array.isArray(progress.wrongGuesses) && progress.wrongGuesses.length
     ? `<div class="caso-wrong-guesses"><span class="caso-wrong-label">Tentativas erradas:</span><div class="caso-wrong-chips">${progress.wrongGuesses.map(g => `<span class="caso-wrong-chip">${escapeHtml(g)}</span>`).join('')}</div></div>`
     : '';
   const explanationToggle = finished ? `<button class="icon-btn caso-explain-toggle" id="casoDoDiaExplainToggle">${progress.explanationOpen?'Ocultar explicação':'Ver explicação'}</button>${progress.explanationOpen?renderCasoExplanation(item.explanation, item.kids):''}` : '';
-  return `<section class="card caso-do-dia-card ${finished?'is-finished':''}">
-    <div class="caso-head"><span class="eyebrow">Caso do dia · #${item.number}</span><div class="caso-dots">${dots}</div></div>
+  return `<section class="card caso-do-dia-card ${finished?'is-finished':''}" style="--caso-text-scale:${textScale}">
+    <div class="caso-head"><span class="eyebrow">Caso do dia · #${item.number}</span><div class="caso-head-actions"><div class="caso-text-zoom" role="group" aria-label="Tamanho do texto do caso"><button type="button" class="caso-zoom-btn" id="casoTextDecrease" title="Diminuir letras" aria-label="Diminuir letras">A−</button><button type="button" class="caso-zoom-btn" id="casoTextIncrease" title="Aumentar letras" aria-label="Aumentar letras">A+</button></div><div class="caso-dots">${dots}</div></div></div>
     ${diagnosisTitle}
+    ${studyReminder}
     <h2 class="caso-question">${escapeHtml(item.question || 'Qual é o diagnóstico?')}</h2>
     <div class="caso-hints">${hintsHtml}</div>
     ${feedback}
@@ -5112,6 +5115,9 @@ function bindCasoDoDia() {
   suggestionsBox?.addEventListener('click', event => {
     event.stopPropagation();
   });
+  guessInput?.closest('.caso-guess-wrap')?.addEventListener('pointerleave', () => {
+    if(suggestionsBox) suggestionsBox.hidden = true;
+  });
   guessInput?.addEventListener('blur', () => { setTimeout(() => { if(suggestionsBox) suggestionsBox.hidden = true; }, 150); });
   document.getElementById('casoDoDiaSkip')?.addEventListener('click', () => {
     progress.lastFeedback = null;
@@ -5121,6 +5127,18 @@ function bindCasoDoDia() {
     progress.explanationOpen = !progress.explanationOpen;
     persist();
   });
+  document.getElementById('casoDoDiaStar')?.addEventListener('click', () => {
+    progress.starred = !progress.starred;
+    persist();
+    renderPainel();
+  });
+  const updateTextScale = delta => {
+    state.dashboardSettings.casoTextScale = Math.round(Math.min(1.35, Math.max(.9, (Number(state.dashboardSettings.casoTextScale) || 1) + delta)) * 100) / 100;
+    persist();
+    renderPainel();
+  };
+  document.getElementById('casoTextDecrease')?.addEventListener('click', () => updateTextScale(-.1));
+  document.getElementById('casoTextIncrease')?.addEventListener('click', () => updateTextScale(.1));
 }
 function renderPainel() {
   const dashboardLog=getDayLog(ui.refDate);
