@@ -3003,7 +3003,8 @@ body.dark .material-folder[open] summary{background:var(--materials-wash);color:
 
 /* Caso do dia: mini game diagnóstico com 6 pistas progressivas */
 .dashboard-desktop-grid>.caso-do-dia-card{grid-column:1/-1;border-left:5px solid var(--teal);background:linear-gradient(135deg,var(--panel),var(--soft-green) 140%)}
-.caso-do-dia-card{display:grid;gap:14px}
+.caso-do-dia-card{position:relative;z-index:1;display:grid;gap:14px}
+.caso-do-dia-card:focus-within{z-index:100}
 .caso-do-dia-card.is-empty{opacity:.7}
 .caso-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .caso-head-actions{display:flex;align-items:center;gap:10px}
@@ -3040,7 +3041,7 @@ body.dark .material-folder[open] summary{background:var(--materials-wash);color:
 .caso-answer-row{display:flex;gap:8px;flex-wrap:wrap}
 .caso-guess-wrap{position:relative;flex:1 1 220px}
 .caso-guess-wrap .input{width:100%}
-.caso-suggestions{position:absolute;z-index:20;top:calc(100% + 4px);left:0;right:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow);max-height:220px;overflow-y:auto;display:flex;flex-direction:column}
+.caso-suggestions{position:absolute;z-index:1000;top:calc(100% + 4px);left:0;right:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow);max-height:220px;overflow-y:auto;display:flex;flex-direction:column}
 .caso-suggestions[hidden]{display:none}
 .caso-suggestion-item{all:unset;box-sizing:border-box;width:100%;padding:12px 14px;font-size:16px;color:var(--ink);cursor:pointer;border-bottom:1px solid var(--line)}
 .caso-suggestion-item:first-child{border-bottom:none}
