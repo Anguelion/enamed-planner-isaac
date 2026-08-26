@@ -1261,14 +1261,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Gestação, doenças que bagunçam o intestino todo, e remédios como o metotrexato (que bloqueia diretamente o uso do ácido fólico) são causas conhecidas de falta de folato. Já a atrofia da mucosa gástrica atrapalha a absorção de vitamina B12 (por afetar o fator intrínseco produzido no estômago), não a do ácido fólico (que é absorvido mais adiante, no intestino) — por isso é a exceção certa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967798",
-      "ankiGuid": "Qt,Q,NOvHe"
+      "ankiGuid": "Qt,Q,NOvHe",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/sintese-defeituosa-DNA3801952412/",
+        "sourceQuestionId": "4000082046",
+        "matchedAt": "2026-08-26T20:08:14.503Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-cdecedfd59f5b0d6",
@@ -1294,14 +1305,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Indisposição, falta de ar, perda de equilíbrio, formigamento nas pernas e pés, icterícia leve, anemia macrocítica com plaquetas baixas — quadro clássico de deficiência de vitamina B12, que ataca tanto o sangue quanto os nervos.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967799",
-      "ankiGuid": "MMzNH2Q.6$"
+      "ankiGuid": "MMzNH2Q.6$",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-69-anos-queixa8844f784f2/",
+        "sourceQuestionId": "4000078420",
+        "matchedAt": "2026-08-26T20:08:21.260Z",
+        "confidence": 0.990909090909091
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-31a88d53cd7986cf",
@@ -1327,7 +1350,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Diabética usando metformina (remédio que atrapalha a absorção de B12 a longo prazo), com anemia macrocítica e neutrófilos hipersegmentados no esfregaço — o exame que melhor explica essa anemia é a dosagem de vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -1360,7 +1383,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fadiga, falta de ar, palidez com icterícia leve, glossite e queilite angular, anemia gravíssima com hemácias enormes (VCM 132) — o retrato completo da anemia perniciosa, tratada com cianocobalamina (vitamina B12).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -1393,7 +1416,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Uma pessoa que ficou tempo sem comer direito (privação alimentar) e desenvolveu anemia com hemácias grandes em apenas alguns meses — esse tempo curto de aparecimento combina mais com falta de ácido fólico (cujos estoques no corpo acabam rápido, em semanas a poucos meses) do que com falta de B12 (cujos estoques duram anos).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",

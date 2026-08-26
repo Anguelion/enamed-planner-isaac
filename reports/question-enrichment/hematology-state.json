@@ -873,13 +873,13 @@
     },
     "anki-hematologia-anemias-hemoliticas-f1e4601f4019310d": {
       "number": "1070f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-19T18:56:53.701Z",
-      "nextAttemptAt": "2026-08-26T18:56:53.701Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-26T20:08:08.366Z",
+      "nextAttemptAt": "2026-09-09T20:08:08.366Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-vai-a1023abbc146/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemias-hemoliticas-cff3f00a1c5084b2": {
       "number": "1071f",
@@ -1450,7 +1450,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-c4d4e81377cfef61": {
+      "number": "1029e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T20:08:14.503Z",
+      "nextAttemptAt": "2026-09-02T20:08:14.503Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sintese-defeituosa-DNA3801952412/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-cdecedfd59f5b0d6": {
+      "number": "1030e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T20:08:21.261Z",
+      "nextAttemptAt": "2026-09-02T20:08:21.261Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-69-anos-queixa8844f784f2/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-31a88d53cd7986cf": {
+      "number": "1031e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T20:08:26.504Z",
+      "nextAttemptAt": "2026-09-02T20:08:26.504Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-7d1662b6473b1b5d": {
+      "number": "1032e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T20:08:31.761Z",
+      "nextAttemptAt": "2026-09-02T20:08:31.761Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-3f7f61091f88f97e": {
+      "number": "1033e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T20:08:37.039Z",
+      "nextAttemptAt": "2026-09-02T20:08:37.039Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-26T07:12:12.074Z"
+  "updatedAt": "2026-08-26T20:08:37.039Z"
 }

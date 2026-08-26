@@ -3053,14 +3053,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Falta de ar, palpitação, usando dapsona (um gatilho oxidante clássico) há 20 dias, anemia gravíssima com reticulocitose alta, LDH elevado, Coombs direto NEGATIVO (descartando causa autoimune) — o quadro completo aponta pra anemia por deficiência de G6PD, desencadeada pela dapsona.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350411",
-      "ankiGuid": "n])K0&pN6T"
+      "ankiGuid": "n])K0&pN6T",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-vai-a1023abbc146/",
+        "sourceQuestionId": "4000034101",
+        "matchedAt": "2026-08-26T20:08:08.365Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-cff3f00a1c5084b2",

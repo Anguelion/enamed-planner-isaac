@@ -1,62 +1,120 @@
 {
-  "generatedAt": "2026-08-26T07:11:43.374Z",
+  "generatedAt": "2026-08-26T20:08:07.060Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 3,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-59832abb742e60a0",
-      "number": "1023e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-35-anos149ff9a1d81/",
-        "https://med.estrategia.com/public/questoes/Mulher-35-anos-idade1560b97280f/"
+      "id": "anki-hematologia-anemias-hemoliticas-f1e4601f4019310d",
+      "number": "1070f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-vai-a1023abbc146/",
+      "sourceQuestionId": "4000034101",
+      "matchedAt": "2026-08-26T20:08:08.365Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD"
       ],
-      "bestSimilarity": {
-        "stem": 0.9477911646586346,
-        "options": 0.125,
-        "combined": 0.7009538152610442
-      }
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: Anemia por deficiência de glicose-6-fosfato desidrogenase.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-35-anos-vai-a1023abbc146/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-d6de6ef139bca8c2",
-      "number": "1024e",
+      "id": "anki-hematologia-anemias-macrociticas-c4d4e81377cfef61",
+      "number": "1029e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sintese-defeituosa-DNA3801952412/",
+      "sourceQuestionId": "4000082046",
+      "matchedAt": "2026-08-26T20:08:14.503Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Deficiência de ácido fólico. Conduta/resposta: Atrofia de mucosa gástrica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/sintese-defeituosa-DNA3801952412/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-cdecedfd59f5b0d6",
+      "number": "1030e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-69-anos-queixa8844f784f2/",
+      "sourceQuestionId": "4000078420",
+      "matchedAt": "2026-08-26T20:08:21.260Z",
+      "similarity": {
+        "stem": 0.987012987012987,
+        "options": 1,
+        "combined": 0.990909090909091
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Deficiência de vitamina B12.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-69-anos-queixa8844f784f2/",
+        "https://med.estrategia.com/public/questoes/Mulher-69-anos-com6576852aaa/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-31a88d53cd7986cf",
+      "number": "1031e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-a5503c12b4fcd8b1",
-      "number": "1025e",
+      "id": "anki-hematologia-anemias-macrociticas-7d1662b6473b1b5d",
+      "number": "1032e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-665ea75838ead27f",
-      "number": "1026e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-d519f109b93bb3b0",
-      "number": "1027e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-8dd2eb16af0ef6fe",
-      "number": "1028e",
+      "id": "anki-hematologia-anemias-macrociticas-3f7f61091f88f97e",
+      "number": "1033e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": false,
       "status": "not_found",
