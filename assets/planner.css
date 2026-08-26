@@ -2721,6 +2721,15 @@ body.dark .tab.active .tab-icon{background:#172331}
 .personal-task-add .task-weekdays{grid-column:1/4}
 .personal-task-add .personal-task-add-button{grid-column:4;grid-row:1/3;align-self:end;min-width:44px;min-height:44px;width:44px;height:44px}
 .personal-task-time{flex:0 0 auto;color:var(--blue);font-size:12px;font-weight:900;font-variant-numeric:tabular-nums}
+.study-plan-date{display:block;margin-top:3px;text-transform:capitalize}
+.study-plan-table{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel)}
+.study-plan-table-head,.personal-task-row{display:grid;grid-template-columns:78px minmax(0,1fr) auto;gap:10px;align-items:center}
+.study-plan-table-head{padding:8px 10px;background:var(--soft-blue);color:var(--blue);font-size:10px;font-weight:900;letter-spacing:.05em;text-transform:uppercase}
+.study-plan-table .personal-task-list{gap:0}.study-plan-table .personal-task-row{position:relative;padding:9px 10px;border:0;border-radius:0;border-bottom:1px solid var(--line);background:transparent}.study-plan-table .personal-task-row:last-child{border-bottom:0}
+.study-plan-table .personal-task-time{font-size:13px}.study-plan-table .personal-task-main{min-width:0}.study-plan-table .personal-task-actions{justify-content:flex-end}.study-plan-table .personal-task-priority{display:none}
+#painel .dashboard-desktop-grid>.card{position:relative}#painel .dashboard-desktop-grid>.card:focus-within{z-index:100}
+#painel .dashboard-tasks-card{overflow:visible}.dashboard-tasks-card .personal-task-manage[open]{position:absolute;z-index:1000;top:calc(100% - 35px);left:0;right:0;display:grid;gap:10px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);box-shadow:0 18px 42px rgba(18,49,72,.25)}
+.personal-task-row:has(.personal-task-editor){z-index:20}.personal-task-editor{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 6px);padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel);box-shadow:0 14px 32px rgba(18,49,72,.2)}
 .study-calendar{display:grid;gap:12px}.study-calendar-nav{display:flex;align-items:center;gap:8px}.study-calendar-nav strong{text-transform:capitalize;font-size:13px;min-width:135px;text-align:center}.study-calendar-weekdays,.study-calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.study-calendar-weekdays span{text-align:center;color:var(--muted);font-size:11px;font-weight:800}.study-calendar-day{min-height:48px;padding:5px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);cursor:pointer}.study-calendar-day.is-blank{border-color:transparent;background:transparent;cursor:default}.study-calendar-day b,.study-calendar-day small{display:block}.study-calendar-day b{font-size:13px}.study-calendar-day small{margin-top:3px;color:var(--green);font-size:10px;font-weight:900}.study-calendar-day.has-study{background:var(--soft-green);border-color:color-mix(in srgb,var(--green) 45%,var(--line))}.study-calendar-day:not(.is-blank):hover{border-color:var(--blue);transform:translateY(-1px)}
 .task-weekdays{margin:0;padding:0;border:0;display:grid;grid-template-columns:repeat(7,minmax(40px,1fr));gap:6px}
 .task-weekdays legend{grid-column:1/-1;padding:0;margin:0 0 2px;color:var(--muted);font-size:11px;font-weight:800}
@@ -2735,6 +2744,7 @@ body.dark .tab.active .tab-icon{background:#172331}
   .personal-task-add #personalTaskInput,.personal-task-add #personalTaskTime,.personal-task-add #personalTaskRecurrence{grid-column:1/-1}
   .personal-task-add .task-weekdays{grid-column:1;grid-template-columns:repeat(4,minmax(44px,1fr))}
   .personal-task-add .personal-task-add-button{grid-column:2;grid-row:4;align-self:end;height:44px}
+  .study-plan-table-head,.personal-task-row{grid-template-columns:62px minmax(0,1fr) auto;gap:6px}.study-plan-table .personal-task-actions{max-width:100px}.study-plan-table .personal-task-actions .tiny-btn{width:25px;min-width:25px}
 }
 @container personal-tasks (max-width:410px){
   .personal-task-date-tools{grid-template-columns:44px minmax(0,1fr) 44px}
