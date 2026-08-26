@@ -2732,7 +2732,7 @@ function renderPersonalDailyTasks(date) {
   const taskRows = visibleTasks.map((task,index) => {
     const editing = ui.personalTaskEditId === task.id;
     const stars = [1,2,3].map(value => `<button class="personal-task-star ${value <= n(task.priority) ? 'active' : ''}" data-task-priority="${escapeAttr(task.id)}" data-priority-value="${value}" title="Prioridade ${value} de 3" aria-label="Prioridade ${value} de 3">★</button>`).join('');
-    const editor = editing ? `<div class="personal-task-editor"><input class="input" data-task-edit-text="${escapeAttr(task.id)}" value="${escapeAttr(task.text)}" maxlength="180"><input class="input task-time-input" type="time" data-task-edit-time="${escapeAttr(task.id)}" value="${escapeAttr(task.time)}"><input class="input task-order-input" type="number" min="1" step="1" data-task-edit-order="${escapeAttr(task.id)}" value="${n(task.order) || index + 1}"><button class="tiny-btn" data-task-edit-save="${escapeAttr(task.id)}">Salvar</button><button class="tiny-btn" data-task-edit-cancel="${escapeAttr(task.id)}">Cancelar</button></div>` : '';
+    const editor = editing ? `<div class="personal-task-editor"><input class="input" data-task-edit-text="${escapeAttr(task.id)}" value="${escapeAttr(task.text)}" maxlength="180" aria-label="Atividade"><button class="tiny-btn" data-task-edit-save="${escapeAttr(task.id)}">Salvar</button><button class="tiny-btn" data-task-edit-cancel="${escapeAttr(task.id)}">Cancelar</button></div>` : '';
     return `<div class="personal-task-row ${task.done ? 'done' : ''} ${task.status==='postponed'?'postponed':''}"><time class="personal-task-time">${escapeHtml(task.time || '—')}</time><div class="personal-task-main"><label><input type="checkbox" data-toggle-personal-task="${escapeAttr(task.id)}" ${task.done ? 'checked' : ''} ${task.status==='postponed'?'disabled':''}><span class="personal-task-text">${escapeHtml(task.text)}</span></label>${task.status==='postponed'?`<small class="muted">Adiada para ${fmtDate(task.postponedTo)}</small>`:''}${editor}</div><div class="personal-task-actions"><div class="personal-task-priority" title="Prioridade ${n(task.priority) || 0} de 3 estrelas">${stars}</div>${!task.done&&task.status!=='postponed'?`<button class="tiny-btn" type="button" data-task-postpone="${escapeAttr(task.id)}" title="Mover para o próximo dia" aria-label="Mover para o próximo dia">${iconSvg('next',{weight:'regular'})}</button>`:''}<button class="tiny-btn" type="button" data-task-edit="${escapeAttr(task.id)}" title="Editar tarefa" aria-label="Editar tarefa">✎</button><button class="tiny-btn danger personal-task-remove" type="button" title="Excluir tarefa" aria-label="Excluir tarefa" data-remove-personal-task="${escapeAttr(task.id)}">×</button></div></div>`;
   }).join('');
   const weekdays=['D','S','T','Q','Q','S','S'].map((label,index)=>`<label class="task-weekday" title="${['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'][index]}"><input type="checkbox" data-new-task-weekday="${index}"><span>${label}</span></label>`).join('');
@@ -2851,11 +2851,9 @@ function bindPersonalDailyTasks(date) {
     const text = document.querySelector(`[data-task-edit-text="${CSS.escape(id)}"]`)?.value?.trim();
     if(!text) return;
     task.text = text;
-    task.time = document.querySelector(`[data-task-edit-time="${CSS.escape(id)}"]`)?.value || '';
-    task.order = Math.max(1, n(document.querySelector(`[data-task-edit-order="${CSS.escape(id)}"]`)?.value) || 1);
     task.updatedAt = new Date().toISOString();
     const template=state.taskTemplates.find(item=>item.id===task.templateId);
-    if(template) { template.text=task.text;template.time=task.time;template.order=task.order;template.updatedAt=task.updatedAt; }
+    if(template) { template.text=task.text;template.updatedAt=task.updatedAt; }
     ui.personalTaskEditId = '';
     ui.personalTaskEditorMode = null;
     persist();
