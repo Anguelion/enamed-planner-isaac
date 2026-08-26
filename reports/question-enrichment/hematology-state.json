@@ -1390,7 +1390,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-59832abb742e60a0": {
+      "number": "1023e",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T07:11:45.629Z",
+      "nextAttemptAt": "2026-10-25T07:11:45.629Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-d6de6ef139bca8c2": {
+      "number": "1024e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T07:11:50.915Z",
+      "nextAttemptAt": "2026-09-02T07:11:50.915Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-a5503c12b4fcd8b1": {
+      "number": "1025e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T07:11:56.205Z",
+      "nextAttemptAt": "2026-09-02T07:11:56.205Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-665ea75838ead27f": {
+      "number": "1026e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T07:12:01.464Z",
+      "nextAttemptAt": "2026-09-02T07:12:01.464Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-d519f109b93bb3b0": {
+      "number": "1027e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T07:12:06.853Z",
+      "nextAttemptAt": "2026-09-02T07:12:06.853Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-8dd2eb16af0ef6fe": {
+      "number": "1028e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-26T07:12:12.074Z",
+      "nextAttemptAt": "2026-09-02T07:12:12.074Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-25T19:06:32.100Z"
+  "updatedAt": "2026-08-26T07:12:12.074Z"
 }

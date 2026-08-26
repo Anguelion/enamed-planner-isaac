@@ -273,7 +273,23 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-08-25T19:06:06.938Z"
+    },
+    "anki-hematologia-anemias-macrociticas-59832abb742e60a0": {
+      "id": "anki-hematologia-anemias-macrociticas-59832abb742e60a0",
+      "number": "1023e",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.9477911646586346,
+        "options": 0.125,
+        "combined": 0.7009538152610442
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-08-26T07:11:45.629Z"
     }
   },
-  "updatedAt": "2026-08-25T19:06:06.938Z"
+  "updatedAt": "2026-08-26T07:11:45.629Z"
 }

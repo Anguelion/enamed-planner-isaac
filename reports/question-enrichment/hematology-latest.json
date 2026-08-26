@@ -1,190 +1,66 @@
 {
-  "generatedAt": "2026-08-25T19:05:58.614Z",
+  "generatedAt": "2026-08-26T07:11:43.374Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-deb19635fb983274",
-      "number": "1017e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos-com21112096c8/",
-      "sourceQuestionId": "4000114562",
-      "matchedAt": "2026-08-25T19:05:59.882Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Quadro clínico da anemia megaloblástica",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Polineuropatias",
-        "Polineuropatias Carenciais",
-        "Deficiência de Vitamina B12 e Ácido Fólico"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: anemia megaloblástica;",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-45-anos-com21112096c8/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-91160709a3a0ac3f",
-      "number": "1018e",
+      "id": "anki-hematologia-anemias-macrociticas-59832abb742e60a0",
+      "number": "1023e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": false,
       "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino58ac27ccda/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino656c859224/"
+        "https://med.estrategia.com/public/questoes/Mulher-35-anos149ff9a1d81/",
+        "https://med.estrategia.com/public/questoes/Mulher-35-anos-idade1560b97280f/"
       ],
       "bestSimilarity": {
-        "stem": 0.29473684210526313,
-        "options": 0.14336643748408454,
-        "combined": 0.24932572071890954
+        "stem": 0.9477911646586346,
+        "options": 0.125,
+        "combined": 0.7009538152610442
       }
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-e4837cc95399ac5c",
-      "number": "1019e",
+      "id": "anki-hematologia-anemias-macrociticas-d6de6ef139bca8c2",
+      "number": "1024e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-78-anos63e26eef6b/",
-      "sourceQuestionId": "4000092767",
-      "matchedAt": "2026-08-25T19:06:12.876Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Neurologia",
-        "Demências",
-        "Demências Reversíveis",
-        "Deficiência de Vitamina B12 e Ácido Fólico",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Deficiência de vitamina B12. Conduta/resposta: deficiência de cobalamina; administração parenteral de vitamina B12",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-78-anos63e26eef6b/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-e9b016ed0e1362e9",
-      "number": "1020e",
+      "id": "anki-hematologia-anemias-macrociticas-a5503c12b4fcd8b1",
+      "number": "1025e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-67-anos611a53fb81/",
-      "sourceQuestionId": "4000046655",
-      "matchedAt": "2026-08-25T19:06:19.095Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Causas de anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Quadro clínico da anemia megaloblástica",
-        "Diagnóstico da anemia megaloblástica"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico da anemia megaloblástica. Conduta/resposta: Gastrite atrófica",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-67-anos611a53fb81/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-e7db93300649c536",
-      "number": "1021e",
+      "id": "anki-hematologia-anemias-macrociticas-665ea75838ead27f",
+      "number": "1026e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes-testes1774ce4251/",
-      "sourceQuestionId": "4000030769",
-      "matchedAt": "2026-08-25T19:06:25.241Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Deficiência de vitamina B12. Conduta/resposta: Vitamina B12 sérica",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-seguintes-testes1774ce4251/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-83e957e0979da2b5",
-      "number": "1022e",
+      "id": "anki-hematologia-anemias-macrociticas-d519f109b93bb3b0",
+      "number": "1027e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
-      "sourceQuestionId": "4000025920",
-      "matchedAt": "2026-08-25T19:06:32.099Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Alterações dos leucócitos",
-        "Neutrófilos hipersegmentados"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: dosagem de B12 e folato.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
-        "https://med.estrategia.com/public/questoes/edc0bf861195348866824e3d/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-8dd2eb16af0ef6fe",
+      "number": "1028e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
