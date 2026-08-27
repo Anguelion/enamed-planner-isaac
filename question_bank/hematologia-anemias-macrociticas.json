@@ -1450,14 +1450,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Comer peixe cru (como salmão) com frequência é um fator de risco clássico pra pegar um verme chamado Diphyllobothrium latum (tênia do peixe), que 'rouba' a vitamina B12 direto do intestino antes dela ser absorvida, causando anemia megaloblástica — por isso, investigar parasitas nas fezes é o próximo passo lógico.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Infecção pela tênia do peixe - Diphyllobothrium latum",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967803",
-      "ankiGuid": "A)>7hWg4tu"
+      "ankiGuid": "A)>7hWg4tu",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-16-anos-chega669af52d05/",
+        "sourceQuestionId": "4000061374",
+        "matchedAt": "2026-08-27T17:41:04.644Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-a43626577e610fcd",
@@ -1484,14 +1497,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A falta de vitamina B12 pode acontecer por vários motivos: falta da proteína transportadora (transcobalamina II), dieta vegana estrita (já que B12 só existe naturalmente em alimentos de origem animal), retirada do estômago (gastrectomia), ou problemas no pâncreas (insuficiência pancreática, que atrapalha a liberação da B12 das proteínas R). Já a gravidez está mais ligada à falta de ÁCIDO FÓLICO (por aumento da demanda), não de B12 especificamente — por isso é a exceção certa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967804",
-      "ankiGuid": "CmWsDv9Yj{"
+      "ankiGuid": "CmWsDv9Yj{",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-causas-anemia18576737ef/",
+        "sourceQuestionId": "4000052075",
+        "matchedAt": "2026-08-27T17:41:10.468Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-edb3294347813e55",
@@ -1518,14 +1542,30 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de uma cirurgia bariátrica sem acompanhamento regular, essa senhora desenvolveu anemia grave com hemácias enormes e pancitopenia, além de sintomas neurológicos que foram (erroneamente) diagnosticados como Alzheimer — na verdade, tudo é bem explicado por deficiência de vitamina B12, que causa exatamente esses sintomas neurológicos e pode ser confundida com demência. No esfregaço, o achado que ajuda a confirmar essa suspeita são os neutrófilos multissegmentados (hipersegmentados).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Neurologia",
+        "Demências",
+        "Demências Reversíveis",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967805",
-      "ankiGuid": "zqTC4geF%0"
+      "ankiGuid": "zqTC4geF%0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Izabel-50-anos-com1202b0b153e/",
+        "sourceQuestionId": "4000048075",
+        "matchedAt": "2026-08-27T17:41:16.558Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-7f7365bece8f355f",
@@ -1552,14 +1592,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, tontura, formigamento e desequilíbrio, com anemia macrocítica grave, pancitopenia leve e LDH bem elevado (800) — quadro clássico de deficiência de vitamina B12, com o padrão de 'pseudo-hemólise' característico dessa anemia.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967806",
-      "ankiGuid": "zy+1:~Zf:s"
+      "ankiGuid": "zy+1:~Zf:s",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-63-anos8463edf8a1/",
+        "sourceQuestionId": "4000047892",
+        "matchedAt": "2026-08-27T17:41:22.575Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-528c25b810880ca6",
@@ -1585,14 +1637,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia perniciosa (falta de B12 autoimune), esperamos encontrar neutrófilos hipersegmentados, glossite (língua inflamada) e até declínio cognitivo (por causa do dano aos nervos) — mas as plaquetas costumam ficar BAIXAS (não altas), já que essa anemia afeta a produção de todas as linhagens do sangue na medula. Por isso trombocitose é a exceção, não um achado esperado.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967807",
-      "ankiGuid": "uAZ<Ed][zl"
+      "ankiGuid": "uAZ<Ed][zl",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alteracoes-clinico1361613d3c/",
+        "sourceQuestionId": "4000035115",
+        "matchedAt": "2026-08-27T17:41:28.658Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-5ba0fdda02f2ad13",

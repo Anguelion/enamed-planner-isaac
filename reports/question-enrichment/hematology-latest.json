@@ -1,83 +1,53 @@
 {
-  "generatedAt": "2026-08-26T20:08:07.060Z",
+  "generatedAt": "2026-08-27T17:40:57.456Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-f1e4601f4019310d",
-      "number": "1070f",
+      "id": "anki-hematologia-anemias-hemoliticas-c800665818a2ce22",
+      "number": "1073f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-vai-a1023abbc146/",
-      "sourceQuestionId": "4000034101",
-      "matchedAt": "2026-08-26T20:08:08.365Z",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-22-anos-tem64c8cfa2fd/",
+      "sourceQuestionId": "4000033055",
+      "matchedAt": "2026-08-27T17:40:58.601Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
+      "localAnswer": "A",
       "remoteAnswer": "C",
-      "answerMismatch": false,
+      "answerMismatch": true,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas por deficiências enzimáticas",
-        "Deficiência de G6PD",
-        "Quadro clínico da deficiência de G6PD"
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: Anemia por deficiência de glicose-6-fosfato desidrogenase.",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: As crises de sequestro esplênico são comuns no início da infância e podem exigir transfusão de emergência e/ou esplenectomia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-35-anos-vai-a1023abbc146/"
+        "https://med.estrategia.com/public/questoes/Maria-22-anos-tem64c8cfa2fd/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-c4d4e81377cfef61",
-      "number": "1029e",
+      "id": "anki-hematologia-anemias-macrociticas-7dbe3627c6737043",
+      "number": "1034e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/sintese-defeituosa-DNA3801952412/",
-      "sourceQuestionId": "4000082046",
-      "matchedAt": "2026-08-26T20:08:14.503Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-16-anos-chega669af52d05/",
+      "sourceQuestionId": "4000061374",
+      "matchedAt": "2026-08-27T17:41:04.644Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de ácido fólico"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Deficiência de ácido fólico. Conduta/resposta: Atrofia de mucosa gástrica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/sintese-defeituosa-DNA3801952412/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-cdecedfd59f5b0d6",
-      "number": "1030e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-69-anos-queixa8844f784f2/",
-      "sourceQuestionId": "4000078420",
-      "matchedAt": "2026-08-26T20:08:21.260Z",
-      "similarity": {
-        "stem": 0.987012987012987,
-        "options": 1,
-        "combined": 0.990909090909091
       },
       "localAnswer": "D",
       "remoteAnswer": "D",
@@ -88,37 +58,140 @@
         "Anemias macrocíticas",
         "Anemia megaloblástica",
         "Deficiência de vitamina B12",
-        "Quadro clínico da anemia megaloblástica"
+        "Distúrbios de absorção de vitamina B12",
+        "Infecção pela tênia do peixe - Diphyllobothrium latum"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Deficiência de vitamina B12.",
+      "comment": "Gabarito confirmado: D. Assunto: Infecção pela tênia do peixe - Diphyllobothrium latum. Conduta/resposta: Fezes para pesquisa de ovos e parasitas.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-69-anos-queixa8844f784f2/",
-        "https://med.estrategia.com/public/questoes/Mulher-69-anos-com6576852aaa/"
+        "https://med.estrategia.com/public/questoes/jovem-16-anos-chega669af52d05/",
+        "https://med.estrategia.com/public/questoes/adolescente-16-anos97fb1a9e1a/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-31a88d53cd7986cf",
-      "number": "1031e",
+      "id": "anki-hematologia-anemias-macrociticas-a43626577e610fcd",
+      "number": "1035e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-causas-anemia18576737ef/",
+      "sourceQuestionId": "4000052075",
+      "matchedAt": "2026-08-27T17:41:10.468Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Deficiência de vitamina B12. Conduta/resposta: Gestação",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Dentre-causas-anemia18576737ef/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-7d1662b6473b1b5d",
-      "number": "1032e",
+      "id": "anki-hematologia-anemias-macrociticas-edb3294347813e55",
+      "number": "1036e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Izabel-50-anos-com1202b0b153e/",
+      "sourceQuestionId": "4000048075",
+      "matchedAt": "2026-08-27T17:41:16.558Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Neurologia",
+        "Demências",
+        "Demências Reversíveis",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: neutrófilos multisegmentados.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Izabel-50-anos-com11509b508ab/",
+        "https://med.estrategia.com/public/questoes/Izabel-50-anos-com1202b0b153e/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-3f7f61091f88f97e",
-      "number": "1033e",
+      "id": "anki-hematologia-anemias-macrociticas-7f7365bece8f355f",
+      "number": "1037e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-63-anos8463edf8a1/",
+      "sourceQuestionId": "4000047892",
+      "matchedAt": "2026-08-27T17:41:22.575Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Deficiência de vitamina B12.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-63-anos8463edf8a1/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-528c25b810880ca6",
+      "number": "1038e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alteracoes-clinico1361613d3c/",
+      "sourceQuestionId": "4000035115",
+      "matchedAt": "2026-08-27T17:41:28.658Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Anemia perniciosa. Conduta/resposta: Trombocitose",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/alteracoes-clinico1349a9c65f/",
+        "https://med.estrategia.com/public/questoes/alteracoes-clinico1361613d3c/"
+      ]
     }
   ]
 }
