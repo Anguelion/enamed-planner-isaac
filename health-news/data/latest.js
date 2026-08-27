@@ -2,7 +2,7 @@ window.RADAR_SAUDE_ISSUE = {
   "id": "2026-08-24",
   "title": "Doença priônica, gratidão em 34 países e fobias específicas",
   "publishedAt": "2026-08-24",
-  "generatedAt": "2026-08-24T09:13:28-03:00",
+  "generatedAt": "2026-08-27T06:47:57-03:00",
   "readingMinutes": 17,
   "sourceUrl": "https://health.thenews.com.br/p/24-08-2026",
   "lead": {
@@ -98,6 +98,15 @@ window.RADAR_SAUDE_ISSUE = {
   ],
   "innovations": [
     {
+      "id": "sismat-estoques-compras-sus",
+      "icon": "📦",
+      "stage": "Sistema em operação",
+      "title": "Novo Sismat integra estoques e planejamento de compras",
+      "summary": "O Ministério da Saúde apresentou uma nova versão do sistema usado para controlar estoques, distribuição e rastreabilidade de insumos estratégicos, com alertas de vencimento e integração de dados.",
+      "impact": "É uma modernização de gestão já em funcionamento, não uma tecnologia clínica. A economia de até R$ 300 milhões em seis meses é uma estimativa do Ministério e ainda depende dos resultados observados.",
+      "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/sistema-reune-controle-de-estoques-e-planejamento-de-compras-no-ministerio-da-saude"
+    },
+    {
       "id": "elevidys-registro-cancelado",
       "icon": "⛔",
       "stage": "Registro cancelado",
@@ -123,15 +132,6 @@ window.RADAR_SAUDE_ISSUE = {
       "summary": "Ministério da Saúde e MEC abriram edital para Institutos Federais desenvolverem, com secretarias de Saúde, projetos de pesquisa, formação e inovação digital.",
       "impact": "O edital seleciona projetos; não representa tecnologia clínica validada nem oferta nacional já implantada.",
       "sourceUrl": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/ministerio-da-saude-lanca-nova-selecao-do-pet-saude-para-ampliar-pesquisa-e-inovacao-em-saude-digital-no-sus"
-    },
-    {
-      "id": "anvisa-piloto-dispositivos-inovadores",
-      "icon": "🩺",
-      "stage": "Avaliação regulatória",
-      "title": "Anvisa abre piloto para dispositivos médicos inovadores",
-      "summary": "O Edital nº 5/2026 selecionará até dez projetos para acompanhamento e diálogo regulatório durante o desenvolvimento de dispositivos inovadores.",
-      "impact": "Seleção no piloto não significa registro, aprovação clínica, incorporação ou oferta no SUS.",
-      "sourceUrl": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-lanca-novo-edital-para-avaliacao-regulatoria-de-dispositivos-medicos-inovadores/"
     }
   ],
   "protocolUpdates": [
