@@ -973,13 +973,13 @@
     },
     "anki-hematologia-anemias-hemoliticas-d84abda5ea3284dc": {
       "number": "1080f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-21T07:11:40.898Z",
-      "nextAttemptAt": "2026-08-28T07:11:40.898Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-28T18:47:39.369Z",
+      "nextAttemptAt": "2026-09-11T18:47:39.369Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/diagnostico-anemia236956582b/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-anemias-hemoliticas-634b065eba064f7d": {
       "number": "1081f",
@@ -1610,7 +1610,57 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/anemias24164dfc63/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-2c8b8e359cf38000": {
+      "number": "1045e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-28T18:47:45.953Z",
+      "nextAttemptAt": "2026-09-04T18:47:45.953Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-83-anos63eebb60da/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-6f87a727c8b07308": {
+      "number": "1046e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-28T18:47:51.956Z",
+      "nextAttemptAt": "2026-09-04T18:47:51.956Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-15-meses77fb981094/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-d66bc37146b2337b": {
+      "number": "1047e",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-28T18:47:58.431Z",
+      "nextAttemptAt": "2026-10-27T18:47:58.431Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-7f821bd2d8555569": {
+      "number": "1048e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-28T18:48:04.234Z",
+      "nextAttemptAt": "2026-09-04T18:48:04.234Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-56-anos-vem69587d38d2/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-macrociticas-2552fdd77e8d7442": {
+      "number": "1049e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-28T18:48:10.405Z",
+      "nextAttemptAt": "2026-09-04T18:48:10.405Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/reposica-parenteral149c9130c7/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-08-28T02:12:46.880Z"
+  "updatedAt": "2026-08-28T18:48:10.405Z"
 }

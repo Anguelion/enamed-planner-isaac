@@ -1967,14 +1967,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idoso com gastrectomia prévia (tempo suficiente pra esgotar estoques de B12), cansaço, perda de memória e formigamento, anemia macrocítica grave com neutrófilos hipersegmentados — deficiência de cobalamina. Como o estômago já não absorve bem a vitamina pela boca, o tratamento precisa ser por injeção (via parenteral), não por comprimido.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Neurologia",
+        "Anatomia, Fisiologia e Semiologia Neurológica",
+        "Semiologia Neurológica",
+        "Síndromes Sensitivas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967814",
-      "ankiGuid": "lkSB02(TNc"
+      "ankiGuid": "lkSB02(TNc",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-83-anos63eebb60da/",
+        "sourceQuestionId": "4000125359",
+        "matchedAt": "2026-08-28T18:47:45.952Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-6f87a727c8b07308",
@@ -2001,14 +2015,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Bebê amamentado exclusivamente por mãe vegana estrita, que perdeu habilidades que já tinha adquirido (regressão do desenvolvimento) — quadro clássico de deficiência de vitamina B12 transmitida pela dieta materna. A boa notícia é que, se tratado a tempo com suplementação, as alterações neurológicas em bebês costumam ter boa chance de melhora (diferente de adultos, em quem o dano pode ser mais permanente se demorar).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Carência nutricional de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967815",
-      "ankiGuid": "QF-k2H=[{&"
+      "ankiGuid": "QF-k2H=[{&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-15-meses77fb981094/",
+        "sourceQuestionId": "4000124437",
+        "matchedAt": "2026-08-28T18:47:51.956Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d66bc37146b2337b",
@@ -2035,7 +2062,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cirurgia bariátrica há 8 anos (tempo suficiente pra esgotar os estoques de B12, que duram anos) explica o cansaço, a língua lisa, a perda de sensibilidade nas pernas e o sinal de Romberg positivo (mostrando que os nervos da propriocepção já foram afetados) — tudo aponta pra deficiência de vitamina B12 causada pela cirurgia antiga.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -2069,14 +2096,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza progressiva e formigamento nas pernas, anemia macrocítica grave, com leucócitos e plaquetas levemente baixos (pancitopenia leve) — deficiência de B12, tratada com reposição intramuscular (a via preferida quando se suspeita de problema de absorção).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967817",
-      "ankiGuid": "g%@{48>[9,"
+      "ankiGuid": "g%@{48>[9,",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-56-anos-vem69587d38d2/",
+        "sourceQuestionId": "4000110602",
+        "matchedAt": "2026-08-28T18:48:04.234Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-2552fdd77e8d7442",
@@ -2103,14 +2143,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando se começa a repor vitamina B12 em quem estava com deficiência grave, a medula 'acorda' rapidamente e passa a fabricar muitas células novas — esse processo consome muito potássio de uma vez, podendo causar uma queda perigosa do potássio no sangue (hipocalemia), que precisa ser monitorada nos primeiros dias de tratamento.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Tratamento da anemia megaloblástica",
+        "Complicações do tratamento da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967818",
-      "ankiGuid": "dR%3{S;`12"
+      "ankiGuid": "dR%3{S;`12",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/reposica-parenteral149c9130c7/",
+        "sourceQuestionId": "4000109930",
+        "matchedAt": "2026-08-28T18:48:10.404Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-6917191fe18f00ad",

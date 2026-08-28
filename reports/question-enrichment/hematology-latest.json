@@ -1,122 +1,81 @@
 {
-  "generatedAt": "2026-08-28T02:12:15.953Z",
+  "generatedAt": "2026-08-28T18:47:37.855Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-5ba0fdda02f2ad13",
-      "number": "1039e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "id": "anki-hematologia-anemias-hemoliticas-d84abda5ea3284dc",
+      "number": "1080f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-68-anos-queixa8340bc2791/",
-      "sourceQuestionId": "4000032646",
-      "matchedAt": "2026-08-28T02:12:17.065Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/diagnostico-anemia236956582b/",
+      "sourceQuestionId": "4000002689",
+      "matchedAt": "2026-08-28T18:47:39.369Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Anemias hemolíticas. Conduta/resposta: Teste de Coombs direto ou de antiglobulina direto: negativo nas anemias hemolíticas autoimunes",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/diagnostico-anemia236956582b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-2c8b8e359cf38000",
+      "number": "1045e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-83-anos63eebb60da/",
+      "sourceQuestionId": "4000125359",
+      "matchedAt": "2026-08-28T18:47:45.952Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
         "Neurologia",
-        "Demências",
-        "Demências Reversíveis",
-        "Deficiência de Vitamina B12 e Ácido Fólico",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12"
+        "Anatomia, Fisiologia e Semiologia Neurológica",
+        "Semiologia Neurológica",
+        "Síndromes Sensitivas"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Distúrbios de absorção de vitamina B12. Conduta/resposta: Má absorção de vitamina B12.",
+      "comment": "Gabarito confirmado: C. Assunto: Síndromes Sensitivas. Conduta/resposta: Deficiência de cobalamina – Administração parenteral de vitamina B12.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-68-anos-queixa8340bc2791/"
+        "https://med.estrategia.com/public/questoes/Homem-83-anos63eebb60da/",
+        "https://med.estrategia.com/public/questoes/paciente-78-anos63e26eef6b/",
+        "https://med.estrategia.com/public/questoes/9edf4b44d10439fab61af145/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-aebedc261a896c7b",
-      "number": "1040e",
+      "id": "anki-hematologia-anemias-macrociticas-6f87a727c8b07308",
+      "number": "1046e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-45-anos112cf21d352/",
-      "sourceQuestionId": "4000032312",
-      "matchedAt": "2026-08-28T02:12:23.644Z",
-      "similarity": {
-        "stem": 0.9513513513513514,
-        "options": 1,
-        "combined": 0.9659459459459458
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Gastroenterologia",
-        "Intestinos",
-        "Distúrbios Disabsortivos",
-        "Supercrescimento Bacteriano",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Distúrbios de absorção de vitamina B12. Conduta/resposta: A alteração mais comum esperada no mielograma desta paciente é hipoplasia global.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/mulher-45-anos112cf21d352/",
-        "https://med.estrategia.com/public/questoes/Mulher-45-anos-com451b58a984/",
-        "https://med.estrategia.com/public/questoes/Leia-caso-clinico108e4424845/",
-        "https://med.estrategia.com/public/questoes/Leia-relato-caso79677d72a3/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-1c4c3985e3b9a6c9",
-      "number": "1041e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-24-anos-idade790106d8b2/",
-      "sourceQuestionId": "4000025190",
-      "matchedAt": "2026-08-28T02:12:29.436Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Anemia perniciosa"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemia perniciosa. Conduta/resposta: anemia perniciosa e anticorpo anti-célula parietal.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-24-anos-idade790106d8b2/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-67583061af485295",
-      "number": "1042e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-43-anos70f2cc9f2e/",
-      "sourceQuestionId": "4000003418",
-      "matchedAt": "2026-08-28T02:12:35.297Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-15-meses77fb981094/",
+      "sourceQuestionId": "4000124437",
+      "matchedAt": "2026-08-28T18:47:51.956Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -132,73 +91,88 @@
         "Anemia megaloblástica",
         "Quadro clínico da anemia megaloblástica",
         "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Gastrectomias"
+        "Carência nutricional de vitamina B12"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Gastrectomias. Conduta/resposta: Deficiência de vitamina B12.",
+      "comment": "Gabarito confirmado: D. Assunto: Carência nutricional de vitamina B12. Conduta/resposta: As alterações neurológicas podem regredir com suplementação vitamínica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-43-anos70f2cc9f2e/"
+        "https://med.estrategia.com/public/questoes/Paciente-15-meses77fb981094/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-befc7b0e6189290a",
-      "number": "1043e",
+      "id": "anki-hematologia-anemias-macrociticas-d66bc37146b2337b",
+      "number": "1047e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/mulher-32-anos-procura483804198a/",
+        "https://med.estrategia.com/public/questoes/mulher-com-38-anos242c077e2b6/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.25210084033613445,
+        "options": 0.03555555555555555,
+        "combined": 0.18713725490196076
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-7f821bd2d8555569",
+      "number": "1048e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/grande-maioria-casos36eec50716/",
-      "sourceQuestionId": "4000003162",
-      "matchedAt": "2026-08-28T02:12:41.045Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-56-anos-vem69587d38d2/",
+      "sourceQuestionId": "4000110602",
+      "matchedAt": "2026-08-28T18:48:04.234Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemias macrocíticas não megaloblásticas",
-        "Anemia aplásica",
-        "Falências medulares congênitas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Falências medulares congênitas. Conduta/resposta: Manifestação idiossincrática.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/grande-maioria-casos36eec50716/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-db92d5029bacbae6",
-      "number": "1044e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias24164dfc63/",
-      "sourceQuestionId": "4000000810",
-      "matchedAt": "2026-08-28T02:12:46.880Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
-        "Causas de anemia megaloblástica",
         "Deficiência de vitamina B12",
-        "Deficiência de ácido fólico"
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Deficiência de ácido fólico. Conduta/resposta: Menometrorragia (perda excessiva de ferro).",
+      "comment": "Gabarito confirmado: E. Assunto: Anemia perniciosa. Conduta/resposta: Déficit de B12, reposição intramuscular",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/anemias24164dfc63/"
+        "https://med.estrategia.com/public/questoes/Homem-56-anos-vem69587d38d2/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-2552fdd77e8d7442",
+      "number": "1049e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/reposica-parenteral149c9130c7/",
+      "sourceQuestionId": "4000109930",
+      "matchedAt": "2026-08-28T18:48:10.404Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Tratamento da anemia megaloblástica",
+        "Complicações do tratamento da anemia megaloblástica"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Complicações do tratamento da anemia megaloblástica. Conduta/resposta: hipocalemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/reposica-parenteral149c9130c7/"
       ]
     }
   ]

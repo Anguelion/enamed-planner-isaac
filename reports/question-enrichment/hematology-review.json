@@ -311,7 +311,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: As crises de sequestro esplênico são comuns no início da infância e podem exigir transfusão de emergência e/ou esplenectomia.",
       "reviewedAt": "2026-08-27T17:40:58.601Z"
+    },
+    "anki-hematologia-anemias-macrociticas-d66bc37146b2337b": {
+      "id": "anki-hematologia-anemias-macrociticas-d66bc37146b2337b",
+      "number": "1047e",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.25210084033613445,
+        "options": 0.03555555555555555,
+        "combined": 0.18713725490196076
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-08-28T18:47:58.431Z"
     }
   },
-  "updatedAt": "2026-08-27T17:40:58.601Z"
+  "updatedAt": "2026-08-28T18:47:58.431Z"
 }
