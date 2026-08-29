@@ -1660,7 +1660,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/reposica-parenteral149c9130c7/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-macrociticas-6917191fe18f00ad": {
+      "number": "1050e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T12:44:12.299Z",
+      "nextAttemptAt": "2026-09-05T12:44:12.299Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-situacoes-I23b51da7e3/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-f5579d685cb91605": {
+      "number": "1051e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T12:44:18.500Z",
+      "nextAttemptAt": "2026-09-05T12:44:18.500Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-52-anos-queixa84f5dd63a1/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-1fa76d10e9c94adf": {
+      "number": "1052e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T12:44:24.259Z",
+      "nextAttemptAt": "2026-09-05T12:44:24.259Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-30-anos-sexo31441ccb9c/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-d0d22f4049aff36d": {
+      "number": "1053e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T12:44:30.245Z",
+      "nextAttemptAt": "2026-09-05T12:44:30.245Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-megaloblastica93dce3b7d/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-5589a996b0942f97": {
+      "number": "1054e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T12:44:35.997Z",
+      "nextAttemptAt": "2026-09-05T12:44:35.997Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-cor-parda-407533be25fa/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-macrociticas-f57fe13b7a22048b": {
+      "number": "1055e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T12:44:42.044Z",
+      "nextAttemptAt": "2026-09-05T12:44:42.044Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Bruno-16-anos-idade-e70579092fe/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-08-28T18:48:10.405Z"
+  "updatedAt": "2026-08-29T12:44:42.044Z"
 }
