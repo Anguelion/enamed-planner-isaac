@@ -289,7 +289,45 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-08-26T07:11:45.629Z"
+    },
+    "anki-hematologia-anemias-hemoliticas-c800665818a2ce22": {
+      "id": "anki-hematologia-anemias-hemoliticas-c800665818a2ce22",
+      "number": "1073f",
+      "status": "answer_mismatch",
+      "localAnswer": "A",
+      "remoteAnswer": "C",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-22-anos-tem64c8cfa2fd/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme"
+      ],
+      "suggestedComment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: As crises de sequestro esplênico são comuns no início da infância e podem exigir transfusão de emergência e/ou esplenectomia.",
+      "reviewedAt": "2026-08-27T17:40:58.601Z"
+    },
+    "anki-hematologia-anemias-macrociticas-d66bc37146b2337b": {
+      "id": "anki-hematologia-anemias-macrociticas-d66bc37146b2337b",
+      "number": "1047e",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.25210084033613445,
+        "options": 0.03555555555555555,
+        "combined": 0.18713725490196076
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-08-28T18:47:58.431Z"
     }
   },
-  "updatedAt": "2026-08-26T07:11:45.629Z"
+  "updatedAt": "2026-08-28T18:47:58.431Z"
 }

@@ -3460,14 +3460,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a D: o teste de Coombs direto deve dar POSITIVO nas anemias hemolíticas AUTOIMUNES (é literalmente o exame usado pra confirmar esse diagnóstico, detectando os anticorpos grudados nas hemácias) — dizer que ele é 'negativo' nesses casos está incorreto. As outras frases (sobre o VCM podendo aumentar por causa dos reticulócitos maiores, esferócitos no esfregaço, e LDH aumentado) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350421",
-      "ankiGuid": "GC%zD0L*XS"
+      "ankiGuid": "GC%zD0L*XS",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/diagnostico-anemia236956582b/",
+        "sourceQuestionId": "4000002689",
+        "matchedAt": "2026-08-28T18:47:39.369Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-634b065eba064f7d",
