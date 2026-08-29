@@ -2478,14 +2478,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fadiga progressiva numa mulher jovem, com anemia macrocítica (VCM 106) e neutrófilos hipersegmentados no esfregaço — o melhor exame pra elucidar a causa é dosar a vitamina B12, uma das principais suspeitas nesse padrão de anemia.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967825",
-      "ankiGuid": "GL$*um|?Pl"
+      "ankiGuid": "GL$*um|?Pl",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+        "sourceQuestionId": "4000062047",
+        "matchedAt": "2026-08-29T20:59:01.377Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-56047629c7f36db5",
@@ -2512,14 +2527,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia perniciosa, esperamos neutrófilos hipersegmentados, glossite, declínio cognitivo e um LDH bem elevado (pela destruição das células dentro da medula) — mas as plaquetas costumam ficar baixas, não altas. Por isso trombocitose é a exceção que NÃO combina com essa doença.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967826",
-      "ankiGuid": "Mm+!eN6kj{"
+      "ankiGuid": "Mm+!eN6kj{",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alteracoes-clinico1349a9c65f/",
+        "sourceQuestionId": "4000043306",
+        "matchedAt": "2026-08-29T20:59:07.509Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d8a7e22069017c0d",
@@ -2546,14 +2574,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Formigamento, dificuldade de andar, língua lisa, queilite angular numa paciente com hipotireoidismo (que costuma vir 'em grupo' com outras doenças autoimunes, incluindo a anemia perniciosa) — o quadro esperado é anemia macrocítica, leucopenia com neutrófilos hipersegmentados, plaquetas levemente baixas, LDH elevado (pela pseudo-hemólise) e vitamina B12 baixa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967827",
-      "ankiGuid": "r`l-_zf&N9"
+      "ankiGuid": "r`l-_zf&N9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-4547a27a1f8c/",
+        "sourceQuestionId": "4000041857",
+        "matchedAt": "2026-08-29T20:59:13.850Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-253e9ee1d7792234",

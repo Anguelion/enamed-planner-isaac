@@ -1133,33 +1133,33 @@
     },
     "anki-hematologia-anemias-hemoliticas-c23ecc7d9fdb5419": {
       "number": "1096f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-22T18:52:15.311Z",
-      "nextAttemptAt": "2026-08-29T18:52:15.311Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-29T20:58:42.536Z",
+      "nextAttemptAt": "2026-09-12T20:58:42.536Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considerando-anemias19a5c0eee3/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-anemias-hemoliticas-b7ec17f369203f11": {
       "number": "1097f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-22T18:52:20.629Z",
-      "nextAttemptAt": "2026-08-29T18:52:20.629Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-29T20:58:49.070Z",
+      "nextAttemptAt": "2026-09-12T20:58:49.070Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes188f7d1a48/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-anemias-hemoliticas-dd80606c4fcdd668": {
       "number": "1098f",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-22T18:52:25.908Z",
-      "nextAttemptAt": "2026-08-29T18:52:25.908Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "answer_mismatch",
+      "attempts": 2,
+      "lastAttemptAt": "2026-08-29T20:58:54.915Z",
+      "nextAttemptAt": "2027-08-29T20:58:54.915Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/assertiva-a-anemia960712f92/",
+      "localAnswer": "C",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-anemias-hemoliticas-5538cb38522cf5fc": {
       "number": "1099f",
@@ -1720,7 +1720,37 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Bruno-16-anos-idade-e70579092fe/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-6ef1b3bd2ad449ba": {
+      "number": "1056e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T20:59:01.378Z",
+      "nextAttemptAt": "2026-09-05T20:59:01.378Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-macrociticas-56047629c7f36db5": {
+      "number": "1057e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T20:59:07.510Z",
+      "nextAttemptAt": "2026-09-05T20:59:07.510Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alteracoes-clinico1349a9c65f/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-d8a7e22069017c0d": {
+      "number": "1058e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-29T20:59:13.850Z",
+      "nextAttemptAt": "2026-09-05T20:59:13.850Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-4547a27a1f8c/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-08-29T12:44:42.044Z"
+  "updatedAt": "2026-08-29T20:59:13.850Z"
 }

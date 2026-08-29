@@ -4205,10 +4205,23 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Fisiopatologia da deficiência de G6PD",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350437",
-      "ankiGuid": "ib&AjE.ML/"
+      "ankiGuid": "ib&AjE.ML/",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Considerando-anemias19a5c0eee3/",
+        "sourceQuestionId": "4000125399",
+        "matchedAt": "2026-08-29T20:58:42.534Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-b7ec17f369203f11",
@@ -4239,10 +4252,23 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Anemias hemolíticas autoimunes (AHAI) por anticorpos quentes",
+        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
+        "Testes de Coombs",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350438",
-      "ankiGuid": "ohM)|!|?jl"
+      "ankiGuid": "ohM)|!|?jl",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes188f7d1a48/",
+        "sourceQuestionId": "4000120305",
+        "matchedAt": "2026-08-29T20:58:49.069Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-dd80606c4fcdd668",

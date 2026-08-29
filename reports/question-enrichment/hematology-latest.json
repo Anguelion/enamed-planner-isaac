@@ -1,99 +1,123 @@
 {
-  "generatedAt": "2026-08-29T12:44:11.382Z",
+  "generatedAt": "2026-08-29T20:58:41.249Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-6917191fe18f00ad",
-      "number": "1050e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "id": "anki-hematologia-anemias-hemoliticas-c23ecc7d9fdb5419",
+      "number": "1096f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-situacoes-I23b51da7e3/",
-      "sourceQuestionId": "4000081412",
-      "matchedAt": "2026-08-29T12:44:12.296Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considerando-anemias19a5c0eee3/",
+      "sourceQuestionId": "4000125399",
+      "matchedAt": "2026-08-29T20:58:42.534Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Introdução à hemólise",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Fisiopatologia da deficiência de G6PD"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Fisiopatologia da deficiência de G6PD. Conduta/resposta: Deficiência de Glicose-6-fosfato redutase (G6PD) – defeito enzimático eritrocitário.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Considerando-anemias19a5c0eee3/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-b7ec17f369203f11",
+      "number": "1097f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes188f7d1a48/",
+      "sourceQuestionId": "4000120305",
+      "matchedAt": "2026-08-29T20:58:49.069Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Anemias hemolíticas autoimunes (AHAI) por anticorpos quentes",
+        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
+        "Testes de Coombs"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Testes de Coombs. Conduta/resposta: Hemoglobinúria de grande monta.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Qual-seguintes188f7d1a48/",
+        "https://med.estrategia.com/public/questoes/paciente-lupica-foi591b1dcbd7/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-hemoliticas-dd80606c4fcdd668",
+      "number": "1098f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/assertiva-a-anemia960712f92/",
+      "sourceQuestionId": "4000071184",
+      "matchedAt": "2026-08-29T20:58:54.915Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
       "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias e condições não hematológicas",
-        "Anemias das endocrinopatias",
-        "Anemia do hipotireoidismo",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Causas de anemia megaloblástica",
-        "Mielodisplasias e mieloproliferações: outras alterações da medula óssea",
-        "Mielodisplasias/síndromes mielodisplásicas (SMD)",
-        "Diagnóstico das síndromes mielodisplásicas (SMD)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico das síndromes mielodisplásicas (SMD). Conduta/resposta: Apenas I, II e III.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Analise-situacoes-I23b51da7e3/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-f5579d685cb91605",
-      "number": "1051e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-52-anos-queixa84f5dd63a1/",
-      "sourceQuestionId": "4000069971",
-      "matchedAt": "2026-08-29T12:44:18.499Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Puericultura",
-        "Vitaminas",
-        "Vitaminas do Complexo B",
-        "Vitamina B12/Cianocobalamina",
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Metabolismo da vitamina B12",
-        "Carência nutricional de vitamina B12"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Carência nutricional de vitamina B12. Conduta/resposta: Dosagem sérica de vitamina B12.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-52-anos-queixa84f5dd63a1/",
-        "https://med.estrategia.com/public/questoes/Mulher-50-anos-queixa6080f4b39f/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-1fa76d10e9c94adf",
-      "number": "1052e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-30-anos-sexo31441ccb9c/",
-      "sourceQuestionId": "4000067840",
-      "matchedAt": "2026-08-29T12:44:24.257Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
       "remoteAnswer": "D",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações crônicas da anemia falciforme",
+        "Auto-esplenectomia",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Crise de sequestro esplênico. Conduta/resposta: Lactentes com anemia falciforme têm alteração da função imune e podem apresentar asplenia funcional precocemente.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/assertiva-a-anemia960712f92/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-6ef1b3bd2ad449ba",
+      "number": "1056e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+      "sourceQuestionId": "4000062047",
+      "matchedAt": "2026-08-29T20:59:01.377Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -101,27 +125,26 @@
         "Anemias macrocíticas",
         "Anemia megaloblástica",
         "Quadro clínico da anemia megaloblástica",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Polineuropatias",
-        "Polineuropatias Carenciais",
-        "Deficiência de Vitamina B12 e Ácido Fólico"
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: Megaloblástica por deficiência de absorção de vitamina B12, com possível causa Doença Celíaca ou Doença Inflamatória intestinal.",
+      "comment": "Gabarito confirmado: B. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: vitamina B12",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-30-anos-sexo31441ccb9c/"
+        "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+        "https://med.estrategia.com/public/questoes/d57d63cde72e0612a247d734/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-d0d22f4049aff36d",
-      "number": "1053e",
+      "id": "anki-hematologia-anemias-macrociticas-56047629c7f36db5",
+      "number": "1057e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-megaloblastica93dce3b7d/",
-      "sourceQuestionId": "4000067043",
-      "matchedAt": "2026-08-29T12:44:30.245Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alteracoes-clinico1349a9c65f/",
+      "sourceQuestionId": "4000043306",
+      "matchedAt": "2026-08-29T20:59:07.509Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -137,73 +160,42 @@
         "Anemia megaloblástica",
         "Deficiência de vitamina B12",
         "Distúrbios de absorção de vitamina B12",
-        "Gastrectomias"
+        "Anemia perniciosa"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Gastrectomias. Conduta/resposta: gastrectomia total.",
+      "comment": "Gabarito confirmado: A. Assunto: Anemia perniciosa. Conduta/resposta: Trombocitose.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-megaloblastica93dce3b7d/"
+        "https://med.estrategia.com/public/questoes/alteracoes-clinico1349a9c65f/",
+        "https://med.estrategia.com/public/questoes/alteracoes-clinico1361613d3c/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-5589a996b0942f97",
-      "number": "1054e",
+      "id": "anki-hematologia-anemias-macrociticas-d8a7e22069017c0d",
+      "number": "1058e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-cor-parda-407533be25fa/",
-      "sourceQuestionId": "4000066013",
-      "matchedAt": "2026-08-29T12:44:35.997Z",
-      "similarity": {
-        "stem": 0.9922480620155039,
-        "options": 1,
-        "combined": 0.9945736434108527
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de ácido fólico",
-        "Quadro clínico da anemia megaloblástica"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Deficiência de Folato",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-cor-parda-407533be25fa/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-f57fe13b7a22048b",
-      "number": "1055e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Bruno-16-anos-idade-e70579092fe/",
-      "sourceQuestionId": "4000063017",
-      "matchedAt": "2026-08-29T12:44:42.044Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-4547a27a1f8c/",
+      "sourceQuestionId": "4000041857",
+      "matchedAt": "2026-08-29T20:59:13.850Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
-        "Deficiência de ácido fólico",
-        "Distúrbios de absorção do ácido fólico",
-        "Anticonvulsivantes"
+        "Deficiência de vitamina B12"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Anticonvulsivantes. Conduta/resposta: Anemia megaloblástica",
+      "comment": "Gabarito confirmado: D. Assunto: Deficiência de vitamina B12. Conduta/resposta: Hemograma com anemia macrocítica; leucopenia com neutrófilos hipersegmentados; plaquetopenia leve; DHL elevado; dosagem de vitamina B12 reduzida.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Bruno-16-anos-idade-e70579092fe/",
-        "https://med.estrategia.com/public/questoes/8461d4da92e72ea06baf52e7/"
+        "https://med.estrategia.com/public/questoes/Paciente-feminina-4547a27a1f8c/",
+        "https://med.estrategia.com/public/questoes/paciente-com-45-anos8993dc19af/"
       ]
     }
   ]

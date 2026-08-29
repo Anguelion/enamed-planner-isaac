@@ -327,7 +327,33 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-08-28T18:47:58.431Z"
+    },
+    "anki-hematologia-anemias-hemoliticas-dd80606c4fcdd668": {
+      "id": "anki-hematologia-anemias-hemoliticas-dd80606c4fcdd668",
+      "number": "1098f",
+      "status": "answer_mismatch",
+      "localAnswer": "C",
+      "remoteAnswer": "D",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/assertiva-a-anemia960712f92/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações crônicas da anemia falciforme",
+        "Auto-esplenectomia",
+        "Complicações agudas da anemia falciforme",
+        "Crise de sequestro esplênico"
+      ],
+      "suggestedComment": "Gabarito confirmado: D. Assunto: Crise de sequestro esplênico. Conduta/resposta: Lactentes com anemia falciforme têm alteração da função imune e podem apresentar asplenia funcional precocemente.",
+      "reviewedAt": "2026-08-29T20:58:54.915Z"
     }
   },
-  "updatedAt": "2026-08-28T18:47:58.431Z"
+  "updatedAt": "2026-08-29T20:58:54.915Z"
 }
