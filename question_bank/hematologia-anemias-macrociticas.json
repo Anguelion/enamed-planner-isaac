@@ -2619,14 +2619,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sobre a anemia perniciosa: ela é realmente a causa mais comum de deficiência de vitamina B12 (frase I certa). Mas ela é mais comum DEPOIS dos 30-40 anos (não antes, como diz a frase II — errada). Os principais anticorpos envolvidos são mesmo contra as células parietais e o fator intrínseco (frase III certa). E, ao contrário da frase IV, existe sim uma associação conhecida com maior risco de câncer gástrico (frase IV errada, já que a gastrite atrófica crônica aumenta esse risco). Juntando: I e III estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967828",
-      "ankiGuid": "x17yIn,[Q."
+      "ankiGuid": "x17yIn,[Q.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino77990458ad/",
+        "sourceQuestionId": "4000001463",
+        "matchedAt": "2026-08-30T11:59:33.783Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d3db7f8a59354e48",
@@ -2653,14 +2666,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Neutrófilos hipersegmentados (com mais 'gomos' no núcleo do que o normal) são um achado que aponta bem diretamente pra deficiência de vitamina B12 ou de ácido fólico — é um dos sinais mais confiáveis pra suspeitar dessas duas deficiências no hemograma.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967829",
-      "ankiGuid": "K36CVdomy:"
+      "ankiGuid": "K36CVdomy:",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Com-as-anemias9fb43526f/",
+        "sourceQuestionId": "4000116545",
+        "matchedAt": "2026-08-30T11:59:40.214Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-ab1bb959ff32d9b9",
@@ -2687,14 +2709,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A anemia aplástica realmente tem medula pobre em células (hipocelular) e pancitopenia (V) — mas, diferente do que a segunda frase afirma, ela NÃO costuma vir com gânglios ou baço/fígado aumentados (F); se isso aparecer, pensa-se em outra doença, como leucemia. A terceira frase está certa: pode ser adquirida ou fazer parte de doenças genéticas desde o nascimento, como a anemia de Fanconi (V). Sequência: V/F/V.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas não megaloblásticas",
+        "Anemia aplásica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967830",
-      "ankiGuid": "rA~3aimr/9"
+      "ankiGuid": "rA~3aimr/9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-aplastica67c2959ed0/",
+        "sourceQuestionId": "4000115103",
+        "matchedAt": "2026-08-30T11:59:46.195Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-67b62d1e811fe3ab",
@@ -2721,14 +2754,30 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A doença de Crohn é a causa mais provável dessa lista, porque ela classicamente afeta o íleo terminal — justamente a parte do intestino onde a vitamina B12 é absorvida junto com o fator intrínseco. A retocolite ulcerativa, por afetar só o cólon (não o íleo), não costuma causar essa deficiência do mesmo jeito.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Gastroenterologia",
+        "Intestinos",
+        "Doença Inflamatória Intestinal",
+        "Manifestações Clínicas",
+        "Doença de Crohn",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967831",
-      "ankiGuid": "n/GEz-b;wB"
+      "ankiGuid": "n/GEz-b;wB",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-54-anos-e29bc8a580a/",
+        "sourceQuestionId": "4000110338",
+        "matchedAt": "2026-08-30T11:59:52.587Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-1fdf3a18a97cbc81",
@@ -2755,14 +2804,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase I está incorreta: apesar do emagrecimento e da anemia grave levantarem suspeita de câncer, o resto do quadro (formigamento nos pés, neutrófilos hipersegmentados, anemia bem macrocítica) já é bem clássico e suficiente pra apontar pra deficiência de vitamina B12 (frase III), sem precisar correr direto pra investigação de neoplasia e transfusão. As outras frases (aguardar transfusão em paciente estável, e usar a contagem de reticulócitos como ferramenta diagnóstica) fazem sentido nesse contexto.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Classificação funcional das anemias",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967832",
-      "ankiGuid": "Js{)erOlog"
+      "ankiGuid": "Js{)erOlog",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-40-anos184a2ea1084/",
+        "sourceQuestionId": "4000107943",
+        "matchedAt": "2026-08-30T11:59:58.415Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-5a753c970b0b2edc",
@@ -2789,14 +2853,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Uma pessoa saudável que fez dieta restritiva por conta própria durante só 4 meses e já desenvolveu anemia com hemácias grandes — esse tempo curto combina mais com falta de ácido fólico (estoques do corpo acabam rápido, em poucos meses) do que com falta de B12 (que demora anos pra esgotar, já que o corpo guarda bastante).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967833",
-      "ankiGuid": "ht:#nymAAf"
+      "ankiGuid": "ht:#nymAAf",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/homem-previamente49e8f81d44/",
+        "sourceQuestionId": "4000092963",
+        "matchedAt": "2026-08-30T12:00:04.976Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-516fc2922734f24a",
