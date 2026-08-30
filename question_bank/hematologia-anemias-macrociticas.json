@@ -2899,14 +2899,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O Diphyllobothrium latum (a tênia do peixe) é o parasita clássico que causa deficiência de vitamina B12 — ele 'rouba' a vitamina direto no intestino do hospedeiro antes dela ser absorvida, principalmente em quem come peixe cru com frequência.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Infecção pela tênia do peixe - Diphyllobothrium latum",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967834",
-      "ankiGuid": "DB8Sfd9(vi"
+      "ankiGuid": "DB8Sfd9(vi",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-parasitas2037e68647/",
+        "sourceQuestionId": "4000091410",
+        "matchedAt": "2026-08-30T21:11:58.264Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-852ea2297754cf7c",
@@ -2933,14 +2946,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A ingestão de soda cáustica (um produto muito alcalino/corrosivo) pode danificar seriamente as células do estômago responsáveis por produzir o fator intrínseco, necessário pra absorver vitamina B12 — explicando, um ano depois, o cansaço e a palidez dessa jovem por deficiência dessa vitamina.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967835",
-      "ankiGuid": "G)JM[gK?Y7"
+      "ankiGuid": "G)JM[gK?Y7",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-17-anos45f9757adc/",
+        "sourceQuestionId": "4000088445",
+        "matchedAt": "2026-08-30T21:12:04.144Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-8b545f3fbe31defb",
@@ -2967,14 +2992,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse menino tem um conjunto de características bem específicas: rosto triangular, mancha café com leite, deformidade no polegar, malformação renal e testicular — tudo isso, junto com a anemia grave macrocítica e pancitopenia (mas com B12 normal, descartando falta de vitamina), aponta pra anemia de Fanconi, uma doença genética rara que combina malformações físicas com falência da medula óssea.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas não megaloblásticas",
+        "Anemia aplásica",
+        "Falências medulares congênitas",
+        "Anemia da Fanconi",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967836",
-      "ankiGuid": "cp&ikmitKN"
+      "ankiGuid": "cp&ikmitKN",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-quatro-anos-foi91408e20bc/",
+        "sourceQuestionId": "4000082742",
+        "matchedAt": "2026-08-30T21:12:09.862Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-29c1a6675cda871f",
@@ -3001,14 +3039,31 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na atrofia da mucosa do estômago (que causa a anemia perniciosa), esperamos LDH alta, leucopenia, plaquetopenia e homocisteína elevada (todos ligados à falta de B12). Mas a gastrina, ao contrário do que diz a alternativa, costuma ficar ALTA (não baixa) — porque, sem ácido sendo produzido pelo estômago doente, o corpo perde o 'freio' natural que controlaria a produção de gastrina, deixando-a elevada.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967837",
-      "ankiGuid": "s23u(yOwbr"
+      "ankiGuid": "s23u(yOwbr",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-F-R-L494abc9e27/",
+        "sourceQuestionId": "4000081346",
+        "matchedAt": "2026-08-30T21:12:16.301Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-aabb4fd5d7a3b8d2",
@@ -3034,14 +3089,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anticorpos contra a bomba de prótons do estômago, gastropatia diabética e ingestão de substâncias corrosivas podem, de formas diferentes, atrapalhar a absorção de B12 e causar anemia megaloblástica. Já o hipertireoidismo não é uma causa reconhecida dessa anemia — por isso é a exceção certa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967838",
-      "ankiGuid": "s.<rI8/3YF"
+      "ankiGuid": "s.<rI8/3YF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-varios-fatores186eee9116/",
+        "sourceQuestionId": "4000059896",
+        "matchedAt": "2026-08-30T21:12:21.969Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-85158a9a09dcaefa",
@@ -3068,14 +3134,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Antrectomia (retirada de parte do estômago), uso crônico de omeprazol, metformina, e a síndrome de alça cega (onde bactérias em excesso 'roubam' a B12 no intestino) são causas conhecidas de deficiência dessa vitamina. Já o metotrexato é um remédio que bloqueia o ÁCIDO FÓLICO, não a vitamina B12 — por isso não está relacionado a essa deficiência específica.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967839",
-      "ankiGuid": "rAdb|V]]#x"
+      "ankiGuid": "rAdb|V]]#x",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-esta-sendo34e6997e2e/",
+        "sourceQuestionId": "4000043919",
+        "matchedAt": "2026-08-30T21:12:27.844Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-24c07b1c3a70bbcb",

@@ -1810,7 +1810,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/homem-previamente49e8f81d44/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-516fc2922734f24a": {
+      "number": "1065e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-30T21:11:58.266Z",
+      "nextAttemptAt": "2026-09-06T21:11:58.266Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-parasitas2037e68647/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-852ea2297754cf7c": {
+      "number": "1066e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-30T21:12:04.145Z",
+      "nextAttemptAt": "2026-09-06T21:12:04.145Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-17-anos45f9757adc/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-8b545f3fbe31defb": {
+      "number": "1067e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-30T21:12:09.863Z",
+      "nextAttemptAt": "2026-09-06T21:12:09.863Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-quatro-anos-foi91408e20bc/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-29c1a6675cda871f": {
+      "number": "1068e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-30T21:12:16.301Z",
+      "nextAttemptAt": "2026-09-06T21:12:16.301Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-F-R-L494abc9e27/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-macrociticas-aabb4fd5d7a3b8d2": {
+      "number": "1069e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-30T21:12:21.970Z",
+      "nextAttemptAt": "2026-09-06T21:12:21.970Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-varios-fatores186eee9116/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-macrociticas-85158a9a09dcaefa": {
+      "number": "1070e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-08-30T21:12:27.844Z",
+      "nextAttemptAt": "2026-09-06T21:12:27.844Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-esta-sendo34e6997e2e/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     }
   },
-  "updatedAt": "2026-08-30T12:00:04.977Z"
+  "updatedAt": "2026-08-30T21:12:27.844Z"
 }
