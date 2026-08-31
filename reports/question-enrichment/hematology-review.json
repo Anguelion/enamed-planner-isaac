@@ -353,7 +353,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: D. Assunto: Crise de sequestro esplênico. Conduta/resposta: Lactentes com anemia falciforme têm alteração da função imune e podem apresentar asplenia funcional precocemente.",
       "reviewedAt": "2026-08-29T20:58:54.915Z"
+    },
+    "anki-hematologia-anemias-macrociticas-4454afbee322d842": {
+      "id": "anki-hematologia-anemias-macrociticas-4454afbee322d842",
+      "number": "1075e",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.8307692307692308,
+        "options": 1,
+        "combined": 0.8815384615384616
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-08-31T14:00:52.067Z"
     }
   },
-  "updatedAt": "2026-08-29T20:58:54.915Z"
+  "updatedAt": "2026-08-31T14:00:52.067Z"
 }

@@ -1,112 +1,79 @@
 {
-  "generatedAt": "2026-08-30T21:11:57.193Z",
+  "generatedAt": "2026-08-31T14:00:25.977Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-516fc2922734f24a",
-      "number": "1065e",
+      "id": "anki-hematologia-anemias-macrociticas-24c07b1c3a70bbcb",
+      "number": "1071e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-parasitas2037e68647/",
-      "sourceQuestionId": "4000091410",
-      "matchedAt": "2026-08-30T21:11:58.264Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-53-anos-vem528ae3500b/",
+      "sourceQuestionId": "4000038032",
+      "matchedAt": "2026-08-31T14:00:27.165Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Infecção pela tênia do peixe - Diphyllobothrium latum"
+        "Deficiência de vitamina B12"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Infecção pela tênia do peixe - Diphyllobothrium latum. Conduta/resposta: Diphyllobotrium latum.",
+      "comment": "Gabarito confirmado: B. Assunto: Deficiência de vitamina B12. Conduta/resposta: Anemia por deficiência de cobalamina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Todos-parasitas2037e68647/"
+        "https://med.estrategia.com/public/questoes/Homem-53-anos-vem528ae3500b/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-852ea2297754cf7c",
-      "number": "1066e",
+      "id": "anki-hematologia-anemias-macrociticas-8153c94ae74e42ba",
+      "number": "1072e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-17-anos45f9757adc/",
-      "sourceQuestionId": "4000088445",
-      "matchedAt": "2026-08-30T21:12:04.144Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-aplasica-e7391fd394/",
+      "sourceQuestionId": "4000025905",
+      "matchedAt": "2026-08-31T14:00:33.564Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Distúrbios de absorção de vitamina B12. Conduta/resposta: Anemia por deficiência de vitamina B12.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-17-anos45f9757adc/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-8b545f3fbe31defb",
-      "number": "1067e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-quatro-anos-foi91408e20bc/",
-      "sourceQuestionId": "4000082742",
-      "matchedAt": "2026-08-30T21:12:09.862Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias macrocíticas",
         "Anemias macrocíticas não megaloblásticas",
-        "Anemia aplásica",
-        "Falências medulares congênitas",
-        "Anemia da Fanconi"
+        "Anemia aplásica"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemia da Fanconi. Conduta/resposta: Anemia de Fanconi.",
+      "comment": "Gabarito confirmado: A. Assunto: Anemia aplásica. Conduta/resposta: Esplenomegalia e reticulocitopenia são achados comuns.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Menino-quatro-anos-foi91408e20bc/"
+        "https://med.estrategia.com/public/questoes/anemia-aplasica-e7391fd394/",
+        "https://med.estrategia.com/public/questoes/anemias-e-correto71efb4a1d/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-29c1a6675cda871f",
-      "number": "1068e",
+      "id": "anki-hematologia-anemias-macrociticas-4f848b2cc4c539fd",
+      "number": "1073e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-F-R-L494abc9e27/",
-      "sourceQuestionId": "4000081346",
-      "matchedAt": "2026-08-30T21:12:16.301Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-idade71337d6da7/",
+      "sourceQuestionId": "4000116709",
+      "matchedAt": "2026-08-31T14:00:39.731Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -118,63 +85,76 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Alterações dos leucócitos",
-        "Neutrófilos hipersegmentados",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
         "Deficiência de vitamina B12",
         "Distúrbios de absorção de vitamina B12",
         "Anemia perniciosa"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemia perniciosa. Conduta/resposta: Gastrina baixa.",
+      "comment": "Gabarito confirmado: C. Assunto: Anemia perniciosa. Conduta/resposta: Anemia perniciosa.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-F-R-L494abc9e27/",
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-7512709aa63ea/",
-        "https://med.estrategia.com/public/questoes/alternativa-que13599f482bb/",
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-75479a21cd3b/",
-        "https://med.estrategia.com/public/questoes/alternativa-que133bcf002d8/"
+        "https://med.estrategia.com/public/questoes/Homem-65-anos-idade71337d6da7/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-aabb4fd5d7a3b8d2",
-      "number": "1069e",
+      "id": "anki-hematologia-anemias-macrociticas-853743e94a460198",
+      "number": "1074e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-varios-fatores186eee9116/",
-      "sourceQuestionId": "4000059896",
-      "matchedAt": "2026-08-30T21:12:21.969Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-65-anos869c23007e/",
+      "sourceQuestionId": "4000114536",
+      "matchedAt": "2026-08-31T14:00:46.237Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
-        "Causas de anemia megaloblástica"
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Causas de anemia megaloblástica. Conduta/resposta: hipertireoidismo",
+      "comment": "Gabarito confirmado: C. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: Neutrófilos hiperlobulados.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Dentre-varios-fatores186eee9116/"
+        "https://med.estrategia.com/public/questoes/Mulher-65-anos869c23007e/",
+        "https://med.estrategia.com/public/questoes/Mulher-55-anos606d71e3b2/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-85158a9a09dcaefa",
-      "number": "1070e",
+      "id": "anki-hematologia-anemias-macrociticas-4454afbee322d842",
+      "number": "1075e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo69d9451677/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.8307692307692308,
+        "options": 1,
+        "combined": 0.8815384615384616
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-d3a12d48f82d5252",
+      "number": "1076e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-esta-sendo34e6997e2e/",
-      "sourceQuestionId": "4000043919",
-      "matchedAt": "2026-08-30T21:12:27.844Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-consulta1060581bbfc/",
+      "sourceQuestionId": "4000086474",
+      "matchedAt": "2026-08-31T14:00:58.791Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -188,11 +168,15 @@
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
-        "Deficiência de vitamina B12"
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Deficiência de vitamina B12. Conduta/resposta: Uso crônico de metotrexato.",
+      "comment": "Gabarito confirmado: E. Assunto: Anemia perniciosa. Conduta/resposta: I, II e III.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-esta-sendo34e6997e2e/"
+        "https://med.estrategia.com/public/questoes/Homem-65-anos-consulta1060581bbfc/",
+        "https://med.estrategia.com/public/questoes/Homem-65-anos-vem463406a4ad/"
       ]
     }
   ]

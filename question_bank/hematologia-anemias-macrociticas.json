@@ -3178,14 +3178,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Formigamento leve, dificuldade de andar, palidez com icterícia leve, anemia macrocítica (VCM 113) e Coombs NEGATIVO (descartando hemólise autoimune de verdade) — o padrão de 'pseudo-hemólise' sem anticorpos aponta pra deficiência de cobalamina (vitamina B12).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967840",
-      "ankiGuid": "oi5|g|TR-V"
+      "ankiGuid": "oi5|g|TR-V",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-53-anos-vem528ae3500b/",
+        "sourceQuestionId": "4000038032",
+        "matchedAt": "2026-08-31T14:00:27.165Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-8153c94ae74e42ba",
@@ -3212,14 +3223,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a A: a esplenomegalia (baço aumentado) NÃO é um achado comum na anemia aplástica — se aparecer, é sinal de que pode ser outra doença (como leucemia), não aplasia de verdade. A reticulocitopenia (reticulócitos baixos) sim é esperada, mas junto com o baço normal. As outras frases (pancitopenia apesar do nome, mecanismo autoimune mediado por células T, transplante como escolha em jovens com doador, e imunossupressão nos mais velhos) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas não megaloblásticas",
+        "Anemia aplásica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967841",
-      "ankiGuid": "xR2WTkC;R4"
+      "ankiGuid": "xR2WTkC;R4",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-aplasica-e7391fd394/",
+        "sourceQuestionId": "4000025905",
+        "matchedAt": "2026-08-31T14:00:33.564Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-4f848b2cc4c539fd",
@@ -3245,14 +3267,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vitiligo, tireoidite de Hashimoto e doença de Addison são todas doenças autoimunes — e é bem comum que elas 'andem juntas' com outra doença autoimune: a anemia perniciosa (falta de B12). Formigamento, perda de sensibilidade e início de demência, com anemia macrocítica, completam esse quadro clássico de deficiência de B12 associada a uma síndrome poliautoimune.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967842",
-      "ankiGuid": "hD8n|#SH8D"
+      "ankiGuid": "hD8n|#SH8D",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-idade71337d6da7/",
+        "sourceQuestionId": "4000116709",
+        "matchedAt": "2026-08-31T14:00:39.731Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-853743e94a460198",
@@ -3279,14 +3315,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesmo com o hipotireoidismo bem controlado (TSH e T4 normais), essa senhora desenvolveu uma anemia grave macrocítica com pancitopenia e sinais de 'pseudo-hemólise' (LDH e bilirrubina indireta altos) — como o hipotireoidismo e a anemia perniciosa costumam andar juntos (ambas doenças autoimunes), o achado esperado no esfregaço são neutrófilos hiperlobulados (hipersegmentados), a marca da deficiência de B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967843",
-      "ankiGuid": "AFP1Y=1Y@s"
+      "ankiGuid": "AFP1Y=1Y@s",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-65-anos869c23007e/",
+        "sourceQuestionId": "4000114536",
+        "matchedAt": "2026-08-31T14:00:46.237Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-4454afbee322d842",
@@ -3313,7 +3364,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de uma cirurgia com retirada do íleo terminal (justamente onde a vitamina B12 é absorvida), formigamento nos pés e anemia macrocítica com neutrófilos hipersegmentados — deficiência de vitamina B12 confirmada. Como a via de absorção intestinal está comprometida, o tratamento precisa ser por injeção (via parenteral).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3347,14 +3398,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As três frases estão certas: a anemia perniciosa realmente é causada pela falta do fator intrínseco (produzido no estômago), que impede a absorção da B12 (frase I); ela costuma vir acompanhada de outras doenças autoimunes, como as da tireoide (frase II); e a destruição das células defeituosas acontece DENTRO da própria medula óssea, causando aumento de LDH e bilirrubina indireta, mesmo sem uma hemólise 'de verdade' no sangue circulante (frase III).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967845",
-      "ankiGuid": "i?D8v@vm?B"
+      "ankiGuid": "i?D8v@vm?B",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-consulta1060581bbfc/",
+        "sourceQuestionId": "4000086474",
+        "matchedAt": "2026-08-31T14:00:58.791Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-37dcf3ff9e80ecac",
