@@ -385,7 +385,55 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-09-01T11:45:00.908Z"
+    },
+    "anki-hematologia-anemias-macrociticas-e7381822d42ca8a7": {
+      "id": "anki-hematologia-anemias-macrociticas-e7381822d42ca8a7",
+      "number": "1089e",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.225,
+        "options": 0.06571428571428571,
+        "combined": 0.1772142857142857
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-01T21:06:27.227Z"
+    },
+    "anki-hematologia-anemias-macrociticas-fdce150efc352ad2": {
+      "id": "anki-hematologia-anemias-macrociticas-fdce150efc352ad2",
+      "number": "1090e",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.18994413407821228,
+        "options": 0,
+        "combined": 0.1329608938547486
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-01T21:06:33.421Z"
+    },
+    "anki-hematologia-anemias-macrociticas-ec69e44435a2b56c": {
+      "id": "anki-hematologia-anemias-macrociticas-ec69e44435a2b56c",
+      "number": "1093e",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.27860696517412936,
+        "options": 0,
+        "combined": 0.19502487562189055
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-01T21:06:50.292Z"
     }
   },
-  "updatedAt": "2026-09-01T11:45:00.908Z"
+  "updatedAt": "2026-09-01T21:06:50.292Z"
 }

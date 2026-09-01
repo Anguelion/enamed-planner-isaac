@@ -1,109 +1,80 @@
 {
-  "generatedAt": "2026-09-01T11:44:35.448Z",
+  "generatedAt": "2026-09-01T21:06:25.359Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 2,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-2aeeab16e5a38775",
-      "number": "1083e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
-      "sourceQuestionId": "4000098143",
-      "matchedAt": "2026-09-01T11:44:38.086Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Alterações dos leucócitos",
-        "Neutrófilos hipersegmentados",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Gastrectomias"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Gastrectomias. Conduta/resposta: Deficiência de cobalamina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
-        "https://med.estrategia.com/public/questoes/Mulher-G3P2-com-idade1155133b91f/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-eccb94b6f7729319",
-      "number": "1084e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-bb22b4200ca3ef7b",
-      "number": "1085e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-apresenta211c51d6e5/",
-      "sourceQuestionId": "4000042980",
-      "matchedAt": "2026-09-01T11:44:49.586Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Anemias macrocíticas. Conduta/resposta: Talassemias.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-apresenta211c51d6e5/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-5ecb469f8f936b30",
-      "number": "1086e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-99626c87b9974618",
-      "number": "1087e",
+      "id": "anki-hematologia-anemias-macrociticas-e7381822d42ca8a7",
+      "number": "1089e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": false,
       "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Anemia-megaloblastica803dfde21c/"
+        "https://med.estrategia.com/public/questoes/Homem-63-anos65f9d554dc/",
+        "https://med.estrategia.com/public/questoes/1193bf1035eab9731941701b/"
       ],
       "bestSimilarity": {
-        "stem": 0.2988505747126437,
-        "options": 0.027777777777777776,
-        "combined": 0.21752873563218392
+        "stem": 0.225,
+        "options": 0.06571428571428571,
+        "combined": 0.1772142857142857
       }
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-1f12a707069e6e4b",
-      "number": "1088e",
+      "id": "anki-hematologia-anemias-macrociticas-fdce150efc352ad2",
+      "number": "1090e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-65-anos-consulta1060581bbfc/",
+        "https://med.estrategia.com/public/questoes/a344e50537f1cbc13b323ce2/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.18994413407821228,
+        "options": 0,
+        "combined": 0.1329608938547486
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-082384acc742bdf4",
+      "number": "1091e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-b1219e8b72c04b92",
+      "number": "1092e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-ec69e44435a2b56c",
+      "number": "1093e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-65-anos73af356dfc/",
+        "https://med.estrategia.com/public/questoes/Mulher-76-anos826e67e6da/",
+        "https://med.estrategia.com/public/questoes/Mulher-65-anos-idade234dbe5168e/",
+        "https://med.estrategia.com/public/questoes/Mulher-60-anos84e5877b61/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.27860696517412936,
+        "options": 0,
+        "combined": 0.19502487562189055
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-c6bc1d5fe578065d",
+      "number": "1094e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": false,
       "status": "not_found",
