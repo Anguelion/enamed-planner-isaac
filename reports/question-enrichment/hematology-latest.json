@@ -1,137 +1,20 @@
 {
-  "generatedAt": "2026-08-31T22:54:21.443Z",
+  "generatedAt": "2026-09-01T11:44:35.448Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 2,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-37dcf3ff9e80ecac",
-      "number": "1077e",
+      "id": "anki-hematologia-anemias-macrociticas-2aeeab16e5a38775",
+      "number": "1083e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Podemos-encontrar2523ece86e/",
-      "sourceQuestionId": "4000057972",
-      "matchedAt": "2026-08-31T22:54:22.560Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Deficiência de vitamina B12. Conduta/resposta: I e II.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Podemos-encontrar2523ece86e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-64f8bbb49b0020e1",
-      "number": "1078e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina108ff3307b9/",
-      "sourceQuestionId": "4000045252",
-      "matchedAt": "2026-08-31T22:54:28.631Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Diagnóstico da anemia megaloblástica",
-        "Homocisteína e ácido metilmalônico"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Homocisteína e ácido metilmalônico. Conduta/resposta: I e III.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-feminina108ff3307b9/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-a03dbb6c613d8377",
-      "number": "1079e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-57-anos-chega465c0f30a3/",
-      "sourceQuestionId": "4000029896",
-      "matchedAt": "2026-08-31T22:54:34.462Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Falta de fator intrínseco.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-57-anos-chega465c0f30a3/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-4296bfe9365f9b93",
-      "number": "1080e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/macrocitose74ef32cab/",
-      "sourceQuestionId": "4000016078",
-      "matchedAt": "2026-08-31T22:54:40.998Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Anemias macrocíticas. Conduta/resposta: O uso de medicamentos como hidroxiuréia, a gestação e o hipotireoidismo podem levar à macrocitose",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/macrocitose74ef32cab/",
-        "https://med.estrategia.com/public/questoes/Com-as-anemias9fb43526f/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-63bbff8570b36606",
-      "number": "1081e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/",
-      "sourceQuestionId": "4000013566",
-      "matchedAt": "2026-08-31T22:54:46.898Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+      "sourceQuestionId": "4000098143",
+      "matchedAt": "2026-09-01T11:44:38.086Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -152,41 +35,79 @@
         "Neutrófilos hipersegmentados",
         "Deficiência de vitamina B12",
         "Distúrbios de absorção de vitamina B12",
-        "Anemia perniciosa"
+        "Gastrectomias"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Anemia perniciosa. Conduta/resposta: Anemia perniciosa.",
+      "comment": "Gabarito confirmado: A. Assunto: Gastrectomias. Conduta/resposta: Deficiência de cobalamina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/"
+        "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+        "https://med.estrategia.com/public/questoes/Mulher-G3P2-com-idade1155133b91f/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-ead8fe78a09891e8",
-      "number": "1082e",
+      "id": "anki-hematologia-anemias-macrociticas-eccb94b6f7729319",
+      "number": "1084e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-bb22b4200ca3ef7b",
+      "number": "1085e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-60-anos394ef0fa50/",
-      "sourceQuestionId": "4000105079",
-      "matchedAt": "2026-08-31T22:54:53.381Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-apresenta211c51d6e5/",
+      "sourceQuestionId": "4000042980",
+      "matchedAt": "2026-09-01T11:44:49.586Z",
       "similarity": {
-        "stem": 0.9565217391304348,
+        "stem": 1,
         "options": 1,
-        "combined": 0.9695652173913043
+        "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica"
+        "Anemias macrocíticas"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Macrocitose e neutrófilos hipersegmentados.",
+      "comment": "Gabarito confirmado: E. Assunto: Anemias macrocíticas. Conduta/resposta: Talassemias.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-60-anos394ef0fa50/"
+        "https://med.estrategia.com/public/questoes/Paciente-apresenta211c51d6e5/"
       ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-5ecb469f8f936b30",
+      "number": "1086e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-99626c87b9974618",
+      "number": "1087e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Anemia-megaloblastica803dfde21c/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.2988505747126437,
+        "options": 0.027777777777777776,
+        "combined": 0.21752873563218392
+      }
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-1f12a707069e6e4b",
+      "number": "1088e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }

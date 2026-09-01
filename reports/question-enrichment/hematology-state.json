@@ -1990,7 +1990,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-60-anos394ef0fa50/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-2aeeab16e5a38775": {
+      "number": "1083e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-01T11:44:38.087Z",
+      "nextAttemptAt": "2026-09-08T11:44:38.087Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-eccb94b6f7729319": {
+      "number": "1084e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-01T11:44:43.395Z",
+      "nextAttemptAt": "2026-09-08T11:44:43.395Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-bb22b4200ca3ef7b": {
+      "number": "1085e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-01T11:44:49.586Z",
+      "nextAttemptAt": "2026-09-08T11:44:49.586Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-apresenta211c51d6e5/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-macrociticas-5ecb469f8f936b30": {
+      "number": "1086e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-01T11:44:54.797Z",
+      "nextAttemptAt": "2026-09-08T11:44:54.797Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-99626c87b9974618": {
+      "number": "1087e",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-01T11:45:00.908Z",
+      "nextAttemptAt": "2026-10-31T11:45:00.908Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-macrociticas-1f12a707069e6e4b": {
+      "number": "1088e",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-01T11:45:06.627Z",
+      "nextAttemptAt": "2026-09-08T11:45:06.627Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-08-31T22:54:53.381Z"
+  "updatedAt": "2026-09-01T11:45:06.627Z"
 }

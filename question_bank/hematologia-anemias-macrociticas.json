@@ -3721,14 +3721,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Grávida com histórico de cirurgia bariátrica (que atrapalha a absorção de várias vitaminas, incluindo B12), já tomando ferro sem melhora completa, com anemia macrocítica (VCM 110) e neutrófilos hipersegmentados — a causa dessa anemia é a deficiência de cobalamina (vitamina B12), não relacionada ao ferro que já está sendo reposto.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Gastrectomias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967852",
-      "ankiGuid": "J_}{l41RF"
+      "ankiGuid": "J_}{l41RF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+        "sourceQuestionId": "4000098143",
+        "matchedAt": "2026-09-01T11:44:38.086Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-eccb94b6f7729319",
@@ -3755,7 +3773,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia hemolítica (pela reticulocitose compensatória, que aumenta o VCM médio), síndrome mielodisplásica, uso de álcool em excesso e uso de hidroxiureia são todas causas reconhecidas de macrocitose. Já a anemia de doença crônica costuma ser NORMOCÍTICA, não macrocítica — por isso é a que não se encaixa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3789,14 +3807,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Doenças que afetam o íleo (onde a B12 é absorvida), cirurgias que retiram o estômago, dieta vegetariana rigorosa e alcoolismo/remédios anticonvulsivantes são todas causas reconhecidas de anemia macrocítica (às vezes com componente hipocrômico misto, se houver deficiência combinada de ferro). Já as talassemias causam anemia MICROcítica (hemácias pequenas), o oposto do que é descrito aqui — por isso não se encaixam nessa lista.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967854",
-      "ankiGuid": "oE4/L+N%k`"
+      "ankiGuid": "oE4/L+N%k`",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-apresenta211c51d6e5/",
+        "sourceQuestionId": "4000042980",
+        "matchedAt": "2026-09-01T11:44:49.586Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-5ecb469f8f936b30",
@@ -3823,7 +3850,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idosa com hipotireoidismo já controlado (TSH normal), formigamento, tontura, anemia macrocítica grave com pancitopenia e LDH bem elevado, além de gastrite atrófica confirmada na endoscopia — quadro clássico de anemia perniciosa, associada ao hipotireoidismo (ambas doenças autoimunes que costumam andar juntas).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3856,7 +3883,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O metotrexato é um remédio que bloqueia diretamente o metabolismo do ácido fólico no corpo — por isso é uma causa bem conhecida de deficiência dessa vitamina, diferente das outras opções, que estão mais ligadas à falta de vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3890,7 +3917,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, dificuldade de andar, língua lisa, sinal de Romberg positivo (mostrando dano nos nervos da propriocepção), anemia macrocítica grave com neutrófilos hipersegmentados, LDH bem alto e bilirrubina indireta elevada — tudo aponta pra deficiência de vitamina B12, com o padrão clássico de 'pseudo-hemólise'.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
