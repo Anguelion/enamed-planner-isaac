@@ -1990,6 +1990,11 @@ body.dark .cc-safety{background:#332a18;color:#ffe6ad;border-color:#765c25}
 .cc-q.feita button{border-color:#9bd7bd;background:color-mix(in srgb,#16a178 8%,var(--panel))}
 .cc-q>span{text-align:center;color:var(--muted);font-weight:700}
 .cc-q.feita>span{color:#16a178}
+.cc-q.cc-check{grid-template-columns:minmax(0,1fr) 46px 22px}
+.cc-q.cc-check>button:first-child{display:flex;align-items:flex-start;gap:8px;cursor:pointer}
+.cc-q.cc-check>button:first-child i{display:grid;place-items:center;flex:0 0 19px;width:19px;height:19px;border:1px solid var(--line);border-radius:5px;font-style:normal;font-size:12px;line-height:1}
+.cc-q.cc-check.feita>button:first-child i{border-color:#16a178;background:#16a178;color:#fff}
+.cc-q.cc-check>span{font-size:10px;text-transform:uppercase;letter-spacing:.03em}
 .cc-anot,.cc-dialogo{margin-top:18px}
 .cc-dialogo-list{max-height:260px;overflow-y:auto;display:grid;gap:8px;margin:8px 0;padding-right:4px}
 .cc-linha{display:grid;grid-template-columns:minmax(0,1fr) 20px;gap:8px;align-items:start;padding:9px 11px;border-radius:8px;background:var(--panel);border:1px solid var(--line)}

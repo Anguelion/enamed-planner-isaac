@@ -104,7 +104,7 @@
     quando:'Útil para tosse, dispneia, tontura, náusea, prurido, sangramento.',
     etapas:[
       { id:'ol1', foco:'exploracao', titulo:'Os oito atributos', objetivo:'Onset, Location, Duration, Character, Aggravating, Relieving, Timing, Severity.',
-        orientacoes:['ALICIA (pt-BR): Aparecimento, Localização, Intensidade, Caráter, Irradiação, Alívio/Agravo.','Um sintoma bem caracterizado já reduz o diferencial pela metade.'],
+        orientacoes:['OLDCARTS: início, localização, duração, caráter, fatores de piora, fatores de alívio, padrão temporal e intensidade.','ALICIA é uma alternativa em português para organizar os atributos do sintoma.','Use as respostas para direcionar hipóteses; o mnemônico não substitui perguntas de gravidade e contexto.'],
         perguntas:['Quando começou e como? (Onset)','Onde você sente? (Location)','Quanto tempo dura cada episódio? (Duration)','Como você descreveria essa sensação? (Character)','O que faz piorar? (Aggravating)','O que faz melhorar? (Relieving)','Tem hora do dia em que é pior? (Timing)','Qual a intensidade de 0 a 10? Como isso limita você? (Severity)'] } ] },
 
   { id:'sbar', nome:'SBAR / ISBAR — Passagem de caso', sigla:'SBAR', tipo:'Comunicação entre profissionais',
@@ -113,7 +113,7 @@
     etapas:[
       { id:'sb1', foco:'sintese', titulo:'S — Situação', objetivo:'Quem é e qual o problema agora, em 2 frases.',
         orientacoes:['Identifique-se, identifique o paciente e diga o problema atual.','Diga logo o quanto é urgente.'],
-        perguntas:['Sou o Isaac, do leito X. Paciente de Y anos, com Z, que agora está apresentando…'] },
+        perguntas:['Sou [seu nome e função], falando sobre [paciente/leito]. O problema agora é… e a urgência é…'] },
       { id:'sb2', foco:'contexto', titulo:'B — Background (antecedentes)', objetivo:'Contexto relevante, não a história inteira.',
         orientacoes:['Diagnóstico de base, tempo de internação, medicações relevantes, alergias.','Apenas o que muda a decisão.'],
         perguntas:['Ele internou há X dias por…, tem antecedente de…, está em uso de…'] },
@@ -143,15 +143,15 @@
     quando:'Encaixa em qualquer consulta; especialmente quando há discordância ou não adesão.',
     etapas:[
       { id:'ic1', foco:'exploracao', titulo:'Ideias, Preocupações, Expectativas e Função', objetivo:'Entender o modelo explicativo da pessoa.',
-        orientacoes:['Pergunte sem parecer teste: "muita gente pensa em algo quando isso acontece…".','A expectativa não atendida é a principal causa de insatisfação e não adesão.','Função: o que a pessoa deixou de fazer por causa do problema.'],
+        orientacoes:['Pergunte sem parecer teste: "muita gente pensa em algo quando isso acontece…".','Conhecer a expectativa evita agendas ocultas e ajuda a negociar um plano possível.','Função: o que a pessoa deixou de fazer por causa do problema.'],
         perguntas:['O que você acha que está causando isso? (Ideias)','O que mais te preocupa? Tem algo específico que te dá medo? (Preocupações)','O que você esperava de mim hoje? (Expectativas)','O que você deixou de fazer por causa disso? (Função)','Alguém próximo já teve algo parecido? O que aconteceu?'] } ] },
 
   { id:'bathe', nome:'BATHE — Abordagem psicossocial breve', sigla:'BATHE', tipo:'Saúde mental na APS',
-    uso:'Cinco perguntas para acessar o contexto emocional em consultas curtas.',
+    uso:'Quatro perguntas seguidas de uma resposta empática para acessar o contexto emocional em consultas curtas.',
     quando:'Queixas vagas, somatização, sofrimento psíquico, consultas de 15 minutos.',
     etapas:[
       { id:'ba1', foco:'contexto', titulo:'B.A.T.H.E.', objetivo:'Background, Affect, Trouble, Handling, Empathy.',
-        orientacoes:['Leva 3 a 5 minutos e muda o rumo da consulta.','Termine sempre com a validação empática — é o que sustenta o vínculo.'],
+        orientacoes:['É uma intervenção breve, aplicável em cerca de um minuto quando a consulta exige foco.','Faça quatro perguntas — Background, Affect, Trouble e Handling — e termine com uma resposta empática; o E não é uma pergunta.','Acolha sem transformar imediatamente a fala em conselho ou solução.'],
         perguntas:['O que está acontecendo na sua vida? (Background)','Como você tem se sentido com isso? (Affect)','O que mais te incomoda nessa situação? (Trouble)','Como você tem lidado com isso? (Handling)','Deve ser muito difícil para você. (Empathy)'] } ] },
 
   { id:'spikes', nome:'SPIKES — Comunicação de más notícias', sigla:'SPIKES', tipo:'Comunicação difícil',
@@ -183,7 +183,7 @@
     etapas:[
       { id:'nu1', foco:'plano', titulo:'N.U.R.S.E.', objetivo:'Naming, Understanding, Respecting, Supporting, Exploring.',
         orientacoes:['Emoção não se resolve com informação; se responde com empatia.','Silêncio e presença valem mais do que frases prontas.'],
-        perguntas:['Parece que você está com medo. (Naming)','Depois de tudo o que você passou, eu entendo por que se sente assim. (Understanding)','Admiro a forma como você tem cuidado da sua mãe. (Respecting)','Estou aqui com você, vamos juntos nisso. (Supporting)','Me conte mais sobre o que te preocupa. (Exploring)'] } ] },
+        perguntas:['Parece que você está com medo. (Naming)','Depois de tudo o que você passou, eu entendo por que se sente assim. (Understanding)','Admiro a forma como você tem enfrentado tudo isso. (Respecting)','Estou aqui com você, vamos juntos nisso. (Supporting)','Me conte mais sobre o que te preocupa. (Exploring)'] } ] },
 
   { id:'em', nome:'Entrevista motivacional', sigla:'EM', tipo:'Mudança de comportamento',
     uso:'Ajuda a pessoa a resolver ambivalência e construir o próprio argumento de mudança.',
@@ -191,13 +191,13 @@
     etapas:[
       { id:'em1', foco:'abertura', titulo:'1. Engajar com OARS', objetivo:'Perguntas abertas, afirmação, escuta reflexiva e resumo.',
         orientacoes:['Nada de confronto: resistência é sinal de que você empurrou demais.','Peça permissão antes de informar: "posso te contar o que costuma acontecer?".'],
-        perguntas:['Como é o seu uso hoje, num dia comum?','Você já conseguiu mudar coisas difíceis antes — como fez?','Posso te contar o que a gente costuma ver nesses casos?'] },
+        perguntas:['Como esse hábito ou comportamento aparece num dia comum?','Você já conseguiu mudar alguma coisa difícil antes — como fez?','Posso compartilhar uma informação e depois ouvir o que você pensa?'] },
       { id:'em2', foco:'exploracao', titulo:'2. Explorar ambivalência', objetivo:'Balança decisória: prós e contras da mudança.',
         orientacoes:['Pergunte pelos ganhos do comportamento antes das perdas — isso reduz resistência.','Deixe a pessoa verbalizar o argumento de mudança (change talk).'],
-        perguntas:['O que de bom o cigarro/a bebida faz por você hoje?','E o que ele te custa?','Como seria sua vida daqui a 5 anos se nada mudasse?','E se você conseguisse mudar?'] },
+        perguntas:['Que lado bom esse hábito tem para você hoje?','E quais custos ou problemas ele traz?','Como imagina sua vida daqui a alguns anos se nada mudar?','E o que poderia melhorar se você conseguisse mudar?'] },
       { id:'em3', foco:'sintese', titulo:'3. Medir importância e confiança', objetivo:'Escalas de 0 a 10 e o "por que não menos".',
-        orientacoes:['Pergunte "por que 6 e não 3?" — a pessoa dá o próprio argumento.','Se a confiança for baixa, trabalhe barreiras concretas.'],
-        perguntas:['De 0 a 10, quanto é importante mudar isso?','Por que você deu 6 e não 3?','De 0 a 10, quanto você se sente capaz?','O que faria esse número subir um ponto?'] },
+        orientacoes:['Depois da nota de importância, pergunte “por que não um número menor?” para evocar razões da própria pessoa.','Se a confiança for baixa, trabalhe barreiras concretas em vez de pressionar.'],
+        perguntas:['De 0 a 10, quanto é importante mudar isso?','Por que não escolheu um número menor?','De 0 a 10, quanto você se sente capaz de mudar?','O que faria sua confiança subir um ponto?'] },
       { id:'em4', foco:'plano', titulo:'4. Planejar e sustentar', objetivo:'Plano concreto, pequeno e do tamanho da pessoa.',
         orientacoes:['Metas específicas e alcançáveis, definidas por ela.','Antecipe situações de risco e combine reavaliação. Recaída não é fracasso.'],
         perguntas:['Qual o primeiro passo possível já nesta semana?','Quais situações vão ser mais difíceis? Como você vai lidar?','Quem pode te apoiar nisso?','Podemos combinar de conversar sobre isso no retorno?'] } ] },
@@ -244,7 +244,7 @@
         orientacoes:['Desenhe: quem mora junto, relações, doenças, óbitos.','Identifique a fase (casal, filhos pequenos, adolescentes, ninho vazio, velhice).'],
         perguntas:['Quem faz parte da sua família? Quem mora com você?','Quem é próximo de quem? Existe algum conflito importante?','Que doenças existem na família e em quem?','Que mudança importante a família viveu recentemente?'] },
       { id:'ap2', foco:'contexto', titulo:'2. APGAR familiar', objetivo:'Medir a satisfação com o funcionamento familiar.',
-        orientacoes:['Cinco domínios: Adaptação, Participação, Crescimento, Afeição, Resolução.','Respostas: sempre / às vezes / nunca.'],
+        orientacoes:['Cinco domínios: Adaptação, Participação, Crescimento, Afeição e Resolução.','Pontue cada item: quase sempre = 2, algumas vezes = 1, quase nunca = 0; 7–10 sugere boa funcionalidade, 5–6 disfunção moderada e 0–4 disfunção acentuada.','Use o resultado como rastreio e ponto de partida para conversar, não como diagnóstico isolado.'],
         perguntas:['Você está satisfeito com a ajuda que recebe da sua família quando tem um problema? (Adaptação)','Você está satisfeito com a forma como sua família discute assuntos e divide problemas? (Participação)','Sua família aceita seus desejos de mudança e crescimento? (Crescimento)','Você está satisfeito com o carinho que sua família demonstra? (Afeição)','Você está satisfeito com o tempo que passam juntos? (Resolução)'] },
       { id:'ap3', foco:'plano', titulo:'3. PRACTICE — plano familiar', objetivo:'Organizar a intervenção com a família.',
         orientacoes:['Problema, Papéis, Afeto, Comunicação, Tempo no ciclo de vida, Doença na família, Enfrentamento.','Considere reunião familiar quando o problema é do sistema, não do indivíduo.'],
@@ -263,7 +263,7 @@
       { id:'g3', foco:'contexto', titulo:'3. Social, nutrição e sentidos', objetivo:'Rede de apoio, renda, nutrição, visão e audição.',
         orientacoes:['Déficit sensorial simula demência e causa isolamento.','Rastreie violência e negligência.'],
         perguntas:['Quem mora com você? Quem ajuda no dia a dia?','Como está seu apetite e seu peso? Perdeu peso sem querer?','Você enxerga e escuta bem? Quando foi o último exame?','Alguém já te tratou mal, gritou ou pegou seu dinheiro sem permissão?'] },
-      { id:'g4', foco:'plano', titulo:'4. Síndromes geriátricas e plano', objetivo:'Os "5 Is": incapacidade, instabilidade, incontinência, iatrogenia, insuficiência cognitiva.',
+      { id:'g4', foco:'plano', titulo:'4. Síndromes geriátricas e plano', objetivo:'Os “5 Is”: imobilidade, instabilidade postural, incontinência, iatrogenia e insuficiência cognitiva.',
         orientacoes:['Revise TODOS os medicamentos (Beers/STOPP).','Priorize funcionalidade e qualidade de vida sobre metas rígidas de exames.'],
         perguntas:['Teve quedas no último ano?','Tem perda de urina? Isso te limita?','Quantos medicamentos usa? Algum pode ser retirado?','O que é mais importante para você: viver mais ou viver melhor e independente?'] } ] },
 
@@ -357,14 +357,14 @@
     sp4:['@spikes.reacaoAviso','@spikes.reacaoNoticia','@spikes.compreensao','@spikes.maisDetalhes'],
     sp5:['@spikes.emocao','@spikes.validacao','@spikes.pausa','@spikes.pensamento','@spikes.medo'],
     sp6:['@spikes.prioridade','@spikes.opcoes','@spikes.naoAbandono','@spikes.plano','@spikes.resumo','@spikes.duvidas'],
-    nu1:['É, estou com medo mesmo.','Obrigado, doutor. Ninguém tinha falado assim comigo.','Faço o que posso por ela.','Isso ajuda muito, de verdade.','@preocupacoes'],
-    em1:['@abertura','Já parei outras coisas antes, na força de vontade.','Pode falar, doutor, eu escuto.'],
-    em2:['Me acalma, me distrai depois de um dia ruim.','Me custa saúde e dinheiro, isso eu sei.','Acho que estaria bem pior do que hoje.','Seria bom. Eu me sentiria orgulhoso de mim.'],
-    em3:['Uns 8. É importante sim.','Porque já vi o que aconteceu com gente próxima de mim.','Capacidade uns 4. Já tentei e falhei antes.','Se eu tivesse um acompanhamento mais de perto.'],
-    em4:['Posso começar diminuindo aos poucos já essa semana.','O fim de semana e a companhia dos amigos.','Minha esposa me apoia bastante nisso.','Pode marcar que eu venho conversar.'],
+    nu1:['É, estou com medo mesmo.','Obrigado, doutor. Ninguém tinha falado assim comigo.','Obrigado por dizer isso. Tenho feito o melhor que consigo.','Isso ajuda muito, de verdade.','@preocupacoes'],
+    em1:['@em.comportamento','@em.sucesso','@em.permissao'],
+    em2:['@em.beneficios','@em.custos','@em.semMudanca','@em.comMudanca'],
+    em3:['@em.importancia','@em.razoes','@em.confianca','@em.subirConfianca'],
+    em4:['@em.primeiroPasso','@em.barreiras','@em.apoio','@em.retorno'],
     r1:['',''], r2:['','',''], r3:['',''], r4:['',''],
     p1:['','',''],
-    p2:['Seria conseguir voltar a trabalhar.','Dá pra tentar, sim.'],
+    p2:['@expectativas','Dá pra tentar, sim.'],
     p3:['','Eu faço a minha parte, e minha filha me ajuda com o resto.'],
     p4:['Pode marcar, doutor.','Melhorou um pouco, mas ainda tem coisa pra ajustar.'],
     ap1:['@contexto','Sou mais próximo da minha filha. Com meu irmão a gente não se fala.','Na família tem pressão alta e diabetes.','Minha mãe faleceu ano passado e isso mexeu com todo mundo.'],
@@ -374,9 +374,9 @@
     g2:['Esqueço nomes e onde deixei as coisas.','Uma vez me perdi voltando da padaria.','Ando meio pra baixo, sim.','Durmo mal, acordo várias vezes de madrugada.'],
     g3:['@apoio','Como pouco e perdi uns quilos ultimamente.','Enxergo mal. Faz anos que não troco o óculos.','Não, ninguém me maltrata.'],
     g4:['Caí duas vezes esse ano.','Escapa um pouco de urina, sim. Me deixa constrangido.','Tomo bastante remédio, uns sete.','Quero continuar me virando sozinho.'],
-    ps1:['@abertura','Já tive algo parecido antes, mas não cheguei a tratar.','Acelerado desse jeito, nunca me aconteceu.','Bebo de vez em quando, mais quando fico mal.','Internação eu nunca tive.'],
-    ps2:['Ouvir voz não. Às vezes acho que escuto meu nome.','Sinto que as pessoas me olham diferente na rua.','Meus pensamentos ficam acelerados à noite.','Acho que estou doente, sim. Queria melhorar.'],
-    ps3:['Já pensei que seria melhor não acordar.','Não cheguei a pensar em como, não.','@apoio','Podemos sim, doutor.'],
+    ps1:['@abertura','@psiq.episodios','@psiq.mania','@psiq.substancias','@psiq.internacao'],
+    ps2:['@psiq.alucinacoes','@psiq.delirios','@psiq.pensamento','@entendimento'],
+    ps3:['@psiq.ideacao','@psiq.plano','@apoio','@psiq.seguranca'],
     pn1:['Foi no dia 12 do mês passado, anotei no aplicativo.','É a minha primeira gestação.','Tenho enjoo de manhã e uma azia que não passa.','Sinto ele mexer bastante, ainda mais à noite.'],
     pn2:['@exame','Pode escutar, doutor. Fico ansiosa nessa hora.'],
     pn3:['Trouxe sim, estão aqui.','Acho que estão em dia. Trouxe o cartão pra o senhor ver.','Nada demais desde a última, só o enjoo mesmo.'],
@@ -399,6 +399,29 @@
   const doencas = () => (window.CONSULTA_DOENCAS || []);
   const metodo = (id) => METODOS.find(m => m.id === id) || METODOS[0];
   const doenca = (id) => doencas().find(d => d.id === id) || null;
+  const CASOS_POR_METODO = {
+    em:new Set(['tabagismo','alcool','obesidade','dm2','has','dislipidemia','insonia']),
+    ampla:new Set(['sca','ic','fa','tvp','pac','asma','dpoc','abdome-agudo','diarreia','cirrose','colelitiase','litiase','cefaleia','avc','epilepsia','vertigem','ansiedade','risco-suicidio','gota','dengue','sepse','pre-eclampsia','febre-crianca','diarreia-infantil','bronquiolite','otite-ivas'])
+  };
+  function doencaCompativelComMetodo(d, metodoId){
+    if(!d) return false;
+    if(metodoId === 'spikes') return !!d.spikes;
+    if(metodoId === 'socrates') return /dor|c[oó]lica|cefaleia|artrite|gota|peito|abdome agudo|fibromialgia/.test(normaliza(`${d.nome} ${d.queixa}`));
+    if(metodoId === 'em' || metodoId === 'ampla') return CASOS_POR_METODO[metodoId].has(d.id);
+    if(metodoId === 'geriatrica') return d.area === 'Geriatria' || ['paliativos','ic-avancada','dpoc-avancada','drc-conservador','demencia-avancada'].includes(d.id);
+    if(metodoId === 'psiquiatrica') return d.area === 'Psiquiatria' || d.id === 'alcool';
+    if(metodoId === 'prenatal-roteiro') return d.area === 'Obstetrícia';
+    if(metodoId === 'pediatrica') return d.area === 'Pediatria';
+    return true;
+  }
+  function textoCaixaMetodo(metodoId){
+    const nomes = { spikes:'Cenários de más notícias', socrates:'Casos com dor', em:'Cenários de mudança de comportamento', ampla:'Cenários de urgência', geriatrica:'Casos geriátricos', psiquiatrica:'Casos de saúde mental', 'prenatal-roteiro':'Casos obstétricos', pediatrica:'Casos pediátricos' };
+    return nomes[metodoId] || 'Caixa de doenças';
+  }
+  function dicaCaixaMetodo(metodoId){
+    const dicas = { spikes:'Somente casos preparados para treinar as seis letras do SPIKES.', socrates:'O método é dedicado à caracterização da dor.', em:'Casos em que há ambivalência e uma mudança a construir.', ampla:'Casos agudos nos quais estabilizar vem antes de completar a história.', geriatrica:'Casos em que funcionalidade, cognição e rede de apoio mudam o plano.', psiquiatrica:'Casos apropriados para entrevista e exame do estado mental.', 'prenatal-roteiro':'Condições próprias da consulta obstétrica.', pediatrica:'Condições próprias da consulta da criança e do adolescente.' };
+    return dicas[metodoId] || '';
+  }
   const sessao = () => store().sessions.find(s => s.id === store().activeId) || null;
   const uid = () => `cc-${Date.now()}-${Math.random().toString(36).slice(2,6)}`;
 
@@ -448,7 +471,8 @@
         </div>
         <div class="cc-metodo-info" id="ccMetodoInfo">${renderMetodoInfo(METODOS[0])}</div>
         <div class="cc-box">
-          <div class="cc-box-head"><h3>2. Caixa de doenças</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div>
+          <div class="cc-box-head"><h3 id="ccBoxTitle">2. Caixa de doenças</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div>
+          <p class="muted cc-box-hint" id="ccBoxHint"></p>
           <div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', '', METODOS[0].id)}</div>
         </div>
         <button class="icon-btn primary cc-start" id="ccStart">Iniciar consulta simulada</button>
@@ -472,9 +496,8 @@
   function normaliza(v){ return String(v||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
   function renderDoencaChips(query, selectedId, metodoId){
     const q = normaliza(query);
-    const apenasComunicacao = metodoId === 'spikes';
-    const list = doencas().filter(d => (!apenasComunicacao || d.spikes) && (!q || normaliza(`${d.nome} ${d.area} ${d.queixa} ${d.spikes?.cenario||''}`).includes(q)));
-    if(!list.length) return `<div class="empty">${apenasComunicacao?'Nenhum cenário SPIKES encontrado.':'Nenhuma condição encontrada.'}</div>`;
+    const list = doencas().filter(d => doencaCompativelComMetodo(d, metodoId) && (!q || normaliza(`${d.nome} ${d.area} ${d.queixa} ${d.spikes?.cenario||''}`).includes(q)));
+    if(!list.length) return '<div class="empty">Nenhum caso compatível encontrado.</div>';
     const groups = new Map();
     list.forEach(d => { if(!groups.has(d.area)) groups.set(d.area, []); groups.get(d.area).push(d); });
     return [...groups.entries()].sort((a,b)=>a[0].localeCompare(b[0],'pt-BR')).map(([area, items]) =>
@@ -502,7 +525,7 @@
         <button class="icon-btn" id="ccCopiar">Copiar consulta</button>
         <button class="icon-btn primary" id="ccFinalizar">${s.finalizada?'Reabrir':'Finalizar'}</button>
       </header>
-      ${store().ui.box ? `<section class="card cc-box cc-box-inline"><div class="cc-box-head"><h3>${m.id==='spikes'?'Cenários de más notícias':'Caixa de doenças'}</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div>${m.id==='spikes'?'<p class="muted cc-box-hint">Somente casos preparados para treinar as seis letras do SPIKES são exibidos.</p>':''}<div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', s.doencaId, m.id)}</div></section>` : ''}
+      ${store().ui.box ? `<section class="card cc-box cc-box-inline"><div class="cc-box-head"><h3>${esc(textoCaixaMetodo(m.id))}</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div>${dicaCaixaMetodo(m.id)?`<p class="muted cc-box-hint">${esc(dicaCaixaMetodo(m.id))}</p>`:''}<div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', s.doencaId, m.id)}</div></section>` : ''}
       ${d ? '' : '<div class="empty">Escolha uma condição na caixa acima para receber as perguntas dirigidas.</div>'}
       ${d ? `<section class="cc-caso card"><div class="cc-avatar">${avatarSvg(avatarCategoria(s.paciente))}</div><div class="cc-caso-info"><span class="eyebrow">Paciente à sua frente</span><h2>${esc(s.paciente.nome)}${s.paciente.idade?` · ${esc(s.paciente.idade)} anos`:''}${s.paciente.sexo?` · ${esc(s.paciente.sexo)}`:''}</h2><p><strong>Queixa:</strong> ${esc(d.queixa)}</p>${renderBalao(s)}</div><div class="cc-progress"><span>Roteiro coberto</span><strong>${pct}%</strong><i style="--p:${pct}%"></i><small>${feitas} de ${total} perguntas-chave</small></div></section>` : ''}
       <div class="cc-layout">
@@ -526,7 +549,7 @@
             </div>
           </div>
           <div class="cc-etapa-head"><span class="eyebrow">${esc(F[etapa.foco]||'Etapa')}</span><h2>${esc(etapa.titulo)}</h2><p class="muted">${esc(etapa.objetivo)}</p></div>
-          ${renderPerguntasBloco(s, d, etapa)}
+          ${renderPerguntasBloco(s, d, m, etapa)}
           <details class="cc-orient"${store().ui.orientOculta?'':' open'} id="ccOrient"><summary>Como conduzir esta etapa</summary><ul>${etapa.orientacoes.map(o=>`<li>${esc(o)}</li>`).join('')}</ul></details>
           <div class="cc-anot"><h4>Sua anotação nesta etapa</h4><textarea class="textarea" id="ccNota" data-etapa="${etapa.id}" placeholder="Escreva aqui como se estivesse registrando o que a pessoa respondeu, o que você pensou e o que decidiu.">${esc(s.notas[etapa.id]||'')}</textarea></div>
         </section>
@@ -586,30 +609,31 @@
     if(indice < 0) return `<p class="muted cc-balao-vazio">Pergunte alguma coisa no campo de conversa — a resposta aparece aqui.</p>`;
     return `<div class="cc-balao" id="ccBalao">${indice===animarIndice?'':esc(s.dialogo[indice].texto)}</div>`;
   }
-  function renderPergunta(s, key, texto, tipo, indice){
+  function renderPergunta(s, key, texto, tipo, indice, interativa){
     const feita = s.asked.includes(key);
+    if(!interativa) return `<div class="cc-q cc-check${feita?' feita':''}"><button type="button" data-cc-check="${esc(key)}" title="Marcar este item no checklist"><i>${feita?'✓':'○'}</i>${esc(texto)}</button><span>${feita?'feito':'checar'}</span><button type="button" class="cc-q-hide" data-cc-ocultar="${esc(key)}" title="Ocultar este item">×</button></div>`;
     return `<div class="cc-q${feita?' feita':''}"><button type="button" data-cc-ask="${esc(key)}" data-texto="${esc(texto)}" data-tipo="${tipo}" data-indice="${indice}">${esc(texto)}</button><span>${feita?'✓':'+'}</span><button type="button" class="cc-q-hide" data-cc-ocultar="${esc(key)}" title="Ocultar esta pergunta">×</button></div>`;
   }
   /* Bloco de perguntas com opções de ocultar: o roteiro inteiro, as já feitas
    * ou uma pergunta específica. */
-  function renderPerguntasBloco(s, d, etapa){
+  function renderPerguntasBloco(s, d, m, etapa){
     const ui = store().ui;
     const ocultas = s.perguntasOcultas || (s.perguntasOcultas = []);
     const visivel = item => !ocultas.includes(item.key) && (!ui.ocultarFeitas || !s.asked.includes(item.key));
-    const doMetodo = etapa.perguntas.map((q,i) => ({ q, i, key:`${etapa.id}-m${i}`, tipo:'metodo' })).filter(visivel);
-    const daDoenca = perguntasDaDoenca(d, etapa).map((q,i) => ({ q, i, key:`${etapa.id}-d${i}`, tipo:'doenca' })).filter(visivel);
+    const doMetodo = etapa.perguntas.map((q,i) => ({ q, i, key:`${etapa.id}-m${i}`, tipo:'metodo', interativa:!!(etapa.resp||[])[i] })).filter(visivel);
+    const daDoenca = perguntasDaDoenca(d, m, etapa).map((q,i) => ({ q, i, key:`${etapa.id}-d${i}`, tipo:'doenca', interativa:!ehItemChecklist(q) })).filter(visivel);
     const escondidasAqui = ocultas.filter(k => k.startsWith(`${etapa.id}-`)).length;
-    const cabecalho = `<div class="section-title cc-perguntas-head"><h4>Perguntas sugeridas</h4><div class="cc-perguntas-acoes">
+    const cabecalho = `<div class="section-title cc-perguntas-head"><h4>Roteiro da etapa</h4><div class="cc-perguntas-acoes">
       <button class="tiny-btn${ui.ocultarFeitas?' active':''}" id="ccOcultarFeitas" title="Some com as perguntas que você já fez">${ui.ocultarFeitas?'Mostrando só as pendentes':'Ocultar as já feitas'}</button>
       ${escondidasAqui?`<button class="tiny-btn" id="ccRestaurarOcultas">Restaurar ${escondidasAqui} oculta${escondidasAqui>1?'s':''}</button>`:''}
       <button class="tiny-btn" id="ccTogglePerguntas">${ui.perguntasOcultas?'Mostrar perguntas':'Ocultar perguntas'}</button>
     </div></div>`;
     if(ui.perguntasOcultas) return `<div class="cc-perguntas recolhido">${cabecalho}</div>`;
     const listaMetodo = doMetodo.length
-      ? `<div class="cc-q-list">${doMetodo.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i)).join('')}</div>`
-      : '<p class="muted cc-q-vazio">Nenhuma pergunta do método visível nesta etapa.</p>';
+      ? `<div class="cc-q-list">${doMetodo.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i, x.interativa)).join('')}</div>`
+      : '<p class="muted cc-q-vazio">Nenhum item do método visível nesta etapa.</p>';
     const listaDoenca = d && daDoenca.length
-      ? `<h4 class="cc-q-title">${etapa.id.startsWith('sp')?'Aplicação ao caso':'Dirigido a'}: ${esc(d.nome)}</h4><div class="cc-q-list">${daDoenca.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i)).join('')}</div>`
+      ? `<h4 class="cc-q-title">${etapa.id.startsWith('sp')?'Aplicação ao caso':'Aplicação ao caso'}: ${esc(d.nome)}</h4><div class="cc-q-list">${daDoenca.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i, x.interativa)).join('')}</div>`
       : '';
     return `<div class="cc-perguntas">${cabecalho}<h4 class="cc-q-title">${etapa.id.startsWith('sp')?'Falas e perguntas desta letra':'Frases e perguntas do método'}</h4>${listaMetodo}${listaDoenca}</div>`;
   }
@@ -617,22 +641,42 @@
   function falasSpikes(d, etapa){
     return d?.spikes?.falas?.[etapa.id] || [];
   }
-  function perguntasDaDoenca(d, etapa){
+  function ehItemChecklist(texto){ return /^(Examinar|Considerar|Conduta|Checar|Planejar|Registrar):/.test(texto); }
+  function perguntasSintoma(d, limite){
+    const padrao = /come[cç]|in[ií]cio|quando|onde|local|como [eé]|descrev|dura|tempo|piora|melhora|al[ií]vio|intens|irrad|vai para|constante|acompanha|associad|limita/;
+    const filtradas = (d.perguntas||[]).filter(q => padrao.test(normaliza(q)));
+    return (filtradas.length >= 3 ? filtradas : (d.perguntas||[])).slice(0, limite || 8);
+  }
+  function perguntasDaDoenca(d, m, etapa){
     if(!d) return [];
     if(etapa.id.startsWith('sp')) return falasSpikes(d, etapa).map(item => item.pergunta);
-    if(etapa.foco === 'exploracao' || etapa.foco === 'abertura') return d.perguntas;
-    if(etapa.foco === 'contexto') return d.perguntas.slice(-4);
-    if(etapa.foco === 'exame') return d.exame.map(x => `Examinar: ${x}`);
-    if(etapa.foco === 'sintese') return (d.hipoteses||[]).map(x => `Considerar: ${x}`);
-    if(etapa.foco === 'plano' || etapa.foco === 'fechamento') return d.conduta.map(x => `Conduta: ${x}`);
-    return d.perguntas;
+    const id = m?.id;
+    const etapaEntrevista = { mccp:'m1', soap:'s1', calgary:'c2', anamnese:'a2', socrates:'so1', oldcarts:'ol1', ampla:'ab2', psiquiatrica:'ps1', 'prenatal-roteiro':'pn1', pediatrica:'pd2' }[id];
+    if(etapa.id === etapaEntrevista){
+      if(id === 'socrates') return perguntasSintoma(d, 8);
+      if(id === 'oldcarts') return perguntasSintoma(d, 8);
+      return d.perguntas || [];
+    }
+    if(id === 'soap' && etapa.id === 's2') return d.exame.map(x => `Examinar: ${x}`);
+    if(id === 'soap' && etapa.id === 's3') return (d.hipoteses||[]).map(x => `Considerar: ${x}`);
+    if(id === 'soap' && etapa.id === 's4') return d.conduta.map(x => `Conduta: ${x}`);
+    if(id === 'anamnese' && etapa.id === 'a5') return d.exame.map(x => `Examinar: ${x}`);
+    if(id === 'anamnese' && etapa.id === 'a6') return [...(d.hipoteses||[]).map(x => `Considerar: ${x}`), ...d.conduta.slice(0,4).map(x => `Conduta: ${x}`)];
+    if(id === 'calgary' && etapa.id === 'c3') return d.exame.map(x => `Examinar: ${x}`);
+    if(id === 'ampla' && etapa.id === 'ab1') return d.redflags.map(x => `Checar: ${x}`);
+    if(id === 'ampla' && etapa.id === 'ab3') return [...(d.hipoteses||[]).map(x => `Considerar: ${x}`), ...d.conduta.slice(0,4).map(x => `Conduta: ${x}`)];
+    if(id === 'rop' && etapa.id === 'r2') return (d.hipoteses||[]).map(x => `Considerar: ${x}`);
+    if(id === 'rop' && etapa.id === 'r3') return d.conduta.map(x => `Planejar: ${x}`);
+    if(id === 'prenatal-roteiro' && etapa.id === 'pn2') return d.exame.map(x => `Examinar: ${x}`);
+    if(id === 'pediatrica' && etapa.id === 'pd4') return d.exame.map(x => `Examinar: ${x}`);
+    return [];
   }
 
   function totalPerguntas(m, d){
-    return m.etapas.reduce((sum, e) => sum + e.perguntas.length + perguntasDaDoenca(d, e).length, 0);
+    return m.etapas.reduce((sum, e) => sum + e.perguntas.length + perguntasDaDoenca(d, m, e).length, 0);
   }
   function etapaConcluida(s, m, d, e){
-    const total = e.perguntas.length + perguntasDaDoenca(d, e).length;
+    const total = e.perguntas.length + perguntasDaDoenca(d, m, e).length;
     if(!total) return false;
     const feitas = s.asked.filter(k => k.startsWith(`${e.id}-`)).length;
     return feitas >= Math.ceil(total * 0.6);
@@ -640,8 +684,8 @@
   function proximoPasso(s, m, d, etapa){
     const pendentes = etapa.perguntas.filter((q,i) => !s.asked.includes(`${etapa.id}-m${i}`));
     if(pendentes.length) return `Ainda nesta etapa: "${pendentes[0]}"`;
-    const dq = perguntasDaDoenca(d, etapa).filter((q,i) => !s.asked.includes(`${etapa.id}-d${i}`));
-    if(dq.length) return `Falta explorar: "${dq[0]}"`;
+    const dq = perguntasDaDoenca(d, m, etapa).filter((q,i) => !s.asked.includes(`${etapa.id}-d${i}`));
+    if(dq.length) return `${ehItemChecklist(dq[0])?'Falta checar':'Falta explorar'}: "${dq[0]}"`;
     const idx = m.etapas.findIndex(e => e.id === etapa.id);
     const prox = m.etapas[idx+1];
     return prox ? `Etapa coberta. Avance para "${prox.titulo}".` : 'Roteiro completo. Feche com resumo, sinais de alarme e retorno — depois finalize a consulta.';
@@ -774,16 +818,18 @@
     let melhor = { score:0, key:'' };
     m.etapas.forEach(e => {
       (e.perguntas||[]).forEach((q,i) => { const sc = pontuacao(tokens(q), alvo); if(sc > melhor.score) melhor = { score:sc, key:`${e.id}-m${i}` }; });
-      perguntasDaDoenca(d, e).forEach((q,i) => { const sc = pontuacao(tokens(q), alvo); if(sc > melhor.score) melhor = { score:sc, key:`${e.id}-d${i}` }; });
+      perguntasDaDoenca(d, m, e).forEach((q,i) => { if(ehItemChecklist(q)) return; const sc = pontuacao(tokens(q), alvo); if(sc > melhor.score) melhor = { score:sc, key:`${e.id}-d${i}` }; });
     });
     if(melhor.score >= 1.1 && melhor.key && !s.asked.includes(melhor.key)) s.asked.push(melhor.key);
   }
   /* Encontra a melhor resposta para o que foi digitado. */
-  function respostaParaTexto(d, m, textoDigitado){
+  function respostaParaTexto(d, m, textoDigitado, paciente){
     if(!d) return sorteia(NAO_ENTENDI);
     const alvo = tokens(textoDigitado);
     if(!alvo.length) return sorteia(NAO_ENTENDI);
     const texto = normaliza(textoDigitado);
+    if(/(qual|diga|fale).*(seu nome)|como (voce )?(se chama|prefere ser chamad)/.test(texto)) return `Pode me chamar de ${paciente?.nome || 'paciente simulado'}.`;
+    if(/quantos anos|qual (e )?(a )?sua idade/.test(texto)) return paciente?.idade ? `Tenho ${paciente.idade} anos.` : 'Minha idade não foi informada neste caso.';
     let melhor = { score:0, resposta:null };
 
     // 0) falas próprias de cada cenário SPIKES. Elas têm prioridade sobre a
@@ -834,10 +880,17 @@
   function resolveMarca(d, marca){
     if(typeof marca !== 'string' || !marca.startsWith('@')) return marca;
     const caminho = marca.slice(1).split('.');
-    let atual = caminho[0] === 'spikes' ? d.spikes : d.perspectiva;
+    let atual = caminho[0] === 'spikes' ? d.spikes
+      : caminho[0] === 'em' ? EM_CASOS[d.id]
+      : caminho[0] === 'psiq' ? PSIQ_CASOS[d.id]
+      : d.perspectiva;
     caminho.slice(1).forEach(chave => { atual = atual?.[chave]; });
     if(caminho.length === 1) atual = d.perspectiva?.[caminho[0]];
-    return atual || (caminho[0] === 'spikes' ? SPIKES_PADRAO[caminho[1]] : PERSPECTIVA_PADRAO[caminho[0]]);
+    const fallback = caminho[0] === 'spikes' ? SPIKES_PADRAO[caminho[1]]
+      : caminho[0] === 'em' ? EM_PADRAO[caminho[1]]
+      : caminho[0] === 'psiq' ? PSIQ_PADRAO[caminho[1]]
+      : PERSPECTIVA_PADRAO[caminho[0]];
+    return atual || fallback;
   }
   function respostaConversacional(d, texto){
     const p = d.perspectiva || {};
@@ -875,6 +928,31 @@
     emocao:'Estou muito abalado. Parece que tudo parou agora.', validacao:'Obrigado por compreender. Está sendo muito difícil.', pausa:'Quero um minuto, por favor.', pensamento:'Estou pensando na minha família e no que vai acontecer daqui para frente.', medo:'Tenho medo de sofrer e de deixar minha família.',
     prioridade:'Quero ficar confortável e perto da minha família.', opcoes:'Pode explicar as opções. Quero decidir junto.', naoAbandono:'Ouvir que vocês continuarão comigo me alivia.', plano:'Entendi. Vamos combinar o próximo passo e quando voltamos a conversar.', resumo:'Entendi que a doença piorou, que a cura pode não ser possível e que vamos priorizar meu conforto e o que importa para mim.', duvidas:'Quero saber como vocês vão controlar meus sintomas e quem devo procurar se eu piorar.'
   };
+  const EM_PADRAO = {
+    comportamento:'Isso aparece bastante no meu dia, principalmente quando estou cansado ou sob pressão.', sucesso:'Já consegui mudar uma rotina antes quando comecei com uma meta pequena.', permissao:'Pode compartilhar. Depois eu digo o que faz sentido para mim.',
+    beneficios:'Na hora isso me traz algum alívio ou praticidade.', custos:'Ao mesmo tempo, está prejudicando minha saúde e minha rotina.', semMudanca:'Acho que o problema vai pesar mais e vou perder qualidade de vida.', comMudanca:'Eu teria mais disposição e sentiria que estou cuidando de mim.',
+    importancia:'Diria 7 de 10.', razoes:'Porque o problema já está afetando coisas que são importantes para mim.', confianca:'Minha confiança está em 5 de 10.', subirConfianca:'Ter um plano pequeno e apoio no acompanhamento faria subir um ponto.',
+    primeiroPasso:'Posso escolher uma mudança pequena e começar ainda esta semana.', barreiras:'Os dias mais corridos e o desânimo vão ser os momentos mais difíceis.', apoio:'Tenho alguém em casa que pode me apoiar.', retorno:'Podemos sim. Quero revisar o que funcionou e ajustar o plano.'
+  };
+  const EM_CASOS = {
+    tabagismo:{ comportamento:'Fumo cerca de 20 cigarros por dia, e o primeiro é logo que acordo.', sucesso:'Já fiquei dois meses sem fumar; ajudou tirar os cigarros de casa e evitar bebida no começo.', permissao:'Pode falar. Quero ouvir e depois pensar no que combina comigo.', beneficios:'O cigarro me acalma e marca minhas pausas durante o dia.', custos:'Tenho falta de ar, gasto muito e meu neto fica preocupado.', semMudanca:'Acho que meu fôlego vai piorar e posso ter uma doença séria.', comMudanca:'Eu respiraria melhor e ficaria mais presente para minha família.', importancia:'É 9 de 10 para mim.', razoes:'Porque meu neto pediu e eu já sinto meu fôlego piorando.', confianca:'Minha confiança está em 4 de 10; já recaí outras vezes.', subirConfianca:'Acompanhamento, remédio se for indicado e um plano para a fissura ajudariam.', primeiroPasso:'Posso escolher uma data e tirar os cigarros de casa antes dela.', barreiras:'O café da manhã, a bebida e estar perto de quem fuma vão ser difíceis.', apoio:'Minha esposa pode tentar comigo e meu neto me incentiva.', retorno:'Pode marcar. Quero voltar para contar como foi, mesmo se eu escorregar.' },
+    alcool:{ comportamento:'Bebo todos os dias, em média seis doses, e mais no fim de semana.', sucesso:'Já consegui ficar alguns dias sem beber quando tive apoio da família.', permissao:'Pode compartilhar, mas prefiro que a decisão seja conversada comigo.', beneficios:'A bebida me relaxa e parece desligar minha cabeça depois do trabalho.', custos:'Tenho tremor, falto ao trabalho e brigo com minha esposa.', semMudanca:'Tenho medo de perder meu trabalho e minha família, além de adoecer.', comMudanca:'Eu voltaria a acordar bem e recuperaria a confiança da minha família.', importancia:'É 8 de 10.', razoes:'Porque as faltas no trabalho e as brigas já passaram do limite.', confianca:'Minha confiança está em 3 de 10.', subirConfianca:'Saber como reduzir com segurança e ter acompanhamento para a abstinência ajudaria.', primeiroPasso:'Posso aceitar uma avaliação para montar um plano seguro, sem tentar parar sozinho.', barreiras:'O tremor ao ficar sem beber e os encontros do fim de semana são as maiores barreiras.', apoio:'Minha esposa pode me acompanhar e eu aceito conhecer a rede de apoio.', retorno:'Podemos combinar um retorno próximo; não quero enfrentar isso sozinho.' },
+    obesidade:{ comportamento:'Como rápido, belisco quando estou ansioso e quase não faço atividade física.', sucesso:'Uma vez consegui organizar o almoço por algumas semanas quando levei comida de casa.', permissao:'Pode compartilhar. Quero pensar em algo que caiba na minha rotina.', beneficios:'Comer me conforta quando estou estressado e pedir comida é mais prático.', custos:'Meu joelho dói, fico cansado e não me sinto bem comigo mesmo.', semMudanca:'Acho que vou perder ainda mais mobilidade e minha saúde vai piorar.', comMudanca:'Eu teria mais energia e conseguiria brincar e caminhar sem tanta dor.', importancia:'É 7 de 10.', razoes:'Porque a dor e o cansaço já estão limitando meu dia.', confianca:'Minha confiança está em 5 de 10.', subirConfianca:'Um plano simples, sem dieta impossível, faria subir para 6.', primeiroPasso:'Posso levar almoço de casa duas vezes e caminhar dez minutos em três dias.', barreiras:'Ansiedade à noite e falta de tempo para cozinhar são os momentos mais difíceis.', apoio:'Minha família pode ajudar a organizar as refeições e caminhar comigo.', retorno:'Quero voltar para ver o que consegui manter e ajustar sem culpa.' },
+    dm2:{ comportamento:'Esqueço a metformina da noite, tomo refrigerante e ainda não voltei a caminhar.', sucesso:'Já consegui diminuir o refrigerante por um mês quando deixei de comprar para casa.', permissao:'Pode me explicar. Quero entender como isso se relaciona com a glicose.', beneficios:'O refrigerante e os doces me dão prazer, e não precisar planejar é mais fácil.', custos:'Minha glicose está alta, sinto sede e tenho medo das complicações.', semMudanca:'Tenho medo de piorar e acabar com problema nos olhos, rins ou pés.', comMudanca:'Eu teria mais energia e ficaria menos preocupado com o futuro.', importancia:'É 9 de 10.', razoes:'Porque os sintomas começaram e eu quero evitar complicações.', confianca:'Minha confiança está em 5 de 10.', subirConfianca:'Um lembrete para o remédio e uma mudança de cada vez ajudariam.', primeiroPasso:'Posso programar o alarme do remédio e trocar o refrigerante durante a semana.', barreiras:'À noite estou cansado e nos encontros de família sempre tem refrigerante.', apoio:'Minha esposa pode ajudar com o lembrete e com as compras.', retorno:'Podemos rever a glicemia e o plano no retorno.' },
+    has:{ comportamento:'Só tomo o remédio quando acho que a pressão subiu e como muita comida salgada fora de casa.', sucesso:'Já consegui organizar outro remédio usando uma caixa semanal.', permissao:'Pode explicar. Quero entender o risco mesmo quando não sinto nada.', beneficios:'Não tomar todo dia evita o incômodo de urinar mais e exige menos organização.', custos:'Minha pressão continua alta e fico com medo de ter um AVC como conhecidos meus.', semMudanca:'Posso ter uma complicação mesmo sem sentir a pressão subir.', comMudanca:'Eu ficaria mais tranquilo sabendo que estou reduzindo meu risco.', importancia:'É 8 de 10.', razoes:'Porque meu pai infartou cedo e eu não quero passar pelo mesmo.', confianca:'Minha confiança está em 6 de 10.', subirConfianca:'Ajustar o horário e reduzir o efeito que me incomoda ajudaria.', primeiroPasso:'Posso usar a caixa de remédios e escolher uma opção com menos sal no almoço.', barreiras:'Comer na rua e lembrar do remédio nos dias corridos são as maiores barreiras.', apoio:'Minha esposa pode conferir a caixa semanal comigo.', retorno:'Pode marcar; quero conferir as medidas e conversar sobre o remédio.' },
+    dislipidemia:{ comportamento:'Como fritura e ultraprocessados com frequência e quase não faço exercício.', sucesso:'Já consegui caminhar por alguns meses quando combinei horário com um amigo.', permissao:'Pode compartilhar os riscos e as opções; tenho receio de remédio para sempre.', beneficios:'A comida pronta é rápida e faz parte dos encontros com a família.', custos:'Meu colesterol está alto e meu pai infartou cedo, então isso me preocupa.', semMudanca:'Meu risco pode aumentar sem que eu sinta qualquer sintoma antes.', comMudanca:'Eu me sentiria mais seguro e teria mais disposição.', importancia:'É 8 de 10.', razoes:'Porque a história do meu pai mostra que o risco é real para mim.', confianca:'Minha confiança está em 5 de 10.', subirConfianca:'Retomar a caminhada com alguém e ter metas alimentares realistas ajudaria.', primeiroPasso:'Posso caminhar com meu amigo três vezes e reduzir refrigerante nesta semana.', barreiras:'O almoço fora e os fins de semana com a família serão mais difíceis.', apoio:'Meu amigo pode caminhar comigo e minha família pode ajudar nas escolhas.', retorno:'Podemos rever o plano e os exames no retorno.' },
+    insonia:{ comportamento:'Uso o celular na cama, cochilo uma hora à tarde e tomo café até a noite.', sucesso:'Já consegui manter um horário regular por alguns dias quando estava de férias.', permissao:'Pode explicar. Quero saber o que realmente ajuda além de remédio.', beneficios:'O celular me distrai da ansiedade e o cochilo alivia o cansaço do dia.', custos:'Demoro a dormir, passo o dia exausto e já quase cochilei dirigindo.', semMudanca:'Acho que vou continuar dependente do remédio e correndo risco durante o dia.', comMudanca:'Eu acordaria com mais energia e teria menos medo de dirigir cansado.', importancia:'É 9 de 10.', razoes:'Porque a sonolência já está colocando minha segurança em risco.', confianca:'Minha confiança está em 6 de 10.', subirConfianca:'Começar por uma regra simples e acompanhar num diário ajudaria.', primeiroPasso:'Posso deixar o celular fora da cama e encurtar o cochilo a partir de hoje.', barreiras:'A ansiedade na hora de deitar e o cansaço da tarde serão difíceis.', apoio:'Quem mora comigo pode me ajudar a manter o quarto sem celular.', retorno:'Quero voltar com o diário do sono para ajustar o plano.' }
+  };
+  const PSIQ_PADRAO = {
+    episodios:'Nunca tive um episódio exatamente igual e não fiz tratamento psiquiátrico antes.', mania:'Nunca tive fase de energia excessiva com pouca necessidade de sono.', substancias:'Não uso drogas; bebo apenas ocasionalmente.', internacao:'Nunca fui internado nem fiz tentativa de suicídio.', alucinacoes:'Não tenho ouvido nem visto coisas que outras pessoas não percebam.', delirios:'Não sinto que alguém queira me prejudicar ou esteja me observando.', pensamento:'Meus pensamentos parecem mais lentos quando estou mal.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não pensei em um método e não tenho um plano.', seguranca:'Podemos construir o plano e combinar quem procurar se eu piorar.'
+  };
+  const PSIQ_CASOS = {
+    depressao:{ episodios:'Já passei por uma fase parecida, mas nunca tratei.', mania:'Nunca tive fase de energia excessiva ou de precisar dormir pouco.', substancias:'Às vezes bebo para tentar dormir; não uso outras drogas.', internacao:'Nunca fui internada nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que outras pessoas não veem.', delirios:'Não acho que estejam me perseguindo.', pensamento:'Meus pensamentos estão lentos e cheios de culpa.', ideacao:'Já pensei que seria melhor sumir ou não acordar.', plano:'Não pensei em como e não me preparei.', seguranca:'Consigo construir o plano e chamar minha irmã se esses pensamentos aumentarem.' },
+    ansiedade:{ episodios:'Já tive crises menores antes, mas ficaram frequentes agora.', mania:'Nunca tive períodos de energia excessiva ou de dormir pouco sem cansaço.', substancias:'Tomo muito café e pré-treino; bebo às vezes para relaxar.', internacao:'Nunca fui internado nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que os outros não veem.', delirios:'Não me sinto perseguido; tenho medo de haver algo errado com meu coração.', pensamento:'Meus pensamentos ficam acelerados, principalmente antes de outra crise.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não tenho plano nem acesso preparado a algum meio.', seguranca:'Podemos combinar o que fazer nas crises e quem procurar se eu me sentir em risco.' },
+    alcool:{ episodios:'O uso foi aumentando aos poucos; ainda não fiz tratamento.', mania:'Não tive fase de energia excessiva sem precisar dormir.', substancias:'Bebo todos os dias e também fumo; não uso outras drogas.', internacao:'Nunca fui internado nem fiz tentativa de suicídio.', alucinacoes:'Só tive impressão estranha quando fiquei muito tempo sem beber; agora não estou ouvindo nada.', delirios:'Não sinto que estejam me perseguindo.', pensamento:'Meu pensamento fica ansioso quando começo a tremer sem bebida.', ideacao:'Às vezes fico desesperançoso, mas hoje não estou pensando em me matar.', plano:'Não tenho plano nem meio preparado.', seguranca:'Aceito montar um plano e procurar ajuda antes de tentar parar sozinho.' },
+    insonia:{ episodios:'Isso começou há seis meses; antes eu dormia normalmente.', mania:'Não fico cheio de energia com pouco sono; no dia seguinte estou exausto.', substancias:'Tomo muito café e uso clonazepam; não uso drogas.', internacao:'Nunca fui internado nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que outros não percebam.', delirios:'Não me sinto perseguido ou observado.', pensamento:'Os pensamentos aceleram quando deito e começo a me preocupar com o sono.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não tenho plano de me ferir.', seguranca:'Podemos combinar um plano e procurar ajuda se meu humor ou segurança piorarem.' },
+    'risco-suicidio':{ episodios:'Já passei por uma crise e fiz uma tentativa há dois anos.', mania:'Nunca tive fase de energia excessiva ou de dormir pouco sem cansaço.', substancias:'Tenho bebido mais desde que perdi o emprego.', internacao:'Fui atendido depois da tentativa anterior, mas não mantive acompanhamento.', alucinacoes:'Não ouço vozes nem vejo coisas que outras pessoas não percebam.', delirios:'Não sinto que alguém queira me prejudicar.', pensamento:'Meu pensamento fica preso na ideia de que não há saída.', ideacao:'Tenho pensado em me matar quase todos os dias, e ficou mais forte nesta semana.', plano:'Pensei em usar os remédios da minha mãe e sei onde eles ficam.', seguranca:'Acho que consigo fazer o plano com você, chamar meu amigo e não ficar sozinho agora.' }
+  };
 
   /* ================================= EVENTOS ================================= */
   function bind(){
@@ -885,6 +963,8 @@
       const info = root.querySelector('#ccMetodoInfo');
       if(info) info.innerHTML = renderMetodoInfo(metodo(metodoSel.value));
       escolhida = '';
+      const titulo = root.querySelector('#ccBoxTitle'); if(titulo) titulo.textContent = `2. ${textoCaixaMetodo(metodoSel.value)}`;
+      const dica = root.querySelector('#ccBoxHint'); if(dica) dica.textContent = dicaCaixaMetodo(metodoSel.value);
       const grid = root.querySelector('#ccDoencaGrid');
       if(grid){ grid.innerHTML = renderDoencaChips(busca?.value || '', '', metodoSel.value); bindChips(); }
     };
@@ -920,8 +1000,8 @@
     root.querySelector('#ccToggleBox').onclick = () => { st.ui.box = !st.ui.box; save(); render(); };
     root.querySelector('#ccTopMetodo').onchange = e => {
       s.metodoId = e.target.value;
-      if(s.metodoId === 'spikes' && !doenca(s.doencaId)?.spikes){
-        const primeiroCaso = doencas().find(item => item.spikes);
+      if(!doencaCompativelComMetodo(doenca(s.doencaId), s.metodoId)){
+        const primeiroCaso = doencas().find(item => doencaCompativelComMetodo(item, s.metodoId));
         if(primeiroCaso) s.doencaId = primeiroCaso.id;
       }
       s.etapaAtiva = ''; touch(); render();
@@ -942,6 +1022,12 @@
       const key = btn.dataset.ccOcultar;
       s.perguntasOcultas = s.perguntasOcultas || [];
       if(!s.perguntasOcultas.includes(key)) s.perguntasOcultas.push(key);
+      touch(); render();
+    });
+    root.querySelectorAll('[data-cc-check]').forEach(btn => btn.onclick = () => {
+      const key = btn.dataset.ccCheck;
+      const pos = s.asked.indexOf(key);
+      if(pos >= 0) s.asked.splice(pos, 1); else s.asked.push(key);
       touch(); render();
     });
     root.querySelector('#ccOrient')?.addEventListener('toggle', event => { st.ui.orientOculta = !event.target.open; save(); });
@@ -968,7 +1054,7 @@
       if(quem === 'medico'){
         marcarPerguntaFeita(s, texto);
         const d = doenca(s.doencaId);
-        const resposta = respostaParaTexto(d, metodo(s.metodoId), texto);
+        const resposta = respostaParaTexto(d, metodo(s.metodoId), texto, s.paciente);
         // A resposta já entra na conversa e é salva; a animação é só de exibição.
         s.dialogo.push({ quem:'paciente', texto: resposta });
         animarIndice = s.dialogo.length - 1;

@@ -393,7 +393,7 @@
     exame:['IMC, circunferência cervical, PA','Orofaringe (Mallampati), tireoide','Exame do estado mental','Rastreios: STOP-BANG, Epworth'],
     hipoteses:['Insônia crônica','Apneia obstrutiva do sono, síndrome das pernas inquietas, depressão/ansiedade, higiene do sono inadequada, cafeína/álcool, medicamentos'],
     conduta:['Diário do sono por 2 semanas','TCC para insônia é primeira linha (restrição de sono, controle de estímulos)','Higiene do sono é coadjuvante, não tratamento isolado','Evitar benzodiazepínico crônico; desprescrever com plano','Polissonografia se suspeita de apneia','Tratar comorbidade psiquiátrica e dor'],
-    achados:['"Demoro mais de uma hora pra pegar no sono."','"Deito às 22h, durmo perto de 1h, acordo às 6h."','"Fico no celular na cama."','"Cochilo 1 hora à tarde."','"Tomo café até à noite."','"Tenho refluxo à noite."','"Ronco alto."','"Ando ansioso com trabalho."','"Tomo clonazepam há 3 anos."','"Já quase dormi dirigindo."','"Tentei chá e melatonina."','"—"'],
+    achados:['"Demoro mais de uma hora pra pegar no sono."','"Deito às 22h, durmo perto de 1h, acordo às 6h."','"Mais de uma hora, quase toda noite."','"Fico no celular na cama."','"Cochilo 1 hora à tarde."','"Tomo café até à noite."','"Tenho refluxo à noite."','"Ronco alto."','"Ando ansioso com trabalho."','"Tomo clonazepam há 3 anos."','"Já quase dormi dirigindo."','"Tentei chá e melatonina."'],
     pontos:['TCC-I supera hipnótico a médio prazo','Cochilo longo e cama-celular sustentam a insônia','Ronco + sonolência = rastreie apneia antes de sedar'] });
 
   add({ id:'risco-suicidio', nome:'Risco de suicídio', area:'Psiquiatria', queixa:'Pensamentos de acabar com a vida',
