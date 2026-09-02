@@ -279,7 +279,7 @@
         perguntas:['Você tem ouvido ou visto coisas que outras pessoas não percebem?','Sente que alguém quer te prejudicar ou que te observam?','Sente que seus pensamentos estão acelerados ou lentos?','Você acha que está doente? O que acha que precisa?'] },
       { id:'ps3', foco:'sintese', titulo:'3. Risco e plano', objetivo:'Risco de suicídio, heteroagressão e autonegligência; plano de cuidado.',
         orientacoes:['Pergunte diretamente sobre suicídio — não induz o ato.','Defina nível de cuidado, rede e retorno.'],
-        perguntas:['Você tem pensado em morrer ou em se machucar?','Chegou a pensar em como? Tem acesso a isso?','Quem sabe o que você está passando? Com quem posso contar?','Podemos construir um plano de segurança juntos?'] } ] },
+        perguntas:['Você tem pensado em morrer ou em se machucar? Com que frequência?','Chegou a pensar em como? Tem acesso a esse meio?','Você pretende fazer isso agora ou nas próximas horas?','Já tentou antes? O que aconteceu?','O que ainda ajuda você a continuar vivo?','Quem sabe o que você está passando? Quem pode ficar com você hoje?','Podemos construir um plano de segurança juntos?'] } ] },
 
   { id:'prenatal-roteiro', nome:'Roteiro de consulta pré-natal', sigla:'Pré-natal', tipo:'Obstetrícia',
     uso:'Estrutura das consultas de pré-natal, com foco em risco e educação.',
@@ -318,6 +318,113 @@
         orientacoes:['Orientação antecipatória: acidentes, alimentação, sono, tela, disciplina positiva.','Sinais de retorno claros e por escrito.'],
         perguntas:['Combinando: vamos fazer X, e vocês devem voltar se…','Nesta idade, é importante cuidar de… já pensaram nisso?'] } ] }
   ];
+
+  /* Guia curto que transforma o protocolo em fala utilizável. As frases com
+   * resposta podem ser enviadas ao paciente virtual; as demais são modelos de
+   * raciocínio ou de comunicação entre profissionais. */
+  const GUIAS_PRATICOS = {
+    mccp:{ prova:'Integre doença, experiência, contexto e decisão compartilhada; não basta completar uma anamnese.', frases:[
+      { texto:'Antes de pensarmos no plano, o que é mais importante para você nesta consulta?', resposta:'@expectativas' },
+      { texto:'Como esse problema mudou sua rotina e as coisas que você consegue fazer?', resposta:'@funcao' },
+      { texto:'Só para confirmar que entendi: qual é sua principal preocupação?', resposta:'@preocupacoes' }
+    ], erros:['Interromper cedo e transformar a consulta em interrogatório.','Apresentar um plano pronto sem explorar preferência e viabilidade.'] },
+    soap:{ prova:'Separe dado relatado, dado observado, interpretação e plano; não misture as quatro partes.', frases:[
+      { texto:'Vou resumir o que você me contou; me corrija se alguma parte estiver errada.', resposta:'@resumo' },
+      { texto:'Antes de encerrarmos, o que ainda não ficou claro para você?', resposta:'@duvida' },
+      { texto:'S — relato; O — medidas e achados; A — interpretação; P — próximos passos.', resposta:'' }
+    ], erros:['Registrar hipótese no Subjetivo ou queixa no Objetivo.','Criar um plano sem retorno, educação ou rede de segurança.'] },
+    calgary:{ prova:'Mostre processo comunicacional: agenda, escuta, transições, resumo, chunk-and-check e fechamento.', frases:[
+      { texto:'Antes de aprofundarmos, existe outro assunto que você queria tratar hoje?', resposta:'@abertura' },
+      { texto:'Vou resumir o que ouvi até aqui; por favor, me corrija se eu tiver entendido errado.', resposta:'@resumo' },
+      { texto:'Com suas palavras, como você explicaria o plano que combinamos?', resposta:'@entendimento' }
+    ], erros:['Descobrir uma segunda demanda somente no fim.','Usar jargão ou despejar informação sem checar compreensão.'] },
+    anamnese:{ prova:'Construa cronologia antes de revisar sistemas e mantenha antecedentes separados da doença atual.', frases:[
+      { texto:'O que estava acontecendo quando isso começou e como evoluiu desde então?', resposta:'@historia' },
+      { texto:'Quais remédios você realmente toma, incluindo os de farmácia, chás e suplementos?', resposta:'Tomo os medicamentos que já contei e, às vezes, um remédio de farmácia ou chá.' },
+      { texto:'Há algo na sua casa, trabalho ou família que esteja dificultando o cuidado?', resposta:'@contexto' }
+    ], erros:['Aceitar uma lista sem organizar a sequência temporal.','Fazer revisão de sistemas indiscriminada e esquecer a queixa principal.'] },
+    socrates:{ prova:'Cubra os oito atributos e procure sinais de alarme próprios da localização da dor.', frases:[
+      { texto:'Mostre com um dedo onde dói mais e diga se a dor vai para outro lugar.', resposta:'@historia' },
+      { texto:'No pior momento, quanto foi de zero a dez? E quanto está agora?', resposta:'No pior momento foi muito forte; agora está um pouco melhor.' },
+      { texto:'Além da dor, o que você sentiu ao mesmo tempo?', resposta:'Vieram também os sintomas que mencionei na história.' }
+    ], erros:['Usar o mnemônico como substituto da avaliação de gravidade.','Esquecer irradiação e sintomas associados.'] },
+    oldcarts:{ prova:'Caracterize qualquer sintoma por início, local, duração, caráter, fatores, padrão e intensidade.', frases:[
+      { texto:'Quando isso começou, foi de repente ou aos poucos?', resposta:'@historia' },
+      { texto:'Quanto dura cada episódio e existe algum horário em que costuma piorar?', resposta:'A duração e o horário variam como contei na minha história.' },
+      { texto:'O que você precisa parar de fazer quando o sintoma aparece?', resposta:'@funcao' }
+    ], erros:['Aplicar atributos sem adaptar ao sintoma.','Não perguntar o impacto funcional nem sinais de alarme.'] },
+    sbar:{ prova:'Em poucos segundos, identifique situação e urgência, contexto relevante, sua avaliação e um pedido concreto.', frases:[
+      { texto:'Situação: sou [nome/função], falando de [paciente]; o problema agora é [X] e a urgência é [Y].', resposta:'' },
+      { texto:'Avaliação: sinais vitais são [valores], encontrei [achados] e suspeito de [hipótese].', resposta:'' },
+      { texto:'Recomendação: preciso que você [ação] até [prazo]. Confirmando, ficou combinado [read-back].', resposta:'' }
+    ], erros:['Contar toda a internação antes de dizer o problema atual.','Terminar sem pedido, prazo ou confirmação.'] },
+    ampla:{ prova:'No instável, trate ameaças no ABCDE e só depois complete AMPLA/SAMPLE e exame secundário.', frases:[
+      { texto:'Você consegue me dizer seu nome e o que aconteceu?', resposta:'@abertura' },
+      { texto:'Tem alergias? Usa remédios, especialmente anticoagulante? Quando comeu pela última vez?', resposta:'Alergia eu não conheço; os remédios e a última refeição são os que já contei.' },
+      { texto:'ABCDE concluído; vou reavaliar e então fazer o exame da cabeça aos pés.', resposta:'' }
+    ], erros:['Completar história enquanto uma ameaça imediata segue sem tratamento.','Não reavaliar depois de uma intervenção.'] },
+    ice:{ prova:'Explore ideias, preocupações, expectativas e impacto funcional sem transformar as perguntas em um teste.', frases:[
+      { texto:'Muitas pessoas imaginam alguma causa quando isso acontece. O que passou pela sua cabeça?', resposta:'@ideias' },
+      { texto:'Existe alguma possibilidade específica que esteja assustando você?', resposta:'@preocupacoes' },
+      { texto:'O que faria esta consulta ter valido a pena para você?', resposta:'@expectativas' }
+    ], erros:['Corrigir a crença antes de compreendê-la.','Confundir expectativa com exigência e responder de modo defensivo.'] },
+    bathe:{ prova:'Faça quatro perguntas breves — contexto, afeto, maior incômodo e manejo — e responda com empatia.', frases:[
+      { texto:'O que mais está acontecendo na sua vida neste momento?', resposta:'@contexto' },
+      { texto:'Qual é a parte mais difícil de tudo isso para você?', resposta:'@preocupacoes' },
+      { texto:'Você tem carregado muita coisa; imagino como isso deve estar sendo difícil.', resposta:'@emocao' }
+    ], erros:['Transformar o E de empatia em uma quinta pergunta.','Dar conselho antes de reconhecer a experiência emocional.'] },
+    spikes:{ prova:'S-P-I-K-E-S: ambiente, percepção, convite, conhecimento, emoção e estratégia/resumo.', frases:[
+      { texto:'Antes de eu explicar os resultados, o que você entendeu da situação até aqui?', resposta:'@spikes.percepcao' },
+      { texto:'Infelizmente, tenho uma notícia difícil. Você gostaria que eu explicasse agora?', resposta:'@spikes.convite' },
+      { texto:'Diante disso, o que é mais importante para você agora?', resposta:'@spikes.prioridade' }
+    ], erros:['Dar detalhes ou prognóstico sem convite.','Ir ao plano antes de reconhecer emoção e silêncio.'] },
+    nurse:{ prova:'Responda à emoção com Naming, Understanding, Respecting, Supporting e Exploring.', frases:[
+      { texto:'Parece que você está muito preocupado com o que pode acontecer.', resposta:'@emocao' },
+      { texto:'Admiro como você tem enfrentado tudo isso até aqui.', resposta:'Obrigado por reconhecer isso. Tenho tentado fazer o melhor que consigo.' },
+      { texto:'Estou aqui com você. Pode me contar o que mais assusta neste momento?', resposta:'@preocupacoes' }
+    ], erros:['Usar frases empáticas mecanicamente, sem observar a reação.','Oferecer falsa tranquilização para encerrar a emoção.'] },
+    em:{ prova:'Use OARS, evoque a própria fala de mudança e só planeje depois de permissão e prontidão.', frases:[
+      { texto:'O que esse comportamento oferece de bom e o que ele cobra de você?', resposta:'@em.custos' },
+      { texto:'Por que a importância não é um número menor?', resposta:'@em.razoes' },
+      { texto:'Qual mudança pequena você escolheria experimentar nesta semana?', resposta:'@em.primeiroPasso' }
+    ], erros:['Confrontar, rotular ou tentar convencer pela culpa.','Transformar baixa confiança em falta de vontade.'] },
+    rop:{ prova:'Mantenha lista numerada, datada e no nível real de certeza; cada problema recebe seu próprio plano.', frases:[
+      { texto:'Problema 1 — [sintoma/diagnóstico], ativo desde [data], sustentado por [dados].', resposta:'' },
+      { texto:'Para cada problema: plano diagnóstico, terapêutico e educativo.', resposta:'' },
+      { texto:'Na evolução, registre o que mudou, por que mudou e o que será feito agora.', resposta:'' }
+    ], erros:['Apagar problemas antigos relevantes.','Registrar um diagnóstico fechado quando há apenas sintoma ou achado.'] },
+    ptc:{ prova:'O PTS é construído com a pessoa e a equipe: diagnóstico ampliado, metas, responsabilidades e reavaliação.', frases:[
+      { texto:'Além dos problemas, quais forças e recursos você reconhece na sua vida?', resposta:'Tenho dificuldades, mas também conto com pessoas e capacidades que podem ajudar.' },
+      { texto:'Que mudança concreta faria diferença para você nas próximas semanas?', resposta:'@expectativas' },
+      { texto:'O que você quer assumir no plano e em que parte precisa de ajuda?', resposta:'Consigo fazer uma parte, mas preciso dividir o restante com minha família e a equipe.' }
+    ], erros:['Definir metas apenas pela equipe.','Criar responsabilidades sem nome, prazo ou reavaliação.'] },
+    apgar:{ prova:'Use genograma/ciclo de vida para contexto; APGAR rastreia satisfação familiar e PRACTICE orienta intervenção.', frases:[
+      { texto:'Quando surge um problema, quem ajuda e como as decisões são tomadas na sua família?', resposta:'@contexto' },
+      { texto:'Você se sente ouvido e apoiado quando precisa mudar alguma coisa?', resposta:'Às vezes. Em algumas decisões eu me sinto apoiado, em outras fico sozinho.' },
+      { texto:'Quem está cuidando e como essa pessoa está conseguindo suportar a rotina?', resposta:'Há alguém que cuida mais de perto, mas essa pessoa também está cansada.' }
+    ], erros:['Tratar escore de APGAR como diagnóstico.','Mapear relações sem perguntar pela sobrecarga do cuidador.'] },
+    geriatrica:{ prova:'Priorize funcionalidade, cognição, humor, mobilidade, nutrição, sentidos, rede e revisão de medicamentos.', frases:[
+      { texto:'O que você fazia sozinho e passou a precisar de ajuda para fazer?', resposta:'@funcao' },
+      { texto:'Quem organiza seus remédios e quantos você usa por dia?', resposta:'Minha família ajuda a organizar; uso vários remédios todos os dias.' },
+      { texto:'Qual capacidade você mais quer preservar neste momento?', resposta:'Quero continuar independente e poder decidir sobre a minha rotina.' }
+    ], erros:['Confundir idade com fragilidade.','Definir metas laboratoriais sem considerar função e preferência.'] },
+    psiquiatrica:{ prova:'Descreva o estado mental e sempre avalie diretamente risco, intenção, meio, tentativa prévia e proteção.', frases:[
+      { texto:'Você tem pensado em morrer ou se machucar? Com que frequência?', resposta:'@psiq.ideacao' },
+      { texto:'Pensou em como faria e tem acesso ao meio?', resposta:'@psiq.plano' },
+      { texto:'Você pretende fazer isso agora ou nas próximas horas?', resposta:'@psiq.intencao' },
+      { texto:'O que ajuda você a continuar e quem pode ficar com você hoje?', resposta:'@psiq.protecao' }
+    ], erros:['Usar eufemismos para perguntar sobre suicídio.','Documentar apenas “nega ideação” sem avaliar plano, intenção, acesso e proteção.'] },
+    'prenatal-roteiro':{ prova:'Em cada consulta, atualize idade gestacional, risco, sintomas, PA, crescimento fetal, exames, vacinas e alarmes.', frases:[
+      { texto:'Desde a última consulta houve sangramento, perda de líquido, dor forte, cefaleia ou alteração visual?', resposta:'Tive apenas os sintomas que já contei; não apareceu outro sinal de alarme.' },
+      { texto:'Você percebeu mudança nos movimentos do bebê?', resposta:'Tenho percebido os movimentos e consigo dizer se mudaram.' },
+      { texto:'Você se sente segura em casa e tem apoio para a gestação e o parto?', resposta:'Tenho alguém em quem confio e posso falar se precisar de ajuda.' }
+    ], erros:['Tratar pré-natal como simples solicitação de exames.','Não reclassificar o risco e não orientar sinais de alarme.'] },
+    pediatrica:{ prova:'Converse com criança e cuidador, use idade corrigida quando necessário e integre crescimento, desenvolvimento e ambiente.', frases:[
+      { texto:'Primeiro quero ouvir você; depois vou completar a história com quem veio junto.', resposta:'Tudo bem. Eu consigo contar uma parte e quem veio comigo ajuda no resto.' },
+      { texto:'Houve alguma perda de habilidade que a criança já tinha adquirido?', resposta:'Não percebemos perda de habilidade; ela continua fazendo o que já sabia.' },
+      { texto:'Na adolescência, converso uma parte a sós e explico os limites da confidencialidade. Tudo bem?', resposta:'Tudo bem. Prefiro ter um momento para conversar sozinho.' }
+    ], erros:['Falar apenas com o acompanhante e ignorar a criança.','Avaliar marco isolado sem trajetória, regressão e contexto.'] }
+  };
 
   /* Respostas do paciente para as perguntas de cada método, na mesma ordem de `perguntas`.
    * '@campo' busca a fala específica da doença em `perspectiva`; '' = não cabe resposta
@@ -376,7 +483,7 @@
     g4:['Caí duas vezes esse ano.','Escapa um pouco de urina, sim. Me deixa constrangido.','Tomo bastante remédio, uns sete.','Quero continuar me virando sozinho.'],
     ps1:['@abertura','@psiq.episodios','@psiq.mania','@psiq.substancias','@psiq.internacao'],
     ps2:['@psiq.alucinacoes','@psiq.delirios','@psiq.pensamento','@entendimento'],
-    ps3:['@psiq.ideacao','@psiq.plano','@apoio','@psiq.seguranca'],
+    ps3:['@psiq.ideacao','@psiq.plano','@psiq.intencao','@psiq.tentativa','@psiq.protecao','@apoio','@psiq.seguranca'],
     pn1:['Foi no dia 12 do mês passado, anotei no aplicativo.','É a minha primeira gestação.','Tenho enjoo de manhã e uma azia que não passa.','Sinto ele mexer bastante, ainda mais à noite.'],
     pn2:['@exame','Pode escutar, doutor. Fico ansiosa nessa hora.'],
     pn3:['Trouxe sim, estão aqui.','Acho que estão em dia. Trouxe o cartão pra o senhor ver.','Nada demais desde a última, só o enjoo mesmo.'],
@@ -488,9 +595,22 @@
   }
 
   function renderMetodoInfo(m){
+    const guia = GUIAS_PRATICOS[m.id];
     return `<div class="cc-metodo-card"><div><span class="badge today">${esc(m.tipo)}</span><strong>${esc(m.nome)}</strong></div>
-      <p>${esc(m.uso)}</p><p class="muted">${esc(m.quando)}</p>
+      <p>${esc(m.uso)}</p><p class="muted">${esc(m.quando)}</p>${guia?`<p class="cc-prova-tip"><strong>Na prova:</strong> ${esc(guia.prova)}</p>`:''}
       <div class="cc-metodo-steps">${m.etapas.map(e=>`<span>${esc(e.titulo)}</span>`).join('')}</div></div>`;
+  }
+
+  function renderGuiaPratico(m){
+    const guia = GUIAS_PRATICOS[m.id];
+    if(!guia) return '';
+    return `<details class="cc-practical"><summary>Frases de alto rendimento e armadilhas</summary>
+      <p class="cc-practical-goal"><strong>O que demonstrar:</strong> ${esc(guia.prova)}</p>
+      <div class="cc-phrase-list">${guia.frases.map(item => item.resposta
+        ? `<button type="button" class="cc-phrase" data-cc-ask="extra" data-texto="${esc(item.texto)}" title="Levar esta frase ao campo de conversa"><span>Usar na conversa</span>${esc(item.texto)}</button>`
+        : `<div class="cc-phrase cc-phrase-model"><span>Modelo</span>${esc(item.texto)}</div>`).join('')}</div>
+      <div class="cc-practical-errors"><strong>Evite:</strong><ul>${guia.erros.map(item=>`<li>${esc(item)}</li>`).join('')}</ul></div>
+    </details>`;
   }
 
   function normaliza(v){ return String(v||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
@@ -551,6 +671,7 @@
           <div class="cc-etapa-head"><span class="eyebrow">${esc(F[etapa.foco]||'Etapa')}</span><h2>${esc(etapa.titulo)}</h2><p class="muted">${esc(etapa.objetivo)}</p></div>
           ${renderPerguntasBloco(s, d, m, etapa)}
           <details class="cc-orient"${store().ui.orientOculta?'':' open'} id="ccOrient"><summary>Como conduzir esta etapa</summary><ul>${etapa.orientacoes.map(o=>`<li>${esc(o)}</li>`).join('')}</ul></details>
+          ${renderGuiaPratico(m)}
           <div class="cc-anot"><h4>Sua anotação nesta etapa</h4><textarea class="textarea" id="ccNota" data-etapa="${etapa.id}" placeholder="Escreva aqui como se estivesse registrando o que a pessoa respondeu, o que você pensou e o que decidiu.">${esc(s.notas[etapa.id]||'')}</textarea></div>
         </section>
         <aside class="cc-coach card">
@@ -651,7 +772,13 @@
     if(!d) return [];
     if(etapa.id.startsWith('sp')) return falasSpikes(d, etapa).map(item => item.pergunta);
     const id = m?.id;
-    const etapaEntrevista = { mccp:'m1', soap:'s1', calgary:'c2', anamnese:'a2', socrates:'so1', oldcarts:'ol1', ampla:'ab2', psiquiatrica:'ps1', 'prenatal-roteiro':'pn1', pediatrica:'pd2' }[id];
+    if(id === 'psiquiatrica'){
+      const itemDeRisco = pergunta => /morrer|sumir|n[aã]o acordar|vida n[aã]o vale|machucar|suic[ií]d|como faria|acesso|meio|prepar|despedi|tentou|tentativa|motivo para continuar|te segura|pode contar|quem sabe|plano de seguran[cç]a|ajudar agora/.test(normaliza(pergunta));
+      if(etapa.id === 'ps1') return (d.perguntas||[]).filter(pergunta => !itemDeRisco(pergunta));
+      if(etapa.id === 'ps3') return (d.perguntas||[]).filter(itemDeRisco);
+      return [];
+    }
+    const etapaEntrevista = { mccp:'m1', soap:'s1', calgary:'c2', anamnese:'a2', socrates:'so1', oldcarts:'ol1', ampla:'ab2', 'prenatal-roteiro':'pn1', pediatrica:'pd2' }[id];
     if(etapa.id === etapaEntrevista){
       if(id === 'socrates') return perguntasSintoma(d, 8);
       if(id === 'oldcarts') return perguntasSintoma(d, 8);
@@ -699,7 +826,14 @@
     esposa:'familia', marido:'familia', companheiro:'familia', companheira:'familia', parente:'familia', filhos:'familia', filho:'familia', filha:'familia', cuidador:'familia',
     receio:'medo', teme:'medo', assusta:'medo', preocupado:'preocupa', preocupada:'preocupa',
     emprego:'trabalho', profissao:'trabalho', rotina:'funcao', limita:'funcao', atrapalha:'funcao',
-    remedio:'medicamento', remedios:'medicamento', farmaco:'medicamento',
+    remedio:'medicamento', remedios:'medicamento', farmaco:'medicamento', farmacos:'medicamento', comprimido:'medicamento',
+    fuma:'tabaco', fumar:'tabaco', cigarro:'tabaco', cigarros:'tabaco', tabagista:'tabaco',
+    beber:'alcool', bebida:'alcool', bebidas:'alcool', cerveja:'alcool', cachaca:'alcool',
+    alergico:'alergia', alergica:'alergia', reacao:'alergia', operou:'cirurgia', cirurgia:'cirurgia', internou:'internacao', hospitalizado:'internacao',
+    comecou:'inicio', iniciou:'inicio', inicio:'inicio', intensidade:'gravidade', forte:'gravidade', severa:'gravidade', severo:'gravidade',
+    piora:'agrava', piorou:'agrava', agrava:'agrava', melhora:'alivia', melhorou:'alivia', alivio:'alivia',
+    gravida:'gestacao', gravidez:'gestacao', gestante:'gestacao', bebe:'feto',
+    cocô:'fezes', coco:'fezes', intestino:'fezes', urinar:'urina', miccao:'urina', xixi:'urina',
     cansaco:'fadiga', cansado:'fadiga', cansada:'fadiga', respirar:'dispneia', falta:'dispneia',
     resultado:'exame', exames:'exame', diagnostico:'doenca', enfermidade:'doenca'
   };
@@ -710,12 +844,13 @@
   function pontuacao(perguntaTokens, digitadoTokens){
     if(!perguntaTokens.length || !digitadoTokens.length) return 0;
     const set = new Set(digitadoTokens);
+    const unicos = [...new Set(perguntaTokens)];
     let acertos = 0;
-    perguntaTokens.forEach(w => {
+    unicos.forEach(w => {
       if(set.has(w)) { acertos += 1; return; }
       for(const dw of digitadoTokens){ if(w.length > 4 && (dw.startsWith(w.slice(0,5)) || w.startsWith(dw.slice(0,5)))) { acertos += 0.7; return; } }
     });
-    return acertos / Math.sqrt(perguntaTokens.length);
+    return acertos / Math.sqrt(unicos.length);
   }
   /* Frases digitadas que puxam a perspectiva da pessoa (SIFE, contexto, emoção…). */
   const GATILHOS = [
@@ -823,13 +958,18 @@
     if(melhor.score >= 1.1 && melhor.key && !s.asked.includes(melhor.key)) s.asked.push(melhor.key);
   }
   /* Encontra a melhor resposta para o que foi digitado. */
-  function respostaParaTexto(d, m, textoDigitado, paciente){
+  function respostaParaTexto(d, m, textoDigitado, paciente, historico){
     if(!d) return sorteia(NAO_ENTENDI);
-    const alvo = tokens(textoDigitado);
+    let alvo = tokens(textoDigitado);
     if(!alvo.length) return sorteia(NAO_ENTENDI);
     const texto = normaliza(textoDigitado);
     if(/(qual|diga|fale).*(seu nome)|como (voce )?(se chama|prefere ser chamad)/.test(texto)) return `Pode me chamar de ${paciente?.nome || 'paciente simulado'}.`;
     if(/quantos anos|qual (e )?(a )?sua idade/.test(texto)) return paciente?.idade ? `Tenho ${paciente.idade} anos.` : 'Minha idade não foi informada neste caso.';
+    const falaAnterior = [...(historico||[])].reverse().find(item => item.quem === 'medico')?.texto || '';
+    if(alvo.length <= 3 && /^(e\b|isso\b|ele\b|ela\b|quanto tempo|desde quando|por que|piora|melhora)/.test(texto) && falaAnterior){
+      alvo = [...new Set([...tokens(falaAnterior), ...alvo])];
+      if(/(ha quanto tempo|desde quando)/.test(texto) && /(fuma|cigarro|tabaco|bebe|alcool|medicamento|remedio)/.test(normaliza(falaAnterior))) alvo.push('anos');
+    }
     let melhor = { score:0, resposta:null };
 
     // 0) falas próprias de cada cenário SPIKES. Elas têm prioridade sobre a
@@ -864,7 +1004,15 @@
       const r = resolveMarca(d, marca);
       if(r) melhor = { score:s, resposta:r };
     }));
-    // 4) campos de perspectiva por semelhança direta
+    // 4) frases adicionais do guia prático
+    (GUIAS_PRATICOS[m?.id]?.frases||[]).forEach(item => {
+      if(!item.resposta) return;
+      const s = pontuacao(tokens(item.texto), alvo);
+      if(s <= melhor.score) return;
+      const r = resolveMarca(d, item.resposta);
+      if(r) melhor = { score:s, resposta:r };
+    });
+    // 5) campos de perspectiva por semelhança direta
     Object.entries(d.perspectiva||{}).forEach(([campo, r]) => {
       if(!r) return;
       const s = pontuacao(tokens(campo === 'abertura' ? 'o que traz motivo consulta' : campo), alvo) * 0.8;
@@ -897,11 +1045,17 @@
     const sp = d.spikes || {};
     if(/^(oi|ola|bom dia|boa tarde|boa noite)\b/.test(texto)) return 'Olá, doutor. Podemos conversar, sim.';
     if(/obrigad|agradec/.test(texto)) return 'Eu que agradeço por me ouvir e explicar com calma.';
+    if(/posso (fazer|te fazer|lhe fazer) (algumas )?perguntas|vamos conversar um pouco/.test(texto)) return 'Pode sim. Vou responder o que eu conseguir.';
     if(/sinto muito|estou aqui|deve ser dificil|imagino como/.test(texto)) return sp.validacao || 'Obrigado por reconhecer isso. Está sendo muito difícil para mim.';
+    if(/nao (vou|vamos) (te |lhe )?abandonar|continuaremos (com voce|cuidando)/.test(texto)) return sp.naoAbandono || 'Isso me deixa mais tranquilo. Eu precisava saber que continuarei sendo cuidado.';
+    if(/quer (fazer )?uma pausa|precisa de um tempo|podemos parar um pouco/.test(texto)) return sp.pausa || 'Quero respirar um pouco e depois podemos continuar.';
     if(/mais importante|prioridade|objetivo|importa para voce/.test(texto)) return sp.prioridade || p.expectativas || PERSPECTIVA_PADRAO.expectativas;
     if(/entendeu|suas palavras|resumir|resumo/.test(texto)) return sp.resumo || p.resumo || PERSPECTIVA_PADRAO.resumo;
     if(/duvida|pergunta agora|quer perguntar/.test(texto)) return sp.duvidas || p.duvida || PERSPECTIVA_PADRAO.duvida;
     if(/posso (te |lhe )?(examinar|explicar|contar)|tudo bem se|voce autoriza/.test(texto)) return 'Pode sim, doutor. Prefiro que explique com calma.';
+    if(/entendi (certo|corretamente)|pelo que entendi|entao voce/.test(texto)) return p.resumo || 'Sim, foi isso mesmo. Obrigado por confirmar comigo.';
+    if(/conte mais|fale mais|pode continuar|o que mais/.test(texto)) return p.historia || p.abertura || PERSPECTIVA_PADRAO.abertura;
+    if(/combinado|vamos fazer assim|podemos marcar|vamos rever/.test(texto)) return p.concorda || PERSPECTIVA_PADRAO.concorda;
     if(/mais alguma coisa|algo a acrescentar/.test(texto)) return 'Por enquanto é isso. Se eu lembrar de algo, conto ao senhor.';
     return '';
   }
@@ -944,14 +1098,14 @@
     insonia:{ comportamento:'Uso o celular na cama, cochilo uma hora à tarde e tomo café até a noite.', sucesso:'Já consegui manter um horário regular por alguns dias quando estava de férias.', permissao:'Pode explicar. Quero saber o que realmente ajuda além de remédio.', beneficios:'O celular me distrai da ansiedade e o cochilo alivia o cansaço do dia.', custos:'Demoro a dormir, passo o dia exausto e já quase cochilei dirigindo.', semMudanca:'Acho que vou continuar dependente do remédio e correndo risco durante o dia.', comMudanca:'Eu acordaria com mais energia e teria menos medo de dirigir cansado.', importancia:'É 9 de 10.', razoes:'Porque a sonolência já está colocando minha segurança em risco.', confianca:'Minha confiança está em 6 de 10.', subirConfianca:'Começar por uma regra simples e acompanhar num diário ajudaria.', primeiroPasso:'Posso deixar o celular fora da cama e encurtar o cochilo a partir de hoje.', barreiras:'A ansiedade na hora de deitar e o cansaço da tarde serão difíceis.', apoio:'Quem mora comigo pode me ajudar a manter o quarto sem celular.', retorno:'Quero voltar com o diário do sono para ajustar o plano.' }
   };
   const PSIQ_PADRAO = {
-    episodios:'Nunca tive um episódio exatamente igual e não fiz tratamento psiquiátrico antes.', mania:'Nunca tive fase de energia excessiva com pouca necessidade de sono.', substancias:'Não uso drogas; bebo apenas ocasionalmente.', internacao:'Nunca fui internado nem fiz tentativa de suicídio.', alucinacoes:'Não tenho ouvido nem visto coisas que outras pessoas não percebam.', delirios:'Não sinto que alguém queira me prejudicar ou esteja me observando.', pensamento:'Meus pensamentos parecem mais lentos quando estou mal.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não pensei em um método e não tenho um plano.', seguranca:'Podemos construir o plano e combinar quem procurar se eu piorar.'
+    episodios:'Nunca tive um episódio exatamente igual e não fiz tratamento psiquiátrico antes.', mania:'Nunca tive fase de energia excessiva com pouca necessidade de sono.', substancias:'Não uso drogas; bebo apenas ocasionalmente.', internacao:'Nunca fui internado nem fiz tentativa de suicídio.', alucinacoes:'Não tenho ouvido nem visto coisas que outras pessoas não percebam.', delirios:'Não sinto que alguém queira me prejudicar ou esteja me observando.', pensamento:'Meus pensamentos parecem mais lentos quando estou mal.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não pensei em um método e não tenho acesso preparado a algum meio.', intencao:'Não pretendo me machucar agora.', tentativa:'Nunca tentei me machucar.', protecao:'Minha família e meus projetos ainda me ajudam a continuar.', seguranca:'Podemos construir o plano e combinar quem procurar se eu piorar.'
   };
   const PSIQ_CASOS = {
-    depressao:{ episodios:'Já passei por uma fase parecida, mas nunca tratei.', mania:'Nunca tive fase de energia excessiva ou de precisar dormir pouco.', substancias:'Às vezes bebo para tentar dormir; não uso outras drogas.', internacao:'Nunca fui internada nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que outras pessoas não veem.', delirios:'Não acho que estejam me perseguindo.', pensamento:'Meus pensamentos estão lentos e cheios de culpa.', ideacao:'Já pensei que seria melhor sumir ou não acordar.', plano:'Não pensei em como e não me preparei.', seguranca:'Consigo construir o plano e chamar minha irmã se esses pensamentos aumentarem.' },
-    ansiedade:{ episodios:'Já tive crises menores antes, mas ficaram frequentes agora.', mania:'Nunca tive períodos de energia excessiva ou de dormir pouco sem cansaço.', substancias:'Tomo muito café e pré-treino; bebo às vezes para relaxar.', internacao:'Nunca fui internado nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que os outros não veem.', delirios:'Não me sinto perseguido; tenho medo de haver algo errado com meu coração.', pensamento:'Meus pensamentos ficam acelerados, principalmente antes de outra crise.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não tenho plano nem acesso preparado a algum meio.', seguranca:'Podemos combinar o que fazer nas crises e quem procurar se eu me sentir em risco.' },
-    alcool:{ episodios:'O uso foi aumentando aos poucos; ainda não fiz tratamento.', mania:'Não tive fase de energia excessiva sem precisar dormir.', substancias:'Bebo todos os dias e também fumo; não uso outras drogas.', internacao:'Nunca fui internado nem fiz tentativa de suicídio.', alucinacoes:'Só tive impressão estranha quando fiquei muito tempo sem beber; agora não estou ouvindo nada.', delirios:'Não sinto que estejam me perseguindo.', pensamento:'Meu pensamento fica ansioso quando começo a tremer sem bebida.', ideacao:'Às vezes fico desesperançoso, mas hoje não estou pensando em me matar.', plano:'Não tenho plano nem meio preparado.', seguranca:'Aceito montar um plano e procurar ajuda antes de tentar parar sozinho.' },
-    insonia:{ episodios:'Isso começou há seis meses; antes eu dormia normalmente.', mania:'Não fico cheio de energia com pouco sono; no dia seguinte estou exausto.', substancias:'Tomo muito café e uso clonazepam; não uso drogas.', internacao:'Nunca fui internado nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que outros não percebam.', delirios:'Não me sinto perseguido ou observado.', pensamento:'Os pensamentos aceleram quando deito e começo a me preocupar com o sono.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não tenho plano de me ferir.', seguranca:'Podemos combinar um plano e procurar ajuda se meu humor ou segurança piorarem.' },
-    'risco-suicidio':{ episodios:'Já passei por uma crise e fiz uma tentativa há dois anos.', mania:'Nunca tive fase de energia excessiva ou de dormir pouco sem cansaço.', substancias:'Tenho bebido mais desde que perdi o emprego.', internacao:'Fui atendido depois da tentativa anterior, mas não mantive acompanhamento.', alucinacoes:'Não ouço vozes nem vejo coisas que outras pessoas não percebam.', delirios:'Não sinto que alguém queira me prejudicar.', pensamento:'Meu pensamento fica preso na ideia de que não há saída.', ideacao:'Tenho pensado em me matar quase todos os dias, e ficou mais forte nesta semana.', plano:'Pensei em usar os remédios da minha mãe e sei onde eles ficam.', seguranca:'Acho que consigo fazer o plano com você, chamar meu amigo e não ficar sozinho agora.' }
+    depressao:{ episodios:'Já passei por uma fase parecida, mas nunca tratei.', mania:'Nunca tive fase de energia excessiva ou de precisar dormir pouco.', substancias:'Às vezes bebo para tentar dormir; não uso outras drogas.', internacao:'Nunca fui internada nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que outras pessoas não veem.', delirios:'Não acho que estejam me perseguindo.', pensamento:'Meus pensamentos estão lentos e cheios de culpa.', ideacao:'Já pensei que seria melhor sumir ou não acordar.', plano:'Não pensei em como e não me preparei.', intencao:'Não pretendo fazer nada contra mim agora.', tentativa:'Nunca tentei me machucar.', protecao:'Minha irmã e uma amiga me ajudam a continuar.', seguranca:'Consigo construir o plano e chamar minha irmã se esses pensamentos aumentarem.' },
+    ansiedade:{ episodios:'Já tive crises menores antes, mas ficaram frequentes agora.', mania:'Nunca tive períodos de energia excessiva ou de dormir pouco sem cansaço.', substancias:'Tomo muito café e pré-treino; bebo às vezes para relaxar.', internacao:'Nunca fui internado nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que os outros não veem.', delirios:'Não me sinto perseguido; tenho medo de haver algo errado com meu coração.', pensamento:'Meus pensamentos ficam acelerados, principalmente antes de outra crise.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não tenho plano nem acesso preparado a algum meio.', intencao:'Não pretendo me machucar agora.', tentativa:'Nunca tentei me machucar.', protecao:'Minha família e a vontade de voltar à minha rotina me ajudam.', seguranca:'Podemos combinar o que fazer nas crises e quem procurar se eu me sentir em risco.' },
+    alcool:{ episodios:'O uso foi aumentando aos poucos; ainda não fiz tratamento.', mania:'Não tive fase de energia excessiva sem precisar dormir.', substancias:'Bebo todos os dias e também fumo; não uso outras drogas.', internacao:'Nunca fui internado nem fiz tentativa de suicídio.', alucinacoes:'Só tive impressão estranha quando fiquei muito tempo sem beber; agora não estou ouvindo nada.', delirios:'Não sinto que estejam me perseguindo.', pensamento:'Meu pensamento fica ansioso quando começo a tremer sem bebida.', ideacao:'Às vezes fico desesperançoso, mas hoje não estou pensando em me matar.', plano:'Não tenho plano nem meio preparado.', intencao:'Não pretendo me machucar agora.', tentativa:'Nunca tentei me machucar.', protecao:'Minha esposa, meus filhos e o trabalho ainda são importantes para mim.', seguranca:'Aceito montar um plano e procurar ajuda antes de tentar parar sozinho.' },
+    insonia:{ episodios:'Isso começou há seis meses; antes eu dormia normalmente.', mania:'Não fico cheio de energia com pouco sono; no dia seguinte estou exausto.', substancias:'Tomo muito café e uso clonazepam; não uso drogas.', internacao:'Nunca fui internado nem tentei suicídio.', alucinacoes:'Não ouço vozes nem vejo coisas que outros não percebam.', delirios:'Não me sinto perseguido ou observado.', pensamento:'Os pensamentos aceleram quando deito e começo a me preocupar com o sono.', ideacao:'Não tenho pensado em morrer nem em me machucar.', plano:'Não tenho plano de me ferir.', intencao:'Não pretendo me machucar agora.', tentativa:'Nunca tentei me machucar.', protecao:'Minha família e a vontade de voltar a dormir e trabalhar bem me ajudam.', seguranca:'Podemos combinar um plano e procurar ajuda se meu humor ou segurança piorarem.' },
+    'risco-suicidio':{ episodios:'Já passei por uma crise e fiz uma tentativa há dois anos.', mania:'Nunca tive fase de energia excessiva ou de dormir pouco sem cansaço.', substancias:'Tenho bebido mais desde que perdi o emprego.', internacao:'Fui atendido depois da tentativa anterior, mas não mantive acompanhamento.', alucinacoes:'Não ouço vozes nem vejo coisas que outras pessoas não percebam.', delirios:'Não sinto que alguém queira me prejudicar.', pensamento:'Meu pensamento fica preso na ideia de que não há saída.', ideacao:'Tenho pensado em me matar quase todos os dias, e ficou mais forte nesta semana.', plano:'Pensei em usar os remédios da minha mãe e sei onde eles ficam.', intencao:'Hoje tenho medo de perder o controle e fazer isso nas próximas horas.', tentativa:'Tentei uma vez há dois anos e fui levado ao atendimento.', protecao:'Minha irmã mais nova e meu amigo ainda me fazem hesitar e pedir ajuda.', seguranca:'Acho que consigo fazer o plano com você, chamar meu amigo e não ficar sozinho agora.' }
   };
 
   /* ================================= EVENTOS ================================= */
@@ -1054,7 +1208,7 @@
       if(quem === 'medico'){
         marcarPerguntaFeita(s, texto);
         const d = doenca(s.doencaId);
-        const resposta = respostaParaTexto(d, metodo(s.metodoId), texto, s.paciente);
+        const resposta = respostaParaTexto(d, metodo(s.metodoId), texto, s.paciente, s.dialogo.slice(0, -1));
         // A resposta já entra na conversa e é salva; a animação é só de exibição.
         s.dialogo.push({ quem:'paciente', texto: resposta });
         animarIndice = s.dialogo.length - 1;

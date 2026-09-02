@@ -22,7 +22,7 @@ vm.runInContext(fs.readFileSync(path.join(root, 'assets/consulta-doencas.js'), '
 let clinicalSource = fs.readFileSync(path.join(root, 'assets/consulta-clinica.js'), 'utf8');
 clinicalSource = clinicalSource.replace(
   'window.ConsultaClinica = { mount, defaultState, METODOS };',
-  'window.ConsultaClinica = { mount, defaultState, METODOS, __test:{ respostaParaTexto, metodo, doenca, resolveMarca, perguntasDaDoenca, ehItemChecklist, doencaCompativelComMetodo } };'
+  'window.ConsultaClinica = { mount, defaultState, METODOS, __test:{ respostaParaTexto, metodo, doenca, resolveMarca, perguntasDaDoenca, ehItemChecklist, doencaCompativelComMetodo, GUIAS_PRATICOS } };'
 );
 vm.runInContext(clinicalSource, context);
 
@@ -131,4 +131,42 @@ test('paciente virtual informa nome e idade definidos na sessão', () => {
   const patient = { nome:'Dona Marlene', idade:'67' };
   assert.match(api.__test.respostaParaTexto(disease, mccp, 'Como você se chama?', patient), /Dona Marlene/);
   assert.match(api.__test.respostaParaTexto(disease, mccp, 'Quantos anos você tem?', patient), /67 anos/);
+});
+
+test('todos os métodos possuem guia prático com frases e armadilhas', () => {
+  for(const method of api.METODOS){
+    const guide = api.__test.GUIAS_PRATICOS[method.id];
+    assert.ok(guide?.prova, `${method.id} sem objetivo de prova`);
+    assert.ok(guide.frases.length >= 3, `${method.id} com poucas frases práticas`);
+    assert.ok(guide.erros.length >= 2, `${method.id} sem armadilhas suficientes`);
+  }
+});
+
+test('frases interativas dos guias recebem resposta sem cair no fallback', () => {
+  const fallbacks = /não entendi|pode repetir|não sei responder|não sei dizer|nunca prestei atenção/i;
+  for(const method of api.METODOS){
+    const disease = diseases.find(item => api.__test.doencaCompativelComMetodo(item, method.id));
+    for(const phrase of api.__test.GUIAS_PRATICOS[method.id].frases.filter(item => item.resposta)){
+      const answer = api.__test.respostaParaTexto(disease, method, phrase.texto);
+      assert.ok(answer && !fallbacks.test(answer), `${method.id} não respondeu à frase: ${phrase.texto}`);
+    }
+  }
+});
+
+test('pergunta curta de seguimento preserva o contexto da fala anterior', () => {
+  const disease = diseases.find(item => item.id === 'tabagismo');
+  const method = api.METODOS.find(item => item.id === 'anamnese');
+  const history = [{ quem:'medico', texto:'Você fuma cigarro?' }, { quem:'paciente', texto:'Fumo, sim.' }];
+  const answer = api.__test.respostaParaTexto(disease, method, 'E há quanto tempo?', null, history);
+  assert.match(answer, /25 anos/i);
+});
+
+test('entrevista psiquiátrica coloca perguntas de suicídio na etapa de risco', () => {
+  const disease = diseases.find(item => item.id === 'depressao');
+  const method = api.METODOS.find(item => item.id === 'psiquiatrica');
+  const historyQuestions = api.__test.perguntasDaDoenca(disease, method, method.etapas[0]);
+  const riskQuestions = api.__test.perguntasDaDoenca(disease, method, method.etapas[2]);
+  assert.ok(historyQuestions.every(item => !/sumir|morrer|machucar|tentou/i.test(item)));
+  assert.ok(riskQuestions.some(item => /sumir|morrer|machucar|tentou/i.test(item)));
+  assert.match(api.__test.resolveMarca(diseases.find(item => item.id === 'risco-suicidio'), '@psiq.intencao'), /próximas horas|proximas horas|perder o controle/i);
 });
