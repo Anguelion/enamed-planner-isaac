@@ -1093,14 +1093,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Marcha instável, formigamento, palidez com icterícia leve, dificuldade de memória, anemia macrocítica com neutrófilos hipersegmentados e plaquetas baixas — quadro clássico de anemia megaloblástica por falta de vitamina B12, precisando de avaliação nutricional pra entender a causa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967793",
-      "ankiGuid": "b-TS1iLPf*"
+      "ankiGuid": "b-TS1iLPf*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
+        "sourceQuestionId": "4000114661",
+        "matchedAt": "2026-09-02T11:25:31.082Z",
+        "confidence": 0.94
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-a5503c12b4fcd8b1",
@@ -1127,14 +1145,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, formigamento nas pernas, histórico de vitiligo (uma doença autoimune, que costuma vir 'em grupo' com outras doenças autoimunes, incluindo a anemia perniciosa), anemia macrocítica grave e LDH extremamente alto (12900!) — tudo aponta pra deficiência de vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967794",
-      "ankiGuid": "J=t@l],[q)"
+      "ankiGuid": "J=t@l],[q)",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-63-anos-vem-a1053cce27be/",
+        "sourceQuestionId": "4000113056",
+        "matchedAt": "2026-09-02T11:25:37.896Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-665ea75838ead27f",
@@ -1161,14 +1197,31 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idoso com anemia macrocítica, leucócitos e plaquetas baixos (pancitopenia), reticulócitos baixos e formigamento nas pernas — quadro clássico de deficiência combinada, tratado preferencialmente com hidroxicobalamina (vitamina B12) e ácido fólico juntos, já que ambas as deficiências podem coexistir e causar sintomas parecidos.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967795",
-      "ankiGuid": "k;@_,wwTOr"
+      "ankiGuid": "k;@_,wwTOr",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-88-anos-com29b5d64b92/",
+        "sourceQuestionId": "4000112855",
+        "matchedAt": "2026-09-02T11:25:43.861Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d519f109b93bb3b0",
@@ -1195,14 +1248,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, falta de ar, formigamento nos pés, perda de peso, língua lisa (glossite atrófica), anemia grave macrocítica com neutrófilos hipersegmentados e plaquetas baixas — a deficiência de vitamina B12 é uma das causas mais comuns e prováveis desse tipo de anemia.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967796",
-      "ankiGuid": "fV,ivzNh6~"
+      "ankiGuid": "fV,ivzNh6~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-42-anos-branca99504422a1/",
+        "sourceQuestionId": "4000112309",
+        "matchedAt": "2026-09-02T11:25:50.345Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-8dd2eb16af0ef6fe",
@@ -1228,14 +1296,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança usando dois remédios anticonvulsivantes (valproato e difenilhidantoína) há anos — ambos conhecidos por atrapalhar o metabolismo do ácido fólico a longo prazo, causando anemia megaloblástica, explicando o VCM bem alto (acima de 120).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico",
+        "Distúrbios de absorção do ácido fólico",
+        "Anticonvulsivantes",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967797",
-      "ankiGuid": "rk>l+ukcMY"
+      "ankiGuid": "rk>l+ukcMY",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-sete-anos690fca9f11/",
+        "sourceQuestionId": "4000083899",
+        "matchedAt": "2026-09-02T11:25:56.270Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-c4d4e81377cfef61",
@@ -2478,14 +2559,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fadiga progressiva numa mulher jovem, com anemia macrocítica (VCM 106) e neutrófilos hipersegmentados no esfregaço — o melhor exame pra elucidar a causa é dosar a vitamina B12, uma das principais suspeitas nesse padrão de anemia.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967825",
-      "ankiGuid": "GL$*um|?Pl"
+      "ankiGuid": "GL$*um|?Pl",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+        "sourceQuestionId": "4000062047",
+        "matchedAt": "2026-08-29T20:59:01.377Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-56047629c7f36db5",
@@ -2512,14 +2608,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia perniciosa, esperamos neutrófilos hipersegmentados, glossite, declínio cognitivo e um LDH bem elevado (pela destruição das células dentro da medula) — mas as plaquetas costumam ficar baixas, não altas. Por isso trombocitose é a exceção que NÃO combina com essa doença.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967826",
-      "ankiGuid": "Mm+!eN6kj{"
+      "ankiGuid": "Mm+!eN6kj{",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alteracoes-clinico1349a9c65f/",
+        "sourceQuestionId": "4000043306",
+        "matchedAt": "2026-08-29T20:59:07.509Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d8a7e22069017c0d",
@@ -2546,14 +2655,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Formigamento, dificuldade de andar, língua lisa, queilite angular numa paciente com hipotireoidismo (que costuma vir 'em grupo' com outras doenças autoimunes, incluindo a anemia perniciosa) — o quadro esperado é anemia macrocítica, leucopenia com neutrófilos hipersegmentados, plaquetas levemente baixas, LDH elevado (pela pseudo-hemólise) e vitamina B12 baixa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967827",
-      "ankiGuid": "r`l-_zf&N9"
+      "ankiGuid": "r`l-_zf&N9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-4547a27a1f8c/",
+        "sourceQuestionId": "4000041857",
+        "matchedAt": "2026-08-29T20:59:13.850Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-253e9ee1d7792234",
@@ -2580,14 +2700,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sobre a anemia perniciosa: ela é realmente a causa mais comum de deficiência de vitamina B12 (frase I certa). Mas ela é mais comum DEPOIS dos 30-40 anos (não antes, como diz a frase II — errada). Os principais anticorpos envolvidos são mesmo contra as células parietais e o fator intrínseco (frase III certa). E, ao contrário da frase IV, existe sim uma associação conhecida com maior risco de câncer gástrico (frase IV errada, já que a gastrite atrófica crônica aumenta esse risco). Juntando: I e III estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967828",
-      "ankiGuid": "x17yIn,[Q."
+      "ankiGuid": "x17yIn,[Q.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino77990458ad/",
+        "sourceQuestionId": "4000001463",
+        "matchedAt": "2026-08-30T11:59:33.783Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d3db7f8a59354e48",
@@ -2614,14 +2747,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Neutrófilos hipersegmentados (com mais 'gomos' no núcleo do que o normal) são um achado que aponta bem diretamente pra deficiência de vitamina B12 ou de ácido fólico — é um dos sinais mais confiáveis pra suspeitar dessas duas deficiências no hemograma.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967829",
-      "ankiGuid": "K36CVdomy:"
+      "ankiGuid": "K36CVdomy:",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Com-as-anemias9fb43526f/",
+        "sourceQuestionId": "4000116545",
+        "matchedAt": "2026-08-30T11:59:40.214Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-ab1bb959ff32d9b9",
@@ -2648,14 +2790,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A anemia aplástica realmente tem medula pobre em células (hipocelular) e pancitopenia (V) — mas, diferente do que a segunda frase afirma, ela NÃO costuma vir com gânglios ou baço/fígado aumentados (F); se isso aparecer, pensa-se em outra doença, como leucemia. A terceira frase está certa: pode ser adquirida ou fazer parte de doenças genéticas desde o nascimento, como a anemia de Fanconi (V). Sequência: V/F/V.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas não megaloblásticas",
+        "Anemia aplásica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967830",
-      "ankiGuid": "rA~3aimr/9"
+      "ankiGuid": "rA~3aimr/9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-aplastica67c2959ed0/",
+        "sourceQuestionId": "4000115103",
+        "matchedAt": "2026-08-30T11:59:46.195Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-67b62d1e811fe3ab",
@@ -2682,14 +2835,30 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A doença de Crohn é a causa mais provável dessa lista, porque ela classicamente afeta o íleo terminal — justamente a parte do intestino onde a vitamina B12 é absorvida junto com o fator intrínseco. A retocolite ulcerativa, por afetar só o cólon (não o íleo), não costuma causar essa deficiência do mesmo jeito.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Gastroenterologia",
+        "Intestinos",
+        "Doença Inflamatória Intestinal",
+        "Manifestações Clínicas",
+        "Doença de Crohn",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967831",
-      "ankiGuid": "n/GEz-b;wB"
+      "ankiGuid": "n/GEz-b;wB",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-54-anos-e29bc8a580a/",
+        "sourceQuestionId": "4000110338",
+        "matchedAt": "2026-08-30T11:59:52.587Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-1fdf3a18a97cbc81",
@@ -2716,14 +2885,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase I está incorreta: apesar do emagrecimento e da anemia grave levantarem suspeita de câncer, o resto do quadro (formigamento nos pés, neutrófilos hipersegmentados, anemia bem macrocítica) já é bem clássico e suficiente pra apontar pra deficiência de vitamina B12 (frase III), sem precisar correr direto pra investigação de neoplasia e transfusão. As outras frases (aguardar transfusão em paciente estável, e usar a contagem de reticulócitos como ferramenta diagnóstica) fazem sentido nesse contexto.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Classificação funcional das anemias",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967832",
-      "ankiGuid": "Js{)erOlog"
+      "ankiGuid": "Js{)erOlog",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-40-anos184a2ea1084/",
+        "sourceQuestionId": "4000107943",
+        "matchedAt": "2026-08-30T11:59:58.415Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-5a753c970b0b2edc",
@@ -2750,14 +2934,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Uma pessoa saudável que fez dieta restritiva por conta própria durante só 4 meses e já desenvolveu anemia com hemácias grandes — esse tempo curto combina mais com falta de ácido fólico (estoques do corpo acabam rápido, em poucos meses) do que com falta de B12 (que demora anos pra esgotar, já que o corpo guarda bastante).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967833",
-      "ankiGuid": "ht:#nymAAf"
+      "ankiGuid": "ht:#nymAAf",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/homem-previamente49e8f81d44/",
+        "sourceQuestionId": "4000092963",
+        "matchedAt": "2026-08-30T12:00:04.976Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-516fc2922734f24a",
@@ -2784,14 +2980,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O Diphyllobothrium latum (a tênia do peixe) é o parasita clássico que causa deficiência de vitamina B12 — ele 'rouba' a vitamina direto no intestino do hospedeiro antes dela ser absorvida, principalmente em quem come peixe cru com frequência.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Infecção pela tênia do peixe - Diphyllobothrium latum",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967834",
-      "ankiGuid": "DB8Sfd9(vi"
+      "ankiGuid": "DB8Sfd9(vi",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-parasitas2037e68647/",
+        "sourceQuestionId": "4000091410",
+        "matchedAt": "2026-08-30T21:11:58.264Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-852ea2297754cf7c",
@@ -2818,14 +3027,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A ingestão de soda cáustica (um produto muito alcalino/corrosivo) pode danificar seriamente as células do estômago responsáveis por produzir o fator intrínseco, necessário pra absorver vitamina B12 — explicando, um ano depois, o cansaço e a palidez dessa jovem por deficiência dessa vitamina.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967835",
-      "ankiGuid": "G)JM[gK?Y7"
+      "ankiGuid": "G)JM[gK?Y7",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-17-anos45f9757adc/",
+        "sourceQuestionId": "4000088445",
+        "matchedAt": "2026-08-30T21:12:04.144Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-8b545f3fbe31defb",
@@ -2852,14 +3073,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse menino tem um conjunto de características bem específicas: rosto triangular, mancha café com leite, deformidade no polegar, malformação renal e testicular — tudo isso, junto com a anemia grave macrocítica e pancitopenia (mas com B12 normal, descartando falta de vitamina), aponta pra anemia de Fanconi, uma doença genética rara que combina malformações físicas com falência da medula óssea.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas não megaloblásticas",
+        "Anemia aplásica",
+        "Falências medulares congênitas",
+        "Anemia da Fanconi",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967836",
-      "ankiGuid": "cp&ikmitKN"
+      "ankiGuid": "cp&ikmitKN",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-quatro-anos-foi91408e20bc/",
+        "sourceQuestionId": "4000082742",
+        "matchedAt": "2026-08-30T21:12:09.862Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-29c1a6675cda871f",
@@ -2886,14 +3120,31 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na atrofia da mucosa do estômago (que causa a anemia perniciosa), esperamos LDH alta, leucopenia, plaquetopenia e homocisteína elevada (todos ligados à falta de B12). Mas a gastrina, ao contrário do que diz a alternativa, costuma ficar ALTA (não baixa) — porque, sem ácido sendo produzido pelo estômago doente, o corpo perde o 'freio' natural que controlaria a produção de gastrina, deixando-a elevada.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967837",
-      "ankiGuid": "s23u(yOwbr"
+      "ankiGuid": "s23u(yOwbr",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-F-R-L494abc9e27/",
+        "sourceQuestionId": "4000081346",
+        "matchedAt": "2026-08-30T21:12:16.301Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-aabb4fd5d7a3b8d2",
@@ -2919,14 +3170,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anticorpos contra a bomba de prótons do estômago, gastropatia diabética e ingestão de substâncias corrosivas podem, de formas diferentes, atrapalhar a absorção de B12 e causar anemia megaloblástica. Já o hipertireoidismo não é uma causa reconhecida dessa anemia — por isso é a exceção certa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967838",
-      "ankiGuid": "s.<rI8/3YF"
+      "ankiGuid": "s.<rI8/3YF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-varios-fatores186eee9116/",
+        "sourceQuestionId": "4000059896",
+        "matchedAt": "2026-08-30T21:12:21.969Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-85158a9a09dcaefa",
@@ -2953,14 +3215,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Antrectomia (retirada de parte do estômago), uso crônico de omeprazol, metformina, e a síndrome de alça cega (onde bactérias em excesso 'roubam' a B12 no intestino) são causas conhecidas de deficiência dessa vitamina. Já o metotrexato é um remédio que bloqueia o ÁCIDO FÓLICO, não a vitamina B12 — por isso não está relacionado a essa deficiência específica.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967839",
-      "ankiGuid": "rAdb|V]]#x"
+      "ankiGuid": "rAdb|V]]#x",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-esta-sendo34e6997e2e/",
+        "sourceQuestionId": "4000043919",
+        "matchedAt": "2026-08-30T21:12:27.844Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-24c07b1c3a70bbcb",
@@ -2986,14 +3259,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Formigamento leve, dificuldade de andar, palidez com icterícia leve, anemia macrocítica (VCM 113) e Coombs NEGATIVO (descartando hemólise autoimune de verdade) — o padrão de 'pseudo-hemólise' sem anticorpos aponta pra deficiência de cobalamina (vitamina B12).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967840",
-      "ankiGuid": "oi5|g|TR-V"
+      "ankiGuid": "oi5|g|TR-V",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-53-anos-vem528ae3500b/",
+        "sourceQuestionId": "4000038032",
+        "matchedAt": "2026-08-31T14:00:27.165Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-8153c94ae74e42ba",
@@ -3020,14 +3304,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a A: a esplenomegalia (baço aumentado) NÃO é um achado comum na anemia aplástica — se aparecer, é sinal de que pode ser outra doença (como leucemia), não aplasia de verdade. A reticulocitopenia (reticulócitos baixos) sim é esperada, mas junto com o baço normal. As outras frases (pancitopenia apesar do nome, mecanismo autoimune mediado por células T, transplante como escolha em jovens com doador, e imunossupressão nos mais velhos) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas não megaloblásticas",
+        "Anemia aplásica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967841",
-      "ankiGuid": "xR2WTkC;R4"
+      "ankiGuid": "xR2WTkC;R4",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-aplasica-e7391fd394/",
+        "sourceQuestionId": "4000025905",
+        "matchedAt": "2026-08-31T14:00:33.564Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-4f848b2cc4c539fd",
@@ -3053,14 +3348,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vitiligo, tireoidite de Hashimoto e doença de Addison são todas doenças autoimunes — e é bem comum que elas 'andem juntas' com outra doença autoimune: a anemia perniciosa (falta de B12). Formigamento, perda de sensibilidade e início de demência, com anemia macrocítica, completam esse quadro clássico de deficiência de B12 associada a uma síndrome poliautoimune.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967842",
-      "ankiGuid": "hD8n|#SH8D"
+      "ankiGuid": "hD8n|#SH8D",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-idade71337d6da7/",
+        "sourceQuestionId": "4000116709",
+        "matchedAt": "2026-08-31T14:00:39.731Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-853743e94a460198",
@@ -3087,14 +3396,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesmo com o hipotireoidismo bem controlado (TSH e T4 normais), essa senhora desenvolveu uma anemia grave macrocítica com pancitopenia e sinais de 'pseudo-hemólise' (LDH e bilirrubina indireta altos) — como o hipotireoidismo e a anemia perniciosa costumam andar juntos (ambas doenças autoimunes), o achado esperado no esfregaço são neutrófilos hiperlobulados (hipersegmentados), a marca da deficiência de B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967843",
-      "ankiGuid": "AFP1Y=1Y@s"
+      "ankiGuid": "AFP1Y=1Y@s",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-65-anos869c23007e/",
+        "sourceQuestionId": "4000114536",
+        "matchedAt": "2026-08-31T14:00:46.237Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-4454afbee322d842",
@@ -3121,7 +3445,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de uma cirurgia com retirada do íleo terminal (justamente onde a vitamina B12 é absorvida), formigamento nos pés e anemia macrocítica com neutrófilos hipersegmentados — deficiência de vitamina B12 confirmada. Como a via de absorção intestinal está comprometida, o tratamento precisa ser por injeção (via parenteral).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3155,14 +3479,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As três frases estão certas: a anemia perniciosa realmente é causada pela falta do fator intrínseco (produzido no estômago), que impede a absorção da B12 (frase I); ela costuma vir acompanhada de outras doenças autoimunes, como as da tireoide (frase II); e a destruição das células defeituosas acontece DENTRO da própria medula óssea, causando aumento de LDH e bilirrubina indireta, mesmo sem uma hemólise 'de verdade' no sangue circulante (frase III).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967845",
-      "ankiGuid": "i?D8v@vm?B"
+      "ankiGuid": "i?D8v@vm?B",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-consulta1060581bbfc/",
+        "sourceQuestionId": "4000086474",
+        "matchedAt": "2026-08-31T14:00:58.791Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-37dcf3ff9e80ecac",
@@ -3189,14 +3527,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A insuficiência pancreática (que atrapalha a liberação da B12 das proteínas que a carregam no intestino) e a gastrectomia total (que remove a fonte do fator intrínseco) são causas reconhecidas de deficiência de vitamina B12. Já a teleangectasia hemorrágica hereditária causa sangramentos que levam à falta de FERRO, e a gravidez está mais ligada à falta de ácido fólico — por isso apenas I e II se encaixam.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967846",
-      "ankiGuid": "d|.IB[(IC]"
+      "ankiGuid": "d|.IB[(IC]",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Podemos-encontrar2523ece86e/",
+        "sourceQuestionId": "4000057972",
+        "matchedAt": "2026-08-31T22:54:22.560Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-64f8bbb49b0020e1",
@@ -3223,14 +3572,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase I está certa: dosar ácido metilmalônico, homocisteína, B12 e folato ajuda bastante na investigação dessa anemia. A frase II está errada: hemotransfusão e reposição de FERRO não fazem sentido aqui (não é falta de ferro!). A frase III está certa: repor só ácido fólico, sem tratar a falta de B12 junto, pode até piorar os sintomas neurológicos — um fenômeno bem conhecido chamado de 'armadilha do folato'. Corretas: I e III.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Diagnóstico da anemia megaloblástica",
+        "Homocisteína e ácido metilmalônico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967847",
-      "ankiGuid": "s^/!5D)^^T"
+      "ankiGuid": "s^/!5D)^^T",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina108ff3307b9/",
+        "sourceQuestionId": "4000045252",
+        "matchedAt": "2026-08-31T22:54:28.631Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-a03dbb6c613d8377",
@@ -3257,14 +3619,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sensação de queimação nos pés (parestesia) e anemia com VCM alto numa mulher de 57 anos — entre as opções, a falta do fator intrínseco (causando deficiência de B12) é a causa mais provável desse tipo de anemia macrocítica com sintomas neurológicos.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967848",
-      "ankiGuid": "e39!jScs&&"
+      "ankiGuid": "e39!jScs&&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-57-anos-chega465c0f30a3/",
+        "sourceQuestionId": "4000029896",
+        "matchedAt": "2026-08-31T22:54:34.462Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-4296bfe9365f9b93",
@@ -3290,14 +3663,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O uso de hidroxiureia (um quimioterápico), a gravidez e o hipotireoidismo são causas reconhecidas de macrocitose que não têm nada a ver com falta de B12 ou folato — mostrando que existem várias causas diferentes pra hemácias grandes, além das deficiências vitamínicas clássicas.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967849",
-      "ankiGuid": "t7/S,_JCS&"
+      "ankiGuid": "t7/S,_JCS&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/macrocitose74ef32cab/",
+        "sourceQuestionId": "4000016078",
+        "matchedAt": "2026-08-31T22:54:40.998Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-63bbff8570b36606",
@@ -3324,14 +3706,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Formigamento nas pernas há um ano, agora parou de andar, com anemia macrocítica (VCM 110), neutrófilos hipersegmentados e anticorpos contra as células do estômago (anti-célula parietal) — é o retrato clássico da anemia perniciosa, a forma autoimune da deficiência de vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967850",
-      "ankiGuid": "x2_dAk@Tgf"
+      "ankiGuid": "x2_dAk@Tgf",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/",
+        "sourceQuestionId": "4000013566",
+        "matchedAt": "2026-08-31T22:54:46.898Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-ead8fe78a09891e8",
@@ -3358,14 +3758,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço aos esforços e formigamento nas pontas dos dedos das mãos e pés — sintomas bem sugestivos de deficiência de vitamina B12, que causa anemia macrocítica com o achado clássico de neutrófilos hipersegmentados no esfregaço de sangue.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967851",
-      "ankiGuid": "c`{H(z6&^s"
+      "ankiGuid": "c`{H(z6&^s",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-60-anos394ef0fa50/",
+        "sourceQuestionId": "4000105079",
+        "matchedAt": "2026-08-31T22:54:53.381Z",
+        "confidence": 0.9695652173913043
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-2aeeab16e5a38775",
@@ -3391,14 +3802,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Grávida com histórico de cirurgia bariátrica (que atrapalha a absorção de várias vitaminas, incluindo B12), já tomando ferro sem melhora completa, com anemia macrocítica (VCM 110) e neutrófilos hipersegmentados — a causa dessa anemia é a deficiência de cobalamina (vitamina B12), não relacionada ao ferro que já está sendo reposto.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Gastrectomias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967852",
-      "ankiGuid": "J_}{l41RF"
+      "ankiGuid": "J_}{l41RF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+        "sourceQuestionId": "4000098143",
+        "matchedAt": "2026-09-01T11:44:38.086Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-eccb94b6f7729319",
@@ -3425,7 +3854,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia hemolítica (pela reticulocitose compensatória, que aumenta o VCM médio), síndrome mielodisplásica, uso de álcool em excesso e uso de hidroxiureia são todas causas reconhecidas de macrocitose. Já a anemia de doença crônica costuma ser NORMOCÍTICA, não macrocítica — por isso é a que não se encaixa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3459,14 +3888,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Doenças que afetam o íleo (onde a B12 é absorvida), cirurgias que retiram o estômago, dieta vegetariana rigorosa e alcoolismo/remédios anticonvulsivantes são todas causas reconhecidas de anemia macrocítica (às vezes com componente hipocrômico misto, se houver deficiência combinada de ferro). Já as talassemias causam anemia MICROcítica (hemácias pequenas), o oposto do que é descrito aqui — por isso não se encaixam nessa lista.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967854",
-      "ankiGuid": "oE4/L+N%k`"
+      "ankiGuid": "oE4/L+N%k`",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-apresenta211c51d6e5/",
+        "sourceQuestionId": "4000042980",
+        "matchedAt": "2026-09-01T11:44:49.586Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-5ecb469f8f936b30",
@@ -3493,7 +3931,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idosa com hipotireoidismo já controlado (TSH normal), formigamento, tontura, anemia macrocítica grave com pancitopenia e LDH bem elevado, além de gastrite atrófica confirmada na endoscopia — quadro clássico de anemia perniciosa, associada ao hipotireoidismo (ambas doenças autoimunes que costumam andar juntas).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3526,7 +3964,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O metotrexato é um remédio que bloqueia diretamente o metabolismo do ácido fólico no corpo — por isso é uma causa bem conhecida de deficiência dessa vitamina, diferente das outras opções, que estão mais ligadas à falta de vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3560,7 +3998,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, dificuldade de andar, língua lisa, sinal de Romberg positivo (mostrando dano nos nervos da propriocepção), anemia macrocítica grave com neutrófilos hipersegmentados, LDH bem alto e bilirrubina indireta elevada — tudo aponta pra deficiência de vitamina B12, com o padrão clássico de 'pseudo-hemólise'.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
@@ -3797,14 +4235,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza progressiva, tonturas, quedas, formigamento nas pernas, icterícia leve, taquicardia, anemia grave macrocítica com pancitopenia, reticulócitos baixos e LDH bem alto — quadro bem sugestivo de deficiência de vitamina B12. Os exames certos pra confirmar são a dosagem de B12 e homocisteína, seguidos de endoscopia digestiva alta (pra investigar gastrite atrófica como causa).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967864",
-      "ankiGuid": "Jlh`.,|w?`"
+      "ankiGuid": "Jlh`.,|w?`",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino783d769e17/",
+        "sourceQuestionId": "4000040240",
+        "matchedAt": "2026-09-02T11:26:02.817Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-9d26925d87e86df6",
