@@ -7,6 +7,47 @@
 (function(){
   const D = [];
   const add = (item) => D.push(item);
+  const casoSpikes = (c) => ({
+    cenario:c.cenario,
+    noticia:c.noticia,
+    estrategia:c.estrategia || [],
+    armadilhas:c.armadilhas || ['Usar jargão ou entregar muitos dados de uma vez.','Dar prazo exato de vida ou retirar toda esperança.','Ir ao plano antes de reconhecer a reação emocional.'],
+    privacidade:c.privacidade || 'Aqui está reservado e confortável para mim.',
+    acompanhante:c.acompanhante || `Quero ${c.apoio||'uma pessoa da minha família'} comigo, por favor.`,
+    tempo:c.tempo || 'Podemos conversar agora. Prefiro que seja com calma.',
+    conforto:c.conforto || 'Estou confortável. Pode se sentar aqui perto.',
+    percepcao:c.percepcao,
+    mudanca:c.mudanca,
+    expectativaExame:c.expectativaExame,
+    objetivoTratamento:c.objetivoTratamento,
+    convite:c.convite || 'Quero saber o que está acontecendo, pode me contar.',
+    detalhes:c.detalhes || 'Quero os detalhes importantes, mas explique sem termos difíceis.',
+    prognostico:c.prognostico || 'Quero saber o que esperar do futuro, mesmo que seja difícil.',
+    compartilhamento:c.compartilhamento || `Pode falar também com ${c.apoio||'minha família'}, mas quero participar das decisões.`,
+    reacaoAviso:c.reacaoAviso || 'Está bem… pode falar.',
+    reacaoNoticia:c.reacaoNoticia,
+    compreensao:c.compreensao,
+    maisDetalhes:c.maisDetalhes || 'Pode continuar, mas vá aos poucos.',
+    emocao:c.emocao,
+    validacao:c.validacao || 'Obrigado por reconhecer. Está sendo muito difícil ouvir isso.',
+    pausa:c.pausa || 'Preciso de um minuto, por favor.',
+    pensamento:c.pensamento,
+    medo:c.medo,
+    prioridade:c.prioridade,
+    opcoes:c.opcoes || 'Pode explicar as opções. Quero decidir junto com vocês.',
+    naoAbandono:c.naoAbandono || 'Saber que vocês continuarão cuidando de mim me deixa mais seguro.',
+    plano:c.plano,
+    resumo:c.resumo,
+    duvidas:c.duvidas,
+    falas:{
+      sp1:[{ pergunta:`Para conversarmos sobre ${c.assunto}, você quer ${c.apoioPergunta||String(c.apoio||'alguém de sua confiança').replace(/^minha\b/,'sua').replace(/^meu\b/,'seu').replace(/^meus\b/,'seus').replace(/^minhas\b/,'suas')} presente?`, resposta:c.acompanhante || `Quero ${c.apoio||'uma pessoa da minha família'} comigo, por favor.` }],
+      sp2:[{ pergunta:c.perguntaPercepcao, resposta:c.percepcao }],
+      sp3:[{ pergunta:`Você quer que eu explique o que a evolução de ${c.assunto} significa, inclusive para o futuro?`, resposta:c.prognostico || 'Quero saber o que esperar, mesmo que seja difícil.' }],
+      sp4:[{ pergunta:c.noticia, resposta:c.reacaoNoticia },{ pergunta:'Com suas palavras, o que essa notícia significa para você?', resposta:c.compreensao }],
+      sp5:[{ pergunta:c.perguntaEmocao || `O que mais preocupa você ao ouvir essa notícia sobre ${c.assunto}?`, resposta:c.medo }],
+      sp6:[{ pergunta:c.perguntaPrioridade || 'Diante dessa mudança, o que mais importa para você agora?', resposta:c.prioridade },{ pergunta:c.perguntaPlano || 'Vamos combinar o próximo passo e quando voltaremos a conversar?', resposta:c.plano }]
+    }
+  });
 
   /* ============================ CARDIOVASCULAR ============================ */
   add({ id:'has', nome:'Hipertensão arterial sistêmica', area:'Cardiologia', queixa:'Pressão alta detectada em aferição de rotina',
@@ -618,7 +659,143 @@
     hipoteses:['Doença avançada com necessidades paliativas; sintomas físicos, psíquicos, sociais e espirituais'],
     conduta:['Usar SPIKES para comunicar; alinhar informação ao desejo da pessoa','Nunca mentir; respeitar a autonomia sobre "conspiração do silêncio", acolhendo a família','Controle de sintomas: opioide para dor/dispneia sem medo de titular','Definir objetivos de cuidado e diretivas antecipadas de vontade','Cuidar da família e do cuidador; equipe multiprofissional','Planejar cuidado no domicílio e sinais de agravamento'],
     achados:['"Sei que é um câncer, mas ninguém me falou se tem cura."','"Quero saber tudo, com minha esposa junto."','"Tenho medo de sentir dor."','"Quero ficar em casa, perto dos meus netos."','"Não quero ficar ligado em aparelho."','"A dor é 7 agora, chega a 9 à noite."','"Tenho falta de ar quando ando."','"Não sinto fome e emagreci muito."','"Ando angustiado."','"Minha fé me ajuda muito."','"Minha esposa está exausta."','"Queria fazer as pazes com meu filho."'],
-    pontos:['Perguntar "o quanto você quer saber" resolve a maior parte dos dilemas','Opioide bem titulado não abrevia a vida','Cuidar do cuidador é parte do plano terapêutico'] });
+    pontos:['Perguntar "o quanto você quer saber" resolve a maior parte dos dilemas','Opioide bem titulado não abrevia a vida','Cuidar do cuidador é parte do plano terapêutico'],
+    spikes:casoSpikes({
+      assunto:'o câncer que voltou', apoio:'minha esposa',
+      cenario:'Homem de 68 anos com neoplasia metastática em progressão. A família pediu que o diagnóstico não fosse revelado, mas ele demonstra capacidade e pede informação completa.',
+      noticia:'Os exames mostram que o câncer voltou, espalhou-se e não responde mais ao tratamento com objetivo de cura.',
+      perguntaPercepcao:'O que você entendeu quando disseram que o câncer havia voltado e estava pior?',
+      percepcao:'Sei que voltou e que está pior, mas ninguém me disse claramente se ainda tem cura.', mudanca:'Estou mais fraco, emagreci e a dor piorou muito à noite.',
+      expectativaExame:'Eu esperava que os exames mostrassem que o tratamento tinha segurado a doença.', objetivoTratamento:'Eu achava que a quimioterapia ainda pudesse me curar.',
+      reacaoNoticia:'(fica em silêncio e segura a mão da esposa) Então não tem mais como curar?', compreensao:'Entendi que o câncer se espalhou e que o tratamento agora não consegue mais curá-lo.',
+      emocao:'Estou muito triste e com medo. Ainda não sei como contar aos meus filhos.', pensamento:'Penso na minha família e nas coisas que ainda preciso resolver.', medo:'Tenho medo de sentir dor e de deixar minha família desamparada.',
+      prioridade:'Quero controlar a dor, ficar em casa perto dos meus netos e fazer as pazes com meu filho.',
+      plano:'Quero conhecer a equipe de cuidados paliativos, ajustar a dor hoje e conversar de novo com minha esposa presente.',
+      resumo:'Entendi que o câncer avançou e não tem mais tratamento para cura, mas vocês vão cuidar dos sintomas e planejar comigo como quero viver esse tempo.',
+      duvidas:'Quanto tempo eu posso ter e como vocês vão controlar a dor e a falta de ar?',
+      estrategia:['Tratar dor e dispneia desde já; cuidados paliativos não dependem de suspender todo tratamento.','Discutir objetivos de cuidado e local preferido, sem impor decisões na primeira conversa.','Marcar novo encontro breve e incluir a esposa com autorização do paciente.']
+    }) });
+
+  add({ id:'ca-pulmao-avancado', nome:'Câncer de pulmão metastático em progressão', area:'Cuidados paliativos', queixa:'Progressão após tratamento e piora da falta de ar',
+    perfil:'Mulher, 62 anos, câncer de pulmão metastático com progressão pulmonar e óssea após duas linhas de tratamento.',
+    perguntas:['O que você sabe sobre o resultado da tomografia?','Como a falta de ar e a dor mudaram?','O que esperava deste tratamento?','Quem você quer nas decisões?','O que mais importa se o tempo for curto?','Onde prefere receber cuidados?'],
+    redflags:['Dispneia em repouso ou hemoptise','Dor óssea intensa com déficit neurológico','Confusão ou hipercalcemia','Sofrimento emocional intenso'],
+    exame:['SpO2, FR e esforço respiratório','Avaliação completa da dor','Performance status','Sinais de compressão medular e derrame pleural'],
+    hipoteses:['Progressão de câncer pulmonar metastático','Derrame pleural, tromboembolismo, pneumonia ou compressão medular como complicações'],
+    conduta:['Controle de dispneia e dor','Avaliar medidas oncológicas paliativas proporcionais','Cuidados paliativos especializados precoces','Planejamento antecipado de cuidados com a paciente'],
+    achados:['"Sei que a tomografia não veio boa."','"Fico sem ar até no banho e a dor nas costas aumentou."','"Esperava que a quimioterapia diminuísse o tumor."','"Quero minha filha comigo."','"Quero estar lúcida e perto dela."','"Se der, quero ficar em casa."'],
+    pontos:['Não confundir ausência de cura com ausência de cuidado','Investigar causas reversíveis de dispneia sem perder o foco nos objetivos','Esperança pode ser redirecionada para metas alcançáveis'],
+    perspectiva:{ abertura:'Minha oncologista pediu que eu viesse conversar sobre a tomografia.', historia:'O câncer espalhou e, apesar do tratamento, estou com mais falta de ar e dor.', ideias:'Acho que a quimioterapia parou de funcionar.', preocupacoes:'Tenho medo de sufocar e de deixar minha filha sozinha.', expectativas:'Quero clareza e um plano para não sofrer.', funcao:'Preciso de ajuda até para tomar banho.', contexto:'Moro com minha filha, que é minha principal cuidadora.', emocao:'Estou assustada e muito cansada.', entendimento:'Sei que é metastático, mas ainda achava que podia diminuir.', apoio:'Quero minha filha comigo.' },
+    spikes:casoSpikes({
+      assunto:'o câncer de pulmão', apoio:'minha filha', cenario:'Mulher de 62 anos recebe o resultado de progressão pulmonar e óssea após duas linhas de tratamento.',
+      noticia:'A tomografia mostra que o câncer cresceu e apareceu em novos locais apesar da quimioterapia; o tratamento usado deixou de controlar a doença.',
+      perguntaPercepcao:'O que você imaginou quando a falta de ar e a dor pioraram apesar da quimioterapia?', percepcao:'Comecei a achar que a quimioterapia tinha parado de funcionar.', mudanca:'Agora fico sem ar até no banho e a dor nas costas me acorda.', expectativaExame:'Eu torcia para a tomografia mostrar que o tumor tinha diminuído.', objetivoTratamento:'Eu ainda esperava ganhar bastante tempo com essa quimioterapia.',
+      reacaoNoticia:'(chora) Eu desconfiava, mas ouvir assim é muito duro. Quanto tempo eu tenho?', compreensao:'Entendi que o câncer continuou crescendo mesmo com a quimioterapia.', emocao:'Estou com medo e penso logo na minha filha.', pensamento:'Não quero que minha filha me veja sufocar.', medo:'Meu maior medo é sentir falta de ar e perder a lucidez.', prioridade:'Quero respirar melhor, ficar lúcida e, se possível, ser cuidada em casa.', plano:'Quero tratar a falta de ar hoje, conversar com os paliativistas e incluir minha filha na próxima decisão.', resumo:'A quimioterapia não está mais controlando o câncer; vamos priorizar meus sintomas e discutir opções que façam sentido para mim.', duvidas:'Existe alguma opção que ajude sem me deixar ainda mais fraca?',
+      estrategia:['Aliviar dispneia e dor e investigar causas reversíveis proporcionais.','Apresentar opções oncológicas com benefício, ônus e incerteza.','Integrar cuidados paliativos e planejar seguimento próximo.']
+    }) });
+
+  add({ id:'ca-pancreas-irressecavel', nome:'Câncer de pâncreas irressecável', area:'Cuidados paliativos', queixa:'Diagnóstico recente de doença localmente avançada',
+    perfil:'Homem, 59 anos, icterícia e perda ponderal; estadiamento mostra envolvimento vascular que impede cirurgia curativa.',
+    perguntas:['O que entendeu sobre a massa no pâncreas?','O que esperava da cirurgia?','Como estão dor, apetite e náusea?','Quem participa das decisões?','O que precisa resolver nas próximas semanas?','Quanto deseja saber sobre prognóstico?'],
+    redflags:['Colangite, febre e icterícia','Dor não controlada','Vômitos persistentes ou obstrução','Desidratação e perda ponderal acelerada'],
+    exame:['Icterícia e estado de hidratação','Dor e exame abdominal','Estado nutricional','Performance status'],
+    hipoteses:['Adenocarcinoma pancreático localmente avançado irressecável','Obstrução biliar e insuficiência pancreática associadas'],
+    conduta:['Descompressão biliar quando indicada','Controle de dor, náusea e insuficiência pancreática','Avaliar tratamento sistêmico paliativo conforme funcionalidade','Cuidados paliativos e apoio nutricional precoces'],
+    achados:['"Sei que acharam um tumor."','"Achei que iam operar e tirar tudo."','"Quase não como e a dor vai para as costas."','"Minha irmã toma as decisões comigo."','"Preciso organizar meu pequeno comércio."','"Quero saber a verdade, sem números fechados."'],
+    pontos:['Irressecável não significa “sem tratamento”','Diferenciar intenção paliativa de abandono','Explorar tarefas práticas e familiares urgentes'],
+    perspectiva:{ abertura:'Vim saber quando será a cirurgia do pâncreas.', historia:'Emagreci, fiquei amarelo e descobriram um tumor.', ideias:'Achei que a cirurgia fosse retirar tudo.', preocupacoes:'Tenho medo de não conseguir organizar minha família e meu comércio.', expectativas:'Quero saber o que ainda pode ser feito.', funcao:'A dor e a fraqueza me afastaram do trabalho.', contexto:'Minha irmã me acompanha e tenho um pequeno comércio.', emocao:'Estou ansioso com a demora e com o resultado.', entendimento:'Sei que há um tumor, mas não entendi o estadiamento.', apoio:'Minha irmã está comigo em tudo.' },
+    spikes:casoSpikes({
+      assunto:'o tumor do pâncreas', apoio:'minha irmã', cenario:'Homem de 59 anos espera uma cirurgia curativa, mas o estadiamento mostrou envolvimento de grandes vasos.',
+      noticia:'O tumor envolve vasos importantes e não pode ser retirado por cirurgia com intenção de cura.', perguntaPercepcao:'O que você entendeu até agora sobre a possibilidade de operar o tumor?', percepcao:'Disseram que havia uma massa, e eu vim achando que marcariam a cirurgia.', mudanca:'Estou mais fraco, amarelo e quase não consigo comer.', expectativaExame:'Eu esperava que os exames servissem apenas para planejar a operação.', objetivoTratamento:'Eu achava que a cirurgia tiraria a doença toda.',
+      reacaoNoticia:'Como assim não dá para operar? Então acabou?', compreensao:'Entendi que a localização do tumor impede uma cirurgia para curar.', emocao:'Estou frustrado e assustado; eu tinha colocado toda a esperança na cirurgia.', pensamento:'Preciso entender o que ainda pode ser feito e organizar minha vida.', medo:'Tenho medo da dor piorar e de deixar problemas para minha família.', prioridade:'Quero controlar a dor e ter tempo com disposição para organizar meu comércio e minha família.', plano:'Quero aliviar a icterícia e a dor e depois discutir os benefícios e efeitos do tratamento paliativo.', resumo:'A cirurgia não consegue retirar o tumor, mas ainda há tratamento para sintomas e podemos avaliar terapia para controlar a doença.', duvidas:'Sem cirurgia, quais são as opções e o que elas podem me trazer de benefício?',
+      estrategia:['Nomear claramente “não operável” e separar isso de “não há cuidado”.','Tratar obstrução biliar, dor e nutrição.','Apresentar tratamento sistêmico como controle, com decisão compartilhada.']
+    }) });
+
+  add({ id:'ic-avancada', nome:'Insuficiência cardíaca avançada', area:'Cuidados paliativos', queixa:'Internações repetidas e limitação apesar de tratamento máximo',
+    perfil:'Mulher, 76 anos, classe funcional IV, três internações em seis meses, sem opção de transplante ou dispositivo avançado.',
+    perguntas:['O que entendeu sobre as internações repetidas?','O que mudou na sua autonomia?','O que espera dos tratamentos atuais?','O que seria uma qualidade de vida aceitável?','Quem ajuda nas decisões?','Onde gostaria de ser cuidada se piorar?'],
+    redflags:['Choque cardiogênico','Edema agudo de pulmão','Síncope ou arritmia grave','Sofrimento por dispneia refratária'],
+    exame:['Perfusão, PA, FC e SpO2','Congestão sistêmica e pulmonar','Estado funcional e fragilidade','Carga de sintomas'],
+    hipoteses:['Insuficiência cardíaca avançada com alto risco de morte','Descompensações potencialmente reversíveis sobre doença limitante'],
+    conduta:['Otimizar medidas de conforto e terapia tolerada','Plano para crises de dispneia e congestão','Discutir preferências sobre internação e suporte invasivo','Integrar cardiologia, paliativos e atenção domiciliar'],
+    achados:['"Sei que meu coração está muito fraco."','"Já não consigo ir sozinha ao banheiro."','"Achei que sempre haveria outro remédio."','"Quero conseguir conversar e reconhecer meus filhos."','"Minha filha me ajuda."','"Prefiro ficar em casa se for seguro."'],
+    pontos:['Trajetória de falência orgânica é incerta, mas isso não impede conversa honesta','Evite prognóstico como certeza','Planeje crises previsíveis'],
+    perspectiva:{ abertura:'Voltei a internar porque o ar faltou de novo.', historia:'Foram três internações em seis meses apesar de todos os remédios.', ideias:'Sei que meu coração está muito fraco.', preocupacoes:'Tenho medo de morrer sufocada e entubada.', expectativas:'Quero um plano para não viver entrando no hospital.', funcao:'Preciso de ajuda até para ir ao banheiro.', contexto:'Moro com minha filha, que cuida de mim.', emocao:'Estou cansada e assustada com cada crise.', entendimento:'Achei que sempre existiria outro remédio para melhorar.', apoio:'Minha filha é quem me ajuda e decide comigo.' },
+    spikes:casoSpikes({
+      assunto:'a insuficiência cardíaca', apoio:'minha filha', cenario:'Mulher de 76 anos, com limitação em repouso e internações repetidas apesar de tratamento máximo tolerado.',
+      noticia:'Seu coração está em uma fase avançada: os tratamentos continuam ajudando nos sintomas, mas já não conseguem reverter a doença, e novas crises podem acontecer.', perguntaPercepcao:'O que as últimas internações fizeram você entender sobre a força do seu coração?', percepcao:'Sei que está muito fraco, mas achei que cada internação faria voltar ao que era antes.', mudanca:'Depois de cada alta volto mais fraca e agora preciso de ajuda para quase tudo.', expectativaExame:'Esperava que o novo eco mostrasse alguma recuperação.', objetivoTratamento:'Achei que sempre haveria um remédio mais forte para fazer o coração melhorar.',
+      reacaoNoticia:'Então eu posso não melhorar mais como antes? Isso me assusta.', compreensao:'Entendi que a doença não vai voltar atrás e que posso ter novas crises.', emocao:'Estou cansada e com medo de outra falta de ar.', pensamento:'Penso se vou terminar ligada a aparelhos.', medo:'Tenho medo de sufocar e de ser entubada sem conseguir falar com minha família.', prioridade:'Quero respirar sem sofrimento, reconhecer meus filhos e evitar UTI se ela não puder me devolver isso.', plano:'Quero tratar esta crise e registrar com minha filha o que desejo se eu piorar de novo.', resumo:'Meu coração está em fase avançada; vamos manter o que ajuda, controlar os sintomas e planejar juntos como agir nas próximas crises.', duvidas:'Vocês conseguem cuidar da falta de ar em casa e quem minha filha deve chamar?',
+      estrategia:['Tratar fatores reversíveis e sintomas sem prometer recuperação basal.','Explorar preferências sobre reanimação, ventilação e local de cuidado no ritmo da paciente.','Documentar plano de crise e contato de referência.']
+    }) });
+
+  add({ id:'dpoc-avancada', nome:'DPOC avançada com insuficiência respiratória', area:'Cuidados paliativos', queixa:'Exacerbações frequentes e dependência crescente de oxigênio',
+    perfil:'Homem, 71 anos, DPOC muito grave, oxigenoterapia domiciliar e quatro internações no último ano.',
+    perguntas:['O que percebeu depois das últimas crises?','Como está a falta de ar no dia a dia?','O que espera de uma nova internação?','Já pensou sobre ventilação invasiva?','Quem cuida de você?','O que torna um dia bom?'],
+    redflags:['Insuficiência respiratória aguda','Sonolência por hipercapnia','Pneumonia ou pneumotórax','Pânico associado à dispneia'],
+    exame:['FR, SpO2 e trabalho respiratório','Gasometria quando indicada','Estado nutricional e funcional','Ansiedade e carga de sintomas'],
+    hipoteses:['DPOC avançada com insuficiência respiratória crônica','Exacerbação infecciosa ou outra causa reversível associada'],
+    conduta:['Otimizar broncodilatadores e medidas de alívio','Plano para dispneia e exacerbações','Reabilitação e suporte domiciliar quando possível','Planejamento antecipado sobre ventilação e internação'],
+    achados:['"Cada crise me deixa pior."','"Falta ar até para falar."','"Tenho medo de internar e não sair."','"Não quero ficar meses em aparelhos."','"Minha esposa cuida de mim."','"Um dia bom é sentar no quintal e conversar."'],
+    pontos:['Incerteza prognóstica não justifica adiar o diálogo','Dispneia inclui dimensão física e emocional','Decisão sobre ventilação exige contexto e objetivos'],
+    perspectiva:{ abertura:'O pulmão não recupera mais depois das crises.', historia:'Interno quase todo mês e uso oxigênio a maior parte do dia.', ideias:'Acho que meu pulmão está no limite.', preocupacoes:'Tenho pavor de morrer sem ar ou preso num respirador.', expectativas:'Quero saber como será a próxima crise.', funcao:'Falta ar até para banho e conversa longa.', contexto:'Minha esposa cuida de mim em casa.', emocao:'Vivo ansioso esperando a falta de ar piorar.', entendimento:'Sei que a DPOC não cura, mas não sabia que estava tão avançada.', apoio:'Minha esposa é meu apoio.' },
+    spikes:casoSpikes({
+      assunto:'a doença pulmonar', apoio:'minha esposa', cenario:'Homem de 71 anos com DPOC muito grave, oxigênio domiciliar e quatro internações no último ano.',
+      noticia:'Sua doença pulmonar está muito avançada; cada crise traz risco de morte e pode ser mais difícil recuperar o nível de antes.', perguntaPercepcao:'O que você percebeu sobre sua recuperação depois das últimas crises de falta de ar?', percepcao:'Cada vez volto para casa mais fraco e dependente do oxigênio.', mudanca:'Agora falta ar até para falar ou tomar banho.', expectativaExame:'Eu esperava que o pulmão recuperasse depois do antibiótico.', objetivoTratamento:'Achei que uma nova internação sempre me faria voltar ao normal.',
+      reacaoNoticia:'Eu sabia que estava ruim, mas não que podia morrer numa dessas crises.', compreensao:'Entendi que a DPOC está avançada e que uma nova crise pode ser fatal ou deixar uma recuperação ainda menor.', emocao:'Fico apavorado só de pensar em não conseguir respirar.', pensamento:'Não quero passar meus últimos dias sedado numa UTI.', medo:'Tenho medo de sufocar e de ficar preso a um respirador sem conseguir sair.', prioridade:'Quero alívio da falta de ar e ficar em casa com minha esposa sempre que for possível e seguro.', plano:'Quero deixar registrado quando aceitaria máscara e quando não gostaria de intubação, e ter um plano para as crises.', resumo:'Meu pulmão está em fase avançada; novas crises são perigosas, e vamos tratar o ar e planejar comigo os limites do suporte.', duvidas:'O que minha esposa pode fazer quando o ar faltar e como vocês evitam que eu sofra?',
+      estrategia:['Combinar plano escrito para exacerbações e dispneia.','Explicar suporte não invasivo e invasivo pelo benefício esperado, não como escolha abstrata.','Reavaliar preferências ao longo do tempo.']
+    }) });
+
+  add({ id:'ela-progressiva', nome:'Esclerose lateral amiotrófica em progressão', area:'Cuidados paliativos', queixa:'Fraqueza progressiva e início de comprometimento respiratório',
+    perfil:'Mulher, 54 anos, ELA com progressão bulbar e respiratória; mantém capacidade decisória.',
+    perguntas:['O que entendeu sobre a progressão da ELA?','Quais mudanças notou na fala e respiração?','Quanto quer saber sobre as próximas fases?','O que pensa sobre suporte ventilatório e alimentação?','Como prefere se comunicar se a fala piorar?','Quem deve representar suas escolhas se não puder falar?'],
+    redflags:['Insuficiência respiratória','Broncoaspiração','Perda rápida de peso','Comunicação insuficiente apesar de cognição preservada'],
+    exame:['Função respiratória e tosse','Deglutição e estado nutricional','Comunicação e tecnologia assistiva','Mobilidade, dor e carga do cuidador'],
+    hipoteses:['ELA progressiva com envolvimento bulbar/respiratório','Complicações respiratórias e nutricionais'],
+    conduta:['Equipe multiprofissional e controle de sintomas','Discutir ventilação não invasiva e gastrostomia no tempo adequado','Planejar comunicação alternativa','Diretivas antecipadas com revisões periódicas'],
+    achados:['"Sei que a ELA continua avançando."','"Minha voz está fraca e acordo com dor de cabeça."','"Quero saber e planejar."','"Aceito máscara; quero entender a traqueostomia."','"Quero um comunicador pelo olhar."','"Minha companheira conhece minhas escolhas."'],
+    pontos:['Preservar autonomia com comunicação assistiva','Não presumir incapacidade cognitiva pela perda motora','Antecipar decisões antes da crise'],
+    perspectiva:{ abertura:'Minha fala e minha respiração pioraram.', historia:'Tenho ELA e estou perdendo força cada mês.', ideias:'Acho que os músculos de respirar começaram a enfraquecer.', preocupacoes:'Tenho medo de não conseguir me comunicar.', expectativas:'Quero planejar antes de uma emergência.', funcao:'Preciso de ajuda para andar, comer e tomar banho.', contexto:'Minha companheira é minha cuidadora.', emocao:'É duro perder autonomia tão rápido.', entendimento:'Sei que a ELA não tem cura e progride, mas não sei como serão as próximas fases.', apoio:'Minha companheira conhece bem minhas escolhas.' },
+    spikes:casoSpikes({
+      assunto:'a progressão da ELA', apoio:'minha companheira', cenario:'Mulher de 54 anos com ELA, piora bulbar e sinais de fraqueza respiratória, cognitivamente capaz.',
+      noticia:'Os testes mostram que a ELA começou a comprometer os músculos da respiração; precisamos planejar suporte respiratório e comunicação antes de uma urgência.', perguntaPercepcao:'O que a piora da fala e o cansaço ao respirar fizeram você pensar sobre a ELA?', percepcao:'Imaginei que a doença tivesse chegado aos músculos da respiração.', mudanca:'Minha voz enfraqueceu, engasgo mais e acordo cansada com dor de cabeça.', expectativaExame:'Eu esperava ter mais tempo antes de a respiração ser afetada.', objetivoTratamento:'Sei que não há cura, mas esperava desacelerar mais a progressão.',
+      reacaoNoticia:'Eu temia isso. Quero planejar enquanto ainda consigo falar por mim.', compreensao:'Entendi que os músculos respiratórios estão enfraquecendo e que precisamos decidir os suportes antes de uma crise.', emocao:'Estou triste, mas principalmente determinada a não perder minha voz nas decisões.', pensamento:'Preciso garantir uma forma de me comunicar mesmo quando não conseguir falar.', medo:'Tenho medo de ficar consciente sem conseguir me comunicar ou dizer que estou sofrendo.', prioridade:'Quero manter comunicação e autonomia; aceito a máscara e quero entender claramente as implicações de traqueostomia.', plano:'Quero testar ventilação não invasiva, avaliar deglutição e registrar minhas escolhas com minha companheira.', resumo:'A ELA atingiu a respiração; vamos antecipar suporte e meios de comunicação respeitando minhas escolhas.', duvidas:'Quando devo usar a máscara e como posso registrar o que desejo sobre traqueostomia?',
+      estrategia:['Falar diretamente com a paciente e garantir comunicação acessível.','Explicar suportes em etapas, benefícios e ônus.','Documentar representante e preferências antes de perda da fala.']
+    }) });
+
+  add({ id:'drc-conservador', nome:'Doença renal crônica estágio 5 — cuidado conservador', area:'Cuidados paliativos', queixa:'Fragilidade e decisão sobre não iniciar diálise',
+    perfil:'Homem, 86 anos, DRC estágio 5, fragilidade grave, demência leve e insuficiência cardíaca; a equipe avalia baixo benefício da diálise.',
+    perguntas:['O que entende sobre o funcionamento dos rins?','O que espera da diálise?','Quais atividades dão sentido à sua vida?','Como se sente com idas frequentes ao hospital?','Quem decide junto com você?','O que deseja se os rins piorarem?'],
+    redflags:['Hipercalemia ou edema pulmonar potencialmente reversível','Delirium','Sintomas urêmicos intensos','Conflito familiar ou dúvida sobre capacidade decisória'],
+    exame:['Volume e sinais urêmicos','Cognição e capacidade para esta decisão','Fragilidade e funcionalidade','Carga de sintomas e apoio do cuidador'],
+    hipoteses:['DRC estágio 5 em paciente muito frágil','Possibilidade de manejo conservador renal abrangente'],
+    conduta:['Decisão compartilhada sobre diálise versus manejo conservador','Tratar sintomas, anemia, volume e prurido proporcionalmente','Plano domiciliar e de crises','Reavaliar capacidade, preferências e apoio familiar'],
+    achados:['"Sei que os rins quase não funcionam."','"Achei que diálise sempre prolongasse a vida."','"Gosto de ficar em casa ouvindo rádio."','"Hospital me deixa confuso."','"Minha filha decide comigo."','"Não quero procedimentos que me deixem pior."'],
+    pontos:['Cuidado conservador é tratamento ativo','Não decidir apenas pela idade','Explorar benefício individual, carga e valores'],
+    perspectiva:{ abertura:'Disseram que preciso decidir sobre diálise.', historia:'Meus rins pioraram e estou cada vez mais fraco.', ideias:'Achei que todo mundo nessa fase precisasse de diálise.', preocupacoes:'Tenho medo de passar o resto do tempo indo ao hospital.', expectativas:'Quero saber se existe outra forma de cuidar.', funcao:'Ando pouco e fico confuso quando interno.', contexto:'Moro com minha filha e gosto da minha rotina em casa.', emocao:'Estou preocupado, mas cansado de procedimentos.', entendimento:'Sei que os rins estão fracos, mas não sei o benefício real da diálise para mim.', apoio:'Minha filha decide comigo.' },
+    spikes:casoSpikes({
+      assunto:'a falência dos rins', apoio:'minha filha', cenario:'Homem de 86 anos com DRC estágio 5 e fragilidade grave discute diálise versus manejo conservador.',
+      noticia:'Seus rins estão falhando. No seu caso, por causa da fragilidade e das outras doenças, a diálise pode trazer muita carga e talvez não prolongue nem melhore sua vida como costuma imaginar.', perguntaPercepcao:'O que você acredita que a diálise poderia mudar na sua saúde e na sua rotina?', percepcao:'Achei que a diálise sempre fizesse a pessoa viver mais e se sentir melhor.', mudanca:'Estou cada vez mais fraco e as internações me deixam confuso.', expectativaExame:'Eu esperava que desse para controlar os rins só com remédio.', objetivoTratamento:'Pensei que começar diálise fosse a única maneira de continuar vivendo.',
+      reacaoNoticia:'Então fazer diálise pode me fazer passar mais tempo no hospital sem me devolver força?', compreensao:'Entendi que a diálise pode pesar muito e que existe a opção de tratar sintomas sem fazê-la.', emocao:'Fico aliviado de ter escolha, mas tenho medo de escolher errado.', pensamento:'Quero ouvir minha filha, mas a vida que importa para mim é em casa.', medo:'Tenho medo de ficar preso a máquinas e hospitais e perder a lucidez.', prioridade:'Quero ficar em casa, lúcido, ouvindo meu rádio e perto da minha filha.', plano:'Quero conversar com a nefrologia e paliativos sobre cuidado conservador e ter um plano se faltar ar ou eu ficar confuso.', resumo:'Meus rins estão falhando; para mim a diálise pode ter mais peso que benefício, e podemos escolher cuidado conservador ativo.', duvidas:'Sem diálise, como vocês tratam a falta de ar, o inchaço e outros sintomas?',
+      estrategia:['Comparar benefícios e ônus individualizados, sem apresentar falsa dicotomia.','Confirmar capacidade decisória e incluir a filha com autorização.','Explicar manejo conservador como cuidado renal ativo e planejar crises.']
+    }) });
+
+  add({ id:'demencia-avancada', nome:'Demência avançada e metas de cuidado', area:'Cuidados paliativos', queixa:'Disfagia e infecções recorrentes; reunião com a família',
+    perfil:'Mulher, 88 anos, demência avançada, não verbal, totalmente dependente, com pneumonias aspirativas recorrentes; filha é representante.',
+    perguntas:['Como era sua mãe antes e o que valorizava?','O que você entende sobre a fase da demência?','O que espera de sonda ou nova internação?','Ela deixou preferências registradas?','Qual é seu maior medo como cuidadora?','O que seria conforto para ela?'],
+    redflags:['Sofrimento atual não tratado','Delirium ou causa reversível de piora','Conflito entre familiares','Decisão sem representante legítimo ou sem considerar valores prévios'],
+    exame:['Sinais de desconforto e dor não verbal','Deglutição, hidratação e boca','Lesões por pressão e mobilidade','Carga e exaustão da cuidadora'],
+    hipoteses:['Demência em fase avançada com disfagia','Pneumonias aspirativas recorrentes e proximidade do fim de vida'],
+    conduta:['Reunião familiar baseada nos valores previamente expressos','Alimentação de conforto e avaliação individualizada de intervenções','Controle de sintomas e prevenção de sofrimento','Plano de cuidado e apoio à cuidadora'],
+    achados:['"Ela valorizava ficar em casa e não queria aparelhos."','"Eu não sabia que demência podia chegar a essa fase."','"Achei que a sonda impediria novas pneumonias."','"Ela dizia que não queria prolongar sofrimento."','"Tenho medo de parecer que estou desistindo."','"Conforto é não ter dor e ouvir nossa voz."'],
+    pontos:['Falar com o representante a partir dos valores da paciente','Evitar transformar decisão em culpa da família','Explicar trajetória da demência com clareza'],
+    perspectiva:{ abertura:'(a filha) Chamaram a família para conversar sobre minha mãe.', historia:'(filha) Ela não fala, não reconhece a gente e teve três pneumonias por engasgo.', ideias:'(filha) Achei que uma sonda resolveria as aspirações.', preocupacoes:'(filha) Tenho medo de decidir errado e parecer que desisti dela.', expectativas:'(filha) Quero que ela não sofra.', funcao:'(filha) Ela depende de nós para tudo.', contexto:'(filha) Cuido dela em casa com meus irmãos.', emocao:'(filha) Estou exausta e muito culpada.', entendimento:'(filha) Não sabia que a demência podia levar a essa fase.', apoio:'(filha) Meus irmãos participam, mas discordamos às vezes.' },
+    spikes:casoSpikes({
+      assunto:'a fase avançada da demência', apoio:'meus irmãos', cenario:'A notícia é comunicada à filha representante de uma mulher não verbal com demência avançada e aspirações recorrentes.',
+      noticia:'A demência chegou a uma fase avançada e irreversível. A dificuldade para engolir e as infecções repetidas fazem parte dessa fase e indicam que ela pode estar se aproximando do fim da vida.', perguntaPercepcao:'O que você entendeu sobre os engasgos e as pneumonias repetidas da sua mãe?', percepcao:'Achei que fossem problemas separados e que uma sonda pudesse resolver tudo.', mudanca:'Ela deixou de falar, não nos reconhece e agora engasga mesmo com comida pastosa.', expectativaExame:'Eu esperava que encontrassem uma infecção tratável e ela voltasse ao estado anterior.', objetivoTratamento:'Achei que internar e colocar sonda pudesse fazê-la ganhar força.',
+      reacaoNoticia:'(a filha chora) Eu não sabia que a demência podia levar à morte. Tenho medo de estar desistindo dela.', compreensao:'Entendi que a disfagia e as pneumonias são parte da fase final e não algo que vá se reverter.', emocao:'Sinto tristeza, culpa e um cansaço enorme.', pensamento:'Fico lembrando que ela sempre disse que não queria viver ligada a aparelhos.', medo:'Meu maior medo é que ela sofra ou que a família diga que eu desisti.', prioridade:'Quero que ela não tenha dor nem falta de ar, ouça nossa voz e fique conosco se isso for seguro.', plano:'Quero reunir meus irmãos, registrar o que ela valorizava e planejar alimentação de conforto e tratamento dos sintomas.', resumo:'A demência está em fase avançada e irreversível; as decisões devem buscar o conforto e respeitar o que minha mãe dizia querer.', duvidas:'Como saber se ela está sofrendo e o que acontece se não colocarmos uma sonda?',
+      estrategia:['Dirigir a decisão aos valores da paciente, não à preferência isolada da família.','Validar a culpa e deixar claro que conforto é cuidado ativo.','Definir plano para alimentação, sintomas, infecções e local de cuidado.'],
+      compartilhamento:'Podem falar comigo e com meus irmãos; quero que a decisão represente o que minha mãe sempre valorizou.'
+    }) });
 
   add({ id:'checkup', nome:'Consulta de rotina / prevenção no adulto', area:'Clínica médica', queixa:'Vim fazer um check-up',
     perfil:'Homem, 45 anos, assintomático, quer "fazer todos os exames".',
@@ -699,7 +876,7 @@
     paliativos:{ abertura:'Sei que estou doente, doutor, mas ninguém me falou direito.', historia:'Descobri o câncer no ano passado. Fiz tratamento, mas dizem que voltou e está pior.', ideias:'Sei que é um câncer, mas não me disseram se tem cura.', preocupacoes:'Meu maior medo é sentir dor. E é de deixar minha família.', expectativas:'Quero saber tudo, com minha esposa junto. Não quero ficar no escuro.', funcao:'Tenho falta de ar quando ando e a dor chega a nove à noite.', contexto:'Moro com minha esposa. Ela está exausta cuidando de mim.', emocao:'Ando angustiado, mas minha fé me ajuda muito.', entendimento:'Ninguém sentou pra me explicar o que vem pela frente.', apoio:'Minha esposa e meus netos. Queria fazer as pazes com meu filho.' },
     checkup:{ abertura:'Vim fazer um check-up, doutor, não tenho queixa nenhuma.', historia:'Não sinto nada. Faz anos que não faço exame e resolvi cuidar.', ideias:'Acho que está tudo bem, mas quero confirmar.', preocupacoes:'Meu pai infartou aos 55. É isso que me preocupa de verdade.', expectativas:'Queria fazer aquele exame de corpo inteiro pra ver se está tudo certo.', funcao:'Não me limita em nada, só o cansaço do trabalho mesmo.', contexto:'Trabalho em obra, como mal, fumo dez por dia e não me exercito.', emocao:'Ando estressado com trabalho, isso sim.', entendimento:'Acho que quanto mais exame, melhor.', apoio:'Minha esposa que insistiu pra eu marcar.' }
   };
-  D.forEach(item => { item.perspectiva = P[item.id] || {}; });
+  D.forEach(item => { item.perspectiva = P[item.id] || item.perspectiva || {}; });
 
   window.CONSULTA_DOENCAS = D;
 })();

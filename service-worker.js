@@ -1,8 +1,8 @@
-const CACHE_NAME = 'soqueromed-shell-v332';
+const CACHE_NAME = 'soqueromed-shell-v333';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260826-7',
+  './assets/planner.css?v=20260902-1',
   './assets/anatomia.css?v=20260802-8',
   './assets/planner-refresh.css?v=20260818-22',
   './assets/mascote-ia.css?v=20260802-7',
@@ -20,6 +20,8 @@ const APP_SHELL = [
   './assets/semiologia-aulas.js?v=20260802-3',
   './assets/semiologia.js?v=20260802-9',
   './assets/caso-do-dia.js?v=20260826-1',
+  './assets/consulta-doencas.js?v=20260902-1',
+  './assets/consulta-clinica.js?v=20260902-1',
   './assets/planner.js?v=20260826-14',
   './assets/mascote-ia.js?v=20260802-10',
   './health-news/data/latest.json',
@@ -186,6 +188,8 @@ self.addEventListener('fetch', event => {
     || url.pathname.endsWith('/assets/anatomia/catalog.json')
     || url.pathname.endsWith('/assets/anatomia/search-index.json')
     || url.pathname.endsWith('/assets/caso-do-dia.js')
+    || url.pathname.endsWith('/assets/consulta-doencas.js')
+    || url.pathname.endsWith('/assets/consulta-clinica.js')
     || url.pathname.endsWith('/assets/ecg-simulator.js')
     || url.pathname.endsWith('/assets/radiografia.js')
     || url.pathname.endsWith('/assets/semiologia.js')

@@ -159,23 +159,23 @@
     quando:'Câncer, doença terminal, óbito, malformação, resultado grave.',
     etapas:[
       { id:'sp1', foco:'abertura', titulo:'S — Setting (preparando o ambiente)', objetivo:'Privacidade, tempo, quem deve estar presente.',
-        orientacoes:['Ambiente reservado, sentado, sem interrupções, celular no silencioso.','Pergunte quem a pessoa quer ao lado.','Reserve tempo real; não faça em pé no corredor.'],
-        perguntas:['Podemos conversar em uma sala reservada?','Você gostaria que alguém estivesse com você nessa conversa?'] },
+        orientacoes:['Revise os fatos clínicos antes de entrar e antecipe as perguntas difíceis.','Garanta privacidade, sente-se na mesma altura e reduza interrupções.','Confirme quem a pessoa deseja ao lado e ofereça apoio de comunicação, se necessário.'],
+        perguntas:['Este é um lugar confortável e reservado para conversarmos?','Você gostaria que alguém de sua confiança estivesse com você?','Podemos desligar as interrupções e conversar com calma agora?','Antes de começarmos, há algo de que você precise para se sentir mais confortável?'] },
       { id:'sp2', foco:'exploracao', titulo:'P — Perception (percepção)', objetivo:'Descobrir o que a pessoa já sabe e entende.',
-        orientacoes:['"Antes de falar, me conte o que você já entendeu até aqui."','Isso revela negação, expectativa irreal ou conhecimento correto.'],
-        perguntas:['O que os outros médicos já te explicaram?','O que você entendeu sobre o motivo dos exames?'] },
+        orientacoes:['Comece pelo entendimento da pessoa, sem corrigir imediatamente.','Explore o que ela percebeu na evolução e o que imagina que os exames mostraram.','Identifique lacunas, negação e expectativas irreais para calibrar a notícia.'],
+        perguntas:['Antes de eu explicar os resultados, o que você entendeu sobre sua doença até aqui?','O que você percebeu que mudou na sua saúde nas últimas semanas?','O que imagina que os exames ou o tratamento mostraram?','Na sua compreensão, qual era o objetivo do tratamento até agora?'] },
       { id:'sp3', foco:'contexto', titulo:'I — Invitation (convite)', objetivo:'Perguntar quanto a pessoa quer saber.',
-        orientacoes:['Respeitar quem não quer todos os detalhes agora.','Deixar a porta aberta para depois.'],
-        perguntas:['Você é do tipo de pessoa que quer saber todos os detalhes ou prefere que eu fale o essencial?','Se em algum momento você quiser parar, é só me dizer.'] },
+        orientacoes:['Peça permissão para compartilhar a informação.','Respeite o ritmo e a quantidade de detalhes desejada, inclusive sobre prognóstico.','Se a pessoa não quiser saber agora, combine a quem informar e mantenha a porta aberta.'],
+        perguntas:['Você gostaria que eu explicasse agora o que os resultados mostram?','Prefere que eu comece pelo essencial ou quer todos os detalhes?','Você quer conversar também sobre o que isso significa para o futuro e sobre tempo de vida?','Com quem mais você autoriza que eu compartilhe essas informações?'] },
       { id:'sp4', foco:'sintese', titulo:'K — Knowledge (informação)', objetivo:'Dar a notícia com aviso prévio, em linguagem simples.',
-        orientacoes:['Use tiro de aviso: "infelizmente, tenho uma notícia difícil".','Fale em blocos curtos, faça pausas e silêncio.','Não use jargão nem eufemismo que confunda.'],
-        perguntas:['Infelizmente os exames não trouxeram a notícia que esperávamos.','O resultado mostrou… (pausa) Quer que eu continue?'] },
+        orientacoes:['Use um “tiro de aviso” antes da notícia: “Infelizmente, tenho uma notícia difícil”.','Diga a informação central com palavras claras, em uma ou duas frases; depois pare.','Dê blocos pequenos, evite jargão e cheque a compreensão antes de acrescentar detalhes.','Não declare prazos exatos como certeza; comunique incerteza com honestidade.'],
+        perguntas:['Infelizmente, tenho uma notícia difícil para compartilhar.','Os resultados mostram que… (diga a notícia central em linguagem simples e faça uma pausa).','O que você entendeu do que eu disse até aqui?','Quer que eu explique novamente alguma parte ou prossiga com mais detalhes?'] },
       { id:'sp5', foco:'plano', titulo:'E — Emotions (emoções)', objetivo:'Acolher a reação com respostas empáticas (NURSE).',
-        orientacoes:['Nomeie a emoção, valide, respeite o silêncio, ofereça apoio, explore.','Não corra para o plano terapêutico antes de acolher.'],
-        perguntas:['Percebo que isso te deixou muito abalado.','Faz todo sentido você se sentir assim.','Estou aqui com você. Quer um tempo?','O que mais te assusta agora?'] },
+        orientacoes:['Observe e nomeie a emoção antes de voltar às informações.','Use NURSE: nomear, compreender, respeitar, apoiar e explorar.','Tolere o silêncio; não apresse a pessoa nem tente apagar a emoção com falsa tranquilização.'],
+        perguntas:['Percebo que essa notícia deixou você muito abalado.','Imagino como deve ser difícil ouvir isso depois de tudo o que você viveu.','Vamos fazer uma pausa. Estou aqui com você.','O que passa pela sua cabeça agora?','O que mais assusta ou preocupa você neste momento?'] },
       { id:'sp6', foco:'fechamento', titulo:'S — Strategy and Summary', objetivo:'Plano, próximos passos e disponibilidade.',
-        orientacoes:['Diga o que vem a seguir, quem cuidará e quando é o próximo contato.','Reforce que nunca haverá abandono, mesmo sem cura.','Cheque o entendimento.'],
-        perguntas:['O próximo passo é… e eu vou acompanhar você em todas as etapas.','Mesmo que a cura não seja possível, sempre haverá o que fazer pelo seu conforto.','O que ficou de dúvida do que conversamos?'] } ] },
+        orientacoes:['Só avance quando a emoção tiver sido reconhecida.','Pergunte o que importa, apresente opções realistas e construa o plano em conjunto.','Resuma notícia e próximos passos, nomeie responsáveis, combine retorno e cheque o entendimento.','Evite “não há mais nada a fazer”: cuidado, conforto e acompanhamento continuam.'],
+        perguntas:['Diante do que conversamos, o que é mais importante para você agora?','Posso explicar as opções e construirmos juntos o próximo passo?','Mesmo sem possibilidade de cura, há muito que podemos fazer para controlar sintomas e cuidar de você.','Vamos resumir o plano, quem será acionado e quando voltaremos a conversar.','Para eu confirmar que fui claro: como você explicaria nossa conversa a alguém de sua confiança?','Que dúvidas ficaram ou o que você gostaria de perguntar agora?'] } ] },
 
   { id:'nurse', nome:'NURSE — Resposta às emoções', sigla:'NURSE', tipo:'Comunicação difícil',
     uso:'Cinco respostas empáticas estruturadas para momentos de emoção intensa.',
@@ -351,12 +351,12 @@
     ab3:['','',''],
     ic1:['@ideias','@preocupacoes','@expectativas','@funcao','Um parente meu teve algo parecido e não terminou bem.'],
     ba1:['@contexto','@emocao','@preocupacoes','Vou levando como dá, tentando não pensar muito.','Obrigado, doutor. Faz diferença ouvir isso.'],
-    sp1:['Podemos sim, doutor.','Queria minha esposa aqui comigo, por favor.'],
-    sp2:['@entendimento','Me disseram que os exames iam mostrar melhor o que era.'],
-    sp3:['Prefiro saber tudo. Não gosto de ficar no escuro.','Está bem, doutor.'],
-    sp4:['(fica em silêncio) Pode falar.','Pode continuar, doutor.'],
-    sp5:['É... foi um baque ouvir isso.','Obrigado por entender.','Preciso de um minuto, se puder.','Tenho medo de sofrer e de deixar minha família.'],
-    sp6:['Entendi. Saber que vou ter acompanhamento me tranquiliza.','Isso me alivia bastante, doutor.','@duvida'],
+    sp1:['@spikes.privacidade','@spikes.acompanhante','@spikes.tempo','@spikes.conforto'],
+    sp2:['@spikes.percepcao','@spikes.mudanca','@spikes.expectativaExame','@spikes.objetivoTratamento'],
+    sp3:['@spikes.convite','@spikes.detalhes','@spikes.prognostico','@spikes.compartilhamento'],
+    sp4:['@spikes.reacaoAviso','@spikes.reacaoNoticia','@spikes.compreensao','@spikes.maisDetalhes'],
+    sp5:['@spikes.emocao','@spikes.validacao','@spikes.pausa','@spikes.pensamento','@spikes.medo'],
+    sp6:['@spikes.prioridade','@spikes.opcoes','@spikes.naoAbandono','@spikes.plano','@spikes.resumo','@spikes.duvidas'],
     nu1:['É, estou com medo mesmo.','Obrigado, doutor. Ninguém tinha falado assim comigo.','Faço o que posso por ela.','Isso ajuda muito, de verdade.','@preocupacoes'],
     em1:['@abertura','Já parei outras coisas antes, na força de vontade.','Pode falar, doutor, eu escuto.'],
     em2:['Me acalma, me distrai depois de um dia ruim.','Me custa saúde e dinheiro, isso eu sei.','Acho que estaria bem pior do que hoje.','Seria bom. Eu me sentiria orgulhoso de mim.'],
@@ -449,7 +449,7 @@
         <div class="cc-metodo-info" id="ccMetodoInfo">${renderMetodoInfo(METODOS[0])}</div>
         <div class="cc-box">
           <div class="cc-box-head"><h3>2. Caixa de doenças</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div>
-          <div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('')}</div>
+          <div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', '', METODOS[0].id)}</div>
         </div>
         <button class="icon-btn primary cc-start" id="ccStart">Iniciar consulta simulada</button>
       </section>
@@ -470,10 +470,11 @@
   }
 
   function normaliza(v){ return String(v||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
-  function renderDoencaChips(query, selectedId){
+  function renderDoencaChips(query, selectedId, metodoId){
     const q = normaliza(query);
-    const list = doencas().filter(d => !q || normaliza(`${d.nome} ${d.area} ${d.queixa}`).includes(q));
-    if(!list.length) return '<div class="empty">Nenhuma condição encontrada.</div>';
+    const apenasComunicacao = metodoId === 'spikes';
+    const list = doencas().filter(d => (!apenasComunicacao || d.spikes) && (!q || normaliza(`${d.nome} ${d.area} ${d.queixa} ${d.spikes?.cenario||''}`).includes(q)));
+    if(!list.length) return `<div class="empty">${apenasComunicacao?'Nenhum cenário SPIKES encontrado.':'Nenhuma condição encontrada.'}</div>`;
     const groups = new Map();
     list.forEach(d => { if(!groups.has(d.area)) groups.set(d.area, []); groups.get(d.area).push(d); });
     return [...groups.entries()].sort((a,b)=>a[0].localeCompare(b[0],'pt-BR')).map(([area, items]) =>
@@ -501,7 +502,7 @@
         <button class="icon-btn" id="ccCopiar">Copiar consulta</button>
         <button class="icon-btn primary" id="ccFinalizar">${s.finalizada?'Reabrir':'Finalizar'}</button>
       </header>
-      ${store().ui.box ? `<section class="card cc-box cc-box-inline"><div class="cc-box-head"><h3>Caixa de doenças</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div><div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', s.doencaId)}</div></section>` : ''}
+      ${store().ui.box ? `<section class="card cc-box cc-box-inline"><div class="cc-box-head"><h3>${m.id==='spikes'?'Cenários de más notícias':'Caixa de doenças'}</h3><input class="input" id="ccBusca" placeholder="Buscar doença, sintoma ou área…"></div>${m.id==='spikes'?'<p class="muted cc-box-hint">Somente casos preparados para treinar as seis letras do SPIKES são exibidos.</p>':''}<div class="cc-chips" id="ccDoencaGrid">${renderDoencaChips('', s.doencaId, m.id)}</div></section>` : ''}
       ${d ? '' : '<div class="empty">Escolha uma condição na caixa acima para receber as perguntas dirigidas.</div>'}
       ${d ? `<section class="cc-caso card"><div class="cc-avatar">${avatarSvg(avatarCategoria(s.paciente))}</div><div class="cc-caso-info"><span class="eyebrow">Paciente à sua frente</span><h2>${esc(s.paciente.nome)}${s.paciente.idade?` · ${esc(s.paciente.idade)} anos`:''}${s.paciente.sexo?` · ${esc(s.paciente.sexo)}`:''}</h2><p><strong>Queixa:</strong> ${esc(d.queixa)}</p>${renderBalao(s)}</div><div class="cc-progress"><span>Roteiro coberto</span><strong>${pct}%</strong><i style="--p:${pct}%"></i><small>${feitas} de ${total} perguntas-chave</small></div></section>` : ''}
       <div class="cc-layout">
@@ -509,7 +510,8 @@
           <h3>Etapas do método</h3>
           <div class="cc-step-list">${m.etapas.map((e,i)=>{
             const done = etapaConcluida(s, m, d, e);
-            return `<button class="cc-step${e.id===etapaAtiva?' active':''}${done?' done':''}" data-cc-step="${e.id}"><span>${i+1}</span><div><strong>${esc(e.titulo.replace(/^\d+\.\s*/,''))}</strong><small>${esc(F[e.foco]||'')}</small></div></button>`;
+            const marcador = m.id === 'spikes' ? e.titulo.split(' — ')[0] : i+1;
+            return `<button class="cc-step${e.id===etapaAtiva?' active':''}${done?' done':''}" data-cc-step="${e.id}"><span>${esc(marcador)}</span><div><strong>${esc(e.titulo.replace(/^\d+\.\s*/,''))}</strong><small>${esc(F[e.foco]||'')}</small></div></button>`;
           }).join('')}</div>
           <div class="cc-step-note"><strong>${esc(m.sigla)}</strong><p>${esc(m.uso)}</p></div>
         </aside>
@@ -530,18 +532,28 @@
         </section>
         <aside class="cc-coach card">
           <h3>Painel de orientação</h3>
-          ${d ? `
+          ${d ? (m.id === 'spikes' ? renderCoachSpikes(d, etapa) : `
           <details open><summary>⚠️ Não pode passar (sinais de alarme)</summary><ul>${d.redflags.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>
           <details${etapa.foco==='exame'?' open':''}><summary>🩺 Exame físico dirigido</summary><ul>${d.exame.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>
           <details${etapa.foco==='sintese'?' open':''}><summary>🧠 Hipóteses e diferenciais</summary><ul>${(d.hipoteses||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>
           <details${etapa.foco==='plano'||etapa.foco==='fechamento'?' open':''}><summary>📋 Conduta e plano</summary><ul>${d.conduta.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>
           <details><summary>💡 Pontos-chave para a prova</summary><ul>${(d.pontos||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>
-          <div class="cc-next"><h4>Próximo passo sugerido</h4><p>${esc(proximoPasso(s, m, d, etapa))}</p></div>
-          ` : '<p class="muted">Escolha uma condição para ver sinais de alarme, exame dirigido, hipóteses e conduta.</p>'}
+          `) : '<p class="muted">Escolha uma condição para ver sinais de alarme, exame dirigido, hipóteses e conduta.</p>'}
+          ${d ? `<div class="cc-next"><h4>Próximo passo sugerido</h4><p>${esc(proximoPasso(s, m, d, etapa))}</p></div>` : ''}
           ${s.finalizada ? `<div class="cc-autoaval"><h4>Autoavaliação</h4><textarea class="textarea" id="ccAuto" placeholder="O que você faria diferente nesta consulta?">${esc(s.autoavaliacao||'')}</textarea></div>` : ''}
         </aside>
       </div>
     </div>`;
+  }
+
+  function renderCoachSpikes(d, etapa){
+    const sp = d.spikes || {};
+    const armadilhas = sp.armadilhas || ['Despejar toda a informação sem checar a compreensão.','Preencher o silêncio ou oferecer falsa tranquilização.','Ir direto ao plano antes de acolher a emoção.'];
+    return `<div class="cc-spikes-case"><span class="eyebrow">Seu desafio neste caso</span><p>${esc(sp.cenario||d.perfil||d.queixa)}</p></div>
+      <details open><summary>🗣️ Notícia central</summary><p>${esc(sp.noticia||'Comunique a mudança clínica com clareza, sem jargões.')}</p></details>
+      <details open><summary>🎯 Objetivo desta letra</summary><p>${esc(etapa.objetivo)}</p></details>
+      <details><summary>⚠️ Armadilhas de prova</summary><ul>${armadilhas.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>
+      <details><summary>📋 Estratégia possível</summary><ul>${(sp.estrategia||d.conduta||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>`;
   }
 
   function avatarCategoria(p){
@@ -597,13 +609,17 @@
       ? `<div class="cc-q-list">${doMetodo.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i)).join('')}</div>`
       : '<p class="muted cc-q-vazio">Nenhuma pergunta do método visível nesta etapa.</p>';
     const listaDoenca = d && daDoenca.length
-      ? `<h4 class="cc-q-title">Dirigido a: ${esc(d.nome)}</h4><div class="cc-q-list">${daDoenca.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i)).join('')}</div>`
+      ? `<h4 class="cc-q-title">${etapa.id.startsWith('sp')?'Aplicação ao caso':'Dirigido a'}: ${esc(d.nome)}</h4><div class="cc-q-list">${daDoenca.map(x => renderPergunta(s, x.key, x.q, x.tipo, x.i)).join('')}</div>`
       : '';
-    return `<div class="cc-perguntas">${cabecalho}<h4 class="cc-q-title">Frases e perguntas do método</h4>${listaMetodo}${listaDoenca}</div>`;
+    return `<div class="cc-perguntas">${cabecalho}<h4 class="cc-q-title">${etapa.id.startsWith('sp')?'Falas e perguntas desta letra':'Frases e perguntas do método'}</h4>${listaMetodo}${listaDoenca}</div>`;
   }
 
+  function falasSpikes(d, etapa){
+    return d?.spikes?.falas?.[etapa.id] || [];
+  }
   function perguntasDaDoenca(d, etapa){
     if(!d) return [];
+    if(etapa.id.startsWith('sp')) return falasSpikes(d, etapa).map(item => item.pergunta);
     if(etapa.foco === 'exploracao' || etapa.foco === 'abertura') return d.perguntas;
     if(etapa.foco === 'contexto') return d.perguntas.slice(-4);
     if(etapa.foco === 'exame') return d.exame.map(x => `Examinar: ${x}`);
@@ -635,7 +651,18 @@
    * de perguntas (as da doença e as do método) e a resposta correspondente é usada,
    * com variação natural na forma de falar. */
   const STOP = new Set(['que','como','qual','quais','voce','esta','tem','isso','para','pra','com','uma','dos','das','por','mais','seu','sua','sr','sra','doutor','doutora','você','mas','nao','sim','pode','poderia','me','fala','conta','sobre','algum','alguma','ate','tambem','quando','onde','porque','tudo','bem','aqui','hoje','agora','ele','ela','eles','elas','meu','minha','muito','ser','estar','ter','fazer','disso','dessa','desse','tipo','vez','coisa','gente','tinha','teve','foi','vai','ainda','depois','antes','desde','entre','sempre','nunca','nada','algo','outro','outra']);
-  function tokens(t){ return normaliza(t).replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(w => w.length > 2 && !STOP.has(w)); }
+  const SINONIMOS = {
+    esposa:'familia', marido:'familia', companheiro:'familia', companheira:'familia', parente:'familia', filhos:'familia', filho:'familia', filha:'familia', cuidador:'familia',
+    receio:'medo', teme:'medo', assusta:'medo', preocupado:'preocupa', preocupada:'preocupa',
+    emprego:'trabalho', profissao:'trabalho', rotina:'funcao', limita:'funcao', atrapalha:'funcao',
+    remedio:'medicamento', remedios:'medicamento', farmaco:'medicamento',
+    cansaco:'fadiga', cansado:'fadiga', cansada:'fadiga', respirar:'dispneia', falta:'dispneia',
+    resultado:'exame', exames:'exame', diagnostico:'doenca', enfermidade:'doenca'
+  };
+  function tokens(t){
+    return normaliza(t).replace(/[^a-z0-9\s]/g,' ').split(/\s+/)
+      .filter(w => w.length > 2 && !STOP.has(w)).map(w => SINONIMOS[w] || w);
+  }
   function pontuacao(perguntaTokens, digitadoTokens){
     if(!perguntaTokens.length || !digitadoTokens.length) return 0;
     const set = new Set(digitadoTokens);
@@ -680,10 +707,11 @@
   ];
   const sorteia = arr => arr[Math.floor(Math.random()*arr.length)];
   function limpaAchado(t){ return String(t||'').replace(/^["“”']+|["“”']+$/g,'').trim(); }
-  function varia(texto){
-    let t = limpaAchado(texto);
+  function varia(texto, sensivel){
+    const escolhido = Array.isArray(texto) ? sorteia(texto) : texto;
+    let t = limpaAchado(escolhido);
     if(!t) return t;
-    if(/^\(/.test(t)) return t; // falas com marcação de acompanhante ficam como estão
+    if(sensivel || /^\(/.test(t)) return t; // comunicação difícil e falas de acompanhante ficam literais
     const pre = sorteia(PREFIXOS);
     if(pre) t = pre + t.charAt(0).toLowerCase() + t.slice(1);
     const suf = sorteia(SUFIXOS);
@@ -758,6 +786,15 @@
     const texto = normaliza(textoDigitado);
     let melhor = { score:0, resposta:null };
 
+    // 0) falas próprias de cada cenário SPIKES. Elas têm prioridade sobre a
+    // anamnese clínica para que cada letra permaneça fiel ao protocolo.
+    if(m?.id === 'spikes'){
+      m.etapas.forEach(e => falasSpikes(d, e).forEach(item => {
+        const s = pontuacao(tokens(item.pergunta), alvo) * 1.2;
+        if(item.resposta && s > melhor.score) melhor = { score:s, resposta:item.resposta };
+      }));
+    }
+
     // 1) perguntas dirigidas à doença → achado de mesmo índice
     (d.perguntas||[]).forEach((q, i) => {
       const s = pontuacao(tokens(q), alvo);
@@ -768,7 +805,8 @@
     GATILHOS.forEach(g => {
       const bateu = g.chaves.some(c => texto.includes(c));
       if(!bateu) return;
-      const r = (d.perspectiva||{})[g.campo] || PERSPECTIVA_PADRAO[g.campo];
+      const campoSpikes = { ideias:'percepcao', preocupacoes:'medo', expectativas:'prioridade', funcao:'mudanca', contexto:'acompanhante', emocao:'emocao', entendimento:'percepcao', apoio:'acompanhante', historia:'mudanca' }[g.campo];
+      const r = (m?.id === 'spikes' && campoSpikes ? d.spikes?.[campoSpikes] : null) || (d.perspectiva||{})[g.campo] || PERSPECTIVA_PADRAO[g.campo];
       if(r && melhor.score < 1.15) melhor = { score:1.15, resposta:r };
     });
     // 3) perguntas do método escolhido
@@ -777,8 +815,7 @@
       if(!marca) return;
       const s = pontuacao(tokens(q), alvo) * 0.9;
       if(s <= melhor.score) return;
-      let r = marca;
-      if(typeof marca === 'string' && marca.startsWith('@')) r = (d.perspectiva||{})[marca.slice(1)] || PERSPECTIVA_PADRAO[marca.slice(1)];
+      const r = resolveMarca(d, marca);
       if(r) melhor = { score:s, resposta:r };
     }));
     // 4) campos de perspectiva por semelhança direta
@@ -788,8 +825,32 @@
       if(s > melhor.score) melhor = { score:s, resposta:r };
     });
 
-    if(melhor.score < 0.75 || !melhor.resposta) return sorteia(Math.random() < 0.65 ? SEM_RESPOSTA : NAO_ENTENDI);
-    return varia(melhor.resposta);
+    if(melhor.score < 0.75 || !melhor.resposta){
+      const conversa = respostaConversacional(d, texto);
+      return conversa || sorteia(Math.random() < 0.65 ? SEM_RESPOSTA : NAO_ENTENDI);
+    }
+    return varia(melhor.resposta, m?.id === 'spikes');
+  }
+  function resolveMarca(d, marca){
+    if(typeof marca !== 'string' || !marca.startsWith('@')) return marca;
+    const caminho = marca.slice(1).split('.');
+    let atual = caminho[0] === 'spikes' ? d.spikes : d.perspectiva;
+    caminho.slice(1).forEach(chave => { atual = atual?.[chave]; });
+    if(caminho.length === 1) atual = d.perspectiva?.[caminho[0]];
+    return atual || (caminho[0] === 'spikes' ? SPIKES_PADRAO[caminho[1]] : PERSPECTIVA_PADRAO[caminho[0]]);
+  }
+  function respostaConversacional(d, texto){
+    const p = d.perspectiva || {};
+    const sp = d.spikes || {};
+    if(/^(oi|ola|bom dia|boa tarde|boa noite)\b/.test(texto)) return 'Olá, doutor. Podemos conversar, sim.';
+    if(/obrigad|agradec/.test(texto)) return 'Eu que agradeço por me ouvir e explicar com calma.';
+    if(/sinto muito|estou aqui|deve ser dificil|imagino como/.test(texto)) return sp.validacao || 'Obrigado por reconhecer isso. Está sendo muito difícil para mim.';
+    if(/mais importante|prioridade|objetivo|importa para voce/.test(texto)) return sp.prioridade || p.expectativas || PERSPECTIVA_PADRAO.expectativas;
+    if(/entendeu|suas palavras|resumir|resumo/.test(texto)) return sp.resumo || p.resumo || PERSPECTIVA_PADRAO.resumo;
+    if(/duvida|pergunta agora|quer perguntar/.test(texto)) return sp.duvidas || p.duvida || PERSPECTIVA_PADRAO.duvida;
+    if(/posso (te |lhe )?(examinar|explicar|contar)|tudo bem se|voce autoriza/.test(texto)) return 'Pode sim, doutor. Prefiro que explique com calma.';
+    if(/mais alguma coisa|algo a acrescentar/.test(texto)) return 'Por enquanto é isso. Se eu lembrar de algo, conto ao senhor.';
+    return '';
   }
   const PERSPECTIVA_PADRAO = {
     abertura:'É por causa disso que eu vim, doutor. Começou faz um tempo e não melhorou.',
@@ -806,16 +867,30 @@
     exame:'Pode examinar, doutor, fique à vontade.',
     resumo:'É isso mesmo que eu falei, o senhor entendeu certinho.'
   };
+  const SPIKES_PADRAO = {
+    privacidade:'Aqui está bom para mim.', acompanhante:'Gostaria que alguém da minha família estivesse aqui.', tempo:'Podemos conversar agora, sim.', conforto:'Estou confortável; pode começar.',
+    percepcao:'Sei que a doença é séria, mas não entendi exatamente como ela está agora.', mudanca:'Percebi que fiquei mais fraco e que as coisas pioraram.', expectativaExame:'Eu esperava que os exames mostrassem alguma melhora.', objetivoTratamento:'Eu achava que o tratamento ainda pudesse controlar a doença.',
+    convite:'Quero saber, pode me explicar.', detalhes:'Prefiro saber os detalhes, mas fale devagar.', prognostico:'Quero saber o que esperar, mesmo que seja difícil.', compartilhamento:'Pode conversar também com a pessoa que me acompanha.',
+    reacaoAviso:'Está bem… pode me contar.', reacaoNoticia:'(permanece em silêncio por alguns segundos) Eu não esperava ouvir isso.', compreensao:'Entendi que a doença avançou e que a situação é séria.', maisDetalhes:'Pode continuar, mas preciso que fale aos poucos.',
+    emocao:'Estou muito abalado. Parece que tudo parou agora.', validacao:'Obrigado por compreender. Está sendo muito difícil.', pausa:'Quero um minuto, por favor.', pensamento:'Estou pensando na minha família e no que vai acontecer daqui para frente.', medo:'Tenho medo de sofrer e de deixar minha família.',
+    prioridade:'Quero ficar confortável e perto da minha família.', opcoes:'Pode explicar as opções. Quero decidir junto.', naoAbandono:'Ouvir que vocês continuarão comigo me alivia.', plano:'Entendi. Vamos combinar o próximo passo e quando voltamos a conversar.', resumo:'Entendi que a doença piorou, que a cura pode não ser possível e que vamos priorizar meu conforto e o que importa para mim.', duvidas:'Quero saber como vocês vão controlar meus sintomas e quem devo procurar se eu piorar.'
+  };
 
   /* ================================= EVENTOS ================================= */
   function bind(){
     const st = store();
     // ---- home
     const metodoSel = root.querySelector('#ccMetodo');
-    if(metodoSel) metodoSel.onchange = () => { const info = root.querySelector('#ccMetodoInfo'); if(info) info.innerHTML = renderMetodoInfo(metodo(metodoSel.value)); };
+    if(metodoSel) metodoSel.onchange = () => {
+      const info = root.querySelector('#ccMetodoInfo');
+      if(info) info.innerHTML = renderMetodoInfo(metodo(metodoSel.value));
+      escolhida = '';
+      const grid = root.querySelector('#ccDoencaGrid');
+      if(grid){ grid.innerHTML = renderDoencaChips(busca?.value || '', '', metodoSel.value); bindChips(); }
+    };
     let escolhida = '';
     const busca = root.querySelector('#ccBusca');
-    if(busca) busca.oninput = () => { const grid = root.querySelector('#ccDoencaGrid'); if(grid){ grid.innerHTML = renderDoencaChips(busca.value, escolhida || (sessao()?sessao().doencaId:'')); bindChips(); } };
+    if(busca) busca.oninput = () => { const grid = root.querySelector('#ccDoencaGrid'); if(grid){ grid.innerHTML = renderDoencaChips(busca.value, escolhida || (sessao()?sessao().doencaId:''), metodoSel?.value || sessao()?.metodoId); bindChips(); } };
     function bindChips(){
       root.querySelectorAll('[data-cc-doenca]').forEach(btn => btn.onclick = () => {
         const id = btn.dataset.ccDoenca;
@@ -843,7 +918,14 @@
     const touch = () => { s.updatedAt = new Date().toISOString(); save(); };
     root.querySelector('#ccBack').onclick = () => { finalizarAnimacao(); st.ui.view = 'home'; st.activeId = ''; save(); render(); };
     root.querySelector('#ccToggleBox').onclick = () => { st.ui.box = !st.ui.box; save(); render(); };
-    root.querySelector('#ccTopMetodo').onchange = e => { s.metodoId = e.target.value; s.etapaAtiva = ''; touch(); render(); };
+    root.querySelector('#ccTopMetodo').onchange = e => {
+      s.metodoId = e.target.value;
+      if(s.metodoId === 'spikes' && !doenca(s.doencaId)?.spikes){
+        const primeiroCaso = doencas().find(item => item.spikes);
+        if(primeiroCaso) s.doencaId = primeiroCaso.id;
+      }
+      s.etapaAtiva = ''; touch(); render();
+    };
     root.querySelector('#ccTopNome').onchange = e => { s.paciente.nome = e.target.value.trim() || 'Paciente simulado'; touch(); render(); };
     root.querySelector('#ccTopIdade').onchange = e => { s.paciente.idade = e.target.value; touch(); render(); };
     root.querySelector('#ccTopSexo').onchange = e => { s.paciente.sexo = e.target.value; touch(); render(); };

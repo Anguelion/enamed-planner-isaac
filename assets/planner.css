@@ -2015,6 +2015,10 @@ body.dark .cc-safety{background:#332a18;color:#ffe6ad;border-color:#765c25}
 .cc-coach details{margin-bottom:10px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
 .cc-coach summary{cursor:pointer;font-weight:700}
 .cc-coach ul{margin:8px 0 0;padding-left:18px}.cc-coach li{margin:4px 0;font-size:13.5px;line-height:1.4}
+.cc-coach details p{margin:8px 0 0;font-size:13.5px;line-height:1.5}
+.cc-spikes-case{margin:10px 0 12px;padding:12px;border:1px solid color-mix(in srgb,#e89a22 35%,var(--line));border-left:4px solid #e89a22;border-radius:8px;background:color-mix(in srgb,#e89a22 7%,var(--panel))}
+.cc-spikes-case p{margin:5px 0 0;font-size:13.5px;line-height:1.5}
+.cc-box-hint{margin:8px 0 2px;font-size:13px}
 .cc-next{margin-top:6px;padding:11px 12px;border-radius:8px;background:color-mix(in srgb,var(--primary) 8%,var(--panel))}
 .cc-next p{margin:0;font-size:13.5px}
 .cc-autoaval{margin-top:14px}
