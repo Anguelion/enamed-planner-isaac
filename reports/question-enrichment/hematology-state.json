@@ -13,23 +13,23 @@
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fdba14ac197dc8bb": {
       "number": "1005g",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-08-19T18:56:43.097Z",
-      "nextAttemptAt": "2026-09-02T18:56:43.097Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-09-02T21:07:11.429Z",
+      "nextAttemptAt": "2026-09-23T21:07:11.429Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo778fb5411f/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5f8dd1bb5890ea5b": {
       "number": "1006g",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-08-19T18:56:48.389Z",
-      "nextAttemptAt": "2026-09-02T18:56:48.389Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-09-02T21:07:17.524Z",
+      "nextAttemptAt": "2026-09-23T21:07:17.524Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-301071a51c8b9/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ee73dc79a3dc3536": {
       "number": "1007g",
@@ -1473,33 +1473,33 @@
     },
     "anki-hematologia-anemias-macrociticas-31a88d53cd7986cf": {
       "number": "1031e",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-26T20:08:26.504Z",
-      "nextAttemptAt": "2026-09-02T20:08:26.504Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-02T21:07:23.341Z",
+      "nextAttemptAt": "2026-09-16T21:07:23.341Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-4064baf0b3fa/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-anemias-macrociticas-7d1662b6473b1b5d": {
       "number": "1032e",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-26T20:08:31.761Z",
-      "nextAttemptAt": "2026-09-02T20:08:31.761Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-02T21:07:29.432Z",
+      "nextAttemptAt": "2026-09-16T21:07:29.432Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-33-anos58a97c0c0b/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemias-macrociticas-3f7f61091f88f97e": {
       "number": "1033e",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-26T20:08:37.039Z",
-      "nextAttemptAt": "2026-09-02T20:08:37.039Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-02T21:07:35.177Z",
+      "nextAttemptAt": "2026-09-16T21:07:35.177Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/avaliaca-paciente-com5085f26a6d/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemias-macrociticas-7dbe3627c6737043": {
       "number": "1034e",
@@ -2120,7 +2120,17 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino783d769e17/",
       "localAnswer": "E",
       "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-macrociticas-9d26925d87e86df6": {
+      "number": "1096e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-02T21:07:41.351Z",
+      "nextAttemptAt": "2026-09-09T21:07:41.351Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-66-anos-com6900c5ae0c/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     }
   },
-  "updatedAt": "2026-09-02T11:26:02.817Z"
+  "updatedAt": "2026-09-02T21:07:41.351Z"
 }

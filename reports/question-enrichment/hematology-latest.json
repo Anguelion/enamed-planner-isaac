@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T11:25:29.717Z",
+  "generatedAt": "2026-09-02T21:07:10.601Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,50 +7,80 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-d6de6ef139bca8c2",
-      "number": "1024e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fdba14ac197dc8bb",
+      "number": "1005g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
-      "sourceQuestionId": "4000114661",
-      "matchedAt": "2026-09-02T11:25:31.082Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo778fb5411f/",
+      "sourceQuestionId": "4000101307",
+      "matchedAt": "2026-09-02T21:07:11.428Z",
       "similarity": {
         "stem": 1,
-        "options": 0.8,
-        "combined": 0.94
+        "options": 1,
+        "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Quadro clínico da anemia megaloblástica",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Polineuropatias",
-        "Polineuropatias Carenciais",
-        "Deficiência de Vitamina B12 e Ácido Fólico"
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: Anemia megaloblástica por deficiência de Vitamina B12, necessita de avaliação nutricional.",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: O paciente apresenta uma anemia desproporcional ao grau de insuficiência renal, devendo ser considerada a possibilidade de patologias concomitantes, como por exemplo, mieloma múltiplo. A confusão mental pode ser hipercalcemia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/"
+        "https://med.estrategia.com/public/questoes/Paciente-sexo778fb5411f/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-a5503c12b4fcd8b1",
-      "number": "1025e",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5f8dd1bb5890ea5b",
+      "number": "1006g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-301071a51c8b9/",
+      "sourceQuestionId": "4000090103",
+      "matchedAt": "2026-09-02T21:07:17.523Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Porfirias",
+        "Classificação das porfirias",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Neuropatias Hereditárias",
+        "Porfiria Intermitente Aguda",
+        "Porfirias Hepáticas",
+        "Porfirias hepáticas agudas"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Porfirias hepáticas agudas. Conduta/resposta: Porfiria aguda intermitente",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-masculino-301071a51c8b9/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-31a88d53cd7986cf",
+      "number": "1031e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-63-anos-vem-a1053cce27be/",
-      "sourceQuestionId": "4000113056",
-      "matchedAt": "2026-09-02T11:25:37.896Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-4064baf0b3fa/",
+      "sourceQuestionId": "4000077850",
+      "matchedAt": "2026-09-02T21:07:23.340Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -64,37 +94,32 @@
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
         "Deficiência de vitamina B12",
-        "Quadro clínico da anemia megaloblástica",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Polineuropatias",
-        "Polineuropatias Carenciais",
-        "Deficiência de Vitamina B12 e Ácido Fólico"
+        "Distúrbios de absorção de vitamina B12",
+        "Uso de metformina"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: Déficit de vitamina B12",
+      "comment": "Gabarito confirmado: B. Assunto: Uso de metformina. Conduta/resposta: dosagem de vitamina B12",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-63-anos-vem-a1053cce27be/",
-        "https://med.estrategia.com/public/questoes/Homem-63-anos65f9d554dc/"
+        "https://med.estrategia.com/public/questoes/Paciente-feminina-4064baf0b3fa/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-665ea75838ead27f",
-      "number": "1026e",
+      "id": "anki-hematologia-anemias-macrociticas-7d1662b6473b1b5d",
+      "number": "1032e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-88-anos-com29b5d64b92/",
-      "sourceQuestionId": "4000112855",
-      "matchedAt": "2026-09-02T11:25:43.861Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-33-anos58a97c0c0b/",
+      "sourceQuestionId": "4000071295",
+      "matchedAt": "2026-09-02T21:07:29.431Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -102,68 +127,33 @@
         "Anemias macrocíticas",
         "Anemia megaloblástica",
         "Quadro clínico da anemia megaloblástica",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Polineuropatias",
-        "Polineuropatias Carenciais",
-        "Deficiência de Vitamina B12 e Ácido Fólico"
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Alterações mucosas: Glossite atrófica e queilite angular"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: hidroxicobalamina e acido fólico.",
+      "comment": "Gabarito confirmado: C. Assunto: Alterações mucosas: Glossite atrófica e queilite angular. Conduta/resposta: Anemia perniciosa - cianocobalamina",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-88-anos-com29b5d64b92/"
+        "https://med.estrategia.com/public/questoes/Paciente-33-anos58a97c0c0b/",
+        "https://med.estrategia.com/public/questoes/Mulher-34-anos1106b430704/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-d519f109b93bb3b0",
-      "number": "1027e",
+      "id": "anki-hematologia-anemias-macrociticas-3f7f61091f88f97e",
+      "number": "1033e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-42-anos-branca99504422a1/",
-      "sourceQuestionId": "4000112309",
-      "matchedAt": "2026-09-02T11:25:50.345Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/avaliaca-paciente-com5085f26a6d/",
+      "sourceQuestionId": "4000062280",
+      "matchedAt": "2026-09-02T21:07:35.177Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Alterações dos leucócitos",
-        "Neutrófilos hipersegmentados"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: A deficiência de vitamina B12 é uma das causas mais comuns implicadas nesse tipo de anemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-42-anos-branca99504422a1/",
-        "https://med.estrategia.com/public/questoes/Paciente-40-anos184a2ea1084/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-8dd2eb16af0ef6fe",
-      "number": "1028e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-sete-anos690fca9f11/",
-      "sourceQuestionId": "4000083899",
-      "matchedAt": "2026-09-02T11:25:56.270Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -171,23 +161,22 @@
         "Anemias macrocíticas",
         "Anemia megaloblástica",
         "Deficiência de ácido fólico",
-        "Distúrbios de absorção do ácido fólico",
-        "Anticonvulsivantes"
+        "Quadro clínico da anemia megaloblástica"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Anticonvulsivantes. Conduta/resposta: Megaloblástica.",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Ácido fólico",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-com-sete-anos690fca9f11/"
+        "https://med.estrategia.com/public/questoes/avaliaca-paciente-com5085f26a6d/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-099a7729b3605f3f",
-      "number": "1095e",
+      "id": "anki-hematologia-anemias-macrociticas-9d26925d87e86df6",
+      "number": "1096e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino783d769e17/",
-      "sourceQuestionId": "4000040240",
-      "matchedAt": "2026-09-02T11:26:02.817Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-66-anos-com6900c5ae0c/",
+      "sourceQuestionId": "4000030652",
+      "matchedAt": "2026-09-02T21:07:41.350Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -201,12 +190,13 @@
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica"
+        "Diagnóstico da anemia megaloblástica",
+        "Homocisteína e ácido metilmalônico"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: As dosagens de vitamina B12 e homocisteína são importantes para o diagnóstico seguidas de EDA.",
+      "comment": "Gabarito confirmado: E. Assunto: Homocisteína e ácido metilmalônico. Conduta/resposta: Deficiência de vitamina B12.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-masculino783d769e17/",
-        "https://med.estrategia.com/public/questoes/Considere-seguintes105fe5a5f4b/"
+        "https://med.estrategia.com/public/questoes/Mulher-66-anos-com6900c5ae0c/",
+        "https://med.estrategia.com/public/questoes/Mulher-66-anos-refere84ad9314e3/"
       ]
     }
   ]

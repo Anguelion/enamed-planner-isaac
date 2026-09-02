@@ -211,10 +211,24 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977809",
-      "ankiGuid": "iwl@/jfNs."
+      "ankiGuid": "iwl@/jfNs.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo778fb5411f/",
+        "sourceQuestionId": "4000101307",
+        "matchedAt": "2026-09-02T21:07:11.428Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5f8dd1bb5890ea5b",
@@ -244,10 +258,28 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Porfirias",
+        "Classificação das porfirias",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Neuropatias Hereditárias",
+        "Porfiria Intermitente Aguda",
+        "Porfirias Hepáticas",
+        "Porfirias hepáticas agudas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977810",
-      "ankiGuid": "N3tA~]7nkK"
+      "ankiGuid": "N3tA~]7nkK",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-301071a51c8b9/",
+        "sourceQuestionId": "4000090103",
+        "matchedAt": "2026-09-02T21:07:17.523Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ee73dc79a3dc3536",

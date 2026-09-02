@@ -1435,10 +1435,24 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Uso de metformina",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967800",
-      "ankiGuid": "wrW%(gf[@o"
+      "ankiGuid": "wrW%(gf[@o",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-4064baf0b3fa/",
+        "sourceQuestionId": "4000077850",
+        "matchedAt": "2026-09-02T21:07:23.340Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-7d1662b6473b1b5d",
@@ -1468,10 +1482,25 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Alterações mucosas: Glossite atrófica e queilite angular",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967801",
-      "ankiGuid": "q!IWEk;Mi:"
+      "ankiGuid": "q!IWEk;Mi:",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-33-anos58a97c0c0b/",
+        "sourceQuestionId": "4000071295",
+        "matchedAt": "2026-09-02T21:07:29.431Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-3f7f61091f88f97e",
@@ -1501,10 +1530,22 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967802",
-      "ankiGuid": "w=9/g9:oL9"
+      "ankiGuid": "w=9/g9:oL9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/avaliaca-paciente-com5085f26a6d/",
+        "sourceQuestionId": "4000062280",
+        "matchedAt": "2026-09-02T21:07:35.177Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-7dbe3627c6737043",
@@ -4280,14 +4321,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Apesar dos exames de ferro (ferro sérico, ferritina) estarem normais e o nível de B12 estar dentro da faixa de referência (240, mas no limite inferior), dois exames mais sensíveis mostram claramente a deficiência: o ácido metilmalônico e a homocisteína estão bem elevados — provando que, mesmo com a dosagem de B12 'aparentemente normal', o corpo já está sofrendo de falta funcional dessa vitamina. É um lembrete importante: o nível sérico de B12 pode enganar, ficando 'normal' mesmo já havendo deficiência real.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Diagnóstico da anemia megaloblástica",
+        "Homocisteína e ácido metilmalônico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967865",
-      "ankiGuid": "hngnn0{Y)6"
+      "ankiGuid": "hngnn0{Y)6",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-66-anos-com6900c5ae0c/",
+        "sourceQuestionId": "4000030652",
+        "matchedAt": "2026-09-02T21:07:41.350Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-0619201d376b3862",
