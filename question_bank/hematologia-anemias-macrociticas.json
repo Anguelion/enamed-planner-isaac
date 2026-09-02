@@ -1093,14 +1093,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Marcha instável, formigamento, palidez com icterícia leve, dificuldade de memória, anemia macrocítica com neutrófilos hipersegmentados e plaquetas baixas — quadro clássico de anemia megaloblástica por falta de vitamina B12, precisando de avaliação nutricional pra entender a causa.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967793",
-      "ankiGuid": "b-TS1iLPf*"
+      "ankiGuid": "b-TS1iLPf*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-60-anos6159e64a5d/",
+        "sourceQuestionId": "4000114661",
+        "matchedAt": "2026-09-02T11:25:31.082Z",
+        "confidence": 0.94
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-a5503c12b4fcd8b1",
@@ -1127,14 +1145,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, formigamento nas pernas, histórico de vitiligo (uma doença autoimune, que costuma vir 'em grupo' com outras doenças autoimunes, incluindo a anemia perniciosa), anemia macrocítica grave e LDH extremamente alto (12900!) — tudo aponta pra deficiência de vitamina B12.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967794",
-      "ankiGuid": "J=t@l],[q)"
+      "ankiGuid": "J=t@l],[q)",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-63-anos-vem-a1053cce27be/",
+        "sourceQuestionId": "4000113056",
+        "matchedAt": "2026-09-02T11:25:37.896Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-665ea75838ead27f",
@@ -1161,14 +1197,31 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idoso com anemia macrocítica, leucócitos e plaquetas baixos (pancitopenia), reticulócitos baixos e formigamento nas pernas — quadro clássico de deficiência combinada, tratado preferencialmente com hidroxicobalamina (vitamina B12) e ácido fólico juntos, já que ambas as deficiências podem coexistir e causar sintomas parecidos.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967795",
-      "ankiGuid": "k;@_,wwTOr"
+      "ankiGuid": "k;@_,wwTOr",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-88-anos-com29b5d64b92/",
+        "sourceQuestionId": "4000112855",
+        "matchedAt": "2026-09-02T11:25:43.861Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d519f109b93bb3b0",
@@ -1195,14 +1248,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, falta de ar, formigamento nos pés, perda de peso, língua lisa (glossite atrófica), anemia grave macrocítica com neutrófilos hipersegmentados e plaquetas baixas — a deficiência de vitamina B12 é uma das causas mais comuns e prováveis desse tipo de anemia.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967796",
-      "ankiGuid": "fV,ivzNh6~"
+      "ankiGuid": "fV,ivzNh6~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-42-anos-branca99504422a1/",
+        "sourceQuestionId": "4000112309",
+        "matchedAt": "2026-09-02T11:25:50.345Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-8dd2eb16af0ef6fe",
@@ -1228,14 +1296,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança usando dois remédios anticonvulsivantes (valproato e difenilhidantoína) há anos — ambos conhecidos por atrapalhar o metabolismo do ácido fólico a longo prazo, causando anemia megaloblástica, explicando o VCM bem alto (acima de 120).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico",
+        "Distúrbios de absorção do ácido fólico",
+        "Anticonvulsivantes",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967797",
-      "ankiGuid": "rk>l+ukcMY"
+      "ankiGuid": "rk>l+ukcMY",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-sete-anos690fca9f11/",
+        "sourceQuestionId": "4000083899",
+        "matchedAt": "2026-09-02T11:25:56.270Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-c4d4e81377cfef61",
@@ -4154,14 +4235,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza progressiva, tonturas, quedas, formigamento nas pernas, icterícia leve, taquicardia, anemia grave macrocítica com pancitopenia, reticulócitos baixos e LDH bem alto — quadro bem sugestivo de deficiência de vitamina B12. Os exames certos pra confirmar são a dosagem de B12 e homocisteína, seguidos de endoscopia digestiva alta (pra investigar gastrite atrófica como causa).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967864",
-      "ankiGuid": "Jlh`.,|w?`"
+      "ankiGuid": "Jlh`.,|w?`",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino783d769e17/",
+        "sourceQuestionId": "4000040240",
+        "matchedAt": "2026-09-02T11:26:02.817Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-9d26925d87e86df6",
