@@ -73,23 +73,23 @@
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7": {
       "number": "1011g",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-08-20T07:10:10.960Z",
-      "nextAttemptAt": "2026-09-03T07:10:10.960Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-09-03T11:21:57.479Z",
+      "nextAttemptAt": "2026-09-24T11:21:57.479Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-porfiria-aguda112cd61ec4/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a": {
       "number": "1012g",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-08-20T07:10:16.837Z",
-      "nextAttemptAt": "2026-09-03T07:10:16.837Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-09-03T11:22:03.455Z",
+      "nextAttemptAt": "2026-09-24T11:22:03.455Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/metemoglobinemia-e7a0351fe5/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e": {
       "number": "1013g",
@@ -2130,7 +2130,47 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-66-anos-com6900c5ae0c/",
       "localAnswer": "E",
       "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-macrociticas-0619201d376b3862": {
+      "number": "1097e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T11:22:09.295Z",
+      "nextAttemptAt": "2026-09-10T11:22:09.295Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-anemia-com5230df8709/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-e43e17093fc42a3b": {
+      "number": "1098e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T11:22:15.172Z",
+      "nextAttemptAt": "2026-09-10T11:22:15.172Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-desses-sinais-ou14e3a8f339/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-macrociticas-686f50b8e469740d": {
+      "number": "1099e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T11:22:20.908Z",
+      "nextAttemptAt": "2026-09-10T11:22:20.908Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-Paula-50-anos981773995b/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-macrociticas-4b4b7b442247abb3": {
+      "number": "10100e",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T11:22:26.770Z",
+      "nextAttemptAt": "2026-09-10T11:22:26.770Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-anemia343a5a87e0/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-09-02T21:07:41.351Z"
+  "updatedAt": "2026-09-03T11:22:26.770Z"
 }

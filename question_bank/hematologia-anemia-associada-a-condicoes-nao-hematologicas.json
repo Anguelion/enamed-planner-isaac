@@ -491,10 +491,25 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Porfirias",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Neuropatias Hereditárias",
+        "Porfiria Intermitente Aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977815",
-      "ankiGuid": "BYYU<PI6zE"
+      "ankiGuid": "BYYU<PI6zE",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-porfiria-aguda112cd61ec4/",
+        "sourceQuestionId": "4000060974",
+        "matchedAt": "2026-09-03T11:21:57.479Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a",
@@ -524,10 +539,21 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Metemoglobinemia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977816",
-      "ankiGuid": "sNdPUfK`x^"
+      "ankiGuid": "sNdPUfK`x^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/metemoglobinemia-e7a0351fe5/",
+        "sourceQuestionId": "4000030776",
+        "matchedAt": "2026-09-03T11:22:03.455Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e",

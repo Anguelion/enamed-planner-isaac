@@ -4367,14 +4367,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Só a frase I está certa: o álcool realmente pode causar macrocitose por dano direto às células jovens do sangue na medula. A frase II está invertida: é a falta de ÁCIDO FÓLICO (não de B12) que está ligada a defeitos do tubo neural no bebê durante a gravidez. A frase III também está invertida: é a falta de VITAMINA B12 (não de folato) que causa os sintomas neurológicos por desmielinização — o folato sozinho não costuma causar esse dano nos nervos.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967866",
-      "ankiGuid": "DvL2bbAd*j"
+      "ankiGuid": "DvL2bbAd*j",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-anemia-com5230df8709/",
+        "sourceQuestionId": "4000090885",
+        "matchedAt": "2026-09-03T11:22:09.295Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-e43e17093fc42a3b",
@@ -4401,14 +4410,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Língua lisa, gastrectomia prévia, neutrófilos hipersegmentados e LDH elevado são todos sinais/fatores ligados à deficiência de cobalamina (vitamina B12). Já a colectomia (retirada do intestino grosso) NÃO afeta a absorção de B12, já que ela acontece no íleo (parte final do intestino DELGADO), não no cólon — por isso é a exceção correta.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967867",
-      "ankiGuid": "u(G6RVGd=^"
+      "ankiGuid": "u(G6RVGd=^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-desses-sinais-ou14e3a8f339/",
+        "sourceQuestionId": "4000084933",
+        "matchedAt": "2026-09-03T11:22:15.171Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-686f50b8e469740d",
@@ -4434,14 +4455,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, formigamento intenso nas pernas, desequilíbrio ao andar, palidez com icterícia, petéquias (por causa das plaquetas baixas), língua inflamada (glossite) e anemia macrocítica grave com sinais de 'pseudo-hemólise' — a tomografia e o líquor normais descartam causas neurológicas estruturais/infecciosas, reforçando que tudo é explicado pela deficiência de vitamina B12. O tratamento é justamente repor essa vitamina.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967868",
-      "ankiGuid": "J@JPgZf(m-"
+      "ankiGuid": "J@JPgZf(m-",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-Paula-50-anos981773995b/",
+        "sourceQuestionId": "4000058245",
+        "matchedAt": "2026-09-03T11:22:20.907Z",
+        "confidence": 0.991358024691358
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-4b4b7b442247abb3",
@@ -4468,14 +4507,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia crônica com hemácias grandes (VCM 106) mas SEM variação de tamanho entre elas (sem anisocitose) — esse padrão 'uniforme' de macrocitose combina com dieta vegetariana, gastrectomia, uso de anticonvulsivantes ou alcoolismo (todas causas de deficiência de B12/folato, que produzem hemácias grandes mas parecidas entre si). Já a microesferocitose é uma anemia HEMOLÍTICA que costuma vir com hemácias de tamanhos variados (RDW alto) e geralmente não é macrocítica — por isso é a situação que NÃO se encaixa nesse quadro.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967869",
-      "ankiGuid": "KSw[B[07%g"
+      "ankiGuid": "KSw[B[07%g",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-anemia343a5a87e0/",
+        "sourceQuestionId": "4000046717",
+        "matchedAt": "2026-09-03T11:22:26.770Z",
+        "confidence": 1
+      }
     }
   ]
 }

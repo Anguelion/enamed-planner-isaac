@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T21:07:10.601Z",
+  "generatedAt": "2026-09-03T11:21:56.595Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,14 +7,14 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-fdba14ac197dc8bb",
-      "number": "1005g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7",
+      "number": "1011g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo778fb5411f/",
-      "sourceQuestionId": "4000101307",
-      "matchedAt": "2026-09-02T21:07:11.428Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-porfiria-aguda112cd61ec4/",
+      "sourceQuestionId": "4000060974",
+      "matchedAt": "2026-09-03T11:21:57.479Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -22,161 +22,86 @@
       },
       "localAnswer": "C",
       "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias e condições não hematológicas",
-        "Anemia da doença renal crônica",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: O paciente apresenta uma anemia desproporcional ao grau de insuficiência renal, devendo ser considerada a possibilidade de patologias concomitantes, como por exemplo, mieloma múltiplo. A confusão mental pode ser hipercalcemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo778fb5411f/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5f8dd1bb5890ea5b",
-      "number": "1006g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-301071a51c8b9/",
-      "sourceQuestionId": "4000090103",
-      "matchedAt": "2026-09-02T21:07:17.523Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Porfirias",
-        "Classificação das porfirias",
         "Neurologia",
         "Doenças Neuromusculares",
         "Neuropatias Periféricas",
         "Neuropatias Hereditárias",
-        "Porfiria Intermitente Aguda",
-        "Porfirias Hepáticas",
-        "Porfirias hepáticas agudas"
+        "Porfiria Intermitente Aguda"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Porfirias hepáticas agudas. Conduta/resposta: Porfiria aguda intermitente",
+      "comment": "Gabarito confirmado: C. Assunto: Porfiria Intermitente Aguda. Conduta/resposta: Durante as crises agudas, deve-se deixar o paciente em jejum até as provas de função hepáticas melhorarem.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-masculino-301071a51c8b9/"
+        "https://med.estrategia.com/public/questoes/Com-a-porfiria-aguda112cd61ec4/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-31a88d53cd7986cf",
-      "number": "1031e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a",
+      "number": "1012g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-4064baf0b3fa/",
-      "sourceQuestionId": "4000077850",
-      "matchedAt": "2026-09-02T21:07:23.340Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/metemoglobinemia-e7a0351fe5/",
+      "sourceQuestionId": "4000030776",
+      "matchedAt": "2026-09-03T11:22:03.455Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Uso de metformina"
+        "Hemoglobinopatias",
+        "Metemoglobinemia"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Uso de metformina. Conduta/resposta: dosagem de vitamina B12",
+      "comment": "Gabarito confirmado: A. Assunto: Metemoglobinemia. Conduta/resposta: Sua principal característica é a cianose central que não melhora com oxigenioterapia. Ocorre tanto por alterações congênitas, quanto por exposição a agentes químicos diversos.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-4064baf0b3fa/"
+        "https://med.estrategia.com/public/questoes/metemoglobinemia-e7a0351fe5/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-7d1662b6473b1b5d",
-      "number": "1032e",
+      "id": "anki-hematologia-anemias-macrociticas-0619201d376b3862",
+      "number": "1097e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-33-anos58a97c0c0b/",
-      "sourceQuestionId": "4000071295",
-      "matchedAt": "2026-09-02T21:07:29.431Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-anemia-com5230df8709/",
+      "sourceQuestionId": "4000090885",
+      "matchedAt": "2026-09-03T11:22:09.295Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Anemias microcíticas",
-        "Anemia ferropriva",
-        "Quadro clínico da anemia ferropriva",
-        "Alterações mucosas: Glossite atrófica e queilite angular"
+        "Anemias macrocíticas"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Alterações mucosas: Glossite atrófica e queilite angular. Conduta/resposta: Anemia perniciosa - cianocobalamina",
+      "comment": "Gabarito confirmado: A. Assunto: Anemias macrocíticas. Conduta/resposta: Apenas a I.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-33-anos58a97c0c0b/",
-        "https://med.estrategia.com/public/questoes/Mulher-34-anos1106b430704/"
+        "https://med.estrategia.com/public/questoes/Com-a-anemia-com5230df8709/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-3f7f61091f88f97e",
-      "number": "1033e",
+      "id": "anki-hematologia-anemias-macrociticas-e43e17093fc42a3b",
+      "number": "1098e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/avaliaca-paciente-com5085f26a6d/",
-      "sourceQuestionId": "4000062280",
-      "matchedAt": "2026-09-02T21:07:35.177Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de ácido fólico",
-        "Quadro clínico da anemia megaloblástica"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Ácido fólico",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/avaliaca-paciente-com5085f26a6d/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-9d26925d87e86df6",
-      "number": "1096e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-66-anos-com6900c5ae0c/",
-      "sourceQuestionId": "4000030652",
-      "matchedAt": "2026-09-02T21:07:41.350Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-desses-sinais-ou14e3a8f339/",
+      "sourceQuestionId": "4000084933",
+      "matchedAt": "2026-09-03T11:22:15.171Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -190,13 +115,78 @@
         "Hematologia",
         "Anemias macrocíticas",
         "Anemia megaloblástica",
-        "Diagnóstico da anemia megaloblástica",
-        "Homocisteína e ácido metilmalônico"
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Homocisteína e ácido metilmalônico. Conduta/resposta: Deficiência de vitamina B12.",
+      "comment": "Gabarito confirmado: E. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Colectomia total prévia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-66-anos-com6900c5ae0c/",
-        "https://med.estrategia.com/public/questoes/Mulher-66-anos-refere84ad9314e3/"
+        "https://med.estrategia.com/public/questoes/Qual-desses-sinais-ou14e3a8f339/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-686f50b8e469740d",
+      "number": "1099e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-Paula-50-anos981773995b/",
+      "sourceQuestionId": "4000058245",
+      "matchedAt": "2026-09-03T11:22:20.907Z",
+      "similarity": {
+        "stem": 0.9876543209876543,
+        "options": 1,
+        "combined": 0.991358024691358
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: Vitamina B12.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Maria-Paula-50-anos981773995b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-macrociticas-4b4b7b442247abb3",
+      "number": "10100e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-anemia343a5a87e0/",
+      "sourceQuestionId": "4000046717",
+      "matchedAt": "2026-09-03T11:22:26.770Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: Paciente com microesferocitose.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-com-anemia343a5a87e0/"
       ]
     }
   ]
